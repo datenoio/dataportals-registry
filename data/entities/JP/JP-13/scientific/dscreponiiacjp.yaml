@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Metadata catalog of datasets provided through NII's Informatics Research
+  Data Repository (IDR), including company-provided and researcher-provided informatics
+  datasets.
+endpoints:
+- type: oaipmh20
+  url: https://dsc.repo.nii.ac.jp/oai?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://dsc.repo.nii.ac.jp/weko/sitemaps/sitemapindex.xml
+id: dscreponiiacjp
+langs:
+- id: EN
+  name: English
+- id: JA
+  name: Japanese
+link: https://dsc.repo.nii.ac.jp/
+name: NII Informatics Research Data Repository (IDR)
+owner:
+  link: https://www.nii.ac.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-13
+      name: Tokyo
+  name: National Institute of Informatics
+  type: Academy
+software:
+  id: weko3
+  name: WEKO3
+status: active
+tags:
+- research data
+- informatics
+- dataset sharing
+- academy
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027414

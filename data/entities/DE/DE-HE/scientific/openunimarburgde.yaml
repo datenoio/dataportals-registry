@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-HE
+      name: Hessen
+description: Institutional DSpace repository of Philipps-Universität Marburg (publications
+  and research data). The dedicated RDR is data.uni-marburg.de.
+endpoints:
+- type: dspace
+  url: https://open.uni-marburg.de/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://open.uni-marburg.de/server/api/discover/search/objects
+  version: '7'
+id: openunimarburgde
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100013377
+  value: r3d100013377
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://open.uni-marburg.de
+name: open_UMR
+owner:
+  link: https://www.uni-marburg.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-HE
+      name: Hessen
+  name: Philipps-Universität Marburg
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+- re3data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027369

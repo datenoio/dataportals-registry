@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: LY
+      name: Libya
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: Institutional DSpace repository of the Libyan International Medical University
+  for scholarly publications and research materials.
+endpoints:
+- type: dspace
+  url: https://repository.limu.edu.ly/server/api
+  version: '9'
+- type: dspace:objects
+  url: https://repository.limu.edu.ly/server/api/discover/search/objects
+  version: '9'
+id: repositorylimueduly
+langs:
+- id: AR
+  name: Arabic
+- id: EN
+  name: English
+link: https://repository.limu.edu.ly/
+name: LIMU Repository
+owner:
+  link: https://limu.edu.ly
+  location:
+    country:
+      id: LY
+      name: Libya
+    level: 20
+  name: Libyan International Medical University
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- institutional repository
+- open access
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00027631

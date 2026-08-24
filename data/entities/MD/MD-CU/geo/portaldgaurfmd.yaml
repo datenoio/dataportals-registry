@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MD
+      name: Moldova
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: MD-CU
+      name: Chișinău
+description: ArcGIS REST services of Chișinău's General Directorate for Architecture,
+  Urban Planning and Land Relations, publishing municipal spatial layers.
+endpoints:
+- type: arcgis:rest:info
+  url: https://portal.dgaurf.md/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://portal.dgaurf.md/arcgis/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://portal.dgaurf.md/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://portal.dgaurf.md/arcgis/rest/services?f=geositemap
+id: portaldgaurfmd
+langs:
+- id: RO
+  name: Romanian
+link: https://portal.dgaurf.md/arcgis/rest/services
+name: DGAURF Chișinău ArcGIS REST
+owner:
+  link: https://www.dgaurf.md
+  location:
+    country:
+      id: MD
+      name: Moldova
+    level: 30
+    subregion:
+      id: MD-CU
+      name: Chișinău
+  name: Direcția Generală Arhitectură, Urbanism și Relații Funciare
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- arcgis
+- REST
+- Directory
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00010226

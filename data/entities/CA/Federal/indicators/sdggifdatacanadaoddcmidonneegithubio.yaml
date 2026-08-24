@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Statistics Canada Open SDG site for the UN Global Indicator Framework
+  (GIF), distinct from the Canadian Indicator Framework (CIF) catalog.
+endpoints:
+- type: opensdg:catalog
+  url: https://sdggif-data-canada-oddcmi-donnee.github.io/
+- type: opensdg:data
+  url: https://sdg-data-canada-odd-donnees.github.io/sdg-data-donnees-odd/en/data/1-1-1.json
+- type: opensdg:data
+  url: https://sdg-data-canada-odd-donnees.github.io/sdg-data-donnees-odd/en/data/1-2-1.json
+id: sdggifdatacanadaoddcmidonneegithubio
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://sdggif-data-canada-oddcmi-donnee.github.io/
+name: Canada Global Indicator Framework for the Sustainable Development Goals
+owner:
+  link: https://www.statcan.gc.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+  name: Statistics Canada
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: opensdg
+  name: OpenSDG
+status: active
+tags:
+- SDG
+- Canada
+- GIF
+- OpenSDG
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00027917

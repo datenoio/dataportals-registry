@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: FI
+      name: Finland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: National biodiversity data portal of the Finnish Biodiversity Information
+  Facility (FinBIF / Laji.fi). Provides species information and occurrence records;
+  related GeoServer and IPT services are registered separately.
+endpoints:
+- type: rest
+  url: https://ogcapi.laji.fi
+id: lajifi
+langs:
+- id: FI
+  name: Finnish
+- id: EN
+  name: English
+link: https://laji.fi
+name: FinBIF – Finnish Biodiversity Information Facility
+owner:
+  link: https://laji.fi/en
+  location:
+    country: *id001
+    level: 20
+  name: Finnish Biodiversity Information Facility
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- biodiversity
+- species
+- occurrences
+- FinBIF
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00027158

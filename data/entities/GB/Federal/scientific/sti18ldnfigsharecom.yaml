@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: STI 2018 London Figshare repository is a Figshare institutional repository
+  that publishes datasets.
+endpoints:
+- type: sitemap
+  url: https://sti18ldn.figshare.com/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://sti18ldn.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: sti18ldnfigsharecom
+langs:
+- id: EN
+  name: English
+link: https://sti18ldn.figshare.com
+name: STI 2018 London Figshare repository
+owner:
+  link: https://sti18ldn.figshare.com
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+  name: STI Conference
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+- figshare
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027218

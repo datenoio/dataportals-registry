@@ -1,0 +1,78 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-SCT
+      name: Scotland
+description: Scotland's Census Flexible Table Builder is the SuperWEB2 census table
+  builder of National Records of Scotland. Guest users build custom tables from Census
+  2022 and related outputs.
+endpoints:
+- type: superstar:catalog
+  url: https://www.scotlandscensus.gov.uk/webapi/jsf/login.xhtml
+id: scotlandscensusgovuk
+langs:
+- id: EN
+  name: English
+link: https://www.scotlandscensus.gov.uk/webapi/
+name: Scotland's Census Flexible Table Builder
+owner:
+  link: https://www.nrscotland.gov.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-SCT
+      name: Scotland
+  name: National Records of Scotland
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: Open Government Licence v3.0
+  license_url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+  privacy_policy_url: https://www.scotlandscensus.gov.uk/about/privacy
+  rights_type: granular
+  tos_url: https://www.scotlandscensus.gov.uk/webapi/terms.html
+software:
+  id: superstar
+  name: SuperSTAR
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- census
+- SuperWEB
+- SuperWEB2
+- Scotland
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00027997

@@ -18,7 +18,7 @@ The project collects and maintains structured metadata about:
 The registry is organized as a collection of YAML files that will eventually be reorganized as a database with a publicly available open API and bulk data dumps.
 
 ## Tech Stack
-- **Python 3.9-3.12**: Primary programming language
+- **Python 3.10-3.12**: Primary programming language
 - **YAML**: Data storage format for catalog entries
 - **JSON/JSONL**: Export formats for datasets
 - **DuckDB**: Analytics-friendly database format
@@ -86,7 +86,7 @@ The registry is organized as a collection of YAML files that will eventually be 
 - **Naming**: Test files follow `test_*.py` convention
 - **Coverage**: Aim for comprehensive test coverage, especially for core builder functions
 - **CI/CD**: Automated testing on push/PR via GitHub Actions
-  - Tests run on Python 3.9, 3.10, 3.11, 3.12
+  - Tests run on Python 3.10, 3.11, 3.12
   - Coverage reports uploaded to Codecov
 - **Test Types**:
   - Unit tests for individual functions
@@ -135,7 +135,7 @@ The registry is organized as a collection of YAML files that will eventually be 
 - **Country Organization**: Files must be placed in correct country/type directory structure
 - **No Duplicates**: Each catalog should have unique `id` and `uid`
 - **Data Quality**: Regular validation and quality checks required
-- **Python Version**: Must support Python 3.9-3.12
+- **Python Version**: Must support Python 3.10-3.12
 - **License**: Code under MIT, data under CC-BY 4.0
 
 ## External Dependencies

@@ -57,6 +57,12 @@ categories:
       - GeoMedia WebMap
       - disy Cadenza
       - Mapbender
+      - G3W-SUITE
+      - Astun iShare
+      - Cadcorp SIS WebMap
+      - Hexagon M.App Enterprise
+      - CubeWerx CubeSERV
+      - Sentinel Hub
     typical_features:
       - OGC service support (WMS, WFS, WCS)
       - CSW metadata catalog
@@ -119,12 +125,16 @@ categories:
       - Economic indicators
     examples:
       - PxWeb
+      - PxStat
       - OpenSDG
       - .Stat Suite
       - SDMX-RI
       - IBIS-PH
       - DHIS2
+      - FENIX
       - GENESIS-Online
+      - TabNet
+      - Beyond 20/20 Web Data Server
     typical_features:
       - SDMX support
       - Time series data
@@ -191,6 +201,9 @@ software_category_map:
   tablion: "Open data portal"
   triplydb: "Open data portal"
   custom: "Open data portal"
+  gxopendata: "Open data portal"
+  rdfrepository: "Open data portal"
+  resourcecontracts: "Open data portal"
 
   # Geoportals
   geonetwork: "Geoportal"
@@ -205,7 +218,15 @@ software_category_map:
   geoserver: "Geoportal"
   getsdiportal: "Geoportal"
   gis4smart: "Geoportal"
+  gisapp: "Geoportal"
   gisoftgis: "Geoportal"
+  g3wsuite: "Geoportal"
+  iobcina: "Geoportal"
+  ishare: "Geoportal"
+  cadcorp: "Geoportal"
+  cubewerx: "Geoportal"
+  mappenterprise: "Geoportal"
+  sentinelhub: "Geoportal"
   sampaswebgis: "Geoportal"
   belsisims: "Geoportal"
   netgisserver: "Geoportal"
@@ -257,6 +278,11 @@ software_category_map:
   gcnavi: "Geoportal"
   reearth: "Geoportal"
   wagmap: "Geoportal"
+  geusmap: "Geoportal"
+  landfolio: "Geoportal"
+  louhi: "Geoportal"
+  spatialsuite: "Geoportal"
+  trimblelocus: "Geoportal"
 
   # Scientific repositories
   dataverse: "Scientific data repository"
@@ -332,11 +358,14 @@ software_category_map:
   redatam: "Microdata catalog"
 
   # Indicators catalogs
+  pxstat: "Indicators catalog"
   pxweb: "Indicators catalog"
   opensdg: "Indicators catalog"
   ibisph: "Indicators catalog"
   dhis2: "Indicators catalog"
+  fenix: "Indicators catalog"
   genesisonline: "Indicators catalog"
+  tabnet: "Indicators catalog"
   statsuite: "Indicators catalog"
   sdmxri: "Indicators catalog"
   datainsight: "Indicators catalog"
@@ -351,9 +380,12 @@ software_category_map:
   eurostat: "Indicators catalog"
   ibmcognos: "Indicators catalog"
   knoema: "Indicators catalog"
+  sparkmap: "Indicators catalog"
   datavavt: "Indicators catalog"
   whoint: "Indicators catalog"
   bicontour: "Indicators catalog"
+  datawarehousepro: "Indicators catalog"
+  goaltracker: "Indicators catalog"
 
   # Metadata
   aristotlemdr: "Metadata"
@@ -401,6 +433,8 @@ software_subtype_map:
   bitrix: "cms_or_app_framework"
   breedbase: "domain_data_infrastructure"
   belsisims: "geospatial_catalog_platform"
+  beyond2020: "indicators_data_platform"
+  cadcorp: "geospatial_catalog_platform"
   carto: "geospatial_catalog_platform"
   cardo: "geospatial_catalog_platform"
   ckan: "data_portal_platform"
@@ -410,6 +444,7 @@ software_subtype_map:
   converis: "scientific_repository_platform"
   copernicuscds: "managed_saas_service"
   copernicusdhus: "geospatial_catalog_platform"
+  cubewerx: "geospatial_service_middleware"
   custom: "general_software"
   d4science: "data_portal_platform"
   databisorg: "indicators_data_platform"
@@ -424,6 +459,7 @@ software_subtype_map:
   datapress: "data_portal_platform"
   datauniceforg: "managed_saas_service"
   datavavt: "indicators_data_platform"
+  datawarehousepro: "managed_saas_service"
   dataverse: "scientific_repository_platform"
   datawheel: "managed_saas_service"
   dataworldbankorg: "managed_saas_service"
@@ -454,6 +490,7 @@ software_subtype_map:
   farvatergisogd: "geospatial_catalog_platform"
   figshare: "managed_saas_service"
   fusionregistry: "metadata_registry_platform"
+  g3wsuite: "geospatial_catalog_platform"
   galaxy: "scientific_repository_platform"
   gbifplatform: "domain_data_infrastructure"
   gcnavi: "managed_saas_service"
@@ -467,11 +504,15 @@ software_subtype_map:
   geoportalrlp: "geospatial_catalog_platform"
   geoserver: "geospatial_service_middleware"
   getsdiportal: "geospatial_catalog_platform"
+  geusmap: "geospatial_catalog_platform"
   gin: "scientific_repository_platform"
   gipuzkoairekia: "data_portal_platform"
+  gxopendata: "managed_saas_service"
   gis4smart: "geospatial_catalog_platform"
+  gisapp: "managed_saas_service"
   gisoftgis: "geospatial_catalog_platform"
   giswebse: "geospatial_catalog_platform"
+  goaltracker: "managed_saas_service"
   gpatlas: "geospatial_catalog_platform"
   haplo: "scientific_repository_platform"
   hubzero: "scientific_repository_platform"
@@ -487,28 +528,33 @@ software_subtype_map:
   instdb: "scientific_repository_platform"
   invenio: "scientific_repository_platform"
   inveniordm: "scientific_repository_platform"
+  iobcina: "managed_saas_service"
   iochembd: "domain_data_infrastructure"
   ipt: "domain_data_infrastructure"
   ipums: "microdata_catalog_platform"
   isigeo: "geospatial_catalog_platform"
   isogeo: "managed_saas_service"
+  ishare: "managed_saas_service"
   islandora: "scientific_repository_platform"
   jdop: "data_portal_platform"
   jkan: "data_portal_platform"
   junar: "managed_saas_service"
   knoema: "managed_saas_service"
   koordinates: "managed_saas_service"
+  landfolio: "managed_saas_service"
   librecat: "scientific_repository_platform"
   liferay: "cms_or_app_framework"
   linkahead: "scientific_repository_platform"
   lizmap: "geospatial_catalog_platform"
   lkod: "data_portal_platform"
+  louhi: "geospatial_catalog_platform"
   magda: "data_portal_platform"
   mangomap: "managed_saas_service"
   mapapps: "geospatial_catalog_platform"
   mapbender: "geospatial_catalog_platform"
   mapbiomas: "domain_data_infrastructure"
   mapgisigserver: "geospatial_service_middleware"
+  mappenterprise: "geospatial_catalog_platform"
   mapproxy: "geospatial_service_middleware"
   mapstore: "geospatial_catalog_platform"
   massbank: "domain_data_infrastructure"
@@ -555,6 +601,7 @@ software_subtype_map:
   popgis: "geospatial_catalog_platform"
   publishmydata: "data_portal_platform"
   pure: "scientific_repository_platform"
+  pxstat: "indicators_data_platform"
   pxweb: "indicators_data_platform"
   pycsw: "geospatial_service_middleware"
   pydap: "protocol_or_api_server"
@@ -564,18 +611,23 @@ software_subtype_map:
   radar: "scientific_repository_platform"
   ramadda: "scientific_repository_platform"
   rasdaman: "geospatial_service_middleware"
+  rdfrepository: "managed_saas_service"
   redatam: "microdata_catalog_platform"
   reearth: "geospatial_catalog_platform"
+  resourcecontracts: "data_portal_platform"
   samvera: "scientific_repository_platform"
   sampaswebgis: "geospatial_catalog_platform"
   sdmxri: "protocol_or_api_server"
   scicat: "scientific_repository_platform"
   seek: "scientific_repository_platform"
+  sentinelhub: "managed_saas_service"
   seue: "data_portal_platform"
   seoulopendataplaza: "data_portal_platform"
   smartfindersdi: "geospatial_catalog_platform"
   smw: "cms_or_app_framework"
   socrata: "managed_saas_service"
+  sparkmap: "managed_saas_service"
+  spatialsuite: "geospatial_catalog_platform"
   stacserver: "protocol_or_api_server"
   statsuite: "indicators_data_platform"
   stattech: "indicators_data_platform"
@@ -591,6 +643,7 @@ software_subtype_map:
   tianditu: "domain_data_infrastructure"
   tripal: "domain_data_infrastructure"
   triplydb: "data_portal_platform"
+  trimblelocus: "geospatial_catalog_platform"
   udata: "data_portal_platform"
   veupathdb: "domain_data_infrastructure"
   vufind: "scientific_repository_platform"

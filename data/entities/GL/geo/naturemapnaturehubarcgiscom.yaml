@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GL
+      name: Greenland
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: NatureMap is the Environmental Agency for Mineral Resource Activities
+  (EAMRA) open mapping catalog of protected areas, wildlife, fieldwork rules, and
+  environmental layers used in Greenland mineral-resource management. The Hub lists
+  more than 100 public datasets via DCAT and OGC API Records.
+endpoints:
+- type: dcatap201
+  url: https://naturemap-nature.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://naturemap-nature.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://naturemap-nature.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://naturemap-nature.hub.arcgis.com/api/search/v1
+id: naturemapnaturehubarcgiscom
+langs:
+- id: EN
+  name: English
+- id: DA
+  name: Danish
+link: https://naturemap-nature.hub.arcgis.com/
+name: NatureMap
+owner:
+  link: https://eamra.gl
+  location:
+    country:
+      id: GL
+      name: Greenland
+    level: 20
+  name: Environmental Agency for Mineral Resource Activities
+  type: Central government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- Greenland
+- nature
+- wildlife
+- protected areas
+- EAMRA
+- ArcGIS Hub
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00027224

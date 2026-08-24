@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: AR-F
+      name: La Rioja
+description: Nodo GeoNode de GEO INTA. IDERA lo lista como nodo de IDErioja; publica
+  capas de suelos y otras capas agropecuarias de La Rioja y el NOA.
+endpoints:
+- type: geonode:datasets
+  url: https://geo-nodo11.inta.gob.ar/api/datasets/
+id: geonodo11intagobar
+langs:
+- id: ES
+  name: Spanish
+link: https://geo-nodo11.inta.gob.ar/
+name: GEO INTA (nodo IDErioja)
+owner:
+  link: https://www.inta.gob.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+  name: Instituto Nacional de Tecnología Agropecuaria (INTA)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- geoportal
+- GeoNode
+- INTA
+- La Rioja
+- Argentina
+- has_api
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00026903

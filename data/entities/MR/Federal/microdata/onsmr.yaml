@@ -15,30 +15,34 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: No data from the provided URL could be extracted via the current process.
-  However, the schema structure and vocabularies can be prepared for future use when
-  the required data is available.
+description: Archivage National des Enquêtes et Recensements de la Mauritanie (ANADRIM).
+  NADA catalog of census and survey microdata and metadata produced by ANSADE (formerly
+  ONS) and other members of the national statistical system. Microdata access is licensed.
 endpoints:
 - type: nada:catalog-search
-  url: https://ons.mr/anadrim/index.php/api/catalog/search
+  url: https://anadrim.rgph5.mr/index.php/api/catalog/search
 id: onsmr
 langs:
-- id: EN
-  name: English
-link: https://ons.mr/anadrim/index.php/home
-name: No direct content extraction from the provided URL in search results.
+- id: FR
+  name: French
+- id: AR
+  name: Arabic
+link: https://anadrim.rgph5.mr/index.php/catalog
+name: ANADRIM - Archivage National des Enquêtes et Recensements de la Mauritanie
 owner:
-  link: https://ons.mr
+  link: https://ansade.mr
   location:
     country:
       id: MR
       name: Mauritania
     level: 20
-  name: Office National de la Statistique (Mauritania)
+  name: Agence Nationale de la Statistique et de l'Analyse Démographique et Économique
+    (ANSADE)
   type: Central government
 properties:
   has_doi: false
   transferable_topics: true
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -54,9 +58,15 @@ tags:
 - government
 - has_api
 - microdata
+- statistics
+- Mauritania
+- ANSADE
 topics:
 - id: SOCI
   name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
 - id: Society
   name: Society

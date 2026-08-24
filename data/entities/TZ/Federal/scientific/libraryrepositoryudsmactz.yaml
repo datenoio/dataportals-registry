@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TZ
+      name: Tanzania
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: DSpace institutional repository of the University of Dar es Salaam Library.
+  Hosts theses, dissertations, research articles, conference papers, and special collections.
+endpoints:
+- type: dspace
+  url: https://libraryrepository.udsm.ac.tz/server/api
+  version: '10'
+- type: dspace:objects
+  url: https://libraryrepository.udsm.ac.tz/server/api/discover/search/objects
+  version: '10'
+id: libraryrepositoryudsmactz
+langs:
+- id: EN
+  name: English
+link: https://libraryrepository.udsm.ac.tz/
+name: University of Dar es Salaam Library Repository
+owner:
+  link: https://www.udsm.ac.tz
+  location:
+    country:
+      id: TZ
+      name: Tanzania
+    level: 20
+  name: University of Dar es Salaam
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- institutional repository
+- open access
+- university
+- Tanzania
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00027570

@@ -16,12 +16,22 @@ coverage:
       id: '005'
       name: South America
 description: Portal of digital repositories managed by the Argentine Ministry of Science,
-  Technology and Innovation.
+  Technology and Innovation. The public discovery UI is VuFind and includes a
+  dataSet / conjunto de datos facet.
+endpoints:
+- type: vufind:api
+  url: https://repositoriosdigitales.mincyt.gob.ar/vufind/api/v1/search
+  version: '1'
+- type: openapi
+  url: https://repositoriosdigitales.mincyt.gob.ar/vufind/api?openapi
+  version: '3.0'
+- type: sitemap
+  url: https://repositoriosdigitales.mincyt.gob.ar/sitemap.xml
 id: repositoriosdigitalesmincytgobar
 langs:
 - id: ES
   name: Spanish
-link: https://repositoriosdigitales.mincyt.gob.ar
+link: https://repositoriosdigitales.mincyt.gob.ar/vufind/
 name: Sistema Nacional de Repositorios Digitales
 owner:
   link: https://mincyt.gob.ar
@@ -42,11 +52,12 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: vufind
+  name: VuFind
 status: active
 tags:
 - scientific
+- has_api
 - digital repositories
 - open access
 - scientific publications
@@ -56,6 +67,3 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00000045
-endpoints:
-- type: sitemap
-  url: https://repositoriosdigitales.mincyt.gob.ar/sitemap.xml

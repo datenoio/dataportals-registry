@@ -33,10 +33,16 @@ endpoints:
   url: https://kort.nunagis.gl/server/rest/services?f=geositemap
 - type: arcgis:kmz
   url: https://kort.nunagis.gl/server/rest/services?f=kmz
+- type: arcgis:rest:info
+  url: https://kort.nunagis.gl/refserver/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://kort.nunagis.gl/refserver/rest/services?f=pjson
 id: kortnunagisgl
 langs:
 - id: DA
   name: Danish
+- id: EN
+  name: English
 link: https://kort.nunagis.gl/server/rest/services
 name: NunaGIS - kort.nunagis.gl
 owner:
@@ -79,14 +85,8 @@ topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
 - id: TRAN
   name: Transport
-  type: eudatatheme
-- id: ENVI
-  name: Environment
   type: eudatatheme
 - id: ENVI
   name: Environment

@@ -11,17 +11,20 @@ coverage:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: Catálogo de Metadados Geográficos para o Município de São Paulo
+    subregion:
+      id: BR-SP
+      name: São Paulo
+description: PRODAM GeoServer hosting GeoSampa map services for the City of São Paulo.
 id: wmsgeosampaprodam
 langs:
 - id: PT
   name: Portuguese
 link: http://wms.geosampa.prodam/geoserver
-name: GeoSampa Data Catalog (Prefeitura de São Paulo)
+name: GeoSampa PRODAM GeoServer
 owner:
   link: http://metadados.geosampa.prefeitura.sp.gov.br
   location:
@@ -63,7 +66,7 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00005558
+uid: cdi00026934
 endpoints:
 - type: api
   url: http://wms.geosampa.prodam/geoserver/ows?service=WFS&request=GetCapabilities

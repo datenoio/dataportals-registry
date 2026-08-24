@@ -19,35 +19,35 @@ description: Sistema de gestión centralizada de metadatos de información georr
   producidos por entidades públicas y privadas, conforme a la normatividad peruana.
 endpoints:
 - type: geonetwork:query
-  url: http://catalogo.geoidep.gob.pe/metadata/srv/eng/q
+  url: https://catalogo.geoidep.gob.pe/metadatos/srv/eng/q
 - type: geonetwork:records
-  url: http://catalogo.geoidep.gob.pe/metadata/srv/api/records
+  url: https://catalogo.geoidep.gob.pe/metadatos/srv/api/records
 - type: openapi
-  url: http://catalogo.geoidep.gob.pe/metadata/srv/v2/api-docs
+  url: https://catalogo.geoidep.gob.pe/metadatos/srv/v2/api-docs
   version: '2'
 - type: csw202
-  url: http://catalogo.geoidep.gob.pe/metadata/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://catalogo.geoidep.gob.pe/metadatos/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: opensearch
-  url: http://catalogo.geoidep.gob.pe/metadata/srv/eng/portal.opensearch
+  url: https://catalogo.geoidep.gob.pe/metadatos/srv/eng/portal.opensearch
   version: '1.0'
 - type: oaipmh20
-  url: http://catalogo.geoidep.gob.pe/metadata/srv/eng/oaipmh?verb=Identify
+  url: https://catalogo.geoidep.gob.pe/metadatos/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 id: catalogogeoidepgobpe
 langs:
 - id: ES
   name: Spanish
-link: http://catalogo.geoidep.gob.pe/metadata/srv/rus/catalog.search
+link: https://catalogo.geoidep.gob.pe/metadatos
 name: Catálogo Nacional de Metadatos
 owner:
-  link: http://catalogo.geoidep.gob.pe
+  link: https://www.gob.pe/transformaciondigital
   location:
     country:
       id: PE
       name: Peru
     level: 20
-  name: Geoidep (Gobierno del Perú)
+  name: Secretaría de Gobierno y Transformación Digital
   type: Central government
 properties:
   has_doi: true

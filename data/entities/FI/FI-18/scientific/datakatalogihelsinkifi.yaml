@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: FI
+      name: Finland
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: FI-18
+      name: Uusimaa
+description: DSpace research data catalogue of the University of Helsinki. It stores
+  metadata for datasets produced at the university, harvested from repositories such
+  as Zenodo and FSD, and supports requests for restricted data.
+endpoints:
+- type: dspace:catalog
+  url: https://datakatalogi.helsinki.fi/
+id: datakatalogihelsinkifi
+langs:
+- id: FI
+  name: Finnish
+- id: EN
+  name: English
+link: https://datakatalogi.helsinki.fi/
+name: University of Helsinki Data Catalogue
+owner:
+  link: https://www.helsinki.fi
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: FI-18
+      name: Uusimaa
+  name: University of Helsinki
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- metadata
+- DSpace
+- Helsinki
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027143

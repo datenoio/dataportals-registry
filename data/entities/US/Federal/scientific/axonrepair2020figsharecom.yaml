@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Axon Repair Miami 2020 Figshare repository is a Figshare institutional
+  repository that publishes research datasets and other scholarly outputs.
+endpoints:
+- type: sitemap
+  url: https://axonrepair2020.figshare.com/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://axonrepair2020.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: axonrepair2020figsharecom
+langs:
+- id: EN
+  name: English
+link: https://axonrepair2020.figshare.com
+name: Axon Repair Miami 2020 Figshare repository
+owner:
+  link: https://axonrepair2020.figshare.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Axon Repair Miami 2020
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+- figshare
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027852

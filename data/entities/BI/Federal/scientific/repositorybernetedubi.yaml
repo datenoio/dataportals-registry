@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BI
+      name: Burundi
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: National DSpace repository of the Burundi Education and Research Network
+  (BERNET), with communities for Burundian universities and higher-education institutions.
+endpoints:
+- type: dspace
+  url: https://repository.bernet.edu.bi/server/api
+  version: '8'
+- type: dspace:objects
+  url: https://repository.bernet.edu.bi/server/api/discover/search/objects
+  version: '8'
+- type: oaipmh20
+  url: https://repository.bernet.edu.bi/server/oai/request?verb=Identify
+  version: '2.0'
+id: repositorybernetedubi
+langs:
+- id: FR
+  name: French
+link: https://repository.bernet.edu.bi
+name: DSpace at BERNET
+owner:
+  link: https://www.bernet.edu.bi
+  location:
+    country:
+      id: BI
+      name: Burundi
+    level: 20
+  name: Burundi Education and Research Network (BERNET)
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- DSpace
+- institutional repository
+- research data
+- Burundi
+- NREN
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Education
+  name: Education
+  type: iso19115
+uid: cdi00027617

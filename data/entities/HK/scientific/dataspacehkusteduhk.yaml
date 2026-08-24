@@ -14,25 +14,25 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Data repository and workspace for the HKUST research community (faculty
-  members and research postgraduate students) to manage research data.
+description: Legacy hostname for DataSpace@HKUST. https://dataspace.ust.hk redirects
+  to the canonical Dataverse at https://dataspace.hkust.edu.hk (see dataspaceusthk).
 endpoints:
 - type: dataverseapi
   url: https://dataspace.hkust.edu.hk/api/search
 id: dataspacehkusteduhk
-langs: 
+langs:
 - id: EN
   name: English
-link: https://dataspace.hkust.edu.hk
-name: "DataSpace@HKUST"
+link: https://dataspace.ust.hk
+name: DataSpace@HKUST (legacy hostname)
 owner:
-  link: https://dataspace.hkust.edu.hk
+  link: https://hkust.edu.hk
   location:
     country:
       id: HK
       name: Hong Kong
     level: 20
-  name: HKUST
+  name: The Hong Kong University of Science and Technology
   type: Academy
 properties:
   has_doi: true
@@ -46,7 +46,7 @@ rights:
 software:
   id: dataverse
   name: Dataverse
-status: active
+status: deprecated
 tags:
 - research data
 - academic

@@ -17,22 +17,25 @@ coverage:
     subregion:
       id: AU-VIC
       name: Victoria
-description: Discover research outputs from RMIT University. RMIT uses Figshare as
-  a research data publishing platform and repository for papers, data, theses, books.
-  Publishing research data enables sharing, verification, and reuse of data, and compliance
-  with research policies and funding requirements. RMIT Figshare automatically publishes
-  information to Research Data Australia, enabling international access and collaboration.
+description: Discover research outputs from RMIT University. RMIT uses Figshare as a research
+  data publishing platform and repository for papers, data, theses, books. Publishing research
+  data enables sharing, verification, and reuse of data, and compliance with research policies
+  and funding requirements. RMIT Figshare automatically publishes information to Research
+  Data Australia, enabling international access and collaboration.
 endpoints:
 - type: sitemap
   url: https://rmit.figshare.com/sitemap/siteindex.xml
   url_pattern: /articles/dataset/
 - type: sitemap
   url: https://research-repository.rmit.edu.au/sitemap/siteindex.xml
+- type: figshare:graphql
+  url: https://research-repository.rmit.edu.au/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
 id: rmitfigsharecom
 langs:
 - id: EN
   name: English
-link: https://rmit.figshare.com
+link: https://research-repository.rmit.edu.au
 name: RMIT University Figshare
 owner:
   link: https://www.rmit.edu.au/

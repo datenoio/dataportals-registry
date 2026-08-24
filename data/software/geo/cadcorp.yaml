@@ -1,0 +1,64 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'Yes'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: cadcorp
+name: Cadcorp SIS WebMap
+website: https://www.cadcorp.com
+description: Cadcorp SIS WebMap (backed by GeognoSIS) is a commercial web GIS used
+  by UK and other local authorities as the public map portal. Public sites are typically
+  branded SIS WebMap or Web Map Layers. Distinct from disy Cadenza (cadenza) and from
+  Astun iShare (ishare). Vendor is now NEC Software Solutions UK.
+owner:
+  name: Cadcorp (NEC Software Solutions)
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+logo_url: https://www.cadcorp.com/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: Uncertain
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: Uncertain
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: Uncertain
+  wfs: 'Yes'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+documentation_url: https://www.cadcorp.com/products/sis-webmap/
+export_formats:
+- GeoJSON
+- GML
+- JSON
+- KML
+- XML
+capabilities:
+- Map viewer
+- WMS service
+- WFS service
+- Local-government GIS
+last_updated: '2026-08-24T00:00:00Z'

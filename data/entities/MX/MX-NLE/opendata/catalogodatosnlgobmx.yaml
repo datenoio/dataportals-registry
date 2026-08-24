@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: MX-NLE
+      name: Nuevo León
+description: State open data catalog of the Government of Nuevo León, managed with
+  CKAN. Publishes datasets from state agencies, trusts, and public bodies.
+endpoints:
+- type: ckan
+  url: https://catalogodatos.nl.gob.mx/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalogodatos.nl.gob.mx/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalogodatos.nl.gob.mx/api/3/action/package_list
+  version: '3'
+id: catalogodatosnlgobmx
+langs:
+- id: ES
+  name: Spanish
+link: https://catalogodatos.nl.gob.mx/
+name: Catálogo de Datos Abiertos de Nuevo León
+owner:
+  link: https://www.nl.gob.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-NLE
+      name: Nuevo León
+  name: Gobierno del Estado de Nuevo León
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- Nuevo León
+- CKAN
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00026888

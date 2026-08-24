@@ -15,25 +15,30 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Оронзайн суурь өгөгдлийн сан, геодезийн цэг тэмдэгт, байр зүйн зураг,
-  хил зааг, хаяг, барилга, суурин газар, өндөржилт, гүн, газар зүйн нэр, газар ашиглалт,
-  газрын бүрхэвч, газрын нэгж талбар, дэд бүтэц, тээврийн сүлжээ, ус зүйн мэдээлэл,
-  ортозураг, хөрс, геологи, хүн ам зүйн мэдээлэл, түүх соёл, археологийн өв
+description: National spatial data infrastructure geoportal of Mongolia, publishing
+  topographic maps, geodetic control, administrative boundaries, addresses, buildings,
+  land use and cover, parcels, infrastructure, transport, hydrography, orthophotos,
+  soils, geology, population, and cultural-heritage layers.
 id: nsdigovmn
 langs:
 - id: MN
   name: Mongolian
+- id: EN
+  name: English
 link: https://nsdi.gov.mn
-name: ГЕОПОРТАЛ - Монгол Улс - Туршилтын хувилбар
+name: Mongolia National Geoportal
 owner:
-  link: https://nsdi.gov.mn
+  link: https://gazar.gov.mn
   location:
     country:
       id: MN
       name: Mongolia
     level: 20
-  name: ГАЗАР ЗОХИОН БАЙГУУЛАЛТ, ГЕОДЕЗИ, ЗУРАГ ЗҮЙН ЕРӨНХИЙ ГАЗАР
+  name: General Agency for Land Administration, Geodesy and Cartography
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -58,15 +63,6 @@ topics:
   type: eudatatheme
 - id: REGI
   name: Regions and cities
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: AGRI
-  name: Agriculture, fisheries, forestry and food
-  type: eudatatheme
-- id: ENVI
-  name: Environment
   type: eudatatheme
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
@@ -110,4 +106,4 @@ topics:
 - id: Transportation
   name: Transportation
   type: iso19115
-uid: temp00003140
+uid: cdi00027973

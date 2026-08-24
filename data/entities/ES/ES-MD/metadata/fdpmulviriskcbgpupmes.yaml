@@ -12,7 +12,7 @@ coverage:
       name: Spain
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: ES-MD
@@ -21,6 +21,13 @@ description: FAIR Data Point for the MULVIRISK plant-health project.
 endpoints:
 - type: dcat:ttl
   url: https://fdp.mulvirisk.cbgp.upm.es
+- type: dcat:ttl
+  url: https://fdp.mulvirisk.cbgp.upm.es/
+- type: openapi
+  url: https://fdp.mulvirisk.cbgp.upm.es/v3/api-docs
+  version: '3'
+- type: docs
+  url: https://fdp.mulvirisk.cbgp.upm.es/swagger-ui.html
 id: fdpmulviriskcbgpupmes
 langs:
 - id: EN

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -19,6 +19,11 @@ coverage:
       name: Northern Ireland
 description: Open data portal of the Northern Ireland Statistics and Research Agency
   (NISRA), providing access to official statistics and datasets for Northern Ireland.
+endpoints:
+- type: pxstatapi
+  url: https://ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadCollection
+- type: pxstatapi
+  url: https://ws-data.nisra.gov.uk/public/api.jsonrpc
 id: datanisragovuk
 langs:
 - id: EN
@@ -38,8 +43,8 @@ owner:
   name: Northern Ireland Statistics and Research Agency
   type: Central government
 software:
-  id: custom
-  name: Custom software
+  id: pxstat
+  name: PxStat
 status: active
 topics:
 - id: GOVE

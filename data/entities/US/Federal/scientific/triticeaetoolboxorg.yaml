@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: World
 description: USDA-ARS breeding information system for wheat, barley, and oat (T3)
   trial, genotype, and phenotype data.
+endpoints:
+- type: breedbase:catalog
+  url: https://triticeaetoolbox.org/
 id: triticeaetoolboxorg
 langs:
 - id: EN

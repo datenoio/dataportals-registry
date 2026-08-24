@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: GEUS tool and map catalog for planning shallow geothermal wells from
+  existing borehole data, including thermal conductivity of near-surface sediments,
+  with WMS/WFS export.
+endpoints:
+- type: wms111
+  url: https://data.geus.dk/geusmap/ows/25832.jsp?mapname=termiskejordarter&SERVICE=WMS&REQUEST=GetCapabilities
+  version: 1.1.1
+- type: wfs100
+  url: https://data.geus.dk/geusmap/ows/25832.jsp?mapname=termiskejordarter&SERVICE=WFS&REQUEST=GetCapabilities
+  version: 1.0.0
+id: termiskejordartergeusdk
+langs:
+- id: DA
+  name: Danish
+- id: EN
+  name: English
+link: https://data.geus.dk/geusmap/?mapname=termiskejordarter
+name: Assessment of thermal conductivity
+owner:
+  link: https://www.geus.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+  name: Geological Survey of Denmark and Greenland – GEUS
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geusmap
+  name: GEUSMAP
+status: active
+tags:
+- geothermal
+- thermal-conductivity
+- Denmark
+- GEUS
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00027787

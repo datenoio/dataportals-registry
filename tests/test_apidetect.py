@@ -1145,3 +1145,84 @@ def test_api_identifier_tianditu_uses_origin(monkeypatch):
         item["url"] == "https://henan.example.gov.cn/iserver/services.json"
         for item in found
     )
+
+
+def test_recommended_urlmaps_are_registered():
+    expected = {
+        "resourcecontracts": ["/contract/resources"],
+        "piveau": [
+            "/api/hub/search/search",
+            "/api/hub/repo/datasets",
+            "/api/hub/search/ckan/package_search",
+        ],
+        "fairdatapoint": ["/", "/v3/api-docs", "/swagger-ui.html"],
+        "omekas": ["/api", "/api/items", "/api-context"],
+        "contentdm": ["/digital/api/collections", "/oai/oai.php?verb=Identify"],
+        "symbiota": [
+            "/collections/datasets/rsshandler.php",
+            "/api/v2/documentation",
+        ],
+        "idra": ["/Idra/api/v1/administration/version", "/Idra/api/v1/catalogues"],
+    }
+    for sid, urls in expected.items():
+        assert sid in apidetect.CATALOGS_URLMAP
+        mapped = [item["url"] for item in apidetect.CATALOGS_URLMAP[sid]]
+        for url in urls:
+            assert url in mapped
+
+
+def test_api_identifier_contentdm_uses_origin(monkeypatch):
+    class _CdmSession:
+        def get(self, url, **kwargs):
+            if url == "https://statsnz.contentdm.oclc.org/digital/api/collections":
+                return _DummyResponse(
+                    content=b'{"collections":[]}',
+                    headers={"Content-Type": "application/json"},
+                )
+            return _DummyResponse(
+                status_code=404, headers={"Content-Type": "text/html"}, content=b""
+            )
+
+        def post(self, *args, **kwargs):
+            return _DummyResponse(status_code=404, content=b"")
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _CdmSession())
+
+    found = apidetect.api_identifier(
+        "https://statsnz.contentdm.oclc.org/digital/collection/p20045coll35",
+        "contentdm",
+    )
+
+    assert any(item["type"] == "customapi" for item in found)
+    assert any(
+        item["url"] == "https://statsnz.contentdm.oclc.org/digital/api/collections"
+        for item in found
+    )
+
+
+def test_api_identifier_resourcecontracts_json(monkeypatch):
+    class _RcSession:
+        def get(self, url, **kwargs):
+            if url.endswith("/contract/resources"):
+                return _DummyResponse(
+                    content=b'[{"resource":"Hydrocarbons","contract":1}]',
+                    headers={"Content-Type": "application/json"},
+                )
+            return _DummyResponse(
+                status_code=404, headers={"Content-Type": "text/html"}, content=b""
+            )
+
+        def post(self, *args, **kwargs):
+            return _DummyResponse(status_code=404, content=b"")
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _RcSession())
+
+    found = apidetect.api_identifier(
+        "https://guinea.resourcecontracts.org", "resourcecontracts"
+    )
+
+    assert any(item["type"] == "custom_api" for item in found)
+    assert any(
+        item["url"] == "https://guinea.resourcecontracts.org/contract/resources"
+        for item in found
+    )

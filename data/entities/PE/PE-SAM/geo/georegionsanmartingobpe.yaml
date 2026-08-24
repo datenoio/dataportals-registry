@@ -11,12 +11,15 @@ coverage:
     country:
       id: PE
       name: Peru
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: A regional data catalog providing geospatial datasets, typically accessible
-  via GeoNetwork.
+    subregion:
+      id: PE-SAM
+      name: San Martin
+description: Catálogo de metadatos de la Infraestructura de Datos Espaciales del
+  Gobierno Regional de San Martín (IDERSAM).
 endpoints:
 - type: geonetwork:query
   url: http://geo.regionsanmartin.gob.pe:8089/geonetwork/srv/eng/q
@@ -39,7 +42,7 @@ langs:
 - id: ES
   name: Spanish
 link: http://geo.regionsanmartin.gob.pe:8089/geonetwork
-name: Gobierno Regional San Martín data catalogue
+name: Catálogo de Metadatos IDERSAM
 owner:
   link: https://www.gob.pe/regionsanmartin
   location:

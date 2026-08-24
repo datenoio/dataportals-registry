@@ -1,7 +1,7 @@
 access_mode:
 - open
-api_status: active
-api: true
+api_status: inactive
+api: false
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -14,10 +14,9 @@ coverage:
     macroregion:
       id: World
       name: World
-description: OECD statistics portal providing data across various domains
-endpoints:
-- type: stattech:catalog
-  url: https://stats.oecd.org
+description: Former OECD.Stat (.Stat Technology) dissemination portal. OECD took the
+  servers offline on 1 July 2024; https://stats.oecd.org now redirects to the successor
+  OECD Data Explorer at https://data-explorer.oecd.org.
 id: statsoecdorg
 langs:
 - id: EN
@@ -45,7 +44,7 @@ rights:
 software:
   id: stattech
   name: .Stat Technology
-status: active
+status: deprecated
 tags:
 - statistics
 - international

@@ -22,7 +22,7 @@ id: webgateeceuropaeufusreg
 langs:
 - id: EN
   name: English
-link: https://webgate.ec.europa.eu/sdmxregistry/
+link: https://webgate.ec.europa.eu/fusionregistry/
 name: Euro SDMX Registry (Eurostat)
 owner:
   link: https://ec.europa.eu/eurostat
@@ -65,5 +65,6 @@ topics:
   type: iso19115
 uid: temp00000272
 endpoints:
-- type: fusionregistry:rest
-  url: https://webgate.ec.europa.eu/FusionRegistry/ws/rest
+- type: sdmx:dataflows
+  url: https://webgate.ec.europa.eu/fusionregistry/ws/public/sdmxapi/rest/dataflow/all/all/latest?detail=allstubs
+  version: '2.1'

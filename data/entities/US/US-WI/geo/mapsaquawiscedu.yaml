@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,11 +18,9 @@ coverage:
     subregion:
       id: US-WI
       name: Wisconsin
-description: Catalog of geospatial datasets, primarily focused on freshwater research
-  and natural resources.
-endpoints:
-- type: opengeoportal:catalog
-  url: http://maps.aqua.wisc.edu/opengeoportal/
+description: Former University of Wisconsin–Madison Aqua OpenGeoPortal catalog.
+  The /opengeoportal path now returns 404. Campus geospatial discovery moved to
+  GeoData@Wisconsin (https://geodata.wisc.edu).
 id: mapsaquawiscedu
 langs:
 - id: EN
@@ -51,7 +49,7 @@ rights:
 software:
   id: opengeoportal
   name: OpenGeoPortal
-status: active
+status: deprecated
 tags:
 - freshwater
 - geospatial

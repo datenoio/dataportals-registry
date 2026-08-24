@@ -11,12 +11,16 @@ coverage:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: GeoServer-based data catalog. geoportal. managed by Not provided. accessible
-  at services.opendataepirus.gr.
+    subregion:
+      id: GR-D
+      name: Ípeiros
+description: GeoServer of the Region of Epirus open-data spatial infrastructure
+  (OpenDataEpirus). OGC WMS/WFS services; the former CKAN UI host opendataepirus.gr
+  no longer resolves.
 endpoints:
 - type: wms111
   url: http://services.opendataepirus.gr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -29,9 +33,9 @@ langs:
 - id: EL
   name: Greek
 link: http://services.opendataepirus.gr/geoserver
-name: Services Geoportal - Not provided
+name: OpenDataEpirus GeoServer
 owner:
-  link: http://services.opendataepirus.gr/geoserver
+  link: https://www.php.gov.gr
   location:
     country:
       id: GR
@@ -40,8 +44,8 @@ owner:
     subregion:
       id: GR-D
       name: Ípeiros
-  name: Not provided
-  type: Local government
+  name: Region of Epirus
+  type: Regional government
 properties:
   has_doi: false
 rights:

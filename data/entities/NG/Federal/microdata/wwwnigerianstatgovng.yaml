@@ -15,30 +15,33 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Official catalog of aggregated statistical data and microdata from Nigeria,
-  covering socio-economic, demographic, and administrative records. Data available
-  for browsing, filtering, visualization, and download.
+description: Official NBS National Data Archive (NADA). Public-use survey files and
+  metadata for labour, agriculture, prices, and household surveys. Current host is
+  microdata.nigerianstat.gov.ng.
 endpoints:
 - type: nada:catalog-search
-  url: https://www.nigerianstat.gov.ng/nada/index.php/api/catalog/search
+  url: https://microdata.nigerianstat.gov.ng/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://microdata.nigerianstat.gov.ng/index.php/catalog/export/csv?ps=5000&collection[]
 id: wwwnigerianstatgovng
 langs:
 - id: EN
   name: English
-link: https://www.nigerianstat.gov.ng/nada/index.php
+link: https://microdata.nigerianstat.gov.ng/
 name: National Bureau of Statistics Nigeria - NADA Data Archive
 owner:
-  link: http://www.nigerianstat.gov.ng
+  link: https://www.nigerianstat.gov.ng
   location:
     country:
       id: NG
       name: Nigeria
     level: 20
-  name: Nigerian statistics agency
+  name: National Bureau of Statistics (NBS)
   type: Central government
 properties:
   has_doi: false
   transferable_topics: true
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -55,9 +58,8 @@ tags:
 - has_api
 - microdata
 - statistics
-- social
-- economic
-- aggregated data
+- official
+- Nigeria
 topics:
 - id: SOCI
   name: Population and society

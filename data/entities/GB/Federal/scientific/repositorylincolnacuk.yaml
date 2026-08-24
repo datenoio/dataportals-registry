@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: University of Lincoln Figshare repository is a Figshare institutional
+  repository that publishes datasets.
+endpoints:
+- type: sitemap
+  url: https://repository.lincoln.ac.uk/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://repository.lincoln.ac.uk/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: repositorylincolnacuk
+langs:
+- id: EN
+  name: English
+link: https://repository.lincoln.ac.uk
+name: University of Lincoln Figshare repository
+owner:
+  link: https://www.lincoln.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+  name: University of Lincoln
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+- figshare
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027216

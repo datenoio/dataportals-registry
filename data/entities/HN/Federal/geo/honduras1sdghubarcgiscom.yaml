@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HN
+      name: Honduras
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: ArcGIS Hub for Honduras Sustainable Development Goals data. Publishes
+  SDG indicators as maps and downloadable datasets.
+endpoints:
+- type: dcatap201
+  url: https://honduras-1-sdg.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://honduras-1-sdg.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://honduras-1-sdg.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://honduras-1-sdg.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://honduras-1-sdg.hub.arcgis.com/sitemap.xml
+id: honduras1sdghubarcgiscom
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: https://honduras-1-sdg.hub.arcgis.com/
+name: SDG Honduras Hub
+owner:
+  link: https://honduras-1-sdg.hub.arcgis.com/
+  location:
+    country:
+      id: HN
+      name: Honduras
+    level: 20
+  name: SDG Honduras Hub
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- SDG
+- Sustainable Development Goals
+- Honduras
+- GIS
+- statistics
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00002954

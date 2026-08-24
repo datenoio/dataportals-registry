@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: IL
+      name: Israel
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: ArcGIS REST catalog of the Society for the Protection of Nature in Israel
+  (SPNI), with nature surveys, birds, urban nature, and citizen-science layers.
+endpoints:
+- type: arcgis:rest:info
+  url: https://mapateva.org.il/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mapateva.org.il/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mapateva.org.il/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://mapateva.org.il/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mapateva.org.il/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://mapateva.org.il/arcgis/rest/services?f=kmz
+id: mapatevaorgil
+langs:
+- id: HE
+  name: Hebrew
+- id: EN
+  name: English
+link: https://mapateva.org.il/arcgis/rest/services
+name: SPNI Nature GIS
+owner:
+  link: https://www.natureisrael.org
+  location:
+    country: *id001
+    level: 20
+  name: Society for the Protection of Nature in Israel
+  type: Civil society
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- nature
+- biodiversity
+- SPNI
+- arcgis
+- Israel
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00027516

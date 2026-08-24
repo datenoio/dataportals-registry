@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Catálogo GeoNetwork de metadatos geográficos de la Superintendencia Nacional
+  de Servicios de Saneamiento (SUNASS).
+endpoints:
+- type: geonetwork:query
+  url: https://geosunass.sunass.gob.pe/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://geosunass.sunass.gob.pe/geonetwork/srv/api/records
+- type: csw202
+  url: https://geosunass.sunass.gob.pe/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geosunass.sunass.gob.pe/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: geosunasssunassgobpe
+langs:
+- id: ES
+  name: Spanish
+link: https://geosunass.sunass.gob.pe/geonetwork
+name: Catálogo de Metadatos de SUNASS
+owner:
+  link: https://www.gob.pe/sunass
+  location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+  name: Superintendencia Nacional de Servicios de Saneamiento
+  type: Central government
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- water
+- government
+- Peru
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+uid: cdi00027277

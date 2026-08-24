@@ -14,16 +14,9 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: "The Integrated Publishing Toolkit (IPT) is free open-source software\
-  \ developed by GBIF and used by organizations around the world to create and manage\
-  \ repositories for sharing/publishing biodiversity datasets in standardized formats.\
-  \ It enables users to map their datasets to the Darwin Core standard, package them\
-  \ into a Darwin Core Archive (DwC-A), and make them accessible through GBIF and\
-  \ other biodiversity portals. The IPT streamlines the process of data standardization,\
-  \ metadata documentation, and sharing, ensuring datasets are interoperable and globally\
-  \ discoverable.\r\n\r\nThis instance of IPT is used by the Ministry of Environmental\
-  \ Protection and Green Transition in Republic of Croatia as a part of a national\
-  \ BioAtlas system.\r\nFor more detailse see: https://www.gbif.org/ipt"
+description: GBIF Integrated Publishing Toolkit (IPT) instance for the Croatian BioAtlas,
+  used by the Ministry of Environmental Protection and Green Transition to publish
+  biodiversity datasets as Darwin Core Archives.
 endpoints:
 - type: dcat:ttl
   url: https://ipt-bioatlas.bioportal.hr/dcat
@@ -34,8 +27,8 @@ endpoints:
   version: '2.0'
 id: iptbioatlasbioportalhr
 langs:
-- id: SR
-  name: Serbian
+- id: HR
+  name: Croatian
 link: https://ipt-bioatlas.bioportal.hr
 name: BioAtlas IPT
 owner:
@@ -46,7 +39,7 @@ owner:
       name: Croatia
     level: 20
   name: Ministry of Environmental Protection and Green Transition
-  type: Academy
+  type: Central government
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)

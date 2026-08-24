@@ -57,6 +57,34 @@ OGC service middleware. Register it when it is the **catalog** (layer list / Get
 
 Do not register the `/geoserver/web` login as a catalog if a public WMS/WFS catalog is already represented by a parent GeoNode/GeoNetwork record on the same host. Prefer one record per public catalog UI.
 
+## CubeWerx CubeSERV (`cubewerx`) {#cubewerx}
+
+Commercial OGC server (WMS, WMTS, WFS, WCS, CSW, OGC API) in the Stratos platform. Vendor: [cubewerx.com](https://www.cubewerx.com). Register when CubeSERV is the **public catalog**, not a hidden backend.
+
+**Signals:** path `/cubewerx/cubeserv`; GetCapabilities `ServiceProvider` or title CubeWerx / CubeSERV; Stratos catalogue CSW.
+
+**Confirm:** GET WMS or CSW GetCapabilities that names CubeWerx. One record per public service root, not per layer.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/cubewerx/cubeserv (WMS OR CSW OR GetCapabilities)` |
+| Google | `"CubeWerx" OR CubeSERV (WMS OR geoportal OR CSW) -site:cubewerx.com` |
+| Censys | `web.endpoints.http.body: "CubeWerx"` |
+
+## Hexagon M.App Enterprise (`mappenterprise`) {#mappenterprise}
+
+Hexagon geoportal / browser GIS. Vendor: [hexagon.com/products/m-app-enterprise](https://hexagon.com/products/m-app-enterprise). Distinct from GeoMedia WebMap (`geomediawebmap`) and ERDAS APOLLO (`erdasapollo`).
+
+**Signals:** path `/Apps/`; M.App Enterprise or Hexagon Geospatial branding; OGC WMS/WFS from the same estate.
+
+**Confirm:** GET the public Apps portal and match M.App / Hexagon Geospatial. One record per public portal, not per app.
+
+| Tool | Query |
+|------|-------|
+| Google | `"M.App Enterprise" OR "M.App" (geoportal OR Apps) Hexagon -site:hexagon.com` |
+| Google | `inurl:/Apps/ (geoportal OR "M.App")` |
+| Censys | `web.endpoints.http.body: "M.App Enterprise"` |
+
 ## ArcGIS Hub (`arcgishub`) {#arcgishub}
 
 Hub sites and Open Data sites on ArcGIS Online. Gallery: [hub.arcgis.com](https://hub.arcgis.com/). Hosts: `*.hub.arcgis.com`, `*opendata.arcgis.com`, plus custom domains.
@@ -93,6 +121,21 @@ QGIS Server web client. **Signals:** `/index.php/view/`, `lizMap`, project list.
 | Google | `"Lizmap" (webgis OR geoportail OR "qgis") -site:github.com` |
 | Google | `inurl:lizmap inurl:index.php/view` |
 | Censys | `web.endpoints.http.body: "lizMap"` |
+
+## G3W-SUITE (`g3wsuite`) {#g3wsuite}
+
+Open-source QGIS WebGIS (G3W-ADMIN + G3W-CLIENT). Site: [g3wsuite.it](https://g3wsuite.it). Distinct from Lizmap (`lizmap`) and QWC2 (`qwc2`).
+
+**Signals:** title or footer “G3W-SUITE”; `g3w-client` / `g3wsdk` in JS; path `/map/{group}/{project}/`; REST `/api/` or `/group/api/`.
+
+**Confirm:** GET the public portal or `/map/` client and match G3W-CLIENT. One record per public portal (tenant), not per QGIS project. Skip `/admin` login. If QGIS Server on the same host is only the OGC backend, do not also register `qgisserver`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"G3W-SUITE" OR "G3W-CLIENT" (webgis OR geoportale) -site:github.com -site:g3wsuite.it` |
+| Google | `inurl:/map/ g3w (webgis OR qgis) site:.it` |
+| Censys | `web.endpoints.http.body: "g3w-client"` |
+| Censys | `web.endpoints.http.body: "G3W-SUITE"` |
 
 ## NextGIS Web (`nextgisweb`) {#nextgisweb}
 
@@ -140,6 +183,20 @@ EO cloud-processing API with a STAC-compatible collection catalog. Site: [openeo
 | Censys | `web.endpoints.http.body: "openeo"` |
 
 Register the **backend API** root, not Hub HTML alone, unless Hub is the public product (`hub.openeo.org`). Prefer `openeo` over `stacserver` when `/processes` is part of the same API. Skip process-graph playgrounds with no collection list.
+
+## Sentinel Hub (`sentinelhub`) {#sentinelhub}
+
+Earth-observation catalog and processing API (Sinergise / Planet). Docs: [docs.sentinel-hub.com](https://docs.sentinel-hub.com). Official STAC: `https://services.sentinel-hub.com/api/v1/catalog/1.0.0/`. Distinct from generic STAC (`stacserver`) and from Sentinel Hub **openEO** backends (`openeo`).
+
+**Signals:** hostname `*.sentinel-hub.com`; STAC `/api/v1/catalog`; Process API `/api/v1/process`; EO Browser / Copernicus Browser UI.
+
+**Confirm:** GET the STAC catalog root JSON (`type` Catalog/STAC API) or the documented OGC WMS/WMTS. One record per public catalog API (not every collection, not EO Browser as a second catalog if the STAC API is already registered). Prefer `sentinelhub` over `stacserver` on Sentinel Hub hosts.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Sentinel Hub" (STAC OR catalog OR "EO Browser") -site:github.com` |
+| Google | `site:services.sentinel-hub.com catalog` |
+| Censys | `web.names: "sentinel-hub.com"` |
 
 ## pygeoapi (`pygeoapi`) {#pygeoapi}
 

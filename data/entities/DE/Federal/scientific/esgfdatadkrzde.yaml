@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: Western Europe
 description: Earth System Grid Federation Metagrid node at DKRZ. European index and data node
   for CMIP and related climate-model archives.
+endpoints:
+- type: esgf:catalog
+  url: https://esgf-data.dkrz.de/
 id: esgfdatadkrzde
 langs:
 - id: EN

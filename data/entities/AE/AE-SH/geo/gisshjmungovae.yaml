@@ -1,0 +1,93 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AE
+      name: United Arab Emirates
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: AE-SH
+      name: Ash Shāriqah
+description: ArcGIS REST services directory for Sharjah Municipality, publishing municipal
+  map and feature services for planning, drainage, agriculture, health, and public
+  services.
+endpoints:
+- type: arcgis:portals:self
+  url: https://gis.shjmun.gov.ae/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://gis.shjmun.gov.ae/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.shjmun.gov.ae/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.shjmun.gov.ae/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.shjmun.gov.ae/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.shjmun.gov.ae/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.shjmun.gov.ae/server/rest/services?f=kmz
+id: gisshjmungovae
+langs:
+- id: AR
+  name: Arabic
+- id: EN
+  name: English
+link: https://gis.shjmun.gov.ae/server/rest/services
+name: Sharjah Municipality GIS
+owner:
+  link: https://www.shjmun.gov.ae
+  location:
+    country:
+      id: AE
+      name: United Arab Emirates
+    level: 30
+    subregion:
+      id: AE-SH
+      name: Ash Shāriqah
+  name: Sharjah Municipality
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- ArcGIS
+- Sharjah
+- municipal
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00027956

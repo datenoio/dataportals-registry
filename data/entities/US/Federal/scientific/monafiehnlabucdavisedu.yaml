@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: World
 description: Mass spectral metadata database aggregating experimental and in-silico
   spectra for metabolite identification.
+endpoints:
+- type: massbank:catalog
+  url: https://mona.fiehnlab.ucdavis.edu/
 id: monafiehnlabucdavisedu
 langs:
 - id: EN

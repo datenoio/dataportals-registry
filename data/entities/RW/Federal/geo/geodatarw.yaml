@@ -15,7 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Data catalog for geospatial data from Rwanda via REST services
+description: ArcGIS Enterprise REST catalog for Rwanda's National Spatial Data Infrastructure
+  (NSDI), hosting fundamental geospatial datasets, land-use master plans, and topographic
+  layers.
 endpoints:
 - type: arcgis:rest:info
   url: https://geodata.rw/server/rest/info?f=pjson
@@ -34,15 +36,15 @@ langs:
 - id: EN
   name: English
 link: https://geodata.rw/server/rest/services
-name: geodata.rw server services
+name: Rwanda NSDI geospatial services (geodata.rw)
 owner:
-  link: https://geodata.rw/
+  link: https://www.lands.rw
   location:
     country:
       id: RW
       name: Rwanda
     level: 20
-  name: Not specified in the provided text
+  name: Rwanda Land Administration and Information Systems Authority (RLISA)
   type: Central government
 properties:
   has_doi: false
@@ -59,10 +61,17 @@ software:
 status: active
 tags:
 - GIS
-- Open Data
+- NSDI
+- land
 - Rwanda
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
-uid: temp00005612
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00027674

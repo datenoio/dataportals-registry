@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-AL
+      name: Alagoas
+description: GeoNetwork metadata catalog of Alagoas SEPLANDE / SEPLAG listed in the
+  INDE harvest table. Distinct from the GeoServer at geo.seplande.al.gov.br. Last
+  INDE harvest recorded in June 2022.
+endpoints:
+- type: geonetwork:catalog
+  url: http://inde.dados.al.gov.br:8080/geonetwork
+id: indedadosalgovbr
+langs:
+- id: PT
+  name: Portuguese
+link: http://inde.dados.al.gov.br:8080/geonetwork
+name: GeoNetwork SEPLAG Alagoas
+owner:
+  link: https://www.seplande.al.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-AL
+      name: Alagoas
+  name: Secretaria de Estado do Planejamento, Gestão e Patrimônio de Alagoas (SEPLANDE)
+  type: Regional government
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- Brazil
+- Alagoas
+- GeoNetwork
+- geospatial
+- INDE
+- metadata
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00027195

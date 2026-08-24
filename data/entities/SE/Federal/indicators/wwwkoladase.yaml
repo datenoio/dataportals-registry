@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Open database of about 6,000 key performance indicators for Swedish municipalities
+  and regions, with comparison tools and a public REST API.
+endpoints:
+- type: api
+  url: https://api.kolada.se/v3
+  version: '3'
+id: wwwkoladase
+langs:
+- id: SV
+  name: Swedish
+link: https://www.kolada.se
+name: Kolada
+owner:
+  link: https://www.rka.nu
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Rådet för främjande av kommunala analyser
+  type: Civil society
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- indicators
+- municipalities
+- regions
+- has_api
+- Sweden
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00027166

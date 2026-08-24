@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,15 +13,14 @@ coverage:
       name: United States
     level: 30
     macroregion:
-      id: World
-      name: World
+      id: '021'
+      name: Northern America
     subregion:
       id: US-WI
       name: Wisconsin
-description: Website described as a data catalog featuring geospatial data resources.
-endpoints:
-- type: opengeoportal:catalog
-  url: http://maps.sco.wisc.edu/opengeoportal/
+description: Former University of Wisconsin State Cartographer's Office OpenGeoPortal
+  catalog. The /opengeoportal path now returns 404. Campus geospatial discovery
+  moved to GeoData@Wisconsin (https://geodata.wisc.edu).
 id: mapsscowiscedu
 langs:
 - id: EN
@@ -50,7 +49,7 @@ rights:
 software:
   id: opengeoportal
   name: OpenGeoPortal
-status: active
+status: deprecated
 tags:
 - GIS
 - academic

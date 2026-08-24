@@ -22,7 +22,7 @@ The registry records **catalogs** (portals, geoportals, repositories, and simila
 | [Geoportals](discovery-geoportals.md) | Overview; SDI stacks: [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md); viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md) |
 | [Scientific repositories](discovery-scientific.md) | Institutional IRs; domain repos: [discovery-scientific-domain.md](discovery-scientific-domain.md) |
 | [Metadata catalogs](discovery-metadata.md) | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
-| [Indicators and microdata](discovery-indicators.md) | PxWeb, OpenSDG, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS |
+| [Indicators and microdata](discovery-indicators.md) | PxWeb, OpenSDG, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, StatPlanet |
 | [Search, ML, API, marketplaces](discovery-other.md) | Data search engines (Idra, OpenAIRE), ML catalogs, API directories, data marketplaces |
 
 ## Before you search
@@ -67,6 +67,7 @@ Many platforms publish installation galleries. Cross-check each URL against the 
 | [STAC Index](https://stacindex.org/catalogs) | STAC catalogs |
 | [Open Data Inception](https://data.opendatasoft.com/explore/dataset/open-data-sources%40public/information/) | Open-data portals |
 | [OpenSDG community](https://open-sdg.org/community) | SDG indicator sites |
+| [StatSilk gallery](https://www.statsilk.com/gallery) | StatPlanet indicator maps (many Flash-era; confirm live Cloud/HTML5) |
 | [GBIF IPT](https://www.gbif.org/ipt) | Biodiversity IPT nodes |
 | [ArcGIS Hub](https://hub.arcgis.com/) | ArcGIS Hub sites |
 | [EntryScape customers](https://entryscape.com/en/customers/) | EntryScape catalogs |
@@ -101,6 +102,18 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | MapServer | `/cgi-bin/mapserv`, WMS GetCapabilities mentions MapServer | WMS `GetCapabilities` |
 | QGIS Server | `qgis_mapserv.fcgi`, GetCapabilities mentions QGIS Server | WMS `GetCapabilities` |
 | mviewer | `mviewer` JS, `/apps/*.xml` config | Viewer URL plus public layer/theme config |
+| Trimble Locus IMS | `/IMS/`, `tekla-mvc-common` | Public karttapalvelu tenant |
+| Sitowise Louhi | OpenLayers + `partner=stw` | Public karttapalvelu without `/IMS/` |
+| Landfolio | `portals.landfolio.com` | Country cadastre map portal (not ArcGIS REST) |
+| Spatial Suite | SpatialMap `browserdetect.js?ver=` | Municipal webkort |
+| GEUSMAP | `/geusmap/?mapname=` | One record per mapname |
+| GISApp | `*.gisapp.ro` | One city tenant (not ArcGIS REST) |
+| iObčina | `/gisapp/Default.aspx?a=` | Kaliopa municipal tenant |
+| DataWarehousePro | `app.datawarehousepro.com/go/` | One tenant portal |
+| Goal Tracker | `*.goaltracker.org` | Country SDG tenant |
+| RDF Online Repository | `*.revenuedev.org` | Country license portal |
+| ResourceContracts | `resourcecontracts.org` | Hub or country contract catalog |
+| Guangxi Public Data Open Platform | `{city}.data.gxzf.gov.cn` | One city or provincial tenant |
 | Isogeo | OpenCatalog `/api` OpenAPI (not IsiGéo) | `/api` or public OpenCatalog home |
 | openEO | landing `api_version` + `/collections` + `/processes` | `/.well-known/openeo` or API root |
 | Mapbender | `/application/`, Mapbender viewer | HTML or title mentions Mapbender |
@@ -116,6 +129,7 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | CoGIS | CoGIS Portal | Portal home; `elitegis` only if that is the branded viewer |
 | OpenGeoPortal | federated layer search | Geoportal home, not a single layer |
 | Knoema | `*.knoema.com` or branded hub | Portal home only — not every dataset URL |
+| StatPlanet | title `StatPlanet`, `data.csv` / StatPlanet Cloud | Public explorer home, not a single indicator URL |
 | SDMX-RI | `NSIWebService` / NSIStdV20Service | Public NSI/SDMX catalog |
 | GENESIS-Online | `/genesis/online` | Table catalog (POST-heavy API) |
 | IBIS-PH | `/ibisph-view/`, IBIS-Q | Public indicator home |
@@ -211,6 +225,13 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - map.apps: `/mapapps/`
 - VertiGIS WebOffice: `/synserver` or `/WebOffice/synserver` (title `VertiGIS WebOffice`)
 - Geocortex Essentials: `/Geocortex/Essentials/REST/sites?f=pjson` or `/Html5Viewer/` (title `Geocortex Essentials Sites Directory` / `Geocortex Viewer for HTML5`)
+- Trimble Locus IMS: `/IMS/` with `imscore` / `tekla-mvc-common` bundles
+- Sitowise Louhi: OpenLayers `/Scripts/integration/openlayers/` plus Sitowise `partner=stw`
+- Landfolio: `portals.landfolio.com/{country}/`
+- Spatial Suite: `/js/standard/browserdetect.js?ver=` (SpatialMap)
+- GEUSMAP: `/geusmap/?mapname=`
+- GISApp: `{city}.gisapp.ro`
+- iObčina: `/gisapp/Default.aspx?a=`
 - disy Cadenza: `/cadenza/` or `/pages/map/default/index.xhtml` (Cadenza Web / Workbooks)
 - ArcGIS: `/arcgis/rest/services?f=pjson`
 - GeoMapFish: `/themes`

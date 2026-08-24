@@ -11,11 +11,14 @@ coverage:
     country:
       id: ZA
       name: South Africa
-    level: 20
+    level: 30
     macroregion:
       id: 018
       name: Southern Africa
-description: Carto-based data catalog for Durban open data, accessible via opendatadurban.carto.com.
+    subregion:
+      id: ZA-KZN
+      name: Kwazulu-Natal
+description: Carto-based open data catalog for eThekwini Municipality (Durban).
 endpoints:
 - type: carto:catalog
   url: https://opendatadurban.carto.com
@@ -34,8 +37,8 @@ owner:
     level: 30
     subregion:
       id: ZA-KZN
-      name: KwaZulu-Natal
-  name: not specified (implied Durban local government use site)
+      name: Kwazulu-Natal
+  name: eThekwini Municipality
   type: Local government
 properties:
   has_doi: false

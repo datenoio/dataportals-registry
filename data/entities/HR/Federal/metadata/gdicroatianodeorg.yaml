@@ -12,12 +12,19 @@ coverage:
       name: Croatia
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Croatian node FAIR Data Point of the European Genomic Data Infrastructure.
 endpoints:
 - type: dcat:ttl
   url: https://gdi-croatia-node.org
+- type: dcat:ttl
+  url: https://gdi-croatia-node.org/
+- type: openapi
+  url: https://gdi-croatia-node.org/v3/api-docs
+  version: '3'
+- type: docs
+  url: https://gdi-croatia-node.org/swagger-ui.html
 id: gdicroatianodeorg
 langs:
 - id: EN

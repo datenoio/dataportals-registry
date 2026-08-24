@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Metadata catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Structural metadata registry of the National Statistical Office of Thailand
+  for authoring, maintaining, storing and exchanging SDMX-compliant Data Structure
+  Definitions, Codelists, Concepts and related artefacts.
+endpoints:
+- type: sdmx:dataflows
+  url: https://sdmx.nso.go.th/FusionMetadataRegistry/ws/public/sdmxapi/rest/dataflow/all/all/latest?detail=allstubs
+  version: '2.1'
+id: sdmxnsogoth
+langs:
+- id: TH
+  name: Thai
+- id: EN
+  name: English
+link: https://sdmx.nso.go.th/FusionMetadataRegistry/
+name: TNSO Metadata Registry
+owner:
+  link: https://www.nso.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+  name: National Statistical Office Thailand
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: fusionregistry
+  name: Fusion Metadata Registry
+status: active
+tags:
+- SDMX
+- metadata
+- statistics
+- structural metadata
+- data structures
+- codelists
+- government
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00027840

@@ -14,10 +14,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Request for explicit extraction schema; currently, no direct extraction
-  from the provided URL is supported due to technical constraints (no direct scraping
-  or API access). However, you can use the following data structure template for manual
-  or scripted extraction, based on the vocabularies you specified.
+description: CKAN open data catalog of El Salvador's Ministry of Education, Science
+  and Technology (MINEDUCYT / SIGES), with datasets on schools, infrastructure,
+  calendars, and education statistics.
 endpoints:
 - type: ckan
   url: https://ckan.siges.sv/api/3
@@ -28,6 +27,9 @@ endpoints:
 - type: ckan:package-list
   url: https://ckan.siges.sv/api/3/action/package_list
   version: '3'
+- type: ckan:status-show
+  url: https://ckan.siges.sv/api/3/action/status_show
+  version: '3'
 id: ckansigessv
 langs:
 - id: ES
@@ -35,13 +37,13 @@ langs:
 link: https://ckan.siges.sv/
 name: SIGES Open Data
 owner:
-  link: https://www.siges.sv
+  link: https://www.mined.gob.sv
   location:
     country:
       id: SV
       name: El Salvador
     level: 20
-  name: SIGES
+  name: Ministerio de Educación, Ciencia y Tecnología
   type: Central government
 rights:
   license_id: null
@@ -57,17 +59,13 @@ status: active
 tags:
 - government
 - has_api
+- education
+- El Salvador
 topics:
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
 - id: Society
   name: Society
-  type: iso19115
-- id: Elevation
-  name: Elevation
-  type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00005340

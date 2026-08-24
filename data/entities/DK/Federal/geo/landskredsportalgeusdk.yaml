@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: GEUS landslide portal mapping landscape structures formed by landslides
+  in Denmark, including ancient and currently active slides mapped from the Danish
+  elevation model, with WMS/WFS export.
+endpoints:
+- type: wms111
+  url: https://data.geus.dk/geusmap/ows/25832.jsp?mapname=landskredsportal&SERVICE=WMS&REQUEST=GetCapabilities
+  version: 1.1.1
+- type: wfs100
+  url: https://data.geus.dk/geusmap/ows/25832.jsp?mapname=landskredsportal&SERVICE=WFS&REQUEST=GetCapabilities
+  version: 1.0.0
+id: landskredsportalgeusdk
+langs:
+- id: DA
+  name: Danish
+- id: EN
+  name: English
+link: https://data.geus.dk/geusmap/?mapname=landskredsportal
+name: GEUS landslide portal
+owner:
+  link: https://www.geus.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+  name: Geological Survey of Denmark and Greenland – GEUS
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geusmap
+  name: GEUSMAP
+status: active
+tags:
+- landslides
+- geology
+- Denmark
+- GEUS
+- hazards
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00027780

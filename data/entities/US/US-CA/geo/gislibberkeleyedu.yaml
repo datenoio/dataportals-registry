@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,14 +18,9 @@ coverage:
     subregion:
       id: US-CA
       name: California
-description: The Library collects GIS data for areas around the world, with an emphasis
-  on the nine county San Francisco Bay Area and northern California. Data can be accessed
-  via GeoData @ UC Berkeley (the Library's geoportal), various databases, and at the
-  GIS workstations in the Earth Sciences & Map Library. The guides below also include
-  links to frequently-requested public datasets and sources.
-endpoints:
-- type: opengeoportal:catalog
-  url: http://gis.lib.berkeley.edu/
+description: Former UC Berkeley Library OpenGeoPortal catalog at gis.lib.berkeley.edu.
+  The URL now returns 404. Geospatial discovery moved to GeoData@UC Berkeley
+  (https://geodata.lib.berkeley.edu).
 id: gislibberkeleyedu
 langs:
 - id: EN
@@ -33,7 +28,7 @@ langs:
 link: http://gis.lib.berkeley.edu/
 name: UC Berkeley Library GIS Data Portal
 owner:
-  link: http://gis.lib.berkeley.edu/
+  link: https://www.lib.berkeley.edu
   location:
     country:
       id: US
@@ -54,7 +49,7 @@ rights:
 software:
   id: opengeoportal
   name: OpenGeoPortal
-status: active
+status: deprecated
 tags:
 - GIS
 - maps

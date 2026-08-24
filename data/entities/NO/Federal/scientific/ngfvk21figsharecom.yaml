@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Vinterkonferansen 2021 Figshare repository is a Figshare institutional
+  repository that publishes research datasets and other scholarly outputs.
+endpoints:
+- type: sitemap
+  url: https://ngf-vk21.figshare.com/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://ngf-vk21.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: ngfvk21figsharecom
+langs:
+- id: EN
+  name: English
+link: https://ngf-vk21.figshare.com
+name: Vinterkonferansen 2021 Figshare repository
+owner:
+  link: https://ngf-vk21.figshare.com
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: Norwegian Geophysical Association
+  type: Civil society
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+- figshare
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027863

@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Standard based and decentralized spatial information management system
-  catalog for geospatial data and metadata.
+description: National Spatial Data Infrastructure metadata catalogue (GeoNetwork) of
+  Moldova for discovery of spatial datasets and network services.
 endpoints:
 - type: csw202
   url: http://geoportalinds.gov.md/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -38,16 +38,16 @@ id: geoportalindsgovmd
 langs:
 - id: RO
   name: Romanian
-link: http://geoportalinds.gov.md/geonetwork
+link: https://geoportalinds.gov.md/geonetwork
 name: GeoPortal of the National Spatial Data Infrastructure of Moldova (NSDI)
 owner:
-  link: https://www.gov.md
+  link: https://www.agcc.gov.md
   location:
     country:
       id: MD
       name: Moldova
     level: 20
-  name: Government of Moldova
+  name: Agenția Geodezie, Cartografie și Cadastru
   type: Central government
 properties:
   has_doi: true
@@ -79,15 +79,6 @@ topics:
   type: eudatatheme
 - id: TRAN
   name: Transport
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: AGRI
-  name: Agriculture, fisheries, forestry and food
-  type: eudatatheme
-- id: REGI
-  name: Regions and cities
   type: eudatatheme
 - id: ENVI
   name: Environment

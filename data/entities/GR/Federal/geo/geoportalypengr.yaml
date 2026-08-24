@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: GeoServer instance belonging to Ministry for Environment and Energy (YPEN),
-  Greece. Provides access to geospatial data layers via WMS/WFS.
+description: GeoServer instance of the Ministry of Environment and Energy (YPEN).
+  OGC WMS/WFS/WCS layer services; metadata search is the separate GeoNetwork catalogue
+  at /geonetwork.
 endpoints:
 - type: wms111
   url: http://geoportal.ypen.gr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -68,15 +69,15 @@ langs:
 - id: EL
   name: Greek
 link: http://geoportal.ypen.gr/geoserver
-name: YPEN Geoportal - Ministry for Environment and Energy
+name: YPEN GeoServer - Ministry of Environment and Energy
 owner:
-  link: http://geoportal.ypen.gr
+  link: https://ypen.gov.gr
   location:
     country:
       id: GR
       name: Greece
     level: 20
-  name: Ministry for Environment and Energy
+  name: Ministry of Environment and Energy
   type: Central government
 properties:
   has_doi: false

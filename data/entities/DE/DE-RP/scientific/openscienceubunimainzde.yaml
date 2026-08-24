@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-RP
+      name: Rheinland-Pfalz
+description: Gutenberg Open Science is a DSpace repository listed in re3data as a
+  research data provider.
+endpoints:
+- type: dspace
+  url: https://openscience.ub.uni-mainz.de/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://openscience.ub.uni-mainz.de/server/api/discover/search/objects
+  version: '7'
+id: openscienceubunimainzde
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100014757
+  value: r3d100014757
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://openscience.ub.uni-mainz.de
+name: Gutenberg Open Science
+owner:
+  link: https://www.uni-mainz.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-RP
+      name: Rheinland-Pfalz
+  name: Johannes Gutenberg-Universität Mainz
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+- re3data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027367

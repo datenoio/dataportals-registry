@@ -15,19 +15,18 @@ coverage:
     macroregion:
       id: 018
       name: Southern Africa
-description: National data catalog managed by Namibia Statistics Agency (NSA) for
-  browsing, searching, and accessing official statistics, microdata, surveys, and
-  geospatial resources.
+description: National NADA microdata catalog of the Namibia Statistics Agency (NSA).
+  The public site now runs at microdata.nsanamibia.com (formerly nada.nsa.org.na).
 endpoints:
 - type: nada:catalog-search
-  url: https://nada.nsa.org.na/index.php/api/catalog/search
+  url: https://microdata.nsanamibia.com/index.php/api/catalog/search
 - type: nada:csvexport
-  url: https://nada.nsa.org.na/index.php/catalog/export/csv?ps=5000&collection[]
+  url: https://microdata.nsanamibia.com/index.php/catalog/export/csv?ps=5000&collection[]
 id: nadansaorgna
 langs:
 - id: EN
   name: English
-link: https://nada.nsa.org.na
+link: https://microdata.nsanamibia.com
 name: Namibia Statistics Agency. An online microdata catalog
 owner:
   link: https://www.nsa.org.na

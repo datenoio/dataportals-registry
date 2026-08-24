@@ -15,30 +15,44 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: A Chilean earth observation platform OWS Services
+description: Datacube-ows service for Data Cube Chile, publishing analysis-ready
+  Earth observation collections over Chile as OGC WMS, WMTS, and WCS.
+endpoints:
+- type: wms130
+  url: https://ows.datacubechile.cl/?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wmts100
+  url: https://ows.datacubechile.cl/?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs201
+  url: https://ows.datacubechile.cl/?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
 id: owsdatacubechilecl
 langs:
 - id: ES
   name: Spanish
+- id: EN
+  name: English
 link: https://ows.datacubechile.cl
-name: Datacube Chile OGC Web Services
+name: Data Cube Chile OGC Web Services
 owner:
-  link: https://www.csiro.cl/en/
+  link: https://datacubechile.cl
   location:
     country:
       id: CL
       name: Chile
     level: 20
-  name: CSIRO Chile
+  name: Data Cube Chile
   type: Academy
 properties:
   has_doi: false
+  transferable_topics: true
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: global
+  rights_type: granular
   tos_url: null
 software:
   id: datacubews
@@ -46,16 +60,21 @@ software:
 status: active
 tags:
 - geospatial
+- has_api
+- Earth observation
 - satellite
 - remote sensing
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: Biota
-  name: Biota
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
   type: iso19115
 uid: cdi00005239
-endpoints:
-- type: sitemap
-  url: https://ows.datacubechile.cl/sitemap.xml

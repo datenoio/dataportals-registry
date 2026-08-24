@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: DK-83
+      name: Syddanmark
+description: Additional ArcGIS REST services catalog operated by Vejle Municipality,
+  distinct from kortservice.vejle.dk.
+endpoints:
+- type: arcgis:rest:info
+  url: https://kortservice2.vejle.dk/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://kortservice2.vejle.dk/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://kortservice2.vejle.dk/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://kortservice2.vejle.dk/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://kortservice2.vejle.dk/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://kortservice2.vejle.dk/arcgis/rest/services?f=kmz
+id: kortservice2vejledk
+langs:
+- id: DA
+  name: Danish
+link: https://kortservice2.vejle.dk/arcgis/rest/services
+name: Vejle Kortservice 2 ArcGIS REST Services
+owner:
+  link: https://www.vejle.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 30
+    subregion:
+      id: DK-83
+      name: Syddanmark
+  name: Vejle Municipality
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- Denmark
+- GIS
+- municipal
+- Vejle
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00027103

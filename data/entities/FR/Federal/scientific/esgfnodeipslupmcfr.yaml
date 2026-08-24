@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: Western Europe
 description: Earth System Grid Federation CoG search portal at IPSL. European index
   of CMIP and related climate-model output.
+endpoints:
+- type: esgf:catalog
+  url: https://esgf-node.ipsl.upmc.fr/
 id: esgfnodeipslupmcfr
 langs:
 - id: EN

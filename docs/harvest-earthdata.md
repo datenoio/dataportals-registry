@@ -91,6 +91,14 @@ GET https://host/.well-known/openeo
 
 Each **collection** is a dataset analog (STAC-compatible). Do not harvest `/processes` as datasets, job results, or process-graph examples. Items/granules only when that is the product. Prefer `openeo` over `stacserver` on the same API. Hub (`hub.openeo.org`) lists backends — harvest `/collections` on the backend URL.
 
+## Sentinel Hub (`sentinelhub`) {#sentinelhub}
+
+```text
+GET https://services.sentinel-hub.com/api/v1/catalog/1.0.0/collections
+```
+
+STAC **collections** (and documented OGC WMS/WMTS layer lists) are the dataset analog. Do not harvest every STAC item/granule, Process API jobs, or EO Browser tiles. Prefer `sentinelhub` over `stacserver` on `*.sentinel-hub.com`. Sentinel Hub **openEO** backends stay `openeo` ([openEO](#openeo)).
+
 ## AODN (`aodn`) {#aodn}
 
 Australian Ocean Data Network portal search (`/portal/search` or the API path in `endpoints[]`). Keep **dataset** hits. Drop individual file downloads and the national map chrome.

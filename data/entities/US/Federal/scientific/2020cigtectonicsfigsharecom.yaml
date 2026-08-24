@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Tectonics Community Science Workshop 2020 Figshare repository is a Figshare
+  institutional repository that publishes research datasets and other scholarly outputs.
+endpoints:
+- type: sitemap
+  url: https://2020cigtectonics.figshare.com/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://2020cigtectonics.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: 2020cigtectonicsfigsharecom
+langs:
+- id: EN
+  name: English
+link: https://2020cigtectonics.figshare.com
+name: Tectonics Community Science Workshop 2020 Figshare repository
+owner:
+  link: https://geodynamics.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Computational Infrastructure for Geodynamics
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+- figshare
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027851

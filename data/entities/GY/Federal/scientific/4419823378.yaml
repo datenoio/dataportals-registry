@@ -14,7 +14,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Environmental Protection Agency - Guyana IPT
+description: Former Environmental Protection Agency Guyana GBIF IPT on 44.198.233.78.
+  GBIF dataset endpoints now point at 132.148.241.236:8080/ipt/. Host timed out on
+  23 August 2026.
 endpoints:
 - type: dcat:ttl
   url: http://44.198.233.78:8080/dcat
@@ -37,11 +39,11 @@ owner:
       name: Guyana
     level: 20
   name: Environmental Protection Agency
-  type: Academy
+  type: Central government
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: deprecated
 tags:
 - GBIF
 - IPT

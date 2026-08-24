@@ -14,29 +14,33 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Within WASCAL a large number of heterogeneous data are collected. These
-  data are mainly coming from different initiated research activities within WASCAL
-  (Core Research Program, Graduate School Program) from the hydrological-meteorological,
-  remote sensing, biodiversity and socio economic observation networks within WASCAL,
-  and from the activities of the WASCAL Competence Center in Ouagadougou, Burkina-Faso.
+description: WASCAL research data catalog (WADI) hosted at the Competence Centre in
+  Ouagadougou. Publishes climate, hydrology, remote sensing, biodiversity and
+  socio-economic datasets from WASCAL observation networks and graduate research
+  across West Africa.
 endpoints:
 - type: ckan:package-list
   url: https://wascal-dataportal.org/api/3/action/package_list
-  version: "3"
+  version: '3'
 id: wascaldataportalorg
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100011566
+  value: r3d100011566
 langs:
 - id: EN
   name: English
 link: https://wascal-dataportal.org
 name: WASCAL Data Discovery Portal
 owner:
-  link: https://wascal-dataportal.org
+  link: https://wascal.org
   location:
     country:
       id: BF
       name: Burkina Faso
     level: 20
-  name: WASCAL
+  name: West African Science Service Centre on Climate Change and Adapted Land Use
+    (WASCAL)
   type: Academy
 properties:
   has_doi: false
@@ -59,15 +63,13 @@ tags:
 - socio-economic
 - observation networks
 - spatial data infrastructure
+- has_api
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: ENVI
-  name: Environment
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
 - id: SOCI
   name: Population and society
@@ -90,4 +92,4 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-uid: temp00000970
+uid: cdi00027588

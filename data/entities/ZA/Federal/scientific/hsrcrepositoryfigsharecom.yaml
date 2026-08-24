@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 20
+    macroregion:
+      id: 018
+      name: Southern Africa
+description: HSRC Research Output Repository on Figshare, publishing Human Sciences
+  Research Council datasets and related research outputs with DOIs.
+endpoints:
+- type: sitemap
+  url: https://hsrc-repository.figshare.com/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://hsrc-repository.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+- type: oaipmh20
+  url: https://api.figshare.com/v2/oai?verb=Identify
+  version: '2.0'
+id: hsrcrepositoryfigsharecom
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100011391
+  value: r3d100011391
+langs:
+- id: EN
+  name: English
+link: https://hsrc-repository.figshare.com/
+name: HSRC Research Output Repository
+owner:
+  link: https://hsrc.ac.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 20
+  name: Human Sciences Research Council
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- Figshare
+- open access
+- research data
+- social sciences
+- South Africa
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027601

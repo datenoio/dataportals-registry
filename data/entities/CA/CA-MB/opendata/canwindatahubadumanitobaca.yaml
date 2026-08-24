@@ -22,6 +22,8 @@ description: CanWIN is the data centre for the Centre for Earth Observation Scie
   projects, publications, instrument, deployment, and campaign information as research
   outputs.
 endpoints:
+- type: rest
+  url: https://sonode.dataone.org/CANWIN
 - type: ckan:package-search
   url: https://canwin-datahub.ad.umanitoba.ca/data/api/3/action/package_search
   version: '3'

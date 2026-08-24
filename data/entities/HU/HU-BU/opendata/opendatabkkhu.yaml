@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: HU-BU
+      name: Budapest
+description: Open data portal of the Centre for Budapest Transport (BKK), publishing
+  static GTFS timetable data and GTFS-Realtime feeds for Budapest public transport.
+endpoints:
+- type: customapi
+  url: https://go.bkk.hu
+id: opendatabkkhu
+langs:
+- id: HU
+  name: Hungarian
+- id: EN
+  name: English
+link: https://opendata.bkk.hu/
+name: BKK OpenData
+owner:
+  link: https://bkk.hu
+  location:
+    country:
+      id: HU
+      name: Hungary
+    level: 30
+    subregion:
+      id: HU-BU
+      name: Budapest
+  name: Centre for Budapest Transport (BKK)
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://bkk.hu/en/about-bkk/data-management-information/
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- open data
+- GTFS
+- public transport
+- Budapest
+- Hungary
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00027441

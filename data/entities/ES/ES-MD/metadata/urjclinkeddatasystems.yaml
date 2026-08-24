@@ -12,7 +12,7 @@ coverage:
       name: Spain
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: ES-MD
@@ -21,6 +21,13 @@ description: FAIR Data Point of the Rey Juan Carlos University germplasm bank.
 endpoints:
 - type: dcat:ttl
   url: https://urjc.linkeddata.systems
+- type: dcat:ttl
+  url: https://urjc.linkeddata.systems/
+- type: openapi
+  url: https://urjc.linkeddata.systems/v3/api-docs
+  version: '3'
+- type: docs
+  url: https://urjc.linkeddata.systems/swagger-ui.html
 id: urjclinkeddatasystems
 langs:
 - id: EN

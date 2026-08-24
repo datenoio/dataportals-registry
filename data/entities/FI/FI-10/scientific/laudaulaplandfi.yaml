@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: FI
+      name: Finland
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: FI-10
+      name: Lappi
+description: Open institutional repository of the University of Lapland for theses
+  and publications.
+endpoints:
+- type: dspace:catalog
+  url: https://lauda.ulapland.fi
+id: laudaulaplandfi
+langs:
+- id: FI
+  name: Finnish
+- id: EN
+  name: English
+link: https://lauda.ulapland.fi
+name: Lauda
+owner:
+  link: https://www.ulapland.fi
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: FI-10
+      name: Lappi
+  name: University of Lapland
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- institutional repository
+- DSpace
+- publications
+- theses
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027149

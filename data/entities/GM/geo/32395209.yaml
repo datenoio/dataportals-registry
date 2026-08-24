@@ -15,10 +15,9 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Gambia Geo-portal is an interactive spatial visualization and storage
-  platform. The Geo-portal can be used for sharing geospatial data and maps as well
-  as collaboration in the Gambia Eba project. In addition to sharing data and maps,
-  one can store, document, search and retrieve and visualize spatial data.
+description: GeoNode geoportal of The Gambia Large-scale Ecosystem-based Adaptation
+  (EbA) project. Used to publish, document, search, and visualize project geospatial
+  layers and maps.
 endpoints:
 - type: geonode:layers
   url: http://3.23.95.209/api/layers/
@@ -92,7 +91,7 @@ owner:
       id: GM
       name: Gambia
     level: 20
-  name: Gambia EBa project
+  name: Gambia Large-scale Ecosystem-based Adaptation (EbA) Project
   type: Central government
 properties:
   has_doi: false
@@ -108,8 +107,16 @@ software:
   name: GeoNode
 status: active
 tags:
-- UNKNOWN
+- geospatial
+- GeoNode
+- EbA
+- environment
+- government
+- Gambia
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115

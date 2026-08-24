@@ -15,21 +15,22 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Microdata catalog maintained by the National Bureau of Statistics of
-  Tanzania
+description: Microdata catalog of the National Bureau of Statistics of Tanzania
+  (TNADA). Catalogs census and survey microdata with DDI metadata; the public
+  site is https://microdata.nbs.go.tz.
 endpoints:
 - type: nada:catalog-search
-  url: https://www.nbs.go.tz/tnada/index.php/api/catalog/search
+  url: https://microdata.nbs.go.tz/index.php/api/catalog/search
 - type: nada:csvexport
-  url: https://www.nbs.go.tz/tnada/index.php/catalog/export/csv?ps=5000&collection[]
+  url: https://microdata.nbs.go.tz/index.php/catalog/export/csv?ps=5000&collection[]
 id: wwwnbsgotz
 langs:
 - id: EN
   name: English
-link: https://www.nbs.go.tz/tnada
+link: https://microdata.nbs.go.tz
 name: Tanzania Microdata Catalog National Data Archive
 owner:
-  link: http://www.nbs.go.tz
+  link: https://www.nbs.go.tz
   location:
     country:
       id: TZ
@@ -71,9 +72,6 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-- id: ECON
-  name: Economy and finance
-  type: eudatatheme
 - id: ECON
   name: Economy and finance
   type: eudatatheme

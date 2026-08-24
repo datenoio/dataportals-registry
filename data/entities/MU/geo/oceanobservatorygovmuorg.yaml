@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MU
+      name: Mauritius
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: National marine spatial data infrastructure for the Republic of Mauritius.
+  GeoNode catalog of maritime-zone datasets supporting marine spatial planning, distinct
+  from the terrestrial ONSDI geoportal.
+endpoints:
+- type: geonode:datasets
+  url: https://oceanobservatory.govmu.org/api/v2/datasets
+- type: wms111
+  url: https://oceanobservatory.govmu.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://oceanobservatory.govmu.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: csw202
+  url: https://oceanobservatory.govmu.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+id: oceanobservatorygovmuorg
+langs:
+- id: EN
+  name: English
+link: https://oceanobservatory.govmu.org/
+name: Mauritius Ocean Observatory E-Platform
+owner:
+  link: https://csmzae.govmu.org
+  location:
+    country:
+      id: MU
+      name: Mauritius
+    level: 20
+  name: Department of Continental Shelf, Maritime Zones Administration and Exploration
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- marine
+- GeoNode
+- Mauritius
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00027710

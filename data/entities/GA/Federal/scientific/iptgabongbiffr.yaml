@@ -10,7 +10,7 @@ coverage:
     country:
       id: GA
       name: Gabon
-    level: 0
+    level: 20
     macroregion:
       id: '017'
       name: Middle Africa
@@ -20,20 +20,22 @@ description: This IPT is hosted by GBIF France to publish datasets coming from G
   dev@gbif.fr or gbif@gbif.fr.
 endpoints:
 - type: dcat:ttl
-  url: http://ipt-gabon.gbif.fr/dcat
+  url: https://ipt-gabon.gbif.fr/dcat
 - type: ipt:dataset
-  url: http://ipt-gabon.gbif.fr/inventory/dataset
+  url: https://ipt-gabon.gbif.fr/inventory/dataset
 - type: rss
-  url: http://ipt-gabon.gbif.fr/rss.do
+  url: https://ipt-gabon.gbif.fr/rss.do
   version: '2.0'
 id: iptgabongbiffr
 langs:
+- id: FR
+  name: French
 - id: EN
   name: English
-link: http://ipt-gabon.gbif.fr
+link: https://ipt-gabon.gbif.fr
 name: Gabon IPT
 owner:
-  link: https://gbif.fr
+  link: https://www.iphametra.org
   location:
     country:
       id: GA
@@ -41,6 +43,15 @@ owner:
     level: 20
   name: Herbier National du Gabon
   type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)

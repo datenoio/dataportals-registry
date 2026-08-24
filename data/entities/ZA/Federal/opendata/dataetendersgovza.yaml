@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 20
+    macroregion:
+      id: 018
+      name: Southern Africa
+description: National Treasury Transparency Portal publishing South African public
+  procurement data as Open Contracting Data Standard (OCDS) packages, with bulk JSON,
+  CSV and Excel downloads and a REST API.
+endpoints:
+- type: custom_api
+  url: https://ocds-api.etenders.gov.za/
+- type: docs
+  url: https://ocds-api.etenders.gov.za/swagger/index.html
+- type: docs
+  url: https://data.etenders.gov.za/Home/LearnMore
+id: dataetendersgovza
+langs:
+- id: EN
+  name: English
+link: https://data.etenders.gov.za/
+name: National Treasury Transparency Portal
+owner:
+  link: https://www.treasury.gov.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 20
+  name: National Treasury Republic of South Africa
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: https://data.etenders.gov.za/Home/LearnMore
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- procurement
+- OCDS
+- government
+- has_api
+- South Africa
+- treasury
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00027599

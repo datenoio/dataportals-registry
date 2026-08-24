@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SD
+      name: Sudan
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: IDeaMapSudan GeoNode spatial data infrastructure for mapping urban deprivation
+  and informal settlements in Greater Khartoum. Publishes open geospatial layers produced
+  with Sudan Urban Development Think-Tank, University of Twente ITC, and Khartoum
+  State partners.
+endpoints:
+- type: geonode:layers
+  url: http://geonode.idea-maps.net/api/layers/
+- type: csw202
+  url: http://geonode.idea-maps.net/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: wms130
+  url: http://geonode.idea-maps.net/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: geonodeideamapsnet
+langs:
+- id: EN
+  name: English
+link: http://geonode.idea-maps.net/
+name: IDeaMapSudan GeoNode
+owner:
+  link: https://www.idea-maps.net/
+  location:
+    country:
+      id: SD
+      name: Sudan
+    level: 20
+  name: Sudan Urban Development Think-Tank (SUDTT)
+  type: Civil society
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- urban
+- poverty
+- geonode
+- khartoum
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00027550

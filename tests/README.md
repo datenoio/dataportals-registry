@@ -1,6 +1,6 @@
 # Tests for dataportals-registry
 
-Pytest suite for `scripts/` (configured in `pytest.ini` at the repository root). Python **3.9–3.12**. Published CLI notes: [docs/cli.md](../docs/cli.md).
+Pytest suite for `scripts/` (configured in `pytest.ini` at the repository root). Python **3.10–3.12**. Published CLI notes: [docs/cli.md](../docs/cli.md).
 
 From the repository root:
 
@@ -88,7 +88,7 @@ The test suite covers:
 ## Continuous Integration
 
 Tests are automatically run on GitHub Actions for:
-- Python 3.9, 3.10, 3.11, and 3.12
+- Python 3.10, 3.11, and 3.12
 - On push to main/master/develop branches
 - On pull requests
 

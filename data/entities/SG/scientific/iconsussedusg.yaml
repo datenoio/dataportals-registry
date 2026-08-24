@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SG
+      name: Singapore
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: ICON is the Singapore University of Social Sciences Figshare institutional
+  repository for research and scholarly outputs.
+endpoints:
+- type: sitemap
+  url: https://icon.suss.edu.sg/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://icon.suss.edu.sg/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: iconsussedusg
+langs:
+- id: EN
+  name: English
+link: https://icon.suss.edu.sg
+name: ICON - Singapore University of Social Sciences
+owner:
+  link: https://www.suss.edu.sg
+  location:
+    country:
+      id: SG
+      name: Singapore
+    level: 20
+  name: Singapore University of Social Sciences
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+- figshare
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027873

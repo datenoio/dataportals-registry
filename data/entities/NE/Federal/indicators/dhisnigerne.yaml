@@ -1,0 +1,74 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: NE
+      name: Niger (the)
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: National DHIS2 health management information system of Niger (SNIS).
+  Login is required to query routine health indicators.
+endpoints:
+- type: dhis2:catalog
+  url: https://dhisniger.ne
+id: dhisnigerne
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://dhisniger.ne
+name: Système National d'Information Sanitaire (DHIS2 Niger)
+owner:
+  link: https://snis.ne
+  location:
+    country:
+      id: NE
+      name: Niger (the)
+    level: 20
+  name: Ministère de la Santé Publique, de la Population et des Affaires Sociales
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dhis2
+  name: DHIS2
+status: active
+tags:
+- health
+- HMIS
+- DHIS2
+- government
+- restricted
+- Niger
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00027508

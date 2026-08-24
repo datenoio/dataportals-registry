@@ -1,7 +1,7 @@
 access_mode:
-- public
-api: true
-api_status: active
+- open
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,15 +15,13 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: A research, development and technological innovation project of the National
-  Institute for Space Research (INPE), Brazil. Catalogs, processes and distributes
-  composed data from satellite sensors, providing data cubes, image collections, and
-  mosaics for the Brazilian territory.
-endpoints:
-- type: stacserverapi
-  url: https://brazildatacube.dpi.inpe.br/stac
+description: Project portal for Brazil Data Cube at INPE, describing the national
+  Earth observation data cube programme and linking to the Data Cube Explorer and
+  STAC API used to access image collections, cubes, and mosaics for Brazil.
 id: brazildatacubedpiinpebr
 langs:
+- id: PT
+  name: Portuguese
 - id: EN
   name: English
 link: https://brazildatacube.dpi.inpe.br
@@ -48,12 +46,11 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: opendatacube
-  name: Open Data Cube
+  id: custom
+  name: Custom software
 status: active
 tags:
 - geospatial
-- has_api
 - satellite imagery
 - earth observation
 - data cube

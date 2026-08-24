@@ -12,7 +12,7 @@ coverage:
       name: Spain
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: ES-PV
@@ -21,6 +21,13 @@ description: FAIR Data Point of the Olarizu Botanic Garden germplasm bank.
 endpoints:
 - type: dcat:ttl
   url: https://jbo.linkeddata.systems
+- type: dcat:ttl
+  url: https://jbo.linkeddata.systems/
+- type: openapi
+  url: https://jbo.linkeddata.systems/v3/api-docs
+  version: '3'
+- type: docs
+  url: https://jbo.linkeddata.systems/swagger-ui.html
 id: jbolinkeddatasystems
 langs:
 - id: EN

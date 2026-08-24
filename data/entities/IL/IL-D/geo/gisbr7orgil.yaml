@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IL
+      name: Israel
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion: &id001
+      id: IL-D
+      name: Al Janūbī
+description: ArcGIS REST services of Beer Sheva Municipality (BR7).
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.br7.org.il/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.br7.org.il/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.br7.org.il/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.br7.org.il/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.br7.org.il/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.br7.org.il/arcgis/rest/services?f=kmz
+id: gisbr7orgil
+langs:
+- id: HE
+  name: Hebrew
+link: https://gis.br7.org.il/arcgis/rest/services
+name: Beer Sheva Municipality GIS
+owner:
+  link: https://www.beer-sheva.muni.il
+  location:
+    country:
+      id: IL
+      name: Israel
+    level: 30
+    subregion: *id001
+  name: Beer Sheva Municipality
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Israel
+- arcgisserver
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00005926

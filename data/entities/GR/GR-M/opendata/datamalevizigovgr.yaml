@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: GR-M
+      name: Kríti
+description: Municipal CKAN open data portal of the Municipality of Malevizi, Crete.
+endpoints:
+- type: ckan
+  url: https://data.malevizi.gov.gr/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.malevizi.gov.gr/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.malevizi.gov.gr/api/3/action/package_list
+  version: '3'
+id: datamalevizigovgr
+langs:
+- id: EL
+  name: Greek
+link: https://data.malevizi.gov.gr/
+name: Municipality of Malevizi Open Data
+owner:
+  link: https://www.malevizi.gov.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    subregion:
+      id: GR-M
+      name: Kríti
+  name: Municipality of Malevizi
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- Greece
+- Crete
+- CKAN
+- open data
+- municipality
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: temp00000329

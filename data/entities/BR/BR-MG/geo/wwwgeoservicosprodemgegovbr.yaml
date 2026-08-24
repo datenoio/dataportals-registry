@@ -1,0 +1,92 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-MG
+      name: Minas Gerais
+description: GeoNetwork metadata catalog of PRODEMGE, the information-technology company
+  of Minas Gerais. Distinct from the GeoServer on geoserver.prodemge.gov.br.
+endpoints:
+- type: csw202
+  url: https://www.geoservicos.prodemge.gov.br/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:query
+  url: https://www.geoservicos.prodemge.gov.br/geonetwork/srv/eng/q
+- type: openapi
+  url: https://www.geoservicos.prodemge.gov.br/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: opensearch
+  url: https://www.geoservicos.prodemge.gov.br/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://www.geoservicos.prodemge.gov.br/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:site
+  url: https://www.geoservicos.prodemge.gov.br/geonetwork/srv/api/site
+id: wwwgeoservicosprodemgegovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://www.geoservicos.prodemge.gov.br/geonetwork/
+name: Catálogo de Metadados PRODEMGE
+owner:
+  link: https://www.prodemge.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-MG
+      name: Minas Gerais
+  name: Companhia de Tecnologia da Informação do Estado de Minas Gerais (PRODEMGE)
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- Brazil
+- GeoNetwork
+- geospatial
+- INDE
+- metadata
+- Minas Gerais
+- PRODEMGE
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00027046

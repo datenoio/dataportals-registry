@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: 'ArcGIS Server instance providing geospatial services. Associated with
-  Spatial Dimension portal: https://guinee.cadastreminier.org/en/'
+description: Public ArcGIS REST catalog of Guinea's mining cadastre (titles, applications,
+  and geological layers). The Landfolio map UI is at https://guinee.cadastreminier.org/.
 endpoints:
 - type: arcgis:rest:info
   url: https://cadastre.mines.gov.gn/arcgis/rest/info?f=pjson
@@ -32,21 +32,24 @@ endpoints:
   url: https://cadastre.mines.gov.gn/arcgis/rest/services?f=kmz
 id: cadastreminesgovgnarcgisrestservices
 langs:
+- id: FR
+  name: French
 - id: EN
   name: English
 link: https://cadastre.mines.gov.gn/arcgis/rest/services
-name: ArcGIS Server - cadastre.mines.gov.gn
+name: Guinea Mining Cadastre ArcGIS Server
 owner:
-  link: https://www.spatialdimension.com
+  link: https://mines.gov.gn
   location:
     country:
       id: GN
       name: Guinea
     level: 20
-  name: Spatial Dimension
-  type: Business
+  name: Ministère des Mines et de la Géologie
+  type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -59,17 +62,28 @@ software:
   name: ArcGIS Server
 status: active
 tags:
+- mining
+- cadastre
+- spatial data
+- geographic information system
 - ArcGIS
-- arcgisserver
-- geospatial
-- GIS
-- REST
-- Spatial Dimension
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: REGI
-  name: Regions and cities
+- id: ECON
+  name: Economy and finance
   type: eudatatheme
-uid: temp00006009
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00027607

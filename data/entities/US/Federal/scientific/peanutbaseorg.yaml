@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: World
 description: USDA-ARS genetics and genomics database for peanut and related Arachis
   species.
+endpoints:
+- type: tripal:catalog
+  url: https://www.peanutbase.org/
 id: peanutbaseorg
 langs:
 - id: EN

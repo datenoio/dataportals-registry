@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-PB
+      name: Paraíba
+description: Statewide open data portal of Paraíba, operated by CODATA. Publishes
+  procurement, budget, revenue, payroll, and health datasets. Distinct from the SES
+  REDS health CKAN. Also served at dadosabertos.codata.pb.gov.br.
+endpoints:
+- type: ckan
+  url: https://dados.pb.gov.br/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dados.pb.gov.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dados.pb.gov.br/api/3/action/package_list
+  version: '3'
+id: dadospbgovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://dados.pb.gov.br/
+name: Portal de Dados Abertos da Paraíba
+owner:
+  link: https://www.codata.pb.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-PB
+      name: Paraíba
+  name: Governo do Estado da Paraíba / CODATA
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- Paraíba
+- Brazil
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00026925

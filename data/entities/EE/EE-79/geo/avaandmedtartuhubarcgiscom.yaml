@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EE
+      name: Estonia
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: EE-79
+      name: Tartumaa
+description: ArcGIS Hub open-data site for the City of Tartu. Distinct from Tartu
+  GeoHUB (geohub.tartulv.ee) and from the municipal ArcGIS REST catalog (gis.tartulv.ee).
+endpoints:
+- type: ogcrecordsapi
+  url: https://avaandmed-tartu.hub.arcgis.com/api/search/v1
+id: avaandmedtartuhubarcgiscom
+langs:
+- id: ET
+  name: Estonian
+- id: EN
+  name: English
+link: https://avaandmed-tartu.hub.arcgis.com/
+name: Tartu Avaandmed
+owner:
+  link: https://www.tartulv.ee
+  location:
+    country:
+      id: EE
+      name: Estonia
+    level: 30
+    subregion:
+      id: EE-79
+      name: Tartumaa
+  name: City of Tartu
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- government
+- geospatial
+- has_api
+- open data
+- Tartu
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00027172

@@ -1374,6 +1374,223 @@ ESGF_URLMAP = [
     },
 ]
 
+JSONLD_MIMETYPES = JSON_MIMETYPES + ["application/ld+json"]
+TURTLE_MIMETYPES = ["text/turtle", "application/turtle", "application/x-turtle"]
+RSS_MIMETYPES = XML_MIMETYPES + ["application/rss+xml", "application/rdf+xml"]
+
+RESOURCECONTRACTS_URLMAP = [
+    {
+        "id": "custom_api",
+        "url": "/contract/resources",
+        "accept": "application/json",
+        "expected_mime": JSONLD_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+PIVEAU_URLMAP = [
+    {
+        "id": "customapi",
+        "url": "/api/hub/search/search",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "customapi",
+        "url": "/api/hub/search/search?q=&filter=dataset",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "customapi",
+        "url": "/api/hub/repo/datasets",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "customapi",
+        "url": "/api/hub/repo/catalogues",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "ckan:package-search",
+        "url": "/api/hub/search/ckan/package_search",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "3",
+    },
+    {
+        "id": "docs",
+        "url": "/api/hub/search/",
+        "expected_mime": HTML_MIMETYPES + JSON_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+]
+
+FAIRDATAPOINT_URLMAP = [
+    {
+        "id": "dcat:ttl",
+        "url": "/",
+        "accept": "text/turtle",
+        "expected_mime": TURTLE_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "dcat:jsonld",
+        "url": "/",
+        "accept": "application/ld+json",
+        "expected_mime": JSONLD_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "openapi",
+        "url": "/v3/api-docs",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "3",
+    },
+    {
+        "id": "docs",
+        "url": "/swagger-ui.html",
+        "expected_mime": HTML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+]
+
+OMEKAS_URLMAP = [
+    {
+        "id": "rest",
+        "url": "/api",
+        "accept": "application/json",
+        "expected_mime": JSONLD_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "rest",
+        "url": "/api/items",
+        "accept": "application/json",
+        "expected_mime": JSONLD_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "rest",
+        "url": "/api-context",
+        "accept": "application/json",
+        "expected_mime": JSONLD_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "rest",
+        "url": "/omeka/api",
+        "accept": "application/json",
+        "expected_mime": JSONLD_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "rest",
+        "url": "/omeka/api/items",
+        "accept": "application/json",
+        "expected_mime": JSONLD_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+CONTENTDM_URLMAP = [
+    {
+        "id": "customapi",
+        "url": "/digital/api/collections",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "customapi",
+        "url": "/digital/bl/dmwebservices/index.php?q=dmGetCollectionList/json",
+        "expected_mime": JSON_MIMETYPES + HTML_MIMETYPES + PLAIN_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/oai/oai.php?verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+]
+
+SYMBIOTA_URLMAP = [
+    {
+        "id": "rss",
+        "url": "/collections/datasets/rsshandler.php",
+        "expected_mime": RSS_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "rss",
+        "url": "/portal/collections/datasets/rsshandler.php",
+        "expected_mime": RSS_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "docs",
+        "url": "/api/v2/documentation",
+        "expected_mime": HTML_MIMETYPES,
+        "is_json": False,
+        "version": "2",
+    },
+    {
+        "id": "docs",
+        "url": "/portal/api/v2/documentation",
+        "expected_mime": HTML_MIMETYPES,
+        "is_json": False,
+        "version": "2",
+    },
+]
+
+IDRA_URLMAP = [
+    {
+        "id": "customapi",
+        "url": "/Idra/api/v1/administration/version",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "1",
+    },
+    {
+        "id": "customapi",
+        "url": "/Idra/api/v1/catalogues",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "1",
+    },
+]
+
 # ---------------------------------------------------------------------------
 # Proposed CATALOGS_URLMAP additions (merge into apidetect.py)
 # ---------------------------------------------------------------------------
@@ -1455,6 +1672,13 @@ DRAFT_CATALOGS_URLMAP = {
     "massbank": MASSBANK_URLMAP,
     "iochembd": IOCHEMBD_URLMAP,
     "esgf": ESGF_URLMAP,
+    "resourcecontracts": RESOURCECONTRACTS_URLMAP,
+    "piveau": PIVEAU_URLMAP,
+    "fairdatapoint": FAIRDATAPOINT_URLMAP,
+    "omekas": OMEKAS_URLMAP,
+    "contentdm": CONTENTDM_URLMAP,
+    "symbiota": SYMBIOTA_URLMAP,
+    "idra": IDRA_URLMAP,
 }
 
 # Software reviewed for auto-fill: do not invent relative API paths.

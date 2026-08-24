@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-52
+      name: Toscana
+description: G3W-SUITE (QDjango) geoportal of Parco Regionale delle Alpi Apuane for
+  park plan, geosites, Natura 2000, and hiking-map WebGIS services.
+id: parcoapuanegis3wit
+langs:
+- id: IT
+  name: Italian
+link: http://parcoapuane.gis3w.it/
+name: Geoportale Parco Regionale delle Alpi Apuane
+owner:
+  link: https://www.parcapuane.toscana.it
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: IT-52
+      name: Toscana
+  name: Ente Parco Regionale delle Alpi Apuane
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: g3wsuite
+  name: G3W-SUITE
+status: active
+tags:
+- geospatial
+- geoportal
+- g3wsuite
+- regional park
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00028021

@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-AL
+      name: Alagoas
+description: Geospatial catalog of the Alagoas state planning secretariat (SEPLANDE),
+  listed as an own-host node in the INDE geoservices directory.
+endpoints:
+- type: wms111
+  url: http://geo.seplande.al.gov.br/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: http://geo.seplande.al.gov.br/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: geoseplandealgovbr
+langs:
+- id: PT
+  name: Portuguese
+link: http://geo.seplande.al.gov.br/
+name: Geo SEPLANDE Alagoas
+owner:
+  link: https://www.seplande.al.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-AL
+      name: Alagoas
+  name: Secretaria de Estado do Planejamento, Gestão e Patrimônio de Alagoas (SEPLANDE)
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- Brazil
+- Alagoas
+- geoserver
+- geospatial
+- INDE
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00026924

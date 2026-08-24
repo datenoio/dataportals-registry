@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: Northern America
 description: Earth System Grid Federation Metagrid search portal at NERSC. Backup
   US/DOE-domain index of CMIP and related climate-model output.
+endpoints:
+- type: esgf:catalog
+  url: https://metagrid.esgf-west.org/search
 id: metagridesgfwestorg
 langs:
 - id: EN

@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+description: DSpace archive of peer-reviewed animal-tracking datasets published from
+  Movebank.
+endpoints:
+- type: dspace
+  url: https://datarepository.movebank.org/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://datarepository.movebank.org/server/api/discover/search/objects
+  version: '7'
+id: datarepositorymovebankorg
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100010469
+  value: r3d100010469
+langs:
+- id: EN
+  name: English
+link: https://datarepository.movebank.org
+name: Movebank Data Repository
+owner:
+  link: https://www.ab.mpg.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+  name: Max Planck Institute of Animal Behavior
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+- re3data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027370

@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion:
+      id: World
+      name: World
+description: Datacube-ows service for CSIRO's EASI Asia hub, publishing Earth observation
+  collections for Asia as OGC WMS, WMTS, and WCS.
+endpoints:
+- type: wms130
+  url: https://ows.asia.easi-eo.solutions/?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wmts100
+  url: https://ows.asia.easi-eo.solutions/?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs201
+  url: https://ows.asia.easi-eo.solutions/?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+id: owsasiaeasieosolutions
+langs:
+- id: EN
+  name: English
+link: https://ows.asia.easi-eo.solutions
+name: EASI CSIRO Asia OGC Web Services
+owner:
+  link: https://www.csiro.au/en/
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 20
+  name: CSIRO
+  type: Academy
+properties:
+  has_doi: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: datacubews
+  name: Datacube Open Web Services
+status: active
+tags:
+- geospatial
+- has_api
+- Earth observation
+- satellite
+- EASI
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00027945

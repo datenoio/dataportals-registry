@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MU
+      name: Mauritius
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: GeoNetwork catalog of the Mauritius Oceanography Institute Ocean Database.
+  Publishes geo-referenced oceanographic datasets and metadata for the maritime zones
+  of Mauritius.
+endpoints:
+- type: geonetwork:query
+  url: https://moigeonetwork.mu/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://moigeonetwork.mu/geonetwork/srv/api/records
+- type: csw202
+  url: https://moigeonetwork.mu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://moigeonetwork.mu/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: moigeonetworkmu
+langs:
+- id: EN
+  name: English
+link: https://moigeonetwork.mu/geonetwork/srv/eng/catalog.search
+name: MOI Ocean Database
+owner:
+  link: https://moi.govmu.org
+  location:
+    country:
+      id: MU
+      name: Mauritius
+    level: 20
+  name: Mauritius Oceanography Institute
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- oceanography
+- GeoNetwork
+- Mauritius
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00027709

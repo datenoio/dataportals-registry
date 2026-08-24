@@ -19,6 +19,8 @@ description: GeoNode-based geoportal providing geospatial data and services for 
   risk management, emergency response, and natural disaster monitoring in Honduras.
   Managed by COPECO (Permanent Contingency Commission of Honduras).
 endpoints:
+- type: geonode:datasets
+  url: https://geonode.copeco.gob.hn/api/v2/datasets/
 - type: wfs200
   url: http://geonode.copeco.gob.hn/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
   version: 2.0.0
@@ -50,10 +52,10 @@ id: geonodecopecogobhn
 langs:
 - id: ES
   name: Spanish
-link: http://geonode.copeco.gob.hn/geoserver/
+link: https://geonode.copeco.gob.hn/
 name: COPECO GeoNode - Disaster Risk Management Portal
 owner:
-  link: http://copeco.gob.hn
+  link: https://www.copeco.gob.hn
   location:
     country:
       id: HN
@@ -71,8 +73,8 @@ rights:
   rights_type: inapplicable
   tos_url: null
 software:
-  id: geoserver
-  name: GeoServer
+  id: geonode
+  name: GeoNode
 status: active
 tags:
 - disaster management
@@ -99,4 +101,4 @@ topics:
 - id: Geoscientific Information
   name: Geoscientific Information
   type: iso19115
-uid: temp00000335
+uid: cdi00027039

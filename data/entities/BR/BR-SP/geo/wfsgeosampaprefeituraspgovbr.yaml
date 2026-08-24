@@ -11,11 +11,14 @@ coverage:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: Geospatial web service provided by the Prefeitura de São Paulo
+    subregion:
+      id: BR-SP
+      name: São Paulo
+description: WFS GeoServer of GeoSampa, the City of São Paulo spatial data infrastructure.
 endpoints:
 - type: wms111
   url: http://wfs.geosampa.prefeitura.sp.gov.br:80/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -53,9 +56,9 @@ endpoints:
 id: wfsgeosampaprefeituraspgovbr
 langs:
 - id: PT
-  name: Portugal
+  name: Portuguese
 link: http://wfs.geosampa.prefeitura.sp.gov.br:80/geoserver
-name: Geoportal - Prefeitura de São Paulo
+name: GeoSampa WFS GeoServer
 owner:
   link: http://geosampa.prefeitura.sp.gov.br
   location:
@@ -89,4 +92,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00001263
+uid: cdi00026938

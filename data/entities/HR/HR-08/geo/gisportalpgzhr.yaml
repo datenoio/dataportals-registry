@@ -12,12 +12,12 @@ coverage:
       id: HR
       name: Croatia
     level: 30
-    subregion:
-      id: HR-08
-      name: Primorsko-goranska županija
     macroregion:
       id: 039
       name: Southern Europe
+    subregion:
+      id: HR-08
+      name: Primorsko-goranska županija
 description: A data catalog offering geospatial datasets and services.
 endpoints:
 - type: arcgis:rest:info
@@ -34,8 +34,8 @@ endpoints:
   url: https://gisportal.pgz.hr/server/rest/services?f=kmz
 id: gisportalpgzhr
 langs:
-- id: SR
-  name: Serbian
+- id: HR
+  name: Croatian
 link: https://gisportal.pgz.hr/server/rest/services
 name: PGZ ArcGIS REST Services
 owner:
@@ -86,4 +86,4 @@ topics:
 - id: Economy
   name: Economy
   type: iso19115
-uid: temp00005911
+uid: cdi00027084

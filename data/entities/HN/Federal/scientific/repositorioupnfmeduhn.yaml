@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: HN
+      name: Honduras
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: DSpace documentary repository of Universidad Pedagógica Nacional Francisco
+  Morazán (UPNFM). Hosts theses, articles, and other academic outputs.
+endpoints:
+- type: dspace
+  url: https://repositorio.upnfm.edu.hn/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositorio.upnfm.edu.hn/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://repositorio.upnfm.edu.hn/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://repositorio.upnfm.edu.hn/sitemap_index.xml
+id: repositorioupnfmeduhn
+langs:
+- id: ES
+  name: Spanish
+link: https://repositorio.upnfm.edu.hn/
+name: Repositorio Documental UPNFM
+owner:
+  link: https://www.upnfm.edu.hn
+  location:
+    country:
+      id: HN
+      name: Honduras
+    level: 20
+  name: Universidad Pedagógica Nacional Francisco Morazán (UPNFM)
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- institutional repository
+- DSpace
+- open access
+- Honduras
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027234

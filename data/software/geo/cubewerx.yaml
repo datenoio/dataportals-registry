@@ -1,0 +1,68 @@
+category: Geoportal
+subtype: geospatial_service_middleware
+datatypes:
+  datasets: Compatible
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: Compatible
+has_api: 'Yes'
+has_bulk: 'No'
+id: cubewerx
+name: CubeWerx CubeSERV
+website: https://www.cubewerx.com
+description: CubeWerx CubeSERV (Stratos Geospatial Platform) is a commercial OGC
+  server for WMS, WMTS, WFS, WCS, CSW, and OGC API. National and provincial SDIs
+  expose it as /cubewerx/cubeserv or a CubeWerx catalogue. Register it when CubeSERV
+  is the public catalog, not merely a backend behind another portal. Distinct from
+  GeoServer (geoserver) and MapServer (mapserver).
+owner:
+  name: CubeWerx Inc.
+  location:
+    country:
+      id: CA
+      name: Canada
+logo_url: https://www.cubewerx.com/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'Yes'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'Yes'
+  oai-pmh: 'No'
+  ogcrecords: 'Yes'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'Yes'
+  wfs: 'Yes'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+documentation_url: https://www.cubewerx.com/web-mapping/
+export_formats:
+- CSW
+- GeoJSON
+- GML
+- JSON
+- KML
+- XML
+capabilities:
+- WMS service
+- WMTS service
+- WFS service
+- WCS service
+- CSW catalog service
+- OGC API
+last_updated: '2026-08-24T00:00:00Z'

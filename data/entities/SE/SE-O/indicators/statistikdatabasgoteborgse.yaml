@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: SE-O
+      name: Västra Götalands län [SE-14]
+description: Official PxWeb statistics database for Göteborgs Stad, with tables for
+  the city, districts and socio-economic area classifications.
+endpoints:
+- type: pxwebapi
+  url: https://statistikdatabas.goteborg.se/api/v1/sv/
+  version: '1'
+id: statistikdatabasgoteborgse
+langs:
+- id: SV
+  name: Swedish
+link: https://statistikdatabas.goteborg.se/pxweb/sv/
+name: Statistikdatabas Göteborgs Stad
+owner:
+  link: https://goteborg.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    subregion:
+      id: SE-O
+      name: Västra Götalands län [SE-14]
+  name: Göteborgs Stad
+  type: Local government
+properties:
+  has_doi: false
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: pxweb
+  name: PxWeb
+status: active
+tags:
+- statistics
+- municipality
+- PxWeb
+- Sweden
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00027165

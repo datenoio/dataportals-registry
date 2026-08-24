@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATACUBE
+================================================================================
+Generated: 2026-08-24 10:46:21
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATACUBE
+Priority: MEDIUM
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='opendatacube' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+TH: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+datacubegistdaorth: 1 issue
+
+=== ISSUES ===
+
+File: TH/Federal/geo/datacubegistdaorth.yaml
+Record ID: datacubegistdaorth
+Country: TH
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATACUBE
+Field: endpoints
+Current Value: {"software_id": "opendatacube", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='opendatacube' is marked as API-capable in software definitions

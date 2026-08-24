@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-AN
+      name: Andalucía
+description: Repositorio Abierto de la UNIA is a DSpace repository listed in re3data
+  as a research data provider.
+endpoints:
+- type: dspace
+  url: https://dspace.unia.es/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://dspace.unia.es/server/api/discover/search/objects
+  version: '7'
+id: dspaceuniaes
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100013722
+  value: r3d100013722
+langs:
+- id: ES
+  name: Spanish
+link: https://dspace.unia.es
+name: Repositorio Abierto de la UNIA
+owner:
+  link: https://www.unia.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-AN
+      name: Andalucía
+  name: Universidad Internacional de Andalucía
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+- re3data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027381

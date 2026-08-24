@@ -22,9 +22,11 @@ description: A user-friendly web-based data publication platform that allows res
   preserved for an agreed-upon period of time. The service is domain-agnostic and
   supports multiple communities with different policy and metadata requirements.
 endpoints:
+- type: islandora:catalog
+  url: https://repository.surfsara.nl
 - type: oaipmh20
   url: https://repository.surfsara.nl/api/oai2?verb=Identify
-  version: 2.0,0
+  version: '2.0'
 - type: sitemap
   url: https://repository.surfsara.nl/sitemap.xml
 id: repositorysurfsaranl

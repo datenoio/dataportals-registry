@@ -20,7 +20,7 @@ Coding agents: [agents/harvest.md](agents/harvest.md). Production harvesting for
 | [Domain scientific repositories](harvest-scientific-domain.md) | IPT, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF |
 | [Open data portals](harvest-opendata.md) | CKAN, OpenDataSoft, Socrata, and similar — packages vs resources |
 | [Geoportals](harvest-geoportals.md) | GeoNetwork CSW, GeoNode, ArcGIS, STAC, OGC API, mviewer, Isogeo, Geocortex, QGIS Server — layers vs services vs tiles |
-| [Indicators and microdata](harvest-indicators.md) | PxWeb tables, SDMX dataflows, OpenSDG indicators, NADA studies, DHIS2, IPUMS |
+| [Indicators and microdata](harvest-indicators.md) | PxWeb tables, SDMX dataflows, OpenSDG indicators, NADA studies, DHIS2, TabNet, IPUMS |
 | [Metadata catalogs](harvest-metadata.md) | FAIR Data Point DCAT, Aristotle MDR, Fusion Registry structure |
 | [Search, ML, API, marketplaces](harvest-other.md) | Aggregators, OpenAIRE, OpenML, API directories, marketplaces, `custom` |
 | [Protocols](harvest-protocols.md) | OAI-PMH, CSW, DCAT, STAC, SDMX, OGC, ArcGIS REST — grain that is shared across products |

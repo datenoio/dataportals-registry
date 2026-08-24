@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -22,6 +22,9 @@ description: The U.S. Antarctic Program Data Center (USAP-DC) supports investiga
   Datasets are registered in the Antarctic Metadata Directory to comply with the Antarctic
   Treaty and to represent the U.S. in Scientific Committee on Antarctic Research (SCAR)
   activities.
+endpoints:
+- type: rest
+  url: https://sonode.dataone.org/IEDA_USAP/
 id: wwwusapdcorg
 langs:
 - id: EN

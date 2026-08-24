@@ -1,7 +1,7 @@
 access_mode:
-- public
-api: true
-api_status: active
+- open
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,13 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This project is one part of the “Sphere", Thai Open Platform by GISTDA.
-  Most of its components were developed by Open Data Cube ( ODC). You may experience
-  space-time computation, almost the same as Google Earth Engine, with Python base
-  programming.
-endpoints:
-- type: stacserverapi
-  url: https://datacube.gistda.or.th/explorer/stac/
+description: GISTDA Open Data Cube catalog for Thailand, providing spatiotemporal
+  search of analysis-ready satellite collections on the Sphere / Thai Open Platform.
 id: datacubegistdaorth
 langs:
 - id: EN
@@ -36,7 +31,7 @@ owner:
       name: Thailand
     level: 20
   name: Thailand Geo-Informatics and Space Technology Development Agency (GISTDA)
-  type: Academy
+  type: Central government
 properties:
   has_doi: false
   transferable_topics: true
@@ -53,10 +48,10 @@ software:
 status: active
 tags:
 - geospatial
-- has_api
 - satellite
 - remote sensing
 - Thailand
+- Open Data Cube
 topics:
 - id: Geoscientific Information
   name: Geoscientific Information

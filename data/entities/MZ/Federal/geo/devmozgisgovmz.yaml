@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Server REST endpoint for accessing map services and data catalogs
+description: Development ArcGIS REST services directory for MozGIS, the national geospatial
+  platform of the Agência Nacional de Desenvolvimento Geo-espacial.
 endpoints:
 - type: arcgis:rest:info
   url: https://dev.mozgis.gov.mz/server/rest/info?f=pjson
@@ -32,17 +33,17 @@ endpoints:
 id: devmozgisgovmz
 langs:
 - id: PT
-  name: Portugal
+  name: Portuguese
 link: https://dev.mozgis.gov.mz/server/rest/services
-name: Mozambique REST Services Catalog
+name: MozGIS development REST services
 owner:
-  link: https://www.gov.mz
+  link: https://www.ade.gov.mz
   location:
     country:
       id: MZ
       name: Mozambique
     level: 20
-  name: Mozambique Government
+  name: Agência Nacional de Desenvolvimento Geo-espacial
   type: Central government
 properties:
   has_doi: false
@@ -66,4 +67,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00005975
+uid: cdi00027468

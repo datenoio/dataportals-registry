@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Official data catalog provided by the Institut National de la Statistique
-  du Niger
+description: National Data Archive (ANADO) of Institut National de la Statistique
+  du Niger. NADA catalog of household surveys, censuses, and other microdata with
+  DDI metadata and documented access conditions.
 endpoints:
 - type: nada:catalog-search
   url: https://www.stat-niger.org/anado/index.php/api/catalog/search
@@ -23,12 +24,12 @@ endpoints:
   url: https://www.stat-niger.org/anado/index.php/catalog/export/csv?ps=5000&collection[]
 id: wwwstatnigerorg
 langs:
-- id: EN
-  name: English
+- id: FR
+  name: French
 link: https://www.stat-niger.org/anado
 name: ANADO (Stat-Niger catalog)
 owner:
-  link: https://www.stat-niger.org
+  link: https://ins.ne
   location:
     country:
       id: NE
@@ -38,6 +39,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -52,6 +54,9 @@ status: active
 tags:
 - statistics
 - official
+- microdata
+- government
+- has_api
 - Niger
 topics:
 - id: SOCI
@@ -63,4 +68,7 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-uid: temp00004198
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00027506

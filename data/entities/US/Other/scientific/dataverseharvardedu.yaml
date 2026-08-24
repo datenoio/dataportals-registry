@@ -17,6 +17,8 @@ coverage:
 description: A general-purpose data repository built on open-source software intended
   for sharing and facilitating citation of research data.
 endpoints:
+- type: rest
+  url: https://sonode.dataone.org/HD
 - type: dataverseapi
   url: https://dataverse.harvard.edu/api/search?q=*&type=dataset&sort=name&order=asc
 - type: dataverseapi

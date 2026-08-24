@@ -25,14 +25,14 @@ Typical subtypes:
 |-----------|---------|
 | `data_portal_platform` | Self-hosted open-data CMS (CKAN, DKAN, uData, Idra) |
 | `scientific_repository_platform` | Dataverse, DSpace, Invenio, Figshare, OPUS, Omeka S, Fedora, Esploro, PHAIDRA, RADAR, Yoda |
-| `geospatial_catalog_platform` | GeoNetwork, GeoNode, ArcGIS Hub, gvSIG Online, VertiGIS WebOffice, Geocortex Essentials, GeoMedia WebMap, disy Cadenza, Mapbender, mviewer |
+| `geospatial_catalog_platform` | GeoNetwork, GeoNode, ArcGIS Hub, gvSIG Online, VertiGIS WebOffice, Geocortex Essentials, GeoMedia WebMap, disy Cadenza, Mapbender, mviewer, G3W-SUITE, Cadcorp SIS WebMap, Hexagon M.App Enterprise |
 | `microdata_catalog_platform` | NADA, NESSTAR, REDATAM, IPUMS |
-| `indicators_data_platform` | PxWeb, OpenSDG, Knoema, DHIS2 |
+| `indicators_data_platform` | PxWeb, OpenSDG, Knoema, DHIS2, FENIX |
 | `metadata_registry_platform` | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
 | `protocol_or_api_server` | STAC, THREDDS, OPeNDAP, SPARQL endpoints, openEO |
-| `geospatial_service_middleware` | GeoServer, MapServer, MapTiler Server, deegree, rasdaman, QGIS Server, SuperMap iServer, MapGIS IGServer |
+| `geospatial_service_middleware` | GeoServer, MapServer, MapTiler Server, deegree, rasdaman, QGIS Server, SuperMap iServer, MapGIS IGServer, CubeWerx CubeSERV |
 | `cms_or_app_framework` | WordPress, Drupal, Liferay used as a catalog |
-| `managed_saas_service` | Socrata, OpenDataSoft, CONTENTdm, vendor-hosted Hub, Isogeo, OpenAIRE |
+| `managed_saas_service` | Socrata, OpenDataSoft, CONTENTdm, vendor-hosted Hub, Isogeo, OpenAIRE, Astun iShare, Sentinel Hub |
 | `domain_data_infrastructure` | Domain-specific stacks (GBIF IPT, SciCat, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, Symbiota) |
 | `general_software` | Catch-all, including `custom` |
 

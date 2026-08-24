@@ -18,6 +18,13 @@ coverage:
 description: GeoServer instance hosted by the Faculty of Geodesy at University of
   Zagreb, providing access to geospatial datasets and web mapping services for research
   and educational purposes.
+endpoints:
+- type: wms111
+  url: http://bolegweb.geof.unizg.hr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: http://bolegweb.geof.unizg.hr/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
 id: bolegwebgeofunizghr
 langs:
 - id: HR
@@ -46,13 +53,6 @@ software:
   id: geoserver
   name: GeoServer
 status: active
-endpoints:
-- type: wms111
-  url: http://bolegweb.geof.unizg.hr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wfs110
-  url: http://bolegweb.geof.unizg.hr/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
 tags:
 - geospatial
 - web service
@@ -72,4 +72,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00003733
+uid: cdi00027088

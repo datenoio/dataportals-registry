@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: UG
+      name: Uganda
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: CKAN open data platform of the Makerere University AI4D Hub, publishing
+  research and AI-related datasets for health, agriculture, education, and community
+  applications.
+endpoints:
+- type: ckan
+  url: https://makerere-university-ai4d-hub.emergentai.ug/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://makerere-university-ai4d-hub.emergentai.ug/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://makerere-university-ai4d-hub.emergentai.ug/api/3/action/package_list
+  version: '3'
+id: makerereuniversityai4dhubemergentaiug
+langs:
+- id: EN
+  name: English
+link: https://makerere-university-ai4d-hub.emergentai.ug/
+name: Makerere University Data Platform
+owner:
+  link: https://www.mak.ac.ug
+  location:
+    country:
+      id: UG
+      name: Uganda
+    level: 20
+  name: Makerere University Centre for Artificial Intelligence (Mak-AI)
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- research
+- artificial intelligence
+- Makerere
+- Uganda
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+uid: cdi00027541

@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: U.S. Army Corps of Engineers GeoSpatial ArcGIS Hub for exploring and
+  downloading USACE geospatial datasets. Distinct from the USACE ArcGIS REST services
+  catalog.
+endpoints:
+- type: dcatap201
+  url: https://geospatial-usace.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://geospatial-usace.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://geospatial-usace.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://geospatial-usace.opendata.arcgis.com/api/search/v1
+id: geospatialusaceopendataarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://geospatial-usace.opendata.arcgis.com
+name: USACE GeoSpatial
+owner:
+  link: https://www.usace.army.mil
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: U.S. Army Corps of Engineers
+  type: Federal government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- GIS
+- open data
+- government
+- USACE
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00027303

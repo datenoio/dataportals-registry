@@ -1,0 +1,83 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Microdata catalog
+content_types:
+- microdata
+coverage:
+- location:
+    country:
+      id: ML
+      name: Mali
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: INSTAT National Data Archive (NADA) on microdata.instat.ml. Public catalog
+  of census, household, agricultural, health, and other official survey microdata
+  for Mali (107 studies when last checked), replacing the empty archive at instat-mali.org/nada.
+endpoints:
+- type: nada:catalog-search
+  url: https://microdata.instat.ml/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://microdata.instat.ml/index.php/catalog/export/csv?ps=5000&collection[]
+id: microdatainstatml
+langs:
+- id: FR
+  name: French
+link: https://microdata.instat.ml/
+name: INSTAT Mali National Data Archive
+owner:
+  link: https://www.instat.ml
+  location:
+    country:
+      id: ML
+      name: Mali
+    level: 20
+  name: Institut National de la Statistique (INSTAT)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: nada
+  name: NADA
+status: active
+tags:
+- government
+- has_api
+- microdata
+- statistics
+- surveys
+- official statistics
+- Mali
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+uid: cdi00027503

@@ -1,0 +1,92 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: MA
+      name: Morocco
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+- location:
+    country:
+      id: EH
+      name: Western Sahara
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: Interactive Apache Superset catalog of indicators from Morocco's 2024
+  General Census of Population and Housing (RGPH 2024), with tables, charts, and thematic
+  maps down to the commune, including Laâyoune-Sakia El Hamra and Dakhla-Oued Ed-Dahab.
+endpoints:
+- type: customapi
+  url: https://resultats2024.rgphapps.ma/api/v1/dashboard/
+  version: '1'
+- type: customapi
+  url: https://resultats2024.rgphapps.ma/api/v1/dataset/
+  version: '1'
+id: resultats2024rgphappsma
+langs:
+- id: AR
+  name: Arabic
+- id: FR
+  name: French
+link: https://resultats2024.rgphapps.ma
+name: Plateforme interactive du RGPH 2024
+owner:
+  link: https://www.hcp.ma
+  location:
+    country:
+      id: MA
+      name: Morocco
+    level: 20
+  name: Haut Commissariat au Plan (HCP)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: superset
+  name: Apache Superset
+status: active
+tags:
+- has_api
+- statistics
+- census
+- RGPH
+- population
+- Morocco
+- HCP
+- government
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00027725

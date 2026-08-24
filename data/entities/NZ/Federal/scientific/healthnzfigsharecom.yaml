@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+description: Health New Zealand Figshare repository is a Figshare institutional repository
+  that publishes research datasets and other scholarly outputs.
+endpoints:
+- type: sitemap
+  url: https://healthnz.figshare.com/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://healthnz.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: healthnzfigsharecom
+langs:
+- id: EN
+  name: English
+link: https://healthnz.figshare.com
+name: Health New Zealand Figshare repository
+owner:
+  link: https://www.tewhatuora.govt.nz
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+  name: Health New Zealand
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+- figshare
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027861

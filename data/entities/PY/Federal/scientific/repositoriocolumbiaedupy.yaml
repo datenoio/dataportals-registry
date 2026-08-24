@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PY
+      name: Paraguay
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: DSpace institutional repository of Universidad Columbia del Paraguay.
+endpoints:
+- type: dspace
+  url: https://repositorio.columbia.edu.py/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositorio.columbia.edu.py/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://repositorio.columbia.edu.py/sitemap_index.xml
+id: repositoriocolumbiaedupy
+langs:
+- id: ES
+  name: Spanish
+link: https://repositorio.columbia.edu.py/
+name: Repositorio Institucional Universidad Columbia
+owner:
+  link: https://www.columbia.edu.py
+  location:
+    country:
+      id: PY
+      name: Paraguay
+    level: 20
+  name: Universidad Columbia del Paraguay
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- institutional repository
+- DSpace
+- open access
+- Paraguay
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00027297

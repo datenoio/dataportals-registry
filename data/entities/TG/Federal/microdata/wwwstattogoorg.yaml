@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - dataset
@@ -16,9 +16,6 @@ coverage:
       name: Western Africa
 description: National Data Archive for Togo, providing access to various datasets
   and microdata from official statistics.
-endpoints:
-- type: nada:catalog
-  url: http://www.stat-togo.org/nada
 id: wwwstattogoorg
 langs:
 - id: FR
@@ -47,7 +44,7 @@ rights:
 software:
   id: nada
   name: NADA
-status: active
+status: inactive
 tags:
 - official statistics
 - microdata

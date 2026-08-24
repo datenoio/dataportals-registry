@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: Data catalog for research data at the University of Melbourne, offering
-  open access to datasets and research outputs.
+description: Data catalog for research data at the University of Melbourne, offering open
+  access to datasets and research outputs.
 endpoints:
 - type: sitemap
   url: https://melbourne.figshare.com/sitemap/siteindex.xml
@@ -24,6 +24,9 @@ endpoints:
   url: https://figshare.unimelb.edu.au/sitemap/siteindex.xml
 - type: figshare:graphql
   url: https://melbourne.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+- type: figshare:graphql
+  url: https://figshare.unimelb.edu.au/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
   version: '1.0'
 id: melbournefigsharecom
 identifiers:
@@ -36,7 +39,7 @@ identifiers:
 langs:
 - id: EN
   name: English
-link: https://melbourne.figshare.com
+link: https://figshare.unimelb.edu.au
 name: University of Melbourne research repository
 owner:
   link: https://www.unimelb.edu.au

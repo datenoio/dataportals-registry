@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: FI
+      name: Finland
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: FI-14
+      name: Pohjois-Pohjanmaa
+description: Open access repository of the University of Oulu for dissertations, theses,
+  publication series, and self-archived articles.
+endpoints:
+- type: dspace:catalog
+  url: https://oulurepo.oulu.fi
+id: oulurepooulufi
+langs:
+- id: FI
+  name: Finnish
+- id: EN
+  name: English
+link: https://oulurepo.oulu.fi
+name: OuluREPO
+owner:
+  link: https://www.oulu.fi
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: FI-14
+      name: Pohjois-Pohjanmaa
+  name: University of Oulu
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- institutional repository
+- DSpace
+- publications
+- theses
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027162

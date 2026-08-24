@@ -15,27 +15,28 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: ArcGIS REST Services Catalog for SIGM TG
+description: ArcGIS REST services of Togo's Geological and Mining Information System
+  (SIGM / GMIS), operated by the General Directorate of Mines and Geology.
 endpoints:
 - type: arcgis:portals:self
-  url: http://sigm.tg/portal/sharing/rest/portals/self?f=pjson
+  url: https://sigm.tg/portal/sharing/rest/portals/self?f=pjson
 - type: arcgis:rest:info
-  url: http://sigm.tg/arcgis/rest/info?f=pjson
+  url: https://sigm.tg/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: http://sigm.tg/arcgis/rest/services?f=pjson
+  url: https://sigm.tg/arcgis/rest/services?f=pjson
 - type: arcgis:soap
-  url: http://sigm.tg/arcgis/services?wsdl
+  url: https://sigm.tg/arcgis/services?wsdl
 - type: arcgis:sitemap
-  url: http://sigm.tg/arcgis/rest/services?f=sitemap
+  url: https://sigm.tg/arcgis/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: http://sigm.tg/arcgis/rest/services?f=geositemap
+  url: https://sigm.tg/arcgis/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: http://sigm.tg/arcgis/rest/services?f=kmz
+  url: https://sigm.tg/arcgis/rest/services?f=kmz
 id: sigmtg
 langs:
 - id: FR
   name: French
-link: http://sigm.tg/arcgis/rest/services
+link: https://sigm.tg/arcgis/rest/services
 name: Geological and Mining Information System (GMIS)
 owner:
   link: https://sigm.tg
@@ -44,7 +45,7 @@ owner:
       id: TG
       name: Togo
     level: 20
-  name: Republique Togolaise General Directorate of Mines and Geology (GDMG)
+  name: Direction Générale des Mines et de la Géologie (DGMG)
   type: Central government
 properties:
   has_doi: false

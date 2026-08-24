@@ -1,0 +1,71 @@
+access_mode:
+- open
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- scientific publication
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Institutional repository of scholarly publications from Lund University,
+  with a public LibreCat search interface over bibliographic records and open full
+  texts.
+endpoints:
+- type: oaipmh20
+  url: https://lup.lub.lu.se/oai?verb=Identify
+  version: '2.0'
+id: luplubluse
+identifiers:
+- id: opendoar
+  url: https://v2.sherpa.ac.uk/id/repository/1110
+  value: '1110'
+langs:
+- id: EN
+  name: English
+- id: SV
+  name: Swedish
+link: https://lup.lub.lu.se/search/
+name: Lund University Publications
+owner:
+  link: https://www.lu.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    subregion:
+      id: SE-M
+      name: Skåne län [SE-12]
+  name: Lund University
+  type: Academy
+properties:
+  transferable_topics: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: librecat
+  name: LibreCat
+status: active
+tags:
+- scientific
+- publications
+- institutional repository
+- open access
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027911
+api: true

@@ -14,21 +14,23 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Data catalog portal hosting statistical and demographic datasets for
-  Benin, managed by the National Institute of Statistics and Demography (INStaD),
-  formerly INSAE. The portal enables browsing, searching, and applying for access
-  to datasets.
+description: National Data Archive (NADA) of Benin's Institut National de la
+  Statistique et de la Démographie (INStaD, formerly INSAE). Catalogues census and
+  survey microdata with searchable metadata; the previous host nada.insae-bj.org
+  now returns HTTP 423 Locked.
 endpoints:
 - type: nada:catalog-search
-  url: http://nada.insae-bj.org/index.php/api/catalog/search
+  url: https://www.nada.instad.bj/index.php/api/v2/catalog/search
+- type: nada:csvexport
+  url: https://www.nada.instad.bj/index.php/catalog/export/csv
 id: nadainsaebj
 langs:
 - id: FR
   name: French
-link: http://nada.insae-bj.org/index.php
+link: https://www.nada.instad.bj/index.php
 name: ARCHIVES DES ENQUETES STATISTIQUES DU BENIN
 owner:
-  link: http://www.insae-bj.org
+  link: https://instad.bj
   location:
     country:
       id: BJ

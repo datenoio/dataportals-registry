@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -14,29 +14,25 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Data catalog providing access to official statistics and datasets for
-  Qatar, including demographic, economic, and social data.
-endpoints:
-- type: sitemap
-  url: http://www.psa.gov.qa/sitemap.xml
-- type: sitemap
-  url: https://www.psa.gov.qa:443/sitemap.xml
+description: Official statistics catalog of Qatar's National Planning Council (successor
+  to the Planning and Statistics Authority), covering demographic, economic, social,
+  and other national statistical releases.
 id: wwwpsagovqa
 langs:
 - id: EN
   name: English
 - id: AR
   name: Arabic
-link: https://www.psa.gov.qa/en/statistics1/Pages/default.aspx
-name: Qatar Planning and Statistics Authority (PSA) Data Catalog
+link: https://www.npc.qa/en/statistics/Pages/default.aspx
+name: Qatar National Planning Council Statistics Catalog
 owner:
-  link: https://www.psa.gov.qa
+  link: https://www.npc.qa
   location:
     country:
       id: QA
       name: Qatar
     level: 20
-  name: Qatar Planning and Statistics Authority
+  name: National Planning Council
   type: Central government
 properties:
   has_doi: false

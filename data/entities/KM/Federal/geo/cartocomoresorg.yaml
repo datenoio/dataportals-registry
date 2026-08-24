@@ -100,10 +100,30 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 tags:
 - GIS
 - geospatial
-description: Geoportal. managed by GeoComores. providing access to geocomores.
+- GeoNode
+- government
+- has_api
+- WMS
+- WFS
+- CSW
+description: National GeoNode geoportal of the Union of the Comoros (GeoComores).
+  Publishes geospatial datasets, maps, documents, and OGC services (WMS, WFS, WCS,
+  CSW).
 content_types:
 - dataset
 - map_layer
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null

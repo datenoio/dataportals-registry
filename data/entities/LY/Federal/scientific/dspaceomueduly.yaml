@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: LY
+      name: Libya
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: Institutional DSpace repository of Omar Al-Mukhtar University for scholarly
+  publications, theses, and research data with supplementary materials.
+endpoints:
+- type: dspace
+  url: https://dspace.omu.edu.ly/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://dspace.omu.edu.ly/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://dspace.omu.edu.ly/server/oai/request?verb=Identify
+  version: '2.0'
+id: dspaceomueduly
+langs:
+- id: AR
+  name: Arabic
+- id: EN
+  name: English
+link: https://dspace.omu.edu.ly/
+name: Omar Al-Mukhtar University Institutional Repository
+owner:
+  link: https://omu.edu.ly
+  location:
+    country:
+      id: LY
+      name: Libya
+    level: 20
+  name: Omar Al-Mukhtar University
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- institutional repository
+- open access
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00027630

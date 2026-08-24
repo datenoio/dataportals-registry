@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,24 +17,8 @@ coverage:
       name: Southern Europe
 description: National spatial data infrastructure of Spain (IDEE). Integrates geospatial
   data, metadata and web services produced by Spanish public administrations under
-  INSPIRE and LISIGE interoperability standards.
-endpoints:
-- type: geonetwork:query
-  url: https://www.idee.es/csw-inspire-idee/srv/eng/q
-- type: openapi
-  url: https://www.idee.es/csw-inspire-idee/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: https://www.idee.es/csw-inspire-idee/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://www.idee.es/csw-inspire-idee/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://www.idee.es/csw-inspire-idee/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
-- type: geonetwork:site
-  url: https://www.idee.es/csw-inspire-idee/srv/api/site
+  INSPIRE and LISIGE interoperability standards. The harvestable GeoNetwork catalog
+  is registered separately as wwwideeescswinspireidee.
 id: wwwideees
 langs:
 - id: ES
@@ -62,13 +46,12 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: geonetwork
-  name: GeoNetwork
+  id: custom
+  name: Custom software
 status: active
 tags:
 - INSPIRE
 - Spain
-- geonetwork
 - geoportal
 - geospatial
 - government

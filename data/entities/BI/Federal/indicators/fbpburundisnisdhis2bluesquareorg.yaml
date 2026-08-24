@@ -1,0 +1,72 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: BI
+      name: Burundi
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: National DHIS2 health information system (SNIS) of the Burundi Ministry
+  of Public Health. Login is required to query routine health indicators.
+endpoints:
+- type: dhis2:catalog
+  url: https://fbp-burundi-snis.dhis2.bluesquare.org
+id: fbpburundisnisdhis2bluesquareorg
+langs:
+- id: FR
+  name: French
+link: https://fbp-burundi-snis.dhis2.bluesquare.org
+name: Burundi Système National d'Information Sanitaire (SNIS)
+owner:
+  link: https://minisante.gov.bi
+  location:
+    country:
+      id: BI
+      name: Burundi
+    level: 20
+  name: Ministère de la Santé Publique et de la Lutte contre le SIDA
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dhis2
+  name: DHIS2
+status: active
+tags:
+- health
+- HMIS
+- DHIS2
+- government
+- restricted
+- Burundi
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00027615

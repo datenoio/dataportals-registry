@@ -15,9 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Provides access to a variety of astronomical catalogs including those
-  from Euclid, 2MASS, IRAS, WISE, MSX, and other projects. Users can search, view,
-  and download catalog data.
+description: ArcGIS Enterprise catalog of Energy Utility Corporation Limited (EUCL)
+  under Rwanda Energy Group, publishing electricity network and related GIS services.
 endpoints:
 - type: arcgis:rest:info
   url: https://euclgis.reg.rw/server/rest/info?f=pjson
@@ -36,16 +35,16 @@ langs:
 - id: EN
   name: English
 link: https://euclgis.reg.rw/server/rest/services
-name: 'Euclid Data Explorer at IRSA: Catalogs'
+name: EUCL GIS Portal
 owner:
-  link: https://irsa.ipac.caltech.edu
+  link: https://www.reg.rw
   location:
     country:
       id: RW
       name: Rwanda
     level: 20
-  name: IRSA
-  type: Academy
+  name: Energy Utility Corporation Limited (EUCL)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -60,20 +59,15 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- astronomy
-- science
-- catalog
-- data
-- Euclid
-- IRSA
+- GIS
+- energy
+- electricity
+- EUCL
 topics:
-- id: TECH
-  name: Science and technology
+- id: ENER
+  name: Energy
   type: eudatatheme
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
-- id: Geoscientific Information
-  name: Geoscientific Information
+- id: Utilities / Communication
+  name: Utilities / Communication
   type: iso19115
-uid: temp00005813
+uid: cdi00027675

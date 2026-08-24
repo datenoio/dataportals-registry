@@ -1,0 +1,59 @@
+category: Open data portal
+subtype: managed_saas_service
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: Uncertain
+has_bulk: Uncertain
+id: gxopendata
+name: Guangxi Public Data Open Platform
+website: https://data.gxzf.gov.cn
+description: The Guangxi Zhuang Autonomous Region public data open platform
+  hosts the provincial catalog at data.gxzf.gov.cn and city tenants at
+  {city}.data.gxzf.gov.cn. Custom stack (not CKAN) built for five-level
+  public-data opening. One record per tenant, not per dataset.
+owner:
+  name: Guangxi Zhuang Autonomous Region Big Data Development Bureau
+  location:
+    country:
+      id: CN
+      name: China
+logo_url: https://data.gxzf.gov.cn/favicon.ico
+documentation_url: https://data.gxzf.gov.cn
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- JSON
+- CSV
+capabilities:
+- Open data catalog
+- Multi-tenant portal
+last_updated: '2026-08-23T19:40:00Z'

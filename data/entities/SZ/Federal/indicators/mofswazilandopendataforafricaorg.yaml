@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: SZ
+      name: Eswatini
+    level: 20
+    macroregion:
+      id: 018
+      name: Southern Africa
+description: Ministry of Finance portal on the African Development Bank Open Data
+  for Africa platform (Africa Information Highway / Knoema). Hosts macroeconomic and
+  financial indicator datasets and the IMF National Summary Data Page. Distinct from
+  the Central Statistical Office country hub.
+endpoints:
+- type: knoema:search
+  url: https://mof-swaziland.opendataforafrica.org/api/1.0/search
+  version: '1.0'
+- type: sdmx:datastructure
+  url: https://mof-swaziland.opendataforafrica.org/api/1.0/sdmx
+  version: '2.0'
+- type: opensearch
+  url: https://mof-swaziland.opendataforafrica.org/OpenSearch.xml
+id: mofswazilandopendataforafricaorg
+langs:
+- id: EN
+  name: English
+link: https://mof-swaziland.opendataforafrica.org/
+name: OpenData for the Ministry of Finance, Eswatini
+owner:
+  link: https://www.gov.sz/index.php/ministries-departments/ministry-of-finance
+  location:
+    country:
+      id: SZ
+      name: Eswatini
+    level: 20
+  name: Ministry of Finance
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: knoema
+  name: Knoema
+status: active
+tags:
+- has_api
+- statistics
+- government
+- official statistics
+- Eswatini
+- NSDP
+- AfDB
+- Open Data for Africa
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00027716

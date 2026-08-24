@@ -1,0 +1,78 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SV
+      name: El Salvador
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Micelio is the DSpace-CRIS research information and data platform of
+  Universidad Centroamericana José Simeón Cañas (UCA). It publishes open and restricted
+  research datasets alongside publications, projects, and researcher profiles.
+endpoints:
+- type: dspace
+  url: https://micelio.uca.edu.sv/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://micelio.uca.edu.sv/server/api/discover/search/objects
+  version: '7'
+id: micelioucaedusv
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100014704
+  value: r3d100014704
+- id: opendoar
+  url: https://opendoar.ac.uk/repository/10980
+  value: '10980'
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: https://micelio.uca.edu.sv
+name: Micelio — Plataforma para la investigación UCA
+owner:
+  link: https://www.uca.edu.sv
+  location:
+    country:
+      id: SV
+      name: El Salvador
+    level: 20
+  name: Universidad Centroamericana José Simeón Cañas
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspacecris
+  name: DSpace CRIS
+status: active
+tags:
+- research
+- research data
+- datasets
+- dspace-cris
+- El Salvador
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00027022

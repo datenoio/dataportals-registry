@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: CKAN catalog of electricity-market and grid datasets published by Svenska
+  kraftnät, including balancing energy, capacity markets and related time series.
+endpoints:
+- type: ckan
+  url: https://data.svk.se/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.svk.se/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.svk.se/api/3/action/package_list
+  version: '3'
+id: datasvkse
+langs:
+- id: SV
+  name: Swedish
+- id: EN
+  name: English
+link: https://data.svk.se
+name: Svenska kraftnät Data Service
+owner:
+  link: https://www.svk.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Svenska kraftnät
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- electricity
+- energy market
+- Sweden
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00027167

@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Shared PxWeb statistical database of the Swedish County Administrative
+  Boards (Länsstyrelserna), including environmental statistics on forest landscape
+  condition.
+endpoints:
+- type: pxwebapi
+  url: https://pxweb.lansstyrelsen.se/api/v1/sv/
+  version: '1'
+id: pxweblansstyrelsense
+langs:
+- id: SV
+  name: Swedish
+link: https://pxweb.lansstyrelsen.se/pxweb/sv/
+name: Länsstyrelsen Statistical Database
+owner:
+  link: https://www.lansstyrelsen.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Länsstyrelserna
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: pxweb
+  name: PxWeb
+status: active
+tags:
+- statistics
+- PxWeb
+- environment
+- forestry
+- Sweden
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00027184

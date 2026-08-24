@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SV
+      name: El Salvador
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: SV-SS
+      name: San Salvador
+description: ArcGIS Enterprise geoportal of OPAMSS for the San Salvador metropolitan
+  area. Public Portal catalog and REST map services covering land-use, environmental,
+  socioeconomic, and regulatory layers.
+endpoints:
+- type: arcgis:rest:info
+  url: https://geovisor.opamss.org.sv/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geovisor.opamss.org.sv/server/rest/services?f=pjson
+- type: arcgis:portals:self
+  url: https://geovisor.opamss.org.sv/portal/sharing/rest/portals/self?f=pjson
+id: geovisoropamssorgsv
+langs:
+- id: ES
+  name: Spanish
+link: https://geovisor.opamss.org.sv/portal/home/
+name: Geovisor / Geoportal OPAMSS
+owner:
+  link: https://opamss.org.sv/
+  location:
+    country:
+      id: SV
+      name: El Salvador
+    level: 30
+    subregion:
+      id: SV-SS
+      name: San Salvador
+  name: Oficina de Planificación del Área Metropolitana de San Salvador (OPAMSS)
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- urban planning
+- GIS
+- El Salvador
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00027015

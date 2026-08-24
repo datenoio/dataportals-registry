@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-NC
+      name: Nafarroako Foru Komunitatea*
+description: Institutional DSpace 7 repository of Universidad Pública de Navarra.
+  Recolecta 2025 quality IR.
+endpoints:
+- type: dspace
+  url: https://academica-e.unavarra.es/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://academica-e.unavarra.es/server/api/discover/search/objects
+  version: '7'
+id: academicaeunavarraes
+langs:
+- id: ES
+  name: Spanish
+link: https://academica-e.unavarra.es
+name: Academica-e
+owner:
+  link: https://www.unavarra.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-NC
+      name: Nafarroako Foru Komunitatea*
+  name: Universidad Pública de Navarra
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027454

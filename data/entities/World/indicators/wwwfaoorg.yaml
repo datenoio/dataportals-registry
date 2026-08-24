@@ -18,16 +18,9 @@ description: FAO statistical database providing free access to food and agricult
   data for over 245 countries and territories and covering all FAO regional groupings
   from 1961 to the most recent year available.
 endpoints:
-- type: sitemap
-  url: https://www.fao.org/newsroom/sitemap/sitemap.gz
-- type: sitemap
-  url: https://www.fao.org/in-action/ectad/sitemap/sitemap.gz
-- type: sitemap
-  url: https://www.fao.org/americas/sitemap/sitemap.gz
-- type: sitemap
-  url: https://www.fao.org/director-general/sitemap/sitemap-index.xml
-- type: sitemap
-  url: https://www.fao.org/europe/sitemap/sitemap.gz
+- type: rest
+  url: https://fenixservices.fao.org/faostat/api/v1/en/groupsanddomains
+  version: '1'
 id: wwwfaoorg
 identifiers:
 - id: re3data
@@ -62,14 +55,13 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: fenix
+  name: FENIX
 status: active
 tags:
 - statistics
-- argiculture
-- food
 - agriculture
+- food
 topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food

@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-RS
+      name: Rio Grande do Sul
+description: GeoNetwork metadata catalog of Rio Grande do Sul's state spatial data
+  infrastructure (IEDE/RS). Distinct from the ArcGIS REST services directory on iede.rs.gov.br.
+endpoints:
+- type: csw202
+  url: https://metadados.iede.rs.gov.br/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://metadados.iede.rs.gov.br/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://metadados.iede.rs.gov.br/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://metadados.iede.rs.gov.br/geonetwork/srv/api/site
+id: metadadosiedersgovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://metadados.iede.rs.gov.br/geonetwork
+name: Catálogo de Metadados IEDE/RS
+owner:
+  link: https://iede.rs.gov.br/geoportal/
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-RS
+      name: Rio Grande do Sul
+  name: IEDE/RS
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- Brazil
+- GeoNetwork
+- geospatial
+- IEDE
+- INDE
+- metadata
+- Rio Grande do Sul
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00027045

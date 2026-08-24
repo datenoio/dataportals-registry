@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: LV
+      name: Latvia
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Institutional open-access DSpace repository of Rīga Stradiņš University.
+  Stores scientific and academic outputs, teaching materials, doctoral theses, and
+  student final papers, including records harvested from the RSU Pure research portal.
+endpoints:
+- type: dspace
+  url: https://dspace.rsu.lv/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://dspace.rsu.lv/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://dspace.rsu.lv/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://dspace.rsu.lv/sitemap_index.xml
+id: dspaceresulv
+langs:
+- id: LV
+  name: Latvian
+- id: EN
+  name: English
+link: https://dspace.rsu.lv
+name: RSU e-resource repository (DSpace)
+owner:
+  link: https://www.rsu.lv
+  location:
+    country:
+      id: LV
+      name: Latvia
+    level: 20
+  name: Rīga Stradiņš University
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- research
+- publications
+- open access
+- university
+- theses
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+uid: cdi00027418

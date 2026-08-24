@@ -56,6 +56,7 @@ Open the harvest heading from [software-index.md](../software-index.md). Do not 
 | `stacserver` | `/collections` (items only if that is the grain) |
 | `arcgisserver` | `/arcgis/rest/services?f=pjson` — not GPServer |
 | `pxweb` | `/api/v1/` tables (`type: t`), not folders |
+| `pxstat` | `PxStat.Data.Cube_API.ReadCollection` matrices, not widgets |
 | `custom` | [harvest-other.md](../harvest-other.md#custom) decision tree |
 
 If the filter returns zero hits, inspect **one** unfiltered sample and `ListSets` / facets before concluding the catalog has no data. Local labels include Forschungsdaten, Research Data, and numeric WEKO3 item types.

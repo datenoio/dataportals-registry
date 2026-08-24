@@ -18,13 +18,15 @@ description: The official portal for accessing statistical data from the Departm
   statistics.
 endpoints:
 - type: pxwebapi
-  url: http://jorinfo.dos.gov.jo/Databank/api/v1/en
+  url: https://jorinfo.dos.gov.jo/Databank/api/v1/en
   version: '1'
 id: jorinfodosgovjo
 langs:
 - id: EN
   name: English
-link: http://jorinfo.dos.gov.jo/Databank/pxweb
+- id: AR
+  name: Arabic
+link: https://jorinfo.dos.gov.jo/Databank/pxweb
 name: Department of Statistics (DoS) Data Catalog
 owner:
   link: https://dosweb.dos.gov.jo
@@ -53,7 +55,7 @@ tags:
 - government
 - official statistics
 - Jordan
-- microdata
+- PxWeb
 - aggregated data
 topics:
 - id: SOCI

@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: UL Research Institutes Figshare repository is a Figshare institutional
+  repository that publishes datasets.
+endpoints:
+- type: sitemap
+  url: https://ulri.figshare.com/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://ulri.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: ulrifigsharecom
+langs:
+- id: EN
+  name: English
+link: https://ulri.figshare.com
+name: UL Research Institutes Figshare repository
+owner:
+  link: https://ul.org
+  location:
+    country:
+      id: US
+      name: United States
+  name: UL Research Institutes
+  type: Civil society
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+- figshare
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027327

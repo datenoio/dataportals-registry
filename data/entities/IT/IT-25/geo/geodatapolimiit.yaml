@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,11 +18,8 @@ coverage:
     subregion: &id001
       id: IT-25
       name: Lombardia
-description: Geoportale - digital territorial maps, allows geographic research of
-  cartographic materials and download of digital cartographies
-endpoints:
-- type: opengeoportal:catalog
-  url: https://geodata.polimi.it/opengeoportal/
+description: Former GeoData@Polimi OpenGeoPortal catalog. The hostname
+  geodata.polimi.it no longer resolves.
 id: geodatapolimiit
 langs:
 - id: IT
@@ -49,7 +46,7 @@ rights:
 software:
   id: opengeoportal
   name: OpenGeoPortal
-status: active
+status: inactive
 tags:
 - Geoportale
 - Italy

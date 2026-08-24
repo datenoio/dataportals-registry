@@ -14,11 +14,9 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: The provided URL 'https://sg-mdh.mpa.gov.sg' does not resolve or provide
-  accessible data in the current search results. As such, a direct catalog extraction
-  is not possible. However, based on context about Singapore's Maritime & Port Authority
-  (MPA) data catalogs, an illustrative catalog entry can be generated following your
-  schema and using the provided vocabularies.
+description: Former Singapore Maritime Data Hub (SG-MDH) of the Maritime and Port
+  Authority of Singapore. Technical support ended 30 January 2026; the catalogue
+  redirected to OCEANS-X (https://oceans-x.mpa.gov.sg) from 9 February 2026.
 id: sgmdhmpagovsg
 langs:
 - id: EN
@@ -26,13 +24,13 @@ langs:
 link: https://sg-mdh.mpa.gov.sg
 name: Singapore Maritime Data Hub
 owner:
-  link: https://www.gov.sg
+  link: https://www.mpa.gov.sg
   location:
     country:
       id: SG
       name: Singapore
     level: 20
-  name: Government of Singapore
+  name: Maritime and Port Authority of Singapore
   type: Central government
 properties:
   has_doi: false
@@ -44,12 +42,11 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: drupal
-  name: Drupal
-status: active
+  id: custom
+  name: Custom software
+status: deprecated
 tags:
 - government
-- has_api
 - maritime
 - port
 - vessels

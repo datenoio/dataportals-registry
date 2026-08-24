@@ -22,11 +22,17 @@ endpoints:
   url_pattern: /articles/dataset/
 - type: figshare:graphql
   url: https://csir.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+- type: sitemap
+  url: https://dataspace.csir.co.za/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://dataspace.csir.co.za/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
 id: csirfigsharecom
 langs:
 - id: EN
   name: English
-link: https://csir.figshare.com/
+link: https://dataspace.csir.co.za
 name: Research from Council for Scientific and Industrial Research
 owner:
   link: https://www.csir.co.za

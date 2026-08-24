@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: IL
+      name: Israel
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: National Elsevier Pure portal (CRISrael) aggregating research outputs
+  of Israel public universities.
+endpoints:
+- type: oaipmh20
+  url: https://cris.iucc.ac.il/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://cris.iucc.ac.il/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://cris.iucc.ac.il/sitemap/datasets.xml
+- type: pure:export_excel
+  url: https://cris.iucc.ac.il/en/datasets/?export=xls
+- type: sitemap
+  url: https://cris.iucc.ac.il/sitemap.xml
+id: crisiuccacil
+langs:
+- id: EN
+  name: English
+link: https://cris.iucc.ac.il
+name: Israeli Research Community Portal
+owner:
+  link: https://www.iucc.ac.il
+  location:
+    country: *id001
+    level: 20
+  name: Inter-University Computation Center
+  type: Academy
+properties:
+  has_doi: true
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research data
+- Pure
+- CRIS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027524

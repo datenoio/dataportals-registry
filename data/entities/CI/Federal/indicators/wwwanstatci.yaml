@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: CI
+      name: Cote d Ivoire
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Official ANSTAT indicator explorer for Côte d'Ivoire, with thematic time
+  series, charts (including trade), publications, and a documented public API for
+  administrative geography.
+endpoints:
+- type: customapi
+  url: https://api-public.anstat.ci/api/v1/regions
+id: wwwanstatci
+langs:
+- id: FR
+  name: French
+link: https://www.anstat.ci/indicateur
+name: ANSTAT Indicateurs
+owner:
+  link: https://www.anstat.ci
+  location:
+    country:
+      id: CI
+      name: Cote d Ivoire
+    level: 20
+  name: Agence Nationale de la Statistique
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- indicators
+- government
+- official statistics
+- ANSTAT
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00027590

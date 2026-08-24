@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Fontys University of Applied Sciences Figshare repository is a Figshare
+  institutional repository that publishes research datasets and other scholarly outputs.
+endpoints:
+- type: sitemap
+  url: https://fontys.figshare.com/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://fontys.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: fontysfigsharecom
+langs:
+- id: NL
+  name: Dutch
+- id: EN
+  name: English
+link: https://fontys.figshare.com
+name: Fontys University of Applied Sciences Figshare repository
+owner:
+  link: https://www.fontys.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: Fontys University of Applied Sciences
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+- figshare
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027893

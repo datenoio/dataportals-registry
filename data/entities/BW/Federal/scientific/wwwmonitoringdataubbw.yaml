@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,10 +17,6 @@ coverage:
 description: Biodiversity Data published by Okavango Research Institute (ORI). The
   datasets include time series monitoring and campaigns undertaken in and around the
   Okavango Delta.
-endpoints:
-- type: rss
-  url: https://www.monitoringdata.ub.bw/ipt/rss.do
-  version: '2.0'
 id: wwwmonitoringdataubbw
 langs:
 - id: EN
@@ -39,7 +35,7 @@ owner:
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT

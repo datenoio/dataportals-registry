@@ -1,0 +1,91 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: QA
+      name: Qatar
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Arabic-language ArcGIS Hub of Qatar's national Sustainable Development
+  Goal indicators, produced by the statistics department in cooperation with ministries
+  and government agencies. Language twin of the English SDGs STATE OF QATAR hub.
+endpoints:
+- type: dcatap201
+  url: https://sdg-ar-psaqatar.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://sdg-ar-psaqatar.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://sdg-ar-psaqatar.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://sdg-ar-psaqatar.opendata.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://sdg-ar-psaqatar.opendata.arcgis.com/sitemap.xml
+id: sdgarpsaqataropendataarcgiscom
+langs:
+- id: AR
+  name: Arabic
+- id: EN
+  name: English
+link: https://sdg-ar-psaqatar.opendata.arcgis.com/
+name: أهداف التنمية المستدامة
+owner:
+  link: https://www.npc.qa
+  location:
+    country:
+      id: QA
+      name: Qatar
+    level: 20
+  name: National Planning Council
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- SDG
+- Sustainable Development Goals
+- open data
+- map
+- statistics
+- Qatar
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00003965

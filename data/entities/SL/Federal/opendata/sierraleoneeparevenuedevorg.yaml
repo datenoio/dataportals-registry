@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SL
+      name: Sierra Leone
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Public environmental licensing repository of the Environment Protection
+  Agency, published from ECAS (RDF Online Repository). Distinct from the EPA-SL CEDAS
+  hub at epahub.epa.gov.sl and from the NMA mining repository.
+endpoints:
+- type: rdfrepository:catalog
+  url: https://sierraleone-epa.revenuedev.org/
+id: sierraleoneeparevenuedevorg
+langs:
+- id: EN
+  name: English
+link: https://sierraleone-epa.revenuedev.org/
+name: Sierra Leone EPA Online Repository
+owner:
+  link: https://www.epa.gov.sl
+  location:
+    country:
+      id: SL
+      name: Sierra Leone
+    level: 20
+  name: Environment Protection Agency
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: rdfrepository
+  name: RDF Online Repository
+status: active
+tags:
+- environment
+- licensing
+- cadastre
+- government
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00027805

@@ -9,13 +9,17 @@ Overview: [harvest.md](harvest.md). Finding catalogs: [discovery-indicators.md](
 | Keep | Drop |
 |------|------|
 | PxWeb **table** (leaf in the subject tree) | Subject **folders** and the API root |
+| PxStat **matrix / table** (JSON-stat collection item) | Subject folders, PxWidget embeds, demo site |
 | SDMX **dataflow** | Codelists, concept schemes, DSDs as if they were data (unless you harvest structural metadata on purpose — [harvest-metadata.md](harvest-metadata.md)) |
 | OpenSDG **indicator** JSON | Static about/reporting HTML |
 | NADA / NESSTAR **study** | Videos, documents, and news items in the same catalog |
 | Mica **study** / dataset | Network chrome, person records |
 | DHIS2 **data set** / public indicator | Org-unit trees, user accounts, login-only analytics |
+| TabNet **`.def` table** (query form) | CGI query sessions, TabWin `.TAB` downloads, individual table cells |
+| FENIX **domain / dataset** (FAOSTAT groupsanddomains) | FAOSTAT observation cubes; dead CountrySTAT hosts |
 | IPUMS **sample** / collection metadata | Completed extract files and variable pages as catalogs |
 | Knoema **dataset** on a portal | Individual time-series points and knoema.com global search hits |
+| SparkMap **map layer** or assessment report | Saved user maps, login-only CHNA builder sessions, sparkmap.org marketing pages |
 
 Do not download full observation cubes unless the user asked for data files. Catalog harvest = identifiers + title + URL + period.
 
@@ -29,6 +33,16 @@ GET https://host/api/v1/en/
 ```
 
 Each JSON object with `type: t` (table) is a dataset. `type: l` is a folder — recurse. Do not treat a POST of table cells as a new dataset. Cap depth; some NSOs have thousands of tables.
+
+## PxStat (`pxstat`) {#pxstat}
+
+List live tables from the Cube API (often on a `ws.` / `ws-data.` host recorded in `endpoints[]`). Prefer REST ReadCollection; JSON-RPC is equivalent.
+
+```text
+GET https://ws-host/public/api.restful/PxStat.Data.Cube_API.ReadCollection/{datefrom}/en
+```
+
+Each JSON-stat **collection item** is a dataset. Grain is the **matrix / table code**. Drop subject folders, PxWidget embeds, and the CSO demo. Do not harvest `visual.cso.ie` as a second catalog of the same tables. Date-from filters recently updated tables; omit or use an early date for a full list.
 
 ## OpenSDG (`opensdg`) {#opensdg}
 
@@ -57,6 +71,14 @@ Same dataflow grain as [.Stat Suite](#statsuite) when the product is Stat Techno
 
 Portal REST (`/api/1.0/` or `/api/3.0/`) lists **datasets** for that hub. Page the dataset catalog. Do not crawl every resource URL or the global knoema.com search. One portal = one harvest scope.
 
+## SparkMap (`sparkmap`) {#sparkmap}
+
+Filter exports on `software.id = 'sparkmap'`. One harvest scope per public hub (SparkMap national, All Things state sites, hospital and Community Action hubs). Do not harvest CARES HQ Map Room as a second copy of SparkMap.
+
+There is no anonymous layer-list API on the public Map Room. Harvest the hub’s public **Map Room data list** (layer catalog page or downloadable layer list) and public **community needs assessment / indicator reports**. Grain is the map layer or report, not a choropleth screenshot.
+
+**Drop** saved user maps, login-only assessment builder sessions, SparkMap marketing and pricing pages, and paid API extracts unless the user asked for those files. Stop on `401`/`403`.
+
 ## SDMX-RI (`sdmxri`) {#sdmxri}
 
 List dataflows from the NSI REST/SOAP endpoint in `endpoints[]` (`/rest/dataflow` or documented NSI path). Keep dataflows. Drop structure-only resources. If the human catalog is PxWeb/.Stat, harvest that UI’s table list instead of raw SOAP. REST grain: [harvest-protocols.md](harvest-protocols.md#sdmx).
@@ -80,6 +102,39 @@ GET https://host/api/indicators.json?fields=id,displayName&pageSize=50
 ```
 
 Keep **data sets** and public **indicators**. Drop user accounts, org-unit trees as datasets, and login-only analytics. Stop on `401`/`403`. Many ministries expose no anonymous API — then harvest only the public portal’s documented indicator list. Skip dhis2.org marketing.
+
+## TabNet (`tabnet`) {#tabnet}
+
+Brazilian DATASUS CGI tabulators. Filter exports on `software.id = 'tabnet'`. There is no REST list API.
+
+Keep each public **`.def` table** (query form) as one dataset analog: title from the form heading, URL the `deftohtm.exe` / `cgi-bin/dh?` / `tabcgi.exe` link. Harvest from the installation’s table menu (HTML index), not by guessing `.def` paths.
+
+**Drop** CGI `Mostre` query results, `Copia para Tabwin` files, CSV cell dumps, TabWin desktop packages, and every `.def` on `tabnet.datasus.gov.br` when harvesting the national catalog already listed from the DATASUS TabNet landing page. One harvest scope per installation (national, SES, municipal, ANS). Stop on `401`/`403`.
+
+## FENIX (`fenix`) {#fenix}
+
+Filter exports on `software.id = 'fenix'`. One harvest scope per public FENIX app (FAOSTAT, AMIS, AIDmonitor, DAD-IS, WIEWS, GIFT), not per CountrySTAT dataset dumped into FAO CKAN.
+
+FAOSTAT list:
+
+```text
+GET https://fenixservices.fao.org/faostat/api/v1/en/groupsanddomains
+```
+
+Keep **domains / datasets** from that JSON. Observation queries (`/faostat/api/v1/{lang}/data/{domain}`) are not new catalogs. Prefer `endpoints[]` on the FAOSTAT record. Other FENIX UIs often have no anonymous list API — harvest the public dataset/indicator list from the UI, then stop. Skip dead `countrystat.org` hosts and GitHub UI repos.
+
+## DataWarehousePro (`datawarehousepro`) {#datawarehousepro}
+
+```text
+GET https://app.datawarehousepro.com/guest/getDatabanksWithMnemonics/{tenant}
+GET https://app.datawarehousepro.com/guest/export/{tenant}
+```
+
+Keep **databanks / series catalogs** for that tenant. Drop admin paste-from-Excel UI and other tenants on the same host. One portal = one harvest scope.
+
+## Goal Tracker (`goaltracker`) {#goaltracker}
+
+Harvest public **indicator / goal** pages the country tenant lists. Drop About/marketing HTML. There is no verified anonymous list API on every tenant — stop rather than scraping every visualization. Distinct from [Open SDG](#opensdg).
 
 ## NADA (`nada`) {#nada}
 
@@ -131,7 +186,15 @@ Headquarters survey catalogs are often login-only. Harvest only a **public** que
 
 ## SuperSTAR (`superstar`) {#superstar}
 
-Census table-builder catalogs. Harvest the published **table / database** list, not every cube cell. Skip marketing and login-only builders.
+Census and official SuperWEB2 table-builder catalogs. Harvest the published **table / database** list from the SuperWEB2 catalogue or Open Data API (`/webapi/rest/v1/schema`), not every cube cell. Skip vendor demos, marketing, and login-only staff builders.
+
+## Beyond 20/20 Web Data Server (`beyond2020`) {#beyond2020}
+
+Filter exports on `software.id = 'beyond2020'`. There is no public REST catalog API.
+
+Keep each public **report** (cube) listed under `ReportFolders/reportFolders.aspx` as one dataset analog: title from the report name, URL the `TableViewer/tableView.aspx?ReportId=` link. Walk the folder tree on that installation only.
+
+**Drop** language-selection pages, `TableViewer` cell extracts, IVT/Excel/CSV downloads as separate catalogs, Crime Insight tenants, login WDS, and every `ReportId` on `www.jodidb.org` / `difusion.jccm.es` when harvesting the installation already registered as a catalog. One harvest scope per WDS host. Stop on `401`/`403`.
 
 ## Official international hubs {#official-international-hubs}
 
@@ -196,6 +259,17 @@ GET https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/dataflow
 
 Keep **dataflows**. Do not treat every country profile on data.unicef.org as a dataset. The HTML site may be Cloudflare-blocked; SDMX is the harvest.
 
+## StatPlanet (`statplanet`) {#statplanet}
+
+Public StatPlanet Cloud / HTML5 **indicator explorer**. Grain is the **indicator** (row in `data.csv` / Cloud indicator list), not every map animation frame.
+
+```text
+GET https://host/.../data.csv
+GET https://host/.../settings.csv
+```
+
+Keep named indicators the dashboard can select. One catalog per host/explorer — do not harvest each `*-StatTrends.html` layout as a separate catalog. Drop vendor demos on statsilk.com, Flash SWF-only pages, and viewers that only chart another registered catalog (World Bank Open Data API). Stop on `401`/`403`. CSV is the list; do not scrape tiles.
+
 ## Oracle APEX (`oracleapex`) {#oracleapex}
 
 Public statistical **apps** that list indicators or tables. Harvest the documented public REST/ORDS feed if it returns a dataset list. Skip generic APEX sites, login builders, and `/apex/f?p=` session URLs as identifiers.
@@ -212,6 +286,7 @@ Harvest published **packages / reports** that are statistical tables. Drop intra
 
 | `software.id` | Harvest | Skip |
 |---------------|---------|------|
+| `statplanet` | see above | Vendor demos; World Bank viewers |
 | `datavavt` | VA/VT public indicator tables | Intranet |
 | `bicontour` | Public contour/indicator catalog | Viewer-only |
 | `datainsight` | Public insight **datasets** | Internal BI |

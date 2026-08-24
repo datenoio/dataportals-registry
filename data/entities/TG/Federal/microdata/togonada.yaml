@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: This output guides how you should structure your extraction based on
-  your vocabularies, but does not contain real data from the provided URL, since live
-  scraping or access is not supported here.
+description: INSEED National Data Archive (NADA) for Togo survey and census microdata.
+  Hosted on a legacy IP address; the former www.stat-togo.org/nada front door is no
+  longer available.
 endpoints:
 - type: nada:csvexport
   url: http://160.242.193.218:8082/nada/index.php/catalog/export/csv?ps=5000&collection[]
@@ -26,11 +26,7 @@ langs:
 - id: FR
   name: French
 link: http://160.242.193.218:8082/nada/
-name: Extract only the requested vocabularies from the given URL; no web content or
-  crawling was possible in this environment. Example output structures and explanations
-  are provided below, based strictly on your schema. For the actual extraction, you
-  must scrape or access the site directly. Using your vocabularies, the recommended
-  structures are as follows, indicating how to map the information when available.
+name: NADA Togo (INSEED)
 owner:
   link: https://inseed.tg
   location:
@@ -38,7 +34,8 @@ owner:
       id: TG
       name: Togo
     level: 20
-  name: INSEED – Institut National de la Statistique et des Etudes
+  name: Institut National de la Statistique et des Études Économiques et Démographiques
+    (INSEED)
   type: Central government
 properties:
   has_doi: false

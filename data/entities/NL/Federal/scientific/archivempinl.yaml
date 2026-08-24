@@ -21,6 +21,9 @@ description: Max Planck Institute archive of audio, video, and documentary langu
 endpoints:
 - type: islandora:catalog
   url: https://archive.mpi.nl/tla/
+- type: oaipmh20
+  url: https://archive.mpi.nl/tla/oai2?verb=Identify
+  version: '2.0'
 id: archivempinl
 identifiers:
 - id: re3data
@@ -58,7 +61,7 @@ tags:
 - research data
 - language resources
 - linguistics
-- Islandora
+- islandora
 topics:
 - id: EDUC
   name: Education, culture and sport

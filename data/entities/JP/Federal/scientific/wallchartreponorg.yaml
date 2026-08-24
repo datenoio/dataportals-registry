@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Data repository of digitized educational wallcharts and related teaching
+  materials curated by the Academic Resource Repository Consortium (RepoN).
+endpoints:
+- type: oaipmh20
+  url: https://wallchart.repon.org/oai?verb=Identify
+  version: '2.0'
+id: wallchartreponorg
+langs:
+- id: JA
+  name: Japanese
+link: https://wallchart.repon.org/
+name: Wallchart Repository
+owner:
+  link: https://repon.org/
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+  name: Academic Resource Repository Consortium (RepoN)
+  type: Civil society
+software:
+  id: weko3
+  name: WEKO3
+status: active
+tags:
+- research data
+- educational materials
+- cultural heritage
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027415

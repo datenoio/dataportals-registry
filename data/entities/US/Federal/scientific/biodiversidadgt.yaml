@@ -8,12 +8,12 @@ content_types:
 coverage:
 - location:
     country:
-      id: US
-      name: United States
+      id: GT
+      name: Guatemala
     level: 20
     macroregion:
-      id: '021'
-      name: Northern America
+      id: '013'
+      name: Central America
 description: Guatemala Biodiversity is a Symbiota biodiversity collections portal
   for biodiversity specimens covering Guatemala, with public specimen/occurrence search
   and Darwin Core dataset feeds.
@@ -21,6 +21,9 @@ endpoints:
 - type: rss
   url: https://biodiversidad.gt/portal/collections/datasets/rsshandler.php
   version: '2.0'
+- type: docs
+  url: https://biodiversidad.gt/portal/api/v2/documentation
+  version: '2'
 id: biodiversidadgt
 langs:
 - id: ES

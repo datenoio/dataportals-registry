@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BW
+      name: Botswana
+    level: 20
+    macroregion:
+      id: 018
+      name: Southern Africa
+description: University of Botswana Research, Innovation and Scholarship Archive (UBRISA).
+  DSpace institutional repository of theses, publications, and research outputs, including
+  the Okavango Research Institute community.
+endpoints:
+- type: dspace:items
+  url: https://ubrisa.ub.bw/rest/items
+  version: '6'
+- type: oaipmh20
+  url: https://ubrisa.ub.bw/oai/request?verb=Identify
+  version: '2.0'
+id: ubrisaubbw
+identifiers:
+- id: opendoar
+  url: https://v2.sherpa.ac.uk/id/repository/1626
+  value: '1626'
+langs:
+- id: EN
+  name: English
+link: https://ubrisa.ub.bw/
+name: University of Botswana Research, Innovation and Scholarship Archive
+owner:
+  link: https://www.ub.bw
+  location:
+    country:
+      id: BW
+      name: Botswana
+    level: 20
+  name: University of Botswana
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- DSpace
+- institutional repository
+- research data
+- theses
+- Botswana
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00027705

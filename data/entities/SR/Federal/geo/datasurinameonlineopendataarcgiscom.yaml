@@ -15,7 +15,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: ArcGIS Online open data catalog for Suriname
+description: ArcGIS Hub open-data catalog operated by GisSat (Esri distributor in
+  Suriname). Hosts national geospatial layers such as rivers, boundaries, and other
+  Suriname Online / Living Atlas content.
 endpoints:
 - type: dcatap201
   url: https://data-surinameonline.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -29,12 +31,14 @@ endpoints:
   url: https://data-surinameonline.opendata.arcgis.com/sitemap.xml
 id: datasurinameonlineopendataarcgiscom
 langs:
-- id: FR
-  name: French
+- id: EN
+  name: English
+- id: NL
+  name: Dutch
 link: https://data-surinameonline.opendata.arcgis.com
 name: Suriname Online Open Data
 owner:
-  link: https://www.gissat.com
+  link: https://gissatcloud.com
   location:
     country:
       id: SR
@@ -44,6 +48,7 @@ owner:
   type: Business
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null

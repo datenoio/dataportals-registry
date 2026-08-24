@@ -1,289 +1,127 @@
 DATA QUALITY REPORT - COUNTRY: US
 ================================================================================
-Generated: 2026-08-22 19:39:25
+Generated: 2026-08-24 10:46:21
 Country Code: US
-Total Records with Issues: 36
-Total Issues Found: 36
+Total Records with Issues: 15
+Total Issues Found: 15
 
 === ISSUES BY TYPE ===
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BREEDBASE]
-Count: 2
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL]
+Count: 4
 Priority: MEDIUM
 
-File: US/Federal/scientific/solgenomicsnet.yaml
-Record ID: solgenomicsnet
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BREEDBASE
+File: US/US-WI/geo/mapsscowiscedu.yaml
+Record ID: mapsscowiscedu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL
 Field: endpoints
-Current Value: {'software_id': 'breedbase', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='breedbase' is marked as API-capable in software definitions
+Current Value: {'software_id': 'opengeoportal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='opengeoportal' is marked as API-capable in software definitions
 
-File: US/Federal/scientific/triticeaetoolboxorg.yaml
-Record ID: triticeaetoolboxorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BREEDBASE
+File: US/US-WI/geo/mapsaquawiscedu.yaml
+Record ID: mapsaquawiscedu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL
 Field: endpoints
-Current Value: {'software_id': 'breedbase', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='breedbase' is marked as API-capable in software definitions
+Current Value: {'software_id': 'opengeoportal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='opengeoportal' is marked as API-capable in software definitions
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ESGF]
-Count: 3
+File: US/US-NY/geo/culspatialculcolumbiaedu.yaml
+Record ID: culspatialculcolumbiaedu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL
+Field: endpoints
+Current Value: {'software_id': 'opengeoportal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='opengeoportal' is marked as API-capable in software definitions
+
+File: US/US-CA/geo/gislibberkeleyedu.yaml
+Record ID: gislibberkeleyedu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL
+Field: endpoints
+Current Value: {'software_id': 'opengeoportal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='opengeoportal' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SPARKMAP]
+Count: 11
 Priority: MEDIUM
 
-File: US/Federal/scientific/esgfnodeornlgovmetagrid.yaml
-Record ID: esgfnodeornlgovmetagrid
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ESGF
+File: US/US-TN/indicators/exploretnhealthorg.yaml
+Record ID: exploretnhealthorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SPARKMAP
 Field: endpoints
-Current Value: {'software_id': 'esgf', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='esgf' is marked as API-capable in software definitions
+Current Value: {'software_id': 'sparkmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='sparkmap' is marked as API-capable in software definitions
 
-File: US/Federal/scientific/aims2llnlgov.yaml
-Record ID: aims2llnlgov
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ESGF
+File: US/US-WA/indicators/wscapdatahuborg.yaml
+Record ID: wscapdatahuborg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SPARKMAP
 Field: endpoints
-Current Value: {'software_id': 'esgf', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='esgf' is marked as API-capable in software definitions
+Current Value: {'software_id': 'sparkmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='sparkmap' is marked as API-capable in software definitions
 
-File: US/Federal/scientific/metagridesgfwestorg.yaml
-Record ID: metagridesgfwestorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ESGF
+File: US/US-PA/indicators/caapengagementnetworkorg.yaml
+Record ID: caapengagementnetworkorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SPARKMAP
 Field: endpoints
-Current Value: {'software_id': 'esgf', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='esgf' is marked as API-capable in software definitions
+Current Value: {'software_id': 'sparkmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='sparkmap' is marked as API-capable in software definitions
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MASSBANK]
-Count: 1
-Priority: MEDIUM
-
-File: US/Federal/scientific/monafiehnlabucdavisedu.yaml
-Record ID: monafiehnlabucdavisedu
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MASSBANK
+File: US/US-NY/indicators/rochealthdataorg.yaml
+Record ID: rochealthdataorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SPARKMAP
 Field: endpoints
-Current Value: {'software_id': 'massbank', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='massbank' is marked as API-capable in software definitions
+Current Value: {'software_id': 'sparkmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='sparkmap' is marked as API-capable in software definitions
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL]
-Count: 15
-Priority: MEDIUM
-
-File: US/Federal/scientific/peanutbaseorg.yaml
-Record ID: peanutbaseorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+File: US/US-NY/indicators/nyscaaengagementnetworkorg.yaml
+Record ID: nyscaaengagementnetworkorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SPARKMAP
 Field: endpoints
-Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
+Current Value: {'software_id': 'sparkmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='sparkmap' is marked as API-capable in software definitions
 
-File: US/Federal/scientific/citrusgenomedborg.yaml
-Record ID: citrusgenomedborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+File: US/US-NE/indicators/allthingsnebraskaunledu.yaml
+Record ID: allthingsnebraskaunledu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SPARKMAP
 Field: endpoints
-Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
+Current Value: {'software_id': 'sparkmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='sparkmap' is marked as API-capable in software definitions
 
-File: US/Federal/scientific/treegenesdborg.yaml
-Record ID: treegenesdborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+File: US/US-KS/indicators/allthingskansaskstateedu.yaml
+Record ID: allthingskansaskstateedu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SPARKMAP
 Field: endpoints
-Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
+Current Value: {'software_id': 'sparkmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='sparkmap' is marked as API-capable in software definitions
 
-File: US/Federal/scientific/rosaceaeorg.yaml
-Record ID: rosaceaeorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+File: US/US-MO/indicators/allthingsmissouriorg.yaml
+Record ID: allthingsmissouriorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SPARKMAP
 Field: endpoints
-Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
+Current Value: {'software_id': 'sparkmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='sparkmap' is marked as API-capable in software definitions
 
-File: US/Federal/scientific/pulsedborg.yaml
-Record ID: pulsedborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+File: US/US-MO/indicators/mocanengagementnetworkorg.yaml
+Record ID: mocanengagementnetworkorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SPARKMAP
 Field: endpoints
-Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
+Current Value: {'software_id': 'sparkmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='sparkmap' is marked as API-capable in software definitions
 
-File: US/Federal/scientific/vacciniumorg.yaml
-Record ID: vacciniumorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+File: US/US-MO/indicators/sparkmaporg.yaml
+Record ID: sparkmaporg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SPARKMAP
 Field: endpoints
-Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
+Current Value: {'software_id': 'sparkmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='sparkmap' is marked as API-capable in software definitions
 
-File: US/Federal/scientific/swinepathogendborg.yaml
-Record ID: swinepathogendborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+File: US/US-MO/indicators/exploremohealthorg.yaml
+Record ID: exploremohealthorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SPARKMAP
 Field: endpoints
-Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/carrotomicsorg.yaml
-Record ID: carrotomicsorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
-Field: endpoints
-Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/structuromebbiastateedu.yaml
-Record ID: structuromebbiastateedu
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
-Field: endpoints
-Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/simrbasestowersorg.yaml
-Record ID: simrbasestowersorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
-Field: endpoints
-Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/spinachbaseorg.yaml
-Record ID: spinachbaseorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
-Field: endpoints
-Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/soybaseorg.yaml
-Record ID: soybaseorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
-Field: endpoints
-Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/cottongenorg.yaml
-Record ID: cottongenorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
-Field: endpoints
-Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/planospherestowersorg.yaml
-Record ID: planospherestowersorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
-Field: endpoints
-Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/i5knalusdagov.yaml
-Record ID: i5knalusdagov
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
-Field: endpoints
-Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB]
-Count: 15
-Priority: MEDIUM
-
-File: US/Federal/scientific/toxodborg.yaml
-Record ID: toxodborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB
-Field: endpoints
-Current Value: {'software_id': 'veupathdb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='veupathdb' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/plasmodborg.yaml
-Record ID: plasmodborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB
-Field: endpoints
-Current Value: {'software_id': 'veupathdb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='veupathdb' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/giardiadborg.yaml
-Record ID: giardiadborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB
-Field: endpoints
-Current Value: {'software_id': 'veupathdb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='veupathdb' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/amoebadborg.yaml
-Record ID: amoebadborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB
-Field: endpoints
-Current Value: {'software_id': 'veupathdb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='veupathdb' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/fungidborg.yaml
-Record ID: fungidborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB
-Field: endpoints
-Current Value: {'software_id': 'veupathdb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='veupathdb' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/trichdborg.yaml
-Record ID: trichdborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB
-Field: endpoints
-Current Value: {'software_id': 'veupathdb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='veupathdb' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/cryptodborg.yaml
-Record ID: cryptodborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB
-Field: endpoints
-Current Value: {'software_id': 'veupathdb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='veupathdb' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/clinepidborg.yaml
-Record ID: clinepidborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB
-Field: endpoints
-Current Value: {'software_id': 'veupathdb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='veupathdb' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/veupathdborg.yaml
-Record ID: veupathdborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB
-Field: endpoints
-Current Value: {'software_id': 'veupathdb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='veupathdb' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/microbiomedborg.yaml
-Record ID: microbiomedborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB
-Field: endpoints
-Current Value: {'software_id': 'veupathdb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='veupathdb' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/microsporidiadborg.yaml
-Record ID: microsporidiadborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB
-Field: endpoints
-Current Value: {'software_id': 'veupathdb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='veupathdb' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/vectorbaseorg.yaml
-Record ID: vectorbaseorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB
-Field: endpoints
-Current Value: {'software_id': 'veupathdb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='veupathdb' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/piroplasmadborg.yaml
-Record ID: piroplasmadborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB
-Field: endpoints
-Current Value: {'software_id': 'veupathdb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='veupathdb' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/hostdborg.yaml
-Record ID: hostdborg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB
-Field: endpoints
-Current Value: {'software_id': 'veupathdb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='veupathdb' is marked as API-capable in software definitions
-
-File: US/Federal/scientific/orthomclorg.yaml
-Record ID: orthomclorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB
-Field: endpoints
-Current Value: {'software_id': 'veupathdb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='veupathdb' is marked as API-capable in software definitions
+Current Value: {'software_id': 'sparkmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='sparkmap' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BREEDBASE: 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ESGF: 3 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MASSBANK: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL: 15 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VEUPATHDB: 15 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL: 4 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SPARKMAP: 11 issues

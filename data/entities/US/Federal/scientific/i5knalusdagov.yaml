@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: World
 description: USDA-NAL workspace for community curation of genome assemblies and annotations
   for non-model arthropods.
+endpoints:
+- type: tripal:catalog
+  url: https://i5k.nal.usda.gov/
 id: i5knalusdagov
 langs:
 - id: EN

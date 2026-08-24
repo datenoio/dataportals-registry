@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Becaris Figshare repository is a Figshare institutional repository that
+  publishes research datasets and other scholarly outputs.
+endpoints:
+- type: sitemap
+  url: https://becaris.figshare.com/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://becaris.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: becarisfigsharecom
+langs:
+- id: EN
+  name: English
+link: https://becaris.figshare.com
+name: Becaris Figshare repository
+owner:
+  link: https://becaris.com
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: Becaris
+  type: Business
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+- figshare
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027879

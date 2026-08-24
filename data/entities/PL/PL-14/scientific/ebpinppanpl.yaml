@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: PL-14
+      name: Mazowieckie
+description: e-Biblioteka Prawnicza is a DSpace repository listed in re3data as a
+  research data provider.
+endpoints:
+- type: dspace
+  url: https://e-bp.inp.pan.pl/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://e-bp.inp.pan.pl/server/api/discover/search/objects
+  version: '7'
+id: ebpinppanpl
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100014373
+  value: r3d100014373
+langs:
+- id: PL
+  name: Polish
+link: https://e-bp.inp.pan.pl
+name: e-Biblioteka Prawnicza
+owner:
+  link: https://inp.pan.pl
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    subregion:
+      id: PL-14
+      name: Mazowieckie
+  name: Instytut Nauk Prawnych PAN
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+- re3data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027344

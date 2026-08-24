@@ -1,7 +1,7 @@
 access_mode:
 - open
 - limited
-api_status: uncertain
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -19,6 +19,9 @@ description: An online database that describes and provides access to diverse da
   from a wide range of disciplines including natural sciences, policy, health, and
   social sciences, and supports Canadian Arctic and Antarctic research and monitoring
   communities.
+endpoints:
+- type: rest
+  url: https://sonode.dataone.org/PDC/
 id: wwwpolardataca
 identifiers:
 - id: re3data
@@ -118,3 +121,4 @@ _re3data:
     url: null
   repository_type: null
   last_updated: '2025-12-25T16:45:42.272587'
+api: true

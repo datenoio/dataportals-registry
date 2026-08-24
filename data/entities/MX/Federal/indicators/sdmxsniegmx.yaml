@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Public SDMX-RI NSI web service of Mexico's National System of Statistical
+  and Geographic Information (SNIEG / INEGI), exposing statistical dataflows through
+  SDMX REST and SOAP APIs.
+endpoints:
+- type: sdmx:dataflows
+  url: https://sdmx.snieg.mx/Service/rest/dataflow
+- type: sdmx:datastructure
+  url: https://sdmx.snieg.mx/Service/rest/datastructure
+  version: '1.0'
+- type: sdmx:codelist
+  url: https://sdmx.snieg.mx/Service/rest/codelist
+  version: '1.0'
+- type: sdmx:conceptscheme
+  url: https://sdmx.snieg.mx/Service/rest/conceptscheme
+  version: '1.0'
+id: sdmxsniegmx
+langs:
+- id: ES
+  name: Spanish
+link: https://sdmx.snieg.mx/service/
+name: SNIEG SDMX API
+owner:
+  link: https://www.inegi.org.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+  name: INEGI
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: sdmxri
+  name: SDMX-RI
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- Mexico
+- SDMX
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00027908

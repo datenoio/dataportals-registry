@@ -65,6 +65,9 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | DSpace `/server/api` or `/xmlui` | `dspace` | Scientific data repository |
 | `/api/records?size=1` InvenioRDM | `inveniordm` | Scientific data repository |
 | `/api/v1/` PxWeb tables | `pxweb` | Indicators catalog |
+| `PxStat.Data.Cube_API` / “PxStat Open Data Platform” | `pxstat` | Indicators catalog |
+| Title “TabNet Win32” / `deftohtm.exe` / `cgi-bin/dh` | `tabnet` | Indicators catalog |
+| `fenixservices.fao.org` / FAOSTAT API / CountrySTAT FENIX UI | `fenix` | Indicators catalog |
 | Two fingerprints fail | `custom` | Primary UI type |
 
 Same-host collision (GeoNetwork+GeoServer, viewer+QGIS Server): [discovery.md](../discovery.md#one-catalog-per-public-product). Types: [catalog-types.md](../catalog-types.md).

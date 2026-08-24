@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: World
+      name: World
+description: Public archive of spectral and quantitative NMR data from investigations
+  of biological macromolecules and metabolites, operated as the Biological Magnetic
+  Resonance Data Bank.
+endpoints:
+- type: rest
+  url: https://api.bmrb.io/v2/
+id: bmrbio
+identifiers:
+- id: opendoar
+  url: https://v2.sherpa.ac.uk/id/repository/2963
+  value: '2963'
+langs:
+- id: EN
+  name: English
+link: https://bmrb.io/
+name: Biological Magnetic Resonance Data Bank (BMRB)
+owner:
+  link: https://health.uconn.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CT
+      name: Connecticut
+  name: UConn Health
+  type: Academy
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- nmr
+- spectroscopy
+- biomolecular data
+- chemistry
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00027413

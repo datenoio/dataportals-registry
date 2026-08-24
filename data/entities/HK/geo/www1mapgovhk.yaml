@@ -20,22 +20,22 @@ description: ArcGIS REST API endpoint for geospatial services provided by the Ho
   geospatial data queries and map services.
 endpoints:
 - type: arcgis:rest:info
-  url: http://www1.map.gov.hk/arcgis/rest/info?f=pjson
+  url: https://www1.map.gov.hk/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: http://www1.map.gov.hk/arcgis/rest/services?f=pjson
+  url: https://www1.map.gov.hk/arcgis/rest/services?f=pjson
 - type: arcgis:soap
-  url: http://www1.map.gov.hk/arcgis/services?wsdl
+  url: https://www1.map.gov.hk/arcgis/services?wsdl
 - type: arcgis:sitemap
-  url: http://www1.map.gov.hk/arcgis/rest/services?f=sitemap
+  url: https://www1.map.gov.hk/arcgis/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: http://www1.map.gov.hk/arcgis/rest/services?f=geositemap
+  url: https://www1.map.gov.hk/arcgis/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: http://www1.map.gov.hk/arcgis/rest/services?f=kmz
+  url: https://www1.map.gov.hk/arcgis/rest/services?f=kmz
 id: www1mapgovhk
 langs:
 - id: ZH
   name: Chinese
-link: http://www1.map.gov.hk/arcgis/rest/services
+link: https://www1.map.gov.hk/arcgis/rest/services
 name: Hong Kong GeoInfo Map Services (ArcGIS REST API)
 owner:
   link: https://www.gov.hk

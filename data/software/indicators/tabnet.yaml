@@ -1,0 +1,62 @@
+category: Indicators catalog
+subtype: indicators_data_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'No'
+has_bulk: 'No'
+id: tabnet
+website: https://datasus.saude.gov.br/informacoes-de-saude-tabnet
+name: TabNet
+description: TabNet is a CGI tabulation application from DATASUS (Brazilian Ministry
+  of Health) used to publish cross-tabulations of SUS health databases (SIM, SINASC,
+  SIH, SIA, CNES, SINAN, and related .DBF files). Windows builds use deftohtm.exe
+  and tabcgi.exe; Linux builds use dh and tabnet. Installations are the national DATASUS
+  site plus state and municipal health secretariats and agencies such as ANS.
+owner:
+  name: DATASUS / Ministério da Saúde
+  location:
+    country:
+      id: BR
+      name: Brazil
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'No'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Structured
+type: Software
+documentation_url: http://tabnet.datasus.gov.br/tabnet/tabdescr.htm
+version: '3.0'
+export_formats:
+- CSV
+- HTML
+- TAB
+capabilities:
+- Custom queries
+- Indicator reports
+- Topic categorization
+last_updated: '2026-08-24T04:00:00Z'

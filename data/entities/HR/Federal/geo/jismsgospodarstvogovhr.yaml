@@ -15,9 +15,8 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: NIPP Portal je vladni informacijski portal, namenjen javnim naročilom
-  in javnim nabavam, ki povezuje uporabnike z informacijami o javnih naročilih v Republiki
-  Hrvaški.
+description: GeoServer of the Ministry of Economy publishing National Spatial Data
+  Infrastructure (NIPP) web map and feature services.
 endpoints:
 - type: wms111
   url: https://jisms.gospodarstvo.gov.hr/nipp/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -57,15 +56,15 @@ langs:
 - id: HR
   name: Croatian
 link: https://jisms.gospodarstvo.gov.hr/nipp/web/
-name: NIPP Portal (Nacionalni informacijski portal o javnim nabavama)
+name: Ministry of Economy NIPP GeoServer
 owner:
-  link: https://www.gospodarstvo.gov.hr
+  link: https://mingo.gov.hr
   location:
     country:
       id: HR
       name: Croatia
     level: 20
-  name: Republika Hrvatska (Hrvaška vlada)
+  name: Ministry of Economy
   type: Central government
 properties:
   has_doi: false
@@ -81,14 +80,14 @@ software:
   name: GeoServer
 status: active
 tags:
-- public procurement
-- tenders
-- government
+- geospatial
+- NIPP
+- GeoServer
 topics:
-- id: ECON
-  name: Economy and finance
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
-- id: Economy
-  name: Economy
+- id: Location
+  name: Location
   type: iso19115
-uid: temp00000344
+uid: cdi00027097

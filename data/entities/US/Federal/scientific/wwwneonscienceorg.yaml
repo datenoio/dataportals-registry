@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -15,8 +15,11 @@ coverage:
       id: '021'
       name: Northern America
 description: Data portal of the National Ecological Observatory Network (NEON), providing
-  open ecological and environmental data from standardized observations across the United
-  States.
+  open ecological and environmental data from standardized observations across the
+  United States.
+endpoints:
+- type: rest
+  url: https://dataone.neonscience.org/metacat/d1/mn
 id: wwwneonscienceorg
 langs:
 - id: EN

@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CM
+      name: Cameroon
+    level: 20
+    macroregion:
+      id: '017'
+      name: Middle Africa
+description: National urban geoportal for Cameroon infrastructure and planning data.
+  Public Hydra catalog of resources, projects, and QGIS/MapStore atlases.
+endpoints:
+- type: hydra:collection
+  url: https://plateforme-urbaine.cm/api/resources
+- type: hydra:collection
+  url: https://plateforme-urbaine.cm/api/projects
+- type: hydra:collection
+  url: https://plateforme-urbaine.cm/api/atlases
+id: plateformeurbainecm
+langs:
+- id: FR
+  name: French
+link: https://plateforme-urbaine.cm/
+name: Plateforme Urbaine du Cameroun
+owner:
+  link: https://www.minhdu.gov.cm/
+  location:
+    country:
+      id: CM
+      name: Cameroon
+    level: 20
+  name: Ministère de l'Habitat et du Développement Urbain (MINHDU)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- urban
+- geospatial
+- Cameroon
+- QGIS
+- MapStore
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00027566

@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Servicios REST de datos geoespaciales de la Autoridad Nacional del Agua
+  (ANA).
+endpoints:
+- type: arcgis:rest:info
+  url: http://geo.ana.gob.pe/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://geo.ana.gob.pe/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://geo.ana.gob.pe/arcgis/services?wsdl
+id: geoanagobpe
+langs:
+- id: ES
+  name: Spanish
+link: http://geo.ana.gob.pe/arcgis/rest/services
+name: ANA - ArcGIS REST Services
+owner:
+  link: http://geo.ana.gob.pe
+  location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+  name: Autoridad Nacional del Agua (ANA)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ANA
+- ArcGIS
+- Geospatial
+- Peru
+- Public Data
+- REST API
+- Water
+- arcgisserver
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00005600

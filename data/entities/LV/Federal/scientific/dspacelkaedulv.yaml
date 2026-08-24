@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: LV
+      name: Latvia
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Institutional DSpace repository of the Latvian Academy of Culture. Preserves
+  student theses, artistic and creative works, research publications, and other academy
+  digital outputs with standardized metadata and persistent access.
+endpoints:
+- type: dspace
+  url: https://dspace.lka.edu.lv/server/api
+  version: '8'
+- type: dspace:objects
+  url: https://dspace.lka.edu.lv/server/api/discover/search/objects
+  version: '8'
+- type: oaipmh20
+  url: https://dspace.lka.edu.lv/server/oai/request?verb=Identify
+  version: '2.0'
+id: dspacelkaedulv
+langs:
+- id: LV
+  name: Latvian
+- id: EN
+  name: English
+link: https://dspace.lka.edu.lv
+name: Latvian Academy of Culture digital repository
+owner:
+  link: https://lka.edu.lv
+  location:
+    country:
+      id: LV
+      name: Latvia
+    level: 20
+  name: Latvian Academy of Culture
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- research
+- cultural heritage
+- theses
+- open access
+- university
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027420

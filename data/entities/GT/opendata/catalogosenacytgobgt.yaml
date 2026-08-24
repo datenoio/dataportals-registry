@@ -14,24 +14,24 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Official open data catalog managed by the Secretaría Nacional de Ciencia
-  y Tecnología (SENACYT), offering access to datasets and institutional agreements
-  related to science, technology, and innovation in Guatemala.
+description: Current Portal Nacional de Datos Abiertos de Guatemala, operated by SENACYT.
+  CKAN catalog of government datasets (science, environment, health, education, and
+  other themes).
 endpoints:
 - type: ckan
-  url: https://catalogo.senacyt.gob.gt:80/api/3
+  url: https://catalogo.senacyt.gob.gt/api/3
   version: '3'
 - type: ckan:package-search
-  url: https://catalogo.senacyt.gob.gt:80/api/3/action/package_search
+  url: https://catalogo.senacyt.gob.gt/api/3/action/package_search
   version: '3'
 - type: ckan:package-list
-  url: https://catalogo.senacyt.gob.gt:80/api/3/action/package_list
+  url: https://catalogo.senacyt.gob.gt/api/3/action/package_list
   version: '3'
 id: catalogosenacytgobgt
 langs:
 - id: ES
   name: Spanish
-link: https://catalogo.senacyt.gob.gt:80/
+link: https://catalogo.senacyt.gob.gt/
 name: Portal Nacional de Datos Abiertos de Guatemala
 owner:
   link: https://www.senacyt.gob.gt
@@ -55,10 +55,10 @@ software:
 status: active
 tags:
 - open data
-- science
-- technology
-- innovation
+- government
 - Guatemala
+- CKAN
+- national portal
 topics:
 - id: GOVE
   name: Government and public sector

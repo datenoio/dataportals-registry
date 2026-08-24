@@ -11,11 +11,15 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: GIS REST service endpoint for spatial data and services
+    subregion:
+      id: IT-82
+      name: Sicilia
+description: ArcGIS REST services of the SITR Sicilia infrastructure. Distinct from
+  the public SITR geoportal catalog.
 endpoints:
 - type: arcgis:rest:info
   url: https://map.sitr.regione.sicilia.it/gis/rest/info?f=pjson
@@ -34,7 +38,7 @@ langs:
 - id: IT
   name: Italian
 link: https://map.sitr.regione.sicilia.it/gis/rest/services
-name: Geoportal - Regione Siciliana
+name: ArcGIS REST SITR Regione Siciliana
 owner:
   link: https://www.regione.sicilia.it
   location:

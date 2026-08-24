@@ -19,11 +19,16 @@ coverage:
       id: US-OH
       name: Ohio
 description: Kent State University institutional repository for scholarly output across
-  the multi-campus system, including faculty publications, theses, and digital collections.
+  the multi-campus system, including faculty publications, theses, research datasets,
+  and digital collections.
 endpoints:
+- type: islandora:catalog
+  url: https://oaks.kent.edu/
 - type: oaipmh20
   url: https://oaks.kent.edu/oai/request?verb=Identify
   version: '2.0'
+- type: sitemap
+  url: https://oaks.kent.edu/sitemap.xml
 id: oakskentedu
 langs:
 - id: EN

@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: ArcGIS data services catalog offered by MRIS, Mongolia
+description: ArcGIS services directory on gismap.mris.mn, exposing mineral-resources
+  and geological map services for Mongolia.
 endpoints:
 - type: arcgis:rest:info
   url: https://gismap.mris.mn/arcgis/rest/info?f=pjson
@@ -34,15 +35,15 @@ langs:
 - id: MN
   name: Mongolian
 link: https://gismap.mris.mn/arcgis/services
-name: gismap.mris.mn ArcGIS Services
+name: MRIS ArcGIS Services
 owner:
-  link: https://gismap.mris.mn
+  link: https://www.mris.mn
   location:
     country:
       id: MN
       name: Mongolia
     level: 20
-  name: General Agency for Land Administration, Geodesy and Cartography
+  name: National Geological Survey
   type: Central government
 properties:
   has_doi: false
@@ -71,4 +72,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-uid: temp00005243
+uid: cdi00027970

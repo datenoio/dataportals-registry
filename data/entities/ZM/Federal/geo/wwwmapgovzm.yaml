@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ZM
+      name: Zambia
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: ArcGIS Server powering Zambia's National Spatial Data Infrastructure
+  map services, including cadastre, imagery, and ZILMIS land layers.
+endpoints:
+- type: arcgis:portals:self
+  url: https://www.map.gov.zm/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://www.map.gov.zm/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://www.map.gov.zm/arcgis/rest/services?f=pjson
+id: wwwmapgovzm
+langs:
+- id: EN
+  name: English
+link: https://www.map.gov.zm
+name: Zambia national spatial data infrastructure
+owner:
+  link: https://www.map.gov.zm
+  location:
+    country:
+      id: ZM
+      name: Zambia
+    level: 20
+  name: Ministry of Lands and Natural Resources
+  type: Central government
+properties:
+  has_doi: false
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- NSDI
+- national data
+- boundaries
+- land use
+topics:
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00002022

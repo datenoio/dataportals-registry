@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: GeoServer del Servicio Nacional de Sanidad Agraria (SENASA) con capas
+  y servicios OGC de sanidad agraria.
+endpoints:
+- type: wms111
+  url: https://geo.senasa.gob.pe/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geo.senasa.gob.pe/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: https://geo.senasa.gob.pe/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geo.senasa.gob.pe/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: geosenasagobpe
+langs:
+- id: ES
+  name: Spanish
+link: https://geo.senasa.gob.pe/geoserver/web/
+name: GeoServer SENASA
+owner:
+  link: https://www.gob.pe/senasa
+  location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+  name: Servicio Nacional de Sanidad Agraria
+  type: Central government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- agriculture
+- government
+- Peru
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+uid: cdi00027070

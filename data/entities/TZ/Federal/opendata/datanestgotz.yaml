@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TZ
+      name: Tanzania
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: National e-Procurement System of Tanzania (NeST) Open Contracting Data
+  Portal of the Public Procurement Regulatory Authority. Publishes public procurement
+  records as Open Contracting Data Standard (OCDS) packages, with search, filters,
+  downloads, and a REST API.
+endpoints:
+- type: customapi
+  url: https://nest.go.tz/gateway/nest-data-portal-api/api/
+id: datanestgotz
+langs:
+- id: EN
+  name: English
+- id: SW
+  name: Swahili
+link: https://data.nest.go.tz
+name: NeST Open Contracting Data Portal
+owner:
+  link: https://www.ppra.go.tz
+  location:
+    country:
+      id: TZ
+      name: Tanzania
+    level: 20
+  name: Public Procurement Regulatory Authority
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: CC-BY-SA-4.0
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- procurement
+- OCDS
+- open contracting
+- government
+- has_api
+- Tanzania
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+uid: cdi00027569

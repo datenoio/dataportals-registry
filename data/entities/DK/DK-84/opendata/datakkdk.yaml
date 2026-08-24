@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,13 +17,13 @@ coverage:
     subregion:
       id: DK-84
       name: Hovedstaden
-description: Københavns Kommune (Copenhagen Municipality) open data portal providing
-  access to datasets.
-endpoints:
-- type: ckan
-  url: http://data.kk.dk/api/3
+description: Former Copenhagen Municipality CKAN portal. The hostname no longer
+  resolves; Copenhagen datasets are now published on Open Data DK
+  (https://www.opendata.dk/organization/city-of-copenhagen).
 id: datakkdk
 langs:
+- id: DA
+  name: Danish
 - id: EN
   name: English
 link: https://data.kk.dk
@@ -39,7 +39,7 @@ owner:
       id: DK-84
       name: Hovedstaden
   name: City of Copenhagen
-  type: Regional government
+  type: Local government
 properties:
   transferable_location: true
 rights:
@@ -52,13 +52,12 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
-- has_api
 - open data
-- geospatial
 - municipal
+- inactive
 topics:
 - id: REGI
   name: Regions and cities

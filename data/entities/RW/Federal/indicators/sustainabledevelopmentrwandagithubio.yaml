@@ -18,12 +18,17 @@ description: Online portal containing the latest data available on Rwanda SDG in
   and metadata, developed by the National Institute of Statistics of Rwanda (NISR).
   The portal enables monitoring of Rwanda's progress on the 17 Sustainable Development
   Goals.
+endpoints:
+- type: opensdg:data
+  url: https://sustainabledevelopment-rwanda.github.io/sdg-data-rwanda/en/data/1-1-1.json
+- type: opensdg:data
+  url: https://sustainabledevelopment-rwanda.github.io/sdg-data-rwanda/en/data/1-2-1.json
 id: sustainabledevelopmentrwandagithubio
 langs:
 - id: EN
   name: English
 link: https://sustainabledevelopment-rwanda.github.io/
-name: National institute of statistics of Rwanda Indicators Catalog
+name: Rwanda Open SDG Indicators Catalog
 owner:
   link: https://www.statistics.gov.rw
   location:
@@ -31,7 +36,7 @@ owner:
       id: RW
       name: Rwanda
     level: 20
-  name: National institute of statistics of Rwanda
+  name: National Institute of Statistics of Rwanda
   type: Central government
 properties:
   has_doi: false
@@ -76,9 +81,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-uid: temp00000874
-endpoints:
-- type: opensdg:data
-  url: https://sustainabledevelopment-rwanda.github.io/sdg-data-rwanda/en/data/1-1-1.json
-- type: opensdg:data
-  url: https://sustainabledevelopment-rwanda.github.io/sdg-data-rwanda/en/data/1-2-1.json
+uid: cdi00027663

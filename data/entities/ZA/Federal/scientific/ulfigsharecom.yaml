@@ -14,19 +14,24 @@ coverage:
     macroregion:
       id: 018
       name: Southern Africa
-description: Institutional Figshare research data repository of the University of
-  Limpopo.
+description: Institutional Figshare research data repository of the University of Limpopo.
 endpoints:
 - type: sitemap
   url: https://ul.figshare.com/sitemap/siteindex.xml
   url_pattern: /articles/dataset/
 - type: figshare:graphql
   url: https://ul.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+- type: sitemap
+  url: https://researchdata.ul.ac.za/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://researchdata.ul.ac.za/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
 id: ulfigsharecom
 langs:
 - id: EN
   name: English
-link: https://ul.figshare.com/
+link: https://researchdata.ul.ac.za
 name: Research from University of Limpopo
 owner:
   link: https://www.ul.ac.za

@@ -17,12 +17,14 @@ coverage:
     subregion: &id001
       id: GB-WLS
       name: Wales [Cymru GB-CYM]
-description: Repository supporting research data sharing at Cardiff University, allowing
-  users to search, browse, and deposit datasets; supports FAIR principles, DOI assignment,
-  and integration with research systems.
+description: Public Converis research data catalog of Cardiff University, with
+  searchable dataset records, DOI assignment, and integration with the university
+  research information system.
 endpoints:
 - type: converis:catalog
   url: https://research.cardiff.ac.uk/converis
+- type: converis:catalog
+  url: https://research.cardiff.ac.uk/converis/portal/list?cypher=All&filter=&items=50&lang=en_US&moreOrLess=&page=1&searchkey=&show=Dataset&showAll=&sortBy=name
 id: researchcardiffacuk
 langs:
 - id: EN
@@ -39,6 +41,8 @@ owner:
     subregion: *id001
   name: Cardiff University
   type: Academy
+properties:
+  has_doi: true
 rights:
   license_id: null
   license_name: null
@@ -51,13 +55,10 @@ software:
   name: Converis
 status: active
 tags:
-- United Kingdom
-- converis
-- data sharing
+- Converis
+- CRIS
+- research data
 - doi
-- figshare
-- open access
-- research
 topics:
 - id: TECH
   name: Science and technology
@@ -65,4 +66,4 @@ topics:
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
-uid: temp00000320
+uid: cdi00027187

@@ -14,28 +14,32 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Catalog of nutrition indicators, specific data, mapping, documentary
-  resources, documents, and databases for nutrition in Niger.
+description: NADA microdata catalog of the Plateforme Nationale d'Information pour
+  la Nutrition (PNIN). Documents nutrition, food-security, and related household surveys
+  for Niger with DDI metadata.
 endpoints:
-- type: nada:catalog
-  url: https://pnin-niger.org/anadonutrition/index.php
+- type: nada:catalog-search
+  url: https://pnin-niger.org/anadonutrition/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://pnin-niger.org/anadonutrition/index.php/catalog/export/csv?ps=5000&collection[]
 id: pninnigerorg
 langs:
-- id: EN
-  name: English
+- id: FR
+  name: French
 link: https://pnin-niger.org/anadonutrition/index.php
 name: Catalogue de données central - PNIN NIGER
 owner:
-  link: https://pnin-niger.org/anadonutrition/index.php/catalog
+  link: https://pnin-niger.org
   location:
     country:
       id: NE
       name: Niger (the)
     level: 20
-  name: PNIN NIGER
-  type: International
+  name: Plateforme Nationale d'Information pour la Nutrition (PNIN)
+  type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -49,14 +53,22 @@ software:
 status: active
 tags:
 - nutrition
-- indicators
-- mapping
-- resources
+- microdata
+- food security
+- government
+- has_api
+- Niger
 topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
 - id: SOCI
   name: Population and society
   type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
 - id: Society
   name: Society
   type: iso19115
-uid: temp00001965
+uid: cdi00027505

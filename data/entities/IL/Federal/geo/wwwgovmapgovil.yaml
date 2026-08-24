@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: IL
+      name: Israel
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: GovMap is the national map portal of the Survey of Israel, providing
+  public access to nationwide basemaps and government spatial layers.
+id: wwwgovmapgovil
+langs:
+- id: HE
+  name: Hebrew
+- id: EN
+  name: English
+link: https://www.govmap.gov.il
+name: GovMap
+owner:
+  link: https://www.mapi.gov.il
+  location:
+    country: *id001
+    level: 20
+  name: Survey of Israel
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geoportal
+- national map
+- Israel
+- Survey of Israel
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00027514

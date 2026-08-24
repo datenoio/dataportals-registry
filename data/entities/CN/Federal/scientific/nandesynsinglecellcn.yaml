@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: World
 description: Nannochloropsis systems and synthetic biology database of genomes, genotypes,
   and related resources.
+endpoints:
+- type: tripal:catalog
+  url: http://nandesyn.single-cell.cn/
 id: nandesynsinglecellcn
 langs:
 - id: EN

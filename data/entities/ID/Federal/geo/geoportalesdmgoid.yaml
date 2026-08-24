@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: ID
+      name: Indonesia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: ESDM One Map geoportal for exploring energy and mineral resource geospatial
+  data from the Ministry of Energy and Mineral Resources.
+id: geoportalesdmgoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://geoportal.esdm.go.id
+name: ESDM One Map
+owner:
+  link: https://www.esdm.go.id
+  location:
+    country: *id001
+    level: 20
+  name: Kementerian Energi dan Sumber Daya Mineral
+  type: Central government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- geoportal
+- energy
+- minerals
+- indonesia
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00027235

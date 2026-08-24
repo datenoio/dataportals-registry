@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+description: HAB-Repositorium is a DSpace repository listed in re3data as a research
+  data provider.
+endpoints:
+- type: dspace
+  url: https://repo.hab.de/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repo.hab.de/server/api/discover/search/objects
+  version: '7'
+id: repohabde
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100014604
+  value: r3d100014604
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://repo.hab.de
+name: HAB-Repositorium
+owner:
+  link: https://www.hab.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+  name: Herzog August Bibliothek Wolfenbüttel
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+- re3data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027371

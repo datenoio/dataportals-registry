@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,14 +16,6 @@ coverage:
       name: South America
 description: EPA Guyana IPT. This scientific data repository. managed by Environmental
   Protection Agency.
-endpoints:
-- type: dcat:ttl
-  url: http://132.148.241.236:8080/dcat
-- type: ipt:dataset
-  url: http://132.148.241.236:8080/inventory/dataset
-- type: rss
-  url: http://132.148.241.236:8080/rss.do
-  version: '2.0'
 id: '132148241236'
 langs:
 - id: EN
@@ -42,7 +34,7 @@ owner:
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT

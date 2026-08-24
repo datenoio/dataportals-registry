@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TZ
+      name: Tanzania
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Institutional DSpace repository of Sokoine University of Agriculture
+  (SUAIRE). Collects and disseminates scholarly publications, theses, and research
+  materials of the university.
+endpoints:
+- type: dspace
+  url: https://www.suaire.sua.ac.tz/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://www.suaire.sua.ac.tz/server/api/discover/search/objects
+  version: '7'
+id: wwwsuaireactz
+langs:
+- id: EN
+  name: English
+link: https://www.suaire.sua.ac.tz/
+name: SUA Institutional Repository (SUAIRE)
+owner:
+  link: https://www.sua.ac.tz
+  location:
+    country:
+      id: TZ
+      name: Tanzania
+    level: 20
+  name: Sokoine University of Agriculture
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- institutional repository
+- open access
+- university
+- Tanzania
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+uid: cdi00027572

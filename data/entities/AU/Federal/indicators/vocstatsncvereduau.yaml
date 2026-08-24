@@ -1,0 +1,71 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 20
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+description: VOCSTATS is NCVER's SuperWEB2 table builder for Australian vocational
+  education and training statistics. Registered users build custom tables from national
+  VET collections.
+endpoints:
+- type: superstar:catalog
+  url: https://vocstats.ncver.edu.au/webapi/jsf/login.xhtml
+id: vocstatsncvereduau
+langs:
+- id: EN
+  name: English
+link: https://vocstats.ncver.edu.au
+name: VOCSTATS
+owner:
+  link: https://www.ncver.edu.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 20
+  name: National Centre for Vocational Education Research
+  type: Academy
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.ncver.edu.au/privacy
+  rights_type: granular
+  tos_url: https://www.ncver.edu.au/research-and-statistics/vocstats
+software:
+  id: superstar
+  name: SuperSTAR
+status: active
+tags:
+- statistics
+- education
+- vocational education
+- SuperWEB
+- SuperWEB2
+- Australia
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00028000

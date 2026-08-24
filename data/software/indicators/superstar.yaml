@@ -9,17 +9,18 @@ datatypes:
 has_api: 'Yes'
 has_bulk: 'No'
 id: superstar
-website: https://www.str.com/products/superstar
-description: SuperSTAR is a hospitality benchmarking and analytics platform from STR
-  used to compare hotel performance indicators, analyze market trends, and support
-  data-driven decisions in the lodging sector.
+website: https://www.wingarc.com.au/products/superweb/
+description: SuperSTAR is a confidential statistical dissemination suite from WingArc
+  Australia (formerly Space-Time Research). SuperWEB2 is the browser table-builder
+  client used by statistical agencies to publish census, survey, and administrative
+  cubes with on-the-fly confidentiality.
 owner:
-  name: STR (CoStar Group)
+  name: WingArc Australia
   location:
     country:
-      id: US
-      name: United States
-logo_url: https://str.com/favicon.ico
+      id: AU
+      name: Australia
+logo_url: https://www.wingarc.com.au/favicon.ico
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
@@ -33,7 +34,7 @@ metadata_support:
   opensearch: 'No'
   rdf_sparql: 'No'
   schema-org: 'No'
-  sdmx: 'No'
+  sdmx: 'Yes'
   stac: 'No'
   swordapi: 'No'
   wcs: 'No'
@@ -48,6 +49,7 @@ rights_management:
   supports_licenses: 'No'
 storage_type: Both
 type: Software
+documentation_url: https://docs.wingarc.com.au/superstar/
 export_formats:
 - CSV
 - Excel
@@ -55,8 +57,9 @@ export_formats:
 - SDMX
 - XML
 capabilities:
-- REST API
-- Hotel performance benchmarking
-- Market analytics dashboards
-- KPI trend analysis
-last_updated: '2026-03-31T12:00:00Z'
+- REST Open Data API
+- SuperWEB2 browser table builder
+- On-the-fly confidentiality
+- Charts and maps
+- Saved tables
+last_updated: '2026-08-24T08:00:00Z'

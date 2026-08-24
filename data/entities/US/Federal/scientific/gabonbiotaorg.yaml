@@ -8,12 +8,12 @@ content_types:
 coverage:
 - location:
     country:
-      id: US
-      name: United States
+      id: GA
+      name: Gabon
     level: 20
     macroregion:
-      id: '021'
-      name: Northern America
+      id: '017'
+      name: Middle Africa
 description: Gabon Biodiversity is a Symbiota biodiversity collections portal for
   biodiversity specimens covering Gabon and West Africa, with public specimen/occurrence
   search and Darwin Core dataset feeds.
@@ -21,6 +21,9 @@ endpoints:
 - type: rss
   url: https://gabonbiota.org/portal/collections/datasets/rsshandler.php
   version: '2.0'
+- type: docs
+  url: https://gabonbiota.org/portal/api/v2/documentation
+  version: '2'
 id: gabonbiotaorg
 langs:
 - id: EN

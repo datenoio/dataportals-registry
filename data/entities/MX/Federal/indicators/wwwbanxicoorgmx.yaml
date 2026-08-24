@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Banco de México Sistema de Información Económica (SIE) publishes official
+  monetary, financial, balance-of-payments, inflation, and survey time series. Series
+  can be browsed in the SIE catalog and retrieved through a documented REST API (JSON,
+  JSONP, XML).
+endpoints:
+- type: customapi
+  url: https://www.banxico.org.mx/SieAPIRest/service/v1/
+- type: docs
+  url: https://www.banxico.org.mx/SieAPIRest/service/v1/?locale=es
+id: wwwbanxicoorgmx
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: https://www.banxico.org.mx/SieInternet/
+name: Banco de México Sistema de Información Económica (SIE)
+owner:
+  link: https://www.banxico.org.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+  name: Banco de México
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- Mexico
+- indicators
+- central bank
+- time series
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00026878

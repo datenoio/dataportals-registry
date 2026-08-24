@@ -20,12 +20,14 @@ endpoints:
 - type: docs
   url: https://www.dst.dk/en/Statistik/brug-statistikken/muligheder-i-statistikbanken/api
 - type: customapi
-  url: http://api.statbank.dk/v1/tables
+  url: https://api.statbank.dk/v1/tables
 id: wwwstatbankdk
 langs:
+- id: DA
+  name: Danish
 - id: EN
   name: English
-link: https://www.statbank.dk/statbank5a/default.asp?w=1280
+link: https://www.statbank.dk/
 name: StatBank Denmark
 owner:
   link: https://www.dst.dk/en
@@ -62,12 +64,6 @@ topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
-- id: ECON
-  name: Economy and finance
-  type: eudatatheme
-- id: SOCI
-  name: Population and society
-  type: eudatatheme
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
@@ -79,9 +75,6 @@ topics:
   type: iso19115
 - id: Economy
   name: Economy
-  type: iso19115
-- id: Society
-  name: Society
   type: iso19115
 - id: Health
   name: Health

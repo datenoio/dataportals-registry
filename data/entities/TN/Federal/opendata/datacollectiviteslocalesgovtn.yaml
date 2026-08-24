@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TN
+      name: Tunisia
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: Official open data catalog of Tunisian local governments (collectivités
+  locales), publishing municipal budgets, human resources, population estimates, and
+  performance datasets.
+endpoints:
+- type: wordpress:catalog
+  url: http://data.collectiviteslocales.gov.tn/
+id: datacollectiviteslocalesgovtn
+langs:
+- id: AR
+  name: Arabic
+- id: FR
+  name: French
+link: http://data.collectiviteslocales.gov.tn/
+name: Open data Collectivités locales
+owner:
+  link: http://www.collectiviteslocales.gov.tn
+  location:
+    country:
+      id: TN
+      name: Tunisia
+    level: 20
+  name: Collectivités Locales
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: wordpress
+  name: WordPress
+status: active
+tags:
+- government
+- open data
+- municipalities
+- local government
+- Tunisia
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00027490

@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: INGV DSpace repository for earth-science publications and research data.
+endpoints:
+- type: dspace
+  url: https://www.earth-prints.org/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://www.earth-prints.org/server/api/discover/search/objects
+  version: '7'
+id: earthprintsorg
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100011191
+  value: r3d100011191
+langs:
+- id: IT
+  name: Italian
+- id: EN
+  name: English
+link: https://www.earth-prints.org
+name: Earth-prints Repository
+owner:
+  link: https://www.ingv.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Istituto Nazionale di Geofisica e Vulcanologia
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+- re3data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027351

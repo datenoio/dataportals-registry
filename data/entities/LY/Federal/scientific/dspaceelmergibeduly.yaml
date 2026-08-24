@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: LY
+      name: Libya
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: Institutional DSpace repository of Elmergib University for theses, journals,
+  conference papers, and other scholarly output.
+endpoints:
+- type: dspace
+  url: https://dspace.elmergib.edu.ly/server/api
+  version: '9'
+- type: dspace:objects
+  url: https://dspace.elmergib.edu.ly/server/api/discover/search/objects
+  version: '9'
+- type: oaipmh20
+  url: https://dspace.elmergib.edu.ly/server/oai/request?verb=Identify
+  version: '2.0'
+id: dspaceelmergibeduly
+langs:
+- id: AR
+  name: Arabic
+link: https://dspace.elmergib.edu.ly/
+name: Elmergib University Digital Repository
+owner:
+  link: https://elmergib.edu.ly
+  location:
+    country:
+      id: LY
+      name: Libya
+    level: 20
+  name: Elmergib University
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- institutional repository
+- open access
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00027628

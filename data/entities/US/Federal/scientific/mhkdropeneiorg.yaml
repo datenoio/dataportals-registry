@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +17,9 @@ coverage:
 description: Marine and Hydrokinetic Data Repository (MHKDR), the U.S. Department
   of Energy submission point for marine energy research data, providing open access
   to datasets and data lakes.
+endpoints:
+- type: ckan:catalog
+  url: https://mhkdr.openei.org/
 id: mhkdropeneiorg
 langs:
 - id: EN
@@ -32,8 +36,8 @@ owner:
   name: U.S. Department of Energy Water Power Technologies Office
   type: Central government
 software:
-  id: custom
-  name: Custom software
+  id: ckan
+  name: CKAN
 status: active
 tags:
 - marine energy

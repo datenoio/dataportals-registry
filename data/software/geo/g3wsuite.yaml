@@ -1,0 +1,68 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: g3wsuite
+name: G3W-SUITE
+website: https://g3wsuite.it
+description: G3W-SUITE is an open-source QGIS WebGIS platform (Django G3W-ADMIN plus
+  Vue/OpenLayers G3W-CLIENT) for publishing QGIS projects as public map catalogs and
+  OGC services. Italian regions, metropolitan cities, parks, and municipalities use
+  it as the public geoportal. Distinct from Lizmap (lizmap) and QWC2 (qwc2).
+owner:
+  name: GIS3W
+  location:
+    country:
+      id: IT
+      name: Italy
+logo_url: https://g3wsuite.it/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: Uncertain
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: Uncertain
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: Uncertain
+  wfs: 'Yes'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/g3w-suite/g3w-admin
+documentation_url: https://g3w-suite.readthedocs.io
+version: '3.11'
+export_formats:
+- GeoJSON
+- GML
+- JSON
+- KML
+- XML
+capabilities:
+- REST API
+- Map viewer
+- WMS service
+- WFS service
+- QGIS project publishing
+changelog_url: https://github.com/g3w-suite/g3w-admin/releases
+last_updated: '2026-08-24T00:00:00Z'

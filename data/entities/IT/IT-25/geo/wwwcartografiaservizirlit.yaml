@@ -11,12 +11,15 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a REST endpoint for ArcGIS services, typically hosting geographic
-  data or map services.
+    subregion:
+      id: IT-25
+      name: Lombardia
+description: ArcGIS REST services of Regione Lombardia (cartografia.servizirl.it).
+  Distinct from the public Geoportale della Lombardia catalog.
 endpoints:
 - type: arcgis:rest:info
   url: http://www.cartografia.servizirl.it/arcgis/rest/info?f=pjson
@@ -45,9 +48,9 @@ langs:
 - id: IT
   name: Italian
 link: http://www.cartografia.servizirl.it/arcgis2/rest/services
-name: Geoportal - Regional Government of Servizirl
+name: ArcGIS REST - Regione Lombardia
 owner:
-  link: https://www.cartografia.servizirl.it
+  link: https://www.regione.lombardia.it
   location:
     country:
       id: IT
@@ -56,7 +59,7 @@ owner:
     subregion:
       id: IT-25
       name: Lombardia
-  name: Regional Government of Servizirl
+  name: Regione Lombardia
   type: Regional government
 properties:
   has_doi: false

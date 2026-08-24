@@ -27,6 +27,19 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | `/.well-known/openeo` | `openeo` | [SDI](discovery-geoportals-sdi.md#openeo) |
 | `qgis_mapserv.fcgi` as the public catalog | `qgisserver` | [SDI](discovery-geoportals-sdi.md#qgisserver) |
 | mviewer `/apps/*.xml` | `mviewer` | [SDI](discovery-geoportals-sdi.md#mviewer) |
+| Finnish `/IMS/` karttapalvelu | `trimblelocus` | [viewers](discovery-geoportals-viewers.md#trimblelocus) |
+| Sitowise Louhi karttapalvelu | `louhi` | [viewers](discovery-geoportals-viewers.md#louhi) |
+| `portals.landfolio.com` cadastre map | `landfolio` | [viewers](discovery-geoportals-viewers.md#landfolio) |
+| SpatialMap `webkort` | `spatialsuite` | [viewers](discovery-geoportals-viewers.md#spatialsuite) |
+| `/geusmap/?mapname=` | `geusmap` | [viewers](discovery-geoportals-viewers.md#geusmap) |
+| `*.gisapp.ro` municipal GIS | `gisapp` | [viewers](discovery-geoportals-viewers.md#gisapp) |
+| Kaliopa iObčina / iOpćina | `iobcina` | [viewers](discovery-geoportals-viewers.md#iobcina) |
+| G3W-CLIENT / `/map/{group}/` QGIS WebGIS | `g3wsuite` | [SDI](discovery-geoportals-sdi.md#g3wsuite) |
+| “Powered by iShare” / `mymaps.aspx` | `ishare` | [viewers](discovery-geoportals-viewers.md#ishare) |
+| Cadcorp SIS WebMap / GeognoSIS | `cadcorp` | [viewers](discovery-geoportals-viewers.md#cadcorp) |
+| Hexagon M.App `/Apps/` | `mappenterprise` | [SDI](discovery-geoportals-sdi.md#mappenterprise) |
+| `/cubewerx/cubeserv` GetCapabilities | `cubewerx` | [SDI](discovery-geoportals-sdi.md#cubewerx) |
+| Sentinel Hub STAC `/api/v1/catalog` | `sentinelhub` | [SDI](discovery-geoportals-sdi.md#sentinelhub) |
 | Isogeo OpenCatalog `/api` | `isogeo` | [SDI](discovery-geoportals-sdi.md#isogeo) |
 | `/Geocortex/Essentials/REST/sites` | `geocortex` | [SDI](discovery-geoportals-sdi.md#geocortex) |
 | `/igs/rest/mrcs/docs` | `mapgisigserver` | [viewers](discovery-geoportals-viewers.md#mapgisigserver) |
@@ -52,6 +65,8 @@ On a **named** mapping-agency or city GIS host:
 /rest/info?f=pjson
 /igs/rest/mrcs/docs?f=json
 /igs/rest/services?f=json
+/cubewerx/cubeserv?SERVICE=WMS&REQUEST=GetCapabilities
+/api/v1/catalog/1.0.0/
 ```
 
 Google patterns: ``geoportal {agency}``, ``INSPIRE {country}``, ``IDE {country}`` (infraestructura de datos espaciales), ``GDI {land}``, ``géoportail {région}``.

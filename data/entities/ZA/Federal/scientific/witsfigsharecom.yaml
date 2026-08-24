@@ -14,19 +14,26 @@ coverage:
     macroregion:
       id: 018
       name: Southern Africa
-description: Institutional Figshare research data repository of the University of
-  the Witwatersrand.
+description: Institutional Figshare research data repository of the University of the Witwatersrand.
+  The branded Open Data Vault hostname opendata.wits.ac.za is the same Figshare tenant, not
+  a second catalog.
 endpoints:
 - type: sitemap
   url: https://wits.figshare.com/sitemap/siteindex.xml
   url_pattern: /articles/dataset/
 - type: figshare:graphql
   url: https://wits.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+- type: sitemap
+  url: https://opendata.wits.ac.za/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://opendata.wits.ac.za/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
 id: witsfigsharecom
 langs:
 - id: EN
   name: English
-link: https://wits.figshare.com/
+link: https://opendata.wits.ac.za
 name: Research from University of the Witwatersrand
 owner:
   link: https://www.wits.ac.za

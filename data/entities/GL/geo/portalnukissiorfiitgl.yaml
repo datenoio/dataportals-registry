@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: Geospatial data catalog for Greenland. This geoportal. managed by Nukissiorfiit.
-  provides access to datasets and resources.
+description: Nukissiorfiit ArcGIS Server catalog of energy, water, and utility geospatial
+  services for Greenland.
 endpoints:
 - type: arcgis:portals:self
   url: https://portal.nukissiorfiit.gl/portal/sharing/rest/portals/self?f=pjson
@@ -36,6 +36,8 @@ id: portalnukissiorfiitgl
 langs:
 - id: DA
   name: Danish
+- id: EN
+  name: English
 link: https://portal.nukissiorfiit.gl/arcgisserver/rest/services
 name: Nukissiorfiit ArcGIS Server
 owner:

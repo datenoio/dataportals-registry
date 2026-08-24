@@ -14,7 +14,8 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: THREDDS Data catalog at http://sgbd.acmad.org:8080/thredds/catalog.html
+description: ACMAD THREDDS Data Server in Niamey providing OPeNDAP and catalog access
+  to meteorological and climate datasets for Africa.
 endpoints:
 - type: thredds:catalog
   url: http://sgbd.acmad.org:8080/thredds/catalog.xml
@@ -22,6 +23,8 @@ id: sgbdacmadorg
 langs:
 - id: EN
   name: English
+- id: FR
+  name: French
 link: http://sgbd.acmad.org:8080/thredds/catalog.html
 name: ACMAD THREDDS Server
 owner:
@@ -31,7 +34,7 @@ owner:
       id: NE
       name: Niger (the)
     level: 20
-  name: The African Centre of Meteorological Application for Development (ACMAD)
+  name: African Centre of Meteorological Applications for Development (ACMAD)
   type: International
 properties:
   has_doi: false
@@ -49,32 +52,14 @@ status: active
 tags:
 - Africa
 - climate
+- meteorology
+- has_api
+- ACMAD
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: AGRI
-  name: Agriculture, fisheries, forestry and food
-  type: eudatatheme
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere
-  type: iso19115
-- id: Environment
-  name: Environment
-  type: iso19115
-- id: Geoscientific Information
-  name: Geoscientific Information
   type: iso19115
 uid: cdi00010262

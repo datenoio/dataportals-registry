@@ -21,19 +21,19 @@ coverage:
 description: Portal de Datos y Metadatos del Gobierno Regional de Ucayali
 endpoints:
 - type: geonetwork:query
-  url: http://catalogo.regionucayali.gob.pe/geonetwork/srv/eng/q
+  url: https://ider.regionucayali.gob.pe/geonetwork/srv/eng/q
 - type: csw202
-  url: http://catalogo.regionucayali.gob.pe/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://ider.regionucayali.gob.pe/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: oaipmh20
-  url: http://catalogo.regionucayali.gob.pe/geonetwork/srv/eng/oaipmh?verb=Identify
+  url: https://ider.regionucayali.gob.pe/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 id: catalogoregionucayaligobpe
 langs:
 - id: ES
   name: Spanish
-link: http://catalogo.regionucayali.gob.pe/geonetwork
-name: Portal de Datos del Gobierno Regional de Ucayali
+link: https://ider.regionucayali.gob.pe/geonetwork
+name: Catálogo de Metadatos IDER Ucayali
 owner:
   link: https://www.gob.pe/regionucayali
   location:

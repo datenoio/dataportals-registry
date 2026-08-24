@@ -15,9 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Geoportal providing REST services for geospatial data and mapping, including
-  folders for MapPortal, System, Test, and Utilities, and various MapServer and GPServer
-  services.
+description: ArcGIS REST services for Mozambique's mining cadastre, including licence
+  and mineral-resource map services published by INAMI.
 endpoints:
 - type: arcgis:rest:info
   url: https://licenses.inami.gov.mz/arcgis/rest/info?f=pjson
@@ -32,9 +31,9 @@ endpoints:
 id: licensesinamigovmz
 langs:
 - id: PT
-  name: Portugal
+  name: Portuguese
 link: https://licenses.inami.gov.mz/arcgis/rest/services
-name: CADASTRO MINEIRO DE MOÇAMBIQUE ArcGIS REST
+name: Cadastro Mineiro de Moçambique
 owner:
   link: https://www.inami.gov.mz
   location:
@@ -42,7 +41,7 @@ owner:
       id: MZ
       name: Mozambique
     level: 20
-  name: INAMI
+  name: Instituto Nacional de Minas
   type: Central government
 properties:
   has_doi: false
@@ -69,4 +68,4 @@ topics:
 - id: Geoscientific Information
   name: Geoscientific Information
   type: iso19115
-uid: temp00005978
+uid: cdi00027470

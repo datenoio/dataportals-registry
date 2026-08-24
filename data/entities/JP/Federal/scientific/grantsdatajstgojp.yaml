@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: GRANTS Data is the Japan Science and Technology Agency Figshare repository
+  for KAKENHI and related research-fund data, distinct from J-STAGE Data.
+endpoints:
+- type: sitemap
+  url: https://grantsdata.jst.go.jp/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://grantsdata.jst.go.jp/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: grantsdatajstgojp
+langs:
+- id: JA
+  name: Japanese
+- id: EN
+  name: English
+link: https://grantsdata.jst.go.jp
+name: JST GRANTS Data
+owner:
+  link: https://www.jst.go.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+  name: Japan Science and Technology Agency
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+- figshare
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027898

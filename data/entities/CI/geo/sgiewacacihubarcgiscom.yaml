@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -36,17 +36,6 @@ description: Système de Gestion d'Information Environnementale pour la zone cot
   54 97 47     (225) 22 54 97 48 Email info@waca.ci      support@waca.ci Il Plateau,
   7è tranche, Quartier Zinsou - 27BP 663 Abidjan 27 - Côte d'IvoireHeures d'ouverture: Lundi
   -Ven; 8h-17h. Samedi - Dimanche; FERMÉ
-endpoints:
-- type: dcatap201
-  url: https://sgie-wacaci.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://sgie-wacaci.hub.arcgis.com/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://sgie-wacaci.hub.arcgis.com/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://sgie-wacaci.hub.arcgis.com/api/search/v1
-- type: sitemap
-  url: https://sgie-wacaci.hub.arcgis.com/sitemap.xml
 id: sgiewacacihubarcgiscom
 langs:
 - id: FR
@@ -74,7 +63,7 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
 - SGIE-WACACI
 - ArcGIS

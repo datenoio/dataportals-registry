@@ -19,6 +19,8 @@ description: Open Access library for archiving, publishing and distributing geor
   Focus on observational and experimental, georeferenced data. Data are FAIR, machine-readable,
   and citable via DOI.
 endpoints:
+- type: rest
+  url: https://sonode.dataone.org/PANGAEA/
 - type: oaipmh20
   url: https://ws.pangaea.de/oai/provider?verb=Identify
   version: 2.0.0

@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Figshare publications repository of the CISPA Helmholtz Center for Information
+  Security.
+endpoints:
+- type: sitemap
+  url: https://publications.cispa.de/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://publications.cispa.de/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: publicationscispade
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://publications.cispa.de
+name: CISPA Publications
+owner:
+  link: https://cispa.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: CISPA Helmholtz Center for Information Security
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+- figshare
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027895

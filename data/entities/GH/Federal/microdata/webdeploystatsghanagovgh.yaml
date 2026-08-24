@@ -14,10 +14,8 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Searchable web-based survey catalogue allowing users to browse, retrieve
-  rich metadata and request access to surveys and datasets, designed to document,
-  disseminate, and preserve research data, and supports the Data Documentation Initiative
-  (DDI) metadata standard.
+description: Staging/deploy host of the Ghana Statistical Service National Data Archive
+  (NADA). The current official catalogue is https://microdata.statsghana.gov.gh/.
 endpoints:
 - type: nada:csvexport
   url: https://webdeploy.statsghana.gov.gh/nada/index.php/catalog/export/csv?ps=5000&collection[]
@@ -82,4 +80,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-uid: temp00004188
+uid: cdi00027574

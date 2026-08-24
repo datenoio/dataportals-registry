@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -43,7 +43,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geodata
 - geonetwork
@@ -58,6 +58,3 @@ topics:
   name: Location
   type: iso19115
 uid: temp00001167
-endpoints:
-- type: geonetwork:api:records
-  url: http://geodatatorget.se:8080/geonetwork/srv/api/records

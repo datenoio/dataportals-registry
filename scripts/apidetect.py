@@ -611,6 +611,16 @@ PXWEB_URLMAP = [
     }
 ]
 
+PXSTAT_URLMAP = [
+    {
+        "id": "pxstatapi",
+        "url": "/public/api.restful/PxStat.Data.Cube_API.ReadCollection/1900-01-01/en",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    }
+]
+
 KNOEMA_URLMAP = [
     {
         "id": "knoema:search",
@@ -2223,6 +2233,7 @@ CATALOGS_URLMAP = {
     "geonetwork": GEONETWORK_URLMAP,
     "openwis": GEONETWORK_URLMAP,
     "pxweb": PXWEB_URLMAP,
+    "pxstat": PXSTAT_URLMAP,
     "knoema": KNOEMA_URLMAP,
     "socrata": SOCRATA_URLMAP,
     "dataverse": DATAVERSE_URLMAP,
@@ -2532,6 +2543,13 @@ def api_identifier(
         "erdasapollo",
         "cogis",
         "tianditu",
+        "contentdm",
+        "idra",
+        "omekas",
+        "piveau",
+        "fairdatapoint",
+        "resourcecontracts",
+        "symbiota",
     ):
         parsed = urlparse(website_url)
         origin = f"{parsed.scheme}://{parsed.netloc}"

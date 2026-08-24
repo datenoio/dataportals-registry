@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: CO-DC
+      name: Distrito Capital de Bogotá
+description: Repositorio Institucional Universidad Distrital is a DSpace repository
+  listed in re3data as a research data provider.
+endpoints:
+- type: dspace
+  url: https://repository.udistrital.edu.co/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repository.udistrital.edu.co/server/api/discover/search/objects
+  version: '7'
+id: repositoryudistritaleduco
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100013939
+  value: r3d100013939
+langs:
+- id: ES
+  name: Spanish
+link: https://repository.udistrital.edu.co
+name: Repositorio Institucional Universidad Distrital
+owner:
+  link: https://www.udistrital.edu.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    subregion:
+      id: CO-DC
+      name: Distrito Capital de Bogotá
+  name: Universidad Distrital Francisco José de Caldas
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+- re3data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027345

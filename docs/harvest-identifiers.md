@@ -47,6 +47,7 @@ Use the **package/dataset** id, not a file/resource/distribution id. `ipums`, `d
 | `erddap` | `datasetID` | Table row |
 | `ipt` | Dataset UUID / key | Occurrence id |
 | `pxweb` | Table path (`type: t`) | Folder path |
+| `pxstat` | Matrix / table code | Widget embed, demo tables |
 | `fairdatapoint` | Dataset IRI | Distribution IRI |
 | `ipums` | Series / sample id | Extract job id |
 | `dhis2` | dataSet / indicator id | orgUnit, analytics cell |

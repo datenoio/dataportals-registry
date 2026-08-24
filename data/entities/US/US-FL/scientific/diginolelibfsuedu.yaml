@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -17,16 +18,21 @@ coverage:
     subregion:
       id: US-FL
       name: Florida
-description: Florida State University digital research repository for theses, dissertations,
-  research data, and scholarly works.
+description: Florida State University digital research repository (DigiNole) for theses,
+  dissertations, research data, and scholarly works.
 endpoints:
 - type: islandora:catalog
-  url: https://diginole.lib.fsu.edu/
+  url: https://repository.lib.fsu.edu/
+- type: oaipmh20
+  url: https://repository.lib.fsu.edu/oai2?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://repository.lib.fsu.edu/sitemap.xml
 id: diginolelibfsuedu
 langs:
 - id: EN
   name: English
-link: https://diginole.lib.fsu.edu/
+link: https://repository.lib.fsu.edu/
 name: DigiNole Research Repository
 owner:
   link: https://www.fsu.edu

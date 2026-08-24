@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 30
+    macroregion:
+      id: 018
+      name: Southern Africa
+    subregion:
+      id: ZA-GP
+      name: Gauteng
+description: City of Johannesburg Open SDG platform publishing local Sustainable Development
+  Goal indicators.
+endpoints:
+- type: opensdg:catalog
+  url: https://sdg.joburg.org.za/
+- type: opensdg:data
+  url: https://sdg.joburg.org.za/data/en/data/1-1-1.json
+- type: opensdg:data
+  url: https://sdg.joburg.org.za/data/en/data/1-2-1.json
+id: sdgjoburgorgza
+langs:
+- id: EN
+  name: English
+link: https://sdg.joburg.org.za/
+name: City of Johannesburg SDG Indicators
+owner:
+  link: https://www.joburg.org.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 30
+    subregion:
+      id: ZA-GP
+      name: Gauteng
+  name: City of Johannesburg
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: opensdg
+  name: OpenSDG
+status: active
+tags:
+- SDG
+- Johannesburg
+- OpenSDG
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00027919

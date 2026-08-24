@@ -15,17 +15,17 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Official statistics and data catalog of Cabo Verde (Cape Verde) by Instituto
-  Nacional de Estatística (INE Cabo Verde).
+description: Official NADA microdata catalog of surveys and censuses from Instituto
+  Nacional de Estatística de Cabo Verde (INE-CV).
 endpoints:
 - type: nada:catalog-search
-  url: https://www.ine.cv/dircv/index.php/api/catalog/search
+  url: https://www.ine.cv/dircaboverde/index.php/api/catalog/search
 id: wwwinecv
 langs:
-- id: FR
-  name: French
-link: https://www.ine.cv/dircv/index.php
-name: Instituto Nacional de Estatístic Catálogo Central de Dados
+- id: PT
+  name: Portuguese
+link: https://www.ine.cv/dircaboverde/
+name: INE Cabo Verde Catálogo de Dados
 owner:
   link: https://www.ine.cv
   location:
@@ -33,7 +33,7 @@ owner:
       id: CV
       name: Cabo Verde
     level: 20
-  name: Instituto Nacional de Estatístic
+  name: Instituto Nacional de Estatística de Cabo Verde
   type: Central government
 properties:
   has_doi: false

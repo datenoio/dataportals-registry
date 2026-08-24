@@ -15,7 +15,9 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: ArcGIS REST Services Directory for maps.1212.mn
+description: ArcGIS REST services directory of the National Statistics Office of Mongolia,
+  serving statistical and administrative map layers used by the 1212.mn statistical
+  information service.
 endpoints:
 - type: arcgis:rest:info
   url: http://maps.1212.mn/arcgis/rest/info?f=pjson
@@ -34,15 +36,15 @@ langs:
 - id: MN
   name: Mongolian
 link: http://maps.1212.mn/arcgis/rest/services
-name: Government of Mongolia Geoportal
+name: NSO Mongolia ArcGIS REST Services
 owner:
-  link: http://1212.mn
+  link: https://www.nso.mn
   location:
     country:
       id: MN
       name: Mongolia
     level: 20
-  name: Government of Mongolia
+  name: National Statistics Office of Mongolia
   type: Central government
 properties:
   has_doi: false
@@ -71,4 +73,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00005969
+uid: cdi00027971

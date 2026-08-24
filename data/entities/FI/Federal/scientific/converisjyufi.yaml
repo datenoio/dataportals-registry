@@ -20,10 +20,14 @@ description: Converis is the research information system (CRIS) of University of
 endpoints:
 - type: converis:catalog
   url: https://converis.jyu.fi/converis
+- type: converis:catalog
+  url: https://converis.jyu.fi/converis/portal/list?cypher=All&filter=&items=10&lang=en_GB&moreOrLess=&page=1&searchkey=&show=ResearchDataset&showAll=&sortBy=yearAvailable
 id: converisjyufi
 langs:
 - id: FI
   name: Finnish
+- id: EN
+  name: English
 link: https://converis.jyu.fi/converis
 name: The University of Jyväskylä Converis system
 owner:
@@ -49,8 +53,9 @@ software:
   name: Converis
 status: active
 tags:
+- Converis
+- CRIS
 - research data
-- data management
 - data publication
 topics:
 - id: TECH

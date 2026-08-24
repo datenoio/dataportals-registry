@@ -1,6 +1,6 @@
 access_mode:
 - open
-api_status: active
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -15,16 +15,6 @@ coverage:
       name: Central America
 description: Official open data catalog of Guatemala. open data portal. managed by
   Government of Guatemala. powered by CKAN. accessible at catalogo.datos.gob.gt.
-endpoints:
-- type: ckan
-  url: http://catalogo.datos.gob.gt/api/3
-  version: '3'
-- type: ckan:package-search
-  url: http://catalogo.datos.gob.gt/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://catalogo.datos.gob.gt/api/3/action/package_list
-  version: '3'
 id: datosgobgt
 langs:
 - id: ES
@@ -53,7 +43,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
 - Guatemala
@@ -120,4 +110,4 @@ topics:
   name: Transportation
   type: iso19115
 uid: cdi00000869
-api: true
+api: false

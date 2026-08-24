@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,19 +17,6 @@ coverage:
       name: Central America
 description: GIS mapping and environmental data services provided by the Ministry
   of Environment and Natural Resources of El Salvador.
-endpoints:
-- type: arcgis:rest:info
-  url: http://mapas.marn.gob.sv/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: http://mapas.marn.gob.sv/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: http://mapas.marn.gob.sv/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: http://mapas.marn.gob.sv/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: http://mapas.marn.gob.sv/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: http://mapas.marn.gob.sv/arcgis/rest/services?f=kmz
 id: mapasmarngobsv
 langs:
 - id: ES
@@ -57,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - GIS
 - Environmental monitoring

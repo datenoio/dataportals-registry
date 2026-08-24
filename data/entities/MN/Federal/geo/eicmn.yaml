@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: GeoServer web interface for spatial data catalog
+description: GeoServer catalog of the Environmental Information Centre of Mongolia,
+  serving environmental spatial datasets via OGC WMS, WFS, and WCS.
 endpoints:
 - type: wms111
   url: http://eic.mn:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -100,7 +101,10 @@ software:
   name: GeoServer
 status: active
 tags:
-- Not specified in raw text
+- environment
+- GeoServer
+- geospatial
+- Mongolia
 topics:
 - id: Location
   name: Location
@@ -111,4 +115,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00001607
+uid: cdi00027976

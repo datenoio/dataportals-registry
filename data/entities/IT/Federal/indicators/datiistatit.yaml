@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -13,8 +14,9 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: Database, data catalog, and visualization of official statistical information
-  for Italy.
+description: Former I.Stat corporate data warehouse (.Stat Technology). The URL now
+  redirects to an Istat notice; all I.Stat data are available in IstatData at
+  https://esploradati.istat.it.
 id: datiistatit
 identifiers:
 - id: dataportals.org
@@ -48,7 +50,7 @@ rights:
 software:
   id: stattech
   name: .Stat Technology
-status: active
+status: deprecated
 tags:
 - statistics
 - government
@@ -84,7 +86,3 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00000945
-endpoints:
-- type: restapi
-  url: https://dati.istat.it/api
-api: true

@@ -69,6 +69,19 @@ GET https://host/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
 
 One Layer (or LayerGroup) = one dataset-like object. Do not also ingest every WFS FeatureType and WCS Coverage of the same name. Skip `/geoserver/web` login. OGC API: `/geoserver/ogc/features/collections` and `/geoserver/ogc/stac/v1/collections` when those endpoints exist.
 
+## CubeWerx CubeSERV (`cubewerx`) {#cubewerx}
+
+```text
+GET https://host/cubewerx/cubeserv?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+GET https://host/cubewerx/cubeserv?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+```
+
+Harvest **named layers** from WMS/WMTS or **ISO dataset/series** from CSW. Prefer CSW when both exist. Do not ingest the same layer from WMS and WMTS. Skip the CubeWerx demo and login-only Stratos admin.
+
+## Hexagon M.App Enterprise (`mappenterprise`) {#mappenterprise}
+
+Public `/Apps/` portal. Harvest WMS/WFS GetCapabilities or the portal’s published app/layer list. One named layer (or published app catalog entry) = one dataset analog. Do not scrape M.App tiles. Distinct from GeoMedia WebMap (`geomediawebmap`) and ERDAS APOLLO (`erdasapollo`). Viewer grain: [harvest-viewers.md](harvest-viewers.md).
+
 ## ArcGIS Hub (`arcgishub`) {#arcgishub}
 
 ```text
@@ -133,6 +146,14 @@ GET https://host/index.php/lizmap/service?repository=REPO&project=PROJECT&SERVIC
 ```
 
 Harvest **layers in published projects**. Skip `/admin.php`. One Lizmap site may have many repositories — use the catalog `link` repository, not every sibling.
+
+## G3W-SUITE (`g3wsuite`) {#g3wsuite}
+
+```text
+GET https://host/ows/{group}/{project}/?SERVICE=WMS&REQUEST=GetCapabilities
+```
+
+Harvest **layers in published QGIS projects** (or the portal’s public project/group list). Skip `/admin` and G3W-ADMIN login. One portal = one harvest scope. Distinct from Lizmap (`lizmap`) and QWC2 (`qwc2`). Viewer grain: [harvest-viewers.md](harvest-viewers.md).
 
 ## GeoMapFish (`geomapfish`) {#geomapfish}
 
@@ -274,6 +295,9 @@ Same REST grain as [CoGIS](#cogis) when the branded viewer is eLiteGIS.
 | `mviewer` | `/apps/*.xml` or WMS | Layers in the config, not tiles |
 | `isogeo` | `/api` or CSW | ISO dataset/series, not workgroups |
 | `openeo` | `/collections` | Collections, not process graphs or job results |
+| `cubewerx` | `/cubewerx/cubeserv` WMS or CSW | Named layers or ISO records; not tiles |
+| `mappenterprise` | `/Apps/` or WMS | Published apps/layers, not M.App tiles |
+| `g3wsuite` | QGIS/OWS GetCapabilities | Layers in published projects; skip `/admin` |
 | `mapgisigserver` | `/igs/rest/mrcs/docs?f=json` or `/igs/rest/services?f=json` | Map documents / services; not tiles or `/igs/manager` |
 
 Municipal viewers (cardo, NetGIS, GC Navi, NOL-IS, Masterportal, Tianditu, Wagmap, GiSoftGis, PopGIS, ActiveMap, Geonomics, ORBISMap): [harvest-viewers.md](harvest-viewers.md). SuperMap iServer/iPortal and MapGIS IGServer recipes are also on [harvest-viewers.md](harvest-viewers.md). MapProxy (`mapproxy`) is a cache — do not treat every cached layer as a new dataset if a parent SDI already lists it. Gridded EO (STAC, ODC, Rasdaman, Copernicus, ncWMS): [harvest-earthdata.md](harvest-earthdata.md). smart.finder: [harvest-viewers.md](harvest-viewers.md#smartfindersdi).

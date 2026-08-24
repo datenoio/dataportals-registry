@@ -244,6 +244,22 @@ Aristotle’s data-portal product — harvest its public dataset API, not every 
 
 Copernicus CDS (`copernicuscds`): [harvest-earthdata.md](harvest-earthdata.md#copernicuscds). Discovery fingerprints: [discovery-opendata.md](discovery-opendata.md).
 
+## RDF Online Repository (`rdfrepository`) {#rdfrepository}
+
+Public license/workspace tables on `*.revenuedev.org`. Harvest the published **dataset / license list** if unauthenticated. Drop login-only company filing modules. Distinct from W3C RDF.
+
+## ResourceContracts (`resourcecontracts`) {#resourcecontracts}
+
+```text
+GET https://host/contract/resources
+```
+
+Keep **contracts** (documents). Drop the vendor About page and per-clause annotation chrome unless that is the catalog. One hub or country tenant = one harvest scope.
+
+## Guangxi Public Data Open Platform (`gxopendata`) {#gxopendata}
+
+Public dataset / directory list on `data.gxzf.gov.cn` or `{city}.data.gxzf.gov.cn`. Keep **open datasets** for that tenant. Drop login-only apply/API-gateway flows. One tenant = one harvest scope.
+
 ## Portals without a dataset API
 
 Liferay, POMOSAM, oPortal, OGD India, Seoul plaza, Drupal, and WordPress are covered above when a list exists. If there is still no machine-readable catalog, stop. Generic DCAT paths: `/catalog.xml`, `/data.json` ([harvest-protocols.md](harvest-protocols.md#dcat)).

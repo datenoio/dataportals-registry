@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-SP
+      name: São Paulo
+description: Open data portal of the São Paulo State Transport Agency (ARTESP), with
+  concession, highway, bus, and airport datasets and a CKAN Action API. Distinct from
+  the statewide dadosabertos.sp.gov.br catalog.
+endpoints:
+- type: ckan
+  url: https://dadosabertos.artesp.sp.gov.br/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dadosabertos.artesp.sp.gov.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dadosabertos.artesp.sp.gov.br/api/3/action/package_list
+  version: '3'
+id: dadosabertosartesspspgovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://dadosabertos.artesp.sp.gov.br/
+name: ARTESP Portal de Dados Abertos
+owner:
+  link: https://www.artesp.sp.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-SP
+      name: São Paulo
+  name: Agência de Transporte do Estado de São Paulo (ARTESP)
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- transport
+- São Paulo
+- Brazil
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00026927

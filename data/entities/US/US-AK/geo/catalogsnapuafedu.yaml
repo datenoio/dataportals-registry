@@ -21,6 +21,8 @@ coverage:
 description: SNAP Geonetwork. This geoportal. managed by University of Alaska Fairbanks.
   provides access to datasets and resources.
 endpoints:
+- type: rest
+  url: https://sonode.dataone.org/SNAP
 - type: geonetwork:query
   url: https://catalog.snap.uaf.edu/geonetwork/srv/eng/q
 - type: geonetwork:records

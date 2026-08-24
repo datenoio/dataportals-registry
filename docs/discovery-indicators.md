@@ -2,7 +2,7 @@
 
 How to find **indicators catalogs** (`catalog_type: Indicators catalog`) and **microdata catalogs** (`catalog_type: Microdata catalog`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md).
 
-Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, OpenSDG, .Stat Suite, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS.
+Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, OpenSDG, .Stat Suite, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
 
 ## PxWeb (`pxweb`) {#pxweb}
 
@@ -19,7 +19,22 @@ PC-Axis web tables, widely used by Nordic and other NSOs. Examples: [SCB PxWeb e
 | Censys | `web.endpoints.http.body: "PxWeb"` |
 | Shodan | `http.title:"PxWeb"` |
 
-**False positives:** documentation for PX files, desktop PC-Axis, a single `.px` download page. Need the **table tree** UI or `/api/v1/`.
+**False positives:** documentation for PX files, desktop PC-Axis, a single `.px` download page. Need the **table tree** UI or `/api/v1/`. Do not label a **PxStat** site (`PxStat.Data.Cube_API`) as PxWeb.
+
+## PxStat (`pxstat`) {#pxstat}
+
+CSO Ireland’s open-source dissemination platform (JSON-stat / PX). Live public catalogs: [data.cso.ie](https://data.cso.ie), [data.nisra.gov.uk](https://data.nisra.gov.uk). Source: [CSOIreland/PxStat](https://github.com/CSOIreland/PxStat).
+
+**Confirm:** JSON-stat collection from `GET /public/api.restful/PxStat.Data.Cube_API.ReadCollection/{datefrom}/{lang}` or JSON-RPC method `PxStat.Data.Cube_API.ReadCollection`. UI often titled “PxStat Open Data Platform”. The API host is frequently `ws.` / `ws-data.` beside the UI host.
+
+| Tool | Query |
+|------|-------|
+| Google | `"PxStat Open Data Platform" OR "PxStat.Data.Cube_API"` |
+| Google | `"powered by PxStat" OR inurl:api.restful/PxStat` |
+| Censys | `web.endpoints.http.body: "PxStat.Data.Cube_API"` |
+| Censys | `web.endpoints.http.html_title: "PxStat"` |
+
+**False positives:** PxWeb (`/api/v1/`, title “PxWeb”); the CSO demo (`demo-pxstat.cso.ie`); `visual.cso.ie` maps over the same tables; GitHub wiki. Irish public bodies that publish **on** data.cso.ie are not separate catalogs.
 
 ## OpenSDG (`opensdg`) {#opensdg}
 
@@ -60,6 +75,22 @@ Commercial indicator portals and country hubs. Site: [knoema.com](https://knoema
 | Google | `"powered by Knoema" OR "Knoema" (statistics OR indicators) -site:knoema.com` |
 | Censys | `web.names: "knoema.com"` |
 | crt.sh | `%.knoema.com` |
+
+## SparkMap (`sparkmap`) {#sparkmap}
+
+CARES (University of Missouri Extension) community mapping and assessment platform. Flagship: [sparkmap.org](https://sparkmap.org). Partner hubs reuse the same Map Room and community needs assessment UI, often on `*.engagementnetwork.org` or a custom domain.
+
+**Signals:** title or chrome “SparkMap” / “Map Room”; path `/map-room/`; “Powered by CARES”; `engagementnetwork.org` hub host.
+
+**Confirm:** GET the public Map Room or assessment home. Layers and reports must be listable without login. Skip CARES HQ’s own Map Room (`careshq.org/map-room`) when SparkMap is already registered — same national layer library. Skip login-only Community Action Partnership national hub, embed-only widgets, and IRI Climate Data Library “Map Room” sites.
+
+| Tool | Query |
+|------|-------|
+| Google | `"SparkMap" ("Map Room" OR "community needs assessment") -site:sparkmap.org` |
+| Google | `"Powered by CARES" ("Map Room" OR "community needs assessment")` |
+| Google | `site:engagementnetwork.org "Map Room"` |
+| Censys | `web.endpoints.http.body: "SparkMap"` |
+| Censys | `web.names: "engagementnetwork.org"` |
 
 ## SDMX-RI (`sdmxri`) {#sdmxri}
 
@@ -116,11 +147,101 @@ Open-source health management information system (HISP / University of Oslo). Mo
 | Censys | `web.endpoints.http.body: "dhis-web-commons"` |
 | Censys | `web.endpoints.http.html_title: "DHIS 2"` |
 
+## TabNet (`tabnet`) {#tabnet}
+
+DATASUS CGI tabulator for Brazilian SUS health databases. National hub: [Informações de Saúde (TABNET)](https://datasus.saude.gov.br/informacoes-de-saude-tabnet). States, municipalities, and ANS run separate installations. Use `software.id: tabnet`. Distinct from the OpenDataSUS CKAN portal.
+
+**Signals:** HTML title “TabNet Win32”; paths `deftohtm.exe`, `tabcgi.exe`, `cgi-bin/dh?`; `.def` query forms; “Copia para Tabwin”.
+
+**Confirm:** GET a public table menu or a `.def` form. One catalog per installation (national vs SES vs municipal vs ANS). Do not add every `.def` table as its own catalog. Skip TabWin desktop downloads and login-only intranet copies.
+
+**False positives:** pytorch-tabnet / tabular ML libraries; a CMS page that only links to the national DATASUS TabNet.
+
+| Tool | Query |
+|------|-------|
+| Google | `"TabNet Win32" site:.gov.br` |
+| Google | `inurl:deftohtm.exe OR inurl:tabcgi.exe OR inurl:/cgi-bin/dh site:.gov.br` |
+| Google | `"Informações de Saúde" TABNET (secretaria OR municipal) site:.gov.br` |
+| Censys | `web.endpoints.http.html_title: "TabNet Win32"` |
+| Censys | `web.endpoints.http.body: "deftohtm.exe"` |
+
+## FENIX (`fenix`) {#fenix}
+
+FAO’s open-source statistical dissemination stack (D3S / ChaplinJS UIs). Flagship live catalog: [FAOSTAT](https://www.fao.org/faostat/en/). Related FAO apps (AMIS, AIDmonitor, DAD-IS, WIEWS, GIFT) use the same family. CountrySTAT was the national agriculture-statistics product; `countrystat.org` no longer resolves.
+
+**Signals:** `fenixservices.fao.org` or `fenixapps.fao.org`; `/faostat/api/v1/`; HTML/JS mentioning FENIX, D3S, or CountrySTAT; GitHub `FENIX-Platform` / `FENIX-Platform-Projects`.
+
+**Confirm:** public indicator catalog UI, or `GET https://fenixservices.fao.org/faostat/api/v1/en/groupsanddomains` JSON for FAOSTAT. Use `software.id: fenix`. Do not add dead `*.countrystat.org` hosts. CountrySTAT Philippines lives in OpenSTAT (`pxweb`), not FENIX. Do not add FAO CKAN CountrySTAT *datasets* as catalogs.
+
+| Tool | Query |
+|------|-------|
+| Google | `"CountrySTAT" OR "FENIX" (FAOSTAT OR "food and agriculture") -site:github.com` |
+| Google | `inurl:fenixservices.fao.org OR inurl:fenixapps.fao.org` |
+| Google | `"fenixservices.fao.org/faostat/api"` |
+| Censys | `web.endpoints.http.body: "fenixservices.fao.org"` |
+| Censys | `web.names: "fenixservices.fao.org"` |
+
+**False positives:** FAOSTAT API host as a second catalog (it belongs on the FAOSTAT record); ingested CountrySTAT tables on `data.apps.fao.org`; training PDFs; GitHub UI repos with no public catalog.
+
+## SuperSTAR / SuperWEB2 (`superstar`) {#superstar}
+
+WingArc Australia SuperSTAR suite (formerly Space-Time Research). The public catalog UI is **SuperWEB2**. Use `software.id: superstar`. Do not confuse with STR (CoStar) hotel SuperSTAR.
+
+**Signals:** `/webapi/jsf/login.xhtml`; HTML title “SuperWEB2” / branded TableBuilder / Stat-Xplore / STATcube; help paths `/webapi/online-help/`; Open Data API `/webapi/rest/v1/schema`.
+
+**Confirm:** GET the SuperWEB2 login or catalogue page. Guest or free registration still counts as a public catalog. Skip the WingArc demo (`sw2.wingarc.com.au`) and documentation hosts.
+
+| Tool | Query |
+|------|-------|
+| Google | `"SuperWEB2" (statistics OR census OR "table builder") -site:github.com` |
+| Google | `inurl:/webapi/jsf/login.xhtml` |
+| Google | `"Stat-Xplore" OR "TableBuilder" SuperWEB2` |
+| Censys | `web.endpoints.http.html_title: "SuperWEB2"` |
+| Censys | `web.endpoints.http.body: "/webapi/jsf/login.xhtml"` |
+
+**False positives:** SuperSTAR desktop SuperCROSS; vendor marketing; STR hotel benchmarking; login-only staff cubes with no public guest/register path.
+
+## Beyond 20/20 Web Data Server (`beyond2020`) {#beyond2020}
+
+Legacy ASP.NET cube browser (Beyond 20/20 Inc., Ottawa). Public catalogs expose a **report-folder tree**, not a REST list API. Vendor: [beyond2020.com/web-data-server](https://www.beyond2020.com/web-data-server/). Live public examples: [JODI World Database](http://www.jodidb.org), [IES Castilla-La Mancha](https://difusion.jccm.es/wds/).
+
+**Signals:** HTML title `Beyond 20/20 WDS`; paths `/ReportFolders/reportFolders.aspx`, `/TableViewer/tableView.aspx`; `Common/Images/wds.gif`; language-selection page with the Beyond 20/20 logo; IVT downloads.
+
+**Confirm:** GET the language page or `ReportFolders/reportFolders.aspx` without login. One catalog per public WDS **installation** (the folder tree), not per `ReportId`. Skip Crime Insight / Perspective (`*.beyond2020.com` NIBRS tenants), OSFI `osfi.beyond2020.com` (self-registration), IEA `wds.iea.org` (login; product retired for public data), and Statistics Canada’s unrelated **Web Data Service** REST API.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Beyond 20/20 WDS" (Reports OR Informes OR "Language Selection")` |
+| Google | `inurl:ReportFolders/reportFolders.aspx` |
+| Google | `"Beyond 20/20 WDS - Table view"` |
+| Censys | `web.endpoints.http.html_title: "Beyond 20/20 WDS"` |
+| Censys | `web.endpoints.http.body: "ReportFolders/reportFolders.aspx"` |
+
+**False positives:** Beyond 20/20 Professional Browser / IVT file downloads with no WDS UI; Crime Insight; vendor marketing; login-only WDS; UNCTADstat `/wds/` redirects (now Data Centre); UNESCO UIS Data Browser (migrated off WDS).
+
+## StatPlanet (`statplanet`) {#statplanet}
+
+StatSilk interactive maps and dashboards (StatPlanet Cloud / HTML5, older Flash). Site: [statsilk.com](https://www.statsilk.com). Gallery: [statsilk.com/gallery](https://www.statsilk.com/gallery). Live example: [EC-OECD STIP Compass statistics](https://stip.oecd.org/Stats/STIP-StatTrends.html).
+
+**Signals:** HTML title `StatPlanet`; `StatPlanet Cloud`; `StatPlanet_Cloud.html`; `data.csv` / `settings.csv`; StatSilk footer or logo; URL params `i=` `v=` `t=` on Cloud dashboards.
+
+**Confirm:** GET the dashboard HTML and a public `data.csv` (or SDMX-backed Cloud instance). One record per public explorer, not per indicator or per `*-StatTrends.html` file on the same host.
+
+| Tool | Query |
+|------|-------|
+| Google | `"StatPlanet Cloud" OR "StatPlanet_Cloud.html" (indicators OR statistics)` |
+| Google | `"powered by StatSilk" OR intitle:StatPlanet (map OR dashboard)` |
+| Censys | `web.endpoints.http.html_title: "StatPlanet"` |
+| Censys | `web.endpoints.http.body: "StatPlanet Cloud"` |
+
+**False positives:** statsilk.com marketing, GitHub `StatSilk/StatPlanet`, Flash-only dead maps, a single thematic poster, StatPlanet World Bank / EdStats viewers of [data.worldbank.org](https://data.worldbank.org) (already `dataworldbankorg`). Skip login-only corporate dashboards.
+
 ## Other indicator platforms
 
 | `software.id` | Where to look | Typical query |
 |---------------|---------------|---------------|
-| `superstar` | Census table browsers | `"SuperSTAR" (census OR "table builder")` |
+| `statplanet` | see above | |
+| `superstar` | see above | |
 | `statsuite` | see above | |
 | `stattech` | SIS-CC .Stat technology / SDMX APIs | `"Stat Technology" OR "SIS-CC" SDMX` |
 | `oracleapex` | Oracle APEX **indicator apps** | `"Oracle APEX" (statistika OR indicators)` (skip generic APEX sites) |
@@ -219,6 +340,36 @@ World Bank survey suite. Register only a **public Data Browser** of microdata, n
 | Tool | Query |
 |------|-------|
 | Google | `"Survey Solutions" ("data browser" OR microdata) -site:mysurvey.solutions` |
+
+## DataWarehousePro (`datawarehousepro`) {#datawarehousepro}
+
+Central-bank macroeconomic warehouse. Site: [datawarehousepro.com](https://datawarehousepro.com). Tenants: `app.datawarehousepro.com/go/{tenant}` (sometimes a custom domain).
+
+**Signals:** DataWarehousePro chrome; `/guest/getDatabanksWithMnemonics/` API.
+
+**Confirm:** GET `/go/{tenant}` and `/guest/getDatabanksWithMnemonics/{tenant}`. One record per institutional tenant, not per series.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:app.datawarehousepro.com/go` |
+| Google | `"DataWarehousePro" ("central bank" OR statistics)` |
+| Censys | `web.names: "app.datawarehousepro.com"` |
+| crt.sh | `%.datawarehousepro.com` |
+
+## Goal Tracker (`goaltracker`) {#goaltracker}
+
+Data Act Lab SDG country platforms. Site: [goaltracker.org](https://goaltracker.org). Distinct from Open SDG (`opensdg`).
+
+**Signals:** host `*.goaltracker.org`; title “Goal Tracker”; Data Act Lab branding.
+
+**Confirm:** GET the country tenant home. One record per country site. Skip the vendor marketing page if a country tenant is already registered.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:goaltracker.org` |
+| Google | `"Goal Tracker" (SDG OR "Global Goals") -site:goaltracker.org/about` |
+| Censys | `web.names: "goaltracker.org"` |
+| crt.sh | `%.goaltracker.org` |
 
 ## Generic statistics-office patterns
 

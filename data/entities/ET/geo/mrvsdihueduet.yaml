@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Geoportal. managed by data catalog. powered by GeoNode. accessible at
-  mrvsdi.hu.edu.et.
+description: Hawassa University GeoNode for measurement, reporting and verification
+  (MRV) spatial data, including forest and land-cover layers.
 endpoints:
 - type: geonode:layers
   url: http://mrvsdi.hu.edu.et/api/layers/
@@ -37,15 +37,15 @@ langs:
 - id: EN
   name: English
 link: http://mrvsdi.hu.edu.et
-name: data catalog Geoportal
+name: Hawassa University MRV Spatial Data Infrastructure
 owner:
-  link: http://hu.edu.et
+  link: https://www.hu.edu.et
   location:
     country:
       id: ET
       name: Ethiopia
     level: 20
-  name: data catalog
+  name: Hawassa University
   type: Academy
 properties:
   has_doi: false
@@ -61,9 +61,10 @@ software:
   name: GeoNode
 status: active
 tags:
-- data catalog
-- metadata
-- Open Data
+- geospatial
+- geonode
+- MRV
+- forestry
 topics:
 - id: Location
   name: Location
@@ -74,4 +75,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00001463
+uid: cdi00027583

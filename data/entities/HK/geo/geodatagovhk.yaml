@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,9 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Public platform for exploring and downloading open spatial data.
+description: Former Lands Department alpha CSDI portal for exploring and downloading
+  open spatial data. Services ceased on 1 August 2023 and were replaced by the Common
+  Spatial Data Infrastructure Portal at https://portal.csdi.gov.hk/.
 id: geodatagovhk
 langs:
 - id: EN
@@ -41,11 +43,10 @@ rights:
 software:
   id: custom
   name: Custom software
-status: active
+status: deprecated
 tags:
 - geospatial
 - government
-- has_api
 - spatial data
 - open data
 topics:
@@ -56,6 +57,3 @@ topics:
   name: Location
   type: iso19115
 uid: cdi00002348
-endpoints:
-- type: sitemap
-  url: https://geodata.gov.hk/sitemap.xml

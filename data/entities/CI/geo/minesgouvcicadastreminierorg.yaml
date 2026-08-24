@@ -15,32 +15,41 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: ArcGIS REST endpoint for Côte d'Ivoire mining cadastre data (spatial
-  and administrative mining rights information).
+description: Public ArcGIS REST catalog of the Côte d'Ivoire mining cadastre (mining
+  titles and related spatial layers).
 endpoints:
-- type: arcgis:portals:self
-  url: https://mines.gouv.ci.cadastreminier.org/arcgis/rest/portal/sharing/rest/portals/self?f=pjson
 - type: arcgis:rest:info
-  url: https://mines.gouv.ci.cadastreminier.org/arcgis/rest/rest/info?f=pjson
+  url: https://mines.gouv.ci.cadastreminier.org/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: https://mines.gouv.ci.cadastreminier.org/arcgis/rest/rest/services?f=pjson
+  url: https://mines.gouv.ci.cadastreminier.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mines.gouv.ci.cadastreminier.org/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://mines.gouv.ci.cadastreminier.org/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mines.gouv.ci.cadastreminier.org/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://mines.gouv.ci.cadastreminier.org/arcgis/rest/services?f=kmz
 id: minesgouvcicadastreminierorg
 langs:
+- id: FR
+  name: French
 - id: EN
   name: English
-link: https://mines.gouv.ci.cadastreminier.org/arcgis/rest/
+link: https://mines.gouv.ci.cadastreminier.org/arcgis/rest/services
 name: Cote d Ivoire Mining Cadastre Geoportal
 owner:
-  link: https://spatialdimension.com
+  link: https://energie.gouv.ci
   location:
     country:
-      id: ZA
-      name: South Africa
+      id: CI
+      name: Cote d Ivoire
     level: 20
-  name: Spatial Dimension
-  type: Business
+  name: Ministere des Mines, du Petrole et de l Energie
+  type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -58,10 +67,16 @@ tags:
 - spatial data
 - geographic information system
 topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme
 - id: Geoscientific Information
   name: Geoscientific Information
+  type: iso19115
+- id: Economy
+  name: Economy
   type: iso19115
 uid: cdi00005026

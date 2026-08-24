@@ -14,19 +14,24 @@ coverage:
     macroregion:
       id: 018
       name: Southern Africa
-description: Institutional Figshare research data repository of Tshwane University
-  of Technology.
+description: Institutional Figshare research data repository of Tshwane University of Technology.
 endpoints:
 - type: sitemap
   url: https://tut.figshare.com/sitemap/siteindex.xml
   url_pattern: /articles/dataset/
 - type: figshare:graphql
   url: https://tut.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+- type: sitemap
+  url: https://tutrod.figshare.com/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://tutrod.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
 id: tutfigsharecom
 langs:
 - id: EN
   name: English
-link: https://tut.figshare.com/
+link: https://tutrod.figshare.com
 name: Research from Tshwane University of Technology
 owner:
   link: https://www.tut.ac.za

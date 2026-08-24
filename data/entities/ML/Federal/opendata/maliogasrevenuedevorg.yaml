@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ML
+      name: Mali
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Public oil and gas licence repository for Mali, published from OGAS (RDF
+  Online Repository). Distinct from the DNGM mining cadastre tenant.
+endpoints:
+- type: rdfrepository:catalog
+  url: https://mali-ogas.revenuedev.org/
+id: maliogasrevenuedevorg
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://mali-ogas.revenuedev.org/
+name: Mali OGAS Online Repository
+owner:
+  link: https://revenuedevelopment.org/mali/
+  location:
+    country:
+      id: ML
+      name: Mali
+    level: 20
+  name: Direction Nationale de la Géologie et des Mines
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: rdfrepository
+  name: RDF Online Repository
+status: active
+tags:
+- petroleum
+- cadastre
+- OGAS
+- government
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00027817

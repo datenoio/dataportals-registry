@@ -14,10 +14,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: A digital library project under Ministry of Education, Ethiopia. It collects
-  and collates metadata and provides full text index from several national and international
-  digital libraries, containing textbooks, articles, audio books, lectures, simulations,
-  fiction and other learning media.
+description: National Academic Digital Repository of Ethiopia (NADRE), the InvenioRDM
+  platform operated by EthERNet for Ethiopian research outputs including publications
+  and research data. Each record can receive a DOI.
 endpoints:
 - type: inveniordmapi
   url: https://nadre.ethernet.edu.et/api
@@ -28,15 +27,15 @@ langs:
 - id: EN
   name: English
 link: https://nadre.ethernet.edu.et
-name: National Academic Digital Library of Ethiopia (NADLE)
+name: National Academic Digital Repository of Ethiopia (NADRE)
 owner:
-  link: http://www.ethernet.edu.et
+  link: https://www.ethernet.edu.et
   location:
     country:
       id: ET
       name: Ethiopia
     level: 20
-  name: Ministry of Education, Ethiopia
+  name: Ethiopian Education and Research Network (EthERNet)
   type: Central government
 properties:
   has_doi: true
@@ -48,23 +47,22 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: invenio
+  id: inveniordm
   name: InvenioRDM
 status: active
 tags:
-- digital library
+- research data
 - academic
-- education
-- textbooks
-- research
+- InvenioRDM
+- Ethiopia
 topics:
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
 - id: Society
   name: Society
   type: iso19115
-- id: Society
-  name: Society
-  type: iso19115
-uid: temp00002061
+uid: cdi00027586

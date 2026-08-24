@@ -1,8 +1,8 @@
 access_mode:
 - open
 - limited
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - dataset
@@ -16,9 +16,6 @@ coverage:
       id: '013'
       name: Central America
 description: Data catalog for statistical and geographical data.
-endpoints:
-- type: nada:catalog-search
-  url: http://digestyc.microdatahub.com/index.php/api/catalog/search
 id: digestycmicrodatahubcom
 langs:
 - id: ES
@@ -47,7 +44,7 @@ rights:
 software:
   id: nada
   name: NADA
-status: active
+status: inactive
 tags:
 - government
 - has_api

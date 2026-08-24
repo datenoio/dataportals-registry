@@ -1,8 +1,8 @@
 access_mode:
 - open
 - limited
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - microdata
@@ -18,11 +18,6 @@ coverage:
 description: Central Data Catalog containing datasets, microdata, and official statistics
   relevant to Mali. Hosted by the national statistics institute, it supports the collection,
   analysis, and dissemination of socio-economic and demographic data for public use.
-endpoints:
-- type: nada:catalog-search
-  url: https://www.instat-mali.org/nada/index.php/api/catalog/search
-- type: nada:csvexport
-  url: https://www.instat-mali.org/nada/index.php/catalog/export/csv?ps=5000&collection[]
 id: instatmaliorgnada
 langs:
 - id: EN
@@ -51,7 +46,7 @@ rights:
 software:
   id: nada
   name: NADA
-status: active
+status: inactive
 tags:
 - government
 - has_api

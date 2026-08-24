@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Data catalog of spatial data services, likely operated by El Salvador's
-  National Territory Studies Service (SNET).
+description: ArcGIS Server catalog of El Salvador's environmental and territorial
+  observatory (historically SNET, now under MARN). REST listing has been slow or
+  unresponsive; successor environmental layers are also published on geoportalsima.ambiente.gob.sv.
 endpoints:
 - type: arcgis:portals:self
   url: https://geoportal.snet.gob.sv/portal/sharing/rest/portals/self?f=pjson
@@ -45,7 +46,7 @@ owner:
       id: SV
       name: El Salvador
     level: 20
-  name: Ministerio de Medio Ambiente El Salvador
+  name: Ministerio de Medio Ambiente y Recursos Naturales
   type: Central government
 properties:
   has_doi: false

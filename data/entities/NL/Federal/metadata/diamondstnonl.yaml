@@ -18,6 +18,13 @@ description: FAIR Data Point for the TNO DIAMONDS project.
 endpoints:
 - type: dcat:ttl
   url: https://diamonds.tno.nl/fairdatapoint
+- type: dcat:ttl
+  url: https://diamonds.tno.nl/fairdatapoint/
+- type: openapi
+  url: https://diamonds.tno.nl/fairdatapoint/v3/api-docs
+  version: '3'
+- type: docs
+  url: https://diamonds.tno.nl/swagger-ui.html
 id: diamondstnonl
 langs:
 - id: EN

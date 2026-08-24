@@ -15,8 +15,17 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: GeoNetwork OpenSource catalog for geospatial data, typically used by
-  national or regional environmental agencies.
+- location:
+    country:
+      id: EH
+      name: Western Sahara
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: GeoNetwork catalog of the Moroccan Ministry of Energy Transition and
+  Sustainable Development (GéoNEDD), providing environmental geospatial metadata for
+  Morocco including the southern provinces.
 endpoints:
 - type: geonetwork:query
   url: https://geonedd.environnement.gov.ma:9876/geonetwork/srv/eng/q
@@ -41,7 +50,7 @@ langs:
 - id: EN
   name: English
 link: https://geonedd.environnement.gov.ma:9876/geonetwork
-name: Geoportal of the Grand-Duchy of Luxembourg INSPIRE geocatalog
+name: GéoNEDD - Catalogue de métadonnées environnementales du Maroc
 owner:
   link: https://www.environnement.gov.ma
   location:

@@ -391,6 +391,51 @@ Taiwan Nuxt/Vue open-data frontend (national data.gov.tw family plus local clone
 | Google | `"moda-gov-tw" opendata` |
 | Censys | `web.names: "data.gov.tw"` |
 
+## RDF Online Repository (`rdfrepository`) {#rdfrepository}
+
+Revenue Development Foundation license-transparency portals. Docs: [Online Repository](https://revenuedevelopment.org/online-repository/). Tenants: `*.revenuedev.org`. Distinct from W3C RDF.
+
+**Signals:** host `*.revenuedev.org`; title Repository; RDF/MCAS branding.
+
+**Confirm:** GET the country tenant home. One record per country portal, not the vendor site.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:revenuedev.org` |
+| Google | `"Online Repository" ("Revenue Development" OR mining) -site:revenuedevelopment.org` |
+| Censys | `web.names: "revenuedev.org"` |
+| crt.sh | `%.revenuedev.org` |
+
+## ResourceContracts (`resourcecontracts`) {#resourcecontracts}
+
+NRGI oil/gas/mining contract repository. Hub: [resourcecontracts.org](https://resourcecontracts.org). Source: [NRGI/resourcecontracts.org](https://github.com/NRGI/resourcecontracts.org).
+
+**Signals:** ResourceContracts chrome; country hosts `{country}.resourcecontracts.org`.
+
+**Confirm:** GET the public contract search (hub or country tenant). One record per public catalog, not per contract PDF.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:resourcecontracts.org` |
+| Google | `"ResourceContracts" (mining OR petroleum) contract` |
+| Censys | `web.names: "resourcecontracts.org"` |
+| crt.sh | `%.resourcecontracts.org` |
+
+## Guangxi Public Data Open Platform (`gxopendata`) {#gxopendata}
+
+Guangxi Zhuang Autonomous Region public data portal. Provincial hub: [data.gxzf.gov.cn](https://data.gxzf.gov.cn). City tenants: `{city}.data.gxzf.gov.cn`. Not CKAN.
+
+**Signals:** host `data.gxzf.gov.cn` or `{city}.data.gxzf.gov.cn`; 公共数据开放平台 chrome.
+
+**Confirm:** GET the tenant home. One record per city or provincial tenant, not per dataset.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:data.gxzf.gov.cn` |
+| Google | `"公共数据开放平台" site:gxzf.gov.cn` |
+| Censys | `web.names: "data.gxzf.gov.cn"` |
+| crt.sh | `%.data.gxzf.gov.cn` |
+
 ## Other open-data platforms
 
 | `software.id` | Signals | Typical query |
@@ -409,6 +454,9 @@ Taiwan Nuxt/Vue open-data frontend (national data.gov.tw family plus local clone
 | `strapi` | Headless CMS **with a public dataset API** | `"Strapi" ("open data" OR datasets)` |
 | `smw` | Semantic MediaWiki data catalog | `"Semantic MediaWiki" (dataset OR catalog)` |
 | `d4science` | D4Science VRE / catalog | `"D4Science" (catalog OR "open data")` |
+| `rdfrepository` | `*.revenuedev.org` | `site:revenuedev.org` |
+| `resourcecontracts` | NRGI contract repository | `site:resourcecontracts.org` |
+| `gxopendata` | Guangxi `{city}.data.gxzf.gov.cn` | `site:data.gxzf.gov.cn` |
 
 ## Generic open-data URL patterns
 

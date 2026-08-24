@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,28 +14,17 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: The provided URL (https://madih.hu.edu.jo) has not been crawled by the
-  queried sources nor is additional context available in the provided search results.
-  To extract catalog metadata as specified, the website content must be programmatically
-  accessible or metadata must be available via standard APIs or DCAT/RDFa/Schema.org
-  markup. With the current information, only placeholder metadata structures (CSV/JSON)
-  can be provided for illustration.
-endpoints:
-- type: ckan
-  url: https://madih.hu.edu.jo/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://madih.hu.edu.jo/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://madih.hu.edu.jo/api/3/action/package_list
-  version: '3'
+description: CKAN catalogue of Jordanian digital cultural heritage datasets compiled
+  by the MaDiH (Mapping Digital Cultural Heritage in Jordan) project at the Hashemite
+  University with King's Digital Lab. The public host currently does not respond.
 id: madihhuedujo
 langs:
 - id: AR
   name: Arabic
+- id: EN
+  name: English
 link: https://madih.hu.edu.jo
-name: URL not crawlable.
+name: MaDiH (Mapping Digital Cultural Heritage in Jordan)
 owner:
   link: https://www.hu.edu.jo
   location:
@@ -55,12 +44,17 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
-- government
-- has_api
+- cultural heritage
+- CKAN
+- Jordan
+- research data
 topics:
-- id: GOVE
-  name: Government and public sector
+- id: EDUC
+  name: Education, culture and sport
   type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00000980

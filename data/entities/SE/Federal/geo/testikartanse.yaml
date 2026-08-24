@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,52 +16,6 @@ coverage:
       id: '154'
       name: Northern Europe
 description: Data catalog related to geospatial datasets and services
-endpoints:
-- type: wms111
-  url: https://test.ikartan.se/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wms130
-  url: https://test.ikartan.se/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
-- type: wfs100
-  url: https://test.ikartan.se/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wfs110
-  url: https://test.ikartan.se/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wfs200
-  url: https://test.ikartan.se/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
-  version: 2.0.0
-- type: wcs100
-  url: https://test.ikartan.se/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wcs110
-  url: https://test.ikartan.se/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: https://test.ikartan.se/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wcs11
-  url: https://test.ikartan.se/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
-  version: '1.1'
-- type: wcs201
-  url: https://test.ikartan.se/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
-  version: 2.0.1
-- type: wps100
-  url: https://test.ikartan.se/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wms111
-  url: https://test.ikartan.se/geoserver/wms?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wms130
-  url: https://test.ikartan.se/geoserver/wms?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
-- type: wfs200
-  url: https://test.ikartan.se/geoserver/wfs?service=WFS&version=2.0.0&request=GetCapabilities
-  version: 2.0.0
-- type: wcs111
-  url: https://test.ikartan.se/geoserver/wcs?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
 id: testikartanse
 langs:
 - id: SV
@@ -89,7 +43,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - geoportal
 - GeoServer

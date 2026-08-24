@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: GeoServer instance for geospatial data catalogs and services
+description: National Spatial Data Infrastructure GeoServer of Moldova, publishing
+  OGC map, feature, and coverage services for NSDI datasets.
 endpoints:
 - type: wms111
   url: http://geodata.gov.md/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -63,13 +64,13 @@ langs:
 link: http://geodata.gov.md/geoserver
 name: NSDI Republic of Moldova
 owner:
-  link: https://www.gov.md
+  link: https://www.agcc.gov.md
   location:
     country:
       id: MD
       name: Moldova
     level: 20
-  name: Government of Moldova
+  name: Agenția Geodezie, Cartografie și Cadastru
   type: Central government
 properties:
   has_doi: true
@@ -92,9 +93,6 @@ tags:
 - OGC standards
 - web services
 topics:
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
 - id: REGI
   name: Regions and cities
   type: eudatatheme

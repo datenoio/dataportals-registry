@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -17,24 +18,25 @@ coverage:
     subregion:
       id: US-VA
       name: Virginia
-description: Neighborhoods in the City of Chesapeake. Maintained by Information Technology.
+description: City of Chesapeake, Virginia ArcGIS Hub open data catalog for exploring
+  and downloading municipal GIS datasets and maps.
 endpoints:
 - type: dcatap201
-  url: https://public.chesva.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+  url: https://public-chesva.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
 - type: dcatus11
-  url: https://public.chesva.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+  url: https://public-chesva.opendata.arcgis.com/api/feed/dcat-us/1.1.json
 - type: rss
-  url: https://public.chesva.opendata.arcgis.com/api/feed/rss/2.0
+  url: https://public-chesva.opendata.arcgis.com/api/feed/rss/2.0
 - type: ogcrecordsapi
-  url: https://public.chesva.opendata.arcgis.com/api/search/v1
+  url: https://public-chesva.opendata.arcgis.com/api/search/v1
 id: publicchesvaopendataarcgiscom
 langs:
 - id: EN
   name: English
-link: https://public.chesva.opendata.arcgis.com
-name: Neighborhoods - Dataset - Catalog - Data.gov
+link: https://public-chesva.opendata.arcgis.com
+name: City of Chesapeake, VA Open Data Site
 owner:
-  link: https://catalog.data.gov/dataset/neighborhoods-fa585
+  link: https://www.cityofchesapeake.net
   location:
     country:
       id: US

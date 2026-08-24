@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Plataforma de información territorial de la Secretaría de Demarcación
+  y Organización Territorial (PCM). Visor, normas de demarcación y descargas geoespaciales.
+endpoints:
+- type: wms111
+  url: https://geosdot.servicios.gob.pe/geoserver/ows?service=WMS&request=GetCapabilities
+- type: wfs110
+  url: https://geosdot.servicios.gob.pe/geoserver/ows?service=WFS&request=GetCapabilities
+id: geosdotserviciosgobpe
+langs:
+- id: ES
+  name: Spanish
+link: https://geosdot.servicios.gob.pe/geoportal/
+name: Demarca Perú
+owner:
+  link: https://www.gob.pe/pcm
+  location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+  name: Secretaría de Demarcación y Organización Territorial
+  type: Central government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- government
+- territorial demarcation
+- Peru
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00027072

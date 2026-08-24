@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-82
+      name: Sicilia
+description: URBAN-TOOLS G3W-SUITE geoportal of Comune di Palermo for municipal urban-planning
+  and territorial WebGIS services.
+id: geoutcomunepalermoit
+langs:
+- id: IT
+  name: Italian
+link: https://geout.comune.palermo.it/
+name: URBAN-TOOLS Palermo
+owner:
+  link: https://www.comune.palermo.it
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: IT-82
+      name: Sicilia
+  name: Comune di Palermo
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: g3wsuite
+  name: G3W-SUITE
+status: active
+tags:
+- geospatial
+- geoportal
+- g3wsuite
+- government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00028016

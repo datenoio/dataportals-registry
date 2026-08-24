@@ -18,6 +18,8 @@ description: DataverseNO (https://dataverse.no/) is a national, generic reposito
   for open research data from researchers from Norwegian research institutions. Some
   collections within DataverseNO also accept data from researchers from other institutions.
 endpoints:
+- type: rest
+  url: https://sonode.dataone.org/DVNO
 - type: dataverseapi
   url: https://dataverse.no/api/search
 - type: oaipmh20

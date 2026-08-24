@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GQ
+      name: Equatorial Guinea
+    level: 20
+    macroregion:
+      id: '017'
+      name: Middle Africa
+description: Open-data hub of the Equatorial Guinea Forest Atlas (WRI / Ministerio
+  de Agricultura, Ganadería, Bosques y Medio Ambiente). Public ArcGIS Hub for forest
+  and land-use layers developed with INDEFOR-AP. DCAT and OGC Records feeds currently
+  return 401/404.
+endpoints:
+- type: arcgishub:catalog
+  url: https://gnq-data.forest-atlas.org
+id: gnqdataforestatlasorg
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: https://gnq-data.forest-atlas.org
+name: Equatorial Guinea Forest Atlas Open Data
+owner:
+  link: https://www.indefor-ap.com
+  location:
+    country:
+      id: GQ
+      name: Equatorial Guinea
+    level: 20
+  name: Ministerio de Agricultura, Ganadería, Bosques y Medio Ambiente (MAGBMA)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- forest atlas
+- forestry
+- geospatial
+- government
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00000172

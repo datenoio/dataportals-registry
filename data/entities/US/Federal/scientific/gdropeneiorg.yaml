@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -15,6 +16,9 @@ coverage:
       name: Northern America
 description: U.S. Department of Energy Geothermal Data Repository (GDR) providing
   open access to geothermal research datasets, data lakes, and related project information.
+endpoints:
+- type: ckan:catalog
+  url: https://gdr.openei.org/
 id: gdropeneiorg
 langs:
 - id: EN
@@ -31,8 +35,8 @@ owner:
   name: U.S. Department of Energy Geothermal Technologies Office
   type: Central government
 software:
-  id: custom
-  name: Custom software
+  id: ckan
+  name: CKAN
 status: active
 tags:
 - geothermal

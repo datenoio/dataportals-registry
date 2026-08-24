@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -19,9 +19,6 @@ description: Yale-NUS Dataverse is the institutional research data repository of
   research output of Yale-NUS researchers and through this, increase the research
   visibility of Yale-NUS researchers and demonstrate the research excellence of Yale-NUS
   College to the world.
-endpoints:
-- type: dataverseapi
-  url: https://dataverse.yale-nus.edu.sg/api/search?q=*&type=dataset&sort=name&order=asc
 id: dataverseyalenusedusg
 identifiers:
 - id: re3data
@@ -54,7 +51,7 @@ rights:
 software:
   id: dataverse
   name: Dataverse
-status: active
+status: inactive
 tags:
 - scientific
 - has_api

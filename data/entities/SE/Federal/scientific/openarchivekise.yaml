@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Open Archive is Karolinska Institutet's Figshare institutional repository
+  for research publications and datasets.
+endpoints:
+- type: sitemap
+  url: https://openarchive.ki.se/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://openarchive.ki.se/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: openarchivekise
+langs:
+- id: EN
+  name: English
+- id: SV
+  name: Swedish
+link: https://openarchive.ki.se
+name: Karolinska Institutet Open Archive
+owner:
+  link: https://ki.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Karolinska Institutet
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+- figshare
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027841

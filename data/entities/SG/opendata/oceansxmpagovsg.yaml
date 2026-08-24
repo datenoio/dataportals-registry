@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SG
+      name: Singapore
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Maritime API and data catalogue from the Maritime and Port Authority
+  of Singapore. Successor to the Singapore Maritime Data Hub (SG-MDH). Lists dynamic,
+  static, and GeoSpace-Sea datasets and APIs for vessel movements, port operations,
+  cargo, bunkers, and weather.
+endpoints:
+- type: customapi
+  url: https://oceans-x.mpa.gov.sg/marketplace/apis
+id: oceansxmpagovsg
+langs:
+- id: EN
+  name: English
+link: https://oceans-x.mpa.gov.sg
+name: OCEANS-X
+owner:
+  link: https://www.mpa.gov.sg
+  location:
+    country:
+      id: SG
+      name: Singapore
+    level: 20
+  name: Maritime and Port Authority of Singapore
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.mpa.gov.sg/footer/privacy-statement
+  rights_type: granular
+  tos_url: https://oceans-x.mpa.gov.sg/api-terms-of-service
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- maritime
+- port
+- vessels
+- shipping
+- navigation
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00026869

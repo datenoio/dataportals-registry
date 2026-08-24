@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: National database on agro-climatic disasters (GeoDataRisk). Hosted at
-  sig-anpc.switch-maker.net.
+description: Vendor-hosted GeoNode URL for GeoDataRisk (ANPC). Same catalog as geodatarisktg;
+  kept as deprecated so harvest uses the official geodatarisk.tg host.
 endpoints:
 - type: geonode:datasets
   url: https://sig-anpc.switch-maker.net/api/datasets/
@@ -84,7 +84,7 @@ owner:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: deprecated
 tags:
 - geospatial
 - disaster risk

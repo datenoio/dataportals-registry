@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: IADT Illustro Figshare repository is a Figshare institutional repository
+  that publishes datasets.
+endpoints:
+- type: sitemap
+  url: https://illustro-iadt.figshare.com/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://illustro-iadt.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: illustroiadtfigsharecom
+langs:
+- id: EN
+  name: English
+link: https://illustro-iadt.figshare.com
+name: IADT Illustro Figshare repository
+owner:
+  link: https://iadt.ie
+  location:
+    country:
+      id: IE
+      name: Ireland
+  name: Dun Laoghaire Institute of Art, Design and Technology
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+- figshare
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00027264

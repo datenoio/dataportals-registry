@@ -1,7 +1,7 @@
 access_mode:
 - open
-api_status: active
-api: true
+api_status: inactive
+api: false
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -14,15 +14,10 @@ coverage:
     macroregion:
       id: World
       name: World
-description: The UIS Data Catalog provides internationally-accepted methodologies,
-  global education, science, technology, innovation, culture, and communication data.
-  It delivers comparative data for countries at all stages of development, serving
-  Member States, UNESCO and UN system, intergovernmental and non-governmental organizations,
-  research institutes, and universities. The data is available in various formats
-  (CSV, Excel) and is updated annually.
-endpoints:
-- type: stattech:catalog
-  url: http://data.uis.unesco.org
+description: Former UNESCO Institute for Statistics UIS.Stat catalog (.Stat Technology).
+  http://data.uis.unesco.org now redirects to the successor UIS Data Browser at
+  https://databrowser.uis.unesco.org. The earlier portal published internationally
+  comparable education, science, culture, and communication indicators.
 id: datauisunescoorg
 identifiers:
 - id: re3data
@@ -55,7 +50,7 @@ rights:
 software:
   id: stattech
   name: .Stat Technology
-status: active
+status: deprecated
 tags:
 - statistics
 - education

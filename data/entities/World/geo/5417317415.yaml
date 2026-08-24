@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,23 +15,23 @@ coverage:
     macroregion:
       id: '001'
       name: World
-description: Geospatial data catalog providing opengeoportal
-endpoints:
-- type: opengeoportal:catalog
-  url: http://54.173.174.15:8080/opengeoportal/
+description: Former public cloud demo of OpenGeoPortal 2.0. The host
+  54.173.174.15:8080 no longer responds.
 id: '5417317415'
 langs:
 - id: EN
   name: English
 link: http://54.173.174.15:8080/opengeoportal/
-name: 15:8080 Geoportal
+name: OpenGeoPortal 2.0 cloud demo
 owner:
-  link: http://54.173.174.15:8080
+  link: https://opengeoportal.io
   location:
-    country: *id001
+    country:
+      id: US
+      name: United States
     level: 20
-  name: '54'
-  type: Central government
+  name: Tufts University
+  type: Academy
 rights:
   license_id: null
   license_name: null
@@ -42,11 +42,12 @@ rights:
 software:
   id: opengeoportal
   name: OpenGeoPortal
-status: active
+status: inactive
 tags:
 - geospatial
 - GIS
 - opengeoportal
+- demo
 topics:
 - id: Location
   name: Location

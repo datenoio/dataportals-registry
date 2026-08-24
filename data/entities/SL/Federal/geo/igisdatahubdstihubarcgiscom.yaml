@@ -15,7 +15,10 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Search, Visualize, Download disparate GIS data from the Government of Sierra Leone and its partners. Explore Our data Education Water Health SL Boundaries Financial Law and Order Population Government Facilities Tourism/Accommodation Cell Towers Data Stories
+description: Integrated GIS Data Hub of the Directorate of Science, Technology and
+  Innovation (DSTI). Search, visualize, and download government and partner geospatial
+  datasets for Sierra Leone, including education, water, health, boundaries, and
+  infrastructure layers.
 endpoints:
 - type: dcatap201
   url: https://igis-data-hub-dsti.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -32,16 +35,17 @@ langs:
 link: https://igis-data-hub-dsti.hub.arcgis.com/
 name: IGIS Data Hub Sierra Leone
 owner:
-  link: https://igis-data-hub-dsti.com
+  link: https://www.dsti.gov.sl
   location:
     country:
       id: SL
       name: Sierra Leone
     level: 20
-  name: Government of Sierra Leone / DSTI
+  name: Directorate of Science, Technology and Innovation
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -58,7 +62,11 @@ tags:
 - GIS
 - geospatial
 - government
+- Sierra Leone
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115

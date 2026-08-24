@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-42
+      name: Liguria
+description: G3W-SUITE territorial information system of Provincia di Savona for public
+  geoportal maps, including flood hazard and provincial road layers.
+id: provinciasavonaservergisit
+langs:
+- id: IT
+  name: Italian
+link: https://provincia-savona.servergis.it/
+name: SIT Provincia di Savona
+owner:
+  link: https://www.provincia.savona.it
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: IT-42
+      name: Liguria
+  name: Provincia di Savona
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: g3wsuite
+  name: G3W-SUITE
+status: active
+tags:
+- geospatial
+- geoportal
+- g3wsuite
+- government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00028023

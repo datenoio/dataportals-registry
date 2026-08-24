@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -15,7 +15,11 @@ coverage:
       id: '154'
       name: Northern Europe
 description: Data portal of Greenland Ecosystem Monitoring (GEM), an integrated long-term
-  research programme on Arctic ecosystems and climate change effects and feedbacks since 1995.
+  research programme on Arctic ecosystems and climate change effects and feedbacks
+  since 1995.
+endpoints:
+- type: rest
+  url: https://sonode.dataone.org/GEM
 id: datagemdk
 langs:
 - id: EN

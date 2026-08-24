@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: RW
+      name: Rwanda
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Institutional DSpace repository of Africa College of Theology (ACT Rwanda).
+endpoints:
+- type: dspace
+  url: https://repository.act.ac.rw/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repository.act.ac.rw/server/api/discover/search/objects
+  version: '7'
+id: repositoryactacrw
+langs:
+- id: EN
+  name: English
+link: https://repository.act.ac.rw
+name: Africa College of Theology Digital Repository
+owner:
+  link: https://act.ac.rw
+  location:
+    country:
+      id: RW
+      name: Rwanda
+    level: 20
+  name: Africa College of Theology
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- DSpace
+- institutional repository
+- research
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Education
+  name: Education
+  type: iso19115
+uid: cdi00027650

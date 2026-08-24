@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+- document
+coverage:
+- location:
+    country:
+      id: GY
+      name: Guyana
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Ministry of Natural Resources GeoPortal (GeoNode) for Guyana geospatial
+  datasets, documents, maps, GeoStories, and dashboards. Dataset APIs currently return
+  an empty catalog; CSW GetCapabilities is live.
+endpoints:
+- type: geonode:datasets
+  url: https://geoportal.gov.gy/api/v2/datasets
+- type: geonode:documents
+  url: https://geoportal.gov.gy/api/v2/documents
+- type: csw202
+  url: https://geoportal.gov.gy/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+id: geoportalgovgy
+langs:
+- id: EN
+  name: English
+link: https://geoportal.gov.gy
+name: Ministry of Natural Resources GeoPortal
+owner:
+  link: https://nre.gov.gy
+  location:
+    country:
+      id: GY
+      name: Guyana
+    level: 20
+  name: Ministry of Natural Resources of Guyana
+  type: Central government
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- GeoNode
+- Guyana
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021509

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,11 +18,9 @@ coverage:
     subregion:
       id: US-NY
       name: New York
-description: A catalog that allows for searching and downloading spatial data contained
-  in zip files. New datasets are continuously being added.
-endpoints:
-- type: opengeoportal:catalog
-  url: http://culspatial.cul.columbia.edu/
+description: Former Columbia University Libraries OpenGeoPortal catalog at
+  culspatial.cul.columbia.edu. The hostname no longer resolves. The successor
+  library geoportal is GeoData@Columbia (https://geodata.library.columbia.edu/).
 id: culspatialculcolumbiaedu
 langs:
 - id: EN
@@ -30,7 +28,7 @@ langs:
 link: http://culspatial.cul.columbia.edu/
 name: Columbia University Libraries Spatial Data Catalog
 owner:
-  link: http://culspatial.cul.columbia.edu/
+  link: https://library.columbia.edu
   location:
     country:
       id: US
@@ -51,7 +49,7 @@ rights:
 software:
   id: opengeoportal
   name: OpenGeoPortal
-status: active
+status: deprecated
 tags:
 - GIS
 - Spatial data

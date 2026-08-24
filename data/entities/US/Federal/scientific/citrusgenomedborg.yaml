@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: World
 description: USDA- and NSF-funded community database of citrus genomics, genetics,
   and breeding data.
+endpoints:
+- type: tripal:catalog
+  url: https://www.citrusgenomedb.org/
 id: citrusgenomedborg
 langs:
 - id: EN

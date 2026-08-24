@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: World
 description: Genomic and large-scale data resource for eukaryotic pathogens and invertebrate
   vectors of infectious disease.
+endpoints:
+- type: veupathdb:catalog
+  url: https://veupathdb.org
 id: veupathdborg
 langs:
 - id: EN

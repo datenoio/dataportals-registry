@@ -12,7 +12,7 @@ coverage:
       name: Spain
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: ES-CM
@@ -21,6 +21,13 @@ description: FAIR Data Point of the Castilla-La Mancha Botanic Garden germplasm 
 endpoints:
 - type: dcat:ttl
   url: https://jbclm.linkeddata.systems
+- type: dcat:ttl
+  url: https://jbclm.linkeddata.systems/
+- type: openapi
+  url: https://jbclm.linkeddata.systems/v3/api-docs
+  version: '3'
+- type: docs
+  url: https://jbclm.linkeddata.systems/swagger-ui.html
 id: jbclmlinkeddatasystems
 langs:
 - id: EN

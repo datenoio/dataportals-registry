@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NA
+      name: Namibia
+    level: 20
+    macroregion:
+      id: 018
+      name: Southern Africa
+description: UNAM Gā-aisib Repository. Institutional DSpace repository of the University
+  of Namibia for theses, publications, and other scholarly outputs.
+endpoints:
+- type: dspace
+  url: https://repository.unam.edu.na/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repository.unam.edu.na/server/api/discover/search/objects
+  version: '7'
+id: repositoryunameduna
+langs:
+- id: EN
+  name: English
+link: https://repository.unam.edu.na/
+name: UNAM Gā-aisib Repository
+owner:
+  link: https://www.unam.edu.na
+  location:
+    country:
+      id: NA
+      name: Namibia
+    level: 20
+  name: University of Namibia
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- DSpace
+- institutional repository
+- research data
+- Namibia
+- UNAM
+- theses
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Education
+  name: Education
+  type: iso19115
+uid: cdi00027694

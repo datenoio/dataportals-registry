@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: WIS 2.0 Seychelles. geoportal. managed by Seychelles Meteorological Authority.
-  powered by Wis 2.0 Box. accessible at wis2.meteo.sc.
+description: WIS 2.0 node of the Seychelles Meteorological Authority. Publishes
+  meteorological observations and related datasets through wis2box (pygeoapi) for
+  WMO data exchange.
 endpoints:
 - type: pygeoapi:openapi
   url: https://wis2.meteo.sc/oapi/openapi
@@ -26,8 +27,8 @@ endpoints:
   version: '1.0'
 id: wis2meteosc
 langs:
-- id: FR
-  name: French
+- id: EN
+  name: English
 link: https://wis2.meteo.sc
 name: WIS 2.0 Seychelles
 owner:
@@ -52,13 +53,18 @@ software:
 status: active
 tags:
 - geoportal
+- meteorology
 - climate
-- map
+- WIS2
+- government
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
 - id: Environment
   name: Environment
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
   type: iso19115
 uid: cdi00010280

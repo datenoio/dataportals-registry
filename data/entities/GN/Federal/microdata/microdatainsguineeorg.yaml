@@ -1,0 +1,76 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Microdata catalog
+content_types:
+- microdata
+coverage:
+- location:
+    country:
+      id: GN
+      name: Guinea
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: NADA microdata catalog of Guinea's Institut National de la Statistique.
+  Publishes survey metadata and licensed microdata, including the 2018 Demographic
+  and Health Survey and the 2021 malaria indicator survey. Replaces the inactive
+  archive at stat-guinee.org/nada.
+endpoints:
+- type: nada:catalog-search
+  url: https://microdata.insguinee.org/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://microdata.insguinee.org/index.php/catalog/export/csv?ps=5000&collection[]
+id: microdatainsguineeorg
+langs:
+- id: FR
+  name: French
+link: https://microdata.insguinee.org
+name: Catalogue de microdonnées de la Guinée
+owner:
+  link: https://www.stat-guinee.org
+  location:
+    country:
+      id: GN
+      name: Guinea
+    level: 20
+  name: Institut National de la Statistique de Guinée
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: nada
+  name: NADA
+status: active
+tags:
+- government
+- has_api
+- microdata
+- statistics
+- surveys
+- official statistics
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00027602

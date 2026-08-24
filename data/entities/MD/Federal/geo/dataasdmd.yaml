@@ -1,0 +1,93 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MD
+      name: Moldova
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: GeoServer of the National Road Administration of Moldova, publishing
+  national and regional road network layers, pavement condition, traffic, and related
+  OGC services.
+endpoints:
+- type: wms111
+  url: https://data.asd.md/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://data.asd.md/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://data.asd.md/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://data.asd.md/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://data.asd.md/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://data.asd.md/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://data.asd.md/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://data.asd.md/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wps100
+  url: https://data.asd.md/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: dataasdmd
+langs:
+- id: RO
+  name: Romanian
+link: https://data.asd.md/geoserver/web/
+name: Moldova National Road Administration GeoServer
+owner:
+  link: https://www.asd.md
+  location:
+    country:
+      id: MD
+      name: Moldova
+    level: 20
+  name: Administrația Națională a Drumurilor
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- geoserver
+- roads
+- transport
+- government
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00027122

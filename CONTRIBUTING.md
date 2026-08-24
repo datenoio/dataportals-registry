@@ -33,7 +33,7 @@ Thank you for your interest in contributing to the dataportals-registry project!
 
 ### Development Environment Setup
 
-1. Ensure you have Python 3.9–3.12 installed (CI runs on those versions)
+1. Ensure you have Python 3.10–3.12 installed (CI runs on those versions)
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt

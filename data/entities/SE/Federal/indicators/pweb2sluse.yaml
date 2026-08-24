@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: PxWeb API catalog (OffStat) at the Swedish University of Agricultural
+  Sciences, distinct from the Riksskogstaxeringen forest statistics database.
+endpoints:
+- type: pxwebapi
+  url: https://pweb2.slu.se/api/v1/sv/
+  version: '1'
+- type: pxwebapi
+  url: https://pweb2.slu.se/api/v1/en/
+  version: '1'
+id: pweb2sluse
+langs:
+- id: SV
+  name: Swedish
+- id: EN
+  name: English
+link: https://pweb2.slu.se
+name: SLU OffStat PxWeb
+owner:
+  link: https://www.slu.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Swedish University of Agricultural Sciences (SLU)
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: pxweb
+  name: PxWeb
+status: active
+tags:
+- statistics
+- PxWeb
+- agriculture
+- Sweden
+- SLU
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00027182

@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: HK
+      name: Hong Kong
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Interactive Data Dissemination Service for Hong Kong merchandise trade
+  statistics, with custom tables and a documented HTTP GET API.
+endpoints:
+- type: api
+  url: https://tradeidds.censtatd.gov.hk/api/get
+id: tradeiddscenstatdgovhk
+langs:
+- id: EN
+  name: English
+- id: ZH
+  name: Chinese
+link: https://tradeidds.censtatd.gov.hk/
+name: Interactive Data Dissemination Service for Trade Statistics
+owner:
+  link: https://www.censtatd.gov.hk
+  location:
+    country:
+      id: HK
+      name: Hong Kong
+    level: 20
+  name: Census and Statistics Department
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- trade
+- government
+- Hong Kong
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00026857

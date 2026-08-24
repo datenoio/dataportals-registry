@@ -251,6 +251,47 @@ Public GISOGD / layer list if any. Skip tiles and vendor marketing.
 
 Same grain as [Ingeo](#ingeo).
 
+## Trimble Locus IMS (`trimblelocus`) {#trimblelocus}
+
+Finnish `/IMS/` viewer. Harvest public WMS/WFS GetCapabilities if the city publishes them. Do not scrape map tiles or the Locus back-office. Distinct from `belsisims`.
+
+## Sitowise Louhi (`louhi`) {#louhi}
+
+Same grain as [Trimble Locus IMS](#trimblelocus): public layer list or WMS, not tiles.
+
+## Trimble Landfolio (`landfolio`) {#landfolio}
+
+Harvest the public cadastre map-portal layer/license list if unauthenticated. If ArcGIS REST on the same estate is already harvested as `arcgisserver`, do not duplicate those services. Stop on login-only eGov modules.
+
+## Spatial Suite (`spatialsuite`) {#spatialsuite}
+
+Danish SpatialMap webkort. Harvest WMS/WFS GetCapabilities when public. Do not scrape webkort tiles. Prefer a city GeoServer/ArcGIS catalog on the same municipality if that is the dataset list.
+
+## GEUSMAP (`geusmap`) {#geusmap}
+
+```text
+GET https://host/geusmap/ows/25832.jsp?mapname={name}&SERVICE=WMS&REQUEST=GetCapabilities
+GET https://host/geusmap/ows/25832.jsp?mapname={name}&SERVICE=WFS&REQUEST=GetCapabilities
+```
+
+One named layer = one dataset analog. Do not scrape map tiles. One harvest scope per `mapname`.
+
+## GISApp (`gisapp`) {#gisapp}
+
+Romanian `{city}.gisapp.ro` viewer. Harvest the public layer list if unauthenticated. Do not scrape map tiles or urbanism-permit forms. If ArcGIS REST on `webadaptor.gisapp.ro` is already harvested as `arcgisserver`, do not duplicate those services.
+
+## iObčina (`iobcina`) {#iobcina}
+
+Kaliopa `/gisapp/Default.aspx?a={tenant}` viewer. Harvest public layers for that tenant. Do not scrape tiles. Distinct from `gisapp`.
+
+## Astun iShare (`ishare`) {#ishare}
+
+UK My Maps / My House portal. Harvest the public **layer / local-info catalog** if unauthenticated, or WMS/WFS GetCapabilities when those are public. Do not scrape map tiles or address-search HTML. Distinct from `cadcorp`.
+
+## Cadcorp SIS WebMap (`cadcorp`) {#cadcorp}
+
+Public SIS WebMap / Web Map Layers. Harvest WMS/WFS GetCapabilities or the published layer list. Do not scrape tiles. Distinct from disy Cadenza (`cadenza`) and from Astun iShare (`ishare`).
+
 ## Related
 
 - [harvest.md](harvest.md)

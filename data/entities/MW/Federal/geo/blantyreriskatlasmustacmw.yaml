@@ -1,0 +1,88 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MW
+      name: Malawi
+    level: 30
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+    subregion:
+      id: MW-BL
+      name: Blantyre
+description: GeoNode spatial catalog of the Blantyre Risk Atlas, publishing hazard,
+  exposure, and urban-risk datasets for Blantyre, Malawi.
+endpoints:
+- type: geonode:datasets
+  url: https://blantyreriskatlas.must.ac.mw/api/v2/datasets
+- type: geonode:documents
+  url: https://blantyreriskatlas.must.ac.mw/api/v2/documents
+- type: wms111
+  url: https://blantyreriskatlas.must.ac.mw/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://blantyreriskatlas.must.ac.mw/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://blantyreriskatlas.must.ac.mw/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://blantyreriskatlas.must.ac.mw/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+id: blantyreriskatlasmustacmw
+langs:
+- id: EN
+  name: English
+link: https://blantyreriskatlas.must.ac.mw/
+name: Blantyre Risk Atlas
+owner:
+  link: https://www.must.ac.mw
+  location:
+    country:
+      id: MW
+      name: Malawi
+    level: 20
+  name: Malawi University of Science and Technology
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- disaster
+- urban risk
+- GeoNode
+- Blantyre
+- Malawi
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: cdi00027652

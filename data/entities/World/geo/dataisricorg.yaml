@@ -18,6 +18,8 @@ coverage:
 description: ISRIC — World Soil Information (International Soil Reference and Information
   Centre) serves the international community with open access global soil data.
 endpoints:
+- type: rest
+  url: https://sonode.dataone.org/ISRIC
 - type: geonetwork:query
   url: https://data.isric.org/geonetwork/srv/eng/q
 - type: geonetwork

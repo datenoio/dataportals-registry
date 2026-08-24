@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Linked Open Data catalog of the Italian Ministry of Culture (MiC), publishing
+  cultural-heritage datasets as RDF/DCAT-AP_IT. Successor hostname of dati.beniculturali.it.
+  Distinct from the Archivio Centrale dello Stato CKAN at ckan.acs.beniculturali.it.
+endpoints:
+- type: sparql
+  url: https://dati.cultura.gov.it/sparql
+- type: sparql:web
+  url: https://dati.cultura.gov.it/sparql
+id: daticulturagovit
+langs:
+- id: IT
+  name: Italian
+link: https://dati.cultura.gov.it
+name: Italian Ministry of Culture Open Data
+owner:
+  link: https://www.cultura.gov.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Ministero della Cultura
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- culture
+- government
+- has_api
+- heritage
+- linked open data
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00027485

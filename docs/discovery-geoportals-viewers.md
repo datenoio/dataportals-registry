@@ -261,6 +261,135 @@ Zondy Cyber GIS server, common in Chinese government and natural-resources SDIs.
 | Censys | `web.endpoints.http.body: "/igs/rest/mrcs"` |
 | FOFA | `body="/igs/rest/" && title="MapGIS"` |
 
+## Trimble Locus IMS (`trimblelocus`) {#trimblelocus}
+
+Finnish municipal karttapalvelu from Trimble Locus (formerly Tekla GIS). Vendor: [Trimble UPA](https://upa.trimble.com/fi/toimialat/julkishallinto). Distinct from Turkish BelsisIMS (`belsisims`) and Sitowise Louhi (`louhi`).
+
+**Signals:** path `/IMS/` or `/ims/`; ASP.NET MVC; scripts `/IMS/bundles/imscore` and `/IMS/bundles/tekla-mvc-common`; footer link to `upa.trimble.com`. Some cities host the viewer on `*.asiointi.fi`.
+
+**Confirm:** GET the public map UI and match IMS bundles or Trimble branding. One record per city tenant, not per layer. Skip staff-only Locus back-office.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/IMS/ karttapalvelu site:.fi` |
+| Google | `"karttapalvelu" IMS OR "tekla-mvc" site:.fi` |
+| Censys | `web.endpoints.http.body: "tekla-mvc-common"` |
+| Censys | `web.endpoints.http.body: "/IMS/bundles/imscore"` |
+
+## Sitowise Louhi (`louhi`) {#louhi}
+
+Sitowise municipal GIS public map viewer. Site: [sitowise.com Louhi](https://www.sitowise.com/digital-solutions/louhi-gis-platform-municipalities). Distinct from Trimble Locus IMS (`trimblelocus`); Louhi maps may still attribute some layers as Locus data.
+
+**Signals:** OpenLayers `/Scripts/integration/openlayers/ol.js`; Sitowise snoobi `partner=stw`; Finnish municipal `kartta.` host without `/IMS/`.
+
+**Confirm:** GET the public karttapalvelu. One record per municipality. Do not also tag the same UI as `trimblelocus`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"karttapalvelu" Sitowise OR Louhi site:.fi -inurl:/IMS` |
+| Censys | `web.endpoints.http.body: "partner=stw"` |
+
+## Trimble Landfolio (`landfolio`) {#landfolio}
+
+Spatial Dimension / Trimble mining and land cadastre map portals (formerly FlexiCadastre). Directory: [spatialdimension.com/portals](https://www.spatialdimension.com/portals/).
+
+**Signals:** host `portals.landfolio.com/{country}/`; title “Spatial Dimension Landfolio” or “Cadastre Map Portal”.
+
+**Confirm:** GET the public map portal (not `/arcgis/rest/services`). ArcGIS REST on Landfolio infrastructure stays `arcgisserver`. One record per country portal.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:portals.landfolio.com` |
+| Google | `"Landfolio" OR FlexiCadastre ("mining cadastre" OR "map portal")` |
+| Censys | `web.names: "portals.landfolio.com"` |
+| crt.sh | `%.landfolio.com` |
+
+## Spatial Suite (`spatialsuite`) {#spatialsuite}
+
+Sweco web GIS; public client is SpatialMap. Vendor: [Sweco Spatial Suite](https://www.sweco.dk/ydelser/digitale-loesninger/spatial-suite/). Distinct from NIRAS KortInfo.
+
+**Signals:** `/js/standard/browserdetect.js?ver=` SpatialMap version; Danish `webkort.` or `*kort*` municipal hosts; title SpatialMap.
+
+**Confirm:** GET the public webkort. One record per municipality viewer, not the GeoServer backend on the same city.
+
+| Tool | Query |
+|------|-------|
+| Google | `"SpatialMap" OR "Spatial Suite" webkort site:.dk` |
+| Google | `inurl:webkort kommune site:.dk` |
+| Censys | `web.endpoints.http.body: "browserdetect.js?ver="` |
+
+## GEUSMAP (`geusmap`) {#geusmap}
+
+Geological Survey of Denmark and Greenland map application. Home: [data.geus.dk/geusmap](https://data.geus.dk/geusmap/). Named databases share `/geusmap/?mapname=`.
+
+**Signals:** `/geusmap/?mapname=`; Jupiter, GERDA, or Greenland Mineral Resources branding; WMS/WFS export controls.
+
+**Confirm:** GET `https://host/geusmap/?mapname={name}`. One record per public mapname. GEUS ArcGIS REST and GeoNetwork on other hosts stay those software ids.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/geusmap/?mapname=` |
+| Google | `"GEUSMAP" OR "geusmap" (Jupiter OR GERDA)` |
+| Censys | `web.endpoints.http.body: "geusmap"` |
+
+## GISApp (`gisapp`) {#gisapp}
+
+Fida Solutions / Urbanova hosted municipal GIS. Tenants: `{city}.gisapp.ro`. Distinct from Kaliopa iObčina (`iobcina`) and from EQWC.
+
+**Signals:** host `*.gisapp.ro`; urbanism certificate / PortalPublic UI; Romanian municipal GIS.
+
+**Confirm:** GET the public city tenant. One record per municipality. ArcGIS REST on `webadaptor.gisapp.ro` stays `arcgisserver`.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:gisapp.ro` |
+| Google | `"gisapp.ro" (geoportal OR urbanism)` |
+| Censys | `web.names: "gisapp.ro"` |
+| crt.sh | `%.gisapp.ro` |
+
+## iObčina (`iobcina`) {#iobcina}
+
+Kaliopa cloud municipal GIS (Croatian brand iOpćina). Site: [kaliopa.si/iobcina](https://www.kaliopa.si/iobcina/). Distinct from Romanian GISApp (`gisapp`).
+
+**Signals:** host `gis.iobcina.si` or `iopcina.hr`; ASP.NET `/gisapp/Default.aspx?a={tenant}`.
+
+**Confirm:** GET the public viewer. One record per municipality or county tenant, plus the Kaliopa hub if it is a separate public catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/gisapp/Default.aspx iobcina OR iopcina` |
+| Google | `"iObčina" OR iOpćina GIS` |
+| Censys | `web.names: "iobcina.si"` |
+| crt.sh | `%.iobcina.si` |
+
+## Astun iShare (`ishare`) {#ishare}
+
+UK local-government public mapping portal (Astun Technology). Product: [astuntechnology.com/ishare](https://www.astuntechnology.com/ishare/). Distinct from Cadcorp SIS WebMap (`cadcorp`) and from the INDEPTH iShare **microdata** catalog.
+
+**Signals:** footer “Powered by iShare”; paths `/mymaps.aspx`, `/myhouse.aspx`; Astun branding.
+
+**Confirm:** GET the public My Maps / Find my nearest UI. One record per authority portal, not per map layer. Skip intranet-only iShare GIS.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Powered by iShare" (maps OR "my house" OR geoportal) site:.gov.uk` |
+| Google | `inurl:mymaps.aspx OR inurl:myhouse.aspx iShare` |
+| Censys | `web.endpoints.http.body: "Powered by iShare"` |
+
+## Cadcorp SIS WebMap (`cadcorp`) {#cadcorp}
+
+Cadcorp (NEC) public web GIS. Product: [cadcorp.com](https://www.cadcorp.com). Distinct from disy Cadenza (`cadenza`) and from Astun iShare (`ishare`).
+
+**Signals:** SIS WebMap / Web Map Layers / GeognoSIS branding; Cadcorp in HTML or GetCapabilities.
+
+**Confirm:** GET the public web map and match Cadcorp/GeognoSIS. One record per public portal. Skip intranet WebMap Editor.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Cadcorp" OR "SIS WebMap" OR GeognoSIS (geoportal OR "web map") site:.gov.uk` |
+| Google | `"Web Map Layers" Cadcorp` |
+| Censys | `web.endpoints.http.body: "Cadcorp"` |
+
 ## Other geoportal platforms
 
 Search the product title with the country TLD. One record per public catalog UI.
@@ -301,6 +430,15 @@ Search the product title with the country TLD. One record per public catalog UI.
 | `supermapiserver` | SuperMap iServer REST | `"SuperMap iServer" rest` |
 | `supermapiportal` | SuperMap iPortal | `"SuperMap iPortal"` |
 | `mapgisigserver` | see above | |
+| `trimblelocus` | Finnish `/IMS/` karttapalvelu | `inurl:/IMS/ karttapalvelu site:.fi` |
+| `louhi` | Sitowise Louhi viewer | `"Louhi" karttapalvelu Sitowise` |
+| `landfolio` | `portals.landfolio.com` cadastre maps | `site:portals.landfolio.com` |
+| `spatialsuite` | Sweco SpatialMap webkort | `"SpatialMap" webkort site:.dk` |
+| `geusmap` | `/geusmap/?mapname=` | `inurl:geusmap mapname` |
+| `gisapp` | `{city}.gisapp.ro` municipal GIS | `site:gisapp.ro` |
+| `iobcina` | Kaliopa `/gisapp/Default.aspx?a=` | `inurl:/gisapp/Default.aspx` |
+| `ishare` | Astun iShare / `mymaps.aspx` | `"Powered by iShare" site:.gov.uk` |
+| `cadcorp` | Cadcorp SIS WebMap / GeognoSIS | `"SIS WebMap" OR GeognoSIS Cadcorp` |
 | `reearth` | Re:Earth / PLATEAU VIEW | `"Re:Earth" OR "PLATEAU VIEW"` |
 | `gpatlas` | GP Atlas | `"GP Atlas" GIS` |
 | `geometa` | GeoMeta catalog | `"GeoMeta" geoportal` |
