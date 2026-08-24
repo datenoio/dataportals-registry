@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: KN
+      name: Saint Kitts and Nevis
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: Official statistics website of the Department of Statistics, Ministry
+  of Sustainable Development. Publishes demographic, social, economic, and environmental
+  indicator tables for Saint Kitts and Nevis.
+endpoints:
+- type: rest
+  url: https://www.stats.gov.kn/wp-json/
+- type: sitemap
+  url: https://www.stats.gov.kn/sitemap_index.xml
+id: wwwstatsgovkn
+langs:
+- id: EN
+  name: English
+link: https://www.stats.gov.kn/data/data-tables/
+name: Saint Kitts and Nevis Department of Statistics
+owner:
+  link: https://www.stats.gov.kn
+  location:
+    country:
+      id: KN
+      name: Saint Kitts and Nevis
+    level: 20
+  name: Department of Statistics, Ministry of Sustainable Development
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+software:
+  id: wordpress
+  name: WordPress
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- Saint Kitts and Nevis
+- has_api
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00028029
