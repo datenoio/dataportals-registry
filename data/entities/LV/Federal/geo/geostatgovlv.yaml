@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Data catalog for accessing geospatial statistics in Latvia, primarily
-  used for government, public, and research applications.
+description: Geospatial statistics portal of the Central Statistical Bureau (CSP).
+  Maps and spatial views of official statistics for Latvia, separate from the national
+  GEO Latvija geoportal.
 id: geostatgovlv
 langs:
 - id: LV
@@ -24,15 +25,15 @@ langs:
 - id: EN
   name: English
 link: https://geo.stat.gov.lv
-name: GEO Latvija
+name: CSP geospatial statistics portal
 owner:
-  link: https://www.stat.gov.lv
+  link: https://stat.gov.lv
   location:
     country:
       id: LV
       name: Latvia
     level: 20
-  name: Central Statistical Bureau
+  name: Central Statistical Bureau of Latvia
   type: Central government
 properties:
   has_doi: false
@@ -48,18 +49,18 @@ software:
   name: Custom software
 status: active
 tags:
-- metadata
-- spatial data
-- catalog
+- statistics
+- geospatial
+- official statistics
 - Latvia
 topics:
-- id: Location
-  name: Location
-  type: iso19115
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00010180

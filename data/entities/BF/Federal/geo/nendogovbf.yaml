@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: false
-api_status: uncertain
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,9 +15,10 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: NENDO (Nos Écoles Nos Données) school map and education indicators application
-  from the Burkina Open Data Initiative. Locates preschool and primary schools and
-  publishes examination success rates for selected communes.
+description: NENDO (Nos Écoles Nos Données) school map and education indicators
+  application from the Burkina Open Data Initiative. Locates preschool and primary
+  schools in selected communes and publishes examination success rates. No public
+  catalog API is exposed.
 id: nendogovbf
 langs:
 - id: FR
@@ -50,6 +51,7 @@ tags:
 - education
 - schools
 - BODI
+- government
 topics:
 - id: EDUC
   name: Education, culture and sport

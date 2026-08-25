@@ -14,9 +14,9 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: SPP ArcGIS Public REST Services. This geoportal. managed by Agency "Road
-  Infrastructure". provides access to datasets and resources.
+      name: Eastern Europe
+description: Public ArcGIS REST catalog of the Road Infrastructure Agency (Агенция
+  „Пътна инфраструктура“), publishing road-network and related geospatial services.
 endpoints:
 - type: arcgis:rest:info
   url: https://spp.api.bg/arcgis/rest/info?f=pjson
@@ -34,8 +34,8 @@ id: sppapibg
 langs:
 - id: BG
   name: Bulgarian
-link: https://spp.api.bg/arcgispublic/rest/services
-name: Agency "Road Infrastructure" Data Catalog
+link: https://spp.api.bg/arcgis/rest/services
+name: Road Infrastructure Agency ArcGIS REST Services
 owner:
   link: https://spp.api.bg
   location:
@@ -43,7 +43,7 @@ owner:
       id: BG
       name: Bulgaria
     level: 20
-  name: Agency "Road Infrastructure"
+  name: Road Infrastructure Agency
   type: Central government
 properties:
   has_doi: false
@@ -61,29 +61,16 @@ status: active
 tags:
 - ArcGIS
 - Bulgaria
-- Energy Data
-- Public
+- roads
 - REST API
 - arcgisserver
 - geospatial
 topics:
-- id: ENER
-  name: Energy
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: TRAN
   name: Transport
   type: eudatatheme
-- id: Environment
-  name: Environment
-  type: iso19115
 - id: Transportation
   name: Transportation
-  type: iso19115
-- id: Utilities / Communication
-  name: Utilities / Communication
   type: iso19115
 - id: Location
   name: Location

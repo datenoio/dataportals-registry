@@ -3,6 +3,9 @@ access_mode:
 api: true
 api_status: active
 catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -12,6 +15,11 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
+description: National GeoNode geoportal of the Union of the Comoros (Carto-Comores /
+  GeoComores), operated by the mapping unit of the Ministry of Land Planning, Urbanism
+  and Housing (MATUAFTT). Publishes 31 public layers covering administrative boundaries,
+  localities, land cover, hydrography, geology, protected areas, coasts, roads, and
+  related OGC services (WMS, WFS, WCS, CSW).
 endpoints:
 - type: geonode:datasets
   url: https://carto-comores.org/api/datasets/
@@ -75,22 +83,53 @@ langs:
 - id: EN
   name: English
 link: https://carto-comores.org
-name: GeoComores
+name: Carto-Comores
 owner:
+  link: https://carto-comores.org
   location:
     country:
       id: KM
       name: Comoros
     level: 20
-  name: GeoComores
-  type: Other
-  link: https://carto-comores.org
+  name: Cellule de cartographie (MATUAFTT)
+  type: Central government
+properties:
+  dataset_count_reported: 31
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: geonode
   name: GeoNode
 status: active
-uid: cdi00021704
+tags:
+- GIS
+- geospatial
+- GeoNode
+- government
+- has_api
+- land
+- cadastre
+- Comoros
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
@@ -100,30 +139,22 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-tags:
-- GIS
-- geospatial
-- GeoNode
-- government
-- has_api
-- WMS
-- WFS
-- CSW
-description: National GeoNode geoportal of the Union of the Comoros (GeoComores).
-  Publishes geospatial datasets, maps, documents, and OGC services (WMS, WFS, WCS,
-  CSW).
-content_types:
-- dataset
-- map_layer
-properties:
-  has_doi: false
-rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
-  rights_type: granular
-  tos_url: null
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00021704

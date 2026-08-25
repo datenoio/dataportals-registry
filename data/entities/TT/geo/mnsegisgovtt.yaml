@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,22 +13,11 @@ coverage:
       name: Trinidad and Tobago
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: ArcGIS REST services endpoint listing geospatial data services.
-endpoints:
-- type: arcgis:rest:info
-  url: http://mnsegis.gov.tt/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: http://mnsegis.gov.tt/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: http://mnsegis.gov.tt/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: http://mnsegis.gov.tt/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: http://mnsegis.gov.tt/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: http://mnsegis.gov.tt/arcgis/rest/services?f=kmz
+description: Historical ArcGIS Server REST catalog associated with the Ministry of
+  National Security enterprise GIS (mnsegis.gov.tt). The host resolved but timed out
+  on 24 August 2026.
 id: mnsegisgovtt
 langs:
 - id: EN
@@ -36,13 +25,13 @@ langs:
 link: http://mnsegis.gov.tt/arcgis/rest/services
 name: MNSEGIS ArcGIS REST Services
 owner:
-  link: http://mnsegis.gov.tt/
+  link: https://homelandsecurity.gov.tt
   location:
     country:
       id: TT
       name: Trinidad and Tobago
     level: 20
-  name: Ministry of National Security and Geographic Information Services (MNSEGIS)
+  name: Ministry of Homeland Security
   type: Central government
 properties:
   has_doi: false
@@ -56,44 +45,19 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
-- ArcGIS REST
 - geospatial
 - GIS
-- Trinidad and Tobago
+- government
 topics:
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: TRAN
-  name: Transport
-  type: eudatatheme
-- id: ENVI
-  name: Environment
+- id: JUST
+  name: Justice, legal system and public safety
   type: eudatatheme
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Elevation
-  name: Elevation
-  type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
-  type: iso19115
-- id: Inland Waters
-  name: Inland Waters
-  type: iso19115
 - id: Location
   name: Location
   type: iso19115
-- id: Oceans
-  name: Oceans
-  type: iso19115
-- id: Transportation
-  name: Transportation
-  type: iso19115
-- id: Structure
-  name: Structure
-  type: iso19115
-uid: temp00005832
+uid: cdi00034942

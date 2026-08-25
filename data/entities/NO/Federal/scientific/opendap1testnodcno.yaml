@@ -1,14 +1,14 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
 coverage:
 - location:
     country:
-      id: false
+      id: 'NO'
       name: Norway
     level: 20
     macroregion:
@@ -17,9 +17,6 @@ coverage:
 description: Test OPeNDAP Hyrax node operated by the Norwegian Marine Data Centre
   (NODC) to expose marine and environmental research datasets via the Data Access
   Protocol.
-endpoints:
-- type: opendap:catalog
-  url: https://opendap1-test.nodc.no/opendap/
 id: opendap1testnodcno
 langs:
 - id: EN
@@ -32,7 +29,7 @@ owner:
   link: https://www.hi.no/en
   location:
     country:
-      id: false
+      id: 'NO'
       name: Norway
     level: 20
   name: Institute of Marine Research
@@ -49,7 +46,7 @@ rights:
 software:
   id: opendap
   name: OPeNDAP
-status: active
+status: inactive
 tags:
 - OPeNDAP
 - Hyrax

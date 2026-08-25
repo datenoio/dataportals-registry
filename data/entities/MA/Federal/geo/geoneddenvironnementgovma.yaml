@@ -27,6 +27,8 @@ description: GeoNetwork catalog of the Moroccan Ministry of Energy Transition an
   Sustainable Development (GéoNEDD), providing environmental geospatial metadata for
   Morocco including the southern provinces.
 endpoints:
+- type: geonetwork:api
+  url: https://geonedd.environnement.gov.ma:9876/geonetwork/srv/api
 - type: geonetwork:query
   url: https://geonedd.environnement.gov.ma:9876/geonetwork/srv/eng/q
 - type: openapi
@@ -43,10 +45,12 @@ endpoints:
   version: '2.0'
 - type: geonetwork:site
   url: https://geonedd.environnement.gov.ma:9876/geonetwork/srv/api/site
-- type: opensearch
-  url: https://geonedd.environnement.gov.ma:9876/portal.opensearch
 id: geoneddenvironnementgovma
 langs:
+- id: AR
+  name: Arabic
+- id: FR
+  name: French
 - id: EN
   name: English
 link: https://geonedd.environnement.gov.ma:9876/geonetwork
@@ -58,7 +62,7 @@ owner:
       id: MA
       name: Morocco
     level: 20
-  name: MINISTERE DE LA TRANSITION ENERGETIQUE ET DU DEVELOPPEMENT DURABLE
+  name: Ministère de la Transition Énergétique et du Développement Durable
   type: Central government
 properties:
   has_doi: true

@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Mapbender map viewer of the Geological Institute of Romania (IGR), providing
+  interactive geological map layers.
+endpoints:
+- type: mapbender:api-doc
+  url: https://mapbender.igr.ro/api/doc/
+id: mapbenderigrro
+langs:
+- id: RO
+  name: Romanian
+link: https://mapbender.igr.ro/application/mapviewerGIR
+name: IGR MapBender geological map viewer
+owner:
+  link: https://www.igr.ro
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+  name: Geological Institute of Romania (IGR)
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mapbender
+  name: Mapbender
+status: active
+tags:
+- GIS
+- geology
+- cartography
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00035041

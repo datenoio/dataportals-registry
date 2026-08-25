@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Web map service for accessing Singapore geospatial data including land
-  use plans, guidelines, car parks, and other location-based services.
+description: URA ArcGIS Server publishing REST map and feature services that underpin
+  Singapore planning maps (Master Plan zoning, land use, urban design, and related
+  layers). The services root may return 403 to unauthenticated clients.
 endpoints:
 - type: arcgis:rest:services
   url: https://maps.ura.gov.sg/arcgis/rest/services?f=pjson

@@ -14,32 +14,34 @@ coverage:
     level: 30
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
+      name: Eastern Europe
     subregion:
       id: BG-22
       name: Sofia (stolitsa)
-description: ArcGIS REST Services providing GIS data for the SOFIA Plan
+description: ArcGIS Server REST catalog of Sofiaplan, the municipal enterprise for
+  strategic spatial planning of Sofia, with folders covering base data, transport,
+  demographics, energy passports, and related urban GIS layers.
 endpoints:
 - type: arcgis:rest:info
-  url: https://gis.sofiaplan.bg/arcgis/rest/info?f=pjson
+  url: https://gis.sofiaplan.bg/server/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: https://gis.sofiaplan.bg/arcgis/rest/services?f=pjson
+  url: https://gis.sofiaplan.bg/server/rest/services?f=pjson
 - type: arcgis:soap
-  url: https://gis.sofiaplan.bg/arcgis/services?wsdl
+  url: https://gis.sofiaplan.bg/server/services?wsdl
 - type: arcgis:sitemap
-  url: https://gis.sofiaplan.bg/arcgis/rest/services?f=sitemap
+  url: https://gis.sofiaplan.bg/server/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: https://gis.sofiaplan.bg/arcgis/rest/services?f=geositemap
+  url: https://gis.sofiaplan.bg/server/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: https://gis.sofiaplan.bg/arcgis/rest/services?f=kmz
+  url: https://gis.sofiaplan.bg/server/rest/services?f=kmz
 id: gissofiaplanbg
 langs:
 - id: BG
   name: Bulgarian
-link: https://gis.sofiaplan.bg/arcgis/rest/services
-name: SOFIA Plan Data Catalog
+link: https://gis.sofiaplan.bg/server/rest/services
+name: Sofiaplan GIS
 owner:
-  link: https://www.sofiaplan.bg
+  link: https://sofiaplan.bg
   location:
     country:
       id: BG
@@ -48,7 +50,7 @@ owner:
     subregion:
       id: BG-22
       name: Sofia (stolitsa)
-  name: SOFIA Plan
+  name: Sofiaplan
   type: Local government
 properties:
   has_doi: false

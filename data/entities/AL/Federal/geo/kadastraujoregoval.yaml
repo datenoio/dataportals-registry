@@ -13,37 +13,37 @@ coverage:
       name: Albania
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Geospatial data services portal for Albania, specifically for cadastral
-  mapping services
+description: ArcGIS Server REST services of the National Water Cadastre, operated
+  by the Water Resources Management Agency (AMBU).
 endpoints:
 - type: arcgis:rest:info
-  url: http://kadastraujore.gov.al/server/rest/info?f=pjson
+  url: https://kadastraujore.gov.al/server/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: http://kadastraujore.gov.al/server/rest/services?f=pjson
+  url: https://kadastraujore.gov.al/server/rest/services?f=pjson
 - type: arcgis:soap
-  url: http://kadastraujore.gov.al/server/services?wsdl
+  url: https://kadastraujore.gov.al/server/services?wsdl
 - type: arcgis:sitemap
-  url: http://kadastraujore.gov.al/server/rest/services?f=sitemap
+  url: https://kadastraujore.gov.al/server/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: http://kadastraujore.gov.al/server/rest/services?f=geositemap
+  url: https://kadastraujore.gov.al/server/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: http://kadastraujore.gov.al/server/rest/services?f=kmz
+  url: https://kadastraujore.gov.al/server/rest/services?f=kmz
 id: kadastraujoregoval
 langs:
 - id: SQ
   name: Albanian
-link: http://kadastraujore.gov.al/server/rest/services
-name: Albanian Cadastre Geoportal Services
+link: https://kadastraujore.gov.al/server/rest/services
+name: National Water Cadastre
 owner:
-  link: http://kadastraujore.gov.al/server/rest/services
+  link: https://www.ambu.gov.al
   location:
     country:
       id: AL
       name: Albania
     level: 20
-  name: kadastraujore.gov.al
+  name: Water Resources Management Agency (AMBU)
   type: Central government
 properties:
   has_doi: false
@@ -60,12 +60,18 @@ software:
 status: active
 tags:
 - cadastre
+- water
 - geospatial
-- Albania
-- ArcGIS
-- rest services
+- government
+- has_api
 topics:
 - id: Planning / Cadastre
   name: Planning / Cadastre
   type: iso19115
-uid: temp00000007
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00036203

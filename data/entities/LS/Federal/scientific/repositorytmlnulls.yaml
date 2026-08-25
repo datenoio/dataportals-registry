@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -12,7 +13,7 @@ coverage:
       name: Lesotho
     level: 20
     macroregion:
-      id: 018
+      id: '018'
       name: Southern Africa
 description: National University of Lesotho Institutional Repository (NULIR). DSpace
   7.6 archive of theses, dissertations, research articles, and other scholarly outputs.
@@ -29,7 +30,7 @@ endpoints:
 id: repositorytmlnulls
 identifiers:
 - id: roar
-  url: http://roar.eprints.org/9878/
+  url: https://roar.eprints.org/9878/
   value: '9878'
 langs:
 - id: EN
@@ -60,9 +61,11 @@ software:
 status: active
 tags:
 - scientific
+- DSpace
 - institutional repository
 - theses
 - research
+- has_api
 - Lesotho
 topics:
 - id: TECH

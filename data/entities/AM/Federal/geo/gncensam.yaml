@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,27 +15,17 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: GeoNetwork catalogue of the Center for Ecological-Noosphere Studies NAS
-  RA. Geoportal. accessible at gn.cens.am:8080.
-endpoints:
-- type: geonetwork:query
-  url: http://gn.cens.am:8080/geonetwork/srv/eng/q
-- type: csw202
-  url: http://gn.cens.am:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: http://gn.cens.am:8080/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
-- type: sitemap
-  url: http://gn.cens.am:8080/geonetwork/sitemap/index
-- type: opensearch
-  url: http://gn.cens.am:8080/portal.opensearch
+description: Former GeoNetwork catalogue of the Center for Ecological-Noosphere Studies
+  of NAS RA. HTTP and HTTPS on gn.cens.am are refused and the documented GeoNetwork
+  port 8080 is not reachable on the public internet.
 id: gncensam
 langs:
+- id: HY
+  name: Armenian
 - id: EN
   name: English
 link: http://gn.cens.am:8080/geonetwork/
-name: GeoNetwork catalogue - The Center for Ecological-Noosphere Studies NAS RA
+name: Center for Ecological-Noosphere Studies GeoNetwork
 owner:
   link: https://cens.am
   location:
@@ -43,7 +33,7 @@ owner:
       id: AM
       name: Armenia
     level: 20
-  name: Center for Ecological-Noosphere Studies National Academy of Sciences, RA
+  name: Center for Ecological-Noosphere Studies of NAS RA
   type: Academy
 properties:
   has_doi: false
@@ -57,12 +47,15 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - GeoNetwork
 - GIS
 - metadata
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 - id: Geoscientific Information
   name: Geoscientific Information
   type: iso19115

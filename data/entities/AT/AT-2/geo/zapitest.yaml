@@ -1,7 +1,7 @@
 access_mode:
-- closed
-api: true
-api_status: active
+- open
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,18 +18,16 @@ coverage:
     subregion:
       id: AT-2
       name: Kärnten
-description: "\n## STAC Catalog\n Includes elevation data and orthophotos"
-endpoints:
-- type: stacserverapi
-  url: https://gis.ktn.gv.at/osgdi/stac/
+description: Test STAC API on the KAGIS OSGDI stack (Land Kärnten). This endpoint
+  is a staging/test service, not the production KAGIS catalog.
 id: zapitest
 langs:
 - id: EN
   name: English
 link: https://gis.ktn.gv.at/osgdi/stac/
-name: z API Test
+name: KAGIS OSGDI STAC test endpoint
 owner:
-  link: https://gis.ktn.gv.at/osgdi/stac/
+  link: https://www.ktn.gv.at
   location:
     country:
       id: AT
@@ -38,8 +36,8 @@ owner:
     subregion:
       id: AT-2
       name: Kärnten
-  name: Land Karnten Austria
-  type: Central government
+  name: Amt der Kärntner Landesregierung
+  type: Regional government
 properties:
   has_doi: false
   transferable_topics: true
@@ -53,7 +51,7 @@ rights:
 software:
   id: stacserver
   name: stac-server
-status: active
+status: inactive
 tags:
 - geospatial
 - government

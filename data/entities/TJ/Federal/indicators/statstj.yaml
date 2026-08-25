@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -22,6 +22,11 @@ description: Official website of the Agency on Statistics under the President of
   labor and income, gender statistics, and regional statistics. The website includes
   links to the open data portal, National Data Archive, and Sustainable Development
   Goals indicators.
+endpoints:
+- type: rest
+  url: https://www.stat.tj/wp-json/
+- type: sitemap
+  url: https://www.stat.tj/sitemap_index.xml
 id: statstj
 langs:
 - id: TG
@@ -52,16 +57,17 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - statistics
 - government
 - indicators
-- Tajikistan
 - official statistics
 - publications
+- has_api
+- Tajikistan
 topics:
 - id: ECON
   name: Economy and finance

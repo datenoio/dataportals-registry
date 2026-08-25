@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: 'Main Data Categories: Natural Resources Data, Marketing and Agri-Services
-  Data, Socio-Economic Data, Crops Data, Livestock, Cross-sectional'
+description: Ethiopian National Agri Data Hub of the Ministry of Agriculture. CKAN
+  catalog of agricultural datasets across natural resources, crops, livestock, marketing,
+  and socio-economic themes, with about 1,700 published packages.
 endpoints:
 - type: ckan
   url: https://data.moa.gov.et/api/3
@@ -25,6 +26,9 @@ endpoints:
   version: '3'
 - type: ckan:package-list
   url: https://data.moa.gov.et/api/3/action/package_list
+  version: '3'
+- type: ckan:status-show
+  url: https://data.moa.gov.et/api/3/action/status_show
   version: '3'
 - type: dcat:n3
   url: https://data.moa.gov.et/catalog.n3
@@ -47,8 +51,11 @@ owner:
       id: ET
       name: Ethiopia
     level: 20
-  name: FDRE Ministry of Agriculture (MoA)
+  name: Ministry of Agriculture
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -61,23 +68,27 @@ software:
   name: CKAN
 status: active
 tags:
-- agricultural-sciences
-- dataset
-- agricultural-research
+- agriculture
+- government
+- has_api
+- open data
 topics:
-- id: ECON
-  name: Economy and finance
-  type: eudatatheme
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
   type: eudatatheme
-- id: Biota
-  name: Biota
-  type: iso19115
-- id: Economy
-  name: Economy
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Farming
+  name: Farming
   type: iso19115
 - id: Environment
   name: Environment
+  type: iso19115
+- id: Economy
+  name: Economy
   type: iso19115
 uid: cdi00004347

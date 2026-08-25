@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Data Catalog - Microdata Home. microdata catalog. managed by Centre for
-  Data Archiving. powered by NADA. accessible at nada.ucc.edu.gh.
+description: C-DAMAA NADA catalogue at the University of Cape Coast. Publishes survey
+  and research microdata (40 studies), including Afrobarometer and other Ghana collections.
+  Registration is required before downloads.
 endpoints:
 - type: nada:catalog-search
   url: https://nada.ucc.edu.gh/index.php/api/catalog/search
@@ -25,17 +26,18 @@ langs:
 - id: EN
   name: English
 link: https://nada.ucc.edu.gh/index.php
-name: Centre for Data Archiving, Management, Analysis and Advocacy
+name: C-DAMAA Microdata Catalog
 owner:
-  link: https://ucc.edu.gh
+  link: https://cdamaa.ucc.edu.gh
   location:
     country:
       id: GH
       name: Ghana
     level: 20
-  name: Centre for Data Archiving
+  name: Centre for Data Archiving, Management, Analysis and Advocacy (C-DAMAA)
   type: Academy
 properties:
+  dataset_count_reported: 40
   has_doi: false
   transferable_topics: true
 rights:
@@ -55,10 +57,10 @@ tags:
 - survey
 - education
 - health
-- enterprise
 - household
 - agriculture
 - population
+- Ghana
 topics:
 - id: SOCI
   name: Population and society

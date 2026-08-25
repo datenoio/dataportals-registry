@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,18 +15,9 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: Dans le cadre de l’ouverture des données publiques, initiée par la Loi pour une République Numérique, Le groupe SIG et Télédétection au Congo vous invite à explorer ses  données Géographiques publiques Vous pouvez désormais VISUALISER, CONSULTER et TÉLÉCHARGER nos données librement et les RÉUTILISER dans vos applications et projets. Vous y trouverez dans notre base, les  données géographiques des Concessions Forestières de la Républiques du Congo, des  aires protégés, permis miniers, Permis pétroliers, districts, Départements, réseaux routier et ferrés, Arrondissements, localités, hôpitaux et centres de santé,  universités et instituts d’enseignements supérieures  en Républiques du Congo etc. Ces données seront au fur et à mesure complétées  et misent à jour. Rechercher les séries de donneés par catégories Transports Limites Administratives Education Localités Hydro-carbures &amp; Mines Santé Agro industrie Aménagement forestier Conservation Hydrographie
-endpoints:
-- type: dcatap201
-  url: https://sig-au-congo-creole93.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://sig-au-congo-creole93.hub.arcgis.com/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://sig-au-congo-creole93.hub.arcgis.com/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://sig-au-congo-creole93.hub.arcgis.com/api/search/v1
-- type: sitemap
-  url: https://sig-au-congo-creole93.hub.arcgis.com/sitemap.xml
+description: Former ArcGIS Hub of SIG et Télédétection au Congo (Creole93) with layers
+  on forest concessions, protected areas, mining and petroleum permits, and administrative
+  boundaries. The Hub item returns 404 and is no longer accessible.
 id: sigaucongocreole93hubarcgiscom
 langs:
 - id: FR
@@ -54,19 +45,26 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
-- ArcGIS
-- GIS
 - geospatial
+- forestry
+- mining
+- ArcGIS
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Planning / Cadastre
+  name: Planning / Cadastre
   type: iso19115
 uid: cdi00003146

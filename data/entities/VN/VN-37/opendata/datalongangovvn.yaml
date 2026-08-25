@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: VN-37
+      name: Tây Ninh
+description: Official CKAN open data portal of Tây Ninh Province. The former Long An catalog at data.longan.gov.vn
+  now redirects here after the 2025 merger of Long An into Tây Ninh.
+endpoints:
+- type: ckan
+  url: https://data.tayninh.gov.vn/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.tayninh.gov.vn/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.tayninh.gov.vn/api/3/action/package_list
+  version: '3'
+id: datalongangovvn
+langs:
+- id: VN
+  name: Vietnamese
+link: https://data.tayninh.gov.vn
+name: Tay Ninh Province open data portal
+owner:
+  link: https://www.tayninh.gov.vn
+  location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 30
+    subregion:
+      id: VN-37
+      name: Tây Ninh
+  name: Tay Ninh Provincial People's Committee
+  type: Regional government
+properties:
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- CKAN
+- Tay Ninh
+- Vietnam
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00002337

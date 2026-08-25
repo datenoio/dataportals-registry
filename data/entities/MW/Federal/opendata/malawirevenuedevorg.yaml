@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -15,11 +15,10 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Public forestry rights repository of the Department of Forestry, published
-  from the FCAS/xCAS licence system (RDF Online Repository).
-endpoints:
-- type: rdfrepository:catalog
-  url: https://malawi.revenuedev.org/
+description: Former public forestry rights repository of the Department of Forestry,
+  published from the FCAS/xCAS licence system (RDF Online Repository). malawi.revenuedev.org
+  no longer accepts connections, and Malawi is not listed among RDF's current public
+  Online Repository tenants.
 id: malawirevenuedevorg
 langs:
 - id: EN
@@ -48,7 +47,7 @@ rights:
 software:
   id: rdfrepository
   name: RDF Online Repository
-status: active
+status: inactive
 tags:
 - forestry
 - cadastre

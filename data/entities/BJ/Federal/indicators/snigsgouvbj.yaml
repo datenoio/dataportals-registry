@@ -16,10 +16,15 @@ coverage:
       id: '011'
       name: Western Africa
 description: National DHIS2 health information system of the Benin Ministry of Health.
-  Login is required to query routine health indicators.
+  The public UI redirects to login; authenticated access is required to query routine
+  health indicators.
 endpoints:
 - type: dhis2:catalog
   url: https://snigs.gouv.bj/dhis
+- type: dhis2:system-info
+  url: https://snigs.gouv.bj/dhis/api/system/info
+- type: dhis2:datasets
+  url: https://snigs.gouv.bj/dhis/api/dataSets.json?fields=id,displayName&pageSize=1
 id: snigsgouvbj
 langs:
 - id: FR
@@ -57,7 +62,7 @@ tags:
 - DHIS2
 - government
 - restricted
-- Benin
+- has_api
 topics:
 - id: HEAL
   name: Health

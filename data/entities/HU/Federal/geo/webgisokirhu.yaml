@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,38 +15,23 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Data catalog for geographic data and services (GeoNetwork-based)
-endpoints:
-- type: geonetwork:query
-  url: http://webgis.okir.hu/geonetwork/srv/eng/q
-- type: openapi
-  url: http://webgis.okir.hu/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: http://webgis.okir.hu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: http://webgis.okir.hu/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: http://webgis.okir.hu/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
-- type: geonetwork:site
-  url: http://webgis.okir.hu/geonetwork/srv/api/site
+description: Former GeoNetwork catalogue of the National Environmental Information
+  System (OKIR). The /geonetwork path now returns 404; environmental maps remain on
+  webgis.okir.hu map viewers and public OKIR data on web.okir.hu.
 id: webgisokirhu
 langs:
 - id: HU
   name: Hungarian
-link: http://webgis.okir.hu/geonetwork
+link: https://webgis.okir.hu/geonetwork
 name: National Environmental Information System (OKIR) geonetwork
 owner:
-  link: http://web.okir.hu
+  link: https://web.okir.hu
   location:
     country:
       id: HU
       name: Hungary
     level: 20
-  name: This system is the National Environmental Information System (OKIR)
+  name: Ministry of Energy of Hungary
   type: Central government
 properties:
   has_doi: true
@@ -61,7 +46,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
 - government

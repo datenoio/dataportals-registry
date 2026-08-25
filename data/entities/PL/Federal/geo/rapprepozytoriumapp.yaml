@@ -15,21 +15,23 @@ coverage:
     macroregion:
       id: '151'
       name: 'Eastern Europe '
-description: Access point for open data published in the RAiPP Repository
+description: Lizmap geoportal for the Repozytorium Aktów Planowania Przestrzennego
+  (RAiPP), a national service for publishing spatial planning act datasets required
+  of Polish regional and municipal authorities.
 id: rapprepozytoriumapp
 langs:
 - id: PL
   name: Polish
 link: https://rapp.repozytorium.app
-name: (Not provided) Geoportal
+name: RAiPP Lizmap geoportal
 owner:
   location:
     country:
       id: PL
       name: Poland
     level: 20
-  name: (Not provided)
-  type: Academy
+  name: EnviroSolutions Sp. z o.o.
+  type: Business
   link: https://repozytorium.app
 properties:
   has_doi: false
@@ -45,18 +47,21 @@ software:
   name: Lizmap
 status: active
 tags:
-- research
-- scholarly data
-- open science
+- geospatial
+- spatial planning
+- has_api
 - Poland
-- Academy
-- education
-- culture
-- sport
+- cadastre
 topics:
-- id: EDUC
-  name: Education, culture and sport
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 - id: Location
   name: Location
   type: iso19115

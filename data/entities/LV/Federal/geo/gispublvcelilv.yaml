@@ -15,7 +15,10 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Public GIS web services and datasets from the Latvian Central Land Office
+description: ArcGIS REST services of VSIA Latvijas Valsts ceļi (Latvian State Roads).
+  Spatial services for the state road network, traffic, and related infrastructure.
+  The HTML services directory currently returns 404; individual MapServer URLs remain
+  referenced from the agency open-data pages.
 endpoints:
 - type: arcgis:rest:info
   url: https://gispub.lvceli.lv/gispub/rest/info?f=pjson
@@ -34,15 +37,15 @@ langs:
 - id: LV
   name: Latvian
 link: https://gispub.lvceli.lv/gispub/rest/services
-name: LVCELI GeoServer
+name: Latvian State Roads ArcGIS REST services
 owner:
-  link: https://www.lvceli.lv
+  link: https://lvceli.lv
   location:
     country:
       id: LV
       name: Latvia
     level: 20
-  name: Latvian Central Land Office
+  name: VSIA Latvijas Valsts ceļi
   type: Central government
 properties:
   has_doi: false
@@ -59,16 +62,15 @@ software:
 status: active
 tags:
 - geospatial
-- rest
-- data_catalog
+- roads
+- transport
+- ArcGIS
+- Latvia
 topics:
-- id: ENVI
-  name: Environment
+- id: TRAN
+  name: Transport
   type: eudatatheme
-- id: Environment
-  name: Environment
+- id: Transportation
+  name: Transportation
   type: iso19115
-- id: Planning / Cadastre
-  name: Planning / Cadastre
-  type: iso19115
-uid: temp00000468
+uid: cdi00035303

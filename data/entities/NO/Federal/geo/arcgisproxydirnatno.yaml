@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,26 +15,23 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Data catalog providing various ArcGIS services
-endpoints:
-- type: arcgis:rest:info
-  url: http://arcgisproxy.dirnat.no/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: http://arcgisproxy.dirnat.no/arcgis/rest/services?f=pjson
+description: Legacy ArcGIS proxy of the former Directorate for Nature Management
+  (Direktoratet for naturforvaltning). The directorate was merged into the Norwegian
+  Environment Agency in 2013; this host returned HTTP 500 during review.
 id: arcgisproxydirnatno
 langs:
 - id: 'NO'
   name: Norwegian
 link: http://arcgisproxy.dirnat.no/arcgis/services
-name: Government of Norway Geoportal
+name: Directorate for Nature Management ArcGIS proxy
 owner:
-  link: http://dirnat.no
+  link: https://www.miljodirektoratet.no
   location:
     country:
       id: 'NO'
       name: Norway
     level: 20
-  name: Government of Norway
+  name: Norwegian Environment Agency
   type: Central government
 properties:
   has_doi: false
@@ -48,7 +45,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS
 - services

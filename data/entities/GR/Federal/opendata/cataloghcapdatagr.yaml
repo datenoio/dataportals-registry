@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,25 +12,10 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Not specified in raw text. open data portal. managed by THE NATIONAL
-  FUND OF GREECE. powered by DKAN. accessible at catalog.hcapdata.gr.
-endpoints:
-- type: ckan:package-search
-  url: https://catalog.hcapdata.gr/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://catalog.hcapdata.gr/api/3/action/package_list
-  version: '3'
-- type: dcat:n3
-  url: https://catalog.hcapdata.gr/catalog.n3
-- type: dcat:ttl
-  url: https://catalog.hcapdata.gr/catalog.ttl
-- type: dcat:xml
-  url: https://catalog.hcapdata.gr/catalog.xml
-- type: dcat:jsonld
-  url: https://catalog.hcapdata.gr/catalog.jsonld
+description: Former HCAP (Hellenic Corporation of Assets and Participations) open data
+  catalog. The hostname no longer resolves.
 id: cataloghcapdatagr
 langs:
 - id: EL
@@ -44,7 +29,7 @@ owner:
       id: GR
       name: Greece
     level: 20
-  name: THE NATIONAL FUND OF GREECE
+  name: Hellenic Corporation of Assets and Participations (HCAP)
   type: Central government
 properties:
   has_doi: false
@@ -58,7 +43,7 @@ rights:
 software:
   id: dkan
   name: DKAN
-status: active
+status: inactive
 tags:
 - government
 topics:

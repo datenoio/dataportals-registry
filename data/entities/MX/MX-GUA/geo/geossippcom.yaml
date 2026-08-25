@@ -1,0 +1,118 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- document
+- map_layer
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: MX-GUA
+      name: Guanajuato
+description: GeoNode geoportal of geographic and statistical information for municipal
+  planning (GEOSSIPP). Published layers cover Guanajuato municipalities including
+  Comonfort, Valle de Santiago, Irapuato, Salamanca, Cortazar, and Villagrán (urban
+  blocks, roads, hydrology, and related planning layers).
+endpoints:
+- type: geonode:datasets
+  url: https://geossipp.com/api/datasets/
+- type: geonode:documents
+  url: https://geossipp.com/api/documents/
+- type: csw202
+  url: https://geossipp.com/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geossipp.com/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://geossipp.com/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geossipp.com/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geossipp.com/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geossipp.com/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geossipp.com/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://geossipp.com/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://geossipp.com/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://geossipp.com/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://geossipp.com/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://geossipp.com/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://geossipp.com/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: geossippcom
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: https://geossipp.com
+name: GEOSSIPP - Geoportal de Información Geográfica y Estadística para la Planeación
+owner:
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-GUA
+      name: Guanajuato
+  name: GEOSSIPP
+  type: Business
+  link: https://geossipp.com
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- geonode
+- planning
+- guanajuato
+uid: cdi00021657
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115

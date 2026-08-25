@@ -19,17 +19,19 @@ coverage:
 description: Staatsolie GeoPortal provides a geographic overview of wells, 2D and
   3D seismic, gravity and magnetic data, and technical studies for Suriname onshore
   and offshore areas. The Hub catalog is public; dataset lease requires a confidentiality
-  agreement and payment.
+  agreement and payment. DCAT feeds are disabled on this site.
 endpoints:
 - type: ogcrecordsapi
   url: https://geoportal-staatsolie.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://geoportal-staatsolie.hub.arcgis.com/sitemap.xml
 id: geoportalstaatsoliehubarcgiscom
 langs:
 - id: EN
   name: English
 - id: NL
   name: Dutch
-link: https://geoportal-staatsolie.hub.arcgis.com/
+link: https://geoportal-staatsolie.hub.arcgis.com
 name: Staatsolie GeoPortal
 owner:
   link: https://www.staatsolie.com
@@ -59,6 +61,7 @@ tags:
 - petroleum
 - seismic
 - wells
+- has_api
 - Suriname
 topics:
 - id: ENER

@@ -13,14 +13,14 @@ coverage:
       name: Montenegro
     level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
     subregion:
       id: ME-08
       name: Herceg-Novi
 description: Municipal geoportal of Herceg-Novi with GIS web services, spatial planning
-  maps, LIDAR 3D visualization, and solar potential data. MapStore2 frontend with
-  GeoServer.
+  maps, LIDAR 3D visualization, and solar potential data. MapStore frontend with GeoServer
+  OGC services.
 endpoints:
 - type: wms111
   url: https://gis.hercegnovi.me/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -83,7 +83,7 @@ owner:
     subregion:
       id: ME-08
       name: Herceg-Novi
-  name: Herceg-Novi city government
+  name: Municipality of Herceg-Novi
   type: Local government
 properties:
   has_doi: false
@@ -104,6 +104,8 @@ tags:
 - MapStore
 - geospatial
 - government
+- has_api
+- Montenegro
 topics:
 - id: REGI
   name: Regions and cities

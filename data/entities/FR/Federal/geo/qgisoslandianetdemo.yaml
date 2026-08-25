@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,9 +17,6 @@ coverage:
       name: Western Europe
 description: Alternative QGIS Web Client 2 (QWC2) demonstration instance by Oslandia,
   configured differently from the main Oslandia demo viewer on the same host.
-endpoints:
-- type: qwc2:layers
-  url: https://qgis.oslandia.net/demo/themes.json
 id: qgisoslandianetdemo
 langs:
 - id: FR
@@ -47,7 +44,7 @@ rights:
 software:
   id: qwc2
   name: QGIS Web Client 2 (QWC2)
-status: active
+status: inactive
 tags:
 - GIS
 - geospatial

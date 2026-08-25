@@ -15,9 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: ArcGIS Server REST services directory providing geospatial data services
-  for Iceland. The portal offers access to geographic datasets through standard OGC
-  and ArcGIS protocols.
+description: ArcGIS Server REST services of ÍSOR (Iceland GeoSurvey), publishing
+  geothermal, geological, and related geospatial datasets for Iceland.
 endpoints:
 - type: arcgis:rest:info
   url: https://arcgisserver.isor.is/arcgis/rest/info?f=pjson
@@ -36,13 +35,13 @@ langs:
 - id: IS
   name: Icelandic
 link: https://arcgisserver.isor.is/arcgis/rest/services
-name: ISOR ArcGIS Server
+name: ÍSOR ArcGIS Server
 owner:
   link: https://isor.is
   location:
     country: *id001
     level: 20
-  name: ISOR (Icelandic organization)
+  name: ÍSOR (Iceland GeoSurvey)
   type: Central government
 properties:
   has_doi: false

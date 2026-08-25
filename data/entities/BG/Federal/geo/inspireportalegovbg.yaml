@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: A data catalog for INSPIRE compliant geospatial resources, managed via
-  GeoNetwork, typically serving public sector geodata in Bulgaria.
+description: National INSPIRE spatial-data catalogue of Bulgaria, implemented with
+  GeoNetwork and used to share public-sector geospatial metadata.
 endpoints:
 - type: csw202
   url: https://inspireportal.egov.bg/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -32,16 +32,16 @@ id: inspireportalegovbg
 langs:
 - id: BG
   name: Bulgarian
-link: https://inspireportal.egov.bg/geonetwork
-name: National spatial data portal National spatial data portal Bulgaria
+link: https://inspireportal.egov.bg/geonetwork/srv/eng/catalog.search
+name: National Spatial Data Portal of Bulgaria
 owner:
-  link: https://www.gov.bg
+  link: https://egov.government.bg
   location:
     country:
       id: BG
       name: Bulgaria
     level: 20
-  name: Government of Bulgaria
+  name: Ministry of e-Government
   type: Central government
 properties:
   has_doi: true

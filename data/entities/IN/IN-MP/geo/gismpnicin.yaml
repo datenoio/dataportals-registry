@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IN-MP
+      name: Madhya Pradesh
+description: ArcGIS REST services for Madhya Pradesh spatial data, hosted on the NIC GIS stack
+  for state government departments.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gismp.nic.in/GeoRoot/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gismp.nic.in/GeoRoot/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gismp.nic.in/GeoRoot/services?wsdl
+- type: arcgis:sitemap
+  url: https://gismp.nic.in/GeoRoot/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gismp.nic.in/GeoRoot/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gismp.nic.in/GeoRoot/rest/services?f=kmz
+id: gismpnicin
+langs:
+- id: EN
+  name: English
+link: https://gismp.nic.in/GeoRoot/rest/services
+name: Madhya Pradesh GIS Portal
+owner:
+  link: https://mp.gov.in/
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-MP
+      name: Madhya Pradesh
+  name: Government of Madhya Pradesh
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- India
+- NIC
+- REST
+- arcgisserver
+- geospatial
+- spatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00005936

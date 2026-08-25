@@ -15,14 +15,13 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: National Territorial Information System of Honduras. Public layer catalog,
-  map viewer, and OGC geoservices for cartography, natural resources, infrastructure,
-  and socio-economic layers.
+description: National Territorial Information System of Honduras (SINIT). WordPress
+  portal for the official territorial archive used in land-use planning, with a public
+  layer catalog, thematic maps, municipal modules, and advertised WMS/WFS geoservices
+  (3,294 public layers claimed on the homepage).
 endpoints:
 - type: sitemap
-  url: https://sinit.hn/sitemap.xml
-- type: sitemap
-  url: https://sinit.hn/sitemap.xml.gz
+  url: https://sinit.hn/wp-sitemap.xml
 id: sinithn
 langs:
 - id: ES
@@ -30,7 +29,7 @@ langs:
 link: https://sinit.hn/
 name: SINIT Honduras
 owner:
-  link: https://sinit.hn
+  link: https://spe.gob.hn
   location:
     country:
       id: HN
@@ -41,6 +40,7 @@ owner:
 properties:
   has_doi: false
   is_national: true
+  dataset_count_reported: 3294
 software:
   id: custom
   name: Custom software
@@ -50,6 +50,7 @@ tags:
 - SDI
 - territorial planning
 - Honduras
+- government
 topics:
 - id: REGI
   name: Regions and cities

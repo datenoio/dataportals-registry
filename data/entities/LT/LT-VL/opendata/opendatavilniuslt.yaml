@@ -17,14 +17,20 @@ coverage:
     subregion:
       id: LT-VL
       name: Vilniaus apskritis
-description: Official open data portal of Vilnius city offering public datasets.
+description: Official CKAN open data portal of Vilnius city, publishing municipal datasets for reuse.
 endpoints:
 - type: ckan
   url: https://opendata.vilnius.lt/api/3
+- type: ckan:package-search
+  url: https://opendata.vilnius.lt/api/3/action/package_search
+- type: ckan:package-list
+  url: https://opendata.vilnius.lt/api/3/action/package_list
 id: opendatavilniuslt
 langs:
 - id: LT
   name: Lithuanian
+- id: EN
+  name: English
 link: https://opendata.vilnius.lt
 name: Vilnius Open Data Portal
 owner:

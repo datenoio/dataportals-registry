@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,26 +14,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: โครงการบูรณาการระบบข้อมูลทะเบียนเกษตรกรและจัดทำข้อมูลทางด้านการเกษตรแบบเปิดเชื่อมโยงกับศูนย์กลางข้อมูลเปิดภาครัฐ
+description: The farmerone.in.th CKAN host no longer resolves (NXDOMAIN). โครงการบูรณาการระบบข้อมูลทะเบียนเกษตรกรและจัดทำข้อมูลทางด้านการเกษตรแบบเปิดเชื่อมโยงกับศูนย์กลางข้อมูลเปิดภาครัฐ
   (Farmer ONE)
-endpoints:
-- type: ckan
-  url: https://farmerone.in.th/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://farmerone.in.th/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://farmerone.in.th/api/3/action/package_list
-  version: '3'
-- type: dcat:n3
-  url: https://farmerone.in.th/catalog.n3
-- type: dcat:ttl
-  url: https://farmerone.in.th/catalog.ttl
-- type: dcat:xml
-  url: https://farmerone.in.th/catalog.xml
-- type: dcat:jsonld
-  url: https://farmerone.in.th/catalog.jsonld
 id: farmeroneinth
 langs:
 - id: TH
@@ -61,13 +43,11 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
-- has_api
 - farmer
 - agriculture
-- open data
 topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food

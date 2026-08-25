@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-AB
+      name: Alberta
+description: ArcGIS Hub open data catalog of Alberta Geological Survey GIS datasets for geology,
+  resources, and hazards.
+id: geologyagsaeropendataarcgiscom
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::2bb0502c80b7432eee4c5847a5fd077b
+  value: fairsharing_::2bb0502c80b7432eee4c5847a5fd077b
+langs:
+- id: EN
+  name: English
+link: https://geology-ags-aer.opendata.arcgis.com
+name: Alberta Geological Survey Open Data Portal
+owner:
+  link: https://ags.aer.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-AB
+      name: Alberta
+  name: Alberta Geological Survey
+  type: Regional government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- geology
+- open data
+- Alberta
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00028780
+endpoints:
+- type: dcatap201
+  url: https://geology-ags-aer.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://geology-ags-aer.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://geology-ags-aer.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://geology-ags-aer.opendata.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://geology-ags-aer.opendata.arcgis.com/sitemap.xml

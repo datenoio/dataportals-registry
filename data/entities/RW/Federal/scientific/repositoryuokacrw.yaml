@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -14,15 +15,20 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Institutional DSpace repository of the University of Kigali, collecting
+description: Institutional DSpace 9 repository of the University of Kigali, collecting
   theses, conference papers, and other research outputs.
 endpoints:
 - type: dspace
   url: https://repository.uok.ac.rw/server/api
-  version: '7'
+  version: '9'
 - type: dspace:objects
   url: https://repository.uok.ac.rw/server/api/discover/search/objects
-  version: '7'
+  version: '9'
+- type: oaipmh20
+  url: https://repository.uok.ac.rw/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://repository.uok.ac.rw/sitemap_index.xml
 id: repositoryuokacrw
 langs:
 - id: EN
@@ -55,6 +61,8 @@ tags:
 - DSpace
 - institutional repository
 - research
+- has_api
+- Rwanda
 topics:
 - id: EDUC
   name: Education, culture and sport

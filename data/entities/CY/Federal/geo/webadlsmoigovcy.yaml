@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: ArcGIS Server REST catalog of the Department of Lands and Surveys on
+  the weba.dls.moi.gov.cy host, exposing national basemaps, cadastre, and related
+  geospatial services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://weba.dls.moi.gov.cy/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://weba.dls.moi.gov.cy/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://weba.dls.moi.gov.cy/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://weba.dls.moi.gov.cy/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://weba.dls.moi.gov.cy/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://weba.dls.moi.gov.cy/arcgis/rest/services?f=kmz
+id: webadlsmoigovcy
+langs:
+- id: EL
+  name: Greek
+- id: EN
+  name: English
+link: https://weba.dls.moi.gov.cy/arcgis/rest/services
+name: Department of Lands and Surveys ArcGIS REST Services (weba)
+owner:
+  link: https://portal.dls.moi.gov.cy
+  location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+  name: Department of Lands and Surveys
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- cadastre
+- Cyprus
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00035613

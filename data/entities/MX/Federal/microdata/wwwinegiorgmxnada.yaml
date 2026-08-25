@@ -14,23 +14,19 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: ' The National Metadata Network (RNM) is the tool implemented by INEGI,
-  as a platform for dissemination and consultation of the metadata of basic statistical
-  information projects; constitutes a cataloging system that allows users to perform
-  general searches and queries on statistical or specific operations at the variable
-  level of statistical projects that have been exhaustively documented in the Data
-  Documentation Initiative (DDI). English).'
+description: Red Nacional de Metadatos (RNM) operated by INEGI. NADA catalog of DDI-documented statistical
+  operations and microdata metadata for Mexico.
 endpoints:
 - type: nada:catalog-search
   url: https://www.inegi.org.mx/rnm/index.php/api/catalog/search
 - type: nada:csvexport
   url: https://www.inegi.org.mx/rnm/index.php/catalog/export/csv?ps=5000&collection[]
-id: wwwinegiorgmx
+id: wwwinegiorgmxnada
 langs:
 - id: ES
   name: Spanish
 link: https://www.inegi.org.mx/rnm
-name: The National Metadata Network (RNM)
+name: Red Nacional de Metadatos (RNM)
 owner:
   link: https://www.inegi.org.mx
   location:
@@ -38,7 +34,7 @@ owner:
       id: MX
       name: Mexico
     level: 20
-  name: INEGI
+  name: Instituto Nacional de Estadística y Geografía (INEGI)
   type: Central government
 properties:
   has_doi: false

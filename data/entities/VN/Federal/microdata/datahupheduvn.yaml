@@ -1,11 +1,11 @@
 access_mode:
 - open
-- limited
-api: true
-api_status: active
+- restricted
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
-- microdata
+- dataset
 coverage:
 - location:
     country:
@@ -15,24 +15,24 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: No direct information available from the provided URL or search results.
-endpoints:
-- type: nada:csvexport
-  url: http://data.huph.edu.vn/index.php/catalog/export/csv?ps=5000&collection[]
+description: Former NADA survey catalog of Hanoi University of Public Health (HUPH). The data.huph.edu.vn
+  hostname no longer resolves.
 id: datahupheduvn
 langs:
+- id: VN
+  name: Vietnamese
 - id: EN
   name: English
 link: http://data.huph.edu.vn
-name: Hanoi School of Public Health Scientific data repository
+name: Hanoi University of Public Health microdata catalog
 owner:
-  link: http://www.ansd.sn
+  link: https://huph.edu.vn
   location:
     country:
       id: VN
       name: Vietnam
     level: 20
-  name: Hanoi School of Public Health
+  name: Hanoi University of Public Health
   type: Academy
 properties:
   has_doi: false
@@ -47,22 +47,24 @@ rights:
 software:
   id: nada
   name: NADA
-status: active
+status: inactive
 tags:
-- government
-- has_api
 - microdata
+- public health
+- surveys
+- NADA
+- Vietnam
 topics:
-- id: SOCI
-  name: Population and society
-  type: eudatatheme
-- id: Society
-  name: Society
-  type: iso19115
 - id: HEAL
   name: Health
   type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 - id: Health
   name: Health
+  type: iso19115
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00001953

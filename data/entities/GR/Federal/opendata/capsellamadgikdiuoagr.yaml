@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,21 +12,10 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: CAPSELLA (Collective Action Platforms for Stronger Sustainability and
-  Localized Agrifood Systems) is a Horizon 2020 funded project that develops ICT tools
-  and platforms to support agroecological practices and local food systems.
-endpoints:
-- type: ckan
-  url: http://capsella.madgik.di.uoa.gr/api/3
-  version: '3'
-- type: ckan:package-search
-  url: http://capsella.madgik.di.uoa.gr/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://capsella.madgik.di.uoa.gr/api/3/action/package_list
-  version: '3'
+description: Former CAPSELLA Horizon 2020 CKAN catalog at MaDGIK/University of Athens.
+  The host no longer responds.
 id: capsellamadgikdiuoagr
 langs:
 - id: EL
@@ -34,13 +23,13 @@ langs:
 link: http://capsella.madgik.di.uoa.gr/
 name: CAPSELLA
 owner:
-  link: http://capsella.madgik.di.uoa.gr/
+  link: https://en.uoa.gr
   location:
     country:
       id: GR
       name: Greece
     level: 20
-  name: CAPSELLA Consortium
+  name: Department of Informatics, University of Athens
   type: Academy
 rights:
   license_id: null
@@ -52,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - Agrifood
 - Greece
@@ -74,4 +63,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-uid: temp00000326
+uid: cdi00035367

@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Lithuanian University of Health Sciences research information system
-  for publications, research data, theses, and related CRIS entities.
+description: Lithuanian University of Health Sciences research information system for publications, research
+  data, theses, and related CRIS entities.
 endpoints:
 - type: dspace
   url: https://portalcris.lsmuni.lt/server/api
@@ -23,13 +23,16 @@ endpoints:
 - type: dspace:objects
   url: https://portalcris.lsmuni.lt/server/api/discover/search/objects
   version: '9'
+- type: oaipmh20
+  url: https://portalcris.lsmuni.lt/server/oai/request?verb=Identify
+  version: '2.0'
 id: portalcrislsmunilt
 langs:
 - id: LT
   name: Lithuanian
 - id: EN
   name: English
-link: https://lsmu.lt/cris/home
+link: https://lsmu.lt/cris
 name: Lithuanian University of Health Sciences Research Management System (CRIS)
 owner:
   link: https://lsmu.lt

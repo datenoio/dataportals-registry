@@ -13,12 +13,12 @@ coverage:
       name: Montenegro
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
 description: National Water Information System geoportal of the Water Administration
-  of Montenegro. Central platform for spatial data on waters, water facilities and
-  water assets, including river basins, flood hazard and risk maps, water cadastre
-  and Water Framework Directive layers.
+  of Montenegro (Uprava za vode). Central platform for spatial data on waters, water
+  facilities and water assets, including river basins, flood hazard and risk maps,
+  water cadastre and Water Framework Directive layers, published through GeoServer.
 endpoints:
 - type: wms111
   url: https://wis.gov.me/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -87,25 +87,17 @@ tags:
 - hydrology
 - geospatial
 - government
+- has_api
 - Montenegro
 topics:
 - id: ENVI
   name: Environment
-  type: eudatatheme
-- id: ENER
-  name: Energy
-  type: eudatatheme
-- id: AGRI
-  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
 - id: Inland Waters
   name: Inland Waters
   type: iso19115
 - id: Environment
   name: Environment
-  type: iso19115
-- id: Oceans
-  name: Oceans
   type: iso19115
 - id: Location
   name: Location
@@ -115,8 +107,5 @@ topics:
   type: iso19115
 - id: Elevation
   name: Elevation
-  type: iso19115
-- id: Structure
-  name: Structure
   type: iso19115
 uid: cdi00022031

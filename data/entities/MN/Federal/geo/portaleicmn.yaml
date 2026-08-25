@@ -15,7 +15,9 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Data catalog hosted on http://portal.eic.mn:8080/geonetwork
+description: GeoNetwork metadata catalog of the Environmental Information Center,
+  describing environmental spatial datasets for Mongolia with CSW, OAI-PMH, and OpenSearch
+  access.
 endpoints:
 - type: geonetwork:query
   url: http://portal.eic.mn:8080/geonetwork/srv/eng/q
@@ -33,22 +35,22 @@ endpoints:
   version: '2.0'
 - type: geonetwork:site
   url: http://portal.eic.mn:8080/geonetwork/srv/api/site
-- type: opensearch
-  url: http://portal.eic.mn:8080/portal.opensearch
 id: portaleicmn
 langs:
 - id: MN
   name: Mongolian
+- id: EN
+  name: English
 link: http://portal.eic.mn:8080/geonetwork
-name: Mongolian Environmental Information Center meta database
+name: Environmental Information Center GeoNetwork
 owner:
-  link: https://www.eic.mn
+  link: https://eic.mn
   location:
     country:
       id: MN
       name: Mongolia
     level: 20
-  name: Mongolian Environmental Information Center
+  name: Environmental Information Center
   type: Central government
 properties:
   has_doi: true

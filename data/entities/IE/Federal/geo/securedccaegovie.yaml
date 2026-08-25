@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,13 +15,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: ArcGIS-based geospatial services and data for public access from the
-  Department of Communications, Climate Action and Environment (DCCAE).
-endpoints:
-- type: arcgis:rest:info
-  url: https://secure.dccae.gov.ie/arcgis3/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://secure.dccae.gov.ie/arcgis3/rest/services?f=pjson
+description: Former Department of Communications, Climate Action and Environment ArcGIS
+  Server catalog. The host returns HTTP 410 Gone after the department was succeeded by
+  DECC.
 id: securedccaegovie
 langs:
 - id: EN
@@ -29,13 +25,13 @@ langs:
 link: https://secure.dccae.gov.ie/arcgis3/services
 name: DCCAE ArcGIS Services
 owner:
-  link: https://www.dccae.gov.ie
+  link: https://www.gov.ie/en/organisation/department-of-the-environment-climate-and-communications/
   location:
     country:
       id: IE
       name: Ireland
     level: 20
-  name: DCCAE (Department of Communications, Climate Action and Environment)
+  name: Department of the Environment, Climate and Communications
   type: Central government
 properties:
   has_doi: false
@@ -49,7 +45,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS
 - geospatial

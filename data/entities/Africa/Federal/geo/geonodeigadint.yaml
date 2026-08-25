@@ -1,0 +1,102 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: Africa
+      name: Africa
+    level: 10
+    macroregion:
+      id: '002'
+      name: Africa
+description: IGAD Spatial web portal is a platform that facilitates the creation,
+  sharing and collaborative use of geospatial data. Users can browse, aggregate, and
+  style geospatial data, generate maps, and manage metadata.
+endpoints:
+- type: wms111
+  url: https://geonode.igad.int/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geonode.igad.int/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geonode.igad.int/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://geonode.igad.int/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geonode.igad.int/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geonode.igad.int/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: geonode:layers
+  url: https://geonode.igad.int/api/layers/
+- type: geonode:documents
+  url: https://geonode.igad.int/api/documents/
+- type: opensearch
+  url: https://geonode.igad.int/catalogue/opensearch
+- type: sitemap
+  url: https://geonode.igad.int/sitemap.xml
+id: geonodeigadint
+langs:
+- id: EN
+  name: English
+link: https://geonode.igad.int/
+name: IGAD Spatial Web Portal
+owner:
+  link: https://www.igad.int
+  location:
+    country:
+      id: Africa
+      name: Africa
+    level: 10
+  name: IGAD
+  type: International
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- maps
+- boundaries
+- water
+- infrastructure
+- metadata
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: INTR
+  name: International issues
+  type: eudatatheme
+uid: cdi00004238

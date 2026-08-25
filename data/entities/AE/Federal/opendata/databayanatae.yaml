@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: UAE official Open Data Portal providing enhanced open data systems for
-  public use.
+description: National CKAN open data portal of the United Arab Emirates (Bayanat),
+  publishing datasets from federal and local government entities.
 endpoints:
 - type: ckan:package-search
   url: https://data.bayanat.ae/api/3/action/package_search
@@ -25,6 +25,8 @@ endpoints:
   version: '3'
 id: databayanatae
 langs:
+- id: AR
+  name: Arabic
 - id: EN
   name: English
 link: https://data.bayanat.ae
@@ -54,8 +56,7 @@ status: active
 tags:
 - government
 - has_api
-- Open Data
-- Geospatial
+- open data
 - UAE
 topics:
 - id: GOVE

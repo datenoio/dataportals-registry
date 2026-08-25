@@ -13,27 +13,25 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: GeoNetwork metadata catalog of the Republic Hydrometeorological Service
-  of Serbia (RHMZ). WIS-GEO geoportal for hydrometeorological and related geospatial
-  data.
+description: GeoNetwork metadata catalogue of the Republic Hydrometeorological Service of
+  Serbia (RHMZ) for hydrometeorological and related geospatial data. CSW GetCapabilities is
+  public; GeoNetwork /srv/api/site and /srv/api/selections currently return HTTP 500.
 endpoints:
 - type: csw202
   url: http://wis-geo.hidmet.gov.rs:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
-- type: geonetwork:selections
-  url: http://wis-geo.hidmet.gov.rs:8080/geonetwork/srv/api/selections
-- type: geonetwork:site
-  url: http://wis-geo.hidmet.gov.rs:8080/geonetwork/srv/api/site
 id: wisgeohidmetgovrs8080geonetwork
 langs:
 - id: SR
   name: Serbian
+- id: EN
+  name: English
 link: http://wis-geo.hidmet.gov.rs:8080/geonetwork
 name: WIS-GEO RHMZ Serbia (GeoNetwork)
 owner:
-  link: http://www.hidmet.gov.rs
+  link: https://www.hidmet.gov.rs
   location:
     country:
       id: RS
@@ -59,14 +57,12 @@ tags:
 - hydrometeorology
 - government
 - Serbia
-uid: cdi00021789
+- GeoNetwork
 topics:
-- id: GOVE
-  name: Government and public sector
+- id: ENVI
+  name: Environment
   type: eudatatheme
-- id: Location
-  name: Location
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
   type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
+uid: cdi00021789

@@ -20,11 +20,11 @@ description: Zambia National Spatial Data Infrastructure (ZNSDI) geoportal hoste
   sharing national geospatial datasets and metadata.
 endpoints:
 - type: geonetwork:query
-  url: https://znsdi.szi.gov.zm/geonetwork/srv/eng/q
+  url: https://znsdi.szi.gov.zm/srv/eng/q
 - type: geonetwork
-  url: https://znsdi.szi.gov.zm/geonetwork/srv/api
+  url: https://znsdi.szi.gov.zm/srv/api
 - type: csw202
-  url: https://znsdi.szi.gov.zm/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://znsdi.szi.gov.zm/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 id: znsdiszigovzm
 langs:
@@ -61,6 +61,7 @@ tags:
 - government
 - Zambia
 - metadata
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector

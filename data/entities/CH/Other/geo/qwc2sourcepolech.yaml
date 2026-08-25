@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,9 +17,6 @@ coverage:
       name: Western Europe
 description: Official QGIS Web Client (QWC) demonstration instance. Formerly hosted at
   qwc2.sourcepole.ch; now published at demo.qwc.app.
-endpoints:
-- type: qwc2:layers
-  url: https://demo.qwc.app/themes.json
 id: qwc2sourcepolech
 langs:
 - id: DE
@@ -47,7 +44,7 @@ rights:
 software:
   id: qwc2
   name: QGIS Web Client 2 (QWC2)
-status: active
+status: inactive
 tags:
 - GIS
 - geospatial

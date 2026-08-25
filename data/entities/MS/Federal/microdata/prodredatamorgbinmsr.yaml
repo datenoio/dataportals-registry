@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Microdata catalog
+content_types:
+- microdata
+- dataset
+coverage:
+- location:
+    country:
+      id: MS
+      name: Montserrat
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: REDATAM online processing portal of the Statistics Department of the
+  Government of Montserrat. Users build custom tables from the 2011 Population and
+  Housing Census and the 2018 Intercensal Count and Labour Force Census, hosted by
+  CELADE/ECLAC.
+endpoints:
+- type: redatam
+  url: https://prod.redatam.org/binmsr/RpWebEngine.exe/Portal
+- type: redatam
+  url: https://prod.redatam.org/binmsr/RpWebEngine.exe/Portal?BASE=PHC2011
+- type: redatam
+  url: https://prod.redatam.org/binmsr/RpWebEngine.exe/Portal?MODE=BASE&ITEM=PHCENSUS&lang=ENG
+- type: redatam
+  url: https://prod.redatam.org/binmsr/RpWebEngine.exe/Portal?MODE=BASE&ITEM=LFICGROUP&lang=ENG
+id: prodredatamorgbinmsr
+langs:
+- id: EN
+  name: English
+link: https://prod.redatam.org/binmsr/RpWebEngine.exe/Portal
+name: Montserrat REDATAM
+owner:
+  link: https://statistics.gov.ms
+  location:
+    country:
+      id: MS
+      name: Montserrat
+    level: 20
+  name: Statistics Department of the Government of Montserrat
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: redatam
+  name: REDATAM
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- census
+- microdata
+- has_api
+- Montserrat
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00023330

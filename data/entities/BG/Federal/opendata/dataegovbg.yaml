@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Open data portal
 content_types:
@@ -13,8 +14,14 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Official open data portal for the Republic of Bulgaria, providing access
-  to public sector datasets in machine-readable formats.
+description: Official open data portal of the Republic of Bulgaria, operated by the
+  Ministry of e-Government. Custom Laravel application (not CKAN) with a REST API
+  under /api. The site may return HTTP 403 to some datacenter clients because of a WAF.
+endpoints:
+- type: rest
+  url: https://data.egov.bg/api
+- type: documentation
+  url: https://data.egov.bg/document
 id: dataegovbg
 identifiers:
 - id: wikidata
@@ -23,16 +30,18 @@ identifiers:
 langs:
 - id: BG
   name: Bulgarian
+- id: EN
+  name: English
 link: https://data.egov.bg
-name: Open Data Bulgaria
+name: Open Data Portal of Bulgaria
 owner:
-  link: https://www.gov.bg
+  link: https://egov.government.bg
   location:
     country:
       id: BG
       name: Bulgaria
     level: 20
-  name: Government of Bulgaria
+  name: Ministry of e-Government
   type: Central government
 properties:
   is_national: true
@@ -51,6 +60,7 @@ tags:
 - government
 - opendata
 - public sector
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector

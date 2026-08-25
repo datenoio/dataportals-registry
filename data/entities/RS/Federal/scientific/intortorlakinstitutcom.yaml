@@ -12,12 +12,14 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: InTOR is a DSpace repository listed in re3data as a research data provider.
+description: DSpace repository of the Institute of Virology, Vaccines and Sera Torlak (OAI
+  repositoryName InTOR), listed in re3data. OAI-PMH Identify is public.
 endpoints:
-- type: dspace:catalog
-  url: https://intor.torlakinstitut.com
+- type: oaipmh20
+  url: https://intor.torlakinstitut.com/oai/request?verb=Identify
+  version: '2.0'
 id: intortorlakinstitutcom
 identifiers:
 - id: re3data
@@ -29,7 +31,7 @@ langs:
 - id: EN
   name: English
 link: https://intor.torlakinstitut.com
-name: InTOR
+name: InTOR – Torlak Institute repository
 owner:
   link: https://www.torlakinstitut.com
   location:
@@ -55,6 +57,8 @@ status: active
 tags:
 - research data
 - dspace
+- vaccines
+- virology
 - re3data
 topics:
 - id: TECH

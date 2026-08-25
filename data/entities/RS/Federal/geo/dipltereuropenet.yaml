@@ -13,17 +13,15 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: A portal providing integration of and access to ecological research data,
-  including site descriptions and datasets from the European Long-Term Ecosystem Research
-  (eLTER) network.
+description: GeoNetwork metadata catalogue of the European Long-Term Ecosystem Research (eLTER)
+  Data Integration Portal, hosted at BioSense Institute in Novi Sad. The public homepage now
+  redirects to the successor eLTER DiV site (div.elter-ri.eu); GeoNetwork remains at dip.lter-europe.net/geonetwork.
+  Coverage is the eLTER network in Europe; the registry path follows the Serbian host institution.
 endpoints:
 - type: geonetwork:query
   url: https://dip.lter-europe.net/geonetwork/srv/eng/q
-- type: openapi
-  url: https://dip.lter-europe.net/geonetwork/srv/v2/api-docs
-  version: '2'
 - type: csw202
   url: https://dip.lter-europe.net/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
@@ -33,26 +31,20 @@ endpoints:
 - type: oaipmh20
   url: https://dip.lter-europe.net/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
-- type: geonetwork:records
-  url: https://dip.lter-europe.net/geonetwork/srv/api/records
-- type: geonetwork:site
-  url: https://dip.lter-europe.net/geonetwork/srv/api/site
-- type: opensearch
-  url: https://dip.lter-europe.net/portal.opensearch
 id: dipltereuropenet
 langs:
-- id: SR
-  name: Serbian
+- id: EN
+  name: English
 link: https://dip.lter-europe.net/geonetwork
 name: eLTER Data Integration Portal (DIP)
 owner:
-  link: https://biosense.rs
+  link: https://biosens.rs
   location:
     country:
       id: RS
       name: Serbia
     level: 20
-  name: Biosense Institute
+  name: BioSense Institute
   type: Academy
 properties:
   has_doi: true
@@ -69,14 +61,11 @@ software:
 status: active
 tags:
 - geospatial
-- government
 - has_api
 - Long-term Ecological Research
 - Environmental Monitoring
-- Ecosystems
-- Metadata
-- Data Integration
-- Open Data
+- eLTER
+- GeoNetwork
 topics:
 - id: ENVI
   name: Environment

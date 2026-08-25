@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,24 +11,23 @@ coverage:
     country:
       id: VN
       name: Vietnam
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Data catalog featuring REST services, likely related to mapping or geospatial
-  data.
-endpoints:
-- type: arcgis:rest:services
-  url: https://ktlddr.hcmpc.com.vn/web/rest/services?f=pjson
-  version: '1.0'
+    subregion:
+      id: VN-SG
+      name: Hồ Chí Minh
+description: ArcGIS REST services hosted at ktlddr.hcmpc.com.vn for Ho Chi Minh City People's Committee
+  land and construction data. The hostname no longer resolves.
 id: ktlddrhcmpccomvn
 langs:
 - id: VN
   name: Vietnamese
 link: https://ktlddr.hcmpc.com.vn/web/rest/services
-name: KTL DDR Data Catalog
+name: Ho Chi Minh City land and construction ArcGIS services
 owner:
-  link: https://ktlddr.hcmpc.com.vn/
+  link: https://hochiminhcity.gov.vn
   location:
     country:
       id: VN
@@ -51,67 +50,21 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
-- REST
-- services
+- ArcGIS
 - geospatial
-- catalog
-- arcgisserver
+- land
+- Ho Chi Minh City
 - Vietnam
 topics:
-- id: TRAN
-  name: Transport
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: SOCI
-  name: Population and society
-  type: eudatatheme
-- id: AGRI
-  name: Agriculture, fisheries, forestry and food
-  type: eudatatheme
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Elevation
-  name: Elevation
-  type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
-  type: iso19115
-- id: Inland Waters
-  name: Inland Waters
+- id: Planning / Cadastre
+  name: Planning / Cadastre
   type: iso19115
 - id: Location
   name: Location
   type: iso19115
-- id: Oceans
-  name: Oceans
-  type: iso19115
-- id: Planning / Cadastre
-  name: Planning / Cadastre
-  type: iso19115
-- id: Society
-  name: Society
-  type: iso19115
-- id: Structure
-  name: Structure
-  type: iso19115
-- id: Transportation
-  name: Transportation
-  type: iso19115
-uid: temp00001090
+uid: cdi00034906

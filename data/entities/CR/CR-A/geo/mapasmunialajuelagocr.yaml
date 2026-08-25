@@ -11,12 +11,15 @@ coverage:
     country:
       id: CR
       name: Costa Rica
-    level: 20
+    level: 30
     macroregion:
       id: '013'
       name: Central America
-description: REST services endpoint for geospatial data hosted by the Municipality
-  of Alajuela, Costa Rica
+    subregion:
+      id: CR-A
+      name: Alajuela
+description: ArcGIS Server catalog of the Municipalidad de Alajuela, exposing
+  municipal geospatial REST map services for the canton.
 endpoints:
 - type: arcgis:rest:info
   url: https://mapas.munialajuela.go.cr/server/rest/info?f=pjson
@@ -46,7 +49,7 @@ owner:
     subregion:
       id: CR-A
       name: Alajuela
-  name: Municipality of Alajuela
+  name: Municipalidad de Alajuela
   type: Local government
 properties:
   has_doi: false
@@ -62,6 +65,7 @@ software:
   name: ArcGIS Server
 status: active
 tags:
+- has_api
 - Costa Rica
 - GIS
 - REST
@@ -73,4 +77,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005871
+uid: cdi00035619

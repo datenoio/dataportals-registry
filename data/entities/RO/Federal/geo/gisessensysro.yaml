@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,38 +14,9 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: GeoServer-based geospatial data portal operated by Essensys, providing
-  access to geographic datasets and map layers through OGC web services including
-  Web Feature Service (WFS), Web Coverage Service (WCS), and Web Processing Service
-  (WPS). The portal serves as a catalog for geospatial data covering Romania, offering
-  standardized access to spatial information through multiple service versions and
-  protocols.
-endpoints:
-- type: wfs100
-  url: http://gis.essensys.ro/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wfs110
-  url: http://gis.essensys.ro/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wfs200
-  url: http://gis.essensys.ro/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
-  version: 2.0.0
-- type: wcs110
-  url: http://gis.essensys.ro/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: http://gis.essensys.ro/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wcs11
-  url: http://gis.essensys.ro/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
-  version: '1.1'
-- type: wcs201
-  url: http://gis.essensys.ro/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
-  version: 2.0.1
-- type: wps100
-  url: http://gis.essensys.ro/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
+      name: Eastern Europe
+description: Former Essensys GeoServer catalog. HTTP and HTTPS /geoserver now return
+  404.
 id: gisessensysro
 identifiers:
 - id: url
@@ -79,7 +50,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - geoserver
 - geospatial
@@ -102,6 +73,7 @@ tags:
 - catalog
 - open data
 - has_api
+- inactive
 topics:
 - id: TECH
   name: Science and technology
@@ -130,4 +102,4 @@ topics:
 - id: Structure
   name: Structure
   type: iso19115
-uid: temp00001658
+uid: cdi00035045

@@ -10,11 +10,14 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Open data portal providing public datasets from Local Government of Blitarkab.
+    subregion:
+      id: ID-JI
+      name: Jawa Timur
+description: Open data portal for Blitar, Indonesia, providing access to government datasets and related resources.
 endpoints:
 - type: ckan
   url: https://opendata.blitarkab.go.id/api/3
@@ -41,7 +44,7 @@ owner:
     subregion:
       id: ID-JI
       name: Jawa Timur
-  name: Local Government of Blitarkab
+  name: Pemerintah Kabupaten Blitar
   type: Local government
 rights:
   license_id: null

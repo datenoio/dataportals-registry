@@ -11,12 +11,15 @@ coverage:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: "Portal SIG AMVALI \u2013 Geographic Information System of the Metropolitan\
-  \ Region of Vale do Itaja\xED (Regi\xE3o Metropolitana do Vale do Itaja\xED)"
+    subregion:
+      id: BR-SC
+      name: Santa Catarina
+description: "Portal SIG AMVALI – Geographic Information System of the Metropolitan\
+  \ Region of Vale do Itajaí (Região Metropolitana do Vale do Itajaí)"
 endpoints:
 - type: geonode:layers
   url: http://sig.amvali.org.br/api/layers/
@@ -50,8 +53,7 @@ langs:
 - id: PT
   name: Portuguese
 link: http://sig.amvali.org.br
-name: "Geoportal - Associa\xE7\xE3o dos Munic\xEDpios do Vale do Itaja\xED \u2013\
-  \ AMVALI"
+name: SIG AMVALI
 owner:
   link: http://sig.amvali.org.br
   location:
@@ -62,7 +64,7 @@ owner:
     subregion:
       id: BR-SC
       name: Santa Catarina
-  name: "Associa\xE7\xE3o dos Munic\xEDpios do Vale do Itaja\xED \u2013 AMVALI"
+  name: "Associação dos Municípios do Vale do Itajaí – AMVALI"
   type: Regional government
 properties:
   has_doi: false

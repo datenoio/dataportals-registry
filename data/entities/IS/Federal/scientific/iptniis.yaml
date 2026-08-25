@@ -14,31 +14,33 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Icelandic node for GBIF. This scientific data repository. managed by
-  Icelandic Institute of Natural History.
+description: GBIF Integrated Publishing Toolkit of Náttúrufræðistofnun, the Icelandic
+  GBIF node, publishing biodiversity occurrence datasets for Iceland.
 endpoints:
 - type: dcat:ttl
-  url: http://ipt.ni.is/ipt/dcat
+  url: https://ipt.ni.is/ipt/dcat
 - type: ipt:dataset
-  url: http://ipt.ni.is/ipt/inventory/dataset
+  url: https://ipt.ni.is/ipt/inventory/dataset
 - type: rss
-  url: http://ipt.ni.is/ipt/rss.do
+  url: https://ipt.ni.is/ipt/rss.do
   version: '2.0'
 id: iptniis
 langs:
 - id: IS
   name: Icelandic
-link: http://ipt.ni.is/ipt
-name: Icelandic node for GBIF
+- id: EN
+  name: English
+link: https://ipt.ni.is/ipt
+name: Icelandic GBIF IPT
 owner:
-  link: http://www.ni.is/english
+  link: https://www.natt.is
   location:
     country:
       id: IS
       name: Iceland
     level: 20
-  name: Icelandic Institute of Natural History
-  type: Academy
+  name: Náttúrufræðistofnun
+  type: Central government
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)

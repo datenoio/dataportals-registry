@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,27 +14,9 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Portal for datasets related to Mongolia, including groundwater, disaster
-  management, and geographic research.
-endpoints:
-- type: ckan
-  url: http://portal.igg.ac.mn/api/3
-  version: '3'
-- type: ckan:package-search
-  url: http://portal.igg.ac.mn/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://portal.igg.ac.mn/api/3/action/package_list
-  version: '3'
-- type: ckan
-  url: https://portal.igg.ac.mn/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://portal.igg.ac.mn/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://portal.igg.ac.mn/api/3/action/package_list
-  version: '3'
+description: Former CKAN knowledge portal of the Institute of Geography and Geoecology
+  for groundwater, disaster-management, and geographic-research datasets. The site
+  currently returns HTTP 500 and the CKAN Action API is unreachable.
 id: portaliggacmn
 langs:
 - id: MN
@@ -42,13 +24,13 @@ langs:
 link: https://portal.igg.ac.mn
 name: IGG Knowledge Portal - Data Catalog
 owner:
-  link: http://www.igg.ac.mn
+  link: https://igg.ac.mn
   location:
     country:
       id: MN
       name: Mongolia
     level: 20
-  name: Institute of Geography
+  name: Institute of Geography and Geoecology
   type: Academy
 rights:
   license_id: null
@@ -60,7 +42,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - has_api
 - Mongolia

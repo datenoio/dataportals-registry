@@ -1,0 +1,98 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RS
+      name: Serbia
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: RS-07
+      name: Sremski okrug
+description: GeoServer of Sremgas (Srem-Gas), the natural-gas distributor in Srem, publishing
+  WMS/WFS/WCS layers. WMTS is disabled on this instance. The GeoServer web admin UI may require
+  login; OGC GetCapabilities documents are public.
+endpoints:
+- type: wms111
+  url: https://gis.sremgas.rs/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://gis.sremgas.rs/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://gis.sremgas.rs/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://gis.sremgas.rs/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://gis.sremgas.rs/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://gis.sremgas.rs/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs111
+  url: https://gis.sremgas.rs/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs201
+  url: https://gis.sremgas.rs/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: tms100
+  url: https://gis.sremgas.rs/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+id: gissremgasrs
+langs:
+- id: SR
+  name: Serbian
+link: https://gis.sremgas.rs/geoserver/web/
+name: Sremgas GeoServer
+owner:
+  link: https://sremgas.rs/
+  location:
+    country:
+      id: RS
+      name: Serbia
+    level: 30
+    subregion:
+      id: RS-07
+      name: Sremski okrug
+  name: Sremgas
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- gas
+- Srem
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+uid: temp00000603

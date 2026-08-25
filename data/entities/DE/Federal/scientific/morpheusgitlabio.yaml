@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: The public MorpheusML model repository collects, curates, documents and
+  tests computational models for multi-scale and multicellular biological systems.
+  Model must be encoded in the model description language MorpheusML. Subsections
+  of the repository distinguish published models from contributed non-published and
+  example models. New models are simulated in Morpheus or Artistoo independently from
+  the authors and results are compared to published results. Successful reproduction
+  is documented on the model's webpage. Models in this repository are included into
+  the CI and test pipelines for each release of the model simulator Morpheus to check
+  and guarantee reproducibility of results across future simulator updates. The model’s
+  webpage provides a History-link to all past model versions and edits that are automatically
+  tracked via Git. Each model is registered with a unique and persistent ID of the
+  format M..... The model description page (incl. the biological context and key results
+  of that model), the model’s XML file, the associated paper, and all further files
+  (often simulation result videos) connected with that model can be retrieved via
+  a persistent URL of the format https://identifiers.org/morpheus/M.....
+id: morpheusgitlabio
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::2120606d6a751a93e392b46d945bba9d
+  value: fairsharing_::2120606d6a751a93e392b46d945bba9d
+langs:
+- id: DE
+  name: German
+link: https://morpheus.gitlab.io/model/
+name: MorpheusML model repository
+owner:
+  link: https://morpheus.gitlab.io
+  location:
+    country:
+      id: DE
+      name: Germany
+  name: Technical University Dresden
+  type: Academy
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- research data
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00029581

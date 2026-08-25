@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,10 +14,8 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Afrischolar Discovery Initiative (ADI) discovers endangered scholarly
-  publications, digitizes/transcribes them when necessary, and makes them available
-  for research purposes globally. Open-access repository with datasets, organizations,
-  and groups.
+description: CKAN repository of the Afrischolar Discovery Initiative for digitised
+  Nigerian scholarly publications and datasets. The host currently returns HTTP 500.
 id: afrischolarrepositorynetng
 langs:
 - id: EN
@@ -33,15 +31,22 @@ owner:
     level: 20
   name: Afrischolar Discovery Initiative
   type: Civil society
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - open access
 - scholarly publications
 - research data
-uid: cdi00020496
+- Nigeria
 topics:
 - id: TECH
   name: Science and technology
@@ -49,9 +54,4 @@ topics:
 - id: Science and technology
   name: Science and technology
   type: iso19115
-endpoints:
-- type: ckan:api
-  url: https://afrischolarrepository.net.ng/api/3/action/package_list
-  version: '3.0'
-- type: sitemap
-  url: https://afrischolarrepository.net.ng/sitemap.xml
+uid: cdi00020496

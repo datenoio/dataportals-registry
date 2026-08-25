@@ -1,6 +1,6 @@
 access_mode:
 - open
-- limited
+- restricted
 api: false
 api_status: inactive
 catalog_type: Microdata catalog
@@ -15,14 +15,17 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: NADA survey catalog of the Vanuatu National Statistics Office, documented
-  by the Accelerated Data Program. The public NADA path is no longer available.
+description: Former NADA survey microdata catalog of the Vanuatu Bureau of Statistics
+  (then Vanuatu National Statistics Office), documented through the Accelerated Data
+  Program. The public NADA path on vnso.gov.vu is no longer available (www.vnso.gov.vu
+  does not resolve; /index.php/en/nada returns 404). The bureau website remains online
+  at https://vnso.gov.vu/.
 id: vnsogovvunada
 langs:
 - id: EN
   name: English
 link: http://www.vnso.gov.vu/index.php/nada
-name: Vanuatu National Statistics Office NADA
+name: Vanuatu Bureau of Statistics NADA
 owner:
   link: https://vnso.gov.vu/
   location:
@@ -30,7 +33,7 @@ owner:
       id: VU
       name: Vanuatu
     level: 20
-  name: Vanuatu National Statistics Office
+  name: Vanuatu Bureau of Statistics
   type: Central government
 properties:
   has_doi: false

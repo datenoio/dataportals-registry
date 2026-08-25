@@ -15,41 +15,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: 'Busca, visualiza, descarga y crea Esta es la plataforma para explorar
-  y descargar datos GIS, descubrir y crear aplicaciones y hacer participar a otros
-  para resolver problemas importantes. Puede analizar y combinar conjuntos de datos
-  utilizando mapas, así como desarrollar nuevas aplicaciones web y móviles. Logremos
-  nuestros objetivos juntos. Promoción del conocimiento abierto La ciencia ciudadana
-  trata de hacer avanzar al conocimiento científico más allá de las fronteras del
-  laboratorio o el trabajo de campo tradicional. Se trata de promover proyectos de
-  investigación que integren entre sus actores principales a científicos de profesión
-  con el ciudadano común para la construcción colaborativa del conocimiento. Los proyectos
-  de ciencia ciudadana pueden clasificarse en función de su tipo de participación
-  voluntaria en: Proyectos contributivos : los participantes aplicados en la recopilación
-  de datos y puntualmente ayudan a analizarlos y difundir resultados.Proyectos colaborativos:
-  los participantes también analizan muestras y en ocasiones ayudan a diseñar el estudio,
-  interpretar los datos, sacar conclusiones o difundir los resultados.Proyectos co-creados:
-  también conocida como ciencia ciudadana extrema en la que los participantes colaboran
-  en todas las etapas del proyecto, incluyendo definición de preguntas, desarrollo
-  de hipótesis, discusión de resultados y respuesta a nuevas preguntas. Data working
-  session Community Hackathon - Flickr: ajturner INICIATIVAS Análisis de exposición
-  al riesgo en las cuencas hidrográficas de Tapia y Tocumen, Ciudad de Panamá. Descripción
-  del proyecto Estudio y análisis de la cobertura terrestre dentro de las cuencas
-  del río Tocumen y el río Tapia, desde la perspectiva de la exposición urbana en
-  áreas con riesgo de inundación, según los términos de referencia proporcionados
-  por el Banco Mundial. Río Tocumen Río Tocumen Ver documento Informe 3. Análisis
-  de exposición Análisis de exposición en las cuencas de los ríos Tocumen y Tapia
-  (Información tipología). Riesgos físicos Riesgos territoriales Riesgos sociales
-  Formulario para reportar afectaciones causadas por las lluvias o solicitar ayuda
-  humanitaria en las áreas afectadas. Ciencia Ciudadana está continuamente consolidando
-  información y analizando datos de manera colaborativa con miras a contribuir y fortalecer
-  la capacidad de gestión del riesgo y desastres para plantear mejoras en las políticas
-  y acciones orientadas a la sostenibilidad y resiliencia en Panamá. Taller de aprendizaje,
-  Bosquejos para proyectar mejor nuestras ciudades Descripción del proyecto Ver documento
-  Resultado del taller de aprendizaje sobre el bosquejo para proyectar mejor nuestras
-  ciudades (City Sketch), usando la experiencia de Yokohama, Japón. Territorio Análitica
-  MAPAS ANTIGUOS DE PANAMÁ Capa de mosaicos Infraestructura Información de contacto
-  Alexander Coles (Director, Centro de Riesgo Urbano) acoles@fsu.edu'
+description: ArcGIS Hub of Florida State University's Panama campus (City of Knowledge)
+  for citizen-science GIS projects, including flood-risk analysis in the Tapia and
+  Tocumen basins of Panama City (39 indexed items).
 endpoints:
 - type: dcatap201
   url: https://ciencia-ciudadana-pa-geofsu.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -66,15 +34,15 @@ langs:
 - id: ES
   name: Spanish
 link: https://ciencia-ciudadana-pa-geofsu.hub.arcgis.com/
-name: Ciencia Ciudadana PA - Geofsu Hub
+name: Ciencia Ciudadana PA
 owner:
-  link: https://ciencia-ciudadana-pa-geofsu.com
+  link: https://www.fsu.edu.pa
   location:
     country:
-      id: US
-      name: United States
+      id: PA
+      name: Panama
     level: 20
-  name: Florida State University - Panama
+  name: Florida State University - Republic of Panama
   type: Academy
 properties:
   has_doi: false
@@ -91,16 +59,28 @@ software:
 status: active
 tags:
 - citizen science
-- geographic information
-- public access
+- geospatial
+- has_api
+- ArcGIS
+- Panama
+- flood risk
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
-- id: Boundaries
-  name: Boundaries
+- id: Inland Waters
+  name: Inland Waters
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00002804

@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Microdata catalog
+content_types:
+- microdata
+- dataset
+coverage:
+- location:
+    country:
+      id: DO
+      name: Republica Dominicana
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: REDATAM-backed statistical portal of the Dominican Republic Superintendency
+  of Health and Occupational Risks. Users explore Family Health Insurance and Occupational
+  Risks Insurance indicators, run dynamic queries, and download databases.
+id: redatamsisalrilgobdo
+langs:
+- id: ES
+  name: Spanish
+link: https://redatam.sisalril.gob.do/
+name: SISALRIL Portal Estadístico
+owner:
+  link: https://www.sisalril.gob.do
+  location:
+    country:
+      id: DO
+      name: Republica Dominicana
+    level: 20
+  name: Superintendencia de Salud y Riesgos Laborales (SISALRIL)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.sisalril.gob.do/transparencia/privacy-policy
+  rights_type: global
+  tos_url: https://www.sisalril.gob.do/transparencia/terminos-y-condiciones-de-uso
+software:
+  id: redatam
+  name: REDATAM
+status: active
+tags:
+- statistics
+- government
+- health
+- insurance
+- microdata
+- REDATAM
+- Republica Dominicana
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00028031
+endpoints:
+- type: redatam
+  url: https://redatam.sisalril.gob.do/
+- type: redatam
+  url: https://redatam.sisalril.gob.do/consultas-dinamicas/seguro-familiar-salud
+- type: redatam
+  url: https://redatam.sisalril.gob.do/bases-de-datos

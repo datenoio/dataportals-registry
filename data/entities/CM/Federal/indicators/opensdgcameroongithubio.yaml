@@ -19,6 +19,8 @@ description: National Open SDG reporting site for Cameroon, published by the Ins
   National de la Statistique with goal, target, and indicator pages and bulk data
   download.
 endpoints:
+- type: opensdg:catalog
+  url: https://opensdg-cameroon.github.io/reporting-status/
 - type: opensdg:data
   url: https://opensdg-cameroon.github.io/ProductionData/en/data/1-1-1.json
 - type: opensdg:data
@@ -57,8 +59,10 @@ status: active
 tags:
 - SDGs
 - Cameroon
-- Official Statistics
-- INS
+- official statistics
+- OpenSDG
+- government
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector

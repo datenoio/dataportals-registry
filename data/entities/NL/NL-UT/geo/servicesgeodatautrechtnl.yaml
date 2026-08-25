@@ -15,10 +15,10 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-    subregion: &id001
+    subregion:
       id: NL-UT
       name: Utrecht
-description: GeoServer-based data catalog for geospatial data in Utrecht, Netherlands
+description: GeoServer providing geospatial datasets for the province and partners in Utrecht.
 endpoints:
 - type: wms111
   url: https://services.geodata-utrecht.nl/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -67,17 +67,19 @@ langs:
 - id: NL
   name: Dutch
 link: https://services.geodata-utrecht.nl/geoserver
-name: Local Government of open_data Geoportal
+name: Geodata Utrecht GeoServer
 owner:
-  link: https://geodata-utrecht.nl
+  link: https://www.provincie-utrecht.nl
   location:
     country:
       id: NL
       name: Netherlands
     level: 30
-    subregion: *id001
-  name: Local Government of open_data
-  type: Local government
+    subregion:
+      id: NL-UT
+      name: Utrecht
+  name: Provincie Utrecht
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -113,4 +115,4 @@ topics:
 - id: Planning / Cadastre
   name: Planning / Cadastre
   type: iso19115
-uid: temp00001625
+uid: cdi00035124

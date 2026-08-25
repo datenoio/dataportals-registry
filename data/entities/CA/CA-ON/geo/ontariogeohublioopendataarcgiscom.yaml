@@ -1,0 +1,96 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: English-language Ontario GeoHub, the provincial ArcGIS Hub for Land Information
+  Ontario geospatial datasets, maps, and applications.
+endpoints:
+- type: dcatap201
+  url: https://ontariogeohub-lio.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://ontariogeohub-lio.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://ontariogeohub-lio.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://ontariogeohub-lio.opendata.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://ontariogeohub-lio.opendata.arcgis.com/sitemap.xml
+id: ontariogeohublioopendataarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://ontariogeohub-lio.opendata.arcgis.com
+name: Ontario GeoHub
+owner:
+  link: https://www.ontario.ca/page/land-information-ontario
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: Land Information Ontario
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- open data
+- GIS
+- Ontario
+- Canada
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00002556

@@ -26,7 +26,7 @@ endpoints:
 - type: arcgis:rest:services
   url: https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services?f=pjson
 - type: arcgis:soap
-  url: https://serviciosgis.catastrobogota.gov.co/arcgis/services?wsdl
+  url: https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services?wsdl
 - type: arcgis:sitemap
   url: https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services?f=sitemap
 - type: arcgis:geositemap
@@ -37,7 +37,7 @@ id: serviciosgiscatastrobogotagovco
 langs:
 - id: ES
   name: Spanish
-link: https://serviciosgis.catastrobogota.gov.co/arcgis/services
+link: https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services
 name: UAECD GIS Services
 owner:
   link: https://www.catastrobogota.gov.co

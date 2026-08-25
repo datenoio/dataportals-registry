@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,27 +15,15 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: ArcGIS REST services directory for FNDS geospatial layers, a second public
-  hostname alongside gis.fnds.gov.mz.
-endpoints:
-- type: arcgis:rest:info
-  url: https://www.fndsgis.gov.mz/server/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://www.fndsgis.gov.mz/server/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://www.fndsgis.gov.mz/server/services?wsdl
-- type: arcgis:sitemap
-  url: https://www.fndsgis.gov.mz/server/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://www.fndsgis.gov.mz/server/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://www.fndsgis.gov.mz/server/rest/services?f=kmz
+description: Former second public hostname for FNDS ArcGIS REST services. www.fndsgis.gov.mz
+  timed out on TLS handshake during review on 25 August 2026. Live FNDS GIS services
+  remain at gis.fnds.gov.mz.
 id: wwwfndsgisgovmz
 langs:
 - id: PT
   name: Portuguese
 link: https://www.fndsgis.gov.mz/server/rest/services
-name: FNDS GIS REST Services
+name: FNDS GIS REST Services (www.fndsgis.gov.mz)
 owner:
   link: https://www.fnds.gov.mz
   location:
@@ -57,15 +45,13 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - GIS
 - REST
 - FNDS
-- Mozambique
-- Government
-- Spatial Data
-- Web Services
+- government
+- geospatial
 topics:
 - id: TRAN
   name: Transport

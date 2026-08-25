@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,10 +17,8 @@ coverage:
     subregion: &id002
       id: SK-ZI
       name: Žilinský kraj
-description: Data catalog for the city of Námestovo, Slovakia
-endpoints:
-- type: sitemap
-  url: https://egov.namestovo.sk/sitemap.xml
+description: Former POMOSAM eGovernment catalog of Námestovo. egov.namestovo.sk
+  currently returns HTTP 404.
 id: egovnamestovosk
 langs:
 - id: SK
@@ -48,7 +46,7 @@ rights:
 software:
   id: pomosam
   name: POMOSAM
-status: active
+status: inactive
 tags:
 - government
 - has_api

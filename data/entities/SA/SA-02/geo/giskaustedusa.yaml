@@ -11,13 +11,16 @@ coverage:
     country:
       id: SA
       name: Saudi Arabia
-    level: 20
+    level: 30
     macroregion:
       id: '145'
       name: Western Asia
+    subregion:
+      id: SA-02
+      name: Makkah al Mukarramah
 description: KAUST GIS platform for exploring, visualizing and downloading location-based
   data. Analyze and combine data layers using maps, as well as develop new web and
-  mobile applications. Lets make our world better together!
+  mobile applications.
 endpoints:
 - type: arcgis:portals:self
   url: https://gis.kaust.edu.sa/portal/sharing/rest/portals/self?f=pjson
@@ -35,6 +38,8 @@ endpoints:
   url: https://gis.kaust.edu.sa/server/rest/services?f=kmz
 id: giskaustedusa
 langs:
+- id: EN
+  name: English
 - id: AR
   name: Arabic
 link: https://gis.kaust.edu.sa/server/rest/services

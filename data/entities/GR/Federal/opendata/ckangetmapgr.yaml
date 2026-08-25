@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,20 +12,9 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: CKAN GET - Open data portal by Geospatial Enabling Technologies (GET),
-  Greece. Hosts datasets and geospatial data.
-endpoints:
-- type: ckan
-  url: https://ckan.getmap.gr/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://ckan.getmap.gr/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://ckan.getmap.gr/api/3/action/package_list
-  version: '3'
+description: GET showcase CKAN catalog. The host currently returns HTTP 502.
 id: ckangetmapgr
 langs:
 - id: EL
@@ -44,7 +33,7 @@ owner:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - CKAN
 - Greece

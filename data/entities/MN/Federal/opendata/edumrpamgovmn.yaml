@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,19 +14,8 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Catalog of datasets managed by the Mineral Resources and Petroleum Authority
-  of Mongolia (MRPAM), including reports such as IMF Mongolia Summary Report, Mongolia
-  Private Equity Fund Feasibility Study, and ICMM Resource Endowment Toolkit.
-endpoints:
-- type: ckan
-  url: https://edu.mrpam.gov.mn/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://edu.mrpam.gov.mn/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://edu.mrpam.gov.mn/api/3/action/package_list
-  version: '3'
+description: Former SESMIM/MRPAM CKAN knowledge portal for mining and resource-endowment
+  datasets. The site currently returns HTTP 500 and the CKAN Action API is unreachable.
 id: edumrpamgovmn
 langs:
 - id: MN
@@ -34,13 +23,13 @@ langs:
 link: https://edu.mrpam.gov.mn
 name: SESMIM Knowledge Portal
 owner:
-  link: https://edu.mrpam.gov.mn
+  link: https://mrpam.gov.mn
   location:
     country:
       id: MN
       name: Mongolia
     level: 20
-  name: Ministry of Mining and Heavy Industry Mongolia
+  name: Mineral Resources and Petroleum Authority of Mongolia
   type: Central government
 rights:
   license_id: null
@@ -52,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
 - has_api

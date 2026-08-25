@@ -23,6 +23,9 @@ endpoints:
 - type: dspace:objects
   url: https://libraryrepository.udsm.ac.tz/server/api/discover/search/objects
   version: '10'
+- type: oaipmh20
+  url: https://libraryrepository.udsm.ac.tz/server/oai/request?verb=Identify
+  version: '2.0'
 id: libraryrepositoryudsmactz
 langs:
 - id: EN

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
 description: The cBioPortal for Cancer Genomics was originally developed at Memorial
   Sloan Kettering Cancer Center (MSK). The public cBioPortal site is hosted by the
   Center for Molecular Oncology at MSK.
+endpoints:
+- type: cbioportal:studies
+  url: https://www.cbioportal.org/api/studies
 id: wwwcbioportalorg
 langs:
 - id: EN
@@ -46,8 +49,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: cbioportal
+  name: cBioPortal
 status: active
 tags:
 - scientific

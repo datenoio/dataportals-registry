@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,23 +18,15 @@ coverage:
     subregion:
       id: AU-ACT
       name: Australian Capital Territory
-description: Geoportal. managed by Geospatial Data Catalogue. providing access to
-  actmapi.actgov.opendata.arcgis.com.
-endpoints:
-- type: dcatap201
-  url: https://actmapi.actgov.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://actmapi.actgov.opendata.arcgis.com/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://actmapi.actgov.opendata.arcgis.com/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://actmapi.actgov.opendata.arcgis.com/api/search/v1
+description: ACT Government ACTmapi open data site on ArcGIS Hub, publishing spatial
+  datasets for the Australian Capital Territory. The recorded hub hostname currently
+  fails TLS certificate checks.
 id: actmapiactgovopendataarcgiscom
 langs:
 - id: EN
   name: English
 link: https://actmapi.actgov.opendata.arcgis.com
-name: Geospatial Data Catalogue Geoportal
+name: ACTmapi Open Data
 owner:
   location:
     country:
@@ -44,9 +36,9 @@ owner:
     subregion:
       id: AU-ACT
       name: Australian Capital Territory
-  name: Geospatial Data Catalogue
-  type: Central government
-  link: https://actgov.com
+  name: ACT Government
+  type: Regional government
+  link: https://www.act.gov.au
 properties:
   has_doi: false
 rights:
@@ -59,7 +51,7 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
 - geospatial
 - government

@@ -3,6 +3,9 @@ access_mode:
 api: true
 api_status: active
 catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -12,9 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Flood Risk Information System for Adaptation Measures and Evaluation
-  in Central Vietnam (FRAME). Datasets, maps, documents, GeoStories, dashboards, and
-  climate scenarios (RCP/SSP).
+description: Flood Risk Information System for Adaptation Measures and Evaluation in Central Vietnam (FRAME).
+  Datasets, maps, documents, GeoStories, dashboards, and climate scenarios (RCP/SSP).
 endpoints:
 - type: geonode:datasets
   url: https://framefavn.org/api/datasets/
@@ -73,11 +75,14 @@ endpoints:
   version: 1.1.1
 id: framefavnorg
 langs:
+- id: VN
+  name: Vietnamese
 - id: EN
   name: English
-link: https://framefavn.org
+link: https://framefavn.org/frame/
 name: FRAME - Flood Risk Information System (Central Vietnam)
 owner:
+  link: https://framefavn.org
   location:
     country:
       id: VN
@@ -85,7 +90,6 @@ owner:
     level: 20
   name: FloodAdaptVN
   type: Academy
-  link: https://framefavn.org
 software:
   id: geonode
   name: GeoNode
@@ -95,7 +99,7 @@ tags:
 - geoportal
 - flood risk
 - climate adaptation
-uid: cdi00021714
+- has_api
 topics:
 - id: Location
   name: Location
@@ -106,6 +110,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-content_types:
-- dataset
-- map_layer
+uid: cdi00021714

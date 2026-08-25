@@ -15,28 +15,9 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: 'Palestine SDG Site 17 Goals to Transform Palestine Explore our data
-  for Sustainable Development Goals Click on an icon below to access spatial indicators
-  relating to a particular Goal. No Poverty Zero Hunger Good Health And Well-Being
-  Quality Education Gender Equality Clean Water and Sanitation Affordable And Clean
-  Energy Decent Work And Economic Growth Industry Innovation And Infrastructure Reduced
-  Inequalities Sustainable Cities And Communities Responsible Consumption And Production
-  Climate Action Life Below Water Life on Land Place And Justice Strong Institutions
-  Partnerships For the Goals Explore the Sustainable Development Goals via Story Maps
-  Click any Story Map below to access an interactive narrative on a Sustainable Development
-  Goal for Palestine POVERTY IN PALESTINE POVERTY IN PALESTINE EMPOWERING WOMEN IN
-  THE LABOUR MARKET EMPOWERING WOMEN IN THE LABOUR MARKET Early Marriage in Palestine
-  Early Marriage in Palestine Unlock the Data Explore Visualize &amp; Analyze Build
-  Share Anyone can use open data from the Government Open Data at no cost. Download
-  raw data and share your insights with your community or build new applications that
-  serve specific users. Dig into the data. Highlight spatial patterns and discover
-  trends. Develop new apps using templates and API''s. Embed analysis on your website.
-  Contact Us Palestinian Central Bureau of Statistics P.O.Box 1647, Ramallah - Palestine
-  Ramallah City, Ein Munjed Quarter, Tokyo St. Toll free.: 1800300300 Tel: 00 (972/970)
-  2-298 2700 Fax: 00 (972/970) 2-298 2710 E-Mail: diwan@pcbs.gov.ps Credits © 2017
-  Palestinian Central Bureau of Statistics Built by ESRI Palestine/GSE using the ArcGIS
-  Open Data platform. Related Links Palestinian Central Bureau of Statistics (http://www.pcbs.gov.ps)
-  ESRI Palestine/Good Shepherd Engineering (http://www.gse.ps)'
+description: English ArcGIS Open Data hub of the Palestinian Central Bureau of Statistics
+  for Sustainable Development Goal indicators and related spatial layers. The DCAT-US
+  feed lists 108 datasets. The Arabic counterpart is sdg-ar-pcbs.opendata.arcgis.com.
 endpoints:
 - type: dcatap201
   url: https://sdg-pcbs.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -52,10 +33,12 @@ id: sdgpcbsopendataarcgiscom
 langs:
 - id: EN
   name: English
+- id: AR
+  name: Arabic
 link: https://sdg-pcbs.opendata.arcgis.com/
-name: SDG Palestinian Central Bureau of Statistics
+name: PCBS Sustainable Development Goals
 owner:
-  link: https://pcbs.gov.ps
+  link: https://www.pcbs.gov.ps
   location:
     country:
       id: PS
@@ -65,6 +48,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  dataset_count_reported: 108
 rights:
   license_id: null
   license_name: null
@@ -78,9 +62,11 @@ software:
 status: active
 tags:
 - SDG
+- statistics
 - GIS
-- Open Data
-- PCBS
+- government
+- has_api
+- Palestine
 topics:
 - id: SOCI
   name: Population and society
@@ -96,9 +82,6 @@ topics:
   type: eudatatheme
 - id: HEAL
   name: Health
-  type: eudatatheme
-- id: TRAN
-  name: Transport
   type: eudatatheme
 - id: Boundaries
   name: Boundaries

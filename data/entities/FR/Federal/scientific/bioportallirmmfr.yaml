@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: 'One of the aims of the SIFR project is to implement a semantic annotation
+  tool for biomedical data in French. To achieve this, we rely on a portal of French-language
+  biomedical ontologies and terminologies. Note from the FAIRsharing team: we have
+  classified the status of this resource as ''uncertain'' because its accessibility
+  appears to be inconsistent. We are actively reaching out to the resource owners
+  to determine whether this is a temporary issue or if the resource is no longer actively
+  maintained.'
+endpoints:
+- type: ontoportal:catalog
+  url: https://bioportal.lirmm.fr/
+id: bioportallirmmfr
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::233f1dd0f3f537bcb7a338ea74d63483
+  value: fairsharing_::233f1dd0f3f537bcb7a338ea74d63483
+langs:
+- id: FR
+  name: French
+link: https://bioportal.lirmm.fr/
+name: SIFR BioPortal
+owner:
+  link: https://www6.montpellier.inra.fr/mistea_eng/
+  location:
+    country:
+      id: FR
+      name: France
+  name: Mathématiques, Informatique et Statistique pour l'Environnement et l'Agronomie
+  type: Academy
+software:
+  id: ontoportal
+  name: OntoPortal
+status: active
+tags:
+- scientific
+- research data
+- academic
+- health
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00030644

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,25 +14,15 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Official Bulgarian government open data portal built on CKAN platform,
-  providing access to public sector datasets in open, machine-readable formats. Launched
-  in September 2014 by the Obshtestvo.bg Foundation.
-endpoints:
-- type: ckan
-  url: https://opendata.government.bg/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://opendata.government.bg/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://opendata.government.bg/api/3/action/package_list
-  version: '3'
+description: Former CKAN national open data portal of Bulgaria, launched in 2014 by
+  Obshtestvo.bg and later operated by government. The host currently times out and
+  was succeeded by data.egov.bg.
 id: opendatagovernmentbg
 langs:
 - id: BG
   name: Bulgarian
 link: https://opendata.government.bg
-name: Open Data Portal Bulgaria
+name: Open Data Portal Bulgaria (legacy CKAN)
 owner:
   link: https://www.gov.bg
   location:
@@ -54,7 +44,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
 - has_api

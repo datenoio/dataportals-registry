@@ -14,24 +14,26 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Figshare is a research data management platform enabling the upload,
-  publication, and sharing of research outputs, including datasets, figures, and articles.
-  Metadata is based on the DataCite schema and can be mapped to other standards.
+description: Figshare is a research data management platform enabling the upload, publication, and sharing
+  of research outputs, including datasets, figures, and articles. Metadata is based on the DataCite schema
+  and can be mapped to other standards.
 endpoints:
 - type: figshare:catalog
   url: https://uu.figshare.com
 id: uufigsharecom
 langs:
+- id: EN
+  name: English
 - id: NL
   name: Dutch
 link: https://uu.figshare.com
-name: UU Figshare Data Catalog
+name: Utrecht University Figshare
 owner:
-  link: https://uu.figshare.com
+  link: https://www.uu.nl
   location:
     country: *id001
     level: 20
-  name: 'Not explicitly stated (inferred: Academy)'
+  name: Utrecht University
   type: Academy
 properties:
   has_doi: true
@@ -60,4 +62,4 @@ topics:
 - id: Science and technology
   name: Science and technology
   type: iso19115
-uid: temp00004250
+uid: cdi00035181

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - microdata
@@ -15,8 +15,10 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: REDATAM online processing portal for Burundi's 2008 General Population
-  and Housing Census. Users build custom tables from census microdata hosted by CELADE/ECLAC.
+description: Former CELADE/ECLAC REDATAM online processing portal for Burundi's 2008
+  General Population and Housing Census (RGPH), published with ISTEEBU/INSBU. The
+  registered prod.redatam.org/binbdi application and the older redatam.org/imisbdi
+  IMIS portal both returned HTTP 404 in August 2026.
 id: prodredatamorgbinbdi
 langs:
 - id: FR
@@ -34,7 +36,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
-  is_national: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -45,7 +47,7 @@ rights:
 software:
   id: redatam
   name: REDATAM
-status: active
+status: inactive
 tags:
 - statistics
 - government
@@ -64,6 +66,3 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00023339
-endpoints:
-- type: redatam
-  url: https://prod.redatam.org/binbdi/RpWebEngine.exe/Portal?BASE=RGPH2008&lang=FRA

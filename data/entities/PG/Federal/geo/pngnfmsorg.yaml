@@ -62,6 +62,12 @@ endpoints:
 - type: wmts100
   url: https://png-nfms.org/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
+- type: geoserver:version
+  url: https://png-nfms.org/geoserver/rest/about/version
+- type: geoserver:settings
+  url: https://png-nfms.org/geoserver/rest/settings
+- type: geoserver:layers
+  url: https://png-nfms.org/geoserver/rest/layers
 id: pngnfmsorg
 langs:
 - id: EN
@@ -96,10 +102,11 @@ tags:
 - REDD+
 - geoserver
 - geospatial
-- Papua New Guinea
 - land use
 - climate
 - NFMS
+- Papua New Guinea
+- has_api
 topics:
 - id: ENVI
   name: Environment

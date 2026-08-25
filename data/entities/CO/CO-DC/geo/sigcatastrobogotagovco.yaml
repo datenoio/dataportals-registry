@@ -35,7 +35,7 @@ endpoints:
 - type: arcgis:rest:services
   url: https://sig.catastrobogota.gov.co/arcgis/rest/services?f=pjson
 - type: arcgis:soap
-  url: https://sig.catastrobogota.gov.co/arcgis/services?wsdl
+  url: https://sig.catastrobogota.gov.co/arcgis/rest/services?wsdl
 - type: arcgis:sitemap
   url: https://sig.catastrobogota.gov.co/arcgis/rest/services?f=sitemap
 - type: arcgis:geositemap
@@ -46,7 +46,7 @@ id: sigcatastrobogotagovco
 langs:
 - id: ES
   name: Spanish
-link: https://sig.catastrobogota.gov.co/arcgis/services
+link: https://sig.catastrobogota.gov.co/arcgis/rest/services
 name: SIG Catastro Bogota
 owner:
   link: https://www.catastrobogota.gov.co
@@ -65,8 +65,8 @@ identifiers:
   url: http://dataportals.org/portal/sigcatastrobogotagovco
   value: sigcatastrobogotagovco
 - id: url
-  value: https://sig.catastrobogota.gov.co/arcgis/services
-  url: https://sig.catastrobogota.gov.co/arcgis/services
+  value: https://sig.catastrobogota.gov.co/arcgis/rest/services
+  url: https://sig.catastrobogota.gov.co/arcgis/rest/services
 - id: domain
   value: sig.catastrobogota.gov.co
   url: https://sig.catastrobogota.gov.co

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,21 +15,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Catálogo Nacional de Información Geoespacial de productos geoespaciales
-  generados por las instituciones del Estado de Chile.
-endpoints:
-- type: arcgis:rest:info
-  url: http://www.geoportal.cl/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: http://www.geoportal.cl/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: http://www.geoportal.cl/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: http://www.geoportal.cl/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: http://www.geoportal.cl/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: http://www.geoportal.cl/arcgis/rest/services?f=kmz
+description: Former ArcGIS Server REST services of Chile's national geoportal (IDE
+  Chile / Ministerio de Bienes Nacionales). The catalog URL returned HTTP 404 on 25
+  August 2026 The national catalog and GeoServer remain on geoportal.cl.
 id: wwwgeoportalcl
 langs:
 - id: ES
@@ -57,7 +45,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - geospatial
 - national_catalog
@@ -65,9 +53,6 @@ tags:
 topics:
 - id: EDUC
   name: Education, culture and sport
-  type: eudatatheme
-- id: ENVI
-  name: Environment
   type: eudatatheme
 - id: ENVI
   name: Environment

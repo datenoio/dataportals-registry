@@ -13,11 +13,16 @@ coverage:
       name: Saint Lucia
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: REDATAM online processing portal for the 2022 Population and Housing
-  Census of Saint Lucia. Users build custom tables from census microdata hosted by
-  CELADE/ECLAC.
+description: REDATAM Webserver of the Central Statistical Office of Saint Lucia, hosted
+  by CELADE/ECLAC. Users build custom tables from the 2022 Population and Housing
+  Census microdata.
+endpoints:
+- type: redatam
+  url: https://prod.redatam.org/binlca/RpWebEngine.exe/Portal
+- type: redatam
+  url: https://prod.redatam.org/binlca/RpWebEngine.exe/Portal?BASE=PHC2022
 id: redatamorgbinlca
 langs:
 - id: EN
@@ -25,7 +30,7 @@ langs:
 link: https://prod.redatam.org/binlca/RpWebEngine.exe/Portal?BASE=PHC2022
 name: Saint Lucia REDATAM Census
 owner:
-  link: https://www.stats.gov.lc
+  link: https://stats.gov.lc
   location:
     country:
       id: LC
@@ -35,7 +40,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
-  is_national: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -50,10 +55,10 @@ status: active
 tags:
 - statistics
 - government
+- official statistics
 - census
 - microdata
-- REDATAM
-- Saint Lucia
+- has_api
 topics:
 - id: SOCI
   name: Population and society
@@ -65,8 +70,3 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00021998
-endpoints:
-- type: redatam
-  url: https://prod.redatam.org/binlca/RpWebEngine.exe/Portal?BASE=PHC2022
-- type: redatam
-  url: https://prod.redatam.org/binlca/RpWebEngine.exe/Portal

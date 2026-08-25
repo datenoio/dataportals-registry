@@ -14,10 +14,11 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: WebFIS - Informacioni sistem za šume Srbije. Forest Information System
-  of Serbia with datasets, documents, maps, and geo-stories.
+description: GeoNode Forest Information System of Serbia (WebFIS / FIS), operated by the Forest
+  Directorate, with datasets, documents, maps, and GeoServer OGC services. The public GeoNode
+  datasets API listed a small holdings set when checked.
 endpoints:
 - type: geonode:datasets
   url: https://fis.upravazasume.gov.rs/api/datasets/
@@ -70,7 +71,7 @@ langs:
 - id: EN
   name: English
 link: https://fis.upravazasume.gov.rs
-name: FIS - Informacioni sistem za šume Srbije
+name: FIS – Forest Information System of Serbia
 owner:
   link: https://www.upravazasume.gov.rs
   location:
@@ -78,7 +79,7 @@ owner:
       id: RS
       name: Serbia
     level: 20
-  name: Uprava za šume (Forest Directorate)
+  name: Forest Directorate (Uprava za šume)
   type: Central government
 properties:
   has_doi: false
@@ -98,6 +99,7 @@ tags:
 - Serbia
 - GIS
 - maps
+- GeoNode
 topics:
 - id: ENVI
   name: Environment

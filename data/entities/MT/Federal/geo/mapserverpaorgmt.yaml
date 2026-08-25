@@ -13,20 +13,30 @@ coverage:
       name: Malta
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Data catalog for geospatial web services hosted at Planning Authority,
-  Malta.
+description: Planning Authority ArcGIS Server hosting REST services for geospatial
+  web maps and layers used in land-use planning in Malta.
 endpoints:
+- type: arcgis:rest:info
+  url: https://mapserver.pa.org.mt/hosting/rest/info?f=pjson
 - type: arcgis:rest:services
   url: https://mapserver.pa.org.mt/hosting/rest/services?f=pjson
   version: '1.0'
+- type: arcgis:soap
+  url: https://mapserver.pa.org.mt/hosting/services?wsdl
+- type: arcgis:sitemap
+  url: https://mapserver.pa.org.mt/hosting/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mapserver.pa.org.mt/hosting/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://mapserver.pa.org.mt/hosting/rest/services?f=kmz
 id: mapserverpaorgmt
 langs:
 - id: EN
   name: English
 link: https://mapserver.pa.org.mt/hosting/rest/services
-name: Planning Authority Malta ArcGIS Server
+name: Planning Authority ArcGIS Server
 owner:
   link: https://www.pa.org.mt
   location:
@@ -34,7 +44,7 @@ owner:
       id: MT
       name: Malta
     level: 20
-  name: Planning Authority Malta
+  name: Planning Authority
   type: Central government
 properties:
   has_doi: false
@@ -50,7 +60,9 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- Planning
+- planning
+- geospatial
+- government
 - Malta
 topics:
 - id: ENVI

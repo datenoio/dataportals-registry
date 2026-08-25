@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Icelandic geospatial metadata portal (Lysigagnagatt) operated by the
-  Icelandic Institute of Natural History.
+description: National geospatial metadata catalogue (Lýsigagnagátt) operated by
+  Náttúrufræðistofnun. gatt.lmi.is and gatt.gis.is are host aliases of this same
+  GeoNetwork instance.
 endpoints:
 - type: geonetwork:query
   url: https://gatt.natt.is/geonetwork/srv/eng/q
@@ -40,13 +41,13 @@ langs:
 link: https://gatt.natt.is/geonetwork
 name: Lýsigagnagátt
 owner:
-  link: https://www.ni.is
+  link: https://www.natt.is
   location:
     country:
       id: IS
       name: Iceland
     level: 20
-  name: Icelandic Institute of Natural History
+  name: Náttúrufræðistofnun
   type: Central government
 rights:
   license_id: null
@@ -63,11 +64,12 @@ tags:
 - geospatial
 - metadata
 - government
+- has_api
 topics:
 - id: Location
   name: Location
   type: iso19115
-- id: Environment
+- id: ENVI
   name: Environment
   type: eudatatheme
 uid: cdi00020405

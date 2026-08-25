@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- document
 coverage:
 - location:
     country:
@@ -18,6 +19,12 @@ description: 'Digital Repository of Georgian Scientific Works: national open-acc
   DSpace-CRIS repository of articles, theses, and research outputs, operated by the
   National Science Library of Georgia.'
 endpoints:
+- type: dspace
+  url: https://openscience.ge/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://openscience.ge/server/api/discover/search/objects
+  version: '7'
 - type: oaipmh20
   url: https://openscience.ge/server/oai/request?verb=Identify
   version: '2.0'
@@ -30,7 +37,7 @@ langs:
 link: https://openscience.ge
 name: Digital Repository of Georgian Scientific Works
 owner:
-  link: https://www.sciencelib.ge
+  link: https://sciencelib.ge
   location:
     country:
       id: GE
@@ -58,6 +65,7 @@ tags:
 - research
 - dspace-cris
 - eosc
+- has_api
 topics:
 - id: TECH
   name: Science and technology

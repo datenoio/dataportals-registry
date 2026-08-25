@@ -5,6 +5,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
 from builder import (
     check_coverage_normalization,
+    check_nested_field_types,
     check_owner_type_values,
     check_path_country_consistency,
     check_software_expected_endpoints,
@@ -91,6 +92,21 @@ def test_software_expected_endpoints_skips_when_api_true(monkeypatch):
         "status": "active",
         "api": True,
         "link": "https://data.example.gov",
+        "endpoints": [],
+    }
+    assert check_software_expected_endpoints(record) is None
+
+
+def test_software_expected_endpoints_skips_deprecated(monkeypatch):
+    monkeypatch.setattr(
+        "builder.get_cached_software_map",
+        lambda: {"stattech": {"has_api": "Yes", "name": ".Stat Technology"}},
+    )
+    record = {
+        "software": {"id": "stattech", "name": ".Stat Technology"},
+        "status": "deprecated",
+        "api": False,
+        "link": "https://stats.example.org",
         "endpoints": [],
     }
     assert check_software_expected_endpoints(record) is None
@@ -270,3 +286,143 @@ def test_duplicate_coverage_allows_multi_country():
         issue for issue in (result or []) if issue["issue_type"] == "DUPLICATE_COVERAGE"
     ]
     assert duplicate_issues == []
+
+
+def _nested_type_record(**overrides):
+    record = {
+        "id": "example",
+        "uid": "cdi00000001",
+        "name": "Example",
+        "link": "https://example.gov",
+        "catalog_type": "Open data portal",
+        "status": "active",
+        "api": True,
+        "access_mode": ["open"],
+        "content_types": ["dataset"],
+        "tags": ["government"],
+        "langs": [{"id": "EN", "name": "English"}],
+        "software": {"id": "ckan", "name": "CKAN"},
+        "owner": {
+            "name": "Example Org",
+            "type": "Central government",
+            "location": {
+                "country": {"id": "US", "name": "United States"},
+                "level": 20,
+            },
+        },
+        "coverage": [
+            {
+                "location": {
+                    "country": {"id": "US", "name": "United States"},
+                    "level": 20,
+                    "macroregion": {"id": "021", "name": "Northern America"},
+                }
+            }
+        ],
+        "topics": [
+            {"id": "GOVE", "name": "Government and public sector", "type": "eudatatheme"}
+        ],
+        "properties": {"has_doi": False, "dataset_count_reported": 12},
+    }
+    record.update(overrides)
+    return record
+
+
+def test_nested_type_clean_record_has_no_issues():
+    assert check_nested_field_types(_nested_type_record()) is None
+
+
+def test_nested_type_priority_is_critical():
+    assert get_priority_level("INVALID_NESTED_TYPE") == "CRITICAL"
+
+
+def test_nested_type_flags_yaml_boolean_country_id():
+    import yaml
+
+    parsed = yaml.safe_load(
+        """
+owner:
+  location:
+    country:
+      id: NO
+      name: Norway
+    level: 20
+coverage:
+- location:
+    country:
+      id: NO
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+"""
+    )
+    assert parsed["owner"]["location"]["country"]["id"] is False
+    issues = check_nested_field_types(_nested_type_record(**parsed))
+    fields = {issue["field"] for issue in issues}
+    assert "owner.location.country.id" in fields
+    assert "coverage[0].location.country.id" in fields
+    norway_issue = next(
+        i for i in issues if i["field"] == "owner.location.country.id"
+    )
+    assert norway_issue["issue_type"] == "INVALID_NESTED_TYPE"
+    assert "quoted string 'NO'" in norway_issue["suggested_action"]
+
+
+def test_nested_type_flags_integer_tag_and_tag_mapping():
+    issues = check_nested_field_types(
+        _nested_type_record(tags=["water", 911, {"tag": "sanitation"}])
+    )
+    by_field = {issue["field"]: issue for issue in issues}
+    assert by_field["tags[1]"]["current_value"]["python_type"] == "integer"
+    assert "'911'" in by_field["tags[1]"]["suggested_action"]
+    assert by_field["tags[2]"]["current_value"]["python_type"] == "object"
+    assert "sanitation" in by_field["tags[2]"]["suggested_action"]
+
+
+def test_nested_type_flags_string_dataset_count_and_integer_m49():
+    record = _nested_type_record(
+        properties={"has_doi": False, "dataset_count_reported": "14"},
+        coverage=[
+            {
+                "location": {
+                    "country": {"id": "EU", "name": "European Union"},
+                    "level": 20,
+                    "macroregion": {"id": 155, "name": "Western Europe"},
+                }
+            }
+        ],
+    )
+    issues = check_nested_field_types(record)
+    by_field = {issue["field"]: issue for issue in issues}
+    assert (
+        by_field["properties.dataset_count_reported"]["current_value"]["python_type"]
+        == "string"
+    )
+    assert (
+        by_field["coverage[0].location.macroregion.id"]["current_value"]["python_type"]
+        == "integer"
+    )
+    assert "'155'" in by_field["coverage[0].location.macroregion.id"]["suggested_action"]
+
+
+def test_schema_rejects_mixed_nested_types():
+    import json
+    from pathlib import Path
+
+    from cerberus import Validator
+
+    schema_path = (
+        Path(__file__).resolve().parent.parent / "data" / "schemes" / "catalog.json"
+    )
+    schema = json.loads(schema_path.read_text(encoding="utf-8"))
+    validator = Validator(schema)
+    record = _nested_type_record(
+        tags=["water", 911],
+        properties={"dataset_count_reported": "14"},
+    )
+    record["owner"]["location"]["country"]["id"] = False
+    assert validator.validate(record) is False
+    errors = validator.errors
+    assert "tags" in errors or "owner" in errors or "properties" in errors

@@ -15,12 +15,14 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: CoGIS Portal catalog of BelGIE's ХВАЛЯ telecommunications quality
-  maps (coverage, drive tests, and broadcast zones). Map services remain on
-  eLiteGIS at /elitegis/rest/services.
+description: CoGIS Portal catalog of BelGIE's Khvalya telecommunications quality maps,
+  including coverage, drive tests, mobile-app measurements, and broadcast zones. Map
+  services remain on eLiteGIS at /elitegis/rest/services.
 endpoints:
+- type: cogis:catalog
+  url: https://карты.хваля.бел/portal/catalog
 - type: arcgis:rest:services
-  url: https://карты.хваля.бел/elitegis/rest/services
+  url: https://карты.хваля.бел/elitegis/rest/services?f=pjson
 id: kartyhvalyabel
 langs:
 - id: RU
@@ -28,7 +30,7 @@ langs:
 - id: BE
   name: Belarusian
 link: https://карты.хваля.бел/portal/catalog
-name: Портал качества ХВАЛЯ
+name: Khvalya telecommunications quality portal
 owner:
   link: https://www.belgie.by
   location:
@@ -36,7 +38,7 @@ owner:
       id: BY
       name: Belarus
     level: 20
-  name: Государственное предприятие «БелГИЭ»
+  name: State Enterprise BelGIE
   type: Central government
 properties:
   has_doi: false
@@ -55,8 +57,19 @@ tags:
 - CoGIS
 - geospatial
 - gis
+- telecommunications
+- has_api
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
 uid: cdi00020086

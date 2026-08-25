@@ -15,7 +15,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: GeoPortal for the National System of Protected Areas of Honduras.
+description: GeoNetwork catalog of the National System of Protected Areas of Honduras
+  (SINAP). The host currently returns HTTP 403 (bot protection) to unauthenticated
+  probes; CSW/OpenSearch/OAI-PMH paths are retained.
 endpoints:
 - type: csw202
   url: https://geoportal.sinap.hn/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -33,13 +35,14 @@ langs:
 link: https://geoportal.sinap.hn/geonetwork
 name: SINAP Geoportal - National System of Protected Areas
 owner:
-  link: https://geoportal.sinap.hn
+  link: https://icf.gob.hn
   location:
     country:
       id: HN
       name: Honduras
     level: 20
-  name: Sistema Nacional de Áreas Protegidas de Honduras (SINAP)
+  name: Instituto Nacional de Conservación y Desarrollo Forestal, Áreas Protegidas
+    y Vida Silvestre (ICF)
   type: Central government
 properties:
   has_doi: true
@@ -58,6 +61,9 @@ tags:
 - biodiversity
 - protected areas
 - geospatial
+- Honduras
+- forestry
+- government
 topics:
 - id: ENVI
   name: Environment

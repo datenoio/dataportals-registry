@@ -1,5 +1,5 @@
 access_mode:
-- public
+- open
 api: true
 api_status: active
 catalog_type: Geoportal
@@ -15,7 +15,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: GeoServer Web Service, anonymous access to 14 workspaces, with 387 layers.
+description: Statistics Finland GeoServer publishing official statistical map layers
+  (administrative units, population, and related themes) as OGC WMS, WFS, WCS, and
+  WPS services.
 endpoints:
 - type: wms111
   url: https://geo.stat.fi/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities

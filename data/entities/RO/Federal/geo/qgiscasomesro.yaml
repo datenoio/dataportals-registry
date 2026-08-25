@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Public QWC2 geoportal of CASOMES with water and canal (apa-canal) infrastructure
-  mapping.
+description: Public QGIS Web Client 2 geoportal of Compania de Apă Someș (CASOMEȘ), mapping water and
+  sewer infrastructure.
 endpoints:
 - type: qwc2:layers
   url: https://qgis.casomes.ro/themes.json
@@ -25,7 +25,7 @@ langs:
 - id: RO
   name: Romanian
 link: https://qgis.casomes.ro/
-name: CASOMES QWC2 (apa-canal)
+name: Compania de Apă Someș QWC2 geoportal
 owner:
   link: https://casomes.ro
   location:
@@ -33,7 +33,7 @@ owner:
       id: RO
       name: Romania
     level: 20
-  name: CASOMES
+  name: Compania de Apă Someș (CASOMEȘ)
   type: Business
 rights:
   license_id: null
@@ -50,13 +50,16 @@ tags:
 - GIS
 - geospatial
 - QWC2
-- Romania
 - water
+- utilities
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
 - id: Location
   name: Location
   type: iso19115
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
 uid: cdi00025667

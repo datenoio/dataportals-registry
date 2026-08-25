@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,19 +12,23 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: OData API endpoint for the open data catalog of the Statistical Office
-  of the Republic of Serbia.
+description: OData catalogue of the Statistical Office of the Republic of Serbia at opendata.stat.gov.rs/odata,
+  exposing official statistics tables as an OData service.
+endpoints:
+- type: odata
+  url: https://opendata.stat.gov.rs/odata/
 id: opendatastatgovrs
 langs:
 - id: SR
   name: Serbian
+- id: EN
+  name: English
 link: https://opendata.stat.gov.rs/odata/
-name: Open Data Catalog OData Service of the Statistical Office of the Republic of
-  Serbia
+name: Statistical Office of the Republic of Serbia Open Data (OData)
 owner:
-  link: https://opendata.stat.gov.rs
+  link: https://www.stat.gov.rs
   location:
     country:
       id: RS
@@ -45,9 +49,15 @@ software:
 status: active
 tags:
 - OData
-- Statistics
-- Open Data
+- statistics
+- open data
 topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
 - id: Society
   name: Society
   type: iso19115

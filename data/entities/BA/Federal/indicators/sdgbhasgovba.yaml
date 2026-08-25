@@ -4,7 +4,7 @@ api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
-- dataset
+- indicator
 coverage:
 - location:
     country:
@@ -12,27 +12,36 @@ coverage:
       name: Bosnia and Herzegovina
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Official data catalog for SDG indicators in Bosnia and Herzegovina, hosted
-  by the national statistical authority.
+description: Official OpenSDG reporting portal for Sustainable Development Goal indicators
+  of Bosnia and Herzegovina, published by the Agency for Statistics of Bosnia and
+  Herzegovina (BHAS), with Bosnian, Serbian, and English interfaces.
+endpoints:
+- type: opensdg:data
+  url: https://sdgbih.github.io/sdg-data-bosnia/en/data/1-1-1.json
 id: sdgbhasgovba
 langs:
+- id: BS
+  name: Bosnian
 - id: SR
   name: Serbian
-link: https://sdg.bhas.gov.ba/
-name: Bosnia and Herzegovina SDG Indicators Portal
+- id: EN
+  name: English
+link: https://sdg.bhas.gov.ba
+name: Bosnia and Herzegovina SDG Indicators
 owner:
-  link: https://sdg.bhas.gov.ba/
+  link: https://bhas.gov.ba
   location:
     country:
       id: BA
       name: Bosnia and Herzegovina
     level: 20
-  name: Bureau of Statistics (BHAS)
+  name: Agency for Statistics of Bosnia and Herzegovina
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -45,12 +54,26 @@ software:
   name: OpenSDG
 status: active
 tags:
-- Bosnia and Herzegovina
+- statistics
+- government
+- has_api
 - SDG
-- Statistics
 - Sustainable Development Goals
-- opensdg
+- indicators
+- BHAS
 topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Society
   name: Society
   type: iso19115
@@ -61,8 +84,3 @@ topics:
   name: Environment
   type: iso19115
 uid: temp00000068
-endpoints:
-- type: opensdg:data
-  url: https://sdgbih.github.io/sdg-data-bosnia/en/data/1-1-1.json
-- type: opensdg:data
-  url: https://sdgbih.github.io/sdg-data-bosnia/en/data/1-2-1.json

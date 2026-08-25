@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -19,6 +20,11 @@ description: National WEKO3 institutional repository aggregating journal article
 endpoints:
 - type: weko3:records
   url: https://meral.edu.mm/api/records/?page=1&size=20
+- type: oaipmh20
+  url: https://meral.edu.mm/oai?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://meral.edu.mm/weko/sitemaps/sitemapindex.xml
 id: meraledumm
 langs:
 - id: EN
@@ -34,8 +40,8 @@ owner:
       id: MM
       name: Myanmar
     level: 20
-  name: Myanmar Education Research and Learning (MERAL)
-  type: Academy
+  name: Department of Higher Education, Ministry of Education
+  type: Central government
 properties:
   has_doi: false
   is_national: true
@@ -64,4 +70,7 @@ topics:
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
+- id: Education
+  name: Education
+  type: iso19115
 uid: cdi00027837

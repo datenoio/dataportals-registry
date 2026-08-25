@@ -20,8 +20,8 @@ description: Web-based platform for sharing geospatial data, maps, and informati
   and natural resource management, based on GeoNode technology and part of the BIOPAMA
   Reference Information System.
 endpoints:
-- type: geonode:layers
-  url: https://geonode.obapao.org/api/layers/
+- type: geonode:datasets
+  url: https://geonode.obapao.org/api/datasets/
 - type: geonode:documents
   url: https://geonode.obapao.org/api/documents/
 - type: wms111
@@ -39,26 +39,25 @@ endpoints:
 - type: oaipmh20
   url: https://geonode.obapao.org/catalogue/csw?mode=oaipmh&verb=Identify
   version: '2.0'
-- type: wmts100
-  url: https://geonode.obapao.org/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
 - type: opensearch
   url: https://geonode.obapao.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
   version: '1.0'
 id: geonodeobapaoorg
 langs:
+- id: FR
+  name: French
 - id: EN
   name: English
 link: https://geonode.obapao.org/
-name: Obapao Geoportal
+name: OBAPAO Geoportal
 owner:
-  link: https://www.biopama.org
+  link: https://obapao.org/
   location:
     country:
       id: SN
       name: Senegal
     level: 20
-  name: OBAPAO
+  name: Observatoire de la Biodiversité et des Aires Protégées d'Afrique de l'Ouest (OBAPAO)
   type: International
 properties:
   has_doi: false
@@ -81,6 +80,7 @@ tags:
 - data sharing
 - geonode
 - geospatial
+- has_api
 topics:
 - id: ENVI
   name: Environment

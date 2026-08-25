@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Official GIS portal for the Ministry of Public Works and Housing in Jordan,
-  providing geospatial data and mapping services to support public works and housing
-  infrastructure management.
+description: Official GIS portal of the Ministry of Public Works and Housing,
+  providing geospatial data and mapping services for roads, public works, and housing
+  infrastructure.
 endpoints:
 - type: arcgis:portals:self
   url: https://gis.mpwh.gov.jo/portal/sharing/rest/portals/self?f=pjson
@@ -37,8 +37,10 @@ id: gismpwhgovjo
 langs:
 - id: AR
   name: Arabic
+- id: EN
+  name: English
 link: https://gis.mpwh.gov.jo
-name: Ministry of Public works and Housing Jordan geoportal
+name: Ministry of Public Works and Housing GIS
 owner:
   link: https://www.mpwh.gov.jo
   location:
@@ -46,7 +48,7 @@ owner:
       id: JO
       name: Jordan
     level: 20
-  name: Ministry of Public works and Housing Jordan
+  name: Ministry of Public Works and Housing
   type: Central government
 properties:
   has_doi: false
@@ -65,11 +67,10 @@ tags:
 - geospatial
 - government
 - GIS
+- has_api
 - infrastructure
 - public works
 - housing
-- Jordan
-- Ministry of Public Works and Housing
 topics:
 - id: TRAN
   name: Transport

@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -13,14 +14,8 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Official open data portal of Ghana, providing access to datasets from
-  various sectors.
-endpoints:
-- type: ckan:package-list
-  url: https://data.gov.gh/api/3/action/package_list
-  version: '3'
-- type: dcatus11
-  url: https://data.gov.gh/data.json
+description: Former national open data portal (GODANA) of Ghana. HTTPS on data.gov.gh
+  is refused and HTTP only returns a default nginx page, not a catalog.
 id: datagovgh
 langs:
 - id: EN
@@ -28,7 +23,7 @@ langs:
 link: https://data.gov.gh
 name: GODANA – Ghana Open Data Portal
 owner:
-  link: https://www.gov.gh
+  link: https://www.ghana.gov.gh
   location:
     country:
       id: GH
@@ -49,7 +44,7 @@ rights:
 software:
   id: dkan
   name: DKAN
-status: active
+status: inactive
 tags:
 - government
 - Open Data
@@ -81,4 +76,3 @@ topics:
   name: Farming
   type: iso19115
 uid: cdi00004609
-api: true

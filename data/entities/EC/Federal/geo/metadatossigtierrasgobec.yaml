@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,24 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Cartographic metadata catalog for Sistema Nacional de Información de
-  Tierras Rurales, providing access to maps, technical reports, and geospatial metadata.
-endpoints:
-- type: geonetwork:query
-  url: http://metadatos.sigtierras.gob.ec/geonetwork/srv/eng/q
-- type: geonetwork
-  url: http://metadatos.sigtierras.gob.ec/geonetwork/srv/api
-- type: csw202
-  url: http://metadatos.sigtierras.gob.ec/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: http://metadatos.sigtierras.gob.ec/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: http://metadatos.sigtierras.gob.ec/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
-- type: opensearch
-  url: http://metadatos.sigtierras.gob.ec/portal.opensearch
+description: Former GeoNetwork of SIGTIERRAS / MAGAP land information. The host timed out
+  and could not be verified as live.
 id: metadatossigtierrasgobec
 langs:
 - id: ES
@@ -40,7 +24,7 @@ langs:
 - id: EN
   name: English
 link: http://metadatos.sigtierras.gob.ec/geonetwork
-name: Catálogo de metadatos - SIGTIERRAS-MAGAP
+name: Catálogo de metadatos SIGTIERRAS
 owner:
   link: https://www.sigtierras.gob.ec
   location:
@@ -62,7 +46,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
 - has_api

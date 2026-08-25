@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -16,11 +16,8 @@ coverage:
       id: '011'
       name: Western Africa
 description: Official ANSTAT indicator explorer for Côte d'Ivoire, with thematic time
-  series, charts (including trade), publications, and a documented public API for
-  administrative geography.
-endpoints:
-- type: customapi
-  url: https://api-public.anstat.ci/api/v1/regions
+  series, charts, and publications. The public site is behind Cloudflare bot protection;
+  the former api-public.anstat.ci host no longer resolves.
 id: wwwanstatci
 langs:
 - id: FR

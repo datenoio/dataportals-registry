@@ -14,9 +14,9 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: GeoNetwork-based data catalog for INSPIRE datasets, managed by the Romanian
-  National Institute of Research and Development for the Environment
+      name: Eastern Europe
+description: GeoNetwork INSPIRE metadata catalog of the Geological Institute of Romania (IGR), publishing
+  geological and related geospatial dataset metadata.
 endpoints:
 - type: csw202
   url: https://inspire.igr.ro/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -43,8 +43,8 @@ owner:
       id: RO
       name: Romania
     level: 20
-  name: Institutul Geologic al României
-  type: Central government
+  name: Geological Institute of Romania (IGR)
+  type: Academy
 properties:
   has_doi: true
 rights:
@@ -60,22 +60,16 @@ software:
 status: active
 tags:
 - geospatial
-- government
-- has_api
 - INSPIRE
-- GIS
-- environmental data
+- geology
+- has_api
 - metadata
-- Romania
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
-- id: Environment
-  name: Environment
+- id: Geoscientific Information
+  name: Geoscientific Information
   type: iso19115
 - id: Location
   name: Location

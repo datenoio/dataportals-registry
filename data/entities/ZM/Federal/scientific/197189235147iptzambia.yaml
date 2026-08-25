@@ -14,8 +14,10 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: GBIF Integrated Publishing Toolkit hosted by the Livingstone Museum,
-  publishing Zambian biodiversity occurrence datasets including museum collections.
+description: GBIF Integrated Publishing Toolkit hosted by the Livingstone Museum
+  (installation 159e5e66-e06f-4480-8f62-0ddc2c803aea). The IPT at
+  197.189.235.147:8080/iptzambia timed out on 24 August 2026; GBIF still lists
+  this IP as the installation endpoint.
 endpoints:
 - type: dcat:ttl
   url: http://197.189.235.147:8080/iptzambia/dcat
@@ -31,7 +33,7 @@ langs:
 link: http://197.189.235.147:8080/iptzambia
 name: Livingstone Museum GBIF IPT
 owner:
-  link: http://www.museumszambia.org/about-livingstone-museum
+  link: https://livingstonemuseum.org
   location:
     country:
       id: ZM
@@ -39,10 +41,19 @@ owner:
     level: 20
   name: Livingstone Museum
   type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: deprecated
 tags:
 - GBIF
 - IPT

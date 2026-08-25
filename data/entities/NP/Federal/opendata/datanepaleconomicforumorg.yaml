@@ -14,7 +14,9 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: Data catalog associated with the Nepal Economic Forum
+description: CKAN open data portal of the Nepal Economic Forum (NEF) in Kathmandu.
+  Intended to publish economic-research and policy datasets; the public Action API
+  currently lists a very small catalog.
 endpoints:
 - type: ckan
   url: https://data.nepaleconomicforum.org/api/3
@@ -52,11 +54,19 @@ software:
   name: CKAN
 status: active
 tags:
-- economic research
+- has_api
+- economics
 - policy
+- research
 - Nepal
 topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00000920
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00035217

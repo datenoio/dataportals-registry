@@ -16,7 +16,8 @@ coverage:
       id: '011'
       name: Western Africa
 description: National DHIS2 HMIS of the Sierra Leone Ministry of Health and Sanitation.
-  Login is required to query routine health indicators.
+  Login is required to query routine health indicators; the Web API redirects anonymous
+  requests to the login app.
 endpoints:
 - type: dhis2:catalog
   url: https://dhis.mohs.gov.sl/hmis
@@ -27,7 +28,7 @@ langs:
 link: https://dhis.mohs.gov.sl/hmis
 name: Sierra Leone Health Management Information System (HMIS)
 owner:
-  link: https://www.mohs.gov.sl
+  link: https://mohs.gov.sl
   location:
     country:
       id: SL

@@ -11,13 +11,17 @@ coverage:
     country:
       id: SO
       name: Somalia
-    level: 20
+    level: 30
     macroregion:
       id: '014'
       name: Eastern Africa
-description: NADA survey catalog of Puntland's Ministry of Planning and International
-  Cooperation, documented by the Accelerated Data Program. The public catalog is no
-  longer reachable.
+    subregion:
+      id: SO-NU
+      name: Nugaal
+description: Former NADA survey catalog of Puntland's Ministry of Planning and International
+  Cooperation, documented by the Accelerated Data Program. The mopicplgov.net host
+  no longer serves the archive. Current Puntland official statistics are published
+  by the Puntland Statistics Department at statistics.pl.so.
 id: mopicplgovnet
 langs:
 - id: EN
@@ -25,7 +29,7 @@ langs:
 link: http://mopicplgov.net/mopic
 name: Puntland MoPIC National Data Archive
 owner:
-  link: http://mopicplgov.net
+  link: https://www.statistics.pl.so
   location:
     country:
       id: SO
@@ -34,7 +38,7 @@ owner:
     subregion:
       id: SO-NU
       name: Nugaal
-  name: Puntland Ministry of Planning and International Cooperation
+  name: Puntland Statistics Department
   type: Regional government
 properties:
   has_doi: false
@@ -54,6 +58,7 @@ tags:
 - microdata
 - statistics
 - surveys
+- Puntland
 topics:
 - id: SOCI
   name: Population and society

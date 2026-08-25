@@ -6,6 +6,7 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
+- document
 coverage:
 - location:
     country:
@@ -13,7 +14,7 @@ coverage:
       name: Oceania
     level: 20
     macroregion:
-      id: 009
+      id: '009'
       name: Oceania
 description: Regional data catalog for Pacific Island countries and territories, providing
   access to datasets, indicators, and dashboards across multiple domains including
@@ -81,7 +82,7 @@ langs:
 link: https://nexus.pacificdata.org
 name: Nexus. Pacific Community Resilience Platform
 owner:
-  link: https://spc.int
+  link: https://www.spc.int
   location:
     country:
       id: Oceania
@@ -154,9 +155,6 @@ topics:
   type: iso19115
 - id: Health
   name: Health
-  type: iso19115
-- id: Society
-  name: Society
   type: iso19115
 - id: Transportation
   name: Transportation

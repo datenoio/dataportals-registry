@@ -45,6 +45,12 @@ endpoints:
 - type: wps100
   url: https://sigsnl.gov.md/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: tms100
+  url: https://sigsnl.gov.md/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wmts100
+  url: https://sigsnl.gov.md/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
+  version: 1.0.0
 id: sigsnlgovmdgeoserver
 langs:
 - id: RO
@@ -78,6 +84,7 @@ tags:
 - geoserver
 - government
 - OGC
+- has_api
 topics:
 - id: REGI
   name: Regions and cities

@@ -1,9 +1,10 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Indicators catalog
 content_types:
+- indicator
 - dataset
 coverage:
 - location:
@@ -14,12 +15,10 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: PxWeb tables from the 2017 national census of Mozambique, published by
-  Instituto Nacional de Estatística.
-endpoints:
-- type: pxwebapi
-  url: http://41.94.86.11/Censo2017/api/v1/en/
-  version: '1'
+description: Former PxWeb tables from the 2017 national census of Mozambique, published
+  by Instituto Nacional de Estatística. The host 41.94.86.11 timed out on HTTP during
+  review on 25 August 2026. Official statistics remain on INE and the NADA archive
+  at mozdata.ine.gov.mz.
 id: '41948611'
 langs:
 - id: EN
@@ -39,7 +38,6 @@ owner:
   type: Central government
 properties:
   has_doi: false
-identifiers: []
 rights:
   license_id: null
   license_name: null
@@ -50,21 +48,13 @@ rights:
 software:
   id: pxweb
   name: PxWeb
-status: active
+status: inactive
 tags:
 - census
 - statistics
-- Mozambique
-- indicators
-- population
-- government statistics
-- national census
-- census-2017
-- demographic data
-- demographics
-- pxweb
+- government
 - official statistics
-- national statistics
+- PxWeb
 topics:
 - id: SOCI
   name: Population and society

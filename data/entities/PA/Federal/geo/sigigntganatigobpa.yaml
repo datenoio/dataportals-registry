@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: ArcGIS REST Services Directory for SIGIGNTG, National Land Administration
-  Authority, Panama.
+description: ArcGIS REST Services Directory of SIGIGNTG, the land-administration GIS
+  of Panama's Autoridad Nacional de Administración de Tierras (ANATI), publishing
+  cadastral, imagery, and political-boundary map services.
 endpoints:
 - type: arcgis:rest:info
   url: https://sigigntg.anati.gob.pa/arcgisserver/rest/info?f=pjson
@@ -37,7 +38,7 @@ langs:
 link: https://sigigntg.anati.gob.pa/arcgisserver/rest/services
 name: SIGIGNTG ArcGIS REST Services Directory
 owner:
-  link: https://anati.gob.pa/
+  link: https://www.anati.gob.pa
   location:
     country:
       id: PA
@@ -59,11 +60,19 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- arcgis
-- rest_services
-- gis
-- panama
+- ArcGIS
+- geospatial
+- cadastre
+- Panama
+- government
+- has_api
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 - id: Boundaries
   name: Boundaries
   type: iso19115

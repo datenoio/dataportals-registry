@@ -18,8 +18,15 @@ description: National research repository operated by the Uganda National Counci
   for Science and Technology, archiving scholarly articles, theses, reports, and related
   research outputs from the UNCST community.
 endpoints:
-- type: dspace:catalog
-  url: https://nru.uncst.go.ug/
+- type: dspace
+  url: https://nru.uncst.go.ug/server/api
+  version: '10'
+- type: dspace:objects
+  url: https://nru.uncst.go.ug/server/api/discover/search/objects
+  version: '10'
+- type: oaipmh20
+  url: https://nru.uncst.go.ug/server/oai/request?verb=Identify
+  version: '2.0'
 id: nruuncstgoug
 langs:
 - id: EN
@@ -54,6 +61,7 @@ tags:
 - research
 - national repository
 - Uganda
+- has_api
 topics:
 - id: TECH
   name: Science and technology

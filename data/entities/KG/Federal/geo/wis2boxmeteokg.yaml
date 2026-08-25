@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: WIS 2.0 in a box provides a platform with the capabilities for centres
-  to integrate their data holdings and publish them to the WMO Information System
-  with a plug and play capability supporting data publishing, discovery and access
+description: WIS 2.0 in a box node of Kyrgyzhydromet, the Hydrometeorological Service
+  under the Ministry of Emergency Situations of the Kyrgyz Republic, publishing
+  meteorological and hydrological collections to the WMO Information System.
 endpoints:
 - type: pygeoapi:openapi
   url: https://wis2box.meteo.kg/oapi/openapi
@@ -29,6 +29,10 @@ id: wis2boxmeteokg
 langs:
 - id: EN
   name: English
+- id: KY
+  name: Kirghiz
+- id: RU
+  name: Russian
 link: https://wis2box.meteo.kg
 name: Kyrgyzstan - WIS 2.0 in a box
 owner:
@@ -59,6 +63,7 @@ tags:
 - environment
 - climate
 - monitoring
+- has_api
 topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere

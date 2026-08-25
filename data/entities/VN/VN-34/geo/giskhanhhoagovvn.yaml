@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: VN-34
       name: Khánh Hòa
-description: GIS portal of Khanh Hoa province, providing access to ArcGIS REST API
-  services, likely managed by a local government authority in Vietnam.
+description: ArcGIS Server REST catalog of Khánh Hòa Province, publishing provincial
+  GIS services.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.khanhhoa.gov.vn/arcgis/rest/info?f=pjson
@@ -40,7 +40,7 @@ langs:
 link: https://gis.khanhhoa.gov.vn/arcgis/rest/services
 name: Khanh Hoa Province Government Geoportal
 owner:
-  link: https://gis.khanhhoa.gov.vn/
+  link: https://khanhhoa.gov.vn
   location:
     country:
       id: VN
@@ -49,8 +49,8 @@ owner:
     subregion:
       id: VN-34
       name: Khánh Hòa
-  name: Khanh Hoa Province Government
-  type: Local government
+  name: Khanh Hoa Provincial People's Committee
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -68,6 +68,7 @@ tags:
 - ArcGIS REST API
 - Web Map Services
 - Geodata
+- has_api
 topics:
 - id: Location
   name: Location
@@ -78,4 +79,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00001089
+uid: cdi00034922

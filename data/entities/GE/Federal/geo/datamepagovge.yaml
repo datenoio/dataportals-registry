@@ -15,14 +15,16 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Open data portal of the Georgia META. This geoportal. managed by Ministry
-  of Environmental Protection and Agriculture of Georgia. provides access to datasets
-  and resources.
+description: ArcGIS Hub open data portal of the Ministry of Environmental Protection
+  and Agriculture of Georgia (MEPA), publishing environmental, agricultural, and
+  spatial datasets with DCAT and OGC API Records feeds.
 endpoints:
 - type: dcatap201
   url: https://data.mepa.gov.ge/api/feed/dcat-ap/2.0.1.json
 - type: dcatus11
   url: https://data.mepa.gov.ge/api/feed/dcat-us/1.1.json
+- type: dcatus11
+  url: https://data.mepa.gov.ge/data.json
 - type: rss
   url: https://data.mepa.gov.ge/api/feed/rss/2.0
 - type: ogcrecordsapi
@@ -33,8 +35,10 @@ id: datamepagovge
 langs:
 - id: KA
   name: Georgian
+- id: EN
+  name: English
 link: https://data.mepa.gov.ge
-name: Georgia MEPA open data
+name: Georgia MEPA Open Data
 owner:
   link: https://www.mepa.gov.ge
   location:
@@ -64,7 +68,14 @@ tags:
 - environment
 - maps
 - spatial data
+- has_api
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
 - id: Elevation
   name: Elevation
   type: iso19115

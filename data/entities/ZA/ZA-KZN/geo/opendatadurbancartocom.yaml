@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,10 +18,8 @@ coverage:
     subregion:
       id: ZA-KZN
       name: Kwazulu-Natal
-description: Carto-based open data catalog for eThekwini Municipality (Durban).
-endpoints:
-- type: carto:catalog
-  url: https://opendatadurban.carto.com
+description: Former Carto open data catalog for eThekwini Municipality. The opendatadurban.carto.com
+  username no longer exists; current catalogs are edgedurban and gisdurbangovza.
 id: opendatadurbancartocom
 langs:
 - id: EN
@@ -52,7 +50,7 @@ rights:
 software:
   id: carto
   name: CARTO
-status: active
+status: inactive
 tags:
 - open data
 - spatial data
@@ -67,4 +65,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00000827
+uid: cdi00034890

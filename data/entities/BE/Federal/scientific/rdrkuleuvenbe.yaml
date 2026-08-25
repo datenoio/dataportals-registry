@@ -1,0 +1,103 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: RDR ('Radar') is the curated institutional research data repository of
+  KU Leuven. It contains published data resulting from KU Leuven research in a FAIR
+  way and allows the published data to be as open as possible, but as closed as necessary.
+  The repository helps KU Leuven researchers publish, share, cite, and preserve their
+  research data in a findable, accessible, interoperable, and reusable way, with support
+  from university staff. The repository uses the open source Dataverse project software
+  as its base.
+endpoints:
+- type: dataverseapi
+  url: https://rdr.kuleuven.be/api/search
+- type: oaipmh20
+  url: https://rdr.kuleuven.be/oai?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://rdr.kuleuven.be/sitemap/sitemap.xml
+- type: sitemap
+  url: https://rdr.kuleuven.be/sitemap.xml
+id: rdrkuleuvenbe
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100013824
+  value: r3d100013824
+- id: datacite
+  url: https://rdr.kuleuven.be/
+  value: brvz.rdr
+langs:
+- id: EN
+  name: English
+- id: NL
+  name: Dutch
+link: https://rdr.kuleuven.be
+name: KU Leuven RDR
+owner:
+  link: https://www.kuleuven.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+  name: KU Leuven
+  type: Academy
+properties:
+  has_doi: true
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- has_api
+- Research data
+- FAIR data
+- Open data
+- Dataverse
+- Academic repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00000153
+_re3data:
+  re3data_id: r3d100013824
+  keywords: []
+  content_type: []
+  contact_email: rdm@kuleuven.be
+  description: null
+  persistent_identifiers: []
+  software: []
+  versioning: null
+  institutions:
+  - name: ROR:05f950310
+    url: https://ror.org/05f950310
+  - name: general
+    url: null
+  repository_type: null
+  last_updated: '2025-12-25T16:42:07.619019'

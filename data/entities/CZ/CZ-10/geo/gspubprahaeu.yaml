@@ -11,10 +11,13 @@ coverage:
     country:
       id: CZ
       name: Czech Republic
-    level: 20
+    level: 30
     macroregion:
       id: '151'
       name: Eastern Europe
+    subregion:
+      id: CZ-10
+      name: Praha, Hlavní město
 description: Data catalog providing spatial data services via ArcGIS REST API
 endpoints:
 - type: arcgis:rest:info
@@ -31,7 +34,7 @@ endpoints:
   url: https://gs-pub.praha.eu/arcgis/rest/services?f=kmz
 id: gspubprahaeu
 langs:
-- id: CZ
+- id: CS
   name: Czech
 link: https://gs-pub.praha.eu/arcgis/rest/services
 name: City of Prague Geoportal
@@ -94,4 +97,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00003602
+uid: cdi00035583

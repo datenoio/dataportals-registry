@@ -5,27 +5,50 @@ api_status: uncertain
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- microdata
 coverage:
 - location:
-    country: &id001
+    country:
       id: GE
       name: Georgia
     level: 20
     macroregion:
       id: '145'
       name: Western Asia
-description: Annual household survey about social economic issues and political attitudes
-  conducted by CRRC.
+- location:
+    country:
+      id: AM
+      name: Armenia
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+- location:
+    country:
+      id: AZ
+      name: Azerbaijan
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Caucasus Barometer annual household survey datasets from the Caucasus
+  Research Resource Centers (CRRC), covering social, economic, and political attitudes
+  in Armenia, Azerbaijan, and Georgia. Tables and microdata can be browsed and downloaded
+  from the surveys catalog.
 id: caucasusbarometerorg
 langs:
 - id: EN
   name: English
-link: https://caucasusbarometer.org/en/datasets/
+- id: KA
+  name: Georgian
+link: https://caucasusbarometer.org/en/surveys
 name: Caucasus Barometer Datasets
 owner:
-  link: http://caucasusbarometer.org/
+  link: https://caucasusbarometer.org
   location:
-    country: *id001
+    country:
+      id: GE
+      name: Georgia
     level: 20
   name: Caucasus Research Resource Centers (CRRC)
   type: Civil society
@@ -47,11 +70,15 @@ tags:
 - political attitudes
 - household
 - South Caucasus
+- microdata
 topics:
-- id: TECH
-  name: Science and technology
+- id: SOCI
+  name: Population and society
   type: eudatatheme
-- id: Science and technology
-  name: Science and technology
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
   type: iso19115
 uid: temp00000999

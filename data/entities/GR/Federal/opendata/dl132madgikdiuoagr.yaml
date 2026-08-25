@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,35 +12,25 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Data Catalog Description. This open data portal. managed by Owner Name.
-  provides access to datasets and resources.
-endpoints:
-- type: ckan
-  url: http://dl132.madgik.di.uoa.gr/api/3
-  version: '3'
-- type: ckan:package-search
-  url: http://dl132.madgik.di.uoa.gr/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://dl132.madgik.di.uoa.gr/api/3/action/package_list
-  version: '3'
+description: Former MaDGIK/University of Athens CKAN instance at dl132.madgik.di.uoa.gr.
+  The host no longer responds.
 id: dl132madgikdiuoagr
 langs:
 - id: EL
   name: Greek
 link: http://dl132.madgik.di.uoa.gr
-name: Data Catalog Name
+name: MaDGIK CKAN (dl132)
 owner:
+  link: https://en.uoa.gr
   location:
     country:
       id: GR
       name: Greece
     level: 20
-  name: Owner Name
-  type: Central government
-  link: https://uoa.gr
+  name: Department of Informatics, University of Athens
+  type: Academy
 rights:
   license_id: null
   license_name: null
@@ -51,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - Greece
 - ckan
@@ -61,4 +51,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00000331
+uid: cdi00035374

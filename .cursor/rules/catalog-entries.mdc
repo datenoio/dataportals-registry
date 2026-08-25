@@ -24,6 +24,13 @@ When adding or editing data catalog YAML files in this repository:
   ```
   when applicable; otherwise create the YAML under the correct path and then run `assign`.
 
+## YAML types
+
+- Quote country code `'NO'` (Norway). Unquoted `NO` / `yes` / `on` / `off` are YAML 1.1 booleans.
+- Quote UN M49 macroregion ids (`'021'`, `'154'`, `'155'`) and numeric tags (`'911'`).
+- `tags` is a list of strings, not `{tag: ...}` mappings.
+- `properties.dataset_count_reported` is an integer.
+
 ## After editing
 
 - Run schema validation:

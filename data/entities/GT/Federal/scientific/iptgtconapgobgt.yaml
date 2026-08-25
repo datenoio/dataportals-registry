@@ -14,10 +14,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: El Sistema Nacional de Información sobre Diversidad Biológica de Guatemala
-  -SNIBgt-, como Nodo GBIF Guatemala, pone a disposición esta Herramienta Integrada
-  de Publicación de datos para facilitar a las organizaciones la gestión y publicación
-  de información en GBIF.
+description: GBIF Guatemala Integrated Publishing Toolkit operated by CONAP / SNIBgt.
+  Organizations use it to manage and publish biodiversity occurrence and checklist
+  datasets to GBIF.
 endpoints:
 - type: dcat:ttl
   url: https://iptgt.conap.gob.gt/dcat
@@ -31,16 +30,16 @@ langs:
 - id: ES
   name: Spanish
 link: https://iptgt.conap.gob.gt
-name: GBIF Guatemala
+name: GBIF Guatemala IPT
 owner:
-  link: https://snib.conap.gob.gt/
+  link: https://conap.gob.gt
   location:
     country:
       id: GT
       name: Guatemala
     level: 20
-  name: Sistema Nacional de Información sobre Diversidad Biológica de Guatemala
-  type: Academy
+  name: Consejo Nacional de Áreas Protegidas (CONAP)
+  type: Central government
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -50,6 +49,8 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- Guatemala
+- has_api
 topics:
 - id: Biota
   name: Biota

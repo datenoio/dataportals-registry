@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: The Kujawsko-Pomorska Digital Library, created by the Nicolaus Copernicus
+  University Library in Toruń, is a long-term project that began in 2005 to preserve
+  and provide access to regional and national cultural and scientific resources. Its
+  collections include digitized scientific works, cultural heritage materials (such
+  as manuscripts, old prints, and maps), regional publications, music scores, and
+  other valuable items.
+endpoints:
+- type: oaipmh20
+  url: https://kpbc.umk.pl/dlibra/oai-pmh-repository.xml?verb=Identify
+  version: '2.0'
+id: kpbcumkpl
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::7ea25c95b0792ca4ce01ea18bbda2d44
+  value: fairsharing_::7ea25c95b0792ca4ce01ea18bbda2d44
+langs:
+- id: PL
+  name: Polish
+link: https://kpbc.umk.pl/dlibra
+name: Kujawsko-Pomorska Digital Library
+owner:
+  link: https://www.bu.umk.pl/web/eng/
+  location:
+    country:
+      id: PL
+      name: Poland
+  name: Nicolaus Copernicus University Library
+  type: Academy
+software:
+  id: dlibra
+  name: dLibra
+status: active
+tags:
+- scientific
+- research data
+- academic
+- humanities
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00032505

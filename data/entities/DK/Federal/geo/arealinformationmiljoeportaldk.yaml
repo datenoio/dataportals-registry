@@ -15,8 +15,10 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Geospatial data catalog from Danmarks Miljøportal providing areal and
-  environmental map services for Denmark.
+description: Danmarks Arealinformation (DAI), the public map client of Danmarks
+  Miljøportal for protected nature, land-use, and related environmental layers.
+  The former ArcGIS REST root arealinformation.miljoeportal.dk/gis/rest/services
+  now redirects to this viewer.
 endpoints:
 - type: arcgis:rest:info
   url: https://arealinformation.miljoeportal.dk/gis/rest/info?f=pjson
@@ -34,14 +36,14 @@ id: arealinformationmiljoeportaldk
 langs:
 - id: DA
   name: Danish
-link: https://arealinformation.miljoeportal.dk/gis/rest/services
+link: https://danmarksarealinformation.miljoeportal.dk/
 name: Arealinformation - Danmarks Miljøportal
 owner:
   link: https://miljoeportal.dk
   location:
     country: *id001
     level: 20
-  name: Miljøportalens Sekretariat
+  name: Danmarks Miljøportal
   type: Central government
 properties:
   has_doi: false
@@ -77,4 +79,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00001419
+uid: cdi00035561

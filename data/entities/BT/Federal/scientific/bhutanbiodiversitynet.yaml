@@ -14,9 +14,9 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: Bhutan Biodiversity Specimen Portal is a Symbiota biodiversity collections
-  portal for biodiversity specimens covering Bhutan, with public specimen/occurrence
-  search.
+description: Symbiota portal of Bhutan's National Biodiversity Centre for biological
+  specimen collections. Public occurrence search is available over HTTP; HTTPS on
+  this host is refused.
 endpoints:
 - type: symbiota:catalog
   url: http://bhutanbiodiversity.net/
@@ -25,15 +25,15 @@ langs:
 - id: EN
   name: English
 link: http://bhutanbiodiversity.net/
-name: Bhutan Biodiversity Specimen Portal
+name: Biological Specimen Collections of Bhutan
 owner:
-  link: http://bhutanbiodiversity.net/
+  link: https://nbc.gov.bt
   location:
     country:
       id: BT
       name: Bhutan
     level: 20
-  name: National Biodiversity Centre of Bhutan
+  name: National Biodiversity Centre
   type: Central government
 software:
   id: symbiota
@@ -44,6 +44,7 @@ tags:
 - biodiversity
 - specimens
 - symbiota
+- has_api
 topics:
 - id: ENVI
   name: Environment

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,20 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: ArcGIS REST endpoint catalog for maps.environ.ie
-endpoints:
-- type: arcgis:rest:info
-  url: http://maps.environ.ie/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: http://maps.environ.ie/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: http://maps.environ.ie/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: http://maps.environ.ie/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: http://maps.environ.ie/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: http://maps.environ.ie/arcgis/rest/services?f=kmz
+description: Former maps.environ.ie ArcGIS REST catalog from the pre-EPA/DECLG
+  environment mapping stack. The host no longer responds.
 id: mapsenvironie
 langs:
 - id: EN
@@ -36,13 +24,13 @@ langs:
 link: http://maps.environ.ie/arcgis/rest/services
 name: maps.environ.ie ArcGIS REST Services
 owner:
-  link: http://www.environ.ie
+  link: https://www.epa.ie
   location:
     country:
       id: IE
       name: Ireland
     level: 20
-  name: Environmental Protection Agency Ireland
+  name: Environmental Protection Agency
   type: Central government
 properties:
   has_doi: false
@@ -56,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS
 - REST

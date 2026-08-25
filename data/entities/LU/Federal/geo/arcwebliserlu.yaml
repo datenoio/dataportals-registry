@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Web page listing ArcGIS REST services hosted by LISER (Luxembourg Institute
-  of Socio-Economic Research). For each service, it provides a list of available service
-  endpoints and their capabilities.
+description: ArcGIS Server REST services directory of the Luxembourg Institute of
+  Socio-Economic Research (LISER). The services root currently returns HTTP 403
+  from some networks.
 endpoints:
 - type: arcgis:rest:info
   url: https://arcweb.liser.lu/arcgis/rest/info?f=pjson
@@ -33,18 +33,20 @@ endpoints:
   url: https://arcweb.liser.lu/arcgis/rest/services?f=kmz
 id: arcwebliserlu
 langs:
+- id: EN
+  name: English
 - id: FR
   name: French
 link: https://arcweb.liser.lu/arcgis/rest/services
 name: ArcGIS REST Services Directory - LISER
 owner:
-  link: https://liser.lu
+  link: https://www.liser.lu
   location:
     country:
       id: LU
       name: Luxembourg
     level: 20
-  name: LISER
+  name: Luxembourg Institute of Socio-Economic Research (LISER)
   type: Academy
 properties:
   has_doi: false

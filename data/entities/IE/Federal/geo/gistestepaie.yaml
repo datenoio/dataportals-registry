@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,38 +15,7 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: GeoServer-based data catalog for environmental data in Ireland
-endpoints:
-- type: wfs100
-  url: https://gis-test.epa.ie/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wfs110
-  url: https://gis-test.epa.ie/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wfs200
-  url: https://gis-test.epa.ie/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
-  version: 2.0.0
-- type: wcs100
-  url: https://gis-test.epa.ie/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wcs110
-  url: https://gis-test.epa.ie/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: https://gis-test.epa.ie/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wcs11
-  url: https://gis-test.epa.ie/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
-  version: '1.1'
-- type: wcs201
-  url: https://gis-test.epa.ie/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
-  version: 2.0.1
-- type: wps100
-  url: https://gis-test.epa.ie/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: tms100
-  url: https://gis-test.epa.ie/geoserver/gwc/service/tms/1.0.0
-  version: 1.0.0
+description: EPA GeoServer test instance. Not a production catalog.
 id: gistestepaie
 langs:
 - id: EN
@@ -60,7 +29,7 @@ owner:
       id: IE
       name: Ireland
     level: 20
-  name: Environmental Protection Agency, Ireland
+  name: Environmental Protection Agency
   type: Central government
 properties:
   has_doi: false
@@ -74,7 +43,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - environment
 - spatial

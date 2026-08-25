@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,14 +16,17 @@ coverage:
       id: '005'
       name: South America
 description: Sistema de Información Geográfica de la ANEP (Administración Nacional
-  de Educación Pública de Uruguay); permite localizar geográficamente los centros
-  educativos de los diferentes niveles y modalidades del sistema educativo uruguayo.
+  de Educación Pública); localiza centros educativos de los diferentes niveles y modalidades
+  del sistema educativo uruguayo.
+endpoints:
+- type: arcgis:rest:services
+  url: http://sig.anep.edu.uy/arcgis/rest/services?f=pjson
 id: siganepeduuy
 langs:
 - id: ES
   name: Spanish
-link: https://sig.anep.edu.uy/arcgis/rest/services
-name: ANEP ArcGIS REST
+link: http://sig.anep.edu.uy/arcgis/rest/services
+name: SIG ANEP
 owner:
   link: https://www.anep.edu.uy
   location:
@@ -31,7 +34,7 @@ owner:
       id: UY
       name: Uruguay
     level: 20
-  name: ANEP
+  name: Administración Nacional de Educación Pública
   type: Central government
 properties:
   has_doi: false

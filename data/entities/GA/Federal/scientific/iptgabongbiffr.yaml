@@ -14,10 +14,10 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: This IPT is hosted by GBIF France to publish datasets coming from Gabonese
-  institutions holding biodiversity data. For more assistance, please contact Herbier
-  National du Gabon at engoneobiangnestor@gmail.com or the GBIF France IT team at
-  dev@gbif.fr or gbif@gbif.fr.
+description: GBIF IPT of Gabon, hosted by GBIF France and managed by the Herbier
+  National du Gabon (IPHAMETRA / CENAREST). Publishes 7 biodiversity datasets (3
+  occurrence, 3 sampling-event, 1 checklist), including the national herbarium
+  collections.
 endpoints:
 - type: dcat:ttl
   url: https://ipt-gabon.gbif.fr/dcat
@@ -27,13 +27,17 @@ endpoints:
   url: https://ipt-gabon.gbif.fr/rss.do
   version: '2.0'
 id: iptgabongbiffr
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/publisher/90a628e5-440e-43b6-9c8d-64a5bfafb39f
+  value: 90a628e5-440e-43b6-9c8d-64a5bfafb39f
 langs:
 - id: FR
   name: French
 - id: EN
   name: English
 link: https://ipt-gabon.gbif.fr
-name: Gabon IPT
+name: IPT of GBIF Gabon
 owner:
   link: https://www.iphametra.org
   location:
@@ -44,13 +48,15 @@ owner:
   name: Herbier National du Gabon
   type: Academy
 properties:
-  has_doi: false
+  dataset_count_reported: 7
+  has_doi: true
+  is_national: true
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: global
+  rights_type: granular
   tos_url: null
 software:
   id: ipt
@@ -61,6 +67,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota

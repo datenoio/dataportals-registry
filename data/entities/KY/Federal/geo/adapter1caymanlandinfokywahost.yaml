@@ -1,0 +1,92 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: KY
+      name: Cayman Islands
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: Public ArcGIS REST services for Cayman Land Info free viewers, published
+  by the Lands and Survey Department. Service directory lists street overlay, navigation,
+  public identifier, address-locator, and aerial basemap map services used by the
+  public GIS viewers.
+endpoints:
+- type: arcgis:rest:info
+  url: https://adapter1.caymanlandinfo.ky/wahost/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://adapter1.caymanlandinfo.ky/wahost/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://adapter1.caymanlandinfo.ky/wahost/services?wsdl
+- type: arcgis:sitemap
+  url: https://adapter1.caymanlandinfo.ky/wahost/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://adapter1.caymanlandinfo.ky/wahost/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://adapter1.caymanlandinfo.ky/wahost/rest/services?f=kmz
+id: adapter1caymanlandinfokywahost
+langs:
+- id: EN
+  name: English
+link: https://adapter1.caymanlandinfo.ky/wahost/rest/services
+name: Cayman Land Info Public ArcGIS Server
+owner:
+  link: https://www.caymanlandinfo.ky
+  location:
+    country:
+      id: KY
+      name: Cayman Islands
+    level: 20
+  name: Lands and Survey Department
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- government
+- geospatial
+- GIS
+- ArcGIS
+- transport
+- has_api
+- Cayman Islands
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00035318

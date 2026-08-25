@@ -13,11 +13,16 @@ coverage:
       name: Trinidad and Tobago
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
 description: REDATAM online processing portal for the 2011 Population and Housing
   Census of Trinidad and Tobago. Users build custom tables from census microdata hosted
   by CELADE/ECLAC.
+endpoints:
+- type: redatam
+  url: https://prod.redatam.org/bintto/RpWebEngine.exe/Portal
+- type: redatam
+  url: https://prod.redatam.org/bintto/RpWebEngine.exe/Portal?BASE=PHC2011
 id: redatamorgbintto
 langs:
 - id: EN
@@ -35,7 +40,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
-  is_national: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -50,10 +55,10 @@ status: active
 tags:
 - statistics
 - government
+- official statistics
 - census
 - microdata
-- REDATAM
-- Trinidad and Tobago
+- has_api
 topics:
 - id: SOCI
   name: Population and society
@@ -65,8 +70,3 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00022016
-endpoints:
-- type: redatam
-  url: https://prod.redatam.org/bintto/RpWebEngine.exe/Portal?BASE=PHC2011
-- type: redatam
-  url: https://prod.redatam.org/bintto/RpWebEngine.exe/Portal

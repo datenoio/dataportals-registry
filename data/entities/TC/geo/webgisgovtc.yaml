@@ -13,15 +13,27 @@ coverage:
       name: Turks and Caicos Islands
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: A tool for stakeholders to visualise the spatial data available for the
-  islands. It provides information on a map to analyze the environment and human activities,
-  specifically for Marine Spatial Planning.
+description: Lizmap WebGIS for marine spatial planning in the Turks and Caicos Islands.
+  Stakeholders can view and overlay environmental and human-activity layers. Built
+  under Darwin Plus project DPLUS094 with the Department of Environment and Coastal
+  Resources. WMS, WFS, and WMTS are published for the open MSP project.
 endpoints:
+- type: lizmap:service
+  url: https://webgis.gov.tc/index.php/lizmap/service/
+- type: wms111
+  url: https://webgis.gov.tc/index.php/lizmap/service/?repository=01tci&project=tcimsp-open&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities
+  version: 1.1.1
 - type: wms130
   url: https://webgis.gov.tc/index.php/lizmap/service/?repository=01tci&project=tcimsp-open&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
   version: '1.3.0'
+- type: wfs110
+  url: https://webgis.gov.tc/index.php/lizmap/service/?repository=01tci&project=tcimsp-open&SERVICE=WFS&VERSION=1.1.0&REQUEST=GetCapabilities
+  version: 1.1.0
+- type: wmts100
+  url: https://webgis.gov.tc/index.php/lizmap/service/?repository=01tci&project=tcimsp-open&SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities
+  version: 1.0.0
 id: webgisgovtc
 langs:
 - id: EN
@@ -29,28 +41,37 @@ langs:
 link: https://webgis.gov.tc
 name: WebGIS for Marine Spatial Planning in Turks and Caicos Islands
 owner:
-  link: https://webgis.gov.tc
+  link: https://www.gov.tc/decr
   location:
     country:
       id: TC
       name: Turks and Caicos Islands
     level: 20
-  name: Turks and Caicos Islands government
+  name: Department of Environment and Coastal Resources
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: unknown
+  rights_type: global
   tos_url: null
 software:
   id: lizmap
   name: Lizmap
 status: active
 tags:
-- Marine Spatial Planning
+- government
+- geospatial
+- lizmap
+- has_api
+- marine spatial planning
+- environment
 - WebGIS
+- Darwin Plus
 - Turks and Caicos Islands
 topics:
 - id: ENVI
@@ -61,5 +82,8 @@ topics:
   type: iso19115
 - id: Oceans
   name: Oceans
+  type: iso19115
+- id: Biota
+  name: Biota
   type: iso19115
 uid: cdi00004854

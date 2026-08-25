@@ -12,11 +12,12 @@ coverage:
       name: Caribbean
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: CARICOM Energy Knowledge Hub (CEKH) data portal of the Caribbean Centre
-  for Renewable Energy and Energy Efficiency, providing regional energy statistics,
-  project databases and related knowledge resources for CARICOM member states.
+description: CARICOM Energy Knowledge Hub (CEKH) of the Caribbean Centre for Renewable
+  Energy and Energy Efficiency. Regional energy knowledge site with the Renewable
+  Energy and Energy Efficiency Activities Database and related resources for CARICOM
+  member states.
 endpoints:
 - type: rest
   url: https://cekh.ccreee.org/wp-json/
@@ -26,6 +27,8 @@ endpoints:
   version: '2'
 - type: sitemap
   url: https://cekh.ccreee.org/sitemap_index.xml
+- type: rss
+  url: https://cekh.ccreee.org/feed/
 id: cekhccreeeorg
 langs:
 - id: EN
@@ -58,6 +61,7 @@ tags:
 - Caribbean
 - CCREEE
 - open data
+- has_api
 topics:
 - id: ENER
   name: Energy

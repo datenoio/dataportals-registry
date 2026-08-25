@@ -9,30 +9,34 @@ content_types:
 coverage:
 - location:
     country:
-      id: KE
-      name: Kenya
+      id: Africa
+      name: Africa
     level: 20
     macroregion:
-      id: '014'
-      name: Eastern Africa
-description: A geoportal providing access to geographical datasets, web maps, applications,
-  and data layers.
+      id: '002'
+      name: Africa
+description: GeoNode 4 geoportal of the Regional Centre for Mapping of Resources for
+  Development (RCMRD). Publishes Earth observation and geospatial datasets, maps,
+  and documents for Eastern and Southern Africa (378 datasets and 86 documents when
+  last counted).
 endpoints:
-- type: geonode:layers
-  url: https://geoportal.rcmrd.org/api/layers/
+- type: geonode:datasets
+  url: https://geoportal.rcmrd.org/api/datasets/
 - type: geonode:documents
   url: https://geoportal.rcmrd.org/api/documents/
-- type: wms111
-  url: https://geoportal.rcmrd.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
+- type: geonode:datasets
+  url: https://geoportal.rcmrd.org/api/v2/datasets/
+- type: csw202
+  url: https://geoportal.rcmrd.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
 - type: oaipmh20
   url: https://geoportal.rcmrd.org/catalogue/csw?mode=oaipmh&verb=Identify
   version: '2.0'
 - type: opensearch
   url: https://geoportal.rcmrd.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
   version: '1.0'
-- type: wcs111
-  url: https://geoportal.rcmrd.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+- type: wms111
+  url: https://geoportal.rcmrd.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
 - type: wfs100
   url: https://geoportal.rcmrd.org/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
@@ -40,22 +44,15 @@ endpoints:
 - type: wfs200
   url: https://geoportal.rcmrd.org/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
   version: 2.0.0
-- type: wcs110
-  url: https://geoportal.rcmrd.org/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs11
-  url: https://geoportal.rcmrd.org/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
-  version: '1.1'
+- type: wcs111
+  url: https://geoportal.rcmrd.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
 - type: wcs201
   url: https://geoportal.rcmrd.org/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
   version: 2.0.1
 - type: wps100
   url: https://geoportal.rcmrd.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
-- type: geoserver:settings
-  url: https://geoportal.rcmrd.org/geoserver/rest/settings
-- type: geoserver:layers
-  url: https://geoportal.rcmrd.org/geoserver/rest/layers
 - type: sitemap
   url: https://geoportal.rcmrd.org/sitemap.xml
 id: geoportalrcmrdorg
@@ -65,16 +62,17 @@ langs:
 link: https://geoportal.rcmrd.org/
 name: RCMRD Geoportal
 owner:
-  link: https://geoportal.rcmrd.org/
+  link: https://rcmrd.org
   location:
     country:
       id: KE
       name: Kenya
     level: 20
-  name: RCMRD
+  name: Regional Centre for Mapping of Resources for Development (RCMRD)
   type: International
 properties:
   has_doi: false
+  dataset_count_reported: 378
 rights:
   license_id: null
   license_name: null
@@ -87,11 +85,12 @@ software:
   name: GeoNode
 status: active
 tags:
-- Geospatial
+- geospatial
 - Africa
 - GIS
-- Open Data
-- Earth Observation
+- Earth observation
+- RCMRD
+- has_api
 topics:
 - id: ENVI
   name: Environment
@@ -102,13 +101,13 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-- id: Inland Waters
-  name: Inland Waters
-  type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 - id: Geoscientific Information
   name: Geoscientific Information
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
   type: iso19115
 uid: temp00000788

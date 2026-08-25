@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,35 +11,28 @@ coverage:
     country:
       id: World
       name: World
-    level: 10
+    level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
-description: ArcGIS Server-based geoportal providing geospatial datasets and map layers
-  through REST and SOAP API endpoints. The OneMapServer service offers open access
-  to geographic information services, enabling programmatic access to spatial data
-  and mapping capabilities for integration into applications and analysis workflows.
-endpoints:
-- type: arcgis:rest:info
-  url: http://221.180.204.25/OneMapServer/rest/info?f=pjson
-- type: arcgis:soap
-  url: http://221.180.204.25/OneMapServer/services?wsdl
+description: Catalog host 221.180.204.25 did not respond on 25 August 2026
+  (timeout or connection refused). Operator and country are unconfirmed.
 id: '22118020425'
 identifiers: []
 langs:
 - id: EN
   name: English
 link: http://221.180.204.25/OneMapServer/rest/services
-name: ArcGIS REST API endpoint Geoportal
+name: Unidentified catalog (221.180.204.25)
 owner:
   link: http://221.180.204.25
   location:
     country:
       id: World
       name: World
-    level: 10
-  name: ArcGIS REST API endpoint
-  type: Business
+    level: 20
+  name: Unidentified operator
+  type: Other
 properties:
   has_doi: false
 rights:
@@ -52,7 +45,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS REST API endpoint
 topics:
@@ -80,4 +73,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-uid: temp00005794
+uid: cdi00037228

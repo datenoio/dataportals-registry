@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: EE
+      name: Estonia
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Estonian largest set of health-related statistics and survey results
+  administrated by National Institute for Health Development. Data covers population,
+  morbidity, use of healthcare and reasons for treatment, healthcare resources and
+  their use, health and health behaviour, statistics on medicines, and data for health
+  and welfare profile. Regularly provides data to EUROSTAT, WHO, OECD, and others.
+endpoints:
+- type: pxwebapi
+  url: https://statistika.tai.ee/api/v1/en/
+  version: '1'
+id: statistikataiee
+langs:
+- id: ET
+  name: Estonian
+- id: EN
+  name: English
+link: https://statistika.tai.ee
+name: Health statistics and health research database
+owner:
+  link: https://www.tai.ee
+  location:
+    country:
+      id: EE
+      name: Estonia
+    level: 20
+  name: National Institute for Health Development
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: pxweb
+  name: PxWeb
+status: active
+tags:
+- government
+- has_api
+- health
+- health statistics
+- health research
+- population
+- morbidity
+- healthcare
+- medicines
+- welfare
+- public health
+- EUROSTAT
+- WHO
+- OECD
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00004751

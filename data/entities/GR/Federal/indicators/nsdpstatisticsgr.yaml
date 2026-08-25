@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: IMF SDDS National Summary Data Page for Greece, hosted by Hellenic Statistical
+  Authority. Disseminates macroeconomic and financial summary indicators with SDMX
+  downloads linked from the IMF Dissemination Standards Bulletin Board.
+endpoints:
+- type: imfnsdp:catalog
+  url: http://www.statistics.gr/sdds/
+id: nsdpstatisticsgr
+langs:
+- id: EL
+  name: Greek
+- id: EN
+  name: English
+link: http://www.statistics.gr/sdds/
+name: Greece National Summary Data Page
+owner:
+  link: https://www.statistics.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: Hellenic Statistical Authority
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+software:
+  id: imfnsdp
+  name: IMF National Summary Data Page
+status: active
+tags:
+- NSDP
+- IMF
+- SDDS
+- statistics
+- government
+- official statistics
+- SDMX
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00037483

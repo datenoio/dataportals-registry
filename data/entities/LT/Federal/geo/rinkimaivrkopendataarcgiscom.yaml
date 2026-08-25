@@ -15,20 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: 'Lietuvos Respublikos Vyriausiosios rinkimų komisijos Atvirųjų duomenų
-  portalas Rinkimų žemėlapių sistemos Atvirųjų duomenų portale saugomi Vyriausiosios
-  rinkimų komisijos kuruojami geografiniai duomenų sluoksniai Šiame portale rasite
-  erdvinius rinkimų duomenis, viešai pasiekiamus "Rinkimų žemėlapių sistemoje". Duomenys
-  teikiami neatlygintinai. Galite šiuos duomenis atsisiųsti ir naudoti jei: Laikotės
-  LR teisės aktų numatytų reikalavimų.Neklaidinate vartotojų dėl informacijos šaltinių,
-  informacijos naudojimo sąlygų, informacijos oficialumo pobūdžio.Nekeičiate duomenų
-  tikrumo ir nesudarote kitų sąlygų, kad vartotojai būtų kitaip klaidinami.Nurodote
-  pirminį informacijos šaltinį (Lietuvos Respublikos vyriausiąją rinkimų komisiją).
-  Atvirieji duomenys Paieškos laukelyje ieškokite jus dominančio duomenų rinkinio
-  Atvirieji duomenys 2020m. Lietuvos Respublikos Seimo rinkimų apygardų ribos Reklamos
-  gaudyklė Vyriausioji rinkimų komisija (VRK) vykdo politinės reklamos stebėseną,
-  renka informaciją apie paskleistą politinę reklamą, leidžiančią įvertinti paskleistos
-  politinės reklamos kiekį ir nedeklaruotas išlaidas politinei reklamai. Anketa    Žemėlapis'
+description: Central Electoral Commission ArcGIS Hub of Lithuanian electoral-district and related geographic
+  open data used by the election mapping system.
 endpoints:
 - type: dcatap201
   url: https://rinkimai-vrk.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -45,15 +33,15 @@ langs:
 - id: LT
   name: Lithuanian
 link: https://rinkimai-vrk.opendata.arcgis.com/
-name: Rinkimų žemėlapių sistema Geoportal
+name: VRK election maps open data
 owner:
-  link: https://rinkimai-vrk.opendata.arcgis.com/
+  link: https://www.vrk.lt
   location:
     country:
       id: LT
       name: Lithuania
     level: 20
-  name: Rinkimų žemėlapių sistema
+  name: Vyriausioji rinkimų komisija
   type: Central government
 properties:
   has_doi: false
@@ -85,9 +73,6 @@ topics:
   type: eudatatheme
 - id: SOCI
   name: Population and society
-  type: eudatatheme
-- id: GOVE
-  name: Government and public sector
   type: eudatatheme
 - id: Society
   name: Society

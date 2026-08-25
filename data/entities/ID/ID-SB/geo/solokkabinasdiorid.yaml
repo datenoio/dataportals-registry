@@ -11,12 +11,14 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Official geospatial portal for Solok Regency, managed by the local government,
-  providing access to geographic data services and datasets.
+    subregion:
+      id: ID-SB
+      name: Sumatera Barat
+description: Official geospatial portal for Solok Regency, managed by the local government, providing access to geographic data services and datasets.
 endpoints:
 - type: wms111
   url: http://solokkab.ina-sdi.or.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities

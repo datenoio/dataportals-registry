@@ -12,22 +12,25 @@ coverage:
       name: Malta
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: drUM Data Repository provides 11 datasets ([91%] open access) according
-  to the BASE search index as of 2023-11-08.
+description: Institutional Figshare repository of the University of Malta for publishing
+  and preserving research datasets and other scholarly outputs.
 endpoints:
 - type: sitemap
   url: https://drum.um.edu.mt/sitemap/siteindex.xml
   url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://drum.um.edu.mt/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
 id: drumumedumt
 langs:
 - id: EN
   name: English
-link: https://drum.um.edu.mt/
+link: https://drum.um.edu.mt
 name: drUM Data Repository
 owner:
-  link: https://drum.um.edu.mt
+  link: https://www.um.edu.mt
   location:
     country:
       id: MT
@@ -35,23 +38,29 @@ owner:
     level: 20
   name: University of Malta
   type: Academy
+properties:
+  has_doi: true
 rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: null
-  rights_type: unknown
-  tos_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
 software:
   id: figshare
   name: Figshare
 status: active
 tags:
-- Figshare
-- open access
 - research data
+- open access
+- university
+- Figshare
 topics:
 - id: TECH
   name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
   type: eudatatheme
 uid: cdi00011099

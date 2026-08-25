@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,24 +11,23 @@ coverage:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Data catalog for ArcGIS REST Services from Lamia City
-endpoints:
-- type: arcgis:rest:services
-  url: http://gisapp.lamia-city.gr/ArcGIS/rest/services?f=pjson
-- type: arcgis:rest:info
-  url: http://gisapp.lamia-city.gr/ArcGIS/rest/info?f=pjson
+    subregion:
+      id: GR-H
+      name: Stereá Elláda
+description: Former ArcGIS Server of the Municipality of Lamia. The hostname no
+  longer resolves.
 id: gisapplamiacitygr
 langs:
 - id: EL
   name: Greek
 link: http://gisapp.lamia-city.gr/ArcGIS/rest/services
-name: Gisapp Geoportal - Lamia City
+name: Municipality of Lamia GIS
 owner:
-  link: http://gisapp.lamia-city.gr/
+  link: https://www.lamia-city.gr
   location:
     country:
       id: GR
@@ -37,7 +36,7 @@ owner:
     subregion:
       id: GR-H
       name: Stereá Elláda
-  name: Lamia City
+  name: Municipality of Lamia
   type: Local government
 properties:
   has_doi: false
@@ -51,7 +50,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - Greece
 - arcgisserver
@@ -60,4 +59,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005393
+uid: cdi00035356

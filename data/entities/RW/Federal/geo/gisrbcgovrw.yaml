@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: GIS data catalog of services provided by the Rwanda Biomedical Centre
+description: ArcGIS Enterprise catalog of the Rwanda Biomedical Centre, including
+  district boundaries and cumulative case map services.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.rbc.gov.rw/server/rest/info?f=pjson
@@ -61,6 +62,7 @@ tags:
 - GIS
 - health
 - services
+- has_api
 topics:
 - id: Location
   name: Location

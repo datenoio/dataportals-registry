@@ -11,13 +11,14 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-    subregion: {}
-description: Geospatial data portal of Yogyakarta Special Region providing mapping
-  services and geographic datasets.
+    subregion:
+      id: ID-YO
+      name: Yogyakarta
+description: Geospatial data portal of Yogyakarta Special Region providing mapping services and geographic datasets.
 endpoints:
 - type: geonode:layers
   url: http://geoportal.jogjaprov.go.id/api/layers/

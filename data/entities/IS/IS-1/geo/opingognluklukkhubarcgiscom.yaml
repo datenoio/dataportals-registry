@@ -1,0 +1,90 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IS
+      name: Iceland
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: IS-1
+      name: Höfuðborgarsvæði
+description: ArcGIS Hub open-data site for Landupplýsingakerfi Kópavogs (LUK), publishing
+  municipal geospatial datasets for Kópavogur including property, infrastructure, and
+  public-service layers.
+endpoints:
+- type: dcatap201
+  url: https://opin-gogn-luk-lukk.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://opin-gogn-luk-lukk.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://opin-gogn-luk-lukk.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://opin-gogn-luk-lukk.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://opin-gogn-luk-lukk.hub.arcgis.com/sitemap.xml
+id: opingognluklukkhubarcgiscom
+langs:
+- id: IS
+  name: Icelandic
+- id: EN
+  name: English
+link: https://opin-gogn-luk-lukk.hub.arcgis.com/
+name: Opin gögn LUK Kópavogs
+owner:
+  link: https://www.kopavogur.is
+  location:
+    country:
+      id: IS
+      name: Iceland
+    level: 30
+    subregion:
+      id: IS-1
+      name: Höfuðborgarsvæði
+  name: Kópavogsbær
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- open data
+- government
+- has_api
+- Kópavogur
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: cdi00003090

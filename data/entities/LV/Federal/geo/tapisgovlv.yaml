@@ -15,11 +15,10 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: TAPIS nodrošina visu līmeņu teritorijas attīstības plānošanas dokumentu
-  (gan teksta, gan grafisko daļu) uzturēšanu, publicēšanu un datu apmaiņu ar citām
-  valsts informācijas sistēmām. Tā atbalsta arī teritorijas plānošanas procesu – sabiedrisko
-  apspriešanu, elektronisko pakalpojumu sniegšanu, kā arī dokumentu apriti starp iesaistītajām
-  pusēm.
+description: TAPIS (Teritorijas attīstības plānošanas informācijas sistēma) is the
+  national territorial-development planning system. It publishes planning documents
+  and related geospatial data for municipalities and the public, operated by the State
+  Digital Development Agency.
 endpoints:
 - type: wms111
   url: https://tapis.gov.lv/izpl/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -27,69 +26,14 @@ endpoints:
 - type: wms130
   url: https://tapis.gov.lv/izpl/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
   version: 1.3.0
-- type: wfs100
-  url: https://tapis.gov.lv/izpl/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wfs110
-  url: https://tapis.gov.lv/izpl/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
 - type: wfs200
   url: https://tapis.gov.lv/izpl/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
   version: 2.0.0
-- type: wcs100
-  url: https://tapis.gov.lv/izpl/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wcs110
-  url: https://tapis.gov.lv/izpl/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: https://tapis.gov.lv/izpl/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wcs11
-  url: https://tapis.gov.lv/izpl/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
-  version: '1.1'
-- type: wcs201
-  url: https://tapis.gov.lv/izpl/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
-  version: 2.0.1
-- type: wps100
-  url: https://tapis.gov.lv/izpl/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: tms100
-  url: https://tapis.gov.lv/izpl/geoserver/gwc/service/tms/1.0.0
-  version: 1.0.0
-- type: wmts100
-  url: https://tapis.gov.lv/izpl/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
-  version: 1.0.0
-- type: geoserver:version
-  url: https://tapis.gov.lv/izpl/geoserver/rest/about/version
-- type: geoserver:server-status
-  url: https://tapis.gov.lv/izpl/geoserver/rest/about/server-status
-- type: geoserver:settings
-  url: https://tapis.gov.lv/izpl/geoserver/rest/settings
-- type: geoserver:layers
-  url: https://tapis.gov.lv/izpl/geoserver/rest/layers
-- type: wms111
-  url: https://tapis.gov.lv/izpl/geoserver/wms?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wms130
-  url: https://tapis.gov.lv/izpl/geoserver/wms?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
-- type: wfs200
-  url: https://tapis.gov.lv/izpl/geoserver/wfs?service=WFS&version=2.0.0&request=GetCapabilities
-  version: 2.0.0
-- type: geoserver:version
-  url: https://tapis.gov.lv/izpl/rest/about/version
-- type: geoserver:server-status
-  url: https://tapis.gov.lv/izpl/rest/about/server-status
-- type: geoserver:settings
-  url: https://tapis.gov.lv/izpl/rest/settings
-- type: geoserver:layers
-  url: https://tapis.gov.lv/izpl/rest/layers
 id: tapisgovlv
 langs:
 - id: LV
   name: Latvian
-link: https://tapis.gov.lv/izpl/geoserver
+link: https://tapis.gov.lv
 name: Teritorijas attīstības plānošanas informācijas sistēma (TAPIS)
 owner:
   link: https://www.vdaa.gov.lv
@@ -110,17 +54,20 @@ rights:
   rights_type: inapplicable
   tos_url: null
 software:
-  id: geoserver
-  name: GeoServer
+  id: custom
+  name: Custom software
 status: active
 tags:
 - territorial development
 - planning
 - geospatial data
-- public consultation
-- electronic services
+- government
+- Latvia
 topics:
 - id: Planning / Cadastre
   name: Planning / Cadastre
   type: iso19115
-uid: temp00001601
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00035302

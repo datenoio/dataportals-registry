@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,26 +14,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: GovTech Thailand provides a centralized platform for government data
-  catalog, supporting data-driven decision making and digital transformation initiatives.
-endpoints:
-- type: ckan
-  url: https://govtech.in.th/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://govtech.in.th/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://govtech.in.th/api/3/action/package_list
-  version: '3'
-- type: dcat:n3
-  url: https://govtech.in.th/catalog.n3
-- type: dcat:ttl
-  url: https://govtech.in.th/catalog.ttl
-- type: dcat:xml
-  url: https://govtech.in.th/catalog.xml
-- type: dcat:jsonld
-  url: https://govtech.in.th/catalog.jsonld
+description: Former GovTech Thailand CKAN portal. The govtech.in.th host now refuses
+  connections and is no longer reachable.
 id: govtechinth
 langs:
 - id: TH
@@ -59,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
 - has_api

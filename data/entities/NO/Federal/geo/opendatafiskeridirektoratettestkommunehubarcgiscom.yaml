@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,38 +15,14 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: 'Åpne data Fiskeridirektoratet Velkommen til Fiskeridirektoratets åpne
-  data. Alle kan fritt finne, utforske og bruke våre data som tilbys her. Bruk skal
-  skje innenfor rammene av Norsk lisens for offentlige data (NLOD). Utforsk våre åpne
-  data Tare Grenser Vern Gyteområder Fiskeplasser Diverse Akvakultur Grenselinjer
-  Rømt oppdrettslaks Forekomsten av rømt oppdrettslaks i overvåkede vassdrag har ikke
-  fulgt
-
-  produksjonsøkningen og ligger nå på et lavere nivå enn før tusenårsskiftet. Påvirkning
-
-  over år har likevel ført til en genetisk innkryssing i en vesentlig andel av norske
-
-  villaksbestander. Dette betyr at det er nødvendig å redusere påvirkningen fra rømt
-
-  oppdrettslaks ytterligere. Utforsk våre applikasjoner Kontaktinformasjon postmottak@fiskeridir.no
-  Copyright 2023. Fiskeridirektoratet. Om oss Følg oss på'
-endpoints:
-- type: dcatap201
-  url: https://opendatafiskeridirektoratet-testkommune.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://opendatafiskeridirektoratet-testkommune.hub.arcgis.com/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://opendatafiskeridirektoratet-testkommune.hub.arcgis.com/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://opendatafiskeridirektoratet-testkommune.hub.arcgis.com/api/search/v1
-- type: sitemap
-  url: https://opendatafiskeridirektoratet-testkommune.hub.arcgis.com/sitemap.xml
+description: Test ArcGIS Hub of the Directorate of Fisheries. Production open data
+  is at open-data-fiskeridirektoratet-fiskeridir.hub.arcgis.com.
 id: opendatafiskeridirektoratettestkommunehubarcgiscom
 langs:
 - id: 'NO'
   name: Norwegian
 link: https://opendatafiskeridirektoratet-testkommune.hub.arcgis.com/
-name: Fiskeridirektoratets Geoportal
+name: Fiskeridirektoratet ArcGIS Hub (test)
 owner:
   link: https://www.fiskeridir.no
   location:
@@ -54,7 +30,7 @@ owner:
       id: 'NO'
       name: Norway
     level: 20
-  name: Fiskeridirektoratets
+  name: Fiskeridirektoratet
   type: Central government
 properties:
   has_doi: false
@@ -68,7 +44,7 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
 - fisheries
 - aquaculture

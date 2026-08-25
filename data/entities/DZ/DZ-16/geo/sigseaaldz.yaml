@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,30 +18,20 @@ coverage:
     subregion:
       id: DZ-16
       name: Alger
-description: Rest services for data catalog at SEAAL.
-endpoints:
-- type: arcgis:portals:self
-  url: https://sig.seaal.dz/portal/sharing/rest/portals/self?f=pjson
-- type: arcgis:rest:info
-  url: https://sig.seaal.dz/server/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://sig.seaal.dz/server/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://sig.seaal.dz/server/services?wsdl
-- type: arcgis:sitemap
-  url: https://sig.seaal.dz/server/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://sig.seaal.dz/server/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://sig.seaal.dz/server/rest/services?f=kmz
+description: Former ArcGIS Enterprise GIS catalog of the Société des Eaux et de
+  l'Assainissement d'Alger (SEAAL) for water and sanitation layers in Algiers. The
+  host sig.seaal.dz returned HTTP 404 for the portal and REST services directory
+  when last checked.
 id: sigseaaldz
 langs:
 - id: AR
   name: Arabic
+- id: FR
+  name: French
 link: https://sig.seaal.dz/server/rest/services
 name: SEAAL Data Catalog
 owner:
-  link: https://sig.seaal.dz/server/rest/services
+  link: https://www.seaal.dz
   location:
     country:
       id: DZ
@@ -50,7 +40,7 @@ owner:
     subregion:
       id: DZ-16
       name: Alger
-  name: SEAAL
+  name: Société des Eaux et de l'Assainissement d'Alger (SEAAL)
   type: Local government
 properties:
   has_doi: false
@@ -64,17 +54,25 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
-- ArcGIS
-- GIS
 - geospatial
+- water
+- sanitation
+- utilities
+- Algiers
 - government
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 - id: Environment
   name: Environment
   type: iso19115
-uid: temp00001429
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+uid: cdi00035549

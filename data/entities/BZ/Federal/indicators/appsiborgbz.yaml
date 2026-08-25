@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: BZ
+      name: Belize
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Official indicators portal of the Statistical Institute of Belize for
+  the Belize National Statistical System (BNSS). Built on Oracle APEX (application
+  134). This instance succeeded the former app.sib.org.bz:8443 site, which no longer
+  responds.
+endpoints:
+- type: customapi
+  url: https://bnss.sib.org.bz/ords/r/sib/bnss/
+id: appsiborgbz
+langs:
+- id: EN
+  name: English
+link: https://bnss.sib.org.bz
+name: Belize National Statistical System (BNSS)
+owner:
+  link: https://sib.org.bz
+  location:
+    country:
+      id: BZ
+      name: Belize
+    level: 20
+  name: Statistical Institute of Belize (SIB)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://sib.org.bz/about-us/privacy-policy/
+  rights_type: global
+  tos_url: null
+software:
+  id: oracleapex
+  name: Oracle APEX
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- indicators
+- has_api
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00004651

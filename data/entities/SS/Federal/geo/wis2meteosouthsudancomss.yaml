@@ -1,6 +1,5 @@
 access_mode:
 - open
-- limited
 api: true
 api_status: active
 catalog_type: Geoportal
@@ -16,21 +15,21 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: WIS 2.0 in a box node operated by South Sudan Meteorological Services.
-  Publishes meteorological observations and related datasets to the WMO Information
-  System for discovery and access.
+description: South Sudan Meteorological Services WIS 2.0 in a box node. Publishes
+  discovery metadata, station information, and SYNOP surface observations to the WMO
+  Information System through an OGC API Features / pygeoapi service.
 endpoints:
 - type: pygeoapi:openapi
-  url: http://wis2.meteosouthsudan.com.ss/oapi/openapi
+  url: https://wis2.meteosouthsudan.com.ss/oapi/openapi
   version: '1.0'
 - type: pygeoapi:collections
-  url: http://wis2.meteosouthsudan.com.ss/oapi/collections/?f=json
+  url: https://wis2.meteosouthsudan.com.ss/oapi/collections/?f=json
   version: '1.0'
 id: wis2meteosouthsudancomss
 langs:
 - id: EN
   name: English
-link: http://wis2.meteosouthsudan.com.ss
+link: https://wis2.meteosouthsudan.com.ss
 name: South Sudan - WIS 2.0 in a box
 owner:
   link: https://meteosouthsudan.com.ss
@@ -49,7 +48,7 @@ rights:
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: granular
+  rights_type: global
   tos_url: null
 software:
   id: wis20box
@@ -58,7 +57,10 @@ status: active
 tags:
 - meteorology
 - climate
+- weather
 - WIS2
+- government
+- has_api
 topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere

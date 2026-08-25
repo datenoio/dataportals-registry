@@ -14,11 +14,18 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Catálogo de Datos Abiertos. Explora más de 1507 conjuntos de datos de
-  más de 97 instituciones.
+description: National open data catalog of Ecuador (CKAN), publishing datasets from central
+  government institutions. The public site is often behind a WAF (HTTP 403 to automated clients).
 endpoints:
 - type: ckan
   url: https://datosabiertos.gob.ec/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datosabiertos.gob.ec/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datosabiertos.gob.ec/api/3/action/package_list
+  version: '3'
 id: catalogodatosabiertosgobec
 identifiers:
 - id: wikidata

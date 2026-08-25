@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,22 +15,12 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-endpoints:
-- type: csw202
-  url: https://gis.bgports.bg/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://gis.bgports.bg/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://gis.bgports.bg/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
 id: gisbgportsbg
 langs:
 - id: BG
   name: Bulgarian
 link: https://gis.bgports.bg/geonetwork
-name: DPPI GeoSpatial catalogue
+name: DPPI GeoSpatial Catalogue
 owner:
   link: https://www.bgports.bg
   location:
@@ -38,7 +28,7 @@ owner:
       id: BG
       name: Bulgaria
     level: 20
-  name: Bulgarian ports infrastructure company
+  name: Bulgarian Ports Infrastructure Company
   type: Business
 properties:
   has_doi: true
@@ -52,7 +42,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
 - has_api
@@ -67,5 +57,5 @@ topics:
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00002116
-description: Geoportal. managed by Bulgarian ports infrastructure company. powered
-  by Geonetwork. accessible at gis.bgports.bg.
+description: GeoNetwork catalogue of the Bulgarian Ports Infrastructure Company (DPPI).
+  The gis.bgports.bg host currently times out.

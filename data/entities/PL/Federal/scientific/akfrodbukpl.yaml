@@ -12,10 +12,11 @@ coverage:
       name: Poland
     level: 20
     macroregion:
-      id: '150'
-      name: Europe
-description: Scientific data repository. managed by awf.rodbuk.pl. powered by Dataverse.
-  accessible at akf.rodbuk.pl.
+      id: '151'
+      name: Eastern Europe
+description: RODBUK Dataverse node of the University of Physical Education in Krakow
+  (AWF Kraków) for depositing and sharing research data from sports science and
+  related disciplines.
 endpoints:
 - type: dataverseapi
   url: https://akf.rodbuk.pl/api/search
@@ -26,17 +27,19 @@ id: akfrodbukpl
 langs:
 - id: EN
   name: English
+- id: PL
+  name: Polish
 link: https://akf.rodbuk.pl
-name: awf.rodbuk.pl Scientific Data Repository
+name: RODBUK University of Physical Education in Krakow
 owner:
   location:
     country:
       id: PL
       name: Poland
     level: 20
-  name: awf.rodbuk.pl
+  name: University of Physical Education in Krakow
   type: Academy
-  link: https://rodbuk.pl
+  link: https://www.awf.krakow.pl
 properties:
   has_doi: false
 rights:
@@ -58,5 +61,8 @@ tags:
 topics:
 - id: TECH
   name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
   type: eudatatheme
 uid: cdi00010296

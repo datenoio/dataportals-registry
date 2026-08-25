@@ -50,7 +50,7 @@
           "schema" : {
             "country" : {"type" : "dict", "schema" : {  
               "id": {
-              "anyof": [{"type": "string"}, {"type": "integer"}],
+              "type": "string",
               "empty" : false
               },
               "name": {
@@ -131,7 +131,7 @@
   "tags": {
     "type": "list",
     "schema": {
-      "anyof": [{"type": "string"}, {"type": "dict"}]
+      "type": "string"
     }
   },
   "api": {
@@ -201,7 +201,7 @@
         "schema" : {
           "country" : {"type" : "dict", "schema" : {  
             "id": {
-            "anyof": [{"type": "string"}, {"type": "integer"}],
+            "type": "string",
             "empty" : false,
             "required" : true
           },
@@ -284,7 +284,7 @@
         "required": false
       },
       "dataset_count_reported": {
-        "anyof": [{"type": "integer"}, {"type": "string"}],
+        "type": "integer",
         "required": false
       }
     }

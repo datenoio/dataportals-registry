@@ -1,8 +1,8 @@
 access_mode:
 - open
-- limited
-api_status: active
-api: true
+- restricted
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - microdata
@@ -15,11 +15,10 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Survey Solutions Data Browser (beta) hosted by the National Bureau of
-  Statistics of Tanzania for browsing and accessing disseminated survey microdata.
-endpoints:
-- type: surveysolutions:catalog
-  url: https://suso.nbs.go.tz:11043/beta/databrowser/
+description: Historical Survey Solutions Data Browser (beta) hosted by the National
+  Bureau of Statistics of Tanzania. The suso.nbs.go.tz host timed out on HTTP, HTTPS,
+  and port 11043 on 24 August 2026. Public survey microdata remains on the NBS NADA
+  catalog at microdata.nbs.go.tz.
 id: susonbsgotzdatabrowser
 langs:
 - id: EN
@@ -49,12 +48,11 @@ rights:
 software:
   id: surveysolutions
   name: Survey Solutions
-status: active
+status: inactive
 tags:
 - government
 - microdata
 - statistics
-- public data
 - survey data
 - Tanzania
 - Survey Solutions

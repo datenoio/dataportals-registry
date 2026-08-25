@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Open data portal
 content_types:
@@ -13,8 +14,9 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: Overview of help and support documents, GIS and spatial data dashboards,
-  and resources on protected areas and invasive species management for Solomon Islands.
+description: National environment data portal for Solomon Islands in the SPREP Inform
+  network. Publishes public environmental datasets for download, monitoring, and
+  decision-making. Not a cross-government open data portal.
 endpoints:
 - type: dcatus11
   url: https://solomonislands-data.sprep.org/data.json
@@ -25,7 +27,7 @@ langs:
 link: https://solomonislands-data.sprep.org
 name: Solomon Islands Environment Data Portal
 owner:
-  link: https://sprep.org
+  link: https://www.sprep.org
   location:
     country:
       id: SB
@@ -50,14 +52,14 @@ software:
 status: active
 tags:
 - government
-- GIS
-- Protected Areas
-- Invasive Species
-- Management
-- Training
-- Blue Carbon
-- Spatial Data
-- Environmental Data
+- environment
+- climate
+- biodiversity
+- marine
+- SPREP
+- Inform project
+- Solomon Islands
+- has_api
 topics:
 - id: ENVI
   name: Environment
@@ -65,5 +67,19 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: cdi00001261
-api: true

@@ -1,0 +1,70 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: PedcBioPortal is a pediatric instance of cBioPortal for Cancer Genomics,
+  operated with the Gabriella Miller Kids First Data Resource Center. It hosts processed
+  childhood cancer genomics studies from consortia including the Children's Brain
+  Tumor Network and related pediatric programs. Login is required.
+endpoints:
+- type: cbioportal:studies
+  url: https://pedcbioportal.org/api/studies
+id: pedcbioportalorg
+langs:
+- id: EN
+  name: English
+link: https://pedcbioportal.org
+name: PedcBioPortal
+owner:
+  link: https://d3b.center/our-research/pedcbioportal/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-PA
+      name: Pennsylvania
+  name: Children's Hospital of Philadelphia
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: cbioportal
+  name: cBioPortal
+status: active
+tags:
+- scientific
+- cancer
+- genomics
+- biomedical data
+- health
+- pediatric
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990015

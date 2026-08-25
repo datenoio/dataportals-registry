@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MA
+      name: Massachusetts
+description: Public OMERO.web catalog at MIT for microscopy image projects and datasets.
+  The OMERO JSON API lists projects without requiring an institutional login.
+endpoints:
+- type: omero:projects
+  url: https://omero.mit.edu/api/v0/m/projects/
+id: omeromitedu
+langs:
+- id: EN
+  name: English
+link: https://omero.mit.edu/
+name: MIT OMERO
+owner:
+  link: https://web.mit.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MA
+      name: Massachusetts
+  name: Massachusetts Institute of Technology
+  type: Academy
+properties:
+  dataset_count_reported: 27
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: omero
+  name: OMERO
+status: active
+tags:
+- scientific
+- research data
+- academic
+- microscopy
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990020

@@ -18,33 +18,34 @@ coverage:
     subregion:
       id: AE-AZ
       name: Abū Z̧aby
-description: Official geospatial data portal for the Abu Dhabi Spatial Data Infrastructure
-  (SDI), providing REST endpoints for accessing fundamental geospatial datasets maintained
-  by relevant government organizations. The portal supports wide-ranging e-government
-  programs and features a metadata catalog for standardized access to data such as
-  cadastral, orthoimagery, elevation, transportation, land use, soils, and utility
-  networks.
+description: ArcGIS REST services of the Abu Dhabi Spatial Data Infrastructure, publishing
+  cadastral, imagery, elevation, transport, land-use, and utility layers for emirate
+  e-government programmes. The public discovery portal is sdi.gov.abudhabi.
 endpoints:
+- type: arcgis:portals:self
+  url: https://arcgis.sdi.abudhabi.ae/portal/sharing/rest/portals/self?f=pjson
 - type: arcgis:rest:info
-  url: https://arcgis.sdi.abudhabi.ae/arcgis/rest/info?f=pjson
+  url: https://arcgis.sdi.abudhabi.ae/agspublish/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: https://arcgis.sdi.abudhabi.ae/arcgis/rest/services?f=pjson
+  url: https://arcgis.sdi.abudhabi.ae/agspublish/rest/services?f=pjson
 - type: arcgis:soap
-  url: https://arcgis.sdi.abudhabi.ae/arcgis/services?wsdl
+  url: https://arcgis.sdi.abudhabi.ae/agspublish/services?wsdl
 - type: arcgis:sitemap
-  url: https://arcgis.sdi.abudhabi.ae/arcgis/rest/services?f=sitemap
+  url: https://arcgis.sdi.abudhabi.ae/agspublish/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: https://arcgis.sdi.abudhabi.ae/arcgis/rest/services?f=geositemap
+  url: https://arcgis.sdi.abudhabi.ae/agspublish/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: https://arcgis.sdi.abudhabi.ae/arcgis/rest/services?f=kmz
+  url: https://arcgis.sdi.abudhabi.ae/agspublish/rest/services?f=kmz
 id: arcgissdiabudhabiae
 langs:
 - id: AR
   name: Arabic
-link: https://arcgis.sdi.abudhabi.ae/arcgis/rest/services
+- id: EN
+  name: English
+link: https://arcgis.sdi.abudhabi.ae/agspublish/rest/services
 name: Abu Dhabi Spatial Data Infrastructure Geoportal
 owner:
-  link: https://www.abudhabi.ae
+  link: https://sdi.gov.abudhabi/sdi/
   location:
     country:
       id: AE
@@ -53,8 +54,8 @@ owner:
     subregion:
       id: AE-AZ
       name: Abū Z̧aby
-  name: Abu Dhabi Government (SDI and associated agencies)
-  type: Central government
+  name: Abu Dhabi Spatial Data Infrastructure
+  type: Regional government
 properties:
   has_doi: false
 rights:

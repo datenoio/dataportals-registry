@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -13,48 +14,46 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Data catalog of the Czech Army. This open data portal. managed by Czech
-  Telecommunication Office. provides access to datasets and resources.
-endpoints:
-- type: ckan:package-list
-  url: https://data.army.cz/api/3/action/package_list
-  version: '3'
-- type: dcatus11
-  url: https://data.army.cz/data.json
-id: datactucz
+description: Open data listing of the Ministry of Defence of the Czech Republic.
+  https://opendata.army.cz redirects to the ministry's published datasets page.
+  The former data.army.cz hostname no longer resolves.
+id: dataarmycz
 langs:
 - id: CS
   name: Czech
-link: https://data.army.cz
-name: CTU Open Data
+link: https://opendata.army.cz
+name: Otevřená data Ministerstva obrany
 owner:
-  link: https://www.army.cz
+  link: https://mocr.mo.gov.cz
   location:
     country:
       id: CZ
       name: Czech Republic
     level: 20
-  name: Czech Telecommunication Office
+  name: Ministerstvo obrany České republiky
   type: Central government
 properties:
   has_doi: false
-  transferable_topics: true
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: granular
+  rights_type: unknown
   tos_url: null
 software:
-  id: dkan
-  name: DKAN
+  id: custom
+  name: Custom software
 status: active
 tags:
 - government
+- defence
+- open data
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Intelligence / Military
   name: Intelligence / Military
   type: iso19115
 uid: cdi00000400
-api: true

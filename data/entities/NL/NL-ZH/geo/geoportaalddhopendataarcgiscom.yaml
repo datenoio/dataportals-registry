@@ -11,19 +11,14 @@ coverage:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: No actual catalog metadata or vocabularies were extracted from the given
-  URL, as the request is to extract structured data according to a schema from a catalog,
-  but the provided URL is the catalog homepage, not a metadata endpoint. No catalog
-  instance or dataset metadata is visible in the provided content. To extract actual
-  metadata, an API endpoint or structured data (e.g., DCAT JSON-LD, CSW XML) must
-  be provided or found within the website. The catalog at the given URL likely contains
-  datasets, but you must provide a direct metadata endpoint, a dataset-specific page,
-  or detailed scraping instructions to extract specific owner types, data themes,
-  and ISO19115 themes.
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+description: ArcGIS Open Data geoportal of the municipality of The Hague (Gemeente Den Haag).
 endpoints:
 - type: dcatap201
   url: https://geoportaal.ddh.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -38,9 +33,9 @@ langs:
 - id: NL
   name: Dutch
 link: https://geoportaal.ddh.opendata.arcgis.com
-name: Extract not possible with provided data
+name: Den Haag Geoportaal
 owner:
-  link: https://geoportaal.ddh.opendata.arcgis.com
+  link: https://www.denhaag.nl
   location:
     country:
       id: NL
@@ -49,7 +44,7 @@ owner:
     subregion:
       id: NL-ZH
       name: Zuid-Holland
-  name: Den Haag
+  name: Gemeente Den Haag
   type: Local government
 properties:
   has_doi: false

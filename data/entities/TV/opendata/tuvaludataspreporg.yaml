@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Open data portal
 content_types:
@@ -13,11 +14,10 @@ coverage:
     macroregion:
       id: '061'
       name: Polynesia
-description: Provides an easy way to find, access and reuse national environmental
-  data. The database can be used to store and access any data type including tables
-  (excel) documents (work and PDF), GIS files (.shp, .tab) and any other file type
-  including non-environmental datasets. The main purpose is to support environmental
-  monitoring, evaluation, analysis, planning, forecasting, and reporting at all levels.
+description: National environment data portal for Tuvalu in the SPREP Inform network.
+  Publishes public environmental datasets for download, monitoring, and decision-making,
+  including climate, biodiversity, coastal, and GIS files. Not a cross-government
+  open data portal.
 endpoints:
 - type: dcatus11
   url: https://tuvalu-data.sprep.org/data.json
@@ -28,7 +28,7 @@ langs:
 link: https://tuvalu-data.sprep.org
 name: Tuvalu Environment Data Portal
 owner:
-  link: https://sprep.org
+  link: https://www.sprep.org
   location:
     country:
       id: TV
@@ -54,11 +54,14 @@ status: active
 tags:
 - government
 - environment
+- climate
 - biodiversity
 - coastal
-- climate
-- protected_areas
 - gis
+- SPREP
+- Inform project
+- has_api
+- Tuvalu
 topics:
 - id: ENVI
   name: Environment
@@ -76,4 +79,3 @@ topics:
   name: Oceans
   type: iso19115
 uid: cdi00001263
-api: true

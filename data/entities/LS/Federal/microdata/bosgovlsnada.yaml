@@ -13,15 +13,17 @@ coverage:
       name: Lesotho
     level: 20
     macroregion:
-      id: 018
+      id: '018'
       name: Southern Africa
-description: NADA survey catalog of Lesotho's Bureau of Statistics, documented by
-  the Accelerated Data Program. The /nada path on bos.gov.ls now returns HTTP 404.
+description: Former NADA survey catalog of Lesotho's Bureau of Statistics, documented
+  by the Accelerated Data Program. The /nada path on bos.gov.ls returned HTTP 404
+  on 25 August 2026; the BOS site now points to the Open Data for Africa indicators
+  hub rather than a microdata archive.
 id: bosgovlsnada
 langs:
 - id: EN
   name: English
-link: http://www.bos.gov.ls/nada
+link: https://www.bos.gov.ls/nada
 name: Lesotho Bureau of Statistics National Data Archive
 owner:
   link: https://www.bos.gov.ls
@@ -52,6 +54,7 @@ tags:
 - statistics
 - surveys
 - official statistics
+- Lesotho
 topics:
 - id: SOCI
   name: Population and society

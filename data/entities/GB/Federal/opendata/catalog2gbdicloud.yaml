@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,34 +14,22 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: No information was scraped or provided from the actual website content
-  at https://catalog2.gbdi.cloud. Without access to the raw HTML, metadata, or structured
-  content from the provided URL, it is not possible to extract or infer data catalog
-  information such as owner types, data themes, or geo topic categories as required.
-endpoints:
-- type: ckan
-  url: https://catalog2.gbdi.cloud/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://catalog2.gbdi.cloud/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://catalog2.gbdi.cloud/api/3/action/package_list
-  version: '3'
+description: CKAN host catalog2.gbdi.cloud timed out when probed; gbdi.cloud currently
+  serves a placeholder landing page rather than a public catalogue.
 id: catalog2gbdicloud
 langs:
 - id: EN
   name: English
 link: https://catalog2.gbdi.cloud
-name: No extraction possible from URL content
+name: GBDI Catalog
 owner:
   location:
     country:
       id: GB
       name: United Kingdom
     level: 20
-  name: Gbdi
-  type: Central government
+  name: GBDI
+  type: Business
   link: https://gbdi.cloud
 rights:
   license_id: null
@@ -53,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - CKAN
 - government
@@ -63,4 +51,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00004786
+uid: cdi00035405

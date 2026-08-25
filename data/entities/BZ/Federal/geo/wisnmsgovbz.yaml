@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BZ
+      name: Belize
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: WIS2 in a Box node of the National Meteorological Service of Belize.
+  Publishes Belize hourly SYNOP observations and related meteorological collections
+  to the WMO Information System through OGC API (pygeoapi) endpoints.
+endpoints:
+- type: pygeoapi:openapi
+  url: https://wis.nms.gov.bz/oapi/openapi
+  version: '1.0'
+- type: pygeoapi:collections
+  url: https://wis.nms.gov.bz/oapi/collections/?f=json
+  version: '1.0'
+id: wisnmsgovbz
+langs:
+- id: EN
+  name: English
+link: https://wis.nms.gov.bz
+name: Belize WIS 2.0 in a Box
+owner:
+  link: https://nms.gov.bz
+  location:
+    country:
+      id: BZ
+      name: Belize
+    level: 20
+  name: National Meteorological Service of Belize
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: wis20box
+  name: Wis 2.0 Box
+status: active
+tags:
+- meteorology
+- climate
+- synoptic observations
+- WIS2
+- government
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00005088

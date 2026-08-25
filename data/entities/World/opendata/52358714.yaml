@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -10,36 +10,27 @@ coverage:
     country:
       id: World
       name: World
-    level: 10
+    level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
-description: No description available in search results.
-endpoints:
-- type: ckan
-  url: http://52.35.87.14/api/3
-  version: '3'
-- type: ckan:package-search
-  url: http://52.35.87.14/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://52.35.87.14/api/3/action/package_list
-  version: '3'
+description: Catalog host 52.35.87.14 did not respond on 25 August 2026
+  (timeout or connection refused). Operator and country are unconfirmed.
 id: '52358714'
 langs:
 - id: EN
   name: English
 link: http://52.35.87.14/
-name: Government of Unknown Open Data Portal
+name: Unidentified catalog (52.35.87.14)
 owner:
   link: http://52.35.87.14
   location:
     country:
       id: World
       name: World
-    level: 10
-  name: Government of Unknown
-  type: Central government
+    level: 20
+  name: Unidentified operator
+  type: Other
 rights:
   license_id: null
   license_name: null
@@ -50,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - CKAN
 - government
@@ -59,4 +50,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00000892
+uid: cdi00037083

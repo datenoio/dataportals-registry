@@ -4,7 +4,7 @@ api: false
 api_status: uncertain
 catalog_type: API Catalog
 content_types:
-- dataset
+- api endpoint
 coverage:
 - location:
     country:
@@ -14,21 +14,24 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Official API portal of the Government of Lithuania
+description: Official catalogue of public-sector APIs of Lithuania, operated alongside the national open
+  data portal.
 id: apigovlt
 langs:
 - id: LT
   name: Lithuanian
+- id: EN
+  name: English
 link: https://api.gov.lt
-name: Government of Lithuania API Catalog
+name: Lithuania Government API Catalog
 owner:
-  link: https://www.gov.lt
+  link: https://vssa.lrv.lt
   location:
     country:
       id: LT
       name: Lithuania
     level: 20
-  name: Government of Lithuania
+  name: Valstybės skaitmeninių sprendimų agentūra
   type: Central government
 rights:
   license_id: null
@@ -42,12 +45,12 @@ software:
   name: Custom software
 status: active
 tags:
+- government
 - API
-- Government
+- open data
 - Lithuania
-- Open Data
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00000440
+uid: cdi00035269

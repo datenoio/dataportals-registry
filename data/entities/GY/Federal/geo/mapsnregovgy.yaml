@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Ministry of Natural Resources GeoServer for Guyana. Publishes OGC WMS,
-  WFS, WCS, WPS, and WMTS services used alongside the GeoNode geoportal.
+description: Ministry of Natural Resources GeoServer for Guyana. Public OGC WMS,
+  WFS, WCS, WPS, and WMTS services used alongside the GeoNode geoportal. GeoServer
+  REST endpoints require authentication.
 endpoints:
 - type: wms111
   url: https://maps.nre.gov.gy/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -97,5 +98,17 @@ tags:
 topics:
 - id: Location
   name: Location
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
   type: iso19115
 uid: cdi00005122

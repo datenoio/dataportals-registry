@@ -8,27 +8,16 @@ content_types:
 - map_layer
 coverage:
 - location:
-    country: &id001
+    country:
       id: Africa
       name: Africa
-    level: 20
+    level: 10
     macroregion:
       id: '002'
       name: Africa
-description: This STAC contains the data used within the Africa Agriculture Adaptation Atlas project found here. This includes data related to climate hazards, crop production, crop exposure to climate hazards, demographics and more across Sub-Saharan Africa. Powered by STAC Browser.
-topics:
-- id: climate
-  name: Climate
-  type: general
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: Location
-  name: Location
-  type: iso19115
-- id: earth_observation
-  name: Earth observation
-  type: general
+description: Static STAC 1.0 catalog on Amazon S3 for the CGIAR African Agriculture Adaptation
+  Atlas. Climate-hazard, crop-production, exposure, and demographic layers for sub-Saharan
+  Africa, used by the Adaptation Atlas map application.
 endpoints:
 - type: stacserverapi
   url: https://digital-atlas.s3.amazonaws.com/stac/public_stac/catalog.json
@@ -41,16 +30,37 @@ name: African Agriculture Adaptation Atlas STAC catalog
 owner:
   link: https://adaptationatlas.cgiar.org
   location:
-    country: *id001
-    level: 20
-  name: African Agriculture Adaptation Atlas STAC catalog
-  type: Other
+    country:
+      id: Africa
+      name: Africa
+    level: 10
+  name: CGIAR (African Agriculture Adaptation Atlas)
+  type: International
+properties:
+  has_doi: false
 software:
-  id: stacbrowser
-  name: STAC Browser
+  id: stacserver
+  name: stac-server
 status: active
 tags:
+- STAC
+- Africa
 - geospatial
 - has_api
-- STAC
+- climate
+- agriculture
+- CGIAR
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
 uid: cdi00021417

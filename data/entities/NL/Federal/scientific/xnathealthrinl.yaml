@@ -1,0 +1,67 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Health-RI XNAT (BMIAXNAT) is the national medical imaging archive for
+  Dutch research projects. Guest users can browse the public project catalog; some
+  collections are downloadable and others require a data use agreement. Public projects
+  include EuCanImage/AFRICAI challenge datasets, AMYPAD, EPAD, the Erasmus Glioma
+  Database, MAMA-MIA, and the WORC radiomics database. The former xnat.bmia.nl host
+  redirects here.
+endpoints:
+- type: rest
+  url: https://xnat.health-ri.nl/data/projects
+id: xnathealthrinl
+langs:
+- id: EN
+  name: English
+- id: NL
+  name: Dutch
+link: https://xnat.health-ri.nl/
+name: Health-RI XNAT Medical Imaging Service
+owner:
+  link: https://www.health-ri.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: Health-RI
+  type: Other
+properties:
+  dataset_count_reported: 21
+software:
+  id: xnat
+  name: XNAT
+status: active
+tags:
+- scientific
+- research data
+- medical imaging
+- neuroimaging
+- Health-RI
+- has_api
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi99990047

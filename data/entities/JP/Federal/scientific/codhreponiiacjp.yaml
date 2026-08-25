@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: WEKO3 repository of the Center for Open Data in the Humanities, publishing humanities
+  research datasets.
+endpoints:
+- type: oaipmh20
+  url: https://codh.repo.nii.ac.jp/oai?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://codh.repo.nii.ac.jp/weko/sitemaps/sitemapindex.xml
+id: codhreponiiacjp
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::4511dccbea0a3350d8ff72c7648cd678
+  value: opendoar____::4511dccbea0a3350d8ff72c7648cd678
+langs:
+- id: JA
+  name: Japanese
+- id: EN
+  name: English
+link: https://codh.repo.nii.ac.jp/
+name: Humanities Research Data Repository
+owner:
+  link: https://codh.rois.ac.jp/index.html.en
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+  name: Center for Open Data in the Humanities
+  type: Academy
+software:
+  id: weko3
+  name: WEKO3
+status: active
+tags:
+- scientific
+- research data
+- academic
+- humanities
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00031862

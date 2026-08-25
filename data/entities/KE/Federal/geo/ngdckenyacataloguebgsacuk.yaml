@@ -15,11 +15,10 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: The authoritative repository of Kenyan Geoscientific data. The NGDC is
-  hosted by the Ministry of Petroleum and Mining and administered by the Directorate
-  of Geological Surveys. The NGDC is established as a one-stop-shop for geoscientific
-  data and information for Kenya, making data, documents, and maps available to stakeholders
-  with minimal bureaucracy.
+description: National Geoscientific Data Centre (NGDC) GeoNetwork catalogue for Kenya.
+  Hosted with the British Geological Survey and administered by the Directorate of
+  Geological Surveys as a one-stop shop for Kenyan geoscientific data, documents,
+  and maps.
 endpoints:
 - type: geonetwork:query
   url: https://ngdckenyacatalogue.bgs.ac.uk/geonetwork/srv/eng/q
@@ -44,13 +43,13 @@ langs:
 link: https://ngdckenyacatalogue.bgs.ac.uk/geonetwork
 name: NGDC Kenya Catalogue (GeoNetwork)
 owner:
-  link: https://www.petroleumandmining.go.ke
+  link: https://www.mining.go.ke
   location:
     country:
       id: KE
       name: Kenya
     level: 20
-  name: Kenya Ministry of Petroleum and Mining
+  name: Directorate of Geological Surveys
   type: Central government
 properties:
   has_doi: true
@@ -72,11 +71,8 @@ tags:
 - hydrogeology
 - geophysics
 - maps
-- topography
+- has_api
 topics:
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme

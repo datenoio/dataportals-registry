@@ -25,21 +25,23 @@ endpoints:
   url: https://repository.clarin.is/repository/oai/request?verb=Identify
   version: '2.0'
 - type: opensearch
-  url: https://repository.clarin.is:443/repository/xmlui/open-search/description.xml
+  url: https://repository.clarin.is/repository/xmlui/open-search/description.xml
 id: repositoryclarinis
 langs:
 - id: IS
   name: Icelandic
+- id: EN
+  name: English
 link: https://repository.clarin.is/repository
 name: CLARIN Iceland Repository
 owner:
-  link: https://www.government.is/ministries/ministry-of-education-science-and-culture/
+  link: https://www.arnastofnun.is/
   location:
     country:
       id: IS
       name: Iceland
     level: 20
-  name: Ministry of Education, Science and Culture (Iceland)
+  name: Árni Magnússon Institute for Icelandic Studies
   type: Academy
 properties:
   has_doi: true

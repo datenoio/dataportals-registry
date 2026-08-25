@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,35 +11,27 @@ coverage:
     country:
       id: World
       name: World
-    level: 10
+    level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
-description: OneMapServer is a geospatial data portal providing access to geographic
-  datasets and map layers through ArcGIS Server REST services. The portal offers a
-  comprehensive catalog of geospatial data resources accessible via REST API endpoints,
-  enabling users to discover, access, and integrate geographic information for mapping,
-  analysis, and application development purposes.
-endpoints:
-- type: arcgis:rest:info
-  url: http://218.4.157.242:8083/OneMapServer/rest/info?f=pjson
-- type: arcgis:soap
-  url: http://218.4.157.242:8083/OneMapServer/services?wsdl
+description: Catalog host 218.4.157.242:8083 did not respond on 25 August 2026
+  (timeout or connection refused). Operator and country are unconfirmed.
 id: '2184157242'
 langs:
 - id: EN
   name: English
 link: http://218.4.157.242:8083/OneMapServer/rest/services
-name: OneMapServer Data Catalog
+name: Unidentified catalog (218.4.157.242:8083)
 owner:
   link: http://218.4.157.242:8083/OneMapServer/rest/services
   location:
     country:
       id: World
       name: World
-    level: 10
-  name: Government of Unknown
-  type: Central government
+    level: 20
+  name: Unidentified operator
+  type: Other
 properties:
   has_doi: false
 rights:
@@ -52,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - GIS
 - FeatureServer
@@ -97,4 +89,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00005792
+uid: cdi00037316

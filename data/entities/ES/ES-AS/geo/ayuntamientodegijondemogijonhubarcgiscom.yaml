@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -26,17 +26,6 @@ description: 'Ayuntamiento de  Gijón GeoPortal de datos abiertos En este portal
   parte de nuestro equipo y te mantendremos informado de todas aquellas iniciativas
   de participación ciudadana así como todos los eventos y fechas importantes. ¡Participa!
   Community Hackathon - Flickr: ajturner @Esri España'
-endpoints:
-- type: dcatap201
-  url: https://ayuntamiento-de-gijon-demo-gijon.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://ayuntamiento-de-gijon-demo-gijon.hub.arcgis.com/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://ayuntamiento-de-gijon-demo-gijon.hub.arcgis.com/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://ayuntamiento-de-gijon-demo-gijon.hub.arcgis.com/api/search/v1
-- type: sitemap
-  url: https://ayuntamiento-de-gijon-demo-gijon.hub.arcgis.com/sitemap.xml
 id: ayuntamientodegijondemogijonhubarcgiscom
 langs:
 - id: EN
@@ -67,7 +56,7 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
 - arcgishub
 - geographic information

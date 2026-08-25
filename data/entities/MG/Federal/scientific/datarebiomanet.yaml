@@ -12,42 +12,60 @@ coverage:
       name: Madagascar
     level: 20
     macroregion:
-      id: '015'
-      name: Northern Africa
-description: IPT REBIOMA. scientific data repository. managed by Réseau de la Biodiversité
-  de Madagascar (REBIOMA). powered by IPT The Integrated Publishing Toolkit. accessible
-  at data.rebioma.net.
+      id: '014'
+      name: Eastern Africa
+description: Former GBIF Integrated Publishing Toolkit of the Réseau de la
+  Biodiversité de Madagascar (REBIOMA), a Wildlife Conservation Society Madagascar
+  and University of California, Berkeley project that published occurrence data
+  for conservation planning. The rebioma.net domain is parked (August 2026). GBIF
+  still lists the IPT installation.
 endpoints:
 - type: dcat:ttl
-  url: http://data.rebioma.net/dcat
+  url: http://data.rebioma.net/ipt/dcat
 - type: ipt:dataset
-  url: http://data.rebioma.net/inventory/dataset
+  url: http://data.rebioma.net/ipt/inventory/dataset
 - type: rss
-  url: http://data.rebioma.net/rss.do
+  url: http://data.rebioma.net/ipt/rss.do
   version: '2.0'
 id: datarebiomanet
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/publisher/a3789606-e6b8-4b4a-b058-44804d448633
+  value: a3789606-e6b8-4b4a-b058-44804d448633
 langs:
 - id: FR
   name: French
+- id: EN
+  name: English
 link: http://data.rebioma.net
 name: IPT REBIOMA
 owner:
-  link: http://www.rebioma.net
+  link: https://madagascar.wcs.org
   location:
     country:
       id: MG
       name: Madagascar
     level: 20
-  name: Réseau de la Biodiversité de Madagascar (REBIOMA)
-  type: Academy
+  name: Wildlife Conservation Society Madagascar
+  type: Civil society
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: deprecated
 tags:
 - GBIF
 - IPT
 - biodiversity
+- Madagascar
 - data publishing
 topics:
 - id: Biota

@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Catalogue contains all official national data that are in the scope of
-  the INSPIRE directive (European pan-european geographic data infrastructure).
+description: INSPIRE discovery catalogue of Geoportail Luxembourg, listing official
+  national datasets and services in the scope of the INSPIRE directive.
 endpoints:
 - type: geonetwork:query
   url: https://catalog.inspire.geoportail.lu/geonetwork/srv/eng/q
@@ -34,10 +34,6 @@ endpoints:
 - type: oaipmh20
   url: https://catalog.inspire.geoportail.lu/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
-- type: geonetwork:site
-  url: https://catalog.inspire.geoportail.lu/geonetwork/srv/api/site
-- type: opensearch
-  url: https://catalog.inspire.geoportail.lu/portal.opensearch
 id: cataloginspiregeoportaillu
 langs:
 - id: FR
@@ -46,16 +42,16 @@ langs:
   name: German
 - id: EN
   name: English
-link: https://catalog.inspire.geoportail.lu/geonetwork
-name: Geoportal of the Grand-Duchy of Luxembourg INSPIRE geocatalog
+link: https://catalog.inspire.geoportail.lu/geonetwork/srv/eng/catalog.search
+name: Geoportail Luxembourg INSPIRE geocatalogue
 owner:
-  link: https://gouvernement.lu
+  link: https://www.geoportail.lu
   location:
     country:
       id: LU
       name: Luxembourg
     level: 20
-  name: Government of Luxemburg
+  name: Administration du Cadastre et de la Topographie
   type: Central government
 properties:
   has_doi: true

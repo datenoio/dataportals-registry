@@ -13,11 +13,10 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: WIS 2.0 in a box provides a platform with the capabilities for centres
-  to integrate their data holdings and publish them to the WMO Information System
-  with a plug and play capability supporting data publishing, discovery and access
+description: WMO WIS 2.0 in a box node of the Republic Hydrometeorological Service of Serbia,
+  exposing hydrometeorological collections through the pygeoapi OpenAPI at /oapi.
 endpoints:
 - type: pygeoapi:openapi
   url: https://wis2.hidmet.gov.rs/oapi/openapi
@@ -29,6 +28,8 @@ id: wis2hidmetgovrs
 langs:
 - id: SR
   name: Serbian
+- id: EN
+  name: English
 link: https://wis2.hidmet.gov.rs
 name: Serbia - WIS 2.0 in a box
 owner:

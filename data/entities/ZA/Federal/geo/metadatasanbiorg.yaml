@@ -21,31 +21,31 @@ description: Metadata catalog for spatially referenced resources managed by SANB
   functions.
 endpoints:
 - type: geonetwork:query
-  url: http://metadata.sanbi.org/geonetwork/srv/eng/q
+  url: https://metadata.sanbi.org/geonetwork/srv/eng/q
 - type: csw202
-  url: http://metadata.sanbi.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://metadata.sanbi.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: opensearch
-  url: http://metadata.sanbi.org/geonetwork/srv/eng/portal.opensearch
+  url: https://metadata.sanbi.org/geonetwork/srv/eng/portal.opensearch
   version: '1.0'
 - type: oaipmh20
-  url: http://metadata.sanbi.org/geonetwork/srv/eng/oaipmh?verb=Identify
+  url: https://metadata.sanbi.org/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 id: metadatasanbiorg
 langs:
 - id: EN
   name: English
-link: http://metadata.sanbi.org/geonetwork/srv/eng/catalog.search#/search
+link: https://metadata.sanbi.org/geonetwork/srv/eng/catalog.search#/search
 name: SANBI Metadata Catalog
 owner:
-  link: http://metadata.sanbi.org
+  link: https://www.sanbi.org
   location:
     country:
       id: ZA
       name: South Africa
     level: 20
-  name: SANBI (South African National Biodiversity Institute)
-  type: Academy
+  name: South African National Biodiversity Institute
+  type: Central government
 properties:
   has_doi: true
 rights:
@@ -73,4 +73,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00000819
+uid: cdi00034882

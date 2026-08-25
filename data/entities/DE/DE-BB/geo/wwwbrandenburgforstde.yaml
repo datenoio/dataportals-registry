@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: DE-BB
       name: Brandenburg
-description: A geospatial data catalog providing access to forest-related GIS datasets
-  for the state of Brandenburg, Germany.
+description: GeoServer of Landesbetrieb Forst Brandenburg, publishing forest and
+  woodland spatial datasets for the state of Brandenburg.
 endpoints:
 - type: wfs100
   url: http://www.brandenburg-forst.de/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
@@ -62,9 +62,9 @@ langs:
 - id: DE
   name: German
 link: http://www.brandenburg-forst.de/geoserver
-name: Brandenburg Forst Geoserver
+name: Brandenburg Forst GeoServer
 owner:
-  link: http://www.brandenburg-forst.de/geoserver
+  link: https://forst.brandenburg.de
   location:
     country:
       id: DE
@@ -73,8 +73,7 @@ owner:
     subregion:
       id: DE-BB
       name: Brandenburg
-  name: Brandenburg State Forestry Office (or similar—exact name not specified on
-    the page, but by context)
+  name: Landesbetrieb Forst Brandenburg
   type: Regional government
 properties:
   has_doi: false

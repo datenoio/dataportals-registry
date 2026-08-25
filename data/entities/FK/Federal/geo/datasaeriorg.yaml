@@ -10,7 +10,7 @@ coverage:
 - location:
     country:
       id: FK
-      name: Falkland Islands (the) [Malvinas]   [l]
+      name: Falkland Islands
     level: 20
     macroregion:
       id: '005'
@@ -18,30 +18,52 @@ coverage:
 - location:
     country:
       id: SH
-      name: "Saint Helena \u00A0 \u00A0 Ascension Island \u00A0 \u00A0 Tristan da Cunha"
+      name: 'Saint Helena     Ascension Island     Tristan da Cunha'
     level: 20
     macroregion:
       id: '011'
       name: Western Africa
-description: This page displays the WebGIS projects that SAERI has helped develop.
-  For any queries, please contact datamanager@saeri.org. WebGIS data catalog providing
-  access to geospatial data and maps for the South Atlantic UK Overseas Territories
-  including Falkland Islands, Saint Helena, Ascension Island, and Tristan da Cunha.
+- location:
+    country:
+      id: MS
+      name: Montserrat
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+- location:
+    country:
+      id: TC
+      name: Turks and Caicos Islands
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: SAERI Lizmap WebGIS of published QGIS projects for South Atlantic UK
+  Overseas Territories. Includes Falkland Islands habitat, soils, energy, and museum
+  maps plus Saint Helena, Montserrat, and Turks and Caicos layers, with WMS and WMTS
+  services.
 endpoints:
 - type: lizmap:service
-  url: https://data.saeri.org/index.php/lizmap/service/
+  url: https://data.saeri.org/saeri_webgis/lizmap/www/index.php/lizmap/service/
+- type: wms130
+  url: https://data.saeri.org/saeri_webgis/lizmap/www/index.php/lizmap/service/?repository=04f&project=webGIS20170717&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: '1.3.0'
+- type: wmts100
+  url: https://data.saeri.org/saeri_webgis/lizmap/www/index.php/lizmap/service/?repository=04f&project=webGIS20170717&SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities
+  version: '1.0.0'
 id: datasaeriorg
 langs:
 - id: EN
   name: English
 link: https://data.saeri.org
-name: SAERI Data Portal
+name: SAERI WebGIS
 owner:
-  link: https://www.saeri.org
+  link: https://www.south-atlantic-research.org
   location:
     country:
       id: FK
-      name: Falkland Islands (the) [Malvinas]   [l]
+      name: Falkland Islands
     level: 20
   name: South Atlantic Environmental Research Institute (SAERI)
   type: Academy
@@ -59,19 +81,25 @@ software:
   name: Lizmap
 status: active
 tags:
-- WebGIS
-- Data catalogue
-- Research
-- Environmental data
-- Open data
-- lizmap
+- has_api
 - geospatial
+- lizmap
+- WebGIS
+- environment
+- marine
 - South Atlantic
 - UK Overseas Territories
+- Falkland Islands
 - SAERI
 topics:
 - id: ENVI
   name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENER
+  name: Energy
   type: eudatatheme
 - id: TECH
   name: Science and technology
@@ -79,5 +107,16 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-uid: temp00003276
-
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00035412

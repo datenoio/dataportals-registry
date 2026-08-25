@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Public ArcGIS REST catalog of Guinea's mining cadastre (titles, applications,
-  and geological layers). The Landfolio map UI is at https://guinee.cadastreminier.org/.
+description: ArcGIS Server 10.9.1 REST catalog backing Guinea's mining cadastre
+  (Landfolio geoprocessing services and SSRSMaps). The public Landfolio map UI is
+  at https://guinee.cadastreminier.org/.
 endpoints:
 - type: arcgis:rest:info
   url: https://cadastre.mines.gov.gn/arcgis/rest/info?f=pjson
@@ -67,6 +68,7 @@ tags:
 - spatial data
 - geographic information system
 - ArcGIS
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector

@@ -1,0 +1,82 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Microdata catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TD
+      name: Chad
+    level: 20
+    macroregion:
+      id: '017'
+      name: Middle Africa
+description: National Data Archive (ANAD) of INSEED Chad. NADA catalog of household
+  surveys, censuses, and other microdata with DDI metadata. Dataset documentation
+  is public; microdata access is request-based.
+endpoints:
+- type: nada:catalog-search
+  url: https://anad.inseed.td/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://anad.inseed.td/index.php/catalog/export/csv?ps=5000&collection[]
+id: anadinseedtd
+langs:
+- id: FR
+  name: French
+link: https://anad.inseed.td
+name: ANAD INSEED Tchad
+owner:
+  link: https://www.inseed.td
+  location:
+    country:
+      id: TD
+      name: Chad
+    level: 20
+  name: Institut National de la Statistique et des Études Économiques et Démographiques
+    (INSEED)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: nada
+  name: NADA
+status: active
+tags:
+- statistics
+- official
+- microdata
+- government
+- has_api
+- census
+- Chad
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00034945

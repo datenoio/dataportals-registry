@@ -15,38 +15,40 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: Official government geoportal of New Caledonia providing ArcGIS REST services
-  for geospatial data (territory mapping, utilities, DIMENC, DASS, DAM).
+description: Official ArcGIS Server REST catalog of the Government of New Caledonia.
+  Publishes territory mapping and sectoral geospatial services (utilities, DIMENC,
+  DASS, DAM).
 endpoints:
 - type: arcgis:rest:info
-  url: https://carto.gouv.nc/arcgis/rest/info?f=pjson
+  url: https://carto.gouv.nc/public/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: https://carto.gouv.nc/arcgis/rest/services?f=pjson
+  url: https://carto.gouv.nc/public/rest/services?f=pjson
 - type: arcgis:soap
-  url: https://carto.gouv.nc/arcgis/services?wsdl
+  url: https://carto.gouv.nc/public/services?wsdl
 - type: arcgis:sitemap
-  url: https://carto.gouv.nc/arcgis/rest/services?f=sitemap
+  url: https://carto.gouv.nc/public/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: https://carto.gouv.nc/arcgis/rest/services?f=geositemap
+  url: https://carto.gouv.nc/public/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: https://carto.gouv.nc/arcgis/rest/services?f=kmz
+  url: https://carto.gouv.nc/public/rest/services?f=kmz
 id: cartogouvnc
 langs:
 - id: FR
   name: French
 link: https://carto.gouv.nc/public/rest/services
-name: CARTO GOUV NC Public Services
+name: CARTO.GOUV.NC REST Services
 owner:
-  link: https://carto.gouv.nc
+  link: https://gouv.nc
   location:
     country:
       id: NC
       name: New Caledonia
     level: 20
-  name: Government of New Caledonia
+  name: Gouvernement de la Nouvelle-Calédonie
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -60,14 +62,18 @@ software:
 status: active
 tags:
 - geospatial
-- public
-- REST
+- government
+- has_api
+- New Caledonia
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
 - id: Environment
   name: Environment

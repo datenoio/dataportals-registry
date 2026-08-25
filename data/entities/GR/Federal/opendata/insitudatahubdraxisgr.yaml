@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,23 +12,10 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Open data geoportal providing access to geospatial datasets and research data
-  from DRAXIS Environmental S.A., a Greek environmental consulting and research organization.
-  The portal uses CKAN software to enable discovery, access, and reuse of open datasets for
-  research and public use. It serves as a comprehensive repository for environmental and
-  geoscientific information, supporting scientific research and data-driven decision making.
-endpoints:
-- type: ckan
-  url: http://insitu-datahub.draxis.gr/api/3
-  version: '3'
-- type: ckan:package-search
-  url: http://insitu-datahub.draxis.gr/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://insitu-datahub.draxis.gr/api/3/action/package_list
-  version: '3'
+description: Former DRAXIS Environmental S.A. CKAN data hub. The hostname no longer
+  resolves.
 id: insitudatahubdraxisgr
 identifiers:
 - id: dataportals.org
@@ -38,7 +25,7 @@ langs:
 - id: EL
   name: Greek
 link: http://insitu-datahub.draxis.gr
-name: Insitu-datahub Geoportal
+name: DRAXIS Insitu Data Hub
 owner:
   link: https://www.draxis.gr
   location:
@@ -46,8 +33,8 @@ owner:
       id: GR
       name: Greece
     level: 20
-  name: DRAXIS
-  type: Academy
+  name: DRAXIS Environmental S.A.
+  type: Business
 rights:
   license_id: null
   license_name: Varies by dataset
@@ -58,7 +45,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - Greece
 - ckan
@@ -90,4 +77,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-uid: temp00004540
+uid: cdi00035378

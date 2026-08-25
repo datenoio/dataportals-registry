@@ -13,10 +13,11 @@ coverage:
       name: Republic of North Macedonia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: GeoNetwork metadata catalog for geospatial data, operated by LRAMS (State
-  Authority for Geodetic Works / cadastre and land registry).
+description: GeoNetwork metadata catalogue (LRAMS) operated by the Agency for Real
+  Estate Cadastre. Discovery of cadastral and NSDI geospatial metadata via CSW, supporting
+  land registry and INSPIRE-oriented spatial data documentation.
 endpoints:
 - type: csw202
   url: http://metadata.lrams.mk/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -34,14 +35,17 @@ langs:
 link: http://metadata.lrams.mk/geonetwork
 name: LRAMS GeoNetwork (North Macedonia)
 owner:
+  link: https://www.katastar.gov.mk
   location:
     country:
       id: MK
       name: Republic of North Macedonia
     level: 20
-  name: State Authority for Geodetic Works
+  name: Agency for Real Estate Cadastre
   type: Central government
-  link: https://lrams.mk
+properties:
+  has_doi: false
+  is_national: true
 software:
   id: geonetwork
   name: GeoNetwork
@@ -49,8 +53,10 @@ status: active
 tags:
 - geospatial
 - cadastre
+- INSPIRE
+- metadata
+- has_api
 - North Macedonia
-uid: cdi00021774
 topics:
 - id: GOVE
   name: Government and public sector
@@ -64,3 +70,4 @@ topics:
 - id: Planning / Cadastre
   name: Planning / Cadastre
   type: iso19115
+uid: cdi00021774

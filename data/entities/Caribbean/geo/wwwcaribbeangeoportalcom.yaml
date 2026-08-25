@@ -11,12 +11,12 @@ coverage:
     country:
       id: Caribbean
       name: Caribbean
-    level: 0
+    level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: Caribbean GeoPortal powered by Esri. Regional hub for geospatial data
-  and map services across the Caribbean.
+description: Esri Caribbean GeoPortal, an open mapping community that publishes geospatial
+  datasets, maps, and insights across the Caribbean region.
 endpoints:
 - type: dcatap201
   url: https://www.caribbeangeoportal.com/api/feed/dcat-ap/2.0.1.json
@@ -26,13 +26,15 @@ endpoints:
   url: https://www.caribbeangeoportal.com/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://www.caribbeangeoportal.com/api/search/v1
+- type: dcatus11
+  url: https://www.caribbeangeoportal.com/data.json
 - type: sitemap
   url: https://www.caribbeangeoportal.com/sitemap.xml
 id: wwwcaribbeangeoportalcom
 langs:
 - id: EN
   name: English
-link: https://www.caribbeangeoportal.com/
+link: https://www.caribbeangeoportal.com
 name: Caribbean GeoPortal
 owner:
   link: https://www.esri.com
@@ -41,8 +43,17 @@ owner:
       id: US
       name: United States
     level: 20
-  name: ESRI
+  name: Esri
   type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
 software:
   id: arcgishub
   name: ArcGIS Hub
@@ -50,12 +61,15 @@ status: active
 tags:
 - Caribbean
 - GIS
-- geospatial data
+- geospatial
 - Esri
-uid: cdi00020991
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
   type: eudatatheme
 - id: Location
   name: Location
@@ -63,3 +77,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
+uid: cdi00020991

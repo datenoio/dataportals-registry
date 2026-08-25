@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,29 +14,18 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Geospatial data services provided via ArcGIS REST interface.
-endpoints:
-- type: arcgis:rest:info
-  url: https://envgis.eea.government.bg:6443/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://envgis.eea.government.bg:6443/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://envgis.eea.government.bg:6443/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://envgis.eea.government.bg:6443/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://envgis.eea.government.bg:6443/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://envgis.eea.government.bg:6443/arcgis/rest/services?f=kmz
+      name: Eastern Europe
+description: ArcGIS REST catalog of the Executive Environment Agency of Bulgaria.
+  The envgis.eea.government.bg host currently returns HTTP 503 and the ArcGIS port
+  times out.
 id: envgiseeagovernmentbg
 langs:
 - id: BG
   name: Bulgarian
 link: https://envgis.eea.government.bg:6443/arcgis/rest/services
-name: envgis.eea.government.bg ArcGIS REST Services
+name: Executive Environment Agency ArcGIS REST Services
 owner:
-  link: https://envgis.eea.government.bg
+  link: https://eea.government.bg
   location:
     country:
       id: BG
@@ -56,7 +45,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS
 - Bulgaria

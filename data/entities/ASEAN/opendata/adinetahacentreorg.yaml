@@ -14,8 +14,9 @@ coverage:
       id: '035'
       name: South-eastern Asia
 description: ASEAN Disaster Information Network (ADINet), the AHA Centre public repository
-  of verified hazard and disaster events in ASEAN member states since 2012, with searchable
-  reports, maps, and regional statistics.
+  of verified hazard and disaster events in ASEAN member states since 2012. The public
+  can submit reports that the AHA Centre verifies; users can search events by hazard
+  type and period, view maps, and download regional statistics.
 id: adinetahacentreorg
 langs:
 - id: EN
@@ -32,12 +33,14 @@ owner:
   name: ASEAN Coordinating Centre for Humanitarian Assistance on Disaster Management
     (AHA Centre)
   type: International
+properties:
+  has_doi: false
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: unknown
+  rights_type: global
   tos_url: null
 software:
   id: custom
@@ -58,6 +61,9 @@ topics:
   type: eudatatheme
 - id: HEAL
   name: Health
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
 - id: Environment
   name: Environment

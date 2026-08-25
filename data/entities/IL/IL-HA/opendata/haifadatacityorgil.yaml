@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,18 +17,9 @@ coverage:
     subregion:
       id: IL-HA
       name: H̱efa
-description: פורטל מידע פתוח של עיריית חיפה, מאגד נתונים בנושאים שונים כולל אוכלוסייה,
-  דמוגרפיה, ביטחון, תשתיות, בריאות, חינוך, סביבה, תכנון עיר, תחבורה, תרבות ותיירות.
-endpoints:
-- type: ckan:package-search
-  url: https://haifa.datacity.org.il/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://haifa.datacity.org.il/api/3/action/package_list
-  version: '3'
-- type: ckan
-  url: https://haifa.datacity.org.il/api/3
-  version: '3'
+description: Municipal CKAN open data portal of Haifa, covering population, infrastructure,
+  health, education, environment, planning, transport, culture, and tourism. The site
+  returned HTTP 502 at last review.
 id: haifadatacityorgil
 langs:
 - id: HE
@@ -45,7 +36,7 @@ owner:
     subregion:
       id: IL-HA
       name: H̱efa
-  name: Haifa city government
+  name: Haifa Municipality
   type: Local government
 properties:
   transferable_location: true
@@ -59,14 +50,12 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
-- has_api
 - open data
 - city data
 - Haifa
-- Israel
 topics:
 - id: REGI
   name: Regions and cities

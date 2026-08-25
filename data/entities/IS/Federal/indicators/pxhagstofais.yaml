@@ -13,26 +13,31 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Official statistics portal of Iceland providing access to statistical
-  data and indicators.
+description: Official PxWeb statistical database of Hagstofa Íslands (Statistics
+  Iceland), with tables and indicators in English and Icelandic.
 endpoints:
 - type: pxwebapi
   url: https://px.hagstofa.is/pxen/api/v1/en/
+  version: '1'
+- type: pxwebapi
+  url: https://px.hagstofa.is/pxis/api/v1/is/
   version: '1'
 id: pxhagstofais
 langs:
 - id: EN
   name: English
+- id: IS
+  name: Icelandic
 link: https://px.hagstofa.is/pxen
-name: Statistics Iceland Data Catalog
+name: PxWeb Statistics Iceland
 owner:
-  link: https://statice.is
+  link: https://hagstofa.is
   location:
     country:
       id: IS
       name: Iceland
     level: 20
-  name: Statistics Iceland
+  name: Hagstofa Íslands (Statistics Iceland)
   type: Central government
 properties:
   has_doi: false
@@ -58,9 +63,6 @@ topics:
   type: eudatatheme
 - id: ECON
   name: Economy and finance
-  type: eudatatheme
-- id: SOCI
-  name: Population and society
   type: eudatatheme
 - id: ENVI
   name: Environment

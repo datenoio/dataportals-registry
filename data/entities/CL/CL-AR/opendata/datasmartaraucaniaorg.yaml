@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,22 +17,12 @@ coverage:
     subregion:
       id: CL-AR
       name: La Araucanía
-description: Data catalog for the region of Araucanía, likely providing access to
-  regional datasets and metadata.
-endpoints:
-- type: ckan
-  url: https://data.smartaraucania.org/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://data.smartaraucania.org/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://data.smartaraucania.org/api/3/action/package_list
-  version: '3'
+description: Former CKAN open data catalog of the Araucanía Region. The catalog hostname
+  had no public DNS on 25 August 2026.
 id: datasmartaraucaniaorg
 langs:
-- id: EN
-  name: English
+- id: ES
+  name: Spanish
 link: https://data.smartaraucania.org/
 name: Smart Araucanía Data Catalog
 owner:
@@ -57,7 +47,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - CKAN
 - government
@@ -66,4 +56,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00000927
+uid: cdi00035716

@@ -16,7 +16,7 @@ coverage:
       id: '034'
       name: Southern Asia
 description: National Spatial Data Infrastructure of Sri Lanka ArcGIS Server REST
-  services directory, publishing geospatial map services including national basemaps,
+  services directory. Publishes geospatial map services including national basemaps,
   geonames, Colombo Municipal Council layers, Port City, and other SL-NSDI datasets.
 endpoints:
 - type: arcgis:portals:self
@@ -68,7 +68,17 @@ tags:
 - REST
 - NSDI
 - government
+- has_api
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115

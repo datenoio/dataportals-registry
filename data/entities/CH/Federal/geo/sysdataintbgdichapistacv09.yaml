@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,11 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Integration environment STAC catalog for the Swiss Federal Spatial Data
-  Infrastructure (data.geo.admin.ch), served as STAC 0.9 / OGC API Features.
-endpoints:
-- type: stacserverapi
-  url: https://sys-data.int.bgdi.ch/api/stac/v0.9/
+description: Integration-environment STAC 0.9 endpoint for the Swiss Federal Spatial
+  Data Infrastructure (sys-data.int.bgdi.ch), not the production data.geo.admin.ch API.
 id: sysdataintbgdichapistacv09
 langs:
 - id: EN
@@ -36,7 +33,7 @@ owner:
 software:
   id: stacserver
   name: stac-server
-status: active
+status: inactive
 tags:
 - geospatial
 - has_api

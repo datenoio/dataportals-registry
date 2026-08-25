@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,20 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Forest GIS data portal via ArcGIS REST Services
-endpoints:
-- type: arcgis:rest:info
-  url: https://gis.forest.go.th/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://gis.forest.go.th/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://gis.forest.go.th/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://gis.forest.go.th/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://gis.forest.go.th/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://gis.forest.go.th/arcgis/rest/services?f=kmz
+description: Former Royal Forest Department ArcGIS REST geoportal. The gis.forest.go.th
+  host no longer resolves (NXDOMAIN).
 id: gisforestgoth
 langs:
 - id: TH
@@ -56,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS REST Services
 - Forestry
@@ -78,4 +66,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00000675
+uid: cdi00034995

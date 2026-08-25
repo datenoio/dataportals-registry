@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: MedPortal is a repository for storing Chinese and English ontologies
+  in the biomedical field. Built using the OntoPortal framework, this repository offers
+  ontology search, browsing, sharing, and semantic annotation. It also provides various
+  forms of ontology and terminology reuse through an API.
+endpoints:
+- type: ontoportal:catalog
+  url: https://medportal.bmicc.cn/
+id: medportalbmicccn
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::2c8ed8587468aec2462a3914f154e570
+  value: fairsharing_::2c8ed8587468aec2462a3914f154e570
+langs:
+- id: ZH
+  name: Chinese
+link: https://medportal.bmicc.cn/
+name: MedPortal
+owner:
+  link: https://medportal.bmicc.cn
+  location:
+    country:
+      id: CN
+      name: China
+  name: Institute of Basic Medical Sciences and Peking Union Medical College Hospital,
+    Chinese Academy of Medical Sciences / Peking Union Medical College.
+  type: Academy
+software:
+  id: ontoportal
+  name: OntoPortal
+status: active
+tags:
+- scientific
+- research data
+- academic
+- health
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00029065

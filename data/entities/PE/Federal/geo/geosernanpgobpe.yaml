@@ -20,25 +20,25 @@ description: Visor de las Áreas Naturales Protegidas del Perú. Recopilación, 
   de la información del catastro oficial de las áreas naturales protegidas del Perú.
 endpoints:
 - type: wms111
-  url: http://geo.sernanp.gob.pe/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  url: https://geo.sernanp.gob.pe/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
 - type: wms130
-  url: http://geo.sernanp.gob.pe/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  url: https://geo.sernanp.gob.pe/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
   version: 1.3.0
 id: geosernanpgobpe
 langs:
 - id: ES
   name: Spanish
-link: http://geo.sernanp.gob.pe/geoserver
-name: GEO ANP - SERNANP Geoportal
+link: https://geo.sernanp.gob.pe/geoserver
+name: GEO ANP - Geoportal SERNANP
 owner:
-  link: http://geo.sernanp.gob.pe
+  link: https://www.gob.pe/sernanp
   location:
     country:
       id: PE
       name: Peru
     level: 20
-  name: SERNANP
+  name: Servicio Nacional de Áreas Naturales Protegidas por el Estado (SERNANP)
   type: Central government
 properties:
   has_doi: false
@@ -69,4 +69,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00003857
+uid: cdi00035083

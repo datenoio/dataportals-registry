@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,18 +17,8 @@ coverage:
     subregion:
       id: TW-TAO
       name: Taoyuan
-description: Official open data portal of Taoyuan City Government, Taiwan, powered
-  by CKAN.
-endpoints:
-- type: ckan
-  url: http://ckan.tycg.gov.tw/api/3
-  version: '3'
-- type: ckan:package-search
-  url: http://ckan.tycg.gov.tw/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://ckan.tycg.gov.tw/api/3/action/package_list
-  version: '3'
+description: Former Taoyuan City Government CKAN catalog. The ckan.tycg.gov.tw
+  hostname no longer resolves; current open data is at data.tycg.gov.tw.
 id: ckantycggovtw
 langs:
 - id: ZH
@@ -45,7 +35,7 @@ owner:
     subregion:
       id: TW-TAO
       name: Taoyuan
-  name: Taoyuan city government
+  name: Taoyuan City Government
   type: Regional government
 rights:
   license_id: null
@@ -57,10 +47,9 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
-- has_api
 topics:
 - id: REGI
   name: Regions and cities

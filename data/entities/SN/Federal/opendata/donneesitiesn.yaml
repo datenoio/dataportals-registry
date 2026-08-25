@@ -14,12 +14,16 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: L’Initiative pour la Transparence dans les Industries Extractives (ITIE)
-  est une norme internationale qui vise à améliorer la transparence dans la gestion
-  des revenus tirés de l’extraction des ressources minières, gazières, pétrolières.
+description: Open information system of Senegal's national EITI committee (ITIE Sénégal).
+  Publishes extractive-industry payments, licences, production, and beneficial-ownership
+  disclosures as WordPress pages and downloads. The wp-json REST API is public; there
+  is no CKAN or OpenDataSoft catalog API.
 endpoints:
+- type: rest
+  url: https://donnees.itie.sn/wp-json/
+  version: '2.0'
 - type: sitemap
-  url: https://donnees.itie.sn/sitemap.xml
+  url: https://donnees.itie.sn/wp-sitemap.xml
 id: donneesitiesn
 langs:
 - id: FR
@@ -33,8 +37,11 @@ owner:
       id: SN
       name: Senegal
     level: 20
-  name: Initiative pour la Transparence dans les Industries Extractives (ITIE)
-  type: Civil society
+  name: Comité National ITIE Sénégal
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -43,16 +50,32 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - EITI
+- extractives
+- mining
+- petroleum
+- open data
+- government
+- has_api
 - Senegal
-- Open Data
-- Dashboard
 topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: cdi00004245

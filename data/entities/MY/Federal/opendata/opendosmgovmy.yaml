@@ -14,19 +14,20 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Your one-stop interface to browse our wealth of open data. This page
-  will consistently grow in depth and breadth, providing richer and more varied data.
+description: OpenDOSM is the Department of Statistics Malaysia open data portal for
+  official statistics on population, the economy, agriculture, and related themes,
+  built on the data.gov.my platform.
 endpoints:
 - type: sitemap
   url: https://open.dosm.gov.my/sitemap.xml
 id: opendosmgovmy
 langs:
-- id: EN
-  name: English
+- id: MS
+  name: Malay
 - id: EN
   name: English
 link: https://open.dosm.gov.my
-name: Open DOSM (Statistics of Malaysia)
+name: OpenDOSM
 owner:
   link: https://www.dosm.gov.my
   location:
@@ -36,12 +37,15 @@ owner:
     level: 20
   name: Department of Statistics Malaysia
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: unknown
+  rights_type: granular
   tos_url: null
 software:
   id: datagovmy
@@ -55,6 +59,12 @@ tags:
 - population
 - agriculture
 topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
 - id: GOVE
   name: Government and public sector
   type: eudatatheme

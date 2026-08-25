@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,28 +15,27 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: The Spatial Agricultural Database for Egypt (SPADE) is a comprehensive
-  digital database for agricultural production and trade statistics in Egypt. It is
-  an easy-to-use tool, where users select an indicator to overlay on the map, including
-  development over time and all related description information.
-endpoints:
-- type: terria:config
-  url: https://spade.ifpri.org/config.json
+description: The Spatial Agricultural Database for Egypt (SPADE) was an IFPRI Terria
+  map catalog of more than 1,000 spatial and remote-sensing layers on agriculture,
+  agroecology, soil, water, demographics, and markets. The spade.ifpri.org hostname
+  no longer resolves.
 id: spadeifpriorg
 langs:
+- id: EN
+  name: English
 - id: AR
   name: Arabic
 link: https://spade.ifpri.org
 name: SPatial Agricultural Database for Egypt (SPADE)
 owner:
-  link: https://egyptssp.ifpri.info
+  link: https://www.ifpri.org
   location:
     country:
       id: EG
       name: Egypt
     level: 20
-  name: IFPRI Egypt Office
-  type: Central government
+  name: International Food Policy Research Institute (IFPRI)
+  type: International
 properties:
   has_doi: false
 rights:
@@ -49,16 +48,27 @@ rights:
 software:
   id: terria
   name: Terria
-status: active
+status: inactive
 tags:
-- Data analysis
-- Visualization
-- Flow cytometry
-- Molecular data
-- Multidimensional data
-- Research
+- agriculture
+- geospatial
+- remote sensing
+- ifpri
+- Egypt
 topics:
-- id: TECH
-  name: Science and technology
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
 uid: cdi00004731

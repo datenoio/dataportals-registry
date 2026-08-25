@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,43 +15,25 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Lithuanian national geoportal with a GeoNetwork catalog offering spatial
-  data provided by Lithuanian organizations. Data includes national spatial datasets
-  in GML format compliant with INSPIRE data specifications, as well as open data layers
-  such as cadastral, land cover, electoral districts, and more.
-endpoints:
-- type: geonetwork:query
-  url: https://www.geoportal.lt/geonetwork/srv/eng/q
-- type: geonetwork:records
-  url: https://www.geoportal.lt/geonetwork/srv/api/records
-- type: openapi
-  url: https://www.geoportal.lt/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: https://www.geoportal.lt/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://www.geoportal.lt/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://www.geoportal.lt/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+description: National Lithuanian spatial information portal (geoportal.lt) for discovering, viewing, and
+  downloading state geographic datasets. The former GeoNetwork metadata catalogue at /geonetwork is no
+  longer published; INSPIRE discovery remains on inspire-geoportal.lt.
 id: wwwgeoportallt
 langs:
 - id: LT
   name: Lithuanian
 - id: EN
   name: English
-link: https://www.geoportal.lt/geonetwork
-name: GIS-Centras metadata catalogue
+link: https://www.geoportal.lt
+name: geoportal.lt Lithuanian spatial information portal
 owner:
-  link: https://www.gis-centras.lt
+  link: https://www.registrucentras.lt
   location:
     country:
       id: LT
       name: Lithuania
     level: 20
-  name: VĮ Distancinių tyrimų ir geoinformatikos centras „GIS-Centras“
+  name: VĮ Registrų centras
   type: Central government
 properties:
   has_doi: true
@@ -64,20 +46,16 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: geonetwork
-  name: GeoNetwork
+  id: custom
+  name: Custom software
 status: active
 tags:
 - geospatial
 - government
-- has_api
 - INSPIRE
 - opendata
 - Lithuania
 topics:
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
 - id: REGI
   name: Regions and cities
   type: eudatatheme

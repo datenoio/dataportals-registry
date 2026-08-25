@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,38 +15,28 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Geoportal providing access to geospatial data and services related to
-  water resources, infrastructure, and water management in Honduras. Managed by SANAA
-  (Servicio Autónomo Nacional de Acueductos y Alcantarillados), the national water
-  and sanitation service.
-endpoints:
-- type: arcgis:rest:info
-  url: https://aguadehonduras.gob.hn/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://aguadehonduras.gob.hn/arcgis/rest/services?f=pjson
-- type: arcgis:sitemap
-  url: https://aguadehonduras.gob.hn/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://aguadehonduras.gob.hn/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://aguadehonduras.gob.hn/arcgis/rest/services?f=kmz
+description: Agua de Honduras is a SERNA/CIAT water-planning platform with hydrographic
+  delimitations, climate, soils, land cover, water demand and quality, floods, and
+  hydrology. The former ArcGIS REST services directory on this host is gone; the live
+  site is a custom catalog and decision-support tools at /catalogoinformacion.
 id: aguadehondurasgobhn
 langs:
 - id: ES
   name: Spanish
-link: https://aguadehonduras.gob.hn/arcgis/rest/services
-name: Agua de Honduras Geoportal
+link: https://aguadehonduras.gob.hn/catalogoinformacion
+name: Agua de Honduras
 owner:
-  link: https://aguadehonduras.gob.hn
+  link: https://serna.gob.hn
   location:
     country:
       id: HN
       name: Honduras
     level: 20
-  name: Servicio Autónomo Nacional de Acueductos y Alcantarillados (SANAA)
+  name: Secretaría de Recursos Naturales y Ambiente (SERNA)
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -55,19 +45,15 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: arcgisserver
-  name: ArcGIS Server
+  id: custom
+  name: Custom software
 status: active
 tags:
 - water resources
 - hydrology
-- water infrastructure
-- sanitation
-- GIS
 - geospatial
-- open data
 - Honduras
-- water management
+- government
 topics:
 - id: ENVI
   name: Environment

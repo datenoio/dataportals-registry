@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: false
-api_status: uncertain
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,9 +15,10 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Interactive geospatial portal presenting Myanmar’s marine physical environment,
-  oceanography, coastal and marine habitats, biodiversity, fisheries, and human pressures
-  for marine spatial planning.
+description: Former interactive geospatial portal for Myanmar marine spatial planning,
+  covering oceanography, coastal and marine habitats, biodiversity, fisheries, and
+  human pressures. The marine.myanmarbiodiversity.org host no longer responds (August
+  2026).
 id: marinemyanmarbiodiversityorg
 langs:
 - id: EN
@@ -25,7 +26,7 @@ langs:
 link: https://marine.myanmarbiodiversity.org/
 name: Myanmar Marine Spatial Planning Geoportal
 owner:
-  link: https://www.myanmarbiodiversity.org/
+  link: https://www.wcs.org
   location:
     country:
       id: MM
@@ -45,7 +46,7 @@ rights:
 software:
   id: custom
   name: Custom software
-status: active
+status: inactive
 tags:
 - geospatial
 - marine
@@ -58,5 +59,8 @@ topics:
   type: eudatatheme
 - id: Oceans
   name: Oceans
+  type: iso19115
+- id: Biota
+  name: Biota
   type: iso19115
 uid: cdi00027836

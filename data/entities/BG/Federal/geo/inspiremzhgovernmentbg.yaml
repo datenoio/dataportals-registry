@@ -14,9 +14,9 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: GeoServer instance hosted by the Bulgarian Ministry of Agriculture, Food
-  and Forestry, providing INSPIRE-compliant geospatial data services.
+      name: Eastern Europe
+description: GeoServer instance of the Ministry of Agriculture and Food of Bulgaria,
+  providing INSPIRE-compliant agricultural, forestry and rural geospatial services.
 endpoints:
 - type: wms111
   url: http://inspire.mzh.government.bg:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -68,15 +68,15 @@ langs:
 - id: BG
   name: Bulgarian
 link: http://inspire.mzh.government.bg:8080/geoserver
-name: INSPIRE GeoServer - Bulgaria Ministry of Agriculture, Food and Forestry
+name: INSPIRE GeoServer - Ministry of Agriculture and Food
 owner:
-  link: http://inspire.mzh.government.bg:8080/geoserver
+  link: https://www.mzh.government.bg
   location:
     country:
       id: BG
       name: Bulgaria
     level: 20
-  name: Ministry of Agriculture, Food and Forestry, Bulgaria
+  name: Ministry of Agriculture and Food
   type: Central government
 properties:
   has_doi: false
@@ -104,9 +104,9 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: Oceans
-  name: Oceans
-  type: iso19115
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
 - id: Biota
   name: Biota
   type: iso19115

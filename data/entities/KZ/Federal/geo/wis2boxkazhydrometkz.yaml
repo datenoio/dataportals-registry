@@ -15,24 +15,23 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: WIS 2.0 in a box provides a platform with the capabilities for centres
-  to integrate their data holdings and publish them to the WMO Information System
-  with a plug and play capability supporting data publishing, discovery and access
+description: WIS 2.0 in a Box node of Kazhydromet, publishing meteorological and
+  hydrological collections to the WMO Information System.
 endpoints:
 - type: pygeoapi:openapi
-  url: http://wis2box.kazhydromet.kz/oapi/openapi
+  url: https://wis2box.kazhydromet.kz/oapi/openapi
   version: '1.0'
 - type: pygeoapi:collections
-  url: http://wis2box.kazhydromet.kz/oapi/collections/?f=json
+  url: https://wis2box.kazhydromet.kz/oapi/collections/?f=json
   version: '1.0'
 id: wis2boxkazhydrometkz
 langs:
 - id: EN
   name: English
-link: http://wis2box.kazhydromet.kz
+link: https://wis2box.kazhydromet.kz
 name: Kazakhstan - WIS 2.0 in a box
 owner:
-  link: http://www.kazhydromet.kz
+  link: https://www.kazhydromet.kz
   location:
     country:
       id: KZ

@@ -13,15 +13,16 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Official national portal for Sustainable Development Goal indicators
-  of Azerbaijan, with goal-level statistics, national reports, and detailed search
-  across producing agencies.
+description: National Sustainable Development Goal (SDG) information portal of Azerbaijan
+  (DİM), operated by the State Statistical Committee. Publishes goal-level statistics,
+  a statistical database, reporting status, national reports, and search across producing
+  agencies, in Azerbaijani and English.
 id: sdgazstatgovaz
 langs:
-- id: EN
-  name: English
 - id: AZ
   name: Azerbaijani
+- id: EN
+  name: English
 link: https://sdg.azstat.gov.az
 name: Azerbaijan National SDG Information Portal
 owner:
@@ -33,6 +34,9 @@ owner:
     level: 20
   name: State Statistical Committee of the Republic of Azerbaijan
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -49,6 +53,7 @@ tags:
 - government
 - SDGs
 - Sustainable Development Goals
+- official statistics
 - Azerbaijan
 topics:
 - id: SOCI
@@ -59,6 +64,9 @@ topics:
   type: eudatatheme
 - id: ECON
   name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
 - id: Society
   name: Society

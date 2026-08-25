@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 0
+    macroregion:
+      id: '001'
+      name: World
+description: The MIBiG (Minimum Information about a Biosynthetic Gene Cluster) Repository
+  stores Biosynthetic Gene Clusters (BGC) that are manually curated through community efforts.
+  It is a central reference database for BGCs of known function, and provides the basis for
+  comparative analyses for a number of tools. It has enabled many computational analyses of
+  BGC function and novelty central to both small and large-scale studies of microbes and microbial
+  communities.
+endpoints:
+- type: customapi
+  url: https://mibig.secondarymetabolites.org/api/v1/stats
+id: mibigsecondarymetabolitesorg
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::b67fb3360ae5597d85a005153451dd4e
+  value: fairsharing_::b67fb3360ae5597d85a005153451dd4e
+langs:
+- id: EN
+  name: English
+link: https://mibig.secondarymetabolites.org/repository
+name: Minimum Information about a Biosynthetic Gene Cluster Repository
+owner:
+  link: https://www.biosustain.dtu.dk/
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+  name: Novo Nordisk Foundation Center for Biosustainability
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- biosynthetic gene clusters
+- secondary metabolites
+- genomics
+- microbiology
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00029828

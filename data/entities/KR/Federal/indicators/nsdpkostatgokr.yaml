@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: KR
+      name: South Korea
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: IMF SDDS National Summary Data Page for South Korea, hosted by Statistics
+  Korea. Disseminates macroeconomic and financial summary indicators with SDMX downloads
+  linked from the IMF Dissemination Standards Bulletin Board.
+endpoints:
+- type: imfnsdp:catalog
+  url: https://kostat.go.kr/imfDsbbArcPage.es?mid=a20302010000&page_code=EIDN001
+id: nsdpkostatgokr
+langs:
+- id: KO
+  name: Korean
+- id: EN
+  name: English
+link: https://kostat.go.kr/imfDsbbArcPage.es?mid=a20302010000&page_code=EIDN001
+name: South Korea National Summary Data Page
+owner:
+  link: https://kostat.go.kr
+  location:
+    country:
+      id: KR
+      name: South Korea
+    level: 20
+  name: Statistics Korea
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+software:
+  id: imfnsdp
+  name: IMF National Summary Data Page
+status: active
+tags:
+- NSDP
+- IMF
+- SDDS
+- statistics
+- government
+- official statistics
+- SDMX
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00037444

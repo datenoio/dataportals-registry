@@ -16,10 +16,15 @@ coverage:
       id: '017'
       name: Middle Africa
 description: National DHIS2 health information system of the Central African Republic
-  Ministry of Health. Login is required to query routine health indicators.
+  Ministry of Health and Population. The public UI redirects to login; authenticated
+  access is required to query routine health indicators.
 endpoints:
 - type: dhis2:catalog
   url: https://snis.sante.gouv.cf/dhis
+- type: dhis2:system-info
+  url: https://snis.sante.gouv.cf/dhis/api/system/info
+- type: dhis2:datasets
+  url: https://snis.sante.gouv.cf/dhis/api/dataSets.json?fields=id,displayName&pageSize=1
 id: snissantegouvcf
 langs:
 - id: FR
@@ -35,7 +40,7 @@ owner:
       id: CF
       name: Central African Republic (the)
     level: 20
-  name: Ministère de la Santé
+  name: Ministère de la Santé et de la Population
   type: Central government
 properties:
   has_doi: false
@@ -57,7 +62,7 @@ tags:
 - DHIS2
 - government
 - restricted
-- Central African Republic
+- has_api
 topics:
 - id: HEAL
   name: Health

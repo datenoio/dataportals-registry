@@ -1,0 +1,93 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LB
+      name: Lebanon
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: LB-BA
+      name: Bayrūt
+description: The Beirut Urban Observatory is a platform of geolocalized urban data
+  informing post-blast recovery. It builds on the Beirut Built Environment
+  Database (BBED), with downloadable layers for coordination, mapping, and an
+  inclusive urban recovery framework.
+endpoints:
+- type: dcatap201
+  url: https://beirut-urban-observatory-aub.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://beirut-urban-observatory-aub.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://beirut-urban-observatory-aub.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://beirut-urban-observatory-aub.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://beirut-urban-observatory-aub.hub.arcgis.com/sitemap.xml
+id: beiruturbanobservatoryaubhubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://beirut-urban-observatory-aub.hub.arcgis.com
+name: Beirut Urban Observatory
+owner:
+  link: https://beiruturbanlab.com
+  location:
+    country:
+      id: LB
+      name: Lebanon
+    level: 30
+    subregion:
+      id: LB-BA
+      name: Bayrūt
+  name: Beirut Urban Lab
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- has_api
+- urban
+- recovery
+- Beirut
+- infrastructure
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00002103

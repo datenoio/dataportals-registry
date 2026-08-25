@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -25,9 +25,9 @@ langs:
 - id: EN
   name: English
 link: https://gs-mv-dev.geoscience.nsw.gov.au/geoserver
-name: Geoserver MV (NSW Government)
+name: Geoscience NSW MinView GeoServer (development)
 owner:
-  link: https://gs-mv-dev.geoscience.nsw.gov.au/geoserver
+  link: https://www.resources.nsw.gov.au
   location:
     country:
       id: AU
@@ -36,8 +36,8 @@ owner:
     subregion:
       id: AU-NSW
       name: New South Wales
-  name: NSW Government
-  type: Central government
+  name: Geoscience NSW
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -50,7 +50,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - geoserver
 - NSW
@@ -75,7 +75,3 @@ topics:
   name: Economy
   type: iso19115
 uid: temp00005450
-endpoints:
-- type: wms130
-  url: https://gs-mv-dev.geoscience.nsw.gov.au/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0

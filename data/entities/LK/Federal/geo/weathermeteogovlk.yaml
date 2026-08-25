@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: Department of Meteorology, Weather portal ArcGIS server
+description: ArcGIS Server REST services of the Department of Meteorology, Sri Lanka.
+  Publishes weather and climate map services used by the national weather portal.
 endpoints:
 - type: arcgis:rest:info
   url: https://weather.meteo.gov.lk/server/rest/info?f=pjson
@@ -34,18 +35,19 @@ langs:
 - id: EN
   name: English
 link: https://weather.meteo.gov.lk/server/rest/services
-name: Sri Lanka weather portal ArcGIS server
+name: Sri Lanka Weather Portal ArcGIS Server
 owner:
-  link: https://www.meteo.gov.lk
+  link: https://meteo.gov.lk
   location:
     country:
       id: LK
       name: Sri Lanka
     level: 20
-  name: Department of Meteorology - Sri Lanka
+  name: Department of Meteorology
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -60,7 +62,9 @@ status: active
 tags:
 - weather
 - geospatial
-- services
+- meteorology
+- government
+- has_api
 topics:
 - id: ENVI
   name: Environment

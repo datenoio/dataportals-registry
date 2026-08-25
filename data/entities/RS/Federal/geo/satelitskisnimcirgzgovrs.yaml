@@ -14,11 +14,11 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
 description: Republic Geodetic Authority ERDAS APOLLO catalog of high-resolution satellite
-  imagery of Serbia. The web portal is registration-gated; OGC image services are
-  published from the APOLLO server.
+  imagery of Serbia. The web portal is registration-gated; OGC image services are published
+  from the APOLLO server.
 endpoints:
 - type: wms130
   url: https://satelitskisnimci.rgz.gov.rs/erdas-iws/ogc/wms/?SERVICE=WMS&REQUEST=GetCapabilities
@@ -27,6 +27,8 @@ id: satelitskisnimcirgzgovrs
 langs:
 - id: SR
   name: Serbian
+- id: EN
+  name: English
 link: https://satelitskisnimci.rgz.gov.rs/
 name: RGZ Satellite Imagery Catalog
 owner:

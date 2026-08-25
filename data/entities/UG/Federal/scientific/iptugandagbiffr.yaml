@@ -14,22 +14,22 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: IPT GBIF Uganda. scientific data repository. managed by National Fisheries
-  Resources Research Institute. powered by IPT The Integrated Publishing Toolkit.
-  accessible at ipt-uganda.gbif.fr.
+description: GBIF Integrated Publishing Toolkit for Uganda, operated with the National
+  Fisheries Resources Research Institute (NaFIRRI). Publishes biodiversity occurrence
+  datasets, including freshwater fish records, for indexing by GBIF.
 endpoints:
 - type: dcat:ttl
-  url: http://ipt-uganda.gbif.fr/dcat
+  url: https://ipt-uganda.gbif.fr/dcat
 - type: ipt:dataset
-  url: http://ipt-uganda.gbif.fr/inventory/dataset
+  url: https://ipt-uganda.gbif.fr/inventory/dataset
 - type: rss
-  url: http://ipt-uganda.gbif.fr/rss.do
+  url: https://ipt-uganda.gbif.fr/rss.do
   version: '2.0'
 id: iptugandagbiffr
 langs:
 - id: EN
   name: English
-link: http://ipt-uganda.gbif.fr
+link: https://ipt-uganda.gbif.fr
 name: IPT GBIF Uganda
 owner:
   link: http://www.firi.go.ug
@@ -49,6 +49,8 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- Uganda
+- has_api
 topics:
 - id: Biota
   name: Biota
@@ -56,7 +58,7 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: TECH
-  name: Science and technology
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
 uid: cdi00010384

@@ -12,32 +12,39 @@ coverage:
       name: Caribbean
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: TIER II OBIS node for the Caribbean region
+description: Ocean Biodiversity Information System (OBIS) Caribbean regional node
+  IPT, hosted with Universidad Simón Bolívar, publishing marine biodiversity datasets
+  for the Caribbean and providing training and technical advice in Spanish for the
+  wider region.
 endpoints:
 - type: dcat:ttl
-  url: http://ipt.iobis.org/caribbeanobis/dcat
+  url: https://ipt.iobis.org/caribbeanobis/dcat
 - type: ipt:dataset
-  url: http://ipt.iobis.org/caribbeanobis/inventory/dataset
+  url: https://ipt.iobis.org/caribbeanobis/inventory/dataset
 - type: rss
-  url: http://ipt.iobis.org/caribbeanobis/rss.do
+  url: https://ipt.iobis.org/caribbeanobis/rss.do
   version: '2.0'
 id: iptiobisorgcaribbeanobis
 langs:
 - id: EN
   name: English
-link: http://ipt.iobis.org/caribbeanobis
+- id: ES
+  name: Spanish
+link: https://ipt.iobis.org/caribbeanobis
 name: Caribbean OBIS node
 owner:
-  link: http://iobis.org/explore/#/node/23
+  link: https://obis.org/node/8385435b-bcf5-4bec-b827-8b480163d479
   location:
     country:
       id: Caribbean
       name: Caribbean
     level: 20
-  name: Caribbean OBIS Node
+  name: Caribbean OBIS Node (Universidad Simón Bolívar)
   type: Academy
+properties:
+  has_doi: false
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -45,11 +52,17 @@ status: active
 tags:
 - GBIF
 - IPT
+- OBIS
 - biodiversity
 - data publishing
+- Caribbean
+- has_api
 topics:
 - id: Biota
   name: Biota
+  type: iso19115
+- id: Oceans
+  name: Oceans
   type: iso19115
 - id: ENVI
   name: Environment

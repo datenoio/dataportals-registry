@@ -26,7 +26,7 @@ endpoints:
 - type: arcgis:rest:services
   url: https://geo.cajaviviendapopular.gov.co/arcgis/rest/services?f=pjson
 - type: arcgis:soap
-  url: https://geo.cajaviviendapopular.gov.co/arcgis/services?wsdl
+  url: https://geo.cajaviviendapopular.gov.co/arcgis/rest/services?wsdl
 - type: arcgis:sitemap
   url: https://geo.cajaviviendapopular.gov.co/arcgis/rest/services?f=sitemap
 - type: arcgis:geositemap
@@ -37,10 +37,10 @@ id: geocajaviviendapopulargovco
 langs:
 - id: ES
   name: Spanish
-link: https://geo.cajaviviendapopular.gov.co/arcgis/services
+link: https://geo.cajaviviendapopular.gov.co/arcgis/rest/services
 name: Caja de la Vivienda Popular Geoportal
 owner:
-  link: https://geo.cajaviviendapopular.gov.co/arcgis/services
+  link: https://geo.cajaviviendapopular.gov.co/arcgis/rest/services
   location:
     country:
       id: CO

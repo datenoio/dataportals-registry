@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Kenya GeoPortal powered by Esri. A centralized platform for geospatial
-  data and analytics in Kenya, supporting informed decision-making across sectors.
+description: Kenya country hub on Africa GeoPortal (Esri ArcGIS Hub). Publishes geospatial
+  datasets, maps, and applications covering Kenya.
 endpoints:
 - type: dcatap201
   url: https://kenya.africageoportal.com/api/feed/dcat-ap/2.0.1.json
@@ -26,6 +26,8 @@ endpoints:
   url: https://kenya.africageoportal.com/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://kenya.africageoportal.com/api/search/v1
+- type: dcatus11
+  url: https://kenya.africageoportal.com/data.json
 - type: sitemap
   url: https://kenya.africageoportal.com/sitemap.xml
 id: kenyaafricageoportalcom
@@ -58,10 +60,10 @@ software:
 status: active
 tags:
 - GIS
-- geospatial data
+- geospatial
 - Kenya
-- Eastern Africa
 - Esri
+- has_api
 topics:
 - id: REGI
   name: Regions and cities
@@ -69,7 +71,7 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Society
-  name: Society
+- id: Location
+  name: Location
   type: iso19115
 uid: cdi00020972

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,26 +12,22 @@ coverage:
       name: Bosnia and Herzegovina
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Open data and information that matters to the citizens of Bosnia and
-  Herzegovina
-endpoints:
-- type: ckan
-  url: http://app.podaci.gov.ba/api/3
-  version: '3'
-- type: ckan:package-search
-  url: http://app.podaci.gov.ba/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://app.podaci.gov.ba/api/3/action/package_list
-  version: '3'
+description: National CKAN open data portal of Bosnia and Herzegovina (Otvoreni podaci
+  BiH). The CKAN application at app.podaci.gov.ba currently returns HTTP 502; a Joomla
+  landing page remains at podaci.gov.ba as a pilot project for institutions of Bosnia
+  and Herzegovina.
 id: apppodacigovba
 langs:
+- id: BS
+  name: Bosnian
 - id: SR
   name: Serbian
+- id: EN
+  name: English
 link: http://app.podaci.gov.ba
-name: Otvoreni podaci Bosnia and Herzegovina
+name: Otvoreni podaci Bosne i Hercegovine
 owner:
   link: https://www.gov.ba
   location:
@@ -39,11 +35,10 @@ owner:
       id: BA
       name: Bosnia and Herzegovina
     level: 20
-  name: Council of Ministers of Bosnia and Herzegovina.
+  name: Council of Ministers of Bosnia and Herzegovina
   type: Central government
 properties:
   is_national: true
-  transferable_location: true
 rights:
   license_id: null
   license_name: null
@@ -54,22 +49,15 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
-- has_api
 - open data
 - Bosnia and Herzegovina
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
 - id: Society
   name: Society
   type: iso19115

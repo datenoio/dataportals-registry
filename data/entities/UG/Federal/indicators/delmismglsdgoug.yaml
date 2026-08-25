@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -14,11 +14,10 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Data portal for the Labour Market Information System (LMIS) of the Ministry
-  of Gender, Labour and Social Development, Uganda
-endpoints:
-- type: statsuite:search
-  url: https://sfs.lmis.mglsd.go.ug/api/search
+description: Former .Stat Suite data explorer for the Labour Market Information System
+  (LMIS) of the Ministry of Gender, Labour and Social Development. HTTPS on
+  de.lmis.mglsd.go.ug failed TLS SNI checks on 24 August 2026; HTTP served a generic
+  IIS default site, and the documented search API was not reachable.
 id: delmismglsdgoug
 langs:
 - id: EN
@@ -26,7 +25,7 @@ langs:
 link: https://de.lmis.mglsd.go.ug/
 name: LMIS Data Exchange Portal
 owner:
-  link: https://www.mglsd.go.ug
+  link: https://mglsd.go.ug
   location:
     country:
       id: UG
@@ -44,7 +43,7 @@ rights:
 software:
   id: statsuite
   name: .Stat Suite
-status: active
+status: inactive
 tags:
 - government
 - labour market

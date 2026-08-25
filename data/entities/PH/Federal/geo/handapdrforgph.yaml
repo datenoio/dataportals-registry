@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: ArcGIS REST services endpoint hosted on handa.pdrf.org.ph, providing
-  geospatial data services.
+description: ArcGIS REST services for disaster preparedness maps operated by the
+  Philippine Disaster Resilience Foundation (PDRF) on the Handa platform.
 endpoints:
 - type: arcgis:rest:info
   url: https://handa.pdrf.org.ph/arcgis/rest/info?f=pjson
@@ -32,10 +32,10 @@ endpoints:
   url: https://handa.pdrf.org.ph/arcgis/rest/services?f=kmz
 id: handapdrforgph
 langs:
-- id: TL
-  name: Tagalog
+- id: EN
+  name: English
 link: https://handa.pdrf.org.ph/arcgis/rest/services
-name: ArcGIS REST Services (Handa PDRF)
+name: Handa PDRF ArcGIS REST Services
 owner:
   link: https://handa.pdrf.org.ph/
   location:
@@ -43,7 +43,7 @@ owner:
       id: PH
       name: Philippines
     level: 20
-  name: Handa PDRF
+  name: Philippine Disaster Resilience Foundation
   type: Civil society
 properties:
   has_doi: false

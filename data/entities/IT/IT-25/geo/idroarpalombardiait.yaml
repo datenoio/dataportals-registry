@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Lombardia
 description: SIDRO G3W-SUITE hydrology WebGIS of ARPA Lombardia for consulting and
   managing regional water-related QGIS map projects.
+endpoints:
+- type: g3wsuite:catalog
+  url: https://idro.arpalombardia.it/
 id: idroarpalombardiait
 langs:
 - id: IT

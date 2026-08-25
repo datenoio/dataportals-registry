@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,44 +18,18 @@ coverage:
     subregion:
       id: SO-WO
       name: Woqooyi Galbeed
-description: No detailed information about the specific content or structure of this
-  data catalog was provided in the search results.
-endpoints:
-- type: geonode:layers
-  url: http://geoportalofhargeisa.org/api/layers/
-- type: geonode:documents
-  url: http://geoportalofhargeisa.org/api/documents/
-- type: geonode:dcatus11
-  url: http://geoportalofhargeisa.org/data.json
-- type: wms111
-  url: http://geoportalofhargeisa.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wfs110
-  url: http://geoportalofhargeisa.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: http://geoportalofhargeisa.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: csw202
-  url: http://geoportalofhargeisa.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: http://geoportalofhargeisa.org/catalogue/csw?mode=oaipmh&verb=Identify
-  version: '2.0'
-- type: wmts100
-  url: http://geoportalofhargeisa.org/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: opensearch
-  url: http://geoportalofhargeisa.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
-  version: '1.0'
+description: GeoNode geoportal of Hargeisa, Somaliland, established in 2020 by the
+  local NGO GIS & Cadastral Survey (GCS) with Map For Future. It published urban and
+  agricultural geospatial layers for Hargeisa and Wajaale. HTTP now redirects to HTTPS,
+  but the TLS handshake fails, so the catalogue is not publicly reachable.
 id: geoportalofhargeisaorg
 langs:
 - id: EN
   name: English
-link: http://geoportalofhargeisa.org
-name: Not specified in search results Geoportal
+link: https://geoportalofhargeisa.org
+name: Geoportal of Hargeisa
 owner:
-  link: http://geoportalofhargeisa.org
+  link: https://geoportalofhargeisa.org
   location:
     country:
       id: SO
@@ -64,8 +38,8 @@ owner:
     subregion:
       id: SO-WO
       name: Woqooyi Galbeed
-  name: Not specified in search results
-  type: Local government
+  name: GIS & Cadastral Survey (GCS)
+  type: Civil society
 properties:
   has_doi: false
 rights:
@@ -78,11 +52,13 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 tags:
-- GIS
 - geospatial
-- government
+- GIS
+- urban planning
+- Somaliland
+- Hargeisa
 topics:
 - id: Location
   name: Location
@@ -93,4 +69,10 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 uid: temp00000787

@@ -16,7 +16,7 @@ coverage:
       id: '013'
       name: Central America
 description: ArcGIS Server catalog of disaster-risk geospatial services operated by
-  SE-CONRED, including evacuation routes and base maps.
+  SE-CONRED, including evacuation routes, regional offices, and base maps.
 endpoints:
 - type: arcgis:rest:info
   url: https://sig.conred.gob.gt/server/rest/info?f=pjson
@@ -28,6 +28,8 @@ endpoints:
   url: https://sig.conred.gob.gt/server/rest/services?f=sitemap
 - type: arcgis:geositemap
   url: https://sig.conred.gob.gt/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://sig.conred.gob.gt/server/rest/services?f=kmz
 id: sigconredgobgt
 langs:
 - id: ES
@@ -54,6 +56,7 @@ tags:
 - Guatemala
 - CONRED
 - ArcGIS
+- has_api
 topics:
 - id: ENVI
   name: Environment

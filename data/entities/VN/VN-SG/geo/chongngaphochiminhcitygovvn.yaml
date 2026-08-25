@@ -11,11 +11,15 @@ coverage:
     country:
       id: VN
       name: Vietnam
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Data catalog of flood prevention information in Ho Chi Minh City
+    subregion:
+      id: VN-SG
+      name: Hồ Chí Minh
+description: ArcGIS Enterprise portal of Ho Chi Minh City for flood-prevention (chống
+  ngập) maps, sensors, and related geospatial services.
 endpoints:
 - type: arcgis:portals:self
   url: https://chongngap.hochiminhcity.gov.vn/portal/sharing/rest/portals/self?f=pjson
@@ -36,9 +40,9 @@ langs:
 - id: VN
   name: Vietnamese
 link: https://chongngap.hochiminhcity.gov.vn/server/rest/services
-name: Ho Chi Minh City Government Geoportal
+name: Ho Chi Minh City flood prevention geoportal
 owner:
-  link: https://chongngap.hochiminhcity.gov.vn
+  link: https://hochiminhcity.gov.vn
   location:
     country:
       id: VN
@@ -47,7 +51,7 @@ owner:
     subregion:
       id: VN-SG
       name: Hồ Chí Minh
-  name: Ho Chi Minh City Government
+  name: Ho Chi Minh City People's Committee
   type: Local government
 properties:
   has_doi: false
@@ -69,6 +73,7 @@ tags:
 - arcgisserver
 - Vietnam
 - provincial government
+- has_api
 topics:
 - id: ENVI
   name: Environment
@@ -82,4 +87,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00001085
+uid: cdi00034903

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,24 +15,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: GeoNetwork metadata catalog for Chilean cultural heritage
-endpoints:
-- type: geonetwork:query
-  url: https://geonetwork.patrimoniocultural.gob.cl/geonetwork/srv/eng/q
-- type: openapi
-  url: https://geonetwork.patrimoniocultural.gob.cl/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: https://geonetwork.patrimoniocultural.gob.cl/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://geonetwork.patrimoniocultural.gob.cl/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://geonetwork.patrimoniocultural.gob.cl/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
-- type: geonetwork:site
-  url: https://geonetwork.patrimoniocultural.gob.cl/geonetwork/srv/api/site
+description: Former GeoNetwork host geonetwork.patrimoniocultural.gob.cl for Chilean
+  cultural heritage metadata. The catalog URL returned HTTP 404 on 25 August 2026
+  The catalog remains at catalogo.patrimoniocultural.gob.cl.
 id: geonetworkpatrimonioculturalgobcl
 langs:
 - id: ES
@@ -58,7 +43,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
 - government

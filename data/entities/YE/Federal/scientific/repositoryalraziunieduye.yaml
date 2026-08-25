@@ -15,11 +15,14 @@ coverage:
       id: '145'
       name: Western Asia
 description: DSpace institutional repository of Al-Razi University (Sana'a) preserving
-  theses, dissertations, and faculty research publications.
+  theses, dissertations, and faculty research publications. XMLUI and JSPUI frontends
+  are indexed; the host is behind Cloudflare.
 endpoints:
 - type: oaipmh20
   url: https://repository.alraziuni.edu.ye/oai/request?verb=Identify
   version: '2.0'
+- type: sitemap
+  url: https://repository.alraziuni.edu.ye/xmlui/htmlmap
 id: repositoryalraziunieduye
 langs:
 - id: AR
@@ -37,6 +40,15 @@ owner:
     level: 20
   name: Al-Razi University
   type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: dspace
   name: DSpace
@@ -45,7 +57,10 @@ tags:
 - theses
 - institutional repository
 - research
+- open access
+- DSpace
 - Yemen
+- has_api
 topics:
 - id: TECH
   name: Science and technology
@@ -53,4 +68,7 @@ topics:
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
+- id: Education
+  name: Education
+  type: iso19115
 uid: cdi00025550

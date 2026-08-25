@@ -14,11 +14,15 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Malaysia's official open data portal. High frequency. High granularity.
-  High impact. Your one-stop centre to browse Malaysia's wealth of open data.
+description: Malaysia's official open data portal, publishing high-frequency public-sector
+  datasets and dashboards with a documented Open API for programmatic access.
 endpoints:
 - type: sitemap
   url: https://data.gov.my/sitemap.xml
+- type: docs
+  url: https://developer.data.gov.my
+- type: customapi
+  url: https://api.data.gov.my/data-catalogue
 id: datagovmy
 langs:
 - id: MS
@@ -26,7 +30,7 @@ langs:
 - id: EN
   name: English
 link: https://data.gov.my
-name: Malaysia official open data portal
+name: Malaysia Open Data Portal
 owner:
   link: https://www.gov.my
   location:

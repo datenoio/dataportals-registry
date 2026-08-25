@@ -28,7 +28,7 @@ endpoints:
   version: '3'
 id: pilotdatagovla
 langs:
-- id: LA
+- id: LO
   name: Lao
 - id: EN
   name: English
@@ -43,6 +43,10 @@ owner:
     level: 20
   name: Digital Government Administration Center, Ministry of Technology and Communications
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
+  dataset_count_reported: 10
 rights:
   license_id: null
   license_name: null
@@ -55,11 +59,15 @@ software:
   name: CKAN
 status: active
 tags:
-- Lao PDR
 - government
+- open data
 - has_api
-uid: cdi00020649
+- Laos
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00020649

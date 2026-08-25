@@ -21,6 +21,15 @@ endpoints:
 - type: oaipmh20
   url: http://repository.out.ac.tz/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://repository.out.ac.tz/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: eprints:rest
+  url: https://repository.out.ac.tz/rest/eprint
+- type: eprints:rdf
+  url: https://repository.out.ac.tz/cgi/export/repository/RDFXML/devel.rdf
+- type: opensearch
+  url: https://repository.out.ac.tz/cgi/opensearchdescription
 id: repositoryoutactz
 langs:
 - id: EN
@@ -56,6 +65,7 @@ tags:
 - university
 - eprints
 - Tanzania
+- has_api
 topics:
 - id: TECH
   name: Science and technology

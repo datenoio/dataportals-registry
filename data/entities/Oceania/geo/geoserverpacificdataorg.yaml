@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -12,10 +13,10 @@ coverage:
       name: Oceania
     level: 20
     macroregion:
-      id: 009
+      id: '009'
       name: Oceania
-description: GeoServer instance at PacificData.org to serve geospatial data for the
-  Pacific region.
+description: Pacific Data Hub GeoServer publishing OGC WMS and WFS layers for Pacific
+  Island countries and territories, operated by the Pacific Community (SPC).
 id: geoserverpacificdataorg
 langs:
 - id: EN
@@ -23,7 +24,7 @@ langs:
 link: https://geoserver.pacificdata.org
 name: GeoServer at Pacific Data Hub
 owner:
-  link: https://spc.int
+  link: https://www.spc.int
   location:
     country:
       id: Oceania
@@ -48,9 +49,6 @@ tags:
 - GIS
 - oceanography
 topics:
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme

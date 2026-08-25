@@ -17,17 +17,18 @@ coverage:
       name: Middle Africa
 description: National Data Archive (NADA) of the Central African Republic. IHSN NADA
   catalog of census and survey microdata curated by ICASEES, with 26 studies including
-  household, health, nutrition, and food-security surveys.
+  household, health, nutrition, and food-security surveys. Catalog metadata is public;
+  microdata access is requested through the Centre National des Données.
 endpoints:
 - type: nada:catalog-search
-  url: https://icasees.org/nada/index.php/api/catalog/search
+  url: https://www.icasees.org/nada/index.php/api/catalog/search
 - type: nada:csvexport
-  url: https://icasees.org/nada/index.php/catalog/export/csv?ps=5000&collection[]
+  url: https://www.icasees.org/nada/index.php/catalog/export/csv?ps=5000&collection[]
 id: icaseesorg
 langs:
 - id: FR
   name: French
-link: https://icasees.org/nada
+link: https://www.icasees.org/nada/index.php/catalog
 name: Portail National d'Archivage des Données de la République Centrafricaine
 owner:
   link: https://www.icasees.org
@@ -40,6 +41,7 @@ owner:
     (ICASEES)
   type: Central government
 properties:
+  dataset_count_reported: 26
   has_doi: false
   is_national: true
 rights:

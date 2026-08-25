@@ -23,9 +23,8 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: WIS 2.0 in a box provides a platform with the capabilities for centres
-  to integrate their data holdings and publish them to the WMO Information System
-  with a plug and play capability supporting data publishing, discovery and access
+description: Maroc Météo WIS 2.0 in a box node, publishing meteorological discovery
+  metadata and observation collections (including SYNOP) to the WMO Information System.
 endpoints:
 - type: pygeoapi:openapi
   url: https://wis2box.marocmeteo.ma/oapi/openapi
@@ -35,12 +34,16 @@ endpoints:
   version: '1.0'
 id: wis2boxmarocmeteoma
 langs:
+- id: AR
+  name: Arabic
+- id: FR
+  name: French
 - id: EN
   name: English
 link: https://wis2box.marocmeteo.ma
 name: Morocco - WIS 2.0 in a box
 owner:
-  link: http://www.marocmeteo.ma
+  link: https://www.marocmeteo.ma
   location:
     country:
       id: MA
@@ -65,7 +68,8 @@ tags:
 - weather
 - meteorology
 - WIS2box
-- Morocco
+- government
+- has_api
 topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere

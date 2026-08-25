@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DO
+      name: Republica Dominicana
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: ArcGIS Server of the Ministerio de Medio Ambiente y Recursos Naturales,
+  publishing REST map services for environmental, land-cover, and biodiversity layers
+  of the Dominican Republic.
+endpoints:
+- type: arcgis:rest:info
+  url: http://sig.ambiente.gob.do/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://sig.ambiente.gob.do/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://sig.ambiente.gob.do/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://sig.ambiente.gob.do/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://sig.ambiente.gob.do/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://sig.ambiente.gob.do/arcgis/rest/services?f=kmz
+id: sigambientegobdo
+langs:
+- id: ES
+  name: Spanish
+link: http://sig.ambiente.gob.do/arcgis/rest/services
+name: SIG Ambiente ArcGIS Server
+owner:
+  link: https://ambiente.gob.do
+  location:
+    country:
+      id: DO
+      name: Republica Dominicana
+    level: 20
+  name: Ministerio de Medio Ambiente y Recursos Naturales, República Dominicana
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- environment
+- land cover
+- biodiversity
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00005884

@@ -18,13 +18,13 @@ description: Institutional DSpace repository of Universidad de Los Andes, provid
   open access to research papers, theses, teaching materials, and university journals.
 endpoints:
 - type: oaipmh20
-  url: http://www.saber.ula.ve/oai/request?verb=Identify
+  url: https://saber.ula.ve/oai/request?verb=Identify
   version: '2.0'
 id: wwwsaberulave
 langs:
 - id: ES
   name: Spanish
-link: http://www.saber.ula.ve/
+link: https://saber.ula.ve/
 name: Saber ULA
 owner:
   link: https://www.ula.ve/
@@ -42,7 +42,7 @@ rights:
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: unknown
+  rights_type: granular
   tos_url: null
 software:
   id: dspace
@@ -54,6 +54,8 @@ tags:
 - research
 - theses
 - Venezuela
+- has_api
+- institutional repository
 topics:
 - id: TECH
   name: Science and technology

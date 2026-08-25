@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: GIS and mapping services provided by the Kenya National Highways Authority.
+description: ArcGIS Server REST catalog of the Kenya National Highways Authority (KeNHA)
+  for roads, highways, and related transport infrastructure mapping.
 endpoints:
 - type: arcgis:portals:self
   url: https://gis.kenha.co.ke/portal/sharing/rest/portals/self?f=pjson
@@ -32,6 +33,10 @@ endpoints:
 - type: arcgis:kmz
   url: https://gis.kenha.co.ke/arcgis/rest/services?f=kmz
 id: giskenhacoke
+identifiers:
+- id: url
+  url: https://gis.kenha.co.ke/arcgis/rest/services
+  value: https://gis.kenha.co.ke/arcgis/rest/services
 langs:
 - id: EN
   name: English
@@ -48,16 +53,12 @@ owner:
     level: 20
   name: Kenya National Highways Authority
   type: Central government
-identifiers:
-- id: url
-  url: https://gis.kenha.co.ke/arcgis/rest/services
-  value: https://gis.kenha.co.ke/arcgis/rest/services
 properties:
   has_doi: false
 rights:
   license_id: null
-  license_name: Open Data
-  license_url: https://opendefinition.org/licenses/odc-odbl/
+  license_name: null
+  license_url: null
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -70,7 +71,8 @@ tags:
 - highways
 - infrastructure
 - GIS
-- public sector
+- government
+- has_api
 topics:
 - id: TRAN
   name: Transport
@@ -78,16 +80,10 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
 - id: Transportation
   name: Transportation
   type: iso19115
 - id: Structure
   name: Structure
-  type: iso19115
-- id: Location
-  name: Location
   type: iso19115
 uid: temp00001728

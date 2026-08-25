@@ -1,52 +1,49 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
 coverage:
 - location:
     country:
-      id: World
-      name: World
-    level: 0
+      id: Oceania
+      name: Oceania
+    level: 20
     macroregion:
-      id: '001'
-      name: World
-description: This IPT is hosted by SPREP to publish relevant datasets to GBIF
-endpoints:
-- type: dcat:ttl
-  url: https://ipt.sprep.org/dcat
-- type: ipt:dataset
-  url: https://ipt.sprep.org/inventory/dataset
-- type: rss
-  url: https://ipt.sprep.org/rss.do
-  version: '2.0'
+      id: '009'
+      name: Oceania
+description: GBIF Integrated Publishing Toolkit hosted by the Secretariat of the Pacific
+  Regional Environment Programme (SPREP) to publish Pacific biodiversity datasets
+  to GBIF. The hostname returns Cloudflare HTTP 526 (invalid origin SSL) as of August
+  2026 and does not currently serve IPT inventory or DCAT endpoints.
 id: iptspreporg
 langs:
 - id: EN
   name: English
 link: https://ipt.sprep.org
-name: Secretariat of the Pacific Regional Environment Programme (SPREP)
+name: SPREP GBIF IPT
 owner:
-  link: https://www.sprep.org/
+  link: https://www.sprep.org
   location:
     country:
-      id: World
-      name: World
-    level: 0
-  name: Secretariat of the Pacific Regional Environment Programme
-  type: Academy
+      id: Oceania
+      name: Oceania
+    level: 20
+  name: Secretariat of the Pacific Regional Environment Programme (SPREP)
+  type: International
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT
 - biodiversity
 - data publishing
+- Pacific
+- SPREP
 topics:
 - id: Biota
   name: Biota

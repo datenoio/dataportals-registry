@@ -18,62 +18,63 @@ coverage:
     subregion:
       id: PH-BUK
       name: Bukidnon
-description: Geospatial data catalog for Bukidnon, Philippines, hosted by the province's
-  official GeoServer, providing access to web mapping services and geospatial information.
+description: GeoServer instance serving OGC map and feature services for the Provincial
+  Government of Bukidnon. The public catalog UI is the PGB GIS Portal on gisportal.bukidnon.gov.ph;
+  OWS capabilities respond on that host.
 endpoints:
 - type: wms111
-  url: https://geoserver.bukidnon.gov.ph/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  url: https://gisportal.bukidnon.gov.ph/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
 - type: wms130
-  url: https://geoserver.bukidnon.gov.ph/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  url: https://gisportal.bukidnon.gov.ph/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
   version: 1.3.0
 - type: wfs100
-  url: https://geoserver.bukidnon.gov.ph/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  url: https://gisportal.bukidnon.gov.ph/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
 - type: wfs110
-  url: https://geoserver.bukidnon.gov.ph/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  url: https://gisportal.bukidnon.gov.ph/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
   version: 1.1.0
 - type: wfs200
-  url: https://geoserver.bukidnon.gov.ph/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  url: https://gisportal.bukidnon.gov.ph/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
   version: 2.0.0
 - type: wcs100
-  url: https://geoserver.bukidnon.gov.ph/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  url: https://gisportal.bukidnon.gov.ph/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
 - type: wcs110
-  url: https://geoserver.bukidnon.gov.ph/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  url: https://gisportal.bukidnon.gov.ph/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
   version: 1.1.0
 - type: wcs111
-  url: https://geoserver.bukidnon.gov.ph/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  url: https://gisportal.bukidnon.gov.ph/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
 - type: wcs11
-  url: https://geoserver.bukidnon.gov.ph/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  url: https://gisportal.bukidnon.gov.ph/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
   version: '1.1'
 - type: wcs201
-  url: https://geoserver.bukidnon.gov.ph/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  url: https://gisportal.bukidnon.gov.ph/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
   version: 2.0.1
 - type: wps100
-  url: https://geoserver.bukidnon.gov.ph/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  url: https://gisportal.bukidnon.gov.ph/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
 - type: tms100
-  url: https://geoserver.bukidnon.gov.ph/geoserver/gwc/service/tms/1.0.0
+  url: https://gisportal.bukidnon.gov.ph/geoserver/gwc/service/tms/1.0.0
   version: 1.0.0
 - type: wms-c111
-  url: https://geoserver.bukidnon.gov.ph/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  url: https://gisportal.bukidnon.gov.ph/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
 - type: wmts100
-  url: https://geoserver.bukidnon.gov.ph/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
+  url: https://gisportal.bukidnon.gov.ph/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 - type: csw202
-  url: https://geoserver.bukidnon.gov.ph/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
+  url: https://gisportal.bukidnon.gov.ph/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
   version: 2.0.2
 id: geoserverbukidnongovph
 langs:
-- id: TL
-  name: Tagalog
-link: https://geoserver.bukidnon.gov.ph/geoserver/web/
-name: Local Government of Open Data Geoportal
+- id: EN
+  name: English
+link: https://gisportal.bukidnon.gov.ph/geoserver
+name: Provincial Government of Bukidnon GeoServer
 owner:
-  link: https://geoserver.bukidnon.gov.ph
+  link: https://bukidnon.gov.ph
   location:
     country:
       id: PH
@@ -82,7 +83,7 @@ owner:
     subregion:
       id: PH-BUK
       name: Bukidnon
-  name: Local Government of Open Data
+  name: Provincial Government of Bukidnon
   type: Local government
 properties:
   has_doi: false
@@ -111,4 +112,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00001834
+uid: cdi00035097

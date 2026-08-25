@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: Moana Data Service geospatial catalog from Kahuto Pacific, including
-  LiDAR, imagery, and terrain datasets for Fiji and the Pacific. Export to CAD, GIS,
+description: Moana Data Service geospatial catalog from Kahuto Pacific, publishing
+  LiDAR, orthophoto, DEM/DSM, contours, building outlines, roads, and waterways for
+  Fiji project areas including Nadi, Suva, Lautoka, and Rakiraki. Export to CAD, GIS,
   PDF, CSV and access via API.
 endpoints:
 - type: koordinates:data-catalog
@@ -40,6 +41,7 @@ owner:
   name: Kahuto Pacific
   type: Business
 properties:
+  dataset_count_reported: 43
   has_doi: false
 rights:
   license_id: null
@@ -58,8 +60,8 @@ tags:
 - lidar
 - imagery
 - elevation
-- pacific
 - fiji
+- has_api
 topics:
 - id: ENVI
   name: Environment
@@ -70,8 +72,11 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-- id: Oceans
-  name: Oceans
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Structure
+  name: Structure
   type: iso19115
 - id: Environment
   name: Environment

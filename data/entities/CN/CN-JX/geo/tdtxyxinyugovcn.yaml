@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,14 +11,15 @@ coverage:
     country:
       id: CN
       name: China
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
-description: GIS and mapping data services, accessible via REST API
-endpoints:
-- type: arcgis:rest:info
-  url: https://tdtxy.xinyu.gov.cn:6443/arcgis/rest/services/info?f=pjson
+    subregion:
+      id: CN-JX
+      name: Jiangxi Sheng
+description: Xinyu Tianditu / ArcGIS REST map services. The tdtxy.xinyu.gov.cn host
+  no longer resolves.
 id: tdtxyxinyugovcn
 langs:
 - id: ZH
@@ -35,7 +36,7 @@ owner:
     subregion:
       id: CN-JX
       name: Jiangxi Sheng
-  name: Local Government of ArcGIS
+  name: Xinyu Bureau of Natural Resources and Planning
   type: Local government
 properties:
   has_doi: false
@@ -49,7 +50,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS
 - China
@@ -68,4 +69,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005780
+uid: cdi00035712

@@ -18,43 +18,32 @@ coverage:
     subregion:
       id: AE-AZ
       name: Abū Z̧aby
-description: A data catalog providing environmental data services via ArcGIS REST
-  API endpoints.
+description: ArcGIS REST services of the Environment Agency – Abu Dhabi Environmental
+  Data Portal (EDP), successor to Enviroportal, publishing habitat, monitoring, and
+  other environmental layers.
 endpoints:
-- type: arcgis:portals:self
-  url: https://enviroportal.ead.ae/portal/sharing/rest/portals/self?f=pjson
 - type: arcgis:rest:info
-  url: https://enviroportal.ead.ae/server/rest/info?f=pjson
+  url: https://edp.ead.ae/server/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: https://enviroportal.ead.ae/server/rest/services?f=pjson
+  url: https://edp.ead.ae/server/rest/services?f=pjson
 - type: arcgis:soap
-  url: https://enviroportal.ead.ae/server/services?wsdl
+  url: https://edp.ead.ae/server/services?wsdl
 - type: arcgis:sitemap
-  url: https://enviroportal.ead.ae/server/rest/services?f=sitemap
+  url: https://edp.ead.ae/server/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: https://enviroportal.ead.ae/server/rest/services?f=geositemap
+  url: https://edp.ead.ae/server/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: https://enviroportal.ead.ae/server/rest/services?f=kmz
-- type: arcgis:rest:info
-  url: https://enviroportal.ead.ae/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://enviroportal.ead.ae/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://enviroportal.ead.ae/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://enviroportal.ead.ae/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://enviroportal.ead.ae/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://enviroportal.ead.ae/arcgis/rest/services?f=kmz
+  url: https://edp.ead.ae/server/rest/services?f=kmz
 id: enviroportaleadae
 langs:
 - id: AR
   name: Arabic
-link: https://enviroportal.ead.ae/server/rest/services
-name: Enviroportal EAD AE Data Catalog
+- id: EN
+  name: English
+link: https://edp.ead.ae/server/rest/services
+name: EAD Environmental Data Portal
 owner:
-  link: https://www.ead.gov.ae/
+  link: https://www.ead.gov.ae
   location:
     country:
       id: AE
@@ -99,4 +88,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-uid: temp00001170
+uid: cdi00036207

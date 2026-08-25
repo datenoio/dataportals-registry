@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Data catalog managed by INETER (Nicaragua Institute of Territorial Studies),
-  providing access to geospatial and environmental metadata.
+description: Official GeoNetwork metadata catalog of INETER's national spatial data
+  infrastructure, with CSW and OAI-PMH harvest interfaces for geospatial and environmental
+  records.
 endpoints:
 - type: csw202
   url: https://idemetadatos.ineter.gob.ni/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -24,10 +25,6 @@ endpoints:
 - type: oaipmh20
   url: https://idemetadatos.ineter.gob.ni/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
-- type: geonetwork:site
-  url: https://idemetadatos.ineter.gob.ni/geonetwork/srv/api/site
-- type: opensearch
-  url: https://idemetadatos.ineter.gob.ni/portal.opensearch
 id: idemetadatosinetergobni
 langs:
 - id: ES
@@ -41,10 +38,11 @@ owner:
       id: NI
       name: Nicaragua
     level: 20
-  name: Instituto Nicaraguense de Estudios Territoriales
+  name: Instituto Nicaragüense de Estudios Territoriales (INETER)
   type: Central government
 properties:
-  has_doi: true
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -61,6 +59,8 @@ tags:
 - has_api
 - metadata
 - Nicaragua
+- INETER
+- government
 topics:
 - id: ENVI
   name: Environment

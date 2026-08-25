@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ERDDAP data server providing access to multiple scientific datasets.
+endpoints:
+- type: erddap:index
+  url: https://data.pmel.noaa.gov/generic/erddap/index.json
+- type: erddap:datasets
+  url: https://data.pmel.noaa.gov/generic/erddap/info/index.json
+- type: opensearch
+  url: https://data.pmel.noaa.gov/generic/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://data.pmel.noaa.gov/generic/erddap/sitemap.xml
+id: datapmelnoaagov
+langs:
+- id: EN
+  name: English
+link: https://data.pmel.noaa.gov/generic/erddap/index.html
+name: NOAA PMEL Generic ERDDAP Data Catalog
+owner:
+  link: https://www.pmel.noaa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Pacific Marine Environmental Laboratory
+  type: Central government
+properties:
+  is_national: true
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- oceans
+- environment
+- pacific
+- ERDDAP
+- NOAA
+- PMEL
+- scientific data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00005273

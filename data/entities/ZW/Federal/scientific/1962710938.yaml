@@ -14,9 +14,14 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Natural History Museum of Zimbabwe. scientific data repository. powered
-  by IPT The Integrated Publishing Toolkit. accessible at 196.27.109.38:8080.
+description: Former Natural History Museum of Zimbabwe GBIF IPT on 196.27.109.38:8080,
+  superseded by ipt.nhmbyozim.cloudns.ph:8080. Host refused connections on 24 August
+  2026.
 endpoints:
+- type: dcat:ttl
+  url: http://196.27.109.38:8080/dcat
+- type: ipt:dataset
+  url: http://196.27.109.38:8080/inventory/dataset
 - type: rss
   url: http://196.27.109.38:8080/rss.do
   version: '2.0'
@@ -25,9 +30,9 @@ langs:
 - id: EN
   name: English
 link: http://196.27.109.38:8080
-name: NHMoZ
+name: Natural History Museum of Zimbabwe IPT (196.27.109.38)
 owner:
-  link: http://naturalhistorymuseumzimbabwe.com/
+  link: https://naturalhistorymuseumzimbabwe.com/
   location:
     country:
       id: ZW
@@ -35,10 +40,19 @@ owner:
     level: 20
   name: Natural History Museum of Zimbabwe
   type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: deprecated
 tags:
 - GBIF
 - IPT

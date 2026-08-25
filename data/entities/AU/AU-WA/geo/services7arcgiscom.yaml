@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 30
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+    subregion:
+      id: AU-WA
+      name: Western Australia
+description: ArcGIS Online REST services for the City of Canning (Western Australia)
+  open data layers, including stormwater drainage, street seating, street bins, footpaths,
+  and trees. Previously misfiled under Uganda.
+endpoints:
+- type: arcgis:rest:info
+  url: https://services7.arcgis.com/LVb4XgP0A6XUnzep/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://services7.arcgis.com/LVb4XgP0A6XUnzep/arcgis/rest/services?f=pjson
+id: services7arcgiscom
+langs:
+- id: EN
+  name: English
+link: https://services7.arcgis.com/LVb4XgP0A6XUnzep/arcgis/rest/services
+name: City of Canning ArcGIS REST Services
+owner:
+  link: https://www.canning.wa.gov.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 30
+    subregion:
+      id: AU-WA
+      name: Western Australia
+  name: City of Canning
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- geospatial
+- local government
+- Western Australia
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: cdi00034935

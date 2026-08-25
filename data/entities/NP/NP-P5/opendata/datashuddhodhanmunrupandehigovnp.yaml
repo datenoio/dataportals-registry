@@ -21,6 +21,9 @@ description: Integrated Data Management System (IDMS) for Shuddhodhan Rural Muni
   in Rupandehi, Lumbini Province. Publishes municipal finance, administration, and
   JAMS dashboard datasets.
 endpoints:
+- type: ckan
+  url: https://data.shuddhodhanmunrupandehi.gov.np/api/3
+  version: '3'
 - type: ckan:package-search
   url: https://data.shuddhodhanmunrupandehi.gov.np/api/3/action/package_search
   version: '3'
@@ -61,8 +64,9 @@ software:
   name: CKAN
 status: active
 tags:
+- has_api
 - municipal data
-- city government
+- local government
 - open data
 - Nepal
 topics:

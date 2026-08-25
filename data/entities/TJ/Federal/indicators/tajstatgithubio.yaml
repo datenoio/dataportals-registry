@@ -17,11 +17,19 @@ coverage:
 description: National OpenSDG reporting platform for Tajikistan Sustainable Development
   Goal indicators, maintained by the Agency on Statistics under the President of the
   Republic of Tajikistan with support from UN ESCAP. Linked from the official statistics
-  website as the portal of SDG indicators.
+  website as the portal of SDG indicators. The site is labelled Alpha / work in progress
+  and publishes indicator JSON from the companion sdg-data-tajikistan repository.
+endpoints:
+- type: opensdg:catalog
+  url: https://tajstat.github.io/sdg-site-tajikistan/reporting-status/
+- type: opensdg:data
+  url: https://tajstat.github.io/sdg-data-tajikistan/en/data/1-1-1.json
 id: tajstatgithubio
 langs:
 - id: TG
   name: Tajik
+- id: RU
+  name: Russian
 - id: EN
   name: English
 link: https://tajstat.github.io/sdg-site-tajikistan/
@@ -55,7 +63,7 @@ tags:
 - SDG
 - Sustainable Development
 - indicators
-- OpenSDG
+- has_api
 - Tajikistan
 topics:
 - id: ECON
@@ -80,8 +88,3 @@ topics:
   name: Environment
   type: iso19115
 uid: cdi00025524
-endpoints:
-- type: opensdg:data
-  url: https://tajstat.github.io/sdg-data-tajikistan/en/data/1-1-1.json
-- type: opensdg:data
-  url: https://tajstat.github.io/sdg-data-tajikistan/en/data/1-2-1.json

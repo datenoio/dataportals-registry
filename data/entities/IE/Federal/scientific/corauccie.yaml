@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: CORA (Cork Open Research Archive) is University College Cork's DSpace
+  institutional repository for peer-reviewed articles, theses, and other scholarly
+  outputs, with OAI-PMH harvest.
+endpoints:
+- type: oaipmh20
+  url: https://cora.ucc.ie/server/oai/request?verb=Identify
+  version: '2.0'
+id: corauccie
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::748ba69d3e8d1af87f84fee909eef339
+  value: opendoar____::748ba69d3e8d1af87f84fee909eef339
+langs:
+- id: EN
+  name: English
+link: https://cora.ucc.ie
+name: Cork Open Research Archive (CORA)
+owner:
+  link: https://www.ucc.ie
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+  name: University College Cork
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- education
+- institutional repository
+- has_api
+- DSpace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00031538

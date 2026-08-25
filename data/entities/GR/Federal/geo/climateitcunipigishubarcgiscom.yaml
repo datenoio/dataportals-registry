@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: ArcGIS Hub of the University of Piraeus MSc programme on Climate Crisis
+  and Information and Communication Technologies, publishing open geospatial datasets
+  and student GIS work.
+endpoints:
+- type: dcatap201
+  url: https://climate-itc-unipigis.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://climate-itc-unipigis.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://climate-itc-unipigis.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://climate-itc-unipigis.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://climate-itc-unipigis.hub.arcgis.com/sitemap.xml
+id: climateitcunipigishubarcgiscom
+langs:
+- id: EL
+  name: Greek
+link: https://climate-itc-unipigis.hub.arcgis.com/
+name: University of Piraeus MSc Climate ICT Hub
+owner:
+  link: https://www.unipi.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: University of Piraeus
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- climate
+- GIS
+- ArcGIS
+- data analysis
+- workflows
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00002723

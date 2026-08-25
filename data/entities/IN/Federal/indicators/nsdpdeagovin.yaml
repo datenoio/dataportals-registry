@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: IMF SDDS National Summary Data Page for India, hosted by Department of
+  Economic Affairs, Ministry of Finance. Disseminates macroeconomic and financial
+  summary indicators with SDMX downloads linked from the IMF Dissemination Standards
+  Bulletin Board.
+endpoints:
+- type: imfnsdp:catalog
+  url: https://dea.gov.in/sites/default/files/nsdp.htm
+id: nsdpdeagovin
+langs:
+- id: EN
+  name: English
+link: https://dea.gov.in/sites/default/files/nsdp.htm
+name: India National Summary Data Page
+owner:
+  link: https://dea.gov.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 20
+  name: Department of Economic Affairs, Ministry of Finance
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+software:
+  id: imfnsdp
+  name: IMF National Summary Data Page
+status: active
+tags:
+- NSDP
+- IMF
+- SDDS
+- statistics
+- government
+- official statistics
+- SDMX
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00037418

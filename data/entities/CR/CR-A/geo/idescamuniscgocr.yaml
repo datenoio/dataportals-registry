@@ -18,7 +18,9 @@ coverage:
     subregion:
       id: CR-A
       name: Alajuela
-description: Portal de datos de la Municipalidad de San Carlos
+description: Infraestructura de Datos Espaciales del Cantón de San Carlos
+  (IDESCA). GeoNode catalog of municipal geographic datasets for San Carlos,
+  Alajuela.
 endpoints:
 - type: geonode:layers
   url: https://idesca.munisc.go.cr/api/layers/
@@ -87,7 +89,7 @@ langs:
 - id: ES
   name: Spanish
 link: https://idesca.munisc.go.cr
-name: MUNICIPALIDAD DE SAN CARLOS Geoportal de Datos Geográficos
+name: IDESCA Geoportal Municipalidad de San Carlos
 owner:
   link: https://www.munisc.go.cr
   location:
@@ -98,7 +100,7 @@ owner:
     subregion:
       id: CR-A
       name: Alajuela
-  name: MUNICIPALIDAD DE SAN CARLOS
+  name: Municipalidad de San Carlos
   type: Local government
 properties:
   has_doi: false
@@ -115,6 +117,7 @@ software:
   name: GeoNode
 status: active
 tags:
+- has_api
 - geospatial
 - Municipality
 - Costa Rica

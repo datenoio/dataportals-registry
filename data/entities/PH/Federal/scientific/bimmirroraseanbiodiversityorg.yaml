@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,36 +14,27 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: "ASEAN Centre for Biodiversity IPT\r\nThis IPT will serve as a portal\
-  \ for publishing biodiversity dataset from the ASEAN countries. The IPT is located\
-  \ in Domingo Lantican Ave University of the Philippines, Los Baños, Laguna Philippines"
-endpoints:
-- type: dcat:ttl
-  url: http://bim-mirror.aseanbiodiversity.org:8080/ipt/dcat
-- type: ipt:dataset
-  url: http://bim-mirror.aseanbiodiversity.org:8080/ipt/inventory/dataset
-- type: rss
-  url: http://bim-mirror.aseanbiodiversity.org:8080/ipt/rss.do
-  version: '2.0'
+description: Former ASEAN Centre for Biodiversity IPT mirror at bim-mirror.aseanbiodiversity.org.
+  The host no longer responds; the live IPT is at ipt.aseanbiodiversity.org.
 id: bimmirroraseanbiodiversityorg
 langs:
-- id: TL
-  name: Tagalog
+- id: EN
+  name: English
 link: http://bim-mirror.aseanbiodiversity.org:8080/ipt
-name: ASEAN Centre for Biodiversity IPT
+name: ASEAN Centre for Biodiversity IPT (mirror)
 owner:
-  link: http://www.aseanbiodiversity.org/
+  link: https://www.aseanbiodiversity.org
   location:
     country:
       id: PH
       name: Philippines
     level: 20
   name: ASEAN Centre for Biodiversity (ACB)
-  type: Academy
+  type: International
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT

@@ -15,26 +15,27 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-    subregion: &id001
+    subregion:
       id: NL-ZH
       name: Zuid-Holland
-description: ArcGIS REST Services Directory of Zoetermeer geoportal providing geospatial
-  datasets.
+description: ArcGIS REST services of the municipality of Zoetermeer.
 id: geoportaalzoetermeernl
 langs:
 - id: NL
   name: Dutch
 link: https://geoportaal.zoetermeer.nl/arcgis/rest/services
-name: geoportaal.zoetermeer.nl - Dateno
+name: Geoportaal Zoetermeer
 owner:
-  link: https://geoportaal.zoetermeer.nl
+  link: https://www.zoetermeer.nl
   location:
     country:
       id: NL
       name: Netherlands
     level: 30
-    subregion: *id001
-  name: no info
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+  name: Gemeente Zoetermeer
   type: Local government
 properties:
   has_doi: false
@@ -69,4 +70,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00005593
+uid: cdi00035208

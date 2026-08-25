@@ -13,10 +13,11 @@ coverage:
       name: Republic of North Macedonia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: This URL represents a data catalog endpoint providing access to multiple
-  datasets available as ArcGIS REST services.
+description: ArcGIS Server geoportal of the Agency for Spatial Planning of North Macedonia.
+  REST services include spatial and urban plans (GUP, PPRSM), studies, and related
+  map layers for national and local planning.
 endpoints:
 - type: arcgis:rest:info
   url: https://portal.app.gov.mk/arcgis/rest/info?f=pjson
@@ -33,17 +34,19 @@ endpoints:
 id: portalappgovmk
 langs:
 - id: MK
-  name: Makedonian
+  name: Macedonian
+- id: EN
+  name: English
 link: https://portal.app.gov.mk/arcgis/rest/services
-name: Government of Republic of North Macedonia Geoportal
+name: Agency for Spatial Planning Geoportal
 owner:
-  link: https://www.app.gov.mk
+  link: https://app.gov.mk
   location:
     country:
       id: MK
       name: Republic of North Macedonia
     level: 20
-  name: Government of Republic of North Macedonia
+  name: Agency for Spatial Planning
   type: Central government
 properties:
   has_doi: false
@@ -63,13 +66,21 @@ tags:
 - GIS
 - geospatial
 - government
-- republic-of-north-macedonia
+- urban planning
+- has_api
+- North Macedonia
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 - id: Location
   name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
   type: iso19115
 - id: Boundaries
   name: Boundaries

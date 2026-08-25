@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -18,14 +19,23 @@ description: National open-access DSpace repository for Cabo Verde scientific ou
   Hosts communities for Universidade de Cabo Verde, Universidade Técnica do Atlântico,
   and Instituto Nacional de Investigação e Desenvolvimento Agrário.
 endpoints:
-- type: dspace:catalog
-  url: https://eciencia.cv/
+- type: dspace
+  url: https://api.eciencia.cv/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://api.eciencia.cv/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://api.eciencia.cv/server/oai/request?verb=Identify
+  version: '2.0'
 id: ecienciacv
 langs:
 - id: PT
   name: Portuguese
+- id: EN
+  name: English
 link: https://eciencia.cv/
-name: E-ciência
+name: Repositório E-ciência
 owner:
   link: https://www.unicv.edu.cv
   location:
@@ -50,6 +60,7 @@ software:
 status: active
 tags:
 - DSpace
+- has_api
 - institutional repository
 - open access
 - Cabo Verde
@@ -61,7 +72,7 @@ topics:
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
-- id: Education
-  name: Education
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00027733

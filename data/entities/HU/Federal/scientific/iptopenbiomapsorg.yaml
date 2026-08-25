@@ -13,19 +13,20 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: OpenBioMaps IPT. This scientific data repository.
+      name: Eastern Europe
+description: GBIF Integrated Publishing Toolkit instance of OpenBioMaps for publishing
+  Hungarian biodiversity occurrence datasets. The former /ipt path returns 404; the
+  IPT landing page remains at the host root.
 endpoints:
 - type: ipt:dataset
-  url: http://ipt.openbiomaps.org/ipt/inventory/dataset
-- type: rss
-  url: http://ipt.openbiomaps.org/ipt/rss.do
-  version: '2.0'
+  url: http://ipt.openbiomaps.org/
 id: iptopenbiomapsorg
 langs:
 - id: HU
   name: Hungarian
-link: http://ipt.openbiomaps.org/ipt
+- id: EN
+  name: English
+link: http://ipt.openbiomaps.org/
 name: OpenBioMaps IPT
 owner:
   link: https://openbiomaps.org

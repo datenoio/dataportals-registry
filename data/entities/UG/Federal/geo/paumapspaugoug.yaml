@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Geospatial data services provided via ArcGIS REST Services
+description: ArcGIS Server REST catalog of the Petroleum Authority of Uganda, exposing
+  geology and hosted map services used with the PAU mapping site.
 endpoints:
 - type: arcgis:rest:info
   url: https://paumaps.pau.go.ug/arcgis/rest/info?f=pjson
@@ -59,19 +60,22 @@ software:
 status: active
 tags:
 - geoportal
-- maps
+- petroleum
+- geology
 - ArcGIS REST services
+- government
+- Uganda
 topics:
-- id: TRAN
-  name: Transport
+- id: ENER
+  name: Energy
   type: eudatatheme
-- id: Location
-  name: Location
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
   type: iso19115
-- id: Boundaries
-  name: Boundaries
+- id: Economy
+  name: Economy
   type: iso19115
-- id: Transportation
-  name: Transportation
-  type: iso19115
-uid: temp00005839
+uid: cdi00034932

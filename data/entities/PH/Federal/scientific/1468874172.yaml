@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,37 +14,28 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: GBIF-Philippines Node IPT Facility maintained by the Biodiversity Management
-  Bureau of the Department of Environment and Natural Resources. This IPT will be
-  recommended to be used for the GBIF data publication of the Philippine CHM (BIOWEB)
-  partner organizations.
-endpoints:
-- type: dcat:ttl
-  url: http://146.88.74.172:8080/ipt/dcat
-- type: ipt:dataset
-  url: http://146.88.74.172:8080/ipt/inventory/dataset
-- type: rss
-  url: http://146.88.74.172:8080/ipt/rss.do
-  version: '2.0'
+description: GBIF Philippines Node IPT formerly hosted by the Biodiversity Management
+  Bureau of the Department of Environment and Natural Resources. The IP-based IPT
+  at 146.88.74.172:8080 no longer responds.
 id: '1468874172'
 langs:
-- id: TL
-  name: Tagalog
+- id: EN
+  name: English
 link: http://146.88.74.172:8080/ipt
 name: GBIF Philippines IPT
 owner:
-  link: http://www.bmb.gov.ph
+  link: https://bmb.gov.ph
   location:
     country:
       id: PH
       name: Philippines
     level: 20
-  name: Biodiversity Management Bureau-Department of Environment and  Natural Resources
-  type: Academy
+  name: Biodiversity Management Bureau
+  type: Central government
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT

@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Geoportal for forest monitoring data managed by the Ministry of Agriculture
-  and Forestry of Laos
+description: National Forest Monitoring System ArcGIS REST services of the Ministry
+  of Agriculture and Forestry of Laos. Forest cover, land use, carbon inventory, and
+  related GIS layers used for national forest monitoring.
 endpoints:
 - type: arcgis:rest:info
   url: https://nfms.maf.gov.la/arcgis/rest/info?f=pjson
@@ -34,8 +35,10 @@ id: nfmsmafgovla
 langs:
 - id: LO
   name: Lao
+- id: EN
+  name: English
 link: https://nfms.maf.gov.la/arcgis/rest/services
-name: Laos - National Forest Monitoring System
+name: Laos National Forest Monitoring System
 owner:
   link: https://www.maf.gov.la
   location:
@@ -47,6 +50,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -61,14 +65,11 @@ status: active
 tags:
 - forest
 - monitoring
-- arcgis
-- laos
-- gis
-- geoportal
-- landuse
-- climate
-- carbon
-- inventory
+- geospatial
+- GIS
+- government
+- has_api
+- Laos
 topics:
 - id: ENVI
   name: Environment

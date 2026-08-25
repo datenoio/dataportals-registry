@@ -16,6 +16,9 @@ coverage:
       name: Western Asia
 description: Dataset listing on the Jordan e-government portal (SANAD), separate from
   the national CKAN Open Government Data Portal at opendata.gov.jo.
+endpoints:
+- type: sitemap
+  url: https://portal.jordan.gov.jo/sitemap.xml
 id: portaljordangovjo
 langs:
 - id: EN
@@ -23,15 +26,15 @@ langs:
 - id: AR
   name: Arabic
 link: https://portal.jordan.gov.jo/wps/portal/OpenData?lang=en#/manageDataSets
-name: Open Data Jordan
+name: Jordan e-Government Open Data (SANAD)
 owner:
-  link: https://www.jordan.gov.jo
+  link: https://www.modee.gov.jo
   location:
     country:
       id: JO
       name: Jordan
     level: 20
-  name: The Hashemite Kingdom of Jordan
+  name: Ministry of Digital Economy and Entrepreneurship
   type: Central government
 properties:
   has_doi: false
@@ -51,7 +54,7 @@ tags:
 - government
 - has_api
 - open data
-- machine-readable
+- SANAD
 topics:
 - id: GOVE
   name: Government and public sector
@@ -81,6 +84,3 @@ topics:
   name: Transportation
   type: iso19115
 uid: cdi00000981
-endpoints:
-- type: sitemap
-  url: https://portal.jordan.gov.jo/sitemap.xml

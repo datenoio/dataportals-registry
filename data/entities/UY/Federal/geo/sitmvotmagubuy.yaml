@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,13 +15,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Geonetwork-based catalog from the Ministry of Housing, Territorial Planning
-  and Environment of Uruguay (MVOTMA)
-endpoints:
-- type: geonetwork:query
-  url: https://sit.mvotma.gub.uy/geonetwork/srv/eng/q
-- type: geonetwork
-  url: https://sit.mvotma.gub.uy/geonetwork/srv/api
+description: Former GeoNetwork catalog of the Ministry of Housing, Territorial Planning
+  and Environment (MVOTMA). The host sit.mvotma.gub.uy has an expired TLS certificate
+  and no longer responds; territorial information is published through the MVOT geoportal.
 id: sitmvotmagubuy
 langs:
 - id: ES
@@ -29,7 +25,7 @@ langs:
 link: https://sit.mvotma.gub.uy/geonetwork
 name: Portal de Datos de MVOTMA
 owner:
-  link: https://mvotma.gub.uy
+  link: https://www.gub.uy/ministerio-vivienda-ordenamiento-territorial/
   location:
     country:
       id: UY
@@ -49,11 +45,10 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
 - government
-- has_api
 - environment
 - Uruguay
 - catalog

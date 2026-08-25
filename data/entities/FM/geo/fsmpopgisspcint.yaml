@@ -15,8 +15,10 @@ coverage:
     macroregion:
       id: '057'
       name: Micronesia
-description: Public Population Geographic Information System (POPGIS) portal for Federated
-  States of Micronesia, managed by the Pacific Community (SPC).
+description: Public Population Geographic Information System (PopGIS3) portal for
+  the Federated States of Micronesia, managed by the Pacific Community (SPC). Census
+  and survey indicators are mapped to administrative areas for public exploration
+  and download.
 endpoints:
 - type: customapi
   url: https://fsm.popgis.spc.int/api
@@ -27,11 +29,11 @@ langs:
 link: https://fsm.popgis.spc.int
 name: Federated States of Micronesia POPGIS Data Catalog
 owner:
-  link: http://www.spc.int
+  link: https://www.spc.int
   location:
     country:
-      id: Oceania
-      name: Oceania
+      id: NC
+      name: New Caledonia
     level: 20
   name: Pacific Community (SPC)
   type: International
@@ -53,13 +55,18 @@ tags:
 - statistics
 - geospatial
 - population
+- census
 - pacific
-- data catalog
+- has_api
+- Micronesia
 topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
 - id: Society
   name: Society
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
   type: iso19115
 uid: cdi00020096

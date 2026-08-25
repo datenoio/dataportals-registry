@@ -24,6 +24,8 @@ endpoints:
   url: https://caf.forest-atlas.org/api/feed/dcat-ap/2.0.1.json
 - type: dcatus11
   url: https://caf.forest-atlas.org/api/feed/dcat-us/1.1.json
+- type: dcatus11
+  url: https://caf.forest-atlas.org/data.json
 - type: rss
   url: https://caf.forest-atlas.org/api/feed/rss/2.0
 - type: ogcrecordsapi
@@ -37,7 +39,7 @@ langs:
 link: https://caf.forest-atlas.org
 name: Atlas Forestier Interactif de la République Centrafricaine
 owner:
-  link: https://forest-atlas.org
+  link: https://caf.forest-atlas.org
   location:
     country:
       id: CF
@@ -52,9 +54,9 @@ rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  privacy_policy_url: https://caf.forest-atlas.org/pages/privacy-policy
   rights_type: granular
-  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+  tos_url: https://caf.forest-atlas.org/pages/terms-of-service
 software:
   id: arcgishub
   name: ArcGIS Hub
@@ -65,6 +67,7 @@ tags:
 - geospatial
 - government
 - has_api
+- wri
 topics:
 - id: ENVI
   name: Environment

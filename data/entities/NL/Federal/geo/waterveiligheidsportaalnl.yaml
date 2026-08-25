@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Supports information exchange for processes related to the assessment
-  and reinforcement of primary flood defenses in the Netherlands.
+description: GeoServer of the Dutch flood-safety portal (Waterveiligheidsportaal) with dike and flood-defence
+  layers.
 endpoints:
 - type: wms111
   url: https://waterveiligheidsportaal.nl/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,15 +65,15 @@ langs:
 - id: NL
   name: Dutch
 link: https://waterveiligheidsportaal.nl/geoserver
-name: Waterveiligheidsportaal Geoserver
+name: Waterveiligheidsportaal GeoServer
 owner:
-  link: https://waterveiligheidsportaal.nl
+  link: https://www.rijkswaterstaat.nl
   location:
     country:
       id: NL
       name: Netherlands
     level: 20
-  name: Not specified (likely Central or Regional government based on context)
+  name: Rijkswaterstaat
   type: Central government
 properties:
   has_doi: false
@@ -102,4 +102,4 @@ topics:
 - id: Inland Waters
   name: Inland Waters
   type: iso19115
-uid: temp00005279
+uid: cdi00035163

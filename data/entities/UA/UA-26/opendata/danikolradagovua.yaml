@@ -10,12 +10,15 @@ coverage:
     country:
       id: UA
       name: Ukraine
-    level: 20
+    level: 30
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Портал відкритих даних міста Коломия статистика · 1,2k набори даних ·
-  40 організації · 7 групи.
+      name: Eastern Europe
+    subregion:
+      id: UA-26
+      name: Ivano-Frankivska oblast
+description: CKAN open data portal of Kolomyia City Council with municipal datasets
+  from city departments and organisations.
 endpoints:
 - type: ckan:package-search
   url: https://dani.kolrada.gov.ua/api/3/action/package_search
@@ -53,18 +56,16 @@ software:
   name: CKAN
 status: active
 tags:
-- соціальний захист
-- медицина
-- освіта
-- Ukraine
+- government
 - open data
 - ckan
-- government
+- Ukraine
+- Kolomyia
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: ECON
-  name: Economy and finance
+- id: REGI
+  name: Regions and cities
   type: eudatatheme
-uid: temp00004775
+uid: cdi00034927

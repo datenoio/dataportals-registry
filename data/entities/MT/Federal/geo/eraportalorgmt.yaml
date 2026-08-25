@@ -13,10 +13,12 @@ coverage:
       name: Malta
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: ArcGIS REST Services directory for eraportal.org.mt, offering access
-  to various geospatial datasets.
+description: ArcGIS Server REST services for the Environment and Resources Authority,
+  exposing environmental geospatial datasets (air, waste, water, marine, protected
+  areas, and related themes). The HTML services directory is disabled; REST endpoints
+  remain available.
 endpoints:
 - type: arcgis:rest:info
   url: https://eraportal.org.mt/arcgis/rest/info?f=pjson
@@ -35,7 +37,7 @@ langs:
 - id: EN
   name: English
 link: https://eraportal.org.mt/arcgis/rest/services
-name: Malta Environment & Resources Authority Geoportal
+name: ERA ArcGIS REST Services
 owner:
   link: https://era.org.mt
   location:
@@ -43,7 +45,7 @@ owner:
       id: MT
       name: Malta
     level: 20
-  name: Malta Environment & Resources Authority
+  name: Environment and Resources Authority
   type: Central government
 properties:
   has_doi: false

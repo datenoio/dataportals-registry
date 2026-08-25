@@ -15,22 +15,22 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Catálogo Nacional de Información Geoespacial, permite encontrar información
-  de productos geoespaciales generados por las instituciones del Estado.
+description: National GeoServer of the Geoportal de Chile (IDE Chile), exposing OGC
+  WMS/WFS/WCS services for geospatial products published by Chilean public institutions.
 id: wwwgeoportalclgs
 langs:
 - id: ES
   name: Spanish
-link: http://www.geoportal.cl/geoserver
-name: Chile Geoportal ArcGIS Server
+link: https://geoportal.cl/geoserver
+name: Geoportal de Chile - GeoServer
 owner:
-  link: https://www.bienesnacionales.cl
+  link: https://www.ide.cl
   location:
     country:
       id: CL
       name: Chile
     level: 20
-  name: Ministerio de Bienes Nacionales
+  name: Secretaría Ejecutiva SNIT - IDE Chile
   type: Central government
 properties:
   has_doi: false
@@ -47,18 +47,11 @@ software:
 status: active
 tags:
 - geospatial
-- Agricultura y ganaderías
-- Aguas continentales
-- Clima y atmósfera
-- Economía
-- Elevación terrestre y submarina
-- Flora y fauna
-- Geociencias
-- Imágenes y mapas base
-- Instalaciones y edificaciones
-- Inteligencia militar
-- Localización
-- direcciones y red geodésica
+- geoserver
+- OGC
+- IDE Chile
+- national catalog
+- Chile
 topics:
 - id: GOVE
   name: Government and public sector
@@ -77,30 +70,6 @@ topics:
   type: eudatatheme
 - id: ENER
   name: Energy
-  type: eudatatheme
-- id: AGRI
-  name: Agriculture, fisheries, forestry and food
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: REGI
-  name: Regions and cities
   type: eudatatheme
 - id: Inland Waters
   name: Inland Waters
@@ -144,22 +113,22 @@ topics:
 uid: cdi00005244
 endpoints:
 - type: wms130
-  url: http://www.geoportal.cl/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  url: https://geoportal.cl/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
   version: 1.3.0
 - type: wfs200
-  url: http://www.geoportal.cl/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  url: https://geoportal.cl/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
   version: 2.0.0
 - type: wcs111
-  url: http://www.geoportal.cl/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  url: https://geoportal.cl/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
 - type: wms130
-  url: http://www.geoportal.cl/geoserver/geo/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  url: https://geoportal.cl/geoserver/geo/wms?service=WMS&version=1.3.0&request=GetCapabilities
   version: 1.3.0
 - type: wfs200
-  url: http://www.geoportal.cl/geoserver/geo/wfs?service=WFS&version=2.0.0&request=GetCapabilities
+  url: https://geoportal.cl/geoserver/geo/wfs?service=WFS&version=2.0.0&request=GetCapabilities
   version: 2.0.0
 - type: wcs111
-  url: http://www.geoportal.cl/geoserver/geo/wms?service=WCS&version=1.1.1&request=GetCapabilities
+  url: https://geoportal.cl/geoserver/geo/wms?service=WCS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
 - type: sitemap
-  url: http://www.geoportal.cl/sitemap.xml
+  url: https://geoportal.cl/sitemap.xml

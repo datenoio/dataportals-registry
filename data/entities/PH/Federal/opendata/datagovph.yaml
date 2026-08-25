@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: false
 api_status: uncertain
 catalog_type: Open data portal
 content_types:
@@ -13,7 +14,9 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: An online repository of open data from different government agencies.
+description: Official Open Data Philippines (ODPH) portal, an online repository of
+  datasets from national government agencies. The current site is an Angular application
+  without a public CKAN-style harvest API.
 id: datagovph
 identifiers:
 - id: dataportals.org
@@ -23,18 +26,18 @@ identifiers:
   url: https://wikidata.org/wiki/Q97062501
   value: Q97062501
 langs:
-- id: TL
-  name: Tagalog
+- id: EN
+  name: English
 link: https://data.gov.ph
 name: Open Data Philippines
 owner:
-  link: https://data.gov.ph
+  link: https://www.gov.ph
   location:
     country:
       id: PH
       name: Philippines
     level: 20
-  name: Government of Phillipines
+  name: Government of the Philippines
   type: Central government
 properties:
   has_doi: false

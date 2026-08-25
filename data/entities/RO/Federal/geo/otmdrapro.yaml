@@ -14,8 +14,9 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Data catalog endpoint providing access to ArcGIS REST services.
+      name: Eastern Europe
+description: ArcGIS REST services of the Ministry of Development, Public Works and
+  Administration (MDLPA), formerly MDRAP. The catalog is published at ot.mdrap.ro.
 endpoints:
 - type: arcgis:rest:info
   url: https://ot.mdrap.ro/arcgis/rest/info?f=pjson
@@ -30,26 +31,26 @@ endpoints:
 - type: arcgis:kmz
   url: https://ot.mdrap.ro/arcgis/rest/services?f=kmz
 id: otmdrapro
-langs:
-- id: RO
-  name: Romanian
-link: https://ot.mdrap.ro/arcgis/rest/services
-name: Ministerul Dezvoltării Rurale și Agriculturii Geoportal
-owner:
-  link: https://www.mdrap.ro
-  location:
-    country:
-      id: RO
-      name: Romania
-    level: 20
-  name: Ministerul Dezvoltării Rurale și Agriculturii
-  type: Central government
 identifiers:
 - id: url
   url: https://ot.mdrap.ro/arcgis/rest/services
   value: https://ot.mdrap.ro/arcgis/rest/services
 - id: domain
   value: ot.mdrap.ro
+langs:
+- id: RO
+  name: Romanian
+link: https://ot.mdrap.ro/arcgis/rest/services
+name: MDLPA ArcGIS REST services
+owner:
+  link: https://www.mdlpa.ro
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+  name: Ministry of Development, Public Works and Administration (MDLPA)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -64,35 +65,24 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- ArcGIS
-- REST
-- services
+- government
+- geospatial
+- has_api
+- planning
 topics:
-- id: Location
-  name: Location
-  type: iso19115
 - id: GOVE
   name: Government and public sector
-  type: eudatatheme
-- id: AGRI
-  name: Agriculture, fisheries, forestry and food
-  type: eudatatheme
-- id: ENVI
-  name: Environment
   type: eudatatheme
 - id: REGI
   name: Regions and cities
   type: eudatatheme
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Location
+  name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Planning / Cadastre
-  name: Planning / Cadastre
-  type: iso19115
-- id: Structure
-  name: Structure
-  type: iso19115
-uid: temp00005610
+uid: cdi00035034

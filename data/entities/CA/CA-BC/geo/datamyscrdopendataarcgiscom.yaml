@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: Sunshine Coast Regional District ArcGIS Hub catalog of GIS layers and open geospatial
+  datasets.
+id: datamyscrdopendataarcgiscom
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::d5c8e1ab6fc0bfeb5f29aafa999cdb29
+  value: fairsharing_::d5c8e1ab6fc0bfeb5f29aafa999cdb29
+langs:
+- id: EN
+  name: English
+link: https://data-myscrd.opendata.arcgis.com
+name: SCRD GIS Open Data
+owner:
+  link: https://www.scrd.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: Sunshine Coast Regional District
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- open data
+- local government
+- British Columbia
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00028766
+endpoints:
+- type: dcatap201
+  url: https://data-myscrd.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://data-myscrd.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://data-myscrd.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://data-myscrd.opendata.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://data-myscrd.opendata.arcgis.com/sitemap.xml

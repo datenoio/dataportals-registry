@@ -17,6 +17,11 @@ coverage:
       name: South America
 description: REDATAM online processing portal for the 2012 Population and Housing
   Census of Suriname. Users build custom tables from census microdata hosted by CELADE/ECLAC.
+endpoints:
+- type: redatam
+  url: https://prod.redatam.org/binsur/RpWebEngine.exe/Portal
+- type: redatam
+  url: https://prod.redatam.org/binsur/RpWebEngine.exe/Portal?BASE=PHC2012S
 id: prodredatamorgbinsur
 langs:
 - id: EN
@@ -24,7 +29,7 @@ langs:
 - id: NL
   name: Dutch
 link: https://prod.redatam.org/binsur/RpWebEngine.exe/Portal?BASE=PHC2012S
-name: Suriname ABS REDATAM CPV 2012
+name: Suriname Population and Housing Census 2012 (REDATAM)
 owner:
   link: https://statistics-suriname.org
   location:
@@ -51,9 +56,10 @@ status: active
 tags:
 - statistics
 - government
+- official statistics
 - census
 - microdata
-- REDATAM
+- has_api
 - Suriname
 topics:
 - id: SOCI
@@ -66,6 +72,3 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00022005
-endpoints:
-- type: redatam
-  url: https://prod.redatam.org/binsur/RpWebEngine.exe/Portal?BASE=PHC2012S

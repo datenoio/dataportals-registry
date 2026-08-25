@@ -19,6 +19,9 @@ description: CityUHK Scholars is the Pure current research information system an
   public portal for City University of Hong Kong research outputs, researcher profiles,
   and datasets.
 endpoints:
+- type: oaipmh20
+  url: https://scholars.cityu.edu.hk/ws/oai?verb=Identify
+  version: '2.0'
 - type: rss
   url: https://scholars.cityu.edu.hk/en/datasets/?search=&isCopyPasteSearch=false&format=rss
   version: '2.0'

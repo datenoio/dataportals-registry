@@ -15,11 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Geographic Information System portal providing REST services for accessing
-  geospatial data related to Kenya Electricity Generating Company (KenGen) power generation
-  facilities and infrastructure. The portal offers comprehensive mapping and spatial
-  analysis capabilities for energy assets, transmission networks, and power plant
-  locations across Kenya.
+description: ArcGIS Server REST catalog of Kenya Electricity Generating Company (KenGen)
+  geospatial data for power generation facilities, transmission networks, and related
+  energy infrastructure.
 endpoints:
 - type: arcgis:portals:self
   url: https://gisportal.kengen.co.ke/portal/sharing/rest/portals/self?f=pjson
@@ -48,7 +46,7 @@ langs:
 link: https://gisportal.kengen.co.ke/arcgis/rest/services
 name: Kenya Electricity Generating Company (KenGen) Geoportal
 owner:
-  link: https://gisportal.kengen.co.ke/
+  link: https://www.kengen.co.ke
   location:
     country:
       id: KE
@@ -60,8 +58,8 @@ properties:
   has_doi: false
 rights:
   license_id: null
-  license_name: Open Data
-  license_url: https://opendefinition.org/licenses/odc-odbl/
+  license_name: null
+  license_url: null
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -71,15 +69,18 @@ software:
 status: active
 tags:
 - GIS
-- Energy
-- Utilities
-- Asset Management
+- energy
+- utilities
 - Kenya
+- has_api
 topics:
 - id: ENER
   name: Energy
   type: eudatatheme
-- id: Geoscientific Information
-  name: Geoscientific Information
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+- id: Structure
+  name: Structure
   type: iso19115
 uid: temp00001729

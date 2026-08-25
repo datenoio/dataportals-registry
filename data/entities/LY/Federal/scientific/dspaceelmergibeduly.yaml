@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -14,8 +15,9 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Institutional DSpace repository of Elmergib University for theses, journals,
-  conference papers, and other scholarly output.
+description: DSpace 9.1 institutional repository of Elmergib University (جامعة
+  المرقب / مستودع جامعة المرقب). Theses, scientific journals, and conference
+  papers, with REST and OAI-PMH APIs.
 endpoints:
 - type: dspace
   url: https://dspace.elmergib.edu.ly/server/api
@@ -26,6 +28,8 @@ endpoints:
 - type: oaipmh20
   url: https://dspace.elmergib.edu.ly/server/oai/request?verb=Identify
   version: '2.0'
+- type: sitemap
+  url: https://dspace.elmergib.edu.ly/sitemap_index.xml
 id: dspaceelmergibeduly
 langs:
 - id: AR
@@ -55,10 +59,13 @@ software:
   name: DSpace
 status: active
 tags:
+- DSpace
 - scientific
 - institutional repository
 - open access
 - research data
+- has_api
+- Libya
 topics:
 - id: TECH
   name: Science and technology
@@ -66,4 +73,7 @@ topics:
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
+- id: Education
+  name: Education
+  type: iso19115
 uid: cdi00027628

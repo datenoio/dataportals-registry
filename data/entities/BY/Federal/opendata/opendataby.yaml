@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,20 +14,17 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: No description available from the provided URL. Only the homepage was
-  referenced.
-endpoints:
-- type: ckan:package-list
-  url: https://opendata.by/api/3/action/package_list
-  version: '3'
-- type: dcatus11
-  url: https://opendata.by/data.json
+description: Community catalog of Belarusian open datasets maintained by the Open
+  Data Belarus civic initiative. The current site is a custom catalog (not DKAN or
+  CKAN); former CKAN/DKAN API paths return 404 and data.json is HTML.
 id: opendataby
 langs:
 - id: RU
   name: Russian
+- id: BE
+  name: Belarusian
 link: https://opendata.by
-name: Открытые данные Беларусь
+name: Open Data Belarus
 owner:
   link: https://opendata.by
   location:
@@ -47,11 +44,13 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: dkan
-  name: DKAN
-status: deprecated
+  id: custom
+  name: Custom software
+status: active
 tags:
 - open data
+- community
+- government
 topics:
 - id: GOVE
   name: Government and public sector

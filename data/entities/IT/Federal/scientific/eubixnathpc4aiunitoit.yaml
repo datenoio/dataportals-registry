@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: EUBI-XNAT is the Euro-BioImaging preclinical imaging archive hosted at
+  the University of Turin HPC4AI centre and provided with the Institute of Biostructures
+  and Bioimaging (IBB-CNR). Guest users can list public projects such as FatCorrectionDataset
+  and GLINT glucose imaging. Metadata for published preclinical datasets is also indexed
+  in the companion PIDAR catalog.
+endpoints:
+- type: rest
+  url: https://eubi-xnat.hpc4ai.unito.it/data/projects
+id: eubixnathpc4aiunitoit
+langs:
+- id: EN
+  name: English
+- id: IT
+  name: Italian
+link: https://eubi-xnat.hpc4ai.unito.it/
+name: EUBI-XNAT
+owner:
+  link: https://en.unito.it/
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: University of Turin
+  type: Academy
+properties:
+  dataset_count_reported: 4
+software:
+  id: xnat
+  name: XNAT
+status: active
+tags:
+- scientific
+- research data
+- academic
+- preclinical imaging
+- Euro-BioImaging
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi99990046

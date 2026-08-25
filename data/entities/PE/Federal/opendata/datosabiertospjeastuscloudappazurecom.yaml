@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,26 +14,22 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Open data catalog from Open Justice, providing access to judicial and
-  government data.
-endpoints:
-- type: ckan:package-list
-  url: https://datosabiertospj.eastus.cloudapp.azure.com/api/3/action/package_list
-  version: '3'
+description: Former CKAN open data catalog of Peru's Poder Judicial hosted on Azure.
+  The hostname datosabiertospj.eastus.cloudapp.azure.com no longer resolves.
 id: datosabiertospjeastuscloudappazurecom
 langs:
 - id: ES
   name: Spanish
 link: https://datosabiertospj.eastus.cloudapp.azure.com
-name: Portal de Datos Abiertos del Poder Judicial del Peru
+name: Portal de Datos Abiertos del Poder Judicial del Perú
 owner:
-  link: https://datosabiertospj.eastus.cloudapp.azure.com
+  link: https://www.gob.pe/pj
   location:
     country:
       id: PE
       name: Peru
     level: 20
-  name: Poder Judicial (Judicial Power)
+  name: Poder Judicial del Perú
   type: Central government
 rights:
   license_id: null
@@ -45,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - judicial
 - government
@@ -64,4 +60,4 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-uid: temp00004824
+uid: cdi00035090

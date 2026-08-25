@@ -15,13 +15,16 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Ecohub SDI - sharing geospatial data and maps (datasets, maps, documents,
-  GeoStories, dashboards).
+description: Ecohub SDI, a GeoNode 4 spatial data infrastructure operated by Ecospace
+  Services Ltd. Publishes geospatial datasets, maps, documents, GeoStories, and dashboards
+  (5 datasets when last counted).
 endpoints:
 - type: geonode:datasets
   url: https://data.espace.co.ke/api/datasets/
 - type: geonode:documents
   url: https://data.espace.co.ke/api/documents/
+- type: geonode:datasets
+  url: https://data.espace.co.ke/api/v2/datasets/
 - type: csw202
   url: https://data.espace.co.ke/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
@@ -73,14 +76,14 @@ langs:
 link: https://data.espace.co.ke
 name: Ecohub SDI
 owner:
+  link: https://espace.co.ke
   location:
     country:
       id: KE
       name: Kenya
     level: 20
-  name: Espace
-  type: Other
-  link: https://co.ke
+  name: Ecospace Services Ltd
+  type: Business
 rights:
   license_id: null
   license_name: null
@@ -97,6 +100,7 @@ tags:
 - geospatial
 - Kenya
 - GeoNode
+- has_api
 topics:
 - id: ENVI
   name: Environment
@@ -104,4 +108,7 @@ topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
 uid: cdi00021517

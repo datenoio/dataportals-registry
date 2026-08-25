@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Gustave Roussy instance of cBioPortal for Cancer Genomics. The public
+  study catalog currently includes MetaPRISM 2023, a whole-exome and RNA-seq cohort
+  from the MOSCATO and MATCH-R precision medicine trials.
+endpoints:
+- type: rest
+  url: https://cbioportal.gustaveroussy.fr/api/info
+- type: rest
+  url: https://cbioportal.gustaveroussy.fr/api/studies
+id: cbioportalgustaveroussyfr
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://cbioportal.gustaveroussy.fr
+name: Gustave Roussy cBioPortal
+owner:
+  link: https://www.gustaveroussy.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Gustave Roussy
+  type: Academy
+properties:
+  dataset_count_reported: 1
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: cbioportal
+  name: cBioPortal
+status: active
+tags:
+- scientific
+- has_api
+- cancer
+- genomics
+- biomedical data
+- health
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990013

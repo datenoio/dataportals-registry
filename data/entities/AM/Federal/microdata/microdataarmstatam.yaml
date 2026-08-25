@@ -15,30 +15,32 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: A collection of datasets from all the divisions from Statistical Committee
-  of the Republic of Armenia.
+description: NADA microdata library of the Statistical Committee of the Republic of
+  Armenia, publishing census and survey studies including the agricultural census
+  and household surveys.
 endpoints:
 - type: nada:catalog-search
   url: https://microdata.armstat.am/index.php/api/catalog/search
-- type: nada:csvexport
-  url: https://microdata.armstat.am/index.php/catalog/export/csv?ps=5000&collection[]
 id: microdataarmstatam
 langs:
+- id: HY
+  name: Armenian
 - id: EN
   name: English
 link: https://microdata.armstat.am
 name: ArmStat Microdata Library
 owner:
-  link: https://armstat.am
+  link: https://www.armstat.am
   location:
     country:
       id: AM
       name: Armenia
     level: 20
-  name: ArmStat
+  name: Statistical Committee of the Republic of Armenia
   type: Central government
 properties:
   has_doi: false
+  is_national: true
   transferable_topics: true
 rights:
   license_id: null
@@ -56,9 +58,8 @@ tags:
 - has_api
 - microdata
 - official statistics
-- population census
-- agricultural census
-- demographic survey
+- census
+- survey
 topics:
 - id: SOCI
   name: Population and society

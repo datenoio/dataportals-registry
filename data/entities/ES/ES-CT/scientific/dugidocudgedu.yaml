@@ -1,0 +1,131 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: DUGiDocs is the institutional repository of the Universitat de Girona.
+  Its aim is to preserve, spread and make visible the intellectual production issued
+  from research and teaching lead at the UdG, such as degree final reports, master
+  reports and doctorate research reports by university students as well as articles
+  in scientific periodicals. Moreover it includes indexing and content description
+  tools, makes visualization from many other internet sites easier (interoperability)
+  and it also includes open access.
+endpoints:
+- type: rss
+  url: https://dugi-doc.udg.edu/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://dugi-doc.udg.edu/feed/atom_1.0/site
+  version: '1.0'
+- type: sitemap
+  url: https://dugi-doc.udg.edu/sitemap
+- type: sitemap
+  url: http://dugi-doc.udg.edu/htmlmap
+- type: opensearch
+  url: https://dugi-doc.udg.edu/open-search/description.xml
+id: dugidocudgedu
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100013665
+  value: r3d100013665
+- id: roar
+  url: http://roar.eprints.org/446/
+  value: '446'
+- id: opendoar
+  url: https://v2.sherpa.ac.uk/id/repository/1264
+  value: '1264'
+langs:
+- id: EN
+  name: English
+- id: ES
+  name: Spanish
+link: https://dugi-doc.udg.edu
+name: Universitat de Girona Scientific Data Repository
+owner:
+  link: https://www.udg.edu
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+  name: Universitat de Girona
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- Metadata
+- Open Access
+- Repository
+- Research Outputs
+- University
+- dspace
+- government
+- has_api
+- open data
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00004254
+_re3data:
+  re3data_id: r3d100013665
+  keywords: []
+  content_type: []
+  contact_email: biblioteca.projectes@udg.edu
+  description: null
+  persistent_identifiers: []
+  software: []
+  versioning: null
+  institutions:
+  - name: Universidad de Gerona
+    url: null
+  - name: University of Girona
+    url: null
+  - name: ROR:01xdxns91
+    url: https://ror.org/01xdxns91
+  - name: other:OrgRef:61405
+    url: null
+  - name: GRID:grid.5319.e
+    url: null
+  - name: Crossref Funder ID:100008722
+    url: https://doi.org/10.13039/100008722
+  - name: ISNI:0000000121797512
+    url: https://isni.org/isni/0000000121797512
+  - name: general
+    url: null
+  - name: technical
+    url: null
+  repository_type: null
+  last_updated: '2025-12-25T16:50:41.501801'

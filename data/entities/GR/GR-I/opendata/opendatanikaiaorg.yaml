@@ -12,25 +12,25 @@ coverage:
       name: Greece
     level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
     subregion:
       id: GR-I
       name: Attikí
-description: Open data portal of the Municipality of Nikaia (Δήμος Νίκαιας), Greece.
+description: CKAN open data portal of the Municipality of Nikaia-Agios Ioannis Rentis.
 endpoints:
 - type: ckan:package-search
-  url: https://open-data-nikaia.reasonablegraph.org/api/3/action/package_search
+  url: https://opendata.nikaia-rentis.gov.gr/api/3/action/package_search
   version: '3'
 - type: ckan:package-list
-  url: https://open-data-nikaia.reasonablegraph.org/api/3/action/package_list
+  url: https://opendata.nikaia-rentis.gov.gr/api/3/action/package_list
   version: '3'
 id: opendatanikaiaorg
 langs:
 - id: EL
   name: Greek
-link: https://open-data-nikaia.reasonablegraph.org/
-name: Δήμος Νίκαιας
+link: https://opendata.nikaia-rentis.gov.gr/
+name: Nikaia-Agios Ioannis Rentis Open Data Portal
 owner:
   location:
     country:
@@ -40,9 +40,9 @@ owner:
     subregion:
       id: GR-I
       name: Attikí
-  name: Municipality of Nikaia
+  name: Municipality of Nikaia-Agios Ioannis Rentis
   type: Local government
-  link: https://reasonablegraph.org
+  link: https://www.nikaia-rentis.gov.gr
 properties:
   transferable_location: true
 rights:

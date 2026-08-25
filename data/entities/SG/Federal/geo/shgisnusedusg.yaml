@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,26 +15,16 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: ArcGIS REST API endpoint providing geospatial data services
-endpoints:
-- type: arcgis:rest:info
-  url: https://shgis.nus.edu.sg:6443/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://shgis.nus.edu.sg:6443/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://shgis.nus.edu.sg:6443/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://shgis.nus.edu.sg:6443/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://shgis.nus.edu.sg:6443/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://shgis.nus.edu.sg:6443/arcgis/rest/services?f=kmz
+description: Former ArcGIS REST endpoint for the Singapore Historical GIS (SHGIS)
+  project at NUS, a digital-humanities WebGIS of historical maps, Chinese temples,
+  clan associations, and related cultural layers. The public site and the :6443 ArcGIS
+  services host timed out in August 2026.
 id: shgisnusedusg
 langs:
 - id: EN
   name: English
 link: https://shgis.nus.edu.sg:6443/arcgis/rest/services
-name: National University of Singapore ArcGIS server
+name: Singapore Historical GIS ArcGIS server
 owner:
   link: https://www.nus.edu.sg
   location:
@@ -56,21 +46,21 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - GIS
+- historical GIS
 - ArcGIS
-- REST
-- Geospatial
+- digital humanities
 - NUS
 topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00004687

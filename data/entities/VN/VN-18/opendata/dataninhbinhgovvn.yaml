@@ -17,11 +17,18 @@ coverage:
     subregion:
       id: VN-18
       name: Ninh Bình
-description: Open data portal for Ninh Binh province, sharing datasets related to
-  local governance, public administration, and regional development.
+description: Open data portal for Ninh Binh province, sharing datasets related to local governance, public
+  administration, and regional development.
 endpoints:
 - type: ckan
   url: https://data.ninhbinh.gov.vn/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.ninhbinh.gov.vn/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.ninhbinh.gov.vn/api/3/action/package_list
+  version: '3'
 id: dataninhbinhgovvn
 langs:
 - id: VN
@@ -29,7 +36,7 @@ langs:
 link: https://data.ninhbinh.gov.vn
 name: Ninh Binh province open data portal
 owner:
-  link: http://www.ninhbinh.gov.vn
+  link: https://www.ninhbinh.gov.vn
   location:
     country:
       id: VN
@@ -38,7 +45,7 @@ owner:
     subregion:
       id: VN-18
       name: Ninh Bình
-  name: Ninh Binh province
+  name: Ninh Binh Provincial People's Committee
   type: Regional government
 properties:
   transferable_location: true

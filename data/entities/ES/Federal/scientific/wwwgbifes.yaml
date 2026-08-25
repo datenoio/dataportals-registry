@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: 'GBIF Spain maintains this data repository, built using an installation
+  of the GBIF Integrated Publishing Toolkit (IPT). Able to assign DOIs to datasets,
+  it ensures the data is disseminated in standardized format in order to facilitate
+  wider reuse and integration of the data, for example into GBIF.org. GBIF Spain supports
+  researchers in Spain by providing them helpdesk assistance and by hosting their
+  data for free in this repository. It has already been used to publish/host data
+  in scientific publications, e.g. http://dx.doi.org/10.15470/qomfu6 which is the
+  data this Scientific Data publication is based on: http://dx.doi.org/10.1038/sdata.2016.85'
+endpoints:
+- type: ipt:dataset
+  url: http://www.gbif.es/ipt/inventory/dataset
+id: wwwgbifes
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::123b7f02433572a0a560e620311a469c
+  value: fairsharing_::123b7f02433572a0a560e620311a469c
+langs:
+- id: ES
+  name: Spanish
+link: http://www.gbif.es/ipt/
+name: GBIF Spain IPT - GBIF Spain Repository
+owner:
+  link: https://www.gbif.es/en/
+  location:
+    country:
+      id: ES
+      name: Spain
+  name: Global Biodiversity Information Facility (GBIF) in Spain, Madrid, Spain
+  type: Academy
+software:
+  id: ipt
+  name: GBIF Integrated Publishing Toolkit (IPT)
+status: active
+tags:
+- scientific
+- research data
+- academic
+- biodiversity
+- ecology
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00030082

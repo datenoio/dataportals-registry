@@ -11,20 +11,23 @@ coverage:
     country:
       id: CH
       name: Switzerland
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Data catalogs and portals registry by Dateno. The source code is licensed
-  under the MIT License, and the website content is licensed under the CC BY-SA 4.0.
+    subregion:
+      id: CH-ZH
+      name: Zürich
+description: GeoLION is the geodata catalogue of the Canton of Zürich, documenting
+  cantonal spatial datasets, geoservices, and metadata.
 id: geolionzhch
 langs:
 - id: DE
   name: German
-link: http://geolion.zh.ch
+link: https://geolion.zh.ch
 name: GeoLION Zurich Geoportal
 owner:
-  link: http://geolion.zh.ch
+  link: https://geolion.zh.ch
   location:
     country:
       id: CH
@@ -33,8 +36,8 @@ owner:
     subregion:
       id: CH-ZH
       name: Zürich
-  name: geolion.zh.ch
-  type: Local government
+  name: Kanton Zürich
+  type: Regional government
 rights:
   license_id: null
   license_name: null
@@ -47,13 +50,11 @@ software:
   name: Custom software
 status: active
 tags:
-- Dateno
-- Switzerland
-- custom
-- data catalog
 - geodata
 - geospatial
-- open data
+- metadata
+- canton
+- Zurich
 topics:
 - id: Location
   name: Location

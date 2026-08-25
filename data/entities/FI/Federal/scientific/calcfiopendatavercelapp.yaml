@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 2
+    macroregion:
+      id: '001'
+      name: World
+description: CalcFi Open Data is a CC BY 4.0 bundle of 34 financial and macroeconomic
+  time series mirrored from primary sources such as FRED, the US Treasury, BLS, and
+  the World Bank. A Datasette instance exposes SQL queries plus JSON and CSV export
+  over more than 117,000 observations. Maintained by Jere Salmisto (Finland).
+endpoints:
+- type: rest
+  url: https://calcfi-open-data.vercel.app/calcfi-open-data.json
+id: calcfiopendatavercelapp
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::e55bc0255c752d1cb05da10c0f1f5026
+  value: fairsharing_::e55bc0255c752d1cb05da10c0f1f5026
+langs:
+- id: EN
+  name: English
+link: https://calcfi-open-data.vercel.app/
+name: CalcFi Open Data
+owner:
+  link: https://calcfi.app
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+  name: CalcFi
+  type: Business
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- research data
+- finance
+- macroeconomic
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00030295

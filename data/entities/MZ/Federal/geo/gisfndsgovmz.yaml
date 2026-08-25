@@ -17,7 +17,8 @@ coverage:
       name: Eastern Africa
 description: ArcGIS REST catalog of geospatial services operated by Fundo Nacional
   de Desenvolvimento Sustentável (FNDS) for land, forest, and sustainable-development
-  programmes.
+  programmes. The TLS certificate on this host is currently invalid, but the REST
+  directory still returns services.
 endpoints:
 - type: arcgis:portals:self
   url: https://gis.fnds.gov.mz/portal/sharing/rest/portals/self?f=pjson
@@ -62,11 +63,15 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- GEO
-- MOZAMBIQUE
-- GEODATA
-- ARCGIS
+- geospatial
+- government
+- has_api
+- ArcGIS
+- FNDS
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115

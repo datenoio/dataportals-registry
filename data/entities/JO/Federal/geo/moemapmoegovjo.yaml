@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Data catalog presenting various GIS services via ArcGIS REST API by the
-  Ministry of Education of Jordan.
+description: ArcGIS REST services of the Ministry of Education, publishing school
+  locations and related geospatial layers for Jordan.
 endpoints:
 - type: arcgis:portals:self
   url: https://moemap.moe.gov.jo/portal/sharing/rest/portals/self?f=pjson
@@ -36,8 +36,10 @@ id: moemapmoegovjo
 langs:
 - id: AR
   name: Arabic
+- id: EN
+  name: English
 link: https://moemap.moe.gov.jo/arcgis/rest/services
-name: Jordan Ministry of Education geo portal
+name: Ministry of Education GIS
 owner:
   link: https://www.moe.gov.jo
   location:
@@ -45,7 +47,7 @@ owner:
       id: JO
       name: Jordan
     level: 20
-  name: Jordan Ministry of Education
+  name: Ministry of Education
   type: Central government
 properties:
   has_doi: false
@@ -65,6 +67,7 @@ tags:
 - geospatial
 - government
 - GIS
+- has_api
 - education
 - schools
 topics:

@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: '010'
       name: Antarctica
-description: This publishing toolkit is installed to allow pushing new Antarctic biodiversity
-  data to GBIF. It is an integrated part of the ANTABIF architecture.
+description: GBIF Integrated Publishing Toolkit of the Antarctic Biodiversity Information
+  Facility (ANTABIF). Publishes Darwin Core archives of Antarctic marine and terrestrial
+  biodiversity into GBIF as part of the SCAR Antarctic Biodiversity Portal architecture.
 endpoints:
 - type: dcat:ttl
   url: https://ipt.biodiversity.aq/dcat
@@ -25,6 +26,10 @@ endpoints:
   url: https://ipt.biodiversity.aq/rss.do
   version: '2.0'
 id: iptbiodiversityaq
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/installation/27c24cba-13c5-47d1-96a1-16abd8f11437
+  value: 27c24cba-13c5-47d1-96a1-16abd8f11437
 langs:
 - id: EN
   name: English
@@ -39,6 +44,16 @@ owner:
     level: 20
   name: Antarctic Biodiversity Information Facility (ANTABIF)
   type: Academy
+properties:
+  dataset_count_reported: 240
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -47,7 +62,9 @@ tags:
 - GBIF
 - IPT
 - biodiversity
+- Antarctica
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota
@@ -58,4 +75,7 @@ topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
 uid: cdi00010452

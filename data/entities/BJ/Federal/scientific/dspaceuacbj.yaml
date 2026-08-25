@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -16,14 +17,24 @@ coverage:
       name: Western Africa
 description: ÉPISTÉMÈ is the institutional DSpace repository of Université d'Abomey-Calavi
   (UAC). It collects, preserves, and disseminates theses, dissertations, articles,
-  and other scientific output from the UAC community.
+  and other scientific output from the UAC community. DSpace 10 REST and OAI-PMH
+  endpoints are public (about 14,644 items).
 endpoints:
-- type: dspace:catalog
-  url: https://dspace.uac.bj/
+- type: dspace
+  url: https://dspace.uac.bj/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://dspace.uac.bj/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://dspace.uac.bj/server/oai/request?verb=Identify
+  version: '2.0'
 id: dspaceuacbj
 langs:
 - id: FR
   name: French
+- id: EN
+  name: English
 link: https://dspace.uac.bj/
 name: ÉPISTÉMÈ – Dépôt Numérique Institutionnel de l'UAC
 owner:
@@ -37,6 +48,7 @@ owner:
   type: Academy
 properties:
   has_doi: false
+  dataset_count_reported: 14644
 rights:
   license_id: null
   license_name: null
@@ -53,8 +65,7 @@ tags:
 - institutional repository
 - open access
 - theses
-- Benin
-- UAC
+- has_api
 topics:
 - id: TECH
   name: Science and technology

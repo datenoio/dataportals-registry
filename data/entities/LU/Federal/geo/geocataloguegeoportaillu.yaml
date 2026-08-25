@@ -15,10 +15,9 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Official national data catalog for geographic and open data, offering
-  access to diverse data products from ministries, administrations, and public sector
-  companies in Luxembourg, including geospatial layers, POIs, and INSPIRE compliant
-  datasets.
+description: Official GeoNetwork catalogue of Geoportail Luxembourg (geoportail.lu),
+  describing geographic products and INSPIRE-compliant datasets from ministries,
+  administrations, and public-sector bodies.
 endpoints:
 - type: geonetwork:query
   url: https://geocatalogue.geoportail.lu/geonetwork/srv/eng/q
@@ -35,17 +34,20 @@ id: geocataloguegeoportaillu
 langs:
 - id: FR
   name: French
-link: https://geocatalogue.geoportail.lu/geonetwork/srv/rus/catalog.search#/home
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://geocatalogue.geoportail.lu/geonetwork/srv/fra/catalog.search
 name: Geocatalogue - Geoportail Luxembourg
 owner:
-  link: https://geoportail.lu/en/catalogues/
+  link: https://www.geoportail.lu
   location:
     country:
       id: LU
       name: Luxembourg
     level: 20
-  name: Administration du Cadastre et de la Topographie - Service du géoportail et
-    de l'ILDG (ACT)
+  name: Administration du Cadastre et de la Topographie
   type: Central government
 properties:
   has_doi: true
@@ -63,13 +65,11 @@ status: active
 tags:
 - INSPIRE
 - Luxembourg
-- POI
 - geonetwork
 - geoportail.lu
 - geoportal
 - geospatial
 - open data
-- point
 topics:
 - id: ENVI
   name: Environment

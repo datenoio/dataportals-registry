@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,13 +15,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Venezuela Climate Data Library (Datoteca) and Maproom. The maproom is
-  a collection of maps and other figures that monitor climate and societal conditions
-  at present and in the recent past. The maps and figures can be manipulated and are
-  linked to the original data.
-endpoints:
-- type: datalibrary:catalog
-  url: http://datoteca.ole2.org/
+description: Former Venezuela Climate Data Library (Datoteca) and Maproom, an IRI
+  Data Library instance operated with INAMEH. The hostname datoteca.ole2.org no longer
+  resolves (NXDOMAIN on 24 August 2026).
 id: datotecaole2org
 langs:
 - id: ES
@@ -49,7 +45,7 @@ rights:
 software:
   id: datalibrary
   name: Data Library
-status: active
+status: inactive
 tags:
 - climate
 - weather

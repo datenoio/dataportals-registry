@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,13 +18,13 @@ coverage:
     subregion:
       id: VE-S
       name: Táchira
-description: Geoportal oficial del estado Táchira que proporciona acceso a datos geográficos
-  y capas cartográficas para la región. Gestionado por el Gobierno del Estado Táchira,
-  este portal ofrece información geoespacial incluyendo límites administrativos, infraestructura
-  vial y urbana, datos territoriales, planificación urbana, y otros conjuntos de datos
-  espaciales relevantes para el estado de Táchira, Venezuela. El portal facilita el
-  acceso a información geográfica gubernamental para apoyar la toma de decisiones,
-  la planificación territorial y el desarrollo regional.
+description: Official geoportal of Táchira state. Custom OpenLayers viewer over a
+  MapServer WMS of administrative boundaries, roads, and territorial layers managed
+  by the Gobernación del Estado Táchira.
+endpoints:
+- type: wms130
+  url: http://geoportal.tachira.gob.ve/cgi-bin/mapserv?map=/var/www/GeoPortal/tachira/tachira.map&service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
 id: geoportaltachiragobve
 identifiers:
 - id: url
@@ -36,7 +36,7 @@ langs:
 link: http://geoportal.tachira.gob.ve
 name: Geoportal Táchira
 owner:
-  link: http://tachira.gob.ve
+  link: http://www.tachira.gob.ve/
   location:
     country:
       id: VE
@@ -47,6 +47,8 @@ owner:
       name: Táchira
   name: Gobernación del Estado Táchira
   type: Regional government
+properties:
+  has_doi: false
 rights:
   license_id: null
   license_name: null
@@ -64,18 +66,7 @@ tags:
 - venezuela
 - tachira
 - government
-- spatial data
-- map layers
-- administrative boundaries
-- infrastructure
-- state government
-- regional data
-- territorial planning
-- urban planning
-- geographic information systems
 - GIS
-- public sector
-- local government
 topics:
 - id: GOVE
   name: Government and public sector
@@ -95,7 +86,4 @@ topics:
 - id: Planning / Cadastre
   name: Planning / Cadastre
   type: iso19115
-- id: Structure
-  name: Structure
-  type: iso19115
-uid: temp00003185
+uid: cdi00034924

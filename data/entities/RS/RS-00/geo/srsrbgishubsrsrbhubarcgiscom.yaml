@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,29 +13,19 @@ coverage:
       name: Serbia
     level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
     subregion:
       id: RS-00
       name: Beograd
-description: Hub site for GIS data and resources (exact site description not available
-  in the search results; this is inferred from the URL and common Hub patterns. For
-  precise description, you would need to visit the site directly.)
-endpoints:
-- type: dcatap201
-  url: https://srsrb-gis-hub-srsrb.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://srsrb-gis-hub-srsrb.hub.arcgis.com/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://srsrb-gis-hub-srsrb.hub.arcgis.com/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://srsrb-gis-hub-srsrb.hub.arcgis.com/api/search/v1
+description: ArcGIS Hub site srsrb-gis-hub-srsrb.hub.arcgis.com. Esri APIs return SB_0005
+  (subscription disabled); the public Hub page is a generic shell with no catalog content.
 id: srsrbgishubsrsrbhubarcgiscom
 langs:
 - id: EN
   name: English
 link: https://srsrb-gis-hub-srsrb.hub.arcgis.com/
-name: Not available in search results Geoportal
+name: srsrb ArcGIS Hub
 owner:
   link: https://srsrb-gis-hub-srsrb.hub.arcgis.com/
   location:
@@ -46,8 +36,8 @@ owner:
     subregion:
       id: RS-00
       name: Beograd
-  name: Not available in search results
-  type: Central government
+  name: srsrb ArcGIS Hub organization
+  type: Other
 properties:
   has_doi: false
 rights:
@@ -60,11 +50,11 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
 - GIS
-- data catalog
 - ArcGIS Hub
+- inactive
 topics:
 - id: Location
   name: Location

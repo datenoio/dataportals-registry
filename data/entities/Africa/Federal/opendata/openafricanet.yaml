@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: Africa
+      name: Africa
+    level: 10
+    macroregion:
+      id: '002'
+      name: Africa
+description: Code for Africa CKAN catalog of volunteer-driven open datasets from across the
+  continent. Largest independent African open-data repository; package search and list APIs
+  are published at /api/3.
+endpoints:
+- type: ckan:package-search
+  url: https://open.africa/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://open.africa/api/3/action/package_list
+  version: '3'
+- type: ckan
+  url: https://open.africa/api/3
+  version: '3'
+id: openafricanet
+langs:
+- id: EN
+  name: English
+link: https://open.africa
+name: openAFRICA Open Data Portal
+owner:
+  link: https://codeforafrica.org
+  location:
+    country:
+      id: Africa
+      name: Africa
+    level: 10
+  name: Code for Africa
+  type: Civil society
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- has_api
+- open data
+- Africa
+- repository
+- data catalog
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00000008

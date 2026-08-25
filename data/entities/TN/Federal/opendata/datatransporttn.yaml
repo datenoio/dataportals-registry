@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -15,23 +15,14 @@ coverage:
       id: '015'
       name: Northern Africa
 description: Sectoral open data portal of the Tunisian Ministry of Transport, publishing
-  transport networks, stops, and related public datasets.
-endpoints:
-- type: ckan
-  url: http://data.transport.tn/api/3
-- type: ckan
-  url: https://data.transport.tn/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://data.transport.tn/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://data.transport.tn/api/3/action/package_list
-  version: '3'
+  transport networks, stops, and related public datasets. The former CKAN API is no
+  longer available.
 id: datatransporttn
 langs:
 - id: FR
   name: French
+- id: AR
+  name: Arabic
 link: https://data.transport.tn
 name: Portail sectoriel des données ouvertes du transport
 owner:
@@ -41,7 +32,7 @@ owner:
       id: TN
       name: Tunisia
     level: 20
-  name: République Tunisienne Ministère du Transport
+  name: Ministère du Transport
   type: Central government
 properties:
   transferable_topics: true
@@ -53,12 +44,13 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: ckan
-  name: CKAN
+  id: custom
+  name: Custom software
 status: active
 tags:
 - government
-- has_api
+- transport
+- open data
 topics:
 - id: Transportation
   name: Transportation

@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: KZ-71
       name: Astana
-description: Website of GIS data and maps for Kazakhstan, likely operated by a government
-  entity.
+description: Official geoinformation portal of Astana city (ArcGIS Experience
+  Builder), with ArcGIS Server REST services for municipal maps and layers.
 endpoints:
 - type: arcgis:portals:self
   url: https://gis.esaulet.kz/portal/sharing/rest/portals/self?f=pjson
@@ -39,6 +39,8 @@ id: gisesauletkz
 langs:
 - id: RU
   name: Russian
+- id: KZ
+  name: Kazakh
 link: https://gis.esaulet.kz
 name: Геоинформационный портал города Астана
 owner:

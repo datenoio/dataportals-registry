@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: OBIS Panama IPT. This scientific data repository provides access to GBIF-published
-  biodiversity datasets.
+description: Ocean Biodiversity Information System (OBIS) IPT instance for Panama,
+  hosted by the OBIS Secretariat for publishing marine biodiversity occurrence datasets
+  using Darwin Core.
 endpoints:
 - type: dcat:ttl
   url: https://ipt.obis.org/panama/dcat
@@ -38,7 +39,7 @@ owner:
       name: Panama
     level: 20
   name: OBIS Secretariat
-  type: Academy
+  type: International
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -46,11 +47,16 @@ status: active
 tags:
 - GBIF
 - IPT
+- OBIS
 - biodiversity
+- marine
 - data publishing
 topics:
 - id: Biota
   name: Biota
+  type: iso19115
+- id: Oceans
+  name: Oceans
   type: iso19115
 - id: ENVI
   name: Environment

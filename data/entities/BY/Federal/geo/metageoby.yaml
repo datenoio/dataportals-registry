@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Published geospatial data via GeoServer. geoportal. managed by Belgeodesia.
-  accessible at meta.geo.by.
+description: National GeoServer of Republican Unitary Enterprise Belgeodesia, publishing
+  official geospatial layers for Belarus via OGC WMS, WFS, WCS, WMTS, and related
+  services.
 endpoints:
 - type: wms111
   url: https://meta.geo.by/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -76,8 +77,10 @@ id: metageoby
 langs:
 - id: RU
   name: Russian
+- id: BE
+  name: Belarusian
 link: https://meta.geo.by/geoserver
-name: geo.by Geoserver Data Catalog
+name: Belgeodesia GeoServer data catalog
 owner:
   link: https://geo.by
   location:
@@ -85,7 +88,7 @@ owner:
       id: BY
       name: Belarus
     level: 20
-  name: Belgeodesia
+  name: Republican Unitary Enterprise Belgeodesia
   type: Central government
 properties:
   has_doi: false
@@ -101,11 +104,10 @@ software:
   name: GeoServer
 status: active
 tags:
-- WMS
-- WFS
-- raster
-- vector
+- geospatial
 - geoserver
+- government
+- has_api
 topics:
 - id: REGI
   name: Regions and cities
@@ -115,5 +117,8 @@ topics:
   type: eudatatheme
 - id: Environment
   name: Environment
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00005040

@@ -15,8 +15,10 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: National web portal for exploring climate scenarios, risk, and related
-  geospatial information for Vanuatu (Vanuatu Climate Futures Portal).
+description: National climate information services portal (Van-KIRAP) for exploring
+  climate scenarios, risk, maps, and sector guidance for Vanuatu. Operated with the
+  Vanuatu Meteorology and Geo-Hazards Department, SPREP, and CSIRO. The public site
+  is a custom Angular application without a documented machine-readable catalog API.
 id: vanclimatefuturesgovvu
 langs:
 - id: EN
@@ -24,13 +26,13 @@ langs:
 link: https://vanclimatefutures.gov.vu/
 name: Vanuatu Climate Futures Portal
 owner:
-  link: https://www.gov.vu
+  link: https://www.vmgd.gov.vu/
   location:
     country:
       id: VU
       name: Vanuatu
     level: 20
-  name: Government of Vanuatu
+  name: Vanuatu Meteorology and Geo-Hazards Department
   type: Central government
 properties:
   has_doi: false
@@ -49,10 +51,11 @@ status: active
 tags:
 - climate
 - climate change
+- meteorology
 - geospatial
 - government
 - pacific
-- Vanuatu
+- Van-KIRAP
 topics:
 - id: ENVI
   name: Environment
@@ -62,6 +65,9 @@ topics:
   type: eudatatheme
 - id: Environment
   name: Environment
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
   type: iso19115
 - id: Location
   name: Location

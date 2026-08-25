@@ -15,14 +15,15 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: National environmental geospatial information platform for Benin, providing
-  access to spatial datasets, maps, and related resources published through the Système
-  d’Information sur l’Environnement du Bénin (SINEB).
+description: National environmental geospatial platform of the Système d'Information
+  sur l'Environnement du Bénin (SINEB). GeoNode catalog (about 17 datasets) with
+  public REST, CSW, and OGC services for environmental spatial data.
 endpoints:
 - type: geonode:datasets
   url: https://sig.sineb.bj/api/datasets/
-- type: geonode:documents
-  url: https://sig.sineb.bj/api/documents/
+- type: csw202
+  url: https://sig.sineb.bj/catalogue/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: '2.0.2'
 - type: wms130
   url: https://sig.sineb.bj/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
   version: 1.3.0
@@ -45,16 +46,18 @@ langs:
 link: https://sig.sineb.bj
 name: SieMap – Plateforme SIG SINEB
 owner:
+  link: https://www.sineb.bj
   location:
     country:
       id: BJ
       name: Benin
     level: 20
-  name: Système d’Information sur l’Environnement du Bénin (SINEB)
+  name: Système d'Information sur l'Environnement du Bénin (SINEB)
   type: Central government
-  link: https://sineb.bj
 properties:
   has_doi: false
+  is_national: true
+  dataset_count_reported: 17
 rights:
   license_id: null
   license_name: null
@@ -69,7 +72,9 @@ status: active
 tags:
 - GIS
 - environment
-- Benin
+- GeoNode
+- government
+- has_api
 topics:
 - id: ENVI
   name: Environment

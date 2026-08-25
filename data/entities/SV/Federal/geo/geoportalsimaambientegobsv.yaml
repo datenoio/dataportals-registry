@@ -15,16 +15,26 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: ArcGIS Enterprise geoportal of El Salvador's Ministry of Environment
-  and Natural Resources (SIMA / SIMACC). Successor to the former mapas.marn.gob.sv
-  REST services, with a public Portal catalog of environmental map layers.
+description: ArcGIS Enterprise 12 geoportal of El Salvador's Ministry of Environment
+  and Natural Resources (SIMA / SIMACC). Public Portal catalog plus REST map services
+  on geoserver.ambiente.gob.sv. Successor to the former mapas.marn.gob.sv REST directory.
 endpoints:
 - type: arcgis:portals:self
   url: https://geoportalsima.ambiente.gob.sv/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:search
+  url: https://geoportalsima.ambiente.gob.sv/portal/sharing/rest/search?f=json&q=type:%22Feature%20Service%22
 - type: arcgis:rest:info
-  url: https://geoportalsima.ambiente.gob.sv/server/rest/info?f=pjson
+  url: https://geoserver.ambiente.gob.sv/server/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: https://geoportalsima.ambiente.gob.sv/server/rest/services?f=pjson
+  url: https://geoserver.ambiente.gob.sv/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoserver.ambiente.gob.sv/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoserver.ambiente.gob.sv/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoserver.ambiente.gob.sv/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geoserver.ambiente.gob.sv/server/rest/services?f=kmz
 id: geoportalsimaambientegobsv
 langs:
 - id: ES

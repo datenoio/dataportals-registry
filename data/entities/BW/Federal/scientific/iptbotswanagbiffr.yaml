@@ -12,35 +12,42 @@ coverage:
       name: Botswana
     level: 20
     macroregion:
-      id: 018
+      id: '018'
       name: Southern Africa
-description: This IPT is hosted by GBIF France to publish datasets coming from Botswanan
-  institutions holding biodiversity data. For more assistance, please contact the
-  Botswana National Museum at blmokotedi13@gmail.com or the GBIF France IT team at
-  dev@gbif.fr or gbif@gbif.fr.
+description: GBIF Integrated Publishing Toolkit for Botswana, hosted by GBIF France
+  and operated with the Botswana National Museum. Publishes biodiversity datasets
+  from Botswanan institutions, including the museum entomology collection.
 endpoints:
 - type: dcat:ttl
-  url: http://ipt-botswana.gbif.fr/dcat
+  url: https://ipt-botswana.gbif.fr/dcat
 - type: ipt:dataset
-  url: http://ipt-botswana.gbif.fr/inventory/dataset
+  url: https://ipt-botswana.gbif.fr/inventory/dataset
 - type: rss
-  url: http://ipt-botswana.gbif.fr/rss.do
+  url: https://ipt-botswana.gbif.fr/rss.do
   version: '2.0'
 id: iptbotswanagbiffr
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/installation/2920238e-578e-4dc7-a834-2b1a2c0f7a8b
+  value: 2920238e-578e-4dc7-a834-2b1a2c0f7a8b
 langs:
 - id: EN
   name: English
-link: http://ipt-botswana.gbif.fr
+link: https://ipt-botswana.gbif.fr
 name: IPT Botswana
 owner:
-  link: https://www.bnm.bw
+  link: https://www.gbif.org/publisher/8ca12fcf-3afe-4d66-933e-48bea18197c4
   location:
     country:
       id: BW
       name: Botswana
     level: 20
   name: Botswana National Museum
-  type: Academy
+  type: Central government
+properties:
+  dataset_count_reported: 1
+  has_doi: true
+  is_national: true
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -50,6 +57,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota

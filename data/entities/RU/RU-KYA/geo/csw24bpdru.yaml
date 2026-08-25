@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+    subregion:
+      id: RU-KYA
+      name: Krasnojarskij kraj
+description: CSW (Catalog Services for the Web) endpoint for metadata and spatial
+  data discovery.
+endpoints:
+- type: csw202
+  url: http://csw.24bpd.ru/?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+id: csw24bpdru
+langs:
+- id: RU
+  name: Russian
+link: http://csw.24bpd.ru
+name: Spatial data catalog Yenisei-GI
+owner:
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    subregion:
+      id: RU-KYA
+      name: Krasnojarskij kraj
+  name: Spatial data catalog Yenisei-GI
+  type: Regional government
+  link: https://24bpd.ru
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- government
+- CSW
+- Oracle
+- Spatial
+- Catalog
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00001394

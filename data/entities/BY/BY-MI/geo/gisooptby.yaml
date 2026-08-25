@@ -11,15 +11,15 @@ coverage:
     country:
       id: BY
       name: Belarus
-    level: 20
+    level: 30
     macroregion:
       id: '151'
       name: Eastern Europe
     subregion:
       id: BY-MI
       name: Minskaja oblast'
-description: Data catalog providing access to ArcGIS REST services and geospatial
-  datasets.
+description: ArcGIS Server and Portal of Narochansky National Park, publishing park
+  spatial layers for fauna, flora, forest, tourism, and related themes.
 endpoints:
 - type: arcgis:portals:self
   url: https://gisoopt.by/portal/sharing/rest/portals/self?f=pjson
@@ -39,10 +39,12 @@ id: gisooptby
 langs:
 - id: RU
   name: Russian
+- id: BE
+  name: Belarusian
 link: https://gisoopt.by/arcgis/rest/services
-name: National Park "Narochansky" ArcGIS Server
+name: Narochansky National Park ArcGIS Server
 owner:
-  link: https://narochpark.by
+  link: https://gisoopt.by
   location:
     country:
       id: BY
@@ -51,7 +53,7 @@ owner:
     subregion:
       id: BY-MI
       name: Minskaja oblast'
-  name: National Park "Narochansky"
+  name: Narochansky National Park
   type: Regional government
 properties:
   has_doi: false
@@ -70,8 +72,19 @@ tags:
 - geospatial
 - REST
 - ArcGIS
+- national park
+- has_api
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00004342

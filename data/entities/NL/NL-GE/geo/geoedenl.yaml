@@ -15,10 +15,10 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-    subregion: &id001
+    subregion:
       id: NL-GE
       name: Gelderland
-description: GeoServer instance, serving geospatial data layers.
+description: GeoServer of the municipality of Ede, publishing local geospatial layers.
 endpoints:
 - type: wms111
   url: https://geo.ede.nl/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -58,16 +58,18 @@ langs:
 - id: NL
   name: Dutch
 link: https://geo.ede.nl/geoserver
-name: Not specified in provided context Geoportal
+name: Municipality of Ede GeoServer
 owner:
-  link: https://geo.ede.nl/geoserver
+  link: https://www.ede.nl
   location:
     country:
       id: NL
       name: Netherlands
     level: 30
-    subregion: *id001
-  name: Not specified in provided context
+    subregion:
+      id: NL-GE
+      name: Gelderland
+  name: Gemeente Ede
   type: Local government
 properties:
   has_doi: false
@@ -97,4 +99,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-uid: temp00005256
+uid: cdi00035199

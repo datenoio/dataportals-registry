@@ -1,8 +1,8 @@
 access_mode:
 - open
 - restricted
-api: false
-api_status: inactive
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -15,10 +15,14 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: LTA publishes a wide variety of land transport-related datasets (static
-  and dynamic / real-time) on DataMall for enterprises, third-party developers, researchers,
-  and other members of the public to promote collaboration and co-creation of innovative
-  and inclusive transport solutions.
+description: LTA DataMall publishes static downloads and AccountKey-gated real-time
+  APIs for Singapore land transport (bus arrivals, traffic, parking, taxi availability,
+  and related feeds) for developers, researchers, and the public.
+endpoints:
+- type: docs
+  url: https://datamall.lta.gov.sg/content/datamall/en.html
+- type: docs
+  url: https://www.developer.tech.gov.sg/products/categories/data-and-apis/land-transport-datamall/overview
 id: datamallltagovsg
 langs:
 - id: EN

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,13 +15,10 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Tanzania Meteorological Authority Climate Data Library and Maproom. The
-  maproom is a collection of maps and other figures that monitor climate and societal
-  conditions at present and in the recent past. The maps and figures can be manipulated
-  and are linked to the original data.
-endpoints:
-- type: datalibrary:catalog
-  url: http://maproom.meteo.go.tz/
+description: Historical Tanzania Meteorological Authority Climate Data Library and
+  Maproom (IRI Data Library / ENACTS). Interactive maps monitoring climate and societal
+  conditions, linked to the original station and blended climate data. Host maproom.meteo.go.tz
+  refused connections on 24 August 2026.
 id: maproommeteogotz
 langs:
 - id: EN
@@ -49,7 +46,7 @@ rights:
 software:
   id: datalibrary
   name: Data Library
-status: active
+status: inactive
 tags:
 - climate
 - weather

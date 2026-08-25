@@ -13,12 +13,12 @@ coverage:
       name: Trinidad and Tobago
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: Geospatial information portal focused on marine data for Trinidad and
-  Tobago, providing infrastructure to collect, analyse, and disseminate geospatial
-  data for marine applications. Allows exploration and visualization of biodiversity
-  data, digital map creation, and supports research and management.
+description: ArcGIS Enterprise Marine Data Hub of the Institute of Marine Affairs.
+  Publishes coastal and marine geospatial layers for Trinidad and Tobago, including
+  coastline change, bathymetry, and hosted feature services. The TLS certificate was
+  expired on 24 August 2026.
 endpoints:
 - type: arcgis:portals:self
   url: https://mdh.ima.gov.tt/portal/sharing/rest/portals/self?f=pjson
@@ -47,8 +47,8 @@ owner:
       id: TT
       name: Trinidad and Tobago
     level: 20
-  name: The Institute of Marine Affairs (IMA)
-  type: Academy
+  name: Institute of Marine Affairs
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -63,15 +63,12 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- scientific
-- biodiversity
-- GIS
 - marine
+- coastal
 - geospatial
-- Trinidad
-- Tobago
-- data catalog
-- visualization
+- GIS
+- biodiversity
+- has_api
 topics:
 - id: ENVI
   name: Environment
@@ -81,5 +78,8 @@ topics:
   type: iso19115
 - id: Environment
   name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
   type: iso19115
 uid: cdi00004216

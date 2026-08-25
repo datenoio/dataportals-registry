@@ -18,26 +18,27 @@ coverage:
     subregion:
       id: CH-ZH
       name: Zürich
-description: Geoportal featuring GIS REST services provided by the city of Zurich.
+description: ArcGIS REST services of the City of Zürich, publishing municipal map
+  layers and spatial datasets.
 endpoints:
 - type: arcgis:rest:info
-  url: http://www.gis.stadt-zuerich.ch/arcgis/rest/info?f=pjson
+  url: https://gis.stadt-zuerich.ch/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: http://www.gis.stadt-zuerich.ch/arcgis/rest/services?f=pjson
+  url: https://gis.stadt-zuerich.ch/arcgis/rest/services?f=pjson
 - type: arcgis:soap
-  url: http://www.gis.stadt-zuerich.ch/arcgis/services?wsdl
+  url: https://gis.stadt-zuerich.ch/arcgis/services?wsdl
 - type: arcgis:sitemap
-  url: http://www.gis.stadt-zuerich.ch/arcgis/rest/services?f=sitemap
+  url: https://gis.stadt-zuerich.ch/arcgis/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: http://www.gis.stadt-zuerich.ch/arcgis/rest/services?f=geositemap
+  url: https://gis.stadt-zuerich.ch/arcgis/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: http://www.gis.stadt-zuerich.ch/arcgis/rest/services?f=kmz
+  url: https://gis.stadt-zuerich.ch/arcgis/rest/services?f=kmz
 id: wwwgisstadtzuerichch
 langs:
 - id: DE
   name: German
-link: http://www.gis.stadt-zuerich.ch/arcgis/rest/services
-name: Stadt Zuerich stadtplan
+link: https://gis.stadt-zuerich.ch/arcgis/rest/services
+name: Stadt Zürich Stadtplan
 owner:
   link: https://www.stadt-zuerich.ch
   location:
@@ -48,7 +49,7 @@ owner:
     subregion:
       id: CH-ZH
       name: Zürich
-  name: Stadt Zuerich
+  name: Stadt Zürich
   type: Local government
 properties:
   has_doi: false

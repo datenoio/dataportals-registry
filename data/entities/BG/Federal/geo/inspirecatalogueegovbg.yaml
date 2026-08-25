@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,12 +14,9 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Official INSPIRE data catalog for Bulgaria managed by the government.
-endpoints:
-- type: csw202
-  url: https://inspire-catalogue.egov.bg/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
+      name: Eastern Europe
+description: Former GeoNetwork INSPIRE metadata catalogue at inspire-catalogue.egov.bg.
+  The host currently times out; the live national INSPIRE catalogue is inspireportal.egov.bg.
 id: inspirecatalogueegovbg
 langs:
 - id: BG
@@ -47,7 +44,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - INSPIRE
 - spatial data

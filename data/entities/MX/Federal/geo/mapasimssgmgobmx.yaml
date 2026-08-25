@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,20 +15,8 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: ArcGIS REST Services endpoint for map and GIS data catalog.
-endpoints:
-- type: arcgis:rest:info
-  url: https://mapasims.sgm.gob.mx/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://mapasims.sgm.gob.mx/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://mapasims.sgm.gob.mx/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://mapasims.sgm.gob.mx/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://mapasims.sgm.gob.mx/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://mapasims.sgm.gob.mx/arcgis/rest/services?f=kmz
+description: Former ArcGIS REST services of Servicio Geológico Mexicano. The mapasims.sgm.gob.mx
+  services URL now redirects to the SGM 404 error page.
 id: mapasimssgmgobmx
 langs:
 - id: ES
@@ -56,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - maps
 - gis
@@ -82,4 +70,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00005980
+uid: cdi00035235

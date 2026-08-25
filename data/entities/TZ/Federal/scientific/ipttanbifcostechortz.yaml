@@ -14,7 +14,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Tanzania Biodiversity  Information  Facility
+description: Official GBIF Integrated Publishing Toolkit of the Tanzania Biodiversity
+  Information Facility (TanBIF), hosted by COSTECH. Publishes biodiversity occurrence,
+  checklist, and sampling-event datasets from Tanzanian institutions.
 endpoints:
 - type: dcat:ttl
   url: https://ipt.tanbif.costech.or.tz/dcat
@@ -28,16 +30,25 @@ langs:
 - id: EN
   name: English
 link: https://ipt.tanbif.costech.or.tz
-name: TanBIF
+name: TanBIF IPT
 owner:
-  link: http://www.tanbif.or.tz
+  link: https://costech.or.tz
   location:
     country:
       id: TZ
       name: Tanzania
     level: 20
-  name: TanBIF
+  name: Tanzania Biodiversity Information Facility (TanBIF)
   type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -47,6 +58,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota

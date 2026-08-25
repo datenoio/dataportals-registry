@@ -6,6 +6,7 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
+- document
 coverage:
 - location:
     country:
@@ -13,13 +14,19 @@ coverage:
       name: Oceania
     level: 20
     macroregion:
-      id: 009
+      id: '009'
       name: Oceania
-description: User Acceptance Testing (UAT) instance of the Pacific Community's Nexus
-  Portal - spatial data repository for Pacific Island countries and territories.
+description: User-acceptance GeoNode instance of the Pacific Community NEXUS spatial
+  data repository for Pacific Island countries and territories. Publicly reachable
+  staging copy of the production NEXUS geoportal (GeoNode 5), with datasets, documents,
+  and CSW.
 endpoints:
+- type: geonode:datasets
+  url: https://geonode-uat.pacificdata.org/api/v2/datasets
 - type: geonode:documents
-  url: https://geonode-uat.pacificdata.org/api/documents/
+  url: https://geonode-uat.pacificdata.org/api/v2/documents
+- type: geonode:maps
+  url: https://geonode-uat.pacificdata.org/api/v2/maps
 - type: csw202
   url: https://geonode-uat.pacificdata.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
@@ -30,7 +37,7 @@ langs:
 link: https://geonode-uat.pacificdata.org
 name: NEXUS (UAT) - Pacific Community Spatial Data Repository
 owner:
-  link: https://spc.int
+  link: https://www.spc.int
   location:
     country:
       id: Oceania
@@ -48,7 +55,7 @@ tags:
 - UAT
 - oceanography
 - mapping
-uid: cdi00021727
+- Pacific
 topics:
 - id: GOVE
   name: Government and public sector
@@ -59,3 +66,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
+uid: cdi00021727

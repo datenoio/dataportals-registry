@@ -14,9 +14,14 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: This IPT serves biological collections and observation data from the
-  Natural History Museum of Zimbabwe and its stakeholders.
+description: Original Natural History Museum of Zimbabwe GBIF IPT at www.nhmbyo.co.zw/ipt,
+  later moved to 196.27.109.38:8080 and ipt.nhmbyozim.cloudns.ph:8080. Host refused
+  connections on 24 August 2026.
 endpoints:
+- type: dcat:ttl
+  url: http://www.nhmbyo.co.zw/ipt/dcat
+- type: ipt:dataset
+  url: http://www.nhmbyo.co.zw/ipt/inventory/dataset
 - type: rss
   url: http://www.nhmbyo.co.zw/ipt/rss.do
   version: '2.0'
@@ -24,10 +29,10 @@ id: wwwnhmbyocozw
 langs:
 - id: EN
   name: English
-link: http://www.nhmbyo.co.zw
-name: Natural History Museum of Zimbabwe IPT
+link: http://www.nhmbyo.co.zw/ipt
+name: Natural History Museum of Zimbabwe IPT (nhmbyo.co.zw)
 owner:
-  link: http://naturalhistorymuseumzimbabwe.com/
+  link: https://naturalhistorymuseumzimbabwe.com/
   location:
     country:
       id: ZW
@@ -35,10 +40,19 @@ owner:
     level: 20
   name: Natural History Museum of Zimbabwe
   type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: deprecated
 tags:
 - GBIF
 - IPT

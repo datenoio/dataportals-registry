@@ -11,14 +11,15 @@ coverage:
     country:
       id: SI
       name: Slovenia
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: GeoNetwork catalog for managing spatially referenced resources (metadata
-  and data). Provides metadata editing, search, and web map viewing capabilities.
-  Not explicitly described as focused on a specific owner type or theme in provided
-  sources.
+    subregion:
+      id: SI-011
+      name: Celje
+description: GeoNetwork metadata catalogue of the City of Celje for municipal spatial
+  datasets, maps, and related OGC services.
 endpoints:
 - type: geonetwork:query
   url: https://prostor.celje.si/geonetwork/srv/eng/q
@@ -30,6 +31,8 @@ endpoints:
   version: '2.0'
 id: prostorceljesi
 langs:
+- id: SL
+  name: Slovenian
 - id: EN
   name: English
 link: https://prostor.celje.si/geonetwork
@@ -44,8 +47,8 @@ owner:
     subregion:
       id: SI-011
       name: Celje
-  name: Mestne občine Celje
-  type: Regional government
+  name: Mestna občina Celje
+  type: Local government
 properties:
   has_doi: true
   transferable_location: true

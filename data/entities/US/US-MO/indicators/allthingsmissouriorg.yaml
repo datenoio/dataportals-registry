@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -20,6 +20,9 @@ coverage:
       name: Missouri
 description: All Things Missouri mapping and reporting platform from University of
   Missouri Extension CARES, with community, health, agriculture, and economy indicators.
+endpoints:
+- type: sparkmap:catalog
+  url: https://allthingsmissouri.org/
 id: allthingsmissouriorg
 langs:
 - id: EN

@@ -11,12 +11,15 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: Geoportal. managed by IDERN (Instituto de Desarrollo de Regiones Negras
-  y Originales). providing access to saludsig.rionegro.gov.ar.
+    subregion:
+      id: AR-R
+      name: Río Negro
+description: Health geoportal of Río Negro province (saludsig), published on the provincial
+  spatial data infrastructure (IDERN) with GeoNode and GeoServer services.
 endpoints:
 - type: wms111
   url: https://saludsig.rionegro.gov.ar/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -71,7 +74,7 @@ langs:
 - id: ES
   name: Spanish
 link: https://saludsig.rionegro.gov.ar
-name: Geoportal - IDERN (Instituto de Desarrollo de Regiones Negras y Originales)
+name: SIG Salud Río Negro
 owner:
   link: https://www.rionegro.gov.ar
   location:
@@ -82,8 +85,8 @@ owner:
     subregion:
       id: AR-R
       name: Río Negro
-  name: IDERN (Instituto de Desarrollo de Regiones Negras y Originales)
-  type: Local government
+  name: Gobierno de la Provincia de Río Negro
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -102,6 +105,12 @@ tags:
 - geospatial
 - government
 topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
 - id: Location
   name: Location
   type: iso19115
@@ -111,4 +120,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00000024
+uid: cdi00036030

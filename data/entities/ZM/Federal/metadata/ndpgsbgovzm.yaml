@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Metadata catalog
 content_types:
 - dataset
@@ -18,9 +18,6 @@ description: Zambia's national catalog of government data registers (ZamData) on
   Government Service Bus. It publishes National Data Registers (NDRs), semantic entities,
   classifiers, and operations across identity, business, land, agriculture, health,
   and other domains so agencies can discover and reuse government data.
-endpoints:
-- type: api
-  url: https://api-ndp.gsb.gov.zm
 id: ndpgsbgovzm
 langs:
 - id: EN
@@ -57,7 +54,6 @@ tags:
 - Zambia
 - NDR
 - GSB
-- has_api
 topics:
 - id: GOVE
   name: Government and public sector

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,30 +18,16 @@ coverage:
     subregion:
       id: UY-RO
       name: Rocha
-description: Catálogo de datos geográficos de la Intendencia Departamental de Rocha.
-endpoints:
-- type: geonetwork:query
-  url: https://sig.rocha.gub.uy/metadata/srv/eng/q
-- type: openapi
-  url: https://sig.rocha.gub.uy/metadata/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: https://sig.rocha.gub.uy/metadata/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://sig.rocha.gub.uy/metadata/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://sig.rocha.gub.uy/metadata/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+description: Geoportal of the Intendencia Departamental de Rocha. The previous GeoNetwork
+  path /metadata returns HTTP 404; the public entry point is the SIG geoportal.
 id: sigrochagubuy
 langs:
 - id: ES
   name: Spanish
-link: https://sig.rocha.gub.uy/metadata
-name: Catálogo de datos geográficos - Intendencia de Rocha
+link: https://sig.rocha.gub.uy/geoportal/
+name: Geoportal SIG - Intendencia de Rocha
 owner:
-  link: https://rocha.gub.uy
+  link: https://www.rocha.gub.uy
   location:
     country:
       id: UY
@@ -50,10 +36,10 @@ owner:
     subregion:
       id: UY-RO
       name: Rocha
-  name: Rocha Gobierno de todos
+  name: Intendencia Departamental de Rocha
   type: Regional government
 properties:
-  has_doi: true
+  has_doi: false
   transferable_location: true
 rights:
   license_id: null
@@ -63,21 +49,14 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: geonetwork
-  name: GeoNetwork
+  id: custom
+  name: Custom software
 status: active
 tags:
 - geospatial
 - government
-- has_api
 - SIG
 - cartography
-- satellite images
-- aerial photos
-- planos de balnearios
-- padrones urbanos
-- padrones rurales
-- caracterización urbana
 topics:
 - id: REGI
   name: Regions and cities

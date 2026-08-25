@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,17 +14,16 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Data catalog of Swisscom, a major Swiss telecommunications provider,
-  offering datasets, APIs, and digital assets for business, innovation, and research.
-endpoints:
-- type: opendatasoftapi
-  url: https://data.swisscom.com/api
-- type: sitemap
-  url: https://data.swisscom.com/sitemap.xml
+description: Former Swisscom Open Data portal (data.swisscom.com). The hostname no
+  longer resolves.
 id: dataswisscomcom
 langs:
 - id: EN
   name: English
+- id: DE
+  name: German
+- id: FR
+  name: French
 link: https://data.swisscom.com
 name: Swisscom Open Data Portal
 owner:
@@ -48,7 +47,7 @@ rights:
 software:
   id: opendatasoft
   name: OpenDataSoft
-status: active
+status: inactive
 tags:
 - telecommunications
 - Open Data

@@ -20,6 +20,12 @@ coverage:
 description: Портал відкритих даних Менської міської ради Чернігівської області. Open
   data portal of Mena City Council, Chernihiv Oblast.
 endpoints:
+- type: ckan
+  url: https://data.menarada.gov.ua/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.menarada.gov.ua/api/3/action/package_search
+  version: '3'
 - type: ckan:package-list
   url: https://data.menarada.gov.ua/api/3/action/package_list
   version: '3'

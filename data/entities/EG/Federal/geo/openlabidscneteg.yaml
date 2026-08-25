@@ -15,24 +15,25 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: The most important and prominent indicators at the national level
+description: Description of Egypt (وصف مصر) is the Information and Decision Support
+  Center's public geospatial indicators portal on ArcGIS Enterprise Sites. It presents
+  national statistics and maps for education, health, and other development themes.
+  The former openlab.idsc.net.eg hostname now redirects here.
 endpoints:
-- type: dcatap201
-  url: https://openlab.idsc.net.eg/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://openlab.idsc.net.eg/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://openlab.idsc.net.eg/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://openlab.idsc.net.eg/api/search/v1
-- type: sitemap
-  url: https://openlab.idsc.net.eg/sitemap.xml
+- type: arcgis:portals:self
+  url: https://egis.idsc.gov.eg/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://www.egis.idsc.gov.eg/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://www.egis.idsc.gov.eg/server/rest/services?f=pjson
 id: openlabidscneteg
 langs:
 - id: AR
   name: Arabic
-link: https://openlab.idsc.net.eg
-name: Description of Egypt
+- id: EN
+  name: English
+link: https://egis.idsc.gov.eg/portal/apps/sites/#/egypt-desc/
+name: Description of Egypt (IDSC)
 owner:
   link: https://idsc.gov.eg
   location:
@@ -40,10 +41,11 @@ owner:
       id: EG
       name: Egypt
     level: 20
-  name: Council of Ministers Center for Information and Decision Support
+  name: Information and Decision Support Center (IDSC)
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -52,20 +54,36 @@ rights:
   rights_type: granular
   tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
 software:
-  id: arcgishub
-  name: ArcGIS Hub
+  id: arcgisserver
+  name: ArcGIS Server
 status: active
 tags:
-- open data
-- data catalog
+- geospatial
+- has_api
+- government
+- indicators
+- ArcGIS
+- GIS
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00004932

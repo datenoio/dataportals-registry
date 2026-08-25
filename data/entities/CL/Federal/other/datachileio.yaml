@@ -14,22 +14,26 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Data catalog for datasets published by the Chilean government, providing
-  comprehensive visualization of Chilean public data.
+description: DataChile integrates and visualizes Chilean public statistics for decision-making.
+  Built by Datawheel with CORFO support and transferred to the Ministry Secretariat
+  General of the Presidency in 2018.
+endpoints:
+- type: datawheel:catalog
+  url: https://www.datachile.io
 id: datachileio
 langs:
 - id: ES
   name: Spanish
-link: https://datachile.io
+link: https://www.datachile.io
 name: DataChile
 owner:
-  link: https://www.gob.cl
+  link: https://www.minsegpres.gob.cl
   location:
     country:
       id: CL
       name: Chile
     level: 20
-  name: Gobierno de Chile
+  name: Ministerio Secretaría General de la Presidencia
   type: Central government
 rights:
   license_id: null
@@ -61,6 +65,3 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00010377
-endpoints:
-- type: sitemap
-  url: https://datachile.io/sitemap.xml

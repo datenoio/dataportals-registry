@@ -17,14 +17,13 @@ coverage:
 description: Mulungushi University open-access DSpace repository of journal articles,
   student projects, archival materials, theses, and dissertations.
 endpoints:
-- type: oaipmh20
-  url: https://space.mu.ac.zm/oai/request?verb=Identify
-  version: '2.0'
+- type: dspace:catalog
+  url: https://space.mu.ac.zm/
 id: spacemuaczm
 langs:
 - id: EN
   name: English
-link: https://space.mu.ac.zm/xmlui/
+link: https://space.mu.ac.zm/
 name: Mulungushi University Repository
 owner:
   link: https://www.mu.ac.zm

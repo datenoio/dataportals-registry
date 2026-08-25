@@ -1,0 +1,60 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: The CAVD DataSpace is a LabKey-based catalog of harmonized HIV vaccine
+  study data from the Collaboration for AIDS Vaccine Discovery. Operated by SCHARP
+  at Fred Hutchinson Cancer Center, it provides a study catalog and integrated binding
+  antibody, neutralizing antibody, and cellular immunoassay results from clinical
+  and animal studies. A free account is required to browse and download datasets.
+endpoints:
+- type: labkey:begin
+  url: https://dataspace.cavd.org/project/home/begin.view
+id: dataspacecavdorg
+langs:
+- id: EN
+  name: English
+link: https://dataspace.cavd.org/cds/CAVD/app.view
+name: CAVD DataSpace
+owner:
+  link: https://www.fredhutch.org/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Fred Hutchinson Cancer Center
+  type: Academy
+software:
+  id: labkey
+  name: LabKey Server
+status: active
+tags:
+- scientific
+- research data
+- academic
+- hiv
+- vaccine
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi99990044

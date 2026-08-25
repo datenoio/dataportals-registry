@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - dataset
@@ -14,11 +14,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Official data catalog for Bolivia, managed by the National Institute
-  of Statistics (INE)
-endpoints:
-- type: nada:csvexport
-  url: http://anda4.ine.gob.bo/ANDA4_2/index.php/catalog/export/csv?ps=5000&collection[]
+description: Legacy NADA 4.2 ANDA catalog on anda4.ine.gob.bo. The host times out;
+  the current ANDA catalog is at https://anda.ine.gob.bo.
 id: anda4inegobbo
 langs:
 - id: ES
@@ -26,13 +23,13 @@ langs:
 link: http://anda4.ine.gob.bo/ANDA4_2
 name: ANDA - Catalogo de Microdatos del INE Bolivia
 owner:
-  link: http://anda4.ine.gob.bo/ANDA4_2
+  link: https://www.ine.gob.bo
   location:
     country:
       id: BO
       name: Bolivia
     level: 20
-  name: Instituto Nacional de Estadística (INE, Bolivia)
+  name: Instituto Nacional de Estadística (INE)
   type: Central government
 properties:
   has_doi: false
@@ -46,7 +43,7 @@ rights:
 software:
   id: nada
   name: NADA
-status: active
+status: inactive
 tags:
 - Bolivia
 - government

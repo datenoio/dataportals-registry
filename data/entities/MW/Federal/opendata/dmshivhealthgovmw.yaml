@@ -14,10 +14,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: A health data catalog managed by the Ministry of Health, Malawi, for
-  reporting, visualization, and supporting health decision-making. The system aggregates
-  health data from various facility and community levels, including outpatient, inpatient,
-  and emergency departments, feeding into a national health information system.
+description: CKAN document management system of the Department of HIV and AIDS, Ministry
+  of Health, Malawi (195 packages). Catalogues programme documents and datasets; it
+  is not the national DHIS2 HMIS.
 endpoints:
 - type: ckan
   url: https://dms.hiv.health.gov.mw/api/3
@@ -28,12 +27,15 @@ endpoints:
 - type: ckan:package-list
   url: https://dms.hiv.health.gov.mw/api/3/action/package_list
   version: '3'
+- type: ckan:status-show
+  url: https://dms.hiv.health.gov.mw/api/3/action/status_show
+  version: '3'
 id: dmshivhealthgovmw
 langs:
 - id: EN
   name: English
 link: https://dms.hiv.health.gov.mw
-name: Department of HIV, AIDS and Viral Hepatitis Document Management System
+name: Department of HIV and AIDS Document Management System
 owner:
   link: https://www.health.gov.mw
   location:
@@ -41,10 +43,11 @@ owner:
       id: MW
       name: Malawi
     level: 20
-  name: Department of HIV, AIDS and Viral Hepatitis, Ministry of Health
+  name: Department of HIV and AIDS, Ministry of Health
   type: Central government
 properties:
   transferable_topics: true
+  dataset_count_reported: 195
 rights:
   license_id: null
   license_name: null
@@ -59,9 +62,8 @@ status: active
 tags:
 - government
 - has_api
-- Health Information System
-- HMIS
-- DHIS2
+- health
+- HIV
 - Malawi
 topics:
 - id: HEAL

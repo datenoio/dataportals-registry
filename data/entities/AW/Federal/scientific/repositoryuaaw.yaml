@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -12,10 +13,11 @@ coverage:
       name: Aruba
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: Open knowledge repository of the University of Aruba, including research
-  datasets.
+description: Institutional DSpace 7.6 repository of the University of Aruba (UA Repository),
+  collecting theses, articles, and other scholarly outputs from university faculties.
+  The homepage currently reports 1,698 publications.
 endpoints:
 - type: dspace
   url: https://repository.ua.aw/server/api
@@ -24,10 +26,12 @@ endpoints:
   url: https://repository.ua.aw/server/api/discover/search/objects
   version: '7'
 - type: oaipmh20
-  url: https://repository.ua.aw/oai/request?verb=Identify
+  url: https://repository.ua.aw/server/oai/request?verb=Identify
   version: '2.0'
 - type: sitemap
   url: https://repository.ua.aw/sitemap_index.xml
+- type: atom
+  url: https://repository.ua.aw/server/opensearch/search?format=atom&query=*
 id: repositoryuaaw
 langs:
 - id: EN
@@ -45,17 +49,35 @@ owner:
     level: 20
   name: University of Aruba
   type: Academy
+properties:
+  dataset_count_reported: 1698
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://repository.ua.aw/pages/privacy-policy/en
+  rights_type: granular
+  tos_url: https://repository.ua.aw/pages/terms-of-use/en
 software:
   id: dspace
   name: DSpace
 status: active
 tags:
-- research data
-- datasets
-- dspace
+- DSpace
 - institutional repository
+- open access
+- theses
+- Aruba
+- has_api
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Education
+  name: Education
+  type: iso19115
 uid: cdi00025957

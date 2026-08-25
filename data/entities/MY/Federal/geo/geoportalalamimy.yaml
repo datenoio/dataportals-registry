@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,14 +15,29 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Geoportal. managed by Government of Malaysia. powered by ArcGIS Server.
-  accessible at geoportal.alami.my.
+description: ArcGIS REST services directory hosted by Alami Tech, publishing geospatial
+  map services used by Malaysian government GIS applications.
+endpoints:
+- type: arcgis:rest:info
+  url: https://geoportal.alami.my/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoportal.alami.my/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoportal.alami.my/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoportal.alami.my/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoportal.alami.my/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geoportal.alami.my/server/rest/services?f=kmz
 id: geoportalalamimy
 langs:
 - id: MS
   name: Malay
+- id: EN
+  name: English
 link: https://geoportal.alami.my/server/rest/services
-name: Government of Malaysia Geoportal
+name: Alami Geoportal ArcGIS REST Services
 owner:
   link: https://alami.my
   location:
@@ -30,8 +45,8 @@ owner:
       id: MY
       name: Malaysia
     level: 20
-  name: Government of Malaysia
-  type: Central government
+  name: Alami Tech
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -49,7 +64,7 @@ tags:
 - ArcGIS
 - GIS
 - geospatial
-- government
+- has_api
 topics:
 - id: Location
   name: Location

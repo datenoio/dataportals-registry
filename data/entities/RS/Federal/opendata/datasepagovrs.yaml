@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,20 +12,11 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Data catalog operated by the Serbian Environmental Protection Agency
-  (SEPA).
-endpoints:
-- type: ckan
-  url: http://data.sepa.gov.rs/api/3
-  version: '3'
-- type: ckan:package-search
-  url: http://data.sepa.gov.rs/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://data.sepa.gov.rs/api/3/action/package_list
-  version: '3'
+description: CKAN open-data catalog previously at http://data.sepa.gov.rs. The host resets
+  HTTP connections (HTTPS likewise). SEPA geospatial services remain listed separately as
+  wwwnrizgissepagovrs.
 id: datasepagovrs
 langs:
 - id: SR
@@ -33,7 +24,7 @@ langs:
 link: http://data.sepa.gov.rs
 name: Serbian Environmental Protection Agency Open Data Portal
 owner:
-  link: http://data.sepa.gov.rs
+  link: https://sepa.gov.rs/
   location:
     country:
       id: RS
@@ -51,11 +42,12 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - environment
 - Serbia
 - SEPA
+- inactive
 topics:
 - id: ENVI
   name: Environment

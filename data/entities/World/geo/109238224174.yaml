@@ -1,34 +1,37 @@
 access_mode:
 - open
 api: false
-api_status: uncertain
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
 coverage:
 - location:
-    country: &id001
+    country:
       id: World
       name: World
     level: 20
     macroregion:
       id: '001'
       name: World
-description: A web-based service allowing the sharing and editing of geospatial data.
+description: Catalog host 109.238.224.174 did not respond on 25 August 2026
+  (timeout or connection refused). Operator and country are unconfirmed.
 id: '109238224174'
 langs:
 - id: EN
   name: English
 link: http://109.238.224.174/geoserver
-name: Geoportal Geoportal
+name: Unidentified catalog (109.238.224.174)
 owner:
   link: http://109.238.224.174
   location:
-    country: *id001
+    country:
+      id: World
+      name: World
     level: 20
-  name: '109'
-  type: Business
+  name: Unidentified operator
+  type: Other
 properties:
   has_doi: false
 rights:
@@ -41,7 +44,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - GIS
 - Open Source
@@ -60,4 +63,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00005532
+uid: cdi00037264

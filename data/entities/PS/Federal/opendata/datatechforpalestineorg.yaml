@@ -14,15 +14,23 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Datasets relevant to the ongoing human catastrophe in Palestine since
-  October 7, 2023, including lists of known victims, daily casualty reports, and summary
-  data for Gaza and the West Bank.
+description: Open datasets from the Tech For Palestine collective documenting casualties,
+  named fatalities, journalist deaths, and infrastructure damage in Gaza and the West
+  Bank since October 2023. Versioned JSON and CSV APIs are published at data.techforpalestine.org
+  under the Unlicense (public domain).
+endpoints:
+- type: customapi
+  url: https://data.techforpalestine.org/api/v3/killed-in-gaza.min.json
+- type: sitemap
+  url: https://data.techforpalestine.org/sitemap.xml
 id: datatechforpalestineorg
 langs:
 - id: EN
   name: English
-link: https://data.techforpalestine.org/docs/datasets/
-name: Palestine Datasets - Tech For Palestine
+- id: AR
+  name: Arabic
+link: https://data.techforpalestine.org/
+name: Palestine Datasets (Tech For Palestine)
 owner:
   link: https://techforpalestine.org
   location:
@@ -30,14 +38,16 @@ owner:
       id: PS
       name: Palestine
     level: 20
-  name: Tech For Palestine collective
+  name: Tech For Palestine
   type: Civil society
+properties:
+  has_doi: false
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Unlicense
+  license_url: https://unlicense.org/
   privacy_policy_url: null
-  rights_type: granular
+  rights_type: global
   tos_url: null
 software:
   id: custom
@@ -46,24 +56,21 @@ status: active
 tags:
 - palestine
 - gaza
-- humanitarian crisis
-- West Bank
+- humanitarian
 - casualties
-- victims
+- open data
+- has_api
 topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
-- id: Society
-  name: Society
-  type: iso19115
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
 - id: HEAL
   name: Health
   type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
 uid: cdi00005162
-endpoints:
-- type: sitemap
-  url: https://data.techforpalestine.org/sitemap.xml

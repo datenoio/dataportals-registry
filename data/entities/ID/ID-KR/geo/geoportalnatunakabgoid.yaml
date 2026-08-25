@@ -18,8 +18,7 @@ coverage:
     subregion:
       id: ID-KR
       name: Kepulauan Riau
-description: GeoServer-based data catalog for Natuna Regency, Indonesia, providing
-  access to geospatial layers, data stores, and mapping services.
+description: GeoServer-based data catalog for Natuna Regency, Indonesia, providing access to geospatial layers, data stores, and mapping services.
 endpoints:
 - type: wms111
   url: http://geoportal.natunakab.go.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -80,7 +79,7 @@ owner:
       id: ID-KR
       name: Kepulauan Riau
   name: Natuna Regency Government
-  type: Regional government
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -110,9 +109,6 @@ topics:
   type: eudatatheme
 - id: GOVE
   name: Government and public sector
-  type: eudatatheme
-- id: REGI
-  name: Regions and cities
   type: eudatatheme
 - id: TRAN
   name: Transport

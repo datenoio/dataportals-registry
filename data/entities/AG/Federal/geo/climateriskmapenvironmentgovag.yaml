@@ -1,0 +1,99 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AG
+      name: Antigua and Barbuda
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: GeoNode 3.1.0 Climate Change Risk Visualization Platform for Antigua
+  and Barbuda, published by the Department of Environment under a Green Climate Fund
+  National Adaptation Plan project. Hosts 16 public climate-hazard layers covering
+  hurricane wind, storm surge, and average annual loss. REST, CSW, and OAI-PMH are
+  live; GeoServer OGC services currently return HTTP 502.
+endpoints:
+- type: geonode:layers
+  url: https://climateriskmap.environment.gov.ag/api/layers/
+- type: geonode:documents
+  url: https://climateriskmap.environment.gov.ag/api/documents/
+- type: csw202
+  url: https://climateriskmap.environment.gov.ag/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://climateriskmap.environment.gov.ag/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://climateriskmap.environment.gov.ag/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: opensearch
+  url: https://climateriskmap.environment.gov.ag/catalogue/opensearch
+- type: sitemap
+  url: https://climateriskmap.environment.gov.ag/sitemap.xml
+id: climateriskmapenvironmentgovag
+langs:
+- id: EN
+  name: English
+link: https://climateriskmap.environment.gov.ag
+name: Climate Change Risk Visualization Platform
+owner:
+  link: https://environment.gov.ag
+  location:
+    country:
+      id: AG
+      name: Antigua and Barbuda
+    level: 20
+  name: Department of Environment, Government of Antigua and Barbuda
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+  dataset_count_reported: 16
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- government
+- geoportal
+- climate
+- climate change
+- disaster risk
+- GeoNode
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00005020

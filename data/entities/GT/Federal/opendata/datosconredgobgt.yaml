@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: CKAN open data portal of SE-CONRED with disaster-risk datasets for Guatemala,
+  including wildfire statistics, geographic layers, and coordinator-network records
+  (9 datasets when last counted).
+endpoints:
+- type: ckan
+  url: https://datos.conred.gob.gt/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datos.conred.gob.gt/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datos.conred.gob.gt/api/3/action/package_list
+  version: '3'
+id: datosconredgobgt
+langs:
+- id: ES
+  name: Spanish
+link: https://datos.conred.gob.gt
+name: Datos Abiertos CONRED
+owner:
+  link: https://conred.gob.gt
+  location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 20
+  name: Secretaría Ejecutiva de la Coordinadora Nacional para la Reducción de Desastres
+    (SE-CONRED)
+  type: Central government
+properties:
+  has_doi: false
+  dataset_count_reported: 9
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- disasters
+- wildfires
+- statistics
+- Guatemala
+- CONRED
+- has_api
+- open data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: temp00000334

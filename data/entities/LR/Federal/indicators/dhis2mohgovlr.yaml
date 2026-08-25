@@ -20,6 +20,10 @@ description: National DHIS2 Health Management Information System of the Liberia 
 endpoints:
 - type: dhis2:catalog
   url: https://dhis2.moh.gov.lr/prod
+- type: dhis2:system-info
+  url: https://dhis2.moh.gov.lr/prod/api/system/info
+- type: dhis2:datasets
+  url: https://dhis2.moh.gov.lr/prod/api/dataSets.json?fields=id,displayName&pageSize=1
 id: dhis2mohgovlr
 langs:
 - id: EN
@@ -55,6 +59,7 @@ tags:
 - DHIS2
 - government
 - restricted
+- has_api
 - Liberia
 topics:
 - id: HEAL

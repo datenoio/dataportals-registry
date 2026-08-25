@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,16 +15,16 @@ coverage:
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: ArcGIS service endpoint for WaterNSW. This geoportal. managed by Regional
-  Government of water. provides access to datasets and resources.
+description: ArcGIS services historically published by WaterNSW for water infrastructure
+  and hydrological mapping. The maps.waternsw.com.au host no longer resolves.
 id: mapswaternswcomau
 langs:
 - id: EN
   name: English
 link: http://maps.waternsw.com.au:6080/arcgis/services
-name: Regional Government of water Geoportal
+name: WaterNSW ArcGIS Services
 owner:
-  link: http://waternsw.com.au
+  link: https://www.waternsw.com.au
   location:
     country:
       id: AU
@@ -33,7 +33,7 @@ owner:
     subregion:
       id: AU-NSW
       name: New South Wales
-  name: Regional Government of water
+  name: WaterNSW
   type: Regional government
 properties:
   has_doi: false
@@ -47,7 +47,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - water
 - gis
@@ -60,6 +60,3 @@ topics:
   name: Environment
   type: iso19115
 uid: temp00004891
-endpoints:
-- type: arcgis:rest:services
-  url: http://maps.waternsw.com.au:6080/arcgis/rest/services?f=pjson

@@ -15,38 +15,29 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Environmental Protection Agency, Ireland (EPA) Geoportal catalog providing
-  environmental spatial data.
+description: EPA Maps GIS site for browsing and downloading Irish environmental spatial
+  datasets (air, water, land, and related layers). The former GeoNetwork catalog at
+  /geonetwork is no longer published.
 endpoints:
-- type: csw202
-  url: https://gis.epa.ie/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: https://gis.epa.ie/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
-- type: geonetwork:selections
-  url: https://gis.epa.ie/geonetwork/srv/api/selections
-- type: geonetwork:site
-  url: https://gis.epa.ie/geonetwork/srv/api/site
-- type: sitemap
-  url: https://gis.epa.ie/sitemap.xml
+- type: docs
+  url: https://gis.epa.ie/GetData/Download
 id: gisepaie
 langs:
 - id: EN
   name: English
-link: https://gis.epa.ie/geonetwork
-name: Geodata catalogue of the Environmental Protection Agency Ireland
+link: https://gis.epa.ie
+name: EPA Maps GIS Data
 owner:
-  link: https://epa.ie
+  link: https://www.epa.ie
   location:
     country:
       id: IE
       name: Ireland
     level: 20
-  name: Environmental Protection Agency Ireland
+  name: Environmental Protection Agency
   type: Central government
 properties:
-  has_doi: true
+  has_doi: false
   transferable_topics: true
 rights:
   license_id: null
@@ -56,13 +47,11 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: geonetwork
-  name: GeoNetwork
+  id: custom
+  name: Custom software
 status: active
 tags:
-- geospatial
 - government
-- has_api
 - environment
 - water
 - pollution

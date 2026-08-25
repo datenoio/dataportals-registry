@@ -11,15 +11,14 @@ coverage:
     country:
       id: Africa
       name: Africa
-    level: 20
+    level: 10
     macroregion:
       id: '002'
       name: Africa
-description: Soil property predictions at 30 m resolution for the African continent
-  from iSDA (Innovative Solutions for Decision Agriculture). Maps for over 20 soil
-  properties at two depths (0–20 cm and 20–50 cm), with GeoTIFF assets, model error
-  layers, and remote-sensing covariates; distributed as a static STAC 1.0 catalog
-  on a public Amazon S3 bucket.
+description: Soil property predictions at 30 m resolution for the African continent from iSDA
+  (Innovative Solutions for Decision Agriculture). Maps for over 20 soil properties at two
+  depths (0–20 cm and 20–50 cm), with GeoTIFF assets, model error layers, and remote-sensing
+  covariates; distributed as a static STAC 1.0 catalog on a public Amazon S3 bucket.
 endpoints:
 - type: stacserverapi
   url: https://isdasoil.s3.amazonaws.com/catalog.json
@@ -30,14 +29,14 @@ langs:
 link: https://isdasoil.s3.amazonaws.com/
 name: iSDAsoil STAC catalog (AWS S3)
 owner:
-  link: https://isda-africa.com/
+  link: https://www.isda-africa.com/
   location:
     country:
       id: Africa
       name: Africa
-    level: 20
+    level: 10
   name: Innovative Solutions for Decision Agriculture (iSDA)
-  type: Other
+  type: Business
 properties:
   has_doi: false
   transferable_topics: true

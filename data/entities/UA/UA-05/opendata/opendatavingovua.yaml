@@ -13,14 +13,21 @@ coverage:
     level: 30
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
+      name: Eastern Europe
     subregion:
       id: UA-05
       name: Vinnytska oblast
-description: Open data portal of Vinnytsia Oblast (Вінницька область)
+description: CKAN open data portal of Vinnytsia Oblast State Administration.
 endpoints:
 - type: ckan
   url: https://opendata.vin.gov.ua/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata.vin.gov.ua/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.vin.gov.ua/api/3/action/package_list
+  version: '3'
 id: opendatavingovua
 langs:
 - id: UK

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,20 +19,7 @@ coverage:
       id: IL-TA
       name: Tall Abīb
 description: Municipal ArcGIS REST services of Tel Aviv-Yafo, including an OpenData
-  folder of city GIS layers.
-endpoints:
-- type: arcgis:rest:info
-  url: https://gisn.tel-aviv.gov.il/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://gisn.tel-aviv.gov.il/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://gisn.tel-aviv.gov.il/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://gisn.tel-aviv.gov.il/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://gisn.tel-aviv.gov.il/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://gisn.tel-aviv.gov.il/arcgis/rest/services?f=kmz
+  folder of city GIS layers. The services directory returned HTTP 571 at last review.
 id: gisntelavivgovil
 langs:
 - id: HE
@@ -61,7 +48,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - municipal GIS
 - Tel Aviv

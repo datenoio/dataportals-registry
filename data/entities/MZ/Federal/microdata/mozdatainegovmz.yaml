@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
+- microdata
 coverage:
 - location:
     country:
@@ -39,6 +40,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -55,10 +57,13 @@ tags:
 - has_api
 - statistics
 - official statistics
-- Mozambique
+- microdata
 - INE
 topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00004635

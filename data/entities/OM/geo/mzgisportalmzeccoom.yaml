@@ -15,7 +15,10 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Geoportal providing comprehensive geospatial data services and map layers for NAMA electricity company operations in Oman. The catalog includes datasets and map layers covering electricity infrastructure, transmission networks, power facilities, and utility assets accessible through ArcGIS Server REST API endpoints. Supports multiple service formats including REST, SOAP, sitemap, and KMZ for integration with various GIS applications.
+description: ArcGIS Server REST services directory for Mazoon Electricity Company
+  (MZEC), publishing geospatial datasets and map layers for electricity distribution
+  infrastructure, transmission and distribution networks, power facilities, and related
+  utility assets in Oman.
 endpoints:
 - type: arcgis:rest:info
   url: https://mzgisportal.mzec.co.om/server/rest/info?f=pjson
@@ -33,24 +36,25 @@ id: mzgisportalmzeccoom
 langs:
 - id: AR
   name: Arabic
+- id: EN
+  name: English
 link: https://mzgisportal.mzec.co.om/server/rest/services
 name: MZEC Geo-Portal
 owner:
-  link: https://namaservices.om
+  link: https://www.distribution.nama.om
   location:
     country:
       id: OM
       name: Oman
     level: 20
-  name: NAMA electricity company
+  name: Mazoon Electricity Company
   type: Business
 properties:
   has_doi: false
-identifiers: []
 rights:
   license_id: null
-  license_name: Terms of Service
-  license_url: https://namaservices.om
+  license_name: null
+  license_url: null
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -60,8 +64,11 @@ software:
 status: active
 tags:
 - geospatial
-- services
 - GIS
+- electricity
+- utilities
+- energy
+- has_api
 topics:
 - id: ENVI
   name: Environment

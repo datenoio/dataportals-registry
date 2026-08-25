@@ -14,27 +14,40 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: IPT oficial para Costa Rica administrado por la CONAGEBIO, para el Costa
-  Rica Biodiversity Facility.
+description: Official GBIF IPT of Costa Rica, operated by CONAGEBIO for the national
+  biodiversity facility. Publishes 26 occurrence and checklist datasets (wildlife
+  monitoring, ICE biological studies, and national taxonomic lists).
 endpoints:
+- type: dcat:ttl
+  url: https://servicios.biodiversidad.go.cr/ipt/dcat
+- type: ipt:dataset
+  url: https://servicios.biodiversidad.go.cr/ipt/inventory/dataset
 - type: rss
   url: https://servicios.biodiversidad.go.cr/ipt/rss.do
   version: '2.0'
 id: serviciosbiodiversidadgocr
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/publisher/0a5343a6-8e13-44bb-aee0-d88f712915ec
+  value: 0a5343a6-8e13-44bb-aee0-d88f712915ec
 langs:
 - id: ES
   name: Spanish
-link: https://servicios.biodiversidad.go.cr
+link: https://servicios.biodiversidad.go.cr/ipt
 name: IPT Oficial de CONAGEBIO-Costa Rica
 owner:
-  link: https://www.conagebio.go.cr/en/contactenos/
+  link: https://www.conagebio.go.cr
   location:
     country:
       id: CR
       name: Costa Rica
     level: 20
-  name: CONAGEBIO
-  type: Academy
+  name: Comisión Nacional para la Gestión de la Biodiversidad (CONAGEBIO)
+  type: Central government
+properties:
+  dataset_count_reported: 26
+  has_doi: true
+  is_national: true
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -44,6 +57,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota

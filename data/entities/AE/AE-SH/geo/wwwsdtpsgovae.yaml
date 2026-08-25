@@ -18,8 +18,8 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: ArcGIS REST services provided by the Sharjah Department of Town Planning
-  and Survey (SDTPS)
+description: ArcGIS REST services of the Sharjah Department of Town Planning and Survey
+  (SDTPS), publishing emirate planning, cadastre, and survey layers.
 endpoints:
 - type: arcgis:rest:info
   url: https://www.sdtps.gov.ae/arcgis/rest/info?f=pjson
@@ -37,6 +37,8 @@ id: wwwsdtpsgovae
 langs:
 - id: AR
   name: Arabic
+- id: EN
+  name: English
 link: https://www.sdtps.gov.ae/arcgis/rest/services
 name: SDTPS ArcGIS REST Services
 owner:
@@ -50,7 +52,7 @@ owner:
       id: AE-SH
       name: Ash Shāriqah
   name: Sharjah Department of Town Planning and Survey
-  type: Local government
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -92,4 +94,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-uid: temp00001177
+uid: cdi00036211

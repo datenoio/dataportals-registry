@@ -11,12 +11,15 @@ coverage:
     country:
       id: NZ
       name: New Zealand
-    level: 20
+    level: 30
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: Geoportal. managed by Local Government of Es. powered by ArcGIS Server.
-  accessible at maps.es.govt.nz.
+    subregion:
+      id: NZ-STL
+      name: Southland
+description: Environment Southland ArcGIS REST services for regional environmental
+  and geospatial layers.
 endpoints:
 - type: arcgis:rest:info
   url: https://maps.es.govt.nz/server/rest/info?f=pjson
@@ -47,8 +50,8 @@ owner:
     subregion:
       id: NZ-STL
       name: Southland
-  name: Local Government of Es
-  type: Local government
+  name: Environment Southland
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -66,15 +69,10 @@ tags:
 - geospatial
 - geoportal
 - government
-- local government
 - has_api
 - ArcGIS
-- ArcGIS Server
 - mapping
 - New Zealand
-- rest-api
-- arcgis-server
-- local-government-es
 topics:
 - id: GOVE
   name: Government and public sector

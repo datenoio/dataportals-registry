@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,26 +15,23 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Provides access to geospatial datasets and services via ArcGIS REST API
-endpoints:
-- type: arcgis:rest:info
-  url: https://maps.nra.ie/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://maps.nra.ie/arcgis/rest/services?f=pjson
+description: Former National Roads Authority ArcGIS REST catalog at maps.nra.ie. NRA
+  functions transferred to Transport Infrastructure Ireland; the REST host does not
+  respond.
 id: mapsnraie
 langs:
 - id: EN
   name: English
 link: https://maps.nra.ie/arcgis/rest/services
-name: maps.nra.ie ArcGIS REST Services
+name: National Roads Authority ArcGIS REST Services
 owner:
-  link: https://www.nra.ie
+  link: https://www.tii.ie
   location:
     country:
       id: IE
       name: Ireland
     level: 20
-  name: NRA Ireland
+  name: Transport Infrastructure Ireland
   type: Central government
 properties:
   has_doi: false
@@ -48,7 +45,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS
 - REST

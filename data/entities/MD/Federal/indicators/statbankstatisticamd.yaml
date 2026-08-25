@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
@@ -18,16 +19,21 @@ description: Statistical databank of the National Bureau of Statistics of the Re
   file formats and APIs for every table.
 endpoints:
 - type: pxwebapi
+  url: https://statbank.statistica.md/PxWeb/api/v1/ro
+  version: '1'
+- type: pxwebapi
   url: https://statbank.statistica.md/PxWeb/api/v1/en
   version: '1'
 id: statbankstatisticamd
 langs:
+- id: RO
+  name: Romanian
 - id: EN
   name: English
 link: https://statbank.statistica.md
 name: Statistica Moldovei Statistical databank
 owner:
-  link: https://www.statistica.md
+  link: https://statistica.gov.md
   location:
     country:
       id: MD
@@ -56,6 +62,7 @@ tags:
 - demography
 - economy
 - environment
+- has_api
 topics:
 - id: SOCI
   name: Population and society
@@ -70,4 +77,3 @@ topics:
   name: Regions and cities
   type: eudatatheme
 uid: cdi00001109
-api: true

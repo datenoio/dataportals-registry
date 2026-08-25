@@ -15,11 +15,13 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: National data warehouse of Sao Tome and Principe for monitoring national
-  development priorities and the Sustainable Development Goals. Coordinated by the
-  Direção de Planeamento with INE and sector agencies, with UNDP and UNFPA support.
-  Publishes official indicators, indicator metadata, and thematic dashboards (including
-  MICS and SDGs). Built on Drupal under the Data for All / CSF stack.
+description: National data warehouse (STP Dados) of Sao Tome and Principe for monitoring
+  national development priorities and the Sustainable Development Goals. Coordinated
+  by the Direcção de Planeamento of the Ministério do Planeamento, Finanças e Economia
+  Azul, with INE and sector agencies, and UNDP and UNFPA support. Launched in 2021.
+  Publishes official indicators, an indicator metadata hub, thematic dashboards (including
+  MICS 6 and SDGs), and publications. Built on Drupal under the Data for All / CSF
+  stack. The public site is HTTP-only.
 endpoints:
 - type: drupal:catalog
   url: http://www.stpdados.info/
@@ -32,13 +34,13 @@ langs:
 link: http://www.stpdados.info/
 name: STP Dados
 owner:
-  link: https://gov.st
+  link: https://mef.gov.st
   location:
     country:
       id: ST
       name: Sao Tome and Principe
     level: 20
-  name: Direção de Planeamento, Ministério do Planeamento, Finanças e Economia Azul
+  name: Direcção de Planeamento, Ministério do Planeamento, Finanças e Economia Azul
   type: Central government
 properties:
   has_doi: false
@@ -61,6 +63,7 @@ tags:
 - Sao Tome and Principe
 - indicators
 - SDG
+- Data for All
 topics:
 - id: SOCI
   name: Population and society

@@ -14,33 +14,42 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: GBIF Integrated Publishing Toolkit node for Cameroon biodiversity
-  datasets, operated by GBIF Cameroon.
+description: GBIF Integrated Publishing Toolkit for Cameroon biodiversity datasets,
+  hosted by GBIF France and operated as the GBIF Cameroon node IPT. Publishes occurrence,
+  sampling-event, and checklist resources endorsed by GBIF Cameroon.
 endpoints:
 - type: dcat:ttl
-  url: http://ipt-cameroun.gbif.fr/dcat
+  url: https://ipt-cameroun.gbif.fr/dcat
 - type: ipt:dataset
-  url: http://ipt-cameroun.gbif.fr/inventory/dataset
+  url: https://ipt-cameroun.gbif.fr/inventory/dataset
 - type: rss
-  url: http://ipt-cameroun.gbif.fr/rss.do
+  url: https://ipt-cameroun.gbif.fr/rss.do
   version: '2.0'
 id: iptcameroungbiffr
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/installation/dcb66639-d9b6-410b-ad16-d4e932cb4ea8
+  value: dcb66639-d9b6-410b-ad16-d4e932cb4ea8
 langs:
 - id: FR
   name: French
-link: http://ipt-cameroun.gbif.fr
+- id: EN
+  name: English
+link: https://ipt-cameroun.gbif.fr
 name: IPT GBIF CAMEROUN
 owner:
-  link: https://gbif.fr
+  link: https://www.gbif.org/country/CM/summary
   location:
     country:
       id: CM
       name: Cameroon
     level: 20
-  name: GBIF Cameroon
-  type: Academy
+  name: GBIF Cameroon (MINEPDED)
+  type: Central government
 properties:
-  has_doi: false
+  dataset_count_reported: 26
+  has_doi: true
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -57,6 +66,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota

@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Open data portal
 content_types:
@@ -16,7 +17,8 @@ coverage:
     subregion:
       id: VN-SG
       name: Hồ Chí Minh
-description: Open data portal for Ho Chi Minh City, Vietnam.
+description: Official open data portal of Ho Chi Minh City, operated by the Department of Information
+  and Communications, publishing city datasets through a DKAN/CKAN-compatible API.
 endpoints:
 - type: ckan:package-list
   url: https://opendata.hochiminhcity.gov.vn/api/3/action/package_list
@@ -28,7 +30,7 @@ langs:
 - id: VN
   name: Vietnamese
 link: https://opendata.hochiminhcity.gov.vn
-name: The shared data warehouse of Ho Chi Minh City
+name: Ho Chi Minh City shared data warehouse
 owner:
   link: https://www.tphcm.gov.vn
   location:
@@ -39,8 +41,8 @@ owner:
     subregion:
       id: VN-SG
       name: Hồ Chí Minh
-  name: DEPARTMENT OF INFORMATION AND COMMUNICATION HCMC
-  type: Regional government
+  name: Ho Chi Minh City Department of Information and Communications
+  type: Local government
 properties:
   has_doi: false
   transferable_location: true
@@ -59,11 +61,15 @@ tags:
 - government
 - open data
 - city
+- DKAN
+- Ho Chi Minh City
 - Vietnam
-- portal
+- has_api
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: REGI
   name: Regions and cities
   type: eudatatheme
 uid: cdi00002343
-api: true

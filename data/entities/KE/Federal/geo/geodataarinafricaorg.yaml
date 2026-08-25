@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -9,28 +9,15 @@ content_types:
 coverage:
 - location:
     country:
-      id: KE
-      name: Kenya
+      id: Africa
+      name: Africa
     level: 20
     macroregion:
-      id: '014'
-      name: Eastern Africa
-description: ARIN's geospatial data repository providing access to spatial data layers,
-  maps published and shared to help in the research process.
-endpoints:
-- type: geonode:layers
-  url: https://geodata.arin-africa.org/api/layers/
-- type: geonode:documents
-  url: https://geodata.arin-africa.org/api/documents/
-- type: csw202
-  url: https://geodata.arin-africa.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: https://geodata.arin-africa.org/catalogue/csw?mode=oaipmh&verb=Identify
-  version: '2.0'
-- type: opensearch
-  url: https://geodata.arin-africa.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
-  version: '1.0'
+      id: '002'
+      name: Africa
+description: GeoNode catalog of the Africa Research and Impact Network (ARIN) for
+  spatial layers used in African research and policy work. The geodata.arin-africa.org
+  host timed out on TLS handshake when last checked in 2026.
 id: geodataarinafricaorg
 langs:
 - id: EN
@@ -45,7 +32,7 @@ owner:
       name: Kenya
     level: 20
   name: Africa Research and Impact Network (ARIN)
-  type: Academy
+  type: Civil society
 properties:
   has_doi: false
 rights:
@@ -58,21 +45,16 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 tags:
 - geospatial
 - research
 - Africa
 - ARIN
 - environment
-- policy
-- SDGs
 topics:
 - id: ENVI
   name: Environment
-  type: eudatatheme
-- id: GOVE
-  name: Government and public sector
   type: eudatatheme
 - id: SOCI
   name: Population and society
@@ -82,8 +64,5 @@ topics:
   type: iso19115
 - id: Society
   name: Society
-  type: iso19115
-- id: Economy
-  name: Economy
   type: iso19115
 uid: temp00003961

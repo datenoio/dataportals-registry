@@ -20,6 +20,10 @@ description: National DHIS2 health information system of Gabon's Ministry of Hea
 endpoints:
 - type: dhis2:catalog
   url: https://dhis2.sante.gouv.ga/prod
+- type: dhis2:system-info
+  url: https://dhis2.sante.gouv.ga/prod/api/system/info
+- type: dhis2:datasets
+  url: https://dhis2.sante.gouv.ga/prod/api/dataSets.json?fields=id,displayName&pageSize=1
 id: dhis2santegouvga
 langs:
 - id: FR
@@ -27,7 +31,7 @@ langs:
 link: https://dhis2.sante.gouv.ga/prod
 name: Système d'Information Sanitaire du Gabon (DHIS2)
 owner:
-  link: https://www.sante.gouv.ga
+  link: https://sante.gouv.ga
   location:
     country:
       id: GA
@@ -55,6 +59,7 @@ tags:
 - DHIS2
 - government
 - restricted
+- has_api
 - Gabon
 topics:
 - id: HEAL

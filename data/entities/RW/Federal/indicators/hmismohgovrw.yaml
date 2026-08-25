@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -15,11 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: National DHIS2 HMIS of the Rwanda Ministry of Health. Login is required
-  to query routine health indicators.
-endpoints:
-- type: dhis2:catalog
-  url: https://hmis.moh.gov.rw
+description: Former public host of the Rwanda Ministry of Health DHIS2 HMIS. The URL
+  now serves only a static welcome page; DHIS2 login and Web API paths return HTTP
+  404. Individual records remain on a separate DHIS2 instance at tracker.moh.gov.rw.
 id: hmismohgovrw
 langs:
 - id: EN
@@ -38,17 +36,10 @@ owner:
 properties:
   has_doi: false
   is_national: true
-rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
-  rights_type: granular
-  tos_url: null
 software:
   id: dhis2
   name: DHIS2
-status: active
+status: inactive
 tags:
 - health
 - HMIS

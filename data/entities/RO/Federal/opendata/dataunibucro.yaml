@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -13,18 +13,9 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Open data portal of the University of Bucharest.
-endpoints:
-- type: ckan
-  url: https://data.unibuc.ro/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://data.unibuc.ro/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://data.unibuc.ro/api/3/action/package_list
-  version: '3'
+      name: Eastern Europe
+description: Former University of Bucharest CKAN open data portal at data.unibuc.ro. The hostname no longer
+  resolves.
 id: dataunibucro
 langs:
 - id: EN
@@ -50,11 +41,12 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - open data
 - has_api
 - academia
+- inactive
 topics:
 - id: TECH
   name: Science and technology

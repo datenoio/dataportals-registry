@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,17 +15,14 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Geoserver Web interface for the IMRoFLOOD project hosted by Meteoromania
-endpoints:
-- type: wms111
-  url: http://imdroflood.meteoromania.ro:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
+description: Former IMRoFLOOD project GeoServer hosted by the National Meteorological
+  Administration on port 8080. The service no longer accepts connections.
 id: imdrofloodmeteoromaniaro
 langs:
 - id: RO
   name: Romanian
 link: http://imdroflood.meteoromania.ro:8080/geoserver/web/
-name: Meteoromania Geoportal
+name: IMRoFLOOD GeoServer
 owner:
   link: https://www.meteoromania.ro
   location:
@@ -47,7 +44,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - geospatial
 - flood
@@ -55,6 +52,7 @@ tags:
 - disaster
 - science
 - environment
+- inactive
 topics:
 - id: ENVI
   name: Environment
@@ -68,4 +66,4 @@ topics:
 - id: Inland Waters
   name: Inland Waters
   type: iso19115
-uid: temp00000600
+uid: cdi00035031

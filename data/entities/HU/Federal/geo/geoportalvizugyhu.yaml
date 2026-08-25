@@ -14,9 +14,9 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Data catalog providing various geographic and thematic datasets accessible
-  via ArcGIS REST services
+      name: Eastern Europe
+description: ArcGIS REST services of the General Directorate of Water Management (OVF)
+  for Hungarian hydrographic and water-management map layers.
 endpoints:
 - type: arcgis:portals:self
   url: http://geoportal.vizugy.hu/portal/sharing/rest/portals/self?f=pjson
@@ -39,13 +39,13 @@ langs:
 link: http://geoportal.vizugy.hu/arcgis/rest/services
 name: Hungarian Water Management Geoportal
 owner:
-  link: http://geoportal.vizugy.hu
+  link: https://www.ovf.hu
   location:
     country:
       id: HU
       name: Hungary
     level: 20
-  name: Government of Hungary
+  name: General Directorate of Water Management (OVF)
   type: Central government
 properties:
   has_doi: false
@@ -68,6 +68,12 @@ tags:
 - Hungary
 - rest
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
 - id: Location
   name: Location
   type: iso19115

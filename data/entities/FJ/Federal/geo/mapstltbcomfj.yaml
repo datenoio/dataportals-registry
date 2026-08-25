@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,36 +15,25 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: ArcGIS REST services provided by the iTaukei Land Trust Board (TLTB),
-  Fiji, supporting geospatial data access and mapping.
-endpoints:
-- type: arcgis:rest:info
-  url: https://maps.tltb.com.fj/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://maps.tltb.com.fj/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://maps.tltb.com.fj/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://maps.tltb.com.fj/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://maps.tltb.com.fj/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://maps.tltb.com.fj/arcgis/rest/services?f=kmz
+description: ArcGIS REST services of the iTaukei Land Trust Board (TLTB), Fiji, for
+  native land administration and cadastral mapping. The maps.tltb.com.fj host returns
+  Cloudflare HTTP 526 (invalid origin SSL) as of August 2026 and does not currently
+  serve ArcGIS REST endpoints.
 id: mapstltbcomfj
 langs:
 - id: EN
   name: English
 link: https://maps.tltb.com.fj/arcgis/rest/services
-name: The iTaukei Land Trust Board (TLTB) ArcGIS server
+name: iTaukei Land Trust Board ArcGIS REST Services
 owner:
-  link: https://www.tltb.com.fj
+  link: https://tltb.com.fj
   location:
     country:
       id: FJ
       name: Fiji
     level: 20
-  name: The iTaukei Land Trust Board (TLTB)
-  type: Business
+  name: iTaukei Land Trust Board (TLTB)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -57,11 +46,12 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - land
 - mapping
 - geospatial
+- cadastre
 topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food

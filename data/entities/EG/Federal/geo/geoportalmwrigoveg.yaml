@@ -15,9 +15,12 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Geospatial services and data catalogs provided by the Ministry of Water
-  Resources Egypt, accessed via REST interface for mapping and geospatial analysis.
+description: ArcGIS Enterprise geoportal of Egypt's Ministry of Water Resources and
+  Irrigation. REST services publish national layers on irrigation, drainage, groundwater,
+  lakes, and related water infrastructure.
 endpoints:
+- type: arcgis:portals:self
+  url: https://geoportal.mwri.gov.eg/portal/sharing/rest/portals/self?f=pjson
 - type: arcgis:rest:info
   url: https://geoportal.mwri.gov.eg/server/rest/info?f=pjson
 - type: arcgis:rest:services
@@ -35,7 +38,7 @@ langs:
 - id: AR
   name: Arabic
 link: https://geoportal.mwri.gov.eg/server/rest/services
-name: Ministry of water resources Egypt geoserver
+name: Ministry of Water Resources and Irrigation Geoportal
 owner:
   link: https://www.mwri.gov.eg
   location:
@@ -43,10 +46,11 @@ owner:
       id: EG
       name: Egypt
     level: 20
-  name: Ministry of water resources Egypt
+  name: Ministry of Water Resources and Irrigation
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -59,12 +63,19 @@ software:
   name: ArcGIS Server
 status: active
 tags:
+- geospatial
+- has_api
 - GIS
-- Water resources
+- water
+- irrigation
+- government
 - Egypt
 topics:
 - id: ENVI
   name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
 - id: Geoscientific Information
   name: Geoscientific Information

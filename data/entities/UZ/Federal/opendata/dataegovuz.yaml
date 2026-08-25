@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: false
 api_status: uncertain
 catalog_type: Open data portal
 content_types:
@@ -13,8 +14,10 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: Open Data Portal of the Republic of Uzbekistan providing access to government
-  and other datasets for public use, analysis, application development, and research.
+description: National Open Data Portal of the Republic of Uzbekistan. Publishes
+  machine-readable government datasets from ministries and agencies in CSV, Excel,
+  XML, JSON, and RDF. Operated under Cabinet of Ministers Resolution No. 232 of 7
+  August 2015, with technical support from the Ministry of Digital Technologies.
 id: dataegovuz
 langs:
 - id: UZ
@@ -24,15 +27,15 @@ langs:
 - id: RU
   name: Russian
 link: https://data.egov.uz
-name: Uzbekistan open data portal
+name: Open Data Portal of the Republic of Uzbekistan
 owner:
-  link: https://www.egov.uz
+  link: https://dgov.uz
   location:
     country:
       id: UZ
       name: Uzbekistan
     level: 20
-  name: Government of Uzbekistan
+  name: Ministry of Digital Technologies of the Republic of Uzbekistan
   type: Central government
 properties:
   has_doi: false
@@ -51,18 +54,16 @@ status: active
 tags:
 - government
 - open data
-- dataset
 - Uzbekistan
-- statistics
-- AI data
-- monitoring
-- news
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
 - id: ECON
   name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
   type: eudatatheme
 - id: Society
   name: Society

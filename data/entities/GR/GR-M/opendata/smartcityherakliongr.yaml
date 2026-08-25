@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -10,22 +10,15 @@ coverage:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Open data portal of Heraklion Smart City, providing datasets for public
-  access
-endpoints:
-- type: ckan
-  url: https://smartcity.heraklion.gr/opendata/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://smartcity.heraklion.gr/opendata/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://smartcity.heraklion.gr/opendata/api/3/action/package_list
-  version: '3'
+    subregion:
+      id: GR-M
+      name: Kríti
+description: Former CKAN open data portal of the Heraklion Smart City programme. The
+  /opendata/ path now returns HTTP 404.
 id: smartcityherakliongr
 langs:
 - id: EL
@@ -54,7 +47,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - Greece
 - ckan
@@ -75,4 +68,4 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-uid: temp00001813
+uid: cdi00035361

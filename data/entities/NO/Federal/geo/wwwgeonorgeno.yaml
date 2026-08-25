@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,18 +15,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Map catalogue for searching, viewing or downloading official Norwegian
-  geodata.
-endpoints:
-- type: csw202
-  url: http://www.geonorge.no/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: http://www.geonorge.no/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: http://www.geonorge.no/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+description: Former Kartverket GeoNetwork metadata catalog. Official discovery has
+  moved to Kartkatalogen at kartkatalog.geonorge.no; this GeoNetwork path returned
+  HTTP 400 during review.
 id: wwwgeonorgeno
 langs:
 - id: 'NO'
@@ -54,10 +45,9 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
-- has_api
 - data catalog
 - open data
 - Norway

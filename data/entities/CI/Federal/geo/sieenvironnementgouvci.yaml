@@ -6,6 +6,7 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
+- indicator
 coverage:
 - location:
     country:
@@ -16,7 +17,9 @@ coverage:
       id: '011'
       name: Western Africa
 description: Système d'Information Environnementale (SIE) of the Ministry of Environment,
-  with a GIS module for regional environmental statistics and maps.
+  with thematic environmental indicators and a SIG-SIE GIS module
+  (https://sie.environnement.gouv.ci/sieapp2/sig_index.php). No public catalog API
+  is advertised.
 id: sieenvironnementgouvci
 langs:
 - id: FR
@@ -52,11 +55,15 @@ tags:
 - statistics
 - GIS
 - government
+- indicators
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
 - id: Environment
   name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
   type: iso19115
 uid: cdi00027591

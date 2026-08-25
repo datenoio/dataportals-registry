@@ -15,17 +15,23 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: A geospatial data catalog hosted by Yaaxché Conservation Trust
+description: Lizmap geoportal of Ya'axché Conservation Trust. The public catalog
+  publishes the Integrated Forest Management Database and OGC WMS layers for
+  conservation and forest management in southern Belize.
 endpoints:
-- type: wms111
-  url: https://gis.yaaxche.org/lizmap/index.php/lizmap/service/?repository=public&project=Yaaxche_Integrated_Forest_Management&SERVICE=WMS&REQUEST=GetCapabilities
-  version: 1.1.1
+- type: lizmap:catalog
+  url: https://gis.yaaxche.org/lizmap
+- type: lizmap:service
+  url: https://gis.yaaxche.org/lizmap/index.php/lizmap/service/
+- type: wms130
+  url: https://gis.yaaxche.org/lizmap/index.php/lizmap/service/?repository=public&project=Yaaxche_Integrated_Forest_Management&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: '1.3.0'
 id: gisyaaxcheorg
 langs:
 - id: EN
   name: English
 link: https://gis.yaaxche.org/lizmap
-name: Lizmap GIS Catalog
+name: Ya'axché Integrated Forest Management GIS
 owner:
   link: https://www.yaaxche.org/
   location:
@@ -33,7 +39,7 @@ owner:
       id: BZ
       name: Belize
     level: 20
-  name: Yaaxché Conservation Trust
+  name: Ya'axché Conservation Trust
   type: Civil society
 properties:
   has_doi: false
@@ -50,13 +56,22 @@ software:
 status: active
 tags:
 - GIS
-- geographic data
-- environmental data
+- conservation
+- forestry
+- geospatial
+- lizmap
+- Belize
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
 - id: Environment
   name: Environment
   type: iso19115
-uid: temp00003278
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00035720

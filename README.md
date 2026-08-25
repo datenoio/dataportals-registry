@@ -87,15 +87,15 @@ Do not hand-edit `data/datasets/`.
 
 ## Data exports
 
-Last published snapshot (**v1.16.0**, 2026-08-24):
+Last published snapshot (**v1.17.0**, 2026-08-25):
 
-- `data/datasets/catalogs.jsonl` (+ `.zst`): **20,142** catalog records
-- `data/datasets/software.jsonl` (+ `.zst`): **247** software/platform definitions
-- `data/datasets/scheduled.jsonl` (+ `.zst`): **12** scheduled sources to crawl
-- `data/datasets/full.jsonl` (+ `.zst`): **20,154** combined entities + scheduled records
+- `data/datasets/catalogs.jsonl` (+ `.zst`): **22,750** catalog records
+- `data/datasets/software.jsonl` (+ `.zst`): **262** software/platform definitions
+- `data/datasets/scheduled.jsonl` (+ `.zst`): **0** scheduled sources to crawl
+- `data/datasets/full.jsonl` (+ `.zst`): **22,750** combined entities + scheduled records
 - `data/datasets/full.parquet`, `data/datasets/datasets.duckdb`: analytics-friendly exports
 
-Source YAML matches this snapshot: **20,142** entities, **12** scheduled, **247** platform definitions, **218** country/territory folders (first Isle of Man `IM` root). Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
+Working-tree exports match source YAML and the published snapshot: **22,750** entities, **0** scheduled, **262** platform definitions, **219** country/territory folders (first Jersey `JE` and Saint Helena `SH` roots). Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
 
 Run `python scripts/builder.py build` to refresh JSONL, Parquet, and DuckDB to match source. All `.zst` files can be decompressed with `unzstd file.zst` (zstd). Filter by catalog type or software in DuckDB rather than looking for pre-sliced dumps.
 
@@ -170,6 +170,10 @@ Catalogs with a re3data identifier can be enriched into `_re3data`. Preview with
 
 Discover CKAN sites from [ecosystem.ckan.org](https://ecosystem.ckan.org/dataset/ckan-sites-metadata). Preview with `python scripts/sync_ckan_ecosystem.py --dry-run`. Full workflow: [docs/ckan-sync.md](docs/ckan-sync.md).
 
+## OpenAIRE Graph data sources
+
+List research data repositories registered in the [OpenAIRE Graph](https://graph.openaire.eu/docs/apis/graph-api/data-sources/). Preview with `python scripts/extract_openaire_portals.py list-sources --output /tmp/openaire_sources.json`. Full workflow: [docs/openaire-sync.md](docs/openaire-sync.md).
+
 ## How to contribute?
 
 If you find any mistake or you have an additional data catalog to add, please generate [pull request](https://github.com/datenoio/dataportals-registry/pulls) or write an [issue](https://github.com/datenoio/dataportals-registry/issues).
@@ -197,6 +201,7 @@ Following data sources used:
 * EUDAT Repositories	https://b2find.eudat.eu/organization/
 * Data.Europe.eu catalogues	https://data.europa.eu/data/catalogues?locale=en
 * Re3Data	https://www.re3data.org/
+* OpenAIRE Graph data sources	https://api.openaire.eu/graph/v3/datasources - automated (`scripts/extract_openaire_portals.py`)
 * RISources	https://risources.dfg.de
 * Spanish opendata initiatives https://datos.gob.es/en/accessible-initiatives
 * INSPIRE Country catalogs	https://inspire-geoportal.ec.europa.eu/overview.html?view=thematicEuOverview&theme=none

@@ -14,9 +14,21 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Open data portal of the Central American Bank for Economic Integration
-  (BCIE). Publishes key data on approvals, disbursements, procurement, impact evaluation,
-  and IATI for transparency and accountability in the region.
+description: CKAN open data portal of the Central American Bank for Economic Integration
+  (BCIE/CABEI), headquartered in Tegucigalpa. Publishes regional data on approvals,
+  disbursements, procurement, impact evaluation, and IATI (7 datasets when last counted).
+endpoints:
+- type: ckan
+  url: https://datosabiertos.bcie.org/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datosabiertos.bcie.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datosabiertos.bcie.org/api/3/action/package_list
+  version: '3'
+- type: sitemap
+  url: https://datosabiertos.bcie.org/sitemap.xml
 id: datosabiertosbcieorg
 langs:
 - id: ES
@@ -34,6 +46,9 @@ owner:
     level: 20
   name: Banco Centroamericano de Integración Económica (BCIE)
   type: International
+properties:
+  has_doi: false
+  dataset_count_reported: 7
 software:
   id: ckan
   name: CKAN
@@ -44,14 +59,12 @@ tags:
 - development bank
 - Central America
 - IATI
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
 uid: cdi00021302
-endpoints:
-- type: ckan:api
-  url: https://datosabiertos.bcie.org/api/3/action/package_list
-  version: '3.0'
-- type: sitemap
-  url: https://datosabiertos.bcie.org/sitemap.xml

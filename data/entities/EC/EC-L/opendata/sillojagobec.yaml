@@ -17,15 +17,15 @@ coverage:
     subregion:
       id: EC-L
       name: Loja
-description: El Sistema de Información Local es el conjunto organizado y sistemático
-  de elementos, dependencias técnicas y administrativas, talento humano, medios técnicos,
-  procedimientos y productos informativos que permiten la interacción de los Gobiernos
-  Autónomos Descentralizados con la ciudadanía en el territorio, en el marco de la
-  rendición de cuentas y control social, para acceder, recoger, almacenar, transformar
-  y difundir datos e información relevante para la planificación.
+description: El Sistema de Información Local es el conjunto organizado y sistemático de elementos,
+  dependencias técnicas y administrativas, talento humano, medios técnicos, procedimientos
+  y productos informativos que permiten la interacción de los Gobiernos Autónomos Descentralizados
+  con la ciudadanía en el territorio, en el marco de la rendición de cuentas y control social,
+  para acceder, recoger, almacenar, transformar y difundir datos e información relevante para
+  la planificación.
 endpoints:
-- type: ckan
-  url: https://sil.loja.gob.ec/api/3
+- type: rest
+  url: http://sil.loja.gob.ec/wp-json/
 - type: sitemap
   url: http://sil.loja.gob.ec/wp-sitemap.xml
 id: sillojagobec
@@ -35,7 +35,7 @@ langs:
 link: http://sil.loja.gob.ec
 name: Sistema de Información Local Municipal de Loja
 owner:
-  link: https://loja.gob.ec
+  link: https://www.loja.gob.ec
   location:
     country:
       id: EC
@@ -44,7 +44,7 @@ owner:
     subregion:
       id: EC-L
       name: Loja
-  name: Municipal de Loja
+  name: GAD Municipal de Loja
   type: Local government
 properties:
   transferable_location: true
@@ -56,8 +56,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: ckan
-  name: CKAN
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - government

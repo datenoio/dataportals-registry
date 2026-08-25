@@ -14,20 +14,25 @@ coverage:
     macroregion:
       id: 018
       name: Southern Africa
-description: There is no data catalog available at the URL https://marcosouth.org
-  according to the provided context. No further information can be extracted from
-  the requested URL using the specified vocabulary.
+description: CSIR CKAN catalog for Oceans and Coastal Information Management System
+  (OCIMS) datasets, including nearshore temperature observations and related marine
+  research data. The former marcosouth.org project site no longer hosts this catalog.
 endpoints:
 - type: ckan
-  url: https://marcosouth.org/api/3
-- type: sitemap
-  url: https://marcosouth.org/sitemap.xml
+  url: https://ocims.csir.co.za/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ocims.csir.co.za/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ocims.csir.co.za/api/3/action/package_list
+  version: '3'
 id: ocimscsircoza
 langs:
 - id: EN
   name: English
-link: https://marcosouth.org
-name: The GMES and Africa Marine and Coastal Operations (MarCOSouth) project
+link: https://ocims.csir.co.za
+name: OCIMS CSIR Data Portal
 owner:
   link: https://www.csir.co.za/
   location:

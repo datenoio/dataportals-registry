@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,26 +15,24 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: National geoportal providing access to geospatial metadata, datasets,
-  and services for Cabo Verde. Managed via the Geoportal application and offering
-  discovery and visualization of geographic information resources.
-endpoints:
-- type: opensearch
-  url: http://arcgis.gov.cv/geoportal/openSearchDescription
+description: Former Esri Geoportal Server metadata catalog for Cabo Verde geospatial
+  resources. The /geoportal application returned HTTP 503 on 25 August 2026 and the
+  host root is an IIS default page. National geospatial metadata is published via
+  INGT GeoNetwork and IDE-CV.
 id: arcgisgovcv
 langs:
 - id: PT
   name: Portuguese
-link: http://arcgis.gov.cv/geoportal/catalog/main/home.page
+link: https://arcgis.gov.cv/geoportal/catalog/main/home.page
 name: Geoportal ArcGIS Cabo Verde
 owner:
-  link: http://arcgis.gov.cv
+  link: https://ingt.gov.cv
   location:
     country:
       id: CV
       name: Cabo Verde
     level: 20
-  name: Government of Cabo Verde
+  name: Instituto Nacional de Gestão do Território
   type: Central government
 rights:
   license_id: null
@@ -46,7 +44,7 @@ rights:
 software:
   id: esrigeo
   name: Esri Geoportal Server
-status: active
+status: inactive
 tags:
 - geospatial
 - government
@@ -67,4 +65,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-uid: temp00003128
+uid: cdi00035608

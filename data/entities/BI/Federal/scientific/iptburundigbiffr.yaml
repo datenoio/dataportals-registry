@@ -14,25 +14,31 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: IPT for data publishers from Burundi. This scientific data repository.
-  managed by ISABU (Institut des Sciences Agronomiques du Burundi). provides access
-  to datasets and resources.
+description: GBIF IPT of Burundi, hosted by GBIF France and managed by ISABU (Institut
+  des Sciences Agronomiques du Burundi), a national agricultural research institute.
+  The installation is live (IPT 3.3.2) but currently publishes 0 registered resources.
 endpoints:
 - type: dcat:ttl
-  url: http://ipt-burundi.gbif.fr/dcat
+  url: https://ipt-burundi.gbif.fr/dcat
 - type: ipt:dataset
-  url: http://ipt-burundi.gbif.fr/inventory/dataset
+  url: https://ipt-burundi.gbif.fr/inventory/dataset
 - type: rss
-  url: http://ipt-burundi.gbif.fr/rss.do
+  url: https://ipt-burundi.gbif.fr/rss.do
   version: '2.0'
 id: iptburundigbiffr
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/publisher/196af968-bf4c-415c-a9c4-7943c7c6cfca
+  value: 196af968-bf4c-415c-a9c4-7943c7c6cfca
 langs:
+- id: FR
+  name: French
 - id: EN
   name: English
-link: http://ipt-burundi.gbif.fr
-name: Burundi IPT
+link: https://ipt-burundi.gbif.fr
+name: IPT of GBIF Burundi
 owner:
-  link: https://gbif.fr
+  link: https://isabu.bi
   location:
     country:
       id: BI
@@ -40,6 +46,17 @@ owner:
     level: 20
   name: ISABU (Institut des Sciences Agronomiques du Burundi)
   type: Academy
+properties:
+  dataset_count_reported: 0
+  has_doi: true
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -49,6 +66,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota
@@ -58,5 +76,8 @@ topics:
   type: eudatatheme
 - id: TECH
   name: Science and technology
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
 uid: cdi00010621

@@ -14,11 +14,10 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Diseminates, manages, and preserves scientific production and results
-  funded by ANID, facilitating open access. Contains over 70,000 resources, including
-  articles, book chapters, patents, audiovisual materials, maps, software, books,
-  manuscripts, reports, presentations, theses, data management plans, and research
-  data.
+description: Institutional DSpace repository of Chile's National Agency for Research
+  and Development (ANID). Preserves open-access scientific outputs funded by ANID,
+  including articles, theses, reports, and research data. The public UI at repositorio.anid.cl
+  returned HTTP 404 on 25 August 2026 while the DSpace 7 REST API remained reachable.
 endpoints:
 - type: dspace
   url: https://repositorio.be-anid.com/server/api
@@ -33,14 +32,14 @@ langs:
 link: https://repositorio.anid.cl
 name: Repositorio ANID
 owner:
-  link: https://www.anid.cl
+  link: https://anid.cl
   location:
     country:
       id: CL
       name: Chile
     level: 20
-  name: Agencia National de Invegasticion y Desarollo
-  type: Academy
+  name: Agencia Nacional de Investigación y Desarrollo
+  type: Central government
 properties:
   has_doi: true
   transferable_topics: true

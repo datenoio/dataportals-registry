@@ -15,12 +15,15 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Data catalog for accessing geospatial metadata in Latvia, primarily used
-  for government, public, and research applications.
+description: GEO Latvija is the national unified geospatial information portal. It
+  publishes maps and geospatial datasets from Latvian public-sector organisations
+  for government, public, and research use.
 id: geolatvijalv
 langs:
 - id: LV
   name: Latvian
+- id: EN
+  name: English
 link: https://geolatvija.lv
 name: GEO Latvija
 owner:
@@ -34,6 +37,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -46,9 +50,9 @@ software:
   name: Custom software
 status: active
 tags:
-- metadata
-- spatial data
-- catalog
+- geospatial
+- geoportal
+- government
 - Latvia
 topics:
 - id: Location

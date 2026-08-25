@@ -15,7 +15,11 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: No description found in user-provided context or search results.
+description: Historical GeoNode spatial data infrastructure known as the Open Center,
+  developed by the Aga Khan Agency for Habitat with the Committee for Emergency Situations
+  and Civil Defense and the Main Department of Geology. It catalogued hazard-risk
+  layers and disaster-risk assessments for Tajikistan. The sdi.tj hostname no longer
+  resolves (24 August 2026).
 endpoints:
 - type: geonode:layers
   url: https://sdi.tj/api/layers/
@@ -46,8 +50,12 @@ id: sditj
 langs:
 - id: RU
   name: Russian
+- id: TG
+  name: Tajik
+- id: EN
+  name: English
 link: https://sdi.tj
-name: Open Center (Tajikistan)
+name: Open Center Spatial Data Infrastructure (Tajikistan)
 owner:
   link: https://the.akdn/en/how-we-work/our-agencies/aga-khan-agency-habitat
   location:
@@ -59,6 +67,7 @@ owner:
   type: Civil society
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -69,17 +78,34 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: deprecated
 tags:
 - geospatial
+- geonode
+- disaster risk
+- hazards
+- has_api
+- Tajikistan
 topics:
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
-  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 uid: cdi00001567

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,10 +18,8 @@ coverage:
     subregion:
       id: DK-82
       name: Midtjylland
-description: ArcGIS REST services provided by Holstebro Kommune GIS Kortservice
-endpoints:
-- type: arcgis:rest:info
-  url: https://gis-kortservice.holstebro.dk/arcgis/rest/info?f=pjson
+description: Former ArcGIS REST directory of Holstebro Kommune GIS Kortservice.
+  gis-kortservice.holstebro.dk/arcgis/rest/services now returns 404.
 id: giskortserviceholstebrodk
 langs:
 - id: DA
@@ -29,7 +27,7 @@ langs:
 link: https://gis-kortservice.holstebro.dk/arcgis/rest/services
 name: Holstebro Kommune GIS Kortservice ArcGIS REST services
 owner:
-  link: https://gis-kortservice.holstebro.dk/arcgis/rest/services
+  link: https://www.holstebro.dk
   location:
     country: *id001
     level: 30
@@ -50,7 +48,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS
 - arcgisserver
@@ -64,4 +62,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005880
+uid: cdi00035554

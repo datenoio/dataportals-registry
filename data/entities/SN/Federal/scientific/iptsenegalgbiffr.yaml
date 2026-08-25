@@ -14,22 +14,25 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: GBIF IPT for Senegalese biodiversity data publishers, managed by the
-  Institut des Sciences de l'Environnement (UCAD).
+description: GBIF Integrated Publishing Toolkit (IPT) for Senegalese biodiversity
+  data publishers, managed by the Institut des Sciences de l'Environnement (UCAD)
+  and hosted by GBIF France.
 endpoints:
 - type: dcat:ttl
-  url: http://ipt-senegal.gbif.fr/dcat
+  url: https://ipt-senegal.gbif.fr/dcat
 - type: ipt:dataset
-  url: http://ipt-senegal.gbif.fr/inventory/dataset
+  url: https://ipt-senegal.gbif.fr/inventory/dataset
 - type: rss
-  url: http://ipt-senegal.gbif.fr/rss.do
+  url: https://ipt-senegal.gbif.fr/rss.do
   version: '2.0'
 id: iptsenegalgbiffr
 langs:
 - id: FR
   name: French
-link: http://ipt-senegal.gbif.fr
-name: Senegal IPT
+- id: EN
+  name: English
+link: https://ipt-senegal.gbif.fr
+name: GBIF Senegal IPT
 owner:
   link: https://www.ucad.sn
   location:

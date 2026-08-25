@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -13,16 +14,22 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Open data portal of Estonian health data, providing access to health-related
-  datasets for public use.
+description: TEHIK open-data portal for Estonian health datasets, including COVID-19,
+  vaccination, and influenza tables, with REST (PostgREST/OpenAPI) and OData APIs.
+  Successor of opendata.digilugu.ee.
+endpoints:
+- type: openapi
+  url: https://rest-avaandmed.tehik.ee/covid19/
+- type: customapi
+  url: https://odata-avaandmed.tehik.ee/odata/covid19
 id: opendatadigiluguee
 langs:
 - id: EN
   name: English
 - id: ET
   name: Estonian
-link: https://opendata.digilugu.ee/docs/#/en/readme
-name: Estonian Covid-19 open-data portal
+link: https://teabekeskus.tehik.ee/et/avaandmed
+name: TEHIK open data
 owner:
   link: https://www.tehik.ee
   location:
@@ -48,6 +55,10 @@ software:
 status: active
 tags:
 - government
+- health
+- COVID-19
+- open data
+- has_api
 topics:
 - id: HEAL
   name: Health

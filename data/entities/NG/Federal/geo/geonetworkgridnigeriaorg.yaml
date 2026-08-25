@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,22 +15,23 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: GeoNetwork catalog for searching and managing spatially referenced resources
-  from GRID Nigeria.
+description: Former GeoNetwork catalog of the GRID3 Nigeria geodatabase, transferred
+  to the National Space Research and Development Agency (NASRDA). The hostname geonetwork.grid-nigeria.org
+  currently does not resolve.
 id: geonetworkgridnigeriaorg
 langs:
 - id: EN
   name: English
 link: https://geonetwork.grid-nigeria.org/geonetwork
-name: GRID Nigeria GeoNetwork
+name: GRID3 Nigeria GeoNetwork
 owner:
-  link: https://grid-nigeria.org
+  link: https://central.nasrda.gov.ng
   location:
     country:
       id: NG
       name: Nigeria
     level: 20
-  name: GRID Nigeria
+  name: National Space Research and Development Agency (NASRDA)
   type: Central government
 properties:
   has_doi: true
@@ -44,21 +45,23 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
 - metadata catalog
+- GRID3
+- Nigeria
 topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Society
+  name: Society
   type: iso19115
 uid: temp00000771
-endpoints:
-- type: sitemap
-  url: https://geonetwork.grid-nigeria.org/sitemap.xml

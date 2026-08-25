@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Open data portal
 content_types:
@@ -11,10 +12,12 @@ coverage:
       name: Trinidad and Tobago
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: GoRTT data under an Open license for reuse, research and development.
-  To find out more or publish datasets on this portal, contact the Open Data team.
+description: Official CKAN open data portal of the Government of the Republic of Trinidad
+  and Tobago, managed by the Ministry of Public Administration and Artificial Intelligence.
+  The public site and Action API returned a planned-maintenance page on 24 August
+  2026.
 endpoints:
 - type: ckan
   url: https://data.gov.tt/api/3
@@ -36,13 +39,13 @@ langs:
 link: https://data.gov.tt
 name: Government of the Republic of Trinidad and Tobago Open Data Platform
 owner:
-  link: https://www.gov.tt
+  link: https://mpaai.gov.tt
   location:
     country:
       id: TT
       name: Trinidad and Tobago
     level: 20
-  name: Government of the Republic of Trinidad and Tobago
+  name: Ministry of Public Administration and Artificial Intelligence
   type: Central government
 properties:
   has_doi: false
@@ -60,12 +63,10 @@ software:
 status: active
 tags:
 - government
-- Central Statistical Office
-- Ministry of Finance
-- Economic and Financial Data
+- open data
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
 uid: cdi00001578
-api: true

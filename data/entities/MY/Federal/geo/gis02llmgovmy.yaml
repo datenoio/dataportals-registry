@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Website serving as a data catalog (REST services endpoint)
+description: ArcGIS REST services directory of Lembaga Lebuhraya Malaysia (Malaysian
+  Highway Authority), publishing highway and related geospatial map layers.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis02.llm.gov.my/llmsmpt/rest/info?f=pjson
@@ -34,7 +35,7 @@ langs:
 - id: MS
   name: Malay
 link: https://gis02.llm.gov.my/llmsmpt/rest/services
-name: Government of Malaysia Geoportal
+name: Lembaga Lebuhraya Malaysia GIS REST Services
 owner:
   link: https://llm.gov.my
   location:
@@ -42,7 +43,7 @@ owner:
       id: MY
       name: Malaysia
     level: 20
-  name: Government of Malaysia
+  name: Lembaga Lebuhraya Malaysia
   type: Central government
 properties:
   has_doi: false
@@ -58,9 +59,11 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- rest
-- services
-- data catalog
+- GIS
+- geospatial
+- highways
+- government
+- has_api
 topics:
 - id: Location
   name: Location

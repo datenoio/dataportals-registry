@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,20 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: A catalog of ArcGIS REST web services for archaeological data
-endpoints:
-- type: arcgis:rest:info
-  url: https://webservices.archaeology.ie/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://webservices.archaeology.ie/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://webservices.archaeology.ie/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://webservices.archaeology.ie/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://webservices.archaeology.ie/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://webservices.archaeology.ie/arcgis/rest/services?f=kmz
+description: Former National Monuments Service ArcGIS REST catalog. The host now
+  redirects to a Department of Housing maintenance page.
 id: webservicesarchaeologyie
 langs:
 - id: EN
@@ -42,7 +30,7 @@ owner:
       id: IE
       name: Ireland
     level: 20
-  name: Ireland Department of Housing, Local Government and Heritage
+  name: Department of Housing, Local Government and Heritage
   type: Central government
 properties:
   has_doi: false
@@ -56,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - archaeology
 - rest

@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: Dataset repository aiming to facilitate sharing and easy access to linguistic
-  datasets for Persian language researchers.
+description: DKAN catalog of Persian linguistic corpora and NLP datasets (Peykaregan),
+  operated by the Computer Research Center of Islamic Sciences (Noor) for researchers
+  working on Persian language resources.
 endpoints:
 - type: dcatus11
   url: https://www.peykaregan.ir/data.json
@@ -23,35 +24,42 @@ id: wwwpeykareganir
 langs:
 - id: FA
   name: Persian
-link: https://www.peykaregan.ir/dataset/
-name: Peykaregan Dataset Catalog
+link: https://www.peykaregan.ir/dataset
+name: Peykaregan Linguistic Data Catalog
 owner:
-  link: https://www.peykaregan.ir/dataset/
+  link: https://www.peykaregan.ir
   location:
     country:
       id: IR
       name: Iran
     level: 20
-  name: Peykaregan
+  name: Computer Research Center of Islamic Sciences (Noor)
   type: Academy
+properties:
+  has_doi: false
+  dataset_count_reported: 127
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: unknown
+  rights_type: granular
   tos_url: null
 software:
-  id: drupal
-  name: Drupal
+  id: dkan
+  name: DKAN
 status: active
 tags:
 - Persian
 - linguistics
-- dataset
 - natural language processing
+- corpus
+- has_api
 topics:
 - id: TECH
   name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
   type: eudatatheme
 uid: temp00004512

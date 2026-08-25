@@ -15,8 +15,7 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: National Map ArcGIS REST Services. geoportal. managed by Not specified
-  in URL or response. powered by ArcGIS Server. accessible at carto.nationalmap.gov.
+description: USGS The National Map ArcGIS REST cartographic and base-map services.
 endpoints:
 - type: arcgis:portals:self
   url: https://carto.nationalmap.gov/portal/sharing/rest/portals/self?f=pjson
@@ -49,17 +48,18 @@ langs:
 - id: EN
   name: English
 link: https://carto.nationalmap.gov/arcgis/rest/services
-name: Not specified in URL or response Geoportal
+name: The National Map Cartographic Services
 owner:
-  link: https://carto.nationalmap.gov
+  link: https://www.usgs.gov
   location:
     country:
       id: US
       name: United States
     level: 20
-  name: Not specified in URL or response
+  name: U.S. Geological Survey
   type: Central government
 properties:
+  is_national: true
   has_doi: false
 rights:
   tos_url: null
@@ -100,4 +100,4 @@ topics:
 - id: Geoscientific Information
   name: Geoscientific Information
   type: iso19115
-uid: temp00001788
+uid: cdi00036222

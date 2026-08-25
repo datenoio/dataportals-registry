@@ -5,6 +5,7 @@ api: true
 api_status: active
 catalog_type: Microdata catalog
 content_types:
+- dataset
 - microdata
 coverage:
 - location:
@@ -19,13 +20,17 @@ description: NADA microdata catalog hosted by Statistics Sierra Leone (SSL), pro
   access to national survey and census microdata with varying access conditions by
   study.
 endpoints:
+- type: nada:catalog
+  url: https://microdata.statistics.sl/index.php
 - type: nada:catalog-search
   url: https://microdata.statistics.sl/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://microdata.statistics.sl/index.php/catalog/export/csv?ps=5000&collection[]
 id: microdatastatisticssl
 langs:
 - id: EN
   name: English
-link: https://microdata.statistics.sl
+link: https://microdata.statistics.sl/index.php
 name: Statistics Sierra Leone microdata catalog (NADA)
 owner:
   link: https://www.statistics.sl
@@ -40,6 +45,7 @@ properties:
   has_doi: false
   is_national: true
   transferable_topics: true
+  dataset_count_reported: 13
 rights:
   license_id: null
   license_name: null

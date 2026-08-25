@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,10 +14,15 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
+description: Former public portal for Mauritanian economic, budgetary and monetary
+  data operated by the ministry in charge of the economy. The hostname www.beyanat.mr
+  no longer resolves (August 2026).
 id: wwwbeyanatmr
 langs:
 - id: FR
   name: French
+- id: AR
+  name: Arabic
 link: https://www.beyanat.mr
 name: Beyanat Mauritania, Economic, budgetary and monetary data portal
 owner:
@@ -27,10 +32,11 @@ owner:
       id: MR
       name: Mauritania
     level: 20
-  name: Ministry of Economic Affairs and Promotion of Productive Sectors (Mauritania)
+  name: Ministère des Affaires Économiques et de la Promotion des Secteurs Productifs
   type: Central government
 properties:
-  transferable_topics: true
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -41,10 +47,13 @@ rights:
 software:
   id: custom
   name: Custom software
-status: active
+status: inactive
 tags:
 - government
-- has_api
+- economy
+- budget
+- statistics
+- Mauritania
 topics:
 - id: ECON
   name: Economy and finance
@@ -53,8 +62,3 @@ topics:
   name: Economy
   type: iso19115
 uid: cdi00001130
-description: Open data portal. managed by Ministry of Economic Affairs and Promotion
-  of Productive Sectors (Mauritania). powered by Custom software. accessible at www.beyanat.mr.
-endpoints:
-- type: sitemap
-  url: https://www.beyanat.mr/sitemap.xml

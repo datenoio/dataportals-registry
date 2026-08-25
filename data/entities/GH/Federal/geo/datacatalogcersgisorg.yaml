@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,23 +15,9 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: An online Geographic Information System database of all planned infrastructural
-  development for the country.
-endpoints:
-- type: geonetwork:query
-  url: http://datacatalog.cersgis.org/geonetwork/srv/eng/q
-- type: openapi
-  url: http://datacatalog.cersgis.org/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: http://datacatalog.cersgis.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: http://datacatalog.cersgis.org/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: http://datacatalog.cersgis.org/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+description: Former CERSGIS GeoNetwork catalog of planned infrastructural development
+  in Ghana. The datacatalog.cersgis.org host no longer responds. CERSGIS remains
+  active at https://cersgis.org.
 id: datacatalogcersgisorg
 langs:
 - id: EN
@@ -39,16 +25,16 @@ langs:
 link: http://datacatalog.cersgis.org/geonetwork/srv/eng/catalog.search#/home
 name: CERSGIS Infrastructure Geoportal
 owner:
-  link: http://datacatalog.cersgis.org/geonetwork/srv/eng/catalog.search#/home
+  link: https://cersgis.org
   location:
     country:
       id: GH
       name: Ghana
     level: 20
-  name: CERSGIS
-  type: Business
+  name: Centre for Remote Sensing and Geographic Information Services (CERSGIS)
+  type: Civil society
 properties:
-  has_doi: true
+  has_doi: false
 rights:
   license_id: null
   license_name: null
@@ -59,7 +45,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - infrastructure
 - GIS

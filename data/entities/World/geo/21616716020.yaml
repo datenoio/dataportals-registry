@@ -8,7 +8,7 @@ content_types:
 - map_layer
 coverage:
 - location:
-    country: &id001
+    country:
       id: World
       name: World
     level: 20
@@ -28,13 +28,15 @@ langs:
 - id: EN
   name: English
 link: http://216.167.160.20/arcgis107/rest/services
-name: 216.167.160.20 ArcGIS Server
+name: Unidentified ArcGIS Server (216.167.160.20)
 owner:
   link: http://216.167.160.20
   location:
-    country: *id001
+    country:
+      id: World
+      name: World
     level: 20
-  name: '216'
+  name: Unidentified ArcGIS operator
   type: Other
 properties:
   has_doi: false
@@ -60,4 +62,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00006047
+uid: cdi00037198

@@ -10,12 +10,15 @@ coverage:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Library resource for Attica Wetlands. open data portal. managed by Region
-  of Attica. powered by CKAN. accessible at library.atticawetlands.eu.
+    subregion:
+      id: GR-I
+      name: Attikí
+description: CKAN catalog of the Attica wetlands repository (Υγρότοποι Αττικής),
+  documenting wetland sites in the Region of Attica.
 endpoints:
 - type: ckan:package-search
   url: https://library.atticawetlands.eu/api/3/action/package_search

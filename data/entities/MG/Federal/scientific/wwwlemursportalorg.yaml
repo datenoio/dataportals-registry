@@ -12,45 +12,61 @@ coverage:
       name: Madagascar
     level: 20
     macroregion:
-      id: '015'
-      name: Southern Africa
-description: The lemur portal (http://www.lemursportal.org) tool was established to
-  overcome difficulties in communication of existing data, addressing gaps and facilitating
-  exchanges between stakeholders in lemur conservation. Based on the needs of the
-  users, the lemur portal includes an online forum to promote real-time exchanges
-  between different users, a comprehensive species database, a ready-made and tailored
-  visualizations, and a mobile application   integrating iNaturalist for citizen science.
+      id: '014'
+      name: Eastern Africa
+description: Former GBIF Integrated Publishing Toolkit of the Madagascar Lemurs
+  Portal, a FAPBM–GERP–WCS consortium platform for expert-validated lemur
+  occurrence and species data. The lemursportal.org domain was hijacked and now
+  serves unrelated gambling content (August 2026). GBIF still lists the publisher
+  and IPT installation.
 endpoints:
 - type: dcat:ttl
-  url: https://www.lemursportal.org/dcat
+  url: https://www.lemursportal.org/ipt/dcat
 - type: ipt:dataset
-  url: https://www.lemursportal.org/inventory/dataset
+  url: https://www.lemursportal.org/ipt/inventory/dataset
 - type: rss
-  url: https://www.lemursportal.org/rss.do
+  url: https://www.lemursportal.org/ipt/rss.do
   version: '2.0'
 id: wwwlemursportalorg
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/publisher/7d3cd162-288f-42ad-b2ad-915272be963e
+  value: 7d3cd162-288f-42ad-b2ad-915272be963e
 langs:
 - id: FR
   name: French
+- id: EN
+  name: English
 link: https://www.lemursportal.org
 name: Madagascar Lemurs Portal IPT
 owner:
-  link: http://www.lemursportal.org
+  link: https://www.fapbm.org
   location:
     country:
       id: MG
       name: Madagascar
     level: 20
-  name: Madagascar Lemurs Portal
-  type: Academy
+  name: Fondation pour les Aires Protégées et la Biodiversité de Madagascar
+  type: Civil society
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: deprecated
 tags:
 - GBIF
 - IPT
 - biodiversity
+- lemurs
+- Madagascar
 - data publishing
 topics:
 - id: Biota

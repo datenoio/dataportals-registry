@@ -12,34 +12,25 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Data catalog for academic information at the Serbian Academy of Sciences
-  and Arts (SANU)
+description: DSpace institutional repository of the Serbian Academy of Sciences and Arts (SANU);
+  OAI repositoryName DAIS. Provides open access to publications and related research outputs.
+  OAI-PMH Identify is public.
 endpoints:
 - type: oaipmh20
   url: https://dais.sanu.ac.rs/oai/request?verb=Identify
   version: '2.0'
-- type: rss
-  url: https://dais.sanu.ac.rs/feed/rss_2.0/site
-  version: '2.0'
-- type: atom
-  url: https://dais.sanu.ac.rs/feed/atom_1.0/site
-  version: '1.0'
-- type: sitemap
-  url: http://dais.sanu.ac.rs/sitemap
-- type: sitemap
-  url: http://dais.sanu.ac.rs/htmlmap
-- type: opensearch
-  url: http://dais.sanu.ac.rs:80/open-search/description.xml
 id: daissanuacrs
 langs:
 - id: SR
   name: Serbian
+- id: EN
+  name: English
 link: https://dais.sanu.ac.rs
-name: DAIS - Digital Academic Information System
+name: DAIS – Digital Archive of the Serbian Academy of Sciences and Arts
 owner:
-  link: https://dais.sanu.ac.rs
+  link: https://www.sanu.ac.rs
   location:
     country:
       id: RS
@@ -64,6 +55,7 @@ tags:
 - academic
 - research
 - Serbia
+- dspace
 topics:
 - id: TECH
   name: Science and technology

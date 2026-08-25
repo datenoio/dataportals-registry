@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: Data catalog provided as a GeoServer instance, offering geospatial datasets
-  and APIs.
+description: GET-IT GeoServer instance (UGBD) publishing geospatial layers from
+  the Italian RITMARE/CNR toolkit.
 endpoints:
 - type: wms111
   url: http://ugbd.get-it.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,16 +65,16 @@ langs:
 - id: IT
   name: Italian
 link: http://ugbd.get-it.it/geoserver
-name: Geoportal - Local Government of web services
+name: UGBD GET-IT GeoServer
 owner:
-  link: http://ugbd.get-it.it/geoserver
+  link: https://www.cnr.it/
   location:
     country:
       id: IT
       name: Italy
     level: 20
-  name: Local Government of web services
-  type: Business
+  name: Consiglio Nazionale delle Ricerche
+  type: Academy
 properties:
   has_doi: false
 rights:

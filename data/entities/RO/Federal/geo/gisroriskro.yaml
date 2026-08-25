@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: false
-api_status: uncertain
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,9 +14,9 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Data catalogue for RO-RISK GIS, providing access to spatial data services
-  under the INSPIRE directive from Romania.
+      name: Eastern Europe
+description: Former RO-RISK INSPIRE ArcGIS REST catalog. The gis.ro-risk.ro and ro-risk.ro
+  hosts no longer resolve.
 id: gisroriskro
 langs:
 - id: RO
@@ -24,14 +24,14 @@ langs:
 link: http://gis.ro-risk.ro/inspire/rest/services
 name: RO-RISK GIS Data Catalogue
 owner:
-  link: http://gis.ro-risk.ro/inspire/rest/services
+  link: https://www.igsu.ro
   location:
     country:
       id: RO
       name: Romania
     level: 20
-  name: RO-RISK GIS
-  type: Civil society
+  name: General Inspectorate for Emergency Situations (IGSU)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -44,17 +44,15 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - INSPIRE
 - spatial data
 - Romania
+- inactive
 topics:
 - id: ENVI
   name: Environment
-  type: eudatatheme
-- id: REGI
-  name: Regions and cities
   type: eudatatheme
 - id: REGI
   name: Regions and cities
@@ -71,4 +69,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-uid: temp00005607
+uid: cdi00035039

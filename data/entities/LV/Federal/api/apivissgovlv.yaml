@@ -1,8 +1,8 @@
 access_mode:
 - open
 - limited
-api: false
-api_status: inactive
+api: true
+api_status: active
 catalog_type: API Catalog
 content_types:
 - api endpoint
@@ -18,7 +18,10 @@ coverage:
       name: Northern Europe
 description: National API Manager developer portal. Catalog of REST and SOAP services
   from Latvian state and municipal information systems, operated by the State Digital
-  Development Agency on WSO2.
+  Development Agency on WSO2 API Manager.
+endpoints:
+- type: docs
+  url: https://api.viss.gov.lv/devportal/apis
 id: apivissgovlv
 langs:
 - id: LV

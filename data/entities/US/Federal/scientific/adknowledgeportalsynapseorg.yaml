@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: The AD Knowledge Portal is a platform for accessing data, analyses, and
+  tools that the National Institute on Aging’s (NIA) Alzheimer's Disease Translational
+  Research Program generates through several initiatives. The program encourages open-science
+  collaborations that share resources early in the research life cycle. The AD Knowledge
+  Portal initially hosted data from the Accelerating Medicines Partnership in Alzheimer’s
+  Disease (AMP-AD) Target Discovery and Preclinical Validation Project. The AD Knowledge
+  Portal now includes “omics” data from human samples and experimental model systems,
+  as well as bioinformatic analyses from research teams and cross-consortium working
+  groups. Please note that, while the data are publicly searchable, a login is required
+  to download data sets.
+endpoints:
+- type: synapse:api
+  url: https://repo-prod.prod.sagebase.org/repo/v1/version
+id: adknowledgeportalsynapseorg
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::faa453efde4ac6a36849ba381feb9e87
+  value: fairsharing_::faa453efde4ac6a36849ba381feb9e87
+langs:
+- id: EN
+  name: English
+link: https://adknowledgeportal.synapse.org/
+name: AD Knowledge Portal
+owner:
+  link: http://sagebase.org/
+  location:
+    country:
+      id: US
+      name: United States
+  name: Sage Bionetworks
+  type: Academy
+software:
+  id: synapse
+  name: Synapse
+status: active
+tags:
+- scientific
+- research data
+- academic
+- health
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00033061

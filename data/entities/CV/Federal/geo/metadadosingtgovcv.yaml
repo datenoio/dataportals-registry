@@ -27,6 +27,8 @@ endpoints:
 - type: oaipmh20
   url: https://metadados-ingt.gov.cv/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: opensearch
+  url: https://metadados-ingt.gov.cv/geonetwork/srv/eng/portal.opensearch
 id: metadadosingtgovcv
 langs:
 - id: PT
@@ -40,7 +42,7 @@ owner:
       id: CV
       name: Cabo Verde
     level: 20
-  name: Instituto Nacional de Gestão do Território e Geografia
+  name: Instituto Nacional de Gestão do Território
   type: Central government
 properties:
   has_doi: false
@@ -58,6 +60,7 @@ status: active
 tags:
 - geospatial
 - government
+- has_api
 - GeoNetwork
 - metadata
 - SDI

@@ -14,27 +14,17 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: 'The web application is the result of the research task V03-S4 Development
-  of a web application built on an open data platform on the issue of occupational
-  health and safety (OSH), solved by the Occupational Safety and Health Research Institute,
-  vvi, in the years 2019–2020 within the institutional support of the Ministry of
-  Labor and Social Affairs things. '
+description: Open data catalog of the Occupational Safety Research Institute (VÚBP)
+  on occupational health and safety. The catalog now lives at https://opendatabozp.cz/.
 endpoints:
-- type: ckan
-  url: http://opendata.vubp.cz/api/3
-  version: '3'
-- type: ckan:package-search
-  url: http://opendata.vubp.cz/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://opendata.vubp.cz/api/3/action/package_list
-  version: '3'
+- type: sitemap
+  url: https://opendatabozp.cz/sitemap.xml
 id: opendatavubpcz
 langs:
 - id: CS
   name: Czech
-link: http://opendata.vubp.cz
-name: Municipal Data Catalog of Vysoké Učení Brno – Police (VUBP)
+link: https://opendatabozp.cz/
+name: Otevřená data BOZP (VÚBP)
 owner:
   link: https://www.vubp.cz
   location:
@@ -42,8 +32,8 @@ owner:
       id: CZ
       name: Czech Republic
     level: 20
-  name: Czech Occupational Safety Research Institute
-  type: Central government
+  name: Výzkumný ústav bezpečnosti práce
+  type: Academy
 rights:
   license_id: null
   license_name: null
@@ -52,14 +42,14 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: ckan
-  name: CKAN
+  id: custom
+  name: Custom software
 status: active
 tags:
-- municipal
+- occupational safety
 - open data
 - czech republic
-- local government
+- research
 topics:
 - id: GOVE
   name: Government and public sector

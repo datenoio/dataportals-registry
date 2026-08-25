@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Trentino-Alto Adige
 description: G3W-SUITE municipal GIS of Comune di Trento for public cartographic groups
   and QGIS-based WebGIS services.
+endpoints:
+- type: g3wsuite:catalog
+  url: https://gis.comune.trento.it/
 id: giscomunetrentoit
 langs:
 - id: IT

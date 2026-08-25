@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: ArcGIS REST services endpoint for the IUCN Red List spatial data and
-  related resources.
+description: ArcGIS Server catalog hosted on iucn.cr with geospatial services for
+  IUCN projects in Mesoamerica, including ecosystems, restoration, and Gulf of
+  Fonseca monitoring. Not limited to Red List layers.
 endpoints:
 - type: arcgis:rest:info
   url: https://iucn.cr/arcgis/rest/info?f=pjson
@@ -34,8 +35,10 @@ id: iucncr
 langs:
 - id: ES
   name: Spanish
+- id: EN
+  name: English
 link: https://iucn.cr/arcgis/rest/services
-name: IUCN Red List REST Services
+name: IUCN Mesoamerica ArcGIS REST Services
 owner:
   link: https://www.iucnredlist.org
   location:
@@ -43,7 +46,7 @@ owner:
       id: CR
       name: Costa Rica
     level: 20
-  name: IUCN
+  name: International Union for Conservation of Nature (IUCN)
   type: International
 properties:
   has_doi: false
@@ -59,6 +62,7 @@ software:
   name: ArcGIS Server
 status: active
 tags:
+- has_api
 - ArcGIS
 - Costa Rica
 - arcgisserver
@@ -71,9 +75,6 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: Biota
   name: Biota
   type: iso19115
@@ -83,4 +84,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005870
+uid: cdi00035627

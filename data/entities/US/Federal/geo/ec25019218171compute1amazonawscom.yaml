@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: false
+api_status: inactive
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Former AWS hostname of the Northeast Ocean Data Portal ArcGIS Server
+  (same /arcgis1/rest/services catalog as services.northeastoceandata.org). Layers
+  include NEFMC, NACCS, and US Atlantic marine themes. Not a Uganda catalog; superseded
+  by the named northeastoceandata.org endpoint.
+id: ec25019218171compute1amazonawscom
+langs:
+- id: EN
+  name: English
+link: http://ec2-50-19-218-171.compute-1.amazonaws.com/arcgis1/rest/services
+name: Northeast Ocean Data Portal (legacy AWS hostname)
+owner:
+  link: https://northeastoceandata.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Northeast Ocean Data
+  type: Civil society
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: deprecated
+tags:
+- ArcGIS
+- REST
+- GIS
+- marine
+- duplicate
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00034934

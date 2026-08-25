@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: GeoServer Web Map Service. A compliant implementation of WMS plus most
-  of the SLD extension (dynamic styling). Can also generate PDF, SVG, KML, GeoRSS.
+description: GeoServer da Fundação Nacional dos Povos Indígenas (FUNAI) with layers
+  on indigenous lands and related geospatial data.
 endpoints:
 - type: wms111
   url: https://geoserver.funai.gov.br/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,15 +65,15 @@ langs:
 - id: PT
   name: Portuguese
 link: https://geoserver.funai.gov.br/geoserver
-name: 'GeoServer: Welcome - Funai'
+name: GeoServer FUNAI
 owner:
-  link: https://geoserver.funai.gov.br
+  link: https://www.gov.br/funai
   location:
     country:
       id: BR
       name: Brazil
     level: 20
-  name: Fundação Nacional do Índio (FUNAI)
+  name: Fundação Nacional dos Povos Indígenas (FUNAI)
   type: Central government
 properties:
   has_doi: false
@@ -96,9 +96,6 @@ tags:
 - indigenous lands
 - maps
 topics:
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme

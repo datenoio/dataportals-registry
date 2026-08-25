@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Geoportal providing geospatial data services using ArcGIS Server.
+description: ArcGIS Server REST services directory of the City of Luxembourg (Ville
+  de Luxembourg), publishing municipal map and feature services.
 endpoints:
 - type: arcgis:rest:info
   url: https://maps.vdl.lu/arcgis/rest/info?f=pjson
@@ -33,10 +34,14 @@ id: mapsvdllu
 langs:
 - id: FR
   name: French
+- id: DE
+  name: German
+- id: EN
+  name: English
 link: https://maps.vdl.lu/arcgis/rest/services
 name: Ville de Luxembourg Geoportal
 owner:
-  link: https://maps.vdl.lu/arcgis/rest/services
+  link: https://www.vdl.lu
   location:
     country:
       id: LU

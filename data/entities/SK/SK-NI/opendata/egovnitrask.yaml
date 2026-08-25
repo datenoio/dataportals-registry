@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: false
+api_status: inactive
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: SK
+      name: Slovakia
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id002
+      id: SK-NI
+      name: Nitriansky kraj
+description: Former POMOSAM eGovernment catalog of Nitra. The host egov.nitra.sk
+  currently returns HTTP 404.
+id: egovnitrask
+langs:
+- id: SK
+  name: Slovak
+link: 'https://egov.nitra.sk/default.aspx?NavigationState=1100:0:'
+name: Open Data Nitra
+owner:
+  link: https://www.nitra.sk
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Mesto Nitra
+  type: Local government
+properties:
+  has_doi: false
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: pomosam
+  name: POMOSAM
+status: inactive
+tags:
+- government
+- has_api
+- eGovernment
+- local data
+- Slovakia
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00020027

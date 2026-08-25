@@ -13,13 +13,17 @@ coverage:
       name: Lesotho
     level: 20
     macroregion:
-      id: 018
+      id: '018'
       name: Southern Africa
 description: National DHIS2 Health Management Information System of the Lesotho Ministry
   of Health. Login is required to query routine health indicators.
 endpoints:
 - type: dhis2:catalog
   url: https://hmis.gov.ls/dhis
+- type: dhis2:system-info
+  url: https://hmis.gov.ls/dhis/api/system/info
+- type: dhis2:datasets
+  url: https://hmis.gov.ls/dhis/api/dataSets.json?fields=id,displayName&pageSize=1
 id: hmisgovls
 langs:
 - id: EN
@@ -27,7 +31,7 @@ langs:
 link: https://hmis.gov.ls/dhis
 name: Lesotho Health Management Information System (HMIS)
 owner:
-  link: https://health.gov.ls/
+  link: https://health.gov.ls
   location:
     country:
       id: LS
@@ -55,6 +59,7 @@ tags:
 - DHIS2
 - government
 - restricted
+- has_api
 - Lesotho
 topics:
 - id: HEAL

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,27 +13,16 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Catalog of ArcGIS services. geoportal. managed by latomet.gr. powered
-  by ArcGIS Server. accessible at www.latomet.gr.
-endpoints:
-- type: arcgis:rest:services
-  url: http://www.latomet.gr/ArcGIS/rest/services?f=pjson
-- type: arcgis:soap
-  url: http://www.latomet.gr/ArcGIS/services?wsdl
-- type: arcgis:sitemap
-  url: http://www.latomet.gr/ArcGIS/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: http://www.latomet.gr/ArcGIS/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: http://www.latomet.gr/ArcGIS/rest/services?f=kmz
+description: Former ArcGIS Server catalog on latomet.gr. The REST services path now
+  returns HTTP 404.
 id: wwwlatometgr
 langs:
 - id: EL
   name: Greek
 link: http://www.latomet.gr/ArcGIS/services
-name: latomet.gr ArcGIS Services Data Catalog
+name: LATOMET ArcGIS Services
 owner:
   link: http://www.latomet.gr
   location:
@@ -41,7 +30,7 @@ owner:
       id: GR
       name: Greece
     level: 20
-  name: latomet.gr
+  name: LATOMET
   type: Business
 properties:
   has_doi: false
@@ -55,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS
 - GIS
@@ -67,4 +56,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00003730
+uid: cdi00035386

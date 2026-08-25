@@ -15,14 +15,21 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Institutional DSpace repository of Elsheikh Abdallah Elbadri University
-  for scholarly publications, theses, and research datasets.
+description: DSpace 9 institutional repository of Elsheikh Abdallah Elbadri University
+  (Berber) for theses, publications, and related scholarly works. REST search currently
+  lists about 1,200 objects.
 endpoints:
-- type: dspace:rest
+- type: dspace
   url: https://ds.eaeu.edu.sd/server/api
+  version: '9'
+- type: dspace:objects
+  url: https://ds.eaeu.edu.sd/server/api/discover/search/objects
+  version: '9'
 - type: oaipmh20
   url: https://ds.eaeu.edu.sd/server/oai/request?verb=Identify
   version: '2.0'
+- type: sitemap
+  url: https://ds.eaeu.edu.sd/sitemap_index.xml
 id: dseaeuedusd
 identifiers:
 - id: opendoar
@@ -60,7 +67,11 @@ status: active
 tags:
 - institutional repository
 - open access
-- research data
+- theses
+- research
+- DSpace
+- Sudan
+- has_api
 topics:
 - id: TECH
   name: Science and technology
@@ -68,4 +79,7 @@ topics:
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
+- id: Education
+  name: Education
+  type: iso19115
 uid: cdi00027552

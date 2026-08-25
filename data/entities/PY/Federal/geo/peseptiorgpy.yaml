@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
@@ -14,8 +15,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: No description found in the given URL (http://pese.pti.org.py) or search
-  results.
+description: GeoNode catalog of the Mapping of the Solar and Wind Energy Potential
+  of Paraguay (PESE) project, published by Parque Tecnológico Itaipu Paraguay, with
+  geospatial layers for renewable-energy resource assessment.
 endpoints:
 - type: geonode:layers
   url: http://pese.pti.org.py/api/layers/
@@ -47,8 +49,7 @@ langs:
 - id: ES
   name: Spanish
 link: http://pese.pti.org.py
-name: The Mapping of the Solar and Wind Energy Potential of Paraguay (PESE_PY) geo
-  data
+name: The Mapping of the Solar and Wind Energy Potential of Paraguay (PESE_PY)
 owner:
   link: https://pti.org.py
   location:
@@ -73,15 +74,25 @@ software:
 status: active
 tags:
 - has_api
+- geospatial
+- renewable energy
+- solar
+- wind
+- Paraguay
 topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
 - id: Location
   name: Location
-  type: iso19115
-- id: Boundaries
-  name: Boundaries
   type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00001332
-api: true

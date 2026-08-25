@@ -36,6 +36,7 @@ def test_enrichment_issue_classification():
     assert is_enrichment_issue_type("MISSING_TOPICS")
     assert not is_enrichment_issue_type("DUPLICATE_LINK_NORMALIZED")
     assert not is_enrichment_issue_type("INVALID_URL")
+    assert not is_enrichment_issue_type("INVALID_NESTED_TYPE")
 
 
 def test_quality_counts_do_not_regress():

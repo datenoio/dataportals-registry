@@ -1,7 +1,6 @@
 access_mode:
 - open
-api: true
-api_status: active
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,29 +12,17 @@ coverage:
       name: Malta
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Malta Environment Platform & Services (MEPS) geoportal from the Environment
-  & Resources Authority, providing public access to environmental spatial data including
-  air, permitting, noise, protected areas, waste, water, and marine information.
-endpoints:
-- type: arcgis:rest:info
-  url: https://eraportal.org.mt/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://eraportal.org.mt/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://eraportal.org.mt/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://eraportal.org.mt/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://eraportal.org.mt/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://eraportal.org.mt/arcgis/rest/services?f=kmz
+description: Malta Environment Platform & Services (MEPS) map viewer from the Environment
+  and Resources Authority, providing public access to environmental spatial data including
+  air, permitting, noise, protected areas, waste, water, and marine layers. Harvestable
+  ArcGIS REST services are recorded separately on eraportal.org.mt.
 id: wwweraportalorgmt
 langs:
 - id: EN
   name: English
-link: https://www.eraportal.org.mt/
+link: https://www.eraportal.org.mt
 name: MEPS Geoportal
 owner:
   link: https://era.org.mt
@@ -44,7 +31,7 @@ owner:
       id: MT
       name: Malta
     level: 20
-  name: Malta Environment & Resources Authority
+  name: Environment and Resources Authority
   type: Central government
 properties:
   has_doi: false
@@ -56,8 +43,8 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: arcgisserver
-  name: ArcGIS Server
+  id: custom
+  name: Custom software
 status: active
 tags:
 - geospatial

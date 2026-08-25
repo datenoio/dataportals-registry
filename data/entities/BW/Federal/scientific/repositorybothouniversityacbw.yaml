@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -12,13 +13,16 @@ coverage:
       name: Botswana
     level: 20
     macroregion:
-      id: 018
+      id: '018'
       name: Southern Africa
 description: Botho University DSpace institutional repository (BUIR) of dissertations
-  and research papers.
+  and research papers. OAI-PMH Identify is live; the DSpace REST API is not exposed.
 endpoints:
 - type: dspace:catalog
   url: https://repository.bothouniversity.ac.bw/buir/
+- type: oaipmh20
+  url: https://repository.bothouniversity.ac.bw/oai/request?verb=Identify
+  version: '2.0'
 id: repositorybothouniversityacbw
 langs:
 - id: EN
@@ -52,6 +56,7 @@ tags:
 - institutional repository
 - research data
 - Botswana
+- has_api
 topics:
 - id: TECH
   name: Science and technology

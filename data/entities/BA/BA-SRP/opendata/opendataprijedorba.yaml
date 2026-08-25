@@ -10,11 +10,16 @@ coverage:
     country:
       id: BA
       name: Bosnia and Herzegovina
-    level: 20
+    level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Data catalog for the city of Prijedor, providing open data access.
+    subregion:
+      id: BA-SRP
+      name: Republika Srpska
+description: CKAN open data portal of the City of Prijedor in Republika Srpska, publishing
+  municipal datasets on local government, culture, transport, health, and the local
+  economy.
 endpoints:
 - type: ckan
   url: https://opendataprijedor.ba/api/3
@@ -44,6 +49,7 @@ owner:
   name: Grad Prijedor
   type: Local government
 properties:
+  dataset_count_reported: 191
   transferable_location: true
 rights:
   license_id: null
@@ -59,6 +65,9 @@ status: active
 tags:
 - government
 - has_api
+- open data
+- Prijedor
+- Republika Srpska
 topics:
 - id: REGI
   name: Regions and cities

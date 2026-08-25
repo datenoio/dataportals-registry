@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,20 +12,11 @@ coverage:
       name: Caribbean
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: No description found in search results.. This open data portal. managed
-  by Caribbean Open Institute. provides access to datasets and resources.
-endpoints:
-- type: ckan:package-search
-  url: http://opencaribbean.org/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://opencaribbean.org/api/3/action/package_list
-  version: '3'
-- type: ckan
-  url: http://opencaribbean.org/api/3
-  version: '3'
+description: Former CKAN open data portal of the Caribbean Open Institute. The host
+  opencaribbean.org returned HTTP 502 from nginx 1.4.6 on 25 August 2026; the Institute
+  website remains at caribbeanopeninstitute.org.
 id: opencaribbeanorg
 langs:
 - id: EN
@@ -51,9 +42,11 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
-- has_api
+- open data
+- Caribbean
+- CKAN
 topics:
 - id: GOVE
   name: Government and public sector

@@ -11,12 +11,15 @@ coverage:
     country:
       id: VN
       name: Vietnam
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Geospatial data catalog from Department of Natural Resources and Environment
-  providing web-based geographic services based on OGC standards.
+    subregion:
+      id: VN-SG
+      name: Hồ Chí Minh
+description: GeoServer of the Ho Chi Minh City Department of Natural Resources and
+  Environment, exposing OGC WMS/WFS/WCS layers for city spatial data.
 endpoints:
 - type: wms111
   url: https://geodata-stnmt.tphcm.gov.vn/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -88,7 +91,7 @@ owner:
     subregion:
       id: VN-SG
       name: Hồ Chí Minh
-  name: Department of Natural Resources and Environment
+  name: Ho Chi Minh City Department of Natural Resources and Environment
   type: Local government
 properties:
   has_doi: false
@@ -108,6 +111,7 @@ tags:
 - geoserver
 - Vietnam
 - government
+- has_api
 topics:
 - id: ENVI
   name: Environment
@@ -118,4 +122,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00004451
+uid: cdi00034902

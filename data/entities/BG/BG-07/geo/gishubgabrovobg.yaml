@@ -14,32 +14,33 @@ coverage:
     level: 30
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
+      name: Eastern Europe
     subregion:
       id: BG-07
       name: Gabrovo
-description: Data catalog of geospatial services and datasets for Gabrovo region
+description: ArcGIS REST services directory of Gabrovo Municipality, publishing
+  geospatial layers for the city and surrounding Gabrovo region.
 endpoints:
 - type: arcgis:rest:info
-  url: http://gishub.gabrovo.bg/arcgis/rest/info?f=pjson
+  url: https://gishub.gabrovo.bg/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: http://gishub.gabrovo.bg/arcgis/rest/services?f=pjson
+  url: https://gishub.gabrovo.bg/arcgis/rest/services?f=pjson
 - type: arcgis:soap
-  url: http://gishub.gabrovo.bg/arcgis/services?wsdl
+  url: https://gishub.gabrovo.bg/arcgis/services?wsdl
 - type: arcgis:sitemap
-  url: http://gishub.gabrovo.bg/arcgis/rest/services?f=sitemap
+  url: https://gishub.gabrovo.bg/arcgis/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: http://gishub.gabrovo.bg/arcgis/rest/services?f=geositemap
+  url: https://gishub.gabrovo.bg/arcgis/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: http://gishub.gabrovo.bg/arcgis/rest/services?f=kmz
+  url: https://gishub.gabrovo.bg/arcgis/rest/services?f=kmz
 id: gishubgabrovobg
 langs:
 - id: BG
   name: Bulgarian
-link: http://gishub.gabrovo.bg/arcgis/rest/services
-name: Gabrovo ArcGIS REST
+link: https://gishub.gabrovo.bg/arcgis/rest/services
+name: Gabrovo Municipal GIS
 owner:
-  link: http://www.gabrovo.bg
+  link: https://www.gabrovo.bg
   location:
     country:
       id: BG

@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: false
+api_status: inactive
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+description: Former GeoServer backend of the TechnologieRegion Karlsruhe mobility
+  portal (mobil.trk.de). HTTPS on port 8443 no longer returns a GeoServer response.
+  The public mobility map remains at https://mobil.trk.de/.
+id: mobiltrkde
+langs:
+- id: DE
+  name: German
+link: https://mobil.trk.de:8443/geoserver
+name: GeoServer Mobilitätsportal TechnologieRegion Karlsruhe
+owner:
+  link: https://trk.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+  name: TechnologieRegion Karlsruhe GmbH
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: inactive
+tags:
+- Baden-Württemberg
+- Karlsruhe
+- geoportal
+- geoserver
+- mobility
+- transport
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00003516

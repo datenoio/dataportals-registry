@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Data Catalog of the Swiss Federal Spatial Data Infrastructure
+description: Production STAC API v1 of the Swiss Federal Spatial Data Infrastructure
+  (data.geo.admin.ch), operated by swisstopo.
 endpoints:
 - type: stacserverapi
   url: https://data.geo.admin.ch/api/stac/v1/
@@ -23,6 +24,12 @@ id: datageoadminchapistacv1
 langs:
 - id: EN
   name: English
+- id: DE
+  name: German
+- id: FR
+  name: French
+- id: IT
+  name: Italian
 link: https://data.geo.admin.ch/api/stac/v1/
 name: Swiss Federal Spatial Data Infrastructure (STAC API v1)
 owner:

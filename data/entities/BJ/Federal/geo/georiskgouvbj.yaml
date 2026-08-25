@@ -1,15 +1,11 @@
 access_mode:
-- public
+- open
 api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
-- map
-- document
 - map_layer
-- dashboard
-- storymap
 coverage:
 - location:
     country:
@@ -19,16 +15,18 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: GeoRisk Bénin est le portail national des risques de catastrophes naturelles
-  au Bénin, offrant des données, cartes et tableaux de bord pour l'évaluation et la
-  gestion des risques.
+description: National GeoRisk Bénin portal for natural-disaster and climate-risk
+  geospatial data, maintained by the Ministère du Cadre de Vie et des Transports
+  under the World Bank BRIC / GFDRR programme. GeoNode 5.0.1 catalog (about 110
+  datasets and 18 documents) with public REST, CSW, and OGC services.
 endpoints:
-- type: geonode:layers
-  url: https://georisk.gouv.bj/api/layers/
+- type: geonode:datasets
+  url: https://georisk.gouv.bj/api/datasets/
 - type: geonode:documents
   url: https://georisk.gouv.bj/api/documents/
-- type: geonode:dcatus11
-  url: https://georisk.gouv.bj/data.json
+- type: csw202
+  url: https://georisk.gouv.bj/catalogue/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: '2.0.2'
 - type: wms130
   url: https://georisk.gouv.bj/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
   version: 1.3.0
@@ -38,8 +36,6 @@ endpoints:
 - type: wmts100
   url: https://georisk.gouv.bj/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
-- type: sitemap
-  url: https://georisk.gouv.bj/sitemap.xml
 id: georiskgouvbj
 langs:
 - id: FR
@@ -49,16 +45,18 @@ langs:
 link: https://georisk.gouv.bj
 name: GeoRisk Bénin
 owner:
-  link: https://www.gouv.bj
+  link: https://cadredevie.gouv.bj
   location:
     country:
       id: BJ
       name: Benin
     level: 20
-  name: Government of Benin
+  name: Ministère du Cadre de Vie et des Transports
   type: Central government
 properties:
   has_doi: false
+  is_national: true
+  dataset_count_reported: 110
 rights:
   license_id: null
   license_name: null
@@ -76,11 +74,8 @@ tags:
 - geoportal
 - disaster risk
 - natural hazards
-- risk management
-- Benin
-- geonode
-- GIS
-- open data
+- GeoNode
+- has_api
 topics:
 - id: ENVI
   name: Environment

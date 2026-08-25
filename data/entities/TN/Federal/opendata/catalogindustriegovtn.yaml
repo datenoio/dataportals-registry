@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,18 +14,9 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Plateforme des données rendues publiques par le Ministère de l'Industrie
-  de l'Energie et des Mines Tunisien
-endpoints:
-- type: ckan
-  url: http://catalog.industrie.gov.tn/api/3
-  version: '3'
-- type: ckan:package-search
-  url: http://catalog.industrie.gov.tn/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://catalog.industrie.gov.tn/api/3/action/package_list
-  version: '3'
+description: Former CKAN open data catalog of the Tunisian Ministry of Industry, Energy
+  and Mines. The catalog.industrie.gov.tn host no longer serves a standalone portal;
+  industry datasets now appear as a publisher on the national catalog at data.gov.tn.
 id: catalogindustriegovtn
 identifiers:
 - id: dataportals.org
@@ -55,10 +46,9 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
-- has_api
 - industry
 - energy
 - mining

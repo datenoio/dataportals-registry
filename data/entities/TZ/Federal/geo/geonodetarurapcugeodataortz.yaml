@@ -15,12 +15,12 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: GeoNode instance for sharing geospatial data and maps. Part of TARURA
-  PCU Geodata (tarurapcugeodata.or.tz), providing access to geospatial datasets, maps,
-  documents, GeoStories, and dashboards.
+description: GeoNode of the Tanzania Rural and Urban Roads Agency (TARURA) Project
+  Coordination Unit. Shares geospatial datasets, maps, documents, GeoStories, and
+  dashboards for the rural and urban road network.
 endpoints:
-- type: geonode:layers
-  url: https://geonode.tarurapcugeodata.or.tz/api/layers/
+- type: geonode:datasets
+  url: https://geonode.tarurapcugeodata.or.tz/api/datasets/
 - type: geonode:documents
   url: https://geonode.tarurapcugeodata.or.tz/api/documents/
 - type: wms111
@@ -38,9 +38,6 @@ endpoints:
 - type: oaipmh20
   url: https://geonode.tarurapcugeodata.or.tz/catalogue/csw?mode=oaipmh&verb=Identify
   version: '2.0'
-- type: wmts100
-  url: https://geonode.tarurapcugeodata.or.tz/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
 - type: opensearch
   url: https://geonode.tarurapcugeodata.or.tz/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
   version: '1.0'
@@ -51,14 +48,14 @@ langs:
 link: https://geonode.tarurapcugeodata.or.tz
 name: TARURA PCU Geodata GeoNode
 owner:
+  link: http://www.tarura.go.tz
   location:
     country:
       id: TZ
       name: Tanzania
     level: 20
-  name: TARURA PCU Geodata
+  name: Tanzania Rural and Urban Roads Agency (TARURA)
   type: Central government
-  link: https://or.tz
 properties:
   has_doi: false
 rights:
@@ -74,13 +71,14 @@ software:
 status: active
 tags:
 - geospatial
-- opendata
 - GIS
 - geodata
+- roads
 - Tanzania
+- has_api
 topics:
-- id: ENVI
-  name: Environment
+- id: TRAN
+  name: Transport
   type: eudatatheme
 - id: GOVE
   name: Government and public sector

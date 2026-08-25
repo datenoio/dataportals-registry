@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,16 +14,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: GBIF Integrated Publishing Toolkit of the National Commission for Science
-  and Technology, serving biodiversity datasets for Malawi.
-endpoints:
-- type: dcat:ttl
-  url: http://41.77.13.208:8081/dcat
-- type: ipt:dataset
-  url: http://41.77.13.208:8081/inventory/dataset
-- type: rss
-  url: http://41.77.13.208:8081/rss.do
-  version: '2.0'
+description: Former public IP for the National Commission for Science and Technology
+  GBIF IPT. http://41.77.13.208:8081 no longer accepts connections. The live NCST IPT
+  is recorded as 19632215240 at http://196.32.215.240:8081/ipt.
 id: '417713208'
 langs:
 - id: EN
@@ -42,7 +35,7 @@ owner:
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT

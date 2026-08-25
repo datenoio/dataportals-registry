@@ -170,14 +170,9 @@
       "examples": ["active"]
     },
     "tags": {
-      "description": "Free-form tags; may be strings or structured tag objects.",
+      "description": "Free-form keyword strings. Quote numeric tags (e.g. '911'); do not use tag objects.",
       "type": "array",
-      "items": {
-        "oneOf": [
-          { "type": "string" },
-          { "type": "object", "additionalProperties": true }
-        ]
-      },
+      "items": { "type": "string" },
       "examples": [["government", "has_api"]]
     },
     "topics": {
@@ -215,9 +210,10 @@
       "required": ["id", "name"],
       "properties": {
         "id": {
-          "description": "ISO 3166-1 alpha-2 code or special territory code.",
-          "oneOf": [{ "type": "string", "minLength": 1 }, { "type": "integer" }],
-          "examples": ["US"]
+          "description": "ISO 3166-1 alpha-2 code or special territory code. Must be a quoted string (unquoted NO is a YAML boolean).",
+          "type": "string",
+          "minLength": 1,
+          "examples": ["US", "NO"]
         },
         "name": {
           "description": "Country or territory display name.",
@@ -371,7 +367,7 @@
         "transferable_location": { "type": "boolean" },
         "base_last_seen": { "type": "string" },
         "dataset_count_reported": {
-          "oneOf": [{ "type": "integer" }, { "type": "string" }]
+          "type": "integer"
         }
       },
       "additionalProperties": true

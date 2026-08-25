@@ -15,7 +15,9 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: Catalog of GIS services from Agro Uzbekistan
+description: ArcGIS Server REST catalog of the Ministry of Agriculture of Uzbekistan.
+  Publishes agricultural, cadastral, and related map services (ArcGIS Server 10.9),
+  including hosted feature services and utility services.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.agro.uz/server/rest/info?f=pjson
@@ -33,16 +35,18 @@ id: gisagrouz
 langs:
 - id: UZ
   name: Uzbek
+- id: RU
+  name: Russian
 link: https://gis.agro.uz/server/rest/services
-name: Minagro Uzbekistan ArcGIS server
+name: Ministry of Agriculture of Uzbekistan ArcGIS Server
 owner:
-  link: https://www.agro.uz
+  link: https://gov.uz/en/agro
   location:
     country:
       id: UZ
       name: Uzbekistan
     level: 20
-  name: Ministry of agriculture of Uzbekistan
+  name: Ministry of Agriculture of the Republic of Uzbekistan
   type: Central government
 properties:
   has_doi: false
@@ -58,17 +62,28 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- GIS
-- Agriculture
-- Uzbekistan
+- gis
+- agriculture
+- geospatial
+- government
+- has_api
 topics:
-- id: GOVE
-  name: Government and public sector
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
-- id: Location
-  name: Location
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
   type: iso19115
 - id: Boundaries
   name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
   type: iso19115
 uid: cdi00005164

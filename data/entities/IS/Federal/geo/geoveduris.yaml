@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Data catalog for geo and weather information from Iceland Meteorological
-  Office
+description: GeoServer of Veðurstofa Íslands (Icelandic Meteorological Office)
+  providing OGC services for meteorological, hydrological, and natural-hazard
+  geospatial data. The /geoserver/web UI is unpublished; capabilities remain on /ows.
 endpoints:
 - type: wms111
   url: https://geo.vedur.is/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -64,14 +65,14 @@ id: geoveduris
 langs:
 - id: IS
   name: Icelandic
-link: https://geo.vedur.is/geoserver/web/
-name: Vedur.is GeoServer
+link: https://geo.vedur.is/geoserver
+name: Veðurstofa Íslands GeoServer
 owner:
-  link: https://en.vedur.is/
+  link: https://www.vedur.is
   location:
     country: *id001
     level: 20
-  name: Iceland Meteorological Office
+  name: Veðurstofa Íslands (Icelandic Meteorological Office)
   type: Central government
 properties:
   has_doi: false

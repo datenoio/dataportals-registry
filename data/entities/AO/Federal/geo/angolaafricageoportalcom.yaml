@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AO
+      name: Angola
+    level: 20
+    macroregion:
+      id: '017'
+      name: Middle Africa
+description: Angola country hub on Africa GeoPortal (Esri). Publishes geospatial datasets,
+  maps, and applications for Angola and the wider continent, including land cover,
+  settlements, OpenStreetMap layers, and related open GIS content (79 datasets in
+  the DCAT-US feed).
+endpoints:
+- type: dcatap201
+  url: https://angola.africageoportal.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://angola.africageoportal.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://angola.africageoportal.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://angola.africageoportal.com/api/search/v1
+- type: sitemap
+  url: https://angola.africageoportal.com/sitemap.xml
+id: angolaafricageoportalcom
+langs:
+- id: EN
+  name: English
+link: https://angola.africageoportal.com/
+name: Angola GeoPortal (Africa GeoPortal)
+owner:
+  link: https://www.esri.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Esri
+  type: Business
+properties:
+  dataset_count_reported: 79
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- GIS
+- geospatial
+- mapping
+- data sharing
+- Angola
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00003237

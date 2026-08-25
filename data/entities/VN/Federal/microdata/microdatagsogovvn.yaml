@@ -1,11 +1,11 @@
 access_mode:
 - open
-- limited
+- restricted
 api: false
 api_status: inactive
 catalog_type: Microdata catalog
 content_types:
-- microdata
+- dataset
 coverage:
 - location:
     country:
@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: NADA catalog of Vietnam's General Statistics Office (now National Statistics
-  Office), launched in 2010. The microdata.gso.gov.vn hostname no longer resolves.
+description: Former NADA national data archive of Vietnam's General Statistics Office (now National Statistics
+  Office). The microdata.gso.gov.vn hostname no longer resolves.
 id: microdatagsogovvn
 langs:
 - id: VN
@@ -54,9 +54,13 @@ tags:
 - statistics
 - surveys
 - official statistics
+- Vietnam
 topics:
 - id: SOCI
   name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
 - id: Society
   name: Society

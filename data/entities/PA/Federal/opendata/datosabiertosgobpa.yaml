@@ -14,32 +14,33 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Datos recolectados y/o producidos por las instituciones públicas puestos
-  a disposición.
+description: National open data portal of Panama (CKAN), operated by the Autoridad
+  Nacional para la Innovación Gubernamental (AIG). Publishes datasets collected or
+  produced by public institutions for reuse under Panama's open data decree.
 endpoints:
 - type: ckan
-  url: https://datosabiertos.gob.pa/api/3
+  url: https://www.datosabiertos.gob.pa/api/3
   version: '3'
 - type: ckan:package-search
-  url: https://datosabiertos.gob.pa/api/3/action/package_search
+  url: https://www.datosabiertos.gob.pa/api/3/action/package_search
   version: '3'
 - type: ckan:package-list
-  url: https://datosabiertos.gob.pa/api/3/action/package_list
+  url: https://www.datosabiertos.gob.pa/api/3/action/package_list
   version: '3'
 id: datosabiertosgobpa
 langs:
 - id: ES
   name: Spanish
-link: https://datosabiertos.gob.pa
-name: Datos Abiertos de Panama
+link: https://www.datosabiertos.gob.pa
+name: Datos Abiertos de Panamá
 owner:
-  link: https://www.gob.pa
+  link: https://aig.gob.pa
   location:
     country:
       id: PA
       name: Panama
     level: 20
-  name: Republica de Panama
+  name: Autoridad Nacional para la Innovación Gubernamental (AIG)
   type: Central government
 properties:
   has_doi: false
@@ -58,9 +59,22 @@ status: active
 tags:
 - has_api
 - open data
-- public administration
+- government
+- Panama
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00001269

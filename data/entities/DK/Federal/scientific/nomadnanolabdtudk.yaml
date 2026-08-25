@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: DTU Nanolab NOMAD Oasis for nanofabrication and materials-discovery research
+  data. Public entries are available through the NOMAD REST API.
+endpoints:
+- type: rest
+  url: https://nomad.nanolab.dtu.dk/nomad-oasis/api/v1/info
+- type: rest
+  url: https://nomad.nanolab.dtu.dk/nomad-oasis/api/v1/entries
+id: nomadnanolabdtudk
+langs:
+- id: EN
+  name: English
+link: https://nomad.nanolab.dtu.dk/nomad-oasis/gui/
+name: DTU Nanolab NOMAD Oasis
+owner:
+  link: https://www.nanolab.dtu.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+  name: DTU Nanolab
+  type: Academy
+properties:
+  dataset_count_reported: 1
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: nomad
+  name: NOMAD
+status: active
+tags:
+- scientific
+- has_api
+- materials science
+- nanofabrication
+- NOMAD Oasis
+- FAIR data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990012

@@ -28,9 +28,9 @@
 
 ## Data layout
 
-- `data/entities/`: verified catalog records (one YAML per catalog, organized by country and catalog type). Source count 24 August 2026 (v1.16.0): **20,142** files in **218** country/territory folders.
-- `data/scheduled/`: unverified records pending promotion — [docs/scheduled.md](docs/scheduled.md) (**12** as of 24 August 2026)
-- `data/software/`: software/platform definitions (**262** YAML files; published `software.jsonl` still has 247 until the next rebuild)
+- `data/entities/`: verified catalog records (one YAML per catalog, organized by country and catalog type). Source count 25 August 2026: **22,750** files in **219** country/territory folders (published v1.17.0).
+- `data/scheduled/`: unverified records pending promotion — [docs/scheduled.md](docs/scheduled.md) (**0** as of 25 August 2026)
+- `data/software/`: software/platform definitions (**262** YAML files; `software.jsonl` matches published v1.17.0)
 - `data/schemes/catalog.json`: Cerberus validation schema (CI source of truth)
 - `data/schemes/catalog.schema.json`: JSON Schema with descriptions for external tooling
 - `data/schemes/catalog.context.jsonld`: DCAT/schema.org JSON-LD mappings

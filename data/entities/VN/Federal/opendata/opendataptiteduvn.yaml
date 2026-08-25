@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,17 +14,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Data catalog managed by the Posts and Telecommunications Institute of
-  Technology (PTIT), a leading academy and research institute in Vietnam.
-endpoints:
-- type: ckan
-  url: https://opendata.ptit.edu.vn/api/3
-- type: ckan:package-search
-  url: https://opendata.ptit.edu.vn/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://opendata.ptit.edu.vn/api/3/action/package_list
-  version: '3'
+description: Former CKAN open data catalog of the Posts and Telecommunications Institute of Technology
+  (PTIT). The opendata.ptit.edu.vn site now returns HTTP 404.
 id: opendataptiteduvn
 langs:
 - id: VN
@@ -32,13 +23,13 @@ langs:
 link: https://opendata.ptit.edu.vn
 name: PTIT Open Data Catalog
 owner:
-  link: https://www.ptit.edu.vn
+  link: https://ptit.edu.vn
   location:
     country:
       id: VN
       name: Vietnam
     level: 20
-  name: Academy of Posts and Telecommunications
+  name: Posts and Telecommunications Institute of Technology
   type: Academy
 rights:
   license_id: null
@@ -50,12 +41,13 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
-- government
 - education
 - technology
 - research
+- CKAN
+- Vietnam
 topics:
 - id: EDUC
   name: Education, culture and sport

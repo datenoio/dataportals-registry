@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: The THREDDS Data Server (TDS) is a web server that provides metadata
+  and data access for scientific datasets, using OPeNDAP, OGC WMS and WCS, HTTP, and
+  other remote data access protocols. The TDS is developed and supported by Unidata,
+  a division of the University Corporation for Atmospheric Research (UCAR), and is
+  sponsored by the National Science Foundation.
+endpoints:
+- type: thredds:catalog
+  url: https://coastwatch.noaa.gov/thredds/catalog.xml
+- type: sitemap
+  url: https://coastwatch.noaa.gov/sitemap.xml
+- type: thredds:info
+  url: https://coastwatch.noaa.gov/thredds/serverInfo.xml
+id: coastwatchnoaagov
+langs:
+- id: EN
+  name: English
+link: https://coastwatch.noaa.gov/thredds/catalog.html
+name: NOAA CoastWatch THREDDS Catalog
+owner:
+  link: https://www.star.nesdis.noaa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: NESDIS STAR
+  type: Central government
+properties:
+  is_national: true
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- ocean
+- environment
+- satellite
+- oceanography
+- science
+- coastal
+- climate
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00005268

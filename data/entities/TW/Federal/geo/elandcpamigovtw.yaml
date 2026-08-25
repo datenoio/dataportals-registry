@@ -15,7 +15,10 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: GeoServer interface for spatial data management at eland.cpami.gov.tw.
+description: GeoServer for national land-use and environmentally sensitive area
+  layers operated by Taiwan's National Land Management Agency (formerly the
+  Construction and Planning Agency, CPAMI). The site redirects from
+  eland.cpami.gov.tw to eland.nlma.gov.tw.
 endpoints:
 - type: wms111
   url: https://eland.cpami.gov.tw/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -58,17 +61,15 @@ langs:
 - id: ZH
   name: Chinese
 link: https://eland.cpami.gov.tw/geoserver/web/
-name: Central Government (assumed based on domain .gov.tw and CPAMI – Construction
-  and Planning Agency, Ministry of the Interior, Taiwan) Geoportal
+name: National Land Management Agency eLand GeoServer
 owner:
-  link: https://eland.cpami.gov.tw/geoserver/web/
+  link: https://www.nlma.gov.tw
   location:
     country:
       id: TW
       name: Taiwan
     level: 20
-  name: Central Government (assumed based on domain .gov.tw and CPAMI – Construction
-    and Planning Agency, Ministry of the Interior, Taiwan)
+  name: National Land Management Agency, Ministry of the Interior
   type: Central government
 properties:
   has_doi: false

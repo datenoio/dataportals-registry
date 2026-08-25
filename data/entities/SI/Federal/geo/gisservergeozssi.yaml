@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: ArcGIS REST services catalog of GeoZS, a regional geodetic and geoinformation
-  service provider in Slovenia.
+description: ArcGIS REST services catalogue of the Geological Survey of Slovenia
+  (GeoZS), exposing national geological map and related spatial services.
 endpoints:
 - type: arcgis:rest:info
   url: https://gisserver.geo-zs.si/arcgis/rest/info?f=pjson
@@ -35,15 +35,15 @@ langs:
 - id: SL
   name: Slovenian
 link: https://gisserver.geo-zs.si/arcgis/rest/services
-name: Ministrsvo za Javno Upravo Geoportal
+name: Geological Survey of Slovenia ArcGIS REST services
 owner:
-  link: https://www.gov.si
+  link: https://www.geo-zs.si
   location:
     country:
       id: SI
       name: Slovenia
     level: 20
-  name: Ministrsvo za Javno Upravo
+  name: Geological Survey of Slovenia
   type: Central government
 properties:
   has_doi: false
@@ -62,18 +62,19 @@ tags:
 - GIS
 - geospatial
 - ArcGIS REST
-- regional government
+- geology
+- GeoZS
 topics:
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
-  type: iso19115
-- id: Boundaries
-  name: Boundaries
   type: iso19115
 uid: cdi00020272

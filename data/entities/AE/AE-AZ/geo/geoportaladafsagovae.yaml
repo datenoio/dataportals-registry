@@ -18,14 +18,29 @@ coverage:
     subregion:
       id: AE-AZ
       name: Abū Z̧aby
-description: Data services available via the ADAFSA Geoportal
+description: ArcGIS REST services of the Abu Dhabi Agriculture and Food Safety Authority
+  (ADAFSA) geoportal, publishing agriculture, food safety, and related spatial layers.
 endpoints:
 - type: arcgis:portals:self
   url: https://geoportal.adafsa.gov.ae/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://geoportal.adafsa.gov.ae/hosting/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoportal.adafsa.gov.ae/hosting/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoportal.adafsa.gov.ae/hosting/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoportal.adafsa.gov.ae/hosting/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoportal.adafsa.gov.ae/hosting/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geoportal.adafsa.gov.ae/hosting/rest/services?f=kmz
 id: geoportaladafsagovae
 langs:
 - id: AR
   name: Arabic
+- id: EN
+  name: English
 link: https://geoportal.adafsa.gov.ae/hosting/rest/services/
 name: ADAFSA Geoportal Data Services
 owner:
@@ -65,9 +80,6 @@ topics:
   type: eudatatheme
 - id: HEAL
   name: Health
-  type: eudatatheme
-- id: AGRI
-  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
 - id: ENVI
   name: Environment

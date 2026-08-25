@@ -11,12 +11,15 @@ coverage:
     country:
       id: MY
       name: Malaysia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: ArcGIS REST Services Directory for Penang GIS, containing mapping and
-  geospatial data layers hosted by the Penang State Government.
+    subregion:
+      id: MY-07
+      name: Pulau Pinang
+description: ArcGIS REST services directory of the Penang Geographic Information
+  System Centre (PeGIS), publishing state mapping and geospatial layers.
 endpoints:
 - type: arcgis:rest:info
   url: https://pegis.penang.gov.my/arcgis/rest/info?f=pjson
@@ -35,7 +38,7 @@ langs:
 - id: MS
   name: Malay
 link: https://pegis.penang.gov.my/arcgis/rest/services
-name: penang-gis-arcgis-rest-data-catalog
+name: PeGIS ArcGIS REST Services
 owner:
   link: https://pegis.penang.gov.my/
   location:
@@ -47,7 +50,7 @@ owner:
       id: MY-07
       name: Pulau Pinang
   name: Penang Geographic Information System Centre (PeGIS)
-  type: Local government
+  type: Regional government
 properties:
   has_doi: false
 rights:

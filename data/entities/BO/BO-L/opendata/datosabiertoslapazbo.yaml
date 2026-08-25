@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,17 +17,8 @@ coverage:
     subregion:
       id: BO-L
       name: La Paz
-description: Portal de datos abiertos del Gobierno Autónomo Municipal de La Paz
-endpoints:
-- type: ckan:package-search
-  url: https://datosabiertos.lapaz.bo/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://datosabiertos.lapaz.bo/api/3/action/package_list
-  version: '3'
-- type: ckan
-  url: https://datosabiertos.lapaz.bo/api/3
-  version: '3'
+description: Open data portal of the Autonomous Municipal Government of La Paz.
+  The CKAN site and Action API currently return HTTP 502.
 id: datosabiertoslapazbo
 langs:
 - id: ES
@@ -58,10 +49,9 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
-- has_api
 - presupuesto
 - pluviometría
 - agua

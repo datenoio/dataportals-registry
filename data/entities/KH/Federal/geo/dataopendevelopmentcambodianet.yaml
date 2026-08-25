@@ -15,10 +15,9 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Geospatial data catalog providing access to over 400 types of geospatial
-  data layers related to Cambodia’s development trends. Data includes environment
-  and land, economic land concessions, forest cover, and other development-related
-  themes.
+description: GeoServer instance providing geospatial datasets for Cambodia, integrated
+  with Open Development Cambodia's CKAN data catalog. Layers cover environment and
+  land, economic land concessions, forest cover, and other development-related themes.
 endpoints:
 - type: wms111
   url: https://data.opendevelopmentcambodia.net/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -60,8 +59,10 @@ id: dataopendevelopmentcambodianet
 langs:
 - id: EN
   name: English
+- id: KM
+  name: Khmer
 link: https://data.opendevelopmentcambodia.net/geoserver
-name: Open Development Cambodia Geoserver Data Catalog
+name: Open Development Cambodia GeoServer
 owner:
   link: https://opendevelopmentcambodia.net/
   location:
@@ -85,13 +86,14 @@ software:
   name: GeoServer
 status: active
 tags:
-- Open Data
-- Geospatial
+- geospatial
+- GeoServer
+- open data
 - Cambodia
-- Environmental Data
-- Forest Cover
-- Land Use
-- Economic Land Concessions
+- has_api
+- environment
+- forest cover
+- land use
 topics:
 - id: ENVI
   name: Environment
@@ -99,16 +101,13 @@ topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
   type: eudatatheme
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
-- id: ENER
-  name: Energy
-  type: eudatatheme
-- id: AGRI
-  name: Agriculture, fisheries, forestry and food
-  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00003945

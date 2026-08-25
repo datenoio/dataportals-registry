@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: WIS 2.0 in a box provides a platform with the capabilities for centres
-  to integrate their data holdings and publish them to the WMO Information System
-  with a plug and play capability supporting data publishing, discovery and access
+description: WIS2 in a box node of Météo Togo (ANAMET). Publishes WMO discovery
+  metadata, station information, and surface synoptic observations (SYNOP) through
+  an OGC API Features / pygeoapi service for the WMO Information System.
 endpoints:
 - type: pygeoapi:openapi
   url: https://wis2.meteotogo.tg/oapi/openapi
@@ -42,6 +42,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -57,6 +58,7 @@ tags:
 - meteorology
 - climate
 - WIS2
+- has_api
 topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere

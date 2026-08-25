@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '010'
       name: Antarctica
-description: A web-based geospatial data catalog and management application for accessing
-  and visualizing geospatial data, particularly for the Polar regions.
+description: GeoServer of Polar View, the British Antarctic Survey operational sea-ice
+  information service. Publishes SAR imagery, ice charts, iceberg tracking, and AMSR2
+  sea-ice concentration for the Antarctic and Arctic.
 endpoints:
 - type: wfs100
   url: https://geos.polarview.aq/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
@@ -27,6 +28,12 @@ endpoints:
 - type: wfs200
   url: https://geos.polarview.aq/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
   version: 2.0.0
+- type: wms111
+  url: https://geos.polarview.aq/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geos.polarview.aq/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
 - type: wps100
   url: https://geos.polarview.aq/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
@@ -39,33 +46,21 @@ endpoints:
 - type: wmts100
   url: https://geos.polarview.aq/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
-- type: wms111
-  url: https://geos.polarview.aq/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wms130
-  url: https://geos.polarview.aq/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
-- type: wms111
-  url: https://geos.polarview.aq/geoserver/wms?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wms130
-  url: https://geos.polarview.aq/geoserver/wms?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
 id: geospolarviewaq
 langs:
 - id: EN
   name: English
-link: https://geos.polarview.aq/geoserver/web/
-name: Geoserver (PolarView)
+link: https://geos.polarview.aq/geoserver
+name: Polar View GeoServer
 owner:
-  link: https://www.polarview.aq/
+  link: https://www.bas.ac.uk
   location:
     country:
-      id: AQ
-      name: Antarctic
+      id: GB
+      name: United Kingdom
     level: 20
-  name: PolarView
-  type: International
+  name: British Antarctic Survey
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -83,8 +78,9 @@ tags:
 - geospatial
 - Antarctica
 - Arctic
-- GIS
+- sea ice
 - remote sensing
+- has_api
 topics:
 - id: ENVI
   name: Environment
@@ -92,7 +88,13 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-- id: Geoscientific Information
-  name: Geoscientific Information
+- id: Oceans
+  name: Oceans
   type: iso19115
-uid: temp00000790
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00036205

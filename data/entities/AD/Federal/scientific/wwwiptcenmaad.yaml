@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -12,23 +12,27 @@ coverage:
       name: Andorra
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: GBIF CENMA IPT. scientific data repository. managed by Centre d'estudis
-  de la neu i de la muntanya d'Andorra (CENMA), Institut d'Estudis Andorrans. powered
-  by IPT The Integrated Publishing Toolkit. accessible at www.ipt-cenma.ad.
-endpoints:
-- type: rss
-  url: http://www.ipt-cenma.ad/rss.do
-  version: '2.0'
+description: Former GBIF Integrated Publishing Toolkit of CENMA (Centre d'estudis
+  de la neu i de la muntanya d'Andorra), Institut d'Estudis Andorrans. HTTP on www.ipt-cenma.ad
+  no longer responds; HTTPS on the same host now serves an unrelated Gandia Integra
+  login application, not IPT. GBIF still lists the CENMA publisher (7 datasets) and
+  a historical IPT installation whose RSS feed is dead.
 id: wwwiptcenmaad
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/publisher/b4370195-ab86-42a1-822a-96809e3d0384
+  value: b4370195-ab86-42a1-822a-96809e3d0384
 langs:
+- id: CA
+  name: Catalan
 - id: ES
   name: Spanish
-link: http://www.ipt-cenma.ad
+link: https://www.ipt-cenma.ad
 name: CENMA IPT
 owner:
-  link: http://www.cenma.ad
+  link: https://www.iea.ad/cenma
   location:
     country:
       id: AD
@@ -37,10 +41,12 @@ owner:
   name: Centre d'estudis de la neu i de la muntanya d'Andorra (CENMA), Institut d'Estudis
     Andorrans
   type: Academy
+properties:
+  has_doi: false
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT

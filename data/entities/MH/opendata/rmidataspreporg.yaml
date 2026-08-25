@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -13,11 +14,12 @@ coverage:
     macroregion:
       id: '057'
       name: Micronesia
-description: Provides access to environment-related data catalogs for the Republic
-  of the Marshall Islands, including datasets, projects, and resources.
-endpoints:
-- type: dcatus11
-  url: https://rmi-data.sprep.org/data.json
+description: National environment data portal for the Republic of the Marshall Islands
+  in the SPREP Inform network. Publishes public environmental datasets for download,
+  monitoring, and decision-making, including biodiversity, coastal and marine, climate,
+  land, inland waters, and GIS files. Not a cross-government open data portal. The
+  hostname returns Cloudflare HTTP 526 (invalid origin SSL) as of August 2026 and
+  does not currently serve DKAN or DCAT endpoints.
 id: rmidataspreporg
 langs:
 - id: EN
@@ -25,13 +27,13 @@ langs:
 link: https://rmi-data.sprep.org
 name: Republic of the Marshall Islands Environment Data Portal
 owner:
-  link: https://sprep.org
+  link: https://www.sprep.org
   location:
     country:
       id: MH
       name: Republic of Marshall Islands
     level: 20
-  name: Pacific Regional Environment Programme
+  name: Secretariat of the Pacific Regional Environment Programme (SPREP)
   type: International
 properties:
   has_doi: false
@@ -47,18 +49,47 @@ rights:
 software:
   id: dkan
   name: DKAN
-status: active
+status: inactive
 tags:
 - government
 - environment
-- protected areas
-- community engagement
+- climate
+- biodiversity
+- marine
+- coastal
+- gis
+- SPREP
+- Inform project
+- Marshall Islands
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
 - id: Environment
   name: Environment
   type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00001259
-api: true

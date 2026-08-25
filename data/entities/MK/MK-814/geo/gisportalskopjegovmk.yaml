@@ -13,13 +13,14 @@ coverage:
       name: Republic of North Macedonia
     level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
     subregion:
       id: MK-814
       name: Centar †
-description: ArcGIS REST services directory for the city of Skopje's GIS portal, listing
-  available data and map services
+description: ArcGIS REST services directory of the City of Skopje GIS portal. Map
+  services cover urban planning (GUP), infrastructure, cadastre extracts, tax zones,
+  and related local government layers.
 endpoints:
 - type: arcgis:rest:info
   url: https://gisportal.skopje.gov.mk/arcgis/rest/info?f=pjson
@@ -40,7 +41,7 @@ langs:
 link: https://gisportal.skopje.gov.mk/arcgis/rest/services
 name: City of Skopje Geoportal
 owner:
-  link: https://gisportal.skopje.gov.mk
+  link: https://skopje.gov.mk
   location:
     country:
       id: MK
@@ -67,17 +68,24 @@ status: active
 tags:
 - ArcGIS
 - GIS
-- REST services
-- Open Data
-- City of Skopje
+- government
+- has_api
+- Skopje
+- urban planning
 topics:
 - id: GOVE
   name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
   type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
   type: iso19115
 uid: temp00001604

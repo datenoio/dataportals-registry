@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,13 +18,8 @@ coverage:
     subregion:
       id: IE-WX
       name: Wexford
-description: Geospatial REST services providing map and GIS resources, likely owned
-  and maintained by a local government entity in Wexford, Ireland.
-endpoints:
-- type: arcgis:rest:info
-  url: https://maps.wexford.ie/extwebadapt103/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://maps.wexford.ie/extwebadapt103/rest/services?f=pjson
+description: Former Wexford County Council ArcGIS REST directory at
+  maps.wexford.ie/extwebadapt103. That path now returns 404.
 id: mapswexfordie
 langs:
 - id: EN
@@ -55,7 +50,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - GIS
 - maps

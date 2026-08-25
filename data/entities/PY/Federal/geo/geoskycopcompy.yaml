@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Geoportal. managed by Skycop. powered by GeoServer. accessible at geo.skycop.com.py.
+description: Public GeoServer instance of Skycop Paraguay S.A. at geo.skycop.com.py,
+  exposing WMS, WFS, WCS, WMTS and related OGC services.
 endpoints:
 - type: wms111
   url: http://geo.skycop.com.py/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -76,7 +77,7 @@ langs:
 - id: ES
   name: Spanish
 link: http://geo.skycop.com.py/geoserver
-name: Skycop Geoportal
+name: Skycop GeoServer (geo)
 owner:
   link: http://skycop.com.py
   location:
@@ -84,7 +85,7 @@ owner:
       id: PY
       name: Paraguay
     level: 20
-  name: Skycop
+  name: Skycop Paraguay S.A.
   type: Business
 properties:
   has_doi: false

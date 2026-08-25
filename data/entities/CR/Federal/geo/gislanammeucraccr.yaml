@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: ArcGIS REST Services endpoint for geospatial data services
+description: ArcGIS Enterprise geoportal of LANAMME at the University of Costa Rica,
+  with map services for bridges, WMS layers, and related infrastructure data.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.lanamme.ucr.ac.cr/server/rest/info?f=pjson
@@ -29,32 +30,22 @@ endpoints:
   url: https://gis.lanamme.ucr.ac.cr/server/rest/services?f=geositemap
 - type: arcgis:kmz
   url: https://gis.lanamme.ucr.ac.cr/server/rest/services?f=kmz
-- type: arcgis:rest:info
-  url: https://gis.lanamme.ucr.ac.cr/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://gis.lanamme.ucr.ac.cr/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://gis.lanamme.ucr.ac.cr/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://gis.lanamme.ucr.ac.cr/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://gis.lanamme.ucr.ac.cr/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://gis.lanamme.ucr.ac.cr/arcgis/rest/services?f=kmz
+- type: arcgis:portals:self
+  url: https://gis.lanamme.ucr.ac.cr/portal/sharing/rest/portals/self?f=pjson
 id: gislanammeucraccr
 langs:
 - id: ES
   name: Spanish
-link: https://gis.lanamme.ucr.ac.cr/arcgis/rest/services
+link: https://gis.lanamme.ucr.ac.cr/server/rest/services
 name: Geoportal GIS LANAMME UCR
 owner:
-  link: https://gis.lanamme.ucr.ac.cr
+  link: https://www.lanamme.ucr.ac.cr
   location:
     country:
       id: CR
       name: Costa Rica
     level: 20
-  name: LANAMME/UCR
+  name: Laboratorio Nacional de Materiales y Modelos Estructurales (LANAMME/UCR)
   type: Academy
 properties:
   has_doi: false
@@ -70,6 +61,7 @@ software:
   name: ArcGIS Server
 status: active
 tags:
+- has_api
 - ArcGIS
 - Costa Rica
 - LANAMME
@@ -89,4 +81,4 @@ topics:
 - id: Elevation
   name: Elevation
   type: iso19115
-uid: temp00001180
+uid: cdi00035626

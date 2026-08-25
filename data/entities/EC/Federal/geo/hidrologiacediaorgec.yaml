@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,31 +15,7 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Geoportal for hydrological and related geospatial data, managed by Corporación
-  Ecuatoriana para el Desarrollo de la Investigación y la Academia (CEDIA), which
-  is an academic and research entity.
-endpoints:
-- type: geonode:layers
-  url: https://hidrologia.cedia.org.ec/api/layers/
-- type: geonode:documents
-  url: https://hidrologia.cedia.org.ec/api/documents/
-- type: geonode:dcatus11
-  url: https://hidrologia.cedia.org.ec/data.json
-- type: wms111
-  url: https://hidrologia.cedia.org.ec/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wfs110
-  url: https://hidrologia.cedia.org.ec/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: https://hidrologia.cedia.org.ec/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: csw202
-  url: https://hidrologia.cedia.org.ec/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://hidrologia.cedia.org.ec/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
-  version: '1.0'
+description: Former GeoNode hydrology node of CEDIA. The host is unreachable.
 id: hidrologiacediaorgec
 langs:
 - id: ES
@@ -47,7 +23,7 @@ langs:
 - id: EN
   name: English
 link: https://hidrologia.cedia.org.ec
-name: CEDIA geodata
+name: CEDIA hidrología GeoNode
 owner:
   link: https://www.cedia.org.ec
   location:
@@ -69,7 +45,7 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 tags:
 - geospatial
 - has_api

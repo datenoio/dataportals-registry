@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: GIS portal offering REST services for spatial data.
+description: ArcGIS Server REST catalog of Cong ty CP Cong nghe, Dich vu Tai nguyen
+  va Moi truong (CDTM), a Vietnamese GIS company providing web-map and 3D GIS services.
 endpoints:
 - type: arcgis:rest:info
   url: https://gisportal.cdtm.com.vn/arcgis11/rest/info?f=pjson
@@ -34,15 +35,15 @@ langs:
 - id: VN
   name: Vietnamese
 link: https://gisportal.cdtm.com.vn/arcgis11/rest/services
-name: Department of Construction ArcGIS Geoportal
+name: CDTM GIS portal
 owner:
-  link: https://gisportal.cdtm.com.vn
+  link: https://cdtm.com.vn
   location:
     country:
       id: VN
       name: Vietnam
     level: 20
-  name: Unknown (not provided in the URL information)
+  name: CDTM Joint Stock Company
   type: Business
 properties:
   has_doi: false
@@ -58,23 +59,19 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- GIS
-- Spatial Data
-- REST
+- ArcGIS
 - geospatial
-- arcgisserver
+- 3D GIS
 - Vietnam
+- has_api
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: Environment
-  name: Environment
-  type: iso19115
 - id: Location
   name: Location
   type: iso19115
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
-uid: temp00005849
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00034920

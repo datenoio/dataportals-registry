@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,25 +15,22 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Data catalog at geo.xdworld.kr/web/. geoportal. managed by Not specified
-  in provided information. powered by GeoServer.
-endpoints:
-- type: geoserver:catalog
-  url: https://geo.xdworld.kr/web/
+description: Former GeoServer catalog associated with the XDWorld 3D GIS engine. The
+  geo.xdworld.kr host no longer resolves.
 id: geoxdworldkr
 langs:
 - id: KO
   name: Korean
 link: https://geo.xdworld.kr/web/
-name: Not specified in provided information Geoportal
+name: XDWorld GeoServer
 owner:
-  link: https://geo.xdworld.kr/web/
+  link: http://www.xdworld.kr
   location:
     country:
       id: KR
       name: South Korea
     level: 20
-  name: Not specified in provided information
+  name: EGIS
   type: Business
 properties:
   has_doi: false
@@ -47,14 +44,12 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - geospatial
-- data-catalog
+- GeoServer
+- 3D GIS
 topics:
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115

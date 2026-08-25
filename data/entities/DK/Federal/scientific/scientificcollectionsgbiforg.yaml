@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 0
+    macroregion:
+      id: '001'
+      name: World
+description: Global Registry of Scientific Collections (GRSciColl) is GBIF's community-curated
+  registry of institutions, collections, and associated staff across natural history and related
+  scientific disciplines. It is the reference for Darwin Core institution and collection codes.
+endpoints:
+- type: customapi
+  url: https://api.gbif.org/v1/grscicoll/institution
+- type: customapi
+  url: https://api.gbif.org/v1/grscicoll/collection
+id: scientificcollectionsgbiforg
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::bca382c81484983f2d437f97d1e141f3
+  value: fairsharing_::bca382c81484983f2d437f97d1e141f3
+langs:
+- id: EN
+  name: English
+link: https://scientific-collections.gbif.org/
+name: Global Registry of Scientific Collections
+owner:
+  link: https://www.gbif.org/
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+  name: Global Biodiversity Information Facility
+  type: International
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: gbifplatform
+  name: GBIF Platform
+status: active
+tags:
+- biodiversity
+- collections
+- taxonomy
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00029831

@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FO
+      name: Faroe Islands
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: ArcGIS Server catalog of SEV, the Faroese inter-municipal electricity
+  company, with map services for the power grid, meters, and related energy infrastructure.
+endpoints:
+- type: arcgis:rest:info
+  url: https://agisportal.sev.fo/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://agisportal.sev.fo/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://agisportal.sev.fo/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://agisportal.sev.fo/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://agisportal.sev.fo/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://agisportal.sev.fo/arcgis/rest/services?f=kmz
+id: agisportalsevfo
+langs:
+- id: FO
+  name: Faroese
+- id: EN
+  name: English
+link: https://agisportal.sev.fo/arcgis/rest/services
+name: SEV ArcGIS Server
+owner:
+  link: https://www.sev.fo/
+  location:
+    country:
+      id: FO
+      name: Faroe Islands
+    level: 20
+  name: SEV
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- electricity
+- energy
+- GIS
+- infrastructure
+- has_api
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00005362

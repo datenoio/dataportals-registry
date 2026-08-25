@@ -12,10 +12,11 @@ coverage:
       name: Tanzania
     level: 20
     macroregion:
-      id: '015'
+      id: '014'
       name: Eastern Africa
-description: The Official TanBIF IPT. Setup during IPT2 workshop held in June 1st-3rd,
-  2011.
+description: Historical TanBIF GBIF Integrated Publishing Toolkit at www.tanbif.or.tz/ipt,
+  set up during the June 2011 IPT2 workshop. The hostname no longer resolves (24 August
+  2026). Current TanBIF IPT is ipt.tanbif.costech.or.tz.
 endpoints:
 - type: rss
   url: http://www.tanbif.or.tz/ipt/rss.do
@@ -25,20 +26,29 @@ langs:
 - id: EN
   name: English
 link: https://www.tanbif.or.tz/ipt
-name: TanBIF IPT
+name: TanBIF IPT (tanbif.or.tz)
 owner:
-  link: http://www.tanbif.or.tz
+  link: https://costech.or.tz
   location:
     country:
       id: TZ
       name: Tanzania
     level: 20
-  name: TanBIF
+  name: Tanzania Biodiversity Information Facility (TanBIF)
   type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: deprecated
 tags:
 - GBIF
 - IPT

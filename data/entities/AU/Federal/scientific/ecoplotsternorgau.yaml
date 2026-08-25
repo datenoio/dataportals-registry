@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 20
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+description: 'The aim of EcoPlots is to harmonise plot-based ecology data from different
+  sources to enable integrated search and access to data based on different jurisdiction,
+  data sources, feature types, parameters and temporal extent.
+
+  The EcoPlots is developed based on semantic data integration approach, each of the
+  data sources are mapped to the TERN Plot ontology. Datasets are generally received
+  from custodians in various forms including PostgreSQL database and CSV file format
+  . In data ingestion process, each of the source datasets are mapped to a TERN Plot
+  ontology including identifying and mapping domain feature types, parameters and
+  categorical values to TERN controlled vocabularies, performing data validation routines
+  and resolving taxonomic names. All data are organised in Resource Description Framework
+  (RDF) and stored in a triple store.'
+id: ecoplotsternorgau
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::6e4243f5511fd6ef0f03e9f386d54403
+  value: fairsharing_::6e4243f5511fd6ef0f03e9f386d54403
+langs:
+- id: EN
+  name: English
+link: https://ecoplots.tern.org.au/
+name: TERN EcoPlots
+owner:
+  link: https://www.uq.edu.au/
+  location:
+    country:
+      id: AU
+      name: Australia
+  name: The University of Queensland
+  type: Academy
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- research data
+- academic
+- biodiversity
+- ecology
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00028343

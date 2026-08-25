@@ -15,39 +15,38 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Catálogo de datos geoespaciales oficiales de Ecuador, desarrollado por
-  el Instituto Geográfico Militar (IGM), permitiendo la búsqueda, visualización y
-  descarga de información geográfica. Integra diferentes servicios de mapas y metadatos
-  según estándares internacionales.
+description: Catálogo de datos geoespaciales oficiales de Ecuador, desarrollado por el Instituto
+  Geográfico Militar (IGM), permitiendo la búsqueda, visualización y descarga de información
+  geográfica. Integra diferentes servicios de mapas y metadatos según estándares internacionales.
 endpoints:
 - type: csw202
-  url: http://www.geoportaligm.gob.ec/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://www.geoportaligm.gob.ec/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: oaipmh20
-  url: http://www.geoportaligm.gob.ec/geonetwork/srv/eng/oaipmh?verb=Identify
+  url: https://www.geoportaligm.gob.ec/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 - type: geonetwork:selections
-  url: http://www.geoportaligm.gob.ec/geonetwork/srv/api/selections
+  url: https://www.geoportaligm.gob.ec/geonetwork/srv/api/selections
 - type: geonetwork:site
-  url: http://www.geoportaligm.gob.ec/geonetwork/srv/api/site
+  url: https://www.geoportaligm.gob.ec/geonetwork/srv/api/site
 - type: opensearch
-  url: http://www.geoportaligm.gob.ec/portal.opensearch
+  url: https://www.geoportaligm.gob.ec/geonetwork/srv/eng/portal.opensearch
 id: wwwgeoportaligmgobec
 langs:
 - id: ES
   name: Spanish
 - id: EN
   name: English
-link: http://www.geoportaligm.gob.ec/geonetwork
-name: Geoportal del Instituto Geográfico Militar del Ecuador (IGM) – Geonetwork
+link: https://www.geoportaligm.gob.ec/geonetwork
+name: Catálogo de Datos Geográficos del IGM Ecuador
 owner:
-  link: https://www.gob.ec
+  link: https://www.geoportaligm.gob.ec
   location:
     country:
       id: EC
       name: Ecuador
     level: 20
-  name: Gobierno del Ecuador
+  name: Instituto Geográfico Militar (IGM)
   type: Central government
 properties:
   has_doi: true

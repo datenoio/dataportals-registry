@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Administrative web interface for managing GeoServer, a server for sharing
-  geospatial data. No data catalog entries or formal metadata are exposed in the URL.
+description: GeoServer of the Department of Local Administration (DLA) publishing
+  local-administration geospatial datasets via OGC WMS, WFS, WCS, and WMTS.
 endpoints:
 - type: wms111
   url: https://geo.dla.go.th/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -64,10 +64,10 @@ id: geodlagoth
 langs:
 - id: TH
   name: Thai
-link: https://geo.dla.go.th/geoserver/web/
-name: GeoServer Web Administration Interface
+link: https://geo.dla.go.th/geoserver
+name: Department of Local Administration GeoServer
 owner:
-  link: https://geo.dla.go.th/geoserver/web/
+  link: https://www.dla.go.th
   location:
     country:
       id: TH
@@ -90,10 +90,10 @@ software:
 status: active
 tags:
 - GIS
-- WebAdmin
-- Geospatial
+- geospatial
 - Thailand
 - geoserver
+- local administration
 topics:
 - id: GOVE
   name: Government and public sector
@@ -104,4 +104,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00000669
+uid: cdi00034997

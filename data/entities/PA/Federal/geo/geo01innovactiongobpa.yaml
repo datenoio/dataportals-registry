@@ -14,8 +14,10 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Panama's geospatial data catalog managed by the Ministry of Innovation
-  of Panama
+description: National GeoNetwork metadata catalogue of Panama's spatial data infrastructure
+  (IPDE / Infraestructura Panameña de Datos Espaciales), operated by the Autoridad
+  Nacional para la Innovación Gubernamental (AIG), with CSW, OAI-PMH, and OpenSearch
+  harvest interfaces.
 endpoints:
 - type: geonetwork:query
   url: https://geo-01.innovacion.gob.pa/geonetwork/srv/eng/q
@@ -34,11 +36,9 @@ endpoints:
 - type: geonetwork:site
   url: https://geo-01.innovacion.gob.pa/geonetwork/srv/api/site
 - type: sitemap
-  url: https://geo-01.innovacion.gob.pa:80/geonetwork/srv/eng/portal.sitemap
+  url: https://geo-01.innovacion.gob.pa/geonetwork/srv/eng/portal.sitemap
 - type: sitemap
-  url: https://geo-01.innovacion.gob.pa:80/geonetwork/srv/eng/portal.sitemap?format=rdf
-- type: opensearch
-  url: https://geo-01.innovacion.gob.pa/portal.opensearch
+  url: https://geo-01.innovacion.gob.pa/geonetwork/srv/eng/portal.sitemap?format=rdf
 id: geo01innovactiongobpa
 langs:
 - id: ES
@@ -46,16 +46,16 @@ langs:
 link: https://geo-01.innovacion.gob.pa/geonetwork
 name: Catálogo Nacional de Metadatos - IPDE
 owner:
-  link: https://geo-01.innovacion.gob.pa/geonetwork
+  link: https://aig.gob.pa
   location:
     country:
       id: PA
       name: Panama
     level: 20
-  name: Ministry of Innovation of Panama
+  name: Autoridad Nacional para la Innovación Gubernamental (AIG)
   type: Central government
 properties:
-  has_doi: true
+  has_doi: false
 rights:
   license_id: null
   license_name: null
@@ -71,9 +71,13 @@ tags:
 - government
 - has_api
 - geospatial
-- catalog
+- metadata
 - Panama
+- IPDE
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115

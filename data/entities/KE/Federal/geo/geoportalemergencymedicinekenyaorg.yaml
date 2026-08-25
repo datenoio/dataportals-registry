@@ -3,6 +3,9 @@ access_mode:
 api: true
 api_status: active
 catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -12,11 +15,15 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
+description: GeoNode 4 geoportal of Emergency Medicine Kenya Foundation, publishing
+  health and emergency-care spatial datasets for Kenya (12 datasets when last counted).
 endpoints:
 - type: geonode:datasets
   url: https://geoportal.emergencymedicinekenya.org/api/datasets/
 - type: geonode:documents
   url: https://geoportal.emergencymedicinekenya.org/api/documents/
+- type: geonode:datasets
+  url: https://geoportal.emergencymedicinekenya.org/api/v2/datasets/
 - type: csw202
   url: https://geoportal.emergencymedicinekenya.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
@@ -66,34 +73,44 @@ langs:
 link: https://geoportal.emergencymedicinekenya.org
 name: Emergency Medicine Kenya Geoportal
 owner:
+  link: https://emergencymedicinekenya.org
   location:
     country:
       id: KE
       name: Kenya
     level: 20
-  name: Emergency Medicine Kenya
-  type: Other
-  link: https://emergencymedicinekenya.org
+  name: Emergency Medicine Kenya Foundation
+  type: Civil society
+properties:
+  dataset_count_reported: 12
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: geonode
   name: GeoNode
 status: active
-uid: cdi00021709
-topics:
-- id: Location
-  name: Location
-  type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
-  type: iso19115
 tags:
 - GIS
 - geospatial
-description: Geoportal. managed by Emergency Medicine Kenya. providing access to emergency
-  medicine kenya geoportal.
-content_types:
-- dataset
-- map_layer
+- health
+- emergency care
+- has_api
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021709

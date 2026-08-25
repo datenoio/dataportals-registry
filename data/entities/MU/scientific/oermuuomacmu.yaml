@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -14,14 +15,19 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: National Open Educational Resources Repository of Mauritius (NORM). DSpace
-  catalog of OER, research publications, and related materials from Mauritian universities
-  and public institutions.
+description: National Open Educational Resources Repository of Mauritius (NORM / OERMU).
+  DSpace 7 catalog of OER, research publications, and related materials from Mauritian
+  universities and public institutions. The public UI currently returns HTTP 500,
+  but the REST API remains harvestable.
 endpoints:
+- type: dspace
+  url: https://oermu.uom.ac.mu/server/api
+  version: '7'
 - type: dspace:objects
-  url: https://oermu.uom.ac.mu/server/api/core/sites
+  url: https://oermu.uom.ac.mu/server/api/discover/search/objects
+  version: '7'
 - type: oaipmh20
-  url: https://oermu.uom.ac.mu/server/oaipmh/request?verb=Identify
+  url: https://oermu.uom.ac.mu/server/oai/request?verb=Identify
   version: '2.0'
 id: oermuuomacmu
 langs:
@@ -30,7 +36,7 @@ langs:
 link: https://oermu.uom.ac.mu/
 name: National OER Repository of Mauritius
 owner:
-  link: https://www.uom.ac.mu
+  link: https://uom.ac.mu
   location:
     country:
       id: MU
@@ -52,6 +58,7 @@ software:
   name: DSpace
 status: active
 tags:
+- has_api
 - DSpace
 - OER
 - institutional repository

@@ -17,10 +17,18 @@ coverage:
     subregion:
       id: CR-C
       name: Cartago
-description: Open data catalog of the Municipality of El Guarco, Costa Rica
+description: CKAN open data catalog of the Municipalidad de El Guarco, Cartago,
+  with municipal datasets published for reuse.
 endpoints:
-- type: dcatus11
-  url: https://datosabiertos.muniguarco.go.cr/data.json
+- type: ckan
+  url: https://datosabiertos.muniguarco.go.cr/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datosabiertos.muniguarco.go.cr/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datosabiertos.muniguarco.go.cr/api/3/action/package_list
+  version: '3'
 id: datosabiertosmuniguarcogocr
 langs:
 - id: ES
@@ -40,6 +48,7 @@ owner:
   name: Municipalidad de El Guarco
   type: Local government
 properties:
+  dataset_count_reported: 4
   has_doi: false
 rights:
   license_id: null
@@ -53,6 +62,7 @@ software:
   name: CKAN
 status: active
 tags:
+- has_api
 - municipal
 - open data
 topics:

@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 20
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+description: University of Queensland OMERO server operated by the Research Computing
+  Centre, including public Queensland Brain Institute microscopy collections. The
+  OMERO JSON API lists projects available to the QBI public user.
+endpoints:
+- type: omero:projects
+  url: https://omero.rcc.uq.edu.au/api/v0/m/projects/
+id: omerorccuqeduau
+langs:
+- id: EN
+  name: English
+link: https://omero.rcc.uq.edu.au/
+name: Queensland Brain Institute OMERO
+owner:
+  link: https://qbi.uq.edu.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 30
+    subregion:
+      id: AU-QLD
+      name: Queensland
+  name: Queensland Brain Institute, University of Queensland
+  type: Academy
+properties:
+  dataset_count_reported: 15
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: omero
+  name: OMERO
+status: active
+tags:
+- scientific
+- research data
+- academic
+- microscopy
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990022

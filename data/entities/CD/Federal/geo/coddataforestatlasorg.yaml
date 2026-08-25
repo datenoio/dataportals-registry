@@ -15,10 +15,10 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: Open-data hub of the DRC Forest Atlas (WRI / Ministère de l'Environnement
-  et Développement Durable). Searchable geospatial datasets on forest management,
-  conservation, agro-industry, mining and hydrocarbons, infrastructure and administrative
-  boundaries.
+description: ArcGIS Hub open-data catalog of the DRC Forest Atlas (MEDD / WRI). Searchable
+  geospatial datasets on forest management, conservation, agro-industry, mining and
+  hydrocarbons, infrastructure and administrative boundaries. Companion to the interactive
+  atlas at cod.forest-atlas.org.
 endpoints:
 - type: dcatap201
   url: https://cod-data.forest-atlas.org/api/feed/dcat-ap/2.0.1.json
@@ -28,16 +28,16 @@ endpoints:
   url: https://cod-data.forest-atlas.org/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://cod-data.forest-atlas.org/api/search/v1
-- type: sitemap
-  url: https://cod-data.forest-atlas.org/sitemap.xml
 id: coddataforestatlasorg
 langs:
 - id: FR
   name: French
+- id: EN
+  name: English
 link: https://cod-data.forest-atlas.org
 name: DRC Forest Atlas Open Data
 owner:
-  link: https://forest-atlas.org
+  link: https://medd.gouv.cd
   location:
     country:
       id: CD
@@ -47,13 +47,14 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  privacy_policy_url: https://cod-data.forest-atlas.org/pages/privacy-policy
   rights_type: granular
-  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+  tos_url: https://cod-data.forest-atlas.org/pages/terms-of-service
 software:
   id: arcgishub
   name: ArcGIS Hub
@@ -64,7 +65,7 @@ tags:
 - geospatial
 - government
 - has_api
-- DR Congo
+- wri
 topics:
 - id: ENVI
   name: Environment

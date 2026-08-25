@@ -1,5 +1,5 @@
 access_mode:
-- closed
+- restricted
 api: true
 api_status: active
 catalog_type: Geoportal
@@ -11,12 +11,16 @@ coverage:
     country:
       id: PH
       name: Philippines
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: GeoNode-based data catalog operated by the Regional Geographic Information
-  Network for Region 9, Philippines.
+    subregion:
+      id: PH-09
+      name: Zamboanga Peninsula (Region IX)
+description: GeoNode geoportal of the Regional Geographic Information Network for
+  Region 9 (Zamboanga Peninsula), coordinated by the Regional Development Council.
+  Many layers require sign-in.
 endpoints:
 - type: geonode:layers
   url: https://rgin.rdc9.gov.ph/api/layers/
@@ -75,16 +79,19 @@ langs:
 - id: EN
   name: English
 link: https://rgin.rdc9.gov.ph
-name: Regional Geographic Information Network Geoportal
+name: RGIN Region 9 Geoportal
 owner:
-  link: https://www.gov.ph
+  link: https://rgin.rdc9.gov.ph
   location:
     country:
       id: PH
       name: Philippines
-    level: 20
-  name: Government of Philippines
-  type: Central government
+    level: 30
+    subregion:
+      id: PH-09
+      name: Zamboanga Peninsula (Region IX)
+  name: Regional Development Council IX
+  type: Regional government
 properties:
   has_doi: false
 rights:

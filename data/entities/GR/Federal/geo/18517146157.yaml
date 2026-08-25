@@ -1,0 +1,127 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+- location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+- location:
+    country:
+      id: AL
+      name: Albania
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+- location:
+    country:
+      id: MK
+      name: Republic of North Macedonia
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: GeoNode geoportal of the INTERREG Balkan-Mediterranean WetMainAreas
+  project, publishing harmonized wetland maps and related geospatial layers for Greece,
+  Bulgaria, Albania, and North Macedonia. Coordinated by the Greek Biotope-Wetland
+  Centre (EKBY). Hosted at a numeric IP in a German data centre.
+endpoints:
+- type: geonode:layers
+  url: http://185.17.146.157/api/layers/
+- type: geonode:documents
+  url: http://185.17.146.157/api/documents/
+- type: geonode:dcatus11
+  url: http://185.17.146.157/data.json
+- type: wms111
+  url: http://185.17.146.157/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: http://185.17.146.157/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: http://185.17.146.157/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: http://185.17.146.157/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://185.17.146.157/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: http://185.17.146.157/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wms130
+  url: http://185.17.146.157/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: http://185.17.146.157/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: http://185.17.146.157/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: '18517146157'
+langs:
+- id: EN
+  name: English
+link: http://185.17.146.157/
+name: WetMainAreas GeoNode
+owner:
+  link: https://www.ekby.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: Greek Biotope-Wetland Centre (EKBY)
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geonode
+- geospatial
+- wetlands
+- Balkan Mediterranean
+- INTERREG
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00000717

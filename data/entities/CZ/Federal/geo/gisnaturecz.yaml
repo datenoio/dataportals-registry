@@ -19,25 +19,25 @@ description: Data catalog containing spatial data services provided by Nature Co
   Agency of the Czech Republic
 endpoints:
 - type: arcgis:rest:info
-  url: http://gis.nature.cz/arcgis/rest/info?f=pjson
+  url: https://gis.nature.cz/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: http://gis.nature.cz/arcgis/rest/services?f=pjson
+  url: https://gis.nature.cz/arcgis/rest/services?f=pjson
 - type: arcgis:soap
-  url: http://gis.nature.cz/arcgis/services?wsdl
+  url: https://gis.nature.cz/arcgis/services?wsdl
 - type: arcgis:sitemap
-  url: http://gis.nature.cz/arcgis/rest/services?f=sitemap
+  url: https://gis.nature.cz/arcgis/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: http://gis.nature.cz/arcgis/rest/services?f=geositemap
+  url: https://gis.nature.cz/arcgis/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: http://gis.nature.cz/arcgis/rest/services?f=kmz
+  url: https://gis.nature.cz/arcgis/rest/services?f=kmz
 id: gisnaturecz
 langs:
 - id: CS
   name: Czech
-link: http://gis.nature.cz/arcgis/rest/services
+link: https://gis.nature.cz/arcgis/rest/services
 name: Nature Conservation Agency GIS Services
 owner:
-  link: http://gis.nature.cz/arcgis/rest/services
+  link: https://www.nature.cz
   location:
     country:
       id: CZ
@@ -76,4 +76,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00001384
+uid: cdi00035598

@@ -1,5 +1,5 @@
 access_mode:
-- public
+- open
 api: true
 api_status: active
 catalog_type: Geoportal
@@ -14,9 +14,9 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Spatio-Temporal Asset Catalog containing various geospatial products
-  distributed by West University of Timisoara.
+      name: Eastern Europe
+description: Spatio-Temporal Asset Catalog of geospatial products distributed by the West University of
+  Timișoara SAGE infrastructure.
 endpoints:
 - type: stacserverapi
   url: https://stac.sage.uvt.ro
@@ -25,15 +25,15 @@ langs:
 - id: EN
   name: English
 link: https://stac.sage.uvt.ro
-name: UVT STAC Catalog
+name: West University of Timișoara STAC catalog
 owner:
-  link: https://stac.sage.uvt.ro
+  link: https://www.uvt.ro
   location:
     country:
       id: RO
       name: Romania
     level: 20
-  name: West University of Timisoara
+  name: West University of Timișoara
   type: Academy
 properties:
   has_doi: false

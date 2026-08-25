@@ -1,5 +1,5 @@
 access_mode:
-- open
+- restricted
 api: true
 api_status: active
 catalog_type: Geoportal
@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: NextGIS Web geoportal of HMG (hartermg.hr) publishing spatial datasets
-  and web maps.
+description: NextGIS Web geoportal of HMG publishing spatial datasets and web maps.
+  Public API reads require authentication (resource root returns 403).
 endpoints:
 - type: nextgisweb:api
   url: https://nextgis.hartermg.hr/api/resource/
@@ -37,7 +37,7 @@ owner:
       id: HR
       name: Croatia
     level: 20
-  name: HMG
+  name: HMG d.o.o.
   type: Business
 properties:
   has_doi: false

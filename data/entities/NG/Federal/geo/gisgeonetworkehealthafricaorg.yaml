@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Geoportal managed by eHealth Africa gGmbH, cataloging geospatial data
-  collected in countries and regions they have worked in.
+description: GeoNetwork catalog of eHealth Africa for geospatial datasets collected
+  in Nigeria and other African programme countries, with CSW, OpenSearch, and OAI-PMH
+  services.
 endpoints:
 - type: geonetwork:query
   url: https://gis-geonetwork.ehealthafrica.org/geonetwork/srv/eng/q
@@ -39,16 +40,16 @@ langs:
 - id: EN
   name: English
 link: https://gis-geonetwork.ehealthafrica.org/geonetwork
-name: eHealth Africa geoportal
+name: eHealth Africa GeoNetwork
 owner:
-  link: https://www.ehealthafrica.org
+  link: https://ehealthafrica.org
   location:
     country:
       id: NG
       name: Nigeria
     level: 20
-  name: eHealth Africa gGmbH
-  type: Business
+  name: eHealth Africa
+  type: Civil society
 properties:
   has_doi: true
   transferable_topics: true
@@ -67,6 +68,8 @@ tags:
 - geospatial
 - has_api
 - health
+- Nigeria
+- eHealth Africa
 topics:
 - id: HEAL
   name: Health

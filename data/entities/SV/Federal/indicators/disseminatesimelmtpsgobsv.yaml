@@ -4,6 +4,7 @@ api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
+- indicator
 - dataset
 coverage:
 - location:
@@ -14,8 +15,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: SIMEL indicators via SDMX REST API, managed by the Ministry of Labor
-  and Social Security of El Salvador.
+description: SDMX-RI REST API of El Salvador's labour-market information system (SIMEL),
+  managed by the Ministry of Labour and Social Welfare. Publishes dataflows, codelists,
+  concept schemes, and data structures for employment and social indicators.
 endpoints:
 - type: sdmx:dataflows
   url: https://disseminatesimel.mtps.gob.sv/rest/dataflow
@@ -41,7 +43,7 @@ owner:
       id: SV
       name: El Salvador
     level: 20
-  name: Ministry of Labor and Social Security El Salvador
+  name: Ministerio de Trabajo y Previsión Social
   type: Central government
 properties:
   has_doi: false
@@ -58,10 +60,19 @@ software:
 status: active
 tags:
 - government
+- has_api
 - indicators
+- labor
 - statistics
+- El Salvador
 topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00010209

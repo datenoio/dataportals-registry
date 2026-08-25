@@ -14,14 +14,18 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Explore a diverse range of indicators to gain insights into the dynamic
-  landscape of ASEAN nations. From economic prowess to social development.
+description: Official ASEANstats Data Portal of the ASEAN Statistics Division, a
+  repository of ASEAN Statistical Indicators compiled from member-state submissions
+  under the ASEAN Community Statistical System. Covers key statistics, socio-demographic
+  indicators, foreign direct investment, macroeconomic accounts, merchandise trade,
+  trade in services, visitor arrivals, prices, transport, manufacturing, and SDG
+  indicators.
 id: dataaseanstatsorg
 langs:
 - id: EN
   name: English
 link: https://data.aseanstats.org
-name: ASEANStats Data Portal
+name: ASEANstats Data Portal
 owner:
   link: https://www.aseanstats.org
   location:
@@ -31,12 +35,14 @@ owner:
     level: 20
   name: ASEAN Statistics Division (ASEANstats)
   type: International
+properties:
+  has_doi: false
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: unknown
+  rights_type: global
   tos_url: null
 software:
   id: custom
@@ -46,7 +52,9 @@ tags:
 - statistics
 - ASEAN
 - indicators
-- data
+- official statistics
+- SDG
+- trade
 topics:
 - id: ECON
   name: Economy and finance
@@ -54,11 +62,14 @@ topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
-- id: ECON
-  name: Economy and finance
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
-- id: ECON
-  name: Economy and finance
+- id: INTR
+  name: International issues
+  type: eudatatheme
+- id: TRAN
+  name: Transport
   type: eudatatheme
 - id: Society
   name: Society

@@ -14,9 +14,10 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Un portail de données ouvertes résultant d’une collaboration entre le
-  ministère des affaires culturelles et ses institutions sous-tutelle afin de fournir
-  aux citoyens une seule porte d’entrée aux jeux de données ouvertes du ministère.
+description: Open data portal from a collaboration between the Ministry of Cultural
+  Affairs and its supervised institutions, providing a single entry point to the
+  ministry's open datasets. HTTPS is not served; the CKAN site remains available
+  over HTTP.
 endpoints:
 - type: ckan
   url: http://www.openculture.gov.tn/api/3
@@ -31,10 +32,12 @@ id: wwwopenculturegovtn
 langs:
 - id: FR
   name: French
-link: https://www.openculture.gov.tn
+- id: AR
+  name: Arabic
+link: http://www.openculture.gov.tn
 name: Open Culture
 owner:
-  link: https://www.openculture.gov.tn
+  link: http://www.culture.gov.tn
   location:
     country:
       id: TN
@@ -60,9 +63,6 @@ tags:
 - has_api
 - culture
 - open data
-- Tunisia
-- ministry
-- public sector
 topics:
 - id: EDUC
   name: Education, culture and sport

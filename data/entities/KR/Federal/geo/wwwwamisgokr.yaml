@@ -15,9 +15,8 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Comprehensive hydrometeorological data from South Korea, sourced through
-  the WAMIS Open API, including hourly precipitation data and related water resource
-  information.
+description: ArcGIS Server REST services for WAMIS, the national water resources management
+  information system, including hydrometeorological and related geospatial layers.
 endpoints:
 - type: arcgis:rest:info
   url: http://www.wamis.go.kr:6080/arcgis/rest/info?f=pjson
@@ -36,15 +35,15 @@ langs:
 - id: KO
   name: Korean
 link: http://www.wamis.go.kr:6080/arcgis/rest/services
-name: South Korea Hydrometeorological Data from WAMIS
+name: WAMIS ArcGIS REST Services
 owner:
-  link: http://www.wamis.go.kr
+  link: https://www.wamis.go.kr
   location:
     country:
       id: KR
       name: South Korea
     level: 20
-  name: Intergovernmental Hydrological Programme
+  name: Hangang Flood Control Office
   type: Central government
 properties:
   has_doi: false

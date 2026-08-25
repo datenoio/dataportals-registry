@@ -12,13 +12,11 @@ coverage:
       name: Caribbean
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: A data portal managed by the Caribbean Regional Fisheries Mechanism (CRFM)
-  Secretariat, providing access to fisheries and related datasets, documents, and
-  resources. Organizations and Groups can be managed within the portal, and datasets
-  may contain multiple resources such as Excel spreadsheets, Word documents, and external
-  URLs.
+description: CKAN data portal of the Caribbean Regional Fisheries Mechanism (CRFM)
+  Secretariat, publishing fisheries and related datasets, documents, and resources
+  for CRFM member states.
 endpoints:
 - type: ckan:package-search
   url: https://portal.crfm.int/api/3/action/package_search
@@ -29,14 +27,17 @@ endpoints:
 - type: ckan
   url: https://portal.crfm.int/api/3
   version: '3'
+- type: ckan:status-show
+  url: https://portal.crfm.int/api/3/action/status_show
+  version: '3'
 - type: sitemap
-  url: http://portal.crfm.int/sitemap.xml
+  url: https://portal.crfm.int/sitemap.xml
 id: portalcrfmint
 langs:
 - id: EN
   name: English
 link: https://portal.crfm.int
-name: Caribbean Regional Fisheries Mechanism portal
+name: CRFM Data Portal
 owner:
   link: https://crfm.int
   location:
@@ -44,8 +45,8 @@ owner:
       id: Caribbean
       name: Caribbean
     level: 20
-  name: Caribbean Regional Fisheries Mechanism.
-  type: Civil society
+  name: Caribbean Regional Fisheries Mechanism
+  type: International
 properties:
   transferable_topics: true
 rights:

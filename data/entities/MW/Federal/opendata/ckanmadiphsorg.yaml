@@ -28,6 +28,9 @@ endpoints:
 - type: ckan:package-list
   url: https://ckan.madiphs.org/api/3/action/package_list
   version: '3'
+- type: ckan:status-show
+  url: https://ckan.madiphs.org/api/3/action/status_show
+  version: '3'
 id: ckanmadiphsorg
 langs:
 - id: EN
@@ -60,8 +63,12 @@ tags:
 - Malawi
 - crop pests
 - CKAN
+- has_api
 topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
   type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
 uid: cdi00020526

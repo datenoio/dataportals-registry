@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -14,9 +15,20 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Interactive ASEAN Biodiversity Dashboard developed by the ASEAN Centre
-  for Biodiversity with NatureServe, visualising species occurrences, protected areas,
-  ASEAN Heritage Parks, and biodiversity indicators across ASEAN member states.
+description: Interactive ASEAN Biodiversity Dashboard of the ASEAN Centre for Biodiversity,
+  developed with NatureServe. Visualises species occurrences, protected areas, ASEAN
+  Heritage Parks, and biodiversity indicators across ASEAN member states.
+endpoints:
+- type: rest
+  url: https://dashboard.aseanbiodiversity.org/wp-json/
+  version: '2.0'
+- type: rest:posts
+  url: https://dashboard.aseanbiodiversity.org/wp-json/wp/v2/posts
+  version: '2'
+- type: sitemap
+  url: https://dashboard.aseanbiodiversity.org/wp-sitemap.xml
+- type: rss
+  url: https://dashboard.aseanbiodiversity.org/feed/
 id: dashboardaseanbiodiversityorg
 langs:
 - id: EN
@@ -32,16 +44,18 @@ owner:
     level: 20
   name: ASEAN Centre for Biodiversity (ACB)
   type: International
+properties:
+  has_doi: false
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: unknown
+  rights_type: global
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - ASEAN
@@ -49,6 +63,7 @@ tags:
 - protected areas
 - indicators
 - NatureServe
+- has_api
 topics:
 - id: ENVI
   name: Environment

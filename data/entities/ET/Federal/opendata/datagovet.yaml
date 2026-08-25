@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,10 +14,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: The Ethiopian Open Data Portal is a platform providing free access to
-  publicly available datasets across sectors like health, education, agriculture,
-  and economy. It aims to promote transparency, support data-driven decisions, and
-  foster innovation for researchers, policymakers, and the public.
+description: Former national Ethiopian Open Data Portal (CKAN). DNS for data.gov.et
+  and www.data.gov.et no longer resolves.
 id: datagovet
 langs:
 - id: EN
@@ -25,14 +23,17 @@ langs:
 link: https://data.gov.et
 name: Ethiopian Open Data Portal
 owner:
-  link: https://www.gov.et
+  link: http://www.mint.gov.et
   location:
     country:
       id: ET
       name: Ethiopia
     level: 20
-  name: Government of Ethiopia
+  name: Ministry of Innovation and Technology
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -43,12 +44,11 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
-- open-data
 - government
-- dataset
-uid: cdi00020564
+- open data
+- Ethiopia
 topics:
 - id: GOVE
   name: Government and public sector
@@ -62,9 +62,4 @@ topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
   type: eudatatheme
-endpoints:
-- type: ckan:api
-  url: https://data.gov.et/api/3/action/package_list
-  version: '3.0'
-- type: sitemap
-  url: https://data.gov.et/sitemap.xml
+uid: cdi00020564

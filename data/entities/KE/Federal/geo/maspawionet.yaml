@@ -1,56 +1,65 @@
 access_mode:
 - open
+api: false
+api_status: inactive
 catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
 coverage:
 - location:
     country:
-      id: KE
-      name: Kenya
+      id: Africa
+      name: Africa
     level: 20
     macroregion:
-      id: '014'
-      name: Eastern Africa
+      id: '002'
+      name: Africa
+description: Marine Spatial Data for the Western Indian Ocean (MASPAWIO) was a GeoNode
+  catalog managed by CORDIO East Africa. The maspawio.net host now serves only the
+  Apache default page and GeoNode API, CSW, and GeoServer paths return 404.
 id: maspawionet
+langs:
+- id: EN
+  name: English
 link: https://maspawio.net
 name: MASPAWIO - Marine Spatial Data Western Indian Ocean
 owner:
+  link: https://cordioea.net
   location:
     country:
       id: KE
       name: Kenya
     level: 20
   name: CORDIO East Africa
-  type: Academy
-  link: https://maspawio.net
+  type: Civil society
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: geonode
   name: GeoNode
-status: active
-uid: cdi00021693
-langs:
-- id: EN
-  name: English
+status: inactive
+tags:
+- geospatial
+- marine
+- Western Indian Ocean
+- CORDIO
 topics:
-- id: Location
-  name: Location
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Biota
+  name: Biota
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
-  type: iso19115
-tags:
-- GIS
-- geospatial
-description: Geoportal. managed by CORDIO East Africa. providing access to maspawio - marine spatial data western indian ocean.
-api: true
-api_status: active
-content_types:
-- dataset
-- map_layer
-endpoints:
-- type: geonode:datasets
-  url: https://maspawio.net/api/datasets/
-- type: geonode:documents
-  url: https://maspawio.net/api/documents/
+uid: cdi00021693

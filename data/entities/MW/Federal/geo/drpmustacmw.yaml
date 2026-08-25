@@ -16,7 +16,8 @@ coverage:
       id: '014'
       name: Eastern Africa
 description: GeoNode catalog of the Malawi University of Science and Technology for
-  sharing disaster-response geospatial datasets, documents, and maps.
+  sharing disaster-response geospatial datasets, documents, and maps (99 datasets
+  reported).
 endpoints:
 - type: geonode:datasets
   url: https://drp.must.ac.mw/api/v2/datasets
@@ -34,6 +35,9 @@ endpoints:
 - type: csw202
   url: https://drp.must.ac.mw/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: oaipmh20
+  url: https://drp.must.ac.mw/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
 id: drpmustacmw
 langs:
 - id: EN
@@ -51,6 +55,7 @@ owner:
   type: Academy
 properties:
   has_doi: false
+  dataset_count_reported: 99
 rights:
   license_id: null
   license_name: null
@@ -67,6 +72,7 @@ tags:
 - disaster
 - GeoNode
 - Malawi
+- has_api
 topics:
 - id: ENVI
   name: Environment

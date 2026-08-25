@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Mykolas Romeris University research information system for publications,
-  research data, theses, and related CRIS entities.
+description: Mykolas Romeris University research information system for publications, research data, theses,
+  and related CRIS entities.
 endpoints:
 - type: dspace
   url: https://cris.mruni.eu/server/api
@@ -23,6 +23,9 @@ endpoints:
 - type: dspace:objects
   url: https://cris.mruni.eu/server/api/discover/search/objects
   version: '9'
+- type: oaipmh20
+  url: https://cris.mruni.eu/server/oai/request?verb=Identify
+  version: '2.0'
 id: crismrunieu
 langs:
 - id: LT

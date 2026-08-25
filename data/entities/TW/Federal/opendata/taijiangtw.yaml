@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,10 +14,7 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: No description provided in search results.
-endpoints:
-- type: ckan
-  url: http://taijiang.tw/api/3
+description: Former Taijiang National Park CKAN catalog. The taijiang.tw domain no longer resolves.
 id: taijiangtw
 langs:
 - id: ZH
@@ -25,14 +22,14 @@ langs:
 link: http://taijiang.tw
 name: Taijiang Research Data Repository
 owner:
-  link: http://taijiang.tw
+  link: https://www.tjnp.gov.tw
   location:
     country:
       id: TW
       name: Taiwan
     level: 20
-  name: Academia Sinica
-  type: Academy
+  name: Taijiang National Park Headquarters
+  type: Central government
 rights:
   license_id: null
   license_name: null
@@ -43,9 +40,10 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
-- has_api
+- national park
+- biodiversity
 topics:
 - id: GOVE
   name: Government and public sector

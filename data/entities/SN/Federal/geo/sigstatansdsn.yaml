@@ -15,24 +15,24 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: A data catalog hosted by the ANSD (Agence Nationale de la Statistique
-  et de la Démographie, Senegal) providing access to statistical and geospatial datasets
-  via the Geonetwork platform.
+description: GeoNetwork catalogue (SIGSTAT) of the Agence Nationale de la Statistique
+  et de la Démographie, publishing statistical and geospatial metadata with CSW,
+  OpenSearch, and OAI-PMH.
 endpoints:
 - type: csw202
-  url: http://sigstat.ansd.sn/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://sigstat.ansd.sn/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: opensearch
-  url: http://sigstat.ansd.sn/geonetwork/srv/eng/portal.opensearch
+  url: https://sigstat.ansd.sn/geonetwork/srv/eng/portal.opensearch
   version: '1.0'
 - type: oaipmh20
-  url: http://sigstat.ansd.sn/geonetwork/srv/eng/oaipmh?verb=Identify
+  url: https://sigstat.ansd.sn/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 id: sigstatansdsn
 langs:
 - id: FR
   name: French
-link: http://sigstat.ansd.sn/geonetwork
+link: https://sigstat.ansd.sn/geonetwork
 name: SIGSTAT
 owner:
   link: https://www.ansd.sn
@@ -59,8 +59,16 @@ status: active
 tags:
 - statistics
 - geospatial
+- government
+- has_api
 - Senegal
 topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115

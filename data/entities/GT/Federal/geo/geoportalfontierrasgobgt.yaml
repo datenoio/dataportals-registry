@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: GeoNetwork metadata catalog of Guatemala's Land Fund (FONTIERRAS), publishing
+  cadastral and territorial spatial datasets used in rural land access and land-tenure
+  programs.
+endpoints:
+- type: csw202
+  url: https://geoportal.fontierras.gob.gt/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geoportal.fontierras.gob.gt/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://geoportal.fontierras.gob.gt/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: geoportalfontierrasgobgt
+langs:
+- id: ES
+  name: Spanish
+link: https://geoportal.fontierras.gob.gt/geonetwork
+name: Geoportal FONTIERRAS
+owner:
+  link: https://www.fontierras.gob.gt
+  location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 20
+  name: Fondo de Tierras (FONTIERRAS)
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- government
+- has_api
+- cadastre
+- land tenure
+- FONTIERRAS
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00000866

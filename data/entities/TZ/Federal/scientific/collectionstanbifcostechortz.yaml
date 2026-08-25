@@ -14,15 +14,13 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Much of the content in the Tanzania National Biodiversity Data Portal,
-  such as occurrence records, environmental data, images and the conservation status
-  of species, comes from data sets provided by collecting institutions, individual
-  collectors and community groups. These data sets are listed on this page.
+description: Collections and datasets registry of the Tanzania National Biodiversity
+  Data Portal (TanBIF Living Atlas). Lists occurrence datasets, environmental data,
+  images, and conservation-status records contributed by collecting institutions,
+  individual collectors, and community groups.
 endpoints:
 - type: ala:collections
   url: https://collections.tanbif.costech.or.tz/ws/collection
-- type: sitemap
-  url: https://collections.tanbif.costech.or.tz/sitemap.xml
 id: collectionstanbifcostechortz
 langs:
 - id: EN
@@ -36,7 +34,7 @@ owner:
       id: TZ
       name: Tanzania
     level: 20
-  name: COSTECH
+  name: Tanzania Commission for Science and Technology (COSTECH)
   type: Academy
 properties:
   has_doi: false
@@ -55,6 +53,7 @@ tags:
 - biodiversity
 - species
 - Living Atlases
+- has_api
 topics:
 - id: TECH
   name: Science and technology

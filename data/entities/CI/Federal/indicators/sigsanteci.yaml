@@ -16,10 +16,15 @@ coverage:
       id: '011'
       name: Western Africa
 description: National DHIS2 health management information system (SIGSANTE) of the
-  Côte d'Ivoire Ministry of Health. Login is required to query routine health indicators.
+  Côte d'Ivoire Ministry of Health. The public UI redirects to login; authenticated
+  access is required to query routine health indicators.
 endpoints:
 - type: dhis2:catalog
   url: https://sigsante.ci
+- type: dhis2:system-info
+  url: https://sigsante.ci/api/system/info
+- type: dhis2:datasets
+  url: https://sigsante.ci/api/dataSets.json?fields=id,displayName&pageSize=1
 id: sigsanteci
 langs:
 - id: FR
@@ -55,6 +60,7 @@ tags:
 - DHIS2
 - government
 - restricted
+- has_api
 topics:
 - id: HEAL
   name: Health

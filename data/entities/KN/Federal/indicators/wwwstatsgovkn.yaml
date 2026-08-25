@@ -6,6 +6,7 @@ catalog_type: Indicators catalog
 content_types:
 - indicator
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -17,12 +18,19 @@ coverage:
       name: Caribbean
 description: Official statistics website of the Department of Statistics, Ministry
   of Sustainable Development. Publishes demographic, social, economic, and environmental
-  indicator tables for Saint Kitts and Nevis.
+  indicator tables, census outputs, and survey releases covering population, national
+  accounts, merchandise trade, CPI, tourism, labour, education, health, crime, transport,
+  and climate.
 endpoints:
 - type: rest
   url: https://www.stats.gov.kn/wp-json/
+- type: rest:posts
+  url: https://www.stats.gov.kn/wp-json/wp/v2/posts
+  version: '2'
 - type: sitemap
   url: https://www.stats.gov.kn/sitemap_index.xml
+- type: rss
+  url: https://www.stats.gov.kn/feed/
 id: wwwstatsgovkn
 langs:
 - id: EN
@@ -41,6 +49,13 @@ owner:
 properties:
   has_doi: false
   is_national: true
+rights:
+  license_id: null
+  license_name: Department of Statistics, St Kitts and Nevis Open Licence Agreement
+  license_url: https://www.stats.gov.kn/terms-and-conditions/open-license-agreement/
+  privacy_policy_url: https://www.stats.gov.kn/privacy-policy/
+  rights_type: open
+  tos_url: https://www.stats.gov.kn/terms-and-conditions/
 software:
   id: wordpress
   name: WordPress
@@ -49,6 +64,8 @@ tags:
 - statistics
 - government
 - official statistics
+- indicators
+- census
 - Saint Kitts and Nevis
 - has_api
 topics:
@@ -64,10 +81,46 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: JUST
+  name: Justice, legal system and public safety
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
 - id: Society
   name: Society
   type: iso19115
 - id: Economy
   name: Economy
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
   type: iso19115
 uid: cdi00028029

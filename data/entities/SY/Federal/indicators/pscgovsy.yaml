@@ -6,6 +6,7 @@ catalog_type: Indicators catalog
 content_types:
 - indicator
 - dataset
+- document
 coverage:
 - location:
     country:
@@ -15,19 +16,24 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Official statistics portal of the Syrian Planning and Statistics Commission
-  (هيئة التخطيط والإحصاء). Publishes economic, social, and demographic statistics,
-  time series, indicators, and the statistical abstract.
+description: Official statistics website of the Syrian Planning and Statistics Commission
+  (هيئة التخطيط والإحصاء), the national statistical office formed in 2025 from the
+  former Central Bureau of Statistics. Publishes economic, social, and demographic
+  indicators, time series, and the statistical yearbook.
 id: pscgovsy
+identifiers:
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q140096733
+  value: Q140096733
 langs:
 - id: AR
   name: Arabic
 - id: EN
   name: English
-link: https://psc.gov.sy/site/arabic/
+link: https://psc.gov.sy
 name: Syrian Planning and Statistics Commission
 owner:
-  link: https://psc.gov.sy/
+  link: https://psc.gov.sy
   location:
     country:
       id: SY
@@ -44,10 +50,11 @@ software:
 status: active
 tags:
 - official statistics
+- government
 - indicators
 - census
 - time series
-- Syria
+- yearbook
 topics:
 - id: SOCI
   name: Population and society

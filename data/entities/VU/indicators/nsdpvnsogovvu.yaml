@@ -14,11 +14,16 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: Official indicators platform for Vanuatu 2030 National Sustainable Development
-  Plan goals and targets.
+description: Official Open SDG reporting platform for Vanuatu 2030 — The People's
+  Plan (National Sustainable Development Plan 2016–2030). Publishes national development
+  indicators across society, environment, and economy pillars, with downloads and
+  SDG alignment. Managed by the Vanuatu Bureau of Statistics. A GitHub Pages mirror
+  remains available if the nsdp.vnso.gov.vu hostname does not resolve.
 endpoints:
 - type: opensdg:catalog
   url: https://nsdp.vnso.gov.vu/
+- type: opensdg:catalog
+  url: https://vanuatu-national-statistics-office.github.io/vnso-nsdp-platform/
 id: nsdpvnsogovvu
 langs:
 - id: EN
@@ -32,7 +37,7 @@ owner:
       id: VU
       name: Vanuatu
     level: 20
-  name: Vanuatu National Statistics Office
+  name: Vanuatu Bureau of Statistics
   type: Central government
 properties:
   has_doi: false
@@ -52,7 +57,8 @@ tags:
 - national development plan
 - indicators
 - official statistics
-- government data
+- government
+- has_api
 topics:
 - id: SOCI
   name: Population and society
@@ -63,10 +69,16 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
 - id: Economy
   name: Economy
   type: iso19115
 - id: Society
   name: Society
+  type: iso19115
+- id: Environment
+  name: Environment
   type: iso19115
 uid: cdi00021809

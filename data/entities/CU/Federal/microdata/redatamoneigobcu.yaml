@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Microdata catalog
+content_types:
+- microdata
+- dataset
+coverage:
+- location:
+    country:
+      id: CU
+      name: Cuba
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: ONEI Sistema Integrado de Consultas Demográficas (SICDem) on REDATAM
+  Webserver. Users tabulate vital statistics, internal and international migration,
+  and population series; census databases are planned for the same portal.
+id: redatamoneigobcu
+langs:
+- id: ES
+  name: Spanish
+link: https://redatam.onei.gob.cu/redbin/RpWebEngine.exe/Portal?lang=esp
+name: ONEI SICDem (Sistema Integrado de Consultas Demográficas)
+owner:
+  link: https://www.onei.gob.cu
+  location:
+    country:
+      id: CU
+      name: Cuba
+    level: 20
+  name: Oficina Nacional de Estadística e Información (ONEI)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: redatam
+  name: REDATAM
+status: active
+tags:
+- statistics
+- government
+- census
+- microdata
+- REDATAM
+- Cuba
+- has_api
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00021999
+endpoints:
+- type: redatam
+  url: https://redatam.onei.gob.cu/redbin/RpWebEngine.exe/Portal?lang=esp
+- type: redatam
+  url: https://redatam.onei.gob.cu/redbin/RpWebEngine.exe/Portal

@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: The Ensembl genome annotation system, developed jointly by EMBL-EBI and
+  the Wellcome Trust Sanger Institute, has been used for the annotation, analysis
+  and display of vertebrate genomes since 2000. Since 2009, the Ensembl site has been
+  complemented by the creation of five new sites, for bacteria, protists, fungi, plants
+  and invertebrate metazoa, enabling users to use a single collection of (interactive
+  and programatic) interfaces for accessing and comparing genome-scale data from species
+  of scientific interest from across the taxonomy.
+endpoints:
+- type: ensembl:rest
+  url: https://rest.ensemblgenomes.org/info/ping
+id: ensemblgenomesorg
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::99f59c0842e83c808dd1813b48a37c6a
+  value: fairsharing_::99f59c0842e83c808dd1813b48a37c6a
+langs:
+- id: EN
+  name: English
+link: https://ensemblgenomes.org/
+name: Ensembl Genomes
+owner:
+  link: http://www.ebi.ac.uk/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+  name: European Bioinformatics Institute
+  type: Academy
+software:
+  id: ensembl
+  name: Ensembl
+status: active
+tags:
+- scientific
+- research data
+- academic
+- biodiversity
+- ecology
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00030852

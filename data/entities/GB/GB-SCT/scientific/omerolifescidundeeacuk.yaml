@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Public OMERO.web server used by the University of Dundee to publish microscopy
+  image collections linked to research papers. The catalog lists projects and datasets
+  that a public user can browse without an institutional account.
+endpoints:
+- type: omero:projects
+  url: https://omero.lifesci.dundee.ac.uk/api/v0/m/projects/
+id: omerolifescidundeeacuk
+langs:
+- id: EN
+  name: English
+link: https://omero.lifesci.dundee.ac.uk/
+name: University of Dundee Life Sciences OMERO
+owner:
+  link: https://www.dundee.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-SCT
+      name: Scotland
+  name: University of Dundee
+  type: Academy
+properties:
+  dataset_count_reported: 54
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: omero
+  name: OMERO
+status: active
+tags:
+- scientific
+- research data
+- academic
+- microscopy
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990021

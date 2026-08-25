@@ -15,12 +15,15 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Institutional DSpace repository of Shendi University for faculty research,
-  postgraduate theses, journals, and related scholarly materials.
+description: DSpace 6 XMLUI institutional repository of the University of Shendi
+  (جامعة شندي) for theses, dissertations, and faculty research. OAI-PMH Identify
+  responds on port 8080; the legacy REST API redirects to an unreachable TLS port.
 endpoints:
 - type: oaipmh20
   url: http://repository.ush.edu.sd:8080/oai/request?verb=Identify
   version: '2.0'
+- type: sitemap
+  url: http://repository.ush.edu.sd:8080/xmlui/htmlmap
 id: repositoryushedusd
 langs:
 - id: AR
@@ -28,7 +31,7 @@ langs:
 - id: EN
   name: English
 link: http://repository.ush.edu.sd:8080/xmlui/
-name: Shendi University Repository
+name: University of Shendi Repository
 owner:
   link: https://ush.edu.sd/
   location:
@@ -36,7 +39,7 @@ owner:
       id: SD
       name: Sudan
     level: 20
-  name: Shendi University
+  name: University of Shendi
   type: Academy
 properties:
   has_doi: false
@@ -54,7 +57,11 @@ status: active
 tags:
 - institutional repository
 - open access
-- research data
+- theses
+- research
+- DSpace
+- Sudan
+- has_api
 topics:
 - id: TECH
   name: Science and technology
@@ -62,4 +69,7 @@ topics:
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
+- id: Education
+  name: Education
+  type: iso19115
 uid: cdi00027553

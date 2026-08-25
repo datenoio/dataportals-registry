@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: No structured schema or dataset details found from the provided URL in
-  the search results
+description: Host alias of the national Lýsigagnagátt GeoNetwork (gatt.natt.is). Same
+  catalogue as gatt.natt.is and gatt.gis.is; prefer https://gatt.natt.is/geonetwork.
 endpoints:
 - type: geonetwork:query
   url: https://gatt.lmi.is/geonetwork/srv/eng/q
@@ -34,12 +34,6 @@ endpoints:
 - type: oaipmh20
   url: https://gatt.lmi.is/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
-- type: geonetwork:site
-  url: https://gatt.lmi.is/geonetwork/srv/api/site
-- type: sitemap
-  url: https://gatt.lmi.is:/geonetwork/srv/api/sitemap
-- type: opensearch
-  url: https://gatt.lmi.is/portal.opensearch
 id: gattlmiis
 langs:
 - id: IS
@@ -47,15 +41,15 @@ langs:
 - id: EN
   name: English
 link: https://gatt.lmi.is/geonetwork
-name: No dataset found in search results
+name: Lýsigagnagátt (gatt.lmi.is)
 owner:
-  link: https://www.lmi.is
+  link: https://www.natt.is
   location:
     country:
       id: IS
       name: Iceland
     level: 20
-  name: National Land Survey of Iceland
+  name: Náttúrufræðistofnun
   type: Central government
 properties:
   has_doi: true
@@ -69,7 +63,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: deprecated
 tags:
 - geospatial
 - government

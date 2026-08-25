@@ -21,6 +21,9 @@ description: Integrated Data Management System (IDMS) for Janakpurdham Sub-Metro
   City. Centralizes municipal datasets from departmental MIS systems, including IEMIS
   and HMIS, for public access.
 endpoints:
+- type: ckan
+  url: https://dms.janakpurmun.gov.np/api/3
+  version: '3'
 - type: ckan:package-search
   url: https://dms.janakpurmun.gov.np/api/3/action/package_search
   version: '3'
@@ -63,7 +66,7 @@ status: active
 tags:
 - has_api
 - municipal data
-- city government
+- local government
 - open data
 - Nepal
 topics:

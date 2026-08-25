@@ -5,6 +5,7 @@ api_status: uncertain
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -16,12 +17,13 @@ coverage:
       name: Eastern Africa
 description: National open-access research repository of the Mauritius Research and
   Innovation Council. Collects reports, publications, and other research outputs related
-  to Mauritius or produced by Mauritian authors.
+  to Mauritius or produced by Mauritian authors. Public browsing is available; REST
+  and OAI-PMH paths redirect to login.
 id: repositorymu
 langs:
 - id: EN
   name: English
-link: https://repository.mu/mrc/out/out.FrontIndex.php
+link: https://repository.mu/mrc/
 name: Mauritius Research Repository
 owner:
   link: https://www.mric.mu

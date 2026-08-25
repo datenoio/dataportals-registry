@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,24 +15,7 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: Discover Your Public Lands Use a keyword or location to quickly discover,
-  visualize, and download the latest geographic data and content shared by the Bureau
-  of Land Management. Explore BLM Data Click on the subject categories below Administrative
-  Boundaries Cadastral Energy Fire &amp; Aviation HazMat Hydrology Lands Minerals
-  National Conservation Lands Planning Range Recreation Transportation Vegetation
-  Fisheries &amp; Wildlife Explore BLM National Data Explore BLM State Data Explore
-  BLM Featured Content Explore Other Agency Data
-endpoints:
-- type: dcatap201
-  url: https://blm-gis-open-data-blmtest.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://blm-gis-open-data-blmtest.hub.arcgis.com/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://blm-gis-open-data-blmtest.hub.arcgis.com/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://blm-gis-open-data-blmtest.hub.arcgis.com/api/search/v1
-- type: sitemap
-  url: https://blm-gis-open-data-blmtest.hub.arcgis.com/sitemap.xml
+description: ArcGIS Hub demonstration or template site. Not a production catalog.
 id: blmgisopendatablmtesthubarcgiscom
 langs:
 - id: EN
@@ -60,7 +43,7 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
 - GIS
 - geospatial

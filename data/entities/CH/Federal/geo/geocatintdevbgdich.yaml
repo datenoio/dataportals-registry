@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,28 +15,20 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: geocat.ch documents geodata, geoservices and models of federal offices,
-  cantons, municipalities, the Principality of Liechtenstein, research institutes,
-  private companies.
-endpoints:
-- type: csw202
-  url: https://geocat-int.dev.bgdi.ch/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: https://geocat-int.dev.bgdi.ch/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
-- type: geonetwork:selections
-  url: https://geocat-int.dev.bgdi.ch/geonetwork/srv/api/selections
-- type: geonetwork:site
-  url: https://geocat-int.dev.bgdi.ch/geonetwork/srv/api/site
-- type: opensearch
-  url: https://geocat-int.dev.bgdi.ch/portal.opensearch
+description: Integration/test GeoNetwork instance of geocat.ch (geocat-int.dev.bgdi.ch),
+  not the production Swiss geographic metadata catalogue.
 id: geocatintdevbgdich
 langs:
 - id: DE
   name: German
+- id: FR
+  name: French
+- id: IT
+  name: Italian
+- id: EN
+  name: English
 link: https://geocat-int.dev.bgdi.ch/geonetwork
-name: The Swiss Grographic catalog Test - Internal
+name: geocat.ch integration environment
 owner:
   link: https://www.swisstopo.admin.ch/
   location:
@@ -58,7 +50,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - Geospatial Data
 - Metadata

@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: GeoServer-based geospatial data portal operated by MAST (Maritime Administration
-  of Iceland) providing access to maritime and coastal geospatial datasets through
-  OGC-compliant web services.
+description: GeoServer of Matvælastofnun (Icelandic Food and Veterinary Authority)
+  providing OGC web services for food safety, agriculture, and veterinary geospatial
+  datasets. The HTML index is not published; WMS/WFS capabilities remain available.
 endpoints:
 - type: wms111
   url: https://geoserver.mast.is/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -66,13 +66,13 @@ langs:
 - id: IS
   name: Icelandic
 link: https://geoserver.mast.is/geoserver
-name: MAST GeoServer
+name: Matvælastofnun GeoServer
 owner:
-  link: https://mast.is
+  link: https://www.mast.is
   location:
     country: *id001
     level: 20
-  name: Maritime Administration of Iceland (MAST)
+  name: Matvælastofnun (Icelandic Food and Veterinary Authority)
   type: Central government
 properties:
   has_doi: false
@@ -90,25 +90,22 @@ status: active
 tags:
 - GeoServer
 - GIS
-- maritime
-- coastal
+- food safety
+- agriculture
+- veterinary
 - Iceland
 - geospatial
-- MAST
 topics:
-- id: ENVI
-  name: Environment
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
-- id: TRAN
-  name: Transport
+- id: HEAL
+  name: Health
   type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
-- id: Oceans
-  name: Oceans
-  type: iso19115
-- id: Transportation
-  name: Transportation
+- id: Farming
+  name: Farming
   type: iso19115
 uid: temp00005511

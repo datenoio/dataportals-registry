@@ -1,5 +1,5 @@
 access_mode:
-- public
+- open
 api: true
 api_status: active
 catalog_type: Geoportal
@@ -15,23 +15,19 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: STAC (SpatioTemporal Asset Catalog) is a standard that provides a common
-  structure for exposing and cataloging geospatial data, such as imagery, SAR, point
-  clouds, data cubes, and more. STAC enables access to different spatial data formats
-  and provides a common way to find information about a geographic location over time.
-  The main components are Item, Catalog, and Collection. The 'catalog.json' typically
-  serves as the entry point for navigating the catalog structure, which can be compared
-  to a directory tree, grouping other catalogs, collections, and items for discovery
-  and browsing.
+description: STAC API of China–Brazil Earth Resources Satellite (CBERS) imagery
+  published by AmsKepler.
 endpoints:
 - type: stacserverapi
   url: https://stac.amskepler.com/v100/
 id: cbers
 langs:
+- id: PT
+  name: Portuguese
 - id: EN
   name: English
 link: https://stac.amskepler.com/v100/
-name: spatiotemporal-asset-catalog
+name: CBERS STAC (AmsKepler)
 owner:
   link: https://amskepler.com
   location:

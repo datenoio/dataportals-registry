@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: The Image Data Resource (IDR) is a public repository of image datasets
+  from published scientific studies, where the community can submit, search and access
+  high-quality bio-image data. It follows the Euro-BioImaging/ELIXIR imaging strategy
+  using the OMERO and Bio-Formats open source software built by the Open Microscopy
+  Environment. It includes image data linked to independent studies from genetic,
+  RNAi, chemical, localisation and geographic high content screens, super-resolution
+  microscopy, and digital pathology.
+endpoints:
+- type: omero:projects
+  url: https://idr.openmicroscopy.org/api/v0/m/projects/
+id: idropenmicroscopyorg
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::d827f12e35eae370ba9c65b7f6026695
+  value: fairsharing_::d827f12e35eae370ba9c65b7f6026695
+langs:
+- id: EN
+  name: English
+link: https://idr.openmicroscopy.org
+name: Image Data Resource
+owner:
+  link: https://www.openmicroscopy.org/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: University of Dundee / Open Microscopy Environment
+  type: Academy
+software:
+  id: omero
+  name: OMERO
+status: active
+tags:
+- scientific
+- research data
+- academic
+- chemistry
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00030210

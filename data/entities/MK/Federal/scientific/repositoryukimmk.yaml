@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -12,40 +13,37 @@ coverage:
       name: Republic of North Macedonia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated before adding to the index.
+description: DSpace 7 institutional repository of Ss. Cyril and Methodius University
+  in Skopje (UKIM). Open-access publications, theses, and research outputs, with REST
+  API at /server/api and OAI-PMH at /server/oai/request.
 endpoints:
+- type: dspace
+  url: https://repository.ukim.mk/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repository.ukim.mk/server/api/discover/search/objects
+  version: '7'
 - type: oaipmh20
-  url: https://repository.ukim.mk/oai/request?verb=Identify
+  url: https://repository.ukim.mk/server/oai/request?verb=Identify
   version: '2.0'
-- type: atom
-  url: https://repository.ukim.mk/feed/atom_1.0/site
-  version: '1.0'
-- type: rss
-  url: https://repository.ukim.mk/feed/rss_2.0/site
-  version: '2.0'
-- type: sitemap
-  url: https://repository.ukim.mk:443/sitemap
-- type: sitemap
-  url: https://repository.ukim.mk:443/htmlmap
-- type: opensearch
-  url: https://repository.ukim.mk/open-search/description.xml
 id: repositoryukimmk
 langs:
 - id: MK
-  name: Makedonian
+  name: Macedonian
+- id: EN
+  name: English
 link: https://repository.ukim.mk
 name: Repository of UKIM
 owner:
-  link: https://repository.ukim.mk
+  link: https://ukim.edu.mk
   location:
     country:
       id: MK
       name: Republic of North Macedonia
     level: 20
-  name: UKIM (Saints Cyril and Methodius University, Skopje)
+  name: Ss. Cyril and Methodius University in Skopje
   type: Academy
 properties:
   has_doi: true
@@ -63,10 +61,18 @@ status: active
 tags:
 - academic
 - research
-- scientific
-- research data
+- DSpace
+- institutional repository
+- has_api
+- North Macedonia
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Education
+  name: Education
+  type: iso19115
 uid: temp00002758

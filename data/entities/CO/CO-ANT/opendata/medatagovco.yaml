@@ -20,6 +20,12 @@ coverage:
 description: Encuentre los datos abiertos generados y publicados por las diferentes
   dependencias de la Alcaldía de Medellín
 endpoints:
+- type: ckan:package-search
+  url: https://medata.gov.co/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://medata.gov.co/api/3/action/package_list
+  version: '3'
 - type: dcatus11
   url: https://medata.gov.co/data.json
 id: medatagovco

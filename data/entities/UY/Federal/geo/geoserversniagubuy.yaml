@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Data catalog for geospatial data published via GeoServer for Uruguay's
-  SNIA (Sistema Nacional de Información Ambiental)
+description: GeoServer of Uruguay's Sistema Nacional de Información Agropecuaria
+  (SNIA / MGAP), publishing agricultural and natural-resources layers as OGC services.
 endpoints:
 - type: wms111
   url: https://geoserver.snia.gub.uy/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -61,13 +61,13 @@ langs:
 link: https://geoserver.snia.gub.uy/geoserver/web/
 name: SNIA GeoServer
 owner:
-  link: https://www.snia.org
+  link: https://www.gub.uy/ministerio-ganaderia-agricultura-pesca/snia
   location:
     country:
       id: UY
       name: Uruguay
     level: 20
-  name: Sistema Nacional de Información Ambiental (SNIA), Uruguay
+  name: Sistema Nacional de Información Agropecuaria (SNIA)
   type: Central government
 properties:
   has_doi: false
@@ -84,14 +84,17 @@ software:
 status: active
 tags:
 - geospatial
-- environment
+- agriculture
 - Uruguay
 - GeoServer
 - SNIA
 topics:
-- id: ENVI
-  name: Environment
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
 - id: Environment
   name: Environment
   type: iso19115

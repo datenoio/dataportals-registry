@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: GEOSNH provides direct access to geospatial data from oil and gas exploration
-  and production (E&P) activities in Cameroon. Operated by the national hydrocarbons
-  company.
+description: GEOSNH is the Société Nationale des Hydrocarbures mapping portal for
+  oil and gas exploration and production geospatial data in Cameroon. Map and feature
+  services are published through GeoServer.
 endpoints:
 - type: wms111
   url: https://geo.snh.cm/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -84,6 +84,7 @@ owner:
   link: https://snh.cm
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -92,8 +93,8 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: geonode
-  name: GeoNode
+  id: geoserver
+  name: GeoServer
 status: active
 tags:
 - geospatial
@@ -101,7 +102,15 @@ tags:
 - E&P
 - Cameroon
 - oil and gas
+- government
+- has_api
 topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
 - id: Economy
   name: Economy
   type: iso19115

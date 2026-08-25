@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,37 +13,25 @@ coverage:
       name: Montenegro
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: ArcGIS REST Services Directory provides access to various geospatial
-  services.
-endpoints:
-- type: arcgis:rest:info
-  url: https://geourbtec.myddns.me:6443/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://geourbtec.myddns.me:6443/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://geourbtec.myddns.me:6443/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://geourbtec.myddns.me:6443/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://geourbtec.myddns.me:6443/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://geourbtec.myddns.me:6443/arcgis/rest/services?f=kmz
+description: Unreachable ArcGIS Server REST services directory previously hosted at
+  geourbtec.myddns.me. Connection attempts currently fail, so the catalog is recorded
+  as inactive.
 id: geourbtecmyddnsme
 langs:
 - id: SR
   name: Serbian
 link: https://geourbtec.myddns.me:6443/arcgis/rest/services
-name: Not specified in immediate metadata, requires manual verification Geoportal
+name: GeoUrbtec ArcGIS Server
 owner:
-  link: https://geourbtec.myddns.me:6443/arcgis/rest/services
+  link: https://geourbtec.myddns.me
   location:
     country:
       id: ME
       name: Montenegro
     level: 20
-  name: Not specified in immediate metadata, requires manual verification
+  name: GeoUrbtec
   type: Business
 properties:
   has_doi: false
@@ -57,21 +45,14 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - geospatial
 - GIS
 - ArcGIS
-- REST
-- services
+- Montenegro
 topics:
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
 - id: Location
   name: Location
-  type: iso19115
-- id: Boundaries
-  name: Boundaries
   type: iso19115
 uid: temp00000483

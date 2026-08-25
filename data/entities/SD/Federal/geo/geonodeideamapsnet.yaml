@@ -15,19 +15,39 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: IDeaMapSudan GeoNode spatial data infrastructure for mapping urban deprivation
-  and informal settlements in Greater Khartoum. Publishes open geospatial layers produced
-  with Sudan Urban Development Think-Tank, University of Twente ITC, and Khartoum
-  State partners.
+description: IDeaMapSudan GeoNode 3.2 spatial data infrastructure for mapping urban
+  deprivation and informal settlements in Greater Khartoum. Publishes about 35 open
+  geospatial layers and 7 maps produced with the Sudan Urban Development Think-Tank
+  and University of Twente ITC. The site serves HTTP only (TLS handshake fails).
 endpoints:
 - type: geonode:layers
   url: http://geonode.idea-maps.net/api/layers/
+- type: geonode:documents
+  url: http://geonode.idea-maps.net/api/documents/
 - type: csw202
   url: http://geonode.idea-maps.net/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: oaipmh20
+  url: http://geonode.idea-maps.net/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: http://geonode.idea-maps.net/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: http://geonode.idea-maps.net/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
 - type: wms130
   url: http://geonode.idea-maps.net/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
   version: 1.3.0
+- type: wfs110
+  url: http://geonode.idea-maps.net/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: http://geonode.idea-maps.net/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: http://geonode.idea-maps.net/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
 id: geonodeideamapsnet
 langs:
 - id: EN
@@ -60,8 +80,11 @@ tags:
 - geospatial
 - urban
 - poverty
+- informal settlements
+- Khartoum
 - geonode
-- khartoum
+- has_api
+- Sudan
 topics:
 - id: SOCI
   name: Population and society

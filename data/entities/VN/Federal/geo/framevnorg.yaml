@@ -3,6 +3,9 @@ access_mode:
 api: true
 api_status: active
 catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -12,8 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Flood risk information system for central Vietnam (FloodAdaptVN project).
-  Datasets, documents, maps, GeoStories, and dashboards.
+description: Flood risk information system for central Vietnam (FloodAdaptVN project). Datasets, documents,
+  maps, GeoStories, and dashboards.
 endpoints:
 - type: geonode:datasets
   url: https://frame-vn.org/api/datasets/
@@ -85,7 +88,7 @@ owner:
       id: VN
       name: Vietnam
     level: 20
-  name: FloodAdaptVN project
+  name: FloodAdaptVN
   type: Academy
 software:
   id: geonode
@@ -96,7 +99,7 @@ tags:
 - geoportal
 - flood risk
 - adaptation
-uid: cdi00021713
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector
@@ -107,6 +110,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-content_types:
-- dataset
-- map_layer
+uid: cdi00021713

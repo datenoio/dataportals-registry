@@ -17,10 +17,11 @@ coverage:
     subregion:
       id: MY-13
       name: Sarawak
-description: Registration details by division and month in Sarawak.
+description: Sarawak state open data portal publishing government datasets across
+  agriculture, economy, environment, health, infrastructure, and related themes.
 endpoints:
 - type: ckan
-  url: https://catalog.sarawak.gov.my/api/3
+  url: https://data.sarawak.gov.my/api/3
 id: datasarawakgovmy
 langs:
 - id: MS
@@ -28,7 +29,7 @@ langs:
 - id: EN
   name: English
 link: https://data.sarawak.gov.my
-name: Registration of Instrument By Division By Month in Sarawak
+name: Sarawak Data
 owner:
   link: https://www.sarawak.gov.my
   location:
@@ -57,17 +58,13 @@ status: active
 tags:
 - government
 - has_api
-- registration
-- division
-- month
+- open data
+- Sarawak
 topics:
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 uid: cdi00001149

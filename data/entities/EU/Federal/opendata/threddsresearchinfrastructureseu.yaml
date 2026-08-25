@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,9 +17,6 @@ coverage:
 description: Logical directory of on-line data resources, organized and described
   via XML documents; provides access, metadata, and human-readable names for datasets
   available via the server.
-endpoints:
-- type: thredds:catalog
-  url: http://thredds.research-infrastructures.eu/thredds/catalog.xml
 id: threddsresearchinfrastructureseu
 langs:
 - id: EN
@@ -27,13 +24,13 @@ langs:
 link: http://thredds.research-infrastructures.eu/thredds/catalog.html
 name: THREDDS Data Server Catalog
 owner:
-  link: http://thredds.research-infrastructures.eu/thredds/catalog.html
+  link: https://www.d4science.org
   location:
     country:
       id: EU
       name: European Union
     level: 20
-  name: Not specified in source
+  name: D4Science Research Infrastructures
   type: Academy
 properties:
   has_doi: false
@@ -47,7 +44,7 @@ rights:
 software:
   id: thredds
   name: Thredds
-status: active
+status: inactive
 tags:
 - European Union
 - NetCDF
@@ -61,4 +58,4 @@ topics:
 - id: Geoscientific Information
   name: Geoscientific Information
   type: iso19115
-uid: temp00003009
+uid: cdi00035504

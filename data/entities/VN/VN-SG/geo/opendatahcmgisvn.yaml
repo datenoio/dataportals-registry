@@ -18,11 +18,8 @@ coverage:
     subregion:
       id: VN-SG
       name: Hồ Chí Minh
-description: Nền tảng chia sẻ dữ liệu và tài liệu GIS mở cho cộng đồng, phục vụ đào
-  tạo, nghiên cỡu, thử nghiệm và các dự án mang tính cộng đồng. Các lớp dữ liệu GIS,
-  tài liệu, mã nguồn từ cơ bản đến nâng cao về GIS, viễn thám, GPS và khoa học máy
-  tính,... được chia sẻ miễn phí. Hoạt động vì cộng đồng, phát triển nhờ cộng đồng,
-  nhằm kiến tạo môi trường chia sẻ dữ liệu GIS mở, cộng tác và kết nối.
+description: GeoNode platform sharing open GIS layers, documents, and training materials for Ho Chi Minh
+  City, covering remote sensing, GPS, and community mapping projects.
 endpoints:
 - type: geonode:datasets
   url: https://opendata.hcmgis.vn/api/datasets/
@@ -30,10 +27,12 @@ endpoints:
   url: https://opendata.hcmgis.vn/api/documents/
 id: opendatahcmgisvn
 langs:
+- id: VN
+  name: Vietnamese
 - id: EN
   name: English
 link: https://opendata.hcmgis.vn
-name: HCMCGIS Open data
+name: HCMGIS Open Data
 owner:
   link: https://hochiminhcity.gov.vn
   location:
@@ -45,7 +44,7 @@ owner:
       id: VN-SG
       name: Hồ Chí Minh
   name: Ho Chi Minh City
-  type: Regional government
+  type: Local government
 properties:
   has_doi: false
   transferable_location: true
@@ -66,6 +65,7 @@ tags:
 - GIS
 - open data
 - Vietnam
+- has_api
 topics:
 - id: REGI
   name: Regions and cities

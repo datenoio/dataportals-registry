@@ -15,20 +15,29 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: A geospatial data catalog platform hosted by INETER.
+description: INETER GeoNode 3 catalog of inter-institutional geospatial layers (INETER,
+  MARENA, INTA, INAFOR and others). HTTPS handshakes time out; the public catalog is
+  HTTP-only. The layers API lists 14 datasets; GeoServer WMS behind the site currently
+  returns 502.
 endpoints:
-- type: geonode:datasets
-  url: https://geonodo.ineter.gob.ni/api/datasets/
+- type: geonode:layers
+  url: http://geonodo.ineter.gob.ni/api/layers/
 - type: geonode:documents
-  url: https://geonodo.ineter.gob.ni/api/documents/
+  url: http://geonodo.ineter.gob.ni/api/documents/
+- type: csw202
+  url: http://geonodo.ineter.gob.ni/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://geonodo.ineter.gob.ni/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: geonodoinetergobni
 langs:
 - id: ES
   name: Spanish
-link: https://geonodo.ineter.gob.ni
+link: http://geonodo.ineter.gob.ni
 name: GeoNode Instituto Nicaragüense de Estudios Territoriales (INETER)
 owner:
-  link: https://ineter.gob.ni
+  link: https://www.ineter.gob.ni
   location:
     country:
       id: NI
@@ -38,6 +47,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -56,6 +66,7 @@ tags:
 - geospatial
 - Nicaragua
 - government
+- has_api
 topics:
 - id: Geoscientific Information
   name: Geoscientific Information

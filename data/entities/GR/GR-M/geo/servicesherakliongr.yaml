@@ -11,11 +11,14 @@ coverage:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Geospatial data server for Heraklion Municipality
+    subregion:
+      id: GR-M
+      name: Kríti
+description: GeoServer of the Municipality of Heraklion providing municipal WMS/WFS services.
 endpoints:
 - type: wms111
   url: https://services.heraklion.gr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -73,7 +76,7 @@ langs:
 - id: EL
   name: Greek
 link: https://services.heraklion.gr/geoserver/web/
-name: Services Geoportal - Heraklion Municipality
+name: Municipality of Heraklion GeoServer
 owner:
   link: https://services.heraklion.gr/geoserver/web/
   location:
@@ -84,7 +87,7 @@ owner:
     subregion:
       id: GR-M
       name: Kríti
-  name: Heraklion Municipality
+  name: Municipality of Heraklion
   type: Local government
 properties:
   has_doi: false
@@ -112,4 +115,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00001544
+uid: cdi00035362

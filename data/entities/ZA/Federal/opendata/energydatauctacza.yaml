@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,22 +14,8 @@ coverage:
     macroregion:
       id: 018
       name: Southern Africa
-description: Energy Research Data Portal developed by the Energy Research Centre at
-  the University of Cape Town, providing access to energy-related datasets for South
-  Africa and other African countries. The portal supports research on energy systems,
-  renewable energy, and energy policy.
-endpoints:
-- type: ckan:package-list
-  url: http://energydata.uct.ac.za/api/3/action/package_list
-  version: '3'
-- type: ckan:package-search
-  url: http://energydata.uct.ac.za/api/3/action/package_search
-  version: '3'
-- type: ckan
-  url: http://energydata.uct.ac.za/api/3
-  version: '3'
-- type: dcatus11
-  url: http://energydata.uct.ac.za/data.json
+description: Former Energy Research Centre CKAN portal. The hostname
+  energydata.uct.ac.za no longer responds.
 id: energydatauctacza
 langs:
 - id: EN
@@ -57,7 +43,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
 - has_api

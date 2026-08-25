@@ -28,8 +28,9 @@ endpoints:
   url: https://geonetwork-central.ecudo.pl/geonetwork/srv/api/site
 - type: opensearch
   url: https://geonetwork-central.ecudo.pl/portal.opensearch
-description: Central GeoNetwork metadata catalog of the eCUDO.pl platform for Polish
-  public administration geospatial data and services.
+description: Central GeoNetwork metadata catalog of eCUDO.pl, the Electronic Centre
+  for Sharing Oceanographic Data, covering Baltic Sea and related marine research
+  datasets from the eCUDO consortium.
 id: geonetworkcentralecudopl
 langs:
 - id: PL
@@ -44,8 +45,8 @@ owner:
       id: PL
       name: Poland
     level: 20
-  name: eCUDO.pl
-  type: Central government
+  name: eCUDO Consortium
+  type: Academy
   link: https://ecudo.pl
 software:
   id: geonetwork
@@ -53,15 +54,23 @@ software:
 status: active
 tags:
 - geospatial
-- government
+- oceanography
+- has_api
+- scientific
 uid: cdi00021782
 topics:
-- id: GOVE
-  name: Government and public sector
+- id: ENVI
+  name: Environment
   type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
 - id: Location
   name: Location
   type: iso19115
-- id: Boundaries
-  name: Boundaries
+- id: Environment
+  name: Environment
   type: iso19115

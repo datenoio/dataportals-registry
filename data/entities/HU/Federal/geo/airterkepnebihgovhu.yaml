@@ -14,29 +14,30 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: ArcGIS REST Service endpoint for air quality mapping.
+      name: Eastern Europe
+description: NÉBIH ArcGIS REST services for Hungarian agricultural air-quality and
+  plant-protection mapping (Airterkép).
 endpoints:
 - type: arcgis:rest:info
-  url: http://airterkep.nebih.gov.hu/ArcGIS/rest/info?f=pjson
+  url: https://airterkep.nebih.gov.hu/ArcGIS/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: http://airterkep.nebih.gov.hu/ArcGIS/rest/services?f=pjson
+  url: https://airterkep.nebih.gov.hu/ArcGIS/rest/services?f=pjson
 - type: arcgis:soap
-  url: http://airterkep.nebih.gov.hu/ArcGIS/services?wsdl
+  url: https://airterkep.nebih.gov.hu/ArcGIS/services?wsdl
 - type: arcgis:sitemap
-  url: http://airterkep.nebih.gov.hu/ArcGIS/rest/services?f=sitemap
+  url: https://airterkep.nebih.gov.hu/ArcGIS/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: http://airterkep.nebih.gov.hu/ArcGIS/rest/services?f=geositemap
+  url: https://airterkep.nebih.gov.hu/ArcGIS/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: http://airterkep.nebih.gov.hu/ArcGIS/rest/services?f=kmz
+  url: https://airterkep.nebih.gov.hu/ArcGIS/rest/services?f=kmz
 id: airterkepnebihgovhu
 langs:
 - id: HU
   name: Hungarian
-link: http://airterkep.nebih.gov.hu/ArcGIS/rest/services
+link: https://airterkep.nebih.gov.hu/ArcGIS/rest/services
 name: Air Quality Map (Airterkep) REST Service
 owner:
-  link: http://airterkep.nebih.gov.hu
+  link: https://airterkep.nebih.gov.hu
   location:
     country:
       id: HU

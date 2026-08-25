@@ -12,35 +12,32 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: We are running IPT behind an apache server. Both servers (apache and
-  tomcat) are debian virtual machines running under KVM. The KVM hosts are 2 dual
-  Xeon X5600 machines with 48GB RAM and FiberChannel connections to SANs for storage.
-  Physicaly, they are located at HCMR's server room at Heraklion and are supervised
-  by the center's NOC team.
+description: GBIF Integrated Publishing Toolkit of HCMR MedOBIS / LifeWatch Greece,
+  publishing Mediterranean marine biodiversity occurrence datasets.
 endpoints:
 - type: dcat:ttl
-  url: http://ipt.medobis.eu/dcat
+  url: https://ipt.medobis.eu/dcat
 - type: ipt:dataset
-  url: http://ipt.medobis.eu/inventory/dataset
+  url: https://ipt.medobis.eu/inventory/dataset
 - type: rss
-  url: http://ipt.medobis.eu/rss.do
+  url: https://ipt.medobis.eu/rss.do
   version: '2.0'
 id: iptmedobiseu
 langs:
 - id: EN
   name: English
-link: http://ipt.medobis.eu
+link: https://ipt.medobis.eu
 name: HCMR-LifeWatchGreece-MedOBIS IPT
 owner:
-  link: http://www.hcmr.gr/en/
+  link: https://www.hcmr.gr/en/
   location:
     country:
       id: GR
       name: Greece
     level: 20
-  name: Hellenic Center for Marine Research
+  name: Hellenic Centre for Marine Research
   type: Academy
 software:
   id: ipt

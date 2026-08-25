@@ -22,20 +22,20 @@ description: Catálogo GeoNetwork de la Infraestructura de Datos Espaciales del 
   Regional de Madre de Dios.
 endpoints:
 - type: geonetwork:query
-  url: http://ide.regionmadrededios.gob.pe/geonetwork/srv/eng/q
+  url: https://ide.regionmadrededios.gob.pe/geonetwork/srv/eng/q
 - type: geonetwork:records
-  url: http://ide.regionmadrededios.gob.pe/geonetwork/srv/api/records
+  url: https://ide.regionmadrededios.gob.pe/geonetwork/srv/api/records
 - type: csw202
-  url: http://ide.regionmadrededios.gob.pe/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://ide.regionmadrededios.gob.pe/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: oaipmh20
-  url: http://ide.regionmadrededios.gob.pe/geonetwork/srv/eng/oaipmh?verb=Identify
+  url: https://ide.regionmadrededios.gob.pe/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 id: ideregionmadredediosgobpe
 langs:
 - id: ES
   name: Spanish
-link: http://ide.regionmadrededios.gob.pe/geonetwork
+link: https://ide.regionmadrededios.gob.pe/geonetwork
 name: Catálogo de Metadatos IDE Madre de Dios
 owner:
   link: https://www.gob.pe/regionmadrededios

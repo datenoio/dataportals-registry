@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '151'
       name: 'Eastern Europe '
-description: Geoportal. managed by Rssi. powered by GeoServer. accessible at mapserver.cepl.rssi.ru:8080.
+description: GeoServer of the Center for Forest Ecology and Productivity of the
+  Russian Academy of Sciences (CEPL RAS).
 endpoints:
 - type: wfs100
   url: http://mapserver.cepl.rssi.ru:8080/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
@@ -53,15 +54,16 @@ langs:
 - id: RU
   name: Russian
 link: http://mapserver.cepl.rssi.ru:8080/geoserver
-name: Rssi Geoportal
+name: CEPL RAS GeoServer
 owner:
-  link: http://rssi.ru
+  link: https://cepl.rssi.ru
   location:
     country:
       id: RU
       name: Russian Federation
     level: 20
-  name: Rssi
+  name: Center for Forest Ecology and Productivity of the Russian Academy of Sciences
+    (CEPL RAS)
   type: Academy
 properties:
   has_doi: false
@@ -117,4 +119,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-uid: temp00002204
+uid: cdi00035054

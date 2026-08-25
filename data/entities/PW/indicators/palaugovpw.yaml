@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -15,17 +15,21 @@ coverage:
     macroregion:
       id: '057'
       name: Micronesia
-description: IMF e-GDDS National Summary Data Page for Palau, maintained with the
-  Bureau of Budget and Planning. Disseminates GDP, CPI, trade, labour, and other summary
-  indicators with SDMX access.
+description: IMF e-GDDS National Summary Data Page for Palau, maintained by the Bureau
+  of Budget and Planning. Disseminates national accounts, CPI, government finance,
+  balance of payments, external debt, labour, merchandise trade, population, and tourism
+  summary indicators as Excel and SDMX files.
+endpoints:
+- type: imfnsdp:catalog
+  url: https://www.palaugov.pw/executive-branch/ministries/finance/budgetandplanning/palau-national-summary-data-page/
 id: palaugovpw
 langs:
 - id: EN
   name: English
 link: https://www.palaugov.pw/executive-branch/ministries/finance/budgetandplanning/palau-national-summary-data-page/
-name: Palau National Summary Data Page
+name: Palau National Summary Data Page (NSDP)
 owner:
-  link: https://www.palaugov.pw/budgetandplanning
+  link: https://www.palaugov.pw/executive-branch/ministries/finance/budgetandplanning/
   location:
     country:
       id: PW
@@ -44,8 +48,8 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: imfnsdp
+  name: IMF National Summary Data Page
 status: active
 tags:
 - statistics
@@ -53,35 +57,23 @@ tags:
 - official statistics
 - Palau
 - NSDP
+- e-GDDS
+- IMF
+- SDMX
 topics:
-- id: SOCI
-  name: Population and society
-  type: eudatatheme
 - id: ECON
   name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
   type: eudatatheme
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: HEAL
-  name: Health
-  type: eudatatheme
-- id: EDUC
-  name: Education, culture and sport
-  type: eudatatheme
-- id: Society
-  name: Society
-  type: iso19115
 - id: Economy
   name: Economy
   type: iso19115
-- id: Environment
-  name: Environment
-  type: iso19115
-- id: Health
-  name: Health
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00021948

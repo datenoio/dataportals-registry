@@ -5,7 +5,7 @@ api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
-- map
+- map_layer
 - document
 coverage:
 - location:
@@ -16,25 +16,24 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: National Land Use Information Management System (LUIMS) providing geospatial
-  data, maps, and land use plans to support sustainable land use planning across Papua
-  New Guinea.
+description: National Land Use Information Management System (LUIMS) GeoNode catalog
+  of the Department of Lands and Physical Planning. Publishes land-use, planning,
+  and cadastral datasets, maps, and documents (GeoNode 4.4.4; 10 datasets and 2 documents
+  at review).
 endpoints:
 - type: geonode:datasets
   url: https://luims.dlpp.gov.pg/api/datasets/
-- type: geonode:layers
-  url: https://luims.dlpp.gov.pg/api/layers/
 - type: geonode:documents
   url: https://luims.dlpp.gov.pg/api/documents/
-- type: wms130
-  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
-- type: wfs200
-  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
-  version: 2.0.0
-- type: wcs201
-  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
-  version: 2.0.1
+- type: wms111
+  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
 - type: csw202
   url: https://luims.dlpp.gov.pg/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
@@ -44,6 +43,39 @@ endpoints:
 - type: opensearch
   url: https://luims.dlpp.gov.pg/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
   version: '1.0'
+- type: wms130
+  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://luims.dlpp.gov.pg/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: geoserver:version
+  url: https://luims.dlpp.gov.pg/geoserver/rest/about/version
+- type: geoserver:settings
+  url: https://luims.dlpp.gov.pg/geoserver/rest/settings
+- type: geoserver:layers
+  url: https://luims.dlpp.gov.pg/geoserver/rest/layers
 id: luimsdlppgovpg
 langs:
 - id: EN
@@ -61,6 +93,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  dataset_count_reported: 10
 rights:
   license_id: null
   license_name: null
@@ -73,16 +106,24 @@ software:
   name: GeoNode
 status: active
 tags:
-- GIS
+- geospatial
 - land use
 - planning
-- Papua New Guinea
+- cadastre
 - geonode
 - geoportal
-- spatial data
+- government
+- Papua New Guinea
+- has_api
 topics:
-- id: Planning Cadastre
-  name: Planning Cadastre
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
   type: iso19115
 - id: Environment
   name: Environment

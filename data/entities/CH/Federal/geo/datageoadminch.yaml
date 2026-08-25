@@ -1,5 +1,5 @@
 access_mode:
-- public
+- open
 api: true
 api_status: active
 catalog_type: Geoportal
@@ -25,16 +25,22 @@ id: datageoadminch
 langs:
 - id: EN
   name: English
+- id: DE
+  name: German
+- id: FR
+  name: French
+- id: IT
+  name: Italian
 link: https://data.geo.admin.ch/api/stac/v0.9/
 name: data.geo.admin.ch STAC API
 owner:
-  link: https://admin.ch
+  link: https://www.geo.admin.ch
   location:
     country:
       id: CH
       name: Switzerland
     level: 20
-  name: Swiss Confederation Federal Administration
+  name: Swiss Federal Office of Topography (swisstopo)
   type: Central government
 properties:
   has_doi: false
@@ -74,15 +80,6 @@ topics:
   type: eudatatheme
 - id: REGI
   name: Regions and cities
-  type: eudatatheme
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: ENVI
-  name: Environment
   type: eudatatheme
 - id: GOVE
   name: Government and public sector

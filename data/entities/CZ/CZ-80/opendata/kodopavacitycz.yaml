@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -21,12 +21,6 @@ description: Katalog otevřených dat města Opavy je portál poskytující pře
   vydaných městem Opavou. Obsahuje různé datové sady týkající se oblasti Opavy, včetně
   oblastí jako je místní správa, životní prostředí, doprava a další aspekty veřejného
   života.
-endpoints:
-- type: ckan:package-list
-  url: http://kod.opava-city.cz/api/3/action/package_list
-  version: '3'
-- type: dcatus11
-  url: http://kod.opava-city.cz/data.json
 id: kodopavacitycz
 langs:
 - id: CS
@@ -57,7 +51,7 @@ rights:
 software:
   id: dkan
   name: DKAN
-status: active
+status: inactive
 tags:
 - Opava
 - otevřená data

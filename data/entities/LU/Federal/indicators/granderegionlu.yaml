@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -13,26 +14,50 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Le cœur du Portail Statistique de la Grande Région. Tableaux statistiques,
-  graphiques ou cartes, données rassemblées et harmonisées par les offices statistiques.
-endpoints:
-- type: pxwebapi
-  url: https://www.grande-region.lu/pxweb/api/v1/fr
-  version: '1'
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Statistical portal of the Greater Region (Saarland, Lorraine, Luxembourg,
+  Rhineland-Palatinate, and Wallonia), previously published as PxWeb tables by the
+  five regional statistical offices. The former site at grande-region.lu now redirects
+  to granderegion.net, where the portal and API paths return 404.
 id: granderegionlu
 langs:
 - id: FR
   name: French
+- id: DE
+  name: German
 link: https://www.grande-region.lu/portal/donnees
 name: Portail Statistique de la Grande Région
 owner:
-  link: https://statec.etat.lu
+  link: https://statistiques.public.lu/en.html
   location:
     country:
       id: LU
       name: Luxembourg
     level: 20
-  name: STATEC - Luxembourg
+  name: STATEC
   type: Central government
 properties:
   has_doi: false
@@ -47,7 +72,7 @@ rights:
 software:
   id: pxweb
   name: PxWeb
-status: active
+status: inactive
 tags:
 - statistics
 - government
@@ -62,8 +87,8 @@ topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
-- id: ECON
-  name: Economy and finance
+- id: ENVI
+  name: Environment
   type: eudatatheme
 - id: Society
   name: Society
@@ -75,4 +100,3 @@ topics:
   name: Boundaries
   type: iso19115
 uid: cdi00001100
-api: true

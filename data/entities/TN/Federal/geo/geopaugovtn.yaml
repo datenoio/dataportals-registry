@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Plans d'Aménagement Urbain (SIG WEB PAU - Tunisie) de la Direction de
-  l'Urbanisme du Ministère de l'Équipement, de l'Habitat et de l'Aménagement du Territoire
-  et élaboré par SEMATGT, GRAPHTECH Esri Tunisia (ArcGIS) et ART-CONCEPT.
+description: Urban development plans (Plans d'Aménagement Urbain) web GIS of the
+  Directorate of Urban Planning at the Ministry of Equipment, Housing and Spatial
+  Planning, published as ArcGIS Server services.
 endpoints:
 - type: arcgis:rest:info
   url: https://geopau.gov.tn/arcgisserver/rest/info?f=pjson
@@ -33,12 +33,14 @@ endpoints:
   url: https://geopau.gov.tn/arcgisserver/rest/services?f=kmz
 id: geopaugovtn
 langs:
+- id: FR
+  name: French
 - id: AR
   name: Arabic
 link: https://geopau.gov.tn/arcgisserver/rest/services
 name: Plans d'Aménagement Urbain (SIG WEB PAU - Tunisie)
 owner:
-  link: http://www.mehat.gov.tn
+  link: https://www.mehat.gov.tn
   location:
     country:
       id: TN
@@ -60,14 +62,11 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- Urban planning
-- Cadastral
+- urban planning
+- cadastre
 - GIS
 - ArcGIS
 topics:
-- id: AGRI
-  name: Agriculture, fisheries, forestry and food
-  type: eudatatheme
 - id: REGI
   name: Regions and cities
   type: eudatatheme

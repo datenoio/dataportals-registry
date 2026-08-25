@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -16,9 +17,13 @@ coverage:
       name: Eastern Africa
 description: Institutional DSpace repository of Universidade Eduardo Mondlane, collecting
   theses, articles, and other research outputs from faculties and research centres.
+  HTTPS on this host resets; HTTP on www.repositorio.uem.mz remains available.
 endpoints:
 - type: oaipmh20
   url: http://www.repositorio.uem.mz/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: http://www.repositorio.uem.mz/feed/rss_2.0/site
   version: '2.0'
 id: wwwrepositoriouemz
 langs:
@@ -27,7 +32,7 @@ langs:
 link: http://www.repositorio.uem.mz/
 name: Repositório Científico da Universidade Eduardo Mondlane
 owner:
-  link: https://www.uem.mz
+  link: https://uem.mz
   location:
     country:
       id: MZ
@@ -53,7 +58,7 @@ tags:
 - open access
 - research
 - theses
-- Mozambique
+- has_api
 topics:
 - id: TECH
   name: Science and technology

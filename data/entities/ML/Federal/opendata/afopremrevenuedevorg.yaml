@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -15,12 +15,9 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: RDF Online Repository tenant listed as Mali AFOPREM, a public workspace
-  for mining-sector suppliers and related records. Distinct from the DNGM mining cadastre
-  and Mali OGAS portals.
-endpoints:
-- type: rdfrepository:catalog
-  url: https://afoprem.revenuedev.org/
+description: RDF Online Repository tenant listed as Mali AFOPREM, a workspace for
+  mining-sector suppliers. The host returns HTTP 403 from the public internet, unlike
+  the DNGM mining and OGAS tenants. Distinct from the SICAM cadastre at cadastre.mines.ml.
 id: afopremrevenuedevorg
 langs:
 - id: FR
@@ -51,7 +48,7 @@ rights:
 software:
   id: rdfrepository
   name: RDF Online Repository
-status: active
+status: inactive
 tags:
 - mining
 - procurement

@@ -18,12 +18,20 @@ coverage:
     subregion:
       id: LT-VL
       name: Vilniaus apskritis
-description: 'GIS service directory for Ukmergė, likely offering spatial data via
-  REST interfaces. Catalog status: may be incomplete/temporary.'
+description: Ukmergė district municipality ArcGIS Server catalogue of local spatial datasets and map services.
 endpoints:
+- type: arcgis:rest:info
+  url: https://gis.ukmerge.lt/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
   url: https://gis.ukmerge.lt/arcgis/rest/services?f=pjson
-  version: '1.0'
+- type: arcgis:soap
+  url: https://gis.ukmerge.lt/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.ukmerge.lt/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.ukmerge.lt/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.ukmerge.lt/arcgis/rest/services?f=kmz
 id: gisukmergelt
 langs:
 - id: LT
@@ -31,7 +39,7 @@ langs:
 link: https://gis.ukmerge.lt/arcgis/rest/services
 name: Ukmergė ArcGIS REST Services
 owner:
-  link: https://ww.ukmerge.lt
+  link: https://www.ukmerge.lt
   location:
     country:
       id: LT
@@ -40,7 +48,7 @@ owner:
     subregion:
       id: LT-VL
       name: Vilniaus apskritis
-  name: Ukmergė
+  name: Ukmergės rajono savivaldybė
   type: Local government
 properties:
   has_doi: false
@@ -82,4 +90,4 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-uid: temp00000453
+uid: cdi00035293

@@ -17,7 +17,8 @@ coverage:
     subregion:
       id: ES-AN
       name: Andalucía
-description: Data catalog at the University of Granada
+description: Open data portal of the University of Granada, publishing institutional
+  datasets for reuse.
 endpoints:
 - type: ckan:package-search
   url: https://opendata.ugr.es/api/3/action/package_search
@@ -36,6 +37,8 @@ endpoints:
   url: https://opendata.ugr.es/catalog.xml
 - type: dcat:jsonld
   url: https://opendata.ugr.es/catalog.jsonld
+- type: dcatap
+  url: https://opendata.ugr.es/catalog.rdf
 id: opendataugres
 identifiers:
 - id: dataportals.org
@@ -44,6 +47,8 @@ identifiers:
 langs:
 - id: ES
   name: Spanish
+- id: CA
+  name: Catalan
 link: https://opendata.ugr.es
 name: La Universidad de Granada Open Data Portal
 owner:

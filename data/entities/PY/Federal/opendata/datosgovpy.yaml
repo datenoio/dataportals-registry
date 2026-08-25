@@ -14,21 +14,21 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Official open data portal of Paraguay, providing access to public datasets
-  across various sectors for transparency and public use.
+description: National open data portal of Paraguay (DKAN on Drupal 7), publishing
+  government datasets across sectors with a CKAN-compatible Action API and a Project
+  Open Data / DCAT-US data.json export.
 endpoints:
 - type: ckan:package-list
-  url: https://datos.gov.py/api/3/action/package_list
+  url: https://www.datos.gov.py/api/3/action/package_list
   version: '3'
 - type: dcatus11
-  url: https://datos.gov.py/data.json
+  url: https://www.datos.gov.py/data.json
 id: datosgovpy
 langs:
 - id: ES
   name: Spanish
-link: https://datos.gov.py
-name: Ministerio de Tecnologías de la Información y Comunicación (MITIC) Open Data
-  Portal
+link: https://www.datos.gov.py
+name: Datos.gov.py - Portal Nacional de Datos Abiertos
 owner:
   link: https://www.mitic.gov.py
   location:
@@ -54,9 +54,9 @@ software:
 status: active
 tags:
 - government
-- Open Data
+- open data
 - Paraguay
-- Public Sector
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector
@@ -78,9 +78,6 @@ topics:
   type: eudatatheme
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
-  type: eudatatheme
-- id: GOVE
-  name: Government and public sector
   type: eudatatheme
 - id: TECH
   name: Science and technology
@@ -114,9 +111,6 @@ topics:
   type: iso19115
 - id: Planning / Cadastre
   name: Planning / Cadastre
-  type: iso19115
-- id: Society
-  name: Society
   type: iso19115
 - id: Structure
   name: Structure

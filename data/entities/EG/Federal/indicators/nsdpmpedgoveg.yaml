@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: EG
+      name: Egypt
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: IMF SDDS National Summary Data Page for Egypt, hosted by Ministry of
+  Planning and Economic Development. Disseminates macroeconomic and financial summary
+  indicators with SDMX downloads linked from the IMF Dissemination Standards Bulletin
+  Board.
+endpoints:
+- type: imfnsdp:catalog
+  url: https://mped.gov.eg/assets/uploads/NSDP.html
+id: nsdpmpedgoveg
+langs:
+- id: AR
+  name: Arabic
+- id: EN
+  name: English
+link: https://mped.gov.eg/assets/uploads/NSDP.html
+name: Egypt National Summary Data Page
+owner:
+  link: https://mped.gov.eg
+  location:
+    country:
+      id: EG
+      name: Egypt
+    level: 20
+  name: Ministry of Planning and Economic Development
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+software:
+  id: imfnsdp
+  name: IMF National Summary Data Page
+status: active
+tags:
+- NSDP
+- IMF
+- SDDS
+- statistics
+- government
+- official statistics
+- SDMX
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00037451

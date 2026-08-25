@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,14 +14,11 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: WASCAL research data catalog (WADI) hosted at the Competence Centre in
-  Ouagadougou. Publishes climate, hydrology, remote sensing, biodiversity and
-  socio-economic datasets from WASCAL observation networks and graduate research
-  across West Africa.
-endpoints:
-- type: ckan:package-list
-  url: https://wascal-dataportal.org/api/3/action/package_list
-  version: '3'
+description: WASCAL Data Infrastructure (WADI) DKAN catalog hosted at the Competence
+  Centre in Ouagadougou. Intended to publish climate, hydrology, remote sensing,
+  biodiversity and socio-economic datasets from WASCAL observation networks across
+  West Africa. The Drupal 7 site currently returns HTTP 500 and CKAN-compatible
+  API paths are missing (August 2026).
 id: wascaldataportalorg
 identifiers:
 - id: re3data
@@ -41,7 +38,7 @@ owner:
     level: 20
   name: West African Science Service Centre on Climate Change and Adapted Land Use
     (WASCAL)
-  type: Academy
+  type: International
 properties:
   has_doi: false
 rights:
@@ -54,16 +51,15 @@ rights:
 software:
   id: dkan
   name: DKAN
-status: active
+status: inactive
 tags:
 - climate change
 - hydrology
 - remote sensing
 - biodiversity
 - socio-economic
-- observation networks
-- spatial data infrastructure
-- has_api
+- West Africa
+- WADI
 topics:
 - id: ENVI
   name: Environment

@@ -1,8 +1,10 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
+- dataset
 - indicator
 coverage:
 - location:
@@ -13,25 +15,34 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Armenia Sustainable Development Goals Data Catalog. Contains official
-  SDG-related datasets produced by the Armenian national statistical authority.
+description: National OpenSDG reporting portal of the Statistical Committee of the
+  Republic of Armenia for official Sustainable Development Goal indicators. Indicator
+  JSON is published from the companion sdg-data-armenia GitHub Pages repository.
+endpoints:
+- type: opensdg:catalog
+  url: https://sdg.armstat.am/reporting-status/
+- type: opensdg:data
+  url: https://armstat.github.io/sdg-data-armenia/prod/en/data/1-1-1.json
+- type: opensdg:data
+  url: https://armstat.github.io/sdg-data-armenia/prod/en/data/1-2-1.json
 id: sdgarmstatam
 langs:
 - id: EN
   name: English
 link: https://sdg.armstat.am
-name: Armenian SDG data portal
+name: Armenia Indicators For The Sustainable Development Goals
 owner:
-  link: https://armstat.am
+  link: https://www.armstat.am
   location:
     country:
       id: AM
       name: Armenia
     level: 20
-  name: ArmStat
+  name: Statistical Committee of the Republic of Armenia
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -47,9 +58,9 @@ tags:
 - statistics
 - government
 - SDGs
-- Sustainable Development Goals
-- Armenia
-- opendata
+- OpenSDG
+- official statistics
+- has_api
 topics:
 - id: ECON
   name: Economy and finance
@@ -67,9 +78,3 @@ topics:
   name: Economy
   type: iso19115
 uid: cdi00000016
-endpoints:
-- type: opensdg:data
-  url: https://armstat.github.io/sdg-data-armenia/prod/en/data/1-1-1.json
-- type: opensdg:data
-  url: https://armstat.github.io/sdg-data-armenia/prod/en/data/1-2-1.json
-api: true

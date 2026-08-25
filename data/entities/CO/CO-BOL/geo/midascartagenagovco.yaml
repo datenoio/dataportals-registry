@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,13 +20,6 @@ coverage:
       name: Bolívar
 description: MIDAS (Municipal Information and Data Access System) PyCSW catalog for
   Cartagena, Colombia providing geospatial metadata services.
-endpoints:
-- type: csw202
-  url: https://midas.cartagena.gov.co:8085/pycsw/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: https://midas.cartagena.gov.co:8085/pycsw/?mode=oaipmh&verb=Identify
-  version: '2.0'
 id: midascartagenagovco
 langs:
 - id: ES
@@ -57,7 +50,7 @@ rights:
 software:
   id: pycsw
   name: pycsw
-status: active
+status: inactive
 tags:
 - geospatial
 - metadata

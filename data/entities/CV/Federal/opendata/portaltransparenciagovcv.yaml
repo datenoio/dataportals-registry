@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,11 +17,18 @@ coverage:
       name: Western Africa
 description: National public-finance transparency portal of Cabo Verde. Publishes
   revenue, expenditure, debt, pensions, regulatory agencies, public procurement, municipal,
-  and state-owned enterprise data. A REST API is documented but not yet released.
+  and state-owned enterprise data. A REST API is documented but not publicly accessible.
+endpoints:
+- type: liferay:catalog
+  url: https://portaltransparencia.gov.cv/
 id: portaltransparenciagovcv
 langs:
 - id: PT
   name: Portuguese
+- id: EN
+  name: English
+- id: FR
+  name: French
 link: https://portaltransparencia.gov.cv/
 name: Portal da Transparência de Cabo Verde
 owner:
@@ -44,8 +51,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: liferay
+  name: Liferay
 status: active
 tags:
 - government
@@ -60,8 +67,8 @@ topics:
 - id: ECON
   name: Economy and finance
   type: eudatatheme
-- id: Government and public sector
-  name: Government and public sector
+- id: Society
+  name: Society
   type: iso19115
 - id: Economy
   name: Economy

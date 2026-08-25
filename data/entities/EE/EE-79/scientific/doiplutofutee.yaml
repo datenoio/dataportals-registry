@@ -18,11 +18,8 @@ coverage:
     subregion:
       id: EE-79
       name: Tartumaa
-description: Online platform for management of biodiversity data, providing database
-  and computing services for taxonomical, ecological, and phylogenetical research.
-  Organizes sampling events, manages species occurrence records, supports molecular
-  sequence data analysis, and manages scientific collections. Hosts the UNITE database
-  for rDNA ITS based identification of eukaryotes.
+description: Public DOI landing catalog for datasets published through the PlutoF
+  biodiversity platform. Distinct from the PlutoF workbench at plutof.ut.ee.
 id: doiplutofutee
 langs:
 - id: EN
@@ -30,7 +27,7 @@ langs:
 - id: ET
   name: Estonian
 link: https://doi.plutof.ut.ee
-name: PlutoF Biodiversity Platform
+name: PlutoF DOI catalog
 owner:
   link: https://www.ut.ee
   location:
@@ -54,8 +51,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: plutof
+  name: PlutoF
 status: active
 tags:
 - scientific
@@ -82,5 +79,5 @@ topics:
   type: iso19115
 uid: cdi00002372
 endpoints:
-- type: sitemap
-  url: https://doi.plutof.ut.ee/sitemap.xml
+- type: rest
+  url: https://api.plutof.ut.ee/v1/public/dois/?format=api

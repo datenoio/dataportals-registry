@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,15 +14,12 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-    subregion: &id001
+    subregion:
       id: NG-ED
       name: Edo
-description: Edo State Government open data portal. WordPress-based catalog of state
-  government datasets at opendata.edostate.gov.ng.
-endpoints:
-- type: rest
-  url: https://opendata.edostate.gov.ng/wp-json/
-  version: '2.0'
+description: Former Edo State Government open data portal. HTTP now serves a default
+  hosting placeholder, and HTTPS presents a certificate for an unrelated commercial
+  site, so the catalog is not reachable.
 id: opendataedostategovng
 langs:
 - id: EN
@@ -36,7 +33,9 @@ owner:
       id: NG
       name: Nigeria
     level: 30
-    subregion: *id001
+    subregion:
+      id: NG-ED
+      name: Edo
   name: Edo State Government
   type: Regional government
 rights:
@@ -49,11 +48,12 @@ rights:
 software:
   id: wordpress
   name: WordPress
-status: active
+status: inactive
 tags:
 - Nigeria
-- wordpress
 - Edo
+- government
+- open data
 topics:
 - id: GOVE
   name: Government and public sector

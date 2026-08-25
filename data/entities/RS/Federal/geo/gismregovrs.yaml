@@ -13,24 +13,24 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Geoportal. managed by Government of Serbia. powered by ArcGIS Server.
-  accessible at gis.mre.gov.rs.
+description: ArcGIS Server REST catalog previously published at http://gis.mre.gov.rs/arcgis/rest/services.
+  The path now returns HTTP 404. The ministry website at mre.gov.rs remains online.
 id: gismregovrs
 langs:
 - id: SR
   name: Serbian
 link: http://gis.mre.gov.rs/arcgis/rest/services
-name: gis.mre.gov.rs - ArcGIS REST Services
+name: Ministry of Mining and Energy ArcGIS REST services
 owner:
-  link: http://mre.gov.rs
+  link: https://mre.gov.rs/
   location:
     country:
       id: RS
       name: Serbia
     level: 20
-  name: Government of Serbia
+  name: Ministry of Mining and Energy
   type: Central government
 properties:
   has_doi: false
@@ -44,12 +44,12 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - geospatial
 - rest
-- services
 - arcgis
+- inactive
 topics:
 - id: Location
   name: Location

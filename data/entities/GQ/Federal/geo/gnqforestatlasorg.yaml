@@ -15,15 +15,18 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: Interactive Forest Atlas of Equatorial Guinea. Public ArcGIS Hub of the
-  Ministerio de Agricultura, Ganadería, Bosques y Medio Ambiente, developed with the
-  World Resources Institute and INDEFOR-AP, combining forest-sector land-use data
-  with Global Forest Watch monitoring.
+description: Interactive Forest Atlas of Equatorial Guinea. Public ArcGIS Hub hosted
+  by Global Forest Watch / World Resources Institute for the Ministerio de Agricultura,
+  Ganadería, Bosques y Medio Ambiente, developed with INDEFOR-AP. Combines forest-sector
+  land-use data with Global Forest Watch monitoring. The former open-data hub at
+  gnq-data.forest-atlas.org is offline.
 endpoints:
 - type: dcatap201
   url: https://gnq.forest-atlas.org/api/feed/dcat-ap/2.0.1.json
 - type: dcatus11
   url: https://gnq.forest-atlas.org/api/feed/dcat-us/1.1.json
+- type: dcatus11
+  url: https://gnq.forest-atlas.org/data.json
 - type: rss
   url: https://gnq.forest-atlas.org/api/feed/rss/2.0
 - type: ogcrecordsapi
@@ -54,9 +57,9 @@ rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  privacy_policy_url: https://gnq.forest-atlas.org/pages/privacy-policy
   rights_type: granular
-  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+  tos_url: https://gnq.forest-atlas.org/pages/terms-of-service
 software:
   id: arcgishub
   name: ArcGIS Hub
@@ -67,6 +70,8 @@ tags:
 - geospatial
 - government
 - has_api
+- Equatorial Guinea
+- wri
 topics:
 - id: ENVI
   name: Environment

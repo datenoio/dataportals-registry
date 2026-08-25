@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Public GIS web services and datasets from the RDP Company
+description: Public GeoServer instance operated by SIA RGP, publishing WMS, WFS, and
+  related OGC services.
 endpoints:
 - type: wms111
   url: https://geoserver.rgp.lv/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -127,15 +128,15 @@ langs:
 - id: LV
   name: Latvian
 link: https://geoserver.rgp.lv/geoserver/
-name: RDP GeoServer
+name: RGP GeoServer
 owner:
-  link: https://www.rdp.lv
+  link: https://rgp.lv
   location:
     country:
       id: LV
       name: Latvia
     level: 20
-  name: RDP
+  name: SIA RGP
   type: Business
 properties:
   has_doi: false

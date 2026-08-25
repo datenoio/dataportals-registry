@@ -1,0 +1,88 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: PT-04
+      name: Bragança
+description: GeoNetwork metadata catalogue of the Comunidade Intermunicipal das Terras
+  de Trás-os-Montes (CIM-TTM).
+endpoints:
+- type: geonetwork:query
+  url: https://ide.cim-ttm.pt/geonetwork/srv/eng/q
+- type: openapi
+  url: https://ide.cim-ttm.pt/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://ide.cim-ttm.pt/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://ide.cim-ttm.pt/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://ide.cim-ttm.pt/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://ide.cim-ttm.pt/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://ide.cim-ttm.pt/geonetwork/srv/api/site
+- type: opensearch
+  url: https://ide.cim-ttm.pt/portal.opensearch
+id: idecimttmpt
+langs:
+- id: PT
+  name: Portuguese
+link: https://ide.cim-ttm.pt/geonetwork
+name: Catálogo de Metadados CIM-TTM - Comunidade Intermunicipal das Terras de Trás-os-Montes
+owner:
+  link: https://www.cim-ttm.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    subregion:
+      id: PT-04
+      name: Bragança
+  name: Comunidade Intermunicipal das Terras de Trás-os-Montes
+  type: Regional government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- has_api
+- transport
+- scientific data
+- public sector
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00001300

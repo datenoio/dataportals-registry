@@ -18,9 +18,11 @@ coverage:
     subregion:
       id: KZ-35
       name: Karagandinskaja oblast'
-description: Website for geospatial data catalog in Qarobl (Kazakhstan). Details not
-  provided in search results.
+description: Geonomics geoportal of Karaganda Region for land, urban-planning and
+  administrative-territorial spatial data, with an optional GeoServer WMS backend.
 endpoints:
+- type: geonomics:catalog
+  url: https://geo.qarobl.kz
 - type: wms130
   url: https://geo.qarobl.kz/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
   version: '1.3.0'

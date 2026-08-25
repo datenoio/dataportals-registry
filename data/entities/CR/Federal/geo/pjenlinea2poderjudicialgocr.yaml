@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,19 +15,8 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Geoportal. managed by Government of Costa Rica. powered by ArcGIS Server.
-  accessible at pjenlinea2.poder-judicial.go.cr.
-endpoints:
-- type: arcgis:rest:info
-  url: https://pjenlinea2.poder-judicial.go.cr/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://pjenlinea2.poder-judicial.go.cr/arcgis/rest/services?f=pjson
-- type: arcgis:sitemap
-  url: https://pjenlinea2.poder-judicial.go.cr/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://pjenlinea2.poder-judicial.go.cr/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://pjenlinea2.poder-judicial.go.cr/arcgis/rest/services?f=kmz
+description: ArcGIS Server geoportal of the Poder Judicial de Costa Rica. REST services
+  at this host returned 404 as of August 2026.
 id: pjenlinea2poderjudicialgocr
 langs:
 - id: ES
@@ -35,13 +24,13 @@ langs:
 link: https://pjenlinea2.poder-judicial.go.cr/arcgis/rest/services
 name: Geoportal del Poder Judicial de Costa Rica
 owner:
-  link: https://poder-judicial.go.cr
+  link: https://www.poder-judicial.go.cr
   location:
     country:
       id: CR
       name: Costa Rica
     level: 20
-  name: Government of Costa Rica
+  name: Poder Judicial de Costa Rica
   type: Central government
 properties:
   has_doi: false
@@ -55,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - Costa Rica
 - arcgisserver
@@ -76,4 +65,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005872
+uid: cdi00035628

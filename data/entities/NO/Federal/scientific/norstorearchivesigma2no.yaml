@@ -1,28 +1,22 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
 coverage:
 - location:
     country:
-      id: false
+      id: 'NO'
       name: Norway
     level: 20
     macroregion:
       id: '154'
       name: Northern Europe
-description: NorStore Archive is a research data archive service provided by UNINETT
-  Sigma2. It offers long-term storage and access to scientific datasets for the Norwegian
-  research community, with metadata accessible via OAI-PMH protocol. The archive supports
-  data preservation and provides persistent access to research data from Norwegian
-  research institutions.
-endpoints:
-- type: oaipmh20
-  url: https://search-api.web.sigma2.no/norstore-archive/oai/v1.0?verb=Identify
-  version: '2.0'
+description: NorStore Archive was UNINETT Sigma2's predecessor research-data archive.
+  It has been replaced by the NIRD Research Data Archive at archive.sigma2.no; this
+  record kept the generic Sigma2 homepage rather than a live catalog URL.
 id: norstorearchivesigma2no
 langs:
 - id: EN
@@ -33,7 +27,7 @@ owner:
   link: https://www.sigma2.no
   location:
     country:
-      id: false
+      id: 'NO'
       name: Norway
     level: 20
   name: UNINETT Sigma2
@@ -48,10 +42,9 @@ rights:
 software:
   id: custom
   name: Custom software
-status: active
+status: inactive
 tags:
 - scientific
-- has_api
 - research data
 - data archive
 - long-term storage

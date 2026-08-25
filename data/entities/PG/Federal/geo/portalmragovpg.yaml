@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,28 +15,15 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: Portal providing access to geospatial services and data managed by the
-  Mineral Resources Authority (MRA) of Papua New Guinea, mainly covering mineral,
-  geological, and cadastre information.
-endpoints:
-- type: arcgis:rest:info
-  url: https://portal.mra.gov.pg/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://portal.mra.gov.pg/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://portal.mra.gov.pg/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://portal.mra.gov.pg/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://portal.mra.gov.pg/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://portal.mra.gov.pg/arcgis/rest/services?f=kmz
+description: Former ArcGIS Server REST root on the Mineral Resources Authority mining
+  cadastre host. https://portal.mra.gov.pg/arcgis/rest/services now returns HTTP 404;
+  the public cadastre map is the separate Trimble Landfolio catalog portalmragovpgmap.
 id: portalmragovpg
 langs:
 - id: EN
   name: English
 link: https://portal.mra.gov.pg/arcgis/rest/services
-name: Mineral Resources Authority (MRA), Papua New Guinea Geoportal
+name: Mineral Resources Authority ArcGIS REST Services
 owner:
   link: https://mra.gov.pg
   location:
@@ -44,7 +31,7 @@ owner:
       id: PG
       name: Papua New Guinea
     level: 20
-  name: Mineral Resources Authority (MRA), Papua New Guinea
+  name: Mineral Resources Authority (MRA)
   type: Central government
 properties:
   has_doi: false
@@ -58,23 +45,28 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - mining
 - geology
 - cadastre
-- Papua New Guinea
-- exploration
-- geo
+- geospatial
 - government
+- Papua New Guinea
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
 - id: Location
   name: Location
-  type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: temp00005800

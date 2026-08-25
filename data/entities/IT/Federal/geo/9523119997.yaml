@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,17 +15,14 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: Geospatial data catalog and web mapping portal based on Lizmap software
-endpoints:
-- type: wms111
-  url: http://95.231.199.97/service?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.1.1
-  version: 1.1.1
+description: Unidentified Lizmap instance hosted on a raw IP address, with no
+  attributable Italian public operator.
 id: '9523119997'
 langs:
 - id: IT
   name: Italian
 link: http://95.231.199.97/lizmap/
-name: Geoportal - 95
+name: Unidentified Lizmap geoportal (95.231.199.97)
 owner:
   link: http://95.231.199.97
   location:
@@ -33,8 +30,8 @@ owner:
       id: IT
       name: Italy
     level: 20
-  name: '95'
-  type: Central government
+  name: Unknown operator
+  type: Other
 properties:
   has_doi: false
 rights:
@@ -47,7 +44,7 @@ rights:
 software:
   id: lizmap
   name: Lizmap
-status: active
+status: inactive
 tags:
 - lizmap
 - geospatial

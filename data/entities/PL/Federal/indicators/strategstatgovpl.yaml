@@ -5,6 +5,7 @@ api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
 - dataset
+- indicator
 coverage:
 - location:
     country:
@@ -21,12 +22,12 @@ description: The STRATEG system is a publicly accessible system, which is update
   development at the national level, as well as at lower levels of territorial division.
   To ensure international comparability, the database also contains the main indicators
   for the EU, its member states and regions at NUTS 2 level.
-id: statregstatgovpl
+id: strategstatgovpl
 langs:
 - id: PL
   name: Polish
 link: https://strateg.stat.gov.pl
-name: STATREG (Poland)
+name: STRATEG
 owner:
   link: https://stat.gov.pl
   location:
@@ -50,9 +51,10 @@ software:
   name: Custom software
 status: active
 tags:
-- Open data
-- API
-- Public statistics
+- statistics
+- indicators
+- government
+- Poland
 topics:
 - id: GOVE
   name: Government and public sector

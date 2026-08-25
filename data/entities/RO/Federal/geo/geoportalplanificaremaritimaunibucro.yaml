@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,84 +14,18 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Data catalog for maritime planning managed by the University of Bucharest
-endpoints:
-- type: geonode:layers
-  url: https://geoportal.planificare-maritima.unibuc.ro/api/layers/
-- type: geonode:documents
-  url: https://geoportal.planificare-maritima.unibuc.ro/api/documents/
-- type: geonode:dcatus11
-  url: https://geoportal.planificare-maritima.unibuc.ro/data.json
-- type: wms111
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wfs110
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: csw202
-  url: https://geoportal.planificare-maritima.unibuc.ro/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: https://geoportal.planificare-maritima.unibuc.ro/catalogue/csw?mode=oaipmh&verb=Identify
-  version: '2.0'
-- type: wmts100
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: opensearch
-  url: https://geoportal.planificare-maritima.unibuc.ro/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
-  version: '1.0'
-- type: wms130
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
-- type: wfs100
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wfs200
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
-  version: 2.0.0
-- type: wcs100
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wcs110
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs11
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
-  version: '1.1'
-- type: wcs201
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
-  version: 2.0.1
-- type: wps100
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: tms100
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/gwc/service/tms/1.0.0
-  version: 1.0.0
-- type: wms-c111
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
-  version: 1.1.1
-- type: geoserver:version
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/rest/about/version
-- type: geoserver:settings
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/rest/settings
-- type: geoserver:layers
-  url: https://geoportal.planificare-maritima.unibuc.ro/geoserver/rest/layers
-- type: opensearch
-  url: https://geoportal.planificare-maritima.unibuc.ro/catalogue/opensearch
-- type: sitemap
-  url: https://geoportal.planificare-maritima.unibuc.ro/sitemap.xml
+      name: Eastern Europe
+description: Former University of Bucharest GeoNode for maritime spatial planning.
+  The geoportal.planificare-maritima.unibuc.ro host no longer resolves. The TEAM4SEAS
+  project site remains at https://planificare-maritima.unibuc.ro/.
 id: geoportalplanificaremaritimaunibucro
 langs:
 - id: RO
   name: Romanian
 link: https://geoportal.planificare-maritima.unibuc.ro
-name: University of Bucharest Geoportal
+name: University of Bucharest maritime spatial planning GeoNode
 owner:
-  link: https://geoportal.planificare-maritima.unibuc.ro
+  link: https://unibuc.ro/
   location:
     country:
       id: RO
@@ -111,11 +45,12 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 tags:
 - maritime
 - planning
 - geospatial
+- inactive
 topics:
 - id: Location
   name: Location
@@ -126,4 +61,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00000598
+uid: cdi00035033

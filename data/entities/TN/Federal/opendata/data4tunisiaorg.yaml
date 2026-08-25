@@ -14,7 +14,8 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Share, improve and reuse public data. Contribute! Best reuse cases.
+description: Civil-society uData catalog of Tunisian public datasets, operated by
+  Cahiers de la Liberté to share, improve, and reuse government and civic data.
 endpoints:
 - type: udataapi
   url: https://data4tunisia.org/api/1
@@ -24,8 +25,10 @@ id: data4tunisiaorg
 langs:
 - id: FR
   name: French
+- id: AR
+  name: Arabic
 link: https://data4tunisia.org
-name: Boosting Open Data in Tunisia!
+name: data4tunisia
 owner:
   link: http://www.cahiersdelaliberte.org
   location:
@@ -50,11 +53,17 @@ software:
 status: active
 tags:
 - has_api
-- Open Data
-- Public Data
+- open data
+- civil society
 - Tunisia
 topics:
-- id: Location
-  name: Location
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00001571

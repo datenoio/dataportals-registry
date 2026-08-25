@@ -15,15 +15,24 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: National DHIS2 Health Information System (SIS) of the Ministry of Health
-  of Sao Tome and Principe. Login is required to query routine health indicators.
+description: National Health Information System (SIS) of the Ministry of Health of
+  Sao Tome and Principe, built on DHIS2. The public landing page at dhis2.gov.st
+  describes the aggregate SIS instance (/sis), the individual/tracker instance (/tracker),
+  and the SIVE epidemiological surveillance instance (/sive). Login is required to
+  query routine health indicators.
 endpoints:
 - type: dhis2:catalog
   url: https://dhis2.gov.st/sis
+- type: dhis2:catalog
+  url: https://dhis2.gov.st/tracker
+- type: dhis2:catalog
+  url: https://dhis2.gov.st/sive
 id: dhis2govst
 langs:
 - id: PT
   name: Portuguese
+- id: EN
+  name: English
 link: https://dhis2.gov.st/sis
 name: Sistema de Informação da Saúde (SIS)
 owner:
@@ -56,6 +65,7 @@ tags:
 - government
 - restricted
 - Sao Tome and Principe
+- SIVE
 topics:
 - id: HEAL
   name: Health

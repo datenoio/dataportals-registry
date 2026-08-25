@@ -16,8 +16,8 @@ coverage:
       name: Western Africa
 description: National Data Archive (NADA) of Benin's Institut National de la
   Statistique et de la Démographie (INStaD, formerly INSAE). Catalogues census and
-  survey microdata with searchable metadata; the previous host nada.insae-bj.org
-  now returns HTTP 423 Locked.
+  survey microdata with searchable metadata and a public NADA REST/CSV export.
+  The previous host nada.insae-bj.org now returns HTTP 423 Locked.
 endpoints:
 - type: nada:catalog-search
   url: https://www.nada.instad.bj/index.php/api/v2/catalog/search
@@ -27,8 +27,8 @@ id: nadainsaebj
 langs:
 - id: FR
   name: French
-link: https://www.nada.instad.bj/index.php
-name: ARCHIVES DES ENQUETES STATISTIQUES DU BENIN
+link: https://www.nada.instad.bj/index.php/catalog
+name: Archives des enquêtes statistiques du Bénin
 owner:
   link: https://instad.bj
   location:
@@ -40,6 +40,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -55,8 +56,9 @@ tags:
 - statistics
 - demography
 - survey
-- Benin
 - census
+- government
+- has_api
 topics:
 - id: SOCI
   name: Population and society

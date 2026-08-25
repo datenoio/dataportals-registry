@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: WIS 2.0 in a box provides a platform with the capabilities for centres
-  to integrate their data holdings and publish them to the WMO Information System
-  with a plug and play capability supporting data publishing, discovery and access
+description: Ghana Meteorological Agency WIS 2.0 in a box node. Publishes discovery
+  metadata, stations, SYNOP surface observations, and data notifications to the WMO
+  Information System via pygeoapi.
 endpoints:
 - type: pygeoapi:openapi
   url: https://wis2.meteo.gov.gh/oapi/openapi
@@ -42,6 +42,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -57,6 +58,8 @@ tags:
 - meteorology
 - climate
 - WIS2
+- has_api
+- government
 topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere

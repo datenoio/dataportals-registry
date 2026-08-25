@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,20 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Geospatial data catalog providing ArcGIS REST services hosted by Uruguay's
-  RENARE (Direction of Renewable Natural Resources, Ministry of Livestock, Agriculture,
-  and Fisheries)
-endpoints:
-- type: arcgis:rest:services
-  url: http://web.renare.gub.uy/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: http://web.renare.gub.uy/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: http://web.renare.gub.uy/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: http://web.renare.gub.uy/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: http://web.renare.gub.uy/arcgis/rest/services?f=kmz
+description: Former ArcGIS REST services of Uruguay's Dirección de Recursos Naturales
+  Renovables (RENARE / MGAP). The host web.renare.gub.uy no longer resolves.
 id: webrenaregubuy
 langs:
 - id: ES
@@ -36,13 +24,13 @@ langs:
 link: http://web.renare.gub.uy/arcgis/rest/services
 name: RENARE ArcGIS REST Services
 owner:
-  link: http://web.renare.gub.uy
+  link: https://www.gub.uy/ministerio-ganaderia-agricultura-pesca
   location:
     country:
       id: UY
       name: Uruguay
     level: 20
-  name: Dirección de Recursos Naturales Renovables (RENARE)
+  name: Dirección General de Recursos Naturales (MGAP)
   type: Central government
 properties:
   has_doi: false
@@ -56,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - geospatial
 - ArcGIS

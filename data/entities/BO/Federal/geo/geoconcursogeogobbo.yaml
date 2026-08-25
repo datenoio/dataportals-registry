@@ -10,12 +10,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: GeoBolivia Geoconcurso - geospatial information portal of Bolivia (GeoNode)
-endpoints:
-- type: geonode:datasets
-  url: https://geoconcurso.geo.gob.bo/api/datasets/
-- type: geonode:documents
-  url: https://geoconcurso.geo.gob.bo/api/documents/
+description: Former GeoBolivia GeoNode used for a geospatial data contest. The
+  host geoconcurso.geo.gob.bo no longer resolves.
 id: geoconcursogeogobbo
 langs:
 - id: ES
@@ -34,24 +30,24 @@ owner:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 topics:
-- id: Geospatial
-  name: Geospatial
+- id: ENVI
+  name: Environment
   type: eudatatheme
-- id: Geography
-  name: Geography
-  type: eudatatheme
-- id: Maps
-  name: Maps
-  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: cdi00021434
 tags:
 - GIS
 - geospatial
 - government
-api: true
-api_status: active
+api: false
+api_status: inactive
 content_types:
 - dataset
 - map_layer

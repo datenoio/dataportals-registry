@@ -4,6 +4,7 @@ api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
+- indicator
 - dataset
 coverage:
 - location:
@@ -15,16 +16,19 @@ coverage:
       id: '011'
       name: Western Africa
 description: National Open SDG reporting site for Nigeria, published by the National
-  Bureau of Statistics with goal, target, and indicator pages and bulk data download.
+  Bureau of Statistics with goal, target, and indicator pages. Indicator JSON is served
+  from the companion sdg-data GitHub Pages path.
 endpoints:
+- type: opensdg:catalog
+  url: https://sdgs-nigeria.github.io/reporting-status/
 - type: opensdg:data
-  url: https://sdgs-nigeria.github.io/production-data/en/data/1-1-1.json
+  url: https://sdgs-nigeria.github.io/sdg-data/en/data/1-1-1.json
 id: sdgsnigeriagithubio
 langs:
 - id: EN
   name: English
 link: https://sdgs-nigeria.github.io/
-name: Indicators For The Sustainable Development Goals (Nigeria)
+name: Indicators for the Sustainable Development Goals (Nigeria)
 owner:
   link: https://www.nigerianstat.gov.ng
   location:
@@ -51,8 +55,9 @@ status: active
 tags:
 - SDGs
 - Nigeria
-- Official Statistics
+- official statistics
 - NBS
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector

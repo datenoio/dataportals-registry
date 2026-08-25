@@ -8,33 +8,33 @@ content_types:
 coverage:
 - location:
     country:
-      id: CH
-      name: Switzerland
+      id: World
+      name: World
     level: 20
     macroregion:
-      id: '155'
-      name: Western Europe
+      id: '001'
+      name: World
 description: The CERN Open Data portal is the access point to a growing range of data
   produced through the research performed at CERN. It disseminates the preserved output
   from various research activities and includes accompanying software and documentation
   needed to understand and analyse the data.
 endpoints:
 - type: inveniordmapi:records
-  url: http://opendata.cern.ch/api/records
+  url: https://opendata.cern.ch/api/records
 - type: sitemap
-  url: http://opendata.cern.ch/sitemap.xml
+  url: https://opendata.cern.ch/sitemap.xml
 id: opendatacernch
 identifiers:
 - id: re3data
   url: https://www.re3data.org/repository/r3d100011381
   value: r3d100011381
 - id: datacite
-  url: http://opendata.cern.ch
+  url: https://opendata.cern.ch
   value: cern.opendata
 langs:
-- id: DE
-  name: German
-link: http://opendata.cern.ch
+- id: EN
+  name: English
+link: https://opendata.cern.ch
 name: CERN Open Data Portal
 owner:
   link: https://www.cern.ch
@@ -44,7 +44,7 @@ owner:
       name: Switzerland
     level: 20
   name: CERN
-  type: Academy
+  type: International
 properties:
   has_doi: true
   invenio-filters: Dataset
@@ -52,9 +52,9 @@ rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: http://opendata.cern.ch/privacy-policy
+  privacy_policy_url: https://opendata.cern.ch/privacy-policy
   rights_type: granular
-  tos_url: http://opendata.cern.ch/terms-of-use
+  tos_url: https://opendata.cern.ch/terms-of-use
 software:
   id: invenio
   name: InvenioRDM

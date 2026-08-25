@@ -14,11 +14,12 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Online portal containing the latest data available on Rwanda SDG indicators
-  and metadata, developed by the National Institute of Statistics of Rwanda (NISR).
-  The portal enables monitoring of Rwanda's progress on the 17 Sustainable Development
-  Goals.
+description: National OpenSDG reporting platform for Rwanda Sustainable Development
+  Goal indicators, maintained by the National Institute of Statistics of Rwanda (NISR).
+  Indicator JSON is published from the companion sdg-data-rwanda GitHub Pages repository.
 endpoints:
+- type: opensdg:catalog
+  url: https://sustainabledevelopment-rwanda.github.io/reporting-status/
 - type: opensdg:data
   url: https://sustainabledevelopment-rwanda.github.io/sdg-data-rwanda/en/data/1-1-1.json
 - type: opensdg:data
@@ -40,6 +41,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -55,13 +57,9 @@ tags:
 - SDGs
 - statistics
 - Rwanda
-- monitoring
-- data
-- indicators
-- metadata
-- Sustainable Development Goals
-- progress tracking
-- public sector
+- OpenSDG
+- official statistics
+- has_api
 topics:
 - id: SOCI
   name: Population and society
@@ -72,11 +70,14 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
 - id: Society
   name: Society
   type: iso19115
-- id: Biota
-  name: Biota
+- id: Economy
+  name: Economy
   type: iso19115
 - id: Environment
   name: Environment

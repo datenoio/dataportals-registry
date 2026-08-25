@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,23 +13,10 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: 'REST services endpoint for geo datasets. Expected use: access to geospatial
-  data and mapping services.'
-endpoints:
-- type: arcgis:rest:info
-  url: https://air.space.noa.gr/gisnoa/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://air.space.noa.gr/gisnoa/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://air.space.noa.gr/gisnoa/services?wsdl
-- type: arcgis:sitemap
-  url: https://air.space.noa.gr/gisnoa/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://air.space.noa.gr/gisnoa/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://air.space.noa.gr/gisnoa/rest/services?f=kmz
+description: Former National Observatory of Athens ArcGIS REST catalog (GISNOA). The
+  services path now returns HTTP 404.
 id: airspacenoagr
 langs:
 - id: EL
@@ -57,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - GIS
 - Greece
@@ -75,4 +62,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005896
+uid: cdi00035385

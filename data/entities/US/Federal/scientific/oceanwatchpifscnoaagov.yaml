@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: OceanWatch - Central Pacific TDS. scientific data repository. managed
+  by NOAA OceanWatch - Central Pacific. powered by Thredds. accessible at oceanwatch.pifsc.noaa.gov.
+endpoints:
+- type: thredds:catalog
+  url: https://oceanwatch.pifsc.noaa.gov/thredds/catalog.xml
+- type: thredds:info
+  url: https://oceanwatch.pifsc.noaa.gov/thredds/serverInfo.xml
+id: oceanwatchpifscnoaagov
+langs:
+- id: EN
+  name: English
+link: https://oceanwatch.pifsc.noaa.gov/thredds/catalog.html
+name: OceanWatch - Central Pacific TDS
+owner:
+  link: https://oceanwatch.pifsc.noaa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: NOAA OceanWatch - Central Pacific
+  type: Central government
+properties:
+  is_national: true
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- meteorology
+- atmosphere
+- climate
+- ocean
+- earth science
+- NOAA
+- Fisheries
+- Pacific Islands
+- Oceanography
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Ocean
+  name: Ocean
+  type: iso19115
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00005343

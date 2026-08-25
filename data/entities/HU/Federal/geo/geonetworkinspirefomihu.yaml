@@ -15,27 +15,21 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
+description: National INSPIRE GeoNetwork catalogue operated by Lechner Knowledge Center,
+  successor to the former FÖMI geonetwork.inspire.fomi.hu service. Discovers Hungarian
+  spatial datasets and network services required by the INSPIRE Directive.
 endpoints:
-- type: geonetwork:query
-  url: http://geonetwork.inspire.fomi.hu/geonetwork/srv/eng/q
-- type: openapi
-  url: http://geonetwork.inspire.fomi.hu/geonetwork/srv/v2/api-docs
-  version: '2'
 - type: csw202
-  url: http://geonetwork.inspire.fomi.hu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://inspire.lechnerkozpont.hu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
-- type: opensearch
-  url: http://geonetwork.inspire.fomi.hu/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: http://geonetwork.inspire.fomi.hu/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
 id: geonetworkinspirefomihu
 langs:
 - id: HU
   name: Hungarian
-link: http://geonetwork.inspire.fomi.hu/geonetwork
-name: Hungarian Inspire Portal 1.1 Lechner Knowledge Center
+- id: EN
+  name: English
+link: https://inspire.lechnerkozpont.hu/geonetwork
+name: Hungarian INSPIRE GeoNetwork Catalogue
 owner:
   link: https://lechnerkozpont.hu
   location:
@@ -62,6 +56,8 @@ tags:
 - geospatial
 - government
 - has_api
+- INSPIRE
+- Hungary
 topics:
 - id: Location
   name: Location
@@ -73,5 +69,3 @@ topics:
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00002085
-description: Geoportal. managed by Lechner Knowledge Center. powered by Geonetwork.
-  accessible at geonetwork.inspire.fomi.hu.

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -41,23 +41,14 @@ description: 'Buscar, visualizar, descargar, crear Agricultura Límites Economí
   on-going events that align with existing local community events when possible. Examples:
   Data working session Community Hackathon - Flickr: ajturner Contact Information
   support@esri.com About Contact Us'
-endpoints:
-- type: dcatap201
-  url: https://prueba-ider-2021-cundinamarca-map.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://prueba-ider-2021-cundinamarca-map.hub.arcgis.com/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://prueba-ider-2021-cundinamarca-map.hub.arcgis.com/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://prueba-ider-2021-cundinamarca-map.hub.arcgis.com/api/search/v1
 id: pruebaider2021cundinamarcamaphubarcgiscom
 langs:
 - id: ES
   name: Spanish
 link: https://prueba-ider-2021-cundinamarca-map.hub.arcgis.com/
-name: prueba-ider-2021-cundinamarca-map
+name: IDER Cundinamarca test hub (2021)
 owner:
-  link: https://prueba-ider-2021-cundinamarca-map.com
+  link: https://ider.cundinamarca.gov.co
   location:
     country:
       id: CO
@@ -66,8 +57,8 @@ owner:
     subregion:
       id: CO-CUN
       name: Cundinamarca
-  name: Infraestructura de Datos Espaciales Cundinamarca IDEC
-  type: Local government
+  name: Infraestructura de Datos Espaciales Regional (IDER) Cundinamarca
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -80,7 +71,7 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
 - ArcGIS
 - GIS

@@ -9,14 +9,14 @@ content_types:
 coverage:
 - location:
     country:
-      id: KE
-      name: Kenya
+      id: Africa
+      name: Africa
     level: 20
     macroregion:
-      id: '014'
-      name: Eastern Africa
-description: RCMRD Disaster Risk Reduction (DRR) geoportal providing access to spatial
-  data and maps for disaster risk reduction in Eastern and Southern Africa.
+      id: '002'
+      name: Africa
+description: RCMRD Disaster Risk Reduction (DRR) ArcGIS Hub for spatial data and maps
+  supporting disaster risk reduction in Eastern and Southern Africa.
 endpoints:
 - type: dcatap201
   url: https://drr.rcmrd.org/api/feed/dcat-ap/2.0.1.json
@@ -48,18 +48,26 @@ software:
   name: ArcGIS Hub
 status: active
 tags:
-- ArcGIS
 - GIS
 - geospatial
-- kenya
+- disaster risk
+- Africa
+- RCMRD
+- has_api
 topics:
-- id: GOVE
-  name: Government and public sector
+- id: ENVI
+  name: Environment
   type: eudatatheme
-- id: Location
-  name: Location
+- id: JUST
+  name: Justice, legal system and public safety
+  type: eudatatheme
+- id: Environment
+  name: Environment
   type: iso19115
-- id: Boundaries
-  name: Boundaries
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
   type: iso19115
 uid: cdi00021026

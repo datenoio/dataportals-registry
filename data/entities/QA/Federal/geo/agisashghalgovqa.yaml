@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Public GIS services provided by the Public Works Authority (Ashghal)
-  of Qatar, accessible via REST endpoints.
+description: ArcGIS Server REST directory of the Public Works Authority (Ashghal),
+  publishing infrastructure GIS services for roads, drainage, and public works across
+  Qatar.
 endpoints:
 - type: arcgis:rest:info
   url: https://agis.ashghal.gov.qa/gisserver/rest/info?f=pjson
@@ -34,8 +35,10 @@ id: agisashghalgovqa
 langs:
 - id: AR
   name: Arabic
+- id: EN
+  name: English
 link: https://agis.ashghal.gov.qa/gisserver/rest/services
-name: The Public Works Authority 'Ashghal' geoserver
+name: Ashghal GIS services
 owner:
   link: https://www.ashghal.gov.qa
   location:
@@ -43,10 +46,11 @@ owner:
       id: QA
       name: Qatar
     level: 20
-  name: The Public Works Authority 'Ashghal'
+  name: Public Works Authority (Ashghal)
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -65,9 +69,14 @@ tags:
 - roads
 - drainage
 - public works
+- government
+- has_api
 topics:
 - id: TRAN
   name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
 - id: Transportation
   name: Transportation

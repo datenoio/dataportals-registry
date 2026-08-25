@@ -11,14 +11,13 @@ coverage:
     country:
       id: KW
       name: Kuwait
-    level: 30
+    level: 20
     macroregion:
       id: '145'
       name: Western Asia
-    subregion:
-      id: KW-KU
-      name: Al ‘Āşimah
-description: GIS data catalog for Municipality of Kuwait
+description: ArcGIS Server REST catalog of Kuwait Municipality, publishing cadastral
+  and municipal map services including parcels, blocks, neighborhoods, roads, parking
+  areas, and governorate boundaries.
 endpoints:
 - type: arcgis:rest:info
   url: https://gismaps.baladia.gov.kw/arcgis/rest/info?f=pjson
@@ -36,8 +35,10 @@ id: gismapsbaladiagovkw
 langs:
 - id: AR
   name: Arabic
+- id: EN
+  name: English
 link: https://gismaps.baladia.gov.kw/arcgis/rest/services
-name: baladia.gov.kw ArcGIS REST Services Directory
+name: Kuwait Municipality GIS
 owner:
   link: https://www.baladia.gov.kw
   location:
@@ -48,8 +49,8 @@ owner:
     subregion:
       id: KW-KU
       name: Al ‘Āşimah
-  name: Kuwait city
-  type: Regional government
+  name: Kuwait Municipality
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -64,23 +65,32 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- GIS
 - ArcGIS
-- Kuwait
-- Municipality
-- data catalog
-- rest services
+- cadastre
+- geoportal
+- GIS
+- has_api
+- municipality
 topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: Society
-  name: Society
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
   type: iso19115
 - id: Structure
   name: Structure
   type: iso19115
-- id: Boundaries
-  name: Boundaries
+- id: Transportation
+  name: Transportation
   type: iso19115
 uid: cdi00004944

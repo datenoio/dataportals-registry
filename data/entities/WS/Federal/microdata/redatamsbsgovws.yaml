@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - microdata
@@ -15,26 +15,27 @@ coverage:
     macroregion:
       id: '061'
       name: Polynesia
-description: REDATAM census query portal of the Samoa Bureau of Statistics. Users
-  tabulate population and housing census microdata from 2006, 2011, and 2016.
+description: REDATAM census query portal of the Samoa Bureau of Statistics. It previously
+  tabulated 2006, 2011, and 2016 population and housing census microdata. The host
+  no longer responds.
 id: redatamsbsgovws
 langs:
 - id: EN
   name: English
-link: http://redatam.sbs.gov.ws/cgibin/RpWebEngine.exe/PortalAction?BASE=MYAPP2016
+link: http://redatam.sbs.gov.ws
 name: Samoa SBS REDATAM Census
 owner:
-  link: http://www.sbs.gov.ws
+  link: https://www.sbs.gov.ws
   location:
     country:
       id: WS
       name: Samoa
     level: 20
-  name: Samoa Bureau of Statistics (SBS)
+  name: Samoa Bureau of Statistics
   type: Central government
 properties:
   has_doi: false
-  is_national: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -45,13 +46,12 @@ rights:
 software:
   id: redatam
   name: REDATAM
-status: active
+status: inactive
 tags:
 - statistics
 - government
 - census
 - microdata
-- REDATAM
 - Samoa
 topics:
 - id: SOCI
@@ -64,8 +64,3 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00023345
-endpoints:
-- type: redatam
-  url: http://redatam.sbs.gov.ws/cgibin/RpWebEngine.exe/PortalAction?BASE=MYAPP2016
-- type: redatam
-  url: http://redatam.sbs.gov.ws/cgibin/RpWebEngine.exe/Portal

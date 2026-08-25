@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GL
+      name: Greenland
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ArcGIS Hub catalog of Regional Baseline Assessments for mining in Greenland,
+  with environmental background layers, reports, and downloadable spatial data produced
+  by EAMRA, the Greenland Institute of Natural Resources, and DCE Aarhus University.
+endpoints:
+- type: dcatap201
+  url: https://rba.eamra.gl/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://rba.eamra.gl/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://rba.eamra.gl/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://rba.eamra.gl/api/search/v1
+- type: sitemap
+  url: https://rba.eamra.gl/sitemap.xml
+id: rbaeamragl
+langs:
+- id: EN
+  name: English
+- id: DA
+  name: Danish
+link: https://rba.eamra.gl/
+name: Regional Baseline Assessments
+owner:
+  link: https://eamra.gl
+  location:
+    country:
+      id: GL
+      name: Greenland
+    level: 20
+  name: Environmental Agency for Mineral Resource Activities
+  type: Central government
+properties:
+  has_doi: false
+  dataset_count_reported: 166
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- baseline assessment
+- mineral resource activities
+- Greenland
+- environmental data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00002722

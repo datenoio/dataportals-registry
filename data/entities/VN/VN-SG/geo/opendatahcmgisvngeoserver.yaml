@@ -15,11 +15,27 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-    subregion: &id001
+    subregion:
       id: VN-SG
       name: Hồ Chí Minh
-description: Public geospatial data portal for Ho Chi Minh City, providing access
-  to various GIS datasets.
+description: GeoServer backend of the HCMGIS Open Data GeoNode, exposing WMS and WFS
+  services for Ho Chi Minh City open geospatial layers.
+endpoints:
+- type: wms111
+  url: https://opendata.hcmgis.vn/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://opendata.hcmgis.vn/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://opendata.hcmgis.vn/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://opendata.hcmgis.vn/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://opendata.hcmgis.vn/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
 id: opendatahcmgisvngeoserver
 langs:
 - id: VN
@@ -33,9 +49,11 @@ owner:
       id: VN
       name: Vietnam
     level: 30
-    subregion: *id001
+    subregion:
+      id: VN-SG
+      name: Hồ Chí Minh
   name: Ho Chi Minh City
-  type: Regional government
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -60,6 +78,7 @@ tags:
 - WMS
 - HCMGIS
 - geoserver
+- has_api
 topics:
 - id: TRAN
   name: Transport
@@ -100,20 +119,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00001093
-endpoints:
-- type: wms111
-  url: https://opendata.hcmgis.vn/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wms130
-  url: https://opendata.hcmgis.vn/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
-- type: wfs100
-  url: https://opendata.hcmgis.vn/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wfs110
-  url: https://opendata.hcmgis.vn/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wfs200
-  url: https://opendata.hcmgis.vn/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
-  version: 2.0.0
+uid: cdi00034907

@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Not explicitly provided in the URL or search results, but inferred as
-  a geospatial data portal.
+description: GeoServer for SafeMap (생활안전지도), the Ministry of the Interior and Safety
+  public safety map, exposing disaster, crime, traffic, health, and related safety
+  layers via OGC services.
 endpoints:
 - type: wms111
   url: https://geo.safemap.go.kr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,17 +66,15 @@ langs:
 - id: KO
   name: Korean
 link: https://geo.safemap.go.kr/geoserver/web/
-name: Not specified in provided context (likely a government agency, but not explicitly
-  stated) Geoportal
+name: SafeMap GeoServer
 owner:
-  link: https://geo.safemap.go.kr
+  link: https://www.mois.go.kr
   location:
     country:
       id: KR
       name: South Korea
     level: 20
-  name: Not specified in provided context (likely a government agency, but not explicitly
-    stated)
+  name: Ministry of the Interior and Safety
   type: Central government
 properties:
   has_doi: false
@@ -93,7 +92,8 @@ status: active
 tags:
 - geospatial
 - geoserver
-- webportal
+- safety
+- disaster
 topics:
 - id: ENVI
   name: Environment

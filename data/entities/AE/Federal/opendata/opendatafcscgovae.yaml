@@ -14,29 +14,31 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Official open data catalog of the UAE Federal Competitiveness and Statistics
-  Centre (FCSC)
+description: Official CKAN open data catalog of the Federal Competitiveness and Statistics
+  Centre, publishing federal and emirate government datasets for the UAE.
 endpoints:
 - type: ckan
-  url: https://ckan.fcsc.production.datopian.com/api/3
+  url: https://opendata.fcsc.gov.ae/api/3
 - type: ckan:package-search
-  url: https://ckan.fcsc.production.datopian.com/api/3/action/package_search
+  url: https://opendata.fcsc.gov.ae/api/3/action/package_search
 - type: ckan:package-list
-  url: https://ckan.fcsc.production.datopian.com/api/3/action/package_list
+  url: https://opendata.fcsc.gov.ae/api/3/action/package_list
 id: opendatafcscgovae
 langs:
+- id: AR
+  name: Arabic
 - id: EN
   name: English
 link: https://opendata.fcsc.gov.ae
-name: Statistics Portal - Open Data UAE
+name: Open Data UAE
 owner:
-  link: https://www.gov.ae
+  link: https://fcsc.gov.ae
   location:
     country:
       id: AE
       name: United Arab Emirates
     level: 20
-  name: Government of UAE
+  name: Federal Competitiveness and Statistics Centre
   type: Central government
 rights:
   license_id: null

@@ -14,24 +14,26 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: This is the IPT installation for Côte-d'Ivoire (Ivory Coast), hosted
-  by GBIF France.
+description: GBIF Integrated Publishing Toolkit (IPT) for Côte d'Ivoire, hosted by
+  GBIF France and operated with the Centre National de Floristique.
 endpoints:
 - type: dcat:ttl
-  url: http://ipt-cotedivoire.gbif.fr/dcat
+  url: https://ipt-cotedivoire.gbif.fr/dcat
 - type: ipt:dataset
-  url: http://ipt-cotedivoire.gbif.fr/inventory/dataset
+  url: https://ipt-cotedivoire.gbif.fr/inventory/dataset
 - type: rss
-  url: http://ipt-cotedivoire.gbif.fr/rss.do
+  url: https://ipt-cotedivoire.gbif.fr/rss.do
   version: '2.0'
 id: iptcotedivoiregbiffr
 langs:
 - id: FR
   name: French
-link: http://ipt-cotedivoire.gbif.fr
+- id: EN
+  name: English
+link: https://ipt-cotedivoire.gbif.fr
 name: IPT de Côte-d'Ivoire
 owner:
-  link: http://univ-fhb.edu.ci
+  link: https://univ-fhb.edu.ci
   location:
     country:
       id: CI
@@ -39,6 +41,9 @@ owner:
     level: 20
   name: Centre National de Floristique
   type: Academy
+properties:
+  has_doi: true
+  dataset_count_reported: 46
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)

@@ -15,32 +15,33 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: GeoNetwork je program otvorenog koda koji omogućuje jednostavno dijeljenje
-  geografsko referiranih tematskih informacija između različitih organizacija.
+description: GeoNetwork metadata catalogue of the Croatian Bureau of Statistics (GeoSTAT)
+  for sharing geographically referenced statistical and spatial information. The
+  catalogue moved from geostat.dzs.hr to geostat.gov.hr.
 endpoints:
 - type: geonetwork:query
-  url: https://geostat.dzs.hr/geonetwork/srv/eng/q
+  url: https://geostat.gov.hr/geonetwork/srv/eng/q
 - type: openapi
-  url: https://geostat.dzs.hr/geonetwork/srv/v2/api-docs
+  url: https://geostat.gov.hr/geonetwork/srv/v2/api-docs
   version: '2'
 - type: csw202
-  url: https://geostat.dzs.hr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://geostat.gov.hr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: opensearch
-  url: https://geostat.dzs.hr/geonetwork/srv/eng/portal.opensearch
+  url: https://geostat.gov.hr/geonetwork/srv/eng/portal.opensearch
   version: '1.0'
 - type: oaipmh20
-  url: https://geostat.dzs.hr/geonetwork/srv/eng/oaipmh?verb=Identify
+  url: https://geostat.gov.hr/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 - type: geonetwork:site
-  url: https://geostat.dzs.hr/geonetwork/srv/api/site
+  url: https://geostat.gov.hr/geonetwork/srv/api/site
 - type: opensearch
-  url: https://geostat.dzs.hr/portal.opensearch
+  url: https://geostat.gov.hr/portal.opensearch
 id: geostatdzshr
 langs:
 - id: HR
   name: Croatian
-link: https://geostat.dzs.hr/geonetwork
+link: https://geostat.gov.hr/geonetwork
 name: DZS katalog metapodataka - GeoSTAT
 owner:
   link: https://dzs.gov.hr
@@ -49,7 +50,7 @@ owner:
       id: HR
       name: Croatia
     level: 20
-  name: Statistical System of the Republic of Croatia
+  name: Croatian Bureau of Statistics
   type: Central government
 properties:
   has_doi: true

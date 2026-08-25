@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,17 +13,13 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
 description: The Hellenic Cadastre, in order to harmonize the data it produces and
   updates with the INSPIRE directive, it has created the Hellenic Cadastre INSPIRE
   Geoportal. With the Hellenic Cadastre INSPIRE Geoportal the user can search, display,
   download and invoke geospatial data of the Hellenic Cadastre Agency in accordance
   with the requirements of the INSPIRE Directive.
-endpoints:
-- type: csw202
-  url: https://www.ktimanet.gr/geoportal/csw
-  version: 3.0.0
 id: wwwktimanetgr
 langs:
 - id: EL
@@ -51,7 +47,7 @@ rights:
 software:
   id: esrigeo
   name: Esri Geoportal Server
-status: active
+status: inactive
 tags:
 - cadastre
 - parcels

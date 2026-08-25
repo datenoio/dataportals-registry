@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -20,6 +20,9 @@ coverage:
       name: New York
 description: ROC Health Data mapping and local health assessment hub for the Rochester
   region, with a CARES SparkMap Map Room and community health indicator reports.
+endpoints:
+- type: sparkmap:catalog
+  url: https://rochealthdata.org/
 id: rochealthdataorg
 langs:
 - id: EN

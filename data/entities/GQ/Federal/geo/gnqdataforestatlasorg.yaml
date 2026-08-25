@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,13 +15,10 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: Open-data hub of the Equatorial Guinea Forest Atlas (WRI / Ministerio
-  de Agricultura, Ganadería, Bosques y Medio Ambiente). Public ArcGIS Hub for forest
-  and land-use layers developed with INDEFOR-AP. DCAT and OGC Records feeds currently
-  return 401/404.
-endpoints:
-- type: arcgishub:catalog
-  url: https://gnq-data.forest-atlas.org
+description: Former ArcGIS Hub open-data catalog of the Equatorial Guinea Forest Atlas
+  (MAGBMA / INDEFOR-AP with WRI). The Hub subscription is canceled (Esri SB_0006);
+  the host returns 404 and DCAT/OGC feeds are inaccessible. The interactive atlas
+  remains at gnq.forest-atlas.org.
 id: gnqdataforestatlasorg
 langs:
 - id: ES
@@ -52,7 +49,7 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
 - forest atlas
 - forestry

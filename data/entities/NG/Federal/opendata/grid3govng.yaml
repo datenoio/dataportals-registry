@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Datasets list
 content_types:
 - dataset
@@ -14,22 +14,23 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Data catalog of GRID3 datasets for Nigeria
+description: Former GRID3 Nigeria public dataset listing for population, settlements,
+  boundaries, and infrastructure layers. The programme geodatabase was transferred
+  to NASRDA. The hostname grid3.gov.ng currently times out.
 id: grid3govng
 langs:
 - id: EN
   name: English
 link: https://grid3.gov.ng/datasets
-name: The Geo-Referenced Infrastructure and Demographic Data for Development (GRID3)
-  programme datasets
+name: GRID3 Nigeria datasets
 owner:
-  link: https://www.gov.ng
+  link: https://central.nasrda.gov.ng
   location:
     country:
       id: NG
       name: Nigeria
     level: 20
-  name: Federal Republic of Nigeria
+  name: National Space Research and Development Agency (NASRDA)
   type: Central government
 rights:
   license_id: null
@@ -41,15 +42,14 @@ rights:
 software:
   id: custom
   name: Custom software
-status: active
+status: inactive
 tags:
 - government
-- has_api
-- grid3
-- nigeria
+- GRID3
+- Nigeria
 - population
 - settlements
-- environmental
+- geospatial
 topics:
 - id: REGI
   name: Regions and cities
@@ -61,6 +61,3 @@ topics:
   name: Environment
   type: eudatatheme
 uid: cdi00001162
-endpoints:
-- type: sitemap
-  url: https://grid3.gov.ng/sitemap.xml

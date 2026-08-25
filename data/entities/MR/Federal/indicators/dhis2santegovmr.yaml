@@ -20,6 +20,10 @@ description: National DHIS2 health management information system (SNIS) of the M
 endpoints:
 - type: dhis2:catalog
   url: https://dhis2.sante.gov.mr/dhis
+- type: dhis2:system-info
+  url: https://dhis2.sante.gov.mr/dhis/api/system/info
+- type: dhis2:datasets
+  url: https://dhis2.sante.gov.mr/dhis/api/dataSets.json?fields=id,displayName&pageSize=1
 id: dhis2santegovmr
 langs:
 - id: FR
@@ -57,6 +61,7 @@ tags:
 - DHIS2
 - government
 - restricted
+- has_api
 - Mauritania
 topics:
 - id: HEAL

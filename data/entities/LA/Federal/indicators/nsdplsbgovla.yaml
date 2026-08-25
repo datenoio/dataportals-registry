@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -15,9 +15,13 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: IMF e-GDDS National Summary Data Page for Lao PDR. Disseminates macroeconomic,
-  financial, and selected socio-demographic summary indicators with SDMX downloads,
-  maintained by the Lao Statistics Bureau and the Bank of the Lao PDR.
+description: IMF e-GDDS National Summary Data Page for Lao PDR, hosted by the Lao
+  Statistics Bureau at /lsb-en.htm. Disseminates macroeconomic, financial, and selected
+  socio-demographic summary indicators with SDMX downloads, jointly with the Bank
+  of the Lao PDR.
+endpoints:
+- type: imfnsdp:catalog
+  url: https://www.lsb.gov.la/lsb-en.htm
 id: nsdplsbgovla
 langs:
 - id: EN
@@ -39,8 +43,8 @@ properties:
   has_doi: false
   is_national: true
 software:
-  id: custom
-  name: Custom software
+  id: imfnsdp
+  name: IMF National Summary Data Page
 status: active
 tags:
 - statistics

@@ -13,11 +13,11 @@ coverage:
       name: Malta
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: 'Valley Management The LIFE Integrated Project is an eight-year project led by the Energy and Water Agency and co-financed under the EU LIFE Programme, which aims to support the implementation of the Water Framework Directive in Malta. This project will help towards the better management of all water resources in the Maltese Islands. The Valley Management Unit within Project Green is responsible for meeting the requirements of Action A8: Catchment Modelling under the LIFE Integrated Project and Action C9: Pilot Projects. The team is made up of a Principal Scientific Officer, GIS Manager, Research Manager, Ecologist, Geologist and Hydrologist. Through the cards below and tabs above, you can view and query the information we have gathered through the LIFE IP MT 008 project Actions A8 and C9. The data collected in the field can be seen in our WebGIS below, along with our methodology and more detailed information on our study areas. The tabs above lead you to more information about
-  our project, our research on ecosystem services, the way forward in terms of activities and research, and all the data that is freely downloadable from our Downloads &amp; Contacts tab. A detailed survey methodology was set up to collect scientific data needed for effective management and planning of interventions in Maltese valleys. Around 80km of watercourse within sixteen catchments, including the four largest catchments (Għasel, Kbir, Xlendi and Dwejra) were included within our study.A 50m buffer was mapped on either side of the stream network as the boundary for the detailed study area. The resulting area of circa 10km2 was surveyed intensively.More than 25,000 geographic objects were collected during the fieldwork, divided into 16 feature classes with more than 100 attribute fields.We invite you to explore the data using our interactive map. All the datasets presented are available for free download from our Downloads &amp; Contacts section. Contact Informationvalleymanagement.lifeip@gov.mt
-  About Privacy'
+description: ArcGIS Hub geoportal for the LIFE IP River Basin Management Plan project,
+  publishing valley catchment survey data, maps, and downloads for watercourse management
+  in Malta and Gozo.
 endpoints:
 - type: dcatap201
   url: https://lifeip-rbmp-geoportal-valleymanagement.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -27,22 +27,24 @@ endpoints:
   url: https://lifeip-rbmp-geoportal-valleymanagement.hub.arcgis.com/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://lifeip-rbmp-geoportal-valleymanagement.hub.arcgis.com/api/search/v1
+- type: dcatus11
+  url: https://lifeip-rbmp-geoportal-valleymanagement.hub.arcgis.com/data.json
 - type: sitemap
   url: https://lifeip-rbmp-geoportal-valleymanagement.hub.arcgis.com/sitemap.xml
 id: lifeiprbmpgeoportalvalleymanagementhubarcgiscom
 langs:
 - id: EN
   name: English
-link: https://lifeip-rbmp-geoportal-valleymanagement.hub.arcgis.com/
+link: https://lifeip-rbmp-geoportal-valleymanagement.hub.arcgis.com
 name: LIFE IP RBMP Geoportal - Valley Management
 owner:
-  link: https://lifeip-rbmp-geoportal-valleymanagement.hub.arcgis.com/
+  link: https://energywateragency.gov.mt
   location:
     country:
       id: MT
       name: Malta
     level: 20
-  name: Energy and Water Agency / Project Green
+  name: Energy and Water Agency
   type: Central government
 properties:
   has_doi: false
@@ -58,11 +60,19 @@ software:
   name: ArcGIS Hub
 status: active
 tags:
-- River Basin Management Plan
+- geospatial
+- environment
+- water
 - LIFE IP
-- Valley Management
+- Malta
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
 uid: cdi00002991

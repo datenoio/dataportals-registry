@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,28 +14,15 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Catalog accessible via REST services endpoint, likely providing geospatial
-  and GIS data services.
-endpoints:
-- type: arcgis:rest:info
-  url: http://www.ertigis.hu:8080/ertigiswa/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: http://www.ertigis.hu:8080/ertigiswa/rest/services?f=pjson
-- type: arcgis:soap
-  url: http://www.ertigis.hu:8080/ertigiswa/services?wsdl
-- type: arcgis:sitemap
-  url: http://www.ertigis.hu:8080/ertigiswa/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: http://www.ertigis.hu:8080/ertigiswa/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: http://www.ertigis.hu:8080/ertigiswa/rest/services?f=kmz
+      name: Eastern Europe
+description: Former ArcGIS Server REST directory at ertigis.hu. The host timed out
+  during review and is treated as offline.
 id: wwwertigishu
 langs:
 - id: HU
   name: Hungarian
 link: http://www.ertigis.hu:8080/ertigiswa/rest/services
-name: ertigis.hu data catalog
+name: ERTI GIS ArcGIS Server
 owner:
   link: http://www.ertigis.hu
   location:
@@ -43,7 +30,7 @@ owner:
       id: HU
       name: Hungary
     level: 20
-  name: Not specified in URL
+  name: ERTI GIS
   type: Business
 properties:
   has_doi: false
@@ -57,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - arcgisserver
 - data services

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,26 +11,27 @@ coverage:
     country:
       id: World
       name: World
-    level: 10
+    level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
-description: Data catalog providing public GIS services
+description: Catalog host 137.191.225.173:8801 did not respond on 25 August 2026
+  (timeout or connection refused). Operator and country are unconfirmed.
 id: '137191225173'
 langs:
 - id: EN
   name: English
 link: http://137.191.225.173:8801/publicgis/services
-name: Government of Unknown Geoportal
+name: Unidentified catalog (137.191.225.173:8801)
 owner:
   link: http://137.191.225.173:8801/publicgis/services
   location:
     country:
       id: World
       name: World
-    level: 10
-  name: Government of Unknown
-  type: Central government
+    level: 20
+  name: Unidentified operator
+  type: Other
 properties:
   has_doi: false
 rights:
@@ -43,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS
 - GIS
@@ -59,13 +60,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00005334
-endpoints:
-- type: dcatap201
-  url: http://137.191.225.173:8801/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: http://137.191.225.173:8801/api/feed/dcat-us/1.1.json
-- type: rss
-  url: http://137.191.225.173:8801/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: http://137.191.225.173:8801/api/search/v1
+uid: cdi00037312

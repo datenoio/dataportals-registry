@@ -24,6 +24,8 @@ endpoints:
   url: https://plateforme-urbaine.cm/api/projects
 - type: hydra:collection
   url: https://plateforme-urbaine.cm/api/atlases
+- type: hydra:apiDocumentation
+  url: https://plateforme-urbaine.cm/api/docs
 id: plateformeurbainecm
 langs:
 - id: FR
@@ -40,6 +42,7 @@ owner:
   name: Ministère de l'Habitat et du Développement Urbain (MINHDU)
   type: Central government
 properties:
+  dataset_count_reported: 528
   has_doi: false
   is_national: true
 rights:
@@ -57,8 +60,8 @@ tags:
 - urban
 - geospatial
 - Cameroon
-- QGIS
-- MapStore
+- government
+- has_api
 topics:
 - id: REGI
   name: Regions and cities

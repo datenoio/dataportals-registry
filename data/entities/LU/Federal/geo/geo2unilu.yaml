@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: A data catalog providing a collection of ArcGIS REST services accessible
-  via the given URL.
+description: ArcGIS Server REST services directory hosted by the University of
+  Luxembourg (geo2.uni.lu).
 endpoints:
 - type: arcgis:rest:info
   url: http://geo2.uni.lu:6080/arcgis/rest/info?f=pjson
@@ -32,18 +32,20 @@ endpoints:
   url: http://geo2.uni.lu:6080/arcgis/rest/services?f=kmz
 id: geo2unilu
 langs:
+- id: EN
+  name: English
 - id: FR
   name: French
 link: http://geo2.uni.lu:6080/arcgis/rest/services
-name: 'geo2.uni.lu: ArcGIS REST Services Catalog'
+name: University of Luxembourg ArcGIS REST Services
 owner:
-  link: http://geo2.uni.lu:6080/arcgis/rest/services
+  link: https://www.uni.lu
   location:
     country:
       id: LU
       name: Luxembourg
     level: 20
-  name: geo2.uni.lu
+  name: University of Luxembourg
   type: Academy
 properties:
   has_doi: false

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -12,11 +12,14 @@ coverage:
       name: World
     level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
 description: Inter-agency Agricultural Market Information System for wheat, maize,
   rice, soybeans, and fertilizer market balances, hosted by FAO and built on the FENIX
   platform.
+endpoints:
+- type: fenix:catalog
+  url: https://www.amis-outlook.org/statistics/crops
 id: wwwamisoutlookorg
 langs:
 - id: EN

@@ -15,8 +15,10 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: GIS mapping and environmental data services provided by the Ministry
-  of Environment and Natural Resources of El Salvador.
+description: Former ArcGIS REST services directory of El Salvador's Ministry of Environment
+  and Natural Resources. The HTTP REST root times out; HTTPS now redirects to the
+  SIMACC Experience Builder on geoportalsima.ambiente.gob.sv. Successor catalog is
+  MARN Geoportal SIMA.
 id: mapasmarngobsv
 langs:
 - id: ES
@@ -24,13 +26,13 @@ langs:
 link: http://mapas.marn.gob.sv/arcgis/rest/services
 name: MARN El Salvador ArcGIS REST Services
 owner:
-  link: https://www.marn.gob.sv
+  link: https://www.ambiente.gob.sv
   location:
     country:
       id: SV
       name: El Salvador
     level: 20
-  name: Ministry of Environment and Natural Resources (MARN)
+  name: Ministerio de Medio Ambiente y Recursos Naturales
   type: Central government
 properties:
   has_doi: false
@@ -46,10 +48,11 @@ software:
   name: ArcGIS Server
 status: inactive
 tags:
+- geospatial
+- government
+- environment
 - GIS
-- Environmental monitoring
-- Water resources
-- Geospatial data
+- El Salvador
 topics:
 - id: ENVI
   name: Environment

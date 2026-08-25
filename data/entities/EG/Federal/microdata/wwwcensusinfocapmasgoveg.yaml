@@ -1,10 +1,11 @@
 access_mode:
 - open
+- restricted
 api: true
 api_status: active
 catalog_type: Microdata catalog
 content_types:
-- dataset
+- microdata
 coverage:
 - location:
     country:
@@ -14,21 +15,21 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: The Central Data Catalog managed by the Central Agency for Public Mobilization
-  and Statistics (CAPMAS) - Egypt, Arab Rep. Government. It contains datasets and
-  metadata related to statistics, health, transport, household surveys, and informatics
-  bulletins.
+description: Arabic-language NADA microdata catalog of the Central Agency for Public
+  Mobilization and Statistics (CAPMAS). Lists census, household, health, and other
+  official survey studies with open metadata and restricted access to most microdata
+  files.
 endpoints:
-- type: nada:catalog-search
-  url: https://www.censusinfo.capmas.gov.eg/Metadata-ar-v4.2/index.php/api/catalog/search
 - type: nada:csvexport
-  url: https://www.censusinfo.capmas.gov.eg/Metadata-ar-v4.2/index.php/catalog/export/csv?ps=5000&collection[]
+  url: https://censusinfo.capmas.gov.eg/Metadata-ar-v4.2/index.php/catalog/export/csv?ps=5000&collection[]
 id: wwwcensusinfocapmasgoveg
 langs:
+- id: AR
+  name: Arabic
 - id: EN
   name: English
-link: https://www.censusinfo.capmas.gov.eg/Metadata-ar-v4.2
-name: CAPMAS Census Metadata Catalog
+link: https://censusinfo.capmas.gov.eg/Metadata-ar-v4.2
+name: CAPMAS Central Data Catalog (Arabic)
 owner:
   link: https://www.capmas.gov.eg
   location:
@@ -36,10 +37,11 @@ owner:
       id: EG
       name: Egypt
     level: 20
-  name: Egypt Central Agency for Public Mobilization and Statistics
+  name: Central Agency for Public Mobilization and Statistics (CAPMAS)
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -52,40 +54,29 @@ software:
   name: NADA
 status: active
 tags:
-- statistics
+- has_api
+- microdata
+- government
 - census
-- health survey
-- household survey
-- informatics
+- official statistics
+- survey
 topics:
-- id: HEAL
-  name: Health
+- id: SOCI
+  name: Population and society
   type: eudatatheme
 - id: ECON
   name: Economy and finance
   type: eudatatheme
-- id: TRAN
-  name: Transport
-  type: eudatatheme
-- id: SOCI
-  name: Population and society
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: Health
+- id: HEAL
   name: Health
+  type: eudatatheme
+- id: Society
+  name: Society
   type: iso19115
 - id: Economy
   name: Economy
   type: iso19115
-- id: Transportation
-  name: Transportation
+- id: Health
+  name: Health
   type: iso19115
-- id: Society
-  name: Society
-  type: iso19115
-- id: Environment
-  name: Environment
-  type: iso19115
-uid: temp00004190
+uid: cdi00035526

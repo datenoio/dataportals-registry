@@ -13,9 +13,11 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Server/rest/services endpoint for GIS portal
+description: ArcGIS Server REST catalog at gisportal.rs used by Public Enterprise Roads of
+  Serbia (Putevi Srbije / JP Putevi Srbije), with folders for the road cadastre, ITS, and
+  related national road datasets.
 endpoints:
 - type: arcgis:rest:info
   url: https://gisportal.rs/server/rest/info?f=pjson
@@ -34,9 +36,9 @@ langs:
 - id: SR
   name: Serbian
 link: https://gisportal.rs/server/rest/services
-name: gisportal.rs REST Services
+name: Roads of Serbia GIS REST services
 owner:
-  link: https://gisportal.rs
+  link: https://www.putevi-srbije.rs
   location:
     country:
       id: RS
@@ -59,24 +61,20 @@ software:
 status: active
 tags:
 - GIS
-- open data
-- services
+- roads
 - REST
 - Serbia
 topics:
-- id: ENVI
-  name: Environment
+- id: TRAN
+  name: Transport
   type: eudatatheme
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: Geoscientific Information
-  name: Geoscientific Information
+- id: Transportation
+  name: Transportation
   type: iso19115
 - id: Location
   name: Location
-  type: iso19115
-- id: Elevation
-  name: Elevation
   type: iso19115
 uid: temp00005811

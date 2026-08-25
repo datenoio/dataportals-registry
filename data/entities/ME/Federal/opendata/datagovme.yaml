@@ -12,10 +12,12 @@ coverage:
       name: Montenegro
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: National open data portal of Montenegro. Central access point for public-sector
-  datasets in open, machine-readable formats, operated by the Ministry of Public Administration.
+description: National open data portal of Montenegro (Portal otvorenih podataka / Data.gov.me).
+  Central CKAN catalog of public-sector datasets in open, machine-readable formats,
+  operated by the Ministry of Public Administration, with a CKAN Action API and DCAT
+  exports.
 endpoints:
 - type: ckan
   url: https://data.gov.me/api/3
@@ -43,7 +45,7 @@ langs:
 - id: EN
   name: English
 link: https://data.gov.me
-name: Portal otvorenih podataka
+name: Portal otvorenih podataka Crne Gore
 owner:
   link: https://www.gov.me/mju
   location:
@@ -54,6 +56,7 @@ owner:
   name: Ministry of Public Administration
   type: Central government
 properties:
+  dataset_count_reported: 904
   has_doi: false
   is_national: true
 rights:

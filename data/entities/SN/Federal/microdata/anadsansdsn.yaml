@@ -19,17 +19,17 @@ description: National NADA archive of survey and census microdata from Senegal's
   statistical system (ANADS), managed by ANSD.
 endpoints:
 - type: nada:catalog-search
-  url: http://anads.ansd.sn/index.php/api/catalog/search
+  url: https://anads.ansd.sn/index.php/api/catalog/search
 - type: nada:csvexport
-  url: http://anads.ansd.sn/index.php/catalog/export/csv?ps=5000&collection[]
+  url: https://anads.ansd.sn/index.php/catalog/export/csv?ps=5000&collection[]
 id: anadsansdsn
 langs:
 - id: FR
   name: French
-link: http://anads.ansd.sn
+link: https://anads.ansd.sn
 name: Archivage national des données du Sénégal (ANADS)
 owner:
-  link: http://www.ansd.sn
+  link: https://www.ansd.sn
   location:
     country:
       id: SN

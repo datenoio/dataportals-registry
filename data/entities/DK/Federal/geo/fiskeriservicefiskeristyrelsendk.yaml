@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,11 +15,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: A geospatial data catalog provided by the Danish Fisheries Agency
-endpoints:
-- type: wms130
-  url: http://fiskeriservice.fiskeristyrelsen.dk/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
+description: Former GeoServer of Fiskeristyrelsen (Danish Fisheries Agency).
+  fiskeriservice.fiskeristyrelsen.dk/geoserver now returns 404. Fisheries administration
+  is part of Landbrugs- og Fiskeristyrelsen (lfst.dk).
 id: fiskeriservicefiskeristyrelsendk
 langs:
 - id: DA
@@ -27,11 +25,11 @@ langs:
 link: http://fiskeriservice.fiskeristyrelsen.dk/geoserver
 name: Fiskeristyrelsen Geoserver
 owner:
-  link: http://fiskeriservice.fiskeristyrelsen.dk/geoserver
+  link: https://lfst.dk/
   location:
     country: *id001
     level: 20
-  name: Fiskeristyrelsen (Danish Fisheries Agency)
+  name: Landbrugs- og Fiskeristyrelsen
   type: Central government
 properties:
   has_doi: false
@@ -45,7 +43,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - Denmark
 - fisheries
@@ -72,4 +70,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005474
+uid: cdi00035562

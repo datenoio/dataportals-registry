@@ -37,6 +37,9 @@ endpoints:
   url: https://metadata.macmatlas.net/catalog.xml
 - type: dcat:jsonld
   url: https://metadata.macmatlas.net/catalog.jsonld
+- type: ckan:status-show
+  url: https://metadata.macmatlas.net/api/3/action/status_show
+  version: '3'
 - type: sitemap
   url: https://metadata.macmatlas.net/sitemap.xml
 id: metadatamacmatlasnet
@@ -57,6 +60,7 @@ owner:
   name: Madagascar National Oceanographic Data Centre (MD-NODC)
   type: Academy
 properties:
+  dataset_count_reported: 19
   has_doi: false
   is_national: true
 rights:

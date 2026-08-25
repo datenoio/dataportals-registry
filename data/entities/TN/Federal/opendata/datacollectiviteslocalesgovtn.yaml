@@ -18,8 +18,9 @@ description: Official open data catalog of Tunisian local governments (collectiv
   locales), publishing municipal budgets, human resources, population estimates, and
   performance datasets.
 endpoints:
-- type: wordpress:catalog
-  url: http://data.collectiviteslocales.gov.tn/
+- type: rest
+  url: http://data.collectiviteslocales.gov.tn/wp-json/
+  version: '2.0'
 id: datacollectiviteslocalesgovtn
 langs:
 - id: AR
@@ -35,7 +36,7 @@ owner:
       id: TN
       name: Tunisia
     level: 20
-  name: Collectivités Locales
+  name: Direction Générale des Collectivités Locales
   type: Central government
 properties:
   has_doi: false
@@ -55,7 +56,7 @@ tags:
 - open data
 - municipalities
 - local government
-- Tunisia
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector

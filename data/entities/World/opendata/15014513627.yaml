@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -10,30 +10,26 @@ coverage:
     country:
       id: World
       name: World
-    level: 10
+    level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
-description: Catalog page for data hosted via THREDDS
-endpoints:
-- type: thredds:catalog
-  url: http://150.145.136.27:8080/thredds/catalog.xml
-- type: thredds:info
-  url: http://150.145.136.27:8080/thredds/serverInfo.xml
+description: Catalog host 150.145.136.27:8080 did not respond on 25 August 2026
+  (timeout or connection refused). Operator and country are unconfirmed.
 id: '15014513627'
 langs:
 - id: EN
   name: English
 link: http://150.145.136.27:8080/thredds/catalog.html
-name: 150.145.136.27:8080/thredds/catalog.html Data Catalog
+name: Unidentified catalog (150.145.136.27:8080)
 owner:
   link: http://150.145.136.27:8080/thredds/catalog.html
   location:
     country:
       id: World
       name: World
-    level: 10
-  name: Academic Institution
+    level: 20
+  name: Unidentified operator
   type: Academy
 properties:
   has_doi: false
@@ -47,7 +43,7 @@ rights:
 software:
   id: thredds
   name: Thredds
-status: active
+status: inactive
 tags:
 - academic
 - open data
@@ -55,4 +51,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00004109
+uid: cdi00037108

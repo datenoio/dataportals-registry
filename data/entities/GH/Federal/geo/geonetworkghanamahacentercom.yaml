@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: A geospatial data catalog hosted by the Ghanaian government, providing
-  access to datasets related to various geographic and thematic areas.
+description: GeoNetwork metadata catalog for Ghana geospatial resources, hosted at
+  geonetwork-ghana.mahacenter.com. Public HTTP access is gated by Anubis bot
+  protection (406/403 without a browser challenge).
 endpoints:
 - type: geonetwork:query
   url: https://geonetwork-ghana.mahacenter.com/geonetwork/srv/eng/q
@@ -41,16 +42,16 @@ langs:
 link: https://geonetwork-ghana.mahacenter.com/geonetwork/srv/eng/catalog.search#/home
 name: Ghana Geospatial Metadata Catalog
 owner:
-  link: https://ghana.gov.gh/
+  link: https://mesti.gov.gh
   location:
     country:
       id: GH
       name: Ghana
     level: 20
-  name: Ghana Ministry of Environment, Science, Technology and Innovation
+  name: Ministry of Environment, Science, Technology and Innovation
   type: Central government
 properties:
-  has_doi: true
+  has_doi: false
 rights:
   license_id: null
   license_name: null

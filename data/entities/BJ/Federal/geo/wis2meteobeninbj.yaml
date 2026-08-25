@@ -15,21 +15,24 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: WIS 2.0 in a box provides a platform with the capabilities for centres
-  to integrate their data holdings and publish them to the WMO Information System
-  with a plug and play capability supporting data publishing, discovery and access
+description: WIS2 in a box node of the Agence Nationale de la Météorologie du Bénin
+  (Météo-Bénin, centre id bj-meteobenin). Publishes WMO discovery metadata, station
+  information, and hourly SYNOP observations through OGC API (pygeoapi) endpoints.
+  HTTPS on this host timed out in August 2026; HTTP APIs respond.
 endpoints:
 - type: pygeoapi:openapi
-  url: https://wis2.meteobenin.bj/oapi/openapi
+  url: http://wis2.meteobenin.bj/oapi/openapi
   version: '1.0'
 - type: pygeoapi:collections
-  url: https://wis2.meteobenin.bj/oapi/collections/?f=json
+  url: http://wis2.meteobenin.bj/oapi/collections/?f=json
   version: '1.0'
 id: wis2meteobeninbj
 langs:
 - id: FR
   name: French
-link: https://wis2.meteobenin.bj
+- id: EN
+  name: English
+link: http://wis2.meteobenin.bj
 name: Benin - WIS 2.0 in a box
 owner:
   link: https://www.meteobenin.bj
@@ -42,6 +45,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -56,7 +60,10 @@ status: active
 tags:
 - meteorology
 - climate
+- synoptic observations
 - WIS2
+- government
+- has_api
 topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere

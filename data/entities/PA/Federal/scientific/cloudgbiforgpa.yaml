@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: IPT for GBIF Panama. This scientific data repository provides access to GBIF-published
-  biodiversity datasets.
+description: GBIF Integrated Publishing Toolkit hosted for Panama. Ministerio de Ambiente
+  (MiAmbiente) publishes biodiversity occurrence datasets, including registered Darwin
+  Core archives.
 endpoints:
 - type: dcat:ttl
   url: https://cloud.gbif.org/pa/dcat
@@ -28,17 +29,19 @@ id: cloudgbiforgpa
 langs:
 - id: EN
   name: English
+- id: ES
+  name: Spanish
 link: https://cloud.gbif.org/pa
-name: IPT for GBIF Panama
+name: GBIF Panama IPT
 owner:
-  link: https://miambiente.gob.pa/
+  link: https://www.miambiente.gob.pa
   location:
     country:
       id: PA
       name: Panama
     level: 20
-  name: Ministerio de Ambiente de Panamá
-  type: Academy
+  name: Ministerio de Ambiente de Panamá (MiAmbiente)
+  type: Central government
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -48,6 +51,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- Panama
 topics:
 - id: Biota
   name: Biota

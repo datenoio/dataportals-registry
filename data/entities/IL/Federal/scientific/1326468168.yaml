@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,20 +14,14 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: BioGIS - Israel node. This scientific data repository. managed by Israel
-  Nature and Parks Authority.
-endpoints:
-- type: ipt:dataset
-  url: http://132.64.68.168:8080/ipt-2.1.1/inventory/dataset
-- type: rss
-  url: http://132.64.68.168:8080/ipt-2.1.1/rss.do
-  version: '2.0'
+description: Former BioGIS GBIF IPT node hosted on an internal IP address. The live
+  BioGIS IPT is registered separately at biogis.huji.ac.il.
 id: '1326468168'
 langs:
 - id: HE
   name: Hebrew
 link: http://132.64.68.168:8080/ipt-2.1.1
-name: BioGIS
+name: BioGIS IPT (legacy host)
 owner:
   link: https://en.parks.org.il/
   location:
@@ -36,11 +30,11 @@ owner:
       name: Israel
     level: 20
   name: Israel Nature and Parks Authority
-  type: Academy
+  type: Central government
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT

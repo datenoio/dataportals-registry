@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -15,18 +15,8 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: ERDDAP data portal providing access to oceanographic datasets managed
-  by the Institute of Oceanology at the Bulgarian Academy of Sciences (IO-BAS), offering
-  easier access to scientific data in common file formats with standardized time formats.
-endpoints:
-- type: erddap:index
-  url: https://erddap.io-bas.bg/erddap/index.json
-- type: erddap:datasets
-  url: https://erddap.io-bas.bg/erddap/info/index.json
-- type: opensearch
-  url: https://erddap.io-bas.bg/erddap/opensearch1.1/description.xml
-- type: sitemap
-  url: https://erddap.io-bas.bg/erddap/sitemap.xml
+description: Former ERDDAP data portal of the Institute of Oceanology at the Bulgarian
+  Academy of Sciences (IO-BAS). The erddap.io-bas.bg hostname no longer resolves.
 id: iobaserddap
 langs:
 - id: EN
@@ -34,7 +24,7 @@ langs:
 link: https://erddap.io-bas.bg/erddap/index.html
 name: IO-BAS ERDDAP
 owner:
-  link: https://www.io-bas.bg
+  link: https://io-bas.bg
   location:
     country:
       id: BG
@@ -54,7 +44,7 @@ rights:
 software:
   id: erddap
   name: ERDDAP
-status: active
+status: inactive
 tags:
 - ocean
 - environment

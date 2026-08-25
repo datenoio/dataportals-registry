@@ -16,17 +16,21 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Ministry of Natural Resources GeoPortal (GeoNode) for Guyana geospatial
-  datasets, documents, maps, GeoStories, and dashboards. Dataset APIs currently return
-  an empty catalog; CSW GetCapabilities is live.
+description: Ministry of Natural Resources GeoNode 5 geoportal for Guyana. Dataset,
+  document, and CSW APIs are live but currently return an empty catalog (0 records).
+  The bundled GeoServer OGC services require authentication.
 endpoints:
 - type: geonode:datasets
-  url: https://geoportal.gov.gy/api/v2/datasets
+  url: https://geoportal.gov.gy/api/datasets/
+- type: geonode:datasets
+  url: https://geoportal.gov.gy/api/v2/datasets/
 - type: geonode:documents
   url: https://geoportal.gov.gy/api/v2/documents
 - type: csw202
   url: https://geoportal.gov.gy/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: sitemap
+  url: https://geoportal.gov.gy/sitemap.xml
 id: geoportalgovgy
 langs:
 - id: EN
@@ -42,6 +46,16 @@ owner:
     level: 20
   name: Ministry of Natural Resources of Guyana
   type: Central government
+properties:
+  dataset_count_reported: 0
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
 software:
   id: geonode
   name: GeoNode
@@ -50,8 +64,22 @@ tags:
 - geospatial
 - GeoNode
 - Guyana
+- has_api
+- GIS
 topics:
 - id: Location
   name: Location
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
   type: iso19115
 uid: cdi00021509

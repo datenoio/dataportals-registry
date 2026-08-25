@@ -15,21 +15,28 @@ coverage:
       id: '011'
       name: Western Africa
 description: GBIF IPT of Guinea, hosted by GBIF France and managed by COSIE (Centre
-  d'Observation de Surveillance et d'Information Environnementales). Publishes Herbier
-  National de Guinée occurrence and checklist datasets.
+  d'Observation de Surveillance et d'Information Environnementales). Publishes 37
+  biodiversity datasets (36 occurrence, 1 checklist), including Herbier National de
+  Guinée collections and field inventories.
 endpoints:
 - type: dcat:ttl
-  url: http://ipt-guinee.gbif.fr/dcat
+  url: https://ipt-guinee.gbif.fr/dcat
 - type: ipt:dataset
-  url: http://ipt-guinee.gbif.fr/inventory/dataset
+  url: https://ipt-guinee.gbif.fr/inventory/dataset
 - type: rss
-  url: http://ipt-guinee.gbif.fr/rss.do
+  url: https://ipt-guinee.gbif.fr/rss.do
   version: '2.0'
 id: iptguineegbiffr
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/publisher/1c905e09-830d-43d6-bea7-32b9275364bf
+  value: 1c905e09-830d-43d6-bea7-32b9275364bf
 langs:
 - id: FR
   name: French
-link: http://ipt-guinee.gbif.fr/ipt
+- id: EN
+  name: English
+link: https://ipt-guinee.gbif.fr
 name: IPT of GBIF Guinea
 owner:
   link: https://medd.gov.gn
@@ -41,8 +48,16 @@ owner:
   name: Centre d'Observation de Surveillance et d'Information Environnementales (COSIE)
   type: Central government
 properties:
-  has_doi: false
+  dataset_count_reported: 37
+  has_doi: true
   is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -52,6 +67,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota

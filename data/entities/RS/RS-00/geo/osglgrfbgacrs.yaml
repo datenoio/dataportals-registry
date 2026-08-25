@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RS
+      name: Serbia
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: RS-00
+      name: Beograd
+description: GeoNetwork catalogue of the Open Source Geospatial Laboratory at the University
+  of Belgrade Faculty of Civil Engineering (OpenSearch short name “OSGL Belgrade catalogue”).
+  CSW, OAI-PMH, and portal OpenSearch are public.
+endpoints:
+- type: csw202
+  url: http://osgl.grf.bg.ac.rs/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://osgl.grf.bg.ac.rs/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://osgl.grf.bg.ac.rs/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: osglgrfbgacrs
+langs:
+- id: SR
+  name: Serbian
+- id: EN
+  name: English
+link: http://osgl.grf.bg.ac.rs/geonetwork
+name: OSGL Belgrade GeoNetwork catalogue
+owner:
+  link: https://www.grf.bg.ac.rs
+  location:
+    country:
+      id: RS
+      name: Serbia
+    level: 30
+    subregion:
+      id: RS-00
+      name: Beograd
+  name: University of Belgrade Faculty of Civil Engineering
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- has_api
+- GeoNetwork
+- university
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00001343

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,14 +14,12 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Galaxy server providing data libraries for bioinformatics research.
-endpoints:
-- type: galaxy:catalog
-  url: https://usegalaxy.dk
+description: Former Danish UseGalaxy public server. The hostname usegalaxy.dk no
+  longer resolves.
 id: usegalaxydk
 langs:
-- id: DA
-  name: Danish
+- id: EN
+  name: English
 link: https://usegalaxy.dk
 name: Galaxy Project Community Scientific Data Repository
 owner:
@@ -34,7 +32,7 @@ owner:
 software:
   id: galaxy
   name: Galaxy
-status: active
+status: inactive
 tags:
 - bioinformatics
 - galaxy
@@ -45,4 +43,4 @@ topics:
 - id: HEAL
   name: Health
   type: eudatatheme
-uid: temp00006169
+uid: cdi00035580

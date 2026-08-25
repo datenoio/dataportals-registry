@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: ArcGIS REST services of the Unidad de Planificación Rural Agropecuaria
+  (UPRA), publishing national rural and agricultural geospatial datasets.
+endpoints:
+- type: arcgis:rest:info
+  url: https://geoservicios.upra.gov.co/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoservicios.upra.gov.co/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoservicios.upra.gov.co/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoservicios.upra.gov.co/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoservicios.upra.gov.co/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geoservicios.upra.gov.co/arcgis/rest/services?f=kmz
+id: geoserviciosupragovco
+langs:
+- id: ES
+  name: Spanish
+link: https://geoservicios.upra.gov.co/arcgis/rest/services
+name: UPRA Geoservices
+owner:
+  link: https://upra.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+  name: Unidad de Planificación Rural Agropecuaria (UPRA)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- rest
+- arcgis
+- agro
+- rural
+- geospatial
+- colombia
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00003474

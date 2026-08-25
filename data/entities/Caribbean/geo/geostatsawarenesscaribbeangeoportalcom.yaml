@@ -11,12 +11,13 @@ coverage:
     country:
       id: Caribbean
       name: Caribbean
-    level: 0
+    level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: GeoStats Awareness Program geoportal providing geospatial data and awareness
-  resources for the Caribbean region.
+description: GeoStats Awareness Program hub on the Esri Caribbean GeoPortal, publishing
+  geospatial layers and awareness resources for statistical geography across the Caribbean
+  region.
 endpoints:
 - type: dcatap201
   url: https://geostatsawareness.caribbeangeoportal.com/api/feed/dcat-ap/2.0.1.json
@@ -37,14 +38,23 @@ langs:
 link: https://geostatsawareness.caribbeangeoportal.com
 name: GeoStats Awareness Program
 owner:
-  link: https://caribbeangeoportal.com
+  link: https://www.caribbeangeoportal.com
   location:
     country:
-      id: Caribbean
-      name: Caribbean
-    level: 0
-  name: Caribbean Geoportal
-  type: International
+      id: US
+      name: United States
+    level: 20
+  name: Esri
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
 software:
   id: arcgishub
   name: ArcGIS Hub
@@ -52,11 +62,16 @@ status: active
 tags:
 - ArcGIS
 - GIS
-- caribbean
+- Caribbean
 - geospatial
+- Esri
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
   type: eudatatheme
 - id: Location
   name: Location

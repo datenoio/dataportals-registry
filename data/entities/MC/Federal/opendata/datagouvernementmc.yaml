@@ -15,9 +15,11 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: National public data portal of the Principality of Monaco (Data Monaco).
-  Publishes 600+ government datasets from IMSEE and other public bodies, with download
-  and API access across health, economy, education, population, environment, and transport.
+description: National public data portal of the Principality of Monaco (Data Monaco),
+  operated by the Direction des Plateformes et des Ressources Numériques. Publishes
+  673 government datasets (633 open, 40 restricted), mainly from IMSEE, with download
+  and REST metadata API access across health, economy, education, population, environment,
+  and transport.
 endpoints:
 - type: rest
   url: https://data.gouvernement.mc/metadata-api/datasets
@@ -36,18 +38,19 @@ owner:
       id: MC
       name: Monaco
     level: 20
-  name: Gouvernement Princier de Monaco
+  name: Direction des Plateformes et des Ressources Numériques
   type: Central government
 properties:
+  dataset_count_reported: 673
   has_doi: false
   is_national: true
 rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: null
+  privacy_policy_url: https://data.gouvernement.mc/privacy-policy
   rights_type: granular
-  tos_url: null
+  tos_url: https://data.gouvernement.mc/privacy-policy
 software:
   id: custom
   name: Custom software

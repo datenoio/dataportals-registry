@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,26 +15,7 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: sdg.org catchy tagline here - mission statement? mission statement goes
-  here Creator Donor Head of State ... SDG Country Profiles View it live See how countries
-  are progressing on their goal to achieve the 2030 Agenda. more text here .. SDG
-  Country Profiles Web App SDG Report 2019 View it live explanation text here more
-  text here .. SDG Stories Datasets have a story to tell. Engage and inspire your
-  audience by combining text, images, and other multimedia content with maps. You
-  have the local knowledge and expertise, now begin and sustain a meaningful connection
-  with your users. Data Hubs &amp; APIs Use this platform to spur innovation from
-  other teams and stay on top of the latest technology. Utilizing open standards,
-  interoperability, data, APIs, and code can connect you directly your data's community.
-  SDG Data Labs Layer Showcase App .. Copyright 2019. SDGs. About Contact Us
-endpoints:
-- type: dcatap201
-  url: https://sdgorgv2-sdgs.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://sdgorgv2-sdgs.hub.arcgis.com/api/feed/dcat-us/1.1.json
-- type: ogcrecordsapi
-  url: https://sdgorgv2-sdgs.hub.arcgis.com/api/search/v1
-- type: sitemap
-  url: https://sdgorgv2-sdgs.hub.arcgis.com/sitemap.xml
+description: ArcGIS Hub demonstration or template site. Not a production catalog.
 id: sdgorgv2sdgshubarcgiscom
 langs:
 - id: EN
@@ -62,7 +43,7 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
 - GIS
 - SDG

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,29 +14,23 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Not available from provided search results. No detailed information extracted
-  from this URL in the search results.
-endpoints:
-- type: ckan:package-search
-  url: http://data.mmr.cz/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://data.mmr.cz/api/3/action/package_list
-  version: '3'
+description: Open data of the Ministry of Regional Development of the Czech Republic.
+  The former data.mmr.cz CKAN catalog now redirects to the ministry's datasets in
+  the National Open Data Catalog (NKOD).
 id: datammrcz
 langs:
 - id: CS
   name: Czech
-link: http://data.mmr.cz
-name: The Ministry of Regional Development of the Czech Republic open data portal
+link: https://data.gov.cz/datov%C3%A9-sady?poskytovatel=https://rpp-opendata.egon.gov.cz/odrpp/zdroj/org%C3%A1n-ve%C5%99ejn%C3%A9-moci/66002222
+name: Open data of the Ministry of Regional Development
 owner:
-  link: https://www.mmr.cz
+  link: https://mmr.gov.cz
   location:
     country:
       id: CZ
       name: Czech Republic
     level: 20
-  name: The Ministry of Regional Development of the Czech Republic
+  name: Ministerstvo pro místní rozvoj
   type: Central government
 rights:
   license_id: null
@@ -46,12 +40,13 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: ckan
-  name: CKAN
+  id: custom
+  name: Custom software
 status: active
 tags:
 - government
-- has_api
+- open data
+- regional development
 topics:
 - id: GOVE
   name: Government and public sector

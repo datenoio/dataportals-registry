@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Ensembl Bacteria is a browser for bacterial and archaeal genomes. These
+  are taken from the databases of the International Nucleotide Sequence Database Collaboration
+  (the European Nucleotide Archive at the EBI, GenBank at the NCBI, and the DNA Database
+  of Japan).
+endpoints:
+- type: ensembl:rest
+  url: https://rest.ensemblgenomes.org/info/ping
+id: bacteriaensemblorg
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::4dd9cec1c21bc54eecb53786a2c5fa09
+  value: fairsharing_::4dd9cec1c21bc54eecb53786a2c5fa09
+langs:
+- id: EN
+  name: English
+link: https://bacteria.ensembl.org/index.html
+name: Ensembl Bacteria
+owner:
+  link: http://www.ebi.ac.uk/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+  name: European Bioinformatics Institute
+  type: Academy
+software:
+  id: ensembl
+  name: Ensembl
+status: active
+tags:
+- scientific
+- research data
+- academic
+- genomics
+- bioinformatics
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00030809

@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: BY-VI
       name: Viciebskaja voblasć
-description: Access point for ArcGIS REST services hosted by Vitebsk GIS Map
+description: ArcGIS REST services for Vitebsk regional GIS Map, publishing local spatial
+  datasets and map layers for the Vitebsk oblast.
 endpoints:
 - type: arcgis:rest:info
   url: https://vitebsk.gismap.by/arcgis/rest/info?f=pjson
@@ -36,8 +37,10 @@ id: vitebskgismapby
 langs:
 - id: RU
   name: Russian
+- id: BE
+  name: Belarusian
 link: https://vitebsk.gismap.by/arcgis/rest/services
-name: Vitebsk ArcGIS REST Services
+name: Vitebsk GIS Map ArcGIS REST services
 owner:
   link: https://vitebsk.gismap.by
   location:
@@ -48,7 +51,7 @@ owner:
     subregion:
       id: BY-VI
       name: Viciebskaja voblasć
-  name: Vitebsk GIS Map
+  name: Vitebsk regional GIS Map
   type: Local government
 properties:
   has_doi: false
@@ -67,6 +70,7 @@ tags:
 - geospatial
 - REST
 - ArcGIS
+- has_api
 topics:
 - id: REGI
   name: Regions and cities

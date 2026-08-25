@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,24 +15,10 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: ArcGIS Server catalog of El Salvador's environmental and territorial
-  observatory (historically SNET, now under MARN). REST listing has been slow or
-  unresponsive; successor environmental layers are also published on geoportalsima.ambiente.gob.sv.
-endpoints:
-- type: arcgis:portals:self
-  url: https://geoportal.snet.gob.sv/portal/sharing/rest/portals/self?f=pjson
-- type: arcgis:rest:info
-  url: https://geoportal.snet.gob.sv/server/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://geoportal.snet.gob.sv/server/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://geoportal.snet.gob.sv/server/services?wsdl
-- type: arcgis:sitemap
-  url: https://geoportal.snet.gob.sv/server/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://geoportal.snet.gob.sv/server/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://geoportal.snet.gob.sv/server/rest/services?f=kmz
+description: Former ArcGIS Server catalog of El Salvador's environmental and territorial
+  observatory (historically SNET, now under MARN). The REST directory and portal
+  endpoints time out; successor environmental layers are published on
+  geoportalsima.ambiente.gob.sv and geoserver.ambiente.gob.sv.
 id: geoportalsnetgobsv
 langs:
 - id: ES
@@ -40,7 +26,7 @@ langs:
 link: https://geoportal.snet.gob.sv/server/rest/services
 name: Ministerio de Medio Ambiente El Salvador ArcGIS server
 owner:
-  link: https://geoportal.snet.gob.sv
+  link: https://www.ambiente.gob.sv
   location:
     country:
       id: SV
@@ -60,7 +46,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - geospatial
 - government
@@ -71,13 +57,19 @@ tags:
 - rest
 - El Salvador
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Geoscientific Information
+  name: Geoscientific Information
   type: iso19115
 uid: cdi00001505

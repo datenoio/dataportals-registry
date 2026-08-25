@@ -15,24 +15,43 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: Geoportal of Iranian national data infrastructure
+description: GeoServer of the Iranian National Spatial Data Infrastructure (NSDI),
+  operated by the National Cartographic Center, publishing national geospatial layers
+  through OGC web services.
+endpoints:
+- type: wms111
+  url: https://iransdi.ncc.gov.ir/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://iransdi.ncc.gov.ir/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: https://iransdi.ncc.gov.ir/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://iransdi.ncc.gov.ir/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs111
+  url: https://iransdi.ncc.gov.ir/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
 id: iransdinccgovir
 langs:
 - id: FA
   name: Persian
 link: https://iransdi.ncc.gov.ir/geoserver
-name: Geoportal of Iranian national data infrastructure
+name: Iran NSDI GeoServer
 owner:
+  link: https://www.ncc.gov.ir
   location:
     country:
       id: IR
       name: Iran
     level: 20
-  name: Ncc
+  name: National Cartographic Center of Iran
   type: Central government
-  link: https://gov.ir
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -43,30 +62,27 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-endpoints:
-- type: wms130
-  url: https://iransdi.ncc.gov.ir/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
-- type: wfs200
-  url: https://iransdi.ncc.gov.ir/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
-  version: 2.0.0
-- type: wcs111
-  url: https://iransdi.ncc.gov.ir/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
 status: active
 tags:
 - geospatial
 - government
-- Geoportal
 - NSDI
+- has_api
+- Iran
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 - id: Geoscientific Information
   name: Geoscientific Information
   type: iso19115
-- id: Structure
-  name: Structure
-  type: iso19115
 - id: Location
   name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00000935

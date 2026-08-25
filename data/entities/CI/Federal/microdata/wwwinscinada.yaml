@@ -1,6 +1,6 @@
 access_mode:
 - open
-- limited
+- restricted
 api: false
 api_status: inactive
 catalog_type: Microdata catalog
@@ -16,7 +16,8 @@ coverage:
       id: '011'
       name: Western Africa
 description: Former NADA survey catalog of the Institut National de la Statistique
-  (now ANSTAT). The ins.ci host no longer resolves and /nada is not available.
+  (now ANSTAT). http://www.ins.ci/nada returns 404; the ins.ci host has a certificate
+  mismatch and nada.anstat.ci does not resolve.
 id: wwwinscinada
 langs:
 - id: FR

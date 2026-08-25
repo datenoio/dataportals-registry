@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,37 +15,24 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Catalog of geospatial data services managed by the Ministry of Agriculture
-  and Fisheries, UAE.
-endpoints:
-- type: arcgis:portals:self
-  url: https://mafpgisdev.maf.ae/portal/sharing/rest/portals/self?f=pjson
-- type: arcgis:rest:services
-  url: https://mafpgisdev.maf.ae/server/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://mafpgisdev.maf.ae/server/services?wsdl
-- type: arcgis:sitemap
-  url: https://mafpgisdev.maf.ae/server/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://mafpgisdev.maf.ae/server/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://mafpgisdev.maf.ae/server/rest/services?f=kmz
-- type: arcgis:rest:info
-  url: https://mafpgisdev.maf.ae/server/rest/info?f=pjson
+description: Former development ArcGIS REST catalog of the UAE Ministry of Agriculture
+  and Fisheries. The hostname mafpgisdev.maf.ae no longer resolves.
 id: mafpgisdevmafae
 langs:
 - id: AR
   name: Arabic
+- id: EN
+  name: English
 link: https://mafpgisdev.maf.ae/server/rest/services/
 name: UAE Ministry of Agriculture and Fisheries Geoportal
 owner:
-  link: https://mafpgisdev.maf.ae/server/rest/services/
+  link: https://www.moccae.gov.ae
   location:
     country:
       id: AE
       name: United Arab Emirates
     level: 20
-  name: Ministry of Agriculture and Fisheries, UAE
+  name: Ministry of Climate Change and Environment
   type: Central government
 properties:
   has_doi: false
@@ -59,7 +46,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - geospatial
 - GIS
@@ -73,4 +60,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-uid: temp00001189
+uid: cdi00036206

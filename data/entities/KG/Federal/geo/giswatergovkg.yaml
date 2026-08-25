@@ -15,9 +15,10 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: Distributed database application with text-based data and geo-referenced
-  thematic map layers, accessible via DWRLI website and/or VPN. Covers water resources,
-  irrigation, and related infrastructure.
+description: Geo-information portal of the Water Information System of the Kyrgyz
+  Republic, with text-based databases and geo-referenced thematic map layers on
+  water resources, irrigation, and related infrastructure. Operated by the Water
+  Resources Service on ArcGIS Server.
 endpoints:
 - type: arcgis:portals:self
   url: https://gis.water.gov.kg/portal/sharing/rest/portals/self?f=pjson
@@ -37,17 +38,21 @@ id: giswatergovkg
 langs:
 - id: RU
   name: Russian
+- id: KY
+  name: Kirghiz
+- id: EN
+  name: English
 link: https://gis.water.gov.kg
-name: Геоинформационный портал о воде Кыргызской республики
+name: Geo-information portal of water of the Kyrgyz Republic
 owner:
-  link: https://water.gov.kg
+  link: https://www.water.gov.kg
   location:
     country:
       id: KG
       name: Kyrgyzstan
     level: 20
-  name: Служба водных водных ресурсов при Министерстве сельского хозяйства Кыргызской
-    Республики
+  name: Water Resources Service under the Ministry of Water Resources, Agriculture
+    and Processing Industry of the Kyrgyz Republic
   type: Central government
 properties:
   has_doi: false
@@ -65,13 +70,16 @@ status: active
 tags:
 - geospatial
 - government
+- has_api
 - water resources
 - irrigation
-- water quality
 - hydrology
 topics:
 - id: ENVI
   name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
 - id: Inland Waters
   name: Inland Waters

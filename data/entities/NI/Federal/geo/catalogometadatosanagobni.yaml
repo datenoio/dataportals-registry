@@ -17,14 +17,19 @@ coverage:
       name: Central America
 description: Official GeoNetwork metadata catalog of Nicaragua's National Water Authority
   (ANA), with records for hydraulic works, surface-water intakes, wells, and discharge
-  permits.
+  permits. Linked from the IDE-ANA / SIAGUA geoportal.
 endpoints:
+- type: geonetwork:query
+  url: http://catalogometadatos.ana.gob.ni/geonetwork/srv/eng/q
 - type: csw202
   url: http://catalogometadatos.ana.gob.ni/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: oaipmh20
   url: http://catalogometadatos.ana.gob.ni/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: opensearch
+  url: http://catalogometadatos.ana.gob.ni/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
 id: catalogometadatosanagobni
 langs:
 - id: ES
@@ -42,6 +47,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -59,6 +65,7 @@ tags:
 - metadata
 - water
 - Nicaragua
+- government
 topics:
 - id: ENVI
   name: Environment

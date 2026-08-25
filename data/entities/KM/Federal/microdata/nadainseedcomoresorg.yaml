@@ -16,9 +16,10 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: National NADA microdata archive of INSEED Comoros. Public catalog of
-  15 census and survey studies (RGPH, EHCVM, MICS, agricultural censuses) with DDI
-  metadata; licensed microdata is available on request.
+description: National NADA microdata archive of INSEED Comoros (Archive nationale
+  de microdonnées). Public catalog of 15 census and survey studies (RGPH, EHCVM,
+  MICS, DHS, agricultural censuses) with DDI metadata; licensed microdata is
+  available on request after INSEED approval.
 endpoints:
 - type: nada:catalog-search
   url: https://www.nada.inseed-comores.org/index.php/api/catalog/search
@@ -37,10 +38,11 @@ owner:
       id: KM
       name: Comoros
     level: 20
-  name: Institut National de la Statistique et des Études Économiques et Démographiques
-    (INSEED)
+  name: Institut National de la Statistique et des Études Économiques et
+    Démographiques (INSEED)
   type: Central government
 properties:
+  dataset_count_reported: 15
   has_doi: false
   is_national: true
 rights:
@@ -60,7 +62,9 @@ tags:
 - microdata
 - statistics
 - surveys
+- census
 - official statistics
+- Comoros
 topics:
 - id: SOCI
   name: Population and society

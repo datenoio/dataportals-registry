@@ -14,8 +14,10 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: OpenSyria is a public data commons for Syrian geography, universities,
-  transport, and telecom datasets with downloads, APIs, and cited sources.
+description: Public data commons for source-cited Syrian reference datasets covering
+  administrative geography, universities, transport locations, and telecom numbering.
+  Offers downloads and a documented read-only REST API with no registration or API
+  key required.
 endpoints:
 - type: openapi
   url: https://api.opensyria.org/openapi.json
@@ -23,7 +25,13 @@ endpoints:
   url: https://api.opensyria.org/api/v1/datasets
 - type: api
   url: https://opensyria.org/.well-known/api-catalog
+- type: docs
+  url: https://api.opensyria.org/docs
 id: opensyriaorg
+identifiers:
+- id: github
+  url: https://github.com/Open-Syria
+  value: Open-Syria
 langs:
 - id: EN
   name: English
@@ -32,7 +40,7 @@ langs:
 link: https://opensyria.org/datasets
 name: OpenSyria
 owner:
-  link: https://opensyria.org/
+  link: https://opensyria.org
   location:
     country:
       id: SY
@@ -40,22 +48,30 @@ owner:
     level: 20
   name: OpenSyria
   type: Civil society
+properties:
+  has_doi: false
+  is_national: true
 software:
   id: custom
   name: Custom software
 status: active
 tags:
+- open data
+- has_api
 - geography
 - transport
 - telecom
 - universities
-- Syria
+- civic tech
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
 - id: TRAN
   name: Transport
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
   type: eudatatheme
 - id: Location
   name: Location

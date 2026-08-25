@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,20 +17,14 @@ coverage:
     subregion:
       id: EC-H
       name: Chimborazo
-description: No direct information available in search results about content of the
-  catalog at 'http://op.espoch.edu.ec'. Assuming this refers to a data catalog associated
-  with Ecuadorian academic institution ESPOCH (Escuela Politécnica del Chimborazo),
-  but no specific catalog entries, metadata, or data themes were identified in provided
-  sources.
-endpoints:
-- type: ckan
-  url: http://op.espoch.edu.ec/api/3
+description: Former CKAN open data portal of Escuela Superior Politécnica de Chimborazo. The
+  host op.espoch.edu.ec timed out and did not respond.
 id: opespocheduec
 langs:
 - id: ES
   name: Spanish
 link: http://op.espoch.edu.ec
-name: Escuela Superior Politécnica de Chimborazo open data
+name: Datos abiertos ESPOCH
 owner:
   link: https://www.espoch.edu.ec
   location:
@@ -53,7 +47,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
 - has_api

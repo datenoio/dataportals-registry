@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: ArcGIS services provided by a council in NSW, Australia; presumed to
-  offer geospatial datasets and web services.
+description: ArcGIS REST services on lmbc.nsw.gov.au used for NSW biodiversity and
+  native vegetation mapping, including koala habitat and Native Vegetation Regulatory
+  (NVR) layers. The host now redirects to the NSW environment biodiversity pages.
 endpoints:
 - type: arcgis:rest:info
   url: https://www.lmbc.nsw.gov.au/arcgis/rest/info?f=pjson
@@ -35,9 +36,9 @@ langs:
 - id: EN
   name: English
 link: https://www.lmbc.nsw.gov.au/arcgis/services
-name: Liverpool Municipal Business Centre (LMBC, presumed) Geoportal
+name: NSW Biodiversity and Native Vegetation ArcGIS Services
 owner:
-  link: https://www.lmbc.nsw.gov.au
+  link: https://www.environment.nsw.gov.au
   location:
     country:
       id: AU
@@ -46,8 +47,8 @@ owner:
     subregion:
       id: AU-NSW
       name: New South Wales
-  name: Liverpool Municipal Business Centre (LMBC, presumed)
-  type: Local government
+  name: NSW Department of Climate Change, Energy, the Environment and Water
+  type: Regional government
 properties:
   has_doi: false
 rights:

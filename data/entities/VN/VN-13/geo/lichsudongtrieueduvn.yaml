@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: VN-13
+      name: Quảng Ninh
+description: ArcGIS REST services presenting historical and education-related maps
+  for Đông Triều, Quảng Ninh Province (ISO 3166-2 VN-13).
+endpoints:
+- type: arcgis:rest:info
+  url: http://lichsu.dongtrieu.edu.vn:6080/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://lichsu.dongtrieu.edu.vn:6080/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://lichsu.dongtrieu.edu.vn:6080/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://lichsu.dongtrieu.edu.vn:6080/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://lichsu.dongtrieu.edu.vn:6080/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://lichsu.dongtrieu.edu.vn:6080/arcgis/rest/services?f=kmz
+id: lichsudongtrieueduvn
+langs:
+- id: VN
+  name: Vietnamese
+link: http://lichsu.dongtrieu.edu.vn:6080/arcgis/rest/services
+name: Dong Trieu education history ArcGIS services
+owner:
+  link: http://dongtrieu.edu.vn
+  location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 30
+    subregion:
+      id: VN-13
+      name: Quảng Ninh
+  name: Dong Trieu Department of Education and Training
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- education
+- history
+- Quang Ninh
+- Vietnam
+- has_api
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00034898

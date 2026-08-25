@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -12,13 +13,19 @@ coverage:
       name: Botswana
     level: 20
     macroregion:
-      id: 018
+      id: '018'
       name: Southern Africa
 description: BUAN ResearchHub DSpace institutional repository of theses, faculty publications,
   and the Botswana Journal of Agriculture and Applied Sciences.
 endpoints:
 - type: dspace:catalog
   url: https://researchhub.buan.ac.bw/
+- type: dspace:items
+  url: https://researchhub.buan.ac.bw/rest/items
+  version: '6'
+- type: oaipmh20
+  url: https://researchhub.buan.ac.bw/oai/request?verb=Identify
+  version: '2.0'
 id: researchhubbuanacbw
 langs:
 - id: EN
@@ -53,6 +60,7 @@ tags:
 - agriculture
 - Botswana
 - BUAN
+- has_api
 topics:
 - id: TECH
   name: Science and technology

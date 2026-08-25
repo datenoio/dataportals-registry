@@ -4,6 +4,7 @@ api: false
 api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
+- indicator
 - dataset
 coverage:
 - location:
@@ -12,10 +13,11 @@ coverage:
       name: Bahamas (the)
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: Research and statistics from the Bahamas Ministry of Tourism, including
-  visitor arrivals, stopover trends and exit survey reports.
+description: Research and statistics site of the Bahamas Ministry of Tourism. Publishes
+  visitor arrivals, cruise and stopover series, exit surveys, expenditure, hotels
+  and satellite-account reports, mainly as downloadable PDFs.
 id: wwwtourismtodaycom
 langs:
 - id: EN
@@ -31,26 +33,37 @@ owner:
     level: 20
   name: Bahamas Ministry of Tourism
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 software:
   id: custom
   name: Custom software
 status: active
 tags:
 - statistics
-- indicators
 - government
 - tourism
-- Bahamas
+- indicators
 topics:
-- id: EDUC
-  name: Education, culture and sport
+- id: ECON
+  name: Economy and finance
   type: eudatatheme
-- id: Society
-  name: Society
+- id: Economy
+  name: Economy
   type: iso19115
 - id: SOCI
   name: Population and society
   type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
 - id: GOVE
   name: Government and public sector
   type: eudatatheme

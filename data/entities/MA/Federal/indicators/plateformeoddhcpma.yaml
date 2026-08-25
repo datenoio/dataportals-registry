@@ -4,6 +4,7 @@ api: false
 api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
+- indicator
 - dataset
 coverage:
 - location:
@@ -22,10 +23,9 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Plateforme conviviale et interactive des indicateurs et métadonnées des
-  dix-sept objectifs de développement durable (ODD), couvrant à la fois la liste officielle
-  de la Commission de Statistique des Nations Unies et des indicateurs complémentaires
-  élaborés par le HCP pour une mesure contextualisée du développement durable au Maroc.
+description: Interactive HCP platform of Sustainable Development Goal (SDG / ODD)
+  indicators and metadata, covering the UN official list and complementary national
+  indicators for Morocco.
 id: plateformeoddhcpma
 langs:
 - id: AR
@@ -43,6 +43,9 @@ owner:
     level: 20
   name: Haut Commissariat au Plan (HCP)
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -61,10 +64,10 @@ tags:
 - indicateurs
 - métadonnées
 - statistiques
-- Morocco
 - sustainable development
 - HCP
 - UN indicators
+- government
 topics:
 - id: SOCI
   name: Population and society
@@ -81,4 +84,4 @@ topics:
 - id: HEAL
   name: Health
   type: eudatatheme
-uid: temp00000477
+uid: cdi00035252

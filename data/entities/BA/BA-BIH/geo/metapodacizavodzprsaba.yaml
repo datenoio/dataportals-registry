@@ -13,13 +13,14 @@ coverage:
       name: Bosnia and Herzegovina
     level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
     subregion:
       id: BA-BIH
       name: Federacija Bosne i Hercegovine
-description: 'GeoNetwork''s purpose is: To improve access to and integrated use of
-  spatial data and information To support decision making To promote multidisciplinary...'
+description: GeoNetwork metadata catalog of the Institute for Development Planning
+  of Canton Sarajevo (Zavod za planiranje razvoja Kantona Sarajevo), describing spatial
+  datasets and services for spatial planning in Canton Sarajevo.
 endpoints:
 - type: geonetwork:query
   url: https://metapodaci.zavodzpr-sa.ba/srv/eng/q
@@ -41,8 +42,10 @@ endpoints:
   url: https://metapodaci.zavodzpr-sa.ba/portal.opensearch
 id: metapodacizavodzprsaba
 langs:
-- id: SR
-  name: Serbian
+- id: BS
+  name: Bosnian
+- id: HR
+  name: Croatian
 link: https://metapodaci.zavodzpr-sa.ba
 name: Metadata Catalog of Canton Sarajevo
 owner:
@@ -55,11 +58,10 @@ owner:
     subregion:
       id: BA-BIH
       name: Federacija Bosne i Hercegovine
-  name: Canton Sarajevo
+  name: Zavod za planiranje razvoja Kantona Sarajevo
   type: Regional government
 properties:
   has_doi: true
-  transferable_location: true
 rights:
   license_id: null
   license_name: null
@@ -76,11 +78,20 @@ tags:
 - government
 - has_api
 - Sarajevo
-- spatial
+- spatial planning
 - metadata
 - GIS
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: cdi00002143

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,18 +14,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Open data portal of the Office of Agricultural Economics (OAE), Thailand,
+description: The opendata.oae.go.th host no longer resolves (NXDOMAIN). Agricultural economics datasets remain on other OAE catalogs. Open data portal of the Office of Agricultural Economics (OAE), Thailand,
   providing agricultural data catalogs.
-endpoints:
-- type: ckan
-  url: https://opendata.oae.go.th/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://opendata.oae.go.th/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://opendata.oae.go.th/api/3/action/package_list
-  version: '3'
 id: opendataoaegoth
 langs:
 - id: TH
@@ -51,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - Agricultural data
 - Agriculture
@@ -61,4 +51,4 @@ topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
   type: eudatatheme
-uid: temp00004772
+uid: cdi00034966

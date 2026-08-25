@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -21,6 +22,12 @@ endpoints:
 - type: oaipmh20
   url: https://repository.aabu.edu.jo/oai/request?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://repository.aabu.edu.jo/jspui/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repository.aabu.edu.jo/jspui/feed/atom_1.0/site
+  version: '1.0'
 id: repositoryaabuedujo
 langs:
 - id: AR
@@ -55,7 +62,8 @@ tags:
 - DSpace
 - institutional repository
 - research data
-- Jordan
+- open access
+- has_api
 - theses
 topics:
 - id: TECH
@@ -64,7 +72,7 @@ topics:
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
-- id: Education
-  name: Education
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00027933

@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: IMF SDDS National Summary Data Page for Norway, hosted by Statistics
+  Norway. Disseminates macroeconomic and financial summary indicators with SDMX downloads
+  linked from the IMF Dissemination Standards Bulletin Board.
+endpoints:
+- type: imfnsdp:catalog
+  url: http://www.ssb.no/en/nasjonalregnskap-og-konjunkturer/nokkeltall/economic-and-financial-data-for-norway
+id: nsdpssbno
+langs:
+- id: 'NO'
+  name: Norwegian
+- id: EN
+  name: English
+link: http://www.ssb.no/en/nasjonalregnskap-og-konjunkturer/nokkeltall/economic-and-financial-data-for-norway
+name: Norway National Summary Data Page
+owner:
+  link: https://www.ssb.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: Statistics Norway
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+software:
+  id: imfnsdp
+  name: IMF National Summary Data Page
+status: active
+tags:
+- NSDP
+- IMF
+- SDDS
+- statistics
+- government
+- official statistics
+- SDMX
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00037472

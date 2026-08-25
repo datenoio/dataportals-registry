@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,35 +15,25 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: GIS services portal by Boshplan (Uzbekistan State Committee on Land Resources,
-  Geodesy, Cartography and State Cadaster). Offers geospatial data and map services.
-endpoints:
-- type: arcgis:rest:info
-  url: https://gis.boshplan.uz/server/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://gis.boshplan.uz/server/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://gis.boshplan.uz/server/services?wsdl
-- type: arcgis:sitemap
-  url: https://gis.boshplan.uz/server/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://gis.boshplan.uz/server/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://gis.boshplan.uz/server/rest/services?f=kmz
+description: Former ArcGIS Server REST catalog of Toshkentboshplan LITI, the state
+  unitary enterprise that prepares the Tashkent city master plan. Hostname gis.boshplan.uz
+  no longer resolves (NXDOMAIN as of 24 August 2026).
 id: gisboshplanuz
 langs:
 - id: UZ
   name: Uzbek
+- id: RU
+  name: Russian
 link: https://gis.boshplan.uz/server/rest/services
-name: Toshkentboshplan LITI ArcGIS
+name: Toshkentboshplan LITI ArcGIS Server
 owner:
-  link: https://gis.boshplan.uz
+  link: https://tashkent.uz
   location:
     country:
       id: UZ
       name: Uzbekistan
     level: 20
-  name: Toshkentboshplan LITI
+  name: Toshkentboshplan LITI State Unitary Enterprise
   type: Central government
 properties:
   has_doi: false
@@ -57,29 +47,33 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
-- GIS
+- gis
 - geospatial
-- cadaster
-- Uzbekistan
+- urban planning
+- cadastre
+- Tashkent
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Elevation
-  name: Elevation
+- id: Structure
+  name: Structure
   type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-- id: Planning / Cadastre
-  name: Planning / Cadastre
-  type: iso19115
-- id: Structure
-  name: Structure
+- id: Elevation
+  name: Elevation
   type: iso19115
 uid: cdi00005165

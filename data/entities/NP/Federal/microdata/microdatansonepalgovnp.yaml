@@ -16,11 +16,13 @@ coverage:
       id: '034'
       name: Southern Asia
 description: National Data Archive (NADA) of the National Statistics Office of Nepal.
-  Catalogues census and survey microdata for researchers to browse, compare, request
-  access, and download.
+  Catalogues census and survey microdata (about 75 studies) for researchers to browse,
+  compare, request access, and download.
 endpoints:
 - type: nada:catalog-search
   url: https://microdata.nsonepal.gov.np/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://microdata.nsonepal.gov.np/index.php/catalog/export/csv?ps=5000&collection[]
 id: microdatansonepalgovnp
 langs:
 - id: EN
@@ -36,7 +38,7 @@ owner:
       id: NP
       name: Nepal
     level: 20
-  name: National Statistics Office of Nepal
+  name: National Statistics Office
   type: Central government
 properties:
   has_doi: false
@@ -59,6 +61,7 @@ tags:
 - census
 - survey
 - statistics
+- Nepal
 topics:
 - id: SOCI
   name: Population and society

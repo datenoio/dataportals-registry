@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: Interactive Forest Atlas of the Republic of the Congo, hosted by the
-  Ministry of Forest Economy with the World Resources Institute. Map, data, documents
-  and dashboards on forest concessions, conservation and processing units.
+description: Interactive Forest Atlas of the Republic of the Congo. Public ArcGIS
+  Hub of the Ministry of Forest Economy, developed with the World Resources Institute,
+  with layers on forest concessions, protected areas and land allocation.
 endpoints:
 - type: dcatap201
   url: https://cog.atlas-forestier.org/api/feed/dcat-ap/2.0.1.json
@@ -27,16 +27,20 @@ endpoints:
   url: https://cog.atlas-forestier.org/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://cog.atlas-forestier.org/api/search/v1
+- type: dcatus11
+  url: https://cog.atlas-forestier.org/data.json
 - type: sitemap
   url: https://cog.atlas-forestier.org/sitemap.xml
 id: cogatlasforestierorg
 langs:
 - id: FR
   name: French
+- id: EN
+  name: English
 link: https://cog.atlas-forestier.org
 name: Atlas Forestier du Congo
 owner:
-  link: https://cog.atlas-forestier.org
+  link: https://forest-atlas.org
   location:
     country:
       id: CG
@@ -45,7 +49,9 @@ owner:
   name: Ministère de l'Économie Forestière
   type: Central government
 properties:
+  dataset_count_reported: 28
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -63,7 +69,6 @@ tags:
 - geospatial
 - government
 - has_api
-- Republic of the Congo
 topics:
 - id: ENVI
   name: Environment

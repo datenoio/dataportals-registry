@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,17 +11,12 @@ coverage:
     country:
       id: World
       name: World
-    level: 10
+    level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
-description: ArcGIS Server geoportal providing comprehensive access to geospatial
-  datasets and map services through standardized REST API endpoints. This geoportal
-  enables discovery, integration, and access to various map layers, feature services,
-  and spatial data for mapping, visualization, and spatial analysis applications.
-  The portal hosts geospatial content accessible via ArcGIS Server REST services directory,
-  supporting web-based mapping applications, GIS workflows, and geospatial data integration
-  across different platforms and tools.
+description: Catalog host 141.91.172.224:6080 did not respond on 25 August 2026
+  (timeout or connection refused). Operator and country are unconfirmed.
 id: '14191172224'
 identifiers:
 - id: ip
@@ -35,16 +30,16 @@ langs:
 - id: EN
   name: English
 link: http://141.91.172.224:6080/arcgis/services
-name: Government of Unknown Geoportal
+name: Unidentified catalog (141.91.172.224:6080)
 owner:
   link: http://141.91.172.224
   location:
     country:
       id: World
       name: World
-    level: 10
-  name: Government of Unknown
-  type: Central government
+    level: 20
+  name: Unidentified operator
+  type: Other
 properties:
   has_doi: false
 rights:
@@ -57,7 +52,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - arcgis
 - arcgisserver
@@ -100,13 +95,4 @@ topics:
 - id: Geoscientific Information
   name: Geoscientific Information
   type: iso19115
-uid: temp00005336
-endpoints:
-- type: dcatap201
-  url: http://141.91.172.224:6080/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: http://141.91.172.224:6080/api/feed/dcat-us/1.1.json
-- type: rss
-  url: http://141.91.172.224:6080/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: http://141.91.172.224:6080/api/search/v1
+uid: cdi00037244

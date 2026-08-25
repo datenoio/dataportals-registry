@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -20,6 +20,9 @@ coverage:
       name: New York
 description: New York State Community Action Association data hub with a CARES SparkMap
   Map Room and community needs assessment reports for New York Community Action Agencies.
+endpoints:
+- type: sparkmap:catalog
+  url: https://nyscaa.engagementnetwork.org/
 id: nyscaaengagementnetworkorg
 langs:
 - id: EN

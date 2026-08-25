@@ -18,18 +18,27 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: ArcGIS REST services catalog. This geoportal. managed by Raseiniai District
-  Municipality. provides access to datasets and resources.
+description: Raseiniai district municipality ArcGIS Server catalogue of local spatial datasets and map
+  services.
 endpoints:
+- type: arcgis:rest:info
+  url: https://gis.raseiniai.lt/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
   url: https://gis.raseiniai.lt/arcgis/rest/services?f=pjson
-  version: '1.0'
+- type: arcgis:soap
+  url: https://gis.raseiniai.lt/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.raseiniai.lt/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.raseiniai.lt/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.raseiniai.lt/arcgis/rest/services?f=kmz
 id: gisraseiniailt
 langs:
 - id: LT
   name: Lithuanian
 link: https://gis.raseiniai.lt/arcgis/rest/services
-name: Raseiniai District Municipality Geoportal
+name: Raseiniai ArcGIS REST Services
 owner:
   link: https://www.raseiniai.lt
   location:
@@ -40,7 +49,7 @@ owner:
     subregion:
       id: LT-KU
       name: Kauno apskritis
-  name: Raseiniai District Municipality
+  name: Raseinių rajono savivaldybė
   type: Local government
 properties:
   has_doi: false
@@ -69,4 +78,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00000452
+uid: cdi00035286

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,38 +11,27 @@ coverage:
     country:
       id: World
       name: World
-    level: 10
+    level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
-description: No metadata found for data catalog at http://196.45.37.197/ in provided
-  search results. Unable to extract owner_type_reference, data_theme, or iso19115_theme
-  due to lack of publicly available metadata.
-endpoints:
-- type: wms111
-  url: http://196.45.37.197/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wfs110
-  url: http://196.45.37.197/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: http://196.45.37.197/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
+description: Catalog host 196.45.37.197 did not respond on 25 August 2026
+  (timeout or connection refused). Operator and country are unconfirmed.
 id: '1964537197'
 langs:
 - id: EN
   name: English
 link: http://196.45.37.197/
-name: No result — website not accessible or metadata not available in search results
+name: Unidentified catalog (196.45.37.197)
 owner:
   link: http://196.45.37.197
   location:
     country:
       id: World
       name: World
-    level: 10
-  name: Government of Unknown
-  type: Central government
+    level: 20
+  name: Unidentified operator
+  type: Other
 properties:
   has_doi: false
 rights:
@@ -55,7 +44,7 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 tags:
 - GIS
 - geospatial
@@ -70,4 +59,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00000718
+uid: cdi00037325

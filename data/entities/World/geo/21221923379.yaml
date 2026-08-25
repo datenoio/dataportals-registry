@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: false
-api_status: uncertain
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,26 +11,27 @@ coverage:
     country:
       id: World
       name: World
-    level: 10
+    level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
-description: Catalog of geospatial datasets provided by GeoServer.
+description: Catalog host 212.219.233.79:8080 did not respond on 25 August 2026
+  (timeout or connection refused). Operator and country are unconfirmed.
 id: '21221923379'
 langs:
 - id: EN
   name: English
 link: http://212.219.233.79:8080/geoserver
-name: GeoServer Data Catalog
+name: Unidentified catalog (212.219.233.79:8080)
 owner:
   link: http://212.219.233.79:8080/geoserver
   location:
     country:
       id: World
       name: World
-    level: 10
-  name: GeoServer
-  type: Business
+    level: 20
+  name: Unidentified operator
+  type: Other
 properties:
   has_doi: false
 rights:
@@ -43,7 +44,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - geospatial
 - data
@@ -59,4 +60,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00005341
+uid: cdi00037179

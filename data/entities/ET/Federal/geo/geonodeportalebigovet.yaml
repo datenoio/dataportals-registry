@@ -15,15 +15,34 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Ethiopian Biodiversity Institute Spatial Decision Support System (SDSS)
-  for geospatial data discovery, maps, GeoStories, and dashboards.
+description: Ethiopian Biodiversity Institute Spatial Decision Support System (SDSS).
+  GeoNode catalog for biodiversity and protected-area geospatial datasets, maps,
+  GeoStories, and dashboards.
 endpoints:
-- type: geonode:layers
-  url: https://geonode.portal.ebi.gov.et/api/layers/
+- type: geonode:datasets
+  url: https://geonode.portal.ebi.gov.et/api/datasets/
 - type: geonode:documents
   url: https://geonode.portal.ebi.gov.et/api/documents/
 - type: geonode:dcatus11
   url: https://geonode.portal.ebi.gov.et/data.json
+- type: csw202
+  url: https://geonode.portal.ebi.gov.et/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geonode.portal.ebi.gov.et/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geonode.portal.ebi.gov.et/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://geonode.portal.ebi.gov.et/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geonode.portal.ebi.gov.et/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geonode.portal.ebi.gov.et/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
 id: geonodeportalebigovet
 langs:
 - id: EN
@@ -39,6 +58,15 @@ owner:
     level: 20
   name: Ethiopian Biodiversity Institute
   type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
 software:
   id: geonode
   name: GeoNode
@@ -46,16 +74,20 @@ status: active
 tags:
 - geospatial
 - biodiversity
-- sdss
+- conservation
 - geonode
+- has_api
 - open data
 topics:
-- id: Biota
-  name: Biota
-  type: iso19115
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
 - id: Environment
   name: Environment
   type: iso19115

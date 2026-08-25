@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,15 +14,8 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: The Croatian Social Science Data Archive (CROSSDA) is a national infrastructure
-  public service whose role is to ensure the long-term preservation and dissemination
-  of social science research data.
-endpoints:
-- type: dataverseapi
-  url: https://data.crossda.hr/api/search
-- type: oaipmh20
-  url: https://data.crossda.hr/oai?verb=Identify
-  version: '2.0'
+description: Former CROSSDA Dataverse at data.crossda.hr. The host now serves
+  only a default Payara page; Dataverse APIs and OAI-PMH return 404.
 id: datacrossdahr
 identifiers:
 - id: datacite
@@ -55,12 +48,10 @@ rights:
 software:
   id: dataverse
   name: Dataverse
-status: active
+status: inactive
 tags:
 - scientific
-- has_api
 - dataverse
-- open
 - dataset
 topics:
 - id: TECH

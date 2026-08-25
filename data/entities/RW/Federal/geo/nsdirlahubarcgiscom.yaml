@@ -15,33 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: 'Search, Visualize, and download NSDI Home Page NSDI Home Page About
-  the datasets The datasets presented on this page were gathered from different
-
-  government organizations in Rwanda. This was done in the framework of the
-
-  2020 Basemap Review, which was conducted alongside the National
-
-  Land Use Development Master Plan 2020-2050. During the Basemap Review, many data
-  sets were gathered,
-
-  cleaned, and harmonized. However, due to limited resources, the datasets were
-
-  not completely updated. In 2021, Rwanda Land Management and Use Authority in
-
-  collaboration with other government institutions, has acquired high-resolution
-
-  satellites images, which, later, have been used to update different layers. Even
-  though the updating processes are still ongoing, most of the datasets on this page
-  are open for use, free of charge. Rwanda Land Management and Use Authority will
-  notify the users whenever new updates are available. The users who would prefer
-  to download and use the data offline are advised to always check for new updates
-  before downloading the layers of their interest. For anyone using the services for
-  digital mapping (web apps, interactive maps, ...), there is no need to check for
-  new updates, since the services will be seamlessly updated. All the users are also
-  encouraged to report any errors or any needed updates. In the same way, users are
-  encouraged to contribute the data for the interest of all. Happy Mapping! Boundaries
-  Environment Elevation Geodetic Hydrography Infrastructure'
+description: ArcGIS Hub for Rwanda's National Spatial Data Infrastructure. Open
+  fundamental geospatial layers compiled for the 2020 basemap review and National
+  Land Use Development Master Plan 2020-2050, operated by the National Land Authority.
 endpoints:
 - type: dcatap201
   url: https://nsdi-rla.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -58,7 +34,7 @@ langs:
 - id: EN
   name: English
 link: https://nsdi-rla.hub.arcgis.com/
-name: Rwanda National Spatial Data Infrastructure (NSDI) - RLA Hub
+name: Rwanda National Spatial Data Infrastructure (NSDI)
 owner:
   link: https://www.lands.rw
   location:
@@ -66,7 +42,7 @@ owner:
       id: RW
       name: Rwanda
     level: 20
-  name: Rwanda Land Administration and Information Systems Authority (RLISA)
+  name: National Land Authority
   type: Central government
 properties:
   has_doi: false
@@ -82,17 +58,24 @@ software:
   name: ArcGIS Hub
 status: active
 tags:
+- GIS
+- NSDI
+- land
 - boundaries
-- administrative
-- spatial
+- ArcGIS Hub
+- has_api
+- Rwanda
 topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Planning / Cadastre
+  name: Planning / Cadastre
   type: iso19115
 uid: cdi00003037

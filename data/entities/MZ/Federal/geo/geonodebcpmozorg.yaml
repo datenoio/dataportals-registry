@@ -3,6 +3,9 @@ access_mode:
 api: true
 api_status: active
 catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -12,6 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
+description: GeoNode catalog of the Great Limpopo REDD+ project operated by BioCarbon
+  Partners, publishing geospatial layers and documents for conservation and carbon-project
+  monitoring in Mozambique.
 endpoints:
 - type: geonode:datasets
   url: https://geonode.bcp-moz.org/api/datasets/
@@ -72,23 +78,42 @@ id: geonodebcpmozorg
 langs:
 - id: EN
   name: English
+- id: PT
+  name: Portuguese
 link: https://geonode.bcp-moz.org
 name: Great Limpopo REDD+ Project
 owner:
+  link: https://bcp.earth
   location:
     country:
       id: MZ
       name: Mozambique
     level: 20
-  name: Great Limpopo REDD+ Project
-  type: Civil society
-  link: https://bcp-moz.org
+  name: BioCarbon Partners
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: geonode
   name: GeoNode
 status: active
-uid: cdi00021702
+tags:
+- GIS
+- geospatial
+- REDD+
+- conservation
+- has_api
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
@@ -98,11 +123,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-tags:
-- GIS
-- geospatial
-description: GeoNode catalog of the Great Limpopo REDD+ project, publishing geospatial
-  layers and documents for conservation and carbon-project monitoring in Mozambique.
-content_types:
-- dataset
-- map_layer
+uid: cdi00021702

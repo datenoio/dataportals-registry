@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -10,12 +10,12 @@ coverage:
     country:
       id: World
       name: World
-    level: 0
+    level: 10
     macroregion:
       id: '001'
       name: World
-description: Open collection of crystal structures of organic, inorganic, metal-organic
-  compounds and minerals.
+description: Open collection of crystal structures of organic, inorganic, metal-organic compounds and
+  minerals.
 id: crystallographynet
 langs:
 - id: EN
@@ -51,6 +51,7 @@ tags:
 - materials science
 - open data
 - research data
+- has_api
 topics:
 - id: TECH
   name: Science and technology
@@ -59,3 +60,10 @@ topics:
   name: Geoscientific Information
   type: iso19115
 uid: cdi00026501
+identifiers:
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q17376074
+  value: Q17376074
+endpoints:
+- type: customapi
+  url: https://www.crystallography.net/cod/result.php

@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: No catalog metadata extractable from provided URL content.
+description: Production GeoServer instance on the WebGIS Publisher hosting platform used by Dutch government
+  organisations.
 endpoints:
 - type: wms111
   url: https://geoserver-productie.webgispublisher.nl/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -64,16 +65,16 @@ langs:
 - id: NL
   name: Dutch
 link: https://geoserver-productie.webgispublisher.nl/web/
-name: Government of Netherlands Geoportal
+name: WebGIS Publisher production GeoServer
 owner:
-  link: https://webgispublisher.nl
+  link: https://www.webgispublisher.nl
   location:
     country:
       id: NL
       name: Netherlands
     level: 20
-  name: Government of Netherlands
-  type: Central government
+  name: WebGIS Publisher
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -103,4 +104,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-uid: temp00000507
+uid: cdi00035156

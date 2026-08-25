@@ -8,10 +8,13 @@ coverage:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
+    subregion:
+      id: BR-PR
+      name: Paraná
 endpoints:
 - type: geonode:datasets
   url: https://inteligenciaegestao.itaipuparquetec.org.br/api/datasets/
@@ -75,8 +78,8 @@ owner:
       id: BR-PR
       name: Paraná
   name: Itaipu Parque Tecnológico
-  type: Other
-  link: https://org.br
+  type: Business
+  link: https://www.itaipuparquetec.org.br
 software:
   id: geonode
   name: GeoNode
@@ -95,8 +98,8 @@ topics:
 tags:
 - GIS
 - geospatial
-description: Geoportal. managed by Itaipu Parque Tecnológico. providing access to
-  geonode - inteligência e gestão (itaipu parque tecnológico).
+description: GeoNode de inteligência e gestão territorial do Itaipu Parque Tecnológico,
+  em Foz do Iguaçu (PR).
 content_types:
 - dataset
 - map_layer

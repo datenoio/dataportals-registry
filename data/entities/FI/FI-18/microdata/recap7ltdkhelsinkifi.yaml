@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - dataset
@@ -14,17 +14,17 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-    subregion: &id001
+    subregion:
       id: FI-18
       name: Uusimaa
-description: Unavailable from provided raw text only.
-endpoints:
-- type: sitemap
-  url: https://recap-7.ltdk.helsinki.fi/sitemap.xml
+description: Former Obiba Mica microdata catalogue of the University of Helsinki RECAP
+  project (recap-7.ltdk.helsinki.fi). The host no longer resolves.
 id: recap7ltdkhelsinkifi
 langs:
 - id: FI
   name: Finnish
+- id: EN
+  name: English
 link: https://recap-7.ltdk.helsinki.fi/cat/
 name: University of Helsinki RECAP Microdata Catalog
 owner:
@@ -34,7 +34,9 @@ owner:
       id: FI
       name: Finland
     level: 30
-    subregion: *id001
+    subregion:
+      id: FI-18
+      name: Uusimaa
   name: University of Helsinki
   type: Academy
 properties:
@@ -49,10 +51,11 @@ rights:
 software:
   id: obibamica
   name: Obiba Mica
-status: active
+status: inactive
 tags:
 - Finland
 - obibamica
+- microdata
 topics:
 - id: SOCI
   name: Population and society

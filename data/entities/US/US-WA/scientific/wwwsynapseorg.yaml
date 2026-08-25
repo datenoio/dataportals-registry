@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       name: Washington
 description: Sage Bionetworks platform for sharing and collaboratively analyzing biomedical
   research datasets.
+endpoints:
+- type: synapse:api
+  url: https://repo-prod.prod.sagebase.org/repo/v1/version
 id: wwwsynapseorg
 identifiers:
 - id: re3data
@@ -42,8 +45,8 @@ owner:
   name: Sage Bionetworks
   type: Civil society
 software:
-  id: custom
-  name: Custom software
+  id: synapse
+  name: Synapse
 status: active
 tags:
 - biomedical

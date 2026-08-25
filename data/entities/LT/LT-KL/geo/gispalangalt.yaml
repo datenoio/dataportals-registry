@@ -11,21 +11,33 @@ coverage:
     country:
       id: LT
       name: Lithuania
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: ArcGIS REST API endpoint providing data catalog services.
+    subregion:
+      id: LT-KL
+      name: Klaipėdos apskritis
+description: Palanga city municipality ArcGIS Server catalogue of local spatial datasets and map services.
 endpoints:
+- type: arcgis:rest:info
+  url: https://gis.palanga.lt/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
   url: https://gis.palanga.lt/arcgis/rest/services?f=pjson
-  version: '1.0'
+- type: arcgis:soap
+  url: https://gis.palanga.lt/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.palanga.lt/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.palanga.lt/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.palanga.lt/arcgis/rest/services?f=kmz
 id: gispalangalt
 langs:
 - id: LT
   name: Lithuanian
 link: https://gis.palanga.lt/arcgis/rest/services
-name: Palangos miestas ArcGIS REST
+name: Palanga ArcGIS REST Services
 owner:
   link: https://www.palanga.lt
   location:
@@ -36,7 +48,7 @@ owner:
     subregion:
       id: LT-KL
       name: Klaipėdos apskritis
-  name: Palangos miestas
+  name: Palangos miesto savivaldybė
   type: Local government
 properties:
   has_doi: false
@@ -65,4 +77,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00000451
+uid: cdi00035283

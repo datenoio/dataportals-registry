@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Public OMERO.web and OMERO.gallery instance for SSBD bioimaging data
+  at RIKEN. Provides project, dataset, and image browsing plus the OMERO JSON API
+  for published microscopy studies in SSBD:database and SSBD:repository.
+endpoints:
+- type: omero:projects
+  url: https://ssbd.riken.jp/omero/api/v0/m/projects/
+id: ssbdrikenjpomero
+langs:
+- id: EN
+  name: English
+- id: JA
+  name: Japanese
+link: https://ssbd.riken.jp/omero/
+name: SSBD OMERO
+owner:
+  link: https://ssbd.riken.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+  name: RIKEN Center for Biosystems Dynamics Research
+  type: Academy
+properties:
+  dataset_count_reported: 260
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: omero
+  name: OMERO
+status: active
+tags:
+- scientific
+- research data
+- academic
+- microscopy
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990024

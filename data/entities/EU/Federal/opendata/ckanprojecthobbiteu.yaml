@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -16,16 +16,6 @@ coverage:
       name: Western Europe
 description: HOBBIT is a European research project providing a holistic open-source
   platform and industry-grade benchmarks for big linked data and Linked Data solutions.
-endpoints:
-- type: ckan:package-search
-  url: https://ckan.project-hobbit.eu/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://ckan.project-hobbit.eu/api/3/action/package_list
-  version: '3'
-- type: ckan
-  url: https://ckan.project-hobbit.eu/api/3
-  version: '3'
 id: ckanprojecthobbiteu
 langs:
 - id: EN
@@ -36,10 +26,10 @@ owner:
   link: https://project-hobbit.eu
   location:
     country:
-      id: BE
-      name: Belgium
+      id: EU
+      name: European Union
     level: 20
-  name: HOBBIT Project
+  name: HOBBIT Project Consortium
   type: Academy
 rights:
   license_id: null
@@ -51,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - CKAN
 - European Union
@@ -66,4 +56,4 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-uid: temp00000277
+uid: cdi00035484

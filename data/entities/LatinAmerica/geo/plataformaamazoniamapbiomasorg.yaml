@@ -71,11 +71,22 @@ coverage:
     macroregion:
       id: '005'
       name: South America
+- location:
+    country:
+      id: GF
+      name: French Guiana
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
 description: MapBiomas Amazonia platform of annual land-cover and land-use maps for
   the Pan-Amazon, produced by the RAISG/MapBiomas network from Landsat imagery.
 endpoints:
 - type: mapbiomas:catalog
   url: https://plataforma.amazonia.mapbiomas.org/
+- type: wms130
+  url: https://shared-geoserver.mapbiomas.org/geoserver/mapbiomas-amazonia/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
 id: plataformaamazoniamapbiomasorg
 langs:
 - id: ES
@@ -110,6 +121,7 @@ software:
 status: active
 tags:
 - geospatial
+- has_api
 - land cover
 - land use
 - satellite

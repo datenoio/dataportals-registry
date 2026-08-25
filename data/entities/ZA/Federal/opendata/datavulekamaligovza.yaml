@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,22 +14,15 @@ coverage:
     macroregion:
       id: 018
       name: Southern Africa
-description: Makes government budget data and processes accessible to all citizens
-  & interested parties. vulekamali is a project by the South African National Treasury
-  and IMALI YETHU is an open coalition of civil society organisations driven by an
-  interest in promoting budget transparency and public participation.
-endpoints:
-- type: ckan:package-search
-  url: https://data.vulekamali.gov.za/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://data.vulekamali.gov.za/api/3/action/package_list
-  version: '3'
+description: National Treasury budget transparency portal for South African national
+  and provincial expenditure data, developed with Imali Yethu. The former CKAN datastore
+  at data.vulekamali.gov.za no longer resolves; the public catalog is the vulekamali
+  website.
 id: datavulekamaligovza
 langs:
 - id: EN
   name: English
-link: https://data.vulekamali.gov.za
+link: https://vulekamali.gov.za/
 name: Vulekamali – South Africa Budget Data Portal
 owner:
   link: https://www.treasury.gov.za
@@ -51,12 +44,11 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: ckan
-  name: CKAN
+  id: custom
+  name: Custom software
 status: active
 tags:
 - government
-- has_api
 - budget
 - fiscal
 - government data

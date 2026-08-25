@@ -14,9 +14,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: National open data portal of the Republic of Mauritius. Hosts government
-  datasets in reusable formats. The portal now runs CKAN 2.11 (the former DKAN /dkan
-  path returns 404).
+description: National open data portal of the Republic of Mauritius. CKAN catalog
+  of government datasets in reusable formats, operated with the Mauritius Digital
+  Promotion Agency.
 endpoints:
 - type: ckan
   url: https://data.govmu.org/api/3
@@ -32,9 +32,9 @@ langs:
 - id: EN
   name: English
 link: https://data.govmu.org
-name: Mauritius OpenData portal
+name: opendata Mauritius
 owner:
-  link: https://www.govmu.org
+  link: https://mitci.govmu.org/mitci/
   location:
     country:
       id: MU
@@ -44,6 +44,8 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
+  dataset_count_reported: 853
 rights:
   license_id: null
   license_name: null
@@ -56,11 +58,15 @@ software:
   name: CKAN
 status: active
 tags:
+- has_api
 - open data
 - government data
 - CKAN
 - Mauritius
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
   type: eudatatheme

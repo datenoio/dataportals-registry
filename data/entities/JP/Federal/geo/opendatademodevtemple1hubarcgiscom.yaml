@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,22 +15,12 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: 'DEMO市 オープンデータ カタログ サイト DEMO市では、市が保有するデータをオープンデータとして公開しています。 このカタログ サイトでは、オープンデータをカテゴリごとに検索して入手することができます。 また、オープンデータを使用した活用事例もご紹介しています。 データをカテゴリからさがす 防災情報 保健・福祉情報 公共施設情報 観光情報 子育て情報 交通関連情報 防災データ オープンデータを活用してみませんか？ 検索 可視化 &amp; 解析 アプリを構築 共有 このカタログ サイトで公開されているデータは誰でも無償で、自由に使用することができます。データを検索、ダウンロードして、新しい活用につなげてください！ たくさんのデータが公開されています データの空間的傾向を把握し、新たな洞察を得ます 公開されているデータは、API で使用できます。 成果物を広く共有しましょう！ オープンデータの活用事例 このオープンデータ カタログ サイトで公開されているオープン データを用いた活用事例をご紹介します。 お問い合わせ先 DEMO市 総務企画課 情報政策ICT推進課電話: xxx-xxx-xxxx'
-endpoints:
-- type: dcatap201
-  url: https://opendata-demo-dev-temple1.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://opendata-demo-dev-temple1.hub.arcgis.com/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://opendata-demo-dev-temple1.hub.arcgis.com/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://opendata-demo-dev-temple1.hub.arcgis.com/api/search/v1
-- type: sitemap
-  url: https://opendata-demo-dev-temple1.hub.arcgis.com/sitemap.xml
+description: ESRI Japan ArcGIS Hub demonstration catalog for a fictional city open
+  data portal. The Hub URL returned HTTP 404 at review.
 id: opendatademodevtemple1hubarcgiscom
 langs:
-- id: EN
-  name: English
+- id: JA
+  name: Japanese
 link: https://opendata-demo-dev-temple1.hub.arcgis.com/
 name: DEMO市 オープンデータ カタログ (ESRI Japan Demo)
 owner:
@@ -54,7 +44,7 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
 - demo
 - dev

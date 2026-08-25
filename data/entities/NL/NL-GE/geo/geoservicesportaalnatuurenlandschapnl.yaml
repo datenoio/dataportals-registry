@@ -11,12 +11,14 @@ coverage:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Geoserver providing geospatial data services for nature and landscape
-  portals
+    subregion:
+      id: NL-GE
+      name: Gelderland
+description: GeoServer for nature and landscape data in the Dutch Portaal Natuur en Landschap.
 endpoints:
 - type: tms100
   url: https://geoservices.portaalnatuurenlandschap.nl/geoserver/gwc/service/tms/1.0.0
@@ -32,7 +34,7 @@ langs:
 - id: NL
   name: Dutch
 link: https://geoservices.portaalnatuurenlandschap.nl/geoserver
-name: Not specified in the provided text Geoportal
+name: Portaal Natuur en Landschap GeoServer
 owner:
   location:
     country:
@@ -42,9 +44,9 @@ owner:
     subregion:
       id: NL-GE
       name: Gelderland
-  name: Not specified in the provided text
-  type: Local government
-  link: https://portaalnatuurenlandschap.nl
+  name: BIJ12 / Portaal Natuur en Landschap
+  type: Central government
+  link: https://www.portaalnatuurenlandschap.nl
 properties:
   has_doi: false
 rights:
@@ -69,4 +71,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-uid: temp00005264
+uid: cdi00035198

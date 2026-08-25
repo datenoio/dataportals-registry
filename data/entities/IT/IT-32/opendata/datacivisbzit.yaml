@@ -17,9 +17,8 @@ coverage:
     subregion: &id001
       id: IT-32
       name: Trentino-Alto Adige
-description: Another vocabulary data_theme should be used to assign topic according
-  to EU data theme vocabulary associated with Data Catalog Vocabulary application
-  profile (DCAT-AP).
+description: CKAN open data portal of the Autonomous Province of Bolzano – South Tyrol
+  (civis.bz.it).
 endpoints:
 - type: ckan
   url: https://data.civis.bz.it/api/3
@@ -37,15 +36,15 @@ langs:
 link: https://data.civis.bz.it
 name: Portale OpenData Bolzano
 owner:
-  link: https://www.civisanalytics.com/platform/
+  link: https://www.provincia.bz.it
   location:
     country:
       id: IT
       name: Italy
     level: 30
     subregion: *id001
-  name: Civis Analytics
-  type: Business
+  name: Provincia Autonoma di Bolzano – Alto Adige
+  type: Regional government
 rights:
   license_id: null
   license_name: null
@@ -58,10 +57,9 @@ software:
   name: CKAN
 status: active
 tags:
-- AI Platform
-- Data Catalog
 - Italy
-- Managed Data Warehouse
+- South Tyrol
+- Bolzano
 - ckan
 - open data
 topics:

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -21,6 +21,9 @@ coverage:
 description: exploreMOhealth community health needs assessment platform from the Missouri
   Hospital Association and Hospital Industry Data Institute, with ZIP-level health
   rankings and a CARES SparkMap Map Room.
+endpoints:
+- type: sparkmap:catalog
+  url: https://exploremohealth.org/
 id: exploremohealthorg
 langs:
 - id: EN

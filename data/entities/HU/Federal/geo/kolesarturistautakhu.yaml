@@ -14,8 +14,9 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Geoportal providing geospatial data services using Mapproxy.
+      name: Eastern Europe
+description: MapProxy tile service for Hungarian tourist hiking routes maintained
+  by the turistautak.hu community mapping project.
 endpoints:
 - type: wms111
   url: http://kolesar.turistautak.hu/mapproxy/service?REQUEST=GetCapabilities
@@ -36,14 +37,14 @@ langs:
 link: http://kolesar.turistautak.hu/mapproxy
 name: Hungarian Tourist Routes Geoportal
 owner:
-  link: http://turistautak.hu
+  link: https://turistautak.hu
   location:
     country:
       id: HU
       name: Hungary
     level: 20
-  name: Government of Hungary
-  type: Central government
+  name: turistautak.hu
+  type: Community
 properties:
   has_doi: false
 rights:

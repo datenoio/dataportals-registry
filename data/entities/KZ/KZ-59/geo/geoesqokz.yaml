@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,17 +18,15 @@ coverage:
     subregion:
       id: KZ-59
       name: Severo-Kazahstanskaja oblast'
-description: Official geospatial data catalog website of the Republic of Kazakhstan
-  (assuming based on the '.kz' domain and 'geo' subdomain)
+description: Regional map portal of North Kazakhstan Region (E-SQO). The former
+  geo.e-sqo.kz host returns HTTP 404; the public Leaflet map is at e-sqo.kz/map.
 id: geoesqokz
 langs:
 - id: RU
   name: Russian
-- id: EN
-  name: English
 - id: KZ
   name: Kazakh
-link: https://geo.e-sqo.kz
+link: https://e-sqo.kz/map/
 name: North Kazakhstan region geoportal
 owner:
   link: https://www.gov.kz/memleket/entities/sko?lang=en

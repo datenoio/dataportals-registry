@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -12,11 +12,14 @@ coverage:
       name: World
     level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
 description: FAO AIDmonitor analyzes Official Development Assistance flows for food
   security, nutrition, agriculture, and rural development. It is the FENIX successor
   to the Agricultural Development Assistance Mapping (ADAM) tool.
+endpoints:
+- type: fenix:catalog
+  url: https://www.fao.org/aid-monitor/en
 id: wwwfaoorgaidmonitor
 langs:
 - id: EN

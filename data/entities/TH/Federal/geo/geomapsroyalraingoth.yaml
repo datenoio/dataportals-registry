@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,23 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: ArcGIS REST services directory for geospatial data catalogs from Thailand's
+description: The geomaps.royalrain.go.th host no longer resolves (NXDOMAIN). ArcGIS REST services directory for geospatial data catalogs from Thailand's
   Royal Rainmaking and Agricultural Aviation Department.
-endpoints:
-- type: arcgis:portals:self
-  url: https://geomaps.royalrain.go.th/portal/sharing/rest/portals/self?f=pjson
-- type: arcgis:rest:info
-  url: https://geomaps.royalrain.go.th/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://geomaps.royalrain.go.th/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://geomaps.royalrain.go.th/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://geomaps.royalrain.go.th/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://geomaps.royalrain.go.th/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://geomaps.royalrain.go.th/arcgis/rest/services?f=kmz
 id: geomapsroyalraingoth
 langs:
 - id: TH
@@ -59,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - GIS
 - ArcGIS
@@ -94,4 +79,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00000670
+uid: cdi00035019

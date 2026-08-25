@@ -15,9 +15,8 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: Republic of Congo GeoPortal powered by Esri. A centralized platform for
-  geospatial data and analytics in Republic of Congo, supporting informed decision-making
-  across sectors.
+description: Republic of the Congo country site on Esri's Africa GeoPortal. ArcGIS
+  Hub sharing continental and national geospatial layers for mapping and analysis.
 endpoints:
 - type: dcatap201
   url: https://republiqueducongo.africageoportal.com/api/feed/dcat-ap/2.0.1.json
@@ -27,14 +26,18 @@ endpoints:
   url: https://republiqueducongo.africageoportal.com/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://republiqueducongo.africageoportal.com/api/search/v1
+- type: dcatus11
+  url: https://republiqueducongo.africageoportal.com/data.json
 - type: sitemap
   url: https://republiqueducongo.africageoportal.com/sitemap.xml
 id: republiqueducongoafricageoportalcom
 langs:
 - id: FR
   name: French
+- id: EN
+  name: English
 link: https://republiqueducongo.africageoportal.com/
-name: Republic of Congo GeoPortal (Africa GeoPortal)
+name: Congo GeoPortal (Africa GeoPortal)
 owner:
   link: https://www.esri.com
   location:
@@ -45,6 +48,7 @@ owner:
   name: ESRI
   type: Business
 properties:
+  dataset_count_reported: 24
   has_doi: false
 rights:
   license_id: null
@@ -59,13 +63,19 @@ software:
 status: active
 tags:
 - GIS
-- geospatial data
-- Republic of Congo
-- Middle Africa
+- geospatial
+- Africa GeoPortal
 - Esri
+- has_api
 topics:
 - id: REGI
   name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
   type: eudatatheme
 - id: Boundaries
   name: Boundaries

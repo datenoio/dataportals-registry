@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,14 +15,20 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Public geoportal of Nicaragua's National Water Authority (IDE-ANA / SIAGUA)
-  for exploring hydrological resources, basin committees, drinking-water operators,
-  and climate-change scenarios.
+description: MapStore geoportal of Nicaragua's National Water Authority (IDE-ANA /
+  SIAGUA) for hydrological resources, basin committees, drinking-water operators, and
+  climate-change scenarios. A Nicepage landing page at /geoportal/Inicio.html links
+  here and to the ANA GeoNetwork catalog.
+endpoints:
+- type: mapstore:catalog
+  url: http://visorsiagua.ana.gob.ni/mapstore/
+- type: mapstore:geostore
+  url: http://visorsiagua.ana.gob.ni/mapstore/rest/geostore/extjs/search/category/MAP/0/10
 id: visorsiaguaanagobni
 langs:
 - id: ES
   name: Spanish
-link: http://visorsiagua.ana.gob.ni/geoportal/Inicio.html
+link: http://visorsiagua.ana.gob.ni/mapstore/
 name: IDE-ANA Geoportal SIAGUA
 owner:
   link: http://www.ana.gob.ni
@@ -35,6 +41,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -43,15 +50,17 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: mapstore
+  name: MapStore
 status: active
 tags:
 - geospatial
 - water
 - hydrology
+- MapStore
 - Nicaragua
 - government
+- has_api
 topics:
 - id: ENVI
   name: Environment

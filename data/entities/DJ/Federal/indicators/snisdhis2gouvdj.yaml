@@ -20,6 +20,10 @@ description: National DHIS2 health information system of the Djibouti Ministry o
 endpoints:
 - type: dhis2:catalog
   url: https://snis-dhis2.gouv.dj/dhis
+- type: dhis2:system-info
+  url: https://snis-dhis2.gouv.dj/dhis/api/system/info
+- type: dhis2:datasets
+  url: https://snis-dhis2.gouv.dj/dhis/api/dataSets.json?fields=id,displayName&pageSize=1
 id: snisdhis2gouvdj
 langs:
 - id: FR
@@ -57,6 +61,7 @@ tags:
 - DHIS2
 - government
 - restricted
+- has_api
 - Djibouti
 topics:
 - id: HEAL

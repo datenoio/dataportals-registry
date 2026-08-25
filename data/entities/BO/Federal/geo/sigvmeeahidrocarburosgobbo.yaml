@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,38 +15,14 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Extracted data catalog entry. This geoportal. managed by Ministerio de
-  Hidrocarburos y Energías. provides access to datasets and resources.
-endpoints:
-- type: geonode:layers
-  url: http://sigvmeea.hidrocarburos.gob.bo/api/layers/
-- type: geonode:documents
-  url: http://sigvmeea.hidrocarburos.gob.bo/api/documents/
-- type: geonode:dcatus11
-  url: http://sigvmeea.hidrocarburos.gob.bo/data.json
-- type: wms111
-  url: http://sigvmeea.hidrocarburos.gob.bo/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wcs111
-  url: http://sigvmeea.hidrocarburos.gob.bo/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: csw202
-  url: http://sigvmeea.hidrocarburos.gob.bo/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: http://sigvmeea.hidrocarburos.gob.bo/catalogue/csw?mode=oaipmh&verb=Identify
-  version: '2.0'
-- type: opensearch
-  url: http://sigvmeea.hidrocarburos.gob.bo/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
-  version: '1.0'
-- type: opensearch
-  url: http://sigvmeea.hidrocarburos.gob.bo/catalogue/opensearch
+description: Former GeoNode of the Viceministerio de Exploración y Explotación de
+  Energías Alternativas (SIG VMEEA). The host sigvmeea.hidrocarburos.gob.bo times out.
 id: sigvmeeahidrocarburosgobbo
 langs:
 - id: ES
   name: Spanish
 link: http://sigvmeea.hidrocarburos.gob.bo
-name: Platforma del datos geospaciales IIGEO-UMSA
+name: SIG VMEEA Hidrocarburos
 owner:
   link: https://www.hidrocarburos.gob.bo
   location:
@@ -69,7 +45,7 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 tags:
 - geospatial
 - government

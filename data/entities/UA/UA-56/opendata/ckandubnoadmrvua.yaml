@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,18 +17,8 @@ coverage:
     subregion:
       id: UA-56
       name: Rivnenska oblast
-description: Open data portal of Dubno City Administration providing access to public
-  datasets through ckan.
-endpoints:
-- type: ckan
-  url: https://ckan.dubno-adm.rv.ua/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://ckan.dubno-adm.rv.ua/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://ckan.dubno-adm.rv.ua/api/3/action/package_list
-  version: '3'
+description: Open data portal of Dubno City Administration. Host timed out in August
+  2026.
 id: ckandubnoadmrvua
 langs:
 - id: UK
@@ -36,7 +26,7 @@ langs:
 link: https://ckan.dubno-adm.rv.ua
 name: Портал відкритих даних Дубенської міської ради
 owner:
-  link: https://dubno-adm.rv.ua
+  link: https://dubno-adm.gov.ua
   location:
     country: *id001
     level: 30
@@ -55,7 +45,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - Ukraine
 - open data

@@ -14,7 +14,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Data catalog provided by Universiti Teknologi MARA (UiTM)
+description: Institutional research data repository of Universiti Teknologi MARA
+  (UiTM), publishing datasets deposited by UiTM researchers on EPrints.
 endpoints:
 - type: oaipmh20
   url: https://data.uitm.edu.my/cgi/oai2?verb=Identify
@@ -31,13 +32,13 @@ endpoints:
 - type: eprints:n3
   url: https://data.uitm.edu.my/cgi/export/repository/RDFN3/devel.n3
 - type: sitemap
-  url: http://data.uitm.edu.my/sitemap.xml
+  url: https://data.uitm.edu.my/sitemap.xml
 - type: sword
-  url: http://data.uitm.edu.my/sword-app/servicedocument
+  url: https://data.uitm.edu.my/sword-app/servicedocument
 - type: sword:deposit
-  url: http://data.uitm.edu.my/id/contents
+  url: https://data.uitm.edu.my/id/contents
 - type: opensearch
-  url: http://data.uitm.edu.my/cgi/opensearchdescription
+  url: https://data.uitm.edu.my/cgi/opensearchdescription
 id: datauitmedumy
 langs:
 - id: EN
@@ -45,7 +46,7 @@ langs:
 link: https://data.uitm.edu.my
 name: UiTM Open Data Repository
 owner:
-  link: http://uitm.edu.my
+  link: https://www.uitm.edu.my
   location:
     country:
       id: MY
@@ -68,7 +69,10 @@ software:
   name: EPrints
 status: active
 tags:
-- government
+- research data
+- academic
+- eprints
+- university
 topics:
 - id: TECH
   name: Science and technology

@@ -15,11 +15,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Geoportal. managed by Universidad Mayor de San Andrés. powered by GeoNode.
-  accessible at geonodeiigeo.umsa.bo.
+description: GeoNode of UMSA's Instituto de Investigaciones Geográficas (IIGEO),
+  publishing 51 geospatial datasets for teaching and research in Bolivia.
 endpoints:
-- type: geonode:layers
-  url: https://geonodeiigeo.umsa.bo/api/layers/
 - type: geonode:documents
   url: https://geonodeiigeo.umsa.bo/api/documents/
 - type: wms111
@@ -82,13 +80,13 @@ endpoints:
 - type: opensearch
   url: https://geonodeiigeo.umsa.bo/catalogue/opensearch
 - type: geonode:datasets
-  url: https://geonodeiigeo.umsa.bo/api/datasets/
+  url: https://geonodeiigeo.umsa.bo/api/v2/datasets/
 id: geonodeiigeoumsabo
 langs:
 - id: ES
   name: Spanish
 link: https://geonodeiigeo.umsa.bo
-name: Platforma del datos geospaciales IIGEO-UMSA
+name: Plataforma de datos geoespaciales IIGEO-UMSA
 owner:
   link: https://www.umsa.bo
   location:
@@ -100,6 +98,7 @@ owner:
   type: Academy
 properties:
   has_doi: false
+  dataset_count_reported: 51
 rights:
   license_id: null
   license_name: null
@@ -113,7 +112,8 @@ software:
 status: active
 tags:
 - geospatial
-- government
+- academy
+- GeoNode
 topics:
 - id: Location
   name: Location

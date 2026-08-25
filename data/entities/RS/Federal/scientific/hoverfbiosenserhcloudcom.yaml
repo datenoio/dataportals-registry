@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -12,43 +12,37 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: "Biodiversity data and metadata\r\nFaculty of Sciences, Department of\
-  \   Biology and Ecology, Novi Sad"
-endpoints:
-- type: dcat:ttl
-  url: http://hoverf-biosense.rhcloud.com/dcat
-- type: ipt:dataset
-  url: http://hoverf-biosense.rhcloud.com/inventory/dataset
-- type: rss
-  url: http://hoverf-biosense.rhcloud.com/rss.do
-  version: '2.0'
+description: GBIF IPT formerly hosted at hoverf-biosense.rhcloud.com (OpenShift). The OpenShift
+  rhcloud.com platform was shut down; the host no longer serves the IPT. Operated by the Department
+  of Biology and Ecology, Faculty of Sciences, University of Novi Sad.
 id: hoverfbiosenserhcloudcom
 langs:
 - id: SR
   name: Serbian
+- id: EN
+  name: English
 link: http://hoverf-biosense.rhcloud.com
-name: Biodiversity Serbia
+name: Biodiversity Serbia IPT (BioSense / University of Novi Sad)
 owner:
-  link: http://www.dbe.uns.ac.rs/sr
+  link: https://www.dbe.uns.ac.rs
   location:
     country:
       id: RS
       name: Serbia
     level: 20
-  name: Department of Biology and Ecology, Faculty of Sciences, University of Novi
-    Sad, Serbia
+  name: Department of Biology and Ecology, Faculty of Sciences, University of Novi Sad
   type: Academy
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT
 - biodiversity
-- data publishing
+- inactive
 topics:
 - id: Biota
   name: Biota

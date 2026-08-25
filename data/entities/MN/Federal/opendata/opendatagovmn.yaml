@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,19 +14,9 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Portal launched by the government of Mongolia to provide usable and redistributable
-  data accumulated by government institutions for citizens and the public. Publishes
-  various types of research reports and spatial data.
-endpoints:
-- type: ckan
-  url: https://opendata.gov.mn/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://opendata.gov.mn/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://opendata.gov.mn/api/3/action/package_list
-  version: '3'
+description: National open data portal of the Government of Mongolia. The previous
+  CKAN installation has been replaced by a custom Nuxt application publishing government
+  datasets, research reports, and spatial data for reuse.
 id: opendatagovmn
 langs:
 - id: MN
@@ -53,12 +43,11 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: ckan
-  name: CKAN
+  id: custom
+  name: Custom software
 status: active
 tags:
 - government
-- has_api
 - open data
 - government data
 - spatial data

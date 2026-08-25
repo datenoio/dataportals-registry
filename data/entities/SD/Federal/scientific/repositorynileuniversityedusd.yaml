@@ -15,11 +15,21 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Institutional DSpace repository of Nile University (Khartoum) for theses,
-  publications, and other scholarly works.
+description: DSpace 8 institutional repository of Nile University (Khartoum) for theses,
+  publications, and other scholarly works. REST search currently lists about 300 objects;
+  OAI-PMH Identify is live on the same host.
 endpoints:
-- type: dspace:rest
+- type: dspace
   url: https://repository.nileuniversity.edu.sd/server/api
+  version: '8'
+- type: dspace:objects
+  url: https://repository.nileuniversity.edu.sd/server/api/discover/search/objects
+  version: '8'
+- type: oaipmh20
+  url: https://repository.nileuniversity.edu.sd/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://repository.nileuniversity.edu.sd/sitemap_index.xml
 id: repositorynileuniversityedusd
 langs:
 - id: AR
@@ -53,7 +63,11 @@ status: active
 tags:
 - institutional repository
 - open access
-- research data
+- theses
+- research
+- DSpace
+- Sudan
+- has_api
 topics:
 - id: TECH
   name: Science and technology
@@ -61,4 +75,7 @@ topics:
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
+- id: Education
+  name: Education
+  type: iso19115
 uid: cdi00027551

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,11 +13,20 @@ coverage:
       name: Eswatini
     level: 20
     macroregion:
-      id: 018
+      id: '018'
       name: Southern Africa
-description: Public drought map catalog operated by the National Disaster Management
+description: Public DroughtMap Hub catalog operated by the National Disaster Management
   Agency. Publishes monthly Composite Drought Indicator maps for browse, compare,
   and download, with the Ministry of Agriculture and the Eswatini Meteorological Service.
+  Akvo-built Next.js/Django application with a public REST API; rasters are stored
+  on the separate NDMA GeoNode Digital Risk Database.
+endpoints:
+- type: openapi
+  url: https://cdie.ndma.org.sz/api/schema/
+  version: '3.0'
+- type: droughtmap:maps
+  url: https://cdie.ndma.org.sz/api/v1/maps/
+  version: '1.0'
 id: cdiendmaorgsz
 langs:
 - id: EN
@@ -35,6 +44,8 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
+  dataset_count_reported: 309
 rights:
   license_id: null
   license_name: null
@@ -51,6 +62,8 @@ tags:
 - climate
 - meteorology
 - government
+- has_api
+- disaster management
 topics:
 - id: ENVI
   name: Environment

@@ -3,6 +3,9 @@ access_mode:
 api: true
 api_status: active
 catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -12,6 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
+description: GeoNode geoportal of Vietnam's National Remote Sensing Department for public disclosure of
+  remote-sensing datasets, maps, and OGC services.
 endpoints:
 - type: csw202
   url: https://congbo.dulieuvientham.gov.vn/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
@@ -75,19 +80,23 @@ langs:
 link: https://congbo.dulieuvientham.gov.vn
 name: Công Bố Dữ Liệu Viễn Thám (National Remote Sensing Data Disclosure)
 owner:
+  link: https://mae.gov.vn
   location:
     country:
       id: VN
       name: Vietnam
     level: 20
-  name: National Remote Sensing Department, Ministry of Natural Resources and Environment
+  name: National Remote Sensing Department
   type: Central government
-  link: https://gov.vn
 software:
   id: geonode
   name: GeoNode
 status: active
-uid: cdi00021556
+tags:
+- GIS
+- geospatial
+- government
+- has_api
 topics:
 - id: Location
   name: Location
@@ -98,13 +107,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-tags:
-- GIS
-- geospatial
-- government
-description: Geoportal. managed by National Remote Sensing Department, Ministry of
-  Natural Resources and Environment. providing access to công bố dữ liệu viễn thám
-  (national remote sensing data disclosure).
-content_types:
-- dataset
-- map_layer
+uid: cdi00021556

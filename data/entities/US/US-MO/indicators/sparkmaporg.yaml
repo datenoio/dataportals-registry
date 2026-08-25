@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -18,6 +18,9 @@ coverage:
 description: National SparkMap Map Room and community needs assessment platform from
   University of Missouri Extension CARES, with tens of thousands of community, health,
   economy, and environment indicator layers for the United States.
+endpoints:
+- type: sparkmap:catalog
+  url: https://sparkmap.org/
 id: sparkmaporg
 langs:
 - id: EN

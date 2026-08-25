@@ -9,15 +9,15 @@ content_types:
 coverage:
 - location:
     country:
-      id: IS
-      name: Iceland
-    level: 20
+      id: World
+      name: World
+    level: 0
     macroregion:
-      id: '154'
-      name: Northern Europe
-description: A GeoNetwork-based data catalog providing search, management, and publication
-  of geospatial and other datasets. It offers metadata editing, map viewing, and resource
-  sharing.
+      id: '001'
+      name: World
+description: Arctic Biodiversity Data Service (ABDS) GeoNetwork catalogue of the Conservation
+  of Arctic Flora and Fauna (CAFF) working group of the Arctic Council, hosted in
+  Iceland. Metadata covers the circumpolar Arctic, not only Iceland.
 endpoints:
 - type: geonetwork:query
   url: https://geo.abds.is/geonetwork/srv/eng/q
@@ -35,27 +35,21 @@ endpoints:
 - type: oaipmh20
   url: https://geo.abds.is/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
-- type: geonetwork:site
-  url: https://geo.abds.is/geonetwork/srv/api/site
-- type: opensearch
-  url: https://geo.abds.is/portal.opensearch
 id: geoabdsis
 langs:
-- id: IS
-  name: Icelandic
 - id: EN
   name: English
 link: https://geo.abds.is/geonetwork
-name: Arctic Biodiversity Data service
+name: Arctic Biodiversity Data Service
 owner:
-  link: https://www.abds.is
+  link: https://caff.is
   location:
     country:
       id: IS
       name: Iceland
     level: 20
   name: Conservation of Arctic Flora and Fauna (CAFF)
-  type: Academy
+  type: International
 properties:
   has_doi: true
   transferable_topics: true
@@ -72,7 +66,8 @@ software:
 status: active
 tags:
 - geospatial
-- government
+- biodiversity
+- Arctic
 - has_api
 topics:
 - id: Biota

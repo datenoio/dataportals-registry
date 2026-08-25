@@ -25,6 +25,9 @@ description: Integrated Data Management System (IDMS) brings the data generated 
   the Integrated Education Management System (IEMIS), Health Management Information
   System (HMIS), etc.
 endpoints:
+- type: ckan
+  url: https://dms.lekbeshimun.gov.np/api/3
+  version: '3'
 - type: ckan:package-search
   url: https://dms.lekbeshimun.gov.np/api/3/action/package_search
   version: '3'
@@ -35,6 +38,8 @@ id: datalekbeshimungovnp
 langs:
 - id: EN
   name: English
+- id: NE
+  name: Nepali
 link: https://data.lekbeshimun.gov.np
 name: Integrated Data Management System of Lekbeshi Municipality
 owner:
@@ -64,8 +69,8 @@ software:
 status: active
 tags:
 - has_api
-- Open Data
-- Municipal Data
+- open data
+- municipal data
 - Nepal
 topics:
 - id: REGI

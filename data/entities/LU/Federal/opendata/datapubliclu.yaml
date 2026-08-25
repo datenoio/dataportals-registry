@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: The Luxembourgish open data platform featuring over 2,200 datasets, resources,
-  visualizations, and applications covering a broad range of topics.
+description: Official open data portal of the Grand Duchy of Luxembourg (uData),
+  publishing public-sector datasets, visualizations, and reuses across government
+  themes. The public API reports about 3,100 datasets and 200 organizations.
 endpoints:
 - type: udataapi
   url: https://data.public.lu/api/1
@@ -32,6 +33,8 @@ identifiers:
 langs:
 - id: FR
   name: French
+- id: EN
+  name: English
 link: https://data.public.lu
 name: Portail Open Data Luxembourg
 owner:
@@ -41,18 +44,19 @@ owner:
       id: LU
       name: Luxembourg
     level: 20
-  name: Government of Luxemburg
+  name: Gouvernement du Grand-Duché de Luxembourg
   type: Central government
 properties:
   has_doi: false
   is_national: true
+  dataset_count_reported: 3173
 rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: null
+  privacy_policy_url: https://data.public.lu/en/pages/legal/privacy
   rights_type: granular
-  tos_url: null
+  tos_url: https://data.public.lu/en/pages/legal/terms
 software:
   id: udata
   name: uData

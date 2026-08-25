@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,30 +14,26 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Portal providing access to research data, publications, and information
-  resources managed by the Czech Technical University in Prague.
-endpoints:
-- type: ckan:package-list
-  url: https://data.ctu.cz/api/3/action/package_list
-  version: '3'
-- type: dcatus11
-  url: https://data.ctu.cz/data.json
-- type: sitemap
-  url: https://data.ctu.cz/sitemap.xml
-id: dataarmycz
+description: Former hostname of the Czech Telecommunication Office (ČTÚ) open data
+  catalog. https://data.ctu.cz now redirects to https://data.ctu.gov.cz, which is
+  recorded separately as datactugovcz. This is not a Czech Technical University (ČVUT)
+  catalog.
+id: datactucz
 langs:
 - id: CS
   name: Czech
+- id: EN
+  name: English
 link: https://data.ctu.cz
-name: Czech Technical University in Prague Data Catalog
+name: Czech Telecommunication Office Open Data (legacy hostname)
 owner:
-  link: https://www.ctu.cz
+  link: https://ctu.gov.cz
   location:
     country:
       id: CZ
       name: Czech Republic
     level: 20
-  name: Czech Telecommunication Office
+  name: Český telekomunikační úřad
   type: Central government
 properties:
   has_doi: false
@@ -47,27 +43,23 @@ rights:
   license_url: null
   privacy_policy_url: null
   rights_type: granular
-  tos_url: null
+  tos_url: https://ctu.gov.cz/podminky-uziti-otevrenych-dat
 software:
   id: dkan
   name: DKAN
-status: active
+status: deprecated
 tags:
 - government
-- research data
-- academic catalog
-- open access
+- telecommunications
+- open data
 topics:
-- id: EDUC
-  name: Education, culture and sport
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
-- id: TECH
-  name: Science and technology
+- id: ECON
+  name: Economy and finance
   type: eudatatheme
-- id: Location
-  name: Location
-  type: iso19115
-- id: Geoscientific Information
-  name: Geoscientific Information
+- id: Utilities / Communication
+  name: Utilities / Communication
   type: iso19115
 uid: cdi00000401

@@ -10,12 +10,15 @@ coverage:
     country:
       id: CR
       name: Costa Rica
-    level: 20
+    level: 30
     macroregion:
       id: '013'
       name: Central America
-description: Un recurso para el uso, reutilización y diseminación de datos abiertos
-  Municipalidad de Santa Ana
+    subregion:
+      id: CR-SJ
+      name: San José
+description: Open data portal of the Municipalidad de Santa Ana for reuse and
+  dissemination of municipal datasets.
 endpoints:
 - type: ckan
   url: https://datosabiertos.santaana.go.cr/api/3
@@ -56,6 +59,7 @@ software:
   name: CKAN
 status: active
 tags:
+- has_api
 - municipal
 - environmental
 - boundaries

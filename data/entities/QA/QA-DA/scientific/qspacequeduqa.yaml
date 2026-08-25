@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -17,29 +18,21 @@ coverage:
     subregion:
       id: QA-DA
       name: Ad Dawḩah
-description: Provides digital access to Qatar University's original research, scholarly
-  works, administrative and historical materials. Built on DSpace platform, hosted
-  in-house through ITS department. Managed by the University Library, responsible
-  for quality control and policy.
+description: Qatar University Digital Hub (QSpace) is the institutional repository
+  for original research, scholarly works, theses, datasets, and administrative records.
+  It runs on DSpace 7 and is managed by the University Library.
 endpoints:
-- type: dspace:items
-  url: https://qspace.qu.edu.qa/rest/items
-  version: '6'
+- type: dspace
+  url: https://qspace.qu.edu.qa/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://qspace.qu.edu.qa/server/api/discover/search/objects
+  version: '7'
 - type: oaipmh20
-  url: https://qspace.qu.edu.qa/oai/request?verb=Identify
+  url: https://qspace.qu.edu.qa/server/oai/request?verb=Identify
   version: '2.0'
-- type: rss
-  url: https://qspace.qu.edu.qa/feed/rss_2.0/site
-  version: '2.0'
-- type: atom
-  url: https://qspace.qu.edu.qa/feed/atom_1.0/site
-  version: '1.0'
 - type: sitemap
-  url: http://qspace.qu.edu.qa/sitemap
-- type: sitemap
-  url: http://qspace.qu.edu.qa/htmlmap
-- type: opensearch
-  url: https://qspace.qu.edu.qa:443/open-search/description.xml
+  url: https://qspace.qu.edu.qa/sitemap_index.xml
 id: qspacequeduqa
 identifiers:
 - id: roar
@@ -51,10 +44,12 @@ identifiers:
 langs:
 - id: EN
   name: English
+- id: AR
+  name: Arabic
 link: https://qspace.qu.edu.qa
 name: Qatar University Digital Hub
 owner:
-  link: https://qu.edu.qa
+  link: https://www.qu.edu.qa
   location:
     country:
       id: QA
@@ -84,6 +79,7 @@ tags:
 - university-archive
 - digital-library
 - research data
+- has_api
 topics:
 - id: TECH
   name: Science and technology
@@ -91,9 +87,6 @@ topics:
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
-- id: Society
-  name: Society
-  type: iso19115
 - id: Society
   name: Society
   type: iso19115

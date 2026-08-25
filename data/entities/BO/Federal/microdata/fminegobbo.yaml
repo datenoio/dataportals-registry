@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - dataset
@@ -14,13 +14,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Official portal of Bolivia's National Statistical Institute, offering
-  access to census data (2001, 2012) and statistics.
-endpoints:
-- type: nada:catalog-search
-  url: http://fm.ine.gob.bo/index.php/api/catalog/search
-- type: nada:csvexport
-  url: http://fm.ine.gob.bo/index.php/catalog/export/csv?ps=5000&collection[]
+description: Duplicate hostname of INE's ANDA NADA catalog (same studies as
+  anda.ine.gob.bo). Kept inactive; use the ANDA record instead.
 id: fminegobbo
 langs:
 - id: ES
@@ -34,7 +29,7 @@ owner:
       id: BO
       name: Bolivia
     level: 20
-  name: Instituto Nacional de Estadística (INE) - Bolivia
+  name: Instituto Nacional de Estadística (INE)
   type: Central government
 properties:
   has_doi: false
@@ -48,7 +43,7 @@ rights:
 software:
   id: nada
   name: NADA
-status: active
+status: inactive
 tags:
 - Bolivia
 - census

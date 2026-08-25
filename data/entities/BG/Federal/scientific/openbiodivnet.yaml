@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: "OpenBiodiv utilizes semantic publishing workflows, text mining, common\
+  \ standards, ontology modelling and graph database technologies to establish a robust\
+  \ infrastructure for creating and managing a Biodiversity Knowledge Graph.\n\nOpenBiodiv\
+  \ encompasses data extracted from full-text article XMLs published by Pensoft and\
+  \ taxonomic treatments extracted by Plazi from journals of other publishers. The\
+  \ data from both sources are converted to RDF and are integrated in a graph database\
+  \ which contains the OpenBiodiv-O ontology and a RDF version of the GBIF taxonomic\
+  \ backbone. OpenBiodiv provides the following services: XML-to-RDF conversion workflow\
+  \ and software for JATS TaxPub XML versions of journal articles, RDF conversion\
+  \ of taxonomic hierarchies in CSV (example: GBIF taxonomic backbone), a triple store\
+  \ of close to one billion triples of facts and metadata extracted from literature,\
+  \ SPARQL endpoint, accessible for regular queries and federated queries with other\
+  \ domain-specific or generic endpoints, and predefined SPARQL queries reflecting\
+  \ different research questions. \nWithin BiCIKL, OpenBiodiv will be developed to\
+  \ provide a LOD version of data liberated from the literature to make them interoperable\
+  \   with other data infrastructures throughout the biodiversity data life cycle."
+endpoints:
+- type: sparql
+  url: https://graph.openbiodiv.net/sparql
+id: openbiodivnet
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::b994697479c5716eda77e8e9713e5f0f
+  value: fairsharing_::b994697479c5716eda77e8e9713e5f0f
+langs:
+- id: EN
+  name: English
+- id: BG
+  name: Bulgarian
+link: https://openbiodiv.net/
+name: The Open Biodiversity Knowledge Management System
+owner:
+  link: https://pensoft.net/
+  location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+  name: Pensoft Publishers
+  type: Academy
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- research data
+- academic
+- biodiversity
+- ecology
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00028522

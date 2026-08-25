@@ -52,10 +52,10 @@ id: mapcadastrumd
 langs:
 - id: RO
   name: Romanian
-link: https://map.cadastru.md/geoserver/web/
-name: Moldova Cadastr GeoServer
+link: https://map.cadastru.md/geoserver
+name: Moldova Immovable Property Cadastre GeoServer
 owner:
-  link: https://www.ipcbi.gov.md/ro
+  link: https://www.ipcbi.gov.md
   location:
     country:
       id: MD
@@ -82,12 +82,19 @@ tags:
 - maps
 - government
 - OGC
+- has_api
 topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
   type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover

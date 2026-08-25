@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,20 +15,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Open data hub of UNAN-Managua's Institute of Geology and Geophysics
-  (IGG-CIGEO), publishing geoscientific layers on geology, geophysics, seismicity,
-  hydrogeology, and natural hazards.
-endpoints:
-- type: dcatap201
-  url: https://portal-de-datos-abiertos-del-igg-cigeo-igg-cigeo.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://portal-de-datos-abiertos-del-igg-cigeo-igg-cigeo.hub.arcgis.com/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://portal-de-datos-abiertos-del-igg-cigeo-igg-cigeo.hub.arcgis.com/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://portal-de-datos-abiertos-del-igg-cigeo-igg-cigeo.hub.arcgis.com/api/search/v1
-- type: sitemap
-  url: https://portal-de-datos-abiertos-del-igg-cigeo-igg-cigeo.hub.arcgis.com/sitemap.xml
+description: ArcGIS Hub of UNAN-Managua's Institute of Geology and Geophysics (IGG-CIGEO)
+  that previously published geoscientific layers. The Hub shell still loads, but Esri
+  reports the subscription as disabled (SB_0005) and DCAT/search feeds return 401/404.
 id: portaldedatosabiertosdeliggcigeoiggcigeohubarcgiscom
 langs:
 - id: ES
@@ -56,7 +45,7 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
 - Nicaragua
 - IGG-CIGEO

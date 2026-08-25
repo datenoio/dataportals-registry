@@ -15,14 +15,15 @@ coverage:
       id: '014'
       name: Eastern Africa
 description: Zimbabwe National Reporting Platform for the Sustainable Development
-  Goals, operated by ZIMSTAT on Open SDG.
+  Goals, operated by ZIMSTAT on Open SDG. Indicator JSON is published from the
+  production-data GitHub Pages repository.
 endpoints:
 - type: opensdg:catalog
   url: https://sdg-zimstat.github.io/
 - type: opensdg:data
-  url: https://SDG-ZimStat.github.io/data-repo/en/data/1-1-1.json
+  url: https://SDG-ZimStat.github.io/production-data/en/data/1-1-1.json
 - type: opensdg:data
-  url: https://SDG-ZimStat.github.io/data-repo/en/data/1-2-1.json
+  url: https://SDG-ZimStat.github.io/production-data/en/data/1-2-1.json
 id: sdgzimstatgithubio
 langs:
 - id: EN
@@ -30,13 +31,13 @@ langs:
 link: https://sdg-zimstat.github.io/
 name: Zimbabwe SDG National Reporting Platform
 owner:
-  link: https://www.zimstat.co.zw
+  link: https://zimstat.co.zw
   location:
     country:
       id: ZW
       name: Zimbabwe
     level: 20
-  name: Zimbabwe National Statistics Agency
+  name: Zimbabwe National Statistics Agency (ZIMSTAT)
   type: Central government
 properties:
   has_doi: false
@@ -56,6 +57,7 @@ tags:
 - Zimbabwe
 - official statistics
 - OpenSDG
+- has_api
 topics:
 - id: SOCI
   name: Population and society

@@ -19,6 +19,9 @@ coverage:
       name: Kirovohradska oblast
 description: Official open data portal of Kropyvnytskyi City Council.
 endpoints:
+- type: ckan
+  url: https://data.kr-rada.gov.ua/api/3
+  version: '3'
 - type: ckan:package-search
   url: https://data.kr-rada.gov.ua/api/3/action/package_search
   version: '3'

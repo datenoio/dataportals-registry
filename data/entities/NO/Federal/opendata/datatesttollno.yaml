@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,23 +14,14 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Data catalog of Norwegian Customs (Tollvesenet) for open datasets.
-endpoints:
-- type: ckan
-  url: https://data-test.toll.no/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://data-test.toll.no/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://data-test.toll.no/api/3/action/package_list
-  version: '3'
+description: Test CKAN instance of Norwegian Customs. Production open data is at
+  data.toll.no; this host timed out during review.
 id: datatesttollno
 langs:
 - id: 'NO'
   name: Norwegian
 link: https://data-test.toll.no
-name: Norwegian Customs Open Data Portal
+name: Norwegian Customs Open Data Portal (test)
 owner:
   link: https://www.toll.no
   location:
@@ -52,7 +43,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - norway
 - economy

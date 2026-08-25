@@ -15,11 +15,24 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Cotonou flood-risk geoportal of the Government of Benin.
+description: Cotonou flood-risk geoportal of the Direction des Systèmes d'Information
+  of the Ministère du Cadre de Vie et des Transports. GeoNode 5 catalog (about 20
+  datasets and 5 documents) for flood-risk GIS, stormwater drainage, and related
+  layers, with public REST, CSW, and OGC services.
 endpoints:
+- type: geonode:datasets
+  url: https://inondation.gouv.bj/api/datasets/
+- type: geonode:documents
+  url: https://inondation.gouv.bj/api/documents/
 - type: csw202
   url: https://inondation.gouv.bj/catalogue/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: '2.0.2'
+- type: wms130
+  url: https://inondation.gouv.bj/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://inondation.gouv.bj/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
 id: inondationgouvbj
 langs:
 - id: FR
@@ -27,27 +40,41 @@ langs:
 link: https://inondation.gouv.bj/
 name: Gestion du risque inondation à Cotonou
 owner:
-  link: https://www.gouv.bj/
+  link: https://cadredevie.gouv.bj
   location:
     country:
       id: BJ
       name: Benin
     level: 20
-  name: Gouvernement du Bénin
+  name: Ministère du Cadre de Vie et des Transports
   type: Central government
+properties:
+  has_doi: false
+  dataset_count_reported: 20
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
 software:
-  id: mapserver
-  name: MapServer
+  id: geonode
+  name: GeoNode
 status: active
 tags:
 - geospatial
 - government
-- MapServer
+- GeoNode
 - flood
-- Benin
+- Cotonou
+- has_api
 topics:
 - id: ENVI
   name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
 - id: Inland Waters
   name: Inland Waters
@@ -58,7 +85,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
 uid: cdi00025823

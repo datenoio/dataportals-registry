@@ -12,17 +12,18 @@ coverage:
       name: Aruba
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
 description: Official Open SDG reporting platform for Aruba, publishing Sustainable
-  Development Goal indicators compiled by the Central Bureau of Statistics.
+  Development Goal indicators compiled by the Central Bureau of Statistics. Indicator
+  JSON is published from the companion productiondata GitHub Pages repository.
 endpoints:
 - type: opensdg:catalog
-  url: https://sdgcbsaua.github.io/
+  url: https://sdgcbsaua.github.io/reporting-status/
 - type: opensdg:data
-  url: https://sdgcbsaua.github.io/data-repo/en/data/1-1-1.json
+  url: https://sdgcbsaua.github.io/productiondata/en/data/1-1-1.json
 - type: opensdg:data
-  url: https://sdgcbsaua.github.io/data-repo/en/data/1-2-1.json
+  url: https://sdgcbsaua.github.io/productiondata/en/data/1-2-1.json
 id: sdgcbsauagithubio
 langs:
 - id: EN
@@ -36,10 +37,11 @@ owner:
       id: AW
       name: Aruba
     level: 20
-  name: Central Bureau of Statistics Aruba
+  name: Central Bureau of Statistics (CBS)
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -56,6 +58,8 @@ tags:
 - Aruba
 - official statistics
 - OpenSDG
+- government
+- has_api
 topics:
 - id: SOCI
   name: Population and society

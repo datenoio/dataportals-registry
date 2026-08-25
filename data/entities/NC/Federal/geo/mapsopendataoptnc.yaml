@@ -15,12 +15,18 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: OPT-NC (Office des Postes et Télécommunications) geoportal for New
-  Caledonia providing maps and geographic data. Sectoral map catalog, not the
-  territorial open data portal.
+description: OPT-NC ArcGIS Hub catalog of maps and geographic datasets for New
+  Caledonia, including telecommunications coverage layers. Sectoral map catalog,
+  not the territorial open data portal.
 endpoints:
+- type: dcatap201
+  url: https://maps.opendata.opt.nc/api/feed/dcat-ap/2.0.1.json
 - type: dcatus11
-  url: https://maps.opendata.opt.nc/data.json
+  url: https://maps.opendata.opt.nc/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://maps.opendata.opt.nc/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://maps.opendata.opt.nc/api/search/v1
 - type: sitemap
   url: https://maps.opendata.opt.nc/sitemap.xml
 id: mapsopendataoptnc
@@ -30,24 +36,35 @@ langs:
 link: https://maps.opendata.opt.nc
 name: OPT-NC Open Data
 owner:
-  link: https://opt.nc
+  link: https://www.opt.nc
   location:
     country:
       id: NC
       name: New Caledonia
     level: 20
   name: Office des Postes et Télécommunications de Nouvelle-Calédonie
-  type: Central government
+  type: Business
 properties:
+  has_doi: false
   is_national: false
+  dataset_count_reported: 3
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
 software:
-  id: opendatasoft
-  name: OpenDataSoft
+  id: arcgishub
+  name: ArcGIS Hub
 status: active
 tags:
 - geospatial
 - telecommunications
 - New Caledonia
+- has_api
+- ArcGIS Hub
 topics:
 - id: GOVE
   name: Government and public sector
@@ -57,5 +74,8 @@ topics:
   type: iso19115
 - id: Boundaries
   name: Boundaries
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
   type: iso19115
 uid: cdi00020842

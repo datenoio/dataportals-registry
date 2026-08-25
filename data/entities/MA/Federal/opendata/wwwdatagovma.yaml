@@ -22,16 +22,17 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Les donnees publiques de l'Administration Marocaine
+description: National CKAN open data portal of the Moroccan administration, publishing
+  public-sector datasets from ministries and agencies (data.gov.ma).
 endpoints:
 - type: ckan
-  url: http://www.data.gov.ma/data/api/3
+  url: https://www.data.gov.ma/data/api/3
   version: '3'
 - type: ckan:package-search
-  url: http://www.data.gov.ma/data/api/3/action/package_search
+  url: https://www.data.gov.ma/data/api/3/action/package_search
   version: '3'
 - type: ckan:package-list
-  url: http://www.data.gov.ma/data/api/3/action/package_list
+  url: https://www.data.gov.ma/data/api/3/action/package_list
   version: '3'
 id: wwwdatagovma
 identifiers:
@@ -39,12 +40,14 @@ identifiers:
   url: http://dataportals.org/portal/morocco
   value: morocco
 langs:
+- id: AR
+  name: Arabic
 - id: FR
   name: French
 link: https://www.data.gov.ma
 name: Portail Open Data - Données ouvertes du Maroc
 owner:
-  link: https://www.gov.ma
+  link: https://www.maroc.ma
   location:
     country:
       id: MA

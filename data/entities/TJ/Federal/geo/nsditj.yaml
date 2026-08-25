@@ -15,7 +15,10 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: Geoportal containing datasets and map layers for Tajikistan.
+description: Custom geoportal of the National Spatial Data Infrastructure of the Republic
+  of Tajikistan, built with GIZ support for the Design and Research Institute FAZO.
+  Intended to publish, catalogue, and share national geospatial datasets among government
+  geodata holders. The nsdi.tj host did not accept connections (24 August 2026).
 endpoints:
 - type: customapi
   url: https://nsdi.tj/datasets
@@ -23,6 +26,8 @@ id: nsditj
 langs:
 - id: RU
   name: Russian
+- id: TG
+  name: Tajik
 link: https://nsdi.tj/datasets
 name: National Spatial Data Infrastructure of the Republic of Tajikistan
 owner:
@@ -34,6 +39,9 @@ owner:
     level: 20
   name: Design and Research Institute "FAZO"
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -44,12 +52,13 @@ rights:
 software:
   id: custom
   name: Custom software
-status: active
+status: deprecated
 tags:
 - geospatial
 - government
-- map_layer
-- dataset
+- NSDI
+- has_api
+- Tajikistan
 topics:
 - id: REGI
   name: Regions and cities
@@ -57,4 +66,13 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: cdi00001566

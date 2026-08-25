@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,22 +15,13 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Geoportal. managed by CEDIA. powered by Geonetwork. accessible at gtide.cedia.org.ec.
-endpoints:
-- type: geonetwork:query
-  url: http://gtide.cedia.org.ec/geonetwork/srv/eng/q
-- type: openapi
-  url: http://gtide.cedia.org.ec/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: http://gtide.cedia.org.ec/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
+description: Former GeoNetwork of CEDIA. The host gtide.cedia.org.ec no longer resolves.
 id: gtidecediaorgec
 langs:
 - id: ES
   name: Spanish
 link: http://gtide.cedia.org.ec/geonetwork
-name: CEDIA Geoportal
+name: CEDIA GeoNetwork
 owner:
   link: https://www.cedia.edu.ec
   location:
@@ -52,7 +43,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - GIS
 - academic

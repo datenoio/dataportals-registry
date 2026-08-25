@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: National DHIS2 health information system of the South Sudan Ministry
-  of Health. Login is required to query routine health indicators.
+description: National DHIS2 health management information system (HMIS) of the South
+  Sudan Ministry of Health. Login is required to query routine health indicators;
+  the Web API redirects anonymous requests to the login app.
 endpoints:
 - type: dhis2:catalog
   url: https://southsudanhis.org

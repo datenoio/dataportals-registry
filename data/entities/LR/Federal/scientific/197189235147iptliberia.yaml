@@ -14,12 +14,10 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: 'The University of Liberia was founded in 1862 as Liberia College and became a
-  full University in 1951. It is a public institution funded mainly by the Government of Liberia.
-  The University now has four campuses: Capitol Hill, Fendall, Medical School Fendall, and
-  Starz-Sinji campus located in Sinji, Grand Cape Mount County. Biodiversity research at the
-  university is carried out by the Department of General Forestry. Faculty members at the
-  department are actively engaged in field research aimed at documenting Liberia’s biodiversity.'
+description: GBIF Integrated Publishing Toolkit of the University of Liberia Department
+  of General Forestry (installation 5161787f-bfbc-4e71-8d81-aaabfddadc86). Publishes
+  Liberian biodiversity occurrence datasets. The IPT at 197.189.235.147:8080/iptliberia
+  timed out on 25 August 2026; GBIF still lists this IP as the installation endpoint.
 endpoints:
 - type: dcat:ttl
   url: http://197.189.235.147:8080/iptliberia/dcat
@@ -29,11 +27,15 @@ endpoints:
   url: http://197.189.235.147:8080/iptliberia/rss.do
   version: '2.0'
 id: 197189235147iptliberia
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/publisher/57c9be37-aeac-410c-8cea-2aea1a472f07
+  value: 57c9be37-aeac-410c-8cea-2aea1a472f07
 langs:
 - id: EN
   name: English
 link: http://197.189.235.147:8080/iptliberia
-name: University of Liberia
+name: University of Liberia GBIF IPT
 owner:
   link: https://ul.edu.lr
   location:
@@ -43,10 +45,20 @@ owner:
     level: 20
   name: University of Liberia
   type: Academy
+properties:
+  dataset_count_reported: 9
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: deprecated
 tags:
 - GBIF
 - IPT

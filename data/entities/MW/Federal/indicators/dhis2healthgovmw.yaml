@@ -15,11 +15,16 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: National DHIS2 HMIS data warehouse of the Malawi Ministry of Health.
-  Login is required to query facility-level health indicators.
+description: National DHIS2 HMIS data warehouse of the Malawi Ministry of Health
+  (Malawi HMIS). The public UI redirects to login; authenticated access is required
+  to query facility-level health indicators.
 endpoints:
 - type: dhis2:catalog
   url: https://dhis2.health.gov.mw
+- type: dhis2:system-info
+  url: https://dhis2.health.gov.mw/api/system/info
+- type: dhis2:datasets
+  url: https://dhis2.health.gov.mw/api/dataSets.json?fields=id,displayName&pageSize=1
 id: dhis2healthgovmw
 langs:
 - id: EN
@@ -56,6 +61,7 @@ tags:
 - government
 - restricted
 - Malawi
+- has_api
 topics:
 - id: HEAL
   name: Health

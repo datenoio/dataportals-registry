@@ -15,9 +15,13 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: GeoNetwork metadata catalog for remote sensing and spatial data, operated
-  by the National Council for Scientific Research (CNRS) Lebanon.
+description: GeoNetwork metadata catalog for remote sensing and spatial data,
+  operated by the National Council for Scientific Research (CNRS) Lebanon. CSW
+  and OAI-PMH endpoints respond; the catalog search currently reports no local
+  records.
 endpoints:
+- type: geonetwork:query
+  url: http://rsensing.cnrs.edu.lb/geonetwork/srv/eng/q
 - type: csw202
   url: http://rsensing.cnrs.edu.lb/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
@@ -31,17 +35,28 @@ id: rsensingcnrsedulb
 langs:
 - id: EN
   name: English
+- id: AR
+  name: Arabic
 link: http://rsensing.cnrs.edu.lb/geonetwork
 name: CNRS Lebanon Remote Sensing GeoNetwork
 owner:
-  link: http://www.cnrs.edu.lb
+  link: https://cnrs.edu.lb
   location:
     country:
       id: LB
       name: Lebanon
     level: 20
-  name: National Council for Scientific Research (CNRS Lebanon)
+  name: National Council for Scientific Research
   type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: geonetwork
   name: GeoNetwork
@@ -49,20 +64,20 @@ status: active
 tags:
 - geospatial
 - geonetwork
-- remote-sensing
-- Lebanon
+- remote sensing
+- has_api
 - CNRS
-uid: cdi00021773
 topics:
-- id: GOVE
-  name: Government and public sector
+- id: ENVI
+  name: Environment
   type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
-  type: iso19115
+uid: cdi00021773

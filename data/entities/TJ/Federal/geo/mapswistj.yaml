@@ -15,7 +15,11 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: No further information provided by user.
+description: GeoNode geoportal of the National Water Information System (NWIS) of
+  Tajikistan, operated by the Ministry of Energy and Water Resources. Published water-related
+  spatial layers including basins, irrigation networks, monitoring sites, and related
+  hydrography. The GeoNode on maps.wis.tj port 555 did not accept connections (24
+  August 2026); HTTPS on maps.wis.tj redirects to that port.
 endpoints:
 - type: geonode:layers
   url: http://maps.wis.tj:555/api/layers/
@@ -45,8 +49,10 @@ id: mapswistj
 langs:
 - id: RU
   name: Russian
+- id: TG
+  name: Tajik
 link: http://maps.wis.tj:555
-name: National water information system of the Tajikistan geonode
+name: National Water Information System of Tajikistan geoportal
 owner:
   link: https://www.mewr.tj
   location:
@@ -54,10 +60,11 @@ owner:
       id: TJ
       name: Tajikistan
     level: 20
-  name: Министерство энергетики и водных ресурсов Республики Таджикистан
+  name: Ministry of Energy and Water Resources of the Republic of Tajikistan
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -68,18 +75,31 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: deprecated
 tags:
 - geospatial
 - government
+- water
+- geonode
+- has_api
+- Tajikistan
 topics:
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
-  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
 uid: cdi00001565

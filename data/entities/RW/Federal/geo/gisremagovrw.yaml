@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: GIS services hosted by the Rwanda Environment Management Authority
+description: ArcGIS Enterprise catalog of the Rwanda Environment Management Authority,
+  including district-level vulnerability, pollution, and planning map services.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.rema.gov.rw/server/rest/info?f=pjson
@@ -34,7 +35,7 @@ langs:
 - id: EN
   name: English
 link: https://gis.rema.gov.rw/server/rest/services
-name: REMA GIS Portal REST Services
+name: REMA GIS Portal
 owner:
   link: https://www.rema.gov.rw
   location:
@@ -61,6 +62,7 @@ tags:
 - GIS
 - REST
 - Environmental data
+- has_api
 topics:
 - id: ENVI
   name: Environment

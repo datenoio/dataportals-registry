@@ -12,13 +12,16 @@ coverage:
       name: Trinidad and Tobago
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: Extract data catalog info as per schema and vocabularies. No actual extraction
-  from 'https://data.tt' is possible as the URL is not crawled/analyzed here. Below
-  is the output structure, filled with placeholders. You must fill with actual data
-  once you have access to the catalog or website content.
+description: AgriNeTT CKAN open data repository of the University of the West Indies,
+  St. Augustine. Hosts agriculture and related Trinidad and Tobago datasets such as
+  commodity prices, farm production, soils, weather, and pest data. The host timed
+  out on 24 August 2026.
 endpoints:
+- type: ckan
+  url: https://data.tt/api/3
+  version: '3'
 - type: ckan:package-search
   url: https://data.tt/api/3/action/package_search
   version: '3'
@@ -32,7 +35,7 @@ langs:
 link: https://data.tt
 name: The Home of Trinidad and Tobago open data
 owner:
-  link: https://www.uwi.edu
+  link: https://sta.uwi.edu
   location:
     country:
       id: TT
@@ -40,6 +43,8 @@ owner:
     level: 20
   name: The University of the West Indies
   type: Academy
+properties:
+  has_doi: false
 rights:
   license_id: null
   license_name: null
@@ -52,11 +57,20 @@ software:
   name: CKAN
 status: active
 tags:
-- CKAN
-- academic
+- agriculture
 - open data
+- has_api
 topics:
-- id: GOVE
-  name: Government and public sector
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00004217

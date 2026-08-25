@@ -15,7 +15,9 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Palestinian Energy and Natural Resources Authority - Mapping Portal
+description: ArcGIS Server REST services of the Palestinian Energy and Natural Resources
+  Authority (PENRA). Folders include operational energy features and related editing
+  layers used for sector mapping.
 endpoints:
 - type: arcgis:rest:info
   url: https://mapserver.penra.pna.ps/server/rest/info?f=pjson
@@ -34,7 +36,7 @@ langs:
 - id: AR
   name: Arabic
 link: https://mapserver.penra.pna.ps/server/rest/services
-name: Palestinian Energy and Natural Resources Authority - Mapping Portal
+name: Palestinian Energy and Natural Resources Authority Mapping Portal
 owner:
   link: https://penra.gov.ps
   location:
@@ -58,19 +60,22 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- geospatial
-- REST
-- open data
-- WMS
-- WFS
+- GIS
+- energy
+- government
+- has_api
+- Palestine
 topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Utilities / Communication
+  name: Utilities / Communication
   type: iso19115
 uid: cdi00005158

@@ -1,0 +1,62 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Dedicated Kadi4Mat instance for the Post Lithium Storage Cluster of Excellence
+  (POLiS). It is the cluster's research data repository and electronic lab notebook
+  for records and collections. Login is required; the REST API needs an access token.
+endpoints:
+- type: rest
+  url: https://kadi4mat.postlithiumstorage.org/api/records
+- type: rest
+  url: https://kadi4mat.postlithiumstorage.org/api/collections
+id: kadi4matpostlithiumstorageorg
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://kadi4mat.postlithiumstorage.org/
+name: Kadi4Mat POLiS
+owner:
+  link: https://www.postlithiumstorage.org
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Post Lithium Storage Cluster of Excellence (POLiS)
+  type: Academy
+software:
+  id: kadi4mat
+  name: Kadi4Mat
+status: active
+tags:
+- scientific
+- research data
+- academic
+- materials science
+- batteries
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi99990037

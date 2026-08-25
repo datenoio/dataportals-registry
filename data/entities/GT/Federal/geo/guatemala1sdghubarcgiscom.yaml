@@ -15,9 +15,10 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: "THE SDG GUATEMALA HUB \n    SUPPORTS THE ACHIEVEMENT OF\n    GUATEMALA'S SOCIAL, ECONOMIC, \n    PEOPLE AND ENVIRONMENTAL \n    GOALS BY 2030. ABOUT US Welcome to Guatemala’s Sustainable Development Goals (SDGs) data hub. The hub helps monitor progress on the Sustainable Development Goals, promotes exploration, analysis, and collaboration using authoritative SDG data sources for evidence-based decision-making and advocacy. Our goal is to enable data providers, managers and users to discover, understand, and communicate patterns and interrelationships, and enable decision makers to identify needs and establish collaborations to advance toward the equitable achievement of the SDGs in Guatemala. In this section, you are able to view Guatemala’s data per Sustainable Development Goal. Set by the United Nations in 2015, the Sustainable Development Goals provide a shared blueprint for peace and prosperity for people and the planet, now and into the future. The SDGs are an urgent call\
-  \ for action by all countries - developed and developing - in a global partnership. SDG 10: Reduced Inequalities Before the pandemic hit, modest gains had been made in reducing inequality in some areas, for instance, reducing income inequality in some countries, continuing preferential trade status to lower-income countries, and reducing transaction costs of remittances. However, inequality persists in its various forms, whether income, wealth, opportunities or other dimensions. The COVID-19 pandemic is now exacerbating existing inequalities within and among countries and hitting the most vulnerable people and the poorest countries hardest and is projected to push back the poorest countries a full 10 years on their SDG progress. Globally, refugees were at the highest absolute number on record in 2020. Even amidst strict COVID-19 mobility restrictions across the globe, thousands of migrants died along the migratory journey. Explore the data Follow Guatemala's progress on the Sustainable\
-  \ Development Goals. The data can be downloaded in various formats and explored on an interactive map. Community Action If you are interested in learning more about the SDG Data Hub, leave us your information and a brief description and we will get back to you. Achieving the SDGs for all communities in Fiji requires everyone’s actions. Engage with the work of Fiji’s Government and its private, multilateral and non-governmental partners to participate in the achievement of long-term and sustainable outcomes, processes, relationships, and decisions that affect your community!"
+description: ArcGIS Hub catalog of Guatemala's Sustainable Development Goals (SDG)
+  indicators and geospatial layers for monitoring progress toward 2030. Datasets can
+  be explored on an interactive map and downloaded in several formats (103 items when
+  last counted).
 endpoints:
 - type: dcatap201
   url: https://guatemala-1-sdg.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -31,21 +32,24 @@ endpoints:
   url: https://guatemala-1-sdg.hub.arcgis.com/sitemap.xml
 id: guatemala1sdghubarcgiscom
 langs:
+- id: ES
+  name: Spanish
 - id: EN
   name: English
-link: https://guatemala-1-sdg.hub.arcgis.com/
-name: Guatemala SDG Data Catalog
+link: https://guatemala-1-sdg.hub.arcgis.com
+name: Guatemala SDG Data Hub
 owner:
-  link: https://guatemala-1-sdg.hub.arcgis.com/
+  link: https://portal.segeplan.gob.gt/segeplan/
   location:
     country:
       id: GT
       name: Guatemala
     level: 20
-  name: Arcgis
+  name: Gobierno de Guatemala
   type: Central government
 properties:
   has_doi: false
+  dataset_count_reported: 103
 rights:
   license_id: null
   license_name: null
@@ -61,9 +65,26 @@ tags:
 - Sustainable Development Goals
 - SDGs
 - GIS
-- ArcGIS
+- ArcGIS Hub
+- Guatemala
+- has_api
 topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00002949

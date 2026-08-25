@@ -14,24 +14,26 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: This IPT allows the publication of data resources from institutions in
-  Ghana
+description: GBIF IPT of the Ghana Biodiversity Information Facility (GhaBIF), hosted
+  by GBIF France. Publishes 15 biodiversity datasets (occurrence and sampling-event),
+  including the Ghana Herbarium, CSIR-PGRRI germplasm, Aburi Botanic Gardens, and
+  marine collections.
 endpoints:
 - type: dcat:ttl
-  url: http://ipt-ghana.gbif.fr/dcat
+  url: https://ipt-ghana.gbif.fr/dcat
 - type: ipt:dataset
-  url: http://ipt-ghana.gbif.fr/inventory/dataset
+  url: https://ipt-ghana.gbif.fr/inventory/dataset
 - type: rss
-  url: http://ipt-ghana.gbif.fr/rss.do
+  url: https://ipt-ghana.gbif.fr/rss.do
   version: '2.0'
 id: iptghanagbiffr
 langs:
 - id: EN
   name: English
-link: http://ipt-ghana.gbif.fr
+link: https://ipt-ghana.gbif.fr
 name: IPT of GhaBIF
 owner:
-  link: http://www.ghabif.org
+  link: https://www.ug.edu.gh
   location:
     country:
       id: GH
@@ -39,6 +41,10 @@ owner:
     level: 20
   name: Ghana Biodiversity Information Facility (GhaBIF)
   type: Academy
+properties:
+  dataset_count_reported: 15
+  has_doi: true
+  is_national: true
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -48,6 +54,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota

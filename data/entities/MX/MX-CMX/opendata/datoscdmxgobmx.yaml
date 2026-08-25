@@ -10,13 +10,15 @@ coverage:
     country:
       id: MX
       name: Mexico
-    level: 20
+    level: 30
     macroregion:
       id: '013'
       name: Central America
-description: Consulta por categoría; Visualizaciones. 114 Conjuntos de Datos; Administración
-  y Finanzas. 24 Conjuntos de Datos; Conectividad. 24 Conjuntos de Datos; Covid-19;
-  instituciones; categorías
+    subregion:
+      id: MX-CMX
+      name: Ciudad de México
+description: Official open data portal of Mexico City (CDMX), operated by the Agencia Digital de Innovación
+  Pública. CKAN catalog of municipal datasets.
 endpoints:
 - type: ckan
   url: https://datos.cdmx.gob.mx/api/3

@@ -20,16 +20,20 @@ description: Official open data portal of the Government of New Caledonia.
 endpoints:
 - type: opendatasoftapi
   url: https://data.gouv.nc/api
+- type: dcat:xml
+  url: https://data.gouv.nc/api/v2/catalog/exports/dcat
 - type: sitemap
   url: https://data.gouv.nc/sitemap.xml
 id: datagouvnc
 langs:
 - id: FR
   name: French
+- id: EN
+  name: English
 link: https://data.gouv.nc
-name: New Caledonia Data
+name: Open Data NC
 owner:
-  link: https://www.gouv.nc
+  link: https://gouv.nc
   location:
     country:
       id: NC
@@ -40,6 +44,7 @@ owner:
 properties:
   has_doi: false
   is_national: true
+  dataset_count_reported: 379
 rights:
   license_id: null
   license_name: null
@@ -52,10 +57,22 @@ software:
   name: OpenDataSoft
 status: active
 tags:
-- Open Data
-- Government Data
+- government
+- open data
+- opendatasoft
+- New Caledonia
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00001956

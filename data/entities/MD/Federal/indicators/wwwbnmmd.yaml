@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: false
 api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
@@ -13,14 +14,16 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: National Bank of Moldova Statistics Database report generator on the
-  Bank of Moldova official website
+description: Interactive reports generator of the National Bank of Moldova, publishing
+  official monetary, financial, and macroeconomic statistical tables for download.
 id: wwwbnmmd
 langs:
+- id: RO
+  name: Romanian
 - id: EN
   name: English
 link: https://www.bnm.md/bdi/?lang=en
-name: National Bank of Moldova Statistics Database
+name: BNM Reports Generator
 owner:
   link: https://www.bnm.md
   location:
@@ -47,6 +50,8 @@ tags:
 - statistics
 - official statistics
 - economy
+- government
+- central bank
 topics:
 - id: ECON
   name: Economy and finance

@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: GE
+      name: Georgia
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: DSpace institutional repository of Ivane Javakhishvili Tbilisi State
+  University for theses, articles, and other research outputs. The university's earlier
+  EPrints repository was discontinued in favour of this DSpace instance.
+endpoints:
+- type: dspace
+  url: https://dspace.tsu.ge/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://dspace.tsu.ge/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://dspace.tsu.ge/server/oai/request?verb=Identify
+  version: '2.0'
+id: dspacetsuge
+langs:
+- id: KA
+  name: Georgian
+- id: EN
+  name: English
+link: https://dspace.tsu.ge
+name: Tbilisi State University DSpace Repository
+owner:
+  link: https://www.tsu.ge
+  location:
+    country:
+      id: GE
+      name: Georgia
+    level: 20
+  name: Ivane Javakhishvili Tbilisi State University
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- dspace
+- institutional repository
+- university
+- open access
+- has_api
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00035408

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,21 +15,9 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Data catalog containing services and datasets (likely geospatial, based
-  on URL structure and context).
-endpoints:
-- type: arcgis:rest:info
-  url: https://maps.nsf.ps/security/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://maps.nsf.ps/security/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://maps.nsf.ps/security/services?wsdl
-- type: arcgis:sitemap
-  url: https://maps.nsf.ps/security/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://maps.nsf.ps/security/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://maps.nsf.ps/security/rest/services?f=kmz
+description: ArcGIS Server REST services of the Palestinian National Security Forces.
+  The maps.nsf.ps host currently times out on TLS handshake, and the public NSF website
+  is marked under construction, so the services directory is not reachable.
 id: mapsnsfps
 langs:
 - id: AR
@@ -57,26 +45,20 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
+- GIS
 - security
-- maps
-- rest
-- services
+- government
+- Palestine
 topics:
+- id: JUST
+  name: Justice, legal system and public safety
+  type: eudatatheme
 - id: Intelligence / Military
   name: Intelligence / Military
   type: iso19115
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: Location
   name: Location
-  type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00005159

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,36 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: GeoNode is an open source geospatial content management system (GeoCMS)
-  that allows users to upload, manage, and share vector and raster geospatial datasets
-  and create maps using a web interface. It supports multiple data formats, metadata
-  standards (ISO 19115/19139), and collaborative mapmaking.
-endpoints:
-- type: geonode:layers
-  url: https://geonode.uhurulabs.org/api/layers/
-- type: geonode:documents
-  url: https://geonode.uhurulabs.org/api/documents/
-- type: wms111
-  url: https://geonode.uhurulabs.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wfs110
-  url: https://geonode.uhurulabs.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: https://geonode.uhurulabs.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: csw202
-  url: https://geonode.uhurulabs.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: https://geonode.uhurulabs.org/catalogue/csw?mode=oaipmh&verb=Identify
-  version: '2.0'
-- type: wmts100
-  url: https://geonode.uhurulabs.org/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: opensearch
-  url: https://geonode.uhurulabs.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
-  version: '1.0'
+description: Historical Uhuru Labs GeoNode for sharing geospatial datasets and maps
+  from Dar es Salaam. On 24 August 2026 the host served only a placeholder HTML page;
+  GeoNode REST, CSW, and GeoServer paths returned 404.
 id: geonodeuhurulabsorg
 langs:
 - id: EN
@@ -52,13 +25,13 @@ langs:
 link: https://geonode.uhurulabs.org
 name: Uhurulabs Geoportal
 owner:
-  link: https://geonode.uhurulabs.org
+  link: https://www.uhurulabs.org
   location:
     country:
       id: TZ
       name: Tanzania
     level: 20
-  name: Uhurulabs
+  name: Uhuru Labs
   type: Business
 properties:
   has_doi: false
@@ -72,69 +45,22 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 tags:
 - geospatial
-- opendata
 - GIS
 - geodata
-- CMS
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
 - id: REGI
   name: Regions and cities
   type: eudatatheme
-- id: Biota
-  name: Biota
-  type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Climatology / Meteorology / Atmosphere
-  name: Climatology / Meteorology / Atmosphere
-  type: iso19115
-- id: Economy
-  name: Economy
-  type: iso19115
-- id: Elevation
-  name: Elevation
-  type: iso19115
-- id: Environment
-  name: Environment
-  type: iso19115
-- id: Geoscientific Information
-  name: Geoscientific Information
-  type: iso19115
-- id: Health
-  name: Health
+- id: Location
+  name: Location
   type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-- id: Inland Waters
-  name: Inland Waters
-  type: iso19115
-- id: Location
-  name: Location
-  type: iso19115
-- id: Oceans
-  name: Oceans
-  type: iso19115
-- id: Planning / Cadastre
-  name: Planning / Cadastre
-  type: iso19115
-- id: Society
-  name: Society
-  type: iso19115
-- id: Structure
-  name: Structure
-  type: iso19115
-- id: Transportation
-  name: Transportation
-  type: iso19115
-uid: temp00000783
+uid: cdi00034940

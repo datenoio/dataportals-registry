@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,30 +15,14 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Geospatial data portal of the Ministry of Transport and Public Works
-  of Ecuador providing access to transportation infrastructure, road networks, public
-  works projects, and related spatial datasets through ArcGIS services.
-endpoints:
-- type: arcgis:portals:self
-  url: https://geoportal.mtop.gob.ec/portal/sharing/rest/portals/self?f=pjson
-- type: arcgis:rest:info
-  url: https://geoportal.mtop.gob.ec/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://geoportal.mtop.gob.ec/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://geoportal.mtop.gob.ec/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://geoportal.mtop.gob.ec/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://geoportal.mtop.gob.ec/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://geoportal.mtop.gob.ec/arcgis/rest/services?f=kmz
+description: ArcGIS REST catalog of the Ministry of Transport and Public Works. Connections
+  are reset and the service could not be verified as live.
 id: geoportalmtopgobec
 langs:
 - id: ES
   name: Spanish
 link: https://geoportal.mtop.gob.ec/arcgis/rest/services
-name: GeoPortal MTOP - Ministry of Transport and Public Works Ecuador
+name: GeoPortal MTOP
 owner:
   link: https://geoportal.mtop.gob.ec/
   location:
@@ -60,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - transportation
 - infrastructure
@@ -87,4 +71,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00001927
+uid: cdi00035539

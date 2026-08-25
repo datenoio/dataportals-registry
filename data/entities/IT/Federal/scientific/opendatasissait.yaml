@@ -6,13 +6,13 @@ catalog_type: Scientific data repository
 content_types:
 - dataset
 coverage:
-- location: &id001
+- location:
     country:
       id: IT
       name: Italy
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
 description: SISSA Open Data (Scuola Internazionale Superiore di Studi Avanzati) provides
   14 datasets according to the BASE search index as of 2023-08-04.
@@ -29,13 +29,17 @@ langs:
 link: https://opendata.sissa.it/
 name: SISSA Open Data (Scuola Internazionale Superiore di Studi Avanzati)
 owner:
-  link: https://opendata.sissa.it
-  location: *id001
+  link: https://www.sissa.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
   name: Scuola Internazionale Superiore di Studi Avanzati
   type: Academy
 properties:
   base_last_seen: '2023-08-04'
-  dataset_count_reported: '14'
+  dataset_count_reported: 14
 rights:
   license_id: null
   license_name: null

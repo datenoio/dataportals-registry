@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -13,22 +14,18 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: DKAN is an open source open data platform with a full suite of cataloging,
-  publishing, and visualization features that allows organizations to easily share
-  data.
-endpoints:
-- type: ckan:package-list
-  url: https://khub.asareca.org/dkan/api/3/action/package_list
-  version: '3'
+description: Former DKAN knowledge hub of the Association for Strengthening Agricultural
+  Research in Eastern and Central Africa (ASARECA), previously published at
+  khub.asareca.org/dkan. The DKAN path returned HTTP 404 on 24 August 2026 and the
+  host root is an empty directory listing.
 id: khubasarecaorg
 langs:
 - id: EN
   name: English
 link: https://khub.asareca.org/dkan
-name: Association for Strengthening Agricultural Research in Eastern and Central Africa
-  Data
+name: ASARECA Knowledge Hub (DKAN)
 owner:
-  link: http://www.asareca.org
+  link: https://www.asareca.org
   location:
     country:
       id: UG
@@ -36,7 +33,7 @@ owner:
     level: 20
   name: Association for Strengthening Agricultural Research in Eastern and Central
     Africa
-  type: Civil society
+  type: International
 properties:
   has_doi: false
   transferable_topics: true
@@ -50,9 +47,9 @@ rights:
 software:
   id: dkan
   name: DKAN
-status: active
+status: inactive
 tags:
-- government
+- agriculture
 - open data
 - Africa
 topics:
@@ -62,20 +59,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
-- id: Location
-  name: Location
-  type: iso19115
-- id: Geoscientific Information
-  name: Geoscientific Information
-  type: iso19115
 uid: cdi00001606
-api: true

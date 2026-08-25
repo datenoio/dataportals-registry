@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,24 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-endpoints:
-- type: geonode:layers
-  url: http://maps.data.ug/api/layers/
-- type: geonode:documents
-  url: http://maps.data.ug/api/documents/
-- type: geonode:dcatus11
-  url: http://maps.data.ug/data.json
-- type: csw202
-  url: http://maps.data.ug/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: http://maps.data.ug/catalogue/csw?mode=oaipmh&verb=Identify
-  version: '2.0'
-- type: opensearch
-  url: http://maps.data.ug/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
-  version: '1.0'
-- type: opensearch
-  url: http://maps.data.ug/catalogue/opensearch
+description: Historical GeoNode map catalog associated with catalog.data.ug and Uganda's
+  early open data programme. The hostname maps.data.ug no longer resolves (24 August
+  2026).
 id: mapsdataug
 langs:
 - id: EN
@@ -40,6 +25,7 @@ langs:
 link: http://maps.data.ug
 name: Uganda Open Data Maps
 owner:
+  link: https://acme-ug.org
   location:
     country:
       id: UG
@@ -47,7 +33,6 @@ owner:
     level: 20
   name: African Centre for Media Excellence
   type: Civil society
-  link: https://data.ug
 properties:
   has_doi: false
 rights:
@@ -60,9 +45,11 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 tags:
-- has_api
+- geospatial
+- geonode
+- uganda
 topics:
 - id: GOVE
   name: Government and public sector
@@ -74,5 +61,3 @@ topics:
   name: Boundaries
   type: iso19115
 uid: cdi00001603
-description: GeoNode map catalog associated with catalog.data.ug / the Uganda open
-  data programme, historically operated with the African Centre for Media Excellence.

@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Official national catalog for geospatial data and services in Luxembourg,
-  following INSPIRE, WMS/WFS standards.
+description: Production GeoServer publishing Luxembourg INSPIRE view and download
+  services (WMS, WFS, WCS) for the national geoportal.
 endpoints:
 - type: wms111
   url: https://wms.inspire.geoportail.lu/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -52,10 +52,14 @@ id: wmsinspiregeoportaillu
 langs:
 - id: FR
   name: French
-link: https://wms.inspire.geoportail.lu/geoserver/web/
-name: geoportail.lu GeoServer INSPIRE Catalog
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://wms.inspire.geoportail.lu/geoserver
+name: Geoportail Luxembourg INSPIRE GeoServer
 owner:
-  link: https://wms.inspire.geoportail.lu/geoserver/web/
+  link: https://www.geoportail.lu
   location:
     country:
       id: LU

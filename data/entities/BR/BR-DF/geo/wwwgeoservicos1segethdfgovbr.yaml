@@ -11,11 +11,15 @@ coverage:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: ArcGIS services platform for geospatial data and services
+    subregion:
+      id: BR-DF
+      name: Distrito Federal
+description: Serviços ArcGIS da Secretaria de Estado de Gestão do Território e
+  Habitação do Distrito Federal (SEGETH).
 endpoints:
 - type: arcgis:rest:services
   url: https://www.geoservicos1.segeth.df.gov.br/arcgis/rest/services?f=pjson
@@ -34,9 +38,9 @@ langs:
 - id: PT
   name: Portuguese
 link: https://www.geoservicos1.segeth.df.gov.br/arcgis/services
-name: Geoportal - segeth.df.gov.br
+name: Geoserviços SEGETH-DF
 owner:
-  link: https://www.geoservicos1.segeth.df.gov.br
+  link: https://www.segeth.df.gov.br
   location:
     country:
       id: BR
@@ -45,8 +49,8 @@ owner:
     subregion:
       id: BR-DF
       name: Distrito Federal
-  name: segeth.df.gov.br
-  type: Local government
+  name: Secretaria de Estado de Gestão do Território e Habitação do DF
+  type: Regional government
 properties:
   has_doi: false
 rights:

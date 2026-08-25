@@ -14,8 +14,41 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Official Nordic Statistics database, a PxWeb-based catalog for accessing
-  and downloading statistical data on Nordic countries.
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+- location:
+    country:
+      id: IS
+      name: Iceland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Official Nordic Statistics PxWeb database of the Nordic Council of Ministers,
+  with comparable tables for the Nordic countries on population, economy, environment,
+  health, education, and related themes.
 endpoints:
 - type: pxwebapi
   url: https://pxweb.nordicstatistics.org/api/v1/en/
@@ -33,7 +66,7 @@ owner:
       id: FI
       name: Finland
     level: 20
-  name: Nordic Statistics
+  name: Nordic Council of Ministers
   type: International
 properties:
   has_doi: false
@@ -69,61 +102,16 @@ topics:
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
-- id: SOCI
-  name: Population and society
-  type: eudatatheme
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
-- id: EDUC
-  name: Education, culture and sport
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: ECON
-  name: Economy and finance
-  type: eudatatheme
-- id: Health
-  name: Health
-  type: iso19115
 - id: Economy
   name: Economy
+  type: iso19115
+- id: Society
+  name: Society
   type: iso19115
 - id: Environment
   name: Environment
   type: iso19115
-- id: Biota
-  name: Biota
-  type: iso19115
-- id: Society
-  name: Society
-  type: iso19115
-- id: Geoscientific Information
-  name: Geoscientific Information
-  type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Climatology / Meteorology / Atmosphere
-  name: Climatology / Meteorology / Atmosphere
-  type: iso19115
-- id: Location
-  name: Location
-  type: iso19115
-- id: Society
-  name: Society
-  type: iso19115
-- id: Transportation
-  name: Transportation
-  type: iso19115
-- id: Structure
-  name: Structure
-  type: iso19115
-- id: Inland Waters
-  name: Inland Waters
-  type: iso19115
-- id: Planning / Cadastre
-  name: Planning / Cadastre
+- id: Health
+  name: Health
   type: iso19115
 uid: cdi00000626

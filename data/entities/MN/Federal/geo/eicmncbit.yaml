@@ -15,22 +15,10 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Sharing geospatial data and maps. CBIT project and Environmental Information
-  Center.
+description: GeoNode catalog of the CBIT (Capacity-Building Initiative for Transparency)
+  Enhanced Transparency Framework portal, publishing environmental and climate spatial
+  datasets of the Environmental Information Center.
 endpoints:
-- type: geonode:datasets
-  url: https://eic.mn/cbit//api/datasets/
-- type: geonode:documents
-  url: https://eic.mn/cbit//api/documents/
-- type: csw202
-  url: https://eic.mn/cbit//catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: https://eic.mn/cbit//catalogue/csw?mode=oaipmh&verb=Identify
-  version: '2.0'
-- type: opensearch
-  url: https://eic.mn/cbit//catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
-  version: '1.0'
 - type: geonode:datasets
   url: https://eic.mn/cbit/api/datasets/
 - type: geonode:documents
@@ -50,16 +38,18 @@ id: eicmncbit
 langs:
 - id: MN
   name: Mongolian
+- id: EN
+  name: English
 link: https://eic.mn/cbit/
 name: ETF Portal
 owner:
-  link: https://www.eic.mn
+  link: https://eic.mn
   location:
     country:
       id: MN
       name: Mongolia
     level: 20
-  name: Mongolian Environmental Information Center
+  name: Environmental Information Center
   type: Central government
 properties:
   has_doi: false
@@ -81,6 +71,7 @@ tags:
 - maps
 - climate
 - transparency
+- has_api
 topics:
 - id: ENVI
   name: Environment

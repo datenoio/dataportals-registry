@@ -12,10 +12,11 @@ coverage:
       name: Republic of North Macedonia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: 'Publishes parliamentary data: composition, bodies, services, research,
-  finance, election results, and more.'
+description: CKAN open data portal of the Assembly of the Republic of North Macedonia.
+  Publishes parliamentary datasets on composition, bodies, services, research, finance,
+  and election results, with a CKAN Action API (29 packages as of August 2026).
 endpoints:
 - type: ckan
   url: https://opendata.sobranie.mk/api/3
@@ -37,11 +38,13 @@ endpoints:
 id: opendatasobraniemk
 langs:
 - id: MK
-  name: Makedonian
+  name: Macedonian
+- id: EN
+  name: English
 link: https://opendata.sobranie.mk
 name: Open Data Portal - Assembly of the Republic of North Macedonia
 owner:
-  link: https://sobranie.mk
+  link: https://www.sobranie.mk
   location:
     country:
       id: MK
@@ -49,6 +52,9 @@ owner:
     level: 20
   name: Assembly of the Republic of North Macedonia
   type: Central government
+properties:
+  dataset_count_reported: 29
+  has_doi: false
 rights:
   license_id: null
   license_name: null
@@ -63,6 +69,8 @@ status: active
 tags:
 - parliament
 - open data
+- government
+- has_api
 - North Macedonia
 topics:
 - id: GOVE
@@ -70,6 +78,9 @@ topics:
   type: eudatatheme
 - id: ECON
   name: Economy and finance
+  type: eudatatheme
+- id: JUST
+  name: Justice, legal system and public safety
   type: eudatatheme
 - id: Structure
   name: Structure

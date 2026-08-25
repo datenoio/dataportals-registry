@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: 'The Library HELLANICUS Institutional Repository of the University of
+  the Aegean is a service for depositing digital documents which are produced by the
+  Institution’s academic community as a result of its scientific and research activities
+  and which, to a great extent, are not commercially available.
+
+
+  The main aim of the Hellanicus Institutional Repository is to collect, organize,
+  publicize and maintain the scientific work of the members of the academic community
+  in a way that ensures an easy and seamless access to it. Examples of this work include
+  scientific articles - published or not - seminar lectures, textbooks, teaching material,
+  dissertations and PhD theses, multimedia material and videotaped lectures.'
+endpoints:
+- type: dspace
+  url: https://hellanicus-api.lib.aegean.gr/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://hellanicus-api.lib.aegean.gr/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://hellanicus-api.lib.aegean.gr/server/oai/request?verb=Identify
+  version: '2.0'
+id: hellanicuslibaegeangr
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::0e1418311a013ebb344e7fcf8d199cc3
+  value: fairsharing_::0e1418311a013ebb344e7fcf8d199cc3
+langs:
+- id: EL
+  name: Greek
+- id: EN
+  name: English
+link: https://hellanicus.lib.aegean.gr
+name: HELLANICUS Institutional Repository - University of the Aegean
+owner:
+  link: https://www.aegean.gr/
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: University of the Aegean
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- education
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00031234

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,21 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Development ArcGIS REST services directory for MozGIS, the national geospatial
-  platform of the Agência Nacional de Desenvolvimento Geo-espacial.
-endpoints:
-- type: arcgis:rest:info
-  url: https://dev.mozgis.gov.mz/server/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://dev.mozgis.gov.mz/server/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://dev.mozgis.gov.mz/server/services?wsdl
-- type: arcgis:sitemap
-  url: https://dev.mozgis.gov.mz/server/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://dev.mozgis.gov.mz/server/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://dev.mozgis.gov.mz/server/rest/services?f=kmz
+description: Development ArcGIS REST services directory for MozGIS. The host still
+  responds, but folders include staging names such as DevelopmentMachine and COVID_test.
+  Public national discovery is on www.mozgis.gov.mz.
 id: devmozgisgovmz
 langs:
 - id: PT
@@ -57,7 +45,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - maps
 - geoportal

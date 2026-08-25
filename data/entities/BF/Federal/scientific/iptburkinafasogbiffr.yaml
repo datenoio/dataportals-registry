@@ -14,21 +14,23 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: GBIF IPT of Burkina Faso (SP/CONEDD-DCIME), operated by FasoBIF.
-  Publishes biodiversity occurrence and checklist datasets to GBIF.
+description: GBIF IPT of Burkina Faso (FasoBIF / SP/CONEDD-DCIME), hosted by GBIF
+  France. Publishes two occurrence datasets (Herbier CNRST/INERA and Herbier CNSF).
 endpoints:
 - type: dcat:ttl
-  url: http://ipt-burkinafaso.gbif.fr/dcat
+  url: https://ipt-burkinafaso.gbif.fr/dcat
 - type: ipt:dataset
-  url: http://ipt-burkinafaso.gbif.fr/inventory/dataset
+  url: https://ipt-burkinafaso.gbif.fr/inventory/dataset
 - type: rss
-  url: http://ipt-burkinafaso.gbif.fr/rss.do
+  url: https://ipt-burkinafaso.gbif.fr/rss.do
   version: '2.0'
 id: iptburkinafasogbiffr
 langs:
 - id: FR
   name: French
-link: http://ipt-burkinafaso.gbif.fr
+- id: EN
+  name: English
+link: https://ipt-burkinafaso.gbif.fr
 name: IPT Burkina Faso (FasoBIF)
 owner:
   link: https://www.gbif.org/country/BF/summary
@@ -39,6 +41,10 @@ owner:
     level: 20
   name: FasoBIF
   type: Academy
+properties:
+  dataset_count_reported: 2
+  has_doi: true
+  is_national: true
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -48,6 +54,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota

@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Phaidra (Permanent Hosting, Archiving and Indexing of Digital Resources
+  and Assets) is the University of Padua Library System’s platform for long-term archiving
+  of digital collections. Phaidra hosts various types of digital objects (antiquarian
+  books, manuscripts, photographs, wallcharts, maps, learning objects, films, archive
+  material and museum objects). Phaidra offers a search facility to identify specific
+  objects, and each object can be viewed, downloaded, used and reused to the extent
+  permitted by law and by its associated licences. The objects in the digital collections
+  on the Phaidra platform are sourced from libraries (in large part due to the digitisation
+  projects promoted by the Library System itself), museums and archives at the University
+  of Padua and other institutions, including the Ca’ Foscari University and the Università
+  Iuav in Venice.
+endpoints:
+- type: oaipmh20
+  url: https://phaidra.unipd.it/api/oai?verb=Identify
+  version: '2.0'
+id: phaidraunipdit
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::331316d4efb44682092a006307b9ae3a
+  value: fairsharing_::331316d4efb44682092a006307b9ae3a
+langs:
+- id: IT
+  name: Italian
+link: https://phaidra.unipd.it/
+name: PHAIDRA - University of Padua
+owner:
+  link: http://www.unipd.it
+  location:
+    country:
+      id: IT
+      name: Italy
+  name: University of Padua
+  type: Academy
+software:
+  id: phaidra
+  name: PHAIDRA
+status: active
+tags:
+- scientific
+- research data
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00031734

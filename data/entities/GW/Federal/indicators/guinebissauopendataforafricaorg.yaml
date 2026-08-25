@@ -18,8 +18,9 @@ coverage:
 description: Guinea-Bissau country portal on the African Development Bank Open Data
   for Africa platform (Africa Information Highway / Knoema). Provides official national
   statistical indicators compiled with the Instituto Nacional de Estatística and hosts
-  the IMF e-GDDS National Summary Data Page. INE's site now points at this full hostname
-  rather than the former guineab.opendataforafrica.org alias.
+  the IMF e-GDDS National Summary Data Page. The portal is published in Portuguese,
+  English, and French. INE previously pointed at this hostname rather than the
+  guineab.opendataforafrica.org alias.
 endpoints:
 - type: knoema:search
   url: https://guinebissau.opendataforafrica.org/api/1.0/search
@@ -33,10 +34,14 @@ id: guinebissauopendataforafricaorg
 langs:
 - id: PT
   name: Portuguese
+- id: EN
+  name: English
+- id: FR
+  name: French
 link: https://guinebissau.opendataforafrica.org/
 name: Guinea-Bissau Open Data for Africa
 owner:
-  link: https://www.stat-guinebissau.com
+  link: https://ine.gw
   location:
     country:
       id: GW

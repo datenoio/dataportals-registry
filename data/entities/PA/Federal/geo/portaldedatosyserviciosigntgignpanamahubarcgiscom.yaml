@@ -15,7 +15,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Datos Abiertos Instituto Geográfico Nacional Tommy Guardia Descubra datos públicos, herramientas y recursos del Instituto Geográfico Nacional Tommy Guardia Descubre nuestras aplicaciones sobre la Cartografía Nacional de Panamá Descarga datos sobre la Cartografía Nacional de Panamá Hidrografía Red Vial División Política Relieve Manglares Masas de agua
+description: Official ArcGIS Hub of Panama's Instituto Geográfico Nacional Tommy Guardia
+  (IGNTG / ANATI) for national cartography datasets and services, including hydrography,
+  road network, political divisions, relief, mangroves, and water bodies.
 endpoints:
 - type: dcatap201
   url: https://portal-de-datos-y-servicios-igntg-ignpanama.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -25,20 +27,22 @@ endpoints:
   url: https://portal-de-datos-y-servicios-igntg-ignpanama.hub.arcgis.com/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://portal-de-datos-y-servicios-igntg-ignpanama.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://portal-de-datos-y-servicios-igntg-ignpanama.hub.arcgis.com/sitemap.xml
 id: portaldedatosyserviciosigntgignpanamahubarcgiscom
 langs:
-- id: EN
-  name: English
+- id: ES
+  name: Spanish
 link: https://portal-de-datos-y-servicios-igntg-ignpanama.hub.arcgis.com/
-name: Portal de Datos y Servicios IGNTG - Instituto Geográfico Nacional Tommy Guardia
+name: Portal de Datos y Servicios IGNTG
 owner:
-  link: https://portal-de-datos-y-servicios-igntg-ignpanama.hub.arcgis.com/
+  link: https://www.anati.gob.pa
   location:
     country:
       id: PA
       name: Panama
     level: 20
-  name: Instituto Geográfico Nacional Tommy Guardia
+  name: Instituto Geográfico Nacional Tommy Guardia (ANATI)
   type: Central government
 properties:
   has_doi: false
@@ -54,24 +58,18 @@ software:
   name: ArcGIS Hub
 status: active
 tags:
-- Cartography
-- Geodatabase
-- Geoviewer
-- Mapas
-- Datos abiertos
-- Panamá
+- cartography
+- geospatial
+- has_api
+- ArcGIS
+- government
+- Panama
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
 - id: TRAN
   name: Transport
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: REGI
-  name: Regions and cities
   type: eudatatheme
 - id: ENVI
   name: Environment

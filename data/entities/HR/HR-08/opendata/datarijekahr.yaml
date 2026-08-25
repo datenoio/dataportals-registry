@@ -17,25 +17,26 @@ coverage:
     subregion:
       id: HR-08
       name: Primorsko-goranska županija
-description: Official data catalog portal for the city of Rijeka.
+description: Official CKAN open data portal of the City of Rijeka for machine-readable
+  datasets from city administration, utilities, and institutions.
 endpoints:
 - type: ckan
-  url: http://data.rijeka.hr/api/3
+  url: https://data.rijeka.hr/api/3
   version: '3'
 - type: ckan:package-search
-  url: http://data.rijeka.hr/api/3/action/package_search
+  url: https://data.rijeka.hr/api/3/action/package_search
   version: '3'
 - type: ckan:package-list
-  url: http://data.rijeka.hr/api/3/action/package_list
+  url: https://data.rijeka.hr/api/3/action/package_list
   version: '3'
 id: datarijekahr
 langs:
 - id: HR
   name: Croatian
-link: http://data.rijeka.hr
+link: https://data.rijeka.hr
 name: Rijeka OpenData
 owner:
-  link: http://www.rijeka.hr
+  link: https://www.rijeka.hr
   location:
     country:
       id: HR

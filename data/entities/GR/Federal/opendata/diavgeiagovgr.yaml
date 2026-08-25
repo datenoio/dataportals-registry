@@ -12,31 +12,27 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
 description: Greek government's official platform for publishing and searching administrative
   decisions and acts online.
 endpoints:
-- type: ckan:package-search
-  url: https://diavgeia.gov.gr/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://diavgeia.gov.gr/api/3/action/package_list
-  version: '3'
+- type: diavgeia:opendata
+  url: https://diavgeia.gov.gr/opendata/search
 id: diavgeiagovgr
 langs:
 - id: EL
   name: Greek
 link: https://diavgeia.gov.gr
-name: Diavgeia Geoportal - Υπουργείο Ψηφιακής Διακυβέρνησης (Ministry of Digital Governance)
+name: Diavgeia (Διαύγεια)
 owner:
-  link: https://diavgeia.gov.gr
+  link: https://mindigital.gr
   location:
     country:
       id: GR
       name: Greece
     level: 20
-  name: Υπουργείο Ψηφιακής Διακυβέρνησης (Ministry of Digital Governance)
+  name: Ministry of Digital Governance
   type: Central government
 rights:
   license_id: null
@@ -46,8 +42,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: ckan
-  name: CKAN
+  id: custom
+  name: Custom software
 status: active
 tags:
 - Greece
@@ -56,7 +52,7 @@ tags:
 - public sector
 - administrative decisions
 - public acts
-- ckan
+- open government
 topics:
 - id: GOVE
   name: Government and public sector
@@ -64,4 +60,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-uid: temp00004667
+uid: cdi00035372

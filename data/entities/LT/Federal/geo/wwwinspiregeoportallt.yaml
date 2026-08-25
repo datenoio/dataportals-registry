@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: This service provides access to the different metadata records of services
-  and data published in relation to the INSPIRE Directive.
+description: INSPIRE discovery GeoNetwork catalogue for Lithuanian spatial data and network services published
+  under the INSPIRE Directive.
 endpoints:
 - type: geonetwork:query
   url: https://www.inspire-geoportal.lt/geonetwork/srv/eng/q
@@ -36,24 +36,22 @@ endpoints:
   version: '2.0'
 - type: geonetwork:site
   url: https://www.inspire-geoportal.lt/geonetwork/srv/api/site
-- type: opensearch
-  url: https://www.inspire-geoportal.lt/portal.opensearch
 id: wwwinspiregeoportallt
 langs:
 - id: LT
   name: Lithuanian
 - id: EN
   name: English
-link: https://www.inspire-geoportal.lt/geonetwork
+link: https://www.inspire-geoportal.lt/geonetwork/srv/eng/catalog.search
 name: INSPIRE Discovery Service of Lithuania
 owner:
-  link: https://www.gis-centras.lt
+  link: https://www.registrucentras.lt
   location:
     country:
       id: LT
       name: Lithuania
     level: 20
-  name: VĮ Distancinių tyrimų ir geoinformatikos centras „GIS-Centras“
+  name: VĮ Registrų centras
   type: Central government
 properties:
   has_doi: true

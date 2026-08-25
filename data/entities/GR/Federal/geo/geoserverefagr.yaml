@@ -13,10 +13,10 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Geospatial data catalog serving Greece, providing access to various geospatial
-  datasets and services.
+description: GeoServer instance hosted on efa.gr providing OGC WMS, WFS, and WCS geospatial
+  services.
 endpoints:
 - type: wms111
   url: https://geoserver.efa.gr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -71,7 +71,7 @@ langs:
 - id: EL
   name: Greek
 link: https://geoserver.efa.gr/geoserver/web/
-name: Geoserver Geoportal - EFA
+name: EFA GeoServer
 owner:
   link: https://geoserver.efa.gr/
   location:
@@ -79,7 +79,7 @@ owner:
       id: GR
       name: Greece
     level: 20
-  name: EFA
+  name: EFA S.A.
   type: Business
 properties:
   has_doi: false
@@ -116,4 +116,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00001540
+uid: cdi00035394

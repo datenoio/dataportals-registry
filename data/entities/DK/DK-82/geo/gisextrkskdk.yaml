@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,12 +18,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: ArcGIS REST Services Directory of the Ringkøbing-Skjern Municipality
-endpoints:
-- type: arcgis:rest:info
-  url: https://gisext.rksk.dk/arcgis/rest/info?f=pjson
-- type: arcgis:soap
-  url: https://gisext.rksk.dk/arcgis/services?wsdl
+description: Former ArcGIS Server directory of Ringkøbing-Skjern Kommune at
+  gisext.rksk.dk. The REST services path now returns 404. Municipal GIS continues on
+  the ArcGIS Hub at gis.rksk.dk.
 id: gisextrkskdk
 langs:
 - id: DA
@@ -54,7 +51,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - gis
 - arcgis
@@ -63,4 +60,4 @@ topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
-uid: temp00004959
+uid: cdi00035553

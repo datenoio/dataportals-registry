@@ -1,0 +1,108 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Official PxWeb statistical database of the Statistical Service of Cyprus
+  (CYSTAT). Interactive tables cover population, economy, agriculture, health, education,
+  environment, and transport, with a PxWeb API at /api/v1/en/.
+endpoints:
+- type: pxweb:catalog
+  url: https://cystatdb.cystat.gov.cy/pxweb/en/
+- type: pxwebapi
+  url: https://cystatdb.cystat.gov.cy/api/v1/en/
+  version: '1'
+id: cystatdbcystatgovcy
+langs:
+- id: EN
+  name: English
+- id: EL
+  name: Greek
+link: https://cystatdb.cystat.gov.cy/pxweb/en/
+name: CYSTAT-DB
+owner:
+  link: https://www.cystat.gov.cy
+  location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+  name: Statistical Service of Cyprus
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: pxweb
+  name: PxWeb
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- open data
+- Cyprus
+- has_api
+- PxWeb
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00000395

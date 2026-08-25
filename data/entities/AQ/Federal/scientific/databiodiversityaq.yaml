@@ -1,0 +1,89 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AQ
+      name: Antarctic
+    level: 20
+    macroregion:
+      id: '010'
+      name: Antarctica
+description: SCAR Antarctic Biodiversity Portal (biodiversity.aq), a GBIF hosted portal
+  for marine and terrestrial biodiversity of Antarctica, the sub-Antarctic islands,
+  and the Southern Ocean. Provides occurrence search, dataset discovery, and literature
+  from ANTABIF and the SCAR network. The former data.biodiversity.aq hostname now
+  redirects here.
+endpoints:
+- type: gbif:dataset
+  url: https://api.gbif.org/v1/dataset?publishingOrg=fb10a11f-4417-41c8-be6a-13a5c8535122
+  version: '1'
+id: databiodiversityaq
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/publisher/fb10a11f-4417-41c8-be6a-13a5c8535122
+  value: fb10a11f-4417-41c8-be6a-13a5c8535122
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::cf88118aa2ba88de549d08038ae76606
+  value: fairsharing_::cf88118aa2ba88de549d08038ae76606
+langs:
+- id: EN
+  name: English
+- id: ES
+  name: Spanish
+- id: FR
+  name: French
+- id: RU
+  name: Russian
+link: https://www.biodiversity.aq
+name: SCAR Antarctic Biodiversity Portal
+owner:
+  link: https://www.biodiversity.aq
+  location:
+    country:
+      id: AQ
+      name: Antarctic
+    level: 20
+  name: Antarctic Biodiversity Information Facility (ANTABIF)
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.biodiversity.aq/privacy
+  rights_type: granular
+  tos_url: null
+software:
+  id: gbifplatform
+  name: GBIF Platform
+status: active
+tags:
+- biodiversity
+- GBIF
+- Antarctica
+- Southern Ocean
+- Darwin Core
+- ANTABIF
+- SCAR
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00004526

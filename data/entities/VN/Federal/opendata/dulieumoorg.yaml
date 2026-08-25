@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: false
-api_status: uncertain
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,23 +14,22 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Cổng dữ liệu mở, nơi cung cấp các bộ dữ liệu mở của các cơ quan nhà nước
-  Việt Nam và các tổ chức liên quan; cho phép tải xuống, truy cập và sử dụng dữ liệu
-  mở.
+description: Unofficial mirror of Vietnam's national open data portal (data.gov.vn).
+  The dulieumo.org hostname no longer resolves.
 id: dulieumoorg
 langs:
 - id: VN
   name: Vietnamese
 link: https://dulieumo.org
-name: Cổng dữ liệu mở Việt Nam (data.gov.vn)
+name: Cổng dữ liệu mở Việt Nam (dulieumo.org)
 owner:
-  link: https://dulieumo.org
+  link: https://english.mst.gov.vn
   location:
     country:
       id: VN
       name: Vietnam
     level: 20
-  name: Không xác định rõ từ URL gốc
+  name: Ministry of Science and Technology
   type: Central government
 rights:
   license_id: null
@@ -44,33 +43,12 @@ software:
   name: CKAN
 status: inactive
 tags:
+- government
 - open data
-- Vietnam open data
-- DCAT-AP
-- data catalog
+- CKAN
+- Vietnam
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: TRAN
-  name: Transport
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: EDUC
-  name: Education, culture and sport
-  type: eudatatheme
-- id: ECON
-  name: Economy and finance
-  type: eudatatheme
-- id: HEAL
-  name: Health
-  type: eudatatheme
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
-- id: SOCI
-  name: Population and society
-  type: eudatatheme
-uid: temp00004828
+uid: cdi00034915

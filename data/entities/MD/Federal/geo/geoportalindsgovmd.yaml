@@ -19,26 +19,18 @@ description: National Spatial Data Infrastructure metadata catalogue (GeoNetwork
   Moldova for discovery of spatial datasets and network services.
 endpoints:
 - type: csw202
-  url: http://geoportalinds.gov.md/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://geoportalinds.gov.md/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: oaipmh20
-  url: http://geoportalinds.gov.md/geonetwork/srv/eng/oaipmh?verb=Identify
+  url: https://geoportalinds.gov.md/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
-- type: geonetwork:selections
-  url: http://geoportalinds.gov.md/geonetwork/srv/api/selections
-- type: geonetwork:site
-  url: http://geoportalinds.gov.md/geonetwork/srv/api/site
 - type: sitemap
   url: https://geoportalinds.gov.md/sitemap_index.xml
-- type: sitemap
-  url: https://inds.gov.md/sitemap_index.xml
-- type: opensearch
-  url: http://geoportalinds.gov.md/portal.opensearch
 id: geoportalindsgovmd
 langs:
 - id: RO
   name: Romanian
-link: https://geoportalinds.gov.md/geonetwork
+link: https://geoportalinds.gov.md/geonetwork/
 name: GeoPortal of the National Spatial Data Infrastructure of Moldova (NSDI)
 owner:
   link: https://www.agcc.gov.md
@@ -51,6 +43,7 @@ owner:
   type: Central government
 properties:
   has_doi: true
+  dataset_count_reported: 367
 rights:
   license_id: null
   license_name: null
@@ -67,12 +60,8 @@ tags:
 - government
 - has_api
 - NSDI
-- Geoportal
 - INSPIRE
-- Metadata
-- FAO/WFP
-- GeoNetwork
-- ISO19115
+- metadata
 topics:
 - id: REGI
   name: Regions and cities
@@ -112,9 +101,6 @@ topics:
   type: iso19115
 - id: Location
   name: Location
-  type: iso19115
-- id: Oceans
-  name: Oceans
   type: iso19115
 - id: Planning / Cadastre
   name: Planning / Cadastre

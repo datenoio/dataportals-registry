@@ -15,34 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: 'Discover and Experience the unknown Experience Kenyan Culture and Heritage,
-  Explore the unlimited Explore your data Tourism Board Commonwealth War Graves National
-  Museums Digitizing Culture and Heritage Local Perspective Story Maps Survey 123
-  Ops Dashboard Kenya is richly endowed with diverse cultural resources that can be
-
-  developed for cultural heritage tourism. The exploitation of her heritage
-
-  assets would increase Kenya’s competitiveness as a top tourist destination in Africa.
-  Configure apps to provide focused citizen experiences. Tell stories about local
-  issues and solutions. Hear from your community. Monitor your data Explore More Apps
-  Unlock the Data Explore Visualize &amp; Analyze Build Share Anyone can use this
-  data at no cost. Download raw data and share your insights with your teams or build
-  new applications that serve specific users. Dig into the data. Highlight spatial
-  patterns and discover trends. Develop new apps using templates and API''s. Embed
-  analysis on your website. Data Narratives Datasets have a story to tell. Engage
-  and inspire your audience by combining text, images, and other multimedia content
-  with maps. You have the local knowledge and expertise, now begin and sustain a meaningful
-  connection with your users. Learn More Story Maps Share local knowledge and insights.
-  ArcGIS Online for Developers Develop new apps and solutions for your community.
-  Connect to your data''s API Use this platform to spur innovation from other teams
-  and stay on top of the latest technology. Utilizing open standards, interoperability,
-  data, APIs, and code can connect you directly your data''s community. Cross-Functional
-  Events Data is best used in coordination between multiple departments and groups.
-  By hosting in-person events you can share knowledge and build a cohesive collaboration
-  to solve your more important initiatives. It is often helpful to have regular and
-  on-going events that align with existing local community events when possible. Examples:
-  Data working session Community Hackathon - Flickr: ajturner Contact Information
-  support@esri.com About Contact Us'
+description: Kenyatta University ArcGIS Hub for tourism, culture, and heritage geospatial
+  content, including datasets, story maps, and related applications.
 endpoints:
 - type: dcatap201
   url: https://tourism-and-culture-kuniversity.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -52,6 +26,8 @@ endpoints:
   url: https://tourism-and-culture-kuniversity.hub.arcgis.com/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://tourism-and-culture-kuniversity.hub.arcgis.com/api/search/v1
+- type: dcatus11
+  url: https://tourism-and-culture-kuniversity.hub.arcgis.com/data.json
 - type: sitemap
   url: https://tourism-and-culture-kuniversity.hub.arcgis.com/sitemap.xml
 id: tourismandculturekuniversityhubarcgiscom
@@ -59,9 +35,9 @@ langs:
 - id: EN
   name: English
 link: https://tourism-and-culture-kuniversity.hub.arcgis.com/
-name: KUniversity Tourism and Culture Hub
+name: Kenyatta University Tourism and Culture Hub
 owner:
-  link: https://tourism-and-culture-kuniversity.com
+  link: https://www.ku.ac.ke
   location:
     country:
       id: KE
@@ -83,18 +59,23 @@ software:
   name: ArcGIS Hub
 status: active
 tags:
-- ArcGIS
 - GIS
-- academic
 - geospatial
+- academic
+- tourism
+- culture
+- has_api
 topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00002757

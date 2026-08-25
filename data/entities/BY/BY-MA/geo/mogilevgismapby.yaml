@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,33 +11,23 @@ coverage:
     country:
       id: BY
       name: Belarus
-    level: 20
+    level: 30
     macroregion:
       id: '151'
       name: Eastern Europe
     subregion:
       id: BY-MA
       name: Mahilioŭskaja voblasć
-description: Access point for ArcGIS REST services hosted by Mogilev GIS Map
-endpoints:
-- type: arcgis:rest:info
-  url: https://mogilev.gismap.by/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://mogilev.gismap.by/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://mogilev.gismap.by/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://mogilev.gismap.by/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://mogilev.gismap.by/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://mogilev.gismap.by/arcgis/rest/services?f=kmz
+description: Former ArcGIS REST services directory for Mogilev GIS Map. The host
+  mogilev.gismap.by no longer responds.
 id: mogilevgismapby
 langs:
 - id: RU
   name: Russian
+- id: BE
+  name: Belarusian
 link: https://mogilev.gismap.by/arcgis/rest/services
-name: ArcGIS REST Services Directory
+name: Mogilev GIS Map ArcGIS REST services
 owner:
   link: https://mogilev.gismap.by
   location:
@@ -48,7 +38,7 @@ owner:
     subregion:
       id: BY-MA
       name: Mahilioŭskaja voblasć
-  name: Mogilev
+  name: Mogilev regional GIS Map
   type: Local government
 properties:
   has_doi: false
@@ -62,20 +52,17 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - geospatial
 - REST
-- services
+- ArcGIS
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
 - id: TRAN
   name: Transport
-  type: eudatatheme
-- id: REGI
-  name: Regions and cities
   type: eudatatheme
 - id: ENVI
   name: Environment

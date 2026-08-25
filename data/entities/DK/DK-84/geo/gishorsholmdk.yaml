@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,11 +18,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Public GIS services provided by the municipality of Hørsholm via ArcGIS
-  REST API.
-endpoints:
-- type: arcgis:rest:info
-  url: https://gis.horsholm.dk/arcgis/rest/info?f=pjson
+description: Former ArcGIS REST directory of Hørsholm Kommune. gis.horsholm.dk/arcgis/rest/services
+  now returns 404.
 id: gishorsholmdk
 langs:
 - id: DA
@@ -53,7 +50,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - GIS
 - municipal
@@ -64,4 +61,4 @@ topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
-uid: temp00005879
+uid: cdi00035558

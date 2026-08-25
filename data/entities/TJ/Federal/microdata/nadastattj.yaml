@@ -4,6 +4,7 @@ api: true
 api_status: active
 catalog_type: Microdata catalog
 content_types:
+- microdata
 - dataset
 coverage:
 - location:
@@ -16,9 +17,14 @@ coverage:
       name: Central Asia
 description: National Data Archive of Tajikistan providing access to microdata from
   surveys and statistical studies conducted by the Agency on Statistics under the
-  President of the Republic of Tajikistan. The catalog includes datasets from household
-  budget surveys, enterprise surveys, time use surveys, tourism surveys, and other
-  statistical studies.
+  President of the Republic of Tajikistan. The catalog includes household budget and
+  time-use surveys, enterprise and trade surveys, tourism and handicraft surveys,
+  a disability assessment, and the 2023 Tajikistan Demographic and Health Survey.
+endpoints:
+- type: nada:catalog-search
+  url: http://nada.stat.tj/index.php/api/catalog/search
+- type: nada:csvexport
+  url: http://nada.stat.tj/index.php/catalog/export/csv?ps=5000&collection[]
 id: nadastattj
 langs:
 - id: RU
@@ -38,6 +44,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -53,16 +60,19 @@ tags:
 - statistics
 - government
 - microdata
-- Tajikistan
 - official statistics
 - surveys
-- nada
+- has_api
+- Tajikistan
 topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
 - id: ECON
   name: Economy and finance
+  type: eudatatheme
+- id: HEAL
+  name: Health
   type: eudatatheme
 - id: Society
   name: Society
@@ -74,8 +84,3 @@ topics:
   name: Health
   type: iso19115
 uid: cdi00013523
-endpoints:
-- type: nada:catalog-search
-  url: http://nada.stat.tj/index.php/api/catalog/search
-- type: nada:csvexport
-  url: http://nada.stat.tj/index.php/catalog/export/csv?ps=5000&collection[]

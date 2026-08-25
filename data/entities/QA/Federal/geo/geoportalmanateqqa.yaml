@@ -15,9 +15,8 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: A geospatial data catalog providing access to GIS datasets and services
-  for Manateq managed and controlled areas, such as logistics parks and industrial
-  zones in Qatar.
+description: ArcGIS Server REST directory of MANATEQ (Economic Zones Company), publishing
+  GIS datasets and map services for logistics parks and industrial zones in Qatar.
 endpoints:
 - type: arcgis:rest:info
   url: https://geoportal.manateq.qa/server/rest/info?f=pjson
@@ -35,8 +34,10 @@ id: geoportalmanateqqa
 langs:
 - id: AR
   name: Arabic
+- id: EN
+  name: English
 link: https://geoportal.manateq.qa/server/rest/services
-name: MANATEQ Qatar geoserver
+name: MANATEQ GIS services
 owner:
   link: https://www.manateq.qa
   location:
@@ -44,7 +45,7 @@ owner:
       id: QA
       name: Qatar
     level: 20
-  name: MANATEQ
+  name: MANATEQ (Economic Zones Company)
   type: Central government
 properties:
   has_doi: false
@@ -64,6 +65,8 @@ tags:
 - logistics
 - industrial zones
 - Qatar
+- government
+- has_api
 topics:
 - id: TRAN
   name: Transport

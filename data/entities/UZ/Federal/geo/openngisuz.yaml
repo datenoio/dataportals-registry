@@ -1,7 +1,8 @@
 access_mode:
 - open
-api: true
-api_status: active
+- restricted
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,10 +16,12 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: Geoportal, National Geospatial Information Portal of Uzbekistan
-endpoints:
-- type: arcgis:rest:services
-  url: https://db.ngis.uz/db/rest/services?f=pjson
+description: Public national geoinformation portal of the Cadastre Agency of Uzbekistan.
+  Provides access to open information from the state register of rights to real estate
+  (cadastral numbers, addresses, and land use) through the National Geographic Information
+  System. Some services require identification via id.egov.uz and may be charged for
+  non-government users. The REST map services themselves are recorded separately as
+  db.ngis.uz.
 id: openngisuz
 langs:
 - id: UZ
@@ -28,15 +31,15 @@ langs:
 - id: RU
   name: Russian
 link: https://open.ngis.uz
-name: Общественный геопортал Кадастрового агентства Республики Узбекистан
+name: Public Geoportal of the Cadastre Agency of Uzbekistan
 owner:
-  link: https://www.kadastr.uz
+  link: https://gov.uz/en/kadastr
   location:
     country:
       id: UZ
       name: Uzbekistan
     level: 20
-  name: Кадастровое агентство Республики Узбекистан
+  name: Cadastre Agency of the Republic of Uzbekistan
   type: Central government
 properties:
   has_doi: false
@@ -48,14 +51,27 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: arcgisserver
-  name: ArcGIS Server
+  id: custom
+  name: Custom software
 status: active
 tags:
 - geospatial
+- cadastre
 - government
 - national
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 - id: Location
   name: Location
   type: iso19115

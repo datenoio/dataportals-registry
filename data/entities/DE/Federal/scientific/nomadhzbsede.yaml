@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Helmholtz-Zentrum Berlin Solar Energy NOMAD Oasis for photovoltaic and
+  materials research data, including HySPRINT lab workflows. Public entries are available
+  through the NOMAD REST API.
+endpoints:
+- type: rest
+  url: https://nomad-hzb-se.de/nomad-oasis/api/v1/info
+- type: rest
+  url: https://nomad-hzb-se.de/nomad-oasis/api/v1/entries
+id: nomadhzbsede
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://nomad-hzb-se.de/nomad-oasis/gui/
+name: HZB Solar Energy NOMAD Oasis
+owner:
+  link: https://www.helmholtz-berlin.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Helmholtz-Zentrum Berlin für Materialien und Energie (HZB)
+  type: Academy
+properties:
+  dataset_count_reported: 2300
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: nomad
+  name: NOMAD
+status: active
+tags:
+- scientific
+- has_api
+- materials science
+- photovoltaics
+- NOMAD Oasis
+- FAIR data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990011

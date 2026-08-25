@@ -14,7 +14,7 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
+      name: Eastern Europe
 description: Romanian geospatial data portal operated by Megagis providing geographic
   datasets and map layers covering Romania. The portal offers ArcGIS Server REST services
   for accessing geospatial data, including WMS, WFS, and other OGC-compliant web services.
@@ -34,6 +34,12 @@ endpoints:
 - type: arcgis:kmz
   url: https://date.megagis.ro/arcgis/rest/services?f=kmz
 id: datemegagisro
+identifiers:
+- id: url
+  url: https://date.megagis.ro/arcgis/rest/services
+  value: https://date.megagis.ro/arcgis/rest/services
+- id: domain
+  value: date.megagis.ro
 langs:
 - id: RO
   name: Romanian
@@ -48,12 +54,6 @@ owner:
     level: 20
   name: Megagis
   type: Business
-identifiers:
-- id: url
-  url: https://date.megagis.ro/arcgis/rest/services
-  value: https://date.megagis.ro/arcgis/rest/services
-- id: domain
-  value: date.megagis.ro
 properties:
   has_doi: false
 rights:
@@ -115,4 +115,4 @@ topics:
 - id: Transportation
   name: Transportation
   type: iso19115
-uid: temp00005806
+uid: cdi00035029

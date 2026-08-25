@@ -1,0 +1,92 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 30
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+    subregion:
+      id: NZ-CAN
+      name: Canterbury
+description: Institutional Figshare repository for Lincoln University research data
+  and scholarly outputs.
+endpoints:
+- type: sitemap
+  url: https://data.lincoln.ac.nz/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://data.lincoln.ac.nz/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: datalincolnacnz
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100013525
+  value: r3d100013525
+- id: opendoar
+  url: https://v2.sherpa.ac.uk/id/repository/4872
+  value: '4872'
+langs:
+- id: EN
+  name: English
+link: https://data.lincoln.ac.nz
+name: Lincoln University research repository
+owner:
+  link: https://www.lincoln.ac.nz
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 30
+    subregion:
+      id: NZ-CAN
+      name: Canterbury
+  name: Lincoln University
+  type: Academy
+properties:
+  has_doi: true
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00002281
+_re3data:
+  re3data_id: r3d100013525
+  keywords: []
+  content_type: []
+  contact_email: data@lincoln.ac.nz
+  description: null
+  persistent_identifiers: []
+  software: []
+  versioning: null
+  institutions:
+  - name: Te Whare Wanaka o Aoraki
+    url: null
+  - name: ROR:04ps1r162
+    url: https://ror.org/04ps1r162
+  - name: general
+    url: null
+  repository_type: null
+  last_updated: '2025-12-25T16:42:17.337148'

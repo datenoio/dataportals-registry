@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '061'
       name: Polynesia
-description: Public seabed minerals licence repository for the Cook Islands (RDF Online
-  Repository). Distinct from the Seabed Minerals Authority CSD document archive.
+description: Public seabed minerals licence repository of the Seabed Minerals Authority,
+  published from MCAS (RDF Online Repository). Distinct from the Authority's CSD
+  document archive.
 endpoints:
 - type: rdfrepository:catalog
   url: https://cook-islands.revenuedev.org/
@@ -25,7 +26,7 @@ langs:
 - id: EN
   name: English
 link: https://cook-islands.revenuedev.org/
-name: Cook Islands Online Repository
+name: Cook Islands Seabed Minerals Online Repository
 owner:
   link: https://www.sbma.gov.ck
   location:
@@ -33,7 +34,7 @@ owner:
       id: CK
       name: Cook Islands
     level: 20
-  name: Seabed Minerals Authority
+  name: Cook Islands Seabed Minerals Authority
   type: Central government
 properties:
   has_doi: false
@@ -50,9 +51,11 @@ software:
   name: RDF Online Repository
 status: active
 tags:
+- has_api
 - mining
 - seabed
 - cadastre
+- MCAS
 - government
 topics:
 - id: ECON
@@ -69,6 +72,9 @@ topics:
   type: iso19115
 - id: Economy
   name: Economy
+  type: iso19115
+- id: Oceans
+  name: Oceans
   type: iso19115
 - id: Planning / Cadastre
   name: Planning / Cadastre

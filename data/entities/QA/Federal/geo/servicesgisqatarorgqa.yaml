@@ -38,7 +38,7 @@ langs:
 - id: AR
   name: Arabic
 link: https://services.gisqatar.org.qa/server/rest/services
-name: CGIS GIS services
+name: CGIS REST services
 owner:
   link: https://www.gisqatar.org.qa
   location:
@@ -46,10 +46,11 @@ owner:
       id: QA
       name: Qatar
     level: 20
-  name: Center for Geographic Information Systems (CGIS)
+  name: Centre for GIS (CGIS)
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -68,7 +69,14 @@ tags:
 - map
 - spatial
 - service
+- has_api
 topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115

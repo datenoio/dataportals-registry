@@ -20,6 +20,10 @@ description: National DHIS2 DHIMS2 instance operated by the Centre for Health In
 endpoints:
 - type: dhis2:catalog
   url: https://dhims.chimgh.org/dhims
+- type: dhis2:system-info
+  url: https://dhims.chimgh.org/dhims/api/system/info
+- type: dhis2:datasets
+  url: https://dhims.chimgh.org/dhims/api/dataSets.json?fields=id,displayName&pageSize=1
 id: dhimschimghorg
 langs:
 - id: EN

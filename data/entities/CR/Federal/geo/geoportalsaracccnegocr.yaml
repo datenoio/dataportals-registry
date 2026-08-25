@@ -1,6 +1,6 @@
 access_mode:
 - open
-api_status: active
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,32 +17,7 @@ coverage:
 description: Official geospatial portal associated with the National Emergency Commission
   (CNE) of Costa Rica. Showcases maps, geodata, and resources related to national
   hazards, emergency management, and planning.
-endpoints:
-- type: geonode:datasets
-  url: https://geoportal-saracc.cne.go.cr/api/datasets/
-- type: geonode:documents
-  url: https://geoportal-saracc.cne.go.cr/api/documents/
-- type: wms111
-  url: https://geoportal-saracc.cne.go.cr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wfs110
-  url: https://geoportal-saracc.cne.go.cr/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: https://geoportal-saracc.cne.go.cr/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: csw202
-  url: https://geoportal-saracc.cne.go.cr/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: https://geoportal-saracc.cne.go.cr/catalogue/csw?mode=oaipmh&verb=Identify
-  version: '2.0'
-- type: wmts100
-  url: https://geoportal-saracc.cne.go.cr/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: opensearch
-  url: https://geoportal-saracc.cne.go.cr/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
-  version: '1.0'
+  The geoportal-saracc.cne.go.cr host no longer resolves as of August 2026.
 id: geoportalsaracccnegocr
 langs:
 - id: ES
@@ -56,7 +31,7 @@ owner:
       id: CR
       name: Costa Rica
     level: 20
-  name: National Commission of risks prevention and emergency care Costa Rica
+  name: Comisión Nacional de Prevención de Riesgos y Atención de Emergencias (CNE)
   type: Central government
 properties:
   has_doi: false
@@ -70,7 +45,7 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 tags:
 - geospatial
 - emergency
@@ -95,4 +70,4 @@ topics:
   name: Geoscientific Information
   type: iso19115
 uid: cdi00002399
-api: true
+api: false

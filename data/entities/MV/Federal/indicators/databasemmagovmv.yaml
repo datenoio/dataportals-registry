@@ -1,9 +1,10 @@
 access_mode:
 - open
 api: false
-api_status: inactive
+api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
+- indicator
 - dataset
 coverage:
 - location:
@@ -15,7 +16,8 @@ coverage:
       id: '034'
       name: Southern Asia
 description: Maldives Monetary Authority platform for macroeconomic, financial, fiscal,
-  and real-sector statistics, with query UI and public API.
+  and real-sector statistics, with a public query UI. Series API documentation exists
+  but requests require registration.
 id: databasemmagovmv
 langs:
 - id: EN
@@ -31,6 +33,9 @@ owner:
     level: 20
   name: Maldives Monetary Authority
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 software:
   id: custom
   name: Custom software
@@ -39,9 +44,13 @@ tags:
 - statistics
 - macroeconomic
 - central bank
+- government
 - Maldives
 topics:
 - id: ECON
   name: Economy and finance
   type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
 uid: cdi00025644

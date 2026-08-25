@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -13,33 +14,24 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: A data catalog identifying and organizing information about datasets,
-  enabling discovery and management of data assets across systems.
-endpoints:
-- type: ckan
-  url: https://data.mmanalytics.org/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://data.mmanalytics.org/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://data.mmanalytics.org/api/3/action/package_list
-  version: '3'
+description: Former CKAN data catalog of USAID/Burma’s Myanmar Analytical Activity
+  (2018–2023), used to share township, indicator, and programming datasets with partners.
+  data.mmanalytics.org no longer serves the catalog (August 2026).
 id: datammanalyticsorg
 langs:
 - id: EN
   name: English
 link: https://data.mmanalytics.org
-name: Data Catalog - MMAnalytics.org
+name: MMAnalytics Data Catalog
 owner:
-  link: https://www.mmanalytics.org
+  link: https://www.usaid.gov
   location:
     country:
       id: MM
       name: Myanmar
     level: 20
-  name: USAID Burma
-  type: Civil society
+  name: United States Agency for International Development (USAID)
+  type: International
 properties:
   has_doi: false
 rights:
@@ -52,14 +44,20 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
-- geospatial
-- data catalog
-- analytics
+- USAID
+- open data
+- Myanmar
+- CKAN
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00004625
-api: true

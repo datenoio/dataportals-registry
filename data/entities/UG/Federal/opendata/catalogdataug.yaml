@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,18 +14,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: National CKAN open data catalog at catalog.data.ug, operated with the
-  African Centre for Media Excellence as part of Uganda's early open data programme.
-endpoints:
-- type: ckan
-  url: http://catalog.data.ug/api/3
-  version: '3'
-- type: ckan:package-search
-  url: http://catalog.data.ug/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://catalog.data.ug/api/3/action/package_list
-  version: '3'
+description: Historical national CKAN catalog at catalog.data.ug, associated with
+  Uganda's early open data programme and the African Centre for Media Excellence.
+  The hostname no longer resolves (24 August 2026).
 id: catalogdataug
 langs:
 - id: EN
@@ -33,7 +24,7 @@ langs:
 link: http://catalog.data.ug
 name: Open Data in Uganda
 owner:
-  link: https://data.ug
+  link: https://acme-ug.org
   location:
     country:
       id: UG
@@ -54,9 +45,11 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
-- has_api
+- government
+- open data
+- uganda
 topics:
 - id: GOVE
   name: Government and public sector

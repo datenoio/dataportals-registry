@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,42 +11,27 @@ coverage:
     country:
       id: World
       name: World
-    level: 10
+    level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
-description: Extracting data catalog information from provided URL according to specified
-  vocabularies.
-endpoints:
-- type: geonetwork:query
-  url: http://157.230.11.35:8080/geonetwork/srv/eng/q
-- type: openapi
-  url: http://157.230.11.35:8080/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: http://157.230.11.35:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: http://157.230.11.35:8080/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: http://157.230.11.35:8080/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+description: Catalog host 157.230.11.35:8080 did not respond on 25 August 2026
+  (timeout or connection refused). Operator and country are unconfirmed.
 id: '1572301135'
 langs:
 - id: EN
   name: English
 link: http://157.230.11.35:8080/geonetwork/srv/eng/catalog.search#/home
-name: data catalog extraction
+name: Unidentified catalog (157.230.11.35:8080)
 owner:
   link: http://157.230.11.35:8080/geonetwork/srv/eng/catalog.search#/home
   location:
     country:
       id: World
       name: World
-    level: 10
-  name: Government of Unknown
-  type: Central government
+    level: 20
+  name: Unidentified operator
+  type: Other
 properties:
   has_doi: true
 rights:
@@ -59,7 +44,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - GIS
 - geospatial
@@ -74,4 +59,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00000713
+uid: cdi00037321

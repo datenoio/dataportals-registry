@@ -12,6 +12,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
+description: GeoNode 4 geoportal of the National Environment Management Authority
+  (NEMA), publishing environmental and geospatial datasets for Uganda with CSW and
+  OGC services.
 endpoints:
 - type: geonode:datasets
   url: https://geonode.nema.go.ug/api/datasets/
@@ -66,6 +69,7 @@ langs:
 link: https://geonode.nema.go.ug
 name: NEMA GeoNode Maps
 owner:
+  link: https://www.nema.go.ug
   location:
     country:
       id: UG
@@ -73,28 +77,32 @@ owner:
     level: 20
   name: National Environment Management Authority
   type: Central government
-  link: https://www.nema.go.ug
 software:
   id: geonode
   name: GeoNode
 status: active
 uid: cdi00021554
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Environment
+  name: Environment
   type: iso19115
 tags:
 - GIS
 - geospatial
 - government
-description: Geoportal. managed by National Environment Management Authority. providing
-  access to nema geonode maps.
+- environment
+- GeoNode
+- has_api
+- Uganda
 content_types:
 - dataset
 - map_layer

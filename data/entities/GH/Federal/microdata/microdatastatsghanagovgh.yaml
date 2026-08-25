@@ -21,6 +21,8 @@ description: Official Ghana Statistical Service microdata catalogue (NADA). Link
 endpoints:
 - type: nada:catalog-search
   url: https://microdata.statsghana.gov.gh/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://microdata.statsghana.gov.gh/index.php/catalog/export/csv?ps=5000&collection[]
 id: microdatastatsghanagovgh
 langs:
 - id: EN
@@ -37,6 +39,7 @@ owner:
   name: Ghana Statistical Service
   type: Central government
 properties:
+  dataset_count_reported: 72
   has_doi: false
   is_national: true
 rights:

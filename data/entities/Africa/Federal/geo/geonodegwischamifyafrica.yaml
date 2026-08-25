@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+- document
+coverage:
+- location:
+    country:
+      id: Africa
+      name: Africa
+    level: 10
+    macroregion:
+      id: '002'
+      name: Africa
+description: GeoNode catalog on the Chamify GWIS (geospatial) platform, publishing datasets,
+  maps, and documents. CSW, OAI-PMH, OpenSearch, and GeoNode REST APIs are live.
+endpoints:
+- type: geonode:datasets
+  url: https://geonode.gwis.chamify.africa/api/datasets/
+- type: geonode:documents
+  url: https://geonode.gwis.chamify.africa/api/documents/
+- type: csw202
+  url: https://geonode.gwis.chamify.africa/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geonode.gwis.chamify.africa/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geonode.gwis.chamify.africa/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: sitemap
+  url: https://geonode.gwis.chamify.africa/sitemap.xml
+id: geonodegwischamifyafrica
+langs:
+- id: EN
+  name: English
+link: https://geonode.gwis.chamify.africa/
+name: GeoNode GWIS
+owner:
+  location:
+    country:
+      id: Africa
+      name: Africa
+    level: 10
+  name: Chamify (GWIS)
+  type: Civil society
+  link: https://chamify.africa
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- GIS
+- geospatial
+- GeoNode
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00021420

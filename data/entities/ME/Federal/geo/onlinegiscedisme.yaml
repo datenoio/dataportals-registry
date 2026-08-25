@@ -1,0 +1,100 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ME
+      name: Montenegro
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Production GeoNode of CEDIS (Crnogorski elektrodistributivni sistem),
+  Montenegro's electricity distribution system operator. Catalogues geospatial layers
+  for the national distribution network, including substations, medium-voltage lines,
+  and related utility assets.
+endpoints:
+- type: geonode:layers
+  url: https://onlinegis.cedis.me/api/layers/
+- type: geonode:documents
+  url: https://onlinegis.cedis.me/api/documents/
+- type: csw202
+  url: https://onlinegis.cedis.me/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://onlinegis.cedis.me/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://onlinegis.cedis.me/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wcs111
+  url: https://onlinegis.cedis.me/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://onlinegis.cedis.me/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://onlinegis.cedis.me/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://onlinegis.cedis.me/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: sitemap
+  url: https://onlinegis.cedis.me/sitemap.xml
+id: onlinegiscedisme
+langs:
+- id: SR
+  name: Serbian
+link: https://onlinegis.cedis.me/
+name: CEDIS Online GIS
+owner:
+  link: https://cedis.me
+  location:
+    country:
+      id: ME
+      name: Montenegro
+    level: 20
+  name: CEDIS (Crnogorski elektrodistributivni sistem)
+  type: Business
+properties:
+  dataset_count_reported: 2880
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- GIS
+- GeoNode
+- geospatial
+- electricity
+- energy infrastructure
+- has_api
+- Montenegro
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021522

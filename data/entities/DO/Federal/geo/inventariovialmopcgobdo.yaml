@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DO
+      name: Republica Dominicana
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: GeoServer web catalog of the Ministerio de Obras Públicas y Comunicaciones
+  (MOPC) road inventory. The public GeoServer UI is available; OGC OWS GetCapabilities
+  URLs currently return HTTP 404.
+id: inventariovialmopcgobdo
+langs:
+- id: ES
+  name: Spanish
+link: https://inventariovial.mopc.gob.do/geoserver/web/
+name: GeoPortal Inventario Vial MOPC
+owner:
+  link: https://mopc.gob.do
+  location:
+    country:
+      id: DO
+      name: Republica Dominicana
+    level: 20
+  name: Ministerio de Obras Públicas y Comunicaciones (MOPC)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- government
+- transportation
+- roads
+- geoserver
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00000508

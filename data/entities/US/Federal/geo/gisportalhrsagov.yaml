@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: HRSA ArcGIS REST catalog of health resources and underserved-area geospatial services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisportal.hrsa.gov/server/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisportal.hrsa.gov/server/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisportal.hrsa.gov/arcgis/services?wsdl
+id: gisportalhrsagov
+langs:
+- id: EN
+  name: English
+link: https://gisportal.hrsa.gov/server/arcgis/rest/services
+name: HRSA GIS Portal
+owner:
+  link: https://www.hrsa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Health Resources and Services Administration
+  type: Central government
+properties:
+  is_national: true
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- federal government
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00013029

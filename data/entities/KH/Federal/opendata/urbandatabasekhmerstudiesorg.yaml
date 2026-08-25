@@ -5,6 +5,7 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
+- document
 coverage:
 - location:
     country:
@@ -14,14 +15,18 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: A resource developed by the Center for Khmer Studies (CKS) that compiles
-  high-quality materials and data on urban studies in Cambodia.
+description: Cambodia Urban Database of the Center for Khmer Studies (CKS). Public
+  repository of reports, journal articles, quantitative datasets, master plans, maps,
+  and images on urbanization in Cambodia, funded by the Australian Government through
+  The Asia Foundation’s Ponlok Chomnes Program.
 id: urbandatabasekhmerstudiesorg
 langs:
 - id: EN
   name: English
+- id: KM
+  name: Khmer
 link: https://urbandatabase.khmerstudies.org/get-data
-name: Center for Khmer Studies Open Data Portal
+name: Cambodia Urban Database
 owner:
   link: https://khmerstudies.org
   location:
@@ -31,6 +36,8 @@ owner:
     level: 20
   name: Center for Khmer Studies
   type: Academy
+properties:
+  has_doi: false
 rights:
   license_id: null
   license_name: null
@@ -53,6 +60,9 @@ tags:
 topics:
 - id: REGI
   name: Regions and cities
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
   type: eudatatheme
 - id: Structure
   name: Structure

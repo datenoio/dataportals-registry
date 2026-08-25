@@ -12,20 +12,22 @@ coverage:
       name: Albania
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Official statistical data catalog and database of the Albanian Institute
-  of Statistics
+description: Official PxWeb statistical database of the Institute of Statistics of
+  Albania (INSTAT), with tables by theme, key figures, and census data.
 endpoints:
 - type: pxwebapi
-  url: http://databaza.instat.gov.al/PXWeb/api/v1/en/
+  url: https://databaza.instat.gov.al:8083/pxweb/api/v1/en/DST/
   version: '1'
 id: databazainstatgoval
 langs:
+- id: SQ
+  name: Albanian
 - id: EN
   name: English
-link: http://databaza.instat.gov.al
-name: INSTAT Statistical database
+link: https://databaza.instat.gov.al:8083/pxweb/en/DST/
+name: INSTAT Statistical Database
 owner:
   link: https://www.instat.gov.al
   location:
@@ -33,10 +35,11 @@ owner:
       id: AL
       name: Albania
     level: 20
-  name: Institute of Statistics Albania
+  name: Institute of Statistics of Albania (INSTAT)
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -53,6 +56,7 @@ tags:
 - government
 - macrodata
 - national statistics
+- has_api
 topics:
 - id: ECON
   name: Economy and finance

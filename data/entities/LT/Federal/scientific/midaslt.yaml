@@ -14,13 +14,12 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: 'MIDAS is a national research data repository managed by Vilnius University.
-  The aim of MIDAS is to collect, process, store and analyze research data and other
-  relevant information in all fields of knowledge,   enabling free, easy and convenient
-  access to the data via the Internet. MIDAS provides services for registered and
-  unregistered users: students, listeners, academics, researchers, scientists, research
-  administrators, other actors of the research and studies ecosystem, and all individuals
-  interested in research data.'
+description: 'MIDAS is a national research data repository managed by Vilnius University. The aim of MIDAS
+  is to collect, process, store and analyze research data and other relevant information in all fields
+  of knowledge,   enabling free, easy and convenient access to the data via the Internet. MIDAS provides
+  services for registered and unregistered users: students, listeners, academics, researchers, scientists,
+  research administrators, other actors of the research and studies ecosystem, and all individuals interested
+  in research data.'
 endpoints:
 - type: oaipmh20
   url: https://midas.lt/web/action/oaipmh?verb=Identify
@@ -29,8 +28,10 @@ id: midaslt
 langs:
 - id: LT
   name: Lithuanian
+- id: EN
+  name: English
 link: https://midas.lt
-name: MIDAS
+name: MIDAS National Research Data Archive
 owner:
   link: https://www.vu.lt
   location:
@@ -63,4 +64,7 @@ topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
-uid: temp00000463
+properties:
+  has_doi: true
+  is_national: true
+uid: cdi00035280

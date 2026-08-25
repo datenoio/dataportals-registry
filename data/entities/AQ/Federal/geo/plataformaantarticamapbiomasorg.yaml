@@ -18,6 +18,8 @@ coverage:
 description: MapBiomas Antarctica platform of land-cover maps for ice-free areas of
   Antarctica, produced using the MapBiomas network methods.
 endpoints:
+- type: mapbiomas:catalog
+  url: https://plataforma.antartica.mapbiomas.org/
 - type: customapi
   url: https://plataforma.mapbiomas.org/api/v1/antarctica/themes?tenantId=mapbiomas
   version: '1'
@@ -70,8 +72,5 @@ topics:
   type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
-  type: iso19115
-- id: Planning / Cadastre
-  name: Planning / Cadastre
   type: iso19115
 uid: cdi00024821

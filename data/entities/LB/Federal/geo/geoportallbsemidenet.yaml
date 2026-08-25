@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,23 +15,9 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Geoportal. managed by Government of Lebanon. powered by Geonetwork. accessible
-  at geoportal.lb.semide.net.
-endpoints:
-- type: geonetwork:query
-  url: http://geoportal.lb.semide.net/geonetwork/srv/eng/q
-- type: openapi
-  url: http://geoportal.lb.semide.net/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: http://geoportal.lb.semide.net/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: http://geoportal.lb.semide.net/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: http://geoportal.lb.semide.net/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+description: GeoNetwork catalog of the Lebanese node of SEMIDE/EMWIS, the
+  Euro-Mediterranean Information System on know-how in the Water Sector. The
+  geoportal host did not respond to probes in August 2026.
 id: geoportallbsemidenet
 langs:
 - id: AR
@@ -41,15 +27,15 @@ langs:
 - id: FR
   name: French
 link: http://geoportal.lb.semide.net/geonetwork
-name: Government of Lebanon Geoportal
+name: Lebanon SEMIDE/EMWIS GeoNetwork
 owner:
-  link: http://semide.net
+  link: https://www.emwis.org
   location:
     country:
       id: LB
       name: Lebanon
     level: 20
-  name: Government of Lebanon
+  name: SEMIDE/EMWIS Lebanon
   type: Central government
 identifiers:
 - id: url
@@ -59,64 +45,32 @@ properties:
   has_doi: true
 rights:
   license_id: null
-  license_name: Open Data (granular licensing per dataset)
-  license_url: https://opendatacommons.org/licenses/odbl/
+  license_name: null
+  license_url: null
   privacy_policy_url: null
   rights_type: granular
   tos_url: null
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
 - geonetwork
 - government
-- Lebanon
-- geoportal
-- metadata
-- semide
-- has_api
-- open data
-- Western Asia
-- CSW
-- OAI-PMH
-- opensearch
-- ISO 19115
-- spatial data infrastructure
-- geographic datasets
-- map layers
-- catalog service
-- INSPIRE
+- water
+- SEMIDE
 topics:
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: TRAN
-  name: Transport
-  type: eudatatheme
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
 - id: Location
   name: Location
   type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Planning / Cadastre
-  name: Planning / Cadastre
-  type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
-  type: iso19115
-- id: Structure
-  name: Structure
-  type: iso19115
-uid: temp00002768
+uid: cdi00035306

@@ -1,11 +1,12 @@
 access_mode:
 - open
-- limited
+- restricted
 api: true
 api_status: active
 catalog_type: Microdata catalog
 content_types:
 - microdata
+- dataset
 coverage:
 - location:
     country:
@@ -15,19 +16,22 @@ coverage:
     macroregion:
       id: '061'
       name: Polynesia
-description: Portal for access, documentation, and management of Samoa's official
-  statistics data, including mapping, microdata, and metadata.
+description: NADA microdata library of the Samoa Bureau of Statistics. Publishes DDI
+  metadata for census and household surveys; unit-record files are available under
+  the library access policy.
 endpoints:
 - type: nada:catalog-search
-  url: http://metadata.sbs.gov.ws/index.php/api/catalog/search
+  url: https://microdata.sbs.gov.ws/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://microdata.sbs.gov.ws/index.php/catalog/export/csv?ps=5000&collection[]
 id: metadatasbsgovws
 langs:
 - id: EN
   name: English
-link: http://metadata.sbs.gov.ws
-name: Samoa Bureau of Statistics Mapping and Metadata Portal
+link: https://microdata.sbs.gov.ws
+name: Samoa Microdata Library
 owner:
-  link: http://www.sbs.gov.ws
+  link: https://www.sbs.gov.ws
   location:
     country:
       id: WS
@@ -37,6 +41,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
   transferable_topics: true
 rights:
   license_id: null
@@ -56,25 +61,22 @@ tags:
 - statistics
 - census
 - survey
-- mapping
-- metadata
+- official statistics
+- Samoa
 topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
-- id: Society
-  name: Society
-  type: iso19115
 - id: ECON
   name: Economy and finance
   type: eudatatheme
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: Boundaries
-  name: Boundaries
+- id: Society
+  name: Society
   type: iso19115
-- id: Location
-  name: Location
+- id: Economy
+  name: Economy
   type: iso19115
 uid: cdi00000046

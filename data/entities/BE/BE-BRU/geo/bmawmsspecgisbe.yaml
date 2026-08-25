@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,15 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: BMAWMS (Belgian Municipal Authorities Web Mapping Service) - Geospatial
-  data catalog for Belgian municipal authorities.
-endpoints:
-- type: wms111
-  url: http://bmawms.specgis.be/service?REQUEST=GetCapabilities
-  version: 1.1.1
-- type: tms100
-  url: http://bmawms.specgis.be/tms/1.0.0/
-  version: 1.0.0
+description: Former MapProxy WMS aggregator for Belgian municipal authorities (SpecGIS).
+  The hostname bmawms.specgis.be no longer resolves.
 id: bmawmsspecgisbe
 langs:
 - id: FR
@@ -40,8 +33,8 @@ owner:
     subregion:
       id: BE-BRU
       name: Bruxelles-Capitale, Région de
-  name: Local Government in Belgium
-  type: Local government
+  name: SpecGIS
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -54,7 +47,7 @@ rights:
 software:
   id: mapproxy
   name: MapProxy
-status: active
+status: inactive
 tags:
 - Belgium
 - GIS
@@ -72,4 +65,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-uid: temp00002190
+uid: cdi00035902

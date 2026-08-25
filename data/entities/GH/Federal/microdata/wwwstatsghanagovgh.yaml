@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - dataset
@@ -14,13 +14,8 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Legacy NADA path on the Ghana Statistical Service website. The current
-  official microdata catalogue is https://microdata.statsghana.gov.gh/.
-endpoints:
-- type: nada:catalog-search
-  url: https://www.statsghana.gov.gh/nada/index.php/api/catalog/search
-- type: nada:csvexport
-  url: https://www.statsghana.gov.gh/nada/index.php/catalog/export/csv?ps=5000&collection[]
+description: Legacy NADA path on the Ghana Statistical Service website. https://www.statsghana.gov.gh/nada
+  returns 404. The current official microdata catalogue is https://microdata.statsghana.gov.gh/.
 id: wwwstatsghanagovgh
 langs:
 - id: EN
@@ -48,15 +43,13 @@ rights:
 software:
   id: nada
   name: NADA
-status: active
+status: inactive
 tags:
 - GSS
 - Ghana
 - microdata
 - nada
 - official
-- open data
-- public sector
 - statistics
 - survey
 topics:
@@ -72,14 +65,8 @@ topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
   type: eudatatheme
-- id: TRAN
-  name: Transport
-  type: eudatatheme
 - id: SOCI
   name: Population and society
-  type: eudatatheme
-- id: REGI
-  name: Regions and cities
   type: eudatatheme
 - id: Economy
   name: Economy
@@ -92,20 +79,5 @@ topics:
   type: iso19115
 - id: Farming
   name: Farming
-  type: iso19115
-- id: Transportation
-  name: Transportation
-  type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
-- id: Education
-  name: Education
-  type: iso19115
-- id: Agriculture
-  name: Agriculture
   type: iso19115
 uid: cdi00027573

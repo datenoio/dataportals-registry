@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,9 +11,9 @@ coverage:
     country:
       id: World
       name: World
-    level: 10
+    level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
 description: GeoServer is an open source server for sharing geospatial data and implements
   several OGC standards such as WMS and WFS.
@@ -22,14 +22,14 @@ langs:
 - id: EN
   name: English
 link: https://www.4xtreme.com/2018/10/17/geoserver/geoserver
-name: GeoServer Community Geoportal
+name: 4xtreme GeoServer blog post (not a catalog)
 owner:
   link: https://geoserver.org/
   location:
     country:
       id: World
       name: World
-    level: 10
+    level: 20
   name: GeoServer Community
   type: Civil society
 properties:
@@ -44,7 +44,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - geospatial
 - server
@@ -57,14 +57,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00004083
-endpoints:
-- type: wms130
-  url: https://www.4xtreme.com/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
-- type: wfs200
-  url: https://www.4xtreme.com/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
-  version: 2.0.0
-- type: wcs111
-  url: https://www.4xtreme.com/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
+uid: cdi00037298

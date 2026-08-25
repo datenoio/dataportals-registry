@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,16 +14,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: GBIF Integrated Publishing Toolkit node for Mozambique, sharing primary
-  biodiversity occurrence datasets from national collections including Herbarium LMA.
-endpoints:
-- type: dcat:ttl
-  url: http://197.249.6.202:8088/dcat
-- type: ipt:dataset
-  url: http://197.249.6.202:8088/inventory/dataset
-- type: rss
-  url: http://197.249.6.202:8088/rss.do
-  version: '2.0'
+description: Former GBIF Integrated Publishing Toolkit node for Mozambique, sharing
+  primary biodiversity occurrence datasets from national collections including Herbarium
+  LMA. The host 197.249.6.202:8088 timed out on HTTP during review on 25 August 2026.
 id: '1972496202'
 langs:
 - id: PT
@@ -31,7 +24,7 @@ langs:
 link: http://197.249.6.202:8088
 name: GBIF Mozambique IPT
 owner:
-  link: http://www.iiam.gov.mz
+  link: https://www.iiam.gov.mz
   location:
     country:
       id: MZ
@@ -42,7 +35,7 @@ owner:
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT

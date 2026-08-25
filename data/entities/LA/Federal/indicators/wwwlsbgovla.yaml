@@ -4,6 +4,7 @@ api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
+- indicator
 - dataset
 coverage:
 - location:
@@ -14,21 +15,25 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Official national data catalog focused on Sustainable Development Goals
-  indicators and related datasets, managed by the Laos Statistics Bureau.
+description: Official OpenSDG reporting platform of the Lao Statistics Bureau for
+  Sustainable Development Goal indicators, including national SDG 18 on unexploded
+  ordnance. Charts, CSV downloads, and a reporting-status page are published in Lao
+  and English; indicator JSON is served from the sdg-laos GitHub data-production site.
 endpoints:
-- type: sitemap
-  url: https://www.lsb.gov.la/wp-sitemap.xml
+- type: opensdg:catalog
+  url: https://www.lsb.gov.la/sdg/en/reporting-status
 - type: opensdg:data
   url: https://sdg-laos.github.io/data-production/lo/data/1-1-1.json
 - type: opensdg:data
-  url: https://sdg-laos.github.io/data-production/lo/data/1-2-1.json
+  url: https://sdg-laos.github.io/data-production/en/data/1-1-1.json
 id: wwwlsbgovla
 langs:
 - id: LO
   name: Lao
+- id: EN
+  name: English
 link: https://www.lsb.gov.la/sdg/
-name: 18 Sustainable Development Goals (SDGs) for Lao PDR
+name: Lao PDR Open SDG Platform
 owner:
   link: https://www.lsb.gov.la
   location:
@@ -40,6 +45,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -54,25 +60,23 @@ status: active
 tags:
 - SDG
 - sustainable development
-- indicator
-- Laos
+- indicators
+- government
 - official statistics
-- data catalog
+- has_api
+- Laos
 topics:
-- id: ECON
-  name: Economy and finance
-  type: eudatatheme
-- id: ECON
-  name: Economy and finance
-  type: eudatatheme
 - id: SOCI
   name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
   type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: REGI
-  name: Regions and cities
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
 - id: Economy
   name: Economy

@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GE
+      name: Georgia
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: GE-TB
+      name: Tbilisi
+description: Interactive municipal GIS map of Tbilisi (maps.tbilisi.gov.ge redirects
+  here), operated by Tbilisi municipal services. Orthophoto and city layers are also
+  published through a MapProxy WMS/WMTS endpoint.
+endpoints:
+- type: wms130
+  url: https://mapproxy.tbilisi.gov.ge/service?SERVICE=WMS&REQUEST=GetCapabilities
+  version: 1.3.0
+id: msgovge
+langs:
+- id: KA
+  name: Georgian
+- id: EN
+  name: English
+link: https://ms.gov.ge/msmap/
+name: Tbilisi Municipal Map
+owner:
+  link: https://ms.gov.ge
+  location:
+    country:
+      id: GE
+      name: Georgia
+    level: 30
+    subregion:
+      id: GE-TB
+      name: Tbilisi
+  name: Tbilisi Municipal Services
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- gis
+- maps
+- tbilisi
+- municipal
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00035411

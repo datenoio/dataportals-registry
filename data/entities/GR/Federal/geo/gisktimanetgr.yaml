@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,23 +13,11 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
 description: Cadastral land parcel boundaries maintained in the Hellenic Cadastre
   data base. The dataset refers to the land parcels that have been integrated into
   the Hellenic Cadastre data base.
-endpoints:
-- type: arcgis:rest:services
-  url: http://gis.ktimanet.gr/inspire/rest/services?f=pjson
-  version: '1.0'
-- type: arcgis:rest:info
-  url: http://gis.ktimanet.gr/inspire/rest/info?f=pjson
-- type: arcgis:soap
-  url: http://gis.ktimanet.gr/inspire/services?wsdl
-- type: arcgis:sitemap
-  url: http://gis.ktimanet.gr/inspire/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: http://gis.ktimanet.gr/inspire/rest/services?f=geositemap
 id: gisktimanetgr
 langs:
 - id: EL
@@ -57,7 +45,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - cadastre
 - parcels
@@ -69,4 +57,4 @@ topics:
 - id: Planning / Cadastre
   name: Planning / Cadastre
   type: iso19115
-uid: temp00001543
+uid: cdi00035380

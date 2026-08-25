@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -13,19 +13,18 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: The I.I. Schmalhausen Institute of Zoology of National Academy of Sciences
-  of Ukraine is the oldest institution in Ukraine specialised in general zoology.
-endpoints:
-- type: rss
-  url: http://ukrbin.com:8888/rss.do
-  version: '2.0'
+      name: Eastern Europe
+description: Ukrainian Biodiversity Information Network (UkrBIN), a citizen-science
+  and research catalog of species occurrences. The former IPT instance on port 8888
+  was unreachable in August 2026; the public database remains at ukrbin.com.
 id: ukrbincom
 langs:
 - id: UK
   name: Ukrainian
-link: http://ukrbin.com:8888
-name: I.I. Schmalhausen Institute of Zoology
+- id: EN
+  name: English
+link: https://ukrbin.com
+name: Ukrainian Biodiversity Information Network (UkrBIN)
 owner:
   link: https://www.izan.kiev.ua
   location:
@@ -36,14 +35,14 @@ owner:
   name: I. I. Schmalhausen Institute of Zoology
   type: Academy
 software:
-  id: ipt
-  name: GBIF Integrated Publishing Toolkit (IPT)
+  id: custom
+  name: Custom software
 status: active
 tags:
 - GBIF
-- IPT
 - biodiversity
-- data publishing
+- citizen science
+- Ukraine
 topics:
 - id: Biota
   name: Biota

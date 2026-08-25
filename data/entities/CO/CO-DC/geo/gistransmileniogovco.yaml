@@ -27,7 +27,7 @@ endpoints:
 - type: arcgis:rest:services
   url: https://gis.transmilenio.gov.co/arcgis/rest/services?f=pjson
 - type: arcgis:soap
-  url: https://gis.transmilenio.gov.co/arcgis/services?wsdl
+  url: https://gis.transmilenio.gov.co/arcgis/rest/services?wsdl
 - type: arcgis:sitemap
   url: https://gis.transmilenio.gov.co/arcgis/rest/services?f=sitemap
 - type: arcgis:geositemap
@@ -38,7 +38,7 @@ id: gistransmileniogovco
 langs:
 - id: ES
   name: Spanish
-link: https://gis.transmilenio.gov.co/arcgis/services
+link: https://gis.transmilenio.gov.co/arcgis/rest/services
 name: TransMilenio GIS Services
 owner:
   link: https://gis.transmilenio.gov.co

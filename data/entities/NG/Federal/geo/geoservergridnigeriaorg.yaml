@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: false
-api_status: uncertain
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,22 +15,23 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: GeoServer Data Catalog (not structured metadata provided, inferred as
-  a geospatial data publishing platform)
+description: Former GeoServer of the GRID3 Nigeria geodatabase, transferred to the
+  National Space Research and Development Agency (NASRDA). The hostname geoserver.grid-nigeria.org
+  currently does not resolve.
 id: geoservergridnigeriaorg
 langs:
 - id: EN
   name: English
 link: https://geoserver.grid-nigeria.org/geoserver
-name: Not explicitly stated Geoportal
+name: GRID3 Nigeria GeoServer
 owner:
-  link: https://geoserver.grid-nigeria.org/geoserver
+  link: https://central.nasrda.gov.ng
   location:
     country:
       id: NG
       name: Nigeria
     level: 20
-  name: Not explicitly stated
+  name: National Space Research and Development Agency (NASRDA)
   type: Central government
 properties:
   has_doi: false
@@ -44,19 +45,24 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
-- Geospatial
-- WMS
-- geoserver
+- geospatial
+- GRID3
+- population
+- settlements
+- Nigeria
 topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Society
+  name: Society
   type: iso19115
 uid: temp00005356

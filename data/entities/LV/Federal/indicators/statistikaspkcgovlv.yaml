@@ -4,6 +4,7 @@ api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
+- indicator
 - dataset
 coverage:
 - location:
@@ -21,13 +22,12 @@ endpoints:
 - type: pxwebapi
   url: https://statistika.spkc.gov.lv/api/v1/en
   version: '1'
-- type: pxwebapi
-  url: https://statistika.spkc.gov.lv/api/v1/en/
-  version: '1'
 id: statistikaspkcgovlv
 langs:
 - id: LV
   name: Latvian
+- id: EN
+  name: English
 link: https://statistika.spkc.gov.lv
 name: SPKC health statistics (PxWeb)
 owner:
@@ -54,11 +54,10 @@ software:
 status: active
 tags:
 - health
-- COVID-19
-- SARS-CoV-2
-- testing
-- cases
-- outcomes
+- statistics
+- government
+- indicators
+- Latvia
 topics:
 - id: HEAL
   name: Health

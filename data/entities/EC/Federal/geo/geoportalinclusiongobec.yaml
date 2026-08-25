@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,33 +15,14 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Data catalog providing access to geospatial datasets managed by Ecuadorian
-  public institutions.
-endpoints:
-- type: geonetwork:query
-  url: https://geoportal.inclusion.gob.ec/geonetwork/srv/eng/q
-- type: openapi
-  url: https://geoportal.inclusion.gob.ec/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: https://geoportal.inclusion.gob.ec/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://geoportal.inclusion.gob.ec/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://geoportal.inclusion.gob.ec/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
-- type: geonetwork:site
-  url: https://geoportal.inclusion.gob.ec/geonetwork/srv/api/site
-- type: opensearch
-  url: https://geoportal.inclusion.gob.ec/portal.opensearch
+description: Former GeoNetwork of the Ministry of Economic and Social Inclusion. Connections
+  to geoportal.inclusion.gob.ec are refused.
 id: geoportalinclusiongobec
 langs:
 - id: ES
   name: Spanish
 link: https://geoportal.inclusion.gob.ec/geonetwork
-name: Ecuador Social Inclusion Geoportal
+name: Geoportal MIES
 owner:
   link: https://geoportal.inclusion.gob.ec/geonetwork
   location:
@@ -63,7 +44,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geoportal
 - Ecuador

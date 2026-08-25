@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Vytautas Magnus University research information system for publications,
-  research data, theses, and related CRIS entities.
+description: Vytautas Magnus University research information system for publications, research data, theses,
+  and related CRIS entities.
 endpoints:
 - type: dspace
   url: https://portalcris.vdu.lt/server/api
@@ -25,6 +25,9 @@ endpoints:
   version: '9'
 - type: sitemap
   url: https://portalcris.vdu.lt/sitemap.xml
+- type: oaipmh20
+  url: https://portalcris.vdu.lt/server/oai/request?verb=Identify
+  version: '2.0'
 id: portalcrisvdult
 langs:
 - id: LT

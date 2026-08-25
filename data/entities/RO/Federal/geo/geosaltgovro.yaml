@@ -14,10 +14,10 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: O vizualizare asupra rezultatelor cercetărilor statistice pentru unitățile
-  administrativ-teritoriale. Află cum localitatea ta este dezvoltata din punct de
-  vedere economic, social-cultural și edilitar.
+      name: Eastern Europe
+description: GeoServer backend of SALT (salt.gov.ro), the Romanian government atlas
+  of statistical indicators for administrative-territorial units (UAT), covering economic,
+  social-cultural, and infrastructure development.
 endpoints:
 - type: wms111
   url: https://geo.salt.gov.ro/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -66,15 +66,15 @@ langs:
 - id: RO
   name: Romanian
 link: https://geo.salt.gov.ro/web/
-name: Guvernul României Geoportal
+name: SALT locality statistics geoportal
 owner:
-  link: https://geo.salt.gov.ro/web/
+  link: https://salt.gov.ro
   location:
     country:
       id: RO
       name: Romania
     level: 20
-  name: Guvernul României
+  name: Government of Romania
   type: Central government
 properties:
   has_doi: false
@@ -93,9 +93,8 @@ tags:
 - statistics
 - administrative units
 - local development
-- economic
-- social-cultural
-- edilitar
+- government
+- has_api
 topics:
 - id: SOCI
   name: Population and society
@@ -103,4 +102,4 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-uid: temp00000599
+uid: cdi00035036

@@ -1,8 +1,8 @@
 access_mode:
 - open
 - limited
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - microdata
@@ -15,17 +15,16 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: NADA microdata catalog for Tunisia, hosted by the National Institute
-  of Statistics (INS), offering researchers access to national statistical microdata.
-endpoints:
-- type: nada:catalog-search
-  url: https://nada.ins.tn/index.php/api/catalog/search
+description: Former NADA microdata catalog of the National Institute of Statistics
+  (INS). The nada.ins.tn hostname no longer resolves.
 id: nadainstn
 langs:
 - id: FR
   name: French
+- id: AR
+  name: Arabic
 link: https://nada.ins.tn
-name: NADA - Tunisian National Statistical Institute
+name: NADA - Institut National de la Statistique
 owner:
   link: https://www.ins.tn
   location:
@@ -33,7 +32,7 @@ owner:
       id: TN
       name: Tunisia
     level: 20
-  name: Statistiques Tunisie
+  name: Institut National de la Statistique
   type: Central government
 properties:
   has_doi: false
@@ -48,13 +47,11 @@ rights:
 software:
   id: nada
   name: NADA
-status: active
+status: inactive
 tags:
 - government
-- has_api
 - microdata
 - statistics
-- Tunisia
 topics:
 - id: SOCI
   name: Population and society
@@ -65,7 +62,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: Structure
-  name: Structure
-  type: iso19115
 uid: cdi00001568

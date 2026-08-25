@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,15 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Servicios REST de datos geoespaciales de la Autoridad Nacional del Agua
-  (ANA).
-endpoints:
-- type: arcgis:rest:info
-  url: http://geo.ana.gob.pe/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: http://geo.ana.gob.pe/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: http://geo.ana.gob.pe/arcgis/services?wsdl
+description: Former ArcGIS REST services of the Autoridad Nacional del Agua. The host
+  geo.ana.gob.pe no longer resolves; ANA geoservices now live at geosnirh.ana.gob.pe.
 id: geoanagobpe
 langs:
 - id: ES
@@ -31,7 +24,7 @@ langs:
 link: http://geo.ana.gob.pe/arcgis/rest/services
 name: ANA - ArcGIS REST Services
 owner:
-  link: http://geo.ana.gob.pe
+  link: https://www.gob.pe/ana
   location:
     country:
       id: PE
@@ -51,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ANA
 - ArcGIS
@@ -65,4 +58,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005600
+uid: cdi00035078

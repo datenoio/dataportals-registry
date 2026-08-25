@@ -14,8 +14,9 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: GeoServer web interface for spatial data services
+      name: Eastern Europe
+description: GeoServer instance of the ELTE Faculty of Informatics, publishing teaching
+  and research spatial datasets as OGC WMS and WFS services.
 endpoints:
 - type: wms111
   url: http://gis.inf.elte.hu:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -54,7 +55,7 @@ id: gisinfeltehu
 langs:
 - id: HU
   name: Hungarian
-link: http://gis.inf.elte.hu:8080/geoserver/web/
+link: http://gis.inf.elte.hu:8080/geoserver
 name: ELTE Informatics GeoServer
 owner:
   link: https://gis.inf.elte.hu
@@ -91,9 +92,6 @@ tags:
 topics:
 - id: ENVI
   name: Environment
-  type: eudatatheme
-- id: TECH
-  name: Science and technology
   type: eudatatheme
 - id: TECH
   name: Science and technology

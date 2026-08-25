@@ -12,27 +12,33 @@ coverage:
       name: Albania
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Open Government Data portal of Albania, hosting public datasets from
-  various public institutions.
+description: National government open data portal of Albania, a custom DCAT-AP platform
+  with a REST catalog API and SPARQL endpoint, harvested into data.europa.eu.
 endpoints:
-- type: sitemap
-  url: http://opendata.gov.al/sitemap.xml
+- type: customapi
+  url: https://opendata.gov.al/api/DcatCategory
+- type: customapi
+  url: https://opendata.gov.al/api/Institution
+- type: sparql
+  url: https://opendata.gov.al/api/Sparql
 id: opendatagoval
 langs:
 - id: SQ
   name: Albanian
+- id: EN
+  name: English
 link: https://opendata.gov.al
-name: Open Data Alabania
+name: Open Data Albania
 owner:
-  link: https://www.gov.al
+  link: https://akshi.gov.al
   location:
     country:
       id: AL
       name: Albania
     level: 20
-  name: Albania government
+  name: National Agency for Information Society (AKSHI)
   type: Central government
 properties:
   is_national: true
@@ -50,7 +56,8 @@ status: active
 tags:
 - government
 - open data
-- Albania
+- has_api
+- DCAT-AP
 topics:
 - id: GOVE
   name: Government and public sector

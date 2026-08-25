@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Geographic information system services from GeoVisit Guatemala, managed
-  by INGUAT (Guatemalan Tourism Institute), providing access to tourism-related geospatial
-  data.
+description: ArcGIS Server geospatial services of INGUAT (Guatemalan Tourism Institute)
+  for tourism-related layers including departments, destinations, and related base
+  maps.
 endpoints:
 - type: arcgis:portals:self
   url: https://www.geovisitguatemala.gt/portal/sharing/rest/portals/self?f=pjson
@@ -37,16 +37,16 @@ id: wwwgeovisitguatemalagt
 langs:
 - id: ES
   name: Spanish
-link: https://www.geovisitguatemala.gt/arcgis/rest/services/
+link: https://www.geovisitguatemala.gt/arcgis/rest/services
 name: GeoVisit Guatemala GIS Services
 owner:
-  link: https://www.geovisitguatemala.gt/
+  link: https://visitguatemala.com
   location:
     country:
       id: GT
       name: Guatemala
     level: 20
-  name: INGUAT (Instituto Guatemalteco de Turismo)
+  name: Instituto Guatemalteco de Turismo (INGUAT)
   type: Central government
 properties:
   has_doi: false
@@ -64,18 +64,16 @@ status: active
 tags:
 - tourism
 - gis
-- guatemala
+- Guatemala
 - spatial data
-- tourism board
+- INGUAT
+- has_api
 topics:
 - id: ECON
   name: Economy and finance
   type: eudatatheme
 - id: TRAN
   name: Transport
-  type: eudatatheme
-- id: GOVE
-  name: Government and public sector
   type: eudatatheme
 - id: Location
   name: Location

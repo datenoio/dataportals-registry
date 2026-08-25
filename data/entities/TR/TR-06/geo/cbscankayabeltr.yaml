@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,22 +18,8 @@ coverage:
     subregion:
       id: TR-06
       name: Ankara
-description: Catalog of ArcGIS REST services provided by Cankaya Municipality
-endpoints:
-- type: arcgis:portals:self
-  url: https://cbs.cankaya.bel.tr/portal/sharing/rest/portals/self?f=pjson
-- type: arcgis:rest:info
-  url: https://cbs.cankaya.bel.tr/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://cbs.cankaya.bel.tr/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://cbs.cankaya.bel.tr/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://cbs.cankaya.bel.tr/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://cbs.cankaya.bel.tr/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://cbs.cankaya.bel.tr/arcgis/rest/services?f=kmz
+description: Former ArcGIS REST services directory of Çankaya Municipality. The host
+  cbs.cankaya.bel.tr no longer resolves.
 id: cbscankayabeltr
 langs:
 - id: TR
@@ -41,7 +27,7 @@ langs:
 link: https://cbs.cankaya.bel.tr/arcgis/rest/services
 name: Cankaya Municipality ArcGIS REST Services
 owner:
-  link: https://wwww.cankaya.bel.tr
+  link: https://www.cankaya.bel.tr
   location:
     country:
       id: TR
@@ -50,7 +36,7 @@ owner:
     subregion:
       id: TR-06
       name: Ankara
-  name: Çankaya municipality
+  name: Çankaya Belediyesi
   type: Local government
 properties:
   has_doi: false
@@ -64,7 +50,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS REST
 - GIS

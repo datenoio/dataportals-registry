@@ -10,15 +10,18 @@ coverage:
     country:
       id: MY
       name: Malaysia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
+    subregion:
+      id: MY-14
+      name: Wilayah Persekutuan Kuala Lumpur
 description: Open research data repository hosting datasets from Universiti Malaya
   researchers, including leaf classification and low-light image datasets.
 endpoints:
 - type: dataverseapi
-  url: https://researchdata.um.edu.my/api/search
+  url: https://researchdata.um.edu.my/api/info/version
 - type: oaipmh20
   url: https://researchdata.um.edu.my/oai?verb=Identify
   version: '2.0'
@@ -31,7 +34,7 @@ langs:
 link: https://researchdata.um.edu.my
 name: Universiti Malaya Research Data Repository
 owner:
-  link: http://www.um.edu.my
+  link: https://www.um.edu.my
   location:
     country:
       id: MY
@@ -57,12 +60,10 @@ software:
   name: Dataverse
 status: active
 tags:
-- government
-- Open Data
-- Research Data
-- Machine Learning Datasets
-- Leaf Dataset
-- Image Dataset
+- research data
+- open data
+- dataverse
+- university
 topics:
 - id: TECH
   name: Science and technology

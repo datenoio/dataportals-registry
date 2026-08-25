@@ -17,25 +17,25 @@ coverage:
     subregion:
       id: UY-MO
       name: Montevideo
-description: Open data catalog for Montevideo, Uruguay, based on CKAN platform.
+description: Open data catalog of the Intendencia de Montevideo, published with CKAN.
 endpoints:
 - type: ckan
-  url: http://ckan.montevideo.gub.uy/api/3
+  url: https://ckan.montevideo.gub.uy/api/3
   version: '3'
 - type: ckan:package-search
-  url: http://ckan.montevideo.gub.uy/api/3/action/package_search
+  url: https://ckan.montevideo.gub.uy/api/3/action/package_search
   version: '3'
 - type: ckan:package-list
-  url: http://ckan.montevideo.gub.uy/api/3/action/package_list
+  url: https://ckan.montevideo.gub.uy/api/3/action/package_list
   version: '3'
 id: ckanmontevideogubuy
 langs:
 - id: ES
   name: Spanish
-link: http://ckan.montevideo.gub.uy
+link: https://ckan.montevideo.gub.uy
 name: Portal de Datos Abiertos Montevideo
 owner:
-  link: https://www.montevideo.gub.uy
+  link: https://montevideo.gub.uy
   location:
     country:
       id: UY
@@ -44,7 +44,7 @@ owner:
     subregion:
       id: UY-MO
       name: Montevideo
-  name: City of Montevideo
+  name: Intendencia de Montevideo
   type: Regional government
 rights:
   license_id: null
@@ -74,9 +74,6 @@ topics:
   type: eudatatheme
 - id: TRAN
   name: Transport
-  type: eudatatheme
-- id: GOVE
-  name: Government and public sector
   type: eudatatheme
 - id: Boundaries
   name: Boundaries

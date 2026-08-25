@@ -17,7 +17,8 @@ coverage:
     subregion:
       id: VN-HP
       name: Hải Phòng
-description: Official open data portal of Hai Phong City, Vietnam.
+description: Official CKAN open data portal of Hải Phòng City, publishing municipal datasets from city
+  departments.
 endpoints:
 - type: ckan
   url: https://data.haiphong.gov.vn/api/3
@@ -44,7 +45,7 @@ owner:
     subregion:
       id: VN-HP
       name: Hải Phòng
-  name: People's Committee of Hai Phong City
+  name: Hai Phong City People's Committee
   type: Local government
 properties:
   transferable_location: true
@@ -61,8 +62,15 @@ software:
 status: active
 tags:
 - government
+- has_api
 - open data
+- CKAN
+- Hai Phong
+- Vietnam
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: REGI
   name: Regions and cities
   type: eudatatheme

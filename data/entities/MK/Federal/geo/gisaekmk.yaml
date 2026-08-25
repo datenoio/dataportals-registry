@@ -13,10 +13,11 @@ coverage:
       name: Republic of North Macedonia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: GIS services hosted under aek.mk, providing ArcGIS REST services for
-  various data layers.
+description: ArcGIS REST services directory hosted at gis.aek.mk for the Agency for
+  Electronic Communications of North Macedonia. TLS to the GIS host failed during
+  review (expired certificate / timeout); the agency website remains at aek.mk.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.aek.mk/arcgis/rest/info?f=pjson
@@ -33,17 +34,17 @@ endpoints:
 id: gisaekmk
 langs:
 - id: MK
-  name: Makedonian
+  name: Macedonian
 link: https://gis.aek.mk/arcgis/rest/services
-name: aek.mk ArcGIS REST Services
+name: Agency for Electronic Communications GIS
 owner:
-  link: https://gis.aek.mk/arcgis/rest/services
+  link: https://aek.mk
   location:
     country:
       id: MK
       name: Republic of North Macedonia
     level: 20
-  name: Not provided
+  name: Agency for Electronic Communications
   type: Central government
 properties:
   has_doi: false
@@ -61,18 +62,21 @@ status: active
 tags:
 - GIS
 - ArcGIS
-- REST Services
+- telecommunications
+- government
+- has_api
+- North Macedonia
 topics:
-- id: ENVI
-  name: Environment
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Utilities / Communication
+  name: Utilities / Communication
   type: iso19115
-- id: Elevation
-  name: Elevation
-  type: iso19115
-- id: Geoscientific Information
-  name: Geoscientific Information
+- id: Location
+  name: Location
   type: iso19115
 uid: temp00001603

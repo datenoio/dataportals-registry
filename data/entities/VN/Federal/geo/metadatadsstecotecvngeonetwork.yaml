@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: GeoNetwork metadata catalog for Tecotec DSS (Decision Support System).
+description: GeoNetwork metadata catalog operated by Tecotec for its decision support system (DSS), with
+  CSW, OAI-PMH, and OpenSearch endpoints.
 endpoints:
 - type: geonetwork:query
   url: https://metadata-dss.tecotec.vn/geonetwork/srv/eng/q
@@ -44,14 +45,14 @@ langs:
 link: https://metadata-dss.tecotec.vn/geonetwork
 name: Tecotec DSS GeoNetwork
 owner:
+  link: https://tecotec.vn
   location:
     country:
       id: VN
       name: Vietnam
     level: 20
   name: Tecotec
-  type: Other
-  link: https://tecotec.vn
+  type: Business
 software:
   id: geonetwork
   name: GeoNetwork
@@ -59,6 +60,7 @@ status: active
 tags:
 - geospatial
 - metadata
+- has_api
 topics:
 - id: Location
   name: Location

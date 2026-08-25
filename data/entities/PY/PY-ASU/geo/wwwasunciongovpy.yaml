@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: PY-ASU
       name: Asunción
-description: ArcGIS REST services provided by the city of Asunción
+description: ArcGIS Server REST services of the Municipality of Asunción, publishing
+  municipal map layers, locators, and web maps for the capital city's cartography.
 endpoints:
 - type: arcgis:rest:info
   url: https://www.asuncion.gov.py/arcgis/rest/info?f=pjson
@@ -66,7 +67,15 @@ tags:
 - REST services
 - Asunción
 - geospatial
+- government
+- has_api
 topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
@@ -75,5 +84,8 @@ topics:
   type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Structure
+  name: Structure
   type: iso19115
 uid: temp00001950

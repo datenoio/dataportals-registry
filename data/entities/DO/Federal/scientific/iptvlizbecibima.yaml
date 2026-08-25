@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DO
+      name: Republica Dominicana
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: GBIF Integrated Publishing Toolkit hosted at VLIZ for the Centro de Investigaciones
+  de Biología Marina "Idelisa Bonnelly de Calventi" (CIBIMA IBC) of the Universidad
+  Autónoma de Santo Domingo. Publishes occurrence datasets such as the CIBIMA marine
+  macroalgae and seagrass collection.
+endpoints:
+- type: dcat:ttl
+  url: https://ipt.vliz.be/cibima/dcat
+- type: ipt:dataset
+  url: https://ipt.vliz.be/cibima/inventory/dataset
+- type: rss
+  url: https://ipt.vliz.be/cibima/rss.do
+  version: '2.0'
+id: iptvlizbecibima
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/publisher/fc2a6ee3-5b7e-48c8-9ef2-0207d3fbb94e
+  value: fc2a6ee3-5b7e-48c8-9ef2-0207d3fbb94e
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: https://ipt.vliz.be/cibima
+name: CIBIMA IBC IPT (UASD)
+owner:
+  link: https://uasd.edu.do
+  location:
+    country:
+      id: DO
+      name: Republica Dominicana
+    level: 20
+  name: Centro de Investigaciones de Biología Marina "Idelisa Bonnelly de Calventi"
+    (CIBIMA IBC), Universidad Autónoma de Santo Domingo (UASD)
+  type: Academy
+software:
+  id: ipt
+  name: GBIF Integrated Publishing Toolkit (IPT)
+status: active
+tags:
+- GBIF
+- IPT
+- biodiversity
+- data publishing
+- marine
+topics:
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00010475

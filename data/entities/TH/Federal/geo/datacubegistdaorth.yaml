@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
       name: South-eastern Asia
 description: GISTDA Open Data Cube catalog for Thailand, providing spatiotemporal
   search of analysis-ready satellite collections on the Sphere / Thai Open Platform.
+endpoints:
+- type: opendatacube:catalog
+  url: https://datacube.gistda.or.th
 id: datacubegistdaorth
 langs:
 - id: EN

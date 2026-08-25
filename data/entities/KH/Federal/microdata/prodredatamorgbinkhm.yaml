@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - microdata
@@ -15,8 +15,11 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: REDATAM online processing portal for Cambodia's population and housing
-  censuses. Users build custom tables from census microdata hosted by CELADE/ECLAC.
+description: Former CELADE/ECLAC REDATAM online processing portal for Cambodia population
+  and housing census microdata (1998 and 2008), published with the National Institute
+  of Statistics. https://prod.redatam.org/binkhm/RpWebEngine.exe/Portal returned HTTP
+  404 in August 2026. CELADE still lists the Cambodia censuses on its online-processing
+  index.
 id: prodredatamorgbinkhm
 langs:
 - id: EN
@@ -26,7 +29,7 @@ langs:
 link: https://prod.redatam.org/binkhm/RpWebEngine.exe/Portal?BASE=KHM2008
 name: Cambodia NIS REDATAM Census
 owner:
-  link: https://www.nis.gov.kh
+  link: https://nis.gov.kh
   location:
     country:
       id: KH
@@ -36,7 +39,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
-  is_national: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -47,7 +50,7 @@ rights:
 software:
   id: redatam
   name: REDATAM
-status: active
+status: inactive
 tags:
 - statistics
 - government
@@ -66,6 +69,3 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00023342
-endpoints:
-- type: redatam
-  url: https://prod.redatam.org/binkhm/RpWebEngine.exe/Portal?BASE=KHM2008

@@ -11,11 +11,15 @@ coverage:
     country:
       id: CO
       name: Colombia
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: REST endpoints for GIS services provided by UMV Colombia.
+    subregion:
+      id: CO-DC
+      name: Distrito Capital de Bogotá
+description: ArcGIS REST GIS services of Bogotá's Unidad de Mantenimiento Vial (UMV),
+  covering road-maintenance and related municipal infrastructure layers.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.umv.gov.co/server/rest/info?f=pjson
@@ -45,8 +49,8 @@ owner:
     subregion:
       id: CO-DC
       name: Distrito Capital de Bogotá
-  name: UMV Colombia
-  type: Regional government
+  name: Unidad de Mantenimiento Vial (UMV)
+  type: Local government
 properties:
   has_doi: false
 rights:

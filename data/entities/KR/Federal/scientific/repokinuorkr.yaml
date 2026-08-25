@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: KR
+      name: South Korea
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+- location:
+    country:
+      id: KP
+      name: North Korea
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: DSpace institutional repository of the Korea Institute for National Unification,
+  publishing research reports and related materials on North Korea and unification.
+endpoints:
+- type: dspace:catalog
+  url: https://repo.kinu.or.kr/
+- type: rss
+  url: https://repo.kinu.or.kr/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repo.kinu.or.kr/feed/atom_1.0/site
+  version: '1.0'
+id: repokinuorkr
+langs:
+- id: KO
+  name: Korean
+link: https://repo.kinu.or.kr/
+name: KINU Repository
+owner:
+  link: https://www.kinu.or.kr
+  location:
+    country:
+      id: KR
+      name: South Korea
+    level: 20
+  name: Korea Institute for National Unification
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+- North Korea
+- unification
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+uid: temp00000005

@@ -15,7 +15,9 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Geospatial data catalog and web mapping services for Mongolia
+description: GeoServer of the General Agency for Land Administration, Geodesy and
+  Cartography, providing OGC WMS, WFS, WCS, and WMTS access to Mongolia's national
+  spatial data infrastructure layers.
 endpoints:
 - type: wms111
   url: https://geo.nsdi.gov.mn/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -76,15 +78,15 @@ langs:
 - id: MN
   name: Mongolian
 link: https://geo.nsdi.gov.mn/geoserver/web/
-name: Administration of Land Affairs, Geodesy and Cartography Geoportal
+name: NSDI GeoServer
 owner:
-  link: http://geo.nsdi.gov.mn
+  link: https://gazar.gov.mn
   location:
     country:
       id: MN
       name: Mongolia
     level: 20
-  name: Administration of Land Affairs, Geodesy and Cartography
+  name: General Agency for Land Administration, Geodesy and Cartography
   type: Central government
 properties:
   has_doi: false

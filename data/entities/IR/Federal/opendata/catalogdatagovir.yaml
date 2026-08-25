@@ -14,31 +14,39 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
+description: National open data catalog of the Government of the Islamic Republic
+  of Iran, aggregating open datasets published by public bodies for reuse.
 endpoints:
 - type: ckan
-  url: https://catalog.data.gov.ir/api/3
+  url: https://data.gov.ir/api/3
   version: '3'
 - type: ckan:package-search
-  url: https://catalog.data.gov.ir/api/3/action/package_search
+  url: https://data.gov.ir/api/3/action/package_search
   version: '3'
 - type: ckan:package-list
-  url: https://catalog.data.gov.ir/api/3/action/package_list
+  url: https://data.gov.ir/api/3/action/package_list
+  version: '3'
+- type: ckan:status-show
+  url: https://data.gov.ir/api/3/action/status_show
   version: '3'
 id: catalogdatagovir
 langs:
 - id: FA
   name: Persian
-link: https://catalog.data.gov.ir
-name: National data and geodata catalog
+link: https://data.gov.ir
+name: National Open Data Portal of Iran
 owner:
-  link: https://www.gov.ir
+  link: https://ito.gov.ir
   location:
     country:
       id: IR
       name: Iran
     level: 20
-  name: Government of Iran
+  name: Information Technology Organization of Iran
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -51,8 +59,10 @@ software:
   name: CKAN
 status: active
 tags:
-- opendata
 - government
+- open data
+- has_api
+- Iran
 topics:
 - id: GOVE
   name: Government and public sector
@@ -60,6 +70,7 @@ topics:
 - id: ECON
   name: Economy and finance
   type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 uid: cdi00000933
-description: Open data portal. managed by Government of Iran. powered by CKAN. accessible
-  at catalog.data.gov.ir.

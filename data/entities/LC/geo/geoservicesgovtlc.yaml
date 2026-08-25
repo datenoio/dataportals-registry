@@ -13,9 +13,13 @@ coverage:
       name: Saint Lucia
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: A geospatial data service catalog providing access to geographic datasets.
+description: National GeoServer of Saint Lucia's Open Source GIS Stack (OSGS), operated
+  by the Department of Physical Development and Urban Renewal. Publishes OGC WMS,
+  WFS, WMTS, and CSW services for administrative boundaries, 2009 and 2022 aerial
+  imagery and DEM, schools, fire services, forest reserves, fisheries, and water
+  management.
 endpoints:
 - type: wms111
   url: https://geoservices.govt.lc/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -60,7 +64,7 @@ endpoints:
   url: https://geoservices.govt.lc/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 - type: csw202
-  url: https://geoservices.govt.lc/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
+  url: https://geoservices.govt.lc/geoserver/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
 - type: wms111
   url: https://geoservices.govt.lc/geoserver/wms?service=WMS&version=1.1.1&request=GetCapabilities
@@ -74,28 +78,31 @@ endpoints:
 - type: wcs111
   url: https://geoservices.govt.lc/geoserver/wcs?service=WCS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
-- type: csw202
-  url: https://geoservices.govt.lc/geoserver/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
 - type: sitemap
   url: https://geoservices.govt.lc/sitemap.xml
+- type: rss
+  url: https://geoservices.govt.lc/index.xml
 id: geoservicesgovtlc
 langs:
 - id: EN
   name: English
+- id: PT
+  name: Portuguese
 link: https://geoservices.govt.lc/geoserver
-name: Saint Lucia Government Geoportal
+name: Saint Lucia Government GeoServer
 owner:
-  link: https://www.gov.lc
+  link: https://geoservices.govt.lc/about/
   location:
     country:
       id: LC
       name: Saint Lucia
     level: 20
-  name: Saint Lucia Government
+  name: Department of Physical Development and Urban Renewal
   type: Central government
 properties:
+  dataset_count_reported: 18
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -108,18 +115,55 @@ software:
   name: GeoServer
 status: active
 tags:
-- scientific
 - geospatial
 - GIS
-- open data
+- government
+- has_api
+- OSGS
+- imagery
+- fisheries
+- Saint Lucia
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Structure
+  name: Structure
   type: iso19115
 uid: cdi00005124

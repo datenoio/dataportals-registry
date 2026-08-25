@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: Data catalog providing access to geospatial datasets via GeoServer at
-  the Surveying and Mapping Authority of the Republic of Slovenia.
+description: GeoServer catalogue of the Slovenia Forest Service (ZGS) providing OGC
+  WMS, WFS, and WMTS access to forest management, hunting, and related spatial layers.
 endpoints:
 - type: wms111
   url: https://prostor.zgs.gov.si/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -59,15 +59,15 @@ langs:
 - id: SL
   name: Slovenian
 link: https://prostor.zgs.gov.si/geoserver/web/
-name: GeoServer Data Catalog
+name: Slovenia Forest Service GeoServer
 owner:
-  link: https://prostor.zgs.gov.si
+  link: https://www.zgs.si
   location:
     country:
       id: SI
       name: Slovenia
     level: 20
-  name: Surveying and Mapping Authority of the Republic of Slovenia
+  name: Slovenia Forest Service
   type: Central government
 properties:
   has_doi: false
@@ -85,10 +85,20 @@ status: active
 tags:
 - geospatial
 - GIS
-- map
-- open data
+- forest
+- ZGS
+- OGC
 topics:
-- id: Planning / Cadastre
-  name: Planning / Cadastre
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
   type: iso19115
 uid: cdi00020266

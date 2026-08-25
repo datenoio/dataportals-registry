@@ -14,28 +14,20 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Municipal open data portal for Tunisia, aggregating datasets from municipalities across the country. Operated by Anshar Association (civil society).
+description: Municipal open data portal aggregating datasets from Tunisian municipalities.
+  Operated by Association Onshor. The site now runs on WordPress; the former CKAN
+  API is gone.
 endpoints:
-- type: ckan:package-search
-  url: http://openbaladiati.tn/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://openbaladiati.tn/api/3/action/package_list
-  version: '3'
-- type: ckan
-  url: http://openbaladiati.tn/api/3
-  version: '3'
-- type: dcat:n3
-  url: http://openbaladiati.tn/catalog.n3
-- type: dcat:jsonld
-  url: http://openbaladiati.tn/catalog.jsonld
+- type: rest
+  url: https://openbaladiati.tn/wp-json/
+  version: '2.0'
 id: openbaladiatitn
 langs:
 - id: AR
   name: Arabic
 - id: FR
   name: French
-link: http://openbaladiati.tn
+link: https://openbaladiati.tn
 name: Portail des données ouvertes des Municipalités
 owner:
   link: http://www.onshor.org
@@ -44,7 +36,7 @@ owner:
       id: TN
       name: Tunisia
     level: 20
-  name: Anshar Association
+  name: Association Onshor
   type: Civil society
 properties:
   transferable_location: true
@@ -56,12 +48,14 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: ckan
-  name: CKAN
+  id: wordpress
+  name: WordPress
 status: active
 tags:
-- government
+- municipalities
+- open data
 - has_api
+- civil society
 topics:
 - id: REGI
   name: Regions and cities

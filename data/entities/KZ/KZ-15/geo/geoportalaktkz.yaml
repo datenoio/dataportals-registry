@@ -17,8 +17,8 @@ coverage:
     subregion:
       id: KZ-15
       name: Aktjubinskaja oblast'
-description: GeoServer-based geospatial data catalog maintained by an administrative
-  authority (assumed Kazakhstan, likely for government use)
+description: GeoServer of the Aktobe Region urban-planning centre, publishing
+  regional geospatial layers via OGC services.
 endpoints:
 - type: wms111
   url: https://geoportal.akt.kz/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -63,8 +63,10 @@ id: geoportalaktkz
 langs:
 - id: RU
   name: Russian
+- id: KZ
+  name: Kazakh
 link: https://geoportal.akt.kz/geoserver
-name: Kazakhstan Geoportal GeoServer
+name: Aktobe region GeoServer
 owner:
   link: https://eaqtobe.kz
   location:
@@ -75,7 +77,7 @@ owner:
     subregion:
       id: KZ-15
       name: Aktjubinskaja oblast'
-  name: Коммунальное государственное учреждение "Центр урбанистики"
+  name: Communal State Institution Urban Planning Centre
   type: Local government
 properties:
   has_doi: false

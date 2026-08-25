@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Public OMERO.gallery at the CellNanOs imaging center of Osnabrück University.
+  Publication-linked microscopy projects and datasets are browsable without login,
+  with a JSON API for projects.
+endpoints:
+- type: omero:projects
+  url: https://omero.cellnanos.uni-osnabrueck.de/api/v0/m/projects/
+id: omerocellnanosuniosnabrueckde
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://omero.cellnanos.uni-osnabrueck.de/
+name: CellNanOs OMERO Gallery
+owner:
+  link: https://www.uni-osnabrueck.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+  name: Osnabrück University
+  type: Academy
+properties:
+  dataset_count_reported: 54
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: omero
+  name: OMERO
+status: active
+tags:
+- scientific
+- research data
+- academic
+- microscopy
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990023

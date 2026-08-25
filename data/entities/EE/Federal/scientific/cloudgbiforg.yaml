@@ -14,25 +14,32 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Integrated Publishing Toolkit for GBIF Estonia
+description: GBIF Integrated Publishing Toolkit for Estonia, hosting Darwin Core
+  archives published by Estonian biodiversity data holders.
 endpoints:
+- type: dcat:ttl
+  url: https://cloud.gbif.org/ee/dcat
+- type: ipt:dataset
+  url: https://cloud.gbif.org/ee/inventory/dataset
 - type: rss
   url: https://cloud.gbif.org/ee/rss.do
   version: '2.0'
 id: cloudgbiforg
 langs:
+- id: EN
+  name: English
 - id: ET
   name: Estonian
-link: https://cloud.gbif.org
-name: GBIF Estonia
+link: https://cloud.gbif.org/ee
+name: GBIF Estonia IPT
 owner:
-  link: https://plutof.ut.ee
+  link: https://www.ut.ee
   location:
     country:
       id: EE
       name: Estonia
     level: 20
-  name: PlutoF
+  name: University of Tartu
   type: Academy
 software:
   id: ipt

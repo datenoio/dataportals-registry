@@ -15,13 +15,20 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Rwanda statistical database. This indicators catalog. managed by National
-  institute of statistics of Rwanda. provides access to datasets and resources.
+description: Official PxWeb statistical database of the National Institute of Statistics
+  of Rwanda (NISR). Interactive tables and a PxWeb API at /api/v1/en/ cover national
+  indicators including population and the economy.
+endpoints:
+- type: pxweb:catalog
+  url: https://pxweb.statistics.gov.rw/pxweb/en/
+- type: pxwebapi
+  url: https://pxweb.statistics.gov.rw/api/v1/en/
+  version: '1'
 id: pxwebstatisticsgovrw
 langs:
 - id: EN
   name: English
-link: https://pxweb.statistics.gov.rw
+link: https://pxweb.statistics.gov.rw/pxweb/en/
 name: NISR Statistical Database (PxWeb)
 owner:
   link: https://www.statistics.gov.rw
@@ -34,6 +41,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
   transferable_topics: true
 rights:
   license_id: null
@@ -49,6 +57,10 @@ status: active
 tags:
 - government
 - has_api
+- statistics
+- official statistics
+- PxWeb
+- Rwanda
 topics:
 - id: SOCI
   name: Population and society
@@ -63,6 +75,3 @@ topics:
   name: Economy
   type: iso19115
 uid: cdi00010186
-endpoints:
-- type: sitemap
-  url: https://pxweb.statistics.gov.rw/sitemap.xml

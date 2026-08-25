@@ -14,7 +14,9 @@ coverage:
     macroregion:
       id: '061'
       name: Polynesia
-description: This IPT is hosted by GBIF to publish datasets from Tonga.
+description: GBIF Integrated Publishing Toolkit hosted by GBIF for Tonga. The Department
+  of Environment (MEIDECC) publishes biodiversity datasets, including marine occurrence
+  records.
 endpoints:
 - type: dcat:ttl
   url: https://cloud.gbif.org/to/dcat
@@ -37,7 +39,7 @@ owner:
       name: Tonga
     level: 20
   name: Department of Environment, Government of Tonga
-  type: Academy
+  type: Central government
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -47,9 +49,13 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- marine
 topics:
 - id: Biota
   name: Biota
+  type: iso19115
+- id: Oceans
+  name: Oceans
   type: iso19115
 - id: ENVI
   name: Environment

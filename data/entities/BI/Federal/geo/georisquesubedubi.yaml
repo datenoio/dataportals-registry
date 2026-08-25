@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: National multi-risk mapping platform for Burundi providing geospatial
-  data and maps on natural hazards and disaster risks.
+description: National multi-risk mapping GeoNode of the University of Burundi, with
+  95 geospatial datasets and 92 documents on floods, landslides, and other natural
+  hazards. Hosted at georisques.ub.edu.bi (GeoNode 5).
 endpoints:
 - type: geonode:datasets
   url: https://georisques.ub.edu.bi/api/datasets/
@@ -86,7 +87,7 @@ langs:
 link: https://georisques.ub.edu.bi
 name: Burundi Plateforme Cartographie Multirisques
 owner:
-  link: https://ub.edu.bi
+  link: https://www.ub.edu.bi
   location:
     country:
       id: BI
@@ -95,6 +96,7 @@ owner:
   name: Université du Burundi
   type: Academy
 properties:
+  dataset_count_reported: 95
   has_doi: false
 rights:
   license_id: null
@@ -114,6 +116,7 @@ tags:
 - natural hazards
 - Burundi
 - geonode
+- has_api
 topics:
 - id: ENVI
   name: Environment

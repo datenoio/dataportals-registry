@@ -16,7 +16,7 @@ coverage:
       id: '035'
       name: South-eastern Asia
 description: GeoServer instance providing geospatial datasets for Myanmar, integrated
-  with Open Development Myanmar's data catalog.
+  with Open Development Myanmar's CKAN data catalog.
 endpoints:
 - type: wms111
   url: https://data.opendevelopmentmyanmar.net/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -59,7 +59,7 @@ langs:
 - id: EN
   name: English
 link: https://data.opendevelopmentmyanmar.net/geoserver
-name: 'GeoServer: open development Myanmar'
+name: Open Development Myanmar GeoServer
 owner:
   link: https://opendevelopmentmyanmar.net/
   location:
@@ -67,7 +67,7 @@ owner:
       id: MM
       name: Myanmar
     level: 20
-  name: Open Development Myanmar
+  name: Open Development Myanmar (ODMm)
   type: Civil society
 properties:
   has_doi: false
@@ -83,17 +83,19 @@ software:
   name: GeoServer
 status: active
 tags:
-- Myanmar
-- spatial data
 - geospatial
-- catalog
-- geoserver
+- GeoServer
 - open data
+- Myanmar
+- has_api
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 - id: Geoscientific Information
   name: Geoscientific Information
   type: iso19115
 - id: Planning / Cadastre
   name: Planning / Cadastre
   type: iso19115
-uid: temp00003946
+uid: cdi00035245

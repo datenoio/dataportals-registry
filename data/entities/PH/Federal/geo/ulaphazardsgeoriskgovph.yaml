@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Public catalog providing ArcGIS REST services related to geospatial hazards
-  in the Philippines.
+description: National GeoRiskPH ArcGIS REST catalog of hazard layers packaged for
+  local government use (ULAP). Operated by PHIVOLCS as part of the GeoRisk Philippines
+  initiative.
 endpoints:
 - type: arcgis:rest:info
   url: https://ulap-hazards.georisk.gov.ph/arcgis/rest/info?f=pjson
@@ -32,22 +33,19 @@ endpoints:
   url: https://ulap-hazards.georisk.gov.ph/arcgis/rest/services?f=kmz
 id: ulaphazardsgeoriskgovph
 langs:
-- id: TL
-  name: Tagalog
+- id: EN
+  name: English
 link: https://ulap-hazards.georisk.gov.ph/arcgis/rest/services
-name: GEO-RISK HAZARDS, Philippines (ULAP) - ArcGIS REST Service Catalog
+name: GeoRiskPH ULAP Hazards REST Services
 owner:
-  link: https://ulap-hazards.georisk.gov.ph/
+  link: https://georisk.gov.ph
   location:
     country:
       id: PH
       name: Philippines
-    level: 30
-    subregion:
-      id: PH-BUK
-      name: Bukidnon
-  name: ULAP or associated government body
-  type: Regional government
+    level: 20
+  name: Philippine Institute of Volcanology and Seismology (PHIVOLCS)
+  type: Central government
 properties:
   has_doi: false
 rights:

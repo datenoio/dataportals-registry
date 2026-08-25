@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,19 +17,8 @@ coverage:
     subregion:
       id: CZ-52
       name: Královéhradecký kraj
-description: Data portal KHK is an information point for the public of publicly available
-  and open data for the Hradec Králové Region.
-endpoints:
-- type: dcatap201
-  url: https://datakhk.eu/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://datakhk.eu/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://datakhk.eu/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://datakhk.eu/api/search/v1
-- type: sitemap
-  url: https://datakhk.eu/sitemap.xml
+description: Former datakhk.eu hostname of the Hradec Králové Region data portal.
+  The live catalog is recorded as wwwdatakhkcz.
 id: datakhkeu
 langs:
 - id: CS
@@ -37,7 +26,7 @@ langs:
 link: https://datakhk.eu
 name: Data portal Hradec Králové Region
 owner:
-  link: https://www.hradeckralove.org
+  link: https://www.kr-kralovehradecky.cz/
   location:
     country:
       id: CZ
@@ -58,7 +47,7 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
 - Open Data
 - Region

@@ -5,7 +5,6 @@ api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
 - indicator
-- dataset
 coverage:
 - location:
     country:
@@ -15,19 +14,18 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Interactive statistical indicators dashboard of the Monegasque Institute
-  of Statistics and Economic Studies (IMSEE), covering key official statistics of
-  Monaco.
+description: Public visualization dashboard of the Monegasque Institute of Statistics
+  and Economic Studies (IMSEE), developed by Thoody Consulting. Interactive charts
+  covering the Principality's economy, Monegasque population, resident population,
+  and building surfaces.
 id: imseedashboardthoodycom
 langs:
 - id: FR
   name: French
-- id: EN
-  name: English
 link: https://imsee-dashboard.thoody.com/
 name: IMSEE Dashboard
 owner:
-  link: https://www.imsee.mc
+  link: https://imsee.mc
   location:
     country:
       id: MC
@@ -53,6 +51,7 @@ tags:
 - statistics
 - government
 - official statistics
+- dashboard
 - Monaco
 topics:
 - id: SOCI
@@ -61,17 +60,8 @@ topics:
 - id: ECON
   name: Economy and finance
   type: eudatatheme
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: HEAL
-  name: Health
-  type: eudatatheme
-- id: EDUC
-  name: Education, culture and sport
+- id: REGI
+  name: Regions and cities
   type: eudatatheme
 - id: Society
   name: Society
@@ -79,10 +69,7 @@ topics:
 - id: Economy
   name: Economy
   type: iso19115
-- id: Environment
-  name: Environment
-  type: iso19115
-- id: Health
-  name: Health
+- id: Structure
+  name: Structure
   type: iso19115
 uid: cdi00021960

@@ -14,8 +14,10 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: This IPT aims to improve the summarization, publication, and bioformatics of
-  information on biodiversity in Uzbekistan.
+description: GBIF Integrated Publishing Toolkit (IPT) hosted for Uzbekistan. Publishes
+  biodiversity datasets from Uzbek institutions, including the Institute of Botany,
+  for indexing in GBIF. The installation currently lists dozens of occurrence and
+  checklist resources.
 endpoints:
 - type: dcat:ttl
   url: https://cloud.gbif.org/uz/dcat
@@ -26,12 +28,16 @@ endpoints:
   version: '2.0'
 id: cloudgbiforguz
 langs:
+- id: EN
+  name: English
+- id: RU
+  name: Russian
 - id: UZ
   name: Uzbek
 link: https://cloud.gbif.org/uz
 name: Uzbekistan IPT
 owner:
-  link: http://floruz.uz/en/
+  link: https://botany.uz
   location:
     country:
       id: UZ
@@ -48,6 +54,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota

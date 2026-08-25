@@ -14,36 +14,38 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: No description available from the provided source.
+description: CKAN open data portal of the Faculty of Engineering at Universidad de
+  San Carlos de Guatemala. Publishes academic and administrative datasets such as
+  enrolled students, graduates, and related faculty statistics (3 datasets when last
+  counted).
 endpoints:
+- type: ckan
+  url: https://datosabiertos.ingenieria.usac.edu.gt/api/3
+  version: '3'
 - type: ckan:package-search
   url: https://datosabiertos.ingenieria.usac.edu.gt/api/3/action/package_search
   version: '3'
 - type: ckan:package-list
   url: https://datosabiertos.ingenieria.usac.edu.gt/api/3/action/package_list
   version: '3'
-- type: ckan
-  url: https://datosabiertos.ingenieria.usac.edu.gt/api/3
-  version: '3'
 id: datosabiertosingenieriausacedugt
 langs:
 - id: ES
   name: Spanish
 link: https://datosabiertos.ingenieria.usac.edu.gt
-name: The Open Data Portal of the Faculty of Engineering of the University of San
-  Carlos de Guatemala
+name: Datos abiertos - Facultad de Ingeniería USAC
 owner:
-  link: https://www.usac.edu.gt
+  link: https://portal.usac.edu.gt
   location:
     country:
       id: GT
       name: Guatemala
-    level: 30
-    subregion:
-      id: GT-01
-      name: Guatemala
-  name: University of San Carlos de Guatemala
+    level: 20
+  name: Facultad de Ingeniería, Universidad de San Carlos de Guatemala
   type: Academy
+properties:
+  has_doi: false
+  dataset_count_reported: 3
 rights:
   license_id: null
   license_name: null
@@ -56,9 +58,20 @@ software:
   name: CKAN
 status: active
 tags:
-- government
+- university
+- engineering
+- education
+- Guatemala
+- has_api
+- open data
 topics:
-- id: GOVE
-  name: Government and public sector
+- id: EDUC
+  name: Education, culture and sport
   type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00000867

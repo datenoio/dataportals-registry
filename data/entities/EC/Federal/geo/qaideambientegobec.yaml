@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,25 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Quality assurance instance of the Environmental Data Infrastructure (IDE)
-  providing access to environmental, water resources, biodiversity, climate, and ecosystem
-  monitoring datasets from the Ministry of Environment, Water and Ecological Transition
-  of Ecuador through GeoNetwork metadata services.
-endpoints:
-- type: geonetwork:query
-  url: http://qa-ide.ambiente.gob.ec:8080/geonetwork/srv/eng/q
-- type: openapi
-  url: http://qa-ide.ambiente.gob.ec:8080/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: http://qa-ide.ambiente.gob.ec:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: http://qa-ide.ambiente.gob.ec:8080/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: http://qa-ide.ambiente.gob.ec:8080/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+description: Former quality-assurance GeoNetwork instance of IDE Ambiente. The host qa-ide.ambiente.gob.ec
+  no longer resolves; production metadata is at ide.ambiente.gob.ec:8080.
 id: qaideambientegobec
 langs:
 - id: ES
@@ -61,7 +44,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - environment
 - ecosystem
@@ -89,4 +72,4 @@ topics:
 - id: Biota
   name: Biota
   type: iso19115
-uid: temp00003537
+uid: cdi00035543

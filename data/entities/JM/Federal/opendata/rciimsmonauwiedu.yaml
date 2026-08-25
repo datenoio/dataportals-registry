@@ -12,10 +12,11 @@ coverage:
       name: Jamaica
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: An online Caribbean coastal and marine metadata platform; includes 103
-  datasets and IMSs
+description: CKAN catalog of the Regional Coastal Integrated Information Management
+  System at the University of the West Indies, Mona. Publishes Caribbean coastal and
+  marine metadata and related datasets. The host timed out on 25 August 2026.
 endpoints:
 - type: ckan
   url: https://rciims.mona.uwi.edu/api/3
@@ -31,9 +32,9 @@ langs:
 - id: EN
   name: English
 link: https://rciims.mona.uwi.edu
-name: The Regional Coastal Integrated Information Management System (RCIIMS)
+name: Regional Coastal Integrated Information Management System (RCIIMS)
 owner:
-  link: https://www.uwi.edu
+  link: https://www.mona.uwi.edu
   location:
     country:
       id: JM
@@ -42,7 +43,9 @@ owner:
   name: The University of the West Indies
   type: Academy
 properties:
+  has_doi: false
   transferable_topics: true
+  dataset_count_reported: 103
 rights:
   license_id: null
   license_name: null
@@ -55,27 +58,22 @@ software:
   name: CKAN
 status: active
 tags:
-- government
-- has_api
-- maritime
 - coastal
+- marine
 - biodiversity
-- infrastructure
-- tourism
-- visitors
 - climate
-- policy
+- has_api
 topics:
-- id: TECH
-  name: Science and technology
+- id: ENVI
+  name: Environment
   type: eudatatheme
 - id: Oceans
   name: Oceans
   type: iso19115
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: Biota
   name: Biota
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
   type: iso19115
 uid: cdi00000971

@@ -15,23 +15,24 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Metadata catalog for geospatial datasets, managed by the Honduran Forestry
-  Institute (ICF)
+description: ICF GeoNetwork catalog of forestry, protected-area, and biodiversity
+  geospatial metadata. The HTML search UI redirects to login; CSW GetCapabilities
+  remains open.
 endpoints:
 - type: csw202
-  url: http://geoportal.icf.gob.hn/geonetwork/srv/eng/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  url: https://geoportal.icf.gob.hn/geonetwork/srv/eng/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
 - type: opensearch
-  url: http://geoportal.icf.gob.hn/geonetwork/srv/eng/portal.opensearch
+  url: https://geoportal.icf.gob.hn/geonetwork/srv/eng/portal.opensearch
   version: '1.0'
 id: geoportalicfgobhn
 langs:
 - id: ES
   name: Spanish
-link: http://geoportal.icf.gob.hn/geonetwork
+link: https://geoportal.icf.gob.hn/geonetwork
 name: ICF Geoportal - Forestry and Protected Areas
 owner:
-  link: https://www.icf.gob.hn
+  link: https://icf.gob.hn
   location:
     country:
       id: HN

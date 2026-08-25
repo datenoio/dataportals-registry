@@ -15,27 +15,33 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Catalogue contains detailed information about products derived from geodata,
-  offered by the ministries, administrations and services of Luxemburg.
+description: MapProxy instance publishing Luxembourg open geodata as WMS and WMTS
+  services for the Administration du Cadastre et de la Topographie.
 endpoints:
 - type: wmts100
-  url: http://wmts1.geoportail.lu/asis/service?REQUEST=GetCapabilities&SERVICE=WMTS
+  url: https://wmts1.geoportail.lu/opendata/service?REQUEST=GetCapabilities&SERVICE=WMTS
   version: 1.0.0
+- type: wms111
+  url: https://wmts1.geoportail.lu/opendata/service?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.1.1
+  version: 1.1.1
 id: wmts1geoportaillu
 langs:
 - id: FR
   name: French
-link: http://wmts1.geoportail.lu
-name: Cadastral Administration and other Luxembourg ministries/administrations/companies
-  Geoportal
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://wmts1.geoportail.lu/opendata
+name: Geoportail Luxembourg Open Data WMTS
 owner:
-  link: https://www.geoportail.lu/en/catalogues/
+  link: https://www.geoportail.lu
   location:
     country:
       id: LU
       name: Luxembourg
     level: 20
-  name: Cadastral Administration and other Luxembourg ministries/administrations/companies
+  name: Administration du Cadastre et de la Topographie
   type: Central government
 properties:
   has_doi: false
@@ -53,8 +59,8 @@ status: active
 tags:
 - INSPIRE
 - Luxembourg
-- WFS
 - WMS
+- WMTS
 - geodata
 - geoportal
 - geospatial

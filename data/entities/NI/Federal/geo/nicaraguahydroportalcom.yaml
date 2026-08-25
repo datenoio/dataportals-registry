@@ -21,9 +21,9 @@ description: Open web portal for hydrogeological data and knowledge of Nicaragua
   resources.
 endpoints:
 - type: geonode:datasets
-  url: https://nicaraguahydroportal.com/api/datasets/
+  url: https://nicaraguahydroportal.com/api/v2/datasets/
 - type: geonode:documents
-  url: https://nicaraguahydroportal.com/api/documents/
+  url: https://nicaraguahydroportal.com/api/v2/resources/
 - type: csw202
   url: https://nicaraguahydroportal.com/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
@@ -63,6 +63,9 @@ endpoints:
 - type: wps100
   url: https://nicaraguahydroportal.com/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: wmts100
+  url: https://nicaraguahydroportal.com/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
 - type: sitemap
   url: https://nicaraguahydroportal.com/sitemap.xml
 id: nicaraguahydroportalcom
@@ -82,15 +85,27 @@ owner:
   name: HydroLOGICA
   type: Business
   link: https://nicaraguahydroportal.com
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
 software:
   id: geonode
   name: GeoNode
 status: active
 tags:
+- geospatial
+- GeoNode
 - hydrogeology
 - groundwater
 - Nicaragua
 - water
+- has_api
 topics:
 - id: ENVI
   name: Environment

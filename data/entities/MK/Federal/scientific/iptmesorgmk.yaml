@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -12,33 +12,36 @@ coverage:
       name: Republic of North Macedonia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: IPT for publishing data on GBIF created by Macedonian Ecological Society,
-  installed on the local office server in Skopje.
-endpoints:
-- type: rss
-  url: https://ipt.mes.org.mk/ipt-2.4.0/rss.do
-  version: '2.0'
+description: Former GBIF Integrated Publishing Toolkit of the Macedonian Ecological
+  Society in Skopje. HTTPS and HTTP to ipt.mes.org.mk timed out during review on 25
+  August 2026. MES remains an endorsed GBIF publisher.
 id: iptmesorgmk
+identifiers:
+- id: gbif
+  value: 856529fb-02f1-4539-80c1-174f7231ef0f
+  url: https://www.gbif.org/publisher/856529fb-02f1-4539-80c1-174f7231ef0f
 langs:
 - id: MK
-  name: Makedonian
+  name: Macedonian
+- id: EN
+  name: English
 link: https://ipt.mes.org.mk
-name: Macedonian Ecological Society Local Server Skopje
+name: Macedonian Ecological Society IPT
 owner:
-  link: http://mes.org.mk/
+  link: https://mes.org.mk/
   location:
     country:
       id: MK
       name: Republic of North Macedonia
     level: 20
   name: Macedonian Ecological Society
-  type: Academy
+  type: Civil society
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT

@@ -15,22 +15,25 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Geoserver web interface of the Lebanese Ministry of Education's SPIMS
-  system
+description: GeoServer of the School Premises Information Management System
+  (SPIMS) at Lebanon's Ministry of Education and Higher Education. The service
+  did not respond to probes in August 2026.
 id: spimsmoegovlb
 langs:
 - id: AR
   name: Arabic
+- id: EN
+  name: English
 link: https://spims.moe.gov.lb/geoserver/web/
-name: Ministry of Education, Lebanon Geoportal
+name: SPIMS GeoServer (Ministry of Education)
 owner:
-  link: https://spims.moe.gov.lb/
+  link: https://www.moe.gov.lb
   location:
     country:
       id: LB
       name: Lebanon
     level: 20
-  name: Ministry of Education, Lebanon
+  name: Ministry of Education and Higher Education
   type: Central government
 properties:
   has_doi: false
@@ -44,13 +47,21 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
-- GIS
-- WebGIS
+- geospatial
 - geoserver
+- education
+- schools
+- government
 topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
-uid: temp00000432
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: cdi00035309

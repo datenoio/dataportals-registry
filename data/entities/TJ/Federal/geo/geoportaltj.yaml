@@ -16,20 +16,31 @@ coverage:
       id: '143'
       name: Central Asia
 description: Public cadastral geoportal of the State Unitary Enterprise for Registration
-  of Immovable Property. Provides free map access to registered property locations,
-  cadastral numbers, and administrative addresses. ArcGIS Server exposes folders including
+  of Immovable Property, under the State Committee for Land Management and Geodesy.
+  Provides free map access to registered property locations, cadastral numbers, parcel
+  boundaries, and administrative addresses. ArcGIS Server 10.7.1 exposes folders including
   CADASTR, BORDERS, and OLD_DATA.
 endpoints:
 - type: arcgis:rest:info
   url: https://geoportal.tj/server/rest/info?f=pjson
 - type: arcgis:rest:services
   url: https://geoportal.tj/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoportal.tj/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoportal.tj/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoportal.tj/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geoportal.tj/server/rest/services?f=kmz
 id: geoportaltj
 langs:
 - id: TG
   name: Tajik
 - id: RU
   name: Russian
+- id: EN
+  name: English
 link: https://geoportal.tj/
 name: Tajikistan Real Estate Registration Geoportal
 owner:
@@ -58,10 +69,10 @@ status: active
 tags:
 - cadastre
 - geospatial
-- Tajikistan
-- ArcGIS
-- real estate
 - government
+- real estate
+- has_api
+- Tajikistan
 topics:
 - id: Planning / Cadastre
   name: Planning / Cadastre

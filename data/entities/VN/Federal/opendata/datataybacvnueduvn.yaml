@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: CKAN catalog of Vietnam National University covering knowledge resources and student data
+  for Vietnam's Northwest (Tây Bắc) region. The catalog is a national-university service, not a Thanh
+  Hóa provincial portal.
+endpoints:
+- type: ckan
+  url: https://data.taybac.vnu.edu.vn/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.taybac.vnu.edu.vn/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.taybac.vnu.edu.vn/api/3/action/package_list
+  version: '3'
+id: datataybacvnueduvn
+langs:
+- id: VN
+  name: Vietnamese
+link: https://data.taybac.vnu.edu.vn
+name: VNU Northwest knowledge and student data catalog
+owner:
+  link: https://www.vnu.edu.vn
+  location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 20
+  name: Vietnam National University
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- education
+- research
+- CKAN
+- VNU
+- Northwest
+- Vietnam
+- has_api
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00002471

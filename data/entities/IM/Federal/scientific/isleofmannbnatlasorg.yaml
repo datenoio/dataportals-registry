@@ -15,8 +15,11 @@ coverage:
       id: '154'
       name: Northern Europe
 description: Isle of Man portal of the NBN Atlas for biodiversity occurrence, habitat,
-  and species data covering the Isle of Man. Living Atlases / Atlas of Living Australia
-  hub operated with the Manx Biological Recording Partnership.
+  and species data covering the Isle of Man, the first entire island nation UNESCO
+  Biosphere reserve. Living Atlases / Atlas of Living Australia hub supported by the
+  Manx Biological Recording Partnership, a wildlife conservation partnership led by
+  Manx National Heritage, the Department of Environment, Food and Agriculture, and
+  Manx Wildlife Trust.
 endpoints:
 - type: ala:api
   url: https://api.nbnatlas.org
@@ -27,7 +30,7 @@ langs:
 link: https://isleofman.nbnatlas.org
 name: NBN Atlas Isle of Man
 owner:
-  link: https://isleofman.nbnatlas.org
+  link: https://isleofman.nbnatlas.org/about-nbn-atlas/
   location:
     country:
       id: IM
@@ -35,6 +38,16 @@ owner:
     level: 20
   name: Manx Biological Recording Partnership
   type: Community
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://docs.nbnatlas.org/privacy-policy/
+  rights_type: granular
+  tos_url: https://docs.nbnatlas.org/nbn-atlas-terms-of-use/
 software:
   id: ala
   name: Atlas of Living Australia
@@ -43,6 +56,7 @@ tags:
 - biodiversity
 - NBN
 - occurrence data
+- has_api
 - Isle of Man
 topics:
 - id: Biota
@@ -53,5 +67,8 @@ topics:
   type: eudatatheme
 - id: Environment
   name: Environment
+  type: iso19115
+- id: Oceans
+  name: Oceans
   type: iso19115
 uid: cdi00027938

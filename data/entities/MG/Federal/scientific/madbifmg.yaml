@@ -12,35 +12,58 @@ coverage:
       name: Madagascar
     level: 20
     macroregion:
-      id: '015'
-      name: Southern Africa
-description: Madagascar Biodiversity Information Facility (MadBIF) IPT
+      id: '014'
+      name: Eastern Africa
+description: Former GBIF Integrated Publishing Toolkit of the Madagascar Biodiversity
+  Information Facility (MadBIF), the national GBIF node hosted by the Centre
+  National de Recherches sur l'Environnement (CNRE). The IPT at madbif.mg/ipt was
+  replaced by ipt.madbif.mg; the homepage is now a stale node website (August
+  2026).
 endpoints:
-- type: sitemap
-  url: http://madbif.mg/sitemap.xml
+- type: dcat:ttl
+  url: http://madbif.mg/ipt/dcat
+- type: ipt:dataset
+  url: http://madbif.mg/ipt/inventory/dataset
+- type: rss
+  url: http://madbif.mg/ipt/rss.do
+  version: '2.0'
 id: madbifmg
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/publisher/c8ce072d-9c61-4ec8-b8e7-0c36a8122791
+  value: c8ce072d-9c61-4ec8-b8e7-0c36a8122791
 langs:
 - id: FR
   name: French
-link: http://madbif.mg
+link: http://madbif.mg/ipt
 name: Madagascar Biodiversity Information Facility (MadBIF) IPT
 owner:
-  link: http://www.madbif.mg
+  link: http://madbif.mg
   location:
     country:
       id: MG
       name: Madagascar
     level: 20
-  name: Madagascar Biodiversity Information Facility (MadBIF)
+  name: Centre National de Recherches sur l'Environnement (CNRE)
   type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: deprecated
 tags:
 - GBIF
 - IPT
 - biodiversity
+- Madagascar
 - data publishing
 topics:
 - id: Biota

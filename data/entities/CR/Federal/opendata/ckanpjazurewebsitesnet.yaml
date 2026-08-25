@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,17 +14,8 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Datos Abiertos del Poder Judicial de Costa Rica. Fortaleciendo la transparencia
-endpoints:
-- type: ckan
-  url: https://ckanpj.azurewebsites.net/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://ckanpj.azurewebsites.net/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://ckanpj.azurewebsites.net/api/3/action/package_list
-  version: '3'
+description: Datos Abiertos del Poder Judicial de Costa Rica. The Azure CKAN app
+  returned HTTP 503 / timeouts as of August 2026.
 id: ckanpjazurewebsitesnet
 langs:
 - id: ES
@@ -50,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - CKAN
 - government
@@ -59,4 +50,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00000907
+uid: cdi00035629

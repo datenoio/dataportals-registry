@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -18,9 +18,6 @@ coverage:
 description: Official macroeconomic statistics catalog of the Banque Centrale du Congo.
   Time series cover the external, monetary and real sectors, with frequency controls
   and XLSX export.
-endpoints:
-- type: sitemap
-  url: https://www.bcc.cd/sitemap.xml
 id: bcccdstatistiques
 langs:
 - id: FR
@@ -55,8 +52,6 @@ tags:
 - government
 - official statistics
 - central bank
-- DR Congo
-- has_api
 topics:
 - id: ECON
   name: Economy and finance

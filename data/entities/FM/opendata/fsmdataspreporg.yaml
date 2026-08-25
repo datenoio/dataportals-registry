@@ -14,12 +14,17 @@ coverage:
     macroregion:
       id: '057'
       name: Micronesia
-description: Building resilience through increased access to information. Provides
-  easy access and reuse of national data related to environment, climate change, and
-  disaster risk management.
+description: National environment data portal for the Federated States of Micronesia
+  in the SPREP Inform network. Publishes public environmental datasets for download,
+  monitoring, and decision-making, including biodiversity, coastal and marine, climate,
+  land, inland waters, disaster risk, and GIS files. Not a cross-government open data
+  portal. Automated HTTP clients currently receive a Cloudflare challenge (HTTP 403)
+  as of August 2026; the DKAN catalog remains published for browsers.
 endpoints:
 - type: dcatus11
   url: https://fsm-data.sprep.org/data.json
+- type: drupal:jsonapi
+  url: https://fsm-data.sprep.org/jsonapi/dataset/dataset
 - type: sitemap
   url: https://fsm-data.sprep.org/sitemap.xml
 id: fsmdataspreporg
@@ -29,7 +34,7 @@ langs:
 link: https://fsm-data.sprep.org
 name: FSM Environment, Climate Change and Disaster Risk Management Data Portal
 owner:
-  link: https://sprep.org
+  link: https://www.sprep.org
   location:
     country:
       id: FM
@@ -54,17 +59,45 @@ software:
 status: active
 tags:
 - government
+- environment
+- climate
+- biodiversity
+- marine
+- coastal
+- gis
 - SPREP
-- FSM
-- resilience
-- data portal
-- climate change
-- disaster risk
+- Inform project
+- Micronesia
+- has_api
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
 - id: Environment
   name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00001249

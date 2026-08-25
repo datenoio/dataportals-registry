@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
@@ -10,12 +11,16 @@ coverage:
     country:
       id: MY
       name: Malaysia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Geospatial data catalog portal for Integrated Shoreline Management Plan
-  (ISMP) Kedah, managed by the Institute of Climate Change.
+    subregion:
+      id: MY-02
+      name: Kedah
+description: Geospatial catalog for the Integrated Shoreline Management Plan (ISMP)
+  of Kedah, operated by Universiti Kebangsaan Malaysia's Institute of Climate Change
+  with layers and documents for shoreline planning.
 endpoints:
 - type: geonode:layers
   url: http://ismp.water.gov.my/api/layers/
@@ -55,8 +60,8 @@ owner:
       id: MY
       name: Malaysia
     level: 20
-  name: Institute of Climate Change
-  type: Central government
+  name: Institute of Climate Change, Universiti Kebangsaan Malaysia
+  type: Academy
 properties:
   has_doi: false
   transferable_topics: true
@@ -92,4 +97,3 @@ topics:
   name: Oceans
   type: iso19115
 uid: cdi00001145
-api: true

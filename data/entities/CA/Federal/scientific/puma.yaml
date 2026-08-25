@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,19 +14,17 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: Vertebrate and Invertebrate Collections of the Royal Ontario Museum.
-endpoints:
-- type: rss
-  url: http://puma:8080/ipt/rss.do
-  version: '2.0'
+description: Former GBIF IPT installation for Royal Ontario Museum vertebrate and invertebrate
+  collections. The recorded host http://puma:8080 was an internal name and is not reachable;
+  GBIF now treats the datasets as orphans.
 id: puma
 langs:
 - id: EN
   name: English
-link: http://puma:8080
+link: https://www.rom.on.ca
 name: Vertebrate and Invertebrate Collections of the Royal Ontario Museum
 owner:
-  link: http://www.rom.on.ca
+  link: https://www.rom.on.ca
   location:
     country:
       id: CA
@@ -37,7 +35,7 @@ owner:
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT

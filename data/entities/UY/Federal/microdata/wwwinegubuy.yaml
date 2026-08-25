@@ -1,8 +1,8 @@
 access_mode:
 - open
 - limited
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - dataset
@@ -15,11 +15,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Official data catalog for statistics and open data published by Uruguay's
-  National Institute of Statistics (INE).
-endpoints:
-- type: nada:catalog-search
-  url: https://www.ine.gub.uy/Anda5/index.php/api/catalog/search
+description: Former NADA microdata catalog of Uruguay's Instituto Nacional de Estadística
+  (ANDA). The /Anda5 path now redirects to the INE homepage; microdata is described
+  on the institute's website.
 id: wwwinegubuy
 langs:
 - id: ES
@@ -27,7 +25,7 @@ langs:
 link: https://www.ine.gub.uy/Anda5/index.php
 name: Catálogo de Metadatos y microdatos del Instituto Nacional de Estadística
 owner:
-  link: https://www.ine.gub.uy
+  link: https://www.gub.uy/instituto-nacional-estadistica
   location:
     country:
       id: UY
@@ -48,10 +46,9 @@ rights:
 software:
   id: nada
   name: NADA
-status: active
+status: inactive
 tags:
 - government
-- has_api
 - microdata
 - statistics
 - population

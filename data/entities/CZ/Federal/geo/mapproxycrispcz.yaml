@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,19 +16,6 @@ coverage:
       id: '151'
       name: Eastern Europe
 description: Geoportal. managed by CRISP. powered by Mapproxy. accessible at mapproxy.crisp.cz.
-endpoints:
-- type: wms111
-  url: http://mapproxy.crisp.cz/service?REQUEST=GetCapabilities
-  version: 1.1.1
-- type: wmts100
-  url: http://mapproxy.crisp.cz/service?REQUEST=GetCapabilities&SERVICE=WMTS
-  version: 1.0.0
-- type: tms100
-  url: http://mapproxy.crisp.cz/tms/1.0.0/
-  version: 1.0.0
-- type: wmts100
-  url: http://mapproxy.crisp.cz/wmts/1.0.0/WMTSCapabilities.xml
-  version: 1.0.0
 id: mapproxycrispcz
 langs:
 - id: CS
@@ -56,7 +43,7 @@ rights:
 software:
   id: mapproxy
   name: MapProxy
-status: active
+status: inactive
 tags:
 - Czech Republic
 - GIS
@@ -68,4 +55,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00002212
+uid: cdi00035602

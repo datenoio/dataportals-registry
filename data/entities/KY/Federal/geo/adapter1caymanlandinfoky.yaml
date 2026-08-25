@@ -1,0 +1,92 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: KY
+      name: Cayman Islands
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: ArcGIS REST services for Cayman Land Info, the national land administration
+  and GIS platform of the Lands and Survey Department. Public service directory lists
+  aerial basemaps and map-production geoprocessing; land-registry layers are subscription-based.
+endpoints:
+- type: arcgis:rest:info
+  url: https://adapter1.caymanlandinfo.ky/wadata/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://adapter1.caymanlandinfo.ky/wadata/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://adapter1.caymanlandinfo.ky/wadata/services?wsdl
+- type: arcgis:sitemap
+  url: https://adapter1.caymanlandinfo.ky/wadata/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://adapter1.caymanlandinfo.ky/wadata/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://adapter1.caymanlandinfo.ky/wadata/rest/services?f=kmz
+id: adapter1caymanlandinfoky
+langs:
+- id: EN
+  name: English
+link: https://adapter1.caymanlandinfo.ky/wadata/rest/services
+name: Cayman Land Info ArcGIS Server
+owner:
+  link: https://www.caymanlandinfo.ky
+  location:
+    country:
+      id: KY
+      name: Cayman Islands
+    level: 20
+  name: Lands and Survey Department
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- government
+- geospatial
+- GIS
+- ArcGIS
+- cadastre
+- land administration
+- has_api
+- Cayman Islands
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00035314

@@ -1,0 +1,104 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: KI
+      name: Kiribati
+    level: 20
+    macroregion:
+      id: '057'
+      name: Micronesia
+description: Official statistics website of the Kiribati National Statistics Office,
+  the national statistical agency under the Ministry of Finance and Economic Development.
+  Publishes statistical releases, indicator tables, and a documents library covering
+  census, HIES, CPI, GDP, trade, labour, poverty, and related topics. Microdata is
+  documented separately in the Pacific Data Hub Microdata Library.
+endpoints:
+- type: rest
+  url: https://nso.gov.ki/wp-json/
+- type: rest:posts
+  url: https://nso.gov.ki/wp-json/wp/v2/posts
+  version: '2'
+- type: sitemap
+  url: https://nso.gov.ki/wp-sitemap.xml
+id: nsogovki
+langs:
+- id: EN
+  name: English
+link: https://nso.gov.ki
+name: Kiribati National Statistics Office
+owner:
+  link: https://nso.gov.ki
+  location:
+    country:
+      id: KI
+      name: Kiribati
+    level: 20
+  name: Kiribati National Statistics Office
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: wordpress
+  name: WordPress
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- census
+- has_api
+- Kiribati
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
+uid: cdi00035320

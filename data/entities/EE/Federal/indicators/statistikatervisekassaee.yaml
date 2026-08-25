@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -14,13 +14,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Estonian largest set of health-related statistics and survey results,
-  administrated by National Institute for Health Development. The database is free
-  of charge, updated regularly, and offers data for download in multiple formats.
-endpoints:
-- type: pxwebapi
-  url: https://statistika.tervisekassa.ee/PXWeb/api/v1/en/
-  version: '1'
+description: Former PxWeb host statistika.tervisekassa.ee (Estonian Health Insurance
+  Fund). The hostname no longer resolves. Official health statistics remain on the
+  National Institute for Health Development database at statistika.tai.ee.
 id: statistikatervisekassaee
 langs:
 - id: ET
@@ -28,13 +24,13 @@ langs:
 link: https://statistika.tervisekassa.ee/PXWeb
 name: Estonian Health Statistics
 owner:
-  link: https://www.tervisekassa.ee
+  link: https://tervisekassa.ee
   location:
     country:
       id: EE
       name: Estonia
     level: 20
-  name: National Institute for Health Development
+  name: Estonian Health Insurance Fund
   type: Central government
 properties:
   has_doi: false
@@ -48,7 +44,7 @@ rights:
 software:
   id: pxweb
   name: PxWeb
-status: active
+status: inactive
 tags:
 - health
 - statistics
@@ -57,4 +53,4 @@ topics:
 - id: HEAL
   name: Health
   type: eudatatheme
-uid: temp00003543
+uid: cdi00035525

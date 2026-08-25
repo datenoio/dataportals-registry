@@ -20,7 +20,7 @@ Each record describes one data catalog or repository: name, URL, owner, geograph
 
 ### How many instances?
 
-Approximately **20,142** verified entity YAML records (v1.16.0, 24 August 2026), plus **12** scheduled records. Export counts are listed in [README.md](README.md#data-exports).
+Approximately **22,750** verified entity YAML records (v1.17.0, 25 August 2026), plus **0** scheduled records. Export counts are listed in [README.md](README.md#data-exports).
 
 ### What data does each instance consist of?
 

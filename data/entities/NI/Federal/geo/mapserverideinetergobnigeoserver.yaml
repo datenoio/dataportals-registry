@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: GeoServer instance on INETER's IDE host (mapserveride), providing OGC
-  map and feature services for the national cartographic base and related layers.
-  Distinct from the GeoNetwork catalog on the same host.
+description: Public GeoServer on INETER's IDE host (mapserveride), providing OGC
+  map and feature services for the national cartographic base, physiography, faults,
+  and related layers. Distinct from the retired GeoNetwork path on the same host.
 endpoints:
 - type: wms111
   url: https://mapserveride.ineter.gob.ni/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -51,6 +51,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null

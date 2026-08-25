@@ -10,13 +10,14 @@ coverage:
     country:
       id: World
       name: World
-    level: 20
+    level: 10
     macroregion:
       id: World
       name: World
-description: Data catalog of the International Livestock Research Institute (ILRI),
-  featuring datasets related to livestock, genetics, agriculture, and socio-economic
-  research.
+description: CKAN data catalog of the International Livestock Research Institute (ILRI),
+  headquartered in Nairobi. Publishes livestock, genetics, agriculture, and socio-economic
+  research datasets from ILRI and partners. The portal returned HTTP 503 when last
+  probed in 2026.
 endpoints:
 - type: ckan
   url: https://data.ilri.org/portal/api/3
@@ -56,24 +57,18 @@ status: active
 tags:
 - scientific
 - has_api
-- Livestock
-- Genetics
-- Agriculture
-- Socio-economic
+- livestock
+- genetics
+- agriculture
+- CGIAR
 topics:
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
   type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
 - id: Farming
   name: Farming
-  type: iso19115
-- id: HEAL
-  name: Health
-  type: eudatatheme
-- id: Health
-  name: Health
   type: iso19115
 uid: cdi00005260

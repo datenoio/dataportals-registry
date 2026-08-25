@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: GeoNode is an open source platform for sharing geospatial data and maps.
-  The MIMU Geonode is the main repository of national-level spatial information in
-  Myanmar.
+description: Humanitarian GeoNode of the Myanmar Information Management Unit, the
+  main public repository of national-level spatial layers, maps, and documents used
+  for coordination and emergency preparedness in Myanmar.
 endpoints:
 - type: geonode:layers
   url: https://geonode.themimu.info/api/layers/
@@ -85,7 +85,7 @@ langs:
 - id: EN
   name: English
 link: https://geonode.themimu.info
-name: Myanmar Information Management Unit geonode
+name: Myanmar Information Management Unit GeoNode
 owner:
   link: https://www.themimu.info
   location:
@@ -94,7 +94,7 @@ owner:
       name: Myanmar
     level: 20
   name: Myanmar Information Management Unit
-  type: Civil society
+  type: International
 properties:
   has_doi: false
 rights:
@@ -111,17 +111,27 @@ status: active
 tags:
 - geospatial
 - GIS
-- public data
+- humanitarian
 - emergency preparedness
 - Myanmar
+- has_api
 topics:
-- id: TRAN
-  name: Transport
-  type: eudatatheme
 - id: SOCI
   name: Population and society
   type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: cdi00002080

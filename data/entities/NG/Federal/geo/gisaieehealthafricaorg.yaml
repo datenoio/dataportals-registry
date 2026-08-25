@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: false
-api_status: uncertain
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,24 +13,27 @@ coverage:
       name: Nigeria
     level: 20
     macroregion:
-      id: '154'
-      name: Northern Europe
-description: Catalog of geospatial datasets provided by eHealth Africa via GeoServer.
+      id: '011'
+      name: Western Africa
+description: Former eHealth Africa GeoServer instance on gis-a.ie.ehealthafrica.org.
+  HTTPS certificate validation fails and /geoserver/web returns 404, so the catalogue
+  is not publicly reachable. Use the live GeoServer at gis-geoserver.ehealthafrica.org
+  for current layers.
 id: gisaieehealthafricaorg
 langs:
 - id: EN
   name: English
 link: https://gis-a.ie.ehealthafrica.org/geoserver
-name: GIS-A Geoserver Data Catalog
+name: eHealth Africa GIS-A GeoServer
 owner:
-  link: https://www.ehealthafrica.org
+  link: https://ehealthafrica.org
   location:
     country:
       id: NG
       name: Nigeria
     level: 20
-  name: eHealth Africa gGmbH
-  type: Business
+  name: eHealth Africa
+  type: Civil society
 properties:
   has_doi: false
 rights:
@@ -43,19 +46,23 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - geospatial
-- open data
 - health
+- Nigeria
+- eHealth Africa
 topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Health
+  name: Health
   type: iso19115
 uid: temp00005359

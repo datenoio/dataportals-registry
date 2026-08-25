@@ -14,12 +14,17 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: National environment data portal for Fiji, part of the SPREP Inform network.
+description: National environment data portal for Fiji in the SPREP Inform network.
   Publishes public environmental datasets for download, monitoring, and decision-making.
-  Not a cross-government open data portal.
+  Not a cross-government open data portal. Unauthenticated probes currently receive
+  Cloudflare HTTP 403 (bot protection); DCAT and Drupal JSON:API paths are retained.
 endpoints:
 - type: dcatus11
   url: https://fiji-data.sprep.org/data.json
+- type: drupal:jsonapi
+  url: https://fiji-data.sprep.org/jsonapi/dataset/dataset
+- type: sitemap
+  url: https://fiji-data.sprep.org/sitemap.xml
 id: fijidataspreporg
 langs:
 - id: EN
@@ -27,13 +32,13 @@ langs:
 link: https://fiji-data.sprep.org
 name: Fiji Environment Data Portal
 owner:
-  link: https://sprep.org
+  link: https://www.sprep.org
   location:
     country:
       id: FJ
       name: Fiji
     level: 20
-  name: Pacific Regional Environment Programme
+  name: Secretariat of the Pacific Regional Environment Programme (SPREP)
   type: International
 properties:
   has_doi: false
@@ -52,15 +57,38 @@ software:
 status: active
 tags:
 - government
-- open data
-- environmental data
-- Fiji
+- environment
+- climate
+- biodiversity
+- marine
+- gis
 - SPREP
+- Inform project
+- Fiji
+- has_api
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
 - id: Environment
   name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
   type: iso19115
 uid: cdi00021943

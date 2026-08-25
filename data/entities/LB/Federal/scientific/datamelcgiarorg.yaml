@@ -8,14 +8,16 @@ content_types:
 coverage:
 - location:
     country:
-      id: LB
-      name: Lebanon
-    level: 20
+      id: World
+      name: World
+    level: 10
     macroregion:
-      id: '145'
-      name: Western Asia
-description: A data catalog for agricultural, environmental, and related research
-  data, managed by CGIAR, an international research partnership.
+      id: World
+      name: World
+description: MELDATA is the ICARDA Dataverse for FAIR agricultural research
+  datasets produced with CGIAR and partners. It is the data catalog of the
+  International Center for Agricultural Research in the Dry Areas, hosted in
+  Lebanon and covering dryland livestock, crops, and related research.
 endpoints:
 - type: dataverseapi
   url: https://data.mel.cgiar.org/api/search
@@ -26,22 +28,23 @@ endpoints:
   url: https://data.mel.cgiar.org/sitemap.xml
 id: datamelcgiarorg
 langs:
-- id: AR
-  name: Arabic
+- id: EN
+  name: English
 link: https://data.mel.cgiar.org
-name: CGIAR Data Catalog (Melbourne)
+name: MELDATA (ICARDA Dataverse)
 owner:
-  link: https://www.cgiar.org
+  link: https://www.icarda.org
   location:
     country:
       id: LB
       name: Lebanon
     level: 20
-  name: CGIAR System Organization
-  type: Academy
+  name: International Center for Agricultural Research in the Dry Areas
+  type: International
 properties:
   has_doi: true
   transferable_topics: true
+  dataset_count_reported: 4845
 rights:
   license_id: null
   license_name: null
@@ -57,21 +60,23 @@ tags:
 - scientific
 - has_api
 - agriculture
-- environment
-- research
+- ICARDA
+- CGIAR
+- drylands
+- research data
 topics:
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
   type: eudatatheme
 - id: Farming
   name: Farming
   type: iso19115
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: Environment
   name: Environment
   type: iso19115

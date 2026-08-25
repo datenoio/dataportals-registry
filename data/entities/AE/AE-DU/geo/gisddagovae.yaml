@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: AE-DU
       name: Dubayy
-description: GIS Server for DDA, providing geospatial data and services
+description: ArcGIS REST services of the Dubai Development Authority, publishing planning
+  and municipal geospatial layers for Dubai development zones.
 endpoints:
 - type: arcgis:portals:self
   url: https://gis.dda.gov.ae/portal/sharing/rest/portals/self?f=pjson
@@ -38,10 +39,12 @@ id: gisddagovae
 langs:
 - id: AR
   name: Arabic
+- id: EN
+  name: English
 link: https://gis.dda.gov.ae/server/rest/services
-name: GIS - DDA GIS Server
+name: Dubai Development Authority GIS
 owner:
-  link: https://gis.dda.gov.ae
+  link: https://dda.gov.ae
   location:
     country:
       id: AE
@@ -92,4 +95,4 @@ topics:
 - id: Planning / Cadastre
   name: Planning / Cadastre
   type: iso19115
-uid: temp00001173
+uid: cdi00036209

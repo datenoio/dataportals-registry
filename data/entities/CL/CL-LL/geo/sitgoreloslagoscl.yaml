@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,20 +18,8 @@ coverage:
     subregion:
       id: CL-LL
       name: Los Lagos
-description: ArcGIS REST Services Directory for Los Lagos Region
-endpoints:
-- type: arcgis:rest:info
-  url: https://sit.goreloslagos.cl/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://sit.goreloslagos.cl/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://sit.goreloslagos.cl/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://sit.goreloslagos.cl/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://sit.goreloslagos.cl/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://sit.goreloslagos.cl/arcgis/rest/services?f=kmz
+description: ArcGIS REST services directory of the Los Lagos Regional Government spatial
+  information system. The catalog host was unreachable on 25 August 2026.
 id: sitgoreloslagoscl
 langs:
 - id: ES
@@ -62,7 +50,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS
 - REST Services
@@ -81,4 +69,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00003471
+uid: cdi00035715

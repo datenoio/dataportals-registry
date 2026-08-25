@@ -1,0 +1,66 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Kadi4Mat instance hosted at TU Braunschweig IWF for exchanging research
+  data in the BMBF competence clusters Recycling & Green Battery (greenBatt) and Battery
+  Utilisation Concepts (BattNutzung). Records and collections require login.
+endpoints:
+- type: rest
+  url: https://kadi4mat.greenbattnutzung.iwf.ing.tu-bs.de/api/records
+- type: rest
+  url: https://kadi4mat.greenbattnutzung.iwf.ing.tu-bs.de/api/collections
+id: kadi4matgreenbattnutzungiwfingtubsde
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://kadi4mat.greenbattnutzung.iwf.ing.tu-bs.de/
+name: Kadi4Mat greenBatt / BattNutzung
+owner:
+  link: https://www.tu-braunschweig.de/iwf
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+  name: Technische Universität Braunschweig, Institute of Machine Tools and Production
+    Technology (IWF)
+  type: Academy
+software:
+  id: kadi4mat
+  name: Kadi4Mat
+status: active
+tags:
+- scientific
+- research data
+- academic
+- materials science
+- batteries
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi99990036

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,33 +11,21 @@ coverage:
     country:
       id: 'NO'
       name: Norway
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: Data catalog containing publicly accessible geospatial services for Bærum
-  municipality.
-endpoints:
-- type: arcgis:portals:self
-  url: https://arcgistest.baerum.kommune.no/portal/sharing/rest/portals/self?f=pjson
-- type: arcgis:rest:info
-  url: https://arcgistest.baerum.kommune.no/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://arcgistest.baerum.kommune.no/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://arcgistest.baerum.kommune.no/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://arcgistest.baerum.kommune.no/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://arcgistest.baerum.kommune.no/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://arcgistest.baerum.kommune.no/arcgis/rest/services?f=kmz
+    subregion:
+      id: NO-30
+      name: Viken
+description: Bærum kommune ArcGIS Server test instance. Not the production municipal
+  geoportal.
 id: arcgistestbaerumkommuneno
 langs:
 - id: 'NO'
   name: Norwegian
 link: https://arcgistest.baerum.kommune.no/arcgis/rest/services
-name: Bærum kommune Geoportal
+name: Bærum kommune ArcGIS Server (test)
 owner:
   link: https://www.baerum.kommune.no
   location:
@@ -62,7 +50,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - geodata
 - ArcGIS

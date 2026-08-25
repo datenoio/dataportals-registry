@@ -15,22 +15,24 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Data catalog related to geospatial datasets and services
+description: Test GeoServer instance of the iKartan municipal mapping platform operated
+  by Sokigo. It is a non-production catalog and should not be treated as an official
+  open data portal.
 id: testikartanse
 langs:
 - id: SV
   name: Swedish
 link: https://test.ikartan.se/geoserver
-name: iKartan Test Geoportal
+name: iKartan Test GeoServer
 owner:
-  link: https://ikartan.se
+  link: https://www.sokigo.com
   location:
     country:
       id: SE
       name: Sweden
     level: 20
-  name: WFS
-  type: Academy
+  name: Sokigo
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -47,14 +49,9 @@ status: inactive
 tags:
 - geoportal
 - GeoServer
-- geospatial
-- Sweden
-- WFS
-- WMS
+- test
+- municipal GIS
 topics:
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115

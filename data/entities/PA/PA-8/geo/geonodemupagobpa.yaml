@@ -11,13 +11,15 @@ coverage:
     country:
       id: PA
       name: Panama
-    level: 20
+    level: 30
     macroregion:
       id: '013'
       name: Central America
-description: GeoNode platform for managing and publishing geospatial data, supporting
-  upload and management of vector and raster datasets, metadata according to ISO 19115/19139,
-  and integration with GeoServer for serving OGC services.
+    subregion:
+      id: PA-8
+      name: Panamá
+description: GeoServer behind the Municipality of Panama City (Alcaldía de Panamá)
+  GeoNode, serving municipal vector and raster layers over OGC WMS, WFS, and WCS.
 endpoints:
 - type: wms111
   url: https://geonode.mupa.gob.pa/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -36,7 +38,7 @@ langs:
 - id: ES
   name: Spanish
 link: https://geonode.mupa.gob.pa/geoserver
-name: GeoNode Alcaldía de Panamá Geoportal
+name: GeoServer Alcaldía de Panamá
 owner:
   link: https://mupa.gob.pa
   location:
@@ -63,15 +65,29 @@ software:
   name: GeoServer
 status: active
 tags:
-- geospatial data
-- mapping
-- geoserver
-- geonode
+- geospatial
+- GeoServer
+- GeoNode
+- government
+- Panama City
+- has_api
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: cdi00020264

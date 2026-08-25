@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: GeoNetwork metadata catalogue of the national GIS portal (gis.is) for
-  Iceland, providing discovery and access to geographic datasets and map layers.
+description: Host alias of the national Lýsigagnagátt GeoNetwork (gatt.natt.is). Same
+  catalogue as gatt.natt.is and gatt.lmi.is; prefer https://gatt.natt.is/geonetwork.
 endpoints:
 - type: csw202
   url: https://gatt.gis.is/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -34,20 +34,20 @@ langs:
 - id: EN
   name: English
 link: https://gatt.gis.is/geonetwork
-name: GATT gis.is GeoNetwork
+name: Lýsigagnagátt (gatt.gis.is)
 owner:
-  link: https://gis.is
+  link: https://www.natt.is
   location:
     country:
       id: IS
       name: Iceland
     level: 20
-  name: Government of Iceland
+  name: Náttúrufræðistofnun
   type: Central government
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: deprecated
 tags:
 - geospatial
 - metadata

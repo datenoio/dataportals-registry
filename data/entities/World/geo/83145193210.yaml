@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,26 +11,27 @@ coverage:
     country:
       id: World
       name: World
-    level: 10
+    level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
-description: GeoServer is an open-source server for sharing geospatial data.
+description: Catalog host 83.145.193.210:80 did not respond on 25 August 2026
+  (timeout or connection refused). Operator and country are unconfirmed.
 id: '83145193210'
 langs:
 - id: EN
   name: English
 link: http://83.145.193.210:80/geoserver
-name: WFS Geoportal
+name: Unidentified catalog (83.145.193.210:80)
 owner:
   link: https://geoserver.org/
   location:
     country:
       id: World
       name: World
-    level: 10
-  name: WFS
-  type: Business
+    level: 20
+  name: Unidentified operator
+  type: Other
 properties:
   has_doi: false
 rights:
@@ -43,7 +44,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - geospatial
 - GIS
@@ -54,14 +55,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005344
-endpoints:
-- type: wms130
-  url: http://83.145.193.210:80/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
-- type: wfs200
-  url: http://83.145.193.210:80/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
-  version: 2.0.0
-- type: wcs111
-  url: http://83.145.193.210:80/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
+uid: cdi00037229

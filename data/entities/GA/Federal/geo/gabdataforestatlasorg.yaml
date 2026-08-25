@@ -15,8 +15,10 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: Gabon Forest Atlas open-data catalog of the Ministère des Eaux et Forêts,
-  with WRI, for forest and wildlife geospatial layers.
+description: Open-data catalog of Gabon's Interactive Forest Atlas, published by
+  MPERNFM with the World Resources Institute. Geospatial layers cover forest management,
+  conservation, agro-industry, and administrative boundaries. Default license is
+  CC BY 4.0.
 endpoints:
 - type: dcatap201
   url: https://gab-data.forest-atlas.org/api/feed/dcat-ap/2.0.1.json
@@ -32,23 +34,28 @@ id: gabdataforestatlasorg
 langs:
 - id: FR
   name: French
+- id: EN
+  name: English
 link: https://gab-data.forest-atlas.org
-name: Gabon Forest Atlas
+name: Forest Atlas of Gabon
 owner:
-  link: https://forest-atlas.org
+  link: https://gab.forest-atlas.org
   location:
     country:
       id: GA
       name: Gabon
     level: 20
-  name: Ministère des Eaux et Forêts
+  name: Ministère de la Préservation de l'Environnement, des Ressources Naturelles,
+    des Forêts et de la Mer (MPERNFM)
   type: Central government
 properties:
+  dataset_count_reported: 4
   has_doi: false
+  is_national: true
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
   privacy_policy_url: https://www.esri.com/en-us/privacy/overview
   rights_type: granular
   tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement

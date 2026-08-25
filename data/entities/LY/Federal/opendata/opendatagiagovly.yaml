@@ -14,9 +14,10 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: National open government data platform of Libya, publishing reusable
-  datasets from public institutions in CSV, JSON, and GeoJSON with a documented CKAN
-  API.
+description: National open government data platform of the General Information
+  Authority (منصة البيانات المفتوحة). CKAN 2.10 catalog of reusable public-sector
+  datasets in CSV, JSON, and GeoJSON, with a documented Action API under
+  /dashboard/api/3. 129 datasets from 16 organizations as of August 2026.
 endpoints:
 - type: ckan
   url: https://opendata.gia.gov.ly/dashboard/api/3
@@ -47,6 +48,7 @@ owner:
 properties:
   has_doi: false
   is_national: true
+  dataset_count_reported: 129
 rights:
   license_id: null
   license_name: null
@@ -62,8 +64,37 @@ tags:
 - government
 - has_api
 - open data
+- CKAN
+- Libya
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
 uid: cdi00027625

@@ -1,0 +1,78 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FO
+      name: Faroe Islands
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: National Elsevier Pure portal for public research in the Faroe Islands,
+  covering researchers, organisations, publications, and datasets from Fróðskaparsetur
+  Føroya and other public research institutes.
+endpoints:
+- type: oaipmh20
+  url: https://www.pure.fo/ws/oai?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://www.pure.fo/sitemap/datasets.xml
+- type: sitemap
+  url: https://www.pure.fo/sitemap.xml
+id: purefo
+langs:
+- id: EN
+  name: English
+- id: FO
+  name: Faroese
+link: https://www.pure.fo/
+name: PURE Faroe Islands
+owner:
+  link: https://www.setur.fo/
+  location:
+    country:
+      id: FO
+      name: Faroe Islands
+    level: 20
+  name: Fróðskaparsetur Føroya (University of the Faroe Islands)
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research data
+- publications
+- academic research
+- government
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00035548

@@ -17,8 +17,15 @@ coverage:
 description: Kyambogo University institutional repository (KYUSpace), collecting theses,
   publications, and other research outputs of the university.
 endpoints:
-- type: dspace:catalog
-  url: https://kyuspace.kyu.ac.ug/
+- type: dspace
+  url: https://kyuspace.kyu.ac.ug/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://kyuspace.kyu.ac.ug/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://kyuspace.kyu.ac.ug/server/oai/request?verb=Identify
+  version: '2.0'
 id: kyuspacekyuacug
 langs:
 - id: EN
@@ -53,6 +60,7 @@ tags:
 - research
 - theses
 - Uganda
+- has_api
 topics:
 - id: TECH
   name: Science and technology

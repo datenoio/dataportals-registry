@@ -13,36 +13,39 @@ coverage:
       name: Albania
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Rest services endpoint for basemap data catalog
+description: ArcGIS Server REST catalog of national basemap services operated by the
+  State Authority for Geospatial Information (ASIG).
 endpoints:
 - type: arcgis:rest:info
-  url: http://basemap.asig.gov.al/server/rest/info?f=pjson
+  url: https://basemap.asig.gov.al/server/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: http://basemap.asig.gov.al/server/rest/services?f=pjson
+  url: https://basemap.asig.gov.al/server/rest/services?f=pjson
 - type: arcgis:soap
-  url: http://basemap.asig.gov.al/server/services?wsdl
+  url: https://basemap.asig.gov.al/server/services?wsdl
 - type: arcgis:sitemap
-  url: http://basemap.asig.gov.al/server/rest/services?f=sitemap
+  url: https://basemap.asig.gov.al/server/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: http://basemap.asig.gov.al/server/rest/services?f=geositemap
+  url: https://basemap.asig.gov.al/server/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: http://basemap.asig.gov.al/server/rest/services?f=kmz
+  url: https://basemap.asig.gov.al/server/rest/services?f=kmz
 id: basemapasiggoval
 langs:
 - id: SQ
   name: Albanian
-link: http://basemap.asig.gov.al/server/rest/services
+- id: EN
+  name: English
+link: https://basemap.asig.gov.al/server/rest/services
 name: ASIG Basemap Geoportal
 owner:
-  link: http://www.asig.gov.al/
+  link: https://asig.gov.al
   location:
     country:
       id: AL
       name: Albania
     level: 20
-  name: asig.gov.al
+  name: State Authority for Geospatial Information (ASIG)
   type: Central government
 properties:
   has_doi: false
@@ -59,7 +62,9 @@ software:
 status: active
 tags:
 - basemap
-- geo
+- geospatial
+- government
+- has_api
 topics:
 - id: Location
   name: Location
@@ -70,4 +75,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00001206
+uid: cdi00036200

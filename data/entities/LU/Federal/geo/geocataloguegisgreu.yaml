@@ -15,9 +15,33 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Geocatalogue of GIS-GR. This geoportal. managed by Ministry of Energy
-  and Regional Planning Land Planning Department (Luxemburg). provides access to datasets
-  and resources.
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GeoNetwork catalogue of GIS-GR / SIG-GR, the geographic information
+  system of the Greater Region (Saarland, Lorraine, Luxembourg, Rhineland-Palatinate,
+  and Wallonia).
 endpoints:
 - type: geonetwork:query
   url: https://geocatalogue.gis-gr.eu/geonetwork/srv/eng/q
@@ -30,27 +54,28 @@ endpoints:
 - type: oaipmh20
   url: https://geocatalogue.gis-gr.eu/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
-- type: geonetwork:site
-  url: https://geocatalogue.gis-gr.eu/geonetwork/srv/api/site
-- type: opensearch
-  url: https://geocatalogue.gis-gr.eu/portal.opensearch
 id: geocataloguegisgreu
 langs:
+- id: FR
+  name: French
+- id: DE
+  name: German
 - id: EN
   name: English
-link: https://geocatalogue.gis-gr.eu/geonetwork
+link: https://geocatalogue.gis-gr.eu/geonetwork/srv/eng/catalog.search
 name: SIG-GR / GIS-GR geoportal of the Greater Region
 owner:
-  link: https://gouvernement.lu
+  link: https://www.sig-gr.eu
   location:
     country:
       id: LU
       name: Luxembourg
     level: 20
-  name: Ministry of Energy and Regional Planning Land Planning Department (Luxemburg)
+  name: Ministère de l'Énergie et de l'Aménagement du territoire
   type: Central government
 properties:
   has_doi: true
+  transferable_location: true
 rights:
   license_id: null
   license_name: null
@@ -66,6 +91,8 @@ tags:
 - geospatial
 - government
 - has_api
+- Greater Region
+- INSPIRE
 topics:
 - id: ENVI
   name: Environment

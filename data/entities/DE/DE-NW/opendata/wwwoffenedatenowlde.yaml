@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,8 +17,9 @@ coverage:
     subregion: &id001
       id: DE-NW
       name: Nordrhein-Westfalen
-description: A regional open data catalog for the OstWestfalenLippe region in Germany,
-  featuring datasets and resources contributed by various public and private entities.
+description: Former DKAN open data portal for Ostwestfalen-Lippe (Offene Daten OWL),
+  piloted by Kreis Lippe with technical support from krz. The hostname offenedaten-owl.de
+  no longer resolves.
 id: wwwoffenedatenowlde
 langs:
 - id: DE
@@ -26,15 +27,14 @@ langs:
 link: https://www.offenedaten-owl.de
 name: Offene Daten OWL
 owner:
-  link: https://www.offenedaten-owl.de
+  link: https://www.kreis-lippe.de
   location:
     country:
       id: DE
       name: Germany
     level: 30
     subregion: *id001
-  name: Not explicitly provided, but likely a consortium or government of OstWestfalenLippe
-    region
+  name: Kreis Lippe
   type: Regional government
 properties:
   has_doi: false
@@ -48,7 +48,7 @@ rights:
 software:
   id: dkan
   name: DKAN
-status: active
+status: inactive
 tags:
 - Germany
 - datasets
@@ -63,7 +63,3 @@ topics:
   name: Society
   type: iso19115
 uid: temp00003162
-endpoints:
-- type: ckan:package-list
-  url: https://www.offenedaten-owl.de/api/3/action/package_list
-  version: '3'

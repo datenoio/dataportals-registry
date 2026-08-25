@@ -4,6 +4,7 @@ api: false
 api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
+- indicator
 - dataset
 coverage:
 - location:
@@ -14,11 +15,10 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: We aim to provide access to data to decision makers through this portal
-  from a wide range of sources, with overall objective of promoting financial inclusion
-  in Pakistan. We understand the importance of evidence based decision making for
-  policy makers, financial service providers, development practitioner, and the private
-  sector.
+description: Financial inclusion and macroeconomic indicators portal operated by Karandaaz
+  Pakistan. Publishes time series on demographics, national accounts, commodities,
+  telecommunications, banking, microfinance, SME and housing finance, mobile money,
+  capital markets, and energy, plus Karandaaz survey dashboards.
 id: portalkarandaazcompk
 langs:
 - id: EN
@@ -32,8 +32,10 @@ owner:
       id: PK
       name: Pakistan
     level: 20
-  name: Karandaaz
+  name: Karandaaz Pakistan
   type: Civil society
+properties:
+  has_doi: false
 rights:
   license_id: null
   license_name: null
@@ -47,20 +49,22 @@ software:
 status: active
 tags:
 - Pakistan
-- analytics tools
-- custom
-- economic data
 - financial inclusion
-- macro data
-- socio-economic indicators
+- economic data
+- statistics
+- microfinance
+- banking
 topics:
 - id: ECON
   name: Economy and finance
   type: eudatatheme
-- id: ECON
-  name: Economy and finance
+- id: SOCI
+  name: Population and society
   type: eudatatheme
 - id: Economy
   name: Economy
   type: iso19115
-uid: temp00004513
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00035059

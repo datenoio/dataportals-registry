@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: ID-SG
+      name: Sulawesi Tenggara
+description: Open data portal for Konawe Utara, Indonesia, providing access to government datasets and related resources.
+id: datakonutgeoportalcoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://datakonut.geoportal.co.id
+name: Konawe Utara Open Data Portal
+owner:
+  link: https://datakonut.geoportal.co.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    subregion:
+      id: ID-SG
+      name: Sulawesi Tenggara
+  name: Pemerintah Kabupaten Konawe Utara
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- spatial
+- open data
+- government
+- Indonesia
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: temp00004684
+endpoints:
+- type: ckan
+  url: https://datakonut.geoportal.co.id/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datakonut.geoportal.co.id/api/3/action/package_search
+  version: '3'

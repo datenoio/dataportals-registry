@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: DE-NI
       name: Niedersachsen
-description: Geospatial data catalog accessed via Geoserver
+description: RIWA GIS GeoServer tenant at nng.riwagis.de, publishing OGC WMS/WFS
+  services for a Lower Saxony municipal or utility customer of RIWA GmbH.
 endpoints:
 - type: wms111
   url: https://nng.riwagis.de/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -67,9 +68,9 @@ langs:
 - id: DE
   name: German
 link: https://nng.riwagis.de/geoserver
-name: Geoserver at nng.riwagis.de
+name: RIWA GIS GeoServer (NNG)
 owner:
-  link: https://nng.riwagis.de/geoserver
+  link: https://www.riwa.de
   location:
     country:
       id: DE
@@ -78,8 +79,8 @@ owner:
     subregion:
       id: DE-NI
       name: Niedersachsen
-  name: Not specified in source
-  type: Local government
+  name: RIWA GmbH
+  type: Business
 properties:
   has_doi: false
 rights:

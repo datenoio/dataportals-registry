@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,14 +15,8 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: GeoServer data catalog of geographic datasets related to COVID-19
-endpoints:
-- type: wms111
-  url: https://coronamap.taldor.co.il/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wfs110
-  url: https://coronamap.taldor.co.il/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
+description: Former Taldor GeoServer catalog of COVID-19 geographic layers. The host
+  did not respond at last review.
 id: coronamaptaldorcoil
 langs:
 - id: HE
@@ -50,7 +44,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - COVID-19
 - GeoServer
@@ -68,4 +62,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005238
+uid: cdi00035336

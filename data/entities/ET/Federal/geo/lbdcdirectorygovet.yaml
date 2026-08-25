@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,31 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: GeoNode geoportal of the Ministry of Innovation and Technology (LBDC
-  directory) publishing national geospatial datasets, documents, and OGC services.
-endpoints:
-- type: geonode:datasets
-  url: http://lbdcdirectory.gov.et/api/datasets/
-- type: geonode:documents
-  url: http://lbdcdirectory.gov.et/api/documents/
-- type: wms111
-  url: http://lbdcdirectory.gov.et/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wfs110
-  url: http://lbdcdirectory.gov.et/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: http://lbdcdirectory.gov.et/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: csw202
-  url: http://lbdcdirectory.gov.et/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: http://lbdcdirectory.gov.et/catalogue/csw?mode=oaipmh&verb=Identify
-  version: '2.0'
-- type: opensearch
-  url: http://lbdcdirectory.gov.et/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
-  version: '1.0'
+description: Former GeoNode geoportal of the Ministry of Innovation and Technology
+  (LBDC directory). DNS for lbdcdirectory.gov.et no longer resolves.
 id: lbdcdirectorygovet
 langs:
 - id: EN
@@ -53,7 +30,7 @@ owner:
       id: ET
       name: Ethiopia
     level: 20
-  name: Ethiopian Ministry of Innovation and Technology
+  name: Ministry of Innovation and Technology
   type: Central government
 properties:
   has_doi: false
@@ -67,41 +44,16 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 tags:
-- Open Data
-- Data Portal
+- geospatial
+- government
 - Ethiopia
-- Open Government Data
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
-- id: TRAN
-  name: Transport
-  type: eudatatheme
-- id: AGRI
-  name: Agriculture, fisheries, forestry and food
-  type: eudatatheme
-- id: SOCI
-  name: Population and society
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: Location
   name: Location
-  type: iso19115
-- id: Elevation
-  name: Elevation
-  type: iso19115
-- id: Society
-  name: Society
-  type: iso19115
-- id: Environment
-  name: Environment
-  type: iso19115
-- id: Economy
-  name: Economy
   type: iso19115
 uid: cdi00027581

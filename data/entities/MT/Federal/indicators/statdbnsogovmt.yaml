@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
+- indicator
 coverage:
 - location:
     country:
@@ -12,30 +13,31 @@ coverage:
       name: Malta
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Your gateway to Malta's official statistics
+description: IRIS is the National Statistics Office of Malta dissemination portal,
+  built on .Stat Suite, providing official statistics through an interactive data
+  browser.
+endpoints:
+- type: rest
+  url: https://iris.nso.gov.mt/databrowserhub/api/core/
 id: statdbnsogovmt
 langs:
 - id: EN
   name: English
-endpoints:
-- type: statsuite:search
-  url: https://search-statdb.nso.gov.mt/api/search
-link: https://statdb.nso.gov.mt
-name: Malta NSO Statistical database
+link: https://iris.nso.gov.mt/databrowser
+name: IRIS statistical database
 owner:
-  link: https://www.nso.gov.mt
+  link: https://nso.gov.mt
   location:
     country:
       id: MT
       name: Malta
     level: 20
-  name: Malta National statistics office
+  name: National Statistics Office
   type: Central government
 properties:
   has_doi: false
-identifiers: []
 rights:
   license_id: null
   license_name: null
@@ -54,13 +56,6 @@ tags:
 - official statistics
 - Malta
 - NSO
-- .Stat Suite
-- open data
-- public sector
-- national statistics
-- statistical database
-- data portal
-- official data
 topics:
 - id: SOCI
   name: Population and society
@@ -71,37 +66,10 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: EDUC
-  name: Education, culture and sport
-  type: eudatatheme
-- id: HEAL
-  name: Health
-  type: eudatatheme
-- id: TRAN
-  name: Transport
-  type: eudatatheme
-- id: AGRI
-  name: Agriculture, fisheries, forestry and food
-  type: eudatatheme
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
 - id: Society
   name: Society
   type: iso19115
 - id: Economy
   name: Economy
-  type: iso19115
-- id: Environment
-  name: Environment
-  type: iso19115
-- id: Health
-  name: Health
-  type: iso19115
-- id: Boundaries
-  name: Boundaries
   type: iso19115
 uid: cdi00004767

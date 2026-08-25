@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,19 +15,10 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Dataset containing information about mineral resources and mines in Hungary.
-endpoints:
-- type: csw202
-  url: https://mbfsz.gov.hu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://mbfsz.gov.hu/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://mbfsz.gov.hu/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
-- type: sitemap
-  url: http://www.mbfsz.gov.hu/sitemap.xml
+description: Former GeoNetwork catalogue of the Mining and Geological Survey of Hungary
+  (MBFSZ). The mbfsz.gov.hu website was shut down on 1 February 2025 after MBFSZ was
+  merged into the Supervisory Authority for Regulated Activities (SZTFH). Geological
+  metadata now lives at geonetwork.geoservices.hu.
 id: mbfszgovhu
 langs:
 - id: HU
@@ -35,13 +26,13 @@ langs:
 link: https://mbfsz.gov.hu/geonetwork
 name: Hungarian Interactive Geothermal Information Platform
 owner:
-  link: https://mbfsz.gov.hu
+  link: https://sztfh.hu
   location:
     country:
       id: HU
       name: Hungary
     level: 20
-  name: Mining and Geological Survey of Hungary
+  name: Supervisory Authority for Regulated Activities (SZTFH)
   type: Central government
 properties:
   has_doi: true
@@ -55,7 +46,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
 - government

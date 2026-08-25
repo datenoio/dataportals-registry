@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,21 +14,17 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: OpenDataSoft portal at ppival.opendatasoft.com, previously attributed
-  to the African Centre for Media Excellence. Identity of the production owner is
-  uncertain; kept as a Uganda-linked record pending verification.
-endpoints:
-- type: opendatasoft
-  url: https://ppival.opendatasoft.com/api
-- type: sitemap
-  url: https://ppival.opendatasoft.com/sitemap.xml
+description: Former OpenDataSoft / Huwise tenant at ppival.opendatasoft.com. The domain
+  returned HTTP 404 (domain not found) on 24 August 2026. Previously filed under the
+  African Centre for Media Excellence; production owner was never confirmed.
 id: ppivalopendatasoftcom
 langs:
 - id: EN
   name: English
 link: https://ppival.opendatasoft.com
-name: African Centre for Media Excellence Open Data Portal
+name: PPI VAL OpenDataSoft portal (defunct)
 owner:
+  link: https://acme-ug.org
   location:
     country:
       id: UG
@@ -36,20 +32,19 @@ owner:
     level: 20
   name: African Centre for Media Excellence
   type: Civil society
-  link: https://acme-ug.org
 properties:
   has_doi: false
 rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: https://ppival.opendatasoft.com/terms/privacy-policy/
+  privacy_policy_url: null
   rights_type: granular
-  tos_url: https://ppival.opendatasoft.com/terms/terms-and-conditions/
+  tos_url: null
 software:
   id: opendatasoft
   name: OpenDataSoft
-status: active
+status: inactive
 tags:
 - open data
 - uganda
@@ -57,4 +52,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00002448
+uid: cdi00034930

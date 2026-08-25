@@ -14,24 +14,25 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: GBIF Integrated Publishing Toolkit for Togo, managed by Université de
-  Lomé. Publishes national biodiversity occurrence datasets, including herbarium collections.
+description: GBIF Integrated Publishing Toolkit for Togo, operated with Université
+  de Lomé. Publishes national biodiversity occurrence datasets, including herbarium
+  collections and other taxonomic resources, for indexing by GBIF.
 endpoints:
 - type: dcat:ttl
-  url: http://ipt-togo.gbif.fr/dcat
+  url: https://ipt-togo.gbif.fr/dcat
 - type: ipt:dataset
-  url: http://ipt-togo.gbif.fr/inventory/dataset
+  url: https://ipt-togo.gbif.fr/inventory/dataset
 - type: rss
-  url: http://ipt-togo.gbif.fr/rss.do
+  url: https://ipt-togo.gbif.fr/rss.do
   version: '2.0'
 id: ipttogogbiffr
 langs:
 - id: FR
   name: French
-link: http://ipt-togo.gbif.fr
+link: https://ipt-togo.gbif.fr
 name: GBIF TOGO
 owner:
-  link: https://www.univ-lome.tg
+  link: https://univ-lome.tg
   location:
     country:
       id: TG
@@ -48,6 +49,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota

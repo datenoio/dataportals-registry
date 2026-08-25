@@ -1,0 +1,76 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-NIR
+      name: Northern Ireland
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: University of Ulster data repository catalog
+endpoints:
+- type: oaipmh20
+  url: https://pure.ulster.ac.uk/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://pure.ulster.ac.uk/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://pure.ulster.ac.uk/sitemap/datasets.xml
+- type: pure:export_excel
+  url: https://pure.ulster.ac.uk/en/datasets/?export=xls
+- type: sitemap
+  url: https://pure.ulster.ac.uk/sitemap.xml
+id: pureulsteracuk
+identifiers:
+- id: opendoar
+  url: https://v2.sherpa.ac.uk/id/repository/1962
+  value: '1962'
+langs:
+- id: EN
+  name: English
+link: https://pure.ulster.ac.uk
+name: Ulster University’s Research Portal
+owner:
+  link: https://www.ulster.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-NIR
+      name: Northern Ireland
+  name: Ulster University
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00002213

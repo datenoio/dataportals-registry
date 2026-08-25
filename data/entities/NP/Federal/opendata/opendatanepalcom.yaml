@@ -14,16 +14,19 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: Open data portal for Nepal, cataloging datasets from various sectors.
+description: Civil-society open data portal run by Open Knowledge Nepal. A Portal.js
+  frontend at opendatanepal.com catalogs public datasets on governance, health, education,
+  environment, and the economy; harvest uses the CKAN Action API on api.opendatanepal.com
+  (about 380 packages).
 endpoints:
 - type: ckan
-  url: https://opendatanepal.com/api/3
+  url: https://api.opendatanepal.com/api/3
   version: '3'
 - type: ckan:package-search
-  url: https://opendatanepal.com/api/3/action/package_search
+  url: https://api.opendatanepal.com/api/3/action/package_search
   version: '3'
 - type: ckan:package-list
-  url: https://opendatanepal.com/api/3/action/package_list
+  url: https://api.opendatanepal.com/api/3/action/package_list
   version: '3'
 id: opendatanepalcom
 identifiers:
@@ -39,7 +42,7 @@ langs:
 link: https://opendatanepal.com
 name: Open Data Nepal
 owner:
-  link: https://opendatanepal.com
+  link: https://oknp.org
   location:
     country:
       id: NP
@@ -60,19 +63,21 @@ software:
 status: active
 tags:
 - has_api
-- Open Data
+- open data
+- civil society
 - Nepal
-- Data Catalog
-- CKAN
 topics:
-- id: ENER
-  name: Energy
-  type: eudatatheme
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
 - id: SOCI
   name: Population and society
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENER
+  name: Energy
   type: eudatatheme
 - id: Society
   name: Society

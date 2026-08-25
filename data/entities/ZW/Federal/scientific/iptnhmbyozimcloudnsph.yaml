@@ -14,9 +14,14 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Natural History Museum of Zimbabwe. scientific data repository. powered
-  by IPT The Integrated Publishing Toolkit. accessible at ipt.nhmbyozim.cloudns.ph:8080.
+description: Latest GBIF IPT hostname for the Natural History Museum of Zimbabwe
+  (Bulawayo), registered on ipt.nhmbyozim.cloudns.ph:8080. The host refused connections
+  on 24 August 2026. GBIF still lists 21 published datasets for this publisher.
 endpoints:
+- type: dcat:ttl
+  url: http://ipt.nhmbyozim.cloudns.ph:8080/dcat
+- type: ipt:dataset
+  url: http://ipt.nhmbyozim.cloudns.ph:8080/inventory/dataset
 - type: rss
   url: http://ipt.nhmbyozim.cloudns.ph:8080/rss.do
   version: '2.0'
@@ -25,9 +30,9 @@ langs:
 - id: EN
   name: English
 link: http://ipt.nhmbyozim.cloudns.ph:8080
-name: Natural History Museum of Zimbabwe
+name: Natural History Museum of Zimbabwe IPT
 owner:
-  link: http://naturalhistorymuseumzimbabwe.com/
+  link: https://naturalhistorymuseumzimbabwe.com/
   location:
     country:
       id: ZW
@@ -35,10 +40,19 @@ owner:
     level: 20
   name: Natural History Museum of Zimbabwe
   type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: deprecated
 tags:
 - GBIF
 - IPT

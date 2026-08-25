@@ -18,7 +18,8 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: Catalog for spatially referenced resources managed by Maribor municipality.
+description: GeoNetwork metadata catalogue of the City of Maribor for municipal spatial
+  datasets, maps, and related OGC services.
 endpoints:
 - type: geonetwork:query
   url: https://prostor.maribor.si/geonetwork/srv/eng/q
@@ -36,6 +37,8 @@ endpoints:
   version: '2.0'
 id: prostormariborsi
 langs:
+- id: SL
+  name: Slovenian
 - id: EN
   name: English
 link: https://prostor.maribor.si/geonetwork
@@ -50,8 +53,8 @@ owner:
     subregion:
       id: SI-070
       name: Maribor
-  name: Mestne občine Maribor
-  type: Regional government
+  name: Mestna občina Maribor
+  type: Local government
 properties:
   has_doi: true
   transferable_location: true

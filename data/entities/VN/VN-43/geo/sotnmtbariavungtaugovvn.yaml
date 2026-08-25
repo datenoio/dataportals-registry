@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: VN-43
       name: Bà Rịa - Vũng Tàu
-description: Geoportal. managed by Local Government of Rest API. powered by ArcGIS
-  Server. accessible at sotnmt.baria-vungtau.gov.vn:8080.
+description: ArcGIS Server REST catalog of the Bà Rịa - Vũng Tàu Department of Natural
+  Resources and Environment (Sở TNMT), publishing provincial spatial data.
 endpoints:
 - type: arcgis:rest:info
   url: http://sotnmt.baria-vungtau.gov.vn:8080/arcgis/rest/info?f=pjson
@@ -38,9 +38,9 @@ langs:
 - id: VN
   name: Vietnamese
 link: http://sotnmt.baria-vungtau.gov.vn:8080/arcgis/rest/services
-name: Local Government of Rest API Geoportal
+name: Ba Ria - Vung Tau DONRE ArcGIS geoportal
 owner:
-  link: http://baria-vungtau.gov.vn
+  link: https://baria-vungtau.gov.vn
   location:
     country:
       id: VN
@@ -49,8 +49,8 @@ owner:
     subregion:
       id: VN-43
       name: Bà Rịa - Vũng Tàu
-  name: Local Government of Rest API
-  type: Local government
+  name: Ba Ria - Vung Tau Department of Natural Resources and Environment
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -65,17 +65,23 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- GIS
-- Rest API
-- services
+- ArcGIS
+- geospatial
+- environment
+- government
+- Vietnam
+- has_api
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
-  type: iso19115
-uid: temp00001097
+uid: cdi00034913

@@ -14,29 +14,36 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Statistical database of Armenia providing data tables and indicators
-  across multiple domains.
+description: Official PxWeb statistical database of the Statistical Committee of the
+  Republic of Armenia, publishing data tables and indicators across population, economy,
+  agriculture, environment, and other domains.
 endpoints:
 - type: pxwebapi
   url: https://statbank.armstat.am/api/v1/en/
   version: '1'
+- type: pxwebapi
+  url: https://statbank.armstat.am/api/v1/hy/
+  version: '1'
 id: statbankarmstatam
 langs:
+- id: HY
+  name: Armenian
 - id: EN
   name: English
 link: https://statbank.armstat.am
-name: ArmStat Statbank
+name: ArmStatBank
 owner:
-  link: https://armstat.am
+  link: https://www.armstat.am
   location:
     country:
       id: AM
       name: Armenia
     level: 20
-  name: ArmStat
+  name: Statistical Committee of the Republic of Armenia
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -51,14 +58,11 @@ status: active
 tags:
 - statistics
 - government
-- Armenia
-- official data
+- official statistics
+- has_api
 topics:
 - id: SOCI
   name: Population and society
-  type: eudatatheme
-- id: ECON
-  name: Economy and finance
   type: eudatatheme
 - id: ECON
   name: Economy and finance
@@ -71,9 +75,6 @@ topics:
   type: eudatatheme
 - id: TRAN
   name: Transport
-  type: eudatatheme
-- id: AGRI
-  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
 - id: Economy
   name: Economy

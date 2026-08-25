@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: BN
+      name: Brunei
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: IMF e-GDDS National Summary Data Page for Brunei, hosted by Department
+  of Economic Planning and Statistics. Disseminates macroeconomic and financial summary
+  indicators with SDMX downloads linked from the IMF Dissemination Standards Bulletin
+  Board.
+endpoints:
+- type: imfnsdp:catalog
+  url: https://deps.mofe.gov.bn/nsdp/
+id: nsdpdepsmofegovbn
+langs:
+- id: MS
+  name: Malay
+- id: EN
+  name: English
+link: https://deps.mofe.gov.bn/nsdp/
+name: Brunei National Summary Data Page
+owner:
+  link: https://deps.mofe.gov.bn
+  location:
+    country:
+      id: BN
+      name: Brunei
+    level: 20
+  name: Department of Economic Planning and Statistics
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+software:
+  id: imfnsdp
+  name: IMF National Summary Data Page
+status: active
+tags:
+- NSDP
+- IMF
+- e-GDDS
+- statistics
+- government
+- official statistics
+- SDMX
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00037419

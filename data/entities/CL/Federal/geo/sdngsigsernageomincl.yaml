@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,38 +15,23 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: The website https://sdngsig.sernageomin.cl is owned by SERNAGEOMIN, which
-  stands for the Servicio Nacional de Geología y Minería (National Service of Geology
-  and Mining) in Chile. This governmental agency is responsible for geological and
-  mining activities, including the management and dissemination of geospatial data
-  related to geological resources and mining operations in the country.
-endpoints:
-- type: arcgis:rest:info
-  url: https://sdngsig.sernageomin.cl/gissdng/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://sdngsig.sernageomin.cl/gissdng/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://sdngsig.sernageomin.cl/gissdng/services?wsdl
-- type: arcgis:sitemap
-  url: https://sdngsig.sernageomin.cl/gissdng/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://sdngsig.sernageomin.cl/gissdng/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://sdngsig.sernageomin.cl/gissdng/rest/services?f=kmz
+description: ArcGIS Server REST services of SERNAGEOMIN (Chile's National Geology
+  and Mining Service) for geological and mining geospatial data. The catalog host
+  was unreachable on 25 August 2026.
 id: sdngsigsernageomincl
 langs:
 - id: ES
   name: Spanish
 link: https://sdngsig.sernageomin.cl/gissdng/rest/services
-name: SERVICES REST SDNGSIG - Sernageomin
+name: SDNG SIG SERNAGEOMIN
 owner:
-  link: https://www.sernageomin.cl
+  link: https://www.sernageomin.gob.cl
   location:
     country:
       id: CL
       name: Chile
     level: 20
-  name: National Service of Geology and Mining
+  name: Servicio Nacional de Geología y Minería (SERNAGEOMIN)
   type: Central government
 properties:
   has_doi: false
@@ -60,7 +45,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - geology
 - chile

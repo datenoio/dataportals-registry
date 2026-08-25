@@ -1,6 +1,5 @@
 access_mode:
 - open
-- limited
 api: true
 api_status: active
 catalog_type: Microdata catalog
@@ -15,31 +14,33 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Online data catalog offering detailed views and access to datasets from
-  various Swiss and European social science research projects, including the European
-  Social Survey (Swiss data), MOSAiCH, Eurobarometer (Swiss data), election studies
-  (Selects, VOXIT, VOTO), and the Swiss Household Panel.
+description: Data Repository making data from scientific studies collected or funded
+  by the Swiss Federal Food Safety and Veterinary Office (FSVO) available for further
+  research.
 endpoints:
 - type: nada:catalog-search
-  url: https://devisu.forscenter.ch/index.php/api/catalog/search
-id: devisuforscenterch
+  url: https://www.studydata.blv.admin.ch/index.php/api/catalog/search
+id: wwwstudydatablvadminch
 langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
 - id: FR
   name: French
-link: https://devisu.forscenter.ch/index.php
-name: De Visu - Data Catalog - FORS
+link: https://www.studydata.blv.admin.ch
+name: FSVO Data Repository
 owner:
-  link: https://forscenter.ch
+  link: https://www.blv.admin.ch
   location:
     country:
       id: CH
       name: Switzerland
     level: 20
-  name: FORS is the Swiss Centre of Expertise in the Social Sciences.
+  name: Federal Food Safety and Veterinary Office
   type: Central government
 properties:
   has_doi: false
-  transferable_topics: true
 rights:
   license_id: null
   license_name: null
@@ -52,16 +53,10 @@ software:
   name: NADA
 status: active
 tags:
-- government
-- has_api
-- microdata
-- social sciences
-- survey data
-- Switzerland
-- research data
-- European Social Survey
-- MOSAiCH
-- Swiss Household Panel
+- nutrition
+- salt consumption
+- public health
+- epidemiology
 topics:
 - id: SOCI
   name: Population and society
@@ -69,4 +64,13 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-uid: cdi00000339
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00004807

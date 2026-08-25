@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,21 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Maritime and hydrographic datasets provided via ArcGIS REST Services
-  by the Danish Geodata Agency.
-endpoints:
-- type: arcgis:rest:info
-  url: https://maritime.gst.dk/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://maritime.gst.dk/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://maritime.gst.dk/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://maritime.gst.dk/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://maritime.gst.dk/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://maritime.gst.dk/arcgis/rest/services?f=kmz
+description: Former ArcGIS REST catalogue of the Danish Geodata Agency (GST) at
+  maritime.gst.dk. The REST directory now redirects to the GST homepage.
 id: maritimegstdk
 langs:
 - id: DA
@@ -37,7 +24,7 @@ langs:
 link: https://maritime.gst.dk/arcgis/rest/services
 name: Danish Geodata Agency ArcGIS Services Catalog
 owner:
-  link: https://maritime.gst.dk/arcgis/rest/services
+  link: https://gst.dk/
   location:
     country: *id001
     level: 20
@@ -55,7 +42,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - arcgisserver
 - Denmark
@@ -84,4 +71,4 @@ topics:
 - id: Structure
   name: Structure
   type: iso19115
-uid: temp00005881
+uid: cdi00035574

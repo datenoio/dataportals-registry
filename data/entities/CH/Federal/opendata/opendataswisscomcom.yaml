@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,21 +14,16 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Swisscom Open Data provides developers with anonymous data from its areas
-  of activity, to promote innovation. The website contains 39 datasets from four areas
-  – communication, mobility, network, and plants. Via the use of filters, such as
-  year and topic, users can find the datasets of interest.
-endpoints:
-- type: opendatasoft
-  url: https://opendata.swisscom.com/api
-- type: sitemap
-  url: https://opendata.swisscom.com/sitemap.xml
+description: Former Swisscom Open Data portal at opendata.swisscom.com, a duplicate
+  hostname of data.swisscom.com. Neither hostname resolves.
 id: opendataswisscomcom
 langs:
 - id: EN
   name: English
-- id: EN
-  name: English
+- id: DE
+  name: German
+- id: FR
+  name: French
 link: https://opendata.swisscom.com
 name: Swisscom Open Data Portal catalog
 owner:
@@ -52,7 +47,7 @@ rights:
 software:
   id: opendatasoft
   name: OpenDataSoft
-status: active
+status: inactive
 tags:
 - telecommunications
 - statistics

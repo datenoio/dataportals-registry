@@ -18,12 +18,16 @@ coverage:
     subregion:
       id: VN-SG
       name: Hồ Chí Minh
-description: Geoportal for spatial data, Ho Chi Minh City, Vietnam
+description: GeoNetwork geoportal of the Ho Chi Minh City Department of Natural Resources and Environment
+  (DONRE / STNMT), publishing city spatial metadata and GIS datasets.
 endpoints:
 - type: geonetwork:query
   url: https://geoportal-stnmt.tphcm.gov.vn/geonetwork/srv/eng/q
-- type: geonetwork
+- type: geonetwork:api
   url: https://geoportal-stnmt.tphcm.gov.vn/geonetwork/srv/api
+- type: csw202
+  url: https://geoportal-stnmt.tphcm.gov.vn/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
 id: geoportalstnmttphcmgovvn
 langs:
 - id: VN
@@ -31,7 +35,7 @@ langs:
 link: https://geoportal-stnmt.tphcm.gov.vn/geonetwork
 name: Department of Natural Resources and Environment of Ho Chi Minh City Geoportal
 owner:
-  link: http://www.donre.hochiminhcity.gov.vn/
+  link: https://stnmt.tphcm.gov.vn
   location:
     country:
       id: VN
@@ -40,8 +44,8 @@ owner:
     subregion:
       id: VN-SG
       name: Hồ Chí Minh
-  name: Department of Natural Resources and Environment of Ho Chi Minh City
-  type: Regional government
+  name: Ho Chi Minh City Department of Natural Resources and Environment
+  type: Local government
 properties:
   has_doi: true
   transferable_topics: true

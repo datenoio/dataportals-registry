@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -20,6 +20,9 @@ coverage:
       name: Tennessee
 description: ExploreTNhealth community health needs assessment platform from the Tennessee
   Hospital Association, with ZIP-level health rankings and a CARES SparkMap Map Room.
+endpoints:
+- type: sparkmap:catalog
+  url: https://exploretnhealth.org/
 id: exploretnhealthorg
 langs:
 - id: EN

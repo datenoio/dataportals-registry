@@ -14,13 +14,16 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: PX-Web 2017 v1 Data Series - Banka Slovenije
+description: PxWeb statistical database of Banka Slovenije with macroeconomic, monetary,
+  financial, and related official time series available through the PxWeb API.
 endpoints:
 - type: pxwebapi
   url: https://px.bsi.si/api/v1/en/
   version: '1'
 id: pxbsisi
 langs:
+- id: SL
+  name: Slovenian
 - id: EN
   name: English
 link: https://px.bsi.si
@@ -57,7 +60,10 @@ tags:
 - XLSX
 - JSON-stat
 topics:
-- id: SOCI
-  name: Population and society
+- id: ECON
+  name: Economy and finance
   type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
 uid: cdi00010187

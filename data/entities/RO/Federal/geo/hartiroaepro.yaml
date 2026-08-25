@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,34 +14,23 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: ArcGIS REST services endpoint for map and data services provided by the
-  ROAEP (Romanian Agency for Environmental Protection)
-endpoints:
-- type: arcgis:rest:services
-  url: http://harti.roaep.ro/ArcGIS/rest/services?f=pjson
-- type: arcgis:soap
-  url: http://harti.roaep.ro/ArcGIS/services?wsdl
-- type: arcgis:sitemap
-  url: http://harti.roaep.ro/ArcGIS/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: http://harti.roaep.ro/ArcGIS/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: http://harti.roaep.ro/ArcGIS/rest/services?f=kmz
+      name: Eastern Europe
+description: Former Permanent Electoral Authority (AEP) ArcGIS REST map services at
+  harti.roaep.ro. The host has DNS but the ArcGIS endpoint no longer accepts connections.
 id: hartiroaepro
 langs:
 - id: RO
   name: Romanian
 link: http://harti.roaep.ro/ArcGIS/rest/services
-name: Romanian Agency for Environmental Protection (ROAEP) Geoportal
+name: AEP electoral maps ArcGIS Server
 owner:
-  link: http://harti.roaep.ro/
+  link: https://www.roaep.ro
   location:
     country:
       id: RO
       name: Romania
     level: 20
-  name: Romanian Agency for Environmental Protection (ROAEP)
+  name: Permanent Electoral Authority (AEP)
   type: Central government
 properties:
   has_doi: false
@@ -55,20 +44,21 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
+- elections
 - ArcGIS
-- REST
 - maps
-- environmental protection
+- government
+- inactive
 topics:
-- id: Location
-  name: Location
-  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Society
+  name: Society
   type: iso19115
-uid: temp00005808
+uid: cdi00035044

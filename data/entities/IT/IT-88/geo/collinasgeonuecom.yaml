@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: IT-88
+      name: Sardegna
+description: GeoNetwork spatial catalogue of the Municipality of Collinas (Sardinia),
+  hosted on the GeoNue platform.
+id: collinasgeonuecom
+langs:
+- id: IT
+  name: Italian
+link: https://collinas.geonue.com/geonetwork
+name: Comune di Collinas GeoNetwork
+owner:
+  link: https://www.comune.collinas.su.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-88
+      name: Sardegna
+  name: Comune di Collinas
+  type: Local government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- catalogue
+- geonetwork
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: temp00003941
+endpoints:
+- type: csw202
+  url: https://collinas.geonue.com/geonetwork/srv/eng/csw
+  version: 2.0.2

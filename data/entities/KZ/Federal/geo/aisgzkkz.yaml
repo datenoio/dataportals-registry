@@ -15,7 +15,9 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: There is no full ArcGIS rest service, instead proxy used. https://aisgzk.kz/aisgzk/Proxy/aisgzkTopo2/MapServer
+description: Public cadastral map viewer of the Automated Information System of the
+  State Land Cadastre (AIS GZK). Map services are exposed through a proxy rather
+  than a full ArcGIS REST directory.
 endpoints:
 - type: arcgis:rest:services
   url: https://aisgzk.kz/arcgis/rest/services?f=pjson

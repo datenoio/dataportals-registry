@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
+- microdata
 coverage:
 - location:
     country:
@@ -15,8 +16,8 @@ coverage:
       id: '011'
       name: Western Africa
 description: National Data Archive (ANADO) of Institut National de la Statistique
-  du Niger. NADA catalog of household surveys, censuses, and other microdata with
-  DDI metadata and documented access conditions.
+  du Niger. NADA catalog of 72 household surveys, censuses, and other microdata studies
+  with DDI metadata and documented access conditions.
 endpoints:
 - type: nada:catalog-search
   url: https://www.stat-niger.org/anado/index.php/api/catalog/search
@@ -27,7 +28,7 @@ langs:
 - id: FR
   name: French
 link: https://www.stat-niger.org/anado
-name: ANADO (Stat-Niger catalog)
+name: Archives Nationales des Données (ANADO) - INS Niger
 owner:
   link: https://ins.ne
   location:
@@ -40,6 +41,7 @@ owner:
 properties:
   has_doi: false
   is_national: true
+  dataset_count_reported: 72
 rights:
   license_id: null
   license_name: null
@@ -57,6 +59,8 @@ tags:
 - microdata
 - government
 - has_api
+- census
+- survey
 - Niger
 topics:
 - id: SOCI

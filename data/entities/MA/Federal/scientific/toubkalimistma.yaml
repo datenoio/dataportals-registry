@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -14,13 +15,19 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Toubkal is Morocco's national DSpace catalog of theses and dissertations,
+description: Toubkal is Morocco's national DSpace 9 catalog of theses and dissertations,
   hosted by IMIST (CNRST). It aggregates deposits from public universities, including
   Université Ibn Zohr which operates a faculty in Laâyoune.
 endpoints:
 - type: dspace
   url: https://toubkal.imist.ma/server/api
   version: '9'
+- type: dspace:objects
+  url: https://toubkal.imist.ma/server/api/discover/search/objects
+  version: '9'
+- type: oaipmh20
+  url: https://toubkal.imist.ma/server/oai/request?verb=Identify
+  version: '2.0'
 id: toubkalimistma
 langs:
 - id: AR
@@ -59,7 +66,6 @@ tags:
 - institutional repository
 - theses
 - open access
-- Morocco
 topics:
 - id: TECH
   name: Science and technology

@@ -8,10 +8,13 @@ coverage:
     country:
       id: DO
       name: Republica Dominicana
-    level: 20
+    level: 30
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
+    subregion:
+      id: DO-25
+      name: Santiago
 description: Geoportal of the Municipal Directorate of Territorial Planning (POT).
   Ayuntamiento del Municipio de Santiago, Dominican Republic. GeoNode with layers,
   maps and documents for territorial planning.
@@ -96,7 +99,7 @@ owner:
       name: Santiago
   name: Ayuntamiento del Municipio de Santiago
   type: Local government
-  link: https://gob.do
+  link: https://ayuntamientosantiago.gob.do
 software:
   id: geonode
   name: GeoNode
@@ -115,9 +118,12 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Planning / Cadastre
+  name: Planning / Cadastre
   type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 content_types:
 - dataset
 - map_layer

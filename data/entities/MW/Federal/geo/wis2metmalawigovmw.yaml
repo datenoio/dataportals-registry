@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,16 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: WIS 2.0 in a box provides a platform with the capabilities for centres
-  to integrate their data holdings and publish them to the WMO Information System
-  with a plug and play capability supporting data publishing, discovery and access
-endpoints:
-- type: pygeoapi:openapi
-  url: https://wis2.metmalawi.gov.mw/oapi/openapi
-  version: '1.0'
-- type: pygeoapi:collections
-  url: https://wis2.metmalawi.gov.mw/oapi/collections/?f=json
-  version: '1.0'
+description: Former WIS 2.0 in a box node of the Department of Climate Change and
+  Meteorological Services. wis2.metmalawi.gov.mw no longer resolves.
 id: wis2metmalawigovmw
 langs:
 - id: EN
@@ -52,7 +44,7 @@ rights:
 software:
   id: wis20box
   name: Wis 2.0 Box
-status: active
+status: inactive
 tags:
 - meteorology
 - climate

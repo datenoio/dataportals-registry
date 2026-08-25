@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,18 +14,9 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Public CKAN catalog of the Nigeria Centre for Disease Control, including
-  the national health facility registry and infectious-disease surveillance datasets.
-endpoints:
-- type: ckan
-  url: https://dataportal.ncdc.gov.ng/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://dataportal.ncdc.gov.ng/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://dataportal.ncdc.gov.ng/api/3/action/package_list
-  version: '3'
+description: Former public CKAN catalog of the Nigeria Centre for Disease Control,
+  including the national health facility registry and infectious-disease surveillance
+  datasets. The hostname dataportal.ncdc.gov.ng currently times out.
 id: dataportalncdcgovng
 langs:
 - id: EN
@@ -54,9 +45,8 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
-- has_api
 - health
 - government
 - open data

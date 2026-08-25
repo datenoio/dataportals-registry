@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
+- microdata
 coverage:
 - location:
     country:
@@ -15,8 +16,8 @@ coverage:
       id: '011'
       name: Western Africa
 description: NADA microdata catalog of the Plateforme Nationale d'Information pour
-  la Nutrition (PNIN). Documents nutrition, food-security, and related household surveys
-  for Niger with DDI metadata.
+  la Nutrition (PNIN). Documents 29 nutrition, food-security, and related household
+  surveys for Niger with DDI metadata.
 endpoints:
 - type: nada:catalog-search
   url: https://pnin-niger.org/anadonutrition/index.php/api/catalog/search
@@ -27,7 +28,7 @@ langs:
 - id: FR
   name: French
 link: https://pnin-niger.org/anadonutrition/index.php
-name: Catalogue de données central - PNIN NIGER
+name: Catalogue de données central - PNIN Niger
 owner:
   link: https://pnin-niger.org
   location:
@@ -40,6 +41,7 @@ owner:
 properties:
   has_doi: false
   is_national: true
+  dataset_count_reported: 29
 rights:
   license_id: null
   license_name: null
@@ -64,6 +66,9 @@ topics:
   type: eudatatheme
 - id: SOCI
   name: Population and society
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
 - id: Health
   name: Health

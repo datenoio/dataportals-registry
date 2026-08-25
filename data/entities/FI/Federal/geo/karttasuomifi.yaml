@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: National geoportal providing geospatial services and map data for Finland,
-  part of the Suomi.fi service network.
+description: Former GeoServer host kartta.suomi.fi, previously associated with the
+  Suomi.fi service network. The hostname no longer resolves. National map layers are
+  published on Paikkatietoikkuna (kartta.paikkatietoikkuna.fi).
 id: karttasuomifi
 langs:
 - id: FI
@@ -24,13 +25,13 @@ langs:
 link: http://kartta.suomi.fi/geoserver
 name: Kartta Suomi.fi
 owner:
-  link: http://kartta.suomi.fi/geoserver
+  link: https://www.suomi.fi
   location:
     country:
       id: FI
       name: Finland
     level: 20
-  name: Kartta
+  name: Digital and Population Data Services Agency
   type: Central government
 properties:
   has_doi: false
@@ -44,7 +45,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - Finland
 - GeoServer

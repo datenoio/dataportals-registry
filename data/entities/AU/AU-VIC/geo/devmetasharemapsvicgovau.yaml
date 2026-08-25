@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -27,29 +27,12 @@ description: Development environment for GeoNetwork-based geospatial data catalo
   APIs for programmatic access. Designed for testing and development purposes before
   deployment to production environments, facilitating quality assurance and validation
   of geospatial data resources.
-endpoints:
-- type: geonetwork:query
-  url: https://dev-metashare.maps.vic.gov.au/geonetwork/srv/eng/q
-- type: geonetwork:records
-  url: https://dev-metashare.maps.vic.gov.au/geonetwork/srv/api/records
-- type: openapi
-  url: https://dev-metashare.maps.vic.gov.au/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: https://dev-metashare.maps.vic.gov.au/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://dev-metashare.maps.vic.gov.au/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://dev-metashare.maps.vic.gov.au/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
 id: devmetasharemapsvicgovau
 langs:
 - id: EN
   name: English
 link: https://dev-metashare.maps.vic.gov.au/geonetwork
-name: Government of Victoria Geoportal
+name: Victoria MetaShare GeoNetwork (development)
 owner:
   link: https://dev-metashare.maps.vic.gov.au/geonetwork
   location:
@@ -80,7 +63,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
 - government

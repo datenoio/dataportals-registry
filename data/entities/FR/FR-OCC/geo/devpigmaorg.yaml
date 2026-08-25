@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,10 +20,6 @@ coverage:
       name: Occitanie
 description: GeoServer data catalog for geospatial datasets managed by PIGMA platform.
   Development instance providing access to geospatial data layers and web services.
-endpoints:
-- type: wms130
-  url: https://dev.pigma.org/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
 id: devpigmaorg
 langs:
 - id: EN
@@ -54,7 +50,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - geoserver
 - geospatial

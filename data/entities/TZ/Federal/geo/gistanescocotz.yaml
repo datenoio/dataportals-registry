@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,18 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: GIS services catalog from TANESCO, Tanzania's national electricity provider
-endpoints:
-- type: arcgis:portals:self
-  url: https://gis.tanesco.co.tz/portal/sharing/rest/portals/self?f=pjson
-- type: arcgis:rest:info
-  url: https://gis.tanesco.co.tz/server/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://gis.tanesco.co.tz/server/rest/services?f=pjson
-- type: arcgis:rest:info
-  url: https://gis.tanesco.co.tz/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://gis.tanesco.co.tz/arcgis/rest/services?f=pjson
+description: Historical ArcGIS Server REST catalog of the Tanzania Electric Supply
+  Company (TANESCO). The gis.tanesco.co.tz hostname no longer resolves (24 August
+  2026).
 id: gistanescocotz
 langs:
 - id: EN
@@ -34,13 +25,13 @@ langs:
 link: https://gis.tanesco.co.tz/server/rest/services
 name: TANESCO ArcGIS REST Services
 owner:
-  link: https://tanesco.co.tz
+  link: https://www.tanesco.co.tz
   location:
     country:
       id: TZ
       name: Tanzania
     level: 20
-  name: TANESCO
+  name: Tanzania Electric Supply Company (TANESCO)
   type: Business
 properties:
   has_doi: false
@@ -54,7 +45,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - GIS
 - electricity
@@ -69,4 +60,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-uid: temp00000703
+uid: cdi00034941

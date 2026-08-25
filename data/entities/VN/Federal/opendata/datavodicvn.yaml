@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,32 +14,22 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Open data portal managed by Vietnam national sea and island data information
-  center, providing marine and island environment and resources datasets.
-endpoints:
-- type: ckan
-  url: http://data.vodic.vn/api/3
-  version: '3'
-- type: ckan:package-search
-  url: http://data.vodic.vn/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://data.vodic.vn/api/3/action/package_list
-  version: '3'
+description: Former CKAN catalog of marine and island environment data from the Vietnam Ocean Data and
+  Information Center (VODIC). The host now serves only an Apache default page; the catalog API is gone.
 id: datavodicvn
 langs:
 - id: VN
   name: Vietnamese
 link: http://data.vodic.vn
-name: Vietnam Open Data Portal Marine and island environment and resources
+name: Vietnam Ocean Data Center open data portal
 owner:
-  link: http://www.vodic.vn
+  link: https://mae.gov.vn
   location:
     country:
       id: VN
       name: Vietnam
     level: 20
-  name: Vietnam national sea and island data information center
+  name: Vietnam Administration of Seas and Islands
   type: Central government
 properties:
   transferable_topics: true
@@ -53,26 +43,20 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
-- government
-- has_api
 - marine
-- island
 - environment
-- resources
-- open_data
-- ckan
+- CKAN
+- government
 - Vietnam
-- api_active
-- dataset
 topics:
-- id: Oceans
-  name: Oceans
-  type: iso19115
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
 - id: Environment
   name: Environment
   type: iso19115

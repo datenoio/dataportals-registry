@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -12,10 +13,10 @@ coverage:
       name: Oceania
     level: 20
     macroregion:
-      id: 009
+      id: '009'
       name: Oceania
-description: Data catalog providing access to geospatial datasets via ncWMS, presumably
-  under regional or international management.
+description: ncWMS service on the Pacific Data Hub THREDDS host, rendering Pacific
+  environmental and oceanographic NetCDF datasets as OGC Web Map Service layers.
 endpoints:
 - type: wms111
   url: https://tds.pacificdata.org/ncWMS/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.1.1
@@ -30,7 +31,7 @@ langs:
 link: https://tds.pacificdata.org/ncWMS/
 name: Pacific Data Hub - ncWMS (tds.pacificdata.org/ncWMS/)
 owner:
-  link: https://spc.int
+  link: https://www.spc.int
   location:
     country:
       id: Oceania

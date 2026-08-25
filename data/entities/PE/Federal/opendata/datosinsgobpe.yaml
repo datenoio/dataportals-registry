@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,11 +14,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Portal de datos abiertos del Instituto Nacional de Salud (INS) de Perú.
-endpoints:
-- type: ckan:package-list
-  url: https://datos.ins.gob.pe/api/3/action/package_list
-  version: '3'
+description: Portal de datos abiertos del Instituto Nacional de Salud (INS). El host
+  datos.ins.gob.pe ya no resuelve; los conjuntos del INS se publican en la Plataforma
+  Nacional de Datos Abiertos.
 id: datosinsgobpe
 langs:
 - id: ES
@@ -26,7 +24,7 @@ langs:
 link: https://datos.ins.gob.pe
 name: Portal de Datos Abiertos del Instituto Nacional de Salud
 owner:
-  link: https://datos.ins.gob.pe
+  link: https://www.gob.pe/ins
   location:
     country:
       id: PE
@@ -44,7 +42,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - Peru
 - ckan
@@ -53,4 +51,4 @@ topics:
 - id: HEAL
   name: Health
   type: eudatatheme
-uid: temp00004752
+uid: cdi00035092

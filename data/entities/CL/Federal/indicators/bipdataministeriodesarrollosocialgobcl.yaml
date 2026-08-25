@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -15,12 +15,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: BIP Data visualizes Chile's public investment landscape from the Integrated
-  Projects Bank, with project-level and aggregated views by geography, sector, and
-  institution.
-endpoints:
-- type: sitemap
-  url: https://bipdata.ministeriodesarrollosocial.gob.cl/sitemap.xml
+description: Former DataWheel visualization of Chile's Integrated Projects Bank (BIP)
+  public-investment data, by the Ministry of Social Development and Family. The catalog
+  hostname had no public DNS on 25 August 2026.
 id: bipdataministeriodesarrollosocialgobcl
 langs:
 - id: ES
@@ -28,7 +25,7 @@ langs:
 link: https://bipdata.ministeriodesarrollosocial.gob.cl
 name: BIP Data
 owner:
-  link: https://www.desarrollosocialyfamilia.gob.cl
+  link: https://www.midesof.gob.cl
   location:
     country:
       id: CL
@@ -46,7 +43,7 @@ rights:
 software:
   id: datawheel
   name: DataWheel
-status: active
+status: inactive
 tags:
 - has_api
 - government

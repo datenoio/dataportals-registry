@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,25 +17,17 @@ coverage:
     subregion:
       id: HR-10
       name: Virovitičko-podravska županija
-description: Data catalog for the city of Virovitica, Croatia.
-endpoints:
-- type: ckan
-  url: http://opendata.virovitica.hr/api/3
-  version: '3'
-- type: ckan:package-search
-  url: http://opendata.virovitica.hr/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://opendata.virovitica.hr/api/3/action/package_list
-  version: '3'
+description: Former City of Virovitica CKAN open data portal. The site returns
+  HTTP 403 and the CKAN API paths return 404. Open data is now listed on the city
+  website and harvested into data.gov.hr.
 id: opendataviroviticahr
 langs:
 - id: HR
   name: Croatian
-link: http://opendata.virovitica.hr
+link: https://opendata.virovitica.hr
 name: Otvoreni podaci Virovitica
 owner:
-  link: http://www.virovitica.hr
+  link: https://www.virovitica.hr
   location:
     country:
       id: HR
@@ -56,7 +48,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - CKAN
 - government

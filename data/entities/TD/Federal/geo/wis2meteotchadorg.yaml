@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: WIS 2.0 in a box provides a platform with the capabilities for centres
-  to integrate their data holdings and publish them to the WMO Information System
-  with a plug and play capability supporting data publishing, discovery and access
+description: WIS 2.0 in a box node of Chad's Agence Nationale de la Météorologie
+  (ANAM / Météo Tchad), publishing meteorological discovery metadata and data collections
+  to the WMO Information System via OGC API Features.
 endpoints:
 - type: pygeoapi:openapi
   url: https://wis2.meteotchad.org/oapi/openapi
@@ -27,6 +27,8 @@ endpoints:
   version: '1.0'
 id: wis2meteotchadorg
 langs:
+- id: FR
+  name: French
 - id: EN
   name: English
 link: https://wis2.meteotchad.org
@@ -38,10 +40,11 @@ owner:
       id: TD
       name: Chad
     level: 20
-  name: Météo Tchad
+  name: Agence Nationale de la Météorologie (ANAM)
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -54,9 +57,11 @@ software:
   name: Wis 2.0 Box
 status: active
 tags:
-- Open Data
-- Climate
-- Meteorology
+- meteorology
+- climate
+- WIS2
+- government
+- has_api
 topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere

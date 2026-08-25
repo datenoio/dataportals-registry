@@ -15,10 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: ArcGIS REST API endpoint listing available data services for Uganda including
-  district boundaries, transmission and distribution infrastructure, generation sites,
-  and administrative boundaries. Metadata is accessible by appending '/info/metadata'
-  to service URLs.
+description: ArcGIS Online REST services for Uganda energy and administrative layers,
+  including UMEME/UETCL distribution and transmission, MEMD generation sites, and
+  district, region, and national boundaries.
 endpoints:
 - type: arcgis:rest:info
   url: https://services2.arcgis.com/D6cgxWzepFC1quJH/arcgis/rest/info?f=pjson
@@ -31,7 +30,7 @@ langs:
 link: https://services2.arcgis.com/D6cgxWzepFC1quJH/arcgis/rest/services
 name: Uganda Energy and Administrative Data Services
 owner:
-  link: https://www.energy.go.ug
+  link: https://www.memd.go.ug
   location:
     country:
       id: UG
@@ -54,48 +53,28 @@ software:
 status: active
 tags:
 - ArcGIS
-- REST
-- services
-- spatial
-- data
-- geoservices
-- arcgisserver
-- geospatial
 - energy
 - infrastructure
-- uganda
+- geospatial
+- government
+- Uganda
 topics:
-- id: ENVI
-  name: Environment
+- id: ENER
+  name: Energy
   type: eudatatheme
 - id: ECON
   name: Economy and finance
   type: eudatatheme
-- id: TRAN
-  name: Transport
-  type: eudatatheme
 - id: REGI
   name: Regions and cities
   type: eudatatheme
-- id: SOCI
-  name: Population and society
-  type: eudatatheme
-- id: Biota
-  name: Biota
-  type: iso19115
-- id: Environment
-  name: Environment
-  type: iso19115
 - id: Economy
   name: Economy
-  type: iso19115
-- id: Transportation
-  name: Transportation
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Society
-  name: Society
+- id: Utilities / Communication
+  name: Utilities / Communication
   type: iso19115
-uid: temp00005370
+uid: cdi00034933

@@ -14,9 +14,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Shared CKAN catalogue for open data from Danish municipalities, regions,
-  and other public organisations. Public search is at opendata.dk; the CKAN API is
-  available on portal.opendata.dk and admin.opendata.dk.
+description: Shared CKAN catalogue for open data from Danish municipalities, regions, and
+  other public organisations. Public search is at opendata.dk; the CKAN API is available on
+  portal.opendata.dk and admin.opendata.dk.
 endpoints:
 - type: ckan:package-search
   url: https://portal.opendata.dk/api/3/action/package_search
@@ -28,10 +28,14 @@ endpoints:
   url: https://admin.opendata.dk/api/3
   version: '3'
 id: portalopendatadk
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=re3data_____::1d3bdaafe47ffccb5474ae083b2689e7
+  value: re3data_____::1d3bdaafe47ffccb5474ae083b2689e7
 langs:
 - id: DA
   name: Danish
-link: https://portal.opendata.dk
+link: https://www.opendata.dk/
 name: Open Data DK
 owner:
   link: https://www.opendata.dk
@@ -40,7 +44,7 @@ owner:
       id: DK
       name: Denmark
     level: 20
-  name: OS2opendatadk
+  name: Foreningen Open Data DK
   type: Civil society
 rights:
   license_id: null

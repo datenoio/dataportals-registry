@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,25 +18,15 @@ coverage:
     subregion:
       id: BY-HO
       name: Gomel'skaja oblast'
-description: Data catalog accessible via ArcGIS REST API
-endpoints:
-- type: arcgis:rest:info
-  url: https://gis.npp.by:6443/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://gis.npp.by:6443/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://gis.npp.by:6443/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://gis.npp.by:6443/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://gis.npp.by:6443/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://gis.npp.by:6443/arcgis/rest/services?f=kmz
+description: Former ArcGIS Server of Pripyatsky National Park. The ArcGIS REST endpoint
+  on gis.npp.by:6443 no longer responds, and /arcgis is not published on port 443.
 id: gisnppby
 langs:
 - id: RU
   name: Russian
-link: https://gis.npp.by:6443/arcgis/rest/
+- id: BE
+  name: Belarusian
+link: https://gis.npp.by:6443/arcgis/rest/services
 name: Pripyatsky National Park ArcGIS Server
 owner:
   link: https://www.npp.by
@@ -62,13 +52,20 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS
-- REST API
+- geospatial
 - GIS
+- national park
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
 uid: cdi00004339

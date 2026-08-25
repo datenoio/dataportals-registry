@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: A National Spatial Data Infrastructure (NSDI) Clearinghouse / Data Center
-  to enhance the public reach and easy access to the authentic Geospatial Dataset
-  provided by the Survey Department, Nepal.
+description: Public National Spatial Data Infrastructure (NSDI) geoportal of Nepal's
+  Survey Department, providing access to authentic geospatial datasets and GeoServer
+  OGC services.
 endpoints:
 - type: wms111
   url: https://nationalgeoportal.gov.np/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -61,13 +61,13 @@ langs:
 link: https://nationalgeoportal.gov.np
 name: Nepal National Spatial Data Center Geoportal
 owner:
-  link: https://www.gov.np
+  link: https://dos.gov.np
   location:
     country:
       id: NP
       name: Nepal
     level: 20
-  name: Nepal National Spatial Data Center
+  name: Survey Department
   type: Central government
 properties:
   has_doi: false
@@ -89,6 +89,12 @@ tags:
 - NSDI
 - Survey Department
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115

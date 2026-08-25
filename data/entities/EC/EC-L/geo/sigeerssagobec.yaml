@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,26 +18,14 @@ coverage:
     subregion:
       id: EC-L
       name: Loja
-description: Geospatial information system of the Empresa Electrica Regional Sur S.A.
-  (EERSSA) providing access to electrical infrastructure, power grid networks, service
-  areas, and utility management spatial data through ArcGIS REST services.
-endpoints:
-- type: arcgis:rest:info
-  url: http://sig.eerssa.gob.ec/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: http://sig.eerssa.gob.ec/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: http://sig.eerssa.gob.ec/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: http://sig.eerssa.gob.ec/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: http://sig.eerssa.gob.ec/arcgis/rest/services?f=geositemap
+description: ArcGIS REST catalog of Empresa Eléctrica Regional Sur S.A. The service timed
+  out and could not be verified as live.
 id: sigeerssagobec
 langs:
 - id: ES
   name: Spanish
 link: http://sig.eerssa.gob.ec/ArcGIS/rest/services
-name: SIG EERSSA - Regional Electric Company South Ecuador
+name: SIG EERSSA
 owner:
   link: http://sig.eerssa.gob.ec/
   location:
@@ -62,7 +50,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS
 - REST
@@ -103,4 +91,4 @@ topics:
 - id: Utilities / Communication
   name: Utilities / Communication
   type: iso19115
-uid: temp00001932
+uid: cdi00035532

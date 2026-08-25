@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,44 +14,44 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Princess Maha Chakri Sirindhorn Natural History Museum (PSU Museum),
-  Prince of Songkla University, Thailand shared IPT to publish the specimen dataset
-  from various natural history collections, including macroalgae and higher plant,
-  plankton, invertebrate, vertebrate and fossil. Among these collections, namely macroalgae
-  and higher plant, crustacean, butterfly, fish and bat. Noticeably, our collections
-  are active collections due to contribution from the university's teching and research
-  activities. Therefore, information will be continuously updated. Princess Maha Chakri
-  Sirindhorn Natural History Museum IPT was installed in local server by Thidawan
-  Saelao on September 26, 2013
-endpoints:
-- type: rss
-  url: http://www.nhm.psu.ac.th/nhmpsuipt/rss.do
-  version: '2.0'
+description: Former GBIF IPT of the Princess Maha Chakri Sirindhorn Natural History
+  Museum (Prince of Songkla University). The host www.nhm.psu.ac.th no longer resolves;
+  specimen datasets are now published through GBIF rather than a local IPT.
 id: wwwnhmpsuacth
 langs:
+- id: EN
+  name: English
 - id: TH
   name: Thai
 link: http://www.nhm.psu.ac.th/nhmpsuipt
 name: Princess Maha Chakri Sirindhorn Natural History Museum IPT
 owner:
-  link: https://ac.th
+  link: https://nhm.psu.ac.th
   location:
     country:
       id: TH
       name: Thailand
     level: 20
-  name: Princess Maha Chakri Sirindhorn Natural History Museum  (PSU Museum, Prince
-    of Songkla University, Thailand)
+  name: Princess Maha Chakri Sirindhorn Natural History Museum, Prince of Songkla
+    University
   type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT
 - biodiversity
-- data publishing
 topics:
 - id: Biota
   name: Biota

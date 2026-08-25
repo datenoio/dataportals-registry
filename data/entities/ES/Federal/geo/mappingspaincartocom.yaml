@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,9 +16,6 @@ coverage:
       id: 039
       name: Southern Europe
 description: Data catalog listing various datasets from the mapping and GIS domain.
-endpoints:
-- type: carto:catalog
-  url: https://mappingspain.carto.com/u/sandrabecker/me
 id: mappingspaincartocom
 langs:
 - id: EN
@@ -46,7 +43,7 @@ rights:
 software:
   id: carto
   name: CARTO
-status: active
+status: inactive
 tags:
 - mapping
 - GIS

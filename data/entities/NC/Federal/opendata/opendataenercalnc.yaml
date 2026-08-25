@@ -1,5 +1,5 @@
 access_mode:
-- open
+- restricted
 api: true
 api_status: active
 catalog_type: Open data portal
@@ -14,19 +14,20 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: Open data portal of ENERCAL (Énergie Calédonienne), the main electricity
-  company in New Caledonia. Powered by OpenDataSoft.
+description: OpenDataSoft catalog of ENERCAL (Énergie Calédonienne), the main
+  electricity company in New Caledonia. The portal and Explore API require login;
+  anonymous requests are redirected to /login/ or return HTTP 401.
 endpoints:
 - type: opendatasoftapi
   url: https://opendata.enercal.nc/api
-- type: sitemap
-  url: https://opendata.enercal.nc/sitemap.xml
 id: opendataenercalnc
 langs:
 - id: FR
   name: French
+- id: EN
+  name: English
 link: https://opendata.enercal.nc
-name: ENERCAL Open Data
+name: Open Data ENERCAL
 owner:
   link: https://www.enercal.nc
   location:
@@ -35,7 +36,16 @@ owner:
       name: New Caledonia
     level: 20
   name: ENERCAL (Énergie Calédonienne)
-  type: Other
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://opendata.enercal.nc/terms/privacy-policy/
+  rights_type: granular
+  tos_url: https://opendata.enercal.nc/terms/terms-and-conditions/
 software:
   id: opendatasoft
   name: OpenDataSoft
@@ -44,8 +54,13 @@ tags:
 - energy
 - electricity
 - New Caledonia
-uid: cdi00021317
+- opendatasoft
+- has_api
 topics:
-- id: GOVE
-  name: Government and public sector
+- id: ENER
+  name: Energy
   type: eudatatheme
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+uid: cdi00021317

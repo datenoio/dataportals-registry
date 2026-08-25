@@ -14,7 +14,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Legacy installation of IPT, version 2.3.2.
+description: GBIF Integrated Publishing Toolkit of Chile's national GBIF node, hosted
+  by the Ministerio del Medio Ambiente. Publishes biodiversity occurrence datasets
+  for Chile via IPT RSS and related harvest endpoints.
 endpoints:
 - type: rss
   url: https://gbif-chile.mma.gob.cl/ipt/rss.do
@@ -23,17 +25,17 @@ id: gbifchilemmagobcl
 langs:
 - id: ES
   name: Spanish
-link: https://gbif-chile.mma.gob.cl
-name: IPT v.2.3.2
+link: https://gbif-chile.mma.gob.cl/ipt
+name: GBIF Chile IPT
 owner:
-  link: https://gob.cl
+  link: https://mma.gob.cl
   location:
     country:
       id: CL
       name: Chile
     level: 20
-  name: Ministerio del Medio Ambiente de Chile
-  type: Academy
+  name: Ministerio del Medio Ambiente
+  type: Central government
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)

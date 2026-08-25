@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: false
-api_status: uncertain
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,18 +11,21 @@ coverage:
     country:
       id: CN
       name: China
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
-description: ArcGIS REST Services catalog. geoportal. managed by Not explicit in provided
-  text. powered by ArcGIS Server. accessible at www.szjdz.gov.cn.
+    subregion:
+      id: CN-NX
+      name: Ningxia Huizu Zizhiqu
+description: ArcGIS REST services associated with Shizuishan, Ningxia. The www.szjdz.gov.cn
+  host no longer resolves.
 id: wwwszjdzgovcn
 langs:
 - id: ZH
   name: Chinese
 link: http://www.szjdz.gov.cn/arcgis/rest/services
-name: Not explicit in provided text Geoportal
+name: Shizuishan ArcGIS Services
 owner:
   link: http://www.szjdz.gov.cn
   location:
@@ -33,7 +36,7 @@ owner:
     subregion:
       id: CN-NX
       name: Ningxia Huizu Zizhiqu
-  name: Not explicit in provided text
+  name: Shizuishan Municipal Government
   type: Local government
 properties:
   has_doi: false
@@ -47,7 +50,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS
 - China
@@ -66,4 +69,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005786
+uid: cdi00035705

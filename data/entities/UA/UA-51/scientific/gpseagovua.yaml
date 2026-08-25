@@ -17,21 +17,26 @@ coverage:
     subregion:
       id: UA-51
       name: Odeska oblast
-description: OBIS Black Sea. scientific data repository. managed by Ukrainian Scientific
-  Centre of Ecology of the Sea (UkrSCES). powered by IPT The Integrated Publishing
-  Toolkit. accessible at gp.sea.gov.ua:8082.
+description: GBIF IPT installation of the Ukrainian Scientific Centre of Ecology of
+  the Sea, publishing Black Sea biodiversity datasets to OBIS and GBIF.
 endpoints:
+- type: ipt:dataset
+  url: http://gp.sea.gov.ua:8082/ipt/inventory/dataset
 - type: rss
   url: http://gp.sea.gov.ua:8082/ipt/rss.do
   version: '2.0'
+- type: dcat:ttl
+  url: http://gp.sea.gov.ua:8082/ipt/dcat
 id: gpseagovua
 langs:
 - id: UK
   name: Ukrainian
-link: http://gp.sea.gov.ua:8082
+- id: EN
+  name: English
+link: http://gp.sea.gov.ua:8082/ipt
 name: OBIS Black Sea
 owner:
-  link: http://www.sea.gov.ua/
+  link: https://sea.gov.ua/
   location:
     country:
       id: UA
@@ -51,6 +56,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- Black Sea
 topics:
 - id: Biota
   name: Biota

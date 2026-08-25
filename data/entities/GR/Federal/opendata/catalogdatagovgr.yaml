@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,17 +12,10 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: data catalog. open data portal. managed by Central government. powered
-  by CKAN. accessible at catalog.data.gov.gr.
-endpoints:
-- type: ckan:package-search
-  url: https://catalog.data.gov.gr/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://catalog.data.gov.gr/api/3/action/package_list
-  version: '3'
+description: Former CKAN catalog of the Greek national open data portal, superseded
+  by data.gov.gr. The host no longer responds.
 id: catalogdatagovgr
 langs:
 - id: EL
@@ -30,13 +23,13 @@ langs:
 link: https://catalog.data.gov.gr
 name: Greece Open Data Catalog
 owner:
-  link: https://catalog.data.gov.gr
+  link: https://mindigital.gr
   location:
     country:
       id: GR
       name: Greece
     level: 20
-  name: Central government
+  name: Ministry of Digital Governance
   type: Central government
 rights:
   license_id: null
@@ -48,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - Greece
 - catalog
@@ -62,4 +55,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00004666
+uid: cdi00035370

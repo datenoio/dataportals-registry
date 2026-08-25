@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,23 +15,14 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: API provided by pygeoapi. This geoportal. managed by Geonovum / IIC Technologies.
-  provides access to datasets and resources.
-endpoints:
-- type: pygeoapi:openapi
-  url: http://18.133.27.162/pygeoapi/openapi
-  version: '1.0'
-- type: pygeoapi:collections
-  url: http://18.133.27.162/pygeoapi/collections/?f=json
-  version: '1.0'
-- type: sitemap
-  url: http://18.133.27.162/sitemap.xml
+description: pygeoapi demo instance hosted on a raw AWS IP address (Geonovum / IIC Technologies). Not
+  a stable production catalogue.
 id: '1813327162'
 langs:
 - id: EN
   name: English
 link: http://18.133.27.162/pygeoapi
-name: Metadata records for marine geospatial data
+name: Geonovum pygeoapi demo
 owner:
   link: https://www.geonovum.nl
   location:
@@ -39,8 +30,8 @@ owner:
       id: NL
       name: Netherlands
     level: 20
-  name: Geonovum / IIC Technologies
-  type: Business
+  name: Geonovum
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -53,7 +44,7 @@ rights:
 software:
   id: pygeoapi
   name: pygeoapi
-status: active
+status: inactive
 tags:
 - GIS
 - geospatial

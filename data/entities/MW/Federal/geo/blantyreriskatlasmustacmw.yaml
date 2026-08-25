@@ -18,7 +18,7 @@ coverage:
     subregion:
       id: MW-BL
       name: Blantyre
-description: GeoNode spatial catalog of the Blantyre Risk Atlas, publishing hazard,
+description: GeoNode spatial catalog of the Blantyre Risk Atlas, publishing 13 hazard,
   exposure, and urban-risk datasets for Blantyre, Malawi.
 endpoints:
 - type: geonode:datasets
@@ -37,6 +37,9 @@ endpoints:
 - type: csw202
   url: https://blantyreriskatlas.must.ac.mw/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: oaipmh20
+  url: https://blantyreriskatlas.must.ac.mw/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
 id: blantyreriskatlasmustacmw
 langs:
 - id: EN
@@ -54,6 +57,7 @@ owner:
   type: Academy
 properties:
   has_doi: false
+  dataset_count_reported: 13
 rights:
   license_id: null
   license_name: null
@@ -72,9 +76,13 @@ tags:
 - GeoNode
 - Blantyre
 - Malawi
+- has_api
 topics:
 - id: ENVI
   name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
   type: eudatatheme
 - id: Geoscientific Information
   name: Geoscientific Information

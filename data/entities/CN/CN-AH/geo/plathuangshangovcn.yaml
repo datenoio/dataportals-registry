@@ -11,11 +11,14 @@ coverage:
     country:
       id: CN
       name: China
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Data catalog API endpoint for Huangshan government services
+    subregion:
+      id: CN-AH
+      name: Anhui Sheng
+description: Huangshan municipal geospatial REST services.
 endpoints:
 - type: arcgis:rest:info
   url: https://plat.huangshan.gov.cn/hserver/rest/info?f=pjson
@@ -45,7 +48,7 @@ owner:
     subregion:
       id: CN-AH
       name: Anhui Sheng
-  name: Local Government of Huangshan
+  name: Huangshan Municipal Government
   type: Local government
 properties:
   has_doi: false
@@ -68,4 +71,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005776
+uid: cdi00035697

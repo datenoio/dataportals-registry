@@ -1,5 +1,5 @@
 access_mode:
-- public
+- open
 api: true
 api_status: active
 catalog_type: Geoportal
@@ -18,7 +18,12 @@ coverage:
     subregion:
       id: AM-ER
       name: Erevan
+description: ArcGIS Enterprise GIS of Yerevan Municipality, publishing municipal
+  spatial datasets and map services. The REST services directory is disabled, but
+  the ArcGIS Server info endpoint and Portal remain publicly reachable.
 endpoints:
+- type: arcgis:portals:self
+  url: https://gis.yerevan.am/portal/sharing/rest/portals/self?f=pjson
 - type: arcgis:rest:info
   url: https://gis.yerevan.am/server/rest/info?f=pjson
 - type: arcgis:rest:services
@@ -31,10 +36,12 @@ endpoints:
   url: https://gis.yerevan.am/server/rest/services?f=geositemap
 id: gisyerevanam
 langs:
+- id: HY
+  name: Armenian
 - id: EN
   name: English
-link: https://gis.yerevan.am/server/rest/services
-name: gis.yerevan.am server REST services
+link: https://gis.yerevan.am/portal
+name: Yerevan Municipality GIS
 owner:
   link: https://www.yerevan.am
   location:
@@ -45,8 +52,8 @@ owner:
     subregion:
       id: AM-ER
       name: Erevan
-  name: Yerevan city government
-  type: Regional government
+  name: Yerevan Municipality
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -63,10 +70,11 @@ status: active
 tags:
 - geospatial
 - government
-uid: cdi00005289
-description: Geoportal. managed by Yerevan city government. powered by ArcGIS Server.
-  accessible at gis.yerevan.am.
+- has_api
 topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
@@ -76,3 +84,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
+uid: cdi00005289

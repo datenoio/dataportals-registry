@@ -17,14 +17,17 @@ coverage:
       name: Central America
 description: REDATAM portal of Guatemala's National Institute of Statistics for the
   2018 Population and Housing Census. Users build custom tables from census microdata.
+endpoints:
+- type: redatam
+  url: https://redatam2018.ine.gob.gt/bingtm/RpWebEngine.exe/Portal
 id: redatam2018inegobgt
 langs:
 - id: ES
   name: Spanish
-link: https://redatam2018.ine.gob.gt/
+link: https://redatam2018.ine.gob.gt
 name: Guatemala INE REDATAM Censo 2018
 owner:
-  link: https://www.ine.gob.gt/
+  link: https://www.ine.gob.gt
   location:
     country:
       id: GT
@@ -34,7 +37,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
-  is_national: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -64,6 +67,3 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00021993
-endpoints:
-- type: redatam
-  url: https://redatam2018.ine.gob.gt/redbin/RpWebEngine.exe/Portal

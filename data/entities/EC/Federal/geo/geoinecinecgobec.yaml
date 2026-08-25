@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,18 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Catalog application to manage spatially referenced resources. Provides
-  metadata editing and search functions, facilitating access to geo-referenced databases.
-endpoints:
-- type: csw202
-  url: https://geoinec.inec.gob.ec/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://geoinec.inec.gob.ec/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://geoinec.inec.gob.ec/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+description: Former GeoNetwork catalog of INEC for spatially referenced statistical resources.
+  The hostname geoinec.inec.gob.ec no longer resolves.
 id: geoinecinecgobec
 langs:
 - id: ES
@@ -34,7 +24,7 @@ langs:
 - id: EN
   name: English
 link: https://geoinec.inec.gob.ec/geonetwork
-name: GeoNEC - Ecuador Statistics Geonetwork
+name: GeoNEC - GeoNetwork INEC
 owner:
   link: https://www.ecuadorencifras.gob.ec
   location:
@@ -42,7 +32,7 @@ owner:
       id: EC
       name: Ecuador
     level: 20
-  name: Gobierno del Ecuador
+  name: Instituto Nacional de Estadística y Censos (INEC)
   type: Central government
 properties:
   has_doi: true
@@ -56,7 +46,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
 - has_api

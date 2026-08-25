@@ -1,9 +1,11 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
+- dataset
 coverage:
 - location:
     country:
@@ -13,8 +15,10 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Official statistics database of Cambodia managed by the National Institute
-  of Statistics (NIS) under the Ministry of Planning.
+description: CamStat is the official .Stat Suite dissemination platform of Cambodia's
+  National Institute of Statistics. It publishes national, CSDG, and SDG indicators
+  across health, education, economy, and other statistical domains (about 90 dataflows
+  on the live search API).
 endpoints:
 - type: statsuite:search
   url: https://sdmx-faceted-search-camstat-live.officialstatistics.org/api/search
@@ -22,10 +26,12 @@ id: camstatnisgovkh
 langs:
 - id: EN
   name: English
+- id: KM
+  name: Khmer
 link: https://camstat.nis.gov.kh
-name: National Indicator Reporting Platform
+name: CamStat
 owner:
-  link: https://camstat.nis.gov.kh
+  link: https://nis.gov.kh
   location:
     country:
       id: KH
@@ -34,7 +40,9 @@ owner:
   name: National Institute of Statistics (NIS)
   type: Central government
 properties:
+  dataset_count_reported: 92
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -50,19 +58,37 @@ tags:
 - statistics
 - government
 - official statistics
+- indicators
+- SDG
+- has_api
 - census
 - population
 - health
 - survey
+- Cambodia
 topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
 - id: GOVE
   name: Government and public sector
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
   type: eudatatheme
 - id: Society
   name: Society
   type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
 uid: cdi00001038
-api: true

@@ -13,10 +13,11 @@ coverage:
       name: Eswatini
     level: 20
     macroregion:
-      id: 018
+      id: '018'
       name: Southern Africa
 description: Eswatini Meteorological Service WIS 2.0 in a box node. Publishes weather
   and climate holdings to the WMO Information System with discovery and access services.
+  Reached only by IP address; no public hostname resolved on 24 August 2026.
 endpoints:
 - type: pygeoapi:openapi
   url: http://136.156.134.190/oapi/openapi
@@ -41,6 +42,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -55,7 +57,10 @@ status: active
 tags:
 - meteorology
 - climate
+- weather
 - WIS2
+- government
+- has_api
 topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere

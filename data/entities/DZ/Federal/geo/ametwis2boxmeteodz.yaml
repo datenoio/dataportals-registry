@@ -15,9 +15,8 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: WIS 2.0 in a box provides a platform with the capabilities for centres
-  to integrate their data holdings and publish them to the WMO Information System
-  with a plug and play capability supporting data publishing, discovery and access
+description: Météo Algérie WIS 2.0 in a box node. Publishes Algerian surface weather
+  observations, station metadata, and WMO discovery metadata through OGC API collections.
 endpoints:
 - type: pygeoapi:openapi
   url: https://ametwis2box.meteo.dz/oapi/openapi
@@ -27,21 +26,26 @@ endpoints:
   version: '1.0'
 id: ametwis2boxmeteodz
 langs:
+- id: AR
+  name: Arabic
+- id: FR
+  name: French
 - id: EN
   name: English
 link: https://ametwis2box.meteo.dz
 name: Algeria - WIS 2.0 in a box
 owner:
-  link: http://www.meteo.dz
+  link: https://www.meteo.dz
   location:
     country:
       id: DZ
       name: Algeria
     level: 20
-  name: Meteo Algerie
+  name: Météo Algérie (Office National de la Météorologie)
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -57,6 +61,10 @@ tags:
 - meteorology
 - weather
 - synoptic observations
+- WIS2
+- government
+- has_api
+- Algeria
 topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere

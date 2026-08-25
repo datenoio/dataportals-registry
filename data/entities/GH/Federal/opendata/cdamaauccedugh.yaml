@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -13,16 +14,10 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: The Centre provides access to quality research data to increase knowledge
-  discovery and advocates for data-driven decision-making. It supports data archiving,
-  management, analysis and training for both the University community and external
-  researchers and policymakers.
-endpoints:
-- type: ckan:package-list
-  url: https://cdamaa.ucc.edu.gh/data/api/3/action/package_list
-  version: '3'
-- type: dcatus11
-  url: https://cdamaa.ucc.edu.gh/data/data.json
+description: Former DKAN open data portal of the Centre for Data Archiving, Management,
+  Analysis and Advocacy (C-DAMAA) at the University of Cape Coast. The /data/ catalog
+  path returns 404. Research microdata is now published through the C-DAMAA NADA
+  catalogue at https://nada.ucc.edu.gh/.
 id: cdamaauccedugh
 langs:
 - id: EN
@@ -30,16 +25,13 @@ langs:
 link: https://cdamaa.ucc.edu.gh/data/
 name: The Centre for Data Archiving, Analysis and Advocacy (C-DAMAA) Open Data Portal
 owner:
-  link: https://ucc.edu.gh
+  link: https://cdamaa.ucc.edu.gh
   location:
     country:
       id: GH
       name: Ghana
-    level: 30
-    subregion:
-      id: GH-CP
-      name: Central
-  name: University of Cape Coast
+    level: 20
+  name: Centre for Data Archiving, Management, Analysis and Advocacy (C-DAMAA)
   type: Academy
 properties:
   has_doi: false
@@ -53,20 +45,27 @@ rights:
 software:
   id: dkan
   name: DKAN
-status: active
+status: inactive
 tags:
-- government
-- data sharing
+- research data
 - data archiving
 - data management
-- data analysis
-- research data
-- data curation
-- data science
 - academic research
+- Ghana
 topics:
-- id: GOVE
-  name: Government and public sector
+- id: SOCI
+  name: Population and society
   type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
 uid: cdi00000853
-api: true

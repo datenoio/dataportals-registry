@@ -12,10 +12,10 @@ coverage:
       name: Oceania
     level: 20
     macroregion:
-      id: 009
+      id: '009'
       name: Oceania
-description: Data catalog for environmental monitoring, fisheries, and climate data
-  at SPC (Pacific Community) region
+description: THREDDS Data Server on SPC's Mahi-mahi host, providing OPeNDAP access
+  to environmental monitoring, fisheries, and climate datasets for the Pacific region.
 endpoints:
 - type: thredds:catalog
   url: https://mahi-mahi.spc.int/thredds/catalog.xml
@@ -28,7 +28,7 @@ langs:
 link: https://mahi-mahi.spc.int/thredds
 name: Mahi Mahi Data Catalog
 owner:
-  link: https://spc.int
+  link: https://www.spc.int
   location:
     country:
       id: Oceania
@@ -56,12 +56,6 @@ tags:
 - environmental monitoring
 - regional
 topics:
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme

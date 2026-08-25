@@ -14,9 +14,9 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Catalog of ArcGIS REST services hosted on webadaptor.gisapp.ro. Metadata
-  per service can be accessed via /info/metadata endpoint.
+      name: Eastern Europe
+description: Shared ArcGIS Server REST catalog on webadaptor.gisapp.ro, used by Fida
+  Solutions GISApp municipal GIS tenants in Romania.
 endpoints:
 - type: arcgis:rest:info
   url: https://webadaptor.gisapp.ro/arcgisprod/rest/info?f=pjson
@@ -35,16 +35,16 @@ langs:
 - id: RO
   name: Romanian
 link: https://webadaptor.gisapp.ro/arcgisprod/rest/services
-name: webadaptor.gisapp.ro ArcGIS Services Catalog
+name: GISApp shared ArcGIS Server
 owner:
-  link: https://webadaptor.gisapp.ro
+  link: https://www.fidasolutions.com/
   location:
     country:
       id: RO
       name: Romania
     level: 20
-  name: Government of Romania
-  type: Central government
+  name: Fida Solutions
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -61,7 +61,8 @@ status: active
 tags:
 - ArcGIS
 - GIS
-- data services
+- GISApp
+- has_api
 topics:
 - id: Location
   name: Location
@@ -72,4 +73,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00005809
+uid: cdi00035046

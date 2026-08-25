@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,22 +15,12 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: 農地情報データポータル 「農地情報共通利用ポータル」は、農地の区画情報（筆ポリゴン）を基盤とする各種業務の申請・データの検索・閲覧・ダウンロード提供することができる情報サービスです。 ※ESRIジャパン株式会社が作成したデモサイトです。 キーワードで検索する アプリを開く テーマごとの複数のデータを重畳したシンプルなマップを並べます。各地図は別アプリで表示されます。 農業データを探す ArcGISプラットフォーム上で利用可能な農業関連データを検索できます。 農林水産省 筆ポリゴン 農業データ連携基盤 (WAGRI) 　　提供データ Copyright 2019. ESRIジャパン リンク集
-endpoints:
-- type: dcatap201
-  url: https://maffude-demo01.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://maffude-demo01.hub.arcgis.com/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://maffude-demo01.hub.arcgis.com/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://maffude-demo01.hub.arcgis.com/api/search/v1
-- type: sitemap
-  url: https://maffude-demo01.hub.arcgis.com/sitemap.xml
+description: ESRI Japan ArcGIS Hub demonstration of a farmland information portal.
+  The Hub URL returned HTTP 404 at review.
 id: maffudedemo01hubarcgiscom
 langs:
-- id: EN
-  name: English
+- id: JA
+  name: Japanese
 link: https://maffude-demo01.hub.arcgis.com/
 name: 農地情報データポータル (ESRI Japan Demo)
 owner:
@@ -54,12 +44,12 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
+- demo
 - ArcGIS
 - GIS
 - geospatial
-- government
 topics:
 - id: Location
   name: Location

@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
@@ -11,16 +12,21 @@ coverage:
       name: Montenegro
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Provides global indicator data for the Sustainable Development Goals
-  (SDGs), accessible by clicking on each goal.
+description: Official OpenSDG reporting portal for Montenegro's Sustainable Development
+  Goal indicators (Indikatori za Ciljeve održivog razvoja), published by the Statistical
+  Office of Montenegro (MONSTAT). Indicator JSON and a bulk ZIP export are available
+  under /sdg-production-data/cnr/.
+endpoints:
+- type: opensdg:data
+  url: https://www.sdgmontenegro.me/sdg-production-data/cnr/data/1-1-1.json
 id: wwwsdgmontenegrome
 langs:
-- id: EN
-  name: English
+- id: SR
+  name: Serbian
 link: https://www.sdgmontenegro.me
-name: Indicators For The Sustainable Development Goals - SDG Montenegro
+name: Montenegro SDG Indicators
 owner:
   link: https://www.monstat.org
   location:
@@ -28,10 +34,11 @@ owner:
       id: ME
       name: Montenegro
     level: 20
-  name: Statisital office of Montenegro
+  name: Statistical Office of Montenegro
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -48,18 +55,20 @@ tags:
 - government
 - SDG
 - Sustainable Development
-- Indicators
+- indicators
+- has_api
+- Montenegro
 topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 - id: ENVI
   name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
 - id: Society
   name: Society
   type: iso19115
 uid: cdi00004762
-endpoints:
-- type: opensdg:data
-  url: https://www.sdgmontenegro.me/sdg-production-data/cnr/data/1-1-1.json
-- type: opensdg:data
-  url: https://www.sdgmontenegro.me/sdg-production-data/cnr/data/1-2-1.json
-api: true

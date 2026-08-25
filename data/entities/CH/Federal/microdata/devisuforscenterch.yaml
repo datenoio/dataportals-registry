@@ -1,0 +1,76 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Microdata catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Online data catalog offering detailed views and access to datasets from
+  various Swiss and European social science research projects, including the European
+  Social Survey (Swiss data), MOSAiCH, Eurobarometer (Swiss data), election studies
+  (Selects, VOXIT, VOTO), and the Swiss Household Panel.
+endpoints:
+- type: nada:catalog-search
+  url: https://devisu.forscenter.ch/index.php/api/catalog/search
+id: devisuforscenterch
+langs:
+- id: FR
+  name: French
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://devisu.forscenter.ch/index.php
+name: De Visu - Data Catalog - FORS
+owner:
+  link: https://forscenter.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+  name: FORS Swiss Centre of Expertise in the Social Sciences
+  type: Academy
+properties:
+  has_doi: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: nada
+  name: NADA
+status: active
+tags:
+- government
+- has_api
+- microdata
+- social sciences
+- survey data
+- Switzerland
+- research data
+- European Social Survey
+- MOSAiCH
+- Swiss Household Panel
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00000339

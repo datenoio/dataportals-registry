@@ -15,10 +15,12 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Geoportal de données géospatiales de l'Agence Spatiale Algérienne (ASAL)
-  qui fournit des services web géographiques basés sur les standards OGC via ArcGIS
-  Server.
+description: ArcGIS Enterprise geoportal of the Algerian Space Agency (ASAL). Publishes
+  OGC and ArcGIS REST services for satellite-derived layers including DEM, groundwater
+  boreholes (forage), and land-potential mapping.
 endpoints:
+- type: arcgis:portals:self
+  url: https://geoportail.asal.dz/portal/sharing/rest/portals/self?f=pjson
 - type: arcgis:rest:info
   url: https://geoportail.asal.dz/server/rest/info?f=pjson
 - type: arcgis:rest:services
@@ -35,6 +37,8 @@ id: geoportailasaldz
 langs:
 - id: AR
   name: Arabic
+- id: FR
+  name: French
 link: https://geoportail.asal.dz/server/rest/services
 name: ASAL Geoportal
 owner:
@@ -48,6 +52,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -61,17 +66,25 @@ software:
 status: active
 tags:
 - geospatial
-- arcgisserver
-- Algeria
+- remote sensing
+- satellite
 - government
+- has_api
+- Algeria
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: Location
-  name: Location
-  type: iso19115
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00005885
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00035550

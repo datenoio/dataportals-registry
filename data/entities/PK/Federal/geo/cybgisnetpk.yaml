@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: Public ArcGIS REST Services Directory endpoint serving geospatial map
-  and feature services in Pakistan.
+description: Public ArcGIS Server REST directory on cybgis.net.pk, with map services
+  including a nationwide network layer and a Peshawar city map. Hosted on ArcGIS Server
+  10.2.2.
 endpoints:
 - type: arcgis:rest:info
   url: https://cybgis.net.pk:6443/arcgis/rest/info?f=pjson
@@ -37,14 +38,14 @@ langs:
 link: https://cybgis.net.pk:6443/arcgis/rest/services
 name: cybgis.net.pk ArcGIS REST Services Directory
 owner:
-  link: https://cybgis.net.pk
+  link: https://www.cyber.net.pk
   location:
     country:
       id: PK
       name: Pakistan
     level: 20
-  name: cybgis.net.pk
-  type: Other
+  name: Cybernet
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -59,15 +60,20 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- API
-- Pakistan
-- REST
-- arcgisserver
 - geospatial
 - ArcGIS
+- REST
 - GIS
+- Pakistan
+- has_api
 topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005804
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00035060

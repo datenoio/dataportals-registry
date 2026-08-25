@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: active
 catalog_type: Open data portal
 content_types:
@@ -18,7 +18,12 @@ coverage:
       id: NG-KD
       name: Kaduna
 description: Kaduna State open contracting portal publishing procurement records as
-  OCDS packages, with project search and an HTTP API.
+  OCDS packages, with project search and documented HTTP APIs at /api and /ocds-api.
+endpoints:
+- type: customapi
+  url: https://www.ocds.kdsg.gov.ng/api
+- type: customapi
+  url: https://www.ocds.kdsg.gov.ng/ocds-api
 id: wwwocdskdsggovng
 langs:
 - id: EN

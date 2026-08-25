@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: No catalog metadata was found on the provided URL that allows extraction
-  of owner_type_reference, data_theme, or iso19115_theme vocabularies.
+description: Geographic Information System of the Commission (GISCO) map services
+  from Eurostat, providing pan-European administrative, statistical and thematic
+  geospatial layers via WMS, WMTS and TMS.
 endpoints:
 - type: wms111
   url: https://gisco-services.ec.europa.eu/maps/service?REQUEST=GetCapabilities
@@ -35,21 +36,15 @@ langs:
 - id: EN
   name: English
 link: https://gisco-services.ec.europa.eu/maps
-name: The URL provided is not an actual entry in a catalog metadata registry, but
-  rather a web service portal for maps (GISCO Services by the European Commission).
-  It does not provide structured catalog metadata for a DCAT-AP compliant data catalog,
-  nor does it expose machine-readable metadata according to your schema (owner_type_reference,
-  data_theme, iso19115_theme, etc.) via the landing page or API call (as of current
-  knowledge). Therefore, no structured metadata can be extracted from this URL that
-  matches your requested schema.
+name: GISCO Map Services
 owner:
-  link: https://gisco-services.ec.europa.eu/maps
+  link: https://ec.europa.eu/eurostat
   location:
     country:
       id: EU
       name: European Union
     level: 20
-  name: European Commission
+  name: Eurostat
   type: Central government
 properties:
   has_doi: false
@@ -72,4 +67,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00002196
+uid: cdi00035447

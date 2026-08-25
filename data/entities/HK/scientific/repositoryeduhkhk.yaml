@@ -18,6 +18,9 @@ coverage:
 description: EdUHK Research Repository is the Pure portal that collects, manages,
   and showcases research outputs of The Education University of Hong Kong.
 endpoints:
+- type: oaipmh20
+  url: https://repository.eduhk.hk/ws/oai?verb=Identify
+  version: '2.0'
 - type: rss
   url: https://repository.eduhk.hk/en/datasets/?search=&isCopyPasteSearch=false&format=rss
   version: '2.0'

@@ -3,6 +3,9 @@ access_mode:
 api: true
 api_status: active
 catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -13,8 +16,10 @@ coverage:
       id: '034'
       name: Southern Asia
 description: Land Resources Information Management System (LRIMS) and National Agro-Ecological
-  Zoning (NAEZ) for Afghanistan. FAO–AIT collaboration; provides GIS data, AEZ data,
-  map comparison, and scenario outputs.
+  Zoning (NAEZ) for Afghanistan. GeoNode 3.0 catalog hosted at AIT for FAO and the
+  Ministry of Agriculture, Irrigation and Livestock; 78 public layers covering AEZ
+  classes, climate scenarios, and administrative geography, with CSW, DCAT, and OGC
+  services.
 endpoints:
 - type: geonode:layers
   url: https://lrimsfaoaf.ait.ac.th/api/layers/
@@ -31,10 +36,22 @@ endpoints:
 - type: opensearch
   url: https://lrimsfaoaf.ait.ac.th/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
   version: '1.0'
-- type: sitemap
-  url: https://lrimsfaoaf.ait.ac.th/sitemap.xml
 - type: opensearch
   url: https://lrimsfaoaf.ait.ac.th/catalogue/opensearch
+- type: wms111
+  url: https://lrimsfaoaf.ait.ac.th/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://lrimsfaoaf.ait.ac.th/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: https://lrimsfaoaf.ait.ac.th/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://lrimsfaoaf.ait.ac.th/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: sitemap
+  url: https://lrimsfaoaf.ait.ac.th/sitemap.xml
 id: lrimsfaoafaitacth
 langs:
 - id: EN
@@ -42,6 +59,7 @@ langs:
 link: https://lrimsfaoaf.ait.ac.th
 name: Afghanistan NAEZ (LRIMS)
 owner:
+  link: https://mail.gov.af
   location:
     country:
       id: AF
@@ -49,13 +67,43 @@ owner:
     level: 20
   name: Ministry of Agriculture, Irrigation and Livestock
   type: Central government
-  link: https://ac.th
+properties:
+  has_doi: false
+  dataset_count_reported: 78
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
 software:
   id: geonode
   name: GeoNode
 status: active
-uid: cdi00021550
+tags:
+- GIS
+- geospatial
+- agriculture
+- AEZ
+- government
+- has_api
 topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
 - id: Location
   name: Location
   type: iso19115
@@ -65,10 +113,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-tags:
-- GIS
-- geospatial
-- government
-content_types:
-- dataset
-- map_layer
+uid: cdi00021550

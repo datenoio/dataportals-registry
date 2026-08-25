@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: ArcGIS Enterprise geoportal of the Cyprus University of Technology ReCult
+  project, publishing cultural-heritage geospatial datasets and map services.
+endpoints:
+- type: arcgis:portals:self
+  url: https://recult.cut.ac.cy/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://recult.cut.ac.cy/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://recult.cut.ac.cy/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://recult.cut.ac.cy/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://recult.cut.ac.cy/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://recult.cut.ac.cy/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://recult.cut.ac.cy/server/rest/services?f=kmz
+id: recultcutaccy
+langs:
+- id: EL
+  name: Greek
+- id: EN
+  name: English
+link: https://recult.cut.ac.cy/server/rest/services
+name: CUT ReCult ArcGIS REST Services
+owner:
+  link: https://cut.ac.cy
+  location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+  name: Cyprus University of Technology
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Cyprus
+- arcgisserver
+- geospatial
+- cultural heritage
+- has_api
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00035614

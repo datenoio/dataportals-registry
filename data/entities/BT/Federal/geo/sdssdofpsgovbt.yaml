@@ -1,0 +1,98 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BT
+      name: Bhutan
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: Spatial Data Sharing System (SDSS) of the Department of Forests and Park
+  Services. GeoNode 5 catalog of forest and park geospatial layers (about 96 datasets),
+  with public REST, CSW, and OGC services.
+endpoints:
+- type: geonode:datasets
+  url: https://sdss.dofps.gov.bt/api/datasets/
+- type: geonode:documents
+  url: https://sdss.dofps.gov.bt/api/documents/
+- type: csw202
+  url: https://sdss.dofps.gov.bt/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://sdss.dofps.gov.bt/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://sdss.dofps.gov.bt/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://sdss.dofps.gov.bt/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://sdss.dofps.gov.bt/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://sdss.dofps.gov.bt/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: sdssdofpsgovbt
+langs:
+- id: EN
+  name: English
+- id: DZ
+  name: Dzongkha
+link: https://sdss.dofps.gov.bt/
+name: DoFPS Spatial Data Sharing System
+owner:
+  link: https://www.dofps.gov.bt
+  location:
+    country:
+      id: BT
+      name: Bhutan
+    level: 20
+  name: Department of Forests and Park Services
+  type: Central government
+properties:
+  has_doi: false
+  dataset_count_reported: 96
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- forests
+- parks
+- spatial data
+- GeoNode
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00021436

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,12 +20,6 @@ coverage:
       name: Guadeloupe
 description: Lizmap catalog of GEOCS land-use mapping for Guadeloupe, including occupancy
   indicators and land-use change visualisation.
-endpoints:
-- type: lizmap:service
-  url: https://cartophyl.lizmap.com/demo/index.php/lizmap/service
-- type: wms130
-  url: https://cartophyl.lizmap.com/demo/index.php/lizmap/service/?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
-  version: 1.3.0
 id: cartophyllizmapcom
 langs:
 - id: FR
@@ -56,7 +50,7 @@ rights:
 software:
   id: lizmap
   name: Lizmap
-status: active
+status: inactive
 tags:
 - geospatial
 - lizmap

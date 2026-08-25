@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 10
+    macroregion:
+      id: EU
+      name: European Union
+description: The ISO Data Archive contains various sets of data products that the
+  user can download for independent scientific analysis. These are the pipeline products,
+  that are kept on disk at the ESDC (ESAC Science Data Center), in Madrid, Spain and
+  accessible through the ISO Data Archive interface. The pipeline products have been
+  subjected to a scientific validation by the Instrument Teams. Additional software
+  generates the so-called browse products to facilitate browsing through the archive
+  and the identification of the data to download. In addition, the ISO Data Archive
+  contains the so-called 'Highly Processed Data Products' (HPDP). These products include
+  DATA (images, spectra etc.), which have been processed beyond the pipeline and/or
+  using new, refined algorithms and therefore have been improved to any degree compared
+  to the pipeline products, as well as any resulting CATALOGUES and ATLASES.
+endpoints:
+- type: esasciencearchive:catalog
+  url: https://nida.esac.esa.int/nida-cl-web/
+id: nidaesacesaint
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::cd5099c73f75235d60ec0e90c4a092aa
+  value: fairsharing_::cd5099c73f75235d60ec0e90c4a092aa
+langs:
+- id: EN
+  name: English
+link: https://nida.esac.esa.int/nida-cl-web/
+name: ISO Science Data Archive
+owner:
+  link: https://www.esa.int
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: European Space Agency
+  type: International
+software:
+  id: esasciencearchive
+  name: ESA Science Archive
+status: active
+tags:
+- scientific
+- research data
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00030688

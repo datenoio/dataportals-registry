@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: ArcGIS Hub open-data portal of soil maps and laboratory data for Córdoba,
+  published by the Facultad de Ciencias Agropecuarias of Universidad Nacional de
+  Córdoba.
+endpoints:
+- type: dcatap201
+  url: https://sueloscordoba-agrounc.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://sueloscordoba-agrounc.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://sueloscordoba-agrounc.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://sueloscordoba-agrounc.opendata.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://sueloscordoba-agrounc.opendata.arcgis.com/sitemap.xml
+id: sueloscordobaagrouncopendataarcgiscom
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=re3data_____::582e7674889f9b59891a161ff388d802
+  value: re3data_____::582e7674889f9b59891a161ff388d802
+langs:
+- id: EN
+  name: English
+- id: ES
+  name: Spanish
+link: https://sueloscordoba-agrounc.opendata.arcgis.com/
+name: Suelos de Córdoba
+owner:
+  link: https://agro.unc.edu.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+  name: Universidad Nacional de Córdoba, Facultad de Ciencias Agropecuarias
+  type: Academy
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- scientific
+- research data
+- oxides
+- exchangeable cations
+- granulometry
+- macronutrients
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00028170

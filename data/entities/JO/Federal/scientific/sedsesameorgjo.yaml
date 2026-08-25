@@ -1,5 +1,6 @@
 access_mode:
 - open
+- restricted
 api: true
 api_status: active
 catalog_type: Scientific data repository
@@ -21,6 +22,8 @@ description: SESAME Data Portal is the ICAT catalogue of experimental data from 
 endpoints:
 - type: icat:version
   url: https://sed.sesame.org.jo/icat/version
+- type: icat:catalog
+  url: https://sed.sesame.org.jo
 id: sedsesameorgjo
 langs:
 - id: EN
@@ -34,7 +37,7 @@ owner:
       id: JO
       name: Jordan
     level: 20
-  name: SESAME
+  name: SESAME Synchrotron
   type: International
 properties:
   has_doi: true
@@ -42,8 +45,8 @@ rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: null
-  rights_type: unknown
+  privacy_policy_url: https://www.sesame.org.jo/for-users/user-guide/protection-of-personal-data-and-scientific-use-of-sesame
+  rights_type: granular
   tos_url: null
 software:
   id: icat
@@ -60,4 +63,7 @@ topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: cdi00023429

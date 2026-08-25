@@ -14,10 +14,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Sabasi Open Data Portal powered by CKAN. A central hub for discovering,
-  sharing, and using datasets published by communities and organizations. Hosts the
-  CSO Data Commons, a shared platform where civil society organizations contribute
-  evidence securely and ethically. Part of the Sabasi Suite by Open Institute.
+description: Sabasi Open Data Portal (CKAN) operated by Open Institute. A hub for
+  discovering and using datasets published by communities and organizations, including
+  the CSO Data Commons where civil society organizations share evidence.
 endpoints:
 - type: ckan
   url: https://ckan.sabasi.io/api/3
@@ -27,6 +26,9 @@ endpoints:
   version: '3'
 - type: ckan:package-list
   url: https://ckan.sabasi.io/api/3/action/package_list
+  version: '3'
+- type: ckan:status-show
+  url: https://ckan.sabasi.io/api/3/action/status_show
   version: '3'
 id: ckansabasiio
 langs:
@@ -43,6 +45,8 @@ owner:
     level: 20
   name: Open Institute
   type: Civil society
+properties:
+  dataset_count_reported: 81
 rights:
   license_id: null
   license_name: null
@@ -58,10 +62,12 @@ tags:
 - has_api
 - civil society
 - open data
-- CSO Data Commons
 - Kenya
-uid: cdi00020535
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+uid: cdi00020535

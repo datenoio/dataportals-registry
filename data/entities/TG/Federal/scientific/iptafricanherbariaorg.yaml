@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: GBIF IPT for the West and Central African herbaria network, published
-  by Université de Lomé.
+description: GBIF Integrated Publishing Toolkit hosted by Université de Lomé for the
+  West and Central African herbaria network. Publishes herbarium and related biodiversity
+  occurrence datasets for indexing by GBIF. HTTPS is not available on this host.
 endpoints:
 - type: dcat:ttl
   url: http://ipt.african-herbaria.org/dcat
@@ -28,10 +29,12 @@ id: iptafricanherbariaorg
 langs:
 - id: FR
   name: French
+- id: EN
+  name: English
 link: http://ipt.african-herbaria.org
 name: African Herbaria
 owner:
-  link: https://www.univ-lome.tg
+  link: https://univ-lome.tg
   location:
     country:
       id: TG
@@ -48,6 +51,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota

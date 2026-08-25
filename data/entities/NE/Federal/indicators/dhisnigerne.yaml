@@ -16,10 +16,15 @@ coverage:
       id: '011'
       name: Western Africa
 description: National DHIS2 health management information system of Niger (SNIS).
-  Login is required to query routine health indicators.
+  The public UI redirects to login; authenticated access is required to query routine
+  health indicators.
 endpoints:
 - type: dhis2:catalog
   url: https://dhisniger.ne
+- type: dhis2:system-info
+  url: https://dhisniger.ne/api/system/info
+- type: dhis2:datasets
+  url: https://dhisniger.ne/api/dataSets.json?fields=id,displayName&pageSize=1
 id: dhisnigerne
 langs:
 - id: FR
@@ -57,6 +62,7 @@ tags:
 - DHIS2
 - government
 - restricted
+- has_api
 - Niger
 topics:
 - id: HEAL

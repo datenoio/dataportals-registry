@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -16,8 +16,11 @@ coverage:
       id: '005'
       name: South America
 description: IMF e-GDDS National Summary Data Page for Guyana. Disseminates macroeconomic,
-  financial, and selected socio-demographic summary indicators with SDMX downloads,
+  financial, and selected socio-demographic summary indicators with SDMX 2.1 downloads,
   jointly covering the Bureau of Statistics, Bank of Guyana, and Ministry of Finance.
+endpoints:
+- type: sdmx-rest
+  url: https://statisticsguyana.gov.gy/IMF_NSDP/pubs/eGDDS_Data%20Contributors/National%20Accounts/NAG_Guyana.xml
 id: statisticsguyanagovgyimfnsdp
 langs:
 - id: EN
@@ -37,8 +40,8 @@ properties:
   has_doi: false
   is_national: true
 software:
-  id: custom
-  name: Custom software
+  id: imfnsdp
+  name: IMF National Summary Data Page
 status: active
 tags:
 - statistics
@@ -49,6 +52,7 @@ tags:
 - e-GDDS
 - IMF
 - SDMX
+- has_api
 topics:
 - id: ECON
   name: Economy and finance

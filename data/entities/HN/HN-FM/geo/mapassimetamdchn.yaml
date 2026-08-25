@@ -11,17 +11,27 @@ coverage:
     country:
       id: HN
       name: Honduras
-    level: 20
+    level: 30
     macroregion:
       id: '013'
       name: Central America
-description: Municipal Atlas of the Central District (AMDC), GeoNode-based geoportal
-  with datasets, maps, GeoStories, and dashboards for Tegucigalpa.
+    subregion:
+      id: HN-FM
+      name: Francisco Morazán
+description: GeoNode municipal atlas of the Central District (AMDC) for Tegucigalpa,
+  with cadastral and urban layers, maps, GeoStories, and dashboards (327 datasets
+  when last counted).
 endpoints:
 - type: geonode:datasets
   url: https://mapas.simet.amdc.hn/api/v2/datasets/
 - type: geonode:documents
   url: https://mapas.simet.amdc.hn/api/v2/documents/
+- type: wms130
+  url: https://mapas.simet.amdc.hn/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://mapas.simet.amdc.hn/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
 id: mapassimetamdchn
 langs:
 - id: ES
@@ -29,7 +39,7 @@ langs:
 link: https://mapas.simet.amdc.hn
 name: Atlas Municipal AMDC
 owner:
-  link: https://www.amdc.hn
+  link: https://amdc.hn
   location:
     country:
       id: HN
@@ -40,23 +50,31 @@ owner:
       name: Francisco Morazán
   name: Alcaldía Municipal del Distrito Central (AMDC)
   type: Local government
+properties:
+  has_doi: false
+  dataset_count_reported: 327
 software:
   id: geonode
   name: GeoNode
 status: active
 tags:
 - geospatial
-- opendata
 - municipal
 - Honduras
+- Tegucigalpa
+- GeoNode
+- has_api
 topics:
 - id: REGI
-  name: Regional and local government
+  name: Regions and cities
   type: eudatatheme
 - id: Society
   name: Society
   type: iso19115
 - id: Boundaries
   name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
   type: iso19115
 uid: cdi00021354

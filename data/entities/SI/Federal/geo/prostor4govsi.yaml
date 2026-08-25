@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,10 +15,9 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: INSPIRE (SI) Data Portal for spatial data, maps, and services in Slovenia.
-endpoints:
-- type: geonetwork:catalog
-  url: https://prostor4.gov.si/imps
+description: Former host of the Slovenian INSPIRE metadata system (IMPS). The catalogue
+  has moved to https://eprostor.gov.si/imps; this prostor4.gov.si endpoint no longer
+  responds.
 id: prostor4govsi
 langs:
 - id: SL
@@ -46,7 +45,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - INSPIRE
 - geoportal

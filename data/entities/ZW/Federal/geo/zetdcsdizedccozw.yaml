@@ -15,24 +15,10 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Data catalog for Zimbabwe grid expansion projects and related geospatial
-  data.
+description: Former GeoNode spatial data infrastructure for Zimbabwe Electricity
+  Transmission and Distribution Company grid-expansion projects. The host
+  zetdcsdi.zedc.co.zw no longer resolves (NXDOMAIN on 24 August 2026).
 endpoints:
-- type: geonode:layers
-  url: https://zetdcsdi.zedc.co.zw:5443//api/layers/
-- type: geonode:documents
-  url: https://zetdcsdi.zedc.co.zw:5443//api/documents/
-- type: geonode:dcatus11
-  url: https://zetdcsdi.zedc.co.zw:5443//data.json
-- type: csw202
-  url: https://zetdcsdi.zedc.co.zw:5443//catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: https://zetdcsdi.zedc.co.zw:5443//catalogue/csw?mode=oaipmh&verb=Identify
-  version: '2.0'
-- type: opensearch
-  url: https://zetdcsdi.zedc.co.zw:5443//catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
-  version: '1.0'
 - type: geonode:layers
   url: https://zetdcsdi.zedc.co.zw:5443/api/layers/
 - type: geonode:documents
@@ -46,7 +32,7 @@ endpoints:
   url: https://zetdcsdi.zedc.co.zw:5443/catalogue/csw?mode=oaipmh&verb=Identify
   version: '2.0'
 - type: opensearch
-  url: https://zetdcsdi.zedc.co.zw:5443/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  url: https://zetdcsdi.zedc.co.zw:5443/catalogue/opensearch
   version: '1.0'
 - type: wms111
   url: https://zetdcsdi.zedc.co.zw:5443/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -96,8 +82,6 @@ endpoints:
   url: https://zetdcsdi.zedc.co.zw:5443/geoserver/rest/settings
 - type: geoserver:layers
   url: https://zetdcsdi.zedc.co.zw:5443/geoserver/rest/layers
-- type: opensearch
-  url: https://zetdcsdi.zedc.co.zw:5443/catalogue/opensearch
 id: zetdcsdizedccozw
 langs:
 - id: EN
@@ -105,7 +89,7 @@ langs:
 link: https://zetdcsdi.zedc.co.zw:5443/
 name: Zimbabwe Electrification Platform SDI
 owner:
-  link: http://www.zetdc.co.zw
+  link: https://www.zetdc.co.zw
   location:
     country:
       id: ZW
@@ -115,7 +99,6 @@ owner:
   type: Business
 properties:
   has_doi: false
-  transferable_location: true
 rights:
   license_id: null
   license_name: null
@@ -126,13 +109,11 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: deprecated
 tags:
 - geospatial
-- government
 - energy
 - grid expansion
-- geospatial data
 - Zimbabwe
 topics:
 - id: ENER

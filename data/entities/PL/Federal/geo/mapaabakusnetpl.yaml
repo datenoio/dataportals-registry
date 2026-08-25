@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '151'
       name: 'Eastern Europe '
-description: No description provided in the provided source text or search results.
+description: MapProxy tile, WMS, and WMTS services operated by Abakus, a Polish GIS
+  technology company, for publishing geospatial map layers.
 endpoints:
 - type: wms111
   url: http://mapa.abakus.net.pl:8080/service?REQUEST=GetCapabilities
@@ -34,16 +35,16 @@ langs:
 - id: PL
   name: Polish
 link: http://mapa.abakus.net.pl:8080
-name: A Geoportal
+name: Abakus MapProxy
 owner:
-  link: https://mapa.abakus.net.pl:8080
+  link: https://abakus.net.pl
   location:
     country:
       id: PL
       name: Poland
     level: 20
-  name: A
-  type: Civil society
+  name: Abakus
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -58,9 +59,10 @@ software:
   name: MapProxy
 status: active
 tags:
-- Poland
 - geospatial
+- has_api
 - mapproxy
+- Poland
 topics:
 - id: Location
   name: Location

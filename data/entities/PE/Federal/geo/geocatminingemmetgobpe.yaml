@@ -21,22 +21,22 @@ description: Geological and Mining Cadastre Information System. Provides daily u
   information.
 endpoints:
 - type: arcgis:rest:info
-  url: http://geocatmin.ingemmet.gob.pe/arcgis/rest/info?f=pjson
+  url: https://geocatmin.ingemmet.gob.pe/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: http://geocatmin.ingemmet.gob.pe/arcgis/rest/services?f=pjson
+  url: https://geocatmin.ingemmet.gob.pe/arcgis/rest/services?f=pjson
 - type: arcgis:soap
-  url: http://geocatmin.ingemmet.gob.pe/arcgis/services?wsdl
+  url: https://geocatmin.ingemmet.gob.pe/arcgis/services?wsdl
 - type: arcgis:sitemap
-  url: http://geocatmin.ingemmet.gob.pe/arcgis/rest/services?f=sitemap
+  url: https://geocatmin.ingemmet.gob.pe/arcgis/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: http://geocatmin.ingemmet.gob.pe/arcgis/rest/services?f=geositemap
+  url: https://geocatmin.ingemmet.gob.pe/arcgis/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: http://geocatmin.ingemmet.gob.pe/arcgis/rest/services?f=kmz
+  url: https://geocatmin.ingemmet.gob.pe/arcgis/rest/services?f=kmz
 id: geocatminingemmetgobpe
 langs:
 - id: ES
   name: Spanish
-link: http://geocatmin.ingemmet.gob.pe/arcgis/rest/services
+link: https://geocatmin.ingemmet.gob.pe/arcgis/rest/services
 name: GEOCATMIN - INGEMMET
 owner:
   link: https://geocatmin.ingemmet.gob.pe
@@ -45,7 +45,7 @@ owner:
       id: PE
       name: Peru
     level: 20
-  name: INGEMMET
+  name: Instituto Geológico, Minero y Metalúrgico (INGEMMET)
   type: Central government
 properties:
   has_doi: false
@@ -80,4 +80,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005602
+uid: cdi00035080

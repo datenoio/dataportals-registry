@@ -10,12 +10,15 @@ coverage:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: The geodata.gov.gr portal is the first attempt to free geospatial data
-  available to the wider Civil Service and to all citizens of Greece.
+    subregion:
+      id: GR-C
+      name: Dytikí Makedonía
+description: CKAN geographic information catalog of the Region of Western Macedonia
+  (Περιφέρεια Δυτικής Μακεδονίας).
 endpoints:
 - type: ckan:package-search
   url: https://geodm.gr/api/3/action/package_search

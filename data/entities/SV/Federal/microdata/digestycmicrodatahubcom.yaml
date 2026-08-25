@@ -6,6 +6,7 @@ api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - dataset
+- microdata
 coverage:
 - location:
     country:
@@ -15,7 +16,10 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Data catalog for statistical and geographical data.
+description: Former NADA microdata catalog of El Salvador's Dirección General de Estadística
+  y Censos (DIGESTYC) hosted on digestyc.microdatahub.com. The domain now redirects
+  to a registrar sale page. Survey and census microdata are published by the successor
+  office ONEC at onec.bcr.gob.sv.
 id: digestycmicrodatahubcom
 langs:
 - id: ES
@@ -23,13 +27,13 @@ langs:
 link: http://digestyc.microdatahub.com/index.php
 name: Catálogo Central de Datos El Salvador
 owner:
-  link: http://digestyc.microdatahub.com/index.php
+  link: https://onec.bcr.gob.sv/
   location:
     country:
       id: SV
       name: El Salvador
     level: 20
-  name: Not specified on page
+  name: Dirección General de Estadística y Censos (DIGESTYC)
   type: Central government
 properties:
   has_doi: false
@@ -47,26 +51,18 @@ software:
 status: inactive
 tags:
 - government
-- has_api
 - microdata
 - statistics
-- geography
-- official
-- salvador
+- official statistics
+- El Salvador
 topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
-- id: Society
-  name: Society
-  type: iso19115
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: Environment
-  name: Environment
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00001506

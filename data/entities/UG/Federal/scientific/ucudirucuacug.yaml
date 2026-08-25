@@ -18,8 +18,15 @@ description: Official institutional repository of Uganda Christian University, c
   theses, articles, working papers, and other scholarly outputs, including datasets
   where deposited.
 endpoints:
-- type: dspace:catalog
-  url: https://ucudir.ucu.ac.ug/
+- type: dspace
+  url: https://ucudir.ucu.ac.ug/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://ucudir.ucu.ac.ug/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://ucudir.ucu.ac.ug/server/oai/request?verb=Identify
+  version: '2.0'
 id: ucudirucuacug
 langs:
 - id: EN
@@ -54,6 +61,7 @@ tags:
 - research
 - theses
 - Uganda
+- has_api
 topics:
 - id: TECH
   name: Science and technology

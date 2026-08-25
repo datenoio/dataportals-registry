@@ -1,11 +1,11 @@
 access_mode:
 - open
 - limited
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
-- dataset
+- microdata
 coverage:
 - location:
     country:
@@ -15,19 +15,16 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: An open-source software designed for researchers to browse, search, compare,
-  apply for access and download research data.
-endpoints:
-- type: nada:catalog-search
-  url: https://nada.ui.edu.ng/index.php/api/catalog/search
+description: NADA microdata catalog of the University of Ibadan for research survey
+  datasets. The public site currently returns HTTP 500.
 id: nadauiedung
 langs:
 - id: EN
   name: English
 link: https://nada.ui.edu.ng/index.php
-name: University of Ibadan, Data Archive
+name: University of Ibadan Data Archive
 owner:
-  link: http://www.ui.edu.ng
+  link: https://ui.edu.ng
   location:
     country:
       id: NG
@@ -48,13 +45,13 @@ rights:
 software:
   id: nada
   name: NADA
-status: active
+status: inactive
 tags:
-- government
-- has_api
 - microdata
 - research
 - survey
+- academy
+- Nigeria
 topics:
 - id: SOCI
   name: Population and society

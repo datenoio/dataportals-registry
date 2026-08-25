@@ -11,12 +11,15 @@ coverage:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Geoportal from Local Government of web services providing geospatial
-  data services and geographic datasets using arcgis server.
+    subregion:
+      id: GR-G
+      name: Dytikí Elláda
+description: ArcGIS Server urban-planning (webpoleod) services of the Municipality of
+  Patras.
 endpoints:
 - type: arcgis:rest:info
   url: https://gissrvweb.geopatras.gr/webpoleod/rest/info?f=pjson
@@ -35,9 +38,9 @@ langs:
 - id: EL
   name: Greek
 link: https://gissrvweb.geopatras.gr/webpoleod/rest/services
-name: webpoleod
+name: Municipality of Patras Urban Planning GIS
 owner:
-  link: https://gissrvweb.geopatras.gr/webpoleod/rest/services
+  link: https://e-patras.gr
   location:
     country:
       id: GR
@@ -46,7 +49,7 @@ owner:
     subregion:
       id: GR-G
       name: Dytikí Elláda
-  name: Local Government of web services
+  name: Municipality of Patras
   type: Local government
 properties:
   has_doi: false
@@ -72,4 +75,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005902
+uid: cdi00035351

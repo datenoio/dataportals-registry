@@ -3,6 +3,9 @@ access_mode:
 api: true
 api_status: active
 catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -12,6 +15,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
+description: National GeoNode geoportal of Paraguay, managed by MITIC, providing
+  discovery of spatial datasets, documents, and OGC services (CSW, WMS, WFS, WCS)
+  for the country's spatial data infrastructure.
 endpoints:
 - type: geonode:datasets
   url: https://geoportal.paraguay.gov.py/api/datasets/
@@ -64,7 +70,7 @@ langs:
 - id: ES
   name: Spanish
 link: https://geoportal.paraguay.gov.py
-name: Geoportal MITIC
+name: Geoportal MITIC Paraguay
 owner:
   link: https://www.mitic.gov.py
   location:
@@ -78,8 +84,20 @@ software:
   id: geonode
   name: GeoNode
 status: active
-uid: cdi00021543
+tags:
+- GIS
+- geospatial
+- government
+- GeoNode
+- Paraguay
+- has_api
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
@@ -89,12 +107,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-tags:
-- GIS
-- geospatial
-- government
-description: Geoportal. managed by Ministerio de Tecnologías de la Información y Comunicación
-  (MITIC). providing access to geoportal mitic.
-content_types:
-- dataset
-- map_layer
+uid: cdi00021543

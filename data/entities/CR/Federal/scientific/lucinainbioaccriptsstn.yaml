@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -18,14 +18,7 @@ description: The Specimen and Species Thematic Network (SSTN), is an electronic 
   network whose main goal is to facilitate the digitization, integration and delivery of digital
   data about specimens and species from American continent. The SSTN is one of six thematic
   networks of IABIN.
-endpoints:
-- type: dcat:ttl
-  url: http://lucina.inbio.ac.cr/IPT-SSTN/dcat
-- type: ipt:dataset
-  url: http://lucina.inbio.ac.cr/IPT-SSTN/inventory/dataset
-- type: rss
-  url: http://lucina.inbio.ac.cr/IPT-SSTN/rss.do
-  version: '2.0'
+  The lucina.inbio.ac.cr host no longer resolves as of August 2026.
 id: lucinainbioaccriptsstn
 langs:
 - id: ES
@@ -40,11 +33,11 @@ owner:
       name: Costa Rica
     level: 20
   name: Inter-American Biodiversity Information Network - Species and Specimen Thematic Network
-  type: Academy
+  type: International
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT

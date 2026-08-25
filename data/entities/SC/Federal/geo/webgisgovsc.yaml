@@ -1,0 +1,98 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SC
+      name: Seychelles
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Public WebGIS of the Centre for GIS in the Ministry of Lands and Housing.
+  The MapServer viewer publishes national layers for cadastre, planning, environment,
+  tourism, and related themes. MapCache WMS and WMTS services are available without
+  registration. The site still brands itself as the MHILT WebGIS.
+endpoints:
+- type: wms111
+  url: https://webgis.gov.sc/mapcache/wms?SERVICE=WMS&REQUEST=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://webgis.gov.sc/mapcache/wmts/1.0.0/WMTSCapabilities.xml
+  version: 1.0.0
+id: webgisgovsc
+langs:
+- id: EN
+  name: English
+link: https://webgis.gov.sc
+name: Seychelles WebGIS
+owner:
+  link: https://lh.gov.sc
+  location:
+    country:
+      id: SC
+      name: Seychelles
+    level: 20
+  name: Centre for Geographic Information Services
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mapserver
+  name: MapServer
+status: active
+tags:
+- geoportal
+- GIS
+- maps
+- cadastre
+- planning
+- government
+- has_api
+- MapServer
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00004242

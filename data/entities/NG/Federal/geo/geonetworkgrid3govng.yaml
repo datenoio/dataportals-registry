@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,28 +15,23 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: A geospatial data catalog for Nigeria managed via GeoNetwork, providing
-  access to authoritative, geospatially referenced data across sectors and regions.
-endpoints:
-- type: geonetwork:query
-  url: https://geonetwork.grid3.gov.ng/geonetwork/srv/eng/q
-- type: geonetwork
-  url: https://geonetwork.grid3.gov.ng/geonetwork/srv/api
+description: Former GeoNetwork catalog of the GRID3 Nigeria programme for boundaries,
+  population, settlements, and infrastructure layers. The hostname geonetwork.grid3.gov.ng
+  currently does not resolve. NASRDA now operates the GRID3 Nigeria geodatabase.
 id: geonetworkgrid3govng
 langs:
 - id: EN
   name: English
 link: https://geonetwork.grid3.gov.ng/geonetwork
-name: The Geo-Referenced Infrastructure and Demographic Data for Development (GRID3)
-  programme geodata catalog
+name: GRID3 Nigeria GeoNetwork
 owner:
-  link: https://www.gov.ng
+  link: https://central.nasrda.gov.ng
   location:
     country:
       id: NG
       name: Nigeria
     level: 20
-  name: Federal Republic of Nigeria
+  name: National Space Research and Development Agency (NASRDA)
   type: Central government
 properties:
   has_doi: true
@@ -50,53 +45,27 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
 - government
-- has_api
 - Nigeria
 - GRID3
-- GeoNetwork
 - boundaries
 - population
 - infrastructure
-- health
-- agriculture
-- environment
 topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme
 - id: TRAN
   name: Transport
   type: eudatatheme
-- id: SOCI
-  name: Population and society
-  type: eudatatheme
 - id: Boundaries
   name: Boundaries
-  type: iso19115
-- id: Environment
-  name: Environment
-  type: iso19115
-- id: Health
-  name: Health
-  type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
-  type: iso19115
-- id: Inland Waters
-  name: Inland Waters
-  type: iso19115
-- id: Location
-  name: Location
-  type: iso19115
-- id: Oceans
-  name: Oceans
-  type: iso19115
-- id: Society
-  name: Society
   type: iso19115
 - id: Society
   name: Society

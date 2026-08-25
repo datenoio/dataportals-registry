@@ -14,8 +14,10 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Datos Abiertos Venezuela. open data portal. managed by Venezuela Government.
-  powered by DKAN. accessible at datos.gob.ve.
+description: National open data portal of Venezuela (datos.gob.ve), historically a
+  DKAN catalog of government datasets. Host probes timed out on 24 August 2026; search
+  indexes still show a Drupal/DKAN front page, so the record is kept active pending
+  a confirmed outage.
 endpoints:
 - type: ckan:package-list
   url: https://datos.gob.ve/api/3/action/package_list
@@ -24,21 +26,22 @@ endpoints:
   url: https://datos.gob.ve/data.json
 id: datosgobve
 langs:
-- id: EN
-  name: English
+- id: ES
+  name: Spanish
 link: https://datos.gob.ve
-name: Venezuela Government Open Data Portal
+name: Datos Abiertos Venezuela
 owner:
-  link: https://datos.gob.ve
+  link: https://cnti.gob.ve/
   location:
     country:
       id: VE
       name: Venezuela (Bolivarian Republic of)
     level: 20
-  name: Venezuela Government
+  name: Centro Nacional de Tecnologías de Información (CNTI)
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -51,11 +54,13 @@ software:
   name: DKAN
 status: active
 tags:
-- datos abiertos
-- gobierno
+- government
+- open data
 - Venezuela
+- DKAN
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00003124
+uid: cdi00034925

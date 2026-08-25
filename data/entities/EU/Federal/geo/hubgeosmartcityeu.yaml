@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -21,7 +21,7 @@ langs:
 - id: EN
   name: English
 link: http://hub.geosmartcity.eu/geonetwork
-name: Government of European Union Geoportal
+name: GeoSmartCity GeoNetwork
 owner:
   link: http://geosmartcity.eu
   location:
@@ -29,8 +29,8 @@ owner:
       id: EU
       name: European Union
     level: 20
-  name: Government of European Union
-  type: Central government
+  name: GeoSmartCity Consortium
+  type: Other
 properties:
   has_doi: true
 rights:
@@ -43,7 +43,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - European Union
 - GeoSmartCity
@@ -57,7 +57,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00004969
-endpoints:
-- type: geonetwork:api:records
-  url: http://hub.geosmartcity.eu/srv/api/records
+uid: cdi00035449

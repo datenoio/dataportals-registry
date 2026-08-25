@@ -10,16 +10,18 @@ coverage:
     country:
       id: CZ
       name: Czech Republic
-    level: 20
+    level: 30
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Open data catalogue for the city of Prague
+    subregion:
+      id: CZ-10
+      name: Praha, Hlavní město
+description: Open data catalogue of the City of Prague, now published as an LKOD
+  catalog at lkod.cz. The former opendata.praha.eu hostname redirects here.
 endpoints:
-- type: ckan
-  url: http://opendata.praha.eu/api/3
-- type: sitemap
-  url: https://opendata.praha.eu/sitemap.xml
+- type: customapi
+  url: https://api.lkod.cz
 id: opendataprahaeu
 identifiers:
 - id: wikidata
@@ -28,7 +30,7 @@ identifiers:
 langs:
 - id: CS
   name: Czech
-link: https://opendata.praha.eu
+link: https://lkod.cz/catalog/praha
 name: Open data hlavního města Prahy
 owner:
   link: https://praha.eu
@@ -40,7 +42,7 @@ owner:
     subregion:
       id: CZ-10
       name: Praha, Hlavní město
-  name: Praha
+  name: Hlavní město Praha
   type: Local government
 properties:
   transferable_location: true

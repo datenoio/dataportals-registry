@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Model of accumulation, preservation and dissemination of research output
-  and activities
+description: Klaipėda University research information system for publications, research data, theses,
+  and related CRIS entities.
 endpoints:
 - type: dspace
   url: https://portalcris.ku.lt/server/api
@@ -25,12 +25,17 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://portalcris.ku.lt/sitemap.xml
+- type: oaipmh20
+  url: https://portalcris.ku.lt/server/oai/request?verb=Identify
+  version: '2.0'
 id: portalcriskult
 langs:
 - id: LT
   name: Lithuanian
+- id: EN
+  name: English
 link: https://portalcris.ku.lt
-name: Klaipeda University Research Management System (CRIS)
+name: Klaipėda University Research Management System (CRIS)
 owner:
   link: https://www.ku.lt
   location:
@@ -38,7 +43,7 @@ owner:
       id: LT
       name: Lithuania
     level: 20
-  name: Klaipeda University
+  name: Klaipėda University
   type: Academy
 properties:
   has_doi: true

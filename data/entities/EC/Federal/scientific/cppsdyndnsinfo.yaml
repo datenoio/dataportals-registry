@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,31 +14,27 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: South Pacific Marine Biodiversity data. This scientific data repository.
-  managed by cpps. provides access to datasets and resources.
-endpoints:
-- type: rss
-  url: http://cpps.dyndns.info:8080/cpps-ipt/rss.do
-  version: '2.0'
+description: Former GBIF/OBIS Integrated Publishing Toolkit of the Permanent Commission for
+  the South Pacific (CPPS) in Guayaquil. The host cpps.dyndns.info no longer resolves.
 id: cppsdyndnsinfo
 langs:
 - id: ES
   name: Spanish
 link: http://cpps.dyndns.info:8080
-name: CPPS OBIS NODE
+name: CPPS OBIS Node (IPT)
 owner:
-  link: http://www.cpps-int.org
+  link: https://cpps-int.org
   location:
     country:
       id: EC
       name: Ecuador
     level: 20
-  name: cpps
-  type: Academy
+  name: Comisión Permanente del Pacífico Sur (CPPS)
+  type: International
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT

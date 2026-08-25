@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- document
 coverage:
 - location:
     country:
@@ -18,7 +19,16 @@ description: Institutional EPrints repository of Ilia State University for acade
   publications and research materials.
 endpoints:
 - type: oaipmh20
-  url: http://eprints.iliauni.edu.ge/cgi/oai2?verb=Identify
+  url: https://eprints.iliauni.edu.ge/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: eprints:rest
+  url: https://eprints.iliauni.edu.ge/rest/eprint
+- type: eprints:rdf
+  url: https://eprints.iliauni.edu.ge/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://eprints.iliauni.edu.ge/cgi/export/repository/RDFN3/devel.n3
+- type: rss
+  url: https://eprints.iliauni.edu.ge/cgi/latest_tool?output=RSS2
   version: '2.0'
 id: eprintsiliaunieduge
 langs:
@@ -26,7 +36,7 @@ langs:
   name: Georgian
 - id: EN
   name: English
-link: http://eprints.iliauni.edu.ge
+link: https://eprints.iliauni.edu.ge
 name: Ilia State University EPrints Repository
 owner:
   link: https://iliauni.edu.ge
@@ -55,6 +65,7 @@ tags:
 - institutional repository
 - university
 - open access
+- has_api
 topics:
 - id: EDUC
   name: Education, culture and sport

@@ -24,6 +24,8 @@ description: Provides access to mapping applications, GIS services, and ready to
   Users can browse, aggregate, and style geospatial data, generate maps, download
   standard-format data, and manage metadata and documents.
 endpoints:
+- type: geonode:datasets
+  url: https://www.carmonagis.org/api/datasets/
 - type: geonode:layers
   url: https://www.carmonagis.org/api/layers/
 - type: geonode:documents
@@ -85,8 +87,6 @@ endpoints:
   url: https://www.carmonagis.org/geoserver/rest/settings
 - type: geoserver:layers
   url: https://www.carmonagis.org/geoserver/rest/layers
-- type: opensearch
-  url: https://www.carmonagis.org/catalogue/opensearch
 - type: sitemap
   url: https://www.carmonagis.org/sitemap.xml
 id: wwwcarmonagisorg
@@ -105,7 +105,7 @@ owner:
     subregion:
       id: PH-40
       name: Calabarzon (Region IV-A)
-  name: City of Carmona (PH)
+  name: City Government of Carmona
   type: Local government
 properties:
   has_doi: false

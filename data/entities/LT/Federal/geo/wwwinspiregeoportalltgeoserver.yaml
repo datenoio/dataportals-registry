@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Provides access to metadata records of services and data published in
-  relation to the INSPIRE Directive
+description: GeoServer publishing INSPIRE-related spatial datasets and OGC view/download services for
+  Lithuania.
 endpoints:
 - type: wms111
   url: https://www.inspire-geoportal.lt/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -64,16 +64,18 @@ id: wwwinspiregeoportalltgeoserver
 langs:
 - id: LT
   name: Lithuanian
+- id: EN
+  name: English
 link: https://www.inspire-geoportal.lt/geoserver/web/
-name: INSPIRE Lithuania Geoportal
+name: INSPIRE Lithuania GeoServer
 owner:
-  link: https://www.inspire-geoportal.lt
+  link: https://www.registrucentras.lt
   location:
     country:
       id: LT
       name: Lithuania
     level: 20
-  name: INSPIRE Lithuania Geoportal
+  name: VĮ Registrų centras
   type: Central government
 properties:
   has_doi: false
@@ -100,4 +102,4 @@ topics:
 - id: Geoscientific Information
   name: Geoscientific Information
   type: iso19115
-uid: temp00000459
+uid: cdi00035276

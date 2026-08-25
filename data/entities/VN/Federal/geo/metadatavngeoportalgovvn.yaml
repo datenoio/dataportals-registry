@@ -15,13 +15,19 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Catalog of geo metadata from the Vietnam National Geoportal, providing
-  access to GIS datasets and related services.
+description: GeoNetwork metadata catalog of Vietnam's national geoportal, publishing ISO 19115 geospatial
+  metadata for survey, mapping, and environmental datasets.
 endpoints:
 - type: geonetwork:query
   url: https://metadata.vngeoportal.gov.vn/geonetwork/srv/eng/q
-- type: geonetwork
+- type: geonetwork:api
   url: https://metadata.vngeoportal.gov.vn/geonetwork/srv/api
+- type: csw202
+  url: https://metadata.vngeoportal.gov.vn/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://metadata.vngeoportal.gov.vn/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: metadatavngeoportalgovvn
 langs:
 - id: VN
@@ -29,13 +35,13 @@ langs:
 link: https://metadata.vngeoportal.gov.vn/geonetwork
 name: Vietnam National Geoportal Metadata Catalog
 owner:
-  link: https://monre.gov.vn
+  link: https://mae.gov.vn
   location:
     country:
       id: VN
       name: Vietnam
     level: 20
-  name: Ministry of Natural Resources and Environment (MONRE) Vietnam
+  name: Ministry of Agriculture and Environment
   type: Central government
 properties:
   has_doi: true
@@ -57,6 +63,7 @@ tags:
 - has_api
 - metadata
 - GIS
+- Vietnam
 topics:
 - id: ENVI
   name: Environment

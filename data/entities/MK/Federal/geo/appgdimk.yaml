@@ -13,12 +13,12 @@ coverage:
       name: Republic of North Macedonia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: This appears to be an ArcGIS REST Services Directory, typically used
-  to catalog GIS and geospatial data services. The exact content, such as datasets
-  or layers available, cannot be determined from the URL alone without parsing the
-  actual content of the page.
+description: ArcGIS REST services directory hosted by GDi, the Esri distributor for
+  North Macedonia. Folders include services for public clients such as spatial planning,
+  INSPIRE, MEPSO, and municipal GIS. HTTP JSON listing returned 500 during review
+  on 25 August 2026 while the host still responded.
 endpoints:
 - type: arcgis:rest:info
   url: http://app.gdi.mk/arcgis/rest/info?f=pjson
@@ -35,18 +35,20 @@ endpoints:
 id: appgdimk
 langs:
 - id: MK
-  name: Makedonian
+  name: Macedonian
+- id: EN
+  name: English
 link: http://app.gdi.mk/arcgis/rest/services
-name: Not specified in the URL or available metadata Geoportal
+name: GDi North Macedonia ArcGIS REST Services
 owner:
-  link: http://app.gdi.mk
+  link: https://gdi.net
   location:
     country:
       id: MK
       name: Republic of North Macedonia
     level: 20
-  name: Not specified in the URL or available metadata
-  type: Central government
+  name: GDi
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -62,10 +64,18 @@ software:
 status: active
 tags:
 - ArcGIS
-- ArcGIS REST Services
-- Geospatial
+- GIS
+- geospatial
+- has_api
+- North Macedonia
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Location
   name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
   type: iso19115
 uid: temp00001602

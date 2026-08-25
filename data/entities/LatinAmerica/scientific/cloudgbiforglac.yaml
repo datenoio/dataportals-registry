@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '419'
       name: Latin America and the Caribbean
-description: This IPT is hosted by GBIF to publish datasets from countries in Latin America
-  or the Caribbean, who prefer not to run their own IPT.
+description: GBIF-hosted Integrated Publishing Toolkit (IPT) for publishers in Latin
+  America and the Caribbean who prefer not to run their own IPT.
 endpoints:
 - type: dcat:ttl
   url: https://cloud.gbif.org/lac/dcat
@@ -26,8 +26,12 @@ endpoints:
   version: '2.0'
 id: cloudgbiforglac
 langs:
+- id: EN
+  name: English
 - id: ES
   name: Spanish
+- id: PT
+  name: Portuguese
 link: https://cloud.gbif.org/lac
 name: GBIF Latin America and Caribbean
 owner:
@@ -39,6 +43,9 @@ owner:
     level: 20
   name: GBIF Secretariat
   type: Academy
+properties:
+  dataset_count_reported: 97
+  has_doi: true
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -48,6 +55,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota

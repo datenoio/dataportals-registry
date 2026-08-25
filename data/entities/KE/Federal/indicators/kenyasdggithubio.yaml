@@ -4,6 +4,7 @@ api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
+- indicator
 - dataset
 coverage:
 - location:
@@ -14,15 +15,16 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: National Open SDG reporting platform for Kenya, publishing Sustainable
-  Development Goal indicators.
+description: National Open SDG reporting platform for Kenya, published by the Kenya
+  National Bureau of Statistics. Indicator JSON is served from the companion
+  production-data GitHub Pages repository (last data update November 2025).
 endpoints:
 - type: opensdg:catalog
   url: https://kenya-sdg.github.io/
 - type: opensdg:data
-  url: https://Kenya-SDG.github.io/data-repo/en/data/1-1-1.json
+  url: https://kenya-sdg.github.io/production-data/en/data/1-1-1.json
 - type: opensdg:data
-  url: https://Kenya-SDG.github.io/data-repo/en/data/1-2-1.json
+  url: https://kenya-sdg.github.io/production-data/en/data/1-2-1.json
 id: kenyasdggithubio
 langs:
 - id: EN
@@ -40,6 +42,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -56,6 +59,7 @@ tags:
 - Kenya
 - official statistics
 - OpenSDG
+- has_api
 topics:
 - id: SOCI
   name: Population and society

@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '029'
       name: Caribbean
-description: National geoportal of the Barbados Lands and Surveys Department for searching,
-  viewing, and downloading government spatial datasets.
+description: National geoportal of the Barbados Lands and Surveys Department. ArcGIS
+  Hub site for viewing, downloading, and analyzing government spatial datasets from
+  multiple departments, including administrative boundaries and base mapping.
 endpoints:
 - type: dcatap201
   url: https://geoportal-bds-lsdept.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -26,6 +27,10 @@ endpoints:
   url: https://geoportal-bds-lsdept.hub.arcgis.com/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://geoportal-bds-lsdept.hub.arcgis.com/api/search/v1
+- type: dcatus11
+  url: https://geoportal-bds-lsdept.hub.arcgis.com/data.json
+- type: sitemap
+  url: https://geoportal-bds-lsdept.hub.arcgis.com/sitemap.xml
 id: geoportalbdslsdepthubarcgiscom
 langs:
 - id: EN
@@ -41,6 +46,16 @@ owner:
     level: 20
   name: Lands and Surveys Department
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
 software:
   id: arcgishub
   name: ArcGIS Hub
@@ -48,16 +63,22 @@ status: active
 tags:
 - geospatial
 - government
-- has_api
-- ArcGIS Hub
+- cadastral
 - Barbados
+- has_api
 topics:
-- id: Location
-  name: Location
-  type: iso19115
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115

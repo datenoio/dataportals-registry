@@ -15,16 +15,13 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: Geoportal powered by GeoNode for publishing, browsing, and downloading
-  geospatial data. Provides layers and related documents contributed by registered
-  users and organizations, with tools for searching, visualizing, and sharing maps.
+description: NAXA GeoNode catalog of Nepal geospatial layers and documents. The HTML
+  UI redirects to login; the GeoNode v2 API lists about 16 datasets without authentication.
 endpoints:
-- type: geonode:layers
-  url: https://geoportalapi.naxa.com.np/api/layers/
+- type: geonode:datasets
+  url: https://geoportalapi.naxa.com.np/api/v2/datasets/
 - type: geonode:documents
-  url: https://geoportalapi.naxa.com.np/api/documents/
-- type: geonode:dcatus11
-  url: https://geoportalapi.naxa.com.np/data.json
+  url: https://geoportalapi.naxa.com.np/api/v2/resources/
 - type: wms111
   url: https://geoportalapi.naxa.com.np/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
@@ -89,7 +86,7 @@ langs:
   name: English
 - id: NE
   name: Nepali
-link: https://geoportalapi.naxa.com.np/
+link: https://geoportalapi.naxa.com.np
 name: NAXA Geoportal
 owner:
   link: https://naxa.com.np
@@ -114,10 +111,10 @@ software:
   name: GeoNode
 status: active
 tags:
+- has_api
 - geospatial
 - geonode
 - maps
-- open data
 - Nepal
 topics:
 - id: ENVI

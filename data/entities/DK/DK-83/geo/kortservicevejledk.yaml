@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: DK-83
       name: Syddanmark
-description: GIS services offered by Vejle Municipality
+description: ArcGIS Server REST catalogue of Vejle Kommune, with municipal map
+  services for planning, environment, utilities, and related local layers.
 endpoints:
 - type: arcgis:rest:info
   url: https://kortservice.vejle.dk/gis/rest/info?f=pjson
@@ -36,10 +37,10 @@ id: kortservicevejledk
 langs:
 - id: DA
   name: Danish
-link: https://kortservice.vejle.dk/gis/services
+link: https://kortservice.vejle.dk/gis/rest/services
 name: Kortservice Vejle GIS Services
 owner:
-  link: https://kortservice.vejle.dk/gis/services
+  link: https://www.vejle.dk
   location:
     country: *id001
     level: 30
@@ -80,4 +81,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-uid: temp00004960
+uid: cdi00035557

@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Data catalog root page. This geoportal. managed by National Marine Research
-  and Expert Center of Bulgraria. provides access to datasets and resources.
+description: GeoNetwork catalogue of the Institute of Oceanology at the Bulgarian
+  Academy of Sciences (IO-BAS), originally developed under an EU grant project, with
+  marine and coastal geospatial metadata.
 endpoints:
 - type: geonetwork:query
   url: http://eugrant.io-bas.bg:8080/geonetwork/srv/eng/q
@@ -35,17 +36,19 @@ id: eugrantiobasbg
 langs:
 - id: BG
   name: Bulgarian
+- id: EN
+  name: English
 link: http://eugrant.io-bas.bg:8080/geonetwork
-name: BG ODc GIS Catalogue
+name: IO-BAS GeoNetwork Catalogue
 owner:
-  link: https://www.io-bas.bg
+  link: https://io-bas.bg
   location:
     country:
       id: BG
       name: Bulgaria
     level: 20
-  name: National Marine Research and Expert Center of Bulgraria
-  type: Central government
+  name: Institute of Oceanology, Bulgarian Academy of Sciences
+  type: Academy
 properties:
   has_doi: true
   transferable_topics: true

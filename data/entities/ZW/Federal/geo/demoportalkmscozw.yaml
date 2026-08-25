@@ -3,6 +3,9 @@ access_mode:
 api: true
 api_status: active
 catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -10,8 +13,11 @@ coverage:
       name: Zimbabwe
     level: 20
     macroregion:
-      id: 018
-      name: Southern Africa
+      id: '014'
+      name: Eastern Africa
+description: KM-Spatial GeoNode demonstration portal hosting sample geospatial
+  datasets, documents, and OGC services. Operated by the Zimbabwe GIS company
+  KM-Spatial.
 endpoints:
 - type: geonode:datasets
   url: https://demo-portal.kms.co.zw/api/datasets/
@@ -72,6 +78,7 @@ langs:
 link: https://demo-portal.kms.co.zw
 name: KM-Spatial Demo Portal
 owner:
+  link: https://kms.co.zw
   location:
     country:
       id: ZW
@@ -79,12 +86,24 @@ owner:
     level: 20
   name: KM-Spatial
   type: Business
-  link: https://co.zw
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
 software:
   id: geonode
   name: GeoNode
 status: active
-uid: cdi00021557
+tags:
+- GIS
+- geospatial
+- GeoNode
+- demo
 topics:
 - id: Location
   name: Location
@@ -95,11 +114,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-tags:
-- GIS
-- geospatial
-description: Geoportal. managed by KM-Spatial. providing access to km-spatial demo
-  portal.
-content_types:
-- dataset
-- map_layer
+uid: cdi00021557

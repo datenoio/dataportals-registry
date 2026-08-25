@@ -1,5 +1,6 @@
 access_mode:
-- limited
+- open
+api: true
 api_status: active
 catalog_type: Open data portal
 content_types:
@@ -13,9 +14,12 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: Official Open Data portal of Kazakhstan providing access to datasets
-  from state and local bodies and other organizations, with sorting, advanced search,
-  and download options in multiple formats.
+description: Official Open Data portal of Kazakhstan, publishing machine-readable
+  datasets from central state bodies, regional akimats and other organizations,
+  with search, download (Excel/JSON) and a documented v4 API.
+endpoints:
+- type: rest
+  url: https://data.egov.kz/api/v4/dataset
 id: dataegovkz
 identifiers:
 - id: wikidata
@@ -27,15 +31,15 @@ langs:
 - id: KZ
   name: Kazakh
 link: https://data.egov.kz/
-name: Портал открытых данных Республики Казахстан
+name: Open Data Portal of the Republic of Kazakhstan
 owner:
-  link: https://www.gov.kz
+  link: https://egov.kz
   location:
     country:
       id: KZ
       name: Kazakhstan
     level: 20
-  name: Government of Kazakhstan
+  name: JSC National Information Technologies
   type: Central government
 properties:
   has_doi: false
@@ -56,6 +60,7 @@ tags:
 - open data
 - catalog
 - kazakhstan
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector

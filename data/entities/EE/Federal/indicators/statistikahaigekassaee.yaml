@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -14,12 +14,10 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Estonian Health Insurance Fund's official statistics portal, providing
-  datasets on health insurance, benefits, and related topics.
-endpoints:
-- type: pxwebapi
-  url: https://statistika.haigekassa.ee/PXWeb/api/v1/en/
-  version: '1'
+description: Former PxWeb statistics catalog of the Estonian Health Insurance Fund
+  (Haigekassa). The hostname statistika.haigekassa.ee no longer resolves. The fund
+  now operates as Tervisekassa; health-insurance tables are published in the TAI
+  health statistics database.
 id: statistikahaigekassaee
 langs:
 - id: ET
@@ -27,7 +25,7 @@ langs:
 link: https://statistika.haigekassa.ee/PXWeb
 name: Estonian Health Insurance Statistics
 owner:
-  link: https://www.haigekassa.ee/
+  link: https://tervisekassa.ee
   location:
     country:
       id: EE
@@ -47,7 +45,7 @@ rights:
 software:
   id: pxweb
   name: PxWeb
-status: active
+status: inactive
 tags:
 - statistics
 - health
@@ -67,4 +65,4 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-uid: temp00003541
+uid: cdi00035524

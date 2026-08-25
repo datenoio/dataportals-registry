@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -14,28 +15,22 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: AUB ScholarWorks is a digital service that collects, preserves, and distributes
-  digital material. Repositories are important tools for preserving an organization's
-  legacy; they facilitate digital preservation and scholarly communication.
+description: DSpace 9 institutional repository of the American University of
+  Beirut. Collects, preserves, and distributes scholarly publications, theses,
+  and research outputs, with REST API at /server/api and OAI-PMH at
+  /server/oai/request.
 endpoints:
-- type: dspace:items
-  url: https://scholarworks.aub.edu.lb/rest/items
-  version: '6'
+- type: dspace
+  url: https://scholarworks.aub.edu.lb/server/api
+  version: '9'
+- type: dspace:objects
+  url: https://scholarworks.aub.edu.lb/server/api/discover/search/objects
+  version: '9'
 - type: oaipmh20
-  url: https://scholarworks.aub.edu.lb/oai/request?verb=Identify
+  url: https://scholarworks.aub.edu.lb/server/oai/request?verb=Identify
   version: '2.0'
-- type: rss
-  url: https://scholarworks.aub.edu.lb/feed/rss_2.0/site
-  version: '2.0'
-- type: atom
-  url: https://scholarworks.aub.edu.lb/feed/atom_1.0/site
-  version: '1.0'
 - type: sitemap
-  url: https://scholarworks.aub.edu.lb/sitemap
-- type: sitemap
-  url: https://scholarworks.aub.edu.lb/htmlmap
-- type: opensearch
-  url: https://scholarworks.aub.edu.lb:443/open-search/description.xml
+  url: https://scholarworks.aub.edu.lb/sitemap_index.xml
 id: scholarworksaubedulb
 identifiers:
 - id: re3data
@@ -45,12 +40,12 @@ identifiers:
   url: https://v2.sherpa.ac.uk/id/repository/4499
   value: '4499'
 langs:
-- id: AR
-  name: Arabic
 - id: EN
   name: English
+- id: AR
+  name: Arabic
 link: https://scholarworks.aub.edu.lb
-name: AUB Scholarworks
+name: AUB ScholarWorks
 owner:
   link: https://www.aub.edu.lb
   location:
@@ -58,10 +53,11 @@ owner:
       id: LB
       name: Lebanon
     level: 20
-  name: American University in Beirut
+  name: American University of Beirut
   type: Academy
 properties:
   has_doi: true
+  dataset_count_reported: 24157
 rights:
   license_id: null
   license_name: null
@@ -74,12 +70,22 @@ software:
   name: DSpace
 status: active
 tags:
+- scientific
+- has_api
+- institutional repository
+- open access
 - research data
-- digital preservation
+- DSpace
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Education
+  name: Education
+  type: iso19115
 uid: cdi00004754
 _re3data:
   re3data_id: r3d100013672

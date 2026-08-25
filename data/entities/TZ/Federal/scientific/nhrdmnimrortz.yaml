@@ -1,6 +1,6 @@
 access_mode:
 - open
-- limited
+- restricted
 api: true
 api_status: active
 catalog_type: Scientific data repository
@@ -24,7 +24,7 @@ endpoints:
 - type: inveniordmapi:records
   url: https://nhrdm.nimr.or.tz/api/records
 - type: oaipmh20
-  url: https://nhrdm.nimr.or.tz/oai2d
+  url: https://nhrdm.nimr.or.tz/oai2d?verb=Identify
   version: '2.0'
 id: nhrdmnimrortz
 langs:
@@ -33,7 +33,7 @@ langs:
 link: https://nhrdm.nimr.or.tz
 name: National Health Research Data Management Repository
 owner:
-  link: https://www.nimr.or.tz
+  link: https://nimr.or.tz
   location:
     country:
       id: TZ

@@ -18,17 +18,26 @@ coverage:
     subregion:
       id: LT-MR
       name: Marijampolės apskritis
-description: ArcGIS REST Services Directory for municipality data
+description: Marijampolė municipality ArcGIS Server catalogue of local spatial datasets and map services.
 endpoints:
+- type: arcgis:rest:info
+  url: https://gis.marijampole.lt/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: https://gis.marijampole.lt/arcgis/rest/services/?f=pjson
-  version: '1.0'
+  url: https://gis.marijampole.lt/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.marijampole.lt/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.marijampole.lt/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.marijampole.lt/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.marijampole.lt/arcgis/rest/services?f=kmz
 id: gismarijampolelt
 langs:
 - id: LT
   name: Lithuanian
-link: https://gis.marijampole.lt/arcgis/rest/services/
-name: Marijampolė ArcGIS REST
+link: https://gis.marijampole.lt/arcgis/rest/services
+name: Marijampolė ArcGIS REST Services
 owner:
   link: https://www.marijampole.lt/
   location:
@@ -39,7 +48,7 @@ owner:
     subregion:
       id: LT-MR
       name: Marijampolės apskritis
-  name: Marijampolė Municipality
+  name: Marijampolės savivaldybė
   type: Local government
 properties:
   has_doi: false

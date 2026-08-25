@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: ArcGIS REST Services Directory providing geospatial services through
-  the standard ArcGIS Server REST API endpoint.
+description: Duplicate ArcGIS REST alias of gis.kgp.kz (/arcgis vs /server). Use
+  giskgpkz as the keeper record.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.kgp.kz/arcgis/rest/info?f=pjson
@@ -61,7 +61,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: deprecated
 tags:
 - geospatial
 - government

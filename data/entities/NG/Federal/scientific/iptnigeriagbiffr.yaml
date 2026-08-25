@@ -14,21 +14,23 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: IPT GBIF Nigeria (NgBIF)  hosted by the GBIF France
+description: GBIF Integrated Publishing Toolkit for Nigeria (NgBIF), hosted by GBIF
+  France and operated with the Forestry Research Institute of Nigeria. Publishes biodiversity
+  occurrence and checklist datasets to GBIF.
 endpoints:
 - type: dcat:ttl
-  url: http://ipt-nigeria.gbif.fr/dcat
+  url: https://ipt-nigeria.gbif.fr/dcat
 - type: ipt:dataset
-  url: http://ipt-nigeria.gbif.fr/inventory/dataset
+  url: https://ipt-nigeria.gbif.fr/inventory/dataset
 - type: rss
-  url: http://ipt-nigeria.gbif.fr/rss.do
+  url: https://ipt-nigeria.gbif.fr/rss.do
   version: '2.0'
 id: iptnigeriagbiffr
 langs:
 - id: EN
   name: English
-link: http://ipt-nigeria.gbif.fr
-name: IPT GBIF Nigeria
+link: https://ipt-nigeria.gbif.fr
+name: IPT GBIF Nigeria (NgBIF)
 owner:
   link: https://www.frin.gov.ng
   location:
@@ -38,6 +40,13 @@ owner:
     level: 20
   name: Forestry Research Institute of Nigeria
   type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -47,6 +56,8 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- Nigeria
+- has_api
 topics:
 - id: Biota
   name: Biota

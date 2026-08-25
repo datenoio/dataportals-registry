@@ -15,12 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: ArcGIS REST services endpoint for water information data, presumably
-  for Flanders (Belgium). This endpoint provides access to geospatial datasets and
-  services related to water-related variables such as air pressure, water level, discharge,
-  etc. The specific owner and publisher details are not fully disclosed in the raw
-  text, but the domain (waterinfo.be) is typically associated with Flemish (Belgium)
-  regional water authorities.
+description: ArcGIS REST services for the Flemish Hydrographic Atlas (VHA) on waterinfo.be,
+  operated by the Flanders Environment Agency (VMM).
 endpoints:
 - type: arcgis:rest:info
   url: https://vha.waterinfo.be/arcgis/rest/info?f=pjson
@@ -36,12 +32,12 @@ endpoints:
   url: https://vha.waterinfo.be/arcgis/rest/services?f=kmz
 id: vhawaterinfobe
 langs:
-- id: FR
-  name: French
+- id: NL
+  name: Dutch
 link: https://vha.waterinfo.be/arcgis/rest/services
-name: Vlaamse Milieumaatschappij (likely, not fully stated) Geoportal
+name: waterinfo.be VHA ArcGIS services
 owner:
-  link: https://waterinfo.be
+  link: https://www.waterinfo.be
   location:
     country:
       id: BE
@@ -50,7 +46,7 @@ owner:
     subregion:
       id: BE-VLG
       name: Vlaams Gewest
-  name: Vlaamse Milieumaatschappij (likely, not fully stated)
+  name: Vlaamse Milieumaatschappij
   type: Regional government
 properties:
   has_doi: false
@@ -84,4 +80,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005463
+uid: cdi00035933

@@ -14,8 +14,18 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Singapore's open data portal. Explore national datasets and access APIs
-  for development. Over 5,000 datasets from 70 government agencies.
+description: Singapore's national open data portal. Publishes datasets from government
+  agencies with collection and dataset APIs (list, metadata, search, and download)
+  plus real-time environment APIs.
+endpoints:
+- type: customapi
+  url: https://api-production.data.gov.sg/v2/public/api/datasets
+- type: customapi
+  url: https://api-production.data.gov.sg/v2/public/api/collections
+- type: docs
+  url: https://guide.data.gov.sg/developer-guide/api-overview
+- type: sitemap
+  url: https://data.gov.sg/sitemap.xml
 id: datagovsg
 identifiers:
 - id: dataportals.org
@@ -30,24 +40,24 @@ langs:
 link: https://data.gov.sg
 name: Data.gov.sg Open Data Singapore
 owner:
-  link: https://www.gov.sg
+  link: https://www.tech.gov.sg
   location:
     country:
       id: SG
       name: Singapore
     level: 20
-  name: Government of Singapore
+  name: Government Technology Agency (GovTech)
   type: Central government
 properties:
   has_doi: false
   is_national: true
 rights:
   license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_name: Singapore Open Data Licence
+  license_url: https://data.gov.sg/open-data-licence
+  privacy_policy_url: https://www.tech.gov.sg/privacy/
   rights_type: granular
-  tos_url: null
+  tos_url: https://developers.data.gov.sg/privacy-and-terms
 software:
   id: custom
   name: Custom software
@@ -91,6 +101,3 @@ topics:
   name: Location
   type: iso19115
 uid: cdi00001482
-endpoints:
-- type: sitemap
-  url: https://data.gov.sg/sitemap.xml

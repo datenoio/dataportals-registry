@@ -1,9 +1,10 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
+- indicator
 - dataset
 coverage:
 - location:
@@ -12,15 +13,16 @@ coverage:
       name: Bahamas (the)
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: Official national statistics agency for The Bahamas, with publications
-  and themed data resources covering census, social, economic, environmental and SDG
-  statistics.
-endpoints:
-- type: sitemap
-  url: https://bnsistats.gov.bs/sitemap.xml
+description: Official statistics website of the Bahamas National Statistical Institute
+  (BNSI). Publishes census, labour, national accounts, prices, foreign trade, vital,
+  environmental and SDG statistics as themed pages and PDF reports.
 id: bnsistatsgovbs
+identifiers:
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q55589783
+  value: Q55589783
 langs:
 - id: EN
   name: English
@@ -35,19 +37,20 @@ owner:
     level: 20
   name: Bahamas National Statistical Institute
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 software:
   id: custom
   name: Custom software
 status: active
 tags:
 - statistics
-- indicators
 - government
-- has_api
-- SDG
+- official statistics
 - census
-- environment
-- Bahamas
+- indicators
+- SDG
 topics:
 - id: ENVI
   name: Environment

@@ -12,10 +12,11 @@ coverage:
       name: Oceania
     level: 20
     macroregion:
-      id: 009
+      id: '009'
       name: Oceania
-description: Regional data catalog providing access to datasets, indicators, and tools
-  for Pacific Island countries and territories. SDMX API
+description: Pacific Data Hub SDMX-RI web service (NSI) exposing statistical dataflows,
+  data structures, codelists, and concept schemes for Pacific Island countries and
+  territories.
 endpoints:
 - type: sdmx:dataflows
   url: https://stats-nsi-stable.pacificdata.org/rest/dataflow
@@ -42,7 +43,7 @@ owner:
       name: Oceania
     level: 20
   name: Pacific Community (SPC)
-  type: Central government
+  type: International
 properties:
   has_doi: false
 rights:
@@ -80,12 +81,6 @@ topics:
   type: eudatatheme
 - id: EDUC
   name: Education, culture and sport
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: SOCI
-  name: Population and society
   type: eudatatheme
 - id: Geoscientific Information
   name: Geoscientific Information

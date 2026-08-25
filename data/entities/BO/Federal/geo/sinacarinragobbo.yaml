@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Public geovisor of Bolivia's National Rural Environmental Cadastre System
-  (SINACAR), operated by INRA. Provides interactive map access to rural agrarian properties
-  by classification, qualification, and location.
+description: INRA platform for Bolivia's National Rural Environmental Cadastre
+  (SINACAR), with agrarian-property maps served from geoserver.inra.gob.bo. The
+  former /geovisor path returns HTTP 404.
 endpoints:
 - type: rest
   url: https://sinacar.inra.gob.bo/api/geovisor/geovisor-menu-config-external
@@ -33,7 +33,7 @@ id: sinacarinragobbo
 langs:
 - id: ES
   name: Spanish
-link: https://sinacar.inra.gob.bo/geovisor
+link: https://sinacar.inra.gob.bo/
 name: Geovisor SINACAR
 owner:
   link: https://www.inra.gob.bo

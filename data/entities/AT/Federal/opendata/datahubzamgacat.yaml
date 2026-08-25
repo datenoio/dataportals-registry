@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,32 +14,15 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Data catalog for datasets provided by GeoSphere Austria, formerly ZAMG,
-  including metadata about data resources and their structure.
-endpoints:
-- type: ckan:package-search
-  url: https://data.hub.zamg.ac.at/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://data.hub.zamg.ac.at/api/3/action/package_list
-  version: '3'
-- type: ckan
-  url: https://data.hub.zamg.ac.at/api/3
-  version: '3'
-- type: dcat:n3
-  url: https://data.hub.zamg.ac.at/catalog.n3
-- type: dcat:xml
-  url: https://data.hub.zamg.ac.at/catalog.xml
-- type: dcat:jsonld
-  url: https://data.hub.zamg.ac.at/catalog.jsonld
-- type: dcat:ttl
-  url: https://data.hub.zamg.ac.at/catalog.ttl
+description: Legacy CKAN host data.hub.zamg.ac.at of GeoSphere Austria (formerly ZAMG).
+  The hostname no longer presents a valid TLS certificate; the current catalog is
+  data.hub.geosphere.at.
 id: datahubzamgacat
 langs:
 - id: EN
   name: English
 link: https://data.hub.zamg.ac.at
-name: Geosphere Austria Open Data
+name: GeoSphere Austria Data Hub (legacy ZAMG host)
 owner:
   link: https://zamg.ac.at
   location:
@@ -49,7 +32,7 @@ owner:
     level: 20
   name: GeoSphere Austria – Bundesanstalt für Geologie, Geophysik, Klimatologie und
     Meteorologie
-  type: Academy
+  type: Central government
 rights:
   license_id: null
   license_name: null
@@ -60,7 +43,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - has_api
 - climate

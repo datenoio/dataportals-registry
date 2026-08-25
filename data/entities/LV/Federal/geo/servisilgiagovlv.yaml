@@ -20,12 +20,22 @@ description: Geoportal providing geospatial information services through web ser
 endpoints:
 - type: arcgis:rest:info
   url: https://servisi.lgia.gov.lv/lksopen/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://servisi.lgia.gov.lv/lksopen/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://servisi.lgia.gov.lv/lksopen/services?wsdl
+- type: arcgis:sitemap
+  url: https://servisi.lgia.gov.lv/lksopen/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://servisi.lgia.gov.lv/lksopen/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://servisi.lgia.gov.lv/lksopen/rest/services?f=kmz
 id: servisilgiagovlv
 langs:
 - id: LV
   name: Latvian
 link: https://servisi.lgia.gov.lv/lksopen/rest/services
-name: LGIA ArcGIA REST Services
+name: LGIA LKS-92 open ArcGIS REST services
 owner:
   link: https://www.lgia.gov.lv/en
   location:
@@ -58,4 +68,4 @@ topics:
 - id: Geoscientific Information
   name: Geoscientific Information
   type: iso19115
-uid: temp00003812
+uid: cdi00035295

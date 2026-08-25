@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,22 +14,8 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Open government data portal for Slovakia. A CKAN based portal, started
-  in April 2012. At the time of launch, it had 19 closed data sets. The portal covers
-  all areas relevant to Slovakia and is published by the Government of the Slovak
-  Republic.
-endpoints:
-- type: dcatap21
-  url: https://data.gov.sk/catalog.rdf
-- type: ckan
-  url: https://data.gov.sk/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://data.gov.sk/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://data.gov.sk/api/3/action/package_list
-  version: '3'
+description: Former national CKAN open data portal at data.gov.sk (launched 2012).
+  The URL now redirects to the current national catalog at data.slovensko.sk.
 id: datagovsk
 identifiers:
 - id: dataportals.org
@@ -65,7 +51,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
 - has_api

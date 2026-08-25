@@ -1,9 +1,11 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
+- dataset
 coverage:
 - location:
     country:
@@ -13,15 +15,19 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: Data portal managed by the State Bank of Pakistan providing access to
-  over 2.65 million data points on 15,996 time-series of economic data. Aggregates
-  datasets from SBP, PBS (Pakistan Bureau of Statistics), and other official sources.
+description: Official macroeconomic time-series portal of the State Bank of Pakistan.
+  EasyData publishes more than 3 million observations across about 24,000 series on
+  the external, monetary, financial, and real sectors, with downloads and a key-authenticated
+  REST API.
+endpoints:
+- type: customapi
+  url: https://easydata.sbp.org.pk/api/v1
 id: easydatasbporgpk
 langs:
 - id: EN
   name: English
 link: https://easydata.sbp.org.pk
-name: State bank of Pakistan data portal
+name: SBP EasyData
 owner:
   link: https://www.sbp.org.pk
   location:
@@ -29,8 +35,11 @@ owner:
       id: PK
       name: Pakistan
     level: 20
-  name: State bank of Pakistan
+  name: State Bank of Pakistan
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -39,24 +48,26 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: oracleapex
+  name: Oracle APEX
 status: active
 tags:
 - statistics
 - government
-- Economic data
-- Banking statistics
-- Time series
-- Official statistics
-- Financial sector
-- Demographics
-- External sector
-- Debt
-- Interest rates
-- Remittances
+- official statistics
+- economic data
+- banking
+- time series
+- has_api
+- Pakistan
 topics:
 - id: ECON
   name: Economy and finance
   type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
 uid: cdi00001281

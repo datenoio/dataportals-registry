@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -9,38 +9,28 @@ content_types:
 coverage:
 - location:
     country:
-      id: ES
-      name: Spain
+      id: EU
+      name: European Union
     level: 20
     macroregion:
-      id: 039
-      name: Southern Europe
+      id: '155'
+      name: Western Europe
 description: Website serving as a data catalog for geospatial data.
-endpoints:
-- type: csw202
-  url: http://www.ideotalex.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: http://www.ideotalex.eu/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: http://www.ideotalex.eu/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
 id: wwwideotalexeu
 langs:
 - id: EN
   name: English
 link: http://www.ideotalex.eu/geonetwork
-name: ideotalex.eu GeoNetwork
+name: IDE-OTALEX GeoNetwork
 owner:
   link: http://www.ideotalex.eu/geonetwork
   location:
     country:
-      id: ES
-      name: Spain
+      id: EU
+      name: European Union
     level: 20
-  name: IDE-OTALEX
-  type: Business
+  name: IDE-OTALEX Euroregion
+  type: International
 properties:
   has_doi: true
 rights:
@@ -53,7 +43,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - European Union
 - Madrid
@@ -70,4 +60,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00002289
+uid: cdi00035476

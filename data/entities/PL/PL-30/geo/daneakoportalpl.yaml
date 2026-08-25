@@ -11,19 +11,24 @@ coverage:
     country:
       id: PL
       name: Poland
-    level: 20
+    level: 30
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Data catalogs and portals registry. Content under CC BY-SA 4.0 license.
+    subregion:
+      id: PL-30
+      name: Wielkopolskie
+description: Data registers of the Regional Integrated Spatial Information Infrastructure
+  of the Kalisz-Ostrów Agglomeration (RZIIP AKO). The GeoARA application publishes
+  spatial and tabular registers for the agglomeration's 23 local governments.
 id: daneakoportalpl
 langs:
 - id: PL
   name: Polish
 link: https://dane.akoportal.pl
-name: Dane Geoportal
+name: RZIIP AKO data registers (GeoARA)
 owner:
-  link: https://dane.akoportal.pl
+  link: https://akoportal.pl
   location:
     country:
       id: PL
@@ -32,7 +37,7 @@ owner:
     subregion:
       id: PL-30
       name: Wielkopolskie
-  name: Dane
+  name: Stowarzyszenie Aglomeracja Kalisko-Ostrowska
   type: Regional government
 rights:
   license_id: null
@@ -46,14 +51,25 @@ software:
   name: Custom software
 status: active
 tags:
-- Poland
-- custom
-- dataset
-- geodata
-- geoportal
 - geospatial
+- government
+- agglomeration
+- Wielkopolskie
+- Poland
 topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Location
   name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
   type: iso19115
 uid: temp00000572

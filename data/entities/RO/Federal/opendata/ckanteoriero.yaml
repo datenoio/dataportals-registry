@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -13,26 +13,15 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: DANUBIUS-RI Data Portal facilitates science on the continuum from river
-  source to sea; offers research infrastructure; and provides integrated knowledge
-  for sustainably managing and protecting River-Sea Systems (e.g. Danube).
-endpoints:
-- type: ckan
-  url: https://ckan.teorie.ro/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://ckan.teorie.ro/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://ckan.teorie.ro/api/3/action/package_list
-  version: '3'
+      name: Eastern Europe
+description: Former University of Bucharest CKAN instance for DANUBIUS-RI on ckan.teorie.ro. The host
+  now returns HTTP 503. The current DANUBIUS-RI data portal is https://data.danubius-ri.eu/.
 id: ckanteoriero
 langs:
 - id: EN
   name: English
 link: https://ckan.teorie.ro
-name: DANUBIUS-RI Data Portal
+name: DANUBIUS-RI Data Portal (ckan.teorie.ro)
 owner:
   link: https://www.unibuc.ro
   location:
@@ -52,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - scientific
 - has_api
@@ -60,8 +49,12 @@ tags:
 - river-sea
 - DANUBIUS-RI
 - research infrastructure
+- inactive
 uid: cdi00020143
 topics:
-- id: GOVE
-  name: Government and public sector
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
   type: eudatatheme

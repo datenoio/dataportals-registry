@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: GR-B
+      name: Kentrikí Makedonía
+description: ArcGIS Server REST catalog of the Region of Central Macedonia Urban Lab
+  for regional geospatial planning layers.
+endpoints:
+- type: arcgis:rest:info
+  url: https://urbanlab.pkm.gov.gr/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://urbanlab.pkm.gov.gr/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://urbanlab.pkm.gov.gr/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://urbanlab.pkm.gov.gr/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://urbanlab.pkm.gov.gr/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://urbanlab.pkm.gov.gr/server/rest/services?f=kmz
+id: urbanlabpkmgovgr
+langs:
+- id: EL
+  name: Greek
+link: https://urbanlab.pkm.gov.gr/server/rest/services
+name: Region of Central Macedonia Urban Lab Geoportal
+owner:
+  link: https://pkm.gov.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    subregion:
+      id: GR-B
+      name: Kentrikí Makedonía
+  name: Region of Central Macedonia
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Greece
+- arcgisserver
+- geospatial
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00035365

@@ -15,11 +15,24 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: National agricultural geoportal of MAGA with GeoServer layers, metadata,
-  and downloads for land use, crops, and climate-related geospatial data.
+description: National agricultural geoportal of MAGA with a public map viewer and
+  GeoServer layers for land use, crops, and climate-related geospatial data.
 endpoints:
-- type: geoserver:catalog
-  url: https://geoportal.maga.gob.gt
+- type: wms111
+  url: https://geoportal.maga.gob.gt/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoportal.maga.gob.gt/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: https://geoportal.maga.gob.gt/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoportal.maga.gob.gt/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wmts100
+  url: https://geoportal.maga.gob.gt/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
+  version: 1.0.0
 id: geoportalmagagobgt
 langs:
 - id: ES
@@ -45,6 +58,7 @@ tags:
 - Guatemala
 - MAGA
 - GeoServer
+- has_api
 topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food

@@ -27,6 +27,8 @@ endpoints:
   url: https://udifad-sigluz.opendata.arcgis.com/api/search/v1
 - type: sitemap
   url: https://udifad-sigluz.opendata.arcgis.com/sitemap.xml
+- type: rss
+  url: https://udifad-sigluz.opendata.arcgis.com/api/feed/rss/2.0
 id: udifadsigluzopendataarcgiscom
 langs:
 - id: ES
@@ -34,13 +36,13 @@ langs:
 link: https://udifad-sigluz.opendata.arcgis.com/
 name: UDIFAD-SIGLUZ Open Data
 owner:
-  link: https://udifad.org
+  link: https://udifad-sigluz.opendata.arcgis.com/
   location:
     country:
       id: VE
       name: Venezuela (Bolivarian Republic of)
     level: 20
-  name: UDIFAD-SIGLUZ
+  name: Universidad del Zulia
   type: Academy
 properties:
   has_doi: false
@@ -60,8 +62,10 @@ tags:
 - Spatial data
 - Open Data
 - Amazon
+- Zulia
+- has_api
 topics:
-- id: Environment
+- id: ENVI
   name: Environment
   type: eudatatheme
 - id: Location

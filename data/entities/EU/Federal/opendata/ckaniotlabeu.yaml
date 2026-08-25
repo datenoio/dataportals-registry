@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -16,22 +16,12 @@ coverage:
       name: Western Europe
 description: Open data catalog powered by CKAN, providing access to datasets for discovery
   and reuse.
-endpoints:
-- type: ckan
-  url: https://ckan.iotlab.eu/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://ckan.iotlab.eu/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://ckan.iotlab.eu/api/3/action/package_list
-  version: '3'
 id: ckaniotlabeu
 langs:
 - id: EN
   name: English
 link: https://ckan.iotlab.eu/
-name: CKAN Data Catalog
+name: IoT Lab CKAN Catalog
 owner:
   link: https://ckan.iotlab.eu/
   location:
@@ -39,7 +29,7 @@ owner:
       id: EU
       name: European Union
     level: 20
-  name: Not available from the website homepage or direct inspection
+  name: IoT Lab
   type: Academy
 rights:
   license_id: null
@@ -51,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - CKAN
 - European Union
@@ -60,4 +50,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00000275
+uid: cdi00035483

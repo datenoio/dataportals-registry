@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: GIS-based portal for COVID-19 response, including mapping, community
-  engagement, and resource monitoring by Lebanese Red Cross.
+description: ArcGIS Hub of the Lebanese Red Cross for COVID-19 maps, resources,
+  and community information.
 endpoints:
 - type: dcatap201
   url: https://covid-19-lebaneseredcross.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -32,16 +32,18 @@ id: covid19lebaneseredcrosshubarcgiscom
 langs:
 - id: AR
   name: Arabic
+- id: EN
+  name: English
 link: https://covid-19-lebaneseredcross.hub.arcgis.com
-name: Lebanese RedCross COVID-19 Hub
+name: Lebanese Red Cross COVID-19 Hub
 owner:
-  link: https://redcross.org.lb
+  link: https://www.redcross.org.lb
   location:
     country:
       id: LB
       name: Lebanon
     level: 20
-  name: Lebanese RedCross
+  name: Lebanese Red Cross
   type: Civil society
 properties:
   has_doi: false
@@ -60,9 +62,9 @@ tags:
 - geospatial
 - has_api
 - COVID-19
-- GIS
-- Emergency response
-- Community engagement
+- health
+- humanitarian
+- Red Cross
 topics:
 - id: HEAL
   name: Health

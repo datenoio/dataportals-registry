@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: IMF SDDS National Summary Data Page for Mexico, hosted by Banco de México.
+  Disseminates macroeconomic and financial summary indicators with SDMX downloads
+  linked from the IMF Dissemination Standards Bulletin Board.
+endpoints:
+- type: imfnsdp:catalog
+  url: http://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA126&sector=12&locale=en
+id: nsdpbanxicoorgmx
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: http://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA126&sector=12&locale=en
+name: Mexico National Summary Data Page
+owner:
+  link: https://www.banxico.org.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+  name: Banco de México
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+software:
+  id: imfnsdp
+  name: IMF National Summary Data Page
+status: active
+tags:
+- NSDP
+- IMF
+- SDDS
+- statistics
+- government
+- official statistics
+- SDMX
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00037392

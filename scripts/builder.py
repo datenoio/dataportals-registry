@@ -1403,8 +1403,8 @@ def check_software_expected_endpoints(record):
     if not software_id:
         return None
 
-    # Skip inactive catalogs because their endpoints may be intentionally unavailable.
-    if record.get("status") == "inactive":
+    # Skip inactive/deprecated catalogs; their endpoints may be intentionally unavailable.
+    if record.get("status") in {"inactive", "deprecated"}:
         return None
 
     # Explicit api=true is an integrity concern handled by MISSING_ENDPOINTS.
@@ -3262,15 +3262,372 @@ def _get_valid_country_codes():
     return _get_valid_country_codes._cache
 
 
+def _value_type_name(value):
+    """Return a stable type label for nested-field quality issues."""
+    if value is None:
+        return "null"
+    if isinstance(value, bool):
+        return "boolean"
+    if isinstance(value, int):
+        return "integer"
+    if isinstance(value, float):
+        return "number"
+    if isinstance(value, str):
+        return "string"
+    if isinstance(value, list):
+        return "list"
+    if isinstance(value, dict):
+        return "object"
+    return type(value).__name__
+
+
+def _invalid_nested_type_issue(field, value, expected, suggested_action):
+    display = value
+    if isinstance(value, (dict, list)):
+        display = _value_type_name(value)
+    return {
+        "issue_type": "INVALID_NESTED_TYPE",
+        "field": field,
+        "current_value": {
+            "value": display,
+            "python_type": _value_type_name(value),
+            "expected": expected,
+        },
+        "suggested_action": suggested_action,
+    }
+
+
+def _country_id_type_suggestion(value, country_name, field):
+    if isinstance(value, bool):
+        if str(country_name or "").strip().lower() == "norway":
+            return (
+                "Unquoted YAML 1.1 country code NO is parsed as boolean false. "
+                "Set this field to the quoted string 'NO'."
+            )
+        return (
+            f"{field} must be a string, not a boolean. Quote YAML 1.1 "
+            "boolean-looking codes such as NO (Norway): id: 'NO'."
+        )
+    if isinstance(value, int):
+        return (
+            f"{field} must be a string, not an integer. Quote it as '{value}'."
+        )
+    return (
+        f"{field} must be a string, got {_value_type_name(value)}."
+    )
+
+
+def check_nested_field_types(record):
+    """Flag nested values whose Python types mix STRUCT/LIST inference in DuckDB/Parquet.
+
+    Identifier-like leaves (country, macroregion, tags, langs, topics, software)
+    must be strings. YAML 1.1 parses unquoted NO/YES/true/false as booleans and
+    unquoted numbers as integers; those mixes must not reach exports.
+    """
+    issues = []
+
+    def add(field, value, expected, action):
+        issues.append(
+            _invalid_nested_type_issue(field, value, expected, action)
+        )
+
+    def expect_str(value, field, extra=None):
+        if value is None:
+            return
+        if isinstance(value, str):
+            return
+        add(
+            field,
+            value,
+            "string",
+            extra or f"{field} must be a string, got {_value_type_name(value)}.",
+        )
+
+    def expect_int(value, field):
+        if value is None:
+            return
+        if isinstance(value, bool) or not isinstance(value, int):
+            add(
+                field,
+                value,
+                "integer",
+                f"{field} must be an integer, got {_value_type_name(value)}.",
+            )
+
+    def expect_bool(value, field):
+        if value is None:
+            return
+        if not isinstance(value, bool):
+            add(
+                field,
+                value,
+                "boolean",
+                f"{field} must be a boolean, got {_value_type_name(value)}.",
+            )
+
+    def expect_named_ref(obj, field, *, country=False, m49=False):
+        if obj is None:
+            return
+        if not isinstance(obj, dict):
+            add(
+                field,
+                obj,
+                "object",
+                f"{field} must be an object with string id and name.",
+            )
+            return
+        ident = obj.get("id")
+        name = obj.get("name")
+        if country:
+            expect_str(
+                ident,
+                f"{field}.id",
+                _country_id_type_suggestion(ident, name, f"{field}.id"),
+            )
+        elif m49 and ident is not None and not isinstance(ident, str):
+            expect_str(
+                ident,
+                f"{field}.id",
+                (
+                    f"{field}.id must be a quoted UN M49 string "
+                    f"(e.g. id: '{ident}'), not {_value_type_name(ident)}."
+                ),
+            )
+        else:
+            expect_str(ident, f"{field}.id")
+        expect_str(name, f"{field}.name")
+
+    def expect_str_list(value, field, *, tags=False):
+        if value is None:
+            return
+        if not isinstance(value, list):
+            add(
+                field,
+                value,
+                "list of strings",
+                f"{field} must be a list of strings, got {_value_type_name(value)}.",
+            )
+            return
+        for idx, item in enumerate(value):
+            item_field = f"{field}[{idx}]"
+            if isinstance(item, str):
+                continue
+            if tags and isinstance(item, dict) and set(item.keys()) == {"tag"}:
+                tag_val = item.get("tag")
+                add(
+                    item_field,
+                    item,
+                    "string",
+                    (
+                        "Tags must be strings, not mappings. "
+                        f"Use '{tag_val}' instead of '{{tag: {tag_val}}}'."
+                        if isinstance(tag_val, str)
+                        else "Tags must be strings, not mappings."
+                    ),
+                )
+                continue
+            if tags and isinstance(item, int) and not isinstance(item, bool):
+                add(
+                    item_field,
+                    item,
+                    "string",
+                    f"Quote numeric tags as strings: '{item}'. Unquoted {item} is an integer.",
+                )
+                continue
+            add(
+                item_field,
+                item,
+                "string",
+                f"{item_field} must be a string, got {_value_type_name(item)}.",
+            )
+
+    expect_str_list(record.get("access_mode"), "access_mode")
+    expect_str_list(record.get("content_types"), "content_types")
+    expect_str_list(record.get("tags"), "tags", tags=True)
+    expect_bool(record.get("api"), "api")
+
+    software = record.get("software")
+    if software is not None:
+        if not isinstance(software, dict):
+            add(
+                "software",
+                software,
+                "object",
+                "software must be an object with string id and name.",
+            )
+        else:
+            expect_str(software.get("id"), "software.id")
+            expect_str(software.get("name"), "software.name")
+
+    owner = record.get("owner")
+    if isinstance(owner, dict):
+        expect_str(owner.get("name"), "owner.name")
+        expect_str(owner.get("type"), "owner.type")
+        loc = owner.get("location")
+        if isinstance(loc, dict):
+            expect_named_ref(loc.get("country"), "owner.location.country", country=True)
+            expect_int(loc.get("level"), "owner.location.level")
+            expect_named_ref(loc.get("subregion"), "owner.location.subregion")
+            expect_named_ref(
+                loc.get("macroregion"), "owner.location.macroregion", m49=True
+            )
+        elif loc is not None:
+            add(
+                "owner.location",
+                loc,
+                "object",
+                "owner.location must be an object.",
+            )
+    elif owner is not None:
+        add("owner", owner, "object", "owner must be an object.")
+
+    coverage = record.get("coverage")
+    if coverage is not None:
+        if not isinstance(coverage, list):
+            add(
+                "coverage",
+                coverage,
+                "list",
+                "coverage must be a list of location objects.",
+            )
+        else:
+            for idx, entry in enumerate(coverage):
+                prefix = f"coverage[{idx}]"
+                if not isinstance(entry, dict):
+                    add(
+                        prefix,
+                        entry,
+                        "object",
+                        f"{prefix} must be an object with a location.",
+                    )
+                    continue
+                loc = entry.get("location")
+                if loc is None:
+                    continue
+                if not isinstance(loc, dict):
+                    add(
+                        f"{prefix}.location",
+                        loc,
+                        "object",
+                        f"{prefix}.location must be an object.",
+                    )
+                    continue
+                expect_named_ref(
+                    loc.get("country"), f"{prefix}.location.country", country=True
+                )
+                expect_int(loc.get("level"), f"{prefix}.location.level")
+                expect_named_ref(
+                    loc.get("macroregion"),
+                    f"{prefix}.location.macroregion",
+                    m49=True,
+                )
+                expect_named_ref(
+                    loc.get("subregion"), f"{prefix}.location.subregion"
+                )
+
+    langs = record.get("langs")
+    if langs is not None:
+        if not isinstance(langs, list):
+            add("langs", langs, "list", "langs must be a list of {id, name} objects.")
+        else:
+            for idx, lang in enumerate(langs):
+                expect_named_ref(lang, f"langs[{idx}]")
+
+    topics = record.get("topics")
+    if topics is not None:
+        if not isinstance(topics, list):
+            add("topics", topics, "list", "topics must be a list of objects.")
+        else:
+            for idx, topic in enumerate(topics):
+                field = f"topics[{idx}]"
+                if not isinstance(topic, dict):
+                    add(
+                        field,
+                        topic,
+                        "object",
+                        f"{field} must be an object with string type, id, and name.",
+                    )
+                    continue
+                expect_str(topic.get("id"), f"{field}.id")
+                expect_str(topic.get("name"), f"{field}.name")
+                expect_str(topic.get("type"), f"{field}.type")
+
+    endpoints = record.get("endpoints")
+    if endpoints is not None:
+        if not isinstance(endpoints, list):
+            add("endpoints", endpoints, "list", "endpoints must be a list of objects.")
+        else:
+            for idx, endpoint in enumerate(endpoints):
+                field = f"endpoints[{idx}]"
+                if not isinstance(endpoint, dict):
+                    add(
+                        field,
+                        endpoint,
+                        "object",
+                        f"{field} must be an object with string type and url.",
+                    )
+                    continue
+                expect_str(endpoint.get("type"), f"{field}.type")
+                expect_str(endpoint.get("url"), f"{field}.url")
+                expect_str(endpoint.get("version"), f"{field}.version")
+                expect_str(endpoint.get("url_pattern"), f"{field}.url_pattern")
+
+    identifiers = record.get("identifiers")
+    if identifiers is not None:
+        if not isinstance(identifiers, list):
+            add(
+                "identifiers",
+                identifiers,
+                "list",
+                "identifiers must be a list of objects.",
+            )
+        else:
+            for idx, ident in enumerate(identifiers):
+                field = f"identifiers[{idx}]"
+                if not isinstance(ident, dict):
+                    add(
+                        field,
+                        ident,
+                        "object",
+                        f"{field} must be an object with string id and value.",
+                    )
+                    continue
+                expect_str(ident.get("id"), f"{field}.id")
+                expect_str(ident.get("value"), f"{field}.value")
+                expect_str(ident.get("url"), f"{field}.url")
+
+    props = record.get("properties")
+    if props is not None:
+        if not isinstance(props, dict):
+            add("properties", props, "object", "properties must be an object.")
+        else:
+            for bool_key in (
+                "has_doi",
+                "is_national",
+                "transferable_topics",
+                "transferable_location",
+                "unfinished",
+            ):
+                expect_bool(props.get(bool_key), f"properties.{bool_key}")
+            expect_int(
+                props.get("dataset_count_reported"),
+                "properties.dataset_count_reported",
+            )
+            expect_str(props.get("invenio-filters"), "properties.invenio-filters")
+            expect_str(props.get("base_last_seen"), "properties.base_last_seen")
+
+    return issues if issues else None
+
+
 def check_country_codes(record):
     """Validate owner and coverage country.id against ISO 3166-1 codes from countries.csv."""
     issues = []
     valid_countries = _get_valid_country_codes()
 
     def _check_country_id(country_id, field_path):
-        if not country_id:
+        if not isinstance(country_id, str):
             return
-        sid = str(country_id).strip().upper()
+        sid = country_id.strip().upper()
         if not sid:
             return
         if sid not in valid_countries:
@@ -3617,6 +3974,7 @@ ISSUE_PRIORITY_MAP = {
         "INVALID_ID",
         "CATALOG_SOFTWARE_MISMATCH",
         "DUPLICATE_RECORD_ID",
+        "INVALID_NESTED_TYPE",
     ],
     "IMPORTANT": [
         "MISSING_OWNER_NAME",
@@ -4502,6 +4860,13 @@ RULE_DESCRIPTIONS = {
     "CATALOG_TYPE_DIRECTORY_MISMATCH": (
         "File path subdirectory must match catalog_type (e.g. geo/ for Geoportal, opendata/ for Open data portal)."
     ),
+    "INVALID_NESTED_TYPE": (
+        "Nested catalog fields must use a single Python type so DuckDB/Parquet can infer "
+        "STRUCT and LIST columns. Country/macroregion/subregion/software ids, tags, langs, "
+        "and topics leaves are strings; coverage level and dataset_count_reported are integers; "
+        "api and properties flags are booleans. Quote YAML 1.1 boolean-looking codes "
+        "(NO for Norway) and numeric M49 / tag values (id: '155', '911')."
+    ),
     "INVALID_COUNTRY_CODE": (
         "owner.location.country.id and coverage[].location.country.id must use valid ISO 3166-1 country codes."
     ),
@@ -4722,6 +5087,7 @@ def analyze_quality(output: str = None):
                     check_identifier_urls,
                     check_rights_urls,
                     check_catalog_type_directory,
+                    check_nested_field_types,
                     check_country_codes,
                     check_country_subregion_name_consistency,
                     check_unknown_country_macroregion,

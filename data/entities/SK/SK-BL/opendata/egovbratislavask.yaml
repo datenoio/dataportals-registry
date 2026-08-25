@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,10 +17,9 @@ coverage:
     subregion: &id002
       id: SK-BL
       name: Bratislavský kraj
-description: Data catalog for the city of Bratislava, Slovakia
-endpoints:
-- type: sitemap
-  url: https://egov.bratislava.sk/sitemap.xml
+description: Former POMOSAM eGovernment catalog of Bratislava. egov.bratislava.sk
+  no longer serves the catalog (Cloudflare 522 / city 404). City open data is at
+  data.bratislava.sk.
 id: egovbratislavask
 langs:
 - id: SK
@@ -48,7 +47,7 @@ rights:
 software:
   id: pomosam
   name: POMOSAM
-status: active
+status: inactive
 tags:
 - government
 - has_api

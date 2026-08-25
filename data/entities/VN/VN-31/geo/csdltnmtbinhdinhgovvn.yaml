@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: VN-31
       name: Bình Định
-description: GIS data catalog REST endpoint for Binh Dinh provincial government
+description: ArcGIS Server REST catalog (CSDL TNMT) of Bình Định Province natural
+  resources and environment spatial data.
 endpoints:
 - type: arcgis:rest:info
   url: http://csdltnmt.binhdinh.gov.vn:6080/arcgis/rest/info?f=pjson
@@ -39,7 +40,7 @@ langs:
 link: http://csdltnmt.binhdinh.gov.vn:6080/arcgis/rest/
 name: CSDLTNMT - Binh Dinh GIS Portal
 owner:
-  link: http://csdltnmt.binhdinh.gov.vn
+  link: https://www.binhdinh.gov.vn
   location:
     country:
       id: VN
@@ -48,8 +49,8 @@ owner:
     subregion:
       id: VN-31
       name: Bình Định
-  name: Binh Dinh Provincial Government
-  type: Local government
+  name: Binh Dinh Department of Natural Resources and Environment
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -67,6 +68,7 @@ tags:
 - GIS
 - Geospatial Data
 - Provincial Data
+- has_api
 topics:
 - id: ENVI
   name: Environment
@@ -74,4 +76,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-uid: temp00001086
+uid: cdi00034909

@@ -21,6 +21,8 @@ description: National marine spatial data infrastructure for the Republic of Mau
 endpoints:
 - type: geonode:datasets
   url: https://oceanobservatory.govmu.org/api/v2/datasets
+- type: geonode:documents
+  url: https://oceanobservatory.govmu.org/api/documents/
 - type: wms111
   url: https://oceanobservatory.govmu.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
@@ -30,6 +32,9 @@ endpoints:
 - type: csw202
   url: https://oceanobservatory.govmu.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: oaipmh20
+  url: https://oceanobservatory.govmu.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
 id: oceanobservatorygovmuorg
 langs:
 - id: EN
@@ -47,6 +52,8 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
+  dataset_count_reported: 20
 rights:
   license_id: null
   license_name: null
@@ -59,6 +66,7 @@ software:
   name: GeoNode
 status: active
 tags:
+- has_api
 - geospatial
 - marine
 - GeoNode
@@ -69,5 +77,8 @@ topics:
   type: eudatatheme
 - id: Oceans
   name: Oceans
+  type: iso19115
+- id: Environment
+  name: Environment
   type: iso19115
 uid: cdi00027710

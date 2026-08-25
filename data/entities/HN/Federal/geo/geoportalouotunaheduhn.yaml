@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,74 +15,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Open repository of geospatial data and maps, based on GeoNode, to share
-  information for the university community and the general population. Collects, processes,
-  analyzes, interprets, systematizes and disseminates information on Territorial Planning
-  and Geographic Information Technologies.
-endpoints:
-- type: geonode:layers
-  url: https://geoportalouot.unah.edu.hn/api/layers/
-- type: geonode:documents
-  url: https://geoportalouot.unah.edu.hn/api/documents/
-- type: wms111
-  url: https://geoportalouot.unah.edu.hn/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wfs110
-  url: https://geoportalouot.unah.edu.hn/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: https://geoportalouot.unah.edu.hn/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: csw202
-  url: https://geoportalouot.unah.edu.hn/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: https://geoportalouot.unah.edu.hn/catalogue/csw?mode=oaipmh&verb=Identify
-  version: '2.0'
-- type: wmts100
-  url: https://geoportalouot.unah.edu.hn/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: opensearch
-  url: https://geoportalouot.unah.edu.hn/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
-  version: '1.0'
-- type: wms130
-  url: https://geoportalouot.unah.edu.hn/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
-- type: wfs100
-  url: https://geoportalouot.unah.edu.hn/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wfs200
-  url: https://geoportalouot.unah.edu.hn/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
-  version: 2.0.0
-- type: wcs100
-  url: https://geoportalouot.unah.edu.hn/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wcs110
-  url: https://geoportalouot.unah.edu.hn/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs11
-  url: https://geoportalouot.unah.edu.hn/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
-  version: '1.1'
-- type: wcs201
-  url: https://geoportalouot.unah.edu.hn/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
-  version: 2.0.1
-- type: wps100
-  url: https://geoportalouot.unah.edu.hn/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: tms100
-  url: https://geoportalouot.unah.edu.hn/geoserver/gwc/service/tms/1.0.0
-  version: 1.0.0
-- type: wms-c111
-  url: https://geoportalouot.unah.edu.hn/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
-  version: 1.1.1
-- type: geoserver:version
-  url: https://geoportalouot.unah.edu.hn/geoserver/rest/about/version
-- type: geoserver:settings
-  url: https://geoportalouot.unah.edu.hn/geoserver/rest/settings
-- type: geoserver:layers
-  url: https://geoportalouot.unah.edu.hn/geoserver/rest/layers
-- type: opensearch
-  url: https://geoportalouot.unah.edu.hn/catalogue/opensearch
+description: UNAH Observatorio Universitario de Ordenamiento Territorial (OUOT) GeoNode
+  for territorial planning and geographic information. The geoportal returned HTTP
+  503 at last review.
 id: geoportalouotunaheduhn
 langs:
 - id: ES
@@ -90,7 +25,7 @@ langs:
 link: https://geoportalouot.unah.edu.hn/
 name: UNAH OUOT Geoportal - Territorial Planning Observatory
 owner:
-  link: https://geoportalouot.unah.edu.hn/
+  link: https://unah.edu.hn
   location:
     country:
       id: HN
@@ -111,7 +46,7 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 tags:
 - geospatial data
 - maps

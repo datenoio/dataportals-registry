@@ -16,12 +16,13 @@ coverage:
       id: '034'
       name: Southern Asia
 description: Official national portal for geospatial, mapping, and land information
-  of the Maldives (NGIS). Managed by the Geomatics Department.
+  of the Maldives (NGIS). ArcGIS Web AppBuilder client over ArcGIS Online hosted
+  feature services, managed by the Geomatics Department.
 endpoints:
 - type: arcgis:rest:info
-  url: https://services7.arcgis.com/yvCbn3q8PPtPLZIM/arcgis/rest/services?f=pjson
+  url: https://services7.arcgis.com/yvCbn3q8PPtPLZIM/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: https://services7.arcgis.com/yvCbn3q8PPtPLZIM/arcgis/rest/services/island_20240509/FeatureServer
+  url: https://services7.arcgis.com/yvCbn3q8PPtPLZIM/arcgis/rest/services?f=pjson
 id: onemapmv
 langs:
 - id: EN
@@ -35,8 +36,11 @@ owner:
       id: MV
       name: Maldives
     level: 20
-  name: Geomatics Department, Ministry of Finance and Planning
+  name: Geomatics Department
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 software:
   id: arcgisserver
   name: ArcGIS Server
@@ -45,6 +49,8 @@ tags:
 - geospatial
 - islands
 - NGIS
+- GIS
+- government
 - Maldives
 topics:
 - id: Boundaries
@@ -52,5 +58,8 @@ topics:
   type: iso19115
 - id: Location
   name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
   type: iso19115
 uid: cdi00025646

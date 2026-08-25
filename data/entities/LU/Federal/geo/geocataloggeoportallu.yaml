@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,25 +15,9 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Catalogue of openly available geospatial data from ministries, administrations
-  and companies of Luxembourg. Includes layers such as cadastral parcels, road names,
-  and cadastral municipalities.
-endpoints:
-- type: geonetwork:query
-  url: https://geocatalog.geoportal.lu/geonetwork/srv/eng/q
-- type: csw202
-  url: https://geocatalog.geoportal.lu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://geocatalog.geoportal.lu/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://geocatalog.geoportal.lu/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
-- type: geonetwork:site
-  url: https://geocatalog.geoportal.lu/geonetwork/srv/api/site
-- type: opensearch
-  url: https://geocatalog.geoportal.lu/portal.opensearch
+description: Duplicate alias of the official Geoportail Luxembourg GeoNetwork catalogue
+  (geocatalogue.geoportail.lu). The CSW GetCapabilities document is identical to
+  geocataloguegeoportaillu; use that record instead.
 id: geocataloggeoportallu
 langs:
 - id: FR
@@ -42,16 +26,16 @@ langs:
   name: German
 - id: EN
   name: English
-link: https://geocatalog.geoportal.lu/geonetwork
-name: ' Geoportal of the Grand-Duchy of Luxembourg'
+link: https://geocatalog.geoportal.lu/geonetwork/srv/eng/catalog.search
+name: Geoportal of the Grand-Duchy of Luxembourg (alias)
 owner:
-  link: https://gouvernement.lu
+  link: https://www.geoportail.lu
   location:
     country:
       id: LU
       name: Luxembourg
     level: 20
-  name: Government of Luxemburg
+  name: Administration du Cadastre et de la Topographie
   type: Central government
 properties:
   has_doi: true
@@ -65,17 +49,14 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: deprecated
 tags:
 - geospatial
 - government
-- has_api
 - Open Data
 - INSPIRE
+- alias
 topics:
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
 - id: REGI
   name: Regions and cities
   type: eudatatheme

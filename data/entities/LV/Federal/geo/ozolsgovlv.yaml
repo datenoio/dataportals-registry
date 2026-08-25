@@ -15,7 +15,10 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: ArcGIS REST Services endpoint for data catalog services hosted on ozols.gov.lv
+description: OZOLS (Dabas datu pārvaldības sistēma) ArcGIS REST services of the Nature
+  Conservation Agency. Spatial services for protected areas, habitats, and other nature
+  data. The HTML services directory is disabled; REST endpoints remain the harvest
+  interface.
 endpoints:
 - type: arcgis:rest:info
   url: https://ozols.gov.lv/arcgis/rest/info?f=pjson
@@ -63,13 +66,16 @@ tags:
 - Spatial Data
 - Latvia
 topics:
-- id: GOVE
-  name: Government and public sector
+- id: ENVI
+  name: Environment
   type: eudatatheme
-- id: Location
-  name: Location
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
-uid: temp00000472
+uid: cdi00035300

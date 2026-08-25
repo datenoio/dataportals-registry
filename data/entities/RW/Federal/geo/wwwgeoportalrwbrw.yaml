@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: GeoNode is an open source platform that facilitates the creation, sharing,
-  and collaborative use of geospatial data
+description: IWRM Geo-Portal of the Rwanda Water Resources Board (GeoNode 2.10).
+  Publishes catchment, river, and other water-resources layers (about 15 layers and
+  7 documents) with CSW, DCAT-US, and OGC services.
 endpoints:
 - type: geonode:layers
   url: https://www.geoportal.rwb.rw/api/layers/
@@ -52,7 +53,7 @@ langs:
 - id: EN
   name: English
 link: https://www.geoportal.rwb.rw
-name: Geoportal Rwanda Water and Forestry Authority (RWFA)
+name: Rwanda Water Resources Board IWRM Geo-Portal
 owner:
   link: https://www.rwb.rw
   location:
@@ -64,6 +65,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  dataset_count_reported: 15
 rights:
   license_id: null
   license_name: null
@@ -79,9 +81,9 @@ tags:
 - geospatial
 - government
 - Rwanda
-- environmental data
 - water
-- forestry
+- catchment
+- has_api
 topics:
 - id: ENVI
   name: Environment

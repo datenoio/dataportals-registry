@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,10 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Catálogo de datos geoespaciales que proporciona servicios de geonode.
-endpoints:
-- type: geonode:datasets
-  url: https://geoexpress-demo.kan.com.ar/api/datasets/
+description: Demo GeoNode of KAN (GeoExpress). Vendor demonstration catalogue, not
+  a production government portal.
 id: geoexpressdemokancomar
 langs:
 - id: ES
@@ -32,7 +30,7 @@ owner:
       id: AR
       name: Argentina
     level: 20
-  name: Not specified in provided source
+  name: KAN
   type: Business
 properties:
   has_doi: false
@@ -46,7 +44,7 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 tags:
 - demo
 - geospatial
@@ -63,4 +61,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00000012
+uid: cdi00036058

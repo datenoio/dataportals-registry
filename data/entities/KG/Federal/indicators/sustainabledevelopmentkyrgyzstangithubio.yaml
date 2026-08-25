@@ -4,7 +4,7 @@ api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
-- dataset
+- indicator
 coverage:
 - location:
     country:
@@ -14,16 +14,27 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: Official data catalog for Sustainable Development Goals (SDG) indicators
-  and metadata for the Kyrgyz Republic, managed by national statistical authorities.
+description: National OpenSDG reporting platform for Kyrgyz Republic Sustainable Development
+  Goal indicators, maintained by the National Statistical Committee. Publishes global
+  and national SDG indicator data and metadata in English, Russian, and Kyrgyz, with
+  indicator JSON from the companion sdg-data GitHub repository.
+endpoints:
+- type: opensdg:catalog
+  url: https://sustainabledevelopment-kyrgyzstan.github.io/reporting-status/
+- type: opensdg:data
+  url: https://sustainabledevelopment-kyrgyzstan.github.io/sdg-data/en/data/1-1-1.json
 id: sustainabledevelopmentkyrgyzstangithubio
 langs:
+- id: RU
+  name: Russian
 - id: EN
   name: English
+- id: KY
+  name: Kirghiz
 link: https://sustainabledevelopment-kyrgyzstan.github.io/
-name: National Statistical Committee of the Kyrgyz Republic Indicators Catalog
+name: Kyrgyzstan Indicators for the Sustainable Development Goals
 owner:
-  link: https://sustainabledevelopment-kyrgyzstan.github.io/
+  link: https://stat.gov.kg
   location:
     country:
       id: KG
@@ -33,6 +44,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -46,10 +58,11 @@ software:
 status: active
 tags:
 - SDG
+- Sustainable Development Goals
 - indicators
 - statistics
-- official
-- metadata
+- official statistics
+- has_api
 - Kyrgyzstan
 topics:
 - id: SOCI
@@ -60,6 +73,9 @@ topics:
   type: eudatatheme
 - id: ECON
   name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
 - id: Society
   name: Society
@@ -73,10 +89,4 @@ topics:
 - id: Health
   name: Health
   type: iso19115
-- id: Society
-  name: Society
-  type: iso19115
-uid: temp00000873
-endpoints:
-- type: opensdg:data
-  url: https://sustainabledevelopment-kyrgyzstan.github.io/sdg-data/en/data/1-1-1.json
+uid: cdi00035315

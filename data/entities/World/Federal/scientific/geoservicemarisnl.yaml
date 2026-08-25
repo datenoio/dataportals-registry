@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: "The **SeaDataNet CDI OGC WFS service** provides a metadata endpoint\
+  \ in OGC Feature format. It provides a WFS endpoint to the metadata overview of\
+  \ the CDI service, e.g. for integration in (web)GIS applications.\n\nThe SeaDataNet\
+  \ infrastructure links more than 100 national oceanographic data centres and marine\
+  \ data centres from 35 countries bordering all European seas. The data centres manage\
+  \ large sets of marine and ocean data (such as samples, timeseries, profiles, trajectories,\
+  \ etc), originating from their own institutes and from other parties in their country,\
+  \ in a variety of data management systems and configurations. \n\nThe CDI service\
+  \ itself provides access to the data resources from more than 800 data originators.\
+  \ The Common Data Index service (CDI) gives users, via an ISO19115 - ISO19139 based\
+  \ index (metadatabase), a highly detailed insight in the availability and geographical\
+  \ spreading of marine data from the different data centres across Europe.  Data\
+  \ sets are available in ODV (Ocean Data View) and NetCDF (CF) SeaDataNet formats\
+  \ that can be imported to ODV software, which includes the Data Interpolating Variational\
+  \ Analysis software tool (DIVA)."
+id: geoservicemarisnl
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=eosc________::20e185d2fd1ccece1f3091e2b5c03297
+  value: eosc________::20e185d2fd1ccece1f3091e2b5c03297
+langs:
+- id: EN
+  name: English
+link: https://geo-service.maris.nl/seadatanet/wfs?request=GetCapabilities
+name: 'SeaDataNet CDI Data Discovery & Access service: OGC WFS service for metadata
+  features of all data sets (open and restricted)'
+owner:
+  link: https://www.seadatanet.org/
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: SeaDataNet AISBL
+  type: International
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- research data
+- academic
+- marine
+- oceanography
+- geospatial
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00030671

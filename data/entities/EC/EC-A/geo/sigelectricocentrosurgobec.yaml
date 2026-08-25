@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,29 +18,14 @@ coverage:
     subregion:
       id: EC-A
       name: Azuay
-description: Geospatial information system for electrical infrastructure management
-  providing access to power grid networks, distribution systems, service coverage
-  areas, and utility assets of the CentroSur regional electric company through ArcGIS
-  REST services.
-endpoints:
-- type: arcgis:rest:info
-  url: https://sigelectrico.centrosur.gob.ec/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://sigelectrico.centrosur.gob.ec/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://sigelectrico.centrosur.gob.ec/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://sigelectrico.centrosur.gob.ec/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://sigelectrico.centrosur.gob.ec/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://sigelectrico.centrosur.gob.ec/arcgis/rest/services?f=kmz
+description: ArcGIS REST catalog of Empresa Eléctrica CentroSur. The service timed out and
+  could not be verified as live.
 id: sigelectricocentrosurgobec
 langs:
 - id: ES
   name: Spanish
 link: https://sigelectrico.centrosur.gob.ec/arcgis/rest/services
-name: SIGElectrico CentroSur - Regional Electric Company Geoportal
+name: SIGElectrico CentroSur
 owner:
   link: https://centrosur.gob.ec
   location:
@@ -65,7 +50,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS
 - REST
@@ -89,4 +74,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00001933
+uid: cdi00035527

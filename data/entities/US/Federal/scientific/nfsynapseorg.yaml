@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: The NF Data Portal is a public repository that shares and stores data
+  from collaborative research on neurofibromatosis and related schwannomatoses. It
+  contains molecular data, clinical data, imaging assays, and other experimental data,
+  along with tools, metadata, publications, and biological resources (cell lines,
+  mouse models, plasmids).
+endpoints:
+- type: synapse:api
+  url: https://repo-prod.prod.sagebase.org/repo/v1/version
+id: nfsynapseorg
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::8471bda5e6201d30893c3582ee131d4d
+  value: fairsharing_::8471bda5e6201d30893c3582ee131d4d
+langs:
+- id: EN
+  name: English
+link: https://nf.synapse.org
+name: NF Data Portal
+owner:
+  link: http://sagebase.org/
+  location:
+    country:
+      id: US
+      name: United States
+  name: Sage Bionetworks
+  type: Academy
+software:
+  id: synapse
+  name: Synapse
+status: active
+tags:
+- scientific
+- research data
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00033387

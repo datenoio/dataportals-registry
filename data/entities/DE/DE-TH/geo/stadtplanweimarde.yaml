@@ -11,11 +11,15 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Geospatial data catalog provided via GeoServer infrastructure.
+    subregion:
+      id: DE-TH
+      name: Thüringen
+description: GeoServer of the City of Weimar, publishing municipal map layers for
+  the city plan and related spatial data.
 endpoints:
 - type: wfs100
   url: https://stadtplan.weimar.de/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
@@ -49,10 +53,9 @@ langs:
 - id: DE
   name: German
 link: https://stadtplan.weimar.de/geoserver
-name: Not explicitly stated; assumed to be city administration of Weimar (communicate
-  with dateno@dateno.io if not) Geoportal
+name: Stadtplan Weimar GeoServer
 owner:
-  link: https://weimar.de
+  link: https://www.weimar.de
   location:
     country:
       id: DE
@@ -61,8 +64,7 @@ owner:
     subregion:
       id: DE-TH
       name: Thüringen
-  name: Not explicitly stated; assumed to be city administration of Weimar (communicate
-    with dateno@dateno.io if not)
+  name: Stadt Weimar
   type: Local government
 properties:
   has_doi: false

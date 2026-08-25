@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: GBIF Benin Integrated Publishing Toolkit (IPT). Publishes biodiversity
-  occurrence datasets as Darwin Core Archives for the GBIF Benin node.
+description: GBIF Benin Integrated Publishing Toolkit (IPT), hosted at Université
+  d'Abomey-Calavi, Faculty of Agricultural Sciences. Publishes biodiversity occurrence
+  datasets as Darwin Core Archives for the GBIF Benin node (241 resources).
 endpoints:
 - type: dcat:ttl
   url: https://ipt.gbifbenin.org/dcat
@@ -28,17 +29,29 @@ id: iptgbifbeninorg
 langs:
 - id: FR
   name: French
+- id: EN
+  name: English
 link: https://ipt.gbifbenin.org
 name: GBIF Benin IPT
 owner:
-  link: https://www.gbifbenin.org
+  link: http://www.gbifbenin.org
   location:
     country:
       id: BJ
       name: Benin
     level: 20
-  name: GBIF Benin
+  name: GBIF Benin (Université d'Abomey-Calavi)
   type: Academy
+properties:
+  has_doi: true
+  dataset_count_reported: 241
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -48,6 +61,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota

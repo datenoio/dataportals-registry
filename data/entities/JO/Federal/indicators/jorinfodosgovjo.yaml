@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
@@ -13,12 +14,15 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: The official portal for accessing statistical data from the Department
-  of Statistics of Jordan (DoS), providing access to population, economic, and social
-  statistics.
+description: Official PxWeb statistical databank of the Department of Statistics of
+  Jordan, providing interactive tables for population, economic, social, agricultural,
+  and environmental statistics.
 endpoints:
 - type: pxwebapi
   url: https://jorinfo.dos.gov.jo/Databank/api/v1/en
+  version: '1'
+- type: pxwebapi
+  url: https://jorinfo.dos.gov.jo/Databank/api/v1/ar
   version: '1'
 id: jorinfodosgovjo
 langs:
@@ -27,7 +31,7 @@ langs:
 - id: AR
   name: Arabic
 link: https://jorinfo.dos.gov.jo/Databank/pxweb
-name: Department of Statistics (DoS) Data Catalog
+name: JordanInfo Statistical Database
 owner:
   link: https://dosweb.dos.gov.jo
   location:
@@ -35,10 +39,11 @@ owner:
       id: JO
       name: Jordan
     level: 20
-  name: Department of Statistics Jordan
+  name: Department of Statistics
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -54,7 +59,7 @@ tags:
 - statistics
 - government
 - official statistics
-- Jordan
+- has_api
 - PxWeb
 - aggregated data
 topics:
@@ -83,4 +88,3 @@ topics:
   name: Health
   type: iso19115
 uid: cdi00000979
-api: true

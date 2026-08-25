@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -44,7 +44,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - geospatial
 - OGC
@@ -56,7 +56,3 @@ topics:
   name: Environment
   type: eudatatheme
 uid: cdi00004987
-endpoints:
-- type: wms111
-  url: http://geoserver-dev.d4science-ii.research-infrastructures.eu/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,31 +15,14 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Risk management and disaster response geospatial portal providing access
-  to hazard maps, vulnerability assessments, emergency response infrastructure, evacuation
-  routes, and disaster risk management spatial data from Ecuador's National Risk Management
-  Service through ArcGIS services.
-endpoints:
-- type: arcgis:portals:self
-  url: https://srvportal.gestionderiesgos.gob.ec/portal/sharing/rest/portals/self?f=pjson
-- type: arcgis:rest:info
-  url: https://srvportal.gestionderiesgos.gob.ec/server/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://srvportal.gestionderiesgos.gob.ec/server/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://srvportal.gestionderiesgos.gob.ec/server/services?wsdl
-- type: arcgis:sitemap
-  url: https://srvportal.gestionderiesgos.gob.ec/server/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://srvportal.gestionderiesgos.gob.ec/server/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://srvportal.gestionderiesgos.gob.ec/server/rest/services?f=kmz
+description: Former ArcGIS REST catalog of the National Risk Management Service. The host
+  srvportal.gestionderiesgos.gob.ec no longer resolves.
 id: srvportalgestionderiesgosgobec
 langs:
 - id: ES
   name: Spanish
 link: https://srvportal.gestionderiesgos.gob.ec/server/rest/services
-name: Portal Gestión de Riesgos - National Risk Management Service Ecuador
+name: Portal Gestión de Riesgos SNGRE
 owner:
   link: https://srvportal.gestionderiesgos.gob.ec
   location:
@@ -61,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - GIS
 - services
@@ -86,4 +69,4 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-uid: temp00001935
+uid: cdi00035544

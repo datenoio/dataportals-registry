@@ -1,11 +1,11 @@
 access_mode:
 - open
 - limited
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
-- microdata
+- dataset
 coverage:
 - location:
     country:
@@ -16,11 +16,9 @@ coverage:
       id: '011'
       name: Western Africa
 description: INSEED National Data Archive (NADA) for Togo survey and census microdata.
-  Hosted on a legacy IP address; the former www.stat-togo.org/nada front door is no
-  longer available.
-endpoints:
-- type: nada:csvexport
-  url: http://160.242.193.218:8082/nada/index.php/catalog/export/csv?ps=5000&collection[]
+  Last public instance was on a legacy IP (160.242.193.218:8082); that host no longer
+  accepts connections. The former www.stat-togo.org/nada front door is recorded as
+  wwwstattogoorg. inseed.tg/nada-togo/ is a corporate page, not the NADA catalogue.
 id: togonada
 langs:
 - id: FR
@@ -50,11 +48,11 @@ rights:
 software:
   id: nada
   name: NADA
-status: active
+status: inactive
 tags:
 - government
-- has_api
 - microdata
+- official statistics
 topics:
 - id: SOCI
   name: Population and society

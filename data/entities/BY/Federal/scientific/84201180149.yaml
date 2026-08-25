@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -13,16 +13,20 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: IPT server of SPC NAS of Belarus for Bioresources
-endpoints:
-- type: rss
-  url: http://84.201.180.149:8080/ipt/rss.do
-  version: '2.0'
+      name: Eastern Europe
+description: Former GBIF IPT of the Scientific and Practical Center of NAS of Belarus
+  for Biological Resources. The host 84.201.180.149:8080 no longer responds; GBIF
+  still lists the installation.
 id: '84201180149'
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/installation/5f0fbf72-35e4-4dcd-8d78-f060cb22e817
+  value: 5f0fbf72-35e4-4dcd-8d78-f060cb22e817
 langs:
 - id: RU
   name: Russian
+- id: EN
+  name: English
 link: http://84.201.180.149:8080
 name: SPC NAS of Belarus for Bioresources IPT
 owner:
@@ -32,13 +36,22 @@ owner:
       id: BY
       name: Belarus
     level: 20
-  name: The Scientific and Practical Center of the National academy of Sciences of
-    Belarus for Biological Resources
+  name: Scientific and Practical Center of the National Academy of Sciences of Belarus
+    for Biological Resources
   type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT

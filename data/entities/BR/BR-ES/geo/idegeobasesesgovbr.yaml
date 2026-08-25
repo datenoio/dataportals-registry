@@ -11,10 +11,13 @@ coverage:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
+    subregion:
+      id: BR-ES
+      name: Espírito Santo
 description: A geographic data catalog hosting and serving geospatial datasets.
 endpoints:
 - type: wms130
@@ -55,7 +58,7 @@ langs:
 - id: PT
   name: Portuguese
 link: https://ide.geobases.es.gov.br/geoserver
-name: Geoserver IDE GeoBases BR
+name: IDE GeoBases Espírito Santo
 owner:
   link: https://ide.geobases.es.gov.br
   location:
@@ -66,8 +69,8 @@ owner:
     subregion:
       id: BR-ES
       name: Espírito Santo
-  name: GeoBases IDE
-  type: Local government
+  name: Instituto Jones dos Santos Neves / GeoBases
+  type: Regional government
 properties:
   has_doi: false
 rights:

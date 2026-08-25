@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -13,10 +14,17 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: Integrated statistics portal managed by the State Statistics Committee
-  of Uzbekistan. Provides access to official statistical indicators across multiple
-  domains, including economic, social, and environmental, with downloadable data in
-  various formats (Excel, PDF, JPG, CSV, JSON, XML).
+description: SIAT (Statistika axborot-tahlil tizimi) is the integrated statistics
+  portal of Uzbekistan. It publishes official indicators with SDMX metadata and
+  machine-readable downloads (Excel, CSV, JSON, XML, PDF). The REST API lists
+  statistical themes and more than 3,000 indicator series.
+endpoints:
+- type: custom_api
+  url: https://siat.stat.uz/api/sdmx/
+- type: custom_api
+  url: https://siat.stat.uz/api/sdmx/json/
+- type: custom_api
+  url: https://siat.stat.uz/api/sdmx/last-layer/
 id: siatstatuz
 langs:
 - id: UZ
@@ -26,16 +34,19 @@ langs:
 - id: RU
   name: Russian
 link: https://siat.stat.uz
-name: Портал статистики Республики Узбекистан
+name: SIAT Statistics Portal of Uzbekistan
 owner:
-  link: https://www.stat.uz
+  link: https://stat.uz
   location:
     country:
       id: UZ
       name: Uzbekistan
     level: 20
-  name: Statistics of Uzbekistan
+  name: National Statistics Committee of the Republic of Uzbekistan
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -50,8 +61,8 @@ status: active
 tags:
 - statistics
 - government
-- official data
-- open data
+- official statistics
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector
@@ -65,8 +76,8 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: TECH
-  name: Science and technology
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
 - id: Economy
   name: Economy

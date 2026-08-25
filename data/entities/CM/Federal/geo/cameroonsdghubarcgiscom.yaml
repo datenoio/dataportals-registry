@@ -15,13 +15,15 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: ArcGIS Hub for Cameroon Sustainable Development Goal data. Publishes
-  SDG layers and indicators for exploration, download, and mapping.
+description: ArcGIS Hub for Cameroon Sustainable Development Goal geospatial layers
+  and indicator pages, used to explore, map, and download SDG-related datasets.
 endpoints:
 - type: dcatap201
   url: https://cameroon-sdg.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
 - type: dcatus11
   url: https://cameroon-sdg.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: dcatus11
+  url: https://cameroon-sdg.hub.arcgis.com/data.json
 - type: rss
   url: https://cameroon-sdg.hub.arcgis.com/api/feed/rss/2.0
 - type: ogcrecordsapi
@@ -35,16 +37,17 @@ langs:
 link: https://cameroon-sdg.hub.arcgis.com/
 name: Cameroon SDG Hub
 owner:
-  link: https://cameroon-sdg.hub.arcgis.com/
+  link: https://ins-cameroun.cm
   location:
     country:
       id: CM
       name: Cameroon
     level: 20
-  name: Cameroon SDG Hub
+  name: Institut National de la Statistique du Cameroun
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -60,8 +63,8 @@ tags:
 - SDG
 - Sustainable Development Goals
 - Cameroon
-- Monitoring
-- Data Hub
+- government
+- has_api
 topics:
 - id: ENVI
   name: Environment

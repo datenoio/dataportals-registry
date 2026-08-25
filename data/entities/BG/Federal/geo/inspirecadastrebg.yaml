@@ -14,8 +14,9 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: ArcGIS REST services endpoint for cadastral data under INSPIRE Directive.
+      name: Eastern Europe
+description: INSPIRE ArcGIS REST services of the Geodesy, Cartography and Cadastre
+  Agency, exposing cadastral and related geospatial layers for Bulgaria.
 endpoints:
 - type: arcgis:rest:info
   url: https://inspire.cadastre.bg/arcgis/rest/info?f=pjson
@@ -34,15 +35,15 @@ langs:
 - id: BG
   name: Bulgarian
 link: https://inspire.cadastre.bg/arcgis/rest/services
-name: INSPIRE Cadastre REST Services, Bulgaria
+name: INSPIRE Cadastre REST Services
 owner:
-  link: https://inspire.cadastre.bg
+  link: https://www.cadastre.bg
   location:
     country:
       id: BG
       name: Bulgaria
     level: 20
-  name: Bulgarian Cadastre Agency
+  name: Geodesy, Cartography and Cadastre Agency
   type: Central government
 properties:
   has_doi: false

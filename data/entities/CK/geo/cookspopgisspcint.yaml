@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '061'
       name: Polynesia
-description: PopGIS Cook Islands. This geoportal. managed by Pacific Community (SPC).
-  provides access to datasets and resources.
+description: Public Population Geographic Information System (PopGIS3) portal for
+  the Cook Islands, managed by the Pacific Community (SPC). Census and survey indicators
+  are mapped to administrative areas for public exploration and download.
 endpoints:
 - type: customapi
   url: https://cooks.popgis.spc.int/api
@@ -27,11 +28,11 @@ langs:
 link: https://cooks.popgis.spc.int
 name: Cook Islands POPGIS Data Catalog
 owner:
-  link: http://www.spc.int
+  link: https://www.spc.int
   location:
     country:
-      id: Oceania
-      name: Oceania
+      id: NC
+      name: New Caledonia
     level: 20
   name: Pacific Community (SPC)
   type: International
@@ -51,13 +52,20 @@ software:
 status: active
 tags:
 - statistics
-- data catalog
 - geospatial
+- population
+- census
+- pacific
+- has_api
+- Cook Islands
 topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
 - id: Society
   name: Society
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
   type: iso19115
 uid: cdi00005041

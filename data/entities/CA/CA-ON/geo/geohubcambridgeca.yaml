@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: This website provides access to published open map data from the City of Cambridge.
+endpoints:
+- type: ogcrecordsapi
+  url: https://geohub.cambridge.ca/api/search/v1
+id: geohubcambridgeca
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=re3data_____::08fc0ea73940848fa2a6e23cb12efe8f
+  value: re3data_____::08fc0ea73940848fa2a6e23cb12efe8f
+langs:
+- id: EN
+  name: English
+link: https://geohub.cambridge.ca/
+name: City of Cambridge GeoHub
+owner:
+  link: https://www.cambridge.ca/
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: City of Cambridge
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geoportal
+- open data
+- municipal
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00033267

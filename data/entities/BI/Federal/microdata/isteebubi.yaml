@@ -5,6 +5,7 @@ api: true
 api_status: active
 catalog_type: Microdata catalog
 content_types:
+- microdata
 - dataset
 coverage:
 - location:
@@ -15,20 +16,21 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: National NADA microdata catalog of the Institut National de la Statistique
-  du Burundi (INSBU), successor to the ISTEEBU archive. Browse, search, request access,
-  and download survey and census documentation.
+description: National NADA microdata archive of the Institut National de la Statistique
+  du Burundi (INSBU), successor to the ISTEEBU catalog. The public catalog currently
+  lists 0 studies; INSBU tendered in 2026 to rebuild the archive and train staff on
+  DDI cataloguing. Browse, search, and request-access APIs are live.
 endpoints:
 - type: nada:catalog-search
   url: https://www.insbu.bi/nada/index.php/api/catalog/search
 - type: nada:csvexport
-  url: https://www.insbu.bi/nada/index.php/catalog/export/csv?ps=5000&collection[]
+  url: https://www.insbu.bi/nada/index.php/catalog/export/csv
 id: isteebubi
 langs:
 - id: FR
   name: French
 link: https://www.insbu.bi/nada/index.php
-name: Burundi Microdata Catalog
+name: Archive Nationale de Microdonnées du Burundi
 owner:
   link: https://www.insbu.bi
   location:
@@ -39,7 +41,9 @@ owner:
   name: Institut National de la Statistique du Burundi (INSBU)
   type: Central government
 properties:
+  dataset_count_reported: 0
   has_doi: false
+  is_national: true
   transferable_topics: true
 rights:
   license_id: null
@@ -57,8 +61,10 @@ tags:
 - has_api
 - microdata
 - statistics
-- catalog
-- open data
+- surveys
+- census
+- official statistics
+- Burundi
 topics:
 - id: SOCI
   name: Population and society

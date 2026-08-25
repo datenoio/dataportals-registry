@@ -1,5 +1,5 @@
 access_mode:
-- public
+- open
 api: true
 api_status: active
 catalog_type: Geoportal
@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: GeoNode-based data catalog of water resources and associated geospatial
-  information in Kyrgyz Republic.
+description: GeoNode geoportal of the Water Resources Service of the Kyrgyz Republic,
+  publishing water-related spatial layers including reservoirs, rivers, canals, and
+  irrigation infrastructure, with GeoServer OGC services and CSW metadata.
 endpoints:
 - type: geonode:layers
   url: https://geonode.water.gov.kg/api/layers/
@@ -81,18 +82,21 @@ id: geonodewatergovkg
 langs:
 - id: RU
   name: Russian
+- id: KY
+  name: Kirghiz
+- id: EN
+  name: English
 link: https://geonode.water.gov.kg
-name: Служба водных водных ресурсов при Министерстве сельского хозяйства Кыргызской
-  Республики geonode
+name: Kyrgyzstan Water Resources GeoNode
 owner:
-  link: https://water.gov.kg
+  link: https://www.water.gov.kg
   location:
     country:
       id: KG
       name: Kyrgyzstan
     level: 20
-  name: Служба водных водных ресурсов при Министерстве сельского хозяйства Кыргызской
-    Республики
+  name: Water Resources Service under the Ministry of Water Resources, Agriculture
+    and Processing Industry of the Kyrgyz Republic
   type: Central government
 properties:
   has_doi: false
@@ -110,30 +114,24 @@ status: active
 tags:
 - geospatial
 - government
+- has_api
 - water resources
-- glaciers
-- climate change
-- Central Asia
+- irrigation
+- hydrology
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: GOVE
-  name: Government and public sector
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
-- id: Geoscientific Information
-  name: Geoscientific Information
+- id: Inland Waters
+  name: Inland Waters
   type: iso19115
 - id: Environment
   name: Environment
   type: iso19115
-- id: Health
-  name: Health
-  type: iso19115
-- id: Inland Waters
-  name: Inland Waters
+- id: Geoscientific Information
+  name: Geoscientific Information
   type: iso19115
 uid: cdi00001032

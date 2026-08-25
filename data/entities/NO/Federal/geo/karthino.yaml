@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Data catalog providing access to marine and topographic datasets from
-  Kartverket, the Norwegian Mapping Authority.
+description: Institute of Marine Research (Havforskningsinstituttet) GeoServer
+  catalog of marine environmental and topographic map services.
 endpoints:
 - type: wms111
   url: https://kart.hi.no/data/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -77,16 +77,16 @@ langs:
 - id: 'NO'
   name: Norwegian
 link: https://kart.hi.no/data/web/
-name: Marine data, topographic data and more from Kartverket
+name: Institute of Marine Research GeoServer (kart.hi.no)
 owner:
-  link: https://kart.hi.no
+  link: https://www.hi.no
   location:
     country:
       id: 'NO'
       name: Norway
     level: 20
-  name: Kartverket
-  type: Central government
+  name: Institute of Marine Research
+  type: Academy
 properties:
   has_doi: false
 rights:

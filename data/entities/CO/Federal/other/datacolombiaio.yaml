@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Other
 content_types:
 - dataset
@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Data catalog for datasets published by the Colombian government, providing
-  comprehensive visualization of Colombian public data.
+description: Former Datawheel visualization portal of Colombian public statistics.
+  The hostname datacolombia.io no longer resolves.
 id: datacolombiaio
 langs:
 - id: ES
@@ -23,14 +23,14 @@ langs:
 link: https://datacolombia.io
 name: DataColombia
 owner:
-  link: https://www.gov.co
+  link: https://www.datawheel.us
   location:
     country:
       id: CO
       name: Colombia
     level: 20
-  name: Gobierno de Colombia
-  type: Central government
+  name: Datawheel
+  type: Business
 rights:
   license_id: null
   license_name: null
@@ -41,7 +41,7 @@ rights:
 software:
   id: datawheel
   name: DataWheel
-status: active
+status: inactive
 tags:
 - has_api
 - government
@@ -61,6 +61,3 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00010379
-endpoints:
-- type: sitemap
-  url: https://datacolombia.io/sitemap.xml

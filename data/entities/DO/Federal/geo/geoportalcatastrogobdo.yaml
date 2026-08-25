@@ -1,0 +1,88 @@
+access_mode:
+- open
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DO
+      name: Republica Dominicana
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: Official national cadastre geoportal for inventory and administrative
+  registration of real estate, offering map and data download services for cadastral
+  information.
+endpoints:
+- type: geonode:layers
+  url: https://geoportal.catastro.gob.do/api/layers/
+- type: geonode:documents
+  url: https://geoportal.catastro.gob.do/api/documents/
+- type: geonode:dcatus11
+  url: https://geoportal.catastro.gob.do/data.json
+- type: wms111
+  url: https://geoportal.catastro.gob.do/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geoportal.catastro.gob.do/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geoportal.catastro.gob.do/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://geoportal.catastro.gob.do/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: wmts100
+  url: https://geoportal.catastro.gob.do/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geoportal.catastro.gob.do/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: geoportalcatastrogobdo
+langs:
+- id: ES
+  name: Spanish
+link: https://geoportal.catastro.gob.do
+name: Geoportal del Catastro Nacional
+owner:
+  link: https://www.catastro.gob.do
+  location:
+    country:
+      id: DO
+      name: Republica Dominicana
+    level: 20
+  name: Dirección General del Catastro Nacional
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- government
+- cadastre
+- land registry
+- geospatial data
+- real estate
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00000507
+api: true

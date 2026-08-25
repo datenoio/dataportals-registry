@@ -14,16 +14,16 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Official statistics and statistical databases published by Statistics
-  Estonia.
+description: Official PxWeb statistical database of Statistics Estonia, publishing
+  national statistics across economy, population, environment, and social themes.
 endpoints:
 - type: pxwebapi
   url: https://andmed.stat.ee/api/v1/en/
   version: '1'
-- type: sdmx-json
-  url: http://andmebaas.stat.ee/sdmx-json
 id: andmedstatee
 langs:
+- id: ET
+  name: Estonian
 - id: EN
   name: English
 link: https://andmed.stat.ee
@@ -65,12 +65,6 @@ topics:
   type: eudatatheme
 - id: ECON
   name: Economy and finance
-  type: eudatatheme
-- id: SOCI
-  name: Population and society
-  type: eudatatheme
-- id: SOCI
-  name: Population and society
   type: eudatatheme
 - id: SOCI
   name: Population and society

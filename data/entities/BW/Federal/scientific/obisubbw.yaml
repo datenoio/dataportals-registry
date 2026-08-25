@@ -12,24 +12,33 @@ coverage:
       name: Botswana
     level: 20
     macroregion:
-      id: 018
+      id: '018'
       name: Southern Africa
-description: University of Botswana, Okavango Research Institute
+description: Former GBIF IPT hosted at the University of Botswana for Botswana Wildlife
+  Management Association trophy-measurement datasets, later deposited with the Okavango
+  Research Institute library. The host obis.ub.bw no longer resolves.
 id: obisubbw
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/installation/c51469db-52ee-4028-9139-b521cbf68dc8
+  value: c51469db-52ee-4028-9139-b521cbf68dc8
 langs:
 - id: EN
   name: English
 link: http://obis.ub.bw:8080
 name: Okavango Research Institute (ORI) IPT Installation
 owner:
-  link: https://www.bwma.bw
+  link: https://www.gbif.org/publisher/bd14512a-b63d-42c1-b426-4c4f0623b6c3
   location:
     country:
       id: BW
       name: Botswana
     level: 20
   name: Botswana Wildlife Management Association
-  type: Academy
+  type: Civil society
+properties:
+  dataset_count_reported: 13
+  has_doi: true
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)

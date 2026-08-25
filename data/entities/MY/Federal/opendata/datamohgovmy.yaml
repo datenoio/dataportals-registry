@@ -14,9 +14,9 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: One-stop interface to browse open data from Ministry of Health Malaysia
-  with datasets on health statistics, COVID-19, pharmaceuticals, and other related
-  topics.
+description: KKMNOW is the Ministry of Health Malaysia open data portal for national
+  health statistics, COVID-19 indicators, pharmaceuticals, and related datasets,
+  built on the data.gov.my platform.
 endpoints:
 - type: sitemap
   url: https://data.moh.gov.my/sitemap.xml
@@ -27,7 +27,7 @@ langs:
 - id: EN
   name: English
 link: https://data.moh.gov.my
-name: Ministry of Health Malaysia Open Data Catalog
+name: KKMNOW
 owner:
   link: https://www.moh.gov.my
   location:
@@ -39,7 +39,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
-  is_national: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -60,7 +60,13 @@ tags:
 - covid19
 - pharmaceuticals
 topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
 uid: cdi00004373

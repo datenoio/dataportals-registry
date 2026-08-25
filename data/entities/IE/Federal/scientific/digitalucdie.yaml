@@ -15,10 +15,11 @@ coverage:
       id: '154'
       name: Northern Europe
 description: University College Dublin Digital Library for cultural heritage, digital
-  scholarship, and research data.
+  scholarship, and research data, built on Islandora.
 endpoints:
 - type: oaipmh20
-  url: http://libucd.ucd.ie/oaiprovider/
+  url: http://libucd.ucd.ie/oaiprovider/?verb=Identify
+  version: '2.0'
 - type: opensearch
   url: https://digital.ucd.ie/opensearchdescription.xml
 id: digitalucdie
@@ -50,13 +51,14 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: islandora
+  name: Islandora
 status: active
 tags:
 - scientific
 - cultural heritage
 - research data
+- has_api
 topics:
 - id: EDUC
   name: Education, culture and sport

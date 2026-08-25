@@ -15,8 +15,7 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Geoportal. managed by Government of Netherlands. powered by GeoServer.
-  accessible at gnlufosrv02.kaartviewer.nl:8444.
+description: Public GeoServer on the Kaartviewer.nl hosting platform (gnlufosrv02.kaartviewer.nl).
 endpoints:
 - type: wms111
   url: https://gnlufosrv02.kaartviewer.nl:8444/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -56,7 +55,7 @@ langs:
 - id: NL
   name: Dutch
 link: https://gnlufosrv02.kaartviewer.nl:8444/geoserver/web/
-name: Government of Netherlands Geoportal
+name: Kaartviewer GeoServer (gnlufosrv02)
 owner:
   link: https://kaartviewer.nl
   location:
@@ -64,8 +63,8 @@ owner:
       id: NL
       name: Netherlands
     level: 20
-  name: Government of Netherlands
-  type: Central government
+  name: Kaartviewer.nl
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -98,4 +97,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-uid: temp00000511
+uid: cdi00035131

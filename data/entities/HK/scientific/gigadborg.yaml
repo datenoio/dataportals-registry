@@ -25,6 +25,10 @@ description: GigaDB primarily serves as a repository to host data and tools asso
 endpoints:
 - type: schemaorg:datacatalog
   url: https://gigadb.org
+- type: api
+  url: https://gigadb.org/api/list
+- type: api
+  url: https://gigadb.org/api/dataset
 id: gigadborg
 identifiers:
 - id: re3data
@@ -39,13 +43,13 @@ langs:
 link: https://gigadb.org
 name: GigaDB
 owner:
-  link: https://academic.oup.com/gigascience
+  link: https://www.gigasciencepress.org/
   location:
     country:
       id: HK
       name: Hong Kong
     level: 20
-  name: Gigascience Journal
+  name: GigaScience Press
   type: Academy
 properties:
   transferable_topics: true
@@ -74,6 +78,12 @@ topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
 uid: cdi00000874
 _re3data:
   re3data_id: r3d100010478

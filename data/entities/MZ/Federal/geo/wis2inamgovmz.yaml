@@ -15,9 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: WIS 2.0 in a box provides a platform with the capabilities for centres
-  to integrate their data holdings and publish them to the WMO Information System
-  with a plug and play capability supporting data publishing, discovery and access
+description: WMO WIS 2.0 in a box node of Instituto Nacional de Meteorologia, publishing
+  meteorological discovery metadata and collections for Mozambique through pygeoapi.
 endpoints:
 - type: pygeoapi:openapi
   url: https://wis2.inam.gov.mz/oapi/openapi
@@ -32,7 +31,7 @@ langs:
 link: https://wis2.inam.gov.mz
 name: Mozambique - WIS 2.0 in a box
 owner:
-  link: https://www.inam.gov.mz
+  link: https://inam.gov.mz
   location:
     country:
       id: MZ
@@ -42,6 +41,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -57,6 +57,8 @@ tags:
 - meteorology
 - climate
 - WIS2
+- government
+- has_api
 topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere

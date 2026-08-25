@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Public Lizmap demonstration and project geoportal operated by Faunalia,
+  exposing QGIS-based maps and OGC services.
+id: lizmapfaunaliaeu
+langs:
+- id: EN
+  name: English
+link: https://lizmap.faunalia.eu
+name: Faunalia Lizmap Geoportal
+owner:
+  link: https://faunalia.eu
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Faunalia
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- European Union
+- geospatial
+- lizmap
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00035512
+endpoints:
+- type: lizmap:service
+  url: https://lizmap.faunalia.eu/index.php/lizmap/service/

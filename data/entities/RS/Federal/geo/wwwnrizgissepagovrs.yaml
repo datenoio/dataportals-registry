@@ -13,11 +13,11 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: A geoportal providing access to geospatial datasets managed by the Serbian
-  Environmental Protection Agency (SEPA). Unknown technology details, likely ArcGIS
-  Server.
+description: ArcGIS Server REST geoportal of the Serbian Environmental Protection Agency (SEPA)
+  National Register of Pollution Sources (NRIZ), with map services under folders such as NRIZ,
+  kdd, and Kosovo.
 endpoints:
 - type: arcgis:rest:info
   url: http://www.nrizgis.sepa.gov.rs/ser/rest/info?f=pjson
@@ -36,9 +36,9 @@ langs:
 - id: SR
   name: Serbian
 link: http://www.nrizgis.sepa.gov.rs/ser/rest/services
-name: GIS Portal of the Serbian Environmental Protection Agency
+name: NRIZ GIS – Serbian Environmental Protection Agency
 owner:
-  link: http://www.nrizgis.sepa.gov.rs/
+  link: https://sepa.gov.rs/
   location:
     country:
       id: RS
@@ -63,51 +63,16 @@ tags:
 - SEPA
 - Serbia
 - GIS
-- geoportal
+- environment
+- NRIZ
 topics:
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme
 - id: Environment
   name: Environment
   type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Elevation
-  name: Elevation
-  type: iso19115
-- id: Health
-  name: Health
-  type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
-  type: iso19115
 - id: Location
   name: Location
-  type: iso19115
-- id: Society
-  name: Society
-  type: iso19115
-- id: Structure
-  name: Structure
-  type: iso19115
-- id: Transportation
-  name: Transportation
-  type: iso19115
-- id: Farming
-  name: Farming
-  type: iso19115
-- id: Utilities / Communication
-  name: Utilities / Communication
   type: iso19115
 uid: temp00005812

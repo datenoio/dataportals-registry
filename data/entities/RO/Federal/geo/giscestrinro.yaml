@@ -14,30 +14,30 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Web services providing geospatial data and mapping functionalities, accessed
-  via CESTRIN GIS portal
+      name: Eastern Europe
+description: ArcGIS REST services of CESTRIN (Centre for Road Technical Studies and
+  Informatics), publishing road engineering and transport geospatial layers.
 endpoints:
 - type: arcgis:rest:info
-  url: http://gis.cestrin.ro/services/rest/info?f=pjson
+  url: https://gis.cestrin.ro/services/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: http://gis.cestrin.ro/services/rest/services?f=pjson
+  url: https://gis.cestrin.ro/services/rest/services?f=pjson
 - type: arcgis:soap
-  url: http://gis.cestrin.ro/services/services?wsdl
+  url: https://gis.cestrin.ro/services/services?wsdl
 - type: arcgis:sitemap
-  url: http://gis.cestrin.ro/services/rest/services?f=sitemap
+  url: https://gis.cestrin.ro/services/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: http://gis.cestrin.ro/services/rest/services?f=geositemap
+  url: https://gis.cestrin.ro/services/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: http://gis.cestrin.ro/services/rest/services?f=kmz
+  url: https://gis.cestrin.ro/services/rest/services?f=kmz
 id: giscestrinro
 langs:
 - id: RO
   name: Romanian
-link: http://gis.cestrin.ro/services/rest/services
-name: GIS services from CESTRIN
+link: https://gis.cestrin.ro/services/rest/services
+name: CESTRIN ArcGIS Server
 owner:
-  link: http://www.cestrin.ro/
+  link: https://www.cestrin.ro/
   location:
     country:
       id: RO
@@ -72,4 +72,4 @@ topics:
 - id: Transportation
   name: Transportation
   type: iso19115
-uid: temp00005606
+uid: cdi00035037

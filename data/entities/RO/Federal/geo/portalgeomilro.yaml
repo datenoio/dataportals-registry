@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: false
-api_status: uncertain
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,17 +14,15 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: The listed URL is an endpoint for ArcGIS REST services, typically providing
-  access to various spatial datasets and map services, but does not explicitly provide
-  human-readable metadata, owner information, or thematic categories in the query
-  path or response style.
+      name: Eastern Europe
+description: Former Romanian Military Geography Directorate ArcGIS REST services directory
+  at portal.geomil.ro. The /arcgis/rest/services path returns 404.
 id: portalgeomilro
 langs:
 - id: RO
   name: Romanian
 link: https://portal.geomil.ro/arcgis/rest/services
-name: Portal Geomil - ArcGIS REST Services Directory
+name: Portal GeoMil ArcGIS REST services
 owner:
   link: https://portal.geomil.ro/
   location:
@@ -32,7 +30,7 @@ owner:
       id: RO
       name: Romania
     level: 20
-  name: Portal Geomil (Romanian Army Geographical Directorate)
+  name: Romanian Military Geography Directorate
   type: Central government
 properties:
   has_doi: false
@@ -46,12 +44,13 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - ArcGIS
 - REST
 - spatial_data
 - Romania
+- inactive
 topics:
 - id: TRAN
   name: Transport
@@ -59,4 +58,4 @@ topics:
 - id: Transportation
   name: Transportation
   type: iso19115
-uid: temp00005611
+uid: cdi00035040

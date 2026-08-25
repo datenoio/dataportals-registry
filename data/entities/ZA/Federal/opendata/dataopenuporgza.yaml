@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,18 +14,8 @@ coverage:
     macroregion:
       id: 018
       name: Southern Africa
-description: Data catalog providing open data tools and datasets to empower citizens
-  and support government accountability in South Africa.
-endpoints:
-- type: ckan
-  url: https://data.openup.org.za/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://data.openup.org.za/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://data.openup.org.za/api/3/action/package_list
-  version: '3'
+description: Former OpenUp CKAN data portal. The hostname data.openup.org.za now
+  returns HTTP 404; the organisation site remains at https://openup.org.za/.
 id: dataopenuporgza
 langs:
 - id: EN
@@ -51,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
 - has_api

@@ -12,19 +12,24 @@ coverage:
       name: Botswana
     level: 20
     macroregion:
-      id: 018
+      id: '018'
       name: Southern Africa
-description: Biodiversity Data published by Okavango Research Institute (ORI). The
-  datasets include time series monitoring and campaigns undertaken in and around the
-  Okavango Delta.
+description: Former GBIF IPT of the Okavango Research Institute (ORI) at the University
+  of Botswana. Published time-series monitoring, herbarium, and campaign datasets
+  from in and around the Okavango Delta. The host monitoringdata.ub.bw no longer
+  resolves.
 id: wwwmonitoringdataubbw
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/installation/6985c822-bca9-4819-a653-52ebb2f99678
+  value: 6985c822-bca9-4819-a653-52ebb2f99678
 langs:
 - id: EN
   name: English
 link: https://www.monitoringdata.ub.bw
-name: Okavango Research Institute
+name: Okavango Research Institute IPT
 owner:
-  link: http://www.ori.ub.bw
+  link: https://ori.ub.bw
   location:
     country:
       id: BW
@@ -32,6 +37,9 @@ owner:
     level: 20
   name: Okavango Research Institute
   type: Academy
+properties:
+  dataset_count_reported: 9
+  has_doi: true
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)

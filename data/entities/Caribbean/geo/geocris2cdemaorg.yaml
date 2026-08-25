@@ -11,13 +11,13 @@ coverage:
     country:
       id: Caribbean
       name: Caribbean
-    level: 0
+    level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: CDEMA (Caribbean Disaster Emergency Management Agency) GeoCRIS2 catalog
-  providing geospatial metadata services for disaster management and emergency response
-  data.
+description: CDEMA GeoCRIS geospatial archive for disaster management and emergency
+  response data across CDEMA member states. HTTPS presents an incomplete certificate
+  chain (checked 25 August 2026); the pycsw catalog still responds.
 endpoints:
 - type: csw202
   url: https://geocris2.cdema.org/catalog/csw?service=CSW&version=2.0.2&request=GetCapabilities
@@ -29,15 +29,15 @@ id: geocris2cdemaorg
 langs:
 - id: EN
   name: English
-link: https://geocris2.cdema.org/catalog
-name: CDEMA GeoCRIS2 Catalog
+link: https://geocris2.cdema.org
+name: CDEMA GeoCRIS
 owner:
   link: https://www.cdema.org
   location:
     country:
       id: Caribbean
       name: Caribbean
-    level: 0
+    level: 20
   name: Caribbean Disaster Emergency Management Agency
   type: International
 properties:
@@ -61,11 +61,18 @@ tags:
 - emergency response
 - CDEMA
 - Caribbean
+- has_api
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: JUST
+  name: Justice, legal system and public safety
+  type: eudatatheme
 - id: Location
   name: Location
+  type: iso19115
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00010555

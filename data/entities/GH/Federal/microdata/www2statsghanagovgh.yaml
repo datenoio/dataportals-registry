@@ -1,8 +1,8 @@
 access_mode:
 - open
 - limited
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - dataset
@@ -15,17 +15,15 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Legacy Ghana Statistical Service NADA host. The current official microdata
-  catalogue is https://microdata.statsghana.gov.gh/.
-endpoints:
-- type: nada:catalog-search
-  url: https://www2.statsghana.gov.gh/nada/index.php/api/catalog/search
+description: Legacy Ghana Statistical Service NADA host on www2.statsghana.gov.gh.
+  The certificate is expired and the URL redirects to the current official catalogue
+  at https://microdata.statsghana.gov.gh/.
 id: www2statsghanagovgh
 langs:
 - id: EN
   name: English
 link: https://www2.statsghana.gov.gh/nada/index.php
-name: Ghana Statistical Service Microdata Catalog
+name: Ghana Statistical Service Microdata Catalog (www2)
 owner:
   link: https://www.statsghana.gov.gh
   location:
@@ -48,10 +46,9 @@ rights:
 software:
   id: nada
   name: NADA
-status: active
+status: inactive
 tags:
 - government
-- has_api
 - microdata
 - survey
 - household
@@ -73,9 +70,6 @@ topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
   type: eudatatheme
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
 - id: Economy
   name: Economy
   type: iso19115

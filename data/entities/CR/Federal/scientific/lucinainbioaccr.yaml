@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,12 +14,13 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: National Biodiversity Institute (INBio) of Costa Rica
-endpoints:
-- type: rss
-  url: http://lucina.inbio.ac.cr/ipt-inbio/rss.do
-  version: '2.0'
+description: GBIF IPT of the Instituto Nacional de Biodiversidad (INBio). The lucina.inbio.ac.cr
+  host no longer resolves as of August 2026; datasets remain in GBIF.
 id: lucinainbioaccr
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/publisher/5c7a5c20-1bd0-11d8-a2da-b8a03c50a862
+  value: 5c7a5c20-1bd0-11d8-a2da-b8a03c50a862
 langs:
 - id: ES
   name: Spanish
@@ -37,7 +38,7 @@ owner:
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: inactive
 tags:
 - GBIF
 - IPT

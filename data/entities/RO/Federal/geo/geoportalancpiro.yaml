@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,31 +14,24 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: 'Romanian National Agency for Cadastre and Real Estate Advertising (ANCPI)
-  Geoportal: Inspirational View endpoint providing public access to geospatial services
-  and catalog.'
-endpoints:
-- type: arcgis:portals:self
-  url: https://geoportal.ancpi.ro/portal/sharing/rest/portals/self?f=pjson
-- type: arcgis:rest:info
-  url: https://geoportal.ancpi.ro/arcgis/rest/info?f=pjson
-- type: arcgis:soap
-  url: https://geoportal.ancpi.ro/arcgis/services?wsdl
+      name: Eastern Europe
+description: Former ANCPI InspireView ArcGIS REST catalog at geoportal.ancpi.ro. The
+  geoportal.ancpi.ro host no longer resolves. Cadastral map viewing later moved to
+  the national INIS geoportal on geoportal.gov.ro.
 id: geoportalancpiro
 langs:
 - id: RO
   name: Romanian
 link: https://geoportal.ancpi.ro/inspireview/rest/services
-name: Geoportal ANCPI InspireView
+name: ANCPI InspireView geoportal
 owner:
-  link: https://geoportal.ancpi.ro
+  link: https://www.ancpi.ro
   location:
     country:
       id: RO
       name: Romania
     level: 20
-  name: ANCPI
+  name: National Agency for Cadastre and Real Estate Publicity (ANCPI)
   type: Central government
 properties:
   has_doi: false
@@ -52,13 +45,14 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - INSPIRE
 - geospatial
 - cadastre
 - real-estate
 - Romania
+- inactive
 topics:
 - id: Boundaries
   name: Boundaries
@@ -75,4 +69,4 @@ topics:
 - id: Structure
   name: Structure
   type: iso19115
-uid: temp00001656
+uid: cdi00035028

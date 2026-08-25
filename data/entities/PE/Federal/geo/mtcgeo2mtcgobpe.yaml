@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,29 +15,22 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Official GeoServer instance for the Ministry of Transport and Communications,
-  Peru
-endpoints:
-- type: wms111
-  url: http://mtcgeo2.mtc.gob.pe:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wms130
-  url: http://mtcgeo2.mtc.gob.pe:8080/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
+description: Former GeoServer of the Ministerio de Transportes y Comunicaciones. The
+  host mtcgeo2.mtc.gob.pe no longer resolves.
 id: mtcgeo2mtcgobpe
 langs:
 - id: ES
   name: Spanish
 link: http://mtcgeo2.mtc.gob.pe:8080/geoserver/web/
-name: mtcgeo2.mtc.gob.pe GeoServer
+name: GeoServer MTC
 owner:
-  link: http://mtc.gob.pe/
+  link: https://www.gob.pe/mtc
   location:
     country:
       id: PE
       name: Peru
     level: 20
-  name: Peru Ministry of Transport and Communications
+  name: Ministerio de Transportes y Comunicaciones
   type: Central government
 properties:
   has_doi: false
@@ -51,7 +44,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - GeoServer
 - Peru
@@ -69,4 +62,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00000556
+uid: cdi00035087

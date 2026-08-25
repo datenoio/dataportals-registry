@@ -18,12 +18,19 @@ coverage:
     subregion:
       id: ZA-WC
       name: Western Cape
-description: A catalog providing access to open datasets for the City of Cape Town,
-  including geospatial and thematic datasets
+description: City of Cape Town ArcGIS Hub open data portal for municipal geospatial
+  and thematic datasets.
 endpoints:
-- type: arcgis:rest:services
-  url: https://odp-cctegis.opendata.arcgis.com/?f=pjson
-  version: '1.0'
+- type: dcatap201
+  url: https://odp-cctegis.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://odp-cctegis.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://odp-cctegis.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://odp-cctegis.opendata.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://odp-cctegis.opendata.arcgis.com/sitemap.xml
 id: odpcctegisopendataarcgiscom
 langs:
 - id: EN
@@ -31,7 +38,7 @@ langs:
 link: https://odp-cctegis.opendata.arcgis.com/
 name: City of Cape Town Open Data Portal
 owner:
-  link: https://odp-cctegis.opendata.arcgis.com/
+  link: https://www.capetown.gov.za
   location:
     country:
       id: ZA
@@ -52,8 +59,8 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: arcgisserver
-  name: ArcGIS Server
+  id: arcgishub
+  name: ArcGIS Hub
 status: active
 tags:
 - geospatial
@@ -69,4 +76,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-uid: temp00000823
+uid: cdi00034877

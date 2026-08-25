@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: VN-25
+      name: Quảng Trị
+description: CKAN catalog of industrial, trade, and consumer-protection datasets originally
+  published by the Quang Binh Department of Industry and Trade. The live site title
+  is now Quang Tri following the 2025 merger of Quang Binh into Quang Tri province.
+endpoints:
+- type: ckan
+  url: http://csdlquangbinh.etix.vn/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://csdlquangbinh.etix.vn/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://csdlquangbinh.etix.vn/api/3/action/package_list
+  version: '3'
+id: csdlquangbinhetixvn
+langs:
+- id: VN
+  name: Vietnamese
+link: http://csdlquangbinh.etix.vn
+name: Quang Tri industry and trade data catalog
+owner:
+  link: https://sct.quangbinh.gov.vn
+  location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 30
+    subregion:
+      id: VN-25
+      name: Quảng Trị
+  name: Quang Tri Department of Industry and Trade
+  type: Regional government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: http://csdlquangbinh.etix.vn/pages/terms
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- industry
+- trade
+- has_api
+- CKAN
+- Quang Tri
+- Vietnam
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00034899

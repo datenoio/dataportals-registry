@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Official CKAN open data portal of Guatemala's Ministry of Education,
+  publishing education statistics and public datasets.
+endpoints:
+- type: ckan
+  url: https://datosabiertos.mineduc.gob.gt/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datosabiertos.mineduc.gob.gt/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datosabiertos.mineduc.gob.gt/api/3/action/package_list
+  version: '3'
+id: datosabiertosmineducgobgt
+langs:
+- id: ES
+  name: Spanish
+link: https://datosabiertos.mineduc.gob.gt
+name: Portal de Datos Abiertos del Ministerio de Educación de Guatemala
+owner:
+  link: https://www.mineduc.gob.gt
+  location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 20
+  name: Ministerio de Educación (MINEDUC)
+  type: Central government
+properties:
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- education
+- Guatemala
+- open data
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00000868

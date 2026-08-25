@@ -27,21 +27,26 @@ endpoints:
   version: '1.0'
 - type: opensearch
   url: https://www.clarin.si:443/repository/xmlui/open-search/description.xml
+- type: oaipmh20
+  url: https://www.clarin.si/repository/oai/request?verb=Identify
+  version: '2.0'
 id: wwwclarinsi
 langs:
 - id: SL
   name: Slovenian
+- id: EN
+  name: English
 link: https://www.clarin.si/repository/xmlui/
-name: Linguistic Data and NLP Tools (Clarin.si)
+name: CLARIN.SI language resources repository
 owner:
-  link: https://www.clarin.si/repository/xmlui/
+  link: https://www.ijs.si
   location:
     country:
       id: SI
       name: Slovenia
     level: 20
-  name: Ministry of Education, Science and Sport of the Republic of Slovenia
-  type: Central government
+  name: Jožef Stefan Institute
+  type: Academy
 rights:
   license_id: null
   license_name: null

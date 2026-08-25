@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,38 +15,23 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: GIS Cloud is a real-time mapping platform for field data collection,
-  operations management, and collaboration. It works online, offline and on-premises.
-  The platform supports mobile data collection and visualization of people, fleet
-  and assets on a map in real-time, also providing in-depth reports and historical
-  data.
-endpoints:
-- type: wms111
-  url: https://www.giscloud.vn/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wfs110
-  url: https://www.giscloud.vn/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: https://www.giscloud.vn/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wmts100
-  url: https://www.giscloud.vn/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
+description: Web GIS application operated by Smap Group (SMAP) for GeoAI-assisted land valuation and planning
+  lookup in Vietnam. The former GeoNode / GeoServer stack on www.giscloud.vn is no longer exposed; the
+  public site is a custom mapping application.
 id: wwwgiscloudvn
 langs:
 - id: VN
   name: Vietnamese
-link: https://www.giscloud.vn
-name: GIS Cloud
+link: https://giscloud.vn
+name: SMAP GIS Cloud (GeoAI land valuation)
 owner:
-  link: https://smap.com.vn/
+  link: https://smap.com.vn
   location:
     country:
       id: VN
       name: Vietnam
     level: 20
-  name: SMAP
+  name: Smap Group
   type: Business
 properties:
   has_doi: false
@@ -57,17 +43,26 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: geonode
-  name: GeoNode
+  id: custom
+  name: Custom software
 status: active
 tags:
 - geospatial
-- GIS
-- Mapping
-- Field Operations
+- land valuation
+- GeoAI
+- WebGIS
+- Vietnam
 topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 - id: Location
   name: Location
   type: iso19115
 uid: cdi00001951
-api: true

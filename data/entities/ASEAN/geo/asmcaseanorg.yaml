@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - map_layer
@@ -16,7 +17,13 @@ coverage:
       name: South-eastern Asia
 description: ASEAN Specialized Meteorological Centre Haze Information GIS Portal,
   providing fire hotspot overlays, polar-orbiting satellite imagery, weather observations,
-  PM10 haze dispersion, rainfall, and peatland layers for the ASEAN region.
+  PM10 haze dispersion, rainfall, and peatland layers for the ASEAN region. The portal
+  is published as a WordPress site; the wp-json REST API requires authentication.
+endpoints:
+- type: sitemap
+  url: https://asmc.asean.org/wp-sitemap.xml
+- type: rss
+  url: https://asmc.asean.org/feed/
 id: asmcaseanorg
 langs:
 - id: EN
@@ -32,16 +39,18 @@ owner:
     level: 20
   name: ASEAN Specialized Meteorological Centre (ASMC)
   type: International
+properties:
+  has_doi: false
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: unknown
+  rights_type: global
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - ASEAN
@@ -49,6 +58,7 @@ tags:
 - fire hotspots
 - meteorology
 - GIS
+- has_api
 topics:
 - id: ENVI
   name: Environment

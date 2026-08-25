@@ -1,5 +1,5 @@
 access_mode:
-- public
+- open
 api: true
 api_status: active
 catalog_type: Geoportal
@@ -15,8 +15,10 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: Web-based data catalog and mapping service for wildlife data in Kyrgyzstan,
-  including geospatial layers and biodiversity information.
+description: GeoServer OGC services for the National Database of Wildlife of
+  Kyrgyzstan, publishing protected-area and biodiversity spatial layers. The public
+  map and species catalogue is at wildlife.caiag.kg, operated by CAIAG with support
+  from the National Wildlife Information Center.
 endpoints:
 - type: wms111
   url: http://wildlife.caiag.kg:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -64,9 +66,12 @@ id: wildlifecaiagkg
 langs:
 - id: RU
   name: Russian
+- id: EN
+  name: English
+- id: KY
+  name: Kirghiz
 link: http://wildlife.caiag.kg:8080/geoserver
-name: ОХРАНЯЕМЫЕ ПРИРОДНЫЕ ТЕРРИТОРИИ И БИОРАЗНООБРАЗИЕ Национальная база данных Кыргызстана.
-  Geoserver
+name: National Wildlife Database of Kyrgyzstan GeoServer
 owner:
   link: https://caiag.kg
   location:
@@ -91,17 +96,12 @@ software:
 status: active
 tags:
 - geospatial
-- government
+- has_api
 - wildlife
-- geoserver
-- Kyrgyzstan
 - biodiversity
+- protected areas
 - biota
-- environment
 topics:
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme

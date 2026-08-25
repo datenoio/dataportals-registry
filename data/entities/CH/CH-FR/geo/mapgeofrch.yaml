@@ -11,29 +11,32 @@ coverage:
     country:
       id: CH
       name: Switzerland
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Portail cartographique du canton de Fribourg ArcGIS server
+    subregion:
+      id: CH-FR
+      name: Fribourg
+description: ArcGIS REST map services of the Canton of Fribourg (portail cartographique).
 endpoints:
 - type: arcgis:rest:info
-  url: http://map.geo.fr.ch/arcgis/rest/info?f=pjson
+  url: https://map.geo.fr.ch/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: http://map.geo.fr.ch/arcgis/rest/services?f=pjson
+  url: https://map.geo.fr.ch/arcgis/rest/services?f=pjson
 - type: arcgis:soap
-  url: http://map.geo.fr.ch/arcgis/services?wsdl
+  url: https://map.geo.fr.ch/arcgis/services?wsdl
 - type: arcgis:sitemap
-  url: http://map.geo.fr.ch/arcgis/rest/services?f=sitemap
+  url: https://map.geo.fr.ch/arcgis/rest/services?f=sitemap
 - type: arcgis:kmz
-  url: http://map.geo.fr.ch/arcgis/rest/services?f=kmz
+  url: https://map.geo.fr.ch/arcgis/rest/services?f=kmz
 - type: arcgis:geositemap
-  url: http://map.geo.fr.ch/arcgis/rest/services?f=geositemap
+  url: https://map.geo.fr.ch/arcgis/rest/services?f=geositemap
 id: mapgeofrch
 langs:
 - id: FR
   name: French
-link: http://map.geo.fr.ch/arcgis/rest/services
+link: https://map.geo.fr.ch/arcgis/rest/services
 name: Portail cartographique du canton de Fribourg
 owner:
   link: https://www.fr.ch

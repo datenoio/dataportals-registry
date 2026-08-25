@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,27 +14,8 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: A catalogue for discovering, accessing, and downloading marine data and
-  metadata from the Atlantic region. Focuses on providing open, interoperable, and
-  regionally specific ocean data and supports multiple data formats.
-endpoints:
-- type: ckan
-  url: https://catalogue.dev.cioosatlantic.ca/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://catalogue.dev.cioosatlantic.ca/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://catalogue.dev.cioosatlantic.ca/api/3/action/package_list
-  version: '3'
-- type: dcat:n3
-  url: https://catalogue.dev.cioosatlantic.ca/catalog.n3
-- type: dcat:ttl
-  url: https://catalogue.dev.cioosatlantic.ca/catalog.ttl
-- type: dcat:xml
-  url: https://catalogue.dev.cioosatlantic.ca/catalog.xml
-- type: dcat:jsonld
-  url: https://catalogue.dev.cioosatlantic.ca/catalog.jsonld
+description: CIOOS Atlantic development CKAN catalogue at catalogue.dev.cioosatlantic.ca.
+  The production Atlantic catalogue is catalogue.cioosatlantic.ca.
 id: cataloguedevcioosatlanticca
 langs:
 - id: EN
@@ -60,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - marine
 - ocean

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,11 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Portal providing access to meteorological and hydrological data for Bolivia,
-  including forecasts and historical climate data records.
-endpoints:
-- type: terria:config
-  url: http://prediccion.senamhi.gob.bo:3001/config.json
+description: Former SENAMHI TerriaJS forecast map at prediccion.senamhi.gob.bo:3001.
+  Connections to that port are refused.
 id: prediccionsenamhigobbo
 langs:
 - id: ES
@@ -27,13 +24,13 @@ langs:
 link: http://prediccion.senamhi.gob.bo:3001
 name: Catalog of Meteorological Data – SENAMHI Bolivia
 owner:
-  link: https://www.gob.bo
+  link: https://senamhi.gob.bo
   location:
     country:
       id: BO
       name: Bolivia
     level: 20
-  name: Government of Bolivia
+  name: Servicio Nacional de Meteorología e Hidrología (SENAMHI)
   type: Central government
 properties:
   has_doi: true
@@ -47,24 +44,23 @@ rights:
 software:
   id: terria
   name: Terria
-status: active
+status: inactive
 tags:
 - geospatial
 - government
-- has_api
 - meteorology
 - hydrology
 - climate
 - Bolivia
 - SENAMHI
 topics:
-- id: Location
-  name: Location
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
   type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Inland Waters
+  name: Inland Waters
   type: iso19115
 uid: cdi00004725

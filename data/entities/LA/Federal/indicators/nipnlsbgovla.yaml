@@ -4,6 +4,7 @@ api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
+- indicator
 - dataset
 coverage:
 - location:
@@ -14,15 +15,17 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: A collection of data related to nutrition from diverse sectors. The interactive
-  tool allows users to create custom queries.
+description: National Information Platforms for Nutrition (NIPN) data repository of
+  the Lao Statistics Bureau. Interactive queries of nutrition indicators by location
+  and time, plus downloadable survey reports, supported by the EU and UNICEF. A custom
+  JSON indicator feed is published at /repository/data.json.
 endpoints:
-- type: dcatus11
+- type: customapi
   url: https://nipn.lsb.gov.la/repository/data.json
-- type: sitemap
-  url: https://nipn.lsb.gov.la/repository/sitemap.xml
 id: nipnlsbgovla
 langs:
+- id: EN
+  name: English
 - id: LO
   name: Lao
 link: https://nipn.lsb.gov.la/repository/
@@ -36,6 +39,9 @@ owner:
     level: 20
   name: Lao Statistics Bureau
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -49,13 +55,21 @@ software:
 status: active
 tags:
 - nutrition
-- data
-- Lao PDR
+- indicators
+- government
+- official statistics
 - NIPN
-- LSB
+- has_api
+- Laos
 topics:
 - id: HEAL
   name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
 - id: Health
   name: Health

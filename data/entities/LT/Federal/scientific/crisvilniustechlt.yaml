@@ -14,8 +14,7 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: VILNIUS TECH institutional CRIS for research outputs, publications, and
-  related metadata.
+description: VILNIUS TECH institutional CRIS for research outputs, publications, and related metadata.
 endpoints:
 - type: dspace
   url: https://cris.vilniustech.lt/server/api
@@ -23,6 +22,9 @@ endpoints:
 - type: dspace:objects
   url: https://cris.vilniustech.lt/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://cris.vilniustech.lt/server/oai/request?verb=Identify
+  version: '2.0'
 id: crisvilniustechlt
 langs:
 - id: LT

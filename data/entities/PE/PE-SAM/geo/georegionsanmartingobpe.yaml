@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,25 +18,8 @@ coverage:
     subregion:
       id: PE-SAM
       name: San Martin
-description: Catálogo de metadatos de la Infraestructura de Datos Espaciales del
-  Gobierno Regional de San Martín (IDERSAM).
-endpoints:
-- type: geonetwork:query
-  url: http://geo.regionsanmartin.gob.pe:8089/geonetwork/srv/eng/q
-- type: geonetwork:records
-  url: http://geo.regionsanmartin.gob.pe:8089/geonetwork/srv/api/records
-- type: openapi
-  url: http://geo.regionsanmartin.gob.pe:8089/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: http://geo.regionsanmartin.gob.pe:8089/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: http://geo.regionsanmartin.gob.pe:8089/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: http://geo.regionsanmartin.gob.pe:8089/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+description: Former GeoNetwork catalog of IDERSAM. The host geo.regionsanmartin.gob.pe
+  no longer resolves; the regional geoportal remains at geoportal.regionsanmartin.gob.pe.
 id: georegionsanmartingobpe
 langs:
 - id: ES
@@ -53,7 +36,7 @@ owner:
     subregion:
       id: PE-SAM
       name: San Martin
-  name: Gobierno Regional San Martín
+  name: Gobierno Regional de San Martín
   type: Regional government
 properties:
   has_doi: true
@@ -68,11 +51,10 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
 - government
-- has_api
 - public sector
 - regional
 - peru

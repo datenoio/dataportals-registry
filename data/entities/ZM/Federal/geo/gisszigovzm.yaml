@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Public GeoServer of Zambia's Surveyor-General / Surveyors Institute of
-  Zambia, publishing cadastral, administrative, and topographic map layers via OGC
-  WMS and WFS at gis.szi.gov.zm.
+description: Public GeoServer hosted by SMART Zambia Institute, publishing cadastral,
+  administrative, and topographic map layers from the Surveyor-General via OGC WMS
+  and WFS at gis.szi.gov.zm.
 endpoints:
 - type: wms111
   url: https://gis.szi.gov.zm/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,7 +65,7 @@ owner:
       id: ZM
       name: Zambia
     level: 20
-  name: Surveyor-General of Zambia
+  name: SMART Zambia Institute
   type: Central government
 properties:
   has_doi: false
@@ -89,6 +89,8 @@ tags:
 - WMS
 - WFS
 - OGC
+- has_api
+- government
 topics:
 - id: GOVE
   name: Government and public sector

@@ -14,8 +14,10 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: Open data portal of the Kyrgyz Republic, providing access to datasets
-  published by various organizations.
+description: Official open data portal of the Kyrgyz Republic (Open Data Kyrgyzstan),
+  publishing machine-readable datasets from central government bodies and other
+  organizations. Operated by the Ministry of Digital Development on CKAN 2.11 with
+  a public Action API.
 endpoints:
 - type: ckan
   url: https://data.gov.kg/api/3
@@ -30,24 +32,27 @@ endpoints:
   url: https://data.gov.kg/sitemap.xml
 id: datagovkg
 langs:
-- id: RU
-  name: Russian
 - id: KY
   name: Kirghiz
+- id: RU
+  name: Russian
+- id: EN
+  name: English
 link: https://data.gov.kg
-name: Kyrgyz Republic open data portal
+name: Open Data Portal of the Kyrgyz Republic
 owner:
-  link: https://data.gov.kg
+  link: https://digital.gov.kg
   location:
     country:
       id: KG
       name: Kyrgyzstan
     level: 20
-  name: Government of Kyrgyzstan
+  name: Ministry of Digital Development of the Kyrgyz Republic
   type: Central government
 properties:
   has_doi: false
   is_national: true
+  dataset_count_reported: 1407
 rights:
   license_id: null
   license_name: null
@@ -61,18 +66,23 @@ software:
 status: active
 tags:
 - government
+- has_api
 - open data
-- public sector
-- geodata
 - statistics
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 - id: Society
   name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
   type: iso19115
 uid: cdi00001037

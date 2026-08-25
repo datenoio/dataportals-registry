@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,33 +15,22 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: No descriptive metadata extracted from provided URL.
-endpoints:
-- type: wms111
-  url: https://cache03.geoapps.nl/test/service?REQUEST=GetCapabilities
-  version: 1.1.1
-- type: wmts100
-  url: https://cache03.geoapps.nl/test/service?REQUEST=GetCapabilities&SERVICE=WMTS
-  version: 1.0.0
-- type: tms100
-  url: https://cache03.geoapps.nl/test/tms/1.0.0/
-  version: 1.0.0
-- type: wmts100
-  url: https://cache03.geoapps.nl/test/wmts/1.0.0/WMTSCapabilities.xml
-  version: 1.0.0
+description: Test MapProxy tile cache on the GeoApps hosting platform. Not a production data catalogue.
 id: cache03geoappsnl
 langs:
 - id: NL
   name: Dutch
+- id: EN
+  name: English
 link: https://cache03.geoapps.nl/test
-name: foretify Geoportal
+name: GeoApps MapProxy test cache
 owner:
   location:
     country:
-      id: US
-      name: United States
+      id: NL
+      name: Netherlands
     level: 20
-  name: foretify
+  name: GeoApps
   type: Business
   link: https://geoapps.nl
 properties:
@@ -56,7 +45,7 @@ rights:
 software:
   id: mapproxy
   name: MapProxy
-status: active
+status: inactive
 tags:
 - N/A
 topics:
@@ -69,4 +58,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-uid: temp00002198
+uid: cdi00035173

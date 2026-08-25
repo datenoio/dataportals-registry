@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Microdata catalog
+content_types:
+- microdata
+- dataset
+coverage:
+- location:
+    country:
+      id: VC
+      name: Saint Vincent and the Grenadines
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: REDATAM online processing portal of the Statistical Office of Saint Vincent
+  and the Grenadines. Users build custom tables from the 2001 and 2012 Population
+  and Housing Censuses and the 2007/2008 Survey of Living Conditions, hosted by CELADE/ECLAC.
+endpoints:
+- type: redatam
+  url: https://prod.redatam.org/binsvg/RpWebEngine.exe/Portal
+- type: redatam
+  url: https://prod.redatam.org/binsvg/RpWebEngine.exe/Portal?BASE=SVG2012
+- type: redatam
+  url: https://prod.redatam.org/binsvg/RpWebEngine.exe/Portal?BASE=SVG2001
+- type: redatam
+  url: https://prod.redatam.org/binsvg/RpWebEngine.exe/Portal?BASE=SVGLIVCOND2007
+id: redatamorgbinsvg
+langs:
+- id: EN
+  name: English
+link: https://prod.redatam.org/binsvg/RpWebEngine.exe/Portal
+name: Saint Vincent and the Grenadines REDATAM
+owner:
+  link: https://stats.gov.vc
+  location:
+    country:
+      id: VC
+      name: Saint Vincent and the Grenadines
+    level: 20
+  name: Statistical Office of Saint Vincent and the Grenadines
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: redatam
+  name: REDATAM
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- census
+- microdata
+- has_api
+- Saint Vincent and the Grenadines
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00022004

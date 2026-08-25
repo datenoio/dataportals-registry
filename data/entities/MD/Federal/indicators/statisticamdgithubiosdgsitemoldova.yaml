@@ -4,7 +4,7 @@ api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
-- dataset
+- indicator
 coverage:
 - location:
     country:
@@ -19,7 +19,9 @@ description: National Open SDG platform of the National Bureau of Statistics of 
   downloads, and reporting status.
 endpoints:
 - type: opensdg:catalog
-  url: https://statisticamd.github.io/sdg-site-moldova/
+  url: https://statisticamd.github.io/sdg-site-moldova/reporting-status/
+- type: opensdg:data
+  url: https://statisticamd.github.io/sdg-data-moldova/en/data/1-1-1.json
 id: statisticamdgithubiosdgsitemoldova
 langs:
 - id: RO
@@ -29,7 +31,7 @@ langs:
 link: https://statisticamd.github.io/sdg-site-moldova/
 name: Moldova Indicators For The Sustainable Development Goals
 owner:
-  link: https://www.statistica.md
+  link: https://statistica.gov.md
   location:
     country:
       id: MD
@@ -56,6 +58,7 @@ tags:
 - SDG
 - Sustainable Development
 - indicators
+- has_api
 topics:
 - id: SOCI
   name: Population and society

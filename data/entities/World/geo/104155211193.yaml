@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: false
-api_status: uncertain
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,26 +11,27 @@ coverage:
     country:
       id: World
       name: World
-    level: 10
+    level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
-description: Geospatial data and services catalog via GeoServer
+description: Catalog host 104.155.211.193 did not respond on 25 August 2026
+  (timeout or connection refused). Operator and country are unconfirmed.
 id: '104155211193'
 langs:
 - id: EN
   name: English
 link: http://104.155.211.193/geoserver
-name: GeoServer Catalog
+name: Unidentified catalog (104.155.211.193)
 owner:
   link: http://104.155.211.193
   location:
     country:
       id: World
       name: World
-    level: 10
-  name: open-data
-  type: Business
+    level: 20
+  name: Unidentified operator
+  type: Other
 properties:
   has_doi: false
 rights:
@@ -43,7 +44,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - open-data
 - geospatial
@@ -65,4 +66,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-uid: temp00005332
+uid: cdi00037254

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,20 +12,10 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Data catalog for data-intensive research, handling data management, analysis,
-  sharing, and reuse needs of Greek scientists.
-endpoints:
-- type: ckan
-  url: https://data.hellenicdataservice.gr/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://data.hellenicdataservice.gr/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://data.hellenicdataservice.gr/api/3/action/package_list
-  version: '3'
+description: Former Hellenic Data Service (HELIX) CKAN catalog. The host certificate is
+  expired and the site no longer responds; HARDMIN at hardmin.heal-link.gr succeeded it.
 id: datahellenicdataservicegr
 langs:
 - id: EL
@@ -33,13 +23,13 @@ langs:
 link: https://data.hellenicdataservice.gr
 name: Hellenic Data Service
 owner:
-  link: https://data.hellenicdataservice.gr
+  link: https://www.heal-link.gr
   location:
     country:
       id: GR
       name: Greece
     level: 20
-  name: Hellenic Data Service
+  name: HEAL-Link
   type: Academy
 rights:
   license_id: null
@@ -51,7 +41,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - Greece
 - ckan
@@ -61,4 +51,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00000328
+uid: cdi00035371

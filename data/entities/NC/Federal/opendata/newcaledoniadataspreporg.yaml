@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -13,16 +14,11 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: Data catalog maintained by SPREP (Secretariat of the Pacific Regional
-  Environment Programme) featuring environmental, geographical, and marine data for
-  New Caledonia, including GIS datasets, country profiles, SDG indicators, and legal
-  resources.
-endpoints:
-- type: ckan:package-list
-  url: https://newcaledonia-data.sprep.org/api/3/action/package_list
-  version: '3'
-- type: dcatus11
-  url: https://newcaledonia-data.sprep.org/data.json
+description: National environment data portal for New Caledonia in the SPREP Inform
+  network, publishing environmental, marine, GIS, country-profile, and legal datasets.
+  Not a cross-government open data portal. The hostname returns Cloudflare HTTP 526
+  (invalid origin SSL) as of August 2026 and does not currently serve DKAN or DCAT
+  endpoints.
 id: newcaledoniadataspreporg
 langs:
 - id: EN
@@ -30,13 +26,13 @@ langs:
 link: https://newcaledonia-data.sprep.org
 name: New Caledonia Environment Data Portal
 owner:
-  link: https://sprep.org
+  link: https://www.sprep.org
   location:
     country:
       id: NC
       name: New Caledonia
     level: 20
-  name: Pacific Regional Environment Programme
+  name: Secretariat of the Pacific Regional Environment Programme (SPREP)
   type: International
 properties:
   has_doi: false
@@ -52,23 +48,30 @@ rights:
 software:
   id: dkan
   name: DKAN
-status: active
+status: inactive
 tags:
 - government
-- GIS data
-- marine protected areas
-- country profiles
-- legal documents
+- environment
+- climate
+- biodiversity
+- marine
+- gis
+- SPREP
+- Inform project
+- New Caledonia
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
 - id: Environment
   name: Environment
   type: iso19115
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
 - id: Oceans
   name: Oceans
   type: iso19115
@@ -79,4 +82,3 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00001252
-api: true

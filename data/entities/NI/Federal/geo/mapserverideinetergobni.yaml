@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,33 +15,15 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Geoportal. managed by Instituto Nicaraguense de Estudios Territoriales.
-  powered by Geonetwork. accessible at mapserveride.ineter.gob.ni.
-endpoints:
-- type: geonetwork:query
-  url: https://mapserveride.ineter.gob.ni/geonetwork/srv/eng/q
-- type: openapi
-  url: https://mapserveride.ineter.gob.ni/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: https://mapserveride.ineter.gob.ni/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://mapserveride.ineter.gob.ni/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://mapserveride.ineter.gob.ni/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
-- type: geonetwork:site
-  url: https://mapserveride.ineter.gob.ni/geonetwork/srv/api/site
-- type: opensearch
-  url: https://mapserveride.ineter.gob.ni/portal.opensearch
+description: Former GeoNetwork catalog on INETER's mapserveride host. The /geonetwork
+  path now returns HTTP 404. The GeoServer instance on the same host remains in a
+  separate record (mapserverideinetergobnigeoserver).
 id: mapserverideinetergobni
 langs:
 - id: ES
   name: Spanish
 link: https://mapserveride.ineter.gob.ni/geonetwork
-name: Instituto Nicaraguense de Estudios Territoriales Geoportal
+name: INETER GeoNetwork (mapserveride)
 owner:
   link: https://www.ineter.gob.ni
   location:
@@ -49,10 +31,11 @@ owner:
       id: NI
       name: Nicaragua
     level: 20
-  name: Instituto Nicaraguense de Estudios Territoriales
+  name: Instituto Nicaragüense de Estudios Territoriales (INETER)
   type: Central government
 properties:
-  has_doi: true
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -63,10 +46,13 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
-- has_api
+- metadata
+- INETER
+- Nicaragua
+- government
 topics:
 - id: Location
   name: Location

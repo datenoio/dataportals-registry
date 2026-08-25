@@ -15,14 +15,10 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Open data catalog provided by Stridata SI, hosted on ArcGIS.
+description: STRI GIS Portal on ArcGIS Hub, publishing open geospatial metadata and
+  layers from the Smithsonian Tropical Research Institute Physical Monitoring GIS
+  Laboratory in Panama (391 indexed items). DCAT feeds are disabled on this site.
 endpoints:
-- type: dcatap201
-  url: https://stridata-si.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://stridata-si.opendata.arcgis.com/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://stridata-si.opendata.arcgis.com/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://stridata-si.opendata.arcgis.com/api/search/v1
 - type: sitemap
@@ -31,16 +27,18 @@ id: stridatasiopendataarcgiscom
 langs:
 - id: ES
   name: Spanish
+- id: EN
+  name: English
 link: https://stridata-si.opendata.arcgis.com
-name: Stridata SI Open Data Catalog
+name: STRI GIS Portal
 owner:
-  link: http://www.si.edu
+  link: https://stri.si.edu
   location:
     country:
       id: PA
       name: Panama
     level: 20
-  name: Smithsonian Tropical Research Institute Physical Monitoring - GIS Laboratory
+  name: Smithsonian Tropical Research Institute
   type: Academy
 properties:
   has_doi: false
@@ -59,37 +57,23 @@ tags:
 - geospatial
 - has_api
 - ArcGIS
-- Slovenia
-- Open Data
+- Smithsonian
+- tropical
+- Panama
 topics:
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: TRAN
-  name: Transport
+- id: TECH
+  name: Science and technology
   type: eudatatheme
-- id: ECON
-  name: Economy and finance
-  type: eudatatheme
-- id: Geoscientific Information
-  name: Geoscientific Information
-  type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
 - id: Environment
   name: Environment
   type: iso19115
-- id: Transportation
-  name: Transportation
+- id: Biota
+  name: Biota
   type: iso19115
-- id: Economy
-  name: Economy
+- id: Location
+  name: Location
   type: iso19115
 uid: cdi00001268

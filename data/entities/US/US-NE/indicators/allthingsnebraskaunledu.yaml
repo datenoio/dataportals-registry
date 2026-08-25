@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -21,6 +21,9 @@ coverage:
 description: All Things Nebraska mapping and reporting platform from Nebraska Extension,
   powered by CARES SparkMap, with community, agriculture, health, and housing indicators
   for Nebraska counties.
+endpoints:
+- type: sparkmap:catalog
+  url: https://allthingsnebraska.unl.edu/
 id: allthingsnebraskaunledu
 langs:
 - id: EN

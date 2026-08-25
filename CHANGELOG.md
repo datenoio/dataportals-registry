@@ -7,6 +7,50 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.17.0] - 2026-08-25
+
+**GitHub Release**: [v1.17.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.17.0) - Published August 25, 2026
+
+### Added
+- **2,608 net new catalog entries**; registry source now **22,750** entities (**0** scheduled) across **219** country/territory folders, including first entity roots for **Jersey (JE)** and **Saint Helena (SH)**.
+- **15 software definitions**; software catalog now **262** platforms: IMF National Summary Data Page (`imfnsdp`), ODWeb (`odweb`), LabKey Server (`labkey`), Synapse (`synapse`), XNAT (`xnat`), OMERO (`omero`), Kadi4Mat (`kadi4mat`), e!DAL (`edal`), NOMAD (`nomad`), InterMine (`intermine`), GRIN-Global (`gringlobal`), PlutoF (`plutof`), JGI Genome Portal (`jgi`), cBioPortal (`cbioportal`), and ESA Science Archive (`esasciencearchive`).
+- Five South Korean catalogs promoted from scheduled review: KOSIS North Korea Statistics, the Ministry of Unification North Korea Information Portal, NGII National Land Information Platform, KINU DSpace, and NKHR Larchiveum.
+- CRITICAL quality rule `INVALID_NESTED_TYPE` for mixed nested leaf types that break DuckDB/Parquet STRUCT and LIST inference (country/macroregion ids, tags, `dataset_count_reported`).
+- Eswatini NDMA Digital Risk Database GeoNode (`geonodendmaorgsz`), the national disaster-risk SDI also served at `geonode.ndrma.org.sz`.
+- SISALRIL Portal Estadístico (`redatamsisalrilgobdo`), the REDATAM-backed health-insurance catalog of the Dominican Republic Superintendency of Health and Occupational Risks listed on CELADE's online-process index.
+- OpenAIRE Graph data-source harvest (`scripts/extract_openaire_portals.py`): list dataset-publishing portals from the Graph v3 API, dedup on host against DuckDB, and add misses under `data/scheduled/` ([docs/openaire-sync.md](docs/openaire-sync.md)).
+- **2,409** scientific repositories promoted from the OpenAIRE Graph harvest after live URL review (data repositories and dataset-publishing IRs, each with an `identifiers[]` row `id: openaire`).
+- **9** UK local-government Cadcorp SIS WebMap geoportals (Barnet, Charnwood, Derby, Medway, North Norfolk, Sefton, Stoke-on-Trent, West Northamptonshire, West Lothian).
+- **105** IMF National Summary Data Page catalogs from the DSBB directory (**118** `imfnsdp` records in total).
+- First entity roots for **Jersey (JE)** (Open Data Jersey) and **Saint Helena (SH)** (St Helena Data Portal, inactive).
+- Domain scientific catalogs on the new software IDs: **25** InterMine, **13** GRIN-Global, **10** ESA Science Archive, **10** Synapse, **6** each LabKey / XNAT / OMERO, plus cBioPortal, Kadi4Mat, and JGI.
+
+### Changed
+- Remapped leftover `software.id: custom` catalogs onto existing products: IPT (`wwwgbifes`), OntoPortal (SIFR BioPortal, MedPortal), DSpace (RIULL, RIUBU, Cambridge), dLibra (UJK, KPBC), DataLad (registry and hubs), Oracle APEX (IPK Gatersleben), ArcGIS Server (Geology Cloud), Open SDG (Serbia), plus 13 IMF NSDP pages onto `imfnsdp` and 3 Chinese `/odweb/` portals onto `odweb`.
+- Serbia catalogs reviewed: quoted UN M49 `039`; marked dead hosts inactive (Zastrugis OpenDataSoft/Huwise, srsrb ArcGIS Hub, OpenShift IPT, MRE ArcGIS REST, SEPA CKAN); moved faculty/city catalogs into ISO subregions (RS-00, RS-07, RS-10, RS-12, RS-20); corrected DSpace names/owners from OAI Identify; documented live harvest endpoints.
+- Sierra Leone IGIS ArcGIS Hub (`igisdatahubdstihubarcgiscom`) and DSTI Education Data Hub (`educationdatahubdstigovsl`) marked inactive; Open Data Sierra Leone (`opendataslgovsl`) notes DNS/TLS timeouts. NaSIS retagged as WordPress with `wp-json`/`feed`; Njala DSpace gained OAI-PMH and sitemap; SSL NADA gained catalog/CSV export endpoints (13 studies); EPA GRS portal title and DHIS2 login-wall notes updated.
+- South Sudan WIS 2.0 in a box (`wis2meteosouthsudancomss`) now uses HTTPS for the node and pygeoapi endpoints, with harvest tags and SYNOP holdings noted.
+- South Sudan CLiMIS (`climissouthsudanorg`) description now covers the public dashboard domains (markets, CPI, rainfall, IPC); the NBS NADA (`ssnbsmicrodatahubcom`) is documented as a HugeDomains park with no replacement archive on nbs.gov.ss.
+- Eswatini Drought Monitor (`cdiendmaorgsz`) now records its public OpenAPI and monthly CDI maps API; the Meteorological Service WIS2 node is marked national with harvest tags.
+- Chile INE REDATAM (`redataminegobcl`) now records the related `redatam-ine.ine.cl` Webserver host; Ecuador INEC REDATAM (`redataminecgobec`) records the CELADE-listed `/redecu/` portal path.
+- Scheduled queue cleared (**0** remaining). Source YAML is **22,750** entities across **219** country/territory folders. Working-tree JSONL, Parquet, and DuckDB exports rebuilt to match (**22,750** catalogs, **0** scheduled, **262** software).
+- National catalogs moved under `{CC}/Federal/`, with type and subregion path corrections. Jersey open data moved out of GB into `JE/`; the St Helena CKAN moved into `SH/` and marked inactive.
+- Discovery and harvest hub pages, agent checklists, identifiers, incremental recipes, and search-tool starters now surface the v1.16.0 software IDs (G3W-SUITE, Trimble Locus / Louhi / Landfolio, Spatial Suite, GEUSMAP, GISApp, iObčina, Cadcorp, iShare, M.App Enterprise, CubeWerx, Sentinel Hub, PxStat, TabNet, FENIX, SparkMap, Goal Tracker, DataWarehousePro, Beyond 20/20, StatPlanet, RDF Online Repository, ResourceContracts, Guangxi) plus Converis, OpenAIRE, IMF NSDP, ODWeb, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal, and ESA Science Archive. Harvest docs state **262** software definitions.
+- Quality analysis reports **0** issues across **22,750** records. Harvest endpoints written onto IMF NSDP, InterMine, ESA Science Archive, GRIN-Global, Synapse, LabKey, and other API-capable software.
+- Catalog schema now requires string country/macroregion ids, string tags, and integer `dataset_count_reported` (no mixed scalar types).
+- Singapore catalogs moved under `SG/Federal/`; data.gov.sg harvest APIs and GovTech ownership recorded; LTA DataMall and SingStat Table Builder APIs documented; SG-MDH API fields aligned with deprecated status. OpenAIRE scientific records cleaned (AlloMAPS, Interfil, WOVOdat, 2DMatPedia); TTD moved to China (`dbidrblabnet`); Model Zoo retagged as an ML catalog and Nexdata as a marketplace. NUS SHGIS ArcGIS REST and Yale-NUS Dataverse marked inactive; NParks TRSGIS described as a UAT host.
+
+### Fixed
+- IMPORTANT quality issues: set `api: true` / `api_status: active` on **120** catalogs that already had harvest endpoints (plus **3** Kadi4Mat REST catalogs); moved **14** files into `scientific/` or `opendata/` to match `catalog_type`; merged duplicate University of Granada and ERMIS-F geoportal records; set Integrity GIS owner subregion to Missouri; retagged the IPC Administración Local ArcGIS Hub template as Community.
+- Mixed nested YAML types that collapsed DuckDB/Parquet nested columns to `JSON`: Norway `country.id` parsed as boolean `false` (unquoted `NO`), integer tag `911`, `{tag: ...}` tag mappings, string `dataset_count_reported`, and unquoted M49 macroregion id `155`.
+- MEDIUM quality sweep: inactive catalogs aligned to `api: false` / `api_status: inactive`; placeholder titles replaced; software-expected harvest endpoints filled; short tags and a Wales subregion name corrected.
+
+### Removed
+- Duplicate catalog records merged into keepers: Cyprus ERMIS-F geoportal (`ermisgeoportalcyiaccy`, same URL as `geoportalermisfeu`) and University of Granada Open Data (`opendataugresdataset`, same URL as `opendataugres`).
+- Cocos (Keeling) Islands (`CC`) and `Unknown` country folders (records recategorized or dropped).
+- **3** Cadcorp scheduled viewers that did not respond (Wirral WebMap9, Bury ExternalWebMap, Inverclyde Maps).
+- **664** OpenAIRE scheduled sources that were dead, duplicate of an existing entity, a staging host, a hijacked/parked domain, or not a catalog (software forges, journal pages, single publications).
+
 ## [1.16.0] - 2026-08-24
 
 **GitHub Release**: [v1.16.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.16.0) - Published August 24, 2026

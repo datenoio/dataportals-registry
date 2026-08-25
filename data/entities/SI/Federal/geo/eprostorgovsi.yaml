@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: INSPIRE (SI) Data Portal. Here you will find data, services and maps
-  and more. Search over data sets, services and maps.
+description: Slovenian INSPIRE metadata catalogue (IMPS) of the Surveying and Mapping
+  Authority, providing GeoNetwork search, CSW, and related services for national
+  spatial datasets, maps, and network services.
 endpoints:
 - type: geonetwork:query
   url: https://eprostor.gov.si/imps/srv/eng/q
@@ -34,18 +35,20 @@ endpoints:
   version: '2.0'
 id: eprostorgovsi
 langs:
+- id: SL
+  name: Slovenian
 - id: EN
   name: English
 link: https://eprostor.gov.si/imps
 name: Slovenski INSPIRE metapodatkovni sistem - INSPIRE (SI)
 owner:
-  link: https://www.gov.si
+  link: https://www.gov.si/drzavni-organi/organi-v-sestavi/geodetska-uprava/
   location:
     country:
       id: SI
       name: Slovenia
     level: 20
-  name: GEODET5KA UPRAVA REPUBLIKE SLOVENIJE
+  name: Surveying and Mapping Authority of the Republic of Slovenia
   type: Central government
 properties:
   has_doi: true

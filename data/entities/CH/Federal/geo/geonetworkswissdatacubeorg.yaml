@@ -19,32 +19,32 @@ description: GeoNetwork opensource allows to easily share geographically referen
   thematic information between different organizations.
 endpoints:
 - type: geonetwork:query
-  url: http://geonetwork.swissdatacube.org/geonetwork/srv/eng/q
+  url: https://geonetwork.swissdatacube.org/geonetwork/srv/eng/q
 - type: geonetwork:records
-  url: http://geonetwork.swissdatacube.org/geonetwork/srv/api/records
+  url: https://geonetwork.swissdatacube.org/geonetwork/srv/api/records
 - type: openapi
-  url: http://geonetwork.swissdatacube.org/geonetwork/srv/v2/api-docs
+  url: https://geonetwork.swissdatacube.org/geonetwork/srv/v2/api-docs
   version: '2'
 - type: csw202
-  url: http://geonetwork.swissdatacube.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://geonetwork.swissdatacube.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: opensearch
-  url: http://geonetwork.swissdatacube.org/geonetwork/srv/eng/portal.opensearch
+  url: https://geonetwork.swissdatacube.org/geonetwork/srv/eng/portal.opensearch
   version: '1.0'
 - type: oaipmh20
-  url: http://geonetwork.swissdatacube.org/geonetwork/srv/eng/oaipmh?verb=Identify
+  url: https://geonetwork.swissdatacube.org/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 - type: geonetwork:site
-  url: http://geonetwork.swissdatacube.org/geonetwork/srv/api/site
+  url: https://geonetwork.swissdatacube.org/geonetwork/srv/api/site
 - type: opensearch
-  url: http://geonetwork.swissdatacube.org/portal.opensearch
+  url: https://geonetwork.swissdatacube.org/portal.opensearch
 id: geonetworkswissdatacubeorg
 langs:
 - id: DE
   name: German
 - id: EN
   name: English
-link: http://geonetwork.swissdatacube.org/geonetwork
+link: https://geonetwork.swissdatacube.org/geonetwork
 name: SwissEnvEO (GeoNetwork)
 owner:
   link: https://www.swissdatacube.org

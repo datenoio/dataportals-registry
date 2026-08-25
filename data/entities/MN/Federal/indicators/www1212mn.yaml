@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -16,20 +16,16 @@ coverage:
       id: '030'
       name: Eastern Asia
 description: National statistical information service of the National Statistics Office
-  of Mongolia. Provides queryable socio-economic indicators, dashboards, and an open
-  data API covering population, labour, economy, education, and health.
-endpoints:
-- type: rest
-  url: https://opendata.1212.mn/en/doc
-- type: rest
-  url: https://opendata.1212.mn/api
+  of Mongolia. Provides queryable socio-economic indicators and dashboards covering
+  population, labour, economy, education, and health. Machine-readable tables are
+  published separately on the NSO PxWeb database.
 id: www1212mn
 langs:
 - id: MN
   name: Mongolian
 - id: EN
   name: English
-link: https://1212.mn/en
+link: https://www.1212.mn/en
 name: Mongolian Statistical Information Service
 owner:
   link: https://www.nso.mn
@@ -59,7 +55,6 @@ tags:
 - government
 - official statistics
 - Mongolia
-- has_api
 topics:
 - id: SOCI
   name: Population and society

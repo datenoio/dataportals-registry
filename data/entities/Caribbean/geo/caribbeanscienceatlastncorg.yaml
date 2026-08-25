@@ -13,10 +13,24 @@ coverage:
       name: Caribbean
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: The Nature Conservancy Caribbean Science Atlas provides geospatial data
-  and maps for conservation science across the Caribbean region.
+description: The Nature Conservancy Caribbean Science Atlas compiles scientific and
+  spatial data used in conservation and policy projects across the Caribbean for partners
+  and stakeholders.
+endpoints:
+- type: dcatap201
+  url: https://caribbeanscienceatlas.tnc.org/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://caribbeanscienceatlas.tnc.org/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://caribbeanscienceatlas.tnc.org/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://caribbeanscienceatlas.tnc.org/api/search/v1
+- type: dcatus11
+  url: https://caribbeanscienceatlas.tnc.org/data.json
+- type: sitemap
+  url: https://caribbeanscienceatlas.tnc.org/sitemap.xml
 id: caribbeanscienceatlastncorg
 langs:
 - id: EN
@@ -50,6 +64,7 @@ tags:
 - conservation
 - Caribbean
 - science
+- has_api
 topics:
 - id: ENVI
   name: Environment
@@ -57,15 +72,10 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
 uid: cdi00020920
-endpoints:
-- type: dcatap201
-  url: https://caribbeanscienceatlas.tnc.org/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://caribbeanscienceatlas.tnc.org/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://caribbeanscienceatlas.tnc.org/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://caribbeanscienceatlas.tnc.org/api/search/v1
-- type: sitemap
-  url: https://caribbeanscienceatlas.tnc.org/sitemap.xml

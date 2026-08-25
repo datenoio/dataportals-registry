@@ -13,14 +13,15 @@ coverage:
       name: Bosnia and Herzegovina
     level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
     subregion:
       id: BA-BIH
       name: Federacija Bosne i Hercegovine
-description: Metadata Catalog of spatial data, sets and services, compliant with INSPIRE
-  and ISO19115 standards, maintained by the Federal Administration of Bosnia and Herzegovina
-  in collaboration with various stakeholders.
+description: GeoNetwork metadata catalog of the spatial data infrastructure of the
+  Federation of Bosnia and Herzegovina (IPP FBiH), describing INSPIRE- and ISO 19115-compliant
+  spatial datasets and services maintained with the Federal Administration for Geodetic
+  and Real Property Affairs.
 endpoints:
 - type: csw202
   url: https://metapodaci.ippfbih.gov.ba/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -42,8 +43,10 @@ endpoints:
   url: https://metapodaci.ippfbih.gov.ba/portal.opensearch
 id: metapodaciippfbihgovba
 langs:
-- id: SR
-  name: Serbian
+- id: HR
+  name: Croatian
+- id: BS
+  name: Bosnian
 link: https://metapodaci.ippfbih.gov.ba
 name: Katalog metapodataka IPP FBiH
 owner:
@@ -57,7 +60,7 @@ owner:
       id: BA-BIH
       name: Federacija Bosne i Hercegovine
   name: Federal Administration for Geodetic and Real Property Affairs
-  type: Central government
+  type: Regional government
 properties:
   has_doi: true
 rights:
@@ -79,11 +82,8 @@ tags:
 - SDI
 - metadata
 - geoportal
-- spatial data
+- FBiH
 topics:
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme

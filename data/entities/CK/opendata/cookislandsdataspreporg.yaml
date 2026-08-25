@@ -14,10 +14,15 @@ coverage:
     macroregion:
       id: '061'
       name: Polynesia
-description: Environmental Information for Decision Making
+description: National environment data portal for the Cook Islands in the SPREP Inform
+  network. Publishes public environmental datasets for download, monitoring, and
+  decision-making, including biodiversity, climate, coastal and marine, and GIS files.
+  Not a cross-government open data portal.
 endpoints:
 - type: dcatus11
   url: https://cookislands-data.sprep.org/data.json
+- type: drupal:jsonapi
+  url: https://cookislands-data.sprep.org/jsonapi/dataset/dataset
 - type: sitemap
   url: https://cookislands-data.sprep.org/sitemap.xml
 id: cookislandsdataspreporg
@@ -27,7 +32,7 @@ langs:
 link: https://cookislands-data.sprep.org
 name: Cook Islands Environment Data Portal
 owner:
-  link: https://sprep.org
+  link: https://www.sprep.org
   location:
     country:
       id: CK
@@ -52,38 +57,45 @@ software:
 status: active
 tags:
 - government
-- Biodiversity
-- Atmosphere and Climate
-- Built Environment
-- Terrestrial Protected Areas
-- Data Portal
-- Environmental Information
+- environment
+- climate
+- biodiversity
+- marine
+- coastal
+- gis
+- SPREP
+- Inform project
+- Cook Islands
+- has_api
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
 - id: Environment
   name: Environment
-  type: iso19115
-- id: Climatology / Meteorology / Atmosphere
-  name: Climatology / Meteorology / Atmosphere
   type: iso19115
 - id: Biota
   name: Biota
   type: iso19115
-- id: Boundaries
-  name: Boundaries
+- id: Oceans
+  name: Oceans
   type: iso19115
-- id: Economy
-  name: Economy
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
   type: iso19115
-- id: Location
-  name: Location
+- id: Inland Waters
+  name: Inland Waters
   type: iso19115
-- id: Planning / Cadastre
-  name: Planning / Cadastre
+- id: Geoscientific Information
+  name: Geoscientific Information
   type: iso19115
 - id: Structure
   name: Structure
+  type: iso19115
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00001248

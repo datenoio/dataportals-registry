@@ -18,28 +18,31 @@ coverage:
     subregion:
       id: AE-AZ
       name: Abū Z̧aby
-description: Data catalog endpoint providing REST services
+description: ArcGIS REST services of the Abu Dhabi Centre for Technical and Vocational
+  Education and Training (ACTVET), publishing campus and related geospatial layers.
 endpoints:
 - type: arcgis:rest:info
-  url: http://share.actvet.ac.ae/public/rest/info?f=pjson
+  url: https://share.actvet.ac.ae/public/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: http://share.actvet.ac.ae/public/rest/services?f=pjson
+  url: https://share.actvet.ac.ae/public/rest/services?f=pjson
 - type: arcgis:soap
-  url: http://share.actvet.ac.ae/public/services?wsdl
+  url: https://share.actvet.ac.ae/public/services?wsdl
 - type: arcgis:sitemap
-  url: http://share.actvet.ac.ae/public/rest/services?f=sitemap
+  url: https://share.actvet.ac.ae/public/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: http://share.actvet.ac.ae/public/rest/services?f=geositemap
+  url: https://share.actvet.ac.ae/public/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: http://share.actvet.ac.ae/public/rest/services?f=kmz
+  url: https://share.actvet.ac.ae/public/rest/services?f=kmz
 id: shareactvetacae
 langs:
 - id: AR
   name: Arabic
-link: http://share.actvet.ac.ae/public/rest/services
-name: ACTVET Geospatial Services
+- id: EN
+  name: English
+link: https://share.actvet.ac.ae/public/rest/services
+name: ACTVET ArcGIS REST Services
 owner:
-  link: http://share.actvet.ac.ae/
+  link: https://www.actvet.gov.ae
   location:
     country:
       id: AE
@@ -48,8 +51,8 @@ owner:
     subregion:
       id: AE-AZ
       name: Abū Z̧aby
-  name: ACTVET
-  type: Academy
+  name: Abu Dhabi Centre for Technical and Vocational Education and Training
+  type: Regional government
 properties:
   has_doi: false
 rights:

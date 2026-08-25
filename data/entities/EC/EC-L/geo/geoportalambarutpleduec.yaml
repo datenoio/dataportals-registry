@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,11 +18,8 @@ coverage:
     subregion:
       id: EC-L
       name: Loja
-description: No description extracted. This geoportal. managed by Universidad Técnica
-  Particular de Loja. provides access to datasets and resources.
-endpoints:
-- type: sitemap
-  url: http://geoportal.ambar.utpl.edu.ec/sitemap.xml
+description: Former GeoNode geoportal of Universidad Técnica Particular de Loja (AMBAR). The
+  host geoportal.ambar.utpl.edu.ec timed out.
 id: geoportalambarutpleduec
 langs:
 - id: ES
@@ -55,7 +52,7 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 tags:
 - geospatial
 - has_api

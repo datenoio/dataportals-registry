@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -14,11 +15,15 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: DSpace repository of Paraguay's Institute of Agricultural Technology,
-  with variety catalogs and agricultural research outputs.
+description: DSpace 6.4 repository of Paraguay's Institute of Agricultural Technology
+  (IPTA), with variety catalogs, agricultural research outputs, and an RSS feed. OAI-PMH
+  is not enabled on this instance.
 endpoints:
 - type: dspace:catalog
   url: https://www.ipta.gov.py/repositorio/
+- type: rss
+  url: https://www.ipta.gov.py/repositorio/feed/rss_2.0/site
+  version: '2.0'
 id: wwwiptagovpy
 langs:
 - id: ES

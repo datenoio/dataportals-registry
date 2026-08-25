@@ -14,9 +14,10 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Forest Biology is one of the six departments in the College of Forestry,Wildlife
-  and Tourism, Sokoine University of Agriculture (SUA) located in Morogoro Region,
-  Tanzania.
+description: Historical GBIF IPT of Sokoine University of Agriculture, Department
+  of Ecosystems and Conservation, at edms.sua.ac.tz/ipt. On 24 August 2026 the path
+  returned HTTP 502 or served an unrelated Inaya application, not an IPT. SUA biodiversity
+  datasets remain registered on GBIF via the BID cloud IPT.
 endpoints:
 - type: rss
   url: http://www.edms.sua.ac.tz/ipt/rss.do
@@ -26,9 +27,9 @@ langs:
 - id: EN
   name: English
 link: http://www.edms.sua.ac.tz/ipt
-name: Forest Biology
+name: SUA Department of Ecosystems and Conservation IPT
 owner:
-  link: http://www.cfwt.sua.ac.tz/forestrybiology/
+  link: https://www.cfwt.sua.ac.tz/ecosystems/
   location:
     country:
       id: TZ
@@ -36,10 +37,19 @@ owner:
     level: 20
   name: Sokoine University of Agriculture, Department of Ecosystems and Conservation
   type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: active
+status: deprecated
 tags:
 - GBIF
 - IPT

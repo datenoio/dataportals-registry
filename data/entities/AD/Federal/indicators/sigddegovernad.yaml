@@ -13,11 +13,13 @@ coverage:
       name: Andorra
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Official statistics dissemination platform of Andorra's Department of
-  Statistics. Provides publications and per-indicator time series on population, economy,
-  labour, prices, and public sector statistics.
+description: Official statistics dissemination platform (SIGDDE) of Andorra's Department
+  of Statistics. Provides publications and per-indicator time series on population,
+  economy, labour, prices, and public sector statistics. The department website at
+  estadistica.ad is an ArcGIS Hub/Sites front end that links here; it is not a separate
+  dataset catalog.
 id: sigddegovernad
 langs:
 - id: CA
@@ -28,10 +30,10 @@ langs:
   name: Spanish
 - id: EN
   name: English
-link: https://sig.govern.ad/Sigdde.Public/Inici?Idioma=en&Pag=PAG_Inici
-name: Andorra SIGDDE Statistics Platform
+link: https://sig.govern.ad/Sigdde.Public/Inici
+name: Andorra Department of Statistics (SIGDDE)
 owner:
-  link: https://www.estadistica.ad
+  link: 'https://www.estadistica.ad/portal/apps/sites/#/estadistica-ca/'
   location:
     country:
       id: AD
@@ -46,9 +48,9 @@ rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: null
+  privacy_policy_url: https://www.govern.ad/ca/politica-de-privacitat
   rights_type: global
-  tos_url: null
+  tos_url: https://www.govern.ad/ca/avis-legal
 software:
   id: custom
   name: Custom software
@@ -57,6 +59,7 @@ tags:
 - statistics
 - government
 - official statistics
+- indicators
 - Andorra
 topics:
 - id: SOCI

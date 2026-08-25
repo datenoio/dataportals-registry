@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AM
+      name: Armenia
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: dLibra digital library of the Armenian OpenAIRE National Open Access
+  Desk, operated by the Institute for Informatics and Automation Problems of NAS RA.
+  It presents scientific output of Armenian higher-education institutions and research
+  institutes and exposes records over OAI-PMH.
+endpoints:
+- type: oaipmh20
+  url: https://noad.sci.am/dlibra/oai-pmh-repository.xml?verb=Identify
+  version: '2.0'
+id: noadsciam
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=openaire____::172bbccecf8fca44ab6a6653e84cb92a
+  value: openaire____::172bbccecf8fca44ab6a6653e84cb92a
+langs:
+- id: HY
+  name: Armenian
+- id: EN
+  name: English
+link: https://noad.sci.am
+name: Armenian OpenAIRE NOAD
+owner:
+  link: https://iiap.sci.am/
+  location:
+    country:
+      id: AM
+      name: Armenia
+    level: 20
+  name: Institute for Informatics and Automation Problems of NAS RA
+  type: Academy
+software:
+  id: dlibra
+  name: dLibra
+status: active
+tags:
+- scientific
+- research data
+- academic
+- has_api
+- openaire
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00028047

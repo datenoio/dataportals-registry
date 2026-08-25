@@ -15,13 +15,17 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: Democratic Republic of the Congo Forest Atlas data catalog. Open data
-  portal for forest and wildlife geospatial data.
+description: Interactive Forest Atlas of the Democratic Republic of the Congo. Public
+  ArcGIS Hub of the Ministère de l'Environnement et Développement Durable (MEDD),
+  developed with the World Resources Institute, with layers on forest concessions,
+  community forests, protected areas, timber production and land allocation.
 endpoints:
 - type: dcatap201
   url: https://cod.forest-atlas.org/api/feed/dcat-ap/2.0.1.json
 - type: dcatus11
   url: https://cod.forest-atlas.org/api/feed/dcat-us/1.1.json
+- type: dcatus11
+  url: https://cod.forest-atlas.org/data.json
 - type: rss
   url: https://cod.forest-atlas.org/api/feed/rss/2.0
 - type: ogcrecordsapi
@@ -32,26 +36,30 @@ id: codforestatlasorg
 langs:
 - id: FR
   name: French
+- id: EN
+  name: English
 link: https://cod.forest-atlas.org
-name: Democratic Republic of the Congo Forest Atlas
+name: Atlas Forestier Interactif de la RDC
 owner:
-  link: https://forest-atlas.org
+  link: https://medd.gouv.cd
   location:
     country:
       id: CD
       name: Democratic Republic of the Congo
     level: 20
-  name: Ministry of Environment and Sustainable Development (DRC)
+  name: Ministère de l'Environnement et Développement Durable (MEDD)
   type: Central government
 properties:
+  dataset_count_reported: 23
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  privacy_policy_url: https://cod.forest-atlas.org/pages/privacy-policy
   rights_type: granular
-  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+  tos_url: https://cod.forest-atlas.org/pages/terms-of-service
 software:
   id: arcgishub
   name: ArcGIS Hub
@@ -62,6 +70,7 @@ tags:
 - geospatial
 - government
 - has_api
+- wri
 topics:
 - id: ENVI
   name: Environment

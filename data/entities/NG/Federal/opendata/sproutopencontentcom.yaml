@@ -14,26 +14,26 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Provides small-scale farmers with expert information and personalized
-  digital agricultural services, designed for farmer-facing organizations across Africa.
+description: CKAN catalog of Sprout Open Content, a Mercy Corps AgriFin digital agriculture
+  platform. It publishes farmer-facing agronomic content, weather advisory, and related
+  datasets used by farmer-facing organisations in Nigeria and across Africa (177 datasets
+  on CKAN 2.9).
 endpoints:
 - type: ckan
-  url: https://sproutopencontent.com/api/3
+  url: https://db.sproutopencontent.com/api/3
   version: '3'
 - type: ckan:package-search
-  url: https://sproutopencontent.com/api/3/action/package_search
+  url: https://db.sproutopencontent.com/api/3/action/package_search
   version: '3'
 - type: ckan:package-list
-  url: https://sproutopencontent.com/api/3/action/package_list
+  url: https://db.sproutopencontent.com/api/3/action/package_list
   version: '3'
-- type: sitemap
-  url: https://www.sproutopencontent.com/sitemap.xml
 id: sproutopencontentcom
 langs:
 - id: EN
   name: English
-link: https://sproutopencontent.com
-name: Sprout Open Content Open Data Portal
+link: https://db.sproutopencontent.com
+name: Sprout Open Content Agriculture Platform
 owner:
   link: https://www.sproutopencontent.com
   location:
@@ -41,8 +41,11 @@ owner:
       id: NG
       name: Nigeria
     level: 20
-  name: Sprout Open Content
+  name: Sprout Open Content (Mercy Corps AgriFin)
   type: Civil society
+properties:
+  has_doi: false
+  dataset_count_reported: 177
 rights:
   license_id: null
   license_name: null
@@ -60,6 +63,8 @@ tags:
 - farmer
 - open content
 - weather advisory
+- has_api
+- Nigeria
 topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
@@ -69,5 +74,8 @@ topics:
   type: eudatatheme
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Farming
+  name: Farming
   type: iso19115
 uid: temp00004853

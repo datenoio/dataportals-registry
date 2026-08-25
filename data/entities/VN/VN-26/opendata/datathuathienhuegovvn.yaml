@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -16,9 +17,8 @@ coverage:
     subregion:
       id: VN-26
       name: Thừa Thiên-Huế
-description: The official open data portal of Thua Thien Hue province, Vietnam, making
-  provincial datasets available for public use, supporting transparency and evidence-based
-  policy making.
+description: Former open data portal of Thừa Thiên-Huế Province. The data.thuathienhue.gov.vn hostname
+  no longer resolves.
 id: datathuathienhuegovvn
 langs:
 - id: VN
@@ -35,7 +35,7 @@ owner:
     subregion:
       id: VN-26
       name: Thừa Thiên-Huế
-  name: Thua Thien Hue province
+  name: Thua Thien Hue Provincial People's Committee
   type: Regional government
 properties:
   transferable_location: true
@@ -49,13 +49,16 @@ rights:
 software:
   id: custom
   name: Custom software
-status: active
+status: inactive
 tags:
 - government
 - open data
-- provincial
-- data catalog
+- Hue
+- Vietnam
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: REGI
   name: Regions and cities
   type: eudatatheme

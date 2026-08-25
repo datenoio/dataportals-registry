@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,27 +14,15 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Data catalog listing ArcGIS REST services
-endpoints:
-- type: arcgis:rest:info
-  url: https://terkep.tigaz.hu:6443/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://terkep.tigaz.hu:6443/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://terkep.tigaz.hu:6443/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://terkep.tigaz.hu:6443/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://terkep.tigaz.hu:6443/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://terkep.tigaz.hu:6443/arcgis/rest/services?f=kmz
+      name: Eastern Europe
+description: Former ArcGIS REST services directory for TIGÁZ gas-network maps. The
+  terkep.tigaz.hu host timed out during review and is treated as offline.
 id: terkeptigazhu
 langs:
 - id: HU
   name: Hungarian
 link: https://terkep.tigaz.hu:6443/arcgis/rest/services
-name: terkep.tigaz.hu ArcGIS REST Services Directory
+name: TIGÁZ Network Map Services
 owner:
   link: https://terkep.tigaz.hu:6443
   location:
@@ -42,7 +30,7 @@ owner:
       id: HU
       name: Hungary
     level: 20
-  name: tigaz.hu
+  name: TIGÁZ Zrt.
   type: Business
 properties:
   has_doi: false
@@ -56,7 +44,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - arcgisserver
 - Energy

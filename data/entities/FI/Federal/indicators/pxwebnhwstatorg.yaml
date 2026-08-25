@@ -14,15 +14,44 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Data catalog providing statistics on health and welfare in the Nordic
-  countries, covering topics such as health, welfare, populations, expenditure, and
-  life situations.
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+- location:
+    country:
+      id: IS
+      name: Iceland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: PxWeb database of Nordic Health and Welfare Statistics (NHWSTAT), with
+  comparable health, welfare, population, expenditure, and living-conditions indicators
+  for the Nordic countries.
 endpoints:
 - type: pxwebapi
   url: https://pxweb.nhwstat.org/Prod/api/v1/en
-  version: '1'
-- type: pxwebapi
-  url: https://pxweb.nhwstat.org/Prod/api/v1/en/
   version: '1'
 id: pxwebnhwstatorg
 langs:

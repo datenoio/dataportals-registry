@@ -13,10 +13,9 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Geoportal. managed by Accesslab. powered by GeoServer. accessible at
-  central.accesslab.gr.
+description: GeoServer instance operated by AccessLab providing OGC geospatial services.
 endpoints:
 - type: wms111
   url: https://central.accesslab.gr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,7 +64,7 @@ langs:
 - id: EL
   name: Greek
 link: https://central.accesslab.gr/geoserver/web/
-name: Central Geoportal - Accesslab
+name: AccessLab GeoServer
 owner:
   link: https://accesslab.gr
   location:
@@ -73,8 +72,8 @@ owner:
       id: GR
       name: Greece
     level: 20
-  name: Accesslab
-  type: Academy
+  name: AccessLab
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -96,4 +95,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00001537
+uid: cdi00035384

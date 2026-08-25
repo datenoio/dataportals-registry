@@ -16,8 +16,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Geoportal of the National Statistics Institute (INE) of Guatemala; GeoNode-based
-  manager for geospatial data offering datasets, maps, documents, GeoStories and dashboards.
+description: GeoNode geoportal of Guatemala's National Institute of Statistics (INE)
+  for geospatial datasets, maps, documents, GeoStories, and dashboards used with official
+  statistics.
 endpoints:
 - type: geonode:datasets
   url: https://geonode4.ine.gob.gt/api/datasets/
@@ -32,9 +33,9 @@ langs:
 - id: EN
   name: English
 link: https://geonode4.ine.gob.gt
-name: Geoportal INE
+name: Geoportal INE Guatemala
 owner:
-  link: https://www.ine.gob.gt/
+  link: https://www.ine.gob.gt
   location:
     country:
       id: GT
@@ -52,8 +53,11 @@ tags:
 - Guatemala
 - statistics
 - INE
-uid: cdi00021508
+- has_api
 topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
@@ -63,3 +67,7 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00021508

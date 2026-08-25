@@ -25,6 +25,11 @@ endpoints:
 - type: dspace:objects
   url: https://micelio.uca.edu.sv/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://micelio.uca.edu.sv/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://micelio.uca.edu.sv/sitemap_index.xml
 id: micelioucaedusv
 identifiers:
 - id: re3data
@@ -66,7 +71,7 @@ tags:
 - research
 - research data
 - datasets
-- dspace-cris
+- has_api
 - El Salvador
 topics:
 - id: TECH

@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,16 +18,16 @@ coverage:
     subregion:
       id: KZ-31
       name: Zhambyl oblysy
-description: Regional geodata catalog for Jambyl region, Kazakhstan.
+description: Regional map portal of Zhambyl Region (E-JAMBYL). The former
+  geo.e-jambyl.kz host returns HTTP 404; the public Leaflet map is at
+  e-jambyl.kz/map.
 id: geoejambylkz
 langs:
 - id: RU
   name: Russian
-- id: EN
-  name: English
 - id: KZ
   name: Kazakh
-link: https://geo.e-jambyl.kz
+link: https://e-jambyl.kz/map/
 name: Zhambyl region geoportal
 owner:
   link: https://www.gov.kz/memleket/entities/zhambyl?lang=en
@@ -57,10 +58,8 @@ tags:
 - geospatial
 - government
 - GIS
-- geodata
-- open data
-- Jambyl
-- Kazakhstan
+- maps
+- Zhambyl
 topics:
 - id: REGI
   name: Regions and cities
@@ -70,9 +69,6 @@ topics:
   type: eudatatheme
 - id: TRAN
   name: Transport
-  type: eudatatheme
-- id: ENVI
-  name: Environment
   type: eudatatheme
 - id: AGRI
   name: Agriculture, fisheries, forestry and food

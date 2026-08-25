@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -10,30 +10,27 @@ coverage:
     country:
       id: World
       name: World
-    level: 10
+    level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
-description: No structured metadata could be extracted from the provided URL according
-  to the schema requirements.
-endpoints:
-- type: nesstar:catalog
-  url: http://14.63.175.31:8090/webview
+description: Catalog host 14.63.175.31:8090 did not respond on 25 August 2026
+  (timeout or connection refused). Operator and country are unconfirmed.
 id: '146317531'
 langs:
 - id: EN
   name: English
 link: http://14.63.175.31:8090/webview
-name: No relevant data available for extraction or mapping
+name: Unidentified catalog (14.63.175.31:8090)
 owner:
   link: http://14.63.175.31
   location:
     country:
       id: World
       name: World
-    level: 10
-  name: Government of Unknown
-  type: Central government
+    level: 20
+  name: Unidentified operator
+  type: Other
 properties:
   has_doi: false
 rights:
@@ -46,7 +43,7 @@ rights:
 software:
   id: nesstar
   name: Nesstar
-status: active
+status: inactive
 tags:
 - government
 - open data
@@ -54,4 +51,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00002106
+uid: cdi00037103

@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: An Online Microdata Catalog maintained by the Somali National Bureau
-  of Statistics
+description: Somali National Data Archive (SoNADA), the NADA microdata catalog of
+  the Somali National Bureau of Statistics. The public API lists 11 survey studies
+  with granular access (some datasets require a licence).
 endpoints:
 - type: nada:csvexport
   url: https://microdata.nbs.gov.so/index.php/catalog/export/csv?ps=5000&collection[]
@@ -29,7 +30,7 @@ langs:
 link: https://microdata.nbs.gov.so
 name: Somali National Data Archive (SoNADA)
 owner:
-  link: https://microdata.nbs.gov.so
+  link: https://nbs.gov.so
   location:
     country:
       id: SO
@@ -39,7 +40,9 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
   transferable_topics: true
+  dataset_count_reported: 11
 rights:
   license_id: null
   license_name: null
@@ -55,6 +58,8 @@ tags:
 - government
 - has_api
 - microdata
+- official statistics
+- Somalia
 topics:
 - id: SOCI
   name: Population and society

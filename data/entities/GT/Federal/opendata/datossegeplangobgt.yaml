@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Portal oficial de Datos Abiertos de la Secretaría de Planificación y
-  Programación de la Presidencia (SEGEPLAN) de Guatemala.
+description: Official CKAN open data portal of SEGEPLAN, publishing planning, public
+  investment, and development datasets for Guatemala (54 datasets when last counted).
 endpoints:
 - type: ckan
   url: https://datos.segeplan.gob.gt/api/3
@@ -30,10 +30,10 @@ id: datossegeplangobgt
 langs:
 - id: ES
   name: Spanish
-link: https://datos.segeplan.gob.gt/
+link: https://datos.segeplan.gob.gt
 name: Portal de Datos Abiertos SEGEPLAN
 owner:
-  link: https://www.segeplan.gob.gt
+  link: https://portal.segeplan.gob.gt/segeplan/
   location:
     country:
       id: GT
@@ -41,6 +41,9 @@ owner:
     level: 20
   name: Secretaría de Planificación y Programación de la Presidencia (SEGEPLAN)
   type: Central government
+properties:
+  has_doi: false
+  dataset_count_reported: 54
 rights:
   license_id: null
   license_name: null
@@ -57,6 +60,7 @@ tags:
 - open data
 - planning
 - SEGEPLAN
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector

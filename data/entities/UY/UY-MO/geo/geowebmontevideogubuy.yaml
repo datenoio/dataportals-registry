@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: UY-MO
       name: Montevideo
-description: GeoNetwork-based catalog providing geospatial data for Montevideo, Uruguay
+description: GeoNetwork catalog of geospatial data published by the Intendencia de
+  Montevideo.
 endpoints:
 - type: geonetwork:query
   url: https://geoweb.montevideo.gub.uy/geonetwork/srv/eng/q
@@ -40,10 +41,10 @@ id: geowebmontevideogubuy
 langs:
 - id: ES
   name: Spanish
-link: https://geoweb.montevideo.gub.uy/geonetwork
-name: Montevideo Geodata
+link: https://geoweb.montevideo.gub.uy/geonetwork/srv/eng/catalog.search
+name: Catálogo geográfico de Montevideo
 owner:
-  link: https://geoweb.montevideo.gub.uy/geonetwork
+  link: https://montevideo.gub.uy
   location:
     country:
       id: UY
@@ -52,8 +53,8 @@ owner:
     subregion:
       id: UY-MO
       name: Montevideo
-  name: Municipality of Montevideo
-  type: Local government
+  name: Intendencia de Montevideo
+  type: Regional government
 properties:
   has_doi: true
 rights:

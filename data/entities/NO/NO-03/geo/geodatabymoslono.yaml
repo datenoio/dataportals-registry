@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: NO-03
       name: Oslo
-description: ArcGIS REST Services endpoint containing geospatial data catalog.
+description: ArcGIS REST services catalog for the City of Oslo (Bymiljøetaten),
+  publishing municipal geodata layers for planning, transport, and city operations.
 endpoints:
 - type: arcgis:rest:info
   url: https://geodata.bymoslo.no/arcgis/rest/info?f=pjson
@@ -37,9 +38,9 @@ langs:
 - id: 'NO'
   name: Norwegian
 link: https://geodata.bymoslo.no/arcgis/rest/services/
-name: Not provided Geoportal
+name: Oslo kommune Geodata (ArcGIS REST)
 owner:
-  link: https://geodata.bymoslo.no
+  link: https://www.oslo.kommune.no
   location:
     country:
       id: 'NO'
@@ -48,7 +49,7 @@ owner:
     subregion:
       id: NO-03
       name: Oslo
-  name: Not provided
+  name: Oslo kommune
   type: Local government
 properties:
   has_doi: false

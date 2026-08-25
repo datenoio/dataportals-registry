@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,11 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Información geoespacial de Bolivia. This geoportal. managed by GeoBolivia.
-  provides access to datasets and resources.
-endpoints:
-- type: geonode:layers
-  url: http://ide.lapaz.bo/api/layers/
+description: Municipal spatial data infrastructure (IDE) of La Paz. The host
+  ide.lapaz.bo times out and no longer serves the GeoNode catalog.
 id: idelapazbo
 langs:
 - id: ES
@@ -27,7 +24,7 @@ langs:
 link: http://ide.lapaz.bo/
 name: IDE La Paz
 owner:
-  link: http://ide.lapaz.bo/
+  link: https://www.lapaz.bo
   location:
     country:
       id: BO
@@ -36,7 +33,7 @@ owner:
     subregion:
       id: BO-L
       name: La Paz
-  name: GeoBolivia
+  name: Gobierno Autónomo Municipal de La Paz
   type: Local government
 properties:
   has_doi: false
@@ -50,7 +47,7 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 tags:
 - Bolivia
 - geonode

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,19 +17,12 @@ coverage:
     subregion:
       id: CO-DC
       name: Distrito Capital de Bogotá
-description: Open data portal for Bogotá, providing access to datasets related to
-  urban development, population, and city infrastructure. The portal is powered by
-  Opendatasoft and serves as a platform for collaboration among public, private, academic,
-  and civil society sectors.
-endpoints:
-- type: opendatasoft
-  url: https://bogota-laburbano.opendatasoft.com/api
-- type: sitemap
-  url: https://bogota-laburbano.opendatasoft.com/sitemap.xml
+description: Former OpenDataSoft catalog of LabUrbano Bogotá (urban-development datasets).
+  The hostname bogota-laburbano.opendatasoft.com returns HTTP 404.
 id: bogotalaburbanoopendatasoftcom
 langs:
-- id: EN
-  name: English
+- id: ES
+  name: Spanish
 - id: EN
   name: English
 link: https://bogota-laburbano.opendatasoft.com
@@ -59,7 +52,7 @@ rights:
 software:
   id: opendatasoft
   name: OpenDataSoft
-status: active
+status: inactive
 tags:
 - Urban planning
 - Population data

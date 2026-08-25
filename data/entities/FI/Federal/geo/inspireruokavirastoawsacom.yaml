@@ -15,7 +15,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Extracted from https://inspire.ruokavirasto-awsa.com/geoserver
+description: INSPIRE GeoServer of the Finnish Food Authority (Ruokavirasto), publishing
+  agricultural, food-safety, and related spatial datasets as OGC WMS, WFS, WCS, WPS,
+  and WMTS services.
 endpoints:
 - type: wms111
   url: https://inspire.ruokavirasto-awsa.com/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -60,15 +62,15 @@ langs:
 - id: EN
   name: English
 link: https://inspire.ruokavirasto-awsa.com/geoserver
-name: Data Catalog Extraction Example
+name: Finnish Food Authority INSPIRE GeoServer
 owner:
-  link: https://inspire.ruokavirasto-awsa.com/geoserver
+  link: https://www.ruokavirasto.fi
   location:
     country:
       id: FI
       name: Finland
     level: 20
-  name: Finnish Food Authority (Ruokavirasto) (assumed from domain, please confirm)
+  name: Finnish Food Authority (Ruokavirasto)
   type: Central government
 properties:
   has_doi: false
@@ -92,7 +94,7 @@ tags:
 - INSPIRE
 - open data
 - Finnish Food Authority
-- datacatalog
+- has_api
 topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food

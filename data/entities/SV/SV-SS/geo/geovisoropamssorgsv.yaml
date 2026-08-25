@@ -22,12 +22,20 @@ description: ArcGIS Enterprise geoportal of OPAMSS for the San Salvador metropol
   area. Public Portal catalog and REST map services covering land-use, environmental,
   socioeconomic, and regulatory layers.
 endpoints:
+- type: arcgis:portals:self
+  url: https://geovisor.opamss.org.sv/portal/sharing/rest/portals/self?f=pjson
 - type: arcgis:rest:info
   url: https://geovisor.opamss.org.sv/server/rest/info?f=pjson
 - type: arcgis:rest:services
   url: https://geovisor.opamss.org.sv/server/rest/services?f=pjson
-- type: arcgis:portals:self
-  url: https://geovisor.opamss.org.sv/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:soap
+  url: https://geovisor.opamss.org.sv/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geovisor.opamss.org.sv/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geovisor.opamss.org.sv/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geovisor.opamss.org.sv/server/rest/services?f=kmz
 id: geovisoropamssorgsv
 langs:
 - id: ES

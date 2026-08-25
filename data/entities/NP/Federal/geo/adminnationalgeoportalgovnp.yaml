@@ -15,14 +15,14 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: A National Spatial Data Infrastructure (NSDI) Clearinghouse / Data Center
-  to enhance the public reach and easy access to the authentic Geospatial Dataset
-  provided by the Survey Department, Nepal.
+description: GeoNode backend of Nepal's National Spatial Data Infrastructure, operated
+  for the Survey Department / Ministry of Land Management. The HTML site requires
+  login; the GeoNode v2 API lists tens of datasets.
 endpoints:
-- type: geonode:layers
-  url: https://admin.nationalgeoportal.gov.np/api/layers/
-- type: geonode:dcatus11
-  url: https://admin.nationalgeoportal.gov.np/data.json
+- type: geonode:datasets
+  url: https://admin.nationalgeoportal.gov.np/api/v2/datasets/
+- type: geonode:documents
+  url: https://admin.nationalgeoportal.gov.np/api/v2/resources/
 - type: wms111
   url: https://admin.nationalgeoportal.gov.np/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
@@ -82,24 +82,24 @@ endpoints:
   url: https://admin.nationalgeoportal.gov.np/geoserver/rest/layers
 - type: opensearch
   url: https://admin.nationalgeoportal.gov.np/catalogue/opensearch
-- type: geonode:documents
-  url: https://admin.nationalgeoportal.gov.np/api/documents/
 - type: sitemap
   url: https://admin.nationalgeoportal.gov.np/sitemap.xml
 id: adminnationalgeoportalgovnp
 langs:
 - id: EN
   name: English
+- id: NE
+  name: Nepali
 link: https://admin.nationalgeoportal.gov.np
 name: National Spatial Data Center Geoportal
 owner:
-  link: http://nationalgeoportal.gov.np
+  link: https://dos.gov.np
   location:
     country:
       id: NP
       name: Nepal
     level: 20
-  name: Ministry of Land Management, Cooperatives and Poverty of Nepal
+  name: Survey Department
   type: Central government
 properties:
   has_doi: false

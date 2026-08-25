@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,12 +15,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: National spatial data infrastructure map portal (Kortagluggi Íslands)
-  operated by Náttúrufræðistofnun. Provides search, view, and download of public geospatial
-  data. gis.is, kortasja.lmi.is, and atlas.lmi.is/kortasja redirect here.
-endpoints:
-- type: oskari:catalog
-  url: https://kortagluggi.is
+description: National map viewer (Kortagluggi / Kortasjá) operated by Náttúrufræðistofnun.
+  gis.is, kortasja.lmi.is, and atlas.lmi.is/kortasja redirect here. Harvestable OGC
+  layers remain on the gis.is GeoServer.
 id: kortagluggiis
 langs:
 - id: IS
@@ -34,7 +31,7 @@ owner:
   location:
     country: *id001
     level: 20
-  name: Náttúrufræðistofnun (Natural Science Institute of Iceland)
+  name: Náttúrufræðistofnun
   type: Central government
 properties:
   has_doi: false
@@ -46,8 +43,8 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: oskari
-  name: Oskari
+  id: custom
+  name: Custom software
 status: active
 tags:
 - geospatial

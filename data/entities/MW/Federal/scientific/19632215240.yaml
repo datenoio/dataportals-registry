@@ -15,21 +15,23 @@ coverage:
       id: '014'
       name: Eastern Africa
 description: GBIF Integrated Publishing Toolkit of the National Commission for Science
-  and Technology, serving biodiversity datasets for Malawi.
+  and Technology (NATIONAL COMMISSION FOR SCIENCE AND TECHNOLOGY-IPT), publishing
+  71 registered biodiversity datasets for Malawi. The application is deployed at the
+  /ipt context; the Tomcat root is not the catalog.
 endpoints:
 - type: dcat:ttl
-  url: http://196.32.215.240:8081/dcat
+  url: http://196.32.215.240:8081/ipt/dcat
 - type: ipt:dataset
-  url: http://196.32.215.240:8081/inventory/dataset
+  url: http://196.32.215.240:8081/ipt/inventory/dataset
 - type: rss
-  url: http://196.32.215.240:8081/rss.do
+  url: http://196.32.215.240:8081/ipt/rss.do
   version: '2.0'
 id: '19632215240'
 langs:
 - id: EN
   name: English
-link: http://196.32.215.240:8081
-name: NCST Integrated Publishing Toolkit (196.32.215.240)
+link: http://196.32.215.240:8081/ipt
+name: NCST Integrated Publishing Toolkit
 owner:
   link: https://www.ncst.mw
   location:
@@ -39,6 +41,15 @@ owner:
     level: 20
   name: National Commission for Science and Technology (NCST)
   type: Central government
+properties:
+  dataset_count_reported: 71
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -48,6 +59,8 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
+- Malawi
 topics:
 - id: Biota
   name: Biota

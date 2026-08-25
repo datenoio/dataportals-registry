@@ -23,9 +23,9 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Geospatial information system providing ArcGIS REST services for environmental
-  data, monitoring, and management in Morocco. Hosted by the Ministry of Energy Transition
-  and Sustainable Development.
+description: ArcGIS Server of the Moroccan Ministry of Energy Transition and Sustainable
+  Development (SIRE / SIREDD), publishing environmental REST map services for monitoring
+  and management, including the southern provinces.
 endpoints:
 - type: arcgis:rest:info
   url: https://siresarcgis.environnement.gov.ma:6443/arcgis/rest/info?f=pjson
@@ -43,6 +43,8 @@ id: siresarcgisenvironnementgovma
 langs:
 - id: AR
   name: Arabic
+- id: FR
+  name: French
 link: https://siresarcgis.environnement.gov.ma:6443/arcgis/rest/services
 name: SIRE - Environmental Geospatial Information System
 owner:
@@ -72,11 +74,12 @@ tags:
 - REST
 - GIS
 - environment
-- Morocco
 - geoportal
 - geospatial
 - environmental monitoring
 - sustainable development
+- government
+- has_api
 topics:
 - id: ENVI
   name: Environment
@@ -99,4 +102,4 @@ topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere
   type: iso19115
-uid: temp00005964
+uid: cdi00035253

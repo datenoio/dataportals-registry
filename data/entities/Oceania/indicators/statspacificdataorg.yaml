@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
@@ -11,10 +12,11 @@ coverage:
       name: Oceania
     level: 20
     macroregion:
-      id: 009
+      id: '009'
       name: Oceania
-description: Regional data catalog providing access to datasets, indicators, and tools
-  for Pacific Island countries and territories.
+description: Pacific Data Hub .Stat Suite explorer for official statistics and SDG
+  indicators covering Pacific Island countries and territories, operated by the Pacific
+  Community (SPC).
 endpoints:
 - type: statsuite:search
   url: https://stats-sfs.pacificdata.org/api/search
@@ -32,7 +34,7 @@ owner:
       name: Oceania
     level: 20
   name: Pacific Community (SPC)
-  type: Central government
+  type: International
 properties:
   has_doi: false
 rights:
@@ -71,12 +73,6 @@ topics:
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: SOCI
-  name: Population and society
-  type: eudatatheme
 - id: Geoscientific Information
   name: Geoscientific Information
   type: iso19115
@@ -99,4 +95,3 @@ topics:
   name: Environment
   type: iso19115
 uid: cdi00005076
-api: true

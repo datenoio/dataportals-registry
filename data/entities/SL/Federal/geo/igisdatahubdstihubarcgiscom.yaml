@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,18 +16,9 @@ coverage:
       id: '011'
       name: Western Africa
 description: Integrated GIS Data Hub of the Directorate of Science, Technology and
-  Innovation (DSTI). Search, visualize, and download government and partner geospatial
-  datasets for Sierra Leone, including education, water, health, boundaries, and
-  infrastructure layers.
-endpoints:
-- type: dcatap201
-  url: https://igis-data-hub-dsti.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://igis-data-hub-dsti.hub.arcgis.com/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://igis-data-hub-dsti.hub.arcgis.com/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://igis-data-hub-dsti.hub.arcgis.com/api/search/v1
+  Innovation (DSTI) on ArcGIS Hub. The hostname still serves a generic ArcGIS Hub
+  shell; DCAT, RSS, and OGC Records feeds report that the item does not exist or is
+  inaccessible.
 id: igisdatahubdstihubarcgiscom
 langs:
 - id: EN
@@ -56,7 +47,7 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
 - ArcGIS
 - GIS

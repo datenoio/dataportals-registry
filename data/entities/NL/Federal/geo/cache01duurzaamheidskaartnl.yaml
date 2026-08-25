@@ -15,8 +15,7 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: MapProxy cache instance for duurzaamheidskaart.nl, providing tile cache
-  services for sustainability mapping in the Netherlands.
+description: Tile cache for the Dutch sustainability map (duurzaamheidskaart).
 endpoints:
 - type: wms111
   url: https://cache01.duurzaamheidskaart.nl/service?REQUEST=GetCapabilities
@@ -35,16 +34,16 @@ langs:
 - id: NL
   name: Dutch
 link: https://cache01.duurzaamheidskaart.nl
-name: Cache01 Duurzaamheidskaart Nl Geoportal
+name: Duurzaamheidskaart tile cache
 owner:
-  link: https://duurzaamheidskaart.nl
+  link: https://www.duurzaamheidskaart.nl
   location:
     country:
       id: NL
       name: Netherlands
     level: 20
   name: Duurzaamheidskaart
-  type: Central government
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -71,4 +70,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-uid: temp00006002
+uid: cdi00035177

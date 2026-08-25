@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,42 +15,9 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: GeoServer instance for the Ministry of Agriculture and Forestry of Turkey,
-  providing geospatial datasets and map layers.
-endpoints:
-- type: wms111
-  url: http://veri.tarimorman.gov.tr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wms130
-  url: http://veri.tarimorman.gov.tr/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
-- type: wfs100
-  url: http://veri.tarimorman.gov.tr/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wfs110
-  url: http://veri.tarimorman.gov.tr/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wfs200
-  url: http://veri.tarimorman.gov.tr/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
-  version: 2.0.0
-- type: wcs100
-  url: http://veri.tarimorman.gov.tr/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wcs110
-  url: http://veri.tarimorman.gov.tr/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: http://veri.tarimorman.gov.tr/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wcs201
-  url: http://veri.tarimorman.gov.tr/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
-  version: 2.0.1
-- type: wps100
-  url: http://veri.tarimorman.gov.tr/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: tms100
-  url: http://veri.tarimorman.gov.tr/geoserver/gwc/service/tms/1.0.0
-  version: 1.0.0
+description: Former GeoServer of the Ministry of Agriculture and Forestry at
+  veri.tarimorman.gov.tr. The hostname no longer resolves. Ministry geospatial
+  services now publish from the ArcGIS REST directory at cbs1.tarimorman.gov.tr.
 id: veritarimormangovtr
 langs:
 - id: TR
@@ -78,7 +45,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - geoserver
 - geospatial

@@ -3,6 +3,9 @@ access_mode:
 api: true
 api_status: active
 catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -12,6 +15,10 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
+description: GeoNode catalog for Kenya's national Marine Spatial Planning (MSP) process,
+  coordinated by the State Department for the Blue Economy and Fisheries under the
+  Ministry of Mining, Blue Economy and Maritime Affairs. Publishes coastal and marine
+  spatial datasets used in the MSP.
 endpoints:
 - type: geonode:datasets
   url: https://portal.msp.go.ke/api/datasets/
@@ -64,37 +71,41 @@ langs:
 - id: EN
   name: English
 link: https://portal.msp.go.ke
-name: Kenya Marine Geoportal Database
+name: Kenya Marine Spatial Planning Geoportal
 owner:
+  link: https://www.mibema.go.ke
   location:
     country:
       id: KE
       name: Kenya
     level: 20
-  name: Government of Kenya
+  name: State Department for the Blue Economy and Fisheries
   type: Central government
-  link: https://go.ke
 software:
   id: geonode
   name: GeoNode
 status: active
-uid: cdi00021518
-topics:
-- id: Location
-  name: Location
-  type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
-  type: iso19115
 tags:
 - GIS
 - geospatial
 - government
-description: Geoportal. managed by Government of Kenya. providing access to kenya
-  marine geoportal database.
-content_types:
-- dataset
-- map_layer
+- marine
+- fisheries
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00021518

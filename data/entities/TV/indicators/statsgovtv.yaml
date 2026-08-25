@@ -15,17 +15,26 @@ coverage:
     macroregion:
       id: '061'
       name: Polynesia
-description: Official statistics website of the Tuvalu Central Statistics Division.
-  Publishes national statistical releases, indicator tables, and a searchable documents
-  library covering population, economy, CPI, trade, CRVS, and related topics.
+description: Official statistics website of the Tuvalu Central Statistics Division,
+  the national statistical agency under the Statistics Act of 1978. Publishes national
+  statistical releases, indicator tables, a documents library, and a dashboard covering
+  population, economy, CPI, trade, CRVS, census and surveys, and related topics.
+endpoints:
+- type: rest
+  url: https://stats.gov.tv/wp-json/
+- type: rest:posts
+  url: https://stats.gov.tv/wp-json/wp/v2/posts
+  version: '2'
+- type: sitemap
+  url: https://stats.gov.tv/wp-sitemap.xml
 id: statsgovtv
 langs:
 - id: EN
   name: English
-link: https://stats.gov.tv/
+link: https://stats.gov.tv
 name: Tuvalu Central Statistics Division
 owner:
-  link: https://stats.gov.tv/
+  link: https://stats.gov.tv
   location:
     country:
       id: TV
@@ -51,6 +60,8 @@ tags:
 - statistics
 - government
 - official statistics
+- census
+- has_api
 - Tuvalu
 topics:
 - id: SOCI
@@ -78,9 +89,3 @@ topics:
   name: Health
   type: iso19115
 uid: cdi00025548
-endpoints:
-- type: rest
-  url: https://stats.gov.tv/wp-json/
-- type: rest:posts
-  url: https://stats.gov.tv/wp-json/wp/v2/posts
-  version: '2'

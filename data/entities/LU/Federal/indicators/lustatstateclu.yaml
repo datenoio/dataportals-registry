@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Centralized platform for Luxembourg's statistical data, including demographic,
-  economic, social, and environmental statistics.
+description: Official .Stat Suite dissemination site for Luxembourg's official
+  statistics (LUSTAT), covering demographic, economic, social, and environmental
+  dataflows published by STATEC.
 endpoints:
 - type: statsuite:search
   url: https://lustat.statec.lu/api/search
@@ -23,8 +24,12 @@ id: lustatstateclu
 langs:
 - id: FR
   name: French
+- id: EN
+  name: English
+- id: DE
+  name: German
 link: https://lustat.statec.lu
-name: Lustat statistiques explorer .Stat
+name: LUSTAT statistical explorer
 owner:
   link: https://statistiques.public.lu/en.html
   location:
@@ -32,7 +37,7 @@ owner:
       id: LU
       name: Luxembourg
     level: 20
-  name: STATEC
+  name: STATEC (Institut national de la statistique et des études économiques)
   type: Central government
 properties:
   has_doi: false

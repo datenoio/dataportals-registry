@@ -8,17 +8,19 @@ content_types:
 coverage:
 - location:
     country:
-      id: KE
-      name: Kenya
-    level: 20
+      id: World
+      name: World
+    level: 10
     macroregion:
-      id: '014'
-      name: Eastern Africa
-description: The World Agroforestry Centre Dataverse repository archives research
-  data used for publications and unpublished datasets related to agroforestry and
-  tree management. The repository provides metadata and allows data request with proper
-  citation standards.
+      id: World
+      name: World
+description: CIFOR-ICRAF (World Agroforestry) Dataverse repository for agroforestry
+  and tree-management research data used in publications and unpublished datasets.
+  Metadata is public; some files require a data request. Dataverse 4.20 when last
+  checked.
 endpoints:
+- type: dataverseapi
+  url: https://data.worldagroforestry.org/api/search
 - type: oaipmh20
   url: https://data.worldagroforestry.org/oai?verb=Identify
   version: '2.0'
@@ -33,14 +35,14 @@ langs:
 link: https://data.worldagroforestry.org
 name: World Agroforestry - Research Data Repository
 owner:
-  link: https://www.worldagroforestry.org
+  link: https://www.cifor-icraf.org
   location:
     country:
       id: KE
       name: Kenya
     level: 20
-  name: World Agroforestry (ICRAF)
-  type: Academy
+  name: CIFOR-ICRAF (World Agroforestry)
+  type: International
 properties:
   has_doi: true
   transferable_topics: true
@@ -61,22 +63,20 @@ tags:
 - agroforestry
 - trees
 - research
-- agricultural landscapes
-- soil
-- climate
+- CGIAR
 topics:
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
   type: eudatatheme
 - id: Farming
   name: Farming
   type: iso19115
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: Biota
   name: Biota
   type: iso19115

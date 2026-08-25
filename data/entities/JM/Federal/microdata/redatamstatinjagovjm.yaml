@@ -13,10 +13,16 @@ coverage:
       name: Jamaica
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: REDATAM census query portal of the Statistical Institute of Jamaica.
-  Users build custom tables from national population and housing census microdata.
+description: REDATAM Webserver of the Statistical Institute of Jamaica (STATIN). Users
+  build custom tables from the 2011 Population and Housing Census microdata (database
+  HPC2011v1).
+endpoints:
+- type: redatam
+  url: https://redatam.statinja.gov.jm:8191/binjam/RpWebEngine.exe/Portal?BASE=HPC2011v1&lang=ENG
+- type: redatam
+  url: https://redatam.statinja.gov.jm:8191/binjam/RpWebEngine.exe/Portal
 id: redatamstatinjagovjm
 langs:
 - id: EN
@@ -34,7 +40,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
-  is_national: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -49,10 +55,10 @@ status: active
 tags:
 - statistics
 - government
+- official statistics
 - census
 - microdata
-- REDATAM
-- Jamaica
+- has_api
 topics:
 - id: SOCI
   name: Population and society
@@ -64,8 +70,3 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00022014
-endpoints:
-- type: redatam
-  url: https://redatam.statinja.gov.jm:8191/binjam/RpWebEngine.exe/Portal?BASE=HPC2011v1&lang=ENG
-- type: redatam
-  url: https://redatam.statinja.gov.jm:8191/binjam/RpWebEngine.exe/Portal

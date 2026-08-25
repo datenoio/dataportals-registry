@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,22 +14,10 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: ArcGIS REST Services hosted by BG ADD (Geographic Agency of the Ministry
-  of Regional Development and Public Works of Bulgaria)
-endpoints:
-- type: arcgis:rest:info
-  url: https://maps2.bgadd.org/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://maps2.bgadd.org/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://maps2.bgadd.org/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://maps2.bgadd.org/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://maps2.bgadd.org/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://maps2.bgadd.org/arcgis/rest/services?f=kmz
+      name: Eastern Europe
+description: ArcGIS REST services previously hosted at maps2.bgadd.org for the geographic
+  agency of the Ministry of Regional Development and Public Works. The host is currently
+  unreachable.
 id: maps2bgaddorg
 langs:
 - id: EN
@@ -58,7 +46,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - REST
 - ArcGIS

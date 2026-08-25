@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-NT
+      name: Northwest Territories
+description: ArcGIS Hub catalog of Northwest Territories Geological Survey geoscience datasets
+  and maps.
+id: ntgsopendatantgshubarcgiscom
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::d4a973e303ec37692cc8923e3148eef7
+  value: fairsharing_::d4a973e303ec37692cc8923e3148eef7
+langs:
+- id: EN
+  name: English
+link: https://ntgs-open-data-ntgs.hub.arcgis.com
+name: NWT Geological Survey Open Data
+owner:
+  link: https://www.nwtgeoscience.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-NT
+      name: Northwest Territories
+  name: Northwest Territories Geological Survey
+  type: Regional government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- geology
+- open data
+- Northwest Territories
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00028796
+endpoints:
+- type: dcatap201
+  url: https://ntgs-open-data-ntgs.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://ntgs-open-data-ntgs.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://ntgs-open-data-ntgs.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://ntgs-open-data-ntgs.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://ntgs-open-data-ntgs.hub.arcgis.com/sitemap.xml

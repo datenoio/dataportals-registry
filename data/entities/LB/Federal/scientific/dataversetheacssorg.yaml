@@ -8,21 +8,17 @@ content_types:
 coverage:
 - location:
     country:
-      id: LB
-      name: Lebanon
-    level: 20
+      id: World
+      name: World
+    level: 10
     macroregion:
-      id: '145'
-      name: Western Asia
+      id: World
+      name: World
 description: The ACSS Dataverse is an initiative of the Arab Council for the Social
   Sciences, in collaboration with the Odum Institute for Research in Social Science
-  at the University of North Carolina at Chapel Hill. The ACSS Dataverse contains
-  social science datasets produced in Arab countries, with the goal of making data
-  available for research in the region and preserving data for future generations
-  of researchers. There is no charge for access to datasets in the ACSS Dataverse,
-  although users are requested to register in order to download data. The ACSS Dataverse
-  encourages social scientists who study the Arab region to participate in this initiative
-  by depositing data.
+  at the University of North Carolina at Chapel Hill. It holds social science
+  datasets produced in Arab countries, with free access for research (registration
+  required to download).
 endpoints:
 - type: dataverseapi
   url: https://dataverse.theacss.org/api/search
@@ -39,6 +35,8 @@ identifiers:
   url: https://www.re3data.org/repository/r3d100013586
   value: r3d100013586
 langs:
+- id: EN
+  name: English
 - id: AR
   name: Arabic
 link: https://dataverse.theacss.org
@@ -71,6 +69,7 @@ tags:
 - has_api
 - social science
 - research data
+- Arab region
 - preservation
 topics:
 - id: TECH

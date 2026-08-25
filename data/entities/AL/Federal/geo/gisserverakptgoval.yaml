@@ -13,10 +13,10 @@ coverage:
       name: Albania
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: GIS Server REST services available via the AKPT (Albanian Geospatial
-  Portal Team or equivalent) government agency or body.
+description: ArcGIS Server REST services of the National Territorial Planning Agency
+  (AKPT), publishing territorial planning and land-use map layers.
 endpoints:
 - type: arcgis:portals:self
   url: https://gis-server.akpt.gov.al/portal/sharing/rest/portals/self?f=pjson
@@ -39,13 +39,13 @@ langs:
 link: https://gis-server.akpt.gov.al/arcgis/rest/services
 name: AKPT GIS Server REST Services
 owner:
-  link: https://www.akpt.gov.al
+  link: https://planifikimi.gov.al
   location:
     country:
       id: AL
       name: Albania
     level: 20
-  name: AKPT
+  name: National Territorial Planning Agency (AKPT)
   type: Central government
 properties:
   has_doi: false
@@ -61,9 +61,10 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- GIS
-- ArcGIS REST
-- Geospatial
+- geospatial
+- government
+- territorial planning
+- has_api
 topics:
 - id: Location
   name: Location
@@ -71,7 +72,7 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
+- id: Planning / Cadastre
+  name: Planning / Cadastre
   type: iso19115
-uid: temp00000006
+uid: cdi00036201

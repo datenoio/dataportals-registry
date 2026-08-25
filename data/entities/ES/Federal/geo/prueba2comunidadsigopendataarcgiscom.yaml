@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -57,17 +57,6 @@ description: 'Utilizamos cookies tanto propias como de terceros para evaluar el 
   qué datos te interesan, contacta con nosotros si quieres publicar tus datos, si
   tienes una aplicación que los utiliza o si quieres colaborar con nosotros. Abre
   tus datos a un mundo de posibilidades. ArcGIS Open Data Enlaces de Interés'
-endpoints:
-- type: dcatap201
-  url: https://prueba2-comunidadsig.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
-- type: dcatus11
-  url: https://prueba2-comunidadsig.opendata.arcgis.com/api/feed/dcat-us/1.1.json
-- type: rss
-  url: https://prueba2-comunidadsig.opendata.arcgis.com/api/feed/rss/2.0
-- type: ogcrecordsapi
-  url: https://prueba2-comunidadsig.opendata.arcgis.com/api/search/v1
-- type: sitemap
-  url: https://prueba2-comunidadsig.opendata.arcgis.com/sitemap.xml
 id: prueba2comunidadsigopendataarcgiscom
 langs:
 - id: ES
@@ -95,7 +84,7 @@ rights:
 software:
   id: arcgishub
   name: ArcGIS Hub
-status: active
+status: inactive
 tags:
 - GIS
 - arcgishub

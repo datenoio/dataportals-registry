@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: PL-24
       name: Śląskie
-description: No description available in input. geoportal. managed by Tychy city government.
-  powered by Geonetwork. accessible at sit.umtychy.pl:8080.
+description: GeoNetwork metadata catalog of the Tychy municipal spatial information
+  system (SIT), publishing cadastral and city GIS metadata for the City of Tychy.
 id: situmtychypl
 langs:
 - id: PL
@@ -36,7 +36,7 @@ owner:
     subregion:
       id: PL-24
       name: Śląskie
-  name: Tychy city government
+  name: Urząd Miasta Tychy
   type: Local government
 properties:
   has_doi: true
@@ -55,11 +55,18 @@ tags:
 - GIS
 - geospatial
 - government
+- has_api
 - poland
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: cdi00004166
 endpoints:
 - type: geonetwork:api:records

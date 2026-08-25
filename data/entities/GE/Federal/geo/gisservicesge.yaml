@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,38 +15,24 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: The URL points to the REST endpoint for services provided by a GI Services
-  GeoServer, which typically serves geospatial data via OGC compliant web services
-  such as WMS, WFS, WCS, etc. As a data catalog, it aggregates datasets (services)
-  rather than individual datasets as such, according to OGC standards.
-endpoints:
-- type: arcgis:rest:info
-  url: https://gisservices.ge/server/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://gisservices.ge/server/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://gisservices.ge/server/services?wsdl
-- type: arcgis:sitemap
-  url: https://gisservices.ge/server/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://gisservices.ge/server/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://gisservices.ge/server/rest/services?f=kmz
+description: Former ArcGIS Server REST services directory at gisservices.ge. The host
+  now serves only the default IIS start page, and /server/rest/services returns HTTP
+  404.
 id: gisservicesge
 langs:
 - id: KA
   name: Georgian
 link: https://gisservices.ge/server/rest/services
-name: GI Services GeoServer REST Services
+name: GI Services ArcGIS REST Services
 owner:
+  link: https://gisservices.ge
   location:
     country:
       id: GE
       name: Georgia
     level: 20
-  name: Not specified in the provided URL or text
+  name: GIS Services
   type: Business
-  link: https://gisservices.ge
 properties:
   has_doi: false
 rights:
@@ -59,15 +45,11 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - GIS
-- OGC
-- GeoServer
+- ArcGIS
 - REST
-- WMS
-- WFS
-- WCS
 topics:
 - id: TRAN
   name: Transport

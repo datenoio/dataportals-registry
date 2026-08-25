@@ -9,14 +9,14 @@ content_types:
 coverage:
 - location:
     country:
-      id: KE
-      name: Kenya
+      id: Africa
+      name: Africa
     level: 20
     macroregion:
-      id: '014'
-      name: Eastern Africa
-description: RCMRD GMES and Africa Geoportal providing access to spatial data and
-  maps for the GMES and Africa programme in Eastern and Southern Africa.
+      id: '002'
+      name: Africa
+description: RCMRD GMES and Africa ArcGIS Hub for Earth observation and geospatial
+  products under the GMES and Africa programme in Eastern and Southern Africa.
 endpoints:
 - type: dcatap201
   url: https://gmesgeoportal.rcmrd.org/api/feed/dcat-ap/2.0.1.json
@@ -50,18 +50,23 @@ software:
   name: ArcGIS Hub
 status: active
 tags:
-- ArcGIS
 - GIS
 - geospatial
-- kenya
+- Earth observation
+- Africa
+- RCMRD
+- has_api
 topics:
-- id: GOVE
-  name: Government and public sector
+- id: ENVI
+  name: Environment
   type: eudatatheme
-- id: Location
-  name: Location
+- id: Environment
+  name: Environment
   type: iso19115
-- id: Boundaries
-  name: Boundaries
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
   type: iso19115
 uid: cdi00021047

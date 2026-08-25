@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: BIA Connect - ArcGIS Hub for Belize-related geospatial data and apps,
-  operated by TBSL Demo Portal.
+description: ArcGIS Hub operated by Total Business Solutions Ltd. to connect Belizeans
+  and friends of Belize with community apps and a small set of Belize-related
+  geospatial datasets.
 endpoints:
 - type: dcatap201
   url: https://connect.belizeinamerica.com/api/feed/dcat-ap/2.0.1.json
@@ -47,6 +48,7 @@ owner:
   type: Business
 properties:
   has_doi: false
+  dataset_count_reported: 1
 rights:
   license_id: null
   license_name: null
@@ -60,13 +62,14 @@ software:
 status: active
 tags:
 - geospatial
+- community
 - Belize
-- ArcGIS Hub
+- has_api
 topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
-- id: Geospatial
-  name: Geospatial
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00020943

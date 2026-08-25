@@ -4,6 +4,7 @@ api: false
 api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
+- indicator
 - dataset
 coverage:
 - location:
@@ -22,17 +23,16 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Base de Données Statistiques (BDS) du Haut Commissariat au Plan du Maroc.
-  Les thèmes couverts portent sur les indicateurs issus des opérations statistiques,
-  notamment le recensement de la population, les enquêtes ménages, les statistiques
-  économiques et sociales.
+description: Statistical database (BDS) of Morocco's Haut Commissariat au Plan, with
+  indicators from the population census, household surveys, and economic and social
+  statistics.
 id: bdshcpma
 langs:
 - id: AR
   name: Arabic
 - id: FR
   name: French
-link: http://bds.hcp.ma
+link: https://bds.hcp.ma
 name: Base de Données Statistiques - HCP Maroc
 owner:
   link: https://www.hcp.ma
@@ -43,6 +43,9 @@ owner:
     level: 20
   name: Haut Commissariat au Plan (HCP)
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -60,10 +63,10 @@ tags:
 - recensement
 - household surveys
 - socio-economic
-- Morocco
 - official statistics
 - HCP
 - indicators
+- government
 topics:
 - id: SOCI
   name: Population and society
@@ -80,4 +83,4 @@ topics:
 - id: Economy
   name: Economy
   type: iso19115
-uid: temp00000476
+uid: cdi00035251

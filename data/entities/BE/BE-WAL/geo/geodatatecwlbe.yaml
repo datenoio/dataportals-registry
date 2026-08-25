@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Geoportal. managed by Regional Government of Tec Wl. powered by ArcGIS
-  Server. accessible at geodata.tec-wl.be.
+description: ArcGIS REST services of TEC, the Walloon public-transport operator
+  (Opérateur de Transport de Wallonie).
 endpoints:
 - type: arcgis:rest:info
   url: https://geodata.tec-wl.be/arcgis/rest/info?f=pjson
@@ -35,9 +35,9 @@ langs:
 - id: FR
   name: French
 link: https://geodata.tec-wl.be/arcgis/rest/services
-name: Regional Government of Tec Wl Geoportal
+name: TEC Wallonia geodata
 owner:
-  link: https://tec-wl.be
+  link: https://www.letec.be
   location:
     country:
       id: BE
@@ -46,7 +46,7 @@ owner:
     subregion:
       id: BE-WAL
       name: wallonne, Région
-  name: Regional Government of Tec Wl
+  name: TEC (Opérateur de Transport de Wallonie)
   type: Regional government
 properties:
   has_doi: false
@@ -69,4 +69,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00001241
+uid: cdi00035938

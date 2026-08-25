@@ -20,6 +20,10 @@ description: National DHIS2 electronic HMIS of the Ethiopia Ministry of Health. 
 endpoints:
 - type: dhis2:catalog
   url: https://dhis.moh.gov.et
+- type: dhis2:system-info
+  url: https://dhis.moh.gov.et/api/system/info
+- type: dhis2:datasets
+  url: https://dhis.moh.gov.et/api/dataSets.json?fields=id,displayName&pageSize=1
 id: dhismohgovet
 langs:
 - id: EN
@@ -55,6 +59,7 @@ tags:
 - DHIS2
 - government
 - restricted
+- has_api
 - Ethiopia
 topics:
 - id: HEAL

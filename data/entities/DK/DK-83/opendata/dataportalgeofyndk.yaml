@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,19 +17,15 @@ coverage:
     subregion:
       id: DK-83
       name: Syddanmark
-description: Data catalog supporting the municipalities on the island of Funen (Fyn)
-  with a common data foundation and data platform, offering background maps, thematic
-  map layers, historical aerial photos, and more. The platform serves municipalities,
-  businesses, educational institutions, associations, and citizens.
-endpoints:
-- type: ckan
-  url: https://dataportal.geofyn.dk/api/3
+description: Former CKAN open data portal of Geo Fyn, the inter-municipal geodata
+  partnership for Funen. dataportal.geofyn.dk now returns 404; Geo Fyn remains active
+  at geofyn.dk.
 id: dataportalgeofyndk
 langs:
 - id: DA
   name: Danish
 link: https://dataportal.geofyn.dk
-name: Geo Fyn
+name: Geo Fyn dataportal
 owner:
   link: https://www.geofyn.dk
   location:
@@ -54,7 +50,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
 - has_api

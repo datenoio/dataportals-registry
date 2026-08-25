@@ -15,7 +15,11 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: National database on agro-climatic disasters (GeoDataRisk).
+description: National GeoNode catalogue on agro-climatic disasters (GeoDataRisk),
+  operated by the Agence Nationale de la Protection Civile. Publishes risk, climate,
+  and related geospatial layers (about 20 datasets) with CSW and OGC services. The
+  vendor host sig-anpc.switch-maker.net is the same catalogue and is recorded separately
+  as deprecated.
 endpoints:
 - type: geonode:datasets
   url: https://geodatarisk.tg/api/datasets/
@@ -78,8 +82,18 @@ owner:
       id: TG
       name: Togo
     level: 20
-  name: Agence Nationale de Protection Civile (ANPC)
+  name: Agence Nationale de la Protection Civile (ANPC)
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
 software:
   id: geonode
   name: GeoNode
@@ -88,8 +102,18 @@ tags:
 - geospatial
 - disaster risk
 - climate
+- has_api
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00021549

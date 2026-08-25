@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Data catalog for [library collections or mapping resources], managed
-  under the official domain of a Malaysian government agency.
+description: MapProxy tile and OGC services of the Malaysian Remote Sensing Agency
+  (ARSM), serving remotely sensed imagery and related geospatial layers.
 endpoints:
 - type: wms111
   url: https://oclc.arsm.gov.my/mapproxy/service?REQUEST=GetCapabilities
@@ -35,15 +35,15 @@ langs:
 - id: MS
   name: Malay
 link: https://oclc.arsm.gov.my/mapproxy
-name: Malaysian government agency (ARSEM) Geoportal
+name: ARSM MapProxy
 owner:
-  link: https://oclc.arsm.gov.my/mapproxy
+  link: https://www.mysa.gov.my
   location:
     country:
       id: MY
       name: Malaysia
     level: 20
-  name: Malaysian government agency (ARSEM)
+  name: Malaysian Remote Sensing Agency
   type: Central government
 properties:
   has_doi: false

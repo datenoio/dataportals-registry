@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,34 +14,25 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Data catalog for the CARpathian CLIMate project (CARPATCLIM), providing
-  harmonized historic climate data (1961-2010) for the Carpathian Region, developed
-  for regional climatological studies, climate atlas, and drought monitoring.
-endpoints:
-- type: csw202
-  url: http://www.carpatclim-eu.org:10000/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: http://www.carpatclim-eu.org:10000/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: http://www.carpatclim-eu.org:10000/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+      name: Eastern Europe
+description: CARPATCLIM climate atlas for the Carpathian Region, publishing harmonized
+  historic climate grids (1961-2010) for regional climatology and drought studies.
+  The former GeoNetwork instance on port 10000 is unreachable; data remain on the
+  project website.
 id: wwwcarpatclimeuorg
 langs:
 - id: EN
   name: English
-link: http://www.carpatclim-eu.org:10000/geonetwork
+link: https://www.carpatclim-eu.org/
 name: CARPATCLIM - Carpathian Climate Data Portal
 owner:
-  link: http://www.carpatclim-eu.org
+  link: https://www.met.hu
   location:
     country:
       id: HU
       name: Hungary
     level: 20
-  name: Hungarian Meteorological Service
+  name: HungaroMet Nonprofit Zrt.
   type: Central government
 properties:
   has_doi: true
@@ -53,8 +44,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: geonetwork
-  name: GeoNetwork
+  id: custom
+  name: Custom software
 status: active
 tags:
 - climate

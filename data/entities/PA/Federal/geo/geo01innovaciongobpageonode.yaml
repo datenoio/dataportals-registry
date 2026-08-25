@@ -1,5 +1,5 @@
 access_mode:
-- closed
+- open
 api: true
 api_status: active
 catalog_type: Geoportal
@@ -15,6 +15,9 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
+description: National GeoNode geoportal of Panama's Autoridad Nacional para la Innovación
+  Gubernamental (AIG) at geo-01.innovacion.gob.pa, publishing SDI layers, documents,
+  and OGC services for the Infraestructura Panameña de Datos Espaciales (IPDE).
 endpoints:
 - type: geonode:layers
   url: https://geo-01.innovacion.gob.pa/api/layers/
@@ -84,15 +87,15 @@ langs:
 - id: ES
   name: Spanish
 link: https://geo-01.innovacion.gob.pa
-name: Autoridad Nacional Para La Innovación Gubernamental geonode
+name: GeoNode IPDE - AIG Panamá
 owner:
-  link: https://www.innovacion.gob.pa
+  link: https://aig.gob.pa
   location:
     country:
       id: PA
       name: Panama
     level: 20
-  name: Autoridad Nacional Para La Innovación Gubernamental
+  name: Autoridad Nacional para la Innovación Gubernamental (AIG)
   type: Central government
 properties:
   has_doi: false
@@ -110,7 +113,14 @@ status: active
 tags:
 - geospatial
 - government
+- GeoNode
+- Panama
+- IPDE
+- has_api
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
@@ -121,5 +131,3 @@ topics:
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00002414
-description: Geoportal. managed by Autoridad Nacional Para La Innovación Gubernamental.
-  powered by GeoNode. accessible at geo-01.innovacion.gob.pa.

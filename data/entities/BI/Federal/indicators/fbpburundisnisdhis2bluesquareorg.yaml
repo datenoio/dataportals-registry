@@ -15,16 +15,22 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: National DHIS2 health information system (SNIS) of the Burundi Ministry
-  of Public Health. Login is required to query routine health indicators.
+description: National DHIS2 health information system (SNIS) of Burundi's Ministry
+  of Public Health and the Fight against AIDS (MSPLS). Login is required to query
+  routine health indicators. The former Bluesquare FBP hostname no longer resolves;
+  the live instance is on minisante.gov.bi.
 endpoints:
 - type: dhis2:catalog
-  url: https://fbp-burundi-snis.dhis2.bluesquare.org
+  url: https://dhis2.minisante.gov.bi
+- type: dhis2:system-info
+  url: https://dhis2.minisante.gov.bi/api/system/info
+- type: dhis2:datasets
+  url: https://dhis2.minisante.gov.bi/api/dataSets.json?fields=id,displayName&pageSize=1
 id: fbpburundisnisdhis2bluesquareorg
 langs:
 - id: FR
   name: French
-link: https://fbp-burundi-snis.dhis2.bluesquare.org
+link: https://dhis2.minisante.gov.bi
 name: Burundi Système National d'Information Sanitaire (SNIS)
 owner:
   link: https://minisante.gov.bi
@@ -55,6 +61,7 @@ tags:
 - DHIS2
 - government
 - restricted
+- has_api
 - Burundi
 topics:
 - id: HEAL

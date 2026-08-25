@@ -11,11 +11,14 @@ coverage:
     country:
       id: CN
       name: China
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Esri ArcGIS Server REST endpoint providing geospatial data services.
+    subregion:
+      id: CN-AH
+      name: Anhui Sheng
+description: ArcGIS REST services of the Bengbu Bureau of Natural Resources and Planning.
 endpoints:
 - type: arcgis:rest:services
   url: http://gis.zrzy.bengbu.gov.cn/arcgis/rest/services?f=pjson
@@ -45,7 +48,7 @@ owner:
     subregion:
       id: CN-AH
       name: Anhui Sheng
-  name: Local Government of ArcGIS
+  name: Bengbu Bureau of Natural Resources and Planning
   type: Local government
 properties:
   has_doi: false
@@ -83,4 +86,4 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-uid: temp00005762
+uid: cdi00035698

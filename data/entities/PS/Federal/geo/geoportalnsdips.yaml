@@ -3,6 +3,9 @@ access_mode:
 api: true
 api_status: active
 catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -12,6 +15,9 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
+description: GeoNode 4.1.5 geoportal of Palestine's National Spatial Data Infrastructure.
+  It publishes a small national geospatial catalogue (4 datasets, including regional
+  roads) with CSW, OAI-PMH, and GeoServer OGC services. nsdi.ps redirects here.
 endpoints:
 - type: geonode:datasets
   url: https://geoportal.nsdi.ps/api/datasets/
@@ -68,6 +74,7 @@ langs:
 link: https://geoportal.nsdi.ps
 name: Palestine Geoportal (National Spatial Data Infrastructure)
 owner:
+  link: https://geoportal.nsdi.ps
   location:
     country:
       id: PS
@@ -75,28 +82,48 @@ owner:
     level: 20
   name: Palestine National Spatial Data Infrastructure
   type: Central government
-  link: https://nsdi.ps
+properties:
+  has_doi: false
+  is_national: true
+  dataset_count_reported: 4
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
 software:
   id: geonode
   name: GeoNode
 status: active
-uid: cdi00021541
+tags:
+- geospatial
+- GIS
+- government
+- NSDI
+- Palestine
+- has_api
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
 - id: Boundaries
   name: Boundaries
   type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-tags:
-- GIS
-- geospatial
-- government
-description: Geoportal. managed by Palestine National Spatial Data Infrastructure.
-  providing access to palestine geoportal (national spatial data infrastructure).
-content_types:
-- dataset
-- map_layer
+uid: cdi00021541

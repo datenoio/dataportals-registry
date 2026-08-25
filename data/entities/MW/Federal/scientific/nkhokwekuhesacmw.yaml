@@ -1,10 +1,11 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -14,12 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Nkhokwe DSpace institutional repository of the Kamuzu University of Health
-  Sciences, providing open access to theses, publications, and learning resources.
-endpoints:
-- type: oaipmh20
-  url: https://nkhokwe.kuhes.ac.mw/oai/request?verb=Identify
-  version: '2.0'
+description: Former Nkhokwe DSpace institutional repository of the Kamuzu University
+  of Health Sciences. The nkhokwe.kuhes.ac.mw hostname now redirects to the WordPress
+  library site at library.kuhes.ac.mw; OAI-PMH and REST endpoints are gone.
 id: nkhokwekuhesacmw
 langs:
 - id: EN
@@ -47,7 +45,7 @@ rights:
 software:
   id: dspace
   name: DSpace
-status: active
+status: inactive
 tags:
 - DSpace
 - institutional repository

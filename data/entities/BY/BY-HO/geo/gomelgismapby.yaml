@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,24 +18,16 @@ coverage:
     subregion:
       id: BY-HO
       name: Gomel'skaja oblast'
-description: GIS and geospatial data services for Gomel
-endpoints:
-- type: arcgis:rest:info
-  url: https://gomel.gismap.by/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://gomel.gismap.by/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://gomel.gismap.by/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://gomel.gismap.by/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://gomel.gismap.by/arcgis/rest/services?f=geositemap
+description: Former ArcGIS REST services for Gomel GIS Map. The host gomel.gismap.by
+  no longer responds.
 id: gomelgismapby
 langs:
 - id: RU
   name: Russian
-link: https://gomel.gismap.by/arcgis/rest/services/
-name: Gomel ArcGIS REST Services
+- id: BE
+  name: Belarusian
+link: https://gomel.gismap.by/arcgis/rest/services
+name: Gomel GIS Map ArcGIS REST services
 owner:
   link: https://gomel.gismap.by
   location:
@@ -46,7 +38,7 @@ owner:
     subregion:
       id: BY-HO
       name: Gomel'skaja oblast'
-  name: Gomel GIS Map
+  name: Gomel regional GIS Map
   type: Local government
 properties:
   has_doi: false
@@ -62,10 +54,9 @@ software:
   name: ArcGIS Server
 status: deprecated
 tags:
-- GIS
+- geospatial
 - ArcGIS
-- Geospatial
-- Regional
+- GIS
 topics:
 - id: Location
   name: Location
@@ -76,4 +67,7 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 uid: cdi00004340

@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NA
+      name: Namibia
+    level: 20
+    macroregion:
+      id: '018'
+      name: Southern Africa
+description: WMO WIS 2.0 in a box node of the Namibia Meteorological Service. Publishes
+  meteorological discovery metadata and collections through pygeoapi. HTTPS is not
+  available on this host.
+endpoints:
+- type: pygeoapi:openapi
+  url: http://wis2box.meteona.com/oapi/openapi
+  version: '1.0'
+- type: pygeoapi:collections
+  url: http://wis2box.meteona.com/oapi/collections/?f=json
+  version: '1.0'
+id: wis2boxmeteonacom
+langs:
+- id: EN
+  name: English
+link: http://wis2box.meteona.com
+name: Namibia - WIS 2.0 in a box
+owner:
+  link: http://www.meteona.com
+  location:
+    country:
+      id: NA
+      name: Namibia
+    level: 20
+  name: Namibia Meteorological Service
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: wis20box
+  name: Wis 2.0 Box
+status: active
+tags:
+- weather
+- meteorology
+- WIS2box
+- government
+- has_api
+topics:
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00005105

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,9 @@ coverage:
     subregion:
       id: BR-SP
       name: São Paulo
-description: PRODAM GeoServer hosting GeoSampa map services for the City of São Paulo.
+description: Legacy/internal GeoSampa WMS hostname (wms.geosampa.prodam) without a
+  public TLD. Canonical GeoServer is wms.geosampa.prefeitura.sp.gov.br.
+  Marked inactive as a non-resolvable duplicate of the municipal GeoSampa service.
 id: wmsgeosampaprodam
 langs:
 - id: PT
@@ -49,7 +51,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - geospatial
 - orthophotos
@@ -67,6 +69,3 @@ topics:
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00026934
-endpoints:
-- type: api
-  url: http://wms.geosampa.prodam/geoserver/ows?service=WFS&request=GetCapabilities

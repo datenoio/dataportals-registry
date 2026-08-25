@@ -1,0 +1,92 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: KW
+      name: Kuwait
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: KW-FA
+      name: Al Farwānīyah
+description: ArcGIS Server catalogue for Sabah Al-Salem University City, Kuwait University's
+  campus in Al-Shadadiya (Farwaniya Governorate). Publishes campus operations map
+  services across common, navigation, utilities, and website folders.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.ssuc.ku.edu.kw/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.ssuc.ku.edu.kw/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.ssuc.ku.edu.kw/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.ssuc.ku.edu.kw/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.ssuc.ku.edu.kw/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.ssuc.ku.edu.kw/server/rest/services?f=kmz
+id: gisssuckuedukw
+langs:
+- id: EN
+  name: English
+- id: AR
+  name: Arabic
+link: https://gis.ssuc.ku.edu.kw/server/rest/services
+name: Kuwait University Sabah Al-Salem University City GIS
+owner:
+  link: https://www.ku.edu.kw
+  location:
+    country:
+      id: KW
+      name: Kuwait
+    level: 20
+  name: Kuwait University
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- campus
+- geoportal
+- GIS
+- has_api
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00004945

@@ -12,16 +12,19 @@ coverage:
       name: Jamaica
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: Provides access to timely and relevant data from various ministries and
-  agencies in Jamaica.
+description: Official DKAN open data portal of the Government of Jamaica. Publishes
+  datasets from ministries and agencies covering agriculture, economy, education,
+  environment, finance, health, infrastructure, society, technology, and transport.
 endpoints:
 - type: ckan:package-list
   url: https://data.gov.jm/api/3/action/package_list
   version: '3'
 - type: dcatus11
   url: https://data.gov.jm/data.json
+- type: dcat:xml
+  url: https://data.gov.jm/catalog.xml
 id: datagovjm
 identifiers:
 - id: wikidata
@@ -31,7 +34,7 @@ langs:
 - id: EN
   name: English
 link: https://data.gov.jm
-name: Jamaica Open Data Catalog
+name: Jamaica Open Data
 owner:
   link: https://www.gov.jm
   location:
@@ -44,6 +47,7 @@ owner:
 properties:
   has_doi: false
   is_national: true
+  dataset_count_reported: 32
 rights:
   license_id: null
   license_name: null
@@ -57,13 +61,52 @@ software:
 status: active
 tags:
 - government
-- has_api
-- government data
 - open data
-- ministries
-- agencies
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00000970

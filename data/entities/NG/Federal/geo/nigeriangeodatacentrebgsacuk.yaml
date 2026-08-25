@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,28 +15,10 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Collects and preserves geoscientific data and information on Nigeria,
-  making them available for the long-term to a wide range of users and communities.
-  The GDC is responsible for managing valuable geoscience-related information and
-  datasets. Data held covers many geological disciplines (mineral exploration, resources
-  management, aeromagnetic, geochemical, geological maps and others).
-endpoints:
-- type: geonetwork:query
-  url: https://nigerian-geodata-centre.bgs.ac.uk/geonetwork/srv/eng/q
-- type: geonetwork:records
-  url: https://nigerian-geodata-centre.bgs.ac.uk/geonetwork/srv/api/records
-- type: openapi
-  url: https://nigerian-geodata-centre.bgs.ac.uk/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: https://nigerian-geodata-centre.bgs.ac.uk/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://nigerian-geodata-centre.bgs.ac.uk/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://nigerian-geodata-centre.bgs.ac.uk/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+description: Former BGS-hosted GeoNetwork for the Nigerian Geodata Centre, covering
+  mineral exploration, aeromagnetic, geochemical, and geological map holdings. The
+  hostname nigerian-geodata-centre.bgs.ac.uk currently does not resolve. NGSA later
+  pointed data holdings at miningdecision.minesandsteel.gov.ng.
 id: nigeriangeodatacentrebgsacuk
 langs:
 - id: EN
@@ -64,15 +46,13 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
 - government
-- has_api
 - geology
 - earth science
 - minerals
-- geography
 - Nigeria
 - NGSA
 topics:

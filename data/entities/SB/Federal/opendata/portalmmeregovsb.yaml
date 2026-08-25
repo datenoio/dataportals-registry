@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: Public mineral rights repository of the Ministry of Mines, Energy and
-  Rural Electrification, published from MCAS (RDF Online Repository; solomon-island.revenuedev.org).
+description: Public mineral rights and mining cadastre repository of the Ministry
+  of Mines, Energy and Rural Electrification. Published from MCAS via RDF Online
+  Repository (also hosted at solomon-island.revenuedev.org).
 endpoints:
 - type: rdfrepository:catalog
   url: https://portal.mmere.gov.sb/
@@ -52,11 +53,18 @@ status: active
 tags:
 - mining
 - cadastre
-- MCAS
+- licenses
+- extractives
+- energy
 - government
+- MCAS
+- has_api
 topics:
 - id: ECON
   name: Economy and finance
+  type: eudatatheme
+- id: ENER
+  name: Energy
   type: eudatatheme
 - id: ENVI
   name: Environment

@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -12,13 +13,16 @@ coverage:
       name: Botswana
     level: 20
     macroregion:
-      id: 018
+      id: '018'
       name: Southern Africa
 description: BIUSTRE, the Botswana International University of Science and Technology
   DSpace institutional repository for staff publications, theses, and conference outputs.
+  OAI-PMH and REST are not exposed; a sitemap is available.
 endpoints:
 - type: dspace:catalog
   url: https://repository.biust.ac.bw/
+- type: sitemap
+  url: https://repository.biust.ac.bw/sitemap
 id: repositorybiustacbw
 langs:
 - id: EN

@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: Official geospatial data services portal for City of Geoplatform providing
-  GIS data and map layers via ArcGIS REST API.
+description: ArcGIS REST catalog of geospatial services operated by the U.S. Bureau of
+  Indian Affairs on the federal GeoPlatform.
 endpoints:
 - type: arcgis:rest:info
   url: https://biamaps.geoplatform.gov/server/arcgis/rest/services/info?f=pjson
@@ -29,7 +29,7 @@ langs:
 - id: EN
   name: English
 link: https://biamaps.geoplatform.gov/server/arcgis/rest/services
-name: City of Geoplatform GIS Portal
+name: Bureau of Indian Affairs GeoPlatform GIS
 owner:
   link: https://biamaps.geoplatform.gov
   location:
@@ -40,6 +40,7 @@ owner:
   name: U.S. Bureau of Indian Affairs
   type: Central government
 properties:
+  is_national: true
   has_doi: false
 rights:
   license_id: null
@@ -57,7 +58,7 @@ tags:
 - REST
 - GIS
 - geospatial data
-- city government
+- federal government
 topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover

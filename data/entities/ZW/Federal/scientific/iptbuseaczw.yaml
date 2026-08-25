@@ -14,9 +14,14 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: GBIF Zimbabwe IPT is the official IPT for GBIF Zimbabwe. It is hosted
-  at Bindura University of Science Education (BUSE)
+description: Official GBIF Zimbabwe Integrated Publishing Toolkit, hosted by Bindura
+  University of Science Education, for biodiversity datasets from Zimbabwean
+  publishers.
 endpoints:
+- type: dcat:ttl
+  url: https://ipt.buse.ac.zw/ipt/dcat
+- type: ipt:dataset
+  url: https://ipt.buse.ac.zw/ipt/inventory/dataset
 - type: rss
   url: https://ipt.buse.ac.zw/ipt/rss.do
   version: '2.0'
@@ -24,7 +29,7 @@ id: iptbuseaczw
 langs:
 - id: EN
   name: English
-link: https://ipt.buse.ac.zw
+link: https://ipt.buse.ac.zw/ipt
 name: GBIF Zimbabwe IPT
 owner:
   link: https://www.buse.ac.zw/
@@ -33,8 +38,17 @@ owner:
       id: ZW
       name: Zimbabwe
     level: 20
-  name: Bindura University Of Science Education
+  name: Bindura University of Science Education
   type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -44,6 +58,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota

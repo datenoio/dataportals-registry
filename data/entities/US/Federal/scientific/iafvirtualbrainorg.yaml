@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: The Image Attribution Framework Development Repository is a system for
+  neuroimaging data citation and credit with a practical implementation that meets
+  the objectives of unique identification, data use tracking, and integration with
+  traditional credit attribution systems. This reference implementation was created
+  which mirrors the structure of the Neuroimaging Informatics Tools and Resources
+  Clearinghouse (NITRC) neuroimaging data repository using the XNAT platform. DOIs
+  can be assigned upon dataset upload, meaning that project-level identifiers as well
+  as per-image DOIs are created. Note that this reference implementation is for illustration
+  purposes. It is expected that ultimate success of this concept will be through the
+  implementation of these recommendations within existing data hosts, and not through
+  this reference implementation itself.
+endpoints:
+- type: xnat:catalog
+  url: http://iaf.virtualbrain.org
+id: iafvirtualbrainorg
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=fairsharing_::59eb5dd36914c29b299c84b7ddaf08ec
+  value: fairsharing_::59eb5dd36914c29b299c84b7ddaf08ec
+langs:
+- id: EN
+  name: English
+link: http://iaf.virtualbrain.org/
+name: Image Attribution Framework Development Repository
+owner:
+  link: https://www.umassmed.edu/psychiatry/candi/
+  location:
+    country:
+      id: US
+      name: United States
+  name: The Child and Adolescent NeuroDevelopment Initiative (CANDI), Department of
+    Psychiatry, University of Massachusetts Medical School, USA
+  type: Academy
+software:
+  id: xnat
+  name: XNAT
+status: active
+tags:
+- scientific
+- research data
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00033297

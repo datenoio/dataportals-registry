@@ -1,5 +1,7 @@
 access_mode:
 - open
+- restricted
+api: false
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
@@ -14,22 +16,29 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: Official website of the Uzbek State Committee on Statistics (information
-  not fully extracted, but inferred from context and standard purpose of such domains)
+description: Geographic information system geoportal of the State Urban Cadastre
+  (Davlat shaharsozlik kadastri / ГГК) of Uzbekistan. Publishes urban-planning layers,
+  cadastral maps, and related spatial data. Public map layers are available without
+  login; full use requires administrator-issued accounts. The site returned HTTP 403
+  to automated clients on 24 August 2026.
 id: dshkuz
 langs:
+- id: UZ
+  name: Uzbek
 - id: RU
   name: Russian
-link: https://dshk.uz/ru/main/
-name: Геопортал ГИС ГГК Республики Узбекистан
+- id: EN
+  name: English
+link: https://dshk.uz
+name: GIS Geoportal of the State Urban Cadastre of Uzbekistan
 owner:
-  link: https://dshk.uz
+  link: https://www.uzgashkliti.uz
   location:
     country:
       id: UZ
       name: Uzbekistan
     level: 20
-  name: ГГК Республики Узбекистан
+  name: UZGASHKLITI State Unitary Enterprise
   type: Central government
 rights:
   license_id: null
@@ -44,15 +53,26 @@ software:
 status: active
 tags:
 - geospatial
+- cadastre
+- urban planning
 - government
-- statistics
-- government data
-- Uzbekistan
 topics:
-- id: ECON
-  name: Economy and finance
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
-- id: Society
-  name: Society
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Structure
+  name: Structure
   type: iso19115
 uid: cdi00001942

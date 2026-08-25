@@ -14,32 +14,33 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: El catálogo de microdatos es una colección de bases de datos del Instituto
-  Nacional de Estadística y otras entidades del Sistema de Estadísticas Oficiales
-  del Estado Plurinacional de Bolivia.
+description: National Data Archive (ANDA) of Bolivia's INE, a NADA microdata catalog
+  with 120 studies from official statistics (censuses, surveys, and administrative
+  sources).
 endpoints:
 - type: nada:catalog-search
-  url: http://anda.ine.gob.bo/index.php/api/catalog/search
+  url: https://anda.ine.gob.bo/index.php/api/catalog/search
 - type: nada:csvexport
-  url: http://anda.ine.gob.bo/index.php/catalog/export/csv?ps=5000&collection[]
+  url: https://anda.ine.gob.bo/index.php/catalog/export/csv?ps=5000&collection[]
 id: andainegobbo
 langs:
 - id: ES
   name: Spanish
-link: http://anda.ine.gob.bo
+link: https://anda.ine.gob.bo
 name: Catálogo del Archivo Nacional de Datos (ANDA)
 owner:
-  link: https://anda.ine.gob.bo
+  link: https://www.ine.gob.bo
   location:
     country:
       id: BO
       name: Bolivia
     level: 20
-  name: Instituto Nacional de Estadística (INE) y otras entidades del Sistema de Estadísticas
-    Oficiales del Estado Plurinacional de Bolivia
+  name: Instituto Nacional de Estadística (INE)
   type: Central government
 properties:
   has_doi: false
+  is_national: true
+  dataset_count_reported: 120
 rights:
   license_id: null
   license_name: null
@@ -66,31 +67,22 @@ topics:
 - id: ECON
   name: Economy and finance
   type: eudatatheme
-- id: SOCI
-  name: Population and society
-  type: eudatatheme
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
-  type: eudatatheme
-- id: ECON
-  name: Economy and finance
   type: eudatatheme
 - id: HEAL
   name: Health
   type: eudatatheme
-- id: Economy
-  name: Economy
-  type: iso19115
 - id: Society
   name: Society
   type: iso19115
-- id: Health
-  name: Health
+- id: Economy
+  name: Economy
   type: iso19115
 - id: Farming
   name: Farming
   type: iso19115
-- id: Society
-  name: Society
+- id: Health
+  name: Health
   type: iso19115
 uid: temp00003410

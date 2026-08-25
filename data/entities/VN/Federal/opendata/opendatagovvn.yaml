@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,33 +14,23 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Vietnamese government open data catalog. open data portal. managed by
-  Vietnam ministry of information and communication . powered by CKAN. accessible
-  at open.data.gov.vn.
-endpoints:
-- type: ckan
-  url: https://open.data.gov.vn/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://open.data.gov.vn/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://open.data.gov.vn/api/3/action/package_list
-  version: '3'
+description: Former CKAN national open data catalog (open.data.gov.vn) operated by Vietnam's Ministry
+  of Information and Communications, later merged into the Ministry of Science and Technology. The open.data.gov.vn
+  and data.gov.vn hostnames no longer resolve.
 id: opendatagovvn
 langs:
 - id: VN
   name: Vietnamese
 link: https://open.data.gov.vn
-name: Vietnam open data portal
+name: Vietnam National Open Data Portal
 owner:
-  link: https://english.mic.gov.vn
+  link: https://english.mst.gov.vn
   location:
     country:
       id: VN
       name: Vietnam
     level: 20
-  name: 'Vietnam ministry of information and communication '
+  name: Ministry of Science and Technology
   type: Central government
 properties:
   has_doi: false
@@ -55,14 +45,18 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
-- has_api
 - open data
-- data catalog
+- CKAN
+- national portal
+- Vietnam
 topics:
 - id: GOVE
   name: Government and public sector
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
   type: eudatatheme
 uid: cdi00001954

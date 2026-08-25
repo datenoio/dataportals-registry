@@ -15,19 +15,20 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Official statistics and data catalog portal of Costa Rica, managed by
-  INEC.
+description: Official NADA microdata catalog of the Instituto Nacional de Estadística
+  y Censos (INEC), with survey and census study documentation. Most files are
+  disseminated under limited/restricted access.
 endpoints:
 - type: nada:catalog-search
-  url: http://sistemas.inec.cr/pad5/index.php/api/catalog/search
+  url: https://sistemas.inec.cr/pad5/index.php/api/catalog/search
 id: sistemasineccr
 langs:
 - id: ES
   name: Spanish
-link: http://sistemas.inec.cr/pad5/index.php
+link: https://sistemas.inec.cr/pad5/index.php
 name: Instituto Nacional de Estadística y Censos (INEC), Costa Rica - PAD5 Data Catalog
 owner:
-  link: https://inec.cr
+  link: https://www.inec.go.cr
   location:
     country:
       id: CR
@@ -36,6 +37,7 @@ owner:
   name: Instituto Nacional de Estadística y Censos Costa Rica
   type: Central government
 properties:
+  dataset_count_reported: 183
   has_doi: false
   transferable_topics: true
 rights:

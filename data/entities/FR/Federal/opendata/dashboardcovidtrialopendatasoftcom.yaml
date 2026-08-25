@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -16,11 +16,6 @@ coverage:
       name: Western Europe
 description: A data catalog providing access to recovery-related datasets and visualizations,
   supporting data exploration, API access, and metadata management.
-endpoints:
-- type: opendatasoft
-  url: https://dashboardcovid.trial.opendatasoft.com/api
-- type: sitemap
-  url: https://dashboardcovid.trial.opendatasoft.com/sitemap.xml
 id: dashboardcovidtrialopendatasoftcom
 langs:
 - id: FR
@@ -50,7 +45,7 @@ rights:
 software:
   id: opendatasoft
   name: OpenDataSoft
-status: active
+status: inactive
 tags:
 - COVID-19
 - Recovery

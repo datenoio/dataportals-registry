@@ -15,21 +15,24 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: WIS 2.0 in a box provides a platform with the capabilities for centres
-  to integrate their data holdings and publish them to the WMO Information System
-  with a plug and play capability supporting data publishing, discovery and access
+description: WIS 2.0 in a box node of the Libyan National Center of Meteorology
+  (centre-id ly-lnmc). Publishes hourly SYNOP observations, daily climate values,
+  CAP alerts, station metadata, and WIS2 discovery records through a public UI and
+  OGC API. The HTTP service moved from 102.221.8.94 to 102.209.32.134.
 endpoints:
 - type: pygeoapi:openapi
-  url: http://102.221.8.94/oapi/openapi
+  url: http://102.209.32.134/oapi/openapi
   version: '1.0'
 - type: pygeoapi:collections
-  url: http://102.221.8.94/oapi/collections/?f=json
+  url: http://102.209.32.134/oapi/collections?f=json
   version: '1.0'
 id: '102221894'
 langs:
+- id: AR
+  name: Arabic
 - id: EN
   name: English
-link: http://102.221.8.94
+link: http://102.209.32.134
 name: Libya - WIS 2.0 in a box
 owner:
   link: https://www.lnmc.org.ly
@@ -57,7 +60,11 @@ status: active
 tags:
 - meteorology
 - weather
-- synoptic observations
+- climate
+- WIS2
+- government
+- has_api
+- Libya
 topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere

@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: false
-api_status: uncertain
+api_status: inactive
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -17,6 +17,8 @@ coverage:
       name: Western Africa
 description: DSTI Education Data Hub with school census data, examination results,
   a searchable school directory, and indicator maps for the Government of Sierra Leone.
+  The hostname resolves to CloudFront but currently resets connections, so the portal
+  is not reachable.
 id: educationdatahubdstigovsl
 langs:
 - id: EN
@@ -45,7 +47,7 @@ rights:
 software:
   id: custom
   name: Custom software
-status: active
+status: inactive
 tags:
 - education
 - schools

@@ -5,10 +5,8 @@ api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
-- map
+- map_layer
 - document
-- geostory
-- dashboard
 coverage:
 - location:
     country:
@@ -18,16 +16,43 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-    subregion: &id001
+    subregion:
       id: NG-OG
       name: Ogun
-description: GeoNode-based spatial data infrastructure for Ogun State, Nigeria, providing
-  access to datasets, maps, documents, GeoStories, and dashboards.
+description: GeoNode spatial data infrastructure of Ogun State, publishing datasets,
+  maps, and documents for state planning (42 datasets and 12 documents on GeoNode 4.4)
+  with CSW and OGC services.
 endpoints:
 - type: geonode:datasets
   url: https://gis.ogunstate.gov.ng/api/datasets/
+- type: geonode:documents
+  url: https://gis.ogunstate.gov.ng/api/documents/
 - type: geonode:maps
   url: https://gis.ogunstate.gov.ng/api/maps/
+- type: csw202
+  url: https://gis.ogunstate.gov.ng/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://gis.ogunstate.gov.ng/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://gis.ogunstate.gov.ng/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://gis.ogunstate.gov.ng/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://gis.ogunstate.gov.ng/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: https://gis.ogunstate.gov.ng/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://gis.ogunstate.gov.ng/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs111
+  url: https://gis.ogunstate.gov.ng/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
 id: gisogunstategovng
 langs:
 - id: EN
@@ -41,9 +66,21 @@ owner:
       id: NG
       name: Nigeria
     level: 30
-    subregion: *id001
+    subregion:
+      id: NG-OG
+      name: Ogun
   name: Ogun State Government
   type: Regional government
+properties:
+  has_doi: false
+  dataset_count_reported: 42
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
 software:
   id: geonode
   name: GeoNode
@@ -53,12 +90,15 @@ tags:
 - GeoNode
 - geospatial
 - spatial data infrastructure
-- Ogun State
+- Ogun
 - Nigeria
-uid: cdi00021537
+- has_api
 topics:
 - id: GOVE
   name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
   type: eudatatheme
 - id: Location
   name: Location
@@ -66,3 +106,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
+uid: cdi00021537

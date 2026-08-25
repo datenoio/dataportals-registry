@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: SA-05
       name: Al Qaşīm
-description: GIS REST services provided by Qassim government, covering various geospatial
-  datasets.
+description: ArcGIS REST services catalog of Qassim Municipality, publishing
+  geospatial layers for cities and governorates of Qassim Region.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis2.qassim.gov.sa:6443/arcgis/rest/info?f=pjson
@@ -85,9 +85,6 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: Boundaries
   name: Boundaries
   type: iso19115
@@ -109,8 +106,8 @@ topics:
 - id: Location
   name: Location
   type: iso19115
-- id: Oceans
-  name: Oceans
+- id: Planning / Cadastre
+  name: Planning / Cadastre
   type: iso19115
 - id: Society
   name: Society

@@ -13,11 +13,11 @@ coverage:
       name: Trinidad and Tobago
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: WIS 2.0 in a box provides a platform with the capabilities for centres
-  to integrate their data holdings and publish them to the WMO Information System
-  with a plug and play capability supporting data publishing, discovery and access
+description: WIS 2.0 in a box node of the Trinidad and Tobago Meteorological Service.
+  Publishes WMO synoptic surface observations, station metadata, and discovery records
+  via pygeoapi OpenAPI collections.
 endpoints:
 - type: pygeoapi:openapi
   url: https://wis.metoffice.gov.tt/oapi/openapi
@@ -30,7 +30,7 @@ langs:
 - id: EN
   name: English
 link: https://wis.metoffice.gov.tt
-name: Trinidad & Tobago Meteorological Service
+name: Trinidad and Tobago Meteorological Service WIS 2.0 in a box
 owner:
   link: https://www.metoffice.gov.tt
   location:
@@ -54,11 +54,11 @@ software:
   name: Wis 2.0 Box
 status: active
 tags:
+- meteorology
 - climate
 - weather
-- meteorology
-- Trinidad
-- Tobago
+- WIS2
+- has_api
 topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere

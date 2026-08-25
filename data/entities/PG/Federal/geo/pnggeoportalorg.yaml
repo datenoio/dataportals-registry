@@ -15,12 +15,13 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: Data catalog providing access to GIS and spatial datasets related to
-  Papua New Guinea, including digital atlases, interactive spatial data viewers, and
-  open access geospatial data repositories.
+description: Biodiversity and Climate Geoportal (GeoNode 4.1.5) for Papua New Guinea.
+  UNDP operates the catalog under the PNG Natural Resource Management Hub, with layers
+  and documents on biodiversity, climate, forests, and Biodiversity and Climate Fund
+  projects.
 endpoints:
-- type: geonode:layers
-  url: https://png-geoportal.org/api/layers/
+- type: geonode:datasets
+  url: https://png-geoportal.org/api/datasets/
 - type: geonode:documents
   url: https://png-geoportal.org/api/documents/
 - type: wms111
@@ -32,8 +33,6 @@ endpoints:
 - type: wcs111
   url: https://png-geoportal.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
-- type: geonode:datasets
-  url: https://png-geoportal.org/api/datasets/
 - type: csw202
   url: https://png-geoportal.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
@@ -81,18 +80,19 @@ langs:
 - id: EN
   name: English
 link: https://png-geoportal.org
-name: Papua New Guinea Environment Geoportal
+name: Papua New Guinea Biodiversity and Climate Geoportal
 owner:
-  link: https://png-geoportal.org
+  link: https://www.undp.org/papua-new-guinea
   location:
     country:
       id: PG
       name: Papua New Guinea
     level: 20
-  name: Papua New Guinea Environment
-  type: Central government
+  name: United Nations Development Programme (UNDP)
+  type: International
 properties:
   has_doi: false
+  dataset_count_reported: 149
 rights:
   license_id: null
   license_name: null
@@ -105,26 +105,33 @@ software:
   name: GeoNode
 status: active
 tags:
-- GIS
-- Pacific
-- Papua New Guinea
+- geospatial
+- biodiversity
+- climate
 - environment
 - geonode
 - geoportal
-- geospatial
-- spatial data
+- UNDP
+- Papua New Guinea
+- has_api
 topics:
-- id: REGI
-  name: Regions and cities
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
 - id: Environment
   name: Environment
   type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
 - id: Geoscientific Information
   name: Geoscientific Information
-  type: iso19115
-- id: Elevation
-  name: Elevation
   type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover

@@ -13,16 +13,18 @@ coverage:
       name: Serbia
     level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
     subregion:
       id: RS-00
       name: Beograd
-description: Institutional repository of the University of Belgrade Faculty of Technology
-  and Metallurgy for research papers and related scientific outputs.
+description: DSpace institutional repository of the University of Belgrade Faculty of Technology
+  and Metallurgy (OAI repositoryName TechnoRep) for research papers and related scientific
+  outputs. OAI-PMH Identify is public.
 endpoints:
-- type: dspace:catalog
-  url: https://technorep.tmf.bg.ac.rs/
+- type: oaipmh20
+  url: https://technorep.tmf.bg.ac.rs/oai/request?verb=Identify
+  version: '2.0'
 id: technoreptmfbgacrs
 identifiers:
 - id: re3data
@@ -36,7 +38,7 @@ langs:
 link: https://technorep.tmf.bg.ac.rs/
 name: TechnoRep
 owner:
-  link: http://www.tmf.bg.ac.rs/
+  link: https://www.tmf.bg.ac.rs/
   location:
     country:
       id: RS
@@ -66,6 +68,7 @@ tags:
 - metallurgy
 - industrial engineering
 - research data
+- dspace
 topics:
 - id: TECH
   name: Science and technology

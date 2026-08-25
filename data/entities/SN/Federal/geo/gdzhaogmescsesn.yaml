@@ -21,9 +21,24 @@ description: Geoportal for environmental data and protected areas in West Africa
   and Nigeria.
 endpoints:
 - type: geonode:datasets
-  url: http://gdzhao.gmes.cse.sn/api/v2/datasets/
+  url: http://gdzhao.gmes.cse.sn/api/datasets/
 - type: geonode:documents
-  url: http://gdzhao.gmes.cse.sn/api/v2/documents/
+  url: http://gdzhao.gmes.cse.sn/api/documents/
+- type: csw202
+  url: http://gdzhao.gmes.cse.sn/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://gdzhao.gmes.cse.sn/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: http://gdzhao.gmes.cse.sn/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: http://gdzhao.gmes.cse.sn/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: http://gdzhao.gmes.cse.sn/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
 id: gdzhaogmescsesn
 langs:
 - id: FR
@@ -39,7 +54,7 @@ owner:
       id: SN
       name: Senegal
     level: 20
-  name: GMES CSE / Centre de Suivi Écologique
+  name: Centre de Suivi Écologique (CSE)
   type: Central government
 rights:
   license_id: null
@@ -58,6 +73,7 @@ tags:
 - West Africa
 - wetlands
 - biodiversity
+- has_api
 topics:
 - id: ENVI
   name: Environment

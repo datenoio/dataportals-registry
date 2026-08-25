@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -12,11 +12,14 @@ coverage:
       name: World
     level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
 description: FAO World Information and Early Warning System on Plant Genetic Resources
   for Food and Agriculture (WIEWS), used for country-driven assessments of PGRFA conservation
   and use.
+endpoints:
+- type: fenix:catalog
+  url: https://www.fao.org/wiews/en/
 id: wwwfaoorgwiews
 langs:
 - id: EN

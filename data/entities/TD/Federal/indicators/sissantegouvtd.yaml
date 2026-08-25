@@ -15,18 +15,19 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: National DHIS2 health information system of the Chad Ministry of Public
-  Health. Login is required to query routine health indicators.
+description: National DHIS2 health management information system (Système d'Information
+  Sanitaire) of the Chad Ministry of Public Health. The application runs under /sisr;
+  login is required to query routine health indicators.
 endpoints:
 - type: dhis2:catalog
-  url: https://sis.sante.gouv.td
+  url: https://sis.sante.gouv.td/sisr
 id: sissantegouvtd
 langs:
 - id: FR
   name: French
 - id: EN
   name: English
-link: https://sis.sante.gouv.td
+link: https://sis.sante.gouv.td/sisr
 name: Système d'Information Sanitaire du Tchad
 owner:
   link: https://sante.gouv.td

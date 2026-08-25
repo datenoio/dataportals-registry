@@ -14,9 +14,11 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: This (Ckan) platform offers (mostly) government and other institutions
-  data in accordance with the Open Data Policy in Palestine - a framework for publishing
-  (non-private) data that is open (technically and legally).
+description: National CKAN portal of Palestine, managed by the Ministry of Telecommunications
+  and Digital Economy as chair of the ministerial open-data committee. It publishes
+  government and institutional datasets under the national Open Data Policy (40 packages
+  on the Action API). HTTPS currently fails certificate verification, so the public
+  site and API are served over HTTP.
 endpoints:
 - type: ckan
   url: http://opendata.ps/api/3
@@ -28,20 +30,30 @@ endpoints:
   url: http://opendata.ps/api/3/action/package_list
   version: '3'
 id: opendataps
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/open_data_ps
+  value: open_data_ps
 langs:
 - id: AR
   name: Arabic
+- id: EN
+  name: English
 link: http://opendata.ps
-name: Open Data in Palestine
+name: Palestine Open Data Portal
 owner:
-  link: https://www.mtit.pna.ps
+  link: https://www.mtde.gov.ps
   location:
     country:
       id: PS
       name: Palestine
     level: 20
-  name: Ministry of Telecom and Information Technology of Palestine
+  name: Ministry of Telecommunications and Digital Economy
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
+  dataset_count_reported: 40
 rights:
   license_id: null
   license_name: null
@@ -54,10 +66,21 @@ software:
   name: CKAN
 status: active
 tags:
+- government
+- has_api
 - open data
-- palestine
+- Palestine
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
 uid: cdi00004270

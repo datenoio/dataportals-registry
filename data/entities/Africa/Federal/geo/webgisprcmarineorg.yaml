@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: Africa
+      name: Africa
+    level: 10
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Géo-PRCM / GEOPRCM is the regional marine geoportal of the Regional Partnership
+  for Coastal and Marine Conservation in West Africa (PRCM). It publishes fisheries, marine
+  protected area, biodiversity, and coastal threat layers for Mauritania, Senegal, Cabo Verde,
+  Guinea, The Gambia, Sierra Leone, and Guinea-Bissau. The former webgis.prcmarine.org host
+  redirects to this ArcGIS Hub.
+endpoints:
+- type: dcatap201
+  url: https://geoprcm-prcm.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://geoprcm-prcm.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://geoprcm-prcm.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://geoprcm-prcm.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://geoprcm-prcm.hub.arcgis.com/sitemap.xml
+id: webgisprcmarineorg
+langs:
+- id: FR
+  name: French
+link: https://geoprcm-prcm.hub.arcgis.com/
+name: GEOPRCM (PRCM Marine Data Catalog)
+owner:
+  link: https://www.prcmarine.org
+  location:
+    country:
+      id: Africa
+      name: Africa
+    level: 10
+  name: Regional Partnership for Coastal and Marine Conservation (PRCM)
+  type: International
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- marine
+- gis
+- West Africa
+- biodiversity
+- fisheries
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00004070

@@ -17,15 +17,14 @@ coverage:
     subregion:
       id: ZA-WC
       name: Western Cape
-description: Commissioned by City of Cape Town c1932. Very detailed topographical
-  survey produced using traversing and conventional survey methods. Also includes
-  geospatial services such as aerial imagery, elevation models, and digital maps.
+description: City of Cape Town ERDAS APOLLO imagery services, including aerial
+  photography mosaics, hillshade, topographic backdrops and historical maps.
 id: cityimgcapetowngovza
 langs:
 - id: EN
   name: English
-link: https://cityimg.capetown.gov.za/erdas-apollo
-name: ERDAS APOLLO 2020 - City of Cape Town
+link: https://cityimg.capetown.gov.za/erdas-iws/esri/GeoSpatial%20Datasets/rest/services/
+name: City of Cape Town Aerial Imagery (ERDAS APOLLO)
 owner:
   link: https://capetown.gov.za
   location:
@@ -60,6 +59,8 @@ topics:
   type: eudatatheme
 uid: cdi00002015
 endpoints:
+- type: arcgis:rest:services
+  url: https://cityimg.capetown.gov.za/erdas-iws/esri/GeoSpatial%20Datasets/rest/services/?f=pjson
 - type: wms130
   url: https://cityimg.capetown.gov.za/erdas-iws/ogc/wms/?service=WMS&request=GetCapabilities&version=1.3.0
   version: 1.3.0

@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: Geospatial data portal providing environmental and spatial data access.
+description: GeoServer of the Slovenian Environment Agency (ARSO) providing OGC access
+  to environmental, water, and related spatial datasets.
 endpoints:
 - type: wfs100
   url: https://gis.arso.gov.si/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
@@ -60,7 +61,7 @@ langs:
 link: https://gis.arso.gov.si/geoserver/web/
 name: Slovenian Environment Agency (ARSO) Geoportal
 owner:
-  link: https://gis.arso.gov.si
+  link: https://www.arso.gov.si
   location:
     country:
       id: SI
@@ -89,9 +90,6 @@ tags:
 topics:
 - id: ENVI
   name: Environment
-  type: eudatatheme
-- id: TRAN
-  name: Transport
   type: eudatatheme
 - id: Environment
   name: Environment

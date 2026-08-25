@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
@@ -24,8 +25,8 @@ id: datasbsgovws
 langs:
 - id: EN
   name: English
-link: https://data.sbs.gov.ws/
-name: Samoa Bureau of Statistics Data Portal
+link: https://data.sbs.gov.ws
+name: Samoa Stats Portal
 owner:
   link: https://www.sbs.gov.ws
   location:
@@ -37,6 +38,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -52,8 +54,8 @@ tags:
 - statistics
 - government
 - official statistics
+- has_api
 - Samoa
-- open data
 topics:
 - id: SOCI
   name: Population and society
@@ -71,4 +73,3 @@ topics:
   name: Economy
   type: iso19115
 uid: cdi00013554
-api: true

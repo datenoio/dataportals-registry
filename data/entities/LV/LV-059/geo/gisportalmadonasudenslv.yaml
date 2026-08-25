@@ -18,16 +18,23 @@ coverage:
     subregion:
       id: LV-059
       name: Madonas novads
-description: ArcGIS REST services catalog for Madonas municipality, providing geospatial
-  data and services.
+description: ArcGIS REST services of SIA Madonas ūdens, the municipal water utility
+  of Madona Municipality. Spatial services for water-supply and related infrastructure.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisportal.madonasudens.lv/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisportal.madonasudens.lv/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisportal.madonasudens.lv/server/services?wsdl
 id: gisportalmadonasudenslv
 langs:
 - id: LV
   name: Latvian
 link: https://gisportal.madonasudens.lv/server/rest/services
-name: Madonas ArcGIS REST Services
+name: Madonas ūdens ArcGIS REST services
 owner:
-  link: https://www.madonasudens.lv/
+  link: https://www.madonasudens.lv
   location:
     country:
       id: LV
@@ -36,8 +43,8 @@ owner:
     subregion:
       id: LV-059
       name: Madonas novads
-  name: Madonas udens
-  type: Regional government
+  name: SIA Madonas ūdens
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -53,29 +60,17 @@ software:
 status: active
 tags:
 - geospatial
+- water
+- utilities
 - GIS
-- municipality
 topics:
-- id: TRAN
-  name: Transport
+- id: ENVI
+  name: Environment
   type: eudatatheme
-- id: REGI
-  name: Regions and cities
-  type: eudatatheme
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
-- id: Boundaries
-  name: Boundaries
+- id: Inland Waters
+  name: Inland Waters
   type: iso19115
-- id: Society
-  name: Society
+- id: Utilities / Communication
+  name: Utilities / Communication
   type: iso19115
 uid: cdi00010184
-endpoints:
-- type: arcgis:rest:info
-  url: https://gisportal.madonasudens.lv/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://gisportal.madonasudens.lv/arcgis/rest/services?f=pjson
-- type: sitemap
-  url: https://gisportal.madonasudens.lv/sitemap.xml

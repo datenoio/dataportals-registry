@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Catalog of GIS services hosted at portserver.georisk.gov.ph/arcgis/rest/services
+description: GeoRiskPH ArcGIS REST catalog of hazard and risk map services operated
+  by PHIVOLCS.
 endpoints:
 - type: arcgis:rest:info
   url: https://portserver.georisk.gov.ph/arcgis/rest/info?f=pjson
@@ -31,18 +32,18 @@ endpoints:
   url: https://portserver.georisk.gov.ph/arcgis/rest/services?f=kmz
 id: portservergeoriskgovph
 langs:
-- id: TL
-  name: Tagalog
+- id: EN
+  name: English
 link: https://portserver.georisk.gov.ph/arcgis/rest/services
-name: GeoRisk Portal Data Catalog
+name: GeoRiskPH Portal REST Services
 owner:
-  link: https://portserver.georisk.gov.ph/arcgis/rest/services
+  link: https://georisk.gov.ph
   location:
     country:
       id: PH
       name: Philippines
     level: 20
-  name: GeoRisk Portal
+  name: Philippine Institute of Volcanology and Seismology (PHIVOLCS)
   type: Central government
 properties:
   has_doi: false

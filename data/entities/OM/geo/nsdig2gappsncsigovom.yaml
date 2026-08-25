@@ -15,22 +15,33 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Data from the provided geoportal URL, structured using specified vocabularies
+description: Metadata catalog of the Oman National Spatial Data Infrastructure (ONSDI,
+  also known as Oman Explorer), operated by the National Centre for Statistics and
+  Information. The Esri Geoportal Server instance publishes ISO 19115 metadata for
+  national geospatial datasets and services used by government agencies and the public.
+endpoints:
+- type: sitemap
+  url: http://nsdig2gapps.ncsi.gov.om:8080/sitemap.xml
 id: nsdig2gappsncsigovom
 langs:
+- id: AR
+  name: Arabic
 - id: EN
   name: English
 link: http://nsdig2gapps.ncsi.gov.om:8080/geoportal
 name: National statistics and information Oman Geoportal
 owner:
-  link: https://ncsi.gov.om
+  link: https://www.ncsi.gov.om
   location:
     country:
       id: OM
       name: Oman
     level: 20
-  name: National centre for statistics and information
+  name: National Centre for Statistics and Information
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -49,7 +60,15 @@ tags:
 - geoportal
 - Oman
 - statistics
+- NSDI
+- metadata
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115
@@ -60,6 +79,3 @@ topics:
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00001265
-endpoints:
-- type: sitemap
-  url: http://nsdig2gapps.ncsi.gov.om:8080/sitemap.xml

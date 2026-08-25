@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,15 +15,16 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: GeoServer Web Service providing access to geospatial data layers
+description: Internal GeoServer hostname on the municipal network of Zaanstad; not reachable on the public
+  internet.
 id: mapsinternzaanstadgemlocal
 langs:
 - id: NL
   name: Dutch
 link: https://maps-intern.zaanstad.gem.local/geoserver
-name: Gemeente Zaanstad Geoportal
+name: Gemeente Zaanstad internal GeoServer
 owner:
-  link: https://maps-intern.zaanstad.gem.local
+  link: https://www.zaanstad.nl
   location:
     country:
       id: NL
@@ -46,7 +47,7 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: active
+status: inactive
 tags:
 - geoserver
 - wms
@@ -92,9 +93,4 @@ topics:
 - id: Transportation
   name: Transportation
   type: iso19115
-uid: temp00005365
-endpoints:
-- type: ogc:wms
-  url: https://maps-intern.zaanstad.gem.local/geoserver/ows?service=WMS&request=GetCapabilities
-- type: ogc:wfs
-  url: https://maps-intern.zaanstad.gem.local/geoserver/ows?service=WFS&request=GetCapabilities
+uid: cdi00035107

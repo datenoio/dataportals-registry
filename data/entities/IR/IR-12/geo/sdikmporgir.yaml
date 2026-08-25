@@ -3,6 +3,9 @@ access_mode:
 api: true
 api_status: active
 catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -15,14 +18,16 @@ coverage:
     subregion:
       id: IR-12
       name: Kordestān
-description: Provincial SDI geoportal of Kurdistan Province; part of national spatial
-  data infrastructure. Hosts map layers and spatial data from government and spatial
-  data custodians.
+description: Provincial SDI GeoNode of Kurdistan Province, publishing map layers and
+  spatial data from government custodians as part of Iran’s national spatial data
+  infrastructure.
 endpoints:
 - type: geonode:layers
   url: https://sdi.kmporg.ir/api/layers/
 - type: geonode:documents
   url: https://sdi.kmporg.ir/api/documents/
+- type: geonode:maps
+  url: https://sdi.kmporg.ir/api/maps/
 - type: csw202
   url: https://sdi.kmporg.ir/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
@@ -48,7 +53,7 @@ owner:
       id: IR-12
       name: Kordestān
   name: Management and Planning Organization of Kurdistan Province
-  type: Central government
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -65,17 +70,24 @@ status: active
 tags:
 - geospatial
 - government
-- Geoportal
 - NSDI
 - provincial
+- has_api
+- Kurdistan
 topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Location
   name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
   type: iso19115
 - id: Structure
   name: Structure
   type: iso19115
 uid: cdi00021516
-content_types:
-- dataset
-- map_layer

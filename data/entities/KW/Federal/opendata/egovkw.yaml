@@ -14,23 +14,32 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Kuwait e-Government portal's Open Data page provides access to public
-  sector datasets.
+description: Open Data page on the Kuwait Government Online (KGO) portal, operated
+  by the Central Agency for Information Technology. Lists downloadable public-sector
+  datasets and statistical publications from agencies including the Central Statistical
+  Bureau, Public Authority for Civil Information, Central Bank of Kuwait, General
+  Administration of Customs, and Ministry of Finance. Available in English and Arabic;
+  this is a document listing rather than a harvestable open-data API.
 id: egovkw
 langs:
 - id: EN
   name: English
+- id: AR
+  name: Arabic
 link: https://e.gov.kw/sites/kgoenglish/Pages/OtherTopics/OpenData.aspx
 name: Open Data Initiative - Kuwait e-Government
 owner:
-  link: https://www.gov.kw
+  link: https://www.cait.gov.kw
   location:
     country:
       id: KW
       name: Kuwait
     level: 20
-  name: Kuwait Government
+  name: Central Agency for Information Technology
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -43,10 +52,9 @@ software:
   name: Custom software
 status: active
 tags:
+- government
 - open data
-- public dataset
-- Kuwait
-- government data
+- statistics
 topics:
 - id: GOVE
   name: Government and public sector

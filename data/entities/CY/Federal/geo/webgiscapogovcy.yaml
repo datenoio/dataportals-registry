@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: ArcGIS Server catalog of the Cyprus Agricultural Payments Organisation
+  (ΚΟΑΠ / CAPO), exposing geospatial services used for agricultural payments and
+  land-parcel identification.
+endpoints:
+- type: arcgis:rest:services
+  url: https://webgis.capo.gov.cy/capoweb/rest/services?f=pjson
+  version: '1.0'
+id: webgiscapogovcy
+langs:
+- id: EL
+  name: Greek
+- id: EN
+  name: English
+link: https://webgis.capo.gov.cy/capoweb/rest/services
+name: CAPO ArcGIS REST Services
+owner:
+  link: https://www.capo.gov.cy
+  location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+  name: Cyprus Agricultural Payments Organisation
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- REST
+- agriculture
+- public sector
+- has_api
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00035612

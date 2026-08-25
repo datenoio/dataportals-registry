@@ -17,9 +17,7 @@ coverage:
     subregion:
       id: ID-KB
       name: Kalimantan Barat
-description: Official data catalog of Mempawah Regency, providing datasets across
-  multiple sectors such as culture, economy, infrastructure, population, health, labor,
-  tourism, government, education, and trade.
+description: Official data catalog of Mempawah Regency, providing datasets across multiple sectors such as culture, economy, infrastructure, population, health, labor, tourism, government, education, and trade.
 endpoints:
 - type: ckan:package-search
   url: https://data.mempawahkab.go.id/api/3/action/package_search
@@ -31,6 +29,8 @@ id: datamempawahkabgoid
 langs:
 - id: EN
   name: English
+- id: ID
+  name: Indonesian
 link: https://data.mempawahkab.go.id
 name: Bank Oneda Mempawah
 owner:
@@ -98,9 +98,6 @@ topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
-- id: ECON
-  name: Economy and finance
-  type: eudatatheme
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
   type: eudatatheme
@@ -121,9 +118,6 @@ topics:
   type: iso19115
 - id: Environment
   name: Environment
-  type: iso19115
-- id: Society
-  name: Society
   type: iso19115
 - id: Farming
   name: Farming

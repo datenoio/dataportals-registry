@@ -15,7 +15,10 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Catalog managed by ArcGIS Hub application
+description: English ArcGIS Hub data catalogue of the Knowledge for Development (K4D)
+  platform of the Government of Lao PDR. National geospatial and statistical datasets
+  on agriculture, environment, land, economy, and society, developed with support
+  from CDE (University of Bern) and the Swiss Agency for Development and Cooperation.
 endpoints:
 - type: dcatap201
   url: https://en.data.k4d.la/api/feed/dcat-ap/2.0.1.json
@@ -34,17 +37,17 @@ langs:
 link: https://en.data.k4d.la/
 name: K4D Data Catalogue
 owner:
-  link: https://www.cde.unibe.ch/
+  link: https://www.k4d.la/
   location:
     country:
       id: LA
       name: Laos
     level: 20
-  name: Centre for development and Environment (CDE) of the University of Bern
+  name: Government of Lao PDR
   type: Central government
 properties:
   has_doi: false
-  transferable_topics: true
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -60,18 +63,26 @@ tags:
 - geospatial
 - has_api
 - GIS
-- datasets
-- Lao PDR
+- government
+- K4D
+- open data
+- Laos
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: Environment
-  name: Environment
-  type: iso19115
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 - id: Location
   name: Location
   type: iso19115

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,24 +15,14 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: URL of a data catalog, not providing further metadata in the given input.
-endpoints:
-- type: geonetwork:query
-  url: http://gis.armf.bg:8080/geonetwork/srv/eng/q
-- type: csw202
-  url: http://gis.armf.bg:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: http://gis.armf.bg:8080/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
-- type: opensearch
-  url: http://gis.armf.bg:8080/portal.opensearch
+description: GeoNetwork spatial-data catalogue of the Military Geographic Service
+  of the Bulgarian Armed Forces. The gis.armf.bg host is currently unreachable.
 id: gisarmfbg
 langs:
 - id: BG
   name: Bulgarian
 link: http://gis.armf.bg:8080/geonetwork
-name: Каталог за пространствени данни на Военно географска служба
+name: Military Geographic Service Spatial Data Catalogue
 owner:
   link: https://gis.armf.bg
   location:
@@ -40,7 +30,7 @@ owner:
       id: BG
       name: Bulgaria
     level: 20
-  name: Bulgarian military geographic service
+  name: Military Geographic Service of Bulgaria
   type: Central government
 properties:
   has_doi: true
@@ -55,7 +45,7 @@ rights:
 software:
   id: geonetwork
   name: GeoNetwork
-status: active
+status: inactive
 tags:
 - geospatial
 - government

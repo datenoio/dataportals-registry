@@ -1,0 +1,100 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HT
+      name: Haiti
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: ArcGIS Hub for Haiti Sustainable Development Goal monitoring. Publishes
+  SDG indicator maps and related geospatial layers for nationwide and regional
+  progress tracking.
+endpoints:
+- type: dcatap201
+  url: https://haiti-sdg.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://haiti-sdg.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: dcatus11
+  url: https://haiti-sdg.hub.arcgis.com/data.json
+- type: rss
+  url: https://haiti-sdg.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://haiti-sdg.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://haiti-sdg.hub.arcgis.com/sitemap.xml
+id: haitisdghubarcgiscom
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://haiti-sdg.hub.arcgis.com/
+name: SDG Haiti Hub
+owner:
+  link: https://haiti-sdg.hub.arcgis.com/
+  location:
+    country:
+      id: HT
+      name: Haiti
+    level: 20
+  name: SDG Haiti Hub
+  type: International
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- SDG
+- GIS
+- ArcGIS
+- Sustainable Development Goals
+- Haiti
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00002950

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,38 +14,57 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Official open data portal of Macau (Government of Macao Special Administrative
-  Region)
+description: Official open data portal of the Macao Special Administrative Region,
+  operated by the Public Administration and Civil Service Bureau (SAFP). It publishes
+  government datasets for download and provides a custom REST API at api.data.gov.mo,
+  with Traditional Chinese, Portuguese, and English interfaces.
+endpoints:
+- type: docs
+  url: https://api.data.gov.mo/swagger-ui.html
+- type: custom_api
+  url: https://api.data.gov.mo
 id: datagovmo
 langs:
 - id: ZH
   name: Chinese
+- id: PT
+  name: Portuguese
+- id: EN
+  name: English
 link: https://data.gov.mo
 name: Macao SAR Government Open Data Platform
 owner:
-  link: https://www.gov.mo
+  link: https://www.safp.gov.mo
   location:
     country:
       id: MO
       name: Macau
     level: 20
-  name: Government of Macao
+  name: Public Administration and Civil Service Bureau
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: null
-  rights_type: unknown
-  tos_url: null
+  privacy_policy_url: https://data.gov.mo/PrivacyClause
+  rights_type: granular
+  tos_url: https://data.gov.mo/UseClause
 software:
   id: custom
   name: Custom software
 status: active
 tags:
 - government
+- has_api
 - open data
+- Macao
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: REGI
   name: Regions and cities
   type: eudatatheme

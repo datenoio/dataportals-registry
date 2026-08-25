@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -14,8 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: DSpace 9 institutional repository of Mzuzu University, collecting research
-  outputs, theses, and datasets from faculties and research centres.
+description: DSpace 9 institutional repository of Mzuzu University (Mzuzu University
+  Digital Repository), collecting research outputs, theses, and datasets from faculties
+  and research centres.
 endpoints:
 - type: dspace
   url: https://repository.mzuni.ac.mw/server/api
@@ -23,12 +25,17 @@ endpoints:
 - type: dspace:objects
   url: https://repository.mzuni.ac.mw/server/api/discover/search/objects
   version: '9'
+- type: oaipmh20
+  url: https://repository.mzuni.ac.mw/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://repository.mzuni.ac.mw/sitemap_index.xml
 id: repositorymzuniacmw
 langs:
 - id: EN
   name: English
 link: https://repository.mzuni.ac.mw/
-name: Mzuzu University Institutional Repository
+name: Mzuzu University Digital Repository
 owner:
   link: https://www.mzuni.ac.mw
   location:
@@ -57,6 +64,7 @@ tags:
 - research data
 - open access
 - Malawi
+- has_api
 topics:
 - id: TECH
   name: Science and technology

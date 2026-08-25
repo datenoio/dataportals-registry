@@ -18,13 +18,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Infraestructura de Datos Espaciales - Sistema Hídrico Lago Titicaca,
-  Rio Desaguadero, Lago Poopó, Salar de Coipasa (Peru-Bolivia Altiplano).
-endpoints:
-- type: geonode:datasets
-  url: https://geoportal.alt-perubolivia.org/api/datasets/
-- type: geonode:documents
-  url: https://geoportal.alt-perubolivia.org/api/documents/
+description: Former ALT Peru-Bolivia GeoNode for the TDPS (Titicaca–Desaguadero–Poopó–Coipasa)
+  water system. The host geoportal.alt-perubolivia.org no longer accepts connections.
 id: geoportalaltperuboliviaorg
 langs:
 - id: ES
@@ -45,7 +40,7 @@ owner:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 uid: cdi00021703
 topics:
 - id: Location
@@ -60,8 +55,8 @@ topics:
 tags:
 - GIS
 - geospatial
-api: true
-api_status: active
+api: false
+api_status: inactive
 content_types:
 - dataset
 - map_layer

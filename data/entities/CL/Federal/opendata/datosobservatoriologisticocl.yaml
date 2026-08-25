@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,12 +14,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: 'Catálogo de 329 recursos de datos del Observatorio Logístico. Navega
-  por los recursos de datos a través de las categorías o utiliza el filtro: Recursos
-  ...'
-endpoints:
-- type: dcatus11
-  url: https://datos.observatoriologistico.cl/data.json
+description: Former Junar data catalog of Chile's Observatorio Logístico, covering
+  transport, ports, energy, and foreign-trade indicators. The catalog hostname had
+  no public DNS on 25 August 2026.
 id: datosobservatoriologisticocl
 langs:
 - id: ES
@@ -27,7 +24,7 @@ langs:
 link: https://datos.observatoriologistico.cl
 name: Catálogo de recursos de datos del Observatorio Logístico
 owner:
-  link: https://observatoriologistico.cl
+  link: https://www.observatoriologistico.cl
   location:
     country:
       id: CL
@@ -47,7 +44,7 @@ rights:
 software:
   id: junar
   name: Junar
-status: active
+status: inactive
 tags:
 - government
 - logistics

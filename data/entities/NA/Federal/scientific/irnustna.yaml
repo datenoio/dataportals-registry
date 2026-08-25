@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: NA
+      name: Namibia
+    level: 20
+    macroregion:
+      id: '018'
+      name: Southern Africa
+description: Ounongo Repository. Institutional DSpace 9 repository of the Namibia
+  University of Science and Technology for theses, publications, and other scholarly
+  outputs, administered by the NUST Library.
+endpoints:
+- type: dspace
+  url: https://ir.nust.na/server/api
+  version: '9'
+- type: dspace:objects
+  url: https://ir.nust.na/server/api/discover/search/objects
+  version: '9'
+- type: oaipmh20
+  url: https://ir.nust.na/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://ir.nust.na/sitemap_index.xml
+id: irnustna
+langs:
+- id: EN
+  name: English
+link: https://ir.nust.na/
+name: Ounongo Repository
+owner:
+  link: https://www.nust.na
+  location:
+    country:
+      id: NA
+      name: Namibia
+    level: 20
+  name: Namibia University of Science and Technology
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- has_api
+- DSpace
+- institutional repository
+- research data
+- NUST
+- theses
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Education
+  name: Education
+  type: iso19115
+uid: cdi00027692

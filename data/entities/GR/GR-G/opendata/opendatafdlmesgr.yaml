@@ -10,11 +10,14 @@ coverage:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Open Data Portal for the Management Agency of the Mesologi Lagoon
+    subregion:
+      id: GR-G
+      name: Dytikí Elláda
+description: Open data portal of the Mesolongi Lagoon Management Agency
 endpoints:
 - type: ckan:package-search
   url: https://opendata.fdlmes.gr/api/3/action/package_search
@@ -27,7 +30,7 @@ langs:
 - id: EL
   name: Greek
 link: https://opendata.fdlmes.gr
-name: Opendata Geoportal - Management Agency of the Mesologi Lagoon
+name: Open Data Portal of the Mesolongi Lagoon Management Agency
 owner:
   link: https://www.fdlmes.gr
   location:
@@ -38,7 +41,7 @@ owner:
     subregion:
       id: GR-G
       name: Dytikí Elláda
-  name: Management Agency of the Mesologi Lagoon
+  name: Management Agency of the Mesolongi Lagoon
   type: Local government
 rights:
   license_id: null
@@ -72,4 +75,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00004545
+uid: cdi00035350

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,36 +15,23 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: ArcGIS REST Services Directory for map and data services provided by
-  the National INSPIRE Geoportal of the Czech Republic. Includes WMS and ArcGIS Server
-  services for various thematic layers.
-endpoints:
-- type: arcgis:rest:info
-  url: http://geoportal.gov.cz/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: http://geoportal.gov.cz/arcgis/rest/services?f=pjson
-- type: arcgis:sitemap
-  url: http://geoportal.gov.cz/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: http://geoportal.gov.cz/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: http://geoportal.gov.cz/arcgis/rest/services?f=kmz
-- type: sitemap
-  url: http://geoportal.gov.cz/sitemap.xml
+description: Former ArcGIS REST services directory of the National INSPIRE Geoportal.
+  The REST root now returns 404. The live metadata catalogue is recorded separately
+  as mickageoportalgovcz.
 id: geoportalgovcz
 langs:
 - id: CS
   name: Czech
 link: http://geoportal.gov.cz/arcgis/rest/services
-name: Národní geoportál INSPIRE - Geoportal.gov.cz ArcGIS REST Services
+name: Národní geoportál INSPIRE - ArcGIS REST Services
 owner:
-  link: http://www.gov.cz
+  link: https://cenia.gov.cz
   location:
     country:
       id: CZ
       name: Czech Republic
     level: 20
-  name: Národní geoportál INSPIRE - Geoportal.gov.cz
+  name: CENIA
   type: Central government
 properties:
   has_doi: false
@@ -58,15 +45,13 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - WMS
 - ArcGIS Server
 - GIS
-- Czech Republic
-- INSPIRE Directive
+- INSPIRE
 - map services
-- data catalog
 topics:
 - id: Location
   name: Location
@@ -77,4 +62,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: temp00001382
+uid: cdi00035592

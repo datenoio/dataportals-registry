@@ -1,7 +1,7 @@
 access_mode:
 - open
-api_status: active
 api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -13,20 +13,22 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: The 17 Goals were adopted by all UN Member States in 2015, as part of
-  the 2030 Agenda for Sustainable Development. Indicators for Ukraine.
+      name: Eastern Europe
+description: National OpenSDG platform of the State Statistics Service of Ukraine
+  for reporting official Sustainable Development Goal indicators.
 endpoints:
 - type: opensdg:catalog
-  url: https://sdg.ukrstat.gov.ua/
+  url: https://sdg.stat.gov.ua/reporting-status
 id: sdgukrstatgovua
 langs:
+- id: UK
+  name: Ukrainian
 - id: EN
   name: English
-link: https://sdg.ukrstat.gov.ua/
+link: https://sdg.stat.gov.ua
 name: Sustainable Development Goals (SDGs) Indicators for Ukraine
 owner:
-  link: https://sdg.ukrstat.gov.ua/
+  link: https://stat.gov.ua
   location:
     country:
       id: UA

@@ -15,8 +15,7 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: Official geospatial data services portal for City of Census providing
-  GIS data and map layers via ArcGIS REST API.
+description: ArcGIS REST map services operated by the U.S. Census Bureau (mtgis-server.geo.census.gov).
 endpoints:
 - type: arcgis:rest:info
   url: https://mtgis-server.geo.census.gov/arcgis/rest/services/info?f=pjson
@@ -29,7 +28,7 @@ langs:
 - id: EN
   name: English
 link: https://mtgis-server.geo.census.gov/arcgis/rest/services
-name: City of Census GIS Portal
+name: U.S. Census Bureau TIGERweb / Map Server
 owner:
   link: https://mtgis-server.geo.census.gov
   location:
@@ -40,6 +39,7 @@ owner:
   name: U.S. Census Bureau
   type: Central government
 properties:
+  is_national: true
   has_doi: false
 rights:
   license_id: null
@@ -57,7 +57,7 @@ tags:
 - REST
 - GIS
 - geospatial data
-- city government
+- federal government
 topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover

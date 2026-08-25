@@ -4,6 +4,7 @@ api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
+- indicator
 - dataset
 coverage:
 - location:
@@ -14,14 +15,20 @@ coverage:
     macroregion:
       id: '029'
       name: Caribbean
-description: Official statistics portal of the Barbados Statistical Service with economic,
-  social, and demographic indicators, census tables, and the IMF National Summary
-  Data Page.
+description: Official statistics website of the Barbados Statistical Service. Publishes
+  economic, social, and demographic indicators, census products, maps and graphs,
+  and the IMF National Summary Data Page. The site is WordPress; the wp-json REST
+  API is public.
 endpoints:
+- type: rest
+  url: https://stats.gov.bb/wp-json/
+- type: rest:posts
+  url: https://stats.gov.bb/wp-json/wp/v2/posts
+  version: '2'
 - type: sitemap
-  url: https://stats.gov.bb/sitemap.xml
-- type: sitemap
-  url: https://stats.gov.bb/sitemap.xml.gz
+  url: https://stats.gov.bb/wp-sitemap.xml
+- type: rss
+  url: https://stats.gov.bb/feed/
 id: statsgovbb
 langs:
 - id: EN
@@ -37,31 +44,41 @@ owner:
     level: 20
   name: Barbados Statistical Service
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - statistics
-- indicators
-- government
-- has_api
+- official statistics
 - census
+- government
 - Barbados
+- has_api
 topics:
 - id: ECON
   name: Economy and finance
   type: eudatatheme
-- id: Economy
-  name: Economy
-  type: iso19115
 - id: SOCI
   name: Population and society
   type: eudatatheme
-- id: Society
-  name: Society
-  type: iso19115
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00025592

@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion:
+      id: CN-HL
+      name: Heilongjiang Sheng
+description: Harbin municipal ArcGIS Server catalog of geospatial map services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://hrbkcyonline.hrbmap.org.cn/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://hrbkcyonline.hrbmap.org.cn/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://hrbkcyonline.hrbmap.org.cn/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://hrbkcyonline.hrbmap.org.cn/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://hrbkcyonline.hrbmap.org.cn/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://hrbkcyonline.hrbmap.org.cn/server/rest/services?f=kmz
+id: hrbkcyonlinehrbmaporgcn
+langs:
+- id: ZH
+  name: Chinese
+link: https://hrbkcyonline.hrbmap.org.cn/server/rest/services
+name: Harbin Map ArcGIS Services
+owner:
+  link: https://hrbkcyonline.hrbmap.org.cn
+  location:
+    country:
+      id: CN
+      name: China
+    level: 30
+    subregion:
+      id: CN-HL
+      name: Heilongjiang Sheng
+  name: Harbin Geographic Information Center
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- China
+- REST
+- arcgisserver
+- catalog
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00035644

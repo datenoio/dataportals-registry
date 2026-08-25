@@ -17,13 +17,13 @@ coverage:
     subregion:
       id: SV-SS
       name: San Salvador
+description: Open data portal of OPAMSS for the San Salvador metropolitan area,
+  with downloadable spreadsheets (building permits, land-use, and related metropolitan
+  datasets) published as WordPress media.
 endpoints:
 - type: rest
   url: https://datosabiertos.opamss.org.sv/wp-json/
   version: '2.0'
-description: Open data portal of OPAMSS for the San Salvador metropolitan area,
-  with downloadable spreadsheets (building permits, land-use, and related metropolitan
-  datasets) published as WordPress media.
 id: datosabiertosopamssorgsv
 langs:
 - id: ES
@@ -42,6 +42,8 @@ owner:
       name: San Salvador
   name: Oficina de Planificación del Área Metropolitana de San Salvador (OPAMSS)
   type: Regional government
+properties:
+  has_doi: false
 rights:
   license_id: null
   license_name: null
@@ -55,8 +57,17 @@ software:
 status: active
 tags:
 - government
+- open data
+- urban planning
+- El Salvador
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: cdi00001507

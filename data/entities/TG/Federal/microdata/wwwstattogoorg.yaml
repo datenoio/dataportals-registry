@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: National Data Archive for Togo, providing access to various datasets
-  and microdata from official statistics.
+description: Former INSEED National Data Archive (NADA) URL at www.stat-togo.org/nada.
+  The hostname now redirects to the INSEED corporate site; /nada returns 404. The
+  later IP-hosted NADA is recorded as togonada (also offline).
 id: wwwstattogoorg
 langs:
 - id: FR
@@ -23,7 +24,7 @@ langs:
 link: http://www.stat-togo.org/nada
 name: NADA Data Catalog of Togo
 owner:
-  link: http://www.stat-togo.org
+  link: https://inseed.tg
   location:
     country:
       id: TG
@@ -50,7 +51,10 @@ tags:
 - microdata
 - social data
 topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 - id: Society
   name: Society
   type: iso19115
-uid: temp00004200
+uid: cdi00035023

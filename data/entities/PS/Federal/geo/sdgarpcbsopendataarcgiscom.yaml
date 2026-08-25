@@ -15,27 +15,9 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: 'أهداف التنمية المستدامة 17 هدف لتحويل فلسطين استكشف بيانات أهداف التنمية
-  المستدامة اضغط على الرابط للوصول إلى المؤشرات المرتبطة بالهدف المختار القضاء على
-  الفقر القضاء على الجوع الصحة الجيدة والرفاه التعليم الجيد المساواة بين الجنسين المياه
-  النظيفة والنظافة الصحية طافة نظيفة وباسعار معقولة العمل اللائق ونمو الاقتصاد الصناعة
-  والابتكار والهياكل الاساسية الحد من اوجه عدم المساواة مدن ومجتمعات محلية مستدامة
-  الاستهلاك والانتاج المسؤولان العمل المناخي الحياة تحت الماء الحياة في البر السلام
-  والعدل والمؤسسات القوية عقد الشراكات لتحقيق الاهداف استكشف بيانات أهداف التنمية
-  المستدامة من خلال قصة الخريطة اضغط على رابط قصة الخريطة للوصول للموقع التفاعلي لاهداف
-  التنمية المستدامة الفلسطينية الفقر في فلسطين الفقر في فلسطين انخراط المرأة في سوق
-  العمل EMPOWERING WOMEN IN THE LABOUR MARKET الزواج المبكر في فلسطين Early Marriage
-  in Palestine البيانات المفتوحة استكشف Dig into the data. تمثيل البيانات وتحليلها
-  بناء مشاركة أي شخص يستطيع استخدام البيانات المتوحة من موقع البيانات المفتوح الحكومي.
-  تحميل البيانات ومشاركتها مع المجتمع لبناء مواقع وبرامج وخدمة المواطنين Highlight
-  spatial patterns and discover trends. Develop new apps using templates and API''s.
-  Embed analysis on your website. تواصلوا معنا الجهاز المركزي للاحصاء الفلسطيني الرمز
-  البريدي 1647 رام الله فلسطين مدينة رام الله - عين منجد شارع طوكيو الهاتف المجاني
-  1800300300 هاتف Tel: 00 (972/970) 2-298 2700 فاكس  Fax: 00 (972/970) 2-298 2710
-  البريد الالكتروني diwan@pcbs.gov.ps اعداد © 2019 الجهاز المركزي للاحصاء الفلسطيني
-  تم بناء الموقع بالشراكة مع شركة الراعي الصالح الهندسية ازري فلسطين ESRI Palestine/GSE
-  باستخدام ArcGIS Open Data الروابط الجهاز المركزي للاحصاء الفلسطيني  (http://www.pcbs.gov.ps)
-  شركة الراعي الصالح الهندسية ازري فلسطين (http://www.gse.ps)'
+description: Arabic ArcGIS Open Data hub of the Palestinian Central Bureau of Statistics
+  for Sustainable Development Goal indicators and related spatial layers. The DCAT-US
+  feed lists 55 datasets. The English counterpart is sdg-pcbs.opendata.arcgis.com.
 endpoints:
 - type: dcatap201
   url: https://sdg-ar-pcbs.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -49,12 +31,14 @@ endpoints:
   url: https://sdg-ar-pcbs.opendata.arcgis.com/sitemap.xml
 id: sdgarpcbsopendataarcgiscom
 langs:
+- id: AR
+  name: Arabic
 - id: EN
   name: English
 link: https://sdg-ar-pcbs.opendata.arcgis.com/
-name: الجهاز المركزي للاحصاء الفلسطيني - أهداف التنمية المستدامة
+name: PCBS Sustainable Development Goals (Arabic)
 owner:
-  link: https://pcbs.gov.ps
+  link: https://www.pcbs.gov.ps
   location:
     country:
       id: PS
@@ -64,6 +48,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  dataset_count_reported: 55
 rights:
   license_id: null
   license_name: null
@@ -77,9 +62,10 @@ software:
 status: active
 tags:
 - SDG
-- Sustainable Development Goals
 - statistics
 - GIS
+- government
+- has_api
 - Palestine
 topics:
 - id: SOCI
@@ -108,8 +94,5 @@ topics:
   type: iso19115
 - id: Health
   name: Health
-  type: iso19115
-- id: Society
-  name: Society
   type: iso19115
 uid: cdi00003964

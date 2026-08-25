@@ -18,20 +18,20 @@ coverage:
 description: Catálogo de Metadatos del Ministerio de Ambiente y Desarrollo Sostenible
 endpoints:
 - type: geonetwork:query
-  url: http://geonetwork.minambiente.gov.co/geonetwork/srv/eng/q
+  url: https://geonetwork.minambiente.gov.co/geonetwork/srv/eng/q
 - type: geonetwork:records
-  url: http://geonetwork.minambiente.gov.co/geonetwork/srv/api/records
+  url: https://geonetwork.minambiente.gov.co/geonetwork/srv/api/records
 - type: openapi
-  url: http://geonetwork.minambiente.gov.co/geonetwork/srv/v2/api-docs
+  url: https://geonetwork.minambiente.gov.co/geonetwork/srv/v2/api-docs
   version: '2'
 - type: csw202
-  url: http://geonetwork.minambiente.gov.co/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://geonetwork.minambiente.gov.co/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: opensearch
-  url: http://geonetwork.minambiente.gov.co/geonetwork/srv/eng/portal.opensearch
+  url: https://geonetwork.minambiente.gov.co/geonetwork/srv/eng/portal.opensearch
   version: '1.0'
 - type: oaipmh20
-  url: http://geonetwork.minambiente.gov.co/geonetwork/srv/eng/oaipmh?verb=Identify
+  url: https://geonetwork.minambiente.gov.co/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 id: geonetworkminambientegovco
 langs:
@@ -39,7 +39,7 @@ langs:
   name: Spanish
 - id: EN
   name: English
-link: http://geonetwork.minambiente.gov.co/geonetwork
+link: https://geonetwork.minambiente.gov.co/geonetwork
 name: Catálogo de Metadatos del Ministerio de Ambiente y Desarrollo Sostenible
 owner:
   link: https://minambiente.gov.co

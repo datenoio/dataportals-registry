@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -12,25 +12,10 @@ coverage:
       name: Hungary
     level: 20
     macroregion:
-      id: '150'
-      name: Europe
-description: 'The repository was originally created as Concorda, an ad-hoc initiative
-  for data exchange during the Covid-19 pandemic by HUN-REN Institute for Computer
-  Science and Control (SZTAKI) and HUN-REN Wigner Research Centre for Physics (WIGNER).
-  Since then, the repository was significantly expanded with additional disk space
-  and other resources donated by SZTAKI and WIGNER institutes, and accepts data from
-  all Hungarian researchers (with some storage constraints). In 2021, the ARP project
-  started to build research data infrastructure for the Hungarian Research Network,
-  and chose it as the main repository component to be integrated, while also significantly
-  expanding its storage capacity. See also: https://researchdata.hu/ https://fairsharing.org/4585
-  https://www.re3data.org/repository/r3d100014109 https://v2.sherpa.ac.uk/id/repository/10638
-  https://wigner.hu/ https://sztaki.hu/'
-endpoints:
-- type: dataverseapi
-  url: https://repo.researchdata.hu/api/search
-- type: oaipmh20
-  url: https://repo.researchdata.hu/oai?verb=Identify
-  version: '2.0'
+      id: '151'
+      name: Eastern Europe
+description: Duplicate of the HUN-REN ARP Dataverse now recorded as sciencedatahu
+  (r3d100014109). science-data.hu and repo.researchdata.hu are the same repository.
 id: reporesearchdatahu
 langs:
 - id: EN
@@ -43,7 +28,7 @@ owner:
       id: HU
       name: Hungary
     level: 20
-  name: ARP
+  name: HUN-REN Institute for Computer Science and Control
   type: Academy
   link: https://researchdata.hu
 properties:
@@ -58,7 +43,7 @@ rights:
 software:
   id: dataverse
   name: Dataverse
-status: active
+status: deprecated
 tags:
 - scientific
 - has_api

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,11 +18,6 @@ coverage:
 description: Official European portal for searching spatial data sets and services
   under the INSPIRE Directive, aggregating datasets from EU Member States and EFTA
   countries.
-endpoints:
-- type: sitemap
-  url: https://inspire-geoportal.ec.europa.eu/srv/api/sitemap
-- type: sitemap
-  url: https://inspire-geoportal.ec.europa.eu/srv/api/sitemap?format=rdf
 id: inspiregeoportaleceuropaeu
 langs:
 - id: EN
@@ -36,7 +31,7 @@ owner:
       id: EU
       name: European Union
     level: 20
-  name: Eurpean Comission
+  name: European Commission
   type: Central government
 rights:
   license_id: null
@@ -48,7 +43,7 @@ rights:
 software:
   id: custom
   name: Custom software
-status: active
+status: inactive
 tags:
 - geospatial
 - government

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,18 +15,15 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: GuyNode is a grassroot, open spatial data infrastructure project. Its
-  main goal is to facilitate easy access to geospatial data to support the use of
-  GIS technology in Guyana.
-endpoints:
-- type: sitemap
-  url: https://www.guynode.com/sitemap.xml
+description: GuyNode Open Geospatial Data Portal is a grassroots spatial data
+  infrastructure project. It publishes GIS layers, place-finding tools, historical
+  maps, and downloadable spatial files to support GIS use in Guyana.
 id: wwwguynodecom
 langs:
 - id: EN
   name: English
 link: https://www.guynode.com
-name: GuyNode Spatial Data Portal
+name: GuyNode Open Geospatial Data Portal
 owner:
   link: https://www.guynode.com
   location:
@@ -43,7 +40,7 @@ rights:
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: granular
+  rights_type: unknown
   tos_url: null
 software:
   id: custom
@@ -51,13 +48,13 @@ software:
 status: active
 tags:
 - geospatial
-- has_api
 - GIS
 - Map
 - Satellite
 - DEM
 - Socio-economic
 - Petroleum
+- Guyana
 topics:
 - id: REGI
   name: Regions and cities

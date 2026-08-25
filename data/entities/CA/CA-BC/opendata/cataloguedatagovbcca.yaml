@@ -17,14 +17,14 @@ coverage:
     subregion:
       id: CA-BC
       name: British Columbia
-description: The BC Data Catalogue provides the easiest access to government's data
-  holdings, as well as applications and web services. Thousands of the datasets discoverable
-  in the Catalogue are available under the Open Government License - British Columbia.
-  The province's area, varied topography and predominantly natural resource based
-  economy has positioned B.C. as a leader in geographic information management and
-  generates a wealth of geographic information that is discoverable in the BC Data
-  Catalogue. DataBC provides access to this information through a suite of unique
-  applications and services that comprise the B.C. Spatial Data Infrastructure.
+description: The BC Data Catalogue provides the easiest access to government's data holdings,
+  as well as applications and web services. Thousands of the datasets discoverable in the
+  Catalogue are available under the Open Government License - British Columbia. The province's
+  area, varied topography and predominantly natural resource based economy has positioned
+  B.C. as a leader in geographic information management and generates a wealth of geographic
+  information that is discoverable in the BC Data Catalogue. DataBC provides access to this
+  information through a suite of unique applications and services that comprise the B.C. Spatial
+  Data Infrastructure.
 endpoints:
 - type: ckan:package-search
   url: https://catalogue.data.gov.bc.ca/api/3/action/package_search
@@ -37,6 +37,9 @@ identifiers:
 - id: re3data
   url: https://www.re3data.org/repository/r3d100012945
   value: r3d100012945
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=re3data_____::c5814db02a7f2747f42c6d6ba53fdb05
+  value: re3data_____::c5814db02a7f2747f42c6d6ba53fdb05
 langs:
 - id: EN
   name: English

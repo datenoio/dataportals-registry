@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-SC
+      name: Santa Catarina
+description: Data portal associated with Universidade do Estado de Santa Catarina
+  (UDESC ESAG), Brazil.
+id: dadosesagudescbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://dados.esag.udesc.br
+name: Dados Abertos UDESC ESAG
+owner:
+  link: https://www.udesc.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-SC
+      name: Santa Catarina
+  name: Universidade do Estado de Santa Catarina (UDESC)
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- Brazil
+- accountability
+- ckan
+- equity
+- governance
+- open data
+- public procurement
+- public services
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00026966
+endpoints:
+- type: api
+  url: https://dados.esag.udesc.br/api/3/action/package_search

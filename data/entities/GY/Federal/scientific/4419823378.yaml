@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,32 +14,31 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Former Environmental Protection Agency Guyana GBIF IPT on 44.198.233.78.
-  GBIF dataset endpoints now point at 132.148.241.236:8080/ipt/. Host timed out on
-  23 August 2026.
-endpoints:
-- type: dcat:ttl
-  url: http://44.198.233.78:8080/dcat
-- type: ipt:dataset
-  url: http://44.198.233.78:8080/inventory/dataset
-- type: rss
-  url: http://44.198.233.78:8080/rss.do
-  version: '2.0'
+description: Abandoned 2022 AWS GBIF IPT of the Environmental Protection Agency of
+  Guyana at 44.198.233.78:8080/ipt (last known paths /ipt/dcat, /ipt/inventory/dataset,
+  /ipt/rss.do). The host timed out on 23 August 2026. GBIF dataset endpoints remain
+  registered on the 2019 installation at 132.148.241.236:8080/ipt/.
 id: '4419823378'
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/publisher/e7cc89db-d984-4b46-bf67-fb2ffdcf1e22
+  value: e7cc89db-d984-4b46-bf67-fb2ffdcf1e22
 langs:
 - id: EN
   name: English
-link: http://44.198.233.78:8080
-name: Environmental Protection Agency - Guyana
+link: http://44.198.233.78:8080/ipt
+name: Environmental Protection Agency - Guyana IPT (legacy AWS)
 owner:
-  link: http://www.epaguyana.org/
+  link: https://epaguyana.org
   location:
     country:
       id: GY
       name: Guyana
     level: 20
-  name: Environmental Protection Agency
+  name: Environmental Protection Agency of Guyana
   type: Central government
+properties:
+  has_doi: true
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)

@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: geonetwork. This geoportal. managed by siami.unal.edu.co.
+description: GeoNetwork catalog of SIAMI (Sistema de Información Ambiental y de
+  Minería) at Universidad Nacional de Colombia.
 endpoints:
 - type: csw202
   url: http://siami.unal.edu.co:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -28,15 +29,15 @@ langs:
 - id: ES
   name: Spanish
 link: http://siami.unal.edu.co:8080/geonetwork
-name: geonetwork
+name: SIAMI GeoNetwork
 owner:
-  link: http://siami.unal.edu.co:8080/geonetwork
+  link: https://unal.edu.co
   location:
     country:
       id: CO
       name: Colombia
     level: 20
-  name: siami.unal.edu.co
+  name: Universidad Nacional de Colombia
   type: Academy
 properties:
   has_doi: true

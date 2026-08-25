@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: WarmteAtlas GeoServer web interface for geodata catalog
+description: GeoServer of the Dutch Heat Atlas (Warmteatlas) with district-heating and energy-transition
+  layers.
 endpoints:
 - type: wms111
   url: https://www.warmteatlas.nl/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -55,16 +56,16 @@ langs:
 - id: NL
   name: Dutch
 link: https://www.warmteatlas.nl/geoserver/web/
-name: warmteatlas.nl geoserver
+name: Warmteatlas GeoServer
 owner:
-  link: https://www.warmteatlas.nl/geoserver/web/
+  link: https://www.rvo.nl
   location:
     country:
       id: NL
       name: Netherlands
     level: 20
-  name: heat
-  type: Business
+  name: RVO (Netherlands Enterprise Agency)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -90,4 +91,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-uid: temp00000517
+uid: cdi00035147

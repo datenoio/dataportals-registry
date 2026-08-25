@@ -1,7 +1,7 @@
 access_mode:
 - open
-api_status: active
-api: true
+api: false
+api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,21 +14,16 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Data Stories explore the impact of the jade industry in Myanmar through
-  data visualizations, analyses, and interviews. Jade can be worth up to millions
-  of dollars per kilogram. The green-hued gemstone fuels an industry that is worth
-  billions. The main market for jade is in China, where it has traditionally been
-  highly valued and associated with royalty. Myanmar's Kachin State, where the world's
-  richest jade mines are located, is on China's southern border.
-endpoints:
-- type: strapi:catalog
-  url: https://openjadedata.org
+description: Open-data site presenting Myanmar jade-industry datasets, data stories,
+  and interactive tools compiled from Extractive Industries Transparency Initiative
+  (EITI) disclosures. Supported by the Natural Resource Governance Institute and the
+  School of Data.
 id: openjadedataorg
 langs:
 - id: EN
   name: English
 link: https://openjadedata.org
-name: 'Myanmar Jade: Open Data'
+name: 'Open Data: Myanmar Jade'
 owner:
   link: https://resourcegovernance.org/
   location:
@@ -41,31 +36,34 @@ owner:
 properties:
   has_doi: false
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: CC-BY-SA-4.0
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
   privacy_policy_url: null
-  rights_type: global
+  rights_type: open
   tos_url: null
 software:
-  id: strapi
-  name: Strapi
+  id: custom
+  name: Custom software
 status: active
 tags:
-- geology
 - jade
 - mining
-- Myanmar
 - extractive industries
 - transparency
+- EITI
+- Myanmar
 topics:
-- id: GOVE
-  name: Government and public sector
-  type: eudatatheme
 - id: ECON
   name: Economy and finance
   type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Economy
   name: Economy
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
   type: iso19115
 uid: cdi00004626

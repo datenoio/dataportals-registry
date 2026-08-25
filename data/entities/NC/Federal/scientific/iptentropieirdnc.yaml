@@ -14,10 +14,10 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: 'Cet IPT permet de publier les données de biodiversité de l''UMR Entropie, une
-  unité mixte de recherche à 4 tutelles : IRD, Université de La Réunion, Ifremer, Université
-  de la Nouvelle-Calédonie et également de l''EMR Santeco, équipe mixte de recherche comprenant
-  le CNRS.'
+description: GBIF Integrated Publishing Toolkit of UMR Entropie, publishing
+  biodiversity datasets. UMR Entropie is a joint research unit of IRD, Université
+  de La Réunion, Ifremer, and Université de la Nouvelle-Calédonie, and also includes
+  CNRS EMR Santeco.
 endpoints:
 - type: dcat:ttl
   url: https://ipt-entropie.ird.nc/dcat
@@ -33,14 +33,17 @@ langs:
 link: https://ipt-entropie.ird.nc
 name: IPT UMR ENTROPIE
 owner:
-  link: http://www.ird.fr
+  link: https://umr-entropie.ird.nc
   location:
     country:
       id: NC
       name: New Caledonia
     level: 20
-  name: IRD - Institute of Research for Development
+  name: UMR Entropie
   type: Academy
+properties:
+  has_doi: true
+  dataset_count_reported: 2
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -50,6 +53,8 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- New Caledonia
+- has_api
 topics:
 - id: Biota
   name: Biota

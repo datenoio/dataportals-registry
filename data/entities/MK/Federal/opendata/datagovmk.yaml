@@ -12,11 +12,11 @@ coverage:
       name: Republic of North Macedonia
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Data catalog for open datasets from North Macedonia (no direct content
-  available within search results). Publisher and thematic details not available in
-  the provided search results.
+description: National open data portal of the Government of North Macedonia. CKAN
+  catalog of public-sector datasets from ministries, agencies, and other institutions,
+  with a CKAN Action API and DCAT exports, operated by the Ministry of Digital Transformation.
 endpoints:
 - type: ckan
   url: https://data.gov.mk/api/3
@@ -38,17 +38,21 @@ endpoints:
 id: datagovmk
 langs:
 - id: MK
-  name: Makedonian
+  name: Macedonian
+- id: EN
+  name: English
+- id: SQ
+  name: Albanian
 link: https://data.gov.mk
-name: Data Open Data Portal
+name: Open Data Portal of North Macedonia
 owner:
-  link: https://data.gov.mk
+  link: https://mdt.gov.mk
   location:
     country:
       id: MK
       name: Republic of North Macedonia
     level: 20
-  name: Data
+  name: Ministry of Digital Transformation
   type: Central government
 properties:
   has_doi: false
@@ -67,6 +71,8 @@ status: active
 tags:
 - government
 - has_api
+- open data
+- North Macedonia
 topics:
 - id: GOVE
   name: Government and public sector

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -31,13 +31,8 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: WIS 2.0 in a box provides a platform with the capabilities for centres
-  to integrate their data holdings and publish them to the WMO Information System
-  with a plug and play capability supporting data publishing, discovery and access
-endpoints:
-- type: pygeoapi:openapi
-  url: https://wis2africa.marocmeteo.ma/oapi/openapi
-  version: '1.0'
+description: Maroc Météo WIS 2.0 in a box hub for Western and Middle Africa meteorological
+  data. Hostname wis2africa.marocmeteo.ma did not resolve on 25 August 2026.
 id: wis2africamarocmeteoma
 langs:
 - id: EN
@@ -45,7 +40,7 @@ langs:
 link: https://wis2africa.marocmeteo.ma
 name: Western and Middle Africa - WIS 2.0 in a box
 owner:
-  link: http://www.marocmeteo.ma
+  link: https://www.marocmeteo.ma
   location:
     country:
       id: MA
@@ -65,7 +60,7 @@ rights:
 software:
   id: wis20box
   name: Wis 2.0 Box
-status: active
+status: inactive
 tags:
 - weather
 - climate

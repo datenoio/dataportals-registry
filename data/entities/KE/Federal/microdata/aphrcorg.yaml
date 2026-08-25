@@ -5,6 +5,7 @@ api: true
 api_status: active
 catalog_type: Microdata catalog
 content_types:
+- dataset
 - microdata
 coverage:
 - location:
@@ -15,21 +16,21 @@ coverage:
     macroregion:
       id: '002'
       name: Africa
-description: APHRC's web-based platform publishes metadata, documentation, and shares
-  qualitative and quantitative datasets from research studies by the Center. Datasets
-  are freely available to partners, researchers, academicians, and post-graduate students
-  for research and thesis-related works in formats like Stata and SPSS. The portal
-  provides a data request process with login and approval mechanisms.
+description: NADA microdata catalog of the African Population and Health Research
+  Center (APHRC). Publishes metadata, documentation, and qualitative and quantitative
+  datasets from APHRC studies across African countries. Access is free after registration
+  and request approval. The catalog now lives at microdataportal.aphrc.org (the former
+  aphrc.org/microdataportal path redirects here).
 endpoints:
 - type: nada:catalog-search
-  url: https://aphrc.org/microdataportal/index.php/api/catalog/search
+  url: https://microdataportal.aphrc.org/index.php/api/catalog/search
 - type: nada:csvexport
-  url: https://aphrc.org/microdataportal/index.php/catalog/export/csv?ps=5000&collection[]
+  url: https://microdataportal.aphrc.org/index.php/catalog/export/csv?ps=5000
 id: aphrcorg
 langs:
 - id: EN
   name: English
-link: https://aphrc.org/microdataportal
+link: https://microdataportal.aphrc.org
 name: APHRC Online Microdata Library
 owner:
   link: https://aphrc.org
@@ -38,7 +39,7 @@ owner:
       id: KE
       name: Kenya
     level: 20
-  name: African Population & Health Research Center
+  name: African Population and Health Research Center
   type: Civil society
 properties:
   has_doi: false
@@ -55,17 +56,22 @@ software:
   name: NADA
 status: active
 tags:
-- government
 - has_api
 - microdata
-- Population
-- Health research
-- Metadata
-- Qualitative data
-- Quantitative data
+- population
+- health
+- education
+- research
+- Africa
 topics:
 - id: SOCI
   name: Population and society
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
   type: eudatatheme
 - id: Society
   name: Society

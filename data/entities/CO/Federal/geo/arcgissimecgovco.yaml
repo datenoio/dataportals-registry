@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: REST endpoint for ArcGIS services, acting as a data catalog for geospatial
-  datasets
+description: ArcGIS Server REST directory of SIMEC (Sistema de Información Minero
+  Energético Colombiano) at UPME. The :6080 host did not respond at last check.
 endpoints:
 - type: arcgis:rest:info
   url: http://arcgis.simec.gov.co:6080/arcgis/rest/info?f=pjson
@@ -35,15 +35,15 @@ langs:
 - id: ES
   name: Spanish
 link: http://arcgis.simec.gov.co:6080/arcgis/rest/services
-name: SIMEC ArcGIS Services
+name: SIMEC / UPME ArcGIS Services
 owner:
-  link: http://arcgis.simec.gov.co:6080
+  link: https://www.upme.gov.co
   location:
     country:
       id: CO
       name: Colombia
     level: 20
-  name: Not specified in text
+  name: Unidad de Planeación Minero Energética (UPME)
   type: Central government
 properties:
   has_doi: false

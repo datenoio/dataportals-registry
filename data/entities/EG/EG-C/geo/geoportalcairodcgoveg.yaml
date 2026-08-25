@@ -11,14 +11,16 @@ coverage:
     country:
       id: EG
       name: Egypt
-    level: 20
+    level: 30
     macroregion:
       id: '015'
       name: Northern Africa
     subregion:
       id: EG-C
       name: Al Qāhirah
-description: Geoportal for accessing data catalog services (rest endpoint)
+description: ArcGIS Enterprise geoportal of Cairo Governorate, publishing municipal
+  geospatial services and map layers for the city of Cairo through Portal for ArcGIS
+  and ArcGIS Server REST APIs.
 endpoints:
 - type: arcgis:portals:self
   url: https://geoportal.cairodc.gov.eg/portal/sharing/rest/portals/self?f=pjson
@@ -34,20 +36,14 @@ endpoints:
   url: https://geoportal.cairodc.gov.eg/server/rest/services?f=geositemap
 - type: arcgis:kmz
   url: https://geoportal.cairodc.gov.eg/server/rest/services?f=kmz
-- type: arcgis:portals:self
-  url: https://geoportal.cairodc.gov.eg/server/rest/portal/sharing/rest/portals/self?f=pjson
-- type: arcgis:rest:info
-  url: https://geoportal.cairodc.gov.eg/server/rest/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://geoportal.cairodc.gov.eg/server/rest/rest/services?f=pjson
 id: geoportalcairodcgoveg
 langs:
 - id: AR
   name: Arabic
-link: https://geoportal.cairodc.gov.eg/server/rest/
-name: Cairo Government Geoportal
+link: https://geoportal.cairodc.gov.eg/server/rest/services
+name: Cairo Governorate Geoportal
 owner:
-  link: https://geoportal.cairodc.gov.eg/server/rest/
+  link: https://www.cairo.gov.eg
   location:
     country:
       id: EG
@@ -56,7 +52,7 @@ owner:
     subregion:
       id: EG-C
       name: Al Qāhirah
-  name: Cairo Government
+  name: Cairo Governorate
   type: Regional government
 properties:
   has_doi: false
@@ -76,10 +72,22 @@ tags:
 - government
 - has_api
 - geoportal
-- rest
 - cairo
+- GIS
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: cdi00000532

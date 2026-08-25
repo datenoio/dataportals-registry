@@ -11,10 +11,13 @@ coverage:
     country:
       id: PE
       name: Peru
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
+    subregion:
+      id: PE-LIM
+      name: Lima
 description: Geoserver web interface for San Isidro Municipality GIS data
 endpoints:
 - type: wms111
@@ -60,7 +63,7 @@ langs:
 link: http://geo.munisanisidro.gob.pe:8080/geoserver/web/
 name: GeoServer de la Municipalidad de San Isidro
 owner:
-  link: http://geo.munisanisidro.gob.pe:8080/geoserver/web/
+  link: https://www.gob.pe/munisanisidro
   location:
     country:
       id: PE
@@ -69,7 +72,7 @@ owner:
     subregion:
       id: PE-LIM
       name: Lima
-  name: San Isidro Municipality
+  name: Municipalidad de San Isidro
   type: Local government
 properties:
   has_doi: false
@@ -122,4 +125,4 @@ topics:
 - id: Utilities / Communication
   name: Utilities / Communication
   type: iso19115
-uid: temp00000553
+uid: cdi00035095

@@ -14,21 +14,29 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: Democratic Republic of the Congo IPT, hosted by the Belgian Biodiversity
-  Platform.
+description: GBIF Integrated Publishing Toolkit for the Democratic Republic of the
+  Congo (IPT-DRC), hosted by the Belgian Biodiversity Platform and operated for the
+  Centre de Surveillance de la Biodiversité de l'Université de Kisangani. Publishes
+  occurrence datasets including amphibian surveys and pollinator inventories.
 endpoints:
 - type: dcat:ttl
-  url: http://ipt-rdc.bebif.be/dcat
+  url: https://ipt-rdc.bebif.be/dcat
 - type: ipt:dataset
-  url: http://ipt-rdc.bebif.be/inventory/dataset
+  url: https://ipt-rdc.bebif.be/inventory/dataset
 - type: rss
-  url: http://ipt-rdc.bebif.be/rss.do
+  url: https://ipt-rdc.bebif.be/rss.do
   version: '2.0'
 id: iptrdcbebifbe
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/installation/18c3e8b0-5f20-42e8-a787-9230bac7f3b6
+  value: 18c3e8b0-5f20-42e8-a787-9230bac7f3b6
 langs:
 - id: FR
   name: French
-link: http://ipt-rdc.bebif.be
+- id: EN
+  name: English
+link: https://ipt-rdc.bebif.be
 name: IPT-DRC
 owner:
   link: https://centresurveillancebiodiversite.org/
@@ -39,6 +47,17 @@ owner:
     level: 20
   name: Centre de Surveillance de la Biodiversité de l'Université de Kisangani
   type: Academy
+properties:
+  dataset_count_reported: 3
+  has_doi: true
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
@@ -48,6 +67,7 @@ tags:
 - IPT
 - biodiversity
 - data publishing
+- has_api
 topics:
 - id: Biota
   name: Biota

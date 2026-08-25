@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -12,10 +12,13 @@ coverage:
       name: World
     level: 20
     macroregion:
-      id: World
+      id: '001'
       name: World
 description: FAO/WHO Global Individual Food consumption data Tool (GIFT), an open
   platform for harmonized individual food-consumption statistics.
+endpoints:
+- type: fenix:catalog
+  url: https://www.fao.org/gift-individual-food-consumption/en/
 id: wwwfaoorggift
 langs:
 - id: EN

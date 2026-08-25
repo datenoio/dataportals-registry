@@ -13,11 +13,11 @@ coverage:
       name: Caribbean
     level: 20
     macroregion:
-      id: 029
+      id: '029'
       name: Caribbean
-description: OECS ArcGIS Hub geospatial repository for exploring, visualizing, and
-  downloading geospatial content supporting decision making in OECS member states,
-  including Dominica.
+description: OECS ArcGIS Enterprise GeoHUB for exploring, visualizing, and downloading
+  geospatial content that supports decision making in Organisation of Eastern Caribbean
+  States member countries.
 endpoints:
 - type: arcgis:portals:self
   url: https://gis.oecs.int/portal/sharing/rest/portals/self?f=pjson
@@ -36,20 +36,36 @@ owner:
     level: 20
   name: Organisation of Eastern Caribbean States
   type: International
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
 software:
   id: arcgishub
   name: ArcGIS Hub
 status: active
 tags:
 - geospatial
-- international
 - ArcGIS Hub
 - Caribbean
+- OECS
+- has_api
 topics:
 - id: INTR
   name: International issues
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 - id: Location
   name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
   type: iso19115
 uid: cdi00025626

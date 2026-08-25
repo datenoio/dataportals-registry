@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: GeoNetwork based geospatial catalog for managing spatially referenced
-  resources. Provides metadata editing, search, and mapping capabilities.
+description: MonGeoCat GeoNetwork catalog of the National Geological Survey of Mongolia,
+  for managing spatially referenced geological resources with metadata search, CSW,
+  and OAI-PMH harvesting.
 endpoints:
 - type: geonetwork:query
   url: https://geonet.mris.mn/geonetwork/srv/eng/q
@@ -27,13 +28,18 @@ endpoints:
   url: https://geonet.mris.mn/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 - type: opensearch
-  url: https://geonet.mris.mn/portal.opensearch
+  url: https://geonet.mris.mn/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: geonetwork:site
+  url: https://geonet.mris.mn/geonetwork/srv/api/site
 id: geonetmrismn
 langs:
 - id: MN
   name: Mongolian
+- id: EN
+  name: English
 link: https://geonet.mris.mn/geonetwork
-name: National Geological Survey (Mongolia) geodata
+name: MonGeoCat
 owner:
   link: https://www.mris.mn
   location:
@@ -67,13 +73,16 @@ tags:
 - ISO19115
 - DCAT-AP
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 - id: Location
   name: Location
-  type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Imagery / Base Maps / Earth Cover
-  name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00001119

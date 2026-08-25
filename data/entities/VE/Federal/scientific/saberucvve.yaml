@@ -39,7 +39,7 @@ rights:
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: unknown
+  rights_type: granular
   tos_url: null
 software:
   id: dspace
@@ -51,6 +51,8 @@ tags:
 - research
 - theses
 - Venezuela
+- has_api
+- institutional repository
 topics:
 - id: TECH
   name: Science and technology
@@ -63,6 +65,9 @@ topics:
   type: iso19115
 uid: cdi00024053
 endpoints:
+- type: oaipmh20
+  url: https://saber.ucv.ve/oai/request?verb=Identify
+  version: '2.0'
 - type: rss
   url: https://saber.ucv.ve/jspui/feed/rss_2.0/site
   version: '2.0'

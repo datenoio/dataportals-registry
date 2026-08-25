@@ -12,9 +12,9 @@ coverage:
       name: Bosnia and Herzegovina
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: Official Open Data Portal of IDDEEA BiH, publishing regularly updated
+description: Official open data portal of IDDEEA BiH, publishing regularly updated
   statistical datasets from national registers of citizens, identity cards, travel
   documents, motor vehicles, driving licences, fines, tachograph cards, and seafarers'
   documents.
@@ -23,10 +23,14 @@ endpoints:
   url: https://odp.iddeea.gov.ba/api/DataSets/GetListDatasets
 id: odpiddeeagovba
 langs:
-- id: SR
-  name: Serbian
+- id: BS
+  name: Bosnian
 - id: EN
   name: English
+- id: SR
+  name: Serbian
+- id: HR
+  name: Croatian
 link: https://odp.iddeea.gov.ba
 name: IDDEEA Open Data Portal
 owner:
@@ -42,7 +46,6 @@ owner:
 properties:
   has_doi: false
   is_national: true
-  transferable_location: true
 rights:
   license_id: null
   license_name: null
@@ -58,9 +61,9 @@ tags:
 - government
 - has_api
 - open data
-- Bosnia and Herzegovina
 - IDDEEA
 - statistics
+- registers
 topics:
 - id: GOVE
   name: Government and public sector

@@ -15,27 +15,27 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: GeoNetwork-based catalog for sharing geographically referenced thematic
-  marine data
+description: Marine Institute GeoNetwork catalog of geographically referenced marine
+  datasets from Ireland's National Oceanographic Data Centre.
 endpoints:
 - type: csw202
-  url: http://data.marine.ie/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://data.marine.ie/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: oaipmh20
-  url: http://data.marine.ie/geonetwork/srv/eng/oaipmh?verb=Identify
+  url: https://data.marine.ie/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 - type: geonetwork:selections
-  url: http://data.marine.ie/geonetwork/srv/api/selections
+  url: https://data.marine.ie/geonetwork/srv/api/selections
 - type: geonetwork:site
-  url: http://data.marine.ie/geonetwork/srv/api/site
+  url: https://data.marine.ie/geonetwork/srv/api/site
 - type: opensearch
-  url: http://data.marine.ie/geonetwork/api/collections/main?f=opensearch
+  url: https://data.marine.ie/geonetwork/api/collections/main?f=opensearch
 id: datamarineie
 langs:
 - id: EN
   name: English
-link: http://data.marine.ie/geonetwork
-name: Irish Marine Institute geonetwork
+link: https://data.marine.ie/geonetwork
+name: Marine Institute GeoNetwork
 owner:
   link: https://www.marine.ie
   location:
@@ -43,8 +43,8 @@ owner:
       id: IE
       name: Ireland
     level: 20
-  name: Irish Marine Institute
-  type: Academy
+  name: Marine Institute
+  type: Central government
 properties:
   has_doi: true
 rights:

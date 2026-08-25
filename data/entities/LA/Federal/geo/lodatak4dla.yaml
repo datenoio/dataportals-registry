@@ -15,8 +15,10 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: ຊອກຄົ້ນຂໍ້ມູນ ກະສິກຳ ສິ່ງແວດລ້ອມ ເສດຖະກິດ-ສັງຄົມ ການຄຸ້ມຄອງທີ່ດິນ ທຸລະກິດພາກລັດແລະເອກະຊົນ
-  ການຮ່ວມມືດ້ານການພັດທະນາ ການບໍລິຫານ ນໍ້າ ແລະ ພື້ນຖານໂຄງລ່າງ
+description: Lao-language ArcGIS Hub data catalogue of the Knowledge for Development
+  (K4D) platform of the Government of Lao PDR. National datasets on agriculture,
+  environment, land management, public and private business, development cooperation,
+  water, and infrastructure.
 endpoints:
 - type: dcatap201
   url: https://lo.data.k4d.la/api/feed/dcat-ap/2.0.1.json
@@ -30,21 +32,22 @@ endpoints:
   url: https://lo.data.k4d.la/sitemap.xml
 id: lodatak4dla
 langs:
-- id: EN
-  name: English
+- id: LO
+  name: Lao
 link: https://lo.data.k4d.la/
 name: K4D Data Catalog
 owner:
-  link: https://k4d.la
+  link: https://www.k4d.la/
   location:
     country:
       id: LA
       name: Laos
     level: 20
-  name: K4D
-  type: Civil society
+  name: Government of Lao PDR
+  type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -57,10 +60,23 @@ software:
   name: ArcGIS Hub
 status: active
 tags:
-- '2019'
-- Lao
-- ArcGIS Hub
+- geospatial
+- has_api
+- GIS
+- government
+- K4D
+- open data
+- Laos
 topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Location
   name: Location
   type: iso19115

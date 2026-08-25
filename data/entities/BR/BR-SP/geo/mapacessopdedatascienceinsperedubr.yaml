@@ -1,5 +1,5 @@
 access_mode:
-- public
+- open
 api: true
 api_status: active
 catalog_type: Geoportal
@@ -18,16 +18,18 @@ coverage:
     subregion:
       id: BR-SP
       name: São Paulo
-description: Brazilian non-profit higher education institution in São Paulo offering
-  courses in Business, Economics, Engineering, Law, and Computer Science.
+description: Mapa de acesso a dados urbanos do Insper (TerriaJS), com camadas e
+  indicadores territoriais da Região Metropolitana de São Paulo.
 endpoints:
 - type: terria:config
   url: https://mapacessopde.datascience.insper.edu.br/config.json
 id: mapacessopdedatascienceinsperedubr
 langs:
+- id: PT
+  name: Portuguese
 - id: EN
   name: English
-link: https://www.insper.edu.br
+link: https://mapacessopde.datascience.insper.edu.br
 name: INSPER Portal de dados urbanos
 owner:
   link: https://www.insper.edu.br

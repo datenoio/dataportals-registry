@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Datasets list
 content_types:
 - dataset
@@ -14,15 +14,8 @@ coverage:
     macroregion:
       id: 018
       name: Southern Africa
-description: PESA is an independent think-tank promoting regional integration in SADC
-  and providing research on the political economy of development in Africa.
-endpoints:
-- type: sitemap
-  url: https://politicaleconomy.org.za/sitemap.xml
-- type: sitemap
-  url: https://politicaleconomy.org.za/sitemap.rss
-- type: sitemap
-  url: https://politicaleconomy.org.za/sitemap_index.xml
+description: Former PESA political economy dataset downloads. The hostname
+  politicaleconomy.org.za no longer resolves.
 id: politicaleconomyorgza
 langs:
 - id: EN
@@ -48,7 +41,7 @@ rights:
 software:
   id: custom
   name: Custom software
-status: active
+status: inactive
 tags:
 - has_api
 - microdata

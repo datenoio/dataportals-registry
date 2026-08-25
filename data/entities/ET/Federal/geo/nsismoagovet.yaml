@@ -3,6 +3,9 @@ access_mode:
 api: true
 api_status: active
 catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -12,11 +15,12 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: 'National Soil Information System of Ethiopia. End-to-end automation
-  for soil data: layers, maps, documents, and datasets (EthioSIS). Powered by GeoNode.'
+description: National Soil Information System of Ethiopia (EthioSIS / NSIS). GeoNode
+  catalog of soil layers, maps, documents, and datasets operated by the Ministry of
+  Agriculture.
 endpoints:
-- type: geonode:layers
-  url: https://nsis.moa.gov.et/api/layers/
+- type: geonode:datasets
+  url: https://nsis.moa.gov.et/api/datasets/
 - type: geonode:documents
   url: https://nsis.moa.gov.et/api/documents/
 - type: csw202
@@ -46,37 +50,14 @@ endpoints:
 - type: wfs200
   url: https://nsis.moa.gov.et/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
   version: 2.0.0
-- type: wcs100
-  url: https://nsis.moa.gov.et/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wcs110
-  url: https://nsis.moa.gov.et/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs11
-  url: https://nsis.moa.gov.et/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
-  version: '1.1'
-- type: wcs201
-  url: https://nsis.moa.gov.et/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
-  version: 2.0.1
-- type: wps100
-  url: https://nsis.moa.gov.et/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: geoserver:version
-  url: https://nsis.moa.gov.et/geoserver/rest/about/version
-- type: geoserver:settings
-  url: https://nsis.moa.gov.et/geoserver/rest/settings
-- type: geoserver:layers
-  url: https://nsis.moa.gov.et/geoserver/rest/layers
 - type: sitemap
   url: https://nsis.moa.gov.et/sitemap.xml
-- type: opensearch
-  url: https://nsis.moa.gov.et/catalogue/opensearch
 id: nsismoagovet
 langs:
 - id: EN
   name: English
 link: https://nsis.moa.gov.et/
-name: NSIS - National Soil Information System GeoPortal
+name: National Soil Information System GeoPortal
 owner:
   link: https://www.moa.gov.et
   location:
@@ -84,8 +65,18 @@ owner:
       id: ET
       name: Ethiopia
     level: 20
-  name: FDRE Ministry of Agriculture (MoA)
+  name: Ministry of Agriculture
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
 software:
   id: geonode
   name: GeoNode
@@ -95,6 +86,7 @@ tags:
 - soil
 - agriculture
 - geonode
+- has_api
 topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
@@ -102,7 +94,10 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00021482
-content_types:
-- dataset
-- map_layer

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -12,15 +12,17 @@ coverage:
       name: Andorra
     level: 20
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
-description: GBIF Andorra collections portal. Biodiversity datasets from Andorran
-  and international institutions, powered by Living Atlases / Atlas of Living Australia
-  software.
-endpoints:
-- type: ala:collections
-  url: https://collections.gbif.ad/ws/collection
+description: Former GBIF Andorra Living Atlases collections portal for biodiversity
+  datasets from Andorran and international institutions. The host collections.gbif.ad
+  timed out in August 2026 and is treated as inactive. Datasets previously published
+  by CENMA remain indexed on GBIF.org.
 id: collectionsgbifad
+identifiers:
+- id: gbif
+  url: https://www.gbif.org/publisher/b4370195-ab86-42a1-822a-96809e3d0384
+  value: b4370195-ab86-42a1-822a-96809e3d0384
 langs:
 - id: CA
   name: Catalan
@@ -29,7 +31,7 @@ langs:
 link: https://collections.gbif.ad/datasets
 name: GBIF Andorra datasets
 owner:
-  link: http://www.gbif.ad/
+  link: https://www.iea.ad/cenma
   location:
     country:
       id: AD
@@ -41,7 +43,7 @@ owner:
 software:
   id: ala
   name: Atlas of Living Australia
-status: active
+status: inactive
 tags:
 - GBIF
 - biodiversity

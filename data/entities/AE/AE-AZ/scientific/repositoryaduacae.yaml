@@ -26,6 +26,9 @@ endpoints:
 - type: dspace:objects
   url: https://repository.adu.ac.ae/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://repository.adu.ac.ae/server/oai/request?verb=Identify
+  version: '2.0'
 - type: sitemap
   url: https://repository.adu.ac.ae/sitemap_index.xml
 id: repositoryaduacae

@@ -13,12 +13,13 @@ coverage:
       name: Montenegro
     level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
     subregion:
       id: ME-02
       name: Bar
-description: Geoserver Web interface for data catalog and GIS services
+description: Municipal geoportal of Bar with a public map viewer at geoportal.bar.me
+  and GeoServer OGC services (WMS, WFS, WCS, WMTS) for local spatial data.
 endpoints:
 - type: wms111
   url: https://geoportal.bar.me:8081/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -66,10 +67,10 @@ id: geoportalbarme
 langs:
 - id: SR
   name: Serbian
-link: https://geoportal.bar.me:8081/geoserver/web/
-name: Geoportal Bar (Geoserver)
+link: https://geoportal.bar.me/
+name: Geoportal Bar
 owner:
-  link: https://www.bar.me
+  link: https://bar.me
   location:
     country:
       id: ME
@@ -78,7 +79,7 @@ owner:
     subregion:
       id: ME-02
       name: Bar
-  name: Bar city government
+  name: Municipality of Bar
   type: Local government
 properties:
   has_doi: false
@@ -96,9 +97,21 @@ status: active
 tags:
 - GIS
 - geoportal
-- web
+- geospatial
+- government
+- has_api
+- Montenegro
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: cdi00004763

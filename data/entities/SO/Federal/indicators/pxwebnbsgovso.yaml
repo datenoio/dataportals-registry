@@ -15,10 +15,14 @@ coverage:
       id: '014'
       name: Eastern Africa
 description: Official PxWeb statistical database of the Somali National Bureau of
-  Statistics, with interactive tables on population, economy, and other national indicators.
+  Statistics. Interactive tables cover population, economy, and other national indicators,
+  with a PxWeb API at /api/v1/en/.
 endpoints:
 - type: pxweb:catalog
   url: https://pxweb.nbs.gov.so/pxweb/en/
+- type: pxwebapi
+  url: https://pxweb.nbs.gov.so/api/v1/en/
+  version: '1'
 id: pxwebnbsgovso
 langs:
 - id: EN
@@ -36,6 +40,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -49,8 +54,11 @@ software:
 status: active
 tags:
 - statistics
+- official statistics
+- government
 - PxWeb
 - Somalia
+- has_api
 topics:
 - id: SOCI
   name: Population and society

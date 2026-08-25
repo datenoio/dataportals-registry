@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Current national open data portal of Guatemala, operated by SENACYT with
+  the Ministry of the Interior. CKAN catalog of government datasets covering science,
+  environment, health, education, and other public themes.
+endpoints:
+- type: ckan
+  url: https://catalogo.senacyt.gob.gt/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalogo.senacyt.gob.gt/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalogo.senacyt.gob.gt/api/3/action/package_list
+  version: '3'
+id: catalogosenacytgobgt
+langs:
+- id: ES
+  name: Spanish
+link: https://catalogo.senacyt.gob.gt
+name: Portal Nacional de Datos Abiertos de Guatemala
+owner:
+  link: https://www.senacyt.gob.gt
+  location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 20
+  name: Secretaría Nacional de Ciencia y Tecnología (SENACYT)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- Guatemala
+- national portal
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00005367

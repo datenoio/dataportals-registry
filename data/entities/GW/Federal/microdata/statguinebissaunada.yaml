@@ -16,9 +16,12 @@ coverage:
       id: '011'
       name: Western Africa
 description: NADA 4.1 survey catalog of Guinea-Bissau's Instituto Nacional de
-  Estatística (Arquivo central de dados GB). INE now links to /nada41/index.php;
-  the former /nada path returns 404. The NADA 4.1 application currently returns
-  HTTP 500, so the catalog is inactive until the archive is restored.
+  Estatística (Arquivo central de dados GB). INE advertised the archive at
+  /nada41/index.php; the former /nada path is gone. The NADA application has
+  been unreachable (HTTP 500, then connection timeouts), so the catalog is
+  inactive until restored. INE's current institutional site is https://ine.gw
+  (WordPress, under maintenance); keep the catalog URL on
+  www.stat-guinebissau.com rather than the apex host.
 id: statguinebissaunada
 langs:
 - id: PT
@@ -26,7 +29,7 @@ langs:
 link: https://www.stat-guinebissau.com/nada41/index.php
 name: INE Guinea-Bissau National Data Archive
 owner:
-  link: https://www.stat-guinebissau.com
+  link: https://ine.gw
   location:
     country:
       id: GW

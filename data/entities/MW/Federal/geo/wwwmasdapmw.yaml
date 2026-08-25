@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
@@ -14,15 +15,18 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: A public platform for GIS Data to support development in Malawi. Hosts
-  datasets, documents, and maps related to boundaries, buildings, climate, elevation,
+description: Public GeoNode 4.3 platform for GIS data to support development in Malawi.
+  Hosts 223 datasets and 78 maps related to boundaries, buildings, climate, elevation,
   geology, health, land cover, nature, places, population, transportation, water,
-  drought monitoring, flood and heavy rain.
+  drought monitoring, flood and heavy rain. The TLS certificate is currently expired
+  but the catalog and APIs respond.
 endpoints:
 - type: geonode:datasets
-  url: https://www.masdap.mw/api/datasets/
+  url: https://www.masdap.mw/api/v2/datasets
 - type: geonode:documents
   url: https://www.masdap.mw/api/documents/
+- type: geonode:maps
+  url: https://www.masdap.mw/api/maps/
 - type: wms111
   url: https://www.masdap.mw/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
@@ -54,10 +58,12 @@ owner:
       id: MW
       name: Malawi
     level: 20
-  name: National Spatial Data Center Department of surveys
+  name: National Spatial Data Centre, Department of Surveys
   type: Central government
 properties:
   has_doi: false
+  is_national: true
+  dataset_count_reported: 223
 rights:
   license_id: null
   license_name: null
@@ -72,6 +78,10 @@ status: active
 tags:
 - geospatial
 - government
+- GeoNode
+- spatial data infrastructure
+- has_api
+- Malawi
 topics:
 - id: ENVI
   name: Environment
@@ -116,4 +126,3 @@ topics:
   name: Environment
   type: iso19115
 uid: cdi00004629
-api: true

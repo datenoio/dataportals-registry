@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,6 +18,9 @@ coverage:
 description: Arca della Biodiversità G3W-SUITE geoportal of Foreste Casentinesi, Monte
   Falterona e Campigna National Park for public nature, cultural, and park-management
   maps.
+endpoints:
+- type: g3wsuite:catalog
+  url: https://biodiversita.parcoforestecasentinesi.it/
 id: biodiversitaparcoforestecasentinesit
 langs:
 - id: IT

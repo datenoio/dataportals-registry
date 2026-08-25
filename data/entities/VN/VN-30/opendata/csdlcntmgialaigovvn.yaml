@@ -17,7 +17,8 @@ coverage:
     subregion:
       id: VN-30
       name: Gia Lai
-description: Unable to extract structured catalog data from the provided URL.
+description: CKAN catalog of the Gia Lai Department of Industry and Trade, publishing industrial statistics,
+  trade administration, and related provincial datasets.
 endpoints:
 - type: ckan
   url: http://csdlcntmgialai.gov.vn/api/3
@@ -33,8 +34,7 @@ langs:
 - id: VN
   name: Vietnamese
 link: http://csdlcntmgialai.gov.vn
-name: Open repository of information and data on industry and commerce of Gia Lai
-  province.
+name: Gia Lai industry and trade data catalog
 owner:
   link: http://sct.gialai.gov.vn
   location:
@@ -45,7 +45,7 @@ owner:
     subregion:
       id: VN-30
       name: Gia Lai
-  name: Gia Lai Provincial Department of Industry and Trade
+  name: Gia Lai Department of Industry and Trade
   type: Regional government
 properties:
   transferable_location: true
@@ -63,8 +63,19 @@ status: active
 tags:
 - government
 - has_api
+- industry
+- trade
+- CKAN
+- Gia Lai
+- Vietnam
 topics:
-- id: REGI
-  name: Regions and cities
+- id: ECON
+  name: Economy and finance
   type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
 uid: cdi00002062

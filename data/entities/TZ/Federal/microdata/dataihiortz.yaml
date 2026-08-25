@@ -1,8 +1,8 @@
 access_mode:
 - open
-- limited
-api: true
-api_status: active
+- restricted
+api: false
+api_status: inactive
 catalog_type: Microdata catalog
 content_types:
 - microdata
@@ -15,12 +15,10 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Centralized hub for all data-related resources managed by Ifakara Health
-  Institute. It provides access to datasets such as health service assessments, vital
-  registration, and verbal autopsy studies in Tanzania.
-endpoints:
-- type: nada:catalog-search
-  url: https://data.ihi.or.tz/index.php/api/catalog/search
+description: Historical NADA microdata catalog of the Ifakara Health Institute at
+  data.ihi.or.tz, used for health service assessments, vital registration, and verbal
+  autopsy studies. The hostname no longer resolves (24 August 2026). A later IHI Data
+  Portal has been announced at dataportal.ihi.or.tz but did not respond to a live probe.
 id: dataihiortz
 langs:
 - id: EN
@@ -28,7 +26,7 @@ langs:
 link: https://data.ihi.or.tz
 name: Ifakara Health Institute Data Repository
 owner:
-  link: http://www.ihi.or.tz
+  link: https://www.ihi.or.tz
   location:
     country:
       id: TZ
@@ -49,10 +47,8 @@ rights:
 software:
   id: nada
   name: NADA
-status: active
+status: inactive
 tags:
-- government
-- has_api
 - microdata
 - health
 - Tanzania

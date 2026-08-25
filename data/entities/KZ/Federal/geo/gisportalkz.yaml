@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
@@ -14,7 +15,8 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: No description available from provided raw text.
+description: ArcGIS Server of LLP Terra Exploration, publishing geospatial REST
+  services used for mineral exploration mapping in Kazakhstan.
 endpoints:
 - type: arcgis:rest:services
   url: https://gisportal.kz/arcgis/rest/services?f=pjson
@@ -25,15 +27,15 @@ langs:
 - id: EN
   name: English
 link: https://gis-portal.kz
-name: ArcGIS server of the LLP Terra Exploration
+name: Terra Exploration ArcGIS Server
 owner:
-  link: http://terraex.kz
+  link: https://www.terraex.kz
   location:
     country:
       id: KZ
       name: Kazakhstan
     level: 20
-  name: LLP "Terra Exploration"
+  name: LLP Terra Exploration
   type: Business
 properties:
   has_doi: false
@@ -50,16 +52,17 @@ software:
 status: active
 tags:
 - geospatial
-- Not available
+- geology
+- mineral exploration
+- has_api
 topics:
 - id: Location
   name: Location
   type: iso19115
-- id: Boundaries
-  name: Boundaries
+- id: Geoscientific Information
+  name: Geoscientific Information
   type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00002036
-api: true

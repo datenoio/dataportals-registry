@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: XK
+      name: Kosovo
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Former national CKAN open data portal of the Republic of Kosovo (RKS
+  Open Data), operated by the Agency for Information Society. The hostname opendata.rks-gov.net
+  no longer resolves (NXDOMAIN as of 24 August 2026). Last public snapshots were on
+  the Internet Archive in 2025.
+endpoints:
+- type: ckan
+  url: https://opendata.rks-gov.net/api/3
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.rks-gov.net/api/3/action/package_list
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata.rks-gov.net/api/3/action/package_search
+  version: '3'
+id: opendatarksgovnet
+langs:
+- id: SQ
+  name: Albanian
+- id: EN
+  name: English
+- id: SR
+  name: Serbian
+link: https://opendata.rks-gov.net
+name: Kosovo Open Data (RKS Open Data)
+owner:
+  link: https://mpb.rks-gov.net
+  location:
+    country:
+      id: XK
+      name: Kosovo
+    level: 20
+  name: Agency for Information Society
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: deprecated
+tags:
+- government
+- open data
+- Kosovo
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00034892

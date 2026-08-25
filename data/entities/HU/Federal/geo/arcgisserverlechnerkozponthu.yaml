@@ -14,27 +14,28 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: Geoportal. managed by Lechner Knowledge Center. powered by ArcGIS Server.
-  accessible at arcgisserver.lechnerkozpont.hu.
+      name: Eastern Europe
+description: ArcGIS Server services directory of Lechner Knowledge Center, publishing
+  Hungarian geospatial map services. Directory listing may require permitted access
+  (HTTP 403 from some clients).
 endpoints:
 - type: arcgis:rest:info
-  url: http://arcgisserver.lechnerkozpont.hu/arcgisserverwa/rest/info?f=pjson
+  url: https://arcgisserver.lechnerkozpont.hu/arcgisserverwa/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: http://arcgisserver.lechnerkozpont.hu/arcgisserverwa/rest/services?f=pjson
+  url: https://arcgisserver.lechnerkozpont.hu/arcgisserverwa/rest/services?f=pjson
 - type: arcgis:soap
-  url: http://arcgisserver.lechnerkozpont.hu/arcgisserverwa/services?wsdl
+  url: https://arcgisserver.lechnerkozpont.hu/arcgisserverwa/services?wsdl
 - type: arcgis:sitemap
-  url: http://arcgisserver.lechnerkozpont.hu/arcgisserverwa/rest/services?f=sitemap
+  url: https://arcgisserver.lechnerkozpont.hu/arcgisserverwa/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: http://arcgisserver.lechnerkozpont.hu/arcgisserverwa/rest/services?f=geositemap
+  url: https://arcgisserver.lechnerkozpont.hu/arcgisserverwa/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: http://arcgisserver.lechnerkozpont.hu/arcgisserverwa/rest/services?f=kmz
+  url: https://arcgisserver.lechnerkozpont.hu/arcgisserverwa/rest/services?f=kmz
 id: arcgisserverlechnerkozponthu
 langs:
 - id: HU
   name: Hungarian
-link: http://arcgisserver.lechnerkozpont.hu/arcgisserverwa/services
+link: https://arcgisserver.lechnerkozpont.hu/arcgisserverwa/services
 name: Lechner Knowledge Center Geoportal
 owner:
   link: https://lechnerkozpont.hu

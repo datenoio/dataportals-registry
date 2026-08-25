@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -20,9 +20,6 @@ description: Official statistics portal of the Bank of Mongolia (Монголб�
   monetary survey, consolidated bank reports, outstanding loans, deposits, interest
   rates, and foreign-exchange market rates, along with downloadable monthly statistical
   bulletins.
-endpoints:
-- type: rest
-  url: https://stat.mongolbank.mn/api/
 id: statmongolbankmn
 langs:
 - id: MN
@@ -66,7 +63,6 @@ tags:
 - exchange rates
 - interest rates
 - time series
-- has_api
 topics:
 - id: ECON
   name: Economy and finance

@@ -1,0 +1,106 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: The institutional research data repository of the Universität Innsbruck
+  is a service to enable storing, sharing and publishing of research data according
+  to the FAIR principles for its employees and project partners.
+endpoints:
+- type: inveniordmapi:records
+  url: https://researchdata.uibk.ac.at/api/records
+id: researchdatauibkacat
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100013770
+  value: r3d100013770
+langs:
+- id: EN
+  name: English
+link: https://researchdata.uibk.ac.at
+name: Research data repository of the Universität Innsbruck
+owner:
+  link: https://www.uibk.ac.at/
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    subregion:
+      id: AT-7
+      name: Tirol
+  name: Universität Innsbruck
+  type: Academy
+properties:
+  has_doi: true
+  invenio-filters: dataset,other
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: inveniordm
+  name: InvenioRDM
+status: active
+tags:
+- scientific
+- has_api
+- FAIR
+- multidisciplinary
+- institutional
+- research data
+- publications
+- lectures
+- project data
+- patents
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00000062
+_re3data:
+  re3data_id: r3d100013770
+  keywords: []
+  content_type: []
+  contact_email: researchdata@uibk.ac.at
+  description: null
+  persistent_identifiers: []
+  software: []
+  versioning: null
+  institutions:
+  - name: ROR:054pv6659
+    url: https://ror.org/054pv6659
+  - name: funding
+    url: null
+  - name: general
+    url: null
+  - name: Universität Innsbruck, Zentraler Informatikdienst
+    url: null
+  - name: general
+    url: null
+  - name: technical
+    url: null
+  repository_type: null
+  last_updated: '2025-12-25T16:48:40.185699'

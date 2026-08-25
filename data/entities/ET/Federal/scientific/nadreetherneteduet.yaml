@@ -22,6 +22,9 @@ endpoints:
   url: https://nadre.ethernet.edu.et/api
 - type: inveniordmapi:records
   url: https://nadre.ethernet.edu.et/api/records
+- type: oaipmh20
+  url: https://nadre.ethernet.edu.et/oai2d?verb=Identify
+  version: '2.0'
 id: nadreetherneteduet
 langs:
 - id: EN
@@ -54,6 +57,7 @@ tags:
 - research data
 - academic
 - InvenioRDM
+- has_api
 - Ethiopia
 topics:
 - id: EDUC

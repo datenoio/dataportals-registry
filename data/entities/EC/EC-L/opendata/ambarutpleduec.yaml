@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,24 +17,14 @@ coverage:
     subregion:
       id: EC-L
       name: Loja
-description: No description available. This open data portal. managed by Universidad
-  Técnica Particular de Loja. provides access to datasets and resources.
-endpoints:
-- type: ckan:package-search
-  url: http://ambar.utpl.edu.ec/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: http://ambar.utpl.edu.ec/api/3/action/package_list
-  version: '3'
-- type: ckan
-  url: http://ambar.utpl.edu.ec/api/3
-  version: '3'
+description: Former CKAN data store of Universidad Técnica Particular de Loja. The site now
+  redirects to a university maintenance page.
 id: ambarutpleduec
 langs:
 - id: ES
   name: Spanish
 link: http://ambar.utpl.edu.ec
-name: Ambar DataStore estadísticas
+name: AMBAR DataStore UTPL
 owner:
   link: https://www.utpl.edu.ec
   location:
@@ -57,7 +47,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
 - has_api

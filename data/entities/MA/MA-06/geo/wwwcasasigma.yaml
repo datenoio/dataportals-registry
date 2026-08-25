@@ -18,9 +18,8 @@ coverage:
     subregion:
       id: MA-06
       name: Casablanca-Settat
-description: Geospatial data portal for Casablanca Smart City initiative, providing
-  ArcGIS REST services for urban management, infrastructure planning, and citizen
-  services in Casablanca.
+description: ArcGIS Server 11.5 of the City of Casablanca (CasaSIG), publishing REST
+  map services for smart-city urban management, road networks, and municipal infrastructure.
 endpoints:
 - type: arcgis:rest:info
   url: https://www.casasig.ma/arcgis/rest/info?f=pjson
@@ -38,6 +37,8 @@ id: wwwcasasigma
 langs:
 - id: AR
   name: Arabic
+- id: FR
+  name: French
 link: https://www.casasig.ma/arcgis/rest/services
 name: Casablanca Smart City - Geospatial Data Portal
 owner:
@@ -71,10 +72,11 @@ tags:
 - spatial data
 - smart city
 - Casablanca
-- Morocco
 - urban management
 - geospatial
 - infrastructure
+- government
+- has_api
 topics:
 - id: REGI
   name: Regions and cities
@@ -88,4 +90,4 @@ topics:
 - id: Transportation
   name: Transportation
   type: iso19115
-uid: temp00005965
+uid: cdi00035255

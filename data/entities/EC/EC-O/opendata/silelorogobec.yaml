@@ -17,17 +17,17 @@ coverage:
     subregion:
       id: EC-O
       name: El Oro
-description: Decentralized Autonomous Government Provincial of El Oro data catalog
+description: 'Sistema de Información Local of the Provincial GAD of El Oro: WordPress portal
+  for territorial planning and public information.'
 endpoints:
-- type: ckan
-  url: https://sil.eloro.gob.ec/api/3
+- type: rest
+  url: https://sil.eloro.gob.ec/wp-json/
 id: silelorogobec
 langs:
 - id: ES
   name: Spanish
 link: https://sil.eloro.gob.ec
-name: Sistema de Información Local Gobierno Autónomo Descentralizado Provincial de
-  El Oro
+name: Sistema de Información Local Gobierno Autónomo Descentralizado Provincial de El Oro
 owner:
   link: https://eloro.gob.ec
   location:
@@ -50,8 +50,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: ckan
-  name: CKAN
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - government

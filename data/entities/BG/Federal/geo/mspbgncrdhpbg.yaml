@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,31 +14,16 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
-description: This is a data catalog URL for a REST services endpoint, possibly part
-  of a larger geospatial data portal. Based on the limited information provided, it
-  is not possible to extract detailed metadata such as owner_type_reference, data_theme,
-  or iso19115_theme directly from the raw URL alone. For a more accurate and complete
-  extraction, structured metadata or further site inspection would be required.
-endpoints:
-- type: arcgis:rest:info
-  url: https://mspbg.ncrdhp.bg/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://mspbg.ncrdhp.bg/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://mspbg.ncrdhp.bg/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://mspbg.ncrdhp.bg/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://mspbg.ncrdhp.bg/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://mspbg.ncrdhp.bg/arcgis/rest/services?f=kmz
+      name: Eastern Europe
+description: Maritime Spatial Planning ArcGIS REST catalog of the National Centre
+  for Regional Development and Housing Policy. The mspbg.ncrdhp.bg REST path currently
+  returns HTTP 404.
 id: mspbgncrdhpbg
 langs:
 - id: BG
   name: Bulgarian
 link: https://mspbg.ncrdhp.bg/arcgis/rest/services
-name: NCRDHP MSP Bulgaria Geoportal
+name: NCRDHP Maritime Spatial Planning Geoportal
 owner:
   link: https://ncrdhp.bg
   location:
@@ -46,7 +31,7 @@ owner:
       id: BG
       name: Bulgaria
     level: 20
-  name: Government of Bulgaria
+  name: National Centre for Regional Development and Housing Policy
   type: Central government
 properties:
   has_doi: false
@@ -60,7 +45,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - Bulgaria
 - arcgisserver

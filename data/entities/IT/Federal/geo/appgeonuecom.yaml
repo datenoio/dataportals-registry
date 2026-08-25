@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: GeoServer data catalog. This geoportal. provides access to datasets and
-  resources.
+description: GeoNue platform GeoServer (Sardinian GIS vendor), used as a shared
+  application endpoint rather than a single public catalogue.
 endpoints:
 - type: wms111
   url: https://app.geonue.com/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -74,16 +74,16 @@ langs:
 - id: EN
   name: English
 link: https://app.geonue.com/geoserver
-name: Geoportal - GeoServer
+name: GeoNue GeoServer
 owner:
-  link: https://app.geonue.com/geoserver
+  link: https://www.geonue.com
   location:
     country:
       id: IT
       name: Italy
     level: 20
-  name: GeoServer
-  type: Central government
+  name: GeoNue
+  type: Business
 properties:
   has_doi: false
 rights:

@@ -13,15 +13,14 @@ coverage:
       name: Bosnia and Herzegovina
     level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
     subregion:
       id: BA-BIH
       name: Federacija Bosne i Hercegovine
 description: Water information system (ISV) geoportal of the Agency for the Adriatic
-  Sea River Basin District in Mostar. Provides public GIS viewers and ArcGIS REST
-  services for water cadastre, water documentation, water estate, and river basin
-  management data.
+  Sea River Basin District in Mostar. Public GIS viewers and ArcGIS REST services
+  cover water cadastre, groundwater, water estate, and river-basin management data.
 endpoints:
 - type: arcgis:portals:self
   url: https://isvportal.jadran.ba/portal/sharing/rest/portals/self?f=pjson
@@ -41,10 +40,12 @@ id: isvportaljadranba
 langs:
 - id: HR
   name: Croatian
-link: https://isvportal.jadran.ba/
+- id: BS
+  name: Bosnian
+link: https://isvportal.jadran.ba
 name: ISV Mostar
 owner:
-  link: https://avpjm.jadran.ba/
+  link: https://avpjm.jadran.ba
   location:
     country:
       id: BA
@@ -71,8 +72,10 @@ status: active
 tags:
 - geospatial
 - government
+- has_api
 - water
-- Bosnia and Herzegovina
+- Adriatic
+- FBiH
 - arcgisserver
 topics:
 - id: ENVI

@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: false
 api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
@@ -13,13 +14,17 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Infostat provides users with options to form and execute requests for
-  statistical data published by the National Statistical Institute of Bulgaria.
+description: Infostat is the interactive statistical request system of the National
+  Statistical Institute of Bulgaria, used to extract official tables and time series.
+  The former infostat.nsi.bg application now redirects to the NSI Infostat product
+  page.
 id: infostatnsibg
 langs:
 - id: BG
   name: Bulgarian
-link: https://infostat.nsi.bg/infostat/
+- id: EN
+  name: English
+link: https://www.nsi.bg/infostat
 name: Infostat - Information System of NSI (National Statistical Institute)
 owner:
   link: https://www.nsi.bg

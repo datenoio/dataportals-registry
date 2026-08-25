@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '151'
       name: 'Eastern Europe '
-description: Geoportal. managed by Government of Poland. powered by ArcGIS Server.
-  accessible at policja.orsip.pl.
+description: ArcGIS Server REST services for the Polish Police instance of ORSIP,
+  the Open Regional Spatial Information System originally developed for the Silesian
+  Voivodeship.
 endpoints:
 - type: arcgis:portals:self
   url: https://policja.orsip.pl/portal/sharing/rest/portals/self?f=pjson
@@ -37,15 +38,15 @@ langs:
 - id: PL
   name: Polish
 link: https://policja.orsip.pl/server/rest/services
-name: Government of Poland Geoportal
+name: Policja ORSIP geoportal
 owner:
-  link: https://orsip.pl
+  link: https://www.policja.pl
   location:
     country:
       id: PL
       name: Poland
     level: 20
-  name: Government of Poland
+  name: Policja
   type: Central government
 properties:
   has_doi: false
@@ -61,11 +62,19 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- Poland
-- arcgisserver
 - geospatial
+- has_api
+- police
+- ORSIP
+- Poland
 topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 - id: Location
   name: Location
+  type: iso19115
+- id: Structure
+  name: Structure
   type: iso19115
 uid: temp00001639

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,26 +15,12 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: Catalog of RESTful geospatial services provided by Tunisie Telecom.
-endpoints:
-- type: arcgis:portals:self
-  url: https://sig.tunisietelecom.tn/server/portal/sharing/rest/portals/self?f=pjson
-- type: arcgis:rest:info
-  url: https://sig.tunisietelecom.tn/server/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://sig.tunisietelecom.tn/server/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://sig.tunisietelecom.tn/server/services?wsdl
-- type: arcgis:sitemap
-  url: https://sig.tunisietelecom.tn/server/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://sig.tunisietelecom.tn/server/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://sig.tunisietelecom.tn/server/rest/services?f=kmz
+description: Former ArcGIS REST services directory of Tunisie Telecom. The host
+  sig.tunisietelecom.tn does not respond from the public internet.
 id: sigtunisietelecomtn
 langs:
-- id: AR
-  name: Arabic
+- id: FR
+  name: French
 link: https://sig.tunisietelecom.tn/server/rest/services
 name: Tunisie Telecom REST Services
 owner:
@@ -44,7 +30,7 @@ owner:
       id: TN
       name: Tunisia
     level: 20
-  name: Tunisia Telecom
+  name: Tunisie Telecom
   type: Business
 properties:
   has_doi: false
@@ -58,11 +44,11 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - geospatial
 - REST
-- services
+- telecom
 topics:
 - id: REGI
   name: Regions and cities

@@ -15,33 +15,33 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: GeoNetwork open source catalog to share geographically referenced thematic
-  information between organizations.
+description: Irish Spatial Data Exchange (ISDE) GeoNetwork catalog for sharing
+  geographically referenced Irish public-sector datasets, including INSPIRE metadata.
 endpoints:
 - type: geonetwork:query
-  url: http://isde.ie/geonetwork/srv/eng/q
+  url: https://isde.ie/geonetwork/srv/eng/q
 - type: openapi
-  url: http://isde.ie/geonetwork/srv/v2/api-docs
+  url: https://isde.ie/geonetwork/srv/v2/api-docs
   version: '2'
 - type: csw202
-  url: http://isde.ie/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://isde.ie/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: opensearch
-  url: http://isde.ie/geonetwork/srv/eng/portal.opensearch
+  url: https://isde.ie/geonetwork/srv/eng/portal.opensearch
   version: '1.0'
 - type: oaipmh20
-  url: http://isde.ie/geonetwork/srv/eng/oaipmh?verb=Identify
+  url: https://isde.ie/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 - type: geonetwork:site
-  url: http://isde.ie/geonetwork/srv/api/site
+  url: https://isde.ie/geonetwork/srv/api/site
 - type: opensearch
-  url: http://isde.ie/portal.opensearch
+  url: https://isde.ie/portal.opensearch
 id: isdeie
 langs:
 - id: EN
   name: English
-link: http://isde.ie/geonetwork
-name: Irish Spatial Data Exchange - GeoNetwork
+link: https://isde.ie/geonetwork
+name: Irish Spatial Data Exchange
 owner:
   link: https://www.marine.ie
   location:
@@ -49,8 +49,8 @@ owner:
       id: IE
       name: Ireland
     level: 20
-  name: Irish Marine Institute
-  type: Academy
+  name: Marine Institute
+  type: Central government
 properties:
   has_doi: true
 rights:

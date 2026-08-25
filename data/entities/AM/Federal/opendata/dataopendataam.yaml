@@ -14,17 +14,33 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: A community project created and supported by Open Data Armenia team.
-  We search, obtain and register all available open data related to Armenia and Armenian
-  language and culture.
+description: Community CKAN catalog operated by the Open Data Armenia team. It collects
+  and republishes open datasets from Armenian government, scientific, and civil-society
+  sources, including material related to the Armenian language and culture.
+endpoints:
+- type: ckan
+  url: https://data.opendata.am/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.opendata.am/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.opendata.am/api/3/action/package_list
+  version: '3'
+- type: sitemap
+  url: https://data.opendata.am/sitemap.xml
 id: dataopendataam
 langs:
+- id: HY
+  name: Armenian
 - id: EN
   name: English
+- id: RU
+  name: Russian
 link: https://data.opendata.am
-name: Data Catalog Armenia
+name: Open Data Catalog Armenia
 owner:
-  link: http://opendata.am
+  link: https://opendata.am
   location:
     country:
       id: AM
@@ -48,10 +64,9 @@ software:
 status: active
 tags:
 - has_api
-- armenia
 - open data
-- Armenian language
-- Armenian culture
+- government
+- community
 topics:
 - id: SOCI
   name: Population and society
@@ -81,9 +96,3 @@ topics:
   name: Planning / Cadastre
   type: iso19115
 uid: cdi00005290
-endpoints:
-- type: ckan:api
-  url: https://data.opendata.am/api/3/action/package_list
-  version: '3.0'
-- type: sitemap
-  url: https://data.opendata.am/sitemap.xml

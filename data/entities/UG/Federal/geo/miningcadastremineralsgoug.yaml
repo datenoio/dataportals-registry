@@ -15,10 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Electronic platform for all stakeholders in the mining sector in Uganda
-  to engage directly with the Directorate of Geological Survey and Mines. The portal
-  facilitates online mineral rights applications, license management, and access to
-  mining sector data in Uganda.
+description: ArcGIS Server REST catalog for the Uganda mining cadastre, exposing mineral
+  licences, geology, geothermal, gazette areas, and related Landfolio geoprocessing
+  services of the Directorate of Geological Survey and Mines.
 endpoints:
 - type: arcgis:rest:info
   url: https://miningcadastre.minerals.go.ug/arcgis/rest/info?f=pjson
@@ -66,11 +65,15 @@ tags:
 - Uganda
 - geological survey
 - mineral rights
+- has_api
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
 - id: Geoscientific Information
   name: Geoscientific Information
   type: iso19115
-uid: temp00005838
+uid: cdi00034931

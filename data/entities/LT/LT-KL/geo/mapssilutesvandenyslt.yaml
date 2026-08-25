@@ -18,8 +18,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Data catalog of ArcGIS REST map services provided by the municipality
-  of Silute, Lithuania.
+description: UAB „Šilutės vandenys“ ArcGIS Server catalogue of water-supply, wastewater, and related utility
+  map services in Šilutė district.
 endpoints:
 - type: arcgis:portals:self
   url: https://maps.silutes-vandenys.lt/portal/sharing/rest/portals/self?f=pjson
@@ -40,18 +40,18 @@ langs:
 - id: LT
   name: Lithuanian
 link: https://maps.silutes-vandenys.lt/arcgis/rest/services
-name: Arcgis REST Services in Silute
+name: Šilutės vandenys ArcGIS REST
 owner:
-  link: https://www.silutes-vandenys.lt/
+  link: https://silutes-vandenys.lt/
   location:
     country:
       id: LT
       name: Lithuania
-    level: 20
+    level: 30
     subregion:
       id: LT-KL
       name: Klaipėdos apskritis
-  name: UAB "Šilutės vandenys"
+  name: UAB „Šilutės vandenys“
   type: Business
 properties:
   has_doi: false
@@ -77,25 +77,16 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: TRAN
-  name: Transport
+- id: ENER
+  name: Energy
   type: eudatatheme
-- id: Biota
-  name: Biota
+- id: Inland Waters
+  name: Inland Waters
   type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Environment
-  name: Environment
+- id: Utilities / Communication
+  name: Utilities / Communication
   type: iso19115
 - id: Location
   name: Location
   type: iso19115
-- id: Planning / Cadastre
-  name: Planning / Cadastre
-  type: iso19115
-- id: Transportation
-  name: Transportation
-  type: iso19115
-uid: temp00000457
+uid: cdi00035284
