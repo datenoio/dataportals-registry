@@ -34,13 +34,14 @@ Match on hostname, not display name. `id` is not a URL.
 ## Discovery order
 
 1. **Vendor and government lists** in [discovery.md](../discovery.md) and the README data-sources section — highest yield, fewest false positives.
-2. **CKAN ecosystem sync** (preview only until the user wants files written):
+2. **Vendor lists and Graph dumps** (preview only until the user wants files written):
 
    ```bash
    python scripts/sync_ckan_ecosystem.py --dry-run
+   python scripts/extract_openaire_portals.py list-sources --output /tmp/openaire_sources.json
    ```
 
-3. **Targeted search** the user asked for (one country, one software, one city). Use local-language open-data terms and government TLDs. Query recipes: [discovery-search-tools.md](../discovery-search-tools.md) and the platform guides ([opendata](../discovery-opendata.md), [geoportals](../discovery-geoportals.md), [scientific](../discovery-scientific.md), [metadata](../discovery-metadata.md), [indicators](../discovery-indicators.md)). Software ID → page: [software-index.md](../software-index.md).
+3. **Targeted search** the user asked for (one country, one software, one city). Use local-language open-data terms and government TLDs. Query recipes: [discovery-search-tools.md](../discovery-search-tools.md) and the platform guides ([opendata](../discovery-opendata.md), [geoportals](../discovery-geoportals.md), [scientific](../discovery-scientific.md) ([domain](../discovery-scientific-domain.md)), [metadata](../discovery-metadata.md), [indicators](../discovery-indicators.md)). Software ID → page: [software-index.md](../software-index.md).
 4. **Endpoint probes** on the candidate host only (table below). GET, short timeout, public URLs.
 
 You MAY run documented Google / Censys / Shodan / FOFA queries when the user asked to discover catalogs and the scope is a country, software, city, or TLD. Do not write internet-wide scanners, recursive crawlers, or unscoped sweeps in this repository. Still duplicate-check exports before probing live hosts.
@@ -68,6 +69,30 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `PxStat.Data.Cube_API` / “PxStat Open Data Platform” | `pxstat` | Indicators catalog |
 | Title “TabNet Win32” / `deftohtm.exe` / `cgi-bin/dh` | `tabnet` | Indicators catalog |
 | `fenixservices.fao.org` / FAOSTAT API / CountrySTAT FENIX UI | `fenix` | Indicators catalog |
+| Finnish `/IMS/` karttapalvelu (`tekla-mvc-common`) | `trimblelocus` | Geoportal |
+| SpatialMap `webkort` | `spatialsuite` | Geoportal |
+| `portals.landfolio.com` cadastre map | `landfolio` | Geoportal |
+| G3W-CLIENT `/map/{group}/` | `g3wsuite` | Geoportal |
+| `*.sentinel-hub.com` STAC `/api/v1/catalog` | `sentinelhub` | Geoportal |
+| `*.revenuedev.org` license portal | `rdfrepository` | Open data portal |
+| ResourceContracts `/contract/resources` | `resourcecontracts` | Open data portal |
+| `{city}.data.gxzf.gov.cn` | `gxopendata` | Open data portal |
+| SparkMap / All Things hub | `sparkmap` | Indicators catalog |
+| Clarivate Converis CRIS | `converis` | Scientific data repository |
+| `begin.view` / Panorama Public / LabKey | `labkey` | Scientific data repository |
+| Sage Bionetworks / `synapse.org` | `synapse` | Scientific data repository |
+| `/xnat/` or `/data/projects` | `xnat` | Scientific data repository |
+| OMERO `/webclient/` or IDR | `omero` | Scientific data repository |
+| Kadi4Mat `/api/records` | `kadi4mat` | Scientific data repository |
+| `/prod/v1/api/v1/info` NOMAD Oasis | `nomad` | Scientific data repository |
+| InterMine `/begin.do` / `/service/version` | `intermine` | Scientific data repository |
+| `/gringlobal/` accession search | `gringlobal` | Scientific data repository |
+| PlutoF workbench (`api.plutof.ut.ee`) | `plutof` | Scientific data repository |
+| MycoCosm / Phytozome / JGI Genome Portal | `jgi` | Scientific data repository |
+| cBioPortal `/api/info` `portalVersion` | `cbioportal` | Scientific data repository |
+| ESA TAP `/tap/capabilities` | `esasciencearchive` | Scientific data repository |
+| path `/odweb/` 公共数据开放平台 | `odweb` | Open data portal |
+| “National Summary Data Page” + SDMX XML | `imfnsdp` | Indicators catalog |
 | Two fingerprints fail | `custom` | Primary UI type |
 
 Same-host collision (GeoNetwork+GeoServer, viewer+QGIS Server): [discovery.md](../discovery.md#one-catalog-per-public-product). Types: [catalog-types.md](../catalog-types.md).
@@ -117,7 +142,7 @@ See [apidetect.md](../apidetect.md). Do not run `apidetect_urlmaps_draft.py` as 
 - [discovery.md](../discovery.md)
 - [discovery-search-tools.md](../discovery-search-tools.md)
 - [discovery-agent-tools.md](../discovery-agent-tools.md)
-- [discovery-opendata.md](../discovery-opendata.md) / [discovery-geoportals.md](../discovery-geoportals.md) / [discovery-scientific.md](../discovery-scientific.md) / [discovery-metadata.md](../discovery-metadata.md) / [discovery-indicators.md](../discovery-indicators.md) / [discovery-other.md](../discovery-other.md)
+- [discovery-opendata.md](../discovery-opendata.md) / [discovery-geoportals.md](../discovery-geoportals.md) / [discovery-scientific.md](../discovery-scientific.md) ([domain](../discovery-scientific-domain.md)) / [discovery-metadata.md](../discovery-metadata.md) / [discovery-indicators.md](../discovery-indicators.md) / [discovery-other.md](../discovery-other.md)
 - [software-index.md](../software-index.md)
 - [apidetect.md](../apidetect.md) / [liveness.md](../liveness.md)
 - [contribute.md](contribute.md)

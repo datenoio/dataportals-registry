@@ -27,7 +27,7 @@ EXPLORE / CONNECT gateways over the OpenAIRE Graph. Filter exports on `software.
 GET https://api.openaire.eu/search/datasets
 ```
 
-Keep Graph **datasets** (research products typed as dataset). Drop publications, software, and org units. For a **CONNECT** community portal, use that gateway’s search/API with the community filter — do not dump the whole European graph. Prefer harvesting **source** IRs from this registry when you need publisher-level ids. Stop on `401`.
+Keep Graph **datasets** (research products typed as dataset). Drop publications, software, and org units. For a **CONNECT** community portal, use that gateway’s search/API with the community filter — do not dump the whole European graph. Prefer harvesting **source** IRs from this registry when you need publisher-level ids. The Graph data-source harvest list is [openaire-sync.md](openaire-sync.md). Stop on `401`.
 
 ## Aleph (`aleph`) {#aleph}
 

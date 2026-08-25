@@ -80,6 +80,7 @@ Copy and replace the TLD or place name. Platform-specific queries live on the pl
 ("open data" OR opendata OR "data portal") (catalog OR datasets) site:.gov
 inurl:/opendata OR inurl:/data OR inurl:/datasets site:.gouv.fr
 "datos abiertos" (ayuntamiento OR municipio OR gobernación) site:.gob.mx
+inurl:/odweb/ (数据开放 OR "公共数据开放平台") site:.gov.cn
 ```
 
 **Geoportals**
@@ -94,6 +95,8 @@ intitle:geoportal (WMS OR CSW OR GeoNetwork) site:.de
 ```text
 ("research data" OR "data repository" OR dataverse OR dspace) (datasets OR "dataverse") site:.edu
 "institutional repository" (data OR research) site:.ac.uk
+("LabKey Server" OR cBioPortal OR InterMine OR "Kadi4Mat" OR NOMAD OR XNAT OR OMERO) (repository OR studies OR archive)
+"National Summary Data Page" (e-GDDS OR SDDS OR IMF)
 ```
 
 **Host patterns**
@@ -153,6 +156,10 @@ web.endpoints.http.html_title: "GeoNetwork"
 web.endpoints.http.body: "GeoNetwork opensource"
 web.endpoints.http.html_title: "Socrata"
 web.endpoints.http.body: "OpenDataSoft"
+web.endpoints.http.body: "LabKey"
+web.endpoints.http.body: "cBioPortal"
+web.endpoints.http.body: "Kadi4Mat"
+web.endpoints.http.body: "/odweb/"
 web.software.product: "GeoServer"
 web.names: "opendata"
 ```
@@ -335,6 +342,7 @@ Search engines miss less when you start from a list. Highest yield:
 | [GeoNetwork gallery](https://github.com/geonetwork/doc/blob/develop/source/annexes/gallery/gallery-urls.csv) | `geonetwork` |
 | [INSPIRE geoportal](https://inspire-geoportal.ec.europa.eu/) | European SDI catalogs |
 | [re3data](https://www.re3data.org/) | Scientific repositories |
+| [OpenAIRE Graph data sources](https://graph.openaire.eu/docs/apis/graph-api/data-sources/) | Scientific repositories (`scripts/extract_openaire_portals.py`) |
 | [Dataverse installations](https://iqss.github.io/dataverse-installations/data/data.json) | `dataverse` |
 | [STAC Index](https://stacindex.org/catalogs) | STAC |
 | [ArcGIS Hub](https://hub.arcgis.com/) | `arcgishub` |

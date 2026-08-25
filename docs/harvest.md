@@ -16,18 +16,18 @@ Coding agents: [agents/harvest.md](agents/harvest.md). Production harvesting for
 
 | Guide | Use when |
 |-------|----------|
-| [Scientific repositories](harvest-scientific.md) | DSpace, Invenio, EPrints, Pure, Esploro, and other IRs that mix **publications, theses, software, and datasets** |
-| [Domain scientific repositories](harvest-scientific-domain.md) | IPT, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF |
-| [Open data portals](harvest-opendata.md) | CKAN, OpenDataSoft, Socrata, and similar — packages vs resources |
-| [Geoportals](harvest-geoportals.md) | GeoNetwork CSW, GeoNode, ArcGIS, STAC, OGC API, mviewer, Isogeo, Geocortex, QGIS Server — layers vs services vs tiles |
-| [Indicators and microdata](harvest-indicators.md) | PxWeb tables, SDMX dataflows, OpenSDG indicators, NADA studies, DHIS2, TabNet, IPUMS |
+| [Scientific repositories](harvest-scientific.md) | DSpace, Invenio, EPrints, Pure, Esploro, Converis, Omega-PSIR, Hyrax, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, and other IRs that mix **publications, theses, software, and datasets** |
+| [Domain scientific repositories](harvest-scientific-domain.md) | IPT, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal |
+| [Open data portals](harvest-opendata.md) | CKAN, OpenDataSoft, Socrata, ResourceContracts, RDF Online Repository, Guangxi, ODWeb — packages vs resources vs contracts |
+| [Geoportals](harvest-geoportals.md) | GeoNetwork CSW, GeoNode, ArcGIS, STAC, OGC API, G3W-SUITE, CubeWerx, M.App Enterprise, mviewer, Isogeo, Geocortex, QGIS Server — layers vs services vs tiles |
+| [Indicators and microdata](harvest-indicators.md) | PxWeb / PxStat tables, SDMX dataflows, OpenSDG / Goal Tracker, IMF NSDP, NADA studies, DHIS2, TabNet, FENIX, SparkMap, IPUMS |
 | [Metadata catalogs](harvest-metadata.md) | FAIR Data Point DCAT, Aristotle MDR, Fusion Registry structure |
 | [Search, ML, API, marketplaces](harvest-other.md) | Aggregators, OpenAIRE, OpenML, API directories, marketplaces, `custom` |
 | [Protocols](harvest-protocols.md) | OAI-PMH, CSW, DCAT, STAC, SDMX, OGC, ArcGIS REST — grain that is shared across products |
 | [Incremental harvests](harvest-incremental.md) | `from=`, `metadata_modified`, STAC `datetime`, checkpoints |
-| [Earth observation](harvest-earthdata.md) | THREDDS, ERDDAP, STAC collections, Open Data Cube, Copernicus, openEO, ESGF |
-| [Biodiversity and genomics](harvest-biodiversity.md) | IPT, Symbiota, ALA, GBIF datasets, Ensembl species, Breedbase, Tripal, VEuPathDB |
-| [Map viewers](harvest-viewers.md) | QWC2, Masterportal, Lizmap, mviewer, MapProxy — layers not tiles |
+| [Earth observation](harvest-earthdata.md) | THREDDS, ERDDAP, STAC collections, Open Data Cube, Copernicus, openEO, Sentinel Hub, ESGF, ESA Science Archive |
+| [Biodiversity and genomics](harvest-biodiversity.md) | IPT, Symbiota, ALA, GBIF datasets, Ensembl species, Breedbase, Tripal, VEuPathDB, PlutoF, InterMine, JGI, cBioPortal |
+| [Map viewers](harvest-viewers.md) | QWC2, Masterportal, Lizmap, mviewer, Trimble Locus / Louhi / Landfolio, Spatial Suite, GEUSMAP, GISApp, iObčina, iShare, Cadcorp — layers not tiles |
 | [Dataset identifiers](harvest-identifiers.md) | Native id + catalog `uid`; DOI/handle; do not mint `cdi########` for datasets |
 | [Harvest output](harvest-output.md) | JSON record shape, skip counts, empty-harvest checklist |
 
@@ -55,13 +55,16 @@ WHERE catalog_type = 'Scientific data repository'
     'dspace', 'dspacecris', 'invenio', 'inveniordm', 'eprints',
     'hyrax', 'pure', 'esploro', 'opus', 'elsevierdigitalcommons',
     'weko3', 'phaidra', 'figshare', 'haplo', 'worktribe', 'mycore',
-    'ipt', 'thredds', 'erddap', 'radar', 'yoda', 'symbiota',
-    'breedbase', 'tripal', 'veupathdb', 'massbank', 'iochembd', 'esgf'
+    'omegapsir', 'converis', 'ipt', 'thredds', 'erddap', 'radar',
+    'yoda', 'symbiota', 'breedbase', 'tripal', 'veupathdb',
+    'massbank', 'iochembd', 'esgf', 'labkey', 'synapse', 'xnat',
+    'omero', 'kadi4mat', 'edal', 'nomad', 'intermine', 'gringlobal',
+    'plutof', 'jgi', 'cbioportal', 'esasciencearchive'
   )
 LIMIT 50;
 ```
 
-Filter `software.id` only with values that exist in `data/software/` (currently **223** definitions, including `radar`, `yoda`, `dhis2`, `ipums`, `openaire`, and `symbiota`). Do not invent an id that is missing from `software_ids.yaml`.
+Filter `software.id` only with values that exist in `data/software/` (currently **262** definitions). Do not invent an id that is missing from `software_ids.yaml`.
 
 For open data or geo, change `catalog_type` and the `software.id` list (`ckan`, `geonetwork`, `stacserver`, …). Nested `software` / `endpoints` are JSON **strings** in DuckDB ([ai-consumers.md](ai-consumers.md)).
 
@@ -88,7 +91,7 @@ Keep a record when its type is clearly research **data** (including data papers 
 
 Also drop: user accounts, projects, org units, researcher profiles, harvest-source records, individual **files** when a parent **dataset** record exists (Dataverse `type=file` vs `type=dataset`).
 
-Other catalog types use a different grain: CSW **dataset/series** not services; STAC **collections** not items; CKAN **packages** not resources; PxWeb **tables** not folders; IPT **archives** not occurrences ([harvest-protocols.md](harvest-protocols.md)).
+Other catalog types use a different grain: CSW **dataset/series** not services; STAC **collections** not items; CKAN **packages** not resources; PxWeb / PxStat **tables** not folders; TabNet **`.def` tables** not CGI sessions; FENIX **domains** not observation cubes; IMF NSDP **SDMX categories/series** not the DSBB directory; ResourceContracts **contracts** not clause chrome; ODWeb **`/odweb/` datasets** not the parent CMS; IPT **archives** not occurrences; PlutoF **datasets** not occurrences; InterMine **experiments/datasets** not gene pages; cBioPortal **studies** not mutation rows; XNAT **projects** not sessions; OMERO **projects/screens** not images; ESA TAP **tables** not FITS files; map viewers **named layers** not tiles ([harvest-protocols.md](harvest-protocols.md)).
 
 Software/code and models are not datasets unless the catalog types them as data. Index them separately if you need them.
 

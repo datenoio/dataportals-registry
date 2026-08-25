@@ -1,0 +1,61 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: plutof
+name: PlutoF
+website: https://plutof.ut.ee
+description: PlutoF is the University of Tartu biodiversity data workbench and repository.
+  It publishes taxonomical, ecological, and molecular datasets with a public REST
+  API and DOI landing pages used by UNITE and other biodiversity projects.
+owner:
+  name: University of Tartu Natural History Museum and Botanical Garden
+  location:
+    country:
+      id: EE
+      name: Estonia
+logo_url: https://plutof.ut.ee/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://gitlab.com/plutof
+documentation_url: https://plutof.docs.ut.ee
+export_formats:
+- CSV
+- Darwin Core
+- JSON
+capabilities:
+- REST API
+- DOI catalog
+- Occurrence and sequence workbench
+last_updated: '2026-08-25T00:00:00Z'

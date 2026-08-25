@@ -59,6 +59,32 @@ Use the **package/dataset** id, not a file/resource/distribution id. `ipums`, `d
 | `breedbase` | study / trial id | plot or marker-call id |
 | `esgf` | `dataset_id` / `master_id` | file id |
 | `symbiota` | dataset RSS id / `collid` | occurrence id |
+| `fenix` | FENIX domain / dataset code | Observation cube cell |
+| `tabnet` | `.def` table name | CGI session / TabWin `.TAB` |
+| `sparkmap` | Map layer / assessment id | Saved user map |
+| `g3wsuite` | group/project + WMS layer name | `/admin` path |
+| `sentinelhub` | STAC collection `id` | Process job id, granule/item |
+| `geusmap` | `mapname` + WMS layer name | Map tile URL |
+| `resourcecontracts` | Contract id | Per-clause annotation |
+| `gxopendata` | Tenant dataset id | Apply-gateway request |
+| `rdfrepository` | License / workspace id | Login-only company filing |
+| `converis` | Dataset / research-data id | Publication or person id |
+| `landfolio` | Public cadastre layer / license id | ArcGIS REST service already harvested as `arcgisserver` |
+| `labkey` | Study / published folder id | Assay run id |
+| `synapse` | Project or dataset entity id (`syn########`) | Child file entity under a dataset |
+| `xnat` | Project id | Imaging session / DICOM file |
+| `omero` | Project / screen / study id | Image or well id |
+| `kadi4mat` | Record or collection id | File blob id |
+| `edal` | DOI dataset id | Single landing-page URL as a seed |
+| `nomad` | Entry / upload id | Calculation file or parser log |
+| `intermine` | Experiment / list / template-result id | Gene report |
+| `gringlobal` | Accession catalog export id | Individual accession HTML page |
+| `plutof` | Dataset / DOI id | Occurrence, sequence, UNITE taxon |
+| `jgi` | Genome / transcriptome project id | Gene page, BLAST hit, IMG/GOLD |
+| `cbioportal` | Study id | Mutation / CNA / patient sample row |
+| `esasciencearchive` | TAP table / observation-catalog id | FITS file or cutout |
+| `odweb` | `/odweb/` dataset id | Parent government homepage |
+| `imfnsdp` | SDMX category / series code on the country page | DSBB directory, Knoema wrapper |
 
 Normalize DOI to `10.prefix/suffix` (lowercase). Strip `https://doi.org/` and `doi:`. Handles: keep the handle string, not only the UI URL.
 

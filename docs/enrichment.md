@@ -14,6 +14,7 @@ Not a CLI. Quality-fix scripts import `infer_endpoints()`, which GETs [apidetect
 |--------|-----|
 | `scripts/re3data_enrichment.py` | [re3data.md](re3data.md) |
 | `scripts/sync_ckan_ecosystem.py` | [ckan-sync.md](ckan-sync.md) |
+| `scripts/extract_openaire_portals.py` | [openaire-sync.md](openaire-sync.md) |
 
 ## Trust scores
 

@@ -1,6 +1,6 @@
 # Harvesting biodiversity and genomics catalogs
 
-IPT, Symbiota, Living Atlases, and Ensembl publish **datasets, collections, or genome databases**. Occurrence rows, gene records, and map clicks are the wrong grain.
+IPT, Symbiota, Living Atlases, Ensembl, PlutoF, InterMine, JGI, and cBioPortal publish **datasets, collections, studies, or genome databases**. Occurrence rows, gene records, mutation tables, and map clicks are the wrong grain.
 
 Overview: [harvest.md](harvest.md). Finding portals: [discovery-scientific.md](discovery-scientific.md). GET only. Stop on `401`/`403`. Prefer `endpoints[]`.
 
@@ -13,6 +13,11 @@ Overview: [harvest.md](harvest.md). Finding portals: [discovery-scientific.md](d
 | ALA **collection** / data resource | `/ws/occurrences/search` hits |
 | GBIF **dataset** (`api.gbif.org`) | Occurrence search; publisher orgs as datasets |
 | Ensembl **species / genome database** | Every gene, variation, or REST ping |
+| PlutoF **dataset / DOI record** | Occurrences, sequences, UNITE taxon pages |
+| InterMine **experiment / dataset list** | Gene report pages |
+| JGI **genome / transcriptome project** | Gene pages, BLAST hits, IMG/GOLD |
+| cBioPortal **study** | Mutation/CNA rows, patient samples |
+| GRIN-Global **accession catalog export** | Individual accession HTML pages |
 
 ## GBIF IPT (`ipt`) {#ipt}
 
@@ -82,6 +87,11 @@ Keep **datasets** (DataCite/OAI type Dataset). Drop publications mixed into the 
 | `tripal` | analyses / downloadable datasets | gene pages, BLAST hits |
 | `veupathdb` | experiment / isolate / genome datasets | gene records, strategy rows |
 | `ifremercatalog` | SEANOE OAI/dataset list | publication mix; file-level NetCDF |
+| `plutof` | PlutoF dataset/DOI API | occurrences, UNITE sequence pages |
+| `intermine` | experiments / dataset lists | gene reports, `/begin.do` crawls |
+| `jgi` | Genome Portal projects | gene pages, IMG, GOLD, `data.jgi.doe.gov` |
+| `cbioportal` | `/api/studies` | mutation/CNA rows |
+| `gringlobal` | accession catalog exports | each accession HTML page |
 
 Institutional IRs that also hold Darwin Core: use [harvest-scientific.md](harvest-scientific.md) type filters, not occurrence APIs. Domain harvest recipes: [harvest-scientific-domain.md](harvest-scientific-domain.md).
 

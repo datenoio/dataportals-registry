@@ -37,6 +37,24 @@ Do not invent `cdi########` ids for datasets.
 | openEO | Re-list `/collections`; diff collection ids. Do not incremental-page `/jobs` |
 | Breedbase BrAPI | Re-list `/brapi/v2/studies` (and trials); diff study ids |
 | ESGF esg-search | `from`/`to` on Solr when documented; else re-query and diff `dataset_id` |
+| PxStat ReadCollection | Re-list matrices; diff table codes. No standard `since` |
+| FENIX groupsanddomains | Re-list domains; diff domain codes. Do not incremental-page observation cubes |
+| Sentinel Hub STAC | Re-list `/collections`; diff collection ids. Do not incremental-page items |
+| ResourceContracts | Re-list `/contract/resources`; diff contract ids |
+| LabKey published folders | Re-list studies/folders; no standard `since` |
+| Synapse | Re-list project children; diff entity ids |
+| XNAT `/data/projects` | Re-list projects; diff project ids |
+| OMERO `/api/v0/m/projects/` | Re-list projects/screens; diff ids |
+| Kadi4Mat `/api/records` | Re-list records; diff record ids |
+| e!DAL DOI catalog | Re-list DOI datasets; diff dataset ids |
+| NOMAD entries | Re-list `/prod/v1/api/v1/entries`; diff entry ids |
+| InterMine | Re-list template/dataset queries; diff ids |
+| GRIN-Global | Re-list accession catalog exports; diff accession ids |
+| PlutoF `/v1/` | Re-list datasets; diff DOI/ids. Do not incremental-page occurrences |
+| cBioPortal `/api/studies` | Re-list studies; diff study ids |
+| ESA TAP tables | Re-list TAP tables; do not incremental-page observations |
+| ODWeb `/odweb/` | Re-list dataset pages; no standard `since` |
+| IMF NSDP | Re-list SDMX category links on the country page |
 
 If the API has **no** date filter, harvest identifiers only (cheap list), then GET metadata for ids not in your store. Do not re-download every observation cube.
 

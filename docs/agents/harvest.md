@@ -57,6 +57,30 @@ Open the harvest heading from [software-index.md](../software-index.md). Do not 
 | `arcgisserver` | `/arcgis/rest/services?f=pjson` — not GPServer |
 | `pxweb` | `/api/v1/` tables (`type: t`), not folders |
 | `pxstat` | `PxStat.Data.Cube_API.ReadCollection` matrices, not widgets |
+| `fenix` | FAOSTAT groupsanddomains — not observation cubes |
+| `tabnet` | `.def` tables — not CGI sessions |
+| `sparkmap` | Public hub layers — not CARES HQ as a second copy |
+| `g3wsuite` | Published project WMS — not `/admin` |
+| `sentinelhub` | STAC collections — not Process jobs or EO Browser tiles |
+| `geusmap` | One harvest per `mapname` WMS/WFS layers |
+| `resourcecontracts` | `/contract/resources` — not per-clause chrome |
+| `gxopendata` | Tenant dataset list — not apply-gateway flows |
+| `converis` | Datasets only — not publications or persons |
+| `labkey` | Studies / published folders — not assay runs |
+| `synapse` | Projects and dataset entities — not every file |
+| `xnat` | Projects — not imaging sessions |
+| `omero` | Projects/screens — not images |
+| `kadi4mat` | Records and collections — not file blobs |
+| `edal` | DOI datasets — not a single landing as a seed |
+| `nomad` | Published entries/uploads — not calculation files |
+| `intermine` | Experiments/datasets — not gene pages |
+| `gringlobal` | Accession catalog exports — not each accession HTML page |
+| `plutof` | Datasets / DOI records — not occurrences or UNITE |
+| `jgi` | Genome/transcriptome projects — not gene pages or IMG/GOLD |
+| `cbioportal` | Studies — not mutation/CNA rows |
+| `esasciencearchive` | TAP tables — not FITS files |
+| `odweb` | `/odweb/` datasets — not the parent CMS |
+| `imfnsdp` | SDMX categories/series on the country page — not DSBB |
 | `custom` | [harvest-other.md](../harvest-other.md#custom) decision tree |
 
 If the filter returns zero hits, inspect **one** unfiltered sample and `ListSets` / facets before concluding the catalog has no data. Local labels include Forschungsdaten, Research Data, and numeric WEKO3 item types.

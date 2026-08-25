@@ -1,6 +1,6 @@
 # Harvesting map viewers and tile caches
 
-Many geoportals in this registry are **viewers** (QWC2, Masterportal, Lizmap, mviewer, Wagmap, Tianditu). The catalog of datasets is the **layer list** (GetCapabilities, `themes.json`, REST services) — not PNG tiles, print PDFs, or the basemap.
+Many geoportals in this registry are **viewers** (QWC2, Masterportal, Lizmap, mviewer, Wagmap, Tianditu, Trimble Locus / Louhi / Landfolio, Spatial Suite, GEUSMAP, GISApp, iObčina, iShare, Cadcorp). The catalog of datasets is the **layer list** (GetCapabilities, `themes.json`, REST services) — not PNG tiles, print PDFs, or the basemap.
 
 Use this page when `software.id` is a viewer or cache. Full SDI catalogs (GeoNetwork, GeoNode, ArcGIS Server): [harvest-geoportals.md](harvest-geoportals.md). Protocol grain: [harvest-protocols.md](harvest-protocols.md). GET only. Stop on `401`/`403`. Do not scrape tiles.
 
@@ -253,7 +253,9 @@ Same grain as [Ingeo](#ingeo).
 
 ## Trimble Locus IMS (`trimblelocus`) {#trimblelocus}
 
-Finnish `/IMS/` viewer. Harvest public WMS/WFS GetCapabilities if the city publishes them. Do not scrape map tiles or the Locus back-office. Distinct from `belsisims`.
+Finnish `/IMS/` viewer. One harvest scope per city tenant.
+
+Harvest public WMS/WFS GetCapabilities if the city publishes them. Do not scrape map tiles or the Locus back-office. Distinct from `belsisims` and from Sitowise Louhi (`louhi`). If a municipal GeoServer/ArcGIS catalog on the same city is already harvested, do not duplicate those layers.
 
 ## Sitowise Louhi (`louhi`) {#louhi}
 

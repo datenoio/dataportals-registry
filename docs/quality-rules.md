@@ -16,6 +16,7 @@ Integrity-track CRITICAL and IMPORTANT counts must not grow (`dataquality/baseli
 | `INVALID_ID` | Make `id` match the filename (lowercase letters and digits) |
 | `CATALOG_SOFTWARE_MISMATCH` | Align `catalog_type` with `software.category`, or retag `software.id` |
 | `DUPLICATE_RECORD_ID` | Merge or rename colliding `id` values |
+| `INVALID_NESTED_TYPE` | Restore a single type on nested leaves: quote `'NO'` (Norway), M49 ids (`'155'`), and numeric tags (`'911'`); tags are strings not `{tag: ...}` maps; `dataset_count_reported` is an integer |
 
 ## IMPORTANT (integrity)
 

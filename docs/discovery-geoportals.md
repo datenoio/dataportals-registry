@@ -6,8 +6,8 @@ Fingerprints live on two pages so this overview stays short:
 
 | Page | Use when |
 |------|----------|
-| [SDI platforms](discovery-geoportals-sdi.md) | GeoNetwork, GeoNode, GeoServer, ArcGIS, STAC, openEO, Lizmap, QGIS Server, mviewer, Isogeo, Geocortex, MapServer, and other catalog/service stacks |
-| [Regional viewers](discovery-geoportals-viewers.md) | Wagmap, EWMAPA, Tianditu, Masterportal, GeoMapFish, NetGIS, cardo, MapGIS IGServer, and municipal GIS viewers |
+| [SDI platforms](discovery-geoportals-sdi.md) | GeoNetwork, GeoNode, GeoServer, ArcGIS, STAC, openEO, Sentinel Hub, Lizmap, QGIS Server, G3W-SUITE, CubeWerx, M.App Enterprise, mviewer, Isogeo, Geocortex, MapServer, and other catalog/service stacks |
+| [Regional viewers](discovery-geoportals-viewers.md) | Wagmap, EWMAPA, Tianditu, Masterportal, GeoMapFish, NetGIS, cardo, MapGIS IGServer, Trimble Locus / Louhi / Landfolio, Spatial Suite, GEUSMAP, GISApp, iObčina, iShare, Cadcorp, and municipal GIS viewers |
 
 All `software.id` values: [software-index.md](software-index.md). Harvest grain (layers vs tiles): [harvest-geoportals.md](harvest-geoportals.md), [harvest-viewers.md](harvest-viewers.md).
 

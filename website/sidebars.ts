@@ -181,7 +181,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Pipelines',
-      items: ['re3data', 'ckan-sync', 'apidetect', 'liveness', 'enrichment'],
+      items: ['re3data', 'ckan-sync', 'openaire-sync', 'apidetect', 'liveness', 'enrichment'],
     },
     {
       type: 'category',

@@ -1,6 +1,6 @@
 # Discovering open data portals
 
-How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md). Also covered here: Idra (`idra`), a DCAT-AP federation layer that is usually typed as a **Data search engine**; Piveau, Our Open Data, Gipuzkoa Irekia, DataPress, and Taiwan MODA.
+How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md). Also covered here: Idra (`idra`), a DCAT-AP federation layer that is usually typed as a **Data search engine**; Piveau, Our Open Data, Gipuzkoa Irekia, DataPress, Taiwan MODA, ResourceContracts, RDF Online Repository, the Guangxi Public Data Open Platform, and ODWeb.
 
 Set `software.id` from `data/software/` only when a probe or page signal matches. Otherwise `custom`. After YAML exists: `python scripts/apidetect.py detect-single {id} --dryrun` (replace `{id}` with the catalog id).
 
@@ -421,6 +421,20 @@ NRGI oil/gas/mining contract repository. Hub: [resourcecontracts.org](https://re
 | Censys | `web.names: "resourcecontracts.org"` |
 | crt.sh | `%.resourcecontracts.org` |
 
+## ODWeb (`odweb`) {#odweb}
+
+Chinese municipal and provincial public-data catalog under `/odweb/`. Distinct from Inspur oPortal (`oportal`) and Zhejiang JDOP (`jdop`).
+
+**Signals:** path `/odweb/`; script roots `/odweb/{city}/libs/`; page title 公共数据开放平台.
+
+**Confirm:** GET `http(s)://host/odweb/`. One record per city or provincial catalog, not per dataset. Skip hosts that redirected off `/odweb/` onto an unrelated government CMS.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/odweb/ 数据开放` |
+| Google | `"odweb" 公共数据开放平台` |
+| Censys | `web.endpoints.http.body: "/odweb/"` |
+
 ## Guangxi Public Data Open Platform (`gxopendata`) {#gxopendata}
 
 Guangxi Zhuang Autonomous Region public data portal. Provincial hub: [data.gxzf.gov.cn](https://data.gxzf.gov.cn). City tenants: `{city}.data.gxzf.gov.cn`. Not CKAN.
@@ -454,9 +468,9 @@ Guangxi Zhuang Autonomous Region public data portal. Provincial hub: [data.gxzf.
 | `strapi` | Headless CMS **with a public dataset API** | `"Strapi" ("open data" OR datasets)` |
 | `smw` | Semantic MediaWiki data catalog | `"Semantic MediaWiki" (dataset OR catalog)` |
 | `d4science` | D4Science VRE / catalog | `"D4Science" (catalog OR "open data")` |
-| `rdfrepository` | `*.revenuedev.org` | `site:revenuedev.org` |
-| `resourcecontracts` | NRGI contract repository | `site:resourcecontracts.org` |
-| `gxopendata` | Guangxi `{city}.data.gxzf.gov.cn` | `site:data.gxzf.gov.cn` |
+| `rdfrepository` | see above | |
+| `resourcecontracts` | see above | |
+| `gxopendata` | see above | |
 
 ## Generic open-data URL patterns
 
@@ -470,6 +484,9 @@ Try these on a **named** government or city host only (not as an internet-wide s
 - `/oportal/` (Inspur oPortal)
 - `/openinf/` (Seoul Open Data Plaza)
 - `/assets/cms/public.css` (Our Open Data)
+- `*.revenuedev.org` tenant home (RDF Online Repository)
+- `/contract/resources` (ResourceContracts)
+- `{city}.data.gxzf.gov.cn` (Guangxi tenant)
 
 Search with local terms plus the city: `datos abiertos "Rosario"`, `offene Daten "Leipzig"`, `开放数据 市`.
 

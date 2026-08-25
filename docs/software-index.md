@@ -23,11 +23,12 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `cadenza` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#cadenza) | [harvest-viewers](harvest-viewers.md#cadenza) | — |
 | `cardo` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#cardo) | [harvest-viewers](harvest-viewers.md#cardo) | — |
 | `carto` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md) | [harvest-viewers](harvest-viewers.md#carto) | — |
+| `cbioportal` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#cbioportal) | [harvest-scientific-domain](harvest-scientific-domain.md#cbioportal) | — |
 | `ckan` | opendata | [discovery-opendata](discovery-opendata.md#ckan) | [harvest-opendata](harvest-opendata.md#ckan) | yes |
 | `cogis` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#cogis) | [harvest-geoportals](harvest-geoportals.md#cogis) | — |
 | `colectica` | microdata | [discovery-indicators](discovery-indicators.md#colectica) | [harvest-indicators](harvest-indicators.md#colectica) | — |
 | `contentdm` | scientific | [discovery-scientific](discovery-scientific.md#contentdm) | [harvest-scientific](harvest-scientific.md#contentdm) | — |
-| `converis` | scientific | [discovery-scientific](discovery-scientific.md) | [harvest-scientific](harvest-scientific.md#converis) | — |
+| `converis` | scientific | [discovery-scientific](discovery-scientific.md#converis) | [harvest-scientific](harvest-scientific.md#converis) | — |
 | `copernicuscds` | opendata | [discovery-opendata](discovery-opendata.md) | [harvest-earthdata](harvest-earthdata.md#copernicuscds) | — |
 | `copernicusdhus` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md) | [harvest-earthdata](harvest-earthdata.md#copernicusdhus) | — |
 | `cubewerx` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#cubewerx) | [harvest-geoportals](harvest-geoportals.md#cubewerx) | — |
@@ -58,6 +59,7 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `dspace` | scientific | [discovery-scientific](discovery-scientific.md#dspace) | [harvest-scientific](harvest-scientific.md#dspace) | yes |
 | `dspacecris` | scientific | [discovery-scientific](discovery-scientific.md#dspacecris) | [harvest-scientific](harvest-scientific.md#dspacecris) | — |
 | `ecb` | indicators | [discovery-indicators](discovery-indicators.md) | [harvest-indicators](harvest-indicators.md#ecb) | — |
+| `edal` | scientific | [discovery-scientific](discovery-scientific.md#edal) | [harvest-scientific](harvest-scientific.md#edal) | — |
 | `elitegis` | geo | [discovery](discovery.md) | [harvest-geoportals](harvest-geoportals.md#elitegis) | — |
 | `elsevierdigitalcommons` | scientific | [discovery-scientific](discovery-scientific.md#elsevierdigitalcommons) | [harvest-scientific](harvest-scientific.md#elsevierdigitalcommons) | yes |
 | `ensembl` | scientific | [discovery-scientific](discovery-scientific.md) | [harvest-biodiversity](harvest-biodiversity.md#ensembl) | — |
@@ -65,6 +67,7 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `eprints` | scientific | [discovery-scientific](discovery-scientific.md#eprints) | [harvest-scientific](harvest-scientific.md#eprints) | yes |
 | `erdasapollo` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#erdasapollo) | [harvest-geoportals](harvest-geoportals.md#erdasapollo) | — |
 | `erddap` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#erddap) | [harvest-earthdata](harvest-earthdata.md#erddap) | yes |
+| `esasciencearchive` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#esasciencearchive) | [harvest-earthdata](harvest-earthdata.md#esasciencearchive) | — |
 | `esploro` | scientific | [discovery-scientific](discovery-scientific.md#esploro) | [harvest-scientific](harvest-scientific.md#esploro) | yes |
 | `esgf` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#esgf) | [harvest-earthdata](harvest-earthdata.md#esgf) | — |
 | `esrigeo` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#esrigeo) | [harvest-geoportals](harvest-geoportals.md#esrigeo) | yes |
@@ -102,6 +105,7 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `giswebse` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#giswebse) | [harvest-viewers](harvest-viewers.md#giswebse) | — |
 | `goaltracker` | indicators | [discovery-indicators](discovery-indicators.md#goaltracker) | [harvest-indicators](harvest-indicators.md#goaltracker) | — |
 | `gpatlas` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md) | [harvest-viewers](harvest-viewers.md#gpatlas) | — |
+| `gringlobal` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#gringlobal) | [harvest-scientific-domain](harvest-scientific-domain.md#gringlobal) | — |
 | `gvsigonline` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#gvsigonline) | [harvest-geoportals](harvest-geoportals.md#gvsigonline) | — |
 | `gxopendata` | opendata | [discovery-opendata](discovery-opendata.md#gxopendata) | [harvest-opendata](harvest-opendata.md#gxopendata) | — |
 | `haplo` | scientific | [discovery-scientific](discovery-scientific.md#haplo) | [harvest-scientific](harvest-scientific.md#haplo) | — |
@@ -113,9 +117,11 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `idra` | opendata | [discovery-opendata](discovery-opendata.md#idra) | [harvest-opendata](harvest-opendata.md#idra) | — |
 | `ifremercatalog` | scientific | [discovery-scientific](discovery-scientific.md) | [harvest-biodiversity](harvest-biodiversity.md#ifremercatalog) | yes |
 | `ilostat` | indicators | [discovery-indicators](discovery-indicators.md) | [harvest-indicators](harvest-indicators.md#ilostat) | — |
+| `imfnsdp` | indicators | [discovery-indicators](discovery-indicators.md#imfnsdp) | [harvest-indicators](harvest-indicators.md#imfnsdp) | — |
 | `ingeo` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md) | [harvest-viewers](harvest-viewers.md#ingeo) | — |
 | `ingrid` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md) | [harvest-viewers](harvest-viewers.md#ingrid) | — |
 | `instdb` | scientific | [discovery-scientific](discovery-scientific.md#instdb) | [harvest-scientific](harvest-scientific.md#instdb) | — |
+| `intermine` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#intermine) | [harvest-scientific-domain](harvest-scientific-domain.md#intermine) | — |
 | `invenio` | scientific | [discovery-scientific](discovery-scientific.md#invenio) | [harvest-scientific](harvest-scientific.md#invenio) | yes |
 | `inveniordm` | scientific | [discovery-scientific](discovery-scientific.md#inveniordm) | [harvest-scientific](harvest-scientific.md#inveniordm) | yes |
 | `iobcina` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#iobcina) | [harvest-viewers](harvest-viewers.md#iobcina) | — |
@@ -127,10 +133,13 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `isogeo` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#isogeo) | [harvest-geoportals](harvest-geoportals.md#isogeo) | yes |
 | `islandora` | scientific | [discovery-scientific](discovery-scientific.md#islandora) | [harvest-scientific](harvest-scientific.md#islandora) | — |
 | `jdop` | opendata | [discovery-opendata](discovery-opendata.md) | [harvest-opendata](harvest-opendata.md#jdop) | — |
+| `jgi` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#jgi) | [harvest-scientific-domain](harvest-scientific-domain.md#jgi) | — |
 | `jkan` | opendata | [discovery-opendata](discovery-opendata.md#jkan) | [harvest-opendata](harvest-opendata.md#jkan) | yes |
 | `junar` | opendata | [discovery-opendata](discovery-opendata.md#junar) | [harvest-opendata](harvest-opendata.md#junar) | yes |
+| `kadi4mat` | scientific | [discovery-scientific](discovery-scientific.md#kadi4mat) | [harvest-scientific](harvest-scientific.md#kadi4mat) | — |
 | `knoema` | indicators | [discovery-indicators](discovery-indicators.md#knoema) | [harvest-indicators](harvest-indicators.md#knoema) | yes |
 | `koordinates` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#koordinates) | [harvest-viewers](harvest-viewers.md#koordinates) | yes |
+| `labkey` | scientific | [discovery-scientific](discovery-scientific.md#labkey) | [harvest-scientific](harvest-scientific.md#labkey) | — |
 | `landfolio` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#landfolio) | [harvest-viewers](harvest-viewers.md#landfolio) | — |
 | `librecat` | scientific | [discovery-scientific](discovery-scientific.md) | [harvest-scientific](harvest-scientific.md#librecat) | — |
 | `liferay` | opendata | [discovery-opendata](discovery-opendata.md#liferay) | [harvest-opendata](harvest-opendata.md#liferay) | — |
@@ -165,13 +174,16 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `netgisserver` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#netgisserver) | [harvest-viewers](harvest-viewers.md#netgisserver) | — |
 | `nextgisweb` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#nextgisweb) | [harvest-geoportals](harvest-geoportals.md#nextgisweb) | — |
 | `nolis` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#nolis) | [harvest-viewers](harvest-viewers.md#nolis) | — |
+| `nomad` | scientific | [discovery-scientific](discovery-scientific.md#nomad) | [harvest-scientific](harvest-scientific.md#nomad) | — |
 | `nyudatacatalog` | scientific | [discovery-scientific](discovery-scientific.md) | [harvest-scientific](harvest-scientific.md#nyudatacatalog) | — |
 | `obibamica` | microdata | [discovery-indicators](discovery-indicators.md#obibamica) | [harvest-indicators](harvest-indicators.md#obibamica) | — |
+| `odweb` | opendata | [discovery-opendata](discovery-opendata.md#odweb) | [harvest-opendata](harvest-opendata.md#odweb) | — |
 | `ogdindia` | opendata | [discovery-opendata](discovery-opendata.md#ogdindia) | [harvest-opendata](harvest-opendata.md#ogdindia) | — |
 | `omegapsir` | scientific | [discovery-scientific](discovery-scientific.md#omegapsir) | [harvest-scientific](harvest-scientific.md#omegapsir) | — |
 | `omekas` | scientific | [discovery-scientific](discovery-scientific.md#omekas) | [harvest-scientific](harvest-scientific.md#omekas) | — |
+| `omero` | scientific | [discovery-scientific](discovery-scientific.md#omero) | [harvest-scientific](harvest-scientific.md#omero) | — |
 | `ontoportal` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#ontoportal) | [harvest-scientific-domain](harvest-scientific-domain.md#ontoportal) | — |
-| `openaire` | opendata | [discovery-other](discovery-other.md) | [harvest-other](harvest-other.md#openaire) | — |
+| `openaire` | opendata | [discovery-other](discovery-other.md#openaire) | [harvest-other](harvest-other.md#openaire) | — |
 | `opendap` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#opendap) | [harvest-earthdata](harvest-earthdata.md#opendap) | yes |
 | `opendatacube` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#opendatacube) | [harvest-earthdata](harvest-earthdata.md#opendatacube) | — |
 | `opendatareg` | opendata | [discovery-opendata](discovery-opendata.md) | [harvest-opendata](harvest-opendata.md#opendatareg) | yes |
@@ -190,6 +202,7 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `ouropendata` | opendata | [discovery-opendata](discovery-opendata.md#ouropendata) | [harvest-opendata](harvest-opendata.md#ouropendata) | — |
 | `phaidra` | scientific | [discovery-scientific](discovery-scientific.md#phaidra) | [harvest-scientific](harvest-scientific.md#phaidra) | — |
 | `piveau` | opendata | [discovery-opendata](discovery-opendata.md#piveau) | [harvest-opendata](harvest-opendata.md#piveau) | — |
+| `plutof` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#plutof) | [harvest-scientific-domain](harvest-scientific-domain.md#plutof) | — |
 | `pomosam` | opendata | [discovery-opendata](discovery-opendata.md#pomosam) | [harvest-opendata](harvest-opendata.md#pomosam) | — |
 | `popgis` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#popgis) | [harvest-viewers](harvest-viewers.md#popgis) | — |
 | `publishmydata` | opendata | [discovery-opendata](discovery-opendata.md) | [harvest-opendata](harvest-opendata.md#publishmydata) | — |
@@ -232,6 +245,7 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `superset` | indicators | [discovery-indicators](discovery-indicators.md) | [harvest-indicators](harvest-indicators.md#superset) | — |
 | `superstar` | indicators | [discovery-indicators](discovery-indicators.md#superstar) | [harvest-indicators](harvest-indicators.md#superstar) | — |
 | `surveysolutions` | microdata | [discovery-indicators](discovery-indicators.md#surveysolutions) | [harvest-indicators](harvest-indicators.md#surveysolutions) | — |
+| `synapse` | scientific | [discovery-scientific](discovery-scientific.md#synapse) | [harvest-scientific](harvest-scientific.md#synapse) | — |
 | `symbiota` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#symbiota) | [harvest-biodiversity](harvest-biodiversity.md#symbiota) | — |
 | `tablion` | opendata | [discovery-opendata](discovery-opendata.md) | [harvest-opendata](harvest-opendata.md#tablion) | — |
 | `tabnet` | indicators | [discovery-indicators](discovery-indicators.md#tabnet) | [harvest-indicators](harvest-indicators.md#tabnet) | — |
@@ -251,4 +265,5 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `wis20box` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#wis20box) | [harvest-earthdata](harvest-earthdata.md#wis20box) | yes |
 | `wordpress` | opendata | [discovery-opendata](discovery-opendata.md#wordpress) | [harvest-opendata](harvest-opendata.md#wordpress) | — |
 | `worktribe` | scientific | [discovery-scientific](discovery-scientific.md#worktribe) | [harvest-scientific](harvest-scientific.md#worktribe) | yes |
+| `xnat` | scientific | [discovery-scientific](discovery-scientific.md#xnat) | [harvest-scientific](harvest-scientific.md#xnat) | — |
 | `yoda` | scientific | [discovery-scientific](discovery-scientific.md#yoda) | [harvest-scientific](harvest-scientific.md#yoda) | — |

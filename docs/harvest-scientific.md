@@ -8,7 +8,7 @@ Use `endpoints[]` from the registry when present ([apidetect.md](apidetect.md)).
 
 | Page | Use when |
 |------|----------|
-| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, Pure, RADAR, Yoda, …) |
+| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, Pure, Converis, Omega-PSIR, RADAR, Yoda, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, …) |
 | [Domain repositories](harvest-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, SciCat-adjacent stacks |
 
 All `software.id` values: [software-index.md](software-index.md).
@@ -17,8 +17,8 @@ All `software.id` values: [software-index.md](software-index.md).
 
 | Class | `software.id` (typical) | Filter needed? |
 |-------|-------------------------|----------------|
-| Mixed IR / CRIS | `dspace`, `dspacecris`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `samvera`, `islandora`, `opus`, `mycore`, `phaidra`, `weko3`, `pure`, `esploro`, `elsevierdigitalcommons`, `figshare`, `haplo`, `worktribe`, `omegapsir`, `librecat`, `vufind` | **Yes** — publications dominate |
-| Dataset-native | `dataverse`, `radar`, `yoda`, `instdb` on this page; IPT/THREDDS/Breedbase/ESGF and similar on [harvest-scientific-domain.md](harvest-scientific-domain.md) | Little or none — still skip files, occurrences, and login-only rows |
+| Mixed IR / CRIS | `dspace`, `dspacecris`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `samvera`, `islandora`, `opus`, `mycore`, `phaidra`, `weko3`, `pure`, `esploro`, `elsevierdigitalcommons`, `figshare`, `haplo`, `worktribe`, `omegapsir`, `converis`, `librecat`, `vufind` | **Yes** — publications dominate |
+| Dataset-native | `dataverse`, `radar`, `yoda`, `instdb`, `labkey`, `synapse`, `xnat`, `omero`, `kadi4mat`, `edal`, `nomad` on this page; IPT/THREDDS/Breedbase/ESGF/InterMine/cBioPortal and similar on [harvest-scientific-domain.md](harvest-scientific-domain.md) | Little or none — still skip files, occurrences, and login-only rows |
 
 ## OAI-PMH fallback (any IR)
 
@@ -323,7 +323,9 @@ Harvest **institution** or named project catalogs only (`https://api.osf.io/v2/`
 
 ## Converis (`converis`) {#converis}
 
-Clarivate CRIS. Same publication-vs-data problem as Pure: harvest **datasets**, not publications or persons. Public OAI/listing if present; stop on `/ws` keys.
+Clarivate CRIS. Same publication-vs-data problem as Pure: harvest **datasets**, not publications or persons. Filter exports on `software.id = 'converis'`.
+
+Prefer a public datasets / research-data listing or OAI `setSpec` for data. Stop on `/ws` API keys. Do not page an unfiltered publication search.
 
 ## Djehuty (`djehuty`) {#djehuty}
 
@@ -344,6 +346,66 @@ Already datasets (`totalHits` in the JSON). Page the API; keep dataset ids/DOIs.
 
 Utrecht / SURF research-data vault on iRODS. Filter exports on `software.id = 'yoda'`. Harvest **published** vault datasets (DataCite DOI landing pages or the public catalog API in `endpoints[]`). Drop `/research/` collaboration collections and iRODS tickets. Stop on `401`. Do not list every file in a vault package.
 
+## LabKey Server (`labkey`) {#labkey}
+
+```text
+GET https://host/login/begin.view
+```
+
+Keep **studies / published folders** (Panorama Public libraries, Open Research Portal projects). Drop assay run rows and a single `begin.view` folder as a seed. Stop on `401`.
+
+## Synapse (`synapse`) {#synapse}
+
+```text
+GET https://repo-prod.prod.sagebase.org/repo/v1/entity/synNNNN/children
+```
+
+Keep **projects and tables/files that are cited as datasets**. Drop every child file under a project when a parent dataset entity exists. Prefer the catalog `link` origin and `endpoints[]`. Stop on `401`.
+
+## XNAT (`xnat`) {#xnat}
+
+```text
+GET https://host/data/projects
+GET https://host/xnat/data/projects
+```
+
+Keep **projects** (and experiment collections when the user asked). Drop individual imaging sessions and DICOM files when a parent project exists. Stop on `401`.
+
+## OMERO (`omero`) {#omero}
+
+```text
+GET https://host/api/v0/m/projects/
+GET https://host/webclient/
+```
+
+Keep **projects / screens / studies** (IDR annotations). Drop individual images and wells. Some public archives return `404` on `/api/v0/m/` — fall back to the documented webclient catalog. Stop on `401`.
+
+## Kadi4Mat (`kadi4mat`) {#kadi4mat}
+
+```text
+GET https://host/api/records
+GET https://host/api/collections
+```
+
+Keep **records and collections**. Drop individual file blobs when a parent record exists. Stop on `401`.
+
+## e!DAL (`edal`) {#edal}
+
+```text
+GET https://host/
+```
+
+Keep versioned **DOI datasets**. Drop a single landing page as a crawl seed. Prefer the documented e!DAL API in `endpoints[]`. Stop on `401`.
+
+## NOMAD (`nomad`) {#nomad}
+
+```text
+GET https://host/prod/v1/api/v1/info
+GET https://host/prod/v1/api/v1/entries
+```
+
+Keep **uploads / entries** that are published datasets. Drop individual calculation files and parser logs. One Oasis or the central archive = one harvest scope. Stop on `401`.
+
 ## dLibra (`dlibra`) {#dlibra}
 
 Polish digital library. Use OAI-PMH with a dataset / dane `set` or `dc:type` filter ([harvest-protocols.md](harvest-protocols.md#oai-pmh)). Skip manuscript/photo libraries that were never accepted as dataset catalogs.
@@ -358,6 +420,13 @@ Little publication noise. Still skip non-dataset objects.
 | SciCat (`scicat`) | [harvest-earthdata.md](harvest-earthdata.md#scicat) | Facility datasets; stop on `401` |
 | RADAR (`radar`) | [above](#radar) | Already datasets; skip marketing and single landings |
 | Yoda (`yoda`) | [above](#yoda) | Published datasets only; skip the authenticated vault |
+| LabKey (`labkey`) | [above](#labkey) | Studies / published folders |
+| Synapse (`synapse`) | [above](#synapse) | Projects and dataset entities, not every file |
+| XNAT (`xnat`) | [above](#xnat) | Projects, not sessions |
+| OMERO (`omero`) | [above](#omero) | Projects/screens, not images |
+| Kadi4Mat (`kadi4mat`) | [above](#kadi4mat) | Records and collections |
+| e!DAL (`edal`) | [above](#edal) | DOI datasets |
+| NOMAD (`nomad`) | [above](#nomad) | Published entries/uploads |
 
 Domain stacks (IPT, THREDDS, Breedbase, ESGF, …): [harvest-scientific-domain.md](harvest-scientific-domain.md). Omeka S and CONTENTdm: sections above.
 

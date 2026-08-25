@@ -2,6 +2,8 @@
 
 Biodiversity, facility, crop, chemistry, and earth-system repositories (`catalog_type: Scientific data repository`). Institutional IRs: [discovery-scientific.md](discovery-scientific.md). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Harvest: [harvest-scientific-domain.md](harvest-scientific-domain.md).
 
+High-count domain stacks with their own recipes: IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, SciCat, InterMine, GRIN-Global, PlutoF, JGI Genome Portal, cBioPortal, ESA Science Archive.
+
 One portal / node = one registry record. Do not add gene pages, occurrences, or ESGF data nodes as extra catalogs.
 
 ## GBIF IPT (`ipt`) {#ipt}
@@ -223,6 +225,72 @@ Facility scientific catalog. Site: [icatproject.org](https://icatproject.org).
 |------|-------|
 | Google | `"ICAT" (facility OR "data catalog" OR "scientific data") -site:icatproject.org -site:github.com` |
 | Censys | `web.endpoints.http.body: "icat"` |
+
+## InterMine (`intermine`) {#intermine}
+
+Biological data warehouse. Site: [intermine.org](https://intermine.org). Organism mines (FlyMine, HumanMine, WheatMine, and others) share `/begin.do` and `/service/version`. Register **each public mine**, not the InterMine project hub.
+
+**Confirm:** GET `/begin.do` or `/service/version`. Skip intermine.org marketing and a single gene report.
+
+| Tool | Query |
+|------|-------|
+| Google | `"InterMine" OR FlyMine OR HumanMine ("begin.do" OR "web service") -site:intermine.org -site:github.com` |
+| Censys | `web.endpoints.http.body: "InterMine"` |
+
+## GRIN-Global (`gringlobal`) {#gringlobal}
+
+Genebank information system (USDA NPGS, AAFC, and other centres). Site: [grin-global.org](https://www.grin-global.org).
+
+**Confirm:** GET a public `/gringlobal/` accession or taxonomy search. One record per national/centre installation. Skip the vendor homepage.
+
+| Tool | Query |
+|------|-------|
+| Google | `"GRIN-Global" OR inurl:/gringlobal/ (accession OR germplasm) -site:grin-global.org` |
+| Censys | `web.endpoints.http.body: "GRIN-Global"` |
+
+## PlutoF (`plutof`) {#plutof}
+
+University of Tartu biodiversity workbench. Site: [plutof.ut.ee](https://plutof.ut.ee). Public API at `https://api.plutof.ut.ee/v1/`. Do **not** remap UNITE (`unite.ut.ee`) — UNITE is a sequence database that uses PlutoF as a companion workbench.
+
+**Confirm:** GET the public PlutoF catalog or `/v1/` API. One record per PlutoF product (workbench vs DOI landing), not per UNITE taxon page.
+
+| Tool | Query |
+|------|-------|
+| Google | `"PlutoF" (repository OR biodiversity OR DOI) site:.ee` |
+| Censys | `web.endpoints.http.body: "PlutoF"` |
+
+## JGI Genome Portal (`jgi`) {#jgi}
+
+DOE Joint Genome Institute portal family (MycoCosm, PhycoCosm, Phytozome). Confirm the Genome Portal UI, not IMG, GOLD, or `data.jgi.doe.gov` (those stay `custom`).
+
+**Confirm:** GET `https://genome.jgi.doe.gov/portal/` or a MycoCosm/Phytozome organism catalog. Skip gene pages and login-only workspaces.
+
+| Tool | Query |
+|------|-------|
+| Google | `"JGI Genome Portal" OR MycoCosm OR Phytozome OR PhycoCosm (genome OR catalog) site:jgi.doe.gov` |
+| Censys | `web.endpoints.http.body: "JGI Genome Portal"` |
+
+## cBioPortal (`cbioportal`) {#cbioportal}
+
+Cancer genomics study portal. Site: [cbioportal.org](https://www.cbioportal.org). Independent hospital/consortium instances share `/api/info`. Not OntoPortal.
+
+**Confirm:** GET `/api/info` (`portalVersion`) or the public study list. One record per public instance. Skip a single study landing page.
+
+| Tool | Query |
+|------|-------|
+| Google | `"cBioPortal" ("cancer genomics" OR studies) -site:github.com` |
+| Censys | `web.endpoints.http.body: "cBioPortal"` |
+
+## ESA Science Archive (`esasciencearchive`) {#esasciencearchive}
+
+ESA Science Data Centre archives (Gaia, XMM-Newton, Herschel, Planck, Euclid, and related ESAC hosts). TAP/VOSI is the shared catalog protocol.
+
+**Confirm:** GET TAP `/tap/capabilities` or `/tap-server/tap/capabilities`. One record per mission archive, not per observation or FITS file.
+
+| Tool | Query |
+|------|-------|
+| Google | `"ESA Science Archive" OR ESAC (TAP OR VOSI OR Gaia OR XMM) site:esac.esa.int` |
+| Censys | `web.endpoints.http.body: "ESA Science Archive"` |
 
 ## Related
 

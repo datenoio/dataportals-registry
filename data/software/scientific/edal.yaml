@@ -1,0 +1,60 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: edal
+name: e!DAL
+website: https://edal.ipk-gatersleben.de
+description: e!DAL (electronic Data Archive Library) is IPK Gatersleben's open research-data
+  infrastructure. The core archive and domain stores such as e!DAL-PGP publish versioned
+  datasets with DOIs and a documented API.
+owner:
+  name: Leibniz Institute of Plant Genetics and Crop Plant Research (IPK)
+  location:
+    country:
+      id: DE
+      name: Germany
+logo_url: https://edal.ipk-gatersleben.de/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/IPK-BIT/eDAL
+documentation_url: https://edal.ipk-gatersleben.de
+export_formats:
+- JSON
+- XML
+capabilities:
+- REST API
+- DOI datasets
+- Versioned archives
+last_updated: '2026-08-25T00:00:00Z'

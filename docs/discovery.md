@@ -18,11 +18,11 @@ The registry records **catalogs** (portals, geoportals, repositories, and simila
 |-------|----------|
 | [Search engines and internet maps](discovery-search-tools.md) | Google, Censys, Shodan, FOFA, URLScan, crt.sh, and similar tools |
 | [Agents, Cursor, ChatGPT](discovery-agent-tools.md) | Configure MCP, APIs, Custom GPTs, and LLM clients to use those tools |
-| [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye, Piveau, Our Open Data, DataPress |
-| [Geoportals](discovery-geoportals.md) | Overview; SDI stacks: [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md); viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md) |
-| [Scientific repositories](discovery-scientific.md) | Institutional IRs; domain repos: [discovery-scientific-domain.md](discovery-scientific-domain.md) |
+| [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye, Piveau, Our Open Data, DataPress, ResourceContracts, RDF Online Repository, Guangxi, ODWeb |
+| [Geoportals](discovery-geoportals.md) | Overview; SDI stacks: [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md) (G3W-SUITE, CubeWerx, M.App Enterprise, Sentinel Hub); viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md) (Trimble Locus / Louhi / Landfolio, Spatial Suite, GEUSMAP, GISApp, iObčina, iShare, Cadcorp) |
+| [Scientific repositories](discovery-scientific.md) | Institutional IRs and CRIS (DSpace, Hyrax, Figshare, Pure, Converis, Omega-PSIR, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD); domain repos: [discovery-scientific-domain.md](discovery-scientific-domain.md) (InterMine, GRIN-Global, PlutoF, JGI, cBioPortal, ESA Science Archive) |
 | [Metadata catalogs](discovery-metadata.md) | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
-| [Indicators and microdata](discovery-indicators.md) | PxWeb, OpenSDG, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, StatPlanet |
+| [Indicators and microdata](discovery-indicators.md) | PxWeb, PxStat, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX, TabNet, SparkMap, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, StatPlanet |
 | [Search, ML, API, marketplaces](discovery-other.md) | Data search engines (Idra, OpenAIRE), ML catalogs, API directories, data marketplaces |
 
 ## Before you search
@@ -77,10 +77,26 @@ Many platforms publish installation galleries. Cross-check each URL against the 
 | [DHIS2](https://dhis2.org/) | National HMIS / public health indicator portals |
 | [Yoda](https://www.uu.nl/en/research/yoda) | Dutch university research-data vaults |
 | [OpenAIRE CONNECT](https://connect.openaire.eu/) | National and community research gateways |
+| [OpenAIRE Graph data sources](https://graph.openaire.eu/docs/apis/graph-api/data-sources/) | Research data repositories harvested by OpenAIRE (automated: `scripts/extract_openaire_portals.py`) |
 | [IPUMS](https://www.ipums.org) | Harmonized census and survey microdata collections |
 | [Symbiota portals](https://symbiota.org/symbiota-portals/) | Biodiversity collection CMS portals |
 | [openEO](https://openeo.org) | EO cloud-processing backends |
 | [Breedbase](https://breedbase.org) | Crop breeding information systems |
+| [Landfolio portals](https://www.spatialdimension.com/portals/) | Trimble mining and land cadastre map portals |
+| [G3W-SUITE](https://g3wsuite.it) | Italian QGIS WebGIS |
+| [ResourceContracts](https://resourcecontracts.org) | Oil/gas/mining contract repositories |
+| [RDF Online Repository](https://revenuedevelopment.org/online-repository/) | Mining and petroleum license-transparency portals |
+| [FAOSTAT / FENIX](https://www.fao.org/faostat/) | FAO indicator catalogs (AMIS, DAD-IS, WIEWS, GIFT) |
+| [DATASUS TabNet](https://datasus.saude.gov.br/informacoes-de-saude-tabnet/) | Brazilian health tabulators |
+| [SparkMap](https://sparkmap.org) | US community and health indicator hubs |
+| [Sentinel Hub Catalog](https://docs.sentinel-hub.com) | EO STAC collections |
+| [IMF DSBB](https://dsbb.imf.org) | National Summary Data Pages (e-GDDS / SDDS / SDDS Plus) |
+| [InterMine registry](https://registry.intermine.org/) | Organism and project mines |
+| [GRIN-Global](https://www.grin-global.org) | National / centre genebank installs |
+| [cBioPortal](https://www.cbioportal.org) | Public and hospital cancer-genomics instances |
+| [NOMAD](https://nomad-lab.eu) | Materials archive and self-hosted Oasis |
+| [XNAT](https://www.xnat.org) | Neuroimaging archives |
+| [Open Microscopy / IDR](https://www.openmicroscopy.org/omero/) | OMERO public image archives |
 | [ROAR](http://roar.eprints.org) | Open-access repositories |
 
 Vendor “customers” and “community” pages are useful but noisy: skip demos, marketing sites, and expired domains.
@@ -109,8 +125,19 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | GEUSMAP | `/geusmap/?mapname=` | One record per mapname |
 | GISApp | `*.gisapp.ro` | One city tenant (not ArcGIS REST) |
 | iObčina | `/gisapp/Default.aspx?a=` | Kaliopa municipal tenant |
+| G3W-SUITE | `g3w-client`, `/map/{group}/` | Public portal, not `/admin` or per-project |
+| Astun iShare | “Powered by iShare”, `/mymaps.aspx` | UK My Maps / My House (not Cadcorp, not INDEPTH iShare) |
+| Cadcorp SIS WebMap | SIS WebMap / GeognoSIS | Public web map (not disy Cadenza) |
+| Hexagon M.App Enterprise | `/Apps/`, Hexagon Geospatial | Public Apps portal, not per-app |
+| CubeWerx CubeSERV | `/cubewerx/cubeserv` GetCapabilities | Public service root, not per layer |
+| Sentinel Hub | `*.sentinel-hub.com` STAC `/api/v1/catalog` | Catalog API, not EO Browser as a second catalog |
 | DataWarehousePro | `app.datawarehousepro.com/go/` | One tenant portal |
 | Goal Tracker | `*.goaltracker.org` | Country SDG tenant |
+| PxStat | `PxStat.Data.Cube_API` / “PxStat Open Data Platform” | Collection API (not PxWeb `/api/v1/`) |
+| TabNet | title “TabNet Win32”, `deftohtm.exe`, `cgi-bin/dh` | Brazilian DATASUS tabulator |
+| FENIX | `fenixservices.fao.org`, FAOSTAT API, CountrySTAT UI | One FENIX app (FAOSTAT, AMIS, …), not a FAO CKAN dump |
+| SparkMap | sparkmap.org / All Things state hubs | One public hub (not CARES HQ as a second copy) |
+| Beyond 20/20 | `ReportFolders/reportFolders.aspx` | Public report/cube catalog |
 | RDF Online Repository | `*.revenuedev.org` | Country license portal |
 | ResourceContracts | `resourcecontracts.org` | Hub or country contract catalog |
 | Guangxi Public Data Open Platform | `{city}.data.gxzf.gov.cn` | One city or provincial tenant |
@@ -180,6 +207,23 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | Fedora Repository | `/fcrepo/rest` or `/rest` | Fedora version headers; prefer Hyrax/Islandora/PHAIDRA if that is the public UI |
 | PHAIDRA | `/api/oai`, `/api/search/select` | OAI `Identify` |
 | Esploro | `*.esploro.exlibrisgroup.com` or campus `/esploro` | Institutional research-outputs portal |
+| Converis | Clarivate Converis CRIS | Public datasets module, not publications/persons |
+| Omega-PSIR | Omega-PSIR / “Baza Wiedzy” | University CRIS root (Poland) |
+| LabKey Server | `begin.view`, Panorama Public | Public project/study home, not a single assay run |
+| Synapse | `synapse.org`, Sage Bionetworks | Portal or project catalog, not a `syn########` file |
+| XNAT | `/xnat/`, `/data/projects` | Public project catalog, not a session |
+| OMERO | `/webclient/`, IDR | Repository home, not a single image |
+| Kadi4Mat | `/api/records`, Kadi4Mat chrome | Public instance, not a login-only lab tenant |
+| e!DAL | e!DAL / IPK Gatersleben | Public DOI catalog, not a single landing |
+| NOMAD | `/prod/v1/api/v1/info` | Oasis or central archive, not a calculation entry |
+| InterMine | `/begin.do`, `/service/version` | One mine, not intermine.org or a gene report |
+| GRIN-Global | `/gringlobal/` | National/centre install, not the vendor homepage |
+| PlutoF | `api.plutof.ut.ee`, PlutoF workbench | Workbench/DOI catalog — not UNITE |
+| JGI Genome Portal | MycoCosm / Phytozome / PhycoCosm | Portal organism catalog, not IMG/GOLD/`data.jgi.doe.gov` |
+| cBioPortal | `/api/info` `portalVersion` | Instance study list, not a single study view |
+| ESA Science Archive | TAP `/tap/capabilities` | One mission archive, not a FITS file |
+| ODWeb | path `/odweb/` | City/provincial catalog, not the parent CMS |
+| IMF NSDP | “National Summary Data Page”, SDMX XML | Country NSDP page, not DSBB or a Knoema wrapper |
 | PxWeb | `/api/v1/` | `/api/v1/` |
 | NADA | `/index.php/api` or microdata UI | site home + API path |
 
@@ -205,6 +249,10 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - `/oportal/` (Inspur oPortal)
 - `/openinf/` (Seoul Open Data Plaza)
 - `/assets/cms/public.css` (Our Open Data)
+- `*.revenuedev.org` (RDF Online Repository tenant)
+- `/contract/resources` (ResourceContracts)
+- `{city}.data.gxzf.gov.cn` (Guangxi public-data tenant)
+- `/odweb/` (ODWeb municipal/provincial catalog)
 
 **Geospatial**
 
@@ -232,6 +280,12 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - GEUSMAP: `/geusmap/?mapname=`
 - GISApp: `{city}.gisapp.ro`
 - iObčina: `/gisapp/Default.aspx?a=`
+- G3W-SUITE: `/map/{group}/{project}/` or `/api/`
+- Astun iShare: `/mymaps.aspx` or `/myhouse.aspx`
+- Cadcorp SIS WebMap: public SIS / GeognoSIS viewer
+- Hexagon M.App Enterprise: `/Apps/`
+- CubeWerx: `/cubewerx/cubeserv?SERVICE=WMS&REQUEST=GetCapabilities`
+- Sentinel Hub: `https://services.sentinel-hub.com/api/v1/catalog/1.0.0/`
 - disy Cadenza: `/cadenza/` or `/pages/map/default/index.xhtml` (Cadenza Web / Workbooks)
 - ArcGIS: `/arcgis/rest/services?f=pjson`
 - GeoMapFish: `/themes`
@@ -253,6 +307,25 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - Digital Commons: repository root or `/do/oai/`
 - Fusion Registry: SDMX REST catalog
 - Knoema: branded hub home (not a dataset page)
+- Converis: public CRIS / datasets listing (stop on `/ws` keys)
+- Omega-PSIR: university “Baza Wiedzy” home
+- PxStat: `/public/api.restful/PxStat.Data.Cube_API.ReadCollection/`
+- TabNet: `deftohtm.exe` / `cgi-bin/dh` query form
+- FENIX: FAOSTAT `/faostat/api/v1/` groups-and-domains
+- SparkMap: public hub home (not CARES HQ)
+- LabKey: `begin.view` / Panorama Public project
+- Synapse: public project catalog (not `syn########`)
+- XNAT: `/data/projects` or `/xnat/data/projects`
+- OMERO: `/webclient/` or `/api/v0/m/projects/`
+- Kadi4Mat: `/api/records`
+- NOMAD: `/prod/v1/api/v1/info`
+- InterMine: `/begin.do` or `/service/version`
+- GRIN-Global: `/gringlobal/`
+- PlutoF: `https://api.plutof.ut.ee/v1/`
+- JGI: `https://genome.jgi.doe.gov/portal/`
+- cBioPortal: `/api/info`
+- ESA Science Archive: `/tap/capabilities` or `/tap-server/tap/capabilities`
+- IMF NSDP: country page titled “National Summary Data Page”
 
 **Generic**
 
@@ -272,12 +345,13 @@ Drop `--dryrun` only when you intend to write YAML. Prefer `--action insert` so 
 | Tool | Use |
 |------|-----|
 | `python scripts/sync_ckan_ecosystem.py --dry-run` | CKAN sites from ecosystem.ckan.org; then sync without `--dry-run` into `data/scheduled/` |
+| `python scripts/extract_openaire_portals.py list-sources --output /tmp/openaire_sources.json` | OpenAIRE Graph data sources; then `match-registry` and `add-scheduled --dry-run` ([openaire-sync.md](openaire-sync.md)) |
 | `python scripts/builder.py add-single URL --scheduled` | Create one YAML from a verified URL |
 | `python scripts/apidetect.py detect-single catalogdatagov` | Probe known API paths on an existing record ([apidetect.md](apidetect.md)) |
 | `python scripts/check_liveness.py --sample 10` | Probe `link` reachability ([liveness.md](liveness.md)) |
 | `python scripts/re3data_enrichment.py enrich --dry-run` | Fill `_re3data` when a re3data identifier is present |
 
-CKAN sync details: [ckan-sync.md](ckan-sync.md). Re3Data: [re3data.md](re3data.md).
+CKAN sync details: [ckan-sync.md](ckan-sync.md). OpenAIRE Graph sources: [openaire-sync.md](openaire-sync.md). Re3Data: [re3data.md](re3data.md).
 
 Do not write internet-wide scanners in this repository. Vendor/government lists, documented search-engine queries, and targeted GETs against candidate hosts are enough. How to query Google, Censys, and similar indexes: [discovery-search-tools.md](discovery-search-tools.md).
 
@@ -294,6 +368,11 @@ The same hostname often runs several GIS products. Register **one YAML per publi
 | openEO + STAC on one API | `openeo` | A second `stacserver` row |
 | MapGIS `/igs/rest/` on a host named `mapgis.*` | `mapgisigserver` | `arcgisserver` unless the path is `/arcgis/rest/` |
 | GET SDI / GeoMapFish / CoGIS wrapping GeoServer | The **portal** software | Bundled GeoServer |
+| G3W-SUITE + QGIS Server | `g3wsuite` portal | `qgisserver` on the same host |
+| Landfolio map portal + ArcGIS REST | `landfolio` cadastre UI | REST already tagged `arcgisserver` |
+| GISApp city viewer + `webadaptor.gisapp.ro` REST | `gisapp` tenant | ArcGIS REST as a second city catalog |
+| Sentinel Hub STAC + EO Browser | `sentinelhub` catalog API | `stacserver` or Browser as a second catalog |
+| Finnish `/IMS/` vs Sitowise Louhi | `trimblelocus` if `/IMS/`; else `louhi` | Both IDs on the same karttapalvelu |
 
 Duplicate-check `link` **and** the service origin before `add-single`. Harvest follows the same grain: [harvest-geoportals.md](harvest-geoportals.md#one-catalog-per-host).
 

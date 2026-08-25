@@ -1,0 +1,62 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: omero
+name: OMERO
+website: https://www.openmicroscopy.org/omero/
+description: OMERO is the Open Microscopy Environment server for managing, viewing,
+  and publishing microscopy images and related experimental metadata. Public archives
+  such as the Image Data Resource (IDR) are OMERO deployments with a JSON API.
+owner:
+  name: Open Microscopy Environment
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+logo_url: https://www.openmicroscopy.org/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/ome/openmicroscopy
+documentation_url: https://omero.readthedocs.io
+export_formats:
+- JSON
+- OME-TIFF
+- XML
+capabilities:
+- REST API
+- Image repositories
+- Dataset and screen catalogs
+changelog_url: https://github.com/ome/openmicroscopy/releases
+last_updated: '2026-08-25T00:00:00Z'

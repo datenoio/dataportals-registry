@@ -2,7 +2,7 @@
 
 How to find **indicators catalogs** (`catalog_type: Indicators catalog`) and **microdata catalogs** (`catalog_type: Microdata catalog`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md).
 
-Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, OpenSDG, .Stat Suite, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
+Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, PxStat, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, TabNet, SparkMap, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
 
 ## PxWeb (`pxweb`) {#pxweb}
 
@@ -355,6 +355,20 @@ Central-bank macroeconomic warehouse. Site: [datawarehousepro.com](https://dataw
 | Google | `"DataWarehousePro" ("central bank" OR statistics)` |
 | Censys | `web.names: "app.datawarehousepro.com"` |
 | crt.sh | `%.datawarehousepro.com` |
+
+## IMF National Summary Data Page (`imfnsdp`) {#imfnsdp}
+
+IMF e-GDDS / SDDS / SDDS Plus National Summary Data Page hosted by an NSO or central bank. Hub: [dsbb.imf.org](https://dsbb.imf.org). Distinct from Knoema (`knoema`) and WordPress (`wordpress`) sites that only wrap an NSDP, and from a whole NSO homepage that happens to link to one.
+
+**Signals:** title or heading “National Summary Data Page”; IMF DSBB / e-GDDS / SDDS chrome; SDMX 2.0 XML links; path `NSDP`, `IMF_NSDP`, or `nsdp`.
+
+**Confirm:** GET the NSDP HTML page (not the NSO home). One record per country page. Skip Open Data for Africa / Knoema NSDP hubs and WordPress ministry sites already tagged with those IDs.
+
+| Tool | Query |
+|------|-------|
+| Google | `"National Summary Data Page" (e-GDDS OR SDDS OR IMF)` |
+| Google | `inurl:NSDP OR inurl:IMF_NSDP "SDMX"` |
+| Censys | `web.endpoints.http.body: "National Summary Data Page"` |
 
 ## Goal Tracker (`goaltracker`) {#goaltracker}
 

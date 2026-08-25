@@ -1,0 +1,62 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: esasciencearchive
+name: ESA Science Archive
+website: https://www.cosmos.esa.int/web/esdc
+description: ESA Science Data Centre archives for space-science missions (Gaia, XMM-Newton,
+  Herschel, Planck, Euclid, ISO, and related ESAC hosts) share TAP/VOSI query services
+  and a common science-archive UI for observations and high-level data products.
+owner:
+  name: European Space Agency (ESAC)
+  location:
+    country:
+      id: ES
+      name: Spain
+logo_url: https://www.esa.int/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'Yes'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: null
+documentation_url: https://www.cosmos.esa.int/web/esdc
+export_formats:
+- FITS
+- JSON
+- VOTable
+- XML
+capabilities:
+- TAP
+- VOSI capabilities
+- Observation catalogs
+last_updated: '2026-08-25T00:00:00Z'

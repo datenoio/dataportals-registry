@@ -6,10 +6,10 @@ GET only. Stop on `401`/`403`. Prefer `endpoints[]`.
 
 | Page | Use when |
 |------|----------|
-| This page | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, Galaxy, SEEK, ICAT, MyTardis |
+| This page | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, Galaxy, SEEK, ICAT, MyTardis, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal |
 | [Institutional IRs and CRIS](harvest-scientific.md) | Dataverse, DSpace, Invenio, EPrints, Pure, RADAR, Yoda, mixed publication catalogs |
 | [harvest-biodiversity.md](harvest-biodiversity.md) | IPT, Symbiota, ALA — occurrence vs dataset grain |
-| [harvest-earthdata.md](harvest-earthdata.md) | THREDDS, ERDDAP, ESGF data nodes, SciCat, openEO |
+| [harvest-earthdata.md](harvest-earthdata.md) | THREDDS, ERDDAP, ESGF data nodes, SciCat, openEO, ESA Science Archive |
 
 All `software.id` values: [software-index.md](software-index.md).
 
@@ -178,6 +178,48 @@ GET https://host/api/v1/dataset/
 ```
 
 TastyPie `dataset` objects. Drop `datafile` rows when a parent dataset exists. Stop on `401`.
+
+## InterMine (`intermine`) {#intermine}
+
+```text
+GET https://host/service/version
+GET https://host/service/query/results?query=...
+```
+
+Keep **experiments, publications-with-data, and list/template results that represent datasets**. Drop gene report pages and `/begin.do` UI crawls. Prefer the mine root from the catalog `link`. Skip intermine.org itself.
+
+## GRIN-Global (`gringlobal`) {#gringlobal}
+
+```text
+GET https://host/gringlobal/
+```
+
+Keep accession/taxonomy **catalog exports** (CSV/Excel) and documented web-service lists. Drop individual accession HTML pages as datasets unless the user asked for accession-level harvest. One genebank instance = one harvest scope.
+
+## PlutoF (`plutof`) {#plutof}
+
+```text
+GET https://api.plutof.ut.ee/v1/
+```
+
+Keep published **datasets / DOI records**. Drop occurrence rows, sequences, and taxon pages. Do not harvest UNITE (`unite.ut.ee`) as PlutoF. Stop on `401`.
+
+## JGI Genome Portal (`jgi`) {#jgi}
+
+```text
+GET https://host/portal/
+```
+
+Keep **genome / transcriptome / comparative projects** listed in the portal download workspace. Drop gene pages, BLAST hits, and login-only workspaces. Do not harvest IMG, GOLD, or `data.jgi.doe.gov` under this id.
+
+## cBioPortal (`cbioportal`) {#cbioportal}
+
+```text
+GET https://host/api/info
+GET https://host/api/studies
+```
+
+Keep **studies**. Drop mutation/CNA rows, patient samples, and a single study view as a crawl seed. One public instance = one harvest scope.
 
 ## Related
 

@@ -54,7 +54,7 @@ Do not invent `uid`. Scheduled records use `temp########` until [scheduled.md](s
 | `transferable_topics` | boolean | Topics may be copied onto related records |
 | `transferable_location` | boolean | Location may be copied onto related records |
 | `unfinished` | boolean | Record is known incomplete; do not treat as fully curated |
-| `dataset_count_reported` | integer or string | Count claimed by the source (not verified by this repo) |
+| `dataset_count_reported` | integer | Count claimed by the source (not verified by this repo) |
 | `base_last_seen` | string | Internal harvest/seen stamp; do not invent for new YAML |
 | `invenio-filters` | string | Invenio search filter used during enrichment |
 
@@ -87,7 +87,9 @@ coverage:
       name: California
 ```
 
-`level` is numeric (higher = more local). Subregion `id` uses ISO 3166-2 style when the catalog is not national. Identifier and endpoint vocabularies: [vocabularies.md](vocabularies.md).
+`level` is numeric (higher = more local). Subregion `id` uses ISO 3166-2 style when the catalog is not national. Country `id` and macroregion `id` are strings: quote `'NO'` (Norway) and M49 codes (`'021'`, `'155'`). Identifier and endpoint vocabularies: [vocabularies.md](vocabularies.md).
+
+`tags` is a list of strings. Quote numeric tags (`'911'`). Do not use `{tag: water}` mappings.
 
 ## Endpoints
 

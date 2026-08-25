@@ -1,6 +1,6 @@
 # Harvesting earth-observation and gridded data
 
-THREDDS, ERDDAP, STAC, Open Data Cube, and similar catalogs list **coverages, collections, and datasetIDs** — not journal articles. The usual mistake is harvesting every NetCDF file, STAC **item**, or map tile as a dataset.
+THREDDS, ERDDAP, STAC, Open Data Cube, Sentinel Hub, ESA Science Archive TAP, and similar catalogs list **coverages, collections, TAP tables, and datasetIDs** — not journal articles. The usual mistake is harvesting every NetCDF file, STAC **item**, FITS cutout, or map tile as a dataset.
 
 Overview: [harvest.md](harvest.md). OGC/STAC grain: [harvest-protocols.md](harvest-protocols.md). Finding installations: [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md). GET only. Stop on `401`/`403`.
 
@@ -14,6 +14,8 @@ Overview: [harvest.md](harvest.md). OGC/STAC grain: [harvest-protocols.md](harve
 | openEO **collection** | `/processes`, jobs, process-graph examples |
 | Rasdaman **coverage** (WCS) | WCPS query results as extra datasets |
 | Copernicus **collection** / product type | Individual scenes when a collection exists |
+| Sentinel Hub **STAC collection** | Process API jobs, EO Browser tiles, items/granules |
+| ESA Science Archive **TAP tables / observations** | Individual FITS files and cutouts |
 | DataONE MN **DATA** objects | CN-wide duplicates of nodes you already harvest |
 
 Replace `https://host` with the catalog origin. Prefer `endpoints[]`.
@@ -136,6 +138,18 @@ GET https://host/esg-search/search?format=application%2Fsolr%2Bjson&limit=100&of
 ```
 
 Keep Solr **dataset** docs (`master_id` / `dataset_id`). Drop files and wget scripts. ESGF data nodes with `/thredds/catalog.xml` use the THREDDS recipe. Detail: [harvest-scientific-domain.md](harvest-scientific-domain.md#esgf).
+
+## ESA Science Archive (`esasciencearchive`) {#esasciencearchive}
+
+ESA Science Data Centre mission archives (Gaia, XMM-Newton, Herschel, and related ESAC TAP services).
+
+```text
+GET https://host/tap/capabilities
+GET https://host/tap-server/tap/capabilities
+GET https://host/tap/tables
+```
+
+Harvest TAP **tables / observation catalogs**, not every FITS file or postage-stamp cutout. Prefer VOSI `capabilities` and `tables` from `endpoints[]`. One mission archive = one harvest scope. Stop on `401`.
 
 ## Related
 

@@ -18,7 +18,7 @@ Controlled values for catalog YAML. Source files live under `data/reference/`. C
 
 Regional and local government owners must have `owner.location.level` of **30 or higher** and a matching subregion directory (`US-CA/`, `GB-SCT/`, …), not `Federal/`.
 
-Country folders use ISO 3166-1 alpha-2. Special roots (`World`, `EU`, `Africa`, `ASEAN`, …) are listed in `PATH_COUNTRY_ALLOWLIST` in `scripts/constants.py`. Subregion ids use ISO 3166-2 style. Macroregion ids are UN M49 numeric codes (`021` Northern America).
+Country folders use ISO 3166-1 alpha-2. Special roots (`World`, `EU`, `Africa`, `ASEAN`, …) are listed in `PATH_COUNTRY_ALLOWLIST` in `scripts/constants.py`. Subregion ids use ISO 3166-2 style. Macroregion ids are UN M49 numeric codes stored as **quoted strings** (`'021'` Northern America, `'155'` Western Europe). Quote country code `'NO'` (Norway); unquoted `NO` is a YAML 1.1 boolean.
 
 ## Identifiers
 

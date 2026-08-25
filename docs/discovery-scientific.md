@@ -1,12 +1,12 @@
 # Discovering scientific data repositories
 
-How to find **scientific data repository** installations (`catalog_type: Scientific data repository`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Cross-check [re3data](https://www.re3data.org/) and the Dataverse installations JSON before adding a well-known platform — many are already registered.
+How to find **scientific data repository** installations (`catalog_type: Scientific data repository`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Cross-check [re3data](https://www.re3data.org/), the [OpenAIRE Graph data sources](openaire-sync.md) dump, and the Dataverse installations JSON before adding a well-known platform — many are already registered.
 
 Do not add dataset-level records (a single Dataverse dataset, a Zenodo deposition, a STAC item).
 
 | Page | Use when |
 |------|----------|
-| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, OPUS, RADAR, Yoda, …) |
+| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, OPUS, RADAR, Yoda, Hyrax, Figshare, Pure, Converis, Omega-PSIR, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, …) |
 | [Domain repositories](discovery-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, SciCat |
 
 All `software.id` values: [software-index.md](software-index.md). Harvest filters: [harvest-scientific.md](harvest-scientific.md), [harvest-scientific-domain.md](harvest-scientific-domain.md).
@@ -301,6 +301,19 @@ Polish university CRIS + repository. Site: [omegapsir.io](https://www.omegapsir.
 | Google | `"Omega-PSIR" OR "Baza Wiedzy" (repozytorium OR CRIS) site:.pl` |
 | Censys | `web.endpoints.http.body: "Omega-PSIR"` |
 
+## Converis (`converis`) {#converis}
+
+Clarivate Converis CRIS. Same publication-vs-data problem as Pure: the public product is often researcher profiles and publications.
+
+**Signals:** Converis branding; Clarivate research information; `/converis/` or a campus CRIS titled Converis.
+
+**Confirm:** GET the public CRIS home and a **datasets / research data** listing if present. One record per university instance. Skip login-only `/ws` APIs and marketing pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Converis" (research OR repository OR "research data" OR CRIS) -site:clarivate.com` |
+| Censys | `web.endpoints.http.body: "Converis"` |
+
 ## Islandora (`islandora`) {#islandora}
 
 Public Drupal + Fedora repository UI. Prefer `islandora` over `fedora` when users see an Islandora collection browser (not a generic Drupal site).
@@ -361,6 +374,83 @@ Repository for Archiving, Managing and Accessing Diverse Data. Site: [ramadda.or
 | Google | `"RAMADDA" (repository OR catalog OR "data portal") -site:github.com` |
 | Censys | `web.endpoints.http.body: "RAMADDA"` |
 
+## LabKey Server (`labkey`) {#labkey}
+
+LabKey Server study/assay platform. Site: [labkey.com](https://www.labkey.com). Public projects such as Panorama Public use `begin.view` folders.
+
+**Confirm:** GET a public project home or `begin.view`. One record per public LabKey instance. Skip login-only folders and a single assay run.
+
+| Tool | Query |
+|------|-------|
+| Google | `"LabKey Server" OR "LabKey" (Panorama OR "begin.view" OR study) -site:labkey.com -site:github.com` |
+| Censys | `web.endpoints.http.body: "LabKey"` |
+
+## Synapse (`synapse`) {#synapse}
+
+Sage Bionetworks hosted biomedical sharing platform. Site: [synapse.org](https://www.synapse.org). Disease portals (AD Knowledge Portal, NF Data Portal) are Synapse tenants.
+
+**Confirm:** GET the public project/dataset catalog. One record per public portal or the main Synapse catalog. Skip a single file entity (`syn########` download).
+
+| Tool | Query |
+|------|-------|
+| Google | `"Synapse" "Sage Bionetworks" (portal OR datasets) -site:github.com` |
+| Censys | `web.endpoints.http.body: "Sage Bionetworks"` |
+
+## XNAT (`xnat`) {#xnat}
+
+Neuroimaging archive platform. Site: [xnat.org](https://www.xnat.org). Independent hospital and consortium installs expose `/xnat/` or a project catalog.
+
+**Confirm:** GET the public XNAT home or REST project list. Skip login-only archives and a single imaging session.
+
+| Tool | Query |
+|------|-------|
+| Google | `"XNAT" (neuroimaging OR "imaging archive" OR repository) -site:xnat.org -site:github.com` |
+| Censys | `web.endpoints.http.body: "XNAT"` |
+
+## OMERO (`omero`) {#omero}
+
+Open Microscopy Environment image repository. Public archives such as the Image Data Resource (IDR) are OMERO deployments.
+
+**Confirm:** GET the public repository home or documented OMERO JSON API. Skip a single image/screen landing page.
+
+| Tool | Query |
+|------|-------|
+| Google | `"OMERO" OR "Image Data Resource" (microscopy OR repository) -site:github.com` |
+| Censys | `web.endpoints.http.body: "OMERO"` |
+
+## Kadi4Mat (`kadi4mat`) {#kadi4mat}
+
+KIT research-data infrastructure for materials science. Site: [kadi.iam.kit.edu](https://kadi.iam.kit.edu).
+
+**Confirm:** GET the public records/collections UI or REST API. One record per public Kadi instance. Skip login-only lab tenants.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Kadi4Mat" OR "Kadi" (KIT OR "research data") -site:github.com` |
+| Censys | `web.endpoints.http.body: "Kadi4Mat"` |
+
+## e!DAL (`edal`) {#edal}
+
+IPK Gatersleben electronic Data Archive Library. Core archive and domain stores (e!DAL-PGP) share the e!DAL stack.
+
+**Confirm:** GET the public dataset catalog. One record per public e!DAL store. Skip a single DOI landing as a seed.
+
+| Tool | Query |
+|------|-------|
+| Google | `"e!DAL" OR "eDAL" (IPK OR Gatersleben OR repository)` |
+| Censys | `web.endpoints.http.body: "e!DAL"` |
+
+## NOMAD (`nomad`) {#nomad}
+
+NOMAD Laboratory archive and Oasis software for computational materials data. Site: [nomad-lab.eu](https://nomad-lab.eu). Central lab and self-hosted Oasis instances share `/prod/v1/api/v1/info`.
+
+**Confirm:** GET `/prod/v1/api/v1/info` or the public upload/entry catalog. One record per public Oasis or the central archive. Skip a single calculation entry.
+
+| Tool | Query |
+|------|-------|
+| Google | `"NOMAD" ("Oasis" OR "nomad-lab" OR "materials discovery") (repository OR API) -site:github.com` |
+| Censys | `web.endpoints.http.body: "nomad-lab"` |
+
 ## Other scientific platforms
 
 | `software.id` | Signals | Typical query |
@@ -369,6 +459,13 @@ Repository for Archiving, Managing and Accessing Diverse Data. Site: [ramadda.or
 | `worktribe` | see above | |
 | `seek` | see above | |
 | `ramadda` | see above | |
+| `labkey` | see above | |
+| `synapse` | see above | |
+| `xnat` | see above | |
+| `omero` | see above | |
+| `kadi4mat` | see above | |
+| `edal` | see above | |
+| `nomad` | see above | |
 | `nyudatacatalog` | NYU Data Catalog forks | `"NYU Data Catalog" OR "data-catalog" medical library` |
 | `icat` | see above | |
 | `ensembl` | Ensembl genome browsers | `site:ensembl.org` taxon portals only (do not clone www) |
@@ -388,7 +485,7 @@ Repository for Archiving, Managing and Accessing Diverse Data. Site: [ramadda.or
 | `esgf` | Metagrid / esg-search (not TDS) | `"esg-search" OR Metagrid ESGF` |
 | `yoda` | see above | |
 | `gbifplatform` | GBIF.org itself | do not re-add; use `ipt` for publisher IPTs |
-| `converis` | Clarivate Converis CRIS | `"Converis" (research OR repository)` |
+| `converis` | see above | |
 | `aodn` | AODN Portal | `"AODN" portal` |
 | `osf` | OSF institutions | `site:osf.io` **institution** catalogs only |
 | `ifremercatalog` | SEANOE | `"SEANOE" IFREMER` |

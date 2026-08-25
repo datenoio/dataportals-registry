@@ -20,6 +20,11 @@ Overview: [harvest.md](harvest.md). Finding catalogs: [discovery-indicators.md](
 | IPUMS **sample** / collection metadata | Completed extract files and variable pages as catalogs |
 | Knoema **dataset** on a portal | Individual time-series points and knoema.com global search hits |
 | SparkMap **map layer** or assessment report | Saved user maps, login-only CHNA builder sessions, sparkmap.org marketing pages |
+| Goal Tracker **indicator / goal** | About / marketing HTML |
+| IMF NSDP **SDMX category / series** linked from the country page | NSO homepage, WordPress/Knoema wrappers, the DSBB directory |
+| DataWarehousePro **databank / series** | Guest-portal chrome, empty mnemonic lists |
+| Beyond 20/20 **report / cube** | ReportFolders chrome without a public report list |
+| StatPlanet **indicator** in a live Cloud/HTML5 explorer | Flash-era demo, a single-indicator URL |
 
 Do not download full observation cubes unless the user asked for data files. Catalog harvest = identifiers + title + URL + period.
 
@@ -131,6 +136,10 @@ GET https://app.datawarehousepro.com/guest/export/{tenant}
 ```
 
 Keep **databanks / series catalogs** for that tenant. Drop admin paste-from-Excel UI and other tenants on the same host. One portal = one harvest scope.
+
+## IMF National Summary Data Page (`imfnsdp`) {#imfnsdp}
+
+The NSDP HTML page is the catalog. Follow the SDMX 2.0 XML (and CSV where published) links for each **category / series**. Drop the IMF DSBB directory, the NSO homepage, and Knoema/WordPress wrappers (harvest those as `knoema` / `wordpress`). One country page = one harvest scope.
 
 ## Goal Tracker (`goaltracker`) {#goaltracker}
 

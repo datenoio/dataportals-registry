@@ -1,6 +1,6 @@
 # Harvesting datasets from open data portals
 
-CKAN, OpenDataSoft, Socrata, and similar portals already treat **datasets** (packages, views) as the primary object. You rarely need the publication-type filters used for [scientific repositories](harvest-scientific.md). You still must avoid harvesting the wrong object (resources, showcases, harvest sources, individual files).
+CKAN, OpenDataSoft, Socrata, and similar portals already treat **datasets** (packages, views) as the primary object. ResourceContracts and RDF Online Repository list **contracts / licenses**; Guangxi tenants and ODWeb catalogs list **open datasets**. You rarely need the publication-type filters used for [scientific repositories](harvest-scientific.md). You still must avoid harvesting the wrong object (resources, showcases, harvest sources, individual files, login-only filings).
 
 Overview: [harvest.md](harvest.md). Finding portals: [discovery-opendata.md](discovery-opendata.md). Shared DCAT/CKAN grain: [harvest-protocols.md](harvest-protocols.md).
 
@@ -11,6 +11,9 @@ Replace `https://host` with the catalog origin. GET only. Stop on `401`/`403`. P
 | Keep | Drop |
 |------|------|
 | Dataset / package / view / explore dataset | A file **resource** (CSV) as if it were a separate catalog record |
+| ResourceContracts **contract** / RDF Online Repository **license** | Vendor About page, per-clause chrome, login-only company filing |
+| Guangxi tenant **open dataset** | Login-only apply / API-gateway flows |
+| ODWeb `/odweb/` **dataset** | Parent government homepage, login-only apply flows |
 | The dataset landing API object | Harvest **source** metadata (the remote catalog CKAN is pulling from) |
 | | Showcase, article, blog, app gallery, idea box |
 | | Organization or group objects without a dataset list |
@@ -246,7 +249,9 @@ Copernicus CDS (`copernicuscds`): [harvest-earthdata.md](harvest-earthdata.md#co
 
 ## RDF Online Repository (`rdfrepository`) {#rdfrepository}
 
-Public license/workspace tables on `*.revenuedev.org`. Harvest the published **dataset / license list** if unauthenticated. Drop login-only company filing modules. Distinct from W3C RDF.
+Public license/workspace tables on `*.revenuedev.org`. Filter exports on `software.id = 'rdfrepository'`.
+
+Harvest the published **dataset / license list** if unauthenticated. One harvest scope per country tenant. Drop login-only company filing modules. Distinct from W3C RDF.
 
 ## ResourceContracts (`resourcecontracts`) {#resourcecontracts}
 
@@ -256,9 +261,17 @@ GET https://host/contract/resources
 
 Keep **contracts** (documents). Drop the vendor About page and per-clause annotation chrome unless that is the catalog. One hub or country tenant = one harvest scope.
 
+## ODWeb (`odweb`) {#odweb}
+
+Public dataset list under `/odweb/`. Filter exports on `software.id = 'odweb'`.
+
+Keep **open datasets** for that tenant. Drop login-only apply flows and the parent government homepage. One `/odweb/` host = one harvest scope. Not CKAN; not [oPortal](#oportal); not [JDOP](#jdop).
+
 ## Guangxi Public Data Open Platform (`gxopendata`) {#gxopendata}
 
-Public dataset / directory list on `data.gxzf.gov.cn` or `{city}.data.gxzf.gov.cn`. Keep **open datasets** for that tenant. Drop login-only apply/API-gateway flows. One tenant = one harvest scope.
+Public dataset / directory list on `data.gxzf.gov.cn` or `{city}.data.gxzf.gov.cn`. Filter exports on `software.id = 'gxopendata'`.
+
+Keep **open datasets** for that tenant. Drop login-only apply/API-gateway flows. One tenant = one harvest scope. Not CKAN.
 
 ## Portals without a dataset API
 

@@ -10,9 +10,11 @@ Sites whose **primary** product is search across other catalogs (aggregators). T
 
 **Idra** (`idra`) is a shared Open Data Federation Platform — fingerprints live in [discovery-opendata.md](discovery-opendata.md#idra). Typical `catalog_type` is **Data search engine**, not Open data portal.
 
-**OpenAIRE** (`openaire`) is the other high-volume shared search stack: EXPLORE is the global Graph UI; CONNECT hosts national and community gateways (`netherlands.openaire.eu`, Canada.EXPLORE, and similar). Docs: [graph.openaire.eu/docs](https://graph.openaire.eu/docs/).
+## OpenAIRE (`openaire`) {#openaire}
 
-**Confirm OpenAIRE:** the UI searches the OpenAIRE Graph (publications, datasets, software, organisations). Register EXPLORE once and each distinct **national/community gateway**. Do not add a single research-product landing page.
+EXPLORE is the global Graph UI; CONNECT hosts national and community gateways (`netherlands.openaire.eu`, Canada.EXPLORE, and similar). Docs: [graph.openaire.eu/docs](https://graph.openaire.eu/docs/). Use `software.id: openaire`. Source repositories harvested into the Graph are a separate list: [openaire-sync.md](openaire-sync.md).
+
+**Confirm:** the UI searches the OpenAIRE Graph (publications, datasets, software, organisations). Register EXPLORE once and each distinct **national/community gateway**. Do not add a single research-product landing page.
 
 | Tool | Query |
 |------|-------|

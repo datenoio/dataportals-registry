@@ -29,6 +29,10 @@ Match discovery: [discovery.md](discovery.md#one-catalog-per-public-product).
 | STAC API + Browser | `/collections` on the API | Browser HTML as a second catalog |
 | openEO | `/collections` | `/processes`, jobs, a parallel `stacserver` crawl |
 | MapGIS IGServer | `/igs/rest/mrcs/docs` or `/igs/rest/services` | `/igs/manager`, tiles |
+| G3W-SUITE + QGIS Server | Published project WMS on the G3W portal | A second `qgisserver` crawl |
+| Landfolio + ArcGIS REST | Landfolio layer/license list | REST already harvested as `arcgisserver` |
+| CubeWerx CubeSERV | WMS/CSW GetCapabilities | Per-layer duplicates |
+| Sentinel Hub | STAC `/api/v1/catalog` collections | Parallel `stacserver` crawl, EO Browser tiles |
 
 ## GeoNetwork (`geonetwork`) {#geonetwork}
 

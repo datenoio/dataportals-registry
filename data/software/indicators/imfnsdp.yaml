@@ -1,0 +1,61 @@
+category: Indicators catalog
+subtype: managed_saas_service
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: imfnsdp
+name: IMF National Summary Data Page
+website: https://dsbb.imf.org
+description: The IMF National Summary Data Page (NSDP) is the standardized e-GDDS,
+  SDDS, and SDDS Plus dissemination template that national statistical offices and
+  central banks host. Pages list macroeconomic categories with SDMX 2.0 XML downloads
+  and a link to the IMF Dissemination Standards Bulletin Board. Distinct from Knoema
+  or WordPress sites that only wrap an NSDP.
+owner:
+  name: International Monetary Fund
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://dsbb.imf.org/favicon.ico
+documentation_url: https://dsbb.imf.org/egdds
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'No'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'Yes'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- SDMX
+- XML
+- CSV
+capabilities:
+- SDMX downloads
+- National summary data page
+last_updated: '2026-08-25T00:00:00Z'

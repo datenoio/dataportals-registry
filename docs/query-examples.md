@@ -118,11 +118,14 @@ WHERE catalog_type = 'Scientific data repository'
   AND status = 'active'
   AND json_extract_string(software, '$.id') IN (
     'dspace', 'dspacecris', 'invenio', 'inveniordm', 'eprints',
-    'hyrax', 'pure', 'esploro', 'opus', 'elsevierdigitalcommons'
+    'hyrax', 'pure', 'esploro', 'opus', 'elsevierdigitalcommons',
+    'figshare', 'converis', 'omegapsir'
   )
 ORDER BY software_id, name
 LIMIT 50;
 ```
+
+Dataset-native scientific platforms (`labkey`, `synapse`, `xnat`, `omero`, `kadi4mat`, `edal`, `nomad`) and domain stacks (`intermine`, `gringlobal`, `plutof`, `jgi`, `cbioportal`, `esasciencearchive`) use the same `catalog_type` filter with those `software.id` values. Recipes: [software-index.md](software-index.md).
 
 API recipes and dataset-vs-publication filters: [harvest.md](harvest.md).
 

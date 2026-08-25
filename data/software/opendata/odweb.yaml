@@ -1,0 +1,60 @@
+category: Open data portal
+subtype: data_portal_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: Uncertain
+has_bulk: 'No'
+id: odweb
+name: ODWeb
+website: http://www.changzhi.gov.cn/odweb/
+description: ODWeb is a Chinese municipal and provincial public-data open catalog
+  product that serves the catalog under an /odweb/ path (scripts, skins, and dataset
+  listing). Independent hosts include Changzhi, Jiangmen, and Henan. Distinct from
+  Inspur oPortal (`oportal`) and Zhejiang JDOP (`jdop`).
+owner:
+  name: Inspur
+  location:
+    country:
+      id: CN
+      name: China
+logo_url: http://www.changzhi.gov.cn/favicon.ico
+documentation_url: http://www.changzhi.gov.cn/odweb/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+export_formats:
+- JSON
+- CSV
+- Excel
+capabilities:
+- Dataset catalog
+- Municipal and provincial catalogs
+last_updated: '2026-08-25T00:00:00Z'

@@ -49,6 +49,7 @@ flowchart LR
 |----------|-------------------|--------|
 | Re3Data metadata | `scripts/re3data_enrichment.py` | `_re3data` on matching entities |
 | CKAN ecosystem sync | `scripts/sync_ckan_ecosystem.py` | new scheduled or entity YAML |
+| OpenAIRE Graph data sources | `scripts/extract_openaire_portals.py` | harvest list + scheduled YAML |
 | API endpoint probe | `scripts/apidetect.py` | `endpoints[]` on known `software.id` maps |
 | Quality analysis | `python scripts/builder.py analyze-quality` | `dataquality/` |
 | URL liveness | `.github/workflows/liveness.yml` | `dataquality/liveness_report.jsonl` |

@@ -1,0 +1,60 @@
+category: Scientific data repository
+subtype: managed_saas_service
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: synapse
+name: Synapse
+website: https://www.synapse.org
+description: Synapse is Sage Bionetworks' hosted platform for sharing biomedical
+  research files, tables, and project catalogs. Disease portals such as the AD Knowledge
+  Portal and NF Data Portal are Synapse tenants with a shared REST API.
+owner:
+  name: Sage Bionetworks
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://www.synapse.org/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/Sage-Bionetworks/SynapseWebClient
+documentation_url: https://rest-docs.synapse.org
+export_formats:
+- CSV
+- JSON
+capabilities:
+- REST API
+- Project catalogs
+- File and table entities
+last_updated: '2026-08-25T00:00:00Z'
