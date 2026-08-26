@@ -1,0 +1,73 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Data marketplace
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion:
+      id: '001'
+      name: World
+description: Centific Data Marketplace, a self-service catalog of AI training datasets
+  from Centific and third-party providers. Listings include free samples and commercial
+  products (speech, image, video, text, and robotics) with request-a-quote fulfillment.
+endpoints:
+- type: rest
+  url: https://api-data.centific.com/api/v1/datasets
+  version: v1
+- type: openapi
+  url: https://api-data.centific.com/swagger
+id: datacentificcom
+langs:
+- id: EN
+  name: English
+link: https://data.centific.com/data-catalog
+name: Centific Data Marketplace
+owner:
+  link: https://www.centific.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WA
+      name: Washington
+  name: Centific
+  type: Business
+properties:
+  dataset_count_reported: 1054
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.centific.com/legal/privacy-policy
+  rights_type: granular
+  tos_url: https://www.centific.com/legal/terms-of-use
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- marketplace
+- data marketplace
+- training data
+- machine learning
+- artificial intelligence
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+uid: cdi99990139

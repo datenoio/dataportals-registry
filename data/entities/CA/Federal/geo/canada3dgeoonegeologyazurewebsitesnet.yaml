@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Geological Survey of Canada OneGeology GeoServer publishing Canada 3D
+  geology layers via WMS.
+endpoints:
+- type: wms130
+  url: https://canada3d-geo-onegeology.azurewebsites.net/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: canada3dgeoonegeologyazurewebsitesnet
+langs:
+- id: EN
+  name: English
+link: https://canada3d-geo-onegeology.azurewebsites.net/ows
+name: Canada 3D OneGeology GeoServer
+owner:
+  link: https://natural-resources.canada.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+  name: Geological Survey of Canada
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- OneGeology
+- GeoServer
+- geology
+- Canada
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi99990429

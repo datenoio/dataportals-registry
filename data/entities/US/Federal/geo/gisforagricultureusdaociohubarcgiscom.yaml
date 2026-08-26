@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: USDA Geospatial Hub. Public catalog operated by USDA Office of the Chief Information
+  Officer.
+endpoints:
+- type: dcatap201
+  url: https://gisforagriculture-usdaocio.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://gisforagriculture-usdaocio.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://gisforagriculture-usdaocio.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://gisforagriculture-usdaocio.hub.arcgis.com/api/search/v1
+id: gisforagricultureusdaociohubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://gisforagriculture-usdaocio.hub.arcgis.com
+name: USDA Geospatial Hub
+owner:
+  link: https://www.usda.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: USDA Office of the Chief Information Officer
+  type: Central government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990619
+properties:
+  is_national: false

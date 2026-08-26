@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-36
+      name: Friuli Venezia Giulia
+description: IRDAT Friuli Venezia Giulia GeoServer publishing regional spatial data
+  infrastructure layers via WMS.
+endpoints:
+- type: wms130
+  url: http://irdat.regione.fvg.it/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: irdatregionefvgit
+langs:
+- id: IT
+  name: Italian
+link: http://irdat.regione.fvg.it/geoserver
+name: IRDAT FVG GeoServer
+owner:
+  link: https://www.regione.fvg.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-36
+      name: Friuli Venezia Giulia
+  name: Regione Autonoma Friuli Venezia Giulia
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- IRDAT
+- GeoServer
+- Friuli Venezia Giulia
+- WMS
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99990426

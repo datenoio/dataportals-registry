@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-NH
+      name: Noord-Holland
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Open Data Portaal Heemstede. Public catalog operated by Gemeente Heemstede.
+endpoints:
+- type: dcatap201
+  url: https://opendata.heemstede.nl/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://opendata.heemstede.nl/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://opendata.heemstede.nl/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://opendata.heemstede.nl/api/search/v1
+id: opendataheemstedenl
+langs:
+- id: NL
+  name: Dutch
+link: https://opendata.heemstede.nl
+name: Open Data Portaal Heemstede
+owner:
+  link: https://www.heemstede.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-NH
+      name: Noord-Holland
+  name: Gemeente Heemstede
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990639
+properties:
+  is_national: false

@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GovConnect pmINSPIRE hale»connect tenant publishing municipal INSPIRE
+  network services (WMS/WFS) for German local governments.
+endpoints:
+- type: csw202
+  url: https://inspire.govconnect.de/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://inspire.govconnect.de/csw?mode=oaipmh&verb=Identify
+id: inspiregovconnectde
+langs:
+- id: DE
+  name: German
+link: https://inspire.govconnect.de/
+name: pmINSPIRE GovConnect
+owner:
+  link: https://www.govconnect.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: GovConnect GmbH
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- INSPIRE
+- WMS
+- WFS
+- hale connect
+- municipal
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi99990130

@@ -35,6 +35,7 @@ from dataclasses import dataclass, field
 from collections import defaultdict, Counter
 from typing import List, Dict, Any, Optional
 
+from national_catalog import check_is_national_flag
 from constants import (
     ENTRY_TEMPLATE,
     CUSTOM_SOFTWARE_KEYS,
@@ -115,32 +116,53 @@ def load_jsonl_zst(filepath):
     return data
 
 
-def normalize_for_duckdb(record: Dict[str, Any]) -> Dict[str, Any]:
-    """Convert nested structures (lists, dicts) to JSON strings for DuckDB compatibility.
-    
-    DuckDB can have issues inferring types from nested JSON structures, especially when
-    there are mixed types or when it tries to cast values incorrectly. By converting
-    complex nested structures to JSON strings, we avoid type inference issues.
-    
-    Also ensures boolean fields are properly typed.
+_DUCKDB_TABLE_NAME_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
+
+
+def jsonl_has_records(filepath: str) -> bool:
+    """Return True if a JSONL file exists and has at least one non-empty line."""
+    if not os.path.exists(filepath) or os.path.getsize(filepath) == 0:
+        return False
+    with open(filepath, "r", encoding="utf8") as handle:
+        for line in handle:
+            if line.strip():
+                return True
+    return False
+
+
+def create_table_from_jsonl(conn, table_name: str, jsonl_path: str) -> int:
+    """Create a DuckDB table from JSONL, preserving LIST, STRUCT, and scalar types.
+
+    Uses DuckDB's native JSON reader (same inference as full.parquet) instead of
+    routing nested values through pandas, which would collapse them to VARCHAR.
     """
-    normalized = {}
-    for key, value in record.items():
-        if isinstance(value, (dict, list)):
-            # Convert nested structures to JSON strings
-            normalized[key] = json.dumps(value, ensure_ascii=False)
-        elif key == 'api' and not isinstance(value, bool) and value is not None:
-            # Ensure 'api' field is always boolean or None
-            # If it's a string like 'dataset', convert to False
-            if isinstance(value, str):
-                logger.warning(f"Record {record.get('id', 'unknown')} has non-boolean 'api' value: {value}, converting to False")
-                normalized[key] = False
-            else:
-                normalized[key] = bool(value)
-        else:
-            # Keep primitive types as-is (str, int, float, bool, None)
-            normalized[key] = value
-    return normalized
+    if not _DUCKDB_TABLE_NAME_RE.fullmatch(table_name):
+        raise ValueError(f"Invalid DuckDB table name: {table_name}")
+    if not jsonl_has_records(jsonl_path):
+        logger.warning(
+            "JSONL file is missing or empty, skipping table %s: %s",
+            table_name,
+            jsonl_path,
+        )
+        return 0
+
+    conn.execute(f"DROP TABLE IF EXISTS {table_name}")
+    conn.execute(
+        f"""
+        CREATE TABLE {table_name} AS
+        SELECT * FROM read_json(
+            ?,
+            format='newline_delimited',
+            auto_detect=true,
+            union_by_name=true,
+            sample_size=-1
+        )
+        """,
+        [jsonl_path],
+    )
+    count = conn.execute(f"SELECT count(*) FROM {table_name}").fetchone()[0]
+    logger.info("Created %s table with %d records", table_name, count)
+    return count
 
 
 def compress_jsonl(input_path, output_path, compression_level=19):
@@ -346,83 +368,36 @@ def build(
     compress_jsonl("full.jsonl", "full.jsonl.zst")
     verify_both_formats_exist("full.jsonl")
     
-    # Build DuckDB database
+    # Build DuckDB database with native LIST/STRUCT types (same inference as Parquet)
     db_path = os.path.join(DATASETS_DIR, "datasets.duckdb")
     logger.info("Building DuckDB database at %s", db_path)
-    
-    # Remove existing database if it exists
-    if os.path.exists(db_path):
-        os.remove(db_path)
-    
+
+    for leftover in (db_path, db_path + ".wal"):
+        if os.path.exists(leftover):
+            os.remove(leftover)
+
     conn = duckdb.connect(db_path)
-    
-    # Create catalogs table from full.jsonl.zst
-    logger.info("Creating catalogs table from full.jsonl.zst")
-    full_jsonl_zst_path = os.path.join(DATASETS_DIR, "full.jsonl.zst")
-    
-    # Decompress and load into DuckDB
-    # DuckDB can read JSONL directly, but we need to handle decompression
-    # We'll decompress to a temporary file or use DuckDB's JSON reading
-    with tqdm.tqdm(desc="Loading catalogs into DuckDB", unit="records") as pbar:
-        # Read compressed file and insert into DuckDB
-        dctx = zstd.ZstdDecompressor()
-        temp_data = []
-        with open(full_jsonl_zst_path, "rb") as f:
-            with dctx.stream_reader(f) as reader:
-                text_stream = reader.read().decode("utf-8")
-                for line in text_stream.strip().split("\n"):
-                    if line:
-                        record = json.loads(line)
-                        # Normalize nested structures to JSON strings to avoid type inference issues
-                        normalized_record = normalize_for_duckdb(record)
-                        temp_data.append(normalized_record)
-                        pbar.update(1)
-        
-        # Create table from JSON data
-        if temp_data:
-            import pandas as pd
-            df = pd.DataFrame(temp_data)
-            conn.execute("CREATE TABLE catalogs AS SELECT * FROM df")
-            logger.info("Created catalogs table with %d records", len(temp_data))
-    
-    # Create software table from software.jsonl.zst
-    logger.info("Creating software table from software.jsonl.zst")
-    software_jsonl_zst_path = os.path.join(DATASETS_DIR, "software.jsonl.zst")
-    
-    with tqdm.tqdm(desc="Loading software into DuckDB", unit="records") as pbar:
-        dctx = zstd.ZstdDecompressor()
-        temp_data = []
-        with open(software_jsonl_zst_path, "rb") as f:
-            with dctx.stream_reader(f) as reader:
-                text_stream = reader.read().decode("utf-8")
-                for line in text_stream.strip().split("\n"):
-                    if line:
-                        record = json.loads(line)
-                        # Normalize nested structures to JSON strings to avoid type inference issues
-                        normalized_record = normalize_for_duckdb(record)
-                        temp_data.append(normalized_record)
-                        pbar.update(1)
-        
-        if temp_data:
-            import pandas as pd
-            df = pd.DataFrame(temp_data)
-            conn.execute("CREATE TABLE software AS SELECT * FROM df")
-            logger.info("Created software table with %d records", len(temp_data))
-    
+
+    full_jsonl_path = os.path.join(DATASETS_DIR, "full.jsonl")
+    logger.info("Creating catalogs table from full.jsonl")
+    catalog_count = create_table_from_jsonl(conn, "catalogs", full_jsonl_path)
+
+    software_jsonl_path = os.path.join(DATASETS_DIR, "software.jsonl")
+    logger.info("Creating software table from software.jsonl")
+    create_table_from_jsonl(conn, "software", software_jsonl_path)
+
+    parquet_path = os.path.join(DATASETS_DIR, "full.parquet")
+    if catalog_count:
+        logger.info("Building final parquet file %s", parquet_path)
+        conn.execute(
+            "COPY catalogs TO ? (FORMAT PARQUET, COMPRESSION ZSTD)",
+            [parquet_path],
+        )
+    else:
+        logger.warning("Skipping parquet export; catalogs table was not created")
+
     conn.close()
     logger.info("DuckDB database created successfully at %s", db_path)
-    
-    # Keep existing parquet file generation
-    logger.info(
-        "Building final parquet file %s", os.path.join(DATASETS_DIR, "full.parquet")
-    )
-    os.system(
-        "duckdb -c \"copy '%s' to '%s'  (FORMAT 'parquet', COMPRESSION 'zstd');\""
-        % (
-            os.path.join(DATASETS_DIR, "full.jsonl"),
-            os.path.join(DATASETS_DIR, "full.parquet"),
-        )
-    )
 
     if jsonld:
         from jsonld_export import export_catalogs_jsonld
@@ -4029,6 +4004,7 @@ ISSUE_PRIORITY_MAP = {
         "SUBREGION_NAME_ID_MISMATCH",
         "OWNER_TYPE_NONCANONICAL",
         "PATH_COUNTRY_MISMATCH",
+        "IS_NATIONAL_AGENCY_OR_TOPIC",
     ],
     "LOW": [
         "MISSING_TOPICS",
@@ -4821,6 +4797,15 @@ RULE_DESCRIPTIONS = {
     "INVALID_OWNER_TYPE": (
         "owner.type must be a canonical value from data/reference/owner_types.yaml."
     ),
+    "IS_NATIONAL_AGENCY_OR_TOPIC": (
+        "properties.is_national is true on a catalog that is not the country's "
+        "official catalog of that type. Keep the flag only for the national "
+        "open-data portal, NSDI/national geoportal/INSPIRE node, or NSO "
+        "statistical product. Agency, thematic, scientific, and subnational "
+        "catalogs must use is_national: false even when the owner is a "
+        "central/federal body. Do not bulk-set the flag from a Federal/ path "
+        "or a .gov/.mil hostname."
+    ),
     "OWNER_TYPE_NONCANONICAL": (
         "owner.type matches a known synonym; replace with the canonical value "
         "(e.g. University → Academy)."
@@ -5093,6 +5078,7 @@ def analyze_quality(output: str = None):
                     check_unknown_country_macroregion,
                     check_owner_type_values,
                     check_path_country_consistency,
+                    check_is_national_flag,
                 ]
                 
                 for check_func in checks:

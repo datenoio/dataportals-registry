@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: Institutional EPrints repository of the National Institute of Advanced
+  Studies, with publications and 7 Dataset records.
+endpoints:
+- type: oaipmh20
+  url: http://eprints.nias.res.in/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: http://eprints.nias.res.in/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: http://eprints.nias.res.in/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: http://eprints.nias.res.in/rest/eprint
+- type: sitemap
+  url: http://eprints.nias.res.in/sitemap.xml
+- type: opensearch
+  url: http://eprints.nias.res.in/cgi/opensearchdescription
+id: eprintsniasresin
+langs:
+- id: EN
+  name: English
+link: http://eprints.nias.res.in
+name: NIAS Repository
+owner:
+  link: https://www.nias.res.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 20
+  name: National Institute of Advanced Studies
+  type: Academy
+properties:
+  dataset_count_reported: 7
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- research data
+- open access
+- eprints
+- university
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+uid: cdi99990158

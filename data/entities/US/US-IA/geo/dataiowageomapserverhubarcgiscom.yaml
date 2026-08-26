@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-IA
+      name: Iowa
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Iowa Geographic Map Server. Public catalog operated by Iowa State University.
+endpoints:
+- type: dcatap201
+  url: https://data-iowageomapserver.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://data-iowageomapserver.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://data-iowageomapserver.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://data-iowageomapserver.hub.arcgis.com/api/search/v1
+id: dataiowageomapserverhubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://data-iowageomapserver.hub.arcgis.com
+name: Iowa Geographic Map Server
+owner:
+  link: https://www.iastate.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-IA
+      name: Iowa
+  name: Iowa State University
+  type: Academy
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990525
+properties:
+  is_national: false

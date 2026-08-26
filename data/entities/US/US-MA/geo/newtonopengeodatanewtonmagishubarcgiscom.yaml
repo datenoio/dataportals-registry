@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MA
+      name: Massachusetts
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Newton Open Geo Data. Public catalog operated by City of Newton, Massachusetts.
+endpoints:
+- type: dcatap201
+  url: https://newton-open-geo-data-newtonmagis.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://newton-open-geo-data-newtonmagis.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: ogcrecordsapi
+  url: https://newton-open-geo-data-newtonmagis.hub.arcgis.com/api/search/v1
+id: newtonopengeodatanewtonmagishubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://newton-open-geo-data-newtonmagis.hub.arcgis.com
+name: Newton Open Geo Data
+owner:
+  link: https://www.newtonma.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MA
+      name: Massachusetts
+  name: City of Newton, Massachusetts
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990634
+properties:
+  is_national: false

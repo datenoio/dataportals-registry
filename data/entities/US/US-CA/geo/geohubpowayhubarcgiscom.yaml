@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+    macroregion:
+      id: '021'
+      name: Northern America
+description: City of Poway GeoHub. Public catalog operated by City of Poway.
+endpoints:
+- type: dcatap201
+  url: https://geohub-poway.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://geohub-poway.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://geohub-poway.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://geohub-poway.hub.arcgis.com/api/search/v1
+id: geohubpowayhubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://geohub-poway.hub.arcgis.com
+name: City of Poway GeoHub
+owner:
+  link: https://www.poway.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: City of Poway
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990600
+properties:
+  is_national: false

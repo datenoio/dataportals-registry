@@ -1,0 +1,75 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MA
+      name: Massachusetts
+description: Redivis data catalog of the Surgical Epidemiology, Trauma Systems, and
+  Geographic Inequalities group at Harvard's Program in Global Surgery and Social
+  Change (PGSSC).
+endpoints:
+- type: openapi
+  url: https://redivis.com/api/v1/openapi.json
+- type: custom_api
+  url: https://redivis.com/api/v1/organizations/JULab_PGSSC/datasets
+id: rediviscomjulabpgssc
+langs:
+- id: EN
+  name: English
+link: https://redivis.com/JULab_PGSSC
+name: Surgical Epi, Trauma Systems, Geographic Inequalities @PGSSC
+owner:
+  link: https://www.pgssc.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MA
+      name: Massachusetts
+  name: Program in Global Surgery and Social Change, Harvard Medical School
+  type: Academy
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://redivis.com/privacy
+  rights_type: granular
+  tos_url: https://redivis.com/terms
+software:
+  id: redivis
+  name: Redivis
+status: active
+tags:
+- research data
+- scientific
+- health
+- surgery
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi99990153

@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-TX
+      name: Texas
+description: Public ArcGIS REST services directory for Texas Parks and Wildlife Department,
+  providing map, feature, and imagery services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://tpwd.texas.gov/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://tpwd.texas.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://tpwd.texas.gov/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://tpwd.texas.gov/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://tpwd.texas.gov/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://tpwd.texas.gov/arcgis/rest/services?f=kmz
+id: tpwdtexasgovarcgis
+langs:
+- id: EN
+  name: English
+link: https://tpwd.texas.gov/arcgis/rest/services
+name: Texas Parks and Wildlife Department ArcGIS REST Services
+owner:
+  link: https://tpwd.texas.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TX
+      name: Texas
+  name: Texas Parks and Wildlife Department
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- ArcGIS
+- REST
+- Texas
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99990319

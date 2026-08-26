@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-AK
+      name: Alaska
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Alaska Geospatial Council. Public catalog operated by Alaska Department of Natural
+  Resources.
+endpoints:
+- type: dcatap201
+  url: https://alaska-geospatial-council-soa-dnr.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://alaska-geospatial-council-soa-dnr.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://alaska-geospatial-council-soa-dnr.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://alaska-geospatial-council-soa-dnr.hub.arcgis.com/api/search/v1
+id: alaskageospatialcouncilsoadnrhubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://alaska-geospatial-council-soa-dnr.hub.arcgis.com
+name: Alaska Geospatial Council
+owner:
+  link: https://dnr.alaska.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-AK
+      name: Alaska
+  name: Alaska Department of Natural Resources
+  type: Regional government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990501
+properties:
+  is_national: false

@@ -1,0 +1,88 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-TX
+      name: Texas
+description: Public ArcGIS REST services directory for City of Wylie, Texas, providing
+  map, feature, and imagery services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisapp.wylietexas.gov/portalserver/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisapp.wylietexas.gov/portalserver/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisapp.wylietexas.gov/portalserver/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisapp.wylietexas.gov/portalserver/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisapp.wylietexas.gov/portalserver/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gisapp.wylietexas.gov/portalserver/rest/services?f=kmz
+id: gisappwylietexasgovportalserver
+langs:
+- id: EN
+  name: English
+link: https://gisapp.wylietexas.gov/portalserver/rest/services
+name: Wylie ArcGIS REST Services (portalserver)
+owner:
+  link: https://gisapp.wylietexas.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TX
+      name: Texas
+  name: City of Wylie, Texas
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- ArcGIS
+- REST
+- Texas
+- city
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99990318

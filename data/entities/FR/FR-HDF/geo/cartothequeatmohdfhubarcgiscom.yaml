@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-HDF
+      name: Hauts-de-France
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Cartothèque Atmo Hauts-de-France. Public catalog operated by Atmo Hauts-de-France.
+endpoints:
+- type: dcatap201
+  url: https://cartotheque-atmo-hdf.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://cartotheque-atmo-hdf.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://cartotheque-atmo-hdf.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://cartotheque-atmo-hdf.hub.arcgis.com/api/search/v1
+id: cartothequeatmohdfhubarcgiscom
+langs:
+- id: FR
+  name: French
+link: https://cartotheque-atmo-hdf.hub.arcgis.com
+name: Cartothèque Atmo Hauts-de-France
+owner:
+  link: https://www.atmo-hdf.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-HDF
+      name: Hauts-de-France
+  name: Atmo Hauts-de-France
+  type: Regional government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990505
+properties:
+  is_national: false

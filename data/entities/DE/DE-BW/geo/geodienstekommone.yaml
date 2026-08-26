@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+description: Komm.ONE hale»connect platform hosting INSPIRE and municipal OGC map
+  services (WMS/WFS) for Baden-Württemberg local governments.
+endpoints:
+- type: wms130
+  url: https://geodienste.komm.one/ows/services/org.152.fd3bb117-3fd9-4293-a0ff-6491e047520b_wms?SERVICE=WMS&Request=GetCapabilities
+  version: 1.3.0
+id: geodienstekommone
+langs:
+- id: DE
+  name: German
+link: https://geodienste.komm.one/
+name: Komm.ONE Geodienste
+owner:
+  link: https://www.komm.one
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+  name: Komm.ONE
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- INSPIRE
+- WMS
+- WFS
+- municipal
+- hale connect
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99990128

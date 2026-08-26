@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 30
+    subregion:
+      id: CR-SJ
+      name: San José
+    macroregion:
+      id: '013'
+      name: Central America
+description: Datos Abiertos Municipalidad de Montes de Oca. Public catalog operated by Municipalidad
+  de Montes de Oca.
+endpoints:
+- type: dcatap201
+  url: https://datos-abiertos-municipalidad-de-montes-de-oca-munimontesdeoca.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://datos-abiertos-municipalidad-de-montes-de-oca-munimontesdeoca.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://datos-abiertos-municipalidad-de-montes-de-oca-munimontesdeoca.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://datos-abiertos-municipalidad-de-montes-de-oca-munimontesdeoca.hub.arcgis.com/api/search/v1
+id: datosabiertosmunicipalidaddemontesdeocamunimontesdeocahubarcgiscom
+langs:
+- id: ES
+  name: Spanish
+link: https://datos-abiertos-municipalidad-de-montes-de-oca-munimontesdeoca.hub.arcgis.com
+name: Datos Abiertos Municipalidad de Montes de Oca
+owner:
+  link: https://www.montesdeoca.go.cr
+  location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 30
+    subregion:
+      id: CR-SJ
+      name: San José
+  name: Municipalidad de Montes de Oca
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990564
+properties:
+  is_national: false

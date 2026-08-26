@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CO
+      name: Colorado
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Garfield County Colorado Open GIS Data. Public catalog operated by Garfield County.
+endpoints:
+- type: dcatap201
+  url: https://data-garfieldcolorado.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://data-garfieldcolorado.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://data-garfieldcolorado.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://data-garfieldcolorado.opendata.arcgis.com/api/search/v1
+id: datagarfieldcoloradoopendataarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://data-garfieldcolorado.opendata.arcgis.com
+name: Garfield County Colorado Open GIS Data
+owner:
+  link: https://www.garfield-county.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CO
+      name: Colorado
+  name: Garfield County
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990519
+properties:
+  is_national: false

@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: USGS Trusted Digital Repository and metadata catalog for Coastal and Marine Hazards
+  and Resources Program field activities and datasets. Harvested into the USGS Science Data
+  Catalog.
+endpoints:
+- type: dcatus11
+  url: https://cmgds.marine.usgs.gov/catalog/data.json
+id: cmgdsmarineusgsgov
+langs:
+- id: EN
+  name: English
+link: https://cmgds.marine.usgs.gov/catalog/
+name: USGS Coastal and Marine Geoscience Data System
+owner:
+  link: https://www.usgs.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: U.S. Geological Survey
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- marine
+- coastal
+- geoscience
+- usgs
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi99990507

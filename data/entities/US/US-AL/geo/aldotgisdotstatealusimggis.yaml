@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-AL
+      name: Alabama
+description: Public ArcGIS REST services directory for Alabama Department of Transportation,
+  providing map, feature, and imagery services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://aldotgis.dot.state.al.us/imggis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://aldotgis.dot.state.al.us/imggis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://aldotgis.dot.state.al.us/imggis/services?wsdl
+- type: arcgis:sitemap
+  url: https://aldotgis.dot.state.al.us/imggis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://aldotgis.dot.state.al.us/imggis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://aldotgis.dot.state.al.us/imggis/rest/services?f=kmz
+id: aldotgisdotstatealusimggis
+langs:
+- id: EN
+  name: English
+link: https://aldotgis.dot.state.al.us/imggis/rest/services
+name: Alabama Department of Transportation ArcGIS REST Services (imggis)
+owner:
+  link: https://www.dot.state.al.us/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-AL
+      name: Alabama
+  name: Alabama Department of Transportation
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- ArcGIS
+- REST
+- Alabama
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99990421

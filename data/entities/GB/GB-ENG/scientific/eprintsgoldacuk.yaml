@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Institutional repository of Goldsmiths, University of London, holding
+  publications, theses, and other research outputs, including 22 Dataset records.
+endpoints:
+- type: oaipmh20
+  url: https://eprints.gold.ac.uk/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://eprints.gold.ac.uk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://eprints.gold.ac.uk/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://eprints.gold.ac.uk/rest/eprint
+- type: sitemap
+  url: https://eprints.gold.ac.uk/sitemap.xml
+- type: opensearch
+  url: https://eprints.gold.ac.uk/cgi/opensearchdescription
+id: eprintsgoldacuk
+langs:
+- id: EN
+  name: English
+link: https://eprints.gold.ac.uk
+name: Goldsmiths Research Online
+owner:
+  link: https://www.gold.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: Goldsmiths, University of London
+  type: Academy
+properties:
+  dataset_count_reported: 22
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- research outputs
+- open access
+- data repository
+- eprints
+- university
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990159

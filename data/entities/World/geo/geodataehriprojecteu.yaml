@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion:
+      id: '001'
+      name: World
+description: EHRI GeoServer publishing Holocaust-related geographic layers for the
+  European Holocaust Research Infrastructure.
+endpoints:
+- type: wms130
+  url: https://geodata.ehri-project.eu/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: geodataehriprojecteu
+langs:
+- id: EN
+  name: English
+link: https://geodata.ehri-project.eu/geoserver
+name: EHRI GeoServer
+owner:
+  link: https://www.ehri-project.eu
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+  name: European Holocaust Research Infrastructure
+  type: International
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- EHRI
+- GeoServer
+- Holocaust
+- WMS
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99990431

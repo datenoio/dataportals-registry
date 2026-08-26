@@ -584,6 +584,16 @@ FIGSHARE_URLMAP = [
     },
 ]
 
+REDIVIS_URLMAP = [
+    {
+        "id": "openapi",
+        "url": "/api/v1/openapi.json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "1.0",
+    },
+]
+
 SOCRATA_URLMAP = [
     {
         "id": "dcatus11",
@@ -2275,6 +2285,7 @@ CATALOGS_URLMAP = {
     "wis20box": WIS20BOX_URLMAP,
     "ncwms": NCWMS_URLMAP,
     "figshare": FIGSHARE_URLMAP,
+    "redivis": REDIVIS_URLMAP,
     "elsevierdigitalcommons": ELSEVIERDC_URLMAP,
     "junar": JUNAR_URLMAP,
     "custom": CUSTOM_URLMAP,

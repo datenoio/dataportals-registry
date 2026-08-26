@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-SCT
+      name: Scotland
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Crown Estate Scotland Spatial Hub. Public catalog operated by Crown Estate Scotland.
+endpoints:
+- type: dcatap201
+  url: https://crown-estate-scotland-spatial-hub-coregis.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://crown-estate-scotland-spatial-hub-coregis.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://crown-estate-scotland-spatial-hub-coregis.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://crown-estate-scotland-spatial-hub-coregis.hub.arcgis.com/api/search/v1
+id: crownestatescotlandspatialhubcoregishubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://crown-estate-scotland-spatial-hub-coregis.hub.arcgis.com
+name: Crown Estate Scotland Spatial Hub
+owner:
+  link: https://www.crownestatescotland.com
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-SCT
+      name: Scotland
+  name: Crown Estate Scotland
+  type: Regional government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990509
+properties:
+  is_national: false

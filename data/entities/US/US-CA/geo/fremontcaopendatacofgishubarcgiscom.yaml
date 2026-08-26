@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+    macroregion:
+      id: '021'
+      name: Northern America
+description: City of Fremont Open Data Hub. Public catalog operated by City of Fremont.
+endpoints:
+- type: dcatap201
+  url: https://fremont-ca-open-data-cofgis.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://fremont-ca-open-data-cofgis.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://fremont-ca-open-data-cofgis.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://fremont-ca-open-data-cofgis.hub.arcgis.com/api/search/v1
+id: fremontcaopendatacofgishubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://fremont-ca-open-data-cofgis.hub.arcgis.com
+name: City of Fremont Open Data Hub
+owner:
+  link: https://www.fremont.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: City of Fremont
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990584
+properties:
+  is_national: false

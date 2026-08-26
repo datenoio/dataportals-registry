@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,8 +14,12 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: Redivis is a data platform for academic research. It provides research organizations
-  with a central hub where researchers can easily discover, access, and analyze their data.
+description: Redivis is a data platform for academic research. It provides research
+  organizations with a central hub where researchers can easily discover, access,
+  and analyze their data.
+endpoints:
+- type: openapi
+  url: https://redivis.com/api/v1/openapi.json
 id: rediviscom
 identifiers:
 - id: openaire
@@ -36,8 +40,8 @@ owner:
   name: Redivis Inc.
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: redivis
+  name: Redivis
 status: active
 tags:
 - scientific

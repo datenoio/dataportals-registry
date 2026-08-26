@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 30
+    subregion:
+      id: ZA-KZN
+      name: Kwazulu-Natal
+    macroregion:
+      id: 018
+      name: Southern Africa
+description: eThekwini Municipality Open GIS Data. Public catalog operated by eThekwini Municipality.
+endpoints:
+- type: dcatap201
+  url: https://gis-ethekwini.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://gis-ethekwini.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://gis-ethekwini.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://gis-ethekwini.opendata.arcgis.com/api/search/v1
+id: gisethekwiniopendataarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://gis-ethekwini.opendata.arcgis.com
+name: eThekwini Municipality Open GIS Data
+owner:
+  link: https://www.durban.gov.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 30
+    subregion:
+      id: ZA-KZN
+      name: Kwazulu-Natal
+  name: eThekwini Municipality
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990618
+properties:
+  is_national: false

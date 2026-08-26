@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-KS
+      name: Kansas
+description: Public ArcGIS REST services directory for Kansas various layers, providing
+  map, feature, and imagery services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://services.kansasgis.org/arcgis5/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://services.kansasgis.org/arcgis5/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://services.kansasgis.org/arcgis5/services?wsdl
+- type: arcgis:sitemap
+  url: https://services.kansasgis.org/arcgis5/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://services.kansasgis.org/arcgis5/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://services.kansasgis.org/arcgis5/rest/services?f=kmz
+id: serviceskansasgisorgarcgis5
+langs:
+- id: EN
+  name: English
+link: https://services.kansasgis.org/arcgis5/rest/services
+name: Kansas various layers ArcGIS REST Services (arcgis5)
+owner:
+  link: https://kars.geoplatform.ku.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-KS
+      name: Kansas
+  name: Kansas various layers
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- ArcGIS
+- REST
+- Kansas
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99990250

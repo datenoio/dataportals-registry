@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Oesterreichische Nationalbank interactive statistical query. Users build
+  custom tables of monetary, banking, and financial indicators and can retrieve the
+  same series as XML via the OeNB data web service.
+endpoints:
+- type: customapi
+  url: https://www.oenb.at/isadataservice/content
+id: isawebstatoenbat
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://www.oenb.at/isawebstat/dynabfrage?lang=EN
+name: OeNB User-Defined Statistical Query
+owner:
+  link: https://www.oenb.at
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+  name: Oesterreichische Nationalbank
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- central bank
+- official statistics
+- time series
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99990102

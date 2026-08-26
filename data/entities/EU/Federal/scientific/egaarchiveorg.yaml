@@ -1,5 +1,6 @@
 access_mode:
 - open
+- restricted
 api: true
 api_status: active
 catalog_type: Scientific data repository
@@ -14,39 +15,75 @@ coverage:
     macroregion:
       id: World
       name: World
-description: European Genome-Phenome Archive (EGA) is a permanent archive for secure
-  sharing of personally identifiable genetic, phenotypic, and clinical datasets for
-  biomedical research.
+description: Permanent archive for controlled sharing of personally identifiable genetic,
+  phenotypic, and clinical datasets from biomedical research. Metadata is publicly
+  searchable; access to data files is granted by Data Access Committees.
+endpoints:
+- type: rest
+  url: https://metadata.ega-archive.org/datasets
+- type: openapi
+  url: https://metadata.ega-archive.org/spec/specs.yaml
+  version: '3.0'
+- type: docs
+  url: https://ega-archive.org/discovery/metadata/public-metadata-api/
 id: egaarchiveorg
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100011242
+  value: r3d100011242
+- id: fairsharing
+  url: https://fairsharing.org/FAIRsharing.mya1ff
+  value: FAIRsharing.mya1ff
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28775107
+  value: Q28775107
 langs:
 - id: EN
   name: English
 link: https://ega-archive.org/
 name: European Genome-Phenome Archive (EGA)
 owner:
-  link: https://ega-archive.org/
+  link: https://ega-archive.org/about/ega/
   location:
     country:
       id: EU
       name: European Union
     level: 20
-  name: EGA Consortium
+  name: EMBL-EBI and Centre for Genomic Regulation (CRG)
   type: Academy
+properties:
+  dataset_count_reported: 21363
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://ega-archive.org/data-protection/privacy-notice/ega-website/
+  rights_type: granular
+  tos_url: https://ega-archive.org/legal-notice/
 software:
   id: custom
   name: Custom software
 status: active
 tags:
+- has_api
+- scientific
 - genomics
 - phenomics
 - clinical data
 - controlled access
 - biomedical research
+- health
+- research data
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
 uid: cdi00020397
-endpoints:
-- type: sitemap
-  url: https://ega-archive.org/sitemap.xml

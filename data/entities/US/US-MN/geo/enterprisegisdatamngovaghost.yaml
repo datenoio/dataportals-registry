@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MN
+      name: Minnesota
+description: Public ArcGIS REST services directory for Minnesota Geospatial Commons,
+  providing map, feature, and imagery services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://enterprise.gisdata.mn.gov/aghost/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://enterprise.gisdata.mn.gov/aghost/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://enterprise.gisdata.mn.gov/aghost/services?wsdl
+- type: arcgis:sitemap
+  url: https://enterprise.gisdata.mn.gov/aghost/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://enterprise.gisdata.mn.gov/aghost/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://enterprise.gisdata.mn.gov/aghost/rest/services?f=kmz
+id: enterprisegisdatamngovaghost
+langs:
+- id: EN
+  name: English
+link: https://enterprise.gisdata.mn.gov/aghost/rest/services
+name: Minnesota Geospatial Commons ArcGIS REST Services (aghost)
+owner:
+  link: https://gis.data.mn.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MN
+      name: Minnesota
+  name: Minnesota Geospatial Commons
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- ArcGIS
+- REST
+- Minnesota
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99990405

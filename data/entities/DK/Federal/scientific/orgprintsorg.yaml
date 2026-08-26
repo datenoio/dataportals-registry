@@ -1,0 +1,89 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: International open-access archive of research on organic food and farming,
+  operated by ICROFS. Includes papers, reports, project records, and a Dataset document
+  type (92 records).
+endpoints:
+- type: oaipmh20
+  url: https://orgprints.org/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://orgprints.org/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://orgprints.org/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://orgprints.org/rest/eprint
+- type: sitemap
+  url: https://orgprints.org/sitemap.xml
+- type: opensearch
+  url: https://orgprints.org/cgi/opensearchdescription
+id: orgprintsorg
+langs:
+- id: EN
+  name: English
+link: https://orgprints.org
+name: Organic Eprints
+owner:
+  link: https://icrofs.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+  name: International Centre for Research in Organic Food Systems (ICROFS)
+  type: Academy
+properties:
+  dataset_count_reported: 92
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- research data
+- organic farming
+- agriculture
+- open access
+- eprints
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi99990161

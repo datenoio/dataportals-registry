@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-IN
+      name: Indiana
+    macroregion:
+      id: '021'
+      name: Northern America
+description: GeoHub - City of Bloomington. Public catalog operated by City of Bloomington.
+endpoints:
+- type: dcatap201
+  url: https://geohub.bloomington.in.gov/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://geohub.bloomington.in.gov/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://geohub.bloomington.in.gov/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://geohub.bloomington.in.gov/api/search/v1
+id: geohubbloomingtoningov
+langs:
+- id: EN
+  name: English
+link: https://geohub.bloomington.in.gov
+name: GeoHub - City of Bloomington
+owner:
+  link: null
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-IN
+      name: Indiana
+  name: City of Bloomington
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990594
+properties:
+  is_national: false

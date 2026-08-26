@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion:
+      id: '001'
+      name: World
+description: SERVIR Global GeoServer providing public WMS, WFS, and WCS layers for
+  regional earth-observation and development applications.
+endpoints:
+- type: wms130
+  url: https://geodata.servirglobal.net/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://geodata.servirglobal.net/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs201
+  url: https://geodata.servirglobal.net/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+id: geodataservirglobalnet
+langs:
+- id: EN
+  name: English
+link: https://geodata.servirglobal.net/geoserver
+name: SERVIR Global GeoServer
+owner:
+  link: https://www.servirglobal.net
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+  name: SERVIR Global
+  type: International
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- SERVIR
+- GeoServer
+- WMS
+- earth observation
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi99990133

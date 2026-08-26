@@ -530,6 +530,7 @@ ENRICHMENT_ISSUE_TYPES = frozenset(
         "MISSING_CONTACT_INFO",
         "DUPLICATE_COVERAGE",
         "OWNER_TYPE_NONCANONICAL",
+        "IS_NATIONAL_AGENCY_OR_TOPIC",
     ]
 )
 
@@ -610,6 +611,7 @@ MAP_SOFTWARE_OWNER_CATALOG_TYPE = {
     "datalad": "Scientific data repository",
     "converis": "Scientific data repository",
     "contentdm": "Scientific data repository",
+    "archipelago": "Scientific data repository",
     "fedora": "Scientific data repository",
     "dspace": "Scientific data repository",
     "eprints": "Scientific data repository",
@@ -673,6 +675,7 @@ MAP_SOFTWARE_OWNER_CATALOG_TYPE = {
     "openaire": "Data search engine",
     "opus": "Scientific data repository",
     "radar": "Scientific data repository",
+    "redivis": "Scientific data repository",
     "yoda": "Scientific data repository",
     "phaidra": "Scientific data repository",
     "nyudatacatalog": "Scientific data repository",
@@ -806,6 +809,9 @@ MAP_SOFTWARE_ALLOWED_CATALOG_TYPES = {
         {"Scientific data repository", "Indicators catalog"}
     ),
     "fedora": frozenset(
+        {"Scientific data repository", "General research repository"}
+    ),
+    "archipelago": frozenset(
         {"Scientific data repository", "General research repository"}
     ),
 }
@@ -1000,6 +1006,7 @@ SOFTWARE_NAME_ALIASES = {
     "px-stat": "pxstat",
     "cso pxstat": "pxstat",
     "yoda": "yoda",
+    "redivis": "redivis",
     "ipums": "ipums",
     "integrated public use microdata": "ipums",
     "omeka s": "omekas",
@@ -1012,6 +1019,8 @@ SOFTWARE_NAME_ALIASES = {
     "fedora repository": "fedora",
     "fedora commons": "fedora",
     "fcrepo": "fedora",
+    "archipelago": "archipelago",
+    "archipelago commons": "archipelago",
     "symbiota": "symbiota",
     "breedbase": "breedbase",
     "cassavabase": "breedbase",
@@ -1197,6 +1206,7 @@ SOFTWARE_REPOSITORY_URLS = {
     "intermine": "https://github.com/intermine/intermine",
     "gringlobal": "https://github.com/GRIN-Global",
     "labkey": "https://github.com/LabKey/server",
+    "redivis": "https://github.com/redivis-com",
     "plutof": "https://gitlab.com/plutof",
     "jgi": "https://github.com/JointGenomeInstitute",
     "synapse": "https://github.com/Sage-Bionetworks/SynapseWebClient",
@@ -1219,6 +1229,7 @@ SOFTWARE_REPOSITORY_URLS = {
     "erddap": "https://github.com/BobSimons/erddap",
     "ramadda": "https://github.com/geodesystems/ramadda",
     "islandora": "https://github.com/Islandora",
+    "archipelago": "https://github.com/esmero/archipelago-deployment",
     "fedora": "https://github.com/fcrepo/fcrepo",
     "samvera": "https://github.com/samvera",
     "hyrax": "https://github.com/samvera/hyrax",
@@ -1359,6 +1370,7 @@ SOFTWARE_DOCUMENTATION_URLS = {
     "intermine": "https://intermine.readthedocs.io",
     "gringlobal": "https://www.grin-global.org",
     "labkey": "https://www.labkey.org/Documentation",
+    "redivis": "https://docs.redivis.com",
     "plutof": "https://plutof.docs.ut.ee",
     "jgi": "https://genome.jgi.doe.gov/portal/help/overview.jsf",
     "esasciencearchive": "https://www.cosmos.esa.int/web/esdc",
@@ -1383,6 +1395,7 @@ SOFTWARE_DOCUMENTATION_URLS = {
     "erddap": "https://coastwatch.pfeg.noaa.gov/erddap/",
     "ramadda": "https://ramadda.org",
     "islandora": "https://islandora.ca/documentation",
+    "archipelago": "https://docs.archipelago.nyc",
     "samvera": "https://samvera.github.io",
     "hyrax": "https://github.com/samvera/hyrax/wiki",
     "vufind": "https://vufind.org/wiki",
@@ -1509,6 +1522,7 @@ SOFTWARE_SPECIFIC_EXPORT_FORMATS = {
     "intermine": ["CSV", "FASTA", "JSON", "XML"],
     "gringlobal": ["CSV", "Excel", "JSON"],
     "labkey": ["CSV", "Excel", "JSON", "XML"],
+    "redivis": ["CSV", "JSON", "Parquet"],
     "plutof": ["CSV", "Darwin Core", "JSON"],
     "jgi": ["FASTA", "GFF3", "JSON"],
     "esasciencearchive": ["FITS", "JSON", "VOTable", "XML"],

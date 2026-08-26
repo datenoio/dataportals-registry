@@ -1,10 +1,11 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
+- api endpoint
 coverage:
 - location:
     country:
@@ -14,12 +15,11 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Official data catalog of Deutsche Bahn, Germany's largest railway company,
-  providing access to a wide range of open and internal datasets, APIs, and tools
-  for data consumers.
-endpoints:
-- type: ckan
-  url: https://data.deutschebahn.com/api/3
+description: Deutsche Bahn open data information portal. Since 10 March 2024 the former
+  CKAN catalog has been retired; DB open datasets are published via Mobilithek, GovData
+  and Open Data ÖPNV, while APIs remain on the DB API Marketplace. The site documents
+  DB InfraGO mobility APIs including Timetables, StaDa (station data) and FaSta (station
+  facility status).
 id: datadeutschebahncom
 identifiers:
 - id: wikidata
@@ -28,8 +28,8 @@ identifiers:
 langs:
 - id: DE
   name: German
-link: https://data.deutschebahn.com
-name: Das Datenportal der Deutschen Bahn AG.
+link: https://data.deutschebahn.com/opendata
+name: DB Open Data Infos
 owner:
   link: https://www.deutschebahn.com
   location:
@@ -37,24 +37,27 @@ owner:
       id: DE
       name: Germany
     level: 20
-  name: Deutschen Bahn AG
+  name: Deutsche Bahn AG
   type: Business
+properties:
+  has_doi: false
+  is_national: false
 rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: null
-  rights_type: granular
+  privacy_policy_url: https://data.deutschebahn.com/opendata/Datenschutzhinweis-12736918
+  rights_type: unknown
   tos_url: null
 software:
-  id: ckan
-  name: CKAN
+  id: custom
+  name: Custom software
 status: active
 tags:
-- has_api
 - railway
 - transport
 - open data
+- mobility
 - Germany
 topics:
 - id: TRAN

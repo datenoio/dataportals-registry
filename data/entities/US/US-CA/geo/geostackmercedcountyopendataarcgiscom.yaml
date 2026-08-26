@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Merced County GIS Open Data. Public catalog operated by Merced County.
+endpoints:
+- type: dcatap201
+  url: https://geostack-mercedcounty.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://geostack-mercedcounty.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://geostack-mercedcounty.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://geostack-mercedcounty.opendata.arcgis.com/api/search/v1
+id: geostackmercedcountyopendataarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://geostack-mercedcounty.opendata.arcgis.com
+name: Merced County GIS Open Data
+owner:
+  link: https://www.countyofmerced.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: Merced County
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990610
+properties:
+  is_national: false

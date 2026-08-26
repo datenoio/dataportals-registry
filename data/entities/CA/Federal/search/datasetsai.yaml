@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Data search engine
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: Global search engine operated by AntColony Inc. that aggregates open
+  datasets from government portals, international organizations, and public institutions
+  worldwide, with a public GraphQL API for discovery and AI/ML research.
+endpoints:
+- type: graphql
+  url: https://api.datasets.ai/graphql
+- type: sitemap
+  url: https://datasets.ai/sitemap.xml
+id: datasetsai
+langs:
+- id: EN
+  name: English
+link: https://datasets.ai
+name: Datasets.ai Open Data Search
+owner:
+  link: https://antcolony.com/
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+  name: AntColony Inc.
+  type: Business
+properties:
+  dataset_count_reported: 2691548
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://datasets.ai/privacy
+  rights_type: granular
+  tos_url: https://datasets.ai/terms
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- has_api
+- search
+- open data
+- aggregator
+- government
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990127

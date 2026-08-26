@@ -1,0 +1,46 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Portal de Datos Abiertos SIAC. Public catalog operated by Ministerio de Ambiente
+  y Desarrollo Sostenible.
+endpoints:
+- type: ogcrecordsapi
+  url: https://datos.siac.gov.co/api/search/v1
+id: datossiacgovco
+langs:
+- id: ES
+  name: Spanish
+link: https://datos.siac.gov.co
+name: Portal de Datos Abiertos SIAC
+owner:
+  link: https://www.minambiente.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+  name: Ministerio de Ambiente y Desarrollo Sostenible
+  type: Central government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990566
+properties:
+  is_national: false

@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TN
+      name: Tennessee
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Tennessee Geographic Alliance Open Data. Public catalog operated by Tennessee
+  Geographic Alliance.
+endpoints:
+- type: dcatap201
+  url: https://data-tga.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://data-tga.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: ogcrecordsapi
+  url: https://data-tga.opendata.arcgis.com/api/search/v1
+id: datatgaopendataarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://data-tga.opendata.arcgis.com
+name: Tennessee Geographic Alliance Open Data
+owner:
+  link: https://tnga.net
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TN
+      name: Tennessee
+  name: Tennessee Geographic Alliance
+  type: Academy
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990554
+properties:
+  is_national: false

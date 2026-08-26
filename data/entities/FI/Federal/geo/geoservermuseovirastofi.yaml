@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Finnish Heritage Agency GeoServer publishing cultural heritage and archaeological
+  map layers via WMS.
+endpoints:
+- type: wms130
+  url: https://geoserver.museovirasto.fi/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: geoservermuseovirastofi
+langs:
+- id: FI
+  name: Finnish
+- id: EN
+  name: English
+link: https://geoserver.museovirasto.fi/geoserver
+name: Museovirasto GeoServer
+owner:
+  link: https://www.museovirasto.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+  name: Museovirasto
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- cultural heritage
+- GeoServer
+- Finland
+- WMS
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99990439

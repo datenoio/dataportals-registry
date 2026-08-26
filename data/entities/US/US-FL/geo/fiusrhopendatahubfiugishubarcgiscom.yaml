@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+    macroregion:
+      id: '021'
+      name: Northern America
+description: FIU SRH Open Data Hub. Public catalog operated by Florida International University.
+endpoints:
+- type: dcatap201
+  url: https://fiu-srh-open-data-hub-fiugis.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: rss
+  url: https://fiu-srh-open-data-hub-fiugis.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://fiu-srh-open-data-hub-fiugis.hub.arcgis.com/api/search/v1
+id: fiusrhopendatahubfiugishubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://fiu-srh-open-data-hub-fiugis.hub.arcgis.com
+name: FIU SRH Open Data Hub
+owner:
+  link: https://www.fiu.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: Florida International University
+  type: Academy
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990582
+properties:
+  is_national: false

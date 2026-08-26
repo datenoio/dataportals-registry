@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-PA
+      name: Pennsylvania
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Delaware County Pennsylvania GIS. Public catalog operated by Delaware County
+  Planning Department.
+endpoints:
+- type: dcatap201
+  url: https://delaware-county-pennsylvania-dcpd.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://delaware-county-pennsylvania-dcpd.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://delaware-county-pennsylvania-dcpd.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://delaware-county-pennsylvania-dcpd.hub.arcgis.com/api/search/v1
+id: delawarecountypennsylvaniadcpdhubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://delaware-county-pennsylvania-dcpd.hub.arcgis.com
+name: Delaware County Pennsylvania GIS
+owner:
+  link: https://www.delcopa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-PA
+      name: Pennsylvania
+  name: Delaware County Planning Department
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990568
+properties:
+  is_national: false

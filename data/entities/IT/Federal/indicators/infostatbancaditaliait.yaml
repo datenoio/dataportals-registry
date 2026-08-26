@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Public Base Dati Statistica (BDS) of Banca d'Italia. Interactive inquiry
+  of macroeconomic, monetary, banking, balance-of-payments, and financial time series,
+  with CSV export via the A2A data service.
+endpoints:
+- type: customapi
+  url: https://a2a.bancaditalia.it/infostat/dataservices
+id: infostatbancaditaliait
+langs:
+- id: IT
+  name: Italian
+- id: EN
+  name: English
+link: https://infostat.bancaditalia.it/inquiry/
+name: Banca d'Italia Statistical Database (BDS)
+owner:
+  link: https://www.bancaditalia.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Banca d'Italia
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- central bank
+- official statistics
+- time series
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99990090

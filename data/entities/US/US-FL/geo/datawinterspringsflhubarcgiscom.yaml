@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+    macroregion:
+      id: '021'
+      name: Northern America
+description: City of Winter Springs GIS Open Data. Public catalog operated by City of Winter
+  Springs.
+endpoints:
+- type: dcatap201
+  url: https://data-winterspringsfl.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://data-winterspringsfl.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://data-winterspringsfl.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://data-winterspringsfl.hub.arcgis.com/api/search/v1
+id: datawinterspringsflhubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://data-winterspringsfl.hub.arcgis.com
+name: City of Winter Springs GIS Open Data
+owner:
+  link: https://www.winterspringsfl.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: City of Winter Springs
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990560
+properties:
+  is_national: false

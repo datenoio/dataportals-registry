@@ -1,0 +1,69 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: Compatible
+  fields: Compatible
+  organizations: Compatible
+  resources: Compatible
+  topics: Compatible
+has_api: 'Yes'
+has_bulk: 'No'
+id: archipelago
+website: https://archipelago.nyc
+description: Archipelago Commons is an open-source digital objects repository and
+  DAM architecture built on Drupal. Metadata lives as JSON in Strawberryfield; public
+  catalogs expose Archipelago Digital Objects (ADOs) via Solr search, IIIF, optional
+  OAI-PMH, and Drupal JSON:API. Installations range from GLAM collections to germplasm
+  and research-data catalogs.
+owner:
+  name: Metropolitan New York Library Council (METRO)
+  location:
+    country:
+      id: US
+      name: United States
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: Plugin only
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'Yes'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+name: Archipelago Commons
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per item
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/esmero/archipelago-deployment
+documentation_url: https://docs.archipelago.nyc
+license:
+  type: GPL-3.0
+  url: https://www.gnu.org/licenses/gpl-3.0.html
+export_formats:
+- CSV
+- JSON
+- RDF
+- XML
+capabilities:
+- Strawberryfield JSON metadata
+- Solr Search API
+- IIIF (Cantaloupe)
+- OAI-PMH Metadata API
+- Drupal JSON:API
+changelog_url: https://github.com/esmero/archipelago-deployment/releases
+last_updated: '2026-08-26T00:00:00Z'

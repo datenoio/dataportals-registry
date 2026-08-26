@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SN
+      name: Senegal
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Senegal GeoPortal (Africa GeoPortal). Public catalog operated by Africa GeoPortal.
+endpoints:
+- type: dcatap201
+  url: https://senegal.africageoportal.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://senegal.africageoportal.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://senegal.africageoportal.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://senegal.africageoportal.com/api/search/v1
+id: senegalafricageoportalcom
+langs:
+- id: FR
+  name: French
+link: https://senegal.africageoportal.com
+name: Senegal GeoPortal (Africa GeoPortal)
+owner:
+  link: null
+  location:
+    country:
+      id: SN
+      name: Senegal
+    level: 20
+  name: Africa GeoPortal
+  type: Business
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990653
+properties:
+  is_national: false

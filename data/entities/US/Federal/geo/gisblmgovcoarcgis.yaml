@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Public ArcGIS REST services directory for BLM Colorado, providing map,
+  feature, and imagery services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.blm.gov/coarcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.blm.gov/coarcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.blm.gov/coarcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.blm.gov/coarcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.blm.gov/coarcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.blm.gov/coarcgis/rest/services?f=kmz
+id: gisblmgovcoarcgis
+langs:
+- id: EN
+  name: English
+link: https://gis.blm.gov/coarcgis/rest/services
+name: BLM Colorado ArcGIS REST Services
+owner:
+  link: https://www.blm.gov/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Bureau of Land Management
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- ArcGIS
+- REST
+- federal
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99990342

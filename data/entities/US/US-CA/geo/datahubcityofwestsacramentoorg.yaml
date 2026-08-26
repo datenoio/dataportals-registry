@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+    macroregion:
+      id: '021'
+      name: Northern America
+description: West Sacramento Open Government Hub. Public catalog operated by City of West
+  Sacramento.
+endpoints:
+- type: dcatap201
+  url: https://datahub.cityofwestsacramento.org/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://datahub.cityofwestsacramento.org/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://datahub.cityofwestsacramento.org/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://datahub.cityofwestsacramento.org/api/search/v1
+id: datahubcityofwestsacramentoorg
+langs:
+- id: EN
+  name: English
+link: https://datahub.cityofwestsacramento.org
+name: West Sacramento Open Government Hub
+owner:
+  link: null
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: City of West Sacramento
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990521
+properties:
+  is_national: false

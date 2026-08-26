@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: TNC Mexico Fish Refugia Geoportal. Public catalog operated by The Nature Conservancy.
+endpoints:
+- type: dcatap201
+  url: https://tnc-mexico-fish-refugia-geoportal-tnc.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://tnc-mexico-fish-refugia-geoportal-tnc.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://tnc-mexico-fish-refugia-geoportal-tnc.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://tnc-mexico-fish-refugia-geoportal-tnc.hub.arcgis.com/api/search/v1
+id: tncmexicofishrefugiageoportaltnchubarcgiscom
+langs:
+- id: ES
+  name: Spanish
+link: https://tnc-mexico-fish-refugia-geoportal-tnc.hub.arcgis.com
+name: TNC Mexico Fish Refugia Geoportal
+owner:
+  link: https://www.nature.org
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+  name: The Nature Conservancy
+  type: Civil society
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990657
+properties:
+  is_national: false

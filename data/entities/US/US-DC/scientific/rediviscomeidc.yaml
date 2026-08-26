@@ -1,0 +1,75 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: The Environmental Impact Data Collaborative (EIDC) gathers environmental
+  data, code, and literature so community groups, policymakers, and researchers can
+  discover, link, and analyze data for more effective and just environmental policy.
+endpoints:
+- type: openapi
+  url: https://redivis.com/api/v1/openapi.json
+- type: custom_api
+  url: https://redivis.com/api/v1/organizations/EIDC/datasets
+id: rediviscomeidc
+langs:
+- id: EN
+  name: English
+link: https://redivis.com/EIDC
+name: Environmental Impact Data Collaborative
+owner:
+  link: https://mdi.georgetown.edu/eidc/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
+  name: Georgetown University Massive Data Institute
+  type: Academy
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://redivis.com/privacy
+  rights_type: granular
+  tos_url: https://redivis.com/terms
+software:
+  id: redivis
+  name: Redivis
+status: active
+tags:
+- research data
+- scientific
+- environment
+- environmental justice
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi99990147

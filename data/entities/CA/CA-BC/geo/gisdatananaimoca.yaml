@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+    macroregion:
+      id: '021'
+      name: Northern America
+description: City of Nanaimo GIS Open Data. Public catalog operated by City of Nanaimo.
+endpoints:
+- type: dcatap201
+  url: https://gisdata.nanaimo.ca/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://gisdata.nanaimo.ca/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://gisdata.nanaimo.ca/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://gisdata.nanaimo.ca/api/search/v1
+id: gisdatananaimoca
+langs:
+- id: EN
+  name: English
+link: https://gisdata.nanaimo.ca
+name: City of Nanaimo GIS Open Data
+owner:
+  link: https://www.nanaimo.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: City of Nanaimo
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990617
+properties:
+  is_national: false

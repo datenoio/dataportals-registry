@@ -30,6 +30,7 @@ When adding or editing data catalog YAML files in this repository:
 - Quote UN M49 macroregion ids (`'021'`, `'154'`, `'155'`) and numeric tags (`'911'`).
 - `tags` is a list of strings, not `{tag: ...}` mappings.
 - `properties.dataset_count_reported` is an integer.
+- `properties.is_national: true` only for the country's official catalog of that type: the national open-data portal, the NSDI/national geoportal/INSPIRE node, or an NSO statistical product (indicators, microdata, IMF NSDP). **Do not** set it because the owner is a central/federal agency, the file sits under `Federal/`, or the hostname is `.gov`/`.mil`. Agency portals (NASA, NOAA labs, INPS, USGS site GIS), scientific/domain repos (NCBI, ERDDAP, DSpace), thematic systems (HMIS, mining cadastre, MapBiomas), and subnational catalogs must be `is_national: false`. Classifier: `scripts/national_catalog.py`.
 
 ## After editing
 

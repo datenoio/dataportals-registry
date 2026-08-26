@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Miami-Dade County Open Data Hub. Public catalog operated by Miami-Dade County.
+endpoints:
+- type: dcatus11
+  url: https://opendata.miamidade.gov/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://opendata.miamidade.gov/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://opendata.miamidade.gov/api/search/v1
+id: opendatamiamidadegov
+langs:
+- id: EN
+  name: English
+link: https://opendata.miamidade.gov
+name: Miami-Dade County Open Data Hub
+owner:
+  link: https://www.miamidade.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: Miami-Dade County
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990641
+properties:
+  is_national: false

@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Nottingham City Council Open Data Geoportal. Public catalog operated by Nottingham
+  City Council.
+endpoints:
+- type: dcatap201
+  url: https://nottingham-city-council-open-data-geoportal-nottmcitycouncil.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://nottingham-city-council-open-data-geoportal-nottmcitycouncil.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://nottingham-city-council-open-data-geoportal-nottmcitycouncil.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://nottingham-city-council-open-data-geoportal-nottmcitycouncil.hub.arcgis.com/api/search/v1
+id: nottinghamcitycouncilopendatageoportalnottmcitycouncilhubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://nottingham-city-council-open-data-geoportal-nottmcitycouncil.hub.arcgis.com
+name: Nottingham City Council Open Data Geoportal
+owner:
+  link: https://www.nottinghamcity.gov.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: Nottingham City Council
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990635
+properties:
+  is_national: false

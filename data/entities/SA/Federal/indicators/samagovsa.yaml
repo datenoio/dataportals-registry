@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Saudi Central Bank (SAMA) open data portal for monetary and financial
+  statistics, with reusable downloads and an API for periodic retrieval of published
+  series.
+endpoints:
+- type: custom_api
+  url: https://www.sama.gov.sa/_LAYOUTS/15/SAMA.Portal/PortalHandler.ashx
+id: samagovsa
+langs:
+- id: AR
+  name: Arabic
+- id: EN
+  name: English
+link: https://www.sama.gov.sa/en-US/Publications/EconomicReports/pages/database.aspx
+name: Saudi Central Bank Open Data Portal
+owner:
+  link: https://www.sama.gov.sa
+  location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 20
+  name: Saudi Central Bank
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- central bank
+- official statistics
+- open data
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99990096

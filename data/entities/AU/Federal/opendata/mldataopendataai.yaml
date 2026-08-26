@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: Experimental CKAN catalog of AI and machine learning datasets (the Provenance
+  Sandbox), developed by Link Digital to support the MLCommons Datasets Working Group
+  with next-generation data provenance and metadata standards.
+endpoints:
+- type: ckan
+  url: https://mldata.opendata.ai/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://mldata.opendata.ai/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://mldata.opendata.ai/api/3/action/package_list
+  version: '3'
+- type: ckan:status-show
+  url: https://mldata.opendata.ai/api/3/action/status_show
+  version: '3'
+- type: dcat:n3
+  url: https://mldata.opendata.ai/catalog.n3
+- type: dcat:ttl
+  url: https://mldata.opendata.ai/catalog.ttl
+- type: dcat:xml
+  url: https://mldata.opendata.ai/catalog.xml
+- type: dcat:jsonld
+  url: https://mldata.opendata.ai/catalog.jsonld
+id: mldataopendataai
+langs:
+- id: EN
+  name: English
+link: https://mldata.opendata.ai/dataset/
+name: 'mldata.opendata.ai: The Provenance Sandbox'
+owner:
+  link: https://linkdigital.com.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 20
+  name: Link Digital
+  type: Business
+properties:
+  dataset_count_reported: 510
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- has_api
+- machine learning
+- datasets
+- provenance
+- ckan
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990077

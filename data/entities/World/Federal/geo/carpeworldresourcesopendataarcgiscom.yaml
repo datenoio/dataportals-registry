@@ -1,0 +1,49 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 2
+    macroregion:
+      id: '001'
+      name: World
+description: CARPE Open Data. Public catalog operated by World Resources Institute.
+endpoints:
+- type: dcatus11
+  url: https://carpe-worldresources.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://carpe-worldresources.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://carpe-worldresources.opendata.arcgis.com/api/search/v1
+id: carpeworldresourcesopendataarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://carpe-worldresources.opendata.arcgis.com
+name: CARPE Open Data
+owner:
+  link: https://www.wri.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 2
+  name: World Resources Institute
+  type: Civil society
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990504
+properties:
+  is_national: false

@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WA
+      name: Washington
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Upper Columbia Salmon Recovery Board Open Data. Public catalog operated by Upper
+  Columbia Salmon Recovery Board.
+endpoints:
+- type: dcatap201
+  url: https://data-ucsrb.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://data-ucsrb.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: ogcrecordsapi
+  url: https://data-ucsrb.opendata.arcgis.com/api/search/v1
+id: dataucsrbopendataarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://data-ucsrb.opendata.arcgis.com
+name: Upper Columbia Salmon Recovery Board Open Data
+owner:
+  link: https://www.ucsrb.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WA
+      name: Washington
+  name: Upper Columbia Salmon Recovery Board
+  type: Civil society
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990556
+properties:
+  is_national: false

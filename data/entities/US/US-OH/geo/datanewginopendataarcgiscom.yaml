@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-OH
+      name: Ohio
+    macroregion:
+      id: '021'
+      name: Northern America
+description: City of Newark NewGIN Open Data. Public catalog operated by City of Newark.
+endpoints:
+- type: dcatap201
+  url: https://data-newgin.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://data-newgin.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://data-newgin.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://data-newgin.opendata.arcgis.com/api/search/v1
+id: datanewginopendataarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://data-newgin.opendata.arcgis.com
+name: City of Newark NewGIN Open Data
+owner:
+  link: https://www.newarknj.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-OH
+      name: Ohio
+  name: City of Newark
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990532
+properties:
+  is_national: false

@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Inland Fisheries Ireland Open Data. Public catalog operated by Inland Fisheries
+  Ireland.
+endpoints:
+- type: dcatap201
+  url: https://opendata-ifigeo.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://opendata-ifigeo.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://opendata-ifigeo.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://opendata-ifigeo.hub.arcgis.com/api/search/v1
+id: opendataifigeohubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://opendata-ifigeo.hub.arcgis.com
+name: Inland Fisheries Ireland Open Data
+owner:
+  link: https://www.fisheriesireland.ie
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+  name: Inland Fisheries Ireland
+  type: Central government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990640
+properties:
+  is_national: false

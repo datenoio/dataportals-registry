@@ -363,7 +363,10 @@
         "unfinished": { "type": "boolean" },
         "transferable_topics": { "type": "boolean" },
         "has_doi": { "type": "boolean" },
-        "is_national": { "type": "boolean" },
+        "is_national": {
+          "type": "boolean",
+          "description": "True only for the country's official catalog of that type (national open-data portal, NSDI/national geoportal/INSPIRE node, or NSO statistical product). False for agency, thematic, scientific, and subnational catalogs even when the owner is a central/federal body. Do not set from a Federal/ path or .gov hostname alone."
+        },
         "transferable_location": { "type": "boolean" },
         "base_last_seen": { "type": "string" },
         "dataset_count_reported": {

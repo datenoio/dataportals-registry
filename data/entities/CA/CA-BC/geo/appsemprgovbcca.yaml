@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: British Columbia mineral occurrence GeoServer (historic EMPR host) publishing
+  mineral inventory layers via WFS.
+endpoints:
+- type: wfs200
+  url: http://apps.empr.gov.bc.ca/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: appsemprgovbcca
+langs:
+- id: EN
+  name: English
+link: http://apps.empr.gov.bc.ca/geoserver
+name: BC EMPR Mineral Occurrences GeoServer
+owner:
+  link: https://www2.gov.bc.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: Government of British Columbia
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- minerals
+- GeoServer
+- British Columbia
+- WFS
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi99990428

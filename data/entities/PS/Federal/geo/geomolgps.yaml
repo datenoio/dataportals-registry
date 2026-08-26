@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PS
+      name: Palestine
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Geomolg geoportal of the Palestinian Ministry of Local Government. Public
+  map viewer with ArcGIS REST map and image services, including orthophotos. Distinct
+  from the NSDI GeoNode at geoportal.nsdi.ps.
+endpoints:
+- type: arcgis:rest:info
+  url: https://orthophotos.geomolg.ps/adaptor/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://orthophotos.geomolg.ps/adaptor/rest/services?f=pjson
+id: geomolgps
+langs:
+- id: AR
+  name: Arabic
+- id: EN
+  name: English
+link: https://geomolg.ps/
+name: Geomolg Geoportal
+owner:
+  link: https://www.molg.pna.ps
+  location:
+    country:
+      id: PS
+      name: Palestine
+    level: 20
+  name: Ministry of Local Government
+  type: Central government
+properties:
+  dataset_count_reported: 124
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- orthophoto
+- cadastre
+- Palestine
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99990125

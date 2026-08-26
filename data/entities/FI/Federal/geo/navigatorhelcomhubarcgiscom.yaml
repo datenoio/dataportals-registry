@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Baltic Sea2Land Navigator. Public catalog operated by Baltic Marine Environment
+  Protection Commission (HELCOM).
+endpoints:
+- type: dcatap201
+  url: https://navigator-helcom.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://navigator-helcom.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://navigator-helcom.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://navigator-helcom.hub.arcgis.com/api/search/v1
+id: navigatorhelcomhubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://navigator-helcom.hub.arcgis.com
+name: Baltic Sea2Land Navigator
+owner:
+  link: https://helcom.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+  name: Baltic Marine Environment Protection Commission (HELCOM)
+  type: International
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990633
+properties:
+  is_national: false

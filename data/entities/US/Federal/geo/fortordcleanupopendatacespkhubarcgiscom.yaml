@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Fort Ord Cleanup Open Data. Public catalog operated by US Army Corps of Engineers,
+  Sacramento District.
+endpoints:
+- type: dcatap201
+  url: https://fort-ord-cleanup-open-data-cespk.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://fort-ord-cleanup-open-data-cespk.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://fort-ord-cleanup-open-data-cespk.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://fort-ord-cleanup-open-data-cespk.hub.arcgis.com/api/search/v1
+id: fortordcleanupopendatacespkhubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://fort-ord-cleanup-open-data-cespk.hub.arcgis.com
+name: Fort Ord Cleanup Open Data
+owner:
+  link: https://www.spk.usace.army.mil
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: US Army Corps of Engineers, Sacramento District
+  type: Central government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990583
+properties:
+  is_national: false

@@ -13,7 +13,14 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
-from builder import load_jsonl, build_dataset, merge_datasets, validate_software_profile
+from builder import (
+    load_jsonl,
+    build_dataset,
+    merge_datasets,
+    validate_software_profile,
+    jsonl_has_records,
+    create_table_from_jsonl,
+)
 
 
 class TestLoadJsonl:
@@ -424,3 +431,147 @@ class TestAssignDryrun:
         builder.assign_by_dir("cdi", entries_dir, dryrun=False)
         with open(path, encoding="utf8") as f:
             assert yaml.safe_load(f)["uid"].startswith("cdi")
+
+
+class TestCreateTableFromJsonl:
+    """DuckDB export must keep LIST and STRUCT types instead of VARCHAR JSON."""
+
+    def _write_jsonl(self, directory, filename, records):
+        path = os.path.join(directory, filename)
+        with open(path, "w", encoding="utf8") as handle:
+            for record in records:
+                handle.write(json.dumps(record, ensure_ascii=False) + "\n")
+        return path
+
+    def test_jsonl_has_records(self, temp_dir):
+        empty_path = os.path.join(temp_dir, "empty.jsonl")
+        with open(empty_path, "w", encoding="utf8"):
+            pass
+        assert jsonl_has_records(empty_path) is False
+        assert jsonl_has_records(os.path.join(temp_dir, "missing.jsonl")) is False
+
+        filled_path = self._write_jsonl(
+            temp_dir, "filled.jsonl", [{"id": "one"}]
+        )
+        assert jsonl_has_records(filled_path) is True
+
+    def test_preserves_list_and_struct_types(self, temp_dir):
+        import duckdb
+
+        jsonl_path = self._write_jsonl(
+            temp_dir,
+            "catalogs.jsonl",
+            [
+                {
+                    "id": "portalus",
+                    "api": True,
+                    "access_mode": ["open"],
+                    "tags": ["government", "ckan"],
+                    "software": {"id": "ckan", "name": "CKAN"},
+                    "owner": {"name": "Example Agency", "type": "Central government"},
+                    "coverage": [
+                        {
+                            "location": {
+                                "country": {"id": "US", "name": "United States"},
+                                "level": 20,
+                            }
+                        }
+                    ],
+                    "identifiers": [
+                        {"id": "wikidata", "value": "Q1"},
+                        {"id": "re3data", "value": "r3d100000001"},
+                    ],
+                    "endpoints": [
+                        {"type": "ckan", "url": "https://example.gov/api/3"}
+                    ],
+                },
+                {
+                    "id": "portalfr",
+                    "api": False,
+                    "access_mode": ["open", "restricted"],
+                    "tags": ["opendata"],
+                    "software": {"id": "ckan", "name": "CKAN"},
+                    "owner": {"name": "Ministère", "type": "Central government"},
+                    "coverage": [
+                        {
+                            "location": {
+                                "country": {"id": "FR", "name": "France"},
+                                "level": 20,
+                            }
+                        }
+                    ],
+                },
+            ],
+        )
+
+        conn = duckdb.connect(os.path.join(temp_dir, "test.duckdb"))
+        count = create_table_from_jsonl(conn, "catalogs", jsonl_path)
+        assert count == 2
+
+        types = {
+            row[0]: row[1]
+            for row in conn.execute("DESCRIBE catalogs").fetchall()
+        }
+        assert types["access_mode"].startswith("VARCHAR")
+        assert "[]" in types["access_mode"]
+        assert types["tags"].startswith("VARCHAR")
+        assert "[]" in types["tags"]
+        assert types["software"].startswith("STRUCT")
+        assert types["owner"].startswith("STRUCT")
+        assert types["coverage"].startswith("STRUCT")
+        assert types["coverage"].endswith("[]")
+        assert types["identifiers"].startswith("STRUCT")
+        assert types["api"] == "BOOLEAN"
+
+        row = conn.execute(
+            """
+            SELECT id, software.id, owner.type,
+                   list_contains(tags, 'government'),
+                   list_contains(
+                       list_transform(coverage, x -> x.location.country.id),
+                       'US'
+                   ),
+                   list_contains(
+                       list_transform(identifiers, x -> x.id),
+                       'wikidata'
+                   )
+            FROM catalogs
+            WHERE software.id = 'ckan'
+              AND list_contains(
+                  list_transform(coverage, x -> x.location.country.id),
+                  'US'
+              )
+            """
+        ).fetchone()
+        assert row[0] == "portalus"
+        assert row[1] == "ckan"
+        assert row[2] == "Central government"
+        assert row[3] is True
+        assert row[4] is True
+        assert row[5] is True
+        conn.close()
+
+    def test_skips_empty_jsonl(self, temp_dir):
+        import duckdb
+
+        empty_path = os.path.join(temp_dir, "empty.jsonl")
+        with open(empty_path, "w", encoding="utf8"):
+            pass
+        conn = duckdb.connect(os.path.join(temp_dir, "empty.duckdb"))
+        count = create_table_from_jsonl(conn, "catalogs", empty_path)
+        assert count == 0
+        tables = [
+            row[0]
+            for row in conn.execute("SHOW TABLES").fetchall()
+        ]
+        assert "catalogs" not in tables
+        conn.close()
+
+    def test_rejects_invalid_table_name(self, temp_dir):
+        import duckdb
+
+        jsonl_path = self._write_jsonl(temp_dir, "ok.jsonl", [{"id": "one"}])
+        conn = duckdb.connect(":memory:")
+        with pytest.raises(ValueError, match="Invalid DuckDB table name"):
+            create_table_from_jsonl(conn, "catalogs; DROP TABLE catalogs", jsonl_path)
+        conn.close()

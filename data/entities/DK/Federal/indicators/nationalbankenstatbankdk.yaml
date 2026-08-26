@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: PxWeb StatBank of Danmarks Nationalbank with financial statistics on
+  banks and mortgage banks, interest rates, securities, balance of payments, investment
+  funds, and related series. Tables are also available in Statistics Denmark's StatBank.
+endpoints:
+- type: pxweb:catalog
+  url: https://nationalbanken.statbank.dk/
+id: nationalbankenstatbankdk
+langs:
+- id: DA
+  name: Danish
+- id: EN
+  name: English
+link: https://nationalbanken.statbank.dk/
+name: Danmarks Nationalbank StatBank
+owner:
+  link: https://www.nationalbanken.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+  name: Danmarks Nationalbank
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: pxweb
+  name: PxWeb
+status: active
+tags:
+- statistics
+- government
+- central bank
+- official statistics
+- PxWeb
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99990103

@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-SK
+      name: Saskatchewan
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Water Security Agency GIS Hub. Public catalog operated by Water Security Agency.
+endpoints:
+- type: dcatap201
+  url: https://geohub-wsask.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://geohub-wsask.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://geohub-wsask.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://geohub-wsask.hub.arcgis.com/api/search/v1
+id: geohubwsaskhubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://geohub-wsask.hub.arcgis.com
+name: Water Security Agency GIS Hub
+owner:
+  link: https://www.wsask.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-SK
+      name: Saskatchewan
+  name: Water Security Agency
+  type: Regional government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990602
+properties:
+  is_national: false

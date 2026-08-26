@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+    macroregion:
+      id: '021'
+      name: Northern America
+description: City of Grand Forks GIS Hub. Public catalog operated by City of Grand Forks.
+endpoints:
+- type: dcatap201
+  url: https://opendata.grandforks.ca/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://opendata.grandforks.ca/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://opendata.grandforks.ca/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://opendata.grandforks.ca/api/search/v1
+id: opendatagrandforksca
+langs:
+- id: EN
+  name: English
+link: https://opendata.grandforks.ca
+name: City of Grand Forks GIS Hub
+owner:
+  link: https://www.grandforks.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: City of Grand Forks
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990638
+properties:
+  is_national: false

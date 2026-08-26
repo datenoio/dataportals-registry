@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 30
+    subregion:
+      id: IE-G
+      name: Galway
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Galway City Council OpenData. Public catalog operated by Galway City Council.
+endpoints:
+- type: dcatap201
+  url: https://galway-city-council-opendata-galwaycityco.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://galway-city-council-opendata-galwaycityco.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://galway-city-council-opendata-galwaycityco.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://galway-city-council-opendata-galwaycityco.hub.arcgis.com/api/search/v1
+id: galwaycitycouncilopendatagalwaycitycohubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://galway-city-council-opendata-galwaycityco.hub.arcgis.com
+name: Galway City Council OpenData
+owner:
+  link: https://www.galwaycity.ie
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 30
+    subregion:
+      id: IE-G
+      name: Galway
+  name: Galway City Council
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags: []
+topics: []
+uid: cdi99990585
+properties:
+  is_national: false

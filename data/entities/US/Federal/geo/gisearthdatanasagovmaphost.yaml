@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Public ArcGIS REST services directory for NASA Earthdata GIBS, providing
+  map, feature, and imagery services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.earthdata.nasa.gov/maphost/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.earthdata.nasa.gov/maphost/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.earthdata.nasa.gov/maphost/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.earthdata.nasa.gov/maphost/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.earthdata.nasa.gov/maphost/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.earthdata.nasa.gov/maphost/rest/services?f=kmz
+id: gisearthdatanasagovmaphost
+langs:
+- id: EN
+  name: English
+link: https://gis.earthdata.nasa.gov/maphost/rest/services
+name: NASA Earthdata GIBS ArcGIS REST Services (maphost)
+owner:
+  link: https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/gibs-api
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: NASA Earthdata GIBS
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- ArcGIS
+- REST
+- federal
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99990337
