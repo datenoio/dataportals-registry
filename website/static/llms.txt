@@ -7,7 +7,7 @@
 - Documentation site: https://datenoio.github.io/dataportals-registry/
 - [docs/getting-started.md](docs/getting-started.md): DuckDB / Parquet / YAML entry points
 - [docs/when-to-use.md](docs/when-to-use.md): scope and related Dateno repositories
-- [docs/ai-consumers.md](docs/ai-consumers.md): consumption contract, join keys, DuckDB JSON-string gotchas
+- [docs/ai-consumers.md](docs/ai-consumers.md): consumption contract, join keys, DuckDB LIST/STRUCT nested fields
 - [docs/data-model.md](docs/data-model.md), [docs/vocabularies.md](docs/vocabularies.md), [docs/catalog-types.md](docs/catalog-types.md), [docs/software-taxonomy.md](docs/software-taxonomy.md), [docs/software-index.md](docs/software-index.md)
 - [docs/exports.md](docs/exports.md), [docs/query-examples.md](docs/query-examples.md), [docs/cli.md](docs/cli.md)
 - [docs/discovery.md](docs/discovery.md): find catalogs not yet in the registry (human)
@@ -28,9 +28,9 @@
 
 ## Data layout
 
-- `data/entities/`: verified catalog records (one YAML per catalog, organized by country and catalog type). Source count 25 August 2026: **22,750** files in **219** country/territory folders (published v1.17.0).
-- `data/scheduled/`: unverified records pending promotion — [docs/scheduled.md](docs/scheduled.md) (**0** as of 25 August 2026)
-- `data/software/`: software/platform definitions (**262** YAML files; `software.jsonl` matches published v1.17.0)
+- `data/entities/`: verified catalog records (one YAML per catalog, organized by country and catalog type). Source count 26 August 2026: **23,338** files in **219** country/territory folders (working tree; published v1.17.0 was 22,750).
+- `data/scheduled/`: unverified records pending promotion — [docs/scheduled.md](docs/scheduled.md) (**0** as of 26 August 2026)
+- `data/software/`: software/platform definitions (**264** YAML files; `software.jsonl` matches working-tree YAML)
 - `data/schemes/catalog.json`: Cerberus validation schema (CI source of truth)
 - `data/schemes/catalog.schema.json`: JSON Schema with descriptions for external tooling
 - `data/schemes/catalog.context.jsonld`: DCAT/schema.org JSON-LD mappings

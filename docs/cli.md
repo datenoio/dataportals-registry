@@ -69,12 +69,13 @@ Re3Data: [re3data.md](re3data.md). Endpoint maps: [apidetect.md](apidetect.md) (
 ```bash
 python scripts/fix_critical_issues.py
 python scripts/fix_important_issues.py
+python scripts/fix_is_national_flags.py --dry-run
 python scripts/update_quality_baseline.py
 python scripts/builder.py fix
 python scripts/generate_cursor_commands.py
 ```
 
-`builder.py fix` drives `cursor-agent` against `dataquality/primary_priority.jsonl` (requires the Cursor CLI). Issue codes: [quality-rules.md](quality-rules.md). Workflow: [metadata-quality.md](metadata-quality.md).
+`builder.py fix` drives `cursor-agent` against `dataquality/primary_priority.jsonl` (requires the Cursor CLI). `fix_is_national_flags.py` unsets `properties.is_national` on agency/thematic/scientific/subnational catalogs ([data-model.md](data-model.md#propertiesis_national)). Issue codes: [quality-rules.md](quality-rules.md). Workflow: [metadata-quality.md](metadata-quality.md).
 
 ## Reports and dumps
 

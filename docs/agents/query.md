@@ -5,7 +5,7 @@ Works with Cursor, Claude Code, Copilot, Codex, and any agent with file access.
 
 ## Before querying
 
-1. Read [llms.txt](https://github.com/datenoio/dataportals-registry/blob/main/llms.txt) for layout and gotchas.
+1. Read [llms.txt](https://github.com/datenoio/dataportals-registry/blob/main/llms.txt) for layout, join keys, and DuckDB LIST/STRUCT nested fields.
 2. Use **exports** — do not walk `data/entities/**/*.yaml` unless authoring.
 3. Full contract: [ai-consumers.md](../ai-consumers.md).
 4. Recipes: [query-examples.md](../query-examples.md).
@@ -24,9 +24,9 @@ Works with Cursor, Claude Code, Copilot, Codex, and any agent with file access.
 ## Join keys
 
 - Catalog: `uid` (stable) or `id` (filename)
-- Software: `software.id` (JSON string in DuckDB)
-- Country: `coverage` JSON contains `"id":"XX"`
-- External: `identifiers` JSON contains `"id":"wikidata"` / `"re3data"`
+- Software: `software.id`
+- Country: `coverage[].location.country.id`
+- External: `identifiers[].id` is `wikidata` / `re3data`
 
 ## Scope
 
@@ -45,7 +45,7 @@ SELECT count(*) FROM software;
 
 ## Gotchas
 
-- Nested fields are JSON **strings** in DuckDB/Parquet.
+- Nested fields are `STRUCT` / `LIST` in DuckDB/Parquet (`software.id`, `owner.type`, `unnest(endpoints)`).
 - `id` is not a URL. Reconstruct nothing from `id`; use `link`.
 - `status` is curated. Liveness is a separate report (`dataquality/liveness_report.jsonl`).
 - Geographic coverage is biased toward the United States — do not treat counts as a complete global census.

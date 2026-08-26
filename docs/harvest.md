@@ -16,7 +16,7 @@ Coding agents: [agents/harvest.md](agents/harvest.md). Production harvesting for
 
 | Guide | Use when |
 |-------|----------|
-| [Scientific repositories](harvest-scientific.md) | DSpace, Invenio, EPrints, Pure, Esploro, Converis, Omega-PSIR, Hyrax, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, and other IRs that mix **publications, theses, software, and datasets** |
+| [Scientific repositories](harvest-scientific.md) | DSpace, Invenio, EPrints, Pure, Esploro, Converis, Omega-PSIR, Hyrax, Archipelago, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, and other IRs that mix **publications, theses, software, and datasets** |
 | [Domain scientific repositories](harvest-scientific-domain.md) | IPT, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal |
 | [Open data portals](harvest-opendata.md) | CKAN, OpenDataSoft, Socrata, ResourceContracts, RDF Online Repository, Guangxi, ODWeb — packages vs resources vs contracts |
 | [Geoportals](harvest-geoportals.md) | GeoNetwork CSW, GeoNode, ArcGIS, STAC, OGC API, G3W-SUITE, CubeWerx, M.App Enterprise, mviewer, Isogeo, Geocortex, QGIS Server — layers vs services vs tiles |
@@ -46,27 +46,27 @@ Do not apply IR publication filters to WMS or PxWeb. Do not treat CSW **service*
 
 ```sql
 SELECT id, uid, name, link,
-       json_extract_string(software, '$.id') AS software_id,
+       software.id AS software_id,
        endpoints
 FROM catalogs
 WHERE catalog_type = 'Scientific data repository'
   AND status = 'active'
-  AND json_extract_string(software, '$.id') IN (
+  AND software.id IN (
     'dspace', 'dspacecris', 'invenio', 'inveniordm', 'eprints',
     'hyrax', 'pure', 'esploro', 'opus', 'elsevierdigitalcommons',
     'weko3', 'phaidra', 'figshare', 'haplo', 'worktribe', 'mycore',
     'omegapsir', 'converis', 'ipt', 'thredds', 'erddap', 'radar',
-    'yoda', 'symbiota', 'breedbase', 'tripal', 'veupathdb',
+    'yoda', 'redivis', 'symbiota', 'breedbase', 'tripal', 'veupathdb',
     'massbank', 'iochembd', 'esgf', 'labkey', 'synapse', 'xnat',
     'omero', 'kadi4mat', 'edal', 'nomad', 'intermine', 'gringlobal',
-    'plutof', 'jgi', 'cbioportal', 'esasciencearchive'
+    'plutof', 'jgi', 'cbioportal', 'esasciencearchive', 'archipelago'
   )
 LIMIT 50;
 ```
 
-Filter `software.id` only with values that exist in `data/software/` (currently **262** definitions). Do not invent an id that is missing from `software_ids.yaml`.
+Filter `software.id` only with values that exist in `data/software/` (currently **264** definitions). Do not invent an id that is missing from `software_ids.yaml`.
 
-For open data or geo, change `catalog_type` and the `software.id` list (`ckan`, `geonetwork`, `stacserver`, …). Nested `software` / `endpoints` are JSON **strings** in DuckDB ([ai-consumers.md](ai-consumers.md)).
+For open data or geo, change `catalog_type` and the `software.id` list (`ckan`, `geonetwork`, `stacserver`, …). Nested `software` / `endpoints` are `STRUCT` / `STRUCT[]` in DuckDB ([ai-consumers.md](ai-consumers.md)).
 
 ## Why scientific repositories need extra filters
 

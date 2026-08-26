@@ -24,7 +24,7 @@ Do not write dataset YAML into this repository. Do not invent `uid` for datasets
 
 ```sql
 SELECT id, uid, name, link,
-       json_extract_string(software, '$.id') AS software_id,
+       software.id AS software_id,
        endpoints
 FROM catalogs
 WHERE id = 'examplegov'
@@ -81,6 +81,8 @@ Open the harvest heading from [software-index.md](../software-index.md). Do not 
 | `esasciencearchive` | TAP tables — not FITS files |
 | `odweb` | `/odweb/` datasets — not the parent CMS |
 | `imfnsdp` | SDMX categories/series on the country page — not DSBB |
+| `archipelago` | Solr `/search` digital objects — not Drupal nodes |
+| `redivis` | `/api/v1/organizations/{org}/datasets` — not tables or workflows |
 | `custom` | [harvest-other.md](../harvest-other.md#custom) decision tree |
 
 If the filter returns zero hits, inspect **one** unfiltered sample and `ListSets` / facets before concluding the catalog has no data. Local labels include Forschungsdaten, Research Data, and numeric WEKO3 item types.

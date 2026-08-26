@@ -350,13 +350,13 @@ Search engines miss less when you start from a list. Highest yield:
 | [ROAR](http://roar.eprints.org) | Repositories (`eprints`, `dspace`, …) |
 | [GBIF IPT](https://www.gbif.org/ipt) | `ipt` |
 
-Full inventory: README [data sources](https://github.com/datenoio/dataportals-registry/blob/main/README.md#data-sources).
+More lists: [discovery.md](discovery.md#existing-lists-start-here) and the per-platform discovery guides.
 
 ## Duplicate check (do this constantly)
 
 ```sql
 SELECT id, uid, name, link, catalog_type, status,
-       json_extract_string(software, '$.id') AS software_id
+       software.id AS software_id
 FROM catalogs
 WHERE lower(link) LIKE '%example.gov%'
    OR id = 'examplegov';

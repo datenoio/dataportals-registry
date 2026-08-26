@@ -20,3 +20,16 @@ The quality pipeline MUST distinguish integrity issues from enrichment-debt issu
 - **WHEN** `software.id` is GeoServer or ArcGIS Server and `link` already points at a service root
 - **THEN** no software-expected-endpoints issue is emitted
 
+### Requirement: National Catalog Flag Is Type-Official Not Owner-Federal
+`analyze-quality` MUST flag `properties.is_national: true` when the catalog is not the country's official catalog of that type.
+
+#### Scenario: Agency scientific repository flagged national
+- **WHEN** a record has `properties.is_national: true`
+- **AND** `catalog_type` is Scientific data repository
+- **THEN** `IS_NATIONAL_AGENCY_OR_TOPIC` is emitted at MEDIUM priority as enrichment debt
+
+#### Scenario: Official national open-data portal
+- **WHEN** a record is the country's official open-data portal (for example `https://catalog.data.gov`)
+- **AND** `properties.is_national` is `true`
+- **THEN** no `IS_NATIONAL_AGENCY_OR_TOPIC` issue is emitted
+

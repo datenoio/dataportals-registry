@@ -38,7 +38,7 @@ The registry collects and maintains structured metadata about:
 - Metadata catalogs
 - Other data infrastructure
 
-As of 25 August 2026, source YAML contains **22,750** verified catalog entries across **219** country/territory folders, **0** scheduled records, and **262** software definitions. Working-tree exports match the published v1.17.0 GitHub release.
+As of 26 August 2026, source YAML contains **23,338** verified catalog entries across **219** country/territory folders, **0** scheduled records, and **264** software definitions. Working-tree exports last rebuilt at 22,835 catalogs; YAML is ahead until the next `build`. Last published snapshot is v1.17.0 (22,750 catalogs, 0 scheduled, 262 software).
 
 ### Scope Boundary (Important)
 
@@ -215,6 +215,7 @@ Schema is defined in `data/schemes/catalog.json` using Cerberus format. Key vali
 - `software`: Must have `id` and `name` subfields
 - `owner`: Must have `name`, `type`, and `location` with country info
 - `uid`: Format `cdi########` for entities, `temp########` for scheduled
+- `properties.is_national`: `true` only for the country's official catalog of that type (national open-data portal, NSDI/geoportal, or NSO product). **Not** “federal owner”. Agency/thematic/scientific/subnational catalogs: `false`. See [docs/data-model.md](docs/data-model.md#propertiesis_national). Do not bulk-set from `Federal/` or `.gov`.
 
 ---
 
@@ -265,8 +266,9 @@ python scripts/builder.py add-single "https://example.com/data" \
 
 1. Create file in correct location: `data/entities/{COUNTRY}/{TYPE}/{id}.yaml`
 2. Ensure `id` field matches filename
-3. Run `python scripts/builder.py assign` to generate UID
-4. Run `python scripts/builder.py validate-yaml` to verify
+3. Set `properties.is_national` only for the official national catalog of that type ([docs/data-model.md](docs/data-model.md#propertiesis_national))
+4. Run `python scripts/builder.py assign` to generate UID
+5. Run `python scripts/builder.py validate-yaml` to verify
 
 ### Data Quality Workflow
 
@@ -281,6 +283,8 @@ cat dataquality/full_report.txt
 # Method A: Priority-based scripts
 python scripts/fix_critical_issues.py
 python scripts/fix_important_issues.py
+python scripts/fix_is_national_flags.py --dry-run
+python scripts/fix_is_national_flags.py
 
 # Method B: Generate Cursor commands
 python scripts/generate_cursor_commands.py
@@ -405,6 +409,7 @@ CLI commands available:
 | `fix_tag_hygiene.py` | Tag quality |
 | `fix_software_id.py` | Software ID fixes |
 | `fix_api_status_mismatch.py` | API status fixes |
+| `fix_is_national_flags.py` | Set `is_national: false` on agency/topic catalogs |
 
 ### Scheduled Scripts
 
@@ -542,8 +547,9 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 2. Use CLI to add: `python scripts/builder.py add-single URL --scheduled`
 3. Or create YAML manually in correct location
 4. Run `python scripts/builder.py assign` to generate UID
-5. Run `python scripts/builder.py validate-yaml` to verify
-6. Run `pytest` to ensure tests pass
+5. Set `properties.is_national` only if this is the country's official catalog of that type ([docs/data-model.md](docs/data-model.md#propertiesis_national)). Never copy `true` onto every federal/agency catalog.
+6. Run `python scripts/builder.py validate-yaml` to verify
+7. Run `pytest` to ensure tests pass
 
 ### Task: Fix Data Quality Issues
 
@@ -594,7 +600,7 @@ Follow [docs/software-taxonomy.md](docs/software-taxonomy.md#adding-a-software-d
 
 ## References
 
-- [README.md](README.md) - Project overview and data sources
+- [README.md](README.md) - Project overview
 - [docs/getting-started.md](docs/getting-started.md) - Published internals (GitHub Pages source)
 - [docs/data-model.md](docs/data-model.md) / [docs/vocabularies.md](docs/vocabularies.md) / [docs/quality-rules.md](docs/quality-rules.md) / [docs/cli.md](docs/cli.md)
 - [docs/agents/query.md](docs/agents/query.md) / [docs/agents/discover.md](docs/agents/discover.md) / [docs/agents/contribute.md](docs/agents/contribute.md)

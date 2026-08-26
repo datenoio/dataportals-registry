@@ -1,6 +1,6 @@
 # Query examples (DuckDB)
 
-Verified patterns against `data/datasets/datasets.duckdb` (table `catalogs`) or `data/datasets/full.parquet`. Nested fields are JSON strings — see [ai-consumers.md](ai-consumers.md).
+Verified patterns against `data/datasets/datasets.duckdb` (table `catalogs`) or `data/datasets/full.parquet`. Nested fields are `STRUCT` / `LIST` — see [ai-consumers.md](ai-consumers.md).
 
 ## Connect
 
@@ -31,8 +31,11 @@ ORDER BY n DESC;
 ```sql
 SELECT id, name, link
 FROM catalogs
-WHERE software LIKE '%"id":"ckan"%'
-  AND coverage LIKE '%"id":"US"%'
+WHERE software.id = 'ckan'
+  AND list_contains(
+        list_transform(coverage, x -> x.location.country.id),
+        'US'
+      )
   AND status = 'active'
 ORDER BY name
 LIMIT 50;
@@ -41,7 +44,7 @@ LIMIT 50;
 ## Active catalogs with an API
 
 ```sql
-SELECT id, name, catalog_type, json_extract_string(software, '$.id') AS software_id
+SELECT id, name, catalog_type, software.id AS software_id
 FROM catalogs
 WHERE api = true
   AND api_status = 'active'
@@ -52,7 +55,7 @@ LIMIT 50;
 ## Geoportals by software
 
 ```sql
-SELECT json_extract_string(software, '$.id') AS software_id, count(*) AS n
+SELECT software.id AS software_id, count(*) AS n
 FROM catalogs
 WHERE catalog_type = 'Geoportal'
 GROUP BY 1
@@ -64,7 +67,7 @@ ORDER BY n DESC;
 ```sql
 SELECT id, name, identifiers
 FROM catalogs
-WHERE identifiers LIKE '%"id":"wikidata"%'
+WHERE list_contains(list_transform(identifiers, x -> x.id), 'wikidata')
 LIMIT 20;
 ```
 
@@ -74,7 +77,7 @@ LIMIT 20;
 SELECT id, name, link
 FROM catalogs
 WHERE catalog_type = 'Scientific data repository'
-  AND identifiers LIKE '%"id":"re3data"%'
+  AND list_contains(list_transform(identifiers, x -> x.id), 're3data')
 ORDER BY name
 LIMIT 50;
 ```
@@ -103,7 +106,7 @@ ORDER BY name;
 SELECT id, name, link, status
 FROM catalogs
 WHERE catalog_type = 'Metadata catalog'
-   OR software LIKE '%"id":"fairdatapoint"%'
+   OR software.id = 'fairdatapoint'
 ORDER BY name;
 ```
 
@@ -112,32 +115,31 @@ DuckDB/Parquet lag source YAML until the next `build`. Duplicate-check `data/sch
 ## Scientific IRs to harvest (mixed publications + data)
 
 ```sql
-SELECT id, name, link, json_extract_string(software, '$.id') AS software_id
+SELECT id, name, link, software.id AS software_id
 FROM catalogs
 WHERE catalog_type = 'Scientific data repository'
   AND status = 'active'
-  AND json_extract_string(software, '$.id') IN (
+  AND software.id IN (
     'dspace', 'dspacecris', 'invenio', 'inveniordm', 'eprints',
     'hyrax', 'pure', 'esploro', 'opus', 'elsevierdigitalcommons',
-    'figshare', 'converis', 'omegapsir'
+    'figshare', 'converis', 'omegapsir', 'archipelago'
   )
 ORDER BY software_id, name
 LIMIT 50;
 ```
 
-Dataset-native scientific platforms (`labkey`, `synapse`, `xnat`, `omero`, `kadi4mat`, `edal`, `nomad`) and domain stacks (`intermine`, `gringlobal`, `plutof`, `jgi`, `cbioportal`, `esasciencearchive`) use the same `catalog_type` filter with those `software.id` values. Recipes: [software-index.md](software-index.md).
+Dataset-native scientific platforms (`labkey`, `synapse`, `xnat`, `omero`, `kadi4mat`, `edal`, `nomad`, `redivis`) and domain stacks (`intermine`, `gringlobal`, `plutof`, `jgi`, `cbioportal`, `esasciencearchive`) use the same `catalog_type` filter with those `software.id` values. Recipes: [software-index.md](software-index.md).
 
 API recipes and dataset-vs-publication filters: [harvest.md](harvest.md).
 
 ## Catalogs with recorded endpoints
 
-Nested `endpoints` is a JSON string. A non-empty array means at least one probed API URL:
+Nested `endpoints` is `STRUCT[]`. A non-empty array means at least one probed API URL:
 
 ```sql
-SELECT id, name, json_extract_string(software, '$.id') AS software_id, endpoints
+SELECT id, name, software.id AS software_id, endpoints
 FROM catalogs
-WHERE endpoints IS NOT NULL
-  AND endpoints NOT IN ('', '[]', 'null')
+WHERE len(endpoints) > 0
 ORDER BY name
 LIMIT 50;
 ```
@@ -145,7 +147,7 @@ LIMIT 50;
 ## Owner type
 
 ```sql
-SELECT json_extract_string(owner, '$.type') AS owner_type, count(*) AS n
+SELECT owner.type AS owner_type, count(*) AS n
 FROM catalogs
 GROUP BY 1
 ORDER BY n DESC;
@@ -154,7 +156,7 @@ ORDER BY n DESC;
 ```sql
 SELECT id, name, link
 FROM catalogs
-WHERE json_extract_string(owner, '$.type') = 'Central government'
+WHERE owner.type = 'Central government'
   AND status = 'active'
 LIMIT 50;
 ```
@@ -182,7 +184,7 @@ LIMIT 50;
 ## Catalogs without a public API flag
 
 ```sql
-SELECT id, name, json_extract_string(software, '$.id') AS software_id
+SELECT id, name, software.id AS software_id
 FROM catalogs
 WHERE api = false
   AND status = 'active'
@@ -198,13 +200,13 @@ LIMIT 50;
 SELECT
   c.id,
   c.name,
-  json_extract_string(c.software, '$.id') AS software_id,
+  c.software.id AS software_id,
   s.name AS software_name,
   s.category
 FROM catalogs c
 LEFT JOIN software s
-  ON json_extract_string(c.software, '$.id') = s.id
-WHERE json_extract_string(c.software, '$.id') = 'geonetwork'
+  ON c.software.id = s.id
+WHERE c.software.id = 'geonetwork'
 LIMIT 20;
 ```
 
@@ -226,6 +228,6 @@ with open("data/datasets/catalogs.jsonl", encoding="utf-8") as fh:
 import polars as pl
 
 df = pl.read_parquet("data/datasets/full.parquet")
-ckan = df.filter(pl.col("software").str.contains('"id":"ckan"'))
+ckan = df.filter(pl.col("software").struct.field("id") == "ckan")
 print(ckan.select(["id", "name", "link"]).head())
 ```

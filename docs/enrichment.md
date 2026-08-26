@@ -31,12 +31,13 @@ python scripts/builder.py analyze-quality
 python scripts/fix_critical_issues.py
 python scripts/fix_important_issues.py
 python scripts/fix_medium_issues.py
+python scripts/fix_is_national_flags.py --dry-run
 python scripts/builder.py validate-yaml
 python scripts/builder.py analyze-quality
 python scripts/update_quality_baseline.py   # only after an intentional baseline change
 ```
 
-Country helpers (`fix_us_issues.py`, `fix_es_issues.py`, `fix_de_issues.py`, …) apply the same rules to one country folder. `fix_all_issues.py` / `fix_all_priority_issues.py` walk every priority.
+`python scripts/fix_is_national_flags.py` unsets `properties.is_national` on agency, thematic, scientific, and subnational catalogs ([data-model.md](data-model.md#propertiesis_national)). Country helpers (`fix_us_issues.py`, `fix_es_issues.py`, `fix_de_issues.py`, …) apply the same rules to one country folder. `fix_all_issues.py` / `fix_all_priority_issues.py` walk every priority.
 
 `python scripts/generate_cursor_commands.py` writes agent prompts from `dataquality/primary_priority.jsonl`.
 

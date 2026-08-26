@@ -50,7 +50,7 @@ Do not invent `uid`. Scheduled records use `temp########` until [scheduled.md](s
 | Key | Type | Meaning |
 |-----|------|---------|
 | `has_doi` | boolean | Catalog or datasets routinely expose DOIs |
-| `is_national` | boolean | National-level catalog (helps coverage checks) |
+| `is_national` | boolean | Official national catalog of that type (see below). **Not** “owned by a federal/central agency” |
 | `transferable_topics` | boolean | Topics may be copied onto related records |
 | `transferable_location` | boolean | Location may be copied onto related records |
 | `unfinished` | boolean | Record is known incomplete; do not treat as fully curated |
@@ -59,6 +59,22 @@ Do not invent `uid`. Scheduled records use `temp########` until [scheduled.md](s
 | `invenio-filters` | string | Invenio search filter used during enrichment |
 
 Omit keys you cannot verify. These flags are not a substitute for `status` or `coverage`.
+
+### `properties.is_national`
+
+Set `is_national: true` only when the catalog is the country’s **official catalog of that type**:
+
+| May be true | Must be false |
+|-------------|----------------|
+| Primary national open-data portal (`data.gov`, `datos.gob`, `data.gouv.fr`, Satu Data, …). Typically **one current** plus **one documented legacy** per country | Ministry/agency open data (NASA, NOAA labs, INPS, VA, health, mining) |
+| NSDI / national geoportal / INSPIRE node (typically 1–2 per country) | Agency GIS (USGS park, HRSA, NOAA CoastWatch, mining cadastre) |
+| NSO indicators, NSO microdata, IMF NSDP, optional Open Data for Africa country page | Line-ministry dashboards (HMIS, EMIS, energy, budget) |
+| National metadata registry when it is the country MDR | Scientific domain/lab repos (NCBI, ERDDAP, DAACs, DSpace, Dataverse) |
+| | Subnational catalogs, civil society/academy/business, MapBiomas, resource-contracts sites, museums |
+
+Federal/central ownership is already expressed by the `Federal/` directory, `owner.type` (`Central government` / `Federal government`), and `coverage.level: 20`. Do **not** copy `is_national: true` onto every federal `.gov`/`.mil` catalog.
+
+If you have reviewed a catalog and it is not national, set `is_national: false` rather than omitting the key. Classifier and quality rule: `scripts/national_catalog.py` (`IS_NATIONAL_AGENCY_OR_TOPIC`). Batch realignment: `python scripts/fix_is_national_flags.py`.
 
 ## Owner
 

@@ -47,6 +47,7 @@ Maintainer notes: [devdocs/quality-fix-workflow.md](https://github.com/datenoio/
 python scripts/builder.py analyze-quality
 python scripts/fix_critical_issues.py
 python scripts/fix_important_issues.py
+python scripts/fix_is_national_flags.py --dry-run
 python scripts/builder.py validate-yaml
 python scripts/builder.py analyze-quality
 python scripts/update_quality_baseline.py   # only after an intentional baseline change

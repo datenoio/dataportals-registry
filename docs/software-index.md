@@ -12,6 +12,7 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `aodn` | scientific | [discovery-scientific](discovery-scientific.md) | [harvest-earthdata](harvest-earthdata.md#aodn) | — |
 | `arcgishub` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#arcgishub) | [harvest-geoportals](harvest-geoportals.md#arcgishub) | yes |
 | `arcgisserver` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#arcgisserver) | [harvest-geoportals](harvest-geoportals.md#arcgisserver) | yes |
+| `archipelago` | scientific | [discovery-scientific](discovery-scientific.md#archipelago) | [harvest-scientific](harvest-scientific.md#archipelago) | — |
 | `aristotlemdr` | metadata | [discovery-metadata](discovery-metadata.md#aristotlemdr) | [harvest-metadata](harvest-metadata.md#aristotlemdr) | — |
 | `axiomportal` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#axiomportal) | [harvest-scientific-domain](harvest-scientific-domain.md#axiomportal) | — |
 | `belsisims` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md) | [harvest-viewers](harvest-viewers.md#belsisims) | — |
@@ -219,6 +220,7 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `rasdaman` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#rasdaman) | [harvest-earthdata](harvest-earthdata.md#rasdaman) | — |
 | `rdfrepository` | opendata | [discovery-opendata](discovery-opendata.md#rdfrepository) | [harvest-opendata](harvest-opendata.md#rdfrepository) | — |
 | `redatam` | microdata | [discovery-indicators](discovery-indicators.md#redatam) | [harvest-indicators](harvest-indicators.md#redatam) | — |
+| `redivis` | scientific | [discovery-scientific](discovery-scientific.md#redivis) | [harvest-scientific](harvest-scientific.md#redivis) | yes |
 | `reearth` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md) | [harvest-viewers](harvest-viewers.md#reearth) | — |
 | `resourcecontracts` | opendata | [discovery-opendata](discovery-opendata.md#resourcecontracts) | [harvest-opendata](harvest-opendata.md#resourcecontracts) | — |
 | `sampaswebgis` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#sampaswebgis) | [harvest-viewers](harvest-viewers.md#sampaswebgis) | — |

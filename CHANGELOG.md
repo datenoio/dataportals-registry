@@ -7,11 +7,56 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **588 net new catalog entries** since v1.17.0; registry source now **23,338** entities (**0** scheduled) across **219** country/territory folders.
+- **2 software definitions**; software catalog now **264** platforms: Archipelago Commons (`archipelago`) and Redivis (`redivis`).
+- **257** US ArcGIS Server geoportals from the MappingSupport federal/state/county/city GIS server list (live REST roots not already in the registry). Includes BLM state adaptors, USFS/NOAA/USGS/FEMA services roots, and municipal/county directories.
+- **148** ArcGIS Hub geoportals promoted from scheduled review (US local/state hubs plus Canada, the UK, Ireland, New Zealand, and others).
+- Archipelago Commons catalogs: Plant Virus Italy / PLAVIT (`archiplavittocnrit`), Vitis Grinzane (`vitisgrinzaneipspcnrit`), and UNAM IIBI digital preservation (`archivodigitaliibiunammx`).
+- **11** Redivis organization workspaces (Stanford Data Farm, Yale Data Green, Duke, Columbia, Carnegie Mellon, Georgetown, Northwestern, UCLA Library, Environmental Impact Data Collaborative, Center for Surgery and Public Health, and PGSSC surgical epidemiology).
+- **40** central-bank and monetary-authority indicators catalogs (custom statistical pages plus Danmarks Nationalbank StatBank on PxWeb).
+- **44** national statistical-office indicator catalogs and **9** intergovernmental statistical databases (IsDB, ITC, ICCAT, ITTO, NAFO, SPRFMO, International IDEA, SIELAC).
+- **5** EPrints repositories: Organic Eprints, Goldsmiths Research Online, CMFRI Digital Repository, NIAS Repository, and Repository@USM.
+- Chinese Academy of Sciences science-data centers promoted from scheduled review (InstDB and custom hosts that responded), plus LANDFIRE, USGS Publications Warehouse, USGS CMGDS, Alaska DGGS, and the Southern California Earthquake Data Center.
+- Geoportals including Africa GeoPortal, Scholars GeoPortal, NASA Worldview (GIBS), Geomolg, NCES EDGE, NIFC Open Data, SERVIR Global GeoServer, k.LAB Integrated Modelling, LIWO flood information, hale»connect, pmINSPIRE, Danish MapCentia/GC2 viewers, and **13** additional GeoServer catalogs.
+- API catalogs for the DB API Marketplace and the Riksbank API Portal; marketplaces Opendatabay and Centific; Epoch AI Data (ML); Datasets.ai search; and the mldata.opendata.ai CKAN sandbox.
+- `properties.is_national` classifier (`scripts/national_catalog.py`) and `scripts/fix_is_national_flags.py` to unset the flag on agency, thematic, scientific, and subnational catalogs.
+
+
+
+### Changed
+
+- Rewrote `README.md` for consumers, contributors, and agents: DuckDB quick start, export table, related projects, and contribution commands. Removed the outdated Data sources list (installation galleries live in [docs/discovery.md](docs/discovery.md)).
+- Clarified `properties.is_national`: `true` only for the country's official catalog of that type (national open-data portal, NSDI/geoportal, or NSO product), not federal ownership. Set `is_national: false` on **988** agency/thematic/scientific/subnational records that had been marked national.
+- Retagged the existing Redivis hub (`rediviscom`) from `custom` to `redivis` and documented the public OpenAPI.
+- Datarade marketplace moved from the retired `datarade.com` US record to `datarade.ai` (Berlin). Deutsche Bahn open-data infoportal retagged from CKAN to custom after the 2024 catalog retirement; APIs live on the new DB API Marketplace record.
+- Bundesbank statistics landing URL updated; EGA and gnomAD metadata, endpoints, and identifiers refreshed.
+- Cleared the scheduled queue: **164** catalogs promoted after live URL review, **6** removed. `data/scheduled/` is empty.
+- Working-tree JSONL, Parquet, and DuckDB exports last rebuilt at **22,835** catalogs, **26** scheduled, **264** software. Source YAML is ahead (**23,338** entities, **0** scheduled) until the next `build`. Quality analysis reports **0** issues across **22,835** export records.
+- Discovery and harvest guides index Archipelago Commons and Redivis. Consumer docs (`README.md`, `docs/ai-consumers.md`, `docs/exports.md`, `docs/query-examples.md`, `llms.txt`) describe native DuckDB `LIST`/`STRUCT` nested types. `docs/scheduled.md` matches the empty scheduled queue. DATASHEET geographic/type mix refreshed from current YAML.
+
+
+
+### Fixed
+
+- `builder.py build` now writes `datasets.duckdb` with native DuckDB `LIST` and `STRUCT` types (matching `full.parquet`) instead of collapsing nested fields to VARCHAR JSON strings.
+
+
+
+### Removed
+
+- Duplicate Datarade record at `datarade.com` (`dataradecom`); keeper is `dataradeai`.
+- **6** scheduled catalogs dropped without promotion: Hamilton ArcGIS Hub duplicate of Open Hamilton (`dataspatialsolutionsopendataarcgiscom`), deprecated IBM Data Asset eXchange landing page (`developeribmcom`), HTTP 502 (`wwwcityghgcom`), and three unreachable Chinese hosts (`bisicstcloudcn`, `cjgeodatacugeducn`, `loessgeodatacn`).
+
+
+
 ## [1.17.0] - 2026-08-25
 
 **GitHub Release**: [v1.17.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.17.0) - Published August 25, 2026
 
 ### Added
+
 - **2,608 net new catalog entries**; registry source now **22,750** entities (**0** scheduled) across **219** country/territory folders, including first entity roots for **Jersey (JE)** and **Saint Helena (SH)**.
 - **15 software definitions**; software catalog now **262** platforms: IMF National Summary Data Page (`imfnsdp`), ODWeb (`odweb`), LabKey Server (`labkey`), Synapse (`synapse`), XNAT (`xnat`), OMERO (`omero`), Kadi4Mat (`kadi4mat`), e!DAL (`edal`), NOMAD (`nomad`), InterMine (`intermine`), GRIN-Global (`gringlobal`), PlutoF (`plutof`), JGI Genome Portal (`jgi`), cBioPortal (`cbioportal`), and ESA Science Archive (`esasciencearchive`).
 - Five South Korean catalogs promoted from scheduled review: KOSIS North Korea Statistics, the Ministry of Unification North Korea Information Portal, NGII National Land Information Platform, KINU DSpace, and NKHR Larchiveum.
@@ -25,7 +70,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First entity roots for **Jersey (JE)** (Open Data Jersey) and **Saint Helena (SH)** (St Helena Data Portal, inactive).
 - Domain scientific catalogs on the new software IDs: **25** InterMine, **13** GRIN-Global, **10** ESA Science Archive, **10** Synapse, **6** each LabKey / XNAT / OMERO, plus cBioPortal, Kadi4Mat, and JGI.
 
+
+
 ### Changed
+
 - Remapped leftover `software.id: custom` catalogs onto existing products: IPT (`wwwgbifes`), OntoPortal (SIFR BioPortal, MedPortal), DSpace (RIULL, RIUBU, Cambridge), dLibra (UJK, KPBC), DataLad (registry and hubs), Oracle APEX (IPK Gatersleben), ArcGIS Server (Geology Cloud), Open SDG (Serbia), plus 13 IMF NSDP pages onto `imfnsdp` and 3 Chinese `/odweb/` portals onto `odweb`.
 - Serbia catalogs reviewed: quoted UN M49 `039`; marked dead hosts inactive (Zastrugis OpenDataSoft/Huwise, srsrb ArcGIS Hub, OpenShift IPT, MRE ArcGIS REST, SEPA CKAN); moved faculty/city catalogs into ISO subregions (RS-00, RS-07, RS-10, RS-12, RS-20); corrected DSpace names/owners from OAI Identify; documented live harvest endpoints.
 - Sierra Leone IGIS ArcGIS Hub (`igisdatahubdstihubarcgiscom`) and DSTI Education Data Hub (`educationdatahubdstigovsl`) marked inactive; Open Data Sierra Leone (`opendataslgovsl`) notes DNS/TLS timeouts. NaSIS retagged as WordPress with `wp-json`/`feed`; Njala DSpace gained OAI-PMH and sitemap; SSL NADA gained catalog/CSV export endpoints (13 studies); EPA GRS portal title and DHIS2 login-wall notes updated.
@@ -40,22 +88,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Catalog schema now requires string country/macroregion ids, string tags, and integer `dataset_count_reported` (no mixed scalar types).
 - Singapore catalogs moved under `SG/Federal/`; data.gov.sg harvest APIs and GovTech ownership recorded; LTA DataMall and SingStat Table Builder APIs documented; SG-MDH API fields aligned with deprecated status. OpenAIRE scientific records cleaned (AlloMAPS, Interfil, WOVOdat, 2DMatPedia); TTD moved to China (`dbidrblabnet`); Model Zoo retagged as an ML catalog and Nexdata as a marketplace. NUS SHGIS ArcGIS REST and Yale-NUS Dataverse marked inactive; NParks TRSGIS described as a UAT host.
 
+
+
 ### Fixed
+
 - IMPORTANT quality issues: set `api: true` / `api_status: active` on **120** catalogs that already had harvest endpoints (plus **3** Kadi4Mat REST catalogs); moved **14** files into `scientific/` or `opendata/` to match `catalog_type`; merged duplicate University of Granada and ERMIS-F geoportal records; set Integrity GIS owner subregion to Missouri; retagged the IPC Administración Local ArcGIS Hub template as Community.
 - Mixed nested YAML types that collapsed DuckDB/Parquet nested columns to `JSON`: Norway `country.id` parsed as boolean `false` (unquoted `NO`), integer tag `911`, `{tag: ...}` tag mappings, string `dataset_count_reported`, and unquoted M49 macroregion id `155`.
 - MEDIUM quality sweep: inactive catalogs aligned to `api: false` / `api_status: inactive`; placeholder titles replaced; software-expected harvest endpoints filled; short tags and a Wales subregion name corrected.
 
+
+
 ### Removed
+
 - Duplicate catalog records merged into keepers: Cyprus ERMIS-F geoportal (`ermisgeoportalcyiaccy`, same URL as `geoportalermisfeu`) and University of Granada Open Data (`opendataugresdataset`, same URL as `opendataugres`).
 - Cocos (Keeling) Islands (`CC`) and `Unknown` country folders (records recategorized or dropped).
 - **3** Cadcorp scheduled viewers that did not respond (Wirral WebMap9, Bury ExternalWebMap, Inverclyde Maps).
 - **664** OpenAIRE scheduled sources that were dead, duplicate of an existing entity, a staging host, a hijacked/parked domain, or not a catalog (software forges, journal pages, single publications).
+
+
 
 ## [1.16.0] - 2026-08-24
 
 **GitHub Release**: [v1.16.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.16.0) - Published August 24, 2026
 
 ### Added
+
 - **1,002 net new catalog entries** (1,010 new IDs; 8 removed after v1.15.0); registry source now **20,142** entities (**12** scheduled) across **218** country/territory folders, including a first entity root for **Isle of Man (IM)**.
 - **24 software definitions**; software catalog now **247** platforms: Trimble Locus IMS (`trimblelocus`), Sitowise Louhi (`louhi`), Trimble Landfolio (`landfolio`), Spatial Suite (`spatialsuite`), GEUSMAP (`geusmap`), GISApp (`gisapp`), iObčina (`iobcina`), G3W-SUITE (`g3wsuite`), Cadcorp SIS WebMap (`cadcorp`), Astun iShare (`ishare`), Hexagon M.App Enterprise (`mappenterprise`), CubeWerx CubeSERV (`cubewerx`), Sentinel Hub (`sentinelhub`), DataWarehousePro (`datawarehousepro`), Goal Tracker (`goaltracker`), RDF Online Repository (`rdfrepository`), ResourceContracts (`resourcecontracts`), the Guangxi Public Data Open Platform (`gxopendata`), PxStat (`pxstat`), TabNet (`tabnet`), FENIX (`fenix`), Beyond 20/20 Web Data Server (`beyond2020`), SparkMap (`sparkmap`), and StatPlanet (`statplanet`).
 - **376 scientific repositories**, including **135 DSpace** (Spain, Finland, Zambia, Argentina, Colombia, Germany, Uganda, Malawi, Botswana, Mongolia, and others), **118 Figshare** (US, UK, World event/org tenants, New Zealand, Australia, Germany, Singapore), **23 Hyrax** (British Library Independent Research Organisation repositories and US campuses), **13 Elsevier Pure** (Israel and Hong Kong), **7 DSpace-CRIS**, **5 Atlas of Living Australia** collection portals, **4 Converis**, **4 Elsevier Digital Commons**, **4 WEKO3**, and **3 Omega-PSIR**.
@@ -71,7 +128,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **12 scheduled** Cadcorp SIS WebMap viewers pending live confirmation (UK councils: Barnet, Bury, Charnwood, Derby, Inverclyde, Medway, North Norfolk, Sefton, Stoke-on-Trent, West Lothian, West Northamptonshire, Wirral).
 - Discovery fingerprints and harvest recipes for the 24 new software IDs (`docs/discovery-geoportals.md`, `docs/discovery-geoportals-viewers.md`, `docs/discovery-geoportals-sdi.md`, `docs/discovery-opendata.md`, `docs/discovery-indicators.md`, `docs/harvest-viewers.md`, `docs/harvest-geoportals.md`, `docs/harvest-earthdata.md`, `docs/harvest-indicators.md`).
 
+
+
 ### Changed
+
 - Drop Python 3.9; supported and CI-tested versions are **3.10–3.12**. Remove the `pyorc<0.11` pin that existed only for 3.9 wheels.
 - SuperSTAR (`superstar`) software definition rewritten: WingArc Australia SuperWEB2 statistical table builder (not the STR hotel-benchmarking product). Website, owner, country, SDMX support, and capabilities updated.
 - Mauritius OpenData portal (`datagovmuorg`) migrated from DKAN to CKAN 2.11; catalog URL is now `https://data.govmu.org`. Statistics Mauritius NSDP description updated from e-GDDS to SDDS Plus.
@@ -83,16 +143,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cleared the polar/Arctic scheduled queue (**16** promoted, **1** removed), then the remaining Africa/Asia/Latin America queue (**14** promoted, **1** removed). New scheduled queue is **12** Cadcorp UK viewers.
 - Regenerated dataset exports: **20,142** catalog records (entities); **247** software definitions; **12** scheduled (**20,154** in `full.jsonl`). Quality regression baseline refreshed after the catalog additions.
 
+
+
 ### Removed
+
 - **8 catalog entries** removed as superseded or duplicate: Cameroon SDG Hub, Finland Paikkatietohakemisto, Guinea-Bissau Open Data for Africa at the old hostname, Vytautas Magnus University CRIS at the old host, the Nigeria NBS NADA catalog, the NZ Open Data Network GeoServer copy at the Federal geo path, Togo `sigm.tg` ArcGIS REST, and the World-folder Côte d'Ivoire mining-cadastre ArcGIS copy.
 - Greenland Mineral Resources geoportal dropped from scheduled without promotion.
 - WASCAL Hydromet Network (`wascal-hydromet-net.org`) dropped from scheduled without promotion: the hostname now redirects to an empty WordPress site, and station data remains on the existing WASCAL Data Discovery Portal.
+
+
 
 ## [1.15.0] - 2026-08-22
 
 **GitHub Release**: [v1.15.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.15.0) - Published August 22, 2026
 
 ### Added
+
 - **720 net new catalog entries** (809 new IDs; 89 removed after v1.14.0); registry source now **19,140** entities (**17** scheduled) across **217** country/territory folders.
 - **12 software definitions**; software catalog now **223** platforms: mviewer (`mviewer`), Geocortex Essentials (`geocortex`), Isogeo (`isogeo`), QGIS Server (`qgisserver`), openEO (`openeo`), MapGIS IGServer (`mapgisigserver`), Breedbase (`breedbase`), Tripal (`tripal`), VEuPathDB (`veupathdb`), MassBank (`massbank`), ioChem-BD (`iochembd`), and ESGF (`esgf`).
 - **471 scientific repositories**, including domain coverage for bioinformatics and genomics, chemistry, materials and engineering, astronomy, linguistics, agriculture, and biodiversity (NCBI/EMBL-EBI, NASA/ESA, CLARIN, USDA, NIST, and related hosts).
@@ -110,7 +176,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **17 scheduled** polar / Arctic / Greenland catalogs pending live promotion (SIOS, NunaGIS, Asiaq, PGC FRIDGE, GTN-G, WGMS, and related hosts).
 - Discovery fingerprints and harvest recipes for mviewer, Isogeo, Geocortex, QGIS Server, openEO, and MapGIS IGServer (`docs/discovery-geoportals.md`, `docs/harvest-geoportals.md`, `docs/harvest-earthdata.md`, `docs/agents/discover.md`).
 
+
+
 ### Changed
+
 - Recategorized Embrapa GeoInfo (`geoinfodadosembrapabr`) from open data to geoportal.
 - Discovery and harvest guides treat `radar`, `yoda`, `dhis2`, `ipums`, `openaire`, and `symbiota` as published `software.id` values (no longer `custom` placeholders), and index mviewer, Isogeo, Geocortex, QGIS Server, openEO, MapGIS IGServer, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, and ESGF in the same recipes.
 - Documentation navigability and harvest depth: generated [software-index.md](docs/software-index.md) (including an `apidetect` column); split geoportal and scientific discovery mega-pages; split scientific harvest into IRs ([harvest-scientific.md](docs/harvest-scientific.md)) vs domain stacks ([harvest-scientific-domain.md](docs/harvest-scientific-domain.md)); unique `{#id}` headings (CI fails on combined software H2s, stale auto-slug links, and a stale index file); custom/host-collision/STAC/DSpace/Drupal playbooks; agent indexes link the software index instead of pasting every probe; harvest-output recipe schema (not a reaper contract); CI test `tests/test_docs_software_coverage.py`. Record-count contract: [exports.md](docs/exports.md#record-counts).
@@ -119,17 +188,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Refreshed metadata on **871** existing catalogs; HTTP-verified endpoints and `api: true` written onto **716** records. Marked **10** catalogs inactive and **1** deprecated.
 - Regenerated dataset exports: **19,140** catalog records (entities); **223** software definitions; **17** scheduled (**19,157** in `full.jsonl`). Quality regression baseline refreshed after the catalog additions.
 
+
+
 ### Fixed
+
 - Quality regression after the v1.14.0 catalog imports: completed owner, coverage, and API metadata so integrity CRITICAL/IMPORTANT counts are back to zero, and refreshed `dataquality/baseline_counts.json`.
 
+
+
 ### Removed
+
 - **89 catalog entries** removed after v1.14.0 as duplicate recategorized records (mostly US Federal/Other geoportals and ArcGIS Hub copies, plus Ukraine, Iceland, Syria, Brazil IPT, and World placeholders).
+
+
 
 ## [1.14.0] - 2026-08-21
 
 **GitHub Release**: [v1.14.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.14.0) - Published August 21, 2026
 
 ### Added
+
 - **702 net new catalog entries**; registry source now **18,420** entities (0 scheduled) across **217** country/territory folders, including a first entity root for **Grenada (GD)**.
 - **19 software definitions**; software catalog now **211** platforms: MapServer, MapTiler Server, gvSIG Online, deegree, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, FAIR Data Point, Idra, CONTENTdm, Omeka S, Fedora, OPUS, RADAR (`radar`), Symbiota (`symbiota`), DHIS2 (`dhis2`), Yoda (`yoda`), OpenAIRE (`openaire`), and IPUMS (`ipums`).
 - **20 DHIS2** national HMIS/indicator portals (Bangladesh, Benin, CAR, Djibouti, Ethiopia, Ghana, Kenya, Malawi, Nigeria, Palestine, Rwanda, Sierra Leone, Somalia, South Sudan, Chad, Tanzania, Uganda, Zambia). Retagged Nepal HMIS from `custom`.
@@ -156,7 +234,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Harvest guides for crawling **datasets** from catalog APIs (`docs/harvest.md` and related pages). Agent checklist: `docs/agents/harvest.md`.
 - Published docs for quality issue codes, vocabularies, scheduled promotion, releases, Re3Data enrichment, CKAN sync, CLI, software taxonomy, and JSON-LD/DCAT export mapping.
 
+
+
 ### Changed
+
 - Harvest/discovery docs treat `radar`, `yoda`, `dhis2`, `ipums`, `openaire`, and `symbiota` as published `software.id` values. Corrected the scheduled-queue count in `ai-consumers.md`. Filled harvest indexes in `llms.txt` and `when-to-use.md`.
 - Cleared the scheduled queue (**80** promoted, **8** removed in the first wave; later **67** Symbiota/DSpace promotions). `data/scheduled/` is empty.
 - Recategorized **199** misplaced catalogs (**140** from `Unknown/`, **40** from `World/`) into country folders (largest batches: United States, United Kingdom, Japan, Canada, Germany).
@@ -166,21 +247,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Regenerated dataset exports: **18,420** catalog records (entities); 211 software definitions; 0 scheduled.
 - Quality regression baseline refreshed after the catalog additions (`dataquality/baseline_counts.json`).
 
+
+
 ### Removed
+
 - **7 catalog entries** removed (placeholder or private Unknown/World geoportals: numeric hosts, `geomapmaker.online`, `geonode.hydrotechsolutions.biz`, `kmkgis.com`, `maps.dsm.city`, and `qwc2.thelabsv.org`).
+
+
 
 ## [1.13.0] - 2026-08-20
 
 **GitHub Release**: [v1.13.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.13.0) - Published August 20, 2026
 
 ### Added
+
 - **1,442 net new catalog entries**; registry source now **17,718** entities (0 scheduled).
 - **44 software definitions**; software catalog now **192** platforms.
 - Docusaurus documentation site (`website/`) publishing `docs/` to GitHub Pages at `https://datenoio.github.io/dataportals-registry/`, with internals docs for humans and agents (query, contribute, OpenSpec).
 - Catalog discovery instructions for humans (`docs/discovery.md`) and coding agents (`docs/agents/discover.md`).
 - Relocated working notes `geoseer-analysis.md`, `metadata-quality.md`, and `trust_score_methodology.md` from `docs/` to `devdocs/`.
 - **546 US catalogs**, including **213** geoportals (ArcGIS Hub/Server, MangoMap), **129** scientific repositories (**57 Elsevier Digital Commons**, **27 DSpace**), **121** state and local indicators catalogs (including **6 IBIS-PH**), and **79** open data portals (including Socrata).
-- **197 Japanese catalogs**, including **166 わが街ガイド (`wagmap`)** municipal and prefectural geoportals, **15 GC Navi** viewers, national GSI/MLIT/JAXA geoportals, and PLATEAU VIEW on Re:Earth (Saitama City and Osaka City).
+- **197 Japanese catalogs**, including **166 わが街ガイド (**`wagmap`**)** municipal and prefectural geoportals, **15 GC Navi** viewers, national GSI/MLIT/JAXA geoportals, and PLATEAU VIEW on Re:Earth (Saitama City and Osaka City).
 - **178 Chinese catalogs**, including **109** municipal and provincial open data portals, **48 Tianditu** geoportals (national, provincial, and municipal, including 8 Guangdong and 8 Henan city viewers plus Chengdu), **9** Inspur oPortal sites, national indicators (Customs, PBOC, SAFE, ChinaBond, exchanges), and microdata (CFPS, CHARLS, NBS, CNSDA).
 - **98 German catalogs**, including **34 Masterportal** community-gallery geoportals, **17 cardo** viewers, **13 NOL-IS** municipal portals, **6 map.apps**, and **5 GENESIS-Online** statistical databases.
 - **76 GeoMapFish geoportals**, mostly Swiss cantonal and Vaud geocommunes viewers, plus Liechtenstein, Saint-Pierre (Réunion), Grand Châtellerault, and Pro Natura.
@@ -203,7 +290,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Software definitions for shared geoportal products: わが街ガイド (`wagmap`), GC Navi (`gcnavi`), Re:Earth (`reearth`), GET SDI Portal (`getsdiportal`), GIS4Smart (`gis4smart`), GeoMapFish (`geomapfish`), MapBiomas (`mapbiomas`), NOL-IS (`nolis`), mf-geoadmin3 (`mfgeoadmin3`), cardo (`cardo`), map.apps (`mapapps`), InGrid (`ingrid`), MangoMap (`mangomap`), Copernicus DHuS (`copernicusdhus`), MapStore (`mapstore`), Masterportal (`masterportal`), SuperMap iPortal (`supermapiportal`), Tianditu (`tianditu`), NetGIS Server (`netgisserver`), Sampaş WebGIS (`sampaswebgis`), GiSoftGis (`gisoftgis`), BelsisIMS (`belsisims`), CoGIS (`cogis`), GP Atlas (`gpatlas`), Geonomics (`geonomics`), DATUM GIS (`datumgis`), InGeo (`ingeo`), Farvater GIS OGD (`farvatergisogd`), EverGIS (`evergis`), Geometa (`geometa`).
 - Software definitions for shared scientific, open data, and indicators products: NYU Data Catalog (`nyudatacatalog`), Axiom Data Science Portal (`axiomportal`), SciCat (`scicat`), FAIRDOM-SEEK (`seek`), Open Science Framework (`osf`), GIN (`gin`), PHAIDRA (`phaidra`), Seoul Open Data Plaza (`seoulopendataplaza`), Our Open Data (`ouropendata`), MODA Open Data Platform (`modaopendata`), LKOD (`lkod`), JDOP (`jdop`), GENESIS-Online (`genesisonline`), IBIS-PH (`ibisph`).
 
+
+
 ### Changed
+
 - Moved the GitHub repository from `commondataio/dataportals-registry` to `datenoio/dataportals-registry`. Old GitHub URLs redirect.
 - Cleared the scheduled queue (22 promoted, 31 removed). `data/scheduled/` is now empty.
 - Recategorized **252** misplaced catalogs, mostly US state, Federal, Other, Unknown, and World path corrections (including a large Oregon `.org` geoportal batch that belonged in other states; NPGeo Corona → Germany; MLIT data hub → Japan; IGG-CIGEO Hub → Nicaragua; GRID Nigeria GeoNetwork → Nigeria).
@@ -218,18 +308,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Merged the duplicate Zhejiang provincial JDOP catalog `datazjgovcn` (`data.zj.gov.cn`, which redirects to `data.zjzwfw.gov.cn`) into `datazjzwfwgovcn`.
 - Regenerated dataset exports: **17,718** catalog records (entities); 192 software definitions; 0 scheduled.
 
+
+
 ### Fixed
+
 - Rehomed four Ohio geoportals that were filed under the wrong place: CAGIS Open Data Hub (`data-cagisportal.opendata.arcgis.com`) from Unknown/California, Lorain County GIS Open Data from California, Butler County Auditor GIS REST from Oregon, and NEORSD GIS REST from South Dakota.
 
+
+
 ### Removed
+
 - **16 catalog entries** removed (ArcGIS Hub templates and copies, Socrata demo sites, duplicate or inactive Hawaii GIS endpoints, and the duplicate Zhejiang JDOP catalog `datazjgovcn`).
 - Dropped **31 scheduled catalogs** that timed out, returned 403, required login for listing, or could not be verified as a public catalog: Turkish municipal Sampaş WebGIS and GiSoftGis city guides, remaining Brazilian INDE candidates, several Russian GIS OGD/InGeo/CoGIS sites (including Terrascop, Yakutsk, and Bashkortostan), ATRIS, DataLad Edu Hub, and the Sainsbury Wellcome Centre GIN instance.
+
+
 
 ## [1.12.0] - 2026-08-18
 
 **GitHub Release**: [v1.12.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.12.0) - Published August 18, 2026
 
 ### Added
+
 - **1,304 net new catalog entries** (1,318 YAML files added; 14 removed); registry source now **16,276** entities (1 scheduled).
 - **166 Polish eWMAPA** county and city geoportals, plus **91 Swedish EntryScape** open data catalogs and **62 Lizmap** geoportals (mostly French).
 - **151 CKAN** open data portals, including **80 Thai** government catalogs and **34 Indonesian** Satu Data sites.
@@ -240,26 +339,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **6 API catalogs** (Tallinn, Estonia RIHA and X-tee, Latvia VISS, Malaysia Kijang, Taiwan TDX) plus additional ArcGIS Hub/Server (50), OpenDataSoft (22), JKAN (14), and Piveau (8) sites.
 - **12 software definitions**: Micka, Knoema, REDATAM, Copernicus Data Stores, data eye, Gipuzkoa Irekia, Liferay, OGD Platform India, Inspur oPortal, Piveau, SEU-e, and Ensembl.
 
+
+
 ### Changed
+
 - Recategorized misplaced catalogs: Lithuania SDG ArcGIS hubs (`Unknown` → `LT/Federal`), American Samoa GIS (`US-AR` → `US-AS`), Bakersfield GIS (`US-DC` → `US-CA`), St. Petersburg stats (`US-TN` → `US-FL`), Guam geoportals (`US/Federal` → `US-GU`), Northern Mariana BECQ (`US-CA` → `US-MP`), Dazhou open data (`CN-NX` → `CN-SC`), and Kosovo ASKdata (`RS` → `XK`).
 - Reassigned software IDs on existing records after new platform definitions: Liferay (104), Knoema (41), OGD Platform India (37), SEU-e (18), REDATAM (16), Data Fair (12), Gipuzkoa Irekia (7), oPortal (6), Micka (5), Piveau (4), and others.
 - Refreshed metadata (names, links, endpoints, API status) across **327** existing catalogs, including large Spanish and Indian batches.
 - Regenerated dataset exports: **16,276** catalog records (entities); 148 software definitions; 1 scheduled.
 
+
+
 ### Removed
+
 - **14 catalog entries** removed (inactive, duplicate, or replaced), including misplaced WIS 2.0 nodes, US ArcGIS Hub copies, and retired Chinese open-data URLs.
 
+
+
 ### Fixed
+
 - Quality regression baseline now matches current `analyze-quality` output after the v1.11.0 catalog additions.
 - Pin `pyorc<0.11` on Python 3.9 so CI can install `iterabledata` without building dropped 3.9 wheels.
 - Make `tests/test_schema_parity.py` collect on Python 3.9 (`from __future__ import annotations`).
 - Allow CKAN, WordPress, OpenDataSoft, and Drupal to use additional catalog types they actually host (geoportals, scientific, indicators).
+
+
 
 ## [1.11.0] - 2026-08-17
 
 **GitHub Release**: [v1.11.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.11.0) - Published August 17, 2026
 
 ### Added
+
 - **444 net new catalog entries** (450 YAML files added; 5 existing records recategorized or replaced); registry source now **14,972** entities (1 scheduled).
 - **64 THREDDS** scientific catalogs, including **48 ESGF** climate-data nodes (DKRZ, NASA NCCS, LLNL, CMCC, DIAS Japan, CEDA, and others).
 - **49 indicators catalogs**, including national SDG portals, statistical databases, and central-bank, health, and finance indicator systems.
@@ -267,16 +378,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **6 metadata catalogs** (including HDA Belgium, I14Y Switzerland, LETZDATA Luxembourg) and **8 API catalogs** (including Datafordeler, Digitraffic, GUS API, Brønnøysund).
 - **Apache Superset** software definition (`data/software/indicators/superset.yaml`) with catalog-type mapping in `scripts/constants.py`.
 
+
+
 ### Changed
+
 - Recategorized or replaced five existing catalogs: Flanders VMM portal (`opendatawsevlaanderenbe` → `opendatawewisvlaanderenbe`), Olomouc geoportal (`EU/CZ-71` → `CZ/CZ-71`), Bordeaux Métropole (`opendatabordeauxmetropolefr` → `datahubbordeauxmetropolefr`), Incheon iMap (`KR-11` → `KR-28`), and Muntinlupa GIS (`muntinlupacitywebgis1com` → `cgismuntinlupacitygovph`).
 - Refreshed metadata for selected Brazilian, Estonian, Italian, Korean, Liechtenstein, Maltese, Montenegrin, and Portuguese catalogs (URL/name updates; some status and software corrections).
 - Regenerated dataset exports: **14,972** catalog records (entities); 136 software definitions; 1 scheduled.
+
+
 
 ## [1.10.0] - 2026-08-16
 
 **GitHub Release**: [v1.10.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.10.0) - Published August 16, 2026
 
 ### Added
+
 - **92 net new catalog entries** (95 YAML files added, 3 recategorized); registry source now **14,528** entities (0 scheduled).
 - **39 Open Data for Africa** indicators catalogs (country portals plus the continental `dataportal.opendataforafrica.org`), covering many previously missing African countries.
 - **15 REDATAM / RpWebEngine** microdata catalogs across Latin America and the Caribbean.
@@ -284,108 +401,165 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Caribbean OECS geoportal (`gis.oecs.int`) and Haiti data search engine (`ayitistats.org`).
 - Language and geography reference support for new coverage: Turkmen (`TK`) in `data/reference/langs.csv` / `langs.tsv`; country entries and domain maps for Eritrea, Eswatini, Monaco, Timor-Leste, and Turkmenistan in `scripts/constants.py`.
 
+
+
 ### Changed
+
 - Regenerated dataset exports: **14,528** catalog records (entities); 135 software definitions; 0 scheduled.
 - Recategorized three existing catalogs: New Caledonia `data.gouv.nc` (`FR/FR-NC` → `NC/Federal`), OPT maps portal (`opendata` → `geo`), and NZ PAM geodata (`opendata` → `geo`).
 - Refreshed metadata for Pacific SPREP country portals and selected Australian, Oman, Tajikistan, Samoa, and Minnesota entries (including HTTPS/name updates; Minnesota state portal marked deprecated; Samoa MNRE RIO portal marked inactive).
 - Extended TLD-to-language defaults (`.sz` → English, `.mc` → French, `.tl` → Portuguese, `.tm` → Turkmen).
+
+
 
 ## [1.9.0] - 2026-08-10
 
 **GitHub Release**: [v1.9.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.9.0) - Published August 10, 2026
 
 ### Added
+
 - Canonical `owner.type` vocabulary (`data/reference/owner_types.yaml`) with synonym map and quality rules (`OWNER_TYPE_NONCANONICAL` / `INVALID_OWNER_TYPE`).
 - Path/country consistency check (`PATH_COUNTRY_MISMATCH`) with allowlisted multinational roots.
 - OpenSpec proposals for owner-type/path consistency and endpoint quality priority recalibration.
 
+
+
 ### Changed
+
 - Regenerated dataset exports and quality reports after integrity cleanup: **14,436** catalog records (entities); 135 software definitions; 0 scheduled.
 - Normalized **240** non-canonical `owner.type` values to the canonical vocabulary (e.g. `University` → `Academy`, `Private` → `Business`).
 - Corrected path/country placement and metadata for misfiled catalogs (e.g. OpenSLR → `World/`, SoDaNet → `GR/`, SAERI → `FK/`, Gibraltar geoportal → `GI/`, New Caledonia SPREP portal → `NC/`, Italian cadastre geoportal → `IT/`, ITIE Sénégal → `SN/`; Esri China HK and Uruguay INE metadata aligned with path).
 - Recalibrated quality priorities so integrity failures remain CRITICAL/IMPORTANT for CI while enrichment-track endpoint gaps stay MEDIUM/warning-only.
 - Added missing runtime dependencies to `requirements.txt`; aligned catalog-type keys and re3data HTML parsing with tests.
 
+
+
 ### Fixed
-- Cleared all **CRITICAL** and **IMPORTANT** integrity-track quality issues (remaining open issues are MEDIUM enrichment-track `SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*` only).
+
+- Cleared all **CRITICAL** and **IMPORTANT** integrity-track quality issues (remaining open issues are MEDIUM enrichment-track `SOFTWARE_EXPECTED_ENDPOINTS_MISSING_`* only).
 - Resolved `DUPLICATE_RECORD_ID` collisions (kept one record or renamed distinct same-domain services such as GeoServer vs IPT).
 - Resolved `DUPLICATE_LINK_NORMALIZED` pairs (29 groups): kept preferred keepers (https / non-www / non-Unknown), merged useful metadata, deleted www/duplicate copies.
 - Fixed `PATH_COUNTRY_MISMATCH`, `OWNER_LOCATION_SUBREGION_REQUIRED`, `COVERAGE_NORMALIZATION`, and `API_STATUS_MISMATCH` findings.
 
+
+
 ### Removed
+
 - Consolidated duplicate catalog YAML entries (duplicate ids and normalized-link twins), net reducing the registry from 14,470 to **14,436** entities.
+
+
 
 ## [1.8.0] - 2026-06-17
 
 **GitHub Release**: [v1.8.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.8.0) - Published June 17, 2026
 
 ### Added
+
 - **124 net new catalog entries** (560 added, 460 removed vs v1.7.0); export snapshot: **14,470** catalog records (entities).
 - Quality regression guard (`tests/test_quality_regression.py`) and CI job to prevent quality-issue count regressions.
 - Software taxonomy discovery guidance in `README.md` (`category`, `subtype` fields).
 - Agent and governance documentation links (`llms.txt`, `DATASHEET.md`, `CITATION.cff`, `SECURITY.md`, `CODE_OF_CONDUCT.md`).
 - Expanded `devdocs/quality-fix-workflow.md` and API detection regression tests.
 
+
+
 ### Changed
+
 - **3,312 catalog entries updated** with refreshed metadata; regenerated datasets and quality reports.
 - Export snapshots: 14,470 catalog records in `catalogs.jsonl` / `full.jsonl`; 135 software definitions; 0 scheduled.
 - Builder, apidetect, enrichment, and fix scripts improved; scope boundary documented in `AGENTS.md`.
 
+
+
 ### Removed
+
 - **460 catalog entries** removed (inactive, duplicate, or consolidated).
+
+
 
 ## [1.7.0] - 2026-02-24
 
 **GitHub Release**: [v1.7.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.7.0) - Published February 24, 2026
 
 ### Added
+
 - **1,647 new catalog entries** (net from v1.6.0); export snapshot: **14,346** catalog records (entities).
 
+
+
 ### Changed
+
 - **3,432 catalog entries updated** with refreshed metadata; regenerated datasets and quality reports.
 - Export snapshots: 14,346 catalog records in `catalogs.jsonl` / `full.jsonl`; 136 software definitions; 0 scheduled (all promoted or removed).
 
+
+
 ### Removed
+
 - **3,472 catalog entries** removed (inactive, duplicate, or consolidated).
 
+
+
 ### Fixed
+
 - Data quality rules and fixes (including API status mismatch handling).
 - Subregion name/ID mismatch fixes (`fix_subregion_name_id_mismatch.py`).
+
+
 
 ## [1.6.0] - 2026-02-21
 
 **GitHub Release**: [v1.6.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.6.0) - Published February 21, 2026
 
 ### Added
+
 - **95 new catalog entries** (including Community Statistics Yukon — community-statistics.service.yukon.ca).
 
+
+
 ### Changed
+
 - **156 catalog entries updated** with refreshed metadata and regenerated datasets and quality reports.
 - Export snapshots: **12,699** catalog records (entities); 136 software definitions; combined entities + scheduled in `full.jsonl`.
 
+
+
 ### Removed
+
 - **1 catalog entry** removed.
 
+
+
 ### Fixed
+
 - Improved API detection reliability; added regression coverage for apidetect.
+
+
 
 ## [1.5.0] - 2026-02-12
 
 **GitHub Release**: [v1.5.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.5.0) - Published February 12, 2026
 
 ### Changed
+
 - Refreshed catalog metadata across entity YAML records and rebuilt generated dataset artifacts.
 - Updated export snapshots in `README.md` to reflect the latest dataset counts (12,697 catalogs; 136 software definitions; 677 scheduled; 13,374 combined entities + scheduled records).
 - Refined release documentation in `CHANGELOG.md` and `README.md`.
 
+
+
 ### Removed
+
 - Removed legacy `History.md`; changelog history is maintained in `CHANGELOG.md`.
+
+
 
 ## [1.4.0] - 2026-02-09
 
 **GitHub Release**: [v1.4.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.4.0) - Published February 9, 2026
 
 ### Added
+
 - **208 new catalog entries** (12,489 total catalogs, up from 12,281)
 - **Many new CKAN data catalogs** from ecosystem.ckan.org synchronization
 - **Reference data files** for validation and consistency:
@@ -399,7 +573,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `docs/metadata-quality.md` - Metadata quality standards and guidelines
 - **OpenSpec proposal** for schema allowed values enhancement
 
+
+
 ### Changed
+
 - **Schema validation enhanced** with allowed values validation for key fields (access_mode, catalog_type, software.id, status)
 - **Raw JSONL files restored** - Both compressed (.zst) and uncompressed versions now available
 - **Updated entity metadata** across multiple catalog entries
@@ -409,29 +586,48 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Expanded CONTRIBUTING.md with quality fix workflow and scheduled-to-entities process
   - Updated README.md with latest statistics and data export information
 
+
+
 ### Fixed
+
 - Various metadata gaps and inconsistencies in catalog entries
 - Improved data quality through enhanced validation rules
 
+
+
 ### Removed
+
 - Legacy files cleaned up from repository
+
+
 
 ## [1.3.0] - 2025-12-10
 
+
+
 ### Added
+
 - Zstandard-compressed exports for `catalogs.jsonl`, `software.jsonl`, `scheduled.jsonl`, and `full.jsonl` plus a `datasets.duckdb` snapshot for analytics-friendly queries
 - New scientific and API catalogs across Switzerland, EU, France, Germany, Great Britain, and Italy (e.g., Agroportal, TechnoPortal HEVS, EarthPortal, W3C Linked Open Vocabularies, BiodivPortal, MATPortal, OLS4)
 - New API registry entry for `api.gov.it` and additional international research repositories
 - Generated data quality reports in `dataquality/` with helper scripts (`fix_*_issues.py`) for resolving flagged items
 
+
+
 ### Changed
+
 - Refreshed and expanded metadata for hundreds of catalog records across Americas, Europe, Asia, and Oceania
 - Rebuilt JSONL/Parquet exports and type/software slices (12,281 catalogs; 134 software platforms; 749 scheduled sources; 13,030 combined records)
 - Simplified CI test invocation to run from the repository root in `tests.yml`
 
+
+
 ## [1.2.0] - 2025-11-21
 
+
+
 ### Added
+
 - **1,993 new data catalog records** across multiple countries and regions
 - **1,515 ArcGIS Server instances** - massive expansion of geoportal coverage
 - **293 World-level catalogs** - international and global data repositories
@@ -453,27 +649,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - 6 NADA microdata catalogs
 - **Additional platforms**: 9 THREDDS servers, 5 Drupal-based catalogs, 3 DataFair instances
 
+
+
 ### Changed
+
 - **363 records updated** with improved metadata
 - Updated API endpoints for IPT-based data catalogs
 - Enhanced metadata completeness across multiple records
 - Improved catalog endpoints and identifiers
 - Better geographic and administrative region coverage
 
+
+
 ### Fixed
+
 - Multiple data errors and inconsistencies
 - Metadata gaps in existing records
 - Various catalog identifier issues
 - Endpoint validation and corrections
 
+
+
 ### Statistics
 
+
+
 #### Record Changes
+
 - **New records**: 1,993
 - **Modified records**: 363
 - **Deleted records**: 0
 
+
+
 #### Software Types (Top 15)
+
 - ArcGIS Server: 1,515
 - Custom/Unknown: 89
 - GeoServer: 83
@@ -490,7 +700,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Drupal: 5
 - DKAN: 5
 
+
+
 #### Catalog Types
+
 - Geoportal: 1,726 (86.6%)
 - Open data portal: 181 (9.1%)
 - Scientific data repository: 68 (3.4%)
@@ -499,9 +712,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Datasets list: 3
 - Metadata catalog: 2
 
+
+
 #### Geographic Coverage
 
 **Countries (Top 20)**:
+
 - United States: 1,472
 - World-level: 293
 - France: 97
@@ -524,6 +740,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Thailand: 3
 
 **United States - State Breakdown (Top 20)**:
+
 - Minnesota: 54
 - California: 51
 - Wisconsin: 43
@@ -546,14 +763,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - North Dakota: 12
 
 **Regional Coverage**:
+
 - Federal-level records: 1,138
 - US state-level records: 500+
 - French regions (Île-de-France): 25
 - Additional subregional coverage across multiple countries
 
+
+
 ## [1.1.0] - 2025-11-15
 
+
+
 ### Added
+
 - Comprehensive data quality analysis tool (`devdocs/analyze_duplicates_and_errors.py`)
   - Detects duplicate UID's and ID's across all records
   - Identifies missing required fields
@@ -561,29 +784,46 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Reports empty files and YAML parsing errors
   - Generates detailed reports in JSON, Markdown, and text formats
 
+
+
 ### Changed
+
 - Updated README.md with data quality and validation section
 - Added documentation for analysis tools in `devdocs/` directory
 
+
+
 ### Fixed
+
 - Identified 7 duplicate ID's (same ID in both entities and software directories)
 - Identified 204 records missing required `uid` field
 - Identified 63 files with filename mismatches
 - Identified 1 empty file requiring attention
 
+
+
 ## [2024-04-13]
 
+
+
 ### Added
+
 - Several scientific and geo data catalogs
 - Changelog (History.md)
 
+
+
 ### Fixed
+
 - Malawi geoportal uid
 - API endpoint errors
 - Schema mistakes and updated validation
 - Various catalog identifiers and metadata
 
+
+
 ### Changed
+
 - Major updates to Finnish data portals
 - Updated many scientific data catalogs
 - Updated API endpoints for multiple platforms

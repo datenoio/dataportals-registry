@@ -37,6 +37,7 @@ Platform-neutral workflow for adding or editing catalog YAML. Full human guide: 
 - `software.id` from `data/software/` (or `custom`)
 - Path country must match `owner.location.country.id` / coverage country
 - Regional/local owners: `owner.location.level` 30 and a subregion folder (`US-CA/`, …)
+- `properties.is_national: true` **only** for the country’s official catalog of that type (national open-data portal, NSDI/geoportal, or NSO statistical product). Do **not** set it because the owner is a central/federal agency, the file is under `Federal/`, or the host is `.gov`. Agency, thematic, scientific, and subnational catalogs get `is_national: false` or omit the key. Full rule: [data-model.md](../data-model.md#propertiesis_national)
 
 ## After editing
 

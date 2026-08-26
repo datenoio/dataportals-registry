@@ -20,7 +20,7 @@ The registry records **catalogs** (portals, geoportals, repositories, and simila
 | [Agents, Cursor, ChatGPT](discovery-agent-tools.md) | Configure MCP, APIs, Custom GPTs, and LLM clients to use those tools |
 | [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye, Piveau, Our Open Data, DataPress, ResourceContracts, RDF Online Repository, Guangxi, ODWeb |
 | [Geoportals](discovery-geoportals.md) | Overview; SDI stacks: [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md) (G3W-SUITE, CubeWerx, M.App Enterprise, Sentinel Hub); viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md) (Trimble Locus / Louhi / Landfolio, Spatial Suite, GEUSMAP, GISApp, iObčina, iShare, Cadcorp) |
-| [Scientific repositories](discovery-scientific.md) | Institutional IRs and CRIS (DSpace, Hyrax, Figshare, Pure, Converis, Omega-PSIR, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD); domain repos: [discovery-scientific-domain.md](discovery-scientific-domain.md) (InterMine, GRIN-Global, PlutoF, JGI, cBioPortal, ESA Science Archive) |
+| [Scientific repositories](discovery-scientific.md) | Institutional IRs and CRIS (DSpace, Hyrax, Figshare, Pure, Converis, Omega-PSIR, Archipelago, Redivis, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD); domain repos: [discovery-scientific-domain.md](discovery-scientific-domain.md) (InterMine, GRIN-Global, PlutoF, JGI, cBioPortal, ESA Science Archive) |
 | [Metadata catalogs](discovery-metadata.md) | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
 | [Indicators and microdata](discovery-indicators.md) | PxWeb, PxStat, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX, TabNet, SparkMap, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, StatPlanet |
 | [Search, ML, API, marketplaces](discovery-other.md) | Data search engines (Idra, OpenAIRE), ML catalogs, API directories, data marketplaces |
@@ -53,7 +53,7 @@ Search with the local language (`datos abiertos`, `données ouvertes`, `offene d
 
 ## Existing lists (start here) {#existing-lists-start-here}
 
-Many platforms publish installation galleries. Cross-check each URL against the registry before adding it. The README [data sources](https://github.com/datenoio/dataportals-registry/blob/main/README.md#data-sources) list is the full inventory; high-yield sources:
+Many platforms publish installation galleries. Cross-check each URL against the registry before adding it. High-yield sources:
 
 | Source | Typical catalogs |
 |--------|------------------|

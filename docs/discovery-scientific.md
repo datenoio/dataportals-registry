@@ -6,7 +6,7 @@ Do not add dataset-level records (a single Dataverse dataset, a Zenodo depositio
 
 | Page | Use when |
 |------|----------|
-| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, OPUS, RADAR, Yoda, Hyrax, Figshare, Pure, Converis, Omega-PSIR, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, …) |
+| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, OPUS, RADAR, Yoda, Hyrax, Figshare, Redivis, Pure, Converis, Omega-PSIR, Archipelago, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, …) |
 | [Domain repositories](discovery-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, SciCat |
 
 All `software.id` values: [software-index.md](software-index.md). Harvest filters: [harvest-scientific.md](harvest-scientific.md), [harvest-scientific-domain.md](harvest-scientific-domain.md).
@@ -147,6 +147,21 @@ Register distinct **Local** hosts (KonDATA, WueData, Datathek, FoDaSi, OstData, 
 | re3data | software filter **RADAR** |
 
 Skip the FIZ product/marketing site (`radar.products.fiz-karlsruhe.de`) and dataset landing pages (`/radar/de/dataset/{id}`).
+
+## Redivis (`redivis`) {#redivis}
+
+Hosted research-data platform ([redivis.com](https://redivis.com)). Academic orgs get `{org}.redivis.com` workspaces (Stanford Data Farm, AIMI, and similar). **Signals:** title “Redivis” or “Data Farm”, scripts from `redivis.com/static/`, JSON-LD `Organization`, OpenAPI at `/api/v1/openapi.json`.
+
+**Confirm:** `GET https://host/api/v1/openapi.json` titled Redivis API. Use `software.id: redivis`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"powered by Redivis" OR "Redivis" ("data farm" OR datasets) site:.edu` |
+| Google | `site:redivis.com -site:docs.redivis.com` |
+| Censys | `web.endpoints.http.body: "redivis.com/static"` |
+| crt.sh | `%.redivis.com` |
+
+Register the **organization root** (`https://stanford.redivis.com`), not a nested dataset URL and not every `/ORG/datasets` collection. Skip `docs.redivis.com` and individual dataset pages.
 
 ## Yoda (`yoda`) {#yoda}
 
@@ -321,6 +336,17 @@ Public Drupal + Fedora repository UI. Prefer `islandora` over `fedora` when user
 | Tool | Query |
 |------|-------|
 | Google | `"Islandora" (repository OR collections) -site:github.com` |
+
+## Archipelago Commons (`archipelago`) {#archipelago}
+
+Drupal digital-objects repository (Strawberryfield JSON ADOs), not Islandora. Official instance list: [Archipelagos in the Wild](https://docs.archipelago.nyc/1.6.0/inthewild/). Prefer `archipelago` over `drupal` when `/do/{uuid}` objects and Solr `/search?search_api_fulltext=` are the catalog.
+
+**Confirm:** public `/search` (or `/do/` object pages) plus strawberryfield / Cantaloupe / “indexed Digital Objects”. Keep catalogs that include **Dataset** ADOs or structured scientific accessions (germplasm, isolate records). Skip METRO playgrounds, finding-aid-only sites, web-archive demos, and login-only tenants.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Archipelago Commons" OR "indexed Digital Objects" OR strawberryfield (repository OR collections) -site:github.com -site:docs.archipelago.nyc` |
+| Censys | `web.endpoints.http.body: "strawberryfield"` |
 
 ## Samvera (`samvera`) {#samvera}
 

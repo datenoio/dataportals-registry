@@ -77,6 +77,7 @@ Integrity-track CRITICAL and IMPORTANT counts must not grow (`dataquality/baseli
 | `SUBREGION_NAME_ID_MISMATCH` | Integrity | Match subregion `id` to the reference name |
 | `OWNER_TYPE_NONCANONICAL` | Enrichment | Map synonyms (`NGO` → `Civil society`, `University` → `Academy`) |
 | `PATH_COUNTRY_MISMATCH` | Integrity | Directory country must match owner/coverage country |
+| `IS_NATIONAL_AGENCY_OR_TOPIC` | Enrichment | Set `properties.is_national: false`. The flag is only for the official national catalog of that type (open-data portal, NSDI/geoportal, or NSO product), not agency/thematic/scientific/subnational catalogs. See [data-model.md](data-model.md#propertiesis_national) |
 | `SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*` | Enrichment | Add the harvest endpoints typical for that `software.id` |
 
 ## LOW (enrichment unless noted)

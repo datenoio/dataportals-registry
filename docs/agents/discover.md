@@ -23,7 +23,7 @@ Do not invent `uid`. Do not add dataset-level records. Do not implement producti
 
 ```sql
 SELECT id, uid, name, link, catalog_type, status,
-       json_extract_string(software, '$.id') AS software_id
+       software.id AS software_id
 FROM catalogs
 WHERE lower(link) LIKE '%example.gov%'
    OR id = 'examplegov';
@@ -33,7 +33,7 @@ Match on hostname, not display name. `id` is not a URL.
 
 ## Discovery order
 
-1. **Vendor and government lists** in [discovery.md](../discovery.md) and the README data-sources section — highest yield, fewest false positives.
+1. **Vendor and government lists** in [discovery.md](../discovery.md) — highest yield, fewest false positives.
 2. **Vendor lists and Graph dumps** (preview only until the user wants files written):
 
    ```bash
@@ -87,6 +87,8 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `/prod/v1/api/v1/info` NOMAD Oasis | `nomad` | Scientific data repository |
 | InterMine `/begin.do` / `/service/version` | `intermine` | Scientific data repository |
 | `/gringlobal/` accession search | `gringlobal` | Scientific data repository |
+| `/do/{uuid}` + strawberryfield / “indexed Digital Objects” | `archipelago` | Scientific data repository |
+| `{org}.redivis.com` / OpenAPI titled Redivis | `redivis` | Scientific data repository |
 | PlutoF workbench (`api.plutof.ut.ee`) | `plutof` | Scientific data repository |
 | MycoCosm / Phytozome / JGI Genome Portal | `jgi` | Scientific data repository |
 | cBioPortal `/api/info` `portalVersion` | `cbioportal` | Scientific data repository |

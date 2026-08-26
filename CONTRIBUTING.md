@@ -166,7 +166,7 @@ Allowed `catalog_type` values and type folders: [docs/catalog-types.md](docs/cat
 
 Field reference, owner types, geographic levels, identifiers, and endpoints: [docs/data-model.md](docs/data-model.md) and [docs/vocabularies.md](docs/vocabularies.md). Re3Data enrichment: [docs/re3data.md](docs/re3data.md).
 
-Required fields: `id`, `uid`, `name`, `link`, `catalog_type`, `access_mode`, `status`, `software` (`id` + `name`), `owner` (`name`, `type`, `location.country`), `coverage`. Use canonical `owner.type` values (`Civil society`, not `NGO`).
+Required fields: `id`, `uid`, `name`, `link`, `catalog_type`, `access_mode`, `status`, `software` (`id` + `name`), `owner` (`name`, `type`, `location.country`), `coverage`. Use canonical `owner.type` values (`Civil society`, not `NGO`). `properties.is_national` is only for the official national catalog of that type — [docs/data-model.md](docs/data-model.md#propertiesis_national).
 
 Minimal verified-entity example (`data/entities/US/Federal/opendata/catalogdatafaagov.yaml`):
 

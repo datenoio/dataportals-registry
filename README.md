@@ -1,65 +1,134 @@
 # dataportals-registry
-Registry of data portals, catalogs, data repositories and related data infrastructure.
 
-This is the first pillar of the open search engine project. Other pillars include:
-* **registry of all catalogs** (this one)
-* datasets raw metadata database
-* unified dataset search index and search engine
-* datasets backup and file cache
+A global registry of data portals, catalogs, data repositories, and related data infrastructure.
 
-Please take a look at [project mindmap](/assets/commondataindex.png) to see its goals and structure.
+**Working tree (26 August 2026):** **23,338** verified catalogs · **264** software platforms · **219** countries and territories · **0** scheduled records.
 
-Source of truth is YAML under `data/entities/`. Consumers should use the exported JSONL, Parquet, and DuckDB datasets. Production search APIs live in [dateno-api](https://github.com/datenoio/dateno-api); this repository does not host a query API or MCP server.
+Last published snapshot: [v1.17.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.17.0), 25 August 2026 (**22,750** catalogs · **262** software · **0** scheduled).
+
+This is the catalog-metadata pillar of the [Common Data Index](https://dateno.io) / open search engine. It describes **catalogs** (open data portals, geoportals, scientific repositories, indicator sites, and similar infrastructure), not the datasets those catalogs hold.
+
+- **Source of truth:** YAML under [`data/entities/`](data/entities/)
+- **Consume:** JSONL, Parquet, and DuckDB under [`data/datasets/`](data/datasets/) — do not parse thousands of YAML files
+- **Out of scope:** this repository does not host a production query API or MCP server
+
+Code is [MIT](LICENSE); data and documentation are [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Inspired by [re3data](https://www.re3data.org/) and [FAIRsharing](https://fairsharing.org/), with a broader focus on open data of every kind — government, geospatial, scientific, and statistical — not only research data.
+
+## Using the data
+
+Python **3.10–3.12**. Install deps with `pip install -r requirements.txt`. Nested fields in DuckDB and Parquet are native `STRUCT` / `LIST` types; query them with field access, not `LIKE` on JSON text.
+
+```bash
+duckdb data/datasets/datasets.duckdb \
+  -c "SELECT id, name, link FROM catalogs WHERE software.id = 'ckan' LIMIT 10;"
+```
+
+```python
+import duckdb
+
+con = duckdb.connect("data/datasets/datasets.duckdb")
+con.execute(
+    """
+    SELECT id, name, link
+    FROM catalogs
+    WHERE catalog_type = 'Open data portal'
+      AND list_contains(
+            list_transform(coverage, x -> x.location.country.id),
+            'US'
+          )
+    LIMIT 10
+    """
+).fetchall()
+```
+
+More patterns: [docs/query-examples.md](docs/query-examples.md). Join keys and column types: [docs/ai-consumers.md](docs/ai-consumers.md).
+
+### Data exports
+
+Last published snapshot (**v1.17.0**, 2026-08-25: 22,750 catalogs, 262 software, 0 scheduled). Working-tree dumps last rebuilt at **22,835** catalogs / **26** scheduled; source YAML is now **23,338** entities / **0** scheduled. Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
+
+| File | Contents |
+|------|----------|
+| `data/datasets/catalogs.jsonl` (+ `.zst`) | **22,835** verified catalog records (export lag) |
+| `data/datasets/software.jsonl` (+ `.zst`) | **264** software / platform definitions |
+| `data/datasets/scheduled.jsonl` (+ `.zst`) | **26** records in the last export (source YAML is empty) |
+| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**22,861**) |
+| `data/datasets/full.parquet`, `data/datasets/datasets.duckdb` | Analytics-friendly copies of `full.jsonl` |
+
+Rebuild from YAML (never hand-edit `data/datasets/`):
+
+```bash
+python scripts/builder.py build
+```
+
+Decompress `.zst` with `unzstd file.zst`. Filter by `catalog_type` or `software.id` in DuckDB or Parquet; there are no pre-sliced `bytype/` or `bysoftware/` dumps.
+
+## What is in the registry
+
+Each record is one catalog: name, URL, owner, geographic coverage, software platform, API/harvest endpoints, and optional identifiers (Wikidata, re3data, OpenAIRE, …).
+
+| `catalog_type` | Folder | Typical contents |
+|----------------|--------|------------------|
+| Open data portal | `opendata/` | Government and institutional open data |
+| Geoportal | `geo/` | Spatial data, OGC services, map viewers |
+| Scientific data repository | `scientific/` | Research data, CRIS, institutional repos |
+| Indicators catalog | `indicators/` | Statistical indicators, SDMX, dashboards |
+| Microdata catalog | `microdata/` | Survey / census microdata |
+| Machine learning catalog | `ml/` | ML datasets and models |
+| Data search engine | `search/` | Cross-catalog search / aggregators |
+| API Catalog | `api/` | API directories |
+| Data marketplace | `marketplace/` | Commercial data markets |
+| Metadata catalog | `metadata/` | Metadata registries |
+| Other | `other/` | Uncategorized |
+
+Use this registry to find portals by country, type, or software, join catalogs to external identifiers, or feed a downstream harvester from `endpoints[]`. Do **not** use it to search for a dataset by title — harvest the remote catalog instead ([docs/harvest.md](docs/harvest.md)). Scope: [docs/when-to-use.md](docs/when-to-use.md).
 
 ## Documentation
 
 Published internals for humans and coding agents:
 
-- Site (GitHub Pages): <https://datenoio.github.io/dataportals-registry/>
-- Source markdown: [`docs/`](docs/)
-- Agent index: [`llms.txt`](llms.txt) (also served at `/dataportals-registry/llms.txt`)
-- Local preview: `cd website && npm install && npm run start`
+| Goal | Start here |
+|------|------------|
+| Docs site | <https://datenoio.github.io/dataportals-registry/> |
+| Getting started | [docs/getting-started.md](docs/getting-started.md) |
+| Field reference and vocabularies | [docs/data-model.md](docs/data-model.md), [docs/vocabularies.md](docs/vocabularies.md), [docs/catalog-types.md](docs/catalog-types.md) |
+| Software IDs | [docs/software-index.md](docs/software-index.md), [docs/software-taxonomy.md](docs/software-taxonomy.md) |
+| Find catalogs not yet registered | [docs/discovery.md](docs/discovery.md) |
+| Harvest datasets from a catalog API | [docs/harvest.md](docs/harvest.md) |
+| CLI | [docs/cli.md](docs/cli.md) |
+| Agent index | [`llms.txt`](llms.txt) (also `/dataportals-registry/llms.txt` on the docs site) |
 
-Working notes and one-off analyses live in [`devdocs/`](devdocs/), not on the site.
+Source markdown lives in [`docs/`](docs/). Local preview: `cd website && npm install && npm run start`. Working notes stay in [`devdocs/`](devdocs/) and are not on the site.
 
-## What kind of data catalogs collected?
+## Repository layout
 
-This registry includes description of the following data catalogs:
-* Open data portals
-* Geoportals
-* Scientific data repositories
-* Indicators catalogs
-* Microdata catalogs
-* Machine learning catalogs
-* Data search engines
-* API Catalogs
-* Data marketplaces
-* Metadata catalogs
-* Other 
+Catalog YAML: `data/entities/{COUNTRY}/{Federal|SUBREGION}/{type}/{id}.yaml`. Filename must equal `id` (lowercase letters and digits only). Layout and field rules: [docs/directory-layout.md](docs/directory-layout.md), [docs/data-model.md](docs/data-model.md).
 
+```
+data/entities/{CC}/{Federal|SUBREGION}/{type}/{id}.yaml   verified catalogs
+data/scheduled/                                          unverified (promote later)
+data/software/                                           platform definitions
+data/schemes/                                            Cerberus + JSON Schema
+data/reference/                                          controlled vocabularies
+data/datasets/                                           generated exports (do not edit)
+```
 
-
-## Inspiration
-
-This project is inspired by Re3Data and FAIRsharing. The key difference is the focus on open data as a broad topic, not just open research data.
-
-## How this repository is organized
-
-Catalog YAML lives under `data/entities/{COUNTRY}/{Federal|SUBREGION}/{type}/{id}.yaml`. Layout, field rules, and software IDs: [docs/directory-layout.md](docs/directory-layout.md), [docs/data-model.md](docs/data-model.md), [docs/software-taxonomy.md](docs/software-taxonomy.md).
-
-### Example
-
-FAA Open Data Portal (`data/entities/US/Federal/opendata/catalogdatafaagov.yaml`):
+Example — FAA Open Data Portal (`data/entities/US/Federal/opendata/catalogdatafaagov.yaml`):
 
 ```yaml
+id: catalogdatafaagov
+uid: cdi00005263
+name: Federal Aviation Administration Open Data Portal
+link: https://catalog.data.faa.gov
+catalog_type: Open data portal
 access_mode:
 - open
+status: active
 api: true
 api_status: active
-catalog_type: Open data portal
-id: catalogdatafaagov
-link: https://catalog.data.faa.gov
-name: Federal Aviation Administration Open Data Portal
+software:
+  id: ckan
+  name: CKAN
 owner:
   name: Federal Aviation Administration
   type: Central government
@@ -68,159 +137,86 @@ owner:
       id: US
       name: United States
     level: 20
-software:
-  id: ckan
-  name: CKAN
-status: active
-uid: cdi00005263
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
 ```
 
-### Datasets and code
+`properties.is_national: true` only for the country’s official catalog of that type (national open-data portal, NSDI/geoportal, or NSO product) — not because the owner is a federal agency. See [docs/data-model.md](docs/data-model.md#propertiesis_national).
 
-Generated exports live in `data/datasets/`. Rebuild from the repository root:
+## Finding catalogs
 
-```bash
-python scripts/builder.py build
-```
+**Already in this registry**
 
-Do not hand-edit `data/datasets/`.
-
-## Data exports
-
-Last published snapshot (**v1.17.0**, 2026-08-25):
-
-- `data/datasets/catalogs.jsonl` (+ `.zst`): **22,750** catalog records
-- `data/datasets/software.jsonl` (+ `.zst`): **262** software/platform definitions
-- `data/datasets/scheduled.jsonl` (+ `.zst`): **0** scheduled sources to crawl
-- `data/datasets/full.jsonl` (+ `.zst`): **22,750** combined entities + scheduled records
-- `data/datasets/full.parquet`, `data/datasets/datasets.duckdb`: analytics-friendly exports
-
-Working-tree exports match source YAML and the published snapshot: **22,750** entities, **0** scheduled, **262** platform definitions, **219** country/territory folders (first Jersey `JE` and Saint Helena `SH` roots). Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
-
-Run `python scripts/builder.py build` to refresh JSONL, Parquet, and DuckDB to match source. All `.zst` files can be decompressed with `unzstd file.zst` (zstd). Filter by catalog type or software in DuckDB rather than looking for pre-sliced dumps.
-
-## Discovery
-
-How to find catalogs **already in this registry**:
-
-**By geography**  
-- Entity YAMLs live under `data/entities/COUNTRY_CODE/` (e.g. `US`, `FR`, `BR`).  
-- Use `Federal/` for federal-level catalogs and subregion codes for states/regions (e.g. `US-CA`, `US-VA`, `BR-SP`).  
-- One YAML per catalog; filename is the catalog `id`.
-
-**By catalog type**  
-- Under each country (or `scheduled/`), type folders: `opendata/`, `geo/`, `scientific/`, `microdata/`, `indicators/`, `ml/`, `search/`, `api/`, `marketplace/`, `metadata/`, `other/`.
-
-**By software taxonomy**  
-- Software definitions in `data/software/` include:
-  - `category`: domain family (Open data portal, Geoportal, Scientific data repository, etc.)
-  - `subtype`: product form/deployment model (for example `data_portal_platform`, `managed_saas_service`, `protocol_or_api_server`)
-- Use `subtype` for cross-category comparisons such as self-hosted platforms vs managed SaaS vs protocol-first components.
-
-**From export artifacts**  
-- **catalogs.jsonl** / **full.jsonl**: line-delimited JSON (entities only, or entities + scheduled).  
-- **full.parquet**, **data/datasets/datasets.duckdb**: for analytics; query with DuckDB or pandas.
-
-Example DuckDB query (all CKAN catalogs in the US from the full export). The built DuckDB store normalizes nested fields to JSON strings, so filter on the `software` and `coverage` string columns:
+- **By geography:** `data/entities/{COUNTRY_CODE}/` (for example `US`, `FR`, `BR`). `Federal/` is national/central; subregion folders are ISO 3166-2 style (`US-CA`, `GB-SCT`, `BR-SP`).
+- **By type:** under each country, `opendata/`, `geo/`, `scientific/`, `indicators/`, `microdata/`, `ml/`, `search/`, `api/`, `marketplace/`, `metadata/`, `other/`.
+- **By software:** filter `software.id` in DuckDB (canonical IDs: [docs/software-index.md](docs/software-index.md)). Platform YAML in `data/software/` also has `category` and `subtype` for self-hosted vs SaaS vs protocol-first comparisons.
+- **By URL / id:** query `catalogs` rather than walking YAML:
 
 ```sql
-SELECT id, name, link
+SELECT id, name, link, catalog_type, status
 FROM catalogs
-WHERE software LIKE '%"id":"ckan"%'
-  AND coverage LIKE '%"id":"US"%';
+WHERE lower(link) LIKE '%data.faa.gov%'
+   OR id = 'catalogdatafaagov';
 ```
 
-How to find catalogs **not yet in this registry** (search lists, identify software, avoid duplicates): [docs/discovery.md](docs/discovery.md) for humans and [docs/agents/discover.md](docs/agents/discover.md) for coding agents. Search-engine recipes (Google, Censys, Shodan, FOFA): [docs/discovery-search-tools.md](docs/discovery-search-tools.md). Configure those tools in Cursor, ChatGPT, and other LLM clients: [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md). Per-platform queries: [open data](docs/discovery-opendata.md), [geoportals](docs/discovery-geoportals.md), [scientific](docs/discovery-scientific.md), [metadata](docs/discovery-metadata.md), [indicators and microdata](docs/discovery-indicators.md), [search / ML / API / marketplaces](docs/discovery-other.md). Endpoint fill: [docs/apidetect.md](docs/apidetect.md). URL liveness: [docs/liveness.md](docs/liveness.md). Dataset harvest from catalog APIs: [docs/harvest.md](docs/harvest.md).
+**Not yet in this registry**
 
-## Data Quality and Validation
+Vendor galleries, search-engine recipes, and per-platform fingerprints: [docs/discovery.md](docs/discovery.md) (humans) and [docs/agents/discover.md](docs/agents/discover.md) (agents). Search tools: [docs/discovery-search-tools.md](docs/discovery-search-tools.md). LLM / MCP setup: [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md). Endpoint fill: [docs/apidetect.md](docs/apidetect.md). URL liveness: [docs/liveness.md](docs/liveness.md).
 
-The repository includes tools for analyzing and validating data quality:
+## Data quality
 
-- **Duplicate Detection**: Exact and normalized URL duplicates (`DUPLICATE_LINK` / `DUPLICATE_LINK_NORMALIZED`) plus same-id collisions (`DUPLICATE_RECORD_ID`), with a preferred keeper (https, non-www, non-Unknown path)
-- **Path and owner consistency**: File-path country vs owner/coverage country (`PATH_COUNTRY_MISMATCH`); regional/local owners require `owner.location.level=30` and matching subregion directory
-- **Owner type vocabulary**: Canonical values and synonyms in `data/reference/owner_types.yaml` (`OWNER_TYPE_NONCANONICAL` / `INVALID_OWNER_TYPE`)
-- **Schema Validation**: Validation against JSON schemas in `data/schemes/`
-- **Data Quality Reports**: Analysis reports written to the `dataquality/` directory (by rule, priority, and country)
-
-CI guards integrity-track regressions via `dataquality/baseline_counts.json`.
-
-To run data quality analysis:
+Quality analysis flags duplicate URLs, path/owner country mismatches, non-canonical owner types, schema violations, and related issues. CI guards regressions with `dataquality/baseline_counts.json`. Issue codes: [docs/quality-rules.md](docs/quality-rules.md).
 
 ```bash
+python scripts/builder.py validate-yaml
 python scripts/builder.py analyze-quality
 ```
 
-Reports are written to `dataquality/` (e.g. `full_report.txt`, `primary_priority.jsonl`, and per-country/per-priority breakouts).
+Reports land in `dataquality/` (`full_report.txt`, `primary_priority.jsonl`, plus per-country and per-priority breakouts). Helper scripts `scripts/fix_*_issues.py` apply automated fixes by priority. Workflow: [docs/metadata-quality.md](docs/metadata-quality.md).
 
-See [devdocs/quality-fix-workflow.md](devdocs/quality-fix-workflow.md), [docs/metadata-quality.md](docs/metadata-quality.md), and `dataquality/full_report.txt` for current findings. Helper scripts (`scripts/fix_*_issues.py`) can apply automated fixes based on reported priorities.
+## Contributing
 
-## Agent and governance documentation
+Fixes and new catalogs are welcome via [pull request](https://github.com/datenoio/dataportals-registry/pulls) or [issue](https://github.com/datenoio/dataportals-registry/issues). Full guide: [CONTRIBUTING.md](CONTRIBUTING.md). Agents: [docs/agents/contribute.md](docs/agents/contribute.md).
 
-- [llms.txt](llms.txt) — concise index for LLM agents
-- [DATASHEET.md](DATASHEET.md) — dataset characteristics, bias, and limitations
-- [CITATION.cff](CITATION.cff) — academic citation metadata
+```bash
+python scripts/builder.py add-single "https://example.com/data" \
+  --software ckan \
+  --catalog-type "Open data portal" \
+  --name "Example Data Portal" \
+  --country US \
+  --scheduled
+
+python scripts/builder.py assign
+python scripts/builder.py validate-yaml --id examplecom
+```
+
+Prefer `--scheduled` for unverified finds; promote later ([docs/scheduled.md](docs/scheduled.md)). Duplicate `link` values fail quality checks.
+
+## Enrichment pipelines
+
+| Pipeline | Script | Docs |
+|----------|--------|------|
+| Re3Data metadata into `_re3data` | `python scripts/re3data_enrichment.py enrich --dry-run` | [docs/re3data.md](docs/re3data.md) |
+| CKAN sites from [ecosystem.ckan.org](https://ecosystem.ckan.org/dataset/ckan-sites-metadata) | `python scripts/sync_ckan_ecosystem.py --dry-run` | [docs/ckan-sync.md](docs/ckan-sync.md) |
+| OpenAIRE Graph data sources | `python scripts/extract_openaire_portals.py list-sources --output /tmp/openaire_sources.json` | [docs/openaire-sync.md](docs/openaire-sync.md) |
+
+## Citation
+
+See [CITATION.cff](CITATION.cff) and [DATASHEET.md](DATASHEET.md) (purpose, bias, limitations).
+
+```
+dataportals-registry: A global registry of open data portals and catalogs
+(Common Data Index, 2026). CC-BY-4.0.
+https://github.com/datenoio/dataportals-registry
+```
+
+## License and community
+
+- **Code:** MIT
+- **Data:** CC BY 4.0
 - [SECURITY.md](SECURITY.md) — vulnerability reporting
 - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) — community standards
-
-## Re3Data enrichment
-
-Catalogs with a re3data identifier can be enriched into `_re3data`. Preview with `python scripts/re3data_enrichment.py enrich --dry-run`. Full workflow: [docs/re3data.md](docs/re3data.md).
-
-## CKAN ecosystem synchronization
-
-Discover CKAN sites from [ecosystem.ckan.org](https://ecosystem.ckan.org/dataset/ckan-sites-metadata). Preview with `python scripts/sync_ckan_ecosystem.py --dry-run`. Full workflow: [docs/ckan-sync.md](docs/ckan-sync.md).
-
-## OpenAIRE Graph data sources
-
-List research data repositories registered in the [OpenAIRE Graph](https://graph.openaire.eu/docs/apis/graph-api/data-sources/). Preview with `python scripts/extract_openaire_portals.py list-sources --output /tmp/openaire_sources.json`. Full workflow: [docs/openaire-sync.md](docs/openaire-sync.md).
-
-## How to contribute?
-
-If you find any mistake or you have an additional data catalog to add, please generate [pull request](https://github.com/datenoio/dataportals-registry/pulls) or write an [issue](https://github.com/datenoio/dataportals-registry/issues).
-
-## Data sources
-
-Following data sources used:
-
-* Stac Catalogs	https://stacindex.org/catalogs - done
-* Dataverse Installations	https://iqss.github.io/dataverse-installations/data/data.json - done
-* Open Data Inception	https://data.opendatasoft.com/explore/dataset/open-data-sources%40public/information/ - done
-* CKAN Portals across the world	https://datashades.info/ - done
-* CKAN Ecosystem Sites	https://ecosystem.ckan.org/dataset/ckan-sites-metadata - done (automated sync)
-* Geonetwork Showcase	https://github.com/geonetwork/doc/blob/develop/source/annexes/gallery/gallery-urls.csv - done
-* PxWeb examples	https://www.scb.se/en/services/statistical-programs-for-px-files/px-web/pxweb-examples/ - done
-* DKAN Community	https://getdkan.org/community - done
-* Junar Clients	https://junar.com/customers/ - done
-* Datashades data portals list	https://datashades.info/api/portal/list - done
-* OpenSDG installations	https://open-sdg.org/community - done
-* MyCore Installations	https://www.mycore.de/site/applications/list/ - done
-* Elsevier Pure installations - https://www.elsevier.com/solutions/pure/pure-in-action - done
-* CoreTrustSeal Repositories https://amt.coretrustseal.org/certificates - done
-* GeoOrchestra installations https://www.georchestra.org/community.html - done
-* CKAN Ecosystem https://ecosystem.ckan.org
-* EUDAT Repositories	https://b2find.eudat.eu/organization/
-* Data.Europe.eu catalogues	https://data.europa.eu/data/catalogues?locale=en
-* Re3Data	https://www.re3data.org/
-* OpenAIRE Graph data sources	https://api.openaire.eu/graph/v3/datasources - automated (`scripts/extract_openaire_portals.py`)
-* RISources	https://risources.dfg.de
-* Spanish opendata initiatives https://datos.gob.es/en/accessible-initiatives
-* INSPIRE Country catalogs	https://inspire-geoportal.ec.europa.eu/overview.html?view=thematicEuOverview&theme=none
-* Socrata OpenDataNetwork	https://www.opendatanetwork.com/search?q= - done
-* ArcGIS Hub search	https://hub.arcgis.com/ - done
-* Brazilian Catalogs of geodata metadata https://inde.gov.br/Estatisticas/CatalogosMetadados
-* Open Data Monitor (outdated, but useful) https://www.opendatamonitor.eu
-* List of French open data catalogs https://airtable.com/shrWxHPi2XjLu9xtM/tblwklJPsyayeH5lX
-* Brazilian local government (state and municipal) open data portals https://github.com/augusto-herrmann/transparencia-dados-abertos-brasil/blob/main/data/valid/brazilian-transparency-and-open-data-portals.csv
-* Russian and CIS countries data catalogs https://datacatalogs.ru
-* EntryScape customers (Sweden) https://entryscape.com/en/customers/ - done
-* Geolode, catalog of open geodata websites https://geolode.org
-* WebCommons Dataset subset http://webdatacommons.org/structureddata/2022-12/stats/schema_org_subsets.html
-* Major Smart Cities with Open Data (updated 2019) https://rlist.io/l/major-smart-cities-with-open-data-portals
-* Registry of Open Access Repositories http://roar.eprints.org
-* IPT: Integrated Publishing Toolkit installations - https://www.gbif.org/ipt
-* Geoblacklight showcase - https://geoblacklight.org/showcase/ - done
-
-## License
-
-Source code licensed under MIT license
-Data licensed under CC-BY 4.0 license

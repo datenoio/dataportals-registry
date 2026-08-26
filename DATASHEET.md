@@ -20,7 +20,7 @@ Each record describes one data catalog or repository: name, URL, owner, geograph
 
 ### How many instances?
 
-Approximately **22,750** verified entity YAML records (v1.17.0, 25 August 2026), plus **0** scheduled records. Export counts are listed in [README.md](README.md#data-exports).
+Approximately **23,338** verified entity YAML records (working tree, 26 August 2026), plus **0** scheduled records. Last published snapshot is v1.17.0 (22,750 entities, 0 scheduled). Export counts are listed in [README.md](README.md#data-exports).
 
 ### What data does each instance consist of?
 
@@ -31,7 +31,7 @@ YAML source files validated against `data/schemes/catalog.json`. Required fields
 ### How was the data associated with each instance acquired?
 
 - Manual curation and community contributions
-- Bulk imports from public lists (CKAN ecosystem, STAC index, Dataverse installations, INSPIRE geoportals, etc.; see README data sources)
+- Bulk imports from public lists (CKAN ecosystem, STAC index, Dataverse installations, INSPIRE geoportals, etc.; see [docs/discovery.md](docs/discovery.md#existing-lists-start-here))
 - Automated sync scripts (`sync_ckan_ecosystem.py`, enrichment from Re3Data)
 - Quality checks and fix scripts (`scripts/builder.py analyze-quality`, `scripts/fix_*_issues.py`)
 
@@ -71,9 +71,9 @@ Yes. Schema validation, software normalization, subregion ISO 3166-2 checks, URL
 
 ### Geographic coverage bias
 
-Coverage is **uneven by country**. United States records are heavily over-represented (~31% of entity records), followed by France, Spain, United Kingdom, Canada, and Germany. Many countries have sparse or no coverage.
+Coverage is **uneven by country**. United States records are heavily over-represented (~29.5% of entity YAML), followed by Germany, France, the United Kingdom, Canada, and Spain. Many countries have sparse or no coverage.
 
-Type mix is **geoportal-heavy**: about **57%** of export rows are `catalog_type: Geoportal` (ArcGIS Server and ArcGIS Hub are the largest `software.id` values). About **15%** of catalogs use `software.id: custom` (no shared platform recipe). Scientific repositories and open-data portals are smaller slices than the page count of those guides might suggest.
+Type mix is **geoportal-heavy**: about **50%** of source YAML rows are `catalog_type: Geoportal` (ArcGIS Server and ArcGIS Hub are the largest `software.id` values). About **24%** of catalogs use `software.id: custom` (no shared platform recipe). Scientific repositories are about **24%** and open-data portals about **19%**.
 
 ### Metadata completeness
 

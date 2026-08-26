@@ -21,10 +21,10 @@ Do not mix these three numbers. Exports lag YAML until `python scripts/builder.p
 | Layer | Date | Catalogs | Scheduled | Software | Countries |
 |-------|------|----------|-----------|----------|-----------|
 | **Published GitHub snapshot** | v1.17.0, 25 August 2026 | **22,750** | **0** | **262** | **219** |
-| **Working-tree exports** | last `build` in this tree | **22,750** (`catalogs.jsonl`) | **0** | **262** | **219** |
-| **Current source YAML** | 25 August 2026 | **22,750** (`data/entities/`) | **0** (`data/scheduled/`) | **262** | **219** |
+| **Working-tree exports** | last `build` in this tree (26 August 2026) | **22,835** (`catalogs.jsonl`) | **26** | **264** | **219** |
+| **Current source YAML** | 26 August 2026 | **23,338** (`data/entities/`) | **0** (`data/scheduled/`) | **264** | **219** |
 
-Working-tree dumps match the published v1.17.0 GitHub release. Canonical software IDs: `data/reference/software_ids.yaml`.
+Working-tree dumps last rebuilt at 22,835 catalogs; source YAML is now **23,338**. Canonical software IDs: `data/reference/software_ids.yaml`.
 
 Filter by catalog type or software in DuckDB / Parquet (see [query-examples.md](query-examples.md)); there are no pre-sliced `bytype/` or `bysoftware/` dumps.
 
@@ -36,15 +36,18 @@ Incidental files such as `software_stats.csv` or `fulldbreg.parquet` may appear 
 
 ## DuckDB columns
 
-`datasets.duckdb` table `catalogs` (August 2026 build). Nested objects are `VARCHAR` JSON strings; `api` is `BOOLEAN`.
+`datasets.duckdb` table `catalogs` (same nested types as `full.parquet`). Lists are DuckDB `LIST` (`VARCHAR[]` or `STRUCT[]`); objects are `STRUCT`. Query with field access (`software.id`) and list functions (`list_contains`, `unnest`, `list_transform`) rather than `LIKE` on JSON text. Heterogeneous Re3Data leaves may remain `JSON`. `api` is `BOOLEAN`.
 
 | Column | JSONL type | DuckDB |
 |--------|------------|--------|
-| `id`, `uid`, `name`, `link`, `catalog_type`, `status`, `api_status`, `description` | string | VARCHAR |
+| `id`, `uid`, `name`, `link`, `catalog_type`, `status`, `api_status`, `description`, `catalog_export` | string | VARCHAR |
 | `api` | boolean | BOOLEAN |
-| `access_mode`, `content_types`, `coverage`, `endpoints`, `identifiers`, `langs`, `owner`, `properties`, `rights`, `software`, `tags`, `topics`, `_re3data` | list/object | VARCHAR (JSON text) |
+| `access_mode`, `content_types`, `tags` | list of strings | VARCHAR[] |
+| `langs`, `topics`, `identifiers`, `endpoints`, `coverage` | list of objects | STRUCT[] |
+| `software`, `owner`, `rights`, `properties` | object | STRUCT |
+| `_re3data` | object | STRUCT (some nested leaves `JSON`) |
 
-Table `software` keeps scalars as VARCHAR (including `has_api` / `has_bulk` as `Yes`/`No` strings). Nested `datatypes`, `metadata_support`, `owner`, `license` are JSON text.
+Table `software` keeps Yes/No flags (`has_api`, `has_bulk`) as VARCHAR. Nested `datatypes`, `metadata_support`, `owner`, `license`, `pid_support`, and `rights_management` are STRUCT; `export_formats` and `capabilities` are VARCHAR[].
 
 `trust_score` is optional on YAML and may be absent from a given DuckDB build if no records in the snapshot have the field.
 

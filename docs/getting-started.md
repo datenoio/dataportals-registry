@@ -2,15 +2,15 @@
 
 dataportals-registry is a **reference-data registry** of open data portals, geoportals, scientific repositories, and related data infrastructure. Source records are YAML; consumers should prefer the exported datasets. High-volume platforms include CKAN, GeoNetwork, Dataverse, ArcGIS, **openEO**, **mviewer**, and **DHIS2** — full map: [software-index.md](software-index.md). Code is MIT; data and documentation are [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-Latest snapshot (v1.17.0, 25 August 2026): **22,750** verified catalog entities, **0** scheduled records, and **262** software definitions across **219** country/territory folders. Published JSONL, Parquet, and DuckDB exports match this count. Record-count contract: [exports.md](exports.md#record-counts).
+Working tree (26 August 2026): **23,338** verified catalog entities, **0** scheduled records, and **264** software definitions across **219** country/territory folders. Last published snapshot is v1.17.0 (22,750 catalogs, 0 scheduled, 262 software). Record-count contract: [exports.md](exports.md#record-counts).
 
 ## Fastest path (analytics)
 
-Query the DuckDB export. Nested objects are stored as JSON strings, so filter with `LIKE` or `json_extract`:
+Query the DuckDB export. Nested objects are `STRUCT` / `LIST` types, so filter with field access:
 
 ```bash
 duckdb data/datasets/datasets.duckdb \
-  -c "SELECT id, name, link FROM catalogs WHERE software LIKE '%\"id\":\"ckan\"%' LIMIT 10;"
+  -c "SELECT id, name, link FROM catalogs WHERE software.id = 'ckan' LIMIT 10;"
 ```
 
 ```python
@@ -22,7 +22,10 @@ con.execute(
     SELECT id, name, link
     FROM catalogs
     WHERE catalog_type = 'Open data portal'
-      AND coverage LIKE '%"id":"US"%'
+      AND list_contains(
+            list_transform(coverage, x -> x.location.country.id),
+            'US'
+          )
     LIMIT 10
     """
 ).fetchall()

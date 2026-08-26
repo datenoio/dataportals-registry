@@ -41,7 +41,7 @@ flowchart LR
 2. **Reference vocabularies** — allowed values under `data/reference/` (owner types, catalog types, software IDs, access modes, status).
 3. **Validation** — Cerberus schema (`data/schemes/catalog.json`), JSON Schema (`catalog.schema.json`), and quality rules.
 4. **Build** — flattens YAML into JSONL, compresses with zstd, writes Parquet and DuckDB.
-5. **Consumers** — DuckDB/Parquet preferred; JSONL for line-oriented tools; YAML only when authoring.
+5. **Consumers** — DuckDB/Parquet preferred (nested fields are native `STRUCT` / `LIST`); JSONL for line-oriented tools; YAML only when authoring.
 
 ## Enrichment and monitoring
 

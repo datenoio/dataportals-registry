@@ -8,7 +8,7 @@ Use `endpoints[]` from the registry when present ([apidetect.md](apidetect.md)).
 
 | Page | Use when |
 |------|----------|
-| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, Pure, Converis, Omega-PSIR, RADAR, Yoda, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, …) |
+| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, Pure, Converis, Omega-PSIR, Archipelago, RADAR, Yoda, Redivis, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, …) |
 | [Domain repositories](harvest-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, SciCat-adjacent stacks |
 
 All `software.id` values: [software-index.md](software-index.md).
@@ -17,8 +17,8 @@ All `software.id` values: [software-index.md](software-index.md).
 
 | Class | `software.id` (typical) | Filter needed? |
 |-------|-------------------------|----------------|
-| Mixed IR / CRIS | `dspace`, `dspacecris`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `samvera`, `islandora`, `opus`, `mycore`, `phaidra`, `weko3`, `pure`, `esploro`, `elsevierdigitalcommons`, `figshare`, `haplo`, `worktribe`, `omegapsir`, `converis`, `librecat`, `vufind` | **Yes** — publications dominate |
-| Dataset-native | `dataverse`, `radar`, `yoda`, `instdb`, `labkey`, `synapse`, `xnat`, `omero`, `kadi4mat`, `edal`, `nomad` on this page; IPT/THREDDS/Breedbase/ESGF/InterMine/cBioPortal and similar on [harvest-scientific-domain.md](harvest-scientific-domain.md) | Little or none — still skip files, occurrences, and login-only rows |
+| Mixed IR / CRIS | `dspace`, `dspacecris`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `samvera`, `islandora`, `archipelago`, `opus`, `mycore`, `phaidra`, `weko3`, `pure`, `esploro`, `elsevierdigitalcommons`, `figshare`, `haplo`, `worktribe`, `omegapsir`, `converis`, `librecat`, `vufind` | **Yes** — publications dominate |
+| Dataset-native | `dataverse`, `radar`, `yoda`, `redivis`, `instdb`, `labkey`, `synapse`, `xnat`, `omero`, `kadi4mat`, `edal`, `nomad` on this page; IPT/THREDDS/Breedbase/ESGF/InterMine/cBioPortal and similar on [harvest-scientific-domain.md](harvest-scientific-domain.md) | Little or none — still skip files, occurrences, and login-only rows |
 
 ## OAI-PMH fallback (any IR)
 
@@ -303,11 +303,22 @@ CaosDB REST (`/api/v1/`). Query Record types that are datasets/collections. Drop
 
 ## Fedora (`fedora`) {#fedora}
 
-Use Fedora LDP `/fcrepo/rest` (or `/rest`) **only** when Fedora is the public catalog. Prefer Hyrax/Islandora/PHAIDRA recipes on the same host.
+Use Fedora LDP `/fcrepo/rest` (or `/rest`) **only** when Fedora is the public catalog. Prefer Hyrax/Islandora/PHAIDRA/Archipelago recipes on the same host.
 
 ## Islandora (`islandora`) {#islandora}
 
 Drupal+Fedora. Harvest Solr/REST with a Dataset content model — not every Drupal node. Prefer Islandora over raw [Fedora](#fedora).
+
+## Archipelago Commons (`archipelago`) {#archipelago}
+
+Drupal Strawberryfield ADOs. Mixed GLAM instances need a Dataset (or accession/isolate) filter; germplasm and culture-collection catalogs may harvest every ADO.
+
+```text
+GET https://host/search?f[0]=descriptive_metadata_object_types:Dataset
+GET https://host/rss.xml
+```
+
+Keep `Dataset`, accession, and isolate records. Drop Photograph, Book, Finding Aid, and WebPage exhibits. OAI-PMH `/api/oai_pmh/oai?verb=Identify` is optional and often restricted. Prefer Archipelago over raw `drupal`.
 
 ## CONTENTdm (`contentdm`) {#contentdm}
 
@@ -341,6 +352,17 @@ GET https://host/oai/OAIHandler?verb=Identify
 ```
 
 Already datasets (`totalHits` in the JSON). Page the API; keep dataset ids/DOIs. Skip a single `/radar/de/dataset/` landing page as a seed and the FIZ marketing site. OAI is a fallback. Discovery: [discovery-scientific.md](discovery-scientific.md#radar).
+
+## Redivis (`redivis`) {#redivis}
+
+Dataset-native SaaS. The public OpenAPI spec does not need a token; **listing datasets does**. Filter exports on `software.id = 'redivis'`. Org name is the `{org}` subdomain (`stanford.redivis.com` → `stanford`).
+
+```text
+GET https://host/api/v1/openapi.json
+GET https://redivis.com/api/v1/organizations/{org}/datasets?maxResults=100
+```
+
+Page with `pageToken`. Keep `dataset.list` rows (`kind` / dataset name). Drop workflows, notebooks, members, and individual **tables** when a parent dataset exists. A Bearer token with the `public` scope is required for the list URL; stop on `401`/`403`. Do not crawl `redivis.com` globally or a single `/ORG/dataset-name` landing page. Discovery: [discovery-scientific.md](discovery-scientific.md#redivis).
 
 ## Yoda (`yoda`) {#yoda}
 

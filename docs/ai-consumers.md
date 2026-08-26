@@ -13,7 +13,7 @@ Metadata about **catalogs** (portals, geoportals, repositories, and related infr
 - Geography: `owner.location`, `coverage[]` (country, subregion, macroregion, level)
 - Access: `access_mode`, `api`, `api_status`, `endpoints[]`, `rights`
 - Crosswalks: `identifiers[]` (wikidata, re3data, fairsharing, …)
-- Optional enrichment: `_re3data`, `trust_score`
+- Optional enrichment: `_re3data`, `trust_score`, `properties.is_national` (official national catalog of that type only — [data-model.md](data-model.md#propertiesis_national))
 
 ### Out of scope
 
@@ -51,19 +51,22 @@ Prefer DuckDB or Parquet over parsing thousands of YAML files.
 
 ## Nested fields in DuckDB / Parquet
 
-The builder stores nested objects as **JSON strings** so DuckDB type inference does not break. Filter with `LIKE` or parse JSON:
+Lists are `LIST` and objects are `STRUCT`. Filter with field access and list functions:
 
 ```sql
 SELECT id, name, link
 FROM catalogs
-WHERE software LIKE '%"id":"ckan"%'
-  AND coverage LIKE '%"id":"FR"%';
+WHERE software.id = 'ckan'
+  AND list_contains(
+        list_transform(coverage, x -> x.location.country.id),
+        'FR'
+      );
 ```
 
 ```sql
-SELECT id, json_extract_string(software, '$.id') AS software_id
+SELECT id, software.id AS software_id
 FROM catalogs
-WHERE json_extract_string(software, '$.id') = 'geonetwork';
+WHERE software.id = 'geonetwork';
 ```
 
 Column inventory: [exports.md](exports.md#duckdb-columns). Identifier types: [vocabularies.md](vocabularies.md#identifiers).

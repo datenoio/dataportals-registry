@@ -68,6 +68,7 @@ The registry is organized as a collection of YAML files that will eventually be 
     - `search/` - Data search engine
     - `api/` - API Catalogs
     - `marketplace/` - Data marketplace
+    - `metadata/` - Metadata catalogs
     - `other/` - Other types
 - **Scripts**:
   - Main build script: `scripts/builder.py`
@@ -158,6 +159,6 @@ The registry is organized as a collection of YAML files that will eventually be 
   - GeoOrchestra installations
   - EUDAT Repositories
   - Data.Europe.eu catalogues
-  - And many others (see README.md for complete list)
+  - And many others (see [docs/discovery.md](../docs/discovery.md#existing-lists-start-here))
 - **Web APIs**: Scripts interact with various catalog APIs (CKAN, DCAT, OAI-PMH, etc.) for metadata extraction
 - **Codecov**: For test coverage reporting in CI/CD
