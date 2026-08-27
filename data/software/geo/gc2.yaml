@@ -1,0 +1,71 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: Compatible
+has_api: 'Yes'
+has_bulk: 'No'
+id: gc2
+website: https://www.osgeo.org/projects/gc2-vidi/
+description: GC2 (GeoCloud 2) is an open-source spatial-data platform from MapCentia,
+  often paired with the Vidi browser GIS client. It deploys PostGIS, MapServer or
+  QGIS Server, MapCache, and Elasticsearch, and exposes layers through a SQL API,
+  WMS, WFS, and WMTS. Danish municipalities commonly host tenants on mapcentia.com
+  or gc2.io.
+owner:
+  name: MapCentia ApS
+  location:
+    country:
+      id: DK
+      name: Denmark
+logo_url: https://www.mapcentia.com/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'Yes'
+  wms: 'Yes'
+name: GC2
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+repository_url: https://github.com/mapcentia/geocloud2
+documentation_url: https://github.com/mapcentia/geocloud2
+license:
+  type: GPL-3.0
+  url: https://www.gnu.org/licenses/gpl-3.0.html
+export_formats:
+- CSV
+- Excel
+- GeoJSON
+- GML
+- JSON
+capabilities:
+- SQL API
+- WMS
+- WFS
+- WMTS / MapCache
+- Vidi web GIS
+changelog_url: https://github.com/mapcentia/geocloud2/releases
+last_updated: '2026-08-27T00:00:00Z'

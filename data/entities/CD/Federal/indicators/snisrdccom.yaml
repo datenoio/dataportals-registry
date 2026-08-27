@@ -1,0 +1,72 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: CD
+      name: Democratic Republic of the Congo
+    level: 20
+    macroregion:
+      id: '017'
+      name: Middle Africa
+description: National DHIS2 health management information system (SNIS) of the Democratic
+  Republic of the Congo. Login is required to query routine HMIS indicators.
+endpoints:
+- type: dhis2:catalog
+  url: https://snisrdc.com
+id: snisrdccom
+langs:
+- id: FR
+  name: French
+link: https://snisrdc.com
+name: Système National d'Information Sanitaire (SNIS RDC)
+owner:
+  link: https://snisrdc.com
+  location:
+    country:
+      id: CD
+      name: Democratic Republic of the Congo
+    level: 20
+  name: Ministère de la Santé Publique
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dhis2
+  name: DHIS2
+status: active
+tags:
+- health
+- HMIS
+- DHIS2
+- government
+- restricted
+- Congo
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99990668

@@ -73,6 +73,8 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | SpatialMap `webkort` | `spatialsuite` | Geoportal |
 | `portals.landfolio.com` cadastre map | `landfolio` | Geoportal |
 | G3W-CLIENT `/map/{group}/` | `g3wsuite` | Geoportal |
+| MapCentia `/apps/viewer` or `/mapcache/` WMTS | `gc2` | Geoportal |
+| hale»connect `/csw` or `/ows/services/` | `haleconnect` | Geoportal |
 | `*.sentinel-hub.com` STAC `/api/v1/catalog` | `sentinelhub` | Geoportal |
 | `*.revenuedev.org` license portal | `rdfrepository` | Open data portal |
 | ResourceContracts `/contract/resources` | `resourcecontracts` | Open data portal |
@@ -87,6 +89,7 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `/prod/v1/api/v1/info` NOMAD Oasis | `nomad` | Scientific data repository |
 | InterMine `/begin.do` / `/service/version` | `intermine` | Scientific data repository |
 | `/gringlobal/` accession search | `gringlobal` | Scientific data repository |
+| `{project}.birdmap.africa` pentad atlas | `birdmap` | Scientific data repository |
 | `/do/{uuid}` + strawberryfield / “indexed Digital Objects” | `archipelago` | Scientific data repository |
 | `{org}.redivis.com` / OpenAPI titled Redivis | `redivis` | Scientific data repository |
 | PlutoF workbench (`api.plutof.ut.ee`) | `plutof` | Scientific data repository |

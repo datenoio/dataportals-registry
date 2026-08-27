@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Nigeria Foreign Trade Monitor on the African Development Bank Open Data for Africa
+  (Knoema) platform, with merchandise-trade indicators compiled with the National Bureau of
+  Statistics.
+id: nigeriaforeigntradeopendataforafricaorg
+langs:
+- id: EN
+  name: English
+link: https://nigeriaforeigntrade.opendataforafrica.org/
+name: Nigeria Foreign Trade Monitor
+owner:
+  link: https://nigerianstat.gov.ng/
+  location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 20
+  name: National Bureau of Statistics
+  type: Central government
+software:
+  id: knoema
+  name: Knoema
+status: active
+tags:
+- statistics
+- indicators
+- Nigeria
+- Knoema
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: INTR
+  name: International issues
+  type: eudatatheme
+uid: cdi99990736
+properties:
+  is_national: false
+  has_doi: false
+endpoints:
+- type: knoema:search
+  url: https://nigeriaforeigntrade.opendataforafrica.org/api/1.0/search
+  version: '1.0'
+- type: sdmx:datastructure
+  url: https://nigeriaforeigntrade.opendataforafrica.org/api/1.0/sdmx
+  version: '2.0'
+- type: opensearch
+  url: https://nigeriaforeigntrade.opendataforafrica.org/OpenSearch.xml

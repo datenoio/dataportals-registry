@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IN-WB
+      name: West Bengal
+description: GeoServer catalog of West Bengal urban GIS layers under AMRUT and Smart
+  City, including cadastre, utilities, buildings, and satellite mosaics.
+endpoints:
+- type: wms111
+  url: https://nagargispariseva.wb.gov.in/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://nagargispariseva.wb.gov.in/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://nagargispariseva.wb.gov.in/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://nagargispariseva.wb.gov.in/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://nagargispariseva.wb.gov.in/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: nagargisparisevawbgovin
+langs:
+- id: EN
+  name: English
+link: https://nagargispariseva.wb.gov.in/geoserver
+name: West Bengal Nagar GIS Pariseva
+owner:
+  link: https://udma.wb.gov.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-WB
+      name: West Bengal
+  name: Department of Urban Development and Municipal Affairs, Government of West
+    Bengal
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- GIS
+- AMRUT
+- urban
+- West Bengal
+topics: []
+uid: cdi99990715

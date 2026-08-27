@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: NIC Bharat Maps ArcGIS REST catalog with public map services for administrative
+  headquarters, canals, districts, railways, and village boundaries.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisservrsdiv.nic.in/bharatmaps/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisservrsdiv.nic.in/bharatmaps/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisservrsdiv.nic.in/bharatmaps/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisservrsdiv.nic.in/bharatmaps/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisservrsdiv.nic.in/bharatmaps/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gisservrsdiv.nic.in/bharatmaps/rest/services?f=kmz
+id: gisservrsdivnicin
+langs:
+- id: EN
+  name: English
+link: https://gisservrsdiv.nic.in/bharatmaps/rest/services
+name: NIC Bharat Maps GIS REST Directory
+owner:
+  link: https://www.nic.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 20
+  name: National Informatics Centre
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- NIC
+- Bharat Maps
+topics: []
+uid: cdi99990733
+properties:
+  is_national: false
+  has_doi: false

@@ -9,17 +9,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- **588 net new catalog entries** since v1.17.0; registry source now **23,338** entities (**0** scheduled) across **219** country/territory folders.
-- **2 software definitions**; software catalog now **264** platforms: Archipelago Commons (`archipelago`) and Redivis (`redivis`).
+- **705 net new catalog entries** since v1.17.0; registry source now **23,455** entities (**0** scheduled) across **219** country/territory folders.
+- **5 software definitions**; software catalog now **267** platforms: Archipelago Commons (`archipelago`), Redivis (`redivis`), MapCentia GC2 (`gc2`), wetransform hale»connect (`haleconnect`), and BirdMap Africa (`birdmap`).
 - **257** US ArcGIS Server geoportals from the MappingSupport federal/state/county/city GIS server list (live REST roots not already in the registry). Includes BLM state adaptors, USFS/NOAA/USGS/FEMA services roots, and municipal/county directories.
 - **148** ArcGIS Hub geoportals promoted from scheduled review (US local/state hubs plus Canada, the UK, Ireland, New Zealand, and others).
+- **48** India catalogs: **27** geoportals (**19** ArcGIS Server REST directories including NIC Bharat Maps / WebGIS / BharatNet, India-WRIS, NWIC, TGRAC Telangana, HSAC Haryana, and APCRDA, plus Bhukosh, VEDAS, Bhoomi, KGIS, NESDR DKAN, India Observatory GeoNode, and West Bengal Nagar GIS); **15** scientific repositories (ICAR-NBPGR genebank and PGR portals, KRISHI, IMD, INCOIS, NICES, NCMRWF, NCPOR, NCS earthquake catalogue, WDC Geomagnetism Mumbai, IndOBIS IPT, and related hosts); CivicDataLab and National Water Data Portal (CKAN); Bengaluru Open Data; Kerala Data Portal; IIPS microdata; and AIKosh.
+- **3** BirdMap Africa country/continental catalogs: Kenya Bird Map, Atlas des oiseaux du Sénégal, and the African Bird Atlas Project hub (`www.birdmap.africa`).
+- **26** Nigeria catalogs: **13** state OCDS/e-procurement portals (Abia, Adamawa, Anambra, Bauchi, Ebonyi, Edo, Ekiti, Jigawa, Kogi, Lagos, Ogun, Osun); BudgIT Open States and GovSpend; Nigeria Foreign Trade Monitor and Health Atlas (Open Data for Africa / Knoema); **7** DSpace institutional repositories (Bells, OAU, UNILAG, Ibadan, Abuja, CBN, NIRIS); CBN Digital Commons; and the Nigerian Bird Atlas.
+- **16** African and Central Asian indicator catalogs: DHIS2 HMIS (DRC SNIS, Cameroon, Mozambique SISMA, Senegal, South Africa webDHIS); KNBS Kenya CPI Explorer and Census DataBrowser; Stats SA census dissemination; Namibia NSA census; INSTAT Gabon national accounts and IHPC; SIGSEF Côte d'Ivoire; Maustats Mauritius; Kyrgyz NSC open data; Senegal Open SDG and ANSD locality directory.
+- **5** Thailand catalogs: NSTDA Data Catalog (CKAN), TH-BIF, TBRC, ASEAN Microbial Database (AmiBase), and Queen Sirikit Botanic Garden Living Plant Database.
+- **4** Pakistan catalogs: KP Bureau of Statistics portal, NIPS public microdata, SDPI Data for Development, and Forman Digital Repository.
+- **11** Danish MapCentia GC2 / Vidi geoportals: Nordjyllands Trafikselskab, Midttrafik, Sydtrafik, Assens, Middelfart, Dragør, Furesø, Geo Fyn, Gate 21, Region Midtjylland, and Region Hovedstaden.
+- **2** German hale»connect tenants: GDI InspireUmsetzer (Hesse) and Stadt Hildesheim.
+- Indonesian Culture Collection (InaCC) and Openscience.vn research data platform.
 - Archipelago Commons catalogs: Plant Virus Italy / PLAVIT (`archiplavittocnrit`), Vitis Grinzane (`vitisgrinzaneipspcnrit`), and UNAM IIBI digital preservation (`archivodigitaliibiunammx`).
 - **11** Redivis organization workspaces (Stanford Data Farm, Yale Data Green, Duke, Columbia, Carnegie Mellon, Georgetown, Northwestern, UCLA Library, Environmental Impact Data Collaborative, Center for Surgery and Public Health, and PGSSC surgical epidemiology).
 - **40** central-bank and monetary-authority indicators catalogs (custom statistical pages plus Danmarks Nationalbank StatBank on PxWeb).
 - **44** national statistical-office indicator catalogs and **9** intergovernmental statistical databases (IsDB, ITC, ICCAT, ITTO, NAFO, SPRFMO, International IDEA, SIELAC).
 - **5** EPrints repositories: Organic Eprints, Goldsmiths Research Online, CMFRI Digital Repository, NIAS Repository, and Repository@USM.
 - Chinese Academy of Sciences science-data centers promoted from scheduled review (InstDB and custom hosts that responded), plus LANDFIRE, USGS Publications Warehouse, USGS CMGDS, Alaska DGGS, and the Southern California Earthquake Data Center.
-- Geoportals including Africa GeoPortal, Scholars GeoPortal, NASA Worldview (GIBS), Geomolg, NCES EDGE, NIFC Open Data, SERVIR Global GeoServer, k.LAB Integrated Modelling, LIWO flood information, hale»connect, pmINSPIRE, Danish MapCentia/GC2 viewers, and **13** additional GeoServer catalogs.
+- Geoportals including Africa GeoPortal, Scholars GeoPortal, NASA Worldview (GIBS), Geomolg, NCES EDGE, NIFC Open Data, SERVIR Global GeoServer, k.LAB Integrated Modelling, LIWO flood information, and **13** additional GeoServer catalogs.
 - API catalogs for the DB API Marketplace and the Riksbank API Portal; marketplaces Opendatabay and Centific; Epoch AI Data (ML); Datasets.ai search; and the mldata.opendata.ai CKAN sandbox.
 - `properties.is_national` classifier (`scripts/national_catalog.py`) and `scripts/fix_is_national_flags.py` to unset the flag on agency, thematic, scientific, and subnational catalogs.
 
@@ -30,11 +39,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rewrote `README.md` for consumers, contributors, and agents: DuckDB quick start, export table, related projects, and contribution commands. Removed the outdated Data sources list (installation galleries live in [docs/discovery.md](docs/discovery.md)).
 - Clarified `properties.is_national`: `true` only for the country's official catalog of that type (national open-data portal, NSDI/geoportal, or NSO product), not federal ownership. Set `is_national: false` on **988** agency/thematic/scientific/subnational records that had been marked national.
 - Retagged the existing Redivis hub (`rediviscom`) from `custom` to `redivis` and documented the public OpenAPI.
+- Retagged Odder and Ballerup MapCentia tenants from `custom` to `gc2`; retagged hale»connect public cloud, GovConnect pmINSPIRE, and Komm.ONE Geodienste to `haleconnect`; retagged SABAP2 from `custom` to `birdmap`.
 - Datarade marketplace moved from the retired `datarade.com` US record to `datarade.ai` (Berlin). Deutsche Bahn open-data infoportal retagged from CKAN to custom after the 2024 catalog retirement; APIs live on the new DB API Marketplace record.
 - Bundesbank statistics landing URL updated; EGA and gnomAD metadata, endpoints, and identifiers refreshed.
-- Cleared the scheduled queue: **164** catalogs promoted after live URL review, **6** removed. `data/scheduled/` is empty.
-- Working-tree JSONL, Parquet, and DuckDB exports last rebuilt at **22,835** catalogs, **26** scheduled, **264** software. Source YAML is ahead (**23,338** entities, **0** scheduled) until the next `build`. Quality analysis reports **0** issues across **22,835** export records.
-- Discovery and harvest guides index Archipelago Commons and Redivis. Consumer docs (`README.md`, `docs/ai-consumers.md`, `docs/exports.md`, `docs/query-examples.md`, `llms.txt`) describe native DuckDB `LIST`/`STRUCT` nested types. `docs/scheduled.md` matches the empty scheduled queue. DATASHEET geographic/type mix refreshed from current YAML.
+- Promoted **200** catalogs from scheduled review after live URL checks (**164** earlier in this cycle, then **36** India/Nigeria/Pakistan records). Scheduled queue is empty.
+- Egypt CAPMAS (`wwwcapmasgoveg`) now records the public indicator REST API on port 8080 (`api: true`).
+- Working-tree JSONL, Parquet, and DuckDB exports last rebuilt at **22,835** catalogs, **26** scheduled, **264** software. Source YAML is ahead (**23,455** entities, **0** scheduled, **267** software) until the next `build`. Quality analysis reports **0** issues across **22,835** export records.
+- Discovery and harvest guides index Archipelago Commons, Redivis, MapCentia GC2, hale»connect, and BirdMap Africa. Consumer docs (`README.md`, `docs/ai-consumers.md`, `docs/exports.md`, `docs/query-examples.md`, `llms.txt`) describe native DuckDB `LIST`/`STRUCT` nested types. DATASHEET geographic/type mix refreshed from current YAML.
 
 
 
@@ -47,7 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Duplicate Datarade record at `datarade.com` (`dataradecom`); keeper is `dataradeai`.
-- **6** scheduled catalogs dropped without promotion: Hamilton ArcGIS Hub duplicate of Open Hamilton (`dataspatialsolutionsopendataarcgiscom`), deprecated IBM Data Asset eXchange landing page (`developeribmcom`), HTTP 502 (`wwwcityghgcom`), and three unreachable Chinese hosts (`bisicstcloudcn`, `cjgeodatacugeducn`, `loessgeodatacn`).
+- **8** scheduled catalogs dropped without promotion: Hamilton ArcGIS Hub duplicate of Open Hamilton (`dataspatialsolutionsopendataarcgiscom`), deprecated IBM Data Asset eXchange landing page (`developeribmcom`), HTTP 502 (`wwwcityghgcom`), three unreachable Chinese hosts (`bisicstcloudcn`, `cjgeodatacugeducn`, `loessgeodatacn`), the empty Niger State infrastructure GIS dashboard (`infrastructurenigerstategovng`), and BBMP Bengaluru GIS REST (`gisappbbmpgovin`, HTTP 502).
 
 
 

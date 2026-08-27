@@ -35,6 +35,8 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | `*.gisapp.ro` municipal GIS | `gisapp` | [viewers](discovery-geoportals-viewers.md#gisapp) |
 | Kaliopa iObčina / iOpćina | `iobcina` | [viewers](discovery-geoportals-viewers.md#iobcina) |
 | G3W-CLIENT / `/map/{group}/` QGIS WebGIS | `g3wsuite` | [SDI](discovery-geoportals-sdi.md#g3wsuite) |
+| MapCentia `/apps/viewer` or `/mapcache/` WMTS | `gc2` | [SDI](discovery-geoportals-sdi.md#gc2) |
+| hale»connect CSW `/csw` or `/ows/services/` | `haleconnect` | [SDI](discovery-geoportals-sdi.md#haleconnect) |
 | “Powered by iShare” / `mymaps.aspx` | `ishare` | [viewers](discovery-geoportals-viewers.md#ishare) |
 | Cadcorp SIS WebMap / GeognoSIS | `cadcorp` | [viewers](discovery-geoportals-viewers.md#cadcorp) |
 | Hexagon M.App `/Apps/` | `mappenterprise` | [SDI](discovery-geoportals-sdi.md#mappenterprise) |

@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: NESAC DKAN catalog of North Eastern Region geospatial datasets, including soil,
+  administrative, climate, and utility layers published as WMS.
+endpoints:
+- type: ckan:package-search
+  url: https://www.nesdr.gov.in/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://www.nesdr.gov.in/api/3/action/package_list
+  version: '3'
+id: wwwnesdrgovin
+langs:
+- id: EN
+  name: English
+link: https://www.nesdr.gov.in
+name: North Eastern Spatial Data Repository
+owner:
+  link: https://nesac.gov.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 20
+  name: North Eastern Space Applications Centre
+  type: Central government
+software:
+  id: dkan
+  name: DKAN
+status: active
+tags:
+- geospatial
+- GIS
+- North East
+- WMS
+topics: []
+uid: cdi99990735
+properties:
+  is_national: false
+  has_doi: false

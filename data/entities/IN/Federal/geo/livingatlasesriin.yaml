@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: Esri India Living Atlas ArcGIS REST catalog of 200-plus India map services
+  covering census, cities, health, NSSO, RBI, roads, and land cover.
+endpoints:
+- type: arcgis:rest:info
+  url: https://livingatlas.esri.in/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://livingatlas.esri.in/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://livingatlas.esri.in/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://livingatlas.esri.in/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://livingatlas.esri.in/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://livingatlas.esri.in/server/rest/services?f=kmz
+id: livingatlasesriin
+langs:
+- id: EN
+  name: English
+link: https://livingatlas.esri.in/server/rest/services
+name: Indo ArcGIS Living Atlas
+owner:
+  link: https://www.esri.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 20
+  name: Esri India Technologies Private Limited
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- Living Atlas
+- India
+topics: []
+uid: cdi99990722

@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: SN
+      name: Senegal
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: ANSD Répertoire des localités from the population census, with village
+  and neighbourhood tables (concessions, households, men, women, population) served
+  from Drupal JSON:API. More than 60,000 locality records; example Gorée MBAMBARA
+  population 460 (2013). Distinct from ANADS NADA, Agridata, SIGSTAT, and Open Data
+  for Africa.
+endpoints:
+- type: jsonapi
+  url: https://www.ansd.sn/jsonapi/node/recensement
+id: donneesrecensementsansdsn
+langs:
+- id: FR
+  name: French
+link: https://www.ansd.sn/donnees-recensements
+name: ANSD Répertoire des localités
+owner:
+  link: https://www.ansd.sn
+  location:
+    country:
+      id: SN
+      name: Senegal
+    level: 20
+  name: Agence nationale de la statistique et de la démographie
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- census
+- Senegal
+- has_api
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: cdi99990709

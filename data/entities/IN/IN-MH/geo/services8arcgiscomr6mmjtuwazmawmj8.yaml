@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IN-MH
+      name: Mahārāshtra
+description: Public ArcGIS Online feature catalog of Brihanmumbai Municipal Corporation
+  layers, including wards, metro, health facilities, parking, toilets, and disaster
+  resources.
+endpoints:
+- type: arcgis:rest:info
+  url: https://services8.arcgis.com/r6MmJtuWAzMawmJ8/ArcGIS/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://services8.arcgis.com/r6MmJtuWAzMawmJ8/ArcGIS/rest/services?f=pjson
+id: services8arcgiscomr6mmjtuwazmawmj8
+langs:
+- id: EN
+  name: English
+link: https://services8.arcgis.com/r6MmJtuWAzMawmJ8/ArcGIS/rest/services
+name: BMC Mumbai ArcGIS Online Feature Catalog
+owner:
+  link: https://www.mcgm.gov.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-MH
+      name: Mahārāshtra
+  name: Brihanmumbai Municipal Corporation
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- municipal
+- Mumbai
+topics: []
+uid: cdi99990711

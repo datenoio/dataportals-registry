@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IN-ML
+      name: Meghālaya
+description: ArcGIS REST catalog of Meghalaya CM Dashboard GIS layers, including administrative
+  boundaries, drainage, forest carbon, MGNREGA, NRLM, tourism, and health services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://meghalayacmdashboard.in/gisserver/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://meghalayacmdashboard.in/gisserver/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://meghalayacmdashboard.in/gisserver/services?wsdl
+- type: arcgis:sitemap
+  url: https://meghalayacmdashboard.in/gisserver/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://meghalayacmdashboard.in/gisserver/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://meghalayacmdashboard.in/gisserver/rest/services?f=kmz
+id: meghalayacmdashboardin
+langs:
+- id: EN
+  name: English
+link: https://meghalayacmdashboard.in/gisserver/rest/services
+name: Meghalaya CM Dashboard GIS REST Directory
+owner:
+  link: https://meghalaya.gov.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-ML
+      name: Meghālaya
+  name: Government of Meghalaya
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- Meghalaya
+- administrative boundaries
+topics: []
+uid: cdi99990717

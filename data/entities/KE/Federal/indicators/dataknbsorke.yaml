@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: KNBS JSON-stat DataBrowser (Istat Cooperation) for the 2019 Kenya Population
+  and Housing Census. Interactive table explorer listed on the KNBS portals page as
+  the Census 2019 Data Browser. Distinct from KeNADA microdata and Open Data for Africa.
+endpoints:
+- type: rest
+  url: http://api1.knbs.or.ke/getDatasetList?lang=en
+- type: rest
+  url: http://api1.knbs.or.ke/getDataset
+id: dataknbsorke
+langs:
+- id: EN
+  name: English
+link: http://data.knbs.or.ke/
+name: KNBS Census DataBrowser
+owner:
+  link: https://www.knbs.or.ke
+  location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+  name: Kenya National Bureau of Statistics
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- census
+- Kenya
+- has_api
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: cdi99990704

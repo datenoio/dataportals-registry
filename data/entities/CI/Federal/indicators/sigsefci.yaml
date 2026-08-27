@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: CI
+      name: Cote d Ivoire
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Integrated system for economic and financial statistics of Côte d'Ivoire,
+  operated by the Direction Générale de l'Économie. Public multicriteria and predefined
+  table consultation across five sectors (real, monetary, public finance, external,
+  social), with about 84 tables and 1,990 indicators and Excel export. Distinct from
+  the ANSTAT indicator explorer.
+endpoints:
+- type: rest
+  url: https://sigsef.ci/gettableauxprefefinis/32
+id: sigsefci
+langs:
+- id: FR
+  name: French
+link: https://sigsef.ci/
+name: SIGSEF Côte d'Ivoire
+owner:
+  link: https://www.dge.gouv.ci/
+  location:
+    country:
+      id: CI
+      name: Cote d Ivoire
+    level: 20
+  name: Direction Générale de l'Économie
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- Côte d'Ivoire
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99990707

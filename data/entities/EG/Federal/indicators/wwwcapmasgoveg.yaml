@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -16,8 +16,14 @@ coverage:
       id: '015'
       name: Northern Africa
 description: Official statistics website of Egypt's Central Agency for Public Mobilization
-  and Statistics (CAPMAS). Publishes statistical tables and publications covering
-  census, demography, prices, and economic statistics.
+  and Statistics (CAPMAS). The public indicator SPA and REST API on port 8080 serve
+  numeric series for CPI, labour force, foreign trade, and other subjects. Pinned
+  CPI for Total Egypt was 13.0 percent year-on-year in July 2026 (83 monthly observations).
+endpoints:
+- type: rest
+  url: https://www.capmas.gov.eg:8080/api/PinedIndicator/IndicatorFilter
+- type: rest
+  url: https://www.capmas.gov.eg:8080/api/Subject/HasData
 id: wwwcapmasgoveg
 langs:
 - id: AR
@@ -48,6 +54,7 @@ tags:
 - official statistics
 - indicators
 - national statistical office
+- has_api
 topics:
 - id: SOCI
   name: Population and society

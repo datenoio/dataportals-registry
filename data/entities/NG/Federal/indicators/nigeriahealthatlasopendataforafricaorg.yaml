@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Nigeria Health Atlas on the African Development Bank Open Data for Africa (Knoema)
+  platform, publishing health and related socio-economic indicators.
+id: nigeriahealthatlasopendataforafricaorg
+langs:
+- id: EN
+  name: English
+link: https://nigeriahealthatlas.opendataforafrica.org/
+name: Nigeria Health Atlas
+owner:
+  link: https://nigerianstat.gov.ng/
+  location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 20
+  name: National Bureau of Statistics
+  type: Central government
+software:
+  id: knoema
+  name: Knoema
+status: active
+tags:
+- statistics
+- indicators
+- Nigeria
+- Knoema
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+uid: cdi99990737
+properties:
+  is_national: false
+  has_doi: false
+endpoints:
+- type: knoema:search
+  url: https://nigeriahealthatlas.opendataforafrica.org/api/1.0/search
+  version: '1.0'
+- type: sdmx:datastructure
+  url: https://nigeriahealthatlas.opendataforafrica.org/api/1.0/sdmx
+  version: '2.0'
+- type: opensearch
+  url: https://nigeriahealthatlas.opendataforafrica.org/OpenSearch.xml

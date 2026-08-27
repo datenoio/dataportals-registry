@@ -1,0 +1,61 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: Compatible
+has_api: 'Yes'
+has_bulk: 'No'
+id: birdmap
+website: https://www.birdmap.africa/
+description: BirdMap Africa is the shared citizen-science atlas platform of the African
+  Bird Atlas Project (FitzPatrick Institute of African Ornithology). Country projects
+  (SABAP2, Nigeria, Kenya, Senegal, and others) publish pentad-based bird distribution
+  catalogs on {project}.birdmap.africa with a public REST API at api.birdmap.africa.
+  Distinct from the BirdLasser mobile app used to submit cards.
+owner:
+  name: FitzPatrick Institute of African Ornithology, University of Cape Town
+  location:
+    country:
+      id: ZA
+      name: South Africa
+logo_url: https://www.birdmap.africa/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+name: BirdMap Africa
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Structured
+type: Software
+documentation_url: https://www.birdmap.africa/
+export_formats:
+- CSV
+- JSON
+capabilities:
+- REST API
+- Pentad coverage maps
+- Survey card protocol
+last_updated: '2026-08-27T00:00:00Z'

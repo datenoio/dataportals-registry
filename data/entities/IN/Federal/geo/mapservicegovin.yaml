@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: NIC ArcGIS REST catalog on mapservice.gov.in, with 28 public folders
+  covering Forest Survey imagery, Matribhoomi land-use layers, Bharat Maps, and Gram
+  Manchitra services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://mapservice.gov.in/mapserviceserv176/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mapservice.gov.in/mapserviceserv176/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mapservice.gov.in/mapserviceserv176/services?wsdl
+- type: arcgis:sitemap
+  url: https://mapservice.gov.in/mapserviceserv176/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mapservice.gov.in/mapserviceserv176/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://mapservice.gov.in/mapserviceserv176/rest/services?f=kmz
+id: mapservicegovin
+langs:
+- id: EN
+  name: English
+link: https://mapservice.gov.in/mapserviceserv176/rest/services
+name: NIC Map Service GIS REST Directory
+owner:
+  link: https://www.nic.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 20
+  name: National Informatics Centre
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- NIC
+- Bharat Maps
+topics: []
+uid: cdi99990724

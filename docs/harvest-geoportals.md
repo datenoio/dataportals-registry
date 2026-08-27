@@ -272,6 +272,14 @@ Also CSW when listed in `endpoints[]`. Keep catalog/coverage records. Drop Image
 
 REST resource tree (`/api/resource/`). Keep vector/raster **layers**. Skip lookup tables, styles, and webmaps unless the user asked for maps as datasets.
 
+## GC2 (`gc2`) {#gc2}
+
+MapCentia GC2 / Vidi. Harvest MapCache WMTS or WMS GetCapabilities named layers (often `/mapcache/{tenant}/wmts`). Do not treat SQL API query rows (`/api/v1/sql/{db}`) or Vidi saved projects as datasets. Skip `/admin` and the MapCentia demo.
+
+## hale»connect (`haleconnect`) {#haleconnect}
+
+CSW GetRecords (ISO `dataset` / `series`) on `/csw`. If CSW is missing, harvest published WMS/WFS feature types under `/ows/services/`. The CSW engine is often pycsw — do not harvest it as a second `pycsw` catalog on the same host. Skip transformation projects and hale studio files.
+
 ## CoGIS (`cogis`) {#cogis}
 
 ArcGIS-style REST under `/elitegis/rest/services`, `/arcgis3/rest/services`, or `/arcgisserver/rest/services` (`f=pjson`). Same keep/drop as [ArcGIS Server](#arcgisserver).
@@ -302,6 +310,8 @@ Same REST grain as [CoGIS](#cogis) when the branded viewer is eLiteGIS.
 | `cubewerx` | `/cubewerx/cubeserv` WMS or CSW | Named layers or ISO records; not tiles |
 | `mappenterprise` | `/Apps/` or WMS | Published apps/layers, not M.App tiles |
 | `g3wsuite` | QGIS/OWS GetCapabilities | Layers in published projects; skip `/admin` |
+| `gc2` | `/mapcache/{tenant}/wmts` GetCapabilities | Named layers, not SQL rows or Vidi projects |
+| `haleconnect` | CSW GetRecords or `/ows/services/` WMS/WFS | ISO dataset/series or named layers; not pycsw as a second catalog |
 | `mapgisigserver` | `/igs/rest/mrcs/docs?f=json` or `/igs/rest/services?f=json` | Map documents / services; not tiles or `/igs/manager` |
 
 Municipal viewers (cardo, NetGIS, GC Navi, NOL-IS, Masterportal, Tianditu, Wagmap, GiSoftGis, PopGIS, ActiveMap, Geonomics, ORBISMap): [harvest-viewers.md](harvest-viewers.md). SuperMap iServer/iPortal and MapGIS IGServer recipes are also on [harvest-viewers.md](harvest-viewers.md). MapProxy (`mapproxy`) is a cache — do not treat every cached layer as a new dataset if a parent SDI already lists it. Gridded EO (STAC, ODC, Rasdaman, Copernicus, ncWMS): [harvest-earthdata.md](harvest-earthdata.md). smart.finder: [harvest-viewers.md](harvest-viewers.md#smartfindersdi).

@@ -18,6 +18,7 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `belsisims` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md) | [harvest-viewers](harvest-viewers.md#belsisims) | — |
 | `beyond2020` | indicators | [discovery-indicators](discovery-indicators.md#beyond2020) | [harvest-indicators](harvest-indicators.md#beyond2020) | — |
 | `bicontour` | indicators | [discovery-indicators](discovery-indicators.md) | [harvest-indicators](harvest-indicators.md) | — |
+| `birdmap` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#birdmap) | [harvest-biodiversity](harvest-biodiversity.md#birdmap) | — |
 | `bitrix` | opendata | [discovery-opendata](discovery-opendata.md) | [harvest-opendata](harvest-opendata.md#bitrix) | — |
 | `breedbase` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#breedbase) | [harvest-scientific-domain](harvest-scientific-domain.md#breedbase) | — |
 | `cadcorp` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#cadcorp) | [harvest-viewers](harvest-viewers.md#cadcorp) | — |
@@ -84,6 +85,7 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `g3wsuite` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#g3wsuite) | [harvest-geoportals](harvest-geoportals.md#g3wsuite) | — |
 | `galaxy` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#galaxy) | [harvest-other](harvest-other.md#galaxy) | — |
 | `gbifplatform` | scientific | [discovery-scientific](discovery-scientific.md) | [harvest-biodiversity](harvest-biodiversity.md#gbifplatform) | — |
+| `gc2` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#gc2) | [harvest-geoportals](harvest-geoportals.md#gc2) | — |
 | `gcnavi` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#gcnavi) | [harvest-viewers](harvest-viewers.md#gcnavi) | — |
 | `genesisonline` | indicators | [discovery-indicators](discovery-indicators.md#genesisonline) | [harvest-indicators](harvest-indicators.md#genesisonline) | — |
 | `geoblacklight` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#geoblacklight) | [harvest-viewers](harvest-viewers.md#geoblacklight) | yes |
@@ -109,6 +111,7 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `gringlobal` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#gringlobal) | [harvest-scientific-domain](harvest-scientific-domain.md#gringlobal) | — |
 | `gvsigonline` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#gvsigonline) | [harvest-geoportals](harvest-geoportals.md#gvsigonline) | — |
 | `gxopendata` | opendata | [discovery-opendata](discovery-opendata.md#gxopendata) | [harvest-opendata](harvest-opendata.md#gxopendata) | — |
+| `haleconnect` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#haleconnect) | [harvest-geoportals](harvest-geoportals.md#haleconnect) | — |
 | `haplo` | scientific | [discovery-scientific](discovery-scientific.md#haplo) | [harvest-scientific](harvest-scientific.md#haplo) | — |
 | `hubzero` | scientific | [discovery-scientific](discovery-scientific.md) | [harvest-scientific](harvest-scientific.md#hubzero) | — |
 | `hyrax` | scientific | [discovery-scientific](discovery-scientific.md#hyrax) | [harvest-scientific](harvest-scientific.md#hyrax) | yes |

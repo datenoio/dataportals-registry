@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Kenya National Bureau of Statistics Consumer Price Index explorer with
+  COICOP breakdowns, regional series, an inflation calculator, and a public JSON API
+  of published CPI observations. Distinct from the KNBS data listing page and KeNADA.
+endpoints:
+- type: rest
+  url: https://cpiexplorer.knbs.or.ke/api/v1/cpi/
+id: cpiexplorerknbsorke
+langs:
+- id: EN
+  name: English
+link: https://cpiexplorer.knbs.or.ke/
+name: KNBS CPI Explorer
+owner:
+  link: https://www.knbs.or.ke
+  location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+  name: Kenya National Bureau of Statistics
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- CPI
+- Kenya
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99990705

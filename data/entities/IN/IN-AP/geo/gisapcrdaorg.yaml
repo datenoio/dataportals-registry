@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IN-AP
+      name: Andhra Pradesh
+description: ArcGIS REST catalog of Amaravati capital-region planning layers from
+  APCRDA, with public map and feature services for boundaries, land pooling, forests,
+  and infrastructure.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.apcrda.org/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.apcrda.org/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.apcrda.org/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.apcrda.org/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.apcrda.org/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.apcrda.org/server/rest/services?f=kmz
+id: gisapcrdaorg
+langs:
+- id: EN
+  name: English
+link: https://gis.apcrda.org/server/rest/services
+name: APCRDA Amaravati GIS REST Directory
+owner:
+  link: https://crda.ap.gov.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-AP
+      name: Andhra Pradesh
+  name: Andhra Pradesh Capital Region Development Authority
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- urban planning
+- Andhra Pradesh
+topics: []
+uid: cdi99990710

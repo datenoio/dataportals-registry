@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IN-MH
+      name: Mahārāshtra
+description: ArcGIS REST catalog of Kalyan-Dombivli Municipal Corporation map and
+  feature services, including basemaps, enterprise GIS layers, and SKDCL boundaries.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.kdmc.gov.in/agserver/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.kdmc.gov.in/agserver/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.kdmc.gov.in/agserver/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.kdmc.gov.in/agserver/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.kdmc.gov.in/agserver/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maps.kdmc.gov.in/agserver/rest/services?f=kmz
+id: mapskdmcgovin
+langs:
+- id: EN
+  name: English
+link: https://maps.kdmc.gov.in/agserver/rest/services
+name: Kalyan-Dombivli Municipal GIS REST Directory
+owner:
+  link: https://kdmc.gov.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-MH
+      name: Mahārāshtra
+  name: Kalyan-Dombivli Municipal Corporation
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- municipal
+- Maharashtra
+topics: []
+uid: cdi99990712

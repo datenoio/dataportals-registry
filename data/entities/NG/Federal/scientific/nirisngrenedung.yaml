@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Nigerian Institutional Repository and Identity System (NIRIS) national DSpace
+  catalog operated by the Nigerian Research and Education Network.
+id: nirisngrenedung
+langs:
+- id: EN
+  name: English
+link: https://niris.ngren.edu.ng/
+name: Nigerian Institutional Repository and Identity System
+owner:
+  link: https://ngren.edu.ng/
+  location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 20
+  name: Nigerian Research and Education Network
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- DSpace
+- institutional repository
+- research data
+- Nigeria
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990758
+properties:
+  is_national: false
+  has_doi: false
+endpoints:
+- type: dspace
+  url: https://niris.ngren.edu.ng/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://niris.ngren.edu.ng/server/api/discover/search/objects
+  version: '7'

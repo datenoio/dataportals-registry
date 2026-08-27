@@ -2,7 +2,7 @@
 
 Biodiversity, facility, crop, chemistry, and earth-system repositories (`catalog_type: Scientific data repository`). Institutional IRs: [discovery-scientific.md](discovery-scientific.md). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Harvest: [harvest-scientific-domain.md](harvest-scientific-domain.md).
 
-High-count domain stacks with their own recipes: IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, SciCat, InterMine, GRIN-Global, PlutoF, JGI Genome Portal, cBioPortal, ESA Science Archive.
+High-count domain stacks with their own recipes: IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat, InterMine, GRIN-Global, PlutoF, JGI Genome Portal, cBioPortal, ESA Science Archive.
 
 One portal / node = one registry record. Do not add gene pages, occurrences, or ESGF data nodes as extra catalogs.
 
@@ -97,6 +97,21 @@ Biodiversity occurrence catalogs (ALA and national living-atlas forks). Site: [a
 |------|-------|
 | Google | `"Atlas of Living Australia" OR "Living Atlas" (occurrences OR biocache)` |
 | Censys | `web.endpoints.http.body: "biocache"` |
+
+## BirdMap Africa (`birdmap`) {#birdmap}
+
+Citizen-science bird atlas platform of the African Bird Atlas Project. Site: [birdmap.africa](https://www.birdmap.africa/). Country portals share `{project}.birdmap.africa` (SABAP2, Nigeria, Kenya, Senegal, and others). Distinct from BirdLasser (the mobile submission app) and from Living Atlases (`ala`).
+
+**Signals:** host `*.birdmap.africa`; pentad coverage maps; SABAP2 protocol; API `api.birdmap.africa/{project}/v2/`.
+
+**Confirm:** GET the country portal home. One record per country project, not per pentad or species page. Skip `symbiota.birdmap.africa` when it is already a Symbiota catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:birdmap.africa (atlas OR pentad OR SABAP)` |
+| Google | `"Bird Atlas" (SABAP2 OR Nigeria OR Kenya) birdmap` |
+| Censys | `web.names: "birdmap.africa"` |
+| crt.sh | `%.birdmap.africa` |
 
 ## SciCat (`scicat`) {#scicat}
 

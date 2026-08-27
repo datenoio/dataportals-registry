@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IN-WB
+      name: West Bengal
+description: ArcGIS REST catalog of West Bengal National Hydrology Project groundwater
+  and irrigation layers, including LULC rasters, well depth, ADMIP command areas,
+  and WRIS services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://nhpgw.wb.gov.in/gisserver/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://nhpgw.wb.gov.in/gisserver/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://nhpgw.wb.gov.in/gisserver/services?wsdl
+- type: arcgis:sitemap
+  url: https://nhpgw.wb.gov.in/gisserver/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://nhpgw.wb.gov.in/gisserver/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://nhpgw.wb.gov.in/gisserver/rest/services?f=kmz
+id: nhpgwwbgovin
+langs:
+- id: EN
+  name: English
+link: https://nhpgw.wb.gov.in/gisserver/rest/services
+name: West Bengal NHP Groundwater GIS REST Directory
+owner:
+  link: https://wbgw-nhp.in/
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-WB
+      name: West Bengal
+  name: State Water Investigation Directorate, Government of West Bengal
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- groundwater
+- hydrology
+- West Bengal
+topics: []
+uid: cdi99990714

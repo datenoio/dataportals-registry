@@ -146,6 +146,35 @@ Open-source QGIS WebGIS (G3W-ADMIN + G3W-CLIENT). Site: [g3wsuite.it](https://g3
 | Google | `"NextGIS Web" OR inurl:/resource/0 "nextgis"` |
 | Censys | `web.endpoints.http.body: "NextGIS"` |
 
+## GC2 (`gc2`) {#gc2}
+
+MapCentia GC2 (GeoCloud 2) spatial-data platform, often with the Vidi viewer. OSGeo: [GC2/Vidi](https://www.osgeo.org/projects/gc2-vidi/). Distinct from Japanese GC Navi (`gcnavi`) on `geocloud.jp`.
+
+**Signals:** title “MapCentia GeoCloud”; path `/apps/viewer`; `/mapcache/{tenant}/wmts`; `/api/v1/sql/{db}`; `/api/v2/configuration`; hosts `*.mapcentia.com` or `*.gc2.io`.
+
+**Confirm:** GET `/apps/viewer` or MapCache WMTS GetCapabilities. One record per public tenant, not the MapCentia marketing site or `map.gc2.io` demo.
+
+| Tool | Query |
+|------|-------|
+| Google | `"MapCentia" OR GC2 (geoportal OR GeoCloud) (inurl:mapcentia.com OR inurl:gc2.io) -site:github.com` |
+| Google | `inurl:/apps/viewer MapCentia OR inurl:/mapcache/` |
+| Censys | `web.names: "mapcentia.com"` |
+| crt.sh | `%.mapcentia.com` OR `%.gc2.io` |
+
+## hale»connect (`haleconnect`) {#haleconnect}
+
+wetransform INSPIRE/SDI publishing platform. Product: [hale»connect](https://wetransform.to/haleconnect/). CSW is often pycsw-backed — still set `haleconnect`, not `pycsw`, when hale»connect is the public catalog.
+
+**Signals:** “hale connect” / hale»connect branding; `/csw?service=CSW`; `/ows/services/org.` WMS/WFS; hosts `haleconnect.com`, GovConnect, Komm.ONE, and other tenants.
+
+**Confirm:** GET CSW GetCapabilities or the public geoportal home. One record per public cloud or on-prem tenant, not per WMS layer.
+
+| Tool | Query |
+|------|-------|
+| Google | `"hale connect" OR haleconnect OR "hale»connect" (INSPIRE OR CSW OR geoportal) -site:wetransform.to` |
+| Google | `inurl:haleconnect.com/csw OR "powered by hale"` |
+| Censys | `web.endpoints.http.body: "hale connect"` |
+
 ## STAC API (`stacserver`) {#stacserver}
 
 Static catalogs (`catalog.json`) and STAC API. Index: [stacindex.org/catalogs](https://stacindex.org/catalogs).

@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: ArcGIS REST catalog of National Water Informatics Centre hydro layers, including
+  agro-regions, canals, coastal data, command areas, dams, wetlands, and sub-basins.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.nwic.in/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.nwic.in/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.nwic.in/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.nwic.in/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.nwic.in/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.nwic.in/server/rest/services?f=kmz
+id: gisnwicin
+langs:
+- id: EN
+  name: English
+link: https://gis.nwic.in/server/rest/services
+name: National Water Informatics Centre GIS REST Directory
+owner:
+  link: https://nwic.gov.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 20
+  name: National Water Informatics Centre
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- hydrology
+- water
+topics: []
+uid: cdi99990732
+properties:
+  is_national: false
+  has_doi: false

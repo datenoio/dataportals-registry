@@ -7,7 +7,7 @@ Do not add dataset-level records (a single Dataverse dataset, a Zenodo depositio
 | Page | Use when |
 |------|----------|
 | This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, OPUS, RADAR, Yoda, Hyrax, Figshare, Redivis, Pure, Converis, Omega-PSIR, Archipelago, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, …) |
-| [Domain repositories](discovery-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, SciCat |
+| [Domain repositories](discovery-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat |
 
 All `software.id` values: [software-index.md](software-index.md). Harvest filters: [harvest-scientific.md](harvest-scientific.md), [harvest-scientific-domain.md](harvest-scientific-domain.md).
 

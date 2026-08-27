@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: NA
+      name: Namibia
+    level: 20
+    macroregion:
+      id: '018'
+      name: Southern Africa
+description: Interactive 2023 Population and Housing Census dissemination portal of
+  the Namibia Statistics Agency. Regional and constituency dashboards cover population,
+  education, and household indicators, distinct from NADA microdata and Digital Namibia
+  geospatial services.
+endpoints:
+- type: sitemap
+  url: https://census.nsa.org.na/sitemap.xml
+- type: sitemap
+  url: https://census.nsa.org.na/sitemap.xml.gz
+id: censusnsaorgna
+langs:
+- id: EN
+  name: English
+link: https://census.nsa.org.na/
+name: Namibia Statistics Agency Census Dissemination
+owner:
+  link: https://nsa.org.na
+  location:
+    country:
+      id: NA
+      name: Namibia
+    level: 20
+  name: Namibia Statistics Agency
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+uid: cdi99990700
+tags:
+- statistics
+- census
+- government
+- official statistics
+- Namibia
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115

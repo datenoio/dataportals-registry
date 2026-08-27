@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Central Bank of Nigeria DSpace institutional repository of research outputs and
+  publications.
+endpoints:
+- type: dspace
+  url: https://repo.cbn.gov.ng/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repo.cbn.gov.ng/server/api/discover/search/objects
+  version: '7'
+id: repocbngovng
+langs:
+- id: EN
+  name: English
+link: https://repo.cbn.gov.ng/
+name: CBN Institutional Repository
+owner:
+  link: https://www.cbn.gov.ng/
+  location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 20
+  name: Central Bank of Nigeria
+  type: Central government
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- DSpace
+- institutional repository
+- research data
+- Nigeria
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990759
+properties:
+  is_national: false
+  has_doi: false

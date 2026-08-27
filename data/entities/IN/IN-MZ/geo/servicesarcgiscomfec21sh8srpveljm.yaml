@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IN-MZ
+      name: Mizoram
+description: Public ArcGIS Online feature catalog of Mizoram Remote Sensing Application
+  Centre layers, including district boundaries, settlements, roads, isolation facilities,
+  and COVID-19 case maps.
+endpoints:
+- type: arcgis:rest:info
+  url: https://services.arcgis.com/FEc21Sh8srpVELjm/ArcGIS/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://services.arcgis.com/FEc21Sh8srpVELjm/ArcGIS/rest/services?f=pjson
+id: servicesarcgiscomfec21sh8srpveljm
+langs:
+- id: EN
+  name: English
+link: https://services.arcgis.com/FEc21Sh8srpVELjm/ArcGIS/rest/services
+name: Mizoram MIRSAC ArcGIS Online Feature Catalog
+owner:
+  link: https://mirsac.mizoram.gov.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-MZ
+      name: Mizoram
+  name: Mizoram Remote Sensing Application Centre
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- Mizoram
+- COVID-19
+topics: []
+uid: cdi99990713

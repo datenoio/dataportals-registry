@@ -1,6 +1,6 @@
 # Harvesting biodiversity and genomics catalogs
 
-IPT, Symbiota, Living Atlases, Ensembl, PlutoF, InterMine, JGI, and cBioPortal publish **datasets, collections, studies, or genome databases**. Occurrence rows, gene records, mutation tables, and map clicks are the wrong grain.
+IPT, Symbiota, Living Atlases, Ensembl, PlutoF, InterMine, JGI, cBioPortal, and BirdMap Africa publish **datasets, collections, studies, or genome databases**. Occurrence rows, gene records, mutation tables, and map clicks are the wrong grain.
 
 Overview: [harvest.md](harvest.md). Finding portals: [discovery-scientific.md](discovery-scientific.md). GET only. Stop on `401`/`403`. Prefer `endpoints[]`.
 
@@ -18,6 +18,7 @@ Overview: [harvest.md](harvest.md). Finding portals: [discovery-scientific.md](d
 | JGI **genome / transcriptome project** | Gene pages, BLAST hits, IMG/GOLD |
 | cBioPortal **study** | Mutation/CNA rows, patient samples |
 | GRIN-Global **accession catalog export** | Individual accession HTML pages |
+| BirdMap Africa **project catalog / API species lists** | Survey cards, pentad clicks, BirdLasser |
 
 ## GBIF IPT (`ipt`) {#ipt}
 
@@ -47,6 +48,14 @@ GET https://host/ws/registry/collections
 ```
 
 Harvest **collections** (data resources). Species autocomplete and occurrence search are not dataset lists. Same pattern on other Living Atlases.
+
+## BirdMap Africa (`birdmap`) {#birdmap}
+
+African Bird Atlas country portals (`{project}.birdmap.africa`). Harvest the project catalog and public API (`https://api.birdmap.africa/{project}/v2/` when listed in `endpoints[]`). Keep pentad coverage / species-list **datasets**. Drop individual survey cards, pentad map clicks, and BirdLasser app traffic. One country project = one harvest scope.
+
+```text
+GET https://api.birdmap.africa/sabap2/v2/
+```
 
 ## GBIF platform (`gbifplatform`) {#gbifplatform}
 
@@ -92,6 +101,7 @@ Keep **datasets** (DataCite/OAI type Dataset). Drop publications mixed into the 
 | `jgi` | Genome Portal projects | gene pages, IMG, GOLD, `data.jgi.doe.gov` |
 | `cbioportal` | `/api/studies` | mutation/CNA rows |
 | `gringlobal` | accession catalog exports | each accession HTML page |
+| `birdmap` | country portal / `api.birdmap.africa/{project}/v2/` | survey cards, pentad clicks |
 
 Institutional IRs that also hold Darwin Core: use [harvest-scientific.md](harvest-scientific.md) type filters, not occurrence APIs. Domain harvest recipes: [harvest-scientific-domain.md](harvest-scientific-domain.md).
 
