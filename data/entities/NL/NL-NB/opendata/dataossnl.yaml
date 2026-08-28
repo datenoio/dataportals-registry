@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-NB
+      name: Noord-Brabant
+description: OpenGDC dataportaal of the municipality of Oss. Harvested by data.overheid.nl.
+endpoints:
+- type: openapi
+  url: https://data.oss.nl/openapi.json
+- type: opengdc:datasets
+  url: https://data.oss.nl/api/datasets
+- type: opensearch
+  url: https://data.oss.nl/osdd.xml
+- type: sitemap
+  url: https://data.oss.nl/sitemap.xml
+id: dataossnl
+langs:
+- id: NL
+  name: Dutch
+link: https://data.oss.nl
+name: Dataportaal gemeente Oss
+owner:
+  link: https://www.oss.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-NB
+      name: Noord-Brabant
+  name: Gemeente Oss
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: opengdc
+  name: OpenGDC
+status: active
+tags:
+- government
+- open data
+- Netherlands
+- municipality
+- Oss
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99991449

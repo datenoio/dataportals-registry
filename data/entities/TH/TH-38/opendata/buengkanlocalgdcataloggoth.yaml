@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: TH-38
+      name: Bueng Kan
+description: Local Government Data Catalog (GD Catalog) for municipalities and subdistrict
+  administrative organizations in Bueng Kan Province, Thailand.
+endpoints:
+- type: ckan
+  url: https://buengkan-local.gdcatalog.go.th/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://buengkan-local.gdcatalog.go.th/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://buengkan-local.gdcatalog.go.th/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://buengkan-local.gdcatalog.go.th/catalog.n3
+- type: dcat:ttl
+  url: https://buengkan-local.gdcatalog.go.th/catalog.ttl
+- type: dcat:xml
+  url: https://buengkan-local.gdcatalog.go.th/catalog.xml
+- type: dcat:jsonld
+  url: https://buengkan-local.gdcatalog.go.th/catalog.jsonld
+id: buengkanlocalgdcataloggoth
+langs:
+- id: TH
+  name: Thai
+link: https://buengkan-local.gdcatalog.go.th
+name: Bueng Kan Local Government Open Data Portal
+owner:
+  link: https://buengkan-local.gdcatalog.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 30
+    subregion:
+      id: TH-38
+      name: Bueng Kan
+  name: Bueng Kan local governments
+  type: Local government
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- local government
+- GD Catalog
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99991582

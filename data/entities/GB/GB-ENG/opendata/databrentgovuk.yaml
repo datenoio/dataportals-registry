@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Open data portal for the London Borough of Brent. Publishes council datasets
+  through a DataPress catalog for residents, businesses, and reuse.
+endpoints:
+- type: dcatus11
+  url: https://data.brent.gov.uk/data.json
+  version: '1.1'
+- type: ckan
+  url: https://data.brent.gov.uk/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.brent.gov.uk/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.brent.gov.uk/api/3/action/package_list
+  version: '3'
+id: databrentgovuk
+langs:
+- id: EN
+  name: English
+link: https://data.brent.gov.uk
+name: Brent Open Data
+owner:
+  link: https://www.brent.gov.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: London Borough of Brent
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: datapress
+  name: DataPress
+status: active
+tags:
+- government
+- has_api
+- open data
+- local government
+- Brent
+- London
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+uid: cdi99990812

@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Institutional repository of Osaka Metropolitan University. IRDB reports 1 dataset
+  records (July 2026).
+endpoints:
+- type: weko3:records
+  url: https://ocu-omu.repo.nii.ac.jp/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english
+id: ocuomureponiiacjp
+langs:
+- id: JA
+  name: Japanese
+- id: EN
+  name: English
+link: https://ocu-omu.repo.nii.ac.jp
+name: Osaka City University Repository for Academic materials
+owner:
+  link: https://ocu-omu.repo.nii.ac.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+  name: Osaka Metropolitan University
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: weko3
+  name: WEKO3
+status: active
+tags:
+- institutional repository
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00037555

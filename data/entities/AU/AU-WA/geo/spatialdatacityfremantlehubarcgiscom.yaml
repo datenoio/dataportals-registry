@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 30
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+    subregion:
+      id: AU-WA
+      name: Western Australia
+description: City of Fremantle ArcGIS Hub catalog of open geospatial datasets, including
+  dog exercise areas, waste services, planning, and property layers.
+endpoints:
+- type: dcatap201
+  url: https://spatialdata-city-fremantle.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://spatialdata-city-fremantle.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://spatialdata-city-fremantle.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://spatialdata-city-fremantle.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://spatialdata-city-fremantle.hub.arcgis.com/sitemap.xml
+id: spatialdatacityfremantlehubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://spatialdata-city-fremantle.hub.arcgis.com
+name: City of Fremantle Open Data
+owner:
+  link: https://www.fremantle.wa.gov.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 30
+    subregion:
+      id: AU-WA
+      name: Western Australia
+  name: City of Fremantle
+  type: Local government
+properties:
+  dataset_count_reported: 11
+  has_doi: false
+  is_national: false
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- has_api
+- GIS
+- Open Data
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99991468

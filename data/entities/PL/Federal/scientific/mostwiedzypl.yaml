@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
       name: Eastern Europe
 description: Open research data catalog of Gdańsk University of Technology, publishing
   datasets produced by the university's researchers.
+endpoints:
+- type: oaipmh20
+  url: https://mostwiedzy.pl/oai/request?verb=Identify
+  version: '2.0'
 id: mostwiedzypl
 identifiers:
 - id: re3data
@@ -38,8 +42,8 @@ owner:
   name: Gdańsk University of Technology
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: omegapsir
+  name: Omega-PSIR
 status: active
 tags:
 - open science

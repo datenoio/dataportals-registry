@@ -196,6 +196,7 @@ const sidebars: SidebarsConfig = {
         'agents/discover',
         'agents/harvest',
         'agents/contribute',
+        'agents/improve',
         'agents/openspec-quickstart',
       ],
     },

@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+description: Shared DSpace institutional repository (Research Bank) for research by
+  staff and students at Unitec, Eastern Institute of Technology, Otago Polytechnic,
+  Toi Ohomai, and Southern Institute of Technology.
+endpoints:
+- type: dspace:objects
+  url: https://www.researchbank.ac.nz/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://www.researchbank.ac.nz/server/oai/request?verb=Identify
+  version: '2.0'
+id: wwwresearchbankacnz
+langs:
+- id: EN
+  name: English
+link: https://www.researchbank.ac.nz
+name: Research Bank
+owner:
+  link: https://www.researchbank.ac.nz
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+  name: Research Bank (Unitec, EIT, Otago Polytechnic, Toi Ohomai, and SIT)
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991481

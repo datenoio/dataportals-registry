@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-MC
+      name: Murcia, Región de
+description: RIUCAM is the institutional repository of Universidad Católica San Antonio
+  de Murcia (UCAM). It collects and disseminates scientific and academic production
+  in open access.
+endpoints:
+- type: oaipmh20
+  url: https://repositorio.ucam.edu/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://repositorio.ucam.edu/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repositorio.ucam.edu/feed/atom_1.0/site
+  version: '1.0'
+id: repositorioucamedu
+langs:
+- id: ES
+  name: Spanish
+link: https://repositorio.ucam.edu
+name: RIUCAM
+owner:
+  link: https://www.ucam.edu
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-MC
+      name: Murcia, Región de
+  name: Universidad Católica San Antonio de Murcia
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- education
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990899

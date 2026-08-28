@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- scientific publication
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Institutional repository of the University of Minho (DSpace). Distinct
+  from DataRepositoriUM; includes dataset-typed items among publications.
+endpoints:
+- type: dspace
+  url: https://repositorium.uminho.pt/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositorium.uminho.pt/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://repositorium.uminho.pt/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://repositorium.uminho.pt/sitemap_index.xml
+id: repositoriumuminhopt
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::8e98d81f8217304975ccb23337bb5761
+  value: opendoar____::8e98d81f8217304975ccb23337bb5761
+langs:
+- id: PT
+  name: Portuguese
+link: https://repositorium.uminho.pt/
+name: RepositóriUM
+owner:
+  link: https://www.uminho.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: Universidade do Minho
+  type: Academy
+properties:
+  dataset_count_reported: 30
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991465

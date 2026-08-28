@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-SC
+      name: South Carolina
+description: Institutional repository for Clemson University research outputs, including
+  a public Data Sets collection of research datasets.
+endpoints:
+- type: oaipmh20
+  url: https://open.clemson.edu/do/oai/?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://open.clemson.edu/siteindex.xml
+id: openclemsonedu
+langs:
+- id: EN
+  name: English
+link: https://open.clemson.edu
+name: Clemson OPEN
+owner:
+  link: https://www.clemson.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-SC
+      name: South Carolina
+  name: Clemson University
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+software:
+  id: elsevierdigitalcommons
+  name: Elsevier Digital Commons
+status: active
+tags:
+- research data
+- datasets
+- institutional repository
+- open access
+- university
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991758

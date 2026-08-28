@@ -1,0 +1,89 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: BG-01
+      name: Blagoevgrad
+description: Public municipal GIS of Blagoevgrad (WebMAP viewer with GeoServer WMS/WFS)
+  for cadastre, spatial plans, and local infrastructure.
+endpoints:
+- type: wms111
+  url: https://gis.blagoevgrad.bg/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://gis.blagoevgrad.bg/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: https://gis.blagoevgrad.bg/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://gis.blagoevgrad.bg/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: gisblagoevgradbg
+langs:
+- id: BG
+  name: Bulgarian
+link: https://gis.blagoevgrad.bg/
+name: Blagoevgrad Municipal GIS
+owner:
+  link: https://www.blagoevgrad.bg
+  location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 30
+    subregion:
+      id: BG-01
+      name: Blagoevgrad
+  name: Municipality of Blagoevgrad
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- GIS
+- GeoServer
+- Blagoevgrad
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99990981

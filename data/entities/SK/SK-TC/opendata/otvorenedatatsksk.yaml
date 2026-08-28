@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: SK
+      name: Slovakia
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id002
+      id: SK-TC
+      name: Trenčiansky kraj
+description: Open data download page of Trenčiansky samosprávny kraj, publishing regional
+  datasets from the publication minimum as structured files.
+id: otvorenedatatsksk
+langs:
+- id: SK
+  name: Slovak
+link: https://www.tsk.sk/uradna-tabula/otvorene-data.html?page_id=974382
+name: Otvorené dáta Trenčianskeho samosprávneho kraja
+owner:
+  link: https://www.tsk.sk
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Trenčiansky samosprávny kraj
+  type: Regional government
+properties:
+  has_doi: false
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+- Slovakia
+- regional
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99990989

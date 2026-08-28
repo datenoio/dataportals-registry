@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-NV
+      name: Nevada
+description: University of Nevada, Reno institutional repository (DSpace), including
+  Dataset records of research data.
+endpoints:
+- type: dspace
+  url: https://scholarwolf.unr.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://scholarwolf.unr.edu/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://scholarwolf.unr.edu/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://scholarwolf.unr.edu/sitemap_index.xml
+id: scholarwolfunredu
+langs:
+- id: EN
+  name: English
+link: https://scholarwolf.unr.edu
+name: ScholarWolf
+owner:
+  link: https://www.unr.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NV
+      name: Nevada
+  name: University of Nevada, Reno
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- datasets
+- dspace
+- institutional repository
+- university
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991754

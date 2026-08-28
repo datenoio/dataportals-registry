@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-25
+      name: Lombardia
+description: ArcGIS Server of the Comune di Bergamo, with public REST folders including
+  AtlanteBG, PGT, and DBT.
+endpoints:
+- type: arcgis:rest:info
+  url: https://territorio.comune.bergamo.it/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://territorio.comune.bergamo.it/arcgis/rest/services?f=pjson
+id: territoricomunebergamoit
+langs:
+- id: IT
+  name: Italian
+link: https://territorio.comune.bergamo.it/arcgis/rest/services
+name: Comune di Bergamo ArcGIS Server
+owner:
+  link: https://www.comune.bergamo.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-25
+      name: Lombardia
+  name: Comune di Bergamo
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- government
+- geospatial
+- has_api
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99991308

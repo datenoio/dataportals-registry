@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- scientific publication
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Institutional repository of the University of the Azores (RCAAP/DSpace),
+  including dataset-typed records.
+endpoints:
+- type: dspace
+  url: https://repositorio.uac.pt/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositorio.uac.pt/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://repositorio.uac.pt/sitemap_index.xml
+id: repositoriouacpt
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::77f959f119f4fb2321e9ce801e2f5163
+  value: opendoar____::77f959f119f4fb2321e9ce801e2f5163
+langs:
+- id: PT
+  name: Portuguese
+link: https://repositorio.uac.pt/
+name: Repositório da Universidade dos Açores
+owner:
+  link: https://www.uac.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: Universidade dos Açores
+  type: Academy
+properties:
+  dataset_count_reported: 24
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991453

@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- scientific publication
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Institutional repository of Universidade Aberta. DSpace lists dataset-typed
+  items alongside theses and publications.
+endpoints:
+- type: dspace
+  url: https://repositorioaberto.uab.pt/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositorioaberto.uab.pt/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://repositorioaberto.uab.pt/sitemap_index.xml
+id: repositorioabertouabpt
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::5cbdfd0dfa22a3fca7266376887f549b
+  value: opendoar____::5cbdfd0dfa22a3fca7266376887f549b
+langs:
+- id: PT
+  name: Portuguese
+link: https://repositorioaberto.uab.pt/
+name: Repositório Aberto da Universidade Aberta
+owner:
+  link: https://www.uab.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: Universidade Aberta
+  type: Academy
+properties:
+  dataset_count_reported: 10
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991462

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
 description: Kenya Bird Map citizen-science catalog of bird distribution records on
   a pentad grid, part of the African Bird Atlas / BirdMap family, with public species
   lists and coverage downloads.
+endpoints:
+- type: rest
+  url: https://api.birdmap.africa/kenya/v2/
 id: kenyabirdmapafrica
 langs:
 - id: EN

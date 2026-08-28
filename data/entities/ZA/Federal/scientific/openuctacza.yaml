@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 20
+    macroregion:
+      id: '018'
+      name: Southern Africa
+description: OpenUCT is a scientific data repository operated by University of Cape Town
+  running on DSpace.
+endpoints:
+- type: dspace
+  url: https://open.uct.ac.za/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://open.uct.ac.za/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://open.uct.ac.za/oai/request?verb=Identify
+  version: '2.0'
+id: openuctacza
+langs:
+- id: EN
+  name: English
+link: https://open.uct.ac.za/
+name: OpenUCT
+owner:
+  link: https://www.uct.ac.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+  name: University of Cape Town
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- dspace
+- South Africa
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994469

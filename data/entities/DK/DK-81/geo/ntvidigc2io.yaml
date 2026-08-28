@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Nordjylland
 description: Nordjyllands Trafikselskab public MapCentia Vidi geoportal for North
   Jutland public transport map layers.
+endpoints:
+- type: rest
+  url: https://nt.vidi.gc2.io/api/v2/
 id: ntvidigc2io
 langs:
 - id: DA

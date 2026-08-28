@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Institutional repository of Obihiro University of Agriculture and Veterinary
+  Medicine. IRDB reports 3 dataset records (July 2026).
+endpoints:
+- type: weko3:records
+  url: https://obihiro.repo.nii.ac.jp/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english
+id: obihiroreponiiacjp
+langs:
+- id: JA
+  name: Japanese
+- id: EN
+  name: English
+link: https://obihiro.repo.nii.ac.jp
+name: 'OAK: Obihiro University Archives of Knowledge'
+owner:
+  link: https://obihiro.repo.nii.ac.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+  name: Obihiro University of Agriculture and Veterinary Medicine
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: weko3
+  name: WEKO3
+status: active
+tags:
+- institutional repository
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00037554

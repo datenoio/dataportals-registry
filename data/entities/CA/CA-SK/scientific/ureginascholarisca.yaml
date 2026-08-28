@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-SK
+      name: Saskatchewan
+description: oURspace is the University of Regina institutional repository, hosted
+  on Scholaris (DSpace).
+endpoints:
+- type: dspace
+  url: https://uregina.scholaris.ca/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://uregina.scholaris.ca/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://uregina.scholaris.ca/sitemap_index.xml
+id: ureginascholarisca
+langs:
+- id: EN
+  name: English
+link: https://uregina.scholaris.ca
+name: oURspace
+owner:
+  link: https://www.uregina.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-SK
+      name: Saskatchewan
+  name: University of Regina
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- datasets
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991722

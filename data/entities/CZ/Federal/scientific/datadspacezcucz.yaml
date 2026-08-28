@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Research data repository of the University of West Bohemia in Pilsen
+  for long-term storage and sharing of FAIR datasets.
+endpoints:
+- type: oaipmh20
+  url: https://data-dspace.zcu.cz/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://data-dspace.zcu.cz/sitemap_index.xml
+id: datadspacezcucz
+langs:
+- id: CS
+  name: Czech
+- id: EN
+  name: English
+link: https://data-dspace.zcu.cz/
+name: University of West Bohemia Data Repository
+owner:
+  link: https://www.zcu.cz/
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: University of West Bohemia
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990954

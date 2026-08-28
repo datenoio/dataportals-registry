@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-AB
+      name: Alberta
+description: OPUS is the University of Lethbridge institutional repository (DSpace).
+endpoints:
+- type: dspace
+  url: https://opus.uleth.ca/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://opus.uleth.ca/server/api/discover/search/objects
+  version: '7'
+id: opusulethca
+langs:
+- id: EN
+  name: English
+link: https://opus.uleth.ca
+name: University of Lethbridge OPUS Institutional Repository
+owner:
+  link: https://www.ulethbridge.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-AB
+      name: Alberta
+  name: University of Lethbridge
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- datasets
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991727

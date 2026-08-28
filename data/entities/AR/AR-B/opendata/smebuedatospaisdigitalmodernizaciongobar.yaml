@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: AR-B
+      name: Buenos Aires
+description: Portal de datos abiertos de la Municipalidad de San Miguel (Buenos Aires),
+  alojado en País Digital. Publica datos municipales en formatos abiertos para reutilización
+  ciudadana.
+endpoints:
+- type: ckan:package-search
+  url: http://sme-bue-datos.paisdigital.modernizacion.gob.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://sme-bue-datos.paisdigital.modernizacion.gob.ar/api/3/action/package_list
+  version: '3'
+id: smebuedatospaisdigitalmodernizaciongobar
+langs:
+- id: ES
+  name: Spanish
+link: http://sme-bue-datos.paisdigital.modernizacion.gob.ar
+name: San Miguel Data
+owner:
+  link: https://www.sanmiguel.gob.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-B
+      name: Buenos Aires
+  name: Municipalidad de San Miguel
+  type: Local government
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- municipio
+- San Miguel
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+uid: cdi99992055

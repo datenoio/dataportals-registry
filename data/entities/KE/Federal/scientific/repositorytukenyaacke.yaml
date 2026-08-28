@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Technical University of Kenya Institutional Repository is a scientific data
+  repository operated by Technical University of Kenya running on DSpace.
+endpoints:
+- type: dspace
+  url: https://repository.tukenya.ac.ke/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repository.tukenya.ac.ke/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://repository.tukenya.ac.ke/sitemap_index.xml
+id: repositorytukenyaacke
+langs:
+- id: EN
+  name: English
+link: https://repository.tukenya.ac.ke/
+name: Technical University of Kenya Institutional Repository
+owner:
+  link: https://www.tukenya.ac.ke
+  location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+  name: Technical University of Kenya
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- dspace
+- Kenya
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991669

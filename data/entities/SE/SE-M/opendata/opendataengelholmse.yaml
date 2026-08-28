@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: SE-M
+      name: Skåne län [SE-12]
+description: CKAN open data portal of Ängelholm Municipality (Sokigo theme, CKAN 2.10.5).
+endpoints:
+- type: ckan
+  url: https://opendata.engelholm.se/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata.engelholm.se/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.engelholm.se/api/3/action/package_list
+  version: '3'
+- type: dcat:xml
+  url: https://opendata.engelholm.se/catalog.rdf
+id: opendataengelholmse
+langs:
+- id: SV
+  name: Swedish
+link: https://opendata.engelholm.se
+name: Ängelholms kommun - Öppna data
+owner:
+  link: https://www.engelholm.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    subregion:
+      id: SE-M
+      name: Skåne län [SE-12]
+  name: Ängelholms kommun
+  type: Local government
+properties:
+  dataset_count_reported: 3
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- open data
+- municipality
+- has_api
+- ckan
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99991359

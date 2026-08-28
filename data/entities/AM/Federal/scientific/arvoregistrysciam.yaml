@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AM
+      name: Armenia
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Armenian Virtual Observatory (ArVO) data center at Byurakan Astrophysical
+  Observatory. Publishes Digitized First Byurakan Survey plate scans and extracted
+  spectra through an IVOA TAP/VOSI service (schemas dfbsplates, dfbsspec, ivoa.obscore).
+endpoints:
+- type: tap:capabilities
+  url: http://arvo-registry.sci.am/__system__/tap/run/tap/capabilities
+id: arvoregistrysciam
+langs:
+- id: EN
+  name: English
+link: http://arvo-registry.sci.am/
+name: ArVO Byurakan data center
+owner:
+  link: https://www.bao.am
+  location:
+    country:
+      id: AM
+      name: Armenia
+    level: 20
+  name: Byurakan Astrophysical Observatory
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- astronomy
+- TAP
+- virtual observatory
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991614

@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-MD
+      name: Madrid, Comunidad de
+description: Institutional repository of Universidad Pontificia Comillas. It provides
+  open access to the academic, scientific and research production of the university
+  community.
+endpoints:
+- type: oaipmh20
+  url: https://repositorio.comillas.edu/oai/request?verb=Identify
+  version: '2.0'
+id: repositoriocomillasedu
+langs:
+- id: ES
+  name: Spanish
+link: https://repositorio.comillas.edu
+name: Repositorio Comillas
+owner:
+  link: https://www.comillas.edu
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-MD
+      name: Madrid, Comunidad de
+  name: Universidad Pontificia Comillas
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- education
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990900

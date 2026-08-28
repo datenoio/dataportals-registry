@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: IR@INFLIBNET is a scientific data repository operated by INFLIBNET Centre
+  running on DSpace.
+endpoints:
+- type: dspace
+  url: https://ir.inflibnet.ac.in/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://ir.inflibnet.ac.in/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://ir.inflibnet.ac.in/sitemap_index.xml
+id: irinflibnetacin
+langs:
+- id: EN
+  name: English
+link: https://ir.inflibnet.ac.in
+name: IR@INFLIBNET
+owner:
+  link: https://ir.inflibnet.ac.in
+  location:
+    country:
+      id: IN
+      name: India
+  name: INFLIBNET Centre
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- dspace
+- India
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99993845

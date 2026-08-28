@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CL
+      name: Chile
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: El Repositorio de Datos de Investigación UC (Dataverse) otorga visibilidad
+  a los datos de investigación generados en la Pontificia Universidad Católica de
+  Chile y usa protocolos y estándares para su reutilización.
+endpoints:
+- type: dataverseapi
+  url: https://datosinvestigacion.repositorio.uc.cl/api/search
+- type: oaipmh20
+  url: https://datosinvestigacion.repositorio.uc.cl/oai?verb=Identify
+  version: '2.0'
+id: datosinvestigacionrepositoriouccl
+langs:
+- id: ES
+  name: Spanish
+link: https://datosinvestigacion.repositorio.uc.cl
+name: Datos de Investigación UC
+owner:
+  link: https://www.uc.cl
+  location:
+    country:
+      id: CL
+      name: Chile
+    level: 20
+  name: Pontificia Universidad Católica de Chile
+  type: Academy
+properties:
+  dataset_count_reported: 63
+  has_doi: true
+  is_national: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- has_api
+- multidisciplinary
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99992083

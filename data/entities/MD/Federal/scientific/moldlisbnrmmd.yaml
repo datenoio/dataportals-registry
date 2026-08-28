@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: MD
+      name: Moldova
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: National Thematic Repository Moldova – Library and Information Science
+  (NTR Mold-LIS / RTN BȘIRM). DSpace 9 archive managed by the National Library of
+  the Republic of Moldova for research in librarianship and information science.
+endpoints:
+- type: dspace
+  url: http://moldlis.bnrm.md/server/api
+  version: '9'
+- type: dspace:objects
+  url: http://moldlis.bnrm.md/server/api/discover/search/objects
+  version: '9'
+- type: oaipmh20
+  url: http://moldlis.bnrm.md/server/oai/request?verb=Identify
+  version: '2.0'
+id: moldlisbnrmmd
+langs:
+- id: RO
+  name: Romanian
+- id: EN
+  name: English
+link: http://moldlis.bnrm.md
+name: National Thematic Repository Moldova – Library and Information Science
+owner:
+  link: https://www.bnrm.md
+  location:
+    country:
+      id: MD
+      name: Moldova
+    level: 20
+  name: National Library of the Republic of Moldova
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- DSpace
+- institutional repository
+- research
+- has_api
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991635

@@ -96,7 +96,7 @@ Contributions to the codebase are welcome:
 
 ## Adding New Catalog Entries
 
-Check [docs/discovery.md](docs/discovery.md) first so you do not add a duplicate `link`. Search-engine recipes: [docs/discovery-search-tools.md](docs/discovery-search-tools.md). Wiring those tools into Cursor, ChatGPT, and other agents: [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md). Coding agents should use [docs/agents/discover.md](docs/agents/discover.md), then [docs/agents/contribute.md](docs/agents/contribute.md).
+Check [docs/discovery.md](docs/discovery.md) first so you do not add a duplicate `link`. Search-engine recipes: [docs/discovery-search-tools.md](docs/discovery-search-tools.md). Wiring those tools into Cursor, ChatGPT, and other agents: [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md). Coding agents should use [docs/agents/discover.md](docs/agents/discover.md), then [docs/agents/contribute.md](docs/agents/contribute.md). Coverage priorities: [docs/agents/improve.md](docs/agents/improve.md).
 
 ### Method 1: Using the Script (Recommended for Quick Additions)
 

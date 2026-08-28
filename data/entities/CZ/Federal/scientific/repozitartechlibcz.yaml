@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Institutional digital repository of the National Library of Technology,
+  including publications and research data records.
+endpoints:
+- type: dspace
+  url: https://repozitar.techlib.cz/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repozitar.techlib.cz/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://repozitar.techlib.cz/sitemap_index.xml
+id: repozitartechlibcz
+langs:
+- id: CS
+  name: Czech
+- id: EN
+  name: English
+link: https://repozitar.techlib.cz/
+name: NTK Institutional Digital Repository
+owner:
+  link: https://www.techlib.cz/
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: National Library of Technology
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990953

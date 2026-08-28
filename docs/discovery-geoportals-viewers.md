@@ -34,6 +34,116 @@ GEOBID GIS used for Polish cadastral, utility, and municipal map publication. Ve
 | Censys | `web.names: "geoportal2.pl"` |
 | crt.sh | `%.geoportal2.pl` |
 
+## e-mapa.net (`emapa`) {#emapa}
+
+Geo-System hosted Polish county/municipal SIP. Vendor: [geo-system.com.pl](https://www.geo-system.com.pl/). Public tenants live at `{powiat}.e-mapa.net` and load Pandora JS from `polska.e-mapa.net`.
+
+**Signals:** hostname `*.e-mapa.net`; title “System Informacji Przestrzennej” / e-mapa.net; `/application/system/pandora/pandora.js`.
+
+**Confirm:** GET the tenant URL and match e-mapa.net / Pandora branding. One record per powiat/gmina tenant. **Do not** set `software.id: ewmapa` — that is GEOBID on `geoportal2.pl`.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:e-mapa.net` |
+| Google | `"e-mapa.net" OR "System Informacji Przestrzennej" (powiat OR gmina) site:.pl` |
+| Censys | `web.names: "e-mapa.net"` |
+| crt.sh | `%.e-mapa.net` |
+
+## Loftmyndir (`loftmyndir`) {#loftmyndir}
+
+Loftmyndir Kortasjá municipal map viewers in Iceland. Vendor: [loftmyndir.is](https://www.loftmyndir.is/). Tenants share `www.map.is/{municipality}/`.
+
+**Signals:** hostname `www.map.is`; title “Kortasjá” plus Loftmyndir branding.
+
+**Confirm:** GET the path tenant. **Do not** label Alta Vefsjá (`geo.alta.is/{tenant}/`, `alta`) or other Icelandic kortasjá sites as Loftmyndir. Skip `geo.alta.is/geoserver` (`geoserver`).
+
+| Tool | Query |
+|------|-------|
+| Google | `site:map.is kortasjá OR loftmyndir` |
+| Google | `"Loftmyndir" (kortasjá OR geoportal) site:.is` |
+| Censys | `web.names: "map.is"` |
+| crt.sh | `map.is` |
+
+## Alta Vefsjá (`alta`) {#alta}
+
+Alta ehf. OpenLayers municipal planning viewer. Tenants under `geo.alta.is/{tenant}/` load `altacode` vefsja assets.
+
+**Signals:** `geo.alta.is` path that is **not** `/geoserver`; scripts from `storage.googleapis.com/altacode/js/vefsja/`; title Kortasjá.
+
+**Confirm:** GET the viewer path. Keep the GeoServer root as a separate `geoserver` record.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:geo.alta.is kortasjá OR vefsjá` |
+| Censys | `web.names: "geo.alta.is"` |
+
+## Bulplan UNIMAP (`bulplan`) {#bulplan}
+
+Bulgarian municipal integrated geoportal. Tenants at `{municipality}.bulplan.eu` (UNIMAP branding).
+
+**Signals:** hostname `*.bulplan.eu`; title or chrome UNIMAP / Bulplan.
+
+**Confirm:** GET the public map. One record per municipality. Skip dead Apache default pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:bulplan.eu` |
+| Google | `"UNIMAP" OR Bulplan (геопортал OR geoportal) site:.bg` |
+| Censys | `web.names: "bulplan.eu"` |
+| crt.sh | `%.bulplan.eu` |
+
+## Tobel (`tobel`) {#tobel}
+
+Bulgarian municipal Web GIS. Tenants at `{city}.tobel.bg` (and hosts such as `shumenweb.tobel.bg`).
+
+**Signals:** hostname `*.tobel.bg`; municipal GIS / кадастър UI.
+
+**Confirm:** GET the public map. One record per city tenant.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:tobel.bg` |
+| Google | `"tobel" (GIS OR геопортал OR кадастър) site:.bg` |
+| Censys | `web.names: "tobel.bg"` |
+| crt.sh | `%.tobel.bg` |
+
+## geoportal.ch (`geoportalch`) {#geoportalch}
+
+Hosted Swiss cantonal geoportal. Tenants share `www.geoportal.ch/{canton}` (ktzg, ktai, ktar, …).
+
+**Signals:** hostname `www.geoportal.ch` with a canton path; title Geoportal.
+
+**Confirm:** GET the canton path. Distinct from swisstopo **mf-geoadmin3** (`mfgeoadmin3`).
+
+| Tool | Query |
+|------|-------|
+| Google | `site:geoportal.ch` |
+| Google | `"geoportal.ch" (Kanton OR geoportal) site:.ch` |
+| Censys | `web.names: "geoportal.ch"` |
+| crt.sh | `geoportal.ch` |
+
+## GIS4Smart (`gis4smart`) {#gis4smart}
+
+DOTSOFT municipal Web GIS (Y.Ge.P. / DotSpatial branding). Confirm the public map UI. Do not also register a bundled GeoServer on the same host.
+
+| Tool | Query |
+|------|-------|
+| Google | `"GIS4Smart" geoportal` |
+| Censys | `web.endpoints.http.body: "GIS4Smart"` |
+
+## Evrymap (`evrymap`) {#evrymap}
+
+Consortis Geospatial municipal map portal. SPA titled Evrymap; MapServer WMS/WFS behind the viewer. Common in Greek municipalities (sometimes on `*.open1.eu`).
+
+**Signals:** HTML title “Evrymap”; `/mapserver/mapserv` GetCapabilities; Consortis branding.
+
+**Confirm:** GET the public map UI and match Evrymap. Harvest WMS layers when GetCapabilities is XML. Do not also register the bundled MapServer as a second catalog on the same host.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Evrymap" (Δήμος OR geoportal OR MapServer) site:.gr` |
+| Censys | `web.endpoints.http.html_title: "Evrymap"` |
+
 ## GeoMapFish (`geomapfish`) {#geomapfish}
 
 Open-source WebGIS (c2cgeoportal + ngeo). Common in Swiss cantons and other European public geoportals. Site: [geomapfish.org](https://geomapfish.org).
@@ -304,6 +414,20 @@ Spatial Dimension / Trimble mining and land cadastre map portals (formerly Flexi
 | Censys | `web.names: "portals.landfolio.com"` |
 | crt.sh | `%.landfolio.com` |
 
+## Hajk (`hajk`) {#hajk}
+
+Open-source Swedish web GIS (React, Material UI, OpenLayers). Site: [hajkmap.github.io/Hajk](https://hajkmap.github.io/Hajk/). Source: [hajkmap/Hajk](https://github.com/hajkmap/Hajk). Installation gallery: [hajkmap.se användare](https://hajkmap.se/valkommen-till-hajk/exempelsamling/).
+
+**Signals:** HTML title “Hajk - open source webGIS”; `appConfig.json` with `mapserviceBase` (`/api/v1`, `/api/v2`, or `/mapservice`); `appName` Hajk.
+
+**Confirm:** GET `/appConfig.json` (or `/publik/appConfig.json`). One record per public map application, not the GeoServer/ArcGIS backend on the same municipality. Skip login-only Hajk (Örebro staff GIS, Partille). Skip the Netlify demo.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Hajk - open source webGIS" OR "mapserviceBase" karta site:.se` |
+| Google | `inurl:appConfig.json Hajk` |
+| Censys | `web.endpoints.http.html_title: "Hajk - open source webGIS"` |
+
 ## Spatial Suite (`spatialsuite`) {#spatialsuite}
 
 Sweco web GIS; public client is SpatialMap. Vendor: [Sweco Spatial Suite](https://www.sweco.dk/ydelser/digitale-loesninger/spatial-suite/). Distinct from NIRAS KortInfo.
@@ -317,6 +441,21 @@ Sweco web GIS; public client is SpatialMap. Vendor: [Sweco Spatial Suite](https:
 | Google | `"SpatialMap" OR "Spatial Suite" webkort site:.dk` |
 | Google | `inurl:webkort kommune site:.dk` |
 | Censys | `web.endpoints.http.body: "browserdetect.js?ver="` |
+
+## KortInfo (`kortinfo`) {#kortinfo}
+
+NIRAS hosted web GIS. Vendor: [NIRAS KortInfo](https://www.niras.dk/sektorer/data-digitalisering/webgis-kortinfo/). Distinct from Sweco Spatial Suite (`spatialsuite`).
+
+**Signals:** host `drift.kortinfo.net`; path `/Map.aspx` with `Site=` tenant; titles or help on `help.kortinfo.net`; Danish municipal “KortInfo” / Kortviseren pages.
+
+**Confirm:** GET the public `Map.aspx` tenant (Borgersite, kortHjemmeside, or the city’s documented page). One record per municipality `Site`, not per map page on the same tenant. Skip login-only sagsbehandling maps.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:drift.kortinfo.net Map.aspx` |
+| Google | `"KortInfo" (kommune OR webkort OR kortviser) site:.dk` |
+| Censys | `web.names: "kortinfo.net"` |
+| crt.sh | `%.kortinfo.net` |
 
 ## GEUSMAP (`geusmap`) {#geusmap}
 
@@ -390,6 +529,21 @@ Cadcorp (NEC) public web GIS. Product: [cadcorp.com](https://www.cadcorp.com). D
 | Google | `"Web Map Layers" Cadcorp` |
 | Censys | `web.endpoints.http.body: "Cadcorp"` |
 
+## Geometa (`geometa`) {#geometa}
+
+Gems Development urban-planning GIS and public GIS OGD geoportals (Agate). Product: [geometa.ru](https://geometa.ru/), module docs [geometa.ru/module/agate](https://geometa.ru/module/agate/). Distinct from unrelated “GeoMeta” catalog products. Typical Russian regional tenants: `portal-gisogd.*`, `agate.*`.
+
+**Signals:** HTML title «Портал ГИСОГД»; short body “agat doesn’t work without JavaScript”; `/agate_` paths; Geometa / Agate / Gems Development branding.
+
+**Confirm:** GET the public portal and match Agate. One record per public tenant. Skip login-only document workflows. Do **not** set `software.id: geometa` from a `gisogd.` hostname alone — sites without Agate strings stay `custom`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Портал ГИСОГД" OR inurl:portal-gisogd OR inurl:agate (геопортал OR ГИСОГД) site:.ru` |
+| Google | `"agat doesn’t work without JavaScript" OR "agat doesn't work without JavaScript"` |
+| Censys | `web.endpoints.http.body: "agat doesn’t work without JavaScript"` |
+| Censys | `web.names: "portal-gisogd"` |
+
 ## Other geoportal platforms
 
 Search the product title with the country TLD. One record per public catalog UI.
@@ -408,6 +562,12 @@ Search the product title with the country TLD. One record per public catalog UI.
 | `orbismap` | ORBISMap Russian GIS | `"ORBISMap" геопортал` |
 | `opengeoportal` | see above | |
 | `geonomics` | Vue/Mapbox, geonomix.kz | `"Geonomics" OR geonomix геопортал` |
+| `emapa` | `*.e-mapa.net` Pandora | `site:e-mapa.net` |
+| `loftmyndir` | `www.map.is/{muni}/` | `site:map.is loftmyndir` |
+| `alta` | `geo.alta.is/{tenant}/` vefsja | `site:geo.alta.is kortasjá` |
+| `bulplan` | `{muni}.bulplan.eu` UNIMAP | `site:bulplan.eu` |
+| `tobel` | `{city}.tobel.bg` | `site:tobel.bg` |
+| `geoportalch` | `www.geoportal.ch/{canton}` | `site:geoportal.ch` |
 | `cogis` | see above | |
 | `elitegis` | ArcGIS-compatible REST (Atemiko) | `"eLiteGIS" OR elitegis REST` |
 | `smartfindersdi` | see above | |
@@ -420,6 +580,7 @@ Search the product title with the country TLD. One record per public catalog UI.
 | `qgisserver` | see above | |
 | `openeo` | see above | |
 | `gis4smart` | GIS4Smart municipal | `"GIS4Smart" geoportal` |
+| `evrymap` | Consortis Evrymap municipal | `"Evrymap" (Δήμος OR geoportal) site:.gr` |
 | `geoportalrlp` | Rhineland-Palatinate stack | `geoportal.rlp.de` (do not re-add known nodes) |
 | `copernicusdhus` | Copernicus DHuS | `"DHuS" Copernicus (catalogue OR odata)` |
 | `popgis` | see above | |
@@ -434,6 +595,7 @@ Search the product title with the country TLD. One record per public catalog UI.
 | `louhi` | Sitowise Louhi viewer | `"Louhi" karttapalvelu Sitowise` |
 | `landfolio` | `portals.landfolio.com` cadastre maps | `site:portals.landfolio.com` |
 | `spatialsuite` | Sweco SpatialMap webkort | `"SpatialMap" webkort site:.dk` |
+| `kortinfo` | NIRAS `drift.kortinfo.net/Map.aspx` | `site:drift.kortinfo.net Map.aspx` |
 | `geusmap` | `/geusmap/?mapname=` | `inurl:geusmap mapname` |
 | `gisapp` | `{city}.gisapp.ro` municipal GIS | `site:gisapp.ro` |
 | `iobcina` | Kaliopa `/gisapp/Default.aspx?a=` | `inurl:/gisapp/Default.aspx` |
@@ -441,7 +603,7 @@ Search the product title with the country TLD. One record per public catalog UI.
 | `cadcorp` | Cadcorp SIS WebMap / GeognoSIS | `"SIS WebMap" OR GeognoSIS Cadcorp` |
 | `reearth` | Re:Earth / PLATEAU VIEW | `"Re:Earth" OR "PLATEAU VIEW"` |
 | `gpatlas` | GP Atlas | `"GP Atlas" GIS` |
-| `geometa` | GeoMeta catalog | `"GeoMeta" geoportal` |
+| `geometa` | see above | |
 | `carto` | CARTO Builder / cloud maps | `site:carto.com` government tenants only |
 | `mfgeoadmin3` | swisstopo geoadmin3 forks | `"geoadmin3" OR mf-geoadmin3` |
 | `datumgis` | DATUM GIS | `"DATUM GIS" геопортал` |

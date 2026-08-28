@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
       name: Northern Europe
 description: DiVA portal of Luleå University of Technology, the institutional publication
   and research-data archive used to register and disseminate LTU research outputs.
+endpoints:
+- type: oaipmh20
+  url: https://ltu.diva-portal.org/smash/oai?verb=Identify
+  version: '2.0'
 id: urnkbse
 identifiers:
 - id: openaire
@@ -38,8 +42,8 @@ owner:
   name: Luleå University of Technology
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: divaportal
+  name: DiVA Portal
 status: active
 tags:
 - scientific

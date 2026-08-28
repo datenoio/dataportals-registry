@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: Western Africa
 description: Nigerian Bird Atlas Project citizen-science catalog of bird distribution records,
   part of the African Bird Atlas / BirdMap family.
+endpoints:
+- type: rest
+  url: https://api.birdmap.africa/nigeria/v2/
 id: nigeriabirdmapafrica
 langs:
 - id: EN

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       name: Jakarta Raya
 description: DKI Jakarta Satu Data portal operated by Diskominfotik, distinct from
   the Jakarta Open Data site at data.jakarta.go.id.
+endpoints:
+- type: udataapi
+  url: https://satudata.jakarta.go.id/api/1/datasets/?page_size=1&page=1
 id: satudatajakartagoid
 langs:
 - id: ID
@@ -36,8 +39,8 @@ owner:
   name: Pemerintah Provinsi DKI Jakarta
   type: Regional government
 software:
-  id: custom
-  name: Custom software
+  id: udata
+  name: uData
 status: active
 tags:
 - government

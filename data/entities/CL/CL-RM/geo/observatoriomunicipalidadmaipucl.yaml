@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CL
+      name: Chile
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: CL-RM
+      name: Región Metropolitana de Santiago
+description: Territorial development observatory (SITMA) of the Municipality of Maipú.
+  Publishes communal map viewers for planning, services, environment, and security,
+  backed by an ArcGIS Server REST catalog.
+endpoints:
+- type: arcgis:rest:info
+  url: https://vsitma.maipu.cl/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://vsitma.maipu.cl/arcgis/rest/services?f=pjson
+id: observatoriomunicipalidadmaipucl
+langs:
+- id: ES
+  name: Spanish
+link: https://observatorio.municipalidadmaipu.cl
+name: Observatorio de Desarrollo Territorial Maipú (SITMA)
+owner:
+  link: https://www.maipu.cl
+  location:
+    country:
+      id: CL
+      name: Chile
+    level: 30
+    subregion:
+      id: CL-RM
+      name: Región Metropolitana de Santiago
+  name: Municipalidad de Maipú
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- government
+- Maipú
+- Chile
+- SITMA
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99992073

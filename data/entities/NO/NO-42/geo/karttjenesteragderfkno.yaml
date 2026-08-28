@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: NO-42
+      name: Agder
+description: ArcGIS REST services of Agder fylkeskommune, publishing regional geospatial
+  data including cultural heritage and public map services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://karttjenester.agderfk.no/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://karttjenester.agderfk.no/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://karttjenester.agderfk.no/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://karttjenester.agderfk.no/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://karttjenester.agderfk.no/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://karttjenester.agderfk.no/arcgis/rest/services?f=kmz
+id: karttjenesteragderfkno
+langs:
+- id: 'NO'
+  name: Norwegian
+link: https://karttjenester.agderfk.no/arcgis/rest/services
+name: Agder fylkeskommune Geoportal
+owner:
+  link: https://agderfk.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 30
+    subregion:
+      id: NO-42
+      name: Agder
+  name: Agder fylkeskommune
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- ArcGIS
+- Agder
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99991325

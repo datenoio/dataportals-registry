@@ -1,0 +1,91 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-BA
+      name: Bahia
+description: Official geotecnology portal of Salvador (GeoSalvador), exposing municipal
+  map layers and geospatial services via ArcGIS Server.
+endpoints:
+- type: arcgis:rest:info
+  url: https://geo.salvador.ba.gov.br/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geo.salvador.ba.gov.br/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geo.salvador.ba.gov.br/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://geo.salvador.ba.gov.br/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geo.salvador.ba.gov.br/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geo.salvador.ba.gov.br/arcgis/rest/services?f=kmz
+id: geosalvadorbagovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://geo.salvador.ba.gov.br
+name: GeoSalvador
+owner:
+  link: https://www.salvador.ba.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-BA
+      name: Bahia
+  name: Prefeitura Municipal de Salvador
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Brazil
+- Salvador
+- Bahia
+- arcgisserver
+- geospatial
+- local-government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi99991760

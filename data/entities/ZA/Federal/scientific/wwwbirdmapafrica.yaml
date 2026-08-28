@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
 description: Continental African Bird Atlas Project citizen-science catalog of pentad-based
   bird distribution records across Africa, including countries without a separate
   country portal, with public species lists and coverage downloads.
+endpoints:
+- type: rest
+  url: https://api.birdmap.africa/sabap2/v2/
 id: wwwbirdmapafrica
 langs:
 - id: EN

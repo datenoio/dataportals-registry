@@ -1,0 +1,78 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Public Elsevier Pure research portal of the Danish Institute for International
+  Studies, with researcher profiles, publications, projects, and a public dataset
+  listing.
+endpoints:
+- type: rss
+  url: https://research.diis.dk/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://research.diis.dk/sitemap/datasets.xml
+- type: sitemap
+  url: https://research.diis.dk/sitemap.xml
+id: researchdiisdk
+langs:
+- id: DA
+  name: Danish
+- id: EN
+  name: English
+link: https://research.diis.dk
+name: DIIS Research Portal
+owner:
+  link: https://www.diis.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 30
+    subregion:
+      id: DK-84
+      name: Hovedstaden
+  name: Danish Institute for International Studies
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research data
+- CRIS
+- international studies
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991078

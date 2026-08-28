@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: KNBS Open Data Browser (Istat Data Browser / StatKit) for SDMX dataflows
+  covering population, labour, education, and other official statistics. Distinct
+  from the Census 2019 JSON-stat DataBrowser at data.knbs.or.ke.
+endpoints:
+- type: istatdatabrowser:hub
+  url: https://opendata.knbs.or.ke/beta/databrowserhub/api/Core/hub/minimalInfo
+- type: istatdatabrowser:catalog
+  url: https://opendata.knbs.or.ke/beta/databrowserhub/api/Core/nodes/1/catalog
+id: opendataknbsorke
+langs:
+- id: EN
+  name: English
+link: https://opendata.knbs.or.ke/beta/databrowser/
+name: KNBS Open Data Browser
+owner:
+  link: https://www.knbs.or.ke
+  location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+  name: Kenya National Bureau of Statistics
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+software:
+  id: istatdatabrowser
+  name: Istat Data Browser
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- Kenya
+- SDMX
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994082

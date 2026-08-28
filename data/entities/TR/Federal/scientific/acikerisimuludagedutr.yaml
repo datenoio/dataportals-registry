@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TR
+      name: Turkey
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Bursa Uludağ University Institutional Repository is a scientific data
+  repository operated by Bursa Uludağ University running on DSpace.
+endpoints:
+- type: dspace
+  url: https://acikerisim.uludag.edu.tr/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://acikerisim.uludag.edu.tr/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://acikerisim.uludag.edu.tr/sitemap_index.xml
+id: acikerisimuludagedutr
+langs:
+- id: TR
+  name: Turkish
+link: https://acikerisim.uludag.edu.tr
+name: Bursa Uludağ University Institutional Repository
+owner:
+  link: https://acikerisim.uludag.edu.tr
+  location:
+    country:
+      id: TR
+      name: Turkey
+  name: Bursa Uludağ University
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- dspace
+- Turkey
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994427

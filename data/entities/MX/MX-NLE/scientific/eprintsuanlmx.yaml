@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: MX-NLE
+      name: Nuevo León
+description: EPrints institutional repository of Universidad Autónoma de Nuevo León.
+  The public catalog includes a Conjunto de datos document type (type=dataset) with
+  downloadable research data files alongside theses and publications.
+endpoints:
+- type: oaipmh20
+  url: http://eprints.uanl.mx/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: http://eprints.uanl.mx/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: http://eprints.uanl.mx/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: http://eprints.uanl.mx/rest/eprint
+- type: eprints:rdf
+  url: http://eprints.uanl.mx/cgi/export/repository/RDFXML/devel.rdf
+id: eprintsuanlmx
+langs:
+- id: ES
+  name: Spanish
+link: http://eprints.uanl.mx
+name: Repositorio Académico Digital UANL
+owner:
+  link: https://www.uanl.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-NLE
+      name: Nuevo León
+  name: Universidad Autónoma de Nuevo León
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- research data
+- university
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990924

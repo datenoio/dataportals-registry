@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-AN
+      name: Andalucía
+description: Brújula is the open-access institutional repository of Universidad Loyola.
+  It archives and preserves scientific production from academic and research activity
+  of the university community.
+endpoints:
+- type: oaipmh20
+  url: https://repositorio.uloyola.es/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://repositorio.uloyola.es/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repositorio.uloyola.es/feed/atom_1.0/site
+  version: '1.0'
+id: repositoriuloyolaes
+langs:
+- id: ES
+  name: Spanish
+link: https://repositorio.uloyola.es
+name: Brújula
+owner:
+  link: https://www.uloyola.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-AN
+      name: Andalucía
+  name: Universidad Loyola Andalucía
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- education
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990897

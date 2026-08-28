@@ -7,7 +7,7 @@ Fingerprints live on two pages so this overview stays short:
 | Page | Use when |
 |------|----------|
 | [SDI platforms](discovery-geoportals-sdi.md) | GeoNetwork, GeoNode, GeoServer, ArcGIS, STAC, openEO, Sentinel Hub, Lizmap, QGIS Server, G3W-SUITE, CubeWerx, M.App Enterprise, mviewer, Isogeo, Geocortex, MapServer, and other catalog/service stacks |
-| [Regional viewers](discovery-geoportals-viewers.md) | Wagmap, EWMAPA, Tianditu, Masterportal, GeoMapFish, NetGIS, cardo, MapGIS IGServer, Trimble Locus / Louhi / Landfolio, Spatial Suite, GEUSMAP, GISApp, iObčina, iShare, Cadcorp, and municipal GIS viewers |
+| [Regional viewers](discovery-geoportals-viewers.md) | Wagmap, EWMAPA, e-mapa.net, Loftmyndir, Alta Vefsjá, Tianditu, Masterportal, GeoMapFish, NetGIS, cardo, MapGIS IGServer, Trimble Locus / Louhi / Landfolio, Spatial Suite, Hajk, KortInfo, GEUSMAP, GISApp, iObčina, iShare, Cadcorp, and municipal GIS viewers |
 
 All `software.id` values: [software-index.md](software-index.md). Harvest grain (layers vs tiles): [harvest-geoportals.md](harvest-geoportals.md), [harvest-viewers.md](harvest-viewers.md).
 
@@ -31,6 +31,8 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | Sitowise Louhi karttapalvelu | `louhi` | [viewers](discovery-geoportals-viewers.md#louhi) |
 | `portals.landfolio.com` cadastre map | `landfolio` | [viewers](discovery-geoportals-viewers.md#landfolio) |
 | SpatialMap `webkort` | `spatialsuite` | [viewers](discovery-geoportals-viewers.md#spatialsuite) |
+| Hajk `appConfig.json` / `mapserviceBase` | `hajk` | [viewers](discovery-geoportals-viewers.md#hajk) |
+| `drift.kortinfo.net/Map.aspx` | `kortinfo` | [viewers](discovery-geoportals-viewers.md#kortinfo) |
 | `/geusmap/?mapname=` | `geusmap` | [viewers](discovery-geoportals-viewers.md#geusmap) |
 | `*.gisapp.ro` municipal GIS | `gisapp` | [viewers](discovery-geoportals-viewers.md#gisapp) |
 | Kaliopa iObčina / iOpćina | `iobcina` | [viewers](discovery-geoportals-viewers.md#iobcina) |
@@ -46,6 +48,9 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | `/Geocortex/Essentials/REST/sites` | `geocortex` | [SDI](discovery-geoportals-sdi.md#geocortex) |
 | `/igs/rest/mrcs/docs` | `mapgisigserver` | [viewers](discovery-geoportals-viewers.md#mapgisigserver) |
 | `www2.wagmap.jp` | `wagmap` | [viewers](discovery-geoportals-viewers.md#wagmap) |
+| `{powiat}.e-mapa.net` | `emapa` | [viewers](discovery-geoportals-viewers.md#emapa) |
+| `www.map.is/{muni}/` | `loftmyndir` | [viewers](discovery-geoportals-viewers.md#loftmyndir) |
+| `geo.alta.is/{tenant}/` viewer | `alta` | [viewers](discovery-geoportals-viewers.md#alta) |
 
 ## Generic geospatial probes
 

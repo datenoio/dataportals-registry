@@ -2,9 +2,9 @@
 
 A global registry of data portals, catalogs, data repositories, and related data infrastructure.
 
-**Working tree (27 August 2026):** **23,455** verified catalogs · **267** software platforms · **219** countries and territories · **0** scheduled records.
+**Working tree (28 August 2026):** **24,993** verified catalogs · **282** software platforms · **219** countries and territories · **7** scheduled records.
 
-Last published snapshot: [v1.17.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.17.0), 25 August 2026 (**22,750** catalogs · **262** software · **0** scheduled).
+Last published snapshot: [v1.18.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.18.0), 28 August 2026 (**24,993** catalogs · **282** software · **7** scheduled).
 
 This is the catalog-metadata pillar of the [Common Data Index](https://dateno.io) / open search engine. It describes **catalogs** (open data portals, geoportals, scientific repositories, indicator sites, and similar infrastructure), not the datasets those catalogs hold.
 
@@ -45,14 +45,14 @@ More patterns: [docs/query-examples.md](docs/query-examples.md). Join keys and c
 
 ### Data exports
 
-Last published snapshot (**v1.17.0**, 2026-08-25: 22,750 catalogs, 262 software, 0 scheduled). Working-tree dumps last rebuilt at **22,835** catalogs / **26** scheduled; source YAML is now **23,455** entities / **0** scheduled. Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
+Last published snapshot (**v1.18.0**, 2026-08-28: 24,993 catalogs, 282 software, 7 scheduled). Exports match source YAML. Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
 
 | File | Contents |
 |------|----------|
-| `data/datasets/catalogs.jsonl` (+ `.zst`) | **22,835** verified catalog records (export lag) |
-| `data/datasets/software.jsonl` (+ `.zst`) | **264** software / platform definitions (export lag; source YAML has **267**) |
-| `data/datasets/scheduled.jsonl` (+ `.zst`) | **26** records in the last export (source YAML is empty) |
-| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**22,861**) |
+| `data/datasets/catalogs.jsonl` (+ `.zst`) | **24,993** verified catalog records |
+| `data/datasets/software.jsonl` (+ `.zst`) | **282** software / platform definitions |
+| `data/datasets/scheduled.jsonl` (+ `.zst`) | **7** scheduled sources |
+| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**25,000**) |
 | `data/datasets/full.parquet`, `data/datasets/datasets.duckdb` | Analytics-friendly copies of `full.jsonl` |
 
 Rebuild from YAML (never hand-edit `data/datasets/`):
@@ -180,7 +180,7 @@ Reports land in `dataquality/` (`full_report.txt`, `primary_priority.jsonl`, plu
 
 ## Contributing
 
-Fixes and new catalogs are welcome via [pull request](https://github.com/datenoio/dataportals-registry/pulls) or [issue](https://github.com/datenoio/dataportals-registry/issues). Full guide: [CONTRIBUTING.md](CONTRIBUTING.md). Agents: [docs/agents/contribute.md](docs/agents/contribute.md).
+Fixes and new catalogs are welcome via [pull request](https://github.com/datenoio/dataportals-registry/pulls) or [issue](https://github.com/datenoio/dataportals-registry/issues). Full guide: [CONTRIBUTING.md](CONTRIBUTING.md). Agents: [docs/agents/contribute.md](docs/agents/contribute.md). What to hunt next: [docs/agents/improve.md](docs/agents/improve.md).
 
 ```bash
 python scripts/builder.py add-single "https://example.com/data" \

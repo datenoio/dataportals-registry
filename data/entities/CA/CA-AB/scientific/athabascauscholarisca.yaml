@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-AB
+      name: Alberta
+description: AUSpace is Athabasca University's institutional repository, hosted on
+  Scholaris (DSpace).
+endpoints:
+- type: dspace
+  url: https://athabascau.scholaris.ca/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://athabascau.scholaris.ca/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://athabascau.scholaris.ca/sitemap_index.xml
+id: athabascauscholarisca
+langs:
+- id: EN
+  name: English
+link: https://athabascau.scholaris.ca
+name: AUSpace
+owner:
+  link: https://www.athabascau.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-AB
+      name: Alberta
+  name: Athabasca University
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- datasets
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991728

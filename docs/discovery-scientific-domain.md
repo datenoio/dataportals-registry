@@ -2,7 +2,7 @@
 
 Biodiversity, facility, crop, chemistry, and earth-system repositories (`catalog_type: Scientific data repository`). Institutional IRs: [discovery-scientific.md](discovery-scientific.md). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Harvest: [harvest-scientific-domain.md](harvest-scientific-domain.md).
 
-High-count domain stacks with their own recipes: IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat, InterMine, GRIN-Global, PlutoF, JGI Genome Portal, cBioPortal, ESA Science Archive.
+High-count domain stacks with their own recipes: IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat, InterMine, GRIN-Global, PlutoF, JGI Genome Portal, cBioPortal, ESA Science Archive, CLLD, TalkBank.
 
 One portal / node = one registry record. Do not add gene pages, occurrences, or ESGF data nodes as extra catalogs.
 
@@ -112,6 +112,36 @@ Citizen-science bird atlas platform of the African Bird Atlas Project. Site: [bi
 | Google | `"Bird Atlas" (SABAP2 OR Nigeria OR Kenya) birdmap` |
 | Censys | `web.names: "birdmap.africa"` |
 | crt.sh | `%.birdmap.africa` |
+
+## CLLD (`clld`) {#clld}
+
+Cross-Linguistic Linked Data web apps. Site: [clld.org](https://clld.org). Public databases such as Grambank, Lexibank, and Pofatu run on `{project}.clld.org` with `clld-static` assets.
+
+**Signals:** hostname `*.clld.org`; `clld-static` JS; Cross-Linguistic Linked Data branding.
+
+**Confirm:** GET the project home. One record per CLLD app, not per language or parameter page. Skip clld.org marketing.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:clld.org (Grambank OR Lexibank OR Pofatu OR "Cross-Linguistic")` |
+| Google | `"Cross-Linguistic Linked Data" OR "clld-static"` |
+| Censys | `web.names: "clld.org"` |
+| crt.sh | `%.clld.org` |
+
+## TalkBank (`talkbank`) {#talkbank}
+
+Shared spoken-language transcript banks. Site: [talkbank.org](https://talkbank.org). Collections such as CHILDES, AphasiaBank, and FluencyBank run on `{bank}.talkbank.org` with the CHAT format and a common browser.
+
+**Signals:** hostname `*.talkbank.org`; CHAT / CLAN; TalkBank, CHILDES, AphasiaBank, or FluencyBank branding.
+
+**Confirm:** GET the bank home. One record per TalkBank collection, not per transcript or speaker. Skip talkbank.org manuals and software-download pages as extra catalogs.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:talkbank.org (CHILDES OR AphasiaBank OR FluencyBank OR CHAT)` |
+| Google | `"TalkBank" (CHILDES OR "AphasiaBank") -site:github.com` |
+| Censys | `web.names: "talkbank.org"` |
+| crt.sh | `%.talkbank.org` |
 
 ## SciCat (`scicat`) {#scicat}
 

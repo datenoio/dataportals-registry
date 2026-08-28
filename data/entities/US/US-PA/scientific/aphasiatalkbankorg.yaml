@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
 description: AphasiaBank is a shared database of multimedia interactions for the study
   of communication in aphasia. Access to the data in AphasiaBank is password protected
   and restricted to registered researchers.
+endpoints:
+- type: index
+  url: https://aphasia.talkbank.org/
 id: aphasiatalkbankorg
 identifiers:
 - id: openaire
@@ -43,8 +46,8 @@ owner:
   name: Carnegie Mellon University
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: talkbank
+  name: TalkBank
 status: active
 tags:
 - scientific

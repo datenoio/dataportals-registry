@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: AZ
+      name: Azerbaijan
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Institutional DSpace-CRIS repository of Azerbaijan State Oil and Industry
+  University (ASOIU), covering theses, articles, and other research outputs. Running
+  DSpace 8.2 with DSpace-CRIS 2024.02.02.
+endpoints:
+- type: dspace
+  url: https://dspace.asoiu.edu.az/server/api
+  version: '8'
+- type: dspace:objects
+  url: https://dspace.asoiu.edu.az/server/api/discover/search/objects
+  version: '8'
+id: dspaceasoiueduaz
+langs:
+- id: AZ
+  name: Azerbaijani
+- id: EN
+  name: English
+link: https://dspace.asoiu.edu.az/
+name: DSpace at ASOIU
+owner:
+  link: https://asoiu.edu.az
+  location:
+    country:
+      id: AZ
+      name: Azerbaijan
+    level: 20
+  name: Azerbaijan State Oil and Industry University
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspacecris
+  name: DSpace CRIS
+status: active
+tags:
+- scientific
+- CRIS
+- institutional repository
+- university
+- open access
+- has_api
+- Azerbaijan
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991639

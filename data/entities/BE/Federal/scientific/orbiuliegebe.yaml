@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- scientific publication
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ORBi (Open Repository and Bibliography) is the institutional repository
+  of the University of Liège. Besides publications it lists databases as a document
+  type (Textual, factual or bibliographical database), harvestable via OAI-PMH set
+  col_j01 and the DSpace REST API.
+endpoints:
+- type: dspace:items
+  url: https://orbi.uliege.be/rest/items
+  version: '6'
+- type: oaipmh20
+  url: https://orbi.uliege.be/oai/request?verb=Identify
+  version: '2.0'
+id: orbiuliegebe
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://orbi.uliege.be
+name: ORBi (Open Repository and Bibliography)
+owner:
+  link: https://www.uliege.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+  name: University of Liège
+  type: Academy
+properties:
+  is_national: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- research data
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99991437

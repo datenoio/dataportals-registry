@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Repositorio Digital Institucional IPN. Institutional repository operated by Instituto
+  Politécnico Nacional.
+endpoints:
+- type: oaipmh20
+  url: https://www.repositoriodigital.ipn.mx/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://www.repositoriodigital.ipn.mx/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://www.repositoriodigital.ipn.mx/feed/atom_1.0/site
+  version: '1.0'
+id: wwwrepositoriodigitalipnmx
+langs:
+- id: ES
+  name: Spanish
+link: https://www.repositoriodigital.ipn.mx/
+name: Repositorio Digital Institucional IPN
+owner:
+  link: https://www.ipn.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+  name: Instituto Politécnico Nacional
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- dspace
+- Mexico
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00037621
+properties:
+  is_national: false

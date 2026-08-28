@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 20
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+description: Adelaide Research and Scholarship is the University of Adelaide DSpace
+  repository. The public catalog includes Dataset-typed records alongside publications
+  and special collections.
+endpoints:
+- type: dspace
+  url: https://digital.library.adelaide.edu.au/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://digital.library.adelaide.edu.au/server/api/discover/search/objects
+  version: '7'
+id: digitallibraryadelaideeduau
+langs:
+- id: EN
+  name: English
+link: https://digital.library.adelaide.edu.au
+name: Adelaide Research and Scholarship
+owner:
+  link: https://www.adelaide.edu.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 30
+    subregion:
+      id: AU-SA
+      name: South Australia
+  name: The University of Adelaide
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- university
+- open access
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991494

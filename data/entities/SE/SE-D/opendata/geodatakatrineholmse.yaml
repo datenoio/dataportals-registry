@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: SE-D
+      name: Södermanlands län [SE-04]
+description: CKAN geodata catalog of Katrineholm Municipality (Sokigo theme, CKAN
+  2.10.5).
+endpoints:
+- type: ckan
+  url: https://geodata.katrineholm.se/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://geodata.katrineholm.se/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://geodata.katrineholm.se/api/3/action/package_list
+  version: '3'
+- type: dcat:xml
+  url: https://geodata.katrineholm.se/catalog.rdf
+id: geodatakatrineholmse
+langs:
+- id: SV
+  name: Swedish
+link: https://geodata.katrineholm.se
+name: Katrineholms geodata
+owner:
+  link: https://www.katrineholm.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    subregion:
+      id: SE-D
+      name: Södermanlands län [SE-04]
+  name: Katrineholms kommun
+  type: Local government
+properties:
+  dataset_count_reported: 2
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- open data
+- municipality
+- has_api
+- ckan
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99991358

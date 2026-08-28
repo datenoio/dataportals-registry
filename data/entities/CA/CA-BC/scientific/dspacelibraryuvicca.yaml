@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: UVicSpace is the University of Victoria institutional repository (DSpace).
+endpoints:
+- type: dspace
+  url: https://dspace.library.uvic.ca/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://dspace.library.uvic.ca/server/api/discover/search/objects
+  version: '7'
+id: dspacelibraryuvicca
+langs:
+- id: EN
+  name: English
+link: https://dspace.library.uvic.ca
+name: UVicSpace
+owner:
+  link: https://www.uvic.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: University of Victoria
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- datasets
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991725

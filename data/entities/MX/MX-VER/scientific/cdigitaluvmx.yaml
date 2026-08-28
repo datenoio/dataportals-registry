@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: MX-VER
+      name: Veracruz de Ignacio de la Llave
+description: DSpace 7 institutional repository of Universidad Veracruzana (cdigital).
+  The public search API includes items with dc.type Dataset, including meteorological
+  research data for Veracruz, mixed with publications and cultural collections.
+endpoints:
+- type: dspace
+  url: https://cdigital.uv.mx/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://cdigital.uv.mx/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://cdigital.uv.mx/sitemap_index.xml
+id: cdigitaluvmx
+langs:
+- id: ES
+  name: Spanish
+link: https://cdigital.uv.mx
+name: Repositorio Institucional UV (cdigital)
+owner:
+  link: https://www.uv.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-VER
+      name: Veracruz de Ignacio de la Llave
+  name: Universidad Veracruzana
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- university
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990921

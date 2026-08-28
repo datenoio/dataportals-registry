@@ -19,6 +19,10 @@ coverage:
       name: Utrecht
 description: Open data portal of the municipality of Utrecht
 endpoints:
+- type: openapi
+  url: https://data.utrecht.nl/openapi.json
+- type: opengdc:datasets
+  url: https://data.utrecht.nl/api/datasets
 - type: sitemap
   url: https://data.utrecht.nl/sitemap.xml
 id: datautrechtnl
@@ -50,8 +54,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: drupal
-  name: Drupal
+  id: opengdc
+  name: OpenGDC
 status: active
 tags:
 - government

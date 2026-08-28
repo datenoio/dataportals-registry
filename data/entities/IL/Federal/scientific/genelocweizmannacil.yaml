@@ -1,0 +1,47 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: IL
+      name: Israel
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: GeneLoc is the genome locator of the GeneCards Suite at the Weizmann
+  Institute of Science. It presents an integrated map of human genes and markers in
+  a scalable genomic neighborhood and assigns location-based GeneCards identifiers.
+  Development is frozen and the maps are not in sync with the latest GeneCards release.
+id: genelocweizmannacil
+langs:
+- id: EN
+  name: English
+link: https://geneloc.weizmann.ac.il/
+name: GeneLoc
+owner:
+  link: https://www.weizmann.ac.il
+  location:
+    country: *id001
+    level: 20
+  name: Weizmann Institute of Science
+  type: Academy
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- research data
+- academic
+- genomics
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991658

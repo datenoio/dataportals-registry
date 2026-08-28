@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Institutional repository of Birmingham City University, holding publications
+  and other research outputs, including 9 Dataset records.
+endpoints:
+- type: oaipmh20
+  url: https://www.open-access.bcu.ac.uk/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://www.open-access.bcu.ac.uk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: eprints:rest
+  url: https://www.open-access.bcu.ac.uk/rest/eprint
+- type: eprints:rdf
+  url: https://www.open-access.bcu.ac.uk/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://www.open-access.bcu.ac.uk/cgi/export/repository/RDFN3/devel.n3
+id: wwwopenaccessbcuacuk
+langs:
+- id: EN
+  name: English
+link: https://www.open-access.bcu.ac.uk
+name: BCU Open Access Repository
+owner:
+  link: https://www.bcu.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: Birmingham City University
+  type: Academy
+properties:
+  dataset_count_reported: 9
+  has_doi: false
+  is_national: false
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- eprints
+- United Kingdom
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00037526

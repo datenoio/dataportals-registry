@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: DZ
+      name: Algeria
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: University of Biskra Theses Repository is a scientific data repository
+  operated by Université Mohamed Khider Biskra running on EPrints.
+endpoints:
+- type: oaipmh20
+  url: http://thesis.univ-biskra.dz/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: http://thesis.univ-biskra.dz/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: http://thesis.univ-biskra.dz/cgi/latest_tool?output=Atom
+id: thesisunivbiskradz
+langs:
+- id: AR
+  name: Arabic
+- id: FR
+  name: French
+link: http://thesis.univ-biskra.dz/
+name: University of Biskra Theses Repository
+owner:
+  link: https://www.univ-biskra.dz
+  location:
+    country:
+      id: DZ
+      name: Algeria
+    level: 20
+  name: Université Mohamed Khider Biskra
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- eprints
+- Algeria
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991685

@@ -1,0 +1,94 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 50
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: LK-1
+      name: Western Province
+description: Colombo Municipal Council National Parcel Fabric geoportal. Guest-accessible
+  map viewer and ArcGIS Server REST services for cadastral parcels, building lines,
+  and street lines in the Colombo municipal area.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.colombo.mc.gov.lk/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.colombo.mc.gov.lk/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.colombo.mc.gov.lk/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.colombo.mc.gov.lk/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.colombo.mc.gov.lk/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.colombo.mc.gov.lk/arcgis/rest/services?f=kmz
+id: giscolombomcgovlk
+langs:
+- id: EN
+  name: English
+link: https://gis.colombo.mc.gov.lk
+name: Colombo Municipal Council National Parcel Fabric
+owner:
+  link: https://www.colombo.mc.gov.lk
+  location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 30
+    subregion:
+      id: LK-1
+      name: Western Province
+  name: Colombo Municipal Council
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- ArcGIS
+- REST
+- municipal
+- Colombo
+- cadastre
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99991746

@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: PSU Knowledge Bank is a scientific data repository operated by Prince of
+  Songkla University running on DSpace.
+endpoints:
+- type: dspace
+  url: https://kb.psu.ac.th/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://kb.psu.ac.th/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://kb.psu.ac.th/sitemap_index.xml
+id: kbpsuacth
+langs:
+- id: TH
+  name: Thai
+link: https://kb.psu.ac.th
+name: PSU Knowledge Bank
+owner:
+  link: https://kb.psu.ac.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+  name: Prince of Songkla University
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- dspace
+- Thailand
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994425

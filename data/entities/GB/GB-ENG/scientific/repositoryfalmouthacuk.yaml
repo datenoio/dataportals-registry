@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Institutional repository of Falmouth University, holding publications and other
+  research outputs, including 4 Dataset records.
+endpoints:
+- type: oaipmh20
+  url: https://repository.falmouth.ac.uk/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://repository.falmouth.ac.uk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://repository.falmouth.ac.uk/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://repository.falmouth.ac.uk/rest/eprint
+- type: eprints:rdf
+  url: https://repository.falmouth.ac.uk/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://repository.falmouth.ac.uk/cgi/export/repository/RDFN3/devel.n3
+id: repositoryfalmouthacuk
+langs:
+- id: EN
+  name: English
+link: https://repository.falmouth.ac.uk
+name: Falmouth University Research Repository (FURR)
+owner:
+  link: https://www.falmouth.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: Falmouth University
+  type: Academy
+properties:
+  dataset_count_reported: 4
+  has_doi: false
+  is_national: false
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- eprints
+- United Kingdom
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00037522

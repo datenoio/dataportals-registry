@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Ricebase is a scientific data repository operated by Boyce Thompson
+  Institute running on Breedbase.
+endpoints:
+- type: brapi:serverinfo
+  url: https://ricebase.org/brapi/v2/serverinfo
+  version: '2'
+- type: brapi:studies
+  url: https://ricebase.org/brapi/v2/studies?page=0&pageSize=1
+  version: '2'
+id: ricebaseorg
+langs:
+- id: EN
+  name: English
+link: https://ricebase.org/
+name: Ricebase
+owner:
+  link: https://btiscience.org/
+  location:
+    country:
+      id: US
+      name: United States
+  name: Boyce Thompson Institute
+  type: Academy
+software:
+  id: breedbase
+  name: Breedbase
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- breedbase
+- United States
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994451

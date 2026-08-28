@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Institutional DSpace data repository of Politehnica University of Timișoara.
+  Public items include research datasets (dc.type Dataset) and related scholarly outputs.
+endpoints:
+- type: dspace
+  url: https://data.upt.ro/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://data.upt.ro/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://data.upt.ro/sitemap_index.xml
+id: datauptro
+langs:
+- id: EN
+  name: English
+- id: RO
+  name: Romanian
+link: https://data.upt.ro
+name: Politehnica University of Timișoara Data Repository
+owner:
+  link: https://www.upt.ro/
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 30
+    subregion:
+      id: RO-TM
+      name: Timiș
+  name: Politehnica University of Timișoara
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990927

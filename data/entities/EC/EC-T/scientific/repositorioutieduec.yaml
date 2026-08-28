@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: EC-T
+      name: Tungurahua
+description: DSpace 7 institutional repository of Universidad Tecnológica Indoamérica.
+  Includes records typed as dataset (COVID-19 panel data and related deposits) alongside
+  theses and publications.
+endpoints:
+- type: dspace
+  url: https://repositorio.uti.edu.ec/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositorio.uti.edu.ec/server/api/discover/search/objects
+  version: '7'
+id: repositorioutieduec
+langs:
+- id: ES
+  name: Spanish
+link: https://repositorio.uti.edu.ec
+name: Repositorio Universidad Indoamérica
+owner:
+  link: https://www.uti.edu.ec
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 30
+    subregion:
+      id: EC-T
+      name: Tungurahua
+  name: Universidad Tecnológica Indoamérica
+  type: Academy
+properties:
+  dataset_count_reported: 4
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+- university
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99992105

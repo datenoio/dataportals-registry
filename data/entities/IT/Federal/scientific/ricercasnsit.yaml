@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: IRIS Scuola Normale Superiore is the Cineca IRIS institutional repository
+  of Scuola Normale Superiore. OpenAIRE Graph reports 54 research-data records harvested
+  from this catalogue.
+endpoints:
+- type: oaipmh20
+  url: https://ricerca.sns.it/oai/request?verb=Identify
+  version: '2.0'
+id: ricercasnsit
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::5487e79fa0ccd0b79e5d4a4c8ced005d
+  value: opendoar____::5487e79fa0ccd0b79e5d4a4c8ced005d
+langs:
+- id: IT
+  name: Italian
+- id: EN
+  name: English
+link: https://ricerca.sns.it
+name: IRIS Scuola Normale Superiore
+owner:
+  link: https://www.sns.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Scuola Normale Superiore
+  type: Academy
+properties:
+  dataset_count_reported: 54
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- dspace
+- iris
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991214

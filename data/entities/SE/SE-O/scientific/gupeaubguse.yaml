@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: GUPEA is the University of Gothenburg DSpace institutional repository
+  for theses, publications, and research datasets.
+endpoints:
+- type: dspace
+  url: https://gupea.ub.gu.se/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://gupea.ub.gu.se/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://gupea.ub.gu.se/oai/request?verb=Identify
+  version: '2.0'
+id: gupeaubguse
+langs:
+- id: SV
+  name: Swedish
+- id: EN
+  name: English
+link: https://gupea.ub.gu.se
+name: GUPEA - University of Gothenburg Publications Electronic Archive
+owner:
+  link: https://www.gu.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    subregion:
+      id: SE-O
+      name: Västra Götalands län [SE-14]
+  name: University of Gothenburg
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991283

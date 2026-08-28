@@ -248,6 +248,30 @@ Japanese わが街ガイド viewers. Public GetCapabilities is often **missing o
 
 Polish geoportal2.pl viewers. Same grain as [Wagmap](#wagmap): harvest only public CSW/WMS/REST. Do not scrape tiles. [harvest-viewers.md](harvest-viewers.md#ewmapa).
 
+## e-mapa.net (`emapa`) {#emapa}
+
+Polish `*.e-mapa.net` viewers (Geo-System). Same grain as [EWMAPA](#ewmapa). Distinct from GEOBID `ewmapa`. [harvest-viewers.md](harvest-viewers.md#emapa).
+
+## Loftmyndir (`loftmyndir`) {#loftmyndir}
+
+Icelandic Loftmyndir Kortasjá (`www.map.is`). Harvest public layers only. [harvest-viewers.md](harvest-viewers.md#loftmyndir).
+
+## Alta Vefsjá (`alta`) {#alta}
+
+Alta municipal viewers on `geo.alta.is/{tenant}/`. Not the GeoServer root. [harvest-viewers.md](harvest-viewers.md#alta).
+
+## Bulplan UNIMAP (`bulplan`) {#bulplan}
+
+Bulgarian `{muni}.bulplan.eu` geoportals. [harvest-viewers.md](harvest-viewers.md#bulplan).
+
+## Tobel (`tobel`) {#tobel}
+
+Bulgarian `{city}.tobel.bg` municipal GIS. [harvest-viewers.md](harvest-viewers.md#tobel).
+
+## geoportal.ch (`geoportalch`) {#geoportalch}
+
+Swiss cantonal `www.geoportal.ch/{canton}` viewers. Distinct from mf-geoadmin3. [harvest-viewers.md](harvest-viewers.md#geoportalch).
+
 ## gvSIG Online (`gvsigonline`) {#gvsigonline}
 
 Municipal SDI over GeoServer (optional GeoNetwork). Harvest **published project layers** or GeoServer GetCapabilities on that host. Prefer CSW if GeoNetwork is public. Do not register/harvest a second GeoServer catalog for the same portal. Skip `/gvsigonline/` admin.

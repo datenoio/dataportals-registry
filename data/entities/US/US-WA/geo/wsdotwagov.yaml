@@ -26,6 +26,12 @@ endpoints:
   url: https://wsdot.wa.gov/arcgis/rest/services?f=pjson
 - type: arcgis:soap
   url: https://wsdot.wa.gov/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://wsdot.wa.gov/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://wsdot.wa.gov/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://wsdot.wa.gov/arcgis/rest/services?f=kmz
 id: wsdotwagov
 langs:
 - id: EN
@@ -46,6 +52,7 @@ owner:
   type: Regional government
 properties:
   has_doi: false
+  is_national: false
 rights:
   license_id: null
   license_name: null

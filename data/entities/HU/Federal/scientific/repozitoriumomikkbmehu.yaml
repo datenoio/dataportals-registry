@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Műegyetem Digitális Archívum (BME MDA), the institutional repository
+  of Budapest University of Technology and Economics. DSpace 7 installation with a
+  dedicated Adatrepozitórium (data repository) community that publishes research datasets
+  alongside publications, dissertations, and learning materials.
+endpoints:
+- type: dspace
+  url: https://repozitorium.omikk.bme.hu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repozitorium.omikk.bme.hu/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://repozitorium.omikk.bme.hu/server/oai/request?verb=Identify
+  version: '2.0'
+id: repozitoriumomikkbmehu
+langs:
+- id: HU
+  name: Hungarian
+- id: EN
+  name: English
+link: https://repozitorium.omikk.bme.hu
+name: BME Digital Archive (MDA)
+owner:
+  link: https://www.bme.hu
+  location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+  name: Budapest University of Technology and Economics
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990862

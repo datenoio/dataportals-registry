@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 20
+    macroregion:
+      id: '143'
+      name: Central Asia
+description: Institutional DSpace archive of Nazarbayev University theses, research
+  publications, institute outputs, journals, and conference materials. Distinct from
+  the NU Research Data Repository at nurdata.nu.edu.kz.
+endpoints:
+- type: dspace
+  url: https://nur.nu.edu.kz/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://nur.nu.edu.kz/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://nur.nu.edu.kz/server/oai/request?verb=Identify
+  version: '2.0'
+id: nurnuedukz
+langs:
+- id: EN
+  name: English
+- id: KZ
+  name: Kazakh
+- id: RU
+  name: Russian
+link: https://nur.nu.edu.kz
+name: Nazarbayev University Repository
+owner:
+  link: https://nu.edu.kz
+  location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 20
+  name: Nazarbayev University
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- institutional repository
+- university
+- Kazakhstan
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991626

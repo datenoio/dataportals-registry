@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: GR-M
+      name: Kríti
+description: GeoServer of the Municipality of Chania providing municipal WMS services.
+  Distinct from the GET SDI Portal at gis.chania.gr.
+endpoints:
+- type: wms130
+  url: https://gisservices.chania.gr/geoserver/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: gisserviceschaniagr
+langs:
+- id: EL
+  name: Greek
+link: https://gisservices.chania.gr/geoserver
+name: Municipality of Chania GeoServer
+owner:
+  link: https://www.chania.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    subregion:
+      id: GR-M
+      name: Kríti
+  name: Municipality of Chania
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- geoportal
+- municipality
+- Greece
+- GeoServer
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99990821

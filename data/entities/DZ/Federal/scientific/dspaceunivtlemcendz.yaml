@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: DZ
+      name: Algeria
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: University of Tlemcen Institutional Repository is a scientific data
+  repository operated by Université Abou Bekr Belkaid Tlemcen running on DSpace.
+endpoints:
+- type: dspace
+  url: https://dspace.univ-tlemcen.dz/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://dspace.univ-tlemcen.dz/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://dspace.univ-tlemcen.dz/sitemap_index.xml
+id: dspaceunivtlemcendz
+langs:
+- id: AR
+  name: Arabic
+- id: FR
+  name: French
+link: https://dspace.univ-tlemcen.dz/
+name: University of Tlemcen Institutional Repository
+owner:
+  link: https://www.univ-tlemcen.dz
+  location:
+    country:
+      id: DZ
+      name: Algeria
+    level: 20
+  name: Université Abou Bekr Belkaid Tlemcen
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- dspace
+- Algeria
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991683

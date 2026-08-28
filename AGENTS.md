@@ -38,7 +38,7 @@ The registry collects and maintains structured metadata about:
 - Metadata catalogs
 - Other data infrastructure
 
-As of 26 August 2026, source YAML contains **23,338** verified catalog entries across **219** country/territory folders, **0** scheduled records, and **264** software definitions. Working-tree exports last rebuilt at 22,835 catalogs; YAML is ahead until the next `build`. Last published snapshot is v1.17.0 (22,750 catalogs, 0 scheduled, 262 software).
+As of 28 August 2026, source YAML contains **24,993** verified catalog entries across **219** country/territory folders, **7** scheduled records, and **282** software definitions. Dataset exports match YAML. Last published snapshot is v1.18.0 (24,993 catalogs, 7 scheduled, 282 software).
 
 ### Scope Boundary (Important)
 
@@ -532,6 +532,7 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 4. Configure Cursor / ChatGPT / Censys MCP using [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md) when the hunt needs those tools
 5. Probe only candidate hosts with targeted GETs; do not write internet-wide scanners
 6. Add verified finds with `add-single --scheduled`, then the contribute checklist below
+7. Choose the next hunt from [docs/agents/improve.md](docs/agents/improve.md) (software-first lists and country *shape* holes, not more US ArcGIS)
 
 ### Task: Harvest datasets from a catalog API
 
@@ -540,6 +541,10 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 3. Scientific IRs mix publications and data — apply type filters in [docs/harvest-scientific.md](docs/harvest-scientific.md). Domain stacks (IPT, THREDDS, Breedbase, ESGF): [docs/harvest-scientific-domain.md](docs/harvest-scientific-domain.md)
 4. Open data: packages not resources — [docs/harvest-opendata.md](docs/harvest-opendata.md). Geo: CSW/STAC/layers not tiles — [docs/harvest-geoportals.md](docs/harvest-geoportals.md). Indicators: tables/dataflows/studies — [docs/harvest-indicators.md](docs/harvest-indicators.md). Metadata: DCAT/SDMX structure — [docs/harvest-metadata.md](docs/harvest-metadata.md). Aggregators/ML/`custom` — [docs/harvest-other.md](docs/harvest-other.md). Shared protocols — [docs/harvest-protocols.md](docs/harvest-protocols.md). Incremental — [docs/harvest-incremental.md](docs/harvest-incremental.md). Identifiers — [docs/harvest-identifiers.md](docs/harvest-identifiers.md). Output — [docs/harvest-output.md](docs/harvest-output.md). EO — [docs/harvest-earthdata.md](docs/harvest-earthdata.md). Biodiversity — [docs/harvest-biodiversity.md](docs/harvest-biodiversity.md). Viewers — [docs/harvest-viewers.md](docs/harvest-viewers.md)
 5. Do not write dataset YAML into this repository; do not implement a crawler here
+
+### Task: Choose what to improve next
+
+Follow [docs/agents/improve.md](docs/agents/improve.md): software-first vendor lists, country-shape hunts (scientific IRs, native NSO tables, Global South open data), then country record reviews. Do not start unscoped US/EU geoportal sweeps.
 
 ### Task: Add a New Catalog Entry
 
@@ -603,7 +608,7 @@ Follow [docs/software-taxonomy.md](docs/software-taxonomy.md#adding-a-software-d
 - [README.md](README.md) - Project overview
 - [docs/getting-started.md](docs/getting-started.md) - Published internals (GitHub Pages source)
 - [docs/data-model.md](docs/data-model.md) / [docs/vocabularies.md](docs/vocabularies.md) / [docs/quality-rules.md](docs/quality-rules.md) / [docs/cli.md](docs/cli.md)
-- [docs/agents/query.md](docs/agents/query.md) / [docs/agents/discover.md](docs/agents/discover.md) / [docs/agents/contribute.md](docs/agents/contribute.md)
+- [docs/agents/query.md](docs/agents/query.md) / [docs/agents/discover.md](docs/agents/discover.md) / [docs/agents/contribute.md](docs/agents/contribute.md) / [docs/agents/improve.md](docs/agents/improve.md)
 - [docs/discovery.md](docs/discovery.md) / [docs/discovery-search-tools.md](docs/discovery-search-tools.md) / [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md) / [docs/discovery-metadata.md](docs/discovery-metadata.md) / [docs/discovery-other.md](docs/discovery-other.md) — find catalogs not yet registered; configure Cursor, ChatGPT, Censys MCP
 - [llms.txt](llms.txt) - Agent index of published docs
 - [CONTRIBUTING.md](CONTRIBUTING.md) - Human contribution guidelines

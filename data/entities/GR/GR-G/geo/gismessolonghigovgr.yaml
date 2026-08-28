@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: GR-G
+      name: Dytikí Elláda
+description: Municipal spatial data infrastructure of Messolonghi. GET SDI Portal
+  over GeoServer and GeoNetwork. Distinct from the Mesolongi Lagoon open-data catalogs.
+endpoints:
+- type: getsdiportal:catalog
+  url: https://gis.messolonghi.gov.gr/
+- type: wms130
+  url: https://gis.messolonghi.gov.gr/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: csw202
+  url: https://gis.messolonghi.gov.gr/geonetwork/srv/eng/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+id: gismessolonghigovgr
+langs:
+- id: EL
+  name: Greek
+link: https://gis.messolonghi.gov.gr/
+name: Messolonghi Geoportal
+owner:
+  link: https://www.messolonghi.gov.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    subregion:
+      id: GR-G
+      name: Dytikí Elláda
+  name: Municipality of Messolonghi
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: getsdiportal
+  name: GET SDI Portal
+status: active
+tags:
+- geospatial
+- geoportal
+- municipality
+- Greece
+- GET SDI Portal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99990816

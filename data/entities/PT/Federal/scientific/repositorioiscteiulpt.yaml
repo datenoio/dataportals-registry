@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- scientific publication
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Institutional repository of Iscte. DSpace reports hundreds of dataset-typed
+  items among the publication archive.
+endpoints:
+- type: dspace
+  url: https://repositorio.iscte-iul.pt/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositorio.iscte-iul.pt/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://repositorio.iscte-iul.pt/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://repositorio.iscte-iul.pt/sitemap_index.xml
+id: repositorioiscteiulpt
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::4d2e7bd33c475784381a64e43e50922f
+  value: opendoar____::4d2e7bd33c475784381a64e43e50922f
+langs:
+- id: PT
+  name: Portuguese
+link: https://repositorio.iscte-iul.pt/
+name: Repositório Iscte
+owner:
+  link: https://www.iscte-iul.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: Iscte – Instituto Universitário de Lisboa
+  type: Academy
+properties:
+  dataset_count_reported: 352
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991461

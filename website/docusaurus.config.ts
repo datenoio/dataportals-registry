@@ -133,6 +133,10 @@ const config: Config = {
               to: '/docs/agents/contribute',
             },
             {
+              label: 'Improve the registry',
+              to: '/docs/agents/improve',
+            },
+            {
               label: 'llms.txt',
               href: 'https://datenoio.github.io/dataportals-registry/llms.txt',
             },

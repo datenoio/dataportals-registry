@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: SK
+      name: Slovakia
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id002
+      id: SK-NI
+      name: Nitriansky kraj
+description: Open data download page of Nitriansky samosprávny kraj, publishing CSV
+  lists of health, pharmacy, social-service, and subsidy datasets.
+id: unskskopendata
+langs:
+- id: SK
+  name: Slovak
+link: https://unsk.sk/zobraz/sekciu/open-data-unsk
+name: Open data UNSK
+owner:
+  link: https://unsk.sk
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Nitriansky samosprávny kraj
+  type: Regional government
+properties:
+  has_doi: false
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+- Slovakia
+- regional
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99990991

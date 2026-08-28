@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: AZ
+      name: Azerbaijan
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Institutional DSpace repository of the Azerbaijan University of Languages
+  (ADU / AUL) Library, branded as the Digital Archive. Public UI on port 4000; REST
+  API on port 8080 (DSpace 8.0).
+endpoints:
+- type: dspace
+  url: http://dspace.adu.edu.az:8080/server/api
+  version: '8'
+- type: dspace:objects
+  url: http://dspace.adu.edu.az:8080/server/api/discover/search/objects
+  version: '8'
+- type: oaipmh20
+  url: http://dspace.adu.edu.az:8080/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: http://dspace.adu.edu.az:4000/sitemap_index.xml
+id: dspaceadueduaz
+langs:
+- id: AZ
+  name: Azerbaijani
+- id: EN
+  name: English
+link: http://dspace.adu.edu.az:4000/
+name: Azerbaijan University of Languages Digital Archive
+owner:
+  link: https://adu.edu.az
+  location:
+    country:
+      id: AZ
+      name: Azerbaijan
+    level: 20
+  name: Azerbaijan University of Languages
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- institutional repository
+- university
+- open access
+- has_api
+- Azerbaijan
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991642

@@ -294,7 +294,7 @@ Linked-data / knowledge-graph publishing with SPARQL. Site: [triplydb.com](https
 
 ## Drupal (`drupal`) {#drupal}
 
-Use `drupal` only when the **public product is a dataset catalog** (open-data nodes, JSON:API dataset bundle). Do not register ordinary CMS homepages. If the site is DKAN, use `dkan`.
+Use `drupal` only when the **public product is a dataset catalog** (open-data nodes, JSON:API dataset bundle). Do not register ordinary CMS homepages. If the site is DKAN, use `dkan`. Dutch municipal OpenGDC tenants (`/openapi.json` + `/api/datasets`) use [`opengdc`](#opengdc), not `drupal`.
 
 **Confirm:** `/jsonapi/node/dataset` (or the site’s dataset bundle) or a public `data.json`.
 
@@ -449,6 +449,20 @@ Guangxi Zhuang Autonomous Region public data portal. Provincial hub: [data.gxzf.
 | Google | `"公共数据开放平台" site:gxzf.gov.cn` |
 | Censys | `web.names: "data.gxzf.gov.cn"` |
 | crt.sh | `%.data.gxzf.gov.cn` |
+
+## OpenGDC (`opengdc`) {#opengdc}
+
+Dutch municipal open-data and Woo catalog (Drupal / Dexes). Product site: [opengdc.nl](https://www.opengdc.nl). Live tenants include Utrecht, Groningen, Nijmegen, Oss, Hilversum, and Land van Cuijk. Not the genomic OpenGDC (GDC/BED) tool.
+
+**Signals:** `/datasets` catalog UI; `/api` titled “Open API Specification”; `/openapi.json` OpenAPI 3 with paths `/api/datasets`, `/api/documents`, `/api/dossiers`; JSON:API `type: dataset`. Title often “Datacatalogus” or “Dataportaal”.
+
+**Confirm:** GET `https://host/openapi.json` and `https://host/api/datasets` (JSON:API, `meta.total`). Some tenants sit behind a WAF (`403`). Prefer `opengdc` over generic `drupal`. One municipality = one catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `"OpenGDC" (dataportaal OR datacatalogus) site:.nl` |
+| Google | `inurl:/openapi.json "api/datasets" (Datacatalogus OR Dataportaal)` |
+| Censys | `web.endpoints.http.body: "api/dossiers"` |
 
 ## Other open-data platforms
 

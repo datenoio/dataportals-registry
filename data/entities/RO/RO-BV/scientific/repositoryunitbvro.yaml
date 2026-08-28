@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Institutional DSpace repository of Transilvania University of Brașov.
+  It publishes theses, articles, and research datasets (including GBIF-derived and
+  vegetation-map datasets).
+endpoints:
+- type: dspace
+  url: https://repository.unitbv.ro/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repository.unitbv.ro/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://repository.unitbv.ro/sitemap_index.xml
+id: repositoryunitbvro
+langs:
+- id: EN
+  name: English
+- id: RO
+  name: Romanian
+link: https://repository.unitbv.ro
+name: Transilvania University of Brașov Open Access Repository
+owner:
+  link: https://www.unitbv.ro/
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 30
+    subregion:
+      id: RO-BV
+      name: Brașov
+  name: Transilvania University of Brașov
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990928

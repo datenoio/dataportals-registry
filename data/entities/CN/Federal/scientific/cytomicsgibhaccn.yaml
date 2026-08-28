@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -15,6 +15,9 @@ coverage:
       id: '030'
       name: Eastern Asia
 description: InstDB-style cytomics/science data catalog of CAS GIBH.
+endpoints:
+- type: rest
+  url: https://cytomics.gibh.ac.cn/api
 id: cytomicsgibhaccn
 langs:
 - id: ZH
@@ -36,6 +39,26 @@ software:
   id: instdb
   name: InstDB
 status: active
-tags: []
-topics: []
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- instdb
+- health
+- China
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
 uid: cdi99990510

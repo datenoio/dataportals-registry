@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: SWPS Science Share is the institutional repository of SWPS University.
+  The DSpace catalog publishes open-access publications and a dedicated research-data
+  collection of datasets produced in SWPS research projects.
+endpoints:
+- type: dspace
+  url: https://share.swps.edu.pl/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://share.swps.edu.pl/server/api/discover/search/objects
+  version: '7'
+id: shareswpsedupl
+langs:
+- id: PL
+  name: Polish
+link: https://share.swps.edu.pl
+name: SWPS Science Share
+owner:
+  link: https://swps.pl
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 20
+  name: SWPS University
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- Academic
+- DSpace
+- Poland
+- publications
+- research data
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991050

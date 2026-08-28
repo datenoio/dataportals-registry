@@ -2,7 +2,7 @@
 
 dataportals-registry is a **reference-data registry** of open data portals, geoportals, scientific repositories, and related data infrastructure. Source records are YAML; consumers should prefer the exported datasets. High-volume platforms include CKAN, GeoNetwork, Dataverse, ArcGIS, **openEO**, **mviewer**, and **DHIS2** — full map: [software-index.md](software-index.md). Code is MIT; data and documentation are [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-Working tree (26 August 2026): **23,338** verified catalog entities, **0** scheduled records, and **264** software definitions across **219** country/territory folders. Last published snapshot is v1.17.0 (22,750 catalogs, 0 scheduled, 262 software). Record-count contract: [exports.md](exports.md#record-counts).
+Working tree (28 August 2026): **24,993** verified catalog entities, **7** scheduled records, and **282** software definitions across **219** country/territory folders. Last published snapshot is v1.18.0 (24,993 catalogs, 7 scheduled, 282 software). Record-count contract: [exports.md](exports.md#record-counts).
 
 ## Fastest path (analytics)
 
@@ -93,3 +93,4 @@ https://github.com/datenoio/dataportals-registry
 | Agent discovery workflow | [agents/discover.md](agents/discover.md) |
 | Agent harvest workflow | [agents/harvest.md](agents/harvest.md) |
 | Add or edit YAML | [agents/contribute.md](agents/contribute.md) |
+| What to hunt or fix next | [agents/improve.md](agents/improve.md) |

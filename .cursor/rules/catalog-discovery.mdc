@@ -13,3 +13,4 @@ When the user asks to find catalogs that are **not yet in this registry**, or to
 4. Client setup (Cursor MCP, ChatGPT Custom GPT, Censys OAuth, API keys): [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md).
 5. Scope to a country, city, TLD, or `software.id`. Do not write scanners. Stop on `401`/`403`.
 6. Add verified finds with `python scripts/builder.py add-single URL --scheduled`, then `assign` and `validate-yaml`.
+7. Pick the next hunt from [docs/agents/improve.md](docs/agents/improve.md) (software-first lists and country shape holes, not more US ArcGIS).

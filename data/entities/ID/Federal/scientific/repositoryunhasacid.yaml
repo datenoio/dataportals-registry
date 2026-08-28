@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: UNHAS Repository is a scientific data repository operated by Universitas
+  Hasanuddin running on EPrints.
+endpoints:
+- type: oaipmh20
+  url: https://repository.unhas.ac.id/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://repository.unhas.ac.id/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://repository.unhas.ac.id/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://repository.unhas.ac.id/rest/eprint
+id: repositoryunhasacid
+langs:
+- id: ID
+  name: Indonesian
+link: https://repository.unhas.ac.id
+name: UNHAS Repository
+owner:
+  link: https://repository.unhas.ac.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+  name: Universitas Hasanuddin
+  type: Academy
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- eprints
+- Indonesia
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99993591

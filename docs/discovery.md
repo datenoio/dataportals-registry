@@ -19,7 +19,7 @@ The registry records **catalogs** (portals, geoportals, repositories, and simila
 | [Search engines and internet maps](discovery-search-tools.md) | Google, Censys, Shodan, FOFA, URLScan, crt.sh, and similar tools |
 | [Agents, Cursor, ChatGPT](discovery-agent-tools.md) | Configure MCP, APIs, Custom GPTs, and LLM clients to use those tools |
 | [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye, Piveau, Our Open Data, DataPress, ResourceContracts, RDF Online Repository, Guangxi, ODWeb |
-| [Geoportals](discovery-geoportals.md) | Overview; SDI stacks: [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md) (G3W-SUITE, CubeWerx, M.App Enterprise, Sentinel Hub); viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md) (Trimble Locus / Louhi / Landfolio, Spatial Suite, GEUSMAP, GISApp, iObčina, iShare, Cadcorp) |
+| [Geoportals](discovery-geoportals.md) | Overview; SDI stacks: [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md) (G3W-SUITE, CubeWerx, M.App Enterprise, Sentinel Hub); viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md) (Trimble Locus / Louhi / Landfolio, Spatial Suite, KortInfo, GEUSMAP, GISApp, iObčina, iShare, Cadcorp) |
 | [Scientific repositories](discovery-scientific.md) | Institutional IRs and CRIS (DSpace, Hyrax, Figshare, Pure, Converis, Omega-PSIR, Archipelago, Redivis, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD); domain repos: [discovery-scientific-domain.md](discovery-scientific-domain.md) (InterMine, GRIN-Global, PlutoF, JGI, cBioPortal, ESA Science Archive) |
 | [Metadata catalogs](discovery-metadata.md) | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
 | [Indicators and microdata](discovery-indicators.md) | PxWeb, PxStat, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX, TabNet, SparkMap, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, StatPlanet |
@@ -68,6 +68,7 @@ Many platforms publish installation galleries. Cross-check each URL against the 
 | [Open Data Inception](https://data.opendatasoft.com/explore/dataset/open-data-sources%40public/information/) | Open-data portals |
 | [OpenSDG community](https://open-sdg.org/community) | SDG indicator sites |
 | [StatSilk gallery](https://www.statsilk.com/gallery) | StatPlanet indicator maps (many Flash-era; confirm live Cloud/HTML5) |
+| [ISTAT StatKit implementations](https://sdmxistattoolkit.github.io/mydoc_RefDiss_Sys.html) | Istat Data Browser / StatKit hubs |
 | [GBIF IPT](https://www.gbif.org/ipt) | Biodiversity IPT nodes |
 | [ArcGIS Hub](https://hub.arcgis.com/) | ArcGIS Hub sites |
 | [EntryScape customers](https://entryscape.com/en/customers/) | EntryScape catalogs |
@@ -84,6 +85,7 @@ Many platforms publish installation galleries. Cross-check each URL against the 
 | [Breedbase](https://breedbase.org) | Crop breeding information systems |
 | [Landfolio portals](https://www.spatialdimension.com/portals/) | Trimble mining and land cadastre map portals |
 | [G3W-SUITE](https://g3wsuite.it) | Italian QGIS WebGIS |
+| [Hajk users](https://hajkmap.se/valkommen-till-hajk/exempelsamling/) | Swedish Hajk webGIS |
 | [ResourceContracts](https://resourcecontracts.org) | Oil/gas/mining contract repositories |
 | [RDF Online Repository](https://revenuedevelopment.org/online-repository/) | Mining and petroleum license-transparency portals |
 | [FAOSTAT / FENIX](https://www.fao.org/faostat/) | FAO indicator catalogs (AMIS, DAD-IS, WIEWS, GIFT) |
@@ -94,6 +96,7 @@ Many platforms publish installation galleries. Cross-check each URL against the 
 | [InterMine registry](https://registry.intermine.org/) | Organism and project mines |
 | [GRIN-Global](https://www.grin-global.org) | National / centre genebank installs |
 | [cBioPortal](https://www.cbioportal.org) | Public and hospital cancer-genomics instances |
+| [TalkBank](https://talkbank.org) | Spoken-language transcript banks (CHILDES, AphasiaBank, FluencyBank) |
 | [NOMAD](https://nomad-lab.eu) | Materials archive and self-hosted Oasis |
 | [XNAT](https://www.xnat.org) | Neuroimaging archives |
 | [Open Microscopy / IDR](https://www.openmicroscopy.org/omero/) | OMERO public image archives |
@@ -122,6 +125,7 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | Sitowise Louhi | OpenLayers + `partner=stw` | Public karttapalvelu without `/IMS/` |
 | Landfolio | `portals.landfolio.com` | Country cadastre map portal (not ArcGIS REST) |
 | Spatial Suite | SpatialMap `browserdetect.js?ver=` | Municipal webkort |
+| KortInfo | `drift.kortinfo.net/Map.aspx` `Site=` | One municipality tenant |
 | GEUSMAP | `/geusmap/?mapname=` | One record per mapname |
 | GISApp | `*.gisapp.ro` | One city tenant (not ArcGIS REST) |
 | iObčina | `/gisapp/Default.aspx?a=` | Kaliopa municipal tenant |
@@ -209,6 +213,8 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | Esploro | `*.esploro.exlibrisgroup.com` or campus `/esploro` | Institutional research-outputs portal |
 | Converis | Clarivate Converis CRIS | Public datasets module, not publications/persons |
 | Omega-PSIR | Omega-PSIR / “Baza Wiedzy” | University CRIS root (Poland) |
+| TalkBank | `*.talkbank.org`, CHAT / CLAN | One bank home (CHILDES, AphasiaBank, …), not a transcript |
+| CLLD | `*.clld.org`, `clld-static` | One project app, not a language or parameter page |
 | LabKey Server | `begin.view`, Panorama Public | Public project/study home, not a single assay run |
 | Synapse | `synapse.org`, Sage Bionetworks | Portal or project catalog, not a `syn########` file |
 | XNAT | `/xnat/`, `/data/projects` | Public project catalog, not a session |
@@ -277,6 +283,7 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - Sitowise Louhi: OpenLayers `/Scripts/integration/openlayers/` plus Sitowise `partner=stw`
 - Landfolio: `portals.landfolio.com/{country}/`
 - Spatial Suite: `/js/standard/browserdetect.js?ver=` (SpatialMap)
+- KortInfo: `drift.kortinfo.net/Map.aspx?Site=`
 - GEUSMAP: `/geusmap/?mapname=`
 - GISApp: `{city}.gisapp.ro`
 - iObčina: `/gisapp/Default.aspx?a=`
@@ -309,6 +316,8 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - Knoema: branded hub home (not a dataset page)
 - Converis: public CRIS / datasets listing (stop on `/ws` keys)
 - Omega-PSIR: university “Baza Wiedzy” home
+- TalkBank: `{bank}.talkbank.org` collection home
+- CLLD: `{project}.clld.org` plus `clld-static`
 - PxStat: `/public/api.restful/PxStat.Data.Cube_API.ReadCollection/`
 - TabNet: `deftohtm.exe` / `cgi-bin/dh` query form
 - FENIX: FAOSTAT `/faostat/api/v1/` groups-and-domains
@@ -371,6 +380,7 @@ The same hostname often runs several GIS products. Register **one YAML per publi
 | G3W-SUITE + QGIS Server | `g3wsuite` portal | `qgisserver` on the same host |
 | Landfolio map portal + ArcGIS REST | `landfolio` cadastre UI | REST already tagged `arcgisserver` |
 | GISApp city viewer + `webadaptor.gisapp.ro` REST | `gisapp` tenant | ArcGIS REST as a second city catalog |
+| KortInfo `Site=` + SpatialMap webkort | The public viewer the kommune documents | Both IDs unless they are distinct public apps |
 | Sentinel Hub STAC + EO Browser | `sentinelhub` catalog API | `stacserver` or Browser as a second catalog |
 | Finnish `/IMS/` vs Sitowise Louhi | `trimblelocus` if `/IMS/`; else `louhi` | Both IDs on the same karttapalvelu |
 
@@ -400,6 +410,7 @@ Duplicate-check `link` **and** the service origin before `add-single`. Harvest f
 - [software-index.md](software-index.md) — every `software.id` → recipe
 - [apidetect.md](apidetect.md) / [liveness.md](liveness.md)
 - [agents/discover.md](agents/discover.md) — agent checklist
+- [agents/improve.md](agents/improve.md) — what to hunt next
 - [agents/contribute.md](agents/contribute.md) — write YAML after a find
 - [catalog-types.md](catalog-types.md)
 - [software-taxonomy.md](software-taxonomy.md)

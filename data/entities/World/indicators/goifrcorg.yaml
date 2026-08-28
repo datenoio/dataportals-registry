@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: Public emergency operations platform of the International Federation
+  of Red Cross and Red Crescent Societies. Lists disasters, appeals, field reports
+  and projects, with a JSON API at goadmin.ifrc.org.
+endpoints:
+- type: other
+  url: https://goadmin.ifrc.org/api/v2/
+id: goifrcorg
+langs:
+- id: EN
+  name: English
+link: https://go.ifrc.org
+name: IFRC GO
+owner:
+  link: https://www.ifrc.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: International Federation of Red Cross and Red Crescent Societies
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- humanitarian
+- disasters
+- red cross
+- emergencies
+- indicators
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi99990786

@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-NS
+      name: Nova Scotia
+description: MSVU e-Commons is Mount Saint Vincent University's institutional repository
+  (DSpace).
+endpoints:
+- type: dspace
+  url: https://ec.msvu.ca/server/api
+  version: '7.4'
+- type: dspace:objects
+  url: https://ec.msvu.ca/server/api/discover/search/objects
+  version: '7.4'
+id: ecmsvuca
+langs:
+- id: EN
+  name: English
+link: https://ec.msvu.ca
+name: MSVU e-Commons
+owner:
+  link: https://www.msvu.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-NS
+      name: Nova Scotia
+  name: Mount Saint Vincent University
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- datasets
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991730

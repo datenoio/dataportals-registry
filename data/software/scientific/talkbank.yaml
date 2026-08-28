@@ -1,0 +1,62 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: talkbank
+website: https://talkbank.org
+name: TalkBank
+description: TalkBank is the shared web application for spoken-language
+  transcript banks. Independent collections such as CHILDES, AphasiaBank,
+  and FluencyBank run on *.talkbank.org with the CHAT format, a common
+  browser, and bulk corpus downloads.
+owner:
+  name: Carnegie Mellon University
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://talkbank.org/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Structured
+type: Software
+repository_url: https://github.com/TalkBank
+documentation_url: https://talkbank.org/manuals/
+export_formats:
+- CHAT
+- CSV
+- XML
+capabilities:
+- Transcript browser
+- CHAT format
+- Bulk corpus download
+last_updated: '2026-08-28T00:00:00Z'

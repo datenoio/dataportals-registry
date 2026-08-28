@@ -6,8 +6,8 @@ Do not add dataset-level records (a single Dataverse dataset, a Zenodo depositio
 
 | Page | Use when |
 |------|----------|
-| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, OPUS, RADAR, Yoda, Hyrax, Figshare, Redivis, Pure, Converis, Omega-PSIR, Archipelago, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, …) |
-| [Domain repositories](discovery-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat |
+| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, OPUS, RADAR, Yoda, Hyrax, Figshare, Redivis, Pure, Converis, Omega-PSIR, Archipelago, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, DiVA Portal, …) |
+| [Domain repositories](discovery-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat, CLLD |
 
 All `software.id` values: [software-index.md](software-index.md). Harvest filters: [harvest-scientific.md](harvest-scientific.md), [harvest-scientific-domain.md](harvest-scientific-domain.md).
 
@@ -81,6 +81,21 @@ Zenodo-like research data repositories. **Confirm:** `/api/records?size=1` JSON 
 | Google | `"Powered by EPrints" -site:eprints.org` |
 | Google | `inurl:/cgi/oai2 eprints` |
 | Censys | `web.endpoints.http.body: "EPrints"` |
+
+## DiVA Portal (`divaportal`) {#divaportal}
+
+Swedish shared IR (Uppsala University Library). Tenants at `{org}.diva-portal.org` with a JSF smash search UI. Hub: [diva-portal.org](https://www.diva-portal.org). Distinct from **DIVA-GIS** species downloads.
+
+**Signals:** hostname `*.diva-portal.org`; path `/smash/`; WildFly / PrimeFaces; branding DiVA.
+
+**Confirm:** GET `/smash/` search. One record per organisational tenant (and the hub). Filter harvest to research data — publications dominate.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:diva-portal.org` |
+| Google | `"DiVA" (repository OR "research data") site:.se` |
+| Censys | `web.names: "diva-portal.org"` |
+| crt.sh | `%.diva-portal.org` |
 
 ## Hyrax (`hyrax`) {#hyrax}
 

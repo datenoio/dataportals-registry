@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: MATE institutional repository for publications and research data (pub.mater).
+  EPrints catalog of the Hungarian University of Agriculture and Life Sciences; OAI-PMH
+  exposes an experiment / scientific-data document type with deposited project datasets.
+endpoints:
+- type: oaipmh20
+  url: https://pub.mater.uni-mate.hu/cgi/oai2?verb=Identify
+  version: '2.0'
+id: pubmaterunimatehu
+langs:
+- id: HU
+  name: Hungarian
+- id: EN
+  name: English
+link: https://pub.mater.uni-mate.hu
+name: MATE Publications and Research Data
+owner:
+  link: https://uni-mate.hu
+  location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+  name: Hungarian University of Agriculture and Life Sciences
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- research data
+- academic
+- agriculture
+- institutional repository
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990861

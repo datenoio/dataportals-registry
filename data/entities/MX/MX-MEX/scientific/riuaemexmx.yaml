@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: MX-MEX
+      name: México
+description: DSpace institutional repository of Universidad Autónoma del Estado de
+  México. OAI-PMH exposes Bases de Datos collections with research datasets (survey
+  and related data) alongside theses and publications.
+endpoints:
+- type: oaipmh20
+  url: https://ri.uaemex.mx/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://ri.uaemex.mx/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://ri.uaemex.mx/feed/atom_1.0/site
+  version: '1.0'
+id: riuaemexmx
+langs:
+- id: ES
+  name: Spanish
+link: https://ri.uaemex.mx
+name: Repositorio Institucional UAEMéx
+owner:
+  link: https://www.uaemex.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-MEX
+      name: México
+  name: Universidad Autónoma del Estado de México
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- university
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990922

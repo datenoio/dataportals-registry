@@ -273,6 +273,17 @@ Public dataset / directory list on `data.gxzf.gov.cn` or `{city}.data.gxzf.gov.c
 
 Keep **open datasets** for that tenant. Drop login-only apply/API-gateway flows. One tenant = one harvest scope. Not CKAN.
 
+## OpenGDC (`opengdc`) {#opengdc}
+
+Dutch municipal catalog. Harvest datasets only:
+
+```text
+GET https://host/api/datasets
+GET https://host/openapi.json
+```
+
+JSON:API collection (`data[].type == "dataset"`, `meta.total`). Page with the API’s start/rows (or follow `links`). **Keep** dataset objects. **Drop** `/api/documents` and `/api/dossiers` (Woo files), CMS pages, and idea boxes. One municipality tenant = one harvest scope. Some hosts return `403` from a WAF — stop; do not scrape HTML as a substitute.
+
 ## Portals without a dataset API
 
 Liferay, POMOSAM, oPortal, OGD India, Seoul plaza, Drupal, and WordPress are covered above when a list exists. If there is still no machine-readable catalog, stop. Generic DCAT paths: `/catalog.xml`, `/data.json` ([harvest-protocols.md](harvest-protocols.md#dcat)).

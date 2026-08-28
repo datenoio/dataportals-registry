@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Maritime Commons is the World Maritime University Digital Commons repository
+  for dissertations, research outputs, and datasets.
+endpoints:
+- type: oaipmh20
+  url: https://commons.wmu.se/do/oai/?verb=Identify
+  version: '2.0'
+id: commonswmuse
+langs:
+- id: EN
+  name: English
+link: https://commons.wmu.se
+name: Maritime Commons
+owner:
+  link: https://www.wmu.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    subregion:
+      id: SE-M
+      name: Skåne län [SE-12]
+  name: World Maritime University
+  type: International
+properties:
+  is_national: false
+software:
+  id: elsevierdigitalcommons
+  name: Elsevier Digital Commons
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- maritime
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+uid: cdi99991306

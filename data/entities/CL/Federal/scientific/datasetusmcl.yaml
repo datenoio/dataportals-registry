@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CL
+      name: Chile
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Repositorio institucional de datos de investigación de la Universidad
+  Técnica Federico Santa María, basado en Dataverse.
+endpoints:
+- type: dataverseapi
+  url: https://dataset.usm.cl/api/search
+- type: oaipmh20
+  url: https://dataset.usm.cl/oai?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://dataset.usm.cl/sitemap.xml
+id: datasetusmcl
+langs:
+- id: ES
+  name: Spanish
+link: https://dataset.usm.cl
+name: Repositorio de datos - UTFSM
+owner:
+  link: https://www.usm.cl
+  location:
+    country:
+      id: CL
+      name: Chile
+    level: 20
+  name: Universidad Técnica Federico Santa María
+  type: Academy
+properties:
+  dataset_count_reported: 6
+  has_doi: true
+  is_national: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- has_api
+- multidisciplinary
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99992079

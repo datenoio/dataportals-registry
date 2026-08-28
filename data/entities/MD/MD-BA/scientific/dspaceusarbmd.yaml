@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: MD
+      name: Moldova
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Open Research Archive (ORA USARB), the DSpace institutional repository
+  of Alecu Russo Bălți State University, with faculty collections, doctoral school
+  records, and the Bălți branch of the Academy of Sciences of Moldova.
+endpoints:
+- type: oaipmh20
+  url: http://dspace.usarb.md:8080/oai/request?verb=Identify
+  version: '2.0'
+id: dspaceusarbmd
+identifiers:
+- id: opendoar
+  url: https://v2.sherpa.ac.uk/id/repository/3714
+  value: '3714'
+langs:
+- id: RO
+  name: Romanian
+- id: EN
+  name: English
+- id: RU
+  name: Russian
+link: http://dspace.usarb.md:8080/xmlui
+name: Open Research Archive of Alecu Russo Bălți State University
+owner:
+  link: https://usarb.md
+  location:
+    country:
+      id: MD
+      name: Moldova
+    level: 30
+    subregion:
+      id: MD-BA
+      name: Bălți
+  name: Alecu Russo Bălți State University
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- DSpace
+- institutional repository
+- research
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991637

@@ -1,0 +1,61 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Elsevier Pure research portal of the Swedish University of Agricultural
+  Sciences, with a public catalog of research datasets, publications, and profiles.
+endpoints:
+- type: oaipmh20
+  url: https://research.slu.se/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://research.slu.se/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://research.slu.se/sitemap/datasets.xml
+id: researchsluse
+langs:
+- id: EN
+  name: English
+- id: SV
+  name: Swedish
+link: https://research.slu.se
+name: SLU Research Portal
+owner:
+  link: https://www.slu.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Swedish University of Agricultural Sciences
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research data
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991294

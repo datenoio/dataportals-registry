@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: MAP Norfolk, the Norfolk County Council ArcGIS Hub open data catalog
+  for county spatial datasets and related open data.
+endpoints:
+- type: dcatap201
+  url: https://data-norfolk.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://data-norfolk.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://data-norfolk.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://data-norfolk.opendata.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://data-norfolk.opendata.arcgis.com/sitemap.xml
+id: datanorfolkopendataarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://data-norfolk.opendata.arcgis.com
+name: MAP Norfolk
+owner:
+  link: https://www.norfolk.gov.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: Norfolk County Council
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- government
+- has_api
+- open data
+- local government
+- Norfolk
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99990814

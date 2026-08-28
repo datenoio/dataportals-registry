@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- scientific publication
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Institutional repository of Universidade Nova de Lisboa. DSpace search
+  lists dataset records in addition to publications and theses.
+endpoints:
+- type: dspace
+  url: https://run.unl.pt/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://run.unl.pt/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://run.unl.pt/sitemap_index.xml
+id: rununlpt
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::a8f8f60264024dca151f164729b76c0b
+  value: opendoar____::a8f8f60264024dca151f164729b76c0b
+langs:
+- id: PT
+  name: Portuguese
+link: https://run.unl.pt/
+name: RUN – Repositório Institucional da NOVA
+owner:
+  link: https://www.unl.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: Universidade Nova de Lisboa
+  type: Academy
+properties:
+  dataset_count_reported: 7
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991466

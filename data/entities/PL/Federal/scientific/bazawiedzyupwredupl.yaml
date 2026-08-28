@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -19,6 +19,10 @@ description: Base of Knowledge Wrocław University of Environmental and Life Sci
   to deposit datasets (as well as publications) created by researchers, PhD candidates and
   students of Wrocław University of Environmental and Life Sciences. It is intended for scientific
   data from the disciplines related to the University’s profile.
+endpoints:
+- type: oaipmh20
+  url: https://bazawiedzy.upwr.edu.pl/oai/request?verb=Identify
+  version: '2.0'
 id: bazawiedzyupwredupl
 identifiers:
 - id: openaire
@@ -41,8 +45,8 @@ owner:
   name: Wroclaw University of Environmental and Life Sciences
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: omegapsir
+  name: Omega-PSIR
 status: active
 tags:
 - scientific

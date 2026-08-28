@@ -67,10 +67,13 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `/api/records?size=1` InvenioRDM | `inveniordm` | Scientific data repository |
 | `/api/v1/` PxWeb tables | `pxweb` | Indicators catalog |
 | `PxStat.Data.Cube_API` / “PxStat Open Data Platform” | `pxstat` | Indicators catalog |
+| `/databrowserhub/api/core` or `/databrowser/api/core` hub JSON | `istatdatabrowser` | Indicators catalog |
 | Title “TabNet Win32” / `deftohtm.exe` / `cgi-bin/dh` | `tabnet` | Indicators catalog |
 | `fenixservices.fao.org` / FAOSTAT API / CountrySTAT FENIX UI | `fenix` | Indicators catalog |
 | Finnish `/IMS/` karttapalvelu (`tekla-mvc-common`) | `trimblelocus` | Geoportal |
 | SpatialMap `webkort` | `spatialsuite` | Geoportal |
+| Hajk `appConfig.json` / `mapserviceBase` | `hajk` | Geoportal |
+| `drift.kortinfo.net/Map.aspx` | `kortinfo` | Geoportal |
 | `portals.landfolio.com` cadastre map | `landfolio` | Geoportal |
 | G3W-CLIENT `/map/{group}/` | `g3wsuite` | Geoportal |
 | MapCentia `/apps/viewer` or `/mapcache/` WMTS | `gc2` | Geoportal |
@@ -79,6 +82,7 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `*.revenuedev.org` license portal | `rdfrepository` | Open data portal |
 | ResourceContracts `/contract/resources` | `resourcecontracts` | Open data portal |
 | `{city}.data.gxzf.gov.cn` | `gxopendata` | Open data portal |
+| `/openapi.json` + `/api/datasets` JSON:API (`type: dataset`) | `opengdc` | Open data portal |
 | SparkMap / All Things hub | `sparkmap` | Indicators catalog |
 | Clarivate Converis CRIS | `converis` | Scientific data repository |
 | `begin.view` / Panorama Public / LabKey | `labkey` | Scientific data repository |
@@ -90,6 +94,7 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | InterMine `/begin.do` / `/service/version` | `intermine` | Scientific data repository |
 | `/gringlobal/` accession search | `gringlobal` | Scientific data repository |
 | `{project}.birdmap.africa` pentad atlas | `birdmap` | Scientific data repository |
+| `{bank}.talkbank.org` CHAT corpus browser | `talkbank` | Scientific data repository |
 | `/do/{uuid}` + strawberryfield / “indexed Digital Objects” | `archipelago` | Scientific data repository |
 | `{org}.redivis.com` / OpenAPI titled Redivis | `redivis` | Scientific data repository |
 | PlutoF workbench (`api.plutof.ut.ee`) | `plutof` | Scientific data repository |
@@ -151,5 +156,6 @@ See [apidetect.md](../apidetect.md). Do not run `apidetect_urlmaps_draft.py` as 
 - [software-index.md](../software-index.md)
 - [apidetect.md](../apidetect.md) / [liveness.md](../liveness.md)
 - [contribute.md](contribute.md)
+- [improve.md](improve.md) — what to hunt next (coverage gaps, session patterns)
 - [query.md](query.md)
 - [cli.md](../cli.md)

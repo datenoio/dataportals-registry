@@ -1,0 +1,95 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 30
+    macroregion:
+      id: 018
+      name: Southern Africa
+    subregion:
+      id: ZA-WC
+      name: Western Cape
+description: ArcGIS REST Services Directory for Western Cape Government departmental
+  geospatial services, including the Spatial Data Warehouse, Surveyor-General data
+  and the Open Data Portal service folder. Distinct from the WCG ArcGIS Hub site.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.westerncape.gov.za/server2/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.westerncape.gov.za/server2/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.westerncape.gov.za/server2/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.westerncape.gov.za/server2/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.westerncape.gov.za/server2/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.westerncape.gov.za/server2/rest/services?f=kmz
+id: giswesterncapegovza
+langs:
+- id: EN
+  name: English
+link: https://gis.westerncape.gov.za/server2/rest/services
+name: Western Cape Government ArcGIS Services
+owner:
+  link: https://www.westerncape.gov.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 30
+    subregion:
+      id: ZA-WC
+      name: Western Cape
+  name: Western Cape Government
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- Western Cape
+- South Africa
+- regional government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi99992068

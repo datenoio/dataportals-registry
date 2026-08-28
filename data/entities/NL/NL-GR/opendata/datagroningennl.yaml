@@ -21,6 +21,10 @@ description: Open data portal of the municipality of Groningen
 endpoints:
 - type: sitemap
   url: https://data.groningen.nl/sitemap.xml
+- type: openapi
+  url: https://data.groningen.nl/openapi.json
+- type: opengdc:datasets
+  url: https://data.groningen.nl/api/datasets
 id: datagroningennl
 langs:
 - id: NL
@@ -50,8 +54,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: drupal
-  name: Drupal
+  id: opengdc
+  name: OpenGDC
 status: active
 tags:
 - government

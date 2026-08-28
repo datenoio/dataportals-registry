@@ -27,7 +27,7 @@ Coding agents: [agents/harvest.md](agents/harvest.md). Production harvesting for
 | [Incremental harvests](harvest-incremental.md) | `from=`, `metadata_modified`, STAC `datetime`, checkpoints |
 | [Earth observation](harvest-earthdata.md) | THREDDS, ERDDAP, STAC collections, Open Data Cube, Copernicus, openEO, Sentinel Hub, ESGF, ESA Science Archive |
 | [Biodiversity and genomics](harvest-biodiversity.md) | IPT, Symbiota, ALA, GBIF datasets, Ensembl species, Breedbase, Tripal, VEuPathDB, PlutoF, InterMine, JGI, cBioPortal |
-| [Map viewers](harvest-viewers.md) | QWC2, Masterportal, Lizmap, mviewer, Trimble Locus / Louhi / Landfolio, Spatial Suite, GEUSMAP, GISApp, iObčina, iShare, Cadcorp — layers not tiles |
+| [Map viewers](harvest-viewers.md) | QWC2, Masterportal, Lizmap, mviewer, Trimble Locus / Louhi / Landfolio, Spatial Suite, Hajk, KortInfo, GEUSMAP, GISApp, iObčina, iShare, Cadcorp — layers not tiles |
 | [Dataset identifiers](harvest-identifiers.md) | Native id + catalog `uid`; DOI/handle; do not mint `cdi########` for datasets |
 | [Harvest output](harvest-output.md) | JSON record shape, skip counts, empty-harvest checklist |
 
@@ -59,7 +59,8 @@ WHERE catalog_type = 'Scientific data repository'
     'yoda', 'redivis', 'symbiota', 'breedbase', 'tripal', 'veupathdb',
     'massbank', 'iochembd', 'esgf', 'labkey', 'synapse', 'xnat',
     'omero', 'kadi4mat', 'edal', 'nomad', 'intermine', 'gringlobal',
-    'plutof', 'jgi', 'cbioportal', 'esasciencearchive', 'archipelago'
+    'plutof', 'jgi', 'cbioportal', 'esasciencearchive', 'archipelago',
+    'talkbank', 'clld'
   )
 LIMIT 50;
 ```

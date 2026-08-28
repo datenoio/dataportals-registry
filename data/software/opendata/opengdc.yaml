@@ -1,0 +1,69 @@
+category: Open data portal
+subtype: data_portal_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: opengdc
+website: https://www.opengdc.nl
+name: OpenGDC
+description: OpenGDC is an open-source Dutch municipal data catalog (Drupal / Dexes)
+  for datasets, APIs, and Wet open overheid dossiers. It publishes DCAT-AP metadata
+  and a JSON:API catalog, and registers with data.overheid.nl. Distinct from the
+  genomic OpenGDC extraction tool.
+owner:
+  name: OpenGDC community (Dexes)
+  location:
+    country:
+      id: NL
+      name: Netherlands
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'Yes'
+  dublin_core: Limited
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'Yes'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://gitlab.com/dexes.efro/drupal-dataspace
+documentation_url: https://www.opengdc.nl
+license:
+  type: EUPL-1.2
+  url: https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
+export_formats:
+- CSV
+- DCAT
+- JSON
+- RDF
+- XML
+capabilities:
+- Dataset catalog
+- DCAT-AP metadata
+- JSON:API
+- OpenAPI
+- Woo dossiers
+- OpenSearch
+last_updated: '2026-08-28T00:00:00Z'

@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-NL
+      name: Newfoundland and Labrador
+description: Institutional repository of Memorial University of Newfoundland, hosted
+  on Scholaris (DSpace).
+endpoints:
+- type: dspace
+  url: https://memorial.scholaris.ca/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://memorial.scholaris.ca/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://memorial.scholaris.ca/sitemap_index.xml
+id: memorialscholarisca
+langs:
+- id: EN
+  name: English
+link: https://memorial.scholaris.ca
+name: Memorial University Research Repository
+owner:
+  link: https://www.mun.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-NL
+      name: Newfoundland and Labrador
+  name: Memorial University of Newfoundland
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- datasets
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991695

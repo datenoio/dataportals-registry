@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-MG
+      name: Minas Gerais
+description: Institutional DSpace 7 repository of the Federal University of Lavras.
+  The BU - Dados de Pesquisa collection (handle 1/39017) publishes research datasets.
+endpoints:
+- type: dspace
+  url: https://repositorio.ufla.br/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositorio.ufla.br/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://repositorio.ufla.br/server/oai/request?verb=Identify
+  version: '2.0'
+id: repositoriouflabr
+langs:
+- id: PT
+  name: Portuguese
+link: https://repositorio.ufla.br
+name: Repositório Institucional da UFLA
+owner:
+  link: https://www.ufla.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-MG
+      name: Minas Gerais
+  name: Universidade Federal de Lavras
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991751

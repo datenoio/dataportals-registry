@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: UvA-DARE is the Digital Academic Repository of the University of Amsterdam.
+  It exposes bibliographic records from Pure, including 3651 dataset metadata records
+  alongside publications and theses.
+endpoints:
+- type: oaipmh20
+  url: https://pure.uva.nl/ws/oai?verb=Identify
+  version: '2.0'
+id: dareuvanl
+langs:
+- id: EN
+  name: English
+- id: NL
+  name: Dutch
+link: https://dare.uva.nl
+name: UvA-DARE Digital Academic Repository
+owner:
+  link: https://www.uva.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: University of Amsterdam
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- research data
+- publications
+- academic repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991448

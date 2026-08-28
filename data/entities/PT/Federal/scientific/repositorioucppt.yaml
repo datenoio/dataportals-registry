@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- scientific publication
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: DSpace institutional repository of Universidade Católica Portuguesa,
+  distinct from the Ciência-UCP Pure portal. Includes dataset-typed items.
+endpoints:
+- type: dspace
+  url: https://repositorio.ucp.pt/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositorio.ucp.pt/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://repositorio.ucp.pt/sitemap_index.xml
+id: repositorioucppt
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::7b7a53e239400a13bd6be6c91c4f6c4e
+  value: opendoar____::7b7a53e239400a13bd6be6c91c4f6c4e
+langs:
+- id: PT
+  name: Portuguese
+link: https://repositorio.ucp.pt/
+name: Repositório Institucional da Universidade Católica Portuguesa
+owner:
+  link: https://www.ucp.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: Universidade Católica Portuguesa
+  type: Academy
+properties:
+  dataset_count_reported: 1
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991458

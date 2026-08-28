@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Hoa Sen University Digital Library is a scientific data repository operated
+  by Hoa Sen University running on DSpace.
+endpoints:
+- type: dspace
+  url: https://thuvienso.hoasen.edu.vn/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://thuvienso.hoasen.edu.vn/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://thuvienso.hoasen.edu.vn/sitemap_index.xml
+id: thuviensohoaseneduvn
+langs:
+- id: VN
+  name: Vietnamese
+link: https://thuvienso.hoasen.edu.vn
+name: Hoa Sen University Digital Library
+owner:
+  link: https://thuvienso.hoasen.edu.vn
+  location:
+    country:
+      id: VN
+      name: Vietnam
+  name: Hoa Sen University
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- dspace
+- Vietnam
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994467

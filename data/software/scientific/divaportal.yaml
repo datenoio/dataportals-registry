@@ -1,0 +1,61 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: divaportal
+website: https://www.diva-portal.org
+name: DiVA Portal
+description: DiVA Portal (Digitala Vetenskapliga Arkivet) is the shared
+  institutional publication and research-data archive used by Swedish
+  universities and research organisations. Tenants live at
+  {org}.diva-portal.org with a JSF smash search UI. Distinct from DIVA-GIS
+  species-occurrence downloads.
+owner:
+  name: Uppsala University Library
+  location:
+    country:
+      id: SE
+      name: Sweden
+logo_url: https://www.diva-portal.org/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'Yes'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+documentation_url: https://info.diva-portal.org/
+export_formats:
+- JSON
+- XML
+- CSV
+capabilities:
+- OAI-PMH harvesting
+- Publication and research-data search
+last_updated: '2026-08-28T00:00:00Z'

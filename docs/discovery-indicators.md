@@ -2,7 +2,7 @@
 
 How to find **indicators catalogs** (`catalog_type: Indicators catalog`) and **microdata catalogs** (`catalog_type: Microdata catalog`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md).
 
-Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, PxStat, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, TabNet, SparkMap, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
+Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, PxStat, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Istat Data Browser, Swing, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, TabNet, SparkMap, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
 
 ## PxWeb (`pxweb`) {#pxweb}
 
@@ -60,6 +60,40 @@ SIS-CC / OECD .Stat. **Confirm:** `/api/search` or SDMX endpoints; UI “.Stat S
 | Google | `".Stat Suite" OR "SIS-CC" "data explorer"` |
 | Google | `inurl:/nsi OR "DotStat" SDMX` |
 | Censys | `web.endpoints.http.body: ".Stat"` |
+
+**False positives:** Istat **Data Browser** / StatKit (`databrowserhub/api/core`, `istatdatabrowser`) — that is not .Stat Suite.
+
+## Istat Data Browser (`istatdatabrowser`) {#istatdatabrowser}
+
+Istat StatKit Data Browser (EUPL). Site: [sdmxistattoolkit.github.io](https://sdmxistattoolkit.github.io/). Reference list: [Reference dissemination systems](https://sdmxistattoolkit.github.io/mydoc_RefDiss_Sys.html). Live examples: IstatData, Coeweb, Sistan Hub, AstatData, Malta IRIS, KNBS Open Data Browser, INPS.
+
+**Signals:** SPA under `/databrowser/`; hub JSON at `/databrowserhub/api/core/hub/minimalInfo` or `/databrowser/api/core/hub/minimalInfo`; title or chrome “Data Browser”; often paired with SDMX-RI (`/SDMXWS`).
+
+**Confirm:** GET the hub `minimalInfo` JSON (`hub` / `nodes`) **and** a public `/databrowser/` UI. Register **one catalog per public hub** (IstatData vs Coeweb vs a regional node), not each dataflow. Do not label these sites `statsuite`.
+
+**False positives:** I.Stat / .Stat Technology (`dati.istat.it`); a raw SDMX-RI `/SDMXWS` page with no Data Browser UI (keep `sdmxri`); KNBS Census 2019 JSON-stat DataBrowser (`data.knbs.or.ke`); UNESCO UIS Data Browser; Survey Solutions Data Browser.
+
+| Tool | Query |
+|------|-------|
+| Google | `"databrowserhub" OR inurl:/databrowserhub/api` |
+| Google | `"Istat Data Browser" OR "StatKit" databrowser SDMX` |
+| Google | `inurl:/databrowser "Data Browser" (Istat OR NSO OR statistics)` |
+| Censys | `web.endpoints.http.body: "databrowserhub"` |
+
+## Swing (`swing`) {#swing}
+
+ABF Research statistical databank (Swing Viewer / Swing Jive). Vendor: [swingsoftware.eu](https://swingsoftware.eu/). Flemish public tenants live at `{city}.incijfers.be` and `provincies.incijfers.be`.
+
+**Signals:** hostname `*.incijfers.be`; “Powered by Swing”; Swing Viewer / databank UI.
+
+**Confirm:** GET the public databank (not `/Admin/Studio/`). One record per municipal or provincial tenant. Dutch “in cijfers” / waarstaatjegemeente sites on other hosts are the same product when Swing-branded.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:incijfers.be` |
+| Google | `"Powered by Swing" OR "Swing Viewer" (incijfers OR databank)` |
+| Censys | `web.names: "incijfers.be"` |
+| crt.sh | `%.incijfers.be` |
 
 ## Knoema (`knoema`) {#knoema}
 
@@ -243,6 +277,7 @@ StatSilk interactive maps and dashboards (StatPlanet Cloud / HTML5, older Flash)
 | `statplanet` | see above | |
 | `superstar` | see above | |
 | `statsuite` | see above | |
+| `istatdatabrowser` | see above | |
 | `stattech` | SIS-CC .Stat technology / SDMX APIs | `"Stat Technology" OR "SIS-CC" SDMX` |
 | `oracleapex` | Oracle APEX **indicator apps** | `"Oracle APEX" (statistika OR indicators)` (skip generic APEX sites) |
 | `datavavt` | Data VAVT economic indicators | `"data.vavt.ru"` |

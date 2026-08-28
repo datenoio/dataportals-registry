@@ -21,7 +21,7 @@ import json
 import os
 import shutil
 import pprint
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urlunparse
 import lxml.html
 import lxml.etree
 import urllib.robotparser
@@ -664,6 +664,38 @@ STATSUITE_URLMAP = [
         "is_json": True,
         "version": None,
     }
+]
+
+
+ISTATDATABROWSER_URLMAP = [
+    {
+        "id": "istatdatabrowser:hub",
+        "url": "/databrowserhub/api/core/hub/minimalInfo",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "istatdatabrowser:nodes",
+        "url": "/databrowserhub/api/core/nodes",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "istatdatabrowser:hub-nested",
+        "url": "/databrowser/api/core/hub/minimalInfo",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "istatdatabrowser:nodes-nested",
+        "url": "/databrowser/api/core/nodes",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
 ]
 
 
@@ -1864,6 +1896,40 @@ JKAN_URLMAP = [
     }
 ]
 
+OPENGDC_URLMAP = [
+    {
+        "id": "openapi",
+        "url": "/openapi.json",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "3.0",
+    },
+    {
+        "id": "opengdc:datasets",
+        "url": "/api/datasets",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "opensearch",
+        "url": "/osdd.xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.0",
+    },
+    {
+        "id": "sitemap",
+        "url": "/sitemap.xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+        "prefetch": False,
+    },
+]
+
 WEKO3_URLMAP = [
     {
         "id": "weko3:records",
@@ -2273,6 +2339,7 @@ CATALOGS_URLMAP = {
     "erddap": ERDDAP_URLMAP,
     "mapproxy": MAPPROXY_URLMAP,
     "statsuite": STATSUITE_URLMAP,
+    "istatdatabrowser": ISTATDATABROWSER_URLMAP,
     "worktribe": WORKTRIBE_URLMAP,
     "inveniordm": INVENIORDM_URLMAP,
     "invenio": INVENIO_URLMAP,
@@ -2295,8 +2362,26 @@ CATALOGS_URLMAP = {
     "ipt": IPT_URLMAP,
     "sdmxri": SDMXRI_URLMAP,
     "opendatareg": OPENDATAREG_URLMAP,
+    "opengdc": OPENGDC_URLMAP,
     **DRAFT_CATALOGS_URLMAP,
 }
+
+
+def istatdatabrowser_url_cleanup_func(url):
+    """Keep StatKit path prefixes; strip the Data Browser SPA path."""
+    parsed = urlparse(url)
+    path = parsed.path or "/"
+    lower = path.lower()
+    for prefix in ("/coeweb", "/dbrowser", "/beta"):
+        idx = lower.find(prefix)
+        if idx != -1:
+            kept = path[: idx + len(prefix)].rstrip("/") or "/"
+            return urlunparse((parsed.scheme, parsed.netloc, kept, "", "", ""))
+    spa = lower.find("/databrowser")
+    if spa != -1 and "/databrowserhub" not in lower:
+        kept = path[:spa].rstrip("/") or "/"
+        return urlunparse((parsed.scheme, parsed.netloc, kept, "", "", ""))
+    return url.rstrip("/")
 
 
 def geoserver_url_cleanup_func(url):
@@ -2452,6 +2537,7 @@ def opus_url_cleanup_func(url):
 
 
 URL_CLEANUP_MAP = {
+    "istatdatabrowser": istatdatabrowser_url_cleanup_func,
     "geoserver": geoserver_url_cleanup_func,
     "arcgisserver": arcgisserver_url_cleanup_func,
     "geonetwork": geonetwork_url_cleanup_func,

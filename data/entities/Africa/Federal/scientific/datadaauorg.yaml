@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: Africa
+      name: Africa
+    level: 10
+    macroregion:
+      id: '002'
+      name: Africa
+description: Database of African Theses and Dissertations including Research (DATAD-R)
+  is a scientific data repository operated by Association of African Universities
+  running on DSpace.
+endpoints:
+- type: oaipmh20
+  url: https://datad.aau.org/oai/request?verb=Identify
+  version: '2.0'
+id: datadaauorg
+langs:
+- id: EN
+  name: English
+link: https://datad.aau.org/
+name: Database of African Theses and Dissertations including Research (DATAD-R)
+owner:
+  link: https://www.aau.org
+  location:
+    country:
+      id: Africa
+      name: Africa
+    level: 10
+  name: Association of African Universities
+  type: International
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- has_api
+- dspace
+- Africa
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991693

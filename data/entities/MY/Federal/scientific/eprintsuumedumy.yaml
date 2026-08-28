@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Universiti Utara Malaysia institutional repository of scholarly outputs,
+  including 1 Dataset record among articles, monographs, and conference items.
+endpoints:
+- type: oaipmh20
+  url: https://eprints.uum.edu.my/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://eprints.uum.edu.my/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://eprints.uum.edu.my/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://eprints.uum.edu.my/rest/eprint
+- type: eprints:n3
+  url: https://eprints.uum.edu.my/cgi/export/repository/RDFN3/devel.n3
+id: eprintsuumedumy
+langs:
+- id: EN
+  name: English
+link: https://eprints.uum.edu.my
+name: UUM Repository
+owner:
+  link: https://www.uum.edu.my
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 20
+  name: Universiti Utara Malaysia
+  type: Academy
+properties:
+  dataset_count_reported: 1
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- research outputs
+- open access
+- data repository
+- eprints
+- university
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991512

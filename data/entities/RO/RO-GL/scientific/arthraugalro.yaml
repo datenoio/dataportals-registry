@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: ARTHRA is the DSpace institutional repository of Dunărea de Jos University
+  of Galați. It holds articles, theses, conference papers, and dataset-typed records
+  harvested via OAI-PMH.
+endpoints:
+- type: dspace:items
+  url: https://arthra.ugal.ro/rest/items
+  version: '6'
+- type: oaipmh20
+  url: https://arthra.ugal.ro/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://arthra.ugal.ro/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://arthra.ugal.ro/feed/atom_1.0/site
+  version: '1.0'
+id: arthraugalro
+langs:
+- id: EN
+  name: English
+- id: RO
+  name: Romanian
+link: https://arthra.ugal.ro/
+name: ARTHRA Institutional Repository
+owner:
+  link: https://www.ugal.ro/
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 30
+    subregion:
+      id: RO-GL
+      name: Galați
+  name: Dunărea de Jos University of Galați
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990926

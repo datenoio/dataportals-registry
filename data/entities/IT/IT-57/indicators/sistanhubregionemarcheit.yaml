@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+- indicator
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-57
+      name: Marche
+description: MarcheData is Regione Marche's Istat Data Browser node in the Sistan
+  Hub network. The public UI was listed by Istat StatKit and Regione Marche but did
+  not respond to probes at last check.
+endpoints:
+- type: istatdatabrowser:hub
+  url: https://sistanhub.regione.marche.it/DBrowser/databrowserhub/api/core/hub/minimalInfo
+id: sistanhubregionemarcheit
+langs:
+- id: IT
+  name: Italian
+link: https://sistanhub.regione.marche.it/DBrowser/databrowser
+name: MarcheData
+owner:
+  link: https://www.regione.marche.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-57
+      name: Marche
+  name: Regione Marche
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: istatdatabrowser
+  name: Istat Data Browser
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- Italy
+- Marche
+- SDMX
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99993994

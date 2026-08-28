@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- scientific publication
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Institutional repository of the Polytechnic of Viseu. DSpace and OpenAIRE
+  list dataset records.
+endpoints:
+- type: dspace
+  url: https://repositorio.ipv.pt/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositorio.ipv.pt/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://repositorio.ipv.pt/sitemap_index.xml
+id: repositorioipvpt
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::8d8818c8e140c64c743113f563cf750f
+  value: opendoar____::8d8818c8e140c64c743113f563cf750f
+langs:
+- id: PT
+  name: Portuguese
+link: https://repositorio.ipv.pt/
+name: Repositório Científico do Instituto Politécnico de Viseu
+owner:
+  link: https://www.ipv.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: Instituto Politécnico de Viseu
+  type: Academy
+properties:
+  dataset_count_reported: 5
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991463

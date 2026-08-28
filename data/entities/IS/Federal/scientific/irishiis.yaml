@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: IS
+      name: Iceland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: University of Iceland Elsevier Pure research portal (IRIS UI), launched
+  in 2025 as a separate public catalog with a dataset listing, OAI-PMH, and RSS.
+endpoints:
+- type: oaipmh20
+  url: https://iris.hi.is/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://iris.hi.is/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://iris.hi.is/sitemap/datasets.xml
+id: irishiis
+langs:
+- id: IS
+  name: Icelandic
+- id: EN
+  name: English
+link: https://iris.hi.is
+name: University of Iceland Research Portal (IRIS UI)
+owner:
+  link: https://www.hi.is
+  location:
+    country: *id001
+    level: 20
+  name: University of Iceland
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research data
+- CRIS
+- Iceland
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991410

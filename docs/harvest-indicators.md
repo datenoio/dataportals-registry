@@ -22,6 +22,8 @@ Overview: [harvest.md](harvest.md). Finding catalogs: [discovery-indicators.md](
 | SparkMap **map layer** or assessment report | Saved user maps, login-only CHNA builder sessions, sparkmap.org marketing pages |
 | Goal Tracker **indicator / goal** | About / marketing HTML |
 | IMF NSDP **SDMX category / series** linked from the country page | NSO homepage, WordPress/Knoema wrappers, the DSBB directory |
+| Istat Data Browser **dataflow** (hub catalog item) | Hub chrome, news, dashboards, and the paired SDMX-RI structure-only resources |
+| Swing **indicator table / report** | Studio admin, map tiles, dashboard chrome |
 | DataWarehousePro **databank / series** | Guest-portal chrome, empty mnemonic lists |
 | Beyond 20/20 **report / cube** | ReportFolders chrome without a public report list |
 | StatPlanet **indicator** in a live Cloud/HTML5 explorer | Flash-era demo, a single-indicator URL |
@@ -66,7 +68,31 @@ Language prefixes (`/en/data/…`) vary. Harvest every indicator id the site pub
 GET https://host/api/search
 ```
 
-SDMX REST: list **dataflows** (the dataset analog). Pair with the Data Explorer UI only to confirm labels. If PxWeb is the public UI on the same office, harvest one catalog — do not double-count the same table.
+SDMX REST: list **dataflows** (the dataset analog). Pair with the Data Explorer UI only to confirm labels. If PxWeb is the public UI on the same office, harvest one catalog — do not double-count the same table. Do not harvest **Istat Data Browser** hubs (`istatdatabrowser`) as .Stat Suite.
+
+## Istat Data Browser (`istatdatabrowser`) {#istatdatabrowser}
+
+Filter exports on `software.id = 'istatdatabrowser'`. One harvest scope per public hub (IstatData, Coeweb, Sistan Hub, AstatData, IRIS, KNBS Open Data, INPS observatories as one catalog with several nodes).
+
+```text
+GET https://host/databrowserhub/api/core/hub/minimalInfo
+GET https://host/databrowserhub/api/core/nodes
+GET https://host/databrowserhub/api/core/nodes/{nodeId}/catalog
+```
+
+Some installs nest the API under `/databrowser/api/core/` (Astat, INPS) or a path prefix (`/coeweb/`, `/beta/`, `/DBrowser/`). Prefer `endpoints[]`. Each catalog item is an SDMX **dataflow**. Keep dataflow id + title + hub URL. Drop hub chrome, news, and dashboard pages. If the same office also has a public SDMX-RI `/SDMXWS/rest/dataflow` endpoint, harvest dataflows once — do not double-count the hub catalog and the NSI list.
+
+**Drop** observation cubes unless the user asked for data files. Stop on `401`/`403`. Grain: [harvest-protocols.md](harvest-protocols.md#sdmx).
+
+## Swing (`swing`) {#swing}
+
+ABF Research Swing Viewer / inCijfers databanks (`{city}.incijfers.be`, `provincies.incijfers.be`). Harvest **indicator tables / reports** from the public databank. Drop dashboard chrome, map tiles, and login-only Studio admin (`/Admin/Studio/`). One tenant = one harvest scope.
+
+```text
+GET https://host/databank
+```
+
+Keep table/report identifiers + title + URL. Do not download full observation cubes unless the user asked for data files.
 
 ## Stat Technology (`stattech`) {#stattech}
 

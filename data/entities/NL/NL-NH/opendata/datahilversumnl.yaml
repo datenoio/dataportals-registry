@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-NH
+      name: Noord-Holland
+description: OpenGDC dataportaal of the municipality of Hilversum. Distinct from the
+  ArcGIS Hub at open.hilversum.nl. Harvested by data.overheid.nl (77 datasets).
+endpoints:
+- type: openapi
+  url: https://data.hilversum.nl/openapi.json
+- type: opengdc:datasets
+  url: https://data.hilversum.nl/api/datasets
+- type: opensearch
+  url: https://data.hilversum.nl/osdd.xml
+- type: sitemap
+  url: https://data.hilversum.nl/sitemap.xml
+id: datahilversumnl
+langs:
+- id: NL
+  name: Dutch
+link: https://data.hilversum.nl
+name: Dataportaal gemeente Hilversum
+owner:
+  link: https://www.hilversum.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-NH
+      name: Noord-Holland
+  name: Gemeente Hilversum
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: opengdc
+  name: OpenGDC
+status: active
+tags:
+- government
+- open data
+- Netherlands
+- municipality
+- Hilversum
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99991452

@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MN
+      name: Mongolia
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: GBIF Mongolia is a scientific data repository operated by Mongolian Academy
+  of Sciences running on GBIF Integrated Publishing Toolkit (IPT).
+endpoints:
+- type: dcat:ttl
+  url: https://ipt.gbif.mn/dcat
+- type: ipt:dataset
+  url: https://ipt.gbif.mn/inventory/dataset
+- type: rss
+  url: https://ipt.gbif.mn/rss.do
+  version: '2.0'
+id: iptgbifmn
+langs:
+- id: MN
+  name: Mongolian
+link: https://ipt.gbif.mn
+name: GBIF Mongolia
+owner:
+  link: https://ipt.gbif.mn
+  location:
+    country:
+      id: MN
+      name: Mongolia
+  name: Mongolian Academy of Sciences
+  type: Academy
+software:
+  id: ipt
+  name: GBIF Integrated Publishing Toolkit (IPT)
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- ipt
+- GBIF Integrated Publishing Toolkit (IPT)
+- Mongolia
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994136

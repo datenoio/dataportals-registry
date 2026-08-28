@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-VA
+      name: Virginia
+description: William & Mary institutional repository (DSpace), including Data collections
+  of research datasets.
+endpoints:
+- type: dspace
+  url: https://scholarworks.wm.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://scholarworks.wm.edu/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://scholarworks.wm.edu/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://scholarworks.wm.edu/sitemap_index.xml
+id: scholarworkswmedu
+langs:
+- id: EN
+  name: English
+link: https://scholarworks.wm.edu
+name: WMScholarWorks
+owner:
+  link: https://www.wm.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-VA
+      name: Virginia
+  name: William & Mary
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- datasets
+- dspace
+- institutional repository
+- university
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991756

@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-UT
+      name: Utah
+description: Utah State University institutional repository, including a Datasets
+  community that archives research data produced at the university.
+endpoints:
+- type: oaipmh20
+  url: https://digitalcommons.usu.edu/do/oai/?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://digitalcommons.usu.edu/siteindex.xml
+id: digitalcommonsusuedu
+langs:
+- id: EN
+  name: English
+link: https://digitalcommons.usu.edu
+name: DigitalCommons@USU
+owner:
+  link: https://www.usu.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-UT
+      name: Utah
+  name: Utah State University
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+software:
+  id: elsevierdigitalcommons
+  name: Elsevier Digital Commons
+status: active
+tags:
+- research data
+- datasets
+- institutional repository
+- open access
+- university
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991757

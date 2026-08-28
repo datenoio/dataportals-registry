@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Departmental DSpace repository of the Faculty of Humanities at the University
+  of Žilina. Public items include a small research-data collection typed as Dataset
+  (dc.type), alongside publications and teaching materials.
+endpoints:
+- type: dspace
+  url: https://repozitar.fhv.uniza.sk/server/api
+  version: '8'
+- type: dspace:objects
+  url: https://repozitar.fhv.uniza.sk/server/api/discover/search/objects
+  version: '8'
+- type: sitemap
+  url: https://repozitar.fhv.uniza.sk/sitemap_index.xml
+id: repozitarfhvunizask
+langs:
+- id: SK
+  name: Slovak
+- id: EN
+  name: English
+link: https://repozitar.fhv.uniza.sk/
+name: Digital Repository of FHV UNIZA
+owner:
+  link: https://fhv.uniza.sk/
+  location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 20
+  name: University of Žilina, Faculty of Humanities
+  type: Academy
+properties:
+  dataset_count_reported: 3
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990962

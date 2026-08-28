@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- scientific publication
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Institutional repository of the University of Lisbon (RCAAP/DSpace).
+  Public catalog includes dataset-typed items alongside publications and theses.
+endpoints:
+- type: dspace
+  url: https://repositorio.ulisboa.pt/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositorio.ulisboa.pt/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://repositorio.ulisboa.pt/sitemap_index.xml
+id: repositorioulisboapt
+langs:
+- id: PT
+  name: Portuguese
+link: https://repositorio.ulisboa.pt/
+name: Repositório da Universidade de Lisboa
+owner:
+  link: https://www.ulisboa.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: Universidade de Lisboa
+  type: Academy
+properties:
+  dataset_count_reported: 8
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991464

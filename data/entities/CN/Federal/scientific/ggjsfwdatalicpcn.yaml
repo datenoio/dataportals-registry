@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -15,6 +15,9 @@ coverage:
       id: '030'
       name: Eastern Asia
 description: Public InstDB-style catalog of the CAS Lanzhou Institute of Chemical Physics.
+endpoints:
+- type: rest
+  url: https://ggjsfwdata.licp.cn/api
 id: ggjsfwdatalicpcn
 langs:
 - id: ZH
@@ -36,6 +39,19 @@ software:
   id: instdb
   name: InstDB
 status: active
-tags: []
-topics: []
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- instdb
+- China
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
 uid: cdi99990612

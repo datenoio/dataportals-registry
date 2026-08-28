@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Universiti Malaysia Terengganu institutional repository (DSpace), including
+  17 Dataset records among other research outputs.
+endpoints:
+- type: dspace
+  url: https://umt-ir.umt.edu.my/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://umt-ir.umt.edu.my/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://umt-ir.umt.edu.my/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://umt-ir.umt.edu.my/sitemap_index.xml
+id: umtirumtedumy
+langs:
+- id: EN
+  name: English
+link: https://umt-ir.umt.edu.my
+name: UMT Institutional Repository
+owner:
+  link: https://www.umt.edu.my
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 20
+  name: Universiti Malaysia Terengganu
+  type: Academy
+properties:
+  dataset_count_reported: 17
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research outputs
+- open access
+- data repository
+- dspace
+- university
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991513

@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Dias is the institutional repository of the Technical University of Crete.
+  It stores, preserves, and disseminates diploma theses, postgraduate dissertations,
+  conference papers, scientific articles, and technical reports of the university.
+endpoints:
+- type: oaipmh20
+  url: https://dias.library.tuc.gr/oai/request?verb=Identify
+  version: '2.0'
+id: diaslibrarytucgr
+langs:
+- id: EL
+  name: Greek
+- id: EN
+  name: English
+link: https://dias.library.tuc.gr
+name: DIAS Technical University of Crete Institutional Repository
+owner:
+  link: https://www.tuc.gr/
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: Technical University of Crete
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- education
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990843

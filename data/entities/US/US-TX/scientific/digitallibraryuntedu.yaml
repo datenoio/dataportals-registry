@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-TX
+      name: Texas
+description: Central archive in the UNT Digital Library for long-term preservation
+  and access to research datasets from the University of North Texas scholarly community.
+endpoints:
+- type: oaipmh20
+  url: https://digital.library.unt.edu/oai/?verb=Identify
+  version: '2.0'
+id: digitallibraryuntedu
+langs:
+- id: EN
+  name: English
+link: https://digital.library.unt.edu/explore/collections/UNTDRD/
+name: UNT Data Repository
+owner:
+  link: https://library.unt.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TX
+      name: Texas
+  name: University of North Texas Libraries
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- research data
+- datasets
+- university
+- digital library
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991755

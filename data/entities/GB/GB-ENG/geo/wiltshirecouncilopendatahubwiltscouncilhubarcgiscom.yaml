@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Wiltshire Council Open Data Hub. Public ArcGIS Hub catalog of council
+  open data and spatial layers, including highways and boundary datasets.
+endpoints:
+- type: dcatap201
+  url: https://wiltshire-council-open-data-hub-wiltscouncil.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://wiltshire-council-open-data-hub-wiltscouncil.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://wiltshire-council-open-data-hub-wiltscouncil.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://wiltshire-council-open-data-hub-wiltscouncil.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://wiltshire-council-open-data-hub-wiltscouncil.hub.arcgis.com/sitemap.xml
+id: wiltshirecouncilopendatahubwiltscouncilhubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://wiltshire-council-open-data-hub-wiltscouncil.hub.arcgis.com
+name: Wiltshire Council Open Data Hub
+owner:
+  link: https://www.wiltshire.gov.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: Wiltshire Council
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- government
+- has_api
+- open data
+- local government
+- Wiltshire
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99990815

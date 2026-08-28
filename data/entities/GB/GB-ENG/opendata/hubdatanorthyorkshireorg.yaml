@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Data North Yorkshire is the CKAN open data catalog maintained by North
+  Yorkshire Council and partner organisations, publishing council datasets, GIS layers,
+  and Joint Strategic Needs Assessment data.
+endpoints:
+- type: ckan
+  url: https://hub.datanorthyorkshire.org/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://hub.datanorthyorkshire.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://hub.datanorthyorkshire.org/api/3/action/package_list
+  version: '3'
+id: hubdatanorthyorkshireorg
+langs:
+- id: EN
+  name: English
+link: https://hub.datanorthyorkshire.org
+name: Data North Yorkshire
+owner:
+  link: https://www.northyorks.gov.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: North Yorkshire Council
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- local government
+- North Yorkshire
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi99990813

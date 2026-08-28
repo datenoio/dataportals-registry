@@ -6,7 +6,7 @@ GET only. Stop on `401`/`403`. Prefer `endpoints[]`.
 
 | Page | Use when |
 |------|----------|
-| This page | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, Galaxy, SEEK, ICAT, MyTardis, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal |
+| This page | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, Galaxy, SEEK, ICAT, MyTardis, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal, CLLD, TalkBank |
 | [Institutional IRs and CRIS](harvest-scientific.md) | Dataverse, DSpace, Invenio, EPrints, Pure, RADAR, Yoda, mixed publication catalogs |
 | [harvest-biodiversity.md](harvest-biodiversity.md) | IPT, Symbiota, ALA — occurrence vs dataset grain |
 | [harvest-earthdata.md](harvest-earthdata.md) | THREDDS, ERDDAP, ESGF data nodes, SciCat, openEO, ESA Science Archive |
@@ -220,6 +220,28 @@ GET https://host/api/studies
 ```
 
 Keep **studies**. Drop mutation/CNA rows, patient samples, and a single study view as a crawl seed. One public instance = one harvest scope.
+
+## CLLD (`clld`) {#clld}
+
+Cross-Linguistic Linked Data apps (`{project}.clld.org`). Harvest the **parameter / dataset catalog** or the published bulk download. Drop individual language-value cells and language report pages. One CLLD app = one harvest scope.
+
+```text
+GET https://host/parameters
+GET https://host/download
+```
+
+Prefer `endpoints[]` when present.
+
+## TalkBank (`talkbank`) {#talkbank}
+
+Spoken-language transcript banks (`{bank}.talkbank.org`). Harvest the **corpus / collection catalog** or published bulk download. Drop individual CHAT transcripts, media files, and speaker pages. One TalkBank collection = one harvest scope.
+
+```text
+GET https://host/
+GET https://host/data.html
+```
+
+Prefer `endpoints[]` when present. AphasiaBank and similar clinical banks may be login-walled (`401`/`403`) — stop; do not guess credentials.
 
 ## Related
 

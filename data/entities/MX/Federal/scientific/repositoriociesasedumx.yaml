@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Repositorio Digital CIESAS. Institutional repository operated by CIESAS.
+endpoints:
+- type: oaipmh20
+  url: https://repositorio.ciesas.edu.mx/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://repositorio.ciesas.edu.mx/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repositorio.ciesas.edu.mx/feed/atom_1.0/site
+  version: '1.0'
+id: repositoriociesasedumx
+langs:
+- id: ES
+  name: Spanish
+link: https://repositorio.ciesas.edu.mx/
+name: Repositorio Digital CIESAS
+owner:
+  link: https://www.ciesas.edu.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+  name: CIESAS
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- dspace
+- Mexico
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00037617
+properties:
+  is_national: false

@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: SK
+      name: Slovakia
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id002
+      id: SK-NI
+      name: Nitriansky kraj
+description: Public GIS portal of the City of Nitra, wrapping an ArcGIS Experience
+  Builder interactive map of municipal spatial layers.
+id: gisnitrask
+langs:
+- id: SK
+  name: Slovak
+link: https://gis.nitra.sk
+name: GIS Portál Mesta Nitra
+owner:
+  link: https://www.nitra.sk
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Mesto Nitra
+  type: Local government
+properties:
+  has_doi: false
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- GIS
+- geospatial
+- Slovakia
+- municipality
+- local data
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99990993

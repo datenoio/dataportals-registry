@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,10 @@ coverage:
 description: The BUT Data Repository is the institutional research data repository
   of Bialystok University of Technology, designed to collect, preserve, and provide
   access to research data and scholarly outputs produced by its academic community.
+endpoints:
+- type: oaipmh20
+  url: https://bazawiedzy.pb.edu.pl/oai/request?verb=Identify
+  version: '2.0'
 id: bazawiedzypbedupl
 identifiers:
 - id: openaire
@@ -36,8 +40,8 @@ owner:
   name: Bialystok University of Technology
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: omegapsir
+  name: Omega-PSIR
 status: active
 tags:
 - scientific

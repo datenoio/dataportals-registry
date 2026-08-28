@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: DiVA institutional repository of Uppsala University, with a public search
+  over publications and research datasets.
+endpoints:
+- type: oaipmh20
+  url: https://uu.diva-portal.org/smash/oai?verb=Identify
+  version: '2.0'
+id: uudivaportalorg
+langs:
+- id: SV
+  name: Swedish
+- id: EN
+  name: English
+link: https://uu.diva-portal.org
+name: Uppsala University DiVA
+owner:
+  link: https://www.uu.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Uppsala University
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: divaportal
+  name: DiVA Portal
+status: active
+tags:
+- scientific
+- research data
+- publications
+- DiVA
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991293

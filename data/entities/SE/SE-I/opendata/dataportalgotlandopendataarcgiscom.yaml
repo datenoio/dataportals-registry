@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: SE-I
+      name: Gotlands län [SE-09]
+description: ArcGIS Hub open data catalog of Region Gotland.
+endpoints:
+- type: dcatap201
+  url: https://dataportal-gotland.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://dataportal-gotland.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://dataportal-gotland.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://dataportal-gotland.opendata.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://dataportal-gotland.opendata.arcgis.com/sitemap.xml
+id: dataportalgotlandopendataarcgiscom
+langs:
+- id: SV
+  name: Swedish
+link: https://dataportal-gotland.opendata.arcgis.com
+name: Öppna data - Region Gotland
+owner:
+  link: https://www.gotland.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    subregion:
+      id: SE-I
+      name: Gotlands län [SE-09]
+  name: Region Gotland
+  type: Regional government
+properties:
+  dataset_count_reported: 5
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- has_api
+- ArcGIS
+- GIS
+- open data
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99991353

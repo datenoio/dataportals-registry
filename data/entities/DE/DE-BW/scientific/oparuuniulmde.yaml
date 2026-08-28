@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+description: Open Access Repository of Ulm University. DSpace 7 institutional repository with
+  a substantial Forschungsdaten collection.
+endpoints:
+- type: dspace
+  url: https://oparu.uni-ulm.de/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://oparu.uni-ulm.de/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://oparu.uni-ulm.de/sitemap_index.xml
+id: oparuuniulmde
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://oparu.uni-ulm.de
+name: OPARU
+owner:
+  link: https://www.uni-ulm.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+  name: Universität Ulm
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- dspace
+- Germany
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00037502

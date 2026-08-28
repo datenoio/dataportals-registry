@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- scientific publication
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Institutional repository of Universidade Fernando Pessoa. DSpace and
+  OpenAIRE list dataset records.
+endpoints:
+- type: dspace
+  url: https://bdigital.ufp.pt/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://bdigital.ufp.pt/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://bdigital.ufp.pt/sitemap_index.xml
+id: bdigitalufppt
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::b265ce60fe4c5384e622b09eb829b8df
+  value: opendoar____::b265ce60fe4c5384e622b09eb829b8df
+langs:
+- id: PT
+  name: Portuguese
+link: https://bdigital.ufp.pt/
+name: B-Digital
+owner:
+  link: https://www.ufp.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: Universidade Fernando Pessoa
+  type: Academy
+properties:
+  dataset_count_reported: 2
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991456

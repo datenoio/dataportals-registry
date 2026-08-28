@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Institutional repository of Nara National Research Institute for Cultural Properties.
+  IRDB reports 246 dataset records (July 2026).
+endpoints:
+- type: oaipmh20
+  url: https://repository.nabunken.go.jp/oai/request?verb=Identify
+  version: '2.0'
+id: repositorynabunkengojp
+langs:
+- id: JA
+  name: Japanese
+- id: EN
+  name: English
+link: https://repository.nabunken.go.jp
+name: NARA NATIONAL RESEARCH INSTITUTE FOR CULTURAL Repository
+owner:
+  link: https://repository.nabunken.go.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+  name: Nara National Research Institute for Cultural Properties
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- institutional repository
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00037562

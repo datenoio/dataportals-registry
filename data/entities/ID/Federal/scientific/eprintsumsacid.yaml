@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: UMS ePrints is a scientific data repository operated by Universitas
+  Muhammadiyah Surakarta running on EPrints.
+endpoints:
+- type: oaipmh20
+  url: https://eprints.ums.ac.id/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://eprints.ums.ac.id/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://eprints.ums.ac.id/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://eprints.ums.ac.id/rest/eprint
+id: eprintsumsacid
+langs:
+- id: ID
+  name: Indonesian
+link: https://eprints.ums.ac.id
+name: UMS ePrints
+owner:
+  link: https://eprints.ums.ac.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+  name: Universitas Muhammadiyah Surakarta
+  type: Academy
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- eprints
+- Indonesia
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99993584

@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-PV
+      name: Euskal Herria
+description: ADDI is the institutional repository of the University of the Basque
+  Country (UPV/EHU). It collects, preserves and disseminates research, teaching and
+  institutional output in open access.
+endpoints:
+- type: oaipmh20
+  url: https://addi.ehu.eus/oai/request?verb=Identify
+  version: '2.0'
+id: addiehueus
+langs:
+- id: ES
+  name: Spanish
+link: https://addi.ehu.eus
+name: ADDI University of the Basque Country Institutional Repository
+owner:
+  link: https://www.ehu.eus
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-PV
+      name: Euskal Herria
+  name: Universidad del País Vasco / Euskal Herriko Unibertsitatea
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- education
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990918

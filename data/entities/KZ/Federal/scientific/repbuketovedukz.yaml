@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 20
+    macroregion:
+      id: '143'
+      name: Central Asia
+description: Institutional DSpace repository of Karaganda Buketov University with
+  university journals, conference proceedings, faculty publications, and subject collections.
+  Distinct from the university GBIF IPT at gbif.buketov.edu.kz.
+endpoints:
+- type: dspace
+  url: https://rep.buketov.edu.kz/server/api
+  version: '9'
+- type: dspace:objects
+  url: https://rep.buketov.edu.kz/server/api/discover/search/objects
+  version: '9'
+- type: oaipmh20
+  url: https://rep.buketov.edu.kz/server/oai/request?verb=Identify
+  version: '2.0'
+id: repbuketovedukz
+langs:
+- id: RU
+  name: Russian
+- id: KZ
+  name: Kazakh
+- id: EN
+  name: English
+link: https://rep.buketov.edu.kz
+name: E.A. Buketov Karaganda University Repository
+owner:
+  link: https://buketov.edu.kz
+  location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 20
+  name: Karaganda Buketov University
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- institutional repository
+- university
+- Kazakhstan
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991618

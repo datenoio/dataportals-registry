@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-VC
+      name: Valenciana, Comunidad
+description: RediUMH is the digital deposit of Miguel Hernández University of Elche.
+  It collects, organises, disseminates and preserves scientific, teaching and institutional
+  documents produced by the university.
+endpoints:
+- type: oaipmh20
+  url: https://dspace.umh.es/oai/request?verb=Identify
+  version: '2.0'
+id: dspaceumhes
+langs:
+- id: ES
+  name: Spanish
+link: https://dspace.umh.es
+name: RediUMH
+owner:
+  link: https://www.umh.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-VC
+      name: Valenciana, Comunidad
+  name: Universidad Miguel Hernández de Elche
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- education
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990908

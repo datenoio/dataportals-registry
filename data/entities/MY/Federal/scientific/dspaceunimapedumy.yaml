@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: UniMAP Library Digital Repository (DSpace), including 458 Dataset records
+  among journal articles, theses, and other scholarly materials. Same catalog as the
+  multimedia.unimap.edu.my UI.
+endpoints:
+- type: dspace
+  url: https://dspace.unimap.edu.my/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://dspace.unimap.edu.my/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://dspace.unimap.edu.my/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://dspace.unimap.edu.my/sitemap_index.xml
+id: dspaceunimapedumy
+langs:
+- id: EN
+  name: English
+link: https://dspace.unimap.edu.my
+name: UniMAP Library Digital Repository
+owner:
+  link: https://www.unimap.edu.my
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 20
+  name: Universiti Malaysia Perlis
+  type: Academy
+properties:
+  dataset_count_reported: 458
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research outputs
+- open access
+- data repository
+- dspace
+- university
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991510

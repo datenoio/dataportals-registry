@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-NB
+      name: New Brunswick
+description: ScriptoriUM is the institutional repository of Université de Moncton,
+  hosted on Scholaris (DSpace).
+endpoints:
+- type: dspace
+  url: https://umoncton.scholaris.ca/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://umoncton.scholaris.ca/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://umoncton.scholaris.ca/sitemap_index.xml
+id: umonctonscholarisca
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://umoncton.scholaris.ca
+name: ScriptoriUM
+owner:
+  link: https://www.umoncton.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-NB
+      name: New Brunswick
+  name: Université de Moncton
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- datasets
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991697

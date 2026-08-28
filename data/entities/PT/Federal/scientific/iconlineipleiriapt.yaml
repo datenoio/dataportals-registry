@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- scientific publication
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Institutional repository of the Polytechnic of Leiria. DSpace search
+  lists dataset-typed items.
+endpoints:
+- type: dspace
+  url: https://iconline.ipleiria.pt/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://iconline.ipleiria.pt/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://iconline.ipleiria.pt/sitemap_index.xml
+id: iconlineipleiriapt
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::facf9f743b083008a894eee7baa16469
+  value: opendoar____::facf9f743b083008a894eee7baa16469
+langs:
+- id: PT
+  name: Portuguese
+link: https://iconline.ipleiria.pt/
+name: IC-online
+owner:
+  link: https://www.ipleiria.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: Instituto Politécnico de Leiria
+  type: Academy
+properties:
+  dataset_count_reported: 6
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991454

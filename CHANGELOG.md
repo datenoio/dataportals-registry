@@ -7,10 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.18.0] - 2026-08-28
+
+**GitHub Release**: [v1.18.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.18.0) - Published August 28, 2026
+
 ### Added
 
-- **705 net new catalog entries** since v1.17.0; registry source now **23,455** entities (**0** scheduled) across **219** country/territory folders.
-- **5 software definitions**; software catalog now **267** platforms: Archipelago Commons (`archipelago`), Redivis (`redivis`), MapCentia GC2 (`gc2`), wetransform hale»connect (`haleconnect`), and BirdMap Africa (`birdmap`).
+- **2,243 net new catalog entries** since v1.17.0; registry source now **24,993** entities (**7** scheduled) across **219** country/territory folders.
+- **20 software definitions**; software catalog now **282** platforms: Archipelago Commons (`archipelago`), Redivis (`redivis`), MapCentia GC2 (`gc2`), wetransform hale»connect (`haleconnect`), BirdMap Africa (`birdmap`), Istat Data Browser (`istatdatabrowser`), Geo-System e-mapa.net (`emapa`), Loftmyndir Kortasjá (`loftmyndir`), Alta Vefsjá (`alta`), DiVA Portal (`divaportal`), Swing / inCijfers (`swing`), CLLD (`clld`), Bulplan UNIMAP (`bulplan`), Tobel GIS (`tobel`), geoportal.ch (`geoportalch`), Evrymap (`evrymap`), Hajk (`hajk`), NIRAS KortInfo (`kortinfo`), OpenGDC (`opengdc`), and TalkBank (`talkbank`).
 - **257** US ArcGIS Server geoportals from the MappingSupport federal/state/county/city GIS server list (live REST roots not already in the registry). Includes BLM state adaptors, USFS/NOAA/USGS/FEMA services roots, and municipal/county directories.
 - **148** ArcGIS Hub geoportals promoted from scheduled review (US local/state hubs plus Canada, the UK, Ireland, New Zealand, and others).
 - **48** India catalogs: **27** geoportals (**19** ArcGIS Server REST directories including NIC Bharat Maps / WebGIS / BharatNet, India-WRIS, NWIC, TGRAC Telangana, HSAC Haryana, and APCRDA, plus Bhukosh, VEDAS, Bhoomi, KGIS, NESDR DKAN, India Observatory GeoNode, and West Bengal Nagar GIS); **15** scientific repositories (ICAR-NBPGR genebank and PGR portals, KRISHI, IMD, INCOIS, NICES, NCMRWF, NCPOR, NCS earthquake catalogue, WDC Geomagnetism Mumbai, IndOBIS IPT, and related hosts); CivicDataLab and National Water Data Portal (CKAN); Bengaluru Open Data; Kerala Data Portal; IIPS microdata; and AIKosh.
@@ -30,6 +34,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Chinese Academy of Sciences science-data centers promoted from scheduled review (InstDB and custom hosts that responded), plus LANDFIRE, USGS Publications Warehouse, USGS CMGDS, Alaska DGGS, and the Southern California Earthquake Data Center.
 - Geoportals including Africa GeoPortal, Scholars GeoPortal, NASA Worldview (GIBS), Geomolg, NCES EDGE, NIFC Open Data, SERVIR Global GeoServer, k.LAB Integrated Modelling, LIWO flood information, and **13** additional GeoServer catalogs.
 - API catalogs for the DB API Marketplace and the Riksbank API Portal; marketplaces Opendatabay and Centific; Epoch AI Data (ML); Datasets.ai search; and the mldata.opendata.ai CKAN sandbox.
+- **651** scientific repositories from later coverage passes, including **354** DSpace (Italy AIR/IRIS, Canada Scholaris, Mexico CONACYT `repositorioinstitucional.mx`, Spain, Kenya, Greece, Sri Lanka, Portugal, Colombia, South Africa, India, Bangladesh, Kazakhstan, Moldova, Turkey, New Zealand), **41** CLLD comparative-linguistics databases, **39** Japanese WEKO3, **33** EPrints, **21** Swedish DiVA Portal, **15** Elsevier Pure, **11** Digital Commons, **10** Polish Omega-PSIR, **8** Dataverse, **8** DSpace-CRIS, and **4** Austrian PHAIDRA.
+- **183** Swing / inCijfers indicator catalogs: **141** Netherlands (municipal, provincial, GGD, and thematic databanks), **41** Flanders, and the Euregional Health Atlas.
+- **125** Polish e-mapa.net county and city geoportals.
+- **77** Thai local-government CKAN portals on `*-local.gdcatalog.go.th`.
+- **77** Icelandic geoportals, including **53** Loftmyndir Kortasjá (`map.is`) and **21** Alta Vefsjá (`geo.alta.is`) tenants.
+- **52** Slovenian iObčina municipal GIS portals.
+- **26** Swiss geoportal.ch cantonal tenants.
+- Geoportal product hunts: **19** Danish KortInfo, **17** Finnish Trimble Locus IMS, **11** Swedish Hajk, **11** Bulgarian Bulplan UNIMAP, **10** Danish Spatial Suite webkort, **9** Romanian GISApp, **6** Bulgarian Tobel GIS, and **4** Greek Evrymap (Chalkidona, Kassandra, Thermaikos, Floodguard).
+- **21** South Korean catalogs (Gyeonggi municipal data portals plus KASI, KEI, ETRI, KIMM, KARI KPDS, and KISTI AIDA); **21** Russian scientific archives and regional open-data portals plus **3** Geometa GIS OGD (Khakassia, Penza, Kazan); **13** Argentine municipal CKAN (Pais Digital and city catalogs).
+- **13** World-level indicator and open-data catalogs (Climate TRACE, Climate Watch, Ember, Gapminder, EITI, IATI, Global Energy Monitor, IFRC GO, ODIN, IDMC, OCP Data Registry, and related hosts).
+- **6** Istat Data Browser hubs (Coeweb, Sistan Hub, INPS, AstatData, MarcheData, KNBS Open Data); **5** Slovak POMO SAM municipal open-data portals; **3** Dutch OpenGDC catalogs (Land van Cuijk, Oss, Hilversum); **5** government API directories (API Setu, APEX Cloud, bund.dev, Brazil Conecta, e-Gov Japan).
 - `properties.is_national` classifier (`scripts/national_catalog.py`) and `scripts/fix_is_national_flags.py` to unset the flag on agency, thematic, scientific, and subnational catalogs.
 
 
@@ -40,18 +55,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Clarified `properties.is_national`: `true` only for the country's official catalog of that type (national open-data portal, NSDI/geoportal, or NSO product), not federal ownership. Set `is_national: false` on **988** agency/thematic/scientific/subnational records that had been marked national.
 - Retagged the existing Redivis hub (`rediviscom`) from `custom` to `redivis` and documented the public OpenAPI.
 - Retagged Odder and Ballerup MapCentia tenants from `custom` to `gc2`; retagged hale»connect public cloud, GovConnect pmINSPIRE, and Komm.ONE Geodienste to `haleconnect`; retagged SABAP2 from `custom` to `birdmap`.
+- Retagged existing catalogs onto new or corrected software IDs: Grambank and Lexibank to `clld`; TalkBank, CHILDES, AphasiaBank, and FluencyBank to `talkbank`; Nijmegen, Groningen, and Utrecht open data from Drupal to `opengdc`; Limburg dataportaal to `swing`; Luleå `urn.kb.se` to `divaportal`; four Polish CRIS portals to `omegapsir`; Jakarta Satu Data to `udata`; Seoul data portal to `seoulopendataplaza`.
+- Retagged Lu'an Public Data Open Platform (`dataluangovcn`) from `custom` to `oportal`.
+- Retagged IstatData (`deesploradatiistatit`) and Malta IRIS (`statdbnsogovmt`) from `.Stat Suite` to `istatdatabrowser`.
 - Datarade marketplace moved from the retired `datarade.com` US record to `datarade.ai` (Berlin). Deutsche Bahn open-data infoportal retagged from CKAN to custom after the 2024 catalog retirement; APIs live on the new DB API Marketplace record.
 - Bundesbank statistics landing URL updated; EGA and gnomAD metadata, endpoints, and identifiers refreshed.
-- Promoted **200** catalogs from scheduled review after live URL checks (**164** earlier in this cycle, then **36** India/Nigeria/Pakistan records). Scheduled queue is empty.
+- Promoted **289** catalogs from scheduled review after live URL checks (**164** earlier in this cycle, then **36** India/Nigeria/Pakistan records, then **89** from a coverage-gap discovery pass). Scheduled queue now holds **7** South African institutional repositories pending live promotion (InfoSpace MRC, OpenHub SPU, OpenScholar UMP, NWU, UFS Scholar, TUT VITAL, Univen DSpace).
 - Egypt CAPMAS (`wwwcapmasgoveg`) now records the public indicator REST API on port 8080 (`api: true`).
-- Working-tree JSONL, Parquet, and DuckDB exports last rebuilt at **22,835** catalogs, **26** scheduled, **264** software. Source YAML is ahead (**23,455** entities, **0** scheduled, **267** software) until the next `build`. Quality analysis reports **0** issues across **22,835** export records.
-- Discovery and harvest guides index Archipelago Commons, Redivis, MapCentia GC2, hale»connect, and BirdMap Africa. Consumer docs (`README.md`, `docs/ai-consumers.md`, `docs/exports.md`, `docs/query-examples.md`, `llms.txt`) describe native DuckDB `LIST`/`STRUCT` nested types. DATASHEET geographic/type mix refreshed from current YAML.
+- Regenerated dataset exports to match source YAML: **24,993** catalogs, **7** scheduled, **282** software. Quality analysis reports **0** issues across **24,993** records.
+- Discovery and harvest guides index the 20 new software IDs (including Evrymap, Hajk, KortInfo, OpenGDC, TalkBank, e-mapa.net, Loftmyndir, Alta, DiVA, Swing, CLLD, Bulplan, Tobel, and geoportal.ch). Consumer docs (`README.md`, `docs/ai-consumers.md`, `docs/exports.md`, `docs/query-examples.md`, `llms.txt`) describe native DuckDB `LIST`/`STRUCT` nested types. DATASHEET geographic/type mix refreshed from current YAML.
+- Agent improvement playbook ([docs/agents/improve.md](docs/agents/improve.md)) distilled from ~3,000 discovery, review, and quality sessions: software-first hunts, country-shape gaps, scheduled promote loop, and `is_national` / endpoint anti-patterns.
 
 
 
 ### Fixed
 
 - `builder.py build` now writes `datasets.duckdb` with native DuckDB `LIST` and `STRUCT` types (matching `full.parquet`) instead of collapsing nested fields to VARCHAR JSON strings.
+- Dropped invalid `owner.location.macroregion` on GeoRhena (`sdigeorhenaeu`); that field is only allowed under `coverage`.
 
 
 

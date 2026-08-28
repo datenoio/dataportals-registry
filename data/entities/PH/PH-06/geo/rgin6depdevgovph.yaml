@@ -1,0 +1,94 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+- document
+coverage:
+- location:
+    country:
+      id: PH
+      name: Philippines
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: PH-06
+      name: Western Visayas (Region VI)
+description: GeoNode geoportal of the Regional Geographic Information Network for
+  Region 6 (Western Visayas), publishing datasets, maps, and documents for regional
+  planning.
+endpoints:
+- type: geonode:datasets
+  url: https://rgin6.depdev.gov.ph/api/v2/datasets/
+- type: geonode:documents
+  url: https://rgin6.depdev.gov.ph/api/v2/documents/
+- type: csw202
+  url: https://rgin6.depdev.gov.ph/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: wms111
+  url: https://rgin6.depdev.gov.ph/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+id: rgin6depdevgovph
+langs:
+- id: EN
+  name: English
+link: https://rgin6.depdev.gov.ph
+name: RGIN Region 6 Geoportal
+owner:
+  link: https://rgin6.depdev.gov.ph
+  location:
+    country:
+      id: PH
+      name: Philippines
+    level: 30
+    subregion:
+      id: PH-06
+      name: Western Visayas (Region VI)
+  name: Regional Development Council VI
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- government
+- region 6
+- philippines
+- geoportal
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99991488

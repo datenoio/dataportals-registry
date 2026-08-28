@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: CO-MET
+      name: Meta
+description: Institutional DSpace repository of Universidad del Meta with publicly
+  listed research data collections (dc.type Dataset / Datos).
+endpoints:
+- type: dspace
+  url: https://repositorio.unimeta.edu.co/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositorio.unimeta.edu.co/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://repositorio.unimeta.edu.co/oai/request?verb=Identify
+  version: '2.0'
+id: repositoriounimetaeduco
+langs:
+- id: ES
+  name: Spanish
+link: https://repositorio.unimeta.edu.co
+name: Repositorio Institucional Universidad del Meta
+owner:
+  link: https://www.unimeta.edu.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    subregion:
+      id: CO-MET
+      name: Meta
+  name: Universidad del Meta
+  type: Academy
+properties:
+  dataset_count_reported: 339
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991777

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: DK-82
       name: Midtjylland
 description: Region Midtjylland public MapCentia Vidi geoportal for regional map layers.
+endpoints:
+- type: rest
+  url: https://rm-vidi.mapcentia.com/api/v2/
 id: rmvidimapcentiacom
 langs:
 - id: DA

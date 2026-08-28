@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+- indicator
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Coeweb is Istat's foreign-trade statistics Data Browser (StatKit), a
+  separate hub from IstatData on the same host, with SDMX dataflows for imports and
+  exports.
+endpoints:
+- type: istatdatabrowser:hub
+  url: https://esploradati.istat.it/coeweb/databrowserhub/api/core/hub/minimalInfo
+id: esploradatiistatitcoeweb
+langs:
+- id: IT
+  name: Italian
+- id: EN
+  name: English
+link: https://esploradati.istat.it/coeweb
+name: Coeweb
+owner:
+  link: https://www.istat.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Istituto Nazionale di Statistica (Istat)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: istatdatabrowser
+  name: Istat Data Browser
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- Italy
+- trade
+- SDMX
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99990784

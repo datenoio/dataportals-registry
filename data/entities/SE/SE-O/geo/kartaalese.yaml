@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: SE-O
+      name: Västra Götalands län [SE-14]
+description: Public Hajk web GIS of Ale Municipality.
+endpoints:
+- type: api
+  url: https://karta.ale.se/appConfig.json
+id: kartaalese
+langs:
+- id: SV
+  name: Swedish
+link: https://karta.ale.se
+name: Ale webbkarta
+owner:
+  link: https://www.ale.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    subregion:
+      id: SE-O
+      name: Västra Götalands län [SE-14]
+  name: Ale kommun
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: hajk
+  name: Hajk
+status: active
+tags:
+- geoportal
+- map viewer
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99991347

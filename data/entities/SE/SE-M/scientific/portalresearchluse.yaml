@@ -1,0 +1,61 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Elsevier Pure research portal of Lund University, with a public catalog
+  of research datasets, publications, and profiles.
+endpoints:
+- type: rss
+  url: https://portal.research.lu.se/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://portal.research.lu.se/sitemap/datasets.xml
+id: portalresearchluse
+langs:
+- id: EN
+  name: English
+- id: SV
+  name: Swedish
+link: https://portal.research.lu.se
+name: Lund University Research Portal
+owner:
+  link: https://www.lu.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    subregion:
+      id: SE-M
+      name: Skåne län [SE-12]
+  name: Lund University
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research data
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991305

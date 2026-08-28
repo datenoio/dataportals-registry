@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: IRIS CNR is the Cineca IRIS institutional repository of Consiglio Nazionale
+  delle Ricerche. OpenAIRE Graph reports 921 research-data records harvested from
+  this catalogue.
+endpoints:
+- type: oaipmh20
+  url: https://iris.cnr.it/oai/request?verb=Identify
+  version: '2.0'
+id: iriscnrit
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::9f9d8edfbd4baab2060a115bbdcee1d6
+  value: opendoar____::9f9d8edfbd4baab2060a115bbdcee1d6
+langs:
+- id: IT
+  name: Italian
+- id: EN
+  name: English
+link: https://iris.cnr.it
+name: IRIS CNR
+owner:
+  link: https://www.cnr.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Consiglio Nazionale delle Ricerche
+  type: Academy
+properties:
+  dataset_count_reported: 921
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- dspace
+- iris
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991249

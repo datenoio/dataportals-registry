@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- scientific publication
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: National shared DSpace institutional repository (SARI/RCAAP) used by
+  Portuguese HE and R&D institutions without their own IR. DSpace reports 2 dataset-typed
+  items.
+endpoints:
+- type: dspace
+  url: https://comum.rcaap.pt/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://comum.rcaap.pt/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://comum.rcaap.pt/sitemap_index.xml
+id: comumrcaappt
+langs:
+- id: PT
+  name: Portuguese
+link: https://comum.rcaap.pt/
+name: Repositório Comum
+owner:
+  link: https://www.fccn.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: FCCN - Fundação para a Ciência e a Tecnologia
+  type: Academy
+properties:
+  dataset_count_reported: 2
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- has_api
+- academic
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991457

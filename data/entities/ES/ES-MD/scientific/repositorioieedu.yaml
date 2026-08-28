@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-MD
+      name: Madrid, Comunidad de
+description: Institutional repository of IE University. It collects, preserves and
+  disseminates academic and research output of IE University in open access.
+endpoints:
+- type: dspace
+  url: https://repositorio.ie.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositorio.ie.edu/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://repositorio.ie.edu/sitemap_index.xml
+id: repositorioieedu
+langs:
+- id: ES
+  name: Spanish
+link: https://repositorio.ie.edu
+name: Repositorio IE
+owner:
+  link: https://www.ie.edu
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-MD
+      name: Madrid, Comunidad de
+  name: IE University
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- education
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990905

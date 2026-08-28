@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-QC
+      name: Quebec
+description: Savoirs UdeS is the institutional repository of Université de Sherbrooke,
+  hosted on Scholaris (DSpace).
+endpoints:
+- type: dspace
+  url: https://usherbrooke.scholaris.ca/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://usherbrooke.scholaris.ca/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://usherbrooke.scholaris.ca/sitemap_index.xml
+id: usherbrookescholarisca
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://usherbrooke.scholaris.ca
+name: Savoirs UdeS
+owner:
+  link: https://www.usherbrooke.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-QC
+      name: Quebec
+  name: Université de Sherbrooke
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- datasets
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991720

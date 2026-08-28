@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-VC
+      name: Valenciana, Comunidad
+description: ReDivia is the institutional repository of the Instituto Valenciano de
+  Investigaciones Agrarias (IVIA). It collects, preserves and disseminates IVIA scientific
+  production in open access, including journal articles, theses, technical notes and
+  research datasets.
+endpoints:
+- type: oaipmh20
+  url: https://redivia.gva.es/oai/request?verb=Identify
+  version: '2.0'
+id: rediviagvaes
+langs:
+- id: ES
+  name: Spanish
+link: https://redivia.gva.es
+name: ReDivia
+owner:
+  link: https://www.ivia.gva.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-VC
+      name: Valenciana, Comunidad
+  name: Instituto Valenciano de Investigaciones Agrarias
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- agriculture
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+uid: cdi99990925

@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: UNNSpace is a scientific data repository operated by University of Nigeria,
+  Nsukka running on DSpace.
+endpoints:
+- type: oaipmh20
+  url: http://www.repository.unn.edu.ng/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: http://www.repository.unn.edu.ng/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: http://www.repository.unn.edu.ng/feed/atom_1.0/site
+  version: '1.0'
+id: wwwrepositoryunnedung
+langs:
+- id: EN
+  name: English
+link: http://www.repository.unn.edu.ng/
+name: UNNSpace
+owner:
+  link: https://www.unn.edu.ng
+  location:
+    country:
+      id: NG
+      name: Nigeria
+  name: University of Nigeria, Nsukka
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- dspace
+- Nigeria
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994162

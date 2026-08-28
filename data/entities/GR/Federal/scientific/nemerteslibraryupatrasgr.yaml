@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Nemertes is the institutional repository of the University of Patras.
+  It holds doctoral dissertations, master’s and diploma theses, technical reports,
+  and faculty publications.
+endpoints:
+- type: dspace
+  url: https://nemertes.library.upatras.gr/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://nemertes.library.upatras.gr/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://nemertes.library.upatras.gr/server/oai/request?verb=Identify
+  version: '2.0'
+id: nemerteslibraryupatrasgr
+langs:
+- id: EL
+  name: Greek
+- id: EN
+  name: English
+link: https://nemertes.library.upatras.gr
+name: Nemertes
+owner:
+  link: https://www.upatras.gr/
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: University of Patras
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- education
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990826

@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: PubliCatt is the Cineca IRIS institutional repository of Università Cattolica
+  del Sacro Cuore. OpenAIRE Graph reports 19 research-data records harvested from
+  this catalogue.
+endpoints:
+- type: oaipmh20
+  url: https://publicatt.unicatt.it/oai/request?verb=Identify
+  version: '2.0'
+id: publicattunicattit
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::e02e27e04fdff967ba7d76fb24b8069d
+  value: opendoar____::e02e27e04fdff967ba7d76fb24b8069d
+langs:
+- id: IT
+  name: Italian
+- id: EN
+  name: English
+link: https://publicatt.unicatt.it
+name: PubliCatt
+owner:
+  link: https://www.unicatt.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Università Cattolica del Sacro Cuore
+  type: Academy
+properties:
+  dataset_count_reported: 19
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- dspace
+- iris
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991221

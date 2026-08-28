@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Padua Research Archive is the Cineca IRIS institutional repository of
+  Università di Padova. OpenAIRE Graph reports 138 research-data records harvested
+  from this catalogue.
+endpoints:
+- type: oaipmh20
+  url: https://research.unipd.it/oai/request?verb=Identify
+  version: '2.0'
+id: researchunipdit
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::a22d33b4a00c165507a61f3bed4b5149
+  value: opendoar____::a22d33b4a00c165507a61f3bed4b5149
+langs:
+- id: IT
+  name: Italian
+- id: EN
+  name: English
+link: https://research.unipd.it
+name: Padua Research Archive
+owner:
+  link: https://www.unipd.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Università di Padova
+  type: Academy
+properties:
+  dataset_count_reported: 138
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- dspace
+- iris
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99991201

@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion: &id001
+      id: AR-S
+      name: Santa Fe
+description: RepHipUNR is the hypermedia institutional repository of Universidad Nacional
+  de Rosario. It includes records typed as conjunto de datos alongside publications.
+endpoints:
+- type: dspace
+  url: https://rephip.unr.edu.ar/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://rephip.unr.edu.ar/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://rephip.unr.edu.ar/sitemap_index.xml
+id: rephipunreduar
+langs:
+- id: ES
+  name: Spanish
+link: https://rephip.unr.edu.ar/
+name: RepHipUNR
+owner:
+  link: https://www.unr.edu.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion: *id001
+  name: Universidad Nacional de Rosario
+  type: Academy
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+- university
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99992095

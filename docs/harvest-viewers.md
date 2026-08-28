@@ -1,6 +1,6 @@
 # Harvesting map viewers and tile caches
 
-Many geoportals in this registry are **viewers** (QWC2, Masterportal, Lizmap, mviewer, Wagmap, Tianditu, Trimble Locus / Louhi / Landfolio, Spatial Suite, GEUSMAP, GISApp, iObčina, iShare, Cadcorp). The catalog of datasets is the **layer list** (GetCapabilities, `themes.json`, REST services) — not PNG tiles, print PDFs, or the basemap.
+Many geoportals in this registry are **viewers** (QWC2, Masterportal, Lizmap, mviewer, Wagmap, Tianditu, Trimble Locus / Louhi / Landfolio, Spatial Suite, KortInfo, GEUSMAP, GISApp, iObčina, iShare, Cadcorp). The catalog of datasets is the **layer list** (GetCapabilities, `themes.json`, REST services) — not PNG tiles, print PDFs, or the basemap.
 
 Use this page when `software.id` is a viewer or cache. Full SDI catalogs (GeoNetwork, GeoNode, ArcGIS Server): [harvest-geoportals.md](harvest-geoportals.md). Protocol grain: [harvest-protocols.md](harvest-protocols.md). GET only. Stop on `401`/`403`. Do not scrape tiles.
 
@@ -101,6 +101,30 @@ GetCapabilities often missing or `403`. Harvest only a public CSW/WMS/REST catal
 ## EWMAPA (`ewmapa`) {#ewmapa}
 
 Polish geoportal2.pl. Same grain as [Wagmap](#wagmap): harvest only public CSW/WMS/REST. Do not scrape tiles.
+
+## e-mapa.net (`emapa`) {#emapa}
+
+Polish `*.e-mapa.net` SIP viewers (Geo-System Pandora). Same grain as [EWMAPA](#ewmapa): harvest only public CSW/WMS/REST. Do not scrape tiles. Distinct from `ewmapa`.
+
+## Loftmyndir (`loftmyndir`) {#loftmyndir}
+
+Icelandic `www.map.is/{muni}/` viewers. Harvest a public layer list or GetCapabilities if present. Do not scrape map tiles.
+
+## Alta Vefsjá (`alta`) {#alta}
+
+`geo.alta.is/{tenant}/` OpenLayers viewers. Harvest the public layer list. Do not harvest the GeoServer root here — that record is `geoserver`.
+
+## Bulplan UNIMAP (`bulplan`) {#bulplan}
+
+`{muni}.bulplan.eu` municipal geoportals. Harvest public layers or GetCapabilities. Do not scrape tiles.
+
+## Tobel (`tobel`) {#tobel}
+
+`{city}.tobel.bg` municipal GIS. Same grain as [Bulplan UNIMAP](#bulplan).
+
+## geoportal.ch (`geoportalch`) {#geoportalch}
+
+Swiss `www.geoportal.ch/{canton}` viewers. Harvest a public layer list or WMS. Distinct from [mf-geoadmin3](#mfgeoadmin3).
 
 ## InGrid (`ingrid`) {#ingrid}
 
@@ -223,6 +247,10 @@ Cesium / PLATEAU VIEW. Harvest the public **catalog / scene dataset** API (CityG
 
 Municipal viewer (Y.Ge.P.). Harvest WMS/REST **layers** if public. Often no GetCapabilities — stop rather than scraping tiles.
 
+## Evrymap (`evrymap`) {#evrymap}
+
+Consortis Geospatial municipal map portal (often titled Evrymap; MapServer behind the SPA). Harvest public WMS GetCapabilities **layers** when the MapServer `map=` URL works. Do not scrape the Angular viewer tiles. Do not also register the bundled MapServer as a second catalog on the same host.
+
 ## BelsisIMS (`belsisims`) {#belsisims}
 
 KRH city guide. Same grain as [GIS4Smart](#gis4smart). Not NetGIS or Sampaş.
@@ -233,7 +261,13 @@ Regional web GIS. Harvest the public **layer / catalog** JSON or WMS. Skip login
 
 ## Geometa (`geometa`) {#geometa}
 
-Same grain as [GP Atlas](#gpatlas). Skip Agate document workflows unless those **are** the catalog.
+Gems Development GIS OGD public geoportal (Agate). Same grain as [GP Atlas](#gpatlas): harvest the public **document / layer catalog** JSON behind the SPA, not map tiles.
+
+**Keep:** public planning-document lists, map-layer catalogs, and any documented GeoServer WMS/WFS GetCapabilities on the same tenant.
+
+**Drop:** `/agate_` document-workflow screens that require login; the short “agat doesn’t work without JavaScript” stub as a catalog in itself; vendor marketing at geometa.ru.
+
+Set `software.id: geometa` only when the public HTML matches Agate (title «Портал ГИСОГД», `agat` JS stub, `/agate_` paths, or `portal-gisogd.` / `agate.` hosts). Other `gisogd.*` sites without those signals stay `custom`.
 
 ## DATUM GIS (`datumgis`) {#datumgis}
 
@@ -265,9 +299,17 @@ Same grain as [Trimble Locus IMS](#trimblelocus): public layer list or WMS, not 
 
 Harvest the public cadastre map-portal layer/license list if unauthenticated. If ArcGIS REST on the same estate is already harvested as `arcgisserver`, do not duplicate those services. Stop on login-only eGov modules.
 
+## Hajk (`hajk`) {#hajk}
+
+Swedish Hajk webGIS. Harvest the public layer/map list from the mapservice API documented in `appConfig.json` (`mapserviceBase`). Do not scrape map tiles. One harvest scope per public Hajk application. If GeoServer or ArcGIS REST on the same estate is already harvested as `geoserver` / `arcgisserver`, do not duplicate those services.
+
 ## Spatial Suite (`spatialsuite`) {#spatialsuite}
 
 Danish SpatialMap webkort. Harvest WMS/WFS GetCapabilities when public. Do not scrape webkort tiles. Prefer a city GeoServer/ArcGIS catalog on the same municipality if that is the dataset list.
+
+## KortInfo (`kortinfo`) {#kortinfo}
+
+NIRAS `drift.kortinfo.net/Map.aspx?Site=` tenant. Harvest the public layer list if unauthenticated. Do not scrape map tiles. One harvest scope per municipality `Site`, not per Map.aspx page. Distinct from `spatialsuite`.
 
 ## GEUSMAP (`geusmap`) {#geusmap}
 

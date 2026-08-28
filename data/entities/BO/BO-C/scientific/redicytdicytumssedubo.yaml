@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BO
+      name: Bolivia
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BO-C
+      name: Cochabamba
+description: Repositorio Digital de Ciencia y Tecnología (ReDiCyT) of Universidad
+  Mayor de San Simón. DSpace 7 catalog with a public Bases de datos entity type (SPSS/Excel
+  research databases and isolate collections) alongside maps, theses, and technical
+  reports.
+endpoints:
+- type: dspace
+  url: https://redicyt.dicyt.umss.edu.bo/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://redicyt.dicyt.umss.edu.bo/server/api/discover/search/objects
+  version: '7'
+id: redicytdicytumssedubo
+langs:
+- id: ES
+  name: Spanish
+link: https://redicyt.dicyt.umss.edu.bo/
+name: ReDiCyT UMSS
+owner:
+  link: https://www.umss.edu.bo
+  location:
+    country:
+      id: BO
+      name: Bolivia
+    level: 30
+    subregion:
+      id: BO-C
+      name: Cochabamba
+  name: Universidad Mayor de San Simón
+  type: Academy
+properties:
+  dataset_count_reported: 4
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+- university
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99992102

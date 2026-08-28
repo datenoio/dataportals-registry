@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
       name: Western Africa
 description: University of Lagos institutional repository of theses, publications, and research
   collections.
+endpoints:
+- type: oaipmh20
+  url: https://ir.unilag.edu.ng/oai/request?verb=Identify
+  version: '2.0'
 id: irunilagedung
 langs:
 - id: EN

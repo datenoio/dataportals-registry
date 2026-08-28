@@ -1,0 +1,61 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Public Elsevier Pure research information portal of Utrecht University.
+  Lists people, research units, outputs, and datasets.
+endpoints:
+- type: oaipmh20
+  url: https://research-portal.uu.nl/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://research-portal.uu.nl/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://research-portal.uu.nl/sitemap.xml
+id: researchportaluunl
+langs:
+- id: EN
+  name: English
+link: https://research-portal.uu.nl
+name: Utrecht University Research Portal
+owner:
+  link: https://www.uu.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: Utrecht University
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+  transferable_topics: true
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research data
+- publications
+- researcher profiles
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991447

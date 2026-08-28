@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-IB
+      name: Illes Balears [Islas Baleares]
+description: Institutional repository of the University of the Balearic Islands. It
+  collects, distributes and preserves digital materials related to the educational
+  and research mission of UIB, including scientific production and student works.
+endpoints:
+- type: dspace:objects
+  url: https://repositori.uib.cat/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://repositori.uib.cat/sitemap_index.xml
+id: repositoriuibcat
+langs:
+- id: ES
+  name: Spanish
+link: https://repositori.uib.cat
+name: Repositori institucional de la UIB
+owner:
+  link: https://www.uib.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-IB
+      name: Illes Balears [Islas Baleares]
+  name: Universitat de les Illes Balears
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- education
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990893

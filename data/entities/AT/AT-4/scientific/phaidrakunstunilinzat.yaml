@@ -1,0 +1,79 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: General research repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Institutional PHAIDRA repository of the University of Arts Linz. The
+  public search index includes about 1,530 objects, mostly theses and other PDF documents.
+endpoints:
+- type: oaipmh20
+  url: https://phaidra.kunstuni-linz.at/api/oai?verb=Identify
+  version: '2.0'
+- type: rest
+  url: https://phaidra.kunstuni-linz.at/api/search/select
+- type: openapi
+  url: https://phaidra.kunstuni-linz.at/api/openapi/json
+id: phaidrakunstunilinzat
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://phaidra.kunstuni-linz.at/
+name: PHAIDRA - Kunstuniversität Linz
+owner:
+  link: https://www.kunstuni-linz.at
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    subregion:
+      id: AT-4
+      name: Oberösterreich
+  name: Universität für künstlerische und industrielle Gestaltung Linz
+  type: Academy
+properties:
+  has_doi: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: phaidra
+  name: PHAIDRA
+status: active
+tags:
+- scientific
+- has_api
+- institutional repository
+- open access
+- theses
+- arts
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99991196

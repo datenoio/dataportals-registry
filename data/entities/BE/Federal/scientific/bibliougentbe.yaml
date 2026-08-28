@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- scientific publication
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Ghent University Academic Bibliography (Biblio) is the institutional
+  repository for scholarly publications and published research datasets of Ghent University
+  researchers. Dataset records are a dedicated publication type (researchData) with
+  public JSON and OAI-PMH access.
+endpoints:
+- type: oaipmh20
+  url: https://biblio.ugent.be/oai?verb=Identify
+  version: '2.0'
+id: bibliougentbe
+langs:
+- id: EN
+  name: English
+- id: NL
+  name: Dutch
+link: https://biblio.ugent.be
+name: Ghent University Academic Bibliography
+owner:
+  link: https://www.ugent.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+  name: Ghent University
+  type: Academy
+properties:
+  is_national: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: librecat
+  name: LibreCat
+status: active
+tags:
+- scientific
+- has_api
+- research data
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99991435

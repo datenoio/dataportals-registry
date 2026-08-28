@@ -9,7 +9,7 @@ Use `endpoints[]` from the registry when present ([apidetect.md](apidetect.md)).
 | Page | Use when |
 |------|----------|
 | This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, Pure, Converis, Omega-PSIR, Archipelago, RADAR, Yoda, Redivis, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, …) |
-| [Domain repositories](harvest-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, SciCat-adjacent stacks |
+| [Domain repositories](harvest-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, SciCat-adjacent stacks, CLLD, TalkBank |
 
 All `software.id` values: [software-index.md](software-index.md).
 
@@ -17,7 +17,7 @@ All `software.id` values: [software-index.md](software-index.md).
 
 | Class | `software.id` (typical) | Filter needed? |
 |-------|-------------------------|----------------|
-| Mixed IR / CRIS | `dspace`, `dspacecris`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `samvera`, `islandora`, `archipelago`, `opus`, `mycore`, `phaidra`, `weko3`, `pure`, `esploro`, `elsevierdigitalcommons`, `figshare`, `haplo`, `worktribe`, `omegapsir`, `converis`, `librecat`, `vufind` | **Yes** — publications dominate |
+| Mixed IR / CRIS | `dspace`, `dspacecris`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `samvera`, `islandora`, `archipelago`, `opus`, `mycore`, `phaidra`, `weko3`, `pure`, `esploro`, `elsevierdigitalcommons`, `figshare`, `haplo`, `worktribe`, `omegapsir`, `converis`, `librecat`, `vufind`, `divaportal` | **Yes** — publications dominate |
 | Dataset-native | `dataverse`, `radar`, `yoda`, `redivis`, `instdb`, `labkey`, `synapse`, `xnat`, `omero`, `kadi4mat`, `edal`, `nomad` on this page; IPT/THREDDS/Breedbase/ESGF/InterMine/cBioPortal and similar on [harvest-scientific-domain.md](harvest-scientific-domain.md) | Little or none — still skip files, occurrences, and login-only rows |
 
 ## OAI-PMH fallback (any IR)
@@ -200,6 +200,17 @@ GET https://host/api/oai?verb=Identify
 ```
 
 Add a type constraint once you see stored fields (often `cmodel`, `dc_type`, or `object_type`). Example patterns to try: `cmodel:*Dataset*`, `dc_type:dataset`. Drop image/book/thesis cmodels.
+
+## DiVA Portal (`divaportal`) {#divaportal}
+
+Mixed IR. Publications dominate. Prefer a research-data filter on smash search or OAI.
+
+```text
+GET https://host/smash/search.jsf
+GET https://www.diva-portal.org/smash/oai?verb=Identify
+```
+
+Keep records typed as research data / dataset. Drop articles, theses, and reports. One harvest scope per `{org}.diva-portal.org` tenant.
 
 ## WEKO3 (`weko3`) {#weko3}
 

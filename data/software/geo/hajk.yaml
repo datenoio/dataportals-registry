@@ -1,0 +1,62 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: hajk
+name: Hajk
+website: https://hajkmap.github.io/Hajk/
+description: Hajk is an open-source React, Material UI, and OpenLayers web GIS
+  developed in Sweden. Municipal and agency public maps load appConfig.json with
+  mapserviceBase pointing at /api/v1, /api/v2, or /mapservice. Distinct from
+  Spatial Suite (spatialsuite) and GeoServer backends on the same estate.
+owner:
+  name: Hajk community
+  location:
+    country:
+      id: SE
+      name: Sweden
+logo_url: https://hajkmap.github.io/Hajk/favicon.ico
+documentation_url: https://github.com/hajkmap/Hajk/wiki
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+repository_url: https://github.com/hajkmap/Hajk
+export_formats:
+- GeoJSON
+- JSON
+capabilities:
+- REST API
+- Map viewer
+- Layer catalog
+changelog_url: https://github.com/hajkmap/Hajk/releases
+last_updated: '2026-08-28T00:00:00Z'

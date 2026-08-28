@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Institutional repository of the National Technical University of Athens.
+  It collects dissertations, postgraduate theses, doctoral theses, faculty publications,
+  and digitized material from the NTUA Historical Library.
+id: dspacelibntuagr
+langs:
+- id: EL
+  name: Greek
+- id: EN
+  name: English
+link: https://dspace.lib.ntua.gr
+name: DSpace@NTUA
+owner:
+  link: https://www.ntua.gr/
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: National Technical University of Athens
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+endpoints:
+- type: oaipmh20
+  url: https://dspace.lib.ntua.gr/oai/request?verb=Identify
+  version: '2.0'
+tags:
+- scientific
+- research data
+- academic
+- education
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990832

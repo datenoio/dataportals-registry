@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Olympias is the institutional repository of the University of Ioannina.
+  It collects scientific articles, master’s and doctoral theses, book chapters, and
+  other research outputs of the university, together with the Ipiromnimon digital
+  library collections.
+endpoints:
+- type: oaipmh20
+  url: https://olympias.lib.uoi.gr/oai/request?verb=Identify
+  version: '2.0'
+id: olympiaslibuoigr
+langs:
+- id: EL
+  name: Greek
+- id: EN
+  name: English
+link: https://olympias.lib.uoi.gr
+name: Olympias Institutional Repository
+owner:
+  link: https://www.uoi.gr/
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: University of Ioannina
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- academic
+- education
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990827

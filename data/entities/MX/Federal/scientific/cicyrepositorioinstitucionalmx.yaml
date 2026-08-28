@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Institutional DSpace repository of CICY (Centro de Investigación Científica
+  de Yucatán). OAI-PMH exposes a Conjuntos de Datos / Conjunto de Datos de Investigación
+  collection with research datasets alongside theses and publications.
+endpoints:
+- type: oaipmh20
+  url: https://cicy.repositorioinstitucional.mx/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://cicy.repositorioinstitucional.mx/jspui/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://cicy.repositorioinstitucional.mx/jspui/feed/atom_1.0/site
+  version: '1.0'
+id: cicyrepositorioinstitucionalmx
+langs:
+- id: ES
+  name: Spanish
+link: https://cicy.repositorioinstitucional.mx/jspui/
+name: Repositorio Institucional CICY
+owner:
+  link: https://www.cicy.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+  name: Centro de Investigación Científica de Yucatán (CICY)
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990923

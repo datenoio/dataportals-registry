@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Hovedstaden
 description: Gate 21 public MapCentia Vidi geoportal for the Greater Copenhagen climate
   partnership.
+endpoints:
+- type: rest
+  url: https://gate21.vidi.gc2.io/api/v2/
 id: gate21vidigc2io
 langs:
 - id: DA

@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: Western University's Open Repository is the institutional repository
+  hosted on Scholaris (DSpace).
+endpoints:
+- type: dspace
+  url: https://uwo.scholaris.ca/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://uwo.scholaris.ca/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://uwo.scholaris.ca/sitemap_index.xml
+id: uwoscholarisca
+langs:
+- id: EN
+  name: English
+link: https://uwo.scholaris.ca
+name: Western University's Open Repository
+owner:
+  link: https://www.uwo.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: Western University
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- datasets
+- institutional repository
+- dspace
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991701

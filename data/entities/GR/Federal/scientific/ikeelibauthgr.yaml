@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: IKEE is the Aristotle University of Thessaloniki institutional repository.
+  It holds publications of AUTH faculty members and other research outputs of the
+  university.
+endpoints:
+- type: inveniordmapi:records
+  url: https://ikee.lib.auth.gr/api/records?size=1
+id: ikeelibauthgr
+langs:
+- id: EL
+  name: Greek
+- id: EN
+  name: English
+link: https://ikee.lib.auth.gr
+name: IKEE Aristotle University of Thessaloniki Institutional Repository
+owner:
+  link: https://www.auth.gr/
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: Aristotle University of Thessaloniki
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: invenio
+  name: InvenioRDM
+status: active
+tags:
+- scientific
+- research data
+- academic
+- education
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99990831

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Syddanmark
 description: Middelfart Municipality public MapCentia Vidi geoportal with municipal
   map layers.
+endpoints:
+- type: rest
+  url: https://middelfart.vidi.gc2.io/api/v2/
 id: middelfartvidigc2io
 langs:
 - id: DA

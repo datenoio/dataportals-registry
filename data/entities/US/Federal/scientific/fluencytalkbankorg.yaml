@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
 description: FluencyBank is a shared database for the study of fluency development.
   Participants include typically-developing monolingual and bilingual children, children
   and adults who stutter (C/AWS) or who clutter (C/AWC), and second language learners.
+endpoints:
+- type: index
+  url: https://fluency.talkbank.org/
 id: fluencytalkbankorg
 identifiers:
 - id: openaire
@@ -36,8 +39,8 @@ owner:
   name: University of Maryland, Baltimore County
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: talkbank
+  name: TalkBank
 status: active
 tags:
 - scientific

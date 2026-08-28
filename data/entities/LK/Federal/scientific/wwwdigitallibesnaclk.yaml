@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: EUSL e-Repository. Institutional repository operated by Eastern University, Sri
+  Lanka.
+endpoints:
+- type: oaipmh20
+  url: http://www.digital.lib.esn.ac.lk/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: http://www.digital.lib.esn.ac.lk/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: http://www.digital.lib.esn.ac.lk/feed/atom_1.0/site
+  version: '1.0'
+id: wwwdigitallibesnaclk
+langs:
+- id: EN
+  name: English
+link: http://www.digital.lib.esn.ac.lk/
+name: EUSL e-Repository
+owner:
+  link: https://www.esn.ac.lk/
+  location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 20
+  name: Eastern University, Sri Lanka
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- dspace
+- Sri Lanka
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00037591
+properties:
+  is_national: false

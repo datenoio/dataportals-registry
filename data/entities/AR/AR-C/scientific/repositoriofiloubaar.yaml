@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion: &id001
+      id: AR-C
+      name: Ciudad Autónoma de Buenos Aires
+description: FILO:Digital is the DSpace institutional repository of the Facultad de
+  Filosofía y Letras, Universidad de Buenos Aires. It includes Dataset-typed records
+  among theses and publications.
+endpoints:
+- type: dspace
+  url: https://repositorio.filo.uba.ar/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositorio.filo.uba.ar/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://repositorio.filo.uba.ar/sitemap_index.xml
+id: repositoriofiloubaar
+langs:
+- id: ES
+  name: Spanish
+link: https://repositorio.filo.uba.ar/
+name: FILO:Digital
+owner:
+  link: https://www.filo.uba.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion: *id001
+  name: Facultad de Filosofía y Letras, Universidad de Buenos Aires
+  type: Academy
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- dspace
+- university
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99992091

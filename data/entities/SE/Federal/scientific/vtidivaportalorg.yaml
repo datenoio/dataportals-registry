@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: DiVA institutional repository of the Swedish National Road and Transport
+  Research Institute (VTI), with a public search over publications and research datasets.
+endpoints:
+- type: oaipmh20
+  url: https://vti.diva-portal.org/smash/oai?verb=Identify
+  version: '2.0'
+id: vtidivaportalorg
+langs:
+- id: SV
+  name: Swedish
+- id: EN
+  name: English
+link: https://vti.diva-portal.org
+name: VTI DiVA
+owner:
+  link: https://www.vti.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Swedish National Road and Transport Research Institute
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: divaportal
+  name: DiVA Portal
+status: active
+tags:
+- scientific
+- research data
+- publications
+- DiVA
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99991289

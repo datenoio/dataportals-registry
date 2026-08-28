@@ -1,0 +1,63 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Microdata catalog
+content_types:
+- microdata
+coverage:
+- location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: NADA/ANDA catalog of Peru's Ministry of Education. Publishes documentation
+  and microdata for the school census series (2000–2016) and the 2016 DRE/UGEL census.
+endpoints:
+- type: nada:csvexport
+  url: https://sistemas02.minedu.gob.pe/anda/index.php/catalog/export/csv?ps=5000&collection[]
+id: sistemas02minedugobpe
+langs:
+- id: ES
+  name: Spanish
+link: https://sistemas02.minedu.gob.pe/anda/index.php/catalog
+name: Archivo de Datos y Metadatos Estadísticos (ANDA) del Ministerio de Educación
+owner:
+  link: https://www.gob.pe/minedu
+  location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+  name: Ministerio de Educación
+  type: Central government
+properties:
+  dataset_count_reported: 17
+  has_doi: false
+  is_national: false
+software:
+  id: nada
+  name: NADA
+status: active
+tags:
+- has_api
+- microdata
+- government
+- census
+- education
+- survey
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99992085
