@@ -79,7 +79,9 @@ def test_json_schema_has_descriptions_for_top_level_properties():
 
 def test_sample_catalog_validates_against_json_schema():
     jsonschema = pytest.importorskip("jsonschema")
-    sample_path = REPO_ROOT / "data" / "entities" / "US" / "US-DC" / "opendata" / "catalogdatagov.yaml"
+    sample_path = (
+        REPO_ROOT / "data" / "entities" / "US" / "Federal" / "opendata" / "catalogdatagov.yaml"
+    )
     with sample_path.open("r", encoding="utf-8") as handle:
         record = yaml.safe_load(handle)
     schema = _load_json(JSON_SCHEMA_PATH)
