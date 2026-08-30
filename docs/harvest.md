@@ -20,7 +20,7 @@ Coding agents: [agents/harvest.md](agents/harvest.md). Production harvesting for
 | [Domain scientific repositories](harvest-scientific-domain.md) | IPT, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal |
 | [Open data portals](harvest-opendata.md) | CKAN, OpenDataSoft, Socrata, ResourceContracts, RDF Online Repository, Guangxi, ODWeb — packages vs resources vs contracts |
 | [Geoportals](harvest-geoportals.md) | GeoNetwork CSW, GeoNode, ArcGIS, STAC, OGC API, G3W-SUITE, CubeWerx, M.App Enterprise, mviewer, Isogeo, Geocortex, QGIS Server — layers vs services vs tiles |
-| [Indicators and microdata](harvest-indicators.md) | PxWeb / PxStat tables, SDMX dataflows, OpenSDG / Goal Tracker, IMF NSDP, NADA studies, DHIS2, TabNet, FENIX, SparkMap, IPUMS |
+| [Indicators and microdata](harvest-indicators.md) | PxWeb / PxStat tables, SDMX dataflows, OpenSDG / Goal Tracker, IMF NSDP, NADA studies, DHIS2, TabNet, FENIX, SparkMap, eDatos, Cancer-Rates.info, HCI, Virtual LMI, IPUMS |
 | [Metadata catalogs](harvest-metadata.md) | FAIR Data Point DCAT, Aristotle MDR, Fusion Registry structure |
 | [Search, ML, API, marketplaces](harvest-other.md) | Aggregators, OpenAIRE, OpenML, API directories, marketplaces, `custom` |
 | [Protocols](harvest-protocols.md) | OAI-PMH, CSW, DCAT, STAC, SDMX, OGC, ArcGIS REST — grain that is shared across products |
@@ -54,7 +54,7 @@ WHERE catalog_type = 'Scientific data repository'
   AND software.id IN (
     'dspace', 'dspacecris', 'invenio', 'inveniordm', 'eprints',
     'hyrax', 'pure', 'esploro', 'opus', 'elsevierdigitalcommons',
-    'weko3', 'phaidra', 'figshare', 'haplo', 'worktribe', 'mycore',
+    'weko3', 'dabar', 'opensciencesi', 'phaidra', 'figshare', 'haplo', 'worktribe', 'mycore',
     'omegapsir', 'converis', 'ipt', 'thredds', 'erddap', 'radar',
     'yoda', 'redivis', 'symbiota', 'breedbase', 'tripal', 'veupathdb',
     'massbank', 'iochembd', 'esgf', 'labkey', 'synapse', 'xnat',

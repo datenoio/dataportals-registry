@@ -17,7 +17,7 @@ All `software.id` values: [software-index.md](software-index.md).
 
 | Class | `software.id` (typical) | Filter needed? |
 |-------|-------------------------|----------------|
-| Mixed IR / CRIS | `dspace`, `dspacecris`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `samvera`, `islandora`, `archipelago`, `opus`, `mycore`, `phaidra`, `weko3`, `pure`, `esploro`, `elsevierdigitalcommons`, `figshare`, `haplo`, `worktribe`, `omegapsir`, `converis`, `librecat`, `vufind`, `divaportal` | **Yes** — publications dominate |
+| Mixed IR / CRIS | `dspace`, `dspacecris`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `samvera`, `islandora`, `archipelago`, `opus`, `mycore`, `phaidra`, `weko3`, `dabar`, `opensciencesi`, `pure`, `esploro`, `elsevierdigitalcommons`, `figshare`, `haplo`, `worktribe`, `omegapsir`, `converis`, `librecat`, `vufind`, `divaportal` | **Yes** — publications dominate |
 | Dataset-native | `dataverse`, `radar`, `yoda`, `redivis`, `instdb`, `labkey`, `synapse`, `xnat`, `omero`, `kadi4mat`, `edal`, `nomad` on this page; IPT/THREDDS/Breedbase/ESGF/InterMine/cBioPortal and similar on [harvest-scientific-domain.md](harvest-scientific-domain.md) | Little or none — still skip files, occurrences, and login-only rows |
 
 ## OAI-PMH fallback (any IR)
@@ -315,6 +315,26 @@ CaosDB REST (`/api/v1/`). Query Record types that are datasets/collections. Drop
 ## Fedora (`fedora`) {#fedora}
 
 Use Fedora LDP `/fcrepo/rest` (or `/rest`) **only** when Fedora is the public catalog. Prefer Hyrax/Islandora/PHAIDRA/Archipelago recipes on the same host.
+
+## DABAR (`dabar`) {#dabar}
+
+Mixed IR (theses, publications, and some research data) on SRCE’s national stack.
+
+1. `GET https://host/oai/?verb=Identify` (hub and some tenants use `/oai/?verb=Identify`; others `/oai?verb=Identify`).
+2. `verb=ListSets` — keep setSpecs that mean research data / datasets. Ignore the whole-repository set.
+3. If no dataset set exists, harvest `oai_dc` and keep records whose `dc:type` matches the [keep list](harvest.md#keep-vs-drop-shared-vocabulary).
+
+Do not crawl `dabar.srce.hr/search?ns=` as a separate catalog. Prefer the institutional hostname already in the registry. Drop ETDs and journal articles unless typed as datasets.
+
+## OpenScience.si repository (`opensciencesi`) {#opensciencesi}
+
+Mixed IR. OAI is usually:
+
+```text
+GET https://host/oai/oai2.php?verb=Identify
+```
+
+Some tenants use `/oai/?verb=Identify`. `ListSets` then keep research-data / dataset sets. Otherwise filter `oai_dc` with the keep list. Skip the national aggregator `www.openscience.si` for dataset harvest — use the university tenants.
 
 ## Islandora (`islandora`) {#islandora}
 

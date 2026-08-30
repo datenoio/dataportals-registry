@@ -146,7 +146,7 @@ Consortis Geospatial municipal map portal. SPA titled Evrymap; MapServer WMS/WFS
 
 ## GeoMapFish (`geomapfish`) {#geomapfish}
 
-Open-source WebGIS (c2cgeoportal + ngeo). Common in Swiss cantons and other European public geoportals. Site: [geomapfish.org](https://geomapfish.org).
+Open-source WebGIS (c2cgeoportal + ngeo). Common in Swiss cantons and other European public geoportals. Site: [geomapfish.org](https://geomapfish.org). Distinct from TYDAC MAP+ (`mapplus`).
 
 **Signals:** `ngeo` / `gmf-` CSS classes; `/themes` JSON; WMS/WMTS theme tree; `c2cgeoportal` in HTML or JS bundles.
 
@@ -428,6 +428,120 @@ Open-source Swedish web GIS (React, Material UI, OpenLayers). Site: [hajkmap.git
 | Google | `inurl:appConfig.json Hajk` |
 | Censys | `web.endpoints.http.html_title: "Hajk - open source webGIS"` |
 
+## ISY Map (`isymap`) {#isymap}
+
+Norconsult Digital municipal web GIS (ISY Map, ISY Map Server, GeoInnsyn). Product: [norconsult.digital/produkter/isy-map](https://norconsult.digital/produkter/isy-map/). Distinct from Avinet Adaptive (`avinet`) and from ArcGIS Hub Nordlandsatlas.
+
+**Signals:** title ISYMap or ISY Map Server; path `/geoinnsyn/` or `/webkart/`; host `*.isy.no`; WinMap.ico on Map Server.
+
+**Confirm:** GET the public viewer. One record per municipality or inter-municipal application, not per map project query string. Skip staff-only WinMap.
+
+| Tool | Query |
+|------|-------|
+| Google | `"ISY Map" OR ISYMap OR GeoInnsyn (kart OR kommune) site:.no` |
+| Google | `inurl:/geoinnsyn/ OR inurl:/webkart/ ISY` |
+| Censys | `web.names: "isy.no"` |
+| crt.sh | `%.isy.no` |
+
+## Avinet Adaptive (`avinet`) {#avinet}
+
+Avinet Adaptive / Webatlas thematic map platform. Vendor: [avinet.no](https://www.avinet.no/). Distinct from ISY Map (`isymap`).
+
+**Signals:** ExtJS 4.2.2 plus OpenLayers 2.13.1; scripts from `a3.avinet.no`; HTML “adaptive”; WMS/WFS `wms.ashx` / `wfs.ashx`. Norwegian county “atlas” and temakart sites.
+
+**Confirm:** GET the atlas home and match ExtJS/OpenLayers Adaptive. One record per public atlas. Do **not** set `avinet` on nordlandsatlas.nfk.no (that is `arcgishub`).
+
+| Tool | Query |
+|------|-------|
+| Google | `"Developed by Avinet" OR a3.avinet.no (atlas OR temakart) site:.no` |
+| Google | `inurl:wms.ashx fylkesatlas OR nordatlas` |
+| Censys | `web.names: "avinet.no"` |
+
+## MAP+ (`mapplus`) {#mapplus}
+
+TYDAC AG WebGIS (sold in Germany as GeoAS Web). Product: [tydac.ch/en/mapplus](https://www.tydac.ch/en/mapplus/). Distinct from GeoMapFish (`geomapfish`) and from mf-geoadmin3 (`mfgeoadmin3`).
+
+**Signals:** path `/mapplus/` or `/mapplus-lib/`; tydac in HTML or script hosts; OpenLayers city-map UI (Chur, St. Gallen, Biel, geoJura bernois).
+
+**Confirm:** GET the public Stadtplan / map UI and match `mapplus-lib` or tydac. One record per municipality or regional conference viewer. Do **not** set `mapplus` from a Swiss `map.` hostname alone (Winterthur, Uri, Schaffhausen, and map.geo.admin.ch are other stacks). Bern `map.bern.ch/arcgis/rest/services` stays `arcgisserver`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"mapplus-lib" OR inurl:/mapplus/ (stadtplan OR GIS) site:.ch` |
+| Google | `"MAP+" OR tydac (WebGIS OR Stadtplan) site:.ch` |
+| Censys | `web.endpoints.http.body: "mapplus-lib"` |
+
+## EnviMAP (`envimap`) {#envimap}
+
+Envirosense Hungary municipal zoning-plan GIS (GeoForte viewer also hosted on intermap.hu). Site: [envimap.hu](https://envimap.hu/). Distinct from Autodesk MapGuide and from old MapFish.
+
+**Signals:** host `*.envimap.hu`; title EnviMAP; path `/hu/Admin/GeoForte/GeoEdit` on envimap.hu or intermap.hu.
+
+**Confirm:** GET the public zoning viewer. One record per municipality tenant. Do **not** set `envimap` from a Hungarian `/mapguide/` (`mapguide`) or ExtJS MapFish terinfo site.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:envimap.hu (szabterv OR GeoForte OR HÉSZ)` |
+| Google | `inurl:/Admin/GeoForte/GeoEdit` |
+| Censys | `web.names: "envimap.hu"` |
+| crt.sh | `%.envimap.hu` |
+
+## PISO (`piso`) {#piso}
+
+Realis municipal GIS for Slovenian občine. Hub: [geoprostor.net](https://www.geoprostor.net). Distinct from Kaliopa iObčina (`iobcina`).
+
+**Signals:** host `geoprostor.net` or `piso.si`; title PISO / Prostorski informacijski sistem občin; path `/PisoPortal/`.
+
+**Confirm:** GET the public hub. One registry record for the national hub (municipality selector), not one row per občina unless that municipality publishes a separate public catalog UI.
+
+| Tool | Query |
+|------|-------|
+| Google | `"PISO" (občin OR geoprostor) site:.si` |
+| Google | `site:geoprostor.net PisoPortal` |
+| Censys | `web.names: "geoprostor.net"` |
+
+## GDi Visios (`gdivisios`) {#gdivisios}
+
+GDi Ensemble (formerly LOCALIS) Web GIS viewer. Product: [gdi.net Ensemble Smart Portal](https://gdi.net/ensemble/ensemble-smart-portal/). Distinct from ArcGIS Hub/Server on other `gdi.net` hosts.
+
+**Signals:** path `/visios/` or `/Visios/`; HTML title `GDi Visios`; scripts `VisiosAPI/gdi_js`; hosts `ensmartportal.gdi.net` or `localismarket.gdi.net`.
+
+**Confirm:** GET the public viewer (not a CMS landing page that only mentions GDi). One record per municipality or county application. Do **not** set `gdivisios` from a GDi marketing page or from `arcgis-azure.gdi.net` REST. Skip GDi marketplace demo tenants unless that URL is the official public catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `"GDi Visios" OR inurl:/visios/ (geoportal OR preglednik) site:.hr` |
+| Google | `inurl:/visios/ site:gdi.net` |
+| Censys | `web.endpoints.http.body: "GDi Visios"` |
+
+## MapGuide (`mapguide`) {#mapguide}
+
+Autodesk MapGuide Open Source / MapGuide Enterprise. Hungarian CityScape E-GOV city viewers wrap MapGuide. Distinct from EnviMAP (`envimap`) and from old ExtJS MapFish terinfo sites.
+
+**Signals:** path `/mapguide/` or `/mapguide2010/`; `mapviewerphp/ajaxviewer.php`; Fusion `fusionSF.js`; CityScape E-GOV / Arkance Twigis branding.
+
+**Confirm:** GET the public `internet.php` or MapGuide viewer. One record per municipality. Do **not** set `mapguide` from a Hungarian `/Admin/GeoForte/` EnviMAP tenant.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/mapguide/ internet.php site:.hu` |
+| Google | `"CityScape E-GOV" OR mapviewerphp MapGuide` |
+| Censys | `web.endpoints.http.body: "mapviewerphp/ajaxviewer.php"` |
+
+## SeaSketch (`seasketch`) {#seasketch}
+
+UCSB/NCEAS marine spatial planning SaaS. Product: [seasketch.org](https://www.seasketch.org/). Distinct from ArcGIS REST on `data.seasketch.org` (`arcgisserver`).
+
+**Signals:** host `www.seasketch.org`; path `/{project}/app`; HTML title SeaSketch.
+
+**Confirm:** GET the project `/app` URL (overlay layers public without sign-in counts). One record per public project app, not the marketing homepage. Do **not** set `seasketch` from `data.seasketch.org/arcgis/rest/services`.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:seasketch.org/app` |
+| Google | `"SeaSketch" "marine spatial" OR MSP` |
+| Censys | `web.names: "seasketch.org"` |
+
 ## Spatial Suite (`spatialsuite`) {#spatialsuite}
 
 Sweco web GIS; public client is SpatialMap. Vendor: [Sweco Spatial Suite](https://www.sweco.dk/ydelser/digitale-loesninger/spatial-suite/). Distinct from NIRAS KortInfo.
@@ -473,18 +587,33 @@ Geological Survey of Denmark and Greenland map application. Home: [data.geus.dk/
 
 ## GISApp (`gisapp`) {#gisapp}
 
-Fida Solutions / Urbanova hosted municipal GIS. Tenants: `{city}.gisapp.ro`. Distinct from Kaliopa iObčina (`iobcina`) and from EQWC.
+Fida Solutions / Urbanova municipal GIS. Tenants: `{city}.gisapp.ro` and city-owned hosts. Distinct from Kaliopa iObčina (`iobcina`) and from EQWC.
 
-**Signals:** host `*.gisapp.ro`; urbanism certificate / PortalPublic UI; Romanian municipal GIS.
+**Signals:** host `*.gisapp.ro`, **or** HTML title PortalPublic plus `logo_fida.png` / Fida branding on `gis.primaria*.ro` and similar city domains; urbanism certificate UI.
 
-**Confirm:** GET the public city tenant. One record per municipality. ArcGIS REST on `webadaptor.gisapp.ro` stays `arcgisserver`.
+**Confirm:** GET the public city tenant and match PortalPublic / Fida. One record per municipality. ArcGIS REST on `webadaptor.gisapp.ro` stays `arcgisserver`. Do **not** set `gisapp` from a `gis.` hostname alone.
 
 | Tool | Query |
 |------|-------|
 | Google | `site:gisapp.ro` |
-| Google | `"gisapp.ro" (geoportal OR urbanism)` |
+| Google | `"PortalPublic" OR "logo_fida" (GIS OR urbanism) site:.ro` |
 | Censys | `web.names: "gisapp.ro"` |
 | crt.sh | `%.gisapp.ro` |
+
+## SmartMap (`smartmap`) {#smartmap}
+
+Hosted Kazakh district investment geoportals. Tenants share `{district}.smartmap.kz`. Distinct from Geonomics (`geonomics`) akimat regional portals.
+
+**Signals:** hostname `*.smartmap.kz`; Leaflet plus Google Maps; `stylse.css`; district/akimat investment layers.
+
+**Confirm:** GET the tenant URL and match the Leaflet/Google Maps bundle. One record per district tenant. Skip unrelated SMARTMap finance products. Do **not** set `geonomics` from a `/map/` path on other KZ hosts.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:smartmap.kz` |
+| Google | `"smartmap.kz" (геопортал OR инвестиц)` |
+| Censys | `web.names: "smartmap.kz"` |
+| crt.sh | `%.smartmap.kz` |
 
 ## iObčina (`iobcina`) {#iobcina}
 
@@ -597,7 +726,16 @@ Search the product title with the country TLD. One record per public catalog UI.
 | `spatialsuite` | Sweco SpatialMap webkort | `"SpatialMap" webkort site:.dk` |
 | `kortinfo` | NIRAS `drift.kortinfo.net/Map.aspx` | `site:drift.kortinfo.net Map.aspx` |
 | `geusmap` | `/geusmap/?mapname=` | `inurl:geusmap mapname` |
-| `gisapp` | `{city}.gisapp.ro` municipal GIS | `site:gisapp.ro` |
+| `gisapp` | see above | |
+| `smartmap` | `{district}.smartmap.kz` Leaflet | `site:smartmap.kz` |
+| `isymap` | ISY Map / GeoInnsyn `/geoinnsyn/` | `"ISY Map" OR GeoInnsyn site:.no` |
+| `avinet` | Adaptive ExtJS atlas, `a3.avinet.no` | `"Developed by Avinet" atlas site:.no` |
+| `mapplus` | `/mapplus-lib/` TYDAC Stadtplan | `inurl:/mapplus/ OR mapplus-lib site:.ch` |
+| `envimap` | `*.envimap.hu` / GeoForte | `site:envimap.hu GeoForte` |
+| `piso` | geoprostor.net PisoPortal | `site:geoprostor.net PISO` |
+| `gdivisios` | `/visios/` GDi Ensemble viewer | `"GDi Visios" OR inurl:/visios/` |
+| `mapguide` | `/mapguide/` CityScape / ajaxviewer | `inurl:/mapguide/ internet.php` |
+| `seasketch` | `seasketch.org/{project}/app` | `site:seasketch.org/app` |
 | `iobcina` | Kaliopa `/gisapp/Default.aspx?a=` | `inurl:/gisapp/Default.aspx` |
 | `ishare` | Astun iShare / `mymaps.aspx` | `"Powered by iShare" site:.gov.uk` |
 | `cadcorp` | Cadcorp SIS WebMap / GeognoSIS | `"SIS WebMap" OR GeognoSIS Cadcorp` |

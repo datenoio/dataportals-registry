@@ -20,6 +20,10 @@ Overview: [harvest.md](harvest.md). Finding catalogs: [discovery-indicators.md](
 | IPUMS **sample** / collection metadata | Completed extract files and variable pages as catalogs |
 | Knoema **dataset** on a portal | Individual time-series points and knoema.com global search hits |
 | SparkMap **map layer** or assessment report | Saved user maps, login-only CHNA builder sessions, sparkmap.org marketing pages |
+| eDatos **indicator / cube** (JSON-stat) | Institute CMS home; Open SDG sites on the same office |
+| Cancer-Rates.info **query UI** (one per registry path) | Login-walled tenants; KCR org home when the query UI is registered |
+| HCI **indicator dashboard** (one per community site) | Conduent marketing; SparkMap Map Rooms |
+| Virtual LMI **LMI home** (one per state tenant) | Generic state LMI pages without `/vosnet/` or virtuallmi.com |
 | Goal Tracker **indicator / goal** | About / marketing HTML |
 | IMF NSDP **SDMX category / series** linked from the country page | NSO homepage, WordPress/Knoema wrappers, the DSBB directory |
 | Istat Data Browser **dataflow** (hub catalog item) | Hub chrome, news, dashboards, and the paired SDMX-RI structure-only resources |
@@ -109,6 +113,34 @@ Filter exports on `software.id = 'sparkmap'`. One harvest scope per public hub (
 There is no anonymous layer-list API on the public Map Room. Harvest the hub’s public **Map Room data list** (layer catalog page or downloadable layer list) and public **community needs assessment / indicator reports**. Grain is the map layer or report, not a choropleth screenshot.
 
 **Drop** saved user maps, login-only assessment builder sessions, SparkMap marketing and pricing pages, and paid API extracts unless the user asked for those files. Stop on `401`/`403`.
+
+## eDatos (`edatos`) {#edatos}
+
+Filter exports on `software.id = 'edatos'`. One harvest scope per public hub.
+
+```text
+GET https://host/indicators/v1.0/indicators
+```
+
+Keep **indicators** and **indicator systems** from that JSON-stat API (or the public ODS catalog listing). Drop institute CMS chrome and each time-series observation cube. ISTAC Open SDG is a different catalog (`opensdg`).
+
+## Cancer-Rates.info (`cancerrates`) {#cancerrates}
+
+Filter exports on `software.id = 'cancerrates'`. There is no anonymous REST list API.
+
+Keep the public **query UI** as the catalog (county incidence/mortality maps and tables). Grain for dataset harvest is a documented query (site × geography × year), not every map tile. Drop login-walled tenant paths and the KCR marketing/support pages.
+
+## Conduent Healthy Communities Institute (`hci`) {#hci}
+
+Filter exports on `software.id = 'hci'`. One harvest scope per public community site.
+
+Keep public **indicator** pages (and CSV downloads linked from indicator detail). Drop CHNA PDF report libraries as if they were the catalog, login-only assessment builders, and SparkMap sites.
+
+## Virtual LMI (`virtuallmi`) {#virtuallmi}
+
+Filter exports on `software.id = 'virtuallmi'`. One harvest scope per state tenant.
+
+Keep public **occupation / industry / area profile** tables the VLMI UI lists. Drop job-board postings, case-management VOS modules, and state LMI sites that are not VLMI. Stop on `401`/`403`.
 
 ## SDMX-RI (`sdmxri`) {#sdmxri}
 

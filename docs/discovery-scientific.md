@@ -6,7 +6,7 @@ Do not add dataset-level records (a single Dataverse dataset, a Zenodo depositio
 
 | Page | Use when |
 |------|----------|
-| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, OPUS, RADAR, Yoda, Hyrax, Figshare, Redivis, Pure, Converis, Omega-PSIR, Archipelago, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, DiVA Portal, …) |
+| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, OPUS, RADAR, Yoda, Hyrax, Figshare, Redivis, Pure, Converis, Omega-PSIR, Archipelago, DABAR, OpenScience.si, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, DiVA Portal, …) |
 | [Domain repositories](discovery-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat, CLLD |
 
 All `software.id` values: [software-index.md](software-index.md). Harvest filters: [harvest-scientific.md](harvest-scientific.md), [harvest-scientific-domain.md](harvest-scientific-domain.md).
@@ -305,13 +305,42 @@ FairStack institutional research-data repository (CAS / CNIC). Site: [fairstack.
 | Google | `"InstDB" OR "FairStack" (数据仓储 OR repository) -site:fairstack.cn` |
 | Censys | `web.endpoints.http.body: "InstDB"` |
 
+## DABAR (`dabar`) {#dabar}
+
+Croatia’s national multi-tenant IR, operated by SRCE. Site: [dabar.srce.hr](https://dabar.srce.hr). Tenant list (bot-blocked from some clients): [browse/repository](https://dabar.srce.hr/browse/repository). Production moved off Drupal+Islandora to Laravel + Fedora in November 2025.
+
+**Signals:** hostname `repozitorij.{org}.hr` or `*.unizg.hr` / `*.unist.hr` / `*.unizd.hr` faculty repos; national ETD hosts `zir.nsk.hr` and `dr.nsk.hr`; hub `dabar.srce.hr`; HTML title “Dabar” / “Repozitorij”; OAI-PMH `/oai/?verb=Identify` or `/oai?verb=Identify`.
+
+**Confirm:** GET the public repository home (not a single thesis). One catalog per **institutional hostname**. Do not add each `?ns=` namespace on the hub as its own catalog — those are facets of `dabar.srce.hr`. Do not label tenants `islandora`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Digitalni akademski arhivi" OR DABAR (repozitorij OR repository) site:.hr -site:github.com` |
+| Google | `inurl:repozitorij (unizg.hr OR srce.hr OR nsk.hr)` |
+| Censys | `web.endpoints.http.body: "Dabar"` |
+| Censys | `web.names: "dabar.srce.hr"` |
+
+## OpenScience.si repository (`opensciencesi`) {#opensciencesi}
+
+Shared Slovenian IR stack (University of Maribor FERI) used by DKUM, RUL, RUP, RUNG, ReVIS, and DiRROS. National portal: [openscience.si](https://www.openscience.si). Not DSpace, EPrints, or Fedora.
+
+**Signals:** path `/oai/oai2.php`; `/info/index.php/eng/policies`; “OpenScience.si” / DKUM / DiRROS chrome; hosts `dk.um.si`, `repozitorij.uni-lj.si`, `repozitorij.upr.si`, `repozitorij.ung.si`, `*.openscience.si`.
+
+**Confirm:** GET the public repository home and `/oai/oai2.php?verb=Identify` (some tenants use `/oai/?verb=Identify`). One catalog per university or research-organisation tenant. Keep `www.openscience.si` as the national **aggregator** (`custom`), not a seventh install of the IR software.
+
+| Tool | Query |
+|------|-------|
+| Google | `"OpenScience.si" (repozitorij OR repository OR DiRROS OR DKUM) site:.si` |
+| Google | `inurl:/oai/oai2.php (dk.um.si OR repozitorij)` |
+| Censys | `web.endpoints.http.body: "OpenScience.si"` |
+
 ## WEKO3 (`weko3`) {#weko3}
 
 NII / RCOS open-source institutional repository. Docs: [weko3.readthedocs.io](https://weko3.readthedocs.io).
 
-**Signals:** WEKO3 / WEKO branding; Invenio-like item types; `/api` search; OAI-PMH.
+**Signals:** WEKO3 / WEKO branding; Invenio-like item types; `/api/records/` search; JAIRO Cloud hosts `*.repo.nii.ac.jp` and `*.ecats-library.jp`; older WEKO paths `/repo/{name}/all/` and `/da/`.
 
-**Confirm:** GET the repository home and `/oai?verb=Identify` when exposed. Register the IR root.
+**Confirm:** GET the repository home. Prefer `/api/records/` on WEKO3/JAIRO Cloud. `/oai?verb=Identify` is often missing. Register the IR root, not a single item.
 
 | Tool | Query |
 |------|-------|
@@ -550,10 +579,23 @@ On a **named** university or lab host:
 
 Google: ``"research data repository" {university}``, ``"repositorio de datos" {universidad}``, ``Forschungsdaten {hochschule}``. re3data.org advanced search by country and software is usually faster than Google for this class.
 
+## Country university IRs {#country-university-irs}
+
+Prompt: `There are a lot of {country} universities and research organizations that could have scientific data repositories that are not yet listed. Which of them are missing?`
+
+1. Count existing `scientific/` YAML for that ISO folder (DuckDB or path glob). Skip the hunt if the folder is already thick (US, DE, GB, IT AIR/IRIS, ES DSpace).
+2. Pull [OpenDOAR](https://v2.sherpa.ac.uk/opendoar/) (country + software), [ROAR](http://roar.eprints.org), re3data country facet, OpenAIRE Graph country, and national aggregators (IRDB Japan, DABAR, OpenScience.si, Scholaris Canada).
+3. Duplicate-check hostname. Probe DSpace `/server/api` or `/oai/request?verb=Identify`, Dataverse `/api/info/version`, EPrints `/cgi/oai2?verb=Identify`.
+4. **Accept only IRs that list datasets.** DSpace 7: Dataset type browse or `/server/api` type facet. Dataverse and research-data communities count. Publication-only IRs were added and later removed (ten Kazakhstan hosts).
+5. Skip login-only, dead/parked, theses-only with no Dataset type, and microstates with no universities (Monaco, Liechtenstein, Kiribati). [CoreTrustSeal](https://www.coretrustseal.org/) is a useful overlay — keep certified hosts that have a public dataset catalog, not preservation systems (SPAR, EWIG, film archives).
+
+`is_national: false` except for a country’s official research-data catalog of that type.
+
 ## Related
 
 - [discovery-scientific-domain.md](discovery-scientific-domain.md)
 - [discovery.md](discovery.md)
+- [discovery.md](discovery.md#hunt-patterns) — session hunt patterns
 - [discovery-search-tools.md](discovery-search-tools.md)
 - [discovery-metadata.md](discovery-metadata.md)
 - [discovery-other.md](discovery-other.md)

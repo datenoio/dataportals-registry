@@ -11,6 +11,7 @@ When the user asks to find catalogs that are **not yet in this registry**, or to
 2. Follow [docs/agents/discover.md](docs/agents/discover.md).
 3. Use query recipes in [docs/discovery-search-tools.md](docs/discovery-search-tools.md) and the platform guides (`docs/discovery-opendata.md`, `discovery-geoportals.md`, `discovery-scientific.md`, `discovery-scientific-domain.md`, `discovery-metadata.md`, `discovery-indicators.md`, `discovery-other.md`).
 4. Client setup (Cursor MCP, ChatGPT Custom GPT, Censys OAuth, API keys): [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md).
-5. Scope to a country, city, TLD, or `software.id`. Do not write scanners. Stop on `401`/`403`.
+5. Scope to a country, city, TLD, `software.id`, or a named list URL. Do not write scanners. Stop on `401`/`403`.
 6. Add verified finds with `python scripts/builder.py add-single URL --scheduled`, then `assign` and `validate-yaml`.
-7. Pick the next hunt from [docs/agents/improve.md](docs/agents/improve.md) (software-first lists and country shape holes, not more US ArcGIS).
+7. Pick the next hunt from [docs/agents/improve.md](docs/agents/improve.md). Prefer harvest-source dumps, dataset-bearing IRs, country indicators leftovers, and named directories — not more US ArcGIS.
+8. Match the user prompt to a hunt type in [docs/agents/discover.md](docs/agents/discover.md#hunt-types) / [docs/discovery.md](docs/discovery.md#hunt-patterns).

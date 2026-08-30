@@ -33,6 +33,23 @@ Other aggregators (national dataset search, harvested CKAN unions, commercial ca
 
 Do not register harvested source catalogs a second time. Duplicate-check each underlying portal `link`.
 
+### Earth, ocean, and facility aggregators
+
+These are **search engines** (or scientific repositories when they host data) whose directories were used as named-list hunts. Duplicate-check each underlying catalog; register the aggregator once if it is missing.
+
+| Source | Typical records |
+|--------|-----------------|
+| [ODIS catalogue](https://catalogue.odis.org/) | Ocean Data and Information System — 28 origin catalogs in one pass (CKAN, GeoNetwork, ERDDAP, custom) |
+| [PANGAEA](https://www.pangaea.de/) harvest sources | Almost all live sources already registered; leftover hosts were org homepages or dead |
+| [WMO WIS2 GDC](https://gdc.wis.cma.cn/) | Meteorological node catalogs |
+| [EPOS Data Portal](https://www.ics-c.epos-eu.org/) | European plate-observing search |
+| [GEO DAB](https://www.geodab.net/) | GEO Discovery and Access Broker |
+| [ENVRI-Hub](https://envri-hub.envri.eu/) | Environmental research-infrastructure search |
+| [STAC Index](https://stacindex.org/catalogs) | STAC catalog directory (also a search engine if unregistered) |
+| [CLARIN VLO](https://vlo.clarin.eu/) | Linguistic data centers — keep endpoints that list datasets |
+
+Do not add GEOSS Portal / GCMD / per-dataset Source Cooperative STAC as extra catalogs when the parent catalog is already registered.
+
 ## Machine learning catalogs (`ml/`)
 
 Public catalogs of ML datasets or models (not a single Kaggle notebook, not a model card).
@@ -101,13 +118,14 @@ About one catalog in eight has no shared product ID. Use `custom` when two indep
 2. If two signals match a named ID, use that ID — do not leave `custom`.
 3. If the host is a viewer wrapping GeoServer/QGIS Server, register the **viewer** ([one catalog per public product](discovery.md#one-catalog-per-public-product)).
 4. If nothing matches: `custom`, `api: false` unless you found a public list (`data.json`, DCAT, OAI, CSW, STAC).
-5. Do not invent a new `software.id` for a one-off. Propose a software YAML only when several independent installations share a product ([software-taxonomy.md](software-taxonomy.md)).
+5. Do not invent a new `software.id` for a one-off. Propose a software YAML only when several independent installations share a product ([software-taxonomy.md](software-taxonomy.md)). Recent custom-geoportal clustering produced SeaSketch, PISO, GDi Visios, MapGuide, EnviMAP, MAP+, Avinet, ISY Map, and SmartMap; leftover custom rows are mostly unique `.gov` roots.
 
 Harvest: [harvest-other.md](harvest-other.md#custom).
 
 ## Related
 
 - [discovery.md](discovery.md)
+- [discovery.md](discovery.md#hunt-patterns) — session hunt patterns
 - [discovery-opendata.md](discovery-opendata.md) (Idra)
 - [discovery-scientific.md](discovery-scientific.md) (OpenML, Galaxy)
 - [harvest-other.md](harvest-other.md)

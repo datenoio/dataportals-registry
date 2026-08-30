@@ -1,12 +1,12 @@
 # Improve the registry (session playbook)
 
-How to grow coverage and quality, based on **~3,000 Cursor sessions** (November 2025–August 2026) and the releases they produced. This is the *what to work on next* guide. Mechanics live in [discover.md](discover.md), [contribute.md](contribute.md), [scheduled.md](../scheduled.md), and [metadata-quality.md](../metadata-quality.md).
+How to grow coverage and quality, based on **~3,200 Cursor sessions** (November 2025–30 August 2026) and the releases they produced. This is the *what to work on next* guide. Mechanics live in [discover.md](discover.md), [contribute.md](contribute.md), [scheduled.md](../scheduled.md), and [metadata-quality.md](../metadata-quality.md). Hunt-pattern table: [discovery.md](../discovery.md#hunt-patterns).
 
-Working tree after those sessions: **24,993** verified catalogs, **7** scheduled, **282** software IDs, **219** country folders. Published snapshot: v1.18.0 (24,993 catalogs).
+Working tree after those sessions: **26,017** verified catalogs, **177** scheduled, **297** software IDs, **222** country folders. Published snapshot: v1.18.0 (24,993 catalogs, 7 scheduled, 282 software). YAML is ahead of exports until the next `build`.
 
 ## What those sessions actually did
 
-First-user-message mix across 3,027 indexed chats:
+First-user-message mix across 3,027 indexed chats (through v1.18.0):
 
 | Session type | Share | Typical prompt |
 |--------------|------:|----------------|
@@ -25,8 +25,9 @@ Volume came from a **small number of session types**, not from the 1,500 one-off
 | v1.16.0 | +1,002 | +24 | Platform instance lists (DSpace, Figshare, Nordic viewers, TabNet, FENIX, …) |
 | v1.17.0 | +2,608 | +15 | OpenAIRE Graph harvest (2,409 promoted; 664 dropped) + IMF NSDP + domain science |
 | v1.18.0 | +2,243 | +20 | Viewer products (e-mapa, Kortasjá, Swing, Hajk), DSpace IRs, MappingSupport ArcGIS, India/Nigeria depth |
+| Unreleased (28–30 Aug 2026) | YAML ahead of v1.18.0 | +15-class | Country indicators wave, university IR country hunts, national harvest sources (data.go.id 112), named directories (ODIS, CoreTrustSeal, WIS2 GDC), viewer IDs (SeaSketch, PISO, GDi Visios, …) |
 
-**Lesson:** one bounded vendor list or graph dump outperforms dozens of “missing {country}” chats. Country hunts still matter when the hole is *shape* (no scientific IRs, no native NSO table DB), not *count*.
+**Lesson:** one bounded vendor list, harvest-source dump, or named directory outperforms dozens of “missing {country}” chats. After v1.18.0 the high-yield *prompts* shifted: `Which {country} indicators…`, `There are a lot of {country} universities…`, `Which data sources harvested by {national portal}…`, `Which catalogs from {list URL}…`. Country hunts still matter when the hole is *shape* (no scientific IRs with datasets, no native NSO table DB), not *count*.
 
 ## Operating loop
 
@@ -52,7 +53,7 @@ Highest catalogs-per-hour. Pattern that worked:
 
 1. Confirm the product is shared → add `data/software/{category}/{id}.yaml` ([software-taxonomy.md](../software-taxonomy.md)).
 2. Add fingerprints + harvest recipe in the same change ([software-index.md](../software-index.md) is CI-guarded).
-3. Take the **vendor/government list**, not a web-wide crawl: OpenAIRE Graph, re3data, Dataverse installations, CKAN ecosystem, IMF DSBB, IHSN/NADA, DHIS2 country list, MappingSupport, national harvest source APIs (`data.gov.*` harvest endpoints).
+3. Take the **vendor/government list**, not a web-wide crawl: OpenAIRE Graph, re3data, OpenDOAR, Dataverse installations, CKAN ecosystem, IMF DSBB, IHSN/NADA, DHIS2 country list, MappingSupport, national harvest source APIs (`data.gov.*` harvest endpoints), named directories (ODIS, CoreTrustSeal, WIS2 GDC, STAC Index, GeoNode gallery).
 4. Duplicate-check **exports** on hostname. Probe `/api/…` fingerprints from [discover.md](discover.md).
 5. Stage, then promote only hosts that respond.
 
@@ -64,21 +65,22 @@ OpenAIRE (`scripts/extract_openaire_portals.py`) added thousands of scientific I
 
 Accept only public catalog UIs / harvest APIs. Journals, forges, single publications, and login walls are out of scope ([discover.md](discover.md#accept--reject)).
 
-National **harvest source lists** (data.gouv.fr, data.gov.uk, dados.gov.pt, data.europa.eu, dataportal.se EntryStore) beat Google for municipal open data in countries that already have a national CKAN.
+National **harvest source lists** (data.gouv.fr, data.gov.uk, dados.gov.pt, data.europa.eu, dataportal.se EntryStore, **data.go.id**, govdata.de, datos.gob.es, data.go.kr, data.gov.ru, opendata.swiss, dane.gov.pl, search.open.canada.ca) beat Google for municipal open data in countries that already have a national CKAN. data.go.id yielded **112** origin catalogs in one pass; dane.gov.pl’s 7,477 institutions were almost all XML dataset feeds — only the six CKAN harvests were catalogs. Probe the origin UI, not the harvest-source row.
 
 ### 3. Country *shape* hunts (not more US ArcGIS)
 
 The registry is dense in the US (~29% of rows) and Western Europe, and **geoportal-heavy** (~half of YAML). The remaining high-yield holes are:
 
-- Populous countries with few catalogs relative to known ecosystems (India states/cities, Nigeria, Pakistan, Egypt, Bangladesh).
-- Countries that already have CKAN/geo but **almost no scientific IRs** (Vietnam, Indonesia, Thailand, Türkiye, Egypt, Pakistan).
-- Native NSO table databases (PxWeb, .Stat, STATcube, custom) vs IMF NSDP proxies already present.
+- Populous countries with few catalogs relative to known ecosystems (India remaining states/cities after the first depth pass).
+- Countries that already have CKAN/geo but **almost no dataset-bearing scientific IRs** (filter OpenDOAR/DSpace to Dataset type; publication-only IRs are out of scope).
+- Native NSO table databases still missing after the 29–30 August indicators wave (Africa, some Pacific) vs IMF NSDP proxies already present.
 - DHIS2 / NADA / REDATAM remaining countries (short vendor lists).
-- Types that barely exist: microdata (~240), metadata (~96), API catalogs, ML catalogs.
+- Types that barely exist: microdata, metadata, API catalogs, ML catalogs.
+- Named directories not yet exhausted: national harvest leftovers, ODIS/WIS2/CLARIN follow-ups.
 
-Deprioritize: another US county ArcGIS Server, another French/Spanish commune geoportal, Open Data Inception rows that are PDFs or election pages, tiny territories that already have an IMF NSDP stub.
+Deprioritize: another US county ArcGIS Server, another French/Spanish commune geoportal, Open Data Inception rows that are PDFs or election pages, tiny territories that already have an IMF NSDP stub, university IR hunts for Monaco/Liechtenstein/Kiribati-class stubs, guessed HCI/Virtual LMI county hostnames.
 
-**Exception:** a *bounded, high-precision* list in a saturated geography is still worth it (MappingSupport live REST roots, Cadcorp council WebMaps). Unscoped “missing US catalogs” is not.
+**Exception:** a *bounded, high-precision* list in a saturated geography is still worth it (MappingSupport live REST roots, Cadcorp council WebMaps, SeaSketch public `/app` tenants, GDi Visios county viewers). Unscoped “missing US catalogs” is not.
 
 ### 4. Country record reviews
 
@@ -104,6 +106,11 @@ Successful cycles grew `data/scheduled/`, live-checked URLs, promoted hundreds, 
 | Add OpenAIRE / re3data rows without accept/reject | Journals, forges, parked domains, staging hosts. |
 | Login-walled CRIS (hosted Symplectic, SSO Pure) | Stop on 401/403; do not add. |
 | “Missing catalogs” for Nauru / San Marino-class stubs | Already have indicator pages; yield is one PDF. |
+| University IR hunt for Monaco / Liechtenstein / Kiribati | No dataset-bearing IR; waste a session. |
+| Add every OpenDOAR / DSpace host | Publication-only IRs (Kazakhstan: 10 later removed). Require Dataset type or a research-data community. |
+| Treat national harvest *rows* as catalogs | dane.gov.pl: 7,477 institutions, almost all XML feeds; opendata.swiss geocat/I14Y slices. Probe the origin UI. |
+| Guess HCI / Virtual LMI / Cancer-Rates county hosts | Timeouts and login loops. Use the vendor tenant list, not DNS guesses. |
+| Register every PISO / SeaSketch / GISApp copy | One catalog per public product; skip marketplace demos and REST adaptors. |
 | Leave YAML ahead of exports | README/docs quote stale counts; CI quality baseline drifts. Rebuild before release. |
 | Commit `.tmp_aq/` probes | Scratch only. |
 | New `software.id` for a single site | Keep `custom` until several independent installations exist. |
@@ -111,20 +118,20 @@ Successful cycles grew `data/scheduled/`, live-checked URLs, promoted hundreds, 
 
 ## Priority queue
 
-Re-check counts in DuckDB before starting; India/Nigeria/DHIS2/DSpace passes already landed after the 26 August 2026 gap analysis.
+Re-check counts in DuckDB (and YAML if exports lag) before starting. India/Nigeria/DHIS2/DSpace, the 29–30 August country-indicators wave, and the university-IR country wave already landed after the 26 August 2026 gap analysis.
 
 | Rank | Hunt | Why | How |
 |-----:|------|-----|-----|
-| 1 | Scientific IRs in Asia and Africa | Shape hole: OD/geo exist, DSpace/Dataverse/EPrints do not | re3data + OpenAIRE Graph, filter to `dspace` / `eprints` / `dataverse` / `inveniordm`, skip countries already thick (US, DE, GB, ZA Figshare) |
-| 2 | India remaining depth | Population × empty states/cities after the first 48 | State SDI, city CKAN, university IRs, MOSPI/state statistics. Duplicate-check `*.data.gov.in` |
-| 3 | Egypt / Algeria / Bangladesh / Iran compact sprints | Almost no open-data and/or scientific rows | National portal + NSO table DB + 2–3 university IRs |
-| 4 | Native NSO table catalogs | Indicators *pages* (IMF NSDP) are done; table DBs are not | PxWeb / PxStat / .Stat / STATcube / custom warehouses; Africa, Central Asia, Pacific |
-| 5 | DHIS2 + NADA leftovers | Short lists, high precision | dhis2.org implementations + IHSN ADP; probe `/api/system/info` and `/index.php/catalog` |
-| 6 | Africa national + capital open data | 19 UN members still had **zero** open-data YAML at last gap pass | National CKAN/DKAN/uData, then capital city. Skip more DHIS2 if already added |
-| 7 | China geo / ODWeb / SuperMap | OD and science are decent; geo is thin vs ArcGIS-shaped countries | ODWeb path `/odweb/`, SuperMap iServer, provincial SDI |
+| 1 | National harvest-source leftovers | data.go.id added 112 origin catalogs in one pass; other national portals still have unmatched harvest URLs | Harvest/organisations API → probe origin UI ([discovery-opendata.md](../discovery-opendata.md#national-harvest-sources)) |
+| 2 | Dataset-bearing scientific IRs | Shape hole after the university-IR wave: OpenDOAR hosts that list **datasets**, not publications | OpenDOAR + re3data + OpenAIRE, filter DSpace Dataset type / Dataverse; skip microstates |
+| 3 | Native NSO / health / education indicators leftovers | OECD+Asia indicators mostly filled; Africa and some subnational explorers remain | PxWeb / .Stat / STATcube / DHIS2 / TabNet; skip IMF NSDP already present |
+| 4 | Named directories | Bounded lists still convert: ODIS 28, CoreTrustSeal 5, STAC leftovers, WIS2 GDC, GeoNode gallery | One list URL per session ([discovery.md](../discovery.md#existing-lists-start-here)) |
+| 5 | India remaining depth | Population × empty states/cities after the first 48 | State SDI, city CKAN, university IRs with datasets, MOSPI/state statistics. Duplicate-check `*.data.gov.in` |
+| 6 | DHIS2 + NADA leftovers | Short lists, high precision | dhis2.org implementations + IHSN ADP; probe `/api/system/info` and `/index.php/catalog` |
+| 7 | Africa national + capital open data | UN members that still have **zero** open-data YAML | National CKAN/DKAN/uData, then capital city. Skip more DHIS2 if already added |
 | 8 | Microdata in OECD countries | Spain, Italy, Poland, Australia often show 0 NADA | IHSN list; do not refile indicator table builders as microdata |
-| 9 | Metadata (FAIR Data Point) and API directories | Tiny types, clean accept/reject | FDP index; government API catalogs (API Setu-style) |
-| — | More US ArcGIS Hub/Server | Already ~4,400 of ~6,900 US rows | Only if a named authoritative list remains unmatched |
+| 9 | Custom-software retag | ~587 custom geoportals remain; path clustering already produced SeaSketch/PISO/GDi Visios/… | Hostname/path clusters with ≥3 installs; one-off `.gov` roots stay `custom` |
+| — | More US ArcGIS Hub/Server | Already thousands of US geo rows | Only if a named authoritative list remains unmatched (MappingSupport, FGDC SSC) |
 
 ## Recipes
 
@@ -152,8 +159,40 @@ Agent steps:
 
 1. Count YAML by type for that ISO folder (opendata / geo / scientific / indicators / microdata).
 2. Hunt the **missing type**, not the type already in the hundreds.
-3. Sources: national harvest API, re3data country facet, NSO site, university IR lists, local-language open-data terms (`datos abiertos`, `data terbuka`, `mở dữ liệu`).
+3. Sources: national harvest API, re3data country facet, OpenDOAR, NSO site, university IR lists, local-language open-data terms (`datos abiertos`, `data terbuka`, `mở dữ liệu`).
 4. Place local owners in `{CC}/{ISO-3166-2}/{type}/` with `owner.location.level` 30.
+
+### National harvest-source hunt
+
+```text
+Which data sources harvested by {national portal} are missing?
+```
+
+Agent steps: [discover.md](discover.md#national-harvest-sources). Full accept/reject: [discovery-opendata.md](../discovery-opendata.md#national-harvest-sources).
+
+### Country university IR hunt
+
+```text
+There are a lot of {country} universities and research organizations that could have scientific data repositories that are not yet listed. Which of them are missing?
+```
+
+Agent steps: [discover.md](discover.md#country-university-irs). Require Dataset type: [discovery-scientific.md](../discovery-scientific.md#country-university-irs).
+
+### Country indicators hunt
+
+```text
+Which {country} indicators catalogs are missing?
+```
+
+Agent steps: [discover.md](discover.md#country-indicators). Skip IMF NSDP already present: [discovery-indicators.md](../discovery-indicators.md#country-indicators-hunt).
+
+### Named directory hunt
+
+```text
+Which data catalogs from {list URL} are missing?
+```
+
+One bounded URL. Duplicate-check hostname. Probe live. Skip preservation-only systems and org homepages. Lists: [discovery.md](../discovery.md#existing-lists-start-here).
 
 ### Country review
 
@@ -211,13 +250,19 @@ If YAML and `catalogs.jsonl` disagree, say so and prefer YAML counts (`data/enti
 Copy these; they match the loops above.
 
 - `Which {software} catalogs are missing?` — instance hunt
+- `Which data sources harvested by {national portal} are missing?` — harvest-source hunt
+- `There are a lot of {country} universities… Which scientific repositories are missing?` — IR hunt (dataset-bearing only)
+- `Which {country} indicators catalogs are missing?` — then skip IMF NSDP / national StatBank already registered
+- `Which catalogs from {list URL} are missing?` — named directory
 - `Missing {country} data catalogs` — then follow the type-shape table, do not add more geo if geo is already 70%
+- `Which {country} cities and counties have data catalogs that are missing?` — subnational; use the national harvest list first
+- `Review custom {type} catalogs and identify new software definitions`
 - `Review records at data/entities/{CC} and fix them` — quality
 - `Review scheduled and promote if they are ok, otherwise remove them`
 - `Find popular {type} software not yet in software records` — taxonomy
 - `Update README and CHANGELOG` — after a batch, with rebuilt exports
 
-Avoid: `Find all missing catalogs in the world`, `Search the internet for ArcGIS`, `Mark every Federal catalog as national`.
+Avoid: `Find all missing catalogs in the world`, `Search the internet for ArcGIS`, `Mark every Federal catalog as national`, university IR hunts for microstates, guessed county HCI hostnames.
 
 ## Done when
 

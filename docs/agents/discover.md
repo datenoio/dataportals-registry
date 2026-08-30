@@ -41,10 +41,68 @@ Match on hostname, not display name. `id` is not a URL.
    python scripts/extract_openaire_portals.py list-sources --output /tmp/openaire_sources.json
    ```
 
-3. **Targeted search** the user asked for (one country, one software, one city). Use local-language open-data terms and government TLDs. Query recipes: [discovery-search-tools.md](../discovery-search-tools.md) and the platform guides ([opendata](../discovery-opendata.md), [geoportals](../discovery-geoportals.md), [scientific](../discovery-scientific.md) ([domain](../discovery-scientific-domain.md)), [metadata](../discovery-metadata.md), [indicators](../discovery-indicators.md)). Software ID → page: [software-index.md](../software-index.md).
+3. **Targeted search** the user asked for (one country, one software, one city, or one named list URL). Use local-language open-data terms and government TLDs. Query recipes: [discovery-search-tools.md](../discovery-search-tools.md) and the platform guides ([opendata](../discovery-opendata.md), [geoportals](../discovery-geoportals.md), [scientific](../discovery-scientific.md) ([domain](../discovery-scientific-domain.md)), [metadata](../discovery-metadata.md), [indicators](../discovery-indicators.md)). Software ID → page: [software-index.md](../software-index.md). Hunt-pattern table: [discovery.md](../discovery.md#hunt-patterns).
 4. **Endpoint probes** on the candidate host only (table below). GET, short timeout, public URLs.
 
-You MAY run documented Google / Censys / Shodan / FOFA queries when the user asked to discover catalogs and the scope is a country, software, city, or TLD. Do not write internet-wide scanners, recursive crawlers, or unscoped sweeps in this repository. Still duplicate-check exports before probing live hosts.
+You MAY run documented Google / Censys / Shodan / FOFA queries when the user asked to discover catalogs and the scope is a country, software, city, TLD, or a named directory URL. Do not write internet-wide scanners, recursive crawlers, or unscoped sweeps in this repository. Still duplicate-check exports before probing live hosts.
+
+## Hunt types {#hunt-types}
+
+Match the user prompt to one of these loops. Do not mix them in the same pass.
+
+### Software instance {#software-instance}
+
+```text
+Which {software} catalogs are missing?
+```
+
+Read the software YAML and [software-index.md](../software-index.md) row. `SELECT link FROM catalogs WHERE software.id = '{id}'`. Fetch the vendor list or hostname pattern (not a scanner). Probe fingerprints. One record per public tenant, not a second copy of the same hub (PISO geoprostor.net, SeaSketch marketing home, GISApp REST adaptor).
+
+### National harvest sources {#national-harvest-sources}
+
+```text
+Which data sources harvested by {national portal} are missing?
+```
+
+Use the portal’s harvest / organisations / catalogues API (data.gouv.fr, govdata.de, datos.gob.es, data.go.kr, data.gov.ru, opendata.swiss, dane.gov.pl, data.go.id, search.open.canada.ca). Match origin hostnames to exports. Probe the **origin catalog UI**, not the harvest-source row inside the national CKAN.
+
+**Accept:** independent CKAN / GeoNetwork / Hub / agency `/opendata` list. **Reject:** XML dataset feeds and developer price files (dane.gov.pl had thousands of those), slices of the same national catalog (opendata.swiss geocat/I14Y), scientific IR dumps already registered, login walls. Full recipe: [discovery-opendata.md](../discovery-opendata.md#national-harvest-sources).
+
+### Country university IRs {#country-university-irs}
+
+```text
+There are a lot of {country} universities and research organizations that could have scientific data repositories that are not yet listed. Which of them are missing?
+```
+
+Count existing `scientific/` YAML for that ISO folder first. Sources: OpenDOAR country facet, ROAR, re3data, OpenAIRE Graph, national IR aggregators (IRDB Japan, DABAR, OpenScience.si, Scholaris). Probe DSpace `/server/api` or OAI Identify.
+
+**Accept** only IRs that **list datasets** (DSpace Dataset type browse, Dataverse, a research-data community). Publication-only IRs were later removed (Kazakhstan). Skip microstates with no universities. Recipe: [discovery-scientific.md](../discovery-scientific.md#country-university-irs).
+
+### Country indicators {#country-indicators}
+
+```text
+Which {country} indicators catalogs are missing?
+```
+
+Count existing `indicators/` YAML. Hunt the **missing product**, not another IMF NSDP: native NSO table DB (PxWeb, .Stat, STATcube, custom), health (DHIS2, TabNet, HCI, Cancer-Rates), education/labour explorers, SDG, central bank, subnational.
+
+**Reject:** PDF publications, CMS homepages, login dashboards, agency PxWeb already on the national StatBank, open-data APIs that are not indicator catalogs. `is_national: true` only for the official NSO product of that type. Recipe: [discovery-indicators.md](../discovery-indicators.md#country-indicators-hunt).
+
+### Named directory {#named-directory}
+
+```text
+Which data catalogs from {list URL} are missing?
+```
+
+One bounded list per session: ODIS, CoreTrustSeal, STAC Index, WIS2 GDC, GeoNetwork/GeoNode galleries, CLARIN/VLO, PANGAEA harvest sources, FGDC SSC, MappingSupport, Geoseer. Duplicate-check hostname; probe live; skip preservation systems with no dataset catalog (CoreTrustSeal SPAR/EWIG) and org homepages (many PANGAEA harvest sources).
+
+### Custom-software review {#custom-software-review}
+
+```text
+Review custom {geoportals|indicators|scientific} catalogs and identify new software definitions
+```
+
+Cluster remaining `software.id: custom` by hostname or path. Add a software YAML only when ≥3 independent installations share a product, then retag those rows in the same change. One-off national `.gov` roots stay `custom`.
 
 ## Software probes
 
@@ -149,7 +207,7 @@ See [apidetect.md](../apidetect.md). Do not run `apidetect_urlmaps_draft.py` as 
 
 ## Related
 
-- [discovery.md](../discovery.md)
+- [discovery.md](../discovery.md) — overview, lists, [hunt patterns](../discovery.md#hunt-patterns)
 - [discovery-search-tools.md](../discovery-search-tools.md)
 - [discovery-agent-tools.md](../discovery-agent-tools.md)
 - [discovery-opendata.md](../discovery-opendata.md) / [discovery-geoportals.md](../discovery-geoportals.md) / [discovery-scientific.md](../discovery-scientific.md) ([domain](../discovery-scientific-domain.md)) / [discovery-metadata.md](../discovery-metadata.md) / [discovery-indicators.md](../discovery-indicators.md) / [discovery-other.md](../discovery-other.md)

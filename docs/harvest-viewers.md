@@ -1,6 +1,6 @@
 # Harvesting map viewers and tile caches
 
-Many geoportals in this registry are **viewers** (QWC2, Masterportal, Lizmap, mviewer, Wagmap, Tianditu, Trimble Locus / Louhi / Landfolio, Spatial Suite, KortInfo, GEUSMAP, GISApp, iObčina, iShare, Cadcorp). The catalog of datasets is the **layer list** (GetCapabilities, `themes.json`, REST services) — not PNG tiles, print PDFs, or the basemap.
+Many geoportals in this registry are **viewers** (QWC2, Masterportal, Lizmap, mviewer, Wagmap, Tianditu, Trimble Locus / Louhi / Landfolio, Spatial Suite, KortInfo, GEUSMAP, GISApp, SmartMap, ISY Map, Avinet Adaptive, iObčina, iShare, Cadcorp). The catalog of datasets is the **layer list** (GetCapabilities, `themes.json`, REST services) — not PNG tiles, print PDFs, or the basemap.
 
 Use this page when `software.id` is a viewer or cache. Full SDI catalogs (GeoNetwork, GeoNode, ArcGIS Server): [harvest-geoportals.md](harvest-geoportals.md). Protocol grain: [harvest-protocols.md](harvest-protocols.md). GET only. Stop on `401`/`403`. Do not scrape tiles.
 
@@ -322,7 +322,48 @@ One named layer = one dataset analog. Do not scrape map tiles. One harvest scope
 
 ## GISApp (`gisapp`) {#gisapp}
 
-Romanian `{city}.gisapp.ro` viewer. Harvest the public layer list if unauthenticated. Do not scrape map tiles or urbanism-permit forms. If ArcGIS REST on `webadaptor.gisapp.ro` is already harvested as `arcgisserver`, do not duplicate those services.
+Romanian `{city}.gisapp.ro` or PortalPublic / Fida city-host viewer. Harvest the public layer list if unauthenticated. Do not scrape map tiles or urbanism-permit forms. If ArcGIS REST on `webadaptor.gisapp.ro` is already harvested as `arcgisserver`, do not duplicate those services.
+
+## SmartMap (`smartmap`) {#smartmap}
+
+`{district}.smartmap.kz` investment viewer. Harvest the public **layer / object list** if unauthenticated. Do not scrape Google/Leaflet tiles. One harvest scope per district tenant. Distinct from `geonomics`.
+
+## ISY Map (`isymap`) {#isymap}
+
+Norconsult ISY Map / GeoInnsyn / ISY Map Server. Harvest public WMS/WFS GetCapabilities or the viewer layer tree. Do not scrape `/webkart/` PNG/SVG tiles. One harvest scope per municipality application (`application=` / `project=`), not per coordinate permalink.
+
+## Avinet Adaptive (`avinet`) {#avinet}
+
+```text
+GET https://host/wms.ashx?service=WMS&request=GetCapabilities
+GET https://host/wfs.ashx?service=WFS&request=GetCapabilities
+```
+
+Keep named WMS/WFS layers. Do not scrape ExtJS map tiles. One harvest scope per public atlas. Distinct from `isymap`.
+
+## MAP+ (`mapplus`) {#mapplus}
+
+TYDAC `/mapplus/` or `/mapplus-lib/` Stadtplan. Harvest the public **layer list** if unauthenticated. Do not scrape OpenLayers tiles. One harvest scope per municipality viewer. Distinct from `geomapfish` and `mfgeoadmin3`.
+
+## EnviMAP (`envimap`) {#envimap}
+
+`*.envimap.hu` or `/hu/Admin/GeoForte/GeoEdit` zoning viewer. Harvest the public layer / parcel query if unauthenticated. Do not scrape Leaflet tiles. One harvest scope per municipality tenant.
+
+## PISO (`piso`) {#piso}
+
+geoprostor.net / PisoPortal hub. Harvest public WMS or the municipality layer list. Do not scrape map tiles. One harvest scope for the hub (not per občina in the selector) unless a municipality exposes a separate catalog API.
+
+## GDi Visios (`gdivisios`) {#gdivisios}
+
+`/visios/{app}` or GDi-hosted Ensemble Smart Portal viewer. Harvest the public **layer list** if unauthenticated. Do not scrape map tiles. One harvest scope per municipality or county application. Distinct from ArcGIS REST on `gdi.net`.
+
+## MapGuide (`mapguide`) {#mapguide}
+
+`/mapguide/` CityScape or `mapviewerphp/ajaxviewer.php`. Harvest the public **layer / legend catalog** if unauthenticated. Do not scrape MapGuide tiles. One harvest scope per municipality. Distinct from `envimap`.
+
+## SeaSketch (`seasketch`) {#seasketch}
+
+`www.seasketch.org/{project}/app`. Harvest public overlay **layer groups** if unauthenticated. Do not scrape map tiles or require a sketching account. One harvest scope per project slug. Distinct from `data.seasketch.org` ArcGIS REST (`arcgisserver`).
 
 ## iObčina (`iobcina`) {#iobcina}
 

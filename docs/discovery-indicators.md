@@ -2,7 +2,7 @@
 
 How to find **indicators catalogs** (`catalog_type: Indicators catalog`) and **microdata catalogs** (`catalog_type: Microdata catalog`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md).
 
-Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, PxStat, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Istat Data Browser, Swing, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, TabNet, SparkMap, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
+Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, PxStat, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Istat Data Browser, Swing, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
 
 ## PxWeb (`pxweb`) {#pxweb}
 
@@ -125,6 +125,66 @@ CARES (University of Missouri Extension) community mapping and assessment platfo
 | Google | `site:engagementnetwork.org "Map Room"` |
 | Censys | `web.endpoints.http.body: "SparkMap"` |
 | Censys | `web.names: "engagementnetwork.org"` |
+
+## eDatos (`edatos`) {#edatos}
+
+Open-source statistical data/metadata stack from ISTAC (Canary Islands), also used by IBESTAT and IESTADIS. Partner/docs: [documentacion.edatos.io](https://documentacion.edatos.io/), [edatos.io](https://edatos.io/).
+
+**Signals:** host `*.edatos.io`; path `/indicators/v1.0/indicators`; JSON-stat; chrome “eDatos” / e-Indicadores / e-Cubos.
+
+**Confirm:** GET `/indicators/v1.0/indicators` JSON **or** a public ODS / indicator-browser UI. One catalog per public hub (ISTAC APIs vs IESTADIS vs IBESTAT ODS), not each indicator. Do not label IBESTAT `/ods/` as Open SDG.
+
+**False positives:** the institute CMS home (`ibestat.es`, `madrid.org/iestadis`) when the eDatos API/UI lives on another host; ISTAC Open SDG (`/aplicaciones/appsistac/ods/`) is `opensdg`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"edatos.io" OR "e-Indicadores" (ISTAC OR IBESTAT OR IESTADIS)` |
+| Google | `inurl:/indicators/v1.0/indicators` |
+| Censys | `web.names: "edatos.io"` |
+| crt.sh | `%.edatos.io` |
+
+## Cancer-Rates.info (`cancerrates`) {#cancerrates}
+
+Kentucky Cancer Registry multi-tenant cancer incidence/mortality query. Tenant list: [cancer-rates.info/about](https://www.cancer-rates.info/about/). Live UI is often `cancer-rates.com/{code}/`.
+
+**Signals:** title `Cancer-Rates.com \| {registry}`; path `/ky/`, `/ms/`, `/naaccr/`, `/se/`; KCR hosting.
+
+**Confirm:** GET the public map/query UI without a login wall. One catalog per registry path. Skip tenants titled “Cancer-Rates.info Login”, pending 404s (Hawaii, Minnesota on the about page), and the KCR organizational home (`kcr.uky.edu`) when the query UI is already registered.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:cancer-rates.info OR site:cancer-rates.com (registry OR incidence)` |
+| Google | `"Cancer-Rates.com" (county OR incidence)` |
+| Censys | `web.names: "cancer-rates.com"` |
+
+## Conduent Healthy Communities Institute (`hci`) {#hci}
+
+Conduent HCI standalone community-health indicator sites (often “Health Matters” branding). Distinct from SparkMap (`sparkmap`).
+
+**Signals:** HTML “Conduent” / “Healthy Communities Institute”; local names like Health Matters; help chrome on healthycities.org.
+
+**Confirm:** GET the public indicator home. One catalog per county/collaborative site. Skip login-only CHNA builders, Conduent marketing, and SparkMap / CARES Map Room sites.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Healthy Communities Institute" (indicators OR "health matters") -site:conduent.com` |
+| Google | `"Powered by Conduent" ("community health" OR indicators)` |
+| Censys | `web.endpoints.http.body: "Healthy Communities Institute"` |
+
+## Virtual LMI (`virtuallmi`) {#virtuallmi}
+
+Geographic Solutions Virtual LMI labor-market databank. Vendor: [geographicsolutions.com/VLMI](https://www.geographicsolutions.com/VLMI).
+
+**Signals:** host `*.virtuallmi.com`; path `/vosnet/`; “Virtual LMI”.
+
+**Confirm:** GET the public LMI home or `/vosnet/Default.aspx`. One catalog per state tenant. Do not retag QualityInfo, WisConomy, `/analyzer` ALMIS, or other LMI sites without those fingerprints.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:virtuallmi.com OR inurl:/vosnet "labor market"` |
+| Google | `"Virtual LMI" (QCEW OR LAUS OR workforce)` |
+| Censys | `web.names: "virtuallmi.com"` |
+| crt.sh | `%.virtuallmi.com` |
 
 ## SDMX-RI (`sdmxri`) {#sdmxri}
 
@@ -430,9 +490,21 @@ site:.gov {country} (statbank OR "statistical database" OR pxweb OR sdmx)
 
 Central banks (`indicators` more often than microdata): `site:{bank-domain} (statistics OR SDMX OR "statistical warehouse")`. Only add a catalog when there is a queryable database, not a PDF publications page.
 
+## Country indicators hunt {#country-indicators-hunt}
+
+Prompt: `Which {country} indicators catalogs are missing?`
+
+1. Count existing `indicators/` YAML for that ISO folder. If the only row is an IMF NSDP, hunt a **native table DB**. If PxWeb/.Stat/STATcube is already there, hunt health, education, SDG, central bank, and subnational explorers — not a second copy of the StatBank.
+2. Sources: NSO site (table builder, not the CMS home), health ministry / DHIS2 / TabNet / HCI / Cancer-Rates.info, education/labour explorers, OpenSDG / Goal Tracker, central-bank warehouse, provincial/city indicator hubs.
+3. **Accept:** a public table tree or indicator explorer (PxWeb `/api/v1/`, .Stat Data Explorer, Shiny profiles, SDMX, SuperWEB2). `is_national: true` only for the official NSO product of that type.
+4. **Reject:** PDF publications pages; ministry CMS homes; login dashboards; agency PxWeb already harvested into the national StatBank (Finland); IMF NSDP already registered; open-data APIs that are not indicator catalogs (data.police.uk); guessed HCI / Virtual LMI / Cancer-Rates county hostnames (timeouts and login loops — use the vendor tenant list).
+
+The 29–30 August 2026 wave covered most OECD and Asian NSO gaps. Remaining yield is Africa, some Pacific NSOs, and subnational health/education explorers.
+
 ## Related
 
 - [discovery.md](discovery.md)
+- [discovery.md](discovery.md#hunt-patterns) — session hunt patterns
 - [discovery-search-tools.md](discovery-search-tools.md)
 - [discovery-metadata.md](discovery-metadata.md)
 - [harvest-indicators.md](harvest-indicators.md)

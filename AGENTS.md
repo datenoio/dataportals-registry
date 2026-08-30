@@ -38,7 +38,7 @@ The registry collects and maintains structured metadata about:
 - Metadata catalogs
 - Other data infrastructure
 
-As of 28 August 2026, source YAML contains **24,993** verified catalog entries across **219** country/territory folders, **7** scheduled records, and **282** software definitions. Dataset exports match YAML. Last published snapshot is v1.18.0 (24,993 catalogs, 7 scheduled, 282 software).
+As of 29 August 2026, source YAML contains **25,103** verified catalog entries across **219** country/territory folders, **0** scheduled records, and **282** software definitions. Dataset exports last rebuilt 28 August 2026 still match the v1.18.0 snapshot (24,993 catalogs, 7 scheduled, 282 software). Last published snapshot is v1.18.0.
 
 ### Scope Boundary (Important)
 
@@ -527,12 +527,13 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 ### Task: Discover catalogs not yet in the registry
 
 1. Duplicate-check exports (`data/datasets/datasets.duckdb` or `full.parquet`), not a full YAML walk
-2. Follow [docs/agents/discover.md](docs/agents/discover.md) (human narrative: [docs/discovery.md](docs/discovery.md))
-3. Prefer vendor/government lists, then documented search queries in [docs/discovery-search-tools.md](docs/discovery-search-tools.md) and the per-platform guides (`docs/discovery-opendata.md`, `docs/discovery-geoportals.md`, `docs/discovery-scientific.md`, `docs/discovery-metadata.md`, `docs/discovery-indicators.md`, `docs/discovery-other.md`). Software ID map: [docs/software-index.md](docs/software-index.md).
+2. Follow [docs/agents/discover.md](docs/agents/discover.md) (human narrative: [docs/discovery.md](docs/discovery.md), hunt patterns: [docs/discovery.md#hunt-patterns](docs/discovery.md#hunt-patterns))
+3. Prefer vendor/government lists, national harvest-source APIs, and named directories, then documented search queries in [docs/discovery-search-tools.md](docs/discovery-search-tools.md) and the per-platform guides (`docs/discovery-opendata.md`, `docs/discovery-geoportals.md`, `docs/discovery-scientific.md`, `docs/discovery-metadata.md`, `docs/discovery-indicators.md`, `docs/discovery-other.md`). Software ID map: [docs/software-index.md](docs/software-index.md).
 4. Configure Cursor / ChatGPT / Censys MCP using [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md) when the hunt needs those tools
 5. Probe only candidate hosts with targeted GETs; do not write internet-wide scanners
 6. Add verified finds with `add-single --scheduled`, then the contribute checklist below
-7. Choose the next hunt from [docs/agents/improve.md](docs/agents/improve.md) (software-first lists and country *shape* holes, not more US ArcGIS)
+7. Choose the next hunt from [docs/agents/improve.md](docs/agents/improve.md) (harvest sources, dataset-bearing IRs, country indicators, named directories — not more US ArcGIS)
+8. Match the user prompt to a hunt type in [docs/agents/discover.md](docs/agents/discover.md#hunt-types)
 
 ### Task: Harvest datasets from a catalog API
 

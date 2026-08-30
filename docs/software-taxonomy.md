@@ -24,15 +24,15 @@ Typical subtypes:
 | `subtype` | Use for |
 |-----------|---------|
 | `data_portal_platform` | Self-hosted open-data CMS (CKAN, DKAN, uData, Idra, OpenGDC, ResourceContracts, ODWeb) |
-| `scientific_repository_platform` | Dataverse, DSpace, Invenio, Figshare, OPUS, Omeka S, Fedora, Esploro, PHAIDRA, RADAR, Yoda, Converis, Archipelago, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL |
-| `geospatial_catalog_platform` | GeoNetwork, GeoNode, ArcGIS Hub, gvSIG Online, VertiGIS WebOffice, Geocortex Essentials, GeoMedia WebMap, disy Cadenza, Mapbender, mviewer, G3W-SUITE, Cadcorp SIS WebMap, Hexagon M.App Enterprise, Trimble Locus IMS, Spatial Suite, Hajk, GEUSMAP, GC2 |
+| `scientific_repository_platform` | Dataverse, DSpace, Invenio, Figshare, OPUS, Omeka S, Fedora, Esploro, PHAIDRA, RADAR, Yoda, Converis, Archipelago, LabKey, DABAR, OpenScience.si, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL |
+| `geospatial_catalog_platform` | GeoNetwork, GeoNode, ArcGIS Hub, gvSIG Online, VertiGIS WebOffice, Geocortex Essentials, GeoMedia WebMap, disy Cadenza, Mapbender, mviewer, G3W-SUITE, Cadcorp SIS WebMap, Hexagon M.App Enterprise, Trimble Locus IMS, Spatial Suite, Hajk, GEUSMAP, GC2, ISY Map, Avinet Adaptive, MAP+, MapGuide |
 | `microdata_catalog_platform` | NADA, NESSTAR, REDATAM, IPUMS |
-| `indicators_data_platform` | PxWeb, PxStat, OpenSDG, Knoema, DHIS2, FENIX, TabNet, Beyond 20/20, StatPlanet, IMF NSDP, Istat Data Browser |
+| `indicators_data_platform` | PxWeb, PxStat, OpenSDG, Knoema, DHIS2, FENIX, TabNet, Beyond 20/20, StatPlanet, IMF NSDP, Istat Data Browser, eDatos |
 | `metadata_registry_platform` | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
 | `protocol_or_api_server` | STAC, THREDDS, OPeNDAP, SPARQL endpoints, openEO |
 | `geospatial_service_middleware` | GeoServer, MapServer, MapTiler Server, deegree, rasdaman, QGIS Server, SuperMap iServer, MapGIS IGServer, CubeWerx CubeSERV |
 | `cms_or_app_framework` | WordPress, Drupal, Liferay used as a catalog |
-| `managed_saas_service` | Socrata, OpenDataSoft, CONTENTdm, vendor-hosted Hub, Isogeo, OpenAIRE, Astun iShare, Sentinel Hub, Landfolio, GISApp, SparkMap, Guangxi, RDF Online Repository, Redivis, hale»connect |
+| `managed_saas_service` | Socrata, OpenDataSoft, CONTENTdm, vendor-hosted Hub, Isogeo, OpenAIRE, Astun iShare, Sentinel Hub, Landfolio, GISApp, SmartMap, EnviMAP, PISO, GDi Visios, SeaSketch, SparkMap, Guangxi, RDF Online Repository, Redivis, hale»connect, Cancer-Rates.info, Conduent HCI, Virtual LMI |
 | `domain_data_infrastructure` | Domain-specific stacks (GBIF IPT, SciCat, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, Symbiota, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal, NOMAD, ESA Science Archive, BirdMap Africa, CLLD, TalkBank) |
 | `general_software` | Catch-all, including `custom` |
 

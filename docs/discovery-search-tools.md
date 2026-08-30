@@ -8,7 +8,7 @@ Agent checklist: [agents/discover.md](agents/discover.md). Platform fingerprints
 
 ## Workflow
 
-1. Scope the search: one country, one city, one `software.id`, or one TLD. Unscoped queries produce more noise than this registry can review.
+1. Scope the search: one country, one city, one `software.id`, one TLD, or one named list URL. Unscoped queries produce more noise than this registry can review.
 2. Duplicate-check exports (`datasets.duckdb` / `full.parquet`) and `data/scheduled/` **before** opening dozens of tabs. Match on hostname, not display name.
 3. Run a **title / URL** query first (Google `intitle:` / `inurl:`, Censys `html_title`). Then a **body / snippet** query (`"Powered by CKAN"`, HTTP body).
 4. Restrict with `site:.gov`, a national TLD, or a Censys `location.country_code`.
@@ -348,9 +348,14 @@ Search engines miss less when you start from a list. Highest yield:
 | [ArcGIS Hub](https://hub.arcgis.com/) | `arcgishub` |
 | [Open Data Inception](https://data.opendatasoft.com/explore/dataset/open-data-sources%40public/information/) | Mixed open data |
 | [ROAR](http://roar.eprints.org) | Repositories (`eprints`, `dspace`, …) |
+| [OpenDOAR](https://v2.sherpa.ac.uk/opendoar/) | Open-access repositories by country/software |
 | [GBIF IPT](https://www.gbif.org/ipt) | `ipt` |
+| [ODIS catalogue](https://catalogue.odis.org/) | Ocean catalogs |
+| [CoreTrustSeal](https://www.coretrustseal.org/) | Certified repos with a public dataset catalog |
+| [WMO WIS2 GDC](https://gdc.wis.cma.cn/) | Meteorological node catalogs |
+| National harvest APIs | Origin catalogs behind data.go.id, datos.gob.es, opendata.swiss, data.gov.ru, search.open.canada.ca, data.gouv.fr, govdata.de, data.go.kr, dane.gov.pl |
 
-More lists: [discovery.md](discovery.md#existing-lists-start-here) and the per-platform discovery guides.
+More lists and the hunt-pattern table: [discovery.md](discovery.md#existing-lists-start-here), [discovery.md](discovery.md#hunt-patterns).
 
 ## Duplicate check (do this constantly)
 

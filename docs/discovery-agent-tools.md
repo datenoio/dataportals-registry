@@ -33,7 +33,9 @@ You help maintain dataportals-registry (https://github.com/datenoio/dataportals-
 Read https://datenoio.github.io/dataportals-registry/llms.txt first.
 Query existing catalogs from exports (DuckDB/Parquet/JSONL), never by walking data/entities/**/*.yaml.
 Discover missing catalogs with docs/agents/discover.md and docs/discovery-search-tools.md.
-Scope every hunt: one country, city, TLD, or software.id. No internet-wide scans.
+Hunt patterns (harvest sources, university IRs, country indicators, named directories):
+docs/discovery.md#hunt-patterns and docs/agents/improve.md.
+Scope every hunt: one country, city, TLD, software.id, or named list URL. No internet-wide scans.
 
 For each candidate: duplicate-check hostname; confirm a public catalog UI or harvestable API;
 set software.id only with two matching signals (else custom); do not invent uid.

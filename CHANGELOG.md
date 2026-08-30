@@ -7,6 +7,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **110 net new catalog entries** since v1.18.0 (120 added, 10 removed); registry source now **25,103** entities (**0** scheduled) across **219** country/territory folders.
+- **30** Belarusian university and academy institutional repositories (**28** DSpace plus the Belarusian State Academy of Arts and Yanka Kupala State University of Grodno catalogs).
+- **7** South African DSpace institutional repositories promoted from scheduled review: SAMRC InfoSpace, Sol Plaatje OpenHub, UMP Open Scholarship, NWU Boloka, UFS KovsieScholar, TUT Digital Open Repository, and University of Venda.
+- **6** Cuban scientific repositories: ALMA Universidad de Pinar del Río (InvenioRDM), DSpace at UCf, UCLV, and Universidad de Guantánamo, plus the national and Artemisa biomedical thesis repositories.
+- **6** US records including the Digital Archaeological Archive of Comparative Slavery (DAACS) and **5** Guam catalogs (northern and southern hydrologic atlases, Guam Hydrologic Survey, University of Guam DSpace, and GCBR Specify).
+- **5** North Macedonia catalogs: EPrints at UGD, UKLO, and University of Tetova; International Vision University; and the Repo-MK national research-repository search.
+- **4** Africa-level catalogs: FeSeRWAM West Africa fertilizer and seed map, Lake Chad Information System, OFAC/COMIFAC forest observatory, and RIHA African herbaria.
+- **4** Kuwait scientific repositories (AUK, IUK, and AOU DSpace; KFAS Research Portal on Elsevier Pure).
+- **4** Seychelles catalogs (NBS ecosystemology and flora Shiny apps, Seychelles Plant Gallery, and UniSey ResearchConnect).
+- **9** geoportals including Palau PALARIS ArcGIS Hub, Kiribati Te Baiku SeaSketch, Lake Chad LIS, FeSeRWAM, CZMAI Belize, FertiTogo, Guam hydrologic atlases, and Grenadines MarSIS.
+- **3** indicator catalogs: Guinea SNIS (DHIS2) and two Nauru Bureau of Statistics sites (WordPress and .Stat Suite on Pacific Data Hub).
+- Coverage-gap scientific repositories and biodiversity catalogs across small states and the Global South, including Oman Shuaa (Islandora), Malta OAR@UM, San Marino IRIS, Timor-Leste RCN/IOB and the national biodiversity bank, Palau coral-reef collections, Marshall Islands radioecology and nuclear document databases, Vanuatu and Samoa Symbiota herbaria, Pacific Biodiversity Information Facility, SPC Digital Library, Belize BERDS, ISA DeepData (Jamaica), and university IRs in Afghanistan, Burkina Faso, Brunei, DRC, Fiji, Gambia, Comoros, Mali, São Tomé, Tajikistan, and Trinidad.
+
+
+
+### Changed
+
+- Discovery guides now include hunt patterns from post-v1.18.0 sessions: national harvest sources (data.go.id, datos.gob.es, opendata.swiss, data.gov.ru, …), dataset-bearing university IRs (OpenDOAR/ROAR), country indicators leftovers, and named directories (ODIS, CoreTrustSeal, WIS2 GDC, STAC Index, GeoNode gallery). Agent checklist and improve playbook updated with those prompts, accept/reject rules, and a refreshed priority queue.
+- Promoted the remaining **7** scheduled South African institutional repositories to entities after live URL checks. Scheduled queue is now empty (**0**).
+- Added San Marino (`SM`) to the `COUNTRIES` map in `scripts/constants.py`.
+- Source YAML is **25,103** catalogs, **0** scheduled, **282** software. Working-tree JSONL, Parquet, and DuckDB dumps still last rebuilt **28 August 2026** at **24,993** catalogs / **7** scheduled / **282** software.
+
+
+
+### Removed
+
+- **10** Kazakhstan university institutional repositories with no dataset records (publication-only IRs): Kostanay Regional University, West Kazakhstan Marat Ospanov Medical University, MNU NARA, Buketov Karaganda University, Karaganda University of Kazpotrebsoyuz, L.N. Gumilyov ENU, KazNARU, Satbayev University, SDU, and Karaganda Medical University.
+
+
+
 ## [1.18.0] - 2026-08-28
 
 **GitHub Release**: [v1.18.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.18.0) - Published August 28, 2026

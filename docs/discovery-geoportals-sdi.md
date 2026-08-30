@@ -475,7 +475,7 @@ WMO WIS2 reference node for publishing meteorological and related geospatial dat
 
 **Signals:** `wis2box` in HTML or API; pygeoapi / OGC API Features alongside WIS2 messaging; WMO WIS2 branding.
 
-**Confirm:** GET the public discovery UI or OGC API landing page. Register the node catalog, not an individual dataset or MQTT topic.
+**Confirm:** GET the public discovery UI or OGC API landing page. Register the node catalog, not an individual dataset or MQTT topic. The [WMO WIS2 Global Discovery Catalogue](https://gdc.wis.cma.cn/) (CMA instance) is a named-list hunt for *other* WIS2 nodes — duplicate-check before adding.
 
 | Tool | Query |
 |------|-------|

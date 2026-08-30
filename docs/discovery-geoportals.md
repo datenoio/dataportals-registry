@@ -7,7 +7,7 @@ Fingerprints live on two pages so this overview stays short:
 | Page | Use when |
 |------|----------|
 | [SDI platforms](discovery-geoportals-sdi.md) | GeoNetwork, GeoNode, GeoServer, ArcGIS, STAC, openEO, Sentinel Hub, Lizmap, QGIS Server, G3W-SUITE, CubeWerx, M.App Enterprise, mviewer, Isogeo, Geocortex, MapServer, and other catalog/service stacks |
-| [Regional viewers](discovery-geoportals-viewers.md) | Wagmap, EWMAPA, e-mapa.net, Loftmyndir, Alta Vefsjá, Tianditu, Masterportal, GeoMapFish, NetGIS, cardo, MapGIS IGServer, Trimble Locus / Louhi / Landfolio, Spatial Suite, Hajk, KortInfo, GEUSMAP, GISApp, iObčina, iShare, Cadcorp, and municipal GIS viewers |
+| [Regional viewers](discovery-geoportals-viewers.md) | Wagmap, EWMAPA, e-mapa.net, Loftmyndir, Alta Vefsjá, Tianditu, Masterportal, GeoMapFish, NetGIS, cardo, MapGIS IGServer, Trimble Locus / Louhi / Landfolio, Spatial Suite, Hajk, KortInfo, GEUSMAP, GISApp, SmartMap, ISY Map, Avinet Adaptive, MAP+, EnviMAP, PISO, GDi Visios, MapGuide, SeaSketch, iObčina, iShare, Cadcorp, and municipal GIS viewers |
 
 All `software.id` values: [software-index.md](software-index.md). Harvest grain (layers vs tiles): [harvest-geoportals.md](harvest-geoportals.md), [harvest-viewers.md](harvest-viewers.md).
 
@@ -34,7 +34,16 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | Hajk `appConfig.json` / `mapserviceBase` | `hajk` | [viewers](discovery-geoportals-viewers.md#hajk) |
 | `drift.kortinfo.net/Map.aspx` | `kortinfo` | [viewers](discovery-geoportals-viewers.md#kortinfo) |
 | `/geusmap/?mapname=` | `geusmap` | [viewers](discovery-geoportals-viewers.md#geusmap) |
-| `*.gisapp.ro` municipal GIS | `gisapp` | [viewers](discovery-geoportals-viewers.md#gisapp) |
+| `*.gisapp.ro` or PortalPublic `logo_fida.png` | `gisapp` | [viewers](discovery-geoportals-viewers.md#gisapp) |
+| `{district}.smartmap.kz` | `smartmap` | [viewers](discovery-geoportals-viewers.md#smartmap) |
+| ISY Map `/geoinnsyn/` or `/webkart/` | `isymap` | [viewers](discovery-geoportals-viewers.md#isymap) |
+| Avinet Adaptive ExtJS atlas | `avinet` | [viewers](discovery-geoportals-viewers.md#avinet) |
+| TYDAC MAP+ `/mapplus-lib/` | `mapplus` | [viewers](discovery-geoportals-viewers.md#mapplus) |
+| EnviMAP / GeoForte | `envimap` | [viewers](discovery-geoportals-viewers.md#envimap) |
+| PISO geoprostor.net | `piso` | [viewers](discovery-geoportals-viewers.md#piso) |
+| GDi Visios `/visios/` | `gdivisios` | [viewers](discovery-geoportals-viewers.md#gdivisios) |
+| MapGuide `/mapguide/` | `mapguide` | [viewers](discovery-geoportals-viewers.md#mapguide) |
+| SeaSketch `/{project}/app` | `seasketch` | [viewers](discovery-geoportals-viewers.md#seasketch) |
 | Kaliopa iObčina / iOpćina | `iobcina` | [viewers](discovery-geoportals-viewers.md#iobcina) |
 | G3W-CLIENT / `/map/{group}/` QGIS WebGIS | `g3wsuite` | [SDI](discovery-geoportals-sdi.md#g3wsuite) |
 | MapCentia `/apps/viewer` or `/mapcache/` WMTS | `gc2` | [SDI](discovery-geoportals-sdi.md#gc2) |
@@ -80,11 +89,32 @@ Google patterns: ``geoportal {agency}``, ``INSPIRE {country}``, ``IDE {country}`
 
 Also try `/themes` (GeoMapFish), `/demo/` (MapProxy), `/net3/public/` (cardo), `/mapapps/` (map.apps), and tenant hosts `www2.wagmap.jp`, `geoportal2.pl`, `geocloud.jp`.
 
+## Named geospatial indexes {#named-geospatial-indexes}
+
+Prefer these bounded lists over unscoped “missing geoportals” searches:
+
+| Source | Use |
+|--------|-----|
+| [GeoNetwork gallery](https://github.com/geonetwork/doc/blob/develop/source/annexes/gallery/gallery-urls.csv) | Leftovers after the first pass — few live hosts remain |
+| [GeoNode](https://geonode.org/) gallery / showcase | Leftovers still yield live nodes (Sardinia, Neuquén, INTA, …) |
+| [STAC Index](https://stacindex.org/catalogs) | Public STAC catalogs not already registered |
+| [WMO WIS2 GDC](https://gdc.wis.cma.cn/) | Meteorological node catalogs (not MQTT topics). Software: `wis20box` / pygeoapi |
+| [MappingSupport GIS servers](https://mappingsupport.com/p/surf_gis/list-federal-state-county-city-GIS-servers.txt) | US ArcGIS Server REST roots — only unmatched *live* roots |
+| [FGDC Service Status Checker](https://statuschecker.fgdc.gov/) | US federal/state geospatial service hosts |
+| [Geoseer](https://www.geoseer.net/) | Indexed OGC services that actually have layers |
+| [ODIS catalogue](https://catalogue.odis.org/) | Ocean/coastal catalogs (often ERDDAP, GeoNetwork, CKAN) |
+| Vendor viewer lists | Hajk, KortInfo, GISApp, SeaSketch `/app`, GDi Visios, PISO hub, EnviMAP tenants |
+
+**One catalog per public product** still applies: do not add PISO municipal copies when `wwwgeoprostornet` is the hub; do not add `data.seasketch.org` ArcGIS REST next to a SeaSketch `/app`; do not add GISApp REST adaptors as a second city catalog.
+
+Custom-geoportal review (30 August 2026) left ~587 `custom` geoportals with **no remaining shared hostname/path pattern** large enough for a new `software.id`. Do not invent IDs for one-off national `.gov` map roots.
+
 ## Related
+
 - [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md)
 - [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md)
-
 - [discovery.md](discovery.md)
+- [discovery.md](discovery.md#hunt-patterns) — session hunt patterns
 - [discovery-search-tools.md](discovery-search-tools.md)
 - [discovery-opendata.md](discovery-opendata.md)
 - [harvest-geoportals.md](harvest-geoportals.md)

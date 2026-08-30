@@ -8,7 +8,7 @@ Three different jobs:
 | Find catalogs **not yet registered** | New portals, geoportals, repositories | This page, then [CONTRIBUTING.md](https://github.com/datenoio/dataportals-registry/blob/main/CONTRIBUTING.md) |
 | List **datasets inside** a registered catalog | Remote catalog APIs, with type filters | [harvest.md](harvest.md) |
 
-This page is for the second job: locating real catalog installations in the wild, checking they are not duplicates, and preparing them for a pull request. Coding agents should follow the shorter checklist in [agents/discover.md](agents/discover.md).
+This page is for the second job: locating real catalog installations in the wild, checking they are not duplicates, and preparing them for a pull request. Coding agents should follow the shorter checklist in [agents/discover.md](agents/discover.md). What to hunt next, and which prompts actually produced catalogs: [agents/improve.md](agents/improve.md).
 
 The registry records **catalogs** (portals, geoportals, repositories, and similar infrastructure). It does not store the datasets inside those catalogs. To crawl those datasets, see [harvest.md](harvest.md).
 
@@ -19,10 +19,10 @@ The registry records **catalogs** (portals, geoportals, repositories, and simila
 | [Search engines and internet maps](discovery-search-tools.md) | Google, Censys, Shodan, FOFA, URLScan, crt.sh, and similar tools |
 | [Agents, Cursor, ChatGPT](discovery-agent-tools.md) | Configure MCP, APIs, Custom GPTs, and LLM clients to use those tools |
 | [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye, Piveau, Our Open Data, DataPress, ResourceContracts, RDF Online Repository, Guangxi, ODWeb |
-| [Geoportals](discovery-geoportals.md) | Overview; SDI stacks: [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md) (G3W-SUITE, CubeWerx, M.App Enterprise, Sentinel Hub); viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md) (Trimble Locus / Louhi / Landfolio, Spatial Suite, KortInfo, GEUSMAP, GISApp, iObčina, iShare, Cadcorp) |
-| [Scientific repositories](discovery-scientific.md) | Institutional IRs and CRIS (DSpace, Hyrax, Figshare, Pure, Converis, Omega-PSIR, Archipelago, Redivis, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD); domain repos: [discovery-scientific-domain.md](discovery-scientific-domain.md) (InterMine, GRIN-Global, PlutoF, JGI, cBioPortal, ESA Science Archive) |
+| [Geoportals](discovery-geoportals.md) | Overview; SDI stacks: [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md); viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md) (GISApp, SmartMap, ISY Map, Avinet, MAP+, EnviMAP, PISO, GDi Visios, MapGuide, SeaSketch, Hajk, KortInfo, …) |
+| [Scientific repositories](discovery-scientific.md) | Institutional IRs and CRIS (DSpace, Hyrax, Figshare, Pure, Converis, Omega-PSIR, Archipelago, Redivis, DABAR, OpenScience.si, …); domain repos: [discovery-scientific-domain.md](discovery-scientific-domain.md) |
 | [Metadata catalogs](discovery-metadata.md) | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
-| [Indicators and microdata](discovery-indicators.md) | PxWeb, PxStat, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX, TabNet, SparkMap, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, StatPlanet |
+| [Indicators and microdata](discovery-indicators.md) | PxWeb, PxStat, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, StatPlanet |
 | [Search, ML, API, marketplaces](discovery-other.md) | Data search engines (Idra, OpenAIRE), ML catalogs, API directories, data marketplaces |
 
 ## Before you search
@@ -101,8 +101,35 @@ Many platforms publish installation galleries. Cross-check each URL against the 
 | [XNAT](https://www.xnat.org) | Neuroimaging archives |
 | [Open Microscopy / IDR](https://www.openmicroscopy.org/omero/) | OMERO public image archives |
 | [ROAR](http://roar.eprints.org) | Open-access repositories |
+| [OpenDOAR](https://v2.sherpa.ac.uk/opendoar/) | Directory of open-access repositories (country + software facets) |
+| [CoreTrustSeal](https://www.coretrustseal.org/) | Certified repositories — keep only those with a public dataset catalog |
+| [ODIS catalogue](https://catalogue.odis.org/) | Ocean Data and Information System catalog records |
+| [WMO WIS2 GDC](https://gdc.wis.cma.cn/) | WIS2 Global Discovery Catalogue (node catalogs, not MQTT topics) |
+| [CLARIN](https://www.clarin.eu/) / [VLO](https://vlo.clarin.eu/) | Linguistic data centers and corpora |
+| [MappingSupport GIS servers](https://mappingsupport.com/p/surf_gis/list-federal-state-county-city-GIS-servers.txt) | US ArcGIS Server REST roots (bounded list; skip unscoped US ArcGIS) |
+| [FGDC Service Status Checker](https://statuschecker.fgdc.gov/) | US federal/state geospatial service hosts |
+| [Geoseer](https://www.geoseer.net/) | Indexed OGC services with layer counts |
+| [GeoNode gallery](https://geonode.org/) | GeoNode installations (gallery leftovers still yield a few live hosts) |
 
 Vendor “customers” and “community” pages are useful but noisy: skip demos, marketing sites, and expired domains.
+
+## Hunt patterns {#hunt-patterns}
+
+Recent discovery sessions (through 30 August 2026) produced catalogs when they followed a **named list or a missing type**, not an unscoped web search. Copy these prompts; details live on the type pages.
+
+| Hunt | Prompt that works | Start from | Accept | Reject |
+|------|-------------------|------------|--------|--------|
+| Software instance | `Which {software} catalogs are missing?` | Vendor gallery / hostname pattern | Live public UI matching that `software.id` | Demos, marketplace tenants, a second copy of the same hub |
+| National harvest sources | `Which data sources harvested by {national portal} are missing?` | Harvest / organisations / catalogues API on the national site | Independent origin catalog (CKAN, GeoNetwork, Hub, agency `/opendata` list) | XML dataset feeds, price files, slices of the same national catalog, IR dumps already registered |
+| Country university IRs | `There are a lot of {country} universities… Which scientific repositories are missing?` | [OpenDOAR](https://v2.sherpa.ac.uk/opendoar/), [ROAR](http://roar.eprints.org), re3data country, OpenAIRE Graph | Public IR that **lists datasets** (DSpace Dataset type, Dataverse, research-data community) | Publication-only IRs, theses-only with no Dataset type, login walls, microstates with no universities |
+| Country indicators | `Which {country} indicators catalogs are missing?` | NSO site, health ministry, SDG, central bank | Queryable table DB or indicator explorer | PDF publications, CMS home, IMF NSDP already registered, agency PxWeb already on the national StatBank |
+| Named directory | `Which catalogs from {list URL} are missing?` | One bounded URL (ODIS, CoreTrustSeal, STAC Index, WIS2 GDC, GeoNode gallery) | Live catalog UI / harvestable API | Preservation systems with no dataset listing, org homepages, hijacked hosts |
+| Subnational coverage | `Which {country} cities and counties have catalogs that are missing?` | National harvest list + local-language open-data terms | Local owner in `{CC}/{ISO-3166-2}/` | Another US county ArcGIS Server unless a named list remains unmatched |
+| Custom-software review | `Review custom {type} catalogs for new software definitions` | Cluster remaining `software.id: custom` by hostname/path | New `software.id` only when ≥3 independent installs share a product | One-off `.gov` roots; keep those `custom` |
+
+Do more of: vendor lists, harvest-source dumps, country *shape* (missing type), named directories. Do less of: Google for “missing catalogs in the world”, university IR hunts for Monaco-class stubs, guessed HCI/Virtual LMI hostnames.
+
+Agent recipes: [agents/discover.md](agents/discover.md#hunt-types). Priority queue: [agents/improve.md](agents/improve.md).
 
 ## Identify the software {#identify-the-software}
 
@@ -141,6 +168,10 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | TabNet | title “TabNet Win32”, `deftohtm.exe`, `cgi-bin/dh` | Brazilian DATASUS tabulator |
 | FENIX | `fenixservices.fao.org`, FAOSTAT API, CountrySTAT UI | One FENIX app (FAOSTAT, AMIS, …), not a FAO CKAN dump |
 | SparkMap | sparkmap.org / All Things state hubs | One public hub (not CARES HQ as a second copy) |
+| eDatos | `*.edatos.io`, `/indicators/v1.0/indicators` | Public hub (not the NSO CMS home) |
+| Cancer-Rates.info | `cancer-rates.info/{st}/` public query UI | Skip login-walled tenant paths |
+| Conduent HCI | “Healthy Communities Institute” HTML | Public community indicator home |
+| Virtual LMI | `*.virtuallmi.com`, `/vosnet/` | State LMI home, not generic `/analyzer` |
 | Beyond 20/20 | `ReportFolders/reportFolders.aspx` | Public report/cube catalog |
 | RDF Online Repository | `*.revenuedev.org` | Country license portal |
 | ResourceContracts | `resourcecontracts.org` | Hub or country contract catalog |
@@ -164,6 +195,10 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | SDMX-RI | `NSIWebService` / NSIStdV20Service | Public NSI/SDMX catalog |
 | GENESIS-Online | `/genesis/online` | Table catalog (POST-heavy API) |
 | IBIS-PH | `/ibisph-view/`, IBIS-Q | Public indicator home |
+| eDatos | `/indicators/v1.0/indicators`, `*.edatos.io` | JSON-stat or public ODS UI |
+| Cancer-Rates.info | `cancer-rates.com/{code}/` | Public query UI, not login |
+| Conduent HCI | “Healthy Communities Institute” | Public indicator home |
+| Virtual LMI | `*.virtuallmi.com`, `/vosnet/` | Public LMI home |
 | DHIS2 | `/api/system/info`, `/dhis-web-commons/` | JSON `version` from system info; skip login-only HMIS |
 | IPUMS | `*.ipums.org`, extract UI | Collection home (USA, International, CPS, …), not a single extract |
 | OpenAIRE | `explore.openaire.eu`, `*.openaire.eu` CONNECT gateway | EXPLORE or national/community gateway home, not a single research product |
@@ -409,7 +444,7 @@ Duplicate-check `link` **and** the service origin before `add-single`. Harvest f
 - [discovery-opendata.md](discovery-opendata.md) / [discovery-geoportals.md](discovery-geoportals.md) ([SDI](discovery-geoportals-sdi.md), [viewers](discovery-geoportals-viewers.md)) / [discovery-scientific.md](discovery-scientific.md) ([domain](discovery-scientific-domain.md)) / [discovery-metadata.md](discovery-metadata.md) / [discovery-indicators.md](discovery-indicators.md) / [discovery-other.md](discovery-other.md)
 - [software-index.md](software-index.md) — every `software.id` → recipe
 - [apidetect.md](apidetect.md) / [liveness.md](liveness.md)
-- [agents/discover.md](agents/discover.md) — agent checklist
+- [agents/discover.md](agents/discover.md) — agent checklist ([hunt types](agents/discover.md#hunt-types))
 - [agents/improve.md](agents/improve.md) — what to hunt next
 - [agents/contribute.md](agents/contribute.md) — write YAML after a find
 - [catalog-types.md](catalog-types.md)

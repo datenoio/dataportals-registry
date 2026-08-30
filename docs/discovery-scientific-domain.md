@@ -6,6 +6,8 @@ High-count domain stacks with their own recipes: IPT, Symbiota, THREDDS, ERDDAP,
 
 One portal / node = one registry record. Do not add gene pages, occurrences, or ESGF data nodes as extra catalogs.
 
+Ocean and earth **directories** (not software): [ODIS](https://catalogue.odis.org/), [PANGAEA harvest sources](https://www.pangaea.de/), [WMO WIS2 GDC](https://gdc.wis.cma.cn/), DataONE member nodes, [CLARIN](https://www.clarin.eu/) / VLO. Treat each as a named-list hunt ([discovery.md](discovery.md#hunt-patterns)); skip org homepages and hijacked hosts.
+
 ## GBIF IPT (`ipt`) {#ipt}
 
 Integrated Publishing Toolkit for biodiversity data. List: [gbif.org/ipt](https://www.gbif.org/ipt).

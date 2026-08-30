@@ -504,9 +504,35 @@ Try these on a **named** government or city host only (not as an internet-wide s
 
 Search with local terms plus the city: `datos abiertos "Rosario"`, `offene Daten "Leipzig"`, `开放数据 市`.
 
+## National harvest sources {#national-harvest-sources}
+
+When a country already has a national open-data portal, its **harvest / organisations / catalogues API** is a better candidate list than Google. Prompt: `Which data sources harvested by {national portal} are missing?`
+
+Portals that produced origin catalogs in 28–30 August 2026 sessions:
+
+| National portal | What to pull | Typical origin catalogs |
+|-----------------|--------------|-------------------------|
+| [data.go.id](https://data.go.id/) | Harvest-source list | Provincial/city CKAN and GeoServer (112 scheduled in one pass) |
+| [datos.gob.es](https://datos.gob.es/) | Harvest sources | City/province CKAN and custom `/datos` |
+| [opendata.swiss](https://opendata.swiss) | Harvest sources | Cantonal votes, BAG indicator DBs, Viageo — not geocat/I14Y/LINDAS slices |
+| [data.gov.ru](https://data.gov.ru/) | Organisations with `/opendata` | Federal agency `list.csv` catalogs (Rosstat, Minenergo, …) |
+| [search.open.canada.ca](https://search.open.canada.ca/opendata/) | Harvested origin URLs | Provincial geo/scientific portals not already in the registry |
+| [data.gouv.fr](https://www.data.gouv.fr/) | Harvest sources | Local CKAN / uData / OpenDataSoft |
+| [www.govdata.de](https://www.govdata.de/) | Harvest sources | Länder / municipal CKAN |
+| [www.data.go.kr](https://www.data.go.kr/) | Harvest sources | Ministry/local portals |
+| [dane.gov.pl](https://dane.gov.pl) | Institutions API | CKAN city catalogs only — thousands of XML dataset feeds are not catalogs |
+| [data.europa.eu catalogues](https://data.europa.eu/data/catalogues) | Catalogue list | Member-state catalogs |
+
+**Accept:** a live independent catalog UI on the origin host (CKAN `/api/3`, GeoNetwork CSW, ArcGIS Hub, agency `/opendata` dataset list). `is_national: false` on those origin catalogs.
+
+**Reject:** harvest-source *rows* inside the national CKAN; XML/CSV dataset feeds and developer price files; slices of the same national catalog (geocat, I14Y, LINDAS); scientific IR dumps already registered; login walls; a private ArcGIS org when a public Hub exists (register the Hub).
+
+Duplicate-check the origin hostname, then GET the origin homepage. Do not invent harvest API paths — use the portal’s documented organisations/harvest endpoint.
+
 ## Related
 
 - [discovery.md](discovery.md)
+- [discovery.md](discovery.md#hunt-patterns) — session hunt patterns
 - [discovery-search-tools.md](discovery-search-tools.md)
 - [discovery-metadata.md](discovery-metadata.md)
 - [discovery-indicators.md](discovery-indicators.md)
