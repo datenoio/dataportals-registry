@@ -2,9 +2,9 @@
 
 A global registry of data portals, catalogs, data repositories, and related data infrastructure.
 
-**Working tree (2 September 2026):** **29,816** verified catalogs · **366** software platforms · **222** countries and territories · **0** scheduled records.
+**Working tree (3 September 2026):** **29,816** verified catalogs · **366** software platforms · **222** countries and territories · **0** scheduled records.
 
-Last published snapshot: [v1.18.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.18.0), 28 August 2026 (**24,993** catalogs · **282** software · **7** scheduled).
+Last published snapshot: [v1.19.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.19.0), 3 September 2026 (**29,816** catalogs · **366** software · **0** scheduled).
 
 This is the catalog-metadata pillar of the [Common Data Index](https://dateno.io) / open search engine. It describes **catalogs** (open data portals, geoportals, scientific repositories, indicator sites, and similar infrastructure), not the datasets those catalogs hold.
 
@@ -45,7 +45,7 @@ More patterns: [docs/query-examples.md](docs/query-examples.md). Join keys and c
 
 ### Data exports
 
-Last published snapshot (**v1.18.0**, 2026-08-28: 24,993 catalogs, 282 software, 7 scheduled). Working-tree dumps last rebuilt **2 September 2026** to **29,816** catalogs / **0** scheduled / **366** software. Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
+Last published snapshot (**v1.19.0**, 2026-09-03: 29,816 catalogs, 366 software, 0 scheduled). Exports match source YAML. Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
 
 | File | Contents |
 |------|----------|

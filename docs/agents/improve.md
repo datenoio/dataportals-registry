@@ -2,7 +2,7 @@
 
 How to grow coverage and quality, based on **~3,200 Cursor sessions** (November 2025–30 August 2026) and the releases they produced. This is the *what to work on next* guide. Mechanics live in [discover.md](discover.md), [contribute.md](contribute.md), [scheduled.md](../scheduled.md), and [metadata-quality.md](../metadata-quality.md). Hunt-pattern table: [discovery.md](../discovery.md#hunt-patterns).
 
-Working tree after those sessions: **26,017** verified catalogs, **177** scheduled, **297** software IDs, **222** country folders. Published snapshot: v1.18.0 (24,993 catalogs, 7 scheduled, 282 software). YAML is ahead of exports until the next `build`.
+Working tree after those sessions: **29,816** verified catalogs, **0** scheduled, **366** software IDs, **222** country folders. Published snapshot: v1.19.0 (29,816 catalogs, 0 scheduled, 366 software). YAML matches exports.
 
 ## What those sessions actually did
 
@@ -25,7 +25,7 @@ Volume came from a **small number of session types**, not from the 1,500 one-off
 | v1.16.0 | +1,002 | +24 | Platform instance lists (DSpace, Figshare, Nordic viewers, TabNet, FENIX, …) |
 | v1.17.0 | +2,608 | +15 | OpenAIRE Graph harvest (2,409 promoted; 664 dropped) + IMF NSDP + domain science |
 | v1.18.0 | +2,243 | +20 | Viewer products (e-mapa, Kortasjá, Swing, Hajk), DSpace IRs, MappingSupport ArcGIS, India/Nigeria depth |
-| Unreleased (28–30 Aug 2026) | YAML ahead of v1.18.0 | +15-class | Country indicators wave, university IR country hunts, national harvest sources (data.go.id 112), named directories (ODIS, CoreTrustSeal, WIS2 GDC), viewer IDs (SeaSketch, PISO, GDi Visios, …) |
+| v1.19.0 | +4,823 | +84 | Municipal GIS viewers (Experience Builder, Mapotip, GisMaster, GISPLAN, IntraMaps, SonicWeb, …), harvest-source dumps, university IRs, named directories |
 
 **Lesson:** one bounded vendor list, harvest-source dump, or named directory outperforms dozens of “missing {country}” chats. After v1.18.0 the high-yield *prompts* shifted: `Which {country} indicators…`, `There are a lot of {country} universities…`, `Which data sources harvested by {national portal}…`, `Which catalogs from {list URL}…`. Country hunts still matter when the hole is *shape* (no scientific IRs with datasets, no native NSO table DB), not *count*.
 

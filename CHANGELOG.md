@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.19.0] - 2026-09-03
+
+**GitHub Release**: [v1.19.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.19.0) - Published September 3, 2026
+
 ### Added
 
 - **4,823 net new catalog entries** since v1.18.0 (4,836 added, 13 removed); registry source now **29,816** entities (**0** scheduled) across **222** country/territory folders (added Bermuda `BM`, French Polynesia `PF`, and Réunion `RE`).
