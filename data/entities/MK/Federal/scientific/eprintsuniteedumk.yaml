@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: MK
+      name: Republic of North Macedonia
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: EPrints 3 institutional repository of the State University of Tetova
+  (Universiteti i Tetoves) for academic publications and research outputs. OAI-PMH
+  at /cgi/oai2.
+endpoints:
+- type: oaipmh20
+  url: https://eprints.unite.edu.mk/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://eprints.unite.edu.mk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://eprints.unite.edu.mk/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://eprints.unite.edu.mk/rest/eprint
+- type: eprints:rdf
+  url: https://eprints.unite.edu.mk/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://eprints.unite.edu.mk/cgi/export/repository/RDFN3/devel.n3
+id: eprintsuniteedumk
+langs:
+- id: SQ
+  name: Albanian
+- id: MK
+  name: Macedonian
+- id: EN
+  name: English
+link: https://eprints.unite.edu.mk
+name: University of Tetova Academic Repository
+owner:
+  link: https://www.unite.edu.mk
+  location:
+    country:
+      id: MK
+      name: Republic of North Macedonia
+    level: 20
+  name: State University of Tetova
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- Republic of North Macedonia
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994614

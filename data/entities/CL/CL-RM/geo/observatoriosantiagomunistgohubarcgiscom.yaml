@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CL
+      name: Chile
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: CL-RM
+      name: Región Metropolitana de Santiago
+description: Download catalog of the Observatorio Santiago. Public ArcGIS Hub geoportal
+  of territorial layers for the Municipality of Santiago.
+endpoints:
+- type: ogcrecordsapi
+  url: https://observatorio-santiago-munistgo.hub.arcgis.com/api/search/v1
+id: observatoriosantiagomunistgohubarcgiscom
+langs:
+- id: ES
+  name: Spanish
+link: https://observatorio-santiago-munistgo.hub.arcgis.com
+name: Observatorio Santiago
+owner:
+  link: https://www.munistgo.cl
+  location:
+    country:
+      id: CL
+      name: Chile
+    level: 30
+    subregion:
+      id: CL-RM
+      name: Región Metropolitana de Santiago
+  name: Municipalidad de Santiago
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- Chile
+- municipal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99995805

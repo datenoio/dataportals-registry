@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IL
+      name: Israel
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion: &id001
+      id: IL-Z
+      name: Ash Shamālī
+description: Intertown ArcGIS REST services of Kiryat Shmona Municipality, including
+  general municipal layers and local planning data.
+endpoints:
+- type: arcgis:rest:info
+  url: https://ags20.intertown.co.il/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ags20.intertown.co.il/arcgis/rest/services/kr8_layers?f=pjson
+- type: arcgis:soap
+  url: https://ags20.intertown.co.il/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://ags20.intertown.co.il/arcgis/rest/services/kr8_layers?f=sitemap
+- type: arcgis:geositemap
+  url: https://ags20.intertown.co.il/arcgis/rest/services/kr8_layers?f=geositemap
+id: ags20intertowncoilkr8layers
+langs:
+- id: HE
+  name: Hebrew
+link: https://ags20.intertown.co.il/arcgis/rest/services/kr8_layers
+name: Kiryat Shmona Municipality GIS
+owner:
+  link: https://www.k-shmona.muni.il
+  location:
+    country:
+      id: IL
+      name: Israel
+    level: 30
+    subregion: *id001
+  name: Kiryat Shmona Municipality
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Israel
+- arcgisserver
+- geospatial
+- municipal GIS
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: cdi99996073

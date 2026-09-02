@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 50
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-ARA
+      name: Auvergne-Rhône-Alpes
+description: Public GeoNetwork metadata catalog of Grenoble-Alpes Métropole.
+endpoints:
+- type: csw202
+  url: https://geonetwork.grenoblealpesmetropole.fr/geonetwork/srv/fre/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+id: geonetworkgrenoblealpesmetropolefr
+langs:
+- id: FR
+  name: French
+link: https://geonetwork.grenoblealpesmetropole.fr/geonetwork
+name: Catalogue de Grenoble Alpes Métropole
+owner:
+  link: https://www.grenoblealpesmetropole.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-ARA
+      name: Auvergne-Rhône-Alpes
+  name: Grenoble-Alpes Métropole
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- geoportal
+- geonetwork
+- France
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99996615

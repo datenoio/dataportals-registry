@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-IB
+      name: Illes Balears [Islas Baleares]
+description: Spatial data infrastructure of the Consell de Mallorca (IDEmallorca),
+  with a public ArcGIS Portal, REST map services, and OGC WMS for island planning,
+  limits, and territorial layers. Distinct from the IDELMA GeoNetwork catalogue.
+endpoints:
+- type: arcgis:rest:info
+  url: https://ide.conselldemallorca.net/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ide.conselldemallorca.net/server/rest/services?f=pjson
+- type: arcgis:portals:self
+  url: https://geoportal.conselldemallorca.net/arcgis/sharing/rest/portals/self?f=pjson
+- type: wms130
+  url: https://ide.conselldemallorca.net/server/services/public/ws_limits/MapServer/WMSServer?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: ideconselldemallorcanet
+langs:
+- id: ES
+  name: Spanish
+- id: CA
+  name: Catalan
+link: https://ide.conselldemallorca.net/server/rest/services
+name: IDEmallorca
+owner:
+  link: https://www.conselldemallorca.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-IB
+      name: Illes Balears [Islas Baleares]
+  name: Consell de Mallorca
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geoportal
+- GIS
+- ArcGIS
+- island
+topics:
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99996808

@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: Public ArcGIS REST services directory for the Thompson-Nicola Regional
+  District, including member municipality parcel, zoning, and utility map services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://portal.tnrd.ca/ags/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://portal.tnrd.ca/ags/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://portal.tnrd.ca/ags/services?wsdl
+- type: arcgis:sitemap
+  url: https://portal.tnrd.ca/ags/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://portal.tnrd.ca/ags/rest/services?f=geositemap
+id: portaltnrdca
+langs:
+- id: EN
+  name: English
+link: https://portal.tnrd.ca/ags/rest/services
+name: Thompson-Nicola Regional District GIS REST Services
+owner:
+  link: https://www.tnrd.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: Thompson-Nicola Regional District
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- government
+topics:
+- id: GEOS
+  name: Geospatial
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99998091

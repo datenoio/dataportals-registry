@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -21,6 +21,9 @@ coverage:
 description: Public ArcGIS Enterprise Sites catalog (GeoHUB) of the City of Tartu.
   Hostname geohub.tartulv.ee redirects to gis.tartulv.ee Sites. Distinct from Tartu
   Avaandmed on ArcGIS Hub Online and from the municipal REST directory.
+endpoints:
+- type: arcgishub:catalog
+  url: https://gis.tartulv.ee/portal/apps/sites/#/geohub/
 id: geohubtartulvee
 langs:
 - id: EN
@@ -51,8 +54,8 @@ rights:
   rights_type: granular
   tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
 software:
-  id: custom
-  name: Custom software
+  id: arcgishub
+  name: ArcGIS Hub
 status: active
 tags:
 - government

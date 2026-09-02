@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: Public Geocortex HTML5 map viewer for the Regional District of Nanaimo,
+  British Columbia.
+endpoints:
+- type: geocortex:catalog
+  url: https://webmap.rdn.bc.ca/Html5Viewer/?viewer=Public
+id: webmaprdnbcca
+langs:
+- id: EN
+  name: English
+link: https://webmap.rdn.bc.ca/Html5Viewer/?viewer=Public
+name: Regional District of Nanaimo Public Web Map
+owner:
+  link: https://www.rdn.bc.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: Regional District of Nanaimo
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- Geocortex
+topics:
+- id: GEOS
+  name: Geospatial
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99995741

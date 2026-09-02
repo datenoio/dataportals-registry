@@ -14,6 +14,7 @@ Replace `https://host` with the catalog origin. GET only. Stop on `401`/`403`. P
 | ResourceContracts **contract** / RDF Online Repository **license** | Vendor About page, per-clause chrome, login-only company filing |
 | Guangxi tenant **open dataset** | Login-only apply / API-gateway flows |
 | ODWeb `/odweb/` **dataset** | Parent government homepage, login-only apply flows |
+| OpenGov **report / story** on `{org}.opengov.com` | Vendor marketing; Highcharts series as separate catalogs |
 | The dataset landing API object | Harvest **source** metadata (the remote catalog CKAN is pulling from) |
 | | Showcase, article, blog, app gallery, idea box |
 | | Organization or group objects without a dataset list |
@@ -132,7 +133,7 @@ Keep **datasets**, not every named graph or SPARQL binding. One instance, not on
 
 ## LKOD (`lkod`) {#lkod}
 
-Czech local DCAT-AP-CZ. Harvest `dcat:Dataset` from the municipal LKOD UI/API. Do not also harvest NKOD for the same datasets.
+Czech local DCAT-AP-CZ. Harvest `dcat:Dataset` from the municipal LKOD UI/API. Slovak clones often expose Turtle at `/opendata/set/lkod` — harvest that graph, not POMOSAM disclosure pages on the same city. Do not also harvest NKOD or data.slovensko.sk for the same datasets.
 
 ## OGD Platform India (`ogdindia`) {#ogdindia}
 
@@ -166,6 +167,16 @@ Slovak municipal disclosure platforms. Harvest the open-data / dataset module. S
 
 `seu-e.cat` e-office tenants. Harvest **dades obertes** listings only, not the whole electronic office.
 
+## ATM Maggioli (`atmmaggioli`) {#atmmaggioli}
+
+Spanish sede electrónica tenants. Harvest the **dataset list** on `/transparencia/datos/catalogo` only.
+
+**Keep:** rows that are datasets (title + landing or file URL). **Drop:** the rest of the e-office, transparency obligation pages, and guessed CKAN/OpenDataSoft/Socrata paths (they are HTML). If the list is HTML-only with no machine table, stop. One municipality tenant = one harvest scope.
+
+## OpenGov (`opengov`) {#opengov}
+
+US `{org}.opengov.com` financial transparency. Harvest named **reports / stories** on `/transparency` or `/data/`, not every Highcharts breakdown. One government tenant = one harvest scope. Distinct from the city’s CKAN/Socrata/ArcGIS Hub open-data portal.
+
 ## Drupal (`drupal`) {#drupal}
 
 Only when the public product is a dataset catalog (not a news CMS).
@@ -193,7 +204,7 @@ CKAN plus CMS. Harvest `package_search` as in [CKAN](#ckan). Do not harvest CMS 
 
 ## Our Open Data (`ouropendata`) {#ouropendata}
 
-Japanese Our Open Data: harvest the catalog home / numeric dataset list, not idea-box posts.
+Japanese Our Open Data / SHIRASAGI catalog: harvest `/api/package_list` or the catalog home / numeric dataset list, not idea-box posts. Do not treat `/api/package_list` as CKAN.
 
 ## Gipuzkoa Irekia (`gipuzkoairekia`) {#gipuzkoairekia}
 
@@ -286,7 +297,7 @@ JSON:API collection (`data[].type == "dataset"`, `meta.total`). Page with the AP
 
 ## Portals without a dataset API
 
-Liferay, POMOSAM, oPortal, OGD India, Seoul plaza, Drupal, and WordPress are covered above when a list exists. If there is still no machine-readable catalog, stop. Generic DCAT paths: `/catalog.xml`, `/data.json` ([harvest-protocols.md](harvest-protocols.md#dcat)).
+Liferay, POMOSAM, ATM Maggioli, oPortal, OGD India, Seoul plaza, Drupal, and WordPress are covered above when a list exists. If there is still no machine-readable catalog, stop. Generic DCAT paths: `/catalog.xml`, `/data.json` ([harvest-protocols.md](harvest-protocols.md#dcat)).
 
 ## Related
 

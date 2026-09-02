@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-ES
+      name: Espírito Santo
+description: ArcGIS Enterprise geoportal of the Municipality of Serra (Portal Serra
+  em Mapas / GeoSerra), with a public Hub site, cartographic base, and REST map services.
+endpoints:
+- type: arcgis:portals:self
+  url: https://mapas.serra.es.gov.br/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://mapas.serra.es.gov.br/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mapas.serra.es.gov.br/server/rest/services?f=pjson
+id: mapasserraesgovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://mapas.serra.es.gov.br/portal
+name: Portal Serra em Mapas
+owner:
+  link: https://www.serra.es.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-ES
+      name: Espírito Santo
+  name: Prefeitura Municipal da Serra
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- Brazil
+- Serra
+- Espírito Santo
+- municipal
+- geospatial
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99995942

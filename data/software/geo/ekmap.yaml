@@ -1,0 +1,60 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: ekmap
+name: eKMap Cloud
+website: https://ekgis.com.vn/ekmap-platform/
+description: eKMap Cloud is eKGIS's Vietnamese provincial planning GIS. Public
+  viewers share Mapbox GL JS 1.13, `assets/ekmapboxgl/ekmap-mapboxgl.js`,
+  `assets/ekmapboxgl/common.js`, and mapbox-gl-compare, often with title
+  `eKMap Cloud`. Distinct from Hanoi `quyhoach.hanoi.gov.vn` (Next.js, not
+  eKMap), Vinh Phuc OpenLayers 6 planning maps, and HCMC VLAB Leaflet
+  planning. Do not set ekmap from a site that only loads Mapbox GL without
+  the ekmapboxgl assets.
+owner:
+  name: eKGIS
+  location:
+    country:
+      id: VN
+      name: Vietnam
+documentation_url: https://docs.ekgis.vn/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- JSON
+capabilities:
+- Map viewer
+- Planning GIS
+last_updated: '2026-09-02T00:00:00Z'

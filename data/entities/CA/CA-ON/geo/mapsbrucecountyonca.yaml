@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: Public Geocortex Essentials site catalog for Bruce County, Ontario, including
+  Bruce County Maps Public and land use planning sites.
+endpoints:
+- type: customapi
+  url: https://maps.brucecounty.on.ca/Geocortex/Essentials/REST/sites?f=pjson
+id: mapsbrucecountyonca
+langs:
+- id: EN
+  name: English
+link: https://maps.brucecounty.on.ca/Geocortex/Essentials/REST/sites
+name: Bruce County Geocortex GIS
+owner:
+  link: https://www.brucecounty.on.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: Bruce County
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- Geocortex
+topics:
+- id: GEOS
+  name: Geospatial
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99995865

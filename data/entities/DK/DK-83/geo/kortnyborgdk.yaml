@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: DK-83
+      name: Syddanmark
+description: Public MapCentia Vidi WebGIS of Nyborg Municipality, providing municipal
+  geographic themes and local map layers.
+endpoints:
+- type: gc2:catalog
+  url: https://kort.nyborg.dk/app/nyborg_gis/?config=/api/v2/configuration/nyborg_gis/configuration_kortnyborg_62f4e0f32ccda467979749.json
+id: kortnyborgdk
+langs:
+- id: DA
+  name: Danish
+link: https://kort.nyborg.dk/app/nyborg_gis/?config=/api/v2/configuration/nyborg_gis/configuration_kortnyborg_62f4e0f32ccda467979749.json
+name: Nyborg Kommune WebGIS
+owner:
+  link: https://www.nyborg.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 30
+    subregion:
+      id: DK-83
+      name: Syddanmark
+  name: Nyborg Municipality
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: gc2
+  name: GC2
+status: active
+tags:
+- geoportal
+- map viewer
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99996747

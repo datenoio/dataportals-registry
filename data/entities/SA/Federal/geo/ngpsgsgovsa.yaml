@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Hexagon GeoMedia WebMap / Geospatial Portal of the Saudi Geological Survey
+  National Geological Database, publishing geological maps, mineral occurrence sites,
+  borehole and core data, and geochemical and geophysical survey layers.
+endpoints:
+- type: geomediawebmap:catalog
+  url: https://ngp.sgs.gov.sa/
+id: ngpsgsgovsa
+langs:
+- id: AR
+  name: Arabic
+- id: EN
+  name: English
+link: https://ngp.sgs.gov.sa/
+name: SGS National Geological Database Portal
+owner:
+  link: https://www.sgs.gov.sa
+  location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 20
+  name: Saudi Geological Survey
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geomediawebmap
+  name: GeoMedia WebMap
+status: active
+tags:
+- GIS
+- geoportal
+- geology
+- government
+- Hexagon
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99996417

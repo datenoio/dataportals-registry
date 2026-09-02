@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-RJ
+      name: Rio de Janeiro
+description: ArcGIS Enterprise geoportal of the Municipality of Maricá (SINFORMAR),
+  with a public Hub site and REST map services for cadastre, zoning, transport, and
+  urban layers.
+endpoints:
+- type: arcgis:portals:self
+  url: https://sinfor.marica.rj.gov.br/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://sinfor.marica.rj.gov.br/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sinfor.marica.rj.gov.br/server/rest/services?f=pjson
+id: sinformaricarjgovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://sinfor.marica.rj.gov.br/
+name: SINFORMAR Maricá
+owner:
+  link: https://www.marica.rj.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-RJ
+      name: Rio de Janeiro
+  name: Prefeitura Municipal de Maricá
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- Brazil
+- Maricá
+- Rio de Janeiro
+- municipal
+- geospatial
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99995955

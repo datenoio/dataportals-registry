@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Utdanningsdirektoratet statistical bank of kindergarten, primary, lower
+  and upper secondary, and vocational education tables. Public reports are filterable
+  by geography and unit. An open REST API currently covers Elevundersøkelsen exports.
+  School-level unredacted cells require login.
+endpoints:
+- type: rest
+  url: https://api.statistikkbanken.udir.no/api/rest/v2/Eksport
+- type: docs
+  url: https://apikonsoll.statistikkbanken.udir.no/
+id: statistikkbankenudirno
+langs:
+- id: 'NO'
+  name: Norwegian
+link: https://www.udir.no/tall-og-forskning/statistikk/statistikkbank/
+name: Udir Statistikkbank
+owner:
+  link: https://www.udir.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: Norwegian Directorate for Education and Training
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: NLOD-2.0
+  license_name: Norwegian Licence for Open Government Data (NLOD) 2.0
+  license_url: https://data.norge.no/nlod/en/2.0/
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- education
+- government
+- Norway
+- indicators
+- has_api
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99995051

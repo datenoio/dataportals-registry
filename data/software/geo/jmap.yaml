@@ -1,0 +1,59 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: jmap
+name: JMap
+website: https://k2geospatial.com/
+description: JMap is K2 Geospatial's map-based integration platform (JMap Web
+  and JMap NG). Public catalogs use /JMapWeb/ with jmap.min.js, JMap NG
+  /services/ng/ loading jmapserver-ng, or hosted tenants on *.jmaponline.net.
+  Distinct from ArcGIS viewers and from hostnames that merely contain "jmap"
+  (Gyeongju gjmap, Rutgers NJMaps). Do not register JMap Admin login.
+owner:
+  name: K2 Geospatial
+  location:
+    country:
+      id: CA
+      name: Canada
+documentation_url: https://doc.k2geospatial.com/jmap/doc/7_jakarta/admin/en/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- GeoJSON
+- JSON
+capabilities:
+- Map viewer
+- Municipal GIS
+last_updated: '2026-09-02T00:00:00Z'

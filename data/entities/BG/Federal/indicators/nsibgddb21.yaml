@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: NSI Dissemination DataBase exposing selected tourism, agriculture, national
+  accounts and structural business statistics as SDMX 2.1 dataflows, with an SDMX-RI
+  web client for custom tables.
+endpoints:
+- type: sdmxri:catalog
+  url: https://www.nsi.bg/ddb2.1/
+id: nsibgddb21
+langs:
+- id: BG
+  name: Bulgarian
+- id: EN
+  name: English
+link: https://www.nsi.bg/ddb2.1/
+name: NSI Dissemination DataBase (SDMX-RI)
+owner:
+  link: https://www.nsi.bg
+  location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+  name: National Statistical Institute of Bulgaria
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: sdmxri
+  name: SDMX-RI
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- SDMX
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
+uid: cdi99994816

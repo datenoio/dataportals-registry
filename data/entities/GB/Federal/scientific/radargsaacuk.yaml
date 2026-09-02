@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -18,6 +18,10 @@ description: This is the Glasgow School of Arts research repository, which provi
   digital archive of the research and enterprise output produced by Glasgow School
   of Art staff and postgraduate students. Full text is available where possible, and
   some additional content is available on request. The interface is in English.
+endpoints:
+- type: oaipmh20
+  url: https://radar.gsa.ac.uk/cgi/oai2?verb=Identify
+  version: '2.0'
 id: radargsaacuk
 identifiers:
 - id: openaire
@@ -26,7 +30,7 @@ identifiers:
 langs:
 - id: EN
   name: English
-link: http://radar.gsa.ac.uk/
+link: https://radar.gsa.ac.uk/
 name: Research Art Design Architecture Repository
 owner:
   link: http://www.gsa.ac.uk/
@@ -37,8 +41,8 @@ owner:
   name: Glasgow School of Art
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: eprints
+  name: EPrints
 status: active
 tags:
 - scientific

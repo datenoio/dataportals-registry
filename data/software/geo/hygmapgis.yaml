@@ -1,0 +1,62 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: hygmapgis
+name: HyG Mapgis
+website: https://hyg.com.co
+description: >
+  HyG Mapgis (Suite MapGIS) is an on-premises municipal and regional GIS viewer
+  from H&G Consultores S.A.S (Medellín). Installs use /mapgis/mapa.jsp?aplicacion=
+  or /mapgis9/mapa.jsp?aplicacion= over ArcGIS Server/Java, with footer text
+  Desarrollado por HyG Consultores S.A.S. Distinct from Zondy Cyber MapGIS
+  IGServer (mapgisigserver, /igs/rest/). Do not register a second ArcGIS Server
+  catalog on the same Mapgis host, and do not add Mapgis as a second product on a
+  host that already has GeoNetwork as the public catalog.
+owner:
+  name: H&G Consultores S.A.S
+  location:
+    country:
+      id: CO
+      name: Colombia
+logo_url: https://hyg.com.co/favicon.ico
+documentation_url: https://hyg.com.co
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+export_formats:
+- JSON
+capabilities:
+- Map viewer
+- Municipal GIS
+last_updated: '2026-08-31T14:16:00Z'

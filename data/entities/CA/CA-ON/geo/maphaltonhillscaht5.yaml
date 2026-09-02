@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: Town of Halton Hills MapLinks public Geocortex viewer for parcels, addresses,
+  streets, parks, municipal boundaries, and aerial imagery.
+endpoints:
+- type: geocortex:sites
+  url: https://map.haltonhills.ca/Geocortex/Essentials/REST/sites?f=pjson
+id: maphaltonhillscaht5
+langs:
+- id: EN
+  name: English
+link: https://map.haltonhills.ca/HT5/Index.html?viewer=p.HT5
+name: Town of Halton Hills MapLinks
+owner:
+  link: https://www.haltonhills.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: Town of Halton Hills
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- Geocortex
+- Ontario
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99998253

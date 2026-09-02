@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Capital Market Authority open data library of quarterly and annual statistical
+  bulletins on equities, sukuk, mutual funds, fintech, corporate governance, securities
+  offerings, and licensed institutions, with Excel, CSV, JSON, and XML downloads.
+endpoints:
+- type: sitemap
+  url: https://cma.gov.sa/sitemap.xml
+- type: openapi
+  url: https://opendataapi.cma.gov.sa/swagger/v1/swagger.json
+id: cmagovsa
+langs:
+- id: AR
+  name: Arabic
+- id: EN
+  name: English
+link: https://cma.gov.sa/en/AboutCMA/ResearchAndReports/opendata/Pages/default.aspx
+name: Capital Market Authority Open Data Library
+owner:
+  link: https://cma.gov.sa
+  location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 20
+  name: Capital Market Authority
+  type: Central government
+properties:
+  dataset_count_reported: 9
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- capital market
+- official statistics
+- open data
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99994989

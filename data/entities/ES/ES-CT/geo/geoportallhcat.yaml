@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+description: Municipal geoportals of the Ajuntament de L'Hospitalet de Llobregat (cartography,
+  urban planning, public space, and city guide viewers) with GeoServer WMS. Distinct
+  from the Socrata open-data portal.
+endpoints:
+- type: wms130
+  url: https://geoportal.l-h.cat/servidormapes/GeoServerWMS.ashx?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wms111
+  url: https://geoportal.l-h.cat/servidormapes/GeoServerWMS.ashx?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+id: geoportallhcat
+langs:
+- id: ES
+  name: Spanish
+- id: CA
+  name: Catalan
+link: https://geoportal.l-h.cat/
+name: GeoPortals Ajuntament de L'Hospitalet
+owner:
+  link: https://www.l-h.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+  name: Ajuntament de L'Hospitalet de Llobregat
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geoportal
+- GIS
+- municipal
+- geoserver
+topics:
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99996806

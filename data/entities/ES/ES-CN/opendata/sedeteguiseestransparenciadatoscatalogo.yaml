@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,31 +12,13 @@ coverage:
       name: Spain
     level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
     subregion:
       id: ES-CN
       name: Canarias
-description: Sede electrÃ³nica del grupo ATM-Maggioli
-endpoints:
-- type: ckan
-  url: https://sede.teguise.es/api/3
-- type: ckan
-  url: https://sede.teguise.es/api/3/action/package_list
-- type: opendatasoft
-  url: https://sede.teguise.es/api/v2/catalog
-- type: socrata
-  url: https://sede.teguise.es/api/views
-- type: dcatap201
-  url: https://sede.teguise.es/api/feed/dcat
-- type: dcat
-  url: https://sede.teguise.es/catalog.xml
-- type: dcatap
-  url: https://sede.teguise.es/catalog.rdf
-- type: dcat:jsonld
-  url: https://sede.teguise.es/catalog.jsonld
-- type: sitemap
-  url: https://sede.teguise.es/sitemap.xml
+description: ATM Maggioli sede electrónica open-data catalog of the Ayuntamiento de
+  Teguise, listing reusable municipal datasets on /transparencia/datos/catalogo.
 id: sedeteguiseestransparenciadatoscatalogo
 langs:
 - id: ES
@@ -50,16 +32,15 @@ owner:
     subregion:
       id: ES-CN
       name: Canarias
-  name: Datos abiertos Teguise
+  name: Ayuntamiento de Teguise
   type: Local government
   link: https://teguise.es
 software:
-  id: custom
-  name: Custom software
+  id: atmmaggioli
+  name: ATM Maggioli
 status: active
 tags:
 - government
-- has_api
 - open data
 topics:
 - id: GOVE

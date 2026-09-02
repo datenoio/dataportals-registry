@@ -2,7 +2,7 @@
 
 How to find **indicators catalogs** (`catalog_type: Indicators catalog`) and **microdata catalogs** (`catalog_type: Microdata catalog`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md).
 
-Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, PxStat, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Istat Data Browser, Swing, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
+Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, PxStat, DGBAS Web, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Istat Data Browser, Swing, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
 
 ## PxWeb (`pxweb`) {#pxweb}
 
@@ -35,6 +35,20 @@ CSO Ireland’s open-source dissemination platform (JSON-stat / PX). Live public
 | Censys | `web.endpoints.http.html_title: "PxStat"` |
 
 **False positives:** PxWeb (`/api/v1/`, title “PxWeb”); the CSO demo (`demo-pxstat.cso.ie`); `visual.cso.ie` maps over the same tables; GitHub wiki. Irish public bodies that publish **on** data.cso.ie are not separate catalogs.
+
+## DGBAS Web (`dgbasweb`) {#dgbasweb}
+
+Taiwan DGBAS local statistical query platform (資料庫查詢平臺 / WINSTA). Public tenants share `/DgbasWeb/` ASP.NET pages.
+
+**Signals:** path `/DgbasWeb/index.aspx`, `/DgbasWeb/Default.aspx`, or `/dgbasweb/`; hostname `{org}.dgbas.gov.tw` or a municipal stats host; title 資料庫查詢平台.
+
+**Confirm:** GET the DgbasWeb home and match the tree/keyword query UI. One record per county or city tenant. Do **not** set `dgbasweb` on `nstatdb.dgbas.gov.tw` (national `dgbasall` table database) or on Taiwan PxWeb sites (`pxweb.kcg.gov.tw`, Taipei DOTSTAT).
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/DgbasWeb/ (統計 OR 資料庫查詢) site:.gov.tw` |
+| Google | `site:dgbas.gov.tw/DgbasWeb/` |
+| Censys | `web.names: "dgbas.gov.tw"` |
 
 ## OpenSDG (`opensdg`) {#opensdg}
 

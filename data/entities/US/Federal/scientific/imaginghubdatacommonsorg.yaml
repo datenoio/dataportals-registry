@@ -1,0 +1,62 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: MIDRC Biomedical Data Fabric Imaging Hub, a federated Gen3 hub for searching
+  biomedical imaging studies across participating repositories without storing the
+  files locally.
+endpoints:
+- type: index
+  url: https://imaging-hub.data-commons.org/index/ga4gh/drs/v1/service-info
+id: imaginghubdatacommonsorg
+langs:
+- id: EN
+  name: English
+link: https://imaging-hub.data-commons.org/
+name: MIDRC BDF Imaging Hub
+owner:
+  link: https://www.midrc.org/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Medical Imaging and Data Resource Center
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: gen3
+  name: Gen3
+status: active
+tags:
+- scientific
+- research data
+- academic
+- health
+- imaging
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi99996454

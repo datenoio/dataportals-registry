@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-CB
+      name: Cantabria
+description: Public municipal GIS viewer of the Ayuntamiento de Santander (interactive
+  street map and thematic layers). Distinct from the CKAN open-data portal.
+endpoints:
+- type: arcgis:portals:self
+  url: https://aytosantander.maps.arcgis.com/sharing/rest/portals/self?f=pjson
+id: aytosantandermapsarcgiscom
+langs:
+- id: ES
+  name: Spanish
+link: https://aytosantander.maps.arcgis.com/apps/webappviewer/index.html?id=81908d63b4be4ec3a2f9f1e93a608888
+name: SIG Ayuntamiento de Santander
+owner:
+  link: https://www.santander.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CB
+      name: Cantabria
+  name: Ayuntamiento de Santander
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geoportal
+- GIS
+- municipal
+- ArcGIS
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99996734

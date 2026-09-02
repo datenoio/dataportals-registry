@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: UA-59
+      name: Sumska oblast
+description: Public ArcGIS Hub geoinformation system of Nova Sloboda rural territorial
+  community with land cadastre and urban-planning maps.
+endpoints:
+- type: dcatap201
+  url: https://novoslobidska-hromada-novoslobidska-tg.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://novoslobidska-hromada-novoslobidska-tg.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://novoslobidska-hromada-novoslobidska-tg.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://novoslobidska-hromada-novoslobidska-tg.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://novoslobidska-hromada-novoslobidska-tg.hub.arcgis.com/sitemap.xml
+id: novoslobidskahromadanovoslobidskatghubarcgiscom
+langs:
+- id: UK
+  name: Ukrainian
+link: https://novoslobidska-hromada-novoslobidska-tg.hub.arcgis.com
+name: Геоінформаційна система Новослобідської сільської територіальної громади
+owner:
+  link: https://novoslobidska-gromada.gov.ua
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: UA-59
+      name: Sumska oblast
+  name: Nova Sloboda Village Council
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- Nova Sloboda
+- Ukraine
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99997735

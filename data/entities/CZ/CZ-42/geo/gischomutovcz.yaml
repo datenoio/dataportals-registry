@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: CZ-42
+      name: Ústecký kraj
+description: Public GIS portal of the statutory city of Chomutov (T-MAPY) with ArcGIS
+  Server map services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.chomutov.cz/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.chomutov.cz/arcgis/rest/services?f=pjson
+id: gischomutovcz
+langs:
+- id: CS
+  name: Czech
+link: https://gis.chomutov.cz/
+name: GIS města Chomutov
+owner:
+  link: https://www.chomutov.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 30
+    subregion:
+      id: CZ-42
+      name: Ústecký kraj
+  name: Statutární město Chomutov
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: gisplan
+  name: GISPLAN
+status: active
+tags:
+- T-MAPY
+- T-WIST
+- geoportal
+- Czech Republic
+- GIS
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99997155

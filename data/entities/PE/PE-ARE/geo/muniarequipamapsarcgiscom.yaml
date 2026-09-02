@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PE
+      name: Peru
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: PE-ARE
+      name: Arequipa
+description: Public ArcGIS Online geoportal of the Provincial Municipality of Arequipa
+  with cadastral lots, road-axis, SIAT tax/cadastre layers, and map viewers (VISOR
+  AQP).
+endpoints:
+- type: arcgishub:catalog
+  url: https://muniarequipa.maps.arcgis.com/home/index.html
+id: muniarequipamapsarcgiscom
+langs:
+- id: ES
+  name: Spanish
+link: https://muniarequipa.maps.arcgis.com/home/index.html
+name: Geoportal Municipal Arequipa
+owner:
+  link: https://www.gob.pe/muniarequipa
+  location:
+    country:
+      id: PE
+      name: Peru
+    level: 30
+    subregion:
+      id: PE-ARE
+      name: Arequipa
+  name: Municipalidad Provincial de Arequipa
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- municipal
+- cadastre
+- Arequipa
+- Peru
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99998728

@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: KG
+      name: Kyrgyzstan
+    level: 20
+    macroregion:
+      id: '143'
+      name: Central Asia
+description: Treasury Open Budget portal of the Kyrgyz Republic. Publishes republican
+  and local budget execution indicators (income, spending, and public debt) with a
+  public JSON API. Distinct from the NSC open-data tables and the IMF NSDP.
+endpoints:
+- type: custom_api
+  url: https://budget.okmot.kg/api/home/data
+- type: custom_api
+  url: https://budget.okmot.kg/api/settings
+id: budgetokmotkg
+langs:
+- id: KY
+  name: Kirghiz
+- id: RU
+  name: Russian
+- id: EN
+  name: English
+link: https://budget.okmot.kg
+name: Open Budget of the Kyrgyz Republic
+owner:
+  link: https://minfin.kg
+  location:
+    country:
+      id: KG
+      name: Kyrgyzstan
+    level: 20
+  name: Ministry of Finance of the Kyrgyz Republic
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- budget
+- finance
+- statistics
+- Kyrgyzstan
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99995357

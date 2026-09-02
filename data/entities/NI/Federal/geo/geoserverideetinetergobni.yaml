@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NI
+      name: Nicaragua
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Public GeoServer for INETER geodesy/cartography (wsINETER-GC) and territorial
+  planning (wsINETER-OT) layers. Distinct from mapserveride and geoserveridefn.
+endpoints:
+- type: wms111
+  url: https://geoserverideet.ineter.gob.ni/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserverideet.ineter.gob.ni/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoserverideet.ineter.gob.ni/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geoserverideet.ineter.gob.ni/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoserverideet.ineter.gob.ni/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: geoserverideetinetergobni
+langs:
+- id: ES
+  name: Spanish
+link: https://geoserverideet.ineter.gob.ni/geoserver
+name: INETER GeoServer IDE ET
+owner:
+  link: https://www.ineter.gob.ni
+  location:
+    country:
+      id: NI
+      name: Nicaragua
+    level: 20
+  name: Instituto Nicaragüense de Estudios Territoriales (INETER)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- GIS
+- government
+- Nicaragua
+- has_api
+- GeoServer
+- planning
+- SDI
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99996392

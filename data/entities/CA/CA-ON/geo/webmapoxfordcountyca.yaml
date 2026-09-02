@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: Public Geocortex Essentials site catalog for Oxford County, Ontario,
+  including the GLIMR public mapping site.
+endpoints:
+- type: customapi
+  url: https://webmap.oxfordcounty.ca/Geocortex/Essentials/REST/sites?f=pjson
+id: webmapoxfordcountyca
+langs:
+- id: EN
+  name: English
+link: https://webmap.oxfordcounty.ca/Geocortex/Essentials/REST/sites
+name: Oxford County Geocortex GIS
+owner:
+  link: https://www.oxfordcounty.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: Oxford County
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- Geocortex
+topics:
+- id: GEOS
+  name: Geospatial
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99995891

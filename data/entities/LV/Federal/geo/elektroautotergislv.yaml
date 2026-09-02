@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LV
+      name: Latvia
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Public terGIS map catalog of electric-vehicle and utility layers (cadastre,
+  topography, engineering networks) with a citizen application overlay.
+endpoints:
+- type: other
+  url: https://elektroauto.tergis.lv/api/v1/classifiers/layers
+id: elektroautotergislv
+langs:
+- id: LV
+  name: Latvian
+link: https://elektroauto.tergis.lv/
+name: terGIS elektroauto
+owner:
+  link: https://topodati.lv
+  location:
+    country:
+      id: LV
+      name: Latvia
+    level: 20
+  name: SIA TOPO DATI
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: tergis
+  name: terGIS
+status: active
+tags:
+- GIS
+- geospatial
+- terGIS
+- Latvia
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99998566

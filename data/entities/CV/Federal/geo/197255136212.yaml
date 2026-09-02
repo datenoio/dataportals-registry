@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CV
+      name: Cabo Verde
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: WIS2 in a box node of the Instituto Nacional de Meteorologia e Geofísica
+  (INMG) of Cabo Verde (centre-id cv-inmg). Publishes WMO discovery metadata, station
+  information, and SYNOP observations through an OGC API Features / pygeoapi service.
+  Reached only by IP address on port 8080; no public hostname resolved on 29 August
+  2026.
+endpoints:
+- type: pygeoapi:openapi
+  url: http://197.255.136.212:8080/oapi/openapi
+  version: '1.0'
+- type: pygeoapi:collections
+  url: http://197.255.136.212:8080/oapi/collections/?f=json
+  version: '1.0'
+id: '197255136212'
+langs:
+- id: PT
+  name: Portuguese
+- id: EN
+  name: English
+link: http://197.255.136.212:8080
+name: Cabo Verde - WIS 2.0 in a box
+owner:
+  link: https://inmg.cv
+  location:
+    country:
+      id: CV
+      name: Cabo Verde
+    level: 20
+  name: Instituto Nacional de Meteorologia e Geofísica (INMG)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: wis20box
+  name: Wis 2.0 Box
+status: active
+tags:
+- meteorology
+- climate
+- WIS2
+- government
+- has_api
+topics:
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi99994673

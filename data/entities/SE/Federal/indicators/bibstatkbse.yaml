@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Official Swedish library statistics for public, higher-education, hospital,
+  and special libraries, with organisation-level reports and open linked data.
+endpoints:
+- type: customapi
+  url: https://bibstat.kb.se/data
+id: bibstatkbse
+langs:
+- id: SV
+  name: Swedish
+link: https://bibstat.kb.se/reports
+name: Biblioteksstatistik
+owner:
+  link: https://www.kb.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Kungliga biblioteket
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- libraries
+- official statistics
+- Sweden
+- has_api
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99995071

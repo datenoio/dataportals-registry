@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: AT-8
+      name: Vorarlberg
+description: Shared VertiGIS WebOffice (WebCity) hub used by 70+ Vorarlberg municipalities
+  for public city maps. Distinct from the Land Vorarlberg ArcGIS REST directory on the same
+  host. One catalog for the hub, not one record per project= tenant.
+id: gisvorarlbergnetzatwebcity
+langs:
+- id: DE
+  name: German
+link: https://gis.vorarlbergnetz.at/WebCity/synserver
+name: Vorarlberg Netz WebCity
+owner:
+  link: https://gis-dienstleistungen.vorarlbergnetz.at/webgis
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    subregion:
+      id: AT-8
+      name: Vorarlberg
+  name: Vorarlberger Energienetze GmbH
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: weboffice
+  name: VertiGIS WebOffice
+status: active
+tags:
+- geospatial
+- geoportal
+- WebOffice
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00037694

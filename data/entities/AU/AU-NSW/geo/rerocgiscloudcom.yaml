@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 30
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+    subregion:
+      id: AU-NSW
+      name: New South Wales
+description: Riverina Eastern Regional Organisation of Councils public GIS Cloud mapping
+  portal for freight routes, industrial land, and related regional layers.
+endpoints:
+- type: giscloud:catalog
+  url: https://reroc.giscloud.com/
+id: rerocgiscloudcom
+langs:
+- id: EN
+  name: English
+link: https://reroc.giscloud.com/
+name: REROC Mapping Portal
+owner:
+  link: https://reroc.com.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 30
+    subregion:
+      id: AU-NSW
+      name: New South Wales
+  name: Riverina Eastern Regional Organisation of Councils
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: giscloud
+  name: GIS Cloud
+status: active
+tags:
+- GIS
+- geospatial
+- regional
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99998810

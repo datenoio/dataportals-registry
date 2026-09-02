@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: CR-G
+      name: Guanacaste
+description: Municipal geoportal of Municipalidad de Bagaces, Costa Rica.
+endpoints:
+- type: mapstore:config
+  url: https://visorbagaces.go.cr/mapstore2/configs/localConfig.json
+- type: wms111
+  url: https://visorbagaces.go.cr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://visorbagaces.go.cr/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://visorbagaces.go.cr/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://visorbagaces.go.cr/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://visorbagaces.go.cr/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs111
+  url: https://visorbagaces.go.cr/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs201
+  url: https://visorbagaces.go.cr/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+id: visorbagacesgocr
+langs:
+- id: ES
+  name: Spanish
+link: https://visorbagaces.go.cr/mapstore2/
+name: Geoportal Municipalidad de Bagaces
+owner:
+  link: https://www.bagaces.go.cr/
+  location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 30
+    subregion:
+      id: CR-G
+      name: Guanacaste
+  name: Municipalidad de Bagaces
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: mapstore
+  name: MapStore
+status: active
+tags:
+- geospatial
+- GIS
+- government
+- municipal
+- Costa Rica
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99996036

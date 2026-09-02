@@ -115,10 +115,16 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `/api/3/action/status_show` | `ckan` | Open data portal |
 | `/api/explore/v2.1/catalog/datasets` | `opendatasoft` | Open data portal |
 | `/api/views` (SODA) | `socrata` | Open data portal |
+| `/transparencia/datos/catalogo` Maggioli/Galileo | `atmmaggioli` | Open data portal |
+| `{org}.opengov.com` /transparency | `opengov` | Open data portal |
+| `/opendata/set/lkod` or lkod.cz catalog | `lkod` | Open data portal |
 | `/srv/eng/csw` or `/srv/api` | `geonetwork` | Geoportal |
+| Title “Geoportal Palapa” / `/main/` or `/gspalapa/` | `palapa` | Geoportal |
 | `/geoserver/ows` GetCapabilities | `geoserver` | Geoportal |
 | ArcGIS Hub search / `opendata.arcgis.com` | `arcgishub` | Geoportal or Open data portal |
 | `/arcgis/rest/info?f=pjson` | `arcgisserver` | Geoportal |
+| `experience.arcgis.com/experience/` or `jimu-core/init.js` | `experiencebuilder` | Geoportal |
+| `/apps/webappviewer/index.html?id=` | `webappbuilder` | Geoportal |
 | STAC `/collections` JSON | `stacserver` | Geoportal |
 | `/api/info/version` | `dataverse` | Scientific data repository |
 | DSpace `/server/api` or `/xmlui` | `dspace` | Scientific data repository |
@@ -129,10 +135,57 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | Title “TabNet Win32” / `deftohtm.exe` / `cgi-bin/dh` | `tabnet` | Indicators catalog |
 | `fenixservices.fao.org` / FAOSTAT API / CountrySTAT FENIX UI | `fenix` | Indicators catalog |
 | Finnish `/IMS/` karttapalvelu (`tekla-mvc-common`) | `trimblelocus` | Geoportal |
+| `web.dmcity.fi/{city}/public/` title “dmCity Web App” | `dmcity` | Geoportal |
+| `www.infogis.fi/{muni}/` `/codebase-infogis/` | `infogis` | Geoportal |
+| `/sigimweb/` title “SIGimWeb” / `/gomap_web/` | `sigimweb` | Geoportal |
+| `/NetGISRuntime/basis/index.jsp` title “NetGIS - © WSP Danmark” | `netgisruntime` | Geoportal |
 | SpatialMap `webkort` | `spatialsuite` | Geoportal |
 | Hajk `appConfig.json` / `mapserviceBase` | `hajk` | Geoportal |
+| `origo.min.js` / `origo.js` / `Origo(` Origosamverkan | `origo` | Geoportal |
+| Title “myCarta WebMap” / `/webmap/` / `/mycartawebmap/` | `mycarta` | Geoportal |
 | `drift.kortinfo.net/Map.aspx` | `kortinfo` | Geoportal |
+| IntraMaps Public `project=` / `*.spatial.t1cloud.com` | `intramaps` | Geoportal |
+| `/connect/analyst/` title Spectrum Spatial / Precisely | `spectrumspatial` | Geoportal |
+| `/exponare/` RestPublicApplication / PublicApplication | `exponare` | Geoportal |
+| LocalMaps `/localmaps/gallery` | `localmaps` | Geoportal |
+| `/mapgis/mapa.jsp` or `/mapgis9/mapa.jsp` (HyG footer) | `hygmapgis` | Geoportal |
+| `/vertigisstudio/web/?app=` or `/gcx/WebViewer/` | `vertigisstudioweb` | Geoportal |
 | `portals.landfolio.com` cadastre map | `landfolio` | Geoportal |
+| `{comune}.servizigis.it` / “GeneGis Site Creator” | `genegis` | Geoportal |
+| Title “City Maps powered by XY” / `maps.xymaps.com/{city}` / `/xymaps/Map` | `xymaps` | Geoportal |
+| `{council}.pozi.com` title Pozi Web Map | `pozi` | Geoportal |
+| `/JMapWeb/` or JMap NG `jmapserver-ng` / `*.jmaponline.net` | `jmap` | Geoportal |
+| `{city}.giscloud.com` GIS Cloud | `giscloud` | Geoportal |
+| `{county}.mrf.com` / `js/lib/mrf/` MRF Web Map | `mrf` | Geoportal |
+| `web.munisight.com/{Tenant}` Catalis Login.aspx | `munisight` | Geoportal |
+| `publicmaps.gisquadrat.com/BP/WEPM.aspx` title GeoMedia SmartClient Public Maps | `publicmaps` | Geoportal |
+| `webgis.sit-puglia.it/{comune}/` title WebGis or SIT- | `sitwebgis` | Geoportal |
+| `/pmapper/` or `{city}.geo-portale.it` p.mapper | `pmapper` | Geoportal |
+| `VECommunityView/cities/{city}/` CommunityView | `communityview` | Geoportal |
+| `{city}.msgis.net` title GeoInformation | `msgis` | Geoportal |
+| Title `Weave Map` webpack `app.*.js` (Cohga) | `weave` | Geoportal |
+| `assets/ekmapboxgl/ekmap-mapboxgl.js` / title eKMap Cloud | `ekmap` | Geoportal |
+| OVIE OpenLayers `/js/libs/OpenLayers/OL.js` + Materialize | `ovie` | Geoportal |
+| `{city}.cadastre.com.ua` or SOFTPRO `/js/locale/ua.js` | `softpro` | Geoportal |
+| `/mdm6/` or `/mxsig2/` amplify.js Mapa Digital | `mxsig` | Geoportal |
+| `/apps/instant/{template}/?appid=` Instant Apps | `instantapps` | Geoportal |
+| `{city}.gisplan.sk` / T-MAPY Spinbox / `tmapy.svg` / GIS4U / `{city}.tmapserver.cz` | `gisplan` | Geoportal |
+| `mobec.sk/{slug}` T-MAPY mOBEC / `tmapyn.svg` | `mobec` | Geoportal |
+| `webgis.{city}.sk` title `WebGIS v2, CG` | `cgwebgis` | Geoportal |
+| `gis.{city}.sk` title `Geodeticca WEB GIS` | `geodeticca` | Geoportal |
+| `{city}.obce.gepro.cz` / `/OUT/HTML/` Geoportál GEPRO | `gepro` | Geoportal |
+| `evald.ee/{slug}/` title EVALD / KOVGIS | `evald` | Geoportal |
+| `{tenant}.tergis.lv` title terGIS / `/api/v1/classifiers/layers` | `tergis` | Geoportal |
+| `app.gisonline.cz/{city}` TopGis | `gisonline` | Geoportal |
+| `{muni}.k5mapserver.cz` title GEOPORTÁL | `k5mapserver` | Geoportal |
+| Marushka `zipped.js` or `js/marushka.js` | `marushka` | Geoportal |
+| `{dtm|geoportal}.{kraj}.cz/portal/` `Georeal.Cards` | `georeal` | Geoportal |
+| `portal.mapotip.cz/{obec}` title Mapotip | `mapotip` | Geoportal |
+| `www.gisserver.de/{city}/` portal.js GIScity | `giscity` | Geoportal |
+| `vianovis.net/{tenant}/` or `loadTouviaMaps()` touvia.MAPS | `touviamaps` | Geoportal |
+| `INGRADA online` / `Softplan.Ingrada.Mobile` | `ingrada` | Geoportal |
+| `html.vcs-ui` title `VC Map` | `vcmap` | Geoportal |
+| `geoportale.sportellounicodigitale.it/GisMaster` `IdCliente=` | `gismaster` | Geoportal |
 | G3W-CLIENT `/map/{group}/` | `g3wsuite` | Geoportal |
 | MapCentia `/apps/viewer` or `/mapcache/` WMTS | `gc2` | Geoportal |
 | hale»connect `/csw` or `/ows/services/` | `haleconnect` | Geoportal |
@@ -148,6 +201,7 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `/xnat/` or `/data/projects` | `xnat` | Scientific data repository |
 | OMERO `/webclient/` or IDR | `omero` | Scientific data repository |
 | Kadi4Mat `/api/records` | `kadi4mat` | Scientific data repository |
+| Cologne CRC `/site/index.php` helper.js | `tr32db` | Scientific data repository |
 | `/prod/v1/api/v1/info` NOMAD Oasis | `nomad` | Scientific data repository |
 | InterMine `/begin.do` / `/service/version` | `intermine` | Scientific data repository |
 | `/gringlobal/` accession search | `gringlobal` | Scientific data repository |

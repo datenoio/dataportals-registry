@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: FI
+      name: Finland
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: FI-13
+      name: Pohjois-Karjala
+description: City of Nurmes public map service (Louhi/SpatialWeb) with municipal geographic
+  datasets.
+id: nurmeskarttatiimifi
+langs:
+- id: FI
+  name: Finnish
+link: https://nurmes.karttatiimi.fi
+name: Nurmes map service
+owner:
+  link: https://www.nurmes.fi
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: FI-13
+      name: Pohjois-Karjala
+  name: City of Nurmes
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: louhi
+  name: Sitowise Louhi
+status: active
+tags:
+- geoportal
+- map viewer
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99996803

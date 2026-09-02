@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: Cowichan Valley Regional District public Geocortex HTML5 web map for
+  properties, addressing, zoning, and related regional layers covering Duncan and
+  Lake Cowichan.
+endpoints:
+- type: geocortex:catalog
+  url: https://maps.cvrd.ca/Html5Viewer/index.html?viewer=public
+id: mapscvrdcapublic
+langs:
+- id: EN
+  name: English
+link: https://maps.cvrd.ca/Html5Viewer/index.html?viewer=public
+name: Cowichan Valley Regional District Web Map Viewer
+owner:
+  link: https://www.cvrd.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: Cowichan Valley Regional District
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- map viewer
+- regional
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99998451

@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ID
+      name: Indonesia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion: &id002
+      id: ID-LA
+      name: Lampung
+description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Kabupaten Tulang
+  Bawang.
+endpoints:
+- type: ckan:package-search
+  url: https://satudata.tulangbawangkab.go.id/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://satudata.tulangbawangkab.go.id/api/3/action/package_list
+  version: '3'
+id: satudatatulangbawangkabgoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://satudata.tulangbawangkab.go.id
+name: Satu Data Kabupaten Tulang Bawang
+owner:
+  link: https://tulangbawangkab.go.id
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Kabupaten Tulang Bawang
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- open data
+- indonesia
+- satu data
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99995651

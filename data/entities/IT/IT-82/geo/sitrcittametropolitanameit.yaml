@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-82
+      name: Sicilia
+description: ArcGIS Server SITR node of Città Metropolitana di Messina, publishing provincial
+  roads, cadastral, environment, and planning map services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://sitr.cittametropolitana.me.it/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sitr.cittametropolitana.me.it/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sitr.cittametropolitana.me.it/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://sitr.cittametropolitana.me.it/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sitr.cittametropolitana.me.it/arcgis/rest/services?f=geositemap
+id: sitrcittametropolitanameit
+langs:
+- id: IT
+  name: Italian
+link: https://sitr.cittametropolitana.me.it/arcgis/rest/services
+name: SITR Città Metropolitana di Messina
+owner:
+  link: https://www.cittametropolitana.me.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-82
+      name: Sicilia
+  name: Città Metropolitana di Messina
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- geoportal
+- arcgis
+- government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00037957

@@ -1,0 +1,62 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Gen3 framework services for the NCI Cancer Research Data Commons. Provides
+  authentication, indexing, and FAIR APIs across CRDC nodes; this is not the Genomic,
+  Proteomic, or Imaging Data Commons.
+endpoints:
+- type: index
+  url: https://nci-crdc.datacommons.io/index/ga4gh/drs/v1/service-info
+id: ncicrdcdatacommonsio
+langs:
+- id: EN
+  name: English
+link: https://nci-crdc.datacommons.io/
+name: NCI Data Commons Framework Services
+owner:
+  link: https://www.cancer.gov/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: National Cancer Institute
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: gen3
+  name: Gen3
+status: active
+tags:
+- scientific
+- research data
+- academic
+- health
+- cancer
+- NIH
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi99996459

@@ -20,7 +20,7 @@ coverage:
 description: Princeton University multidisciplinary repository for research data and
   code produced by the Princeton research community, replacing DataSpace.
 endpoints:
-- type: stac
+- type: hyrax:catalog
   url: https://datacommons.princeton.edu/discovery/catalog.json
 id: datacommonsprincetonedu
 langs:
@@ -50,8 +50,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: hyrax
+  name: Hyrax
 status: active
 tags:
 - research data

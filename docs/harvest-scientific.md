@@ -8,8 +8,8 @@ Use `endpoints[]` from the registry when present ([apidetect.md](apidetect.md)).
 
 | Page | Use when |
 |------|----------|
-| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, Pure, Converis, Omega-PSIR, Archipelago, RADAR, Yoda, Redivis, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, …) |
-| [Domain repositories](harvest-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, SciCat-adjacent stacks, CLLD, TalkBank |
+| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, Pure, Converis, Omega-PSIR, Archipelago, RADAR, Yoda, Redivis, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, META-SHARE, Gen3, TR32DB, …) |
+| [Domain repositories](harvest-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, SciCat-adjacent stacks, CLLD, TalkBank, Pathway Tools, IBDC |
 
 All `software.id` values: [software-index.md](software-index.md).
 
@@ -18,7 +18,7 @@ All `software.id` values: [software-index.md](software-index.md).
 | Class | `software.id` (typical) | Filter needed? |
 |-------|-------------------------|----------------|
 | Mixed IR / CRIS | `dspace`, `dspacecris`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `samvera`, `islandora`, `archipelago`, `opus`, `mycore`, `phaidra`, `weko3`, `dabar`, `opensciencesi`, `pure`, `esploro`, `elsevierdigitalcommons`, `figshare`, `haplo`, `worktribe`, `omegapsir`, `converis`, `librecat`, `vufind`, `divaportal` | **Yes** — publications dominate |
-| Dataset-native | `dataverse`, `radar`, `yoda`, `redivis`, `instdb`, `labkey`, `synapse`, `xnat`, `omero`, `kadi4mat`, `edal`, `nomad` on this page; IPT/THREDDS/Breedbase/ESGF/InterMine/cBioPortal and similar on [harvest-scientific-domain.md](harvest-scientific-domain.md) | Little or none — still skip files, occurrences, and login-only rows |
+| Dataset-native | `dataverse`, `radar`, `yoda`, `redivis`, `instdb`, `labkey`, `synapse`, `xnat`, `omero`, `kadi4mat`, `edal`, `nomad`, `gen3` on this page; IPT/THREDDS/Breedbase/ESGF/InterMine/cBioPortal and similar on [harvest-scientific-domain.md](harvest-scientific-domain.md) | Little or none — still skip files, occurrences, and login-only rows |
 
 ## OAI-PMH fallback (any IR)
 
@@ -292,6 +292,16 @@ Same facet-first harvest as [VuFind](#vufind) when the public UI is LibreCat.
 
 FairStack institutional research-data nodes. Harvest the public dataset/API list on the node (`/api` when present). Skip fairstack.cn marketing and per-file URLs.
 
+## META-SHARE (`metashare`) {#metashare}
+
+Language-resource nodes. Harvest the public **resource catalog** (corpora, lexica, tools) from the node search or documented export.
+
+```text
+GET https://host/
+```
+
+Keep resource records. Drop a single corpus/tool landing page as a crawl seed and META-NET marketing pages. One harvest scope per node. Victoria MetaShare is GeoNetwork — use that recipe instead.
+
 ## NYU Data Catalog (`nyudatacatalog`) {#nyudatacatalog}
 
 Medical-library dataset catalog (schema.org DataCatalog JSON-LD on listing pages). Harvest **Dataset** objects from JSON-LD or the public search listing. Drop expert/person pages. Drupal JSON:API only if a dataset bundle exists.
@@ -415,6 +425,17 @@ GET https://repo-prod.prod.sagebase.org/repo/v1/entity/synNNNN/children
 
 Keep **projects and tables/files that are cited as datasets**. Drop every child file under a project when a parent dataset entity exists. Prefer the catalog `link` origin and `endpoints[]`. Stop on `401`.
 
+## Gen3 (`gen3`) {#gen3}
+
+Data-commons portal. Prefer `endpoints[]` (Indexd, DRS, GraphQL). Defaults:
+
+```text
+GET https://host/_status
+GET https://host/index/ga4gh/drs/v1/service-info
+```
+
+Keep **studies / projects** from the public GraphQL or portal catalog. Drop individual DRS objects, files, and Fence `/user/login` as harvest seeds. Stop on `401`/`403`. Do not harvest NCI GDC/PDC/IDC under this recipe.
+
 ## XNAT (`xnat`) {#xnat}
 
 ```text
@@ -441,6 +462,10 @@ GET https://host/api/collections
 ```
 
 Keep **records and collections**. Drop individual file blobs when a parent record exists. Stop on `401`.
+
+## TR32DB (`tr32db`) {#tr32db}
+
+`/site/index.php` Cologne CRC databases. Harvest the public **metadata / dataset search** if unauthenticated. Do not scrape file blobs or require project login. One harvest scope per CRC database (TR32, CRC1211, TRR228). Distinct from CRC806DB.
 
 ## e!DAL (`edal`) {#edal}
 

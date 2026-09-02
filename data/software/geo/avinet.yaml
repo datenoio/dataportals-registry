@@ -1,0 +1,60 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: avinet
+name: Avinet Adaptive
+website: https://www.avinet.no/
+description: Avinet Adaptive (Webatlas) is a Norwegian thematic map platform
+  from Avinet AS / Asplan Viak Digitale tjenester. Public atlases load ExtJS
+  4.2 and OpenLayers 2.13, often from a3.avinet.no, and expose WMS/WFS via
+  wms.ashx / wfs.ashx. Distinct from ISY Map (isymap) and from ArcGIS Hub.
+owner:
+  name: Avinet AS
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+logo_url: https://www.avinet.no/favicon.ico
+documentation_url: https://www.avinet.no/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'Yes'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- GML
+- JSON
+capabilities:
+- WMS
+- WFS
+- Map viewer
+last_updated: '2026-08-30T00:00:00Z'

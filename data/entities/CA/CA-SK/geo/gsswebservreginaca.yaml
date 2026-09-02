@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-SK
+      name: Saskatchewan
+description: City of Regina ArcGIS Enterprise REST catalog (gss-webserv) for public-facing
+  capital projects, planning, winter road maintenance, parks, roads, and flood-hazard
+  layers. Distinct from the older OpenGIS REST host on opengis.regina.ca.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gss-webserv.regina.ca/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gss-webserv.regina.ca/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gss-webserv.regina.ca/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gss-webserv.regina.ca/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gss-webserv.regina.ca/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gss-webserv.regina.ca/arcgis/rest/services?f=kmz
+id: gsswebservreginaca
+langs:
+- id: EN
+  name: English
+link: https://gss-webserv.regina.ca/arcgis/rest/services
+name: Regina GSS ArcGIS REST Services
+owner:
+  link: https://www.regina.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-SK
+      name: Saskatchewan
+  name: City of Regina
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- Saskatchewan
+- ArcGIS REST
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi99998094

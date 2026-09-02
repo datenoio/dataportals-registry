@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: CO-GUV
+      name: Guaviare
+description: Lizmap geographic information system of CDA with public map projects,
+  WMS, and WMTS for environmental layers in Guaviare and the northern/eastern Amazon
+  jurisdiction.
+endpoints:
+- type: wms130
+  url: https://sig.cda.gov.co/index.php/lizmap/service/?repository=guaviare&project=guaviare&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0
+id: sigcdagovco
+langs:
+- id: ES
+  name: Spanish
+link: https://sig.cda.gov.co/
+name: SIG CDA Amazonía
+owner:
+  link: https://www.cda.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    subregion:
+      id: CO-GUV
+      name: Guaviare
+  name: Corporación para el Desarrollo Sostenible del Norte y el Oriente Amazónico
+    (CDA)
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geoportal
+- geospatial
+- Colombia
+- Guaviare
+- Amazonía
+- environment
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99996004

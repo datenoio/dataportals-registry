@@ -2,7 +2,7 @@
 
 Biodiversity, facility, crop, chemistry, and earth-system repositories (`catalog_type: Scientific data repository`). Institutional IRs: [discovery-scientific.md](discovery-scientific.md). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Harvest: [harvest-scientific-domain.md](harvest-scientific-domain.md).
 
-High-count domain stacks with their own recipes: IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat, InterMine, GRIN-Global, PlutoF, JGI Genome Portal, cBioPortal, ESA Science Archive, CLLD, TalkBank.
+High-count domain stacks with their own recipes: IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat, InterMine, GRIN-Global, PlutoF, JGI Genome Portal, cBioPortal, ESA Science Archive, CLLD, TalkBank, Pathway Tools, IBDC.
 
 One portal / node = one registry record. Do not add gene pages, occurrences, or ESGF data nodes as extra catalogs.
 
@@ -338,6 +338,33 @@ ESA Science Data Centre archives (Gaia, XMM-Newton, Herschel, Planck, Euclid, an
 |------|-------|
 | Google | `"ESA Science Archive" OR ESAC (TAP OR VOSI OR Gaia OR XMM) site:esac.esa.int` |
 | Censys | `web.endpoints.http.body: "ESA Science Archive"` |
+
+## Pathway Tools (`pathwaytools`) {#pathwaytools}
+
+SRI International Pathway/Genome Database software. Site: [bioinformatics.ai.sri.com/ptools](https://bioinformatics.ai.sri.com/ptools/). BioCyc family hosts (EcoCyc, MetaCyc, YeastCyc, biocyc.org) share the Pathway Tools web UI.
+
+**Signals:** “Pathway Tools” / SRI International in the page; BioCyc organism/PGDB switcher; pathway and genome browsers.
+
+**Confirm:** GET the public organism or collection home with Pathway Tools branding. One catalog per **PGDB / collection host**, not per gene or pathway page.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Pathway Tools" (BioCyc OR EcoCyc OR MetaCyc) (database OR PGDB) -site:github.com` |
+| Google | `site:biocyc.org OR site:ecocyc.org OR site:metacyc.org` |
+| Censys | `web.endpoints.http.body: "Pathway Tools"` |
+
+## IBDC (`ibdc`) {#ibdc}
+
+Indian Biological Data Centre archives. Hub: [ibdc.dbt.gov.in](https://ibdc.dbt.gov.in/). Domain archives (INDA, IPD, IMDA, IADA, IBIA, IPR, ISDA, GenomeIndia, ICPD) share that host.
+
+**Signals:** hostname `ibdc.dbt.gov.in`; IBDC / Indian Biological Data Centre branding; archive-specific paths (`/inda/`, `/ipd/`, `/imda/`).
+
+**Confirm:** GET the archive home. One catalog per **archive path**, not per accession. Do not add the hub marketing page as a separate catalog if it only links to archives already registered.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Indian Biological Data Centre" OR IBDC (INDA OR "proteome databank") site:ibdc.dbt.gov.in` |
+| Censys | `web.names: "ibdc.dbt.gov.in"` |
 
 ## Related
 

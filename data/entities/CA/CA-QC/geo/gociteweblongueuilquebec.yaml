@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-QC
+      name: Quebec
+description: Public ArcGIS REST services directory for Ville de Longueuil, including
+  cadastre, interactive map, environment, and planning services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gociteweb.longueuil.quebec/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gociteweb.longueuil.quebec/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gociteweb.longueuil.quebec/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gociteweb.longueuil.quebec/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gociteweb.longueuil.quebec/arcgis/rest/services?f=geositemap
+id: gociteweblongueuilquebec
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://gociteweb.longueuil.quebec/arcgis/rest/services
+name: Ville de Longueuil GIS REST Services
+owner:
+  link: https://longueuil.quebec
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-QC
+      name: Quebec
+  name: Ville de Longueuil
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- government
+topics:
+- id: GEOS
+  name: Geospatial
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99995770

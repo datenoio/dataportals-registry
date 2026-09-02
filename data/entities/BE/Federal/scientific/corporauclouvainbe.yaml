@@ -1,0 +1,65 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: UCLouvain catalog of written, oral, video, and learner corpora, including
+  the CLARIN Knowledge Centre for Learner Corpora (CKL2CORPORA).
+endpoints:
+- type: oaipmh20
+  url: https://repository.clarin.uclouvain.be/oai-pmh?verb=Identify
+  version: '2.0'
+id: corporauclouvainbe
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://corpora.uclouvain.be/catalog/
+name: corpor@uclouvain
+owner:
+  link: https://www.uclouvain.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+  name: Université catholique de Louvain
+  type: Academy
+properties:
+  dataset_count_reported: 31
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- linguistics
+- language resources
+- clarin
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99994559

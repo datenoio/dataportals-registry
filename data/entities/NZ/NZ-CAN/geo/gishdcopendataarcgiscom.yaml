@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 30
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+    subregion:
+      id: NZ-CAN
+      name: Canterbury
+description: Geoportal. managed by Hurunui District Council. powered by ArcGIS Hub.
+  accessible at gis-hdc.opendata.arcgis.com.
+id: gishdcopendataarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://gis-hdc.opendata.arcgis.com
+name: Hurunui District Council Spatial Hub
+owner:
+  link: https://www.hurunui.govt.nz
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 30
+    subregion:
+      id: NZ-CAN
+      name: Canterbury
+  name: Hurunui District Council
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- GIS
+- government
+- municipal
+- New Zealand
+- has_api
+- ArcGIS
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99996396
+endpoints:
+- type: dcatap201
+  url: https://gis-hdc.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://gis-hdc.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://gis-hdc.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://gis-hdc.opendata.arcgis.com/api/search/v1

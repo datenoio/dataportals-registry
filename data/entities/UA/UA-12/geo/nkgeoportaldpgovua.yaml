@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: UA-12
+      name: Dnipropetrovska oblast
+description: ArcGIS Enterprise urban-planning cadastre geoportal of Nikopol with public
+  portal access and map services. Distinct from the Dnipro, Kryvyi Rih, and Kamianske
+  city geoportals.
+endpoints:
+- type: arcgis:rest:info
+  url: https://nk-geoportal.dp.gov.ua/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://nk-geoportal.dp.gov.ua/server/rest/services?f=pjson
+id: nkgeoportaldpgovua
+langs:
+- id: UK
+  name: Ukrainian
+link: https://nk-geoportal.dp.gov.ua/portal/home/
+name: Геопортал містобудівного кадастру м. Нікополь
+owner:
+  link: https://www.nikopol-mrada.dp.gov.ua
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: UA-12
+      name: Dnipropetrovska oblast
+  name: Nikopol City Council
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- Nikopol
+- Ukraine
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99997462

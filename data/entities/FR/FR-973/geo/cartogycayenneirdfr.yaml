@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-973
+      name: Guyane (française)
+description: Lizmap catalog of IRD Cayenne maps for French Guiana (Cayenne tree canopy,
+  demography, MOSAIC GIS, malaria risk, Guiana Shield tri-border). Distinct from the
+  IRD Espace-Dev PROGYSAT Lizmap on teledetection.fr.
+id: cartogycayenneirdfr
+langs:
+- id: FR
+  name: French
+link: https://cartogy.cayenne.ird.fr/
+name: IRD Cayenne Lizmap
+owner:
+  link: https://www.ird.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-973
+      name: Guyane (française)
+  name: Institut de recherche pour le développement (IRD)
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- lizmap
+- Guyane
+- IRD
+- remote sensing
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi99996063
+endpoints:
+- type: lizmap:service:wms
+  url: https://cartogy.cayenne.ird.fr/index.php/lizmap/service/?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0

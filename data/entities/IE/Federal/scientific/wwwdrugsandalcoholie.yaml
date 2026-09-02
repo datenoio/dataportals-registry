@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: EPrints subject repository of the Health Research Board National Drugs
+  Library for Irish drugs and alcohol research publications, with OAI-PMH harvest.
+endpoints:
+- type: oaipmh20
+  url: https://www.drugsandalcohol.ie/cgi/oai2?verb=Identify
+  version: '2.0'
+id: wwwdrugsandalcoholie
+langs:
+- id: EN
+  name: English
+link: https://www.drugsandalcohol.ie
+name: HRB National Drugs Library
+owner:
+  link: https://www.hrb.ie
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+  name: Health Research Board
+  type: Central government
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- research data
+- academic
+- institutional repository
+- has_api
+- EPrints
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99995226

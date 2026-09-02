@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: CH-ZG
+      name: Zug
+description: Official elections and votes portal of the Canton of Zug. Publishes results
+  datasets as open data with a DCAT-AP CH catalog harvested by opendata.swiss.
+endpoints:
+- type: dcatap21
+  url: https://wab.zug.ch/catalog.rdf
+id: wabzugch
+langs:
+- id: DE
+  name: German
+link: https://wab.zug.ch
+name: Canton Zug Elections and Votes
+owner:
+  link: https://www.zg.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-ZG
+      name: Zug
+  name: Kanton Zug
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- elections
+- government
+- open data
+- Switzerland
+- Zug
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99994658

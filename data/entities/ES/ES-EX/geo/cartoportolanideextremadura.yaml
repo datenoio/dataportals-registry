@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-EX
+      name: Extremadura
+description: Portolan STAC catalog of selected Junta de Extremadura (CICTEX) geospatial
+  layers, originally published through the SITEX download centre and converted to
+  cloud-native GeoParquet and PMTiles. Distinct from the official IDEEX geoportal.
+endpoints:
+- type: stacserverapi
+  url: https://storage.googleapis.com/carto-portolan-ide-extremadura/catalog.json
+id: cartoportolanideextremadura
+langs:
+- id: ES
+  name: Spanish
+link: https://storage.googleapis.com/carto-portolan-ide-extremadura/catalog.json
+name: IDE Extremadura (CICTEX)
+owner:
+  link: https://sitex.juntaex.es/SITEX/centrodescargas
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-EX
+      name: Extremadura
+  name: Centro de Información Cartográfica y Territorial de Extremadura (CICTEX)
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- STAC
+- Extremadura
+- geospatial
+- has_api
+- government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi99994645

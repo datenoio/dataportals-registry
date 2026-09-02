@@ -1,0 +1,61 @@
+category: Indicators catalog
+subtype: managed_saas_service
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'No'
+has_bulk: 'No'
+id: cancerrates
+website: https://www.cancer-rates.info/about/
+name: Cancer-Rates.info
+description: Cancer-Rates.info is a multi-tenant cancer incidence and mortality query
+  system hosted by the Kentucky Cancer Registry. Central cancer registries publish
+  county maps, tables, and exports at a unique path on cancer-rates.info / cancer-rates.com.
+  Register only public guest UIs, not login-walled tenant paths.
+owner:
+  name: Kentucky Cancer Registry, University of Kentucky
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://www.cancer-rates.info/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'No'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Structured
+type: Software
+documentation_url: https://www.kcr.uky.edu/support/cancer-rates/
+export_formats:
+- CSV
+- Excel
+- PDF
+capabilities:
+- County cancer maps
+- Incidence and mortality query
+- Dataset comparison
+last_updated: '2026-08-29T00:00:00Z'

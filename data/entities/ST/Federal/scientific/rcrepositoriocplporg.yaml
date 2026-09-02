@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- publication
+coverage:
+- location:
+    country:
+      id: ST
+      name: Sao Tome and Principe
+    level: 20
+    macroregion:
+      id: '017'
+      name: Middle Africa
+description: National open-access DSpace 7 repository for São Tomé and Príncipe, hosted
+  as the São Tomé e Príncipe community on the CPLP common repository. Subcommunities
+  exist for Universidade de São Tomé e Príncipe and Instituto Superior Politécnico
+  de São Tomé e Príncipe. Launched March 2026.
+endpoints:
+- type: dspace
+  url: https://rc-repositorio.cplp.org/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://rc-repositorio.cplp.org/server/api/discover/search/objects
+  version: '7'
+id: rcrepositoriocplporg
+langs:
+- id: PT
+  name: Portuguese
+- id: EN
+  name: English
+link: https://rc-repositorio.cplp.org/
+name: Repositório Científico de São Tomé e Príncipe
+owner:
+  link: https://desc.gov.st/
+  location:
+    country:
+      id: ST
+      name: Sao Tome and Principe
+    level: 20
+  name: Direção do Ensino Superior e Ciência
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- institutional repository
+- DSpace
+- open access
+- Sao Tome and Principe
+- CPLP
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994627

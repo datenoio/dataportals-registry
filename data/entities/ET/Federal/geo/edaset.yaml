@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ET
+      name: Ethiopia
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Public Ethiopian Digital Addressing System map. OpenLayers viewer over
+  GeoServer layers for parcels, buildings, roads, landmarks, and city extents including
+  Adama and Bishoftu. HTTPS on edas.et times out; the catalog UI is http://edas.et/.
+endpoints:
+- type: wms130
+  url: http://edas.et:8080/geoserver/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wms111
+  url: http://edas.et:8080/geoserver/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: http://edas.et:8080/geoserver/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+id: edaset
+langs:
+- id: EN
+  name: English
+link: http://edas.et/
+name: Ethiopian Digital Addressing System
+owner:
+  link: https://ssgi.gov.et
+  location:
+    country:
+      id: ET
+      name: Ethiopia
+    level: 20
+  name: Space Science and Geospatial Institute
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- addressing
+- government
+- Ethiopia
+- has_api
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99998649

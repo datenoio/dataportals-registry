@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-AS
+      name: Asturias, Principado de
+description: CKAN open data portal of the City Council of Avilés, harvested by the
+  Spanish national catalogue datos.gob.es.
+endpoints:
+- type: ckan
+  url: https://datos.aviles.es/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datos.aviles.es/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datos.aviles.es/api/3/action/package_list
+  version: '3'
+id: datosavileses
+langs:
+- id: ES
+  name: Spanish
+link: https://datos.aviles.es
+name: Datos Abiertos Ayuntamiento de Avilés
+owner:
+  link: https://www.aviles.es
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: ES-AS
+      name: Asturias, Principado de
+  name: Ayuntamiento de Avilés
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99994761

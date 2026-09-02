@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-AB
+      name: Alberta
+description: Shared Geocortex Essentials GIS for Oldman River Regional Services Commission
+  member municipalities in southern Alberta, listing public interactive map sites
+  from a single Essentials instance.
+endpoints:
+- type: geocortex:catalog
+  url: https://gis.orrsc.com/Geocortex/Essentials/REST/sites?f=pjson
+id: gisorrsccom
+langs:
+- id: EN
+  name: English
+link: https://gis.orrsc.com/
+name: ORRSC GIS
+owner:
+  link: https://www.orrsc.com
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-AB
+      name: Alberta
+  name: Oldman River Regional Services Commission
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- Geocortex
+- government
+topics:
+- id: GEOS
+  name: Geospatial
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99995747

@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: UA-61
+      name: Ternopilska oblast
+description: ArcGIS Enterprise geoinformation system of Chortkiv territorial community
+  with public urban-planning map services. Distinct from the Ternopil city ArcGIS
+  Online geoportal and from Khmelnytskyi oblast ArcGIS folders.
+endpoints:
+- type: arcgis:portals:self
+  url: https://gis.chortkivmr.gov.ua/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:search
+  url: https://gis.chortkivmr.gov.ua/portal/sharing/rest/search?f=json&q=orgid:0123456789ABCDEF
+- type: arcgis:rest:info
+  url: https://gis.chortkivmr.gov.ua/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.chortkivmr.gov.ua/server/rest/services?f=pjson
+id: gischortkivmrgovua
+langs:
+- id: UK
+  name: Ukrainian
+link: https://gis.chortkivmr.gov.ua/portal/home/
+name: Геоінформаційна система Чортківської громади
+owner:
+  link: https://www.chortkivmr.gov.ua
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: UA-61
+      name: Ternopilska oblast
+  name: Chortkiv City Council
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- Chortkiv
+- Ukraine
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99997463

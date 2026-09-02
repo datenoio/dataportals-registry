@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: WMO WIS2 Global Discovery Catalogue (GDC) instance operated by the China
+  Meteorological Administration (CMA). pycsw OGC API - Records service for discovering
+  WIS2 metadata (WCMP2) published by WMO Members worldwide.
+endpoints:
+- type: ogcrecordsapi
+  url: https://gdc.wis.cma.cn/collections/wis2-discovery-metadata?f=json
+  version: '1.0'
+id: gdcwiscmacn
+langs:
+- id: EN
+  name: English
+- id: ZH
+  name: Chinese
+link: https://gdc.wis.cma.cn/
+name: WMO WIS2 Global Discovery Catalogue (CMA)
+owner:
+  link: https://www.cma.gov.cn/en/
+  location:
+    country:
+      id: CN
+      name: China
+    level: 20
+  name: China Meteorological Administration (CMA)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: pycsw
+  name: pycsw
+status: active
+tags:
+- WIS2
+- WMO
+- meteorology
+- discovery
+- OGC API
+- has_api
+topics:
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi99994669

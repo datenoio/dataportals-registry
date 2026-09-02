@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: ID
+      name: Indonesia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion: &id002
+      id: ID-GO
+      name: Gorontalo
+description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Kabupaten Boalemo.
+endpoints:
+- type: wms130
+  url: https://boalemokab.ina-sdi.or.id/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: '1.3.0'
+id: boalemokabinasdiorid
+langs:
+- id: ID
+  name: Indonesian
+link: https://boalemokab.ina-sdi.or.id
+name: Kabupaten Boalemo Geoportal
+owner:
+  link: https://boalemokab.ina-sdi.or.id
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Kabupaten Boalemo
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- government
+- geospatial
+- indonesia
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99995563

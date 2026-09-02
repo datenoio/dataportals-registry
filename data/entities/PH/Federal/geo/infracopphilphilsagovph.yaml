@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PH
+      name: Philippines
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: CopPhil Copernicus Data Infrastructure operated by the Philippine Space
+  Agency. Public Data Explorer and STAC 1.0 / OData catalogue of Sentinel-1/2/3/5P/6
+  and Copernicus DEM products covering the Philippines. Distinct from PhilSA's own
+  Diwata/Planet STAC API.
+endpoints:
+- type: stacserverapi
+  url: https://catalogue.infra.copphil.philsa.gov.ph/stac
+id: infracopphilphilsagovph
+langs:
+- id: EN
+  name: English
+link: https://infra.copphil.philsa.gov.ph/
+name: CopPhil Copernicus Data Infrastructure
+owner:
+  link: https://www.philsa.gov.ph
+  location:
+    country:
+      id: PH
+      name: Philippines
+    level: 20
+  name: Philippine Space Agency
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- geospatial
+- GIS
+- government
+- Philippines
+- has_api
+- STAC
+- Copernicus
+- Sentinel
+- earth observation
+- satellite
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery Base Maps Earth Cover
+  name: Imagery Base Maps Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99998731

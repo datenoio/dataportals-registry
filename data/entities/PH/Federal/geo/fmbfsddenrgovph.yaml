@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PH
+      name: Philippines
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Public ArcGIS Enterprise catalog of DENR Forest Management Bureau (Forestry
+  Spatial Dataset Portal). Publishes forest-land, National Greening Program, INREMP,
+  watershed, and related map services. Portal UI at https://fmbfsd.denr.gov.ph/arcgis/home/.
+endpoints:
+- type: arcgis:rest:info
+  url: https://fmbfsd.denr.gov.ph/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://fmbfsd.denr.gov.ph/server/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://fmbfsd.denr.gov.ph/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://fmbfsd.denr.gov.ph/server/rest/services?f=geositemap
+id: fmbfsddenrgovph
+langs:
+- id: EN
+  name: English
+link: https://fmbfsd.denr.gov.ph/server/rest/services
+name: DENR Forest Management Bureau Forestry Spatial Dataset Portal
+owner:
+  link: https://forestry.denr.gov.ph
+  location:
+    country:
+      id: PH
+      name: Philippines
+    level: 20
+  name: Forest Management Bureau
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- government
+- Philippines
+- has_api
+- ArcGIS
+- forestry
+- forest
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi99998729

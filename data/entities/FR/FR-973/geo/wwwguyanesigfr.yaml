@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-973
+      name: Guyane (française)
+description: Guyane SIG territorial catalog (Isogeo OpenCatalog with a CKAN-compatible
+  indexer), harvested by data.gouv.fr. Distinct from the GeoServer at catalogue.guyane-sig.fr.
+endpoints:
+- type: ckan
+  url: https://www.guyane-sig.fr/fr/indexer/service/ckan/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://www.guyane-sig.fr/fr/indexer/service/ckan/api/3/action/package_search
+  version: '3'
+id: wwwguyanesigfr
+langs:
+- id: FR
+  name: French
+link: https://www.guyane-sig.fr/
+name: Guyane SIG catalog
+owner:
+  link: https://www.guyane-sig.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-973
+      name: Guyane (française)
+  name: Collectivité Territoriale de Guyane
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: isogeo
+  name: Isogeo
+status: active
+tags:
+- geospatial
+- open data
+- Guyana
+- Isogeo
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99994688

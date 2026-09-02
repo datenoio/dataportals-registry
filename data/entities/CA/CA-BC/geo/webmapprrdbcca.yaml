@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: Public Geocortex Essentials mapping site for the Peace River Regional
+  District, British Columbia, including the PeaceRiver Public interactive web map.
+endpoints:
+- type: geocortex:catalog
+  url: https://webmap.prrd.bc.ca/Geocortex/Essentials/REST/sites?f=pjson
+id: webmapprrdbcca
+langs:
+- id: EN
+  name: English
+link: https://webmap.prrd.bc.ca/Html5Viewer/index.html?viewer=PeaceRiver_Public
+name: Peace River Regional District Interactive Web Map
+owner:
+  link: https://www.prrd.bc.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: Peace River Regional District
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- Geocortex
+- government
+topics:
+- id: GEOS
+  name: Geospatial
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99995749

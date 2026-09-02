@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-TN
+      name: Tennessee
+description: Henry County, Tennessee 911 public GIS Cloud map for emergency addressing
+  and dispatch layers.
+endpoints:
+- type: giscloud:catalog
+  url: https://henrycounty911.giscloud.com/
+id: henrycounty911giscloudcom
+langs:
+- id: EN
+  name: English
+link: https://henrycounty911.giscloud.com/
+name: Henry County 911 Portal
+owner:
+  link: https://henryco911tn.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TN
+      name: Tennessee
+  name: Henry County 911 Communications District
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: giscloud
+  name: GIS Cloud
+status: active
+tags:
+- GIS
+- geospatial
+- '911'
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99998784

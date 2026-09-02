@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: ES-AN
+      name: Andalucía
+description: Tabular statistical warehouse of the Instituto de Estadística y Cartografía
+  de Andalucía. Users build and download cubes covering labour, business, industry,
+  tourism, economic accounts, living conditions, and R&D, with a JSON REST API.
+endpoints:
+- type: rest
+  url: https://www.juntadeandalucia.es/institutodeestadisticaycartografia/intranet/admin/rest/v.0.1/consulta/1353
+  version: '0.1'
+id: wwwjuntadeandaluciaesbadea
+langs:
+- id: ES
+  name: Spanish
+link: https://www.juntadeandalucia.es/institutodeestadisticaycartografia/badea/
+name: BADEA Banco de Datos Estadísticos de Andalucía
+owner:
+  link: https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-AN
+      name: Andalucía
+  name: Instituto de Estadística y Cartografía de Andalucía
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- indicators
+- regional
+- Andalucía
+- has_api
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99994724

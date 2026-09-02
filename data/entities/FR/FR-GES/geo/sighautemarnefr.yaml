@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 40
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-GES
+      name: Grand-Est
+description: Public ArcGIS Server REST catalog of the Département de la Haute-Marne,
+  including communal OASIS webservices and ortho map services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://sig.haute-marne.fr/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.haute-marne.fr/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig.haute-marne.fr/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://sig.haute-marne.fr/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sig.haute-marne.fr/arcgis/rest/services?f=geositemap
+id: sighautemarnefr
+langs:
+- id: FR
+  name: French
+link: https://sig.haute-marne.fr/arcgis/rest/services
+name: SIG Haute-Marne ArcGIS Server
+owner:
+  link: https://www.haute-marne.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-GES
+      name: Grand-Est
+  name: Département de la Haute-Marne
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- geoportal
+- France
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99996834

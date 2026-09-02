@@ -9,33 +9,127 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- **110 net new catalog entries** since v1.18.0 (120 added, 10 removed); registry source now **25,103** entities (**0** scheduled) across **219** country/territory folders.
+- **4,823 net new catalog entries** since v1.18.0 (4,836 added, 13 removed); registry source now **29,816** entities (**0** scheduled) across **222** country/territory folders (added Bermuda `BM`, French Polynesia `PF`, and Réunion `RE`).
+- **84 software definitions**; software catalog now **366** platforms. Highest-count new IDs: ArcGIS Experience Builder (`experiencebuilder`, **193**), Mapotip (`mapotip`, **137**), GisMaster (`gismaster`, **135**), GISPLAN (`gisplan`, **128**), ArcGIS Web AppBuilder (`webappbuilder`, **114**), IntraMaps Public (`intramaps`, **107**), SonicWeb (`sonicweb`, **105**), Geoportál GEPRO (`gepro`, **99**), KOVGIS EVALD (`evald`, **80**), Pozi (`pozi`, **78**), ALANDIS+ (`alandis`, **76**), and GeoMedia SmartClient Public Maps (`publicmaps`, **69**).
+- IntraMaps Public (`intramaps`) software definition for TechnologyOne Spatial municipal GIS (`/intramaps90/`, `{council}.spatial.t1cloud.com`); **107** catalogs (**99** Australian councils, **8** New Zealand).
+- SonicWeb (`sonicweb`) software definition for Kokusai Kogyo `{slug}` public WebGIS on `www.sonicweb-asp.jp`; **105** Japanese prefecture and municipal geoportals.
+- KOVGIS EVALD (`evald`) software definition for EOMAP / Geodata Arendus Estonian municipal GIS (`evald.ee/{slug}/`); **80** local-government geoportals.
+- ALANDIS+ (`alandis`) software definition for Asia Air Survey hosted public WebGIS (`webgis.alandis.jp/{tenant}/`); **76** Japanese geoportals.
+- GeoMedia SmartClient Public Maps (`publicmaps`) software definition for GIS Quadrat `publicmaps.gisquadrat.com/BP/WEPM.aspx`; **69** Austrian municipal geoportals. Distinct from GIS Quadrat ERDAS APOLLO on `apollo.gisquadrat.com`.
+- p.mapper (`pmapper`) software definition for the MapServer PHP frontend (`/pmapper-4.2.0/`, `{city}.geo-portale.it`); **50** Italian geoportals.
+- SeaSketch (`seasketch`) software definition for UCSB/NCEAS marine spatial planning (`www.seasketch.org/{project}/app`); **49** project map portals.
+- Conduent Healthy Communities Institute (`hci`) software definition for US community-health indicator dashboards; **48** county and collaborative sites.
+- MapGuide (`mapguide`) software definition for Autodesk MapGuide Open Source / Enterprise; **45** catalogs (mostly Canadian municipal community maps).
+- Geodeticca WEB GIS (`geodeticca`) software definition for GEODETICCA VISION `gis.{city}.sk`; **44** Slovak municipal clients.
+- MAP+ (`mapplus`) software definition for TYDAC AG modular WebGIS; **33** Swiss and German geoportals.
+- Spectrum Spatial Analyst (`spectrumspatial`) software definition for Precisely / MapInfo `/connect/analyst/` (successor to Exponare); **27** council and regional catalogs.
+- GDi Visios (`gdivisios`) software definition for GDi Ensemble (formerly LOCALIS) Web GIS; **26** Croatian municipal viewers.
+- PAGIS (`genegis`) software definition for GeneGIS GI hosted municipal SIT; **25** Italian comune catalogs.
+- ISY Map (`isymap`) software definition for Norconsult Digital municipal GIS (GeoInnsyn); **25** Norwegian kartinnsyn portals.
+- touvia.MAPS (`touviamaps`) software definition for vianovis municipal GIS (`vianovis.net/{tenant}/`); **25** German geoportals.
+- VC Map (`vcmap`) software definition for Virtual City Systems `html.vcs-ui` 2D/3D viewers; **24** German digital-twin and 3D-city catalogs.
+- DABAR (`dabar`) software definition for Croatia’s national multi-tenant IR platform (SRCE); **22** institutional repositories.
+- Gen3 (`gen3`) software definition for the University of Chicago CTDS data-commons platform; **22** US biomedical data commons.
+- Geopixel Cidades (`geopixel`) software definition for Brazilian municipal geointelligence SaaS; **22** GeoPortal catalogs.
+- INGRADA online (`ingrada`) software definition for Softplan `Softplan.Ingrada.Mobile` BürgerGIS; **22** German municipal viewers.
+- EnviMAP (`envimap`) software definition for Envirosense Hungary municipal zoning GIS; **19** Hungarian geoportals.
+- Geolonia スマートマップ (`geoloniagis`) software definition for Digital Agency model-spec public WebGIS; **18** Japanese geoportals.
+- K5 MapServer (`k5mapserver`) software definition for MK Consult `{muni}.k5mapserver.cz`; **18** Czech municipal geoportals.
+- Origo (`origo`) software definition for Origosamverkan OpenLayers municipal viewers (`origo.min.js`); **18** Swedish kommunkartor. Retagged Umeåkartan from `custom` to `mapguide`.
+- SmartMap (`smartmap`) software definition for hosted Kazakh district investment geoportals; **18** catalogs.
+- ATM Maggioli (`atmmaggioli`) software definition for Spanish municipal Portal de Transparencia `/transparencia/datos/catalogo`; **17** Canary Islands and municipal open-data catalogs.
+- DGBAS Web (`dgbasweb`) software definition for Taiwan local-government statistical query platforms; **17** county/city indicator catalogs.
+- GeDA-Public (`geogeo`) software definition for Nakano AI System `geogeo.jp` resident GIS; **17** Japanese geoportals.
+- Palapa (`palapa`) software definition for Badan Informasi Geospasial simpul jaringan geoportals; **17** Indonesian ministry/province/kabupaten catalogs.
+- GIS Cloud (`giscloud`) software definition for `{city}.giscloud.com` hosted GIS; **16** catalogs (Canada, US, and others).
+- SIT WebGis (`sitwebgis`) software definition for SIT Servizi `webgis.sit-puglia.it/{comune}/`; **16** Puglia comune catalogs. Distinct from Regione Puglia GeoNetwork on `repertorio.sit.puglia.it`.
+- Avinet Adaptive (`avinet`) software definition for Norwegian Webatlas thematic maps (`a3.avinet.no`); **15** catalogs.
+- Georeal (`georeal`) software definition for GEOREAL Czech kraj DTM/geoportal CMS (`/portal/Georeal.Cards`); **15** kraj geoportals.
+- mOBEC (`mobec`) software definition for T-MAPY `mobec.sk/{slug}` municipal map portals; **15** Slovak city catalogs.
+- LocalMaps (`localmaps`) software definition for Eagle Technology New Zealand council GIS; **13** regional/city map portals.
+- MRF Web Map (`mrf`) software definition for MRF Geosystems `{county}.mrf.com` municipal GIS; **11** Alberta catalogs.
+- Cancer-Rates.info (`cancerrates`) software definition for Kentucky Cancer Registry multi-tenant query sites; **10** US/NAACCR indicator catalogs.
+- IBDC (`ibdc`) software definition for the Indian Biological Data Centre; **10** national biological-data archives.
+- MuniSight (`munisight`) software definition for Catalis GIS WebMap `web.munisight.com/{Tenant}`; **10** Alberta/Saskatchewan catalogs.
+- SOFTPRO (`softpro`) software definition for Ukrainian Містобудівний кадастр GIS; **10** city MBK geoportals.
+- terGIS (`tergis`) software definition for METRUM / TOPO DATI `{tenant}.tergis.lv`; **10** Latvian territorial-planning catalogs.
+- Weave (`weave`) software definition for Cohga municipal HTML5 GIS (title Weave Map); **9** Australian catalogs.
+- Pozi (`pozi`) software definition for Australian `{council}.pozi.com` web GIS (title Pozi Web Map); **78** council catalogs.
+- ArcGIS Instant Apps (`instantapps`) software definition for Esri `/apps/instant/{template}/?appid=` template apps; **34** geoportals.
+- JMap (`jmap`) software definition for K2 Geospatial JMap Web / JMap NG; **8** Canadian geoportals.
+- CommunityView (`communityview`) software definition for Digital Map Products `VECommunityView` municipal GIS; **7** catalogs (California plus Clarkston GA).
+- MS-GIS (`msgis`) software definition for Lower Austria `{city}.msgis.net` GeoInformation viewers; remapped **3** geoportals from `custom`.
+- OVIE (`ovie`) software definition for INEGI Oficina Virtual de Información Económica OpenLayers viewers; **8** Mexican geoportals.
+- MxSIG (`mxsig`) software definition for INEGI Mapa Digital de México V6 (`/mdm6/`, `/mxsig2/`); **5** Mexican geoportals.
+- TR32DB (`tr32db`) software definition for the University of Cologne CRC research-data platform; remapped TR32DB, CRC1211DB, and TRR228DB from `custom` (CRC806DB stays `custom`).
+- eKMap Cloud (`ekmap`) software definition for eKGIS Vietnamese planning GIS; **6** `quyhoach.*.gov.vn` catalogs. Hanoi city `quyhoach.hanoi.gov.vn` stays `custom` (Next.js, not eKMap).
+- KAZGISA RGIS (`rgis`) software definition for Kazakhstani akimat `{host}/map/` Angular Leaflet viewers; **5** catalogs. Atyrau `eatyrau.kz` stays `custom` (older OpenLayers KAZGISA stack).
+- Exponare (`exponare`) software definition for MapInfo / Pitney Bowes `/exponare/RestPublicApplication.aspx`; **2** Australian catalogs (Willoughby, Somerset). Later tenants use Spectrum Spatial Analyst.
+- SIGimWeb (`sigimweb`) software definition for Indixio SIGim Web Quebec municipal GIS; remapped **3** geoportals from `custom`.
+- CG WebGIS (`cgwebgis`) software definition for CORA GEO `webgis.{city}.sk`; remapped **8** Slovak geoportals from `custom`.
+- giscity (`giscity`) software definition for ibb DV-Systems `www.gisserver.de/{city}/`; **7** German municipal GIS tenants.
+- Mapotip (`mapotip`) software definition for Czech `portal.mapotip.cz/{municipality}` municipal map portals; **137** catalogs.
+- Geoportál GEPRO (`gepro`) software definition for GEPRO municipal web GIS (`{city}.obce.gepro.cz`, `{city}.gepro.cz`); **99** Czech catalogs.
+- GisOnline (`gisonline`) software definition for TopGis `app.gisonline.cz/{city}`; **31** Czech municipal map apps.
+- Marushka (`marushka`) software definition for GEOVAP map application server (`zipped.js` / `js/marushka.js`); **5** Czech catalogs.
+- GISPLAN (`gisplan`) software definition for T-MAPY Spinbox / GIS4U / T-WIST (`{city}.gisplan.sk`, `{muni}.gis4u.cz`, `{city}.tmapserver.cz`); **128** catalogs (**88** Czech, **40** Slovak).
+- ArcGIS Experience Builder (`experiencebuilder`) software definition for Esri Jimu apps (`experience.arcgis.com/experience/`, `/portal/apps/experiencebuilder/`); **193** geoportals.
+- ArcGIS Web AppBuilder (`webappbuilder`) software definition for `/apps/webappviewer/` apps; **114** geoportals.
+- dmCity (`dmcity`) software definition for Esri Finland `web.dmcity.fi/{city}/public/` municipal tenants; remapped **7** Finnish geoportals from `custom`.
+- NetGIS Runtime (`netgisruntime`) software definition for WSP Danmark `/NetGISRuntime/basis/index.jsp`; **8** Danish municipal viewers.
+- VertiGIS Studio Web (`vertigisstudioweb`) software definition for VertiGIS Studio Web viewers (`/vertigisstudio/web/?app=`, `/gcx/WebViewer/`); **29** geoportals.
+- HyG Mapgis (`hygmapgis`) software definition for H&G Consultores Suite MapGIS viewers (`/mapgis/mapa.jsp`); **3** Colombian geoportals.
+- GisMaster (`gismaster`) software definition for Technical Design municipal GeoPortale tenants on `geoportale.sportellounicodigitale.it/GisMaster`; **135** Italian comune catalogs (promoted from scheduled).
+- Dobles Visor de Mapas (`doblesvisor`) software definition for Costa Rican municipal Leaflet cadastral viewers; **8** canton catalogs.
+- myCarta (`mycarta`) software definition for Aveki Swedish municipal WebMap; **8** kommunkartor.
+- Pathway Tools (`pathwaytools`) software definition for SRI Pathway/Genome Databases; **8** catalogs.
+- OpenScience.si (`opensciencesi`) software definition for the Slovenian national repository platform; **7** catalogs.
+- META-SHARE (`metashare`) software definition for the META-NET language-resource exchange; **6** nodes.
+- Visor Urbano (`visorurbano`) software definition for Guadalajara-origin municipal urban GIS; **6** Mexican city catalogs.
+- CTMGEO SigWEB (`ctmgeo`) software definition for Brazilian municipal cadastral WebGIS; **5** SIGWeb catalogs.
+- InfoGIS (`infogis`) software definition for Infokartta Oy Finnish municipal map SaaS; **5** catalogs.
+- OpenGov (`opengov`) software definition for Tyler Technologies local-government transparency SaaS; **4** US catalogs.
+- XY Maps (`xymaps`) software definition for Eckersall municipal GIS; **4** California catalogs.
+- eDatos (`edatos`) software definition for ISTAC-origin statistical data/metadata infrastructure; **3** Spanish regional catalogs.
+- GeoNube (`geonube`) software definition for Cooperativa Cambalache hosted Leaflet maps; **3** Argentine municipal catalogs.
+- VKOMAP (`vkomap`) software definition for Geoinfo Kazakh akimat geoportals (`/vkomap/`); **3** catalogs.
+- Virtual LMI (`virtuallmi`) software definition for Geographic Solutions labor-market information (`*.virtuallmi.com`); **2** catalogs.
+- PISO (`piso`) software definition for Realis Slovenian municipal GIS (`geoprostor.net`); distinct from Kaliopa iObčina.
+- Retagged INSTAT WebGIS, Klosterneuburg Geoportal, and AMVA Portal Geográfico Metropolitano from `custom` to `experiencebuilder`.
+- Retagged three ArcGIS Enterprise `/portal/home/` catalogs (Mendoza, Cergy-Pontoise, Angers Loire Métropole) from `custom` to `arcgishub`, and Güngören Kent Rehberi from `custom` to `netgisserver`.
+- **159** Slovenian iObčina (`iobcina`) municipal GIS portals.
+- **291** ArcGIS Hub and **278** ArcGIS Server geoportals (Canada, US, Ukraine, France, Chile, Costa Rica, and others).
+- **77** Finnish Sitowise Louhi, **72** Finnish QWC2, and **20** Finnish Trimble Locus IMS geoportals.
+- **36** Romanian GISApp municipal viewers and **31** Turkish NetGIS Server Kent Rehberi catalogs.
+- **65** Indonesian open-data portals (including CKAN local governments) plus Palapa geoportals.
+- **17** Taiwan DGBAS Web statistical databases and **25** South Korean indicator catalogs.
 - **30** Belarusian university and academy institutional repositories (**28** DSpace plus the Belarusian State Academy of Arts and Yanka Kupala State University of Grodno catalogs).
+- **22** Croatian DABAR institutional repositories and **26** GDi Visios municipal geoportals.
+- **10** Indian Biological Data Centre archives and further Indian scientific repositories.
 - **7** South African DSpace institutional repositories promoted from scheduled review: SAMRC InfoSpace, Sol Plaatje OpenHub, UMP Open Scholarship, NWU Boloka, UFS KovsieScholar, TUT Digital Open Repository, and University of Venda.
 - **6** Cuban scientific repositories: ALMA Universidad de Pinar del Río (InvenioRDM), DSpace at UCf, UCLV, and Universidad de Guantánamo, plus the national and Artemisa biomedical thesis repositories.
-- **6** US records including the Digital Archaeological Archive of Comparative Slavery (DAACS) and **5** Guam catalogs (northern and southern hydrologic atlases, Guam Hydrologic Survey, University of Guam DSpace, and GCBR Specify).
 - **5** North Macedonia catalogs: EPrints at UGD, UKLO, and University of Tetova; International Vision University; and the Repo-MK national research-repository search.
 - **4** Africa-level catalogs: FeSeRWAM West Africa fertilizer and seed map, Lake Chad Information System, OFAC/COMIFAC forest observatory, and RIHA African herbaria.
 - **4** Kuwait scientific repositories (AUK, IUK, and AOU DSpace; KFAS Research Portal on Elsevier Pure).
 - **4** Seychelles catalogs (NBS ecosystemology and flora Shiny apps, Seychelles Plant Gallery, and UniSey ResearchConnect).
-- **9** geoportals including Palau PALARIS ArcGIS Hub, Kiribati Te Baiku SeaSketch, Lake Chad LIS, FeSeRWAM, CZMAI Belize, FertiTogo, Guam hydrologic atlases, and Grenadines MarSIS.
-- **3** indicator catalogs: Guinea SNIS (DHIS2) and two Nauru Bureau of Statistics sites (WordPress and .Stat Suite on Pacific Data Hub).
-- Coverage-gap scientific repositories and biodiversity catalogs across small states and the Global South, including Oman Shuaa (Islandora), Malta OAR@UM, San Marino IRIS, Timor-Leste RCN/IOB and the national biodiversity bank, Palau coral-reef collections, Marshall Islands radioecology and nuclear document databases, Vanuatu and Samoa Symbiota herbaria, Pacific Biodiversity Information Facility, SPC Digital Library, Belize BERDS, ISA DeepData (Jamaica), and university IRs in Afghanistan, Burkina Faso, Brunei, DRC, Fiji, Gambia, Comoros, Mali, São Tomé, Tajikistan, and Trinidad.
-
-
+- Coverage-gap scientific repositories and biodiversity catalogs across small states and the Global South, including Oman Shuaa (Islandora), Malta OAR@UM, San Marino IRIS, Timor-Leste RCN/IOB and the national biodiversity bank, Palau coral-reef collections, Marshall Islands radioecology and nuclear document databases, Vanuatu and Samoa Symbiota herbaria, Pacific Biodiversity Information Facility, SPC Digital Library, Belize BERDS, ISA DeepData (Jamaica), Guam hydrologic atlases and University of Guam DSpace, and university IRs in Afghanistan, Burkina Faso, Brunei, DRC, Fiji, Gambia, Comoros, Mali, São Tomé, Tajikistan, and Trinidad.
 
 ### Changed
 
+- Retagged Alingsås karta from `custom` to `experiencebuilder` after a live redirect to `experience.arcgis.com`, and Kiruna karta from `custom` to `webappbuilder` after a live `/apps/webappviewer/` probe.
+- Retagged GESIS ZACAT `/webview/` from `custom` to `nesstar`.
+- Retagged University of St Andrews research data portal from `custom` to `pure` after a live Elsevier Pure probe (`research-portal.st-andrews.ac.uk`).
+- Retagged GRSF (i-marine) and Gaia Blu Cruise Inventory from `custom` to `d4science` after live gCube CKAN data-catalogue probes.
 - Discovery guides now include hunt patterns from post-v1.18.0 sessions: national harvest sources (data.go.id, datos.gob.es, opendata.swiss, data.gov.ru, …), dataset-bearing university IRs (OpenDOAR/ROAR), country indicators leftovers, and named directories (ODIS, CoreTrustSeal, WIS2 GDC, STAC Index, GeoNode gallery). Agent checklist and improve playbook updated with those prompts, accept/reject rules, and a refreshed priority queue.
-- Promoted the remaining **7** scheduled South African institutional repositories to entities after live URL checks. Scheduled queue is now empty (**0**).
+- Promoted the remaining **7** scheduled South African institutional repositories and **135** Italian GisMaster comuni to entities after live URL checks. Scheduled queue is now empty (**0**).
 - Added San Marino (`SM`) to the `COUNTRIES` map in `scripts/constants.py`.
-- Source YAML is **25,103** catalogs, **0** scheduled, **282** software. Working-tree JSONL, Parquet, and DuckDB dumps still last rebuilt **28 August 2026** at **24,993** catalogs / **7** scheduled / **282** software.
-
-
+- Regenerated dataset exports to match source YAML: **29,816** catalogs, **0** scheduled, **366** software. Quality analysis reports **0** issues across **29,816** records.
 
 ### Removed
 
 - **10** Kazakhstan university institutional repositories with no dataset records (publication-only IRs): Kostanay Regional University, West Kazakhstan Marat Ospanov Medical University, MNU NARA, Buketov Karaganda University, Karaganda University of Kazpotrebsoyuz, L.N. Gumilyov ENU, KazNARU, Satbayev University, SDU, and Karaganda Medical University.
+- Duplicate US ArcGIS Server records for Fort Bend County (`giswebfortbendcountytxgov`, wrongly filed under `US-DC`) and Will County GIS REST (`giswilcoorg`).
+- IBESTAT Open Data Service (`ibestatedatosio`) after the Balearic indicators catalog moved to the eDatos record.
 
 
 

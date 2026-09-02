@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: NORMA is the National College of Ireland EPrints institutional repository
+  for research publications and other scholarly outputs, with OAI-PMH harvest.
+endpoints:
+- type: oaipmh20
+  url: https://norma.ncirl.ie/cgi/oai2?verb=Identify
+  version: '2.0'
+id: normancirlie
+langs:
+- id: EN
+  name: English
+link: https://norma.ncirl.ie
+name: NORMA@NCI Library
+owner:
+  link: https://www.ncirl.ie
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+  name: National College of Ireland
+  type: Academy
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- research data
+- academic
+- institutional repository
+- has_api
+- EPrints
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99995246

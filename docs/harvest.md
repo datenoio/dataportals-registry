@@ -18,16 +18,16 @@ Coding agents: [agents/harvest.md](agents/harvest.md). Production harvesting for
 |-------|----------|
 | [Scientific repositories](harvest-scientific.md) | DSpace, Invenio, EPrints, Pure, Esploro, Converis, Omega-PSIR, Hyrax, Archipelago, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, and other IRs that mix **publications, theses, software, and datasets** |
 | [Domain scientific repositories](harvest-scientific-domain.md) | IPT, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal |
-| [Open data portals](harvest-opendata.md) | CKAN, OpenDataSoft, Socrata, ResourceContracts, RDF Online Repository, Guangxi, ODWeb — packages vs resources vs contracts |
+| [Open data portals](harvest-opendata.md) | CKAN, OpenDataSoft, Socrata, ResourceContracts, RDF Online Repository, Guangxi, ODWeb, OpenGov — packages vs resources vs contracts vs reports |
 | [Geoportals](harvest-geoportals.md) | GeoNetwork CSW, GeoNode, ArcGIS, STAC, OGC API, G3W-SUITE, CubeWerx, M.App Enterprise, mviewer, Isogeo, Geocortex, QGIS Server — layers vs services vs tiles |
-| [Indicators and microdata](harvest-indicators.md) | PxWeb / PxStat tables, SDMX dataflows, OpenSDG / Goal Tracker, IMF NSDP, NADA studies, DHIS2, TabNet, FENIX, SparkMap, eDatos, Cancer-Rates.info, HCI, Virtual LMI, IPUMS |
+| [Indicators and microdata](harvest-indicators.md) | PxWeb / PxStat tables, DGBAS Web tables, SDMX dataflows, OpenSDG / Goal Tracker, IMF NSDP, NADA studies, DHIS2, TabNet, FENIX, SparkMap, eDatos, Cancer-Rates.info, HCI, Virtual LMI, IPUMS |
 | [Metadata catalogs](harvest-metadata.md) | FAIR Data Point DCAT, Aristotle MDR, Fusion Registry structure |
 | [Search, ML, API, marketplaces](harvest-other.md) | Aggregators, OpenAIRE, OpenML, API directories, marketplaces, `custom` |
 | [Protocols](harvest-protocols.md) | OAI-PMH, CSW, DCAT, STAC, SDMX, OGC, ArcGIS REST — grain that is shared across products |
 | [Incremental harvests](harvest-incremental.md) | `from=`, `metadata_modified`, STAC `datetime`, checkpoints |
 | [Earth observation](harvest-earthdata.md) | THREDDS, ERDDAP, STAC collections, Open Data Cube, Copernicus, openEO, Sentinel Hub, ESGF, ESA Science Archive |
 | [Biodiversity and genomics](harvest-biodiversity.md) | IPT, Symbiota, ALA, GBIF datasets, Ensembl species, Breedbase, Tripal, VEuPathDB, PlutoF, InterMine, JGI, cBioPortal |
-| [Map viewers](harvest-viewers.md) | QWC2, Masterportal, Lizmap, mviewer, Trimble Locus / Louhi / Landfolio, Spatial Suite, Hajk, KortInfo, GEUSMAP, GISApp, iObčina, iShare, Cadcorp — layers not tiles |
+| [Map viewers](harvest-viewers.md) | QWC2, Masterportal, Lizmap, mviewer, Trimble Locus / Louhi / Landfolio, Spatial Suite, Spectrum Spatial Analyst, Hajk, myCarta, KortInfo, IntraMaps, LocalMaps, GEUSMAP, GISApp, GeneGIS PAGIS, GisMaster, HyG Mapgis, iObčina, iShare, Cadcorp — layers not tiles |
 | [Dataset identifiers](harvest-identifiers.md) | Native id + catalog `uid`; DOI/handle; do not mint `cdi########` for datasets |
 | [Harvest output](harvest-output.md) | JSON record shape, skip counts, empty-harvest checklist |
 

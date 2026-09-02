@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: MY-10
+      name: Selangor
+description: Selangor state geospatial portal (GeoSmart) listed on MyGDI. Public ArcGIS
+  Enterprise catalog for state land use, infrastructure, and emergency mapping, distinct
+  from the JPS Selangor drainage GIS already registered.
+id: geosmartselangorgovmy
+langs:
+- id: MS
+  name: Malay
+- id: EN
+  name: English
+link: https://geosmart.selangor.gov.my/portal/home/
+name: GeoSmart Selangor
+owner:
+  link: https://www.selangor.gov.my/
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 30
+    subregion:
+      id: MY-10
+      name: Selangor
+  name: Selangor State Government
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geoportal
+- geospatial
+- GIS
+- Selangor
+- Malaysia
+- ArcGIS
+- MyGDI
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99996385
+endpoints:
+- type: arcgis:portals:self
+  url: https://geosmart.selangor.gov.my/portal/sharing/rest/portals/self?f=pjson

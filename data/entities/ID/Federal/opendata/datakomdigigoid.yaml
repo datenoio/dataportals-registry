@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ID
+      name: Indonesia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Kementerian Komunikasi
+  dan Digital.
+endpoints:
+- type: dcatus11
+  url: https://data.komdigi.go.id/data.json
+id: datakomdigigoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://data.komdigi.go.id
+name: Kementerian Komunikasi dan Digital Open Data
+owner:
+  link: https://komdigi.go.id
+  location:
+    country: *id001
+    level: 20
+  name: Kementerian Komunikasi dan Digital
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- open data
+- indonesia
+- satu data
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99995577

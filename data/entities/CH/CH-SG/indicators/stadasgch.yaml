@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: CH-SG
+      name: Sankt Gallen
+description: SuperWEB2 table builder (STADA) of the Canton of St. Gallen. Users combine
+  dimensions for custom tables on population, labour, enterprises, housing and elections.
+  A public guest login is published (username and password gast).
+endpoints:
+- type: superstar:catalog
+  url: https://stada.sg.ch/webapi/jsf/login.xhtml
+id: stadasgch
+langs:
+- id: DE
+  name: German
+link: https://stada.sg.ch/
+name: STADA Statistikdatenbank St. Gallen
+owner:
+  link: https://www.sg.ch/ueber-den-kanton-st-gallen/statistik.html
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-SG
+      name: Sankt Gallen
+  name: Amt für Daten und Statistik Kanton St.Gallen
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+  transferable_location: true
+software:
+  id: superstar
+  name: SuperSTAR
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- Switzerland
+- St. Gallen
+- cantonal
+- SuperWEB2
+- has_api
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99994785

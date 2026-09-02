@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LV
+      name: Latvia
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: LV-050
+      name: Kuldīgas novads
+description: ArcGIS Hub site of Kuldīga Municipality (Kuldīgas novads) publishing
+  public GIS layers, maps, and apps for cadastre, planning, and local government data.
+endpoints:
+- type: dcatap201
+  url: https://gis-kuldiga.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://gis-kuldiga.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://gis-kuldiga.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://gis-kuldiga.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://gis-kuldiga.hub.arcgis.com/sitemap.xml
+id: giskuldigahubarcgiscom
+langs:
+- id: LV
+  name: Latvian
+link: https://gis-kuldiga.hub.arcgis.com
+name: Kuldīga ĢIS
+owner:
+  link: https://www.kuldigasnovads.lv
+  location:
+    country:
+      id: LV
+      name: Latvia
+    level: 30
+    subregion:
+      id: LV-050
+      name: Kuldīgas novads
+  name: Kuldīgas novada pašvaldība
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- GIS
+- geospatial
+- municipality
+- Kuldīga
+- Latvia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99998453

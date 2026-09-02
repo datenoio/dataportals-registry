@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Institute for Financial Policy data and statistics. Time series on macroeconomic
+  and fiscal indicators, tax revenues, VAT gap, inflation, and related structural
+  policy measures.
+endpoints:
+- type: rest
+  url: https://ifp.sk/wp-json/
+- type: sitemap
+  url: https://ifp.sk/sitemap_index.xml
+- type: rss
+  url: https://ifp.sk/feed/
+id: ifpsk
+langs:
+- id: SK
+  name: Slovak
+link: https://ifp.sk/data-a-statistiky/
+name: IFP – dáta a štatistiky
+owner:
+  link: https://ifp.sk
+  location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 20
+  name: Inštitút finančnej politiky
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: wordpress
+  name: WordPress
+status: active
+tags:
+- statistics
+- government
+- fiscal
+- economy
+- indicators
+- Slovakia
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99994960

@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion:
+      id: JP-05
+      name: Akita
+description: Akita Prefecture ArcGIS Hub publishing forest inventory and related geospatial
+  open data.
+id: akitafmdakitafmdhubarcgiscom
+langs:
+- id: JA
+  name: Japanese
+link: https://akitafmd-akitafmd.hub.arcgis.com/
+name: 秋田県森林情報公開サービス
+owner:
+  link: https://www.pref.akita.lg.jp/
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-05
+      name: Akita
+  name: Akita Prefectural Government
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- GIS
+- prefecture
+- Japan
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99996092
+endpoints:
+- type: dcatap201
+  url: https://akitafmd-akitafmd.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://akitafmd-akitafmd.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://akitafmd-akitafmd.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://akitafmd-akitafmd.hub.arcgis.com/api/search/v1

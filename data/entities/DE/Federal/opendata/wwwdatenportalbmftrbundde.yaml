@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Data portal of the Federal Ministry of Research, Technology and Space
+  (BMFTR), formerly the BMBF Datenportal. Publishes statistical datasets on education,
+  research, and related topics and is harvested by GovData as a DCAT-AP.de source.
+endpoints:
+- type: dcat:jsonld
+  url: https://www.datenportal.bmftr.bund.de/portal/dump/govdata/metadatenkatalog.json?standard=dcatap
+id: wwwdatenportalbmftrbundde
+langs:
+- id: DE
+  name: German
+link: https://www.datenportal.bmftr.bund.de/portal/
+name: Datenportal des BMFTR
+owner:
+  link: https://www.bmftr.bund.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Bundesministerium für Forschung, Technologie und Raumfahrt
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- open data
+- research
+- education
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99994652

@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: ERDDAP server of the National Marine Data and Information Service (NMDIS) providing
+  oceanographic datasets.
+endpoints:
+- type: erddap:index
+  url: http://222.186.3.18:8888/erddap/index.json
+- type: erddap:datasets
+  url: http://222.186.3.18:8888/erddap/info/index.json
+id: '222186318'
+langs:
+- id: EN
+  name: English
+link: http://222.186.3.18:8888/erddap/index.html
+name: National Marine Data and Information Service ERDDAP
+owner:
+  link: https://www.nmdis.org.cn
+  location:
+    country:
+      id: CN
+      name: China
+    level: 20
+  name: National Marine Data and Information Service
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- ocean
+- ODIS
+- ERDDAP
+- NMDIS
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi99995556

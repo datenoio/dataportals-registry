@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-QC
+      name: Quebec
+description: Production ArcGIS REST services catalog for Ville de Montréal municipal
+  GIS.
+endpoints:
+- type: arcgis:portals:self
+  url: https://donneesgeomatique.montreal.ca/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://donneesgeomatique.montreal.ca/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://donneesgeomatique.montreal.ca/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://donneesgeomatique.montreal.ca/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://donneesgeomatique.montreal.ca/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://donneesgeomatique.montreal.ca/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://donneesgeomatique.montreal.ca/arcgis/rest/services?f=kmz
+id: donneesgeomatiquemontrealca
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://donneesgeomatique.montreal.ca/arcgis/rest/services
+name: Ville de Montréal GIS REST Services
+owner:
+  link: https://www.montreal.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-QC
+      name: Quebec
+  name: Ville de Montréal
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- government
+- Quebec
+- Montreal
+- ArcGIS
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99997776

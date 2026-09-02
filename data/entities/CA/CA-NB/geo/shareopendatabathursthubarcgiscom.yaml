@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-NB
+      name: New Brunswick
+description: City of Bathurst ArcGIS Hub with municipal GIS datasets including trails, statistics,
+  and proposed boundary areas.
+endpoints:
+- type: dcatap201
+  url: https://share-open-data-Bathurst.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://share-open-data-Bathurst.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://share-open-data-Bathurst.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://share-open-data-Bathurst.hub.arcgis.com/api/search/v1
+id: shareopendatabathursthubarcgiscom
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://share-open-data-Bathurst.hub.arcgis.com/
+name: City of Bathurst Open Data
+owner:
+  link: https://www.bathurst.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-NB
+      name: New Brunswick
+  name: City of Bathurst
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- GIS
+- municipal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00037706

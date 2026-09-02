@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FJ
+      name: Fiji
+    level: 20
+    macroregion:
+      id: '054'
+      name: Melanesia
+description: Institutional EPrints repository of the University of the South Pacific
+  (USPERR) at Laucala Campus, Suva. Publishes scholarly outputs for USP staff across
+  the 12 member countries, including the Kiribati Campus division. Mixed publications
+  and research data; unauthenticated scripted GETs currently receive Cloudflare 403.
+endpoints:
+- type: oaipmh20
+  url: https://repository.usp.ac.fj/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://repository.usp.ac.fj/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://repository.usp.ac.fj/cgi/latest_tool?output=Atom
+id: repositoryuspacfj
+langs:
+- id: EN
+  name: English
+link: https://repository.usp.ac.fj
+name: USP Electronic Research Repository
+owner:
+  link: https://www.usp.ac.fj
+  location:
+    country:
+      id: FJ
+      name: Fiji
+    level: 20
+  name: University of the South Pacific
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- institutional repository
+- research data
+- eprints
+- Fiji
+- Kiribati
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+uid: cdi99994597

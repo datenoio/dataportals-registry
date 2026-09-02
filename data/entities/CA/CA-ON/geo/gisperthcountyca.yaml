@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: Public Geocortex Essentials site catalog for the County of Perth, Ontario,
+  including the County of Perth Public mapping site.
+endpoints:
+- type: customapi
+  url: https://gis.perthcounty.ca/Geocortex/Essentials/REST/sites?f=pjson
+id: gisperthcountyca
+langs:
+- id: EN
+  name: English
+link: https://gis.perthcounty.ca/Geocortex/Essentials/REST/sites
+name: County of Perth Geocortex GIS
+owner:
+  link: https://www.perthcounty.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: County of Perth
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- Geocortex
+topics:
+- id: GEOS
+  name: Geospatial
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99995851

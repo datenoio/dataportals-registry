@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: DATAHub@EKT interactive tables, maps, and dashboards for official Greek
+  research, development, and innovation statistics produced by the National Documentation
+  Centre.
+endpoints:
+- type: drupal:catalog
+  url: https://datahub.ekt.gr
+id: datahubektgr
+langs:
+- id: EL
+  name: Greek
+- id: EN
+  name: English
+link: https://datahub.ekt.gr
+name: EKT Datahub
+owner:
+  link: https://www.ekt.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: National Documentation Centre (EKT)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: drupal
+  name: Drupal
+status: active
+tags:
+- statistics
+- research
+- innovation
+- R&D
+- Greece
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99994819

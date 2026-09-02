@@ -10,6 +10,7 @@ Overview: [harvest.md](harvest.md). Finding catalogs: [discovery-indicators.md](
 |------|------|
 | PxWeb **table** (leaf in the subject tree) | Subject **folders** and the API root |
 | PxStat **matrix / table** (JSON-stat collection item) | Subject folders, PxWidget embeds, demo site |
+| DGBAS Web **table / indicator** in `/DgbasWeb/` | Yearbook PDFs; WINSTA admin; `nstatdb` `/dgbasall/` |
 | SDMX **dataflow** | Codelists, concept schemes, DSDs as if they were data (unless you harvest structural metadata on purpose — [harvest-metadata.md](harvest-metadata.md)) |
 | OpenSDG **indicator** JSON | Static about/reporting HTML |
 | NADA / NESSTAR **study** | Videos, documents, and news items in the same catalog |
@@ -54,6 +55,10 @@ GET https://ws-host/public/api.restful/PxStat.Data.Cube_API.ReadCollection/{date
 ```
 
 Each JSON-stat **collection item** is a dataset. Grain is the **matrix / table code**. Drop subject folders, PxWidget embeds, and the CSO demo. Do not harvest `visual.cso.ie` as a second catalog of the same tables. Date-from filters recently updated tables; omit or use an early date for a full list.
+
+## DGBAS Web (`dgbasweb`) {#dgbasweb}
+
+Taiwan `/DgbasWeb/` statistical query UI. Harvest the public **table / indicator tree**, not yearbook PDFs or login-only WINSTA admin. One harvest scope per county or city tenant. Distinct from `nstatdb.dgbas.gov.tw` and from Taiwan PxWeb.
 
 ## OpenSDG (`opensdg`) {#opensdg}
 

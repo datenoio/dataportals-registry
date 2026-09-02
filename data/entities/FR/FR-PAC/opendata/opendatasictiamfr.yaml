@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-PAC
+      name: Provence-Alpes-Côte-d’Azur
+description: Shared CKAN open-data portal operated by SICTIAM for member local authorities
+  in Provence-Alpes-Côte d'Azur. Harvested by data.gouv.fr.
+endpoints:
+- type: ckan
+  url: https://opendata.sictiam.fr/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata.sictiam.fr/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.sictiam.fr/api/3/action/package_list
+  version: '3'
+id: opendatasictiamfr
+langs:
+- id: FR
+  name: French
+link: https://opendata.sictiam.fr
+name: SICTIAM Open Data
+owner:
+  link: https://www.sictiam.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-PAC
+      name: Provence-Alpes-Côte-d’Azur
+  name: SICTIAM
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- local government
+- CKAN
+- PACA
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99994690

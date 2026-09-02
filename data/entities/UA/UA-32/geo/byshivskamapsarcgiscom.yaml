@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: UA-32
+      name: Kyivska oblast
+description: Public ArcGIS Online organization of Byshiv rural territorial community
+  with community boundary, settlement, investment, and tourism map layers.
+endpoints:
+- type: arcgis:portals:self
+  url: https://byshivska.maps.arcgis.com/sharing/rest/portals/self?f=pjson
+- type: arcgis:search
+  url: https://byshivska.maps.arcgis.com/sharing/rest/search?f=json&q=orgid:DBHQHIEBW2uFLSLd
+id: byshivskamapsarcgiscom
+langs:
+- id: UK
+  name: Ukrainian
+link: https://byshivska.maps.arcgis.com/home/index.html
+name: Геоінформаційна система Бишівської сільської територіальної громади
+owner:
+  link: https://byshiv-rada.gov.ua
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: UA-32
+      name: Kyivska oblast
+  name: Byshiv Village Council
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- Byshiv
+- Ukraine
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99997750

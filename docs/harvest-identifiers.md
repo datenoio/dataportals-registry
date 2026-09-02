@@ -55,7 +55,9 @@ Use the **package/dataset** id, not a file/resource/distribution id. `ipums`, `d
 | `yoda` | Vault dataset DOI | iRODS path in `/research/` |
 | `radar` | RADAR dataset id / DOI | Landing-page URL only |
 | `geocortex` | Essentials site id | Html5Viewer tile URL |
+| `vertigisstudioweb` | Tenant host / `?app=` GUID | Extra `?app=` GUID on the same tenant; Html5Viewer tiles |
 | `mapgisigserver` | Map document / service name | `/igs/manager` |
+| `hygmapgis` | `aplicacion=` + layer name | Map tile URL / `mapa.jsp` session |
 | `breedbase` | study / trial id | plot or marker-call id |
 | `esgf` | `dataset_id` / `master_id` | file id |
 | `symbiota` | dataset RSS id / `collid` | occurrence id |

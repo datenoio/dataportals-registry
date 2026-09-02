@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: GR-B
+      name: Kentrikí Makedonía
+description: Municipal ArcGIS Online organization of Kalamaria publishing web maps
+  and GIS applications for parcels, buildings, planning permits, and points of interest.
+endpoints:
+- type: arcgis:portals:self
+  url: https://kalamaria.maps.arcgis.com/sharing/rest/portals/self?f=json
+id: kalamariamapsarcgiscom
+langs:
+- id: EL
+  name: Greek
+link: https://kalamaria.maps.arcgis.com/home/index.html
+name: Kalamaria Geoportal
+owner:
+  link: https://www.kalamaria.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    subregion:
+      id: GR-B
+      name: Kentrikí Makedonía
+  name: Municipality of Kalamaria
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Greece
+- ArcGIS
+- geospatial
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99995788

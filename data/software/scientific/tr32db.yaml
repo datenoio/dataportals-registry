@@ -1,0 +1,59 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: tr32db
+name: TR32DB
+website: https://www.tr32db.uni-koeln.de/site/index.php
+description: TR32DB is the University of Cologne CRC research-data management
+  system first built for DFG CRC/TR32 and reused for CRC1211DB and TRR228DB.
+  Public tenants share /site/index.php, /extLib/jquery/, and
+  /lib/js/generic/helper.js plus newLogin.js. Distinct from CRC806DB, which
+  is a different SPA. Do not set tr32db from a generic CRC homepage.
+owner:
+  name: University of Cologne
+  location:
+    country:
+      id: DE
+      name: Germany
+documentation_url: https://www.tr32db.uni-koeln.de/site/about.php
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'Yes'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- JSON
+capabilities:
+- Research data catalog
+- Metadata search
+- DOI minting
+last_updated: '2026-09-02T00:00:00Z'

@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-75
+      name: Puglia
+description: Lizmap municipal WebGIS of Comune di Nardò, publishing QGIS projects for the
+  PRG, landscape constraints, and related planning layers.
+endpoints:
+- type: wms130
+  url: https://gis.nardo.puglia.it/index.php/lizmap/service/?repository=01&project=00_prg_vincolibase&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0
+id: gisnardopugliait
+langs:
+- id: IT
+  name: Italian
+link: https://gis.nardo.puglia.it/
+name: WebGIS Comune di Nardò
+owner:
+  link: https://www.comune.nardo.le.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-75
+      name: Puglia
+  name: Comune di Nardò
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- geoportal
+- lizmap
+- government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00037941

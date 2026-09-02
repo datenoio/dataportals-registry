@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: BY
+      name: Belarus
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Institutional DSpace repository of BSUCA. Public catalog of scholarly
+  and educational documents; OAI-PMH at /oai/request.
+endpoints:
+- type: oaipmh20
+  url: http://repository.buk.by/oai/request?verb=Identify
+  version: '2.0'
+id: repositorybukby
+langs:
+- id: RU
+  name: Russian
+- id: BE
+  name: Belarusian
+link: http://repository.buk.by/
+name: Repository of Belarusian State University of Culture and Arts
+owner:
+  link: https://buk.by
+  location:
+    country:
+      id: BY
+      name: Belarus
+    level: 20
+  name: Belarusian State University of Culture and Arts
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- Belarus
+- arts
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994583

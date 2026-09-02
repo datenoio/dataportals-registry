@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-AN
+      name: Andalucía
+description: Municipal spatial data infrastructure of Écija (IDEAndalucía node), with
+  a public map viewer and OGC WFS for cadastral parcels, streets, and urban planning
+  layers.
+endpoints:
+- type: wfs100
+  url: http://94.130.11.214:5000/ide_wfs/services?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: http://94.130.11.214:5000/ide_wfs/services?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+id: ideaytoecija
+langs:
+- id: ES
+  name: Spanish
+link: http://94.130.11.214:5000/ide/index
+name: IDE Ayuntamiento de Écija
+owner:
+  link: https://www.ecija.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-AN
+      name: Andalucía
+  name: Ayuntamiento de Écija
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geoportal
+- GIS
+- municipal
+- IDE
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99996915

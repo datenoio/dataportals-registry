@@ -1,0 +1,105 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-88
+      name: Sardegna
+description: Regional GeoNode WebGIS of the Sardinia documentation centre, publishing
+  geospatial datasets and maps for regional decision-making.
+endpoints:
+- type: geonode:datasets
+  url: https://cedoc-webgis.regione.sardegna.it/api/datasets/
+- type: geonode:documents
+  url: https://cedoc-webgis.regione.sardegna.it/api/documents/
+- type: csw202
+  url: https://cedoc-webgis.regione.sardegna.it/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://cedoc-webgis.regione.sardegna.it/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://cedoc-webgis.regione.sardegna.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://cedoc-webgis.regione.sardegna.it/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://cedoc-webgis.regione.sardegna.it/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://cedoc-webgis.regione.sardegna.it/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://cedoc-webgis.regione.sardegna.it/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs201
+  url: https://cedoc-webgis.regione.sardegna.it/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://cedoc-webgis.regione.sardegna.it/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: cedocwebgisregionesardegnait
+langs:
+- id: IT
+  name: Italian
+link: https://cedoc-webgis.regione.sardegna.it/
+name: Sardegna CeDoc WebGIS
+owner:
+  link: https://www.regione.sardegna.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-88
+      name: Sardegna
+  name: Regione Autonoma della Sardegna
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- Sardinia
+- geospatial
+- geonode
+- regional
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi99994646

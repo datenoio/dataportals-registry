@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: CH-FR
       name: Fribourg
-description: Interactive city map of Fribourg, Switzerland, served by MapServer.
+description: Interactive city map of Fribourg, Switzerland, on TYDAC MAP+ (sitecof.ch
+  redirects here). MapServer provides WMS; the public UI is MAP+.
 endpoints:
 - type: wms130
   url: https://map.geo.ville-fribourg.ch/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
@@ -42,13 +43,13 @@ owner:
   name: Ville de Fribourg
   type: Local government
 software:
-  id: mapserver
-  name: MapServer
+  id: mapplus
+  name: MAP+
 status: active
 tags:
 - geospatial
 - government
-- MapServer
+- MAP+
 - Fribourg
 - Switzerland
 topics:

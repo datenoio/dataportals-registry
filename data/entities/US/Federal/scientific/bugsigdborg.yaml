@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -40,8 +40,8 @@ owner:
   name: THE CITY UNIVERSITY OF NEW YORK
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: smw
+  name: Semantic MediaWiki
 status: active
 tags:
 - scientific
@@ -52,3 +52,6 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00033121
+endpoints:
+- type: mediawiki:api
+  url: https://bugsigdb.org/w/api.php?action=query&meta=siteinfo&format=json

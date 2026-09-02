@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: Oceania
+      name: Oceania
+    level: 20
+    macroregion:
+      id: '009'
+      name: Oceania
+description: Pacific Community (SPC) Digital Library of fisheries, statistics, energy,
+  and other Pacific documents. Public search UI and JSON Search API; OAI-PMH 2.0.
+  Content type Dataset currently lists 13 records (census and household-survey tables).
+endpoints:
+- type: oaipmh20
+  url: https://www.spc.int/DigitalLibrary/OAI?verb=Identify
+  version: '2.0'
+id: digitallibraryspcint
+langs:
+- id: EN
+  name: English
+link: https://www.spc.int/digitallibrary/
+name: SPC Digital Library
+owner:
+  link: https://www.spc.int
+  location:
+    country:
+      id: Oceania
+      name: Oceania
+    level: 20
+  name: Pacific Community (SPC)
+  type: International
+properties:
+  dataset_count_reported: 13
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- has_api
+- Pacific
+- fisheries
+- statistics
+- regional
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi99994530

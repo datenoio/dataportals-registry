@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: CR-A
+      name: Alajuela
+description: Municipal geoportal of Municipalidad de Los Chiles, Costa Rica.
+id: muniloschilesmapsarcgiscom
+langs:
+- id: ES
+  name: Spanish
+link: https://muniloschiles.maps.arcgis.com/apps/webappviewer/index.html?id=9cdca6f3fff44b03959d88fa6c7d54b2
+name: Mapa Catastral Municipalidad de Los Chiles
+owner:
+  link: https://www.muniloschiles.go.cr/
+  location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 30
+    subregion:
+      id: CR-A
+      name: Alajuela
+  name: Municipalidad de Los Chiles
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- government
+- municipal
+- Costa Rica
+- has_api
+- ArcGIS
+- cadastre
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99996022
+endpoints:
+- type: arcgis:portals:self
+  url: https://muniloschiles.maps.arcgis.com/sharing/rest/portals/self?f=pjson

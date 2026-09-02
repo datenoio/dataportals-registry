@@ -1,6 +1,6 @@
 # Discovering open data portals
 
-How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md). Also covered here: Idra (`idra`), a DCAT-AP federation layer that is usually typed as a **Data search engine**; Piveau, Our Open Data, Gipuzkoa Irekia, DataPress, Taiwan MODA, ResourceContracts, RDF Online Repository, the Guangxi Public Data Open Platform, and ODWeb.
+How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md). Also covered here: Idra (`idra`), a DCAT-AP federation layer that is usually typed as a **Data search engine**; Piveau, Our Open Data, Gipuzkoa Irekia, DataPress, Taiwan MODA, ResourceContracts, RDF Online Repository, the Guangxi Public Data Open Platform, ODWeb, ATM Maggioli, and OpenGov.
 
 Set `software.id` from `data/software/` only when a probe or page signal matches. Otherwise `custom`. After YAML exists: `python scripts/apidetect.py detect-single {id} --dryrun` (replace `{id}` with the catalog id).
 
@@ -180,6 +180,38 @@ Digital experience CMS. **Only** register when a public Open Data / RISP dataset
 | Google | `inurl:/web/guest/ "datos abiertos"` |
 | Censys | `web.endpoints.http.body: "Liferay"` |
 
+## ATM Maggioli (`atmmaggioli`) {#atmmaggioli}
+
+Spanish municipal sede electrónica / Portal de Transparencia with an open-data catalog (ATM Grupo Maggioli / Galileo IyS). Common on Canary Islands `eadmin.*` and `sede.*` tenants. Product: [administración electrónica](https://www.atm-maggioli.es/software-y-consultoria/administracion-electronica/).
+
+**Signals:** path `/transparencia/datos/catalogo`; Maggioli / Galileo IyS / ATM branding; title “Sede Electrónica”; dataset list under transparencia.
+
+**Confirm:** GET `https://host/transparencia/datos/catalogo` and match a reusable dataset listing. One record per municipality tenant. Do **not** set `ckan`, `opendatasoft`, or `socrata` from guessed `/api/3`, `/api/v2/catalog`, or `/api/views` paths — those URLs return the HTML shell.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/transparencia/datos/catalogo (Maggioli OR Galileo OR "sede electrónica")` |
+| Google | `"grupo ATM-Maggioli" OR "ATM Maggioli" ("datos abiertos" OR catálogo)` |
+| Censys | `web.endpoints.http.body: "Maggioli"` |
+
+Skip the vendor homepage and Galileo demo sede. Prefer the municipal catalog path, not the whole e-office.
+
+## OpenGov (`opengov`) {#opengov}
+
+Tyler / OpenGov financial transparency SaaS for US cities and states. Public tenants are `{org}.opengov.com` with `/transparency` and `/data` report views.
+
+**Signals:** hostname `*.opengov.com`; path `/transparency` or `/data/`; Highcharts budget explorer; “Transparency Home”.
+
+**Confirm:** GET the tenant home or `/transparency` and match OpenGov report navigation. One record per government tenant. Do **not** set `opengov` from the word “OpenGov” on ArcGIS Hub, `wyopen.gov`, `opengov.brandon.ca`, or other checkbooks that are not `*.opengov.com`.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:opengov.com/transparency (budget OR financial)` |
+| Google | `inurl:.opengov.com/data` |
+| Censys | `web.names: "opengov.com"` |
+
+Skip `www.opengov.com` marketing. Do not bulk-add every guessed city subdomain.
+
 ## POMOSAM (`pomosam`) {#pomosam}
 
 CORA GEO municipal eGovernment / open-data publisher used by Slovak cities (contracts, invoices, orders, public datasets). Vendor: [pomosam.sk](http://www.pomosam.sk).
@@ -325,13 +357,14 @@ DCAT-AP microservice catalog (Fraunhofer FOKUS). Site: [piveau.de](https://www.p
 
 ## LKOD (`lkod`) {#lkod}
 
-Czech local DCAT-AP-CZ catalogs (Golemio / Operátor ICT). Harvests into NKOD. Site: [lkod.cz](https://lkod.cz).
+Czech local DCAT-AP-CZ catalogs (Golemio / Operátor ICT). Harvests into NKOD. Site: [lkod.cz](https://lkod.cz). Slovak municipal clones use `/opendata/set/lkod` (DCAT-AP-SK TTL) on city `opendata.*` hosts — still `lkod`, not POMOSAM.
 
-**Confirm:** GET the municipal/local catalog (Next.js LKOD UI), not the national NKOD record twice.
+**Confirm:** GET the municipal/local catalog (Next.js LKOD UI or `/opendata/set/lkod`), not the national NKOD/data.slovensko.sk record twice.
 
 | Tool | Query |
 |------|-------|
 | Google | `"LKOD" OR "lokální katalog otevřených dat" site:.cz` |
+| Google | `inurl:/opendata/set/lkod site:.sk` |
 | Censys | `web.endpoints.http.body: "lkod"` |
 
 ## Aleph (`aleph`) {#aleph}
@@ -347,9 +380,9 @@ OCCRP investigative document/dataset search. Site: [aleph.occrp.org](https://ale
 
 ## Our Open Data (`ouropendata`) {#ouropendata}
 
-Japanese prefecture/city open-data CMS (Tokushima, Kagawa, Aomori, and others). Shared assets: `/assets/cms/public.css`, numeric `/dataset/` HTML pages, plus an application market and idea box.
+Japanese prefecture/city open-data CMS (Tokushima, Kagawa, Aomori, and others). This is the SHIRASAGI (シラサギ) catalog UI. Shared assets: `/assets/cms/public.css`, numeric `/dataset/` HTML pages, plus an application market and idea box. API: `/api/package_list` (not CKAN `/api/3/action/status_show`).
 
-**Confirm:** GET the catalog home (not a single dataset HTML page). Distinct from CKAN and data.go.jp.
+**Confirm:** GET the catalog home (not a single dataset HTML page). Distinct from CKAN and data.go.jp. Do not add a separate `shirasagi` software id.
 
 | Tool | Query |
 |------|-------|
@@ -481,7 +514,7 @@ Dutch municipal open-data and Woo catalog (Drupal / Dexes). Product site: [openg
 | `tablion` | Aristotle Tablion portal | `"Tablion" "data portal"` |
 | `strapi` | Headless CMS **with a public dataset API** | `"Strapi" ("open data" OR datasets)` |
 | `smw` | Semantic MediaWiki data catalog | `"Semantic MediaWiki" (dataset OR catalog)` |
-| `d4science` | D4Science VRE / catalog | `"D4Science" (catalog OR "open data")` |
+| `d4science` | D4Science VRE / gCube CKAN data-catalogue (`/web/{lab}/data-catalogue`, `gcube-ckan-datacatalog`) | `"D4Science" (catalog OR "open data")` OR `inurl:d4science.org/web` |
 | `rdfrepository` | see above | |
 | `resourcecontracts` | see above | |
 | `gxopendata` | see above | |
@@ -501,6 +534,8 @@ Try these on a **named** government or city host only (not as an internet-wide s
 - `*.revenuedev.org` tenant home (RDF Online Repository)
 - `/contract/resources` (ResourceContracts)
 - `{city}.data.gxzf.gov.cn` (Guangxi tenant)
+- `/transparencia/datos/catalogo` (ATM Maggioli)
+- `/opendata/set/lkod` (LKOD, including Slovak municipal clones)
 
 Search with local terms plus the city: `datos abiertos "Rosario"`, `offene Daten "Leipzig"`, `开放数据 市`.
 

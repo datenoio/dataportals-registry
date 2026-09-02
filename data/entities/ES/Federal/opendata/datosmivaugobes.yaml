@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Open data catalogue of the Ministry of Housing and Urban Agenda (MIVAU),
+  harvested by the Spanish national catalogue datos.gob.es.
+endpoints:
+- type: ckan:catalog
+  url: https://datos.mivau.gob.es
+id: datosmivaugobes
+langs:
+- id: ES
+  name: Spanish
+link: https://datos.mivau.gob.es
+name: Catálogo MIVAU – Gobierno del Dato Público
+owner:
+  link: https://www.mivau.gob.es
+  location:
+    country: *id001
+    level: 20
+  name: Ministerio de Vivienda y Agenda Urbana
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- government
+- housing
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99994764

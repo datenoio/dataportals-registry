@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: FI
+      name: Finland
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: FI-02
+      name: Etelä-Karjala
+description: Municipality of Ruokolahti public map service (Louhi/SpatialWeb) with
+  municipal geographic datasets.
+id: ruokolahtikarttatiimifi
+langs:
+- id: FI
+  name: Finnish
+link: https://ruokolahti.karttatiimi.fi
+name: Ruokolahti map service
+owner:
+  link: https://www.ruokolahti.fi
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: FI-02
+      name: Etelä-Karjala
+  name: Municipality of Ruokolahti
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: louhi
+  name: Sitowise Louhi
+status: active
+tags:
+- geoportal
+- map viewer
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99996779

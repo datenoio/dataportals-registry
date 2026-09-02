@@ -1,0 +1,93 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EG
+      name: Egypt
+    level: 30
+    macroregion:
+      id: '015'
+      name: Northern Africa
+    subregion:
+      id: EG-KFS
+      name: Kafr ash Shaykh
+description: ArcGIS Enterprise geoportal of Kafr El-Sheikh Governorate, publishing
+  municipal geospatial services, district geoportal layers, and KPI maps. A public
+  map viewer is available at geo.kfs.gov.eg over the same ArcGIS site.
+endpoints:
+- type: arcgis:portals:self
+  url: https://portal.kfs.gov.eg/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://portal.kfs.gov.eg/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://portal.kfs.gov.eg/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://portal.kfs.gov.eg/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://portal.kfs.gov.eg/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://portal.kfs.gov.eg/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://portal.kfs.gov.eg/server/rest/services?f=kmz
+id: portalkfsgoveg
+langs:
+- id: AR
+  name: Arabic
+link: https://portal.kfs.gov.eg/server/rest/services
+name: Kafr El-Sheikh Governorate Geoportal
+owner:
+  link: https://www.kfs.gov.eg
+  location:
+    country:
+      id: EG
+      name: Egypt
+    level: 30
+    subregion:
+      id: EG-KFS
+      name: Kafr ash Shaykh
+  name: Kafr El-Sheikh Governorate
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+- geoportal
+- GIS
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99995692

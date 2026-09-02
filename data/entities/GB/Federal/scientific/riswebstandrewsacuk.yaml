@@ -1,6 +1,6 @@
 access_mode:
 - open
-api_status: uncertain
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
 description: Catalog for research datasets and software from the University of St
   Andrews, covering diverse disciplines including history, philosophy, and physical
   sciences.
+endpoints:
+- type: pure:catalog
+  url: https://risweb.st-andrews.ac.uk/portal/en/datasets/index.html
+api: true
 id: riswebstandrewsacuk
 identifiers:
 - id: re3data
@@ -49,8 +53,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: pure
+  name: Pure
 status: active
 tags:
 - scientific

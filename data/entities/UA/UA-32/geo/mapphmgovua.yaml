@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: UA-32
+      name: Kyivska oblast
+description: Municipal geoportal of Pereiaslav (formerly Pereiaslav-Khmelnytskyi)
+  with an interactive city map, master plan, and cadastral layers.
+id: mapphmgovua
+langs:
+- id: UK
+  name: Ukrainian
+link: https://map.phm.gov.ua
+name: Геопортал міста Переяслав
+owner:
+  link: https://phm.gov.ua
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: UA-32
+      name: Kyivska oblast
+  name: Pereiaslav City Council
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- government
+- Pereiaslav
+- Ukraine
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99997736

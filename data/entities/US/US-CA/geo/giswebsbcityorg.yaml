@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CA
+      name: California
+description: City of San Bernardino ArcGIS Server REST directory for parcels, zoning, public
+  works, and related municipal GIS layers.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisweb.sbcity.org/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisweb.sbcity.org/arcgis/rest/services?f=pjson
+id: giswebsbcityorg
+langs:
+- id: EN
+  name: English
+link: https://gisweb.sbcity.org/arcgis/rest/services
+name: City of San Bernardino GIS REST Services
+owner:
+  link: https://www.sbcity.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: City of San Bernardino
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- geoportal
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00038034

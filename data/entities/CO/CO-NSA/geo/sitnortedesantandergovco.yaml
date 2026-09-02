@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: CO-NSA
+      name: Norte de Santander
+description: ArcGIS Hub geoportal of the Sistema de Información Territorial (SIT Norte)
+  of the Gobernación de Norte de Santander, with DCAT and OGC Records APIs for departmental
+  geospatial and statistical products.
+endpoints:
+- type: dcatap201
+  url: https://sit.nortedesantander.gov.co/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://sit.nortedesantander.gov.co/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://sit.nortedesantander.gov.co/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://sit.nortedesantander.gov.co/api/search/v1
+id: sitnortedesantandergovco
+langs:
+- id: ES
+  name: Spanish
+link: https://sit.nortedesantander.gov.co/
+name: GEOPORTAL SIT NORTE
+owner:
+  link: https://www.nortedesantander.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    subregion:
+      id: CO-NSA
+      name: Norte de Santander
+  name: Gobernación de Norte de Santander
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geoportal
+- geospatial
+- Colombia
+- Norte de Santander
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99996009

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: Eastern Asia
 description: Institutional repository of Kobe University. IRDB reports 5 dataset records (July
   2026).
+endpoints:
+- type: weko3:catalog
+  url: https://da.lib.kobe-u.ac.jp/da/kernel
 id: dalibkobeuacjp
 langs:
 - id: JA
@@ -36,8 +39,8 @@ owner:
 properties:
   is_national: false
 software:
-  id: custom
-  name: Custom software
+  id: weko3
+  name: WEKO3
 status: active
 tags:
 - institutional repository

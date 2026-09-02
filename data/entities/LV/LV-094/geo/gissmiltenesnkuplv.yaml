@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LV
+      name: Latvia
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: LV-094
+      name: Smiltenes novads
+description: ArcGIS REST services of SIA Smiltenes NKUP, the municipal utilities company
+  of Smiltene Municipality. Public cadastre, water and sewage, and service contract
+  map services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.smiltenesnkup.lv/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.smiltenesnkup.lv/server/rest/services?f=pjson
+id: gissmiltenesnkuplv
+langs:
+- id: LV
+  name: Latvian
+link: https://gis.smiltenesnkup.lv/server/rest/services
+name: Smiltenes NKUP ArcGIS REST services
+owner:
+  link: https://smiltenesnkup.lv
+  location:
+    country:
+      id: LV
+      name: Latvia
+    level: 30
+    subregion:
+      id: LV-094
+      name: Smiltenes novads
+  name: SIA Smiltenes NKUP
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- water
+- utilities
+- GIS
+- Smiltene
+- Latvia
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+uid: cdi99998585

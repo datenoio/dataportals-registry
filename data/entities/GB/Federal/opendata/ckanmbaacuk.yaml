@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: CKAN data catalogue of the Marine Biological Association of the United Kingdom
+  for marine biological and oceanographic datasets.
+endpoints:
+- type: ckan:package-search
+  url: https://ckan.mba.ac.uk/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.mba.ac.uk/api/3/action/package_list
+  version: '3'
+- type: ckan
+  url: https://ckan.mba.ac.uk/api/3
+  version: '3'
+id: ckanmbaacuk
+langs:
+- id: EN
+  name: English
+link: https://ckan.mba.ac.uk/
+name: MBA Data Catalogue
+owner:
+  link: https://www.mba.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: Marine Biological Association of the United Kingdom
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ocean
+- ODIS
+- marine biology
+- CKAN
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi99995567

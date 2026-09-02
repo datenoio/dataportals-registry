@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-NB
+      name: New Brunswick
+description: Chaleur Regional Service Commission ArcGIS Hub (GéoHub) with public GIS sections
+  for local entities and the Chaleur rural district.
+endpoints:
+- type: dcatap201
+  url: https://gis-csrchaleurrsc.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://gis-csrchaleurrsc.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://gis-csrchaleurrsc.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://gis-csrchaleurrsc.hub.arcgis.com/api/search/v1
+id: giscsrchaleurrschubarcgiscom
+langs:
+- id: FR
+  name: French
+link: https://gis-csrchaleurrsc.hub.arcgis.com/
+name: CSR Chaleur GIS Hub
+owner:
+  link: https://csrchaleurrsc.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-NB
+      name: New Brunswick
+  name: Chaleur Regional Service Commission
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- GIS
+- regional
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00037702

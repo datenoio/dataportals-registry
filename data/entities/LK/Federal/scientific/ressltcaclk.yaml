@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: Institutional repository of Sri Lanka Technology Campus (SLTC). Collects journal
+  articles, conference papers, theses and dissertations, and other scholarly output of the
+  campus.
+endpoints:
+- type: dspace
+  url: https://res.sltc.ac.lk/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://res.sltc.ac.lk/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://res.sltc.ac.lk/sitemap_index.xml
+id: ressltcaclk
+langs:
+- id: EN
+  name: English
+link: https://res.sltc.ac.lk/
+name: SLTC Institutional Repository
+owner:
+  link: https://sltc.ac.lk/
+  location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 20
+  name: Sri Lanka Technology Campus
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- dspace
+- Sri Lanka
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99995622

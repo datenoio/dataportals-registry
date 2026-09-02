@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 50
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-IDF
+      name: Île-de-France
+description: ArcGIS Enterprise geoportal of the Cergy-Pontoise agglomeration (GéoAgglo),
+  distinct from the Cergy-Pontoise ArcGIS Hub open data site.
+endpoints:
+- type: arcgishub:catalog
+  url: https://geoagglo.cergypontoise.fr/portal/home/
+id: geoagglocergypointoisefr
+langs:
+- id: FR
+  name: French
+link: https://geoagglo.cergypontoise.fr/portal/home/
+name: GéoAgglo Cergy-Pontoise
+owner:
+  link: https://www.cergypontoise.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Île-de-France
+  name: Communauté d'agglomération de Cergy-Pontoise
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- geoportal
+- France
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99996545

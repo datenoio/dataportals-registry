@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 50
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-NOR
+      name: Normandie
+description: Public ArcGIS Server REST catalog of Le Havre Seine Métropole (basemaps,
+  geographic reference and city GIS services).
+endpoints:
+- type: arcgis:rest:info
+  url: https://ext-services-sig.lehavremetro.fr/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ext-services-sig.lehavremetro.fr/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://ext-services-sig.lehavremetro.fr/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://ext-services-sig.lehavremetro.fr/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://ext-services-sig.lehavremetro.fr/arcgis/rest/services?f=geositemap
+id: extservicessiglehavremetrofr
+langs:
+- id: FR
+  name: French
+link: https://ext-services-sig.lehavremetro.fr/arcgis/rest/services
+name: Le Havre Seine Métropole ArcGIS Server
+owner:
+  link: https://lehavreseinemetropole.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-NOR
+      name: Normandie
+  name: Le Havre Seine Métropole
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- geoportal
+- France
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99996730

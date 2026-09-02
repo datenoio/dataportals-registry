@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -19,6 +19,9 @@ description: 'The GRSF, the Global Record of Stocks and Fisheries, integrates da
   Stock Assessment Database) and FishSource (Program of the Sustainable Fisheries Partnership).
   The GRSF content publicly disseminated through this catalogue is distributed as a beta version
   to test the logic to generate unique identifiers for stocks and fisheries.'
+endpoints:
+- type: d4science:catalog
+  url: https://i-marine.d4science.org/web/grsf/data-catalogue
 id: imarined4scienceorg
 identifiers:
 - id: openaire
@@ -41,8 +44,8 @@ owner:
   name: D4Science
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: d4science
+  name: D4Science
 status: active
 tags:
 - scientific

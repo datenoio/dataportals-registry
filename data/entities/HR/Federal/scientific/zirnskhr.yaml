@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: HR
+      name: Croatia
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: National DABAR repository of undergraduate and graduate theses, operated
+  with SRCE.
+endpoints:
+- type: oaipmh20
+  url: https://zir.nsk.hr/oai/?verb=Identify
+  version: '2.0'
+id: zirnskhr
+langs:
+- id: HR
+  name: Croatian
+- id: EN
+  name: English
+link: https://zir.nsk.hr
+name: Croatian Digital Theses Repository (ZIR)
+owner:
+  link: https://www.nsk.hr
+  location:
+    country:
+      id: HR
+      name: Croatia
+    level: 20
+  name: National and University Library in Zagreb
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dabar
+  name: DABAR
+status: active
+tags:
+- scientific
+- research data
+- academic
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99995342

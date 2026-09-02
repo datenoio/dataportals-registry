@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: PropertyMap Geocortex Essentials instance hosted by the Regional District
+  of Fraser-Fort George, providing shared public property mapping for Fraser-Fort
+  George, Bulkley-Nechako, and partner municipalities.
+endpoints:
+- type: geocortex:catalog
+  url: https://rdffg-gisext.rdffg.bc.ca/Geocortex/Essentials/REST/sites?f=pjson
+id: rdffggisextrdffgbcca
+langs:
+- id: EN
+  name: English
+link: https://rdffg-gisext.rdffg.bc.ca/Html5Viewer/index.html?viewer=PropertyMap.RMap
+name: PropertyMap
+owner:
+  link: https://www.rdffg.bc.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: Regional District of Fraser-Fort George
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- Geocortex
+- government
+topics:
+- id: GEOS
+  name: Geospatial
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99995746

@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- time series
+coverage:
+- location:
+    country:
+      id: IL
+      name: Israel
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Central Bureau of Statistics database of prices and price indices, including
+  consumer, producer, housing, and construction input indices, with a public index
+  API.
+endpoints:
+- type: custom:api
+  url: https://api.cbs.gov.il/index/data/price_all
+id: wwwcbsgovilpriceindices
+langs:
+- id: HE
+  name: Hebrew
+- id: EN
+  name: English
+link: https://www.cbs.gov.il/en/Statistics/Pages/Generators/Database-of-Prices-and-Price-Indices.aspx
+name: CBS Database of Prices and Price Indices
+owner:
+  link: https://www.cbs.gov.il
+  location:
+    country:
+      id: IL
+      name: Israel
+    level: 20
+  name: Central Bureau of Statistics
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- prices
+- government
+- official statistics
+- CBS
+- Israel
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99995157

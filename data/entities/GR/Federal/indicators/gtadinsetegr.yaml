@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Greek Tourism Analytics Dashboard (GTAD) from INSETE. Public guest dashboards
+  of incoming tourism, occupancy, and related tourism indicators for Greece.
+endpoints:
+- type: liferay:catalog
+  url: https://gtad.insete.gr
+id: gtadinsetegr
+langs:
+- id: EL
+  name: Greek
+- id: EN
+  name: English
+link: https://gtad.insete.gr
+name: Greek Tourism Analytics Dashboard
+owner:
+  link: https://insete.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: INSETE
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: liferay
+  name: Liferay
+status: active
+tags:
+- statistics
+- tourism
+- Greece
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99994817

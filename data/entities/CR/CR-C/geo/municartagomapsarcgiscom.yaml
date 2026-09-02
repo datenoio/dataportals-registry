@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: CR-C
+      name: Cartago
+description: Municipal geoportal of Municipalidad de Cartago, Costa Rica.
+id: municartagomapsarcgiscom
+langs:
+- id: ES
+  name: Spanish
+link: https://municartago.maps.arcgis.com/apps/webappviewer/index.html?id=9976b241b8434af6b5229d7bf5470ff1
+name: Visor Cartográfico Municipalidad de Cartago
+owner:
+  link: https://www.muni-carta.go.cr/
+  location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 30
+    subregion:
+      id: CR-C
+      name: Cartago
+  name: Municipalidad de Cartago
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- government
+- municipal
+- Costa Rica
+- has_api
+- ArcGIS
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99996029
+endpoints:
+- type: arcgis:portals:self
+  url: https://municartago.maps.arcgis.com/sharing/rest/portals/self?f=pjson

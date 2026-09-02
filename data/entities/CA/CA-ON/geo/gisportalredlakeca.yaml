@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: Municipality of Red Lake ArcGIS Enterprise portal for property, zoning,
+  and planning maps.
+endpoints:
+- type: arcgis:portals:self
+  url: https://gisportal.redlake.ca/arcgis/sharing/rest/portals/self?f=pjson
+id: gisportalredlakeca
+langs:
+- id: EN
+  name: English
+link: https://gisportal.redlake.ca/arcgis/home
+name: Red Lake GIS Mapping
+owner:
+  link: https://www.redlake.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: Municipality of Red Lake
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- GIS
+- geospatial
+- Ontario
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99997817

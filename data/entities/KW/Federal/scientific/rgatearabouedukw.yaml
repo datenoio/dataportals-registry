@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: KW
+      name: Kuwait
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Institutional DSpace repository of the Arab Open University (headquartered
+  in Kuwait). Public faculty communities cover business, computer studies, education,
+  language studies, law, and media. The same instance also answers at dspace.arabou.edu.kw;
+  r-gate.arabou.edu.kw is the canonical UI.
+endpoints:
+- type: dspace
+  url: https://r-gate.arabou.edu.kw/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://r-gate.arabou.edu.kw/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://r-gate.arabou.edu.kw/sitemap_index.xml
+id: rgatearabouedukw
+langs:
+- id: EN
+  name: English
+- id: AR
+  name: Arabic
+link: https://r-gate.arabou.edu.kw/
+name: AOU DSpace
+owner:
+  link: https://www.arabou.edu.kw/
+  location:
+    country:
+      id: KW
+      name: Kuwait
+    level: 20
+  name: Arab Open University
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- Kuwait
+- economics
+- information technology
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99994604

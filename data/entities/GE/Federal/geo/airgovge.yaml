@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GE
+      name: Georgia
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: National air quality portal of Georgia. Public map of automatic and indicative
+  monitoring stations with pollutant filters, plus a JSON stations API. Operated by
+  the Environmental Information and Education Centre (EIEC).
+endpoints:
+- type: custom_api
+  url: https://air.gov.ge/api/stations/
+id: airgovge
+langs:
+- id: KA
+  name: Georgian
+- id: EN
+  name: English
+link: https://air.gov.ge
+name: Georgia Air Quality Portal
+owner:
+  link: https://www.eiec.gov.ge
+  location:
+    country:
+      id: GE
+      name: Georgia
+    level: 20
+  name: Environmental Information and Education Centre
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- air quality
+- environment
+- monitoring
+- maps
+- georgia
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi99997408

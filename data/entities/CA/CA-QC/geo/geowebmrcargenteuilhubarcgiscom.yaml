@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-QC
+      name: Quebec
+description: Public ArcGIS Hub of MRC d'Argenteuil for local geospatial datasets and
+  maps in the Laurentides region of Quebec.
+endpoints:
+- type: dcatap201
+  url: https://geoweb-mrcargenteuil.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://geoweb-mrcargenteuil.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://geoweb-mrcargenteuil.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://geoweb-mrcargenteuil.hub.arcgis.com/api/search/v1
+id: geowebmrcargenteuilhubarcgiscom
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://geoweb-mrcargenteuil.hub.arcgis.com
+name: GeoHub MRC d'Argenteuil
+owner:
+  link: https://argenteuil.qc.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-QC
+      name: Quebec
+  name: MRC d'Argenteuil
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- GIS
+- geoportal
+- government
+- local government
+- has_api
+- arcgishub
+- Quebec
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99994705

@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: City of Victoria public Geocortex HTML5 map viewer (VicMap) for properties
+  and related municipal layers.
+endpoints:
+- type: geocortex:catalog
+  url: https://maps.victoria.ca/Geocortex/Essentials/REST/sites?f=pjson
+id: mapsvictoriavicmap
+langs:
+- id: EN
+  name: English
+link: https://maps.victoria.ca/Html5Viewer/index.html?viewer=VicMap
+name: VicMap
+owner:
+  link: https://www.victoria.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: City of Victoria
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- map viewer
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99998162

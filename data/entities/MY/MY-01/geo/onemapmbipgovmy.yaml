@@ -1,0 +1,95 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: MY-01
+      name: Johor
+description: Iskandar Puteri City Council One Map ArcGIS Enterprise portal for land
+  use, facilities, tourism, flooding, and district-boundary layers.
+endpoints:
+- type: arcgis:rest:info
+  url: https://onemap.mbip.gov.my/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://onemap.mbip.gov.my/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://onemap.mbip.gov.my/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://onemap.mbip.gov.my/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://onemap.mbip.gov.my/arcgis/rest/services?f=geositemap
+- type: arcgis:portals:self
+  url: https://onemap.mbip.gov.my/portal/sharing/rest/portals/self?f=pjson
+id: onemapmbipgovmy
+langs:
+- id: MS
+  name: Malay
+- id: EN
+  name: English
+link: https://onemap.mbip.gov.my/portal/home/
+name: One Map MBIP
+owner:
+  link: https://mbip.gov.my/
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 30
+    subregion:
+      id: MY-01
+      name: Johor
+  name: Majlis Bandaraya Iskandar Puteri
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geoportal
+- geospatial
+- GIS
+- Iskandar Puteri
+- Johor
+- Malaysia
+- ArcGIS
+- municipal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99998676

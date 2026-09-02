@@ -11,10 +11,12 @@ has_bulk: 'No'
 id: ouropendata
 website: https://opendata.pref.tokushima.lg.jp
 name: Our Open Data
-description: Our Open Data is a Japanese open-data catalog CMS used by Tokushima,
-  Kagawa, Aomori, Tottori, Shizuoka, Ehime, and Kakegawa. Deployments share
-  /assets/cms/public.css, jPlayer, numeric /dataset/{n}.html pages, and a three-part
-  layout of data catalog, application market, and idea box.
+description: Our Open Data is the Japanese open-data catalog UI of the SHIRASAGI
+  CMS (ss-proj.org), used by Tokushima, Kagawa, Aomori, Tottori, Shizuoka,
+  Ehime, and Kakegawa. Deployments share /assets/cms/public.css, jPlayer,
+  numeric /dataset/{n}.html pages, a three-part layout of data catalog,
+  application market, and idea box, and a SHIRASAGI /api/package_list API.
+  Distinct from CKAN (/api/3/action/status_show) and data.go.jp.
 owner:
   name: Prefectural Our Open Data deployments
   location:

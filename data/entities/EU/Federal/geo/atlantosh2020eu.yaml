@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: AtlantOS project catalogue of Atlantic ocean observing datasets and metadata
+  (GeoNetwork).
+endpoints:
+- type: csw202
+  url: https://sextant.ifremer.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:site
+  url: https://sextant.ifremer.fr/geonetwork/srv/api/site
+id: atlantosh2020eu
+langs:
+- id: EN
+  name: English
+link: https://atlantos-h2020.eu/atlantos-catalogue/
+name: AtlantOS Catalogue
+owner:
+  link: https://atlantos-h2020.eu/
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: AtlantOS
+  type: International
+properties:
+  is_national: false
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- ocean
+- ODIS
+- AtlantOS
+- GeoNetwork
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi99995559

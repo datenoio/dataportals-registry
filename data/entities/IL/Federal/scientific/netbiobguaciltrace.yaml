@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: IL
+      name: Israel
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: TRACE (Tissue Risk Assessment of Causality by Expression) is a catalog
+  of tissue-associated disease-risk scores for 18,927 human protein-coding genes.
+  Users can download the catalog or upload a gene list or VCF and a disease-inflicted
+  tissue to obtain TRACE scores.
+id: netbiobguaciltrace
+langs:
+- id: EN
+  name: English
+link: https://netbio.bgu.ac.il/trace/
+name: TRACE
+owner:
+  link: https://www.bgu.ac.il
+  location:
+    country: *id001
+    level: 20
+  name: Ben-Gurion University of the Negev
+  type: Academy
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- research data
+- academic
+- health
+- genomics
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi99995180

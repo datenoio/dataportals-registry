@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: LT-SA
+      name: Šiaulių apskritis
+description: Šiauliai city coordination (MKS) ArcGIS Enterprise catalogue of municipal
+  map services, including orthophoto, topographic layers, addresses, and public reports.
+endpoints:
+- type: arcgis:portals:self
+  url: https://mks.siauliai.lt/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://mks.siauliai.lt/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mks.siauliai.lt/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mks.siauliai.lt/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://mks.siauliai.lt/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mks.siauliai.lt/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://mks.siauliai.lt/server/rest/services?f=kmz
+id: mkssiauliailt
+langs:
+- id: LT
+  name: Lithuanian
+link: https://mks.siauliai.lt/server/rest/services
+name: Šiauliai MKS ArcGIS REST
+owner:
+  link: https://www.siauliai.lt
+  location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 30
+    subregion:
+      id: LT-SA
+      name: Šiaulių apskritis
+  name: Šiaulių miesto savivaldybė
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- ArcGIS
+- spatial data
+- geoportal
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi99998599

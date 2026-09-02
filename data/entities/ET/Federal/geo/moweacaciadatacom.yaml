@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ET
+      name: Ethiopia
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Public Ministry of Water and Energy groundwater map viewer. QGIS Server
+  WMS/WFS for MoWE lot maps (geology, hydrogeology, and related layers), with a JSON
+  layer-group API. Distinct from the UNICEF GW4E viewer on the same Acacia host.
+endpoints:
+- type: wms130
+  url: https://gis.acaciadata.com/?map=/project/mowe/lot1.qgz&service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wms130
+  url: https://gis.acaciadata.com/?map=/project/mowe/lot2.qgz&service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wms130
+  url: https://gis.acaciadata.com/?map=/project/mowe/lot3.qgz&service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wms130
+  url: https://gis.acaciadata.com/?map=/project/mowe/lot4.qgz&service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: https://gis.acaciadata.com/?map=/project/mowe/lot1.qgz&service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+id: moweacaciadatacom
+langs:
+- id: EN
+  name: English
+link: https://mowe.acaciadata.com/
+name: MoWE Groundwater Database
+owner:
+  link: https://www.mowe.gov.et
+  location:
+    country:
+      id: ET
+      name: Ethiopia
+    level: 20
+  name: Ministry of Water and Energy
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: qgisserver
+  name: QGIS Server
+status: active
+tags:
+- geospatial
+- groundwater
+- hydrology
+- government
+- Ethiopia
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi99998648

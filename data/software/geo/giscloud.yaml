@@ -1,0 +1,59 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: giscloud
+name: GIS Cloud
+website: https://www.giscloud.com/
+description: GIS Cloud is a hosted web GIS. Public municipal tenants live at
+  {city}.giscloud.com and load assets.giscloud.com (compiled-smart.js, api.js).
+  Distinct from generic Leaflet viewers and from MuniSight (login-only
+  web.munisight.com). Do not register the marketing homepage or Map Editor
+  login.
+owner:
+  name: GIS Cloud
+  location:
+    country:
+      id: HR
+      name: Croatia
+documentation_url: https://www.giscloud.com/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+export_formats:
+- GeoJSON
+- JSON
+capabilities:
+- Map viewer
+- Municipal GIS
+last_updated: '2026-09-02T00:00:00Z'

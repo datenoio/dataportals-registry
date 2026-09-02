@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-TX
+      name: Texas
+description: Public ArcGIS REST services directory for the City of Conroe, Texas,
+  providing map, feature, and GIS services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.cityofconroe.org/cvharcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.cityofconroe.org/cvharcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.cityofconroe.org/cvharcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.cityofconroe.org/cvharcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.cityofconroe.org/cvharcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maps.cityofconroe.org/cvharcgis/rest/services?f=kmz
+id: mapscityofconroeorgcvharcgis
+langs:
+- id: EN
+  name: English
+link: https://maps.cityofconroe.org/cvharcgis/rest/services
+name: City of Conroe ArcGIS REST Services
+owner:
+  link: https://www.cityofconroe.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TX
+      name: Texas
+  name: City of Conroe
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- ArcGIS
+- city
+- Texas
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99998204

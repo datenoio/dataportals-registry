@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 40
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-GES
+      name: Grand-Est
+description: Public ArcGIS Server REST catalog of the Conseil départemental des Ardennes,
+  including open WFS layers, administrative limits and greenway maps.
+endpoints:
+- type: arcgis:rest:info
+  url: https://sig.cd08.fr/ags-mut/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.cd08.fr/ags-mut/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig.cd08.fr/ags-mut/services?wsdl
+- type: arcgis:sitemap
+  url: https://sig.cd08.fr/ags-mut/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sig.cd08.fr/ags-mut/rest/services?f=geositemap
+id: sigcd08fr
+langs:
+- id: FR
+  name: French
+link: https://sig.cd08.fr/ags-mut/rest/services
+name: SIG Conseil départemental des Ardennes
+owner:
+  link: https://cd08.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-GES
+      name: Grand-Est
+  name: Conseil départemental des Ardennes
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- geoportal
+- France
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99996746

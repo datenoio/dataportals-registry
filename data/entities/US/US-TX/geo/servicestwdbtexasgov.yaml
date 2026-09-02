@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-TX
+      name: Texas
+description: Public ArcGIS REST services directory for the Texas Water Development
+  Board, providing groundwater, well, surface water, and GAM map services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://services.twdb.texas.gov/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://services.twdb.texas.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://services.twdb.texas.gov/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://services.twdb.texas.gov/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://services.twdb.texas.gov/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://services.twdb.texas.gov/arcgis/rest/services?f=kmz
+id: servicestwdbtexasgov
+langs:
+- id: EN
+  name: English
+link: https://services.twdb.texas.gov/arcgis/rest/services
+name: Texas Water Development Board ArcGIS REST Services
+owner:
+  link: https://www.twdb.texas.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TX
+      name: Texas
+  name: Texas Water Development Board
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- ArcGIS
+- water
+- Texas
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi99998596

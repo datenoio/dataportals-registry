@@ -1,0 +1,91 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: TT
+      name: Trinidad and Tobago
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: Institutional DSpace 9.1 repository of The University of the West Indies,
+  hosted by the Alma Jordan Library at St. Augustine. Collects theses, publications,
+  and research datasets from all UWI campuses, including Cave Hill (Barbados) and
+  Five Islands (Antigua). Items typed Dataset currently number 11 among about 28,000
+  total records.
+endpoints:
+- type: dspace
+  url: https://uwispace.sta.uwi.edu/server/api
+  version: '9'
+- type: dspace:objects
+  url: https://uwispace.sta.uwi.edu/server/api/discover/search/objects
+  version: '9'
+- type: oaipmh20
+  url: https://uwispace.sta.uwi.edu/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://uwispace.sta.uwi.edu/sitemap_index.xml
+- type: atom
+  url: https://uwispace.sta.uwi.edu/server/opensearch/search?format=atom&query=*
+id: uwispacestauwiedu
+identifiers:
+- id: opendoar
+  url: https://v2.sherpa.ac.uk/id/repository/1480
+  value: '1480'
+- id: ror
+  url: https://ror.org/003kgv736
+  value: 003kgv736
+langs:
+- id: EN
+  name: English
+link: https://uwispace.sta.uwi.edu
+name: UWISpace
+owner:
+  link: https://sta.uwi.edu
+  location:
+    country:
+      id: TT
+      name: Trinidad and Tobago
+    level: 20
+  name: The University of the West Indies
+  type: Academy
+properties:
+  dataset_count_reported: 11
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://uwispace.sta.uwi.edu/info/privacy
+  rights_type: granular
+  tos_url: https://uwispace.sta.uwi.edu/info/end-user-agreement
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- DSpace
+- institutional repository
+- research data
+- open access
+- theses
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Education
+  name: Education
+  type: iso19115
+uid: cdi99994531

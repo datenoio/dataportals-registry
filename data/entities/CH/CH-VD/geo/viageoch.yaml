@@ -1,0 +1,81 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Geodata catalog for French-speaking Switzerland (Suisse romande), operated
+  by ASIT. Lists maps and geospatial datasets from cantonal, municipal and other providers.
+  Open-data slices for Lausanne and Morges are harvested by opendata.swiss via DCAT-AP
+  CH.
+endpoints:
+- type: dcatap21
+  url: https://viageo.ch/api/catalog/dcat-ch/lausanne
+- type: dcatap21
+  url: https://viageo.ch/api/catalog/dcat-ch/morges
+- type: docs
+  url: https://viageo.ch/api/doc
+id: viageoch
+langs:
+- id: FR
+  name: French
+link: https://viageo.ch
+name: Viageo
+owner:
+  link: https://www.asitvd.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-VD
+      name: Vaud
+  name: ASIT
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- geoportal
+- Switzerland
+- Vaud
+- open data
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi99994659

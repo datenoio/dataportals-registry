@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-AB
+      name: Alberta
+description: Town of Morinville public ArcGIS Enterprise portal for municipal maps,
+  land use, and related geospatial layers.
+endpoints:
+- type: arcgis:portals:self
+  url: https://mapping.morinville.ca/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:search
+  url: https://mapping.morinville.ca/portal/sharing/rest/search?f=json&q=orgid:0123456789ABCDEF
+- type: arcgis:rest:info
+  url: https://mapping.morinville.ca/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mapping.morinville.ca/server/rest/services?f=pjson
+id: mappingmorinvilleca
+langs:
+- id: EN
+  name: English
+link: https://mapping.morinville.ca/portal/home/
+name: Town of Morinville GIS Portal
+owner:
+  link: https://www.morinville.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-AB
+      name: Alberta
+  name: Town of Morinville
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- GIS
+- geospatial
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99998178

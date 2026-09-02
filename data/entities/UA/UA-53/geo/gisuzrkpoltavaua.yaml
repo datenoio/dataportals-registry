@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: UA-53
+      name: Poltavska oblast
+description: Public ArcGIS Sites geoinformation system of the Poltava municipal land
+  resources department with land cadastre and address-register maps. Distinct from
+  the city urban-planning cadastre at mbk.rada-poltava.gov.ua.
+endpoints:
+- type: arcgis:portals:self
+  url: https://gis.uzrk.poltava.ua/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:search
+  url: https://gis.uzrk.poltava.ua/portal/sharing/rest/search?f=json&q=orgid:0123456789ABCDEF
+- type: arcgis:rest:info
+  url: https://gis.uzrk.poltava.ua/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.uzrk.poltava.ua/server/rest/services?f=pjson
+id: gisuzrkpoltavaua
+langs:
+- id: UK
+  name: Ukrainian
+link: https://gis.uzrk.poltava.ua/portal/apps/sites/#/gis-uzrk-poltava
+name: Геоінформаційна система Полтавського міського управління земельних ресурсів
+  та земельного кадастру
+owner:
+  link: https://www.rada-poltava.gov.ua
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: UA-53
+      name: Poltavska oblast
+  name: Poltava Municipal Department of Land Resources and Cadastre
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- Poltava
+- Ukraine
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99997749

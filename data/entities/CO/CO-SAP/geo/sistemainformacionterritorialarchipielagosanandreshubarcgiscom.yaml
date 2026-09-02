@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: CO-SAP
+      name: San Andrés, Providencia y Santa Catalina
+description: ArcGIS Hub territorial information system of the Archipelago of San Andrés,
+  Providencia and Santa Catalina with open geospatial data and map applications.
+endpoints:
+- type: dcatap201
+  url: https://sistema-informacion-territorial-archipielago-sanandres.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://sistema-informacion-territorial-archipielago-sanandres.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: ogcrecordsapi
+  url: https://sistema-informacion-territorial-archipielago-sanandres.hub.arcgis.com/api/search/v1
+id: sistemainformacionterritorialarchipielagosanandreshubarcgiscom
+langs:
+- id: ES
+  name: Spanish
+link: https://sistema-informacion-territorial-archipielago-sanandres.hub.arcgis.com/
+name: SIT Archipiélago de San Andrés
+owner:
+  link: https://www.sanandres.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    subregion:
+      id: CO-SAP
+      name: San Andrés, Providencia y Santa Catalina
+  name: Gobernación de San Andrés, Providencia y Santa Catalina
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geoportal
+- geospatial
+- Colombia
+- San Andrés
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99996015

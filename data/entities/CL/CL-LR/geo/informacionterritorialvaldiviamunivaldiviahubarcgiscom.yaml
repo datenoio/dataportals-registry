@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CL
+      name: Chile
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: CL-LR
+      name: Los Ríos
+description: Territorial information catalog of the Municipality of Valdivia. Public
+  ArcGIS Hub geoportal of communal maps and layers.
+endpoints:
+- type: dcatap201
+  url: https://informacion-territorial-valdivia-muni-valdivia.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://informacion-territorial-valdivia-muni-valdivia.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://informacion-territorial-valdivia-muni-valdivia.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://informacion-territorial-valdivia-muni-valdivia.hub.arcgis.com/api/search/v1
+id: informacionterritorialvaldiviamunivaldiviahubarcgiscom
+langs:
+- id: ES
+  name: Spanish
+link: https://informacion-territorial-valdivia-muni-valdivia.hub.arcgis.com
+name: Información Territorial Valdivia
+owner:
+  link: https://munivaldivia.cl
+  location:
+    country:
+      id: CL
+      name: Chile
+    level: 30
+    subregion:
+      id: CL-LR
+      name: Los Ríos
+  name: Municipalidad de Valdivia
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- Chile
+- municipal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99995809

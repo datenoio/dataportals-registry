@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Department for Transport street-level and summary road traffic statistics
+  for Great Britain. Explore traffic by vehicle type, road type, region, and local
+  authority, with bulk CSV downloads and a public REST API for count points and flows.
+endpoints:
+- type: rest
+  url: https://roadtraffic.dft.gov.uk/api/count-points
+- type: docs
+  url: https://roadtraffic.dft.gov.uk/api-documentation
+id: roadtrafficdftgovuk
+langs:
+- id: EN
+  name: English
+link: https://roadtraffic.dft.gov.uk
+name: Road traffic statistics
+owner:
+  link: https://www.gov.uk/government/organisations/department-for-transport
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: Department for Transport
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: Open Government Licence v3.0
+  license_url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+  privacy_policy_url: https://www.gov.uk/government/organisations/department-for-transport/about/personal-information-charter
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- transport
+- traffic
+- official statistics
+- government
+- has_api
+- United Kingdom
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi99994856

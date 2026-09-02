@@ -1,0 +1,59 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: tergis
+name: terGIS
+website: https://tergis.lv/
+description: terGIS is a Latvian territorial-planning and public-engagement GIS
+  (METRUM / TOPO DATI) hosted on {tenant}.tergis.lv. Municipal tenants use an
+  Angular SPA with a public /api/v1/classifiers/layers catalog; some territorial-plan
+  viewers use a QWC2 frontend on the same domain. Distinct from generic QWC2
+  (qwc2) off tergis.lv and from the sibling pGIS (pgis.lv) product.
+owner:
+  name: SIA TOPO DATI
+  location:
+    country:
+      id: LV
+      name: Latvia
+documentation_url: https://tergis.lv/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+export_formats:
+- GeoJSON
+- JSON
+capabilities:
+- Map viewer
+- Municipal GIS
+last_updated: '2026-09-02T00:00:00Z'

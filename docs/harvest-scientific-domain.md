@@ -6,7 +6,7 @@ GET only. Stop on `401`/`403`. Prefer `endpoints[]`.
 
 | Page | Use when |
 |------|----------|
-| This page | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, Galaxy, SEEK, ICAT, MyTardis, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal, CLLD, TalkBank |
+| This page | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, Galaxy, SEEK, ICAT, MyTardis, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal, CLLD, TalkBank, Pathway Tools, IBDC |
 | [Institutional IRs and CRIS](harvest-scientific.md) | Dataverse, DSpace, Invenio, EPrints, Pure, RADAR, Yoda, mixed publication catalogs |
 | [harvest-biodiversity.md](harvest-biodiversity.md) | IPT, Symbiota, ALA — occurrence vs dataset grain |
 | [harvest-earthdata.md](harvest-earthdata.md) | THREDDS, ERDDAP, ESGF data nodes, SciCat, openEO, ESA Science Archive |
@@ -242,6 +242,26 @@ GET https://host/data.html
 ```
 
 Prefer `endpoints[]` when present. AphasiaBank and similar clinical banks may be login-walled (`401`/`403`) — stop; do not guess credentials.
+
+## Pathway Tools (`pathwaytools`) {#pathwaytools}
+
+BioCyc-family Pathway/Genome Databases. Harvest the **organism / PGDB catalog** or published bulk export. Drop gene pages, individual pathway diagrams, and reaction records.
+
+```text
+GET https://host/
+```
+
+Prefer `endpoints[]` when present. One harvest scope per BioCyc collection or organism database (EcoCyc, MetaCyc, YeastCyc, biocyc.org).
+
+## IBDC (`ibdc`) {#ibdc}
+
+IBDC domain archives on `ibdc.dbt.gov.in`. Harvest the archive **study / accession catalog**, not sequences, spectra, or image files.
+
+```text
+GET https://ibdc.dbt.gov.in/{archive}/
+```
+
+Keep submitted studies or datasets listed by the archive UI. Drop a single accession landing page as a crawl seed. One harvest scope per archive path already in the registry.
 
 ## Related
 

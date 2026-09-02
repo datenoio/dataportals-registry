@@ -1,0 +1,60 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: dmcity
+name: dmCity
+website: https://www.esri.fi/fi-fi/tuotteet/dmcity/intro
+description: dmCity is Esri Finland's municipal digital-city SaaS. Public map
+  tenants live at web.dmcity.fi/{city}/public/ with title dmCity Web App and
+  jimu-core/init.js (Experience Builder shell). Distinct from generic ArcGIS
+  Experience Builder (experiencebuilder) on other hosts and from ArcGIS Server
+  REST on {city}.dmcity.fi/server (arcgisserver). One record per public city
+  tenant, not the marketing site.
+owner:
+  name: Esri Finland
+  location:
+    country:
+      id: FI
+      name: Finland
+logo_url: https://www.esri.fi/favicon.ico
+documentation_url: https://www.esri.fi/fi-fi/tuotteet/dmcity/toiminnallisuudet
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- JSON
+capabilities:
+- Map viewer
+- Municipal GIS
+last_updated: '2026-09-01T00:00:00Z'

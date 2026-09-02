@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: UA-26
+      name: Ivano-Frankivska oblast
+description: Public ArcGIS Hub GIS portal of Ivano-Frankivsk oblast with thematic
+  spatial datasets. Distinct from the Halych and Kolomyia community geoportals.
+endpoints:
+- type: dcatap201
+  url: https://gis-if.tdukr.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://gis-if.tdukr.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://gis-if.tdukr.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://gis-if.tdukr.com/api/search/v1
+- type: sitemap
+  url: https://gis-if.tdukr.com/sitemap.xml
+id: gisiftdukrcom
+langs:
+- id: UK
+  name: Ukrainian
+link: https://gis-if.tdukr.com
+name: ГІС-портал Івано-Франківської області
+owner:
+  link: https://www.if.gov.ua
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: UA-26
+      name: Ivano-Frankivska oblast
+  name: Ivano-Frankivsk Regional State Administration
+  type: Regional government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- Ivano-Frankivsk
+- Ukraine
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99997763

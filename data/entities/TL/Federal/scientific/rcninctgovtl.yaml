@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- publication
+- dataset
+coverage:
+- location:
+    country:
+      id: TL
+      name: Timor-Leste
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: National scientific repository of Timor-Leste (EPrints 3.4.5) for articles,
+  theses, reports, and research data. Public search and OAI-PMH at /cgi/oai2.
+endpoints:
+- type: oaipmh20
+  url: https://rcn.inct.gov.tl/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://rcn.inct.gov.tl/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://rcn.inct.gov.tl/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://rcn.inct.gov.tl/rest/eprint
+- type: eprints:rdf
+  url: https://rcn.inct.gov.tl/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://rcn.inct.gov.tl/cgi/export/repository/RDFN3/devel.n3
+id: rcninctgovtl
+langs:
+- id: PT
+  name: Portuguese
+- id: EN
+  name: English
+link: https://rcn.inct.gov.tl/
+name: Repositório Científico Nacional de Timor-Leste
+owner:
+  link: https://inct.gov.tl/
+  location:
+    country:
+      id: TL
+      name: Timor-Leste
+    level: 20
+  name: Instituto Nacional de Ciência e Tecnologia
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- institutional repository
+- eprints
+- open access
+- Timor-Leste
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994628

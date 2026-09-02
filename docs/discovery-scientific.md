@@ -6,8 +6,8 @@ Do not add dataset-level records (a single Dataverse dataset, a Zenodo depositio
 
 | Page | Use when |
 |------|----------|
-| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, OPUS, RADAR, Yoda, Hyrax, Figshare, Redivis, Pure, Converis, Omega-PSIR, Archipelago, DABAR, OpenScience.si, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, DiVA Portal, …) |
-| [Domain repositories](discovery-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat, CLLD |
+| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, OPUS, RADAR, Yoda, Hyrax, Figshare, Redivis, Pure, Converis, Omega-PSIR, Archipelago, DABAR, OpenScience.si, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, DiVA Portal, META-SHARE, Gen3, …) |
+| [Domain repositories](discovery-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat, CLLD, Pathway Tools, IBDC |
 
 All `software.id` values: [software-index.md](software-index.md). Harvest filters: [harvest-scientific.md](harvest-scientific.md), [harvest-scientific-domain.md](harvest-scientific-domain.md).
 
@@ -444,6 +444,21 @@ Repository for Archiving, Managing and Accessing Diverse Data. Site: [ramadda.or
 | Google | `"RAMADDA" (repository OR catalog OR "data portal") -site:github.com` |
 | Censys | `web.endpoints.http.body: "RAMADDA"` |
 
+## META-SHARE (`metashare`) {#metashare}
+
+META-NET language-resource repository nodes. Site: [meta-net.eu/meta-share](https://www.meta-net.eu/meta-share). Hosts are often `metashare.{org}`.
+
+**Signals:** title “META-SHARE”; resource browse/search for corpora, lexica, and tools; META-NET branding.
+
+**Confirm:** GET the public repository home (resource search). One catalog per **node**, not per language resource. Skip Victoria MetaShare (that is GeoNetwork). Do not add a single corpus landing page.
+
+| Tool | Query |
+|------|-------|
+| Google | `"META-SHARE" (corpus OR "language resource" OR repository) -site:github.com` |
+| Google | `inurl:metashare (repository OR resources)` |
+| Censys | `web.endpoints.http.body: "META-SHARE"` |
+| crt.sh | `metashare.%` |
+
 ## LabKey Server (`labkey`) {#labkey}
 
 LabKey Server study/assay platform. Site: [labkey.com](https://www.labkey.com). Public projects such as Panorama Public use `begin.view` folders.
@@ -465,6 +480,21 @@ Sage Bionetworks hosted biomedical sharing platform. Site: [synapse.org](https:/
 |------|-------|
 | Google | `"Synapse" "Sage Bionetworks" (portal OR datasets) -site:github.com` |
 | Censys | `web.endpoints.http.body: "Sage Bionetworks"` |
+
+## Gen3 (`gen3`) {#gen3}
+
+University of Chicago CTDS data-commons platform. Site: [gen3.org](https://gen3.org). Docs: [docs.gen3.org](https://docs.gen3.org). Public portals share a React data-portal UI, Fence login, Indexd/DRS, and GraphQL.
+
+**Signals:** `_status` JSON (`Feelin good!`); `/index/ga4gh/drs/v1/service-info` with Indexd; `planx` / `uc-cdis` assets; title often “Data Portal”.
+
+**Confirm:** GET `/_status` and/or DRS `service-info`. One catalog per **commons portal**, not per study or file. Do **not** label NCI GDC, PDC, or IDC as Gen3 (different stacks). Do not label Bento UIs (ICDC and similar) as Gen3 even when Fence is used for login.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Gen3" ("data portal" OR "data commons") (Fence OR Indexd OR CTDS)` |
+| Google | `inurl:/index/ga4gh/drs/v1/service-info` |
+| Censys | `web.endpoints.http.body: "Feelin good!"` |
+| crt.sh | `%.midrc.org` |
 
 ## XNAT (`xnat`) {#xnat}
 
@@ -498,6 +528,19 @@ KIT research-data infrastructure for materials science. Site: [kadi.iam.kit.edu]
 |------|-------|
 | Google | `"Kadi4Mat" OR "Kadi" (KIT OR "research data") -site:github.com` |
 | Censys | `web.endpoints.http.body: "Kadi4Mat"` |
+
+## TR32DB (`tr32db`) {#tr32db}
+
+University of Cologne CRC research-data management system (TR32DB), reused as CRC1211DB and TRR228DB.
+
+**Signals:** path `/site/index.php`; scripts `/extLib/jquery/jquery-3.4.1.js`, `/lib/js/generic/helper.js`, `/lib/js/generic/newLogin.js`.
+
+**Confirm:** GET `/site/index.php` and match the helper.js / newLogin.js stack. One record per CRC database. Do **not** set `tr32db` on CRC806DB (`crc806db.uni-koeln.de`), which is a different SPA.
+
+| Tool | Query |
+|------|-------|
+| Google | `"TR32DB" OR "CRC1211DB" OR "TRR228DB" (database OR repository)` |
+| Google | `inurl:/site/index.php (TR32DB OR CRC1211 OR TRR228)` |
 
 ## e!DAL (`edal`) {#edal}
 

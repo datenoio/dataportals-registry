@@ -1,0 +1,79 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: GN
+      name: Guinea
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: National DHIS2 health management information system (SNIS) of Guinea's
+  Ministry of Health and Public Hygiene. The public UI at /dhis redirects to login;
+  authenticated access is required to query routine health indicators and datasets.
+  The former host dhis2.sante.gov.gn is no longer reachable.
+endpoints:
+- type: dhis2:catalog
+  url: https://entrepot.sante.gov.gn/dhis
+- type: dhis2:system-info
+  url: https://entrepot.sante.gov.gn/dhis/api/system/info
+- type: dhis2:datasets
+  url: https://entrepot.sante.gov.gn/dhis/api/dataSets.json?fields=id,displayName&pageSize=1
+id: entrepotsantegovgn
+langs:
+- id: FR
+  name: French
+link: https://entrepot.sante.gov.gn/dhis
+name: SNIS Guinée (DHIS2)
+owner:
+  link: https://sante.gov.gn
+  location:
+    country:
+      id: GN
+      name: Guinea
+    level: 20
+  name: Ministère de la Santé et de l'Hygiène Publique
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dhis2
+  name: DHIS2
+status: active
+tags:
+- health
+- HMIS
+- DHIS2
+- government
+- restricted
+- has_api
+- Guinea
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99994556

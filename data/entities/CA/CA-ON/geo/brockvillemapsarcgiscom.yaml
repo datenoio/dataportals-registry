@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: Public ArcGIS Online organization of the City of Brockville, including
+  the Brockville Maps gallery and municipal GIS layers.
+endpoints:
+- type: arcgis:portals:self
+  url: https://brockville.maps.arcgis.com/sharing/rest/portals/self?f=pjson
+- type: arcgis:search
+  url: https://brockville.maps.arcgis.com/sharing/rest/search?f=json&q=orgid:D2ecTrBdbHbXvaXs
+id: brockvillemapsarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://brockville.maps.arcgis.com
+name: City of Brockville Maps and Apps
+owner:
+  link: https://brockville.com
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: City of Brockville
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- GIS
+- geospatial
+- Ontario
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99997832

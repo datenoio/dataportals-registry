@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,31 +12,13 @@ coverage:
       name: Spain
     level: 30
     macroregion:
-      id: 039
+      id: '039'
       name: Southern Europe
     subregion:
       id: ES-CN
       name: Canarias
-description: Sede electrÃ³nica del grupo ATM-Maggioli
-endpoints:
-- type: ckan
-  url: https://eadmin.aridane.org/api/3
-- type: ckan
-  url: https://eadmin.aridane.org/api/3/action/package_list
-- type: opendatasoft
-  url: https://eadmin.aridane.org/api/v2/catalog
-- type: socrata
-  url: https://eadmin.aridane.org/api/views
-- type: dcatap201
-  url: https://eadmin.aridane.org/api/feed/dcat
-- type: dcat
-  url: https://eadmin.aridane.org/catalog.xml
-- type: dcatap
-  url: https://eadmin.aridane.org/catalog.rdf
-- type: dcat:jsonld
-  url: https://eadmin.aridane.org/catalog.jsonld
-- type: sitemap
-  url: https://eadmin.aridane.org/sitemap.xml
+description: ATM Maggioli sede electrónica open-data catalog of the Ayuntamiento de
+  Los Llanos de Aridane, listing reusable municipal datasets on /transparencia/datos/catalogo.
 id: eadminaridaneorgtransparenciadatoscatalogo
 langs:
 - id: ES
@@ -50,16 +32,15 @@ owner:
     subregion:
       id: ES-CN
       name: Canarias
-  name: Catálogo de datos abiertos del Ayuntamiento de Los Llanos de Aridane
+  name: Ayuntamiento de Los Llanos de Aridane
   type: Local government
   link: https://aridane.org
 software:
-  id: custom
-  name: Custom software
+  id: atmmaggioli
+  name: ATM Maggioli
 status: active
 tags:
 - government
-- has_api
 - open data
 topics:
 - id: GOVE

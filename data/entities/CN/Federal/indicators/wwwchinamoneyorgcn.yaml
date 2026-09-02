@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country: &id001
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Public interbank money-market statistics of China Foreign Exchange Trade
+  System, including SHIBOR, pledged and outright repo, and related benchmark tables.
+id: wwwchinamoneyorgcn
+langs:
+- id: ZH
+  name: Chinese
+- id: EN
+  name: English
+link: https://www.chinamoney.org.cn/chinese/mkdatapm/
+name: ChinaMoney Interbank Market Statistics
+owner:
+  link: https://www.chinamoney.org.cn
+  location:
+    country: *id001
+    level: 20
+  name: China Foreign Exchange Trade System
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- finance
+- money market
+- China
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99995089

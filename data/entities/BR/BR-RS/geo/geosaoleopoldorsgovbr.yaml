@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-RS
+      name: Rio Grande do Sul
+description: ArcGIS Enterprise geoportal of the Municipality of São Leopoldo, with
+  a public portal catalog and REST map services for cadastral, zoning, and environmental
+  layers.
+endpoints:
+- type: arcgis:portals:self
+  url: https://geo.saoleopoldo.rs.gov.br/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://geo.saoleopoldo.rs.gov.br/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geo.saoleopoldo.rs.gov.br/server/rest/services?f=pjson
+id: geosaoleopoldorsgovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://geo.saoleopoldo.rs.gov.br/portal
+name: Geo São Leopoldo
+owner:
+  link: https://www.saoleopoldo.rs.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-RS
+      name: Rio Grande do Sul
+  name: Prefeitura Municipal de São Leopoldo
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- Brazil
+- São Leopoldo
+- Rio Grande do Sul
+- municipal
+- geospatial
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99995958

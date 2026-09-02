@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: AR-B
+      name: Buenos Aires
+description: Infraestructura de Datos Espaciales del Municipio de Moreno (GeoNetwork),
+  nodo municipal de IDERA.
+id: idemorenogobar
+langs:
+- id: ES
+  name: Spanish
+link: http://ide.moreno.gob.ar/
+name: IDE Moreno
+owner:
+  link: https://www.moreno.gob.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-B
+      name: Buenos Aires
+  name: Municipalidad de Moreno
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- geoportal
+- GeoNetwork
+- Moreno
+- Buenos Aires
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99995819
+endpoints:
+- type: geonetwork:site
+  url: http://ide.moreno.gob.ar/geonetwork/srv/api/site

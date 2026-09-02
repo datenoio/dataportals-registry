@@ -221,6 +221,9 @@ def stale_software_anchor_links() -> list[str]:
                 frag = frag.strip()
                 if not frag or "/" in frag:
                     continue
+                # `#tergis` is not a stale slug of `{#rgis}`; skip real software ids.
+                if frag in known:
+                    continue
                 if filepart:
                     dest = (path.parent / filepart).resolve()
                 else:

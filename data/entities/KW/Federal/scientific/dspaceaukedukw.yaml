@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: KW
+      name: Kuwait
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Institutional DSpace repository of the American University of Kuwait.
+  Public collections include a Data Bank (Datasets), faculty and staff scholarship,
+  student projects, special collections, and university archives. Harvestable via
+  the DSpace 7+ REST API and OAI-PMH. Listed in OpenDOAR as the AUK Repository.
+endpoints:
+- type: dspace
+  url: https://dspace.auk.edu.kw/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://dspace.auk.edu.kw/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://dspace.auk.edu.kw/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://dspace.auk.edu.kw/sitemap_index.xml
+id: dspaceaukedukw
+langs:
+- id: EN
+  name: English
+- id: AR
+  name: Arabic
+link: https://dspace.auk.edu.kw/
+name: AUK Repository
+owner:
+  link: https://www.auk.edu.kw/
+  location:
+    country:
+      id: KW
+      name: Kuwait
+    level: 20
+  name: American University of Kuwait
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- DSpace
+- institutional repository
+- research data
+- open access
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99994532

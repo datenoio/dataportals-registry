@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-GU
+      name: Guam
+description: DSpace institutional repository of the University of Guam Libraries.
+  Public communities include the Richard Flores Taitano Micronesian Area Research
+  Center (MARC) collections and RFK Memorial Library graduate theses and special projects.
+  Same catalog is also served at http://rfk2.edu.gu:8080/jspui/. HTTPS on this host
+  has an expired certificate; the public UI is HTTP on port 8080.
+endpoints:
+- type: oaipmh20
+  url: http://hasso.uog.edu:8080/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: http://hasso.uog.edu:8080/jspui/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: http://hasso.uog.edu:8080/jspui/feed/atom_1.0/site
+  version: '1.0'
+id: hassouogedu
+langs:
+- id: EN
+  name: English
+link: http://hasso.uog.edu:8080/jspui/
+name: University of Guam Libraries Digital Repository
+owner:
+  link: https://www.uog.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-GU
+      name: Guam
+  name: University of Guam
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- institutional repository
+- DSpace
+- theses
+- Micronesia
+- Guam
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994536

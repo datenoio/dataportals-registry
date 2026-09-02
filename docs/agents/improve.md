@@ -130,7 +130,7 @@ Re-check counts in DuckDB (and YAML if exports lag) before starting. India/Niger
 | 6 | DHIS2 + NADA leftovers | Short lists, high precision | dhis2.org implementations + IHSN ADP; probe `/api/system/info` and `/index.php/catalog` |
 | 7 | Africa national + capital open data | UN members that still have **zero** open-data YAML | National CKAN/DKAN/uData, then capital city. Skip more DHIS2 if already added |
 | 8 | Microdata in OECD countries | Spain, Italy, Poland, Australia often show 0 NADA | IHSN list; do not refile indicator table builders as microdata |
-| 9 | Custom-software retag | ~587 custom geoportals remain; path clustering already produced SeaSketch/PISO/GDi Visios/… | Hostname/path clusters with ≥3 installs; one-off `.gov` roots stay `custom` |
+| 9 | Custom-software retag | Pozi, Instant Apps, JMap, GIS Cloud, MRF Web Map, MuniSight, p.mapper, CommunityView, MS-GIS, Weave, OVIE, SOFTPRO, MxSIG, and Cologne TR32DB extracted from custom catalogs; remaining custom geoportals are mostly one-off `.gov` roots | Hostname/path clusters with ≥3 installs; one-off `.gov` roots stay `custom` |
 | — | More US ArcGIS Hub/Server | Already thousands of US geo rows | Only if a named authoritative list remains unmatched (MappingSupport, FGDC SSC) |
 
 ## Recipes

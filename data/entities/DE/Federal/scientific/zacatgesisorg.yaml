@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: Western Europe
 description: ZACAT is the GESIS online study catalogue (Nesstar/WebView) for browsing and
   analysing documented social science survey datasets.
+endpoints:
+- type: nesstar:webview
+  url: https://zacat.gesis.org/webview/
 id: zacatgesisorg
 identifiers:
 - id: openaire
@@ -38,8 +41,8 @@ owner:
   name: GESIS – Leibniz Institute for the Social Sciences
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: nesstar
+  name: Nesstar
 status: active
 tags:
 - scientific

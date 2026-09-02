@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: CD
+      name: Democratic Republic of the Congo
+    level: 20
+    macroregion:
+      id: '017'
+      name: Middle Africa
+description: DSpace 8 institutional repository of Université Bernadette Muleka
+  (UBM), branded LIRE (Libre Inventaire de la Recherche et de l'Excellence). Public
+  search UI and REST API; launched March 2026 as the first academic IR in the DRC.
+  Catalog listing is public; the collection was still empty at registration.
+endpoints:
+- type: dspace
+  url: https://lire.ubm.ac.cd/server/api
+  version: '8'
+- type: dspace:objects
+  url: https://lire.ubm.ac.cd/server/api/discover/search/objects
+  version: '8'
+- type: oaipmh20
+  url: https://lire.ubm.ac.cd/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://lire.ubm.ac.cd/sitemap_index.xml
+id: lireubmaccd
+identifiers:
+- id: opendoar
+  url: https://v2.sherpa.ac.uk/id/repository/11316
+  value: '11316'
+langs:
+- id: FR
+  name: French
+link: https://lire.ubm.ac.cd/
+name: LIRE - Libre Inventaire de la Recherche et de l'Excellence (UBM)
+owner:
+  link: https://www.ubm.ac.cd
+  location:
+    country:
+      id: CD
+      name: Democratic Republic of the Congo
+    level: 20
+  name: Université Bernadette Muleka
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- institutional repository
+- university
+- open access
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994588

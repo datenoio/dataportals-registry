@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: STAC catalog of SPOT orthoimagery of Canada (2005-2010) published as open data
+  on Amazon S3.
+endpoints:
+- type: stacserverapi
+  url: https://canada-spot-ortho.s3.amazonaws.com/canada_spot_orthoimages/catalog.json
+id: canadaspotorthos3amazonawscom
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://canada-spot-ortho.s3.amazonaws.com/canada_spot_orthoimages/catalog.json
+name: SPOT Orthoimages of Canada (2005-2010)
+owner:
+  link: https://natural-resources.canada.ca/
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+  name: Natural Resources Canada
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: stacbrowser
+  name: STAC Browser
+status: active
+tags:
+- STAC
+- remote sensing
+- orthoimagery
+- geospatial
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi99995565

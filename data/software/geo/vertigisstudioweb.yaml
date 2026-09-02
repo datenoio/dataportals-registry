@@ -1,0 +1,64 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'Yes'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'No'
+has_bulk: 'No'
+id: vertigisstudioweb
+name: VertiGIS Studio Web
+website: https://www.vertigis.com/studio/web/
+description: >
+  VertiGIS Studio Web (formerly Geocortex Web / GXW) is a commercial web GIS
+  viewer on Esri ArcGIS. Public apps launch from /vertigisstudio/web/?app={guid},
+  /gcx/WebViewer/?app={guid}, or /Geocortex/WebViewer/?app={guid}, with HTML
+  #gcx-app and a page title VertiGIS Studio Web. SaaS tenants appear under
+  apps.vertigisstudio.com and apps.vertigisstudio.eu. Distinct from Geocortex
+  Essentials (geocortex) Html5Viewer / REST Sites Directory and from VertiGIS
+  WebOffice (weboffice). One catalog per public tenant, not per app GUID.
+owner:
+  name: VertiGIS
+  location:
+    country:
+      id: CA
+      name: Canada
+logo_url: https://www.vertigis.com/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+documentation_url: https://docs.vertigisstudio.com/webviewer/
+export_formats:
+- GeoJSON
+- JSON
+- KML
+- Shapefile
+capabilities:
+- Map viewer
+last_updated: '2026-09-01T00:00:00Z'

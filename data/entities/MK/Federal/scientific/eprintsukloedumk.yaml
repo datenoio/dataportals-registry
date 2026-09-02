@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: MK
+      name: Republic of North Macedonia
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: EPrints institutional repository of St. Kliment Ohridski University of
+  Bitola (UKLO) for academic publications, theses, and research outputs. OAI-PMH at
+  /cgi/oai2.
+endpoints:
+- type: oaipmh20
+  url: https://eprints.uklo.edu.mk/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://eprints.uklo.edu.mk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://eprints.uklo.edu.mk/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://eprints.uklo.edu.mk/rest/eprint
+id: eprintsukloedumk
+langs:
+- id: MK
+  name: Macedonian
+- id: EN
+  name: English
+link: https://eprints.uklo.edu.mk
+name: UKLO Repository
+owner:
+  link: https://www.uklo.edu.mk
+  location:
+    country:
+      id: MK
+      name: Republic of North Macedonia
+    level: 20
+  name: St. Kliment Ohridski University of Bitola
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- Republic of North Macedonia
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994613

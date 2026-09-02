@@ -1,0 +1,61 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: sitwebgis
+name: SIT WebGis
+website: https://webgis.sit-puglia.it/
+description: SIT WebGis is SIT Servizi di Informazione Territoriale's
+  municipal GIS. Public tenants live at webgis.sit-puglia.it/{comune}/
+  with title WebGis {Town} (AngularJS ng-app WebApp plus OpenLayers 3
+  core/lib/openlayers/js/ol.js) or SIT-{TOWN} (Angular CLI plus
+  ol-attribution-hotfix.js). Distinct from Regione Puglia GeoNetwork on
+  repertorio.sit.puglia.it, Lizmap, Spectrum Spatial Analyst, and GeneGIS
+  PAGIS. Do not register the marketing homepage. Skip stale homepage
+  slugs such as /mola and /potenza that 404.
+owner:
+  name: SIT Servizi di Informazione Territoriale Srl
+  location:
+    country:
+      id: IT
+      name: Italy
+documentation_url: https://webgis.sit-puglia.it/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+export_formats:
+- JSON
+capabilities:
+- Map viewer
+- Municipal GIS
+last_updated: '2026-09-02T00:00:00Z'

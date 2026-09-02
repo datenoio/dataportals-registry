@@ -24,6 +24,7 @@ Match discovery: [discovery.md](discovery.md#one-catalog-per-public-product).
 | Stack | Harvest this | Skip as extra datasets |
 |-------|----------------|------------------------|
 | GeoNetwork + GeoServer | CSW `GetRecords` dataset/series | WMS layers already in CSW |
+| Palapa + GeoServer | Palapa CSW `/csw` or Palapa catalog layers | A second `geoserver` crawl of `/geoserver` |
 | Lizmap / QWC2 / mviewer + QGIS Server | Viewer config or the viewer’s WMS | A second crawl of `qgis_mapserv.fcgi` |
 | ArcGIS Hub + Server | Hub DCAT or Hub search | REST services already listed as Hub items |
 | STAC API + Browser | `/collections` on the API | Browser HTML as a second catalog |
@@ -63,9 +64,21 @@ GeoNode 3 uses `/api/layers/` instead of `/api/datasets/`. Follow `meta.total_co
 
 **Drop:** `/api/maps/` (compositions), `/api/geoapps/`, `/api/documents/` unless those documents are the data product, `/api/profiles/`. CSW at `/catalogue/csw` duplicates REST layers — pick one.
 
+## Palapa (`palapa`) {#palapa}
+
+Indonesian BIG simpul jaringan catalog. Prefer pycsw CSW when it answers; otherwise harvest GeoServer layers on the same host. Do not also register `/geoserver` as a second catalog.
+
+```text
+GET https://host/csw?service=CSW&version=2.0.2&request=GetCapabilities
+GET https://host/csw?service=CSW&version=2.0.2&request=GetRecords&resultType=results&outputSchema=http://www.isotc211.org/2005/gmd&typeNames=gmd:MD_Metadata&elementSetName=summary&maxRecords=50&startPosition=1
+GET https://host/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+```
+
+Keep ISO `dataset` / `series` from CSW, or WMS Layer names if CSW is absent. Drop `/gspalapa/` login, `/main/` HTML as datasets, and GeoNode `/api/datasets/` (that is `geonode`, not Palapa).
+
 ## GeoServer (`geoserver`) {#geoserver}
 
-Register GeoServer only when it is the public catalog. Harvest **Layer** names from WMS GetCapabilities (or REST `/geoserver/rest/layers.json` if public).
+Register GeoServer only when it is the public catalog, not the backend behind GeoNode or Palapa. Harvest **Layer** names from WMS GetCapabilities (or REST `/geoserver/rest/layers.json` if public).
 
 ```text
 GET https://host/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
@@ -103,6 +116,18 @@ GET https://host/arcgis/rest/info?f=pjson
 ```
 
 Walk folders. Keep `FeatureServer`, `MapServer`, `ImageServer` (and `SceneServer` if you index 3D). **Drop** `GPServer`, `GeometryServer`, `NAServer`, `GeocodeServer`, `IndexingServer`, `PrintingTools`. One service URL is one dataset-like object; do not explode every layer id unless the user wants layer-level records.
+
+## ArcGIS Experience Builder (`experiencebuilder`) {#experiencebuilder}
+
+Map UI first. Harvest public CSW/WMS/REST on the same host when present. Do not scrape Jimu tiles or treat each widget as a dataset. One harvest scope per public app (Experience item id or Länsstyrelsen tenant). Distinct from `webappbuilder` and `dmcity`. Viewer grain: [harvest-viewers.md](harvest-viewers.md#experiencebuilder).
+
+## ArcGIS Web AppBuilder (`webappbuilder`) {#webappbuilder}
+
+Map UI first. Harvest public REST/WMS on the same host when present. Do not scrape Web AppViewer tiles. One harvest scope per public `?id=` app. Distinct from `experiencebuilder` and `instantapps`. Viewer grain: [harvest-viewers.md](harvest-viewers.md#webappbuilder).
+
+## ArcGIS Instant Apps (`instantapps`) {#instantapps}
+
+Map UI first. Harvest public REST/WMS on the same host when present. Do not scrape Instant App tiles or treat each template widget as a dataset. One harvest scope per public `appid`. Distinct from `experiencebuilder` and `webappbuilder`. Viewer grain: [harvest-viewers.md](harvest-viewers.md#instantapps).
 
 ## STAC API (`stacserver`) {#stacserver}
 
@@ -173,7 +198,7 @@ Theme JSON lists layers. Keep data layers; drop background/basemap-only entries 
 GET https://host/themes.json
 ```
 
-The theme/layer tree is the catalog. One theme is not automatically one dataset — harvest **layers** (or the documented QGIS Server WMS). Skip viewer HTML.
+The theme/layer tree is the catalog. One theme is not automatically one dataset — harvest **layers** (or the documented QGIS Server WMS). Skip viewer HTML. `{tenant}.tergis.lv` QWC2 frontends are `tergis` ([harvest-viewers.md](harvest-viewers.md#tergis)).
 
 ## Mapbender (`mapbender`) {#mapbender}
 
@@ -185,7 +210,11 @@ Harvest WMS GetCapabilities of **published applications**, not `/application/` a
 GET https://host?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 ```
 
-Named layers. Do not harvest every CLASS as a dataset. If a parent CSW exists, prefer CSW.
+Named layers. Do not harvest every CLASS as a dataset. If a parent CSW exists, prefer CSW. If a p.mapper UI is the public catalog (`pmapper`), harvest that instead of a second MapServer record.
+
+## p.mapper (`pmapper`) {#pmapper}
+
+Harvest WMS GetCapabilities of the MapServer mapfile behind `/pmapper/` when public, or the p.mapper layer tree. Named layers are the dataset analog. Do not scrape map images. One harvest scope per municipality or SIT. Distinct from UMN `mapserver` as the public catalog. Viewer grain: [harvest-viewers.md](harvest-viewers.md#pmapper).
 
 ## QGIS Server (`qgisserver`) {#qgisserver}
 
@@ -213,7 +242,7 @@ OpenAPI lists resources. Prefer ISO dataset/series records (or CSW `GetRecords` 
 GET https://host/Geocortex/Essentials/REST/sites?f=pjson
 ```
 
-Each Essentials **site** is one application/catalog analog. Do not scrape Html5Viewer tiles or explode every layer unless the user asked for layer-level harvest. Distinct from VertiGIS WebOffice (`weboffice`). Viewer grain: [harvest-viewers.md](harvest-viewers.md).
+Each Essentials **site** is one application/catalog analog. Do not scrape Html5Viewer tiles or explode every layer unless the user asked for layer-level harvest. Distinct from VertiGIS WebOffice (`weboffice`) and VertiGIS Studio Web (`vertigisstudioweb`). Viewer grain: [harvest-viewers.md](harvest-viewers.md).
 
 ## Esri Geoportal (`esrigeo`) {#esrigeo}
 
@@ -243,6 +272,126 @@ Ingrid/THREDDS-style climate catalogs. Harvest dataset nodes in the library tree
 ## Wagmap (`wagmap`) {#wagmap}
 
 Japanese わが街ガイド viewers. Public GetCapabilities is often **missing or `403`**. Harvest only when a CSW/WMS/REST catalog is public. Do not scrape map tiles. Detail: [harvest-viewers.md](harvest-viewers.md#wagmap).
+
+## SonicWeb (`sonicweb`) {#sonicweb}
+
+Japanese SonicWeb-Cloud viewers on `www.sonicweb-asp.jp/{slug}/`. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#sonicweb).
+
+## ALANDIS+ (`alandis`) {#alandis}
+
+Japanese ALANDIS+ public WebGIS on `webgis.alandis.jp/{tenant}/`. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#alandis).
+
+## GeDA-Public (`geogeo`) {#geogeo}
+
+Japanese Geogeo.jp / GeDA-Public viewers. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#geogeo).
+
+## Geolonia スマートマップ (`geoloniagis`) {#geoloniagis}
+
+Japanese Geolonia スマートマップ viewers (とっとりジオマップ, 香川 BRIDGES). Distinct from Kazakhstan `smartmap`. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#geoloniagis).
+
+## Visor Urbano (`visorurbano`) {#visorurbano}
+
+Mexican Visor Urbano municipal GIS. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#visorurbano).
+
+## Dobles Visor de Mapas (`doblesvisor`) {#doblesvisor}
+
+Costa Rican `/comun/` Leaflet cadastral visors. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#doblesvisor).
+
+## GeoNube (`geonube`) {#geonube}
+
+Argentine GeoNube Leaflet/bootleaf visors. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#geonube).
+
+## Geopixel Cidades (`geopixel`) {#geopixel}
+
+Brazilian Geopixel Cidades municipal geoportals. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#geopixel).
+
+## CTMGEO SigWEB (`ctmgeo`) {#ctmgeo}
+
+Brazilian CTMGEO SigWEB municipal cadastral maps. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#ctmgeo).
+
+## dmCity (`dmcity`) {#dmcity}
+
+Esri Finland `web.dmcity.fi/{city}/public/` tenants. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#dmcity). Distinct from `experiencebuilder`.
+
+## InfoGIS (`infogis`) {#infogis}
+
+Infokartta `www.infogis.fi/{municipality}/` tenants. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#infogis). Distinct from `louhi` and `trimblelocus`.
+
+## SIGimWeb (`sigimweb`) {#sigimweb}
+
+Indixio SIGim Web Quebec municipal GIS (`/sigimweb/`, `/sigim/`, title `SIGimWeb`). Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#sigimweb). Distinct from `mapguide`.
+
+## NetGIS Runtime (`netgisruntime`) {#netgisruntime}
+
+WSP Danmark `/NetGISRuntime/basis/index.jsp` municipal viewers. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#netgisruntime). Distinct from `netgisserver`.
+
+## GISPLAN (`gisplan`) {#gisplan}
+
+T-MAPY `{city}.gisplan.sk`, Czech GIS4U `{muni}.gis4u.cz`, `{city}.tmapserver.cz`, or city-host Spinbox / T-WIST municipal GIS. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#gisplan). Distinct from `gisapp`, `iobcina`, `gepro`, `gisonline`, `mapotip`, `cgwebgis`, `mobec`, `georeal`, and `geodeticca`.
+
+## mOBEC (`mobec`) {#mobec}
+
+T-MAPY `mobec.sk/{slug}` municipal map portal. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#mobec). Distinct from `gisplan`.
+
+## CG WebGIS (`cgwebgis`) {#cgwebgis}
+
+CORA GEO `webgis.{city}.sk` municipal GIS. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#cgwebgis). Distinct from `gisplan` and `geodeticca`.
+
+## Geodeticca WEB GIS (`geodeticca`) {#geodeticca}
+
+GEODETICCA VISION `gis.{city}.sk` municipal map client. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#geodeticca). Distinct from `cgwebgis` and `gisplan`.
+
+## Geoportál GEPRO (`gepro`) {#gepro}
+
+GEPRO `{city}.obce.gepro.cz` municipal web GIS. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#gepro). Distinct from `gisplan`.
+
+## KOVGIS EVALD (`evald`) {#evald}
+
+EOMAP `evald.ee/{slug}/` municipal GIS for Estonian local governments, plus nationwide `eesti` and ELVL tenants. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#evald). Distinct from `arcgisserver` city portals. Do not harvest `service.eomap.ee` aliases or `evald2_*` session URLs.
+
+## terGIS (`tergis`) {#tergis}
+
+TOPO DATI / METRUM `{tenant}.tergis.lv` territorial-planning GIS. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#tergis). Distinct from generic `qwc2` off `tergis.lv`. Do not harvest the marketing homepage.
+
+## GisOnline (`gisonline`) {#gisonline}
+
+TopGis `app.gisonline.cz/{city}` municipal map apps. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#gisonline). Distinct from `gisplan` and `gepro`.
+
+## K5 MapServer (`k5mapserver`) {#k5mapserver}
+
+MK Consult `{muni}.k5mapserver.cz` municipal geoportals. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#k5mapserver). Distinct from UMN `mapserver`.
+
+## Marushka (`marushka`) {#marushka}
+
+GEOVAP Marushka map application server. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#marushka). Distinct from `gisplan`, `gepro`, and `georeal`.
+
+## Georeal (`georeal`) {#georeal}
+
+GEOREAL `{dtm|geoportal}.{kraj}.cz/portal/` kraj CMS (`Georeal.Cards`). Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#georeal). Distinct from `gisplan`, `gepro`, and `marushka`.
+
+## Mapotip (`mapotip`) {#mapotip}
+
+Czech `portal.mapotip.cz/{municipality}` municipal map portal. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#mapotip). Distinct from `gisplan`, `gepro`, and `gisonline`.
+
+## giscity (`giscity`) {#giscity}
+
+ibb DV-Systems `www.gisserver.de/{city}/` municipal GIS. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#giscity). Distinct from ArcGIS Hub `gis.cityof*` catalogs.
+
+## touvia.MAPS (`touviamaps`) {#touviamaps}
+
+vianovis `vianovis.net/{tenant}/` municipal GIS. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#touviamaps). Distinct from `masterportal` and `vcmap`.
+
+## INGRADA online (`ingrada`) {#ingrada}
+
+Softplan INGRADA online BürgerGIS (`Softplan.Ingrada.Mobile`). Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#ingrada). Distinct from `weboffice` and `mapguide`.
+
+## VC Map (`vcmap`) {#vcmap}
+
+Virtual City Systems VC Map (`html.vcs-ui`). Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#vcmap). Distinct from `masterportal` and `touviamaps`.
+
+## Origo (`origo`) {#origo}
+
+Origosamverkan OpenLayers municipal viewers (`origo.min.js`). Same grain as [Hajk](harvest-viewers.md#hajk). [harvest-viewers.md](harvest-viewers.md#origo). Distinct from `hajk`, `mycarta`, and `geoserver` on the same host.
 
 ## EWMAPA (`ewmapa`) {#ewmapa}
 
@@ -327,6 +476,7 @@ Same REST grain as [CoGIS](#cogis) when the branded viewer is eLiteGIS.
 | `opengeoportal` | search API / Solr | Layers, not institutions |
 | `mapapps` | `/mapapps/` is a **viewer** | Harvest the CSW/ArcGIS backend if public |
 | `geocortex` | `.../REST/sites?f=pjson` | Each Essentials **site** is one application; do not scrape Html5Viewer tiles or explode every layer |
+| `vertigisstudioweb` | Map UI first; `?app=` GUID is the viewer, not a dataset list | Harvest public CSW/WMS/REST on the same host; do not explode every app GUID |
 | `qgisserver` | WMS GetCapabilities | Named layers; skip if Lizmap/QWC2/mviewer is the public catalog |
 | `mviewer` | `/apps/*.xml` or WMS | Layers in the config, not tiles |
 | `isogeo` | `/api` or CSW | ISO dataset/series, not workgroups |
@@ -337,8 +487,9 @@ Same REST grain as [CoGIS](#cogis) when the branded viewer is eLiteGIS.
 | `gc2` | `/mapcache/{tenant}/wmts` GetCapabilities | Named layers, not SQL rows or Vidi projects |
 | `haleconnect` | CSW GetRecords or `/ows/services/` WMS/WFS | ISO dataset/series or named layers; not pycsw as a second catalog |
 | `mapgisigserver` | `/igs/rest/mrcs/docs?f=json` or `/igs/rest/services?f=json` | Map documents / services; not tiles or `/igs/manager` |
+| `hygmapgis` | Mapgis layer list / OWS URL in the UI | Named layers; not tiles, not a second ArcGIS Server harvest on the same host |
 
-Municipal viewers (cardo, NetGIS, GC Navi, NOL-IS, Masterportal, Tianditu, Wagmap, GiSoftGis, PopGIS, ActiveMap, Geonomics, ORBISMap): [harvest-viewers.md](harvest-viewers.md). SuperMap iServer/iPortal and MapGIS IGServer recipes are also on [harvest-viewers.md](harvest-viewers.md). MapProxy (`mapproxy`) is a cache — do not treat every cached layer as a new dataset if a parent SDI already lists it. Gridded EO (STAC, ODC, Rasdaman, Copernicus, ncWMS): [harvest-earthdata.md](harvest-earthdata.md). smart.finder: [harvest-viewers.md](harvest-viewers.md#smartfindersdi).
+Municipal viewers (cardo, NetGIS, GC Navi, NOL-IS, Masterportal, touvia.MAPS, Tianditu, Wagmap, GiSoftGis, PopGIS, ActiveMap, Geonomics, ORBISMap, HyG Mapgis, GISApp, GisMaster, VertiGIS Studio Web, T-MAPY GISPLAN): [harvest-viewers.md](harvest-viewers.md). SuperMap iServer/iPortal, MapGIS IGServer, and HyG Mapgis recipes are also on [harvest-viewers.md](harvest-viewers.md). MapProxy (`mapproxy`) is a cache — do not treat every cached layer as a new dataset if a parent SDI already lists it. Gridded EO (STAC, ODC, Rasdaman, Copernicus, ncWMS): [harvest-earthdata.md](harvest-earthdata.md). smart.finder: [harvest-viewers.md](harvest-viewers.md#smartfindersdi).
 
 ## Pagination and duplicates
 

@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: BY
+      name: Belarus
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Institutional DSpace repository of GSMU. Homepage is a sparse SPA; OAI-PMH
+  Identify responds at /oai/request.
+endpoints:
+- type: oaipmh20
+  url: https://elib.gsmu.by/oai/request?verb=Identify
+  version: '2.0'
+id: elibgsmuby
+langs:
+- id: RU
+  name: Russian
+- id: BE
+  name: Belarusian
+link: https://elib.gsmu.by/
+name: Repository of Gomel State Medical University
+owner:
+  link: https://www.gsmu.by
+  location:
+    country:
+      id: BY
+      name: Belarus
+    level: 20
+  name: Gomel State Medical University
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- Belarus
+- health
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi99994567

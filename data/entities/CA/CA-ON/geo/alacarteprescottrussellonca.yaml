@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: Public Geocortex Essentials site catalog for the United Counties of Prescott
+  and Russell, including the À la Carte public mapping sites.
+endpoints:
+- type: customapi
+  url: https://alacarte.prescott-russell.on.ca/Geocortex/Essentials/REST/sites?f=pjson
+id: alacarteprescottrussellonca
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://alacarte.prescott-russell.on.ca/Geocortex/Essentials/REST/sites
+name: Prescott and Russell Geocortex GIS
+owner:
+  link: https://www.prescott-russell.on.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: United Counties of Prescott and Russell
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- Geocortex
+topics:
+- id: GEOS
+  name: Geospatial
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99995866

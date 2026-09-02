@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PA
+      name: Panama
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: WIS2 in a box node of the Instituto de Meteorología e Hidrología de Panamá
+  (IMHPA) (centre-id pa-imhpa). Publishes WMO discovery metadata, station information,
+  and SYNOP surface observations through an OGC API Features / pygeoapi service for
+  the WMO Information System.
+endpoints:
+- type: pygeoapi:openapi
+  url: https://sensored.imhpa.gob.pa/oapi/openapi
+  version: '1.0'
+- type: pygeoapi:collections
+  url: https://sensored.imhpa.gob.pa/oapi/collections/?f=json
+  version: '1.0'
+id: sensoredimhpagobpa
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: https://sensored.imhpa.gob.pa
+name: Panama - WIS 2.0 in a box
+owner:
+  link: https://www.imhpa.gob.pa
+  location:
+    country:
+      id: PA
+      name: Panama
+    level: 20
+  name: Instituto de Meteorología e Hidrología de Panamá (IMHPA)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: wis20box
+  name: Wis 2.0 Box
+status: active
+tags:
+- meteorology
+- climate
+- WIS2
+- government
+- has_api
+topics:
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi99994670

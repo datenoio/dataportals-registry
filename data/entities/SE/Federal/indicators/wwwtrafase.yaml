@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Interactive portal and open API for official Swedish transport statistics
+  covering road, rail, aviation, maritime, public transport, and communications.
+endpoints:
+- type: customapi
+  url: https://api.trafa.se/api/structure
+id: wwwtrafase
+langs:
+- id: SV
+  name: Swedish
+- id: EN
+  name: English
+link: https://www.trafa.se/sidor/statistikportalen/
+name: Trafikanalys Statistikportalen
+owner:
+  link: https://www.trafa.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Trafikanalys
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- transport
+- official statistics
+- Sweden
+- has_api
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi99995070

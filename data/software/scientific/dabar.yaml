@@ -1,0 +1,58 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: dabar
+website: https://dabar.srce.hr
+description: DABAR (Digital Academic Archives and Repositories) is Croatia’s national
+  multi-tenant institutional repository platform, operated by the University of Zagreb
+  University Computing Centre (SRCE). Public tenants expose a shared Laravel UI and
+  OAI-PMH, with Fedora as the storage layer after the 2025 reimplementation (previously
+  Drupal and Islandora). Register one catalog per public institutional hostname, not
+  each namespace facet on the national hub.
+owner:
+  name: University of Zagreb, University Computing Centre (SRCE)
+  location:
+    country:
+      id: HR
+      name: Croatia
+logo_url: https://dabar.srce.hr/img/dabar.svg
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'Yes'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+name: DABAR
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per item
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+documentation_url: https://dabar.srce.hr/en
+export_formats:
+- JSON
+- XML
+last_updated: '2026-08-30T12:00:00Z'

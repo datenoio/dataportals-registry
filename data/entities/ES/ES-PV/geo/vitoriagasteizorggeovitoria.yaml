@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-PV
+      name: Euskal Herria
+description: Municipal geoportal of Vitoria-Gasteiz (GEO Vitoria-Gasteiz), with a
+  public map viewer and WMS services for city and environmental cartography. Distinct
+  from the municipal open-data portal.
+endpoints:
+- type: wms130
+  url: https://www.vitoria-gasteiz.org/arcgis/services/internet/cea_SIAM/MapServer/WMSServer?request=GetCapabilities&service=WMS&version=1.3.0
+  version: 1.3.0
+id: vitoriagasteizorggeovitoria
+langs:
+- id: ES
+  name: Spanish
+- id: EU
+  name: Basque
+link: https://www.vitoria-gasteiz.org/geovitoria/geo?idioma=ES
+name: GEO Vitoria-Gasteiz
+owner:
+  link: https://www.vitoria-gasteiz.org
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-PV
+      name: Euskal Herria
+  name: Ayuntamiento de Vitoria-Gasteiz
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geoportal
+- GIS
+- municipal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99996766

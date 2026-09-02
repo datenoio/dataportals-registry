@@ -11,34 +11,36 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 50
     macroregion:
       id: '155'
       name: Western Europe
     subregion:
       id: FR-GES
       name: Grand-Est
-description: Data catalog service. This geoportal. managed by Local Government of
-  Chalons Agglo. provides access to datasets and resources.
+description: Public ArcGIS Server REST catalog of Châlons Agglo (Communauté
+  d'agglomération de Châlons-en-Champagne). The former carto.chalons-agglo.fr
+  host returns 404; services now live at geo.chalons-agglo.fr, including a public
+  OpenData/OPENDATA MapServer.
 endpoints:
 - type: arcgis:rest:info
-  url: https://carto.chalons-agglo.fr/server/rest/info?f=pjson
+  url: https://geo.chalons-agglo.fr/server/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: https://carto.chalons-agglo.fr/server/rest/services?f=pjson
+  url: https://geo.chalons-agglo.fr/server/rest/services?f=pjson
 - type: arcgis:soap
-  url: https://carto.chalons-agglo.fr/server/services?wsdl
+  url: https://geo.chalons-agglo.fr/server/services?wsdl
 - type: arcgis:sitemap
-  url: https://carto.chalons-agglo.fr/server/rest/services?f=sitemap
+  url: https://geo.chalons-agglo.fr/server/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: https://carto.chalons-agglo.fr/server/rest/services?f=geositemap
+  url: https://geo.chalons-agglo.fr/server/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: https://carto.chalons-agglo.fr/server/rest/services?f=kmz
+  url: https://geo.chalons-agglo.fr/server/rest/services?f=kmz
 id: cartochalonsagglofr
 langs:
 - id: FR
   name: French
-link: https://carto.chalons-agglo.fr/server/rest/services
-name: Local Government of Chalons Agglo Geoportal
+link: https://geo.chalons-agglo.fr/server/rest/services
+name: Châlons Agglo ArcGIS Server
 owner:
   link: https://chalons-agglo.fr
   location:
@@ -49,10 +51,11 @@ owner:
     subregion:
       id: FR-GES
       name: Grand-Est
-  name: Local Government of Chalons Agglo
+  name: Communauté d'agglomération de Châlons-en-Champagne
   type: Local government
 properties:
   has_doi: false
+  is_national: false
 rights:
   license_id: null
   license_name: null

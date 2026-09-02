@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-MG
+      name: Minas Gerais
+description: ArcGIS Enterprise geoportal of Juiz de Fora (SISURB), with a public portal
+  catalog and REST map services for planning, cadastre, and urban layers.
+endpoints:
+- type: arcgis:portals:self
+  url: https://sisurb.pjf.mg.gov.br/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://sisurb.pjf.mg.gov.br/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sisurb.pjf.mg.gov.br/server/rest/services?f=pjson
+id: sisurbpjfmggovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://sisurb.pjf.mg.gov.br/portal
+name: SISURB Juiz de Fora
+owner:
+  link: https://www.pjf.mg.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-MG
+      name: Minas Gerais
+  name: Prefeitura de Juiz de Fora
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- Brazil
+- Juiz de Fora
+- Minas Gerais
+- municipal
+- geospatial
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99995948

@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: GR-B
+      name: Kentrikí Makedonía
+description: Municipal ArcGIS Enterprise geoportal of Thessaloniki (maps.thessaloniki.gr)
+  for planning, addressing, parking, and related city layers. Distinct from the GET
+  SDI portal at sdi.thessaloniki.gr and the retired GeoServer at gis.thessaloniki.gr.
+endpoints:
+- type: arcgis:portals:self
+  url: https://maps.thessaloniki.gr/portal/sharing/rest/portals/self?f=json
+- type: arcgis:rest:info
+  url: https://maps.thessaloniki.gr/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.thessaloniki.gr/server/rest/services?f=pjson
+id: mapsthessalonikigr
+langs:
+- id: EL
+  name: Greek
+link: https://maps.thessaloniki.gr/portal
+name: Thessaloniki ArcGIS Geoportal
+owner:
+  link: https://thessaloniki.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    subregion:
+      id: GR-B
+      name: Kentrikí Makedonía
+  name: Municipality of Thessaloniki
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Greece
+- ArcGIS
+- geospatial
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99995887

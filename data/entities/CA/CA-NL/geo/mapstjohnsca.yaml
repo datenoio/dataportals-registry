@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-NL
+      name: Newfoundland and Labrador
+description: Public ArcGIS REST services directory for the City of St. John's, Newfoundland
+  and Labrador.
+endpoints:
+- type: arcgis:rest:info
+  url: https://map.stjohns.ca/mapsrv/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://map.stjohns.ca/mapsrv/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://map.stjohns.ca/mapsrv/services?wsdl
+- type: arcgis:sitemap
+  url: https://map.stjohns.ca/mapsrv/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://map.stjohns.ca/mapsrv/rest/services?f=geositemap
+id: mapstjohnsca
+langs:
+- id: EN
+  name: English
+link: https://map.stjohns.ca/mapsrv/rest/services
+name: City of St. John's GIS REST Services
+owner:
+  link: https://www.stjohns.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-NL
+      name: Newfoundland and Labrador
+  name: City of St. John's
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- government
+topics:
+- id: GEOS
+  name: Geospatial
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99995737

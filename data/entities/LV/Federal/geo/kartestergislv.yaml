@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LV
+      name: Latvia
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Public terGIS QWC2 map catalog publishing Latvian soil, cadastre, territorial-planning,
+  and related geospatial themes.
+endpoints:
+- type: qwc2:layers
+  url: https://kartes.tergis.lv/themes.json
+id: kartestergislv
+langs:
+- id: LV
+  name: Latvian
+link: https://kartes.tergis.lv/
+name: terGIS kartes
+owner:
+  link: https://topodati.lv
+  location:
+    country:
+      id: LV
+      name: Latvia
+    level: 20
+  name: SIA TOPO DATI
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: tergis
+  name: terGIS
+status: active
+tags:
+- GIS
+- geospatial
+- terGIS
+- Latvia
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99998565

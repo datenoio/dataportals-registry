@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: Township of Springwater GIS and mapping hub for public web maps and related
+  geographic tools, hosted on the County of Simcoe ArcGIS Enterprise portal.
+endpoints:
+- type: arcgishub:catalog
+  url: https://gisportal.simcoe.ca/arcgis/apps/sites/#/springwatersite
+id: gisportalsimcoecaspringwater
+langs:
+- id: EN
+  name: English
+link: https://gisportal.simcoe.ca/arcgis/apps/sites/#/springwatersite
+name: Springwater Mapping Hub
+owner:
+  link: https://www.springwater.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: Township of Springwater
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- GIS
+- geospatial
+- map viewer
+- Ontario
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99998428

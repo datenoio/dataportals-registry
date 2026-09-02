@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: Public ArcGIS Online organization of Loyalist Township, including the
+  public GIS map, heritage, parks, and related municipal layers.
+endpoints:
+- type: arcgis:portals:self
+  url: https://loyalisttownship.maps.arcgis.com/sharing/rest/portals/self?f=pjson
+- type: arcgis:search
+  url: https://loyalisttownship.maps.arcgis.com/sharing/rest/search?f=json&q=orgid:c4799G3DAz1SmoSi
+id: loyalisttownshipmapsarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://loyalisttownship.maps.arcgis.com
+name: Loyalist Township Maps and Apps
+owner:
+  link: https://www.loyalist.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: Loyalist Township
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- GIS
+- geospatial
+- Ontario
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99997945

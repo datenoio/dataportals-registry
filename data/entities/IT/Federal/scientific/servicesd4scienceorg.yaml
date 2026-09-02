@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -18,6 +18,9 @@ description: This catalogue implements the Gaia Blu Cruise Inventory, which is t
   catalogue of research objects generated during Gaia Blu cruises. It contributes to making
   Gaia Blu data FAIR (Findable, Accessible, Interoperable, and Reusable). Gaia Blu is the
   primary research vessel of the National Research Council of Italy.
+endpoints:
+- type: d4science:catalog
+  url: https://services.d4science.org/web/gaiablulab/cruise-inventory
 id: servicesd4scienceorg
 identifiers:
 - id: openaire
@@ -40,8 +43,8 @@ owner:
   name: D4Science
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: d4science
+  name: D4Science
 status: active
 tags:
 - scientific

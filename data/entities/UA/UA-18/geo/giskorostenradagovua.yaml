@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: UA-18
+      name: Zhytomyrska oblast
+description: ArcGIS Enterprise geoinformation system of Korosten territorial community
+  with public topographic, zoning, and master-plan map services. Distinct from the
+  Zhytomyr city and oblast geoportals.
+endpoints:
+- type: arcgis:portals:self
+  url: https://gis.korosten-rada.gov.ua/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:search
+  url: https://gis.korosten-rada.gov.ua/portal/sharing/rest/search?f=json&q=orgid:0123456789ABCDEF
+- type: arcgis:rest:info
+  url: https://gis.korosten-rada.gov.ua/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.korosten-rada.gov.ua/server/rest/services?f=pjson
+id: giskorostenradagovua
+langs:
+- id: UK
+  name: Ukrainian
+link: https://gis.korosten-rada.gov.ua/portal/home/
+name: Геоінформаційна система Коростенської громади
+owner:
+  link: https://korosten-rada.gov.ua
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: UA-18
+      name: Zhytomyrska oblast
+  name: Korosten City Council
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- Korosten
+- Ukraine
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99997412

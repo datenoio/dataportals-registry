@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: Public Geocortex Essentials site catalog for the Regional Municipality
+  of Durham, including YourDurham, PLANit External, and municipal mapping sites.
+endpoints:
+- type: customapi
+  url: https://geoapps.durham.ca/Geocortex/Essentials/REST/sites?f=pjson
+id: geoappsdurhamca
+langs:
+- id: EN
+  name: English
+link: https://geoapps.durham.ca/Geocortex/Essentials/REST/sites
+name: Region of Durham Geocortex GIS
+owner:
+  link: https://www.durham.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: Regional Municipality of Durham
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- Geocortex
+topics:
+- id: GEOS
+  name: Geospatial
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99995890

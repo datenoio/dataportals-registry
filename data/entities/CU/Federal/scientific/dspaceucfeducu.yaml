@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: CU
+      name: Cuba
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: DSpace 7 institutional repository of Universidad de Cienfuegos "Carlos
+  Rafael Rodríguez" (Repositorio UCf). REST API at /server/api.
+endpoints:
+- type: dspace
+  url: https://dspace.ucf.edu.cu/server/api
+  version: '7'
+- type: oaipmh20
+  url: https://dspace.ucf.edu.cu/server/oai/request?verb=Identify
+  version: '2.0'
+id: dspaceucfeducu
+langs:
+- id: ES
+  name: Spanish
+link: https://dspace.ucf.edu.cu
+name: Repositorio UCf
+owner:
+  link: https://www.ucf.edu.cu
+  location:
+    country:
+      id: CU
+      name: Cuba
+    level: 20
+  name: Universidad de Cienfuegos "Carlos Rafael Rodríguez"
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- dspace
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994590

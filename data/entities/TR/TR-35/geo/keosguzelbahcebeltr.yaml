@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TR
+      name: Turkey
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: TR-35
+      name: İzmir
+description: Public Netcad E-İmar map of Güzelbahçe municipality on the municipal
+  KEOS host.
+id: keosguzelbahcebeltr
+langs:
+- id: TR
+  name: Turkish
+link: https://keos.guzelbahce.bel.tr/imardurumu/
+name: Güzelbahçe KEOS E-İmar
+owner:
+  link: https://www.guzelbahce.bel.tr
+  location:
+    country:
+      id: TR
+      name: Turkey
+    level: 30
+    subregion:
+      id: TR-35
+      name: İzmir
+  name: Güzelbahçe Belediyesi
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: netgisserver
+  name: NetGIS Server
+status: active
+tags:
+- geospatial
+- municipality
+- KEOS
+- NetGIS
+- Turkey
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99995916
+endpoints:
+- type: arcgis:rest:services
+  url: https://keos.guzelbahce.bel.tr/keos/rest/services?f=pjson

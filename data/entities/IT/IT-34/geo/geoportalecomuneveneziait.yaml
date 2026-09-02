@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-34
+      name: Veneto
+description: Geocortex Essentials geoportal of Comune di Venezia for municipal WebGIS sites,
+  including GeoUrbanistica and other public mapping applications.
+endpoints:
+- type: customapi
+  url: https://geoportale.comune.venezia.it/Geocortex/Essentials/REST/sites?f=pjson
+id: geoportalecomuneveneziait
+langs:
+- id: IT
+  name: Italian
+link: https://geoportale.comune.venezia.it/Html5Viewer/index.html?viewer=GeoPortale.Geoportale&LOCALE=IT-it
+name: Geoportale Comune di Venezia
+owner:
+  link: https://www.comune.venezia.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-34
+      name: Veneto
+  name: Comune di Venezia
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- geospatial
+- geoportal
+- geocortex
+- government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00037859

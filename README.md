@@ -2,7 +2,7 @@
 
 A global registry of data portals, catalogs, data repositories, and related data infrastructure.
 
-**Working tree (28 August 2026):** **24,993** verified catalogs · **282** software platforms · **219** countries and territories · **7** scheduled records.
+**Working tree (2 September 2026):** **29,816** verified catalogs · **366** software platforms · **222** countries and territories · **0** scheduled records.
 
 Last published snapshot: [v1.18.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.18.0), 28 August 2026 (**24,993** catalogs · **282** software · **7** scheduled).
 
@@ -45,14 +45,14 @@ More patterns: [docs/query-examples.md](docs/query-examples.md). Join keys and c
 
 ### Data exports
 
-Last published snapshot (**v1.18.0**, 2026-08-28: 24,993 catalogs, 282 software, 7 scheduled). Exports match source YAML. Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
+Last published snapshot (**v1.18.0**, 2026-08-28: 24,993 catalogs, 282 software, 7 scheduled). Working-tree dumps last rebuilt **2 September 2026** to **29,816** catalogs / **0** scheduled / **366** software. Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
 
 | File | Contents |
 |------|----------|
-| `data/datasets/catalogs.jsonl` (+ `.zst`) | **24,993** verified catalog records |
-| `data/datasets/software.jsonl` (+ `.zst`) | **282** software / platform definitions |
-| `data/datasets/scheduled.jsonl` (+ `.zst`) | **7** scheduled sources |
-| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**25,000**) |
+| `data/datasets/catalogs.jsonl` (+ `.zst`) | **29,816** verified catalog records |
+| `data/datasets/software.jsonl` (+ `.zst`) | **366** software / platform definitions |
+| `data/datasets/scheduled.jsonl` (+ `.zst`) | **0** scheduled sources |
+| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**29,816**) |
 | `data/datasets/full.parquet`, `data/datasets/datasets.duckdb` | Analytics-friendly copies of `full.jsonl` |
 
 Rebuild from YAML (never hand-edit `data/datasets/`):

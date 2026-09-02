@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: MY-07
+      name: Pulau Pinang
+description: Seberang Perai City Council SPGIS ArcGIS Enterprise portal used for planning-zone
+  checks and municipal geospatial data.
+id: spgismbspgovmy
+langs:
+- id: MS
+  name: Malay
+- id: EN
+  name: English
+link: https://spgis.mbsp.gov.my/portal/home/
+name: SPGIS Seberang Perai
+owner:
+  link: https://www.mbsp.gov.my/
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 30
+    subregion:
+      id: MY-07
+      name: Pulau Pinang
+  name: Majlis Bandaraya Seberang Perai
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geoportal
+- geospatial
+- GIS
+- Seberang Perai
+- Penang
+- Malaysia
+- ArcGIS
+- municipal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99996383
+endpoints:
+- type: arcgis:portals:self
+  url: https://spgis.mbsp.gov.my/portal/sharing/rest/portals/self?f=pjson

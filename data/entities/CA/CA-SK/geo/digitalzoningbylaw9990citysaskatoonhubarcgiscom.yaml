@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-SK
+      name: Saskatchewan
+description: City of Saskatoon Digital Zoning Bylaw 9990. ArcGIS Hub catalog of zoning
+  districts, interpretation records, and related land-use layers.
+endpoints:
+- type: dcatap201
+  url: https://digital-zoning-bylaw-9990-citysaskatoon.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://digital-zoning-bylaw-9990-citysaskatoon.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://digital-zoning-bylaw-9990-citysaskatoon.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://digital-zoning-bylaw-9990-citysaskatoon.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://digital-zoning-bylaw-9990-citysaskatoon.hub.arcgis.com/sitemap.xml
+id: digitalzoningbylaw9990citysaskatoonhubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://digital-zoning-bylaw-9990-citysaskatoon.hub.arcgis.com
+name: Saskatoon Digital Zoning Bylaw 9990
+owner:
+  link: https://www.saskatoon.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-SK
+      name: Saskatchewan
+  name: City of Saskatoon
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- GIS
+- geospatial
+- Saskatchewan
+- zoning
+- arcgishub
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99998081

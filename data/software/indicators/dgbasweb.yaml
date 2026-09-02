@@ -1,0 +1,61 @@
+category: Indicators catalog
+subtype: indicators_data_platform
+datatypes:
+  datasets: Compatible
+  fields: 'Yes'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'Yes'
+has_api: Uncertain
+has_bulk: 'No'
+id: dgbasweb
+name: DGBAS Web
+website: https://winsta.dgbas.gov.tw/
+description: DGBAS Web is Taiwan's local-government statistical query platform
+  (資料庫查詢平臺), distributed by the Directorate-General of Budget, Accounting
+  and Statistics under the WINSTA programme. Public tenants use /DgbasWeb/
+  (index.aspx or Default.aspx) on {org}.dgbas.gov.tw or a municipal host.
+  Distinct from the national nstatdb.dgbas.gov.tw table database and from
+  county PxWeb sites.
+owner:
+  name: Directorate-General of Budget, Accounting and Statistics
+  location:
+    country:
+      id: TW
+      name: Taiwan
+documentation_url: https://winsta.dgbas.gov.tw/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Structured
+type: Software
+export_formats:
+- Excel
+- CSV
+- JSON
+capabilities:
+- Statistical tables
+- Indicator explorer
+last_updated: '2026-08-31T00:00:00Z'

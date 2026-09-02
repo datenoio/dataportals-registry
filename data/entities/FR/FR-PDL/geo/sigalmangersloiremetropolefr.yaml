@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 50
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-PDL
+      name: Pays-de-la-Loire
+description: Geographic information portal of Angers Loire Métropole (SIGALM), listed
+  in the AFIGEO 2022 territorial platforms directory.
+endpoints:
+- type: ogcrecordsapi
+  url: https://sigalm.angersloiremetropole.fr/portal/home/api/search/v1
+id: sigalmangersloiremetropolefr
+langs:
+- id: FR
+  name: French
+link: https://sigalm.angersloiremetropole.fr/portal/home/
+name: Portail SIG Angers Loire Métropole
+owner:
+  link: https://www.angersloiremetropole.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-PDL
+      name: Pays-de-la-Loire
+  name: Angers Loire Métropole
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- geoportal
+- France
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99996541

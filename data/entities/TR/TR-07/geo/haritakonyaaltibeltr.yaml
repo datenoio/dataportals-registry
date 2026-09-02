@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TR
+      name: Turkey
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: TR-07
+      name: Antalya
+description: Public KEOS city-guide map of Konyaaltı municipality, backed by NetGIS
+  Server.
+endpoints:
+- type: netgisserver:runxml
+  url: https://harita.konyaalti.bel.tr/keos/handlers/runXMLHandler.ashx
+id: haritakonyaaltibeltr
+langs:
+- id: TR
+  name: Turkish
+link: https://harita.konyaalti.bel.tr/keos/
+name: Konyaaltı KEOS Kent Rehberi
+owner:
+  link: https://www.konyaalti.bel.tr
+  location:
+    country:
+      id: TR
+      name: Turkey
+    level: 30
+    subregion:
+      id: TR-07
+      name: Antalya
+  name: Konyaaltı Belediyesi
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: netgisserver
+  name: NetGIS Server
+status: active
+tags:
+- geospatial
+- municipality
+- KEOS
+- NetGIS
+- Turkey
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99995834

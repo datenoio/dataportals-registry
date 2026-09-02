@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-AR
+      name: Aragón
+description: Municipal spatial data infrastructure of Zaragoza (IDEZar) published
+  with GeoServer, providing OGC WMS/WFS for city cartography, districts, and urban
+  layers. Distinct from the municipal open-data catalogue.
+endpoints:
+- type: wms130
+  url: https://idezar.zaragoza.es/geoserver_idezar/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wms111
+  url: https://idezar.zaragoza.es/geoserver_idezar/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs200
+  url: https://idezar.zaragoza.es/geoserver_idezar/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: idezarzaragozaes
+langs:
+- id: ES
+  name: Spanish
+link: https://idezar.zaragoza.es/geoserver_idezar/web/
+name: IDEZar
+owner:
+  link: https://www.zaragoza.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-AR
+      name: Aragón
+  name: Ayuntamiento de Zaragoza
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geoportal
+- GIS
+- municipal
+- geoserver
+topics:
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99996831

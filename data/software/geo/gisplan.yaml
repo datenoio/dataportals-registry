@@ -1,0 +1,63 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: gisplan
+name: GISPLAN
+website: https://www.tmapy.sk/verejna-sprava/mesta
+description: GISPLAN is T-MAPY's municipal web GIS (Spinbox / T-WIST gallery).
+  Slovak tenants usually live at {city}.gisplan.sk or a city host that still
+  loads tmapy.svg / Spinbox and public /mapa/ apps. Czech GIS4U tenants live at
+  {muni}.gis4u.cz; T-WIST galleries also live at {city}.tmapserver.cz and on
+  city hosts that load ost/filebox/ug_hm.php with t-wist_ren / tmapy.svg icons.
+  Distinct from T-MAPY mOBEC (mobec) on mobec.sk tenants, Romanian GISApp
+  (gisapp), Kaliopa iObčina (iobcina), Geoportál GEPRO (gepro), TopGis
+  GisOnline (gisonline), Mapotip (mapotip), and CORA GEO CG WebGIS (cgwebgis).
+  Login-only tenants without a public app gallery are not catalogs.
+owner:
+  name: T-MAPY s. r. o.
+  location:
+    country:
+      id: SK
+      name: Slovakia
+logo_url: https://www.tmapy.sk/favicon.ico
+documentation_url: https://www.tmapy.sk/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+export_formats:
+- JSON
+capabilities:
+- Map viewer
+- Municipal GIS
+last_updated: '2026-09-01T17:00:00Z'

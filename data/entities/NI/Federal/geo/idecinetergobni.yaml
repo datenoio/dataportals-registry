@@ -1,0 +1,107 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NI
+      name: Nicaragua
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: INETER GeoNode 4 catalog (IDEC) with public cadastral and national geospatial
+  layers, CSW, and WMS. Distinct from the older inter-institutional GeoNode at geonodo.ineter.gob.ni.
+endpoints:
+- type: geonode:datasets
+  url: https://idec.ineter.gob.ni/api/datasets/
+- type: geonode:documents
+  url: https://idec.ineter.gob.ni/api/documents/
+- type: csw202
+  url: https://idec.ineter.gob.ni/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://idec.ineter.gob.ni/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://idec.ineter.gob.ni/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://idec.ineter.gob.ni/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://idec.ineter.gob.ni/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://idec.ineter.gob.ni/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://idec.ineter.gob.ni/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://idec.ineter.gob.ni/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://idec.ineter.gob.ni/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://idec.ineter.gob.ni/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://idec.ineter.gob.ni/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://idec.ineter.gob.ni/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://idec.ineter.gob.ni/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://idec.ineter.gob.ni/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: idecinetergobni
+langs:
+- id: ES
+  name: Spanish
+link: https://idec.ineter.gob.ni/
+name: INETER IDEC GeoNode
+owner:
+  link: https://www.ineter.gob.ni
+  location:
+    country:
+      id: NI
+      name: Nicaragua
+    level: 20
+  name: Instituto Nicaragüense de Estudios Territoriales (INETER)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- GIS
+- government
+- Nicaragua
+- has_api
+- GeoNode
+- cadastre
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99996393

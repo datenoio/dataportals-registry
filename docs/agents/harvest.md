@@ -80,6 +80,7 @@ Open the harvest heading from [software-index.md](../software-index.md). Do not 
 | `cbioportal` | Studies — not mutation/CNA rows |
 | `esasciencearchive` | TAP tables — not FITS files |
 | `odweb` | `/odweb/` datasets — not the parent CMS |
+| `opengov` | Named reports on `{org}.opengov.com`, not Highcharts series |
 | `imfnsdp` | SDMX categories/series on the country page — not DSBB |
 | `archipelago` | Solr `/search` digital objects — not Drupal nodes |
 | `redivis` | `/api/v1/organizations/{org}/datasets` — not tables or workflows |

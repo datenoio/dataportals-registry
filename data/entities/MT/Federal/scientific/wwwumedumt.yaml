@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: MT
+      name: Malta
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: University of Malta institutional repository (OAR@UM) on DSpace 6.3.
+  Mixed IR of publications, theses, and research data; OpenAIRE Graph harvests 2 dataset
+  records from this source. Dedicated research-data deposits also go to drUM (Figshare).
+endpoints:
+- type: oaipmh20
+  url: https://www.um.edu.mt/library/oar/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://www.um.edu.mt/library/oar/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://www.um.edu.mt/library/oar/feed/atom_1.0/site
+  version: '1.0'
+id: wwwumedumt
+identifiers:
+- id: openaire
+  url: https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::db98dc0dbafde48e8f74c0de001d35e4
+  value: opendoar____::db98dc0dbafde48e8f74c0de001d35e4
+- id: opendoar
+  url: https://v2.sherpa.ac.uk/id/repository/3549
+  value: '3549'
+langs:
+- id: EN
+  name: English
+link: https://www.um.edu.mt/library/oar/
+name: OAR@UM
+owner:
+  link: https://www.um.edu.mt
+  location:
+    country:
+      id: MT
+      name: Malta
+    level: 20
+  name: University of Malta
+  type: Academy
+properties:
+  dataset_count_reported: 2
+  has_doi: false
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- dspace
+- open access
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994547

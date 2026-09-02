@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: CO-CAL
+      name: Caldas
+description: ArcGIS Server catalog of CORPOCALDAS publishing environmental map services
+  for water, ecosystems, mining, basin plans (POMCAS), and hazard in Caldas.
+endpoints:
+- type: arcgis:rest:info
+  url: https://swappweb.corpocaldas.gov.co/waserver/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://swappweb.corpocaldas.gov.co/waserver/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://swappweb.corpocaldas.gov.co/waserver/services?wsdl
+- type: arcgis:sitemap
+  url: https://swappweb.corpocaldas.gov.co/waserver/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://swappweb.corpocaldas.gov.co/waserver/rest/services?f=geositemap
+id: swappwebcorpocaldasgovco
+langs:
+- id: ES
+  name: Spanish
+link: https://swappweb.corpocaldas.gov.co/waserver/rest/services
+name: Portal Cartográfico CORPOCALDAS
+owner:
+  link: https://www.corpocaldas.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    subregion:
+      id: CO-CAL
+      name: Caldas
+  name: Corporación Autónoma Regional de Caldas (CORPOCALDAS)
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geoportal
+- geospatial
+- Colombia
+- Caldas
+- environment
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99995995

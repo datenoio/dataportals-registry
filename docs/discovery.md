@@ -18,11 +18,11 @@ The registry records **catalogs** (portals, geoportals, repositories, and simila
 |-------|----------|
 | [Search engines and internet maps](discovery-search-tools.md) | Google, Censys, Shodan, FOFA, URLScan, crt.sh, and similar tools |
 | [Agents, Cursor, ChatGPT](discovery-agent-tools.md) | Configure MCP, APIs, Custom GPTs, and LLM clients to use those tools |
-| [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye, Piveau, Our Open Data, DataPress, ResourceContracts, RDF Online Repository, Guangxi, ODWeb |
-| [Geoportals](discovery-geoportals.md) | Overview; SDI stacks: [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md); viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md) (GISApp, SmartMap, ISY Map, Avinet, MAP+, EnviMAP, PISO, GDi Visios, MapGuide, SeaSketch, Hajk, KortInfo, …) |
+| [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye, Piveau, Our Open Data, DataPress, ResourceContracts, RDF Online Repository, Guangxi, ODWeb, OpenGov |
+| [Geoportals](discovery-geoportals.md) | Overview; SDI stacks: [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md); viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md) (GISApp, SmartMap, ISY Map, Avinet, MAP+, EnviMAP, PISO, GDi Visios, MapGuide, SeaSketch, XY Maps, Hajk, Origo, myCarta, KortInfo, …) |
 | [Scientific repositories](discovery-scientific.md) | Institutional IRs and CRIS (DSpace, Hyrax, Figshare, Pure, Converis, Omega-PSIR, Archipelago, Redivis, DABAR, OpenScience.si, …); domain repos: [discovery-scientific-domain.md](discovery-scientific-domain.md) |
 | [Metadata catalogs](discovery-metadata.md) | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
-| [Indicators and microdata](discovery-indicators.md) | PxWeb, PxStat, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, StatPlanet |
+| [Indicators and microdata](discovery-indicators.md) | PxWeb, PxStat, DGBAS Web, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, StatPlanet |
 | [Search, ML, API, marketplaces](discovery-other.md) | Data search engines (Idra, OpenAIRE), ML catalogs, API directories, data marketplaces |
 
 ## Before you search
@@ -86,6 +86,8 @@ Many platforms publish installation galleries. Cross-check each URL against the 
 | [Landfolio portals](https://www.spatialdimension.com/portals/) | Trimble mining and land cadastre map portals |
 | [G3W-SUITE](https://g3wsuite.it) | Italian QGIS WebGIS |
 | [Hajk users](https://hajkmap.se/valkommen-till-hajk/exempelsamling/) | Swedish Hajk webGIS |
+| [Origo / Origosamverkan](https://origomap.se/) | Swedish Origo municipal webbkartor |
+| [Aveki myCarta](https://www.aveki.se/Produkter/Geografisk_informationsplattform/WebbApp.aspx) | Swedish myCarta WebMap |
 | [ResourceContracts](https://resourcecontracts.org) | Oil/gas/mining contract repositories |
 | [RDF Online Repository](https://revenuedevelopment.org/online-repository/) | Mining and petroleum license-transparency portals |
 | [FAOSTAT / FENIX](https://www.fao.org/faostat/) | FAO indicator catalogs (AMIS, DAD-IS, WIEWS, GIFT) |
@@ -153,8 +155,16 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | Landfolio | `portals.landfolio.com` | Country cadastre map portal (not ArcGIS REST) |
 | Spatial Suite | SpatialMap `browserdetect.js?ver=` | Municipal webkort |
 | KortInfo | `drift.kortinfo.net/Map.aspx` `Site=` | One municipality tenant |
+| IntraMaps Public | title `IntraMaps`, `ApplicationEngine`, `project=Public` | One council public project, not per module |
+| Spectrum Spatial Analyst | `/connect/analyst/` title Spectrum Spatial | One public tenant, not per `mapcfg=` |
+| Exponare | `/exponare/RestPublicApplication.aspx` | One public tenant (not Public vs REST vs Mobile) |
+| LocalMaps | `/localmaps/gallery` title LocalMaps Gallery | One gallery per council; skip REST on the same host |
 | GEUSMAP | `/geusmap/?mapname=` | One record per mapname |
 | GISApp | `*.gisapp.ro` | One city tenant (not ArcGIS REST) |
+| XY Maps | `maps.xymaps.com/{city}`, `/xymaps/Map` | One public city tenant (not vendor home) |
+| GeneGIS PAGIS | `{comune}.servizigis.it` | One municipality tenant (not vendor hub) |
+| GisMaster | `geoportale.sportellounicodigitale.it/GisMaster` `IdCliente=` | One comune tenant (not Default.aspx as a second copy) |
+| HyG Mapgis | `/mapgis/mapa.jsp` or `/mapgis9/mapa.jsp`, HyG Consultores footer | One public `aplicacion=` (not `mapgisigserver`) |
 | iObčina | `/gisapp/Default.aspx?a=` | Kaliopa municipal tenant |
 | G3W-SUITE | `g3w-client`, `/map/{group}/` | Public portal, not `/admin` or per-project |
 | Astun iShare | “Powered by iShare”, `/mymaps.aspx` | UK My Maps / My House (not Cadcorp, not INDEPTH iShare) |
@@ -165,6 +175,7 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | DataWarehousePro | `app.datawarehousepro.com/go/` | One tenant portal |
 | Goal Tracker | `*.goaltracker.org` | Country SDG tenant |
 | PxStat | `PxStat.Data.Cube_API` / “PxStat Open Data Platform” | Collection API (not PxWeb `/api/v1/`) |
+| DGBAS Web | `/DgbasWeb/` Taiwan local stats | County/city query UI; skip nstatdb |
 | TabNet | title “TabNet Win32”, `deftohtm.exe`, `cgi-bin/dh` | Brazilian DATASUS tabulator |
 | FENIX | `fenixservices.fao.org`, FAOSTAT API, CountrySTAT UI | One FENIX app (FAOSTAT, AMIS, …), not a FAO CKAN dump |
 | SparkMap | sparkmap.org / All Things state hubs | One public hub (not CARES HQ as a second copy) |
@@ -184,6 +195,31 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | NetGIS Server | `/keos/`, `/Netgis7` | Page title `NetGIS Server 7`; optional `wms.ashx` GetCapabilities |
 | Sampaş WebGIS | `/KentrehberiApp/Index` | Page title contains `SAMPAŞ WEBGIS` |
 | GiSoftGis | `/GiSoftGis/#/cityguidepublic` | Angular SPA; `gi-ajax-loading-indicator`; meta “Kent Rehberi Uygulaması” |
+| Visor Urbano | `visorurbano.{city}.gob.mx`, `{city}.visorurbano.com` | Title Visor Urbano; skip visorguadalupe.com |
+| Dobles Visor de Mapas | `/comun/js/leaflet.js`, Leaflet.GoogleMutant | Costa Rican municipal visor; title `Visor de Mapas` |
+| GeoNube | `geonube.com.ar/visor/{slug}` | Leaflet/bootleaf; Cambalache; custom domains OK |
+| Geopixel Cidades | `{city}.geoportal.geopixel.com.br` | Next.js `/_next/`; confirm city; wildcard DNS |
+| CTMGEO SigWEB | `{city}.ctmgeo.com.br/mapa/` | Title SIGWeb; not a DNS wildcard; skip generic SIGWeb |
+| dmCity | `web.dmcity.fi/{city}/public/` | Title `dmCity Web App`; not generic Experience Builder |
+| InfoGIS | `www.infogis.fi/{municipality}/` | `/codebase-infogis/`; Infokartta Oy; not Louhi/IMS |
+| SIGimWeb | `/sigimweb/` or `/sigim/`, title `SIGimWeb` | `/gomap_web/`; not generic MapGuide; not GOnet or JP Cadrin CIF |
+| NetGIS Runtime | `/NetGISRuntime/basis/index.jsp` | Title `NetGIS - © WSP Danmark`; not Turkish `netgisserver` |
+| ArcGIS Experience Builder | `experience.arcgis.com/experience/`, `jimu-core/init.js`, Länsstyrelsen `ext-webbgis` | Not dmCity tenants; not `/apps/webappviewer/`; not `/apps/instant/` |
+| ArcGIS Web AppBuilder | `/apps/webappviewer/index.html?id=` | Not Experience Builder; not Instant Apps |
+| ArcGIS Instant Apps | `/apps/instant/{template}/index.html?appid=` | Not Experience Builder; not Web AppBuilder |
+| Pozi | `{council}.pozi.com` | Title Pozi Web Map; not IntraMaps or Exponare |
+| JMap | `/JMapWeb/` or JMap NG `/services/ng/` | Not hostnames that merely contain `jmap` |
+| GIS Cloud | `{city}.giscloud.com` | Not MuniSight login |
+| MRF Web Map | `{county}.mrf.com` / `js/lib/mrf/` | Not `web.munisight.com` (`munisight`) |
+| MuniSight | `web.munisight.com/{Tenant}` Catalis Login.aspx | Not `mrf`; not generic GeoMedia WebMap |
+| GeoMedia SmartClient Public Maps | `publicmaps.gisquadrat.com/BP/WEPM.aspx` `ig.publicmaps` | Not GeoMedia WebMap `$GP`; not ERDAS APOLLO |
+| SIT WebGis | `webgis.sit-puglia.it/{comune}/` `ng-app="WebApp"` or `SIT-` | Not Regione Puglia GeoNetwork; not Lizmap |
+| p.mapper | `/pmapper/` or `{city}.geo-portale.it` | Not UMN MapServer as the public catalog |
+| Weave | title `Weave Map` webpack `app.*.js` | Not GeneWeaver; not IntraMaps or Pozi |
+| eKMap Cloud | `assets/ekmapboxgl/ekmap-mapboxgl.js` | Not `quyhoach.hanoi.gov.vn` Next.js; not Vinh Phuc OL or HCMC VLAB |
+| OVIE | `/js/libs/OpenLayers/OL.js` + Materialize | Not Mission Viejo `geoviewer.io`; not INEGI `/mdm6/` (`mxsig`) |
+| SOFTPRO | `{city}.cadastre.com.ua` / SOFTPRO `/js/locale/ua.js` | Not `kadastr.gov.ua` or `map.land.gov.ua` |
+| MxSIG | `/mdm6/` or `/mxsig2/` amplify.js | Not OVIE |
 | cardo | `/net3/public/`, cardo.Map | Public map/catalog under `/net3/public/` |
 | GC Navi | `geocloud.jp/webgis/` | Tenant WebGIS home |
 | NOL-IS | `maps.nol-is.de` / `static.nol-is.de` | Public municipal geoportal |
@@ -211,6 +247,7 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | ICAT | facility data catalog | Public search or documented REST/OAI |
 | BelsisIMS KRH | `ims.*/Projects/*/Pages/KRH.aspx` | ASP.NET KRH city-guide; do not confuse with Netcad Netigma |
 | VertiGIS WebOffice | `/synserver`, `/WebOffice/synserver`, `wo-hosting.vertigis.com`, `map.geoportal.at` | Page title `VertiGIS WebOffice`; `weboffice_packed.css`; core/flex/mobile clients |
+| VertiGIS Studio Web | `/vertigisstudio/web/?app=`, `/gcx/WebViewer/?app=`, `/Geocortex/WebViewer/?app=`, `apps.vertigisstudio.com`, `apps.vertigisstudio.eu` | `#gcx-app`; GA title `VertiGIS Studio Web`; not Html5Viewer or Essentials REST sites |
 | Geocortex Essentials | `/Geocortex/Essentials/REST/sites`, `/Html5Viewer/`, `*.geocortex.com` | Title `Geocortex Essentials Sites Directory` or `Geocortex Viewer for HTML5`; licensed Geocortex footer |
 | GeoMedia WebMap / Geospatial Portal | `/geoportal01/`, `/cdngiportal/`, `/msip/Full.aspx`, `/Online_Mapping/` | `Version:` + `Licensed to:`; `Intergraph.WebSolutions` / `$GP.`; title may be Geospatial Portal or GeoMedia WebMap Publisher Portal |
 | disy Cadenza | `/cadenza/`, `/public/`, `/pages/map/`, `/fachauswertungweb/` | `cadenza`/`disy` in HTML; Cadenza Web or Workbooks UI; guest login plus theme/workbook navigator |
@@ -222,6 +259,9 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | Fusion Registry | SDMX structural metadata, Fusion Registry branding | SDMX REST catalog |
 | Metadata Browser | MetadataWorks catalog UI | Public browser home |
 | Wagmap / わが街ガイド | `www2.wagmap.jp`, GeoAccessJS | Tenant map gallery |
+| SonicWeb | `www.sonicweb-asp.jp/{slug}/`, `sonicweb.js` | Tenant map home |
+| GeDA-Public | `*.geogeo.jp` | Tenant eマップ home |
+| Geolonia スマートマップ | `{org}.tottori-geomap.jp`, Next.js GIS | Tenant map UI (not Kazakhstan `smartmap`) |
 | EWMAPA | `*.geoportal2.pl`, GEOBID | Public municipal SIP |
 | GeoMapFish | `ngeo` / `gmf-`, `/themes` JSON | Theme API plus map UI |
 | Tianditu | 天地图 / `tianditu` | Public province or city node |
@@ -255,6 +295,7 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | XNAT | `/xnat/`, `/data/projects` | Public project catalog, not a session |
 | OMERO | `/webclient/`, IDR | Repository home, not a single image |
 | Kadi4Mat | `/api/records`, Kadi4Mat chrome | Public instance, not a login-only lab tenant |
+| TR32DB | `/site/index.php` + `/lib/js/generic/helper.js` | Not CRC806DB (`crc806db.uni-koeln.de`) |
 | e!DAL | e!DAL / IPK Gatersleben | Public DOI catalog, not a single landing |
 | NOMAD | `/prod/v1/api/v1/info` | Oasis or central archive, not a calculation entry |
 | InterMine | `/begin.do`, `/service/version` | One mine, not intermine.org or a gene report |
@@ -264,6 +305,7 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | cBioPortal | `/api/info` `portalVersion` | Instance study list, not a single study view |
 | ESA Science Archive | TAP `/tap/capabilities` | One mission archive, not a FITS file |
 | ODWeb | path `/odweb/` | City/provincial catalog, not the parent CMS |
+| OpenGov | `{org}.opengov.com` `/transparency` | Budget reports; skip Hub sites named OpenGov |
 | IMF NSDP | “National Summary Data Page”, SDMX XML | Country NSDP page, not DSBB or a Knoema wrapper |
 | PxWeb | `/api/v1/` | `/api/v1/` |
 | NADA | `/index.php/api` or microdata UI | site home + API path |
@@ -294,6 +336,7 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - `/contract/resources` (ResourceContracts)
 - `{city}.data.gxzf.gov.cn` (Guangxi public-data tenant)
 - `/odweb/` (ODWeb municipal/provincial catalog)
+- `{org}.opengov.com` `/transparency` (OpenGov financial reports)
 
 **Geospatial**
 
@@ -313,14 +356,39 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - GC Navi: tenant on `geocloud.jp/webgis/`
 - map.apps: `/mapapps/`
 - VertiGIS WebOffice: `/synserver` or `/WebOffice/synserver` (title `VertiGIS WebOffice`)
+- VertiGIS Studio Web: `/vertigisstudio/web/?app=` or `/gcx/WebViewer/?app=` (`#gcx-app` / title `VertiGIS Studio Web`)
 - Geocortex Essentials: `/Geocortex/Essentials/REST/sites?f=pjson` or `/Html5Viewer/` (title `Geocortex Essentials Sites Directory` / `Geocortex Viewer for HTML5`)
 - Trimble Locus IMS: `/IMS/` with `imscore` / `tekla-mvc-common` bundles
 - Sitowise Louhi: OpenLayers `/Scripts/integration/openlayers/` plus Sitowise `partner=stw`
 - Landfolio: `portals.landfolio.com/{country}/`
 - Spatial Suite: `/js/standard/browserdetect.js?ver=` (SpatialMap)
 - KortInfo: `drift.kortinfo.net/Map.aspx?Site=`
+- IntraMaps Public: `/intramaps90/default.htm?project=` or `{council}.spatial.t1cloud.com/spatial/intramaps/`
+- Spectrum Spatial Analyst: `/connect/analyst/mobile/` with `mapcfg=`
+- Exponare: `/exponare/RestPublicApplication.aspx` or `/exponare/publicinvoker.aspx`
+- LocalMaps: `/localmaps/gallery` (Eagle Technology NZ galleries)
 - GEUSMAP: `/geusmap/?mapname=`
 - GISApp: `{city}.gisapp.ro`
+- XY Maps: `maps.xymaps.com/{city}` or `/xymaps/Map`
+- Pozi: `{council}.pozi.com` (title Pozi Web Map)
+- JMap: `/JMapWeb/` or JMap NG `/services/ng/`
+- GIS Cloud: `{city}.giscloud.com`
+- MRF Web Map: `{county}.mrf.com` or `js/lib/mrf/`
+- MuniSight: `web.munisight.com/{Tenant}` Catalis Login.aspx
+- GeoMedia SmartClient Public Maps: `publicmaps.gisquadrat.com/BP/WEPM.aspx` (`ig.publicmaps.application.min.js`)
+- SIT WebGis: `webgis.sit-puglia.it/{comune}/` (`ng-app="WebApp"` + `ol.js`, or Angular `SIT-{TOWN}`)
+- p.mapper: `/pmapper/` or `{city}.geo-portale.it`
+- CommunityView: `VECommunityView/cities/{city}/`
+- MS-GIS: `{city}.msgis.net`
+- Weave: HTML title `Weave Map` (Cohga webpack `app.*.js`)
+- eKMap Cloud: `assets/ekmapboxgl/ekmap-mapboxgl.js` (not Hanoi `quyhoach.hanoi.gov.vn`)
+- OVIE: `/js/libs/OpenLayers/OL.js` + Materialize (INEGI economic GIS)
+- SOFTPRO: `{city}.cadastre.com.ua` or `/js/locale/ua.js` Ukrainian MBK
+- MxSIG: `/mdm6/` or `/mxsig2/` amplify.js Mapa Digital
+- ArcGIS Instant Apps: `/apps/instant/{template}/index.html?appid=`
+- GeneGIS PAGIS: `{comune}.servizigis.it`
+- GisMaster: `geoportale.sportellounicodigitale.it/GisMaster/GisMaster/VisualDesc.aspx?IdCliente=`
+- HyG Mapgis: `/mapgis/mapa.jsp?aplicacion=` or `/mapgis9/mapa.jsp?aplicacion=` (HyG Consultores footer; not `/igs/rest/`)
 - iObčina: `/gisapp/Default.aspx?a=`
 - G3W-SUITE: `/map/{group}/{project}/` or `/api/`
 - Astun iShare: `/mymaps.aspx` or `/myhouse.aspx`
@@ -333,6 +401,9 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - GeoMapFish: `/themes`
 - MapGIS IGServer: `/igs/rest/mrcs/docs?f=json` or `/igs/rest/services?f=json`
 - Wagmap: `https://www2.wagmap.jp/` plus tenant path
+- SonicWeb: `https://www.sonicweb-asp.jp/` plus tenant path
+- GeDA-Public: `{city}.geogeo.jp` or `{city}.e-map.geogeo.jp`
+- Geolonia スマートマップ: `{org}.tottori-geomap.jp` (distinct from Kazakhstan `smartmap`)
 - WIS2 Box / pygeoapi: OGC API landing page
 
 **Scientific and metadata**
@@ -362,6 +433,7 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - XNAT: `/data/projects` or `/xnat/data/projects`
 - OMERO: `/webclient/` or `/api/v0/m/projects/`
 - Kadi4Mat: `/api/records`
+- TR32DB: `/site/index.php` + `/lib/js/generic/helper.js`
 - NOMAD: `/prod/v1/api/v1/info`
 - InterMine: `/begin.do` or `/service/version`
 - GRIN-Global: `/gringlobal/`
@@ -411,10 +483,14 @@ The same hostname often runs several GIS products. Register **one YAML per publi
 | STAC API + STAC Browser | `stacserver` when the API is public | `stacbrowser` on the same origin |
 | openEO + STAC on one API | `openeo` | A second `stacserver` row |
 | MapGIS `/igs/rest/` on a host named `mapgis.*` | `mapgisigserver` | `arcgisserver` unless the path is `/arcgis/rest/` |
+| HyG Mapgis `/mapgis/mapa.jsp` + ArcGIS REST | `hygmapgis` viewer | `arcgisserver` or `mapgisigserver` on the same host; a second Mapgis row where GeoNetwork is already the catalog |
+| VertiGIS Studio Web `?app=` + ArcGIS REST or Html5Viewer | `vertigisstudioweb` viewer | Extra `?app=` GUIDs on the same tenant; do not retag Essentials `/Html5Viewer/` as Studio Web |
 | GET SDI / GeoMapFish / CoGIS wrapping GeoServer | The **portal** software | Bundled GeoServer |
 | G3W-SUITE + QGIS Server | `g3wsuite` portal | `qgisserver` on the same host |
 | Landfolio map portal + ArcGIS REST | `landfolio` cadastre UI | REST already tagged `arcgisserver` |
 | GISApp city viewer + `webadaptor.gisapp.ro` REST | `gisapp` tenant | ArcGIS REST as a second city catalog |
+| XY Maps `maps.xymaps.com/{city}` + `www.xymaps.com/{city}` | One public city tenant | The other SaaS hostname; Geocortex/ArcGIS Eckersall built for the same city |
+| GeneGIS PAGIS city SIT + `{comune}.servizigis.it` | The public municipal tenant | Vendor hub, cloud alias of the same comune, `IndexPC.aspx` as a second copy of `Index.aspx` |
 | KortInfo `Site=` + SpatialMap webkort | The public viewer the kommune documents | Both IDs unless they are distinct public apps |
 | Sentinel Hub STAC + EO Browser | `sentinelhub` catalog API | `stacserver` or Browser as a second catalog |
 | Finnish `/IMS/` vs Sitowise Louhi | `trimblelocus` if `/IMS/`; else `louhi` | Both IDs on the same karttapalvelu |

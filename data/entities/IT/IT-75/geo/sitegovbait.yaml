@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-75
+      name: Puglia
+description: G3W-SUITE territorial information system of Area Vasta Metropoli Terra di Bari,
+  with public QGIS WebGIS maps for the 28 metropolitan municipalities, cadastral layers, and
+  regional planning overlays.
+endpoints:
+- type: g3wsuite:catalog
+  url: https://sit.egov.ba.it/
+id: sitegovbait
+langs:
+- id: IT
+  name: Italian
+link: https://sit.egov.ba.it/
+name: SIT Area Vasta Metropoli Terra di Bari
+owner:
+  link: https://www.cittametropolitana.ba.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-75
+      name: Puglia
+  name: Città Metropolitana di Bari
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: g3wsuite
+  name: G3W-SUITE
+status: active
+tags:
+- geospatial
+- geoportal
+- g3wsuite
+- government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00037942

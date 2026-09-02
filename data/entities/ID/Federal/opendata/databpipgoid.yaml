@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ID
+      name: Indonesia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Badan Pembinaan
+  Ideologi Pancasila.
+endpoints:
+- type: ckan:package-search
+  url: https://data.bpip.go.id/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.bpip.go.id/api/3/action/package_list
+  version: '3'
+id: databpipgoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://data.bpip.go.id
+name: Badan Pembinaan Ideologi Pancasila Open Data
+owner:
+  link: https://bpip.go.id
+  location:
+    country: *id001
+    level: 20
+  name: Badan Pembinaan Ideologi Pancasila
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- open data
+- indonesia
+- satu data
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99995572

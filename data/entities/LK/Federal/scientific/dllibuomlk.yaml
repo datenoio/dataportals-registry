@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: Institutional repository of the University of Moratuwa. Collects postgraduate
+  theses and dissertations, conference papers, university journals, and research publications
+  by academic staff.
+endpoints:
+- type: dspace
+  url: https://dl.lib.uom.lk/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://dl.lib.uom.lk/server/api/discover/search/objects
+  version: '7'
+id: dllibuomlk
+langs:
+- id: EN
+  name: English
+link: https://dl.lib.uom.lk/
+name: Institutional Repository, University of Moratuwa
+owner:
+  link: https://uom.lk/
+  location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 20
+  name: University of Moratuwa
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- dspace
+- Sri Lanka
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99995594

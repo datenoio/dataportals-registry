@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: BY
+      name: Belarus
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Institutional DSpace 7 repository of Vitebsk State University named after
+  P. M. Masherov (ISSN 2519-4534). Discover API reports 1 item with dc.type=Dataset.
+endpoints:
+- type: dspace
+  url: https://rep.vsu.by/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://rep.vsu.by/server/api/discover/search/objects
+  version: '7'
+id: repvsuby
+langs:
+- id: RU
+  name: Russian
+- id: BE
+  name: Belarusian
+link: https://rep.vsu.by/
+name: Repository of Vitebsk State University named after P. M. Masherov
+owner:
+  link: https://vsu.by
+  location:
+    country:
+      id: BY
+      name: Belarus
+    level: 20
+  name: Vitebsk State University named after P. M. Masherov
+  type: Academy
+properties:
+  dataset_count_reported: 1
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- Belarus
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99994551

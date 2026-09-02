@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-PR
+      name: Paraná
+description: ArcGIS Enterprise geoportal of IPPUC for Curitiba municipal geospatial
+  datasets and map layers (GeoCuritiba).
+endpoints:
+- type: arcgis:portals:self
+  url: https://geocuritiba.ippuc.org.br/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://geocuritiba.ippuc.org.br/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geocuritiba.ippuc.org.br/server/rest/services?f=pjson
+id: geocuritibaippucorgbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://geocuritiba.ippuc.org.br/portal
+name: GeoCuritiba
+owner:
+  link: https://www.ippuc.org.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-PR
+      name: Paraná
+  name: Instituto de Pesquisa e Planejamento Urbano de Curitiba (IPPUC)
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- Brazil
+- Curitiba
+- Paraná
+- municipal
+- geospatial
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99995951

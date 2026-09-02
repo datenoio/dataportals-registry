@@ -1,0 +1,61 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: origo
+name: Origo
+website: https://origomap.se/
+description: Origo is an open-source OpenLayers web GIS developed by Origosamverkan.
+  Public municipal maps load origo.min.js, origo.js, or Origo configuration JSON,
+  often as named kommun kartan viewers on karta.*.se hosts. Distinct from Hajk
+  (hajk), myCarta (mycarta), and GeoServer backends on the same estate.
+owner:
+  name: Origosamverkan
+  location:
+    country:
+      id: SE
+      name: Sweden
+logo_url: https://origomap.se/favicon.ico
+documentation_url: https://origo-map.github.io/origo-documentation/latest/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Open
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+repository_url: https://github.com/origo-map/origo
+export_formats:
+- GeoJSON
+- JSON
+capabilities:
+- Map viewer
+- Municipal GIS
+changelog_url: https://github.com/origo-map/origo/releases
+last_updated: '2026-09-01T00:00:00Z'

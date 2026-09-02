@@ -1930,6 +1930,34 @@ OPENGDC_URLMAP = [
     },
 ]
 
+DABAR_URLMAP = [
+    {
+        "id": "oaipmh20",
+        "url": "/oai/?verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "sitemap",
+        "url": "/sitemap.xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+        "prefetch": False,
+    },
+]
+
+OPENSCIENCESI_URLMAP = [
+    {
+        "id": "oaipmh20",
+        "url": "/oai/oai2.php?verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+]
+
 WEKO3_URLMAP = [
     {
         "id": "weko3:records",
@@ -2349,6 +2377,8 @@ CATALOGS_URLMAP = {
     "jkan": JKAN_URLMAP,
     "qwc2": QWC2_URLMAP,
     "weko3": WEKO3_URLMAP,
+    "dabar": DABAR_URLMAP,
+    "opensciencesi": OPENSCIENCESI_URLMAP,
     "wis20box": WIS20BOX_URLMAP,
     "ncwms": NCWMS_URLMAP,
     "figshare": FIGSHARE_URLMAP,

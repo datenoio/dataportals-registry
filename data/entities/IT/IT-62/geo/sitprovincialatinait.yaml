@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-62
+      name: Lazio
+description: Lizmap WebGIS of Provincia di Latina for the provincial SIT, with public QGIS
+  map services for cadastre, planning, and territorial layers.
+endpoints:
+- type: wms130
+  url: https://sit.provincia.latina.it/index.php/lizmap/service/?repository=webgis&project=SIT&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0
+id: sitprovincialatinait
+langs:
+- id: IT
+  name: Italian
+link: https://sit.provincia.latina.it/
+name: WebGIS Provincia di Latina
+owner:
+  link: https://www.provincia.latina.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-62
+      name: Lazio
+  name: Provincia di Latina
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- geoportal
+- lizmap
+- government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00037912

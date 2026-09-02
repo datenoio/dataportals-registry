@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LV
+      name: Latvia
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: LV-052
+      name: Ķekavas novads
+description: Public ArcGIS Online organization of Ķekava Municipality publishing municipal
+  GIS layers and web maps for property, roads, detailed plans, and sports infrastructure.
+endpoints:
+- type: arcgis:portals:self
+  url: https://kekava.maps.arcgis.com/sharing/rest/portals/self?f=pjson
+- type: arcgis:search
+  url: https://kekava.maps.arcgis.com/sharing/rest/search?f=json&q=orgid:2ZLmffmLl6zhMfAi
+id: kekavamapsarcgiscom
+langs:
+- id: LV
+  name: Latvian
+link: https://kekava.maps.arcgis.com/home/index.html
+name: Ķekavas novada pašvaldības ĢIS
+owner:
+  link: https://www.kekava.lv
+  location:
+    country:
+      id: LV
+      name: Latvia
+    level: 30
+    subregion:
+      id: LV-052
+      name: Ķekavas novads
+  name: Ķekavas novada pašvaldība
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- GIS
+- geospatial
+- municipality
+- Ķekava
+- Latvia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99998522

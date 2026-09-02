@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: Institutional repository of the University of the Visual and Performing Arts.
+  Collects theses, dissertations, staff publications, and faculty collections in dance, music,
+  visual arts, and ICT.
+endpoints:
+- type: oaipmh20
+  url: http://repository.lib.vpa.ac.lk/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: http://repository.lib.vpa.ac.lk/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: http://repository.lib.vpa.ac.lk/feed/atom_1.0/site
+  version: '1.0'
+id: repositorylibvpaaclk
+langs:
+- id: EN
+  name: English
+link: http://repository.lib.vpa.ac.lk/
+name: Digital Repository, University of the Visual and Performing Arts
+owner:
+  link: https://vpa.ac.lk/
+  location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 20
+  name: University of the Visual and Performing Arts
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- academic
+- has_api
+- dspace
+- Sri Lanka
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99995620

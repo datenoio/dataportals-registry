@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-GA
+      name: Galicia [Galicia]
+description: GeoNetwork metadata catalogue of the Spatial Data Infrastructure of Galicia (IDEG),
+  with CSW access to regional geographic datasets.
+endpoints:
+- type: geonetwork:query
+  url: https://xeocatalogo.xunta.gal/xeocatalogo/srv/eng/q
+- type: geonetwork:records
+  url: https://xeocatalogo.xunta.gal/xeocatalogo/srv/api/records
+- type: openapi
+  url: https://xeocatalogo.xunta.gal/xeocatalogo/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://xeocatalogo.xunta.gal/xeocatalogo/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://xeocatalogo.xunta.gal/xeocatalogo/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://xeocatalogo.xunta.gal/xeocatalogo/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:site
+  url: https://xeocatalogo.xunta.gal/xeocatalogo/srv/api/site
+id: xeocatalogoxuntagal
+langs:
+- id: ES
+  name: Spanish
+link: https://xeocatalogo.xunta.gal/xeocatalogo
+name: Xeocatalogo de Galicia
+owner:
+  link: https://www.xunta.gal
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-GA
+      name: Galicia [Galicia]
+  name: Xunta de Galicia
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- government
+- metadata
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99995669

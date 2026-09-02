@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: STAC API over Copernicus Sentinel-2 L2A, operated by Semablu Limited
+  (Malta). The public collection is a live Copernicus Dataspace catalogue proxy; the
+  console UI is login-gated. Super-resolved 2.5 m products are a separate Semablu
+  offering.
+endpoints:
+- type: stacserverapi
+  url: https://console.semablu.com/py/stac
+- type: openapi
+  url: https://console.semablu.com/py/openapi.json
+id: consolesemablucom
+langs:
+- id: EN
+  name: English
+link: https://console.semablu.com/py/stac
+name: Semablu Sentinel-2 STAC API
+owner:
+  link: https://www.semablu.com/
+  location:
+    country:
+      id: MT
+      name: Malta
+    level: 20
+  name: Semablu Limited
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- STAC
+- Earth observation
+- Sentinel-2
+- geospatial
+- has_api
+topics:
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi99994642

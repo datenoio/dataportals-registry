@@ -41,9 +41,26 @@ Layer/map catalog, often with a bundled GeoServer.
 
 Skip demo.geonode.org and the project docs.
 
+## Palapa (`palapa`) {#palapa}
+
+Indonesian simpul jaringan geoportal from Badan Informasi Geospasial (GSPalapa). Open source (GPL). GitHub: [agrisoft/gspalapa](https://github.com/agrisoft/gspalapa).
+
+**Signals:** title “Geoportal Palapa”; path `/main/`; login `/gspalapa/`; footer Palapa V.x / BIG; pycsw CSW at `/csw`; bundled GeoServer at `/geoserver`.
+
+**Confirm:** GET the catalog UI (often `/main/`) and match the Palapa title or `/gspalapa/` login. CSW: `https://host/csw?service=CSW&version=2.0.2&request=GetCapabilities` (pycsw). One record per public Palapa node, not a second copy of `/geoserver` on the same host.
+
+| Tool | Query |
+|------|-------|
+| Google | `intitle:"Geoportal Palapa" site:.go.id` |
+| Google | `inurl:/gspalapa/ OR inurl:/main/ "Geoportal Palapa"` |
+| Censys | `web.endpoints.http.html_title: "Geoportal Palapa"` |
+| Shodan | `http.title:"Geoportal Palapa"` |
+
+**False positives:** GeoNode JIGN nodes (`/api/datasets/`); standalone GeoServer catalogs with no Palapa UI; Ina-Geoportal (`tanahair.indonesia.go.id`); provincial `/WebPortal/` Vue shells unless the Palapa title or `/gspalapa/` is present; CKAN Satu Data hosts named Palapa (for example `satudatapalapa.*`).
+
 ## GeoServer (`geoserver`) {#geoserver}
 
-OGC service middleware. Register it when it is the **catalog** (layer list / GetCapabilities as the public product), not merely the backend behind GeoNode or ArcGIS.
+OGC service middleware. Register it when it is the **catalog** (layer list / GetCapabilities as the public product), not merely the backend behind GeoNode, Palapa, or ArcGIS.
 
 **Confirm:** `https://host/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities` (sometimes `/ows` without `/geoserver`). Web admin title “GeoServer: Welcome”.
 
@@ -55,7 +72,7 @@ OGC service middleware. Register it when it is the **catalog** (layer list / Get
 | Shodan | `product:GeoServer` or `http.title:"GeoServer"` |
 | FOFA | `app="GeoServer"` |
 
-Do not register the `/geoserver/web` login as a catalog if a public WMS/WFS catalog is already represented by a parent GeoNode/GeoNetwork record on the same host. Prefer one record per public catalog UI.
+Do not register the `/geoserver/web` login as a catalog if a public WMS/WFS catalog is already represented by a parent GeoNode, Palapa, or GeoNetwork record on the same host. Prefer one record per public catalog UI.
 
 ## CubeWerx CubeSERV (`cubewerx`) {#cubewerx}
 
@@ -111,6 +128,51 @@ REST services directory. **Confirm:** `https://host/arcgis/rest/info?f=pjson` or
 | Shodan | `http.html:"ArcGIS REST Services Directory"` |
 
 Skip internal-only servers that return `401`/`403` for the services list. One record per public services root, not per map service.
+
+## ArcGIS Experience Builder (`experiencebuilder`) {#experiencebuilder}
+
+Esri configurable web app (Jimu). Product: [ArcGIS Experience Builder](https://www.esri.com/en-us/arcgis/products/arcgis-experience-builder/overview). Distinct from ArcGIS Hub (`arcgishub`), ArcGIS Server REST (`arcgisserver`), ArcGIS Web AppBuilder (`webappbuilder`), ArcGIS Instant Apps (`instantapps`), and Esri Finland dmCity (`dmcity`).
+
+**Signals:** `experience.arcgis.com/experience/{id}`; Portal `/portal/apps/experiencebuilder/experience/?id=`; `jimu-core/init.js`; title `Experience`; favicon `exb.ico`. Swedish county WebbGIS on `ext-webbgis.lansstyrelsen.se/{tenant}/` is this product.
+
+**Confirm:** GET the app URL and match Jimu / Experience Builder. One record per public app (item id or Länsstyrelsen tenant path), not per widget. Do **not** set `experiencebuilder` on `web.dmcity.fi/{city}/public/` (`dmcity`), on `/apps/webappviewer/` (`webappbuilder`), or on `/apps/instant/` (`instantapps`). Keep an existing `arcgisserver` REST directory on the same host as a separate catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:experience.arcgis.com/experience` |
+| Google | `inurl:/portal/apps/experiencebuilder/experience` |
+| Google | `site:ext-webbgis.lansstyrelsen.se` |
+| Censys | `web.endpoints.http.body: "jimu-core/init.js"` |
+
+Skip Experience Builder samples on developers.arcgis.com and login-only drafts.
+
+## ArcGIS Web AppBuilder (`webappbuilder`) {#webappbuilder}
+
+Esri Web AppViewer (predecessor of Experience Builder). Docs: [Web AppBuilder](https://doc.arcgis.com/en/web-appbuilder/). Distinct from Experience Builder (`experiencebuilder`), Instant Apps (`instantapps`), and ArcGIS Hub (`arcgishub`).
+
+**Signals:** `/apps/webappviewer/index.html?id=` on `*.maps.arcgis.com` or `/portal/apps/webappviewer/`.
+
+**Confirm:** GET the viewer URL. One record per public app id. Do not also register the same host’s REST `/arcgis/rest/services` as a second Web AppBuilder catalog; keep `arcgisserver` if that directory is already the catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/apps/webappviewer/index.html` |
+| Google | `inurl:/portal/apps/webappviewer/` |
+| Censys | `web.endpoints.http.body: "/apps/webappviewer/"` |
+
+## ArcGIS Instant Apps (`instantapps`) {#instantapps}
+
+Esri template-based public map apps (Basic, Sidebar, Lookup, Filter Gallery, Minimalist). Product: [ArcGIS Instant Apps](https://www.esri.com/en-us/arcgis/products/arcgis-instant-apps/overview). Distinct from Experience Builder (`experiencebuilder`), Web AppBuilder (`webappbuilder`), ArcGIS Hub (`arcgishub`), and ArcGIS Server REST (`arcgisserver`).
+
+**Signals:** `/apps/instant/{template}/index.html?appid=` on `*.maps.arcgis.com` or Portal `/portal/apps/instant/`. Templates include `basic`, `sidebar`, `lookup`, `filtergallery`, `minimalist`.
+
+**Confirm:** GET the Instant App URL. One record per public `appid`. Do **not** set `instantapps` on `/apps/webappviewer/` (`webappbuilder`) or `experience.arcgis.com` / `jimu-core/init.js` (`experiencebuilder`). Keep an existing `arcgisserver` REST directory on the same host as a separate catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/apps/instant/ basic OR sidebar OR lookup site:maps.arcgis.com` |
+| Google | `inurl:/apps/instant/index.html?appid=` |
+| Censys | `web.endpoints.http.body: "/apps/instant/"` |
 
 ## Lizmap (`lizmap`) {#lizmap}
 
@@ -247,7 +309,7 @@ GeoSolutions MapStore. **Signals:** `/mapstore`, `MapStore2`.
 
 ## QWC2 (`qwc2`) {#qwc2}
 
-QGIS Web Client 2. **Signals:** `qwc2`, `qwc-services`, `/theme/` map UI.
+QGIS Web Client 2. **Signals:** `qwc2`, `qwc-services`, `/theme/` map UI. Do **not** set `qwc2` from `{tenant}.tergis.lv` (use `tergis`).
 
 | Tool | Query |
 |------|-------|
@@ -281,7 +343,7 @@ Self-hosted tile and map-style catalog. Default port **3650**; production sites 
 
 ## MapServer (`mapserver`) {#mapserver}
 
-OGC service middleware (WMS/WFS/WCS from a mapfile). Register it when MapServer is the **public catalog** (GetCapabilities or a map list as the product), not merely the renderer behind Lizmap, QWC2, or GeoNetwork.
+OGC service middleware (WMS/WFS/WCS from a mapfile). Register it when MapServer is the **public catalog** (GetCapabilities or a map list as the product), not merely the renderer behind Lizmap, QWC2, GeoNetwork, or p.mapper.
 
 **Confirm:** WMS `GetCapabilities` whose service metadata mentions MapServer (`cgi-bin/mapserv`, `mapserv.exe`, or a `MapServer` keyword). Typical paths: `/cgi-bin/mapserv`, `/cgi-bin/mapserv.cgi`, or a named `.map` URL.
 
@@ -292,7 +354,7 @@ OGC service middleware (WMS/WFS/WCS from a mapfile). Register it when MapServer 
 | Censys | `web.endpoints.http.body: "MapServer"` |
 | Shodan | `http.html:"MapServer"` |
 
-Do not add a second record for MapServer on a host that already has a Lizmap, QWC2, or GeoNetwork catalog pointing at the same services.
+Do not add a second record for MapServer on a host that already has a Lizmap, QWC2, GeoNetwork, or p.mapper catalog pointing at the same services. Do **not** set `mapserver` on `{city}.geo-portale.it` `/pmapper-4.2.0/` UIs (`pmapper`).
 
 ## QGIS Server (`qgisserver`) {#qgisserver}
 
@@ -387,7 +449,7 @@ Commercial web GIS (formerly SynerGIS WebOffice) on ArcGIS Enterprise. Vendor: [
 
 ## Geocortex Essentials (`geocortex`) {#geocortex}
 
-Commercial web GIS (Latitude Geographics, now VertiGIS Studio) on ArcGIS. Vendor: [geocortex.com](https://www.geocortex.com). Hosted tenants: `*.geocortex.com`. Distinct from VertiGIS WebOffice (`weboffice`).
+Commercial web GIS (Latitude Geographics, now VertiGIS Studio) on ArcGIS. Vendor: [geocortex.com](https://www.geocortex.com). Hosted tenants: `*.geocortex.com`. Distinct from VertiGIS WebOffice (`weboffice`) and VertiGIS Studio Web (`vertigisstudioweb`).
 
 **Signals:** title `Geocortex Essentials Sites Directory` or `Geocortex Viewer for HTML5`; path `/Geocortex/Essentials/` (sometimes `/ess/`) plus `/REST/sites`; `/Html5Viewer/`; footer “licensed Geocortex Essentials”.
 
@@ -403,6 +465,23 @@ Commercial web GIS (Latitude Geographics, now VertiGIS Studio) on ArcGIS. Vendor
 | Censys | `web.endpoints.http.html_title: "Geocortex Viewer for HTML5"` |
 
 Skip `gedemo.geocortex.com`, test hosts, and empty Sites Directories.
+
+## VertiGIS Studio Web (`vertigisstudioweb`) {#vertigisstudioweb}
+
+Configurable web GIS viewer (formerly Geocortex Web / GXW) on ArcGIS Online or Portal for ArcGIS. Vendor: [vertigis.com](https://www.vertigis.com/studio/web/). SaaS: `apps.vertigisstudio.com`, `apps.vertigisstudio.eu`. Distinct from Geocortex Essentials (`geocortex`) and VertiGIS WebOffice (`weboffice`).
+
+**Signals:** `/vertigisstudio/web/?app=`; `/gcx/WebViewer/?app=`; `/Geocortex/WebViewer/?app=` (not `/Html5Viewer/` and not `/Geocortex/Essentials/REST/sites`); HTML `#gcx-app`; GA title `VertiGIS Studio Web`; SaaS shells are often ~728 bytes.
+
+**Confirm:** GET the viewer URL and match `#gcx-app` plus VertiGIS Studio Web branding. One record per public tenant, not every `?app=` GUID. Keep an existing `arcgisserver` or `geocortex` record on the same host if that is already the services directory or Html5Viewer.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:vertigisstudio/web/?app=` |
+| Google | `inurl:/gcx/WebViewer/?app= OR inurl:/Geocortex/WebViewer/?app=` |
+| Google | `site:apps.vertigisstudio.com/web OR site:apps.vertigisstudio.eu/web` |
+| Censys | `web.endpoints.http.html_title: "VertiGIS Studio Web"` |
+
+Skip vendor Designer samples, login-only Designer, and extra app GUIDs on a tenant already registered.
 
 ## GeoMedia WebMap (`geomediawebmap`) {#geomediawebmap}
 

@@ -263,6 +263,33 @@ def expand_description(record, file_path):
     
     return False, None
 
+def fix_is_national(record, file_path):
+    """Fix IS_NATIONAL_AGENCY_OR_TOPIC by clearing is_national on non-national catalogs."""
+    props = record.get("properties") or {}
+    if not isinstance(props, dict) or props.get("is_national") is not True:
+        return False, None
+    props["is_national"] = False
+    record["properties"] = props
+    return True, "Set properties.is_national to false"
+
+
+def fix_placeholder_title(record, file_path):
+    """Fix PLACEHOLDER_TITLE for very short non-descriptive titles."""
+    name = (record.get("name") or "").strip()
+    if len(name) >= 5:
+        return False, None
+    owner_name = ((record.get("owner") or {}).get("name") or "").strip()
+    catalog_type = record.get("catalog_type", "Data portal")
+    if owner_name and owner_name not in name:
+        new_name = f"{owner_name} {catalog_type} ({name})"
+    else:
+        new_name = f"{name} ({catalog_type})"
+    if len(new_name) >= 5 and new_name != name:
+        record["name"] = new_name
+        return True, f"Expanded title to '{new_name}'"
+    return False, None
+
+
 def fix_tag_hygiene(record, file_path, field):
     """Fix TAG_HYGIENE by removing or fixing problematic tags"""
     # Parse field like "tags[2]" to get index
@@ -349,7 +376,9 @@ def fix_yaml_file(file_path, issue_type, field=None):
         
         if issue_type == "MISSING_DESCRIPTION":
             fixed, message = fix_description(data, file_path)
-        elif issue_type == "MISSING_ENDPOINTS":
+        elif issue_type in ("MISSING_ENDPOINTS",) or (
+            issue_type and issue_type.startswith("SOFTWARE_EXPECTED_ENDPOINTS_MISSING")
+        ):
             fixed, message = fix_endpoints(data, file_path)
         elif issue_type == "MISSING_LANGS":
             fixed, message = fix_langs(data, file_path)
@@ -357,6 +386,10 @@ def fix_yaml_file(file_path, issue_type, field=None):
             fixed, message = expand_description(data, file_path)
         elif issue_type == "TAG_HYGIENE":
             fixed, message = fix_tag_hygiene(data, file_path, field)
+        elif issue_type == "IS_NATIONAL_AGENCY_OR_TOPIC":
+            fixed, message = fix_is_national(data, file_path)
+        elif issue_type == "PLACEHOLDER_TITLE":
+            fixed, message = fix_placeholder_title(data, file_path)
         
         if fixed and message:
             print(f"{issue_type} in {file_path}: {message}")

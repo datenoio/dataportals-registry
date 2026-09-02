@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Official Statistics Dashboard of the Statistics Bureau of Japan. Charts,
+  maps, and rankings of key government indicators by country, prefecture, and municipality,
+  with a public JSON API separate from the e-Stat table portal.
+endpoints:
+- type: api
+  url: https://dashboard.e-stat.go.jp/api/1.0/
+  version: '1.0'
+- type: documentation
+  url: https://dashboard.e-stat.go.jp/static/api
+id: dashboardestatgojp
+langs:
+- id: JA
+  name: Japanese
+- id: EN
+  name: English
+link: https://dashboard.e-stat.go.jp
+name: Statistics Dashboard
+owner:
+  link: https://www.stat.go.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+  name: Statistics Bureau of Japan
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- indicators
+- Japan
+- has_api
+- dashboard
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99994942

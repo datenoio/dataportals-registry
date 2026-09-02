@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: GR-C
+      name: Dytikí Makedonía
+description: Municipal ArcGIS Enterprise Portal of Kozani for public GIS applications
+  and geospatial services. Distinct from the city’s ArcGIS Online org at cityofkozani.maps.arcgis.com.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.cityofkozani.gov.gr/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.cityofkozani.gov.gr/arcgis/rest/services?f=pjson
+- type: arcgis:portals:self
+  url: https://gis.cityofkozani.gov.gr/portal/sharing/rest/portals/self?f=pjson
+id: giscityofkozanigovgr
+langs:
+- id: EL
+  name: Greek
+link: https://gis.cityofkozani.gov.gr/portal
+name: Kozani Geoportal
+owner:
+  link: https://cityofkozani.gov.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    subregion:
+      id: GR-C
+      name: Dytikí Makedonía
+  name: Municipality of Kozani
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Greece
+- arcgisserver
+- geospatial
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99995786

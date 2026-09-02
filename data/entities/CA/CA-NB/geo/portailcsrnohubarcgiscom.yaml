@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-NB
+      name: New Brunswick
+description: Official 2025 ArcGIS Hub geoportal of the Northwest Regional Service Commission,
+  with public GIS sections for Edmundston, Saint-Quentin, Grand Falls, Haut-Madawaska, and
+  Vallée-des-Rivières.
+endpoints:
+- type: dcatap201
+  url: https://portail-csrno.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://portail-csrno.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://portail-csrno.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://portail-csrno.hub.arcgis.com/api/search/v1
+id: portailcsrnohubarcgiscom
+langs:
+- id: FR
+  name: French
+link: https://portail-csrno.hub.arcgis.com/
+name: Portail CSRNO officiel (2025)
+owner:
+  link: https://csrno.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-NB
+      name: New Brunswick
+  name: Northwest Regional Service Commission (CSRNO)
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- GIS
+- regional
+- zoning
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00037705

@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-FR
+      name: Fryslân
+description: Gemeente Smallingerland public GIS Cloud Map Portal for municipal layers
+  including mowing policy and tree replacement.
+endpoints:
+- type: giscloud:catalog
+  url: https://smallingerland.giscloud.com/
+id: smallingerlandgiscloudcom
+langs:
+- id: NL
+  name: Dutch
+link: https://smallingerland.giscloud.com/
+name: Smallingerland Map Portal
+owner:
+  link: https://www.smallingerland.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-FR
+      name: Fryslân
+  name: Gemeente Smallingerland
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: giscloud
+  name: GIS Cloud
+status: active
+tags:
+- GIS
+- geospatial
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99998828

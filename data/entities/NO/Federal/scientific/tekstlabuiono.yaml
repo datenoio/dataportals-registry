@@ -1,0 +1,65 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: CLARIN C-centre catalog of speech and text corpora from the University
+  of Oslo Text Laboratory, with Glossa search and OAI-PMH metadata.
+endpoints:
+- type: oaipmh20
+  url: https://tekstlab.uio.no/oai?verb=Identify
+  version: '2.0'
+id: tekstlabuiono
+langs:
+- id: 'NO'
+  name: Norwegian
+- id: EN
+  name: English
+link: https://tekstlab.uio.no/clarino/
+name: CLARINO Humit Text Laboratory Centre
+owner:
+  link: https://www.uio.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: University of Oslo
+  type: Academy
+properties:
+  dataset_count_reported: 29
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- linguistics
+- language resources
+- clarin
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99994617

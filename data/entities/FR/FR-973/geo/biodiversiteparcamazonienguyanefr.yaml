@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-973
+      name: Guyane (française)
+description: GeoNature-atlas of biodiversity observations for the Parc amazonien de
+  Guyane. Distinct from the Lizmap cartotheque.
+endpoints:
+- type: sitemap
+  url: https://biodiversite.parc-amazonien-guyane.fr/sitemap.xml
+id: biodiversiteparcamazonienguyanefr
+langs:
+- id: FR
+  name: French
+link: https://biodiversite.parc-amazonien-guyane.fr/
+name: Atlas de la biodiversité du Parc amazonien de Guyane
+owner:
+  link: https://www.parc-amazonien-guyane.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-973
+      name: Guyane (française)
+  name: Parc amazonien de Guyane
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- biodiversity
+- GeoNature
+- Guyane
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi99996062

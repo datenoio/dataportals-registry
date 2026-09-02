@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TR
+      name: Turkey
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: TR-09
+      name: Aydın
+description: Public ArcGIS Experience Builder city-guide map of Aydın metropolitan
+  municipality.
+id: cbsaydinbeltr
+langs:
+- id: TR
+  name: Turkish
+link: https://cbs.aydin.bel.tr/
+name: Aydın Büyükşehir Belediyesi CBS
+owner:
+  link: https://www.aydin.bel.tr
+  location:
+    country:
+      id: TR
+      name: Turkey
+    level: 30
+    subregion:
+      id: TR-09
+      name: Aydın
+  name: Aydın Büyükşehir Belediyesi
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- municipality
+- ArcGIS
+- Turkey
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99995901
+endpoints:
+- type: arcgis:portals:self
+  url: https://cbs.aydin.bel.tr/portal/sharing/rest/portals/self?f=pjson

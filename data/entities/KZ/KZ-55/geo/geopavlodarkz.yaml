@@ -18,9 +18,15 @@ coverage:
     subregion:
       id: KZ-55
       name: Pavlodar oblysy
-description: GeoServer of Pavlodar Region, publishing regional geospatial layers
-  via OGC WFS, WCS and WMTS services.
+description: Regional GIS (RGIS) geoportal of Pavlodar Region, with a public Angular
+  Leaflet map viewer and GeoServer OGC services for regional spatial data.
 endpoints:
+- type: wms111
+  url: https://geopavlodar.kz/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geopavlodar.kz/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
 - type: wfs100
   url: https://geopavlodar.kz/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
@@ -65,8 +71,8 @@ langs:
   name: English
 - id: KZ
   name: Kazakh
-link: https://geopavlodar.kz/geoserver/
-name: GeoPavlodar GeoServer
+link: https://geopavlodar.kz/map/
+name: Pavlodar region geoportal
 owner:
   link: https://pavlodar.gov.kz
   location:
@@ -89,8 +95,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: geoserver
-  name: GeoServer
+  id: rgis
+  name: KAZGISA RGIS
 status: active
 tags:
 - geospatial
@@ -98,6 +104,7 @@ tags:
 - GIS
 - mapping
 - Pavlodar
+- has_api
 topics:
 - id: REGI
   name: Regions and cities

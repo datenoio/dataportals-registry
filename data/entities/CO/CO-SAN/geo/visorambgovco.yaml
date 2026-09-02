@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: CO-SAN
+      name: Santander
+description: Public metropolitan map viewer of the Área Metropolitana de Bucaramanga
+  with planning, transport, environmental, and cadastral layers for the four member
+  municipalities.
+endpoints:
+- type: arcgis:rest:services
+  url: https://mapa.amb.gov.co/server/rest/services?f=pjson
+id: visorambgovco
+langs:
+- id: ES
+  name: Spanish
+link: https://visor.amb.gov.co/visor/
+name: Visor de Mapa Metropolitano AMB
+owner:
+  link: https://www.amb.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    subregion:
+      id: CO-SAN
+      name: Santander
+  name: Área Metropolitana de Bucaramanga
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geoportal
+- geospatial
+- Colombia
+- Santander
+- Bucaramanga
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99996014

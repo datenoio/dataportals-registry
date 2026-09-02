@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DO
+      name: Republica Dominicana
+    level: 20
+    macroregion:
+      id: 029
+      name: Caribbean
+description: WIS2 in a box node of the Instituto Dominicano de Meteorología (INDOMET)
+  (centre-id do-indomet). Publishes WMO discovery metadata, station information, and
+  manual SYNOP observations through an OGC API Features / pygeoapi service. Public
+  HTTP catalog only (HTTPS did not connect).
+endpoints:
+- type: pygeoapi:openapi
+  url: http://wis2box.indomet.gov.do/oapi/openapi
+  version: '1.0'
+- type: pygeoapi:collections
+  url: http://wis2box.indomet.gov.do/oapi/collections/?f=json
+  version: '1.0'
+id: wis2boxindometgovdo
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: http://wis2box.indomet.gov.do
+name: Dominican Republic - WIS 2.0 in a box
+owner:
+  link: http://indomet.gov.do
+  location:
+    country:
+      id: DO
+      name: Republica Dominicana
+    level: 20
+  name: Instituto Dominicano de Meteorología (INDOMET)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: wis20box
+  name: Wis 2.0 Box
+status: active
+tags:
+- meteorology
+- climate
+- WIS2
+- government
+- has_api
+topics:
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi99994668

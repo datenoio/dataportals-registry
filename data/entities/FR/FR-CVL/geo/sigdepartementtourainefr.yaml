@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 40
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-CVL
+      name: Centre-Val de Loire
+description: Public ArcGIS Server REST catalog of the Département d'Indre-et-Loire
+  (Touraine), including an Open_Data map service plus cadastre, roads and environment
+  folders.
+endpoints:
+- type: arcgis:rest:info
+  url: https://sig.departement-touraine.fr/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.departement-touraine.fr/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig.departement-touraine.fr/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://sig.departement-touraine.fr/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sig.departement-touraine.fr/arcgis/rest/services?f=geositemap
+id: sigdepartementtourainefr
+langs:
+- id: FR
+  name: French
+link: https://sig.departement-touraine.fr/arcgis/rest/services
+name: SIG Département de Touraine ArcGIS Server
+owner:
+  link: https://www.departement-touraine.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-CVL
+      name: Centre-Val de Loire
+  name: Département d'Indre-et-Loire
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- geoportal
+- France
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99996729

@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: GR-E
+      name: Thessalía
+description: Municipal ArcGIS Online organization of Trikala publishing web maps and
+  GIS applications. Distinct from the city’s DKAN open data portal at data.trikalacity.gr.
+endpoints:
+- type: arcgis:portals:self
+  url: https://trikalacity.maps.arcgis.com/sharing/rest/portals/self?f=json
+id: trikalacitymapsarcgiscom
+langs:
+- id: EL
+  name: Greek
+link: https://trikalacity.maps.arcgis.com/home/index.html
+name: Trikala Geoportal
+owner:
+  link: https://trikalacity.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    subregion:
+      id: GR-E
+      name: Thessalía
+  name: Municipality of Trikala
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Greece
+- ArcGIS
+- geospatial
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99995789

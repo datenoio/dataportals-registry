@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CA
+      name: California
+description: City of Pacific Grove public ArcGIS Server REST directory with open GIS
+  layers for parcels, infrastructure, and coastal program data.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis-web.cityofpacificgrove.org/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis-web.cityofpacificgrove.org/arcgis/rest/services?f=pjson
+id: giswebcityofpacificgroveorg
+langs:
+- id: EN
+  name: English
+link: https://gis-web.cityofpacificgrove.org/arcgis/rest/services
+name: City of Pacific Grove GIS REST Services
+owner:
+  link: https://www.cityofpacificgrove.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: City of Pacific Grove
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- geoportal
+- government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99998738

@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-WLS
+      name: Wales [Cymru GB-CYM]
+description: Office for National Statistics Census 2021 custom dataset builder for
+  England and Wales. Select a population type, geography, and variables to build and
+  download multivariate census tables. Distinct from Nomis census tables.
+endpoints:
+- type: rest
+  url: https://api.beta.ons.gov.uk/v1/datasets
+- type: docs
+  url: https://developer.ons.gov.uk/
+id: wwwonsgovukdatasetscreate
+langs:
+- id: EN
+  name: English
+link: https://www.ons.gov.uk/datasets/create
+name: ONS Census 2021 custom dataset
+owner:
+  link: https://www.ons.gov.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: Office for National Statistics
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: Open Government Licence v3.0
+  license_url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- census
+- official statistics
+- ONS
+- has_api
+- England
+- Wales
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99994857

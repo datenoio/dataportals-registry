@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: SK
+      name: Slovakia
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id002
+      id: SK-PV
+      name: Prešovský kraj
+description: Local DCAT-AP-SK catalog of the City of Levoča, harvested by the national
+  open data portal, publishing municipal datasets separately from the POMOSAM eGOV
+  site.
+endpoints:
+- type: dcat:jsonld
+  url: https://opendata.levoca.sk/set/catalog/lkod
+id: opendatalevocask
+langs:
+- id: SK
+  name: Slovak
+link: https://opendata.levoca.sk/set/catalog/lkod
+name: Katalóg otvorených dát mesta Levoča
+owner:
+  link: https://www.levoca.sk
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Mesto Levoča
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+  transferable_location: true
+software:
+  id: lkod
+  name: LKOD
+status: active
+tags:
+- government
+- has_api
+- open data
+- Slovakia
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99996419

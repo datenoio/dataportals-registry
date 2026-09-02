@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IL
+      name: Israel
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion: &id001
+      id: IL-Z
+      name: Ash Shamālī
+description: Public GISNET V5 geoportal of Mavo Haamakim Regional Council, with planning,
+  parcels, and regional map layers.
+id: gismavocoilmavohaamakim
+langs:
+- id: HE
+  name: Hebrew
+link: https://gis.mavo.co.il/v5/mavo_haamakim
+name: Mavo Haamakim GIS
+owner:
+  link: https://www.mavo.co.il
+  location:
+    country:
+      id: IL
+      name: Israel
+    level: 30
+    subregion: *id001
+  name: Mavo Haamakim Regional Council
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- GIS
+- geoportal
+- municipal GIS
+- Israel
+- GISNET
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99996074
