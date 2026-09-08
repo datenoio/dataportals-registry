@@ -17,7 +17,15 @@
   "category": {
     "type": "string",
     "empty": false,
-    "required": true
+    "required": true,
+    "allowed": [
+      "Open data portal",
+      "Geoportal",
+      "Scientific data repository",
+      "Indicators catalog",
+      "Microdata catalog",
+      "Metadata catalog"
+    ]
   },
   "subtype": {
     "type": "string",
@@ -116,23 +124,28 @@
     "schema": {
       "datasets": {
         "type": "string",
-        "allowed": ["Yes", "No", "Unknown", "Uncertain", "Compatible", "Generated"]
+        "allowed": ["Yes", "No", "Unknown", "Uncertain", "Compatible", "Generated"],
+        "required": true
       },
       "fields": {
         "type": "string",
-        "allowed": ["Yes", "No", "Unknown", "Uncertain", "Compatible", "Generated"]
+        "allowed": ["Yes", "No", "Unknown", "Uncertain", "Compatible", "Generated"],
+        "required": true
       },
       "organizations": {
         "type": "string",
-        "allowed": ["Yes", "No", "Unknown", "Uncertain", "Compatible", "Generated"]
+        "allowed": ["Yes", "No", "Unknown", "Uncertain", "Compatible", "Generated"],
+        "required": true
       },
       "resources": {
         "type": "string",
-        "allowed": ["Yes", "No", "Unknown", "Uncertain", "Compatible", "Generated"]
+        "allowed": ["Yes", "No", "Unknown", "Uncertain", "Compatible", "Generated"],
+        "required": true
       },
       "topics": {
         "type": "string",
-        "allowed": ["Yes", "No", "Unknown", "Uncertain", "Compatible", "Generated"]
+        "allowed": ["Yes", "No", "Unknown", "Uncertain", "Compatible", "Generated"],
+        "required": true
       }
     }
   },
@@ -151,112 +164,94 @@
     "required": true,
     "schema": {
       "ckan_api": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "csw": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "custom_api": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "dcat": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "dublin_core": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "iso19115": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "oai-pmh": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "ogcrecords": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "openaire": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "opensearch": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "rdf_sparql": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "schema-org": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "sdmx": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "stac": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "swordapi": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "wcs": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "wfs": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"],
+        "required": true
       },
       "wms": {
-        "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
-          {"type": "boolean"}
-        ]
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"],
+        "required": true
       }
     }
   },
@@ -280,7 +275,7 @@
     "schema": {
       "licensing_type": {
         "type": "string",
-        "allowed": ["Per dataset", "Per-dataset", "Per resource", "Per item", "Global", "Open", "Proprietary", "Uncertain", "Not applicable"]
+        "allowed": ["Per dataset", "Per resource", "Per item", "Global", "Open", "Proprietary", "Uncertain", "Not applicable"]
       },
       "supports_licenses": {
         "type": "string",
