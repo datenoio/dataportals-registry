@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Microdata catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Colectica Portal for the Midlife in the United States (MIDUS) national
+  longitudinal study of health and well-being, with variable-level DDI documentation
+  across waves. Public registration is required to browse and download custom extracts.
+endpoints:
+- type: colectica:api
+  url: https://midus.colectica.org/swagger/ui
+- type: colectica:api:swagger
+  url: https://midus.colectica.org/swagger/v1/swagger.json
+id: miduscolecticaorg
+langs:
+- id: EN
+  name: English
+link: https://midus.colectica.org
+name: MIDUS Colectica Portal
+owner:
+  link: https://midus.wisc.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WI
+      name: Wisconsin
+  name: University of Wisconsin-Madison
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: colectica
+  name: Colectica
+status: active
+tags:
+- microdata
+- longitudinal data
+- survey
+- health
+- aging
+- DDI
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi99999242

@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Statistics Sweden catalog for high-value datasets (värdefulla datamängder),
+  published through PxWeb.
+id: hvduppdragscbse
+endpoints:
+- type: pxwebapi
+  url: https://hvduppdrag.scb.se/api/v1/sv/uppdrag
+  version: '1'
+langs:
+- id: SV
+  name: Swedish
+- id: EN
+  name: English
+link: https://hvduppdrag.scb.se/pxweb/sv/uppdrag/
+name: SCB Uppdragsstatistik – Värdefulla datamängder
+owner:
+  link: https://www.scb.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Statistics Sweden
+  type: Central government
+software:
+  id: pxweb
+  name: PxWeb
+status: active
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+tags:
+- PxWeb
+- statistics
+- official statistics
+- high-value datasets
+- Sweden
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+uid: cdi00041933

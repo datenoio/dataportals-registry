@@ -1,0 +1,57 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-ARK
+      name: Arhangel'skaja oblast'
+description: Municipal open data about transport stops and routes, urban works and
+  alcohol-sale restriction areas, supplied as CSV and GeoJSON.
+id: wwwarhcityru
+langs:
+- id: RU
+  name: Russian
+link: https://www.arhcity.ru/?page=2023/1
+name: Открытые данные города Архангельска
+owner:
+  link: https://www.arhcity.ru/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Администрация городского округа Город Архангельск
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00041857

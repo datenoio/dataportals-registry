@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GBIF hosted portal for the biodiversity collections database of Haus
+  der Natur, Salzburg.
+endpoints:
+- type: gbif:dataset
+  url: https://api.gbif.org/v1/dataset
+  version: '1'
+id: sammlungenhausdernaturat
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://sammlungen.hausdernatur.at
+name: Biodiversitätsdatenbank
+owner:
+  link: https://www.hausdernatur.at
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+  name: Haus der Natur Salzburg
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: gbifplatform
+  name: GBIF Platform
+status: active
+tags:
+- biodiversity
+- GBIF
+- has_api
+- Austria
+- collections
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi99999207

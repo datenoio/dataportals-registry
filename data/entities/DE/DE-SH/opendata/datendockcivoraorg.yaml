@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-SH
+      name: Schleswig-Holstein
+description: CIVORA / Piveau data catalog (DatenDock) for KielRegion, listing regional
+  open datasets from Kiel and surrounding districts with a public hub-search API.
+endpoints:
+- type: customapi
+  url: https://piveau-search.datendock.civora.org/search
+- type: customapi
+  url: https://piveau-repo.datendock.civora.org/catalogues
+- type: customapi
+  url: https://piveau-repo.datendock.civora.org/datasets
+- type: ckan:package-search
+  url: https://piveau-search.datendock.civora.org/ckan/package_search
+  version: '3'
+- type: docs
+  url: https://piveau-search.datendock.civora.org/
+id: datendockcivoraorg
+langs:
+- id: DE
+  name: German
+link: https://datendock.civora.org/app/catalog
+name: DatenDock KielRegion
+owner:
+  link: https://www.kielregion.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-SH
+      name: Schleswig-Holstein
+  name: KielRegion
+  type: Local government
+properties:
+  dataset_count_reported: 64
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: piveau
+  name: Piveau
+status: active
+tags:
+- government
+- has_api
+- open data
+- Schleswig-Holstein
+- Kiel
+- municipal
+- piveau
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99999505

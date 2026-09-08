@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Galaxy@Pasteur is Institut Pasteur's public Galaxy analysis platform for biomedical research data and workflows.
+
+endpoints:
+- type: galaxy:api
+  url: https://galaxy.pasteur.fr/api/version
+- type: galaxy:api:configuration
+  url: https://galaxy.pasteur.fr/api/configuration
+id: galaxypasteurfr
+langs:
+- id: FR
+  name: French
+link: https://galaxy.pasteur.fr
+name: Galaxy@Pasteur
+owner:
+  link: https://www.pasteur.fr
+  location:
+    country:
+      id: FR
+      name: France
+  name: Institut Pasteur
+  type: Academy
+software:
+  id: galaxy
+  name: Galaxy
+status: active
+tags:
+- scientific
+- research
+- academic
+- France
+- has_api
+- Galaxy
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+uid: cdi00039372

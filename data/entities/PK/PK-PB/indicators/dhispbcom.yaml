@@ -1,0 +1,83 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: PK
+      name: Pakistan
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: PK-PB
+      name: Punjab
+description: Provincial DHIS2 health management information system for public health
+  facilities in Punjab, Pakistan. Login is required to query facility-level HMIS indicators.
+endpoints:
+- type: dhis2:catalog
+  url: https://dhispb.com/dhis2
+- type: dhis2:system-info
+  url: https://dhispb.com/dhis2/api/system/info
+- type: dhis2:datasets
+  url: https://dhispb.com/dhis2/api/dataSets.json?fields=id,displayName&pageSize=1
+id: dhispbcom
+langs:
+- id: EN
+  name: English
+link: https://dhispb.com/dhis2
+name: DHIS2 Punjab
+owner:
+  link: https://dhispb.com
+  location:
+    country:
+      id: PK
+      name: Pakistan
+    level: 30
+    subregion:
+      id: PK-PB
+      name: Punjab
+  name: Department of Health, Government of Punjab
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dhis2
+  name: DHIS2
+status: active
+tags:
+- health
+- HMIS
+- DHIS2
+- government
+- restricted
+- Punjab
+- Pakistan
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00039893

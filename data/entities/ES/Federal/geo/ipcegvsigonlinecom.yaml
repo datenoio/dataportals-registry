@@ -1,0 +1,93 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Preventive-conservation spatial data infrastructure of the Instituto
+  del Patrimonio Cultural de España built on gvSIG Online, with public viewers for
+  climate and building-deterioration risk.
+id: ipcegvsigonlinecom
+langs:
+- id: ES
+  name: Spanish
+link: https://ipce.gvsigonline.com/gvsigonline/
+name: IDE de conservación preventiva del IPCE
+owner:
+  link: https://www.cultura.gob.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+  name: Instituto del Patrimonio Cultural de España
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: gvsigonline
+  name: gvSIG Online
+status: active
+tags:
+- gvsigonline
+- geospatial
+- GIS
+- heritage
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99999435
+endpoints:
+- type: wms111
+  url: https://ipce.gvsigonline.com/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://ipce.gvsigonline.com/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://ipce.gvsigonline.com/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://ipce.gvsigonline.com/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://ipce.gvsigonline.com/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs111
+  url: https://ipce.gvsigonline.com/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs201
+  url: https://ipce.gvsigonline.com/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1

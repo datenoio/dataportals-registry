@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -19,6 +19,9 @@ description: SSHADE is an interoperable Solid Spectroscopy database infrastructu
   the whole electromagnetic spectrum from gamma to radio wavelengths, through X, UV, Vis,
   IR, and mm ranges. The measured samples include ices, minerals, rocks, organic and carbonaceous
   materials... and also liquids.
+endpoints:
+- type: tap:capabilities
+  url: http://osug-vo.osug.fr:8080/tap/capabilities
 id: wwwsshadeeu
 identifiers:
 - id: openaire
@@ -41,8 +44,8 @@ owner:
   name: Centre National de la Recherche Scientifique
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: dachs
+  name: DaCHS
 status: active
 tags:
 - scientific
@@ -51,6 +54,8 @@ tags:
 - idps
 - raman spectroscopy
 - x-ray spectroscopy
+- TAP
+- virtual observatory
 topics:
 - id: ENVI
   name: Environment

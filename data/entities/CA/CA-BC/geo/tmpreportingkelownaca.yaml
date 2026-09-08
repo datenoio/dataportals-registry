@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: City of Kelowna catalog and reporting hub for transportation-plan performance
+  measures and related mobility datasets.
+endpoints:
+- type: dcatap201
+  url: https://tmp.reporting.kelowna.ca/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://tmp.reporting.kelowna.ca/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://tmp.reporting.kelowna.ca/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://tmp.reporting.kelowna.ca/api/search/v1
+id: tmpreportingkelownaca
+langs:
+- id: EN
+  name: English
+link: https://tmp.reporting.kelowna.ca
+name: TMP Reporting - 2024
+owner:
+  link: https://www.kelowna.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: City of Kelowna
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- ArcGIS
+- GIS
+- government
+- transport
+- performance indicators
+- Kelowna
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00038625

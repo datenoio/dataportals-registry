@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: JM
+      name: Jamaica
+    level: 20
+    macroregion:
+      id: 029
+      name: Caribbean
+description: Official Statistical Institute of Jamaica platform for national Sustainable
+  Development Goal indicators.
+endpoints:
+- type: opensdg:catalog
+  url: https://sdgnrp.statinja.gov.jm/
+- type: opensdg:catalog
+  url: https://sdgnrp.statinja.gov.jm/reporting-status/
+id: sdgnrpstatinjagovjm
+langs:
+- id: EN
+  name: English
+link: https://sdgnrp.statinja.gov.jm/
+name: Jamaica SDG National Reporting Platform
+owner:
+  link: https://statinja.gov.jm/
+  location:
+    country:
+      id: JM
+      name: Jamaica
+    level: 20
+  name: Statistical Institute of Jamaica
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: opensdg
+  name: OpenSDG
+status: active
+tags:
+- sustainable development goals
+- indicators
+- official statistics
+- government
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00039709

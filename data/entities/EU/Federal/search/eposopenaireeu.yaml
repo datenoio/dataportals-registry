@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Data search engine
+content_types:
+- dataset
+- publication
+- software
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: EU
+      name: European Union
+description: OpenAIRE CONNECT gateway for EPOS, the European Plate Observing System.
+  It provides a Graph-filtered view of solid-Earth science research products, distinct
+  from the EPOS Data Portal at ics-c.epos-eu.org.
+endpoints:
+- type: openaire:public-apis
+  url: https://epos.openaire.eu/develop
+- type: openaire:graph
+  url: https://api.openaire.eu/graph/v2/researchProducts?relCommunityId=epos
+- type: openaire:graph-docs
+  url: https://graph.openaire.eu/docs/
+id: eposopenaireeu
+langs:
+- id: EN
+  name: English
+link: https://epos.openaire.eu
+name: European Plate Observing System
+owner:
+  link: https://www.epos-eu.org/
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: EPOS ERIC
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: openaire
+  name: OpenAIRE
+status: active
+tags:
+- openaire
+- open science
+- research
+- scholarly communication
+- epos
+- earth science
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00039251

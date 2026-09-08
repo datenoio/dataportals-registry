@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: AT-3
+      name: Niederösterreich
+description: INSPIRE GeoServer service of Lower Austria publishing regional public
+  geospatial layers through standard OGC interfaces.
+endpoints:
+- type: wms130
+  url: https://geo.noel.gv.at/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: geonoelgvat
+langs:
+- id: DE
+  name: German
+link: https://geo.noel.gv.at/geoserver
+name: INSPIRE WMS Lower Austria
+owner:
+  link: https://www.noe.gv.at/
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    subregion:
+      id: AT-3
+      name: Niederösterreich
+  name: State of Lower Austria
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- Austria
+- GeoServer
+- INSPIRE
+- Lower Austria
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00038534

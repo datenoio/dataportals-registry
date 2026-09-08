@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-VC
+      name: Valenciana, Comunidad
+description: Public Mapia/Giscube geoportal for the Diputació de València (DIVAL),
+  with QGIS Server WMS for provincial road axes and names. Distinct from the certificate-login
+  Geoportal Dival at geoportal.dival.es.
+endpoints:
+- type: wms130
+  url: https://mapiadival.infraplan.cat/apps/giscube-admin/qgisserver/services/dival-carreteres-noms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wms111
+  url: https://mapiadival.infraplan.cat/apps/giscube-admin/qgisserver/services/dival-carreteres-noms?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+id: mapiadivalinfraplancat
+langs:
+- id: CA
+  name: Catalan
+- id: ES
+  name: Spanish
+link: https://mapiadival.infraplan.cat/geoportal/
+name: Geoportal DIVAL
+owner:
+  link: https://www.dival.es/
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-VC
+      name: Valenciana, Comunidad
+  name: Diputació de València
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: qgisserver
+  name: QGIS Server
+status: active
+tags:
+- geoportal
+- GIS
+- provincial
+- QGIS Server
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99999336

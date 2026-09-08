@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+description: Vendor-hosted public New Zealand macroeconomic data warehouse on DataWarehousePro.
+  Guest APIs expose databanks for balance of payments, activity, exchange rates, public
+  finance, interest rates, labour, money, national accounts, prices, and related series.
+  Distinct from official Stats NZ and RBNZ statistics sites.
+endpoints:
+- type: customapi
+  url: https://app.datawarehousepro.com/guest/getDatabanksWithMnemonics/newzealand
+- type: customapi
+  url: https://app.datawarehousepro.com/guest/export/newzealand
+id: appdatawarehouseprocomgonewzealand
+langs:
+- id: EN
+  name: English
+link: https://app.datawarehousepro.com/go/newzealand
+name: New Zealand Macroeconomic Data Warehouse
+owner:
+  link: https://datawarehousepro.com
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+  name: DataWarehousePro
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: datawarehousepro
+  name: DataWarehousePro
+status: active
+tags:
+- has_api
+- statistics
+- economy
+- New Zealand
+- macroeconomics
+- indicators
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99999240

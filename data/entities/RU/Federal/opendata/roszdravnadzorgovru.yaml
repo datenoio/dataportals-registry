@@ -1,0 +1,48 @@
+access_mode:
+- open
+- restricted
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Federal health-supervision open-data catalog with CSV datasets and a
+  downloadable register. Access to some datasets requires ESIA authentication.
+id: roszdravnadzorgovru
+langs:
+- id: RU
+  name: Russian
+link: https://roszdravnadzor.gov.ru/opendata/
+name: Открытые данные Росздравнадзора
+owner:
+  link: https://roszdravnadzor.gov.ru/
+  location:
+    country: *id001
+    level: 20
+  name: Федеральная служба по надзору в сфере здравоохранения
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+uid: cdi00041840

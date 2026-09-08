@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: ELIXIR CZ / CERIT-SC Galaxy instance hosting RepeatExplorer for
+  characterization of repetitive DNA from next-generation sequencing data.
+endpoints:
+- type: galaxy:api
+  url: https://repeatexplorer-elixir.cerit-sc.cz/galaxy/api/version
+- type: galaxy:api:configuration
+  url: https://repeatexplorer-elixir.cerit-sc.cz/galaxy/api/configuration
+id: repeatexplorerelixirceritsccz
+langs:
+- id: EN
+  name: English
+link: https://repeatexplorer-elixir.cerit-sc.cz/galaxy
+name: RepeatExplorer Galaxy
+owner:
+  link: https://www.elixir-czech.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+  name: ELIXIR CZ / CERIT-SC
+  type: Academy
+software:
+  id: galaxy
+  name: Galaxy
+status: active
+tags:
+- scientific
+- research
+- academic
+- Czech Republic
+- has_api
+- Galaxy
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039116

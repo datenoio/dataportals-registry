@@ -2,7 +2,7 @@
 
 How to find **indicators catalogs** (`catalog_type: Indicators catalog`) and **microdata catalogs** (`catalog_type: Microdata catalog`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md).
 
-Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, PxStat, DGBAS Web, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Istat Data Browser, Swing, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
+Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, PxStat, DGBAS Web, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, .Stat Technology, Istat Data Browser, Swing, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
 
 ## PxWeb (`pxweb`) {#pxweb}
 
@@ -67,7 +67,9 @@ Start from the community list; use Google for national translations (`indicadore
 
 ## .Stat Suite (`statsuite`) {#statsuite}
 
-SIS-CC / OECD .Stat. **Confirm:** `/api/search` or SDMX endpoints; UI “.Stat Suite” / Data Explorer.
+SIS-CC .Stat Suite **Data Explorer** (current generation). Product: [siscc.org/stat-suite](https://siscc.org/stat-suite/). Live examples: [data-explorer.oecd.org](https://data-explorer.oecd.org), [explore.data.abs.gov.au](https://explore.data.abs.gov.au), [esploradati.istat.it](https://esploradati.istat.it).
+
+**Confirm:** `/api/search` or SDMX endpoints; UI “.Stat Suite” / Data Explorer.
 
 | Tool | Query |
 |------|-------|
@@ -75,7 +77,20 @@ SIS-CC / OECD .Stat. **Confirm:** `/api/search` or SDMX endpoints; UI “.Stat S
 | Google | `inurl:/nsi OR "DotStat" SDMX` |
 | Censys | `web.endpoints.http.body: ".Stat"` |
 
-**False positives:** Istat **Data Browser** / StatKit (`databrowserhub/api/core`, `istatdatabrowser`) — that is not .Stat Suite.
+**False positives:** classic OECD.Stat / I.Stat “Powered by .Stat technology” (`stattech`); Istat **Data Browser** / StatKit (`databrowserhub/api/core`, `istatdatabrowser`).
+
+## .Stat Technology (`stattech`) {#stattech}
+
+Legacy OECD.Stat / I.Stat table browser (“Powered by .Stat technology”), predecessor to .Stat Suite Data Explorer. Reference UI: [stats.oecd.org](https://stats.oecd.org). Other live catalogs: [dati.istat.it](https://dati.istat.it) (I.Stat), [stat.ine.cl](https://stat.ine.cl), [stat.nbb.be](https://stat.nbb.be), [data.uis.unesco.org](http://data.uis.unesco.org).
+
+**Confirm:** OECD.Stat-style table browser chrome or footer “Powered by .Stat technology”. Do **not** label Data Explorer sites `stattech`.
+
+**False positives:** .Stat Suite Data Explorer (`statsuite`); Istat Data Browser (`istatdatabrowser`, for example IstatData / Coeweb — not `dati.istat.it`).
+
+| Tool | Query |
+|------|-------|
+| Google | `"Powered by .Stat technology" OR "OECD.Stat"` |
+| Google | `"I.Stat" inurl:dati.istat.it` |
 
 ## Istat Data Browser (`istatdatabrowser`) {#istatdatabrowser}
 
@@ -344,6 +359,84 @@ StatSilk interactive maps and dashboards (StatPlanet Cloud / HTML5, older Flash)
 
 **False positives:** statsilk.com marketing, GitHub `StatSilk/StatPlanet`, Flash-only dead maps, a single thematic poster, StatPlanet World Bank / EdStats viewers of [data.worldbank.org](https://data.worldbank.org) (already `dataworldbankorg`). Skip login-only corporate dashboards.
 
+## Microsoft Power BI (`powerbi`) {#powerbi}
+
+Microsoft Power BI dashboards published as public web embeds. The catalog record is the **page or portal whose indicator layer is the Power BI dashboard**, not the anonymous `app.powerbi.com/view?r=` URL itself. On-premises Power BI Report Server portals (e.g. `unidata.gv.at`) also count.
+
+**Signals:** `app.powerbi.com/view?r=` iframe or link; `embed-powerbi`; `public.powerbi.*` Report Server hosts; CSP/frames allowing `app.powerbi.com`.
+
+**Confirm:** GET the statistics page and confirm the interactive indicator content is a Power BI embed. One catalog per institution/theme. Skip pages that merely mention Power BI in text or CSP, screenshots of dashboards, and internal (login) workspaces.
+
+| Tool | Query |
+|-------|-------|
+| Google | `site:app.powerbi.com/view` — not catalogable itself; find parents via `"app.powerbi.com" (statistics OR dashboard) site:.gov` |
+| Google | `"power bi" (dashboard OR "data portal") (statistics OR indicators) site:.gov` |
+| Censys | `web.endpoints.http.body: "app.powerbi.com/view"` |
+
+**False positives:** Microsoft marketing/docs; embedded single charts on generic corporate pages; Power Platform partner pages.
+
+## Tableau (`tableau`) {#tableau}
+
+Salesforce Tableau as the interactive statistics layer of an indicators portal — Tableau Public embeds/profiles (`public.tableau.com`), the `tableau-2.min.js` / `tableau-viz` embed API, or self-hosted Tableau Server views (`/t/…/views/…`).
+
+**Signals:** `public.tableau.com/static/`, `/views/`, `/app/profile/…/viz/`; `<tableau-viz`; `tableau-2.min.js`; `tableau.embedding` module; `/javascripts/api/tableau_`.
+
+**Confirm:** GET the statistics section and confirm the indicator tables/dashboards are Tableau views. One catalog per institution/theme. Skip Tableau marketing, public.tableau.com profiles themselves (not a catalog), single blog-chart embeds, and CSP-only mentions.
+
+| Tool | Query |
+|-------|-------|
+| Google | `"public.tableau.com" (statistics OR indicators) site:.gov` |
+| Google | `"tableau-viz" OR "tableau-2.min.js" statistics` |
+| Censys | `web.endpoints.http.body: "public.tableau.com/static/"` |
+
+**False positives:** training/gallery vizzes on tableau.com; corporate annual-report charts; login-only Tableau Server.
+
+## Microsoft SharePoint (`sharepoint`) {#sharepoint}
+
+Statistics/indicator sections published on Microsoft SharePoint sites (ministries, central banks, planning agencies) instead of a data platform.
+
+**Signals:** `<meta name="GENERATOR" content="Microsoft SharePoint">`; `/_layouts/15/`; `.aspx` pages with SharePoint chrome; `Authenticate.aspx` references.
+
+**Confirm:** GET the statistics section and confirm it is SharePoint-driven (generator meta or `_layouts`). One catalog per institution. Skip pages that only link to a SharePoint document library for downloads while the catalog itself runs on another platform, and login-only intranets.
+
+| Tool | Query |
+|-------|-------|
+| Google | `"Microsoft SharePoint" statistics site:.gov` |
+| Censys | `web.endpoints.http.body: "_layouts/15/Authenticate.aspx"` + manual review for statistics content |
+
+**False positives:** SharePoint vendor content; intranets requiring login; document libraries with no indicator/tables layer.
+
+## R Shiny (`shiny`) {#shiny}
+
+Shiny (Posit/RStudio) web applications deployed as statistical query tools and indicator dashboards — self-hosted (`shiny.<agency>`, `/shiny/` paths) or on `*.shinyapps.io`.
+
+**Signals:** `shared/shiny.css`, `shiny.min.js`, `shiny-javascript-*`; `shiny-connected`; `*.shinyapps.io` hosts.
+
+**Confirm:** GET the app and confirm the app **itself** is Shiny (its HTML loads shiny.min.js), not a portal that merely links to a Shiny tool elsewhere. One catalog per app (or per tool family under one path). Skip RStudio marketing and teaching/demo apps.
+
+| Tool | Query |
+|-------|-------|
+| Google | `inurl:shinyapps.io (statistics OR indicators OR dashboard)` |
+| Google | `"shiny.min.js" (statistics OR "data portal") site:.gov` |
+| Censys | `web.endpoints.http.body: "shared/shiny.css"` |
+
+**False positives:** portals linking to external Shiny apps; course projects; internal-only apps.
+
+## Qlik Sense (`qlik`) {#qlik}
+
+Qlik Sense hubs/mashups as public statistics platforms (customs, tourism, health).
+
+**Signals:** `qlik-styles.css` autogenerated paths; `qlik_host` / mashup config; requires.js loading `/resources/js/qlik`; "Qlik" branding on statistics UIs.
+
+**Confirm:** GET the statistics portal and confirm the dashboards are Qlik Sense apps. One catalog per installation. Skip Qlik marketing and internal hubs behind login.
+
+| Tool | Query |
+|-------|-------|
+| Google | `"Qlik Sense" (statistics OR dashboard) site:.gov` |
+| Censys | `web.endpoints.http.body: "qlik-styles.css"` |
+
+**False positives:** Qlik vendor pages; "qlik" inside unrelated words in other scripts; login-only enterprise hubs.
+
 ## Other indicator platforms
 
 | `software.id` | Where to look | Typical query |
@@ -352,7 +445,7 @@ StatSilk interactive maps and dashboards (StatPlanet Cloud / HTML5, older Flash)
 | `superstar` | see above | |
 | `statsuite` | see above | |
 | `istatdatabrowser` | see above | |
-| `stattech` | SIS-CC .Stat technology / SDMX APIs | `"Stat Technology" OR "SIS-CC" SDMX` |
+| `stattech` | see above | |
 | `oracleapex` | Oracle APEX **indicator apps** | `"Oracle APEX" (statistika OR indicators)` (skip generic APEX sites) |
 | `datavavt` | Data VAVT economic indicators | `"data.vavt.ru"` |
 | `superset` | Apache Superset **public indicator dashboards** | `"Apache Superset" (open data OR indicators)` |

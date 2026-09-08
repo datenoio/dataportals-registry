@@ -1,0 +1,65 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: 'Yes'
+  fields: Uncertain
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: Uncertain
+has_api: 'Yes'
+has_bulk: 'No'
+id: prodige
+name: PRODIGE
+website: https://adullact.net/projects/prodige/
+description: Open-source infrastructure for multi-partner geographic data sharing, cataloging, storage,
+  downloads and web mapping. Integrates a metadata catalog and spatial services. DatARA documents its
+  deployment of version 5 and exposes a PRODIGE resource API. Distinct from its separately registered
+  GeoNetwork catalog component.
+owner:
+  name: ADULLACT
+  location:
+    country:
+      id: FR
+      name: France
+documentation_url: https://adullact.net/projects/prodige/
+repository_url: https://gitlab.adullact.net/prodige
+metadata_support:
+  ckan_api: 'No'
+  csw: 'Yes'
+  custom_api: 'Yes'
+  dcat: Uncertain
+  dublin_core: 'No'
+  iso19115: 'Yes'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: Uncertain
+  wfs: 'Yes'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: Uncertain
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+license:
+  type: CeCILL-2.0
+  url: https://cecill.info/licences/Licence_CeCILL_V2-en.html
+export_formats:
+- Atom
+- GML
+- JSON
+capabilities:
+- Metadata catalog
+- OGC CSW
+- WMS and WFS
+- Resource API
+last_updated: '2026-09-08T12:00:00Z'

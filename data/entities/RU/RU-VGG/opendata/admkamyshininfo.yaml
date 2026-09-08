@@ -1,0 +1,51 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-VGG
+      name: Volgogradskaja oblast'
+description: Municipal open-data catalog listing local services, facilities, emergency
+  response, cultural heritage and nonprofit support datasets in CSV and XML.
+id: admkamyshininfo
+langs:
+- id: RU
+  name: Russian
+link: http://admkamyshin.info/opendata/
+name: Открытые данные города Камышина
+owner:
+  link: http://admkamyshin.info/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Администрация городского округа город Камышин
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00041923

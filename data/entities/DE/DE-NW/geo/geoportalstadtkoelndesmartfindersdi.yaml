@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: Geokatalog of the City of Cologne. Public smart.finder SDI search of
+  ISO/INSPIRE metadata for municipal geodata, services, and applications, with an
+  OGC CSW interface registered in GDI-DE.
+endpoints:
+- type: smartfindersdi:catalog
+  url: https://geoportal.stadt-koeln.de/smart.finder-sdi/
+- type: csw202
+  url: https://geoportal.stadt-koeln.de/smart.finder-csw/api?Service=CSW&Request=GetCapabilities
+  version: 2.0.2
+id: geoportalstadtkoelndesmartfindersdi
+langs:
+- id: DE
+  name: German
+link: https://geoportal.stadt-koeln.de/smart.finder-sdi/
+name: Geokatalog Stadt Köln
+owner:
+  link: https://www.stadt-koeln.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+  name: Stadt Köln
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: smartfindersdi
+  name: smart.finder SDI
+status: active
+tags:
+- geospatial
+- metadata
+- INSPIRE
+- CSW
+- Köln
+- smartfindersdi
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99999380

@@ -1,0 +1,60 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-ME
+      name: Marij Èl, Respublika
+description: Public ecological and geographical atlas of Mari El developed by Volga
+  State University of Technology with regional contributors. Organized map collections
+  cover administrative geography, natural resources, settlement history, population,
+  economy, ecology and cultural heritage.
+id: geo12rfatlas
+langs:
+- id: RU
+  name: Russian
+link: https://xn--12-glci9b.xn--p1ai/atlas/
+name: Эколого-географический атлас Республики Марий Эл
+owner:
+  link: https://www.volgatech.net/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Поволжский государственный технологический университет
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00041897

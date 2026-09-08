@@ -7,6 +7,67 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **5,450 net new catalog entries** since v1.19.0 (5,583 added, 133 removed); registry source now **35,266** entities (**0** scheduled) across **224** country/territory folders (added Curaçao `CW` and Wallis and Futuna `WF`).
+- **57 software definitions**; software catalog now **423** platforms. Highest-count new IDs: WebEWID (`webewid`, **66**), DaCHS (`dachs`, **33**), Argenmap (`argenmap`, **16**), Dialnet CRIS (`dialnetcris`, **13**), ArcGIS Dashboards (`arcgisdashboards`, **11**), BEXIS2 (`bexis2`, **11**), Esri UK Data Observatory (`esridataobservatory`, **10**), and Specify Web Portal (`specify`, **10**).
+- WebEWID (`webewid`) software definition for GEOMATYKA-KRAKÓW EWID 2007 Portal Mapowy; **66** Polish municipal cadastral geoportals.
+- DaCHS (`dachs`) software definition for the GAVO Data Center Helper Suite (Virtual Observatory); **33** astronomical data centers.
+- Argenmap (`argenmap`) software definition for IGN Argentina’s open-source Leaflet viewer; **16** Argentine geoportals.
+- Dialnet CRIS (`dialnetcris`) software definition for Fundación Dialnet hosted research-information portals; **13** Spanish institutional catalogs.
+- ArcGIS Dashboards (`arcgisdashboards`) software definition for Esri `/apps/dashboards/{item-id}`; **11** geoportals. Distinct from Hub, Experience Builder, Web AppBuilder, and Instant Apps.
+- BEXIS2 (`bexis2`) software definition for Friedrich Schiller University Jena research-data management; **11** German scientific repositories.
+- Esri UK Data Observatory (`esridataobservatory`) software definition for InstantAtlas Data Observatory WordPress tenants; **10** UK local-information catalogs.
+- Specify Web Portal (`specify`) software definition for Specify Collections Consortium public collection portals; **10** biodiversity catalogs.
+- MOLGENIS (`molgenis`) software definition for the EMX2 FAIR scientific data platform; **8** catalogs.
+- VIVO (`vivo`) software definition for the LYRASIS semantic research-discovery platform; **6** catalogs.
+- GeoViewer Online (`geoviewer`) software definition for Nobel Systems `geoviewer.io`; **4** catalogs.
+- Sputnik Web (`sputnikweb`) software definition for Geoscan 3D/raster publishing; **4** Russian geoportals.
+- AMBIT (`ambit`) software definition for OpenTox / eNanoMapper cheminformatics; **4** catalogs.
+- Daiquiri (`daiquiri`) software definition for IVOA TAP scientific-database websites; **4** catalogs.
+- Diversity Workbench (`diversityworkbench`) software definition for SNSB bio- and geodiversity modules; **4** catalogs.
+- OPeNDAP Hyrax (`opendaphyrax`) software definition for the OPeNDAP 4 data server (OLFS + BES); **4** catalogs. Distinct from generic OPeNDAP and older Hyrax IDs.
+- dpWebmap (`dpwebmap`) software definition for Digpro `/bios/dpwebmap/`; **3** catalogs.
+- IGO2 (`igo2`) software definition for Quebec Open GIS Infrastructure 2.0; **3** catalogs.
+- InfoMap (`infomap`) software definition for Emtel New Zealand `*.infomap.co.nz`; **3** catalogs.
+- pGIS (`pgis`) software definition for TOPODATI Latvian `*.pgis.lv`; **3** catalogs.
+- PRODIGE (`prodige`) software definition for the ADULLACT multi-partner SDI; **3** catalogs.
+- ArcGIS StoryMaps (`arcgisstorymaps`) software definition for Esri `storymaps.arcgis.com`; **2** catalogs.
+- Geoambiental (`geoambiental`) software definition for SIGMA Ingeniería Colombian environmental GIS; **2** catalogs.
+- GT Map (`gtmap`) software definition for V&G Korean LifeMap / SODA; **2** catalogs.
+- OneGeo Suite (`onegeosuite`) software definition for Neogeo Explorer/portal stacks; **2** catalogs.
+- Terratwin (`terratwin`) software definition for German municipal ArcGIS digital-twin geoportals; **2** catalogs.
+- Xiltrion (`xiltrion`) software definition for Dataxil multipurpose-cadastre viewers; **2** catalogs.
+- Aubrey (`aubrey`) software definition for UNT Libraries digital-collection access (UNT Digital Library / Portal to Texas History); **2** catalogs.
+- openEQUELLA (`openequella`) software definition for Edalex digital repositories; **2** catalogs.
+- 3MAP (`3map`) software definition for 3 PORT IT 3OIS municipal GIS (`3-port.si`); **1** catalog.
+- AvanMap (`avanmap`), Berry GIS (`berryict`), Geocad System Enterprise Edition (`geocadgsee`), inkasPortal (`inkasportal`), KC WebGIS (`kcwebgis`), and CWIS (`cwis`) software definitions (one catalog each).
+- Software definitions from custom-catalog reviews (instance hunts pending or still tagged `custom` / another ID): CartoVista (`cartovista`), CGI WebGIS / Facta WebGIS (`factawebgis`), Flood Intelligence Portal (`floodintelligenceportal`), GIS4U (`gis4u`; T-MAPY `/mapa/` tenants currently counted under `gisplan`), Myeongji WebGIS (`myeongji`), NAZCA (`nazca`), SHK Kent Bilgi Sistemi (`shkkbs`), VB GIS (`vbgis`), Microsoft Power BI (`powerbi`), Qlik Sense (`qlik`), Microsoft SharePoint (`sharepoint`), R Shiny (`shiny`), Tableau (`tableau`), GIS Open Data Portal (`gisopendataportal`), RUDI (`rudi`), SIMAI Open Data Portal (`simaiopendata`), BRAHMS Online (`brahmsonline`), ESIMO (`esimo`), FLAT (`flat`), Greenstone (`greenstone`), and LOVD (`lovd`).
+- **1,802** Polish Geo-System e-mapa.net (`emapa`) municipal geoportals (e-mapa.net now **1,927**).
+- **288** GISPLAN, **244** GisOnline, **121** Mapotip, and **116** Geoportál GEPRO catalogs (mostly Czech municipal GIS, including GIS4U-branded tenants still tagged `gisplan`).
+- **162** Slovak mOBEC and **115** Geodeticca WEB GIS municipal geoportals.
+- **133** Italian GisMaster comune catalogs and **31** PAGIS / GeneGIS tenants.
+- **122** GeoMapFish geoportals (mostly Swiss cantonal/municipal).
+- **94** Brazilian CTMGEO SigWEB cadastral catalogs.
+- **84** Japanese WagMap geoportals plus further SonicWeb and ALANDIS+ tenants.
+- **70** GBIF platform catalogs, **66** Elsevier Digital Commons repositories, **64** THREDDS scientific data servers, **61** SeaSketch project maps, **53** Croatian DABAR institutional repositories, **53** IsiGéo, **44** ArcGIS Instant Apps, **37** NetGIS Server, and **36** Knoema indicator catalogs.
+- **24** ERDDAP scientific endpoints and **12** Nesstar microdata catalogs (recategorized from `opendata/` / `indicators/` into `scientific/` and `microdata/`).
+- **20** Conduent HCI and **17** Axiom Portal catalogs (US).
+- **22** German NOLIS and **20** touvia.MAPS geoportals.
+- Russian open-data and geoportal coverage (**149** catalogs), including Bitrix, WordPress, NextGIS Web, and Sputnik Web tenants.
+- Curaçao SeaSketch and CBS indicator catalogs; Wallis and Futuna SPC PopGIS.
+
+### Changed
+
+- Discovery and harvest guides (viewers, scientific-domain, open data, geoportals, indicators) plus `docs/software-index.md` now cover the new software IDs.
+- Regenerated dataset exports to match source YAML: **35,266** catalogs, **0** scheduled, **423** software.
+- Recategorized THREDDS and ERDDAP endpoints from `opendata/` into `scientific/`, and Nesstar catalogs into `microdata/`.
+- Metadata and status repairs on existing records (including Ukrainian open-data portals and several federal geoportals).
+
+### Removed
+
+- **133** records relative to v1.19.0. Most are path recategorization (THREDDS/ERDDAP/Nesstar moved to `scientific/` or `microdata/`). Dropped as unreachable or out of scope: dead US ArcGIS Server / Hub directories (NCE, USGS EDC International, DOJ ESP, Grand Canyon, CDC OneMap, NPS, TPL GIS `server5`/`server6`, Northeast Ocean Data, Marin, Orange County, GeoSL, Grand County, NECCOG, Niles, Integrity GIS image servers, NCDCR, Rockwall, ORCity maps), Esri Press books Hub, FRED (St. Louis Fed), PNDB OpenDataSoft, IPUMS CDOH (coverage kept on the international IPUMS microdata record), generic dataX.io country sites (Argentina, Chile, Colombia, Peru, Data USA), AWS Open Data Registry, Data Chile / Lixandria, Recap platforms, CMEMS viewer slices, and several duplicate THREDDS/ERDDAP adaptor URLs.
+
 ## [1.19.0] - 2026-09-03
 
 **GitHub Release**: [v1.19.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.19.0) - Published September 3, 2026

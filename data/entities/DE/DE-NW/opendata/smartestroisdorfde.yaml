@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: CIVORA / Piveau municipal data catalog of Stadt Troisdorf (Smartes Troisdorf),
+  listing local open datasets from the city's urban data hub.
+endpoints:
+- type: customapi
+  url: https://piveau-search.troisdorf.civora.org/search
+- type: customapi
+  url: https://piveau-repo.troisdorf.civora.org/catalogues
+- type: customapi
+  url: https://piveau-repo.troisdorf.civora.org/datasets
+- type: ckan:package-search
+  url: https://piveau-search.troisdorf.civora.org/ckan/package_search
+  version: '3'
+- type: docs
+  url: https://piveau-search.troisdorf.civora.org/
+id: smartestroisdorfde
+langs:
+- id: DE
+  name: German
+link: https://smartes.troisdorf.de/app/catalog
+name: Smartes Troisdorf Datenkatalog
+owner:
+  link: https://www.troisdorf.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+  name: Stadt Troisdorf
+  type: Local government
+properties:
+  dataset_count_reported: 8
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: piveau
+  name: Piveau
+status: active
+tags:
+- government
+- has_api
+- open data
+- Troisdorf
+- Nordrhein-Westfalen
+- municipal
+- piveau
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99999502

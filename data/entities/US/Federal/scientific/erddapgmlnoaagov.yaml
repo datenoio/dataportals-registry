@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ERDDAP catalog providing atmospheric and environmental observations from
+  NOAA's Global Monitoring Laboratory.
+endpoints:
+- type: erddap:index
+  url: https://erddap.gml.noaa.gov/erddap/index.json
+- type: erddap:datasets
+  url: https://erddap.gml.noaa.gov/erddap/info/index.json
+- type: opensearch
+  url: https://erddap.gml.noaa.gov/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://erddap.gml.noaa.gov/erddap/sitemap.xml
+langs:
+  - id: EN
+    name: English
+id: erddapgmlnoaagov
+link: https://erddap.gml.noaa.gov/erddap/index.html
+name: NOAA Global Monitoring Laboratory ERDDAP
+owner:
+  link: https://gml.noaa.gov/
+  location:
+    country:
+      id: US
+      name: United States
+  name: NOAA Global Monitoring Laboratory
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- scientific
+- research
+- government
+- United States
+- has_api
+- ERDDAP
+- environment
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00042154

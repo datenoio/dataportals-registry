@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-WA
+      name: Washington
+description: Western Washington University Libraries Archipelago Commons repository
+  (MABEL). Public advanced search lists about 32,928 digital objects; 17 are Dataset-type
+  ADOs (environmental chemistry, planetary spectroscopy, salmon risk assessment, and
+  related research data). Photograph and special-collections ADOs dominate the rest
+  of the catalog.
+endpoints:
+- type: rss
+  url: https://mabel.wwu.edu/rss.xml
+  version: '2.0'
+- type: drupal:jsonapi
+  url: https://mabel.wwu.edu/jsonapi/node/digital_object
+id: mabelwwuedu
+langs:
+- id: EN
+  name: English
+link: https://mabel.wwu.edu
+name: MABEL (Western Washington University)
+owner:
+  link: https://library.wwu.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WA
+      name: Washington
+  name: Western Libraries, Western Washington University
+  type: Academy
+properties:
+  dataset_count_reported: 17
+  is_national: false
+software:
+  id: archipelago
+  name: Archipelago Commons
+status: active
+tags:
+- scientific
+- research data
+- university
+- archives
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99998971

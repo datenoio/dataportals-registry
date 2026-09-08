@@ -1,0 +1,73 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: bexis2
+name: BEXIS2
+website: https://bexis2.uni-jena.de
+description: BEXIS2 is an open-source research data management and repository
+  platform for structured and unstructured data. It supports configurable metadata,
+  dataset versioning, variable-level data structures, access control, search, DOI
+  workflows, downloads, and read/write web APIs.
+owner:
+  name: BEXIS2 Team, Friedrich Schiller University Jena
+  location:
+    country:
+      id: DE
+      name: Germany
+logo_url: https://bexis2.uni-jena.de/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: Uncertain
+  iso19115: 'No'
+  oai-pmh: Uncertain
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: Limited
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/BEXIS2/Core
+documentation_url: https://github.com/BEXIS2/Documents
+changelog_url: https://github.com/BEXIS2/Core/releases
+version: 4.3.1
+release_date: '2026-05-19'
+license:
+  type: LGPL-3.0
+  url: https://github.com/BEXIS2/Core/blob/master/License/LICENSE
+export_formats:
+- CSV
+- Darwin Core Archive
+- JSON
+- XML
+- ZIP
+capabilities:
+- Dataset and metadata APIs
+- Structured and unstructured data storage
+- Dataset versioning and access control
+- Variable-level data structures
+- DOI and citation workflows
+- Bulk dataset packages
+last_updated: '2026-09-06T00:00:00Z'

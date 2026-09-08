@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+description: Public thematic geodata catalogue of the Municipality of Rotterdam, exposing
+  municipal spatial themes through a MapServer WMS.
+endpoints:
+- type: wms130
+  url: https://ows.gis.rotterdam.nl/cgi-bin/mapserv.exe?map=d%3A%5Cgwr%5Cwebdata%5Cmapserver%5Cmap%5Cmonumenten_pub.map&service=WMS&request=GetCapabilities&version=1.3.0
+  version: 1.3.0
+id: wwwgisrotterdamnl
+langs:
+- id: NL
+  name: Dutch
+link: https://www.gis.rotterdam.nl/Gisweb2/Default.aspx?context=MIJNPROJECT.444
+name: Rotterdam GisWeb
+owner:
+  link: https://www.rotterdam.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+  name: Gemeente Rotterdam
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: mapserver
+  name: MapServer
+status: active
+tags:
+- geospatial
+- government
+- MapServer
+- Rotterdam
+- Netherlands
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00039858

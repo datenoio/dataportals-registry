@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-64
+      name: Pyrénées-Atlantiques
+description: Municipal open data portal of the Ville de Biarritz.
+endpoints:
+- type: opendatasoftapi
+  url: https://data.biarritz.fr/api
+- type: sitemap
+  url: https://data.biarritz.fr/sitemap.xml
+id: databiarritzfr
+langs:
+- id: FR
+  name: French
+link: https://data.biarritz.fr
+name: Open Data Biarritz
+owner:
+  link: https://www.biarritz.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-64
+      name: Pyrénées-Atlantiques
+  name: Ville de Biarritz
+  type: Local government
+properties:
+  dataset_count_reported: 22
+  is_national: false
+software:
+  id: opendatasoft
+  name: OpenDataSoft
+status: active
+tags:
+- government
+- municipal
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00039316

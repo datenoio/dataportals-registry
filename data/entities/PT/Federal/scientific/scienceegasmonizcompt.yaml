@@ -1,0 +1,77 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Public Pure research portal for Egas Moniz School of Health and Science,
+  including searchable datasets and related institutional research information.
+endpoints:
+- type: oaipmh20
+  url: https://science.egasmoniz.com.pt/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://science.egasmoniz.com.pt/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://science.egasmoniz.com.pt/sitemap/datasets.xml
+- type: sitemap
+  url: https://science.egasmoniz.com.pt/sitemap.xml
+id: scienceegasmonizcompt
+langs:
+- id: EN
+  name: English
+- id: PT
+  name: Portuguese
+link: https://science.egasmoniz.com.pt
+name: Egas Moniz School of Health and Science Research Portal
+owner:
+  link: https://www.egasmoniz.com.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: Egas Moniz School of Health and Science
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research data
+- datasets
+- health research
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+uid: cdi00041787

@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Public document databases published by the French Ministry for Europe
+  and Foreign Affairs.
+endpoints:
+- type: opendatasoftapi
+  url: https://basedoc.diplomatie.gouv.fr/api
+- type: sitemap
+  url: https://basedoc.diplomatie.gouv.fr/sitemap.xml
+id: basedocdiplomatiegouvfr
+langs:
+- id: FR
+  name: French
+link: https://basedoc.diplomatie.gouv.fr
+name: Bases documentaires du ministère de l'Europe et des Affaires étrangères
+owner:
+  link: https://www.diplomatie.gouv.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Ministère de l'Europe et des Affaires étrangères
+  type: Central government
+properties:
+  dataset_count_reported: 3
+  is_national: false
+software:
+  id: opendatasoft
+  name: OpenDataSoft
+status: active
+tags:
+- government
+- foreign affairs
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00039366

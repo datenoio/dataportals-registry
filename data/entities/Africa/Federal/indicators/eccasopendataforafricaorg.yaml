@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: Africa
+      name: Africa
+    level: 10
+    macroregion:
+      id: '017'
+      name: Middle Africa
+description: Regional statistical indicators portal for the Economic Community of
+  Central African States.
+endpoints:
+- type: knoema:search
+  url: https://eccas.opendataforafrica.org/api/1.0/search
+  version: '1.0'
+- type: sdmx:datastructure
+  url: https://eccas.opendataforafrica.org/api/1.0/sdmx
+  version: '2.0'
+- type: opensearch
+  url: https://eccas.opendataforafrica.org/OpenSearch.xml
+id: eccasopendataforafricaorg
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+- id: ES
+  name: Spanish
+link: https://eccas.opendataforafrica.org/
+name: ECCAS Open Data Portal
+owner:
+  link: https://eccas.opendataforafrica.org/
+  location:
+    country:
+      id: Africa
+      name: Africa
+    level: 10
+  name: Economic Community of Central African States
+  type: International
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: knoema
+  name: Knoema
+status: active
+tags:
+- has_api
+- statistics
+- indicators
+- Knoema
+- Open Data for Africa
+- regional
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00038561

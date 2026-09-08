@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-GES
+      name: Grand-Est
+description: Open data portal of the Communauté de communes Pays Haut Val d'Alzette.
+endpoints:
+- type: opendatasoftapi
+  url: https://ccphva.opendatasoft.com/api
+- type: sitemap
+  url: https://ccphva.opendatasoft.com/sitemap.xml
+id: ccphvaopendatasoftcom
+langs:
+- id: FR
+  name: French
+link: https://ccphva.opendatasoft.com
+name: Open Data CCPHVA
+owner:
+  link: https://www.ccphva.com
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-GES
+      name: Grand-Est
+  name: Communauté de communes Pays Haut Val d'Alzette
+  type: Local government
+properties:
+  dataset_count_reported: 25
+  is_national: false
+software:
+  id: opendatasoft
+  name: OpenDataSoft
+status: active
+tags:
+- government
+- intermunicipal
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00039333

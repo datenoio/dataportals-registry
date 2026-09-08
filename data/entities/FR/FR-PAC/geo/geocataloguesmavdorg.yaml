@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 40
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-PAC
+      name: Provence-Alpes-Côte-d’Azur
+description: Isogeo / PixUp data portal of the Syndicat Mixte d’Aménagement de la
+  Vallée de la Durance (SMAVD).
+endpoints:
+- type: isogeo:catalog
+  url: https://geocatalogue.smavd.org/
+id: geocataloguesmavdorg
+langs:
+- id: FR
+  name: French
+link: https://geocatalogue.smavd.org
+name: Geocatalogue SMAVD
+owner:
+  link: https://www.smavd.org
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-PAC
+      name: Provence-Alpes-Côte-d’Azur
+  name: Syndicat Mixte d’Aménagement de la Vallée de la Durance
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://geocatalogue.smavd.org/terms/privacy-policy/
+  rights_type: granular
+  tos_url: https://geocatalogue.smavd.org/terms/terms-and-conditions/
+software:
+  id: isogeo
+  name: Isogeo
+status: active
+tags:
+- France
+- geospatial
+- government
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00037115

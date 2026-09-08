@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: ZM
+      name: Zambia
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Public economic, monetary, and financial indicators portal of the Bank
+  of Zambia.
+endpoints:
+- type: knoema:search
+  url: https://bankofzambia.opendataforafrica.org/api/1.0/search
+  version: '1.0'
+- type: sdmx:datastructure
+  url: https://bankofzambia.opendataforafrica.org/api/1.0/sdmx
+  version: '2.0'
+- type: opensearch
+  url: https://bankofzambia.opendataforafrica.org/OpenSearch.xml
+id: bankofzambiaopendataforafricaorg
+langs:
+- id: EN
+  name: English
+link: https://bankofzambia.opendataforafrica.org/
+name: Bank of Zambia Data Portal
+owner:
+  link: https://bankofzambia.opendataforafrica.org/
+  location:
+    country:
+      id: ZM
+      name: Zambia
+    level: 20
+  name: Bank of Zambia
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: knoema
+  name: Knoema
+status: active
+tags:
+- has_api
+- statistics
+- indicators
+- Knoema
+- Open Data for Africa
+- government
+- Zambia
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00042323

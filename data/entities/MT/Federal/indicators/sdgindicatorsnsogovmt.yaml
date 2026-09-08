@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: MT
+      name: Malta
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Official National Statistics Office portal for Malta's Sustainable Development
+  Goal indicators.
+endpoints:
+- type: opensdg:catalog
+  url: https://sdgindicators.nso.gov.mt/
+- type: opensdg:catalog
+  url: https://sdgindicators.nso.gov.mt/reporting-status/
+id: sdgindicatorsnsogovmt
+langs:
+- id: EN
+  name: English
+link: https://sdgindicators.nso.gov.mt/
+name: Malta SDG Indicators
+owner:
+  link: https://nso.gov.mt/
+  location:
+    country:
+      id: MT
+      name: Malta
+    level: 20
+  name: National Statistics Office Malta
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: opensdg
+  name: OpenSDG
+status: active
+tags:
+- sustainable development goals
+- indicators
+- official statistics
+- government
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00039825

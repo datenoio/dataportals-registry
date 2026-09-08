@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: false
+api_status: inactive
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion: &id001
+      id: AR-X
+      name: Córdoba
+description: Former Junar open data portal of the City of Córdoba, Argentina. The
+  tenant now returns HTTP 410. Successor open-data presence is elsewhere in the registry.
+id: cordobaciudadopendatajunarcom
+langs:
+- id: ES
+  name: Spanish
+link: https://cordobaciudad.opendata.junar.com
+name: Datos Abiertos - Ciudad de Córdoba
+owner:
+  link: https://www.cordoba.gob.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion: *id001
+  name: Municipalidad de Córdoba
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: junar
+  name: Junar
+status: inactive
+tags:
+- government
+- junar
+- Open data portal
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00038522

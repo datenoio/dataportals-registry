@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MA
+      name: Massachusetts
+description: Tufts Digital Library is a Hyrax repository for Tufts University digital
+  collections, including spreadsheet and CSV research datasets alongside cultural
+  heritage objects.
+endpoints:
+- type: hyrax:catalog
+  url: https://dl.tufts.edu/catalog
+- type: oaipmh20
+  url: https://dl.tufts.edu/catalog/oai?verb=Identify
+  version: '2.0'
+id: dltuftsedu
+langs:
+- id: EN
+  name: English
+link: https://dl.tufts.edu
+name: Tufts Digital Library
+owner:
+  link: https://www.tufts.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MA
+      name: Massachusetts
+  name: Tufts University
+  type: Academy
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: hyrax
+  name: Samvera Hyrax
+status: active
+tags:
+- scientific
+- research data
+- digital collections
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99998954

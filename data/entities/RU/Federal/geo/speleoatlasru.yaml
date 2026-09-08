@@ -1,0 +1,53 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Public cave inventory with geographic and speleological region navigation,
+  maps, cave records and filters for physical characteristics. Covers Russia and selected
+  caves in other countries. Detailed entrance coordinates are withheld from public
+  access.
+id: speleoatlasru
+langs:
+- id: RU
+  name: Russian
+link: https://speleoatlas.ru/
+name: Информационно-поисковая система Пещеры
+owner:
+  link: https://www.rgo.ru/
+  location:
+    country: *id001
+    level: 20
+  name: Русское географическое общество
+  type: Civil society
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00041818

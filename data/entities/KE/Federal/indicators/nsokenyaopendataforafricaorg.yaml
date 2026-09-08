@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Official public statistical data portal of the Kenya National Bureau
+  of Statistics.
+endpoints:
+- type: knoema:search
+  url: https://nso-kenya.opendataforafrica.org/api/1.0/search
+  version: '1.0'
+- type: sdmx:datastructure
+  url: https://nso-kenya.opendataforafrica.org/api/1.0/sdmx
+  version: '2.0'
+- type: opensearch
+  url: https://nso-kenya.opendataforafrica.org/OpenSearch.xml
+id: nsokenyaopendataforafricaorg
+langs:
+- id: EN
+  name: English
+link: https://nso-kenya.opendataforafrica.org/
+name: Kenya National Bureau of Statistics Open Data
+owner:
+  link: https://nso-kenya.opendataforafrica.org/
+  location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+  name: Kenya National Bureau of Statistics
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: knoema
+  name: Knoema
+status: active
+tags:
+- has_api
+- statistics
+- indicators
+- Knoema
+- Open Data for Africa
+- government
+- Kenya
+- official statistics
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00039810

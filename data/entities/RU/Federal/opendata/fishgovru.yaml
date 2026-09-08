@@ -1,0 +1,50 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Federal fisheries agency open-data catalog listing ten datasets on territorial
+  offices, subordinate organizations, inspections, vacancies and international agreements.
+id: fishgovru
+langs:
+- id: RU
+  name: Russian
+link: https://fish.gov.ru/otkrytoe-agentstvo/otkrytye-dannye/
+name: Открытые данные Росрыболовства
+owner:
+  link: https://fish.gov.ru/
+  location:
+    country: *id001
+    level: 20
+  name: Федеральное агентство по рыболовству
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00041836

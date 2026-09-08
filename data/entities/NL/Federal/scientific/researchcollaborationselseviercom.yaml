@@ -1,0 +1,69 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Elsevier's public Pure portal for research collaborations, providing
+  searchable datasets produced or referenced by collaborative research projects.
+endpoints:
+- type: oaipmh20
+  url: https://researchcollaborations.elsevier.com/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://researchcollaborations.elsevier.com/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://researchcollaborations.elsevier.com/sitemap/datasets.xml
+- type: sitemap
+  url: https://researchcollaborations.elsevier.com/sitemap.xml
+id: researchcollaborationselseviercom
+langs:
+- id: EN
+  name: English
+link: https://researchcollaborations.elsevier.com
+name: Elsevier's Research Collaborations
+owner:
+  link: https://www.elsevier.com
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: Elsevier B.V.
+  type: Business
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research data
+- datasets
+- research collaboration
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039853

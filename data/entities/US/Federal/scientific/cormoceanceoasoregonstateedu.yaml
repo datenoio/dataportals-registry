@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ERDDAP catalog for the Cormorant Oceanography Project at Oregon State
+  University.
+endpoints:
+- type: erddap:index
+  url: https://cormocean.ceoas.oregonstate.edu/erddap/index.json
+- type: erddap:datasets
+  url: https://cormocean.ceoas.oregonstate.edu/erddap/info/index.json
+- type: opensearch
+  url: https://cormocean.ceoas.oregonstate.edu/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://cormocean.ceoas.oregonstate.edu/erddap/sitemap.xml
+langs:
+  - id: EN
+    name: English
+id: cormoceanceoasoregonstateedu
+link: https://cormocean.ceoas.oregonstate.edu/erddap/index.html
+name: Cormorant Oceanography Project ERDDAP
+owner:
+  link: https://ceoas.oregonstate.edu/
+  location:
+    country:
+      id: US
+      name: United States
+  name: Oregon State University
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- scientific
+- research
+- academic
+- United States
+- has_api
+- ERDDAP
+- marine
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00042147

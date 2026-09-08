@@ -151,7 +151,7 @@ If there is no dataset set, ListRecords and keep `dc:type` = `dataset` / `Datase
 
 **Drop:** `article`, `thesis`, `book`, `conference_item`, `exhibition`, `performance`.
 
-## Hyrax (`hyrax`) {#hyrax}
+## Samvera Hyrax (`hyrax`) {#hyrax}
 
 Blacklight JSON catalog. Work types include GenericWork, Dataset, Etd, Image, FileSet.
 
@@ -514,6 +514,60 @@ Domain stacks (IPT, THREDDS, Breedbase, ESGF, …): [harvest-scientific-domain.m
 2. Cap page size; do not request `size=10000` on Solr-backed IRs.
 3. Deduplicate on DOI, handle, or native id plus catalog `uid` ([harvest-identifiers.md](harvest-identifiers.md)). Emit [output records](harvest-output.md).
 4. Re-run with `from=` (OAI) or `updated` sort for incremental harvests when the API supports it ([harvest-incremental.md](harvest-incremental.md)).
+
+## FLAT (`flat`) {#flat}
+
+Start at the registered repository and use the advertised OAI-PMH endpoint. For Lund:
+`GET https://archive.humlab.lu.se/flat/oai2?verb=Identify`. Enumerate metadata formats and
+sets before ListRecords; prefer CMDI when offered, otherwise a supported descriptive format.
+Follow resumption tokens and preserve repository identifiers and collection membership.
+
+Keep deposited language-resource collections, corpora and dataset metadata. Exclude navigation
+nodes, user profiles and individual media files as independent datasets. Public metadata does
+not imply that restricted audio or video is downloadable. The
+[FLAT source documentation](https://github.com/TLA-FLAT/FLAT) describes its Fedora/Islandora
+components; administrative Fedora endpoints are not public harvesting seeds.
+
+## openEQUELLA (`openequella`) {#openequella}
+
+Start at the registered institution's repository and its advertised OAI-PMH or REST search
+interface. For RADAR: `GET https://radar.brookes.ac.uk/radar/oai?verb=Identify`.
+Enumerate metadata formats and sets, then use ListRecords with resumption tokens.
+[Apereo's product description](https://archived.apereo.org/projects/openequella)
+documents OAI and REST interfaces; authentication and route prefixes vary by institution.
+
+Keep dataset/research-resource metadata and attached resource links. Exclude teaching objects,
+publication-only records and administrative collections when harvesting research datasets.
+An item can have several versions and files; preserve its stable identifier and version
+without counting every attached file as a new dataset.
+
+## Aubrey (`aubrey`) {#aubrey}
+
+Start at the registered collection, such as
+`GET https://digital.library.unt.edu/explore/collections/UNTDRD/`, and follow its API link.
+[Official API guidance](https://digital.library.unt.edu/api/) documents collection-scoped
+interfaces and OAI-PMH formats `untl` and `oai_dc`. Resolve the exact collection scope from
+that help page instead of harvesting all historical materials in the library.
+
+Keep deposited datasets and their ARK identifiers, collection relationships and resource links.
+Follow OAI resumption tokens; exclude page images, IIIF tiles, navigation pages and non-data
+historical collections from dataset output. The metadata service is publicly documented;
+resource reuse rights still vary by item.
+
+## Dialnet CRIS (`dialnetcris`) {#dialnetcris}
+
+Start at the registered institutional portal. La Rioja exposes
+`GET https://investigacion.unirioja.es/oai/openaire?verb=Identify`.
+Enumerate the actual metadata formats and available sets before harvesting records.
+The [provider's product page](https://fundaciondialnet.unirioja.es/servicios/dialnet-cris/)
+describes an additional REST export service; do not assume that this service is public on
+every tenant or invent its URL.
+
+Keep explicitly typed datasets and their metadata/resource links. Drop researcher profiles,
+projects, indicators and publication-only entries from a dataset harvest. A CRIS record may
+link to a deposit in another repository: preserve that relationship instead of counting the
+same dataset twice. The presence of a CRIS platform does not prove that every tenant contains
+datasets; return an empty dataset result if the available records are only publications.
 
 ## Related
 

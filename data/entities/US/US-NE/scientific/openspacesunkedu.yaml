@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-NE
+      name: Nebraska
+description: Institutional research repository for University of Nebraska at Kearney,
+  including the public Data Repository collection exposed through Elsevier Digital
+  Commons OAI-PMH.
+endpoints:
+- type: oaipmh20
+  url: https://openspaces.unk.edu/do/oai/?verb=Identify
+  version: '2.0'
+id: openspacesunkedu
+langs:
+- id: EN
+  name: English
+link: https://openspaces.unk.edu
+name: OpenSPACES at UNK
+owner:
+  link: https://openspaces.unk.edu/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NE
+      name: Nebraska
+  name: University of Nebraska at Kearney
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: elsevierdigitalcommons
+  name: Elsevier Digital Commons
+status: active
+tags:
+- research data
+- institutional repository
+- datasets
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00038288

@@ -1,0 +1,51 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-PSK
+      name: Pskovskaja oblast'
+description: Regional government open-data section linking datasets on policy indicators,
+  coordinate-based information and government information systems.
+id: pskovru
+langs:
+- id: RU
+  name: Russian
+link: https://pskov.ru/opendata
+name: Открытые данные Правительства Псковской области
+owner:
+  link: https://pskov.ru/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Правительство Псковской области
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00041911

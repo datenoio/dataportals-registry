@@ -2,6 +2,7 @@
 
 import sys
 import os
+from pathlib import Path
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
@@ -14,6 +15,11 @@ from constants import (
     MAP_SOFTWARE_ALLOWED_CATALOG_TYPES,
     MAP_SOFTWARE_OWNER_CATALOG_TYPE,
     CUSTOM_SOFTWARE_KEYS,
+    CUSTOM_SOFTWARE_ALIAS_CATALOG_TYPE,
+    SOFTWARE_MAP_SKIP_IDS,
+    SOFTWARE_IDS_PATH,
+    software_ids_from_yaml,
+    render_software_ids_yaml,
     ENTRY_TEMPLATE,
     COUNTRIES,
 )
@@ -86,6 +92,34 @@ class TestConstants:
         assert "ckan" in MAP_SOFTWARE_OWNER_CATALOG_TYPE
         assert MAP_SOFTWARE_OWNER_CATALOG_TYPE["ckan"] == "Open data portal"
         assert MAP_SOFTWARE_OWNER_CATALOG_TYPE["arcgishub"] == "Geoportal"
+        for software_id in (
+            "bexis2",
+            "cwis",
+            "diversityworkbench",
+            "greenstone",
+        ):
+            assert (
+                MAP_SOFTWARE_OWNER_CATALOG_TYPE[software_id]
+                == "Scientific data repository"
+            )
+        assert MAP_SOFTWARE_OWNER_CATALOG_TYPE["vivo"] == "Scientific data repository"
+
+    def test_map_software_owner_catalog_type_from_yaml(self):
+        """Primary catalog_type comes from software YAML category, not a hand list."""
+        assert "custom" not in MAP_SOFTWARE_OWNER_CATALOG_TYPE
+        for software_id in SOFTWARE_MAP_SKIP_IDS:
+            assert software_id not in MAP_SOFTWARE_OWNER_CATALOG_TYPE
+        for software_id in software_ids_from_yaml():
+            if software_id in SOFTWARE_MAP_SKIP_IDS:
+                continue
+            assert software_id in MAP_SOFTWARE_OWNER_CATALOG_TYPE
+        assert MAP_SOFTWARE_OWNER_CATALOG_TYPE["stattech"] == "Indicators catalog"
+        for alias, catalog_type in CUSTOM_SOFTWARE_ALIAS_CATALOG_TYPE.items():
+            assert MAP_SOFTWARE_OWNER_CATALOG_TYPE[alias] == catalog_type
+
+    def test_software_ids_yaml_matches_software_dir(self):
+        actual = Path(SOFTWARE_IDS_PATH).read_text(encoding="utf8")
+        assert actual == render_software_ids_yaml()
 
     def test_map_software_allowed_catalog_types(self):
         """Multi-type software must list every allowed catalog_type pair used in QA."""
@@ -99,6 +133,29 @@ class TestConstants:
         assert "Geoportal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["opendatasoft"]
         assert "Geoportal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["wordpress"]
         assert "Indicators catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["wordpress"]
+        assert "Microdata catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["nada"]
+        assert "Scientific data repository" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["nada"]
+        assert "Metadata catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["molgenis"]
+        assert (
+            "Scientific data repository"
+            in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["molgenis"]
+        )
+        assert "Data search engine" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["vivo"]
+        assert (
+            "Scientific data repository"
+            in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["vivo"]
+        )
+        assert "General research repository" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES[
+            "worktribe"
+        ]
+        assert "Indicators catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["datawheel"]
+        assert "Machine learning catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES[
+            "openmlorg"
+        ]
+        for software_id, allowed in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES.items():
+            primary = MAP_SOFTWARE_OWNER_CATALOG_TYPE.get(software_id)
+            if primary:
+                assert primary in allowed, software_id
 
     def test_custom_software_keys(self):
         """Test CUSTOM_SOFTWARE_KEYS list"""

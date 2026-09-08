@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion:
+      id: '001'
+      name: World
+description: Public geospatial data catalogue for fisheries and marine resources of
+  the Western Central Atlantic Fishery Commission and FIRMS.
+id: geonetworkwecafcfirmsd4scienceorg
+langs:
+- id: EN
+  name: English
+link: https://geonetwork-wecafc-firms.d4science.org/geonetwork
+name: WECAFC-FIRMS Data Catalogue
+owner:
+  link: https://www.fao.org/wecafc/
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+  name: Food and Agriculture Organization of the United Nations (FAO)
+  type: International
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- fisheries
+- marine
+- geospatial
+- metadata
+- GeoNetwork
+- has_api
+- FIRMS
+- WECAFC
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+endpoints:
+- type: geonetwork:query
+  url: https://geonetwork-wecafc-firms.d4science.org/geonetwork/srv/eng/q
+- type: openapi
+  url: https://geonetwork-wecafc-firms.d4science.org/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://geonetwork-wecafc-firms.d4science.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geonetwork-wecafc-firms.d4science.org/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://geonetwork-wecafc-firms.d4science.org/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:site
+  url: https://geonetwork-wecafc-firms.d4science.org/geonetwork/srv/api/site
+uid: cdi00042290

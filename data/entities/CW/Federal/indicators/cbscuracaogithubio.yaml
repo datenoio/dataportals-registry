@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: CW
+      name: Curaçao
+    level: 20
+    macroregion:
+      id: 029
+      name: Caribbean
+description: National Sustainable Development Goal indicator portal maintained by
+  the Central Bureau of Statistics Curaçao.
+endpoints:
+- type: opensdg:catalog
+  url: https://cbs-curacao.github.io/sdg-site/
+- type: opensdg:catalog
+  url: https://cbs-curacao.github.io/sdg-site/reporting-status/
+id: cbscuracaogithubio
+langs:
+- id: EN
+  name: English
+link: https://cbs-curacao.github.io/sdg-site/
+name: Curaçao SDG Indicators
+owner:
+  link: https://www.cbs.cw/
+  location:
+    country:
+      id: CW
+      name: Curaçao
+    level: 20
+  name: Central Bureau of Statistics Curaçao
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+software:
+  id: opensdg
+  name: OpenSDG
+status: active
+tags:
+- sustainable development goals
+- indicators
+- official statistics
+- government
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00038712

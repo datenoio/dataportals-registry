@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Institutional repository of the University of Marketing and Distribution
+  Sciences, including social-science survey data.
+endpoints:
+- type: weko3:records
+  url: https://ryuka.repo.nii.ac.jp/api/records/?page=1&size=20
+- type: sitemap
+  url: https://ryuka.repo.nii.ac.jp/weko/sitemaps/sitemapindex.xml
+id: ryukareponiiacjp
+langs:
+- id: EN
+  name: English
+- id: JA
+  name: Japanese
+link: https://ryuka.repo.nii.ac.jp/
+name: University of Marketing and Distribution Sciences Repository
+owner:
+  link: https://www.umds.ac.jp/english/
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-28
+      name: Hyogo
+  name: University of Marketing and Distribution Sciences
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: weko3
+  name: WEKO3
+status: active
+tags:
+- research data
+- institutional repository
+- social survey
+- academy
+topics:
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00038356

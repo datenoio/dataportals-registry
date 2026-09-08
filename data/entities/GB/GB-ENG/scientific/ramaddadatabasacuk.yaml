@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: RAMADDA data repository of the UK Polar Data Centre, distributing DOI-citable
+  polar and cryospheric datasets from NERC-funded research, ESA and EU projects, and
+  British Antarctic Survey collections.
+endpoints:
+- type: ramadda:json
+  url: https://ramadda.data.bas.ac.uk/repository/entry/show?output=json
+id: ramaddadatabasacuk
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100010120
+  value: r3d100010120
+langs:
+- id: EN
+  name: English
+link: https://ramadda.data.bas.ac.uk/repository
+name: UK Polar Data Centre
+owner:
+  link: https://www.bas.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: British Antarctic Survey
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: ramadda
+  name: RAMADDA
+status: active
+tags:
+- RAMADDA
+- polar
+- Antarctica
+- Arctic
+- NERC
+- scientific
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi99999315

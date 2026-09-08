@@ -125,6 +125,14 @@ Map UI first. Harvest public CSW/WMS/REST on the same host when present. Do not 
 
 Map UI first. Harvest public REST/WMS on the same host when present. Do not scrape Web AppViewer tiles. One harvest scope per public `?id=` app. Distinct from `experiencebuilder` and `instantapps`. Viewer grain: [harvest-viewers.md](harvest-viewers.md#webappbuilder).
 
+## ArcGIS Dashboards (`arcgisdashboards`) {#arcgisdashboards}
+
+Resolve the public dashboard item and harvest its referenced ArcGIS feature/map services. Charts and indicators are presentation elements, not datasets. Deduplicate services already covered by a broader Hub or REST catalog. Viewer grain: [harvest-viewers.md](harvest-viewers.md#arcgisdashboards).
+
+## ArcGIS StoryMaps (`arcgisstorymaps`) {#arcgisstorymaps}
+
+Resolve the public story item and its referenced web maps, scenes, and ArcGIS data services. Harvest the underlying FeatureServer, MapServer, or ImageServer resources when the story is the catalog interface. Narrative blocks, images, videos, express-map annotations, and presentation sections are not datasets. Deduplicate services already covered by a broader Hub or REST catalog.
+
 ## ArcGIS Instant Apps (`instantapps`) {#instantapps}
 
 Map UI first. Harvest public REST/WMS on the same host when present. Do not scrape Instant App tiles or treat each template widget as a dataset. One harvest scope per public `appid`. Distinct from `experiencebuilder` and `webappbuilder`. Viewer grain: [harvest-viewers.md](harvest-viewers.md#instantapps).
@@ -510,3 +518,30 @@ Municipal viewers (cardo, NetGIS, GC Navi, NOL-IS, Masterportal, touvia.MAPS, Ti
 - [harvest-output.md](harvest-output.md)
 - [discovery-geoportals.md](discovery-geoportals.md)
 - [apidetect.md](apidetect.md)
+
+## OneGeo Suite (`onegeosuite`) {#onegeosuite}
+
+Follow the deployment's linked Explorer catalog, such as
+[DataSud Explorer](https://www.datasud.fr/explorer/), and retain one record per dataset,
+with publisher, source identifier, license and downloadable resources. Exclude editorial
+posts, map compositions and individual feature rows. The
+[DataSud white-label guide](https://www.datasud.fr/portal/services/marque-blanche/)
+links integration source and explains catalog filtering by organization and other facets.
+Resolve actual service URLs from the deployment's published configuration or integration
+code. A universal anonymous metadata API was not verified in this review; older OneGeo
+API projects and component versions must not be assumed to match every installation.
+Preserve access restrictions and deduplicate catalog entries shown in multiple portals.
+
+## PRODIGE (`prodige`) {#prodige}
+
+Use the deployment's linked metadata catalog rather than harvesting editorial pages.
+[DatARA's reuse guide](https://www.open-datara.fr/accueil/reutilisation/comment-reutiliser-les-donnees)
+lists GeoNetwork CSW catalogs, an Atom download feed, WMS/WFS services and the
+[PRODIGE resource API](https://catalogue.open-datara.fr/api/doc/). Keep one metadata
+record per dataset identifier; distributions and spatial features belong beneath it.
+The resource API documents authenticated operations and is not evidence of an anonymous
+catalog listing. Only use public read operations or explicitly authorized access.
+DatARA's advertised `/geonetwork/srv/fre/csw-opendata?service=CSW&request=GetCapabilities`
+returned HTTP 500, `Service not found`, on 2026-09-07; do not add it as a verified working
+endpoint. Discover the current metadata service from the linked catalog and apply the
+[shared protocol guidance](harvest-protocols.md). No catalog API fields were changed.

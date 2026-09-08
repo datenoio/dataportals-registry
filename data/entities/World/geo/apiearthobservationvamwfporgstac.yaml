@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: STAC API for the World Food Programme Humanitarian Data Cube (HDC), exposing
+  climate, vegetation, precipitation and related Earth observation collections used
+  in food-security analysis.
+endpoints:
+- type: stacserverapi
+  url: https://api.earthobservation.vam.wfp.org/stac/
+- type: openapi
+  url: https://api.earthobservation.vam.wfp.org/stac/api
+  version: '3.0'
+id: apiearthobservationvamwfporgstac
+langs:
+- id: EN
+  name: English
+link: https://api.earthobservation.vam.wfp.org/stac/
+name: WFP Humanitarian Data Cube STAC API
+owner:
+  link: https://www.wfp.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: United Nations World Food Programme
+  type: International
+properties:
+  has_doi: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- geospatial
+- has_api
+- STAC
+- Earth observation
+- satellite
+- climate
+- food security
+- humanitarian
+- Open Data Cube
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
+uid: cdi99999690

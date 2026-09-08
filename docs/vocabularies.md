@@ -77,7 +77,7 @@ Open-data portals usually use EU data themes. Geoportals may use ISO 19115. Inco
 | File | Used for |
 |------|----------|
 | `catalog_types.yaml` | `catalog_type` |
-| `software_ids.yaml` | `software.id` |
+| `software_ids.yaml` | `software.id` (generated from `data/software/` by `python scripts/builder.py sync-software-maps`) |
 | `status.yaml` | `status` |
 | `access_modes.yaml` | `access_mode` (prefer `open` / `restricted`) |
 | `owner_types.yaml` | canonical `owner.type` plus synonym map |

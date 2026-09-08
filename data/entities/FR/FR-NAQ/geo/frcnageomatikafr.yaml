@@ -1,0 +1,64 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-NAQ
+      name: Nouvelle-Aquitaine
+description: IsiGéo (Geomatika) web GIS tenant at frcna.geomatika.fr. Login-walled;
+  not a public open-data portal.
+endpoints:
+- type: isigeo:catalog
+  url: https://frcna.geomatika.fr/
+id: frcnageomatikafr
+langs:
+- id: FR
+  name: French
+link: https://frcna.geomatika.fr/
+name: FRC Nouvelle-Aquitaine Carto-Chasse
+owner:
+  link: https://frcna.geomatika.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-NAQ
+      name: Nouvelle-Aquitaine
+  name: Fédération régionale des chasseurs de Nouvelle-Aquitaine
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: isigeo
+  name: IsiGéo
+status: active
+tags:
+- France
+- geoportal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00039336

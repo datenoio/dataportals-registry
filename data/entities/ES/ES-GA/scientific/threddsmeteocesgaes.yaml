@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-GA
+      name: Galicia [Galicia]
+description: CESGA THREDDS service publishing meteorological observations, numerical
+  models, radar precipitation, reanalysis, and regional environmental datasets.
+endpoints:
+- type: thredds:catalog
+  url: https://thredds-meteo.cesga.es/thredds/catalog/catalog.xml
+id: threddsmeteocesgaes
+langs:
+- id: EN
+  name: English
+- id: ES
+  name: Spanish
+link: https://thredds-meteo.cesga.es/thredds/catalog/catalog.html
+name: CESGA Meteorological THREDDS Catalog
+owner:
+  link: https://www.cesga.es/en/
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-GA
+      name: Galicia [Galicia]
+  name: Galician Supercomputing Centre (CESGA)
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- THREDDS
+- meteorology
+- radar
+- reanalysis
+- Galicia
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00039223

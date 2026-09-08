@@ -29,13 +29,13 @@ metadata_support:
   dublin_core: 'No'
   iso19115: 'No'
   oai-pmh: 'No'
-  ogcrecords: 'Yes'
+  ogcrecords: 'No'
   openaire: 'No'
   opensearch: 'No'
   rdf_sparql: 'No'
   schema-org: 'No'
   sdmx: 'No'
-  stac: 'Yes'
+  stac: 'No'
   swordapi: 'No'
   wcs: 'Yes'
   wfs: 'Yes'
@@ -53,7 +53,6 @@ repository_url: https://github.com/3liz/lizmap-web-client
 documentation_url: https://docs.lizmap.com
 version: 3.9.4
 export_formats:
-- CSW
 - GML
 - GeoJSON
 - JSON
@@ -61,9 +60,8 @@ export_formats:
 - XML
 capabilities:
 - REST API
-- STAC catalog
 - WMS service
 - WFS service
 - WCS service
 changelog_url: https://github.com/3liz/lizmap-web-client/releases
-last_updated: '2026-03-31T00:00:00Z'
+last_updated: '2026-09-08T00:00:00Z'

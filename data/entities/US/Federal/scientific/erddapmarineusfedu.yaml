@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ERDDAP catalog providing marine remote-sensing and oceanographic datasets
+  from the University of South Florida.
+endpoints:
+- type: erddap:index
+  url: https://erddap.marine.usf.edu/erddap/index.json
+- type: erddap:datasets
+  url: https://erddap.marine.usf.edu/erddap/info/index.json
+- type: opensearch
+  url: https://erddap.marine.usf.edu/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://erddap.marine.usf.edu/erddap/sitemap.xml
+langs:
+  - id: EN
+    name: English
+id: erddapmarineusfedu
+link: https://erddap.marine.usf.edu/erddap/index.html
+name: University of South Florida IMaRS ERDDAP
+owner:
+  link: https://www.usf.edu/marine-science/
+  location:
+    country:
+      id: US
+      name: United States
+  name: University of South Florida Institute for Marine Remote Sensing
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- scientific
+- research
+- academic
+- United States
+- has_api
+- ERDDAP
+- marine
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00042155

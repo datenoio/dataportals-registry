@@ -1,0 +1,78 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: HT
+      name: Haiti
+    level: 20
+    macroregion:
+      id: 029
+      name: Caribbean
+description: SISNU client follow-up (Suivi Linéaire des Clients) DHIS2 tracker instance
+  of Haiti's Ministry of Public Health and Population. Login is required to query
+  case-based records.
+endpoints:
+- type: dhis2:catalog
+  url: https://slc.sisnu.net
+- type: dhis2:system-info
+  url: https://slc.sisnu.net/api/system/info
+- type: dhis2:datasets
+  url: https://slc.sisnu.net/api/dataSets.json?fields=id,displayName&pageSize=1
+id: slcsisnunet
+langs:
+- id: FR
+  name: French
+link: https://slc.sisnu.net
+name: SISNU Haiti SLC (DHIS2)
+owner:
+  link: https://www.mspp.gouv.ht
+  location:
+    country:
+      id: HT
+      name: Haiti
+    level: 20
+  name: Ministère de la Santé Publique et de la Population
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dhis2
+  name: DHIS2
+status: active
+tags:
+- health
+- HMIS
+- DHIS2
+- government
+- restricted
+- tracker
+- Haiti
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00039537

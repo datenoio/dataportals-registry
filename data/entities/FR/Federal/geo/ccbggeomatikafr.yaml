@@ -1,0 +1,58 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: IsiGéo (Geomatika) web GIS tenant at ccbg.geomatika.fr. Login-walled;
+  not a public open-data portal.
+endpoints:
+- type: isigeo:catalog
+  url: https://ccbg.geomatika.fr/
+id: ccbggeomatikafr
+langs:
+- id: FR
+  name: French
+link: https://ccbg.geomatika.fr/
+name: CCBG IsiGéo
+owner:
+  link: https://ccbg.geomatika.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: CCBG
+  type: Other
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: isigeo
+  name: IsiGéo
+status: active
+tags:
+- France
+- geoportal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00039349

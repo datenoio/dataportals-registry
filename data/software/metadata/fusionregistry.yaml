@@ -9,15 +9,15 @@ datatypes:
 has_api: 'Yes'
 has_bulk: 'No'
 id: fusionregistry
-description: Fusion Metadata Registry (FMR) is an SDMX-native metadata and registry
-  platform for publishing structural metadata, code lists, and related services via
-  REST APIs.
+description: Fusion Metadata Registry (FMR) is the SDMX structural metadata registry
+  published under the BIS Open Tech initiative (sdmx.io). It stores dataflows, DSDs,
+  and codelists and exposes the SDMX REST API used by official-statistics registries.
 owner:
-  name: Center for Expanded Data Annotation and Retrieval (CEDAR), Stanford University
+  name: Bank for International Settlements (BIS Open Tech)
   location:
     country:
-      id: US
-      name: United States
+      id: CH
+      name: Switzerland
 logo_url: https://www.sdmx.io/favicon.ico
 metadata_support:
   ckan_api: 'No'
@@ -30,16 +30,16 @@ metadata_support:
   ogcrecords: 'No'
   openaire: 'No'
   opensearch: 'No'
-  rdf_sparql: 'Yes'
+  rdf_sparql: 'No'
   schema-org: 'No'
-  sdmx: 'No'
+  sdmx: 'Yes'
   stac: 'No'
   swordapi: 'No'
   wcs: 'No'
   wfs: 'No'
   wms: 'No'
 name: Fusion Metadata Registry
-website: https://www.sdmx.io/fmr/
+website: https://www.sdmx.io/software/fmr/
 pid_support:
   has_doi: 'No'
   persistent_dataset_url: 'Yes'
@@ -48,9 +48,19 @@ rights_management:
   supports_licenses: 'No'
 storage_type: Both
 type: Software
-repository_url: https://github.com/metadatacenter/fusion-registry
-documentation_url: https://metadatacenter.github.io/fusion-registry/
+repository_url: https://github.com/bis-med-it/fmr-public
+documentation_url: https://www.sdmx.io/software/fmr/
+version: 12.2.0
+license:
+  type: Apache-2.0
+  url: https://www.apache.org/licenses/LICENSE-2.0
+export_formats:
+- JSON
+- SDMX
+- XML
 capabilities:
 - REST API
-changelog_url: https://github.com/metadatacenter/fusion-registry/releases
-last_updated: '2026-03-31T12:00:00Z'
+- SDMX support
+- Structural metadata registry
+changelog_url: https://github.com/bis-med-it/fmr-public/releases
+last_updated: '2026-09-08T00:00:00Z'

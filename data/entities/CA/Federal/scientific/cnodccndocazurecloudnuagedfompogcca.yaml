@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ERDDAP data catalog operated by the Canadian National Oceanographic Data
+  Centre for oceanographic and marine datasets.
+endpoints:
+- type: erddap:index
+  url: https://cnodc-cndoc.azure.cloud-nuage.dfo-mpo.gc.ca/erddap/index.json
+- type: erddap:datasets
+  url: https://cnodc-cndoc.azure.cloud-nuage.dfo-mpo.gc.ca/erddap/info/index.json
+- type: opensearch
+  url: https://cnodc-cndoc.azure.cloud-nuage.dfo-mpo.gc.ca/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://cnodc-cndoc.azure.cloud-nuage.dfo-mpo.gc.ca/erddap/sitemap.xml
+id: cnodccndocazurecloudnuagedfompogcca
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://cnodc-cndoc.azure.cloud-nuage.dfo-mpo.gc.ca/erddap/index.html
+name: Canadian National Oceanographic Data Centre ERDDAP
+owner:
+  link: https://www.dfo-mpo.gc.ca/
+  location:
+    country:
+      id: CA
+      name: Canada
+  name: Fisheries and Oceans Canada
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- scientific
+- research
+- government
+- Canada
+- has_api
+- ERDDAP
+- marine
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00038628

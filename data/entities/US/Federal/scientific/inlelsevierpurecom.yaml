@@ -1,0 +1,72 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Idaho National Laboratory's public Pure research portal provides searchable
+  datasets and related information about laboratory research and scholarly outputs.
+endpoints:
+- type: oaipmh20
+  url: https://inl.elsevierpure.com/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://inl.elsevierpure.com/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://inl.elsevierpure.com/sitemap/datasets.xml
+- type: sitemap
+  url: https://inl.elsevierpure.com/sitemap.xml
+id: inlelsevierpurecom
+langs:
+- id: EN
+  name: English
+link: https://inl.elsevierpure.com
+name: Idaho National Laboratory Research Portal
+owner:
+  link: https://inl.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Idaho National Laboratory
+  type: Federal government
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research data
+- datasets
+- laboratory research
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
+uid: cdi00042159

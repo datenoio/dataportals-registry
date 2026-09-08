@@ -1,0 +1,53 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id002
+      id: RU-KHM
+      name: Hanty-Mansijskij avtonomnyj okrug
+description: Municipal gallery of public thematic maps of Surgut, including urban
+  infrastructure, electoral districts and city services. The public menu API lists
+  available map applications.
+id: mapsadmsurgutru
+langs:
+- id: RU
+  name: Russian
+link: https://maps.admsurgut.ru/
+name: Интерактивные карты города Сургута
+owner:
+  link: https://admsurgut.ru
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Администрация города Сургута
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00041886

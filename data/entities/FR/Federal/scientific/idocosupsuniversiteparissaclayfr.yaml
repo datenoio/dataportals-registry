@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -20,6 +20,9 @@ description: IDOC (Integrated Data & Operation Center) has existed since 2003 as
   des Sciences de l’Univers de l’Université Paris Saclay). IDOC participates in the
   space missions of OSUPS and its partners, from mission design to long-term scientific
   data archiving.
+endpoints:
+- type: tap:capabilities
+  url: https://idoc-dachs.ias.u-psud.fr/tap/capabilities
 id: idocosupsuniversiteparissaclayfr
 identifiers:
 - id: openaire
@@ -39,8 +42,8 @@ owner:
   name: Observatoires des Sciences de l'Univers
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: dachs
+  name: DaCHS
 status: active
 tags:
 - scientific
@@ -48,6 +51,8 @@ tags:
 - academic
 - remote sensing
 - earth observation
+- TAP
+- virtual observatory
 topics:
 - id: TECH
   name: Science and technology

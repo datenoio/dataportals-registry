@@ -1,0 +1,59 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: factawebgis
+name: CGI WebGIS (Facta WebGIS)
+website: https://www.cgi.com/fi/fi/tuoteratkaisut/facta
+description: CGI WebGIS, deployed in earlier installations as Facta WebGIS,
+  publishes Finnish municipal register and geospatial data in a browser map.
+  Facta WebGIS 4 deployments have that exact HTML title and load facta.css plus
+  bundle.js from a /karttapalvelu.{tenant}/ application path.
+owner:
+  name: CGI Finland Oy
+  location:
+    country:
+      id: FI
+      name: Finland
+logo_url: https://www.cgi.com/favicon.ico
+documentation_url: https://www.cgi.com/fi/fi/tuoteratkaisut/facta
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+export_formats:
+- PDF
+capabilities:
+- Municipal map viewer
+- Register-data integration
+- Browser-based GIS
+last_updated: '2026-09-07T00:00:00Z'

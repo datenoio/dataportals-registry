@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: CO-CUN
+      name: Cundinamarca
+description: Public real-estate observatory of Sesquilé, Cundinamarca, with geographic
+  layers of property-market offers.
+endpoints:
+- type: customapi
+  url: https://observatorio-inmobiliario-sesquile.xiltriongeoservicio.com/api/geoadmin/layers/
+id: observatorioinmobiliariosesquilexiltriongeoserviciocom
+langs:
+- id: ES
+  name: Spanish
+link: https://observatorio-inmobiliario-sesquile.xiltriongeoservicio.com/realestate
+name: Observatorio Inmobiliario Sesquilé
+owner:
+  link: https://catastrosesquile.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    subregion:
+      id: CO-CUN
+      name: Cundinamarca
+  name: Alcaldía de Sesquilé
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: xiltrion
+  name: Xiltrion
+status: active
+tags:
+- geoportal
+- Colombia
+- Cundinamarca
+- Sesquilé
+- real estate
+- property market
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00038694

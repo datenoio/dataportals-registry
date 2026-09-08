@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: SK
+      name: Slovakia
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id002
+      id: SK-KI
+      name: Košický kraj
+description: Košice self-governing region mviewer of transport infrastructure.
+endpoints:
+- type: mviewer:config
+  url: https://www.geoportalksk.sk/mviewer/apps/doprava/doprava.xml
+id: geoportalkskskmviewerdoprava
+langs:
+- id: SK
+  name: Slovak
+link: https://www.geoportalksk.sk/mviewer/?lang=sk&config=apps/doprava/doprava.xml
+name: Geoportál KSK doprava
+owner:
+  link: https://web.vucke.sk/sk/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Košický samosprávny kraj
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- mviewer
+- geoportal
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00038101

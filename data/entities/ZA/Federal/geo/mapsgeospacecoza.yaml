@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 20
+    macroregion:
+      id: 018
+      name: Southern Africa
+description: GeoSpace MapProxy instance publishing tiled geospatial imagery and map
+  layers for South Africa via WMTS.
+endpoints:
+- type: wmts100
+  url: https://maps.geospace.co.za/mapproxy/wmts/1.0.0/WMTSCapabilities.xml
+  version: 1.0.0
+id: mapsgeospacecoza
+langs:
+- id: EN
+  name: English
+link: https://maps.geospace.co.za/mapproxy
+name: GeoSpace MapProxy
+owner:
+  link: https://geospace.co.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 20
+  name: GeoSpace
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: mapproxy
+  name: MapProxy
+status: active
+tags:
+- geospatial
+- mapproxy
+- South Africa
+- WMTS
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00042320

@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion: &id001
+      id: DE-BY
+      name: Bayern
+description: Bavaria-wide CKAN catalog for datasets, services, applications, and other
+  resources used by municipalities and urban digital twin projects.
+id: sddikatalogbayern
+endpoints:
+- type: ckan
+  url: https://sddi-katalog.bayern/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://sddi-katalog.bayern/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://sddi-katalog.bayern/api/3/action/package_list
+  version: '3'
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://sddi-katalog.bayern
+name: SDDI Katalog Bayern
+owner:
+  link: https://www.asg.ed.tum.de/gis/
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion: *id001
+  name: Technische Universität München (TUM), Lehrstuhl für Geoinformatik
+  type: Academy
+software:
+  id: ckan
+  name: CKAN
+properties:
+  has_doi: false
+  is_national: false
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+status: active
+tags:
+- open data
+- CKAN
+- digital twin
+- smart cities
+- municipal data
+- Bayern
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00039179

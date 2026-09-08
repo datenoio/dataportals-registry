@@ -1,0 +1,63 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-KR
+      name: Karelija, Respublika
+description: Public electronic atlas with browsable thematic map collections for Karelia,
+  including geology, climate, water, soils, forests, population, economy, historical
+  boundaries and municipalities. Publishes raster maps with legends and explanatory
+  text.
+id: nwpikrckareliaruatlas
+langs:
+- id: RU
+  name: Russian
+link: http://nwpi.krc.karelia.ru/atlas/
+name: Электронный атлас Карелии
+owner:
+  link: http://nwpi.krc.karelia.ru/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Институт водных проблем Севера Карельского научного центра РАН
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00041889

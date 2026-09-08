@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id001
+      id: CZ-64
+      name: Jihomoravský kraj
+description: Islandora dataset of Late Eneolithic and Early Bronze Age lithic projectiles
+  and wristguards from Czech and Slovak sites, with macrophotos, microphotos, and
+  3D models. Fedora is the preservation backend.
+endpoints:
+- type: islandora:catalog
+  url: https://projectiles.phil.muni.cz/
+id: projectilesphilmunicz
+langs:
+- id: CS
+  name: Czech
+- id: EN
+  name: English
+link: https://projectiles.phil.muni.cz/
+name: Lithic Projectiles
+owner:
+  link: https://www.phil.muni.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 30
+    subregion: *id001
+  name: Masaryk University, Faculty of Arts
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: CC-BY-NC-SA-4.0
+  license_name: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: islandora
+  name: Islandora
+status: active
+tags:
+- scientific
+- research data
+- archaeology
+- islandora
+- 3d-models
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi99999462

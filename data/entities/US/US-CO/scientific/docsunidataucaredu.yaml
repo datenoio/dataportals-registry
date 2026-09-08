@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion: &id001
+      id: US-CO
+      name: Colorado
+description: THREDDS catalogs are XML documents that list datasets and the data access
+  services available for the datasets. Catalogs may contain metadata to document details.
+endpoints:
+- type: thredds:catalog
+  url: https://docs.unidata.ucar.edu/thredds/catalog.xml
+- type: thredds:info
+  url: https://docs.unidata.ucar.edu/thredds/serverInfo.xml
+id: docsunidataucaredu
+langs:
+- id: EN
+  name: English
+link: https://docs.unidata.ucar.edu/thredds/catalog.html
+name: THREDDS Data Server (TDS) Catalog
+owner:
+  link: https://www.unidata.ucar.edu/software/tds/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion: *id001
+  name: Unidata/UCAR
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- thredds
+- metadata
+- catalog
+- data server
+- geospatial
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00036614

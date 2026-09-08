@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GBIF hosted portal for the Swiss Biodiversity Information Facility node.
+endpoints:
+- type: gbif:dataset
+  url: https://api.gbif.org/v1/dataset
+  version: '1'
+id: swissbifch
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+- id: FR
+  name: French
+link: https://swissbif.ch
+name: Swiss Biodiversity Information Facility
+owner:
+  link: https://swissbif.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+  name: Swiss Biodiversity Information Facility
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: gbifplatform
+  name: GBIF Platform
+status: active
+tags:
+- biodiversity
+- GBIF
+- has_api
+- Switzerland
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi99999162

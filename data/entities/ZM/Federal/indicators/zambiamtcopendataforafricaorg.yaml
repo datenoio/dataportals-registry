@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: ZM
+      name: Zambia
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Public transport and communications statistics portal for Zambia.
+endpoints:
+- type: knoema:search
+  url: https://zambiamtc.opendataforafrica.org/api/1.0/search
+  version: '1.0'
+- type: sdmx:datastructure
+  url: https://zambiamtc.opendataforafrica.org/api/1.0/sdmx
+  version: '2.0'
+- type: opensearch
+  url: https://zambiamtc.opendataforafrica.org/OpenSearch.xml
+id: zambiamtcopendataforafricaorg
+langs:
+- id: EN
+  name: English
+link: https://zambiamtc.opendataforafrica.org/
+name: Zambia Transport Data Portal
+owner:
+  link: https://zambiamtc.opendataforafrica.org/
+  location:
+    country:
+      id: ZM
+      name: Zambia
+    level: 20
+  name: Ministry of Transport and Communications, Zambia
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: knoema
+  name: Knoema
+status: active
+tags:
+- has_api
+- statistics
+- indicators
+- Knoema
+- Open Data for Africa
+- government
+- Zambia
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00042330

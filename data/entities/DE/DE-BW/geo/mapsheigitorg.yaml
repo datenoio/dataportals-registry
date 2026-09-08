@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion: &id001
+      id: DE-BW
+      name: Baden-Württemberg
+description: HeiGIT MapProxy hub listing public raster instances (OSM Carto, OSM Landuse,
+  ohsome, DAP, and related research layers) with WMS, WMTS, and TMS services.
+endpoints:
+- type: wms111
+  url: https://maps.heigit.org/osm-carto/service?REQUEST=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://maps.heigit.org/osm-carto/service?REQUEST=GetCapabilities&SERVICE=WMTS
+  version: 1.0.0
+id: mapsheigitorg
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://maps.heigit.org/raster
+name: HeiGIT MapProxy
+owner:
+  link: https://heigit.org
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion: *id001
+  name: Heidelberg Institute for Geoinformation Technology
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: mapproxy
+  name: MapProxy
+status: active
+tags:
+- geospatial
+- mapproxy
+- OpenStreetMap
+- WMS
+- WMTS
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00039122

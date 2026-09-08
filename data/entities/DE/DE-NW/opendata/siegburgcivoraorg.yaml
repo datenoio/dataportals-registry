@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: CIVORA / Piveau municipal data catalog of Kreisstadt Siegburg, publishing
+  local open datasets through a public hub-search API.
+endpoints:
+- type: customapi
+  url: https://piveau-search.siegburg.civora.org/search
+- type: customapi
+  url: https://piveau-repo.siegburg.civora.org/catalogues
+- type: customapi
+  url: https://piveau-repo.siegburg.civora.org/datasets
+- type: ckan:package-search
+  url: https://piveau-search.siegburg.civora.org/ckan/package_search
+  version: '3'
+- type: docs
+  url: https://piveau-search.siegburg.civora.org/
+id: siegburgcivoraorg
+langs:
+- id: DE
+  name: German
+link: https://siegburg.civora.org/app/catalog
+name: CIVORA Datenkatalog Siegburg
+owner:
+  link: https://www.siegburg.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+  name: Kreisstadt Siegburg
+  type: Local government
+properties:
+  dataset_count_reported: 31
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: piveau
+  name: Piveau
+status: active
+tags:
+- government
+- has_api
+- open data
+- Siegburg
+- Nordrhein-Westfalen
+- municipal
+- piveau
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99999504

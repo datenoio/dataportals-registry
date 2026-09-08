@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location: &id001
+    country:
+      id: FR
+      name: France
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 30
+    subregion:
+      id: FR-976
+      name: Mayotte
+description: Geographic data-sharing portal for Mayotte, providing thematic dataset
+  search, maps and downloads from public authorities and local partners. Operated
+  by DEAL Mayotte using PRODIGE.
+endpoints:
+- type: csw
+  url: https://catalogue.observatoire-de-mayotte.fr/geonetwork/srv/fre/csw
+  version: 2.0.2
+id: wwwobservatoiredemayottefr
+langs:
+- id: FR
+  name: French
+link: https://www.observatoire-de-mayotte.fr
+name: Observatoire de Mayotte
+owner:
+  link: https://www.observatoire-de-mayotte.fr/accueil/mentions-legales
+  location: *id001
+  name: Direction de l’Environnement, de l’Aménagement et du Logement de Mayotte
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: prodige
+  name: PRODIGE
+status: active
+tags:
+- geospatial
+- environment
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00039329

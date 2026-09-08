@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion:
+      id: '001'
+      name: World
+description: Publicly available system allowing search, download, and visualization
+  of aerosol lidar data from the EARLINET network. Includes aerosol backscatter/extinction
+  coefficients, depolarization ratios, aerosol layer heights, and more, stored in
+  CF-compliant Netcdf-Format.
+endpoints:
+- type: thredds:catalog
+  url: https://login.earlinet.org:8443/thredds/catalog.xml
+id: loginearlinetorg
+langs:
+- id: EN
+  name: English
+link: https://login.earlinet.org:8443/thredds/catalog.html
+name: EARLINET Open Data Portal
+owner:
+  link: https://www.earlinet.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+  name: EARLINET
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- aerosol
+- lidar
+- atmosphere
+- research
+- climate
+- air quality
+- optical properties
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00037119

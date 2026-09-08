@@ -1,0 +1,88 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: CIVORA / Piveau municipal data catalog of Stadt Gelsenkirchen, separate
+  from the city's DKAN open data portal, with public hub-search and hub-repo APIs.
+endpoints:
+- type: customapi
+  url: https://piveau-search.gelsenkirchen.civora.org/search
+- type: customapi
+  url: https://piveau-repo.gelsenkirchen.civora.org/catalogues
+- type: customapi
+  url: https://piveau-repo.gelsenkirchen.civora.org/datasets
+- type: ckan:package-search
+  url: https://piveau-search.gelsenkirchen.civora.org/ckan/package_search
+  version: '3'
+- type: docs
+  url: https://piveau-search.gelsenkirchen.civora.org/
+id: gelsenkirchencivoraorg
+langs:
+- id: DE
+  name: German
+link: https://gelsenkirchen.civora.org/app/catalog
+name: CIVORA Datenkatalog Gelsenkirchen
+owner:
+  link: https://www.gelsenkirchen.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+  name: Stadt Gelsenkirchen
+  type: Local government
+properties:
+  dataset_count_reported: 38
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: piveau
+  name: Piveau
+status: active
+tags:
+- government
+- has_api
+- open data
+- Gelsenkirchen
+- Nordrhein-Westfalen
+- municipal
+- piveau
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi99999503

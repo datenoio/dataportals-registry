@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: HR
+      name: Croatia
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: DABAR institutional repository with 1 Dataset/Research data records.
+endpoints:
+- type: oaipmh20
+  url: https://repozitorij.pilar.hr/oai/?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://repozitorij.pilar.hr/sitemap.xml
+id: repozitorijpilarhr
+langs:
+- id: HR
+  name: Croatian
+- id: EN
+  name: English
+link: https://repozitorij.pilar.hr
+name: Ivo Pilar Institute institutional repository
+owner:
+  link: https://repozitorij.pilar.hr/
+  location:
+    country:
+      id: HR
+      name: Croatia
+  name: Institut društvenih znanosti Ivo Pilar
+  type: Academy
+software:
+  id: dabar
+  name: DABAR
+status: active
+tags:
+- scientific
+- research
+- academic
+- Croatia
+- has_api
+- DABAR
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00039482
+properties:
+  is_national: false

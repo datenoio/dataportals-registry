@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: City of Kelowna catalog and reporting hub for monitoring implementation
+  of the Official Community Plan and its community performance measures.
+endpoints:
+- type: dcatap201
+  url: https://ocp.reporting.kelowna.ca/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://ocp.reporting.kelowna.ca/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://ocp.reporting.kelowna.ca/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://ocp.reporting.kelowna.ca/api/search/v1
+id: ocpreportingkelownaca
+langs:
+- id: EN
+  name: English
+link: https://ocp.reporting.kelowna.ca
+name: OCP Reporting - 2024
+owner:
+  link: https://www.kelowna.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: City of Kelowna
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- ArcGIS
+- GIS
+- government
+- planning
+- performance indicators
+- Kelowna
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00038621

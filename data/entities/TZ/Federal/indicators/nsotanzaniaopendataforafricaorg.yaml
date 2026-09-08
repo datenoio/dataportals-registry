@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: TZ
+      name: Tanzania
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Tanzania national statistics portal on the Africa Information Highway
+  / Knoema platform, hosting NBS statistical datasets and the IMF National Summary
+  Data Page. Distinct from the country-level Tanzania Open Data for Africa hub.
+endpoints:
+- type: knoema:search
+  url: https://nso-tanzania.opendataforafrica.org/api/1.0/search
+  version: '1.0'
+- type: sdmx:datastructure
+  url: https://nso-tanzania.opendataforafrica.org/api/1.0/sdmx
+  version: '2.0'
+- type: opensearch
+  url: https://nso-tanzania.opendataforafrica.org/OpenSearch.xml
+id: nsotanzaniaopendataforafricaorg
+langs:
+- id: EN
+  name: English
+link: https://nso-tanzania.opendataforafrica.org/
+name: Tanzania NSO Open Data (Africa Information Highway)
+owner:
+  link: https://www.nbs.go.tz
+  location:
+    country:
+      id: TZ
+      name: Tanzania
+    level: 20
+  name: National Bureau of Statistics (Tanzania)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: knoema
+  name: Knoema
+status: active
+tags:
+- has_api
+- statistics
+- government
+- official statistics
+- Tanzania
+- NSDP
+- e-GDDS
+- AfDB
+- Open Data for Africa
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00038353

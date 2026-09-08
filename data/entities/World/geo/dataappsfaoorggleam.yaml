@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: FAO Global Livestock Environmental Assessment Model (GLEAM) TerriaJS
+  catalog of livestock populations, products, and greenhouse-gas emissions.
+endpoints:
+- type: terria:catalog
+  url: https://data.apps.fao.org/static/sites/gleam/config.json
+id: dataappsfaoorggleam
+langs:
+- id: EN
+  name: English
+link: https://data.apps.fao.org/gleam/
+name: FAO GLEAM Map
+owner:
+  link: https://www.fao.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: Food and Agriculture Organization of the United Nations
+  type: International
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: terria
+  name: Terria
+status: active
+tags:
+- geospatial
+- FAO
+- has_api
+- livestock
+- emissions
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00042311

@@ -108,6 +108,11 @@ Integrity-track CRITICAL and IMPORTANT counts must not grow (`dataquality/baseli
 | `SOFTWARE_INVALID_CAPABILITIES` / `SOFTWARE_INVALID_CAPABILITY_ITEM` | Fix the `capabilities` list shape |
 | `SOFTWARE_INVALID_EXPORT_FORMATS` / `SOFTWARE_INVALID_EXPORT_FORMAT_ITEM` | Fix the `export_formats` list shape |
 | `SOFTWARE_INVALID_LICENSE` / `SOFTWARE_LICENSE_MISSING_TYPE` | Give `license` a valid `type` |
+| `SOFTWARE_FOLDER_CATEGORY_MISMATCH` | Put the YAML under `data/software/{opendata,geo,scientific,indicators,microdata,metadata}/` matching `category` |
+
+`validate-software` also fails when `data/reference/software_ids.yaml` does not match `data/software/` (run `python scripts/builder.py sync-software-maps`). `metadata_support` values must be strings (`Yes` / `No` / …), not booleans.
+
+`version` and `repository_url` coverage thresholds in `validate-software` are scoped to OSS subtypes. SaaS viewers, CMS shells, and geospatial catalog platforms are excluded from those two denominators.
 
 ## Related
 

@@ -1,0 +1,51 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-KLU
+      name: Kaluzhskaya oblast'
+description: Municipal open-data catalog with a downloadable CSV register and linked
+  dataset passports.
+id: wwwadmobninskru
+langs:
+- id: RU
+  name: Russian
+link: https://www.admobninsk.ru/opendata/
+name: Открытые данные города Обнинска
+owner:
+  link: https://www.admobninsk.ru/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Администрация города Обнинска
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00041888

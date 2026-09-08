@@ -1,0 +1,60 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-SAM
+      name: Samarskaja oblast'
+description: Municipal open-data catalog organized by transport, education, culture,
+  sports, government and municipal property.
+id: tglru
+langs:
+- id: RU
+  name: Russian
+link: https://tgl.ru/opendata/
+name: Открытые данные города Тольятти
+owner:
+  link: https://tgl.ru/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Администрация городского округа Тольятти
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00041914

@@ -1,0 +1,54 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Public maritime heritage geoportal developed by the People of the Sea
+  foundation with support from the Russian Geographical Society. Thematic applications
+  map shipwrecks, lighthouses, navigation structures, expeditions, geographical discoveries
+  and cultural heritage, with descriptive and multimedia records. Also known under
+  the former address gis.rmteam.ru.
+id: oceangisru
+langs:
+- id: RU
+  name: Russian
+link: https://ocean-gis.ru
+name: Океан.ГИС — Россия от моря до моря
+owner:
+  link: https://ocean-gis.ru
+  location:
+    country: *id001
+    level: 20
+  name: Фонд «Люди моря»
+  type: Civil society
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00041809

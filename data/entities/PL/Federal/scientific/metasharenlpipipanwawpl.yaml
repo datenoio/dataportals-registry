@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
 description: META-SHARE language-resource repository node of the Institute of Computer
   Science, Polish Academy of Sciences (IPI PAN), cataloguing language datasets and
   tools in the META-NET/CESAR network.
+endpoints:
+- type: metashare:catalog
+  url: http://metashare.nlp.ipipan.waw.pl/metashare/
 id: metasharenlpipipanwawpl
 langs:
 - id: PL

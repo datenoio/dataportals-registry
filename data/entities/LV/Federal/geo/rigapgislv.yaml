@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LV
+      name: Latvia
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Street-cleaning coverage in Skanste, Rīga listed by this pGIS tenant
+  in Latvia. The public layer-classifier API was accessible on 2026-09-07 and reported
+  zero feature counts. Tenant ownership and feature availability require verification
+  before promotion.
+endpoints:
+- type: other
+  url: https://riga.pgis.lv/api/v1/classifiers/layers
+id: rigapgislv
+langs:
+- id: LV
+  name: Latvian
+link: https://riga.pgis.lv/
+name: Rīga pGIS
+owner:
+  link: https://riga.pgis.lv/
+  location:
+    country:
+      id: LV
+      name: Latvia
+  name: Riga City Council
+  type: Other
+properties:
+  is_national: false
+  unfinished: true
+software:
+  id: pgis
+  name: pGIS
+status: active
+tags:
+- pGIS
+- Latvia
+- riga
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00039822

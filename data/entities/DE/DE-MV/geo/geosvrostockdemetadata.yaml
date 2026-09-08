@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-MV
+      name: Mecklenburg-Vorpommern
+description: OGC API Records metadata catalog of Rostock's geospatial data infrastructure
+  (GDI.HRO), with record collections for repository, dataset, assetset, service, topic,
+  and app metadata.
+endpoints:
+- type: pygeoapi:openapi
+  url: https://geo.sv.rostock.de/metadata/openapi
+  version: '1.0'
+- type: pygeoapi:collections
+  url: https://geo.sv.rostock.de/metadata/collections?f=json
+  version: '1.0'
+id: geosvrostockdemetadata
+langs:
+- id: DE
+  name: German
+link: https://geo.sv.rostock.de/metadata
+name: GDI.HRO metadata catalog
+owner:
+  link: https://www.rostock.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-MV
+      name: Mecklenburg-Vorpommern
+  name: Hanse- und Universitätsstadt Rostock
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: pygeoapi
+  name: pygeoapi
+status: active
+tags:
+- GDI.HRO
+- geospatial
+- metadata
+- municipality
+- OGC API Records
+- pygeoapi
+- Rostock
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00039142

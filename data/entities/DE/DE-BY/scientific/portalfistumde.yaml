@@ -1,0 +1,76 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BY
+      name: Bayern
+description: Public Pure research portal for Technical University of Munich, including
+  searchable research datasets and their associated scholarly metadata.
+endpoints:
+- type: oaipmh20
+  url: https://portal.fis.tum.de/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://portal.fis.tum.de/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://portal.fis.tum.de/sitemap.xml
+id: portalfistumde
+langs:
+- id: EN
+  name: English
+link: https://portal.fis.tum.de
+name: Technical University of Munich Research Portal
+owner:
+  link: https://www.tum.de/en/
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BY
+      name: Bayern
+  name: Technical University of Munich
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research data
+- datasets
+- university research
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00039124

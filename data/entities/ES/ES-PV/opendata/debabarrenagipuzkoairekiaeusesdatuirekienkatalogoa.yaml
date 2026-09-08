@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-PV
+      name: Euskal Herria
+description: Open data catalog of the Debabarrena commonwealth on the Gipuzkoa Irekia
+  platform.
+endpoints:
+- type: dcat:xml
+  url: https://debabarrena.gipuzkoairekia.eus/catalog.xml
+id: debabarrenagipuzkoairekiaeusesdatuirekienkatalogoa
+langs:
+- id: ES
+  name: Spanish
+- id: EU
+  name: Basque
+link: https://debabarrena.gipuzkoairekia.eus/es/datu-irekien-katalogoa
+name: Catálogo de datos abiertos — Debabarrena
+owner:
+  link: https://gipuzkoairekia.eus
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: ES-PV
+      name: Euskal Herria
+  name: Mancomunidad Comarcal de Debabarrena
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: gipuzkoairekia
+  name: Gipuzkoa Irekia
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99999292

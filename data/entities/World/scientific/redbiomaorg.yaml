@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 0
+    macroregion:
+      id: '001'
+      name: World
+description: GBIF hosted portal for the Mesoamerican biodiversity network (Redbioma).
+  Provides occurrence and dataset search for the region.
+endpoints:
+- type: gbif:dataset
+  url: https://api.gbif.org/v1/dataset
+  version: '1'
+id: redbiomaorg
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: https://redbioma.org
+name: Redbioma
+owner:
+  link: https://redbioma.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 0
+  name: Red Mesoamericana de Biodiversidad
+  type: International
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: gbifplatform
+  name: GBIF Platform
+status: active
+tags:
+- biodiversity
+- GBIF
+- has_api
+- Mesoamerica
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi99999170

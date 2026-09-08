@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BY
+      name: Bayern
+description: Public map.apps environmental atlas of the Bavarian Environment Agency
+  (LfU) with thematic maps on geology, soil, water, noise, and natural hazards.
+endpoints:
+- type: mapapps:apps
+  url: https://www.umweltatlas.bayern.de/mapapps/resources/apps
+id: wwwumweltatlasbayernde
+langs:
+- id: DE
+  name: German
+link: https://www.umweltatlas.bayern.de/mapapps/resources/apps/umweltatlas/index.html
+name: UmweltAtlas Bayern
+owner:
+  link: https://www.lfu.bayern.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BY
+      name: Bayern
+  name: Bayerisches Landesamt für Umwelt
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: mapapps
+  name: map.apps
+status: active
+tags:
+- GIS
+- geodata
+- environment
+- Bayern
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+uid: cdi99999499

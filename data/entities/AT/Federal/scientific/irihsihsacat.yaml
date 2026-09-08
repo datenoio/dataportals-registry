@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: IRIHS is the Institute for Advanced Studies' EPrints institutional repository
+  and includes Dataset records among its research outputs.
+endpoints:
+- type: oaipmh20
+  url: https://irihs.ihs.ac.at/cgi/oai2?verb=Identify
+  version: '2.0'
+id: irihsihsacat
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://irihs.ihs.ac.at/
+name: IRIHS
+owner:
+  link: https://www.ihs.ac.at/
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+  name: Institute for Advanced Studies
+  type: Academy
+properties:
+  dataset_count_reported: 17
+  is_national: false
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- research data
+- institutional repository
+- eprints
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00038536

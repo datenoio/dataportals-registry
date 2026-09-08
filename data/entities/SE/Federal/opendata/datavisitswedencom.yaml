@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: National tourism data service providing openly searchable structured
+  information about places, events, accommodation and visitor experiences through
+  a public portal and API.
+endpoints:
+- type: entrystore:search
+  url: https://data.visitsweden.com/store/search
+id: datavisitswedencom
+langs:
+- id: SV
+  name: Swedish
+- id: EN
+  name: English
+link: https://data.visitsweden.com/apps/portal/sv/
+name: Visit Sweden Nationellt API
+owner:
+  link: https://corporate.visitsweden.com
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Visit Sweden AB
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: entryscape
+  name: EntryScape
+status: active
+tags:
+- tourism
+- linked data
+- open data
+- Sweden
+- has_api
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+uid: cdi00038262

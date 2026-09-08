@@ -1,0 +1,59 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Public catalogue and request portal for participant, assessment, and
+  variable metadata from the Lifelines population cohort and biobank.
+endpoints:
+- type: molgenis:catalog
+  url: https://data-catalogue.lifelines.nl/
+id: datacataloguelifelinesnl
+langs:
+- id: EN
+  name: English
+link: https://data-catalogue.lifelines.nl/
+name: Lifelines Data Catalogue
+owner:
+  link: https://www.lifelines.nl/
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: Lifelines
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: molgenis
+  name: MOLGENIS
+status: active
+tags:
+- health
+- cohort
+- biobank
+- research data
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00039850

@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- map
+- publication
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Repository of the Servicio Sismológico Nacional providing earthquake
+  catalogs, seismograms, maps, and other research data from seismic monitoring in
+  Mexico.
+endpoints:
+- type: oaipmh20
+  url: http://rigeofisica.ssn.unam.mx/oai/request?verb=Identify
+  version: '2.0'
+id: rigeofisicassnunammx
+langs:
+- id: ES
+  name: Spanish
+link: http://rigeofisica.ssn.unam.mx/jspui/
+name: Repositorio de Datos del Servicio Sismológico Nacional
+owner:
+  link: https://www.ssn.unam.mx/
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+  name: Servicio Sismológico Nacional, Instituto de Geofísica, UNAM
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- seismology
+- earthquakes
+- dspace
+- Mexico
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00039830

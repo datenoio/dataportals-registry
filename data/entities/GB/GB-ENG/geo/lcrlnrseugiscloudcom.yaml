@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Liverpool City Region Combined Authority public GIS Cloud Local Habitat
+  Map for the statutory Local Nature Recovery Strategy, including core nature sites
+  and habitat opportunity measures.
+endpoints:
+- type: giscloud:catalog
+  url: https://lcr-lnrs.eu.giscloud.com/
+id: lcrlnrseugiscloudcom
+langs:
+- id: EN
+  name: English
+link: https://lcr-lnrs.eu.giscloud.com/
+name: LCRCA Local Nature Recovery Strategy
+owner:
+  link: https://www.liverpoolcityregion-ca.gov.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: Liverpool City Region Combined Authority
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: giscloud
+  name: GIS Cloud
+status: active
+tags:
+- GIS
+- geospatial
+- nature recovery
+- habitat
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi99999722

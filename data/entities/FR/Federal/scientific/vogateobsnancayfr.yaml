@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 20
+description: Radio astronomy catalog containing Nançay Decameter Array, NenuFAR, radioheliograph,
+  ORFEES, and pulsar observations.
+endpoints:
+- type: tap:capabilities
+  url: http://vogate.obs-nancay.fr/tap/capabilities
+id: vogateobsnancayfr
+langs:
+- id: EN
+  name: English
+link: http://vogate.obs-nancay.fr/
+name: Nançay Radio Astronomy Data Center
+owner:
+  link: http://vogate.obs-nancay.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Paris Observatory, Nançay Radio Astronomy Station
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- astronomy
+- virtual observatory
+- TAP
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039377

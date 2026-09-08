@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Data search engine
+content_types:
+- dataset
+- publication
+- software
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: OpenAIRE CONNECT gateway for PANGAEA, the data publisher for Earth and
+  environmental science. It exposes PANGAEA-affiliated research products as a filtered
+  view of the OpenAIRE Graph, distinct from the origin catalog at pangaea.de.
+endpoints:
+- type: openaire:public-apis
+  url: https://pangaea.openaire.eu/develop
+- type: openaire:graph
+  url: https://api.openaire.eu/graph/v2/researchProducts?relCommunityId=pangaea
+- type: openaire:graph-docs
+  url: https://graph.openaire.eu/docs/
+id: pangaeaopenaireeu
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://pangaea.openaire.eu
+name: PANGAEA
+owner:
+  link: https://www.pangaea.de/
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: PANGAEA
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: openaire
+  name: OpenAIRE
+status: active
+tags:
+- openaire
+- open science
+- research
+- scholarly communication
+- germany
+- earth science
+- pangaea
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00039205

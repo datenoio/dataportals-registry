@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: UNESCO's global DataHub for discovering and accessing datasets across
+  the organization's fields of competence.
+endpoints:
+- type: opendatasoftapi
+  url: https://data.unesco.org/api
+- type: sitemap
+  url: https://data.unesco.org/sitemap.xml
+id: dataunescoorg
+langs:
+- id: EN
+  name: English
+link: https://data.unesco.org
+name: UNESCO DataHub
+owner:
+  link: https://www.unesco.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: UNESCO
+  type: International
+properties:
+  dataset_count_reported: 37
+  is_national: false
+software:
+  id: opendatasoft
+  name: OpenDataSoft
+status: active
+tags:
+- international
+- UNESCO
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00042302

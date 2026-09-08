@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: The University of Derby Online Research Archive (UDORA) is the open access
+  institutional repository of the University of Derby. It holds research outputs from
+  staff and research students, including publications, research data, and doctoral
+  theses.
+endpoints:
+- type: oaipmh20
+  url: https://derby-repository.worktribe.com/oaiprovider?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://derby-repository.worktribe.com/sitemap_index.xml
+id: repositoryderbyacuk
+identifiers:
+- id: opendoar
+  url: https://v2.sherpa.ac.uk/id/repository/2236
+  value: '2236'
+langs:
+- id: EN
+  name: English
+link: https://derby-repository.worktribe.com
+name: UDORA
+owner:
+  link: https://www.derby.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: University of Derby
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: worktribe
+  name: Worktribe
+status: active
+tags:
+- scientific
+- has_api
+- open access
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00004937

@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SK
+      name: Slovakia
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Archive of small-telescope observations, with time series and associated
+  images for variable-star research.
+endpoints:
+- type: tap:capabilities
+  url: https://skvo.science.upjs.sk/tap/capabilities
+id: skvoscienceupjssk
+langs:
+- id: EN
+  name: English
+link: https://skvo.science.upjs.sk/
+name: Pavol Jozef Šafárik University Archive
+owner:
+  link: https://skvo.science.upjs.sk/
+  location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 20
+  name: Pavol Jozef Šafárik University in Košice
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- astronomy
+- virtual observatory
+- TAP
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00041946

@@ -17,15 +17,15 @@ SOFTWARE_DIR = REPO_ROOT / "data" / "software"
 SOFTWARE_IDS = REPO_ROOT / "data" / "reference" / "software_ids.yaml"
 
 HEADING_ID_RE = re.compile(
-    r"^## .+?\(`([a-z][a-z0-9]*)`\)(?:\s*\{#([a-z0-9]+)\})?",
+    r"^## .+?\(`([a-z0-9]+)`\)(?:\s*\{#([a-z0-9]+)\})?",
     re.MULTILINE,
 )
 HEADING_MULTI_RE = re.compile(
-    r"^## .+?\(`([a-z][a-z0-9]*)`(,\s*`([a-z][a-z0-9]*)`)+\)",
+    r"^## .+?\(`([a-z0-9]+)`(,\s*`([a-z0-9]+)`)+\)",
     re.MULTILINE,
 )
-BACKTICK_ID_RE = re.compile(r"`([a-z][a-z0-9]*)`")
-EXPLICIT_ANCHOR_RE = re.compile(r"\{#([a-z][a-z0-9]*)\}")
+BACKTICK_ID_RE = re.compile(r"`([a-z0-9]+)`")
+EXPLICIT_ANCHOR_RE = re.compile(r"\{#([a-z0-9]+)\}")
 
 DISCOVERY_GLOBS = (
     "discovery.md",
@@ -39,9 +39,9 @@ HARVEST_GLOBS = (
 )
 
 SKIP_IDS = frozenset({"custom"})
-URLMAP_KEY_RE = re.compile(r'"([a-z][a-z0-9]*)":\s*[A-Z][A-Z0-9_]*URLMAP')
+URLMAP_KEY_RE = re.compile(r'"([a-z0-9]+)":\s*[A-Z][A-Z0-9_]*URLMAP')
 COMBINED_H2_RE = re.compile(
-    r"^## .+\(`[a-z][a-z0-9]*`\).+\(`[a-z][a-z0-9]*`\)"
+    r"^## .+\(`[a-z0-9]+`\).+\(`[a-z0-9]+`\)"
 )
 
 
@@ -96,7 +96,7 @@ def _heading_ids_in_text(text: str) -> dict[str, str]:
         explicit = match.group(2)
         found[sid] = explicit or sid
     for match in HEADING_MULTI_RE.finditer(text):
-        for sid in re.findall(r"`([a-z][a-z0-9]*)`", match.group(0)):
+        for sid in re.findall(r"`([a-z0-9]+)`", match.group(0)):
             found.setdefault(sid, sid)
     for match in EXPLICIT_ANCHOR_RE.finditer(text):
         found.setdefault(match.group(1), match.group(1))

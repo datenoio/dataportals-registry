@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    level: 20
+description: Virtual Observatory data service publishing magnetodisc model tables
+  through the mdisc EPN-TAP schema.
+endpoints:
+- type: tap:capabilities
+  url: http://astroweb.projects.phys.ucl.ac.uk:8000/tap/capabilities
+id: astrowebprojectsphysuclacuk
+langs:
+- id: EN
+  name: English
+link: http://astroweb.projects.phys.ucl.ac.uk:8000/
+name: UCL DaCHS server
+owner:
+  link: http://astroweb.projects.phys.ucl.ac.uk:8000/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: University College London
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- astronomy
+- virtual observatory
+- TAP
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039390

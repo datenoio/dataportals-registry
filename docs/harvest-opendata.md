@@ -312,3 +312,58 @@ Liferay, POMOSAM, ATM Maggioli, oPortal, OGD India, Seoul plaza, Drupal, and Wor
 - [harvest-output.md](harvest-output.md)
 - [apidetect.md](apidetect.md)
 - [agents/harvest.md](agents/harvest.md)
+
+## GIS Open Data Portal (`gisopendataportal`) {#gisopendataportal}
+
+Start at `/api/opendata/set/catalog/lkod`: the DCAT-AP-SK JSON-LD catalog contains a
+`dataset` array of metadata URLs under `/api/opendata/set/{uuid}`. Keep one record per
+dataset URL, retaining the source IRI, publisher, description, and distributions. Resolve
+its declared JSON-LD context; do not assume English JSON property names. Follow dataset
+metadata to CSV downloads. Drop site navigation and individual spatial features from the
+catalog inventory. Feature retrieval is a separate operation at
+`/api/open-api/features?limit=1&page=1`, with `filter.featureClass.id` or
+`filter.featureClass.code`; coordinates may use EPSG:5514. GraphQL is documented at
+`/api/open-api`. Both municipal catalog responses were verified on 2026-09-07.
+
+Use [Tvrdošín](https://tvrdosin.twinmap.ai/developer) or
+[Nové Mesto](https://nove-mesto.twinmap.ai/developer) for the deployment's API contract.
+Tvrdošín's catalog currently copies Nové Mesto's title: retain provenance and do not infer
+publisher identity from that title alone.
+
+## Esri UK Data Observatory (`esridataobservatory`) {#esridataobservatory}
+
+Start at the deployment's linked Data Explorer page (for example, the
+[Suffolk explorer](https://www.suffolkobservatory.info/data-explorer/)). Read its published
+application configuration to resolve the ArcGIS data catalog and backing service URLs;
+there is no assumed universal `/api/3/action` or DCAT endpoint. The
+[vendor embedding guide](https://help.instantatlas.com/category/data-observatory/)
+documents `dataCatalogExplorer.launch` with an ArcGIS application ID. Keep discoverable
+source datasets or indicator tables and their metadata; drop WordPress posts, ward-profile
+pages, rendered charts, and per-area observation rows from the catalog inventory.
+Deduplicate repeated references to the same source item/table across reports. Use only
+publicly accessible services, retaining source IDs and licensing information. API URLs
+and access vary by deployment; a single standalone harvest endpoint was not verified in
+this review.
+
+## RUDI (`rudi`) {#rudi}
+
+Use the deployment's [documented API](https://doc.rudi.fr/api/api_exposees/).
+Portal metadata search uses `/konsult/v1/datasets/metadatas`; the documented anonymous
+session requires a token from `/authenticate`. Follow the published public-access flow
+and preserve access restrictions. Producer nodes instead expose `/api/v1/resources`
+and `/api/v1/resources/{id}`, as documented in the
+[node catalog source](https://github.com/rudi-platform/rudi-node-catalog). Do not assume
+node routes exist on the portal host. Keep one metadata record per `global_id`, follow
+pagination and producer provenance, and distinguish catalog visibility from permission to
+retrieve the underlying data. No anonymous API access was verified on the registered
+Rennes portal in this review; its existing access fields are preserved.
+
+## SIMAI Open Data Portal (`simaiopendata`) {#simaiopendata}
+
+Start from the deployment's `/datasets/` directory and follow dataset detail links.
+Keep one dataset passport with its publisher, description and linked downloads; exclude
+category pages, organization indexes, news and individual table rows. Consult the
+[product manual](https://support.simai.ru/learn/courses/course/12/index). No stable
+public metadata API was verified; do not infer one from the underlying Bitrix CMS.
+The [vendor demo](https://opendata.sf2.simai.ru/datasets/) contains demonstration data
+and must remain distinguishable from production holdings.

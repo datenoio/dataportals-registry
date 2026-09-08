@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Public OMERO instance of the TU Dresden Faculty of Medicine, hosting
+  public image libraries and original figures from peer-reviewed publications. The
+  OMERO JSON API lists projects available to the public user.
+endpoints:
+- type: omero:projects
+  url: https://omero.med.tu-dresden.de/api/v0/m/projects/
+id: omeromedtudresdende
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://omero.med.tu-dresden.de/
+name: TU Dresden Medical Faculty OMERO
+owner:
+  link: https://tu-dresden.de/med
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-SN
+      name: Sachsen
+  name: Faculty of Medicine, TU Dresden
+  type: Academy
+properties:
+  dataset_count_reported: 15
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: omero
+  name: OMERO
+status: active
+tags:
+- scientific
+- research data
+- academic
+- microscopy
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99999255

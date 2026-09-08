@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MA
+      name: Massachusetts
+description: Institutional research repository for Smith College, including the public
+  Data and Datasets collection exposed through Elsevier Digital Commons OAI-PMH.
+endpoints:
+- type: oaipmh20
+  url: https://scholarworks.smith.edu/do/oai/?verb=Identify
+  version: '2.0'
+id: scholarworkssmithedu
+langs:
+- id: EN
+  name: English
+link: https://scholarworks.smith.edu
+name: Smith ScholarWorks
+owner:
+  link: https://scholarworks.smith.edu/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MA
+      name: Massachusetts
+  name: Smith College
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: elsevierdigitalcommons
+  name: Elsevier Digital Commons
+status: active
+tags:
+- research data
+- institutional repository
+- datasets
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00038312

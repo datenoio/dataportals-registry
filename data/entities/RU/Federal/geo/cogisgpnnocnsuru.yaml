@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: CoGIS Portal of Novosibirsk State University NOC Evolution of the Earth
+  (НОЦ «Эволюция Земли»), with teaching and research maps. Map services remain on
+  eLiteGIS at /elitegis/rest/services.
+endpoints:
+- type: arcgis:rest:services
+  url: https://cogis-gpn-noc.nsu.ru/elitegis/rest/services
+id: cogisgpnnocnsuru
+langs:
+- id: RU
+  name: Russian
+link: https://cogis-gpn-noc.nsu.ru/portal/catalog
+name: NSU Evolution of the Earth CoGIS Geoportal
+owner:
+  link: https://www.nsu.ru
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 20
+  name: Novosibirsk state university
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: cogis
+  name: CoGIS
+status: active
+tags:
+- CoGIS
+- geospatial
+- gis
+- research
+- geology
+- science
+- education
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi99999330

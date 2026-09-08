@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: GalaxyTrakr is the U.S. FDA's public Galaxy analysis platform for foodborne-pathogen genomic data and workflows.
+
+endpoints:
+- type: galaxy:api
+  url: https://galaxytrakr.org/api/version
+- type: galaxy:api:configuration
+  url: https://galaxytrakr.org/api/configuration
+id: galaxytrakrorg
+langs:
+- id: EN
+  name: English
+link: https://galaxytrakr.org
+name: GalaxyTrakr
+owner:
+  link: https://www.fda.gov
+  location:
+    country:
+      id: US
+      name: United States
+  name: U.S. Food and Drug Administration
+  type: Central government
+software:
+  id: galaxy
+  name: Galaxy
+status: active
+tags:
+- scientific
+- research
+- government
+- United States
+- has_api
+- Galaxy
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00042157

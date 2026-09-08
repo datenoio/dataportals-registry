@@ -1,0 +1,89 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-RJ
+      name: Rio de Janeiro
+description: Public catalog of urban geographic and statistical datasets for research
+  and teaching, operated by the Graduate Program in Architecture and Urbanism at Universidade
+  Federal Fluminense.
+endpoints:
+- type: ckan
+  url: https://portaldados.ppgau.uff.br/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://portaldados.ppgau.uff.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://portaldados.ppgau.uff.br/api/3/action/package_list
+  version: '3'
+id: portaldadosppgauuffbr
+langs:
+- id: PT
+  name: Portuguese
+- id: EN
+  name: English
+link: https://portaldados.ppgau.uff.br
+name: Portal de Dados Urbanos PPGAU UFF
+owner:
+  link: https://ppgau.uff.br/
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-RJ
+      name: Rio de Janeiro
+  name: Programa de Pós-Graduação em Arquitetura e Urbanismo, Universidade Federal
+    Fluminense
+  type: Academy
+properties:
+  dataset_count_reported: 120
+  has_doi: false
+  is_national: false
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- urban data
+- geospatial
+- statistics
+- research
+- open data
+- CKAN
+- Brazil
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00038601

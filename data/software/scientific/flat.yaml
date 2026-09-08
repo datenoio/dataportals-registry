@@ -1,0 +1,62 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: Uncertain
+has_api: 'Yes'
+has_bulk: 'No'
+id: flat
+name: FLAT
+website: https://github.com/TLA-FLAT/FLAT
+description: Fedora Language Archiving Technology is a reusable CLARIN-compatible language resource
+  repository based on Fedora Commons and Islandora, with Component Metadata support, resource discovery
+  and preservation workflows.
+owner:
+  name: The Language Archive
+  location:
+    country:
+      id: NL
+      name: Netherlands
+documentation_url: https://github.com/TLA-FLAT/FLAT/tree/develop/documents
+repository_url: https://github.com/TLA-FLAT/FLAT
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: Uncertain
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: Uncertain
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per item
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+license:
+  type: GPL-3.0
+  url: https://www.gnu.org/licenses/gpl-3.0.html
+export_formats:
+- CMDI
+- XML
+capabilities:
+- OAI-PMH
+- CLARIN Component Metadata
+- Language resource repository
+last_updated: '2026-09-08T12:00:00Z'

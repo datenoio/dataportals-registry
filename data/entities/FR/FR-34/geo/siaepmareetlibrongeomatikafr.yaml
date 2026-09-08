@@ -1,0 +1,61 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-34
+      name: Hérault
+description: IsiGéo (Geomatika) web GIS tenant at siaep-mare-et-libron.geomatika.fr.
+  Login-walled; not a public open-data portal.
+endpoints:
+- type: isigeo:catalog
+  url: https://siaep-mare-et-libron.geomatika.fr/
+id: siaepmareetlibrongeomatikafr
+langs:
+- id: FR
+  name: French
+link: https://siaep-mare-et-libron.geomatika.fr/
+name: SIAEP Mare et Libron IsiGéo
+owner:
+  link: https://siaep-mare-et-libron.geomatika.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-34
+      name: Hérault
+  name: Syndicat intercommunal d'alimentation en eau potable Mare et Libron
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: isigeo
+  name: IsiGéo
+status: active
+tags:
+- France
+- geoportal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00039301

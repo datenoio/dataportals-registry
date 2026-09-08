@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BY
+      name: Bayern
+description: CIVORA / Piveau data catalog of hoferLand.digital for Landkreis Hof,
+  publishing municipal and harvested DCAT-AP.de datasets from the district's smart-city
+  data hub.
+endpoints:
+- type: customapi
+  url: https://piveau-search.hoferland.civora.org/search
+- type: customapi
+  url: https://piveau-repo.hoferland.civora.org/catalogues
+- type: customapi
+  url: https://piveau-repo.hoferland.civora.org/datasets
+- type: ckan:package-search
+  url: https://piveau-search.hoferland.civora.org/ckan/package_search
+  version: '3'
+- type: docs
+  url: https://piveau-search.hoferland.civora.org/
+id: hoferlanddigitalde
+langs:
+- id: DE
+  name: German
+link: https://www.hoferland-digital.de/app/catalog
+name: hoferLand.digital Datenkatalog
+owner:
+  link: https://www.landkreis-hof.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BY
+      name: Bayern
+  name: Landkreis Hof
+  type: Local government
+properties:
+  dataset_count_reported: 153
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: piveau
+  name: Piveau
+status: active
+tags:
+- government
+- has_api
+- open data
+- Bavaria
+- Hof
+- municipal
+- piveau
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99999506

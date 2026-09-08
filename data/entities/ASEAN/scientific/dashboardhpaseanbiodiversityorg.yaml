@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ASEAN
+      name: ASEAN
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: GBIF hosted portal for the ASEAN Centre for Biodiversity species-occurrence
+  dashboard, distinct from the WordPress ASEAN Biodiversity Dashboard.
+endpoints:
+- type: gbif:dataset
+  url: https://api.gbif.org/v1/dataset
+  version: '1'
+id: dashboardhpaseanbiodiversityorg
+langs:
+- id: EN
+  name: English
+link: https://dashboard-hp.aseanbiodiversity.org
+name: ASEAN Biodiversity Dashboard Species Occurrence
+owner:
+  link: https://www.aseanbiodiversity.org
+  location:
+    country:
+      id: ASEAN
+      name: ASEAN
+    level: 20
+  name: ASEAN Centre for Biodiversity
+  type: International
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: gbifplatform
+  name: GBIF Platform
+status: active
+tags:
+- biodiversity
+- GBIF
+- has_api
+- ASEAN
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi99999175

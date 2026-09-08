@@ -1,0 +1,45 @@
+access_mode:
+- open
+- restricted
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Federal labor and social protection ministry open-data catalog with current
+  and archived datasets and CSV and XML registers. Some datasets require ESIA authentication.
+id: mintrudgovru
+langs:
+- id: RU
+  name: Russian
+link: https://mintrud.gov.ru/opendata
+name: Открытые данные Минтруда России
+owner:
+  link: https://mintrud.gov.ru/
+  location:
+    country: *id001
+    level: 20
+  name: Министерство труда и социальной защиты Российской Федерации
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00041837

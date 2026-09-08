@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Public Galaxy analysis platform operated by Sciensano for bioinformatics
+  workflows, shared tools, and reusable research datasets.
+endpoints:
+- type: galaxy:api
+  url: https://galaxy.sciensano.be/api/version
+- type: galaxy:api:configuration
+  url: https://galaxy.sciensano.be/api/configuration
+id: galaxysciensanobe
+langs:
+- id: EN
+  name: English
+link: https://galaxy.sciensano.be
+name: Galaxy@Sciensano
+owner:
+  link: https://www.sciensano.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+  name: Sciensano
+  type: Central government
+software:
+  id: galaxy
+  name: Galaxy
+status: active
+tags:
+- scientific
+- research
+- government
+- Belgium
+- has_api
+- Galaxy
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00038578

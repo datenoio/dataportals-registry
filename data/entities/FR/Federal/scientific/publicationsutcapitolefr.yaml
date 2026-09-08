@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Toulouse Capitole Publications is the university's EPrints institutional
+  repository and includes Dataset records among its scholarly outputs.
+endpoints:
+- type: oaipmh20
+  url: https://publications.ut-capitole.fr/cgi/oai2?verb=Identify
+  version: '2.0'
+id: publicationsutcapitolefr
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://publications.ut-capitole.fr/
+name: Toulouse Capitole Publications
+owner:
+  link: https://www.ut-capitole.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Université Toulouse Capitole
+  type: Academy
+properties:
+  dataset_count_reported: 2
+  is_national: false
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- research data
+- institutional repository
+- eprints
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00039375

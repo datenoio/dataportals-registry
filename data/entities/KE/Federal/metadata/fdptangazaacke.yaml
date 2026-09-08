@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Metadata catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Tangaza University FAIR Data Point for faculty of science and technology
+  research data metadata.
+endpoints:
+- type: dcat:ttl
+  url: https://fdp.tangaza.ac.ke
+- type: dcat:ttl
+  url: https://fdp.tangaza.ac.ke/
+- type: openapi
+  url: https://fdp.tangaza.ac.ke/v3/api-docs
+  version: '3'
+- type: docs
+  url: https://fdp.tangaza.ac.ke/swagger-ui.html
+id: fdptangazaacke
+langs:
+- id: EN
+  name: English
+link: https://fdp.tangaza.ac.ke
+name: Tangaza University FAIR Data Point
+owner:
+  link: https://tangaza.ac.ke
+  location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+  name: Tangaza University
+  type: Academy
+software:
+  id: fairdatapoint
+  name: FAIR Data Point
+status: active
+tags:
+- metadata
+- FAIR
+- academic
+- Kenya
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00039811

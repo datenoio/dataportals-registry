@@ -1,0 +1,88 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: DK-82
+      name: Midtjylland
+description: CIVORA / Piveau data catalog of the Horizon Europe BIPED project for
+  the Brabrand / Aarhus positive energy district, publishing DCAT-AP metadata for
+  energy, mobility, environment, and 3D city datasets.
+endpoints:
+- type: customapi
+  url: https://piveau-search.bi-ped.civora.org/search
+- type: customapi
+  url: https://piveau-repo.bi-ped.civora.org/catalogues
+- type: customapi
+  url: https://piveau-repo.bi-ped.civora.org/datasets
+- type: ckan:package-search
+  url: https://piveau-search.bi-ped.civora.org/ckan/package_search
+  version: '3'
+- type: docs
+  url: https://piveau-search.bi-ped.civora.org/
+id: bipedcivoraorg
+langs:
+- id: EN
+  name: English
+- id: DA
+  name: Danish
+link: https://bi-ped.civora.org/app/catalog
+name: BIPED Data Catalogue
+owner:
+  link: https://www.bi-ped.eu
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+  name: BIPED Consortium
+  type: Academy
+properties:
+  dataset_count_reported: 31
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: piveau
+  name: Piveau
+status: active
+tags:
+- has_api
+- open data
+- Aarhus
+- energy
+- digital twin
+- piveau
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi99999509

@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-NV
+      name: Nevada
+description: Institutional research repository for University of Nevada, Las Vegas,
+  including the public Library Faculty Datasets collection exposed through Elsevier
+  Digital Commons OAI-PMH.
+endpoints:
+- type: oaipmh20
+  url: https://oasis.library.unlv.edu/do/oai/?verb=Identify
+  version: '2.0'
+id: oasislibraryunlvedu
+langs:
+- id: EN
+  name: English
+link: https://oasis.library.unlv.edu
+name: UNLV Digital Scholarship
+owner:
+  link: https://oasis.library.unlv.edu/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NV
+      name: Nevada
+  name: University of Nevada, Las Vegas
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: elsevierdigitalcommons
+  name: Elsevier Digital Commons
+status: active
+tags:
+- research data
+- institutional repository
+- datasets
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00038298

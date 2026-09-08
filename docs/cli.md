@@ -19,7 +19,8 @@ Python **3.10–3.12**. Test layout: [tests/README.md](https://github.com/dateno
 | `python scripts/builder.py validate-yaml --id catalogdatafaagov` | Validate one catalog id |
 | `python scripts/builder.py validate-yaml --file path/to/file.yaml` | Validate one file |
 | `python scripts/builder.py validate` | Validate built `full.jsonl` against the same schema |
-| `python scripts/builder.py validate-software` | Software YAML coverage/profile checks |
+| `python scripts/builder.py validate-software` | Software YAML coverage/profile checks. `version` and `repository_url` thresholds apply to OSS subtypes, not SaaS/CMS/geo viewers. Fails if `software_ids.yaml` does not match `data/software/` |
+| `python scripts/builder.py sync-software-maps` | Rewrite `data/reference/software_ids.yaml` from software YAML |
 | `python scripts/builder.py assign` | Assign missing `cdi########` UIDs in entities (`--dryrun` to preview) |
 | `python scripts/builder.py assign --mode scheduled` | Assign `temp########` UIDs in scheduled |
 | `python scripts/builder.py analyze-quality` | Write `dataquality/` reports |

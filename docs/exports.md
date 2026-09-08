@@ -21,10 +21,10 @@ Do not mix these three numbers. Exports lag YAML until `python scripts/builder.p
 | Layer | Date | Catalogs | Scheduled | Software | Countries |
 |-------|------|----------|-----------|----------|-----------|
 | **Published GitHub snapshot** | v1.19.0, 3 September 2026 | **29,816** | **0** | **366** | **222** |
-| **Working-tree exports** | last `build` in this tree (2 September 2026) | **29,816** (`catalogs.jsonl`) | **0** | **366** | **222** |
-| **Current source YAML** | 3 September 2026 | **29,816** (`data/entities/`) | **0** (`data/scheduled/`) | **366** | **222** |
+| **Working-tree exports** | last `build` in this tree (8 September 2026) | **35,266** (`catalogs.jsonl`) | **0** | **423** | **224** |
+| **Current source YAML** | 8 September 2026 | **35,266** (`data/entities/`) | **0** (`data/scheduled/`) | **423** | **224** |
 
-Working-tree dumps match source YAML (**29,816** catalogs). Canonical software IDs: `data/reference/software_ids.yaml`.
+Working-tree dumps match source YAML (**35,266** catalogs). Canonical software IDs: `data/reference/software_ids.yaml`.
 
 Filter by catalog type or software in DuckDB / Parquet (see [query-examples.md](query-examples.md)); there are no pre-sliced `bytype/` or `bysoftware/` dumps.
 

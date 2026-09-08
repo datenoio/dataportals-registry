@@ -1,0 +1,51 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-MOW
+      name: Moskva
+description: Zelenograd open-data catalog with bus routes, timetables, budget and
+  development indicators in CSV and spreadsheets.
+id: wwwzelaoru
+langs:
+- id: RU
+  name: Russian
+link: https://www.zelao.ru/opendata/
+name: Реестр открытых данных Зеленограда
+owner:
+  link: https://www.zelao.ru/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Префектура Зеленоградского административного округа города Москвы
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00041902

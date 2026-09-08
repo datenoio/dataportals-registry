@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: EU
+      name: European Union
+description: European High Frequency Radar Node ERDDAP providing harmonized access
+  to near-real-time and historical ocean surface-current datasets.
+endpoints:
+- type: erddap:index
+  url: https://erddap.hfrnode.eu/erddap/index.json
+- type: erddap:datasets
+  url: https://erddap.hfrnode.eu/erddap/info/index.json
+- type: opensearch
+  url: https://erddap.hfrnode.eu/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://erddap.hfrnode.eu/erddap/sitemap.xml
+langs:
+  - id: EN
+    name: English
+id: erddaphfrnodeeu
+link: https://erddap.hfrnode.eu/erddap/index.html
+name: EuroGOOS European HFR Node ERDDAP
+owner:
+  link: https://www.hfrnode.eu/
+  location:
+    country:
+      id: EU
+      name: European Union
+  name: EuroGOOS European High Frequency Radar Node
+  type: International
+properties:
+  is_national: false
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- scientific
+- research
+- European Union
+- has_api
+- ERDDAP
+- marine
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00039247

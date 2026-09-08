@@ -1,0 +1,59 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-PNZ
+      name: Penzenskaja oblast'
+description: Public investment-site map linked by the regional development corporation.
+  Provides investment areas and preferential regimes, utilities, transport, communications,
+  mineral resources, prospective land resources, support measures and tariffs.
+id: gispnzregruinvareas
+langs:
+- id: RU
+  name: Russian
+link: https://gis.pnzreg.ru/public/app/inv_areas/inv_areas.html
+name: Инвестиционные площадки Пензенской области
+owner:
+  link: https://investinpenza.com/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Корпорация развития Пензенской области
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00041909

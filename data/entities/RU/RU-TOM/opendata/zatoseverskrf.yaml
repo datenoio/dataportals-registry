@@ -1,0 +1,57 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-TOM
+      name: Tomskaja oblast'
+description: Municipal open-data catalog with CSV datasets covering local administration,
+  facilities, transport and social services.
+id: zatoseverskrf
+langs:
+- id: RU
+  name: Russian
+link: https://xn----7sbhlbh0a1awgee.xn--p1ai/opendata
+name: Открытые данные г. Северска
+owner:
+  link: https://xn----7sbhlbh0a1awgee.xn--p1ai/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Администрация ЗАТО Северск
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00041920

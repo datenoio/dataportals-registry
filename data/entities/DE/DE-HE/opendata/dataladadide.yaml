@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-HE
+      name: Hessen
+description: CIVORA / Piveau data catalog of Landkreis Darmstadt-Dieburg (LaDaDi),
+  publishing district datasets from the open municipal data platform at data.ladadi.de.
+endpoints:
+- type: customapi
+  url: https://piveau-search.ladadi.civora.org/search
+- type: customapi
+  url: https://piveau-repo.ladadi.civora.org/catalogues
+- type: customapi
+  url: https://piveau-repo.ladadi.civora.org/datasets
+- type: ckan:package-search
+  url: https://piveau-search.ladadi.civora.org/ckan/package_search
+  version: '3'
+- type: docs
+  url: https://piveau-search.ladadi.civora.org/
+id: dataladadide
+langs:
+- id: DE
+  name: German
+link: https://data.ladadi.de/app/catalog
+name: LaDaDi Datenplattform
+owner:
+  link: https://www.ladadi.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-HE
+      name: Hessen
+  name: Landkreis Darmstadt-Dieburg
+  type: Local government
+properties:
+  dataset_count_reported: 23
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: piveau
+  name: Piveau
+status: active
+tags:
+- government
+- has_api
+- open data
+- Hessen
+- Darmstadt-Dieburg
+- municipal
+- piveau
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99999508

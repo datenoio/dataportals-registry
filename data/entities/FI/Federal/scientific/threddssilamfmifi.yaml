@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: FMI SILAM THREDDS catalog publishing global and regional atmospheric-composition,
+  air-quality, pollen, allergen, fire, and emissions model data.
+endpoints:
+- type: thredds:catalog
+  url: https://thredds.silam.fmi.fi/thredds/catalog/catalog.xml
+id: threddssilamfmifi
+langs:
+- id: EN
+  name: English
+link: https://thredds.silam.fmi.fi/thredds/catalog/catalog.html
+name: FMI SILAM THREDDS Catalog
+owner:
+  link: https://en.ilmatieteenlaitos.fi/
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+  name: Finnish Meteorological Institute
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- THREDDS
+- SILAM
+- air quality
+- atmospheric modelling
+- pollen
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00039276

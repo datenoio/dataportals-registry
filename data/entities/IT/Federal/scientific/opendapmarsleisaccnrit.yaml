@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: OPeNDAP Hyrax catalog operated by the CNR Institute of Atmospheric Sciences
+  and Climate for Martian atmosphere and surface research data published by the MARS
+  project.
+endpoints:
+- type: opendap:catalog
+  url: https://opendap.mars.le.isac.cnr.it/opendap/
+- type: thredds:catalog
+  url: https://opendap.mars.le.isac.cnr.it/opendap/catalog.xml
+id: opendapmarsleisaccnrit
+langs:
+- id: EN
+  name: English
+- id: IT
+  name: Italian
+link: https://opendap.mars.le.isac.cnr.it/opendap/
+name: CNR-ISAC MARS OPeNDAP Hyrax
+owner:
+  link: https://www.isac.cnr.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: CNR Institute of Atmospheric Sciences and Climate
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: opendaphyrax
+  name: OPeNDAP Hyrax
+status: active
+tags:
+- OPeNDAP
+- Hyrax
+- Mars
+- atmosphere
+- planetary science
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00039566

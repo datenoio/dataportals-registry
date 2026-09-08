@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 20
+description: Virtual Observatory data center providing astronomical tables and metadata
+  through TAP.
+endpoints:
+- type: tap:capabilities
+  url: https://vo-tap.oma.be/tap/capabilities
+id: votapomabe
+langs:
+- id: EN
+  name: English
+link: https://vo-tap.oma.be/
+name: ROB Virtual Observatory Data Center
+owner:
+  link: https://vo-tap.oma.be/
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+  name: Royal Observatory of Belgium
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- astronomy
+- virtual observatory
+- TAP
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00038581

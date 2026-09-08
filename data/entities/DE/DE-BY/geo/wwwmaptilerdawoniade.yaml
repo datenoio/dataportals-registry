@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BY
+      name: Bayern
+description: Public MapTiler Server catalog of map styles and tilesets operated by
+  Dawonia Real Estate.
+endpoints:
+- type: maptilerserver:catalog
+  url: https://www.maptiler.dawonia.de
+id: wwwmaptilerdawoniade
+langs:
+- id: DE
+  name: German
+link: https://www.maptiler.dawonia.de
+name: Dawonia MapTiler Server
+owner:
+  link: https://www.dawonia.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BY
+      name: Bayern
+  name: Dawonia Real Estate
+  type: Business
+software:
+  id: maptilerserver
+  name: MapTiler Server
+status: active
+tags:
+- geospatial
+- tiles
+- MapTiler
+- housing
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi99999145

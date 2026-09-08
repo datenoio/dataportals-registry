@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    level: 20
+description: EPN-TAP catalog of planetary observations published by the Planetary
+  Virtual Observatory and Laboratory.
+endpoints:
+- type: tap:capabilities
+  url: http://pvol2.ehu.eus:8083/tap/capabilities
+id: pvol2ehueus
+langs:
+- id: EN
+  name: English
+link: http://pvol2.ehu.eus:8083/
+name: PVOL EPN-TAP
+owner:
+  link: http://pvol2.ehu.eus:8083/
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+  name: University of the Basque Country, Planetary Virtual Observatory and Laboratory
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- astronomy
+- virtual observatory
+- TAP
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039238

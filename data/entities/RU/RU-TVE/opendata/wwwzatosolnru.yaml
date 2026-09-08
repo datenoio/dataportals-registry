@@ -1,0 +1,51 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-TVE
+      name: Tverskaja oblast'
+description: Municipal open-data catalog with four CSV dataset entries covering construction
+  permits, government bodies, service centers and unsafe housing.
+id: wwwzatosolnru
+langs:
+- id: RU
+  name: Russian
+link: https://www.zatosoln.ru/opendata/
+name: Открытые данные ЗАТО Солнечный
+owner:
+  link: https://www.zatosoln.ru/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Администрация ЗАТО Солнечный
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00041922

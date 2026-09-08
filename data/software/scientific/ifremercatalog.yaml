@@ -25,13 +25,13 @@ metadata_support:
   csw: 'No'
   custom_api: 'Yes'
   dcat: 'Yes'
-  dublin_core: 'No'
+  dublin_core: 'Yes'
   iso19115: 'No'
-  oai-pmh: 'No'
+  oai-pmh: 'Yes'
   ogcrecords: 'No'
   openaire: 'No'
   opensearch: 'No'
-  rdf_sparql: 'Yes'
+  rdf_sparql: 'No'
   schema-org: 'Yes'
   sdmx: 'No'
   stac: 'No'
@@ -56,4 +56,6 @@ export_formats:
 - XML
 capabilities:
 - REST API
-last_updated: '2026-03-31T12:00:00Z'
+- OAI-PMH harvesting
+- DCAT export
+last_updated: '2026-09-08T00:00:00Z'

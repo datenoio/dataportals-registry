@@ -1,0 +1,59 @@
+access_mode:
+- open
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion:
+      id: RU-KDA
+      name: Krasnodarskij kraj
+description: Municipal open-data catalog with CSV files and downloadable passports
+  covering administration leadership, structure and general information.
+endpoints:
+- type: drupal:catalog
+  url: https://www.viselki.net/node/669
+api: true
+id: wwwviselkinet
+langs:
+- id: RU
+  name: Russian
+link: https://www.viselki.net/node/669
+name: Открытые данные Выселковского района
+owner:
+  link: https://www.viselki.net/
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    subregion:
+      id: RU-KDA
+      name: Krasnodarskij kraj
+  name: Администрация муниципального образования Выселковский район
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: drupal
+  name: Drupal
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00041882

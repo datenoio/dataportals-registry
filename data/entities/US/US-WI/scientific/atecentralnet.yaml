@@ -1,0 +1,61 @@
+access_mode:
+- open
+catalog_type: Scientific data repository
+api: true
+api_status: active
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ATE Central is a CWIS-based repository and archive for resources produced
+  by National Science Foundation Advanced Technological Education projects. Its public
+  Resource Type browse facet includes 39 dataset records.
+endpoints:
+- type: oaipmh20
+  url: https://atecentral.net/?verb=Identify
+  version: '2.0'
+id: atecentralnet
+langs:
+- id: EN
+  name: English
+link: https://atecentral.net
+name: ATE Central
+owner:
+  link: https://scout.wisc.edu/ate-central
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WI
+      name: Wisconsin
+  name: Internet Scout Research Group, University of Wisconsin-Madison
+  type: Academy
+properties:
+  dataset_count_reported: 39
+  is_national: false
+software:
+  id: cwis
+  name: Collection Workflow Integration System
+status: active
+tags:
+- scientific
+- research data
+- technical education
+- CWIS
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00042284

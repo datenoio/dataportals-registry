@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Metadata catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Health-RI Genomic Data Infrastructure production FAIR Data Point, including
+  ERGO genomics metadata, distinct from the main Health-RI FAIR Data Point.
+endpoints:
+- type: dcat:ttl
+  url: https://gdi-fdp-prd.healthdata.nl
+- type: dcat:ttl
+  url: https://gdi-fdp-prd.healthdata.nl/
+- type: openapi
+  url: https://gdi-fdp-prd.healthdata.nl/v3/api-docs
+  version: '3'
+- type: docs
+  url: https://gdi-fdp-prd.healthdata.nl/swagger-ui.html
+id: gdifdpprdhealthdatanl
+langs:
+- id: EN
+  name: English
+link: https://gdi-fdp-prd.healthdata.nl
+name: Health-RI GDI FAIR Data Point
+owner:
+  link: https://www.health-ri.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: Health-RI
+  type: Other
+software:
+  id: fairdatapoint
+  name: FAIR Data Point
+status: active
+tags:
+- metadata
+- FAIR
+- health
+- genomics
+- Netherlands
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039848

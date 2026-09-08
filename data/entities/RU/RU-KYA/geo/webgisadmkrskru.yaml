@@ -1,0 +1,65 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: true
+api_status: active
+content_types:
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id002
+      id: RU-KYA
+      name: Krasnojarskij kraj
+description: Public municipal GIS with a browsable layer tree for the general plan,
+  territorial zoning, land auctions, water resources, parks, roads and cadastral information.
+  Current destination of map3.admkrsk.ru.
+endpoints:
+- type: geocadgsee:catalog
+  url: https://web-gis.admkrsk.ru/app/portal/imap
+id: webgisadmkrskru
+langs:
+- id: RU
+  name: Russian
+link: https://web-gis.admkrsk.ru/app/portal/imap
+name: Интерактивная карта города Красноярска
+owner:
+  link: https://www.admkrsk.ru
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Администрация города Красноярска
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: geocadgsee
+  name: Geocad System Enterprise Edition
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00041890

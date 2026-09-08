@@ -47,6 +47,8 @@ from constants import (
     COUNTRIES_LANGS,
     COUNTRIES,
     SOFTWARE_NAME_ALIASES,
+    SOFTWARE_IDS_PATH,
+    render_software_ids_yaml,
     ACCESS_MODE_ALLOWED,
     CATALOG_TYPE_ALLOWED,
     STATUS_ALLOWED,
@@ -1993,6 +1995,45 @@ def _load_software_definitions() -> Dict[str, Dict[str, Any]]:
     return software_defs
 
 
+# Version is commonly published for installable OSS platforms, not SaaS viewers.
+SOFTWARE_COVERAGE_VERSION_SUBTYPES = frozenset(
+    {
+        "data_portal_platform",
+        "scientific_repository_platform",
+        "geospatial_service_middleware",
+        "protocol_or_api_server",
+        "metadata_registry_platform",
+        "microdata_catalog_platform",
+    }
+)
+# Public VCS URLs are expected for the same OSS group plus domain/indicator stacks.
+SOFTWARE_COVERAGE_REPO_SUBTYPES = SOFTWARE_COVERAGE_VERSION_SUBTYPES | frozenset(
+    {
+        "domain_data_infrastructure",
+        "indicators_data_platform",
+    }
+)
+SOFTWARE_COVERAGE_GLOBAL_FIELDS = ("license", "documentation_url")
+
+
+def _software_field_present(record: Dict[str, Any], field: str) -> bool:
+    """Return True when a coverage field has a non-empty value."""
+    value = record.get(field)
+    return value not in (None, "", [], {})
+
+
+def _software_counts_toward_coverage(record: Dict[str, Any], field: str) -> bool:
+    """Return True when this record is in the coverage denominator for field."""
+    if field in SOFTWARE_COVERAGE_GLOBAL_FIELDS:
+        return True
+    subtype = record.get("subtype")
+    if field == "version":
+        return subtype in SOFTWARE_COVERAGE_VERSION_SUBTYPES
+    if field == "repository_url":
+        return subtype in SOFTWARE_COVERAGE_REPO_SUBTYPES
+    return True
+
+
 def _collect_catalog_software_ids() -> Counter:
     """Collect software.id usage from entities and scheduled YAML files."""
     usage = Counter()
@@ -2047,8 +2088,10 @@ def validate_software(
     Gates:
     - schema validity against data/schemes/software.json
     - profile checks from validate_software_profile()
-    - unresolved software IDs in references/catalogs
-    - minimum coverage thresholds for key fields
+    - software_ids.yaml matches data/software YAML (run sync-software-maps)
+    - unresolved software IDs in catalogs
+    - minimum coverage thresholds for key fields (version and
+      repository_url are scoped to OSS subtypes, not SaaS viewers)
     """
     from cerberus import Validator
 
@@ -2060,6 +2103,7 @@ def validate_software(
     files = _iter_software_yaml_files()
     total = 0
     present = {"license": 0, "version": 0, "documentation_url": 0, "repository_url": 0}
+    eligible = {"license": 0, "version": 0, "documentation_url": 0, "repository_url": 0}
     schema_errors = []
     profile_issues = []
     software_defs = {}
@@ -2083,24 +2127,51 @@ def validate_software(
             issue["file_path"] = rel_path
             profile_issues.append(issue)
 
+        parent = os.path.basename(os.path.dirname(filepath))
+        expected_folder = MAP_CATALOG_TYPE_SUBDIR.get(record.get("category"))
+        if (
+            parent != os.path.basename(SOFTWARE_DIR)
+            and expected_folder
+            and parent != expected_folder
+        ):
+            profile_issues.append(
+                {
+                    "file_path": rel_path,
+                    "issue_type": "SOFTWARE_FOLDER_CATEGORY_MISMATCH",
+                    "field": "category",
+                    "current_value": f"folder={parent}, category={record.get('category')}",
+                    "suggested_action": (
+                        f"Move the file to data/software/{expected_folder}/ "
+                        "or align category with the folder"
+                    ),
+                }
+            )
+
         for field in present.keys():
-            value = record.get(field)
-            if value not in (None, "", [], {}):
+            if not _software_counts_toward_coverage(record, field):
+                continue
+            eligible[field] += 1
+            if _software_field_present(record, field):
                 present[field] += 1
 
     # Resolve IDs referenced in software_ids.yaml
-    software_ids_ref_path = os.path.join(_REPO_ROOT, "data", "reference", "software_ids.yaml")
-    with open(software_ids_ref_path, "r", encoding="utf8") as f:
-        software_ids_ref = set(yaml.safe_load(f) or [])
+    with open(SOFTWARE_IDS_PATH, "r", encoding="utf8") as f:
+        software_ids_text = f.read()
+    software_ids_ref = set(yaml.safe_load(software_ids_text) or [])
     defined_ids = set(software_defs.keys())
+    expected_ids_text = render_software_ids_yaml(sorted(defined_ids))
+    ids_file_stale = software_ids_text != expected_ids_text
     ref_missing_defs = sorted(software_ids_ref - defined_ids)
+    defs_missing_ref = sorted(defined_ids - software_ids_ref)
 
     # Resolve IDs used in catalogs
     catalog_usage = _collect_catalog_software_ids()
     used_ids = set(catalog_usage.keys())
     used_missing_defs = sorted(used_ids - defined_ids)
 
-    coverage = {k: (present[k] / total if total else 0.0) for k in present.keys()}
+    coverage = {
+        k: (present[k] / eligible[k] if eligible[k] else 1.0) for k in present.keys()
+    }
     threshold_failures = []
     thresholds = {
         "license": min_license_coverage,
@@ -2110,20 +2181,24 @@ def validate_software(
     }
     for field, minimum in thresholds.items():
         if coverage[field] < minimum:
-            threshold_failures.append((field, coverage[field], minimum))
+            threshold_failures.append(
+                (field, coverage[field], minimum, eligible[field])
+            )
 
     typer.echo("Software validation report")
     typer.echo(f"  Total software records: {total}")
     typer.echo(
         "  Coverage: "
-        f"license={coverage['license']:.1%}, "
-        f"version={coverage['version']:.1%}, "
-        f"documentation_url={coverage['documentation_url']:.1%}, "
-        f"repository_url={coverage['repository_url']:.1%}"
+        f"license={coverage['license']:.1%} ({eligible['license']}), "
+        f"version={coverage['version']:.1%} ({eligible['version']} OSS), "
+        f"documentation_url={coverage['documentation_url']:.1%} ({eligible['documentation_url']}), "
+        f"repository_url={coverage['repository_url']:.1%} ({eligible['repository_url']} OSS)"
     )
     typer.echo(f"  Schema errors: {len(schema_errors)}")
     typer.echo(f"  Profile issues: {len(profile_issues)}")
     typer.echo(f"  Reference IDs missing definitions: {len(ref_missing_defs)}")
+    typer.echo(f"  Definitions missing from software_ids.yaml: {len(defs_missing_ref)}")
+    typer.echo(f"  software_ids.yaml stale: {ids_file_stale}")
     typer.echo(f"  Catalog IDs missing definitions: {len(used_missing_defs)}")
     typer.echo(f"  Threshold failures: {len(threshold_failures)}")
 
@@ -2142,6 +2217,15 @@ def validate_software(
         typer.echo("\nReference IDs with no software definition:")
         for software_id in ref_missing_defs[:20]:
             typer.echo(f"  - {software_id}")
+    if defs_missing_ref:
+        typer.echo("\nSoftware YAML IDs missing from software_ids.yaml:")
+        for software_id in defs_missing_ref[:20]:
+            typer.echo(f"  - {software_id}")
+    if ids_file_stale:
+        typer.echo(
+            "\nsoftware_ids.yaml is stale. Run: "
+            "python scripts/builder.py sync-software-maps"
+        )
     if used_missing_defs:
         typer.echo("\nCatalog software IDs with no software definition:")
         for software_id in used_missing_defs[:20]:
@@ -2149,14 +2233,19 @@ def validate_software(
             typer.echo(f"  - {software_id} (used by {count} record(s))")
     if threshold_failures:
         typer.echo("\nCoverage threshold failures:")
-        for field, value, minimum in threshold_failures:
-            typer.echo(f"  - {field}: {value:.1%} < {minimum:.1%}")
+        for field, value, minimum, population in threshold_failures:
+            typer.echo(
+                f"  - {field}: {value:.1%} < {minimum:.1%} "
+                f"(n={population})"
+            )
 
     has_failures = any(
         [
             schema_errors,
             profile_issues,
             ref_missing_defs,
+            defs_missing_ref,
+            ids_file_stale,
             used_missing_defs,
             threshold_failures,
         ]
@@ -2164,6 +2253,16 @@ def validate_software(
     if has_failures:
         raise typer.Exit(1)
     typer.echo("\nAll software quality gates passed.")
+
+
+@app.command("sync-software-maps")
+def sync_software_maps():
+    """Rewrite data/reference/software_ids.yaml from data/software YAML."""
+    text = render_software_ids_yaml()
+    with open(SOFTWARE_IDS_PATH, "w", encoding="utf8") as handle:
+        handle.write(text)
+    id_count = sum(1 for line in text.splitlines() if line.startswith("- "))
+    typer.echo(f"Wrote {SOFTWARE_IDS_PATH} ({id_count} ids)")
 
 
 def validate_software_profile(software_record):

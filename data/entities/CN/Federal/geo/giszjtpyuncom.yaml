@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Public SuperMap iServer on gis.zjtpyun.com publishing hundreds of REST
+  map and data services keyed to Chinese administrative division codes across multiple
+  provinces.
+endpoints:
+- type: supermap:services
+  url: https://gis.zjtpyun.com/iserver/services.json
+id: giszjtpyuncom
+langs:
+- id: ZH
+  name: Chinese
+link: https://gis.zjtpyun.com/iserver/
+name: zjtpyun SuperMap iServer
+owner:
+  link: https://gis.zjtpyun.com
+  location:
+    country:
+      id: CN
+      name: China
+    level: 20
+  name: zjtpyun.com
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: supermapiserver
+  name: SuperMap iServer
+status: active
+tags:
+- SuperMap
+- iServer
+- geospatial
+- GIS
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00038679

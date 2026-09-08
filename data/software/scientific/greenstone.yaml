@@ -1,0 +1,72 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: greenstone
+name: Greenstone Digital Library Software
+website: https://www.greenstone.org
+description: Greenstone is an open-source system for building, organizing, searching,
+  and publishing digital library collections. Greenstone 3 installations have
+  distinctive /greenstone3/{library}/collection routes and can expose collection
+  metadata through an integrated OAI-PMH server.
+owner:
+  name: New Zealand Digital Library Project, University of Waikato
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+logo_url: https://www.greenstone.org/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Limited
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: Limited
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per item
+  supports_licenses: 'Yes'
+storage_type: Raw
+type: Software
+repository_url: https://sourceforge.net/p/greenstone/code/HEAD/tree/
+documentation_url: https://wiki.greenstone.org/doku.php?id=en:tutorials
+changelog_url: https://www.greenstone.org/blog/category/releases/
+version: '3.12'
+release_date: '2025-07-16'
+license:
+  type: GPL-2.0
+  url: https://www.greenstone.org/greenstone3/library/page/gsdl
+export_formats:
+- Dublin Core
+- HTML
+- RSS
+- XML
+capabilities:
+- Configurable digital-library collections
+- Full-text and metadata search
+- OAI-PMH metadata harvesting
+- Dublin Core metadata
+- Multilingual interfaces
+- Bulk collection building and export
+last_updated: '2026-09-06T00:00:00Z'

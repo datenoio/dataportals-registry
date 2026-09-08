@@ -1,0 +1,54 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: UK Data Service ReShare is an EPrints repository for sharing research
+  data, including open, safeguarded, and controlled-access deposits.
+endpoints:
+- type: oaipmh20
+  url: https://reshare.ukdataservice.ac.uk/cgi/oai2?verb=Identify
+  version: '2.0'
+id: reshareukdataserviceacuk
+langs:
+- id: EN
+  name: English
+link: https://reshare.ukdataservice.ac.uk/
+name: UK Data Service ReShare
+owner:
+  link: https://ukdataservice.ac.uk/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: UK Data Service
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- research data
+- data repository
+- eprints
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039403

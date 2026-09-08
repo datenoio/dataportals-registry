@@ -1,0 +1,89 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: RU-KHM
+      name: Hanty-Mansijskij avtonomnyj okrug
+description: Public GP Atlas catalog of the Khanty-Mansi Autonomous Okrug – Yugra
+  IAS «Лесные пожары» forest-fire monitoring system. The Atlas UI is at fire-hmao.ru;
+  map services remain on GeoServer at /geoserver. Operator is БУ ХМАО–Югры «База авиационной
+  и наземной охраны лесов».
+endpoints:
+- type: wms111
+  url: https://www.fire-hmao.ru/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://www.fire-hmao.ru/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://www.fire-hmao.ru/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs201
+  url: https://www.fire-hmao.ru/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://www.fire-hmao.ru/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: firehmaoru
+langs:
+- id: RU
+  name: Russian
+link: https://www.fire-hmao.ru/
+name: ИАС «Лесные пожары» ХМАО–Югры
+owner:
+  link: https://aviales86.ru
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    subregion:
+      id: RU-KHM
+      name: Hanty-Mansijskij avtonomnyj okrug
+  name: БУ ХМАО–Югры «База авиационной и наземной охраны лесов»
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: gpatlas
+  name: GP Atlas
+status: active
+tags:
+- GP Atlas
+- geospatial
+- government
+- geoportal
+- GIS
+- forest fires
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi99998961

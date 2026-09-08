@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-NY
+      name: New York
+description: OPeNDAP catalog of North American Multi-Model Ensemble (NMME) seasonal
+  forecasts, hindcasts, and related observations, hosted by Columbia CCSR as the successor
+  service to the IRI Data Library. Datasets are published with DAP2/DAP4 subsetting
+  (DDS, DAS, DMR, DODS).
+endpoints:
+- type: opendap:catalog
+  url: https://forecast.ccsr.columbia.edu/data/
+id: forecastccsrcolumbiaedu
+langs:
+- id: EN
+  name: English
+link: https://forecast.ccsr.columbia.edu/data/
+name: CCSR Climate Forecast OPeNDAP
+owner:
+  link: https://iri.columbia.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NY
+      name: New York
+  name: Columbia University Center for Climate Systems Research
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: pydap
+  name: PyDAP
+status: active
+tags:
+- climate
+- seasonal forecast
+- NMME
+- OPeNDAP
+- pydap
+- scientific data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00038068

@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: NOAA National Centers for Environmental Information granule-level metadata
+  catalog (Esri Geoportal Server 2.6). Separate from the collection-level NCEI Geoportal;
+  indexes individual data files rather than dataset collections.
+endpoints:
+- type: esrigeo:geoportal
+  url: https://www.ncei.noaa.gov/metadata/granule/geoportal/rest/geoportal
+- type: esrigeo:metadata:search
+  url: https://www.ncei.noaa.gov/metadata/granule/geoportal/rest/metadata/search
+- type: csw300
+  url: https://www.ncei.noaa.gov/metadata/granule/geoportal/csw
+  version: 3.0.0
+- type: csw202
+  url: https://www.ncei.noaa.gov/metadata/granule/geoportal/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: atom
+  url: https://www.ncei.noaa.gov/metadata/granule/geoportal/opensearch?f=atom&from=1&size=10
+- type: esrigeo:json
+  url: https://www.ncei.noaa.gov/metadata/granule/geoportal/opensearch?f=json&from=1&size=10
+id: wwwnceinoaagovmetadatagranulegeoportal
+langs:
+- id: EN
+  name: English
+link: https://www.ncei.noaa.gov/metadata/granule/geoportal/
+name: NCEI Granule Geoportal
+owner:
+  link: https://www.ncei.noaa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: National Centers for Environmental Information
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: esrigeo
+  name: Esri Geoportal Server
+status: active
+tags:
+- geospatial
+- metadata
+- granule
+- climate
+- ocean
+- NOAA
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00042133

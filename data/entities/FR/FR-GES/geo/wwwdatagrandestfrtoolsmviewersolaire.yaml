@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion: &id002
+      id: FR-GES
+      name: Grand-Est
+description: DataGrandEst mviewer of solar potential on properties of the Grand Est
+  region.
+endpoints:
+- type: mviewer:config
+  url: https://www.datagrandest.fr/tools/mviewer/apps/rge_solaire/solaire_pro.xml
+id: wwwdatagrandestfrtoolsmviewersolaire
+langs:
+- id: FR
+  name: French
+link: https://www.datagrandest.fr/tools/mviewer/?config=apps/rge_solaire/solaire_pro.xml
+name: DataGrandEst potentiel solaire
+owner:
+  link: https://www.datagrandest.fr
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Grand Est Region
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- mviewer
+- geoportal
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00038120

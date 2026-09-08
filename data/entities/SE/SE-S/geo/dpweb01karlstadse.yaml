@@ -1,0 +1,54 @@
+access_mode:
+- restricted
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: SE
+      name: Sweden
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    level: 30
+    subregion: &id002
+      id: SE-S
+      name: Värmlands län [SE-17]
+description: Utility mapping deployment indexed as dpSpatial - dpWebmap with dpPower
+  and dpCom applications. Live verification timed out on 2026-09-07; public catalog
+  access is unverified. Access mode is provisionally restricted pending verification.
+id: dpweb01karlstadse
+langs:
+- id: SV
+  name: Swedish
+link: https://dpweb01.karlstad.se/
+name: Karlstad dpSpatial Webmap
+owner:
+  link: https://dpweb01.karlstad.se/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Karlstads kommun
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: dpwebmap
+  name: dpWebmap
+status: active
+tags:
+- utility mapping
+- verification pending
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00041939

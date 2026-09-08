@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+description: Mapia/Giscube geoportal Celia with public QGIS Server WMS for Barcelona
+  municipal districts, neighbourhoods, parcels, and street labels. Distinct from GeoportalBCN.
+endpoints:
+- type: wms130
+  url: https://celia.infraplan.cat/apps/giscube-admin/qgisserver/services/parceles-codis?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wms111
+  url: https://celia.infraplan.cat/apps/giscube-admin/qgisserver/services/parceles-codis?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://celia.infraplan.cat/apps/giscube-admin/qgisserver/services/admin-limit-terme?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: celiainfraplancat
+langs:
+- id: CA
+  name: Catalan
+- id: ES
+  name: Spanish
+link: https://celia.infraplan.cat/geoportal/
+name: Geoportal Celia
+owner:
+  link: https://www.barcelona.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+  name: Ajuntament de Barcelona
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: qgisserver
+  name: QGIS Server
+status: active
+tags:
+- geoportal
+- GIS
+- municipal
+- QGIS Server
+topics:
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99999337

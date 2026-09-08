@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: National data hub for Nigerian statistical portals, indicators, and thematic
+  data products.
+endpoints:
+- type: knoema:search
+  url: https://nigeriainfohighway.opendataforafrica.org/api/1.0/search
+  version: '1.0'
+- type: sdmx:datastructure
+  url: https://nigeriainfohighway.opendataforafrica.org/api/1.0/sdmx
+  version: '2.0'
+- type: opensearch
+  url: https://nigeriainfohighway.opendataforafrica.org/OpenSearch.xml
+id: nigeriainfohighwayopendataforafricaorg
+langs:
+- id: EN
+  name: English
+link: https://nigeriainfohighway.opendataforafrica.org/
+name: Nigeria Information Highway
+owner:
+  link: https://nigeriainfohighway.opendataforafrica.org/
+  location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 20
+  name: National Bureau of Statistics, Nigeria
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: knoema
+  name: Knoema
+status: active
+tags:
+- has_api
+- statistics
+- indicators
+- Knoema
+- Open Data for Africa
+- government
+- Nigeria
+- official statistics
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00039839

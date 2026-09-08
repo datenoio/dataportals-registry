@@ -1,0 +1,50 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Federal Agency for Railway Transport open-data catalog covering railway
+  stations, transport infrastructure and agency activities.
+id: rlwgovru
+langs:
+- id: RU
+  name: Russian
+link: https://rlw.gov.ru/opendata
+name: Открытые данные Росжелдора
+owner:
+  link: https://rlw.gov.ru/
+  location:
+    country: *id001
+    level: 20
+  name: Федеральное агентство железнодорожного транспорта
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00041838

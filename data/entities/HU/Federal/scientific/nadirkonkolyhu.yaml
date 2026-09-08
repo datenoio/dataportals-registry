@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Virtual Observatory catalog of astronomical data published by Konkoly
+  Observatory through TAP.
+endpoints:
+- type: tap:capabilities
+  url: http://nadir.konkoly.hu:80/tap/capabilities
+id: nadirkonkolyhu
+langs:
+- id: EN
+  name: English
+link: http://nadir.konkoly.hu:80/
+name: TAP server for Konkoly
+owner:
+  link: http://nadir.konkoly.hu:80/
+  location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+  name: Konkoly Observatory
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- astronomy
+- virtual observatory
+- TAP
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039538

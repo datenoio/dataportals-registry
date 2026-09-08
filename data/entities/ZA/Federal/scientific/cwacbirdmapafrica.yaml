@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 20
+    macroregion:
+      id: '018'
+      name: Southern Africa
+description: Coordinated Waterbird Counts citizen-science catalog of wetland bird
+  counts at registered waterbodies in South Africa and Kenya, with public site and
+  species lists and a REST API, part of the BirdMap family.
+endpoints:
+- type: rest
+  url: https://api.birdmap.africa/cwac/
+id: cwacbirdmapafrica
+langs:
+- id: EN
+  name: English
+link: https://cwac.birdmap.africa/
+name: Coordinated Waterbird Counts
+owner:
+  link: https://www.fitzpatrick.uct.ac.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 20
+  name: FitzPatrick Institute of African Ornithology, University of Cape Town
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: birdmap
+  name: BirdMap Africa
+status: active
+tags:
+- biodiversity
+- birds
+- citizen science
+- waterbirds
+- South Africa
+- has_api
+topics:
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99999105

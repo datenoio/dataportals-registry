@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-PRI
+      name: Primorskij kraj
+description: Regional geospatial portal and CKAN catalog for Primorsky Krai. Publishes
+  cartographic and spatial datasets, geological maps and supporting reports, including
+  MapInfo interchange and raster resources. Developed through cooperation between
+  municipal administrations, Engineering Systems, Geokad DV and the Pacific Geographical
+  Institute of the Far Eastern Branch of the Russian Academy of Sciences.
+endpoints:
+- type: ckan:api
+  url: https://sihote-alin.ru/api/3/action/
+id: sihotealinru
+langs:
+- id: RU
+  name: Russian
+link: https://sihote-alin.ru
+name: Геопортал Приморского края «Сихотэ-Алинь»
+owner:
+  link: https://sihote-alin.ru/about
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: ООО «Центр геопространственной аналитики»
+  type: Business
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00041910

@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Data search engine
+content_types:
+- dataset
+- publication
+- software
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: OpenAIRE CONNECT gateway for the Austrian Social Science Data Archive
+  (AUSSDA), a consortium of Austrian universities and organisations. It provides a
+  Graph-filtered view of AUSSDA-affiliated research products, distinct from the origin
+  Dataverse at data.aussda.at.
+endpoints:
+- type: openaire:public-apis
+  url: https://aussda.openaire.eu/develop
+- type: openaire:graph
+  url: https://api.openaire.eu/graph/v2/researchProducts?relCommunityId=aussda
+- type: openaire:graph-docs
+  url: https://graph.openaire.eu/docs/
+id: aussdaopenaireeu
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://aussda.openaire.eu
+name: AUSSDA
+owner:
+  link: https://aussda.at/
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+  name: AUSSDA
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: openaire
+  name: OpenAIRE
+status: active
+tags:
+- openaire
+- open science
+- research
+- scholarly communication
+- austria
+- social science
+- aussda
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+uid: cdi00038537

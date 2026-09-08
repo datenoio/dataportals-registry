@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: Africa
+      name: Africa
+    macroregion:
+      id: '002'
+      name: Africa
+    level: 10
+description: Regional trade and market indicators portal for members of the Common
+  Market for Eastern and Southern Africa.
+endpoints:
+- type: sdmx:datastructure
+  url: https://madeincomesa.opendataforafrica.org/api/1.0/sdmx
+  version: '2.0'
+- type: opensearch
+  url: https://madeincomesa.opendataforafrica.org/OpenSearch.xml
+id: madeincomesaopendataforafricaorg
+langs:
+- id: EN
+  name: English
+link: https://madeincomesa.opendataforafrica.org/
+name: Made in COMESA
+owner:
+  link: https://madeincomesa.opendataforafrica.org/
+  location:
+    country:
+      id: Africa
+      name: Africa
+    level: 10
+  name: Common Market for Eastern and Southern Africa
+  type: International
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: knoema
+  name: Knoema
+status: active
+tags:
+- has_api
+- statistics
+- indicators
+- Knoema
+- Open Data for Africa
+- regional
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00038563

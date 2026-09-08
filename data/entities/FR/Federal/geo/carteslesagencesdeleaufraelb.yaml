@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Public QWC2 geoportal publishing water-management and environmental map
+  layers for the Loire-Bretagne basin.
+endpoints:
+- type: qwc2:layers
+  url: https://cartes.lesagencesdeleau.fr/aelb/themes.json
+id: carteslesagencesdeleaufraelb
+langs:
+- id: FR
+  name: French
+link: https://cartes.lesagencesdeleau.fr/aelb/
+name: Cartes de l'Agence de l'eau Loire-Bretagne
+owner:
+  link: https://agence.eau-loire-bretagne.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Agence de l'eau Loire-Bretagne
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: qwc2
+  name: QGIS Web Client 2 (QWC2)
+status: active
+tags:
+- GIS
+- geospatial
+- QWC2
+- water
+- Loire-Bretagne
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00039346

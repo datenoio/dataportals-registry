@@ -1,0 +1,55 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id002
+      id: RU-MO
+      name: Mordovija, Respublika
+description: Public thematic map and atlas of Mordovia with settlements, administrative
+  districts, landslides, protected areas, religious sites and recreation infrastructure.
+id: geo13ru
+langs:
+- id: RU
+  name: Russian
+link: https://geo13.ru/geoportal
+name: Геопортал РГО в Республике Мордовия
+owner:
+  link: https://geo13.ru/contacts
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Отделение Русского географического общества в Республике Мордовия
+  type: Civil society
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00041898

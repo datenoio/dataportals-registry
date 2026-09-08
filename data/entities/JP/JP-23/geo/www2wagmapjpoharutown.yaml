@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion: &id001
+      id: JP-23
+      name: Aichi
+description: Public WagMap WebGIS for 大治町 publishing administrative and thematic map
+  layers.
+id: www2wagmapjpoharutown
+langs:
+- id: JA
+  name: Japanese
+link: https://www2.wagmap.jp/oharutown/Portal
+name: Oharu Town WebGIS (はるちず)
+owner:
+  link: https://www2.wagmap.jp/
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion: *id001
+  name: 大治町
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: wagmap
+  name: わが街ガイド
+status: active
+tags:
+- geospatial
+- GIS
+- municipal
+- Japan
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00039771

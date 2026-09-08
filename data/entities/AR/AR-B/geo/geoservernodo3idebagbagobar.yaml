@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: AR-B
+      name: Buenos Aires
+description: IDEBA's third GeoServer node, publishing geospatial layers from public
+  bodies of the Province of Buenos Aires.
+endpoints:
+- type: wms130
+  url: https://geoserver-nodo3.ideba.gba.gob.ar/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://geoserver-nodo3.ideba.gba.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: geoservernodo3idebagbagobar
+langs:
+- id: ES
+  name: Spanish
+link: https://geoserver-nodo3.ideba.gba.gob.ar/geoserver
+name: IDEBA GeoServer Node 3
+owner:
+  link: https://www.gba.gob.ar/
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-B
+      name: Buenos Aires
+  name: Province of Buenos Aires
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- Buenos Aires
+- geospatial
+- GeoServer
+- IDEBA
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00038514

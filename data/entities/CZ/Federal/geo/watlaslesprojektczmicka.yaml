@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Spatial metadata catalogue (Micka) of Watlas, a Lesprojekt geospatial
+  hub. Implements OGC CSW 2.0.2 ISO AP 1.0 for water, environment, and regional spatial
+  datasets and services.
+endpoints:
+- type: csw202
+  url: https://watlas.lesprojekt.cz/micka/csw/?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: atom
+  url: https://watlas.lesprojekt.cz/micka/csw/?request=GetRecords&query=&format=application/xml&MaxRecords=9999&outputSchema=http://www.w3.org/2005/Atom
+- type: dcat:xml
+  url: https://watlas.lesprojekt.cz/micka/csw/?request=GetRecords&query=&format=application/xml&MaxRecords=9999&ElementSetName=brief&outputSchema=http://www.w3.org/ns/dcat%23
+- type: opensearch
+  url: https://watlas.lesprojekt.cz/micka/opensearch
+  version: '1.0'
+id: watlaslesprojektczmicka
+langs:
+- id: CS
+  name: Czech
+- id: EN
+  name: English
+link: https://watlas.lesprojekt.cz/micka/
+name: Watlas Spatial Metadata Catalogue
+owner:
+  link: https://www.lesprojekt.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: Lesprojekt
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: micka
+  name: Micka
+status: active
+tags:
+- CSW
+- INSPIRE
+- Micka
+- geospatial
+- metadata
+- water
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+uid: cdi99999342

@@ -1,0 +1,57 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-ALT
+      name: Altajskij kraj
+description: Public municipal investment and land map dashboard linked by the Barnaul
+  investment portal. Includes land parcels, investment sites and an industrial park,
+  with filters for street, district, cadastral number, status, zoning and intended
+  use.
+id: diasbarnauladmru
+langs:
+- id: RU
+  name: Russian
+link: https://dias.barnaul-adm.ru/embed/dashboard/4a799170-c1f0-48db-a7dc-944b22367e84
+name: Инвестиционная карта города Барнаула
+owner:
+  link: https://invest.barnaul.org/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Администрация города Барнаула
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00041856

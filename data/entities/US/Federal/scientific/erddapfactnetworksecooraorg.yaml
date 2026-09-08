@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ERDDAP catalog providing aquatic animal telemetry datasets from the FACT
+  Network.
+endpoints:
+- type: erddap:index
+  url: https://erddap.factnetwork.secoora.org/erddap/index.json
+- type: erddap:datasets
+  url: https://erddap.factnetwork.secoora.org/erddap/info/index.json
+- type: opensearch
+  url: https://erddap.factnetwork.secoora.org/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://erddap.factnetwork.secoora.org/erddap/sitemap.xml
+langs:
+  - id: EN
+    name: English
+id: erddapfactnetworksecooraorg
+link: https://erddap.factnetwork.secoora.org/erddap/index.html
+name: FACT Network ERDDAP
+owner:
+  link: https://www.factnetwork.org/
+  location:
+    country:
+      id: US
+      name: United States
+  name: FACT Network
+  type: Civil society
+properties:
+  is_national: false
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- scientific
+- research
+- civil-society
+- United States
+- has_api
+- ERDDAP
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00042153

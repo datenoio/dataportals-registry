@@ -1,0 +1,71 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: cwis
+name: Collection Workflow Integration System
+website: https://scout.wisc.edu/cwis
+description: The Collection Workflow Integration System (CWIS) is open-source
+  software for assembling, organizing, searching, and sharing metadata collections.
+  It provides configurable schemas, qualified Dublin Core, RSS and metadata exports,
+  and an integrated OAI-PMH server with selective harvesting.
+owner:
+  name: Internet Scout Research Group, University of Wisconsin-Madison
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://scout.wisc.edu/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Limited
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per item
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+documentation_url: https://scout.wisc.edu/cwis
+changelog_url: https://scout.wisc.edu/cwis/changelog
+version: 4.1.1
+release_date: '2018-05-18'
+license:
+  type: GPL-2.0
+  url: https://scout.wisc.edu/cwis/faq
+export_formats:
+- Dublin Core
+- RSS
+- TSV
+- XML
+capabilities:
+- Configurable metadata schemas
+- OAI-PMH and OAI-SQ harvesting
+- Qualified Dublin Core
+- RSS feeds
+- Fielded and full-text search
+- Bulk metadata export
+last_updated: '2026-09-06T00:00:00Z'

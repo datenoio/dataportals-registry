@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: MT
+      name: Malta
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Public SDMX-RI NSI web service of Malta's National Statistics Office
+  (StatDB release API), exposing official statistics dataflows through SDMX REST and
+  SOAP. Distinct from the IRIS Istat Data Browser UI on iris.nso.gov.mt.
+endpoints:
+- type: sdmx:dataflows
+  url: https://apirelease-statdb.nso.gov.mt/rest/dataflow
+- type: sdmx:datastructure
+  url: https://apirelease-statdb.nso.gov.mt/rest/datastructure
+  version: '1.0'
+- type: sdmx:codelist
+  url: https://apirelease-statdb.nso.gov.mt/rest/codelist
+  version: '1.0'
+- type: sdmx:conceptscheme
+  url: https://apirelease-statdb.nso.gov.mt/rest/conceptscheme
+  version: '1.0'
+id: apireleasestatdbnsogovmt
+langs:
+- id: EN
+  name: English
+link: https://apirelease-statdb.nso.gov.mt/
+name: Malta NSO StatDB SDMX API
+owner:
+  link: https://nso.gov.mt
+  location:
+    country:
+      id: MT
+      name: Malta
+    level: 20
+  name: National Statistics Office
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: sdmxri
+  name: SDMX-RI
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- Malta
+- NSO
+- SDMX
+- has_api
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi99999753

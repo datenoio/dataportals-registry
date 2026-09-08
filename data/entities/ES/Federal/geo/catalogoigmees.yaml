@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Public metadata catalogue for geological and geospatial datasets published
+  by the Geological Survey of Spain (IGME-CSIC).
+id: catalogoigmees
+langs:
+- id: ES
+  name: Spanish
+link: https://catalogo.igme.es/geonetwork
+name: IGME-CSIC Metadata Catalogue
+owner:
+  link: https://www.igme.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+  name: Instituto Geológico y Minero de España (IGME-CSIC)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- geology
+- metadata
+- GeoNetwork
+- has_api
+- government
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+endpoints:
+- type: csw202
+  url: https://catalogo.igme.es/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://catalogo.igme.es/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://catalogo.igme.es/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://catalogo.igme.es/geonetwork/srv/api/site
+uid: cdi00039235

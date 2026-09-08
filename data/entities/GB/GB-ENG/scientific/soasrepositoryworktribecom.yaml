@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: General research repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: SOAS Research Online is the institutional repository of SOAS, University
+  of London. It provides a permanent public record of the university's research output
+  and includes publications, theses, and research data.
+endpoints:
+- type: oaipmh20
+  url: https://soas-repository.worktribe.com/oaiprovider?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://soas-repository.worktribe.com/sitemap_index.xml
+id: soasrepositoryworktribecom
+langs:
+- id: EN
+  name: English
+link: https://soas-repository.worktribe.com
+name: SOAS Research Online
+owner:
+  link: https://www.soas.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: SOAS University of London
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: worktribe
+  name: Worktribe
+status: active
+tags:
+- scientific
+- has_api
+- open access
+- research output
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi99999300

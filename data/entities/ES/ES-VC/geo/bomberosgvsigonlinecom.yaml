@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: inactive
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -50,7 +50,7 @@ rights:
 software:
   id: gvsigonline
   name: gvSIG Online
-status: inactive
+status: deprecated
 tags:
 - gvsigonline
 - geospatial
@@ -63,4 +63,9 @@ topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
-uid: cdi99992884
+uid: temp00005543
+endpoints:
+- type: ogc:wms
+  url: https://bomberos.gvsigonline.com/geoserver/wms
+- type: ogc:wfs
+  url: https://bomberos.gvsigonline.com/geoserver/wfs

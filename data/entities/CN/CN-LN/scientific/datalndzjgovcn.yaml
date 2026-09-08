@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion:
+      id: CN-LN
+      name: Liaoning Sheng
+description: Institutional scientific data repository of the Liaoning Earthquake Administration.
+  FairStack reports an InstDB deployment for the organization; the candidate public
+  endpoint requires availability verification.
+endpoints:
+- type: instdb:catalog
+  url: https://data.lndzj.gov.cn
+id: datalndzjgovcn
+langs:
+- id: ZH
+  name: Chinese
+link: https://data.lndzj.gov.cn
+name: Liaoning Earthquake Science Data Center
+owner:
+  link: https://www.lndzj.gov.cn
+  location:
+    country:
+      id: CN
+      name: China
+    level: 30
+    subregion:
+      id: CN-LN
+      name: Liaoning Sheng
+  name: Liaoning Earthquake Administration
+  type: Regional government
+properties:
+  is_national: false
+  unfinished: true
+software:
+  id: instdb
+  name: InstDB
+status: active
+tags:
+- scientific
+- research data
+- earthquake
+- seismology
+- InstDB
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00038691

@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Coastal science data repository of the Yantai Institute of Coastal Zone
+  Research, Chinese Academy of Sciences. FairStack reports an InstDB deployment for
+  the institute; the candidate public endpoint requires renewed availability verification.
+endpoints:
+- type: instdb:catalog
+  url: http://data.yic.ac.cn
+id: datayicaccn
+langs:
+- id: ZH
+  name: Chinese
+link: http://data.yic.ac.cn
+name: Coastal Science Data Platform
+owner:
+  link: https://yic.cas.cn
+  location:
+    country:
+      id: CN
+      name: China
+    level: 20
+  name: Yantai Institute of Coastal Zone Research, Chinese Academy of Sciences
+  type: Academy
+properties:
+  is_national: false
+  unfinished: true
+software:
+  id: instdb
+  name: InstDB
+status: active
+tags:
+- scientific
+- research data
+- coastal science
+- marine science
+- InstDB
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00038692

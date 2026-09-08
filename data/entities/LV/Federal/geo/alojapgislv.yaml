@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LV
+      name: Latvia
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Flower beds and the Aloja–Ungurpils cycle path listed by this pGIS tenant
+  in Latvia. The public layer-classifier API was accessible on 2026-09-07 and reported
+  zero feature counts. Tenant ownership and feature availability require verification
+  before promotion.
+endpoints:
+- type: other
+  url: https://aloja.pgis.lv/api/v1/classifiers/layers
+id: alojapgislv
+langs:
+- id: LV
+  name: Latvian
+link: https://aloja.pgis.lv/
+name: Aloja pGIS
+owner:
+  link: https://aloja.pgis.lv/
+  location:
+    country:
+      id: LV
+      name: Latvia
+  name: Aloja Municipality
+  type: Other
+properties:
+  is_national: false
+  unfinished: true
+software:
+  id: pgis
+  name: pGIS
+status: active
+tags:
+- pGIS
+- Latvia
+- aloja
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00039820

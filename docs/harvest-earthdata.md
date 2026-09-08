@@ -38,7 +38,7 @@ Each `datasetID` is one dataset. Grid and table datasets are both in scope. Do n
 
 ## OPeNDAP (`opendap`) {#opendap}
 
-Hyrax/`catalog.xml` or an OPeNDAP directory. Harvest catalog **dataset nodes**, not every `.nc` URL. If THREDDS or ERDDAP is on the same host, use those recipes.
+OPeNDAP directory or implementation-specific catalog. Harvest catalog **dataset nodes**, not every `.nc` URL. For an OPeNDAP Hyrax server, use the [Hyrax recipe](harvest-scientific-domain.md#opendaphyrax). If THREDDS or ERDDAP is on the same host, use those recipes.
 
 ## PyDAP (`pydap`) {#pydap}
 

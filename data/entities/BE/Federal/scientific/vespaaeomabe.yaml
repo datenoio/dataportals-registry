@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 20
+description: Planetary atmosphere data service providing GEM-Mars model data and NOMAD
+  and SOIR observations.
+endpoints:
+- type: tap:capabilities
+  url: http://vespa-ae.oma.be/tap/capabilities
+id: vespaaeomabe
+langs:
+- id: EN
+  name: English
+link: http://vespa-ae.oma.be/
+name: VESPA PA team server
+owner:
+  link: http://vespa-ae.oma.be/
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+  name: Royal Belgian Institute for Space Aeronomy
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- astronomy
+- virtual observatory
+- TAP
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00038580

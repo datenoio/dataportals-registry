@@ -1,0 +1,61 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-73
+      name: Savoie
+description: IsiGéo (Geomatika) web GIS tenant at vanoise.geomatika.fr. Login-walled;
+  not a public open-data portal.
+endpoints:
+- type: openapi
+  url: https://vanoise.geomatika.fr/api
+id: vanoisegeomatikafr
+langs:
+- id: FR
+  name: French
+link: https://vanoise.geomatika.fr/
+name: Parc national de la Vanoise IsiGéo
+owner:
+  link: https://www.vanoise-parcnational.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-73
+      name: Savoie
+  name: Parc national de la Vanoise
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: isigeo
+  name: IsiGéo
+status: active
+tags:
+- France
+- geoportal
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00039318

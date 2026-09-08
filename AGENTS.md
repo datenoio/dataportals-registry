@@ -38,7 +38,7 @@ The registry collects and maintains structured metadata about:
 - Metadata catalogs
 - Other data infrastructure
 
-As of 3 September 2026, source YAML contains **29,816** verified catalog entries across **222** country/territory folders, **0** scheduled records, and **366** software definitions. Dataset exports match YAML. Last published snapshot is v1.19.0 (29,816 catalogs, 0 scheduled, 366 software).
+As of 8 September 2026, source YAML contains **35,266** verified catalog entries across **224** country/territory folders, **0** scheduled records, and **423** software definitions. Dataset exports match YAML. Last published snapshot is v1.19.0 (29,816 catalogs, 0 scheduled, 366 software).
 
 ### Scope Boundary (Important)
 
@@ -580,7 +580,7 @@ Follow [docs/software-taxonomy.md](docs/software-taxonomy.md#adding-a-software-d
 
 1. Check existing software in `data/software/`
 2. Create new YAML file with software metadata (`type: Software`, `category`, `subtype`)
-3. Update `data/reference/software_ids.yaml` / `scripts/constants.py` if needed
+3. Run `python scripts/builder.py sync-software-maps` (do not hand-edit `software_ids.yaml` or `MAP_SOFTWARE_OWNER_CATALOG_TYPE`)
 4. Add fingerprints to the matching discovery guide ([software-taxonomy.md](docs/software-taxonomy.md#adding-a-software-definition))
 5. Run `python scripts/builder.py validate-software` and `python scripts/builder.py build`
 6. Validate and test

@@ -1,0 +1,78 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+description: MERIT is Ramon Llull University's public Pure research portal, providing
+  searchable institutional research datasets and related research information.
+endpoints:
+- type: oaipmh20
+  url: https://merit.url.edu/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://merit.url.edu/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://merit.url.edu/sitemap/datasets.xml
+- type: sitemap
+  url: https://merit.url.edu/sitemap.xml
+id: meriturledu
+langs:
+- id: EN
+  name: English
+link: https://merit.url.edu
+name: MERIT - Ramon Llull University Research Portal
+owner:
+  link: https://www.url.edu/en
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+  name: Ramon Llull University
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research data
+- datasets
+- university research
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00039221

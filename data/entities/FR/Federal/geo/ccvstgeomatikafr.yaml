@@ -1,0 +1,58 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: IsiGéo (Geomatika) web GIS tenant at ccvst.geomatika.fr. Login-walled;
+  not a public open-data portal.
+endpoints:
+- type: openapi
+  url: https://ccvst.geomatika.fr/api
+id: ccvstgeomatikafr
+langs:
+- id: FR
+  name: French
+link: https://ccvst.geomatika.fr/
+name: CCVST IsiGéo
+owner:
+  link: https://ccvst.geomatika.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: CCVST
+  type: Other
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: isigeo
+  name: IsiGéo
+status: active
+tags:
+- France
+- geoportal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00039350

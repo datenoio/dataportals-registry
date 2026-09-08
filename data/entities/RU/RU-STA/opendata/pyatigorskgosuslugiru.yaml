@@ -1,0 +1,51 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-STA
+      name: Stavropol'skij kraj
+description: Municipal open-data catalog with dataset passports, structures and CSV
+  downloads on the Gosweb city website.
+id: pyatigorskgosuslugiru
+langs:
+- id: RU
+  name: Russian
+link: https://pyatigorsk.gosuslugi.ru/ofitsialno/statistika/otkrytye-dannye/
+name: Открытые данные города Пятигорска
+owner:
+  link: https://pyatigorsk.gosuslugi.ru/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Администрация города Пятигорска
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00041915

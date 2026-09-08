@@ -1,0 +1,62 @@
+access_mode:
+- open
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    macroregion:
+      id: '005'
+      name: South America
+    level: 30
+    subregion:
+      id: BR-MT
+      name: Mato Grosso
+description: Earth observation platform for monitoring socio-environmental dynamics
+  in Mato Grosso, Brazil. Provides thematic geographic layers and spatio-temporal
+  indicators for land use, climate, vegetation, agriculture and hydrology. Developed
+  by the CHOVE-CHUVA consortium led by LETG Rennes with Alkante and French and Brazilian
+  partners.
+endpoints:
+- type: prodige:catalog
+  url: https://www.sco.chove-chuva.org/en/
+api: true
+id: wwwscochovechuvaorg
+langs:
+- id: EN
+  name: English
+link: https://www.sco.chove-chuva.org/en/
+name: SCO Chove-Chuva
+owner:
+  link: https://www.spaceclimateobservatory.org/chove-chuva
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-BRE
+      name: Bretagne
+  name: CHOVE-CHUVA consortium - UMR LETG (CNRS / Université Rennes 2)
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: prodige
+  name: PRODIGE
+status: active
+tags:
+- earth observation
+- climate
+- land use
+- geospatial
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00039332

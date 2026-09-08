@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CD
+      name: Democratic Republic of the Congo
+    level: 20
+    macroregion:
+      id: '017'
+      name: Middle Africa
+description: MapBiomas Democratic Republic of the Congo platform of annual land-cover
+  and land-use maps for 2000–2025 (Collection 1), produced from Landsat imagery using
+  the shared MapBiomas network methods across five working regions.
+endpoints:
+- type: mapbiomas:catalog
+  url: https://plataforma.mapbiomas.org/projects/mapbiomas/democratic-republic-of-congo
+- type: customapi
+  url: https://plataforma.mapbiomas.org/api/v1/democratic-republic-of-congo/themes?tenantId=mapbiomas
+  version: '1'
+id: plataformamapbiomasorgdemocraticrepublicofcongo
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://plataforma.mapbiomas.org/projects/mapbiomas/democratic-republic-of-congo
+name: MapBiomas République Démocratique du Congo
+owner:
+  link: https://rdc.mapbiomas.org
+  location:
+    country:
+      id: CD
+      name: Democratic Republic of the Congo
+    level: 20
+  name: MapBiomas RDC
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: mapbiomas
+  name: MapBiomas
+status: active
+tags:
+- geospatial
+- land cover
+- land use
+- satellite
+- MapBiomas
+- has_api
+- Congo
+- DRC
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99999842

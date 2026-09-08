@@ -1,0 +1,79 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: American University Office of Research Redivis catalog for discovering,
+  accessing, and analyzing research datasets, including large-scale voter files.
+endpoints:
+- type: openapi
+  url: https://redivis.com/api/v1/openapi.json
+- type: custom_api
+  url: https://redivis.com/api/v1/organizations/au_office_of_research/datasets
+id: rediviscomauofficeofresearch
+identifiers:
+- id: ror
+  url: https://ror.org/052w4zt36
+  value: 052w4zt36
+langs:
+- id: EN
+  name: English
+link: https://redivis.com/au_office_of_research
+name: American University Office of Research
+owner:
+  link: https://www.american.edu/research/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
+  name: American University
+  type: Academy
+properties:
+  dataset_count_reported: 4
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://redivis.com/privacy
+  rights_type: granular
+  tos_url: https://redivis.com/terms
+software:
+  id: redivis
+  name: Redivis
+status: active
+tags:
+- research data
+- scientific
+- university
+- elections
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99999441

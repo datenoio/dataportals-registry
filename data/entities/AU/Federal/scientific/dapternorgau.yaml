@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 20
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+description: TERN THREDDS service publishing ecosystem-process, landscape, climate-model,
+  heatwave, extreme-weather, evapotranspiration, and bioclimatic datasets.
+endpoints:
+- type: thredds:catalog
+  url: https://dap.tern.org.au/thredds/catalog/catalog.xml
+id: dapternorgau
+langs:
+- id: EN
+  name: English
+link: https://dap.tern.org.au/thredds/catalog/catalog.html
+name: TERN Data Access Portal THREDDS Catalog
+owner:
+  link: https://www.tern.org.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 20
+  name: Terrestrial Ecosystem Research Network
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: TERN Data Licence
+  license_url: https://www.tern.org.au/datalicence/
+  privacy_policy_url: https://www.tern.org.au/terms-of-use/#disclaimer
+  rights_type: granular
+  tos_url: https://www.tern.org.au/terms-of-use
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- THREDDS
+- ecosystem
+- climate
+- landscape
+- environmental data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00038554

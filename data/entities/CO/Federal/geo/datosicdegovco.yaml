@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Official open geospatial data catalog of Colombia's national spatial
+  data infrastructure, providing searchable datasets and interoperable services.
+endpoints:
+- type: dcatus11
+  url: https://datos.icde.gov.co/api/feed/dcat-us/1.1.json
+- type: ogcrecordsapi
+  url: https://datos.icde.gov.co/api/search/v1
+id: datosicdegovco
+langs:
+- id: ES
+  name: Spanish
+link: https://datos.icde.gov.co
+name: Datos Abiertos ICDE
+owner:
+  link: https://www.icde.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+  name: Infraestructura Colombiana de Datos Espaciales (ICDE)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- open data
+- Colombia
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00038698

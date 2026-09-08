@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 20
+description: 'GREGOR solar telescope project and archive at AIP, covering GFPI and
+  high-resolution imaging observations. The Daiquiri site is reachable, but public
+  archive access remains unverified: its Observations link returned HTTP 404 on 2026-09-07.'
+endpoints:
+- type: daiquiri:catalog
+  url: https://gregor.aip.de/
+id: gregoraipde
+langs:
+- id: EN
+  name: English
+link: https://gregor.aip.de/
+name: GREGOR project and archive at AIP
+owner:
+  link: https://www.aip.de/
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Leibniz Institute for Astrophysics Potsdam (AIP)
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: daiquiri
+  name: Daiquiri
+status: active
+tags:
+- astronomy
+- solar physics
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039194

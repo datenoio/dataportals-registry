@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -18,6 +18,9 @@ description: The European VLBI Network (EVN) is an interferometric array of radi
   located primarily in Europe and Asia, with additional telescopes in South Africa and Puerto
   Rico. The EVN performs high-resolution observations of cosmic radio sources at wavelenghts
   from 92cm to 7mm.
+endpoints:
+- type: tap:capabilities
+  url: http://evn-vo.jive.eu/tap/capabilities
 id: wwwjiveeu
 identifiers:
 - id: openaire
@@ -38,8 +41,8 @@ owner:
   name: European VLBI Network
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: dachs
+  name: DaCHS
 status: active
 tags:
 - scientific
@@ -48,6 +51,8 @@ tags:
 - evn
 - interferometry
 - radio astronomy
+- TAP
+- virtual observatory
 topics:
 - id: TECH
   name: Science and technology

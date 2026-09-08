@@ -1,0 +1,70 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: diversityworkbench
+name: Diversity Workbench
+website: https://www.diversityworkbench.net
+description: Diversity Workbench is an open-source modular research environment
+  for managing and publishing bio- and geodiversity data. Its database modules
+  cover collections, observations, taxonomies, descriptions, projects, and agents,
+  with publication pipelines for BioCASe/ABCD, RDF, and other exports.
+owner:
+  name: SNSB IT Center and University of Bayreuth
+  location:
+    country:
+      id: DE
+      name: Germany
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: Uncertain
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: Limited
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: Uncertain
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/SNSB/DWB-Source
+documentation_url: https://www.diversityworkbench.de/manual/dwb_latest/
+changelog_url: https://www.diversityworkbench.de/manual/dwb_latest/modules/diversitycollection/download_dc/
+license:
+  type: GPL-3.0
+  url: https://github.com/SNSB/DWB-Source/blob/main/LICENSE
+export_formats:
+- CSV
+- Darwin Core Archive
+- JSON
+- RDF/XML
+- XML
+capabilities:
+- Modular biodiversity data management
+- BioCASe and ABCD publication pipeline
+- RDF publication services
+- REST and SOAP services
+- Stable object identifiers
+- Configurable project and dataset metadata
+last_updated: '2026-09-06T00:00:00Z'

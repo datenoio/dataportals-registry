@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: TerriaJS map browser for the Cyprus Earth Observation Data Cube (CEODC
+  / ERATOSTHENES), visualising satellite and derived layers served from the national
+  Open Data Cube via OGC WMS.
+endpoints:
+- type: terria:config
+  url: https://browser.cyprusdatacube.com/config.json
+- type: terria:catalog
+  url: https://browser.cyprusdatacube.com/init/simple.json
+id: browsercyprusdatacubecom
+langs:
+- id: EN
+  name: English
+link: https://browser.cyprusdatacube.com/
+name: Cyprus Data Cube Browser
+owner:
+  link: https://cyprusdatacube.com
+  location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+  name: ERATOSTHENES Centre of Excellence
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: terria
+  name: Terria
+status: active
+tags:
+- geospatial
+- has_api
+- Earth observation
+- satellite
+- Open Data Cube
+- map
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi99999691

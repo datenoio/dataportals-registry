@@ -1,0 +1,55 @@
+access_mode:
+- open
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-KGD
+      name: Kaliningradskaja oblast'
+description: Municipal open-data catalog with dataset passports and CSV files covering
+  administration departments and the telephone directory.
+endpoints:
+- type: bitrix:catalog
+  url: https://www.klgd.ru/opendata/
+api: true
+id: wwwklgdru
+langs:
+- id: RU
+  name: Russian
+link: https://www.klgd.ru/opendata/
+name: Открытые данные города Калининграда
+owner:
+  link: https://www.klgd.ru/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Администрация городского округа Город Калининград
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: bitrix
+  name: Bitrix
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00041884

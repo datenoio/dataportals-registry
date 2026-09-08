@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: EPA Active Pesticide Product Registration Informational Listing (APPRIL),
+  a searchable public database of Section 3 and distributor pesticide product registrations.
+endpoints:
+- type: oracleapex:catalog
+  url: https://ordspub.epa.gov/ords/pesticides/f?p=APPRIL_PUBLIC:2
+id: ordspubepagovappril
+langs:
+- id: EN
+  name: English
+link: https://ordspub.epa.gov/ords/pesticides/f?p=APPRIL_PUBLIC:2
+name: EPA APPRIL Pesticide Product Registrations
+owner:
+  link: https://www.epa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: United States Environmental Protection Agency
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: oracleapex
+  name: Oracle APEX
+status: active
+tags:
+- government
+- pesticides
+- environment
+- chemicals
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00042140

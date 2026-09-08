@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: LovPortal is the OntoPortal Alliance vocabulary repository for
+  domain-agnostic Linked Open Vocabularies and other semantic artefacts. Hosted by
+  LIRMM, it mirrors content curated through the LOV platform and provides browsing,
+  search, annotation, and REST access. It is not a direct-upload catalog; vocabularies
+  are submitted via LOV first.
+endpoints:
+- type: ontoportal:catalog
+  url: https://lovportal.lirmm.fr/ontologies
+- type: rest
+  url: https://data.lovportal.lirmm.fr
+id: lovportallirmmfr
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://lovportal.lirmm.fr
+name: LovPortal
+owner:
+  link: https://www.lirmm.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: LIRMM (Laboratoire d'Informatique, de Robotique et de Microélectronique de
+    Montpellier)
+  type: Academy
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: ontoportal
+  name: OntoPortal
+status: active
+tags:
+- ontologies
+- vocabularies
+- linked data
+- terminology
+- semantic web
+- research
+- open data
+- LIRMM
+- LOV
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00020014

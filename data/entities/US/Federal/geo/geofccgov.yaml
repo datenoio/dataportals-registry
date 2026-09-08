@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Public FCC GeoServer service publishing broadband, licensing, coverage,
+  administrative, and other communications-related geospatial layers.
+endpoints:
+- type: wms130
+  url: https://geo.fcc.gov/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://geo.fcc.gov/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: geofccgov
+langs:
+- id: EN
+  name: English
+link: https://geo.fcc.gov/
+name: FCC GeoServer
+owner:
+  link: https://www.fcc.gov/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Federal Communications Commission
+  type: Federal government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- communications
+- FCC
+- geospatial
+- GeoServer
+- United States
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042120

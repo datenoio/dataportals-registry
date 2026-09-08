@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    macroregion:
+      id: '021'
+      name: Northern America
+    level: 20
+description: Optical and infrared spectra and images from ground-based telescopes,
+  including CfA Reticon echelle and FLWO FAST spectra.
+endpoints:
+- type: tap:capabilities
+  url: http://oirsa.cfa.harvard.edu:8080/tap/capabilities
+id: oirsacfaharvardedu
+langs:
+- id: EN
+  name: English
+link: http://oirsa.cfa.harvard.edu:8080/
+name: Smithsonian Astrophysical Observatory Telescope Data Center
+owner:
+  link: http://oirsa.cfa.harvard.edu:8080/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Smithsonian Astrophysical Observatory
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- astronomy
+- virtual observatory
+- TAP
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00042163

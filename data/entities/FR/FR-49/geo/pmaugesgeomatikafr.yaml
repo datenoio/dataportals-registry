@@ -1,0 +1,61 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-49
+      name: Maine-et-Loire
+description: IsiGéo (Geomatika) web GIS tenant at pmauges.geomatika.fr. Login-walled;
+  not a public open-data portal.
+endpoints:
+- type: isigeo:catalog
+  url: https://pmauges.geomatika.fr/
+id: pmaugesgeomatikafr
+langs:
+- id: FR
+  name: French
+link: https://pmauges.geomatika.fr/
+name: Mauges Communauté IsiGéo
+owner:
+  link: https://www.maugescommunaute.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-49
+      name: Maine-et-Loire
+  name: Mauges Communauté
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: isigeo
+  name: IsiGéo
+status: active
+tags:
+- France
+- geoportal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00039307

@@ -1,0 +1,61 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: Compatible
+has_api: 'Yes'
+has_bulk: 'No'
+id: gtmap
+name: GT Map
+website: https://www.vng.co.kr/product/platform/gtmap.do
+description: GT Map is V&G's municipal spatial-information platform for South
+  Korean public authorities. Public LifeMap deployments load the V&G SODA
+  OpenLayers client from /resources/common/thirdparty/soda/soda.js, whose header
+  identifies V&G and a SODA version. Tenant applications commonly expose a
+  municipal layer catalog and WMS gateway under /gs-gate/.
+owner:
+  name: V&G
+  location:
+    country:
+      id: KR
+      name: South Korea
+logo_url: https://www.vng.co.kr/resources/common/images/header/logo-light.svg
+documentation_url: https://www.vng.co.kr/product/solution/gtmap-lifemap.do
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Compatible
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- JSON
+capabilities:
+- Municipal map viewer
+- Public thematic layer catalog
+- Spatial search and analysis
+- WMS gateway
+last_updated: '2026-09-07T00:00:00Z'

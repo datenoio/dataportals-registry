@@ -1,0 +1,61 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Hosted cloud of the Sputnik Web platform operated by its vendor, Geoscan.
+  Publishes georeferenced 3D models, terrain, orthomosaics and vector layers as numbered
+  /location/{id} pages with a public examples gallery, while customer projects can
+  be shared via access codes or kept private. The gallery includes models of Russian
+  and international sites. Live access could not be verified in September 2026 from
+  outside Russia, where DNS resolution returns a loopback address; the Internet Archive
+  received a live response from the service in August 2025.
+id: sputnikgeoscanaero
+langs:
+- id: RU
+  name: Russian
+- id: EN
+  name: English
+link: https://sputnik.geoscan.aero
+name: Sputnik Web — облачная ГИС ГК «Геоскан»
+owner:
+  link: https://www.geoscan.ru
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 20
+  name: ГК «Геоскан»
+  type: Business
+properties:
+  is_national: false
+software:
+  id: sputnikweb
+  name: Sputnik Web
+status: active
+tags:
+- geospatial
+- Russia
+- 3D models
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00041819

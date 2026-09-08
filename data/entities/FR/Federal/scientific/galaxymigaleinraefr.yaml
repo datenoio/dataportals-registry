@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Galaxy Migale is INRAE's public Galaxy analysis platform for life-science research data and workflows.
+
+endpoints:
+- type: galaxy:api
+  url: https://galaxy.migale.inrae.fr/api/version
+- type: galaxy:api:configuration
+  url: https://galaxy.migale.inrae.fr/api/configuration
+id: galaxymigaleinraefr
+langs:
+- id: FR
+  name: French
+link: https://galaxy.migale.inrae.fr
+name: Migale Galaxy
+owner:
+  link: https://migale.inrae.fr
+  location:
+    country:
+      id: FR
+      name: France
+  name: INRAE Migale bioinformatics facility
+  type: Academy
+software:
+  id: galaxy
+  name: Galaxy
+status: active
+tags:
+- scientific
+- research
+- academic
+- France
+- has_api
+- Galaxy
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039371

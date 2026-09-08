@@ -21,10 +21,11 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | `/api/layers/` or `/api/datasets/` | `geonode` | [SDI](discovery-geoportals-sdi.md#geonode) |
 | Title “Geoportal Palapa” / `/main/` or `/gspalapa/` | `palapa` | [SDI](discovery-geoportals-sdi.md#palapa) |
 | `/geoserver/ows` GetCapabilities | `geoserver` | [SDI](discovery-geoportals-sdi.md#geoserver) |
-| Hub search / `opendata.arcgis.com` | `arcgishub` | [SDI](discovery-geoportals-sdi.md#arcgishub) |
+| Hub search / `opendata-ui` / `/portal/apps/sites/` | `arcgishub` | [SDI](discovery-geoportals-sdi.md#arcgishub) |
 | `/arcgis/rest/info?f=pjson` | `arcgisserver` | [SDI](discovery-geoportals-sdi.md#arcgisserver) |
 | `experience.arcgis.com/experience/` or `jimu-core/init.js` | `experiencebuilder` | [SDI](discovery-geoportals-sdi.md#experiencebuilder) |
-| `/apps/webappviewer/index.html?id=` | `webappbuilder` | [SDI](discovery-geoportals-sdi.md#webappbuilder) |
+| `/apps/webappviewer/` or self-hosted `env.js` + Jimu | `webappbuilder` | [SDI](discovery-geoportals-sdi.md#webappbuilder) |
+| `/apps/dashboards/{item-id}` | `arcgisdashboards` | [SDI](discovery-geoportals-sdi.md#arcgisdashboards) |
 | `/apps/instant/{template}/?appid=` | `instantapps` | [SDI](discovery-geoportals-sdi.md#instantapps) |
 | STAC `/collections` JSON | `stacserver` | [SDI](discovery-geoportals-sdi.md#stacserver) |
 | STAC Browser HTML only | `stacbrowser` | [SDI](discovery-geoportals-sdi.md#stacbrowser) |
@@ -45,6 +46,10 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | LocalMaps `/localmaps/gallery` | `localmaps` | [viewers](discovery-geoportals-viewers.md#localmaps) |
 | `/geusmap/?mapname=` | `geusmap` | [viewers](discovery-geoportals-viewers.md#geusmap) |
 | `*.gisapp.ro` or PortalPublic `logo_fida.png` | `gisapp` | [viewers](discovery-geoportals-viewers.md#gisapp) |
+| Argenmap `src/js/app.js` and retained IGN template | `argenmap` | [viewers](discovery-geoportals-viewers.md#argenmap) |
+| `/AvanMap/` plus `initAvanMap.js` | `avanmap` | [viewers](discovery-geoportals-viewers.md#avanmap) |
+| Title `WebEWID` / Portal Mapowy | `webewid` | [viewers](discovery-geoportals-viewers.md#webewid) |
+| `gms*.kc-systemhaus.de/BMApp/` | `kcwebgis` | [viewers](discovery-geoportals-viewers.md#kcwebgis) |
 | `{comune}.servizigis.it` or “GeneGis Site Creator” / App PAGIS | `genegis` | [viewers](discovery-geoportals-viewers.md#genegis) |
 | `geoportale.sportellounicodigitale.it/GisMaster` `IdCliente=` | `gismaster` | [viewers](discovery-geoportals-viewers.md#gismaster) |
 | `{district}.smartmap.kz` | `smartmap` | [viewers](discovery-geoportals-viewers.md#smartmap) |
@@ -120,6 +125,22 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | `www.infogis.fi/{muni}/` | `infogis` | [viewers](discovery-geoportals-viewers.md#infogis) |
 | `/sigimweb/` title SIGimWeb or `/gomap_web/` | `sigimweb` | [viewers](discovery-geoportals-viewers.md#sigimweb) |
 | `/NetGISRuntime/basis/index.jsp` title WSP NetGIS | `netgisruntime` | [viewers](discovery-geoportals-viewers.md#netgisruntime) |
+| `/CartoVistaServer/maps/view` / `cartovistawebportal-*` | `cartovista` | [viewers](discovery-geoportals-viewers.md#cartovista) |
+| Exact IGO2 title and JSON contexts | `igo2` | [viewers](discovery-geoportals-viewers.md#igo2) |
+| Title `InfoMap Map Portal` / Emtel header | `infomap` | [viewers](discovery-geoportals-viewers.md#infomap) |
+| `/bios/dpwebmap/` / `DPWebApp.nocache.js` | `dpwebmap` | [viewers](discovery-geoportals-viewers.md#dpwebmap) |
+| 3MAP `GISProjectListing_mini.js` / `/desk/` assets | `3map` | [viewers](discovery-geoportals-viewers.md#3map) |
+| Title `Facta WebGIS 4.0` plus `facta.css` | `factawebgis` | [viewers](discovery-geoportals-viewers.md#factawebgis) |
+| `inkasPortal - GeoNet Online GmbH` / `inkas-portal.js` | `inkasportal` | [viewers](discovery-geoportals-viewers.md#inkasportal) |
+| `geoviewer.io/css/nobel-style.css` | `geoviewer` | [viewers](discovery-geoportals-viewers.md#geoviewer) |
+| `my.floodreport.com.au/{authority}` Water Technology iframe | `floodintelligenceportal` | [viewers](discovery-geoportals-viewers.md#floodintelligenceportal) |
+| `*.pgis.lv`, title `pGIS`, layer-classifier API | `pgis` | [viewers](discovery-geoportals-viewers.md#pgis) |
+| `*-visorpublico.geoambiental.co/content-layout` | `geoambiental` | [viewers](discovery-geoportals-viewers.md#geoambiental) |
+| `apps.nazcacatastro.com/public/{code}/` cadastral viewer | `nazca` | [viewers](discovery-geoportals-viewers.md#nazca) |
+| `*.xiltriongeoservicio.com/map`, shared Xiltrion bundle | `xiltrion` | [viewers](discovery-geoportals-viewers.md#xiltrion) |
+| V&G `thirdparty/soda/soda.js` header and `/1/system/` LifeMap | `gtmap` | [viewers](discovery-geoportals-viewers.md#gtmap) |
+| SHK municipal city guide plus confirmed SHK customer | `shkkbs` | [viewers](discovery-geoportals-viewers.md#shkkbs) |
+| `storymaps.arcgis.com/stories/{item-id}` | `arcgisstorymaps` | [SDI](discovery-geoportals-sdi.md#arcgisstorymaps) |
 
 ## Generic geospatial probes
 
@@ -171,6 +192,14 @@ Prefer these bounded lists over unscoped “missing geoportals” searches:
 
 Custom-geoportal review (1 September 2026) extracted ArcGIS Experience Builder (`experiencebuilder`) from hosted `experience.arcgis.com` apps, Portal `/portal/apps/experiencebuilder/` tenants, Swedish Länsstyrelsen WebbGIS on `ext-webbgis.lansstyrelsen.se`, Mustasaari `kartta.mustasaari.fi`, plus CMS wrappers that embed Jimu (Klosterneuburg, AMVA, INSTAT); ArcGIS Web AppBuilder (`webappbuilder`) from `/apps/webappviewer/` apps; Esri Finland dmCity (`dmcity`) from `web.dmcity.fi/{city}/public/`; Infokartta InfoGIS (`infogis`) from `www.infogis.fi/{municipality}/`; WSP NetGIS Runtime (`netgisruntime`) from Danish `/NetGISRuntime/basis/index.jsp` viewers; Origosamverkan Origo (`origo`) from Swedish `origo.min.js` / `origo.js` municipal kartan viewers; T-MAPY GISPLAN (`gisplan`) from Slovak `{city}.gisplan.sk` plus Czech GIS4U / `{city}.tmapserver.cz` / T-WIST galleries; Geoportál GEPRO (`gepro`) from `{city}.obce.gepro.cz`; TopGis GisOnline (`gisonline`) from `app.gisonline.cz/{city}`; MK Consult K5 MapServer (`k5mapserver`) from `{muni}.k5mapserver.cz`; GEOVAP Marushka (`marushka`) from `zipped.js` / `js/marushka.js` clients; Mapotip (`mapotip`) from `portal.mapotip.cz/{municipality}`; ibb giscity (`giscity`) from `www.gisserver.de/{city}/`; vianovis touvia.MAPS (`touviamaps`) from `vianovis.net/{tenant}/` and city hosts loading `loadTouviaMaps()`; and CORA GEO CG WebGIS (`cgwebgis`) from `webgis.{city}.sk`; Geodeticca WEB GIS (`geodeticca`) from `gis.{city}.sk` titled Geodeticca WEB GIS; Georeal (`georeal`) from Czech kraj `/portal/Georeal.Cards` DTM and geoportal CMS; INGRADA online (`ingrada`) from Softplan `Softplan.Ingrada.Mobile` BürgerGIS; and VC Map (`vcmap`) from Virtual City Systems `html.vcs-ui` digital twins. Custom-geoportal review (2 September 2026) extracted Pozi (`pozi`) from `{council}.pozi.com` (title Pozi Web Map); ArcGIS Instant Apps (`instantapps`) from `/apps/instant/{template}/?appid=`; K2 Geospatial JMap (`jmap`) from `/JMapWeb/` and JMap NG `jmapserver-ng`; GIS Cloud (`giscloud`) from `{city}.giscloud.com`; MRF Web Map (`mrf`) from `{county}.mrf.com` and `js/lib/mrf/`; MuniSight (`munisight`) from Catalis `web.munisight.com/{Tenant}` Login.aspx; p.mapper (`pmapper`) from `{city}.geo-portale.it/pmapper-4.2.0/` and other p.mapper SIT; Digital Map Products CommunityView (`communityview`) from `VECommunityView/cities/{city}/`; MS-GIS (`msgis`) from `{city}.msgis.net` titled GeoInformation; Cohga Weave (`weave`) from HTML title `Weave Map` and webpack `app.*.js`; INEGI OVIE (`ovie`) from municipal OpenLayers `/js/libs/OpenLayers/OL.js` + Materialize economic viewers; SOFTPRO (`softpro`) from Ukrainian `{city}.cadastre.com.ua` and city MBK hosts that mention SOFTPRO; and INEGI MxSIG (`mxsig`) from `/mdm6/` and `/mxsig2/` amplify.js Mapa Digital viewers. `/portal/home/` ArcGIS Enterprise catalogs retag to `arcgishub`. Remaining custom geoportals are mostly one-off `.gov` map roots or mixed municipal viewers without a named shared product. Do not invent IDs for one-off national `.gov` map roots. Do **not** reuse `smartmap` for Geolonia — that ID is Kazakhstan `{district}.smartmap.kz`. Do **not** tag `www.visorguadalupe.com` as `visorurbano` (Proaxis Leaflet). Do **not** set `ctmgeo` from a generic “SIGWeb” title on a non-ctmgeo host. Do **not** set `experiencebuilder` on dmCity tenants (`dmcity`) or on Web AppBuilder `/apps/webappviewer/` (`webappbuilder`) or Instant Apps `/apps/instant/` (`instantapps`). Do **not** set `instantapps` on Experience Builder or Web AppBuilder. Do **not** set `netgisserver` on Danish `/NetGISRuntime/` viewers (`netgisruntime`). Do **not** set `origo` on Hajk (`appConfig.json`), myCarta, MapGuide Fusion, or GeoServer `/geoserver` catalogs on the same host. Do **not** set `gisplan` on Georeal `/portal/Georeal.*` kraj CMS (`georeal`), on T-MAPY MapProxy (`services7.tmapserver.cz`), on ArcGIS Hub, on CORA GEO CG WebGIS (`cgwebgis`), or on Geodeticca WEB GIS (`geodeticca`). Do **not** set `mapserver` on `{muni}.k5mapserver.cz` (`k5mapserver`) or on p.mapper UIs (`pmapper`). Do **not** set `jmap` from a hostname that merely contains `jmap` (Gyeongju `gjmap`, Rutgers NJMaps). Do **not** set `mrf` from MuniSight/Catalis `web.munisight.com` login portals (`munisight`). Do **not** set `geomediawebmap` from `web.munisight.com`. Do **not** set `gepro` from desktop MISYS. Do **not** set `geoserver` on `evald.ee/{slug}/` or `service.eomap.ee/{slug}/` tenants (`evald`). Do **not** add `service.eomap.ee` as a second copy of the same EVALD tenant. Do **not** set `giscity` from US/GR `gis.cityof*` ArcGIS hosts. Do **not** set `masterportal` on touvia.MAPS (`touviamaps`) or `touviamaps` on Masterportal (`masterportal.js`, `lgv-config`). Do **not** set `vcmap` from Masterportal or touvia.MAPS, or `ingrada` from a BürgerGIS hostname that is WebOffice or ArcGIS. Do **not** set `georeal` from `/portal/` shells without `Georeal.Cards`, or `geodeticca` from CG WebGIS or `michalovce.web-gis.sk`. Do **not** set `weave` from GeneWeaver or hosts that merely contain the word weave. Do **not** set `ovie` from Mission Viejo `geoviewer.io`, SNIGRD, or INEGI Mapa Digital de México `/mdm6/` (`mxsig`). Do **not** set `mxsig` on OVIE OpenLayers/Materialize viewers (`ovie`). Do **not** set `softpro` on the state Urban Planning Cadastre `kadastr.gov.ua` or StateGeoCadastre `map.land.gov.ua`. Do **not** add HydroNET (`my.floodreport.com.au`) until a third independent public tenant matches the iframe shell (North Central CMA Flood Eye is a different Angular/Leaflet stack).
 
+Custom-geoportal review (7 September 2026) classified 39 records: 13 additional T-MAPY T-WIST galleries as `gisplan`, six exported self-hosted Jimu builds as `webappbuilder`, four Hub/Sites shells as `arcgishub`, four Ukrainian MBK clients as `softpro`, two WebClient-handler portals as `geomediawebmap`, and two records each for new `argenmap`, `avanmap`, `webewid`, `kcwebgis`, and `arcgisdashboards` definitions. Unattributed Korean municipal templates and two routes from one HydroGuam deployment remain `custom` because product provenance or independent-installation evidence is insufficient. Do **not** identify Argenmap from Leaflet alone, AvanMap from generic Avansis pages without `initAvanMap.js`, WebEWID from authenticated role portals, KC WebGIS from `/BMApp/` alone off the KC host family, or ArcGIS Dashboards from arbitrary dashboards outside `/apps/dashboards/`.
+
+Second-pass review on 7 September 2026 classified 11 more records into ten new definitions: `cartovista`, `igo2`, `infomap`, `dpwebmap`, `3map`, `factawebgis`, `inkasportal`, `geoviewer`, `floodintelligenceportal` (two tenants), and `arcgisstorymaps`. First-party product pages, repositories, manuals, or vendor deployment lists establish that these are reusable products even where only one installation was already present in the registry. This second-pass evidence supersedes the earlier HydroNET caution: the two `my.floodreport.com.au` tenants are documented deployments of the shared SaaS Flood Intelligence Portal; North Central CMA Flood Eye remains `custom` because it is a different Angular/Leaflet application.
+
+Third-pass review on 7 September 2026 resolved eight more records into four definitions: `pgis` for two TOPODATI municipal tenants with a public layer API and documented WMS/WFS service; `geoambiental` for two SIGMA Ingeniería environmental-authority viewers backed by a documented multi-client SaaS product; `nazca` for two Soltesoft municipal cadastral tenants with a shared client and tenant-specific configuration; and `xiltrion` for two Dataxil/CATASIG cadastral viewers with identical product bundles and first-party product/owner strings.
+
+Fourth-pass review on 7 September 2026 resolved ten more records into two definitions that meet the three-installation rule. `gtmap` covers seven South Korean municipal viewers whose live `soda.js` header identifies V&G and whose shared application layout matches the vendor's GT Map LifeMap product. `shkkbs` covers the Gölbaşı, Pursaklar, and Üsküdar city guides: all three municipalities appear in SHK Bilişim's official customer references, the product page documents the same parcel/zoning and thematic-map functions, and the Pursaklar client displays the SHK mark directly. Other Korean and Turkish city guides remain `custom` unless one of these product-specific signals is present.
+
 ## Related
 
 - [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md)
@@ -183,3 +212,27 @@ Custom-geoportal review (1 September 2026) extracted ArcGIS Experience Builder (
 - [harvest-viewers.md](harvest-viewers.md)
 - [harvest-earthdata.md](harvest-earthdata.md)
 - [software-taxonomy.md](software-taxonomy.md)
+
+## OneGeo Suite (`onegeosuite`) {#onegeosuite}
+
+[Neogeo's modular platform](https://www.onegeosuite.fr/) combines Core, Explorer,
+Maps and Portal. [Vendor references](https://neogeo.fr/references-projets/) explicitly
+name PIGMA and Data Grand Lyon. [DataSud documentation](https://www.datasud.fr/portal/documentation/)
+links the same product, and its login shell names `onegeo-suite-site-login-vuejs`.
+The [white-label guide](https://www.datasud.fr/portal/services/marque-blanche/) describes
+OneGeo catalog integration. Use these product-specific credits together with the linked
+Explorer catalog; generic Angular or Gatsby bundles are insufficient. Search
+`"OneGeo Suite" "catalogue"` and the vendor's references. Keep separately registered
+GeoNetwork/GeoServer components classified as their own software.
+
+## PRODIGE (`prodige`) {#prodige}
+
+A reusable geographic data-sharing infrastructure, with
+[project metadata](https://adullact.net/projects/prodige/) and
+[source projects](https://gitlab.adullact.net/prodige).
+[DatARA's tutorials](https://www.open-datara.fr/accueil/ressources/tutoriels-et-videos-de-prise-en-main)
+explicitly document PRODIGE V5. Its catalog host exposes `/api/doc/` with the title
+`API PRODIGE Ressources`, a stronger fingerprint than GeoNetwork or generic PHP assets.
+Search `"PRODIGE" "plateforme" "données"` and confirm a deployment through its own
+operator documentation. The complete portal and its GeoNetwork component can have
+separate registry records and software assignments.

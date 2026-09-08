@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: Western Europe
 description: The Science Data Centre of the Leibniz Institute for Solar Physics (KIS) archives
   and publishes solar observation data from KIS instruments and related surveys.
+endpoints:
+- type: tap:capabilities
+  url: http://dachs.sdc.leibniz-kis.de/tap/capabilities
 id: sdcleibnizkisde
 identifiers:
 - id: openaire
@@ -38,13 +41,15 @@ owner:
   name: Leibniz Institute for Solar Physics (KIS)
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: dachs
+  name: DaCHS
 status: active
 tags:
 - scientific
 - solar physics
 - research data
+- TAP
+- virtual observatory
 topics:
 - id: TECH
   name: Science and technology

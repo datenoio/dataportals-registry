@@ -1,0 +1,59 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Metadata catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Catalogue for discovering rare-disease samples, sample collections, studies,
+  biobanks, and registries in the RD-Connect network.
+endpoints:
+- type: molgenis:catalog
+  url: https://samples.rd-connect.eu/
+id: samplesrdconnecteu
+langs:
+- id: EN
+  name: English
+link: https://samples.rd-connect.eu/
+name: RD-Connect Sample Catalogue
+owner:
+  link: https://rd-connect.eu/
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: RD-Connect
+  type: International
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: molgenis
+  name: MOLGENIS
+status: active
+tags:
+- rare diseases
+- biobanks
+- samples
+- metadata
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00039244

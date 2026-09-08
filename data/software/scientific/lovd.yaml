@@ -1,0 +1,63 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: lovd
+name: LOVD
+website: https://www.lovd.nl/
+description: Leiden Open Variation Database is a reusable open-source platform for curating and publishing
+  gene-centered DNA variant databases. Independent installations manage genes, variants and associated
+  individual-level data with configurable access.
+owner:
+  name: Leiden University Medical Center
+  location:
+    country:
+      id: NL
+      name: Netherlands
+logo_url: https://www.lovd.nl/favicon.ico
+documentation_url: https://www.lovd.nl/3.0/faq
+repository_url: https://github.com/LOVDnl/LOVD3
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: Uncertain
+  persistent_dataset_url: Uncertain
+rights_management:
+  licensing_type: Uncertain
+  supports_licenses: Uncertain
+storage_type: Structured
+type: Software
+license:
+  type: GPL-3.0
+  url: https://www.gnu.org/licenses/gpl-3.0.html
+export_formats:
+- CSV
+- TSV
+capabilities:
+- Gene and variant catalog
+- Optional public API
+- Configurable access
+last_updated: '2026-09-08T12:00:00Z'

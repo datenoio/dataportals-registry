@@ -1,0 +1,57 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-LEN
+      name: Leningradskaja oblast'
+description: Municipal open-data catalog with CSV datasets and passports covering
+  local facilities, transport, construction permits and emergency services.
+id: wwwslanmoru
+langs:
+- id: RU
+  name: Russian
+link: https://www.slanmo.ru/opendata/
+name: Открытые данные Сланцевского муниципального района
+owner:
+  link: https://www.slanmo.ru/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Администрация Сланцевского муниципального района Ленинградской области
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00041894

@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Public metadata catalogue for Colombian mining and geospatial information.
+endpoints:
+- type: geonetwork:catalog
+  url: https://metadatos.anm.gov.co/geonetwork
+id: metadatosanmgovco
+langs:
+- id: ES
+  name: Spanish
+link: https://metadatos.anm.gov.co/geonetwork
+name: ANM Metadata Catalogue
+owner:
+  link: https://www.anm.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+  name: Agencia Nacional de Minería
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- mining
+- metadata
+- GeoNetwork
+- government
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00038701

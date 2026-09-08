@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 20
+description: Archive of high-resolution HERMES spectra from the Mercator Telescope
+  at the Roque de los Muchachos Observatory.
+endpoints:
+- type: tap:capabilities
+  url: https://mercatorvo.ster.kuleuven.be/tap/capabilities
+id: mercatorvosterkuleuvenbe
+langs:
+- id: EN
+  name: English
+link: https://mercatorvo.ster.kuleuven.be/
+name: Mercator Observatory Data Archive
+owner:
+  link: https://mercatorvo.ster.kuleuven.be/
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+  name: KU Leuven, Mercator Observatory
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- astronomy
+- virtual observatory
+- TAP
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00038579

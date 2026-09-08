@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: SK
+      name: Slovakia
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Local DCAT-AP-SK catalog of the Slovak National Museum digital collections
+  registry (DEMZ), harvested by the national open data portal.
+endpoints:
+- type: dcat:ttl
+  url: https://demz.sk/opendata/set/Lkod
+id: demzsk
+langs:
+- id: SK
+  name: Slovak
+link: https://demz.sk/opendata/set/Lkod
+name: Katalóg otvorených údajov Slovenského národného múzea
+owner:
+  link: https://www.snm.sk
+  location:
+    country: *id001
+    level: 20
+  name: Slovenské národné múzeum
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: lkod
+  name: LKOD
+status: active
+tags:
+- government
+- has_api
+- open data
+- Slovakia
+- culture
+- museum
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99999454

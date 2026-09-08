@@ -12,12 +12,12 @@ id: webappbuilder
 name: ArcGIS Web AppBuilder
 website: https://www.esri.com/en-us/arcgis/products/arcgis-web-appbuilder/overview
 description: ArcGIS Web AppBuilder (Web AppViewer) is Esri's earlier configurable
-  map app, typically at /apps/webappviewer/index.html?id= on ArcGIS Online
-  (*.maps.arcgis.com) or Portal for ArcGIS (/portal/apps/webappviewer/). Distinct
-  from ArcGIS Experience Builder (experiencebuilder), ArcGIS Instant Apps
-  (instantapps), ArcGIS Hub (arcgishub), and ArcGIS Server REST directories
-  (arcgisserver). Esri is retiring Web AppBuilder
-  in favor of Experience Builder.
+  map app, typically at /apps/webappviewer/index.html?id= on ArcGIS Online or
+  Portal for ArcGIS. Exported self-hosted builds retain the Jimu client and load
+  env.js, simpleLoader.js, init.js, and jimu.js. Distinct from ArcGIS Experience
+  Builder (experiencebuilder), ArcGIS Instant Apps (instantapps), ArcGIS Hub
+  (arcgishub), and ArcGIS Server REST directories (arcgisserver). Esri is
+  retiring Web AppBuilder in favor of Experience Builder.
 owner:
   name: Esri
   location:
@@ -58,4 +58,4 @@ export_formats:
 - JSON
 capabilities:
 - Map viewer
-last_updated: '2026-09-01T00:00:00Z'
+last_updated: '2026-09-07T00:00:00Z'

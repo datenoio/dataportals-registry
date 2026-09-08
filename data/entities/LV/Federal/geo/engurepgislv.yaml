@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LV
+      name: Latvia
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Road signs, street names, and Smārde industrial park listed by this pGIS
+  tenant in Latvia. The public layer-classifier API was accessible on 2026-09-07 and
+  reported zero feature counts. Tenant ownership and feature availability require
+  verification before promotion.
+endpoints:
+- type: other
+  url: https://engure.pgis.lv/api/v1/classifiers/layers
+id: engurepgislv
+langs:
+- id: LV
+  name: Latvian
+link: https://engure.pgis.lv/
+name: Engure pGIS
+owner:
+  link: https://engure.pgis.lv/
+  location:
+    country:
+      id: LV
+      name: Latvia
+  name: Engure Municipality
+  type: Other
+properties:
+  is_national: false
+  unfinished: true
+software:
+  id: pgis
+  name: pGIS
+status: active
+tags:
+- pGIS
+- Latvia
+- engure
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00039821

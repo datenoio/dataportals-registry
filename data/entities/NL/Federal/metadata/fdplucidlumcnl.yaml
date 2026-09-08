@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Metadata catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: LUMC LUCID FAIR Data Point for CHHIL study metadata, distinct from the
+  main LUMC FAIR Data Point.
+endpoints:
+- type: dcat:ttl
+  url: https://fdp.lucid.lumc.nl
+- type: dcat:ttl
+  url: https://fdp.lucid.lumc.nl/
+- type: openapi
+  url: https://fdp.lucid.lumc.nl/v3/api-docs
+  version: '3'
+- type: docs
+  url: https://fdp.lucid.lumc.nl/swagger-ui.html
+id: fdplucidlumcnl
+langs:
+- id: EN
+  name: English
+link: https://fdp.lucid.lumc.nl
+name: LUMC LUCID FAIR Data Point
+owner:
+  link: https://www.lumc.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: Leiden University Medical Center
+  type: Academy
+software:
+  id: fairdatapoint
+  name: FAIR Data Point
+status: active
+tags:
+- metadata
+- FAIR
+- academic
+- health
+- Netherlands
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039847

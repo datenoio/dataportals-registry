@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IS
+      name: Iceland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Arctic Portal geospatial service publishing hundreds of environmental,
+  maritime, administrative, scientific, and reference map layers for the Arctic.
+endpoints:
+- type: wms130
+  url: https://geoserver.arcticportal.org/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://geoserver.arcticportal.org/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: geoserverarcticportalorg
+langs:
+- id: EN
+  name: English
+link: https://geoserver.arcticportal.org/geoserver
+name: Arctic Portal GeoServer
+owner:
+  link: https://arcticportal.org/
+  location:
+    country:
+      id: IS
+      name: Iceland
+    level: 20
+  name: Arctic Portal
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- Arctic
+- environment
+- geospatial
+- GeoServer
+- Iceland
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00039548

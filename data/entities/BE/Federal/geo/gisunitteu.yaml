@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Unit-T's public Geo-T Online QWC2 portal with infrastructure and field-activity
+  map themes.
+endpoints:
+- type: qwc2:layers
+  url: https://gis.unit-t.eu/unitt/themes.json
+id: gisunitteu
+langs:
+- id: NL
+  name: Dutch
+- id: FR
+  name: French
+link: https://gis.unit-t.eu/unitt/
+name: Geo-T Online
+owner:
+  link: https://unit-t.eu/
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+  name: Unit-T
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: qwc2
+  name: QGIS Web Client 2 (QWC2)
+status: active
+tags:
+- GIS
+- geospatial
+- QWC2
+- infrastructure
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00038569

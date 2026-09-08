@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -19,6 +19,9 @@ description: META-SHARE, the open language resource exchange facility, is devote
   resources in a global scale. META-SHARE is an open, integrated, secure and interoperable
   sharing and exchange facility for LRs (datasets and tools) for the Human Language Technologies
   domain and other applicative domains where language plays a critical role.
+endpoints:
+- type: metashare:catalog
+  url: https://metashare.elda.org/
 id: metashareeldaorg
 identifiers:
 - id: openaire

@@ -1,0 +1,54 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Read-only archive of the Russian protected areas information system,
+  restored by NextGIS with the former AARI GIS laboratory team. Provides a searchable
+  protected-area registry, geographic information, documents and map pages. The restoration
+  notice dates the archived content to May 2024; information is not being updated
+  and some sections are disabled. Formerly hosted at oopt.aari.ru.
+id: ooptaarinextgisru
+langs:
+- id: RU
+  name: Russian
+link: https://ooptaari.nextgis.ru
+name: ООПТ России — архив информационно-аналитической системы
+owner:
+  link: https://nextgis.ru
+  location:
+    country: *id001
+    level: 20
+  name: NextGIS
+  type: Business
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00041811

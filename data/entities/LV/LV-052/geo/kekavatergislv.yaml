@@ -1,0 +1,73 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LV
+      name: Latvia
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: LV-052
+      name: Ķekavas novads
+description: terGIS tenant of Ķekava Municipality (Ķekavas novads). The host is on
+  the current TLS certificate but returns HTTP 401 Authorization Required; not a public
+  catalog UI.
+endpoints:
+- type: tergis:catalog
+  url: https://kekava.tergis.lv/
+id: kekavatergislv
+langs:
+- id: LV
+  name: Latvian
+link: https://kekava.tergis.lv/
+name: Ķekavas novada terGIS
+owner:
+  link: https://www.kekava.lv
+  location:
+    country:
+      id: LV
+      name: Latvia
+    level: 30
+    subregion:
+      id: LV-052
+      name: Ķekavas novads
+  name: Ķekavas novada pašvaldība
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: tergis
+  name: terGIS
+status: active
+tags:
+- GIS
+- geospatial
+- municipality
+- terGIS
+- Ķekava
+- Latvia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi99999340

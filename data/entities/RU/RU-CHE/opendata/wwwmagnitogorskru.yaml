@@ -1,0 +1,57 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-CHE
+      name: Chelyabinskaya oblast'
+description: Municipal open-data register covering government bodies, information
+  systems and health, sports, education and cultural institutions.
+id: wwwmagnitogorskru
+langs:
+- id: RU
+  name: Russian
+link: https://www.magnitogorsk.ru/opendata
+name: Открытые данные Магнитогорска
+owner:
+  link: https://www.magnitogorsk.ru/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Администрация города Магнитогорска
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00041871

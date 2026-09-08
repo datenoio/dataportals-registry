@@ -1,0 +1,44 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Federal Property Management Agency open-data catalog with a CSV register
+  and dataset metadata and downloads.
+id: rosimgovru
+langs:
+- id: RU
+  name: Russian
+link: https://rosim.gov.ru/otkrytyj-foiv/otkrytye-dannye/
+name: Открытые данные Росимущества
+owner:
+  link: https://rosim.gov.ru/
+  location:
+    country: *id001
+    level: 20
+  name: Федеральное агентство по управлению государственным имуществом
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00041839

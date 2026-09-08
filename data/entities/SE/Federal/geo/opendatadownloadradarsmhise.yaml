@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: SMHI open data API for Swedish weather radar composites and per-site
+  volume scans.
+endpoints:
+- type: rest
+  url: https://opendata-download-radar.smhi.se/api/version/latest
+id: opendatadownloadradarsmhise
+langs:
+- id: SV
+  name: Swedish
+- id: EN
+  name: English
+link: https://opendata-download-radar.smhi.se/api/version/latest
+name: SMHI radar data (Open Data API)
+owner:
+  link: https://www.smhi.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Swedish Meteorological and Hydrological Institute
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- radar
+- weather radar
+- meteorology
+- has_api
+- Sweden
+- SMHI
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi99999442

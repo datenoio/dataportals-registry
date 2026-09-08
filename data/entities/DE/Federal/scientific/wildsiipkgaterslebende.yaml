@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 0
+    macroregion:
+      id: '001'
+      name: World
+description: WiLDSI data portal linking European Nucleotide Archive sequence records
+  to citations in open-access literature, for exploring use and provision of digital
+  sequence information.
+endpoints:
+- type: oracleapex:catalog
+  url: https://wildsi.ipk-gatersleben.de/ords/r/wildsi/wildsi/home
+id: wildsiipkgaterslebende
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://wildsi.ipk-gatersleben.de/ords/r/wildsi/wildsi/home
+name: WiLDSI Data Portal
+owner:
+  link: https://www.ipk-gatersleben.de/
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Institute of Plant Genetics and Crop Plant Research
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: oracleapex
+  name: Oracle APEX
+status: active
+tags:
+- scientific
+- research data
+- academic
+- biodiversity
+- digital sequence information
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00039202

@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-VA
+      name: Virginia
+description: Arlington County Geocortex Essentials catalog for public and departmental
+  mapping applications, including its layer catalog, planning, permits, schools, and
+  public works maps.
+endpoints:
+- type: geocortex:catalog
+  url: https://geocortex.arlingtonva.us/Geocortex/Essentials/REST/sites?f=pjson
+id: geocortexarlingtonvaus
+langs:
+- id: EN
+  name: English
+link: https://geocortex.arlingtonva.us/Geocortex/Essentials/REST/sites
+name: Arlington County Geocortex Maps
+owner:
+  link: https://www.arlingtonva.us
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-VA
+      name: Virginia
+  name: Arlington County Government
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- county government
+- Geocortex
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00042277

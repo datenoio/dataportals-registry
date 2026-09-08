@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+description: Public WMS catalogue of the Consell Comarcal del Vallès Occidental, publishing
+  planning, infrastructure, environment, tourism, demographic, and other comarca-level
+  spatial themes.
+endpoints:
+- type: wms130
+  url: http://www.geolocal.cat/cgi-bin/mapserv?map=/opt/idec/dades/ccvoc/ows/ccvoc_public.map&service=WMS&request=GetCapabilities&version=1.3.0
+  version: 1.3.0
+id: wwwgeolocalcat
+langs:
+- id: CA
+  name: Catalan
+- id: ES
+  name: Spanish
+link: http://www.geolocal.cat/cgi-bin/mapserv?map=/opt/idec/dades/ccvoc/ows/ccvoc_public.map
+name: WMS Consell Comarcal Vallès Occidental
+owner:
+  link: http://www.geolocal.cat/
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+  name: Consell Comarcal del Vallès Occidental
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: mapserver
+  name: MapServer
+status: active
+tags:
+- Catalonia
+- geospatial
+- government
+- MapServer
+- Vallès Occidental
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00039220

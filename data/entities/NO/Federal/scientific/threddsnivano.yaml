@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: NIVA THREDDS catalog publishing environmental observations, logger and
+  ferrybox measurements, model outputs, samples, and archived datasets.
+endpoints:
+- type: thredds:catalog
+  url: https://thredds.niva.no/thredds/catalog/catalog.xml
+id: threddsnivano
+langs:
+- id: EN
+  name: English
+link: https://thredds.niva.no/thredds/catalog/catalog.html
+name: NIVA THREDDS Catalog
+owner:
+  link: https://www.niva.no/en
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: Norwegian Institute for Water Research (NIVA)
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- THREDDS
+- environmental data
+- water
+- oceanography
+- model data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00039875

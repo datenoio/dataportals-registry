@@ -1,10 +1,11 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- publication
 coverage:
 - location:
     country:
@@ -40,9 +41,13 @@ owner:
   name: Alma Mater Studiorum University of Bologna
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: eprints
+  name: EPrints
 status: active
+endpoints:
+- type: oaipmh20
+  url: https://amsacta.unibo.it/cgi/oai2?verb=Identify
+  version: '2.0'
 tags:
 - scientific
 - research data

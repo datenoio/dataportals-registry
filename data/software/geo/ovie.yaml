@@ -10,20 +10,21 @@ has_api: Uncertain
 has_bulk: 'No'
 id: ovie
 name: OVIE
-website: https://www.inegi.org.mx/servicios/mxsig.html
+website: https://git.inegi.org.mx/ovie/ovie-client
+repository_url: https://git.inegi.org.mx/ovie/ovie-client
 description: OVIE (Oficina Virtual de Información Económica) is INEGI's municipal
   economic GIS template for IMPLAN and state sites. Public viewers share
   OpenLayers OL.js, Materialize, html2canvas, canvg, and jsPdf under /js/libs/.
-  Distinct from Mapa Digital de México / MxSIG (mxsig) and
-  from generic OpenLayers copies. Do not set ovie from Mission Viejo
-  geoviewer.io or other hosts that merely contain ovie in the hostname.
+  Distinct from Mapa Digital de México / MxSIG (mxsig), whose product page is
+  inegi.org.mx/servicios/mxsig.html, and from generic OpenLayers copies. Do not
+  set ovie from Mission Viejo geoviewer.io or hostnames that merely contain ovie.
 owner:
   name: INEGI
   location:
     country:
       id: MX
       name: Mexico
-documentation_url: https://www.inegi.org.mx/servicios/mxsig.html
+documentation_url: https://git.inegi.org.mx/ovie/ovie-client
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
@@ -56,4 +57,4 @@ export_formats:
 capabilities:
 - Map viewer
 - Economic GIS
-last_updated: '2026-09-02T00:00:00Z'
+last_updated: '2026-09-08T00:00:00Z'

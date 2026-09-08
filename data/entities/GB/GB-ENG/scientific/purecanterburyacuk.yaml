@@ -1,0 +1,78 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Public Pure research portal for Canterbury Christ Church University,
+  including searchable research datasets and associated scholarly metadata.
+endpoints:
+- type: oaipmh20
+  url: https://pure.canterbury.ac.uk/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://pure.canterbury.ac.uk/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://pure.canterbury.ac.uk/sitemap/datasets.xml
+- type: sitemap
+  url: https://pure.canterbury.ac.uk/sitemap.xml
+id: purecanterburyacuk
+langs:
+- id: EN
+  name: English
+link: https://pure.canterbury.ac.uk
+name: Canterbury Christ Church University Research Portal
+owner:
+  link: https://www.canterbury.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: Canterbury Christ Church University
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research data
+- datasets
+- university research
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00039427

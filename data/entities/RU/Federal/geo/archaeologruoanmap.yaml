@@ -1,0 +1,52 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Public archaeological heritage map of Russia with filters by site type,
+  historical period and kind, and grouped map results. Developed by the Institute
+  of Archaeology of the Russian Academy of Sciences.
+id: archaeologruoanmap
+langs:
+- id: RU
+  name: Russian
+link: https://archaeolog.ru/oanmap/
+name: Археологическая карта России
+owner:
+  link: https://archaeolog.ru/
+  location:
+    country: *id001
+    level: 20
+  name: Институт археологии Российской академии наук
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00041797

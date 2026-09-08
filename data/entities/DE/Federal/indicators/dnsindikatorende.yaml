@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Official indicator portal for monitoring the German Sustainable Development
+  Strategy, published by the Federal Statistical Office of Germany.
+endpoints:
+- type: opensdg:catalog
+  url: https://dns-indikatoren.de/
+- type: opensdg:catalog
+  url: https://dns-indikatoren.de/en/reporting-status/
+id: dnsindikatorende
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://dns-indikatoren.de/
+name: Indicators of the German Sustainable Development Strategy
+owner:
+  link: https://www.destatis.de/
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Federal Statistical Office of Germany
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+software:
+  id: opensdg
+  name: OpenSDG
+status: active
+tags:
+- sustainable development goals
+- indicators
+- official statistics
+- government
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00039173

@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location: &id001
+    country:
+      id: FR
+      name: France
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 30
+    subregion:
+      id: FR-974
+      name: La Réunion
+description: Coastal observatory for Réunion providing geographic datasets, maps and
+  studies on coastal environments, erosion and coastal risks through a PRODIGE portal.
+endpoints:
+- type: csw
+  url: https://catalogue.observatoire-littoral-lareunion.re/geonetwork/srv/fre/csw
+  version: 2.0.2
+id: wwwobservatoirelittorallareunionre
+langs:
+- id: FR
+  name: French
+link: https://www.observatoire-littoral-lareunion.re
+name: Nout bord’mer - Observatoire du littoral de La Réunion
+owner:
+  link: https://www.observatoire-littoral-lareunion.re/accueil/mentions-legales
+  location: *id001
+  name: Direction de l’Environnement, de l’Aménagement et du Logement de La Réunion
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: prodige
+  name: PRODIGE
+status: active
+tags:
+- geospatial
+- environment
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00039328

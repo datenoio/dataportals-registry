@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    macroregion:
+      id: '143'
+      name: Central Asia
+    level: 20
+description: Archive of photometric and spectral observations, digitized astronomical
+  plates, and simulation results from the Fesenkov Astrophysical Institute.
+endpoints:
+- type: tap:capabilities
+  url: https://dachs.fai.kz/tap/capabilities
+id: dachsfaikz
+langs:
+- id: EN
+  name: English
+link: https://dachs.fai.kz/
+name: FAI archives
+owner:
+  link: https://dachs.fai.kz/
+  location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 20
+  name: Fesenkov Astrophysical Institute
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- astronomy
+- virtual observatory
+- TAP
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039817

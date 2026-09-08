@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Norwegian National Ground Segment for Satellite Data (NBS). National
+  Copernicus Collaborative Ground Segment catalog replacing the retired colhub.met.no
+  DHuS nodes, with search and download of Sentinel products over Norway plus CSW metadata
+  discovery.
+endpoints:
+- type: csw202
+  url: https://nbs.csw.met.no/?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+id: wwwsatellittdatano
+langs:
+- id: 'NO'
+  name: Norwegian
+- id: EN
+  name: English
+link: https://www.satellittdata.no
+name: Norwegian National Ground Segment for Satellite Data
+owner:
+  link: https://www.met.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: Norwegian Meteorological Institute
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- government
+- has_api
+- sentinel
+- copernicus
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi99998983

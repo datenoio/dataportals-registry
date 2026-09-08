@@ -1,0 +1,63 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: sputnikweb
+name: Sputnik Web
+website: https://www.geoscan.ru/en/software/sputnik/
+description: Sputnik Web is a server platform from Geoscan for publishing and sharing
+  georeferenced 3D models, terrain, raster and vector maps, panoramas, media and
+  attachments. Public installations use numbered /location/{id} pages and a shared
+  /resources/ application bundle; it can be hosted on a customer's own server.
+owner:
+  name: Geoscan
+  location:
+    country:
+      id: RU
+      name: Russia
+logo_url: https://www.geoscan.ru/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+documentation_url: https://download.geoscan.ru/sputnik/Sputnik_Manual_1.4_en.pdf
+export_formats:
+- 3D Tiles
+- KML
+- Raster
+- Vector
+capabilities:
+- 3D model and terrain publication
+- Raster and vector map layers
+- Panoramas and media attachments
+- Access control
+last_updated: '2026-09-07T00:00:00Z'

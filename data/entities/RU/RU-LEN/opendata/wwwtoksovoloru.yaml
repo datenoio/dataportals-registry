@@ -1,0 +1,51 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-LEN
+      name: Leningradskaja oblast'
+description: Municipal open-data catalog with CSV datasets covering administration
+  contacts, municipal administration information and vacancies.
+id: wwwtoksovoloru
+langs:
+- id: RU
+  name: Russian
+link: https://www.toksovo-lo.ru/opendata/
+name: Открытые данные Токсовского городского поселения
+owner:
+  link: https://www.toksovo-lo.ru/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Администрация муниципального образования Токсовское городское поселение
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00041895

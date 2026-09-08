@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-RP
+      name: Rheinland-Pfalz
+description: Mapbender geoportal of the Landwirtschaftskammer Rheinland-Pfalz with
+  public vineyard, cadastre, and wine-growing map applications.
+endpoints:
+- type: mapbender:application
+  url: https://geodaten.lwk-rlp.de/mapbender/
+- type: mapbender:application
+  url: https://geodaten.lwk-rlp.de/mapbender/application/gg_weinbau
+id: geodatenlwkrlpde
+langs:
+- id: DE
+  name: German
+link: https://geodaten.lwk-rlp.de/mapbender/
+name: GeoDaten-LWK
+owner:
+  link: https://www.lwk-rlp.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-RP
+      name: Rheinland-Pfalz
+  name: Landwirtschaftskammer Rheinland-Pfalz
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: mapbender
+  name: Mapbender
+status: active
+tags:
+- GIS
+- Rhineland-Palatinate
+- geodata
+- geospatial
+- mapbender
+- viticulture
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi99998978

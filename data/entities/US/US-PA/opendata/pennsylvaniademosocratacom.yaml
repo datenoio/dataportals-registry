@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: inactive
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -19,6 +19,15 @@ coverage:
       name: Pennsylvania
 description: Socrata demo tenant previously labeled as PennWATCH. This is not the
   live Commonwealth open data portal; use data.pa.gov instead.
+endpoints:
+- type: dcatus11
+  url: https://pennsylvania.demo.socrata.com/data.json
+- type: socrata:views
+  url: https://pennsylvania.demo.socrata.com/api/views
+- type: sitemap
+  url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-pennsylvania.demo.socrata.com.xml
+- type: opensearch
+  url: https://pennsylvania.demo.socrata.com/opensearch.xml
 id: pennsylvaniademosocratacom
 langs:
 - id: EN
@@ -51,7 +60,7 @@ rights:
 software:
   id: socrata
   name: Socrata
-status: inactive
+status: deprecated
 tags:
 - government
 - open data
@@ -60,4 +69,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: cdi00036954
+uid: temp00002508

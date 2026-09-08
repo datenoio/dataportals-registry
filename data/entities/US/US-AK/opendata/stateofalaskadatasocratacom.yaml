@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-AK
+      name: Alaska
+description: Public catalog of State of Alaska expenditures, revenues, staffing, fund
+  balances, and other financial reports.
+endpoints:
+- type: dcatus11
+  url: https://stateofalaska.data.socrata.com/data.json
+- type: socrata:views
+  url: https://stateofalaska.data.socrata.com/api/views
+id: stateofalaskadatasocratacom
+langs:
+- id: EN
+  name: English
+link: https://stateofalaska.data.socrata.com/
+name: State of Alaska Financial Reporting
+owner:
+  link: https://alaska.gov/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-AK
+      name: Alaska
+  name: State of Alaska
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: socrata
+  name: Socrata
+status: active
+tags:
+- government
+- open data
+- public finance
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00042171

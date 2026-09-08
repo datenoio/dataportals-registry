@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-HI
+      name: Hawaii
+description: Public catalog of campaign contributions, expenditures, filings, loans,
+  and other election finance data for Hawaii state and county candidates.
+endpoints:
+- type: dcatus11
+  url: https://hicscdata.hawaii.gov/data.json
+- type: socrata:views
+  url: https://hicscdata.hawaii.gov/api/views
+id: hicscdatahawaiigov
+langs:
+- id: EN
+  name: English
+link: https://hicscdata.hawaii.gov/
+name: Hawaii Campaign Spending Commission Data
+owner:
+  link: https://ags.hawaii.gov/campaign/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-HI
+      name: Hawaii
+  name: Hawaii Campaign Spending Commission
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: socrata
+  name: Socrata
+status: active
+tags:
+- government
+- open data
+- campaign finance
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00042198

@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: AR-J
+      name: San Juan
+description: Official mining-cadastre GeoServer of San Juan Province, providing mineral-right
+  and cadastral geospatial layers through WMS and WFS.
+endpoints:
+- type: wms130
+  url: https://catastrominero.sanjuan.gob.ar/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://catastrominero.sanjuan.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: catastrominerosanjuangobar
+langs:
+- id: ES
+  name: Spanish
+link: https://catastrominero.sanjuan.gob.ar/geoserver
+name: Catastro Minero de San Juan
+owner:
+  link: https://mineria.sanjuan.gob.ar/
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-J
+      name: San Juan
+  name: Ministry of Mining, Government of San Juan
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- cadastre
+- GeoServer
+- mining
+- San Juan
+topics:
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00038513

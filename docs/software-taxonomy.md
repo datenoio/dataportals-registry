@@ -25,7 +25,7 @@ Typical subtypes:
 |-----------|---------|
 | `data_portal_platform` | Self-hosted open-data CMS (CKAN, DKAN, uData, Idra, OpenGDC, ResourceContracts, ODWeb) |
 | `scientific_repository_platform` | Dataverse, DSpace, Invenio, Figshare, OPUS, Omeka S, Fedora, Esploro, PHAIDRA, RADAR, Yoda, Converis, Archipelago, LabKey, DABAR, OpenScience.si, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, META-SHARE, Gen3, TR32DB |
-| `geospatial_catalog_platform` | GeoNetwork, GeoNode, Palapa, ArcGIS Hub, ArcGIS Experience Builder, ArcGIS Web AppBuilder, ArcGIS Instant Apps, gvSIG Online, VertiGIS WebOffice, Geocortex Essentials, VertiGIS Studio Web, GeoMedia WebMap, disy Cadenza, Mapbender, mviewer, G3W-SUITE, Cadcorp SIS WebMap, Hexagon M.App Enterprise, Trimble Locus IMS, Spatial Suite, Spectrum Spatial Analyst, Exponare, Hajk, Origo, myCarta, GEUSMAP, GC2, ISY Map, Avinet Adaptive, MAP+, MapGuide, SIGimWeb, VKOMAP, HyG Mapgis, Dobles Visor de Mapas, WSP NetGIS Runtime, GEOVAP Marushka, VC Map, JMap, p.mapper, Weave, OVIE, SOFTPRO, MxSIG, KAZGISA RGIS, eKMap Cloud |
+| `geospatial_catalog_platform` | GeoNetwork, GeoNode, Palapa, ArcGIS Hub, ArcGIS Experience Builder, ArcGIS Web AppBuilder, ArcGIS Instant Apps, gvSIG Online, VertiGIS WebOffice, Geocortex Essentials, VertiGIS Studio Web, GeoMedia WebMap, disy Cadenza, Mapbender, mviewer, G3W-SUITE, Cadcorp SIS WebMap, Hexagon M.App Enterprise, Trimble Locus IMS, Spatial Suite, Spectrum Spatial Analyst, Exponare, Hajk, Origo, myCarta, GEUSMAP, GC2, ISY Map, Avinet Adaptive, MAP+, MapGuide, SIGimWeb, VKOMAP, HyG Mapgis, Dobles Visor de Mapas, WSP NetGIS Runtime, GEOVAP Marushka, VC Map, JMap, p.mapper, Weave, OVIE, SOFTPRO, MxSIG, KAZGISA RGIS, eKMap Cloud, GT Map, SHK Kent Bilgi Sistemi, Sputnik Web, Geocad GSEE |
 | `microdata_catalog_platform` | NADA, NESSTAR, REDATAM, IPUMS |
 | `indicators_data_platform` | PxWeb, PxStat, OpenSDG, Knoema, DHIS2, FENIX, TabNet, Beyond 20/20, StatPlanet, IMF NSDP, Istat Data Browser, eDatos, DGBAS Web |
 | `metadata_registry_platform` | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
@@ -33,10 +33,10 @@ Typical subtypes:
 | `geospatial_service_middleware` | GeoServer, MapServer, MapTiler Server, deegree, rasdaman, QGIS Server, SuperMap iServer, MapGIS IGServer, CubeWerx CubeSERV |
 | `cms_or_app_framework` | WordPress, Drupal, Liferay used as a catalog |
 | `managed_saas_service` | Socrata, OpenDataSoft, CONTENTdm, vendor-hosted Hub, Isogeo, OpenAIRE, Astun iShare, IntraMaps Public, LocalMaps, Sentinel Hub, Landfolio, GISApp, GisMaster, GeneGIS PAGIS, SmartMap, Geolonia スマートマップ, SonicWeb, GeDA-Public, ALANDIS+, EnviMAP, PISO, GDi Visios, SeaSketch, XY Maps, SparkMap, Guangxi, RDF Online Repository, Redivis, hale»connect, Cancer-Rates.info, Conduent HCI, Virtual LMI, ATM Maggioli, Visor Urbano, GeoNube, Geopixel Cidades, CTMGEO SigWEB, dmCity, InfoGIS, OpenGov, T-MAPY GISPLAN, T-MAPY mOBEC, CORA GEO CG WebGIS, Geodeticca WEB GIS, Geoportál GEPRO, TopGis GisOnline, MK Consult K5 MapServer, Georeal, Mapotip, ibb giscity, vianovis touvia.MAPS, INGRADA online, EOMAP KOVGIS EVALD, terGIS, Pozi, GIS Cloud, MRF Web Map, MuniSight, GIS Quadrat PublicMaps, SIT WebGis, CommunityView, MS-GIS |
-| `domain_data_infrastructure` | Domain-specific stacks (GBIF IPT, SciCat, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, Symbiota, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal, NOMAD, ESA Science Archive, BirdMap Africa, CLLD, TalkBank, Pathway Tools, IBDC) |
+| `domain_data_infrastructure` | Domain-specific stacks (GBIF IPT, SciCat, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ESIMO, Symbiota, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal, NOMAD, ESA Science Archive, BirdMap Africa, CLLD, TalkBank, Pathway Tools, IBDC) |
 | `general_software` | Catch-all, including `custom` |
 
-Human-readable category notes: `data/software/types.yaml`. Allowed list: `data/schemes/software.json`.
+Human-readable category notes: `data/software/types.yaml`. Allowed `category` / `subtype` lists: `data/schemes/software.json`. Per-id category and subtype live on each YAML record; `MAP_SOFTWARE_OWNER_CATALOG_TYPE` is loaded from those files (`custom` is excluded so catalogs can keep any `catalog_type`).
 
 ## Layout
 
@@ -66,13 +66,15 @@ Beyond `id` / `name` / `category`, records may include:
 
 Quality checks flag catalogs whose software implies endpoints that are missing (`SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*`) on the enrichment track — they do not fail CI by themselves.
 
+`validate-software` coverage gates for `version` and `repository_url` apply to installable OSS subtypes (`data_portal_platform`, `scientific_repository_platform`, `geospatial_service_middleware`, `protocol_or_api_server`, plus repo coverage for domain/indicator stacks). They do not require a public git tag on `managed_saas_service` or municipal GIS viewers.
+
 ## Adding a software definition
 
 1. Confirm the product is shared (not a one-off site). One-off sites keep `software.id: custom`.
 2. Pick `id`: lowercase letters/digits, matching the filename (`data/software/{category}/{id}.yaml`).
 3. Set `type: Software`, `name`, `category` (aligned with catalog types), and `subtype` from the table above.
 4. Fill `has_api`, `metadata_support`, `website`, and `documentation_url` when known. See `data/software/opendata/ckan.yaml`.
-5. Add the id to `data/reference/software_ids.yaml` if that list is maintained in the same change.
+5. Run `python scripts/builder.py sync-software-maps` so `data/reference/software_ids.yaml` lists the new id.
 6. Run `python scripts/builder.py validate-software` and `python scripts/builder.py build`.
 
 Do not create a new software id for a single catalog unless several independent installations exist or are expected.

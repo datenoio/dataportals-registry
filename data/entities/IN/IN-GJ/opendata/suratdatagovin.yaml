@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IN-GJ
+      name: Gujarāt
+description: Former OGD Platform India SaaS catalog for Surat Municipal Corporation
+  (surat.data.gov.in). NIC launched it as a city instance alongside Tamil Nadu, Odisha,
+  and Sikkim. The hostname no longer resolves; re3data and web archives document the
+  catalog.
+endpoints:
+- type: ogdindia:catalog
+  url: https://surat.data.gov.in
+id: suratdatagovin
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100012679
+  value: r3d100012679
+langs:
+- id: EN
+  name: English
+link: https://surat.data.gov.in
+name: Open Government Data Portal of Surat City
+owner:
+  link: https://www.suratmunicipal.gov.in/
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-GJ
+      name: Gujarāt
+  name: Surat Municipal Corporation
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: ogdindia
+  name: OGD Platform India
+status: deprecated
+tags:
+- government
+- open data
+- Surat
+- municipal
+- Gujarat
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00039547

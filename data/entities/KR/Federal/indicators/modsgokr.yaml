@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: KR
+      name: South Korea
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Official Korean platform for national Sustainable Development Goal indicators,
+  operated by the Ministry of Data and Statistics and built with OpenSDG.
+endpoints:
+- type: opensdg:catalog
+  url: https://mods.go.kr/sdg/
+- type: opensdg:catalog
+  url: https://kostat-sdg-kor.github.io/sdg-indicators/reporting-status/
+id: modsgokr
+langs:
+- id: KO
+  name: Korean
+link: https://mods.go.kr/sdg/
+name: Korea SDG Data Platform
+owner:
+  link: https://mods.go.kr/
+  location:
+    country:
+      id: KR
+      name: South Korea
+    level: 20
+  name: Ministry of Data and Statistics
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: opensdg
+  name: OpenSDG
+status: active
+tags:
+- sustainable development goals
+- indicators
+- official statistics
+- government
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00039813

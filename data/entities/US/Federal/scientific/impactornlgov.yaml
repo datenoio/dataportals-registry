@@ -1,0 +1,72 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: IMPACT is Oak Ridge National Laboratory's public Pure research portal,
+  providing searchable research datasets and associated scholarly information.
+endpoints:
+- type: oaipmh20
+  url: https://impact.ornl.gov/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://impact.ornl.gov/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://impact.ornl.gov/sitemap/datasets.xml
+- type: sitemap
+  url: https://impact.ornl.gov/sitemap.xml
+id: impactornlgov
+langs:
+- id: EN
+  name: English
+link: https://impact.ornl.gov
+name: Oak Ridge National Laboratory Research Portal
+owner:
+  link: https://www.ornl.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Oak Ridge National Laboratory
+  type: Federal government
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research data
+- datasets
+- laboratory research
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
+uid: cdi00042158

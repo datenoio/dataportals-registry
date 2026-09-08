@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: SK
+      name: Slovakia
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id002
+      id: SK-BC
+      name: Banskobystrický kraj
+description: Local DCAT-AP-SK catalog of the City of Zvolen, harvested by the national
+  open data portal, publishing municipal datasets separately from the POMOSAM eGOV
+  site.
+endpoints:
+- type: dcat:jsonld
+  url: https://opendata.zvolen.sk/set/catalog/lkod
+id: opendatazvolensk
+langs:
+- id: SK
+  name: Slovak
+link: https://opendata.zvolen.sk/set/catalog/lkod
+name: Katalóg otvorených dát Mesta Zvolen
+owner:
+  link: https://www.zvolen.sk
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Mesto Zvolen
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+  transferable_location: true
+software:
+  id: lkod
+  name: LKOD
+status: active
+tags:
+- government
+- has_api
+- open data
+- Slovakia
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99999457

@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-HH
+      name: Hamburg
+description: Open-access DSpace-CRIS repository of Helmut Schmidt University / University
+  of the Federal Armed Forces Hamburg, including Forschungsdaten (research data).
+endpoints:
+- type: dspace
+  url: https://openhsu.ub.hsu-hh.de/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://openhsu.ub.hsu-hh.de/server/api/discover/search/objects
+  version: '7'
+id: openhsuubhsuhhde
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://openhsu.ub.hsu-hh.de
+name: OpenHSU
+owner:
+  link: https://www.hsu-hh.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-HH
+      name: Hamburg
+  name: Helmut-Schmidt-Universität / Universität der Bundeswehr Hamburg
+  type: Academy
+properties:
+  dataset_count_reported: 31
+  is_national: false
+software:
+  id: dspacecris
+  name: DSpace CRIS
+status: active
+tags:
+- scientific
+- research data
+- dspacecris
+- has_api
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00039126

@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: Government of Ontario Geocortex Essentials catalog for Land Information
+  Ontario applications, including AgMaps, natural heritage, land tenure, fire, water,
+  and geographic names maps.
+endpoints:
+- type: geocortex:catalog
+  url: https://www.lioapplications.lrc.gov.on.ca/Geocortex/Essentials/essentials414/REST/sites?f=pjson
+id: wwwlioapplicationslrcgovonca
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://www.lioapplications.lrc.gov.on.ca/Geocortex/Essentials/essentials414/REST/sites
+name: Ontario Land Information Geocortex Applications
+owner:
+  link: https://www.ontario.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: Government of Ontario
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- provincial government
+- Geocortex
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00038627

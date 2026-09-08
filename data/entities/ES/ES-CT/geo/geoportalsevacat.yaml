@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+description: Municipal geoportal of the Ajuntament de Seva (Mapia/Giscube), with a
+  public map viewer and QGIS Server WMS for urban planning, land classification, and
+  settlement limits.
+endpoints:
+- type: wms130
+  url: https://geoportal.seva.cat/apps/giscube-admin/qgisserver/services/planejament-urbanistic-qgis?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wms111
+  url: https://geoportal.seva.cat/apps/giscube-admin/qgisserver/services/planejament-urbanistic-qgis?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoportal.seva.cat/apps/giscube-admin/qgisserver/services/seva-classificacio-sol?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: geoportalsevacat
+langs:
+- id: CA
+  name: Catalan
+- id: ES
+  name: Spanish
+link: https://geoportal.seva.cat/geoportal/
+name: Geoportal Seva
+owner:
+  link: https://www.seva.cat/
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+  name: Ajuntament de Seva
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: qgisserver
+  name: QGIS Server
+status: active
+tags:
+- geoportal
+- GIS
+- municipal
+- QGIS Server
+topics:
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi99999333

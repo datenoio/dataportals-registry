@@ -1,0 +1,63 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: true
+api_status: active
+content_types:
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-OMS
+      name: Omskaja oblast'
+description: Public regional investment map with a 52-layer catalog covering investment
+  potential, administrative boundaries, mineral resources, communications, engineering
+  and transport infrastructure, development territories, tariffs, land sites and business
+  proposals.
+endpoints:
+- type: cogis:catalog
+  url: https://geo.omskportal.ru/invest
+id: geoomskportalruinvest
+langs:
+- id: RU
+  name: Russian
+link: https://geo.omskportal.ru/invest
+name: Инвестиционная карта Омской области
+owner:
+  link: https://omskportal.ru/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Правительство Омской области
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: cogis
+  name: CoGIS
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00041906

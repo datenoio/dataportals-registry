@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 0
+    macroregion:
+      id: '001'
+      name: World
+description: DiVA institutional repository of Nordic Council of Ministers, with a
+  public search over publications and research datasets.
+endpoints:
+- type: oaipmh20
+  url: https://norden.diva-portal.org/smash/oai?verb=Identify
+  version: '2.0'
+id: nordendivaportalorg
+langs:
+- id: EN
+  name: English
+- id: SV
+  name: Swedish
+link: https://norden.diva-portal.org
+name: Nordic Council of Ministers DiVA
+owner:
+  link: https://www.norden.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 0
+  name: Nordic Council of Ministers
+  type: International
+properties:
+  is_national: false
+software:
+  id: divaportal
+  name: DiVA Portal
+status: active
+tags:
+- scientific
+- research data
+- publications
+- DiVA
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99999796

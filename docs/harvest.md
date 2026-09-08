@@ -65,7 +65,7 @@ WHERE catalog_type = 'Scientific data repository'
 LIMIT 50;
 ```
 
-Filter `software.id` only with values that exist in `data/software/` (currently **264** definitions). Do not invent an id that is missing from `software_ids.yaml`.
+Filter `software.id` only with values that exist in `data/software/` (currently **423** definitions). Do not invent an id that is missing from `software_ids.yaml`.
 
 For open data or geo, change `catalog_type` and the `software.id` list (`ckan`, `geonetwork`, `stacserver`, …). Nested `software` / `endpoints` are `STRUCT` / `STRUCT[]` in DuckDB ([ai-consumers.md](ai-consumers.md)).
 

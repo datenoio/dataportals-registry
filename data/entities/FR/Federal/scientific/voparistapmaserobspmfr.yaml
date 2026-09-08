@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 20
+description: MASER catalog of planetary and heliospheric radio observations and simulations,
+  including Cassini, Juno, Voyager, Wind, STEREO, and ExPRES.
+endpoints:
+- type: tap:capabilities
+  url: http://voparis-tap-maser.obspm.fr/tap/capabilities
+id: voparistapmaserobspmfr
+langs:
+- id: EN
+  name: English
+link: http://voparis-tap-maser.obspm.fr/
+name: PADC MASER radio astronomy catalog
+owner:
+  link: http://voparis-tap-maser.obspm.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Paris Observatory, Paris Astronomical Data Centre
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- astronomy
+- virtual observatory
+- TAP
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039383

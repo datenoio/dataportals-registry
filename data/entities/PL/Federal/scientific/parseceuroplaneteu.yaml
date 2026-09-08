@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Catalog of Europlanet Telescope Network facilities and observing capabilities
+  for planetary science and exoplanet research.
+endpoints:
+- type: tap:capabilities
+  url: http://parsec-europlanet.eu:81/tap/capabilities
+id: parseceuroplaneteu
+langs:
+- id: EN
+  name: English
+link: http://parsec-europlanet.eu:81/
+name: Europlanet Telescope Network Database
+owner:
+  link: http://parsec-europlanet.eu:81/
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 20
+  name: Adam Mickiewicz University, Astronomical Observatory / Europlanet Telescope
+    Network
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- astronomy
+- virtual observatory
+- TAP
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039908

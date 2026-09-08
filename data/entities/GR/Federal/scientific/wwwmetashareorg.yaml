@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -18,6 +18,9 @@ description: META-SHARE is an open and repository for sharing and exchanging lan
   data, tools and related web services. It is devoted to the sustainable sharing and
   dissemination of Language Resources (LRs) for the Human Language Technologies domain
   and other domains where language plays a critical role.
+endpoints:
+- type: metashare:catalog
+  url: http://metashare.ilsp.gr:8080
 id: wwwmetashareorg
 identifiers:
 - id: openaire

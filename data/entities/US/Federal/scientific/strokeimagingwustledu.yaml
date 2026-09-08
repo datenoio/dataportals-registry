@@ -1,0 +1,65 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: The Imaging Cerebrovascular Disease Knowledge Portal (iCDKP) is a public
+  XNAT archive of stroke CT and MRI collections, built on the Stroke Neuro-Imaging
+  Phenotype Repository (SNIPR) at Washington University. Guests can browse the project
+  catalog; imaging downloads require a data use agreement. Public projects include
+  ERICH, GENISIS, and Mass General Brigham ischemic-stroke and ICH collections.
+endpoints:
+- type: rest
+  url: https://strokeimaging.wustl.edu/data/projects
+id: strokeimagingwustledu
+langs:
+- id: EN
+  name: English
+link: https://strokeimaging.wustl.edu/
+name: Imaging Cerebrovascular Disease Knowledge Portal
+owner:
+  link: https://sites.wustl.edu/icdkp/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Washington University in St. Louis
+  type: Academy
+properties:
+  dataset_count_reported: 4
+  is_national: false
+software:
+  id: xnat
+  name: XNAT
+status: active
+tags:
+- scientific
+- research data
+- medical imaging
+- neuroimaging
+- stroke
+- has_api
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi99999225

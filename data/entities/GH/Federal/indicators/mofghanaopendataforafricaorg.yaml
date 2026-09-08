@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: GH
+      name: Ghana
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Public fiscal, economic, and financial indicators portal of the Ministry
+  of Finance of Ghana.
+endpoints:
+- type: knoema:search
+  url: https://mof-ghana.opendataforafrica.org/api/1.0/search
+  version: '1.0'
+- type: sdmx:datastructure
+  url: https://mof-ghana.opendataforafrica.org/api/1.0/sdmx
+  version: '2.0'
+- type: opensearch
+  url: https://mof-ghana.opendataforafrica.org/OpenSearch.xml
+id: mofghanaopendataforafricaorg
+langs:
+- id: EN
+  name: English
+link: https://mof-ghana.opendataforafrica.org/
+name: Ministry of Finance Ghana Open Data
+owner:
+  link: https://mof-ghana.opendataforafrica.org/
+  location:
+    country:
+      id: GH
+      name: Ghana
+    level: 20
+  name: Ministry of Finance, Ghana
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: knoema
+  name: Knoema
+status: active
+tags:
+- has_api
+- statistics
+- indicators
+- Knoema
+- Open Data for Africa
+- government
+- Ghana
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00039431

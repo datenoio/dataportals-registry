@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: DANE's national geostatistical data center, providing interoperable access
+  to statistical and geospatial datasets, services, and territorial resources.
+endpoints:
+- type: dcatap201
+  url: https://cdge.dane.gov.co/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://cdge.dane.gov.co/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://cdge.dane.gov.co/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://cdge.dane.gov.co/api/search/v1
+id: cdgedanegovco
+langs:
+- id: ES
+  name: Spanish
+link: https://cdge.dane.gov.co
+name: Centro de Datos Geoestadísticos
+owner:
+  link: https://www.dane.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+  name: Departamento Administrativo Nacional de Estadística (DANE)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- statistics
+- Colombia
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00038696

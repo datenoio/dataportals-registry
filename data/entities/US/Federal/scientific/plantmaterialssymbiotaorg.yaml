@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: DAPPER is a Symbiota collections database for coastal native plant materials
+  and wild populations used in ecological restoration; its public API exposes collection
+  metadata.
+endpoints:
+- type: symbiota:api
+  url: https://plantmaterials.symbiota.org/portal/api/v2/collection
+  version: '2'
+- type: docs
+  url: https://plantmaterials.symbiota.org/portal/api/v2/documentation
+  version: '2'
+id: plantmaterialssymbiotaorg
+langs:
+- id: EN
+  name: English
+link: https://plantmaterials.symbiota.org/portal/
+name: Data Access Portal of Propagules for Ecological Restoration (DAPPER)
+owner:
+  link: https://www.fws.gov/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: U.S. Fish and Wildlife Service
+  type: Federal government
+properties:
+  is_national: false
+software:
+  id: symbiota
+  name: Symbiota
+status: active
+tags:
+- scientific
+- biodiversity
+- ecological restoration
+- symbiota
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00042165

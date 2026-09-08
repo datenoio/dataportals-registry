@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-MD
+      name: Madrid, Comunidad de
+description: ioChem-BD Browse node of the Universidad Autónoma de Madrid (Centro de
+  Computación Científica), publishing computational chemistry datasets with REST and
+  OAI-PMH access.
+endpoints:
+- type: dspace:items
+  url: https://iochem.ccc.uam.es/rest/items
+  version: '6'
+- type: oaipmh20
+  url: https://iochem.ccc.uam.es/oai/request?verb=Identify
+  version: '2.0'
+id: iochemcccuames
+langs:
+- id: EN
+  name: English
+- id: ES
+  name: Spanish
+link: https://iochem.ccc.uam.es
+name: ioChem-BD Browse - Universidad Autónoma de Madrid
+owner:
+  link: https://www.uam.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-MD
+      name: Madrid, Comunidad de
+  name: Universidad Autónoma de Madrid
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: iochembd
+  name: ioChem-BD
+status: active
+tags:
+- chemistry
+- computational chemistry
+- iochembd
+- quantum chemistry
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99999238

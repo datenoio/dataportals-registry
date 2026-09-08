@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: SE-O
+      name: Västra Götalands län [SE-14]
+description: Public Hajk geoportal of Västtrafik for exploring public-transport geographic
+  data in Västra Götaland.
+endpoints:
+- type: api
+  url: https://geoportalen.vasttrafik.se/appConfig.json
+id: geoportalenvasttrafikse
+langs:
+- id: SV
+  name: Swedish
+link: https://geoportalen.vasttrafik.se
+name: Västtrafik Geoportalen
+owner:
+  link: https://www.vasttrafik.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    subregion:
+      id: SE-O
+      name: Västra Götalands län [SE-14]
+  name: Västtrafik
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: hajk
+  name: Hajk
+status: active
+tags:
+- geoportal
+- map viewer
+- transport
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi99999714

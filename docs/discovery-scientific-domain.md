@@ -58,14 +58,26 @@ NOAA-style tabular/gridded data server. **Confirm:** `/erddap/index.html` or `/e
 
 ## OPeNDAP (`opendap`) {#opendap}
 
-Remote subsetting protocol and Hyrax/THREDDS-style servers. Site: [opendap.org](https://www.opendap.org). Use `opendap` when the public catalog is an OPeNDAP/Hyrax directory, not when OPeNDAP is only a download option on THREDDS (`thredds`) or ERDDAP (`erddap`).
+Remote subsetting protocol and server ecosystem. Site: [opendap.org](https://www.opendap.org). Use `opendap` for a public OPeNDAP catalog whose server implementation is not identified as Hyrax, Pydap, THREDDS, or ERDDAP. Do not register OPeNDAP only as a download option on a THREDDS (`thredds`) or ERDDAP (`erddap`) catalog.
 
-**Confirm:** GET a catalog XML or Hyrax/OPeNDAP directory listing.
+**Confirm:** GET a DAP catalog or directory listing and verify that it exposes multiple datasets.
 
 | Tool | Query |
 |------|-------|
-| Google | `"OPeNDAP" (Hyrax OR "catalog.xml") -site:opendap.org -site:github.com` |
+| Google | `"OPeNDAP" ("catalog.xml" OR DODS) -Hyrax -site:opendap.org -site:github.com` |
 | Censys | `web.endpoints.http.body: "OPeNDAP"` |
+
+## OPeNDAP Hyrax (`opendaphyrax`) {#opendaphyrax}
+
+The OPeNDAP 4 Data Server, unrelated to the Samvera repository product that uses `software.id: hyrax`. Register one public Hyrax server per independently operated dataset catalog. Prefer `thredds` or `erddap` when Hyrax is only an alternate access service for one of those catalogs.
+
+**Confirm:** the directory page title starts with `OPeNDAP Hyrax: Contents of`, the footer reports `Hyrax (version)`, or `/opendap/catalog.xml` returns the server catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `"OPeNDAP Hyrax: Contents of" -site:opendap.org -site:github.com` |
+| Google | `inurl:/opendap/ "Hyrax development sponsored by"` |
+| Censys | `web.endpoints.http.body: "OPeNDAP Hyrax"` |
 
 ## DataONE (`dataone`) {#dataone}
 
@@ -77,6 +89,123 @@ Earth-science member-node network. Site: [dataone.org](https://www.dataone.org).
 |------|-------|
 | Google | `"DataONE" ("member node" OR MN) repository` |
 | Censys | `web.endpoints.http.body: "DataONE"` |
+
+## MOLGENIS (`molgenis`) {#molgenis}
+
+Configurable FAIR scientific data platform used for research catalogues, biobank
+directories, and registries. Site and public-instance list: [molgenis.org/tools](https://molgenis.org/tools.html).
+
+**Signals:** current EMX2 catalogues say “Created with MOLGENIS” and expose
+`/api/graphql`, `/api/rdf`, or `/<database>/api/csv/<table>`. Legacy installations
+use `molgenis.do`, often below a project path. A generic University of Groningen
+page is not sufficient evidence.
+
+**Confirm:** GET the public catalogue/search UI and one read-only API surface when
+available. Register one public catalogue or registry per installation, not each
+database table, cohort, biobank, or variable.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Created with MOLGENIS" (catalogue OR registry OR collections)` |
+| Google | `inurl:molgenis.do (data OR database OR repository)` |
+| Censys | `web.endpoints.http.body: "Created with MOLGENIS"` |
+
+## BEXIS2 (`bexis2`) {#bexis2}
+
+Open-source research data management and repository platform for structured and
+unstructured data. Site: [bexis2.uni-jena.de](https://bexis2.uni-jena.de/). Public
+instances can be heavily themed, so confirm both the application route and assets.
+
+**Signals:** root redirects to `/home/Start`; BEXIS2 name or footer; `/Content/`
+assets and ASP.NET application; read-only `/api/dataset`, `/api/metadata/{id}`, or
+`/api/data/{id}` endpoints.
+
+**Confirm:** GET the public search and a read-only dataset API. Register one BEXIS2
+installation, not each project, metadata schema, or dataset.
+
+| Tool | Query |
+|------|-------|
+| Google | `"BEXIS2" (repository OR "research data") -site:github.com` |
+| Google | `inurl:/home/Start BEXIS` |
+| Censys | `web.endpoints.http.body: "BEXIS2"` |
+
+## Diversity Workbench (`diversityworkbench`) {#diversityworkbench}
+
+Modular bio- and geodiversity research-data environment maintained by the SNSB IT
+Center and partners. Site: [diversityworkbench.net](https://www.diversityworkbench.net/).
+Deployments often publish through project-specific web interfaces or the SNSB
+BioCASe/RDF pipeline rather than a uniform DWB homepage.
+
+**Signals:** explicit “Diversity Workbench” or “DWB” attribution; modules such as
+DiversityCollection, DiversityDescriptions, DiversityTaxonNames, or DiversityProjects;
+BioCASe/ABCD publication backed by a DWB cache database; `id.snsb.info` RDF identifiers.
+
+**Confirm:** require an explicit DWB attribution from the portal or its operator. One
+public catalog or publication pipeline = one registry record; do not register every DWB
+module, project database, BioCASe datasource, or occurrence record separately.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Diversity Workbench" (database OR repository OR data)` |
+| Google | `"DiversityCollection" (BioCASe OR RDF OR dataset)` |
+| Censys | `web.endpoints.http.body: "Diversity Workbench"` |
+
+## Greenstone (`greenstone`) {#greenstone}
+
+Open-source digital-library collection software from the University of Waikato. The
+[official examples page](https://www.greenstone.org/examples) lists independent public
+libraries built with Greenstone 2 and Greenstone 3.
+
+**Signals:** Greenstone 3 uses `/greenstone3/<library>/collection/<collection>/...`,
+`xmlns:gs3`, `greenstone.org/gs3`, or an `/greenstone3/oaiserver` endpoint. Legacy
+Greenstone 2 installations commonly use `/greenstone/cgi-bin/library.cgi`.
+
+**Confirm:** GET the library home and, when enabled, the OAI Identify response. Register
+one independently operated library/catalog, not every collection inside it.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/greenstone3/library/collection` |
+| Google | `inurl:/greenstone/cgi-bin/library.cgi (collection OR library)` |
+| Censys | `web.endpoints.http.body: "greenstone.org/gs3"` |
+
+## VIVO (`vivo`) {#vivo}
+
+Open-source semantic web platform for research discovery. Site:
+[vivo.lyrasis.org](https://vivo.lyrasis.org/). VIVO normally catalogs people and
+research activity, but some deployments also index datasets and repository records.
+
+**Signals:** VIVO attribution together with `vitro`/`vivo` assets; RDF entity pages;
+faceted classes for datasets or data records; `/api/sparqlQuery`, `/reconcile`, or a
+configured Data Distribution API.
+
+**Confirm:** the installation must expose a public dataset or research-object catalog.
+Do not register a profiles-only VIVO deployment, individual researcher pages, or the
+project website itself.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Powered by VIVO" (dataset OR repository OR data)` |
+| Google | `"VIVO" "research data" (search OR repository)` |
+| Censys | `web.endpoints.http.body: "vitro" AND web.endpoints.http.body: "VIVO"` |
+
+## CWIS (`cwis`) {#cwis}
+
+The Collection Workflow Integration System is an open-source metadata collection and
+digital-library platform from Internet Scout. Site:
+[scout.wisc.edu/cwis](https://scout.wisc.edu/cwis).
+
+**Signals:** “Powered by CWIS” or the expanded product name; CWIS PHP assets; a root
+OAI-PMH response using `?verb=Identify`; qualified Dublin Core and RSS links.
+
+**Confirm:** GET the public resource search and OAI Identify response. Avoid the unrelated
+Chest Wall Injury Society acronym. One CWIS collection site = one registry record.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Powered by CWIS" (repository OR collection OR resources)` |
+| Google | `"Collection Workflow Integration System" -site:scout.wisc.edu` |
+| Censys | `web.endpoints.http.body: "Powered by CWIS"` |
 
 ## Galaxy (`galaxy`) {#galaxy}
 
@@ -366,6 +495,99 @@ Indian Biological Data Centre archives. Hub: [ibdc.dbt.gov.in](https://ibdc.dbt.
 | Google | `"Indian Biological Data Centre" OR IBDC (INDA OR "proteome databank") site:ibdc.dbt.gov.in` |
 | Censys | `web.names: "ibdc.dbt.gov.in"` |
 
+## Specify Web Portal (`specify`) {#specify}
+
+Shared public collection frontend from the Specify Collections Consortium. Start with the
+[maintainer's instance list](https://speciforum.org/t/specify-web-portal-examples/723),
+which includes independent university and museum deployments.
+
+**Signals:** Specify branding, collection selectors, specimen/image/map views and configured
+Solr collection cores. Confirm the product in HTML and collection configuration; Solr alone
+is not a Specify fingerprint. Example: `https://specifyportal.uog.edu/`.
+
+**Search:** `"Specify Web Portal" (museum OR collection OR university)`.
+Register the public collection portal, not a staff login or each specimen page.
+
+## BRAHMS Online (`brahmsonline`) {#brahmsonline}
+
+Web publishing component of BRAHMS, distinct from its desktop collection-management client.
+The [official website list](https://herbaria.plants.ox.ac.uk/bol/brahms/Websites)
+includes Oxford-hosted projects and independently hosted servers.
+
+**Signals:** `/bol/{project}` routes together with BRAHMS Online attribution and collection
+search pages. A `/bol/` path alone is insufficient. Confirm the public project's branding;
+Mauritius Herbarium explicitly attributes its database to BRAHMS.
+
+**Search:** `"BRAHMS Online" (herbarium OR specimens)` and `inurl:/bol/ "BRAHMS"`.
+Count distinct published collections, not botanical species pages or product documentation.
+
+## LOVD (`lovd`) {#lovd}
+
+Reusable Leiden Open Variation Database software. The maintainer's
+[installation directory](https://lovd.nl/3.0/public_list) identifies independent deployments.
+
+**Signals:** LOVD version banner and gene/variant database navigation; corroborate with the
+installation directory or [upstream source](https://github.com/LOVDnl/LOVD3).
+Do not classify arbitrary variant databases or every link in the broader LSDB directory as LOVD.
+
+**Search:** `"LOVD" "variants" "genes" -site:lovd.app`.
+The registered `www.lovd.nl` URL is a network/software entry page linking to databases;
+resolve the intended installation before harvesting or adding an API endpoint.
+
+## DaCHS (`dachs`) {#dachs}
+
+[GAVO DaCHS](https://docs.g-vo.org/DaCHS/) is a reusable Virtual Observatory publishing stack.
+**Signals:** a `Server: DaCHS/...` response header, or the combined GAVO stylesheet/scripts
+(`gavo_dc.css`, `gavo.js`) and characteristic GAVO functions in TAP capability responses.
+Legacy routes can include `/__system__/tap/run/tap/capabilities`. TAP support alone is not
+specific: Daiquiri and other products also implement it.
+
+**Confirm:** GET the registered homepage and advertised TAP capabilities; check XML response
+content, not merely HTTP 200. GAVO, ASTRON and ArVO are verified examples.
+**Search:** `"gavo_dc.css"` or `"DaCHS" "data center"`.
+Treat GAVO's `dc.g-vo.org` and `dc.zah.uni-heidelberg.de` as a potential alias pair during
+new-record discovery; matching software on two registry records does not prove two deployments.
+
+## Daiquiri (`daiquiri`) {#daiquiri}
+
+[AIP's publication framework](https://django-daiquiri.github.io/docs/) is used for Gaia@AIP,
+RAVE, CosmoSim, APPLAUSE and MUSE-Wide. The documentation links to actual deployments.
+**Signals:** a “Proudly powered by Daiquiri” footer linking to the upstream project;
+query interfaces and `/metadata/` schema/table pages corroborate the product identity.
+**Search:** `"Proudly powered by" "Daiquiri"`.
+Confirm the data portal itself: an AIP hostname, astronomical subject or TAP endpoint alone
+is insufficient. Legacy and current generations can have different routes.
+
+## AMBIT (`ambit`) {#ambit}
+
+[AMBIT](https://ambit.sourceforge.net/) is reusable cheminformatics software supporting
+OpenTox and eNanoMapper interfaces. **Signals:** an AMBIT version banner, links to the
+upstream installation guide, and substance/dataset/compound routes. The eNanoMapper site
+explicitly identifies itself as a customized AMBIT deployment.
+
+**Confirm:** request the homepage with `Accept: text/html` to see its product attribution,
+then inspect a small advertised substance search response. RDF content negotiation can hide
+HTML branding. A previous timeout alone does not establish inactivity.
+**Search:** `"AMBIT" "eNanoMapper" "database"` or `"AMBIT REST web services"`.
+Avoid confusing this product with unrelated software also named Ambit.
+
+## ESIMO (`esimo`) {#esimo}
+
+Russia's Unified State System of Information on the World Ocean is a federated marine
+data infrastructure with a central portal and regional information-technology nodes.
+Typical installations use `/portal/portal/esimo-user/` routes, ESIMO-specific
+`/portal-ajax/jquery/esimo.*.js` files, and an `esimo-central` portal theme. Regional
+operator documentation may identify a RITU or ESIMO centre and the shared distributed
+database and metadata technologies.
+
+**Confirm:** match the ESIMO name and common portal assets or official node documentation.
+A marine institute hostname or a JBoss portal alone is insufficient. Register the central
+catalog and independently operated regional nodes, not individual applications or data
+resources within a node.
+
+**Search:** `"Портал ЕСИМО"`, `inurl:/portal/portal/esimo-user/`, or
+`"portal-ajax" "esimo.resources.js"`.
+
 ## Related
 
 - [discovery-scientific.md](discovery-scientific.md)
@@ -375,4 +597,3 @@ Indian Biological Data Centre archives. Hub: [ibdc.dbt.gov.in](https://ibdc.dbt.
 - [harvest-biodiversity.md](harvest-biodiversity.md)
 - [harvest-earthdata.md](harvest-earthdata.md)
 - [software-index.md](software-index.md)
-

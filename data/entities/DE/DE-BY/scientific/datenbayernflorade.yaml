@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BY
+      name: Bayern
+description: The Botanischer Informationsknoten Bayern publishes occurrence data,
+  species profiles, and distribution maps for the Flora of Bavaria from a Diversity
+  Workbench-managed biodiversity data repository.
+endpoints:
+- type: diversityworkbench:catalog
+  url: https://daten.bayernflora.de/de/index.php
+id: datenbayernflorade
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100011505
+  value: r3d100011505
+langs:
+- id: DE
+  name: German
+link: https://daten.bayernflora.de/de/index.php
+name: Botanischer Informationsknoten Bayern - Flora von Bayern
+owner:
+  link: https://daten.bayernflora.de/de/index.php
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BY
+      name: Bayern
+  name: Arbeitsgemeinschaft Flora von Bayern
+  type: Community
+properties:
+  is_national: false
+software:
+  id: diversityworkbench
+  name: Diversity Workbench
+status: active
+tags:
+- scientific
+- biodiversity
+- botany
+- species occurrence
+- flora
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00039187

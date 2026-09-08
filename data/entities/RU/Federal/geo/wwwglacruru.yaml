@@ -1,0 +1,53 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Russian glacier catalog organized by glacier region, with mapped glacier
+  outlines, morphology, area and historical inventory comparisons. Provides downloadable
+  shapefiles for the catalog and individual regions.
+id: wwwglacruru
+langs:
+- id: RU
+  name: Russian
+link: https://www.glacru.ru/
+name: Каталог ледников России
+owner:
+  link: https://www.igras.ru/
+  location:
+    country: *id001
+    level: 20
+  name: Институт географии Российской академии наук
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00041821

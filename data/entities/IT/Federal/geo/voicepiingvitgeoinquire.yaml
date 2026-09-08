@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Geo-INQUIRE SaaS WP5 pygeoapi at INGV Pisa. Public OGC API Processes
+  instance (SOLWCAD, conduit, pybox) for volcanology and related geoscience workflows;
+  collections list is empty.
+endpoints:
+- type: pygeoapi:openapi
+  url: https://voice.pi.ingv.it/geoinquire/openapi?f=json
+  version: '1.0'
+- type: pygeoapi:collections
+  url: https://voice.pi.ingv.it/geoinquire/collections?f=json
+  version: '1.0'
+id: voicepiingvitgeoinquire
+langs:
+- id: EN
+  name: English
+- id: IT
+  name: Italian
+link: https://voice.pi.ingv.it/geoinquire
+name: Geo-INQUIRE Saas WP5
+owner:
+  link: https://www.ingv.it/en/
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: INGV (Istituto Nazionale di Geofisica e Vulcanologia)
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: pygeoapi
+  name: pygeoapi
+status: active
+tags:
+- Geo-INQUIRE
+- INGV
+- OGC API Processes
+- pygeoapi
+- volcanology
+topics:
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00039562

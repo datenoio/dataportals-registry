@@ -1,0 +1,65 @@
+access_mode:
+- limited
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Földmegfigyelési Információs Rendszer (FIR / eFöld), Hungary's Copernicus
+  Collaborative Ground Segment catalog for searching, viewing and downloading Sentinel-1,
+  Sentinel-2 and Sentinel-3 products. Public search is available; download requires
+  registration.
+endpoints:
+- type: opensearch
+  url: https://fir.gov.hu/opensearch
+id: firgovhu
+langs:
+- id: HU
+  name: Hungarian
+link: https://fir.gov.hu
+name: Földmegfigyelési Információs Rendszer (eFöld)
+owner:
+  link: https://lechnerkozpont.hu
+  location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+  name: Lechner Knowledge Center
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- government
+- has_api
+- sentinel
+- copernicus
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi99998984

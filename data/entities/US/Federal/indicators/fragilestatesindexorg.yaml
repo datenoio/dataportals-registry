@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: Country dashboards, comparative analysis and downloadable historical
+  scores for the Fragile States Index, organized across political, social, economic,
+  cohesion and cross-cutting indicators.
+endpoints:
+- type: wpjson
+  url: https://fragilestatesindex.org/wp-json/
+id: fragilestatesindexorg
+langs:
+- id: EN
+  name: English
+link: https://fragilestatesindex.org/country-data/
+name: Fragile States Index Country Dashboard
+owner:
+  link: https://fundforpeace.org/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: The Fund for Peace
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: wordpress
+  name: WordPress
+status: active
+tags:
+- indicators
+- state fragility
+- governance
+- conflict risk
+- country comparison
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: JUST
+  name: Justice, legal system and public safety
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042136

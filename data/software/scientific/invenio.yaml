@@ -9,10 +9,10 @@ datatypes:
 has_api: 'Yes'
 has_bulk: 'No'
 id: invenio
-website: https://inveniosoftware.org
-description: InvenioRDM is an open-source research data repository framework for managing,
-  publishing, and preserving datasets with rich metadata, persistent identifiers,
-  and interoperable APIs.
+website: https://inveniosoftware.org/products/framework/
+description: Invenio is CERN's open-source digital library and repository framework
+  (classic Invenio, not InvenioRDM) for managing publications and research outputs
+  with MARC/JSON metadata, OAI-PMH, and REST APIs.
 owner:
   name: CERN
   location:
@@ -29,9 +29,9 @@ metadata_support:
   iso19115: 'No'
   oai-pmh: 'Yes'
   ogcrecords: 'No'
-  openaire: 'No'
+  openaire: Plugin only
   opensearch: 'No'
-  rdf_sparql: 'Yes'
+  rdf_sparql: 'No'
   schema-org: 'No'
   sdmx: 'No'
   stac: 'No'
@@ -39,7 +39,7 @@ metadata_support:
   wcs: 'No'
   wfs: 'No'
   wms: 'No'
-name: InvenioRDM
+name: Invenio
 pid_support:
   has_doi: 'Yes'
   persistent_dataset_url: 'Yes'
@@ -49,7 +49,7 @@ rights_management:
 storage_type: Raw
 type: Software
 repository_url: https://github.com/inveniosoftware/invenio
-documentation_url: https://inveniordm.docs.cern.ch
+documentation_url: https://invenio.readthedocs.io
 version: 3.1.0
 export_formats:
 - BibTeX
@@ -65,4 +65,4 @@ capabilities:
 - Organization management
 - Topic categorization
 changelog_url: https://github.com/inveniosoftware/invenio/releases
-last_updated: '2026-03-31T12:00:00Z'
+last_updated: '2026-09-08T12:00:00Z'

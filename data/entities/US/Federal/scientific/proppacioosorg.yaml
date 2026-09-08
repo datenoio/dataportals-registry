@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ERDDAP catalog operated by PacIOOS for Pacific Regional Ocean Partnership
+  marine and oceanographic datasets.
+endpoints:
+- type: erddap:index
+  url: https://prop.pacioos.org/erddap/index.json
+- type: erddap:datasets
+  url: https://prop.pacioos.org/erddap/info/index.json
+- type: opensearch
+  url: https://prop.pacioos.org/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://prop.pacioos.org/erddap/sitemap.xml
+langs:
+  - id: EN
+    name: English
+id: proppacioosorg
+link: https://prop.pacioos.org/erddap/index.html
+name: Pacific Regional Ocean Partnership ERDDAP
+owner:
+  link: https://www.pacioos.hawaii.edu/
+  location:
+    country:
+      id: US
+      name: United States
+  name: Pacific Islands Ocean Observing System (PacIOOS)
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- scientific
+- research
+- academic
+- United States
+- has_api
+- ERDDAP
+- marine
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00042166

@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 40
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-BRE
+      name: Bretagne
+description: Isogeo / PixUp data portal of Lorient Agglomération (géocatalogue), backed
+  by an Isogeo OpenCatalog share.
+endpoints:
+- type: isogeo:catalog
+  url: https://geocatalogue.lorient-agglo.bzh/
+- type: dcat
+  url: https://dcat.isogeo.com/0bd17a2a330842c68ec4a412d1df6824/AiCyPK6W8fg012l-vHV0s5tPry5b0
+id: geocataloguelorientagglobzh
+langs:
+- id: FR
+  name: French
+link: https://geocatalogue.lorient-agglo.bzh
+name: Geocatalogue Lorient Agglomération
+owner:
+  link: https://www.lorient-agglo.bzh
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-BRE
+      name: Bretagne
+  name: Lorient Agglomération
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://geocatalogue.lorient-agglo.bzh/terms/privacy-policy/
+  rights_type: granular
+  tos_url: https://geocatalogue.lorient-agglo.bzh/terms/terms-and-conditions/
+software:
+  id: isogeo
+  name: Isogeo
+status: active
+tags:
+- France
+- geospatial
+- government
+- opendata
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99993021

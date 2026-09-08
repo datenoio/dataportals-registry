@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CM
+      name: Cameroon
+    level: 20
+    macroregion:
+      id: '017'
+      name: Middle Africa
+description: Public forest atlas of Cameroon with downloadable forestry, land-use,
+  protected-area, and environmental geospatial datasets.
+endpoints:
+- type: dcatap201
+  url: https://cmr.forest-atlas.org/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://cmr.forest-atlas.org/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://cmr.forest-atlas.org/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://cmr.forest-atlas.org/api/search/v1
+id: cmrforestatlasorg
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://cmr.forest-atlas.org
+name: Atlas Forestier du Cameroun
+owner:
+  link: https://forest-atlas.org
+  location:
+    country:
+      id: CM
+      name: Cameroon
+    level: 20
+  name: Ministère des Forêts et de la Faune (MINFOF)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- forestry
+- Cameroon
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00038664

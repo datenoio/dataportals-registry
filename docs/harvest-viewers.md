@@ -1,6 +1,6 @@
 # Harvesting map viewers and tile caches
 
-Many geoportals in this registry are **viewers** (QWC2, Masterportal, Lizmap, mviewer, Wagmap, Tianditu, Trimble Locus / Louhi / Landfolio, dmCity, InfoGIS, Spatial Suite, Spectrum Spatial Analyst, Exponare, KortInfo, IntraMaps Public, LocalMaps, GEUSMAP, GISApp, GeneGIS PAGIS, GisMaster, HyG Mapgis, SmartMap, VKOMAP, Visor Urbano, Dobles Visor de Mapas, ISY Map, Avinet Adaptive, iObčina, iShare, Cadcorp, VertiGIS Studio Web, ArcGIS Experience Builder, ArcGIS Web AppBuilder, ArcGIS Instant Apps, Hajk, myCarta, T-MAPY GISPLAN, CG WebGIS, Geodeticca WEB GIS, Geoportál GEPRO, GisOnline, K5 MapServer, Marushka, Georeal, Mapotip, giscity, touvia.MAPS, INGRADA online, VC Map, XY Maps, Pozi, JMap, GIS Cloud, MRF Web Map, MuniSight, p.mapper, CommunityView, MS-GIS, Weave, OVIE, SOFTPRO, MxSIG). The catalog of datasets is the **layer list** (GetCapabilities, `themes.json`, REST services) — not PNG tiles, print PDFs, or the basemap.
+Many geoportals in this registry are **viewers** (QWC2, Masterportal, Lizmap, mviewer, Wagmap, Tianditu, Trimble Locus / Louhi / Landfolio, dmCity, InfoGIS, Spatial Suite, Spectrum Spatial Analyst, Exponare, KortInfo, IntraMaps Public, LocalMaps, GEUSMAP, GISApp, GeneGIS PAGIS, GisMaster, HyG Mapgis, SmartMap, VKOMAP, Visor Urbano, Dobles Visor de Mapas, ISY Map, Avinet Adaptive, iObčina, iShare, Cadcorp, VertiGIS Studio Web, ArcGIS Experience Builder, ArcGIS Web AppBuilder, ArcGIS Dashboards, ArcGIS Instant Apps, Argenmap, AvanMap, WebEWID, KC WebGIS, Hajk, myCarta, T-MAPY GISPLAN, CG WebGIS, Geodeticca WEB GIS, Geoportál GEPRO, GisOnline, K5 MapServer, Marushka, Georeal, Mapotip, giscity, touvia.MAPS, INGRADA online, VC Map, XY Maps, Pozi, JMap, GIS Cloud, MRF Web Map, MuniSight, p.mapper, CommunityView, MS-GIS, Weave, OVIE, SOFTPRO, MxSIG). The catalog of datasets is the **layer list** (GetCapabilities, `themes.json`, REST services) — not PNG tiles, print PDFs, or the basemap.
 
 Use this page when `software.id` is a viewer or cache. Full SDI catalogs (GeoNetwork, GeoNode, ArcGIS Server): [harvest-geoportals.md](harvest-geoportals.md). Protocol grain: [harvest-protocols.md](harvest-protocols.md). GET only. Stop on `401`/`403`. Do not scrape tiles.
 
@@ -104,11 +104,31 @@ Map UI first. App configuration is an ArcGIS Online / Portal item (or a Länssty
 
 ## ArcGIS Web AppBuilder (`webappbuilder`) {#webappbuilder}
 
-Map UI first. Harvest public REST/WMS on the same host when present. Do not scrape Web AppViewer tiles. One harvest scope per public `?id=` app. Distinct from `experiencebuilder` and `instantapps`.
+Map UI first. Hosted apps and exported self-hosted Jimu builds use the same grain. Harvest public REST/WMS on the same host when present. Do not scrape Web AppViewer tiles. One harvest scope per public app. Distinct from `experiencebuilder` and `instantapps`.
+
+## ArcGIS Dashboards (`arcgisdashboards`) {#arcgisdashboards}
+
+Dashboard UI first. Resolve the public ArcGIS dashboard item, then harvest the referenced public feature/map services through ArcGIS REST. Do not turn charts, indicators, selectors, or widgets into datasets. One harvest scope per dashboard item; deduplicate services already harvested from a broader `arcgisserver` or `arcgishub` catalog.
 
 ## ArcGIS Instant Apps (`instantapps`) {#instantapps}
 
 Map UI first. Harvest public REST/WMS on the same host when present. Do not scrape Instant App tiles. One harvest scope per public `appid`. Distinct from `experiencebuilder` and `webappbuilder`.
+
+## Argenmap (`argenmap`) {#argenmap}
+
+Read the public JSON layer configuration used by the Argenmap `src/js/` client. Harvest named overlay layers or their WMS/WMTS service metadata; omit the IGN basemap, drawing tools, and tile requests. One harvest scope per institutional deployment.
+
+## AvanMap (`avanmap`) {#avanmap}
+
+Harvest the public municipal layer tree exposed through the `/AvanMap/` client, or WMS/WFS GetCapabilities when published. Do not scrape tiles, cadastral identify responses, or generated report documents. One harvest scope per municipality deployment.
+
+## WebEWID (`webewid`) {#webewid}
+
+Harvest the public Portal Mapowy layer list or an authority's public WFS GetCapabilities. Prefer the WFS feature-type catalog when available. Do not crawl authenticated surveyor, appraiser, or document portals, and do not ingest individual cadastral parcels as datasets. One harvest scope per authority.
+
+## KC WebGIS (`kcwebgis`) {#kcwebgis}
+
+Harvest the public BürgerGIS theme/layer list from the `/BMApp/` configuration, or public WMS/WFS GetCapabilities when present. Do not scrape tiles, offline packages, field-edit endpoints, or citizen-report records. One harvest scope per public municipality or Landkreis project.
 
 ## Cadenza (`cadenza`) {#cadenza}
 
@@ -621,6 +641,112 @@ UK My Maps / My House portal. Harvest the public **layer / local-info catalog** 
 ## Cadcorp SIS WebMap (`cadcorp`) {#cadcorp}
 
 Public SIS WebMap / Web Map Layers. Harvest WMS/WFS GetCapabilities or the published layer list. Do not scrape tiles. Distinct from disy Cadenza (`cadenza`) and from Astun iShare (`ishare`).
+
+## CartoVista (`cartovista`) {#cartovista}
+
+Start from `/CartoVistaServer/maps/view?page=mapGallery` and enumerate public maps in the gallery. For each map, use its published configuration or documented CartoVista Server API to resolve data layers. Keep named public data layers; drop basemaps, UI themes, thumbnails, and rendered tiles.
+
+## IGO2 (`igo2`) {#igo2}
+
+Read the deployment's JSON contexts (`contexts.json`, `_default.json`, or the context API) and resolve configured WMS/WFS/GeoJSON sources. Keep named operational layers or CSW dataset records. Deduplicate the same source exposed through more than one OGC protocol.
+
+## InfoMap (`infomap`) {#infomap}
+
+Enumerate public maps from the InfoMap Map Portal, then resolve the QGIS Server WMS behind each map. Harvest named WMS layers, not rendered tiles or saved map views. Treat one tenant portal as one harvest scope.
+
+## dpWebmap (`dpwebmap`) {#dpwebmap}
+
+Harvest the public layer tree or configured WMS/WFS services. Keep named operational layers; drop dpWebmap UI modules, cached basemap tiles, print jobs, and organizer/login applications.
+
+## 3MAP (`3map`) {#3map}
+
+Harvest the public project and layer list exposed by the GIS viewer. Prefer linked WMS/WFS capabilities when available. Do not treat the 3OIS document modules, help pages, or rendered tiles as datasets.
+
+## CGI WebGIS / Facta WebGIS (`factawebgis`) {#factawebgis}
+
+Harvest the public map's layer list and any exposed WMS/WFS services. Keep municipal register-derived thematic layers; drop address-search responses, basemaps, print output, and the application bundle.
+
+## inkasPortal (`inkasportal`) {#inkasportal}
+
+Harvest public themes/layers or their WMS capabilities. Keep named geodata layers; drop `inkas@work` forms, cadastral-order workflows, drawing output, login-only data, and map tiles.
+
+## GeoViewer Online (`geoviewer`) {#geoviewer}
+
+Harvest only layers explicitly published in the public map. Do not crawl work orders, billing, SCADA, IoT, customer, or staff-only asset-management functions. Drop vector/raster tiles and UI configuration.
+
+## Flood Intelligence Portal (`floodintelligenceportal`) {#floodintelligenceportal}
+
+Treat published flood scenarios, historical events, gauges, and downloadable flood-study layers as dataset-like objects when the tenant exposes a list. Property reports are generated views, not independent datasets. Do not enumerate addresses or properties.
+
+## pGIS (`pgis`) {#pgis}
+
+Start with `GET /api/v1/classifiers/layers` and keep enabled named leaf layers as the tenant's public layer catalog. Preserve parent groups as topics, not datasets. When the deployment publishes WMS/WFS, prefer GetCapabilities for stable identifiers and service metadata. Do not harvest Google basemaps, suggestions, or feature responses one object at a time.
+
+## Geoambiental (`geoambiental`) {#geoambiental}
+
+Harvest the public viewer's named environmental layer tree and resolve its configured ArcGIS REST or OGC services when exposed. Keep thematic layers and public reports with stable definitions; drop basemaps, permit case records, user-specific workflows, rendered tiles, and Angular assets. One harvest scope per environmental authority tenant.
+
+## NAZCA (`nazca`) {#nazca}
+
+Read the municipality-specific `config_{name}.js` and shared `main.js` to identify the public cadastral and thematic services. Keep named public layers; drop individual parcel-query results, addresses, Street View content, user-loaded local overlays, basemaps, and rendered tiles. One harvest scope per numeric municipal route.
+
+## Xiltrion (`xiltrion`) {#xiltrion}
+
+Use only unauthenticated public `/api` responses required by the `/map` client to enumerate named municipal or cadastral layers. Keep stable public layer definitions; drop individual parcels, owners, addresses, authenticated cadastral cases, generated certificates, Mapbox styles, and tiles. One harvest scope per municipality subdomain.
+
+## GT Map (`gtmap`) {#gtmap}
+
+Use the public LifeMap layer tree and the `/gs-gate/` WMS configuration referenced by the client. Keep named municipal thematic layers and stable WMS layers; drop address and parcel-query responses, weather and air-quality readings, basemaps, road-view imagery, print jobs, and SODA application assets. One harvest scope per municipality.
+
+## Terratwin (`terratwin`) {#terratwin}
+
+Harvest the county GDI layer tree and the TerraTwin module's published map services. Keep named district and cadastral layers; drop individual parcel lookups, 3D scene tiles, and Vite application assets. One harvest scope per county deployment.
+
+## GIS4U (`gis4u`) {#gis4u}
+
+Harvest the /mapa/ application catalogue and each application's layer configuration. Keep named cadastral, technical-map, and register layers; drop per-feature queries and square-theme application assets. One harvest scope per municipal domain.
+
+## Myeongji WebGIS (`myeongji`) {#myeongji}
+
+Harvest the living-information layer tree and cadastral/aerial search panels exposed by the shared client. Keep named thematic and cadastral layers; drop address and parcel-query responses, aerial-image tiles, print/save jobs, and `/js/base/` application assets. One harvest scope per municipal deployment.
+
+## Berry GIS (`berryict`) {#berryict}
+
+Harvest the per-assembly layer list behind `propertyidentification.php`. Keep named street, building, parcel, block, community, and sub-metro layers; drop individual property lookups and Leaflet application assets. One harvest scope per assembly tenant.
+
+## VB GIS (`vbgis`) {#vbgis}
+
+Harvest the tenant's public construction-planning and infrastructure layer endpoints referenced by the viewer. Keep named planning and infrastructure layers; drop parcel-record queries, certificates, and tiles. One harvest scope per tenant subdomain.
+
+## SHK Kent Bilgi Sistemi (`shkkbs`) {#shkkbs}
+
+Enumerate the public city-guide themes and their municipality-hosted ArcGIS REST services. Keep stable thematic map layers and zoning/plan layers intended for public reuse; drop individual parcel lookups, address-search responses, generated zoning certificates, basemaps, panorama imagery, and private staff modules. One harvest scope per municipality.
+
+## CoGIS (`cogis`) {#cogis}
+
+Enumerate the public map and application catalog exposed by CoGIS Portal. Keep named maps,
+stable thematic layers and their service metadata; drop application bundles, basemaps,
+tiles, search suggestions, individual features and user tasks. Legacy portals may expose
+the catalog through `/CoGIS/Map` or custom `/api/providers` routes. One public portal is
+one harvest scope even when it contains several map applications.
+
+## Geocad System Enterprise Edition (`geocadgsee`) {#geocadgsee}
+
+Resolve the public workset and layer catalog used by the registered portal. Keep named
+thematic layers and stable service metadata; preserve workset/group hierarchy as topics.
+Drop individual `graph_ids`, object-semantic responses, address searches, basemaps,
+application modules and rendered tiles. Use bounded REST requests and do not enumerate
+features through spatial `ids/filter` calls unless a documented dataset export requires
+them. One regional or municipal portal is one harvest scope.
+
+## Sputnik Web (`sputnikweb`) {#sputnikweb}
+
+Start from the registered installation and enumerate only public locations and the named
+layers, models or attachments exposed inside them. Keep stable city models, terrain,
+planning layers and downloadable project resources as dataset-like records. Drop Cesium
+tiles, textures, thumbnails, application bundles, authentication routes and generated
+views. Do not crawl numeric `/location/{id}` values; follow locations linked by the public
+installation. Treat a public installation as one harvest scope.
 
 ## Related
 

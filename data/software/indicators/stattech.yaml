@@ -9,9 +9,11 @@ datatypes:
 has_api: 'Yes'
 has_bulk: 'Yes'
 id: stattech
-description: SDMX-native technology stack and APIs for official statistics portals
-  in the SIS-CC .Stat ecosystem—REST and SDMX services for discovery, structured metadata,
-  and dissemination of indicator data.
+description: Legacy OECD.Stat / I.Stat dissemination stack (“Powered by .Stat
+  technology”), predecessor to .Stat Suite Data Explorer. Public UIs are the
+  classic OECD.Stat table browser (OECD.Stat, I.Stat, UNESCO UIS, and similar
+  NSO sites), not Data Explorer. Keep this ID separate from `statsuite` and from
+  Istat Data Browser (`istatdatabrowser`).
 owner:
   name: Statistical Information System Collaboration Community (SIS-CC)
   location:
@@ -39,7 +41,7 @@ metadata_support:
   wfs: 'No'
   wms: 'No'
 name: .Stat Technology
-website: https://siscc.org/stat-suite/
+website: https://stats.oecd.org
 pid_support:
   has_doi: 'No'
   persistent_dataset_url: 'No'
@@ -48,7 +50,7 @@ rights_management:
   supports_licenses: 'No'
 storage_type: Both
 type: Software
-documentation_url: https://siscc.org/manual
+documentation_url: https://stats.oecd.org
 export_formats:
 - CSV
 - Excel
@@ -58,4 +60,4 @@ export_formats:
 capabilities:
 - REST API
 - SDMX support
-last_updated: '2026-03-31T12:00:00Z'
+last_updated: '2026-09-08T00:00:00Z'

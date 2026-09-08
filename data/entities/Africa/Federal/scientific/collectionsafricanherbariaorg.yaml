@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: inactive
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -10,19 +10,20 @@ coverage:
     country:
       id: Africa
       name: Africa
-    level: 10
+    level: 20
     macroregion:
       id: '002'
       name: Africa
-description: Regional Living Atlases catalog of West and Central African herbaria collections
-  (Benin, Cameroon, Côte d'Ivoire, Gabon, Guinea, and Togo). collections.african-herbaria.org
-  returned HTTP 502 in August 2026; the parent african-herbaria.org site still responds.
+description: Regional Living Atlases catalog of West and Central African herbaria
+  collections (Benin, Cameroon, Côte d'Ivoire, Gabon, Guinea, and Togo), powered by
+  Atlas of Living Australia software.
+endpoints:
+- type: ala:collections
+  url: http://collections.african-herbaria.org/ws/collection
 id: collectionsafricanherbariaorg
 langs:
 - id: FR
   name: French
-- id: EN
-  name: English
 link: http://collections.african-herbaria.org/datasets
 name: Plateforme Régionale des Collections des Herbiers d'Afrique de l'Ouest et d'Afrique
   Centrale datasets
@@ -38,7 +39,7 @@ owner:
 software:
   id: ala
   name: Atlas of Living Australia
-status: inactive
+status: active
 tags:
 - GBIF
 - biodiversity

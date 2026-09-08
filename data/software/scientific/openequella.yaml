@@ -1,0 +1,63 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: Uncertain
+has_api: 'Yes'
+has_bulk: 'No'
+id: openequella
+name: openEQUELLA
+website: https://www.edalex.com/openequella/
+description: Reusable digital repository for educational and research content, with configurable
+  collections, metadata, versioning, search, access control, OAI-PMH harvesting and REST APIs.
+owner:
+  name: Edalex
+  location:
+    country:
+      id: AU
+      name: Australia
+documentation_url: https://openequella.github.io/
+repository_url: https://github.com/openequella/openEQUELLA
+changelog_url: https://github.com/openequella/openEQUELLA/releases
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: Uncertain
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: Uncertain
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: Uncertain
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per item
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+license:
+  type: Apache-2.0
+  url: https://www.apache.org/licenses/LICENSE-2.0
+export_formats:
+- JSON
+- XML
+capabilities:
+- OAI-PMH
+- REST API
+- Collection management
+- Versioned items
+last_updated: '2026-09-08T12:00:00Z'

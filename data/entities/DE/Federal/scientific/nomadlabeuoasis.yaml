@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: FAIRmat public Example Oasis on NOMAD software, listed separately from
+  the central archive. Published entries include materials ELNs and example experimental
+  uploads, available through the NOMAD REST API.
+endpoints:
+- type: rest
+  url: https://nomad-lab.eu/oasis/backend/api/v1/info
+- type: rest
+  url: https://nomad-lab.eu/oasis/backend/api/v1/entries
+id: nomadlabeuoasis
+langs:
+- id: EN
+  name: English
+link: https://nomad-lab.eu/oasis/gui/
+name: FAIRmat Example Oasis
+owner:
+  link: https://www.fairmat-nfdi.eu/fairmat
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: NOMAD Laboratory (FAIRmat)
+  type: Academy
+properties:
+  dataset_count_reported: 77
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: nomad
+  name: NOMAD
+status: active
+tags:
+- scientific
+- has_api
+- materials science
+- NOMAD Oasis
+- FAIR data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99998962

@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Government of Canada Earth Observation Data Management System for RADARSAT,
+  RCM, Sentinel, and other federal satellite archives.
+endpoints:
+- type: stacserverapi
+  url: https://www.eodms-sgdot.nrcan-rncan.gc.ca/stac
+id: wwweodmssgdotnrcanrncangcca
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://www.eodms-sgdot.nrcan-rncan.gc.ca/index-en.html
+name: Earth Observation Data Management System (EODMS)
+owner:
+  link: https://natural-resources.canada.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+  name: Natural Resources Canada
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- SAR
+- RADARSAT
+- RCM
+- Sentinel-1
+- radar
+- Earth observation
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi99999447

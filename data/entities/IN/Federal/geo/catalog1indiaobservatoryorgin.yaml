@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: Foundation for Ecological Security Commons Platform Land Instance. pygeoapi
+  OGC API with four public collections of commons and land geospatial features, distinct
+  from the India Observatory GeoNode catalog.
+endpoints:
+- type: pygeoapi:openapi
+  url: https://catalog1.indiaobservatory.org.in/openapi?f=json
+  version: '1.0'
+- type: pygeoapi:collections
+  url: https://catalog1.indiaobservatory.org.in/collections?f=json
+  version: '1.0'
+id: catalog1indiaobservatoryorgin
+langs:
+- id: EN
+  name: English
+link: https://catalog1.indiaobservatory.org.in
+name: Commons Platform Land Instance
+owner:
+  link: https://indiaobservatory.org.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 20
+  name: Foundation for Ecological Security
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: pygeoapi
+  name: pygeoapi
+status: active
+tags:
+- commons
+- ecology
+- geospatial
+- India
+- OGC API
+- pygeoapi
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00039546

@@ -97,7 +97,7 @@ Swedish shared IR (Uppsala University Library). Tenants at `{org}.diva-portal.or
 | Censys | `web.names: "diva-portal.org"` |
 | crt.sh | `%.diva-portal.org` |
 
-## Hyrax (`hyrax`) {#hyrax}
+## Samvera Hyrax (`hyrax`) {#hyrax}
 
 Rails institutional repo. **Confirm:** `/catalog.json` or Blacklight `/catalog`. Branding “Hyrax”, “Samvera”, “Nurax”.
 
@@ -633,6 +633,55 @@ Prompt: `There are a lot of {country} universities and research organizations th
 5. Skip login-only, dead/parked, theses-only with no Dataset type, and microstates with no universities (Monaco, Liechtenstein, Kiribati). [CoreTrustSeal](https://www.coretrustseal.org/) is a useful overlay — keep certified hosts that have a public dataset catalog, not preservation systems (SPAR, EWIG, film archives).
 
 `is_national: false` except for a country’s official research-data catalog of that type.
+
+## FLAT (`flat`) {#flat}
+
+[Fedora Language Archiving Technology](https://github.com/TLA-FLAT/FLAT) packages Fedora
+Commons and Islandora for language-resource repositories with CLARIN Component Metadata.
+**Signals:** FLAT-specific theme assets such as `flat_bootstrap_theme`, Islandora resource
+routes under `/flat/`, and attribution to The Language Archive. The path `/flat/` alone is
+not enough. The upstream Docker setup documents the package's repository components.
+
+**Confirm:** check the public collection page and its advertised OAI-PMH Identify response.
+Lund Humanities Lab serves `/flat/oai2?verb=Identify`; other deployments may use different
+OAI paths. **Search:** `"flat_bootstrap_theme"` or `"Fedora Language Archiving Technology"`.
+Use the more specific `flat` ID only with FLAT evidence; ordinary Islandora remains `islandora`.
+
+## openEQUELLA (`openequella`) {#openequella}
+
+[openEQUELLA](https://www.edalex.com/openequella/) is the reusable EQUELLA repository family.
+**Signals:** versioned assets under `p/r/{version}/com.equella.core/`, EQUELLA branding,
+and repository collection/search pages. Oxford Brookes RADAR is a verified installation.
+Do not confuse that institution's RADAR name with the separate RADAR repository software.
+
+**Search:** `"com.equella.core"` or `"openEQUELLA" "research"`.
+Check the live asset paths and published OAI endpoint; a generic `/items/` route is not enough.
+The [source project](https://github.com/openequella/openEQUELLA) and vendor use cases
+establish reuse across independent institutions.
+
+## Aubrey (`aubrey`) {#aubrey}
+
+UNT Libraries' public digital collection platform. The
+[operator's infrastructure description](https://library.unt.edu/digital-libraries/trusted-digital-repository/)
+and [instance presentation](https://digital.library.unt.edu/ark:/67531/metadc2405129/m1/7/)
+identify separate Aubrey deployments at UNT Digital Library, Portal to Texas History and
+Gateway to Oklahoma History.
+
+**Signals:** operator-confirmed Aubrey deployment, `/explore/collections/{code}/`, ARK item
+links and collection-specific API help. ARKs and OAI-PMH alone are not Aubrey fingerprints.
+**Search:** `"Aubrey" "digital library"` and `site:library.unt.edu "Aubrey"`.
+The public GitHub repository is empty as reviewed; do not describe it as downloadable source.
+
+## Dialnet CRIS (`dialnetcris`) {#dialnetcris}
+
+[Fundacion Dialnet's hosted research-portal product](https://fundaciondialnet.unirioja.es/servicios/dialnet-cris/)
+is used by multiple institutions. **Signals:** Fundacion Dialnet attribution on a research
+portal with researcher, project and output navigation, confirmed against the provider's
+portal directory or the institution's product documentation. La Rioja's research portal is
+an example. Linking to a Dialnet publication is not evidence that Dialnet powers the site.
+
+**Search:** `"Dialnet CRIS" "portal"` or `"Fundación Dialnet" "investigadores"`.
+Distinguish hosted institutional CRIS portals from the central Dialnet bibliographic database.
 
 ## Related
 

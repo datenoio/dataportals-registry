@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: BA-BIH
+      name: Federacija Bosne i Hercegovine
+description: Spatial metadata catalogue (Micka) of the Geological Survey of the Federation
+  of Bosnia and Herzegovina (FZZG). Implements OGC CSW 2.0.2 ISO AP 1.0 for geological
+  and landslide datasets, funded by CzechAid with the Czech Geological Survey.
+endpoints:
+- type: csw202
+  url: https://app.fzzg.gov.ba/metapodaci/csw/?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: atom
+  url: https://app.fzzg.gov.ba/metapodaci/csw/?request=GetRecords&query=&format=application/xml&MaxRecords=9999&outputSchema=http://www.w3.org/2005/Atom
+- type: dcat:xml
+  url: https://app.fzzg.gov.ba/metapodaci/csw/?request=GetRecords&query=&format=application/xml&MaxRecords=9999&ElementSetName=brief&outputSchema=http://www.w3.org/ns/dcat%23
+- type: opensearch
+  url: https://app.fzzg.gov.ba/metapodaci/opensearch
+  version: '1.0'
+id: appfzzggovbametapodaci
+langs:
+- id: BS
+  name: Bosnian
+- id: EN
+  name: English
+link: https://app.fzzg.gov.ba/metapodaci/
+name: FZZG Spatial Metadata Catalogue
+owner:
+  link: https://www.fzzg.gov.ba
+  location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 30
+    subregion:
+      id: BA-BIH
+      name: Federacija Bosne i Hercegovine
+  name: Geological Survey of the Federation of Bosnia and Herzegovina
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: micka
+  name: Micka
+status: active
+tags:
+- CSW
+- INSPIRE
+- Micka
+- geology
+- geospatial
+- metadata
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi99999345

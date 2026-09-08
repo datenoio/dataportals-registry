@@ -1,0 +1,50 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Ministry of Transport open-data catalog listing CSV datasets on transport,
+  government services, budgets and infrastructure.
+id: wwwmintransgovru
+langs:
+- id: RU
+  name: Russian
+link: https://www.mintrans.gov.ru/opendata
+name: Открытые данные Минтранса России
+owner:
+  link: https://www.mintrans.gov.ru/
+  location:
+    country: *id001
+    level: 20
+  name: Министерство транспорта Российской Федерации
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00041842

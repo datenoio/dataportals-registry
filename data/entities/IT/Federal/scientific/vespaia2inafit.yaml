@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    level: 20
+description: VESPA data service hub publishing exoplanet atmosphere simulations and
+  the NASA Dust Catalogue.
+endpoints:
+- type: tap:capabilities
+  url: http://vespa.ia2.inaf.it/tap/capabilities
+id: vespaia2inafit
+langs:
+- id: EN
+  name: English
+link: http://vespa.ia2.inaf.it/
+name: INAF-OATs VESPA Data Service Hub
+owner:
+  link: http://vespa.ia2.inaf.it/
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: INAF - Astronomical Observatory of Trieste / Italian Astronomical Archives
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- astronomy
+- virtual observatory
+- TAP
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039567

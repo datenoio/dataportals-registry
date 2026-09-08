@@ -1,0 +1,64 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: daiquiri
+name: Daiquiri
+website: https://django-daiquiri.github.io/
+description: Reusable framework for publishing scientific databases through configurable websites,
+  SQL and ADQL query interfaces, IVOA TAP services, table metadata and data downloads. Developed
+  at the Leibniz Institute for Astrophysics Potsdam.
+owner:
+  name: Leibniz Institute for Astrophysics Potsdam
+  location:
+    country:
+      id: DE
+      name: Germany
+documentation_url: https://django-daiquiri.github.io/docs/
+repository_url: https://github.com/django-daiquiri/daiquiri
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+license:
+  type: Apache-2.0
+  url: https://www.apache.org/licenses/LICENSE-2.0
+export_formats:
+- CSV
+- FITS
+- VOTable
+capabilities:
+- IVOA TAP
+- SQL and ADQL query
+- Table metadata
+- OAI-PMH
+last_updated: '2026-09-08T12:00:00Z'

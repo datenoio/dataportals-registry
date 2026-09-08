@@ -1,0 +1,61 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-64
+      name: Pyrénées-Atlantiques
+description: IsiGéo (Geomatika) web GIS tenant at cclacq.geomatika.fr. Login-walled;
+  not a public open-data portal.
+endpoints:
+- type: isigeo:catalog
+  url: https://cclacq.geomatika.fr/
+id: cclacqgeomatikafr
+langs:
+- id: FR
+  name: French
+link: https://cclacq.geomatika.fr/
+name: CC Lacq-Orthez IsiGéo
+owner:
+  link: https://www.cc-lacqorthez.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-64
+      name: Pyrénées-Atlantiques
+  name: Communauté de communes de Lacq-Orthez
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: isigeo
+  name: IsiGéo
+status: active
+tags:
+- France
+- geoportal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00039311

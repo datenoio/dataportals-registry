@@ -1,0 +1,54 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BG
+      name: Bulgaria
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Aggregated nanosafety data interface backed by AMBIT/eNanoMapper databases.
+  Provides physicochemical, environmental, ecotoxicity and human toxicity data from
+  multiple research projects, with public and partner-restricted collections. The
+  former search.data.enanomapper.net address redirects here.
+endpoints:
+- type: ambit:catalog
+  url: https://enanomapper.adma.ai/
+id: enanomapperadmaai
+langs:
+- id: EN
+  name: English
+link: https://enanomapper.adma.ai/
+name: Nanosafety Data Interface
+owner:
+  link: https://www.ideaconsult.net/
+  location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+  name: IDEAconsult Ltd.
+  type: Business
+properties:
+  is_national: false
+software:
+  id: ambit
+  name: AMBIT
+status: active
+tags:
+- chemistry
+- nanomaterials
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00038588

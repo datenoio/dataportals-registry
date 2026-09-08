@@ -1,0 +1,65 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: dachs
+name: DaCHS
+website: https://docs.g-vo.org/DaCHS/
+description: The GAVO Data Center Helper Suite publishes astronomical data through Virtual Observatory
+  services. It combines data ingestion, metadata mapping, a publishing registry, table queries and
+  web interfaces.
+owner:
+  name: German Astrophysical Virtual Observatory
+  location:
+    country:
+      id: DE
+      name: Germany
+logo_url: https://docs.g-vo.org/favicon.ico
+documentation_url: https://docs.g-vo.org/DaCHS/
+repository_url: https://gitlab-p4n.aip.de/gavo/dachs/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: Compatible
+  wfs: 'No'
+  wms: Compatible
+pid_support:
+  has_doi: Uncertain
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Structured
+type: Software
+license:
+  type: GPL-3.0
+  url: https://www.gnu.org/licenses/gpl-3.0.html
+export_formats:
+- FITS
+- VOTable
+- XML
+capabilities:
+- IVOA TAP
+- Publishing registry
+- OAI-PMH
+- Table metadata
+last_updated: '2026-09-08T12:00:00Z'

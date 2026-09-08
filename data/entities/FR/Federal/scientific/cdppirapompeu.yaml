@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -18,6 +18,9 @@ description: The CDPP is the French national data centre for natural plasmas of 
   system. The CDPP assures the long term preservation of data obtained primarily from instruments
   built using French resources, and renders them readily accessible and exploitable by the
   international community.
+endpoints:
+- type: tap:capabilities
+  url: https://cdpp-epntap.irap.omp.eu/tap/capabilities
 id: cdppirapompeu
 identifiers:
 - id: openaire
@@ -40,8 +43,8 @@ owner:
   name: Centre National de la Recherche Scientifique
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: dachs
+  name: DaCHS
 status: active
 tags:
 - scientific
@@ -50,6 +53,7 @@ tags:
 - natural plasmas
 - solar system
 - space plasma physics
+- TAP
 topics:
 - id: TECH
   name: Science and technology

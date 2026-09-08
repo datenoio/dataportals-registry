@@ -1,0 +1,88 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SV
+      name: El Salvador
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Public geoportal of ORMUSA built on gvSIG Online, with map viewers for
+  the observatory of violence against women.
+id: ormusagvsigonlinecom
+langs:
+- id: ES
+  name: Spanish
+link: https://ormusa.gvsigonline.com/gvsigonline/
+name: Visualizador ORMUSA
+owner:
+  link: https://ormusa.org
+  location:
+    country:
+      id: SV
+      name: El Salvador
+    level: 20
+  name: Organización de Mujeres Salvadoreñas por la Paz
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: gvsigonline
+  name: gvSIG Online
+status: active
+tags:
+- gvsigonline
+- geospatial
+- GIS
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: JUST
+  name: Justice, legal system and public safety
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi99999413
+endpoints:
+- type: wms111
+  url: https://ormusa.gvsigonline.com/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://ormusa.gvsigonline.com/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://ormusa.gvsigonline.com/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://ormusa.gvsigonline.com/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://ormusa.gvsigonline.com/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs111
+  url: https://ormusa.gvsigonline.com/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs201
+  url: https://ormusa.gvsigonline.com/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1

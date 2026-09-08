@@ -1,0 +1,56 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id002
+      id: RU-SVE
+      name: Sverdlovskaja oblast'
+description: Community geospatial portal visualizing Yekaterinburg building age, building
+  height and condition, cultural heritage, traffic accidents, tourism routes and urban
+  design data.
+id: mapekaterinburgcity
+langs:
+- id: RU
+  name: Russian
+link: https://map.ekaterinburg.city/
+name: Инфокарта Екатеринбурга
+owner:
+  link: https://github.com/ekaterinburgdev/map
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Код Екатеринбурга
+  type: Community
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00041916

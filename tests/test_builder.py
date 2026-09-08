@@ -20,6 +20,8 @@ from builder import (
     validate_software_profile,
     jsonl_has_records,
     create_table_from_jsonl,
+    _software_counts_toward_coverage,
+    _software_field_present,
 )
 
 
@@ -343,6 +345,68 @@ class TestSoftwareSubtypeValidation:
         record["subtype"] = "scientific_repository_platform"
         issues = validate_software_profile(record)
         assert any(i["issue_type"] == "SOFTWARE_SUBTYPE_CATEGORY_MISMATCH" for i in issues)
+
+    def test_coverage_includes_oss_portal_for_version_and_repo(self):
+        record = self._base_software()
+        assert _software_counts_toward_coverage(record, "version")
+        assert _software_counts_toward_coverage(record, "repository_url")
+        assert _software_counts_toward_coverage(record, "documentation_url")
+
+    def test_coverage_excludes_saas_from_version_and_repo(self):
+        record = self._base_software()
+        record["subtype"] = "managed_saas_service"
+        assert not _software_counts_toward_coverage(record, "version")
+        assert not _software_counts_toward_coverage(record, "repository_url")
+        assert _software_counts_toward_coverage(record, "license")
+        assert _software_counts_toward_coverage(record, "documentation_url")
+
+    def test_coverage_counts_domain_stack_for_repo_not_version(self):
+        record = self._base_software()
+        record["subtype"] = "domain_data_infrastructure"
+        assert not _software_counts_toward_coverage(record, "version")
+        assert _software_counts_toward_coverage(record, "repository_url")
+
+    def test_software_field_present_treats_empty_as_missing(self):
+        assert not _software_field_present({"version": None}, "version")
+        assert not _software_field_present({"version": ""}, "version")
+        assert _software_field_present({"version": "2.11.4"}, "version")
+
+    def _software_schema(self):
+        schema_path = (
+            Path(__file__).resolve().parents[1] / "data" / "schemes" / "software.json"
+        )
+        return json.loads(schema_path.read_text(encoding="utf8"))
+
+    def _complete_software(self):
+        path = (
+            Path(__file__).resolve().parents[1]
+            / "data"
+            / "software"
+            / "opendata"
+            / "ckan.yaml"
+        )
+        return yaml.safe_load(path.read_text(encoding="utf8"))
+
+    def test_schema_rejects_boolean_metadata_support(self):
+        from cerberus import Validator
+
+        record = self._complete_software()
+        record["metadata_support"]["ckan_api"] = True
+        assert not Validator(self._software_schema()).validate(record)
+
+    def test_schema_requires_all_metadata_support_keys(self):
+        from cerberus import Validator
+
+        record = self._complete_software()
+        del record["metadata_support"]["wms"]
+        assert not Validator(self._software_schema()).validate(record)
+
+    def test_schema_rejects_unknown_category(self):
+        from cerberus import Validator
+
+        record = self._complete_software()
+        record["category"] = "Not a catalog type"
+        assert not Validator(self._software_schema()).validate(record)
 
 
 class TestAddSingleEntryForceBehavior:

@@ -579,3 +579,53 @@ Duplicate-check the origin hostname, then GET the origin homepage. Do not invent
 - [ckan-sync.md](ckan-sync.md)
 - [catalog-types.md](catalog-types.md)
 - [software-taxonomy.md](software-taxonomy.md)
+
+## GIS Open Data Portal (`gisopendataportal`) {#gisopendataportal}
+
+Shared municipal catalog deployed at `tvrdosin.twinmap.ai` and `nove-mesto.twinmap.ai`.
+Both `/developer` pages identify the same `gis-open-data-portal/od-portal` source project
+and document `/api/open-api/features`, GraphQL at `/api/open-api`, and DCAT-AP-SK at
+`/api/opendata/set/catalog/lkod`. Confirm this combination and the repository attribution;
+a `twinmap.ai` hostname or a Next.js bundle alone is insufficient. The advertised GitLab
+repository redirected to sign-in on 2026-09-07, so do not assume a verified open-source license.
+
+Search: `"gis-open-data-portal/od-portal"`, `site:twinmap.ai "OpenAPI"`.
+First-party examples: [Tvrdošín developer guide](https://tvrdosin.twinmap.ai/developer),
+[Nové Mesto developer guide](https://nove-mesto.twinmap.ai/developer).
+
+## Esri UK Data Observatory (`esridataobservatory`) {#esridataobservatory}
+
+Managed local-data service, formerly InstantAtlas Data Observatory. Confirm vendor or
+operator attribution to the product, with supporting Data Explorer / Quick Ward Profile /
+Custom Area Reporter features. Technical corroboration includes
+`hub.instantatlas.com/data-catalog-explorer/` assets and `window.dataCatalogExplorer.launch`.
+WordPress, ArcGIS maps, or an embedded report alone do not establish this product.
+Confirmed Oxfordshire, Kingston, and Ealing deployments load `/wp-content/themes/ia-theme/`
+with `ia-map.js`, `ia-quickprofile.js`, and `ia-stat.js`, and explicitly credit Esri UK.
+Use this combination of theme assets and attribution as a stronger installation fingerprint.
+The [vendor product page](https://www.esriuk.com/en-gb/arcgis/products/instantatlas/products/data-observatory)
+identifies Suffolk; the [Hounslow case study](https://resource.esriuk.com/esri-resources/london-borough-of-hounslow/)
+confirms another independent deployment. See the [branding and theme documentation](https://help.instantatlas.com/category/data-observatory/).
+
+Search: `"Esri UK Data Observatory"`, `"InstantAtlas Data Observatory"`,
+`"hub.instantatlas.com/data-catalog-explorer"`.
+
+## RUDI (`rudi`) {#rudi}
+
+An independently deployable, distributed data-sharing platform. The
+[portal source](https://github.com/rudi-platform/rudi-portal) identifies the
+[Rennes deployment](https://rudi.rennesmetropole.fr/); the
+[out-of-the-box distribution](https://github.com/rudi-platform/rudi-out-of-the-box)
+provides Docker Compose installation. Match explicit RUDI branding and project provenance,
+not generic Angular bundles. Producer nodes and the central metadata portal have different
+interfaces. See [API documentation](https://doc.rudi.fr/api/api_exposees/).
+
+## SIMAI Open Data Portal (`simaiopendata`) {#simaiopendata}
+
+The [vendor product page](https://simai.ru/solution/gosudarstvennye-organizatsii/simai-portal-otkrytykh-dannykh/)
+markets a dedicated 1C-Bitrix open-data application and links its
+[current demo](https://opendata.sf2.simai.ru/). Strong fingerprints are explicit
+«SIMAI: Портал открытых данных» credit plus `simai.opendata` template/cache asset paths.
+Generic `/bitrix/` assets alone do not identify this product. The Bashkortostan-branded
+vendor demo is not a production government portal; the old `opendata.demo.simai.ru`
+host currently serves a hosting placeholder.

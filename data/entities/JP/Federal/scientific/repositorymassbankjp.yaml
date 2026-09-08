@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 0
+    macroregion:
+      id: '001'
+      name: World
+description: Shin-MassBank metabolomics mass spectrometry repository (MB-POST) for
+  depositing and sharing raw and processed experimental datasets.
+endpoints:
+- type: customapi
+  url: https://repository.massbank.jp/api/projects
+id: repositorymassbankjp
+langs:
+- id: EN
+  name: English
+- id: JA
+  name: Japanese
+link: https://repository.massbank.jp/
+name: MB-POST
+owner:
+  link: https://shin.massbank.jp/
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+  name: Shin-MassBank project
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- chemistry
+- mass spectrometry
+- metabolomics
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99998977

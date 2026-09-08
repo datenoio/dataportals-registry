@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: Western Europe
 description: A sustainable network of repositories of language resources documented
   with high-quality metadata, allowing for uniform search and access.
+endpoints:
+- type: metashare:catalog
+  url: https://metashare.dfki.de
 id: metasharedfkide
 langs:
 - id: DE

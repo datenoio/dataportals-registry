@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: National Laboratory of Energy and Geology Minerals4EU deegree WFS providing
+  public access to INSPIRE mineral resource features from SIORMINP.
+endpoints:
+- type: wfs200
+  url: https://lnegmineral4eu.lneg.pt/m4eu/services?service=WFS&request=GetCapabilities&version=2.0.0
+  version: 2.0.0
+id: lnegmineral4eulnegpt
+langs:
+- id: PT
+  name: Portuguese
+- id: EN
+  name: English
+link: https://lnegmineral4eu.lneg.pt/m4eu/
+name: Minerals4EU Portugal (LNEG)
+owner:
+  link: https://geoportal.lneg.pt/
+  location:
+    country: *id001
+    level: 20
+  name: National Laboratory of Energy and Geology (LNEG)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: deegree
+  name: deegree
+status: active
+tags:
+- GIS
+- Portugal
+- INSPIRE
+- deegree
+- geodata
+- minerals
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi99999321

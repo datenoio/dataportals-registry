@@ -1,0 +1,59 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-BRY
+      name: Brjanskaja oblast'
+description: Public investment map with municipality filters, greenfield and brownfield
+  sites, ownership and land-category filters, investment projects, mineral resources,
+  engineering and transport infrastructure.
+id: wwwinvest32rumap
+langs:
+- id: RU
+  name: Russian
+link: https://www.invest32.ru/map/
+name: Инвестиционная карта Брянской области
+owner:
+  link: https://www.invest32.ru/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Агентство инвестиционного развития Брянской области
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00041868

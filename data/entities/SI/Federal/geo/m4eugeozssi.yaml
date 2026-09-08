@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: SI
+      name: Slovenia
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Geological Survey of Slovenia Minerals4EU deegree WFS providing public
+  access to INSPIRE mineral resource features from the national mining register.
+endpoints:
+- type: wfs200
+  url: https://deegree.geo-zs.si/m4eu/services/m4eu_v2020.8_svn_geozs?request=GetCapabilities&service=wfs&version=2.0.0
+  version: 2.0.0
+id: m4eugeozssi
+langs:
+- id: SL
+  name: Slovenian
+- id: EN
+  name: English
+link: https://deegree.geo-zs.si/m4eu/
+name: Minerals4EU Slovenia (GeoZS)
+owner:
+  link: https://www.geo-zs.si
+  location:
+    country: *id001
+    level: 20
+  name: Geološki zavod Slovenije (GeoZS)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: deegree
+  name: deegree
+status: active
+tags:
+- GIS
+- Slovenia
+- INSPIRE
+- deegree
+- geodata
+- minerals
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00025668

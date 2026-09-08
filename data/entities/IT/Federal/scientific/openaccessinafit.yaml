@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: DSpace-CRIS open-access repository of the Italian National Institute
+  for Astrophysics (INAF), including publications and datasets.
+endpoints:
+- type: dspace
+  url: https://openaccess.inaf.it/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://openaccess.inaf.it/server/api/discover/search/objects
+  version: '7'
+id: openaccessinafit
+langs:
+- id: IT
+  name: Italian
+- id: EN
+  name: English
+link: https://openaccess.inaf.it
+name: INAF Open Access Repository
+owner:
+  link: https://www.inaf.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Istituto Nazionale di Astrofisica
+  type: Central government
+properties:
+  dataset_count_reported: 2
+  is_national: false
+software:
+  id: dspacecris
+  name: DSpace CRIS
+status: active
+tags:
+- scientific
+- research data
+- dspacecris
+- has_api
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039565

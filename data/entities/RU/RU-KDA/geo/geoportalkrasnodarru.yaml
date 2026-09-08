@@ -1,0 +1,56 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion: &id002
+      id: RU-KDA
+      name: Krasnodarskij kraj
+description: Public regional map catalog with investment, resort, Anapa, consumer-sector,
+  agriculture and natural-resource map categories. The investment map is also embedded
+  in the official InvestKuban portal.
+id: geoportalkrasnodarru
+langs:
+- id: RU
+  name: Russian
+link: https://geoportal.krasnodar.ru/
+name: Региональная геоинформационная система Краснодарского края
+owner:
+  link: https://admkrai.krasnodar.ru/
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Администрация Краснодарского края
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- Russia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00041878

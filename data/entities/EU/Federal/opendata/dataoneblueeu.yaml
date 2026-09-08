@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 10
+    macroregion:
+      id: EU
+      name: European Union
+description: CECsMarineDB data catalog for the EU-funded ONE-BLUE project, publishing
+  datasets about contaminants of emerging concern in marine ecosystems.
+endpoints:
+- type: dcatus11
+  url: https://data.one-blue.eu/data.json
+- type: dkan:search
+  url: https://data.one-blue.eu/api/1/search
+  version: '1'
+- type: dkan:metastore
+  url: https://data.one-blue.eu/api/1/metastore
+  version: '1'
+- type: dkan:datastore
+  url: https://data.one-blue.eu/api/1/datastore
+  version: '1'
+id: dataoneblueeu
+langs:
+- id: EN
+  name: English
+link: https://data.one-blue.eu/
+name: ONE-BLUE CECsMarineDB
+owner:
+  link: https://one-blue.eu/
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 10
+  name: ONE-BLUE consortium
+  type: International
+properties:
+  dataset_count_reported: 16
+  is_national: false
+software:
+  id: dkan
+  name: DKAN
+status: active
+tags:
+- marine data
+- contaminants
+- research data
+- open data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00039245

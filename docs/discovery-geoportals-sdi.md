@@ -106,7 +106,9 @@ Hexagon geoportal / browser GIS. Vendor: [hexagon.com/products/m-app-enterprise]
 
 Hub sites and Open Data sites on ArcGIS Online. Gallery: [hub.arcgis.com](https://hub.arcgis.com/). Hosts: `*.hub.arcgis.com`, `*opendata.arcgis.com`, plus custom domains.
 
-**Confirm:** `/api/search/v1` or `/api/feed/dcat-us/1.1.json`. Map-first hubs stay `catalog_type: Geoportal`; dataset-first hubs may be Open data portal ([discovery-opendata.md](discovery-opendata.md#arcgishub)).
+**Signals:** `/api/search/v1`; `/api/feed/dcat-us/1.1.json`; `hubcdn.arcgis.com/opendata-ui`; or ArcGIS Enterprise `/portal/apps/sites/` with `opendata-ui` / `hub-site` assets.
+
+**Confirm:** match a Hub/Sites signal and a public content or data gallery. Map-first hubs stay `catalog_type: Geoportal`; dataset-first hubs may be Open data portal ([discovery-opendata.md](discovery-opendata.md#arcgishub)).
 
 | Tool | Query |
 |------|-------|
@@ -150,7 +152,7 @@ Skip Experience Builder samples on developers.arcgis.com and login-only drafts.
 
 Esri Web AppViewer (predecessor of Experience Builder). Docs: [Web AppBuilder](https://doc.arcgis.com/en/web-appbuilder/). Distinct from Experience Builder (`experiencebuilder`), Instant Apps (`instantapps`), and ArcGIS Hub (`arcgishub`).
 
-**Signals:** `/apps/webappviewer/index.html?id=` on `*.maps.arcgis.com` or `/portal/apps/webappviewer/`.
+**Signals:** `/apps/webappviewer/index.html?id=` on `*.maps.arcgis.com` or `/portal/apps/webappviewer/`. Exported self-hosted builds load `env.js`, `simpleLoader.js`, `init.js`, and Jimu assets such as `jimu.js/css` or `#jimu-layout-manager`.
 
 **Confirm:** GET the viewer URL. One record per public app id. Do not also register the same host’s REST `/arcgis/rest/services` as a second Web AppBuilder catalog; keep `arcgisserver` if that directory is already the catalog.
 
@@ -159,6 +161,20 @@ Esri Web AppViewer (predecessor of Experience Builder). Docs: [Web AppBuilder](h
 | Google | `inurl:/apps/webappviewer/index.html` |
 | Google | `inurl:/portal/apps/webappviewer/` |
 | Censys | `web.endpoints.http.body: "/apps/webappviewer/"` |
+
+## ArcGIS Dashboards (`arcgisdashboards`) {#arcgisdashboards}
+
+Esri location-analytics dashboards with maps, indicators, charts, gauges, and lists. Product: [ArcGIS Dashboards](https://www.esri.com/en-us/arcgis/products/arcgis-dashboards/overview). Distinct from ArcGIS Hub (`arcgishub`), Experience Builder (`experiencebuilder`), Web AppBuilder (`webappbuilder`), and Instant Apps (`instantapps`).
+
+**Signals:** `/apps/dashboards/{item-id}` on `www.arcgis.com`, `*.maps.arcgis.com`, or an ArcGIS Enterprise portal; title `ArcGIS Dashboards`; dashboard JavaScript application shell.
+
+**Confirm:** GET the public dashboard and match the exact `/apps/dashboards/` route. One record per public dashboard item when it functions as the catalog interface. Keep an existing ArcGIS Server REST directory as a separate catalog only when it exposes a broader service catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/apps/dashboards/ (GIS OR map OR data)` |
+| Google | `site:maps.arcgis.com/apps/dashboards` |
+| Censys | `web.endpoints.http.body: "ArcGIS Dashboards"` |
 
 ## ArcGIS Instant Apps (`instantapps`) {#instantapps}
 
@@ -487,7 +503,7 @@ Skip vendor Designer samples, login-only Designer, and extra app GUIDs on a tena
 
 Hexagon / Intergraph Geospatial Portal (GeoMedia WebMap Publisher Portal). Typical paths: `/geoportal01/`, `/cdngiportal/`, `/msip/Full.aspx`, `/Online_Mapping/`.
 
-**Signals:** `Version:` and `Licensed to:` in the UI; `Intergraph.WebSolutions`; `$GP.` JavaScript; title may say Geospatial Portal or GeoMedia WebMap Publisher Portal.
+**Signals:** `Version:` and `Licensed to:` in the UI; `Intergraph.WebSolutions`; `$GP.` JavaScript; `Compositor.WebClient.ashx`, `CRSNames.WebClient.ashx`, or related `WebClient.ashx` handlers; title may say Geospatial Portal or GeoMedia WebMap Publisher Portal.
 
 **Confirm:** GET the portal URL and match at least two of those fingerprints. Skip staff-only intranet portals that require authentication for any map list.
 
@@ -691,3 +707,13 @@ WMS for NetCDF / multidimensional environmental data. Docs: [ncwms](https://read
 | Google | `"ncWMS" OR Godiva (WMS OR NetCDF) -site:github.com` |
 | Censys | `web.endpoints.http.body: "ncWMS"` |
 
+## ArcGIS StoryMaps (`arcgisstorymaps`) {#arcgisstorymaps}
+
+Esri's current geospatial storytelling product. Product: [ArcGIS StoryMaps](https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/overview).
+
+**Signals:** `storymaps.arcgis.com/stories/{item-id}` or an ArcGIS Enterprise equivalent; ArcGIS StoryMaps application shell; a public story item. Register only when the story is the primary interface for discovering or exploring a coherent data collection, not every narrative that embeds a map.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:storymaps.arcgis.com/stories (data OR atlas OR catalog)` |
+| Censys | `web.endpoints.http.body: "ArcGIS StoryMaps"` |

@@ -2388,6 +2388,7 @@ CATALOGS_URLMAP = {
     "custom": CUSTOM_URLMAP,
     "pycsw": PYCSW30_URLMAP,
     "opendap": OPENDAP_URLMAP,
+    "opendaphyrax": OPENDAP_URLMAP,
     "triplydb": TRIPLYDB_URLMAP,
     "ipt": IPT_URLMAP,
     "sdmxri": SDMXRI_URLMAP,

@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: SK
+      name: Slovakia
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id002
+      id: SK-NI
+      name: Nitriansky kraj
+description: Local DCAT-AP-SK catalog of the City of Levice, harvested by the national
+  open data portal, publishing municipal datasets separately from the POMOSAM eGOV
+  site.
+endpoints:
+- type: dcat:ttl
+  url: https://opendata.levice.sk/opendata/set/lkod
+id: opendatalevicesk
+langs:
+- id: SK
+  name: Slovak
+link: https://opendata.levice.sk/opendata/set/lkod
+name: Katalóg otvorených údajov mesta Levice
+owner:
+  link: https://www.levice.sk
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Mesto Levice
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+  transferable_location: true
+software:
+  id: lkod
+  name: LKOD
+status: active
+tags:
+- government
+- has_api
+- open data
+- Slovakia
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi99999456

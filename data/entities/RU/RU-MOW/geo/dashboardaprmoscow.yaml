@@ -1,0 +1,60 @@
+access_mode:
+- open
+catalog_type: Geoportal
+api: false
+api_status: uncertain
+content_types:
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion:
+      id: RU-MOW
+      name: Moskva
+description: Sputnik Web installation operated by the Moscow Agency for Industrial
+  Development. Anonymous scans from January and July 2024 show the Sputnik Web application
+  served at the root without authentication; the exact published content was not recorded.
+  The installation is no longer reachable — the DNS record has been withdrawn and
+  the former server address returns a gateway error, so the record is kept as inactive.
+id: dashboardaprmoscow
+langs:
+- id: RU
+  name: Russian
+link: https://dashboard.apr.moscow
+name: Sputnik Web — дашборд АПР Москвы
+owner:
+  link: https://apr.moscow
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    subregion:
+      id: RU-MOW
+      name: Moskva
+  name: ГБУ «Агентство промышленного развития города Москвы»
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: sputnikweb
+  name: Sputnik Web
+status: inactive
+tags:
+- geospatial
+- Russia
+- Moscow
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00041901

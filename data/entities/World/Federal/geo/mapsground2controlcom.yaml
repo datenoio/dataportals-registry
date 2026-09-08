@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion:
+      id: '001'
+      name: World
+description: Public multi-project QWC2 catalog operated by Ground2Control, exposing
+  environmental, planning, land and infrastructure map themes for multiple regions.
+endpoints:
+- type: qwc2:layers
+  url: https://maps.ground2control.com/themes.json
+id: mapsground2controlcom
+langs:
+- id: EN
+  name: English
+link: https://maps.ground2control.com/
+name: Ground2Control Maps
+owner:
+  link: https://www.ground2control.com/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: Ground2Control Ltd
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: qwc2
+  name: QGIS Web Client 2 (QWC2)
+status: active
+tags:
+- GIS
+- geospatial
+- QWC2
+- environmental planning
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00042291
