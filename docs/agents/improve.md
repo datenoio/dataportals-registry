@@ -2,7 +2,7 @@
 
 How to grow coverage and quality, based on **~3,200 Cursor sessions** (November 2025–30 August 2026) and the releases they produced. This is the *what to work on next* guide. Mechanics live in [discover.md](discover.md), [contribute.md](contribute.md), [scheduled.md](../scheduled.md), and [metadata-quality.md](../metadata-quality.md). Hunt-pattern table: [discovery.md](../discovery.md#hunt-patterns).
 
-Working tree after those sessions: **35,266** verified catalogs, **0** scheduled, **423** software IDs, **224** country folders. Published snapshot: v1.19.0 (29,816 catalogs, 0 scheduled, 366 software). YAML matches exports.
+Working tree after those sessions: **35,266** verified catalogs, **0** scheduled, **423** software IDs, **224** country folders. Published snapshot: v1.20.0 (35,266 catalogs, 0 scheduled, 423 software). YAML matches exports.
 
 ## What those sessions actually did
 
@@ -26,6 +26,7 @@ Volume came from a **small number of session types**, not from the 1,500 one-off
 | v1.17.0 | +2,608 | +15 | OpenAIRE Graph harvest (2,409 promoted; 664 dropped) + IMF NSDP + domain science |
 | v1.18.0 | +2,243 | +20 | Viewer products (e-mapa, Kortasjá, Swing, Hajk), DSpace IRs, MappingSupport ArcGIS, India/Nigeria depth |
 | v1.19.0 | +4,823 | +84 | Municipal GIS viewers (Experience Builder, Mapotip, GisMaster, GISPLAN, IntraMaps, SonicWeb, …), harvest-source dumps, university IRs, named directories |
+| v1.20.0 | +5,450 | +57 | Polish e-mapa.net, Czech/Slovak municipal GIS (GISPLAN, GisOnline, Mapotip, GEPRO, mOBEC), Italian GisMaster, Swiss GeoMapFish, Brazilian CTMGEO, Japanese WagMap, new software IDs (WebEWID, DaCHS, Argenmap, …) |
 
 **Lesson:** one bounded vendor list, harvest-source dump, or named directory outperforms dozens of “missing {country}” chats. After v1.18.0 the high-yield *prompts* shifted: `Which {country} indicators…`, `There are a lot of {country} universities…`, `Which data sources harvested by {national portal}…`, `Which catalogs from {list URL}…`. Country hunts still matter when the hole is *shape* (no scientific IRs with datasets, no native NSO table DB), not *count*.
 

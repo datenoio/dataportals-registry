@@ -20,7 +20,7 @@ Do not mix these three numbers. Exports lag YAML until `python scripts/builder.p
 
 | Layer | Date | Catalogs | Scheduled | Software | Countries |
 |-------|------|----------|-----------|----------|-----------|
-| **Published GitHub snapshot** | v1.19.0, 3 September 2026 | **29,816** | **0** | **366** | **222** |
+| **Published GitHub snapshot** | v1.20.0, 8 September 2026 | **35,266** | **0** | **423** | **224** |
 | **Working-tree exports** | last `build` in this tree (8 September 2026) | **35,266** (`catalogs.jsonl`) | **0** | **423** | **224** |
 | **Current source YAML** | 8 September 2026 | **35,266** (`data/entities/`) | **0** (`data/scheduled/`) | **423** | **224** |
 

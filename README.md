@@ -4,7 +4,7 @@ A global registry of data portals, catalogs, data repositories, and related data
 
 **Working tree (8 September 2026):** **35,266** verified catalogs · **423** software platforms · **224** countries and territories · **0** scheduled records.
 
-Last published snapshot: [v1.19.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.19.0), 3 September 2026 (**29,816** catalogs · **366** software · **0** scheduled).
+Last published snapshot: [v1.20.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.20.0), 8 September 2026 (**35,266** catalogs · **423** software · **0** scheduled).
 
 This is the catalog-metadata pillar of the [Common Data Index](https://dateno.io) / open search engine. It describes **catalogs** (open data portals, geoportals, scientific repositories, indicator sites, and similar infrastructure), not the datasets those catalogs hold.
 
@@ -45,7 +45,7 @@ More patterns: [docs/query-examples.md](docs/query-examples.md). Join keys and c
 
 ### Data exports
 
-Last published snapshot (**v1.19.0**, 2026-09-03: 29,816 catalogs, 366 software, 0 scheduled). Working-tree exports match source YAML. Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
+Last published snapshot (**v1.20.0**, 2026-09-08: 35,266 catalogs, 423 software, 0 scheduled). Exports match source YAML. Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
 
 | File | Contents |
 |------|----------|

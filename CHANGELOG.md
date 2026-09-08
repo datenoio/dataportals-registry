@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.20.0] - 2026-09-08
+
+**GitHub Release**: [v1.20.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.20.0) - Published September 8, 2026
+
 ### Added
 
 - **5,450 net new catalog entries** since v1.19.0 (5,583 added, 133 removed); registry source now **35,266** entities (**0** scheduled) across **224** country/territory folders (added Curaçao `CW` and Wallis and Futuna `WF`).
