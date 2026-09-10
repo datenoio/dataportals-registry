@@ -2,7 +2,7 @@
 
 A global registry of data portals, catalogs, data repositories, and related data infrastructure.
 
-**Working tree (8 September 2026):** **35,266** verified catalogs · **423** software platforms · **224** countries and territories · **0** scheduled records.
+**Working tree (10 September 2026):** **36,873** verified catalogs · **470** software platforms · **224** countries and territories · **0** scheduled YAML records.
 
 Last published snapshot: [v1.20.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.20.0), 8 September 2026 (**35,266** catalogs · **423** software · **0** scheduled).
 
@@ -45,14 +45,14 @@ More patterns: [docs/query-examples.md](docs/query-examples.md). Join keys and c
 
 ### Data exports
 
-Last published snapshot (**v1.20.0**, 2026-09-08: 35,266 catalogs, 423 software, 0 scheduled). Exports match source YAML. Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
+Last published snapshot (**v1.20.0**, 2026-09-08: 35,266 catalogs, 423 software, 0 scheduled). Working-tree exports below are from the last `build` and lag source YAML until the next `python scripts/builder.py build`. Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
 
 | File | Contents |
 |------|----------|
-| `data/datasets/catalogs.jsonl` (+ `.zst`) | **35,266** verified catalog records |
-| `data/datasets/software.jsonl` (+ `.zst`) | **423** software / platform definitions |
-| `data/datasets/scheduled.jsonl` (+ `.zst`) | **0** scheduled sources |
-| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**35,266**) |
+| `data/datasets/catalogs.jsonl.zst` | **36,776** verified catalog records |
+| `data/datasets/software.jsonl` (+ `.zst`) | **463** software / platform definitions |
+| `data/datasets/scheduled.jsonl` (+ `.zst`) | **23** scheduled sources (**27** YAML files) |
+| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**36,799**) |
 | `data/datasets/full.parquet`, `data/datasets/datasets.duckdb` | Analytics-friendly copies of `full.jsonl` |
 
 Rebuild from YAML (never hand-edit `data/datasets/`):

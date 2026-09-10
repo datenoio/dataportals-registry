@@ -28,6 +28,8 @@ Also try `application/ld+json`. Follow `dcat:dataset` (and nested `dcat:catalog`
 
 HTML `fdp-client` alone is not a harvest. Swagger `/swagger-ui` documents the API — use it to find catalog/dataset paths. Register/harvest the FDP **root**, not a single dataset IRI as the catalog.
 
+**Keep:** FAIR Data Point **Catalog** and child **Dataset** IRIs. **Drop:** `dcat:Distribution` as a separate dataset (keep URLs as files on the parent) and the public index as if it were every child FDP.
+
 Docs: [docs.fairdatapoint.org](https://docs.fairdatapoint.org). Public index: [home.fairdatapoint.org](https://home.fairdatapoint.org) (do not re-harvest the index as if it were every child FDP).
 
 ## Aristotle MDR (`aristotlemdr`) {#aristotlemdr}
@@ -44,6 +46,8 @@ This is a **metadata registry** (object classes, data elements, value domains). 
 
 Skip login-only stewardship UIs.
 
+**Keep:** Aristotle types that represent a dataset/distribution when the user wants datasets; otherwise page `/api/v4/metadata/` for metadata objects. **Drop:** staff-only workflow items and login-only stewardship UIs.
+
 ## Fusion Registry (`fusionregistry`) {#fusionregistry}
 
 SDMX structural metadata.
@@ -55,13 +59,31 @@ GET https://host/ws/rest
 
 List **dataflows** as the harvest grain for “datasets”. Harvest DSDs/codelists only when the job is a structure crawl. Do not confuse this with PxWeb/.Stat **observation** APIs ([harvest-indicators.md](harvest-indicators.md)).
 
+**Keep:** Fusion Registry **dataflows**. **Drop:** codelists and DSDs unless harvesting structure.
+
 ## Metadata Browser (`mwmb`) {#mwmb}
 
 Public MetadataWorks UI. There may be no stable open list API. Harvest the public dataset/standard listing if a JSON/search endpoint exists in `endpoints[]`. Skip terminology-only pages when the user asked for datasets. One deployment = one catalog harvest scope.
 
+**Keep:** public dataset/standard listing if a JSON/search endpoint exists in `endpoints[]`.
+**Drop:** terminology-only pages when the user asked for datasets.
+
+```text
+GET https://host/api/
+```
+
+
+## DataHub (`datahubproject`) {#datahubproject}
+
+```text
+GET https://host/api/graphql
+```
+
+**Keep:** **dataset / data-product metadata entities**. **Drop:** users, glossary terms, and lineage edges as datasets. GraphQL is often authenticated (`401`) — stop rather than scraping the SPA. One harvest scope per public DataHub catalog. Distinct from datahub.io (CKAN).
+
 ## DCAT without an FDP
 
-Many open-data sites expose `/catalog.xml`, `/data.json`, or DCAT-AP. That harvest belongs with [harvest-opendata.md](harvest-opendata.md) (`dcat:Dataset` only). Protocol details: [harvest-protocols.md](harvest-protocols.md#dcat). Use this page when `software.id` is `fairdatapoint`, `aristotlemdr`, `fusionregistry`, or `mwmb`.
+Many open-data sites expose `/catalog.xml`, `/data.json`, or DCAT-AP. That harvest belongs with [harvest-opendata.md](harvest-opendata.md) (`dcat:Dataset` only). Protocol details: [harvest-protocols.md](harvest-protocols.md#dcat). Use this page when `software.id` is `fairdatapoint`, `aristotlemdr`, `fusionregistry`, `mwmb`, or `datahubproject`.
 
 ## Related
 

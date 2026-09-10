@@ -30,7 +30,7 @@ Do **not** expect:
 |--------|------|
 | DuckDB (preferred in-repo) | `data/datasets/datasets.duckdb` table `catalogs` |
 | Parquet | `data/datasets/full.parquet` |
-| JSONL entities | `data/datasets/catalogs.jsonl` (+ `.zst`) |
+| JSONL entities | `data/datasets/catalogs.jsonl.zst` |
 | JSONL + scheduled | `data/datasets/full.jsonl` |
 | Software definitions | `data/datasets/software.jsonl` and DuckDB table `software` |
 | YAML source | `data/entities/**/*.yaml` — **authoring only** |

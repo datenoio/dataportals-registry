@@ -19,7 +19,7 @@ The registry records **catalogs** (portals, geoportals, repositories, and simila
 | [Search engines and internet maps](discovery-search-tools.md) | Google, Censys, Shodan, FOFA, URLScan, crt.sh, and similar tools |
 | [Agents, Cursor, ChatGPT](discovery-agent-tools.md) | Configure MCP, APIs, Custom GPTs, and LLM clients to use those tools |
 | [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye, Piveau, Our Open Data, DataPress, ResourceContracts, RDF Online Repository, Guangxi, ODWeb, OpenGov |
-| [Geoportals](discovery-geoportals.md) | Overview; SDI stacks: [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md); viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md) (GISApp, SmartMap, ISY Map, Avinet, MAP+, EnviMAP, PISO, GDi Visios, MapGuide, SeaSketch, XY Maps, Hajk, Origo, myCarta, KortInfo, …) |
+| [Geoportals](discovery-geoportals.md) | Overview; SDI stacks: [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md); viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md) (GISApp, SmartMap, ISY Map, Avinet, MAP+, EnviMAP, PISO, GDi Visios, MapGuide, SeaSketch, XY Maps, Hajk, Origo, myCarta, AddSpatial, KortInfo, …) |
 | [Scientific repositories](discovery-scientific.md) | Institutional IRs and CRIS (DSpace, Hyrax, Figshare, Pure, Converis, Omega-PSIR, Archipelago, Redivis, DABAR, OpenScience.si, …); domain repos: [discovery-scientific-domain.md](discovery-scientific-domain.md) |
 | [Metadata catalogs](discovery-metadata.md) | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
 | [Indicators and microdata](discovery-indicators.md) | PxWeb, PxStat, DGBAS Web, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, StatPlanet |
@@ -49,7 +49,7 @@ Also search `data/scheduled/` if that directory is not empty. Do not walk every 
 - Local government: city/region sites, `opendata.` subdomains, ArcGIS Hub sites
 - Research: institutional repositories, Dataverse, DSpace, GBIF IPT, re3data-listed repos
 
-Search with the local language (`datos abiertos`, `données ouvertes`, `offene daten`, `dados abertos`, `开放数据`) plus the country or city name. Restrict with `site:.gov`, `site:.gob.*`, or the national government TLD. Operators, Censys/Shodan queries, and other indexes: [discovery-search-tools.md](discovery-search-tools.md). Per-platform queries: the guides above.
+Search with the local language (`datos abiertos`, `données ouvertes`, `offene daten`, `dados abertos`, `开放数据`) plus the country or city name. Restrict with `site:.gov`, `site:.gob.*`, or the national government TLD. Operators, Censys/Shodan/FOFA queries, and other indexes: [discovery-search-tools.md](discovery-search-tools.md) (FOFA is the Censys alternative when Platform search is unavailable). Per-platform queries: the guides above.
 
 ## Existing lists (start here) {#existing-lists-start-here}
 
@@ -88,6 +88,7 @@ Many platforms publish installation galleries. Cross-check each URL against the 
 | [Hajk users](https://hajkmap.se/valkommen-till-hajk/exempelsamling/) | Swedish Hajk webGIS |
 | [Origo / Origosamverkan](https://origomap.se/) | Swedish Origo municipal webbkartor |
 | [Aveki myCarta](https://www.aveki.se/Produkter/Geografisk_informationsplattform/WebbApp.aspx) | Swedish myCarta WebMap |
+| [Icebound AddSpatial](https://www.icebound.com/vara-produkter/addspatial-gis/) | Swedish AddSpatial municipal webbkartor |
 | [ResourceContracts](https://resourcecontracts.org) | Oil/gas/mining contract repositories |
 | [RDF Online Repository](https://revenuedevelopment.org/online-repository/) | Mining and petroleum license-transparency portals |
 | [FAOSTAT / FENIX](https://www.fao.org/faostat/) | FAO indicator catalogs (AMIS, DAD-IS, WIEWS, GIFT) |
@@ -112,26 +113,27 @@ Many platforms publish installation galleries. Cross-check each URL against the 
 | [FGDC Service Status Checker](https://statuschecker.fgdc.gov/) | US federal/state geospatial service hosts |
 | [Geoseer](https://www.geoseer.net/) | Indexed OGC services with layer counts |
 | [GeoNode gallery](https://geonode.org/) | GeoNode installations (gallery leftovers still yield a few live hosts) |
+| [ArcGIS Instant Apps](https://www.esri.com/en-us/arcgis/products/arcgis-instant-apps/overview) Filter Gallery / org galleries | Public `/apps/instant/{template}/?appid=` apps (one record per public `appid`, not the gallery chrome) |
 
 Vendor “customers” and “community” pages are useful but noisy: skip demos, marketing sites, and expired domains.
 
 ## Hunt patterns {#hunt-patterns}
 
-Recent discovery sessions (through 30 August 2026) produced catalogs when they followed a **named list or a missing type**, not an unscoped web search. Copy these prompts; details live on the type pages.
+Recent discovery sessions (through 8 September 2026, v1.20.0) produced catalogs when they followed a **named list, a software tenant pattern, or a missing type**, not an unscoped web search. Copy these prompts; details live on the type pages.
 
 | Hunt | Prompt that works | Start from | Accept | Reject |
 |------|-------------------|------------|--------|--------|
-| Software instance | `Which {software} catalogs are missing?` | Vendor gallery / hostname pattern | Live public UI matching that `software.id` | Demos, marketplace tenants, a second copy of the same hub |
+| Software instance | `Which {software} catalogs are missing?` | Vendor gallery / hostname pattern / crt.sh for SaaS | Live public UI matching that `software.id` | Demos, marketplace tenants, a second copy of the same hub; repeating a hunt from the last two weeks |
 | National harvest sources | `Which data sources harvested by {national portal} are missing?` | Harvest / organisations / catalogues API on the national site | Independent origin catalog (CKAN, GeoNetwork, Hub, agency `/opendata` list) | XML dataset feeds, price files, slices of the same national catalog, IR dumps already registered |
 | Country university IRs | `There are a lot of {country} universities… Which scientific repositories are missing?` | [OpenDOAR](https://v2.sherpa.ac.uk/opendoar/), [ROAR](http://roar.eprints.org), re3data country, OpenAIRE Graph | Public IR that **lists datasets** (DSpace Dataset type, Dataverse, research-data community) | Publication-only IRs, theses-only with no Dataset type, login walls, microstates with no universities |
 | Country indicators | `Which {country} indicators catalogs are missing?` | NSO site, health ministry, SDG, central bank | Queryable table DB or indicator explorer | PDF publications, CMS home, IMF NSDP already registered, agency PxWeb already on the national StatBank |
-| Named directory | `Which catalogs from {list URL} are missing?` | One bounded URL (ODIS, CoreTrustSeal, STAC Index, WIS2 GDC, GeoNode gallery) | Live catalog UI / harvestable API | Preservation systems with no dataset listing, org homepages, hijacked hosts |
-| Subnational coverage | `Which {country} cities and counties have catalogs that are missing?` | National harvest list + local-language open-data terms | Local owner in `{CC}/{ISO-3166-2}/` | Another US county ArcGIS Server unless a named list remains unmatched |
-| Custom-software review | `Review custom {type} catalogs for new software definitions` | Cluster remaining `software.id: custom` by hostname/path | New `software.id` only when ≥3 independent installs share a product | One-off `.gov` roots; keep those `custom` |
+| Named directory | `Which catalogs from {list URL} are missing?` | One bounded URL (ODIS, CoreTrustSeal, STAC Index, WIS2 GDC, GeoNode gallery, Instant Apps Filter Gallery) | Live catalog UI / harvestable API | Preservation systems with no dataset listing, org homepages, hijacked hosts |
+| Subnational coverage | `Which {country} cities and counties have geoportals that are missing?` | Municipal GIS **product tenant list** for that country | Local owner in `{CC}/{ISO-3166-2}/` | Google every city; REST of an existing Hub; “all 400 counties”; another PL/CZ/SK/IT/JP commune sweep after v1.20.0 |
+| Custom-software review | `Review custom {type} catalogs for new software definitions` | Cluster remaining `software.id: custom` by hostname/path | New `software.id` when ≥3 independent installs **or** a first-party product page names it | Unnamed one-off `.gov` roots; Leaflet-only guesses; keep those `custom` |
 
-Do more of: vendor lists, harvest-source dumps, country *shape* (missing type), named directories. Do less of: Google for “missing catalogs in the world”, university IR hunts for Monaco-class stubs, guessed HCI/Virtual LMI hostnames.
+Do more of: vendor tenant lists, harvest-source dumps, country *shape* (missing type), named directories, crt.sh for SaaS hostname patterns. Do less of: Google for “missing catalogs in the world”, university IR hunts for Monaco-class stubs, guessed HCI/Virtual LMI hostnames, repeating a software hunt from this week, city-by-city geoportal sweeps in countries whose municipal GIS product is already tenant-complete.
 
-Agent recipes: [agents/discover.md](agents/discover.md#hunt-types). Priority queue: [agents/improve.md](agents/improve.md).
+A hunt that finds **0 missing** catalogs is complete — report that and stop. Agent recipes: [agents/discover.md](agents/discover.md#hunt-types). Priority queue: [agents/improve.md](agents/improve.md).
 
 ## Identify the software {#identify-the-software}
 
@@ -206,7 +208,10 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | NetGIS Runtime | `/NetGISRuntime/basis/index.jsp` | Title `NetGIS - © WSP Danmark`; not Turkish `netgisserver` |
 | ArcGIS Experience Builder | `experience.arcgis.com/experience/`, `jimu-core/init.js`, Länsstyrelsen `ext-webbgis` | Not dmCity tenants; not `/apps/webappviewer/`; not `/apps/instant/` |
 | ArcGIS Web AppBuilder | `/apps/webappviewer/index.html?id=` | Not Experience Builder; not Instant Apps |
-| ArcGIS Instant Apps | `/apps/instant/{template}/index.html?appid=` | Not Experience Builder; not Web AppBuilder |
+| ArcGIS Instant Apps | `/apps/instant/{template}/index.html?appid=` | Not Experience Builder; not Web AppBuilder; not Dashboards |
+| ArcGIS Dashboards | `/apps/dashboards/{item-id}` | Not Instant Apps; not Hub; not arbitrary dashboards outside `/apps/dashboards/` |
+| Argenmap | `src/js/app.js` plus IGN Argenmap modules | Not generic Leaflet |
+| WebEWID | title `WebEWID` / Portal Mapowy | Not authenticated role portals; not EWMAPA `geoportal2.pl` |
 | Pozi | `{council}.pozi.com` | Title Pozi Web Map; not IntraMaps or Exponare |
 | JMap | `/JMapWeb/` or JMap NG `/services/ng/` | Not hostnames that merely contain `jmap` |
 | GIS Cloud | `{city}.giscloud.com` | Not MuniSight login |
@@ -386,6 +391,9 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - SOFTPRO: `{city}.cadastre.com.ua` or `/js/locale/ua.js` Ukrainian MBK
 - MxSIG: `/mdm6/` or `/mxsig2/` amplify.js Mapa Digital
 - ArcGIS Instant Apps: `/apps/instant/{template}/index.html?appid=`
+- ArcGIS Dashboards: `/apps/dashboards/{item-id}`
+- Argenmap: `src/js/app.js` plus IGN template (not Leaflet alone)
+- WebEWID: title `WebEWID` / Portal Mapowy on `*.webewid.pl`
 - GeneGIS PAGIS: `{comune}.servizigis.it`
 - GisMaster: `geoportale.sportellounicodigitale.it/GisMaster/GisMaster/VisualDesc.aspx?IdCliente=`
 - HyG Mapgis: `/mapgis/mapa.jsp?aplicacion=` or `/mapgis9/mapa.jsp?aplicacion=` (HyG Consultores footer; not `/igs/rest/`)
@@ -493,6 +501,8 @@ The same hostname often runs several GIS products. Register **one YAML per publi
 | GeneGIS PAGIS city SIT + `{comune}.servizigis.it` | The public municipal tenant | Vendor hub, cloud alias of the same comune, `IndexPC.aspx` as a second copy of `Index.aspx` |
 | KortInfo `Site=` + SpatialMap webkort | The public viewer the kommune documents | Both IDs unless they are distinct public apps |
 | Sentinel Hub STAC + EO Browser | `sentinelhub` catalog API | `stacserver` or Browser as a second catalog |
+| ArcGIS Hub + Instant Apps / Experience Builder / Dashboards / StoryMaps / Server on the same org | The public catalog UI the owner documents (usually Hub or the named viewer) | A second Esri product for the same layer set unless it is a distinct public catalog |
+| Instant Apps Filter Gallery + each gallery item | One Instant App per public `appid` that is itself a catalog | The Filter Gallery chrome as a second catalog; every widget/template |
 | Finnish `/IMS/` vs Sitowise Louhi | `trimblelocus` if `/IMS/`; else `louhi` | Both IDs on the same karttapalvelu |
 
 Duplicate-check `link` **and** the service origin before `add-single`. Harvest follows the same grain: [harvest-geoportals.md](harvest-geoportals.md#one-catalog-per-host).
@@ -515,7 +525,7 @@ Duplicate-check `link` **and** the service origin before `add-single`. Harvest f
 
 ## Related
 
-- [discovery-search-tools.md](discovery-search-tools.md) — Google, Censys, Shodan, FOFA, URLScan, crt.sh
+- [discovery-search-tools.md](discovery-search-tools.md) — Google, Censys, Shodan, FOFA (Censys alternative), URLScan, crt.sh
 - [discovery-agent-tools.md](discovery-agent-tools.md) — Cursor, ChatGPT, Claude, MCP, and API setup
 - [discovery-opendata.md](discovery-opendata.md) / [discovery-geoportals.md](discovery-geoportals.md) ([SDI](discovery-geoportals-sdi.md), [viewers](discovery-geoportals-viewers.md)) / [discovery-scientific.md](discovery-scientific.md) ([domain](discovery-scientific-domain.md)) / [discovery-metadata.md](discovery-metadata.md) / [discovery-indicators.md](discovery-indicators.md) / [discovery-other.md](discovery-other.md)
 - [software-index.md](software-index.md) — every `software.id` → recipe

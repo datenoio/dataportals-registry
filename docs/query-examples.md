@@ -17,6 +17,8 @@ con = duckdb.connect()
 con.execute("SELECT count(*) FROM 'data/datasets/full.parquet'").fetchone()
 ```
 
+If `datasets.duckdb` is locked by another session, use the Parquet path. It is read-only and enough for hostname duplicate checks.
+
 ## Counts by catalog type
 
 ```sql
@@ -122,13 +124,14 @@ WHERE catalog_type = 'Scientific data repository'
   AND software.id IN (
     'dspace', 'dspacecris', 'invenio', 'inveniordm', 'eprints',
     'hyrax', 'pure', 'esploro', 'opus', 'elsevierdigitalcommons',
-    'figshare', 'converis', 'omegapsir', 'archipelago'
+    'figshare', 'converis', 'omegapsir', 'archipelago',
+    'dlcm', 'easydb', 'haplo', 'djehuty', 'islandora', 'samvera'
   )
 ORDER BY software_id, name
 LIMIT 50;
 ```
 
-Dataset-native scientific platforms (`labkey`, `synapse`, `xnat`, `omero`, `kadi4mat`, `edal`, `nomad`, `redivis`) and domain stacks (`intermine`, `gringlobal`, `plutof`, `jgi`, `cbioportal`, `esasciencearchive`) use the same `catalog_type` filter with those `software.id` values. Recipes: [software-index.md](software-index.md).
+Dataset-native scientific platforms (`labkey`, `synapse`, `xnat`, `omero`, `kadi4mat`, `edal`, `nomad`, `redivis`, `frostserver`) and domain stacks (`intermine`, `gringlobal`, `plutof`, `jgi`, `cbioportal`, `esasciencearchive`, `geonature`, `specify`, `dachs`) use the same `catalog_type` filter with those `software.id` values. Recipes: [software-index.md](software-index.md).
 
 API recipes and dataset-vs-publication filters: [harvest.md](harvest.md).
 
@@ -165,7 +168,7 @@ Canonical values: [vocabularies.md](vocabularies.md).
 
 ## Scheduled and inactive
 
-`data/datasets/catalogs.jsonl` is verified entities. Scheduled rows are in `full.jsonl` / `full.parquet` / `datasets.duckdb` table `catalogs` only after a build that includes scheduled — prefer `full.parquet` if counts look short.
+`data/datasets/catalogs.jsonl.zst` is verified entities. Scheduled rows are in `full.jsonl` / `full.parquet` / `datasets.duckdb` table `catalogs` only after a build that includes scheduled — prefer `full.parquet` if counts look short.
 
 ```sql
 SELECT id, name, link, status
@@ -214,12 +217,14 @@ LIMIT 20;
 
 ```python
 import json
+import zstandard as zstd
 
-with open("data/datasets/catalogs.jsonl", encoding="utf-8") as fh:
-    for line in fh:
-        rec = json.loads(line)
-        if rec.get("software", {}).get("id") == "ckan":
-            print(rec["id"], rec["link"])
+with open("data/datasets/catalogs.jsonl.zst", "rb") as fh:
+    with zstd.ZstdDecompressor().stream_reader(fh) as reader:
+        for line in reader.read().decode("utf-8").splitlines():
+            rec = json.loads(line)
+            if rec.get("software", {}).get("id") == "ckan":
+                print(rec["id"], rec["link"])
 ```
 
 ## Polars / Parquet

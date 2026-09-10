@@ -16,18 +16,18 @@ Coding agents: [agents/harvest.md](agents/harvest.md). Production harvesting for
 
 | Guide | Use when |
 |-------|----------|
-| [Scientific repositories](harvest-scientific.md) | DSpace, Invenio, EPrints, Pure, Esploro, Converis, Omega-PSIR, Hyrax, Archipelago, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, and other IRs that mix **publications, theses, software, and datasets** |
-| [Domain scientific repositories](harvest-scientific-domain.md) | IPT, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal |
-| [Open data portals](harvest-opendata.md) | CKAN, OpenDataSoft, Socrata, ResourceContracts, RDF Online Repository, Guangxi, ODWeb, OpenGov — packages vs resources vs contracts vs reports |
-| [Geoportals](harvest-geoportals.md) | GeoNetwork CSW, GeoNode, ArcGIS, STAC, OGC API, G3W-SUITE, CubeWerx, M.App Enterprise, mviewer, Isogeo, Geocortex, QGIS Server — layers vs services vs tiles |
+| [Scientific repositories](harvest-scientific.md) | DSpace, Invenio, EPrints, Pure, Esploro, DLCM, easydb, Haplo, Omega-PSIR, Hyrax, Archipelago, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, and other IRs that mix **publications, theses, software, and datasets** |
+| [Domain scientific repositories](harvest-scientific-domain.md) | IPT, THREDDS, ERDDAP, FROST-Server, GeoNature, Specify, DaCHS, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal |
+| [Open data portals](harvest-opendata.md) | CKAN, OpenDataSoft, Socrata, RUDI, GIS Open Data Portal, ResourceContracts, RDF Online Repository, Guangxi, ODWeb, OpenGov — packages vs resources vs contracts vs reports |
+| [Geoportals](harvest-geoportals.md) | GeoNetwork CSW, GeoNode, ArcGIS, STAC, OGC API, OneGeo Suite, PRODIGE, G3W-SUITE, CubeWerx, M.App Enterprise, mviewer, Isogeo, Geocortex, QGIS Server — layers vs services vs tiles |
 | [Indicators and microdata](harvest-indicators.md) | PxWeb / PxStat tables, DGBAS Web tables, SDMX dataflows, OpenSDG / Goal Tracker, IMF NSDP, NADA studies, DHIS2, TabNet, FENIX, SparkMap, eDatos, Cancer-Rates.info, HCI, Virtual LMI, IPUMS |
-| [Metadata catalogs](harvest-metadata.md) | FAIR Data Point DCAT, Aristotle MDR, Fusion Registry structure |
-| [Search, ML, API, marketplaces](harvest-other.md) | Aggregators, OpenAIRE, OpenML, API directories, marketplaces, `custom` |
+| [Metadata catalogs](harvest-metadata.md) | FAIR Data Point DCAT, Aristotle MDR, Fusion Registry, Metadata Browser structure |
+| [Search, ML, API, marketplaces](harvest-other.md) | Aggregators, OpenAIRE, OpenML, Hugging Face, CodaLab, API directories, marketplaces, `custom` |
 | [Protocols](harvest-protocols.md) | OAI-PMH, CSW, DCAT, STAC, SDMX, OGC, ArcGIS REST — grain that is shared across products |
 | [Incremental harvests](harvest-incremental.md) | `from=`, `metadata_modified`, STAC `datetime`, checkpoints |
 | [Earth observation](harvest-earthdata.md) | THREDDS, ERDDAP, STAC collections, Open Data Cube, Copernicus, openEO, Sentinel Hub, ESGF, ESA Science Archive |
 | [Biodiversity and genomics](harvest-biodiversity.md) | IPT, Symbiota, ALA, GBIF datasets, Ensembl species, Breedbase, Tripal, VEuPathDB, PlutoF, InterMine, JGI, cBioPortal |
-| [Map viewers](harvest-viewers.md) | QWC2, Masterportal, Lizmap, mviewer, Trimble Locus / Louhi / Landfolio, Spatial Suite, Spectrum Spatial Analyst, Hajk, myCarta, KortInfo, IntraMaps, LocalMaps, GEUSMAP, GISApp, GeneGIS PAGIS, GisMaster, HyG Mapgis, iObčina, iShare, Cadcorp — layers not tiles |
+| [Map viewers](harvest-viewers.md) | QWC2, Masterportal, Lizmap, mviewer, WebEWID, GISPLAN, Wagmap, Trimble Locus / Louhi / Landfolio, Spatial Suite, Spectrum Spatial Analyst, Hajk, myCarta, KortInfo, IntraMaps, LocalMaps, GEUSMAP, GISApp, GeneGIS PAGIS, GisMaster, HyG Mapgis, iObčina, iShare, Cadcorp — layers not tiles |
 | [Dataset identifiers](harvest-identifiers.md) | Native id + catalog `uid`; DOI/handle; do not mint `cdi########` for datasets |
 | [Harvest output](harvest-output.md) | JSON record shape, skip counts, empty-harvest checklist |
 
@@ -55,17 +55,19 @@ WHERE catalog_type = 'Scientific data repository'
     'dspace', 'dspacecris', 'invenio', 'inveniordm', 'eprints',
     'hyrax', 'pure', 'esploro', 'opus', 'elsevierdigitalcommons',
     'weko3', 'dabar', 'opensciencesi', 'phaidra', 'figshare', 'haplo', 'worktribe', 'mycore',
-    'omegapsir', 'converis', 'ipt', 'thredds', 'erddap', 'radar',
+    'omegapsir', 'converis', 'dlcm', 'easydb', 'djehuty', 'islandora',
+    'ipt', 'thredds', 'erddap', 'radar', 'frostserver', 'geonature',
     'yoda', 'redivis', 'symbiota', 'breedbase', 'tripal', 'veupathdb',
     'massbank', 'iochembd', 'esgf', 'labkey', 'synapse', 'xnat',
     'omero', 'kadi4mat', 'edal', 'nomad', 'intermine', 'gringlobal',
     'plutof', 'jgi', 'cbioportal', 'esasciencearchive', 'archipelago',
-    'talkbank', 'clld'
+    'talkbank', 'clld', 'dachs', 'specify', 'divaportal', 'huggingface',
+    'databus', 'dialnetcris'
   )
 LIMIT 50;
 ```
 
-Filter `software.id` only with values that exist in `data/software/` (currently **423** definitions). Do not invent an id that is missing from `software_ids.yaml`.
+Filter `software.id` only with values that exist in `data/software/` (currently **467** definitions). Do not invent an id that is missing from `software_ids.yaml`.
 
 For open data or geo, change `catalog_type` and the `software.id` list (`ckan`, `geonetwork`, `stacserver`, …). Nested `software` / `endpoints` are `STRUCT` / `STRUCT[]` in DuckDB ([ai-consumers.md](ai-consumers.md)).
 

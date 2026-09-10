@@ -28,7 +28,7 @@ Each catalog is one YAML document validated against `data/schemes/catalog.json` 
 | `tags` | Keywords (`government`, `has_api`, …) |
 | `topics` | `{type, id, name}` — EU data themes or ISO 19115 |
 | `api` / `api_status` | Set together when an API exists |
-| `owner.link` | Owning organization URL |
+| `owner.link` | Owning organization URL. Quality rule `MISSING_CONTACT_INFO` flags this when the catalog is `active` and `access_mode` includes `restricted` — there is no separate catalog `contact` field |
 | `content_types` | e.g. `dataset`, `map_layer` |
 | `rights` | `license_id`, `license_name`, `license_url`, `rights_type`, `tos_url`, `privacy_policy_url` |
 

@@ -210,7 +210,7 @@ Optional JSON-LD export:
 python scripts/builder.py build --jsonld
 ```
 
-This writes `data/datasets/catalogs.jsonld` alongside the usual JSONL exports.
+This writes `data/datasets/catalogs.jsonld` alongside the usual compressed JSONL exports.
 
 For recommended (optional) fields and quality rules, see [docs/metadata-quality.md](docs/metadata-quality.md).
 

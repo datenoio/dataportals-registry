@@ -35,17 +35,17 @@ python scripts/apidetect.py detect-cattype "Open data portal" --dryrun
 
 ## Software IDs with URL maps
 
-Maps exist for the IDs in `CATALOGS_URLMAP` (built-in plus draft merge). High-traffic examples:
+Maps exist for the IDs in `CATALOGS_URLMAP` (built-in plus draft merge from `apidetect_urlmaps_draft.py`). The [software index](software-index.md) `apidetect` column is `yes` when a map exists. High-traffic examples:
 
 | Area | `software.id` |
 |------|----------------|
-| Open data | `ckan`, `dkan`, `opendatasoft`, `socrata`, `udata`, `magda`, `jkan`, `junar`, `entryscape`, `drupal`, `wordpress`, `triplydb`, `piveau`, `idra`, `resourcecontracts` |
-| Geo | `geonetwork`, `geonode`, `geoserver`, `arcgishub`, `arcgisserver`, `pycsw`, `pygeoapi`, `mapproxy`, `qwc2`, `mapstore`, `lizmap`, `mapbender`, `geomapfish`, `getsdiportal`, `terria`, `gvsigonline`, `erdasapollo`, `wis20box`, `koordinates`, `nextgisweb`, `tianditu`, `openeo`, `isogeo`, `mapgisigserver` |
-| Scientific | `dataverse`, `dspace`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `opus`, `esploro`, `pure`, `weko3`, `elsevierdigitalcommons`, `opendap`, `opendaphyrax`, `thredds`, `erddap`, `ipt`, `galaxy`, `ala`, `figshare`, `redivis`, `radar`, `breedbase`, `tripal`, `veupathdb`, `massbank`, `iochembd`, `esgf`, `omekas`, `contentdm`, `symbiota` |
-| Indicators / microdata | `pxweb`, `pxstat`, `opensdg`, `statsuite`, `istatdatabrowser`, `sdmxri`, `nada`, `nesstar`, `redatam`, `colectica`, `obibamica`, `knoema`, `dhis2` |
-| Metadata | `fusionregistry`, `aristotlemdr`, `mwmb`, `fairdatapoint` |
+| Open data | `ckan`, `dkan`, `opendatasoft`, `socrata`, `udata`, `magda`, `jkan`, `junar`, `entryscape`, `drupal`, `wordpress`, `triplydb`, `piveau`, `idra`, `resourcecontracts`, `gisopendataportal`, `datafair`, `lkod`, `ouropendata`, `dataeye`, `opengov`, `odweb`, `atmmaggioli`, `simaiopendata` |
+| Geo | `geonetwork`, `geonode`, `geoserver`, `arcgishub`, `arcgisserver`, `pycsw`, `pygeoapi`, `mapproxy`, `qwc2`, `mapstore`, `lizmap`, `mapbender`, `geomapfish`, `getsdiportal`, `terria`, `gvsigonline`, `erdasapollo`, `wis20box`, `koordinates`, `nextgisweb`, `tianditu`, `openeo`, `isogeo`, `mapgisigserver`, `cubewerx`, `haleconnect`, `palapa`, `stacbrowser`, `qgisserver`, `deegree`, `gc2`, `micka`, `supermapiportal`, `g3wsuite`, `geonature`, `hajk`, `tergis`, `geocortex`, `activemapgis`, `opendatacube`, `datacubews`, `origo` |
+| Scientific | `dataverse`, `dspace`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `opus`, `esploro`, `pure`, `weko3`, `elsevierdigitalcommons`, `opendap`, `opendaphyrax`, `thredds`, `erddap`, `ipt`, `galaxy`, `ala`, `figshare`, `redivis`, `radar`, `breedbase`, `tripal`, `veupathdb`, `massbank`, `iochembd`, `esgf`, `omekas`, `contentdm`, `symbiota`, `frostserver`, `cbioportal`, `bexis2`, `intermine`, `kadi4mat`, `omero`, `xnat`, `wikibase`, `huggingface`, `openalex`, `idigbio`, `inaturalist`, `clld`, `minerva`, `aubrey`, `gringlobal`, `synapse`, `yoda`, `dataone`, `codalab`, `tr32db` |
+| Indicators / microdata | `pxweb`, `pxstat`, `opensdg`, `statsuite`, `istatdatabrowser`, `sdmxri`, `nada`, `nesstar`, `redatam`, `colectica`, `obibamica`, `knoema`, `dhis2`, `edatos`, `superset`, `dgbasweb`, `swing`, `ibisph`, `superstar`, `duva`, `beyond2020` |
+| Metadata | `fusionregistry`, `aristotlemdr`, `mwmb`, `fairdatapoint`, `datahubproject` |
 
-If `detect-single` reports no map for the ID, stop. Do not copy URLs from a different platform.
+If `detect-single` reports no map for the ID, stop. Do not copy URLs from a different platform. Most map-viewer IDs and BI/query UIs are listed in `NO_STANDARD_PROBE` (`apidetect_urlmaps_draft.py`); the [software index](software-index.md) shows `—` for those IDs.
 
 ## After a successful run
 

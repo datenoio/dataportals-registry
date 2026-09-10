@@ -1,6 +1,6 @@
 # Discovering open data portals
 
-How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md). Also covered here: Idra (`idra`), a DCAT-AP federation layer that is usually typed as a **Data search engine**; Piveau, Our Open Data, Gipuzkoa Irekia, DataPress, Taiwan MODA, ResourceContracts, RDF Online Repository, the Guangxi Public Data Open Platform, ODWeb, ATM Maggioli, and OpenGov.
+How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax (Google, Censys, Shodan, and [FOFA as a Censys alternative](discovery-search-tools.md#fofa)): [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md). Also covered here: Idra (`idra`), a DCAT-AP federation layer that is usually typed as a **Data search engine**; Piveau, Our Open Data, Gipuzkoa Irekia, DataPress, Taiwan MODA, ResourceContracts, RDF Online Repository, the Guangxi Public Data Open Platform, ODWeb, ATM Maggioli, and OpenGov.
 
 Set `software.id` from `data/software/` only when a probe or page signal matches. Otherwise `custom`. After YAML exists: `python scripts/apidetect.py detect-single {id} --dryrun` (replace `{id}` with the catalog id).
 
@@ -10,7 +10,7 @@ Most common self-hosted open-data CMS. Gallery: [CKAN ecosystem](https://ecosyst
 
 **Signals:** footer “Powered by CKAN”; `/dataset` or `/dataset/` listing; HTML includes `ckan.js` or `ckanext-`; cookie `ckan_`.
 
-**Confirm (GET):** `https://host/api/3/action/status_show` and/or `/api/3/action/package_list`. JSON with `"success": true` is enough.
+**Confirm (GET):** `https://host/api/3/action/status_show` and/or `/api/3/action/package_list`. JSON with `"success": true` is enough. Scientific data repositories may also be `ckan` when that API matches (AuScope Data Repository, `generator` CKAN 2.10.1; Observatorio Medioambiental La Plata, `generator` CKAN 2.7.3). HTML that mentions “ckan” is not enough when `status_show` returns HTML or 503 (INAIL `dati.inail.it`). An `og:url` pointing at a CKAN test host is not enough when `status_show` 404s (NIRD `archive.sigma2.no`).
 
 | Tool | Query |
 |------|-------|
@@ -18,7 +18,9 @@ Most common self-hosted open-data CMS. Gallery: [CKAN ecosystem](https://ecosyst
 | Google | `inurl:/api/3/action/status_show` |
 | Google | `"CKAN" "open data" site:.gov` |
 | Censys (web) | `web.endpoints.http.body: "Powered by CKAN"` |
+| FOFA | `body="Powered by CKAN"` |
 | Censys (web) | `web.endpoints.http.html_title: "CKAN"` |
+| FOFA | `title="CKAN" && country="PT"` |
 | Shodan | `http.html:"Powered by CKAN"` |
 | PublicWWW | `"Powered by CKAN"` or `"ckan.js"` |
 
@@ -37,6 +39,7 @@ Drupal-based portal with a CKAN-compatible Action API plus DKAN’s own `/api/1/
 | Google | `"powered by DKAN" OR inurl:/api/1/metastore` |
 | Google | `"DKAN" "open data" site:.gov` |
 | Censys | `web.endpoints.http.body: "DKAN"` |
+| FOFA | `body="DKAN"` |
 | Shodan | `http.html:"dkan"` |
 
 Do not label a site `dkan` from the CKAN API alone — that is usually `ckan`.
@@ -53,7 +56,10 @@ SaaS and self-hosted Explore portals. Many hosts end in `*.opendatasoft.com` or 
 | Google | `site:opendatasoft.com/explore` |
 | Google | `"Powered by OpenDataSoft" OR "ods-explore"` |
 | Censys | `web.names: "opendatasoft.com"` |
+| FOFA | `domain="opendatasoft.com"` |
 | Censys | `web.endpoints.http.body: "OpenDataSoft"` |
+| FOFA | `body="OpenDataSoft"` |
+| FOFA | `body="OpenDataSoft" && country="BE"` |
 | crt.sh | `%.opendatasoft.com` |
 
 **False positives:** the vendor homepage, academy, and blog. Register the **portal** (`{org}.opendatasoft.com` or the city’s custom domain), not `www.opendatasoft.com`. List: [Open Data Inception](https://data.opendatasoft.com/explore/dataset/open-data-sources%40public/information/).
@@ -70,6 +76,7 @@ Tyler / Socrata Open Data. UI often `/browse` or `/datasets`. SODA API under `/a
 | Google | `"Powered by Socrata" OR inurl:/api/views` |
 | Google | `site:*.socrata.com` (custom domains are more interesting) |
 | Censys | `web.endpoints.http.body: "socrata"` |
+| FOFA | `header="X-Socrata"` |
 | Shodan | `http.html:"X-Socrata" OR http.html:"soda.demo"` |
 
 Skip `soda.demo.socrata.com` and Tyler marketing sites. Prefer the city’s production domain.
@@ -85,7 +92,9 @@ French-origin portal (data.gouv.fr lineage). Dataset UI `/datasets/`. API `/api/
 | Google | `"opendata" inurl:/datasets site:.gouv.fr` |
 | Google | `"udata" "jeux de données" OR inurl:/api/1/datasets` |
 | Censys | `web.endpoints.http.body: "udata"` |
+| FOFA | `body="udata"` |
 | Censys | `web.names: "data.gouv"` |
+| FOFA | `domain="data.gouv"` |
 
 Local clones exist outside France. Do not assume every `/api/1/datasets` is uData — check the JSON shape.
 
@@ -100,6 +109,7 @@ Search-centric catalog (data.gov.au and derivatives). API `/api/v0/search/datase
 | Google | `"magda" "data catalog" OR inurl:/api/v0/search/datasets` |
 | Google | `inurl:/search/api/v0/search/datasets` |
 | Censys | `web.endpoints.http.body: "magda"` |
+| FOFA | `body="magda"` |
 
 ## JKAN (`jkan`) {#jkan}
 
@@ -111,6 +121,8 @@ Jekyll + CKAN-like static portal. Often GitHub Pages. Datasets as Markdown in `/
 |------|-------|
 | Google | `"JKAN" "open data" OR "jkan" inurl:/datasets` |
 | Google | `site:github.io "JKAN"` |
+| Censys | `web.endpoints.http.body: "JKAN"` |
+| FOFA | `body="JKAN"` |
 
 Skip the [jkan.io](https://jkan.io) project site unless it is a real catalog instance.
 
@@ -122,6 +134,7 @@ SaaS open-data CMS used in Latin America. Customer list: [junar.com/customers](h
 |------|-------|
 | Google | `"powered by Junar" OR "junar" "datos abiertos"` |
 | Censys | `web.endpoints.http.body: "Junar"` |
+| FOFA | `body="Junar"` |
 
 ## EntryScape (`entryscape`) {#entryscape}
 
@@ -132,20 +145,26 @@ DCAT-AP catalogs, especially Sweden and Nordics. Customers: [entryscape.com/en/c
 | Google | `"EntryScape" (catalog OR "öppna data" OR dcat)` |
 | Google | `inurl:/store "entryscape"` |
 | Censys | `web.endpoints.http.body: "EntryScape"` |
+| FOFA | `body="EntryScape"` |
 
 ## ArcGIS Hub as an open-data site (`arcgishub`) {#arcgishub}
 
 Many Hub sites are **open data** first (dataset search, DCAT) rather than a map viewer. If the primary UI is a dataset catalog, use `catalog_type: Open data portal` and `software.id: arcgishub`. If it is a GIS hub / map gallery, use **Geoportal** — see [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md#arcgishub).
 
-**Confirm:** `/api/search/v1` or `/api/feed/dcat-us/1.1.json`. Hosts often `*.hub.arcgis.com` or `opendata.arcgis.com`.
+**Confirm:** `/api/search/v1` or `/api/feed/dcat-us/1.1.json`. Hosts often `*.hub.arcgis.com` or `opendata.arcgis.com`. Custom-domain example: Bloemendaal (`hubcdn.arcgis.com/opendata-ui`).
 
-```text
-site:hub.arcgis.com "open data"
-site:opendata.arcgis.com
-inurl:hub.arcgis.com
-```
+| Tool | Query |
+|------|-------|
+| Google | `site:hub.arcgis.com "open data"` |
+| Google | `site:opendata.arcgis.com` |
+| Google | `inurl:hub.arcgis.com` |
+| Censys | `web.names: "hub.arcgis.com"` |
+| FOFA | `host="hub.arcgis.com"` |
+| FOFA | `body="opendata-ui"` |
+| crt.sh | `%.hub.arcgis.com` |
 
-crt.sh: `%.hub.arcgis.com`. Gallery: [hub.arcgis.com](https://hub.arcgis.com/).
+Gallery: [hub.arcgis.com](https://hub.arcgis.com/).
+
 
 ## Idra (`idra`) {#idra}
 
@@ -162,7 +181,9 @@ Typical `catalog_type` is **Data search engine** (folder `search/`), not Open da
 | Google | `"Idra" ("Open Data Federation" OR IdraPortal OR "DCAT-AP_IT") -site:github.com -site:readthedocs.io` |
 | Google | `inurl:/IdraPortal/ OR inurl:/Idra/api/v1/` |
 | Censys | `web.endpoints.http.body: "IdraPortal"` |
+| FOFA | `body="IdraPortal"` |
 | Censys | `web.endpoints.http.body: "Idra"` |
+| FOFA | `body="Idra"` |
 
 Do not register harvested source catalogs a second time as Idra. Duplicate-check the underlying CKAN/Socrata/OpenDataSoft `link` as well.
 
@@ -179,6 +200,7 @@ Digital experience CMS. **Only** register when a public Open Data / RISP dataset
 | Google | `"datos abiertos" Liferay OR RISP (ayuntamiento OR diputación) site:.es` |
 | Google | `inurl:/web/guest/ "datos abiertos"` |
 | Censys | `web.endpoints.http.body: "Liferay"` |
+| FOFA | `body="Liferay"` |
 
 ## ATM Maggioli (`atmmaggioli`) {#atmmaggioli}
 
@@ -186,13 +208,14 @@ Spanish municipal sede electrónica / Portal de Transparencia with an open-data 
 
 **Signals:** path `/transparencia/datos/catalogo`; Maggioli / Galileo IyS / ATM branding; title “Sede Electrónica”; dataset list under transparencia.
 
-**Confirm:** GET `https://host/transparencia/datos/catalogo` and match a reusable dataset listing. One record per municipality tenant. Do **not** set `ckan`, `opendatasoft`, or `socrata` from guessed `/api/3`, `/api/v2/catalog`, or `/api/views` paths — those URLs return the HTML shell.
+**Confirm:** GET `https://host/transparencia/datos/catalogo` and match a reusable dataset listing. One record per municipality tenant. Do **not** set `ckan`, `opendatasoft`, or `socrata` from guessed `/api/3`, `/api/v2/catalog`, or `/api/views` paths — those URLs return the HTML shell. Do **not** set `atmmaggioli` on Italian Municipium / Maggioli “Portale Opendata” shells (`municipiumapp.it` civic CMS); that is a different product and has no dedicated software id.
 
 | Tool | Query |
 |------|-------|
 | Google | `inurl:/transparencia/datos/catalogo (Maggioli OR Galileo OR "sede electrónica")` |
 | Google | `"grupo ATM-Maggioli" OR "ATM Maggioli" ("datos abiertos" OR catálogo)` |
 | Censys | `web.endpoints.http.body: "Maggioli"` |
+| FOFA | `body="Maggioli"` |
 
 Skip the vendor homepage and Galileo demo sede. Prefer the municipal catalog path, not the whole e-office.
 
@@ -209,6 +232,7 @@ Tyler / OpenGov financial transparency SaaS for US cities and states. Public ten
 | Google | `site:opengov.com/transparency (budget OR financial)` |
 | Google | `inurl:.opengov.com/data` |
 | Censys | `web.names: "opengov.com"` |
+| FOFA | `domain="opengov.com"` |
 
 Skip `www.opengov.com` marketing. Do not bulk-add every guessed city subdomain.
 
@@ -224,6 +248,7 @@ CORA GEO municipal eGovernment / open-data publisher used by Slovak cities (cont
 |------|-------|
 | Google | `"POMOSAM" OR "CG eGOV" (otvorené OR zverejňovanie) site:.sk` |
 | Censys | `web.endpoints.http.body: "POMOSAM"` |
+| FOFA | `body="POMOSAM"` |
 
 ## oPortal (`oportal`) {#oportal}
 
@@ -238,6 +263,7 @@ Inspur Chinese government open-data product. Deployments share `/oportal/` catal
 | Google | `inurl:/oportal/ (数据 OR 开放)` |
 | Google | `"浪潮" 开放数据 oportal` |
 | Censys | `web.endpoints.http.body: "/oportal/"` |
+| FOFA | `body="/oportal/"` |
 
 ## OGD Platform India (`ogdindia`) {#ogdindia}
 
@@ -252,6 +278,8 @@ NIC SaaS on data.gov.in for ministries and states. Site: [data.gov.in](https://d
 | Google | `site:data.gov.in (catalog OR dataset)` |
 | Google | `"OGD Platform" OR "Open Government Data" site:.gov.in` |
 | crt.sh | `%.data.gov.in` |
+| Censys | `web.names: "data.gov.in"` |
+| FOFA | `host="data.gov.in"` |
 
 ## data eye (`dataeye`) {#dataeye}
 
@@ -264,6 +292,8 @@ Japanese municipal open-data SaaS (Data Cradle). Site: [dataeye.jp](https://data
 | Google | `site:dataeye.jp` |
 | Google | `"data eye" オープンデータ (市 OR 県)` |
 | crt.sh | `%.dataeye.jp` |
+| Censys | `web.names: "dataeye.jp"` |
+| FOFA | `domain="dataeye.jp"` |
 
 ## Seoul Open Data Plaza (`seoulopendataplaza`) {#seoulopendataplaza}
 
@@ -276,6 +306,7 @@ Shared catalog used by Seoul Metropolitan Government district (`gu`) portals. Ti
 | Google | `"열린 데이터 광장" site:.go.kr` |
 | Google | `inurl:/openinf/ seoul` |
 | Censys | `web.endpoints.http.body: "openinf"` |
+| FOFA | `body="openinf"` |
 
 ## Data Fair (`datafair`) {#datafair}
 
@@ -289,6 +320,7 @@ Koumoul open-source data portals. Docs: [data-fair.github.io](https://data-fair.
 |------|-------|
 | Google | `"Data Fair" (Koumoul OR datasets) -site:github.com` |
 | Censys | `web.endpoints.http.body: "data-fair"` |
+| FOFA | `body="data-fair"` |
 
 ## Datawheel (`datawheel`) {#datawheel}
 
@@ -300,6 +332,7 @@ Datawheel-hosted open-data / economic-complexity portals. Site: [datawheel.us](h
 |------|-------|
 | Google | `"Datawheel" (open data OR "data portal") -site:datawheel.us` |
 | Censys | `web.endpoints.http.body: "datawheel"` |
+| FOFA | `body="datawheel"` |
 
 ## SEU-e (`seue`) {#seue}
 
@@ -311,6 +344,8 @@ Consorci AOC electronic office / transparency / open-data service for Catalan ad
 |------|-------|
 | Google | `site:seu-e.cat (dades OR datasets OR "dades obertes")` |
 | crt.sh | `%.seu-e.cat` |
+| Censys | `web.names: "seu-e.cat"` |
+| FOFA | `domain="seu-e.cat"` |
 
 ## TriplyDB (`triplydb`) {#triplydb}
 
@@ -323,6 +358,8 @@ Linked-data / knowledge-graph publishing with SPARQL. Site: [triplydb.com](https
 | Google | `site:triplydb.com` |
 | Google | `"TriplyDB" (SPARQL OR datasets) -site:triplydb.com` |
 | crt.sh | `%.triplydb.com` |
+| Censys | `web.names: "triplydb.com"` |
+| FOFA | `domain="triplydb.com"` |
 
 ## Drupal (`drupal`) {#drupal}
 
@@ -333,6 +370,8 @@ Use `drupal` only when the **public product is a dataset catalog** (open-data no
 | Tool | Query |
 |------|-------|
 | Google | `"powered by Drupal" ("open data" OR datasets) inurl:/data` |
+| Censys | `web.endpoints.http.body: "/jsonapi/node/dataset"` |
+| FOFA | `body="/jsonapi/node/dataset"` |
 
 ## WordPress (`wordpress`) {#wordpress}
 
@@ -341,6 +380,8 @@ Use `wordpress` only for a **datasets** custom post type or CKAN-theme WP catalo
 | Tool | Query |
 |------|-------|
 | Google | `"open data" WordPress (CKAN OR dataset) -site:wordpress.org` |
+| Censys | `web.endpoints.http.body: "wp-content"` |
+| FOFA | `body="wp-content" && body="open data" && body="dataset"` |
 
 ## Piveau (`piveau`) {#piveau}
 
@@ -354,6 +395,7 @@ DCAT-AP microservice catalog (Fraunhofer FOKUS). Site: [piveau.de](https://www.p
 |------|-------|
 | Google | `"Piveau" (DCAT-AP OR "open data") -site:github.com -site:piveau.de` |
 | Censys | `web.endpoints.http.body: "piveau"` |
+| FOFA | `body="piveau"` |
 
 ## LKOD (`lkod`) {#lkod}
 
@@ -366,6 +408,7 @@ Czech local DCAT-AP-CZ catalogs (Golemio / Operátor ICT). Harvests into NKOD. S
 | Google | `"LKOD" OR "lokální katalog otevřených dat" site:.cz` |
 | Google | `inurl:/opendata/set/lkod site:.sk` |
 | Censys | `web.endpoints.http.body: "lkod"` |
+| FOFA | `body="lkod"` |
 
 ## Aleph (`aleph`) {#aleph}
 
@@ -377,6 +420,7 @@ OCCRP investigative document/dataset search. Site: [aleph.occrp.org](https://ale
 |------|-------|
 | Google | `"Aleph" OCCRP (datasets OR documents) -site:occrp.org` |
 | Censys | `web.endpoints.http.body: "aleph"` |
+| FOFA | `body="aleph"` |
 
 ## Our Open Data (`ouropendata`) {#ouropendata}
 
@@ -388,6 +432,7 @@ Japanese prefecture/city open-data CMS (Tokushima, Kagawa, Aomori, and others). 
 |------|-------|
 | Google | `"Our Open Data" オープンデータ OR inurl:/assets/cms/public.css` |
 | Censys | `web.endpoints.http.body: "assets/cms/public.css"` |
+| FOFA | `body="assets/cms/public.css"` |
 
 ## Gipuzkoa Irekia (`gipuzkoairekia`) {#gipuzkoairekia}
 
@@ -400,6 +445,7 @@ Shared open-government / open-data platform for Gipuzkoa municipalities. Hub: [g
 | Google | `site:gipuzkoairekia.eus (datos OR datuak OR catalog)` |
 | Google | `"Gipuzkoa Irekia" (opendata OR "datos abiertos")` |
 | Censys | `web.names: "gipuzkoairekia.eus"` |
+| FOFA | `domain="gipuzkoairekia.eus"` |
 
 ## DataPress (`datapress`) {#datapress}
 
@@ -411,6 +457,7 @@ Managed CKAN plus CMS. Site: [datapress.com](https://datapress.com). Prefer `dat
 |------|-------|
 | Google | `"DataPress" ("open data" OR CKAN)` |
 | Censys | `web.endpoints.http.body: "datapress"` |
+| FOFA | `body="datapress"` |
 
 ## MODA Open Data Platform (`modaopendata`) {#modaopendata}
 
@@ -423,6 +470,7 @@ Taiwan Nuxt/Vue open-data frontend (national data.gov.tw family plus local clone
 | Google | `"data.gov.tw" OR inurl:_nuxt (opendata OR 開放資料) site:.tw` |
 | Google | `"moda-gov-tw" opendata` |
 | Censys | `web.names: "data.gov.tw"` |
+| FOFA | `host="data.gov.tw"` |
 
 ## RDF Online Repository (`rdfrepository`) {#rdfrepository}
 
@@ -437,6 +485,7 @@ Revenue Development Foundation license-transparency portals. Docs: [Online Repos
 | Google | `site:revenuedev.org` |
 | Google | `"Online Repository" ("Revenue Development" OR mining) -site:revenuedevelopment.org` |
 | Censys | `web.names: "revenuedev.org"` |
+| FOFA | `domain="revenuedev.org"` |
 | crt.sh | `%.revenuedev.org` |
 
 ## ResourceContracts (`resourcecontracts`) {#resourcecontracts}
@@ -452,7 +501,20 @@ NRGI oil/gas/mining contract repository. Hub: [resourcecontracts.org](https://re
 | Google | `site:resourcecontracts.org` |
 | Google | `"ResourceContracts" (mining OR petroleum) contract` |
 | Censys | `web.names: "resourcecontracts.org"` |
+| FOFA | `domain="resourcecontracts.org"` |
 | crt.sh | `%.resourcecontracts.org` |
+
+## OpenSpending (`openspending`) {#openspending}
+
+Open Knowledge Foundation public-finance catalog. Hub: [openspending.org](https://openspending.org). Fiscal Data Packages with a public search UI and API.
+
+**Confirm:** GET the public dataset search. One record for the hub (and any independent OpenSpending deployment). Skip individual budget visualizations as catalogs.
+
+| Tool | Query |
+|------|-------|
+| Google | `"OpenSpending" (budget OR "fiscal data" OR "open spending")` |
+| Censys | `web.names: "openspending.org"` |
+| FOFA | `domain="openspending.org"` |
 
 ## ODWeb (`odweb`) {#odweb}
 
@@ -467,6 +529,7 @@ Chinese municipal and provincial public-data catalog under `/odweb/`. Distinct f
 | Google | `inurl:/odweb/ 数据开放` |
 | Google | `"odweb" 公共数据开放平台` |
 | Censys | `web.endpoints.http.body: "/odweb/"` |
+| FOFA | `body="/odweb/" && title="数据开放"` |
 
 ## Guangxi Public Data Open Platform (`gxopendata`) {#gxopendata}
 
@@ -481,6 +544,7 @@ Guangxi Zhuang Autonomous Region public data portal. Provincial hub: [data.gxzf.
 | Google | `site:data.gxzf.gov.cn` |
 | Google | `"公共数据开放平台" site:gxzf.gov.cn` |
 | Censys | `web.names: "data.gxzf.gov.cn"` |
+| FOFA | `host="data.gxzf.gov.cn"` |
 | crt.sh | `%.data.gxzf.gov.cn` |
 
 ## OpenGDC (`opengdc`) {#opengdc}
@@ -496,6 +560,141 @@ Dutch municipal open-data and Woo catalog (Drupal / Dexes). Product site: [openg
 | Google | `"OpenGDC" (dataportaal OR datacatalogus) site:.nl` |
 | Google | `inurl:/openapi.json "api/datasets" (Datacatalogus OR Dataportaal)` |
 | Censys | `web.endpoints.http.body: "api/dossiers"` |
+| FOFA | `body="api/dossiers"` |
+
+## Bitrix (`bitrix`) {#bitrix}
+
+1C-Bitrix CMS used for government dataset catalogs. Site: [1c-bitrix.ru](https://www.1c-bitrix.ru). Skip ordinary Bitrix homepages.
+
+**Signals:** Bitrix chrome; a **datasets** catalog section (открытые данные), not a news CMS.
+
+**Confirm:** GET the public dataset listing. One catalog per dataset portal.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Битрикс" открытые данные` |
+| Censys | `web.endpoints.http.body: "bitrix"` |
+| FOFA | `body="bitrix"` |
+
+## Copernicus Data Stores (`copernicuscds`) {#copernicuscds}
+
+ECMWF Climate / Atmosphere / CEMS data stores. Hub: [cds.climate.copernicus.eu](https://cds.climate.copernicus.eu).
+
+**Confirm:** do **not** clone the CDS hub. Register only a distinct CDS/ADS/CEMS catalog UI. Harvest recipes: [harvest-earthdata.md](harvest-earthdata.md#copernicuscds).
+
+| Tool | Query |
+|------|-------|
+| Google | `"Climate Data Store" Copernicus` |
+| Censys | `web.names: "cds.climate.copernicus.eu"` |
+| FOFA | `host="cds.climate.copernicus.eu"` |
+
+## D4Science (`d4science`) {#d4science}
+
+CNR virtual research environments with a gCube CKAN data-catalogue. Site: [d4science.org](https://www.d4science.org).
+
+**Signals:** `/web/{lab}/data-catalogue`; `gcube-ckan-datacatalog`; D4Science VRE chrome.
+
+**Confirm:** GET the public data-catalogue for that VRE. One catalog per lab catalogue, not the D4Science marketing home.
+
+| Tool | Query |
+|------|-------|
+| Google | `"D4Science" (catalog OR "open data")` OR `inurl:d4science.org/web` |
+| Censys | `web.names: "d4science.org"` |
+| FOFA | `domain="d4science.org"` |
+
+## data.gov.my (`datagovmy`) {#datagovmy}
+
+Malaysia national open-data stack. Hub: [data.gov.my](https://www.data.gov.my).
+
+**Confirm:** register **tenant** catalogs on the stack, not a second copy of the national hub. Duplicate-check `*.data.gov.my`.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:data.gov.my` tenant catalogs only |
+| Censys | `web.names: "data.gov.my"` |
+| FOFA | `host="data.gov.my"` |
+
+## JDOP (`jdop`) {#jdop}
+
+Zhejiang public-data open platform (浙江•数据开放). Distinct from Inspur oPortal (`oportal`) and ODWeb (`odweb`).
+
+**Signals:** `/jdop_front/` or `/dopServer/`; 浙江•数据开放 chrome.
+
+**Confirm:** GET the public dataset catalog. One record per provincial/municipal JDOP tenant.
+
+| Tool | Query |
+|------|-------|
+| Google | `"JDOP" オープンデータ` OR `"jdop_front"` |
+| Censys | `web.endpoints.http.body: "jdop_front"` |
+| FOFA | `body="jdop_front"` |
+
+## Open Data Registry (`opendatareg`) {#opendatareg}
+
+AWS Labs YAML registry of public datasets (and regional IT clones named OpenData.reg). Source: [awslabs/open-data-registry](https://github.com/awslabs/open-data-registry).
+
+**Confirm:** GET a public dataset registry UI or the published catalog files. Skip a GitHub clone with no catalog UI. One catalog per public registry.
+
+| Tool | Query |
+|------|-------|
+| Google | `"opendata.reg"` OR `"Open Data Registry" awslabs` |
+| Censys | `web.endpoints.http.body: "open-data-registry"` |
+| FOFA | `body="open-data-registry"` |
+
+## PublishMyData (`publishmydata`) {#publishmydata}
+
+Swirrl linked-data publisher for official statistics. Site: [publishmydata.com](https://publishmydata.com). Docs: [publishmydata.com/docs](https://publishmydata.com/docs).
+
+**Signals:** PublishMyData chrome; SPARQL / linked-data catalog UI.
+
+**Confirm:** GET the public dataset/SPARQL catalog. One catalog per deployment.
+
+| Tool | Query |
+|------|-------|
+| Google | `"PublishMyData" OR publishmydata` |
+| Censys | `web.endpoints.http.body: "PublishMyData"` |
+| FOFA | `body="PublishMyData"` |
+
+## Semantic MediaWiki (`smw`) {#smw}
+
+MediaWiki with semantic queries used as a dataset catalog. Site: [semantic-mediawiki.org](https://www.semantic-mediawiki.org). Skip ordinary MediaWiki encyclopedias.
+
+**Signals:** Semantic MediaWiki / `#ask` catalog pages; RDF export of datasets.
+
+**Confirm:** GET a public dataset/category listing. One catalog per wiki that publishes datasets.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Semantic MediaWiki" (dataset OR catalog)` |
+| Censys | `web.endpoints.http.body: "Semantic MediaWiki"` |
+| FOFA | `body="Semantic MediaWiki"` |
+
+## Strapi (`strapi`) {#strapi}
+
+Headless CMS. Site: [strapi.io](https://strapi.io). Docs: [strapi.io/docs](https://strapi.io/docs). Use only with a **public dataset API**, not a blog CMS.
+
+**Signals:** `/api/` content-types that list datasets; Strapi admin is not the catalog.
+
+**Confirm:** GET a public dataset collection. Skip login-only Strapi. One catalog per public API.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Strapi" ("open data" OR datasets)` |
+| Censys | `web.endpoints.http.body: "strapi"` |
+| FOFA | `body="strapi"` |
+
+## Tablion (`tablion`) {#tablion}
+
+Aristotle Metadata data portal. Product: [Tablion Data Portal](https://www.aristotlemetadata.com/products/tablion-data-portal/).
+
+**Signals:** Tablion chrome; Aristotle metadata/data portal UI.
+
+**Confirm:** GET the public dataset search. One catalog per portal.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Tablion" "data portal"` |
+| Censys | `web.endpoints.http.body: "Tablion"` |
+| FOFA | `body="Tablion"` |
 
 ## Other open-data platforms
 
@@ -505,18 +704,19 @@ Dutch municipal open-data and Woo catalog (Drupal / Dexes). Product site: [openg
 | `gipuzkoairekia` | see above | |
 | `datapress` | see above | |
 | `modaopendata` | see above | |
-| `bitrix` | 1C-Bitrix **dataset catalog only** | `"Битрикс" открытые данные` (skip ordinary CMS) |
-| `jdop` | Japanese JDOP | `"JDOP" オープンデータ` |
-| `publishmydata` | Linked-data publisher | `"PublishMyData" OR publishmydata` |
-| `opendatareg` | OpenData.reg / regional IT | `"opendata.reg"` |
-| `datagovmy` | Malaysia data.gov.my stack | `site:data.gov.my` (tenant catalogs only) |
-| `copernicuscds` | Copernicus Climate/Atmosphere Data Store | `"Climate Data Store" Copernicus` (do not clone CDS) |
-| `tablion` | Aristotle Tablion portal | `"Tablion" "data portal"` |
-| `strapi` | Headless CMS **with a public dataset API** | `"Strapi" ("open data" OR datasets)` |
-| `smw` | Semantic MediaWiki data catalog | `"Semantic MediaWiki" (dataset OR catalog)` |
-| `d4science` | D4Science VRE / gCube CKAN data-catalogue (`/web/{lab}/data-catalogue`, `gcube-ckan-datacatalog`) | `"D4Science" (catalog OR "open data")` OR `inurl:d4science.org/web` |
+| `bitrix` | see above | |
+| `jdop` | see above | |
+| `publishmydata` | see above | |
+| `opendatareg` | see above | |
+| `datagovmy` | see above | |
+| `copernicuscds` | see above | |
+| `tablion` | see above | |
+| `strapi` | see above | |
+| `smw` | see above | |
+| `d4science` | see above | |
 | `rdfrepository` | see above | |
 | `resourcecontracts` | see above | |
+| `openspending` | see above | |
 | `gxopendata` | see above | |
 
 ## Generic open-data URL patterns
@@ -564,21 +764,6 @@ Portals that produced origin catalogs in 28–30 August 2026 sessions:
 
 Duplicate-check the origin hostname, then GET the origin homepage. Do not invent harvest API paths — use the portal’s documented organisations/harvest endpoint.
 
-## Related
-
-- [discovery.md](discovery.md)
-- [discovery.md](discovery.md#hunt-patterns) — session hunt patterns
-- [discovery-search-tools.md](discovery-search-tools.md)
-- [discovery-metadata.md](discovery-metadata.md)
-- [discovery-indicators.md](discovery-indicators.md)
-- [discovery-other.md](discovery-other.md)
-- [harvest-opendata.md](harvest-opendata.md)
-- [harvest.md](harvest.md)
-- [harvest-protocols.md](harvest-protocols.md)
-- [apidetect.md](apidetect.md)
-- [ckan-sync.md](ckan-sync.md)
-- [catalog-types.md](catalog-types.md)
-- [software-taxonomy.md](software-taxonomy.md)
 
 ## GIS Open Data Portal (`gisopendataportal`) {#gisopendataportal}
 
@@ -592,6 +777,14 @@ repository redirected to sign-in on 2026-09-07, so do not assume a verified open
 Search: `"gis-open-data-portal/od-portal"`, `site:twinmap.ai "OpenAPI"`.
 First-party examples: [Tvrdošín developer guide](https://tvrdosin.twinmap.ai/developer),
 [Nové Mesto developer guide](https://nove-mesto.twinmap.ai/developer).
+
+
+| Tool | Query |
+|------|-------|
+| Google | `"gis-open-data-portal/od-portal" OR site:twinmap.ai OpenAPI` |
+| Censys | `web.names: "twinmap.ai"` |
+| FOFA | `host="twinmap.ai"` |
+
 
 ## Esri UK Data Observatory (`esridataobservatory`) {#esridataobservatory}
 
@@ -610,6 +803,14 @@ confirms another independent deployment. See the [branding and theme documentati
 Search: `"Esri UK Data Observatory"`, `"InstantAtlas Data Observatory"`,
 `"hub.instantatlas.com/data-catalog-explorer"`.
 
+
+| Tool | Query |
+|------|-------|
+| Google | `"Esri UK Data Observatory" OR "InstantAtlas Data Observatory"` |
+| Censys | `web.endpoints.http.body: "hub.instantatlas.com/data-catalog-explorer"` |
+| FOFA | `body="dataCatalogExplorer"` |
+
+
 ## RUDI (`rudi`) {#rudi}
 
 An independently deployable, distributed data-sharing platform. The
@@ -620,6 +821,14 @@ provides Docker Compose installation. Match explicit RUDI branding and project p
 not generic Angular bundles. Producer nodes and the central metadata portal have different
 interfaces. See [API documentation](https://doc.rudi.fr/api/api_exposees/).
 
+
+| Tool | Query |
+|------|-------|
+| Google | `"RUDI" (données OR "data sharing") -site:github.com` |
+| Censys | `web.endpoints.http.body: "rudi-portal"` |
+| FOFA | `body="RUDI" && body="rudi"` |
+
+
 ## SIMAI Open Data Portal (`simaiopendata`) {#simaiopendata}
 
 The [vendor product page](https://simai.ru/solution/gosudarstvennye-organizatsii/simai-portal-otkrytykh-dannykh/)
@@ -629,3 +838,27 @@ markets a dedicated 1C-Bitrix open-data application and links its
 Generic `/bitrix/` assets alone do not identify this product. The Bashkortostan-branded
 vendor demo is not a production government portal; the old `opendata.demo.simai.ru`
 host currently serves a hosting placeholder.
+
+
+| Tool | Query |
+|------|-------|
+| Google | `"SIMAI" "Портал открытых данных" OR simai.opendata` |
+| Censys | `web.endpoints.http.body: "simai.opendata"` |
+| FOFA | `body="simai.opendata"` |
+
+## Related
+
+- [discovery.md](discovery.md)
+- [discovery.md](discovery.md#hunt-patterns) — session hunt patterns
+- [discovery-search-tools.md](discovery-search-tools.md)
+- [discovery-metadata.md](discovery-metadata.md)
+- [discovery-indicators.md](discovery-indicators.md)
+- [discovery-other.md](discovery-other.md)
+- [harvest-opendata.md](harvest-opendata.md)
+- [harvest.md](harvest.md)
+- [harvest-protocols.md](harvest-protocols.md)
+- [apidetect.md](apidetect.md)
+- [ckan-sync.md](ckan-sync.md)
+- [catalog-types.md](catalog-types.md)
+- [software-taxonomy.md](software-taxonomy.md)
+

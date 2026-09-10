@@ -1,8 +1,8 @@
 # Discovering domain scientific repositories
 
-Biodiversity, facility, crop, chemistry, and earth-system repositories (`catalog_type: Scientific data repository`). Institutional IRs: [discovery-scientific.md](discovery-scientific.md). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Harvest: [harvest-scientific-domain.md](harvest-scientific-domain.md).
+Biodiversity, facility, crop, chemistry, and earth-system repositories (`catalog_type: Scientific data repository`). Institutional IRs: [discovery-scientific.md](discovery-scientific.md). Search-engine syntax (Google, Censys, and [FOFA as a Censys alternative](discovery-search-tools.md#fofa)): [discovery-search-tools.md](discovery-search-tools.md). Harvest: [harvest-scientific-domain.md](harvest-scientific-domain.md).
 
-High-count domain stacks with their own recipes: IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat, InterMine, GRIN-Global, PlutoF, JGI Genome Portal, cBioPortal, ESA Science Archive, CLLD, TalkBank, Pathway Tools, IBDC.
+High-count domain stacks with their own recipes: IPT, Symbiota, THREDDS, ERDDAP, FROST-Server, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat, InterMine, GRIN-Global, PlutoF, JGI Genome Portal, cBioPortal, ESA Science Archive, CLLD, TalkBank, Pathway Tools, IBDC.
 
 One portal / node = one registry record. Do not add gene pages, occurrences, or ESGF data nodes as extra catalogs.
 
@@ -19,6 +19,7 @@ Integrated Publishing Toolkit for biodiversity data. List: [gbif.org/ipt](https:
 | Google | `"Integrated Publishing Toolkit" IPT GBIF` |
 | Google | `inurl:/ipt "GBIF"` |
 | Censys | `web.endpoints.http.body: "Integrated Publishing Toolkit"` |
+| FOFA | `body="Integrated Publishing Toolkit"` |
 
 Prefer GBIF’s official installation list, then fill gaps with search.
 
@@ -35,6 +36,7 @@ Theme-based portals (SEINet, MyCoPortal, CCH2, Ecdysis, and others) publish spec
 | Google | `"Powered by Symbiota" OR "Symbiota portal" (collections OR occurrences) -site:symbiota.org -site:github.com` |
 | Google | `inurl:/collections/datasets/rsshandler.php` |
 | Censys | `web.endpoints.http.body: "Symbiota"` |
+| FOFA | `body="Symbiota"` |
 
 ## THREDDS (`thredds`) {#thredds}
 
@@ -45,6 +47,7 @@ Scientific data servers (often climate/ocean). **Confirm:** `/thredds/catalog.ht
 | Google | `inurl:/thredds/catalog.html` |
 | Google | `"THREDDS Data Server" catalog` |
 | Censys | `web.endpoints.http.body: "THREDDS"` |
+| FOFA | `body="THREDDS"` |
 | Shodan | `http.html:"THREDDS Data Server"` |
 
 ## ERDDAP (`erddap`) {#erddap}
@@ -55,6 +58,20 @@ NOAA-style tabular/gridded data server. **Confirm:** `/erddap/index.html` or `/e
 |------|-------|
 | Google | `inurl:/erddap "ERDDAP"` |
 | Censys | `web.endpoints.http.body: "ERDDAP"` |
+| FOFA | `body="ERDDAP"` |
+
+## FROST-Server (`frostserver`) {#frostserver}
+
+Fraunhofer IOSB open-source OGC SensorThings API server. Product: [FROST-Server](https://www.iosb.fraunhofer.de/en/projects-and-products/frost-server.html); source: [github.com/FraunhoferIOSB/FROST-Server](https://github.com/FraunhoferIOSB/FROST-Server). Register one public SensorThings catalog per independently operated instance. Typical `catalog_type` is Scientific data repository (urban IoT and groundwater stations are still a Things/Datastreams catalog, not a map viewer). Distinct from THREDDS, ERDDAP, and a SensorThings endpoint that is only a download option on another catalog.
+
+**Confirm:** JSON at `/v1.1/`, `/v1.0/`, or `/FROST-Server/v1.1/` listing `Things` / `Datastreams` / `Locations`, or the default HTML start page titled `Start Page` with heading `FROST-Server`. `Things?$top=1&$count=true` returns `@iot.count`. Skip Fraunhofer k8s demos, SensorUp scratchpads, login-walled hydrometry, and hosts with only a single Thing.
+
+| Tool | Query |
+|------|-------|
+| Google | `"FROST-Server" (SensorThings OR Things OR Datastreams) -site:github.com` |
+| Google | `inurl:/FROST-Server/ "Start Page"` |
+| Censys | `web.endpoints.http.body: "FROST-Server"` |
+| FOFA | `body="FROST-Server"` |
 
 ## OPeNDAP (`opendap`) {#opendap}
 
@@ -66,6 +83,7 @@ Remote subsetting protocol and server ecosystem. Site: [opendap.org](https://www
 |------|-------|
 | Google | `"OPeNDAP" ("catalog.xml" OR DODS) -Hyrax -site:opendap.org -site:github.com` |
 | Censys | `web.endpoints.http.body: "OPeNDAP"` |
+| FOFA | `body="OPeNDAP"` |
 
 ## OPeNDAP Hyrax (`opendaphyrax`) {#opendaphyrax}
 
@@ -78,6 +96,7 @@ The OPeNDAP 4 Data Server, unrelated to the Samvera repository product that uses
 | Google | `"OPeNDAP Hyrax: Contents of" -site:opendap.org -site:github.com` |
 | Google | `inurl:/opendap/ "Hyrax development sponsored by"` |
 | Censys | `web.endpoints.http.body: "OPeNDAP Hyrax"` |
+| FOFA | `body="OPeNDAP Hyrax"` |
 
 ## DataONE (`dataone`) {#dataone}
 
@@ -89,6 +108,7 @@ Earth-science member-node network. Site: [dataone.org](https://www.dataone.org).
 |------|-------|
 | Google | `"DataONE" ("member node" OR MN) repository` |
 | Censys | `web.endpoints.http.body: "DataONE"` |
+| FOFA | `body="DataONE"` |
 
 ## MOLGENIS (`molgenis`) {#molgenis}
 
@@ -109,6 +129,7 @@ database table, cohort, biobank, or variable.
 | Google | `"Created with MOLGENIS" (catalogue OR registry OR collections)` |
 | Google | `inurl:molgenis.do (data OR database OR repository)` |
 | Censys | `web.endpoints.http.body: "Created with MOLGENIS"` |
+| FOFA | `body="Created with MOLGENIS"` |
 
 ## BEXIS2 (`bexis2`) {#bexis2}
 
@@ -128,6 +149,7 @@ installation, not each project, metadata schema, or dataset.
 | Google | `"BEXIS2" (repository OR "research data") -site:github.com` |
 | Google | `inurl:/home/Start BEXIS` |
 | Censys | `web.endpoints.http.body: "BEXIS2"` |
+| FOFA | `body="BEXIS2"` |
 
 ## Diversity Workbench (`diversityworkbench`) {#diversityworkbench}
 
@@ -149,6 +171,7 @@ module, project database, BioCASe datasource, or occurrence record separately.
 | Google | `"Diversity Workbench" (database OR repository OR data)` |
 | Google | `"DiversityCollection" (BioCASe OR RDF OR dataset)` |
 | Censys | `web.endpoints.http.body: "Diversity Workbench"` |
+| FOFA | `body="Diversity Workbench"` |
 
 ## Greenstone (`greenstone`) {#greenstone}
 
@@ -168,6 +191,7 @@ one independently operated library/catalog, not every collection inside it.
 | Google | `inurl:/greenstone3/library/collection` |
 | Google | `inurl:/greenstone/cgi-bin/library.cgi (collection OR library)` |
 | Censys | `web.endpoints.http.body: "greenstone.org/gs3"` |
+| FOFA | `body="greenstone.org/gs3"` |
 
 ## VIVO (`vivo`) {#vivo}
 
@@ -188,6 +212,7 @@ project website itself.
 | Google | `"Powered by VIVO" (dataset OR repository OR data)` |
 | Google | `"VIVO" "research data" (search OR repository)` |
 | Censys | `web.endpoints.http.body: "vitro" AND web.endpoints.http.body: "VIVO"` |
+| FOFA | `body="vitro" && body="VIVO"` |
 
 ## CWIS (`cwis`) {#cwis}
 
@@ -200,12 +225,15 @@ OAI-PMH response using `?verb=Identify`; qualified Dublin Core and RSS links.
 
 **Confirm:** GET the public resource search and OAI Identify response. Avoid the unrelated
 Chest Wall Injury Society acronym. One CWIS collection site = one registry record.
+INFOMED `tesis.sld.cu` and the Artemisa provincial node are verified CWIS catalogs
+(CWIS JavaScript and a `scout.wisc.edu/cwis` credit).
 
 | Tool | Query |
 |------|-------|
 | Google | `"Powered by CWIS" (repository OR collection OR resources)` |
 | Google | `"Collection Workflow Integration System" -site:scout.wisc.edu` |
 | Censys | `web.endpoints.http.body: "Powered by CWIS"` |
+| FOFA | `body="Powered by CWIS"` |
 
 ## Galaxy (`galaxy`) {#galaxy}
 
@@ -217,6 +245,7 @@ Usable-analysis platform that sometimes publishes public data libraries. Site: [
 |------|-------|
 | Google | `"Galaxy" ("data libraries" OR usegalaxy) -site:galaxyproject.org` |
 | Censys | `web.endpoints.http.body: "usegalaxy"` |
+| FOFA | `body="usegalaxy"` |
 
 ## Atlas of Living Australia (`ala`) {#ala}
 
@@ -228,6 +257,7 @@ Biodiversity occurrence catalogs (ALA and national living-atlas forks). Site: [a
 |------|-------|
 | Google | `"Atlas of Living Australia" OR "Living Atlas" (occurrences OR biocache)` |
 | Censys | `web.endpoints.http.body: "biocache"` |
+| FOFA | `body="biocache"` |
 
 ## BirdMap Africa (`birdmap`) {#birdmap}
 
@@ -242,6 +272,7 @@ Citizen-science bird atlas platform of the African Bird Atlas Project. Site: [bi
 | Google | `site:birdmap.africa (atlas OR pentad OR SABAP)` |
 | Google | `"Bird Atlas" (SABAP2 OR Nigeria OR Kenya) birdmap` |
 | Censys | `web.names: "birdmap.africa"` |
+| FOFA | `domain="birdmap.africa"` |
 | crt.sh | `%.birdmap.africa` |
 
 ## CLLD (`clld`) {#clld}
@@ -257,6 +288,7 @@ Cross-Linguistic Linked Data web apps. Site: [clld.org](https://clld.org). Publi
 | Google | `site:clld.org (Grambank OR Lexibank OR Pofatu OR "Cross-Linguistic")` |
 | Google | `"Cross-Linguistic Linked Data" OR "clld-static"` |
 | Censys | `web.names: "clld.org"` |
+| FOFA | `domain="clld.org"` |
 | crt.sh | `%.clld.org` |
 
 ## TalkBank (`talkbank`) {#talkbank}
@@ -272,6 +304,7 @@ Shared spoken-language transcript banks. Site: [talkbank.org](https://talkbank.o
 | Google | `site:talkbank.org (CHILDES OR AphasiaBank OR FluencyBank OR CHAT)` |
 | Google | `"TalkBank" (CHILDES OR "AphasiaBank") -site:github.com` |
 | Censys | `web.names: "talkbank.org"` |
+| FOFA | `domain="talkbank.org"` |
 | crt.sh | `%.talkbank.org` |
 
 ## SciCat (`scicat`) {#scicat}
@@ -286,6 +319,7 @@ Metadata catalogue for photon/neutron facilities. Docs: [scicatproject.github.io
 |------|-------|
 | Google | `"SciCat" (dataset OR catalogue) (ESS OR PSI OR "MAX IV") -site:github.com` |
 | Censys | `web.endpoints.http.body: "scicat"` |
+| FOFA | `body="scicat"` |
 
 ## Axiom Data Science Portal (`axiomportal`) {#axiomportal}
 
@@ -299,6 +333,7 @@ IOOS-style ocean observing explorer (Axiom). Distinct from ERDDAP/THREDDS backen
 |------|-------|
 | Google | `"Axiom" ("Data Science" OR IOOS) portal` |
 | Censys | `web.endpoints.http.body: "axiomdatascience"` |
+| FOFA | `body="axiomdatascience"` |
 
 ## OntoPortal (`ontoportal`) {#ontoportal}
 
@@ -310,6 +345,7 @@ Ontology repositories (BioPortal-style). Site: [ontoportal.org](https://ontoport
 |------|-------|
 | Google | `"OntoPortal" OR "BioPortal" (ontology repository) -site:bioontology.org` |
 | Censys | `web.endpoints.http.body: "ontoportal"` |
+| FOFA | `body="ontoportal"` |
 
 ## Breedbase (`breedbase`) {#breedbase}
 
@@ -324,6 +360,7 @@ Crop breeding information systems. Site: [breedbase.org](https://breedbase.org).
 | Google | `"Breedbase" OR CassavaBase OR MusaBase OR YamBase OR SweetPotatoBase (breeding OR BrAPI)` |
 | Google | `inurl:/brapi/v2/serverinfo` |
 | Censys | `web.endpoints.http.body: "Breedbase"` |
+| FOFA | `body="Breedbase"` |
 
 ## Tripal (`tripal`) {#tripal}
 
@@ -337,6 +374,7 @@ GMOD Tripal genome databases (Drupal + Chado). Site: [tripal.info](https://tripa
 |------|-------|
 | Google | `"Powered by Tripal" OR "Tripal" (genome OR germplasm OR Chado) -site:tripal.info -site:github.com` |
 | Censys | `web.endpoints.http.body: "Tripal"` |
+| FOFA | `body="Tripal"` |
 
 ## VEuPathDB (`veupathdb`) {#veupathdb}
 
@@ -350,6 +388,7 @@ EuPathDB WDK organism sites. Hub: [veupathdb.org](https://veupathdb.org). Compon
 |------|-------|
 | Google | `"VEuPathDB" OR EuPathDB OR PlasmoDB OR FungiDB OR VectorBase OR TriTrypDB (genome OR "data set")` |
 | Censys | `web.endpoints.http.body: "VEuPathDB"` |
+| FOFA | `body="VEuPathDB"` |
 
 ## MassBank (`massbank`) {#massbank}
 
@@ -364,6 +403,7 @@ Community reference mass-spectral databases. Instances: MassBank Europe, MassBan
 | Google | `"MassBank" (spectra OR "mass spectral") (database OR repository) -site:github.com` |
 | Google | `"MassBank of North America" OR MoNA spectra` |
 | Censys | `web.endpoints.http.body: "MassBank"` |
+| FOFA | `body="MassBank"` |
 
 ## ioChem-BD (`iochembd`) {#iochembd}
 
@@ -377,6 +417,7 @@ Distributed computational-chemistry repository. Site: [iochem-bd.org](https://ww
 |------|-------|
 | Google | `"ioChem-BD" (repository OR "computational chemistry") -site:github.com` |
 | Censys | `web.endpoints.http.body: "ioChem-BD"` |
+| FOFA | `body="ioChem-BD"` |
 
 ## ESGF (`esgf`) {#esgf}
 
@@ -390,6 +431,7 @@ Earth System Grid Federation **search/index** (Metagrid, esg-search). Site: [esg
 |------|-------|
 | Google | `"ESGF" OR Metagrid ("esg-search" OR CMIP) (catalog OR search)` |
 | Censys | `web.endpoints.http.body: "esg-search"` |
+| FOFA | `body="esg-search"` |
 
 ## ICAT (`icat`) {#icat}
 
@@ -401,6 +443,7 @@ Facility scientific catalog. Site: [icatproject.org](https://icatproject.org).
 |------|-------|
 | Google | `"ICAT" (facility OR "data catalog" OR "scientific data") -site:icatproject.org -site:github.com` |
 | Censys | `web.endpoints.http.body: "icat"` |
+| FOFA | `body="icat"` |
 
 ## InterMine (`intermine`) {#intermine}
 
@@ -412,6 +455,7 @@ Biological data warehouse. Site: [intermine.org](https://intermine.org). Organis
 |------|-------|
 | Google | `"InterMine" OR FlyMine OR HumanMine ("begin.do" OR "web service") -site:intermine.org -site:github.com` |
 | Censys | `web.endpoints.http.body: "InterMine"` |
+| FOFA | `body="InterMine"` |
 
 ## GRIN-Global (`gringlobal`) {#gringlobal}
 
@@ -423,6 +467,7 @@ Genebank information system (USDA NPGS, AAFC, and other centres). Site: [grin-gl
 |------|-------|
 | Google | `"GRIN-Global" OR inurl:/gringlobal/ (accession OR germplasm) -site:grin-global.org` |
 | Censys | `web.endpoints.http.body: "GRIN-Global"` |
+| FOFA | `body="GRIN-Global"` |
 
 ## PlutoF (`plutof`) {#plutof}
 
@@ -434,6 +479,7 @@ University of Tartu biodiversity workbench. Site: [plutof.ut.ee](https://plutof.
 |------|-------|
 | Google | `"PlutoF" (repository OR biodiversity OR DOI) site:.ee` |
 | Censys | `web.endpoints.http.body: "PlutoF"` |
+| FOFA | `body="PlutoF"` |
 
 ## JGI Genome Portal (`jgi`) {#jgi}
 
@@ -445,6 +491,7 @@ DOE Joint Genome Institute portal family (MycoCosm, PhycoCosm, Phytozome). Confi
 |------|-------|
 | Google | `"JGI Genome Portal" OR MycoCosm OR Phytozome OR PhycoCosm (genome OR catalog) site:jgi.doe.gov` |
 | Censys | `web.endpoints.http.body: "JGI Genome Portal"` |
+| FOFA | `body="JGI Genome Portal"` |
 
 ## cBioPortal (`cbioportal`) {#cbioportal}
 
@@ -456,6 +503,7 @@ Cancer genomics study portal. Site: [cbioportal.org](https://www.cbioportal.org)
 |------|-------|
 | Google | `"cBioPortal" ("cancer genomics" OR studies) -site:github.com` |
 | Censys | `web.endpoints.http.body: "cBioPortal"` |
+| FOFA | `body="cBioPortal"` |
 
 ## ESA Science Archive (`esasciencearchive`) {#esasciencearchive}
 
@@ -467,6 +515,7 @@ ESA Science Data Centre archives (Gaia, XMM-Newton, Herschel, Planck, Euclid, an
 |------|-------|
 | Google | `"ESA Science Archive" OR ESAC (TAP OR VOSI OR Gaia OR XMM) site:esac.esa.int` |
 | Censys | `web.endpoints.http.body: "ESA Science Archive"` |
+| FOFA | `body="ESA Science Archive"` |
 
 ## Pathway Tools (`pathwaytools`) {#pathwaytools}
 
@@ -481,6 +530,7 @@ SRI International Pathway/Genome Database software. Site: [bioinformatics.ai.sri
 | Google | `"Pathway Tools" (BioCyc OR EcoCyc OR MetaCyc) (database OR PGDB) -site:github.com` |
 | Google | `site:biocyc.org OR site:ecocyc.org OR site:metacyc.org` |
 | Censys | `web.endpoints.http.body: "Pathway Tools"` |
+| FOFA | `body="Pathway Tools"` |
 
 ## IBDC (`ibdc`) {#ibdc}
 
@@ -494,6 +544,7 @@ Indian Biological Data Centre archives. Hub: [ibdc.dbt.gov.in](https://ibdc.dbt.
 |------|-------|
 | Google | `"Indian Biological Data Centre" OR IBDC (INDA OR "proteome databank") site:ibdc.dbt.gov.in` |
 | Censys | `web.names: "ibdc.dbt.gov.in"` |
+| FOFA | `host="ibdc.dbt.gov.in"` |
 
 ## Specify Web Portal (`specify`) {#specify}
 
@@ -508,6 +559,14 @@ is not a Specify fingerprint. Example: `https://specifyportal.uog.edu/`.
 **Search:** `"Specify Web Portal" (museum OR collection OR university)`.
 Register the public collection portal, not a staff login or each specimen page.
 
+
+| Tool | Query |
+|------|-------|
+| Google | `"Specify Web Portal" (museum OR collection OR university)` |
+| Censys | `web.endpoints.http.body: "Specify Web Portal"` |
+| FOFA | `body="Specify Web Portal"` |
+
+
 ## BRAHMS Online (`brahmsonline`) {#brahmsonline}
 
 Web publishing component of BRAHMS, distinct from its desktop collection-management client.
@@ -521,6 +580,14 @@ Mauritius Herbarium explicitly attributes its database to BRAHMS.
 **Search:** `"BRAHMS Online" (herbarium OR specimens)` and `inurl:/bol/ "BRAHMS"`.
 Count distinct published collections, not botanical species pages or product documentation.
 
+
+| Tool | Query |
+|------|-------|
+| Google | `"BRAHMS Online" (herbarium OR specimens)` |
+| Censys | `web.endpoints.http.body: "/bol/"` |
+| FOFA | `body="BRAHMS Online"` |
+
+
 ## LOVD (`lovd`) {#lovd}
 
 Reusable Leiden Open Variation Database software. The maintainer's
@@ -533,6 +600,14 @@ Do not classify arbitrary variant databases or every link in the broader LSDB di
 **Search:** `"LOVD" "variants" "genes" -site:lovd.app`.
 The registered `www.lovd.nl` URL is a network/software entry page linking to databases;
 resolve the intended installation before harvesting or adding an API endpoint.
+
+
+| Tool | Query |
+|------|-------|
+| Google | `"LOVD" variants genes -site:lovd.app` |
+| Censys | `web.endpoints.http.body: "Leiden Open Variation Database"` |
+| FOFA | `body="LOVD" && body="variants"` |
+
 
 ## DaCHS (`dachs`) {#dachs}
 
@@ -548,15 +623,32 @@ content, not merely HTTP 200. GAVO, ASTRON and ArVO are verified examples.
 Treat GAVO's `dc.g-vo.org` and `dc.zah.uni-heidelberg.de` as a potential alias pair during
 new-record discovery; matching software on two registry records does not prove two deployments.
 
+
+| Tool | Query |
+|------|-------|
+| Google | `"gavo_dc.css" OR "DaCHS" "data center"` |
+| Censys | `web.endpoints.http.body: "gavo_dc.css"` |
+| FOFA | `body="gavo_dc.css"` |
+| FOFA | `header="DaCHS"` |
+
+
 ## Daiquiri (`daiquiri`) {#daiquiri}
 
 [AIP's publication framework](https://django-daiquiri.github.io/docs/) is used for Gaia@AIP,
-RAVE, CosmoSim, APPLAUSE and MUSE-Wide. The documentation links to actual deployments.
+RAVE, CosmoSim, APPLAUSE, MUSE-Wide, CARS, and CLUES. The documentation links to actual deployments.
 **Signals:** a “Proudly powered by Daiquiri” footer linking to the upstream project;
 query interfaces and `/metadata/` schema/table pages corroborate the product identity.
 **Search:** `"Proudly powered by" "Daiquiri"`.
 Confirm the data portal itself: an AIP hostname, astronomical subject or TAP endpoint alone
 is insufficient. Legacy and current generations can have different routes.
+
+
+| Tool | Query |
+|------|-------|
+| Google | `"Proudly powered by" Daiquiri` |
+| Censys | `web.endpoints.http.body: "Proudly powered by Daiquiri"` |
+| FOFA | `body="Proudly powered by Daiquiri"` |
+
 
 ## AMBIT (`ambit`) {#ambit}
 
@@ -570,6 +662,14 @@ then inspect a small advertised substance search response. RDF content negotiati
 HTML branding. A previous timeout alone does not establish inactivity.
 **Search:** `"AMBIT" "eNanoMapper" "database"` or `"AMBIT REST web services"`.
 Avoid confusing this product with unrelated software also named Ambit.
+
+
+| Tool | Query |
+|------|-------|
+| Google | `"AMBIT" ("eNanoMapper" OR "REST web services") database -site:sourceforge.net` |
+| Censys | `web.endpoints.http.body: "AMBIT REST"` |
+| FOFA | `body="AMBIT REST web services"` |
+
 
 ## ESIMO (`esimo`) {#esimo}
 
@@ -587,6 +687,266 @@ resources within a node.
 
 **Search:** `"Портал ЕСИМО"`, `inurl:/portal/portal/esimo-user/`, or
 `"portal-ajax" "esimo.resources.js"`.
+
+
+| Tool | Query |
+|------|-------|
+| Google | `"Портал ЕСИМО" OR inurl:/portal/portal/esimo-user/` |
+| Censys | `web.endpoints.http.body: "esimo.resources.js"` |
+| FOFA | `body="esimo.resources.js"` |
+
+
+## MINERVA (`minerva`) {#minerva}
+
+LCSB Luxembourg pathway-map platform. Docs: [minerva.pages.uni.lu](https://minerva.pages.uni.lu/). MINERVA-Net ([minerva-net.lcsb.uni.lu](https://minerva-net.lcsb.uni.lu/)) is the public registry of hosted maps. Independent instances serve `/minerva/` UIs and a REST API.
+
+**Confirm:** GET the instance home or MINERVA-Net. Title/body `MINERVA`. One catalog per **public instance or the Net registry**, not per disease-map diagram. Skip login-only lab tenants.
+
+| Tool | Query |
+|------|-------|
+| Google | `"MINERVA" (pathway OR "disease map" OR SBGN) (platform OR registry) -site:github.com` |
+| Censys | `web.endpoints.http.body: "MINERVA"` |
+| FOFA | `body="MINERVA"` |
+
+## Nextstrain (`nextstrain`) {#nextstrain}
+
+Pathogen phylodynamics platform. Hub: [nextstrain.org](https://nextstrain.org). Community instances share Auspice JSON datasets.
+
+**Confirm:** GET the public dataset catalog (`nextstrain.org` or a documented community host). One record per public Nextstrain/Auspice catalog, not per pathogen narrative page.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Nextstrain" (pathogen OR phylogeny OR Auspice) (dataset OR catalog)` |
+| Censys | `web.endpoints.http.title: "Nextstrain"` |
+| FOFA | `title="Nextstrain"` |
+
+## Materials Cloud (`materialscloud`) {#materialscloud}
+
+EPFL/MARVEL computational materials platform (AiiDA Explore UI). Distinct from Materials Cloud Archive, which is InvenioRDM (`inveniordm`).
+
+**Confirm:** GET `/explore` or the Explore work-graph catalog. Do **not** retag `archive.materialscloud.org`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Materials Cloud" (Explore OR AiiDA) -archive.materialscloud.org` |
+| Censys | `web.endpoints.http.body: "Materials Cloud"` |
+| FOFA | `body="Materials Cloud"` |
+
+## OpenKIM (`openkim`) {#openkim}
+
+Open Knowledgebase of Interatomic Models. Site: [openkim.org](https://openkim.org).
+
+**Confirm:** GET the public model/test catalog. One record for the hub; skip individual potential landing pages as catalogs.
+
+| Tool | Query |
+|------|-------|
+| Google | `"OpenKIM" ("interatomic" OR potential OR "force field")` |
+| Censys | `web.names: "openkim.org"` |
+| FOFA | `domain="openkim.org"` |
+
+## ChecklistBank (`checklistbank`) {#checklistbank}
+
+Catalogue of Life checklist platform. Site: [checklistbank.org](https://www.checklistbank.org). REST API at `api.checklistbank.org`.
+
+**Confirm:** GET the dataset catalog or `/api`. One record for the hub (and any independent ChecklistBank deployments). Not GBIF IPT; not Catalogue of Life’s public website alone.
+
+| Tool | Query |
+|------|-------|
+| Google | `"ChecklistBank" ("Catalogue of Life" OR taxonomy OR checklist)` |
+| Censys | `web.names: "checklistbank.org"` |
+| FOFA | `domain="checklistbank.org"` |
+
+## ProteoSAFe (`proteosafe`) {#proteosafe}
+
+UCSD CCMS mass-spectrometry catalog UI shared by GNPS and MassIVE (`/ProteoSAFe/datasets.jsp`).
+
+**Confirm:** GET `/ProteoSAFe/datasets.jsp` or the GNPS/MassIVE dataset list. One record per public ProteoSAFe catalog (GNPS metabolomics vs MassIVE proteomics), not per dataset or workflow job.
+
+| Tool | Query |
+|------|-------|
+| Google | `"ProteoSAFe" (GNPS OR MassIVE OR datasets.jsp)` |
+| Censys | `web.endpoints.http.body: "ProteoSAFe"` |
+| FOFA | `body="ProteoSAFe"` |
+
+## CyVerse Data Commons (`cyverse`) {#cyverse}
+
+CyVerse public data-publication catalog (DOI curated data and community collections). Site: [datacommons.cyverse.org](https://datacommons.cyverse.org). iRODS is storage, not the catalog id.
+
+**Confirm:** GET the Data Commons catalog home. One record for the public Commons; skip authenticated DE workspaces and raw iRODS endpoints.
+
+| Tool | Query |
+|------|-------|
+| Google | `"CyVerse" "Data Commons" (DOI OR dataset OR repository)` |
+| Censys | `web.names: "datacommons.cyverse.org"` |
+| FOFA | `host="datacommons.cyverse.org"` |
+
+## Hugging Face (`huggingface`) {#huggingface}
+
+ML dataset hub at [huggingface.co/datasets](https://huggingface.co/datasets/). One catalog for the Hub; do not add per-user spaces. Catalog type is often Machine learning catalog (`openmlorg` pattern).
+
+**Confirm:** GET `/datasets/`. Title `Datasets – Hugging Face`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Hugging Face" datasets (hub OR catalog)` |
+| Censys | `web.names: "huggingface.co"` |
+| FOFA | `domain="huggingface.co"` |
+
+## OpenAlex (`openalex`) {#openalex}
+
+OurResearch bibliographic catalog. Site: [openalex.org](https://openalex.org). Cloudflare may return 403 to bots; the registry row is the unique hub.
+
+**Confirm:** GET the home or `https://api.openalex.org/`. Do not add per-work landing pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `"OpenAlex" (API OR catalog) OurResearch` |
+| Censys | `web.names: "openalex.org"` |
+| FOFA | `domain="openalex.org"` |
+
+## Wikibase (`wikibase`) {#wikibase}
+
+MediaWiki knowledge-base software. Wikidata ([wikidata.org](https://www.wikidata.org)) is the primary public catalog. Independent Wikibase instances share the Wikibase API and often a SPARQL endpoint.
+
+**Confirm:** GET the wiki home. Title/body `Wikidata` / `Wikibase`. One record per public instance, not per entity.
+
+| Tool | Query |
+|------|-------|
+| Google | `"powered by Wikibase" OR "Special:ListDatatypes" Wikibase` |
+| Censys | `web.endpoints.http.body: "wikibase"` |
+| FOFA | `body="wikibase"` |
+
+## DBpedia Databus (`databus`) {#databus}
+
+DBpedia dataset catalog/versioning bus. Site: [databus.dbpedia.org](https://databus.dbpedia.org). Distinct from the DBpedia Association WordPress homepage (`www.dbpedia.org` stays `custom`).
+
+**Confirm:** GET Databus (OIDC login on the SPA is OK if the product is Databus). Do not retag www.dbpedia.org.
+
+| Tool | Query |
+|------|-------|
+| Google | `"DBpedia Databus" (dataset OR catalog)` |
+| Censys | `web.names: "databus.dbpedia.org"` |
+| FOFA | `host="databus.dbpedia.org"` |
+
+## MGnify (`mgnify`) {#mgnify}
+
+EMBL-EBI microbiome archive (formerly EBI Metagenomics). Site: [ebi.ac.uk/metagenomics](https://www.ebi.ac.uk/metagenomics).
+
+**Confirm:** GET `/metagenomics`. Title `MGnify`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"MGnify" (metagenomics OR microbiome) EBI` |
+| Censys | `web.endpoints.http.title: "MGnify"` |
+| FOFA | `title="MGnify"` |
+
+## MetaboLights (`metabolights`) {#metabolights}
+
+EMBL-EBI metabolomics study archive. Site: [ebi.ac.uk/metabolights](https://www.ebi.ac.uk/metabolights/).
+
+**Confirm:** GET `/metabolights`. Title `MetaboLights`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"MetaboLights" (metabolomics OR study) EBI` |
+| Censys | `web.endpoints.http.title: "MetaboLights"` |
+| FOFA | `title="MetaboLights"` |
+
+## BioStudies (`biostudies`) {#biostudies}
+
+EMBL-EBI archive for studies that do not fit a dedicated archive. Site: [ebi.ac.uk/biostudies](https://www.ebi.ac.uk/biostudies/).
+
+**Confirm:** GET `/biostudies`. Title `BioStudies`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"BioStudies" EBI (archive OR study)` |
+| Censys | `web.endpoints.http.title: "BioStudies"` |
+| FOFA | `title="BioStudies"` |
+
+## Reactome (`reactome`) {#reactome}
+
+Curated pathway knowledgebase. Site: [reactome.org](https://reactome.org).
+
+**Confirm:** GET the home. Title `Reactome Pathway Database`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Reactome" "Pathway Database"` |
+| Censys | `web.names: "reactome.org"` |
+| FOFA | `domain="reactome.org"` |
+
+## WikiPathways (`wikipathways`) {#wikipathways}
+
+Community pathway database. Site: [wikipathways.org](https://www.wikipathways.org).
+
+**Confirm:** GET the home. Title `WikiPathways`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"WikiPathways" (pathway OR GPML)` |
+| Censys | `web.names: "wikipathways.org"` |
+| FOFA | `domain="wikipathways.org"` |
+
+## UCSC Genome Browser (`ucscgenomebrowser`) {#ucscgenomebrowser}
+
+UCSC genome annotation catalog and viewer. Site: [genome.ucsc.edu](https://genome.ucsc.edu).
+
+**Confirm:** GET the home. Title `UCSC Genome Browser`. One record for the public browser, not per assembly hub unless it is an independent catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `"UCSC Genome Browser" (hub OR downloads)` |
+| Censys | `web.names: "genome.ucsc.edu"` |
+| FOFA | `host="genome.ucsc.edu"` |
+
+## FlyBase (`flybase`) {#flybase}
+
+Drosophila model-organism knowledgebase. Site: [flybase.org](https://flybase.org). CloudFront may return 403 to bots; the registry row is the unique hub.
+
+**Confirm:** GET flybase.org when reachable. Do not add per-gene pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `"FlyBase" Drosophila (database OR genome)` |
+| Censys | `web.names: "flybase.org"` |
+| FOFA | `domain="flybase.org"` |
+
+## WormBase (`wormbase`) {#wormbase}
+
+C. elegans / nematode knowledgebase. Site: [wormbase.org](https://wormbase.org). Cloudflare may return 403 to bots.
+
+**Confirm:** GET wormbase.org when reachable. Do not add per-gene pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `"WormBase" "C. elegans" (database OR genome)` |
+| Censys | `web.names: "wormbase.org"` |
+| FOFA | `domain="wormbase.org"` |
+
+## iDigBio (`idigbio`) {#idigbio}
+
+US digitized biodiversity-collections portal. Public catalog: [portal.idigbio.org](https://portal.idigbio.org/). Distinct from the iDigBio IPT (`ipt`).
+
+**Confirm:** GET the Portal (www.idigbio.org currently redirects). Title `iDigBio Portal`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"iDigBio Portal" (specimen OR collections)` |
+| Censys | `web.names: "portal.idigbio.org"` |
+| FOFA | `host="portal.idigbio.org"` |
+
+## iNaturalist (`inaturalist`) {#inaturalist}
+
+Open-source citizen-science observation platform. Site: [inaturalist.org](https://www.inaturalist.org). Register the hub (and documented independent iNaturalist Network nodes), not per-user feeds.
+
+**Confirm:** GET the home. Title includes `iNaturalist`. API `api.inaturalist.org/v1`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"iNaturalist" (API OR "open source") -site:inaturalist.org` |
+| Censys | `web.names: "inaturalist.org"` |
+| FOFA | `domain="inaturalist.org"` |
 
 ## Related
 

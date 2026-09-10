@@ -1,6 +1,6 @@
 # Discovering metadata catalogs
 
-How to find **metadata catalog** installations (`catalog_type: Metadata catalog`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Overview: [discovery.md](discovery.md).
+How to find **metadata catalog** installations (`catalog_type: Metadata catalog`). Search-engine syntax (Google, Censys, and [FOFA as a Censys alternative](discovery-search-tools.md#fofa)): [discovery-search-tools.md](discovery-search-tools.md). Overview: [discovery.md](discovery.md).
 
 These sites publish **catalog/dataset metadata** (often RDF / DCAT or SDMX structural metadata), not a full open-data CMS and not a research-data file store. If the public product is CKAN, Dataverse, or GeoNetwork, use those `software.id` values and types instead.
 
@@ -17,7 +17,9 @@ Open-source REST API and web client for FAIR metadata as RDF (DCAT + the [FAIR D
 | Google | `"FAIR Data Point" OR "fairdatapoint" (catalog OR DCAT) -site:github.com` |
 | Google | `inurl:fairdatapoint OR intitle:"FAIR Data Point"` |
 | Censys | `web.endpoints.http.body: "fairdatapoint"` |
+| FOFA | `body="fairdatapoint"` |
 | Censys | `web.endpoints.http.body: "fdp-client"` |
+| FOFA | `body="fdp-client"` |
 | crt.sh | `fdp.%` |
 
 Start from the public index, then fill gaps with search. Skip points that require login for any catalog listing. Register the FDP root, not a single dataset IRI. Do not duplicate the index (`home.fairdatapoint.org`) if it is already in the registry.
@@ -34,6 +36,7 @@ Open-source metadata registry for models and controlled vocabularies. Site: [ari
 |------|-------|
 | Google | `"Aristotle" ("Metadata Registry" OR MDR) (vocabulary OR "data element") -site:github.com` |
 | Censys | `web.endpoints.http.body: "Aristotle"` |
+| FOFA | `body="Aristotle"` |
 
 ## Fusion Metadata Registry (`fusionregistry`) {#fusionregistry}
 
@@ -48,6 +51,7 @@ SDMX-native structural metadata registry (code lists, DSDs, REST). Often branded
 | Google | `"Fusion Registry" OR "Fusion Metadata Registry" SDMX -site:github.com` |
 | Google | `inurl:/sdmx/v2/ "Fusion"` |
 | Censys | `web.endpoints.http.body: "Fusion Registry"` |
+| FOFA | `body="Fusion Registry"` |
 
 ## Metadata Browser (`mwmb`) {#mwmb}
 
@@ -61,6 +65,21 @@ MetadataWorks catalog UI for datasets, standards, and terminologies. Site: [meta
 |------|-------|
 | Google | `"Metadata Browser" MetadataWorks (catalog OR terminology)` |
 | Censys | `web.endpoints.http.body: "MetadataWorks"` |
+| FOFA | `body="MetadataWorks"` |
+
+## DataHub (`datahubproject`) {#datahubproject}
+
+LinkedIn/Acryl DataHub metadata platform. Site: [datahubproject.io](https://datahubproject.io). Distinct from datahub.io (CKAN).
+
+**Signals:** HTML title `DataHub`; meta description “A Metadata Platform for the Modern Data Stack”; `/api/graphql`; `assets/index-*.css` SPA. GraphQL is often `401` without a token — the public UI is enough to confirm.
+
+**Confirm:** GET the catalog home. Stop on login-only tenants with no public dataset list. Do not invent this id from a generic “data hub” heading.
+
+| Tool | Query |
+|------|-------|
+| Google | `"DataHub" "Metadata Platform for the Modern Data Stack"` |
+| Censys | `web.endpoints.http.title: "DataHub"` |
+| FOFA | `title="DataHub"` |
 
 ## Related
 

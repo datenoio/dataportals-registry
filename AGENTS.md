@@ -38,7 +38,7 @@ The registry collects and maintains structured metadata about:
 - Metadata catalogs
 - Other data infrastructure
 
-As of 8 September 2026, source YAML contains **35,266** verified catalog entries across **224** country/territory folders, **0** scheduled records, and **423** software definitions. Dataset exports match YAML. Last published snapshot is v1.20.0 (35,266 catalogs, 0 scheduled, 423 software).
+As of 10 September 2026, source YAML contains **36,873** verified catalog entries across **224** country/territory folders, **0** scheduled records, and **470** software definitions. Dataset exports: **36,776** catalogs, **23** scheduled JSONL, **463** software (last `build`; lag YAML). Last published snapshot is v1.20.0 (35,266 catalogs, 0 scheduled, 423 software).
 
 ### Scope Boundary (Important)
 
@@ -88,7 +88,7 @@ dataportals-registry/
 │   │   ├── catalog.json    # Main catalog schema
 │   │   └── software.json   # Software schema
 │   ├── datasets/           # Generated exports
-│   │   ├── catalogs.jsonl  # Main catalog export
+│   │   ├── catalogs.jsonl.zst  # Compressed catalog export
 │   │   ├── software.jsonl  # Software export
 │   │   ├── full.jsonl      # Combined entities + scheduled
 │   │   ├── *.zst           # Compressed versions
@@ -526,13 +526,13 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 
 ### Task: Discover catalogs not yet in the registry
 
-1. Duplicate-check exports (`data/datasets/datasets.duckdb` or `full.parquet`), not a full YAML walk
+1. Duplicate-check exports (`data/datasets/datasets.duckdb` or `full.parquet`), not a full YAML walk. If DuckDB is locked, use Parquet.
 2. Follow [docs/agents/discover.md](docs/agents/discover.md) (human narrative: [docs/discovery.md](docs/discovery.md), hunt patterns: [docs/discovery.md#hunt-patterns](docs/discovery.md#hunt-patterns))
 3. Prefer vendor/government lists, national harvest-source APIs, and named directories, then documented search queries in [docs/discovery-search-tools.md](docs/discovery-search-tools.md) and the per-platform guides (`docs/discovery-opendata.md`, `docs/discovery-geoportals.md`, `docs/discovery-scientific.md`, `docs/discovery-metadata.md`, `docs/discovery-indicators.md`, `docs/discovery-other.md`). Software ID map: [docs/software-index.md](docs/software-index.md).
-4. Configure Cursor / ChatGPT / Censys MCP using [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md) when the hunt needs those tools
+4. Configure Cursor / ChatGPT / Censys MCP (or FOFA as a Censys alternative) using [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md) when the hunt needs those tools
 5. Probe only candidate hosts with targeted GETs; do not write internet-wide scanners
-6. Add verified finds with `add-single --scheduled`, then the contribute checklist below
-7. Choose the next hunt from [docs/agents/improve.md](docs/agents/improve.md) (harvest sources, dataset-bearing IRs, country indicators, named directories — not more US ArcGIS)
+6. Add verified finds with `add-single --scheduled`, then the contribute checklist below. A hunt that finds 0 missing catalogs is complete — report that and stop.
+7. Choose the next hunt from [docs/agents/improve.md](docs/agents/improve.md) (pending instance lists for new software IDs, dataset-bearing IRs, country indicators leftovers, named directories, harvest-source leftovers — not more US ArcGIS or another PL/CZ/IT commune sweep)
 8. Match the user prompt to a hunt type in [docs/agents/discover.md](docs/agents/discover.md#hunt-types)
 
 ### Task: Harvest datasets from a catalog API
@@ -545,7 +545,7 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 
 ### Task: Choose what to improve next
 
-Follow [docs/agents/improve.md](docs/agents/improve.md): software-first vendor lists, country-shape hunts (scientific IRs, native NSO tables, Global South open data), then country record reviews. Do not start unscoped US/EU geoportal sweeps.
+Follow [docs/agents/improve.md](docs/agents/improve.md): software-first vendor tenant lists, country-shape hunts (scientific IRs, native NSO tables, Global South open data), then country record reviews. Do not start unscoped US/EU geoportal sweeps or repeat a software-instance hunt from the last two weeks.
 
 ### Task: Add a New Catalog Entry
 
@@ -610,7 +610,7 @@ Follow [docs/software-taxonomy.md](docs/software-taxonomy.md#adding-a-software-d
 - [docs/getting-started.md](docs/getting-started.md) - Published internals (GitHub Pages source)
 - [docs/data-model.md](docs/data-model.md) / [docs/vocabularies.md](docs/vocabularies.md) / [docs/quality-rules.md](docs/quality-rules.md) / [docs/cli.md](docs/cli.md)
 - [docs/agents/query.md](docs/agents/query.md) / [docs/agents/discover.md](docs/agents/discover.md) / [docs/agents/contribute.md](docs/agents/contribute.md) / [docs/agents/improve.md](docs/agents/improve.md)
-- [docs/discovery.md](docs/discovery.md) / [docs/discovery-search-tools.md](docs/discovery-search-tools.md) / [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md) / [docs/discovery-metadata.md](docs/discovery-metadata.md) / [docs/discovery-other.md](docs/discovery-other.md) — find catalogs not yet registered; configure Cursor, ChatGPT, Censys MCP
+- [docs/discovery.md](docs/discovery.md) / [docs/discovery-search-tools.md](docs/discovery-search-tools.md) / [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md) / [docs/discovery-metadata.md](docs/discovery-metadata.md) / [docs/discovery-other.md](docs/discovery-other.md) — find catalogs not yet registered; configure Cursor, ChatGPT, Censys MCP, or FOFA
 - [llms.txt](llms.txt) - Agent index of published docs
 - [CONTRIBUTING.md](CONTRIBUTING.md) - Human contribution guidelines
 - [openspec/project.md](openspec/project.md) - Project conventions

@@ -1,6 +1,6 @@
 # Discovering search engines, ML catalogs, API directories, and marketplaces
 
-How to find catalog types that do not have a dedicated high-volume software page: **Data search engine**, **Machine learning catalog**, **API Catalog**, and **Data marketplace**. Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Overview: [discovery.md](discovery.md). Type rules: [catalog-types.md](catalog-types.md).
+How to find catalog types that do not have a dedicated high-volume software page: **Data search engine**, **Machine learning catalog**, **API Catalog**, and **Data marketplace**. Search-engine syntax (Google, Censys, and [FOFA as a Censys alternative](discovery-search-tools.md#fofa)): [discovery-search-tools.md](discovery-search-tools.md). Overview: [discovery.md](discovery.md). Type rules: [catalog-types.md](catalog-types.md).
 
 These types are uncommon compared with open data, geo, and scientific repositories. Prefer an existing `software.id` when the product matches; otherwise use `custom`. Do not invent a new software ID for a one-off site.
 
@@ -21,6 +21,7 @@ EXPLORE is the global Graph UI; CONNECT hosts national and community gateways (`
 | Google | `"OpenAIRE" (Explore OR CONNECT OR "research portal") -site:openaire.eu/about` |
 | Google | `site:openaire.eu (Explore OR CONNECT)` |
 | Censys | `web.names: "openaire.eu"` |
+| FOFA | `domain="openaire.eu"` |
 
 Other aggregators (national dataset search, harvested CKAN unions, commercial catalog search) are usually `software.id: custom`.
 
@@ -58,12 +59,53 @@ Shared software that sometimes maps here:
 
 | `software.id` | When to use | Hunt notes |
 |---------------|-------------|------------|
-| `openmlorg` | OpenML instance | Site: [openml.org](https://www.openml.org). Confirm `/api/v1/` or the public dataset/task UI. Most national copies are already registered. |
+| `openmlorg` | see above | |
+| `huggingface` | Hugging Face Datasets Hub | Site: [huggingface.co/datasets](https://huggingface.co/datasets/). Confirm the datasets catalog. Do not add per-user spaces. |
+| `codalab` | CodaLab Competitions hub | Site: [competitions.codalab.org](https://competitions.codalab.org). Confirm the public competitions list. One hub, not per competition. Distinct from `codabench`. |
+| `codabench` | Codabench hub | Site: [codabench.org](https://www.codabench.org). Confirm title `Codabench`. One hub, not per benchmark. Distinct from `codalab`. |
 | `galaxy` | Public Galaxy with data libraries | See [discovery-scientific.md](discovery-scientific.md). Prefer Scientific unless ML datasets are the primary product. |
 
 Hugging Face, Kaggle, Papers with Code, and similar **global** hubs are usually already in the registry as single catalogs — do not add per-user spaces or per-dataset pages.
 
-Regional challenge platforms (Zindi, AIcrowd, SIGNATE, Grand Challenge, CodaLab/Codabench, and national Chinese hubs such as Baidu AI Studio, BAAI, OpenXLab) are typically `software.id: custom`. Register **one catalog per hub**, not per competition or dataset.
+## OpenML (`openmlorg`) {#openmlorg}
+
+Open machine-learning dataset/task/flow repository. Hub: [openml.org](https://www.openml.org). Docs: [docs.openml.org](https://docs.openml.org). Catalog type is often Machine learning catalog.
+
+**Signals:** OpenML chrome; `/api/v1/`; public dataset/task UI.
+
+**Confirm:** GET `/api/v1/` or the public dataset list. Most national copies are already registered. One hub (plus independent OpenML instances). Do not add per-dataset pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `"OpenML" (datasets OR "machine learning") -site:github.com` |
+| Censys | `web.names: "openml.org"` |
+| FOFA | `domain="openml.org"` |
+
+## CodaLab Competitions (`codalab`) {#codalab}
+
+Open-source ML competition platform. Public hub: [competitions.codalab.org](https://competitions.codalab.org). Source: [github.com/codalab/codalab-competitions](https://github.com/codalab/codalab-competitions). Use `software.id: codalab`. Register the hub once, not per competition. The successor product is Codabench (`codabench`).
+
+**Confirm:** GET the public competitions list. Title includes `CodaLab`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"CodaLab" competitions datasets -site:github.com` |
+| Censys | `web.names: "competitions.codalab.org"` |
+| FOFA | `host="competitions.codalab.org"` |
+
+## Codabench (`codabench`) {#codabench}
+
+Open-source successor to CodaLab Competitions. Public hub: [codabench.org](https://www.codabench.org). Source: [github.com/codalab/codabench](https://github.com/codalab/codabench). Use `software.id: codabench`. Register the hub once, not per benchmark. `/api/datasets/` is often `403`; the public HTML catalog is the product.
+
+**Confirm:** GET the home. Title `Codabench`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Codabench" (benchmark OR competition OR datasets) -site:github.com` |
+| Censys | `web.names: "codabench.org"` |
+| FOFA | `domain="codabench.org"` |
+
+Regional challenge platforms (Zindi, AIcrowd, SIGNATE, Grand Challenge, and national Chinese hubs such as Baidu AI Studio, BAAI, OpenXLab) are typically `software.id: custom`. Register **one catalog per hub**, not per competition or dataset.
 
 | Tool | Query |
 |------|-------|

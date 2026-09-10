@@ -6,7 +6,7 @@ Generated artifacts live in `data/datasets/`. Rebuild with `python scripts/build
 
 | File | Contents |
 |------|----------|
-| `catalogs.jsonl` (+ `.zst`) | Verified entities only |
+| `catalogs.jsonl.zst` | Verified entities only (uncompressed JSONL is not kept; it exceeds GitHub size limits) |
 | `scheduled.jsonl` (+ `.zst`) | Unverified scheduled records (may be empty) |
 | `full.jsonl` (+ `.zst`) | Entities + scheduled |
 | `software.jsonl` (+ `.zst`) | Software / platform definitions |
@@ -21,10 +21,10 @@ Do not mix these three numbers. Exports lag YAML until `python scripts/builder.p
 | Layer | Date | Catalogs | Scheduled | Software | Countries |
 |-------|------|----------|-----------|----------|-----------|
 | **Published GitHub snapshot** | v1.20.0, 8 September 2026 | **35,266** | **0** | **423** | **224** |
-| **Working-tree exports** | last `build` in this tree (8 September 2026) | **35,266** (`catalogs.jsonl`) | **0** | **423** | **224** |
-| **Current source YAML** | 8 September 2026 | **35,266** (`data/entities/`) | **0** (`data/scheduled/`) | **423** | **224** |
+| **Working-tree exports** | last `build` in this tree (10 September 2026) | **36,776** (`catalogs.jsonl.zst`) | **23** | **463** | **224** |
+| **Current source YAML** | 10 September 2026 | **36,873** (`data/entities/`) | **0** (`data/scheduled/`) | **470** | **224** |
 
-Working-tree dumps match source YAML (**35,266** catalogs). Canonical software IDs: `data/reference/software_ids.yaml`.
+Working-tree catalog dumps lag entity YAML (**36,873**) until the next `build`. Scheduled JSONL still has **23** records from an earlier build; source scheduled YAML is empty. Canonical software IDs: `data/reference/software_ids.yaml`. The published snapshot remains v1.20.0 until the next GitHub release.
 
 Filter by catalog type or software in DuckDB / Parquet (see [query-examples.md](query-examples.md)); there are no pre-sliced `bytype/` or `bysoftware/` dumps.
 
@@ -32,7 +32,7 @@ Incidental files such as `software_stats.csv` or `fulldbreg.parquet` may appear 
 
 ## Compression
 
-`.zst` files are [zstandard](https://facebook.github.io/zstd/). Decompress with `unzstd file.zst` or stream them in Python via `zstandard`.
+`.zst` files are [zstandard](https://facebook.github.io/zstd/). Decompress with `unzstd file.zst` or stream them in Python via `zstandard`. Verified catalog records are published only as `catalogs.jsonl.zst`; `python scripts/builder.py build` writes uncompressed `catalogs.jsonl` as a temporary merge input and then deletes it.
 
 ## DuckDB columns
 

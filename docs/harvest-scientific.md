@@ -49,6 +49,8 @@ Page with `start`. `total_count` is in the JSON envelope.
 
 **Drop:** `type=file` (file hits under a dataset), `type=dataverse` (collections), `/dataset.xhtml?persistentId=` as a crawl seed (that is one record). Harvest the installation root from the registry, then this search API.
 
+**Keep:** `type=dataset` search hits.
+
 Docs: [guides.dataverse.org](https://guides.dataverse.org).
 
 ## DSpace 7+ (`dspace`) {#dspace}
@@ -95,15 +97,29 @@ Keep `setSpec` values whose name is dataset / research data / Forschungsdaten. I
 
 **Drop:** `dsoType=COMMUNITY` / `COLLECTION`, researcher `Person` / `OrgUnit` / `Project` (CRIS), bitstream URLs.
 
+**Keep:** items filtered to Dataset / ResearchData (REST entity type, `dc.type`, or OAI dataset set).
+
 ## DSpace-CRIS (`dspacecris`) {#dspacecris}
 
 Same REST/OAI as [DSpace](#dspace). Prefer `f.entityType=Dataset,equals` (or the campus ResearchData entity). Drop CRIS `Person`, `OrgUnit`, and `Project` objects.
 
+**Keep:** Dataset / ResearchData entities via REST or OAI.
+**Drop:** CRIS `Person`, `OrgUnit`, and `Project` objects.
+
+```text
+GET https://host/server/api/discover/search/objects?f.entityType=Dataset,equals
+```
+
+
 ## Invenio (`invenio`) {#invenio}
 
-Classic Invenio (not RDM). `/api/records` returns **all** record types. Filter to datasets the same way as [InvenioRDM](#inveniordm), then confirm the UI is not InvenioRDM-branded.
+Classic Invenio (not RDM). `/api/records` returns **all** record types.
 
-**Drop:** `publication`, `presentation`, `poster`, `image`, `video`, `lesson`, `other`. `software` is not a dataset. OAI is often `/oai2d`.
+```text
+GET https://host/api/records?size=25
+```
+
+Filter to datasets the same way as [InvenioRDM](#inveniordm), then confirm the UI is not InvenioRDM-branded. **Keep:** `resource_type` dataset. **Drop:** `publication`, `presentation`, `poster`, `image`, `video`, `lesson`, `other`. `software` is not a dataset. OAI is often `/oai2d`.
 
 ## InvenioRDM (`inveniordm`) {#inveniordm}
 
@@ -123,6 +139,8 @@ GET https://host/api/records?type=dataset&size=100
 Follow `links.next`. Inspect `hits.hits[].metadata.resource_type`.
 
 **Drop:** `publication`, `presentation`, `poster`, `image`, `video`, `lesson`, `other` unless you explicitly want those corpora. `software` is not a dataset.
+
+**Keep:** `resource_type` dataset (or `type=dataset`).
 
 OAI is often `/oai2d`. Skip zenodo.org if you only need institutional instances already in the registry.
 
@@ -151,6 +169,8 @@ If there is no dataset set, ListRecords and keep `dc:type` = `dataset` / `Datase
 
 **Drop:** `article`, `thesis`, `book`, `conference_item`, `exhibition`, `performance`.
 
+**Keep:** eprints with `type=dataset` (exportview, OAI set, or `dc:type`).
+
 ## Samvera Hyrax (`hyrax`) {#hyrax}
 
 Blacklight JSON catalog. Work types include GenericWork, Dataset, Etd, Image, FileSet.
@@ -161,9 +181,17 @@ GET https://host/catalog.json?f[human_readable_type_sim][]=Dataset&per_page=100&
 
 If that facet is empty, try `f[resource_type_sim][]=Dataset` or `f[has_model_ssim][]=Dataset`. FileSets are files, not datasets.
 
+**Keep:** Blacklight works typed Dataset. **Drop:** FileSets, GenericWork/Etd/Image unless they are the data product.
+
 ## Samvera (`samvera`) {#samvera}
 
 Same Blacklight harvest as [Hyrax](#hyrax) when the UI is Samvera without Hyrax branding.
+
+```text
+GET https://host/catalog.json?f[human_readable_type_sim][]=Dataset&per_page=100&page=1
+```
+
+**Keep:** Dataset works (same grain as Hyrax). **Drop:** FileSets and publication-only work types.
 
 Islandora (`islandora`) is Drupal+Fedora: harvest the public JSON:API or Solr only when a **dataset** content model / collection exists. Prefer Islandora over raw `fedora` `/fcrepo/rest`. See [Islandora](#islandora).
 
@@ -183,6 +211,8 @@ GET https://host/oai?verb=ListRecords&metadataPrefix=oai_dc&set=doc-type:researc
 
 Solr UI often supports a doctype facet (`doctypefq=researchdata`). Thesis-only OPUS hosts have no dataset set — skip them for a data crawl (they can still be valid **catalog** records).
 
+**Keep:** `doc-type:researchdata` / ResearchData OAI or Solr facet. **Drop:** thesis-only OPUS hosts for a data crawl.
+
 ## MyCoRe (`mycore`) {#mycore}
 
 ```text
@@ -192,6 +222,8 @@ GET https://host/servlets/OAIDataProvider?verb=ListSets
 
 Classification values are local (`mir_types`, `state`). Filter to data/Forschungsdaten classes after reading one object and `ListSets`. Unfiltered `/api/v2/objects` is the whole IR.
 
+**Keep:** objects in data/Forschungsdaten classes. **Drop:** unfiltered `/api/v2/objects` as the whole IR.
+
 ## PHAIDRA (`phaidra`) {#phaidra}
 
 ```text
@@ -200,6 +232,8 @@ GET https://host/api/oai?verb=Identify
 ```
 
 Add a type constraint once you see stored fields (often `cmodel`, `dc_type`, or `object_type`). Example patterns to try: `cmodel:*Dataset*`, `dc_type:dataset`. Drop image/book/thesis cmodels.
+
+**Keep:** Dataset cmodels / `dc_type:dataset`. **Drop:** image, book, and thesis cmodels.
 
 ## DiVA Portal (`divaportal`) {#divaportal}
 
@@ -212,6 +246,8 @@ GET https://www.diva-portal.org/smash/oai?verb=Identify
 
 Keep records typed as research data / dataset. Drop articles, theses, and reports. One harvest scope per `{org}.diva-portal.org` tenant.
 
+**Keep:** research data / dataset records (smash filter or OAI). **Drop:** articles, theses, and reports.
+
 ## WEKO3 (`weko3`) {#weko3}
 
 Item **type IDs are per instance**. The registry probe uses `type=` on `/api/records/` — that integer is **not** portable.
@@ -221,6 +257,12 @@ Item **type IDs are per instance**. The registry probe uses `type=` on `/api/rec
 3. Crawl `/api/records/?type=ITEM_TYPE_ID&page=1&size=20` (replace `ITEM_TYPE_ID`).
 
 Without a resolved type id, you will ingest articles and reports.
+
+```text
+GET https://host/api/records/?page=1&size=20
+```
+
+**Keep:** WEKO3 items whose type id is research data / Dataset. **Drop:** articles and reports (unfiltered `/api/records/`).
 
 ## Elsevier Pure (`pure`) {#pure}
 
@@ -239,6 +281,8 @@ Pure Web Services (`/ws/api/datasets`) often need an API key. If you get `401`, 
 
 **Drop:** `/publications/`, activities, prizes, student theses unless typed as datasets.
 
+**Keep:** Pure **datasets** channel (`/datasets/` sitemap, RSS, or OAI datasets set).
+
 ## Esploro (`esploro`) {#esploro}
 
 Research outputs include datasets as one resource type.
@@ -249,11 +293,23 @@ Otherwise use the public research search with a **datasets** facet (UI labels: D
 
 **Drop:** articles, books, conference papers, ETDs in the same index.
 
+```text
+GET https://host/view/google/siteindex.xml
+```
+
+**Keep:** Esploro records with a datasets / research-data facet.
+
 ## Elsevier Digital Commons (`elsevierdigitalcommons`) {#elsevierdigitalcommons}
 
 Collections mix articles and data series. OAI: `/do/oai/?verb=ListSets`. Harvest only sets whose names are data/datasets/statistics — not the whole IR.
 
 Sitemap `/sitemap/index` can list every series; still skip photograph and journal series.
+
+```text
+GET https://host/do/oai/?verb=ListSets
+```
+
+**Keep:** OAI sets named data/datasets/statistics. **Drop:** photograph and journal series, and the unfiltered IR.
 
 ## Figshare (`figshare`) {#figshare}
 
@@ -268,29 +324,83 @@ Institutional Figshare (not every figshare.com article). Item types are numeric.
 
 GraphQL/search endpoints vary by tenant. Prefer the institution’s public API or sitemap entries under `/articles/dataset/`. Do not crawl `figshare.com/articles` globally.
 
+```text
+GET https://host/articles/dataset/
+```
+
+**Keep:** institutional Figshare `item_type` 3 (dataset) and 4 (fileset). **Drop:** papers, theses, posters, presentations, and a global figshare.com crawl.
+
 ## Haplo (`haplo`) {#haplo}
 
 Output types include publications and datasets. Use the public catalog/OAI and keep records typed as dataset / research data. Skip grant and HR objects. Skip haplo.com marketing hosts.
+
+**Keep:** public catalog/OAI records typed as dataset or research data.
+**Drop:** grant, HR, and person objects; haplo.com marketing hosts.
+
+```text
+GET https://host/oaiprovider?verb=Identify
+GET https://host/oaiprovider?verb=ListSets
+```
+
 
 ## Worktribe (`worktribe`) {#worktribe}
 
 Public catalog/OAI (`/oaiprovider?verb=Identify`). Keep dataset / research data. Skip grant/HR objects and worktribe.com marketing.
 
+**Keep:** public catalog/OAI records typed as dataset / research data.
+**Drop:** grant/HR objects and worktribe.com marketing.
+
+```text
+GET https://host/oaiprovider?verb=Identify
+GET https://host/oaiprovider?verb=ListRecords&metadataPrefix=oai_dc
+```
+
+
 ## Omega-PSIR (`omegapsir`) {#omegapsir}
 
 CRIS with separate publications vs data modules when configured. Prefer URLs/APIs under a datasets/research-data listing. A global publication search is the wrong crawl.
 
+**Keep:** records from a datasets / research-data module when configured.
+**Drop:** global publication search hits (articles, theses) as datasets.
+
+```text
+GET https://host/oai?verb=Identify
+```
+
+
 ## VuFind (`vufind`) {#vufind}
 
-Discovery layer over mixed IRs. Add a format/type facet (`format:Dataset`, `document_type:dataset`) **before** paging. Unfiltered VuFind search is the library catalog, not a data catalog.
+Discovery layer over mixed IRs.
+
+```text
+GET https://host/vufind/Search/Results?type=AllFields&filter[]=format%3A"Dataset"
+```
+
+Add a format/type facet (`format:Dataset`, `document_type:dataset`) **before** paging. **Keep:** facet-filtered dataset records. **Drop:** unfiltered library-catalog hits.
 
 ## LibreCat (`librecat`) {#librecat}
 
 Same facet-first harvest as [VuFind](#vufind) when the public UI is LibreCat.
 
+**Keep:** facet-filtered dataset / research-data records (same grain as VuFind).
+**Drop:** publications and person records.
+
+```text
+GET https://host/vufind/Search/Results?type=AllFields&filter[]=format%3A"Dataset"
+```
+
+
 ## InstDB (`instdb`) {#instdb}
 
 FairStack institutional research-data nodes. Harvest the public dataset/API list on the node (`/api` when present). Skip fairstack.cn marketing and per-file URLs.
+
+**Keep:** dataset records from the node `/api` (or documented catalog list).
+**Drop:** fairstack.cn marketing pages and per-file object URLs.
+
+```text
+GET https://host/api
+```
+
 
 ## META-SHARE (`metashare`) {#metashare}
 
@@ -302,29 +412,70 @@ GET https://host/
 
 Keep resource records. Drop a single corpus/tool landing page as a crawl seed and META-NET marketing pages. One harvest scope per node. Victoria MetaShare is GeoNetwork — use that recipe instead.
 
+**Keep:** public **resource catalog** records (corpora, lexica, tools). **Drop:** a single corpus/tool landing as a crawl seed and META-NET marketing.
+
 ## NYU Data Catalog (`nyudatacatalog`) {#nyudatacatalog}
 
 Medical-library dataset catalog (schema.org DataCatalog JSON-LD on listing pages). Harvest **Dataset** objects from JSON-LD or the public search listing. Drop expert/person pages. Drupal JSON:API only if a dataset bundle exists.
+
+**Keep:** schema.org **Dataset** objects from JSON-LD or the public listing. **Drop:** expert/person pages.
 
 ## DataLad (`datalad`) {#datalad}
 
 Harvest the published **catalog** dataset list (`catalog.json` or the catalog site’s dataset pages), not git-annex keys.
 
+**Keep:** dataset entries in the published DataLad catalog (`catalog.json` or equivalent dataset pages).
+**Drop:** git-annex keys, annex object URLs, and Git commit pages.
+
+```text
+GET https://host/catalog.json
+```
+
+
 ## GIN (`gin`) {#gin}
 
-Gogs `/api/v1/repos/search` — each **repository** can be a dataset; do not harvest git objects. Stop on `401`.
+```text
+GET https://host/api/v1/repos/search
+```
+
+**Keep:** public **repositories** that are datasets. **Drop:** git objects and private repos. Stop on `401`.
 
 ## HUBzero (`hubzero`) {#hubzero}
 
 Scientific gateway. Harvest public **resources** typed as datasets/databases. Drop tools, tickets, and login-only groups.
 
+**Keep:** public resources typed as datasets/databases.
+**Drop:** tools, tickets, and login-only groups.
+
+```text
+GET https://host/resources?sortby=date
+```
+
+
 ## LinkAhead (`linkahead`) {#linkahead}
 
 CaosDB REST (`/api/v1/`). Query Record types that are datasets/collections. Drop files and properties as extra datasets.
 
+**Keep:** Record types that are datasets/collections.
+**Drop:** files and properties as extra datasets.
+
+```text
+GET https://host/api/v1/
+```
+
+
 ## Fedora (`fedora`) {#fedora}
 
 Use Fedora LDP `/fcrepo/rest` (or `/rest`) **only** when Fedora is the public catalog. Prefer Hyrax/Islandora/PHAIDRA/Archipelago recipes on the same host.
+
+**Keep:** LDP containers that represent datasets or data collections when Fedora is the public catalog.
+**Drop:** bitstreams as separate datasets when a parent object exists; prefer Hyrax/Islandora/PHAIDRA/Archipelago on the same host.
+
+```text
+GET https://host/fcrepo/rest
+GET https://host/rest
+```
+
 
 ## DABAR (`dabar`) {#dabar}
 
@@ -336,6 +487,8 @@ Mixed IR (theses, publications, and some research data) on SRCE’s national sta
 
 Do not crawl `dabar.srce.hr/search?ns=` as a separate catalog. Prefer the institutional hostname already in the registry. Drop ETDs and journal articles unless typed as datasets.
 
+**Keep:** OAI sets that mean research data / datasets (or `dc:type` keep-list). **Drop:** ETDs and journal articles unless typed as datasets.
+
 ## OpenScience.si repository (`opensciencesi`) {#opensciencesi}
 
 Mixed IR. OAI is usually:
@@ -346,9 +499,19 @@ GET https://host/oai/oai2.php?verb=Identify
 
 Some tenants use `/oai/?verb=Identify`. `ListSets` then keep research-data / dataset sets. Otherwise filter `oai_dc` with the keep list. Skip the national aggregator `www.openscience.si` for dataset harvest — use the university tenants.
 
+**Keep:** research-data / dataset OAI sets (or `oai_dc` keep-list). **Drop:** the national aggregator `www.openscience.si` as a dataset harvest.
+
 ## Islandora (`islandora`) {#islandora}
 
 Drupal+Fedora. Harvest Solr/REST with a Dataset content model — not every Drupal node. Prefer Islandora over raw [Fedora](#fedora).
+
+**Keep:** Islandora objects with a Dataset (or equivalent) content model.
+**Drop:** every Drupal node, exhibit pages, and raw Fedora bitstreams.
+
+```text
+GET https://host/solr/select?q=RELS_EXT_hasModel_uri_ms:*Dataset*&wt=json&rows=25
+```
+
 
 ## Archipelago Commons (`archipelago`) {#archipelago}
 
@@ -361,17 +524,44 @@ GET https://host/rss.xml
 
 Keep `Dataset`, accession, and isolate records. Drop Photograph, Book, Finding Aid, and WebPage exhibits. OAI-PMH `/api/oai_pmh/oai?verb=Identify` is optional and often restricted. Prefer Archipelago over raw `drupal`.
 
+**Keep:** `Dataset`, accession, and isolate records. **Drop:** Photograph, Book, Finding Aid, and WebPage exhibits.
+
 ## CONTENTdm (`contentdm`) {#contentdm}
 
 Only when the site was accepted as a **dataset** catalog ([discovery-scientific.md](discovery-scientific.md)). `/digital/api/collections` plus OAI; keep statistical/climate collections, skip photo exhibits.
+
+**Keep:** collections that are statistical, climate, or research datasets.
+**Drop:** photo/manuscript exhibits and individual image records.
+
+```text
+GET https://host/digital/api/collections
+GET https://host/digital/oai/oai.php?verb=Identify
+```
+
 
 ## Omeka S (`omekas`) {#omekas}
 
 Only when accepted as a dataset catalog. `/api/items` filtered to Dataset / DataCatalog classes; skip exhibit images.
 
+**Keep:** `/api/items` filtered to Dataset / DataCatalog classes.
+**Drop:** exhibit images. Only when the site was accepted as a dataset catalog.
+
+```text
+GET https://host/api/items?resource_class_label=Dataset
+```
+
+
 ## OSF (`osf`) {#osf}
 
 Harvest **institution** or named project catalogs only (`https://api.osf.io/v2/`). Keep nodes/registrations that are data. Do not crawl all of osf.io. Stop on `401`.
+
+**Keep:** institution or named project nodes/registrations that are data.
+**Drop:** a crawl of all osf.io. Stop on `401`.
+
+```text
+GET https://api.osf.io/v2/nodes/?filter[parent]=null
+```
+
 
 ## Converis (`converis`) {#converis}
 
@@ -379,9 +569,19 @@ Clarivate CRIS. Same publication-vs-data problem as Pure: harvest **datasets**, 
 
 Prefer a public datasets / research-data listing or OAI `setSpec` for data. Stop on `/ws` API keys. Do not page an unfiltered publication search.
 
+**Keep:** public **datasets** / research-data listing or OAI data setSpec. **Drop:** unfiltered publication search, persons, and `/ws` API keys.
+
 ## Djehuty (`djehuty`) {#djehuty}
 
 4TU.ResearchData stack. Harvest the public dataset search (Invenio-like `resource_type` filter when exposed).
+
+**Keep:** records typed as dataset / research data in the public search.
+**Drop:** publications, presentations, and login-only deposit forms.
+
+```text
+GET https://host/api/records?q=metadata.resource_type.type:dataset&size=25
+```
+
 
 ## RADAR (`radar`) {#radar}
 
@@ -394,6 +594,8 @@ GET https://host/oai/OAIHandler?verb=Identify
 
 Already datasets (`totalHits` in the JSON). Page the API; keep dataset ids/DOIs. Skip a single `/radar/de/dataset/` landing page as a seed and the FIZ marketing site. OAI is a fallback. Discovery: [discovery-scientific.md](discovery-scientific.md#radar).
 
+**Keep:** RADAR **dataset** ids/DOIs from `/radar/api/datasets` or OAI. **Drop:** a single landing page as a seed and FIZ marketing.
+
 ## Redivis (`redivis`) {#redivis}
 
 Dataset-native SaaS. The public OpenAPI spec does not need a token; **listing datasets does**. Filter exports on `software.id = 'redivis'`. Org name is the `{org}` subdomain (`stanford.redivis.com` → `stanford`).
@@ -405,9 +607,38 @@ GET https://redivis.com/api/v1/organizations/{org}/datasets?maxResults=100
 
 Page with `pageToken`. Keep `dataset.list` rows (`kind` / dataset name). Drop workflows, notebooks, members, and individual **tables** when a parent dataset exists. A Bearer token with the `public` scope is required for the list URL; stop on `401`/`403`. Do not crawl `redivis.com` globally or a single `/ORG/dataset-name` landing page. Discovery: [discovery-scientific.md](discovery-scientific.md#redivis).
 
+**Keep:** `dataset.list` rows. **Drop:** workflows, notebooks, members, and individual **tables** when a parent dataset exists.
+
 ## Yoda (`yoda`) {#yoda}
 
-Utrecht / SURF research-data vault on iRODS. Filter exports on `software.id = 'yoda'`. Harvest **published** vault datasets (DataCite DOI landing pages or the public catalog API in `endpoints[]`). Drop `/research/` collaboration collections and iRODS tickets. Stop on `401`. Do not list every file in a vault package.
+Utrecht / SURF research-data vault on iRODS. Filter exports on `software.id = 'yoda'`.
+
+```text
+GET https://host/oai/oai?verb=Identify
+```
+
+**Keep:** **published** vault datasets (DataCite DOI landing pages or the public catalog API in `endpoints[]`). **Drop:** `/research/` collaboration collections, iRODS tickets, and every file in a vault package. Stop on `401`.
+
+## DLCM (`dlcm`) {#dlcm}
+
+swissuniversities OAIS stack. Filter exports on `software.id = 'dlcm'`. Prefer `endpoints[]` OAI-PMH on the access module.
+
+```text
+GET https://access.host/oai-info/oai-provider/oai?verb=Identify
+GET https://access.host/oai-info/oai-provider/oai?verb=ListRecords&metadataPrefix=oai_dc
+```
+
+Keep deposited **datasets** and their DOIs. Follow resumption tokens. Drop the Angular UI chrome, WordPress marketing pages (`olos.swiss`), and login-only OAI. Discovery: [discovery-scientific.md](discovery-scientific.md#dlcm).
+
+**Keep:** deposited **datasets** and their DOIs (OAI on the access module). **Drop:** Angular UI chrome, WordPress marketing, and login-only OAI.
+
+## easydb (`easydb`) {#easydb}
+
+Programmfabrik easydb 5 / fylr. Filter exports on `software.id = 'easydb'`. There is usually **no** public dataset-list API; `/api/v1/session` is session metadata, not a catalog dump.
+
+Harvest the public object/search UI the catalog `link` points at (or a documented public search export if present). Keep collection objects that are datasets or media catalog records. Drop login-walled objects and session JSON. Stop on `401`. Discovery: [discovery-scientific.md](discovery-scientific.md#easydb).
+
+**Keep:** collection objects that are datasets or media catalog records. **Drop:** login-walled objects and `/api/v1/session` JSON.
 
 ## LabKey Server (`labkey`) {#labkey}
 
@@ -417,6 +648,8 @@ GET https://host/login/begin.view
 
 Keep **studies / published folders** (Panorama Public libraries, Open Research Portal projects). Drop assay run rows and a single `begin.view` folder as a seed. Stop on `401`.
 
+**Keep:** **studies / published folders**. **Drop:** assay run rows and a single `begin.view` folder as a seed.
+
 ## Synapse (`synapse`) {#synapse}
 
 ```text
@@ -424,6 +657,8 @@ GET https://repo-prod.prod.sagebase.org/repo/v1/entity/synNNNN/children
 ```
 
 Keep **projects and tables/files that are cited as datasets**. Drop every child file under a project when a parent dataset entity exists. Prefer the catalog `link` origin and `endpoints[]`. Stop on `401`.
+
+**Keep:** **projects and tables/files cited as datasets**. **Drop:** every child file under a project when a parent dataset entity exists.
 
 ## Gen3 (`gen3`) {#gen3}
 
@@ -436,6 +671,8 @@ GET https://host/index/ga4gh/drs/v1/service-info
 
 Keep **studies / projects** from the public GraphQL or portal catalog. Drop individual DRS objects, files, and Fence `/user/login` as harvest seeds. Stop on `401`/`403`. Do not harvest NCI GDC/PDC/IDC under this recipe.
 
+**Keep:** **studies / projects** from public GraphQL or the portal catalog. **Drop:** individual DRS objects, files, and Fence login as harvest seeds.
+
 ## XNAT (`xnat`) {#xnat}
 
 ```text
@@ -444,6 +681,28 @@ GET https://host/xnat/data/projects
 ```
 
 Keep **projects** (and experiment collections when the user asked). Drop individual imaging sessions and DICOM files when a parent project exists. Stop on `401`.
+
+**Keep:** **projects** (and experiment collections when asked). **Drop:** individual imaging sessions and DICOM files when a parent project exists.
+
+## Shanoir (`shanoir`) {#shanoir}
+
+```text
+GET https://host/shanoir-ng/welcome
+```
+
+Keep **studies / datasets** listed on the public instance. Drop individual imaging examinations, DICOM files, and the Inria project homepage. Stop on `401`/`403`. One harvest scope per public Shanoir instance (Neurinfo, OFSEP, …).
+
+**Keep:** public **studies / datasets**. **Drop:** individual imaging examinations, DICOM files, and the Inria project homepage.
+
+## LORIS (`loris`) {#loris}
+
+```text
+GET https://host/
+```
+
+Keep **published instruments / imaging collections / datasets** on the public portal. Drop candidate pages, visit forms, and `demo.loris.ca`. Stop on `401`/`403`. One harvest scope per public LORIS instance.
+
+**Keep:** published instruments / imaging collections / datasets. **Drop:** candidate pages, visit forms, and `demo.loris.ca`.
 
 ## OMERO (`omero`) {#omero}
 
@@ -454,6 +713,8 @@ GET https://host/webclient/
 
 Keep **projects / screens / studies** (IDR annotations). Drop individual images and wells. Some public archives return `404` on `/api/v0/m/` — fall back to the documented webclient catalog. Stop on `401`.
 
+**Keep:** **projects / screens / studies**. **Drop:** individual images and wells.
+
 ## Kadi4Mat (`kadi4mat`) {#kadi4mat}
 
 ```text
@@ -463,9 +724,17 @@ GET https://host/api/collections
 
 Keep **records and collections**. Drop individual file blobs when a parent record exists. Stop on `401`.
 
+**Keep:** **records and collections**. **Drop:** individual file blobs when a parent record exists.
+
 ## TR32DB (`tr32db`) {#tr32db}
 
 `/site/index.php` Cologne CRC databases. Harvest the public **metadata / dataset search** if unauthenticated. Do not scrape file blobs or require project login. One harvest scope per CRC database (TR32, CRC1211, TRR228). Distinct from CRC806DB.
+
+```text
+GET https://host/site/index.php
+```
+
+**Keep:** public **metadata / dataset search**. **Drop:** file blobs and project-login walls.
 
 ## e!DAL (`edal`) {#edal}
 
@@ -474,6 +743,8 @@ GET https://host/
 ```
 
 Keep versioned **DOI datasets**. Drop a single landing page as a crawl seed. Prefer the documented e!DAL API in `endpoints[]`. Stop on `401`.
+
+**Keep:** versioned **DOI datasets**. **Drop:** a single landing page as a crawl seed.
 
 ## NOMAD (`nomad`) {#nomad}
 
@@ -484,9 +755,13 @@ GET https://host/prod/v1/api/v1/entries
 
 Keep **uploads / entries** that are published datasets. Drop individual calculation files and parser logs. One Oasis or the central archive = one harvest scope. Stop on `401`.
 
+**Keep:** published **uploads / entries**. **Drop:** individual calculation files and parser logs.
+
 ## dLibra (`dlibra`) {#dlibra}
 
-Polish digital library. Use OAI-PMH with a dataset / dane `set` or `dc:type` filter ([harvest-protocols.md](harvest-protocols.md#oai-pmh)). Skip manuscript/photo libraries that were never accepted as dataset catalogs.
+Polish digital library. OAI/REST prefixes vary by install — resolve the Identify URL from the live site or `endpoints[]`.
+
+**Keep:** OAI-PMH records with a dataset / dane `set` or `dc:type` filter ([harvest-protocols.md](harvest-protocols.md#oai-pmh)). **Drop:** manuscript/photo libraries that were never accepted as dataset catalogs, and unfiltered ListRecords.
 
 ## Dataset-native platforms (short)
 
@@ -501,6 +776,8 @@ Little publication noise. Still skip non-dataset objects.
 | LabKey (`labkey`) | [above](#labkey) | Studies / published folders |
 | Synapse (`synapse`) | [above](#synapse) | Projects and dataset entities, not every file |
 | XNAT (`xnat`) | [above](#xnat) | Projects, not sessions |
+| Shanoir (`shanoir`) | [above](#shanoir) | Studies, not imaging sessions |
+| LORIS (`loris`) | [above](#loris) | Published collections, not candidate visits |
 | OMERO (`omero`) | [above](#omero) | Projects/screens, not images |
 | Kadi4Mat (`kadi4mat`) | [above](#kadi4mat) | Records and collections |
 | e!DAL (`edal`) | [above](#edal) | DOI datasets |
@@ -528,6 +805,8 @@ not imply that restricted audio or video is downloadable. The
 [FLAT source documentation](https://github.com/TLA-FLAT/FLAT) describes its Fedora/Islandora
 components; administrative Fedora endpoints are not public harvesting seeds.
 
+**Keep:** deposited language-resource collections, corpora, and dataset metadata. **Drop:** navigation nodes, user profiles, and individual media files as independent datasets.
+
 ## openEQUELLA (`openequella`) {#openequella}
 
 Start at the registered institution's repository and its advertised OAI-PMH or REST search
@@ -541,6 +820,8 @@ publication-only records and administrative collections when harvesting research
 An item can have several versions and files; preserve its stable identifier and version
 without counting every attached file as a new dataset.
 
+**Keep:** dataset / research-resource metadata and attached resource links. **Drop:** teaching objects, publication-only records, and every attached file as a new dataset.
+
 ## Aubrey (`aubrey`) {#aubrey}
 
 Start at the registered collection, such as
@@ -553,6 +834,8 @@ Keep deposited datasets and their ARK identifiers, collection relationships and 
 Follow OAI resumption tokens; exclude page images, IIIF tiles, navigation pages and non-data
 historical collections from dataset output. The metadata service is publicly documented;
 resource reuse rights still vary by item.
+
+**Keep:** deposited datasets and their ARK identifiers. **Drop:** page images, IIIF tiles, navigation pages, and non-data historical collections.
 
 ## Dialnet CRIS (`dialnetcris`) {#dialnetcris}
 
@@ -568,6 +851,8 @@ projects, indicators and publication-only entries from a dataset harvest. A CRIS
 link to a deposit in another repository: preserve that relationship instead of counting the
 same dataset twice. The presence of a CRIS platform does not prove that every tenant contains
 datasets; return an empty dataset result if the available records are only publications.
+
+**Keep:** explicitly typed **datasets** and their metadata/resource links. **Drop:** researcher profiles, projects, indicators, and publication-only entries.
 
 ## Related
 

@@ -19,6 +19,9 @@ Overview: [harvest.md](harvest.md). Finding portals: [discovery-scientific.md](d
 | cBioPortal **study** | Mutation/CNA rows, patient samples |
 | GRIN-Global **accession catalog export** | Individual accession HTML pages |
 | BirdMap Africa **project catalog / API species lists** | Survey cards, pentad clicks, BirdLasser |
+| GeoNature-atlas **species / taxon sheets** | Individual observations, TaxHub media files |
+| iDigBio **datasets / collections** | Occurrence search hits (use IPT for Darwin Core archives) |
+| iNaturalist **projects / export datasets** | Per-observation API rows |
 
 ## GBIF IPT (`ipt`) {#ipt}
 
@@ -29,6 +32,8 @@ GET https://host/dcat
 ```
 
 Each inventory/RSS item is one dataset. Prefer the IPT root on the catalog `link`. Skip harvesting gbif.org when you only needed publisher IPTs already in the registry.
+
+**Keep:** IPT Darwin Core **archives** (inventory/RSS/DCAT). **Drop:** occurrence rows inside the archive.
 
 ## Symbiota (`symbiota`) {#symbiota}
 
@@ -41,6 +46,8 @@ GET https://host/collections/datasets/rsshandler.php
 
 **Keep** Darwin Core datasets (RSS). Collection-level harvest only if the user wants one record per `collid`. One portal = one harvest scope. Login-only: stop. Directory: [symbiota.org/symbiota-portals](https://symbiota.org/symbiota-portals/).
 
+**Keep:** published Darwin Core **datasets** (RSS). **Drop:** images, checklists, and single occurrences.
+
 ## Atlas of Living Australia (`ala`) {#ala}
 
 ```text
@@ -49,9 +56,13 @@ GET https://host/ws/registry/collections
 
 Harvest **collections** (data resources). Species autocomplete and occurrence search are not dataset lists. Same pattern on other Living Atlases.
 
+**Keep:** ALA **collections** / data resources. **Drop:** `/ws/occurrences/search` hits.
+
 ## BirdMap Africa (`birdmap`) {#birdmap}
 
 African Bird Atlas country portals (`{project}.birdmap.africa`). Harvest the project catalog and public API (`https://api.birdmap.africa/{project}/v2/` when listed in `endpoints[]`). Keep pentad coverage / species-list **datasets**. Drop individual survey cards, pentad map clicks, and BirdLasser app traffic. One country project = one harvest scope.
+
+**Keep:** project catalog / API species-list **datasets**. **Drop:** survey cards, pentad clicks, and BirdLasser.
 
 ```text
 GET https://api.birdmap.africa/sabap2/v2/
@@ -65,6 +76,8 @@ GET https://api.gbif.org/v1/dataset?limit=100&offset=0
 
 Use this only when the registry record **is** GBIF (or a national GBIF portal whose API is GBIF). Filter with `publishingCountry` / `publishingOrg` when the catalog is a country node. Prefer harvesting member **IPTs** from this registry for publisher-level ids. Do not page `/v1/occurrence/search`.
 
+**Keep:** GBIF **datasets**. **Drop:** occurrence search and publisher orgs as datasets.
+
 ## Ensembl (`ensembl`) {#ensembl}
 
 ```text
@@ -73,6 +86,8 @@ GET https://host/info/species
 ```
 
 REST base is often `https://rest.ensembl.org` or `https://host/rest`. Harvest **species / assembly** databases on that taxon portal (Fungi, Protists, Metazoa, …). Do not harvest every gene. Do not clone `ensembl.org` if you only needed an existing registry row.
+
+**Keep:** Ensembl **species / genome databases**. **Drop:** every gene, variation, or REST ping.
 
 ## SEANOE / IFREMER Catalog (`ifremercatalog`) {#ifremercatalog}
 
@@ -84,6 +99,8 @@ GET https://www.seanoe.org/oai/OAIHandler?verb=ListRecords&metadataPrefix=oai_dc
 ```
 
 Keep **datasets** (DataCite/OAI type Dataset). Drop publications mixed into the same OAI set without a type filter. Do not harvest every NetCDF file under a parent dataset. Skip cloning seanoe.org if you only needed the existing registry row.
+
+**Keep:** SEANOE **datasets**. **Drop:** publications without a type filter and every NetCDF file under a parent dataset.
 
 ## Related scientific IDs
 
@@ -100,8 +117,12 @@ Keep **datasets** (DataCite/OAI type Dataset). Drop publications mixed into the 
 | `intermine` | experiments / dataset lists | gene reports, `/begin.do` crawls |
 | `jgi` | Genome Portal projects | gene pages, IMG, GOLD, `data.jgi.doe.gov` |
 | `cbioportal` | `/api/studies` | mutation/CNA rows |
+| `checklistbank` | ChecklistBank dataset API | taxon / name-usage pages |
 | `gringlobal` | accession catalog exports | each accession HTML page |
 | `birdmap` | country portal / `api.birdmap.africa/{project}/v2/` | survey cards, pentad clicks |
+| `geonature` | GeoNature-atlas species sheets | observations; GeoNature back-office |
+| `idigbio` | Portal datasets/collections; IPT is `ipt` | occurrence search hits |
+| `inaturalist` | hub projects / exports | per-observation rows |
 
 Institutional IRs that also hold Darwin Core: use [harvest-scientific.md](harvest-scientific.md) type filters, not occurrence APIs. Domain harvest recipes: [harvest-scientific-domain.md](harvest-scientific-domain.md).
 

@@ -89,7 +89,7 @@ Integrity-track CRITICAL and IMPORTANT counts must not grow (`dataquality/baseli
 | `MISSING_OWNER_LINK` | Set `owner.link` |
 | `DUPLICATE_TAGS` | Deduplicate `tags` |
 | `DUPLICATE_COVERAGE` | Remove repeated coverage entries (same country, level, and subregion) |
-| `MISSING_CONTACT_INFO` | Add contact when the catalog publishes it |
+| `MISSING_CONTACT_INFO` | Add `owner.link` on **active** catalogs with `restricted` in `access_mode` (there is no catalog `contact` field; checker: `check_contact_info` in `scripts/builder.py`) |
 | `TOPIC_SCHEMA_VIOLATION` | Fix `topics` shape (`type`, `id`, `name`) |
 
 ## Software definition issues

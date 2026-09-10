@@ -15,6 +15,7 @@ GET public URLs only. Stop on `401`/`403`. Do not write dataset YAML into this r
 | SDMX | **Dataflow** | Codelists, DSDs, observations |
 | OGC WMS/WFS/WCS | Named **Layer** / FeatureType / Coverage | GetMap/GetTile images |
 | OGC API | `/collections` entry | `/conformance`, OpenAPI HTML |
+| OGC SensorThings | **Thing** or **Datastream** | Observations, HistoricalLocations |
 | ArcGIS REST | Feature/Map/Image **service** | GPServer, geocode, print |
 | CKAN Action | `package_search` **package** | Resource rows, harvest sources |
 | SPARQL | Named **dataset** / graph the catalog documents | Every triple |
@@ -86,6 +87,14 @@ GET https://host/collections?f=json
 ```
 
 Each collection is a dataset. Same grain as STAC collections. WIS2 Box usually wraps this API.
+
+## OGC SensorThings / FROST-Server
+
+```text
+GET https://host/v1.1/Things?$top=100&$count=true
+```
+
+Harvest **Things** or **Datastreams**, not Observations. Product recipe: [harvest-scientific-domain.md](harvest-scientific-domain.md#frostserver).
 
 ## ArcGIS REST
 

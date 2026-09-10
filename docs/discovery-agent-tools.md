@@ -2,7 +2,7 @@
 
 This page is how to **wire search tools into Cursor, ChatGPT, Claude, and similar agents** so they can (1) look up catalogs **already in this registry** and (2) **discover** installations that are not registered yet.
 
-Query recipes (Google operators, Censys CenQL, Shodan filters): [discovery-search-tools.md](discovery-search-tools.md). Agent checklist: [agents/discover.md](agents/discover.md). This repository does **not** ship a production search API or MCP server — see [when-to-use.md](when-to-use.md).
+Query recipes (Google operators, Censys CenQL, FOFA as a Censys alternative, Shodan filters): [discovery-search-tools.md](discovery-search-tools.md). Agent checklist: [agents/discover.md](agents/discover.md). This repository does **not** ship a production search API or MCP server — see [when-to-use.md](when-to-use.md).
 
 ## Two jobs, two tool stacks
 
@@ -19,9 +19,9 @@ Do not mix them up. Searching Google for “CKAN Portugal” does not tell you w
 |-------|---------------------|------------------------|
 | **Minimum (Cursor in this repo)** | Files + DuckDB; follow [llms.txt](https://github.com/datenoio/dataportals-registry/blob/main/llms.txt) | Cursor **web search** + **browser**; paste queries from [discovery-search-tools.md](discovery-search-tools.md) |
 | **Minimum (ChatGPT / Claude in the browser)** | Upload `llms.txt` + a DuckDB/CSV extract, or use dateno-api | Built-in **web search** / browsing; paste the [shared instructions](#shared-system-instructions) |
-| **Full agent stack** | Same as minimum, plus dateno-api if you need HTTP | Official **Censys MCP**; Google **Programmable Search** or Brave/Tavily; optional Shodan / URLScan keys |
+| **Full agent stack** | Same as minimum, plus dateno-api if you need HTTP | Official **Censys MCP**, **or FOFA API** when Censys search is unavailable; Google **Programmable Search** or Brave/Tavily; optional Shodan / URLScan keys |
 
-Start with the minimum. Add Censys MCP when Google stops listing sites (no inbound links, IP-only GeoServer, certificate names).
+Start with the minimum. Add Censys MCP when Google stops listing sites (no inbound links, IP-only GeoServer, certificate names). If Censys search is not on the plan or OAuth is blocked, use [FOFA](#fofa) with the same title / body / country filters ([translation table](discovery-search-tools.md#fofa)).
 
 ## Shared system instructions
 
@@ -32,16 +32,22 @@ You help maintain dataportals-registry (https://github.com/datenoio/dataportals-
 
 Read https://datenoio.github.io/dataportals-registry/llms.txt first.
 Query existing catalogs from exports (DuckDB/Parquet/JSONL), never by walking data/entities/**/*.yaml.
+If datasets.duckdb is locked, use full.parquet.
 Discover missing catalogs with docs/agents/discover.md and docs/discovery-search-tools.md.
-Hunt patterns (harvest sources, university IRs, country indicators, named directories):
+FOFA is the Censys alternative (title= / body= / host= / country=).
+Hunt patterns (harvest sources, university IRs, country indicators, named directories,
+software tenant lists, subnational municipal GIS):
 docs/discovery.md#hunt-patterns and docs/agents/improve.md.
 Scope every hunt: one country, city, TLD, software.id, or named list URL. No internet-wide scans.
+A hunt that finds 0 missing catalogs is complete — report that and stop.
 
 For each candidate: duplicate-check hostname; confirm a public catalog UI or harvestable API;
 set software.id only with two matching signals (else custom); do not invent uid.
 Stop on HTTP 401/403. Do not follow login forms or guess API keys.
 Register the catalog homepage, not a single dataset URL.
 Prefer add-single --scheduled, then assign and validate-yaml --id {id}.
+Do not mix ArcGIS Hub, Experience Builder, Web AppBuilder, Instant Apps, Dashboards,
+StoryMaps, and Server on the same org unless they are distinct public catalogs.
 
 Search-tool config: docs/discovery-agent-tools.md
 Platform fingerprints: docs/discovery-opendata.md, discovery-geoportals.md,
@@ -77,16 +83,19 @@ Cursor already has this repository’s [AGENTS.md](https://github.com/datenoio/d
 
 1. **Web search** — ask the agent to run the Google queries from [discovery-search-tools.md](discovery-search-tools.md) (or Bing/DuckDuckGo if Google is blocked).
 2. **Browser** — open a candidate URL, confirm it is a catalog, copy the homepage `link`.
-3. **Terminal** — duplicate-check DuckDB; `add-single --scheduled`; `validate-yaml --id`.
+3. **Terminal** — duplicate-check DuckDB or `full.parquet` if DuckDB is locked; `add-single --scheduled`; `validate-yaml --id`.
 4. **Rules** — project rule `.cursor/rules/catalog-discovery.mdc` attaches when the task is discovery. User rules can paste the [shared instructions](#shared-system-instructions) if you want them in every chat.
 
-Example prompt:
+Reuse a prior hunt transcript for the same `software.id` before starting a second pass. Example prompt:
 
 ```text
 Discover CKAN open data portals in Portugal that are not in this registry.
-Follow docs/agents/discover.md. Duplicate-check datasets.duckdb first.
+Follow docs/agents/discover.md. Duplicate-check datasets.duckdb first
+(or full.parquet if DuckDB is locked).
 Use Google queries from docs/discovery-opendata.md, then confirm
-/api/3/action/status_show. Add verified finds with add-single --scheduled.
+/api/3/action/status_show. If Censys MCP is not connected, use FOFA
+title="CKAN" && country="PT" (see docs/discovery-search-tools.md#fofa).
+Add verified finds with add-single --scheduled.
 ```
 
 ### MCP in Cursor
@@ -149,13 +158,17 @@ There is no official Shodan MCP. Community servers exist (search GitHub for `sho
 
 Package names vary. If you do not want a third-party MCP, have Cursor run the [Shodan CLI](#shodan) in the terminal instead.
 
+**FOFA (Censys alternative; no official MCP)**
+
+There is no official FOFA MCP. Do not add an unreviewed third-party FOFA MCP for this registry. Have Cursor run the [FOFA API](#fofa) in the terminal with `FOFA_EMAIL` / `FOFA_KEY` from the user environment, then probe live hosts the same way as Censys hits.
+
 **Google**
 
 Do not add a “Google scrape” MCP. Use Cursor web search, or configure [Programmable Search](#google-programmable-search-json-api) and let the agent `curl` it with keys from the environment.
 
 ### Cursor Cloud Agents
 
-Cloud agents do **not** automatically inherit your laptop `~/.cursor/mcp.json` or local API keys. Give them the GitHub repo, `llms.txt`, and tell them to use public web search. Attach Censys only if you add a **project** MCP with OAuth (no PAT in the repo) or run discovery locally.
+Cloud agents do **not** automatically inherit your laptop `~/.cursor/mcp.json` or local API keys. Give them the GitHub repo, `llms.txt`, and tell them to use public web search. Attach Censys only if you add a **project** MCP with OAuth (no PAT in the repo) or run discovery locally. FOFA keys stay in the user environment — run FOFA hunts locally, not in cloud agents.
 
 ## ChatGPT app
 
@@ -192,8 +205,8 @@ Projects persist that context across chats. Still use web search for live discov
 2. **Instructions**: paste the [shared system instructions](#shared-system-instructions).
 3. **Knowledge**: upload the same files as for Projects. Keep them updated when docs change.
 4. **Capabilities**: enable **Web Search**. Do not enable image generation for this job.
-5. **Actions** (optional): add an OpenAPI action for Google CSE, Censys, or Shodan ([examples below](#custom-gpt-actions-openapi)). Store keys in the GPT’s authentication, not in the spec.
-6. **Conversation starters**: “Find CKAN portals in Kenya”, “GeoNetwork in the Balkans”, “Dataverse installations missing from the registry”.
+5. **Actions** (optional): add an OpenAPI action for Google CSE, Censys, Shodan, or FOFA ([examples below](#custom-gpt-actions-openapi)). Store keys in the GPT’s authentication, not in the spec. For FOFA, the HTTP API is simpler from Cursor’s terminal than as a GPT Action (email + key query params).
+6. **Conversation starters**: “Find CKAN portals in Kenya”, “GeoNetwork in the Balkans”, “Dataverse installations missing from the registry”, “Use FOFA instead of Censys for ODWeb catalogs in China”.
 
 Custom GPTs cannot run `builder.py`. The GPT should return a candidate table; you (or Cursor) write YAML in the repo.
 
@@ -275,9 +288,9 @@ Then open this repository so Claude Code can duplicate-check DuckDB and add YAML
 | **VS Code Copilot** | Open the repo; Copilot reads `AGENTS.md` if present | `.vscode/mcp.json` with the same Censys URL |
 | **Continue.dev** | Index the repo | `mcpServers` in Continue config ([Censys example](https://docs.censys.com/docs/platform-mcp-server)) |
 | **Windsurf / Cline** | Open the repo | User MCP JSON, same schema as Cursor |
-| **Gemini Gems** | Paste shared instructions; link `llms.txt` | Built-in Google Search grounding (strong for Google dorks); no Censys unless you add an API call in a larger app |
+| **Gemini Gems** | Paste shared instructions; link `llms.txt` | Built-in Google Search grounding (strong for Google dorks); no Censys/FOFA unless you add an API call in a larger app |
 | **Perplexity** | Link the docs site | Built-in web search; paste candidate URLs back into Cursor for YAML |
-| **Open WebUI / local models** | RAG over `docs/` + `llms.txt` | Add CSE/Brave/Censys as HTTP tools in the tool registry |
+| **Open WebUI / local models** | RAG over `docs/` + `llms.txt` | Add CSE/Brave/Censys/FOFA as HTTP tools in the tool registry |
 
 ## Configure each search tool
 
@@ -347,6 +360,7 @@ Agent rules:
 - `page_size` ≤ 25 per call. Do not page through the entire internet.
 - Convert hostnames to `https://{name}/`, then probe. Never set `link` to a bare IP.
 - MCP helpers `generate_query` and `validate_censys_query` are useful; `investigate_host` is optional and expensive — skip it unless you need to disambiguate one IP.
+- If Censys search returns no credits / plan error, switch to [FOFA](#fofa) instead of inventing hosts.
 
 Legacy Search (`search.censys.io` / v1 API) is a different product. New integrations should use Platform CenQL ([query language](https://docs.censys.com/docs/censys-query-language)).
 
@@ -373,14 +387,20 @@ curl -sS "https://api.shodan.io/shodan/host/search" \
 
 Agent rules: prefer `hostname` / SSL CN in the banner over `ip_str` for `link`. Skip results with no HTTP title. Do not run `shodan scan` (active scanning) for this registry.
 
-### FOFA
+### FOFA {#fofa}
 
-East Asian coverage. Encode the query as Base64 (`qbase64`). Agent must not log the key.
+FOFA is the **Censys alternative** for this registry: same job (title / body / country / hostname internet map), different syntax and API. Query translation: [discovery-search-tools.md](discovery-search-tools.md#fofa). Prefer Censys MCP when it is connected; use FOFA when Censys search is unavailable, or when the hunt is East Asia.
+
+1. Create an account at [en.fofa.info](https://en.fofa.info). Copy the API **email** and **key** from the account page. Do not commit them.
+2. There is **no official FOFA MCP**. Run the HTTP API from Cursor’s terminal (same pattern as Shodan). Do not install an unreviewed third-party FOFA MCP for this work.
+3. Encode the query as Base64 (`qbase64`). Agent must not log the key.
+4. Request `fields=host,ip,port,protocol,title,domain`. Prefer `host` / `domain` for `link`. `size` ≤ 20 per call (plan caps are often 20–100). Do not page through the entire internet.
+5. Free and low plans often cannot search `body=` or `header=` over the API. Fall back to `title=`, `host=`, `domain=`, `app=`, and `cert=`, or paste results from the FOFA web UI.
 
 ```bash
 python - <<'PY'
-import base64, os, urllib.parse, urllib.request
-q = 'title="CKAN" && country="PT"'
+import base64, json, os, urllib.parse, urllib.request
+q = 'body="Powered by CKAN" && country="JP"'
 qb = base64.b64encode(q.encode()).decode()
 url = (
     "https://fofa.info/api/v1/search/all?"
@@ -388,12 +408,40 @@ url = (
         "email": os.environ["FOFA_EMAIL"],
         "key": os.environ["FOFA_KEY"],
         "qbase64": qb,
+        "fields": "host,ip,port,protocol,title,domain",
         "size": 20,
     })
 )
-print(urllib.request.urlopen(url).read().decode()[:2000])
+data = json.loads(urllib.request.urlopen(url, timeout=30).read().decode())
+if data.get("error"):
+    raise SystemExit(data)
+for row in data.get("results") or []:
+    print(row)
 PY
 ```
+
+Example queries an agent can paste into the FOFA UI or the script above:
+
+```text
+title="CKAN" && country="PT"
+body="OpenDataSoft" && country="BE"
+title="GeoNetwork" && country="CZ"
+domain="opendatasoft.com"
+app="GeoServer" && country="ID"
+body="/odweb/" && title="数据开放"
+title="Dataverse"
+body="hyrax"
+host="www2.wagmap.jp"
+```
+
+Agent rules:
+
+- Search **titles and body snippets** for catalog UIs; use `app=` for GeoServer-class products; use `host=` / `domain=` / `cert=` for SaaS hostname patterns.
+- Convert `host` to `https://{host}/`, then probe. Never set `link` to a bare IP. Deduplicate 80/443 before probing.
+- A FOFA hit is a lead, not a catalog. Duplicate-check exports, then confirm the public UI.
+- If `error` is true or `results` is empty because `body=` is not on the plan, retry with `title=` / `host=` and say so in the hunt report.
+
+ChatGPT / Claude without the API: open [en.fofa.info](https://en.fofa.info), paste the translated query, and return `host` + title for duplicate-check in the repo. Do not invent hosts from memory.
 
 ### urlscan.io
 
@@ -429,13 +477,14 @@ User names a country / city / software
         ├─► Web search (Cursor/ChatGPT/CSE/Brave) with platform queries
         │
         ├─► If thin results: Censys web properties (MCP or API)
-        │         optional Shodan / FOFA / URLScan / crt.sh
+        │         or FOFA title/body/country (API) when Censys is not configured
+        │         optional Shodan / URLScan / crt.sh
         │
         └─► Browser or GET: confirm catalog + software probe
                   then add-single --scheduled (in the git workspace)
 ```
 
-If the agent has **no** Censys/Shodan credentials, it must still finish the Google + vendor-list path and report “Censys not configured” rather than inventing hosts.
+If the agent has **no** Censys/FOFA/Shodan credentials, it must still finish the Google + vendor-list path and report “Censys/FOFA not configured” rather than inventing hosts.
 
 ## Example: Cursor vs ChatGPT for the same hunt
 
@@ -446,7 +495,20 @@ Find unregistered OpenDataSoft portals in Belgium.
 1) SQL duplicate-check on link like '%opendatasoft%' and '%belgium%' / '.be'
 2) Google: inurl:/explore site:.be OpenDataSoft
 3) Censys MCP: web.names: ".be" and web.endpoints.http.body: "OpenDataSoft"
+   (FOFA alternative: body="OpenDataSoft" && country="BE")
 4) Confirm /api/explore/v2.1/catalog/datasets
+5) add-single --scheduled for new hosts only
+```
+
+**Cursor (repo open, FOFA API instead of Censys)**
+
+```text
+Find unregistered CKAN portals in Japan. Censys is not configured; use FOFA.
+1) SQL duplicate-check software.id = 'ckan' and link like '%.jp%'
+2) Google: "Powered by CKAN" inurl:/dataset site:.jp
+3) FOFA: body="Powered by CKAN" && country="JP"
+   (if body= is not on the plan: title="CKAN" && country="JP")
+4) Confirm /api/3/action/status_show
 5) add-single --scheduled for new hosts only
 ```
 
@@ -464,13 +526,14 @@ I will check the registry myself. Do not invent uids.
 | Symptom | Likely cause | Fix |
 |---------|--------------|-----|
 | Agent walks thousands of YAML files | Ignored `llms.txt` | Point it at exports; repeat [agents/query.md](agents/query.md) |
-| Censys MCP does nothing | No API role / OAuth not completed / Free plan has no search | Finish consent; check credits; fall back to Google |
+| Censys MCP does nothing | No API role / OAuth not completed / Free plan has no search | Finish consent; check credits; fall back to FOFA or Google |
 | `401` from Censys API | Missing PAT or org header | Use MCP OAuth, or set both `Authorization` and `X-Organization-ID` |
+| FOFA `error: true` / empty `results` | Missing key, `body=` not on the plan, or query too broad | Check `FOFA_EMAIL`/`FOFA_KEY`; retry `title=`/`host=`; add `country=` |
+| Agent sets `link` to an IP | Censys/Shodan/FOFA host record | Use certificate / web-property / FOFA `host` name; confirm HTTPS vhost |
 | Google CSE returns only your site | Entire-web toggle off | Enable “Search the entire web” on the engine |
 | CSE `403` | API not enabled or key restricted | Enable Custom Search API; relax key restrictions for the agent runtime |
 | Shodan empty / error | No credits or query too broad | `shodan info`; add `country:` and a title filter |
 | ChatGPT proposes zenodo.org / ckan.org | No duplicate-check | Paste existing `link` values or a country CSV into the thread |
-| Agent sets `link` to an IP | Censys/Shodan host record | Use certificate / web-property name; confirm HTTPS vhost |
 | Keys leaked in a PR | mcp.json or GPT spec committed | Rotate the key; move secrets to user config |
 
 ## Related

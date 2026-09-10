@@ -1,6 +1,6 @@
 # Discovering geoportal SDI platforms
 
-Shared catalog and service stacks (`catalog_type: Geoportal`). Overview and short probe table: [discovery-geoportals.md](discovery-geoportals.md). Regional / municipal viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md).
+Shared catalog and service stacks (`catalog_type: Geoportal`). Overview and short probe table: [discovery-geoportals.md](discovery-geoportals.md). Regional / municipal viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md). Search-engine syntax (Google, Censys, Shodan, and [FOFA as a Censys alternative](discovery-search-tools.md#fofa)): [discovery-search-tools.md](discovery-search-tools.md).
 
 Do not add dataset-level records (a single CSW UUID, a STAC item, an ArcGIS layer id). One public catalog UI = one registry record.
 
@@ -10,7 +10,7 @@ ISO 19115 / CSW catalog. Gallery: [gallery-urls.csv](https://github.com/geonetwo
 
 **Signals:** title “GeoNetwork”, path `/geonetwork` or `/srv/eng/catalog.search`, footer “GeoNetwork opensource”.
 
-**Confirm:** `https://host/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities` (drop `/geonetwork` if the app is at the site root). Also `/srv/api` or `/srv/api/site`.
+**Confirm:** `https://host/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities` (drop `/geonetwork` if the app is at the site root). Also `/srv/api` or `/srv/api/site`. A site-root redirect to `/geonetwork/.../catalog.search` (Città Metropolitana di Torino) or a live `/geonetwork/srv/eng/catalog.search` catalog (RSDI Basilicata Catalogo RSDI; GéoArdèche `/q` reports 143 records; Atmo Nouvelle-Aquitaine branded title; Lille Métropole `gn_search_georchestra`) is enough when CSW also matches. The default title “My GeoNetwork catalogue” still counts when CSW and search JSON match. GeoOrchestra-themed GeoNetwork stays `geonetwork` (no `georchestra` software id). Do **not** set `geonetwork` on a CMS geoportal landing when `/geonetwork/srv` 404s (also leftover Spanish IDE hubs: IDEEX, Gran Canaria, IDERIOJA, Cartagena, Pontevedra). Do **not** set `geonetwork` on EPA Maps GIS (`gis.epa.ie`): the maps landing is a different product from live GeoNetwork at `/geonetwork` (`EPA Ireland Catalogue`). Do **not** set `geonetwork` on the IDEE geoportal hub (`www.idee.es`); CODSI is already tagged.
 
 | Tool | Query |
 |------|-------|
@@ -18,13 +18,26 @@ ISO 19115 / CSW catalog. Gallery: [gallery-urls.csv](https://github.com/geonetwo
 | Google | `inurl:/srv/eng/catalog.search` |
 | Google | `inurl:geonetwork "CSW" site:.europa.eu` |
 | Censys (web) | `web.endpoints.http.html_title: "GeoNetwork"` |
-| Censys | `web.endpoints.http.body: "GeoNetwork opensource"` |
-| Shodan | `http.title:"GeoNetwork"` |
 | FOFA | `title="GeoNetwork"` |
+| Censys | `web.endpoints.http.body: "GeoNetwork opensource"` |
+| FOFA | `body="GeoNetwork opensource"` |
+| Shodan | `http.title:"GeoNetwork"` |
 
 **False positives:** documentation, GeoNetwork GitHub, harvested remote catalogs listed *inside* another GeoNetwork. Register the catalog root (`https://host/geonetwork` or `https://host/`), not a single metadata UUID.
 
-OpenWIS (`openwis`) reuses GeoNetwork-style CSW paths; only set `openwis` when the product branding says OpenWIS.
+## OpenWIS (`openwis`) {#openwis}
+
+WMO meteorological metadata catalog. Source: [OpenWIS/openwis](https://github.com/OpenWIS/openwis). Reuses GeoNetwork-style CSW paths.
+
+**Signals:** OpenWIS branding (not generic GeoNetwork footer); meteorological/WIS catalog chrome.
+
+**Confirm:** GET CSW GetCapabilities or the OpenWIS catalog UI. Only set `openwis` when the product branding says OpenWIS; otherwise use `geonetwork`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"OpenWIS" (catalogue OR CSW OR WIS)` |
+| Censys | `web.endpoints.http.body: "OpenWIS"` |
+| FOFA | `body="OpenWIS"` |
 
 ## GeoNode (`geonode`) {#geonode}
 
@@ -37,6 +50,7 @@ Layer/map catalog, often with a bundled GeoServer.
 | Google | `"GeoNode" (layers OR maps) inurl:/layers -site:geonode.org` |
 | Google | `inurl:/api/layers/ geonode` |
 | Censys | `web.endpoints.http.body: "GeoNode"` |
+| FOFA | `body="GeoNode"` |
 | Shodan | `http.html:"GeoNode"` |
 
 Skip demo.geonode.org and the project docs.
@@ -54,6 +68,7 @@ Indonesian simpul jaringan geoportal from Badan Informasi Geospasial (GSPalapa).
 | Google | `intitle:"Geoportal Palapa" site:.go.id` |
 | Google | `inurl:/gspalapa/ OR inurl:/main/ "Geoportal Palapa"` |
 | Censys | `web.endpoints.http.html_title: "Geoportal Palapa"` |
+| FOFA | `title="Geoportal Palapa"` |
 | Shodan | `http.title:"Geoportal Palapa"` |
 
 **False positives:** GeoNode JIGN nodes (`/api/datasets/`); standalone GeoServer catalogs with no Palapa UI; Ina-Geoportal (`tanahair.indonesia.go.id`); provincial `/WebPortal/` Vue shells unless the Palapa title or `/gspalapa/` is present; CKAN Satu Data hosts named Palapa (for example `satudatapalapa.*`).
@@ -69,8 +84,9 @@ OGC service middleware. Register it when it is the **catalog** (layer list / Get
 | Google | `intitle:"GeoServer: Welcome" OR inurl:/geoserver/web` |
 | Google | `inurl:/geoserver/ows GetCapabilities` |
 | Censys (hosts) | `host.services.software.product = "GeoServer"` |
-| Shodan | `product:GeoServer` or `http.title:"GeoServer"` |
 | FOFA | `app="GeoServer"` |
+| FOFA | `app="GeoServer" && country="ID"` |
+| Shodan | `product:GeoServer` or `http.title:"GeoServer"` |
 
 Do not register the `/geoserver/web` login as a catalog if a public WMS/WFS catalog is already represented by a parent GeoNode, Palapa, or GeoNetwork record on the same host. Prefer one record per public catalog UI.
 
@@ -87,6 +103,7 @@ Commercial OGC server (WMS, WMTS, WFS, WCS, CSW, OGC API) in the Stratos platfor
 | Google | `inurl:/cubewerx/cubeserv (WMS OR CSW OR GetCapabilities)` |
 | Google | `"CubeWerx" OR CubeSERV (WMS OR geoportal OR CSW) -site:cubewerx.com` |
 | Censys | `web.endpoints.http.body: "CubeWerx"` |
+| FOFA | `body="CubeWerx"` |
 
 ## Hexagon M.App Enterprise (`mappenterprise`) {#mappenterprise}
 
@@ -101,6 +118,7 @@ Hexagon geoportal / browser GIS. Vendor: [hexagon.com/products/m-app-enterprise]
 | Google | `"M.App Enterprise" OR "M.App" (geoportal OR Apps) Hexagon -site:hexagon.com` |
 | Google | `inurl:/Apps/ (geoportal OR "M.App")` |
 | Censys | `web.endpoints.http.body: "M.App Enterprise"` |
+| FOFA | `body="M.App Enterprise"` |
 
 ## ArcGIS Hub (`arcgishub`) {#arcgishub}
 
@@ -108,7 +126,7 @@ Hub sites and Open Data sites on ArcGIS Online. Gallery: [hub.arcgis.com](https:
 
 **Signals:** `/api/search/v1`; `/api/feed/dcat-us/1.1.json`; `hubcdn.arcgis.com/opendata-ui`; or ArcGIS Enterprise `/portal/apps/sites/` with `opendata-ui` / `hub-site` assets.
 
-**Confirm:** match a Hub/Sites signal and a public content or data gallery. Map-first hubs stay `catalog_type: Geoportal`; dataset-first hubs may be Open data portal ([discovery-opendata.md](discovery-opendata.md#arcgishub)).
+**Confirm:** match a Hub/Sites signal and a public content or data gallery. Map-first hubs stay `catalog_type: Geoportal`; dataset-first hubs may be Open data portal ([discovery-opendata.md](discovery-opendata.md#arcgishub)). Custom-domain examples include Bloemendaal (`hubcdn.arcgis.com/opendata-ui`, `/api/search/v1`, DCAT-US). Do **not** set `arcgishub` from ArcGIS Enterprise `/portal/home/` alone; confirm `/portal/apps/sites/` (or a custom-domain Hub) with `opendata-ui` / `hub-site`.
 
 | Tool | Query |
 |------|-------|
@@ -116,6 +134,8 @@ Hub sites and Open Data sites on ArcGIS Online. Gallery: [hub.arcgis.com](https:
 | Google | `site:opendata.arcgis.com "{city or agency}"` |
 | Google | `"ArcGIS Hub" "open data" -site:esri.com` |
 | Censys | `web.names: "hub.arcgis.com"` |
+| FOFA | `host="hub.arcgis.com"` |
+| FOFA | `body="opendata-ui"` |
 | crt.sh | `%.hub.arcgis.com` |
 
 ## ArcGIS Server / Enterprise (`arcgisserver`) {#arcgisserver}
@@ -127,6 +147,7 @@ REST services directory. **Confirm:** `https://host/arcgis/rest/info?f=pjson` or
 | Google | `intitle:"Folder: /" "ArcGIS REST Services Directory"` |
 | Google | `inurl:/arcgis/rest/services` |
 | Censys | `host.services.software.product = "ArcGIS"` |
+| FOFA | `app="ArcGIS"` |
 | Shodan | `http.html:"ArcGIS REST Services Directory"` |
 
 Skip internal-only servers that return `401`/`403` for the services list. One record per public services root, not per map service.
@@ -145,6 +166,7 @@ Esri configurable web app (Jimu). Product: [ArcGIS Experience Builder](https://w
 | Google | `inurl:/portal/apps/experiencebuilder/experience` |
 | Google | `site:ext-webbgis.lansstyrelsen.se` |
 | Censys | `web.endpoints.http.body: "jimu-core/init.js"` |
+| FOFA | `body="jimu-core/init.js"` |
 
 Skip Experience Builder samples on developers.arcgis.com and login-only drafts.
 
@@ -161,6 +183,7 @@ Esri Web AppViewer (predecessor of Experience Builder). Docs: [Web AppBuilder](h
 | Google | `inurl:/apps/webappviewer/index.html` |
 | Google | `inurl:/portal/apps/webappviewer/` |
 | Censys | `web.endpoints.http.body: "/apps/webappviewer/"` |
+| FOFA | `body="/apps/webappviewer/"` |
 
 ## ArcGIS Dashboards (`arcgisdashboards`) {#arcgisdashboards}
 
@@ -175,6 +198,7 @@ Esri location-analytics dashboards with maps, indicators, charts, gauges, and li
 | Google | `inurl:/apps/dashboards/ (GIS OR map OR data)` |
 | Google | `site:maps.arcgis.com/apps/dashboards` |
 | Censys | `web.endpoints.http.body: "ArcGIS Dashboards"` |
+| FOFA | `body="ArcGIS Dashboards"` |
 
 ## ArcGIS Instant Apps (`instantapps`) {#instantapps}
 
@@ -182,23 +206,40 @@ Esri template-based public map apps (Basic, Sidebar, Lookup, Filter Gallery, Min
 
 **Signals:** `/apps/instant/{template}/index.html?appid=` on `*.maps.arcgis.com` or Portal `/portal/apps/instant/`. Templates include `basic`, `sidebar`, `lookup`, `filtergallery`, `minimalist`.
 
-**Confirm:** GET the Instant App URL. One record per public `appid`. Do **not** set `instantapps` on `/apps/webappviewer/` (`webappbuilder`) or `experience.arcgis.com` / `jimu-core/init.js` (`experiencebuilder`). Keep an existing `arcgisserver` REST directory on the same host as a separate catalog.
+**Confirm:** GET the Instant App URL. One record per public `appid`. Filter Gallery and org galleries are **hunt sources** (lists of apps), not a second catalog. Do **not** set `instantapps` on `/apps/webappviewer/` (`webappbuilder`) or `experience.arcgis.com` / `jimu-core/init.js` (`experiencebuilder`). Keep an existing `arcgisserver` REST directory on the same host as a separate catalog.
 
 | Tool | Query |
 |------|-------|
 | Google | `inurl:/apps/instant/ basic OR sidebar OR lookup site:maps.arcgis.com` |
 | Google | `inurl:/apps/instant/index.html?appid=` |
 | Censys | `web.endpoints.http.body: "/apps/instant/"` |
+| FOFA | `body="/apps/instant/"` |
 
 ## Lizmap (`lizmap`) {#lizmap}
 
-QGIS Server web client. **Signals:** `/index.php/view/`, `lizMap`, project list. Vendor: [lizmap.com](https://www.lizmap.com/en/).
+QGIS Server web client. **Signals:** `/index.php/view/`, `lizMap`, project list. Vendor: [lizmap.com](https://www.lizmap.com/en/). OpenSIS / pgMetadata DCAT wrappers that still serve Lizmap (`lizmapPopup`, dock CSS, `/index.php/view/`) stay `lizmap`; do **not** invent `opensis`. Do **not** set `lizmap` from `/index.php/view/` when the HTML is the same CMS homepage (SIG Cévennes).
 
 | Tool | Query |
 |------|-------|
 | Google | `"Lizmap" (webgis OR geoportail OR "qgis") -site:github.com` |
 | Google | `inurl:lizmap inurl:index.php/view` |
 | Censys | `web.endpoints.http.body: "lizMap"` |
+| FOFA | `body="lizMap"` |
+
+## GeoNature (`geonature`) {#geonature}
+
+French biodiversity suite (PnX-SI). Public catalogs are **GeoNature-atlas** sites. Docs: [geonature.fr](https://geonature.fr), [GeoNature-atlas](https://github.com/PnX-SI/GeoNature-atlas). Distinct from Lizmap cartothèques on the same park.
+
+**Signals:** `/static/css/atlas.css`; TaxHub media URLs (`/geonature/api/taxhub/`); gunicorn + Leaflet species sheets. Title often `Biodiv'…`.
+
+**Confirm:** GET the public atlas home. One record per public atlas, not the authenticated GeoNature back-office (`/geonature/`) and not the project site geonature.fr.
+
+| Tool | Query |
+|------|-------|
+| Google | `"GeoNature-atlas" OR "GeoNature atlas" (biodiversité OR biodiv) -site:github.com` |
+| Google | `inurl:biodiversite "atlas.css" site:.fr` |
+| Censys | `web.endpoints.http.body: "/static/css/atlas.css"` |
+| FOFA | `body="/static/css/atlas.css"` |
 
 ## G3W-SUITE (`g3wsuite`) {#g3wsuite}
 
@@ -206,14 +247,16 @@ Open-source QGIS WebGIS (G3W-ADMIN + G3W-CLIENT). Site: [g3wsuite.it](https://g3
 
 **Signals:** title or footer “G3W-SUITE”; `g3w-client` / `g3wsdk` in JS; path `/map/{group}/{project}/`; REST `/api/` or `/group/api/`.
 
-**Confirm:** GET the public portal or `/map/` client and match G3W-CLIENT. One record per public portal (tenant), not per QGIS project. Skip `/admin` login. If QGIS Server on the same host is only the OGC backend, do not also register `qgisserver`.
+**Confirm:** GET the public portal or `/map/` client and match G3W-CLIENT. One record per public portal (tenant), not per QGIS project. Skip `/admin` login. If QGIS Server on the same host is only the OGC backend, do not also register `qgisserver`. Do **not** set `g3wsuite` from GisClient (`widgetGisClient.js`, `gcTool`, `?mapset=`) — that is a different product.
 
 | Tool | Query |
 |------|-------|
 | Google | `"G3W-SUITE" OR "G3W-CLIENT" (webgis OR geoportale) -site:github.com -site:g3wsuite.it` |
 | Google | `inurl:/map/ g3w (webgis OR qgis) site:.it` |
 | Censys | `web.endpoints.http.body: "g3w-client"` |
+| FOFA | `body="g3w-client"` |
 | Censys | `web.endpoints.http.body: "G3W-SUITE"` |
+| FOFA | `body="G3W-SUITE"` |
 
 ## NextGIS Web (`nextgisweb`) {#nextgisweb}
 
@@ -223,6 +266,7 @@ Open-source QGIS WebGIS (G3W-ADMIN + G3W-CLIENT). Site: [g3wsuite.it](https://g3
 |------|-------|
 | Google | `"NextGIS Web" OR inurl:/resource/0 "nextgis"` |
 | Censys | `web.endpoints.http.body: "NextGIS"` |
+| FOFA | `body="NextGIS"` |
 
 ## GC2 (`gc2`) {#gc2}
 
@@ -237,6 +281,7 @@ MapCentia GC2 (GeoCloud 2) spatial-data platform, often with the Vidi viewer. OS
 | Google | `"MapCentia" OR GC2 (geoportal OR GeoCloud) (inurl:mapcentia.com OR inurl:gc2.io) -site:github.com` |
 | Google | `inurl:/apps/viewer MapCentia OR inurl:/mapcache/` |
 | Censys | `web.names: "mapcentia.com"` |
+| FOFA | `domain="mapcentia.com"` |
 | crt.sh | `%.mapcentia.com` OR `%.gc2.io` |
 
 ## hale»connect (`haleconnect`) {#haleconnect}
@@ -252,6 +297,7 @@ wetransform INSPIRE/SDI publishing platform. Product: [hale»connect](https://we
 | Google | `"hale connect" OR haleconnect OR "hale»connect" (INSPIRE OR CSW OR geoportal) -site:wetransform.to` |
 | Google | `inurl:haleconnect.com/csw OR "powered by hale"` |
 | Censys | `web.endpoints.http.body: "hale connect"` |
+| FOFA | `body="hale connect"` |
 
 ## STAC API (`stacserver`) {#stacserver}
 
@@ -263,6 +309,7 @@ Static catalogs (`catalog.json`) and STAC API. Index: [stacindex.org/catalogs](h
 |------|-------|
 | Google | `"stac" "catalog.json" OR inurl:/stac filetype:json` |
 | Censys | `web.endpoints.http.body: "stac_version"` |
+| FOFA | `body="stac_version"` |
 
 Do not add STAC **items** as catalogs.
 
@@ -276,6 +323,7 @@ If that API is already registered as `stacserver` on the same host, do **not** a
 |------|-------|
 | Google | `"stac-browser" OR "radiantearth" catalog` |
 | Censys | `web.endpoints.http.body: "stac-browser"` |
+| FOFA | `body="stac-browser"` |
 
 ## openEO (`openeo`) {#openeo}
 
@@ -288,6 +336,7 @@ EO cloud-processing API with a STAC-compatible collection catalog. Site: [openeo
 | Google | `"openeo" ("api_version" OR /collections OR /processes) -site:github.com -site:openeo.org` |
 | Google | `inurl:/openeo/ (collections OR processes)` |
 | Censys | `web.endpoints.http.body: "openeo"` |
+| FOFA | `body="openeo"` |
 
 Register the **backend API** root, not Hub HTML alone, unless Hub is the public product (`hub.openeo.org`). Prefer `openeo` over `stacserver` when `/processes` is part of the same API. Skip process-graph playgrounds with no collection list.
 
@@ -304,6 +353,7 @@ Earth-observation catalog and processing API (Sinergise / Planet). Docs: [docs.s
 | Google | `"Sentinel Hub" (STAC OR catalog OR "EO Browser") -site:github.com` |
 | Google | `site:services.sentinel-hub.com catalog` |
 | Censys | `web.names: "sentinel-hub.com"` |
+| FOFA | `domain="sentinel-hub.com"` |
 
 ## pygeoapi (`pygeoapi`) {#pygeoapi}
 
@@ -313,6 +363,7 @@ OGC API Features / Records. **Confirm:** `/` or `/openapi` JSON with `pygeoapi` 
 |------|-------|
 | Google | `"pygeoapi" (collections OR "ogc api") -site:github.com` |
 | Censys | `web.endpoints.http.body: "pygeoapi"` |
+| FOFA | `body="pygeoapi"` |
 
 ## MapStore (`mapstore`) {#mapstore}
 
@@ -322,25 +373,28 @@ GeoSolutions MapStore. **Signals:** `/mapstore`, `MapStore2`.
 |------|-------|
 | Google | `"MapStore" geoportal OR inurl:/mapstore -site:github.com` |
 | Censys | `web.endpoints.http.body: "MapStore"` |
+| FOFA | `body="MapStore"` |
 
 ## QWC2 (`qwc2`) {#qwc2}
 
-QGIS Web Client 2. **Signals:** `qwc2`, `qwc-services`, `/theme/` map UI. Do **not** set `qwc2` from `{tenant}.tergis.lv` (use `tergis`).
+QGIS Web Client 2. **Signals:** `qwc2`, `qwc-services`, `/theme/` map UI, `assets/css/qwc2.css` (Schaumburg `/maps/`). Do **not** set `qwc2` from `{tenant}.tergis.lv` (use `tergis`).
 
 | Tool | Query |
 |------|-------|
 | Google | `"QWC2" OR "QGIS Web Client" geoportal` |
 | Censys | `web.endpoints.http.body: "qwc2"` |
+| FOFA | `body="qwc2"` |
 
 ## Mapbender (`mapbender`) {#mapbender}
 
-Open-source geoportal framework (WhereGroup). **Signals:** Mapbender application UI, `/application/`, configurable map viewers on OGC services. Vendor: [mapbender.org](https://mapbender.org).
+Open-source geoportal framework (WhereGroup). **Signals:** Mapbender application UI, `/mapbender/application/` or `/mapbender/app.php/application/`, configurable map viewers on OGC services. A homepage that JS-redirects to `/mapbender/application/{name}` (Offenbach) counts. Vendor: [mapbender.org](https://mapbender.org). Do **not** set `mapbender` on a CMS hub that only links another agency’s Mapbender (Merzig-Wadern → Saarland; Trier-Saarburg → GeoPortal.rlp).
 
 | Tool | Query |
 |------|-------|
 | Google | `"Mapbender" (geoportal OR Anwendung OR "map application") -site:github.com -site:mapbender.org` |
 | Google | `inurl:/application/ mapbender` |
 | Censys | `web.endpoints.http.body: "Mapbender"` |
+| FOFA | `body="Mapbender"` |
 
 Do not register a Mapbender app that is only a login shell with no public map list.
 
@@ -354,7 +408,9 @@ Self-hosted tile and map-style catalog. Default port **3650**; production sites 
 |------|-------|
 | Google | `intitle:"MapTiler Server" -site:maptiler.com -site:github.com` |
 | Censys | `web.endpoints.http.html_title: "MapTiler Server"` |
+| FOFA | `title="MapTiler Server"` |
 | Censys | `host.services.endpoints.http.html_title: "MapTiler Server"` |
+| FOFA | `title="MapTiler Server"` |
 | Shodan | `http.title:"MapTiler Server"` |
 
 ## MapServer (`mapserver`) {#mapserver}
@@ -368,6 +424,7 @@ OGC service middleware (WMS/WFS/WCS from a mapfile). Register it when MapServer 
 | Google | `inurl:cgi-bin/mapserv (WMS OR GetCapabilities)` |
 | Google | `"MapServer" GetCapabilities -site:mapserver.org -site:github.com` |
 | Censys | `web.endpoints.http.body: "MapServer"` |
+| FOFA | `body="MapServer"` |
 | Shodan | `http.html:"MapServer"` |
 
 Do not add a second record for MapServer on a host that already has a Lizmap, QWC2, GeoNetwork, or p.mapper catalog pointing at the same services. Do **not** set `mapserver` on `{city}.geo-portale.it` `/pmapper-4.2.0/` UIs (`pmapper`).
@@ -383,6 +440,7 @@ OGC service middleware from a QGIS project (WMS/WFS/WCS, OGC API). Register it w
 | Google | `inurl:qgis_mapserv.fcgi (WMS OR GetCapabilities)` |
 | Google | `"QGIS Server" GetCapabilities -site:qgis.org -site:github.com` |
 | Censys | `web.endpoints.http.body: "QGIS Server"` |
+| FOFA | `body="QGIS Server"` |
 | Shodan | `http.html:"QGIS Server"` |
 
 Do not add a second record for QGIS Server on a host that already has a Lizmap, QWC2, or mviewer catalog pointing at the same services.
@@ -400,6 +458,7 @@ GéoBretagne thematic map viewer (OpenLayers). Common in French régions, dépar
 | Google | `"mviewer" (géoportail OR geoportail OR "openlayers") -site:github.com -site:mviewer.github.io` |
 | Google | `inurl:mviewer (apps OR config.xml) site:.fr` |
 | Censys | `web.endpoints.http.body: "mviewer"` |
+| FOFA | `body="mviewer"` |
 
 Skip mviewerstudio admin and demo configs on mviewer.github.io unless the task is to record them.
 
@@ -416,6 +475,7 @@ French SaaS GIS metadata catalog (OpenCatalog / App). Vendor: [isogeo.com](https
 | Google | `"Isogeo" (OpenCatalog OR géocatalogue OR "catalogue de données") site:.fr -site:isogeo.com` |
 | Google | `"powered by Isogeo" OR "OpenCatalog Isogeo"` |
 | Censys | `web.endpoints.http.body: "Isogeo"` |
+| FOFA | `body="Isogeo"` |
 
 Do not set `isigeo` (IsiGéo) for an Isogeo OpenCatalog.
 
@@ -432,7 +492,9 @@ Municipal / regional SDI built by the gvSIG Association. Demo and docs: [demo.gv
 | Google | `"gvSIG Online" (geoportal OR visor OR IDE) -site:gvsig.com -site:github.com` |
 | Google | `inurl:/gvsigonline/ select_public_project` |
 | Censys | `web.endpoints.http.body: "gvSIG Online"` |
+| FOFA | `body="gvSIG Online"` |
 | Censys | `web.endpoints.http.body: "select_public_project"` |
+| FOFA | `body="select_public_project"` |
 
 One record per public SDI UI. Do not also register the bundled GeoServer as a separate catalog on the same host.
 
@@ -446,22 +508,25 @@ Open-source Java SDI stack (WMS, WFS, WMTS, CSW, WPS, and deegree ogcapi). Used 
 |------|-------|
 | Google | `"deegree" (CSW OR WMS OR "ogcapi") GetCapabilities -site:github.com -site:deegree.org` |
 | Censys | `web.endpoints.http.body: "deegree"` |
+| FOFA | `body="deegree"` |
 | Shodan | `http.html:"deegree"` |
 
 ## VertiGIS WebOffice (`weboffice`) {#weboffice}
 
 Commercial web GIS (formerly SynerGIS WebOffice) on ArcGIS Enterprise. Vendor: [vertigis.com](https://www.vertigis.com). Multi-tenant hosts: `wo-hosting.vertigis.com`, `map.geoportal.at`.
 
-**Signals:** `/synserver` or `/WebOffice/synserver`; HTML title `VertiGIS WebOffice`; `weboffice_packed.css`; core, flex, or mobile clients.
+**Signals:** `/synserver` or `/WebOffice/synserver`; HTML title `VertiGIS WebOffice`; `weboffice_packed.css`; core, flex, or mobile clients. A WebInfo landing that POSTs to `./synserver` and loads `weboffice_modern_user.css` (Landkreis Osnabrück) also counts.
 
-**Confirm:** GET the synserver URL and match the title plus `weboffice_packed.css`. One record per public client (tenant), not per map project.
+**Confirm:** GET the synserver URL and match the title plus `weboffice_packed.css`, or the WebInfo guest landing plus `synserver`. One record per public client (tenant), not per map project. Do **not** set `weboffice` on a CMS Bürgerportal that only links an already-registered `wo-hosting.vertigis.com` client (Radolfzell).
 
 | Tool | Query |
 |------|-------|
 | Google | `intitle:"VertiGIS WebOffice" OR inurl:/synserver WebOffice` |
 | Google | `site:wo-hosting.vertigis.com OR site:map.geoportal.at` |
 | Censys | `web.endpoints.http.html_title: "VertiGIS WebOffice"` |
+| FOFA | `title="VertiGIS WebOffice"` |
 | Censys | `web.endpoints.http.body: "weboffice_packed.css"` |
+| FOFA | `body="weboffice_packed.css"` |
 
 ## Geocortex Essentials (`geocortex`) {#geocortex}
 
@@ -478,7 +543,9 @@ Commercial web GIS (Latitude Geographics, now VertiGIS Studio) on ArcGIS. Vendor
 | Google | `inurl:/Geocortex/Essentials/REST/sites OR inurl:/Html5Viewer/` |
 | Google | `site:geocortex.com Html5Viewer OR Essentials -www -shop -accounts` |
 | Censys | `web.endpoints.http.html_title: "Geocortex Essentials Sites Directory"` |
+| FOFA | `title="Geocortex Essentials Sites Directory"` |
 | Censys | `web.endpoints.http.html_title: "Geocortex Viewer for HTML5"` |
+| FOFA | `title="Geocortex Viewer for HTML5"` |
 
 Skip `gedemo.geocortex.com`, test hosts, and empty Sites Directories.
 
@@ -496,12 +563,13 @@ Configurable web GIS viewer (formerly Geocortex Web / GXW) on ArcGIS Online or P
 | Google | `inurl:/gcx/WebViewer/?app= OR inurl:/Geocortex/WebViewer/?app=` |
 | Google | `site:apps.vertigisstudio.com/web OR site:apps.vertigisstudio.eu/web` |
 | Censys | `web.endpoints.http.html_title: "VertiGIS Studio Web"` |
+| FOFA | `title="VertiGIS Studio Web"` |
 
 Skip vendor Designer samples, login-only Designer, and extra app GUIDs on a tenant already registered.
 
 ## GeoMedia WebMap (`geomediawebmap`) {#geomediawebmap}
 
-Hexagon / Intergraph Geospatial Portal (GeoMedia WebMap Publisher Portal). Typical paths: `/geoportal01/`, `/cdngiportal/`, `/msip/Full.aspx`, `/Online_Mapping/`.
+Hexagon / Intergraph Geospatial Portal (GeoMedia WebMap Publisher Portal). Typical paths: `/geoportal01/`, `/cdngiportal/`, `/msip/Full.aspx`, `/Online_Mapping/`, `/hartagisoradea/`.
 
 **Signals:** `Version:` and `Licensed to:` in the UI; `Intergraph.WebSolutions`; `$GP.` JavaScript; `Compositor.WebClient.ashx`, `CRSNames.WebClient.ashx`, or related `WebClient.ashx` handlers; title may say Geospatial Portal or GeoMedia WebMap Publisher Portal.
 
@@ -513,6 +581,7 @@ Hexagon / Intergraph Geospatial Portal (GeoMedia WebMap Publisher Portal). Typic
 | Google | `"GeoMedia WebMap" (portal OR geoportal)` |
 | Google | `inurl:/geoportal01/ OR inurl:/cdngiportal/ OR inurl:/msip/Full.aspx` |
 | Censys | `web.endpoints.http.body: "Intergraph.WebSolutions"` |
+| FOFA | `body="Intergraph.WebSolutions"` |
 
 ## Micka (`micka`) {#micka}
 
@@ -522,6 +591,7 @@ Czech/Slovak metadata catalog. **Signals:** `/micka`, HSLayers, “Micka”.
 |------|-------|
 | Google | `"Micka" (metadata OR geoportal OR CSW) site:.cz OR site:.sk` |
 | Censys | `web.endpoints.http.body: "micka"` |
+| FOFA | `body="micka"` |
 
 ## GeoBlacklight (`geoblacklight`) {#geoblacklight}
 
@@ -531,15 +601,19 @@ Library geoportals (often US universities). Showcase: [geoblacklight.org/showcas
 |------|-------|
 | Google | `"GeoBlacklight" OR inurl:/catalog geoblacklight site:.edu` |
 | Censys | `web.endpoints.http.body: "geoblacklight"` |
+| FOFA | `body="geoblacklight"` |
 
 ## Oskari (`oskari`) {#oskari}
 
 Finnish SDI map client. **Signals:** `Oskari`, `/Oskari/`, map full-screen UI.
 
+**Confirm:** GET the public map UI. One record per independent portal. **Reject** Oskari RPC embeds of another catalog (Suomi.fi Maps / HKP `hkp.maanmittauslaitos.fi` embeds on Kalastusrajoitus.fi and similar) and login-walled publishers (API 403).
+
 | Tool | Query |
 |------|-------|
 | Google | `"Oskari" (geoportal OR kartta) -site:oskari.org` |
 | Censys | `web.endpoints.http.body: "Oskari"` |
+| FOFA | `body="Oskari"` |
 
 ## Esri Geoportal Server (`esrigeo`) {#esrigeo}
 
@@ -549,6 +623,7 @@ Older Esri metadata catalog (not Hub). **Signals:** `/geoportal`, Geoportal Serv
 |------|-------|
 | Google | `"Geoportal Server" Esri OR inurl:/geoportal/csw` |
 | Censys | `web.endpoints.http.body: "Geoportal Server"` |
+| FOFA | `body="Geoportal Server"` |
 
 ## disy Cadenza (`cadenza`) {#cadenza}
 
@@ -563,6 +638,7 @@ German public-sector geoanalytics / geoportal (Cadenza Web and Cadenza Workbooks
 | Google | `"Cadenza Web" OR "disy Cadenza" (Umwelt OR Kartendienst OR Geoportal) site:.de` |
 | Google | `inurl:/cadenza/ (UDO OR iDA OR Kartendienst)` |
 | Censys | `web.endpoints.http.body: "cadenza"` |
+| FOFA | `body="cadenza"` |
 
 ## WIS 2.0 Box (`wis20box`) {#wis20box}
 
@@ -576,6 +652,7 @@ WMO WIS2 reference node for publishing meteorological and related geospatial dat
 |------|-------|
 | Google | `"wis2box" OR "WIS 2.0 Box" (pygeoapi OR "OGC API") -site:github.com` |
 | Censys | `web.endpoints.http.body: "wis2box"` |
+| FOFA | `body="wis2box"` |
 
 ## GET SDI Portal (`getsdiportal`) {#getsdiportal}
 
@@ -589,6 +666,7 @@ Geospatial Enabling Technologies SDI client over GeoServer / GeoNetwork. Common 
 |------|-------|
 | Google | `"GET SDI Portal" OR "GETMAP" (geoportal OR CSW) -site:getmap.eu` |
 | Censys | `web.endpoints.http.body: "GET SDI"` |
+| FOFA | `body="GET SDI"` |
 
 ## MapProxy (`mapproxy`) {#mapproxy}
 
@@ -600,6 +678,7 @@ Open-source map cache/proxy. Register only when MapProxy is the **public catalog
 |------|-------|
 | Google | `intitle:"MapProxy" (demo OR WMTS) -site:github.com -site:mapproxy.org` |
 | Censys | `web.endpoints.http.body: "MapProxy"` |
+| FOFA | `body="MapProxy"` |
 
 ## Terria (`terria`) {#terria}
 
@@ -613,6 +692,7 @@ Open-source catalog-driven map portal (TerriaJS). Site: [terria.io](https://terr
 |------|-------|
 | Google | `"Terria" (catalog OR "National Map") -site:github.com` |
 | Censys | `web.endpoints.http.body: "Terria"` |
+| FOFA | `body="Terria"` |
 
 ## MapBiomas (`mapbiomas`) {#mapbiomas}
 
@@ -624,6 +704,7 @@ Land-cover collections and map viewers. Country nodes (Brazil, Indonesia, and ot
 |------|-------|
 | Google | `"MapBiomas" (coleções OR collections OR geoportal)` |
 | Censys | `web.endpoints.http.body: "MapBiomas"` |
+| FOFA | `body="MapBiomas"` |
 
 ## ERDAS APOLLO (`erdasapollo`) {#erdasapollo}
 
@@ -637,6 +718,7 @@ Hexagon geospatial content management. Vendor: [hexagon.com](https://hexagon.com
 |------|-------|
 | Google | `"ERDAS APOLLO" (WMS OR catalog OR geoportal) -site:hexagon.com` |
 | Censys | `web.endpoints.http.body: "ERDAS APOLLO"` |
+| FOFA | `body="ERDAS APOLLO"` |
 
 ## pycsw (`pycsw`) {#pycsw}
 
@@ -648,6 +730,7 @@ OGC CSW and OGC API – Records server. Site: [pycsw.org](https://pycsw.org/). R
 |------|-------|
 | Google | `"pycsw" (CSW OR "OGC API" Records) -site:github.com -site:pycsw.org` |
 | Censys | `web.endpoints.http.body: "pycsw"` |
+| FOFA | `body="pycsw"` |
 
 ## Koordinates (`koordinates`) {#koordinates}
 
@@ -660,6 +743,8 @@ Cloud geospatial data platform. Hosts: `*.koordinates.com` plus custom governmen
 | Google | `site:koordinates.com (data OR layers)` |
 | Google | `"Powered by Koordinates" OR "koordinates" "open data"` |
 | crt.sh | `%.koordinates.com` |
+| Censys | `web.names: "koordinates.com"` |
+| FOFA | `domain="koordinates.com"` |
 
 ## IRI Data Library (`datalibrary`) {#datalibrary}
 
@@ -673,6 +758,7 @@ Climate / maproom portals (IRI Columbia and meteorological services). Site: [iri
 |------|-------|
 | Google | `"Data Library" (maproom OR IRI) (climate OR geospatial) -site:columbia.edu` |
 | Censys | `web.endpoints.http.body: "maproom"` |
+| FOFA | `body="maproom"` |
 
 ## Rasdaman (`rasdaman`) {#rasdaman}
 
@@ -684,6 +770,7 @@ Array database with OGC WCS/WMS/WCPS. Site: [rasdaman.com](https://rasdaman.com)
 |------|-------|
 | Google | `"rasdaman" (WCS OR WCPS OR petascope) -site:github.com -site:rasdaman.com` |
 | Censys | `web.endpoints.http.body: "rasdaman"` |
+| FOFA | `body="rasdaman"` |
 
 ## Open Data Cube (`opendatacube`) {#opendatacube}
 
@@ -695,6 +782,47 @@ Earth-observation data cube. Site: [opendatacube.org](https://www.opendatacube.o
 |------|-------|
 | Google | `"Open Data Cube" (explorer OR datacube) -site:opendatacube.org -site:github.com` |
 | Censys | `web.endpoints.http.body: "opendatacube"` |
+| FOFA | `body="opendatacube"` |
+
+## Datacube OWS (`datacubews`) {#datacubews}
+
+OGC service layer for Open Data Cube (`datacube-ows`). Docs: [datacube-core.readthedocs.io](https://datacube-core.readthedocs.io). Use when WMS/WCS OWS is the public product, not the cube explorer (`opendatacube`) or a STAC API (`stacserver`).
+
+**Signals:** `datacube-ows` / `datacube_ows`; ODC WMS/WCS GetCapabilities.
+
+**Confirm:** GET WMS or WCS GetCapabilities that names datacube-ows. Same `/collections` grain as Open Data Cube when OWS is the public product.
+
+| Tool | Query |
+|------|-------|
+| Google | `"datacube-ows" OR "datacube_ows"` |
+| Censys | `web.endpoints.http.body: "datacube-ows"` |
+| FOFA | `body="datacube-ows"` |
+
+## InGrid (`ingrid`) {#ingrid}
+
+German environmental/spatial metadata catalog. Site: [ingrid-oss.eu](https://ingrid-oss.eu). Source: [informationgrid](https://github.com/informationgrid).
+
+**Signals:** InGrid chrome; CSW and OpenSearch; German environmental SDI.
+
+**Confirm:** GET CSW GetCapabilities or the InGrid search UI. One catalog per public node.
+
+| Tool | Query |
+|------|-------|
+| Google | `"InGrid" (CSW OR Geoportal) site:.de` |
+| Censys | `web.endpoints.http.body: "InGrid"` |
+| FOFA | `body="InGrid"` |
+
+## GeoPortal.rlp (`geoportalrlp`) {#geoportalrlp}
+
+Rhineland-Palatinate SDI suite (OWS, ISO 19139, map viewer). Source: [mrmap-community/GeoPortal.rlp](https://github.com/mrmap-community/GeoPortal.rlp). Help: [geoportal.rlp.de](https://www.geoportal.rlp.de/article/Hilfe/).
+
+**Confirm:** do **not** re-add known RLP nodes already in the registry. GET CSW or the catalog UI on a distinct node.
+
+| Tool | Query |
+|------|-------|
+| Google | `geoportal.rlp.de` |
+| Censys | `web.names: "geoportal.rlp.de"` |
+| FOFA | `host="geoportal.rlp.de"` |
 
 ## ncWMS (`ncwms`) {#ncwms}
 
@@ -706,6 +834,7 @@ WMS for NetCDF / multidimensional environmental data. Docs: [ncwms](https://read
 |------|-------|
 | Google | `"ncWMS" OR Godiva (WMS OR NetCDF) -site:github.com` |
 | Censys | `web.endpoints.http.body: "ncWMS"` |
+| FOFA | `body="ncWMS"` |
 
 ## ArcGIS StoryMaps (`arcgisstorymaps`) {#arcgisstorymaps}
 
@@ -717,3 +846,4 @@ Esri's current geospatial storytelling product. Product: [ArcGIS StoryMaps](http
 |------|-------|
 | Google | `site:storymaps.arcgis.com/stories (data OR atlas OR catalog)` |
 | Censys | `web.endpoints.http.body: "ArcGIS StoryMaps"` |
+| FOFA | `body="ArcGIS StoryMaps"` |

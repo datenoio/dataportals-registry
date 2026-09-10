@@ -27,7 +27,7 @@ EXPLORE / CONNECT gateways over the OpenAIRE Graph. Filter exports on `software.
 GET https://api.openaire.eu/search/datasets
 ```
 
-Keep Graph **datasets** (research products typed as dataset). Drop publications, software, and org units. For a **CONNECT** community portal, use that gateway’s search/API with the community filter — do not dump the whole European graph. Prefer harvesting **source** IRs from this registry when you need publisher-level ids. The Graph data-source harvest list is [openaire-sync.md](openaire-sync.md). Stop on `401`.
+**Keep:** Graph **datasets** (research products typed as dataset). **Drop:** publications, software, and org units. For a **CONNECT** community portal, use that gateway’s search/API with the community filter — do not dump the whole European graph. Prefer harvesting **source** IRs from this registry when you need publisher-level ids. The Graph data-source harvest list is [openaire-sync.md](openaire-sync.md). Stop on `401`.
 
 ## Aleph (`aleph`) {#aleph}
 
@@ -37,11 +37,11 @@ OCCRP-style investigative collections.
 GET https://host/api/2/collections
 ```
 
-Keep **collections** that are dataset corpora. Drop entity/document search hits (`/api/2/entities`) as datasets. Page collection results; do not crawl every PDF. Skip aleph.occrp.org if you only needed the existing registry record.
+**Keep:** **collections** that are dataset corpora. **Drop:** entity/document search hits (`/api/2/entities`) as datasets. Page collection results; do not crawl every PDF. Skip aleph.occrp.org if you only needed the existing registry record.
 
 ## Machine learning catalogs
 
-OpenML, Galaxy, and similar hubs list **datasets** (or data libraries), not tasks, runs, or user spaces. Regional challenge platforms (Zindi, AIcrowd, SIGNATE, Grand Challenge, CodaLab) are usually `custom` — harvest the hub’s public **dataset** list, not every competition submission.
+OpenML, Galaxy, and similar hubs list **datasets** (or data libraries), not tasks, runs, or user spaces. Regional challenge platforms (Zindi, AIcrowd, SIGNATE, Grand Challenge) are usually `custom` — harvest the hub’s public **dataset** list, not every competition submission.
 
 ## OpenML (`openmlorg`) {#openmlorg}
 
@@ -49,13 +49,43 @@ OpenML, Galaxy, and similar hubs list **datasets** (or data libraries), not task
 GET https://www.openml.org/api/v1/json/data/list/limit/100/offset/0
 ```
 
-Keep **datasets** (`data`). Drop tasks, flows, runs, and setups. Do not harvest every OpenML task as a dataset. Skip cloning openml.org if you only needed the existing registry record — harvest **contents** when the user asked.
+**Keep:** **datasets** (`data`). **Drop:** tasks, flows, runs, and setups. Do not harvest every OpenML task as a dataset. Skip cloning openml.org if you only needed the existing registry record — harvest **contents** when the user asked.
+
+## Hugging Face (`huggingface`) {#huggingface}
+
+```text
+GET https://huggingface.co/api/datasets
+```
+
+**Keep:** **datasets**. **Drop:** models, Spaces, and per-user repos. The Hub is usually **one** registered catalog.
+
+## CodaLab Competitions (`codalab`) {#codalab}
+
+```text
+GET https://competitions.codalab.org/competitions/
+```
+
+**Keep:** public **competitions** that publish dataset bundles, or the hub’s public dataset list if exposed. **Drop:** submissions, leaderboards, and per-user workspaces. One registered hub.
+
+## Codabench (`codabench`) {#codabench}
+
+```text
+GET https://www.codabench.org/
+```
+
+**Keep:** public **benchmarks / competitions** and any public dataset catalog pages. `/api/datasets/` is often `403` — stop and use the HTML catalog. **Drop:** submissions and login-only datasets. One registered hub.
 
 ## Galaxy (`galaxy`) {#galaxy}
 
 Public **data libraries** are the dataset catalog. Histories and workflow runs are not. Prefer [harvest-scientific.md](harvest-scientific.md) unless `catalog_type` is Machine learning catalog.
 
-Hugging Face, Kaggle, and Papers with Code are usually **one** registered hub. Harvest their public dataset APIs if asked; do not add per-user spaces as catalogs.
+```text
+GET https://host/api/libraries
+```
+
+**Keep:** public data libraries. **Drop:** histories, workflows, and job outputs. Stop on `401` for user workspaces.
+
+Hugging Face (`huggingface`) has its own harvest section above. Kaggle and Papers with Code are usually **one** registered hub each. Harvest their public dataset APIs if asked; do not add per-user spaces as catalogs.
 
 ## API catalogs
 
@@ -68,6 +98,7 @@ Public catalog of datasets for sale or license. Harvest **public** listing APIs 
 ## Datasets lists {#datasets-lists}
 
 HTML tables, spreadsheets, GitHub inventories (`catalog_type: Datasets list`). One row / bullet with a dataset title + URL = one dataset. Skip the wrapping README as a dataset. No CMS API — parse the published file the catalog `link` points at, not a site-wide scrape.
+
 
 ## Custom software (`custom`) {#custom}
 
@@ -96,6 +127,8 @@ About one catalog in eight has no shared product ID. Do not guess CKAN, DSpace, 
 | Municipal Excel / HTML inventory | The file the `link` points at | Rows with title + URL | The wrapping CMS |
 
 Do not invent a new `software.id` for a one-off.
+
+**Keep:** the first public dataset list from `endpoints[]` or the protocol fallback (DCAT, OAI dataset set, CSW/STAC/OGC collections, or a published HTML/CSV inventory). **Drop:** CMS-wide scrapes, guessed CKAN/DSpace/GeoNetwork filters, gene pages, and `401`/`403` login walls.
 
 ## Related
 

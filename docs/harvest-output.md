@@ -50,7 +50,7 @@ Do not write this JSON into `data/entities/`. Store it in your index or harvest 
 }
 ```
 
-This schema is documentation-only. It is not published under `data/schemes/` and is not validated in CI.
+This schema is an agent recipe, not a runtime contract. It is served at [harvest-record.schema.json](https://datenoio.github.io/dataportals-registry/harvest-record.schema.json) (`website/static/harvest-record.schema.json`). It is not under `data/schemes/` and is not validated in CI.
 
 ## Skip report
 

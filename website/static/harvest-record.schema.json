@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://datenoio.github.io/dataportals-registry/harvest-record.schema.json",
+  "title": "Harvest dataset record (agent recipe)",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["catalog_uid", "catalog_id", "software_id", "native_id"],
+  "properties": {
+    "catalog_uid": { "type": "string", "pattern": "^(cdi|temp)[0-9]{8}$" },
+    "catalog_id": { "type": "string" },
+    "catalog_link": { "type": "string", "format": "uri" },
+    "software_id": { "type": "string" },
+    "native_id": { "type": "string", "minLength": 1 },
+    "persistent_id": { "type": "string" },
+    "landing_url": { "type": "string", "format": "uri" },
+    "title": { "type": "string" },
+    "type_filter": { "type": "string" },
+    "modified": { "type": "string" }
+  }
+}

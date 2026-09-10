@@ -18,7 +18,7 @@ Works with Cursor, Claude Code, Copilot, Codex, and any agent with file access.
 |--------|------|
 | DuckDB | `data/datasets/datasets.duckdb` table `catalogs` |
 | Parquet | `data/datasets/full.parquet` |
-| JSONL | `data/datasets/catalogs.jsonl` |
+| JSONL | `data/datasets/catalogs.jsonl.zst` |
 | Software | DuckDB table `software` or `data/datasets/software.jsonl` |
 
 ## Join keys
@@ -50,6 +50,7 @@ SELECT count(*) FROM software;
 - `status` is curated. Liveness is a separate report (`dataquality/liveness_report.jsonl`).
 - Geographic coverage is biased toward the United States — do not treat counts as a complete global census.
 - `software.id` may be `custom` when the platform is unknown.
+- If `datasets.duckdb` raises a lock error (another session writing), query `data/datasets/full.parquet` instead. Do not walk YAML.
 
 ## After answering
 

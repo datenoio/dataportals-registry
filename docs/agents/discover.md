@@ -19,7 +19,9 @@ Do not invent `uid`. Do not add dataset-level records. Do not implement producti
 
 1. Read [llms.txt](https://github.com/datenoio/dataportals-registry/blob/main/llms.txt) if you have not already.
 2. Duplicate-check **exports** (`data/datasets/datasets.duckdb` or `full.parquet`), then `data/scheduled/` if present.
-3. If the user named a URL or domain, search that first and stop if it is already registered.
+3. If DuckDB raises a lock error, query `data/datasets/full.parquet` instead. Do not walk YAML.
+4. If the user named a URL or domain, search that first and stop if it is already registered.
+5. If this is a software-instance hunt, check whether a prior session already exhausted that vendor list (0 missing is done).
 
 ```sql
 SELECT id, uid, name, link, catalog_type, status,
@@ -56,7 +58,9 @@ Match the user prompt to one of these loops. Do not mix them in the same pass.
 Which {software} catalogs are missing?
 ```
 
-Read the software YAML and [software-index.md](../software-index.md) row. `SELECT link FROM catalogs WHERE software.id = '{id}'`. Fetch the vendor list or hostname pattern (not a scanner). Probe fingerprints. One record per public tenant, not a second copy of the same hub (PISO geoprostor.net, SeaSketch marketing home, GISApp REST adaptor).
+Read the software YAML and [software-index.md](../software-index.md) row. `SELECT link FROM catalogs WHERE software.id = '{id}'`. Fetch the vendor list or hostname pattern (not a scanner). Optional: crt.sh for SaaS hosts (`%.pozi.com`, `%.giscloud.com`), then Censys or FOFA title/body if Google is silent ([FOFA as Censys alternative](../discovery-search-tools.md#fofa)). Probe fingerprints. One record per public tenant, not a second copy of the same hub (PISO geoprostor.net, SeaSketch marketing home, GISApp REST adaptor).
+
+If the vendor list is exhausted and nothing new probes live, **stop and list 0 missing**. Do not invent extra cities.
 
 ### National harvest sources {#national-harvest-sources}
 
@@ -94,7 +98,15 @@ Count existing `indicators/` YAML. Hunt the **missing product**, not another IMF
 Which data catalogs from {list URL} are missing?
 ```
 
-One bounded list per session: ODIS, CoreTrustSeal, STAC Index, WIS2 GDC, GeoNetwork/GeoNode galleries, CLARIN/VLO, PANGAEA harvest sources, FGDC SSC, MappingSupport, Geoseer. Duplicate-check hostname; probe live; skip preservation systems with no dataset catalog (CoreTrustSeal SPAR/EWIG) and org homepages (many PANGAEA harvest sources).
+One bounded list per session: ODIS, CoreTrustSeal, STAC Index, WIS2 GDC, GeoNetwork/GeoNode galleries, CLARIN/VLO, PANGAEA harvest sources, FGDC SSC, MappingSupport, Geoseer, Instant Apps Filter Gallery hosts. Duplicate-check hostname; probe live; skip preservation systems with no dataset catalog (CoreTrustSeal SPAR/EWIG) and org homepages (many PANGAEA harvest sources).
+
+### Subnational municipal GIS {#subnational-municipal-gis}
+
+```text
+Which {country} cities and counties have geoportals that are missing?
+```
+
+Count existing `geo/` YAML first. Hunt the **product tenant list** for that country (e-mapa.net, GISPLAN, GisMaster, IntraMaps, SonicWeb, WebEWID), not every administrative unit. **Accept:** live public viewer. **Reject:** REST of an existing Hub, staff login GIS, marketplace demos, “all counties” guesses (Iran: only cities with a public ArcGIS / GeoServer / GeoNode UI). Saturated after v1.20.0: Poland e-mapa, Czech/Slovak GISPLAN/GEPRO/Mapotip, Italian GisMaster, Japanese WagMap/SonicWeb, Brazilian CTMGEO — skip unless a new gallery URL exists.
 
 ### Custom-software review {#custom-software-review}
 
@@ -102,7 +114,7 @@ One bounded list per session: ODIS, CoreTrustSeal, STAC Index, WIS2 GDC, GeoNetw
 Review custom {geoportals|indicators|scientific} catalogs and identify new software definitions
 ```
 
-Cluster remaining `software.id: custom` by hostname or path. Add a software YAML only when ≥3 independent installations share a product, then retag those rows in the same change. One-off national `.gov` roots stay `custom`.
+Cluster remaining `software.id: custom` by hostname or path. Add a software YAML when ≥3 independent installations share a product, **or** a first-party product page / vendor deployment list names it (then run the instance hunt). One-off national `.gov` roots stay `custom`. Do not identify Argenmap from Leaflet alone, WebEWID from authenticated role portals, or ArcGIS Dashboards from pages outside `/apps/dashboards/`.
 
 ## Software probes
 
@@ -120,6 +132,8 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `/opendata/set/lkod` or lkod.cz catalog | `lkod` | Open data portal |
 | `/srv/eng/csw` or `/srv/api` | `geonetwork` | Geoportal |
 | Title “Geoportal Palapa” / `/main/` or `/gspalapa/` | `palapa` | Geoportal |
+| Argenmap `src/js/app.js` / IGN template | `argenmap` | Geoportal |
+| Title `WebEWID` / Portal Mapowy | `webewid` | Geoportal |
 | `/geoserver/ows` GetCapabilities | `geoserver` | Geoportal |
 | ArcGIS Hub search / `opendata.arcgis.com` | `arcgishub` | Geoportal or Open data portal |
 | `/arcgis/rest/info?f=pjson` | `arcgisserver` | Geoportal |
@@ -128,8 +142,21 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | STAC `/collections` JSON | `stacserver` | Geoportal |
 | `/api/info/version` | `dataverse` | Scientific data repository |
 | DSpace `/server/api` or `/xmlui` | `dspace` | Scientific data repository |
+| GAVO DaCHS TAP / `DaCHS` | `dachs` | Scientific data repository |
+| BEXIS2 `/api/` or bexis2 chrome | `bexis2` | Scientific data repository |
+| Specify Web Portal collection search | `specify` | Scientific data repository |
 | `/api/records?size=1` InvenioRDM | `inveniordm` | Scientific data repository |
 | `/api/v1/` PxWeb tables | `pxweb` | Indicators catalog |
+| `webMain.aspx` `funid=` Taiwan statistical dynamic query | `webmain` | Indicators catalog |
+| `terristory.fr/{region}` TerriSTORY hub | `terristory` | Indicators catalog |
+| `ihk-fachkraeftemonitor.de/{land}/` | `ihkfachkraeftemonitor` | Indicators catalog |
+| `/Informationsportal/` DUVA (KOSIS-Gemeinschaft) | `duva` | Indicators catalog |
+| `GC_loadCss.php` / `/geoclipair/` Géoclip Air | `geoclip` | Indicators catalog |
+| Title InstantAtlas™ / `ia-min.js` | `instantatlas` | Indicators catalog |
+| MATS-Datenportal / “Modernes Analyse Tool Statistik” | `mats` | Indicators catalog |
+| `*.ifinmon.ru` / iminfin.ru iMonitoring Open Budget | `imonitoring` | Indicators catalog |
+| `/jaxi/Tabla.htm` `/jaxiT3/` / `iaeaxi` / `*-jaxi` menu.do | `jaxi` | Indicators catalog |
+| `hdc.moph.go.th/{tenant}/public/` Health Data Center | `hdc` | Indicators catalog |
 | `PxStat.Data.Cube_API` / “PxStat Open Data Platform” | `pxstat` | Indicators catalog |
 | `/databrowserhub/api/core` or `/databrowser/api/core` hub JSON | `istatdatabrowser` | Indicators catalog |
 | Title “TabNet Win32” / `deftohtm.exe` / `cgi-bin/dh` | `tabnet` | Indicators catalog |
@@ -143,6 +170,7 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | Hajk `appConfig.json` / `mapserviceBase` | `hajk` | Geoportal |
 | `origo.min.js` / `origo.js` / `Origo(` Origosamverkan | `origo` | Geoportal |
 | Title “myCarta WebMap” / `/webmap/` / `/mycartawebmap/` | `mycarta` | Geoportal |
+| Title `AddSpatial` / `/smart/?profile=` / `images/addspatial.svg` | `addspatial` | Geoportal |
 | `drift.kortinfo.net/Map.aspx` | `kortinfo` | Geoportal |
 | IntraMaps Public `project=` / `*.spatial.t1cloud.com` | `intramaps` | Geoportal |
 | `/connect/analyst/` title Spectrum Spatial / Precisely | `spectrumspatial` | Geoportal |
@@ -168,6 +196,10 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | OVIE OpenLayers `/js/libs/OpenLayers/OL.js` + Materialize | `ovie` | Geoportal |
 | `{city}.cadastre.com.ua` or SOFTPRO `/js/locale/ua.js` | `softpro` | Geoportal |
 | `/mdm6/` or `/mxsig2/` amplify.js Mapa Digital | `mxsig` | Geoportal |
+| `/apps/dashboards/{item-id}` | `arcgisdashboards` | Geoportal |
+| HTML comment `DIGITAL TWIN CLOUD - NEWLAYER` / `assets/css/IDE.css` | `digitaltwincloud` | Geoportal |
+| V&G `/resources/common/thirdparty/soda/soda.js` | `gtmap` | Geoportal |
+| `/js/base/MapSave.js` + `BaseMap.js` / `SeeMap.js` | `myeongji` | Geoportal |
 | `/apps/instant/{template}/?appid=` Instant Apps | `instantapps` | Geoportal |
 | `{city}.gisplan.sk` / T-MAPY Spinbox / `tmapy.svg` / GIS4U / `{city}.tmapserver.cz` | `gisplan` | Geoportal |
 | `mobec.sk/{slug}` T-MAPY mOBEC / `tmapyn.svg` | `mobec` | Geoportal |
@@ -192,6 +224,35 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `*.sentinel-hub.com` STAC `/api/v1/catalog` | `sentinelhub` | Geoportal |
 | `*.revenuedev.org` license portal | `rdfrepository` | Open data portal |
 | ResourceContracts `/contract/resources` | `resourcecontracts` | Open data portal |
+| OpenSpending fiscal dataset search | `openspending` | Open data portal |
+| Title `Shanoir` / `Shanoir NG` | `shanoir` | Scientific data repository |
+| Title `LORIS` / `*.loris.ca` public portal | `loris` | Scientific data repository |
+| MINERVA / MINERVA-Net pathway maps | `minerva` | Scientific data repository |
+| Nextstrain / Auspice dataset catalog | `nextstrain` | Scientific data repository |
+| Materials Cloud Explore (not Archive) | `materialscloud` | Scientific data repository |
+| OpenKIM interatomic models | `openkim` | Scientific data repository |
+| ChecklistBank dataset API | `checklistbank` | Scientific data repository |
+| ProteoSAFe `/ProteoSAFe/datasets.jsp` | `proteosafe` | Scientific data repository |
+| CyVerse Data Commons catalog | `cyverse` | Scientific data repository |
+| GeoNature-atlas `/static/css/atlas.css` | `geonature` | Geoportal |
+| map.geo.admin.ch `/v1.*/assets/index-` | `webmapviewer` | Geoportal |
+| DataHub title + `/api/graphql` | `datahubproject` | Metadata catalog |
+| Hugging Face `/datasets/` | `huggingface` | Machine learning catalog |
+| Title `CodaLab` / `competitions.codalab.org` | `codalab` | Machine learning catalog |
+| Title `Codabench` / `codabench.org` | `codabench` | Machine learning catalog |
+| `/v1.1/` SensorThings JSON (`Things` / `Datastreams`) or title `FROST-Server` | `frostserver` | Scientific data repository |
+| Title `easydb 5` / `fylr_inject` / `/api/v1/session` | `easydb` | Scientific data repository |
+| Title `Yareta` / `/oai-info/oai-provider/oai` | `dlcm` | Scientific data repository |
+| `meta generator` `GeoCMS Version:` `brain-SCC` | `braingeocms` | Geoportal |
+| OpenAlex bibliographic API | `openalex` | Scientific data repository |
+| Wikidata / Wikibase SPARQL | `wikibase` | Scientific data repository |
+| DBpedia Databus | `databus` | Scientific data repository |
+| MGnify / MetaboLights / BioStudies | `mgnify` / `metabolights` / `biostudies` | Scientific data repository |
+| Reactome / WikiPathways | `reactome` / `wikipathways` | Scientific data repository |
+| UCSC Genome Browser | `ucscgenomebrowser` | Scientific data repository |
+| FlyBase / WormBase | `flybase` / `wormbase` | Scientific data repository |
+| iDigBio Portal | `idigbio` | Scientific data repository |
+| iNaturalist hub | `inaturalist` | Scientific data repository |
 | `{city}.data.gxzf.gov.cn` | `gxopendata` | Open data portal |
 | `/openapi.json` + `/api/datasets` JSON:API (`type: dataset`) | `opengdc` | Open data portal |
 | SparkMap / All Things hub | `sparkmap` | Indicators catalog |
@@ -243,21 +304,28 @@ See [apidetect.md](../apidetect.md). Do not run `apidetect_urlmaps_draft.py` as 
 - Sites that require authentication for any catalog listing
 - Dataset records, CKAN packages, STAC items (out of scope)
 - Guessed software IDs
+- Directory hubs that only list other catalogs (IPUMS Health Surveys-class)
+- Survey / data-collection platforms with no public dataset catalog (SurveySolutions)
+- Embeds or RPC viewers of another catalog (Oskari embeds of Suomi.fi)
+- Marketplace and demo tenants (`giscloud` `mapportal` / `crowdsource-demo`)
 
 ## After a valid find
 
 1. `python scripts/builder.py add-single URL --scheduled` (preferred) or write YAML per [contribute.md](contribute.md).
 2. `python scripts/builder.py assign`
 3. `python scripts/builder.py validate-yaml --id` for that catalog id
-4. Cite `id` + `link` in the reply. List skipped duplicates with their existing `id`.
+4. Cite `id` + `link` in the reply. List skipped duplicates with their existing `id`. If the vendor list is exhausted, say so (0 missing is a complete hunt).
 
 ## Do not
 
 - Walk `data/entities/**/*.yaml` to search; use exports
+- Treat a DuckDB lock as failure; use `full.parquet`
 - Hand-edit `data/datasets/`
 - Bypass `401`/`403`, guess API keys, or follow login forms
 - Flood a host; one or two GETs per path is enough
 - Commit generated dumps unless the user asked for a rebuild
+- Repeat a software-instance hunt from the last two weeks unless a new gallery URL exists
+- Google every city in a country that already has a complete municipal GIS tenant list
 
 ## Related
 

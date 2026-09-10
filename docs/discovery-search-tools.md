@@ -8,12 +8,12 @@ Agent checklist: [agents/discover.md](agents/discover.md). Platform fingerprints
 
 ## Workflow
 
-1. Scope the search: one country, one city, one `software.id`, one TLD, or one named list URL. Unscoped queries produce more noise than this registry can review.
-2. Duplicate-check exports (`datasets.duckdb` / `full.parquet`) and `data/scheduled/` **before** opening dozens of tabs. Match on hostname, not display name.
-3. Run a **title / URL** query first (Google `intitle:` / `inurl:`, Censys `html_title`). Then a **body / snippet** query (`"Powered by CKAN"`, HTTP body).
-4. Restrict with `site:.gov`, a national TLD, or a Censys `location.country_code`.
+1. Scope the search: one country, one city, one `software.id`, one TLD, or one named list URL. Unscoped queries produce more noise than this registry can review. For municipal geoportals, scope to a **product tenant list**, not every city name.
+2. Duplicate-check exports (`datasets.duckdb` / `full.parquet`) and `data/scheduled/` **before** opening dozens of tabs. Match on hostname, not display name. If DuckDB is locked, use Parquet.
+3. Run a **title / URL** query first (Google `intitle:` / `inurl:`, Censys `html_title`, FOFA `title=`). Then a **body / snippet** query (`"Powered by CKAN"`, HTTP body). For SaaS viewers, Certificate Transparency often beats Google (`%.pozi.com`, `%.giscloud.com`, `%.webewid.pl`).
+4. Restrict with `site:.gov`, a national TLD, a Censys `location.country_code`, or FOFA `country="XX"`.
 5. Confirm the live site with the probe table for that platform. Set `software.id` only when two signals match.
-6. Add verified finds with `add-single --scheduled`. Skip demos, docs, GitHub repos, and login-only sites.
+6. Add verified finds with `add-single --scheduled`. Skip demos, docs, GitHub repos, and login-only sites. If the vendor list is exhausted, report 0 missing and stop.
 
 ## What counts as a hit
 
@@ -125,7 +125,7 @@ Google often ranks **dataset pages** and **news articles** above the catalog hom
 
 ## Censys
 
-[Censys Platform](https://platform.censys.io) indexes hosts, certificates, and web properties. It is useful when Google does not list a site (no inbound links, robots-blocked HTML, IP-only services).
+[Censys Platform](https://platform.censys.io) indexes hosts, certificates, and web properties. It is useful when Google does not list a site (no inbound links, robots-blocked HTML, IP-only services). If Censys search is not on your plan or MCP is not connected, use [FOFA](#fofa) with the same title / body / country filters.
 
 Create a free or research account. Use the **web properties** dataset for catalogs (they are websites). Use **hosts** when you need a product fingerprint on a port (GeoServer, ArcGIS Server). Use **certificates** for hostname patterns such as `opendata.*`.
 
@@ -235,20 +235,84 @@ ssl.cert.subject.CN:opendata
 
 Same review rules as Censys: hostname over IP, public catalog UI, no auth bypass.
 
-## FOFA, ZoomEye, and similar maps
+## FOFA {#fofa}
 
-These indexes are strong for East Asian and some European hosts that Google ranks poorly.
+[FOFA](https://en.fofa.info) is an internet map in the same class as Censys and Shodan. Use it as the **Censys alternative** when any of these is true:
 
-**[FOFA](https://en.fofa.info)** (example syntax):
+- Censys Platform search is not on the plan, or the official Censys MCP is not connected
+- The hunt is East Asia (China, Japan, Korea, Taiwan, Hong Kong) — FOFA’s index is often denser there
+- You already have `FOFA_EMAIL` / `FOFA_KEY` and want the same title / body / country filters in FOFA syntax
+
+Same job as Censys: find catalog UIs that Google does not list. Same review rules: hostname over IP, public catalog UI, no auth bypass. Do not export huge unscoped result sets. Filter by country or software, then review hostnames one by one.
+
+API and agent setup: [discovery-agent-tools.md](discovery-agent-tools.md#fofa). Official syntax: [FOFA rule list](https://en.fofa.info) (sign-in). Free and low plans often cannot search `body=` or `header=` over the API — fall back to `title=`, `host=`, `domain=`, `app=`, and `cert=`.
+
+### Query language
+
+FOFA uses `field="value"` with `&&` (AND), `||` (OR), and `!=` (NOT). Values are quoted. Translate any Censys row in the platform guides with this table. Software pages include a FOFA row for each Censys query; use this table when you need a variant (country, TLD) that is not listed.
+
+| Goal | FOFA | Censys (web properties) |
+|------|------|-------------------------|
+| HTML title | `title="CKAN"` | `web.endpoints.http.html_title: "CKAN"` |
+| HTML body | `body="Powered by CKAN"` | `web.endpoints.http.body: "Powered by CKAN"` |
+| HTTP header | `header="X-Socrata"` | (headers / body) |
+| Detected product | `app="GeoServer"` | `web.software.product: "GeoServer"` |
+| Country | `country="PT"` | `web.location.country_code = "PT"` |
+| Hostname fragment | `host="opendata"` | `web.names: "opendata"` |
+| Registrable domain | `domain="opendatasoft.com"` | `web.names: "opendatasoft.com"` |
+| Certificate name | `cert="opendata"` | `cert.parsed.names: "opendata"` |
+| HTTPS only | `protocol="https"` | prefer HTTPS web-property names |
+
+`host=` is a substring match, so `host=".gouv.fr"` is the usual TLD filter. Combine with country whenever the query would otherwise be global.
+
+**Worked translations**
+
+| Censys | FOFA |
+|--------|------|
+| `web.location.country_code = "FR" and web.endpoints.http.html_title: "données"` | `title="données" && country="FR"` |
+| `web.names: ".gouv.fr" and web.endpoints.http.body: "ckan"` | `host=".gouv.fr" && body="ckan"` |
+| `web.names: "opendatasoft.com"` | `domain="opendatasoft.com"` |
+| `host.services.software.product = "GeoServer"` | `app="GeoServer"` |
+| `web.endpoints.http.body: "/odweb/"` | `body="/odweb/"` |
+
+### Starter queries
 
 ```text
 title="CKAN"
 body="Powered by CKAN"
+title="CKAN" && country="PT"
+body="Powered by CKAN" && country="JP"
 title="GeoNetwork"
+body="GeoNetwork opensource"
 app="GeoServer"
-title="数据开放" && country="CN"
+title="Socrata"
+body="OpenDataSoft"
+domain="opendatasoft.com"
 host="opendata"
+cert="opendata"
+title="数据开放" && country="CN"
+body="/odweb/" && title="数据开放"
+host="data.gxzf.gov.cn"
+title="Dataverse"
+body="DSpace"
+title="PxWeb"
 ```
+
+Paste these in the FOFA web search box, or Base64-encode them for the API (`qbase64`). Platform pages include a few FOFA rows where the query is not a 1:1 Censys translation or where FOFA coverage is stronger (ODWeb, Guangxi, Tianditu, MapGIS, Hyrax).
+
+### How to turn a FOFA hit into a registry URL
+
+1. Prefer `host`, `domain`, or `link` in the result, not `ip`.
+2. Try `https://{host}/` first (drop `:443`; keep a non-443 port only if the catalog really listens there), then the platform path (`/dataset`, `/geonetwork`, `/dataverse`, `/odweb/`).
+3. Duplicate-check the hostname in DuckDB.
+4. Probe the public API path from the platform guide.
+5. Skip hosts that only serve a login form, a default web-server page, or an internal dashboard.
+
+FOFA often returns the same catalog on ports 80 and 443, or several vhosts on one IP. Deduplicate by hostname before probing. Never set `link` to a bare IP.
+
+## ZoomEye and similar maps
+
+These indexes overlap FOFA for East Asian and some European hosts that Google ranks poorly.
 
 **[ZoomEye](https://www.zoomeye.org)**:
 
@@ -298,6 +362,10 @@ geoportal.%
 geonetwork.%
 %.hub.arcgis.com
 %.opendatasoft.com
+%.pozi.com
+%.giscloud.com
+%.spatial.t1cloud.com
+%.webewid.pl
 ```
 
 **[Censys certificates](https://platform.censys.io)** and **[Cloudflare Radar / CT](https://radar.cloudflare.com)** can list the same names.
