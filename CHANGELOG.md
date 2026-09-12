@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.21.0] - 2026-09-12
+
+**GitHub Release**: [v1.21.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.21.0) - Published September 12, 2026
+
 ### Added
 
 - **1,904 net new catalog entries** since v1.20.0 (1,905 added, 1 recategorized); registry source now **37,170** entities (**0** scheduled) across **224** country/territory folders.
