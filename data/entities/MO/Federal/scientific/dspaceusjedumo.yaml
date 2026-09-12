@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: MO
+      name: Macau
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: University of Saint Joseph DSpace-CRIS repository with publications and
+  at least one Dataset-typed research record (zebrafish auditory-system data).
+endpoints:
+- type: dspace
+  url: https://dspace.usj.edu.mo/server/api
+- type: dspace:objects
+  url: https://dspace.usj.edu.mo/server/api/discover/search/objects
+- type: oaipmh20
+  url: https://dspace.usj.edu.mo/server/oai/request?verb=Identify
+  version: '2.0'
+id: dspaceusjedumo
+langs:
+- id: EN
+  name: English
+- id: ZH
+  name: Chinese
+- id: PT
+  name: Portuguese
+link: https://dspace.usj.edu.mo/
+name: University of Saint Joseph DSpace-CRIS
+owner:
+  link: https://www.usj.edu.mo
+  location:
+    country:
+      id: MO
+      name: Macau
+    level: 20
+  name: University of Saint Joseph
+  type: Academy
+properties:
+  dataset_count_reported: 1
+  is_national: false
+software:
+  id: dspacecris
+  name: DSpace CRIS
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- DSpace CRIS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00043569

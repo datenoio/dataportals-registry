@@ -25,6 +25,12 @@ endpoints:
 - type: pygeoapi:collections
   url: https://merit.internetofwater.app/collections?f=json
   version: '1.0'
+- type: pygeoapi:openapi
+  url: https://merit.internetofwater.app/openapi
+  version: '1.0'
+- type: ogc:features
+  url: https://merit.internetofwater.app/collections/?f=json
+  version: '1.0'
 id: meritinternetofwaterapp
 langs:
 - id: EN

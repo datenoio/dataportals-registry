@@ -26,6 +26,16 @@ endpoints:
 - type: ckan:package-list
   url: https://dataut.vegvesen.no/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://dataut.vegvesen.no/catalog.n3
+- type: dcat:ttl
+  url: https://dataut.vegvesen.no/catalog.ttl
+- type: dcat:xml
+  url: https://dataut.vegvesen.no/catalog.xml
+- type: dcat:jsonld
+  url: https://dataut.vegvesen.no/catalog.jsonld
+- type: dcat
+  url: https://dataut.vegvesen.no/catalog.rdf
 id: datautvegvesenno
 langs:
 - id: 'NO'

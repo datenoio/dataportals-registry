@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -12,7 +12,7 @@ coverage:
       name: Portugal
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: This site provides access to the work of the institution. The interface
   ie ins Portuguese and English.
@@ -35,8 +35,8 @@ owner:
   name: University of Beira Interior
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: dspace
+  name: DSpace
 status: active
 tags:
 - scientific
@@ -47,3 +47,15 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00032556
+endpoints:
+- type: dspace
+  url: http://ubibliorum.ubi.pt/server/api
+  version: '7'
+- type: dspace:objects
+  url: http://ubibliorum.ubi.pt/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: http://ubibliorum.ubi.pt/sitemap_index.xml
+- type: oaipmh20
+  url: http://ubibliorum.ubi.pt/server/oai/request?verb=Identify
+  version: '2.0'

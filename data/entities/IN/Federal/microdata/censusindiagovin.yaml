@@ -20,6 +20,8 @@ description: Official portal providing access to census tables, documents (acts,
 endpoints:
 - type: nada:catalog-search
   url: https://censusindia.gov.in/nada/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://censusindia.gov.in/nada/index.php/catalog/export/csv?ps=5000&collection[]
 id: censusindiagovin
 identifiers:
 - id: re3data

@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: QGIS Web Client 2 map of fishing waters around Jena, including association
+  waters and reservoirs.
+endpoints:
+- type: qwc2:layers
+  url: https://maps.fischerschule-jena.de/themes.json
+id: mapsfischerschulejenade
+langs:
+- id: DE
+  name: German
+link: https://maps.fischerschule-jena.de/
+name: Fischerschule Jena Gewässerkarte
+owner:
+  link: https://maps.fischerschule-jena.de/
+  location:
+    country:
+      id: DE
+      name: Germany
+  name: Fischerschule Jena
+  type: Civil society
+software:
+  id: qwc2
+  name: QGIS Web Client 2 (QWC2)
+status: active
+tags:
+- geospatial
+- civil society
+- qwc2
+- QGIS Web Client 2 (QWC2)
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043064

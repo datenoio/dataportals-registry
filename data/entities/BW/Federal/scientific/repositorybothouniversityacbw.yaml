@@ -13,7 +13,7 @@ coverage:
       name: Botswana
     level: 20
     macroregion:
-      id: '018'
+      id: 018
       name: Southern Africa
 description: Botho University DSpace institutional repository (BUIR) of dissertations
   and research papers. OAI-PMH Identify is live; the DSpace REST API is not exposed.
@@ -23,6 +23,12 @@ endpoints:
 - type: oaipmh20
   url: https://repository.bothouniversity.ac.bw/oai/request?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://repository.bothouniversity.ac.bw/buir/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repository.bothouniversity.ac.bw/buir/feed/atom_1.0/site
+  version: '1.0'
 id: repositorybothouniversityacbw
 langs:
 - id: EN

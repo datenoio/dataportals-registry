@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CL
+      name: Chile
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: MapStore map viewer of Chile's National Fisheries and Aquaculture Service
+  (Sernapesca).
+endpoints:
+- type: mapstore:config
+  url: https://visormapasgrdsn.sernapesca.cl/mapstore/configs/localConfig.json
+- type: mapstore:config
+  url: https://visormapasgrdsn.sernapesca.cl/configs/localConfig.json
+id: visormapasgrdsnsernapescacl
+langs:
+- id: ES
+  name: Spanish
+link: https://visormapasgrdsn.sernapesca.cl/mapstore/
+name: Visualizador de Mapas Sernapesca
+owner:
+  link: https://www.sernapesca.cl
+  location:
+    country:
+      id: CL
+      name: Chile
+  name: Servicio Nacional de Pesca y Acuicultura
+  type: Central government
+software:
+  id: mapstore
+  name: MapStore
+status: active
+tags:
+- geospatial
+- government
+- mapstore
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00042942
+properties:
+  has_doi: false
+  is_national: false

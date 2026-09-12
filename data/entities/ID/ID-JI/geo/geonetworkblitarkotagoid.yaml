@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: ID-JI
+      name: Jawa Timur
+description: Katalog Metadata Geospasial Kota Blitar is a Geoportal operated by Pemerintah
+  Kota Blitar, built with GeoNetwork.
+endpoints:
+- type: csw202
+  url: https://geonetwork.blitarkota.go.id/geonetwork/srv/fre/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:site
+  url: https://geonetwork.blitarkota.go.id/geonetwork/srv/api/site
+- type: geonetwork:selections
+  url: https://geonetwork.blitarkota.go.id/geonetwork/srv/api/selections
+id: geonetworkblitarkotagoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://geonetwork.blitarkota.go.id/geonetwork
+name: Katalog Metadata Geospasial Kota Blitar
+owner:
+  link: https://blitarkota.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    subregion:
+      id: ID-JI
+      name: Jawa Timur
+  name: Pemerintah Kota Blitar
+  type: Local government
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- government
+- geonetwork
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043357

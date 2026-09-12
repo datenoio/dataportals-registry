@@ -21,6 +21,15 @@ endpoints:
   url: https://spenergynetworks.opendatasoft.com/api
 - type: sitemap
   url: https://spenergynetworks.opendatasoft.com/sitemap.xml
+- type: opendatasoftapi
+  url: https://spenergynetworks.opendatasoft.com/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://spenergynetworks.opendatasoft.com/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://spenergynetworks.opendatasoft.com/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://spenergynetworks.opendatasoft.com/data.json
 id: spenergynetworksopendatasoftcom
 langs:
 - id: EN

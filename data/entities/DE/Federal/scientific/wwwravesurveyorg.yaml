@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -30,6 +30,9 @@ identifiers:
 langs:
 - id: DE
   name: German
+endpoints:
+- type: daiquiri:api
+  url: https://www.rave-survey.org/query/api/
 link: https://www.rave-survey.org/query/
 name: RAVE database
 owner:
@@ -41,8 +44,8 @@ owner:
   name: Leibniz Institute for Astrophysics Potsdam
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: daiquiri
+  name: Daiquiri
 status: active
 tags:
 - scientific

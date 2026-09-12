@@ -13,13 +13,16 @@ coverage:
       name: Cuba
     level: 20
     macroregion:
-      id: '029'
+      id: 029
       name: Caribbean
 description: ALMA is the InvenioRDM institutional repository of Universidad de Pinar
   del Río "Hermanos Saíz Montes de Oca". Public records API at /api/records.
 endpoints:
 - type: inveniordmapi:records
   url: https://alma.upr.edu.cu/api/records
+- type: oaipmh20
+  url: https://alma.upr.edu.cu/oai2d?verb=Identify
+  version: '2.0'
 id: almaupreducu
 langs:
 - id: ES

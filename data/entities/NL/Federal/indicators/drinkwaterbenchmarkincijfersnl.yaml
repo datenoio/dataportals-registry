@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -58,3 +58,8 @@ topics:
   name: Environment
   type: eudatatheme
 uid: cdi99992002
+endpoints:
+- type: swing:databank
+  url: https://drinkwaterbenchmark.incijfers.nl/databank
+- type: swing:viewer
+  url: https://drinkwaterbenchmark.incijfers.nl/viewer/

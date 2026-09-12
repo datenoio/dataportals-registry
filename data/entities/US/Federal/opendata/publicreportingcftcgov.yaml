@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Public Socrata catalog of CFTC Commitments of Traders and related market
+  reporting datasets.
+endpoints:
+- type: dcatus11
+  url: https://publicreporting.cftc.gov/data.json
+- type: socrata:views
+  url: https://publicreporting.cftc.gov/api/views
+- type: socrata:catalog
+  url: https://publicreporting.cftc.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://publicreporting.cftc.gov/opensearch.xml
+  version: '1.1'
+id: publicreportingcftcgov
+langs:
+- id: EN
+  name: English
+link: https://publicreporting.cftc.gov/
+name: CFTC Public Reporting
+owner:
+  link: https://www.cftc.gov/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Commodity Futures Trading Commission
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: socrata
+  name: Socrata
+status: active
+tags:
+- government
+- open data
+- financial markets
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00043755

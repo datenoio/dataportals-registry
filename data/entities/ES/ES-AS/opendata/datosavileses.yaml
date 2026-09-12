@@ -29,6 +29,14 @@ endpoints:
 - type: ckan:package-list
   url: https://datos.aviles.es/api/3/action/package_list
   version: '3'
+- type: dcat:xml
+  url: https://datos.aviles.es/catalog.xml
+- type: dcat:jsonld
+  url: https://datos.aviles.es/catalog.jsonld
+- type: dcat
+  url: https://datos.aviles.es/catalog.rdf
+- type: dcat:n3
+  url: https://datos.aviles.es/catalog.n3
 id: datosavileses
 langs:
 - id: ES

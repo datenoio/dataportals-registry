@@ -25,6 +25,9 @@ endpoints:
   url: https://s3-eu-west-1.amazonaws.com/sa-socrata-sitemaps-eu-west-1-prod/sitemaps/sitemap-data.cdp.net.xml
 - type: opensearch
   url: https://data.cdp.net/opensearch.xml
+- type: socrata:catalog
+  url: https://data.cdp.net/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: datacdpnet
 langs:
 - id: EN

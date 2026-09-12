@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: KIT Campus Alpin IMK-IFU TERENO SensorThings catalog of climate-station
+  Things and Datastreams published through FROST-Server.
+endpoints:
+- type: sensorthings
+  url: https://sensorthings.imk-ifu.kit.edu/v1.1/
+  version: '1.1'
+- type: sensorthings
+  url: https://sensorthings.imk-ifu.kit.edu/v1.1/Datastreams?$top=1&$count=true
+  version: '1.1'
+- type: sensorthings
+  url: https://sensorthings.imk-ifu.kit.edu/v1.1/Things?$top=1&$count=true
+  version: '1.1'
+id: sensorthingsimkifukitedu
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://sensorthings.imk-ifu.kit.edu/
+name: KIT IMK-IFU TERENO SensorThings
+owner:
+  link: https://www.imk-ifu.kit.edu/
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Karlsruhe Institute of Technology IMK-IFU
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: frostserver
+  name: FROST-Server
+status: active
+tags:
+- SensorThings
+- TERENO
+- FROST
+- climate
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00043117

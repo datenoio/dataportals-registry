@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ESTER project Dataverse is a Scientific data repository operated by ESTER
+  project, built with Dataverse.
+id: dataverseesterprojectorg
+langs:
+- id: DE
+  name: German
+link: https://dataverse.ester-project.org
+name: ESTER project Dataverse
+owner:
+  link: https://ester-project.org
+  location:
+    country:
+      id: DE
+      name: Germany
+  name: ESTER project
+  type: Academy
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research
+- academic
+- dataverse
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043104
+endpoints:
+- type: dataverseapi
+  url: https://dataverse.ester-project.org/api/search
+- type: dataverseapi
+  url: https://dataverse.ester-project.org/api/info/version

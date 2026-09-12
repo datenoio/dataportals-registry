@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Public SDMX-RI NSI web service of the National Bank of Belgium, exposing
+  macroeconomic and financial statistics dataflows through SDMX REST and SOAP. Pairs
+  with the .Stat Suite Data Explorer at dataexplorer.nbb.be.
+endpoints:
+- type: sdmx:dataflows
+  url: https://nsidisseminate-stat.nbb.be/rest/dataflow
+- type: sdmx:datastructure
+  url: https://nsidisseminate-stat.nbb.be/rest/datastructure
+  version: '1.0'
+- type: sdmx:codelist
+  url: https://nsidisseminate-stat.nbb.be/rest/codelist
+  version: '1.0'
+- type: sdmx:conceptscheme
+  url: https://nsidisseminate-stat.nbb.be/rest/conceptscheme
+  version: '1.0'
+id: nsidisseminatestatnbbbe
+langs:
+- id: NL
+  name: Dutch
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://nsidisseminate-stat.nbb.be/
+name: NBB SDMX API
+owner:
+  link: https://www.nbb.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+  name: National Bank of Belgium
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: sdmxri
+  name: SDMX-RI
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- Belgium
+- macroeconomic
+- SDMX
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00042852

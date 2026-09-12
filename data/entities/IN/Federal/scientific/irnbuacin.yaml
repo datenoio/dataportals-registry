@@ -19,6 +19,17 @@ description: Institutional repository of the University of North Bengal, running
 endpoints:
 - type: dspace:catalog
   url: https://ir.nbu.ac.in
+- type: dspace
+  url: https://ir.nbu.ac.in/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://ir.nbu.ac.in/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://ir.nbu.ac.in/sitemap_index.xml
+- type: oaipmh20
+  url: https://ir.nbu.ac.in/server/oai/request?verb=Identify
+  version: '2.0'
 id: irnbuacin
 langs:
 - id: EN

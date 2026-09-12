@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion:
+      id: JP-40
+      name: Fukuoka
+description: BODIK ODCS open data catalog for 福岡県福津市 (福津市オープンデータカタログサイト), listed on
+  the e-Gov Data Portal database-site directory.
+endpoints:
+- type: ckan:package-search
+  url: https://data.bodik.jp/api/3/action/package_search?q=organization:402249
+  version: '3'
+id: odcsbodikjp402249
+langs:
+- id: JA
+  name: Japanese
+link: https://odcs.bodik.jp/402249
+name: 福津市オープンデータカタログサイト
+owner:
+  link: https://odcs.bodik.jp/402249
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-40
+      name: Fukuoka
+  name: 福岡県福津市
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- open data
+- BODIK
+- Japan
+- Fukuoka
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00005451

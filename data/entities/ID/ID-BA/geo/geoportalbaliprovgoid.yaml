@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: ID-BA
+      name: Bali
+description: Geoportal Palapa Provinsi Bali, a GSPalapa simpul jaringan node for sharing
+  geospatial catalogs and maps.
+id: geoportalbaliprovgoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://geoportal.baliprov.go.id
+name: Geoportal Palapa Provinsi Bali
+owner:
+  link: https://www.baliprov.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    subregion:
+      id: ID-BA
+      name: Bali
+  name: Pemerintah Provinsi Bali
+  type: Regional government
+software:
+  id: palapa
+  name: Palapa
+status: active
+tags:
+- geospatial
+- government
+- palapa
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043359
+endpoints:
+- type: wms130
+  url: https://geoportal.baliprov.go.id/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities

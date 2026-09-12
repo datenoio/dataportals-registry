@@ -21,6 +21,15 @@ endpoints:
   url: https://opendata.fluvius.be/api
 - type: sitemap
   url: https://opendata.fluvius.be/sitemap.xml
+- type: opendatasoftapi
+  url: https://opendata.fluvius.be/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://opendata.fluvius.be/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://opendata.fluvius.be/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://opendata.fluvius.be/data.json
 id: opendatafluviusbe
 langs:
 - id: FR

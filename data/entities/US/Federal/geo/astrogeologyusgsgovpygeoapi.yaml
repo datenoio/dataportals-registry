@@ -24,6 +24,9 @@ endpoints:
 - type: pygeoapi:collections
   url: https://astrogeology.usgs.gov/pygeoapi/collections/?f=json
   version: '1.0'
+- type: ogc:features
+  url: https://astrogeology.usgs.gov/pygeoapi/collections?f=json
+  version: '1.0'
 id: astrogeologyusgsgovpygeoapi
 langs:
 - id: EN

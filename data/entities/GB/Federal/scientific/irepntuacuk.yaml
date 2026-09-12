@@ -21,6 +21,20 @@ endpoints:
 - type: oaipmh20
   url: https://irep.ntu.ac.uk/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://irep.ntu.ac.uk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: eprints:datasets
+  url: https://irep.ntu.ac.uk/cgi/exportview/type/dataset/JSON/dataset.js
+- type: eprints:rest
+  url: https://irep.ntu.ac.uk/rest/eprint
+- type: eprints:n3
+  url: https://irep.ntu.ac.uk/cgi/export/repository/RDFN3/devel.n3
+- type: eprints:rdf
+  url: https://irep.ntu.ac.uk/cgi/export/repository/RDFXML/devel.rdf
+- type: opensearch
+  url: https://irep.ntu.ac.uk/cgi/opensearchdescription
+  version: '1.1'
 id: irepntuacuk
 langs:
 - id: EN

@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-NOR
+      name: Normandie
+description: GeoNature-atlas of fauna and flora observations for Parc naturel régional
+  des Boucles de la Seine Normande.
+id: biodivpnrseinenormandecom
+langs:
+- id: FR
+  name: French
+link: https://biodiv.pnr-seine-normande.com/atlas
+name: Biodiv'en Seine
+owner:
+  link: https://www.pnr-seine-normande.com/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-NOR
+      name: Normandie
+  name: Parc naturel régional des Boucles de la Seine Normande
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geonature
+  name: GeoNature
+status: active
+tags:
+- geospatial
+- biodiversity
+- GeoNature
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00043206
+endpoints:
+- type: geonature:api
+  url: https://biodiv.pnr-seine-normande.com/atlas/api/searchTaxon
+- type: geonature:api
+  url: https://biodiv.pnr-seine-normande.com/atlas/api/searchCommune

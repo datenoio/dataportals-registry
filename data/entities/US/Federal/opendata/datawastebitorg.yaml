@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Datasette of OCR'd local-government meeting minutes, searchable by municipality,
+  body, and date.
+id: datawastebitorg
+langs:
+- id: EN
+  name: English
+link: https://data.wastebit.org/
+name: Wastebit municipal minutes
+owner:
+  link: https://data.wastebit.org/
+  location:
+    country:
+      id: US
+      name: United States
+  name: Wastebit
+  type: Community
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- government
+- meeting minutes
+- municipalities
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: datasette:databases
+  url: https://data.wastebit.org/-/databases.json
+properties:
+  is_national: false
+uid: cdi00005609

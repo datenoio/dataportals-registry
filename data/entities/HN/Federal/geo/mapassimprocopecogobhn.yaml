@@ -23,6 +23,22 @@ endpoints:
   url: https://mapassimpro.copeco.gob.hn/api/v2/datasets/
 - type: geonode:documents
   url: https://mapassimpro.copeco.gob.hn/api/v2/documents/
+- type: geonode:datasets
+  url: https://mapassimpro.copeco.gob.hn/api/datasets/
+- type: geonode:documents
+  url: https://mapassimpro.copeco.gob.hn/api/documents/
+- type: csw202
+  url: https://mapassimpro.copeco.gob.hn/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://mapassimpro.copeco.gob.hn/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://mapassimpro.copeco.gob.hn/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: opensearch
+  url: https://mapassimpro.copeco.gob.hn/catalogue/opensearch
+  version: '1.1'
 id: mapassimprocopecogobhn
 langs:
 - id: ES

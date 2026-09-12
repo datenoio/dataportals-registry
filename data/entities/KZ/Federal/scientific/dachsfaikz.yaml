@@ -19,6 +19,9 @@ description: Archive of photometric and spectral observations, digitized astrono
 endpoints:
 - type: tap:capabilities
   url: https://dachs.fai.kz/tap/capabilities
+- type: oaipmh20
+  url: https://dachs.fai.kz/oai.xml?verb=Identify
+  version: '2.0'
 id: dachsfaikz
 langs:
 - id: EN

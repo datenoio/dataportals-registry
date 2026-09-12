@@ -23,6 +23,17 @@ description: Geoportal of Sanggau Regency (Kabupaten Sanggau), West Kalimantan, 
 endpoints:
 - type: geonode:datasets
   url: https://geoportal.sanggau.go.id/api/datasets/
+- type: geonode:documents
+  url: https://geoportal.sanggau.go.id/api/documents/
+- type: csw202
+  url: https://geoportal.sanggau.go.id/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geoportal.sanggau.go.id/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geoportal.sanggau.go.id/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: geoportalsanggaugoid
 langs:
 - id: ID

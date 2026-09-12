@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: ES-AN
       name: Andalucía
-description: GeoNetwork metadata catalog of ICTS-Doñana (CSIC), documenting scientific and
-  environmental datasets from the Doñana Biological Station.
+description: GeoNetwork metadata catalog of ICTS-Doñana (CSIC), documenting scientific
+  and environmental datasets from the Doñana Biological Station.
 endpoints:
 - type: geonetwork:query
   url: https://geonetwork.icts-donana.es/geonetwork/srv/eng/q
@@ -39,6 +39,8 @@ endpoints:
   version: '2.0'
 - type: geonetwork:site
   url: https://geonetwork.icts-donana.es/geonetwork/srv/api/site
+- type: geonetwork:selections
+  url: https://geonetwork.icts-donana.es/geonetwork/srv/api/selections
 id: geonetworkictsdonanaes
 langs:
 - id: ES

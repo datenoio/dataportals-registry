@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-WY
+      name: Wyoming
+description: Public Socrata catalog of City of Laramie datasets, including fire district
+  and police ORI tables.
+endpoints:
+- type: dcatus11
+  url: https://cityoflaramie.data.socrata.com/data.json
+- type: socrata:views
+  url: https://cityoflaramie.data.socrata.com/api/views
+- type: socrata:catalog
+  url: https://cityoflaramie.data.socrata.com/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://cityoflaramie.data.socrata.com/opensearch.xml
+  version: '1.1'
+id: cityoflaramiedatasocratacom
+langs:
+- id: EN
+  name: English
+link: https://cityoflaramie.data.socrata.com/
+name: City of Laramie Open Data
+owner:
+  link: https://www.cityoflaramie.org/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WY
+      name: Wyoming
+  name: City of Laramie
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: socrata
+  name: Socrata
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00043795

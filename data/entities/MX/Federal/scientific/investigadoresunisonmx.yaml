@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Universidad de Sonora is a Scientific data repository operated by Universidad
+  de Sonora.
+id: investigadoresunisonmx
+langs:
+- id: ES
+  name: Spanish
+link: https://investigadores.unison.mx
+name: Universidad de Sonora
+owner:
+  link: https://investigadores.unison.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+  name: Universidad de Sonora
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042545
+endpoints:
+- type: oaipmh20
+  url: https://investigadores.unison.mx/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://investigadores.unison.mx/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://investigadores.unison.mx/sitemap/datasets.xml

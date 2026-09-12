@@ -52,9 +52,9 @@ coverage:
       id: US-PA
       name: Pennsylvania
 description: The Delaware River Basin Data Portal provides access to water resource
-  GIS data collected by the Delaware River Basin Commission (DRBC) and partners,
-  including flow, water quality, and analysis tools covering the basin in Delaware,
-  New Jersey, Pennsylvania, and New York.
+  GIS data collected by the Delaware River Basin Commission (DRBC) and partners, including
+  flow, water quality, and analysis tools covering the basin in Delaware, New Jersey,
+  Pennsylvania, and New York.
 endpoints:
 - type: dcatap201
   url: https://gisdata-drbc.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -66,6 +66,8 @@ endpoints:
   url: https://gisdata-drbc.opendata.arcgis.com/api/search/v1
 - type: sitemap
   url: https://gisdata-drbc.opendata.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://gisdata-drbc.opendata.arcgis.com/data.json
 id: gisdatadrbcopendataarcgiscom
 langs:
 - id: EN

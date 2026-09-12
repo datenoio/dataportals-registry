@@ -18,12 +18,16 @@ coverage:
     subregion:
       id: CA-NS
       name: Nova Scotia
-description: GeoNova Geographic Catalog (gCat), the GeoNetwork metadata catalogue for Nova
-  Scotia geographic data.
+description: GeoNova Geographic Catalog (gCat), the GeoNetwork metadata catalogue
+  for Nova Scotia geographic data.
 endpoints:
 - type: csw202
   url: https://gcat.novascotia.ca/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
+- type: geonetwork:selections
+  url: https://gcat.novascotia.ca/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://gcat.novascotia.ca/geonetwork/srv/api/site
 id: gcatnovascotiaca
 langs:
 - id: EN

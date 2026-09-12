@@ -39,6 +39,14 @@ endpoints:
   version: '2.0'
 - type: opensearch
   url: https://csdc.3is.org/catalogue/opensearch
+- type: geonode:datasets
+  url: https://csdc.3is.org/api/datasets/
+- type: opensearch
+  url: https://csdc.3is.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: geonode:datasets
+  url: https://csdc.3is.org/api/v2/datasets/
+  version: '2'
 id: csdc3isorg
 langs:
 - id: ES

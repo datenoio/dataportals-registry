@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: GB-ENG
       name: England
-description: Institutional repository of St Mary's University, Twickenham, holding publications
-  and other research outputs, including 1 Dataset record.
+description: Institutional repository of St Mary's University, Twickenham, holding
+  publications and other research outputs, including 1 Dataset record.
 endpoints:
 - type: oaipmh20
   url: https://research.stmarys.ac.uk/cgi/oai2?verb=Identify
@@ -32,6 +32,11 @@ endpoints:
   url: https://research.stmarys.ac.uk/cgi/export/repository/RDFXML/devel.rdf
 - type: eprints:n3
   url: https://research.stmarys.ac.uk/cgi/export/repository/RDFN3/devel.n3
+- type: eprints:datasets
+  url: https://research.stmarys.ac.uk/cgi/exportview/type/dataset/JSON/dataset.js
+- type: opensearch
+  url: https://research.stmarys.ac.uk/cgi/opensearchdescription
+  version: '1.1'
 id: researchstmarysacuk
 langs:
 - id: EN

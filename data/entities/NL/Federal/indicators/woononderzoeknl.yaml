@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -58,3 +58,8 @@ topics:
   name: Economy and finance
   type: eudatatheme
 uid: cdi99992011
+endpoints:
+- type: swing:databank
+  url: https://woononderzoek.nl/databank
+- type: swing:viewer
+  url: https://woononderzoek.nl/viewer/

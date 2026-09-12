@@ -73,6 +73,11 @@ endpoints:
   url: https://data.lumbung.hutanharapan.id/geoserver/rest/layers
 - type: opensearch
   url: https://geodata.lumbung.hutanharapan.id/catalogue/opensearch
+- type: geonode:datasets
+  url: https://data.lumbung.hutanharapan.id/api/datasets/
+- type: wps100
+  url: https://data.lumbung.hutanharapan.id/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
 id: datalumbunghutanharapanid
 langs:
 - id: ID

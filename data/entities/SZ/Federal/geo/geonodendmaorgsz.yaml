@@ -13,7 +13,7 @@ coverage:
       name: Eswatini
     level: 20
     macroregion:
-      id: '018'
+      id: 018
       name: Southern Africa
 description: National GeoNode catalogue (Digital Risk Database) of the National Disaster
   Management Agency. Publishes drought CDI rasters, disaster-risk layers, and related
@@ -66,6 +66,12 @@ endpoints:
 - type: wps100
   url: https://geonode.ndma.org.sz/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://geonode.ndma.org.sz/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geonode.ndma.org.sz/catalogue/opensearch
+  version: '1.1'
 id: geonodendmaorgsz
 langs:
 - id: EN

@@ -21,6 +21,12 @@ description: Open Data Cube Explorer for Terra in AI (TAI-ODC) at Maynooth Unive
 endpoints:
 - type: stacserverapi
   url: https://tai-odc.terrainai.com/stac/
+- type: stacserverapi
+  url: https://tai-odc.terrainai.com/stac
+  version: '1.0'
+- type: stacserverapi:stac-collections
+  url: https://tai-odc.terrainai.com/stac/collections
+  version: '1.0'
 id: taiodcterrainaicom
 langs:
 - id: EN

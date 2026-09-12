@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: HR
+      name: Croatia
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: HR-18
+      name: Istarska županija
+description: DKAN open data portal of the Municipality of Grožnjan-Grisignana (Istria,
+  Croatia) publishing procurement, budget, spatial-plan, and EU-funded project datasets.
+endpoints:
+- type: ckan:package-list
+  url: https://otvoreni.groznjan-grisignana.hr/api/3/action/package_list
+  version: '3'
+id: otvorenigroznjangrisignanahr
+langs:
+- id: HR
+  name: Croatian
+link: https://otvoreni.groznjan-grisignana.hr
+name: Portal otvorenih podataka Općine Grožnjan-Grisignana
+owner:
+  link: https://www.groznjan-grisignana.hr
+  location:
+    country:
+      id: HR
+      name: Croatia
+    level: 30
+    subregion:
+      id: HR-18
+      name: Istarska županija
+  name: Općina Grožnjan-Grisignana
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dkan
+  name: DKAN
+status: active
+tags:
+- government
+- croatia
+- istria
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00043348

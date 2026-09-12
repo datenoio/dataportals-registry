@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,10 +14,11 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: The Repository of University of Wroclaw is an institutional repository, which
-  archives and makes available scientific as well as research and development materials, that
-  were created by the employees, postgraduate students, and (in the selection) by the students
-  of the University of Wroclaw or issued at the University of Wroclaw.
+description: The Repository of University of Wroclaw is an institutional repository,
+  which archives and makes available scientific as well as research and development
+  materials, that were created by the employees, postgraduate students, and (in the
+  selection) by the students of the University of Wroclaw or issued at the University
+  of Wroclaw.
 id: wwwrepozytoriumuniwrocpl
 identifiers:
 - id: openaire
@@ -40,8 +41,8 @@ owner:
   name: University of Wrocław
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: dlibra
+  name: dLibra
 status: active
 tags:
 - scientific
@@ -58,3 +59,7 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00032527
+endpoints:
+- type: oaipmh20
+  url: https://www.repozytorium.uni.wroc.pl/dlibra/oai-pmh-repository.xml?verb=Identify
+  version: '2.0'

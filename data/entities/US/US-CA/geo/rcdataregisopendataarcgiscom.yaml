@@ -18,16 +18,16 @@ coverage:
     subregion:
       id: US-CA
       name: California
-description: "Open Data Portal Search for the latest data and geographic content from\
-  \ the City of Rancho Cucamonga. Use keyword or geographic searches to find and quickly\
-  \ display content. City of Rancho Cucamonga is committed to being open, transparent\
-  \ and providing data that is easy to find, is accessible, and is usable. Data Categories\
-  \ Boundaries Community &amp; Culture Environment Government Infrastructure Transportation\
-  \ Applications Apps provide simple access to information and tools for citizens\
-  \ to understand your community. We\n    recommend exploring the apps below for helping\
-  \ engage around specific goals and initiatives - as well as encourage\n    people\
-  \ to create their own stories and apps using the API and ready to configure apps.\
-  \ Contact Information gis@cityofrc.us"
+description: "Open Data Portal Search for the latest data and geographic content from
+  the City of Rancho Cucamonga. Use keyword or geographic searches to find and quickly
+  display content. City of Rancho Cucamonga is committed to being open, transparent
+  and providing data that is easy to find, is accessible, and is usable. Data Categories
+  Boundaries Community &amp; Culture Environment Government Infrastructure Transportation
+  Applications Apps provide simple access to information and tools for citizens to
+  understand your community. We\n    recommend exploring the apps below for helping
+  engage around specific goals and initiatives - as well as encourage\n    people
+  to create their own stories and apps using the API and ready to configure apps.
+  Contact Information gis@cityofrc.us"
 endpoints:
 - type: dcatap201
   url: https://rcdata-regis.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -39,6 +39,8 @@ endpoints:
   url: https://rcdata-regis.opendata.arcgis.com/api/search/v1
 - type: sitemap
   url: https://rcdata-regis.opendata.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://rcdata-regis.opendata.arcgis.com/data.json
 id: rcdataregisopendataarcgiscom
 langs:
 - id: EN

@@ -26,6 +26,14 @@ endpoints:
 - type: dspace:objects
   url: https://dspace.tdea.edu.co/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://dspace.tdea.edu.co/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://dspace.tdea.edu.co/sitemap_index.xml
+- type: oaipmh20
+  url: https://dspace.tdea.edu.co/server/oai/request?verb=Identify
+  version: '2.0'
 id: dspacetdeaeduco
 langs:
 - id: ES

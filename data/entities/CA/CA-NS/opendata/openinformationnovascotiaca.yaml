@@ -26,6 +26,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-openinformation.novascotia.ca.xml
 - type: opensearch
   url: https://openinformation.novascotia.ca/opensearch.xml
+- type: socrata:catalog
+  url: https://openinformation.novascotia.ca/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: openinformationnovascotiaca
 langs:
 - id: EN

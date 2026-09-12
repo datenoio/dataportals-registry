@@ -23,6 +23,11 @@ description: Hyrax repository for the Warburg Institute Library, providing acces
 endpoints:
 - type: hyrax:catalog
   url: https://commons.warburg.sas.ac.uk/catalog
+- type: hyrax:catalog
+  url: https://commons.warburg.sas.ac.uk/catalog.json
+- type: oaipmh20
+  url: https://commons.warburg.sas.ac.uk/catalog/oai?verb=Identify
+  version: '2.0'
 id: commonswarburgsasacuk
 langs:
 - id: EN

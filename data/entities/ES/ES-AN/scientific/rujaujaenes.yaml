@@ -24,6 +24,14 @@ endpoints:
 - type: oaipmh20
   url: https://ruja.ujaen.es/oai/request?verb=Identify
   version: '2.0'
+- type: dspace
+  url: https://ruja.ujaen.es/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://ruja.ujaen.es/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://ruja.ujaen.es/sitemap_index.xml
 id: rujaujaenes
 langs:
 - id: ES

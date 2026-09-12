@@ -19,6 +19,9 @@ description: Virtual Observatory catalog of astronomical data published by Konko
 endpoints:
 - type: tap:capabilities
   url: http://nadir.konkoly.hu:80/tap/capabilities
+- type: oaipmh20
+  url: http://nadir.konkoly.hu:80/oai.xml?verb=Identify
+  version: '2.0'
 id: nadirkonkolyhu
 langs:
 - id: EN

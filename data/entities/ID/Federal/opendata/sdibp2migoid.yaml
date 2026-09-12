@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Badan Pelindungan
-  Pekerja Migran Indonesia.
+description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Badan
+  Pelindungan Pekerja Migran Indonesia.
 endpoints:
 - type: ckan:package-search
   url: https://sdi.bp2mi.go.id/api/3/action/package_search
@@ -23,6 +23,19 @@ endpoints:
 - type: ckan:package-list
   url: https://sdi.bp2mi.go.id/api/3/action/package_list
   version: '3'
+- type: ckan
+  url: https://sdi.bp2mi.go.id/api/3
+  version: '3'
+- type: dcat:n3
+  url: https://sdi.bp2mi.go.id/catalog.n3
+- type: dcat:ttl
+  url: https://sdi.bp2mi.go.id/catalog.ttl
+- type: dcat:xml
+  url: https://sdi.bp2mi.go.id/catalog.xml
+- type: dcat:jsonld
+  url: https://sdi.bp2mi.go.id/catalog.jsonld
+- type: dcat
+  url: https://sdi.bp2mi.go.id/catalog.rdf
 id: sdibp2migoid
 langs:
 - id: ID

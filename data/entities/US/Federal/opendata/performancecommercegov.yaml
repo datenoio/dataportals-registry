@@ -71,3 +71,11 @@ endpoints:
   url: https://performance.commerce.gov/api/views
 - type: sitemap
   url: https://performance.commerce.gov/sitemap.xml
+- type: dcatus11
+  url: https://performance.commerce.gov/data.json
+- type: socrata:catalog
+  url: https://performance.commerce.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://performance.commerce.gov/opensearch.xml
+  version: '1.1'

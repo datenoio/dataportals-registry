@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion: &id001
+      id: CN-LN
+      name: Liaoning Sheng
+description: Provincial InstDB scientific data repository for ecology and environment
+  in Liaoning, operated by the CAS Shenyang Institute of Applied Ecology.
+endpoints:
+- type: custom:api
+  url: http://lnstdc.cstspace.cn:8081/api
+id: lnstdccstspacecn
+langs:
+- id: ZH
+  name: Chinese
+link: http://lnstdc.cstspace.cn:8081
+name: 辽宁省生态环境科学数据中心
+owner:
+  link: https://iae.ac.cn
+  location:
+    country:
+      id: CN
+      name: China
+    level: 30
+    subregion: *id001
+  name: Liaoning Provincial Ecology and Environment Science Data Center
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: instdb
+  name: InstDB
+status: active
+tags:
+- scientific
+- InstDB
+- ecology
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00042955

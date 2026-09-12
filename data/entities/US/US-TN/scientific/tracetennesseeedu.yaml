@@ -27,6 +27,12 @@ endpoints:
 - type: dspace:objects
   url: https://trace.tennessee.edu/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://trace.tennessee.edu/oai/request?verb=Identify
+  version: '2.0'
+- type: oaipmh20
+  url: https://trace.tennessee.edu/server/oai/request?verb=Identify
+  version: '2.0'
 id: tracetennesseeedu
 langs:
 - id: EN

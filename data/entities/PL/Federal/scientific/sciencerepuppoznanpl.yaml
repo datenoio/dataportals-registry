@@ -24,6 +24,9 @@ endpoints:
 - type: dspace:objects
   url: https://sciencerep.up.poznan.pl/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://sciencerep.up.poznan.pl/server/oai/request?verb=Identify
+  version: '2.0'
 id: sciencerepuppoznanpl
 langs:
 - id: PL

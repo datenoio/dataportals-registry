@@ -15,7 +15,12 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: This is the platform for exploring and downloading Radford City's Open GIS Data. Find the data that you are looking for by typing in the search bar (Ex. Try searching "Buildings"). A list of available data matching the search term will show in the directory. Data will show in an interactive map once selected with options to download in various formats. The map can be alternated into tabular view with options to filter by queries. Contact Information Engineering.GIS@radfordva.gov
+description: This is the platform for exploring and downloading Radford City's Open
+  GIS Data. Find the data that you are looking for by typing in the search bar (Ex.
+  Try searching "Buildings"). A list of available data matching the search term will
+  show in the directory. Data will show in an interactive map once selected with options
+  to download in various formats. The map can be alternated into tabular view with
+  options to filter by queries. Contact Information Engineering.GIS@radfordva.gov
 endpoints:
 - type: dcatap201
   url: https://va-radfordgis.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -27,6 +32,8 @@ endpoints:
   url: https://va-radfordgis.opendata.arcgis.com/api/search/v1
 - type: sitemap
   url: https://va-radfordgis.opendata.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://va-radfordgis.opendata.arcgis.com/data.json
 id: varadfordgisopendataarcgiscom
 langs:
 - id: EN

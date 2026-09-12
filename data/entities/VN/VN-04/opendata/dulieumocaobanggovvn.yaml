@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: VN-04
+      name: Cao Bằng
+description: Cổng dữ liệu mở Cao Bằng is an Open data portal operated by Cao Bang
+  Provincial People's Committee, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://dulieumo.caobang.gov.vn/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dulieumo.caobang.gov.vn/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dulieumo.caobang.gov.vn/api/3/action/package_list
+  version: '3'
+id: dulieumocaobanggovvn
+langs:
+- id: VN
+  name: Vietnamese
+link: https://dulieumo.caobang.gov.vn
+name: Cổng dữ liệu mở Cao Bằng
+owner:
+  link: https://www.caobang.gov.vn
+  location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 30
+    subregion:
+      id: VN-04
+      name: Cao Bằng
+  name: Cao Bang Provincial People's Committee
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- ckan
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043800

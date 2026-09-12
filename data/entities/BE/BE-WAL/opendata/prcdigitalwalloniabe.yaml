@@ -63,3 +63,12 @@ api_status: active
 endpoints:
 - type: opendatasoft
   url: https://prc.digitalwallonia.be/api
+- type: opendatasoftapi
+  url: https://prc.digitalwallonia.be/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://prc.digitalwallonia.be/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://prc.digitalwallonia.be/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://prc.digitalwallonia.be/data.json

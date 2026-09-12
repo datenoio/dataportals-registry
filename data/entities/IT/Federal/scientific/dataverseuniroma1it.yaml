@@ -12,7 +12,7 @@ coverage:
       name: Italy
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: SAPIENZA Open DATA is the institutional Dataverse research-data repository
   of Sapienza Università di Roma. The installation API reports Dataverse 6.6 and 29
@@ -23,6 +23,8 @@ endpoints:
 - type: oaipmh20
   url: https://dataverse.uniroma1.it/oai?verb=Identify
   version: '2.0'
+- type: dataverseapi
+  url: https://dataverse.uniroma1.it/api/info/version
 id: dataverseuniroma1it
 langs:
 - id: IT

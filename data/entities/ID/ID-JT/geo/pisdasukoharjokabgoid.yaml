@@ -67,6 +67,12 @@ endpoints:
 - type: wps100
   url: https://pisda.sukoharjokab.go.id/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://pisda.sukoharjokab.go.id/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://pisda.sukoharjokab.go.id/catalogue/opensearch
+  version: '1.1'
 id: pisdasukoharjokabgoid
 langs:
 - id: ID

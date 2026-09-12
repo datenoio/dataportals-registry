@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: University of Brighton EPrints research data repository with public dataset
+  records and OAI-PMH.
+endpoints:
+- type: oaipmh20
+  url: https://researchdata.brighton.ac.uk/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://researchdata.brighton.ac.uk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://researchdata.brighton.ac.uk/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://researchdata.brighton.ac.uk/rest/eprint
+- type: eprints:rdf
+  url: https://researchdata.brighton.ac.uk/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://researchdata.brighton.ac.uk/cgi/export/repository/RDFN3/devel.n3
+- type: opensearch
+  url: https://researchdata.brighton.ac.uk/cgi/opensearchdescription
+  version: '1.1'
+id: researchdatabrightonacuk
+langs:
+- id: EN
+  name: English
+link: https://researchdata.brighton.ac.uk/
+name: Brighton Research Data
+owner:
+  link: https://www.brighton.ac.uk/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: University of Brighton
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- research data
+- eprints
+- institutional repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00043328

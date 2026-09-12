@@ -12,12 +12,18 @@ coverage:
       name: Croatia
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: DABAR institutional repository with 2 Dataset/Research data records.
 endpoints:
 - type: sitemap
   url: https://repozitorij.meteo.hr/sitemap.xml
+- type: oaipmh20
+  url: https://repozitorij.meteo.hr/oai/?verb=Identify
+  version: '2.0'
+- type: oaipmh20
+  url: https://repozitorij.meteo.hr/oai?verb=Identify
+  version: '2.0'
 id: repozitorijmeteohr
 langs:
 - id: HR

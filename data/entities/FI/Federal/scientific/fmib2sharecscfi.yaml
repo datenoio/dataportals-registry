@@ -21,6 +21,11 @@ endpoints:
 - type: oaipmh20
   url: https://fmi.b2share.csc.fi/oai2d
   version: '2.0'
+- type: inveniordmapi:records
+  url: https://fmi.b2share.csc.fi/api/records
+- type: oaipmh20
+  url: https://fmi.b2share.csc.fi/oai2d?verb=Identify
+  version: '2.0'
 id: fmib2sharecscfi
 langs:
 - id: EN

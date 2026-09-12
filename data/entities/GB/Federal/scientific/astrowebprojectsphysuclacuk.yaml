@@ -19,6 +19,9 @@ description: Virtual Observatory data service publishing magnetodisc model table
 endpoints:
 - type: tap:capabilities
   url: http://astroweb.projects.phys.ucl.ac.uk:8000/tap/capabilities
+- type: oaipmh20
+  url: http://astroweb.projects.phys.ucl.ac.uk:8000/oai.xml?verb=Identify
+  version: '2.0'
 id: astrowebprojectsphysuclacuk
 langs:
 - id: EN

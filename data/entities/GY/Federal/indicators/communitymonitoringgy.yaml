@@ -1,0 +1,77 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: GY
+      name: Guyana
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: DHIS2 community-monitoring instance for Guyana. Login is required to
+  query programme indicators.
+endpoints:
+- type: dhis2:catalog
+  url: https://community-monitoring.gy
+- type: dhis2:system-info
+  url: https://community-monitoring.gy/api/system/info
+- type: dhis2:datasets
+  url: https://community-monitoring.gy/api/dataSets.json?fields=id,displayName&pageSize=1
+id: communitymonitoringgy
+langs:
+- id: EN
+  name: English
+link: https://community-monitoring.gy
+name: Guyana Community Monitoring (DHIS2)
+owner:
+  link: https://www.health.gov.gy
+  location:
+    country:
+      id: GY
+      name: Guyana
+    level: 20
+  name: Ministry of Health
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dhis2
+  name: DHIS2
+status: active
+tags:
+- health
+- HMIS
+- DHIS2
+- government
+- restricted
+- has_api
+- Guyana
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043344

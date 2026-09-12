@@ -24,6 +24,13 @@ endpoints:
 - type: csw202
   url: https://data.lillemetropole.fr/geonetwork/srv/fre/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
+- type: csw202
+  url: https://data.lillemetropole.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:selections
+  url: https://data.lillemetropole.fr/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://data.lillemetropole.fr/geonetwork/srv/api/site
 id: datalillemetropolefrgeonetwork
 langs:
 - id: FR

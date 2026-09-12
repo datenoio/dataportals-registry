@@ -70,6 +70,15 @@ endpoints:
 - type: wms-c111
   url: https://chocofair.dev/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: csw202
+  url: https://chocofair.dev/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: geonode:datasets
+  url: https://chocofair.dev/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://chocofair.dev/catalogue/opensearch
+  version: '1.1'
 id: chocofairdev
 langs:
 - id: EN

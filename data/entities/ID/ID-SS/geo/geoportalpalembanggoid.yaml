@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: ID-SS
       name: Sumatera Selatan
-description: Geospatial data catalog of Palembang City providing diverse datasets such as spatial plans, flood points, swamps, LRT routes, and more.
+description: Geospatial data catalog of Palembang City providing diverse datasets
+  such as spatial plans, flood points, swamps, LRT routes, and more.
 endpoints:
 - type: wms111
   url: http://geoportal.palembang.go.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -59,6 +60,9 @@ endpoints:
 - type: wmts100
   url: http://geoportal.palembang.go.id/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
+- type: csw202
+  url: https://geoportal.palembang.go.id/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
 id: geoportalpalembanggoid
 langs:
 - id: ID

@@ -28,6 +28,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-ksopendata.ksrevenue.gov.xml
 - type: opensearch
   url: https://ksopendata.ksrevenue.gov/opensearch.xml
+- type: socrata:catalog
+  url: https://ksopendata.ksrevenue.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: ksopendataksrevenuegov
 langs:
 - id: EN

@@ -26,6 +26,11 @@ endpoints:
   url: https://didomena.ehess.fr/capabilitylist?locale=fr
 - type: resourcesync
   url: https://didomena.ehess.fr/capabilitylist?locale=en
+- type: hyrax:catalog
+  url: https://didomena.ehess.fr/catalog.json
+- type: oaipmh20
+  url: https://didomena.ehess.fr/catalog/oai?verb=Identify
+  version: '2.0'
 id: didomenaehessfr
 langs:
 - id: FR

@@ -15,11 +15,22 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: DSpace institutional repository of the Central University of Punjab Library, preserving
-  theses, dissertations, articles, and other scholarly outputs of the university.
+description: DSpace institutional repository of the Central University of Punjab Library,
+  preserving theses, dissertations, articles, and other scholarly outputs of the university.
 endpoints:
 - type: oaipmh20
   url: https://kr.cup.edu.in/oai/request?verb=Identify
+  version: '2.0'
+- type: dspace
+  url: https://kr.cup.edu.in/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://kr.cup.edu.in/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://kr.cup.edu.in/sitemap_index.xml
+- type: oaipmh20
+  url: https://kr.cup.edu.in/server/oai/request?verb=Identify
   version: '2.0'
 id: krcupeduin
 identifiers:

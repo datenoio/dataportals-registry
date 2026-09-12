@@ -21,6 +21,15 @@ endpoints:
   url: https://babel.opendatasoft.com/api
 - type: sitemap
   url: https://babel.opendatasoft.com/sitemap.xml
+- type: opendatasoftapi
+  url: https://babel.opendatasoft.com/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://babel.opendatasoft.com/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://babel.opendatasoft.com/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://babel.opendatasoft.com/data.json
 id: babelopendatasoftcom
 langs:
 - id: EN

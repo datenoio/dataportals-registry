@@ -21,6 +21,8 @@ description: NADA microdata library of the Statistical Committee of the Republic
 endpoints:
 - type: nada:catalog-search
   url: https://microdata.armstat.am/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://microdata.armstat.am/index.php/catalog/export/csv?ps=5000&collection[]
 id: microdataarmstatam
 langs:
 - id: HY

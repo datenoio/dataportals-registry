@@ -16,8 +16,8 @@ coverage:
       id: '014'
       name: Eastern Africa
 description: Ethiopian Biodiversity Institute Spatial Decision Support System (SDSS).
-  GeoNode catalog for biodiversity and protected-area geospatial datasets, maps,
-  GeoStories, and dashboards.
+  GeoNode catalog for biodiversity and protected-area geospatial datasets, maps, GeoStories,
+  and dashboards.
 endpoints:
 - type: geonode:datasets
   url: https://geonode.portal.ebi.gov.et/api/datasets/
@@ -43,6 +43,24 @@ endpoints:
 - type: wcs111
   url: https://geonode.portal.ebi.gov.et/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
+- type: wfs200
+  url: https://geonode.portal.ebi.gov.et/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://geonode.portal.ebi.gov.et/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://geonode.portal.ebi.gov.et/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://geonode.portal.ebi.gov.et/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://geonode.portal.ebi.gov.et/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://geonode.portal.ebi.gov.et/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
 id: geonodeportalebigovet
 langs:
 - id: EN

@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-BFC
+      name: Bourgogne-Franche-Comté
+description: Enquête sols Dijon is a Geoportal operated by Ville de Dijon / sols Dijon.
+id: enquetesolsdijonfr
+langs:
+- id: FR
+  name: French
+link: https://enquete.solsdijon.fr/
+name: Enquête sols Dijon
+owner:
+  link: https://www.dijon.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-BFC
+      name: Bourgogne-Franche-Comté
+  name: Ville de Dijon / sols Dijon
+  type: Local government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- lizmap
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00042477
+endpoints:
+- type: lizmap:catalog
+  url: https://enquete.solsdijon.fr

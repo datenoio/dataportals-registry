@@ -22,6 +22,18 @@ description: Repozytorium Uniwersytetu Łódzkiego is a DSpace repository listed
 endpoints:
 - type: dspace:catalog
   url: https://repozytorium.uni.lodz.pl
+- type: dspace:items
+  url: https://repozytorium.uni.lodz.pl/rest/items
+  version: '6'
+- type: oaipmh20
+  url: https://repozytorium.uni.lodz.pl/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://repozytorium.uni.lodz.pl/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repozytorium.uni.lodz.pl/feed/atom_1.0/site
+  version: '1.0'
 id: repozytoriumunilodzpl
 identifiers:
 - id: re3data

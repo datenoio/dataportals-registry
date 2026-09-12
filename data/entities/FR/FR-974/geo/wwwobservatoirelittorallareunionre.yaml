@@ -7,7 +7,7 @@ content_types:
 - dataset
 - map_layer
 coverage:
-- location: &id001
+- location:
     country:
       id: FR
       name: France
@@ -32,7 +32,14 @@ link: https://www.observatoire-littoral-lareunion.re
 name: Nout bord’mer - Observatoire du littoral de La Réunion
 owner:
   link: https://www.observatoire-littoral-lareunion.re/accueil/mentions-legales
-  location: *id001
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-974
+      name: La Réunion
   name: Direction de l’Environnement, de l’Aménagement et du Logement de La Réunion
   type: Central government
 properties:

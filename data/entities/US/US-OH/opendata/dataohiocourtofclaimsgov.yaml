@@ -32,6 +32,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.ohiocourtofclaims.gov.xml
 - type: opensearch
   url: https://data.ohiocourtofclaims.gov/opensearch.xml
+- type: socrata:catalog
+  url: https://data.ohiocourtofclaims.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: dataohiocourtofclaimsgov
 langs:
 - id: EN

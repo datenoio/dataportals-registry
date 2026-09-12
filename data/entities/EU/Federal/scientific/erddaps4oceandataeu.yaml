@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 10
+    macroregion:
+      id: EU
+      name: European Union
+description: S4OceanData ERDDAP is a Scientific data repository operated by S4OceanData,
+  built with ERDDAP.
+endpoints:
+- type: erddap:index
+  url: https://erddap.s4oceandata.eu/erddap/index.json
+- type: erddap:datasets
+  url: https://erddap.s4oceandata.eu/erddap/info/index.json
+- type: opensearch
+  url: https://erddap.s4oceandata.eu/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://erddap.s4oceandata.eu/erddap/sitemap.xml
+id: erddaps4oceandataeu
+langs:
+- id: EN
+  name: English
+link: https://erddap.s4oceandata.eu/erddap/index.html
+name: S4OceanData ERDDAP
+owner:
+  link: https://s4oceandata.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+  name: S4OceanData
+  type: International
+properties:
+  is_national: false
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- scientific
+- research
+- erddap
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043158

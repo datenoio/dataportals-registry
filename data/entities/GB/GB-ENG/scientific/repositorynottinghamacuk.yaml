@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: University of Nottingham DSpace-CRIS research repository with publications,
+  theses, and research datasets. Distinct from the Nottingham Research Data Management
+  Repository (rdmc.nottingham.ac.uk).
+endpoints:
+- type: dspace
+  url: https://repository.nottingham.ac.uk/server/api
+  version: '8'
+- type: dspace:objects
+  url: https://repository.nottingham.ac.uk/server/api/discover/search/objects
+  version: '8'
+- type: oaipmh20
+  url: https://repository.nottingham.ac.uk/oai/request?verb=Identify
+  version: '2.0'
+- type: oaipmh20
+  url: https://repository.nottingham.ac.uk/server/oai/request?verb=Identify
+  version: '2.0'
+id: repositorynottinghamacuk
+langs:
+- id: EN
+  name: English
+link: https://repository.nottingham.ac.uk
+name: University of Nottingham Repository
+owner:
+  link: https://www.nottingham.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: University of Nottingham
+  type: Academy
+properties:
+  dataset_count_reported: 1987
+  has_doi: true
+  is_national: false
+software:
+  id: dspacecris
+  name: DSpace CRIS
+status: active
+tags:
+- research data
+- institutional repository
+- DSpace-CRIS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00042684

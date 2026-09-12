@@ -26,6 +26,11 @@ endpoints:
 - type: dspace:objects
   url: https://e-bp.inp.pan.pl/server/api/discover/search/objects
   version: '7'
+- type: sitemap
+  url: https://e-bp.inp.pan.pl/sitemap_index.xml
+- type: oaipmh20
+  url: https://e-bp.inp.pan.pl/server/oai/request?verb=Identify
+  version: '2.0'
 id: ebpinppanpl
 identifiers:
 - id: re3data

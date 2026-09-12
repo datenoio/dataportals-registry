@@ -26,6 +26,15 @@ endpoints:
   url: https://data.ajman.ae/api/explore/v2.1/catalog/datasets
 - type: sitemap
   url: https://data.ajman.ae/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.ajman.ae/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.ajman.ae/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.ajman.ae/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.ajman.ae/data.json
 id: dataajmanae
 langs:
 - id: AR

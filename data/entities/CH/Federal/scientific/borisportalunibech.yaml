@@ -29,6 +29,9 @@ endpoints:
   url: HTTPS://d7-frontend-production:4000/sitemap_index.xml
 - type: sitemap
   url: HTTPS://d7-frontend-production:4000/sitemap_index.html
+- type: oaipmh20
+  url: https://boris-portal.unibe.ch/server/oai/request?verb=Identify
+  version: '2.0'
 id: borisportalunibech
 identifiers:
 - id: re3data

@@ -35,6 +35,10 @@ endpoints:
 - type: oaipmh20
   url: https://opendata.meteo.be/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:selections
+  url: https://opendata.meteo.be/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://opendata.meteo.be/geonetwork/srv/api/site
 id: opendatameteobe
 langs:
 - id: FR

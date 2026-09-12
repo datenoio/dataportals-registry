@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: WIS2 in a box node of INPE/CPTEC (centre-id br-inpe-cptec), publishing
+  space-based meteorological observations such as DBNET METOP AMSU-A products to the
+  WMO Information System through an OGC API.
+endpoints:
+- type: pygeoapi:openapi
+  url: https://wis.cptec.inpe.br/oapi/openapi
+  version: '1.0'
+- type: pygeoapi:collections
+  url: https://wis.cptec.inpe.br/oapi/collections/?f=json
+  version: '1.0'
+id: wiscptecinpebr
+langs:
+- id: PT
+  name: Portuguese
+- id: EN
+  name: English
+link: https://wis.cptec.inpe.br
+name: Brazil INPE/CPTEC - WIS 2.0 in a box
+owner:
+  link: https://www.cptec.inpe.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+  name: INPE/CPTEC
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: wis20box
+  name: Wis 2.0 Box
+status: active
+tags:
+- meteorology
+- climate
+- weather
+- WIS2
+- government
+- has_api
+topics:
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00042883

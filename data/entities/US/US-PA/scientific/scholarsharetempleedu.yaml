@@ -38,6 +38,17 @@ endpoints:
   url: https://scholarshare.temple.edu/htmlmap
 - type: opensearch
   url: http://scholarshare.temple.edu:80/open-search/description.xml
+- type: dspace
+  url: https://scholarshare.temple.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://scholarshare.temple.edu/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://scholarshare.temple.edu/sitemap_index.xml
+- type: oaipmh20
+  url: https://scholarshare.temple.edu/server/oai/request?verb=Identify
+  version: '2.0'
 id: scholarsharetempleedu
 identifiers:
 - id: opendoar

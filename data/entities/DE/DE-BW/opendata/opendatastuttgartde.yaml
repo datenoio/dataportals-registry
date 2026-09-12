@@ -26,6 +26,19 @@ endpoints:
 - type: ckan:package-list
   url: https://opendata.stuttgart.de/api/3/action/package_list
   version: '3'
+- type: ckan:package-search
+  url: https://opendata.stuttgart.de/api/3/action/package_search
+  version: '3'
+- type: dcat:n3
+  url: https://opendata.stuttgart.de/catalog.n3
+- type: dcat:ttl
+  url: https://opendata.stuttgart.de/catalog.ttl
+- type: dcat:xml
+  url: https://opendata.stuttgart.de/catalog.xml
+- type: dcat:jsonld
+  url: https://opendata.stuttgart.de/catalog.jsonld
+- type: dcat
+  url: https://opendata.stuttgart.de/catalog.rdf
 id: opendatastuttgartde
 langs:
 - id: DE

@@ -129,6 +129,7 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `/api/views` (SODA) | `socrata` | Open data portal |
 | `/transparencia/datos/catalogo` Maggioli/Galileo | `atmmaggioli` | Open data portal |
 | `{org}.opengov.com` /transparency | `opengov` | Open data portal |
+| `/backend/api/catalog/` DCAT-AP_IT / “Powered by ACTAINFO” | `opendataente` | Open data portal |
 | `/opendata/set/lkod` or lkod.cz catalog | `lkod` | Open data portal |
 | `/srv/eng/csw` or `/srv/api` | `geonetwork` | Geoportal |
 | Title “Geoportal Palapa” / `/main/` or `/gspalapa/` | `palapa` | Geoportal |

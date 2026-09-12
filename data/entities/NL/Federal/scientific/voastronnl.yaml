@@ -19,6 +19,9 @@ description: ASTRON Virtual Observatory data center. Public TAP and catalog serv
 endpoints:
 - type: tap:capabilities
   url: https://vo.astron.nl/tap/capabilities
+- type: oaipmh20
+  url: https://vo.astron.nl/oai.xml?verb=Identify
+  version: '2.0'
 id: voastronnl
 langs:
 - id: EN
@@ -37,8 +40,8 @@ owner:
 properties:
   is_national: false
 software:
-  id: custom
-  name: Custom software
+  id: dachs
+  name: DaCHS
 status: active
 tags:
 - astronomy

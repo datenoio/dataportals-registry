@@ -31,6 +31,26 @@ endpoints:
 - type: wcs201
   url: https://geonode.copeco.gob.hn/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
   version: 2.0.1
+- type: geonode:documents
+  url: https://geonode.copeco.gob.hn/api/documents/
+- type: wcs111
+  url: https://geonode.copeco.gob.hn/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs100
+  url: https://geonode.copeco.gob.hn/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://geonode.copeco.gob.hn/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://geonode.copeco.gob.hn/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wps100
+  url: https://geonode.copeco.gob.hn/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geonode.copeco.gob.hn/catalogue/opensearch
+  version: '1.1'
 id: geonodecopecogobhn
 langs:
 - id: ES

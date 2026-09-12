@@ -21,6 +21,8 @@ description: ANDA is a catalog-type platform of open data for dissemination and 
 endpoints:
 - type: nada:catalog-search
   url: https://anda.inec.gob.ec/anda5/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://anda.inec.gob.ec/anda5/index.php/catalog/export/csv?ps=5000&collection[]
 id: andainecgobec
 langs:
 - id: ES

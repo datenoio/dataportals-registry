@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: WEKO3 institutional repository of Fukushima Medical University, including
+  research data records harvested by IRDB.
+endpoints:
+- type: weko3:records
+  url: https://fmu.repo.nii.ac.jp/api/records/?page=1&size=20
+- type: sitemap
+  url: https://fmu.repo.nii.ac.jp/weko/sitemaps/sitemapindex.xml
+- type: weko3:records
+  url: https://fmu.repo.nii.ac.jp/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english
+- type: oaipmh20
+  url: https://fmu.repo.nii.ac.jp/oai?verb=Identify
+  version: '2.0'
+id: fmureponiiacjp
+langs:
+- id: EN
+  name: English
+- id: JA
+  name: Japanese
+link: https://fmu.repo.nii.ac.jp
+name: Fukushima Medical University Repository
+owner:
+  link: https://fmu.repo.nii.ac.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+  name: Fukushima Medical University
+  type: Academy
+properties:
+  dataset_count_reported: 3
+  is_national: false
+software:
+  id: weko3
+  name: WEKO3
+status: active
+tags:
+- has_api
+- academy
+- institutional repository
+- research data
+- WEKO3
+- Japan
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00042518

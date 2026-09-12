@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Boğaziçi University Digital Archive is a scientific data repository
-  operated by Boğaziçi University running on DSpace.
+description: Boğaziçi University Digital Archive is a scientific data repository operated
+  by Boğaziçi University running on DSpace.
 endpoints:
 - type: dspace
   url: https://digitalarchive.library.bogazici.edu.tr/server/api
@@ -23,6 +23,9 @@ endpoints:
 - type: dspace:objects
   url: https://digitalarchive.library.bogazici.edu.tr/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://digitalarchive.library.bogazici.edu.tr/server/oai/request?verb=Identify
+  version: '2.0'
 id: digitalarchivelibrarybogaziciedutr
 langs:
 - id: TR

@@ -24,6 +24,18 @@ endpoints:
 - type: oaipmh20
   url: https://geoportal.big.go.id/csw/?mode=oaipmh&verb=Identify
   version: '2.0'
+- type: csw300
+  url: https://geoportal.big.go.id/csw/csw
+  version: 3.0.0
+- type: oaipmh20
+  url: https://geoportal.big.go.id/csw/oaipmh
+  version: '2.0'
+- type: opensearch
+  url: https://geoportal.big.go.id/csw/opensearch
+  version: '1.0'
+- type: sru
+  url: https://geoportal.big.go.id/csw/sru
+  version: '1.0'
 id: geoportalbiggoidcsw
 langs:
 - id: ID

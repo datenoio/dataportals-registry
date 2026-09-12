@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: Global reference database on national parliaments, with a public data
+  explorer for structure, composition, elections, and women in parliament.
+endpoints:
+- type: sitemap
+  url: https://data.ipu.org/sitemap.xml
+- type: sitemap
+  url: https://data.ipu.org/sitemap_index.xml
+id: dataipuorg
+langs:
+- id: EN
+  name: English
+link: https://data.ipu.org
+name: IPU Parline
+owner:
+  link: https://www.ipu.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: Inter-Parliamentary Union
+  type: International
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- parliaments
+- elections
+- gender
+- indicators
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00005549

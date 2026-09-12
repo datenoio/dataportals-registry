@@ -39,6 +39,10 @@ endpoints:
 - type: oaipmh20
   url: https://catalog.snap.uaf.edu/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: dcat:xml
+  url: https://catalog.snap.uaf.edu/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://catalog.snap.uaf.edu/geonetwork/srv/api/site
 id: catalogsnapuafedu
 langs:
 - id: EN

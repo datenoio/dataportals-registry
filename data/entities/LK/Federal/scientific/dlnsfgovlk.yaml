@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: NSF National e-Repository. Institutional repository operated by National Science
-  Foundation of Sri Lanka.
+description: NSF National e-Repository. Institutional repository operated by National
+  Science Foundation of Sri Lanka.
 endpoints:
 - type: dspace
   url: https://dl.nsf.gov.lk/server/api
@@ -25,6 +25,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://dl.nsf.gov.lk/sitemap_index.xml
+- type: oaipmh20
+  url: https://dl.nsf.gov.lk/server/oai/request?verb=Identify
+  version: '2.0'
 id: dlnsfgovlk
 langs:
 - id: EN

@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: FH Wiener Neustadt GmbH is a Scientific data repository operated by FH
+  Wiener Neustadt GmbH.
+id: fisfhwnacat
+langs:
+- id: DE
+  name: German
+link: https://fis.fhwn.ac.at
+name: FH Wiener Neustadt GmbH
+owner:
+  link: https://fis.fhwn.ac.at
+  location:
+    country:
+      id: AT
+      name: Austria
+  name: FH Wiener Neustadt GmbH
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042516
+endpoints:
+- type: oaipmh20
+  url: https://fis.fhwn.ac.at/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://fis.fhwn.ac.at/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://fis.fhwn.ac.at/sitemap/datasets.xml

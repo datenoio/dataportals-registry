@@ -28,7 +28,7 @@ GET public URLs only. Stop on `401`/`403`. Do not write dataset YAML into this r
 
 Keep records whose `dc:type` or DataCite `resourceTypeGeneral` matches the [keep list](harvest.md#keep-vs-drop-shared-vocabulary). Drop articles and theses.
 
-Common Identify paths: `/oai`, `/oai/request`, `/cgi/oai2`, `/oai2d`, `/ws/oai`, `/api/oai`, `/srv/eng/oaipmh`.
+Common Identify paths: `/oai`, `/oai/request`, `/oai2`, `/cgi/oai2`, `/oai2d`, `/ws/oai`, `/api/oai`, `/api/oai_pmh/oai`, `/srv/eng/oaipmh`, `/catalog/oai`.
 
 Incremental: `from=` / `until=` (ISO date). Do not page `ListIdentifiers` titles as datasets.
 

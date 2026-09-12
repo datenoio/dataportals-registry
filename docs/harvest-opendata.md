@@ -47,16 +47,19 @@ OpenAIRE Graph/CONNECT gateways are **data search engines**, not open-data CMSs.
 
 **Keep:** `package_search` **packages** (`results[]`). **Drop:** `dataset_type:showcase`, harvest source objects, `type:harvest`, and individual resources.
 
+Optional dumps when present in `endpoints[]`: OAI-PMH Identify (`/oai?verb=Identify`) and SPARQL (`/sparql`, ckanext-dcat / ckanext-sparql). Prefer `package_search` for dataset harvest; SPARQL is a catalog dump, not a substitute for packages.
+
 ## DKAN (`dkan`) {#dkan}
 
-Same Action API as [CKAN](#ckan) when enabled; also `/api/1/search`. Confirm JSON `"success": true`. If only Drupal JSON:API is public, see [Drupal](#drupal) and prefer `dkan` when the product is DKAN.
+Same Action API as [CKAN](#ckan) when enabled; also `/api/1/search`. Confirm JSON `"success": true`. If only Drupal JSON:API is public, harvest `/jsonapi/dataset/dataset` (DKAN 2 dataset entity) and prefer `dkan` when the product is DKAN.
 
-**Keep:** packages from CKAN-compatible Action API or `/api/1/search`.
+**Keep:** packages from CKAN-compatible Action API or `/api/1/search`, or DKAN 2 JSON:API dataset entities.
 **Drop:** Drupal nodes that are not datasets. Prefer `dkan` over `drupal` when the product is DKAN.
 
 ```text
 GET https://host/api/3/action/package_search?rows=25
 GET https://host/api/1/search
+GET https://host/jsonapi/dataset/dataset
 ```
 
 
@@ -70,6 +73,16 @@ GET https://host/api/explore/v2.1/catalog/datasets?limit=100&offset=0
 
 Follow `links` / offset until `total_count`. Do not harvest the vendor academy or `www.opendatasoft.com`.
 
+Optional DCAT dump (same `dcat:Dataset` grain as [harvest-protocols.md](harvest-protocols.md#dcat)):
+
+```text
+GET https://host/api/v2/catalog/exports/dcat
+GET https://host/api/explore/v2.1/catalog/exports/dcat
+GET https://host/data.json
+```
+
+`/data.json` is Project Open Data (`dcatus11`) on some tenants. Prefer the explore catalog API when both exist.
+
 **Keep:** explore **datasets**. **Drop:** the vendor academy, `www.opendatasoft.com`, and individual records as extra catalogs.
 
 ## Socrata (`socrata`) {#socrata}
@@ -78,7 +91,10 @@ Views include charts, maps, files, and stories.
 
 ```text
 GET https://host/api/catalog/v1?only=datasets&limit=100&offset=0
+GET https://host/opensearch.xml
 ```
+
+OpenSearch description is `/opensearch.xml`. Detection types it `opensearch`.
 
 Legacy: `/api/views.json` mixes types — filter `viewType` / `displayType` to tabular datasets, or use the catalog API `only=datasets`. Drop `only=stories`, `only=filters`.
 
@@ -117,6 +133,18 @@ GET https://host/datasets.json
 
 **Keep:** published dataset entries. **Drop:** GitHub issues and the JKAN docs site.
 
+## Datasette (`datasette`) {#datasette}
+
+Harvest the published instance root. Each SQLite database or listed table is a dataset; canned queries and SQL result rows are not extra catalogs.
+
+```text
+GET https://host/-/databases.json
+GET https://host/{database}.json
+GET https://host/{database}/{table}.json?_shape=array&_size=1
+```
+
+**Keep:** published databases/tables and their JSON/CSV exports. **Drop:** `/-/` debug pages, canned-query result rows, and datasette.io marketing.
+
 ## Junar (`junar`) {#junar}
 
 Dataset API on the tenant, not junar.com marketing.
@@ -150,7 +178,11 @@ DCAT-AP search; skip the hub UI chrome. Keep `dcat:Dataset` only.
 
 ```text
 GET https://host/api/hub/search
+GET https://host/sparql
+GET https://host/api/sparql
 ```
+
+SPARQL is `/sparql` or `/api/sparql` on some hubs.
 
 
 ## Idra (`idra`) {#idra}
@@ -169,6 +201,8 @@ GET https://host/Idra/api/v1/catalogues
 
 ```text
 GET https://host/api/search/v1
+GET https://host/api/feed/dcat-us/1.1.json
+GET https://host/data.json
 ```
 
 Keep dataset / feature layer **items** that are public data. Drop StoryMaps, sites, and applications unless you have a separate apps index.
@@ -183,7 +217,7 @@ Koumoul portals. Typical list:
 GET https://host/data-fair/api/v1/datasets
 ```
 
-Page the JSON dataset collection. Drop applications and remote-service catalog chrome. Paths vary — use `endpoints[]` when present.
+Page the JSON dataset collection. Type the catalog API as `datafairapi`. Drop applications and remote-service catalog chrome. Paths vary — use `endpoints[]` when present. Do not invent a catalog-level DCAT dump path.
 
 **Keep:** Data Fair **datasets**. **Drop:** applications and remote-service catalog chrome.
 
@@ -203,7 +237,10 @@ GET https://host/api
 
 ```text
 GET https://host/_api/facets/datasets
+GET https://host/opensearch.xml
 ```
+
+OpenSearch description is `/opensearch.xml`.
 
 Keep **datasets**, not every named graph or SPARQL binding. One instance, not one graph per harvest record. See [harvest-protocols.md](harvest-protocols.md#sparql--linked-data).
 
@@ -216,6 +253,8 @@ Czech local DCAT-AP-CZ. Harvest `dcat:Dataset` from the municipal LKOD UI/API. S
 ```text
 GET https://host/opendata/set/lkod
 ```
+
+Typical catalog links already are `/opendata/set/lkod`. Cleanup strips `/opendata` so that dump path attaches at origin and is not doubled.
 
 Harvest that graph, not POMOSAM disclosure pages on the same city. Do not also harvest NKOD or data.slovensko.sk for the same datasets.
 
@@ -234,6 +273,8 @@ Japanese municipal SaaS. Some tenants speak CKAN-compatible metadata.
 ```text
 GET https://host/api/3/action/status_show
 GET https://host/api/3/action/package_search?rows=0
+GET https://host/ckan_api/package_search
+GET https://host/ckan_api/package_list
 ```
 
 **Keep:** tenant **datasets** from `package_search` or the public catalog JSON. **Drop:** idea-box posts and the vendor homepage. One tenant = one scope (`%.dataeye.jp`). If `status_show` 404s, harvest the HTML catalog list only.
@@ -288,6 +329,16 @@ GET https://host/transparencia/datos/catalogo
 
 **Keep:** rows that are datasets (title + landing or file URL). **Drop:** the rest of the e-office, transparency obligation pages, and guessed CKAN/OpenDataSoft/Socrata paths (they are HTML). If the list is HTML-only with no machine table, stop. One municipality tenant = one harvest scope.
 
+## OPENDATAENTE (`opendataente`) {#opendataente}
+
+Italian Actainfo municipal SaaS. Harvest `dcat:Dataset` from the tenant DCAT-AP_IT catalog, not the React theme tiles.
+
+```text
+GET https://host/backend/api/catalog/
+```
+
+**Keep:** `dcatapit:Dataset` / `dcat:Dataset` in that RDF. **Drop:** `dcat:Distribution` files, the vendor sites `opendataente.it` / `opendataente.cloud`, ActaLogin hosts, and dati.gov.it copies of the same datasets. One tenant = one harvest scope.
+
 ## OpenGov (`opengov`) {#opengov}
 
 US `{org}.opengov.com` financial transparency.
@@ -305,6 +356,8 @@ Only when the public product is a dataset catalog (not a news CMS).
 
 ```text
 GET https://host/jsonapi/node/dataset
+GET https://host/jsonapi/node/open_data
+GET https://host/jsonapi/node/ckan_dataset
 GET https://host/data.json
 ```
 
@@ -333,6 +386,8 @@ GET https://host/opendata/
 GET https://host/opendata/opendata.json
 ```
 
+Type `/opendata/opendata.json` as `opendata:json` when present. Do not append `/opendata/` onto catalog links that already are the open-data page. Cleanup strips `/opendata` (keeping any locale prefix such as `/ru`) so that JSON path attaches at origin.
+
 
 ## DataPress (`datapress`) {#datapress}
 
@@ -343,7 +398,10 @@ CKAN plus CMS. Harvest `package_search` as in [CKAN](#ckan). Do not harvest CMS 
 
 ```text
 GET https://host/api/3/action/package_search?rows=25
+GET https://host/api/3/action/package_list
 ```
+
+Optional SPARQL dump when present in `endpoints[]` (`/sparql`, same grain as [CKAN](#ckan)): a catalog dump, not a substitute for packages.
 
 
 ## Our Open Data (`ouropendata`) {#ouropendata}
@@ -354,17 +412,23 @@ Japanese Our Open Data / SHIRASAGI catalog.
 GET https://host/api/package_list
 ```
 
-**Keep:** datasets from `/api/package_list` or the catalog home / numeric dataset list. **Drop:** idea-box posts. Do not treat `/api/package_list` as CKAN.
+**Keep:** datasets from `/api/package_list` or the catalog home / numeric dataset list. **Drop:** idea-box posts. Type `/api/package_list` as `ouropendata:packages`. Do not treat it as CKAN.
 
 ## Gipuzkoa Irekia (`gipuzkoairekia`) {#gipuzkoairekia}
 
 Tenant DCAT. Keep datasets, not the rest of the Irekia CMS.
 
+Subdomain tenants (`{town}.gipuzkoairekia.eus/es/datu-irekien-katalogoa`) expose dumps at the origin (`/catalog.xml`, `/catalog.rdf`, `/catalog.jsonld`, `/api/feed/dcat`). Catalogs on `www.gipuzkoairekia.eus/es/web/{tenant}/datu-irekien-katalogoa` keep the tenant path (`{link}/catalogo.rdf`). Do not copy the provincial hub origin dump onto those www tenants.
+
 **Keep:** tenant DCAT datasets.
-**Drop:** the rest of the Irekia CMS.
+**Drop:** the rest of the Irekia CMS. Do not treat guessed CKAN / Socrata / OpenDataSoft paths on the Irekia HTML shell as harvest APIs.
 
 ```text
 GET https://host/catalogo.rdf
+GET https://host/catalog.xml
+GET https://host/catalog.rdf
+GET https://host/catalog.jsonld
+GET https://host/api/feed/dcat
 ```
 
 
@@ -433,6 +497,8 @@ GET https://host/w/api.php?action=ask&query=[[Category:Dataset]]
 ```
 
 Keep pages typed as Dataset (or the site’s equivalent category). Drop ordinary wiki articles. `api.php` without a dataset query is not a harvest.
+
+Probe `/w/api.php?action=ask&query=[[Category:Dataset]]&format=json` (or `/api.php` without `/w/`) as `smw:ask`.
 
 **Keep:** pages typed as Dataset (or the site’s equivalent category). **Drop:** ordinary wiki articles and unfiltered `api.php`.
 

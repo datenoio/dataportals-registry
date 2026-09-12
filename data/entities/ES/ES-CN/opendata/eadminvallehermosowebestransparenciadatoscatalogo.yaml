@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,7 +12,7 @@ coverage:
       name: Spain
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: ES-CN
@@ -47,3 +47,6 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi99995676
+endpoints:
+- type: atmmaggioli:catalog
+  url: https://eadmin.vallehermosoweb.es/transparencia/datos/catalogo

@@ -15,7 +15,12 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: 'Klimaatlas Her kan du hente GIS-data fra DMI om forventede fremtidige ændringer i klimaet på kommune-, kyststræknings- og vandoplandsniveau - samt gitter Vælg en af følgende 6 klimavariable for at hente det bagvedliggende datasæt: Fordampning Solindstråling Nedbør Temperatur Vandstand og stormflod Vind Find GIS vejledning her Find oversigt over variabelnavne og kodelister her Data kan ses grafisk på kort i Klimaatlas. Tryk på kortet og gå til Klimaatlas. DMI''s hjemmeside DMI''s hjemmeside'
+description: 'Klimaatlas Her kan du hente GIS-data fra DMI om forventede fremtidige
+  ændringer i klimaet på kommune-, kyststræknings- og vandoplandsniveau - samt gitter
+  Vælg en af følgende 6 klimavariable for at hente det bagvedliggende datasæt: Fordampning
+  Solindstråling Nedbør Temperatur Vandstand og stormflod Vind Find GIS vejledning
+  her Find oversigt over variabelnavne og kodelister her Data kan ses grafisk på kort
+  i Klimaatlas. Tryk på kortet og gå til Klimaatlas. DMI''s hjemmeside DMI''s hjemmeside'
 endpoints:
 - type: dcatap201
   url: https://klimaatlas-dmidata.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -27,6 +32,8 @@ endpoints:
   url: https://klimaatlas-dmidata.opendata.arcgis.com/api/search/v1
 - type: sitemap
   url: https://klimaatlas-dmidata.opendata.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://klimaatlas-dmidata.opendata.arcgis.com/data.json
 id: klimaatlasdmidataopendataarcgiscom
 langs:
 - id: EN

@@ -52,6 +52,12 @@ endpoints:
 - type: wps100
   url: https://nationalgeoportal.gov.np/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geoserver:version
+  url: https://nationalgeoportal.gov.np/geoserver/rest/about/version
+- type: geoserver:settings
+  url: https://nationalgeoportal.gov.np/geoserver/rest/settings
+- type: geoserver:layers
+  url: https://nationalgeoportal.gov.np/geoserver/rest/layers
 id: nationalgeoportalgovnp
 langs:
 - id: NE

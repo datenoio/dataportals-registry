@@ -14,13 +14,18 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: OPeNDAP Hyrax test server providing access to scientific datasets via OPeNDAP
-  protocol. Test server for OPeNDAP Hyrax (1.17.1-487) sponsored by NSF, NASA, and NOAA.
+description: OPeNDAP Hyrax test server providing access to scientific datasets via
+  OPeNDAP protocol. Test server for OPeNDAP Hyrax (1.17.1-487) sponsored by NSF, NASA,
+  and NOAA.
 endpoints:
 - type: thredds:catalog
   url: http://test.opendap.org:8080/opendap/thredds/catalog.xml
 - type: sitemap
   url: http://test.opendap.org:8080/siteMap/smap_0.txt
+- type: opendap:catalog
+  url: http://test.opendap.org:8080/opendap/
+- type: opendap:catalog
+  url: http://test.opendap.org:8080/opendap/catalog.xml
 id: testopendaporg
 langs:
 - id: EN

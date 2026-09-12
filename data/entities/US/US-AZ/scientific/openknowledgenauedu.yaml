@@ -24,6 +24,20 @@ endpoints:
 - type: oaipmh20
   url: https://openknowledge.nau.edu/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://openknowledge.nau.edu/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: eprints:rest
+  url: https://openknowledge.nau.edu/rest/eprint
+- type: eprints:n3
+  url: https://openknowledge.nau.edu/cgi/export/repository/RDFN3/devel.n3
+- type: atom
+  url: https://openknowledge.nau.edu/cgi/latest_tool?output=Atom
+- type: eprints:rdf
+  url: https://openknowledge.nau.edu/cgi/export/repository/RDFXML/devel.rdf
+- type: opensearch
+  url: https://openknowledge.nau.edu/cgi/opensearchdescription
+  version: '1.1'
 id: openknowledgenauedu
 langs:
 - id: EN

@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion: &id002
+      id: FR-BRE
+      name: Bretagne
+description: Agence des espaces naturels bretons mviewer of nature-protection designations
+  in Brittany.
+endpoints:
+- type: mviewer:config
+  url: https://geobretagne.fr/pub/agenb/apps/couches_protection.xml
+id: geobretagnefrmvieweragenb
+langs:
+- id: FR
+  name: French
+link: https://geobretagne.fr/mviewer/?config=/pub/agenb/apps/couches_protection.xml
+name: AGENB espaces naturels protégés
+owner:
+  link: https://www.agenb.bzh
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Agence des espaces naturels bretons
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- mviewer
+- geoportal
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00042376

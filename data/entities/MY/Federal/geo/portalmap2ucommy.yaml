@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Public SuperMap iServer on MAP2U's portal host, publishing hundreds of
+  REST map and data services for Malaysian local planning, buildings, and 3D city
+  models. Distinct from the MBMB SmartMap iPortal on mbmbsmap.map2u.com.my.
+endpoints:
+- type: supermap:services
+  url: http://portal.map2u.com.my:8090/iserver/services.json
+id: portalmap2ucommy
+langs:
+- id: MS
+  name: Malay
+- id: EN
+  name: English
+link: http://portal.map2u.com.my:8090/iserver/
+name: MAP2U SuperMap iServer
+owner:
+  link: https://www.map2u.com.my
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 20
+  name: MAP2U Sdn Bhd
+  type: Business
+properties:
+  dataset_count_reported: 378
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: supermapiserver
+  name: SuperMap iServer
+status: active
+tags:
+- SuperMap
+- iServer
+- geospatial
+- GIS
+- Malaysia
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: cdi00043924

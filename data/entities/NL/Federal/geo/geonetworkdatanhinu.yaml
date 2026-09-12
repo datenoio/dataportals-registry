@@ -22,6 +22,20 @@ endpoints:
   url: https://geonetwork.data.nhi.nu/geonetwork/srv/eng/q
 - type: geonetwork
   url: https://geonetwork.data.nhi.nu/geonetwork/srv/api
+- type: openapi
+  url: https://geonetwork.data.nhi.nu/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://geonetwork.data.nhi.nu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geonetwork.data.nhi.nu/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://geonetwork.data.nhi.nu/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:site
+  url: https://geonetwork.data.nhi.nu/geonetwork/srv/api/site
 id: geonetworkdatanhinu
 langs:
 - id: NL

@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Public Datasette API of structured metadata for the German Die drei ???
+  audio-play series.
+id: apidreimetadatende
+langs:
+- id: DE
+  name: German
+link: https://api.dreimetadaten.de/
+name: Die drei ??? Metadaten
+owner:
+  link: https://dreimetadaten.de/
+  location:
+    country:
+      id: DE
+      name: Germany
+  name: Drei Metadaten
+  type: Community
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- audio
+- metadata
+- culture
+- open data
+- Germany
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+endpoints:
+- type: datasette:databases
+  url: https://api.dreimetadaten.de/-/databases.json
+properties:
+  is_national: false
+uid: cdi00005590

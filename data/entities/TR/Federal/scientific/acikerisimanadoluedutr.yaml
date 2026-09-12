@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Anadolu University Academic Archive is a scientific data repository
-  operated by Anadolu University running on DSpace.
+description: Anadolu University Academic Archive is a scientific data repository operated
+  by Anadolu University running on DSpace.
 endpoints:
 - type: dspace
   url: https://acikerisim.anadolu.edu.tr/server/api
@@ -25,6 +25,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://acikerisim.anadolu.edu.tr/sitemap_index.xml
+- type: oaipmh20
+  url: https://acikerisim.anadolu.edu.tr/server/oai/request?verb=Identify
+  version: '2.0'
 id: acikerisimanadoluedutr
 langs:
 - id: TR

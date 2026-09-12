@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Hasselt University DSpace-CRIS document server. The Datasets collection
+  (OAI set col_1942_33689) lists research data such as clustering benchmarks, CoMix
+  contact data, and simulation outputs.
+endpoints:
+- type: oaipmh20
+  url: https://documentserver.uhasselt.be/oai/request?verb=Identify
+  version: '2.0'
+id: documentserveruhasseltbe
+langs:
+- id: NL
+  name: Dutch
+- id: EN
+  name: English
+link: https://documentserver.uhasselt.be/
+name: Document Server@UHasselt
+owner:
+  link: https://www.uhasselt.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+  name: Hasselt University
+  type: Academy
+properties:
+  dataset_count_reported: 100
+  is_national: false
+software:
+  id: dspacecris
+  name: DSpace CRIS
+status: active
+tags:
+- scientific
+- research data
+- institutional repository
+- DSpace CRIS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00042854

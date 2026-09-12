@@ -29,6 +29,8 @@ endpoints:
   version: '3.0'
 - type: opensearch
   url: https://silo.uy/vufind/Search/OpenSearch?method=describe
+- type: index
+  url: https://silo.uy/vufind/Search/Results?type=AllFields&filter[]=format%3A"Dataset"
 id: silouy
 langs:
 - id: ES

@@ -20,6 +20,15 @@ endpoints:
   url: https://transparencia.sns.gov.pt/api
 - type: sitemap
   url: https://transparencia.sns.gov.pt/sitemap.xml
+- type: opendatasoftapi
+  url: https://transparencia.sns.gov.pt/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://transparencia.sns.gov.pt/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://transparencia.sns.gov.pt/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://transparencia.sns.gov.pt/data.json
 id: transparenciasnsgovpt
 langs:
 - id: PT

@@ -19,6 +19,9 @@ description: An open-source digital repository of open, authoritative and reprod
 endpoints:
 - type: inveniordmapi:records
   url: https://gkhub.earthobservations.org/api/records
+- type: oaipmh20
+  url: https://gkhub.earthobservations.org/oai2d?verb=Identify
+  version: '2.0'
 id: gkhubearthobservationsorg
 identifiers:
 - id: datacite

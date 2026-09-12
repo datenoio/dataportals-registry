@@ -34,6 +34,13 @@ endpoints:
   version: '2.0'
 - type: geonetwork:site
   url: https://www.pigma.org/geonetwork/srv/api/site
+- type: geonetwork:records
+  url: https://www.pigma.org/geonetwork/srv/api/records
+- type: openapi
+  url: https://www.pigma.org/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: dcat:xml
+  url: https://www.pigma.org/geonetwork/srv/api/records?accept=application/rdf+xml
 id: pigmaorggeonetwork
 langs:
 - id: FR

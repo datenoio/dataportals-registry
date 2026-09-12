@@ -18,13 +18,17 @@ coverage:
     subregion:
       id: US-CA
       name: California
-description: City of Redding GIS open data portal with publicly downloadable geospatial layers
-  and mapping applications.
+description: City of Redding GIS open data portal with publicly downloadable geospatial
+  layers and mapping applications.
 endpoints:
 - type: dcatus11
   url: https://data-redding.opendata.arcgis.com/api/feed/dcat-us/1.1.json
 - type: ogcrecordsapi
   url: https://data-redding.opendata.arcgis.com/api/search/v1
+- type: dcatap201
+  url: https://data-redding.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://data-redding.opendata.arcgis.com/data.json
 id: datareddingopendataarcgiscom
 langs:
 - id: EN

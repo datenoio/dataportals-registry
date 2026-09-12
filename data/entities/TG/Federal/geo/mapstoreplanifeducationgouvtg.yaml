@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TG
+      name: Togo
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: MapStore geoportal for Togo education planning, listing spatial layers
+  used in school and education-system planning.
+endpoints:
+- type: mapstore:config
+  url: https://mapstore.planifeducation.gouv.tg/mapstore/configs/localConfig.json
+id: mapstoreplanifeducationgouvtg
+langs:
+- id: FR
+  name: French
+link: https://mapstore.planifeducation.gouv.tg/mapstore/
+name: MapStore Planification de l'Éducation Togo
+owner:
+  link: https://planifeducation.gouv.tg
+  location:
+    country:
+      id: TG
+      name: Togo
+  name: Ministère des Enseignements Primaire et Secondaire du Togo
+  type: Central government
+software:
+  id: mapstore
+  name: MapStore
+status: active
+tags:
+- geospatial
+- government
+- mapstore
+- has_api
+- education
+- planning
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00043702
+properties:
+  has_doi: false
+  is_national: false

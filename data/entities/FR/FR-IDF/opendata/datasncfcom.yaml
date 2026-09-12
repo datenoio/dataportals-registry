@@ -21,6 +21,15 @@ endpoints:
   url: https://data.sncf.com/api
 - type: sitemap
   url: https://data.sncf.com/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.sncf.com/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.sncf.com/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.sncf.com/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.sncf.com/data.json
 id: datasncfcom
 langs:
 - id: FR

@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CO
+      name: Colorado
+description: DataONE Metacat member node (urn:node:PitCo_OST) publishing ecological
+  monitoring datasets from Pitkin County Open Space and Trails in Colorado.
+endpoints:
+- type: sitemap
+  url: https://www.pitkincounty-ost.info/metacat/sitemaps/sitemap_index.xml
+- type: rest
+  url: https://www.pitkincounty-ost.info/metacat/d1/mn/v2
+id: wwwpitkincountyostinfo
+langs:
+- id: EN
+  name: English
+link: https://www.pitkincounty-ost.info/metacatui
+name: Pitkin County OST Data Catalogue
+owner:
+  link: https://pitkincounty.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CO
+      name: Colorado
+  name: Pitkin County Open Space and Trails
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: dataone
+  name: DataONE
+status: active
+tags:
+- scientific
+- ecology
+- DataONE
+- Metacat
+- Colorado
+- Pitkin County
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00043783

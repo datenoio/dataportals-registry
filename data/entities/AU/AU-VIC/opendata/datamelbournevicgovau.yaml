@@ -24,6 +24,11 @@ endpoints:
   url: https://data.melbourne.vic.gov.au/api
 - type: sitemap
   url: https://data.melbourne.vic.gov.au/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.melbourne.vic.gov.au/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.melbourne.vic.gov.au/api/explore/v2.1/catalog/exports/dcat
 id: datamelbournevicgovau
 identifiers:
 - id: dataportals.org

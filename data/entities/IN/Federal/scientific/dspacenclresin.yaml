@@ -40,6 +40,12 @@ endpoints:
   version: '1.0'
 - type: sitemap
   url: https://dspace.ncl.res.in/sitemap_index.xml
+- type: oaipmh20
+  url: https://dspace.ncl.res.in/oai?verb=Identify
+  version: '2.0'
+- type: oaipmh20
+  url: https://dspace.ncl.res.in/server/oai/request?verb=Identify
+  version: '2.0'
 id: dspacenclresin
 langs:
 - id: EN

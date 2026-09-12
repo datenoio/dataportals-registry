@@ -26,6 +26,16 @@ endpoints:
 - type: ckan:package-list
   url: https://suojattudata.suomi.fi/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://suojattudata.suomi.fi/catalog.n3
+- type: dcat:ttl
+  url: https://suojattudata.suomi.fi/catalog.ttl
+- type: dcat:xml
+  url: https://suojattudata.suomi.fi/catalog.xml
+- type: dcat:jsonld
+  url: https://suojattudata.suomi.fi/catalog.jsonld
+- type: dcat
+  url: https://suojattudata.suomi.fi/catalog.rdf
 id: suojattudatasuomifi
 langs:
 - id: FI

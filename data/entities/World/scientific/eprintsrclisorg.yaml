@@ -32,6 +32,13 @@ endpoints:
   url: https://eprints.rclis.org/sitemap.xml
 - type: opensearch
   url: http://eprints.rclis.org/cgi/opensearchdescription
+- type: eprints:rdf
+  url: https://eprints.rclis.org/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://eprints.rclis.org/cgi/export/repository/RDFN3/devel.n3
+- type: opensearch
+  url: https://eprints.rclis.org/cgi/opensearchdescription
+  version: '1.1'
 id: eprintsrclisorg
 langs:
 - id: EN
@@ -72,4 +79,3 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00020019
-

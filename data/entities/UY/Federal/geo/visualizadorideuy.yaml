@@ -22,6 +22,24 @@ endpoints:
   url: https://visualizador.ide.uy/geonetwork/srv/eng/q
 - type: geonetwork
   url: https://visualizador.ide.uy/geonetwork/srv/api
+- type: geonetwork:records
+  url: https://visualizador.ide.uy/geonetwork/srv/api/records
+- type: openapi
+  url: https://visualizador.ide.uy/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://visualizador.ide.uy/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://visualizador.ide.uy/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://visualizador.ide.uy/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: dcat:xml
+  url: https://visualizador.ide.uy/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://visualizador.ide.uy/geonetwork/srv/api/site
 id: visualizadorideuy
 langs:
 - id: ES

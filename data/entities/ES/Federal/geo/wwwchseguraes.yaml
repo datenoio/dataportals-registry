@@ -37,6 +37,9 @@ endpoints:
   url: https://www.chsegura.es/geoportal/opensearch?f=csv&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
 - type: esrigeo:kml
   url: https://www.chsegura.es/geoportal/opensearch?f=kml&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: csw202
+  url: https://www.chsegura.es/geoportal/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
 id: wwwchseguraes
 langs:
 - id: ES

@@ -38,6 +38,12 @@ endpoints:
 - type: opensearch
   url: https://ppdb.us.edu.pl/geonetwork/srv/eng/portal.opensearch
   version: '1.0'
+- type: geonetwork:records
+  url: https://ppdb.us.edu.pl/geonetwork/srv/api/records
+- type: dcat:xml
+  url: https://ppdb.us.edu.pl/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://ppdb.us.edu.pl/geonetwork/srv/api/site
 id: geonetworkppdbusedupl
 langs:
 - id: EN

@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion:
+      id: JP-41
+      name: Saga
+description: BODIK ODCS open data catalog for 佐賀県吉野ヶ里町 (吉野ヶ里町オープンデータサイト), listed on
+  the e-Gov Data Portal database-site directory.
+endpoints:
+- type: ckan:package-search
+  url: https://data.bodik.jp/api/3/action/package_search?q=organization:413275
+  version: '3'
+id: odcsbodikjp413275
+langs:
+- id: JA
+  name: Japanese
+link: https://odcs.bodik.jp/413275
+name: 吉野ヶ里町オープンデータサイト
+owner:
+  link: https://odcs.bodik.jp/413275
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-41
+      name: Saga
+  name: 佐賀県吉野ヶ里町
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- open data
+- BODIK
+- Japan
+- Saga
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00005465

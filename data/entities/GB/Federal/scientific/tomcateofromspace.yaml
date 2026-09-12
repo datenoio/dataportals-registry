@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: THREDDS catalog of Earth Observation from Space project datasets including
+  AquaPlan, CERTO, and phytoplankton products.
+endpoints:
+- type: thredds:catalog
+  url: https://tomcat.eofrom.space/thredds/catalog.xml
+- type: thredds:info
+  url: https://tomcat.eofrom.space/thredds/serverInfo.xml
+id: tomcateofromspace
+langs:
+- id: EN
+  name: English
+link: https://tomcat.eofrom.space/thredds/catalog.html
+name: EO From Space THREDDS Data Server
+owner:
+  link: https://www.pml.ac.uk/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: Plymouth Marine Laboratory
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- THREDDS
+- earth observation
+- scientific
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00042344

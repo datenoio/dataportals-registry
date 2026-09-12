@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: TH-44
+      name: Maha Sarakham
+description: SuperMap iPortal of the Research and Development Unit for Smart City
+  Solution (RDSC) at Mahasarakham University, cataloguing maps and geospatial datasets
+  for smart-city research.
+endpoints:
+- type: supermapiportal:web
+  url: https://rdsc.online:8190/iportal/web.rjson
+- type: supermapiportal:maps
+  url: https://rdsc.online:8190/iportal/web/maps.json
+- type: supermapiportal:services
+  url: https://rdsc.online:8190/iportal/web/services.json
+- type: supermapiportal:datas
+  url: https://rdsc.online:8190/iportal/web/datas.json
+id: rdsconline
+langs:
+- id: TH
+  name: Thai
+- id: EN
+  name: English
+link: https://rdsc.online:8190/iportal
+name: Mahasarakham University RDSC SuperMap iPortal
+owner:
+  link: https://rdsc.ac.th/
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 30
+    subregion:
+      id: TH-44
+      name: Maha Sarakham
+  name: Mahasarakham University RDSC
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+  dataset_count_reported: 1712
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: supermapiportal
+  name: SuperMap iPortal
+status: active
+tags:
+- SuperMap
+- iPortal
+- geospatial
+- university
+- smart city
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00043730

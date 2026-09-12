@@ -22,6 +22,11 @@ endpoints:
 - type: csw202
   url: https://inspire.lechnerkozpont.hu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
+- type: oaipmh20
+  url: https://inspire.lechnerkozpont.hu/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://inspire.lechnerkozpont.hu/geonetwork/srv/api/selections
 id: geonetworkinspirefomihu
 langs:
 - id: HU

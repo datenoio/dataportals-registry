@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: UM Impact is a Scientific data repository operated by UM Impact.
+id: umimpactumtedu
+langs:
+- id: EN
+  name: English
+link: https://umimpact.umt.edu
+name: UM Impact
+owner:
+  link: https://umimpact.umt.edu
+  location:
+    country:
+      id: US
+      name: United States
+  name: UM Impact
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042801
+endpoints:
+- type: oaipmh20
+  url: https://umimpact.umt.edu/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://umimpact.umt.edu/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://umimpact.umt.edu/sitemap/datasets.xml

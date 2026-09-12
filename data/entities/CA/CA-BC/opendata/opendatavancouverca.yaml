@@ -24,6 +24,15 @@ endpoints:
   url: https://opendata.vancouver.ca/api
 - type: sitemap
   url: https://opendata.vancouver.ca/sitemap.xml
+- type: opendatasoftapi
+  url: https://opendata.vancouver.ca/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://opendata.vancouver.ca/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://opendata.vancouver.ca/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://opendata.vancouver.ca/data.json
 id: opendatavancouverca
 identifiers:
 - id: re3data

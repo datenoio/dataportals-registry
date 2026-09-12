@@ -68,6 +68,15 @@ endpoints:
   url: https://portal.marineportal.gistda.or.th/geoserver/rest/settings
 - type: geoserver:layers
   url: https://portal.marineportal.gistda.or.th/geoserver/rest/layers
+- type: geonode:datasets
+  url: https://portal.marineportal.gistda.or.th/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://portal.marineportal.gistda.or.th/catalogue/opensearch
+  version: '1.1'
+- type: tms100
+  url: https://portal.marineportal.gistda.or.th/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
 id: portalmarineportalgistdaorth
 langs:
 - id: TH

@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Lizmap GEOLAB Réunion is a Geoportal operated by GEOLAB Réunion.
+id: srigeolabre
+langs:
+- id: FR
+  name: French
+link: https://sri.geolab.re/
+name: Lizmap GEOLAB Réunion
+owner:
+  link: https://www.geolab.re
+  location:
+    country:
+      id: FR
+      name: France
+  name: GEOLAB Réunion
+  type: Academy
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- academic
+- lizmap
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00042777
+endpoints:
+- type: lizmap:service
+  url: https://sri.geolab.re/index.php/lizmap/service/?repository=boutickchinois&project=lizmap_Boutiques_chinois
+- type: wms130
+  url: https://sri.geolab.re/index.php/lizmap/service/?repository=boutickchinois&project=lizmap_Boutiques_chinois&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0

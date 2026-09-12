@@ -27,6 +27,16 @@ endpoints:
   url: https://opengis.grand-island.com/arcgis/rest/services?f=pjson
 - type: arcgis:soap
   url: https://opengis.grand-island.com/arcgis/services?wsdl
+- type: dcatap201
+  url: https://opengis.grand-island.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://opengis.grand-island.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://opengis.grand-island.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://opengis.grand-island.com/api/search/v1
+- type: dcatus11
+  url: https://opengis.grand-island.com/data.json
 id: opengisgrandislandcom
 langs:
 - id: EN

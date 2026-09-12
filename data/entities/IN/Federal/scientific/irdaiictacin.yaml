@@ -18,6 +18,17 @@ description: Institutional repository of DA-IICT, running on DSpace.
 endpoints:
 - type: dspace:catalog
   url: https://ir.daiict.ac.in
+- type: dspace
+  url: https://ir.daiict.ac.in/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://ir.daiict.ac.in/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://ir.daiict.ac.in/sitemap_index.xml
+- type: oaipmh20
+  url: https://ir.daiict.ac.in/server/oai/request?verb=Identify
+  version: '2.0'
 id: irdaiictacin
 langs:
 - id: EN

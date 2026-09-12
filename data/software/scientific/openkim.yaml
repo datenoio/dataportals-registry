@@ -1,0 +1,61 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: openkim
+name: OpenKIM
+website: https://openkim.org
+description: OpenKIM (Open Knowledgebase of Interatomic Models) is an open-source
+  repository of interatomic potentials and force fields for atomistic simulation,
+  with verification tests and a query API for models and tests.
+owner:
+  name: University of Minnesota OpenKIM project
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://openkim.org/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Structured
+type: Software
+repository_url: https://github.com/openkim/kim-api
+documentation_url: https://openkim.org/doc/
+export_formats:
+- JSON
+- KIM
+- LAMMPS
+capabilities:
+- Query API
+- Interatomic model catalog
+- Verification tests
+last_updated: '2026-09-09T00:00:00Z'

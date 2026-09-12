@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Repositorio Institucional UABC. Institutional repository operated by Universidad
-  Autónoma de Baja California.
+description: Repositorio Institucional UABC. Institutional repository operated by
+  Universidad Autónoma de Baja California.
 endpoints:
 - type: dspace
   url: https://repositorioinstitucional.uabc.mx/server/api
@@ -28,6 +28,9 @@ endpoints:
   version: '2.0'
 - type: sitemap
   url: https://repositorioinstitucional.uabc.mx/sitemap_index.xml
+- type: oaipmh20
+  url: https://repositorioinstitucional.uabc.mx/server/oai/request?verb=Identify
+  version: '2.0'
 id: repositorioinstitucionaluabcmx
 langs:
 - id: ES

@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: FI-18
+      name: Uusimaa
+description: pygeoapi OGC API for Helsinki-region urban geospatial collections (buildings,
+  vegetation, urban heat, land cover) published via dataportal.fi.
+endpoints:
+- type: pygeoapi:openapi
+  url: https://pygeoapi.dataportal.fi/openapi
+  version: '1.0'
+- type: pygeoapi:collections
+  url: https://pygeoapi.dataportal.fi/collections?f=json
+  version: '1.0'
+id: pygeoapidataportalfi
+langs:
+- id: FI
+  name: Finnish
+- id: SV
+  name: Swedish
+link: https://pygeoapi.dataportal.fi
+name: Forum Virium Helsinki dataportal.fi OGC API
+owner:
+  link: https://forumvirium.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 30
+    subregion:
+      id: FI-18
+      name: Uusimaa
+  name: Forum Virium Helsinki
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: pygeoapi
+  name: pygeoapi
+status: active
+tags:
+- geospatial
+- government
+- pygeoapi
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043161

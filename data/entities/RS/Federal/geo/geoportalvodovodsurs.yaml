@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RS
+      name: Serbia
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: MapStore geoportal of Subotica's public water and sewer utility (ViK)
+  with network and infrastructure layers.
+endpoints:
+- type: wms111
+  url: https://geoportal.vodovodsu.rs/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoportal.vodovodsu.rs/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoportal.vodovodsu.rs/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geoportal.vodovodsu.rs/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoportal.vodovodsu.rs/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs111
+  url: https://geoportal.vodovodsu.rs/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs201
+  url: https://geoportal.vodovodsu.rs/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+id: geoportalvodovodsurs
+langs:
+- id: SR
+  name: Serbian
+link: https://geoportal.vodovodsu.rs/
+name: GIS ViK Subotica
+owner:
+  link: https://www.vodovodsu.rs
+  location:
+    country:
+      id: RS
+      name: Serbia
+  name: JKP Vodovod i kanalizacija Subotica
+  type: Business
+software:
+  id: mapstore
+  name: MapStore
+status: active
+tags:
+- geospatial
+- commercial
+- mapstore
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043646
+properties:
+  has_doi: false
+  is_national: false

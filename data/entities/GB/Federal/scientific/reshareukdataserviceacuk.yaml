@@ -21,6 +21,20 @@ endpoints:
 - type: oaipmh20
   url: https://reshare.ukdataservice.ac.uk/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://reshare.ukdataservice.ac.uk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://reshare.ukdataservice.ac.uk/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://reshare.ukdataservice.ac.uk/rest/eprint
+- type: eprints:rdf
+  url: https://reshare.ukdataservice.ac.uk/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://reshare.ukdataservice.ac.uk/cgi/export/repository/RDFN3/devel.n3
+- type: opensearch
+  url: https://reshare.ukdataservice.ac.uk/cgi/opensearchdescription
+  version: '1.1'
 id: reshareukdataserviceacuk
 langs:
 - id: EN

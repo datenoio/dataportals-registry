@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: ES-GA
       name: Galicia [Galicia]
-description: GeoNetwork metadata catalogue of the Spatial Data Infrastructure of Galicia (IDEG),
-  with CSW access to regional geographic datasets.
+description: GeoNetwork metadata catalogue of the Spatial Data Infrastructure of Galicia
+  (IDEG), with CSW access to regional geographic datasets.
 endpoints:
 - type: geonetwork:query
   url: https://xeocatalogo.xunta.gal/xeocatalogo/srv/eng/q
@@ -39,6 +39,8 @@ endpoints:
   version: '2.0'
 - type: geonetwork:site
   url: https://xeocatalogo.xunta.gal/xeocatalogo/srv/api/site
+- type: dcat:xml
+  url: https://xeocatalogo.xunta.gal/xeocatalogo/srv/api/records?accept=application/rdf+xml
 id: xeocatalogoxuntagal
 langs:
 - id: ES

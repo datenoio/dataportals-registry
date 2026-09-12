@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Chang Gung University Academic Capacity Ensemble is a Scientific data
+  repository operated by Chang Gung University Academic Capacity Ensemble.
+id: purelibcguedutw
+langs:
+- id: ZH
+  name: Chinese
+link: https://pure.lib.cgu.edu.tw
+name: Chang Gung University Academic Capacity Ensemble
+owner:
+  link: https://pure.lib.cgu.edu.tw
+  location:
+    country:
+      id: TW
+      name: Taiwan
+  name: Chang Gung University Academic Capacity Ensemble
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00042659
+endpoints:
+- type: oaipmh20
+  url: https://pure.lib.cgu.edu.tw/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://pure.lib.cgu.edu.tw/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://pure.lib.cgu.edu.tw/sitemap/datasets.xml

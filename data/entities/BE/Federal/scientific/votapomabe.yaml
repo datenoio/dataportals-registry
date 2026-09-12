@@ -19,6 +19,9 @@ description: Virtual Observatory data center providing astronomical tables and m
 endpoints:
 - type: tap:capabilities
   url: https://vo-tap.oma.be/tap/capabilities
+- type: oaipmh20
+  url: https://vo-tap.oma.be/oai.xml?verb=Identify
+  version: '2.0'
 id: votapomabe
 langs:
 - id: EN

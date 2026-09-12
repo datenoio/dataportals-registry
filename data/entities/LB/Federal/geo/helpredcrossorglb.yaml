@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: ArcGIS Hub used by the Lebanese Red Cross for community engagement
-  and open geospatial data, including facilities, Beirut blast damage and
-  assistance, buildings, and related map layers.
+description: ArcGIS Hub used by the Lebanese Red Cross for community engagement and
+  open geospatial data, including facilities, Beirut blast damage and assistance,
+  buildings, and related map layers.
 endpoints:
 - type: dcatap201
   url: https://help.redcross.org.lb/api/feed/dcat-ap/2.0.1.json
@@ -29,6 +29,8 @@ endpoints:
   url: https://help.redcross.org.lb/api/search/v1
 - type: sitemap
   url: https://help.redcross.org.lb/sitemap.xml
+- type: dcatus11
+  url: https://help.redcross.org.lb/data.json
 id: helpredcrossorglb
 langs:
 - id: AR

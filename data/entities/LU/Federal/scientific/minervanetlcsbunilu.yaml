@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -49,8 +49,8 @@ owner:
   name: ELIXIR Luxembourg
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: minerva
+  name: MINERVA
 status: active
 tags:
 - scientific
@@ -68,3 +68,6 @@ topics:
   name: Health
   type: iso19115
 uid: cdi00032041
+endpoints:
+- type: minerva
+  url: https://minerva-net.lcsb.uni.lu/

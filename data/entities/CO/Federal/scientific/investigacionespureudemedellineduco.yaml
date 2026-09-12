@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Universidad de Medellín is a Scientific data repository operated by Universidad
+  de Medellín.
+id: investigacionespureudemedellineduco
+langs:
+- id: ES
+  name: Spanish
+link: https://investigaciones-pure.udemedellin.edu.co
+name: Universidad de Medellín
+owner:
+  link: https://investigaciones-pure.udemedellin.edu.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+  name: Universidad de Medellín
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042541
+endpoints:
+- type: oaipmh20
+  url: https://investigaciones-pure.udemedellin.edu.co/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://investigaciones-pure.udemedellin.edu.co/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://investigaciones-pure.udemedellin.edu.co/sitemap/datasets.xml

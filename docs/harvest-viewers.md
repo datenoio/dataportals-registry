@@ -55,11 +55,12 @@ Init `catalog.json` / `config.json` **members typed as data**. If Magda or CKAN 
 
 ```text
 GET https://host/catalog.json
+GET https://host/catalog/opensearch.xml
 ```
 
 Geospatial items. Drop books/images when the Solr mix includes them. Page `start` / `rows` as in Blacklight.
 
-**Keep:** geospatial **items** from `/catalog.json`. **Drop:** books/images when the Solr mix includes them.
+**Keep:** geospatial **items** from `/catalog.json`. OpenSearch is `/catalog/opensearch.xml`. **Drop:** books/images when the Solr mix includes them.
 
 ## OpenGeoPortal (`opengeoportal`) {#opengeoportal}
 
@@ -106,7 +107,7 @@ GET https://host/arcgis/rest/services?f=pjson
 GET https://host/api/cityNode/queryByTree.json
 ```
 
-Keep SuperMap services, iPortal maps/services, ArcGIS Map/Feature/Image services, or the city-node tree. Drop SSO, `console.tianditu.gov.cn` developer pages, and WMTS GetTile URLs.
+Keep SuperMap services, iPortal maps/services, ArcGIS Map/Feature/Image services, or the city-node tree. Detection probes `/api/cityNode/queryByTree.json` on the node origin (plus the SuperMap/ArcGIS paths above). Drop SSO, `console.tianditu.gov.cn` developer pages, and WMTS GetTile URLs.
 
 **Keep:** node **layer/catalog API** (iServer/iPortal/ArcGIS/city-node tree). **Drop:** pure tile hosts (`t0`–`t7`), `tk=` keys, SSO, and GetTile URLs.
 
@@ -308,9 +309,13 @@ Keep published **datasets/services**. Drop tiles and admin.
 GET https://host/services.json
 GET https://host/iserver/services.json
 GET https://host/iportal/web/services.json
+GET https://host/iportal/web/maps.json
+GET https://host/iportal/web/datas.json
 ```
 
-Same `services.json` grain as [iServer](#supermapiserver) when the public product is iPortal. Drop tiles and admin.
+Typical catalog links already end in `/iportal`. Cleanup strips `/iportal` so those JSON paths attach at origin and are not doubled.
+
+Same `services.json` grain as [iServer](#supermapiserver) when the public product is iPortal. Maps and datasets lists are `/iportal/web/maps.json` and `/iportal/web/datas.json`. Drop tiles and admin.
 
 **Keep:** iPortal/iServer **maps/services**. **Drop:** tiles and admin.
 

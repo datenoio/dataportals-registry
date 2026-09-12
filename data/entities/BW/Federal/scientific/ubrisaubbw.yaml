@@ -13,7 +13,7 @@ coverage:
       name: Botswana
     level: 20
     macroregion:
-      id: '018'
+      id: 018
       name: Southern Africa
 description: University of Botswana Research, Innovation and Scholarship Archive (UBRISA).
   DSpace institutional repository of theses, publications, and research outputs, including
@@ -25,6 +25,12 @@ endpoints:
 - type: oaipmh20
   url: https://ubrisa.ub.bw/oai/request?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://ubrisa.ub.bw/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://ubrisa.ub.bw/feed/atom_1.0/site
+  version: '1.0'
 id: ubrisaubbw
 identifiers:
 - id: opendoar

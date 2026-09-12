@@ -66,6 +66,12 @@ endpoints:
 - type: wps100
   url: https://lema2.acad.univali.br/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://lema2.acad.univali.br/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://lema2.acad.univali.br/catalogue/opensearch
+  version: '1.1'
 id: lema2acadunivalibr
 langs:
 - id: PT

@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: AEE INTEC Energieatlas is a Geoportal operated by AEE INTEC, built with
+  Lizmap.
+id: energieatlasaeeintecat
+langs:
+- id: DE
+  name: German
+link: https://energieatlas.aee-intec.at/
+name: AEE INTEC Energieatlas
+owner:
+  link: https://www.aee-intec.at
+  location:
+    country:
+      id: AT
+      name: Austria
+  name: AEE INTEC
+  type: Academy
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- academic
+- lizmap
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00042839
+endpoints:
+- type: lizmap:service
+  url: https://energieatlas.aee-intec.at/index.php/lizmap/service/?repository=ship&project=ship
+- type: wms130
+  url: https://energieatlas.aee-intec.at/index.php/lizmap/service/?repository=ship&project=ship&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0

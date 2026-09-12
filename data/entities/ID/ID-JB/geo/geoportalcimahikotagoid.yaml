@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: ID-JB
+      name: Jawa Barat
+description: Geoportal Kota Cimahi is a Geoportal operated by Pemerintah Kota Cimahi,
+  built with GeoNode.
+endpoints:
+- type: geonode:datasets
+  url: https://geoportal.cimahikota.go.id/api/datasets/
+- type: geonode:documents
+  url: https://geoportal.cimahikota.go.id/api/documents/
+- type: csw202
+  url: https://geoportal.cimahikota.go.id/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geoportal.cimahikota.go.id/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: geonode:datasets
+  url: https://geoportal.cimahikota.go.id/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geoportal.cimahikota.go.id/catalogue/opensearch
+  version: '1.1'
+id: geoportalcimahikotagoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://geoportal.cimahikota.go.id
+name: Geoportal Kota Cimahi
+owner:
+  link: https://geoportal.cimahikota.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    subregion:
+      id: ID-JB
+      name: Jawa Barat
+  name: Pemerintah Kota Cimahi
+  type: Local government
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- government
+- geonode
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043364

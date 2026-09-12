@@ -19,6 +19,11 @@ description: CKAN open data portal of the Duero River Basin Authority (Confedera
 endpoints:
 - type: ckan:package-search
   url: https://datos.chduero.es/api/3/action/package_search
+- type: ckan:package-list
+  url: https://datos.chduero.es/api/3/action/package_list
+  version: '3'
+- type: dcat:xml
+  url: https://datos.chduero.es/catalog.xml
 id: datoschdueroes
 langs:
 - id: ES

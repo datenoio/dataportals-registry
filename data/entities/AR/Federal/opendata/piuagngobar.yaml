@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Portal de Información de las Universidades Públicas Nacionales is an
+  Open data portal operated by Archivo General de la Nación, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://piu.agn.gob.ar/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://piu.agn.gob.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://piu.agn.gob.ar/api/3/action/package_list
+  version: '3'
+id: piuagngobar
+langs:
+- id: ES
+  name: Spanish
+link: https://piu.agn.gob.ar
+name: Portal de Información de las Universidades Públicas Nacionales
+owner:
+  link: https://www.argentina.gob.ar/agn
+  location:
+    country:
+      id: AR
+      name: Argentina
+  name: Archivo General de la Nación
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- ckan
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00042837

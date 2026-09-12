@@ -22,6 +22,8 @@ description: Online data catalog offering detailed views and access to datasets 
 endpoints:
 - type: nada:catalog-search
   url: https://devisu.forscenter.ch/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://devisu.forscenter.ch/index.php/catalog/export/csv?ps=5000&collection[]
 id: devisuforscenterch
 langs:
 - id: FR

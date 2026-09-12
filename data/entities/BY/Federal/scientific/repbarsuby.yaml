@@ -20,6 +20,17 @@ description: Institutional DSpace repository of BarSU. Public catalog of scholar
 endpoints:
 - type: dspace:catalog
   url: https://rep.barsu.by/
+- type: dspace
+  url: https://rep.barsu.by/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://rep.barsu.by/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://rep.barsu.by/sitemap_index.xml
+- type: oaipmh20
+  url: https://rep.barsu.by/server/oai/request?verb=Identify
+  version: '2.0'
 id: repbarsuby
 langs:
 - id: RU

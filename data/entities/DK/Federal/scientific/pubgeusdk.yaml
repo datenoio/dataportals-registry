@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: GEUS' publikationer is a Scientific data repository operated by GEUS'
+  publikationer, built with Pure.
+id: pubgeusdk
+langs:
+- id: DA
+  name: Danish
+link: https://pub.geus.dk
+name: GEUS' publikationer
+owner:
+  link: https://pub.geus.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+  name: GEUS' publikationer
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043127
+endpoints:
+- type: rss
+  url: https://pub.geus.dk/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'

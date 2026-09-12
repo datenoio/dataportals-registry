@@ -21,6 +21,15 @@ endpoints:
   url: https://data.sbb.ch/api
 - type: sitemap
   url: https://data.sbb.ch/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.sbb.ch/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.sbb.ch/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.sbb.ch/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.sbb.ch/data.json
 id: datasbbch
 identifiers:
 - id: wikidata

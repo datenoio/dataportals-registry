@@ -29,6 +29,56 @@ endpoints:
 - type: wfs200
   url: http://geoportal.bantulkab.go.id:8080/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
   version: 2.0.0
+- type: geonode:documents
+  url: https://geoportal.bantulkab.go.id/api/documents/
+- type: csw202
+  url: https://geoportal.bantulkab.go.id/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geoportal.bantulkab.go.id/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geoportal.bantulkab.go.id/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wfs110
+  url: https://geoportal.bantulkab.go.id/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geoportal.bantulkab.go.id/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs100
+  url: https://geoportal.bantulkab.go.id/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://geoportal.bantulkab.go.id/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://geoportal.bantulkab.go.id/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://geoportal.bantulkab.go.id/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://geoportal.bantulkab.go.id/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://geoportal.bantulkab.go.id/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://geoportal.bantulkab.go.id/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://geoportal.bantulkab.go.id/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: geonode:datasets
+  url: https://geoportal.bantulkab.go.id/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geoportal.bantulkab.go.id/catalogue/opensearch
+  version: '1.1'
+- type: wms-c111
+  url: https://geoportal.bantulkab.go.id/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
 id: geoportalbantulkabgoid
 langs:
 - id: ID

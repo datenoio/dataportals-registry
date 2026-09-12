@@ -12,10 +12,11 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
-description: Official open government data portal of the Republic of Serbia (uData), operated
-  by the Office for Information Technologies and eGovernment. The uData API at /api/1 is public.
+description: Official open government data portal of the Republic of Serbia (uData),
+  operated by the Office for Information Technologies and eGovernment. The uData API
+  at /api/1 is public.
 endpoints:
 - type: udataapi
   url: https://data.gov.rs/api/1
@@ -23,6 +24,12 @@ endpoints:
   url: https://data.gov.rs/api/1/datasets/?page_size=1
 - type: sitemap
   url: https://data.gov.rs/sitemap.xml
+- type: udataapi
+  url: https://data.gov.rs/api/1/datasets/
+  version: '1'
+- type: udataapi:organizations
+  url: https://data.gov.rs/api/1/organizations/
+  version: '1'
 id: datagovrs
 identifiers:
 - id: dataportals.org

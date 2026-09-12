@@ -19,6 +19,9 @@ description: Catalog of Europlanet Telescope Network facilities and observing ca
 endpoints:
 - type: tap:capabilities
   url: http://parsec-europlanet.eu:81/tap/capabilities
+- type: oaipmh20
+  url: http://parsec-europlanet.eu:81/oai.xml?verb=Identify
+  version: '2.0'
 id: parseceuroplaneteu
 langs:
 - id: EN

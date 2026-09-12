@@ -2,6 +2,9 @@
 # This script intended to detect data catalogs API
 import logging
 import sys
+import glob
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from io import BytesIO
 import typer
 from typing import Optional
@@ -25,7 +28,13 @@ from urllib.parse import urlparse, urlunparse
 import lxml.html
 import lxml.etree
 import urllib.robotparser
-from requests.exceptions import ConnectionError, TooManyRedirects, ContentDecodingError
+from requests.exceptions import (
+    ConnectionError,
+    ContentDecodingError,
+    InvalidURL,
+    RequestException,
+    TooManyRedirects,
+)
 from urllib3.exceptions import InsecureRequestWarning  # , ConnectionError
 
 # Suppress only the single warning from urllib3 needed.
@@ -46,6 +55,9 @@ SCHEDULED_DIR = os.path.join(_REPO_ROOT, "data", "scheduled")
 app = typer.Typer()
 
 DEFAULT_TIMEOUT = 5
+DEFAULT_RECORD_WORKERS = 8
+DEFAULT_PROBE_WORKERS = 8
+_SAVE_LOCK = threading.Lock()
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0"
@@ -71,6 +83,17 @@ JSON_MIMETYPES = [
     "application/vnd.oai.openapi+json",
 ]
 N3_MIMETYPES = ["text/n3"]
+TURTLE_MIMETYPES = ["text/turtle", "application/turtle", "application/x-turtle"]
+JSONLD_MIMETYPES = JSON_MIMETYPES + ["application/ld+json"]
+SPARQL_MIMETYPES = (
+    JSON_MIMETYPES
+    + XML_MIMETYPES
+    + [
+        "application/sparql-results+json",
+        "application/sparql-results+xml",
+        "application/sparql-query",
+    ]
+)
 ZIP_MIMETYPES = ["application/zip"]
 EXCEL_MIMETYPES = [
     "application/vnd.ms-excel",
@@ -97,6 +120,13 @@ GEONODE_URLMAP = [
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
         "version": "",
+    },
+    {
+        "id": "geonode:datasets",
+        "url": "/api/v2/datasets/",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "2",
     },
     {
         "id": "geonode:documents",
@@ -132,6 +162,13 @@ GEONODE_URLMAP = [
         "expected_mime": XML_MIMETYPES,
         "is_json": False,
         "version": "1.0",
+    },
+    {
+        "id": "opensearch",
+        "url": "/catalogue/opensearch",
+        "expected_mime": XML_MIMETYPES + ["application/opensearchdescription+xml"],
+        "is_json": False,
+        "version": "1.1",
     },
     {
         "id": "wms111",
@@ -373,6 +410,14 @@ DKAN_URLMAP = [
         "is_json": True,
         "version": None,
     },
+    {
+        "id": "drupal:jsonapi",
+        "url": "/jsonapi/dataset/dataset",
+        "accept": "application/vnd.api+json, application/json",
+        "expected_mime": JSON_MIMETYPES + ["application/vnd.api+json"],
+        "is_json": True,
+        "version": None,
+    },
 ]
 
 CKAN_URLMAP = [
@@ -432,6 +477,43 @@ CKAN_URLMAP = [
         "is_json": True,
         "version": None,
     },
+    {
+        "id": "dcat",
+        "url": "/catalog.rdf",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "dcat:xml",
+        "url": "/feeds/dcat",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/oai?verb=Identify",
+        "accept": "application/xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/catalog/oai?verb=Identify",
+        "accept": "application/xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "sparql",
+        "url": "/sparql",
+        "expected_mime": SPARQL_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
 ]
 
 IPT_URLMAP = [
@@ -467,6 +549,13 @@ JUNAR_URLMAP = [
         "is_json": True,
         "version": None,
     },
+    {
+        "id": "junar:datasets",
+        "url": "/api/v2/datasets",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "2",
+    },
 ]
 
 TRIPLYDB_URLMAP = [
@@ -476,6 +565,20 @@ TRIPLYDB_URLMAP = [
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
         "version": None,
+    },
+    {
+        "id": "sparql",
+        "url": "/sparql",
+        "expected_mime": SPARQL_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "opensearch",
+        "url": "/opensearch.xml",
+        "expected_mime": XML_MIMETYPES + ["application/opensearchdescription+xml"],
+        "is_json": False,
+        "version": "1.1",
     },
 ]
 
@@ -539,6 +642,30 @@ GEONETWORK_URLMAP = [
         "is_json": False,
         "version": "2.0",
     },
+    {
+        "id": "dcat:xml",
+        "url": "/srv/api/records?accept=application/rdf+xml",
+        "accept": "application/rdf+xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "ogcrecordsapi",
+        "url": "/srv/ogc/records/collections?f=json",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "ogcrecordsapi",
+        "url": "/ogc/records/collections?f=json",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
     #    {'id' : 'geonetwork:search', 'url' : '/srv/api/search/records/_search?bucket=metadata', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : False, 'version': None, 'post_params': GEONETWORK_SEARCH_POST_PARAMS},
     {
         "id": "geonetwork:settings",
@@ -582,6 +709,13 @@ FIGSHARE_URLMAP = [
         "is_json": True,
         "version": "1.0",
     },
+    {
+        "id": "index",
+        "url": "/articles/dataset/",
+        "expected_mime": HTML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
 ]
 
 REDIVIS_URLMAP = [
@@ -609,16 +743,58 @@ SOCRATA_URLMAP = [
         "is_json": True,
         "version": None,
     },
+    {
+        "id": "socrata:catalog",
+        "url": "/api/catalog/v1?only=datasets&limit=1",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "1",
+    },
+    {
+        "id": "opensearch",
+        "url": "/opensearch.xml",
+        "expected_mime": XML_MIMETYPES + ["application/opensearchdescription+xml"],
+        "is_json": False,
+        "version": "1.1",
+    },
 ]
 
 PXWEB_URLMAP = [
+    {
+        "id": "pxwebapi",
+        "url": "/api/v1/",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "1",
+    },
     {
         "id": "pxwebapi",
         "url": "/api/v1/en/",
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
         "version": "1",
-    }
+    },
+    {
+        "id": "pxwebapi",
+        "url": "/api/v1/sv/",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "1",
+    },
+    {
+        "id": "pxwebapi",
+        "url": "/api/v1/fi/",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "1",
+    },
+    {
+        "id": "pxwebapi",
+        "url": "/api/v1/da/",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "1",
+    },
 ]
 
 PXSTAT_URLMAP = [
@@ -653,6 +829,13 @@ KNOEMA_URLMAP = [
         "expected_mime": XML_MIMETYPES,
         "is_json": False,
         "version": None,
+    },
+    {
+        "id": "knoema:meta-dataset",
+        "url": "/api/1.0/meta/dataset",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "1.0",
     },
 ]
 
@@ -709,6 +892,14 @@ DATAVERSE_URLMAP = [
         "version": None,
     },
     {
+        "id": "dataverseapi",
+        "url": "/api/info/version",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
         "id": "oaipmh20",
         "url": "/oai?verb=Identify",
         "accept": "application/xml",
@@ -742,6 +933,22 @@ INVENIORDM_URLMAP = [
         "is_json": False,
         "version": "2.0",
     },
+    {
+        "id": "oaipmh20",
+        "url": "/oai2d?verb=Identify",
+        "accept": "application/xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/oai?verb=Identify",
+        "accept": "application/xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
 ]
 
 INVENIO_URLMAP = [
@@ -762,6 +969,22 @@ INVENIO_URLMAP = [
     {
         "id": "oaipmh20",
         "url": "/oai2d",
+        "accept": "application/xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/oai2d?verb=Identify",
+        "accept": "application/xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/oai?verb=Identify",
         "accept": "application/xml",
         "expected_mime": XML_MIMETYPES,
         "is_json": False,
@@ -792,12 +1015,28 @@ WORKTRIBE_URLMAP = [
 HYRAX_URLMAP = [
     {
         "id": "hyrax:catalog",
+        "url": "/catalog.json",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "hyrax:catalog",
         "url": "/catalog",
         "accept": "application/json",
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
         "version": None,
-    }
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/catalog/oai?verb=Identify",
+        "accept": "application/xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
 ]
 
 DSPACE_URLMAP = [
@@ -826,6 +1065,20 @@ DSPACE_URLMAP = [
     {
         "id": "oaipmh20",
         "url": "/oai/request?verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/oai?verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/server/oai/request?verb=Identify",
         "expected_mime": XML_MIMETYPES,
         "is_json": False,
         "version": "2.0",
@@ -907,6 +1160,20 @@ PURE_URLMAP = [
         "is_json": False,
         "version": None,
     },
+    {
+        "id": "rss",
+        "url": "/de/datasets/?search=&isCopyPasteSearch=false&format=rss",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "rss",
+        "url": "/da/datasets/?search=&isCopyPasteSearch=false&format=rss",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
 ]
 
 ELSEVIERDC_URLMAP = [
@@ -916,6 +1183,21 @@ ELSEVIERDC_URLMAP = [
         "expected_mime": XML_MIMETYPES,
         "is_json": False,
         "version": None,
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/do/oai/?verb=Identify",
+        "accept": "application/xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/oai?verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
     },
 ]
 
@@ -1248,6 +1530,13 @@ EPRINTS_URLMAP = [
         "version": "2.0",
     },
     {
+        "id": "oaipmh20",
+        "url": "/oai2?verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
         "id": "rss",
         "url": "/cgi/latest_tool?output=RSS2",
         "expected_mime": XML_MIMETYPES,
@@ -1282,6 +1571,20 @@ EPRINTS_URLMAP = [
         "is_json": False,
         "version": None,
     },
+    {
+        "id": "eprints:datasets",
+        "url": "/cgi/exportview/type/dataset/JSON/dataset.js",
+        "expected_mime": JSON_MIMETYPES + HTML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "opensearch",
+        "url": "/cgi/opensearchdescription",
+        "expected_mime": XML_MIMETYPES + ["application/opensearchdescription+xml"],
+        "is_json": False,
+        "version": "1.1",
+    },
 ]
 
 KOORDINATES_URLMAP = [
@@ -1310,7 +1613,14 @@ BLACKLIGHT_URLMAP = [
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
         "version": "1.0",
-    }
+    },
+    {
+        "id": "opensearch",
+        "url": "/catalog/opensearch.xml",
+        "expected_mime": XML_MIMETYPES + ["application/opensearchdescription+xml"],
+        "is_json": False,
+        "version": "1.1",
+    },
 ]
 
 
@@ -1354,8 +1664,16 @@ PYGEOAPI_URLMAP = [
         "version": "1.0",
     },
     {
-        "id": "pygeoapi:collections",
+        "id": "ogc:features",
         "url": "/collections/?f=json",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "1.0",
+    },
+    {
+        "id": "ogc:features",
+        "url": "/collections?f=json",
         "accept": "application/json",
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
@@ -1375,6 +1693,14 @@ OPENEO_URLMAP = [
     {
         "id": "openeo:processes",
         "url": "/processes",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "openeo:well-known",
+        "url": "/.well-known/openeo",
         "accept": "application/json",
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
@@ -1405,6 +1731,13 @@ PYCSW30_URLMAP = [
     {
         "id": "oaipmh20",
         "url": "/oaipmh",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/?mode=oaipmh&verb=Identify",
         "expected_mime": XML_MIMETYPES,
         "is_json": False,
         "version": "2.0",
@@ -1466,8 +1799,16 @@ WIS20BOX_URLMAP = [
         "version": "1.0",
     },
     {
-        "id": "pygeoapi:collections",
+        "id": "ogc:features",
         "url": "/oapi/collections/?f=json",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "1.0",
+    },
+    {
+        "id": "ogcrecords",
+        "url": "/collections?f=json",
         "accept": "application/json",
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
@@ -1478,14 +1819,43 @@ WIS20BOX_URLMAP = [
 
 OPENDATASOFT_URLMAP = [
     {
-        "id": "opendatasoft",
+        "id": "opendatasoftapi",
         "display_url": "/api",
         "url": "/api/v2/catalog/datasets/",
         "accept": "application/json",
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
         "version": None,
-    }
+    },
+    {
+        "id": "opendatasoftapi",
+        "url": "/api/explore/v2.1/catalog/datasets?limit=1",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "2.1",
+    },
+    {
+        "id": "dcat:xml",
+        "url": "/api/v2/catalog/exports/dcat",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "dcat:xml",
+        "url": "/api/explore/v2.1/catalog/exports/dcat",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "dcatus11",
+        "url": "/data.json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
 ]
 
 MAGDA_URLMAP = [
@@ -1552,6 +1922,13 @@ ARCGISHUB_URLMAP = [
         "id": "ogcrecordsapi",
         "url": "/api/search/v1",
         "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "dcatus11",
+        "url": "/data.json",
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
         "version": None,
@@ -1772,6 +2149,14 @@ DHIS2_URLMAP = [
         "is_json": True,
         "version": None,
     },
+    {
+        "id": "dhis2:indicators",
+        "url": "/api/indicators.json?fields=id,displayName&pageSize=1",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
 ]
 
 
@@ -1843,6 +2228,13 @@ ESRIGEO_URLMAP = [
         "version": "3.0.0",
     },
     {
+        "id": "csw202",
+        "url": "/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.2",
+    },
+    {
         "id": "atom",
         "url": "/opensearch?f=atom&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D",
         "expected_mime": XML_MIMETYPES,
@@ -1884,6 +2276,20 @@ ESRIGEO_URLMAP = [
         "is_json": False,
         "version": None,
     },
+    {
+        "id": "opensearch",
+        "url": "/openSearchDescription",
+        "expected_mime": XML_MIMETYPES + ["application/opensearchdescription+xml"],
+        "is_json": False,
+        "version": "1.1",
+    },
+    {
+        "id": "opensearch",
+        "url": "/geoportal/openSearchDescription",
+        "expected_mime": XML_MIMETYPES + ["application/opensearchdescription+xml"],
+        "is_json": False,
+        "version": "1.1",
+    },
 ]
 
 JKAN_URLMAP = [
@@ -1893,7 +2299,14 @@ JKAN_URLMAP = [
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
         "version": None,
-    }
+    },
+    {
+        "id": "dcatus11",
+        "url": "/datasets.json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
 ]
 
 OPENGDC_URLMAP = [
@@ -1939,6 +2352,13 @@ DABAR_URLMAP = [
         "version": "2.0",
     },
     {
+        "id": "oaipmh20",
+        "url": "/oai?verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
         "id": "sitemap",
         "url": "/sitemap.xml",
         "expected_mime": XML_MIMETYPES,
@@ -1956,6 +2376,13 @@ OPENSCIENCESI_URLMAP = [
         "is_json": False,
         "version": "2.0",
     },
+    {
+        "id": "oaipmh20",
+        "url": "/oai/?verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
 ]
 
 WEKO3_URLMAP = [
@@ -1965,7 +2392,14 @@ WEKO3_URLMAP = [
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
         "version": None,
-    }
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/oai?verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
 ]
 
 SDMXRI_URLMAP = [
@@ -2036,6 +2470,100 @@ CUSTOM_URLMAP = [
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
         "version": None,
+    },
+    {
+        "id": "dcat:xml",
+        "url": "/catalog.xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "dcat:json",
+        "url": "/catalog.json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "dcat:jsonld",
+        "url": "/catalog.jsonld",
+        "expected_mime": JSONLD_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "dcat:ttl",
+        "url": "/catalog.ttl",
+        "expected_mime": TURTLE_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "dcat",
+        "url": "/catalog.rdf",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/oai?verb=Identify",
+        "accept": "application/xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/oai/request?verb=Identify",
+        "accept": "application/xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/cgi/oai2?verb=Identify",
+        "accept": "application/xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "csw202",
+        "url": "/csw?service=CSW&version=2.0.2&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.2",
+    },
+    {
+        "id": "sparql",
+        "url": "/sparql",
+        "expected_mime": SPARQL_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "opensearch",
+        "url": "/opensearch.xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.1",
+    },
+    {
+        "id": "rss",
+        "url": "/rss.xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "atom",
+        "url": "/feed.xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.0",
     },
     {
         "id": "sitemap",
@@ -2422,6 +2950,18 @@ def geoserver_url_cleanup_func(url):
     return url
 
 
+def copernicusdhus_url_cleanup_func(url):
+    """Drop SPA fragments and keep the /dhus app root when present."""
+    parsed = urlparse(url)
+    path = parsed.path or "/"
+    lower = path.lower()
+    idx = lower.find("/dhus")
+    if idx != -1:
+        kept = path[: idx + len("/dhus")].rstrip("/") or "/dhus"
+        return urlunparse((parsed.scheme, parsed.netloc, kept, "", "", ""))
+    return urlunparse((parsed.scheme, parsed.netloc, "", "", "", "")).rstrip("/")
+
+
 def geoserver_root_url(url):
     """Return the /geoserver root when present, otherwise the cleaned URL."""
     url = geoserver_url_cleanup_func(url)
@@ -2523,6 +3063,13 @@ def supermapiserver_url_cleanup_func(url):
     return url
 
 
+def supermapiportal_url_cleanup_func(url):
+    """Strip /iportal so /iportal/web/*.json probes are not doubled."""
+    if _path_has_segment(url, "iportal"):
+        return _strip_path_marker(url, "/iportal")
+    return url.rstrip("/")
+
+
 def mapgisigserver_url_cleanup_func(url):
     """Keep /igs when present so REST probes attach under the IGServer app."""
     url = url.rstrip("/")
@@ -2567,6 +3114,456 @@ def opus_url_cleanup_func(url):
     return url
 
 
+def _origin_url(url):
+    parsed = urlparse(url)
+    return f"{parsed.scheme}://{parsed.netloc}"
+
+
+def geocortex_url_cleanup_func(url):
+    """Strip Essentials REST/viewer suffixes so sites?f=pjson attaches at origin."""
+    parsed = urlparse(url)
+    path = (parsed.path or "").lower()
+    if "/geocortex/" in path or "/essentials/" in path:
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+def minerva_url_cleanup_func(url):
+    """Always probe /api/projects/ and /minerva/api/projects/ from origin."""
+    return _origin_url(url)
+
+
+def gringlobal_url_cleanup_func(url):
+    """Always probe /gringlobal/* from the catalog origin."""
+    return _origin_url(url)
+
+
+def g3wsuite_url_cleanup_func(url):
+    """Strip /map/{group}/{project}/ and /admin so /api/ attaches at the portal root."""
+    parsed = urlparse(url)
+    path = parsed.path or ""
+    lower = path.lower()
+    for marker in ("/map/", "/admin"):
+        idx = lower.find(marker)
+        if idx != -1:
+            kept = path[:idx].rstrip("/") or "/"
+            if kept == "/":
+                return _origin_url(url)
+            return urlunparse((parsed.scheme, parsed.netloc, kept, "", "", ""))
+    return url.rstrip("/")
+
+
+def dataone_url_cleanup_func(url):
+    return _origin_url(url)
+
+
+def yoda_url_cleanup_func(url):
+    return _origin_url(url)
+
+
+def origo_url_cleanup_func(url):
+    """Strip viewer HTML so /index.json attaches next to the map directory."""
+    parsed = urlparse(url)
+    path = parsed.path or ""
+    lower = path.lower()
+    if lower.endswith(".html") or lower.endswith(".htm"):
+        path = path.rsplit("/", 1)[0]
+        return urlunparse(
+            (parsed.scheme, parsed.netloc, path or "/", "", "", "")
+        ).rstrip("/")
+    return url.rstrip("/")
+
+
+def swing_url_cleanup_func(url):
+    """Strip dashboard chrome so /viewer/ and /databank attach at the origin."""
+    path = (urlparse(url).path or "").lower()
+    if any(part in path for part in ("/databank", "/viewer", "/dashboard", "/mosaic")):
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+ORIGO_CALL_RE = re.compile(
+    r"""Origo\(\s*['\"]([^'\"]+\.json)['\"]""",
+    re.I,
+)
+ORIGO_HREF_RE = re.compile(r"""href\s*=\s*['"]([^"'#]+)['"]""", re.I)
+ORIGO_GALLERY_SKIP_PARTS = {
+    "css",
+    "js",
+    "img",
+    "images",
+    "static",
+    "assets",
+    "fonts",
+    "vendor",
+    "origo2client",
+    "node_modules",
+    "wp-content",
+}
+ORIGO_GALLERY_SKIP_EXT = {
+    "pdf",
+    "png",
+    "jpg",
+    "jpeg",
+    "gif",
+    "ico",
+    "css",
+    "js",
+    "svg",
+    "zip",
+    "doc",
+    "docx",
+    "xls",
+    "xlsx",
+    "woff",
+    "woff2",
+    "map",
+}
+ORIGO_GALLERY_MAX_DIRS = 20
+
+
+def origo_parse_config_urls(html, site_url):
+    """Return Origo('*.json') config URLs from a viewer HTML page."""
+    if not html:
+        return []
+    found = []
+    seen = set()
+    for raw in ORIGO_CALL_RE.findall(html):
+        raw = (raw or "").strip()
+        if not raw:
+            continue
+        url = urljoin(site_url, raw)
+        if url not in seen:
+            seen.add(url)
+            found.append(url)
+    return found
+
+
+def origo_parse_gallery_config_urls(html, site_url):
+    """Return {mapdir}/index.json URLs from a gallery landing page."""
+    if not html:
+        return []
+    site = urlparse(site_url)
+    dirs = []
+    seen_dirs = set()
+    for raw in ORIGO_HREF_RE.findall(html):
+        raw = (raw or "").strip()
+        if not raw:
+            continue
+        lower = raw.lower()
+        if lower.startswith(("javascript:", "mailto:", "tel:", "data:")):
+            continue
+        parsed = urlparse(urljoin(site_url, raw))
+        if parsed.netloc.lower() != site.netloc.lower():
+            continue
+        path = parsed.path or "/"
+        last = path.rsplit("/", 1)[-1]
+        if "." in last:
+            ext = last.rsplit(".", 1)[-1].lower()
+            if ext in {"html", "htm"}:
+                path = path.rsplit("/", 1)[0]
+            elif ext in ORIGO_GALLERY_SKIP_EXT:
+                continue
+            else:
+                continue
+        parts = [p for p in path.split("/") if p]
+        if not parts:
+            continue
+        if any(p.lower() in ORIGO_GALLERY_SKIP_PARTS for p in parts):
+            continue
+        dir_url = urlunparse(
+            (parsed.scheme, parsed.netloc, "/" + "/".join(parts), "", "", "")
+        ).rstrip("/")
+        if dir_url not in seen_dirs:
+            seen_dirs.add(dir_url)
+            dirs.append(dir_url)
+        if len(dirs) >= ORIGO_GALLERY_MAX_DIRS:
+            break
+    found = []
+    seen = set()
+    for directory in dirs:
+        for name in ("index.json", "index_ssl.json"):
+            url = f"{directory}/{name}"
+            if url not in seen:
+                seen.add(url)
+                found.append(url)
+    return found
+
+
+def origo_config_urls_from_page(site_url, session=None, timeout=DEFAULT_TIMEOUT):
+    """Fetch a viewer page and read Origo('*.json') or gallery map dirs."""
+    logger = logging.getLogger(__name__)
+    getter = session.get if session is not None else requests.get
+    try:
+        response = getter(
+            site_url,
+            verify=False,
+            headers={"User-Agent": USER_AGENT},
+            timeout=(timeout, timeout),
+        )
+    except (requests.exceptions.Timeout, requests.exceptions.SSLError, ConnectionError, TooManyRedirects):
+        logger.info("Origo viewer unavailable for %s", site_url)
+        return []
+    if getattr(response, "status_code", None) != 200:
+        return []
+    page_url = getattr(response, "url", None) or site_url
+    named = origo_parse_config_urls(response.text, page_url)
+    if named:
+        return named
+    return origo_parse_gallery_config_urls(response.text, page_url)
+
+
+def atmmaggioli_url_cleanup_func(url):
+    path = (urlparse(url).path or "").lower()
+    if "/transparencia/datos/catalogo" in path:
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+def odweb_url_cleanup_func(url):
+    path = (urlparse(url).path or "").lower()
+    if "/odweb" in path:
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+def duva_url_cleanup_func(url):
+    path = (urlparse(url).path or "").lower()
+    if "/informationsportal" in path:
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+def beyond2020_url_cleanup_func(url):
+    path = (urlparse(url).path or "").lower()
+    if "reportfolders" in path:
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+def tr32db_url_cleanup_func(url):
+    path = (urlparse(url).path or "").lower()
+    if "/site/index.php" in path or path.rstrip("/").endswith("/site"):
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+def codalab_url_cleanup_func(url):
+    path = (urlparse(url).path or "").lower()
+    if "/competitions" in path:
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+def dgbasweb_url_cleanup_func(url):
+    path = (urlparse(url).path or "").lower()
+    if "/dgbasweb" in path:
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+def hubzero_url_cleanup_func(url):
+    return _origin_url(url)
+
+
+def palapa_url_cleanup_func(url):
+    """Strip /geoserver, /gspalapa, and /main so CSW and WMS attach at origin."""
+    parsed = urlparse(url)
+    parts = [part for part in (parsed.path or "").lower().split("/") if part]
+    if "geoserver" in parts or "gspalapa" in parts or "main" in parts:
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+def talkbank_url_cleanup_func(url):
+    """Strip data.html so /data.html attaches at the bank origin."""
+    path = (urlparse(url).path or "").rstrip("/").lower()
+    if path.endswith("data.html"):
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+def materialscloud_url_cleanup_func(url):
+    """Strip /explore so the Explore listing is not doubled."""
+    path = (urlparse(url).path or "").rstrip("/").lower()
+    if path.endswith("/explore") or path == "explore":
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+def icat_url_cleanup_func(url):
+    """Strip /icat/portlet so the portlet listing is not doubled."""
+    path = (urlparse(url).path or "").rstrip("/").lower()
+    if "/icat/portlet" in path:
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+def ramadda_url_cleanup_func(url):
+    """Strip /repository so /repository/entry/show is not doubled."""
+    path = (urlparse(url).path or "").rstrip("/").lower()
+    if path.endswith("/repository") or path == "repository":
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+def _strip_path_marker(url, marker):
+    """Drop marker and everything after it; keep any path prefix before marker."""
+    parsed = urlparse(url)
+    path = parsed.path or ""
+    idx = path.lower().find(marker)
+    if idx == -1:
+        return url.rstrip("/")
+    kept = path[:idx].rstrip("/") or "/"
+    if kept == "/":
+        return _origin_url(url)
+    return urlunparse((parsed.scheme, parsed.netloc, kept, "", "", ""))
+
+
+def erdasapollo_url_cleanup_func(url):
+    """Strip /erdas-iws and /erdas-apollo so /erdas-iws/ogc/wms/ is not doubled."""
+    lower = (urlparse(url).path or "").lower()
+    if "/erdas-iws" in lower:
+        return _strip_path_marker(url, "/erdas-iws")
+    if "/erdas-apollo" in lower:
+        return _strip_path_marker(url, "/erdas-apollo")
+    return url.rstrip("/")
+
+
+def frostserver_url_cleanup_func(url):
+    """Strip /FROST-Server so /FROST-Server/v1.1/ probes are not doubled.
+
+    Leave /sensorthings/, /sta/, /server/, and UI /dataportaal/ mounts so
+    origin /v1.1/ concatenates onto those catalog links.
+    """
+    if "/frost-server" in (urlparse(url).path or "").lower():
+        return _strip_path_marker(url, "/frost-server")
+    return url.rstrip("/")
+
+
+def cubewerx_url_cleanup_func(url):
+    """Strip /cubewerx so harvest /cubewerx/cubeserv GetCapabilities is not doubled."""
+    if "/cubewerx" in (urlparse(url).path or "").lower():
+        return _strip_path_marker(url, "/cubewerx")
+    return url.rstrip("/")
+
+
+def greenstone_url_cleanup_func(url):
+    """Strip /greenstone3 and /greenstone so OAI Identify attaches at origin."""
+    lower = (urlparse(url).path or "").lower()
+    if "/greenstone3" in lower:
+        return _strip_path_marker(url, "/greenstone3")
+    if "/greenstone" in lower:
+        return _strip_path_marker(url, "/greenstone")
+    return url.rstrip("/")
+
+
+def bitrix_url_cleanup_func(url):
+    """Strip /opendata so /opendata/opendata.json is not doubled."""
+    if "/opendata" in (urlparse(url).path or "").lower():
+        return _strip_path_marker(url, "/opendata")
+    return url.rstrip("/")
+
+
+def massbank_url_cleanup_func(url):
+    """Strip /MassBank so /MassBank/api/records is not doubled."""
+    if "/massbank" in (urlparse(url).path or "").lower():
+        return _strip_path_marker(url, "/massbank")
+    return url.rstrip("/")
+
+
+def nada_url_cleanup_func(url):
+    """Strip /index.php so /index.php/api/catalog/search is not doubled."""
+    if "/index.php" in (urlparse(url).path or "").lower():
+        return _strip_path_marker(url, "/index.php")
+    return url.rstrip("/")
+
+
+def stacbrowser_url_cleanup_func(url):
+    """Strip trailing catalog.json so /catalog.json is not doubled."""
+    path = (urlparse(url).path or "").rstrip("/").lower()
+    if path.endswith("catalog.json"):
+        return _strip_path_marker(url, "/catalog.json")
+    return url.rstrip("/")
+
+
+def _path_has_segment(url, segment):
+    parts = [part for part in (urlparse(url).path or "").lower().split("/") if part]
+    return segment.lower() in parts
+
+
+def micka_url_cleanup_func(url):
+    """Strip /micka so /micka/csw GetCapabilities is not doubled."""
+    if _path_has_segment(url, "micka"):
+        return _strip_path_marker(url, "/micka")
+    return url.rstrip("/")
+
+
+def wis20box_url_cleanup_func(url):
+    """Strip /oapi so /oapi/collections probes are not doubled."""
+    if _path_has_segment(url, "oapi"):
+        return _strip_path_marker(url, "/oapi")
+    return url.rstrip("/")
+
+
+def symbiota_url_cleanup_func(url):
+    """Strip /portal and /collections so harvest collection paths are not doubled."""
+    if _path_has_segment(url, "portal"):
+        return _strip_path_marker(url, "/portal")
+    if _path_has_segment(url, "collections"):
+        return _strip_path_marker(url, "/collections")
+    return url.rstrip("/")
+
+
+def lkod_url_cleanup_func(url):
+    """Strip /opendata so /opendata/set/lkod is not doubled."""
+    if _path_has_segment(url, "opendata"):
+        return _strip_path_marker(url, "/opendata")
+    return url.rstrip("/")
+
+
+def deegree_url_cleanup_func(url):
+    """Strip /deegree-webservices so prefixed /services probes are not doubled.
+
+    Leave /m4eu/, /geoproxy/, and xPlanBox mounts so origin /services
+    concatenates onto those catalog links.
+    """
+    if _path_has_segment(url, "deegree-webservices"):
+        return _strip_path_marker(url, "/deegree-webservices")
+    return url.rstrip("/")
+
+
+def flat_url_cleanup_func(url):
+    """Strip /flat so /flat/oai2 Identify is not doubled."""
+    if _path_has_segment(url, "flat"):
+        return _strip_path_marker(url, "/flat")
+    return url.rstrip("/")
+
+
+def dlibra_url_cleanup_func(url):
+    """Strip /dlibra so /dlibra/oai-pmh-repository.xml is not doubled."""
+    if _path_has_segment(url, "dlibra"):
+        return _strip_path_marker(url, "/dlibra")
+    return url.rstrip("/")
+
+
+def gipuzkoairekia_url_cleanup_func(url):
+    """Origin dumps for subdomain tenants; keep www /es/web/{tenant}/ paths."""
+    host = (urlparse(url).netloc or "").lower()
+    if host in {"www.gipuzkoairekia.eus", "gipuzkoairekia.eus"}:
+        return url.rstrip("/")
+    if _path_has_segment(url, "datu-irekien-katalogoa"):
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+def esrigeo_url_cleanup_func(url):
+    """Strip /geoportal so /geoportal/openSearchDescription is not doubled."""
+    if _path_has_segment(url, "geoportal"):
+        return _strip_path_marker(url, "/geoportal")
+    return url.rstrip("/")
+
+
 URL_CLEANUP_MAP = {
     "istatdatabrowser": istatdatabrowser_url_cleanup_func,
     "geoserver": geoserver_url_cleanup_func,
@@ -2584,10 +3581,52 @@ URL_CLEANUP_MAP = {
     "redatam": redatam_url_cleanup_func,
     "nextgisweb": nextgisweb_url_cleanup_func,
     "supermapiserver": supermapiserver_url_cleanup_func,
+    "supermapiportal": supermapiportal_url_cleanup_func,
     "mapgisigserver": mapgisigserver_url_cleanup_func,
     "tianditu": tianditu_url_cleanup_func,
     "cogis": cogis_url_cleanup_func,
     "elitegis": cogis_url_cleanup_func,
+    "geocortex": geocortex_url_cleanup_func,
+    "minerva": minerva_url_cleanup_func,
+    "gringlobal": gringlobal_url_cleanup_func,
+    "g3wsuite": g3wsuite_url_cleanup_func,
+    "dataone": dataone_url_cleanup_func,
+    "yoda": yoda_url_cleanup_func,
+    "origo": origo_url_cleanup_func,
+    "swing": swing_url_cleanup_func,
+    "atmmaggioli": atmmaggioli_url_cleanup_func,
+    "odweb": odweb_url_cleanup_func,
+    "duva": duva_url_cleanup_func,
+    "beyond2020": beyond2020_url_cleanup_func,
+    "tr32db": tr32db_url_cleanup_func,
+    "codalab": codalab_url_cleanup_func,
+    "dgbasweb": dgbasweb_url_cleanup_func,
+    "hubzero": hubzero_url_cleanup_func,
+    "copernicusdhus": copernicusdhus_url_cleanup_func,
+    "cbioportal": _origin_url,
+    "huggingface": _origin_url,
+    "palapa": palapa_url_cleanup_func,
+    "talkbank": talkbank_url_cleanup_func,
+    "materialscloud": materialscloud_url_cleanup_func,
+    "icat": icat_url_cleanup_func,
+    "ramadda": ramadda_url_cleanup_func,
+    "erdasapollo": erdasapollo_url_cleanup_func,
+    "frostserver": frostserver_url_cleanup_func,
+    "cubewerx": cubewerx_url_cleanup_func,
+    "greenstone": greenstone_url_cleanup_func,
+    "bitrix": bitrix_url_cleanup_func,
+    "massbank": massbank_url_cleanup_func,
+    "nada": nada_url_cleanup_func,
+    "stacbrowser": stacbrowser_url_cleanup_func,
+    "micka": micka_url_cleanup_func,
+    "wis20box": wis20box_url_cleanup_func,
+    "symbiota": symbiota_url_cleanup_func,
+    "lkod": lkod_url_cleanup_func,
+    "deegree": deegree_url_cleanup_func,
+    "flat": flat_url_cleanup_func,
+    "dlibra": dlibra_url_cleanup_func,
+    "gipuzkoairekia": gipuzkoairekia_url_cleanup_func,
+    "esrigeo": esrigeo_url_cleanup_func,
 }
 
 
@@ -2630,13 +3669,188 @@ def opensdg_remote_data_base_url(site_url, session=None, timeout=DEFAULT_TIMEOUT
     return opensdg_parse_remote_data_base_url(response.text, site_url)
 
 
+def _probe_request_url(item, base_url, original_url):
+    if item.get("absolute_url"):
+        return item["absolute_url"]
+    if item.get("use_original_url"):
+        return original_url
+    return base_url + item["url"]
+
+
+def _collect_probe_jobs(base_urls, umap, original_url):
+    jobs = []
+    tried_urls = set()
+    for base_url in base_urls:
+        for item in umap:
+            request_url = _probe_request_url(item, base_url, original_url)
+            if request_url in tried_urls:
+                continue
+            tried_urls.add(request_url)
+            jobs.append((len(jobs), item, request_url, base_url))
+    return jobs
+
+
+def _probe_one(session, item, request_url, base_url, timeout, verify_json):
+    """GET/POST one URL-map item. Returns (endpoint_or_none, failure_or_none)."""
+    logger = logging.getLogger(__name__)
+    logger.info("Requesting %s", request_url)
+    try:
+        if "post_params" in item.keys():
+            headers = {"User-Agent": USER_AGENT}
+            if "accept" in item.keys():
+                headers["Accept"] = item["accept"]
+            response = session.post(
+                request_url,
+                verify=False,
+                headers=headers,
+                json=json.loads(item["post_params"]),
+                timeout=(timeout, timeout),
+            )
+        else:
+            response = None
+            if "prefetch" in item and item["prefetch"]:
+                response = session.get(
+                    request_url,
+                    headers={"User-Agent": USER_AGENT},
+                    timeout=(timeout, timeout),
+                )
+            if response is None and "accept" in item.keys():
+                response = session.get(
+                    request_url,
+                    verify=False,
+                    headers={"User-Agent": USER_AGENT, "Accept": item["accept"]},
+                    timeout=(timeout, timeout),
+                )
+            elif response is None:
+                response = session.get(
+                    request_url,
+                    verify=False,
+                    headers={"User-Agent": USER_AGENT},
+                    timeout=(timeout, timeout),
+                )
+        if response.status_code != 200:
+            return None, {
+                "url": request_url,
+                "status": response.status_code,
+                "mime": (
+                    response.headers["Content-Type"].split(";", 1)[0].lower()
+                    if "content-type" in response.headers.keys()
+                    else ""
+                ),
+                "error": "Wrong status",
+            }
+    except requests.exceptions.Timeout:
+        return None, {"url": request_url, "error": "Timeout"}
+    except requests.exceptions.SSLError:
+        return None, {"url": request_url, "error": "SSL Error"}
+    except ConnectionError:
+        return None, {"url": request_url, "error": "no connection"}
+    except TooManyRedirects:
+        return None, {"url": request_url, "error": "no connection"}
+    except ContentDecodingError:
+        return None, {"url": request_url, "error": "content error"}
+    except (InvalidURL, RequestException, ValueError) as e:
+        return None, {"url": request_url, "error": type(e).__name__}
+    logger.info("Finished request to %s", request_url)
+    if (
+        "expected_mime" in item.keys()
+        and item["expected_mime"] is not None
+        and "Content-Type" in response.headers.keys()
+    ):
+        if verify_json:
+            if "is_json" in item.keys() and item["is_json"]:
+                try:
+                    json.loads(response.content)
+                except (json.JSONDecodeError, ValueError, TypeError):
+                    return None, {
+                        "url": request_url,
+                        "status": response.status_code,
+                        "mime": response.headers["Content-Type"]
+                        .split(";", 1)[0]
+                        .lower(),
+                        "error": "Error loading JSON",
+                    }
+        expected_mime = item["expected_mime"]
+        if isinstance(expected_mime, str):
+            expected_mime = [expected_mime]
+        if (
+            response.headers["Content-Type"].split(";", 1)[0].lower()
+            not in expected_mime
+        ):
+            return None, {
+                "url": request_url,
+                "status": response.status_code,
+                "mime": response.headers["Content-Type"].split(";", 1)[0].lower(),
+                "error": "Wrong content type",
+            }
+    api = {
+        "type": item["id"],
+        "url": (
+            base_url + item["display_url"]
+            if "display_url" in item.keys()
+            else request_url
+        ),
+    }
+    if item["version"]:
+        api["version"] = item["version"]
+    if "urlpat" in item.keys():
+        api["url_pattern"] = item["urlpat"]
+    return api, None
+
+
+def _run_probe_jobs(jobs, timeout, verify_json, probe_workers, session=None):
+    """Run URL-map probes; preserve map order in the returned endpoint list."""
+    found_slots = [None] * len(jobs)
+    results = []
+    workers = DEFAULT_PROBE_WORKERS if probe_workers is None else probe_workers
+
+    def _run(job, sess):
+        _idx, item, request_url, base_url = job
+        return _idx, *_probe_one(
+            sess, item, request_url, base_url, timeout, verify_json
+        )
+
+    if workers <= 1 or len(jobs) <= 1:
+        sess = session if session is not None else requests.Session()
+        for job in jobs:
+            idx, api, fail = _run(job, sess)
+            if api is not None:
+                found_slots[idx] = api
+            if fail is not None:
+                results.append(fail)
+    else:
+        def _run_threaded(job):
+            return _run(job, requests.Session())
+
+        pool_size = max(1, min(workers, len(jobs)))
+        with ThreadPoolExecutor(max_workers=pool_size) as pool:
+            futures = [pool.submit(_run_threaded, job) for job in jobs]
+            for fut in as_completed(futures):
+                try:
+                    idx, api, fail = fut.result()
+                except Exception as exc:
+                    logging.getLogger(__name__).exception(
+                        "Probe worker failed: %s", exc
+                    )
+                    continue
+                if api is not None:
+                    found_slots[idx] = api
+                if fail is not None:
+                    results.append(fail)
+    found = [api for api in found_slots if api is not None]
+    return found, results
+
+
 def api_identifier(
-    website_url, software_id, verify_json=False, deep=False, timeout=DEFAULT_TIMEOUT
+    website_url,
+    software_id,
+    verify_json=False,
+    deep=False,
+    timeout=DEFAULT_TIMEOUT,
+    probe_workers=None,
 ):
     logger = logging.getLogger(__name__)
     url_map = CATALOGS_URLMAP[software_id]
-    results = []
-    found = []
     s = requests.Session()
     original_url = website_url
     if software_id in {"scicat", "gin"}:
@@ -2678,11 +3892,46 @@ def api_identifier(
         "fairdatapoint",
         "resourcecontracts",
         "symbiota",
+        "geocortex",
+        "minerva",
+        "g3wsuite",
+        "geonature",
+        "aubrey",
+        "hajk",
+        "activemapgis",
+        "tergis",
+        "opengov",
+        "opendatacube",
+        "origo",
+        "swing",
+        "atmmaggioli",
+        "odweb",
+        "duva",
+        "beyond2020",
+        "tr32db",
+        "codalab",
+        "dgbasweb",
+        "hubzero",
+        "idra",
+        "librecat",
     ):
         parsed = urlparse(website_url)
         origin = f"{parsed.scheme}://{parsed.netloc}"
         if origin.rstrip("/") != website_url.rstrip("/"):
             base_urls.append(origin)
+    if software_id == "origo":
+        parsed = urlparse(website_url)
+        origo_root = f"{parsed.scheme}://{parsed.netloc}/origo"
+        if origo_root.rstrip("/") not in [item.rstrip("/") for item in base_urls]:
+            base_urls.append(origo_root)
+    if software_id == "geonature":
+        parsed = urlparse(website_url)
+        origin = f"{parsed.scheme}://{parsed.netloc}"
+        path = (parsed.path or "").rstrip("/").lower()
+        if not path.endswith("/atlas"):
+            atlas = origin.rstrip("/") + "/atlas"
+            if atlas.rstrip("/") not in [item.rstrip("/") for item in base_urls]:
+                base_urls.append(atlas)
     if software_id == "oskari":
         if "/oskari" not in (urlparse(website_url).path or "").lower():
             base_urls.append(website_url.rstrip("/") + "/oskari")
@@ -2709,149 +3958,30 @@ def api_identifier(
         ] + umap
     if software_id != "custom" and deep:
         umap.extend(CUSTOM_URLMAP)
+    if software_id == "origo":
+        for abs_url in origo_config_urls_from_page(
+            original_url, session=s, timeout=timeout
+        ):
+            umap.append(
+                {
+                    "id": "origo:config",
+                    "url": "",
+                    "absolute_url": abs_url,
+                    "accept": "application/json",
+                    "expected_mime": JSON_MIMETYPES,
+                    "is_json": True,
+                    "version": None,
+                }
+            )
     
-    # Track URLs we've already tried to avoid duplicates
-    tried_urls = set()
-    
-    for base_url in base_urls:
-        for item in umap:
-            try:
-                if item.get("absolute_url"):
-                    request_url = item["absolute_url"]
-                else:
-                    request_url = (
-                        original_url
-                        if item.get("use_original_url")
-                        else base_url + item["url"]
-                    )
-                # Skip if we've already tried this URL
-                if request_url in tried_urls:
-                    continue
-                tried_urls.add(request_url)
-                logger.info("Requesting %s", request_url)
-                if "post_params" in item.keys():
-                    if "accept" in item.keys():
-                        response = s.post(
-                            request_url,
-                            verify=False,
-                            headers={"User-Agent": USER_AGENT, "Accept": item["accept"]},
-                            json=json.loads(item["post_params"]),
-                            timeout=(timeout, timeout),
-                        )
-                    else:
-                        response = s.post(
-                            request_url,
-                            verify=False,
-                            headers={"User-Agent": USER_AGENT},
-                            json=json.loads(item["post_params"]),
-                            timeout=(timeout, timeout),
-                        )
-                else:
-                    response = None
-                    if "prefetch" in item and item["prefetch"]:
-                        # Reuse prefetched response instead of issuing a duplicate request.
-                        response = s.get(
-                            request_url,
-                            headers={"User-Agent": USER_AGENT},
-                            timeout=(timeout, timeout),
-                        )
-                    # request_url already set above with base_url
-                    if response is None and "accept" in item.keys():
-                        response = s.get(
-                            request_url,
-                            verify=False,
-                            headers={"User-Agent": USER_AGENT, "Accept": item["accept"]},
-                            timeout=(timeout, timeout),
-                        )
-                    elif response is None:
-                        response = s.get(
-                            request_url,
-                            verify=False,
-                            headers={"User-Agent": USER_AGENT},
-                            timeout=(timeout, timeout),
-                        )
-                if response.status_code != 200:
-                    results.append(
-                        {
-                            "url": request_url,
-                            "status": response.status_code,
-                            "mime": (
-                                response.headers["Content-Type"].split(";", 1)[0].lower()
-                                if "content-type" in response.headers.keys()
-                                else ""
-                            ),
-                            "error": "Wrong status",
-                        }
-                    )
-                    continue
-            except requests.exceptions.Timeout:
-                results.append({"url": request_url, "error": "Timeout"})
-                continue
-            except requests.exceptions.SSLError:
-                results.append({"url": request_url, "error": "SSL Error"})
-                continue
-            except ConnectionError:
-                results.append({"url": request_url, "error": "no connection"})
-                continue
-            except TooManyRedirects:
-                results.append({"url": request_url, "error": "no connection"})
-                continue
-            except ContentDecodingError:
-                results.append({"url": request_url, "error": "content error"})
-                continue
-            logger.info("Finished request to %s", request_url)
-            if (
-                "expected_mime" in item.keys()
-                and item["expected_mime"] is not None
-                and "Content-Type" in response.headers.keys()
-            ):
-                if verify_json:
-                    if "is_json" in item.keys() and item["is_json"]:
-                        try:
-                            data = json.loads(response.content)
-                        except (json.JSONDecodeError, ValueError, TypeError):
-                            results.append(
-                                {
-                                    "url": request_url,
-                                    "status": response.status_code,
-                                    "mime": response.headers["Content-Type"]
-                                    .split(";", 1)[0]
-                                    .lower(),
-                                    "error": "Error loading JSON",
-                                }
-                            )
-                            continue
-                expected_mime = item["expected_mime"]
-                if isinstance(expected_mime, str):
-                    expected_mime = [expected_mime]
-                if (
-                    response.headers["Content-Type"].split(";", 1)[0].lower()
-                    not in expected_mime
-                ):
-                    results.append(
-                        {
-                            "url": request_url,
-                            "status": response.status_code,
-                            "mime": response.headers["Content-Type"]
-                            .split(";", 1)[0]
-                            .lower(),
-                            "error": "Wrong content type",
-                        }
-                    )
-                    continue
-            api = {
-                "type": item["id"],
-                "url": (
-                    base_url + item["display_url"]
-                    if "display_url" in item.keys()
-                    else request_url
-                ),
-            }
-            if item["version"]:
-                api["version"] = item["version"]
-            if "urlpat" in item.keys():
-                api["url_pattern"] = item["urlpat"]
-            found.append(api)
+    jobs = _collect_probe_jobs(base_urls, umap, original_url)
+    found, results = _run_probe_jobs(
+        jobs,
+        timeout,
+        verify_json,
+        probe_workers,
+        session=s,
+    )
     if software_id == "nyudatacatalog":
         for item in analyze_root(original_url):
             if item.get("type") != "schemaorg:datacatalog":
@@ -2906,6 +4036,7 @@ def __detect_one(
     filepath,
     timeout=DEFAULT_TIMEOUT,
     dryrun=False,
+    probe_workers=None,
 ):
     logger = logging.getLogger(__name__)
     logger.info("Processing %s", os.path.basename(filename).split(".", 1)[0])
@@ -2919,7 +4050,11 @@ def __detect_one(
         )
         return
     found = api_identifier(
-        record["link"].rstrip("/"), software, deep=deep, timeout=timeout
+        record["link"].rstrip("/"),
+        software,
+        deep=deep,
+        timeout=timeout,
+        probe_workers=probe_workers,
     )
     keys = []
     if action == "update":
@@ -2962,21 +4097,76 @@ def _iter_yaml_files(root_dir):
                 yield os.path.join(root, fi)
 
 
+def _yaml_id_glob_paths(root_dir, uniqid):
+    """Return YAML paths whose filename is `{uniqid}.yaml`, or None to walk."""
+    token = str(uniqid).strip()
+    if (
+        not token
+        or "://" in token
+        or os.path.basename(token) != token
+        or token in {".", ".."}
+    ):
+        return None
+    hits = glob.glob(os.path.join(root_dir, "**", f"{token}.yaml"), recursive=True)
+    return hits or None
+
+
+def _collect_matching_records(root_dir, match, load_workers=None):
+    files = list(_iter_yaml_files(root_dir))
+    workers = DEFAULT_RECORD_WORKERS if load_workers is None else load_workers
+
+    def _load_pair(filepath):
+        record = _load_record(filepath)
+        if match(record):
+            return filepath, record
+        return None
+
+    if workers <= 1 or len(files) <= 1:
+        out = []
+        for filepath in files:
+            pair = _load_pair(filepath)
+            if pair is not None:
+                out.append(pair)
+        return out
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        return [pair for pair in pool.map(_load_pair, files, chunksize=32) if pair]
+
+
+def _run_record_jobs(jobs, runner, record_workers):
+    workers = DEFAULT_RECORD_WORKERS if record_workers is None else record_workers
+    logger = logging.getLogger(__name__)
+
+    def _safe(job):
+        try:
+            runner(job)
+        except Exception:
+            label = job[0] if isinstance(job, tuple) and job else job
+            logger.exception("Catalog job failed: %s", label)
+
+    if workers <= 1 or len(jobs) <= 1:
+        for job in jobs:
+            _safe(job)
+        return
+    with ThreadPoolExecutor(max_workers=min(workers, len(jobs))) as pool:
+        list(pool.map(_safe, jobs))
+
+
 def _load_record(filepath):
     with open(filepath, "r", encoding="utf8") as f:
         return yaml.load(f, Loader=Loader)
 
 
 def _save_record(filepath, record):
-    with open(filepath, "w", encoding="utf8") as f:
-        yaml.dump(
-            record,
-            f,
-            Dumper=Dumper,
-            allow_unicode=True,
-            default_flow_style=False,
-            sort_keys=False,
-        )
+    with _SAVE_LOCK:
+        with open(filepath, "w", encoding="utf8") as f:
+            yaml.dump(
+                record,
+                f,
+                Dumper=Dumper,
+                allow_unicode=True,
+                default_flow_style=False,
+                sort_keys=False,
+            )
 
 
 def _detect_record(
@@ -2987,26 +4177,35 @@ def _detect_record(
     deep,
     timeout=DEFAULT_TIMEOUT,
     dryrun=False,
+    include_custom=False,
+    probe_workers=None,
 ):
-    software = record["software"]["id"] if record["software"]["id"] in CATALOGS_URLMAP else "custom"
+    software_id = ((record.get("software") or {}).get("id") or "").strip()
+    if software_id not in CATALOGS_URLMAP:
+        if not include_custom:
+            return
+        software_id = "custom"
+    elif software_id == "custom" and not include_custom:
+        return
     __detect_one(
         filename,
         record,
-        software,
+        software_id,
         action,
         deep,
         filepath,
         timeout=timeout,
         dryrun=dryrun,
+        probe_workers=probe_workers,
     )
 
 
 def _replace_detected_endpoints(
-    filepath, record, software_id, base_url=None, dryrun=False
+    filepath, record, software_id, base_url=None, dryrun=False, probe_workers=None
 ):
     logger = logging.getLogger(__name__)
     detection_base = base_url if base_url else record["link"].rstrip("/")
-    found = api_identifier(detection_base, software_id)
+    found = api_identifier(detection_base, software_id, probe_workers=probe_workers)
     record["endpoints"] = []
     for api in found:
         logger.info("- %s %s", api["type"], api["url"])
@@ -3028,6 +4227,13 @@ def detect_software(
     action: Annotated[str, typer.Option("--action")] = "insert",
     mode: str = "entries",
     deep: bool = False,
+    include_custom: Annotated[
+        bool,
+        typer.Option(
+            "--include-custom",
+            help="Probe custom catalogs with CUSTOM_URLMAP. Required for software id custom.",
+        ),
+    ] = False,
     max_endpoints: Annotated[
         Optional[int],
         typer.Option(
@@ -3035,17 +4241,35 @@ def detect_software(
             help="Only process records with fewer than N endpoints. Use 1 for records with no endpoints.",
         ),
     ] = None,
+    workers: Annotated[
+        int,
+        typer.Option(
+            "--workers",
+            help="Parallel catalog jobs (YAML load + per-record probes). Use 1 for sequential.",
+        ),
+    ] = DEFAULT_RECORD_WORKERS,
+    probe_workers: Annotated[
+        int,
+        typer.Option(
+            "--probe-workers",
+            help="Parallel HTTP probes per catalog. Use 1 for sequential probes.",
+        ),
+    ] = DEFAULT_PROBE_WORKERS,
 ):
     """Enrich data catalogs with API endpoints by software"""
     root_dir = _resolve_root_dir(mode)
-    for filepath in _iter_yaml_files(root_dir):
-        record = _load_record(filepath)
+
+    def _match(record):
         if record["software"]["id"] != software:
-            continue
+            return False
         if max_endpoints is not None:
-            endpoint_count = len(record.get("endpoints", []))
-            if endpoint_count >= max_endpoints:
-                continue
+            return len(record.get("endpoints", [])) < max_endpoints
+        return True
+
+    jobs = _collect_matching_records(root_dir, _match, load_workers=workers)
+
+    def _run(job):
+        filepath, record = job
         _detect_record(
             filepath,
             filepath,
@@ -3053,7 +4277,11 @@ def detect_software(
             action,
             deep,
             dryrun=dryrun,
+            include_custom=include_custom,
+            probe_workers=probe_workers,
         )
+
+    _run_record_jobs(jobs, _run, workers)
 
 
 @app.command()
@@ -3064,11 +4292,28 @@ def detect_single(
     mode: str = "entries",
     deep: bool = False,
     timeout: int = DEFAULT_TIMEOUT,
+    include_custom: Annotated[
+        bool,
+        typer.Option(
+            "--include-custom",
+            help="Probe custom catalogs with CUSTOM_URLMAP.",
+        ),
+    ] = False,
+    probe_workers: Annotated[
+        int,
+        typer.Option(
+            "--probe-workers",
+            help="Parallel HTTP probes. Use 1 for sequential probes.",
+        ),
+    ] = DEFAULT_PROBE_WORKERS,
 ):
     """Enrich single data catalog with API endpoints"""
     root_dir = _resolve_root_dir(mode)
     found = False
-    for filepath in _iter_yaml_files(root_dir):
+    paths = _yaml_id_glob_paths(root_dir, uniqid)
+    if paths is None:
+        paths = _iter_yaml_files(root_dir)
+    for filepath in paths:
         record = _load_record(filepath)
         idkeys = []
         for k in ["uid", "id", "link"]:
@@ -3085,7 +4330,11 @@ def detect_single(
             deep,
             timeout=timeout,
             dryrun=dryrun,
+            include_custom=include_custom,
+            probe_workers=probe_workers,
         )
+    if not found:
+        logging.getLogger(__name__).info("No catalog matched %s", uniqid)
 
 
 @app.command()
@@ -3095,13 +4344,38 @@ def detect_country(
     action: Annotated[str, typer.Option("--action")] = "insert",
     mode: str = "entries",
     deep: bool = False,
+    include_custom: Annotated[
+        bool,
+        typer.Option(
+            "--include-custom",
+            help="Probe custom catalogs with CUSTOM_URLMAP.",
+        ),
+    ] = False,
+    workers: Annotated[
+        int,
+        typer.Option(
+            "--workers",
+            help="Parallel catalog jobs. Use 1 for sequential.",
+        ),
+    ] = DEFAULT_RECORD_WORKERS,
+    probe_workers: Annotated[
+        int,
+        typer.Option(
+            "--probe-workers",
+            help="Parallel HTTP probes per catalog. Use 1 for sequential probes.",
+        ),
+    ] = DEFAULT_PROBE_WORKERS,
 ):
     """Enrich data catalogs with API endpoints by country"""
     root_dir = _resolve_root_dir(mode)
-    for filepath in _iter_yaml_files(root_dir):
-        record = _load_record(filepath)
-        if record["owner"]["location"]["country"]["id"] != country:
-            continue
+    jobs = _collect_matching_records(
+        root_dir,
+        lambda record: record["owner"]["location"]["country"]["id"] == country,
+        load_workers=workers,
+    )
+
+    def _run(job):
+        filepath, record = job
         _detect_record(
             filepath,
             filepath,
@@ -3109,7 +4383,11 @@ def detect_country(
             action,
             deep,
             dryrun=dryrun,
+            include_custom=include_custom,
+            probe_workers=probe_workers,
         )
+
+    _run_record_jobs(jobs, _run, workers)
 
 
 @app.command()
@@ -3119,13 +4397,38 @@ def detect_cattype(
     action: Annotated[str, typer.Option("--action")] = "insert",
     mode: str = "entries",
     deep: bool = False,
+    include_custom: Annotated[
+        bool,
+        typer.Option(
+            "--include-custom",
+            help="Probe custom catalogs with CUSTOM_URLMAP.",
+        ),
+    ] = False,
+    workers: Annotated[
+        int,
+        typer.Option(
+            "--workers",
+            help="Parallel catalog jobs. Use 1 for sequential.",
+        ),
+    ] = DEFAULT_RECORD_WORKERS,
+    probe_workers: Annotated[
+        int,
+        typer.Option(
+            "--probe-workers",
+            help="Parallel HTTP probes per catalog. Use 1 for sequential probes.",
+        ),
+    ] = DEFAULT_PROBE_WORKERS,
 ):
     """Enrich data catalogs with API endpoints by catalog type"""
     root_dir = _resolve_root_dir(mode)
-    for filepath in _iter_yaml_files(root_dir):
-        record = _load_record(filepath)
-        if record["catalog_type"] != catalogtype:
-            continue
+    jobs = _collect_matching_records(
+        root_dir,
+        lambda record: record["catalog_type"] == catalogtype,
+        load_workers=workers,
+    )
+
+    def _run(job):
+        filepath, record = job
         _detect_record(
             filepath,
             filepath,
@@ -3133,36 +4436,63 @@ def detect_cattype(
             action,
             deep,
             dryrun=dryrun,
+            include_custom=include_custom,
+            probe_workers=probe_workers,
         )
+
+    _run_record_jobs(jobs, _run, workers)
 
 
 @app.command()
-def detect_ckan(dryrun=False, replace_endpoints=True, mode="entries"):
+def detect_ckan(
+    dryrun=False,
+    replace_endpoints=True,
+    mode="entries",
+    workers: Annotated[
+        int,
+        typer.Option("--workers", help="Parallel catalog jobs. Use 1 for sequential."),
+    ] = DEFAULT_RECORD_WORKERS,
+    probe_workers: Annotated[
+        int,
+        typer.Option(
+            "--probe-workers",
+            help="Parallel HTTP probes per catalog. Use 1 for sequential probes.",
+        ),
+    ] = DEFAULT_PROBE_WORKERS,
+):
     """Enrich data catalogs with API endpoints by CKAN instance (special function to update all endpoints"""
     root_dir = _resolve_root_dir(mode)
-    for filepath in _iter_yaml_files(root_dir):
-        record = _load_record(filepath)
-        if record["software"]["id"] == "ckan":
-            logger = logging.getLogger(__name__)
-            logger.info("Processing %s", os.path.basename(filepath).split(".", 1)[0])
-            if "endpoints" in record.keys() and len(record["endpoints"]) > 1:
-                logger.info(" - skip, we have more than 2 endpoints so we skip")
-                continue
-            if (
-                "endpoints" in record.keys()
-                and len(record["endpoints"]) == 1
-                and record["endpoints"][0]["type"] == "ckanapi"
-            ):
-                base_url = record["endpoints"][0]["url"][0:-6]
-            else:
-                base_url = record["link"].rstrip("/")
-            _replace_detected_endpoints(
-                filepath,
-                record,
-                record["software"]["id"],
-                base_url=base_url,
-                dryrun=dryrun,
-            )
+    jobs = _collect_matching_records(
+        root_dir,
+        lambda record: record["software"]["id"] == "ckan",
+        load_workers=workers,
+    )
+
+    def _run(job):
+        filepath, record = job
+        logger = logging.getLogger(__name__)
+        logger.info("Processing %s", os.path.basename(filepath).split(".", 1)[0])
+        if "endpoints" in record.keys() and len(record["endpoints"]) > 1:
+            logger.info(" - skip, we have more than 2 endpoints so we skip")
+            return
+        if (
+            "endpoints" in record.keys()
+            and len(record["endpoints"]) == 1
+            and record["endpoints"][0]["type"] == "ckanapi"
+        ):
+            base_url = record["endpoints"][0]["url"][0:-6]
+        else:
+            base_url = record["link"].rstrip("/")
+        _replace_detected_endpoints(
+            filepath,
+            record,
+            record["software"]["id"],
+            base_url=base_url,
+            dryrun=dryrun,
+            probe_workers=probe_workers,
+        )
+
+    _run_record_jobs(jobs, _run, workers)
 
 
 @app.command()
@@ -3170,34 +4500,63 @@ def detect_all(
     status="undetected",
     replace_endpoints: Annotated[bool, typer.Option("--replace")] = False,
     mode="entries",
+    include_custom: Annotated[
+        bool,
+        typer.Option(
+            "--include-custom",
+            help="Include custom software.id catalogs when walking all maps.",
+        ),
+    ] = False,
+    workers: Annotated[
+        int,
+        typer.Option("--workers", help="Parallel catalog jobs. Use 1 for sequential."),
+    ] = DEFAULT_RECORD_WORKERS,
+    probe_workers: Annotated[
+        int,
+        typer.Option(
+            "--probe-workers",
+            help="Parallel HTTP probes per catalog. Use 1 for sequential probes.",
+        ),
+    ] = DEFAULT_PROBE_WORKERS,
 ):
     """Detect all known API endpoints"""
     root_dir = _resolve_root_dir(mode)
-    for filepath in _iter_yaml_files(root_dir):
-        record = _load_record(filepath)
-        if record["software"]["id"] in CATALOGS_URLMAP.keys():
-            if "endpoints" not in record.keys() or len(record["endpoints"]) == 0:
-                if status == "undetected":
-                    logger = logging.getLogger(__name__)
-                    logger.info(
-                        "Processing catalog %s, software %s",
-                        os.path.basename(filepath).split(".", 1)[0],
-                        record["software"]["id"],
-                    )
-                    if (
-                        "endpoints" in record.keys()
-                        and len(record["endpoints"]) > 0
-                        and replace_endpoints is False
-                    ):
-                        logger.info(
-                            " - skip, we have endpoints already and no replace mode"
-                        )
-                        continue
-                    _replace_detected_endpoints(
-                        filepath,
-                        record,
-                        record["software"]["id"],
-                    )
+
+    def _match(record):
+        software_id = record["software"]["id"]
+        if software_id == "custom" and not include_custom:
+            return False
+        if software_id not in CATALOGS_URLMAP.keys():
+            return False
+        if status == "undetected":
+            return "endpoints" not in record.keys() or len(record["endpoints"]) == 0
+        return True
+
+    jobs = _collect_matching_records(root_dir, _match, load_workers=workers)
+
+    def _run(job):
+        filepath, record = job
+        logger = logging.getLogger(__name__)
+        logger.info(
+            "Processing catalog %s, software %s",
+            os.path.basename(filepath).split(".", 1)[0],
+            record["software"]["id"],
+        )
+        if (
+            "endpoints" in record.keys()
+            and len(record["endpoints"]) > 0
+            and replace_endpoints is False
+        ):
+            logger.info(" - skip, we have endpoints already and no replace mode")
+            return
+        _replace_detected_endpoints(
+            filepath,
+            record,
+            record["software"]["id"],
+            probe_workers=probe_workers,
+        )
+
+    _run_record_jobs(jobs, _run, workers)
 
 
 @app.command()

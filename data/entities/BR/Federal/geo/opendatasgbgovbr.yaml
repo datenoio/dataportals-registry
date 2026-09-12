@@ -64,6 +64,12 @@ endpoints:
 - type: tms100
   url: https://opendata.sgb.gov.br/geoserver/gwc/service/tms/1.0.0
   version: 1.0.0
+- type: geonode:datasets
+  url: https://opendata.sgb.gov.br/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://opendata.sgb.gov.br/catalogue/opensearch
+  version: '1.1'
 id: opendatasgbgovbr
 langs:
 - id: PT

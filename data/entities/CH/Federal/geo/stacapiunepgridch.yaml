@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: STAC API for UNEP/GRID-Geneva geospatial collections including GIRI.
+endpoints:
+- type: stacserverapi
+  url: https://stac-api.unepgrid.ch/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://stac-api.unepgrid.ch/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac-api.unepgrid.ch/conformance
+  version: '1.0'
+id: stacapiunepgridch
+langs:
+- id: DE
+  name: German
+- id: FR
+  name: French
+- id: IT
+  name: Italian
+link: https://stac-api.unepgrid.ch/
+name: UNEP/GRID-Geneva STAC API
+owner:
+  link: https://unepgrid.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+  name: UNEP/GRID-Geneva
+  type: International
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- geospatial
+- stacserver
+- stac-server
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00042936

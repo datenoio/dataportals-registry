@@ -25,6 +25,8 @@ endpoints:
   url: https://statistics.knbs.or.ke/nada/index.php/api/catalog/search
 - type: nada:csvexport
   url: https://statistics.knbs.or.ke/nada/index.php/catalog/export/csv?ps=5000
+- type: nada:csvexport
+  url: https://statistics.knbs.or.ke/nada/index.php/catalog/export/csv?ps=5000&collection[]
 id: statisticsknbsorke
 langs:
 - id: EN

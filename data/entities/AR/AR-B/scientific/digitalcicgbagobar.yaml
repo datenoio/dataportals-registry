@@ -22,6 +22,17 @@ description: Repositorio institucional CIC Digital de la Comisión de Investigac
 endpoints:
 - type: rest
   url: https://digital.cic.gba.gob.ar/server/api
+- type: dspace:objects
+  url: https://digital.cic.gba.gob.ar/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://digital.cic.gba.gob.ar/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://digital.cic.gba.gob.ar/sitemap_index.xml
+- type: oaipmh20
+  url: https://digital.cic.gba.gob.ar/server/oai/request?verb=Identify
+  version: '2.0'
 id: digitalcicgbagobar
 langs:
 - id: ES

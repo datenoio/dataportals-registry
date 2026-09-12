@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: International Energy Agency .Stat Suite Data Explorer for energy statistics.
+  Public Data Explorer UI alongside the IEA SDMX-RI NSI service at sis-cc-nsi-wv.iea.org.
+endpoints:
+- type: statsuite:search
+  url: https://sis-cc-sfs.iea.org/api
+id: sisccdeieaorg
+langs:
+- id: EN
+  name: English
+link: https://sis-cc-de.iea.org/
+name: IEA Data Explorer
+owner:
+  link: https://www.iea.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: International Energy Agency
+  type: International
+properties:
+  has_doi: false
+software:
+  id: statsuite
+  name: .Stat Suite
+status: active
+tags:
+- statistics
+- energy
+- international
+- indicators
+- SDMX
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00043808

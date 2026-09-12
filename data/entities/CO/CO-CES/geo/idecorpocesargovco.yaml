@@ -67,6 +67,12 @@ endpoints:
 - type: tms100
   url: https://ide.corpocesar.gov.co/geoserver/gwc/service/tms/1.0.0
   version: 1.0.0
+- type: geonode:datasets
+  url: https://ide.corpocesar.gov.co/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://ide.corpocesar.gov.co/catalogue/opensearch
+  version: '1.1'
 id: idecorpocesargovco
 langs:
 - id: ES

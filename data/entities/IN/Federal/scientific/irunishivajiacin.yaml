@@ -19,6 +19,12 @@ description: Institutional repository of Shivaji University (SHIV DNYANSAGAR), r
 endpoints:
 - type: dspace:catalog
   url: http://ir.unishivaji.ac.in:8080/jspui/
+- type: rss
+  url: http://ir.unishivaji.ac.in:8080/jspui/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: http://ir.unishivaji.ac.in:8080/jspui/feed/atom_1.0/site
+  version: '1.0'
 id: irunishivajiacin
 langs:
 - id: EN

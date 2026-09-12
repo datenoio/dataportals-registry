@@ -22,6 +22,15 @@ description: eBiltegia is a DSpace repository listed in re3data as a research da
 endpoints:
 - type: dspace:catalog
   url: https://ebiltegia.mondragon.edu
+- type: oaipmh20
+  url: https://ebiltegia.mondragon.edu/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://ebiltegia.mondragon.edu/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://ebiltegia.mondragon.edu/feed/atom_1.0/site
+  version: '1.0'
 id: ebiltegiamondragonedu
 identifiers:
 - id: re3data

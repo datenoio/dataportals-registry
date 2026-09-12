@@ -76,6 +76,18 @@ endpoints:
   url: https://luims.dlpp.gov.pg/geoserver/rest/settings
 - type: geoserver:layers
   url: https://luims.dlpp.gov.pg/geoserver/rest/layers
+- type: wmts100
+  url: https://luims.dlpp.gov.pg/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wms-c111
+  url: https://luims.dlpp.gov.pg/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+- type: geonode:datasets
+  url: https://luims.dlpp.gov.pg/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://luims.dlpp.gov.pg/catalogue/opensearch
+  version: '1.1'
 id: luimsdlppgovpg
 langs:
 - id: EN

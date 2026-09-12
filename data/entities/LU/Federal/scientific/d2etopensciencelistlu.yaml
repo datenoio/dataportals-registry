@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: LU
+      name: Luxembourg
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: D2ET Open Science Portal is a Scientific data repository operated by
+  Luxembourg Institute of Science and Technology, built with Dataverse.
+id: d2etopensciencelistlu
+langs:
+- id: FR
+  name: French
+- id: DE
+  name: German
+link: https://d2et-openscience.list.lu
+name: D2ET Open Science Portal
+owner:
+  link: https://www.list.lu
+  location:
+    country:
+      id: LU
+      name: Luxembourg
+  name: Luxembourg Institute of Science and Technology
+  type: Academy
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research
+- academic
+- dataverse
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043552
+endpoints:
+- type: dataverseapi
+  url: https://d2et-openscience.list.lu/api/search
+- type: dataverseapi
+  url: https://d2et-openscience.list.lu/api/info/version

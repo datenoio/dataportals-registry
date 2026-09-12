@@ -65,6 +65,12 @@ endpoints:
 - type: wmts100
   url: http://cigno.ve.ismar.cnr.it:80/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
+- type: wcs100
+  url: http://cigno.ve.ismar.cnr.it/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: http://cigno.ve.ismar.cnr.it/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
 id: cignoveismarcnrit
 langs:
 - id: IT

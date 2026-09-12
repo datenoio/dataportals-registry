@@ -19,6 +19,9 @@ description: Astronomical data catalog and Virtual Observatory services publishe
 endpoints:
 - type: tap:capabilities
   url: https://vo.lam.fr/tap/capabilities
+- type: oaipmh20
+  url: https://vo.lam.fr/oai.xml?verb=Identify
+  version: '2.0'
 id: volamfr
 langs:
 - id: EN

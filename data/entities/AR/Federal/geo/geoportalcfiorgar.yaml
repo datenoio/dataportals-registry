@@ -53,6 +53,24 @@ endpoints:
 - type: wps100
   url: https://geoportal.cfi.org.ar/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: wms111
+  url: https://geoportal.cfi.org.ar/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs200
+  url: https://geoportal.cfi.org.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs110
+  url: https://geoportal.cfi.org.ar/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://geoportal.cfi.org.ar/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: geonode:datasets
+  url: https://geoportal.cfi.org.ar/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geoportal.cfi.org.ar/catalogue/opensearch
+  version: '1.1'
 id: geoportalcfiorgar
 langs:
 - id: ES

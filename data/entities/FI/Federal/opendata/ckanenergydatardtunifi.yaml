@@ -26,6 +26,16 @@ endpoints:
 - type: ckan:package-list
   url: https://ckan.energydata.rd.tuni.fi/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://ckan.energydata.rd.tuni.fi/catalog.n3
+- type: dcat:ttl
+  url: https://ckan.energydata.rd.tuni.fi/catalog.ttl
+- type: dcat:xml
+  url: https://ckan.energydata.rd.tuni.fi/catalog.xml
+- type: dcat:jsonld
+  url: https://ckan.energydata.rd.tuni.fi/catalog.jsonld
+- type: dcat
+  url: https://ckan.energydata.rd.tuni.fi/catalog.rdf
 id: ckanenergydatardtunifi
 langs:
 - id: EN

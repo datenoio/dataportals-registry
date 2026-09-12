@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: CZ-804
+      name: Nový Jičín
+description: Lizmap Nový Jičín is a Geoportal operated by Město Nový Jičín.
+id: mapsnovyjicincz
+langs:
+- id: CS
+  name: Czech
+link: https://maps.novyjicin.cz/
+name: Lizmap Nový Jičín
+owner:
+  link: https://www.novyjicin.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 30
+    subregion:
+      id: CZ-804
+      name: Nový Jičín
+  name: Město Nový Jičín
+  type: Local government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- lizmap
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00042590
+endpoints:
+- type: lizmap:catalog
+  url: https://maps.novyjicin.cz

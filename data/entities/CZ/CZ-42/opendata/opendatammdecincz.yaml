@@ -26,6 +26,28 @@ endpoints:
 - type: ckan
   url: https://opendata.mmdecin.cz/api/3
   version: '3'
+- type: dcatus11
+  url: https://opendata.mmdecin.cz/data.json
+- type: dcat:n3
+  url: https://opendata.mmdecin.cz/catalog.n3
+- type: dcat:ttl
+  url: https://opendata.mmdecin.cz/catalog.ttl
+- type: dcat:xml
+  url: https://opendata.mmdecin.cz/catalog.xml
+- type: dcat:jsonld
+  url: https://opendata.mmdecin.cz/catalog.jsonld
+- type: dcat
+  url: https://opendata.mmdecin.cz/catalog.rdf
+- type: dcat:xml
+  url: https://opendata.mmdecin.cz/feeds/dcat
+- type: oaipmh20
+  url: https://opendata.mmdecin.cz/oai?verb=Identify
+  version: '2.0'
+- type: oaipmh20
+  url: https://opendata.mmdecin.cz/catalog/oai?verb=Identify
+  version: '2.0'
+- type: sparql
+  url: https://opendata.mmdecin.cz/sparql
 id: opendatammdecincz
 identifiers:
 - id: wikidata

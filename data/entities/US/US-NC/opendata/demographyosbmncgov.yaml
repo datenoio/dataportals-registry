@@ -25,6 +25,15 @@ endpoints:
   url: https://demography.osbm.nc.gov/api
 - type: sitemap
   url: https://demography.osbm.nc.gov/sitemap.xml
+- type: opendatasoftapi
+  url: https://demography.osbm.nc.gov/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://demography.osbm.nc.gov/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://demography.osbm.nc.gov/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://demography.osbm.nc.gov/data.json
 id: demographyosbmncgov
 langs:
 - id: EN

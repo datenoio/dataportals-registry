@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: OPeNDAP Hyrax catalog of the Leibniz Institute for Baltic Sea Research
+  Warnemünde, publishing numbered marine and oceanographic dataset collections through
+  DAP2, DAP4, and a machine-readable directory catalog. Distinct from the institute's
+  legacy THREDDS server and ODIN/IOWDB search portal.
+endpoints:
+- type: opendap:catalog
+  url: https://hyrax.iow.de/opendap/
+- type: thredds:catalog
+  url: https://hyrax.iow.de/opendap/catalog.xml
+id: hyraxiowde
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://hyrax.iow.de/opendap/
+name: IOW OPeNDAP Hyrax
+owner:
+  link: https://www.io-warnemuende.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Leibniz Institute for Baltic Sea Research Warnemünde
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: opendaphyrax
+  name: OPeNDAP Hyrax
+status: active
+tags:
+- OPeNDAP
+- Hyrax
+- oceanography
+- Baltic Sea
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00043109

@@ -21,6 +21,10 @@ endpoints:
   url: https://data.worldbank.org/sitemap.xml
 - type: sitemap
   url: https://data.worldbank.org/sitemap.xml.gz
+- type: rest
+  url: https://api.worldbank.org/v2/indicator?format=json&per_page=1000
+- type: rest
+  url: https://api.worldbank.org/v2/sources?format=json
 id: dataworldbankorg
 identifiers:
 - id: re3data

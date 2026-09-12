@@ -75,6 +75,23 @@ GET https://www.codabench.org/
 
 **Keep:** public **benchmarks / competitions** and any public dataset catalog pages. `/api/datasets/` is often `403` — stop and use the HTML catalog. **Drop:** submissions and login-only datasets. One registered hub.
 
+## Grand Challenge (`grandchallenge`) {#grandchallenge}
+
+```text
+GET https://grand-challenge.org/challenges/
+GET https://grand-challenge.org/archives/
+```
+
+**Keep:** public **challenges** and **archives** (dataset collections). **Drop:** algorithms as extra catalogs, reader studies, submissions, and per-user workspaces. `/api/v1/` may return `403` to non-browser clients — stop and use the HTML lists. One registered hub.
+
+## EvalAI (`evalai`) {#evalai}
+
+```text
+GET https://eval.ai/
+```
+
+**Keep:** public **challenges** and any advertised dataset bundles. **Drop:** submissions, leaderboards as extra datasets, and login-only drafts. One registered hub.
+
 ## Galaxy (`galaxy`) {#galaxy}
 
 Public **data libraries** are the dataset catalog. Histories and workflow runs are not. Prefer [harvest-scientific.md](harvest-scientific.md) unless `catalog_type` is Machine learning catalog.

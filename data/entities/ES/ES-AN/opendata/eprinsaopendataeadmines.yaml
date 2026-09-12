@@ -32,6 +32,13 @@ endpoints:
 - type: ckan
   url: https://eprinsa-opendata.e-admin.es/api/3
   version: '3'
+- type: ckan:package-search
+  url: https://eprinsa-opendata.e-admin.es/api/3/action/package_search
+  version: '3'
+- type: dcat:ttl
+  url: https://eprinsa-opendata.e-admin.es/catalog.ttl
+- type: dcat:n3
+  url: https://eprinsa-opendata.e-admin.es/catalog.n3
 id: eprinsaopendataeadmines
 langs:
 - id: ES

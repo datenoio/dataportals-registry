@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-88
+      name: Sardegna
+description: ASPAL Open Data is an Open data portal operated by Agenzia Sarda per
+  le politiche attive del lavoro, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://aspal-opendata.consulmedia.it/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://aspal-opendata.consulmedia.it/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://aspal-opendata.consulmedia.it/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://aspal-opendata.consulmedia.it/catalog.n3
+- type: dcat:ttl
+  url: https://aspal-opendata.consulmedia.it/catalog.ttl
+- type: dcat:xml
+  url: https://aspal-opendata.consulmedia.it/catalog.xml
+- type: dcat:jsonld
+  url: https://aspal-opendata.consulmedia.it/catalog.jsonld
+- type: dcat
+  url: https://aspal-opendata.consulmedia.it/catalog.rdf
+id: aspalopendataconsulmediait
+langs:
+- id: IT
+  name: Italian
+link: https://aspal-opendata.consulmedia.it
+name: ASPAL Open Data
+owner:
+  link: https://www.regione.sardegna.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-88
+      name: Sardegna
+  name: Agenzia Sarda per le politiche attive del lavoro
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- ckan
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043496

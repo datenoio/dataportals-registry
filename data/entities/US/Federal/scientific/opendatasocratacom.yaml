@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,10 +14,20 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: This research presents a new method for predicting prime numbers, leveraging
-  connections between remainder sequences, the zeta function, and prime number distribution.
-  The approach improves efficiency and has potential applications in cryptography,
-  coding theory, and other fields
+description: Public Socrata-hosted open data catalog at opendata.socrata.com.
+endpoints:
+- type: rest
+  url: https://opendata.socrata.com/api/catalog/v1
+- type: dcatus11
+  url: https://opendata.socrata.com/data.json
+- type: socrata:views
+  url: https://opendata.socrata.com/api/views
+- type: socrata:catalog
+  url: https://opendata.socrata.com/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://opendata.socrata.com/opensearch.xml
+  version: '1.1'
 id: opendatasocratacom
 identifiers:
 - id: openaire
@@ -35,10 +45,10 @@ owner:
       id: US
       name: United States
   name: Socrata
-  type: Academy
+  type: Business
 software:
-  id: custom
-  name: Custom software
+  id: socrata
+  name: Socrata
 status: active
 tags:
 - scientific

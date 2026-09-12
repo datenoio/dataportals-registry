@@ -70,6 +70,12 @@ endpoints:
 - type: wms-c111
   url: https://geo.hydrotec.de/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://geo.hydrotec.de/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geo.hydrotec.de/catalogue/opensearch
+  version: '1.1'
 id: geohydrotecde
 langs:
 - id: DE

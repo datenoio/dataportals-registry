@@ -26,6 +26,16 @@ endpoints:
 - type: ckan:package-list
   url: https://data.svk.se/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://data.svk.se/catalog.n3
+- type: dcat:ttl
+  url: https://data.svk.se/catalog.ttl
+- type: dcat:xml
+  url: https://data.svk.se/catalog.xml
+- type: dcat:jsonld
+  url: https://data.svk.se/catalog.jsonld
+- type: dcat
+  url: https://data.svk.se/catalog.rdf
 id: datasvkse
 langs:
 - id: SV

@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-GA
+      name: Georgia
+description: Georgia Tech sea-level sensor SensorThings catalog published through
+  FROST-Server. Use the frost-api.rnoc.gatech.edu host (api.sealevelsensors.org has
+  an SSL hostname mismatch).
+endpoints:
+- type: sensorthings
+  url: https://frost-api.rnoc.gatech.edu/v1.1/
+  version: '1.1'
+- type: sensorthings
+  url: https://frost-api.rnoc.gatech.edu/FROST-Server/v1.1/
+  version: '1.1'
+- type: sensorthings
+  url: https://frost-api.rnoc.gatech.edu/v1.1/Datastreams?$top=1&$count=true
+  version: '1.1'
+- type: sensorthings
+  url: https://frost-api.rnoc.gatech.edu/FROST-Server/v1.1/Things?$top=1&$count=true
+  version: '1.1'
+- type: sensorthings
+  url: https://frost-api.rnoc.gatech.edu/v1.1/Things?$top=1&$count=true
+  version: '1.1'
+id: frostapirnocgatechedu
+langs:
+- id: EN
+  name: English
+link: https://frost-api.rnoc.gatech.edu/
+name: Georgia Tech Sea Level Sensors
+owner:
+  link: https://www.gatech.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-GA
+      name: Georgia
+  name: Georgia Institute of Technology
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: frostserver
+  name: FROST-Server
+status: active
+tags:
+- SensorThings
+- sea level
+- FROST
+- Georgia Tech
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00043785

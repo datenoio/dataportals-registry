@@ -19,6 +19,9 @@ description: Archive of small-telescope observations, with time series and assoc
 endpoints:
 - type: tap:capabilities
   url: https://skvo.science.upjs.sk/tap/capabilities
+- type: oaipmh20
+  url: https://skvo.science.upjs.sk/oai.xml?verb=Identify
+  version: '2.0'
 id: skvoscienceupjssk
 langs:
 - id: EN

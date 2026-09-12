@@ -16,9 +16,9 @@ coverage:
     macroregion:
       id: '002'
       name: Africa
-description: Air Quality Community of Practice for Africa; platform for air quality monitoring
-  capacity building in African cities (UNEP China Trust Fund project). Data and GIS layers
-  for Addis Ababa, Gaborone, Kampala, Kigali, Nairobi.
+description: Air Quality Community of Practice for Africa; platform for air quality
+  monitoring capacity building in African cities (UNEP China Trust Fund project).
+  Data and GIS layers for Addis Ababa, Gaborone, Kampala, Kigali, Nairobi.
 endpoints:
 - type: geonode:layers
   url: https://aqcopafrica.net/api/layers/
@@ -74,6 +74,9 @@ endpoints:
   url: https://aqcopafrica.net/geoserver/rest/layers
 - type: opensearch
   url: https://aqcopafrica.net/catalogue/opensearch
+- type: wmts100
+  url: https://aqcopafrica.net/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
 id: aqcopafricanet
 langs:
 - id: EN

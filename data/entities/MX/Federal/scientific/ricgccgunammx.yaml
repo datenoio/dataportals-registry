@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Repositorio Institucional de Conocimiento Genómico is a Scientific data
+  repository operated by Centro de Ciencias Genómicas, UNAM, built with Dataverse.
+id: ricgccgunammx
+langs:
+- id: ES
+  name: Spanish
+link: https://ricg.ccg.unam.mx
+name: Repositorio Institucional de Conocimiento Genómico
+owner:
+  link: https://www.ccg.unam.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+  name: Centro de Ciencias Genómicas, UNAM
+  type: Academy
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research
+- academic
+- dataverse
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043572
+endpoints:
+- type: dataverseapi
+  url: https://ricg.ccg.unam.mx/api/search
+- type: dataverseapi
+  url: https://ricg.ccg.unam.mx/api/info/version

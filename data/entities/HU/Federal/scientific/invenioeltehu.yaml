@@ -19,6 +19,9 @@ description: InvenioRDM repository of Eötvös Loránd University (ELTE) for res
 endpoints:
 - type: inveniordmapi:records
   url: https://invenio.elte.hu/api/records
+- type: oaipmh20
+  url: https://invenio.elte.hu/oai2d?verb=Identify
+  version: '2.0'
 id: invenioeltehu
 langs:
 - id: HU

@@ -63,6 +63,12 @@ endpoints:
 - type: wps100
   url: https://atlasspincam.net/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://atlasspincam.net/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://atlasspincam.net/catalogue/opensearch
+  version: '1.1'
 id: atlasspincamnet
 langs:
 - id: EN

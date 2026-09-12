@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-PV
+      name: Euskal Herria
+description: Udalmap municipal sustainability and equipment indicators for the Basque
+  Autonomous Community. Public indicator selector with CSV, JSON, and REST/LOD downloads,
+  distinct from the Eustat PxWeb databank and from Open Data Euskadi.
+endpoints:
+- type: rest
+  url: https://opendata.euskadi.eus/contenidos/estadistica/udalmap_grupo_m/es_def/adjuntos/indice.json
+id: wwweuskadieusindicadoresmunicipales
+langs:
+- id: ES
+  name: Spanish
+- id: EU
+  name: Basque
+link: https://www.euskadi.eus/indicadores-municipales/web01-ejeduki/es/
+name: Udalmap indicadores municipales
+owner:
+  link: https://www.euskadi.eus/indicadores-municipales/web01-ejeduki/es/
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-PV
+      name: Euskal Herria
+  name: Gobierno Vasco
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- indicators
+- regional
+- Basque Country
+- municipal
+- has_api
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00002770

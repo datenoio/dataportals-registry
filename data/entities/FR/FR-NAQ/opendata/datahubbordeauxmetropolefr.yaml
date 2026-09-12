@@ -24,6 +24,15 @@ endpoints:
   url: https://datahub.bordeaux-metropole.fr/api
 - type: sitemap
   url: https://datahub.bordeaux-metropole.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://datahub.bordeaux-metropole.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://datahub.bordeaux-metropole.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://datahub.bordeaux-metropole.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://datahub.bordeaux-metropole.fr/data.json
 id: datahubbordeauxmetropolefr
 langs:
 - id: FR

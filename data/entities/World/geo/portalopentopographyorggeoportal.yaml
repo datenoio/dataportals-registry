@@ -25,6 +25,15 @@ endpoints:
   version: 3.0.0
 - type: opensearch
   url: https://portal.opentopography.org/geoportal/openSearchDescription
+- type: csw202
+  url: https://portal.opentopography.org/geoportal/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: csw202
+  url: https://portal.opentopography.org/csw
+  version: 3.0.0
+- type: csw202
+  url: https://portal.opentopography.org/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
 id: portalopentopographyorggeoportal
 langs:
 - id: EN

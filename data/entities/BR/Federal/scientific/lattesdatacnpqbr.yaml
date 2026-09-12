@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: LattesData is CNPq's official research data repository for depositing,
+  preserving, and sharing datasets from CNPq-funded research. The public catalog is
+  Dataverse.
+endpoints:
+- type: dataverseapi
+  url: https://lattesdata.cnpq.br/api/search
+id: lattesdatacnpqbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://lattesdata.cnpq.br/
+name: LattesData
+owner:
+  link: https://www.gov.br/cnpq/pt-br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+  name: Conselho Nacional de Desenvolvimento Científico e Tecnológico
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research data
+- research
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00000761

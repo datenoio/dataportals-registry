@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-972
+      name: Martinique
+description: Guide Orientation SPOT Martinique is an Open data portal operated by
+  SPOT Martinique, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://guideorientation.spot.mq/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://guideorientation.spot.mq/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://guideorientation.spot.mq/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://guideorientation.spot.mq/catalog.n3
+- type: dcat:ttl
+  url: https://guideorientation.spot.mq/catalog.ttl
+- type: dcat:xml
+  url: https://guideorientation.spot.mq/catalog.xml
+- type: dcat:jsonld
+  url: https://guideorientation.spot.mq/catalog.jsonld
+- type: dcat
+  url: https://guideorientation.spot.mq/catalog.rdf
+id: guideorientationspotmq
+langs:
+- id: FR
+  name: French
+link: https://guideorientation.spot.mq
+name: Guide Orientation SPOT Martinique
+owner:
+  link: https://www.spot.mq
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-972
+      name: Martinique
+  name: SPOT Martinique
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- ckan
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043296

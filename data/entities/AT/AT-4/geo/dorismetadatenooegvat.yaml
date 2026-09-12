@@ -39,6 +39,13 @@ endpoints:
   version: '2.0'
 - type: geonetwork:site
   url: https://doris-metadaten.ooe.gv.at/geonetwork/srv/api/site
+- type: csw202
+  url: https://doris-metadaten.ooe.gv.at/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:selections
+  url: https://doris-metadaten.ooe.gv.at/srv/api/selections
+- type: geonetwork:site
+  url: https://doris-metadaten.ooe.gv.at/srv/api/site
 id: dorismetadatenooegvat
 langs:
 - id: DE

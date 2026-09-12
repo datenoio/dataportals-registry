@@ -22,6 +22,13 @@ description: OpenDataSoft catalog of Queensland Government datasets, including t
 endpoints:
 - type: opendatasoft
   url: https://queensland.opendatasoft.com/api
+- type: opendatasoftapi
+  url: https://queensland.opendatasoft.com/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://queensland.opendatasoft.com/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://queensland.opendatasoft.com/api/explore/v2.1/catalog/exports/dcat
 id: queenslandopendatasoftcom
 langs:
 - id: EN

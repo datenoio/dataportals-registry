@@ -69,3 +69,9 @@ endpoints:
   version: '3.0'
 - type: sitemap
   url: https://data.lignesdazur.com/sitemap.xml
+- type: ckan
+  url: https://data.lignesdazur.com/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.lignesdazur.com/api/3/action/package_search
+  version: '3'

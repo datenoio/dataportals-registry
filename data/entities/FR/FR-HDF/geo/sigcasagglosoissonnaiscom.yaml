@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-HDF
+      name: Hauts-de-France
+description: Lizmap Grand Soissons Agglomération is a Geoportal operated by Grand
+  Soissons Agglomération.
+id: sigcasagglosoissonnaiscom
+langs:
+- id: FR
+  name: French
+link: https://sigcas.agglo-soissonnais.com/
+name: Lizmap Grand Soissons Agglomération
+owner:
+  link: https://www.agglo-soissonnais.com
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-HDF
+      name: Hauts-de-France
+  name: Grand Soissons Agglomération
+  type: Local government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- lizmap
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00042766
+endpoints:
+- type: lizmap:service
+  url: https://sigcas.agglo-soissonnais.com/index.php/lizmap/service/?repository=accueil&project=accueil
+- type: wms130
+  url: https://sigcas.agglo-soissonnais.com/index.php/lizmap/service/?repository=accueil&project=accueil&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0

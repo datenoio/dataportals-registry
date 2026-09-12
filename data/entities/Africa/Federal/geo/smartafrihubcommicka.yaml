@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '002'
       name: Africa
-description: Spatial metadata catalogue (Micka) of SmartAfriHub, a digital innovation hub
-  for smart agriculture in Africa. Implements OGC CSW 2.0.2 ISO AP 1.0 for African agricultural,
-  land-use, and Earth observation geospatial datasets.
+description: Spatial metadata catalogue (Micka) of SmartAfriHub, a digital innovation
+  hub for smart agriculture in Africa. Implements OGC CSW 2.0.2 ISO AP 1.0 for African
+  agricultural, land-use, and Earth observation geospatial datasets.
 endpoints:
 - type: csw202
   url: https://www.smartafrihub.com/micka/csw/?service=CSW&version=2.0.2&request=GetCapabilities
@@ -27,6 +27,9 @@ endpoints:
 - type: opensearch
   url: https://www.smartafrihub.com/micka/opensearch
   version: '1.0'
+- type: csw202
+  url: https://www.smartafrihub.com/micka/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
 id: smartafrihubcommicka
 langs:
 - id: EN

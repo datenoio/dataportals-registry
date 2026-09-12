@@ -19,6 +19,16 @@ description: The FAIR portal provides an overview of existing databases with hea
 endpoints:
 - type: dcatus11
   url: https://fair.healthdata.be/data.json
+- type: dkan:search
+  url: https://fair.healthdata.be/api/1/search
+  version: '1'
+- type: dkan:metastore
+  url: https://fair.healthdata.be/api/1/metastore
+  version: '1'
+- type: dcat:ttl
+  url: https://fair.healthdata.be/catalog.ttl
+- type: dcat:xml
+  url: https://fair.healthdata.be/catalog.xml
 id: fairhealthdatabe
 langs:
 - id: EN

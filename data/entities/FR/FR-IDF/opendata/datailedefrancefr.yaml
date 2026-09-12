@@ -24,6 +24,13 @@ endpoints:
   url: https://data.iledefrance.fr/api
 - type: sitemap
   url: https://data.iledefrance.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.iledefrance.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.iledefrance.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.iledefrance.fr/api/explore/v2.1/catalog/exports/dcat
 id: datailedefrancefr
 identifiers:
 - id: wikidata

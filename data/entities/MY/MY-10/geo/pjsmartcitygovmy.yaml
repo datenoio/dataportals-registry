@@ -1,0 +1,88 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: MY-10
+      name: Selangor
+description: SuperMap iPortal of Petaling Jaya Smart City, cataloguing maps, GIS services,
+  and datasets. Distinct from the existing MBPJ MapGuide GIS Integration System.
+endpoints:
+- type: supermapiportal:web
+  url: https://pjsmartcity.gov.my:8192/iportal/web.rjson
+- type: supermapiportal:maps
+  url: https://pjsmartcity.gov.my:8192/iportal/web/maps.json
+- type: supermapiportal:services
+  url: https://pjsmartcity.gov.my:8192/iportal/web/services.json
+- type: supermapiportal:datas
+  url: https://pjsmartcity.gov.my:8192/iportal/web/datas.json
+id: pjsmartcitygovmy
+langs:
+- id: MS
+  name: Malay
+- id: EN
+  name: English
+link: https://pjsmartcity.gov.my:8192/iportal
+name: Petaling Jaya Smart City SuperMap iPortal
+owner:
+  link: https://www.mbpj.gov.my/
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 30
+    subregion:
+      id: MY-10
+      name: Selangor
+  name: Majlis Bandaraya Petaling Jaya
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+  dataset_count_reported: 1379
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: supermapiportal
+  name: SuperMap iPortal
+status: active
+tags:
+- SuperMap
+- iPortal
+- geospatial
+- government
+- Petaling Jaya
+- Selangor
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043578

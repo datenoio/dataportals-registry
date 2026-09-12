@@ -14,12 +14,15 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: IIIT-Delhi Institutional Repository is a scientific data repository
-  operated by IIIT Delhi running on DSpace.
+description: IIIT-Delhi Institutional Repository is a scientific data repository operated
+  by IIIT Delhi running on DSpace.
 endpoints:
 - type: oaipmh20
   url: https://repository.iiitd.edu.in/oai/request?verb=Identify
   version: '2.0'
+- type: dspace:items
+  url: https://repository.iiitd.edu.in/rest/items
+  version: '6'
 id: repositoryiiitdeduin
 langs:
 - id: EN

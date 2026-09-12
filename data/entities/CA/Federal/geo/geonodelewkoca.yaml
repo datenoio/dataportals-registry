@@ -68,6 +68,19 @@ endpoints:
   url: https://geonode.lewko.ca/geoserver/rest/layers
 - type: opensearch
   url: https://geonode.lewko.ca/catalogue/opensearch
+- type: geonode:datasets
+  url: https://geonode.lewko.ca/api/datasets/
+- type: geonode:documents
+  url: https://geonode.lewko.ca/api/documents/
+- type: csw202
+  url: https://geonode.lewko.ca/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geonode.lewko.ca/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: geonode:datasets
+  url: https://geonode.lewko.ca/api/v2/datasets/
+  version: '2'
 id: geonodelewkoca
 langs:
 - id: EN

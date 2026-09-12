@@ -19,6 +19,9 @@ description: Planetary atmosphere data service providing GEM-Mars model data and
 endpoints:
 - type: tap:capabilities
   url: http://vespa-ae.oma.be/tap/capabilities
+- type: oaipmh20
+  url: http://vespa-ae.oma.be/oai.xml?verb=Identify
+  version: '2.0'
 id: vespaaeomabe
 langs:
 - id: EN

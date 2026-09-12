@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 10
+    macroregion:
+      id: EU
+      name: European Union
+description: STAC API for Copernicus LAC fire and related Earth-observation metadata.
+endpoints:
+- type: stacserverapi
+  url: https://discover.fire.copernicuslac.terradue.com/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://discover.fire.copernicuslac.terradue.com/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://discover.fire.copernicuslac.terradue.com/conformance
+  version: '1.0'
+id: discoverfirecopernicuslacterraduecom
+langs:
+- id: EN
+  name: English
+link: https://discover.fire.copernicuslac.terradue.com/
+name: CopernicusLAC Fire Metadata STAC
+owner:
+  link: https://www.terradue.com
+  location:
+    country:
+      id: EU
+      name: European Union
+  name: Terradue / Copernicus LAC
+  type: International
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- geospatial
+- stacserver
+- stac-server
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043149

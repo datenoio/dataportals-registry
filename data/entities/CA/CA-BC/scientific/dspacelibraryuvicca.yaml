@@ -25,6 +25,11 @@ endpoints:
 - type: dspace:objects
   url: https://dspace.library.uvic.ca/server/api/discover/search/objects
   version: '7'
+- type: sitemap
+  url: https://dspace.library.uvic.ca/sitemap_index.xml
+- type: oaipmh20
+  url: https://dspace.library.uvic.ca/server/oai/request?verb=Identify
+  version: '2.0'
 id: dspacelibraryuvicca
 langs:
 - id: EN

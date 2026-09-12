@@ -26,6 +26,9 @@ endpoints:
   url: https://data.va.gov/opensearch.xml
 - type: socrata:views
   url: https://data.va.gov/api/views
+- type: socrata:catalog
+  url: https://data.va.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: datavagov
 langs:
 - id: EN

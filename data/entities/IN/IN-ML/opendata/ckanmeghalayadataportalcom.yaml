@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IN-ML
+      name: Meghālaya
+description: Meghalaya Data Portal is an Open data portal operated by Government of
+  Meghalaya, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://ckan.meghalayadataportal.com/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan.meghalayadataportal.com/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.meghalayadataportal.com/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://ckan.meghalayadataportal.com/catalog.n3
+- type: dcat:ttl
+  url: https://ckan.meghalayadataportal.com/catalog.ttl
+- type: dcat:xml
+  url: https://ckan.meghalayadataportal.com/catalog.xml
+- type: dcat:jsonld
+  url: https://ckan.meghalayadataportal.com/catalog.jsonld
+- type: dcat
+  url: https://ckan.meghalayadataportal.com/catalog.rdf
+id: ckanmeghalayadataportalcom
+langs:
+- id: EN
+  name: English
+link: https://ckan.meghalayadataportal.com
+name: Meghalaya Data Portal
+owner:
+  link: https://meghalaya.gov.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-ML
+      name: Meghālaya
+  name: Government of Meghalaya
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- ckan
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043423

@@ -27,6 +27,13 @@ endpoints:
   url: https://opendata.cangt.fr/data.json
 - type: sitemap
   url: https://opendata.cangt.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://opendata.cangt.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://opendata.cangt.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://opendata.cangt.fr/api/explore/v2.1/catalog/exports/dcat
 id: opendatacangtfr
 langs:
 - id: FR

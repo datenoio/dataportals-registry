@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: inactive
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -54,3 +54,8 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00010344
+endpoints:
+- type: dataverseapi
+  url: https://repo.researchdata.hu/api/search
+- type: dataverseapi
+  url: https://repo.researchdata.hu/api/info/version

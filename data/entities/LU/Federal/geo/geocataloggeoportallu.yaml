@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: inactive
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,8 +16,8 @@ coverage:
       id: '155'
       name: Western Europe
 description: Duplicate alias of the official Geoportail Luxembourg GeoNetwork catalogue
-  (geocatalogue.geoportail.lu). The CSW GetCapabilities document is identical to
-  geocataloguegeoportaillu; use that record instead.
+  (geocatalogue.geoportail.lu). The CSW GetCapabilities document is identical to geocataloguegeoportaillu;
+  use that record instead.
 id: geocataloggeoportallu
 langs:
 - id: FR
@@ -67,3 +67,11 @@ topics:
   name: Structure
   type: iso19115
 uid: cdi00001099
+endpoints:
+- type: csw202
+  url: https://geocatalog.geoportal.lu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:selections
+  url: https://geocatalog.geoportal.lu/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://geocatalog.geoportal.lu/geonetwork/srv/api/site

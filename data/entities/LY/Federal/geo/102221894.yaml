@@ -15,16 +15,19 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: WIS 2.0 in a box node of the Libyan National Center of Meteorology
-  (centre-id ly-lnmc). Publishes hourly SYNOP observations, daily climate values,
-  CAP alerts, station metadata, and WIS2 discovery records through a public UI and
-  OGC API. The HTTP service moved from 102.221.8.94 to 102.209.32.134.
+description: WIS 2.0 in a box node of the Libyan National Center of Meteorology (centre-id
+  ly-lnmc). Publishes hourly SYNOP observations, daily climate values, CAP alerts,
+  station metadata, and WIS2 discovery records through a public UI and OGC API. The
+  HTTP service moved from 102.221.8.94 to 102.209.32.134.
 endpoints:
 - type: pygeoapi:openapi
   url: http://102.209.32.134/oapi/openapi
   version: '1.0'
 - type: pygeoapi:collections
   url: http://102.209.32.134/oapi/collections?f=json
+  version: '1.0'
+- type: ogc:features
+  url: http://102.209.32.134/oapi/collections/?f=json
   version: '1.0'
 id: '102221894'
 langs:

@@ -21,6 +21,12 @@ description: Research portal of the Royal Danish Academy (Architecture, Design, 
 endpoints:
 - type: sitemap
   url: https://adk.elsevierpure.com/sitemap.xml
+- type: oaipmh20
+  url: https://adk.elsevierpure.com/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://adk.elsevierpure.com/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
 id: researchkglakademidk
 langs:
 - id: DA

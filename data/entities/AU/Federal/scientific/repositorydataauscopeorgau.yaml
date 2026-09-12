@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -26,6 +26,13 @@ identifiers:
 langs:
 - id: EN
   name: English
+endpoints:
+- type: ckan
+  url: https://repository.data.auscope.org.au/api/3
+  version: '3'
+- type: ckan:package-list
+  url: https://repository.data.auscope.org.au/api/3/action/package_list
+  version: '3'
 link: https://repository.data.auscope.org.au/
 name: AuScope Data Repository
 owner:
@@ -37,8 +44,8 @@ owner:
   name: Commonwealth Scientific and Industrial Research Organisation
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: ckan
+  name: CKAN
 status: active
 tags:
 - scientific

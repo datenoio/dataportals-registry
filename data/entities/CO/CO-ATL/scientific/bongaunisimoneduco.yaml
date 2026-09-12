@@ -26,6 +26,11 @@ endpoints:
 - type: dspace:objects
   url: https://bonga.unisimon.edu.co/server/api/discover/search/objects
   version: '7'
+- type: sitemap
+  url: https://bonga.unisimon.edu.co/sitemap_index.xml
+- type: oaipmh20
+  url: https://bonga.unisimon.edu.co/server/oai/request?verb=Identify
+  version: '2.0'
 id: bongaunisimoneduco
 langs:
 - id: ES

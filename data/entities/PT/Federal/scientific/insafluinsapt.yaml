@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Public Auspice catalog of SARS-CoV-2 phylogenies at Portugal's National
+  Institute of Health INSA, served alongside the INSaFLU-TELEVIR genomic surveillance
+  platform.
+endpoints:
+- type: customapi
+  url: https://insaflu.insa.pt/charon/getAvailable
+id: insafluinsapt
+langs:
+- id: EN
+  name: English
+link: https://insaflu.insa.pt/
+name: INSaFLU Nextstrain
+owner:
+  link: https://www.insa.min-saude.pt/
+  location:
+    country:
+      id: PT
+      name: Portugal
+  name: Instituto Nacional de Saúde Doutor Ricardo Jorge
+  type: Central government
+properties:
+  dataset_count_reported: 7
+  is_national: false
+software:
+  id: nextstrain
+  name: Nextstrain
+status: active
+tags:
+- scientific
+- research data
+- epidemiology
+- health
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00043640

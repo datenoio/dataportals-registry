@@ -29,6 +29,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.bayareametro.gov.xml
 - type: opensearch
   url: https://data.bayareametro.gov/opensearch.xml
+- type: socrata:catalog
+  url: https://data.bayareametro.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: databayareametrogov
 langs:
 - id: EN

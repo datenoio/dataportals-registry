@@ -39,6 +39,17 @@ endpoints:
   url: https://rdmc.nottingham.ac.uk/htmlmap
 - type: opensearch
   url: https://rdmc.nottingham.ac.uk:443/open-search/description.xml
+- type: dspace
+  url: https://rdmc.nottingham.ac.uk/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://rdmc.nottingham.ac.uk/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://rdmc.nottingham.ac.uk/sitemap_index.xml
+- type: oaipmh20
+  url: https://rdmc.nottingham.ac.uk/server/oai/request?verb=Identify
+  version: '2.0'
 id: rdmcnottinghamacuk
 identifiers:
 - id: re3data

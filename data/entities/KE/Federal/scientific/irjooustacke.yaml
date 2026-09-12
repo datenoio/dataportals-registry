@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: JOOUST Institutional Repository is a scientific data repository operated by
-  Jaramogi Oginga Odinga University of Science and Technology running on DSpace.
+description: JOOUST Institutional Repository is a scientific data repository operated
+  by Jaramogi Oginga Odinga University of Science and Technology running on DSpace.
 endpoints:
 - type: dspace
   url: https://ir.jooust.ac.ke/server/api
@@ -26,6 +26,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://ir.jooust.ac.ke/sitemap_index.xml
+- type: oaipmh20
+  url: https://ir.jooust.ac.ke/server/oai/request?verb=Identify
+  version: '2.0'
 id: irjooustacke
 langs:
 - id: EN

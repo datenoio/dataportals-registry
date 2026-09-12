@@ -20,6 +20,12 @@ description: Institutional DSpace repository of BGUT (Mogilev). Public catalog o
 endpoints:
 - type: dspace:catalog
   url: https://repasitory.bgut.by/
+- type: rss
+  url: https://repasitory.bgut.by/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repasitory.bgut.by/feed/atom_1.0/site
+  version: '1.0'
 id: repasitorybgutby
 langs:
 - id: RU

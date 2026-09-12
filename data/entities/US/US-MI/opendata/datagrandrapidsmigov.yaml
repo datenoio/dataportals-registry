@@ -22,6 +22,9 @@ endpoints:
   url: https://data.grandrapidsmi.gov/data.json
 - type: socrata:views
   url: https://data.grandrapidsmi.gov/api/views
+- type: socrata:catalog
+  url: https://data.grandrapidsmi.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: datagrandrapidsmigov
 langs:
 - id: EN

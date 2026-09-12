@@ -18,6 +18,13 @@ description: Open data platform for business and legal information in France.
 endpoints:
 - type: opendatasoft
   url: https://datainfogreffe.fr/api
+- type: opendatasoftapi
+  url: https://datainfogreffe.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://datainfogreffe.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://datainfogreffe.fr/api/explore/v2.1/catalog/exports/dcat
 id: datainfogreffefr
 langs:
 - id: FR

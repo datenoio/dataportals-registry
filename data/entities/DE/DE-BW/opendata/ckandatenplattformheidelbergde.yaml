@@ -22,6 +22,22 @@ endpoints:
 - type: ckan
   url: https://ckan.datenplattform.heidelberg.de/api/3
   version: '3'
+- type: ckan:package-search
+  url: https://ckan.datenplattform.heidelberg.de/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.datenplattform.heidelberg.de/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://ckan.datenplattform.heidelberg.de/catalog.n3
+- type: dcat:ttl
+  url: https://ckan.datenplattform.heidelberg.de/catalog.ttl
+- type: dcat:jsonld
+  url: https://ckan.datenplattform.heidelberg.de/catalog.jsonld
+- type: dcat
+  url: https://ckan.datenplattform.heidelberg.de/catalog.rdf
+- type: dcat:xml
+  url: https://ckan.datenplattform.heidelberg.de/catalog.xml
 id: ckandatenplattformheidelbergde
 langs:
 - id: DE

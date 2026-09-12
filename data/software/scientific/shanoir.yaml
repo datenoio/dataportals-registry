@@ -1,0 +1,68 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: shanoir
+name: Shanoir
+website: https://project.inria.fr/shanoir/
+description: Shanoir-NG (SHAring iN vivO Imaging Resources) is an open-source web
+  platform from Inria Empenn for importing, sharing, archiving, and visualizing medical
+  imaging studies (MRI, CT, PET, EEG). Independent clinical and preclinical instances
+  share a study catalog and DICOM/NIfTI/BIDS export.
+owner:
+  name: Inria Empenn / Shanoir consortium
+  location:
+    country:
+      id: FR
+      name: France
+logo_url: https://project.inria.fr/shanoir/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'Yes'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/fli-iam/shanoir-ng
+documentation_url: https://github.com/fli-iam/shanoir-ng/wiki
+license:
+  type: GPL-3.0
+  url: https://www.gnu.org/licenses/gpl-3.0.html
+export_formats:
+- DICOM
+- NIfTI
+- BIDS
+- JSON
+capabilities:
+- REST API
+- Imaging study catalog
+- DICOMWeb
+- OHIF viewer
+changelog_url: https://github.com/fli-iam/shanoir-ng/releases
+last_updated: '2026-09-09T00:00:00Z'

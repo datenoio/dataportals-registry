@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: GeoNetwork metadata catalog operated by Tecotec for its decision support system (DSS), with
-  CSW, OAI-PMH, and OpenSearch endpoints.
+description: GeoNetwork metadata catalog operated by Tecotec for its decision support
+  system (DSS), with CSW, OAI-PMH, and OpenSearch endpoints.
 endpoints:
 - type: geonetwork:query
   url: https://metadata-dss.tecotec.vn/geonetwork/srv/eng/q
@@ -36,6 +36,10 @@ endpoints:
   url: https://metadata-dss.tecotec.vn/geonetwork/srv/api/site
 - type: opensearch
   url: https://metadata-dss.tecotec.vn/portal.opensearch
+- type: geonetwork:records
+  url: https://metadata-dss.tecotec.vn/geonetwork/srv/api/records
+- type: dcat:xml
+  url: https://metadata-dss.tecotec.vn/geonetwork/srv/api/records?accept=application/rdf+xml
 id: metadatadsstecotecvngeonetwork
 langs:
 - id: VN

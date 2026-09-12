@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: inactive
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -56,3 +56,6 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi00020411
+endpoints:
+- type: datafairapi
+  url: https://gouv-ci.koumoul.com/data-fair/api/v1/datasets

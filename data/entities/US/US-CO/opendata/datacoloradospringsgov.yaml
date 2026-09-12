@@ -27,6 +27,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.coloradosprings.gov.xml
 - type: opensearch
   url: https://data.coloradosprings.gov/opensearch.xml
+- type: socrata:catalog
+  url: https://data.coloradosprings.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: datacoloradospringsgov
 langs:
 - id: EN

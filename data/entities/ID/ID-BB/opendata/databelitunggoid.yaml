@@ -23,6 +23,12 @@ endpoints:
 - type: ckan
   url: https://data.belitung.go.id/api/3
   version: '3'
+- type: ckan:package-search
+  url: https://data.belitung.go.id/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.belitung.go.id/api/3/action/package_list
+  version: '3'
 id: databelitunggoid
 langs:
 - id: ID

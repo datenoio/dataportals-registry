@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: WIS2 in a box node of India's National Centre for Medium Range Weather
+  Forecasting (centre-id in-ncmrwf), publishing global deterministic medium-range
+  forecast and analysis datasets to the WMO Information System through an OGC API.
+  Distinct from the IMD wis2box node. Reached only by IP address; no public hostname
+  resolved.
+endpoints:
+- type: pygeoapi:openapi
+  url: http://14.139.63.153/oapi/openapi
+  version: '1.0'
+- type: pygeoapi:collections
+  url: http://14.139.63.153/oapi/collections/?f=json
+  version: '1.0'
+id: '1413963153'
+langs:
+- id: EN
+  name: English
+link: http://14.139.63.153
+name: India NCMRWF - WIS 2.0 in a box
+owner:
+  link: https://www.ncmrwf.gov.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 20
+  name: National Centre for Medium Range Weather Forecasting
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: wis20box
+  name: Wis 2.0 Box
+status: active
+tags:
+- meteorology
+- climate
+- weather
+- WIS2
+- government
+- has_api
+topics:
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00043421

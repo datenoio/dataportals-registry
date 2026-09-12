@@ -31,6 +31,17 @@ endpoints:
 - type: ckan
   url: https://datos.comunidad.madrid/api/3
   version: '3'
+- type: ckan
+  url: https://datos.comunidad.madrid/catalogo/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datos.comunidad.madrid/catalogo/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datos.comunidad.madrid/catalogo/api/3/action/package_list
+  version: '3'
+- type: dcat
+  url: https://datos.comunidad.madrid/catalogo/catalog.rdf
 id: datoscomunidadmadridcatalogo
 langs:
 - id: ES

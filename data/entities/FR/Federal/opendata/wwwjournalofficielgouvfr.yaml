@@ -21,6 +21,15 @@ endpoints:
   url: https://www.journal-officiel.gouv.fr/api
 - type: sitemap
   url: https://www.journal-officiel.gouv.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://www.journal-officiel.gouv.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://www.journal-officiel.gouv.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://www.journal-officiel.gouv.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://www.journal-officiel.gouv.fr/data.json
 id: wwwjournalofficielgouvfr
 langs:
 - id: FR

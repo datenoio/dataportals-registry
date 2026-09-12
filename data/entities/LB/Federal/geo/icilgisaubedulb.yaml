@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LB
+      name: Lebanon
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: ArcGIS Enterprise 11.2 of the American University of Beirut Inclusive
+  Cloud Innovation Lab (ICIL). Public REST map services include a temporal Lebanon
+  coastline atlas, administrative boundaries, municipalities, rivers, contours, woodlands,
+  and related research layers. Portal UI at icilgis.aub.edu.lb/arcgis.
+endpoints:
+- type: arcgis:portals:self
+  url: https://icilgis.aub.edu.lb/arcgis/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://icilgis.aub.edu.lb/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://icilgis.aub.edu.lb/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://icilgis.aub.edu.lb/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://icilgis.aub.edu.lb/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://icilgis.aub.edu.lb/server/rest/services?f=geositemap
+id: icilgisaubedulb
+langs:
+- id: EN
+  name: English
+- id: AR
+  name: Arabic
+link: https://icilgis.aub.edu.lb/server/rest/services
+name: AUB Inclusive Cloud Innovation Lab GIS
+owner:
+  link: https://icil.aub.edu.lb
+  location:
+    country:
+      id: LB
+      name: Lebanon
+    level: 20
+  name: Inclusive Cloud Innovation Lab, American University of Beirut
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- has_api
+- coastline
+- GIS
+- research
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00042534

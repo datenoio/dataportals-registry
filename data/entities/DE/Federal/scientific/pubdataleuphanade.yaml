@@ -14,11 +14,11 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: "Institutional repository for the long-term preservation, documentation
+description: Institutional repository for the long-term preservation, documentation
   and publishing of literature, research data from scientific projects and alternative
   publication formats. Maintained by Leuphana University Lüneburg's Media and Information
   Centre (MIZ), primarily aimed at Leuphana employees, students, and contractual cooperation
-  partners."
+  partners.
 endpoints:
 - type: oaipmh20
   url: https://pubdata.leuphana.de/oai/request?verb=Identify
@@ -29,6 +29,15 @@ endpoints:
   url: https://pubdata.leuphana.de/htmlmap
 - type: opensearch
   url: https://pubdata.leuphana.de/open-search/description.xml
+- type: dspace
+  url: https://pubdata.leuphana.de/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://pubdata.leuphana.de/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://pubdata.leuphana.de/server/oai/request?verb=Identify
+  version: '2.0'
 id: pubdataleuphanade
 langs:
 - id: DE

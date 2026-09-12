@@ -37,6 +37,8 @@ endpoints:
   url: https://data.rivm.nl/meta/srv/api/site
 - type: opensearch
   url: https://data.rivm.nl/portal.opensearch
+- type: dcat:xml
+  url: https://data.rivm.nl/meta/srv/api/records?accept=application/rdf+xml
 id: datarivmnl
 identifiers:
 - id: datacite

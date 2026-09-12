@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: IT-PT
+      name: Pistoia
+description: G3W-SUITE geoportal of Provincia di Pistoia for public QGIS WebGIS maps.
+id: gisprovinciapistoiait
+langs:
+- id: IT
+  name: Italian
+link: https://gis.provincia.pistoia.it/
+name: GIS Provincia di Pistoia
+owner:
+  link: https://www.provincia.pistoia.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-PT
+      name: Pistoia
+  name: Provincia di Pistoia
+  type: Local government
+software:
+  id: g3wsuite
+  name: G3W-SUITE
+status: active
+tags:
+- geospatial
+- geoportal
+- g3wsuite
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043451
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: g3wsuite:catalog
+  url: https://gis.provincia.pistoia.it/

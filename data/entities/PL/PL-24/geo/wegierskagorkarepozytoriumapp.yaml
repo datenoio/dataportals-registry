@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: PL-24
+      name: Śląskie
+description: RAPP Węgierska Górka is a Geoportal operated by Gmina Węgierska Górka,
+  built with Lizmap.
+id: wegierskagorkarepozytoriumapp
+langs:
+- id: PL
+  name: Polish
+link: https://wegierskagorka.repozytorium.app/
+name: RAPP Węgierska Górka
+owner:
+  link: https://wegierskagorka.repozytorium.app/
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    subregion:
+      id: PL-24
+      name: Śląskie
+  name: Gmina Węgierska Górka
+  type: Local government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- lizmap
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043629
+endpoints:
+- type: lizmap:service
+  url: https://wegierskagorka.repozytorium.app/index.php/lizmap/service/?repository=rapp&project=Wegierska_Gorka
+- type: wms130
+  url: https://wegierskagorka.repozytorium.app/index.php/lizmap/service/?repository=rapp&project=Wegierska_Gorka&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0

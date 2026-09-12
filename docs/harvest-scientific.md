@@ -45,7 +45,7 @@ GET https://host/api/search?q=*&type=dataset&per_page=100&start=0
 
 Page with `start`. `total_count` is in the JSON envelope.
 
-**Also useful:** `/api/info/version`, OAI `/oai?verb=Identify`.
+**Also useful:** `/api/info/version` (`dataverseapi`), OAI `/oai?verb=Identify`.
 
 **Drop:** `type=file` (file hits under a dataset), `type=dataverse` (collections), `/dataset.xhtml?persistentId=` as a crawl seed (that is one record). Harvest the installation root from the registry, then this search API.
 
@@ -87,6 +87,7 @@ DSpace 6 and 7 fallback when REST has no entity type:
 
 ```text
 GET https://host/oai/request?verb=Identify
+GET https://host/server/oai/request?verb=Identify
 GET https://host/oai/request?verb=ListSets
 GET https://host/oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=col_123456789_4
 ```
@@ -119,7 +120,7 @@ Classic Invenio (not RDM). `/api/records` returns **all** record types.
 GET https://host/api/records?size=25
 ```
 
-Filter to datasets the same way as [InvenioRDM](#inveniordm), then confirm the UI is not InvenioRDM-branded. **Keep:** `resource_type` dataset. **Drop:** `publication`, `presentation`, `poster`, `image`, `video`, `lesson`, `other`. `software` is not a dataset. OAI is often `/oai2d`.
+Filter to datasets the same way as [InvenioRDM](#inveniordm), then confirm the UI is not InvenioRDM-branded. **Keep:** `resource_type` dataset. **Drop:** `publication`, `presentation`, `poster`, `image`, `video`, `lesson`, `other`. `software` is not a dataset. OAI is often `/oai2d?verb=Identify`; some classic installs also expose `/oai?verb=Identify`.
 
 ## InvenioRDM (`inveniordm`) {#inveniordm}
 
@@ -142,7 +143,7 @@ Follow `links.next`. Inspect `hits.hits[].metadata.resource_type`.
 
 **Keep:** `resource_type` dataset (or `type=dataset`).
 
-OAI is often `/oai2d`. Skip zenodo.org if you only need institutional instances already in the registry.
+OAI is often `/oai2d?verb=Identify`. Skip zenodo.org if you only need institutional instances already in the registry.
 
 Docs: [inveniordm.docs.cern.ch](https://inveniordm.docs.cern.ch).
 
@@ -157,6 +158,12 @@ GET https://host/cgi/exportview/type/dataset/JSON/dataset.js
 ```
 
 **Search:** `/cgi/search/archive/advanced` with `type=dataset` (parameter names vary; confirm on one host).
+
+OpenSearch description is `/cgi/opensearchdescription`. Detection types it `opensearch`.
+
+```text
+GET https://host/cgi/opensearchdescription
+```
 
 **REST:** `/rest/eprint/` plus the numeric eprint id (`.xml`) is per-record. For a crawl, OAI is better:
 
@@ -181,6 +188,14 @@ GET https://host/catalog.json?f[human_readable_type_sim][]=Dataset&per_page=100&
 
 If that facet is empty, try `f[resource_type_sim][]=Dataset` or `f[has_model_ssim][]=Dataset`. FileSets are files, not datasets.
 
+Optional OAI-PMH when the Blacklight OAI plugin is enabled:
+
+```text
+GET https://host/catalog/oai?verb=Identify
+```
+
+Then `ListSets` / `ListRecords` with the [OAI fallback](#oai-pmh-fallback-any-ir).
+
 **Keep:** Blacklight works typed Dataset. **Drop:** FileSets, GenericWork/Etd/Image unless they are the data product.
 
 ## Samvera (`samvera`) {#samvera}
@@ -190,6 +205,8 @@ Same Blacklight harvest as [Hyrax](#hyrax) when the UI is Samvera without Hyrax 
 ```text
 GET https://host/catalog.json?f[human_readable_type_sim][]=Dataset&per_page=100&page=1
 ```
+
+Same optional OAI as [Hyrax](#hyrax): `/catalog/oai?verb=Identify`.
 
 **Keep:** Dataset works (same grain as Hyrax). **Drop:** FileSets and publication-only work types.
 
@@ -229,9 +246,12 @@ Classification values are local (`mir_types`, `state`). Filter to data/Forschung
 ```text
 GET https://host/api/search/select?q=*:*&rows=0
 GET https://host/api/oai?verb=Identify
+GET https://host/api/openapi
 ```
 
 Add a type constraint once you see stored fields (often `cmodel`, `dc_type`, or `object_type`). Example patterns to try: `cmodel:*Dataset*`, `dc_type:dataset`. Drop image/book/thesis cmodels.
+
+Type Dataset Solr select (`cmodel:*Dataset*` or `dc_type:dataset`) as `rest`.
 
 **Keep:** Dataset cmodels / `dc_type:dataset`. **Drop:** image, book, and thesis cmodels.
 
@@ -244,7 +264,7 @@ GET https://host/smash/search.jsf
 GET https://www.diva-portal.org/smash/oai?verb=Identify
 ```
 
-Keep records typed as research data / dataset. Drop articles, theses, and reports. One harvest scope per `{org}.diva-portal.org` tenant.
+Type `/smash/search.jsf` as `index`. Keep records typed as research data / dataset. Drop articles, theses, and reports. One harvest scope per `{org}.diva-portal.org` tenant.
 
 **Keep:** research data / dataset records (smash filter or OAI). **Drop:** articles, theses, and reports.
 
@@ -256,10 +276,11 @@ Item **type IDs are per instance**. The registry probe uses `type=` on `/api/rec
 2. Find the id for research data / 研究データ / Dataset.
 3. Crawl `/api/records/?type=ITEM_TYPE_ID&page=1&size=20` (replace `ITEM_TYPE_ID`).
 
-Without a resolved type id, you will ingest articles and reports.
+Without a resolved type id, you will ingest articles and reports. OAI Identify is portable when present; still filter ListRecords to a research-data set or `dc:type`.
 
 ```text
 GET https://host/api/records/?page=1&size=20
+GET https://host/oai?verb=Identify
 ```
 
 **Keep:** WEKO3 items whose type id is research data / Dataset. **Drop:** articles and reports (unfiltered `/api/records/`).
@@ -274,6 +295,8 @@ The public **portal** lists `/en/datasets/` (locale prefix varies: `/de/datasets
 GET https://host/sitemap/datasets.xml
 GET https://host/en/datasets/?search=&format=rss
 ```
+
+Locale prefix varies (`/de/datasets/`, `/da/datasets/`). Type those dataset RSS feeds as `rss`.
 
 OAI: `/ws/oai?verb=Identify` then `ListSets` for a datasets set.
 
@@ -301,12 +324,13 @@ GET https://host/view/google/siteindex.xml
 
 ## Elsevier Digital Commons (`elsevierdigitalcommons`) {#elsevierdigitalcommons}
 
-Collections mix articles and data series. OAI: `/do/oai/?verb=ListSets`. Harvest only sets whose names are data/datasets/statistics — not the whole IR.
+Collections mix articles and data series. OAI: `/do/oai/?verb=ListSets` or `/oai?verb=ListSets` on Elsevier Data Repository hosts. Harvest only sets whose names are data/datasets/statistics — not the whole IR.
 
 Sitemap `/sitemap/index` can list every series; still skip photograph and journal series.
 
 ```text
 GET https://host/do/oai/?verb=ListSets
+GET https://host/oai?verb=ListSets
 ```
 
 **Keep:** OAI sets named data/datasets/statistics. **Drop:** photograph and journal series, and the unfiltered IR.
@@ -328,7 +352,7 @@ GraphQL/search endpoints vary by tenant. Prefer the institution’s public API o
 GET https://host/articles/dataset/
 ```
 
-**Keep:** institutional Figshare `item_type` 3 (dataset) and 4 (fileset). **Drop:** papers, theses, posters, presentations, and a global figshare.com crawl.
+Type `/articles/dataset/` as `index`. **Keep:** institutional Figshare `item_type` 3 (dataset) and 4 (fileset). **Drop:** papers, theses, posters, presentations, and a global figshare.com crawl.
 
 ## Haplo (`haplo`) {#haplo}
 
@@ -374,21 +398,24 @@ Discovery layer over mixed IRs.
 
 ```text
 GET https://host/vufind/Search/Results?type=AllFields&filter[]=format%3A"Dataset"
+GET https://host/api?openapi
 ```
 
-Add a format/type facet (`format:Dataset`, `document_type:dataset`) **before** paging. **Keep:** facet-filtered dataset records. **Drop:** unfiltered library-catalog hits.
+Add a format/type facet (`format:Dataset`, `document_type:dataset`) **before** paging. Type the Dataset Search/Results listing as `index`. Attach `/Search/Results` to the catalog `link`; do not prefix `/vufind` again when the link already includes that mount. Type `/api?openapi` as `openapi`. **Keep:** facet-filtered dataset records. **Drop:** unfiltered library-catalog hits.
 
 ## LibreCat (`librecat`) {#librecat}
 
-Same facet-first harvest as [VuFind](#vufind) when the public UI is LibreCat.
+Same facet-first harvest as [VuFind](#vufind) when the public UI is LibreCat. Optional OAI Identify is `/oai?verb=Identify` at the repository origin (not under a `/search` UI mount).
 
 **Keep:** facet-filtered dataset / research-data records (same grain as VuFind).
 **Drop:** publications and person records.
 
 ```text
 GET https://host/vufind/Search/Results?type=AllFields&filter[]=format%3A"Dataset"
+GET https://host/oai?verb=Identify
 ```
 
+Type the Dataset Search/Results listing as `index` (same grain as [VuFind](#vufind)). OAI Identify is `oaipmh20`.
 
 ## InstDB (`instdb`) {#instdb}
 
@@ -459,6 +486,8 @@ CaosDB REST (`/api/v1/`). Query Record types that are datasets/collections. Drop
 **Keep:** Record types that are datasets/collections.
 **Drop:** files and properties as extra datasets.
 
+Type `/api/v1/` as `rest`.
+
 ```text
 GET https://host/api/v1/
 ```
@@ -510,7 +539,20 @@ Drupal+Fedora. Harvest Solr/REST with a Dataset content model — not every Drup
 
 ```text
 GET https://host/solr/select?q=RELS_EXT_hasModel_uri_ms:*Dataset*&wt=json&rows=25
+GET https://host/jsonapi
 ```
+
+Type the Solr Dataset select as `rest`. Solr `wt=json` may be served as `text/plain`.
+
+Optional OAI-PMH Identify (portable paths only; skip host-specific `/api/oai2` and `/oaiprovider/`):
+
+```text
+GET https://host/oai/request?verb=Identify
+GET https://host/oai2?verb=Identify
+GET https://host/oai?verb=Identify
+```
+
+Then `ListSets` / `ListRecords` with the [OAI fallback](#oai-pmh-fallback-any-ir).
 
 
 ## Archipelago Commons (`archipelago`) {#archipelago}
@@ -520,9 +562,11 @@ Drupal Strawberryfield ADOs. Mixed GLAM instances need a Dataset (or accession/i
 ```text
 GET https://host/search?f[0]=descriptive_metadata_object_types:Dataset
 GET https://host/rss.xml
+GET https://host/jsonapi/node/digital_object
+GET https://host/api/oai_pmh/oai?verb=Identify
 ```
 
-Keep `Dataset`, accession, and isolate records. Drop Photograph, Book, Finding Aid, and WebPage exhibits. OAI-PMH `/api/oai_pmh/oai?verb=Identify` is optional and often restricted. Prefer Archipelago over raw `drupal`.
+Type Dataset search as `index`. Keep `Dataset`, accession, and isolate records. Drop Photograph, Book, Finding Aid, and WebPage exhibits. OAI-PMH `/api/oai_pmh/oai?verb=Identify` is optional and often restricted. Prefer Archipelago over raw `drupal`.
 
 **Keep:** `Dataset`, accession, and isolate records. **Drop:** Photograph, Book, Finding Aid, and WebPage exhibits.
 
@@ -580,7 +624,10 @@ Prefer a public datasets / research-data listing or OAI `setSpec` for data. Stop
 
 ```text
 GET https://host/api/records?q=metadata.resource_type.type:dataset&size=25
+GET https://host/v2/articles
 ```
+
+Type Invenio-like `/api/records` as `inveniordmapi:records`. Some tenants list articles at `/v2/articles` (`rest`).
 
 
 ## RADAR (`radar`) {#radar}
@@ -684,6 +731,8 @@ Keep **projects** (and experiment collections when the user asked). Drop individ
 
 **Keep:** **projects** (and experiment collections when asked). **Drop:** individual imaging sessions and DICOM files when a parent project exists.
 
+Type `/data/projects` as `xnat:projects`.
+
 ## Shanoir (`shanoir`) {#shanoir}
 
 ```text
@@ -713,6 +762,8 @@ GET https://host/webclient/
 
 Keep **projects / screens / studies** (IDR annotations). Drop individual images and wells. Some public archives return `404` on `/api/v0/m/` — fall back to the documented webclient catalog. Stop on `401`.
 
+Type `/api/v0/m/projects/` as `omero:projects`. Fall back `/webclient/` as `omero:webclient`.
+
 **Keep:** **projects / screens / studies**. **Drop:** individual images and wells.
 
 ## Kadi4Mat (`kadi4mat`) {#kadi4mat}
@@ -723,6 +774,8 @@ GET https://host/api/collections
 ```
 
 Keep **records and collections**. Drop individual file blobs when a parent record exists. Stop on `401`.
+
+Type `/api/records` as `kadi4mat:records` and `/api/collections` as `kadi4mat:collections`.
 
 **Keep:** **records and collections**. **Drop:** individual file blobs when a parent record exists.
 
@@ -755,11 +808,17 @@ GET https://host/prod/v1/api/v1/entries
 
 Keep **uploads / entries** that are published datasets. Drop individual calculation files and parser logs. One Oasis or the central archive = one harvest scope. Stop on `401`.
 
+Type `/prod/v1/api/v1/info` and `/prod/v1/api/v1/entries` as `rest`.
+
 **Keep:** published **uploads / entries**. **Drop:** individual calculation files and parser logs.
 
 ## dLibra (`dlibra`) {#dlibra}
 
-Polish digital library. OAI/REST prefixes vary by install — resolve the Identify URL from the live site or `endpoints[]`.
+Polish digital library. Most installs expose Identify at `/dlibra/oai-pmh-repository.xml?verb=Identify` (catalog links that already end in `/dlibra` are stripped before that path is attached).
+
+```text
+GET https://host/dlibra/oai-pmh-repository.xml?verb=Identify
+```
 
 **Keep:** OAI-PMH records with a dataset / dane `set` or `dc:type` filter ([harvest-protocols.md](harvest-protocols.md#oai-pmh)). **Drop:** manuscript/photo libraries that were never accepted as dataset catalogs, and unfiltered ListRecords.
 
@@ -795,9 +854,14 @@ Domain stacks (IPT, THREDDS, Breedbase, ESGF, …): [harvest-scientific-domain.m
 ## FLAT (`flat`) {#flat}
 
 Start at the registered repository and use the advertised OAI-PMH endpoint. For Lund:
-`GET https://archive.humlab.lu.se/flat/oai2?verb=Identify`. Enumerate metadata formats and
-sets before ListRecords; prefer CMDI when offered, otherwise a supported descriptive format.
-Follow resumption tokens and preserve repository identifiers and collection membership.
+
+```text
+GET https://host/flat/oai2?verb=Identify
+```
+
+Typical catalog links already end in `/flat/`. Cleanup strips that mount so Identify is not doubled (`/flat/flat/`).
+
+Enumerate metadata formats and sets before ListRecords; prefer CMDI when offered, otherwise a supported descriptive format. Follow resumption tokens and preserve repository identifiers and collection membership.
 
 Keep deposited language-resource collections, corpora and dataset metadata. Exclude navigation
 nodes, user profiles and individual media files as independent datasets. Public metadata does

@@ -56,6 +56,12 @@ endpoints:
 - type: wps100
   url: https://newportal.swiftgeoint.com/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://newportal.swiftgeoint.com/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://newportal.swiftgeoint.com/catalogue/opensearch
+  version: '1.1'
 id: newportalswiftgeointcom
 link: https://newportal.swiftgeoint.com
 name: Swift Geointelligence Portal

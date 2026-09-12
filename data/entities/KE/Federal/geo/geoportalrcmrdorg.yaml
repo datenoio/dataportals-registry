@@ -55,6 +55,14 @@ endpoints:
   version: 1.0.0
 - type: sitemap
   url: https://geoportal.rcmrd.org/sitemap.xml
+- type: wcs11
+  url: https://geoportal.rcmrd.org/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: geoserver:settings
+  url: https://geoportal.rcmrd.org/geoserver/rest/settings
+- type: opensearch
+  url: https://geoportal.rcmrd.org/catalogue/opensearch
+  version: '1.1'
 id: geoportalrcmrdorg
 langs:
 - id: EN

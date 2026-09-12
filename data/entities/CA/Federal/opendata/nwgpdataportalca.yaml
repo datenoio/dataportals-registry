@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Nicola Watershed Governance Data Portal is an Open data portal operated
+  by Nicola Watershed Governance Project, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://nwgpdataportal.ca/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://nwgpdataportal.ca/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://nwgpdataportal.ca/api/3/action/package_list
+  version: '3'
+id: nwgpdataportalca
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://nwgpdataportal.ca
+name: Nicola Watershed Governance Data Portal
+owner:
+  link: https://www.nwgpdataportal.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+  name: Nicola Watershed Governance Project
+  type: Civil society
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- civil society
+- ckan
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00042895

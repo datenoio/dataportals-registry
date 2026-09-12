@@ -25,6 +25,12 @@ endpoints:
   url: https://data.wcad.org/data.json
 - type: socrata:views
   url: https://data.wcad.org/api/views
+- type: socrata:catalog
+  url: https://data.wcad.org/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://data.wcad.org/opensearch.xml
+  version: '1.1'
 id: datawcadorg
 langs:
 - id: EN

@@ -22,6 +22,17 @@ endpoints:
 - type: oaipmh20
   url: https://www.lenus.ie/server/oai/request?verb=Identify
   version: '2.0'
+- type: dspace
+  url: https://www.lenus.ie/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://www.lenus.ie/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://www.lenus.ie/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://www.lenus.ie/sitemap_index.xml
 id: wwwlenusie
 langs:
 - id: EN

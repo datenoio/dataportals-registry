@@ -25,6 +25,9 @@ endpoints:
 - type: pygeoapi:collections
   url: https://wis2-grep.weather.gc.ca/collections?f=json
   version: '1.0'
+- type: ogc:features
+  url: https://wis2-grep.weather.gc.ca/collections/?f=json
+  version: '1.0'
 id: wis2grepweathergcca
 langs:
 - id: EN

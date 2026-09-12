@@ -15,10 +15,9 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: Open-data catalog of Gabon's Interactive Forest Atlas, published by
-  MPERNFM with the World Resources Institute. Geospatial layers cover forest management,
-  conservation, agro-industry, and administrative boundaries. Default license is
-  CC BY 4.0.
+description: Open-data catalog of Gabon's Interactive Forest Atlas, published by MPERNFM
+  with the World Resources Institute. Geospatial layers cover forest management, conservation,
+  agro-industry, and administrative boundaries. Default license is CC BY 4.0.
 endpoints:
 - type: dcatap201
   url: https://gab-data.forest-atlas.org/api/feed/dcat-ap/2.0.1.json
@@ -30,6 +29,8 @@ endpoints:
   url: https://gab-data.forest-atlas.org/api/search/v1
 - type: sitemap
   url: https://gab-data.forest-atlas.org/sitemap.xml
+- type: dcatus11
+  url: https://gab-data.forest-atlas.org/data.json
 id: gabdataforestatlasorg
 langs:
 - id: FR

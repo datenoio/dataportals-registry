@@ -11,7 +11,7 @@ coverage:
       id: IT
       name: Italy
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     level: 20
 description: VESPA data service hub publishing exoplanet atmosphere simulations and
@@ -19,6 +19,9 @@ description: VESPA data service hub publishing exoplanet atmosphere simulations 
 endpoints:
 - type: tap:capabilities
   url: http://vespa.ia2.inaf.it/tap/capabilities
+- type: oaipmh20
+  url: http://vespa.ia2.inaf.it/oai.xml?verb=Identify
+  version: '2.0'
 id: vespaia2inafit
 langs:
 - id: EN

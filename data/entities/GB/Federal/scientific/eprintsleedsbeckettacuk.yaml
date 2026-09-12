@@ -21,6 +21,20 @@ endpoints:
 - type: oaipmh20
   url: https://eprints.leedsbeckett.ac.uk/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://eprints.leedsbeckett.ac.uk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://eprints.leedsbeckett.ac.uk/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://eprints.leedsbeckett.ac.uk/rest/eprint
+- type: eprints:rdf
+  url: https://eprints.leedsbeckett.ac.uk/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://eprints.leedsbeckett.ac.uk/cgi/export/repository/RDFN3/devel.n3
+- type: opensearch
+  url: https://eprints.leedsbeckett.ac.uk/cgi/opensearchdescription
+  version: '1.1'
 id: eprintsleedsbeckettacuk
 langs:
 - id: EN

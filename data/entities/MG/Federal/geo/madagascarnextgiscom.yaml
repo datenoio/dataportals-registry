@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MG
+      name: Madagascar
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Public NextGIS Web catalog of Manondroala forest-degradation, tree-cover,
+  and field-point layers for Madagascar.
+endpoints:
+- type: nextgisweb:api
+  url: https://madagascar.nextgis.com/api/resource/
+- type: nextgisweb:pkg-version
+  url: https://madagascar.nextgis.com/api/component/pyramid/pkg_version
+- type: nextgisweb:routes
+  url: https://madagascar.nextgis.com/api/component/pyramid/route
+id: madagascarnextgiscom
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://madagascar.nextgis.com
+name: Forest Degradation in Madagascar
+owner:
+  link: https://manondroalamadagascar.wordpress.com
+  location:
+    country:
+      id: MG
+      name: Madagascar
+    level: 20
+  name: Manondroala
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: nextgisweb
+  name: NextGIS Web
+status: active
+tags:
+- geospatial
+- environment
+- forest
+- Madagascar
+- NextGIS
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00043565

@@ -48,6 +48,21 @@ endpoints:
 - type: wmts100
   url: http://geonode.idea-maps.net/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: wps100
+  url: http://geonode.idea-maps.net/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: http://geonode.idea-maps.net/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: http://geonode.idea-maps.net/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+- type: geoserver:version
+  url: http://geonode.idea-maps.net/geoserver/rest/about/version
+- type: geoserver:settings
+  url: http://geonode.idea-maps.net/geoserver/rest/settings
+- type: geoserver:layers
+  url: http://geonode.idea-maps.net/geoserver/rest/layers
 id: geonodeideamapsnet
 langs:
 - id: EN

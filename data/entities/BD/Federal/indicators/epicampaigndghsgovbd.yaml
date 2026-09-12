@@ -1,0 +1,80 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: BD
+      name: Bangladesh
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: National EPI campaign DHIS2 of Bangladesh's Directorate General of Health
+  Services. Login is required to query immunization-campaign indicators. Distinct
+  from the aggregated HMIS at centraldhis.mohfw.gov.bd.
+endpoints:
+- type: dhis2:catalog
+  url: https://epicampaign.dghs.gov.bd
+- type: dhis2:system-info
+  url: https://epicampaign.dghs.gov.bd/api/system/info
+- type: dhis2:datasets
+  url: https://epicampaign.dghs.gov.bd/api/dataSets.json?fields=id,displayName&pageSize=1
+id: epicampaigndghsgovbd
+langs:
+- id: BN
+  name: Bengali
+- id: EN
+  name: English
+link: https://epicampaign.dghs.gov.bd
+name: Bangladesh National EPI Campaign System (DHIS2)
+owner:
+  link: https://dghs.gov.bd
+  location:
+    country:
+      id: BD
+      name: Bangladesh
+    level: 20
+  name: Directorate General of Health Services
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dhis2
+  name: DHIS2
+status: active
+tags:
+- health
+- immunization
+- DHIS2
+- government
+- restricted
+- has_api
+- Bangladesh
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042850

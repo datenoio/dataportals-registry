@@ -40,6 +40,12 @@ endpoints:
   version: '1.0'
 - type: sitemap
   url: https://dspace.gipe.ac.in/sitemap_index.xml
+- type: oaipmh20
+  url: https://dspace.gipe.ac.in/oai?verb=Identify
+  version: '2.0'
+- type: oaipmh20
+  url: https://dspace.gipe.ac.in/server/oai/request?verb=Identify
+  version: '2.0'
 id: dspacegipeacin
 langs:
 - id: EN

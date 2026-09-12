@@ -14,14 +14,20 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Official open data portal of the Grand Duchy of Luxembourg (uData),
-  publishing public-sector datasets, visualizations, and reuses across government
-  themes. The public API reports about 3,100 datasets and 200 organizations.
+description: Official open data portal of the Grand Duchy of Luxembourg (uData), publishing
+  public-sector datasets, visualizations, and reuses across government themes. The
+  public API reports about 3,100 datasets and 200 organizations.
 endpoints:
 - type: udataapi
   url: https://data.public.lu/api/1
 - type: sitemap
   url: https://data.public.lu/sitemap.xml
+- type: udataapi
+  url: https://data.public.lu/api/1/datasets/
+  version: '1'
+- type: udataapi:organizations
+  url: https://data.public.lu/api/1/organizations/
+  version: '1'
 id: datapubliclu
 identifiers:
 - id: re3data

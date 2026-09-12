@@ -7,7 +7,7 @@ content_types:
 - dataset
 - map_layer
 coverage:
-- location: &id001
+- location:
     country:
       id: FR
       name: France
@@ -33,7 +33,14 @@ link: https://www.observatoire-de-mayotte.fr
 name: Observatoire de Mayotte
 owner:
   link: https://www.observatoire-de-mayotte.fr/accueil/mentions-legales
-  location: *id001
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-976
+      name: Mayotte
   name: Direction de l’Environnement, de l’Aménagement et du Logement de Mayotte
   type: Central government
 properties:

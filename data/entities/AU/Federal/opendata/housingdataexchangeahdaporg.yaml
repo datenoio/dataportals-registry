@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 20
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+description: National Housing Data Exchange is an Open data portal operated by Australian
+  Housing Data Analytics Platform, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://housing-data-exchange.ahdap.org/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://housing-data-exchange.ahdap.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://housing-data-exchange.ahdap.org/api/3/action/package_list
+  version: '3'
+id: housingdataexchangeahdaporg
+langs:
+- id: EN
+  name: English
+link: https://housing-data-exchange.ahdap.org
+name: National Housing Data Exchange
+owner:
+  link: https://ahdap.org
+  location:
+    country:
+      id: AU
+      name: Australia
+  name: Australian Housing Data Analytics Platform
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- academic
+- ckan
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00042845

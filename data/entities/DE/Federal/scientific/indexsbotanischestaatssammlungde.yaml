@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -23,6 +23,9 @@ description: 'IndExs is a database comprising information on exsiccatae (=exsicc
   is neutral and used for dried specimens in general. If available, images of one
   or more examplary labels are added to give layout information. IndExs is powered
   by the Diversity Workbench database framework.'
+endpoints:
+- type: diversityworkbench:catalog
+  url: http://indexs.botanischestaatssammlung.de/
 id: indexsbotanischestaatssammlungde
 identifiers:
 - id: openaire
@@ -42,8 +45,8 @@ owner:
   name: Bavarian Natural History Collections
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: diversityworkbench
+  name: Diversity Workbench
 status: active
 tags:
 - scientific

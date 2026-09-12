@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Dominican University of California Research Portal is a Scientific data
+  repository operated by Dominican University of California Research Portal.
+id: facultyprofilesdominicanedu
+langs:
+- id: EN
+  name: English
+link: https://facultyprofiles.dominican.edu
+name: Dominican University of California Research Portal
+owner:
+  link: https://facultyprofiles.dominican.edu
+  location:
+    country:
+      id: US
+      name: United States
+  name: Dominican University of California Research Portal
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00042510
+endpoints:
+- type: oaipmh20
+  url: https://facultyprofiles.dominican.edu/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://facultyprofiles.dominican.edu/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://facultyprofiles.dominican.edu/sitemap/datasets.xml

@@ -24,6 +24,11 @@ endpoints:
 - type: dspace:objects
   url: https://uzspace.unizulu.ac.za/server/api/discover/search/objects
   version: '7'
+- type: sitemap
+  url: https://uzspace.unizulu.ac.za/sitemap_index.xml
+- type: oaipmh20
+  url: https://uzspace.unizulu.ac.za/server/oai/request?verb=Identify
+  version: '2.0'
 id: uzspaceunizuluacza
 langs:
 - id: EN

@@ -24,6 +24,11 @@ endpoints:
   url: https://data.sarthe.fr/api
 - type: sitemap
   url: https://data.sarthe.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.sarthe.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.sarthe.fr/api/explore/v2.1/catalog/exports/dcat
 id: datasarthefr
 langs:
 - id: FR

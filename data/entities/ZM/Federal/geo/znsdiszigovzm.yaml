@@ -26,6 +26,13 @@ endpoints:
 - type: csw202
   url: https://znsdi.szi.gov.zm/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
+- type: oaipmh20
+  url: https://znsdi.szi.gov.zm/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://znsdi.szi.gov.zm/srv/api/selections
+- type: geonetwork:site
+  url: https://znsdi.szi.gov.zm/srv/api/site
 id: znsdiszigovzm
 langs:
 - id: EN

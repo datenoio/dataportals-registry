@@ -24,6 +24,9 @@ endpoints:
 - type: dspace:objects
   url: https://openaccess.inaf.it/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://openaccess.inaf.it/server/oai/request?verb=Identify
+  version: '2.0'
 id: openaccessinafit
 langs:
 - id: IT

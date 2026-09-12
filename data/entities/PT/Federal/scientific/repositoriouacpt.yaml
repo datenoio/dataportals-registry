@@ -13,7 +13,7 @@ coverage:
       name: Portugal
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Institutional repository of the University of the Azores (RCAAP/DSpace),
   including dataset-typed records.
@@ -26,6 +26,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://repositorio.uac.pt/sitemap_index.xml
+- type: oaipmh20
+  url: https://repositorio.uac.pt/server/oai/request?verb=Identify
+  version: '2.0'
 id: repositoriouacpt
 identifiers:
 - id: openaire

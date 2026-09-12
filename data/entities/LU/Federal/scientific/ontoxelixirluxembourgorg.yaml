@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: LU
+      name: Luxembourg
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ELIXIR Luxembourg MINERVA instance hosting ONTOX liver physiological
+  maps (bile secretion and lipid metabolism), with a public REST API.
+endpoints:
+- type: custom_api
+  url: https://ontox.elixir-luxembourg.org/minerva/api/projects/
+id: ontoxelixirluxembourgorg
+langs:
+- id: EN
+  name: English
+link: https://ontox.elixir-luxembourg.org/minerva/
+name: ONTOX physiological maps MINERVA
+owner:
+  link: https://elixir-luxembourg.org/
+  location:
+    country:
+      id: LU
+      name: Luxembourg
+    level: 20
+  name: ELIXIR Luxembourg
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: minerva
+  name: MINERVA
+status: active
+tags:
+- scientific
+- research data
+- academic
+- health
+- pathways
+- MINERVA
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00043557

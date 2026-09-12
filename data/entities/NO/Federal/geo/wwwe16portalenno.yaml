@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: ArcGIS Hub portal for the E16 Kongsvinger–E6 intermunicipal
-  road-planning project, publishing plan documents and related geodata.
+description: ArcGIS Hub portal for the E16 Kongsvinger–E6 intermunicipal road-planning
+  project, publishing plan documents and related geodata.
 endpoints:
 - type: dcatap201
   url: https://www.e16portalen.no/api/feed/dcat-ap/2.0.1.json
@@ -28,6 +28,8 @@ endpoints:
   url: https://www.e16portalen.no/api/search/v1
 - type: sitemap
   url: https://www.e16portalen.no/sitemap.xml
+- type: dcatus11
+  url: https://www.e16portalen.no/data.json
 id: wwwe16portalenno
 langs:
 - id: 'NO'

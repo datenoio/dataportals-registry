@@ -23,6 +23,11 @@ description: El Repositorio de datos de investigación es una infraestructura te
 endpoints:
 - type: dataverseapi
   url: https://repositoriodedatos.unab.cl/api/search
+- type: dataverseapi
+  url: https://repositoriodedatos.unab.cl/api/info/version
+- type: oaipmh20
+  url: https://repositoriodedatos.unab.cl/oai?verb=Identify
+  version: '2.0'
 id: repositoriodedatosunabcl
 langs:
 - id: ES

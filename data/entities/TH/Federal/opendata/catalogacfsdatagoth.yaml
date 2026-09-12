@@ -26,6 +26,16 @@ endpoints:
 - type: ckan:package-list
   url: https://catalog-acfs.data.go.th/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://catalog-acfs.data.go.th/catalog.n3
+- type: dcat:ttl
+  url: https://catalog-acfs.data.go.th/catalog.ttl
+- type: dcat:xml
+  url: https://catalog-acfs.data.go.th/catalog.xml
+- type: dcat:jsonld
+  url: https://catalog-acfs.data.go.th/catalog.jsonld
+- type: dcat
+  url: https://catalog-acfs.data.go.th/catalog.rdf
 id: catalogacfsdatagoth
 langs:
 - id: TH

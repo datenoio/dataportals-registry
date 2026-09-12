@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Pontificia Universidad Católica del Ecuador | PUCE is a Scientific data
+  repository operated by Pontificia Universidad Católica del Ecuador.
+id: puceinvestigapuceeduec
+langs:
+- id: ES
+  name: Spanish
+link: https://puceinvestiga.puce.edu.ec
+name: Pontificia Universidad Católica del Ecuador | PUCE
+owner:
+  link: https://puceinvestiga.puce.edu.ec
+  location:
+    country:
+      id: EC
+      name: Ecuador
+  name: Pontificia Universidad Católica del Ecuador
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042646
+endpoints:
+- type: oaipmh20
+  url: https://puceinvestiga.puce.edu.ec/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://puceinvestiga.puce.edu.ec/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://puceinvestiga.puce.edu.ec/sitemap/datasets.xml

@@ -20,6 +20,11 @@ description: DATICE research data repository of the University of Iceland Social
 endpoints:
 - type: dataverseapi
   url: https://gagnis.hi.is/api/search
+- type: oaipmh20
+  url: https://gagnis.hi.is/oai?verb=Identify
+  version: '2.0'
+- type: dataverseapi
+  url: https://gagnis.hi.is/api/info/version
 id: dataverserhihiis
 identifiers:
 - id: re3data

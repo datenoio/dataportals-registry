@@ -24,6 +24,12 @@ endpoints:
   url: https://kirklandwa.data.socrata.com/data.json
 - type: socrata:views
   url: https://kirklandwa.data.socrata.com/api/views
+- type: socrata:catalog
+  url: https://kirklandwa.data.socrata.com/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://kirklandwa.data.socrata.com/opensearch.xml
+  version: '1.1'
 id: kirklandwadatasocratacom
 langs:
 - id: EN

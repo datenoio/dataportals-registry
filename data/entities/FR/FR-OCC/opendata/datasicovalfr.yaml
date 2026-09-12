@@ -25,6 +25,15 @@ endpoints:
   url: https://data.sicoval.fr/api
 - type: sitemap
   url: https://data.sicoval.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.sicoval.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.sicoval.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.sicoval.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.sicoval.fr/data.json
 id: datasicovalfr
 langs:
 - id: FR

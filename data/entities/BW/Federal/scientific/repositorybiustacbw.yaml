@@ -13,7 +13,7 @@ coverage:
       name: Botswana
     level: 20
     macroregion:
-      id: '018'
+      id: 018
       name: Southern Africa
 description: BIUSTRE, the Botswana International University of Science and Technology
   DSpace institutional repository for staff publications, theses, and conference outputs.
@@ -23,6 +23,12 @@ endpoints:
   url: https://repository.biust.ac.bw/
 - type: sitemap
   url: https://repository.biust.ac.bw/sitemap
+- type: rss
+  url: https://repository.biust.ac.bw/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repository.biust.ac.bw/feed/atom_1.0/site
+  version: '1.0'
 id: repositorybiustacbw
 langs:
 - id: EN

@@ -17,12 +17,14 @@ coverage:
     subregion:
       id: EC-L
       name: Loja
-description: Symbiota portal of the biological collections of Loja Province, with public specimen
-  and occurrence search and Darwin Core dataset feeds.
+description: Symbiota portal of the biological collections of Loja Province, with
+  public specimen and occurrence search and Darwin Core dataset feeds.
 endpoints:
 - type: rss
   url: https://www.bioloja.org/l/collections/datasets/rsshandler.php
   version: '2.0'
+- type: symbiota:collections
+  url: https://www.bioloja.org/l/collections/index.php
 id: biolojaorg
 langs:
 - id: ES

@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: US-AZ
       name: Arizona
-description: City of Tucson's public platform for exploring and downloading open data, discovering
-  and building apps, and engaging to solve important local issues.
+description: City of Tucson's public platform for exploring and downloading open data,
+  discovering and building apps, and engaging to solve important local issues.
 endpoints:
 - type: dcatap201
   url: https://gisdata.tucsonaz.gov/api/feed/dcat-ap/2.0.1.json
@@ -31,6 +31,8 @@ endpoints:
   url: https://gisdata.tucsonaz.gov/api/search/v1
 - type: sitemap
   url: https://gisdata.tucsonaz.gov/sitemap.xml
+- type: dcatus11
+  url: https://gisdata.tucsonaz.gov/data.json
 id: gisdatatucsonazgov
 langs:
 - id: EN

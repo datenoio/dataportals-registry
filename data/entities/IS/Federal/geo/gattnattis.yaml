@@ -15,9 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: National geospatial metadata catalogue (Lýsigagnagátt) operated by
-  Náttúrufræðistofnun. gatt.lmi.is and gatt.gis.is are host aliases of this same
-  GeoNetwork instance.
+description: National geospatial metadata catalogue (Lýsigagnagátt) operated by Náttúrufræðistofnun.
+  gatt.lmi.is and gatt.gis.is are host aliases of this same GeoNetwork instance.
 endpoints:
 - type: geonetwork:query
   url: https://gatt.natt.is/geonetwork/srv/eng/q
@@ -32,6 +31,13 @@ endpoints:
 - type: oaipmh20
   url: https://gatt.natt.is/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: opensearch
+  url: https://gatt.natt.is/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: dcat:xml
+  url: https://gatt.natt.is/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://gatt.natt.is/geonetwork/srv/api/site
 id: gattnattis
 langs:
 - id: IS

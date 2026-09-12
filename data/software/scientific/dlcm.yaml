@@ -1,0 +1,61 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: dlcm
+name: DLCM
+website: https://dlcm.ch/
+description: DLCM (Data Life Cycle Management) is the swissuniversities OAIS research-data
+  platform developed at the University of Geneva. Public tenants such as Yareta use
+  an Angular catalog UI and a public OAI-PMH provider on the access module
+  (/oai-info/oai-provider/oai).
+owner:
+  name: University of Geneva
+  location:
+    country:
+      id: CH
+      name: Switzerland
+logo_url: https://dlcm.ch/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://gitlab.unige.ch/dlcm
+documentation_url: https://dlcm.ch/
+export_formats:
+- XML
+- JSON
+capabilities:
+- OAI-PMH
+- OAIS preservation
+- Research data catalog
+last_updated: '2026-09-09T00:00:00Z'

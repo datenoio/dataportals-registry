@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Repositorio de Datos de Investigación UNALM is a Scientific data repository
+  operated by Universidad Nacional Agraria La Molina, built with Dataverse.
+id: datoslamolinaedupe
+langs:
+- id: ES
+  name: Spanish
+link: https://datos.lamolina.edu.pe
+name: Repositorio de Datos de Investigación UNALM
+owner:
+  link: https://www.lamolina.edu.pe
+  location:
+    country:
+      id: PE
+      name: Peru
+  name: Universidad Nacional Agraria La Molina
+  type: Academy
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research
+- academic
+- dataverse
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043605
+endpoints:
+- type: dataverseapi
+  url: https://datos.lamolina.edu.pe/api/search
+- type: oaipmh20
+  url: https://datos.lamolina.edu.pe/oai?verb=Identify
+  version: '2.0'
+- type: dataverseapi
+  url: https://datos.lamolina.edu.pe/api/info/version

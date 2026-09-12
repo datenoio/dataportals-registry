@@ -26,6 +26,14 @@ endpoints:
 - type: dspace:objects
   url: https://repository.udistrital.edu.co/server/api/discover/search/objects
   version: '7'
+- type: sitemap
+  url: https://repository.udistrital.edu.co/sitemap_index.xml
+- type: oaipmh20
+  url: https://repository.udistrital.edu.co/oai/request?verb=Identify
+  version: '2.0'
+- type: oaipmh20
+  url: https://repository.udistrital.edu.co/server/oai/request?verb=Identify
+  version: '2.0'
 id: repositoryudistritaleduco
 identifiers:
 - id: re3data

@@ -17,7 +17,8 @@ coverage:
     subregion: &id002
       id: ID-SG
       name: Sulawesi Tenggara
-description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Kota Kendari.
+description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Kota
+  Kendari.
 endpoints:
 - type: ckan:package-search
   url: https://satudata.kendarikota.go.id/api/3/action/package_search
@@ -25,6 +26,19 @@ endpoints:
 - type: ckan:package-list
   url: https://satudata.kendarikota.go.id/api/3/action/package_list
   version: '3'
+- type: ckan
+  url: https://satudata.kendarikota.go.id/api/3
+  version: '3'
+- type: dcat:n3
+  url: https://satudata.kendarikota.go.id/catalog.n3
+- type: dcat:ttl
+  url: https://satudata.kendarikota.go.id/catalog.ttl
+- type: dcat:jsonld
+  url: https://satudata.kendarikota.go.id/catalog.jsonld
+- type: dcat
+  url: https://satudata.kendarikota.go.id/catalog.rdf
+- type: dcat:xml
+  url: https://satudata.kendarikota.go.id/catalog.xml
 id: satudatakendarikotagoid
 langs:
 - id: ID

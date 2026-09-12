@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: National Spatial Data Infrastructure metadata catalogue (GeoNetwork) of
-  Moldova for discovery of spatial datasets and network services.
+description: National Spatial Data Infrastructure metadata catalogue (GeoNetwork)
+  of Moldova for discovery of spatial datasets and network services.
 endpoints:
 - type: csw202
   url: https://geoportalinds.gov.md/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -26,6 +26,10 @@ endpoints:
   version: '2.0'
 - type: sitemap
   url: https://geoportalinds.gov.md/sitemap_index.xml
+- type: geonetwork:selections
+  url: https://geoportalinds.gov.md/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://geoportalinds.gov.md/geonetwork/srv/api/site
 id: geoportalindsgovmd
 langs:
 - id: RO

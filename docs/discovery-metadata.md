@@ -81,6 +81,18 @@ LinkedIn/Acryl DataHub metadata platform. Site: [datahubproject.io](https://data
 | Censys | `web.endpoints.http.title: "DataHub"` |
 | FOFA | `title="DataHub"` |
 
+## CEDAR Workbench (`cedar`) {#cedar}
+
+Stanford metadata-template workbench. App: [cedar.metadatacenter.org](https://cedar.metadatacenter.org). Docs: [cedar-docs](https://metadatacenter.github.io/cedar-docs/). Distinct from the metadatacenter.org marketing homepage.
+
+**Confirm:** GET `https://cedar.metadatacenter.org` (title `Project Cedar`). Register the workbench, not each template or filled instance.
+
+| Tool | Query |
+|------|-------|
+| Google | `"CEDAR Workbench" OR "Project Cedar" (metadata OR template)` |
+| Censys | `web.names: "cedar.metadatacenter.org"` |
+| FOFA | `host="cedar.metadatacenter.org"` |
+
 ## Related
 
 - [discovery.md](discovery.md)

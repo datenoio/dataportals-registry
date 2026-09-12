@@ -27,6 +27,9 @@ endpoints:
 - type: opensearch
   url: https://geoportal.npu.cz/metadataserver/opensearch
   version: '1.0'
+- type: csw202
+  url: https://geoportal.npu.cz/metadataserver/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
 id: geoportalnpuczmetadataserver
 langs:
 - id: CS

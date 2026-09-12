@@ -25,6 +25,8 @@ endpoints:
   url: https://www.insbu.bi/nada/index.php/api/catalog/search
 - type: nada:csvexport
   url: https://www.insbu.bi/nada/index.php/catalog/export/csv
+- type: nada:csvexport
+  url: https://www.insbu.bi/nada/index.php/catalog/export/csv?ps=5000&collection[]
 id: isteebubi
 langs:
 - id: FR

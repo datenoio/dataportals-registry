@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -64,3 +64,8 @@ topics:
   name: Economy and finance
   type: eudatatheme
 uid: cdi00025361
+endpoints:
+- type: opengov:catalog
+  url: https://westvirginia.opengov.com/transparency
+- type: opengov:catalog
+  url: https://westvirginia.opengov.com/data/

@@ -66,6 +66,22 @@ endpoints:
 - type: wms-c111
   url: https://ide.correoargentino.com.ar/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://ide.correoargentino.com.ar/api/datasets/
+- type: geonode:documents
+  url: https://ide.correoargentino.com.ar/api/documents/
+- type: geoserver:version
+  url: https://ide.correoargentino.com.ar/geoserver/rest/about/version
+- type: geoserver:settings
+  url: https://ide.correoargentino.com.ar/geoserver/rest/settings
+- type: geoserver:layers
+  url: https://ide.correoargentino.com.ar/geoserver/rest/layers
+- type: geonode:datasets
+  url: https://ide.correoargentino.com.ar/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://ide.correoargentino.com.ar/catalogue/opensearch
+  version: '1.1'
 id: idecorreoargentinocomar
 langs:
 - id: ES

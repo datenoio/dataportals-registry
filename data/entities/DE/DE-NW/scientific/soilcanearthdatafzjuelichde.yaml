@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: Forschungszentrum Jülich TERENO SoilCan SensorThings catalog of soil-canopy
+  observatory Things and Datastreams published through FROST-Server.
+endpoints:
+- type: sensorthings
+  url: https://soilcan.earth-data.fz-juelich.de/FROST-Server/v1.1/
+  version: '1.1'
+- type: sensorthings
+  url: https://soilcan.earth-data.fz-juelich.de/FROST-Server/v1.1/Datastreams?$top=1&$count=true
+  version: '1.1'
+id: soilcanearthdatafzjuelichde
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://soilcan.earth-data.fz-juelich.de/FROST-Server/
+name: FZJ TERENO SoilCan SensorThings
+owner:
+  link: https://www.fz-juelich.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+  name: Forschungszentrum Jülich
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: frostserver
+  name: FROST-Server
+status: active
+tags:
+- SensorThings
+- TERENO
+- FROST
+- soil
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00043030

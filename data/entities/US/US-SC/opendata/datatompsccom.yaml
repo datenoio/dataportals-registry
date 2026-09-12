@@ -28,6 +28,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.tompsc.com.xml
 - type: opensearch
   url: https://data.tompsc.com/opensearch.xml
+- type: socrata:catalog
+  url: https://data.tompsc.com/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: datatompsccom
 langs:
 - id: EN

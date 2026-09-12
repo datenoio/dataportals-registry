@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion: &id002
+      id: FR-22
+      name: Côtes-d'Armor
+description: Conseil départemental des Côtes-d'Armor mviewer of the departmental landscape
+  atlas.
+endpoints:
+- type: mviewer:config
+  url: https://geobretagne.fr/pub/cd22/apps/atlas.xml
+id: geobretagnefrmviewercd22atlas
+langs:
+- id: FR
+  name: French
+link: https://geobretagne.fr/mviewer/?config=/pub/cd22/apps/atlas.xml
+name: Atlas des paysages des Côtes-d'Armor
+owner:
+  link: https://cotesdarmor.fr
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Conseil départemental des Côtes-d'Armor
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- mviewer
+- geoportal
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00042394

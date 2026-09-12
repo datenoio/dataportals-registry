@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: easydb collection catalog of the Austrian Archaeological Institute (OeAI, Austrian Academy of Sciences).
+id: oeaidamoeawacat
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+endpoints:
+- type: easydb:session
+  url: https://oeaidam.oeaw.ac.at/api/v1/session
+link: https://oeaidam.oeaw.ac.at/
+name: OEAI DAM
+owner:
+  link: https://www.oeaw.ac.at/oeai/
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+  name: Austrian Archaeological Institute, Austrian Academy of Sciences
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: easydb
+  name: easydb
+status: active
+tags:
+- scientific
+- research data
+- academic
+- collections
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00042843

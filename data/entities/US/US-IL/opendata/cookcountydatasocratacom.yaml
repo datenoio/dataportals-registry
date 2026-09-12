@@ -26,6 +26,12 @@ endpoints:
   url: https://cookcounty.data.socrata.com/api/views
 - type: sitemap
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-cookcounty.data.socrata.com.xml
+- type: socrata:catalog
+  url: https://cookcounty.data.socrata.com/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://cookcounty.data.socrata.com/opensearch.xml
+  version: '1.1'
 id: cookcountydatasocratacom
 langs:
 - id: EN

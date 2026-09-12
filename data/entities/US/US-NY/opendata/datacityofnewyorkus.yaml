@@ -24,6 +24,12 @@ endpoints:
   url: https://data.cityofnewyork.us/data.json
 - type: sitemap
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.cityofnewyork.us.xml
+- type: socrata:catalog
+  url: https://data.cityofnewyork.us/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://data.cityofnewyork.us/opensearch.xml
+  version: '1.1'
 id: datacityofnewyorkus
 langs:
 - id: EN

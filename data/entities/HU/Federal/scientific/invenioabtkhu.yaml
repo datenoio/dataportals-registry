@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: InvenioRDM repository of the ELTE Research Centre for the Humanities.
+endpoints:
+- type: inveniordmapi:records
+  url: https://invenio.abtk.hu/api/records
+- type: oaipmh20
+  url: https://invenio.abtk.hu/oai2d?verb=Identify
+  version: '2.0'
+id: invenioabtkhu
+langs:
+- id: HU
+  name: Hungarian
+link: https://invenio.abtk.hu
+name: ELTE Research Centre for the Humanities Repository
+owner:
+  link: https://www.abtk.hu
+  location:
+    country:
+      id: HU
+      name: Hungary
+  name: ELTE Research Centre for the Humanities
+  type: Academy
+software:
+  id: inveniordm
+  name: InvenioRDM
+status: active
+tags:
+- scientific
+- research
+- academic
+- inveniordm
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043351

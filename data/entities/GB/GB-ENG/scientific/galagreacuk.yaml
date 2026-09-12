@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: GB-ENG
       name: England
-description: Institutional repository of University of Greenwich, holding publications and
-  other research outputs, including 13 Dataset records.
+description: Institutional repository of University of Greenwich, holding publications
+  and other research outputs, including 13 Dataset records.
 endpoints:
 - type: oaipmh20
   url: https://gala.gre.ac.uk/cgi/oai2?verb=Identify
@@ -29,6 +29,15 @@ endpoints:
   version: '2.0'
 - type: atom
   url: https://gala.gre.ac.uk/cgi/latest_tool?output=Atom
+- type: eprints:rdf
+  url: https://gala.gre.ac.uk/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://gala.gre.ac.uk/cgi/export/repository/RDFN3/devel.n3
+- type: eprints:rest
+  url: https://gala.gre.ac.uk/rest/eprint
+- type: opensearch
+  url: https://gala.gre.ac.uk/cgi/opensearchdescription
+  version: '1.1'
 id: galagreacuk
 langs:
 - id: EN

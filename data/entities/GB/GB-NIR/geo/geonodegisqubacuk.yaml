@@ -49,6 +49,14 @@ endpoints:
 - type: opensearch
   url: https://geonode.gis.qub.ac.uk/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
   version: '1.0'
+- type: geonode:datasets
+  url: https://geonode.gis.qub.ac.uk/api/datasets/
+- type: geonode:datasets
+  url: https://geonode.gis.qub.ac.uk/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geonode.gis.qub.ac.uk/catalogue/opensearch
+  version: '1.1'
 id: geonodegisqubacuk
 langs:
 - id: EN

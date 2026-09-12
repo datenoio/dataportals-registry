@@ -24,6 +24,15 @@ endpoints:
   url: https://www.e-zybw.be/api
 - type: sitemap
   url: https://www.e-zybw.be/sitemap.xml
+- type: opendatasoftapi
+  url: https://www.e-zybw.be/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://www.e-zybw.be/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://www.e-zybw.be/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://www.e-zybw.be/data.json
 id: wwwezybwbe
 langs:
 - id: FR

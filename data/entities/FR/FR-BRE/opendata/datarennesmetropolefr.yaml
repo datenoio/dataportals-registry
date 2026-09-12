@@ -25,6 +25,11 @@ endpoints:
   url: https://data.rennesmetropole.fr/api
 - type: sitemap
   url: https://data.rennesmetropole.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.rennesmetropole.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.rennesmetropole.fr/api/explore/v2.1/catalog/exports/dcat
 id: datarennesmetropolefr
 langs:
 - id: FR

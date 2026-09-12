@@ -25,6 +25,14 @@ endpoints:
 - type: ckan:package-list
   url: https://data.npafc.org/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://data.npafc.org/catalog.n3
+- type: dcat:xml
+  url: https://data.npafc.org/catalog.xml
+- type: dcat:jsonld
+  url: https://data.npafc.org/catalog.jsonld
+- type: dcat
+  url: https://data.npafc.org/catalog.rdf
 id: datanpafcorg
 langs:
 - id: EN

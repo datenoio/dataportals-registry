@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Public STAC API for ocean and marine geospatial collections (SFEOS).
+endpoints:
+- type: stacserverapi
+  url: https://api.aquaview.org/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://api.aquaview.org/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://api.aquaview.org/conformance
+  version: '1.0'
+id: apiaquavieworg
+langs:
+- id: EN
+  name: English
+link: https://api.aquaview.org/
+name: AQUAVIEW STAC API
+owner:
+  link: https://aquaview.org
+  location:
+    country:
+      id: US
+      name: United States
+  name: AQUAVIEW
+  type: Business
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- geospatial
+- commercial
+- stacserver
+- stac-server
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00043746

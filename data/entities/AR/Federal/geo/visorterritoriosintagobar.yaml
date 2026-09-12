@@ -55,6 +55,21 @@ endpoints:
 - type: wcs11
   url: https://visor-territorios.inta.gob.ar/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
   version: '1.1'
+- type: wfs200
+  url: https://visor-territorios.inta.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs201
+  url: https://visor-territorios.inta.gob.ar/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://visor-territorios.inta.gob.ar/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: geonode:datasets
+  url: https://visor-territorios.inta.gob.ar/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://visor-territorios.inta.gob.ar/catalogue/opensearch
+  version: '1.1'
 id: visorterritoriosintagobar
 langs:
 - id: ES

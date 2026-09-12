@@ -14,11 +14,12 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: The proposed project will create the first 'Digital Twin' of the Romanian coastal zone by
-  integrating geomorphological, remote sensing, and bathymetric measurement data with the results of laboratory
-  sedimentological analyses and mathematical modeling into a database organized according to Open Access
-  and FAIR principles, as well as visualization in a GIS instance, which will be made available to a wide
-  range of end users.
+description: The proposed project will create the first 'Digital Twin' of the Romanian
+  coastal zone by integrating geomorphological, remote sensing, and bathymetric measurement
+  data with the results of laboratory sedimentological analyses and mathematical modeling
+  into a database organized according to Open Access and FAIR principles, as well
+  as visualization in a GIS instance, which will be made available to a wide range
+  of end users.
 endpoints:
 - type: ckan
   url: https://digitwin.geoecomar.ro/api/3
@@ -31,6 +32,16 @@ endpoints:
   version: '3'
 - type: sitemap
   url: https://digitwin.geoecomar.ro/sitemap.xml
+- type: dcat:n3
+  url: https://digitwin.geoecomar.ro/catalog.n3
+- type: dcat:ttl
+  url: https://digitwin.geoecomar.ro/catalog.ttl
+- type: dcat:xml
+  url: https://digitwin.geoecomar.ro/catalog.xml
+- type: dcat:jsonld
+  url: https://digitwin.geoecomar.ro/catalog.jsonld
+- type: dcat
+  url: https://digitwin.geoecomar.ro/catalog.rdf
 id: digitwingeoecomarro
 langs:
 - id: EN

@@ -24,6 +24,15 @@ endpoints:
   url: https://data.combs-la-ville.fr/api
 - type: sitemap
   url: https://data.combs-la-ville.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.combs-la-ville.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.combs-la-ville.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.combs-la-ville.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.combs-la-ville.fr/data.json
 id: datacombslavillefr
 langs:
 - id: FR

@@ -24,6 +24,9 @@ endpoints:
 - type: wmts100
   url: http://ballerup.admin.gc2.io/mapcache/ballerup/wmts?SERVICE=WMTS&REQUEST=GetCapabilities
   version: 1.0.0
+- type: rest
+  url: http://ballerup.admin.gc2.io/api/v2/configuration
+  version: '2'
 id: ballerupadmingc2io
 langs:
 - id: DA

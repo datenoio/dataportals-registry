@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-NAQ
+      name: Nouvelle-Aquitaine
+description: mviewer photothèque of the SCoT du Périgord Vert (heritage, landscape,
+  and aerial views).
+endpoints:
+- type: mviewer:config
+  url: https://www.cartographie.agrn.fr/apps/scot_pvert_phototheque.xml
+id: wwwcartographieagrnfr
+langs:
+- id: FR
+  name: French
+link: https://www.cartographie.agrn.fr/?config=apps/scot_pvert_phototheque.xml
+name: SCoT du Périgord Vert photothèque
+owner:
+  link: https://www.cartographie.agrn.fr/?config=apps/scot_pvert_phototheque.xml
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-NAQ
+      name: Nouvelle-Aquitaine
+  name: SCoT du Périgord Vert
+  type: Local government
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- government
+- mviewer
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00043295

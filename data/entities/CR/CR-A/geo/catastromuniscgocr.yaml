@@ -74,6 +74,12 @@ endpoints:
 - type: wms-c111
   url: https://catastro.munisc.go.cr/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://catastro.munisc.go.cr/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://catastro.munisc.go.cr/catalogue/opensearch
+  version: '1.1'
 id: catastromuniscgocr
 langs:
 - id: ES
@@ -119,6 +125,3 @@ topics:
   name: Structure
   type: iso19115
 uid: cdi00021445
-content_types:
-- dataset
-- map_layer

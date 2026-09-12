@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: İTÜ Academic Archive (Polen) is a scientific data repository operated by
-  Istanbul Technical University running on DSpace.
+description: İTÜ Academic Archive (Polen) is a scientific data repository operated
+  by Istanbul Technical University running on DSpace.
 endpoints:
 - type: dspace
   url: https://polen.itu.edu.tr/server/api
@@ -25,6 +25,12 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://polen.itu.edu.tr/sitemap_index.xml
+- type: oaipmh20
+  url: https://polen.itu.edu.tr/oai/request?verb=Identify
+  version: '2.0'
+- type: oaipmh20
+  url: https://polen.itu.edu.tr/server/oai/request?verb=Identify
+  version: '2.0'
 id: polenituedutr
 langs:
 - id: TR

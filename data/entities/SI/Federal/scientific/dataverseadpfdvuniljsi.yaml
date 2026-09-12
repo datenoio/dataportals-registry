@@ -12,7 +12,7 @@ coverage:
       name: Slovenia
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Slovenian Social Science Data Archives (ADP) was established in 1997
   as an organizational unit of the Social Sciences Research Institute at the Faculty
@@ -25,6 +25,8 @@ endpoints:
 - type: oaipmh20
   url: https://dataverse.adp.fdv.uni-lj.si/oai?verb=Identify
   version: '2.0'
+- type: dataverseapi
+  url: https://dataverse.adp.fdv.uni-lj.si/api/info/version
 id: dataverseadpfdvuniljsi
 identifiers:
 - id: datacite

@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Nagoya Institute of Technology is a Scientific data repository operated
+  by Nagoya Institute of Technology, built with Pure.
+id: purenitechacjp
+langs:
+- id: JA
+  name: Japanese
+link: https://pure.nitech.ac.jp
+name: Nagoya Institute of Technology
+owner:
+  link: https://pure.nitech.ac.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+  name: Nagoya Institute of Technology
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043535
+endpoints:
+- type: oaipmh20
+  url: https://pure.nitech.ac.jp/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://pure.nitech.ac.jp/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://pure.nitech.ac.jp/sitemap/datasets.xml

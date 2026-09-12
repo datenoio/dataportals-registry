@@ -24,6 +24,13 @@ endpoints:
   url: https://opendata.paris.fr/api
 - type: sitemap
   url: https://opendata.paris.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://opendata.paris.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://opendata.paris.fr/api/v2/catalog/exports/dcat
+- type: dcatus11
+  url: https://opendata.paris.fr/data.json
 id: opendataparisfr
 identifiers:
 - id: dataportals.org

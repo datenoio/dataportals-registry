@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -35,8 +35,8 @@ owner:
   name: University of Ostrava
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: dspace
+  name: DSpace
 status: active
 tags:
 - scientific
@@ -47,3 +47,18 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00029232
+endpoints:
+- type: dspace
+  url: https://eduo.osu.cz/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://eduo.osu.cz/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://eduo.osu.cz/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://eduo.osu.cz/sitemap_index.xml
+- type: oaipmh20
+  url: https://eduo.osu.cz/server/oai/request?verb=Identify
+  version: '2.0'

@@ -15,15 +15,22 @@ coverage:
       id: ES-CN
       name: Canarias
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
-description: RIULL is the Institutional Repository of the University of La Laguna, created
-  with the aim of gathering, preserving and disseminating in open access the scientific and
-  academic production of the University of La Laguna. It is managed by the University Library.
+description: RIULL is the Institutional Repository of the University of La Laguna,
+  created with the aim of gathering, preserving and disseminating in open access the
+  scientific and academic production of the University of La Laguna. It is managed
+  by the University Library.
 endpoints:
 - type: oaipmh20
   url: https://riull.ull.es/oai/request?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://riull.ull.es/xmlui/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://riull.ull.es/xmlui/feed/atom_1.0/site
+  version: '1.0'
 id: riullulles
 identifiers:
 - id: openaire

@@ -20,6 +20,15 @@ endpoints:
   url: https://data.unedic.org/api
 - type: sitemap
   url: https://data.unedic.org/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.unedic.org/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.unedic.org/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.unedic.org/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.unedic.org/data.json
 id: dataunedicorg
 langs:
 - id: FR

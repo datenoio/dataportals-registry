@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: UMS ePrints is a scientific data repository operated by Universitas
-  Muhammadiyah Surakarta running on EPrints.
+description: UMS ePrints is a scientific data repository operated by Universitas Muhammadiyah
+  Surakarta running on EPrints.
 endpoints:
 - type: oaipmh20
   url: https://eprints.ums.ac.id/cgi/oai2?verb=Identify
@@ -27,6 +27,11 @@ endpoints:
   url: https://eprints.ums.ac.id/cgi/latest_tool?output=Atom
 - type: eprints:rest
   url: https://eprints.ums.ac.id/rest/eprint
+- type: eprints:datasets
+  url: https://eprints.ums.ac.id/cgi/exportview/type/dataset/JSON/dataset.js
+- type: opensearch
+  url: https://eprints.ums.ac.id/cgi/opensearchdescription
+  version: '1.1'
 id: eprintsumsacid
 langs:
 - id: ID

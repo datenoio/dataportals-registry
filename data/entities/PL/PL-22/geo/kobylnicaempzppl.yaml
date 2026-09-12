@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: PL-22
+      name: Pomorskie
+description: SIP Gmina Kobylnica is a Geoportal operated by Gmina Kobylnica, built
+  with Lizmap.
+id: kobylnicaempzppl
+langs:
+- id: PL
+  name: Polish
+link: https://kobylnica.e-mpzp.pl/
+name: SIP Gmina Kobylnica
+owner:
+  link: https://www.kobylnica.pl
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    subregion:
+      id: PL-22
+      name: Pomorskie
+  name: Gmina Kobylnica
+  type: Local government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- lizmap
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043618
+endpoints:
+- type: lizmap:service
+  url: https://kobylnica.e-mpzp.pl/index.php/lizmap/service/?repository=kobylnica&project=kobylnica
+- type: wms130
+  url: https://kobylnica.e-mpzp.pl/index.php/lizmap/service/?repository=kobylnica&project=kobylnica&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0

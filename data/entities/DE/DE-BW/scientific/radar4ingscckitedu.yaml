@@ -22,6 +22,13 @@ description: NFDI4Ing disciplinary RADAR repository for compiling completed engi
 endpoints:
 - type: radar:catalog
   url: https://radar4ing.scc.kit.edu/
+- type: oaipmh20
+  url: https://radar4ing.scc.kit.edu/oai/OAIHandler?verb=Identify
+  version: '2.0'
+- type: radar:datasets
+  url: https://radar4ing.scc.kit.edu/radar/api/datasets
+- type: sitemap
+  url: https://radar4ing.scc.kit.edu/radar/sitemap
 id: radar4ingscckitedu
 identifiers:
 - id: re3data

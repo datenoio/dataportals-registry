@@ -30,6 +30,16 @@ endpoints:
 - type: ckan:package-list
   url: https://datosabiertos.aytosanlorenzo.es/api/3/action/package_list
   version: '3'
+- type: dcat:jsonld
+  url: https://datosabiertos.aytosanlorenzo.es/catalog.jsonld
+- type: dcat:n3
+  url: https://datosabiertos.aytosanlorenzo.es/catalog.n3
+- type: dcat:ttl
+  url: https://datosabiertos.aytosanlorenzo.es/catalog.ttl
+- type: dcat:xml
+  url: https://datosabiertos.aytosanlorenzo.es/catalog.xml
+- type: dcat
+  url: https://datosabiertos.aytosanlorenzo.es/catalog.rdf
 id: datosabiertosaytosanlorenzoes
 langs:
 - id: ES

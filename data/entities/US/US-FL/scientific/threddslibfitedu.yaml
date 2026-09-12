@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-FL
+      name: Florida
+description: THREDDS catalog of meteorological datasets hosted by the Florida Institute
+  of Technology library.
+endpoints:
+- type: thredds:catalog
+  url: https://thredds.lib.fit.edu/thredds/catalog.xml
+id: threddslibfitedu
+langs:
+- id: EN
+  name: English
+link: https://thredds.lib.fit.edu/thredds/catalog.html
+name: Florida Tech Library THREDDS Data Server
+owner:
+  link: https://www.fit.edu/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: Florida Institute of Technology
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- THREDDS
+- meteorology
+- scientific
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00042365

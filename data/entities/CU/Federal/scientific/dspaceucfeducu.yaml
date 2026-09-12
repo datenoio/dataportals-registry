@@ -13,7 +13,7 @@ coverage:
       name: Cuba
     level: 20
     macroregion:
-      id: '029'
+      id: 029
       name: Caribbean
 description: DSpace 7 institutional repository of Universidad de Cienfuegos "Carlos
   Rafael Rodríguez" (Repositorio UCf). REST API at /server/api.
@@ -24,6 +24,11 @@ endpoints:
 - type: oaipmh20
   url: https://dspace.ucf.edu.cu/server/oai/request?verb=Identify
   version: '2.0'
+- type: dspace:objects
+  url: https://dspace.ucf.edu.cu/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://dspace.ucf.edu.cu/sitemap_index.xml
 id: dspaceucfeducu
 langs:
 - id: ES

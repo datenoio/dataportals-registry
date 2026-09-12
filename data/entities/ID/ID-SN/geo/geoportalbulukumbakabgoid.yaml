@@ -69,6 +69,12 @@ endpoints:
 - type: wms-c111
   url: https://geoportal.bulukumbakab.go.id/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: wms111
+  url: https://geoportal.bulukumbakab.go.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: opensearch
+  url: https://geoportal.bulukumbakab.go.id/catalogue/opensearch
+  version: '1.1'
 id: geoportalbulukumbakabgoid
 langs:
 - id: ID

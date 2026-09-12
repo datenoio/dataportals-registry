@@ -39,6 +39,8 @@ endpoints:
   url: http://mapy2.natur.cuni.cz:8080/geonetwork/srv/api/site
 - type: opensearch
   url: http://mapy2.natur.cuni.cz:8080/portal.opensearch
+- type: dcat:xml
+  url: http://mapy2.natur.cuni.cz:8080/geonetwork/srv/api/records?accept=application/rdf+xml
 id: mapy2naturcunicz
 langs:
 - id: CS

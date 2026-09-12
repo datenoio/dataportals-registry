@@ -24,6 +24,18 @@ description: The PLDR brings together datasets that track changes in the determi
 endpoints:
 - type: dcatus11
   url: https://pldr.org/data.json
+- type: ckan
+  url: https://pldr.org/api/3/action/package_search?rows=0
+  version: '3'
+- type: ckan
+  url: https://pldr.org/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://pldr.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://pldr.org/api/3/action/package_list
+  version: '3'
 id: pldrorg
 langs:
 - id: EN

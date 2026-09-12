@@ -13,7 +13,7 @@ coverage:
       name: Republic of North Macedonia
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: DSpace 7 institutional repository of Ss. Cyril and Methodius University
   in Skopje (UKIM). Open-access publications, theses, and research outputs, with REST
@@ -28,6 +28,8 @@ endpoints:
 - type: oaipmh20
   url: https://repository.ukim.mk/server/oai/request?verb=Identify
   version: '2.0'
+- type: sitemap
+  url: https://repository.ukim.mk/sitemap_index.xml
 id: repositoryukimmk
 langs:
 - id: MK

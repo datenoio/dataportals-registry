@@ -21,6 +21,12 @@ description: Open Data Cube Explorer for Digital Earth Sweden, providing a techn
 endpoints:
 - type: stacserverapi
   url: https://explorer.digitalearth.se/stac
+- type: stacserverapi
+  url: https://explorer.digitalearth.se/stac/
+  version: '1.0'
+- type: stacserverapi:stac-collections
+  url: https://explorer.digitalearth.se/stac/collections
+  version: '1.0'
 id: explorerdigitalearthse
 langs:
 - id: SV

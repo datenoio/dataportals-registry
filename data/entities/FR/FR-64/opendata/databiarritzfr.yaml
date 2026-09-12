@@ -23,6 +23,15 @@ endpoints:
   url: https://data.biarritz.fr/api
 - type: sitemap
   url: https://data.biarritz.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.biarritz.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.biarritz.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.biarritz.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.biarritz.fr/data.json
 id: databiarritzfr
 langs:
 - id: FR

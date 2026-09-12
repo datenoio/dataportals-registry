@@ -80,6 +80,12 @@ endpoints:
   url: https://geoportal.govmu.org/geoserver/rest/settings
 - type: geoserver:layers
   url: https://geoportal.govmu.org/geoserver/rest/layers
+- type: geonode:datasets
+  url: https://geoportal.govmu.org/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geoportal.govmu.org/catalogue/opensearch
+  version: '1.1'
 id: geoportalgovmuorg
 langs:
 - id: EN

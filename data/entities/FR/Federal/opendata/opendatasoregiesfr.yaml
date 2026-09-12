@@ -21,6 +21,15 @@ endpoints:
   url: https://opendata.soregies.fr/api
 - type: sitemap
   url: https://opendata.soregies.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://opendata.soregies.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://opendata.soregies.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://opendata.soregies.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://opendata.soregies.fr/data.json
 id: opendatasoregiesfr
 langs:
 - id: FR

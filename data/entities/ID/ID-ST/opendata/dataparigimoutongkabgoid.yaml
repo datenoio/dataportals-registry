@@ -17,8 +17,8 @@ coverage:
     subregion: &id002
       id: ID-ST
       name: Sulawesi Tengah
-description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Kabupaten Parigi
-  Moutong.
+description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Kabupaten
+  Parigi Moutong.
 endpoints:
 - type: ckan:package-search
   url: https://data.parigimoutongkab.go.id/api/3/action/package_search
@@ -26,6 +26,19 @@ endpoints:
 - type: ckan:package-list
   url: https://data.parigimoutongkab.go.id/api/3/action/package_list
   version: '3'
+- type: ckan
+  url: https://data.parigimoutongkab.go.id/api/3
+  version: '3'
+- type: dcat:ttl
+  url: https://data.parigimoutongkab.go.id/catalog.ttl
+- type: dcat:xml
+  url: https://data.parigimoutongkab.go.id/catalog.xml
+- type: dcat
+  url: https://data.parigimoutongkab.go.id/catalog.rdf
+- type: dcat:n3
+  url: https://data.parigimoutongkab.go.id/catalog.n3
+- type: dcat:jsonld
+  url: https://data.parigimoutongkab.go.id/catalog.jsonld
 id: dataparigimoutongkabgoid
 langs:
 - id: ID

@@ -24,6 +24,11 @@ endpoints:
 - type: dspace:objects
   url: https://dspace.unza.zm/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://dspace.unza.zm/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://dspace.unza.zm/sitemap_index.xml
 id: dspaceunzazm
 langs:
 - id: EN

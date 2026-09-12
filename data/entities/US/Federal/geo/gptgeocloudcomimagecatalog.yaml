@@ -34,6 +34,12 @@ endpoints:
   url: https://gpt.geocloud.com/imagecatalog/opensearch?f=csv&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
 - type: esrigeo:kml
   url: https://gpt.geocloud.com/imagecatalog/opensearch?f=kml&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: csw202
+  url: https://gpt.geocloud.com/imagecatalog/csw
+  version: 3.0.0
+- type: csw202
+  url: https://gpt.geocloud.com/imagecatalog/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
 id: gptgeocloudcomimagecatalog
 langs:
 - id: EN

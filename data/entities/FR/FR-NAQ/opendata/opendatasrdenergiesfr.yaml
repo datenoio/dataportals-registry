@@ -24,6 +24,15 @@ endpoints:
   url: https://opendata.srd-energies.fr/api
 - type: sitemap
   url: https://opendata.srd-energies.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://opendata.srd-energies.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://opendata.srd-energies.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://opendata.srd-energies.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://opendata.srd-energies.fr/data.json
 id: opendatasrdenergiesfr
 langs:
 - id: FR

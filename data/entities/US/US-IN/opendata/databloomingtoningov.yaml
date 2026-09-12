@@ -28,6 +28,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.bloomington.in.gov.xml
 - type: opensearch
   url: https://data.bloomington.in.gov/opensearch.xml
+- type: socrata:catalog
+  url: https://data.bloomington.in.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: databloomingtoningov
 langs:
 - id: EN

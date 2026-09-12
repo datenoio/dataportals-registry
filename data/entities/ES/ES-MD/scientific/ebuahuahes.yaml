@@ -22,6 +22,9 @@ description: Institutional DSpace repository of Universidad de Alcalá (e_Buah).
 endpoints:
 - type: dspace:catalog
   url: https://ebuah.uah.es
+- type: oaipmh20
+  url: https://ebuah.uah.es/oai/request?verb=Identify
+  version: '2.0'
 id: ebuahuahes
 langs:
 - id: ES

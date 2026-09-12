@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -25,6 +25,10 @@ identifiers:
 langs:
 - id: ES
   name: Spanish
+endpoints:
+- type: oaipmh20
+  url: http://www.repotesis.art.sld.cu/?verb=Identify
+  version: '2.0'
 link: http://www.repotesis.art.sld.cu
 name: Repositorio de Tesis en Ciencias Biomédicas y de la Salud de Artemisa
 owner:
@@ -39,8 +43,8 @@ owner:
 properties:
   is_national: false
 software:
-  id: custom
-  name: Custom software
+  id: cwis
+  name: Collection Workflow Integration System
 status: active
 tags:
 - scientific

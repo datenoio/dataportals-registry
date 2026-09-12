@@ -2,6 +2,7 @@
 
 import os
 import json
+import re
 import tempfile
 import pytest
 import yaml
@@ -15,6 +16,9 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
 from builder import (
     load_jsonl,
+    load_dataset_jsonl,
+    remove_uncompressed_jsonl,
+    verify_both_formats_exist,
     build_dataset,
     merge_datasets,
     validate_software_profile,
@@ -52,6 +56,59 @@ class TestLoadJsonl:
         data = load_jsonl(filepath)
         assert len(data) == 1
         assert data[0]["id"] == "single"
+
+
+class TestLoadDatasetJsonl:
+    """Tests for compressed-export fallbacks."""
+
+    def test_load_dataset_jsonl_prefers_uncompressed(self, temp_dir, monkeypatch):
+        import builder
+
+        monkeypatch.setattr(builder, "DATASETS_DIR", temp_dir)
+        jsonl_path = os.path.join(temp_dir, "catalogs.jsonl")
+        with open(jsonl_path, "w", encoding="utf8") as handle:
+            handle.write('{"id": "plain"}\n')
+        data = load_dataset_jsonl("catalogs.jsonl")
+        assert data == [{"id": "plain"}]
+
+    def test_load_dataset_jsonl_falls_back_to_zst(self, temp_dir, monkeypatch):
+        import builder
+        import zstandard as zstd
+
+        monkeypatch.setattr(builder, "DATASETS_DIR", temp_dir)
+        payload = b'{"id": "compressed"}\n'
+        zst_path = os.path.join(temp_dir, "catalogs.jsonl.zst")
+        with open(zst_path, "wb") as handle:
+            handle.write(zstd.ZstdCompressor().compress(payload))
+        data = load_dataset_jsonl("catalogs.jsonl")
+        assert data == [{"id": "compressed"}]
+
+    def test_remove_uncompressed_jsonl_keeps_zst(self, temp_dir, monkeypatch):
+        import builder
+
+        monkeypatch.setattr(builder, "DATASETS_DIR", temp_dir)
+        jsonl_path = os.path.join(temp_dir, "catalogs.jsonl")
+        zst_path = os.path.join(temp_dir, "catalogs.jsonl.zst")
+        with open(jsonl_path, "w", encoding="utf8") as handle:
+            handle.write("{}\n")
+        with open(zst_path, "wb") as handle:
+            handle.write(b"zst")
+        remove_uncompressed_jsonl("catalogs.jsonl")
+        assert not os.path.exists(jsonl_path)
+        assert os.path.exists(zst_path)
+
+    def test_verify_both_formats_exist_zst_only(self, temp_dir, monkeypatch):
+        import builder
+
+        monkeypatch.setattr(builder, "DATASETS_DIR", temp_dir)
+        zst_path = os.path.join(temp_dir, "catalogs.jsonl.zst")
+        with open(zst_path, "wb") as handle:
+            handle.write(b"zst")
+        assert (
+            verify_both_formats_exist("catalogs.jsonl", require_uncompressed=False)
+            is True
+        )
+        assert verify_both_formats_exist("catalogs.jsonl") is False
 
 
 class TestBuildDataset:
@@ -494,7 +551,63 @@ class TestAssignDryrun:
 
         builder.assign_by_dir("cdi", entries_dir, dryrun=False)
         with open(path, encoding="utf8") as f:
-            assert yaml.safe_load(f)["uid"].startswith("cdi")
+            record = yaml.safe_load(f)
+        assert record["uid"] == "cdi00000001"
+        assert record["id"] == "sample"
+
+
+class TestAssignInvalidUid:
+    """assign_by_dir must repair overflowed UIDs without rewriting YAML bodies."""
+
+    def test_reassigns_nine_digit_uids_using_gaps(self, temp_dir):
+        import builder
+
+        entries_dir = os.path.join(temp_dir, "entities")
+        os.makedirs(entries_dir, exist_ok=True)
+
+        high_path = os.path.join(entries_dir, "high.yaml")
+        invalid_path = os.path.join(entries_dir, "invalid.yaml")
+        missing_path = os.path.join(entries_dir, "missing.yaml")
+        with open(high_path, "w", encoding="utf8") as f:
+            f.write("id: high\nname: High\nuid: cdi99999999\n")
+        with open(invalid_path, "w", encoding="utf8") as f:
+            f.write(
+                "id: invalid\n"
+                "name: Invalid\n"
+                "description: keep this body\n"
+                "uid: cdi100000000\n"
+            )
+        with open(missing_path, "w", encoding="utf8") as f:
+            f.write("id: missing\nname: Missing\n")
+
+        builder.assign_by_dir("cdi", entries_dir, dryrun=False)
+
+        with open(high_path, encoding="utf8") as f:
+            high_text = f.read()
+        with open(invalid_path, encoding="utf8") as f:
+            invalid_text = f.read()
+        with open(missing_path, encoding="utf8") as f:
+            missing_text = f.read()
+
+        assert yaml.safe_load(high_text)["uid"] == "cdi99999999"
+        assert yaml.safe_load(invalid_text)["uid"] == "cdi00000001"
+        assert yaml.safe_load(missing_text)["uid"] == "cdi00000002"
+        assert "description: keep this body\n" in invalid_text
+        assert re.search(r"^(cdi|temp)\d{8}$", yaml.safe_load(invalid_text)["uid"])
+
+
+class TestSoftwareMap:
+    """Quality checks should read software IDs from YAML definitions."""
+
+    def test_includes_yaml_definitions(self):
+        import builder
+
+        builder._software_map_cache = None
+        software_map = builder.get_software_map()
+        assert "geoclip" in software_map
+        assert software_map["geoclip"]["name"] == "Géoclip"
+        assert "ckan" in software_map
+        assert "opendataente" in software_map
 
 
 class TestCreateTableFromJsonl:

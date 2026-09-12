@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: THREDDS catalog of Deltares Marine Strategy Framework Directive / OSPAR
+  satellite water-quality subsets, including Sentinel-3 OLCI monthly and multi-year
+  collections.
+endpoints:
+- type: thredds:catalog
+  url: https://msfd.avi.deltares.nl/thredds/catalog.xml
+id: msfdavideltaresnl
+langs:
+- id: NL
+  name: Dutch
+- id: EN
+  name: English
+link: https://msfd.avi.deltares.nl/thredds/catalog.html
+name: Deltares MSFD OSPAR THREDDS
+owner:
+  link: https://www.deltares.nl/
+  location:
+    country:
+      id: NL
+      name: Netherlands
+  name: Deltares
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- scientific
+- research
+- academic
+- thredds
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00043593

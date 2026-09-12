@@ -61,6 +61,12 @@ endpoints:
 - type: wps100
   url: https://geonode.imperialbeachca.gov/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://geonode.imperialbeachca.gov/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geonode.imperialbeachca.gov/catalogue/opensearch
+  version: '1.1'
 id: geonodeimperialbeachcagov
 langs:
 - id: EN

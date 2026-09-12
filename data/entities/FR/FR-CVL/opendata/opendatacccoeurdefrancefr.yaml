@@ -24,6 +24,13 @@ endpoints:
   url: https://opendata.cc-coeurdefrance.fr/api
 - type: sitemap
   url: https://opendata.cc-coeurdefrance.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://opendata.cc-coeurdefrance.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://opendata.cc-coeurdefrance.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://opendata.cc-coeurdefrance.fr/data.json
 id: opendatacccoeurdefrancefr
 langs:
 - id: FR

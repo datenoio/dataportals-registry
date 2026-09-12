@@ -14,14 +14,16 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: KEEN Data Management Platform is a scientific data repository operated by
-  Technische Universität Dresden running on Dataverse.
+description: KEEN Data Management Platform is a scientific data repository operated
+  by Technische Universität Dresden running on Dataverse.
 endpoints:
 - type: dataverseapi
   url: https://infraverse.zih.tu-dresden.de/api/search
 - type: oaipmh20
   url: https://infraverse.zih.tu-dresden.de/oai?verb=Identify
   version: '2.0'
+- type: dataverseapi
+  url: https://infraverse.zih.tu-dresden.de/api/info/version
 id: infraversezihtudresdende
 langs:
 - id: DE

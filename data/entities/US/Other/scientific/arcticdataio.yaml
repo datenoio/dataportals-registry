@@ -22,8 +22,9 @@ endpoints:
   url: https://arcticdata.io/metacat/d1/mn
 - type: sitemap
   url: https://arcticdata.io/metacat/sitemaps/sitemap_index.xml
-- type: sitemap
-  url: https://arcticdata.io/sitemap_index.xml
+- type: rest
+  url: https://arcticdata.io/metacat/d1/mn/v2
+  version: '2'
 id: arcticdataio
 identifiers:
 - id: re3data

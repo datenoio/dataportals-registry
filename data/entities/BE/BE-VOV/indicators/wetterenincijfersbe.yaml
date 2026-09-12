@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -62,3 +62,6 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi00038576
+endpoints:
+- type: swing:viewer
+  url: https://wetteren.incijfers.be/viewer/

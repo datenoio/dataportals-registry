@@ -21,6 +21,15 @@ description: GREDOS is a DSpace repository listed in re3data as a research data 
 endpoints:
 - type: dspace:catalog
   url: https://gredos.usal.es
+- type: oaipmh20
+  url: https://gredos.usal.es/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://gredos.usal.es/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://gredos.usal.es/feed/atom_1.0/site
+  version: '1.0'
 id: gredosusales
 identifiers:
 - id: re3data

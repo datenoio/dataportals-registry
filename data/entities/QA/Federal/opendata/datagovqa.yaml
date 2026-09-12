@@ -21,6 +21,15 @@ endpoints:
   url: https://www.data.gov.qa/api
 - type: sitemap
   url: https://www.data.gov.qa/sitemap.xml
+- type: opendatasoftapi
+  url: https://www.data.gov.qa/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://www.data.gov.qa/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://www.data.gov.qa/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://www.data.gov.qa/data.json
 id: datagovqa
 langs:
 - id: EN

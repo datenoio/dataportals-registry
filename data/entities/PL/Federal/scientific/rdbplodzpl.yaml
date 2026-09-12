@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,12 +14,12 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: TUL Open Research Data Repository (RDB.open) is a service addressed to the scientific
-  and research community of the Lodz University of Technology. The main purpose of RDB.open
-  is to collect, share and store the open research data, both during the research and after
-  its completion, at least for the minimum period indicated by the funder or the scientists.
-  The RDB.open is a place where research data can be openly shared, accessed and then reused
-  by others.
+description: TUL Open Research Data Repository (RDB.open) is a service addressed to
+  the scientific and research community of the Lodz University of Technology. The
+  main purpose of RDB.open is to collect, share and store the open research data,
+  both during the research and after its completion, at least for the minimum period
+  indicated by the funder or the scientists. The RDB.open is a place where research
+  data can be openly shared, accessed and then reused by others.
 id: rdbplodzpl
 identifiers:
 - id: openaire
@@ -42,8 +42,8 @@ owner:
   name: Lodz University of Technology
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: dataverse
+  name: Dataverse
 status: active
 tags:
 - scientific
@@ -75,3 +75,11 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00032516
+endpoints:
+- type: dataverseapi
+  url: https://rdb.p.lodz.pl/api/search
+- type: oaipmh20
+  url: https://rdb.p.lodz.pl/oai?verb=Identify
+  version: '2.0'
+- type: dataverseapi
+  url: https://rdb.p.lodz.pl/api/info/version

@@ -17,14 +17,21 @@ coverage:
     subregion:
       id: GB-ENG
       name: England
-description: Birmingham City Observatory, the city council's Huwise/OpenDataSoft
-  portal for civic, socioeconomic, and environmental datasets covering Birmingham
-  and the wider West Midlands.
+description: Birmingham City Observatory, the city council's Huwise/OpenDataSoft portal
+  for civic, socioeconomic, and environmental datasets covering Birmingham and the
+  wider West Midlands.
 endpoints:
 - type: opendatasoftapi
   url: https://www.cityobservatory.birmingham.gov.uk/api
 - type: sitemap
   url: https://www.cityobservatory.birmingham.gov.uk/sitemap.xml
+- type: opendatasoftapi
+  url: https://www.cityobservatory.birmingham.gov.uk/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://www.cityobservatory.birmingham.gov.uk/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://www.cityobservatory.birmingham.gov.uk/api/explore/v2.1/catalog/exports/dcat
 id: cityobservatorybirminghamgovuk
 identifiers:
 - id: builtwith

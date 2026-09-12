@@ -29,6 +29,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.brla.gov.xml
 - type: opensearch
   url: https://data.brla.gov/opensearch.xml
+- type: socrata:catalog
+  url: https://data.brla.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: databrlagov
 identifiers:
 - id: dataportals.org

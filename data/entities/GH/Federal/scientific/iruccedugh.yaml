@@ -23,6 +23,11 @@ endpoints:
 - type: dspace:objects
   url: https://ir.ucc.edu.gh/server/api/discover/search/objects
   version: '7'
+- type: sitemap
+  url: https://ir.ucc.edu.gh/sitemap_index.xml
+- type: oaipmh20
+  url: https://ir.ucc.edu.gh/server/oai/request?verb=Identify
+  version: '2.0'
 id: iruccedugh
 langs:
 - id: EN

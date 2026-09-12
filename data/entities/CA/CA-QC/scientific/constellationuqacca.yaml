@@ -23,6 +23,22 @@ endpoints:
 - type: oaipmh20
   url: https://constellation.uqac.ca/cgi/oai2?verb=Identify
   version: '2.0'
+- type: atom
+  url: https://constellation.uqac.ca/cgi/latest_tool?output=Atom
+- type: eprints:datasets
+  url: https://constellation.uqac.ca/cgi/exportview/type/dataset/JSON/dataset.js
+- type: rss
+  url: https://constellation.uqac.ca/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: eprints:rest
+  url: https://constellation.uqac.ca/rest/eprint
+- type: eprints:rdf
+  url: https://constellation.uqac.ca/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://constellation.uqac.ca/cgi/export/repository/RDFN3/devel.n3
+- type: opensearch
+  url: https://constellation.uqac.ca/cgi/opensearchdescription
+  version: '1.1'
 id: constellationuqacca
 langs:
 - id: FR

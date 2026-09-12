@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: GR-M
+      name: Kríti
+description: Live DKAN open data catalog of the Municipality of Heraklion (Crete),
+  successor to the former Smart City CKAN at smartcity.heraklion.gr/opendata/.
+endpoints:
+- type: ckan:package-list
+  url: https://opendata.smartcity.heraklion.gr/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://opendata.smartcity.heraklion.gr/data.json
+id: opendatasmartcityherakliongr
+langs:
+- id: EL
+  name: Greek
+link: https://opendata.smartcity.heraklion.gr
+name: Municipality of Heraklion Open Data Portal
+owner:
+  link: https://www.heraklion.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    subregion:
+      id: GR-M
+      name: Kríti
+  name: Municipality of Heraklion
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dkan
+  name: DKAN
+status: active
+tags:
+- government
+- greece
+- crete
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00043340

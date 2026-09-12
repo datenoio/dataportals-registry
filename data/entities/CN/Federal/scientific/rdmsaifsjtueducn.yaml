@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: InvenioRDM research data repository of SJTU SAIF.
+endpoints:
+- type: inveniordmapi:records
+  url: https://rdm.saif.sjtu.edu.cn/api/records
+- type: oaipmh20
+  url: https://rdm.saif.sjtu.edu.cn/oai2d?verb=Identify
+  version: '2.0'
+id: rdmsaifsjtueducn
+langs:
+- id: ZH
+  name: Chinese
+link: https://rdm.saif.sjtu.edu.cn
+name: SAIF Research Data Management
+owner:
+  link: https://www.saif.sjtu.edu.cn
+  location:
+    country:
+      id: CN
+      name: China
+  name: Shanghai Jiao Tong University Shanghai Advanced Institute of Finance
+  type: Academy
+software:
+  id: inveniordm
+  name: InvenioRDM
+status: active
+tags:
+- scientific
+- research
+- academic
+- inveniordm
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042968

@@ -19,6 +19,9 @@ description: Archive of high-resolution HERMES spectra from the Mercator Telesco
 endpoints:
 - type: tap:capabilities
   url: https://mercatorvo.ster.kuleuven.be/tap/capabilities
+- type: oaipmh20
+  url: https://mercatorvo.ster.kuleuven.be/oai.xml?verb=Identify
+  version: '2.0'
 id: mercatorvosterkuleuvenbe
 langs:
 - id: EN

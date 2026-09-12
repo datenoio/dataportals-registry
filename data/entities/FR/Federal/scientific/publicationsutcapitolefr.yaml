@@ -21,6 +21,10 @@ endpoints:
 - type: oaipmh20
   url: https://publications.ut-capitole.fr/cgi/oai2?verb=Identify
   version: '2.0'
+- type: eprints:rest
+  url: https://publications.ut-capitole.fr/rest/eprint
+- type: eprints:datasets
+  url: https://publications.ut-capitole.fr/cgi/exportview/type/dataset/JSON/dataset.js
 id: publicationsutcapitolefr
 langs:
 - id: FR

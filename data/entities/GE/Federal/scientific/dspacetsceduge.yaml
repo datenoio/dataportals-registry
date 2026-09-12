@@ -21,6 +21,15 @@ endpoints:
 - type: oaipmh20
   url: http://dspace.tsc.edu.ge/oai/request?verb=Identify
   version: '2.0'
+- type: dspace:items
+  url: http://dspace.tsc.edu.ge/rest/items
+  version: '6'
+- type: atom
+  url: http://dspace.tsc.edu.ge/feed/atom_1.0/site
+  version: '1.0'
+- type: rss
+  url: http://dspace.tsc.edu.ge/feed/rss_2.0/site
+  version: '2.0'
 id: dspacetsceduge
 langs:
 - id: KA

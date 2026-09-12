@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+description: City of Osnabrück SensorThings catalog of parking, traffic, and urban
+  IoT Things and Datastreams published through FROST-Server.
+endpoints:
+- type: sensorthings
+  url: https://daten-api.osnabrueck.de/v1.1/
+  version: '1.1'
+- type: sensorthings
+  url: https://daten-api.osnabrueck.de/v1.1/Datastreams?$top=1&$count=true
+  version: '1.1'
+- type: sensorthings
+  url: https://daten-api.osnabrueck.de/v1.1/Things?$top=1&$count=true
+  version: '1.1'
+id: datenapiosnabrueckde
+langs:
+- id: DE
+  name: German
+link: https://daten-api.osnabrueck.de/
+name: Osnabrück Daten-API SensorThings
+owner:
+  link: https://www.osnabrueck.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+  name: Stadt Osnabrück
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: frostserver
+  name: FROST-Server
+status: active
+tags:
+- SensorThings
+- IoT
+- FROST
+- Osnabrück
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00043018

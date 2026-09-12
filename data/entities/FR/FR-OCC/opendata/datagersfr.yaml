@@ -24,6 +24,15 @@ endpoints:
   url: https://data.gers.fr/api
 - type: sitemap
   url: https://data.gers.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.gers.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.gers.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.gers.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.gers.fr/data.json
 id: datagersfr
 langs:
 - id: FR

@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: CA-NB
       name: New Brunswick
-description: Chaleur Regional Service Commission ArcGIS Hub (GéoHub) with public GIS sections
-  for local entities and the Chaleur rural district.
+description: Chaleur Regional Service Commission ArcGIS Hub (GéoHub) with public GIS
+  sections for local entities and the Chaleur rural district.
 endpoints:
 - type: dcatap201
   url: https://gis-csrchaleurrsc.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -29,6 +29,8 @@ endpoints:
   url: https://gis-csrchaleurrsc.hub.arcgis.com/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://gis-csrchaleurrsc.hub.arcgis.com/api/search/v1
+- type: dcatus11
+  url: https://gis-csrchaleurrsc.hub.arcgis.com/data.json
 id: giscsrchaleurrschubarcgiscom
 langs:
 - id: FR

@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Fundación Dialnet Dataverse is a Scientific data repository operated
+  by Fundación Dialnet, built with Dataverse.
+id: datosdialnetuniriojaes
+langs:
+- id: ES
+  name: Spanish
+link: https://datos.dialnet.unirioja.es
+name: Fundación Dialnet Dataverse
+owner:
+  link: https://dialnet.unirioja.es
+  location:
+    country:
+      id: ES
+      name: Spain
+  name: Fundación Dialnet
+  type: Academy
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research
+- academic
+- dataverse
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043142
+endpoints:
+- type: dataverseapi
+  url: https://datos.dialnet.unirioja.es/api/search
+- type: oaipmh20
+  url: https://datos.dialnet.unirioja.es/oai?verb=Identify
+  version: '2.0'

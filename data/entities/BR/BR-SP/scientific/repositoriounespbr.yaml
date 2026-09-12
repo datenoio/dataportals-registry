@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -45,8 +45,8 @@ owner:
   name: Universidade Estadual Paulista (UNESP)
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: dspace
+  name: DSpace
 status: active
 tags:
 - scientific
@@ -60,3 +60,6 @@ topics:
   name: Education, culture and sport
   type: eudatatheme
 uid: cdi00028552
+endpoints:
+- type: oaipmh20
+  url: https://repositorio.unesp.br/server/oai/request?verb=Identify

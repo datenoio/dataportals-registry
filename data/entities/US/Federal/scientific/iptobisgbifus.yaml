@@ -14,17 +14,21 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: "The OBIS-USA Integrated Publishing Toolkit is managed by the United\
-  \ States Geological Survey and includes marine observation data collected in U.S.\
-  \ Waters or with U.S. funding. OBIS-USA is part of an international data sharing\
-  \ network (Ocean Biodiversity Information System, OBIS) coordinated by the Intergovernmental\
-  \ Oceanographic Commission, of UNESCO (United Nations Educational, Science and Cultural\
-  \ Organization International Oceanographic Data and Information Exchange.\r\n\r\n\
-  For more information contact obis-usa@usgs.gov"
+description: "The OBIS-USA Integrated Publishing Toolkit is managed by the United
+  States Geological Survey and includes marine observation data collected in U.S.
+  Waters or with U.S. funding. OBIS-USA is part of an international data sharing network
+  (Ocean Biodiversity Information System, OBIS) coordinated by the Intergovernmental
+  Oceanographic Commission, of UNESCO (United Nations Educational, Science and Cultural
+  Organization International Oceanographic Data and Information Exchange.\r\n\r\nFor
+  more information contact obis-usa@usgs.gov"
 endpoints:
 - type: rss
   url: https://ipt-obis.gbif.us/rss.do
   version: '2.0'
+- type: dcat:ttl
+  url: https://ipt-obis.gbif.us/dcat
+- type: ipt:dataset
+  url: https://ipt-obis.gbif.us/inventory/dataset
 id: iptobisgbifus
 langs:
 - id: EN

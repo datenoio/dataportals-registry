@@ -20,8 +20,8 @@ coverage:
       id: NG-OG
       name: Ogun
 description: GeoNode spatial data infrastructure of Ogun State, publishing datasets,
-  maps, and documents for state planning (42 datasets and 12 documents on GeoNode 4.4)
-  with CSW and OGC services.
+  maps, and documents for state planning (42 datasets and 12 documents on GeoNode
+  4.4) with CSW and OGC services.
 endpoints:
 - type: geonode:datasets
   url: https://gis.ogunstate.gov.ng/api/datasets/
@@ -53,6 +53,30 @@ endpoints:
 - type: wcs111
   url: https://gis.ogunstate.gov.ng/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
+- type: wfs100
+  url: https://gis.ogunstate.gov.ng/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs100
+  url: https://gis.ogunstate.gov.ng/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://gis.ogunstate.gov.ng/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wps100
+  url: https://gis.ogunstate.gov.ng/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: geonode:datasets
+  url: https://gis.ogunstate.gov.ng/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://gis.ogunstate.gov.ng/catalogue/opensearch
+  version: '1.1'
+- type: wcs11
+  url: https://gis.ogunstate.gov.ng/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://gis.ogunstate.gov.ng/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
 id: gisogunstategovng
 langs:
 - id: EN

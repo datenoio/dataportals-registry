@@ -29,6 +29,20 @@ endpoints:
   url: http://lindat.mff.cuni.cz/repository/xmlui/sitemap
 - type: sitemap
   url: http://lindat.mff.cuni.cz/repository/xmlui/htmlmap
+- type: dspace
+  url: https://lindat.mff.cuni.cz/repository/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://lindat.mff.cuni.cz/repository/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://lindat.mff.cuni.cz/repository/sitemap_index.xml
+- type: oaipmh20
+  url: https://lindat.mff.cuni.cz/repository/oai?verb=Identify
+  version: '2.0'
+- type: oaipmh20
+  url: https://lindat.mff.cuni.cz/repository/server/oai/request?verb=Identify
+  version: '2.0'
 id: lindatmffcunicz
 identifiers:
 - id: re3data

@@ -59,3 +59,9 @@ uid: cdi00026998
 endpoints:
 - type: api
   url: https://ckan.pbh.gov.br/api/3/action/package_search
+- type: ckan
+  url: https://ckan.pbh.gov.br/api/3
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.pbh.gov.br/api/3/action/package_list
+  version: '3'

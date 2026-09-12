@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Copernicus satellite imagery mviewer for western France (Copernik'Ouest).
+endpoints:
+- type: mviewer:config
+  url: https://copernikouest.someware.fr/apps/default.xml
+id: copernikouestsomewarefr
+langs:
+- id: FR
+  name: French
+link: https://copernikouest.someware.fr/
+name: Copernik'Ouest
+owner:
+  link: https://www.someware.fr
+  location:
+    country:
+      id: FR
+      name: France
+  name: Someware
+  type: Business
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- commercial
+- mviewer
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00043261

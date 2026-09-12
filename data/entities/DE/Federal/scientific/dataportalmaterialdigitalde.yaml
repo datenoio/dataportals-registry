@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: PMD Dataportal is a Scientific data repository operated by Platform MaterialDigital,
+  built with CKAN.
+endpoints:
+- type: ckan
+  url: https://dataportal.material-digital.de/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dataportal.material-digital.de/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dataportal.material-digital.de/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://dataportal.material-digital.de/catalog.n3
+- type: dcat:ttl
+  url: https://dataportal.material-digital.de/catalog.ttl
+- type: dcat:xml
+  url: https://dataportal.material-digital.de/catalog.xml
+- type: dcat:jsonld
+  url: https://dataportal.material-digital.de/catalog.jsonld
+- type: dcat
+  url: https://dataportal.material-digital.de/catalog.rdf
+id: dataportalmaterialdigitalde
+langs:
+- id: DE
+  name: German
+link: https://dataportal.material-digital.de
+name: PMD Dataportal
+owner:
+  link: https://www.material-digital.de
+  location:
+    country:
+      id: DE
+      name: Germany
+  name: Platform MaterialDigital
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- scientific
+- research
+- academic
+- ckan
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043102

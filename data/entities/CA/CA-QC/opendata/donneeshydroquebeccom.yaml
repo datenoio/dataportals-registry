@@ -24,6 +24,17 @@ endpoints:
   url: https://donnees.hydroquebec.com/api/v2/catalog
 - type: sitemap
   url: https://donnees.hydroquebec.com/sitemap.xml
+- type: opendatasoftapi
+  url: https://donnees.hydroquebec.com/api
+- type: opendatasoftapi
+  url: https://donnees.hydroquebec.com/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://donnees.hydroquebec.com/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://donnees.hydroquebec.com/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://donnees.hydroquebec.com/data.json
 id: donneeshydroquebeccom
 langs:
 - id: EN

@@ -25,6 +25,18 @@ endpoints:
 - type: oaipmh20
   url: https://adc.csw.met.no/?mode=oaipmh&verb=Identify
   version: '2.0'
+- type: oaipmh20
+  url: https://adc.csw.met.no/oaipmh
+  version: '2.0'
+- type: csw300
+  url: https://adc.csw.met.no/csw
+  version: 3.0.0
+- type: opensearch
+  url: https://adc.csw.met.no/opensearch
+  version: '1.0'
+- type: sru
+  url: https://adc.csw.met.no/sru
+  version: '1.0'
 id: adccswmetno
 langs:
 - id: 'NO'

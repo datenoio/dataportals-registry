@@ -13,7 +13,7 @@ coverage:
       name: Bosnia and Herzegovina
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: BA-BIH
@@ -32,6 +32,9 @@ endpoints:
 - type: opensearch
   url: https://app.fzzg.gov.ba/metapodaci/opensearch
   version: '1.0'
+- type: csw202
+  url: https://app.fzzg.gov.ba/metapodaci/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
 id: appfzzggovbametapodaci
 langs:
 - id: BS

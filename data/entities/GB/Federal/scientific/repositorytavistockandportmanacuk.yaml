@@ -21,6 +21,22 @@ endpoints:
 - type: oaipmh20
   url: https://repository.tavistockandportman.ac.uk/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://repository.tavistockandportman.ac.uk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://repository.tavistockandportman.ac.uk/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://repository.tavistockandportman.ac.uk/rest/eprint
+- type: eprints:rdf
+  url: https://repository.tavistockandportman.ac.uk/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:datasets
+  url: https://repository.tavistockandportman.ac.uk/cgi/exportview/type/dataset/JSON/dataset.js
+- type: eprints:n3
+  url: https://repository.tavistockandportman.ac.uk/cgi/export/repository/RDFN3/devel.n3
+- type: opensearch
+  url: https://repository.tavistockandportman.ac.uk/cgi/opensearchdescription
+  version: '1.1'
 id: repositorytavistockandportmanacuk
 langs:
 - id: EN

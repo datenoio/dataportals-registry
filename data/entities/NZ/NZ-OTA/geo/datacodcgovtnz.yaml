@@ -76,6 +76,12 @@ endpoints:
 - type: wms-c111
   url: https://data.codc.govt.nz/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://data.codc.govt.nz/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://data.codc.govt.nz/catalogue/opensearch
+  version: '1.1'
 id: datacodcgovtnz
 langs:
 - id: EN

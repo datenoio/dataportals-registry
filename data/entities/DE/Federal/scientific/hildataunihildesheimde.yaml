@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -26,6 +26,9 @@ langs:
   name: English
 - id: DE
   name: German
+endpoints:
+- type: easydb:session
+  url: https://hildata.uni-hildesheim.de/api/v1/session
 link: https://hildata.uni-hildesheim.de/
 name: HilData
 owner:
@@ -38,8 +41,8 @@ owner:
   name: University of Hildesheim Library
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: easydb
+  name: easydb
 status: active
 tags:
 - scientific

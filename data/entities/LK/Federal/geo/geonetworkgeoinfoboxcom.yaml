@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: NARA GeoNetwork (NDDP) is a Geoportal operated by National Aquatic Resources
+  Research and Development Agency (NARA), built with GeoNetwork.
+endpoints:
+- type: csw202
+  url: https://geonetwork.geoinfobox.com/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:site
+  url: https://geonetwork.geoinfobox.com/geonetwork/srv/api/site
+- type: geonetwork:query
+  url: https://geonetwork.geoinfobox.com/geonetwork/srv/eng/q
+- type: openapi
+  url: https://geonetwork.geoinfobox.com/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: opensearch
+  url: https://geonetwork.geoinfobox.com/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://geonetwork.geoinfobox.com/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: geonetworkgeoinfoboxcom
+langs:
+- id: EN
+  name: English
+link: https://geonetwork.geoinfobox.com/geonetwork
+name: NARA GeoNetwork (NDDP)
+owner:
+  link: https://www.nara.ac.lk
+  location:
+    country:
+      id: LK
+      name: Sri Lanka
+  name: National Aquatic Resources Research and Development Agency (NARA)
+  type: Academy
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- academic
+- geonetwork
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043544

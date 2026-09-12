@@ -18,13 +18,19 @@ coverage:
     subregion:
       id: US-CA
       name: California
-description: City of Torrance GIS open data hub with publicly downloadable geospatial layers
-  and interactive maps.
+description: City of Torrance GIS open data hub with publicly downloadable geospatial
+  layers and interactive maps.
 endpoints:
 - type: dcatus11
   url: https://open-data-torranceca.hub.arcgis.com/api/feed/dcat-us/1.1.json
 - type: ogcrecordsapi
   url: https://open-data-torranceca.hub.arcgis.com/api/search/v1
+- type: dcatap201
+  url: https://open-data-torranceca.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: rss
+  url: https://open-data-torranceca.hub.arcgis.com/api/feed/rss/2.0
+- type: dcatus11
+  url: https://open-data-torranceca.hub.arcgis.com/data.json
 id: opendatatorrancecahubarcgiscom
 langs:
 - id: EN

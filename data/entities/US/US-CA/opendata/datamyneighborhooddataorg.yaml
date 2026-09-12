@@ -26,6 +26,9 @@ endpoints:
   url: https://data.myneighborhooddata.org/api/views
 - type: opensearch
   url: https://data.myneighborhooddata.org/opensearch.xml
+- type: socrata:catalog
+  url: https://data.myneighborhooddata.org/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: datamyneighborhooddataorg
 langs:
 - id: EN

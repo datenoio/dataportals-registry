@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -28,6 +28,16 @@ langs:
   name: English
 - id: ES
   name: Spanish
+endpoints:
+- type: ckan:package-search
+  url: https://omlp.sedici.unlp.edu.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://omlp.sedici.unlp.edu.ar/api/3/action/package_list
+  version: '3'
+- type: oaipmh20
+  url: https://omlp.sedici.unlp.edu.ar/oai?verb=Identify
+  version: '2.0'
 link: https://omlp.sedici.unlp.edu.ar/
 name: Observatorio Medioambiental La Plata
 owner:
@@ -40,8 +50,8 @@ owner:
   name: National Scientific and Technical Research Council
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: ckan
+  name: CKAN
 status: active
 tags:
 - scientific

@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: PL-04
+      name: Kujawsko-Pomorskie
+description: RAPP Gmina Nowe is a Geoportal operated by Gmina Nowe, built with Lizmap.
+id: nowerepozytoriumapp
+langs:
+- id: PL
+  name: Polish
+link: https://nowe.repozytorium.app/
+name: RAPP Gmina Nowe
+owner:
+  link: https://nowe.repozytorium.app/
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    subregion:
+      id: PL-04
+      name: Kujawsko-Pomorskie
+  name: Gmina Nowe
+  type: Local government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- lizmap
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043621
+endpoints:
+- type: lizmap:service
+  url: https://nowe.repozytorium.app/index.php/lizmap/service/?repository=rapp&project=Nowe
+- type: wms130
+  url: https://nowe.repozytorium.app/index.php/lizmap/service/?repository=rapp&project=Nowe&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0

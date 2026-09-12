@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Satu Data OIKN is an Open data portal operated by Nusantara Capital Authority,
+  built with CKAN.
+endpoints:
+- type: ckan
+  url: https://satudata.ikn.go.id/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://satudata.ikn.go.id/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://satudata.ikn.go.id/api/3/action/package_list
+  version: '3'
+id: satudataikngoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://satudata.ikn.go.id
+name: Satu Data OIKN
+owner:
+  link: https://www.ikn.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+  name: Nusantara Capital Authority
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- ckan
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043412

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
 description: WormQTL is an online scalable system for QTL exploration to service the
   worm community. WormQTL provides many publicly available datasets and welcomes submissions
   from other worm researchers.
+endpoints:
+- type: molgenis:catalog
+  url: https://www.wormqtl.org/xqtl_panacea/molgenis.do
 id: wwwwormqtlorg
 identifiers:
 - id: openaire
@@ -36,8 +39,8 @@ owner:
   name: European Commission FP7
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: molgenis
+  name: MOLGENIS
 status: active
 tags:
 - scientific

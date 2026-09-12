@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Digital Arctic Shipping Data Catalogue is a Scientific data repository
+  operated by Nansen Environmental and Remote Sensing Center, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://catalog-das.nersc.no/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalog-das.nersc.no/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalog-das.nersc.no/api/3/action/package_list
+  version: '3'
+id: catalogdasnerscno
+langs:
+- id: 'NO'
+  name: Norwegian
+link: https://catalog-das.nersc.no
+name: Digital Arctic Shipping Data Catalogue
+owner:
+  link: https://www.nersc.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+  name: Nansen Environmental and Remote Sensing Center
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- scientific
+- research
+- academic
+- ckan
+- has_api
+- environment
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043599

@@ -63,8 +63,15 @@ def load_software_ids() -> list[str]:
 
 
 def load_apidetect_ids() -> set[str]:
-    text = (REPO_ROOT / "scripts" / "apidetect.py").read_text(encoding="utf-8")
-    keys = set(URLMAP_KEY_RE.findall(text))
+    """IDs with a URL map in apidetect.py or the draft merge file.
+
+    Runtime ``CATALOGS_URLMAP`` is built-in maps plus ``DRAFT_CATALOGS_URLMAP``.
+    Scanning only ``apidetect.py`` under-counts draft keys as ``—`` in the index.
+    """
+    keys: set[str] = set()
+    for rel in ("scripts/apidetect.py", "scripts/apidetect_urlmaps_draft.py"):
+        text = (REPO_ROOT / rel).read_text(encoding="utf-8")
+        keys.update(URLMAP_KEY_RE.findall(text))
     keys.discard("custom")
     return keys
 
@@ -159,6 +166,14 @@ def missing_mentions() -> tuple[list[str], list[str]]:
     return missing_d, missing_h
 
 
+def missing_headings() -> tuple[list[str], list[str]]:
+    """IDs that lack a unique ``## Name (`id`) {#id}`` heading."""
+    rows = coverage_rows()
+    missing_d = [r["id"] for r in rows if not r["discovery_heading"]]
+    missing_h = [r["id"] for r in rows if not r["harvest_heading"]]
+    return missing_d, missing_h
+
+
 def _doc_link(rel: str | None, anchor: str | None) -> str:
     if not rel:
         return "—"
@@ -246,6 +261,7 @@ def write_index(path: Path | None = None) -> Path:
 
 def main() -> None:
     missing_d, missing_h = missing_mentions()
+    missing_hd, missing_hh = missing_headings()
     combined = combined_software_headings()
     stale = stale_software_anchor_links()
     dest = write_index()
@@ -254,6 +270,10 @@ def main() -> None:
         print("Missing discovery mentions:", ", ".join(missing_d))
     if missing_h:
         print("Missing harvest mentions:", ", ".join(missing_h))
+    if missing_hd:
+        print("Missing discovery headings:", ", ".join(missing_hd))
+    if missing_hh:
+        print("Missing harvest headings:", ", ".join(missing_hh))
     if combined:
         print("Combined software H2s (split these):")
         for hit in combined:
@@ -262,7 +282,14 @@ def main() -> None:
         print("Stale software heading links:")
         for hit in stale:
             print(" ", hit)
-    if not missing_d and not missing_h and not combined and not stale:
+    if (
+        not missing_d
+        and not missing_h
+        and not missing_hd
+        and not missing_hh
+        and not combined
+        and not stale
+    ):
         print("All software IDs mentioned; unique H2s; anchors current.")
 
 

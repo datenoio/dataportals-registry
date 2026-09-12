@@ -25,6 +25,15 @@ endpoints:
   url: https://opendata.rcrc.gov.sa/api
 - type: sitemap
   url: https://opendata.rcrc.gov.sa/sitemap.xml
+- type: opendatasoftapi
+  url: https://opendata.rcrc.gov.sa/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://opendata.rcrc.gov.sa/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://opendata.rcrc.gov.sa/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://opendata.rcrc.gov.sa/data.json
 id: opendatarcrcgovsa
 langs:
 - id: AR

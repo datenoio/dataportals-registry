@@ -37,6 +37,10 @@ endpoints:
 - type: oaipmh20
   url: https://metadados.geosampa.prefeitura.sp.gov.br/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: dcat:xml
+  url: https://metadados.geosampa.prefeitura.sp.gov.br/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://metadados.geosampa.prefeitura.sp.gov.br/geonetwork/srv/api/site
 id: metadadosgeosampaprefeituraspgovbr
 langs:
 - id: PT

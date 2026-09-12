@@ -18,22 +18,22 @@ coverage:
     subregion:
       id: FR-76
       name: Seine-Maritime
-description: "Open data de la Seine-Maritime Retrouvez sur ce portail l’ensemble des\
-  \ données publiées par le Département de la Seine-Maritime, des espaces de data\
-  \ visualisation, des cartes, des statistiques, des documents, ... Démarche Données\
-  \ Télécharger le catalogue des données (dcat) Administration et ses ressources Sanitaire\
-  \ et Social Routes, Véloroutes, Ports et Bacs Education et Jeunesse Appui aux territoires\
-  \ Habitat et Environnement Culture, Vie associative, Sports et Loisirs Sécurité\
-  \ Les visualisations, les cartes et les sites du Département Archive de la Seine-Maritime\
-  \ Photographie du Pôle culturel Grammont, où est située la direction des Archives\
-  \ Départementales Clos masure Dessin d'un clos-masure Budget 2022 de la Seine-Maritime\
-  \ - Visualisation Budget 2022 du Département de la Seine-Maritime - Visualisation\
-  \ Aide &amp; tutoriels Visuel de l'affichage de la carte des cantons électoraux\
-  \ sur le site opendata76 Pour commencer Le\n site opendata76 fonctionne bien avec\
-  \ les principaux navigateurs : \nChrome, Mozilla Firefox, Microsoft Edge ou encore\
-  \ Opera. Si vous \nrencontrez des difficultés d'affichage, essayez de vous tourner\
-  \ vers une\n de ces options. Tableau de Bord L'Itinérance dans le Département de\
-  \ la Seine-Maritime Partenaires institutionnels"
+description: "Open data de la Seine-Maritime Retrouvez sur ce portail l’ensemble des
+  données publiées par le Département de la Seine-Maritime, des espaces de data visualisation,
+  des cartes, des statistiques, des documents, ... Démarche Données Télécharger le
+  catalogue des données (dcat) Administration et ses ressources Sanitaire et Social
+  Routes, Véloroutes, Ports et Bacs Education et Jeunesse Appui aux territoires Habitat
+  et Environnement Culture, Vie associative, Sports et Loisirs Sécurité Les visualisations,
+  les cartes et les sites du Département Archive de la Seine-Maritime Photographie
+  du Pôle culturel Grammont, où est située la direction des Archives Départementales
+  Clos masure Dessin d'un clos-masure Budget 2022 de la Seine-Maritime - Visualisation
+  Budget 2022 du Département de la Seine-Maritime - Visualisation Aide &amp; tutoriels
+  Visuel de l'affichage de la carte des cantons électoraux sur le site opendata76
+  Pour commencer Le\n site opendata76 fonctionne bien avec les principaux navigateurs
+  : \nChrome, Mozilla Firefox, Microsoft Edge ou encore Opera. Si vous \nrencontrez
+  des difficultés d'affichage, essayez de vous tourner vers une\n de ces options.
+  Tableau de Bord L'Itinérance dans le Département de la Seine-Maritime Partenaires
+  institutionnels"
 endpoints:
 - type: dcatap201
   url: https://www.opendata76.fr/api/feed/dcat-ap/2.0.1.json
@@ -45,6 +45,8 @@ endpoints:
   url: https://www.opendata76.fr/api/search/v1
 - type: sitemap
   url: https://www.opendata76.fr/sitemap.xml
+- type: dcatus11
+  url: https://www.opendata76.fr/data.json
 id: wwwopendata76fr
 langs:
 - id: FR

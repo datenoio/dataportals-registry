@@ -17,10 +17,20 @@ coverage:
     subregion:
       id: ID-SU
       name: Sumatera Utara
-description: USU Institutional Repository is a DSpace repository listed in re3data as a research data provider.
+description: USU Institutional Repository is a DSpace repository listed in re3data
+  as a research data provider.
 endpoints:
 - type: dspace:catalog
   url: https://repositori.usu.ac.id
+- type: oaipmh20
+  url: https://repositori.usu.ac.id/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://repositori.usu.ac.id/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repositori.usu.ac.id/feed/atom_1.0/site
+  version: '1.0'
 id: repositoriusuacid
 identifiers:
 - id: re3data

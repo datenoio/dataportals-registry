@@ -29,6 +29,14 @@ endpoints:
 - type: ckan:package-list
   url: https://opendata.univaq.it/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://opendata.univaq.it/catalog.n3
+- type: dcat:ttl
+  url: https://opendata.univaq.it/catalog.ttl
+- type: dcat:xml
+  url: https://opendata.univaq.it/catalog.xml
+- type: dcat
+  url: https://opendata.univaq.it/catalog.rdf
 id: opendataunivaqit
 langs:
 - id: IT

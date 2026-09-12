@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 10
+    macroregion:
+      id: EU
+      name: European Union
+description: Stella CKAN is an Open data portal operated by STELLA / Green Supply
+  Chain, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://ckan-stella-pss.greensupplychain.eu/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan-stella-pss.greensupplychain.eu/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan-stella-pss.greensupplychain.eu/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://ckan-stella-pss.greensupplychain.eu/catalog.n3
+- type: dcat:ttl
+  url: https://ckan-stella-pss.greensupplychain.eu/catalog.ttl
+- type: dcat:xml
+  url: https://ckan-stella-pss.greensupplychain.eu/catalog.xml
+- type: dcat:jsonld
+  url: https://ckan-stella-pss.greensupplychain.eu/catalog.jsonld
+- type: dcat
+  url: https://ckan-stella-pss.greensupplychain.eu/catalog.rdf
+id: ckanstellapssgreensupplychaineu
+langs:
+- id: EN
+  name: English
+link: https://ckan-stella-pss.greensupplychain.eu
+name: Stella CKAN
+owner:
+  link: https://www.greensupplychain.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+  name: STELLA / Green Supply Chain
+  type: International
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- ckan
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043157

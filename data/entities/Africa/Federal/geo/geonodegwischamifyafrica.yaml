@@ -16,8 +16,9 @@ coverage:
     macroregion:
       id: '002'
       name: Africa
-description: GeoNode catalog on the Chamify GWIS (geospatial) platform, publishing datasets,
-  maps, and documents. CSW, OAI-PMH, OpenSearch, and GeoNode REST APIs are live.
+description: GeoNode catalog on the Chamify GWIS (geospatial) platform, publishing
+  datasets, maps, and documents. CSW, OAI-PMH, OpenSearch, and GeoNode REST APIs are
+  live.
 endpoints:
 - type: geonode:datasets
   url: https://geonode.gwis.chamify.africa/api/datasets/
@@ -34,6 +35,12 @@ endpoints:
   version: '1.0'
 - type: sitemap
   url: https://geonode.gwis.chamify.africa/sitemap.xml
+- type: geonode:datasets
+  url: https://geonode.gwis.chamify.africa/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geonode.gwis.chamify.africa/catalogue/opensearch
+  version: '1.1'
 id: geonodegwischamifyafrica
 langs:
 - id: EN

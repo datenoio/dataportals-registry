@@ -24,6 +24,13 @@ endpoints:
   url: https://data.jerseycitynj.gov/api
 - type: sitemap
   url: https://data.jerseycitynj.gov/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.jerseycitynj.gov/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.jerseycitynj.gov/api/v2/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.jerseycitynj.gov/data.json
 id: datajerseycitynjgov
 langs:
 - id: EN

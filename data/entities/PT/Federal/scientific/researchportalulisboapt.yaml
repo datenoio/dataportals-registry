@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Universidade de Lisboa is a Scientific data repository operated by Universidade
+  de Lisboa.
+id: researchportalulisboapt
+langs:
+- id: PT
+  name: Portuguese
+link: https://researchportal.ulisboa.pt
+name: Universidade de Lisboa
+owner:
+  link: https://researchportal.ulisboa.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+  name: Universidade de Lisboa
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042708
+endpoints:
+- type: oaipmh20
+  url: https://researchportal.ulisboa.pt/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://researchportal.ulisboa.pt/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'

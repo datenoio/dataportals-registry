@@ -23,6 +23,20 @@ endpoints:
   version: '2.0'
 - type: sitemap
   url: https://repositorio.unan.edu.ni/sitemap.xml
+- type: rss
+  url: https://repositorio.unan.edu.ni/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://repositorio.unan.edu.ni/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://repositorio.unan.edu.ni/rest/eprint
+- type: eprints:rdf
+  url: https://repositorio.unan.edu.ni/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://repositorio.unan.edu.ni/cgi/export/repository/RDFN3/devel.n3
+- type: opensearch
+  url: https://repositorio.unan.edu.ni/cgi/opensearchdescription
+  version: '1.1'
 id: repositoriounaneduni
 langs:
 - id: ES

@@ -18,7 +18,7 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: 'Welcome to Oxford County open data. Open data is the idea that certain
+description: Welcome to Oxford County open data. Open data is the idea that certain
   data should be freely available to everyone to use and republish as they wish, without
   restrictions from copyright, patents or other mechanisms of control. All Open Data
   Explore Data Categories Select a category below to browse available datasets Administrative
@@ -37,7 +37,7 @@ description: 'Welcome to Oxford County open data. Open data is the idea that cer
   Regional Information Systems Association (URISA) in 1988.  The system is now called
   MAP-IT and is used by the County and area municipalities today and has been expanded
   to support numerous business processes including administering building permits,
-  civic addressing and Public Works - work management. Online Interactive Maps'
+  civic addressing and Public Works - work management. Online Interactive Maps
 endpoints:
 - type: dcatap201
   url: https://public-oxfordcounty.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -49,6 +49,8 @@ endpoints:
   url: https://public-oxfordcounty.opendata.arcgis.com/api/search/v1
 - type: sitemap
   url: https://public-oxfordcounty.opendata.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://public-oxfordcounty.opendata.arcgis.com/data.json
 id: publicoxfordcountyopendataarcgiscom
 langs:
 - id: EN

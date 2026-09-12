@@ -18,16 +18,16 @@ coverage:
     subregion:
       id: FI-01
       name: Landskapet Åland
-description: "På den här sidan hittar du landskapsregeringens öppna kartdata. I vår\
-  \ öppna kartportal kan du bekanta dig med bl.a. naturskyddsområden, fornminnen och\
-  \ låglänta områden. Kartinformationen baseras på kartdata från Landskapsregeringen\
-  \ samt Lantmäteriverket. Mera information finns i webbkartorna. \nNedanför hittar\
-  \ du dessutom länkar till andra tjänster och kartportaler. Vill du använda våra\
-  \ kartor i en app, installera field maps for ArcGIS och sök på LRALAND för att hitta\
-  \ våra kartor. Våra färdiga webbkartor Nyheter Inspire Tjänsterna för inspire datamängden\
-  \ har förnyats. Webbsidor Här under hittar du länkar till andra användbara sidor\
-  \ på nätet. Lantmäteriverkets portal: Kartfönstret Lantmäteriverkets tjänst: Kartplatsen\
-  \ Trafikledsverkets visnings- och nedladdningstjänst VELMU karttjänst"
+description: "På den här sidan hittar du landskapsregeringens öppna kartdata. I vår
+  öppna kartportal kan du bekanta dig med bl.a. naturskyddsområden, fornminnen och
+  låglänta områden. Kartinformationen baseras på kartdata från Landskapsregeringen
+  samt Lantmäteriverket. Mera information finns i webbkartorna. \nNedanför hittar
+  du dessutom länkar till andra tjänster och kartportaler. Vill du använda våra kartor
+  i en app, installera field maps for ArcGIS och sök på LRALAND för att hitta våra
+  kartor. Våra färdiga webbkartor Nyheter Inspire Tjänsterna för inspire datamängden
+  har förnyats. Webbsidor Här under hittar du länkar till andra användbara sidor på
+  nätet. Lantmäteriverkets portal: Kartfönstret Lantmäteriverkets tjänst: Kartplatsen
+  Trafikledsverkets visnings- och nedladdningstjänst VELMU karttjänst"
 endpoints:
 - type: dcatap201
   url: https://www.kartor.ax/api/feed/dcat-ap/2.0.1.json
@@ -39,6 +39,8 @@ endpoints:
   url: https://www.kartor.ax/api/search/v1
 - type: sitemap
   url: https://www.kartor.ax/sitemap.xml
+- type: dcatus11
+  url: https://www.kartor.ax/data.json
 id: wwwkartorax
 langs:
 - id: SV

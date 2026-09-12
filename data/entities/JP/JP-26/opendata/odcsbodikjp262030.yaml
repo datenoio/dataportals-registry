@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion:
+      id: JP-26
+      name: Kyoto
+description: BODIK ODCS open data catalog for 綾部市 (綾部市オープンデータ), listed on the e-Gov
+  Data Portal database-site directory.
+endpoints:
+- type: ckan:package-search
+  url: https://data.bodik.jp/api/3/action/package_search?q=organization:262030
+  version: '3'
+id: odcsbodikjp262030
+langs:
+- id: JA
+  name: Japanese
+link: https://odcs.bodik.jp/262030
+name: 綾部市オープンデータ
+owner:
+  link: https://odcs.bodik.jp/262030
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-26
+      name: Kyoto
+  name: 綾部市
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- open data
+- BODIK
+- Japan
+- Kyoto
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00005422

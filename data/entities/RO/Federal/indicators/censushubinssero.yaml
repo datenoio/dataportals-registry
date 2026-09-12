@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public SDMX-RI NSI web service of the Romanian National Institute of
+  Statistics Census Hub, exposing 2021 census dataflows through SDMX REST and SOAP.
+endpoints:
+- type: sdmx:dataflows
+  url: https://censushub.insse.ro/rest/dataflow
+- type: sdmx:datastructure
+  url: https://censushub.insse.ro/rest/datastructure
+  version: '1.0'
+- type: sdmx:codelist
+  url: https://censushub.insse.ro/rest/codelist
+  version: '1.0'
+- type: sdmx:conceptscheme
+  url: https://censushub.insse.ro/rest/conceptscheme
+  version: '1.0'
+id: censushubinssero
+langs:
+- id: RO
+  name: Romanian
+- id: EN
+  name: English
+link: https://censushub.insse.ro/
+name: INSSE Census Hub SDMX API
+owner:
+  link: https://insse.ro
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+  name: National Institute of Statistics (INS)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: sdmxri
+  name: SDMX-RI
+status: active
+tags:
+- statistics
+- government
+- census
+- Romania
+- indicators
+- SDMX
+- has_api
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043644

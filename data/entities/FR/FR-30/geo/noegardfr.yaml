@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-30
+      name: Gard
+description: NOE Gard is a Geoportal operated by Département du Gard, built with Lizmap.
+id: noegardfr
+langs:
+- id: FR
+  name: French
+endpoints:
+- type: sitemap
+  url: https://noe.gard.fr/noe-prevention-contre-le-risque-inondation-dans-le-gard/sitemap.xml
+link: https://noe.gard.fr/
+name: NOE Gard
+owner:
+  link: https://www.gard.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-30
+      name: Gard
+  name: Département du Gard
+  type: Regional government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- lizmap
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043274

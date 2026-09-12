@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: KR
+      name: South Korea
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: University of Seoul is a Scientific data repository operated by University
+  of Seoul.
+id: pureuosackr
+langs:
+- id: KO
+  name: Korean
+link: https://pure.uos.ac.kr
+name: University of Seoul
+owner:
+  link: https://pure.uos.ac.kr
+  location:
+    country:
+      id: KR
+      name: South Korea
+  name: University of Seoul
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00042675
+endpoints:
+- type: oaipmh20
+  url: https://pure.uos.ac.kr/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://pure.uos.ac.kr/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://pure.uos.ac.kr/sitemap/datasets.xml

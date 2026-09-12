@@ -24,6 +24,15 @@ endpoints:
   url: https://data.saintnazaireagglo.fr/api
 - type: sitemap
   url: https://data.saintnazaireagglo.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.saintnazaireagglo.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.saintnazaireagglo.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.saintnazaireagglo.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.saintnazaireagglo.fr/data.json
 id: datasaintnazaireagglofr
 langs:
 - id: FR

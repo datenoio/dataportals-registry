@@ -19,6 +19,20 @@ description: intellectum is a DSpace repository listed in re3data as a research 
 endpoints:
 - type: dspace:catalog
   url: https://intellectum.unisabana.edu.co
+- type: dspace
+  url: https://intellectum.unisabana.edu.co/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://intellectum.unisabana.edu.co/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://intellectum.unisabana.edu.co/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://intellectum.unisabana.edu.co/sitemap_index.xml
+- type: oaipmh20
+  url: https://intellectum.unisabana.edu.co/server/oai/request?verb=Identify
+  version: '2.0'
 id: intellectumunisabanaeduco
 identifiers:
 - id: re3data

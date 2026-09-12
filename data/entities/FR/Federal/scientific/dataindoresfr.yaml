@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: data.InDoRES is a repository for research data in biodiversity, environment, and
-  societies.
+description: data.InDoRES is a repository for research data in biodiversity, environment,
+  and societies.
 id: dataindoresfr
 identifiers:
 - id: openaire
@@ -38,8 +38,8 @@ owner:
   name: CNRS INEE
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: dataverse
+  name: Dataverse
 status: active
 tags:
 - scientific
@@ -57,3 +57,11 @@ topics:
   name: Biota
   type: iso19115
 uid: cdi00030660
+endpoints:
+- type: dataverseapi
+  url: https://data.indores.fr/api/search
+- type: oaipmh20
+  url: https://data.indores.fr/oai?verb=Identify
+  version: '2.0'
+- type: dataverseapi
+  url: https://data.indores.fr/api/info/version

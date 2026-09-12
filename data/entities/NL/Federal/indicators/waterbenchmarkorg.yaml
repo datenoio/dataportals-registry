@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -58,3 +58,8 @@ topics:
   name: Environment
   type: eudatatheme
 uid: cdi99992015
+endpoints:
+- type: swing:databank
+  url: https://www.waterbenchmark.org/databank
+- type: swing:viewer
+  url: https://www.waterbenchmark.org/viewer/

@@ -25,6 +25,13 @@ endpoints:
   url: https://vendome-catv41-centrevaldeloire.opendatasoft.com/api
 - type: sitemap
   url: https://vendome-catv41-centrevaldeloire.opendatasoft.com/sitemap.xml
+- type: opendatasoftapi
+  url: https://vendome-catv41-centrevaldeloire.opendatasoft.com/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://vendome-catv41-centrevaldeloire.opendatasoft.com/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://vendome-catv41-centrevaldeloire.opendatasoft.com/data.json
 id: vendomecatv41centrevaldeloireopendatasoftcom
 langs:
 - id: FR

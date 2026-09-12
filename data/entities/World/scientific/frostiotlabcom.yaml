@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: IoT Lab SensorThings catalog of laboratory and platform Things and Datastreams
+  published through FROST-Server.
+endpoints:
+- type: sensorthings
+  url: https://frost.iotlab.com/sensorthings/v1.1/
+  version: '1.1'
+- type: sensorthings
+  url: https://frost.iotlab.com/sensorthings/v1.1/Datastreams?$top=1&$count=true
+  version: '1.1'
+- type: sensorthings
+  url: https://frost.iotlab.com/sensorthings/v1.1/Things?$top=1&$count=true
+  version: '1.1'
+id: frostiotlabcom
+langs:
+- id: EN
+  name: English
+link: https://frost.iotlab.com/sensorthings/
+name: IoT Lab SensorThings
+owner:
+  link: https://iotlab.com
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: IoT Lab
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: frostserver
+  name: FROST-Server
+status: active
+tags:
+- SensorThings
+- FROST
+- IoT
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00043826

@@ -12,7 +12,7 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: OPeNDAP Hyrax (1.8.4) catalog hosted by the National and Kapodistrian
   University of Athens (NKUA) Ocean Physics group, exposing thematic collections such
@@ -20,6 +20,8 @@ description: OPeNDAP Hyrax (1.8.4) catalog hosted by the National and Kapodistri
 endpoints:
 - type: opendap:catalog
   url: http://ostria.oc.phys.uoa.gr:8080/opendap/
+- type: opendap:catalog
+  url: http://ostria.oc.phys.uoa.gr:8080/opendap/catalog.xml
 id: ostriaocphysuoagropendap
 langs:
 - id: EN

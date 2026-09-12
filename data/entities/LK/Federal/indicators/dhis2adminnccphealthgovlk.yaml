@@ -1,0 +1,77 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: DHIS2 instance of Sri Lanka's National Cancer Control Programme for cancer
+  surveillance and programme indicators. Login is required to query the catalog.
+endpoints:
+- type: dhis2:catalog
+  url: https://dhis2admin.nccp.health.gov.lk
+- type: dhis2:system-info
+  url: https://dhis2admin.nccp.health.gov.lk/api/system/info
+- type: dhis2:datasets
+  url: https://dhis2admin.nccp.health.gov.lk/api/dataSets.json?fields=id,displayName&pageSize=1
+id: dhis2adminnccphealthgovlk
+langs:
+- id: EN
+  name: English
+link: https://dhis2admin.nccp.health.gov.lk
+name: Sri Lanka National Cancer Control Programme (DHIS2)
+owner:
+  link: https://www.nccp.health.gov.lk
+  location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 20
+  name: National Cancer Control Programme
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dhis2
+  name: DHIS2
+status: active
+tags:
+- health
+- cancer
+- DHIS2
+- government
+- restricted
+- has_api
+- Sri Lanka
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043545

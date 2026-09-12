@@ -16,8 +16,8 @@ coverage:
       id: '014'
       name: Eastern Africa
 description: GeoNode 5 geohazard risk platform of the Rwanda Transport Development
-  Agency for feeder-road landslide, flood, and related spatial layers. About 125
-  datasets are listed in the GeoNode API, with CSW and OGC services.
+  Agency for feeder-road landslide, flood, and related spatial layers. About 125 datasets
+  are listed in the GeoNode API, with CSW and OGC services.
 endpoints:
 - type: geonode:datasets
   url: https://geohazards.rtda.gov.rw/api/datasets/
@@ -74,6 +74,12 @@ endpoints:
 - type: wms-c111
   url: https://geohazards.rtda.gov.rw/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://geohazards.rtda.gov.rw/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geohazards.rtda.gov.rw/catalogue/opensearch
+  version: '1.1'
 id: geohazardsrtdagovrw
 langs:
 - id: EN

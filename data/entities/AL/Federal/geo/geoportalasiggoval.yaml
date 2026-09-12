@@ -13,7 +13,7 @@ coverage:
       name: Albania
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Official GeoNetwork metadata catalog of the State Authority for Geospatial
   Information (ASIG), the national geospatial data infrastructure of Albania.
@@ -38,6 +38,8 @@ endpoints:
   url: https://geoportal.asig.gov.al/geonetwork/srv/api/site
 - type: opensearch
   url: https://geoportal.asig.gov.al/portal.opensearch
+- type: dcat:xml
+  url: https://geoportal.asig.gov.al/geonetwork/srv/api/records?accept=application/rdf+xml
 id: geoportalasiggoval
 langs:
 - id: SQ

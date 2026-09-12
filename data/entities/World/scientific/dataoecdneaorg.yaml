@@ -19,6 +19,9 @@ description: OECD Nuclear Energy Agency Data Bank open data platform for nuclear
 endpoints:
 - type: inveniordmapi:records
   url: https://data.oecd-nea.org/api/records
+- type: oaipmh20
+  url: https://data.oecd-nea.org/oai2d?verb=Identify
+  version: '2.0'
 id: dataoecdneaorg
 langs:
 - id: EN

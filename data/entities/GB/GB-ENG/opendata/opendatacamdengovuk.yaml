@@ -33,6 +33,9 @@ endpoints:
   url: https://s3-eu-west-1.amazonaws.com/sa-socrata-sitemaps-eu-west-1-prod/sitemaps/sitemap-opendata.camden.gov.uk.xml
 - type: opensearch
   url: https://opendata.camden.gov.uk/opensearch.xml
+- type: socrata:catalog
+  url: https://opendata.camden.gov.uk/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: opendatacamdengovuk
 langs:
 - id: EN

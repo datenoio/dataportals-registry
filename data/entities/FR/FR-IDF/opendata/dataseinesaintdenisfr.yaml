@@ -60,3 +60,12 @@ description: Open data portal of the Seine-Saint-Denis department (Open Data 93)
 endpoints:
 - type: opendatasoft
   url: https://data.seinesaintdenis.fr/api
+- type: opendatasoftapi
+  url: https://data.seinesaintdenis.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.seinesaintdenis.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.seinesaintdenis.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.seinesaintdenis.fr/data.json

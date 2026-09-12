@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: AI4EC Open Data Platform is a Scientific data repository operated by
+  AI for Electrochemistry (AI4EC), built with Dataverse.
+id: dataverseai4ecaccn
+langs:
+- id: ZH
+  name: Chinese
+link: https://dataverse.ai4ec.ac.cn
+name: AI4EC Open Data Platform
+owner:
+  link: https://www.ai4ec.ac.cn
+  location:
+    country:
+      id: CN
+      name: China
+  name: AI for Electrochemistry (AI4EC)
+  type: Academy
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research
+- academic
+- dataverse
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042965
+endpoints:
+- type: dataverseapi
+  url: https://dataverse.ai4ec.ac.cn/api/search
+- type: dataverseapi
+  url: https://dataverse.ai4ec.ac.cn/api/info/version

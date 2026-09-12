@@ -23,6 +23,12 @@ endpoints:
 - type: csw202
   url: https://heis.vuv.cz/xmicka/csw/?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: csw202
+  url: https://heis.vuv.cz/xmicka/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://heis.vuv.cz/xmicka/opensearch
+  version: '1.1'
 id: heisvuvcz
 langs:
 - id: CS

@@ -24,6 +24,17 @@ endpoints:
 - type: oaipmh20
   url: https://kb.osu.edu/oai/request?verb=Identify
   version: '2.0'
+- type: dspace
+  url: https://kb.osu.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://kb.osu.edu/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://kb.osu.edu/sitemap_index.xml
+- type: oaipmh20
+  url: https://kb.osu.edu/server/oai/request?verb=Identify
+  version: '2.0'
 id: kbosuedu
 langs:
 - id: EN

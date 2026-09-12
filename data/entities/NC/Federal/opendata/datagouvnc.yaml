@@ -14,9 +14,8 @@ coverage:
     macroregion:
       id: '054'
       name: Melanesia
-description: Official open data portal of the Government of New Caledonia.
-  Cross-government catalog of public datasets, APIs, and reuse guides for the
-  territory.
+description: Official open data portal of the Government of New Caledonia. Cross-government
+  catalog of public datasets, APIs, and reuse guides for the territory.
 endpoints:
 - type: opendatasoftapi
   url: https://data.gouv.nc/api
@@ -24,6 +23,9 @@ endpoints:
   url: https://data.gouv.nc/api/v2/catalog/exports/dcat
 - type: sitemap
   url: https://data.gouv.nc/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.gouv.nc/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
 id: datagouvnc
 langs:
 - id: FR

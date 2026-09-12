@@ -18,13 +18,19 @@ coverage:
     subregion:
       id: US-CA
       name: California
-description: County of Santa Barbara ArcGIS Hub open data catalog for parcels, planning, and
-  public GIS layers.
+description: County of Santa Barbara ArcGIS Hub open data catalog for parcels, planning,
+  and public GIS layers.
 endpoints:
 - type: dcatus11
   url: https://open-data-cosb-ent.hub.arcgis.com/api/feed/dcat-us/1.1.json
 - type: ogcrecordsapi
   url: https://open-data-cosb-ent.hub.arcgis.com/api/search/v1
+- type: dcatap201
+  url: https://open-data-cosb-ent.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: rss
+  url: https://open-data-cosb-ent.hub.arcgis.com/api/feed/rss/2.0
+- type: dcatus11
+  url: https://open-data-cosb-ent.hub.arcgis.com/data.json
 id: opendatacosbenthubarcgiscom
 langs:
 - id: EN

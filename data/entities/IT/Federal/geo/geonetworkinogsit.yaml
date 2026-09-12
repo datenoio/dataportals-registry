@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: GeoNetwork spatial metadata catalogue of the National Institute of
-  Oceanography and Applied Geophysics (OGS).
+description: GeoNetwork spatial metadata catalogue of the National Institute of Oceanography
+  and Applied Geophysics (OGS).
 endpoints:
 - type: geonetwork:query
   url: https://geonetwork.inogs.it/srv/eng/q
@@ -32,6 +32,8 @@ endpoints:
 - type: oaipmh20
   url: https://geonetwork.inogs.it/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:site
+  url: https://geonetwork.inogs.it/srv/api/site
 id: geonetworkinogsit
 langs:
 - id: IT

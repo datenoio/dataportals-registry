@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: PSU Knowledge Bank is a scientific data repository operated by Prince of
-  Songkla University running on DSpace.
+description: PSU Knowledge Bank is a scientific data repository operated by Prince
+  of Songkla University running on DSpace.
 endpoints:
 - type: dspace
   url: https://kb.psu.ac.th/server/api
@@ -25,6 +25,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://kb.psu.ac.th/sitemap_index.xml
+- type: oaipmh20
+  url: https://kb.psu.ac.th/server/oai/request?verb=Identify
+  version: '2.0'
 id: kbpsuacth
 langs:
 - id: TH

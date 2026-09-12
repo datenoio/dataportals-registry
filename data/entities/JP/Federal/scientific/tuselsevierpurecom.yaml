@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Tokyo University of Science is a Scientific data repository operated
+  by Tokyo University of Science.
+id: tuselsevierpurecom
+langs:
+- id: JA
+  name: Japanese
+link: https://tus.elsevierpure.com
+name: Tokyo University of Science
+owner:
+  link: https://tus.elsevierpure.com
+  location:
+    country:
+      id: JP
+      name: Japan
+  name: Tokyo University of Science
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00042799
+endpoints:
+- type: oaipmh20
+  url: https://tus.elsevierpure.com/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://tus.elsevierpure.com/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://tus.elsevierpure.com/sitemap/datasets.xml

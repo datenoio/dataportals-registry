@@ -24,6 +24,15 @@ endpoints:
   url: https://data.bs.ch/api
 - type: sitemap
   url: https://data.bs.ch/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.bs.ch/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.bs.ch/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.bs.ch/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.bs.ch/data.json
 id: databsch
 identifiers:
 - id: wikidata

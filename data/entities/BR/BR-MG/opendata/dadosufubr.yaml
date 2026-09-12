@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-MG
+      name: Minas Gerais
+description: DKAN open data portal of the Federal University of Uberlândia (UFU) publishing
+  institutional datasets such as library holdings.
+endpoints:
+- type: ckan:package-list
+  url: https://dados.ufu.br/api/3/action/package_list
+  version: '3'
+id: dadosufubr
+langs:
+- id: PT
+  name: Portuguese
+link: https://dados.ufu.br
+name: Dados Abertos da Universidade Federal de Uberlândia
+owner:
+  link: https://www.ufu.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-MG
+      name: Minas Gerais
+  name: Universidade Federal de Uberlândia
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dkan
+  name: DKAN
+status: active
+tags:
+- Brazil
+- university
+- open data
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00042866

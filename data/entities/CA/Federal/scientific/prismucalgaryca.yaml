@@ -14,9 +14,9 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: PRISM is the University of Calgary institutional repository on DSpace 7 (Scholaris).
-  It holds publications and research datasets; the previous hostname prism.ucalgary.ca redirects
-  here.
+description: PRISM is the University of Calgary institutional repository on DSpace
+  7 (Scholaris). It holds publications and research datasets; the previous hostname
+  prism.ucalgary.ca redirects here.
 endpoints:
 - type: dspace
   url: https://ucalgary.scholaris.ca/server/api
@@ -26,6 +26,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://ucalgary.scholaris.ca/sitemap_index.xml
+- type: oaipmh20
+  url: https://ucalgary.scholaris.ca/server/oai/request?verb=Identify
+  version: '2.0'
 id: prismucalgaryca
 langs:
 - id: EN

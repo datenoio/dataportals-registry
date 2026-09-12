@@ -21,6 +21,17 @@ endpoints:
 - type: oaipmh20
   url: https://researchrepository.universityofgalway.ie/server/oai/request?verb=Identify
   version: '2.0'
+- type: dspace
+  url: https://researchrepository.universityofgalway.ie/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://researchrepository.universityofgalway.ie/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://researchrepository.universityofgalway.ie/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://researchrepository.universityofgalway.ie/sitemap_index.xml
 id: researchrepositoryuniversityofgalwayie
 langs:
 - id: EN

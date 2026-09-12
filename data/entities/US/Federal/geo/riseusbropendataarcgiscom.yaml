@@ -15,7 +15,12 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: RISE is a Reclamation open data system for viewing, accessing, and downloading Reclamation's water and water-related data. With RISE you can search the catalog or browse the map to find data, query time series for specific dates, parameters, and locations, plot or download data, obtain machine-readable data through an API, view and download geospatial data, and get web service connections for your own maps.
+description: RISE is a Reclamation open data system for viewing, accessing, and downloading
+  Reclamation's water and water-related data. With RISE you can search the catalog
+  or browse the map to find data, query time series for specific dates, parameters,
+  and locations, plot or download data, obtain machine-readable data through an API,
+  view and download geospatial data, and get web service connections for your own
+  maps.
 endpoints:
 - type: dcatap201
   url: https://rise-usbr.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -27,6 +32,8 @@ endpoints:
   url: https://rise-usbr.opendata.arcgis.com/api/search/v1
 - type: sitemap
   url: https://rise-usbr.opendata.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://rise-usbr.opendata.arcgis.com/data.json
 id: riseusbropendataarcgiscom
 langs:
 - id: EN

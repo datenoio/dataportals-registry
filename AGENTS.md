@@ -38,7 +38,7 @@ The registry collects and maintains structured metadata about:
 - Metadata catalogs
 - Other data infrastructure
 
-As of 10 September 2026, source YAML contains **36,873** verified catalog entries across **224** country/territory folders, **0** scheduled records, and **470** software definitions. Dataset exports: **36,776** catalogs, **23** scheduled JSONL, **463** software (last `build`; lag YAML). Last published snapshot is v1.20.0 (35,266 catalogs, 0 scheduled, 423 software).
+As of 12 September 2026, source YAML contains **37,170** verified catalog entries across **224** country/territory folders, **0** scheduled records, and **486** software definitions. Dataset exports match YAML: **37,170** catalogs, **0** scheduled JSONL, **486** software. Last published snapshot is v1.20.0 (35,266 catalogs, 0 scheduled, 423 software).
 
 ### Scope Boundary (Important)
 

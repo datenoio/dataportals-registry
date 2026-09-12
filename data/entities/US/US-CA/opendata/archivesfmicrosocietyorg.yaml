@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CA
+      name: California
+description: Searchable Datasette archive of digitized San Francisco Microscopical
+  Society records dating back to 1870.
+id: archivesfmicrosocietyorg
+langs:
+- id: EN
+  name: English
+link: https://archive.sfmicrosociety.org/
+name: San Francisco Microscopical Society Archive
+owner:
+  link: https://sfmicrosociety.org/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: San Francisco Microscopical Society
+  type: Civil society
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- archives
+- history
+- microscopy
+- San Francisco
+- open data
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: datasette:databases
+  url: https://archive.sfmicrosociety.org/-/databases.json
+properties:
+  is_national: false
+uid: cdi00005617

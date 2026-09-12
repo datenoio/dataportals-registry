@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Metadata catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 10
+    macroregion:
+      id: EU
+      name: European Union
+description: FAIR Data Point catalog of datasets, variables, and data services from
+  ENVRI environmental research infrastructures.
+endpoints:
+- type: dcat:ttl
+  url: https://fdp.envri.eu/
+- type: openapi
+  url: https://fdp.envri.eu/v3/api-docs
+  version: '3'
+- type: docs
+  url: https://fdp.envri.eu/swagger-ui.html
+id: fdpenvrieu
+langs:
+- id: EN
+  name: English
+link: https://fdp.envri.eu
+name: ENVRI Catalogue of Data
+owner:
+  link: https://envri.eu/
+  location:
+    country:
+      id: EU
+      name: European Union
+  name: ENVRI Community
+  type: International
+software:
+  id: fairdatapoint
+  name: FAIR Data Point
+status: active
+tags:
+- metadata
+- fairdatapoint
+- FAIR Data Point
+- has_api
+- environment
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00043156

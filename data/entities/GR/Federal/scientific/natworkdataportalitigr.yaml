@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: NATWORK Data Portal is a Scientific data repository operated by CERTH
+  / ITI, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://natwork-data-portal.iti.gr/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://natwork-data-portal.iti.gr/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://natwork-data-portal.iti.gr/api/3/action/package_list
+  version: '3'
+id: natworkdataportalitigr
+langs:
+- id: EL
+  name: Greek
+link: https://natwork-data-portal.iti.gr
+name: NATWORK Data Portal
+owner:
+  link: https://www.iti.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+  name: CERTH / ITI
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- scientific
+- research
+- academic
+- ckan
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043337

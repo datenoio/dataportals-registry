@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Flood risk information system for central Vietnam (FloodAdaptVN project). Datasets, documents,
-  maps, GeoStories, and dashboards.
+description: Flood risk information system for central Vietnam (FloodAdaptVN project).
+  Datasets, documents, maps, GeoStories, and dashboards.
 endpoints:
 - type: geonode:datasets
   url: https://frame-vn.org/api/datasets/
@@ -73,6 +73,12 @@ endpoints:
 - type: wms-c111
   url: https://frame-vn.org/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://frame-vn.org/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://frame-vn.org/catalogue/opensearch
+  version: '1.1'
 id: framevnorg
 langs:
 - id: VN

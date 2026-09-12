@@ -14,9 +14,9 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: Institutional repository of Sri Lanka Technology Campus (SLTC). Collects journal
-  articles, conference papers, theses and dissertations, and other scholarly output of the
-  campus.
+description: Institutional repository of Sri Lanka Technology Campus (SLTC). Collects
+  journal articles, conference papers, theses and dissertations, and other scholarly
+  output of the campus.
 endpoints:
 - type: dspace
   url: https://res.sltc.ac.lk/server/api
@@ -26,6 +26,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://res.sltc.ac.lk/sitemap_index.xml
+- type: oaipmh20
+  url: https://res.sltc.ac.lk/server/oai/request?verb=Identify
+  version: '2.0'
 id: ressltcaclk
 langs:
 - id: EN

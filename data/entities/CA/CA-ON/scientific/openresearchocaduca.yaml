@@ -22,6 +22,18 @@ endpoints:
 - type: oaipmh20
   url: https://openresearch.ocadu.ca/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://openresearch.ocadu.ca/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: eprints:rdf
+  url: https://openresearch.ocadu.ca/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://openresearch.ocadu.ca/cgi/export/repository/RDFN3/devel.n3
+- type: eprints:rest
+  url: https://openresearch.ocadu.ca/rest/eprint
+- type: opensearch
+  url: https://openresearch.ocadu.ca/cgi/opensearchdescription
+  version: '1.1'
 id: openresearchocaduca
 langs:
 - id: EN

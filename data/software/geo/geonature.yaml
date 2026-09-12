@@ -1,0 +1,63 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: geonature
+name: GeoNature
+website: https://geonature.fr
+description: GeoNature is the open-source biodiversity information suite from French
+  national parks (PnX-SI). Public GeoNature-atlas sites publish species sheets, maps,
+  and observation summaries from a GeoNature/TaxHub backend (`/static/css/atlas.css`).
+owner:
+  name: Parc national des Écrins / PnX-SI
+  location:
+    country:
+      id: FR
+      name: France
+logo_url: https://geonature.fr/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/PnX-SI/GeoNature-atlas
+documentation_url: https://pnx-si.github.io/GeoNature-atlas/
+license:
+  type: GPL-3.0
+  url: https://www.gnu.org/licenses/gpl-3.0.html
+export_formats:
+- GeoJSON
+- JSON
+capabilities:
+- Species atlas
+- Leaflet map
+- TaxHub media API
+last_updated: '2026-09-09T00:00:00Z'

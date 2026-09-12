@@ -15,12 +15,18 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: USIU-Africa Digital Repository is a scientific data repository operated by
-  United States International University-Africa running on DSpace.
+description: USIU-Africa Digital Repository is a scientific data repository operated
+  by United States International University-Africa running on DSpace.
 endpoints:
 - type: atom
   url: https://erepo.usiu.ac.ke/feed/atom_1.0/site
   version: '1.0'
+- type: oaipmh20
+  url: https://erepo.usiu.ac.ke/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://erepo.usiu.ac.ke/feed/rss_2.0/site
+  version: '2.0'
 id: erepousiuacke
 langs:
 - id: EN

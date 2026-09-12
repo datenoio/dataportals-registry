@@ -23,6 +23,10 @@ description: GeoNature-atlas of biodiversity observations for the Parc amazonien
 endpoints:
 - type: sitemap
   url: https://biodiversite.parc-amazonien-guyane.fr/sitemap.xml
+- type: geonature:api
+  url: https://biodiversite.parc-amazonien-guyane.fr/api/searchTaxon
+- type: geonature:api
+  url: https://biodiversite.parc-amazonien-guyane.fr/api/searchCommune
 id: biodiversiteparcamazonienguyanefr
 langs:
 - id: FR
@@ -45,8 +49,8 @@ properties:
   has_doi: false
   is_national: false
 software:
-  id: custom
-  name: Custom software
+  id: geonature
+  name: GeoNature
 status: active
 tags:
 - geospatial

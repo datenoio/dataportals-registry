@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: OFB ONEM mviewer of marine species observations, sampling plans, and
+  related layers.
+endpoints:
+- type: mviewer:config
+  url: https://data-onem.milieumarinfrance.fr/apps/prod/public/cartographie.xml
+id: dataonemmilieumarinfrancefr
+langs:
+- id: FR
+  name: French
+link: https://data-onem.milieumarinfrance.fr/?config=apps/prod/public/cartographie.xml
+name: Portail de données de l'ONEM
+owner:
+  link: https://www.milieumarinfrance.fr
+  location:
+    country:
+      id: FR
+      name: France
+  name: Office français de la biodiversité
+  type: Central government
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- government
+- mviewer
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00043262

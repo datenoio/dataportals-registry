@@ -23,6 +23,17 @@ description: Ball State University institutional repository for faculty, student
 endpoints:
 - type: dspace:rest
   url: https://cardinalscholar.bsu.edu/server/api
+- type: dspace:objects
+  url: https://cardinalscholar.bsu.edu/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://cardinalscholar.bsu.edu/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://cardinalscholar.bsu.edu/sitemap_index.xml
+- type: oaipmh20
+  url: https://cardinalscholar.bsu.edu/server/oai/request?verb=Identify
+  version: '2.0'
 id: cardinalscholarbsuedu
 langs:
 - id: EN

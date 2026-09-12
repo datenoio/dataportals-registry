@@ -33,6 +33,14 @@ endpoints:
   version: '1.0'
 - type: opensearch
   url: http://repositori.upf.edu:80/open-search/description.xml
+- type: dspace
+  url: https://repositori.upf.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositori.upf.edu/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://repositori.upf.edu/sitemap_index.xml
 id: repositoriupfedu
 langs:
 - id: ES

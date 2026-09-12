@@ -13,7 +13,7 @@ coverage:
       name: Lesotho
     level: 20
     macroregion:
-      id: '018'
+      id: 018
       name: Southern Africa
 description: National University of Lesotho Institutional Repository (NULIR). DSpace
   7.6 archive of theses, dissertations, research articles, and other scholarly outputs.
@@ -27,6 +27,8 @@ endpoints:
 - type: oaipmh20
   url: https://repository.tml.nul.ls/server/oai/request?verb=Identify
   version: '2.0'
+- type: sitemap
+  url: https://repository.tml.nul.ls/sitemap_index.xml
 id: repositorytmlnulls
 identifiers:
 - id: roar

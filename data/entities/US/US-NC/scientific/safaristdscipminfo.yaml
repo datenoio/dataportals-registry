@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-NC
+      name: North Carolina
+description: THREDDS catalog of climate, phenology, and pest-risk datasets for the
+  SAFARIS modeling framework.
+endpoints:
+- type: thredds:catalog
+  url: https://safaris-tds.cipm.info/thredds/catalog.xml
+- type: thredds:info
+  url: https://safaris-tds.cipm.info/thredds/serverInfo.xml
+id: safaristdscipminfo
+langs:
+- id: EN
+  name: English
+link: https://safaris-tds.cipm.info/thredds/catalog.html
+name: SAFARIS CIPM THREDDS Data Server
+owner:
+  link: https://cipm.ncsu.edu/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NC
+      name: North Carolina
+  name: NSF Center for Integrated Pest Management, NC State University
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- THREDDS
+- climate
+- pest
+- scientific
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00042361

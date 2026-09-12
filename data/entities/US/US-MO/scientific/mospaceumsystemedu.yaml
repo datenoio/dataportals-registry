@@ -24,6 +24,17 @@ endpoints:
 - type: oaipmh20
   url: https://mospace.umsystem.edu/oai/request?verb=Identify
   version: '2.0'
+- type: dspace
+  url: https://mospace.umsystem.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://mospace.umsystem.edu/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://mospace.umsystem.edu/sitemap_index.xml
+- type: oaipmh20
+  url: https://mospace.umsystem.edu/server/oai/request?verb=Identify
+  version: '2.0'
 id: mospaceumsystemedu
 langs:
 - id: EN

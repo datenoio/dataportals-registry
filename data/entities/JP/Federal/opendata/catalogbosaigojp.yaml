@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: SIP4D-CKAN is an Open data portal operated by National Research Institute
+  for Earth Science and Disaster Resilience, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://catalog.bosai.go.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalog.bosai.go.jp/api/3/action/package_search
+  version: '3'
+- type: dcat:n3
+  url: https://catalog.bosai.go.jp/catalog.n3
+- type: dcat:ttl
+  url: https://catalog.bosai.go.jp/catalog.ttl
+- type: dcat:xml
+  url: https://catalog.bosai.go.jp/catalog.xml
+- type: dcat:jsonld
+  url: https://catalog.bosai.go.jp/catalog.jsonld
+- type: dcat
+  url: https://catalog.bosai.go.jp/catalog.rdf
+- type: ckan:package-list
+  url: https://catalog.bosai.go.jp/api/3/action/package_list
+  version: '3'
+id: catalogbosaigojp
+langs:
+- id: JA
+  name: Japanese
+link: https://catalog.bosai.go.jp
+name: SIP4D-CKAN
+owner:
+  link: https://www.bosai.go.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+  name: National Research Institute for Earth Science and Disaster Resilience
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- ckan
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043530

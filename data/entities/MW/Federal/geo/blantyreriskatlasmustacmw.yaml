@@ -40,6 +40,19 @@ endpoints:
 - type: oaipmh20
   url: https://blantyreriskatlas.must.ac.mw/catalogue/csw?mode=oaipmh&verb=Identify
   version: '2.0'
+- type: geonode:datasets
+  url: https://blantyreriskatlas.must.ac.mw/api/datasets/
+- type: geonode:documents
+  url: https://blantyreriskatlas.must.ac.mw/api/documents/
+- type: opensearch
+  url: https://blantyreriskatlas.must.ac.mw/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: geonode:datasets
+  url: https://blantyreriskatlas.must.ac.mw/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://blantyreriskatlas.must.ac.mw/catalogue/opensearch
+  version: '1.1'
 id: blantyreriskatlasmustacmw
 langs:
 - id: EN

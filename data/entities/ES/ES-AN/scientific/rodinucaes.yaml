@@ -21,6 +21,18 @@ description: RODIN is a DSpace repository listed in re3data as a research data p
 endpoints:
 - type: dspace:catalog
   url: https://rodin.uca.es
+- type: oaipmh20
+  url: https://rodin.uca.es/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://rodin.uca.es/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://rodin.uca.es/feed/atom_1.0/site
+  version: '1.0'
+- type: dspace:items
+  url: https://rodin.uca.es/rest/items
+  version: '6'
 id: rodinucaes
 identifiers:
 - id: re3data

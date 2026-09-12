@@ -33,6 +33,12 @@ endpoints:
   url: https://orgprints.org/sitemap.xml
 - type: opensearch
   url: https://orgprints.org/cgi/opensearchdescription
+- type: eprints:rdf
+  url: https://orgprints.org/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://orgprints.org/cgi/export/repository/RDFN3/devel.n3
+- type: eprints:datasets
+  url: https://orgprints.org/cgi/exportview/type/dataset/JSON/dataset.js
 id: orgprintsorg
 langs:
 - id: EN

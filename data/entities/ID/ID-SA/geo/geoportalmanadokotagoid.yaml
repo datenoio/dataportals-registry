@@ -64,6 +64,9 @@ endpoints:
   url: http://geoportal.manadokota.go.id/geoserver/rest/settings
 - type: geoserver:layers
   url: http://geoportal.manadokota.go.id/geoserver/rest/layers
+- type: opensearch
+  url: http://geoportal.manadokota.go.id/catalogue/opensearch
+  version: '1.1'
 id: geoportalmanadokotagoid
 langs:
 - id: ID
@@ -101,7 +104,8 @@ tags:
 - GIS
 - geospatial
 - government
-description: Geoportal. managed by Pemerintah Kota Manado. providing access to geoportal manado.
+description: Geoportal. managed by Pemerintah Kota Manado. providing access to geoportal
+  manado.
 content_types:
 - dataset
 - map_layer

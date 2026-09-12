@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: ID-YO
       name: Yogyakarta
-description: Assign topic according to EU data theme vocabulary associated with Data Catalog Vocabulary application profile (DCAT-AP)
+description: Assign topic according to EU data theme vocabulary associated with Data
+  Catalog Vocabulary application profile (DCAT-AP)
 endpoints:
 - type: geonode:layers
   url: https://geoportal.slemankab.go.id/api/layers/
@@ -68,6 +69,12 @@ endpoints:
 - type: wps100
   url: https://geoportal.slemankab.go.id/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://geoportal.slemankab.go.id/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geoportal.slemankab.go.id/catalogue/opensearch
+  version: '1.1'
 id: geoportalslemankabgoid
 langs:
 - id: ID

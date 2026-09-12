@@ -19,8 +19,8 @@ coverage:
       id: IS-1
       name: Höfuðborgarsvæði
 description: ArcGIS Hub open-data site for Landupplýsingakerfi Kópavogs (LUK), publishing
-  municipal geospatial datasets for Kópavogur including property, infrastructure, and
-  public-service layers.
+  municipal geospatial datasets for Kópavogur including property, infrastructure,
+  and public-service layers.
 endpoints:
 - type: dcatap201
   url: https://opin-gogn-luk-lukk.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -32,6 +32,8 @@ endpoints:
   url: https://opin-gogn-luk-lukk.hub.arcgis.com/api/search/v1
 - type: sitemap
   url: https://opin-gogn-luk-lukk.hub.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://opin-gogn-luk-lukk.hub.arcgis.com/data.json
 id: opingognluklukkhubarcgiscom
 langs:
 - id: IS

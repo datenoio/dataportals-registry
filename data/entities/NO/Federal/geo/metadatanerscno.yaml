@@ -39,6 +39,26 @@ endpoints:
   url: http://metadata.nersc.no/geonetwork/srv/api/site
 - type: opensearch
   url: http://metadata.nersc.no/portal.opensearch
+- type: geonetwork:query
+  url: https://metadata.nersc.no/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://metadata.nersc.no/geonetwork/srv/api/records
+- type: openapi
+  url: https://metadata.nersc.no/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://metadata.nersc.no/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://metadata.nersc.no/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://metadata.nersc.no/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: dcat:xml
+  url: https://metadata.nersc.no/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://metadata.nersc.no/geonetwork/srv/api/site
 id: metadatanerscno
 langs:
 - id: 'NO'

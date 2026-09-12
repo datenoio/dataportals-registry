@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CI
+      name: Cote d Ivoire
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: SuperMap iServer used by CNTIG for Côte d'Ivoire geospatial services,
+  including national administrative maps and commune cartography. Same engine is also
+  exposed on carte-emploi.net, stats-dgcn.com, and serv2.devcntig.com.
+endpoints:
+- type: supermap:services
+  url: https://cartescolaire-men.ci:8443/iserver/services.json
+id: cartescolairemenci
+langs:
+- id: FR
+  name: French
+link: https://cartescolaire-men.ci:8443/iserver/
+name: CNTIG SuperMap iServer
+owner:
+  link: http://www.cntig.net
+  location:
+    country:
+      id: CI
+      name: Cote d Ivoire
+    level: 20
+  name: Comite National de Teledetection et d'Information Geographique (CNTIG)
+  type: Central government
+properties:
+  dataset_count_reported: 19
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: supermapiserver
+  name: SuperMap iServer
+status: active
+tags:
+- SuperMap
+- iServer
+- geospatial
+- government
+- Cote d Ivoire
+- CNTIG
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043849

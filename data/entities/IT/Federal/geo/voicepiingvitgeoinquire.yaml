@@ -25,6 +25,12 @@ endpoints:
 - type: pygeoapi:collections
   url: https://voice.pi.ingv.it/geoinquire/collections?f=json
   version: '1.0'
+- type: pygeoapi:openapi
+  url: https://voice.pi.ingv.it/geoinquire/openapi
+  version: '1.0'
+- type: ogc:features
+  url: https://voice.pi.ingv.it/geoinquire/collections/?f=json
+  version: '1.0'
 id: voicepiingvitgeoinquire
 langs:
 - id: EN

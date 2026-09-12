@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '001'
       name: World
-description: GeoNetwork catalog of SERVIR Global for Earth observation and geospatial datasets
-  supporting climate, agriculture, water, and disaster applications.
+description: GeoNetwork catalog of SERVIR Global for Earth observation and geospatial
+  datasets supporting climate, agriculture, water, and disaster applications.
 endpoints:
 - type: geonetwork:query
   url: https://gis1.servirglobal.net/geonetwork/srv/eng/q
@@ -31,6 +31,13 @@ endpoints:
   version: '2.0'
 - type: geonetwork:site
   url: https://gis1.servirglobal.net/geonetwork/srv/api/site
+- type: geonetwork:records
+  url: https://gis1.servirglobal.net/geonetwork/srv/api/records
+- type: openapi
+  url: https://gis1.servirglobal.net/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: dcat:xml
+  url: https://gis1.servirglobal.net/geonetwork/srv/api/records?accept=application/rdf+xml
 id: gis1servirglobalnetgeonetwork
 langs:
 - id: EN

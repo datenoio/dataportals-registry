@@ -79,6 +79,12 @@ endpoints:
   url: https://prinserena.igag.cnr.it/geoserver/rest/settings
 - type: geoserver:layers
   url: https://prinserena.igag.cnr.it/geoserver/rest/layers
+- type: geonode:datasets
+  url: https://prinserena.igag.cnr.it/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://prinserena.igag.cnr.it/catalogue/opensearch
+  version: '1.1'
 id: prinserenaigagcnrit
 langs:
 - id: EN

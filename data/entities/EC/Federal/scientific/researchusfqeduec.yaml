@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Universidad San Francisco de Quito USFQ is a Scientific data repository
+  operated by Universidad San Francisco de Quito USFQ.
+id: researchusfqeduec
+langs:
+- id: ES
+  name: Spanish
+link: https://research.usfq.edu.ec
+name: Universidad San Francisco de Quito USFQ
+owner:
+  link: https://research.usfq.edu.ec
+  location:
+    country:
+      id: EC
+      name: Ecuador
+  name: Universidad San Francisco de Quito USFQ
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042723
+endpoints:
+- type: oaipmh20
+  url: https://research.usfq.edu.ec/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://research.usfq.edu.ec/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://research.usfq.edu.ec/sitemap/datasets.xml

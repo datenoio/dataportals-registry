@@ -14,16 +14,18 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: Open source research data repository software hosting datasets related to agricultural
-  research, including phenotypic, genotypic, social science, spatial, soil, and weather data.
-  Focuses on crops, economic growth, food sufficiency, health, nutrition, poverty, and women
-  empowerment, primarily in Asia and sub-Saharan Africa.
+description: Open source research data repository software hosting datasets related
+  to agricultural research, including phenotypic, genotypic, social science, spatial,
+  soil, and weather data. Focuses on crops, economic growth, food sufficiency, health,
+  nutrition, poverty, and women empowerment, primarily in Asia and sub-Saharan Africa.
 endpoints:
 - type: oaipmh20
   url: https://dataverse.icrisat.org/oai?verb=Identify
   version: '2.0'
 - type: sitemap
   url: https://dataverse.icrisat.org/sitemap.xml
+- type: dataverseapi
+  url: https://dataverse.icrisat.org/api/info/version
 id: dataverseicrisatorg
 identifiers:
 - id: re3data

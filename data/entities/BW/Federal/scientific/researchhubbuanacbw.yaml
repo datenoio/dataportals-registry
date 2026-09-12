@@ -13,7 +13,7 @@ coverage:
       name: Botswana
     level: 20
     macroregion:
-      id: '018'
+      id: 018
       name: Southern Africa
 description: BUAN ResearchHub DSpace institutional repository of theses, faculty publications,
   and the Botswana Journal of Agriculture and Applied Sciences.
@@ -26,6 +26,12 @@ endpoints:
 - type: oaipmh20
   url: https://researchhub.buan.ac.bw/oai/request?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://researchhub.buan.ac.bw/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://researchhub.buan.ac.bw/feed/atom_1.0/site
+  version: '1.0'
 id: researchhubbuanacbw
 langs:
 - id: EN

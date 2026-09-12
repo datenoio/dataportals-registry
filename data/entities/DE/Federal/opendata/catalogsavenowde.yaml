@@ -27,6 +27,16 @@ endpoints:
 - type: ckan:package-list
   url: http://catalog.savenow.de/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: http://catalog.savenow.de/catalog.n3
+- type: dcat:ttl
+  url: http://catalog.savenow.de/catalog.ttl
+- type: dcat:xml
+  url: http://catalog.savenow.de/catalog.xml
+- type: dcat:jsonld
+  url: http://catalog.savenow.de/catalog.jsonld
+- type: dcat
+  url: http://catalog.savenow.de/catalog.rdf
 id: catalogsavenowde
 langs:
 - id: DE

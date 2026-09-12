@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: RIVM Samen Meten citizen-science air-quality SensorThings catalog. The
+  public dataportaal lists stations; Things and Datastreams are served by FROST-Server.
+endpoints:
+- type: sensorthings
+  url: https://api-samenmeten.rivm.nl/v1.0/Things
+  version: '1.0'
+id: samenmetennl
+langs:
+- id: NL
+  name: Dutch
+link: https://www.samenmeten.nl/dataportaal/
+name: Samen Meten dataportaal
+owner:
+  link: https://www.rivm.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: Rijksinstituut voor Volksgezondheid en Milieu
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: frostserver
+  name: FROST-Server
+status: active
+tags:
+- SensorThings
+- air quality
+- FROST
+- citizen science
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00043595

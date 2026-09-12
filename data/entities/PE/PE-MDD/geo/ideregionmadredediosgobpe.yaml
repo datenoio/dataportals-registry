@@ -31,6 +31,16 @@ endpoints:
 - type: oaipmh20
   url: https://ide.regionmadrededios.gob.pe/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: openapi
+  url: https://ide.regionmadrededios.gob.pe/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: opensearch
+  url: https://ide.regionmadrededios.gob.pe/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: dcat:xml
+  url: https://ide.regionmadrededios.gob.pe/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://ide.regionmadrededios.gob.pe/geonetwork/srv/api/site
 id: ideregionmadredediosgobpe
 langs:
 - id: ES

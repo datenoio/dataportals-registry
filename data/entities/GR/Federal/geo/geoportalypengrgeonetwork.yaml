@@ -13,7 +13,7 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: INSPIRE discovery catalogue of the Greek Ministry of Environment and
   Energy (YPEN). GeoNetwork CSW/search UI for environmental geospatial metadata, distinct
@@ -30,6 +30,15 @@ endpoints:
 - type: oaipmh20
   url: http://geoportal.ypen.gr/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:records
+  url: http://geoportal.ypen.gr/geonetwork/srv/api/records
+- type: openapi
+  url: http://geoportal.ypen.gr/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: dcat:xml
+  url: http://geoportal.ypen.gr/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: http://geoportal.ypen.gr/geonetwork/srv/api/site
 id: geoportalypengrgeonetwork
 langs:
 - id: EL

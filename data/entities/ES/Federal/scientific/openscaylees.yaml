@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: SCAYLE Open Data is a Scientific data repository operated by Supercomputación
+  Castilla y León, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://open.scayle.es/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://open.scayle.es/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://open.scayle.es/api/3/action/package_list
+  version: '3'
+id: openscaylees
+langs:
+- id: ES
+  name: Spanish
+link: https://open.scayle.es
+name: SCAYLE Open Data
+owner:
+  link: https://www.scayle.es
+  location:
+    country:
+      id: ES
+      name: Spain
+  name: Supercomputación Castilla y León
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- scientific
+- research
+- academic
+- ckan
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043143

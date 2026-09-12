@@ -27,6 +27,16 @@ endpoints:
 - type: ckan:package-list
   url: https://data.bioheritage.nz/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://data.bioheritage.nz/catalog.n3
+- type: dcat:ttl
+  url: https://data.bioheritage.nz/catalog.ttl
+- type: dcat:xml
+  url: https://data.bioheritage.nz/catalog.xml
+- type: dcat:jsonld
+  url: https://data.bioheritage.nz/catalog.jsonld
+- type: dcat
+  url: https://data.bioheritage.nz/catalog.rdf
 id: databioheritagenz
 identifiers:
 - id: re3data

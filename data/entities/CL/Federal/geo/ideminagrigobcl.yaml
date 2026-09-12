@@ -32,6 +32,8 @@ endpoints:
 - type: oaipmh20
   url: https://ide.minagri.gob.cl/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: dcat:xml
+  url: https://ide.minagri.gob.cl/geonetwork/srv/api/records?accept=application/rdf+xml
 - type: geonetwork:site
   url: https://ide.minagri.gob.cl/geonetwork/srv/api/site
 - type: opensearch

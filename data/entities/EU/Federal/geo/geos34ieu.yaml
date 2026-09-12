@@ -59,6 +59,12 @@ endpoints:
 - type: wps100
   url: https://geo.s34i.eu/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://geo.s34i.eu/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geo.s34i.eu/catalogue/opensearch
+  version: '1.1'
 id: geos34ieu
 link: https://geo.s34i.eu
 name: S34I Geoportal

@@ -65,6 +65,12 @@ endpoints:
   url: https://idefor.cnf.gob.mx/geoserver/rest/settings
 - type: geoserver:layers
   url: https://idefor.cnf.gob.mx/geoserver/rest/layers
+- type: wms130
+  url: https://idefor.cnf.gob.mx/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: opensearch
+  url: https://idefor.cnf.gob.mx/catalogue/opensearch
+  version: '1.1'
 id: ideforcnfgobmx
 langs:
 - id: ES

@@ -22,6 +22,21 @@ description: Institutional repository of Universidad Politécnica de Madrid (Arc
 endpoints:
 - type: eprints:catalog
   url: https://oa.upm.es
+- type: rss
+  url: https://oa.upm.es/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: eprints:datasets
+  url: https://oa.upm.es/cgi/exportview/type/dataset/JSON/dataset.js
+- type: oaipmh20
+  url: https://oa.upm.es/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: atom
+  url: https://oa.upm.es/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://oa.upm.es/rest/eprint
+- type: opensearch
+  url: https://oa.upm.es/cgi/opensearchdescription
+  version: '1.1'
 id: oaupmes
 langs:
 - id: ES

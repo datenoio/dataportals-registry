@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: GeoNode geoportal of the Po River Basin District Authority (ADBPo)
-  with INSPIRE-compliant maps and datasets on water, flood risk, and the Po basin.
+description: GeoNode geoportal of the Po River Basin District Authority (ADBPo) with
+  INSPIRE-compliant maps and datasets on water, flood risk, and the Po basin.
 endpoints:
 - type: geonode:datasets
   url: https://webgis.adbpo.it/api/datasets/
@@ -73,6 +73,12 @@ endpoints:
 - type: wms-c111
   url: https://webgis.adbpo.it/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://webgis.adbpo.it/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://webgis.adbpo.it/catalogue/opensearch
+  version: '1.1'
 id: webgisadbpoit
 langs:
 - id: IT

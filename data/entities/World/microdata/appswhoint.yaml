@@ -19,6 +19,8 @@ description: Catalog providing access to health survey datasets for multiple cou
 endpoints:
 - type: nada:catalog-search
   url: https://apps.who.int/healthinfo/systems/surveydata/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://apps.who.int/healthinfo/systems/surveydata/index.php/catalog/export/csv?ps=5000&collection[]
 id: appswhoint
 identifiers:
 - id: re3data

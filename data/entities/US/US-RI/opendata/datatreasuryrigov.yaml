@@ -28,6 +28,15 @@ endpoints:
 - type: ckan:package-list
   url: http://data.treasury.ri.gov/api/3/action/package_list
   version: '3'
+- type: ckan
+  url: https://data.treasury.ri.gov/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.treasury.ri.gov/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.treasury.ri.gov/api/3/action/package_list
+  version: '3'
 id: datatreasuryrigov
 langs:
 - id: EN

@@ -22,6 +22,11 @@ endpoints:
   url: https://data.enseignementsup-recherche.gouv.fr/api
 - type: sitemap
   url: https://data.enseignementsup-recherche.gouv.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.enseignementsup-recherche.gouv.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.enseignementsup-recherche.gouv.fr/api/v2/catalog/exports/dcat
 id: dataenseignementsuprecherchegouvfr
 langs:
 - id: FR

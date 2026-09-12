@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Vientiane Integrated Urban Information GIS-based open data platform
-  (VIRGO) of the Ministry of Public Works and Transport. GeoNode 4 catalog of urban
-  infrastructure, roads, and related map layers for Vientiane.
+description: Vientiane Integrated Urban Information GIS-based open data platform (VIRGO)
+  of the Ministry of Public Works and Transport. GeoNode 4 catalog of urban infrastructure,
+  roads, and related map layers for Vientiane.
 endpoints:
 - type: geonode:datasets
   url: https://virgo.mpwt.gov.la/api/datasets/
@@ -65,6 +65,12 @@ endpoints:
 - type: wps100
   url: https://virgo.mpwt.gov.la/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://virgo.mpwt.gov.la/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://virgo.mpwt.gov.la/catalogue/opensearch
+  version: '1.1'
 id: virgompwtgovla
 langs:
 - id: LO

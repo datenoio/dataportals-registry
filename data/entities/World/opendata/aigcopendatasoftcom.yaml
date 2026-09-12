@@ -21,6 +21,15 @@ endpoints:
   url: https://aigc.opendatasoft.com/api
 - type: sitemap
   url: https://aigc.opendatasoft.com/sitemap.xml
+- type: opendatasoftapi
+  url: https://aigc.opendatasoft.com/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://aigc.opendatasoft.com/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://aigc.opendatasoft.com/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://aigc.opendatasoft.com/data.json
 id: aigcopendatasoftcom
 langs:
 - id: EN

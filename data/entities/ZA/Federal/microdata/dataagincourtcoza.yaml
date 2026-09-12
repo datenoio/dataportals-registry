@@ -20,6 +20,8 @@ description: Public data catalog for health, demographic, and social data collec
 endpoints:
 - type: nada:catalog-search
   url: https://data.agincourt.co.za/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://data.agincourt.co.za/index.php/catalog/export/csv?ps=5000&collection[]
 id: dataagincourtcoza
 langs:
 - id: EN

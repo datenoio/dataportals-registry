@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: MET Norway S-ENDA pycsw CSW catalogue for meteorological and environmental
+  dataset metadata (data.csw.met.no).
+endpoints:
+- type: csw202
+  url: https://data.csw.met.no/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://data.csw.met.no/?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: oaipmh20
+  url: https://data.csw.met.no/oaipmh
+  version: '2.0'
+- type: csw300
+  url: https://data.csw.met.no/csw
+  version: 3.0.0
+- type: opensearch
+  url: https://data.csw.met.no/opensearch
+  version: '1.0'
+- type: sru
+  url: https://data.csw.met.no/sru
+  version: '1.0'
+id: datacswmetno
+langs:
+- id: 'NO'
+  name: Norwegian
+- id: EN
+  name: English
+link: https://data.csw.met.no
+name: MET Norway CSW Geospatial Catalogue
+owner:
+  link: https://met.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: Norwegian Meteorological Institute
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: pycsw
+  name: pycsw
+status: active
+tags:
+- geospatial
+- metadata
+- pycsw
+- meteorology
+- climate
+- MET Norway
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00043597

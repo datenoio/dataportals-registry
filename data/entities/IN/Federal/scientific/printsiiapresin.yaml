@@ -19,6 +19,18 @@ description: Institutional repository of the Indian Institute of Astrophysics, r
 endpoints:
 - type: dspace:catalog
   url: http://prints.iiap.res.in
+- type: dspace:items
+  url: http://prints.iiap.res.in/rest/items
+  version: '6'
+- type: oaipmh20
+  url: http://prints.iiap.res.in/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: http://prints.iiap.res.in/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: http://prints.iiap.res.in/feed/atom_1.0/site
+  version: '1.0'
 id: printsiiapresin
 langs:
 - id: EN

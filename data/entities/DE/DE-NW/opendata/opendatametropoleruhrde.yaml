@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: Open Data Portal Ruhr is an Open data portal operated by Regionalverband
+  Ruhr, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://opendata.metropoleruhr.de/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata.metropoleruhr.de/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.metropoleruhr.de/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://opendata.metropoleruhr.de/catalog.n3
+- type: dcat:ttl
+  url: https://opendata.metropoleruhr.de/catalog.ttl
+- type: dcat:xml
+  url: https://opendata.metropoleruhr.de/catalog.xml
+- type: dcat:jsonld
+  url: https://opendata.metropoleruhr.de/catalog.jsonld
+id: opendatametropoleruhrde
+langs:
+- id: DE
+  name: German
+link: https://opendata.metropoleruhr.de
+name: Open Data Portal Ruhr
+owner:
+  link: https://www.rvr.ruhr
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+  name: Regionalverband Ruhr
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- ckan
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043096

@@ -18,6 +18,18 @@ description: Institutional repository of Jadavpur University, running on DSpace.
 endpoints:
 - type: dspace:catalog
   url: https://irju.jdvu.ac.in
+- type: dspace:items
+  url: https://irju.jdvu.ac.in/rest/items
+  version: '6'
+- type: oaipmh20
+  url: https://irju.jdvu.ac.in/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://irju.jdvu.ac.in/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://irju.jdvu.ac.in/feed/atom_1.0/site
+  version: '1.0'
 id: irjujdvuacin
 langs:
 - id: EN

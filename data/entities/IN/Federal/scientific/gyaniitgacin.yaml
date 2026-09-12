@@ -19,6 +19,17 @@ description: Institutional repository of Indian Institute of Technology Guwahati
 endpoints:
 - type: dspace:catalog
   url: https://gyan.iitg.ac.in
+- type: dspace
+  url: https://gyan.iitg.ac.in/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://gyan.iitg.ac.in/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://gyan.iitg.ac.in/sitemap_index.xml
+- type: oaipmh20
+  url: https://gyan.iitg.ac.in/server/oai/request?verb=Identify
+  version: '2.0'
 id: gyaniitgacin
 langs:
 - id: EN

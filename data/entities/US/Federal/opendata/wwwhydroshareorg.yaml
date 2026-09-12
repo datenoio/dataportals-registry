@@ -19,6 +19,8 @@ description: HydroShare is CUAHSI's online collaboration environment for sharing
   data and models, supporting collaboration, reproducibility, and data citation.
 endpoints:
 - type: rest
+  url: https://www.hydroshare.org/hsapi/resource/
+- type: rest
   url: https://sonode.dataone.org/HYDROSHARE/
 - type: sitemap
   url: https://www.hydroshare.org/sitemap.xml
@@ -47,8 +49,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: hydroshare
+  name: HydroShare
 status: active
 tags:
 - Hydrology

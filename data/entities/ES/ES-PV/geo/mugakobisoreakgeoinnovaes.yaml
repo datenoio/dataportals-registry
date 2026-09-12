@@ -62,6 +62,12 @@ endpoints:
 - type: wps100
   url: https://mugakobisoreak.geoinnova.es/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://mugakobisoreak.geoinnova.es/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://mugakobisoreak.geoinnova.es/catalogue/opensearch
+  version: '1.1'
 id: mugakobisoreakgeoinnovaes
 langs:
 - id: ES

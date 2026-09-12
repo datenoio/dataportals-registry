@@ -22,6 +22,9 @@ description: Institutional repository of TU Wien to enable storing, sharing and 
 endpoints:
 - type: inveniordmapi:records
   url: https://researchdata.tuwien.ac.at/api/records
+- type: oaipmh20
+  url: https://researchdata.tuwien.ac.at/oai2d?verb=Identify
+  version: '2.0'
 id: researchdatatuwienacat
 identifiers:
 - id: opendoar

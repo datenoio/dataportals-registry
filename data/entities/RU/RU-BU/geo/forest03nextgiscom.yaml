@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: RU-BU
+      name: Burjatija, Respublika
+description: Public NextGIS Web catalog of forest, remote-sensing, and protected-area
+  layers for Buryatia and Pribaikalye, published by IPMS SB RAS and cited for PolInSAR
+  forest-height research.
+endpoints:
+- type: nextgisweb:api
+  url: https://forest03.nextgis.com/api/resource/
+- type: nextgisweb:pkg-version
+  url: https://forest03.nextgis.com/api/component/pyramid/pkg_version
+- type: nextgisweb:routes
+  url: https://forest03.nextgis.com/api/component/pyramid/route
+id: forest03nextgiscom
+langs:
+- id: RU
+  name: Russian
+link: https://forest03.nextgis.com
+name: Геоинформационная система ИФМ СО РАН
+owner:
+  link: https://ipms.bscnet.ru
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    subregion:
+      id: RU-BU
+      name: Burjatija, Respublika
+  name: Институт физического материаловедения СО РАН
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: nextgisweb
+  name: NextGIS Web
+status: active
+tags:
+- geospatial
+- environment
+- forest
+- remote sensing
+- NextGIS
+- Buryatia
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00043660

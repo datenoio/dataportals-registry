@@ -13,7 +13,7 @@ coverage:
       name: Portugal
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Institutional repository of the University of Minho (DSpace). Distinct
   from DataRepositoriUM; includes dataset-typed items among publications.
@@ -29,6 +29,9 @@ endpoints:
   version: '2.0'
 - type: sitemap
   url: https://repositorium.uminho.pt/sitemap_index.xml
+- type: oaipmh20
+  url: https://repositorium.uminho.pt/server/oai/request?verb=Identify
+  version: '2.0'
 id: repositoriumuminhopt
 identifiers:
 - id: openaire

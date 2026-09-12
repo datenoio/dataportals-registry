@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -29,6 +29,9 @@ langs:
   name: English
 - id: FR
   name: French
+endpoints:
+- type: customapi
+  url: https://api.openalex.org/works?per-page=1
 link: https://openalex.org/
 name: OpenAlex
 owner:
@@ -40,8 +43,8 @@ owner:
   name: OurResearch
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: openalex
+  name: OpenAlex
 status: active
 tags:
 - scientific

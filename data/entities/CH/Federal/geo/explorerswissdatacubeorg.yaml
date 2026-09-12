@@ -21,6 +21,12 @@ description: Web-based explorer to visualize, query, and access Earth Observatio
 endpoints:
 - type: stacserverapi
   url: https://explorer.swissdatacube.org/stac
+- type: stacserverapi
+  url: https://explorer.swissdatacube.org/stac/
+  version: '1.0'
+- type: stacserverapi:stac-collections
+  url: https://explorer.swissdatacube.org/stac/collections
+  version: '1.0'
 id: explorerswissdatacubeorg
 langs:
 - id: DE

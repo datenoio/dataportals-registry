@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -22,6 +22,9 @@ description: The Center for Expanded Data Annotation and Retrieval (CEDAR) Workb
   or curators to use the templates to define the metadata for individual experiments,
   and scientists to search the metadata to access and analyze the corresponding online
   datasets.
+endpoints:
+- type: custom_api
+  url: https://resource.metadatacenter.org/
 id: metadatacenterorg
 identifiers:
 - id: openaire
@@ -30,8 +33,8 @@ identifiers:
 langs:
 - id: EN
   name: English
-link: https://metadatacenter.org/
-name: Center for Expanded Data Annotation and Retrieval Workbench
+link: https://cedar.metadatacenter.org
+name: CEDAR Workbench
 owner:
   link: https://metadatacenter.org
   location:
@@ -41,8 +44,8 @@ owner:
   name: Stanford University / Stanford Center for Biomedical Informatics Research
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: cedar
+  name: CEDAR Workbench
 status: active
 tags:
 - scientific

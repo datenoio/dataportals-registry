@@ -22,6 +22,14 @@ description: Clermont County Open Data portal providing public datasets from the
 endpoints:
 - type: socrata:views
   url: https://opendata.clermontauditor.org/api/views
+- type: dcatus11
+  url: https://opendata.clermontauditor.org/data.json
+- type: socrata:catalog
+  url: https://opendata.clermontauditor.org/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://opendata.clermontauditor.org/opensearch.xml
+  version: '1.1'
 id: opendataclermontauditororg
 langs:
 - id: EN

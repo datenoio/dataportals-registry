@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -43,8 +43,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: dspace
+  name: DSpace
 status: active
 tags:
 - scientific
@@ -56,3 +56,16 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00026432
+endpoints:
+- type: dspace
+  url: https://henry.baw.de/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://henry.baw.de/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://henry.baw.de/oai/request?verb=Identify
+  version: '2.0'
+- type: oaipmh20
+  url: https://henry.baw.de/server/oai/request?verb=Identify
+  version: '2.0'

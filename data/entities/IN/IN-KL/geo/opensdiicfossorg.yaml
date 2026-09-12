@@ -64,6 +64,12 @@ endpoints:
 - type: wps100
   url: https://opensdi.icfoss.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://opensdi.icfoss.org/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://opensdi.icfoss.org/catalogue/opensearch
+  version: '1.1'
 id: opensdiicfossorg
 link: https://opensdi.icfoss.org
 name: Open SDI

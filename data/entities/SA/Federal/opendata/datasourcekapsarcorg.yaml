@@ -14,13 +14,22 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: KAPSARC open data portal publishing energy, economy, and policy
-  datasets for researchers and the public.
+description: KAPSARC open data portal publishing energy, economy, and policy datasets
+  for researchers and the public.
 endpoints:
 - type: opendatasoftapi
   url: https://datasource.kapsarc.org/api
 - type: sitemap
   url: https://datasource.kapsarc.org/sitemap.xml
+- type: opendatasoftapi
+  url: https://datasource.kapsarc.org/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://datasource.kapsarc.org/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://datasource.kapsarc.org/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://datasource.kapsarc.org/data.json
 id: datasourcekapsarcorg
 langs:
 - id: EN

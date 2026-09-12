@@ -19,14 +19,16 @@ coverage:
       id: FR-NAQ
       name: Nouvelle-Aquitaine
 description: OGC API Features service (pygeoapi) exposing the French agricultural
-  parcel register (Registre Parcellaire Graphique, RPG), operated by GéoSAS in
-  Nouvelle-Aquitaine.
+  parcel register (Registre Parcellaire Graphique, RPG), operated by GéoSAS in Nouvelle-Aquitaine.
 endpoints:
 - type: pygeoapi:openapi
   url: https://api.geosas.fr/rpg/openapi
   version: '1.0'
 - type: pygeoapi:collections
   url: https://api.geosas.fr/rpg/collections/?f=json
+  version: '1.0'
+- type: ogc:features
+  url: https://api.geosas.fr/rpg/collections?f=json
   version: '1.0'
 id: apigeosasfr
 langs:

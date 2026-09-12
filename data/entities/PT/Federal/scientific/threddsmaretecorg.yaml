@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: THREDDS catalog of MARETEC ocean modelling datasets including UAzores
+  and ColabAtlantic collections.
+endpoints:
+- type: thredds:catalog
+  url: http://thredds.maretec.org/thredds/catalog.xml
+- type: thredds:info
+  url: http://thredds.maretec.org/thredds/serverInfo.xml
+id: threddsmaretecorg
+langs:
+- id: EN
+  name: English
+- id: PT
+  name: Portuguese
+link: http://thredds.maretec.org/thredds/catalog.html
+name: MARETEC THREDDS Data Server
+owner:
+  link: https://www.maretec.org/
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: MARETEC, Instituto Superior Tecnico
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- THREDDS
+- ocean
+- MARETEC
+- scientific
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00042356

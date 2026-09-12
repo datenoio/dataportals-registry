@@ -18,13 +18,15 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: Washington UTC ArcGIS Open Data. Public catalog operated by Washington Utilities
-  and Transportation Commission.
+description: Washington UTC ArcGIS Open Data. Public catalog operated by Washington
+  Utilities and Transportation Commission.
 endpoints:
 - type: rss
   url: https://data-wutc.opendata.arcgis.com/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://data-wutc.opendata.arcgis.com/api/search/v1
+- type: dcatus11
+  url: https://data-wutc.opendata.arcgis.com/api/feed/dcat-us/1.1.json
 id: datawutcopendataarcgiscom
 langs:
 - id: EN

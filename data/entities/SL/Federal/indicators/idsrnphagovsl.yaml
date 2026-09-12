@@ -1,0 +1,78 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: SL
+      name: Sierra Leone
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Integrated Disease Surveillance and Response DHIS2 of Sierra Leone's
+  National Public Health Agency. Login is required to query surveillance indicators.
+  Distinct from the national HMIS at dhis.mohs.gov.sl.
+endpoints:
+- type: dhis2:catalog
+  url: https://idsr.npha.gov.sl
+- type: dhis2:system-info
+  url: https://idsr.npha.gov.sl/api/system/info
+- type: dhis2:datasets
+  url: https://idsr.npha.gov.sl/api/dataSets.json?fields=id,displayName&pageSize=1
+id: idsrnphagovsl
+langs:
+- id: EN
+  name: English
+link: https://idsr.npha.gov.sl
+name: Sierra Leone IDSR (DHIS2)
+owner:
+  link: https://npha.gov.sl
+  location:
+    country:
+      id: SL
+      name: Sierra Leone
+    level: 20
+  name: National Public Health Agency
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dhis2
+  name: DHIS2
+status: active
+tags:
+- health
+- surveillance
+- DHIS2
+- government
+- restricted
+- has_api
+- Sierra Leone
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043699

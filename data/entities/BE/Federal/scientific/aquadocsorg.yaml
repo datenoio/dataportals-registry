@@ -37,6 +37,12 @@ endpoints:
   url: https://aquadocs.org/htmlmap
 - type: opensearch
   url: http://aquadocs.org:80/open-search/description.xml
+- type: dspace
+  url: https://aquadocs.org/server/api
+  version: '7'
+- type: oaipmh20
+  url: https://aquadocs.org/server/oai/request?verb=Identify
+  version: '2.0'
 id: aquadocsorg
 langs:
 - id: EN

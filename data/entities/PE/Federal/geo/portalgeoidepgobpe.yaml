@@ -28,6 +28,16 @@ endpoints:
 - type: oaipmh20
   url: https://portalgeo.idep.gob.pe:8443/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: dcat:xml
+  url: https://portalgeo.idep.gob.pe:8443/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://portalgeo.idep.gob.pe:8443/geonetwork/srv/api/site
+- type: openapi
+  url: https://portalgeo.idep.gob.pe:8443/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: opensearch
+  url: https://portalgeo.idep.gob.pe:8443/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
 id: portalgeoidepgobpe
 langs:
 - id: ES

@@ -24,6 +24,12 @@ endpoints:
   url: https://stutsman.data.socrata.com/data.json
 - type: socrata:views
   url: https://stutsman.data.socrata.com/api/views
+- type: socrata:catalog
+  url: https://stutsman.data.socrata.com/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://stutsman.data.socrata.com/opensearch.xml
+  version: '1.1'
 id: stutsmandatasocratacom
 langs:
 - id: EN

@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: CA-NB
       name: New Brunswick
-description: City of Edmundston ArcGIS Hub with municipal GIS datasets including zoning, roads,
-  parks, buildings, and urban trees.
+description: City of Edmundston ArcGIS Hub with municipal GIS datasets including zoning,
+  roads, parks, buildings, and urban trees.
 endpoints:
 - type: dcatap201
   url: https://data-edmundston.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -29,6 +29,8 @@ endpoints:
   url: https://data-edmundston.opendata.arcgis.com/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://data-edmundston.opendata.arcgis.com/api/search/v1
+- type: dcatus11
+  url: https://data-edmundston.opendata.arcgis.com/data.json
 id: dataedmundstonopendataarcgiscom
 langs:
 - id: FR

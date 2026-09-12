@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Royal College of Art is a Scientific data repository operated by Royal
+  College of Art.
+id: researchrcaacuk
+langs:
+- id: EN
+  name: English
+link: https://research.rca.ac.uk
+name: Royal College of Art
+owner:
+  link: https://research.rca.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+  name: Royal College of Art
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042712
+endpoints:
+- type: oaipmh20
+  url: https://research.rca.ac.uk/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://research.rca.ac.uk/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://research.rca.ac.uk/sitemap/datasets.xml

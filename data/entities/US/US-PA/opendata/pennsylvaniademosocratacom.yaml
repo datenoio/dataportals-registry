@@ -28,6 +28,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-pennsylvania.demo.socrata.com.xml
 - type: opensearch
   url: https://pennsylvania.demo.socrata.com/opensearch.xml
+- type: socrata:catalog
+  url: https://pennsylvania.demo.socrata.com/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: pennsylvaniademosocratacom
 langs:
 - id: EN
@@ -69,4 +72,4 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
-uid: temp00002508
+uid: cdi00043791

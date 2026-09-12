@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: The James Hutton Institute is a Scientific data repository operated by
+  The James Hutton Institute, built with Pure.
+id: purehuttonacuk
+langs:
+- id: EN
+  name: English
+link: https://pure.hutton.ac.uk
+name: The James Hutton Institute
+owner:
+  link: https://pure.hutton.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+  name: The James Hutton Institute
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043324
+endpoints:
+- type: oaipmh20
+  url: https://pure.hutton.ac.uk/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://pure.hutton.ac.uk/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://pure.hutton.ac.uk/sitemap/datasets.xml

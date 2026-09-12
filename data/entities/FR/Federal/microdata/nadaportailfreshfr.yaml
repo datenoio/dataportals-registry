@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Microdata catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Inserm NADA catalog of French human-health studies (cohorts, registries,
+  trials, and surveys). The WordPress portal at portail-fresh.fr is the public front;
+  this record is the NADA catalog.
+endpoints:
+- type: nada:catalog-search
+  url: https://nada.portail-fresh.fr/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://nada.portail-fresh.fr/index.php/catalog/export/csv?ps=5000&collection[]
+id: nadaportailfreshfr
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://nada.portail-fresh.fr
+name: FReSH - France Recherche en Santé Humaine
+owner:
+  link: https://www.inserm.fr
+  location:
+    country:
+      id: FR
+      name: France
+  name: Institut national de la santé et de la recherche médicale
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: nada
+  name: NADA
+status: active
+tags:
+- has_api
+- microdata
+- health
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00042607

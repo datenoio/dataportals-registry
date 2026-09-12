@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: CKAN portal of Indonesia's Ministry of Law; harvested into Portal Satu
+  Data Indonesia.
+endpoints:
+- type: ckan
+  url: https://portal-data.kemenkum.go.id/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://portal-data.kemenkum.go.id/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://portal-data.kemenkum.go.id/api/3/action/package_list
+  version: '3'
+id: portaldatakemenkumgoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://portal-data.kemenkum.go.id
+name: Portal Data Kementerian Hukum
+owner:
+  link: https://www.kemenkum.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+  name: Kementerian Hukum
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- open data
+- indonesia
+- satu data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00002914

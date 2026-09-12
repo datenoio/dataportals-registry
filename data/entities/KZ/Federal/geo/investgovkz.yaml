@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 20
+    macroregion:
+      id: '143'
+      name: Central Asia
+description: National interactive investment map cataloging investment projects, industrial
+  and special economic zones, infrastructure, natural resources and regional information
+  across Kazakhstan.
+endpoints:
+- type: custom:invest-projects
+  url: https://invest.gov.kz/api/v2/invest-projects/?lang=en
+- type: custom:investment-categories
+  url: https://invest.gov.kz/api/v2/invest-projects/get-categories?lang=en
+id: investgovkz
+langs:
+- id: KZ
+  name: Kazakh
+- id: RU
+  name: Russian
+- id: EN
+  name: English
+- id: ZH
+  name: Chinese
+link: https://invest.gov.kz/en/map/
+name: Kazakh Invest Interactive Map
+owner:
+  link: https://invest.gov.kz/en/about-us/about-kazakh-invest/
+  location:
+    country:
+      id: KZ
+      name: Kazakhstan
+  name: KAZAKH INVEST National Company JSC
+  type: Business
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- investment
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00042540

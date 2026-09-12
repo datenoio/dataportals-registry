@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-OCC
+      name: Occitanie
+description: SIG Communauté de communes Carmausin-Ségala is a Geoportal operated by
+  Communauté de communes Carmausin-Ségala.
+id: cartocccstigeofr
+langs:
+- id: FR
+  name: French
+link: https://carto-cccs.tigeo.fr/
+name: SIG Communauté de communes Carmausin-Ségala
+owner:
+  link: https://www.carmausin-segala.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-OCC
+      name: Occitanie
+  name: Communauté de communes Carmausin-Ségala
+  type: Local government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- lizmap
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00042429
+endpoints:
+- type: lizmap:service
+  url: https://carto-cccs.tigeo.fr/index.php/lizmap/service/?repository=accueil&project=PAV_2022
+- type: wms130
+  url: https://carto-cccs.tigeo.fr/index.php/lizmap/service/?repository=accueil&project=PAV_2022&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0

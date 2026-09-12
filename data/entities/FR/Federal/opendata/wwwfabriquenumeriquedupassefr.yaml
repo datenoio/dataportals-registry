@@ -14,12 +14,25 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: 'The Digital Factory of the Past, open data platform, makes it possible to connect permanent repositories (data warehouses like Nakala for Human and Social Sciences - SHS), actors who produce within the framework of projects according to business perspectives and data creation which must be both sustainable and accessible to be mobilized by new actors.'
+description: The Digital Factory of the Past, open data platform, makes it possible
+  to connect permanent repositories (data warehouses like Nakala for Human and Social
+  Sciences - SHS), actors who produce within the framework of projects according to
+  business perspectives and data creation which must be both sustainable and accessible
+  to be mobilized by new actors.
 endpoints:
 - type: opendatasoft
   url: https://www.fabriquenumeriquedupasse.fr/api
 - type: sitemap
   url: https://www.fabriquenumeriquedupasse.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://www.fabriquenumeriquedupasse.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://www.fabriquenumeriquedupasse.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://www.fabriquenumeriquedupasse.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://www.fabriquenumeriquedupasse.fr/data.json
 id: wwwfabriquenumeriquedupassefr
 langs:
 - id: FR

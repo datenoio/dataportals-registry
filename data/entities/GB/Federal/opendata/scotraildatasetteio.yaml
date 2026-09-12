@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Datasette of ScotRail station announcement recordings and related metadata.
+id: scotraildatasetteio
+langs:
+- id: EN
+  name: English
+link: https://scotrail.datasette.io/
+name: ScotRail announcements
+owner:
+  link: https://datasette.io/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+  name: Datasette project
+  type: Civil society
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- transport
+- rail
+- Scotland
+- audio
+- open data
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+endpoints:
+- type: datasette:databases
+  url: https://scotrail.datasette.io/-/databases.json
+properties:
+  is_national: false
+uid: cdi00005594

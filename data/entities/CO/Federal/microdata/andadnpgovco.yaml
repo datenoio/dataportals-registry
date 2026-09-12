@@ -21,6 +21,8 @@ description: Central data catalog for the National Department of Planning (DNP),
 endpoints:
 - type: nada:catalog-search
   url: https://anda.dnp.gov.co/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://anda.dnp.gov.co/index.php/catalog/export/csv?ps=5000&collection[]
 id: andadnpgovco
 langs:
 - id: ES

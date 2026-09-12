@@ -26,6 +26,22 @@ endpoints:
   version: '3'
 - type: dcatus11
   url: https://data.kaboki.go.id/data.json
+- type: ckan
+  url: https://data.kaboki.go.id/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.kaboki.go.id/api/3/action/package_search
+  version: '3'
+- type: dcat:n3
+  url: https://data.kaboki.go.id/catalog.n3
+- type: dcat:ttl
+  url: https://data.kaboki.go.id/catalog.ttl
+- type: dcat:xml
+  url: https://data.kaboki.go.id/catalog.xml
+- type: dcat:jsonld
+  url: https://data.kaboki.go.id/catalog.jsonld
+- type: dcat
+  url: https://data.kaboki.go.id/catalog.rdf
 id: datakabokigoid
 langs:
 - id: ID

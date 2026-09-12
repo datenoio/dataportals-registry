@@ -26,6 +26,12 @@ endpoints:
   url: https://citydata.mesaaz.gov/api/views
 - type: sitemap
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-citydata.mesaaz.gov.xml
+- type: socrata:catalog
+  url: https://citydata.mesaaz.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://citydata.mesaaz.gov/opensearch.xml
+  version: '1.1'
 id: citydatamesaazgov
 langs:
 - id: EN

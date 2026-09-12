@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: EKBY DSpace-CRIS repository of Greek biodiversity and wetland datasets
+  (maps, photos, and Dataset-typed monitoring tables). Distinct from the EKBY GeoServer
+  at ekbygis.biodiversity-info.gr.
+endpoints:
+- type: dspace
+  url: http://repositorynew.biodiversity-info.gr/server/api
+  version: '9'
+- type: dspace:objects
+  url: http://repositorynew.biodiversity-info.gr/server/api/discover/search/objects
+  version: '9'
+id: repositorybiodiversityinfogr
+langs:
+- id: EL
+  name: Greek
+- id: EN
+  name: English
+link: https://repository.biodiversity-info.gr
+name: EKBY Biodiversity Repository
+owner:
+  link: https://www.ekby.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: Greek Biotope-Wetland Centre (EKBY)
+  type: Academy
+properties:
+  dataset_count_reported: 49
+  has_doi: false
+  is_national: false
+software:
+  id: dspacecris
+  name: DSpace CRIS
+status: active
+tags:
+- research data
+- biodiversity
+- DSpace-CRIS
+- EKBY
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00043339

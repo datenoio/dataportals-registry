@@ -22,6 +22,17 @@ description: Repositorio Digital UNC is a DSpace repository listed in re3data as
 endpoints:
 - type: dspace:catalog
   url: https://rdu.unc.edu.ar
+- type: dspace
+  url: https://rdu.unc.edu.ar/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://rdu.unc.edu.ar/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://rdu.unc.edu.ar/sitemap_index.xml
+- type: oaipmh20
+  url: https://rdu.unc.edu.ar/server/oai/request?verb=Identify
+  version: '2.0'
 id: rduunceduar
 identifiers:
 - id: re3data

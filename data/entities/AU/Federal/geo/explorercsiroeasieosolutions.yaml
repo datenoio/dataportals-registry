@@ -21,6 +21,12 @@ description: Open Data Cube Explorer for CSIRO's Earth Analytics and Science Inn
 endpoints:
 - type: stacserverapi
   url: https://explorer.csiro.easi-eo.solutions/stac
+- type: stacserverapi
+  url: https://explorer.csiro.easi-eo.solutions/stac/
+  version: '1.0'
+- type: stacserverapi:stac-collections
+  url: https://explorer.csiro.easi-eo.solutions/stac/collections
+  version: '1.0'
 id: explorercsiroeasieosolutions
 langs:
 - id: EN

@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: National GeoNode geoportal of the Union of the Comoros (Carto-Comores /
-  GeoComores), operated by the mapping unit of the Ministry of Land Planning, Urbanism
+description: National GeoNode geoportal of the Union of the Comoros (Carto-Comores
+  / GeoComores), operated by the mapping unit of the Ministry of Land Planning, Urbanism
   and Housing (MATUAFTT). Publishes 31 public layers covering administrative boundaries,
   localities, land cover, hydrography, geology, protected areas, coasts, roads, and
   related OGC services (WMS, WFS, WCS, CSW).
@@ -76,6 +76,12 @@ endpoints:
 - type: wms-c111
   url: https://carto-comores.org/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://carto-comores.org/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://carto-comores.org/catalogue/opensearch
+  version: '1.1'
 id: cartocomoresorg
 langs:
 - id: FR

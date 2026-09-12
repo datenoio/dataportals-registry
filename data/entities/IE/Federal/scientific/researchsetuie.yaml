@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: South East Technological University is a Scientific data repository operated
+  by South East Technological University.
+id: researchsetuie
+langs:
+- id: EN
+  name: English
+link: https://research.setu.ie
+name: South East Technological University
+owner:
+  link: https://research.setu.ie
+  location:
+    country:
+      id: IE
+      name: Ireland
+  name: South East Technological University
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00042714
+endpoints:
+- type: oaipmh20
+  url: https://research.setu.ie/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://research.setu.ie/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://research.setu.ie/sitemap/datasets.xml

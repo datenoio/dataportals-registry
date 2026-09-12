@@ -70,6 +70,12 @@ endpoints:
 - type: wms-c111
   url: https://datahub.inowas.com/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://datahub.inowas.com/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://datahub.inowas.com/catalogue/opensearch
+  version: '1.1'
 id: datahubinowascom
 langs:
 - id: EN

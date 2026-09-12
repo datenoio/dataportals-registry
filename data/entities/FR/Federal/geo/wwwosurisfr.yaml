@@ -33,6 +33,10 @@ endpoints:
 - type: oaipmh20
   url: https://www.osuris.fr/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: dcat:xml
+  url: https://www.osuris.fr/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://www.osuris.fr/geonetwork/srv/api/site
 id: wwwosurisfr
 langs:
 - id: FR

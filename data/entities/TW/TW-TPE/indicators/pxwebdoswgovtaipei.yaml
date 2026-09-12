@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion:
+      id: TW-TPE
+      name: Taipei
+description: PC-AXIS / PxWeb statistical database of the Taipei City Department of
+  Social Welfare. Distinct from the city-wide DOTSTAT catalog at dotstat.gov.taipei.
+endpoints:
+- type: pxweb:catalog
+  url: https://pxweb.dosw.gov.taipei/pxweb/Dialog/statfile9.asp
+id: pxwebdoswgovtaipei
+langs:
+- id: ZH
+  name: Chinese
+link: https://pxweb.dosw.gov.taipei/pxweb/Dialog/statfile9.asp
+name: Taipei City Department of Social Welfare Statistical Database
+owner:
+  link: https://dosw.gov.taipei
+  location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 30
+    subregion:
+      id: TW-TPE
+      name: Taipei
+  name: Taipei City Department of Social Welfare
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: pxweb
+  name: PxWeb
+status: active
+tags:
+- statistics
+- indicators
+- PxWeb
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043737

@@ -21,6 +21,13 @@ endpoints:
 - type: oaipmh20
   url: http://eprints.hud.ac.uk/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: http://eprints.hud.ac.uk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: eprints:rest
+  url: http://eprints.hud.ac.uk/rest/eprint
+- type: eprints:rdf
+  url: http://eprints.hud.ac.uk/cgi/export/repository/RDFXML/devel.rdf
 id: eprintshudacuk
 langs:
 - id: EN

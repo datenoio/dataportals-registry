@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: IT-PI
+      name: Pisa
+description: G3W-SUITE WebGIS of Provincia di Pisa for public QGIS geoportal maps.
+id: webgisprovinciapisait
+langs:
+- id: IT
+  name: Italian
+link: https://webgis.provincia.pisa.it/
+name: WebGIS Provincia di Pisa
+owner:
+  link: https://www.provincia.pisa.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-PI
+      name: Pisa
+  name: Provincia di Pisa
+  type: Local government
+software:
+  id: g3wsuite
+  name: G3W-SUITE
+status: active
+tags:
+- geospatial
+- geoportal
+- g3wsuite
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043493
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: g3wsuite:catalog
+  url: https://webgis.provincia.pisa.it/

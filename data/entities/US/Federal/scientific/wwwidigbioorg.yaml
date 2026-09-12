@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -20,6 +20,9 @@ description: iDigBio is the US national resource for digitized information about
   of Biodiversity Collections) program. Through ADBC, data and images for millions
   of biological specimens are being made available in electronic format for the research
   community, government agencies, students, educators, and the general public.
+endpoints:
+- type: rest
+  url: https://search.idigbio.org/v2/
 id: wwwidigbioorg
 identifiers:
 - id: openaire
@@ -28,7 +31,7 @@ identifiers:
 langs:
 - id: EN
   name: English
-link: https://www.idigbio.org/
+link: https://portal.idigbio.org/
 name: Integrated Digitized Biocollections
 owner:
   link: http://www.ufl.edu/
@@ -39,8 +42,8 @@ owner:
   name: University of Florida
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: idigbio
+  name: iDigBio
 status: active
 tags:
 - scientific

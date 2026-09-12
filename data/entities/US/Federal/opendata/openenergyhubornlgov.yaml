@@ -23,6 +23,13 @@ endpoints:
   url: https://openenergyhub.ornl.gov/data.json
 - type: sitemap
   url: https://openenergyhub.ornl.gov/sitemap.xml
+- type: opendatasoftapi
+  url: https://openenergyhub.ornl.gov/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://openenergyhub.ornl.gov/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://openenergyhub.ornl.gov/api/explore/v2.1/catalog/exports/dcat
 id: openenergyhubornlgov
 langs:
 - id: EN
@@ -43,17 +50,11 @@ software:
   name: OpenDataSoft
 status: active
 tags:
-- open data
-- energy
-- government
-- united-states
-- opendatasoft
-uid: cdi00021310
-tags:
 - academic
 - energy
 - open data
 - united-states
+uid: cdi00021310
 topics:
 - id: GOVE
   name: Government and public sector

@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ZM
+      name: Zambia
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Zambia Evaluation and Research Repository is a Scientific data repository
+  operated by Government of the Republic of Zambia, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://znrr.grz.gov.zm/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://znrr.grz.gov.zm/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://znrr.grz.gov.zm/api/3/action/package_list
+  version: '3'
+id: znrrgrzgovzm
+langs:
+- id: EN
+  name: English
+link: https://znrr.grz.gov.zm
+name: Zambia Evaluation and Research Repository
+owner:
+  link: https://www.grz.gov.zm
+  location:
+    country:
+      id: ZM
+      name: Zambia
+  name: Government of the Republic of Zambia
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- scientific
+- research
+- government
+- ckan
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043835

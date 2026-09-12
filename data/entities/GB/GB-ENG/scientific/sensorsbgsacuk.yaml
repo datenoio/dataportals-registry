@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: British Geological Survey SensorThings API catalog of monitoring Things
+  and Datastreams published through FROST-Server.
+endpoints:
+- type: sensorthings
+  url: https://sensors.bgs.ac.uk/FROST-Server/v1.1/
+  version: '1.1'
+- type: sensorthings
+  url: https://sensors.bgs.ac.uk/FROST-Server/v1.1/Datastreams?$top=1&$count=true
+  version: '1.1'
+- type: sensorthings
+  url: https://sensors.bgs.ac.uk/FROST-Server/v1.1/Things?$top=1&$count=true
+  version: '1.1'
+id: sensorsbgsacuk
+langs:
+- id: EN
+  name: English
+link: https://sensors.bgs.ac.uk/FROST-Server/
+name: BGS SensorThingsAPI
+owner:
+  link: https://www.bgs.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: British Geological Survey
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: frostserver
+  name: FROST-Server
+status: active
+tags:
+- SensorThings
+- geology
+- FROST
+- United Kingdom
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00043329

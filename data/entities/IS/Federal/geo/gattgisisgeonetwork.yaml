@@ -27,6 +27,17 @@ endpoints:
 - type: oaipmh20
   url: https://gatt.gis.is/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:query
+  url: https://gatt.gis.is/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://gatt.gis.is/geonetwork/srv/api/records
+- type: openapi
+  url: https://gatt.gis.is/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: dcat:xml
+  url: https://gatt.gis.is/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://gatt.gis.is/geonetwork/srv/api/site
 id: gattgisisgeonetwork
 langs:
 - id: IS

@@ -28,6 +28,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-opendata.nassaucountyny.gov.xml
 - type: opensearch
   url: https://opendata.nassaucountyny.gov/opensearch.xml
+- type: socrata:catalog
+  url: https://opendata.nassaucountyny.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: opendatanassaucountynygov
 langs:
 - id: EN

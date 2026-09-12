@@ -28,6 +28,13 @@ endpoints:
   url: https://research.sabanciuniv.edu/cgi/latest_tool?output=Atom
 - type: eprints:rest
   url: https://research.sabanciuniv.edu/rest/eprint
+- type: eprints:n3
+  url: https://research.sabanciuniv.edu/cgi/export/repository/RDFN3/devel.n3
+- type: eprints:rdf
+  url: https://research.sabanciuniv.edu/cgi/export/repository/RDFXML/devel.rdf
+- type: opensearch
+  url: https://research.sabanciuniv.edu/cgi/opensearchdescription
+  version: '1.1'
 id: researchsabanciunivedu
 identifiers:
 - id: openaire

@@ -15,10 +15,15 @@ coverage:
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: SpatioTemporal Asset Catalog (STAC) 1.0 root catalogue for the Australian Antarctic Data Centre, with child catalogues, STAC Item Search (GET/POST) at data.aad.gov.au, OGC API Features and CQL2 filter conformance, and queryables. Powered by STAC Browser.
+description: SpatioTemporal Asset Catalog (STAC) 1.0 root catalogue for the Australian
+  Antarctic Data Centre, with child catalogues, STAC Item Search (GET/POST) at data.aad.gov.au,
+  OGC API Features and CQL2 filter conformance, and queryables. Powered by STAC Browser.
 endpoints:
 - type: stacserverapi
   url: https://transfer.data.aad.gov.au/aadc-metadata/
+- type: stac
+  url: https://transfer.data.aad.gov.au/aadc-metadata/catalog.json
+  version: '1.0'
 id: stactransferdataaadgovauaadcmetadata
 langs:
 - id: EN

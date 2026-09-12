@@ -30,6 +30,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-healthdata.nj.gov.xml
 - type: opensearch
   url: https://healthdata.nj.gov/opensearch.xml
+- type: socrata:catalog
+  url: https://healthdata.nj.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: healthdatadatanjgov
 langs:
 - id: EN

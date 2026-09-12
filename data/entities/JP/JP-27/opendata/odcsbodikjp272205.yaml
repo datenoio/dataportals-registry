@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion:
+      id: JP-27
+      name: Osaka
+description: BODIK ODCS open data catalog for 大阪府箕面市 (箕面市オープンデータカタログサイト), listed on
+  the e-Gov Data Portal database-site directory.
+endpoints:
+- type: ckan:package-search
+  url: https://data.bodik.jp/api/3/action/package_search?q=organization:272205
+  version: '3'
+id: odcsbodikjp272205
+langs:
+- id: JA
+  name: Japanese
+link: https://odcs.bodik.jp/272205
+name: 箕面市オープンデータカタログサイト
+owner:
+  link: https://odcs.bodik.jp/272205
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-27
+      name: Osaka
+  name: 大阪府箕面市
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- open data
+- BODIK
+- Japan
+- Osaka
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00005430

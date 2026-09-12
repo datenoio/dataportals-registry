@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Research data management repository of the ELI Attosecond Light Pulse
+  Source.
+endpoints:
+- type: inveniordmapi:records
+  url: https://datarepository.eli-alps.hu/api/records
+- type: oaipmh20
+  url: https://datarepository.eli-alps.hu/oai2d?verb=Identify
+  version: '2.0'
+id: datarepositoryelialpshu
+langs:
+- id: EN
+  name: English
+link: https://datarepository.eli-alps.hu
+name: ELI-ALPS RDM
+owner:
+  link: https://www.eli-alps.hu
+  location:
+    country:
+      id: HU
+      name: Hungary
+  name: ELI-ALPS Research Institute
+  type: Academy
+software:
+  id: inveniordm
+  name: InvenioRDM
+status: active
+tags:
+- scientific
+- research
+- academic
+- inveniordm
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043350

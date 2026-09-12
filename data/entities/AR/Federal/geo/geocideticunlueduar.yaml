@@ -71,6 +71,12 @@ endpoints:
   url: https://geo.cidetic.unlu.edu.ar/geoserver/rest/layers
 - type: sitemap
   url: https://geo.cidetic.unlu.edu.ar/sitemap.xml
+- type: geonode:datasets
+  url: https://geo.cidetic.unlu.edu.ar/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geo.cidetic.unlu.edu.ar/catalogue/opensearch
+  version: '1.1'
 id: geocideticunlueduar
 langs:
 - id: ES

@@ -15,9 +15,33 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: 'City Overview City limits, parcels, addresses, alleys, and various city data Road Ownership View roads based on who maintains them (NCDOT, City, Private, etc), alleys, street signs, and Adopt-A-Street Zoning Explore zoning, historic district, airport noise contours, future land use plan, and much more Flood Zones FEMA flood zone designations, LOMAs, frequently flooded areas, parcels, and building footprints Trash Services Enter your address to find out what day your trash, limb, and yard waste are collected Utility Infrastructure Water, sewer, and stormwater utilities Current Weather Conditions View a live weather radar and current weather advisories Geodetic Survey Markers All of the benchmarks within Pasquotank County (brass or metal disks in the ground that provide latitude, longitude or orthometric height) Click an icon below to be taken to the page with all of maps for that Department, or click a link in the list to be taken directly to that map Public Utilities Adopt-A-Street
-  Electricity Outages Leak Detection Powell Bill Sanitation Stormwater SCM Inspection Results Utility Infrastructure Community Development Property Sales 2013-2019 School Districts Voting Wards &amp; Polling Locations Zoning Parks &amp; Recreation Parks &amp; Bike Trails Parks Story Map Public Safety Police &amp; Fire Emergency Management Flood Zones Storm Surge Emergency Management Operations Dashboard Contact Us GIS Coordinator - Amy Durden adurden@elizabethcitync.gov GIS Technician - Darrick Allen dallen@elizabethcitync.gov Disclaimer: GIS maps are not intended to be surveys and should not be used as such. Maps and tabular data presented on this site are developed from public records and data sources including recorded deeds, plats, and other public records. Users of these mapping applications are hereby notified that the aforementioned public primary information sources should be consulted for verification of the information contained on this website. While efforts have been made to
-  use the most current and accurate data, Elizabeth City and the software companies assume no legal responsibility for the information contained in the interactive maps on this website. Copyright 2021. City of Elizabeth City.'
+description: 'City Overview City limits, parcels, addresses, alleys, and various city
+  data Road Ownership View roads based on who maintains them (NCDOT, City, Private,
+  etc), alleys, street signs, and Adopt-A-Street Zoning Explore zoning, historic district,
+  airport noise contours, future land use plan, and much more Flood Zones FEMA flood
+  zone designations, LOMAs, frequently flooded areas, parcels, and building footprints
+  Trash Services Enter your address to find out what day your trash, limb, and yard
+  waste are collected Utility Infrastructure Water, sewer, and stormwater utilities
+  Current Weather Conditions View a live weather radar and current weather advisories
+  Geodetic Survey Markers All of the benchmarks within Pasquotank County (brass or
+  metal disks in the ground that provide latitude, longitude or orthometric height)
+  Click an icon below to be taken to the page with all of maps for that Department,
+  or click a link in the list to be taken directly to that map Public Utilities Adopt-A-Street
+  Electricity Outages Leak Detection Powell Bill Sanitation Stormwater SCM Inspection
+  Results Utility Infrastructure Community Development Property Sales 2013-2019 School
+  Districts Voting Wards &amp; Polling Locations Zoning Parks &amp; Recreation Parks
+  &amp; Bike Trails Parks Story Map Public Safety Police &amp; Fire Emergency Management
+  Flood Zones Storm Surge Emergency Management Operations Dashboard Contact Us GIS
+  Coordinator - Amy Durden adurden@elizabethcitync.gov GIS Technician - Darrick Allen
+  dallen@elizabethcitync.gov Disclaimer: GIS maps are not intended to be surveys and
+  should not be used as such. Maps and tabular data presented on this site are developed
+  from public records and data sources including recorded deeds, plats, and other
+  public records. Users of these mapping applications are hereby notified that the
+  aforementioned public primary information sources should be consulted for verification
+  of the information contained on this website. While efforts have been made to use
+  the most current and accurate data, Elizabeth City and the software companies assume
+  no legal responsibility for the information contained in the interactive maps on
+  this website. Copyright 2021. City of Elizabeth City.'
 endpoints:
 - type: dcatap201
   url: https://data-ecity.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -29,6 +53,8 @@ endpoints:
   url: https://data-ecity.opendata.arcgis.com/api/search/v1
 - type: sitemap
   url: https://data-ecity.opendata.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://data-ecity.opendata.arcgis.com/data.json
 id: dataecityopendataarcgiscom
 langs:
 - id: EN

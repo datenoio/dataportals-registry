@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Central Electoral Commission ArcGIS Hub of Lithuanian electoral-district and related geographic
-  open data used by the election mapping system.
+description: Central Electoral Commission ArcGIS Hub of Lithuanian electoral-district
+  and related geographic open data used by the election mapping system.
 endpoints:
 - type: dcatap201
   url: https://rinkimai-vrk.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -28,6 +28,8 @@ endpoints:
   url: https://rinkimai-vrk.opendata.arcgis.com/api/search/v1
 - type: sitemap
   url: https://rinkimai-vrk.opendata.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://rinkimai-vrk.opendata.arcgis.com/data.json
 id: rinkimaivrkopendataarcgiscom
 langs:
 - id: LT

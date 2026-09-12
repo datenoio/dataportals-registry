@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: Asian Development Bank .Stat Suite Data Explorer for Key Indicators,
+  Asian Development Outlook, ARIC, and related macroeconomic and environmental dataflows
+  covering Asia and the Pacific. Distinct from the older Key Indicators Database UI
+  at kidb.adb.org.
+endpoints:
+- type: statsuite:search
+  url: https://search.statsuite.economics.adb.org/api/search
+id: destatsuiteeconomicsadborg
+langs:
+- id: EN
+  name: English
+link: https://de.statsuite.economics.adb.org/
+name: ADB Data Explorer
+owner:
+  link: https://www.adb.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: Asian Development Bank
+  type: International
+properties:
+  dataset_count_reported: 72
+  has_doi: false
+software:
+  id: statsuite
+  name: .Stat Suite
+status: active
+tags:
+- statistics
+- international
+- indicators
+- Asia
+- Pacific
+- macroeconomics
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00043805

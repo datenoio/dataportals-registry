@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-NY
+      name: New York
+description: Shared SUNY Digital Repository for campuses on SUNY Connect, including
+  research datasets and scholarly works.
+endpoints:
+- type: dspace
+  url: https://dspace.sunyconnect.suny.edu/server/api
+  version: '9'
+- type: dspace:objects
+  url: https://dspace.sunyconnect.suny.edu/server/api/discover/search/objects
+  version: '9'
+- type: oaipmh20
+  url: https://dspace.sunyconnect.suny.edu/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://dspace.sunyconnect.suny.edu/sitemap_index.xml
+- type: oaipmh20
+  url: https://dspace.sunyconnect.suny.edu/server/oai/request?verb=Identify
+  version: '2.0'
+id: dspacesunyconnectsunyedu
+langs:
+- id: EN
+  name: English
+link: https://dspace.sunyconnect.suny.edu
+name: SUNY Digital Repository
+owner:
+  link: https://www.suny.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NY
+      name: New York
+  name: State University of New York
+  type: Academy
+properties:
+  dataset_count_reported: 6
+  has_doi: false
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- institutional repository
+- DSpace
+- SUNY
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00042471

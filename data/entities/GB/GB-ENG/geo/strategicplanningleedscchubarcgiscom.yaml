@@ -15,7 +15,15 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Strategic Planning Location Intelligence Hub This site provides access to a collection of web-based spatial data and location intelligence applications that relate either to specific work areas within the Strategic Planning Group, or to subjects that have a wider strategic relevance to the group's varied interests. The applications featured here range from simple interactive maps that display location-based information in a clear and straightforward way, through to more complex spatially-enabled dashboards that allow for the interrogation of the underlying data via the use of selections and filters, and the visualisation of outputs using a variety of data display metrics. Popular Applications
+description: Strategic Planning Location Intelligence Hub This site provides access
+  to a collection of web-based spatial data and location intelligence applications
+  that relate either to specific work areas within the Strategic Planning Group, or
+  to subjects that have a wider strategic relevance to the group's varied interests.
+  The applications featured here range from simple interactive maps that display location-based
+  information in a clear and straightforward way, through to more complex spatially-enabled
+  dashboards that allow for the interrogation of the underlying data via the use of
+  selections and filters, and the visualisation of outputs using a variety of data
+  display metrics. Popular Applications
 endpoints:
 - type: dcatap201
   url: https://strategic-planning-leedscc.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -27,6 +35,8 @@ endpoints:
   url: https://strategic-planning-leedscc.hub.arcgis.com/api/search/v1
 - type: sitemap
   url: https://strategic-planning-leedscc.hub.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://strategic-planning-leedscc.hub.arcgis.com/data.json
 id: strategicplanningleedscchubarcgiscom
 langs:
 - id: EN

@@ -20,6 +20,11 @@ description: '新潟経営大学・新潟中央短期大学学術リポジトリ
 endpoints:
 - type: sitemap
   url: https://numcjc.repo.nii.ac.jp/sitemap.xml
+- type: weko3:records
+  url: https://numcjc.repo.nii.ac.jp/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english
+- type: oaipmh20
+  url: https://numcjc.repo.nii.ac.jp/oai?verb=Identify
+  version: '2.0'
 id: numcjcreponiiacjp
 langs:
 - id: EN

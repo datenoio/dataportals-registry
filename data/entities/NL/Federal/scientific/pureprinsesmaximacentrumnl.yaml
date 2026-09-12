@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Prinses Máxima Centrum is a Scientific data repository operated by Prinses
+  Máxima Centrum.
+id: pureprinsesmaximacentrumnl
+langs:
+- id: NL
+  name: Dutch
+link: https://pure.prinsesmaximacentrum.nl
+name: Prinses Máxima Centrum
+owner:
+  link: https://pure.prinsesmaximacentrum.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+  name: Prinses Máxima Centrum
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042664
+endpoints:
+- type: oaipmh20
+  url: https://pure.prinsesmaximacentrum.nl/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://pure.prinsesmaximacentrum.nl/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://pure.prinsesmaximacentrum.nl/sitemap/datasets.xml

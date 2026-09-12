@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-75
+      name: Puglia
+description: CKAN open-data catalog of Comune di Deliceto (Puglia), harvested by dati.gov.it.
+endpoints:
+- type: ckan
+  url: https://dati.comune.deliceto.fg.it/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dati.comune.deliceto.fg.it/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dati.comune.deliceto.fg.it/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://dati.comune.deliceto.fg.it/catalog.n3
+- type: dcat:ttl
+  url: https://dati.comune.deliceto.fg.it/catalog.ttl
+- type: dcat:xml
+  url: https://dati.comune.deliceto.fg.it/catalog.xml
+- type: dcat:jsonld
+  url: https://dati.comune.deliceto.fg.it/catalog.jsonld
+- type: dcat
+  url: https://dati.comune.deliceto.fg.it/catalog.rdf
+- type: oaipmh20
+  url: https://dati.comune.deliceto.fg.it/oai?verb=Identify
+  version: '2.0'
+id: daticomunedelicetofgit
+langs:
+- id: IT
+  name: Italian
+link: https://dati.comune.deliceto.fg.it/
+name: Portale dei Dati Aperti Comune di Deliceto
+owner:
+  link: https://www.comune.deliceto.fg.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-75
+      name: Puglia
+  name: Comune di Deliceto
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- municipality
+- open data
+- puglia
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00004127

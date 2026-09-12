@@ -13,7 +13,7 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: GeoNetwork metadata catalog for marine and oceanographic spatial data
   under Hellenic Centre for Marine Research (HCMR).
@@ -29,6 +29,10 @@ endpoints:
 - type: oaipmh20
   url: https://geonet.hcmr.gr/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:selections
+  url: https://geonet.hcmr.gr/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://geonet.hcmr.gr/geonetwork/srv/api/site
 id: geonethcmrgrgeonetwork
 langs:
 - id: EL

@@ -29,6 +29,9 @@ endpoints:
   url: https://s3-eu-west-1.amazonaws.com/sa-socrata-sitemaps-eu-west-1-prod/sitemaps/sitemap-opendata.rdw.nl.xml
 - type: opensearch
   url: https://opendata.rdw.nl/opensearch.xml
+- type: socrata:catalog
+  url: https://opendata.rdw.nl/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: opendatardwnl
 langs:
 - id: NL

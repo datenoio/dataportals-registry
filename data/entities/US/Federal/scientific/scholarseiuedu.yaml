@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Eastern Illinois University Scholars @ EIU is a Scientific data repository
+  operated by Eastern Illinois University Scholars @ EIU.
+id: scholarseiuedu
+langs:
+- id: EN
+  name: English
+link: https://scholars.eiu.edu
+name: Eastern Illinois University Scholars @ EIU
+owner:
+  link: https://scholars.eiu.edu
+  location:
+    country:
+      id: US
+      name: United States
+  name: Eastern Illinois University Scholars @ EIU
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00042739
+endpoints:
+- type: oaipmh20
+  url: https://scholars.eiu.edu/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://scholars.eiu.edu/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://scholars.eiu.edu/sitemap/datasets.xml

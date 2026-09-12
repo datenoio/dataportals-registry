@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: RAISE ERDDAP is a Scientific data repository operated by RAISE.
+endpoints:
+- type: erddap:index
+  url: https://erddap.s4raise.it/erddap/index.json
+- type: erddap:datasets
+  url: https://erddap.s4raise.it/erddap/info/index.json
+- type: opensearch
+  url: https://erddap.s4raise.it/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://erddap.s4raise.it/erddap/sitemap.xml
+id: erddaps4raiseit
+langs:
+- id: IT
+  name: Italian
+link: https://erddap.s4raise.it/erddap/index.html
+name: RAISE ERDDAP
+owner:
+  link: https://www.raiseliguria.it
+  location:
+    country:
+      id: IT
+      name: Italy
+  name: RAISE
+  type: Other
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- scientific
+- research
+- erddap
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042500

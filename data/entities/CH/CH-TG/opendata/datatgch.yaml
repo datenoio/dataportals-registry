@@ -24,6 +24,15 @@ endpoints:
   url: https://data.tg.ch/api
 - type: sitemap
   url: https://data.tg.ch/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.tg.ch/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.tg.ch/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.tg.ch/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.tg.ch/data.json
 id: datatgch
 langs:
 - id: DE

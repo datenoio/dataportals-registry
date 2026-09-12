@@ -19,6 +19,9 @@ description: Institutional repository of Obihiro University of Agriculture and V
 endpoints:
 - type: weko3:records
   url: https://obihiro.repo.nii.ac.jp/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english
+- type: oaipmh20
+  url: https://obihiro.repo.nii.ac.jp/oai?verb=Identify
+  version: '2.0'
 id: obihiroreponiiacjp
 langs:
 - id: JA

@@ -25,6 +25,12 @@ endpoints:
   url: https://data.datacenterresearch.org/data.json
 - type: socrata:views
   url: https://data.datacenterresearch.org/api/views
+- type: socrata:catalog
+  url: https://data.datacenterresearch.org/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://data.datacenterresearch.org/opensearch.xml
+  version: '1.1'
 id: datadatacenterresearchorg
 langs:
 - id: EN

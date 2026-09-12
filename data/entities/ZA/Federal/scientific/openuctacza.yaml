@@ -12,10 +12,10 @@ coverage:
       name: South Africa
     level: 20
     macroregion:
-      id: '018'
+      id: 018
       name: Southern Africa
-description: OpenUCT is a scientific data repository operated by University of Cape Town
-  running on DSpace.
+description: OpenUCT is a scientific data repository operated by University of Cape
+  Town running on DSpace.
 endpoints:
 - type: dspace
   url: https://open.uct.ac.za/server/api
@@ -25,6 +25,11 @@ endpoints:
   version: '7'
 - type: oaipmh20
   url: https://open.uct.ac.za/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://open.uct.ac.za/sitemap_index.xml
+- type: oaipmh20
+  url: https://open.uct.ac.za/server/oai/request?verb=Identify
   version: '2.0'
 id: openuctacza
 langs:

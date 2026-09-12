@@ -14,12 +14,14 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: GRIN-CA taxonomic data provide the structure and nomenclature for the accessions
-  of the Canadian National Plant Germplasm System (NPGS). Many plants are included in GRIN-CA
-  taxonomy, especially economic plants.
+description: GRIN-CA taxonomic data provide the structure and nomenclature for the
+  accessions of the Canadian National Plant Germplasm System (NPGS). Many plants are
+  included in GRIN-CA taxonomy, especially economic plants.
 endpoints:
 - type: gringlobal:search
   url: https://pgrc-rpc.agr.gc.ca/gringlobal/search
+- type: index
+  url: https://pgrc-rpc.agr.gc.ca/gringlobal/
 id: pgrcrpcagrgcca
 identifiers:
 - id: openaire

@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GEOMAR SOOP SensorThings catalog of coastal and ship-of-opportunity observing
+  Things and Datastreams published through FROST-Server.
+endpoints:
+- type: sensorthings
+  url: https://timeseries.geomar.de/soop/FROST-Server/v1.1/
+  version: '1.1'
+- type: sensorthings
+  url: https://timeseries.geomar.de/soop/FROST-Server/v1.1/Datastreams?$top=1&$count=true
+  version: '1.1'
+- type: sensorthings
+  url: https://timeseries.geomar.de/soop/FROST-Server/v1.1/Things?$top=1&$count=true
+  version: '1.1'
+id: timeseriesgeomarde
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://timeseries.geomar.de/soop/FROST-Server/
+name: GEOMAR SOOP SensorThings
+owner:
+  link: https://www.geomar.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: GEOMAR Helmholtz Centre for Ocean Research Kiel
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: frostserver
+  name: FROST-Server
+status: active
+tags:
+- SensorThings
+- FROST
+- oceanography
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00043120

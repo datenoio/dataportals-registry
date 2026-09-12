@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: InvenioRDM publications repository of the European Spallation Source.
+endpoints:
+- type: inveniordmapi:records
+  url: https://publications.ess.eu/api/records
+- type: oaipmh20
+  url: https://publications.ess.eu/oai2d?verb=Identify
+  version: '2.0'
+id: publicationsesseu
+langs:
+- id: EN
+  name: English
+link: https://publications.ess.eu
+name: ESS Publications
+owner:
+  link: https://ess.eu
+  location:
+    country:
+      id: SE
+      name: Sweden
+  name: European Spallation Source ERIC
+  type: International
+software:
+  id: inveniordm
+  name: InvenioRDM
+status: active
+tags:
+- scientific
+- research
+- inveniordm
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043695

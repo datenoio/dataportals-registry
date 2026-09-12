@@ -22,6 +22,12 @@ endpoints:
   url: https://data.waterpointdata.org/data.json
 - type: socrata:views
   url: https://data.waterpointdata.org/api/views
+- type: socrata:catalog
+  url: https://data.waterpointdata.org/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://data.waterpointdata.org/opensearch.xml
+  version: '1.1'
 id: datawaterpointdataorg
 langs:
 - id: EN

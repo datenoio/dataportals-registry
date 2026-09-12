@@ -20,6 +20,12 @@ endpoints:
 - type: csw202
   url: https://sniambgeoportal.apambiente.pt/geoportal/csw
   version: 3.0.0
+- type: csw202
+  url: https://sniambgeoportal.apambiente.pt/geoportal/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://sniambgeoportal.apambiente.pt/geoportal/openSearchDescription
+  version: '1.1'
 id: sniambgeoogcapambienteptgeoportal
 langs:
 - id: PT

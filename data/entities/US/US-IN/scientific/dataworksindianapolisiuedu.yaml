@@ -22,6 +22,12 @@ description: IU Indianapolis research data repository for preserving and sharing
 endpoints:
 - type: dspace:rest
   url: https://dataworks.indianapolis.iu.edu/server/api
+- type: rss
+  url: https://dataworks.indianapolis.iu.edu/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://dataworks.indianapolis.iu.edu/feed/atom_1.0/site
+  version: '1.0'
 id: dataworksindianapolisiuedu
 langs:
 - id: EN

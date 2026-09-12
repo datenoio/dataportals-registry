@@ -22,6 +22,10 @@ endpoints:
 - type: oaipmh20
   url: https://dair.dias.ie/cgi/oai2?verb=Identify
   version: '2.0'
+- type: eprints:rest
+  url: https://dair.dias.ie/rest/eprint
+- type: eprints:datasets
+  url: https://dair.dias.ie/cgi/exportview/type/dataset/JSON/dataset.js
 id: dairdiasie
 langs:
 - id: EN

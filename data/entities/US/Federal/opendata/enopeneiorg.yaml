@@ -59,4 +59,6 @@ topics:
 endpoints:
 - type: mediawiki:api
   url: https://en.openei.org/w/api.php?action=query&meta=siteinfo&format=json
+- type: smw:ask
+  url: https://en.openei.org/w/api.php?action=ask&query=[[Category:Dataset]]&format=json
 api: true

@@ -11,7 +11,7 @@ coverage:
       id: IT
       name: Italy
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     level: 20
 description: Catalog of near-Earth object data from ESA NEOCC, including orbital information,
@@ -19,6 +19,9 @@ description: Catalog of near-Earth object data from ESA NEOCC, including orbital
 endpoints:
 - type: tap:capabilities
   url: https://dachs.neo.s2p.esa.int/tap/capabilities
+- type: oaipmh20
+  url: https://dachs.neo.s2p.esa.int/oai.xml?verb=Identify
+  version: '2.0'
 id: dachsneos2pesaint
 langs:
 - id: EN

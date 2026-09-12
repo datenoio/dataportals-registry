@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Parkland College is a Scientific data repository operated by Parkland
+  College.
+id: parklandelsevierpurecom
+langs:
+- id: EN
+  name: English
+link: https://parkland.elsevierpure.com
+name: Parkland College
+owner:
+  link: https://parkland.elsevierpure.com
+  location:
+    country:
+      id: US
+      name: United States
+  name: Parkland College
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042633
+endpoints:
+- type: oaipmh20
+  url: https://parkland.elsevierpure.com/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://parkland.elsevierpure.com/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://parkland.elsevierpure.com/sitemap/datasets.xml

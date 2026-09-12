@@ -31,6 +31,14 @@ endpoints:
   version: 2.0.2
 - type: sitemap
   url: https://geoportal.gov.gy/sitemap.xml
+- type: geonode:documents
+  url: https://geoportal.gov.gy/api/documents/
+- type: opensearch
+  url: https://geoportal.gov.gy/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: opensearch
+  url: https://geoportal.gov.gy/catalogue/opensearch
+  version: '1.1'
 id: geoportalgovgy
 langs:
 - id: EN

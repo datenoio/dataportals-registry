@@ -13,7 +13,7 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Amitos is the institutional repository of the University of the Peloponnese.
   It stores diploma theses and postgraduate dissertations of the university’s students.
@@ -26,6 +26,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://amitos.library.uop.gr/sitemap_index.xml
+- type: oaipmh20
+  url: https://amitos.library.uop.gr/server/oai/request?verb=Identify
+  version: '2.0'
 id: amitoslibraryuopgr
 langs:
 - id: EL

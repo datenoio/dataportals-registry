@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MI
+      name: Michigan
+description: Northwestern Michigan College DSpace repository with Great Lakes hydrographic,
+  lake sampling, and related research datasets.
+endpoints:
+- type: dspace
+  url: https://dspace.nmc.edu/server/api
+  version: '9'
+- type: dspace:objects
+  url: https://dspace.nmc.edu/server/api/discover/search/objects
+  version: '9'
+- type: oaipmh20
+  url: https://dspace.nmc.edu/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://dspace.nmc.edu/sitemap_index.xml
+- type: oaipmh20
+  url: https://dspace.nmc.edu/server/oai/request?verb=Identify
+  version: '2.0'
+id: dspacenmcedu
+langs:
+- id: EN
+  name: English
+link: https://dspace.nmc.edu
+name: Northwestern Michigan College DSpace
+owner:
+  link: https://www.nmc.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MI
+      name: Michigan
+  name: Northwestern Michigan College
+  type: Academy
+properties:
+  dataset_count_reported: 32
+  has_doi: false
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- DSpace
+- Great Lakes
+- hydrography
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00042470

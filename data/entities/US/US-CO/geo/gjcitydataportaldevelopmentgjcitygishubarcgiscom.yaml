@@ -15,7 +15,16 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: Development Information This page will let you view and download development data such as subdivisions, annexations, city development projects, capital improvement projects, floodplains, zoning, current land use and future land use districts.  You can analyze and combine datasets using maps, as well as develop new web and mobile applications. Explore Development Datasets Applications The City of Grand Junction is conducting a 2020 Comprehensive Plan update to plan for the next 10 to 20 years. The Plan will work to identify goals, strategies and actions that reflect the values and vision for the community as a whole. Check out the One Grand Junction site for more info. Copyright 2020. City of Grand Junction GIS. Contact Us 970-256-4070 gis@gjcity.org
+description: Development Information This page will let you view and download development
+  data such as subdivisions, annexations, city development projects, capital improvement
+  projects, floodplains, zoning, current land use and future land use districts. 
+  You can analyze and combine datasets using maps, as well as develop new web and
+  mobile applications. Explore Development Datasets Applications The City of Grand
+  Junction is conducting a 2020 Comprehensive Plan update to plan for the next 10
+  to 20 years. The Plan will work to identify goals, strategies and actions that reflect
+  the values and vision for the community as a whole. Check out the One Grand Junction
+  site for more info. Copyright 2020. City of Grand Junction GIS. Contact Us 970-256-4070
+  gis@gjcity.org
 endpoints:
 - type: rss
   url: https://gj-city-data-portal-development-gjcitygis.hub.arcgis.com/api/feed/rss/2.0
@@ -27,6 +36,8 @@ endpoints:
   url: https://gj-city-data-portal-development-gjcitygis.hub.arcgis.com/api/feed/dcat-us/1.1.json
 - type: sitemap
   url: https://gj-city-data-portal-development-gjcitygis.hub.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://gj-city-data-portal-development-gjcitygis.hub.arcgis.com/data.json
 id: gjcitydataportaldevelopmentgjcitygishubarcgiscom
 langs:
 - id: EN

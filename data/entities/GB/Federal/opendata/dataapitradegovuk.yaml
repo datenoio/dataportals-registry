@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Public dataset API from the Department for Business and Trade, listing
+  UK tariff, trade quota, export-control and related open datasets with JSON metadata
+  and table downloads.
+endpoints:
+- type: customapi
+  url: https://data.api.trade.gov.uk/v1/datasets?format=json
+id: dataapitradegovuk
+langs:
+- id: EN
+  name: English
+link: https://data.api.trade.gov.uk/
+name: Department for Business and Trade Data API
+owner:
+  link: https://www.gov.uk/government/organisations/department-for-business-and-trade
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: Department for Business and Trade
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- open data
+- has_api
+- trade
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00042454

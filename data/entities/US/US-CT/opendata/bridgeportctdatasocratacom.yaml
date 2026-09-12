@@ -24,6 +24,12 @@ endpoints:
   url: https://bridgeportct.data.socrata.com/data.json
 - type: socrata:views
   url: https://bridgeportct.data.socrata.com/api/views
+- type: socrata:catalog
+  url: https://bridgeportct.data.socrata.com/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://bridgeportct.data.socrata.com/opensearch.xml
+  version: '1.1'
 id: bridgeportctdatasocratacom
 langs:
 - id: EN

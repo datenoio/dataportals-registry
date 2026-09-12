@@ -24,6 +24,12 @@ endpoints:
 - type: csw202
   url: https://geoportail.oeil.nc/geoportal/csw
   version: 3.0.0
+- type: csw202
+  url: https://geoportail.oeil.nc/geoportal/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geoportail.oeil.nc/geoportal/openSearchDescription
+  version: '1.1'
 id: geoportailoeilncgeoportal
 langs:
 - id: FR

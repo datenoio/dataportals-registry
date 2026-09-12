@@ -22,6 +22,8 @@ description: National Data Archive of the National Statistics Office of Mongolia
 endpoints:
 - type: nada:catalog-search
   url: https://nada.nso.mn/mn/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://nada.nso.mn/mn/index.php/catalog/export/csv?ps=5000&collection[]
 id: nadansomn
 langs:
 - id: MN

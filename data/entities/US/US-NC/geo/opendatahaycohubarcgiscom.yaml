@@ -18,15 +18,15 @@ coverage:
     subregion:
       id: US-NC
       name: North Carolina
-description: "Haywood County NC Land Records &amp; GIS Welcome to the Haywood County\
-  \ North Carolina Land Records &amp; GIS Department's Open Data Site. Use the categories\
-  \ below to search for and download County maintained data and use the maps to view\
-  \ data and applications. Download Data Also available on the Haywood County GIS\
-  \ Data Download page Government Boundaries Transportation Infrastructure Environment\
-  \ View Applications Parcel Map Parcel Map (Mobile) Search for Parcels Search for\
-  \ Parcels Additional data maintained by the State of North Carolina is available\
-  \ at \n    NCOneMap\n      and \n    NCDOT. Haywood County Land Records and GIS\
-  \ Terms &amp; Conditions Copyright 2020 Haywood County"
+description: "Haywood County NC Land Records &amp; GIS Welcome to the Haywood County
+  North Carolina Land Records &amp; GIS Department's Open Data Site. Use the categories
+  below to search for and download County maintained data and use the maps to view
+  data and applications. Download Data Also available on the Haywood County GIS Data
+  Download page Government Boundaries Transportation Infrastructure Environment View
+  Applications Parcel Map Parcel Map (Mobile) Search for Parcels Search for Parcels
+  Additional data maintained by the State of North Carolina is available at \n    NCOneMap\n
+  \     and \n    NCDOT. Haywood County Land Records and GIS Terms &amp; Conditions
+  Copyright 2020 Haywood County"
 endpoints:
 - type: dcatap201
   url: https://opendata-hayco.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -38,6 +38,8 @@ endpoints:
   url: https://opendata-hayco.hub.arcgis.com/api/search/v1
 - type: sitemap
   url: https://opendata-hayco.hub.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://opendata-hayco.hub.arcgis.com/data.json
 id: opendatahaycohubarcgiscom
 langs:
 - id: EN
@@ -54,7 +56,7 @@ owner:
     subregion:
       id: US-NC
       name: North Carolina
-  name: 'Haywood County'
+  name: Haywood County
   type: Local government
 properties:
   has_doi: false

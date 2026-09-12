@@ -24,6 +24,12 @@ endpoints:
 - type: wms130
   url: https://geodienste.komm.one/ows/services/org.152.fd3bb117-3fd9-4293-a0ff-6491e047520b_wms?SERVICE=WMS&Request=GetCapabilities
   version: 1.3.0
+- type: csw202
+  url: https://geodienste.komm.one/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geodienste.komm.one/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
 id: geodienstekommone
 langs:
 - id: DE

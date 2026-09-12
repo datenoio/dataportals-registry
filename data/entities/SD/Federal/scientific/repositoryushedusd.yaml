@@ -15,15 +15,21 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: DSpace 6 XMLUI institutional repository of the University of Shendi
-  (جامعة شندي) for theses, dissertations, and faculty research. OAI-PMH Identify
-  responds on port 8080; the legacy REST API redirects to an unreachable TLS port.
+description: DSpace 6 XMLUI institutional repository of the University of Shendi (جامعة
+  شندي) for theses, dissertations, and faculty research. OAI-PMH Identify responds
+  on port 8080; the legacy REST API redirects to an unreachable TLS port.
 endpoints:
 - type: oaipmh20
   url: http://repository.ush.edu.sd:8080/oai/request?verb=Identify
   version: '2.0'
 - type: sitemap
   url: http://repository.ush.edu.sd:8080/xmlui/htmlmap
+- type: rss
+  url: http://repository.ush.edu.sd:8080/xmlui/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: http://repository.ush.edu.sd:8080/xmlui/feed/atom_1.0/site
+  version: '1.0'
 id: repositoryushedusd
 langs:
 - id: AR

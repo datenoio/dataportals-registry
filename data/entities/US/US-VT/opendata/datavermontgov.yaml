@@ -27,6 +27,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.vermont.gov.xml
 - type: opensearch
   url: https://data.vermont.gov/opensearch.xml
+- type: socrata:catalog
+  url: https://data.vermont.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: datavermontgov
 langs:
 - id: EN

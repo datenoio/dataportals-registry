@@ -17,8 +17,8 @@ coverage:
       name: Western Africa
 description: ÉPISTÉMÈ is the institutional DSpace repository of Université d'Abomey-Calavi
   (UAC). It collects, preserves, and disseminates theses, dissertations, articles,
-  and other scientific output from the UAC community. DSpace 10 REST and OAI-PMH
-  endpoints are public (about 14,644 items).
+  and other scientific output from the UAC community. DSpace 10 REST and OAI-PMH endpoints
+  are public (about 14,644 items).
 endpoints:
 - type: dspace
   url: https://dspace.uac.bj/server/api
@@ -29,6 +29,8 @@ endpoints:
 - type: oaipmh20
   url: https://dspace.uac.bj/server/oai/request?verb=Identify
   version: '2.0'
+- type: sitemap
+  url: https://dspace.uac.bj/sitemap_index.xml
 id: dspaceuacbj
 langs:
 - id: FR

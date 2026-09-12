@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Sytenko Institute Scientific Data Archive is a Scientific data repository
+  operated by Sytenko Institute of Spine and Joint Pathology, built with Dataverse.
+id: dataversesytenkoorgua
+langs:
+- id: UK
+  name: Ukrainian
+link: https://dataverse.sytenko.org.ua
+name: Sytenko Institute Scientific Data Archive
+owner:
+  link: https://sytenko.org.ua
+  location:
+    country:
+      id: UA
+      name: Ukraine
+  name: Sytenko Institute of Spine and Joint Pathology
+  type: Academy
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research
+- academic
+- dataverse
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043744
+endpoints:
+- type: dataverseapi
+  url: https://dataverse.sytenko.org.ua/api/search
+- type: dataverseapi
+  url: https://dataverse.sytenko.org.ua/api/info/version

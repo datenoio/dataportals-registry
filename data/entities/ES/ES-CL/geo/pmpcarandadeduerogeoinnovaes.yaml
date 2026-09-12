@@ -67,6 +67,15 @@ endpoints:
 - type: wms-c111
   url: https://pmpc-arandadeduero.geoinnova.es/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://pmpc-arandadeduero.geoinnova.es/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://pmpc-arandadeduero.geoinnova.es/catalogue/opensearch
+  version: '1.1'
+- type: wms111
+  url: https://pmpc-arandadeduero.geoinnova.es/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
 id: pmpcarandadeduerogeoinnovaes
 langs:
 - id: ES

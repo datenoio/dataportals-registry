@@ -19,6 +19,17 @@ description: Institutional Digital Repository of Maulana Azad National Institute
 endpoints:
 - type: dspace:catalog
   url: https://idr.manit.ac.in
+- type: dspace
+  url: https://idr.manit.ac.in/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://idr.manit.ac.in/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://idr.manit.ac.in/sitemap_index.xml
+- type: oaipmh20
+  url: https://idr.manit.ac.in/server/oai/request?verb=Identify
+  version: '2.0'
 id: idrmanitacin
 langs:
 - id: EN

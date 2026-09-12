@@ -24,6 +24,12 @@ endpoints:
 - type: wmts100
   url: http://ssig.conabio.gob.mx/erdas-iws/ogc/wmts/conabio?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities
   version: 1.0.0
+- type: wms130
+  url: http://ssig.conabio.gob.mx/erdas-iws/ogc/wms/?service=WMS&request=GetCapabilities&version=1.3.0
+  version: 1.3.0
+- type: wms111
+  url: http://ssig.conabio.gob.mx/erdas-iws/ogc/wms/?service=WMS&request=GetCapabilities&version=1.1.1
+  version: 1.1.1
 id: ssigconabiogobmx
 langs:
 - id: ES

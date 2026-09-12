@@ -26,6 +26,15 @@ description: Regional geospatial portal and CKAN catalog for Primorsky Krai. Pub
 endpoints:
 - type: ckan:api
   url: https://sihote-alin.ru/api/3/action/
+- type: ckan
+  url: https://sihote-alin.ru/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://sihote-alin.ru/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://sihote-alin.ru/api/3/action/package_list
+  version: '3'
 id: sihotealinru
 langs:
 - id: RU

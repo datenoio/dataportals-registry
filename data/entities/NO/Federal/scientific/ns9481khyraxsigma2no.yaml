@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: OPeNDAP Hyrax catalog on UNINETT Sigma2 NIRD project ns9481k, publishing
+  ARGO, ERA5, NA2, TP2 and related oceanographic collections through DAP. Distinct
+  from the ns9081k Hyrax tenant.
+endpoints:
+- type: opendap:catalog
+  url: https://ns9481k.hyrax.sigma2.no/opendap/
+- type: thredds:catalog
+  url: https://ns9481k.hyrax.sigma2.no/opendap/catalog.xml
+id: ns9481khyraxsigma2no
+langs:
+- id: EN
+  name: English
+link: https://ns9481k.hyrax.sigma2.no/opendap/
+name: Sigma2 NIRD ns9481k OPeNDAP Hyrax
+owner:
+  link: https://www.sigma2.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: UNINETT Sigma2
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: opendaphyrax
+  name: OPeNDAP Hyrax
+status: active
+tags:
+- OPeNDAP
+- Hyrax
+- oceanography
+- ARGO
+- ERA5
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00043600

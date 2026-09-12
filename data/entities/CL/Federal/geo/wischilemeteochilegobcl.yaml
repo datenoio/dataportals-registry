@@ -22,6 +22,9 @@ endpoints:
 - type: pygeoapi:openapi
   url: https://wischile.meteochile.gob.cl/oapi/openapi
   version: '1.0'
+- type: ogc:features
+  url: https://wischile.meteochile.gob.cl/oapi/collections/?f=json
+  version: '1.0'
 id: wischilemeteochilegobcl
 langs:
 - id: ES

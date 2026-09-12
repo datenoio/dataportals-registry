@@ -18,7 +18,6 @@ coverage:
     subregion:
       id: US-OR
       name: Oregon
-
 description: Redistricting Data Hub Welcome to the Oregon Redistricting Data Hub.
   This site provides free, public access to geographic data and maps that relate to
   the State of Oregon's redistricting process. What is redistricting? Redistricting
@@ -54,6 +53,8 @@ endpoints:
   url: https://redistricting-geo.hub.arcgis.com/api/search/v1
 - type: sitemap
   url: https://redistricting-geo.hub.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://redistricting-geo.hub.arcgis.com/data.json
 id: redistrictinggeohubarcgiscom
 langs:
 - id: EN

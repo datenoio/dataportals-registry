@@ -21,6 +21,12 @@ endpoints:
 - type: oaipmh20
   url: http://repository.uki.ac.id/cgi/oai2?verb=Identify
   version: '2.0'
+- type: eprints:rest
+  url: http://repository.uki.ac.id/rest/eprint
+- type: eprints:rdf
+  url: http://repository.uki.ac.id/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: http://repository.uki.ac.id/cgi/export/repository/RDFN3/devel.n3
 id: repositoryukiacid
 langs:
 - id: ID

@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: IT-77
+      name: Basilicata
+description: G3W-SUITE WebQGIS portal of Comune di Matera for public QGIS geoportal
+  maps.
+id: webqgiscomunemtit
+langs:
+- id: IT
+  name: Italian
+link: https://webqgis.comune.mt.it/
+name: WebQGIS Comune di Matera
+owner:
+  link: https://www.comune.matera.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-77
+      name: Basilicata
+  name: Comune di Matera
+  type: Local government
+software:
+  id: g3wsuite
+  name: G3W-SUITE
+status: active
+tags:
+- geospatial
+- geoportal
+- g3wsuite
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043495
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: g3wsuite:catalog
+  url: https://webqgis.comune.mt.it/

@@ -36,6 +36,10 @@ endpoints:
   version: '2.0'
 - type: geonetwork:site
   url: https://catalogo.cultura.gob.pe/geonetwork/srv/api/site
+- type: geonetwork:records
+  url: https://catalogo.cultura.gob.pe/geonetwork/srv/api/records
+- type: dcat:xml
+  url: https://catalogo.cultura.gob.pe/geonetwork/srv/api/records?accept=application/rdf+xml
 id: catalogoculturagobpegeonetwork
 langs:
 - id: ES

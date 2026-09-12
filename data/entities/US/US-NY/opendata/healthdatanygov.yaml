@@ -26,6 +26,14 @@ endpoints:
   url: https://health.data.ny.gov/data.json
 - type: sitemap
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-health.data.ny.gov.xml
+- type: socrata:views
+  url: https://health.data.ny.gov/api/views
+- type: socrata:catalog
+  url: https://health.data.ny.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://health.data.ny.gov/opensearch.xml
+  version: '1.1'
 id: healthdatanygov
 langs:
 - id: EN

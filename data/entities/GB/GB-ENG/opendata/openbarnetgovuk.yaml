@@ -34,6 +34,9 @@ endpoints:
 - type: ckan:package-list
   url: https://open.barnet.gov.uk/api/3/action/package_list
   version: '3'
+- type: ckan
+  url: https://open.barnet.gov.uk/api/3/action/package_search?rows=0
+  version: '3'
 id: openbarnetgovuk
 langs:
 - id: EN

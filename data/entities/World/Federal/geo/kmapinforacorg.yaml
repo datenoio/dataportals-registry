@@ -44,6 +44,21 @@ endpoints:
 - type: wps100
   url: https://kmap.info-rac.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: wms111
+  url: https://kmap.info-rac.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://kmap.info-rac.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://kmap.info-rac.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: geonode:datasets
+  url: https://kmap.info-rac.org/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://kmap.info-rac.org/catalogue/opensearch
+  version: '1.1'
 id: kmapinforacorg
 langs:
 - id: EN

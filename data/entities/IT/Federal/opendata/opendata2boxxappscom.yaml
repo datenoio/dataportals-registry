@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Shared CKAN open-data catalog (X-OpenData2) operated by Boxxapps for
+  Italian municipalities. Harvested by dati.gov.it.
+endpoints:
+- type: ckan
+  url: https://opendata2.boxxapps.com/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata2.boxxapps.com/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata2.boxxapps.com/api/3/action/package_list
+  version: '3'
+- type: dcat:xml
+  url: https://opendata2.boxxapps.com/catalog.xml
+- type: dcat:jsonld
+  url: https://opendata2.boxxapps.com/catalog.jsonld
+- type: dcat
+  url: https://opendata2.boxxapps.com/catalog.rdf
+id: opendata2boxxappscom
+langs:
+- id: IT
+  name: Italian
+link: https://opendata2.boxxapps.com/
+name: X-OpenData2 Boxxapps
+owner:
+  link: https://www.boxxapps.com
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Boxxapps
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- italy
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00003324

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -40,8 +40,8 @@ owner:
   name: McGill University
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: loris
+  name: LORIS
 status: active
 tags:
 - scientific
@@ -61,3 +61,6 @@ topics:
   name: Health
   type: iso19115
 uid: cdi00028750
+endpoints:
+- type: loris
+  url: https://cbigr-open.loris.ca/

@@ -28,6 +28,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.orcities.org.xml
 - type: opensearch
   url: https://data.orcities.org/opensearch.xml
+- type: socrata:catalog
+  url: https://data.orcities.org/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: dataorcitiesorg
 langs:
 - id: EN

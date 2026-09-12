@@ -16,8 +16,8 @@ coverage:
       id: 039
       name: Southern Europe
 description: GeoNetwork metadata catalogue of the Croatian Bureau of Statistics (GeoSTAT)
-  for sharing geographically referenced statistical and spatial information. The
-  catalogue moved from geostat.dzs.hr to geostat.gov.hr.
+  for sharing geographically referenced statistical and spatial information. The catalogue
+  moved from geostat.dzs.hr to geostat.gov.hr.
 endpoints:
 - type: geonetwork:query
   url: https://geostat.gov.hr/geonetwork/srv/eng/q
@@ -37,6 +37,8 @@ endpoints:
   url: https://geostat.gov.hr/geonetwork/srv/api/site
 - type: opensearch
   url: https://geostat.gov.hr/portal.opensearch
+- type: dcat:xml
+  url: https://geostat.gov.hr/geonetwork/srv/api/records?accept=application/rdf+xml
 id: geostatdzshr
 langs:
 - id: HR

@@ -28,6 +28,15 @@ endpoints:
 - type: csw202
   url: https://idecyl.jcyl.es/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
+- type: openapi
+  url: https://idecyl.jcyl.es/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: opensearch
+  url: https://idecyl.jcyl.es/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://idecyl.jcyl.es/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: idecyljcylesgeonetwork
 langs:
 - id: ES

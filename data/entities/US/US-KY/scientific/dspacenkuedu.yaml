@@ -24,6 +24,15 @@ endpoints:
 - type: oaipmh20
   url: https://dspace.nku.edu/oai/request?verb=Identify
   version: '2.0'
+- type: dspace
+  url: https://dspace.nku.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://dspace.nku.edu/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://dspace.nku.edu/server/oai/request?verb=Identify
+  version: '2.0'
 id: dspacenkuedu
 langs:
 - id: EN

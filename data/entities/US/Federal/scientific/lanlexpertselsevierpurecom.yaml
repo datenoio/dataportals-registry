@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Los Alamos National Laboratory is a Scientific data repository operated
+  by Los Alamos National Laboratory.
+id: lanlexpertselsevierpurecom
+langs:
+- id: EN
+  name: English
+link: https://lanlexperts.elsevierpure.com
+name: Los Alamos National Laboratory
+owner:
+  link: https://lanlexperts.elsevierpure.com
+  location:
+    country:
+      id: US
+      name: United States
+  name: Los Alamos National Laboratory
+  type: Federal government
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042568
+endpoints:
+- type: oaipmh20
+  url: https://lanlexperts.elsevierpure.com/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://lanlexperts.elsevierpure.com/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://lanlexperts.elsevierpure.com/sitemap/datasets.xml

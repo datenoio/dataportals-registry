@@ -21,6 +21,15 @@ endpoints:
   url: https://data.ameli.fr/api
 - type: sitemap
   url: https://data.ameli.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.ameli.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.ameli.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.ameli.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.ameli.fr/data.json
 id: dataamelifr
 langs:
 - id: FR

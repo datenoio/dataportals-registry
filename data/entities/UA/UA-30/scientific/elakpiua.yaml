@@ -22,6 +22,14 @@ endpoints:
 - type: oaipmh20
   url: https://ela.kpi.ua/server/oai/request?verb=Identify
   version: '2.0'
+- type: dspace
+  url: https://ela.kpi.ua/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://ela.kpi.ua/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://ela.kpi.ua/sitemap_index.xml
 id: elakpiua
 langs:
 - id: UK

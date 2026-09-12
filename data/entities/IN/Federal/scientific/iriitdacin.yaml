@@ -19,6 +19,17 @@ description: Institutional repository of Indian Institute of Technology Delhi, r
 endpoints:
 - type: dspace:catalog
   url: https://ir.iitd.ac.in
+- type: dspace
+  url: https://ir.iitd.ac.in/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://ir.iitd.ac.in/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://ir.iitd.ac.in/sitemap_index.xml
+- type: oaipmh20
+  url: https://ir.iitd.ac.in/server/oai/request?verb=Identify
+  version: '2.0'
 id: iriitdacin
 langs:
 - id: EN

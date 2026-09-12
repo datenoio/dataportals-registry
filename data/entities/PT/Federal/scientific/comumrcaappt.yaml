@@ -13,7 +13,7 @@ coverage:
       name: Portugal
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: National shared DSpace institutional repository (SARI/RCAAP) used by
   Portuguese HE and R&D institutions without their own IR. DSpace reports 2 dataset-typed
@@ -27,6 +27,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://comum.rcaap.pt/sitemap_index.xml
+- type: oaipmh20
+  url: https://comum.rcaap.pt/server/oai/request?verb=Identify
+  version: '2.0'
 id: comumrcaappt
 langs:
 - id: PT

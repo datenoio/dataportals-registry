@@ -15,9 +15,10 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: CILSS (Permanent Inter-State Committee for Drought Control in the Sahel) geoportal.
-  Provides geospatial data and maps for food security, pastoralism, irrigation, forests, climate,
-  floods, crop pests, and integrated landscape management across the Sahel and West Africa.
+description: CILSS (Permanent Inter-State Committee for Drought Control in the Sahel)
+  geoportal. Provides geospatial data and maps for food security, pastoralism, irrigation,
+  forests, climate, floods, crop pests, and integrated landscape management across
+  the Sahel and West Africa.
 endpoints:
 - type: geonode:datasets
   url: https://geoportal.cilss.int/api/datasets/
@@ -65,6 +66,12 @@ endpoints:
 - type: wps100
   url: https://geoportal.cilss.int/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://geoportal.cilss.int/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geoportal.cilss.int/catalogue/opensearch
+  version: '1.1'
 id: geoportalcilssint
 langs:
 - id: FR

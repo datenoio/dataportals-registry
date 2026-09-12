@@ -23,6 +23,12 @@ description: County geographic information public service platform (Map World / 
 endpoints:
 - type: tianditu:catalog
   url: https://jilin.tianditu.gov.cn/huinanxian/
+- type: arcgis:rest:services
+  url: https://jilin.tianditu.gov.cn/arcgis/rest/services?f=pjson
+- type: arcgis:rest:info
+  url: https://jilin.tianditu.gov.cn/arcgis/rest/info?f=pjson
+- type: rest
+  url: https://jilin.tianditu.gov.cn/api/cityNode/queryByTree.json
 id: jilintianditugovcnhuinanxian
 langs:
 - id: ZH

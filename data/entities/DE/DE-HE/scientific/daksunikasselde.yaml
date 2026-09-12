@@ -26,12 +26,15 @@ endpoints:
   url: https://daks.uni-kassel.de/sitemap_index.xml
 - type: sitemap
   url: https://daks.uni-kassel.de/sitemap_index.html
+- type: oaipmh20
+  url: https://daks.uni-kassel.de/server/oai/request?verb=Identify
+  version: '2.0'
 id: daksunikasselde
 langs:
 - id: DE
   name: German
 link: https://daks.uni-kassel.de
-name: "DaKS - University of Kassel's research data repository"
+name: DaKS - University of Kassel's research data repository
 owner:
   link: https://www.uni-kassel.de
   location:
@@ -57,12 +60,12 @@ software:
   id: dspace
   name: DSpace
 status: active
-tags: 
+tags:
 - research
 - scientific
 - science
 - research data
-topics: 
+topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme

@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GFZ Helmholtz Centre SensorThings catalog of environmental monitoring
+  Things and Datastreams published through FROST-Server.
+endpoints:
+- type: sensorthings
+  url: https://sta.gfz-potsdam.de/v1.1/
+  version: '1.1'
+- type: sensorthings
+  url: https://sta.gfz-potsdam.de/v1.1/Datastreams?$top=1&$count=true
+  version: '1.1'
+- type: sensorthings
+  url: https://sta.gfz-potsdam.de/v1.1/Things?$top=1&$count=true
+  version: '1.1'
+id: stagfzpotsdamde
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://sta.gfz-potsdam.de/
+name: GFZ SensorThings
+owner:
+  link: https://www.gfz.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: GFZ Helmholtz Centre for Geosciences
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: frostserver
+  name: FROST-Server
+status: active
+tags:
+- SensorThings
+- FROST
+- geoscience
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00043118

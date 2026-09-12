@@ -19,6 +19,12 @@ description: Official open data portal of the French government, providing acces
 endpoints:
 - type: udataapi
   url: https://data.gouv.fr/api/1
+- type: udataapi
+  url: https://data.gouv.fr/api/1/datasets/
+  version: '1'
+- type: udataapi:organizations
+  url: https://data.gouv.fr/api/1/organizations/
+  version: '1'
 id: datagouvfr
 langs:
 - id: FR

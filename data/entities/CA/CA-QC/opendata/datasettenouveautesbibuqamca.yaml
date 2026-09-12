@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-QC
+      name: Quebec
+description: Datasette catalog of new titles added to Université du Québec à Montréal
+  library collections.
+id: datasettenouveautesbibuqamca
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://datasette-nouveautes.bib.uqam.ca/
+name: UQAM Library New Acquisitions
+owner:
+  link: https://www.uqam.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-QC
+      name: Quebec
+  name: Université du Québec à Montréal
+  type: Academy
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- library
+- academic
+- bibliography
+- open data
+- Quebec
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+endpoints:
+- type: datasette:databases
+  url: https://datasette-nouveautes.bib.uqam.ca/-/databases.json
+properties:
+  is_national: false
+uid: cdi00005589

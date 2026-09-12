@@ -12,12 +12,12 @@ coverage:
       name: Montenegro
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
-description: National open data portal of Montenegro (Portal otvorenih podataka / Data.gov.me).
-  Central CKAN catalog of public-sector datasets in open, machine-readable formats,
-  operated by the Ministry of Public Administration, with a CKAN Action API and DCAT
-  exports.
+description: National open data portal of Montenegro (Portal otvorenih podataka /
+  Data.gov.me). Central CKAN catalog of public-sector datasets in open, machine-readable
+  formats, operated by the Ministry of Public Administration, with a CKAN Action API
+  and DCAT exports.
 endpoints:
 - type: ckan
   url: https://data.gov.me/api/3
@@ -38,6 +38,8 @@ endpoints:
   url: https://data.gov.me/catalog.jsonld
 - type: sitemap
   url: https://data.gov.me/sitemap.xml
+- type: dcat
+  url: https://data.gov.me/catalog.rdf
 id: datagovme
 langs:
 - id: SR

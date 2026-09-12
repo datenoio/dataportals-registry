@@ -24,6 +24,13 @@ endpoints:
   url: https://www.karudata.com/data.json
 - type: sitemap
   url: https://www.karudata.com/sitemap.xml
+- type: opendatasoftapi
+  url: https://www.karudata.com/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://www.karudata.com/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://www.karudata.com/api/explore/v2.1/catalog/exports/dcat
 id: karudatacom
 langs:
 - id: FR

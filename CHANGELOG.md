@@ -9,6 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **1,904 net new catalog entries** since v1.20.0 (1,905 added, 1 recategorized); registry source now **37,170** entities (**0** scheduled) across **224** country/territory folders.
+- **63 software definitions**; software catalog now **486** platforms. Highest-count new IDs: Géoclip (`geoclip`, **47**), GeoNature (`geonature`, **29**), FROST-Server (`frostserver`, **22**), MINERVA (`minerva`, **16**), Datasette (`datasette`, **14**), TerriSTORY (`terristory`, **13**), InstantAtlas (`instantatlas`, **13**), and OPENDATAENTE (`opendataente`, **13**).
+- OPENDATAENTE (`opendataente`) software definition for Actainfo’s Italian municipal open-data SaaS (`/backend/api/catalog/` DCAT-AP_IT); remapped existing tenants and added missing comuni (**13** catalogs).
+- Datasette (`datasette`) software definition for Simon Willison’s SQLite publisher (`/-/databases.json`, `/-/versions`); remapped the inactive calc.fi instance and staged **14** scheduled sites (**15** catalogs).
+- Korp (`korp`) software definition for Språkbanken Text corpus search; remapped the Swedish hub, added Estonia, and staged further Nordic/Baltic UIs (**7** catalogs).
+- DANDI Archive (`dandi`) software definition for the neurophysiology NWB archive; remapped the hub and staged EMBER and LINC (**3** catalogs).
+- CEDAR Workbench (`cedar`) software definition for Stanford’s metadata-template workbench; remapped **2** catalogs.
+- EvalAI (`evalai`) software definition for CloudCV’s AI-challenge platform; remapped eval.ai and staged the ITU AI for Good competition hub (**2** catalogs).
+- JACQ (`jacq`), NMRShiftDB2 (`nmrshiftdb2`), Chemotion Repository (`chemotion`), CELLxGENE Discover (`cellxgene`), HydroShare (`hydroshare`), Brainlife (`brainlife`), Open Context (`opencontext`), BioDare2 (`biodare2`), TemplateFlow (`templateflow`), and Grand Challenge (`grandchallenge`) software definitions from the custom-catalog OSS review; remapped the matching `custom` hubs (one catalog each).
 - Géoclip (`geoclip`) software definition for Business Geografic Géoclip Air observatories (`GC_loadCss.php`, `/geoclipair/`); remapped French, Swiss, and Belgian tenants from `custom` (**46** catalogs).
 - InstantAtlas (`instantatlas`) software definition for Esri UK HTML5 atlases (`ia-min.js`); remapped German, Swiss, and UK report sites (**13** catalogs). Distinct from Esri UK Data Observatory (`esridataobservatory`).
 - TerriSTORY (`terristory`) software definition for the French aGPL-v3 territorial energy/climate hubs (`terristory.fr/{region}`); remapped **13** regional catalogs from `custom`.
@@ -36,7 +45,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Review the scheduled queue: **97** promoted to entities, **19** removed (unreachable hosts, vendor marketing pages, login walls, or not a catalog UI); scheduled YAML is now **0**. Rewrote **14** TerriSTORY/NISRA UIDs that had invalid 9-digit values onto the next free 8-digit `cdi` numbers.
+- Review the scheduled queue: **32** promoted to entities, **1** removed (UK Register of Members’ Interests Datasette, persistent HTTP 503); scheduled YAML is now **0**. Promoted groups: Datasette **13**, Korp **5**, Taiwan/India/Saudi geoportals **11**, DANDI EMBER/LINC, and EvalAI ITU AI for Good.
+- Regenerated dataset exports to match source YAML: **37,170** catalogs, **0** scheduled, **486** software. Quality analysis reports **0** issues across **37,170** records.
+- Custom-catalog OSS review remapped leftover catalogs onto existing IDs: WormQTL / WormQTL HD `molgenis`; LIAS / IndExs `diversityworkbench`; `ooptaari.nextgis.ru` `nextgisweb`; HUN-REN ARP search `vivo`; MassBank Human `massbank`; PlantCyc / PMN `pathwaytools`; UNITE `plutof`; Open Data by Socrata `socrata`. PolarWatch `/catalog/list.php` is inactive (the ERDDAP catalog is already registered).
+- Add Datasette `/-/databases.json` and HydroShare `/hsapi/resource/` `apidetect` probes; skip CELLxGENE, Chemotion, JACQ, Korp, NMRShiftDB2, Brainlife, CEDAR, BioDare2, TemplateFlow, EvalAI, and Grand Challenge where the list API is not on the catalog link.
+- Review the scheduled queue: **97** promoted to entities, **19** removed (unreachable hosts, vendor marketing pages, login walls, or not a catalog UI); scheduled YAML was **0** after that pass (discovery since then refilled **33** scheduled YAML). Rewrote **14** TerriSTORY/NISRA UIDs that had invalid 9-digit values onto the next free 8-digit `cdi` numbers.
 - Refresh source YAML counts (**36,873** catalogs, **0** scheduled, **470** software). Working-tree exports still reflect the last `build` (**36,776** catalogs, **23** scheduled JSONL, **463** software).
 - Fill discovery Google/Censys/FOFA query tables and harvest Keep/Drop + list-URL recipes for software IDs that had headings but thin recipes; add `documentation_url` on 34 software YAML files (and `website` for `doblesvisor`); publish `website/static/harvest-record.schema.json`; refresh working-tree record counts (36,776 catalogs, 27 scheduled YAML, 463 software).
 - Count draft `apidetect` URL maps in `docs/software-index.md`; add harvest-documented relative probes (FROST-Server, GIS Open Data Portal, cBioPortal, and related IDs); translate remaining Censys discovery rows to FOFA.
@@ -85,6 +98,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Twenty-sixth custom-software pass found no further remaps onto existing IDs. NIRD Research Data Archive stays `custom` (`og:url` mentions a CKAN test host, `status_show` 404). Leftover Spanish IDE hubs stay `custom` (`/geonetwork/srv` 404). Aurich and Worms stay `custom` (shared WAF `cmd=wafdownload` chrome; only two leftovers, no software id). SciLifeLab data hub stays `custom` (Hugo, not Figshare). FRDR, PutraRepo (timeout), Southampton Open Data (Incapsula), and Schaffhausen `data.sh.ch` (not uData `/api/1/datasets/`) stay `custom`.
 
 - Stop publishing uncompressed `data/datasets/catalogs.jsonl` (too large for GitHub). `python scripts/builder.py build` still builds it as a temporary merge input, then keeps only `catalogs.jsonl.zst`.
+
+### Removed
+
+- **1** record path relative to v1.20.0: IRI Climate Data Library moved from `opendata/` to `geo/` (`iridlldeocolumbiaedu`).
 
 ## [1.20.0] - 2026-09-08
 

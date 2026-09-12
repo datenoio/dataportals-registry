@@ -13,7 +13,7 @@ coverage:
       name: Portugal
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Institutional repository of Instituto Superior Miguel Torga. DSpace lists
   dataset-typed items.
@@ -24,6 +24,9 @@ endpoints:
 - type: dspace:objects
   url: https://repositorio.ismt.pt/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://repositorio.ismt.pt/server/oai/request?verb=Identify
+  version: '2.0'
 id: repositorioismtpt
 identifiers:
 - id: openaire

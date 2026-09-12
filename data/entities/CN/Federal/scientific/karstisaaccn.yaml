@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Thematic InstDB catalog for karst-region ecological science data, operated
+  by the CAS Institute of Subtropical Agriculture. Distinct from the institute's main
+  InstDB node at instdb.isa.ac.cn.
+endpoints:
+- type: custom:api
+  url: https://karst.isa.ac.cn/api
+id: karstisaaccn
+langs:
+- id: ZH
+  name: Chinese
+link: https://karst.isa.ac.cn
+name: 喀斯特区域生态科学数据库
+owner:
+  link: https://isa.ac.cn
+  location:
+    country:
+      id: CN
+      name: China
+    level: 20
+  name: CAS Institute of Subtropical Agriculture
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: instdb
+  name: InstDB
+status: active
+tags:
+- scientific
+- InstDB
+- karst
+- ecology
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00042966

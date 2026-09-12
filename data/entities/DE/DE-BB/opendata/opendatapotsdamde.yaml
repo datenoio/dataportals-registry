@@ -23,6 +23,13 @@ endpoints:
   url: https://opendata.potsdam.de/api
 - type: sitemap
   url: https://opendata.potsdam.de/sitemap.xml
+- type: opendatasoftapi
+  url: https://opendata.potsdam.de/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://opendata.potsdam.de/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://opendata.potsdam.de/api/explore/v2.1/catalog/exports/dcat
 id: opendatapotsdamde
 identifiers:
 - id: wikidata

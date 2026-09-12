@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LB
+      name: Lebanon
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Public ArcGIS Web AppBuilder geoportal for UN-Habitat and UNICEF neighbourhood
+  profiles in Lebanon. Layers cover buildings, infrastructure, open spaces, enterprises,
+  health, education, and landmarks across profiled neighbourhoods. Viewer at un-habitat.maps.arcgis.com/apps/webappviewer/index.html?id=3a38c8bbdc104a7ebb41089644aa1505.
+endpoints:
+- type: sitemap
+  url: https://lebanonportal.unhabitat.org/geoportal/sitemap.xml
+id: lebanonportalunhabitatorg
+langs:
+- id: EN
+  name: English
+- id: AR
+  name: Arabic
+link: https://lebanonportal.unhabitat.org/geoportal/
+name: UN-Habitat Lebanon Neighbourhood Profiles Geoportal
+owner:
+  link: https://unhabitat.org/lebanon
+  location:
+    country:
+      id: LB
+      name: Lebanon
+    level: 20
+  name: UN-Habitat Lebanon
+  type: International
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: webappbuilder
+  name: ArcGIS Web AppBuilder
+status: active
+tags:
+- geospatial
+- neighbourhoods
+- urban
+- humanitarian
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: cdi00042572

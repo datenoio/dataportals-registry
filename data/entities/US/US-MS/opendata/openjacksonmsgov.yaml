@@ -30,6 +30,18 @@ endpoints:
 - type: ckan:package-list
   url: https://open.jacksonms.gov/api/3/action/package_list
   version: '3'
+- type: dcatus11
+  url: https://open.jacksonms.gov/data.json
+- type: dcat:n3
+  url: https://open.jacksonms.gov/catalog.n3
+- type: dcat:ttl
+  url: https://open.jacksonms.gov/catalog.ttl
+- type: dcat:xml
+  url: https://open.jacksonms.gov/catalog.xml
+- type: dcat:jsonld
+  url: https://open.jacksonms.gov/catalog.jsonld
+- type: dcat
+  url: https://open.jacksonms.gov/catalog.rdf
 id: openjacksonmsgov
 langs:
 - id: EN

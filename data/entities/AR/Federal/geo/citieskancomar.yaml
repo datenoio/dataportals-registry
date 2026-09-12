@@ -77,6 +77,14 @@ endpoints:
   url: https://cities.kan.com.ar/geoserver/rest/settings
 - type: geoserver:layers
   url: https://cities.kan.com.ar/geoserver/rest/layers
+- type: geonode:datasets
+  url: https://cities.kan.com.ar/api/datasets/
+- type: geonode:datasets
+  url: https://cities.kan.com.ar/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://cities.kan.com.ar/catalogue/opensearch
+  version: '1.1'
 id: citieskancomar
 langs:
 - id: EN

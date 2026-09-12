@@ -22,6 +22,20 @@ endpoints:
 - type: oaipmh20
   url: https://eprints.teachingandlearning.ie/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://eprints.teachingandlearning.ie/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://eprints.teachingandlearning.ie/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://eprints.teachingandlearning.ie/rest/eprint
+- type: eprints:rdf
+  url: https://eprints.teachingandlearning.ie/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://eprints.teachingandlearning.ie/cgi/export/repository/RDFN3/devel.n3
+- type: opensearch
+  url: https://eprints.teachingandlearning.ie/cgi/opensearchdescription
+  version: '1.1'
 id: eprintsteachingandlearningie
 langs:
 - id: EN

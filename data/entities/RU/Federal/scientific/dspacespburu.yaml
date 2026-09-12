@@ -26,6 +26,12 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://dspace.spbu.ru/sitemap_index.xml
+- type: dspace
+  url: https://dspace.spbu.ru/server/api
+  version: '7'
+- type: oaipmh20
+  url: https://dspace.spbu.ru/server/oai/request?verb=Identify
+  version: '2.0'
 id: dspacespburu
 langs:
 - id: RU

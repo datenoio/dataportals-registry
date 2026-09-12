@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: IMC Krems is a Scientific data repository operated by IMC Krems.
+id: researchimcacat
+langs:
+- id: DE
+  name: German
+link: https://research.imc.ac.at
+name: IMC Krems
+owner:
+  link: https://research.imc.ac.at
+  location:
+    country:
+      id: AT
+      name: Austria
+  name: IMC Krems
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042692
+endpoints:
+- type: oaipmh20
+  url: https://research.imc.ac.at/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://research.imc.ac.at/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://research.imc.ac.at/sitemap/datasets.xml

@@ -25,6 +25,9 @@ endpoints:
   url: https://micka.geology.cz/csw/?request=GetRecords&query=&format=application/xml&MaxRecords=9999&outputSchema=http://www.w3.org/2005/Atom
 - type: dcat:xml
   url: https://micka.geology.cz/csw/?request=GetRecords&query=&format=application/xml&MaxRecords=9999&ElementSetName=brief&outputSchema=http://www.w3.org/ns/dcat%23
+- type: opensearch
+  url: https://micka.geology.cz/opensearch
+  version: '1.1'
 id: mickageologycz
 langs:
 - id: CS

@@ -18,20 +18,19 @@ coverage:
     subregion:
       id: BR-RJ
       name: Rio de Janeiro
-description: "Logo SIGeo Niterói Responsável por administrar os dados geográficos\
-  \ do município de Niterói, o SIGeo empenha-se em auxiliar tecnicamente na gestão\
-  \ interna da prefeitura para levar informações e dados ao público de forma transparente.\
-  \ Aplicações e materiais Aplicações Aplicações Ortofotos Dados Abertos Civitas Geoportal\
-  \ Painéis Mapas Metadados Pesquisa de Satisfação Aplicações desenvolvidas para consulta\
-  \ de dados e informações Aplicações desenvolvidas para consulta de dados e informações\
-  \ Área de consulta e download das imagens aéreas 2014 e\n                  2019\
-  \ Portal de Dados Abertos do SIGeo com arquivos para\n                  download\
-  \ SIG-Web para visualização das camadas públicas do\n                  nosso banco\
-  \ de dados Painéis desenvolvidos para apresentação de dados\n                  estatísticos\
-  \ Área para download de materiais cartográficos Metadados dos dados públicos disponíveis\
-  \ no portal de\n                  Dados Abertos Pesquisa para avaliação do atendimento\
-  \ e apresentação\n                  dos dados no nosso site Perguntas Frequentes\
-  \ (FAQ)"
+description: "Logo SIGeo Niterói Responsável por administrar os dados geográficos
+  do município de Niterói, o SIGeo empenha-se em auxiliar tecnicamente na gestão interna
+  da prefeitura para levar informações e dados ao público de forma transparente. Aplicações
+  e materiais Aplicações Aplicações Ortofotos Dados Abertos Civitas Geoportal Painéis
+  Mapas Metadados Pesquisa de Satisfação Aplicações desenvolvidas para consulta de
+  dados e informações Aplicações desenvolvidas para consulta de dados e informações
+  Área de consulta e download das imagens aéreas 2014 e\n                  2019 Portal
+  de Dados Abertos do SIGeo com arquivos para\n                  download SIG-Web
+  para visualização das camadas públicas do\n                  nosso banco de dados
+  Painéis desenvolvidos para apresentação de dados\n                  estatísticos
+  Área para download de materiais cartográficos Metadados dos dados públicos disponíveis
+  no portal de\n                  Dados Abertos Pesquisa para avaliação do atendimento
+  e apresentação\n                  dos dados no nosso site Perguntas Frequentes (FAQ)"
 endpoints:
 - type: dcatap201
   url: https://www.sigeo.niteroi.rj.gov.br/api/feed/dcat-ap/2.0.1.json
@@ -43,6 +42,8 @@ endpoints:
   url: https://www.sigeo.niteroi.rj.gov.br/api/search/v1
 - type: sitemap
   url: https://www.sigeo.niteroi.rj.gov.br/sitemap.xml
+- type: dcatus11
+  url: https://www.sigeo.niteroi.rj.gov.br/data.json
 id: wwwsigeoniteroirjgovbr
 langs:
 - id: PT

@@ -32,6 +32,11 @@ endpoints:
 - type: ckan
   url: https://montoro-opendata.e-admin.es/api/3
   version: '3'
+- type: ckan:package-search
+  url: https://montoro-opendata.e-admin.es/api/3/action/package_search
+  version: '3'
+- type: dcat:ttl
+  url: https://montoro-opendata.e-admin.es/catalog.ttl
 id: montoroopendataeadmines
 langs:
 - id: ES

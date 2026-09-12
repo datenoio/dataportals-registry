@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -33,6 +33,20 @@ identifiers:
 langs:
 - id: EN
   name: English
+endpoints:
+- type: oaipmh20
+  url: https://nora.nerc.ac.uk/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://nora.nerc.ac.uk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: eprints:rest
+  url: https://nora.nerc.ac.uk/rest/eprint
+- type: eprints:datasets
+  url: https://nora.nerc.ac.uk/cgi/exportview/type/dataset/JSON/dataset.js
+- type: opensearch
+  url: https://nora.nerc.ac.uk/cgi/opensearchdescription
+  version: '1.1'
 link: https://nora.nerc.ac.uk/
 name: NERC Open Research Archive
 owner:
@@ -44,8 +58,8 @@ owner:
   name: Natural Environment Research Council
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: eprints
+  name: EPrints
 status: active
 tags:
 - scientific

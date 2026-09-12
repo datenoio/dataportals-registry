@@ -1,0 +1,78 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: National Agency for the Control of AIDS DHIS2 instance (eNNRIMS) for
+  HIV programme monitoring in Nigeria. Login is required to query indicators. Distinct
+  from the national HMIS at dhis2nigeria.org.ng.
+endpoints:
+- type: dhis2:catalog
+  url: https://ennrims.naca.gov.ng
+- type: dhis2:system-info
+  url: https://ennrims.naca.gov.ng/api/system/info
+- type: dhis2:datasets
+  url: https://ennrims.naca.gov.ng/api/dataSets.json?fields=id,displayName&pageSize=1
+id: ennrimsnacagovng
+langs:
+- id: EN
+  name: English
+link: https://ennrims.naca.gov.ng
+name: Nigeria eNNRIMS (DHIS2)
+owner:
+  link: https://naca.gov.ng
+  location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 20
+  name: National Agency for the Control of AIDS
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dhis2
+  name: DHIS2
+status: active
+tags:
+- health
+- HIV
+- DHIS2
+- government
+- restricted
+- has_api
+- Nigeria
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043581

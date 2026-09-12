@@ -24,6 +24,15 @@ endpoints:
 - type: csw202
   url: https://zanjansdi.ir/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: oaipmh20
+  url: https://zanjansdi.ir/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://zanjansdi.ir/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: opensearch
+  url: https://zanjansdi.ir/catalogue/opensearch
+  version: '1.1'
 id: zanjansdiir
 langs:
 - id: FA

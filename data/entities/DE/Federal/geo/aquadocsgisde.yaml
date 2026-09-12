@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: QGIS Web Client 2 geoportal used by aquadocs for municipal sewer-rehabilitation
+  and related project maps.
+endpoints:
+- type: qwc2:layers
+  url: https://aquadocs-gis.de/themes.json
+id: aquadocsgisde
+langs:
+- id: DE
+  name: German
+link: https://aquadocs-gis.de/
+name: aquadocs Web-GIS
+owner:
+  link: https://www.aquadocs-gis.de
+  location:
+    country:
+      id: DE
+      name: Germany
+  name: aquadocs
+  type: Business
+software:
+  id: qwc2
+  name: QGIS Web Client 2 (QWC2)
+status: active
+tags:
+- geospatial
+- commercial
+- qwc2
+- QGIS Web Client 2 (QWC2)
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043044

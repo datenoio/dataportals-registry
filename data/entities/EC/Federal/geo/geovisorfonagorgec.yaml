@@ -12,9 +12,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: GeoNode del FONAG; plataforma para compartir documentos e información geoespacial
-  sobre conservación y recuperación de las fuentes de agua que abastecen al DMQ (Distrito
-  Metropolitano de Quito).
+description: GeoNode del FONAG; plataforma para compartir documentos e información
+  geoespacial sobre conservación y recuperación de las fuentes de agua que abastecen
+  al DMQ (Distrito Metropolitano de Quito).
 endpoints:
 - type: geonode:datasets
   url: https://geovisor.fonag.org.ec/api/datasets/
@@ -62,6 +62,12 @@ endpoints:
 - type: wps100
   url: https://geovisor.fonag.org.ec/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://geovisor.fonag.org.ec/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geovisor.fonag.org.ec/catalogue/opensearch
+  version: '1.1'
 id: geovisorfonagorgec
 langs:
 - id: ES

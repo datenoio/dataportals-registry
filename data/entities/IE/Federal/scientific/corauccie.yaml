@@ -22,6 +22,17 @@ endpoints:
 - type: oaipmh20
   url: https://cora.ucc.ie/server/oai/request?verb=Identify
   version: '2.0'
+- type: dspace
+  url: https://cora.ucc.ie/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://cora.ucc.ie/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://cora.ucc.ie/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://cora.ucc.ie/sitemap_index.xml
 id: corauccie
 identifiers:
 - id: openaire

@@ -26,6 +26,15 @@ endpoints:
   url: https://data.te44.fr/api
 - type: sitemap
   url: https://data.te44.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.te44.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.te44.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.te44.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.te44.fr/data.json
 id: datate44fr
 langs:
 - id: FR

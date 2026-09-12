@@ -21,6 +21,11 @@ description: Data catalog managed by the Centre for Data and Knowledge Integrati
 endpoints:
 - type: dataverseapi
   url: https://dataverse.cidacs.org/api/search
+- type: oaipmh20
+  url: https://dataverse.cidacs.org/oai?verb=Identify
+  version: '2.0'
+- type: dataverseapi
+  url: https://dataverse.cidacs.org/api/info/version
 id: dataversecidacsorg
 identifiers:
 - id: datacite

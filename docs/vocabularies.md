@@ -44,18 +44,33 @@ Also present in historical records (do not add for new catalogs unless there is 
 | Type | Typical software |
 |------|------------------|
 | `ckan`, `ckan:package-search`, `ckan:package-list`, `ckan:status-show` | CKAN |
-| `dcatus11`, `dcatap201`, `dcatap21`, `dcat:jsonld` | DCAT portals |
-| `socrata:opendata` | Socrata |
-| `opendatasoft`, `opendatasoftapi` | OpenDataSoft |
-| `geonetwork:csw`, `csw202`, `csw300` | GeoNetwork / CSW |
-| `oaipmh`, `oaipmh20` | OAI-PMH |
-| `stac` | STAC |
+| `dcatus11`, `dcatap201`, `dcatap21`, `dcat`, `dcat:xml`, `dcat:ttl`, `dcat:jsonld` | DCAT dumps |
+| `socrata:views` | Socrata (prefer over unused `socrata:opendata`) |
+| `opendatasoftapi` (prefer over `opendatasoft`) | OpenDataSoft |
+| `datafairapi` | Data Fair |
+| `ouropendata:packages` | Our Open Data (not CKAN) |
+| `cbioportal:studies` | cBioPortal |
+| `huggingface:api` | Hugging Face Hub |
+| `omero:projects`, `omero:webclient` | OMERO |
+| `scicat:datasets` | SciCat (prefer over `customapi` on `/api/v3/datasets`) |
+| `kadi4mat:records`, `kadi4mat:collections` | Kadi4Mat |
+| `intermine:version` | InterMine |
+| `xnat:projects` | XNAT project list |
+| `pxwebapi` | PxWeb table tree |
+| `csw202`, `csw300` | GeoNetwork / pycsw / CSW (prefer over unused `geonetwork:csw`) |
+| `oaipmh20` | OAI-PMH (prefer over unused bare `oaipmh`) |
+| `stacserverapi`, `stac:collection` | STAC (prefer over unused bare `stac`) |
 | `sparql` | SPARQL |
+| `opensearch` | OpenSearch description documents |
+| `sensorthings` | FROST-Server / OGC SensorThings |
+| `ogcrecordsapi`, `ogc:features` | OGC API Records / Features (prefer `ogc:features` over `pygeoapi:collections`) |
+| `tap:capabilities`, `tap:tables` | IVOA TAP |
+| `odata` | OData (Copernicus DHuS and similar) |
 | `arcgis:rest:services`, `arcgis:rest:info` | ArcGIS Server / Hub |
 | `dataverseapi` | Dataverse |
-| `ogc:features`, `wms`, `wfs` | OGC services |
+| `wms130`, `wfs200`, `wcs201`, `wmts100` | OGC OWS |
 
-The observed inventory (150+ values, including vendor-specific types) is `data/reference/endpoint_types.yaml`. That file is generated from current YAML, not a closed allow-list.
+Harvestable catalog dumps (`/data.json`, `/catalog.xml`, `/catalog.rdf`) are `endpoints[]` entries, not `catalog_export`. The observed inventory is `data/reference/endpoint_types.yaml` (generated from YAML, not a closed allow-list).
 
 ## Topics
 

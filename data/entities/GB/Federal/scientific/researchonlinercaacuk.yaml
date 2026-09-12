@@ -21,6 +21,17 @@ endpoints:
 - type: oaipmh20
   url: http://researchonline.rca.ac.uk/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: http://researchonline.rca.ac.uk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: http://researchonline.rca.ac.uk/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: http://researchonline.rca.ac.uk/rest/eprint
+- type: eprints:rdf
+  url: http://researchonline.rca.ac.uk/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: http://researchonline.rca.ac.uk/cgi/export/repository/RDFN3/devel.n3
 id: researchonlinercaacuk
 langs:
 - id: EN

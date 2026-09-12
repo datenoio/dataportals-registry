@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Mary Immaculate College is a Scientific data repository operated by Mary
+  Immaculate College.
+id: micelsevierpurecom
+langs:
+- id: EN
+  name: English
+link: https://mic.elsevierpure.com
+name: Mary Immaculate College
+owner:
+  link: https://mic.elsevierpure.com
+  location:
+    country:
+      id: IE
+      name: Ireland
+  name: Mary Immaculate College
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042595
+endpoints:
+- type: oaipmh20
+  url: https://mic.elsevierpure.com/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://mic.elsevierpure.com/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://mic.elsevierpure.com/sitemap/datasets.xml

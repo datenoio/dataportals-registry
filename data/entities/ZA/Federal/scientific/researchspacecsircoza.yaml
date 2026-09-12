@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: 018
       name: Southern Africa
-description: CSIR ResearchSpace is a scientific data repository operated by Council for
-  Scientific and Industrial Research running on DSpace.
+description: CSIR ResearchSpace is a scientific data repository operated by Council
+  for Scientific and Industrial Research running on DSpace.
 endpoints:
 - type: dspace
   url: https://researchspace.csir.co.za/server/api
@@ -24,6 +24,11 @@ endpoints:
 - type: dspace:objects
   url: https://researchspace.csir.co.za/server/api/discover/search/objects
   version: '7'
+- type: sitemap
+  url: https://researchspace.csir.co.za/sitemap_index.xml
+- type: oaipmh20
+  url: https://researchspace.csir.co.za/server/oai/request?verb=Identify
+  version: '2.0'
 id: researchspacecsircoza
 langs:
 - id: EN

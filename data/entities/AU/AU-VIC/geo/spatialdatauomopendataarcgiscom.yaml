@@ -15,7 +15,16 @@ coverage:
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: Open Spatial Data Search, Visualize, Download, Innovate This is a platform for exploring and downloading the University of Melbourne GIS data, discovering and building apps, and engaging others to solve important issues. By using this platform, you acknowledge our disclaimer. Parkville Landscape Overview (Zoom In for More Information) Explore our data Property Facility Road Sustainability Unlock the Data Explore Visualize &amp; Analyze Build Share Anyone can use this data at no cost. Download raw data and share your insights with your teams or build new applications that serve specific users. Dig into the data. Highlight spatial patterns and discover trends. Develop new apps using templates and API's. Embed analysis on your website. Copyright 2019. Space Management, The University of Melbourne.
+description: Open Spatial Data Search, Visualize, Download, Innovate This is a platform
+  for exploring and downloading the University of Melbourne GIS data, discovering
+  and building apps, and engaging others to solve important issues. By using this
+  platform, you acknowledge our disclaimer. Parkville Landscape Overview (Zoom In
+  for More Information) Explore our data Property Facility Road Sustainability Unlock
+  the Data Explore Visualize &amp; Analyze Build Share Anyone can use this data at
+  no cost. Download raw data and share your insights with your teams or build new
+  applications that serve specific users. Dig into the data. Highlight spatial patterns
+  and discover trends. Develop new apps using templates and API's. Embed analysis
+  on your website. Copyright 2019. Space Management, The University of Melbourne.
 endpoints:
 - type: dcatap201
   url: https://spatialdata-uom.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -27,6 +36,8 @@ endpoints:
   url: https://spatialdata-uom.opendata.arcgis.com/api/search/v1
 - type: sitemap
   url: https://spatialdata-uom.opendata.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://spatialdata-uom.opendata.arcgis.com/data.json
 id: spatialdatauomopendataarcgiscom
 langs:
 - id: EN

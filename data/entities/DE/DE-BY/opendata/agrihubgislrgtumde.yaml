@@ -30,6 +30,16 @@ endpoints:
 - type: ckan:package-list
   url: https://agrihub.gis.lrg.tum.de/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://agrihub.gis.lrg.tum.de/catalog.n3
+- type: dcat:ttl
+  url: https://agrihub.gis.lrg.tum.de/catalog.ttl
+- type: dcat:jsonld
+  url: https://agrihub.gis.lrg.tum.de/catalog.jsonld
+- type: dcat:xml
+  url: https://agrihub.gis.lrg.tum.de/catalog.xml
+- type: dcat
+  url: https://agrihub.gis.lrg.tum.de/catalog.rdf
 id: agrihubgislrgtumde
 langs:
 - id: DE

@@ -48,6 +48,9 @@ Walk the JSON tree. Language segment is often `en`, `sv`, `fi`, `da`.
 ```text
 GET https://host/api/v1/
 GET https://host/api/v1/en/
+GET https://host/api/v1/sv/
+GET https://host/api/v1/fi/
+GET https://host/api/v1/da/
 ```
 
 Each JSON object with `type: t` (table) is a dataset. `type: l` is a folder — recurse. Do not treat a POST of table cells as a new dataset. Cap depth; some NSOs have thousands of tables.
@@ -180,7 +183,7 @@ Filter exports on `software.id = 'edatos'`. One harvest scope per public hub.
 GET https://host/indicators/v1.0/indicators
 ```
 
-Keep **indicators** and **indicator systems** from that JSON-stat API (or the public ODS catalog listing). Drop institute CMS chrome and each time-series observation cube. ISTAC Open SDG is a different catalog (`opensdg`).
+Type `/indicators/v1.0/indicators` as `rest`. Keep **indicators** and **indicator systems** from that JSON-stat API (or the public ODS catalog listing). Drop institute CMS chrome and each time-series observation cube. ISTAC Open SDG is a different catalog (`opensdg`).
 
 **Keep:** JSON-stat **indicators** and indicator systems. **Drop:** institute CMS chrome and time-series observation cubes.
 
@@ -401,6 +404,8 @@ Survey microdata catalog.
 GET https://host/index.php/api/catalog/search
 ```
 
+Typical catalog links already end in `/index.php` or `/index.php/catalog`. Cleanup strips `/index.php` (keeping any path prefix) so the search API attaches at origin and is not doubled.
+
 Page the JSON study list. Keep survey / microdata / geospatial studies. **Drop** `dtype` values that are document, video, or news when present. CSV export (`/index.php/catalog/export/csv`) is a bulk study list — still one row per study, not per file.
 
 **Keep:** NADA survey / microdata / geospatial **studies**.
@@ -521,6 +526,8 @@ List **dataflows**. The UI host `data.ecb.europa.eu` is not the SDMX root; `/ser
 GET https://data-api.ecb.europa.eu/service/dataflow
 ```
 
+Detection uses that API host (`absolute_url`); do not concatenate `/service/dataflow` onto `data.ecb.europa.eu`.
+
 
 ## World Bank (`dataworldbankorg`) {#dataworldbankorg}
 
@@ -532,6 +539,8 @@ GET https://api.worldbank.org/v2/sources?format=json
 Keep **indicators** (or **sources** if the user asked for catalogs-of-catalogs). Drop country pages, WDI observation queries (`/v2/country/.../indicator/...`), and data.worldbank.org marketing.
 
 **Keep:** World Bank **indicators** (or **sources** if asked). **Drop:** country pages, WDI observation queries, and marketing.
+
+Detection probes the documented API host (`https://api.worldbank.org/v2/indicator` and `/v2/sources`), not paths on `data.worldbank.org`.
 
 ## WHO GHO (`whoint`) {#whoint}
 
@@ -603,6 +612,7 @@ Public BI that sometimes **is** the indicator catalog. Harvest public **datasets
 GET https://host/api/v1/dataset/
 ```
 
+Type `/api/v1/dataset/` as `rest`.
 
 ## IBM Cognos (`ibmcognos`) {#ibmcognos}
 

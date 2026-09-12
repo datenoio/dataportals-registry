@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: A web interface for searching and managing geospatial data catalogs, supporting metadata editing and access to maps and geospatial services.
+description: A web interface for searching and managing geospatial data catalogs,
+  supporting metadata editing and access to maps and geospatial services.
 endpoints:
 - type: csw202
   url: https://apps.titellus.net/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -23,6 +24,10 @@ endpoints:
 - type: oaipmh20
   url: https://apps.titellus.net/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:selections
+  url: https://apps.titellus.net/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://apps.titellus.net/geonetwork/srv/api/site
 id: appstitellusnet
 langs:
 - id: EN

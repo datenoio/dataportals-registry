@@ -55,9 +55,12 @@ OGC SensorThings API. Filter exports on `software.id = 'frostserver'`. Prefer `e
 
 ```text
 GET https://host/v1.1/
+GET https://host/v1.1/Things?$top=100&$count=true
 GET https://host/FROST-Server/v1.1/Things?$top=100&$count=true
 GET https://host/v1.1/Datastreams?$top=100&$count=true
 ```
+
+Type `/v1.1/Things` as `sensorthings`. Probe both origin `/v1.1/Things` and `/FROST-Server/v1.1/Things` (default servlet). Cleanup strips `/FROST-Server` (keeping any path prefix such as `/soop`) so the prefixed probe is not doubled. Leave other mounts (`/sensorthings/`, `/sta/`, `/server/`) so origin `/v1.1/` concatenates onto those catalog links. Do not copy a `/dataportaal/` UI host onto a different API origin.
 
 **Keep:** **Things** (stations / sensors) or **Datastreams** (observed properties), depending on the harvest ask — not both as duplicate datasets unless requested. Page with `$skip` / `$top` and `@iot.nextLink`. **Drop:** Observations, HistoricalLocations, FeaturesOfInterest rows, and the HTML start page. Stop on `401`/`403`. Skip demo/scratchpad hosts. Prefer the API root from the catalog `link` (some UIs sit on a separate dataportaal host).
 
@@ -68,7 +71,11 @@ Biodiversity collections CMS. Official directory: [symbiota.org/symbiota-portals
 ```text
 GET https://host/collections/index.php
 GET https://host/collections/datasets/rsshandler.php
+GET https://host/portal/collections/index.php
+GET https://host/portal/collections/datasets/rsshandler.php
 ```
+
+Typical catalog links already end in `/portal/` or `/collections/`. Cleanup strips those mounts so harvest collection paths attach at origin and are not doubled (`/portal/portal/`).
 
 **Keep:** published Darwin Core **datasets** (RSS) and, if the user wants collection-level catalogs, one record per public collection (`collid`). **Drop:** individual occurrences, images, and checklists as datasets. One portal = one harvest scope (not per collection unless asked). Login-only portals: stop. Detail: [harvest-biodiversity.md](harvest-biodiversity.md#symbiota).
 
@@ -113,7 +120,9 @@ GET https://host/MassBank/api/records
 GET https://host/rest/spectra
 ```
 
-Path prefixes differ per instance (`/MassBank/` vs MoNA `/rest/`). **Keep:** spectral **records** (or record accessions) as the dataset grain. **Drop:** peak lists inside a record as extra datasets.
+Path prefixes differ per instance (`/MassBank/` vs MoNA `/rest/`). Cleanup strips `/MassBank` so `/MassBank/api/records` attaches at origin and is not doubled. Leave MoNA origin links so `/rest/spectra` concatenates there.
+
+**Keep:** spectral **records** (or record accessions) as the dataset grain. **Drop:** peak lists inside a record as extra datasets.
 
 ## ioChem-BD (`iochembd`) {#iochembd}
 
@@ -122,6 +131,7 @@ Computational chemistry nodes. Browse is DSpace-based; Find is the central index
 ```text
 GET https://host/rest/items
 GET https://host/oai/request?verb=Identify
+GET https://host/oai?verb=Identify
 GET https://host/oai/request?verb=ListRecords&metadataPrefix=oai_dc
 ```
 
@@ -192,7 +202,7 @@ GET https://host/api/metadata/{id}
 GET https://host/api/data/{id}
 ```
 
-Keep one record per released public **dataset**. Attach its metadata, current version,
+Type the public dataset list as `bexis2:datasets`. Keep one record per released public **dataset**. Attach its metadata, current version,
 data structure, files, and download package as child information or distributions. Do
 not emit variables, rows, attachments, metadata schemas, tags, or dataset versions as
 independent datasets. Stop when the API requires authentication rather than enumerating
@@ -224,12 +234,16 @@ GET https://host/greenstone3/oaiserver?verb=ListSets
 GET https://host/greenstone3/oaiserver?verb=ListRecords&metadataPrefix=oai_dc&set={set}
 ```
 
+Typical catalog links already include `/greenstone3/library`. Cleanup strips `/greenstone3` (and Greenstone 2 `/greenstone`) so Identify attaches at origin and is not doubled.
+
 For Greenstone 2, test `/greenstone/cgi-bin/oaiserver.cgi` instead. Map OAI sets to
 Greenstone collections, then keep resource records at the catalog's declared document or
 dataset grain. Do not emit search-result pages, classifiers, sections, or files belonging
 to the same record as additional datasets. Follow `resumptionToken` pagination.
 
 **Keep:** OAI resource records at the catalog’s document or dataset grain. **Drop:** search-result pages, classifiers, sections, and files belonging to the same record.
+
+Greenstone 2 Identify is `/greenstone/cgi-bin/oaiserver.cgi?verb=Identify`.
 
 ## VIVO (`vivo`) {#vivo}
 
@@ -275,6 +289,7 @@ OPeNDAP directory or implementation-specific catalog. Harvest dataset nodes in t
 
 ```text
 GET https://host/opendap/
+GET https://host/catalog.xml
 ```
 
 
@@ -330,6 +345,8 @@ Folder/entry repository. Harvest **entry** types that are data collections, not 
 GET https://host/repository/entry/show?output=json
 ```
 
+Type `/repository/entry/show?output=json` as `ramadda:entry-show`. Attach from the catalog origin; strip `/repository` when the link already includes that mount.
+
 
 ## Galaxy (`galaxy`) {#galaxy}
 
@@ -351,7 +368,7 @@ GET https://host/assays.json
 GET https://host/api
 ```
 
-Keep **data files** / assays / studies that deposit data. Drop SOP-only pages, documents, and presentations. WorkflowHub uses the same stack — still keep data assets, not every CWL workflow, unless the user asked for workflows. Skip seek4science.org marketing.
+Type `/api` as `rest`. Keep **data files** / assays / studies that deposit data. Drop SOP-only pages, documents, and presentations. WorkflowHub uses the same stack — still keep data assets, not every CWL workflow, unless the user asked for workflows. Skip seek4science.org marketing.
 
 **Keep:** **data files** / assays / studies that deposit data. **Drop:** SOP-only pages, documents, presentations, and every CWL workflow unless asked.
 
@@ -366,6 +383,8 @@ Facility catalog (REST and/or OAI in `endpoints[]`). Harvest **datasets** / inve
 GET https://host/icat/portlet/
 ```
 
+Type `/icat/portlet/` as `index`. Attach to the catalog `link`; strip `/icat/portlet` when the link already includes that mount.
+
 
 ## MyTardis (`mytardis`) {#mytardis}
 
@@ -374,6 +393,8 @@ GET https://host/api/v1/dataset/
 ```
 
 TastyPie `dataset` objects. Drop `datafile` rows when a parent dataset exists. Stop on `401`.
+
+Type `/api/v1/dataset/` as `mytardis:datasets`.
 
 **Keep:** TastyPie **dataset** objects. **Drop:** `datafile` rows when a parent dataset exists.
 
@@ -388,11 +409,15 @@ Keep **experiments, publications-with-data, and list/template results that repre
 
 **Keep:** experiments, publications-with-data, and list/template results that represent datasets. **Drop:** gene report pages and `/begin.do` UI crawls.
 
+Type `/service/version` as `intermine:version`.
+
 ## GRIN-Global (`gringlobal`) {#gringlobal}
 
 ```text
 GET https://host/gringlobal/
 ```
+
+Type `/gringlobal/` as `index`. Attach from the catalog origin; do not prefix `/gringlobal` again when the link already includes that mount.
 
 Keep accession/taxonomy **catalog exports** (CSV/Excel) and documented web-service lists. Drop individual accession HTML pages as datasets unless the user asked for accession-level harvest. One genebank instance = one harvest scope.
 
@@ -425,7 +450,7 @@ GET https://host/api/info
 GET https://host/api/studies
 ```
 
-Keep **studies**. Drop mutation/CNA rows, patient samples, and a single study view as a crawl seed. One public instance = one harvest scope.
+Type the study catalog as `cbioportal:studies`. Keep **studies**. Drop mutation/CNA rows, patient samples, and a single study view as a crawl seed. One public instance = one harvest scope.
 
 **Keep:** cBioPortal **studies**. **Drop:** mutation/CNA rows, patient samples, and a single study view as a crawl seed.
 
@@ -438,7 +463,7 @@ GET https://host/parameters
 GET https://host/download
 ```
 
-Prefer `endpoints[]` when present.
+Type `/parameters` as `index` when it is the public parameter catalog. Type `/download` as `index` when it is the published bulk-download listing. Prefer `endpoints[]` when present.
 
 **Keep:** parameter / dataset catalog or published bulk download. **Drop:** individual language-value cells and language report pages.
 
@@ -452,6 +477,8 @@ GET https://host/data.html
 ```
 
 Prefer `endpoints[]` when present. AphasiaBank and similar clinical banks may be login-walled (`401`/`403`) — stop; do not guess credentials.
+
+Type `/data.html` as `index`. Strip `data.html` from the catalog `link`.
 
 **Keep:** corpus / collection catalog or published bulk download. **Drop:** individual CHAT transcripts, media files, and speaker pages.
 
@@ -528,7 +555,7 @@ Start at the registered homepage and follow the published service roster. For ex
 `GET https://dc.g-vo.org/` lists collection services. Verify an advertised TAP endpoint with
 `GET https://vo.astron.nl/tap/capabilities` before using it.
 
-Prefer the publishing registry's OAI-PMH resource metadata, or TAP table metadata from
+Prefer the publishing registry's OAI-PMH resource metadata (`GET https://host/oai.xml?verb=Identify` on DaCHS), or TAP table metadata from
 `TAP_SCHEMA.tables` after resolving the site's advertised TAP base URL. Keep published
 collections, tables and dataset services with stable IVO identifiers. Drop individual stars,
 measurements and image pixels as independent dataset records. Service endpoints and tables
@@ -591,8 +618,12 @@ GET https://host/portal/portal/esimo-user/data
 Prefer the MINERVA-Net registry API or the instance map list. Keep **registered pathway / disease maps**. Drop individual glyphs, reactions, and overlay files. One harvest scope per public MINERVA instance or the Net registry.
 
 ```text
+GET https://host/api/projects/
+GET https://host/minerva/api/projects/
 GET https://minerva-net.lcsb.uni.lu/
 ```
+
+Type `/api/projects/` as `rest`. Keep **registered pathway / disease maps**. Drop individual glyphs, reactions, and overlay files. One harvest scope per public MINERVA instance or the Net registry.
 
 **Keep:** registered pathway / disease **maps**. **Drop:** individual glyphs, reactions, and overlay files.
 
@@ -602,7 +633,7 @@ GET https://minerva-net.lcsb.uni.lu/
 GET https://nextstrain.org/charon/getAvailable
 ```
 
-Keep **pathogen / community datasets** in the Nextstrain catalog. Drop individual Auspice narrative slides and per-sample FASTA. One harvest scope per public Nextstrain hub or community catalog.
+Type `/charon/getAvailable` as `rest` on the instance `link`. Do not copy `https://nextstrain.org/charon/getAvailable` onto community or tenant catalogs; that URL belongs only on the Nextstrain hub record. Keep **pathogen / community datasets** in the Nextstrain catalog. Drop individual Auspice narrative slides and per-sample FASTA. One harvest scope per public Nextstrain hub or community catalog.
 
 **Keep:** pathogen / community **datasets**. **Drop:** Auspice narrative slides and per-sample FASTA.
 
@@ -613,6 +644,8 @@ GET https://host/explore
 ```
 
 Harvest the Explore work-graph / curated-dataset catalog. Do not harvest Materials Cloud Archive under this id (that record is `inveniordm`). Keep published Explore entries; drop individual AiiDA node dumps.
+
+Type `/explore` as `index`. Strip `/explore` from the catalog `link`.
 
 **Keep:** published Explore **entries**. **Drop:** individual AiiDA node dumps and Materials Cloud Archive (`inveniordm`).
 
@@ -663,7 +696,7 @@ GET https://datacommons.cyverse.org/
 GET https://huggingface.co/api/datasets
 ```
 
-Keep **datasets**. Drop models, Spaces, and per-user repos. One harvest scope for the Hub.
+Type the Hub list as `huggingface:api`. Keep **datasets**. Drop models, Spaces, and per-user repos. One harvest scope for the Hub.
 
 **Keep:** Hub **datasets**. **Drop:** models, Spaces, and per-user repos.
 
@@ -807,6 +840,133 @@ GET https://api.inaturalist.org/v1/observations
 Keep **projects or export datasets** if that was the ask. Do not treat every observation as a dataset. One harvest scope for the hub.
 
 **Keep:** iNaturalist **projects / export datasets**. **Drop:** per-observation API rows.
+
+## JACQ (`jacq`) {#jacq}
+
+Start at the Virtual Herbaria portal or a participating herbarium's public JACQ search.
+
+```text
+GET https://jacq.org/
+GET https://api.jacq.org/
+```
+
+Keep published **herbarium / collection** catalogs. Drop individual specimen, image, and taxon pages. One harvest scope for the shared portal unless an institution publishes a separate JACQ instance.
+
+**Keep:** herbarium / collection catalogs. **Drop:** specimen, image, and taxon pages.
+
+## NMRShiftDB2 (`nmrshiftdb2`) {#nmrshiftdb2}
+
+Start at the public database instance. Swagger UI is at `/api-docs/` on the Cologne reference install.
+
+```text
+GET https://nmrshiftdb.nmr.uni-koeln.de/
+GET https://nmrshiftdb.nmr.uni-koeln.de/api-docs/
+```
+
+Keep **compound / assigned-spectrum records** as listed by the instance. Drop prediction jobs and per-peak rows as extra datasets.
+
+**Keep:** compound / assigned-spectrum records. **Drop:** prediction jobs and per-peak rows.
+
+## Chemotion Repository (`chemotion`) {#chemotion}
+
+Harvest the public repository, not Chemotion ELN notebooks.
+
+```text
+GET https://www.chemotion-repository.net/home/welcome
+```
+
+Keep published **samples, reactions, and analytical datasets**. Drop ELN lab notebooks, login, and individual spectrum image files as extra datasets.
+
+**Keep:** published samples, reactions, and analytical datasets. **Drop:** ELN notebooks, login, and spectrum image files.
+
+## Korp (`korp`) {#korp}
+
+Harvest the public Korp UI for one installation. Corpus collections are the dataset grain; KWIC hits are not datasets.
+
+```text
+GET https://spraakbanken.gu.se/korp/
+GET https://korp.eki.ee/
+```
+
+**Keep:** published **corpus collections** in that Korp instance. **Drop:** concordance/KWIC rows, word-picture widgets, and login-only corpora listings that are not a public catalog.
+
+## DANDI Archive (`dandi`) {#dandi}
+
+```text
+GET https://api.dandiarchive.org/api/dandisets/
+```
+
+Keep **dandisets**. Drop individual NWB assets, blobs, and per-file download URLs as extra datasets. One harvest scope for the archive hub.
+
+**Keep:** dandisets. **Drop:** individual NWB assets and blob download URLs.
+
+Detection uses the documented API host (`https://api.dandiarchive.org/api/dandisets/`); do not concatenate that path onto `dandiarchive.org`.
+
+## CELLxGENE Discover (`cellxgene`) {#cellxgene}
+
+```text
+GET https://api.cellxgene.cziscience.com/curation/v1/datasets
+```
+
+Keep curated **datasets** from the Discover/Curation API. Drop explorer sessions, embeddings, and Census snapshot files as extra catalogs.
+
+**Keep:** curated Discover datasets. **Drop:** explorer sessions, embeddings, and Census snapshot files.
+
+Detection uses the documented Curation API host (`https://api.cellxgene.cziscience.com/curation/v1/datasets`); do not concatenate that path onto the Discover UI host.
+
+## HydroShare (`hydroshare`) {#hydroshare}
+
+```text
+GET https://www.hydroshare.org/hsapi/resource/
+```
+
+Type `/hsapi/resource/` as `rest`. Keep **resources** (datasets, models, collections). Drop user profiles, group pages, and the companion THREDDS catalog (`threddshydroshareorg`) as extra HydroShare datasets.
+
+**Keep:** HydroShare **resources**. **Drop:** user/group pages and THREDDS service rows.
+
+## Brainlife (`brainlife`) {#brainlife}
+
+```text
+GET https://brainlife.io/datasets
+```
+
+Keep published **datasets**. Drop processing-app runs, JWT-only warehouse dumps, and per-object provenance events.
+
+**Keep:** published datasets. **Drop:** app runs and login-only warehouse dumps.
+
+## Open Context (`opencontext`) {#opencontext}
+
+```text
+GET https://opencontext.org/
+```
+
+Keep **projects / published datasets**. Drop individual media items, images, and map points as extra datasets.
+
+**Keep:** projects / published datasets. **Drop:** per-item media, images, and map points.
+
+## BioDare2 (`biodare2`) {#biodare2}
+
+```text
+GET https://biodare2.ed.ac.uk/api/experiments?showPublic=true
+```
+
+Keep public **experiments** (`isOpenAccess`). Drop period-analysis jobs, rhythmicity jobs, attachments, and login-only drafts.
+
+Type `/api/experiments?showPublic=true` as `rest`. One community hub (`biodare2.ed.ac.uk`).
+
+**Keep:** public experiments. **Drop:** analysis jobs, attachments, and login-only drafts.
+
+## TemplateFlow (`templateflow`) {#templateflow}
+
+```text
+GET https://www.templateflow.org/browse/
+```
+
+Keep **templates / atlases** in the archive. Drop Python-client cache files, DataLad submodule clones, and individual NIfTI derivatives as extra datasets.
+
+Type `/browse/` as `index`. One archive hub (`templateflow.org`).
+
+**Keep:** templates / atlases. **Drop:** client cache files and per-file NIfTI derivatives.
 
 ## Related
 

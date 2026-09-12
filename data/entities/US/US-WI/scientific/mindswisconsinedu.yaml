@@ -35,6 +35,17 @@ endpoints:
   url: https://minds.wisconsin.edu/htmlmap
 - type: opensearch
   url: https://minds.wisconsin.edu:443/open-search/description.xml
+- type: dspace
+  url: https://minds.wisconsin.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://minds.wisconsin.edu/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://minds.wisconsin.edu/sitemap_index.xml
+- type: oaipmh20
+  url: https://minds.wisconsin.edu/server/oai/request?verb=Identify
+  version: '2.0'
 id: mindswisconsinedu
 langs:
 - id: EN

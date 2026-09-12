@@ -37,7 +37,7 @@ Each catalog is one YAML document validated against `data/schemes/catalog.json` 
 | Field | Purpose |
 |-------|---------|
 | `properties` | Flags such as `has_doi`, `is_national`, `transferable_topics`, `transferable_location`, `unfinished`, `dataset_count_reported` |
-| `catalog_export` | Export/syndication label (e.g. `CKAN API`) |
+| `catalog_export` | Unused leftover. Harvestable dumps belong in `endpoints[]` (e.g. `dcatus11` `/data.json`). Do not add new values. |
 | `trust_score` / `trust_score_components` | Optional 0–100 score; see [trust-score.md](trust-score.md) |
 | `_re3data` | Re3Data payload; see [re3data.md](re3data.md) |
 
@@ -118,7 +118,7 @@ endpoints:
   url: https://catalog.data.faa.gov/data.json
 ```
 
-Common `type` values include `ckan`, `ckan:package-search`, `dcatap201`, `dcatus11`, `geonetwork:csw`, `oaipmh`, `socrata:opendata`, `stac`, `sparql`. Use the types already present for the same `software.id`.
+Prefer live type names in [vocabularies.md](vocabularies.md#endpoint-types) (`csw202` not `geonetwork:csw`, `oaipmh20` not `oaipmh`, `socrata:views` not `socrata:opendata`). Use types already present for the same `software.id`.
 
 ## Example (verified entity)
 

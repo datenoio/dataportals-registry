@@ -14,11 +14,11 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
-description: GeoNode Forest Information System of Serbia (WebFIS / FIS), operated by the Forest
-  Directorate, with datasets, documents, maps, and GeoServer OGC services. The public GeoNode
-  datasets API listed a small holdings set when checked.
+description: GeoNode Forest Information System of Serbia (WebFIS / FIS), operated
+  by the Forest Directorate, with datasets, documents, maps, and GeoServer OGC services.
+  The public GeoNode datasets API listed a small holdings set when checked.
 endpoints:
 - type: geonode:datasets
   url: https://fis.upravazasume.gov.rs/api/datasets/
@@ -64,6 +64,12 @@ endpoints:
   url: https://fis.upravazasume.gov.rs/geoserver/rest/settings
 - type: geoserver:layers
   url: https://fis.upravazasume.gov.rs/geoserver/rest/layers
+- type: geonode:datasets
+  url: https://fis.upravazasume.gov.rs/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://fis.upravazasume.gov.rs/catalogue/opensearch
+  version: '1.1'
 id: fisupravazasumegovrs
 langs:
 - id: SR

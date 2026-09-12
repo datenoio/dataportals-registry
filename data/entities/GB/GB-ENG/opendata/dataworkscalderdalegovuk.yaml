@@ -23,6 +23,15 @@ description: Open data catalog managed by Calderdale Metropolitan Borough Counci
 endpoints:
 - type: dcatus11
   url: https://dataworks.calderdale.gov.uk/data.json
+- type: ckan
+  url: https://dataworks.calderdale.gov.uk/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dataworks.calderdale.gov.uk/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dataworks.calderdale.gov.uk/api/3/action/package_list
+  version: '3'
 id: dataworkscalderdalegovuk
 langs:
 - id: EN

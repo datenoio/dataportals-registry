@@ -25,6 +25,13 @@ endpoints:
   url: https://data.cc-autourdechenonceaux.fr/api
 - type: sitemap
   url: https://data.cc-autourdechenonceaux.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.cc-autourdechenonceaux.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.cc-autourdechenonceaux.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.cc-autourdechenonceaux.fr/data.json
 id: dataccautourdechenonceauxfr
 langs:
 - id: FR

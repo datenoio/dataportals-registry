@@ -26,6 +26,16 @@ endpoints:
 - type: ckan:package-list
   url: https://ckan.kupferdigital.org/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://ckan.kupferdigital.org/catalog.n3
+- type: dcat:ttl
+  url: https://ckan.kupferdigital.org/catalog.ttl
+- type: dcat
+  url: https://ckan.kupferdigital.org/catalog.rdf
+- type: dcat:xml
+  url: https://ckan.kupferdigital.org/catalog.xml
+- type: dcat:jsonld
+  url: https://ckan.kupferdigital.org/catalog.jsonld
 id: ckankupferdigitalorg
 langs:
 - id: EN

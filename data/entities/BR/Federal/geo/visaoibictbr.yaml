@@ -31,6 +31,13 @@ endpoints:
 - type: oaipmh20
   url: https://visao.ibict.br/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: opensearch
+  url: https://visao.ibict.br/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: dcat:xml
+  url: https://visao.ibict.br/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://visao.ibict.br/geonetwork/srv/api/site
 id: visaoibictbr
 langs:
 - id: PT

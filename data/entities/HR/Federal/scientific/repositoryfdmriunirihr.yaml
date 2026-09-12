@@ -12,7 +12,7 @@ coverage:
       name: Croatia
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: DABAR institutional repository with 4 Dataset/Research data records.
 endpoints:
@@ -21,6 +21,9 @@ endpoints:
   version: '2.0'
 - type: sitemap
   url: https://repository.fdmri.uniri.hr/sitemap.xml
+- type: oaipmh20
+  url: https://repository.fdmri.uniri.hr/oai?verb=Identify
+  version: '2.0'
 id: repositoryfdmriunirihr
 langs:
 - id: HR

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: inactive
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -78,3 +78,12 @@ topics:
   name: Planning / Cadastre
   type: iso19115
 uid: cdi00002495
+endpoints:
+- type: dcatap201
+  url: https://citizen-problem-reporter-esriau.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://citizen-problem-reporter-esriau.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: ogcrecordsapi
+  url: https://citizen-problem-reporter-esriau.hub.arcgis.com/api/search/v1
+- type: dcatus11
+  url: https://citizen-problem-reporter-esriau.hub.arcgis.com/data.json

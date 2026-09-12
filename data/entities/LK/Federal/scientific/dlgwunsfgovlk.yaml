@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: Gampaha Wickramarachchi University e-Repository. Institutional repository operated
-  by Gampaha Wickramarachchi University of Indigenous Medicine.
+description: Gampaha Wickramarachchi University e-Repository. Institutional repository
+  operated by Gampaha Wickramarachchi University of Indigenous Medicine.
 endpoints:
 - type: dspace
   url: https://dl-gwu.nsf.gov.lk/server/api
@@ -25,6 +25,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://dl-gwu.nsf.gov.lk/sitemap_index.xml
+- type: oaipmh20
+  url: https://dl-gwu.nsf.gov.lk/server/oai/request?verb=Identify
+  version: '2.0'
 id: dlgwunsfgovlk
 langs:
 - id: EN

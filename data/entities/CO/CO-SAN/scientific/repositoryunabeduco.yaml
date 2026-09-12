@@ -35,6 +35,17 @@ endpoints:
   url: https://repository.unab.edu.co/htmlmap
 - type: opensearch
   url: https://repository.unab.edu.co:443/open-search/description.xml
+- type: dspace
+  url: https://repository.unab.edu.co/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repository.unab.edu.co/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://repository.unab.edu.co/sitemap_index.xml
+- type: oaipmh20
+  url: https://repository.unab.edu.co/server/oai/request?verb=Identify
+  version: '2.0'
 id: repositoryunabeduco
 langs:
 - id: ES

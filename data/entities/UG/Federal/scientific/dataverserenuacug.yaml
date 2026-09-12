@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: UG
+      name: Uganda
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: RENU Dataverse is a Scientific data repository operated by Research and
+  Education Network for Uganda, built with Dataverse.
+id: dataverserenuacug
+langs:
+- id: EN
+  name: English
+link: https://dataverse.renu.ac.ug
+name: RENU Dataverse
+owner:
+  link: https://www.renu.ac.ug
+  location:
+    country:
+      id: UG
+      name: Uganda
+  name: Research and Education Network for Uganda
+  type: Academy
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research
+- academic
+- dataverse
+- has_api
+- education
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00043745
+endpoints:
+- type: dataverseapi
+  url: https://dataverse.renu.ac.ug/api/search
+- type: dataverseapi
+  url: https://dataverse.renu.ac.ug/api/info/version

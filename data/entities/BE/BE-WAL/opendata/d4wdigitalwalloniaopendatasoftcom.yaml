@@ -20,6 +20,15 @@ endpoints:
   url: https://d4w-digitalwallonia.opendatasoft.com/api
 - type: sitemap
   url: https://d4w-digitalwallonia.opendatasoft.com/sitemap.xml
+- type: opendatasoftapi
+  url: https://d4w-digitalwallonia.opendatasoft.com/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://d4w-digitalwallonia.opendatasoft.com/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://d4w-digitalwallonia.opendatasoft.com/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://d4w-digitalwallonia.opendatasoft.com/data.json
 id: d4wdigitalwalloniaopendatasoftcom
 langs:
 - id: FR

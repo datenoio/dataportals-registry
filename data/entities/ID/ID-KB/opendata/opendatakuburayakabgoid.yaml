@@ -29,6 +29,16 @@ endpoints:
 - type: ckan:package-list
   url: https://opendata.kuburayakab.go.id/api/3/action/package_list
   version: '3'
+- type: dcat
+  url: https://opendata.kuburayakab.go.id/catalog.rdf
+- type: dcat:n3
+  url: https://opendata.kuburayakab.go.id/catalog.n3
+- type: dcat:ttl
+  url: https://opendata.kuburayakab.go.id/catalog.ttl
+- type: dcat:xml
+  url: https://opendata.kuburayakab.go.id/catalog.xml
+- type: dcat:jsonld
+  url: https://opendata.kuburayakab.go.id/catalog.jsonld
 id: opendatakuburayakabgoid
 langs:
 - id: ID

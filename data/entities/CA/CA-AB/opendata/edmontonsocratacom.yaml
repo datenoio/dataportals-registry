@@ -24,6 +24,12 @@ endpoints:
   url: https://edmonton.socrata.com/data.json
 - type: socrata:views
   url: https://edmonton.socrata.com/api/views
+- type: socrata:catalog
+  url: https://edmonton.socrata.com/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://edmonton.socrata.com/opensearch.xml
+  version: '1.1'
 id: edmontonsocratacom
 langs:
 - id: EN
@@ -58,4 +64,3 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi00020470
-

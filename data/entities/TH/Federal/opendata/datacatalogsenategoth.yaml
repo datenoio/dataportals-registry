@@ -25,6 +25,16 @@ endpoints:
 - type: ckan:package-list
   url: https://datacatalog.senate.go.th/api/3/action/package_list
   version: '3'
+- type: dcat:ttl
+  url: https://datacatalog.senate.go.th/catalog.ttl
+- type: dcat:xml
+  url: https://datacatalog.senate.go.th/catalog.xml
+- type: dcat:jsonld
+  url: https://datacatalog.senate.go.th/catalog.jsonld
+- type: dcat
+  url: https://datacatalog.senate.go.th/catalog.rdf
+- type: dcat:n3
+  url: https://datacatalog.senate.go.th/catalog.n3
 id: datacatalogsenategoth
 langs:
 - id: TH

@@ -25,6 +25,14 @@ endpoints:
 - type: dspace:objects
   url: https://yorkspace.library.yorku.ca/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://yorkspace.library.yorku.ca/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://yorkspace.library.yorku.ca/sitemap_index.xml
+- type: oaipmh20
+  url: https://yorkspace.library.yorku.ca/server/oai/request?verb=Identify
+  version: '2.0'
 id: yorkspacelibraryyorkuca
 langs:
 - id: EN

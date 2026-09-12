@@ -24,6 +24,9 @@ endpoints:
   url: https://data.redmond.gov/data.json
 - type: socrata:views
   url: https://data.redmond.gov/api/views
+- type: socrata:catalog
+  url: https://data.redmond.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: dataredmondgov
 langs:
 - id: EN

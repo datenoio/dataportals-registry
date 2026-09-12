@@ -24,6 +24,12 @@ endpoints:
   url: https://internal.agtransport.usda.gov/api/views
 - type: sitemap
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-internal.agtransport.usda.gov.xml
+- type: socrata:catalog
+  url: https://internal.agtransport.usda.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://internal.agtransport.usda.gov/opensearch.xml
+  version: '1.1'
 id: internalagtransportusdagov
 langs:
 - id: EN

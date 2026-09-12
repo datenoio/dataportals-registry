@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: 018
       name: Southern Africa
-description: UWCScholar is a scientific data repository operated by University of the
-  Western Cape running on DSpace.
+description: UWCScholar is a scientific data repository operated by University of
+  the Western Cape running on DSpace.
 endpoints:
 - type: dspace
   url: https://uwcscholar.uwc.ac.za/server/api
@@ -26,6 +26,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://uwcscholar.uwc.ac.za/sitemap_index.xml
+- type: oaipmh20
+  url: https://uwcscholar.uwc.ac.za/server/oai/request?verb=Identify
+  version: '2.0'
 id: uwcscholaruwcacza
 langs:
 - id: EN

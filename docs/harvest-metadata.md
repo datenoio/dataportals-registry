@@ -81,9 +81,19 @@ GET https://host/api/graphql
 
 **Keep:** **dataset / data-product metadata entities**. **Drop:** users, glossary terms, and lineage edges as datasets. GraphQL is often authenticated (`401`) — stop rather than scraping the SPA. One harvest scope per public DataHub catalog. Distinct from datahub.io (CKAN).
 
+## CEDAR Workbench (`cedar`) {#cedar}
+
+Harvest the public template / metadata-instance catalog, not the marketing site.
+
+```text
+GET https://cedar.metadatacenter.org
+```
+
+**Keep:** published **metadata templates** and filled experiment metadata records. **Drop:** login, template-designer chrome, and the metadatacenter.org homepage.
+
 ## DCAT without an FDP
 
-Many open-data sites expose `/catalog.xml`, `/data.json`, or DCAT-AP. That harvest belongs with [harvest-opendata.md](harvest-opendata.md) (`dcat:Dataset` only). Protocol details: [harvest-protocols.md](harvest-protocols.md#dcat). Use this page when `software.id` is `fairdatapoint`, `aristotlemdr`, `fusionregistry`, `mwmb`, or `datahubproject`.
+Many open-data sites expose `/catalog.xml`, `/data.json`, or DCAT-AP. That harvest belongs with [harvest-opendata.md](harvest-opendata.md) (`dcat:Dataset` only). Protocol details: [harvest-protocols.md](harvest-protocols.md#dcat). Use this page when `software.id` is `fairdatapoint`, `aristotlemdr`, `fusionregistry`, `mwmb`, `datahubproject`, or `cedar`.
 
 ## Related
 

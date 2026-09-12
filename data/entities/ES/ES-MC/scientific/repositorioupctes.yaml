@@ -22,6 +22,14 @@ description: Institutional DSpace repository of Universidad Politécnica de Cart
 endpoints:
 - type: dspace:catalog
   url: https://repositorio.upct.es
+- type: oaipmh20
+  url: https://repositorio.upct.es/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://repositorio.upct.es/sitemap_index.xml
+- type: oaipmh20
+  url: https://repositorio.upct.es/server/oai/request?verb=Identify
+  version: '2.0'
 id: repositorioupctes
 langs:
 - id: ES

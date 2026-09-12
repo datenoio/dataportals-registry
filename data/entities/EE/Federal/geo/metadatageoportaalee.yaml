@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: GeoNetwork metadata catalog of Estonian spatial data (national SDI / INSPIRE
-  discovery). Operated by the Land and Spatial Development Board.
+description: GeoNetwork metadata catalog of Estonian spatial data (national SDI /
+  INSPIRE discovery). Operated by the Land and Spatial Development Board.
 endpoints:
 - type: geonetwork:query
   url: https://metadata.geoportaal.ee/geonetwork/srv/eng/q
@@ -38,6 +38,8 @@ endpoints:
   url: https://metadata.geoportaal.ee/geonetwork/srv/api/site
 - type: opensearch
   url: https://metadata.geoportaal.ee/portal.opensearch
+- type: geonetwork:selections
+  url: https://metadata.geoportaal.ee/geonetwork/srv/api/selections
 id: metadatageoportaalee
 langs:
 - id: ET

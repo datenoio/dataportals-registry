@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Institutional repository of UNAM's Instituto de Investigaciones Económicas (IIEc), holding
-  research publications and related documents.
+description: Institutional repository of UNAM's Instituto de Investigaciones Económicas
+  (IIEc), holding research publications and related documents.
 id: ruiiecunammx
 identifiers:
 - id: openaire
@@ -24,6 +24,24 @@ identifiers:
 langs:
 - id: ES
   name: Spanish
+endpoints:
+- type: oaipmh20
+  url: https://ru.iiec.unam.mx/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://ru.iiec.unam.mx/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://ru.iiec.unam.mx/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://ru.iiec.unam.mx/rest/eprint
+- type: eprints:rdf
+  url: https://ru.iiec.unam.mx/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://ru.iiec.unam.mx/cgi/export/repository/RDFN3/devel.n3
+- type: opensearch
+  url: https://ru.iiec.unam.mx/cgi/opensearchdescription
+  version: '1.1'
 link: https://ru.iiec.unam.mx/
 name: Repositorio Universitario del IIEc (UNAM)
 owner:
@@ -33,11 +51,12 @@ owner:
       id: MX
       name: Mexico
     level: 20
-  name: Universidad Nacional Autónoma de México, Instituto de Investigaciones Económicas (IIEc)
+  name: Universidad Nacional Autónoma de México, Instituto de Investigaciones Económicas
+    (IIEc)
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: eprints
+  name: EPrints
 status: active
 tags:
 - scientific

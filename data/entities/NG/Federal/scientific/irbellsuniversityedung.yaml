@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Institutional repository of Bells University of Technology, including theses,
-  publications, and research collections (DSpace 7).
+description: Institutional repository of Bells University of Technology, including
+  theses, publications, and research collections (DSpace 7).
 endpoints:
 - type: dspace
   url: https://ir.bellsuniversity.edu.ng/server/api
@@ -25,6 +25,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://ir.bellsuniversity.edu.ng/sitemap_index.xml
+- type: oaipmh20
+  url: https://ir.bellsuniversity.edu.ng/server/oai/request?verb=Identify
+  version: '2.0'
 id: irbellsuniversityedung
 langs:
 - id: EN

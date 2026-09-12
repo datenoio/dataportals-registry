@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-88
+      name: Sardegna
+description: Shared CKAN open-data catalog operated by Arionline for Sardinian municipalities
+  (Arbus, Arzachena, Quartu Sant'Elena). Harvested by dati.gov.it.
+endpoints:
+- type: ckan
+  url: https://centroservizi-opendata.arionline.cloud/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://centroservizi-opendata.arionline.cloud/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://centroservizi-opendata.arionline.cloud/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://centroservizi-opendata.arionline.cloud/catalog.n3
+- type: dcat:ttl
+  url: https://centroservizi-opendata.arionline.cloud/catalog.ttl
+- type: dcat:xml
+  url: https://centroservizi-opendata.arionline.cloud/catalog.xml
+- type: dcat:jsonld
+  url: https://centroservizi-opendata.arionline.cloud/catalog.jsonld
+- type: dcat
+  url: https://centroservizi-opendata.arionline.cloud/catalog.rdf
+id: centroserviziopendataarionlinecloud
+langs:
+- id: IT
+  name: Italian
+link: https://centroservizi-opendata.arionline.cloud/
+name: Centro Servizi Open Data Arionline
+owner:
+  link: https://www.arionline.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-88
+      name: Sardegna
+  name: Arionline
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- sardinia
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00004252

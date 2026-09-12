@@ -18,22 +18,21 @@ coverage:
     subregion:
       id: US-VA
       name: Virginia
-description: "Welcome to PWC GIS Data Portal The PWC GIS Data Portal is the platform\
-  \ used to increase public access to valuable GIS data created, maintained, licensed,\
-  \ and stored by Prince William County for county agencies and the people we serve.\
-  \ Browse by category or enter keywords in the search box to locate a dataset of\
-  \ interest, read its description, learn more about its authoritative data source,\
-  \ and explore attributes before downloading. \n\nClick here to learn how to use\
-  \ the PWC GIS Data Portal Search Our Data Select a Category View all data layers\
-  \ Boundaries Education Environmental Planning and Development Points of Interest\
-  \ Property Information Public Safety Recreation Transportation Utilities View Our\
-  \ Popular Datasets Prince William County has many geospatial datasets.  Here are\
-  \ some of our most popular ones. Parcels provide basic information regarding property\
-  \ location and boundaries, and is used as a graphical representation of legally\
-  \ recorded deed and plat documents for properties Roadway centerlines for all of\
-  \ Prince William County, City of Manassas and City of Manassas Park. Themed Map\
-  \ Gallery View and print PDF Maps Zoning &amp; Planning Maps Election Maps Street\
-  \ Maps Historical Maps Reference Maps"
+description: "Welcome to PWC GIS Data Portal The PWC GIS Data Portal is the platform
+  used to increase public access to valuable GIS data created, maintained, licensed,
+  and stored by Prince William County for county agencies and the people we serve.
+  Browse by category or enter keywords in the search box to locate a dataset of interest,
+  read its description, learn more about its authoritative data source, and explore
+  attributes before downloading. \n\nClick here to learn how to use the PWC GIS Data
+  Portal Search Our Data Select a Category View all data layers Boundaries Education
+  Environmental Planning and Development Points of Interest Property Information Public
+  Safety Recreation Transportation Utilities View Our Popular Datasets Prince William
+  County has many geospatial datasets.  Here are some of our most popular ones. Parcels
+  provide basic information regarding property location and boundaries, and is used
+  as a graphical representation of legally recorded deed and plat documents for properties
+  Roadway centerlines for all of Prince William County, City of Manassas and City
+  of Manassas Park. Themed Map Gallery View and print PDF Maps Zoning &amp; Planning
+  Maps Election Maps Street Maps Historical Maps Reference Maps"
 endpoints:
 - type: dcatap201
   url: https://gisdata-pwcgov.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -45,6 +44,8 @@ endpoints:
   url: https://gisdata-pwcgov.opendata.arcgis.com/api/search/v1
 - type: sitemap
   url: https://gisdata-pwcgov.opendata.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://gisdata-pwcgov.opendata.arcgis.com/data.json
 id: gisdatapwcgovopendataarcgiscom
 langs:
 - id: EN

@@ -17,7 +17,6 @@ coverage:
     subregion:
       id: US-OR
       name: Oregon
-
 description: ScholarsArchive@OSU is an institutional repository operated by Oregon
   State University. It hosts research datasets, scholarly articles, theses, and other
   scholarly work. Datasets are curated for discoverability, usability, and accessibility.
@@ -28,6 +27,9 @@ endpoints:
   url: https://ir.library.oregonstate.edu/sitemap/sitemap.xml
 - type: resourcesync
   url: https://ir.library.oregonstate.edu/capabilitylist?locale=en
+- type: oaipmh20
+  url: https://ir.library.oregonstate.edu/catalog/oai?verb=Identify
+  version: '2.0'
 id: irlibraryoregonstateedu
 identifiers:
 - id: re3data

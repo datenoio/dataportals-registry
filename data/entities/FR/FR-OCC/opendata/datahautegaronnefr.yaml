@@ -25,6 +25,11 @@ endpoints:
   url: https://data.haute-garonne.fr/api
 - type: sitemap
   url: https://data.haute-garonne.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.haute-garonne.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.haute-garonne.fr/api/v2/catalog/exports/dcat
 id: datahautegaronnefr
 langs:
 - id: FR

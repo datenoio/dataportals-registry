@@ -21,6 +21,12 @@ endpoints:
   url: https://opendata.usac.org/data.json
 - type: socrata:views
   url: https://opendata.usac.org/api/views
+- type: socrata:catalog
+  url: https://opendata.usac.org/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://opendata.usac.org/opensearch.xml
+  version: '1.1'
 id: opendatausacorg
 langs:
 - id: EN

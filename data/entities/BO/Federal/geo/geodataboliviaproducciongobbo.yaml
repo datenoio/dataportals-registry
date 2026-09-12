@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BO
+      name: Bolivia
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: MapStore frontend of Bolivia's SIIP productive-sector geodata, with GeoServer
+  WMS/WFS behind the viewer.
+endpoints:
+- type: mapstore:config
+  url: https://geodata-bolivia.produccion.gob.bo/mapstore/configs/localConfig.json
+- type: wms111
+  url: https://geodata-bolivia.produccion.gob.bo/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geodata-bolivia.produccion.gob.bo/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geodata-bolivia.produccion.gob.bo/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geodata-bolivia.produccion.gob.bo/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geodata-bolivia.produccion.gob.bo/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs111
+  url: https://geodata-bolivia.produccion.gob.bo/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs201
+  url: https://geodata-bolivia.produccion.gob.bo/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+id: geodataboliviaproducciongobbo
+langs:
+- id: ES
+  name: Spanish
+link: https://geodata-bolivia.produccion.gob.bo/mapstore/
+name: SIIP GeoData
+owner:
+  link: https://www.produccion.gob.bo
+  location:
+    country:
+      id: BO
+      name: Bolivia
+  name: Ministerio de Desarrollo Productivo y Economía Plural
+  type: Central government
+software:
+  id: mapstore
+  name: MapStore
+status: active
+tags:
+- geospatial
+- government
+- mapstore
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00042859
+properties:
+  has_doi: false
+  is_national: false

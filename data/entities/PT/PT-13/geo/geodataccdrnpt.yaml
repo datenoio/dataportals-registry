@@ -18,8 +18,8 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: CCDR Norte Dados SIG. Public catalog operated by Comissão de Coordenação e Desenvolvimento
-  Regional do Norte.
+description: CCDR Norte Dados SIG. Public catalog operated by Comissão de Coordenação
+  e Desenvolvimento Regional do Norte.
 endpoints:
 - type: dcatap201
   url: https://geodata.ccdr-n.pt/api/feed/dcat-ap/2.0.1.json
@@ -29,6 +29,8 @@ endpoints:
   url: https://geodata.ccdr-n.pt/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://geodata.ccdr-n.pt/api/search/v1
+- type: dcatus11
+  url: https://geodata.ccdr-n.pt/data.json
 id: geodataccdrnpt
 langs:
 - id: PT

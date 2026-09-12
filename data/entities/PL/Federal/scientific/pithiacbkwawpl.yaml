@@ -19,6 +19,9 @@ description: Catalog of Jupiter radio observations from the LOFAR PL610 station 
 endpoints:
 - type: tap:capabilities
   url: http://pithia.cbk.waw.pl/tap/capabilities
+- type: oaipmh20
+  url: http://pithia.cbk.waw.pl/oai.xml?verb=Identify
+  version: '2.0'
 id: pithiacbkwawpl
 langs:
 - id: EN

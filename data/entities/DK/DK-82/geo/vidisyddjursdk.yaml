@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: DK-82
+      name: Midtjylland
+description: Public MapCentia Vidi geoportal of Syddjurs Municipality, with a GC2
+  WMTS cache of municipal map layers. Distinct from the Spatial Suite webkort at webkort.syddjurs.dk.
+  Also published at https://kort.oplevsyddjurs.dk/app/syddjursgis/.
+endpoints:
+- type: gc2:catalog
+  url: https://vidi.syddjurs.dk/app/syddjursgis/
+- type: wmts100
+  url: https://geocloud.syddjurs.dk/mapcache/syddjursgis/wmts?SERVICE=WMTS&REQUEST=GetCapabilities
+  version: 1.0.0
+- type: customapi
+  url: https://geocloud.syddjurs.dk/api/v1/meta/syddjursgis
+id: vidisyddjursdk
+langs:
+- id: DA
+  name: Danish
+link: https://vidi.syddjurs.dk/app/syddjursgis/
+name: Syddjurs Kommune Vidi
+owner:
+  link: https://www.syddjurs.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 30
+    subregion:
+      id: DK-82
+      name: Midtjylland
+  name: Syddjurs Municipality
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: gc2
+  name: GC2
+status: active
+tags:
+- geoportal
+- map viewer
+- municipality
+- MapCentia
+- GC2
+- Vidi
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043122

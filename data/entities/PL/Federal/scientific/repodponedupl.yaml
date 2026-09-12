@@ -20,6 +20,13 @@ description: RepOD – Repository for Open Data (Open Science Platform - PON/Int
 endpoints:
 - type: sitemap
   url: https://repod.pon.edu.pl/sitemap.xml
+- type: dataverseapi
+  url: https://repod.pon.edu.pl/api/search
+- type: oaipmh20
+  url: https://repod.pon.edu.pl/oai?verb=Identify
+  version: '2.0'
+- type: dataverseapi
+  url: https://repod.pon.edu.pl/api/info/version
 id: repodponedupl
 langs:
 - id: EN

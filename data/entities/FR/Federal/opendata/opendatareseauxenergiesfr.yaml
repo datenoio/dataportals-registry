@@ -19,6 +19,11 @@ description: Open Data Réseaux Énergies (ODRÉ) publie des données autour des
 endpoints:
 - type: opendatasoft
   url: https://opendata.reseaux-energies.fr/api
+- type: dcat:xml
+  url: https://opendata.reseaux-energies.fr/api/v2/catalog/exports/dcat
+- type: opendatasoftapi
+  url: https://opendata.reseaux-energies.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
 id: opendatareseauxenergiesfr
 langs:
 - id: FR

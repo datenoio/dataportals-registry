@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: CDIP Syntool THREDDS catalog of wave-model FMRC collections (CDIP MOP,
+  IFREMER GFS, ECMWF WAM/ERA5, Great Lakes), distinct from the CDIP archive/realtime
+  buoy TDS.
+endpoints:
+- type: thredds:catalog
+  url: https://syntool.cdip.ucsd.edu/thredds/catalog.xml
+id: syntoolcdipucsdedu
+langs:
+- id: EN
+  name: English
+link: https://syntool.cdip.ucsd.edu/thredds/catalog.html
+name: CDIP Syntool Wave Model THREDDS
+owner:
+  link: https://cdip.ucsd.edu/
+  location:
+    country:
+      id: US
+      name: United States
+  name: Coastal Data Information Program, Scripps Institution of Oceanography
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- scientific
+- research
+- academic
+- thredds
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043777

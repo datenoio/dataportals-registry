@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Public easydb catalog of photographs, plans, and documentation of Syrian
+  cultural heritage, hosted by the GBV Verbundzentrale.
+id: syrianheritagegbvde
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+- id: AR
+  name: Arabic
+endpoints:
+- type: easydb:session
+  url: https://syrianheritage.gbv.de/search/api/v1/session
+link: https://syrianheritage.gbv.de/search
+name: Syrian Heritage Archive
+owner:
+  link: https://www.smb.museum/museen-einrichtungen/museum-fuer-islamische-kunst/home/
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Museum für Islamische Kunst, Staatliche Museen zu Berlin
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: easydb
+  name: easydb
+status: active
+tags:
+- scientific
+- research data
+- heritage
+- collections
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+uid: cdi00043119

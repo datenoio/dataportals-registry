@@ -15,7 +15,14 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: "Awareness. Analyze. Preserve. Protect. Public Awareness Risk Analysis The Public Awareness App allows you to view \ncurrent Flood Risk Products including Water Surface Elevation Raster Layers, Depth Raster Layers, Analysis Raster Layers, Building Footprints, and Changes Since Last FIRM. The Risk Analysis App displays the same Flood Risk Products as the Public Awareness App, but is only available to registered users for additional analysis and access custom tools. Sydney RobertFloodplain Engineering and Mapping Section Managersydney.roberts@sema.dps.mo.gov573-526-9383 Daniel GwartneyGeospatial Scientistdaniel.gwartney@woodplc.com785-272-6830"
+description: "Awareness. Analyze. Preserve. Protect. Public Awareness Risk Analysis
+  The Public Awareness App allows you to view \ncurrent Flood Risk Products including
+  Water Surface Elevation Raster Layers, Depth Raster Layers, Analysis Raster Layers,
+  Building Footprints, and Changes Since Last FIRM. The Risk Analysis App displays
+  the same Flood Risk Products as the Public Awareness App, but is only available
+  to registered users for additional analysis and access custom tools. Sydney RobertFloodplain
+  Engineering and Mapping Section Managersydney.roberts@sema.dps.mo.gov573-526-9383
+  Daniel GwartneyGeospatial Scientistdaniel.gwartney@woodplc.com785-272-6830"
 endpoints:
 - type: dcatap201
   url: https://sema-web-portal-showmefloodrisk.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -27,6 +34,8 @@ endpoints:
   url: https://sema-web-portal-showmefloodrisk.hub.arcgis.com/api/search/v1
 - type: sitemap
   url: https://sema-web-portal-showmefloodrisk.hub.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://sema-web-portal-showmefloodrisk.hub.arcgis.com/data.json
 id: semawebportalshowmefloodriskhubarcgiscom
 langs:
 - id: EN

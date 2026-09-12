@@ -1,0 +1,59 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: ucscgenomebrowser
+name: UCSC Genome Browser
+website: https://genome.ucsc.edu
+description: The UCSC Genome Browser is the University of California Santa Cruz genome
+  annotation catalog and viewer, with public track hubs, REST/GBIB APIs, and bulk
+  downloads.
+owner:
+  name: UC Santa Cruz Genomics Institute
+  location:
+    country:
+      id: US
+      name: United States
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/ucscGenomeBrowser
+documentation_url: https://genome.ucsc.edu/goldenPath/help/api.html
+export_formats:
+- BED
+- FASTA
+- JSON
+capabilities:
+- Genome browser
+- Track hub catalog
+last_updated: '2026-09-09T00:00:00Z'

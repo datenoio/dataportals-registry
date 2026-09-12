@@ -23,6 +23,15 @@ endpoints:
   url: https://transparence.sante.gouv.fr/api
 - type: sitemap
   url: https://transparence.sante.gouv.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://transparence.sante.gouv.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://transparence.sante.gouv.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://transparence.sante.gouv.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://transparence.sante.gouv.fr/data.json
 id: transparencesantegouvfr
 langs:
 - id: FR

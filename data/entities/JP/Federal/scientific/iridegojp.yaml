@@ -14,11 +14,14 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Institutional repository of Institute of Developing Economies, Japan External
-  Trade Organization. IRDB reports 2 dataset records (July 2026).
+description: Institutional repository of Institute of Developing Economies, Japan
+  External Trade Organization. IRDB reports 2 dataset records (July 2026).
 endpoints:
 - type: weko3:records
   url: https://ir.ide.go.jp/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english
+- type: oaipmh20
+  url: https://ir.ide.go.jp/oai?verb=Identify
+  version: '2.0'
 id: iridegojp
 langs:
 - id: JA

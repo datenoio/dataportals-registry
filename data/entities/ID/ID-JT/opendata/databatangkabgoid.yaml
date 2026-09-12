@@ -23,6 +23,12 @@ endpoints:
 - type: ckan
   url: https://data.batangkab.go.id/api/3
   version: '3'
+- type: ckan:package-search
+  url: https://data.batangkab.go.id/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.batangkab.go.id/api/3/action/package_list
+  version: '3'
 id: databatangkabgoid
 langs:
 - id: ID

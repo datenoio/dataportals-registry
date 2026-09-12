@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: National InvenioRDM research data repository operated by SURF.
+endpoints:
+- type: inveniordmapi:records
+  url: https://repository.surf.nl/api/records
+- type: oaipmh20
+  url: https://repository.surf.nl/oai2d?verb=Identify
+  version: '2.0'
+id: repositorysurfnl
+langs:
+- id: EN
+  name: English
+link: https://repository.surf.nl
+name: SURF Data Repository
+owner:
+  link: https://www.surf.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+  name: SURF
+  type: Academy
+software:
+  id: inveniordm
+  name: InvenioRDM
+status: active
+tags:
+- scientific
+- research
+- academic
+- inveniordm
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043594

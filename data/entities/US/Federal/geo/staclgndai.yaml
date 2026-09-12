@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Production STAC API (stac-server) for the LGND Earth-imagery catalog,
+  including commercial and open collections such as WorldView Legion, Sentinel-2,
+  and NAIP.
+endpoints:
+- type: stacserverapi
+  url: https://stac.lgnd.ai/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://stac.lgnd.ai/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac.lgnd.ai/conformance
+  version: '1.0'
+id: staclgndai
+langs:
+- id: EN
+  name: English
+link: https://stac.lgnd.ai/
+name: LGND STAC API
+owner:
+  link: https://lgnd.ai
+  location:
+    country:
+      id: US
+      name: United States
+  name: LGND AI, Inc.
+  type: Business
+properties:
+  is_national: false
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- STAC
+- Earth observation
+- geospatial
+- has_api
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00042781

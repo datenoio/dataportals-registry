@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Piveau metadata catalogue of the Horizon Europe GREEN.DAT.AI project,
+  publishing DCAT-AP records for energy, mobility, and water-management use-case datasets.
+endpoints:
+- type: customapi
+  url: https://search-piveau.greendatai.ari-energy.eu/search
+- type: customapi
+  url: https://repo-piveau.greendatai.ari-energy.eu/catalogues
+- type: customapi
+  url: https://repo-piveau.greendatai.ari-energy.eu/datasets
+- type: ckan:package-search
+  url: https://search-piveau.greendatai.ari-energy.eu/ckan/package_search
+  version: '3'
+- type: docs
+  url: https://search-piveau.greendatai.ari-energy.eu/
+- type: docs
+  url: https://piveau.greendatai.ari-energy.eu/api/hub/search/
+id: piveaugreendataiarienergyeu
+langs:
+- id: EN
+  name: English
+link: https://piveau.greendatai.ari-energy.eu/
+name: GREEN.DAT.AI Data Catalogue
+owner:
+  link: https://greendatai.eu
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: GREEN.DAT.AI Consortium
+  type: Academy
+properties:
+  dataset_count_reported: 3
+  has_doi: false
+  is_national: false
+software:
+  id: piveau
+  name: Piveau
+status: active
+tags:
+- has_api
+- open data
+- energy
+- piveau
+- Horizon Europe
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00043335

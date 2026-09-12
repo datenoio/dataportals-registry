@@ -70,6 +70,12 @@ endpoints:
 - type: wms-c111
   url: https://lsc-hub.eiar.gov.et/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://lsc-hub.eiar.gov.et/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://lsc-hub.eiar.gov.et/catalogue/opensearch
+  version: '1.1'
 id: lschubeiargovet
 link: https://lsc-hub.eiar.gov.et
 name: The Land, Soil and Crop (LSC) hub

@@ -1,0 +1,89 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: MY-04
+      name: Melaka
+description: SuperMap iPortal for Majlis Bandaraya Melaka Bersejarah SmartMap, listing
+  maps, GIS services, and datasets for Melaka Historic City Council.
+endpoints:
+- type: supermapiportal:web
+  url: https://mbmbsmap.map2u.com.my/iportal/web.rjson
+- type: supermapiportal:maps
+  url: https://mbmbsmap.map2u.com.my/iportal/web/maps.json
+- type: supermapiportal:services
+  url: https://mbmbsmap.map2u.com.my/iportal/web/services.json
+- type: supermapiportal:datas
+  url: https://mbmbsmap.map2u.com.my/iportal/web/datas.json
+- type: supermap:services
+  url: https://mbmbsmap.map2u.com.my/iserver/services.json
+id: mbmbsmapmap2ucommy
+langs:
+- id: MS
+  name: Malay
+- id: EN
+  name: English
+link: https://mbmbsmap.map2u.com.my/iportal
+name: MBMB SmartMap SuperMap iPortal
+owner:
+  link: https://www.mbmb.gov.my/
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 30
+    subregion:
+      id: MY-04
+      name: Melaka
+  name: Majlis Bandaraya Melaka Bersejarah
+  type: Local government
+properties:
+  dataset_count_reported: 9
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: supermapiportal
+  name: SuperMap iPortal
+status: active
+tags:
+- SuperMap
+- iPortal
+- geospatial
+- government
+- Melaka
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043577

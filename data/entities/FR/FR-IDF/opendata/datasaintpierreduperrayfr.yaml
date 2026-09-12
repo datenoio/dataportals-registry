@@ -23,6 +23,15 @@ endpoints:
   url: https://data.saint-pierre-du-perray.fr/api
 - type: sitemap
   url: https://data.saint-pierre-du-perray.fr/sitemap.xml
+- type: dcat:xml
+  url: https://data.saint-pierre-du-perray.fr/api/explore/v2.1/catalog/exports/dcat
+- type: opendatasoftapi
+  url: https://data.saint-pierre-du-perray.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.saint-pierre-du-perray.fr/api/v2/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.saint-pierre-du-perray.fr/data.json
 id: datasaintpierreduperrayfr
 langs:
 - id: FR

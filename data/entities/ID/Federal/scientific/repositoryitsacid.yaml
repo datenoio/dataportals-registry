@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: ITS Repository is a scientific data repository operated by Institut
-  Teknologi Sepuluh Nopember running on EPrints.
+description: ITS Repository is a scientific data repository operated by Institut Teknologi
+  Sepuluh Nopember running on EPrints.
 endpoints:
 - type: oaipmh20
   url: https://repository.its.ac.id/cgi/oai2?verb=Identify
@@ -25,6 +25,8 @@ endpoints:
   version: '2.0'
 - type: atom
   url: https://repository.its.ac.id/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://repository.its.ac.id/rest/eprint
 id: repositoryitsacid
 langs:
 - id: ID

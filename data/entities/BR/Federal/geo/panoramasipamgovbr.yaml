@@ -36,6 +36,10 @@ endpoints:
 - type: oaipmh20
   url: https://panorama.sipam.gov.br/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: dcat:xml
+  url: https://panorama.sipam.gov.br/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://panorama.sipam.gov.br/geonetwork/srv/api/site
 id: panoramasipamgovbr
 langs:
 - id: PT

@@ -73,6 +73,12 @@ endpoints:
 - type: wms-c111
   url: https://geoportale.cittametropolitana.rc.it/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://geoportale.cittametropolitana.rc.it/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geoportale.cittametropolitana.rc.it/catalogue/opensearch
+  version: '1.1'
 id: geoportalecittametropolitanarcit
 langs:
 - id: IT

@@ -13,7 +13,7 @@ coverage:
       name: Aruba
     level: 20
     macroregion:
-      id: '029'
+      id: 029
       name: Caribbean
 description: Institutional DSpace 7.6 repository of the University of Aruba (UA Repository),
   collecting theses, articles, and other scholarly outputs from university faculties.
@@ -32,6 +32,9 @@ endpoints:
   url: https://repository.ua.aw/sitemap_index.xml
 - type: atom
   url: https://repository.ua.aw/server/opensearch/search?format=atom&query=*
+- type: oaipmh20
+  url: https://repository.ua.aw/oai/request?verb=Identify
+  version: '2.0'
 id: repositoryuaaw
 langs:
 - id: EN

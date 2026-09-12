@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: DSpace at IUCAA is a scientific data repository operated by
-  Inter-University Centre for Astronomy and Astrophysics running on DSpace.
+description: DSpace at IUCAA is a scientific data repository operated by Inter-University
+  Centre for Astronomy and Astrophysics running on DSpace.
 endpoints:
 - type: dspace
   url: https://dspace.iucaa.in/server/api
@@ -25,6 +25,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://dspace.iucaa.in/sitemap_index.xml
+- type: oaipmh20
+  url: https://dspace.iucaa.in/server/oai/request?verb=Identify
+  version: '2.0'
 id: dspaceiucaain
 langs:
 - id: EN

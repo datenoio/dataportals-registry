@@ -23,6 +23,9 @@ description: UltraViolet is a repository built on InvenioRDM for NYU Libraries c
 endpoints:
 - type: inveniordmapi:records
   url: https://ultraviolet.library.nyu.edu/api/records
+- type: oaipmh20
+  url: https://ultraviolet.library.nyu.edu/oai2d?verb=Identify
+  version: '2.0'
 id: ultravioletlibrarynyuedu
 identifiers:
 - id: datacite

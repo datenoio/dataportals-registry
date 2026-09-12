@@ -34,6 +34,10 @@ endpoints:
   version: '2.0'
 - type: opensearch
   url: https://aplicaciones.siatac.co/portal.opensearch
+- type: dcat:xml
+  url: https://aplicaciones.siatac.co/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://aplicaciones.siatac.co/geonetwork/srv/api/site
 id: aplicacionessiatacco
 langs:
 - id: ES

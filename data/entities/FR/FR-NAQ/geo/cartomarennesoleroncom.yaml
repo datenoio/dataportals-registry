@@ -38,6 +38,10 @@ endpoints:
 - type: oaipmh20
   url: https://carto.marennes-oleron.com/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: dcat:xml
+  url: https://carto.marennes-oleron.com/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://carto.marennes-oleron.com/geonetwork/srv/api/site
 id: cartomarennesoleroncom
 langs:
 - id: FR

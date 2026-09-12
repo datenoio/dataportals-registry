@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: MKDC GeoNetwork metadata catalog is a Geoportal operated by Ministry
+  of Natural Resources and Environment, built with GeoNetwork.
+endpoints:
+- type: csw202
+  url: https://metadata.mkdc.vn/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:site
+  url: https://metadata.mkdc.vn/geonetwork/srv/api/site
+- type: geonetwork:query
+  url: https://metadata.mkdc.vn/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://metadata.mkdc.vn/geonetwork/srv/api/records
+- type: openapi
+  url: https://metadata.mkdc.vn/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: opensearch
+  url: https://metadata.mkdc.vn/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://metadata.mkdc.vn/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: dcat:xml
+  url: https://metadata.mkdc.vn/geonetwork/srv/api/records?accept=application/rdf+xml
+id: metadatamkdcvn
+langs:
+- id: VN
+  name: Vietnamese
+link: https://metadata.mkdc.vn/geonetwork
+name: MKDC GeoNetwork metadata catalog
+owner:
+  link: https://monre.gov.vn
+  location:
+    country:
+      id: VN
+      name: Vietnam
+  name: Ministry of Natural Resources and Environment
+  type: Central government
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- government
+- geonetwork
+- has_api
+- environment
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00043797

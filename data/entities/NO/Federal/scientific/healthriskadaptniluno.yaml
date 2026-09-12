@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Project THREDDS catalog for HealthRiskAdapt air-quality and climate datasets
+  hosted by NILU.
+endpoints:
+- type: thredds:catalog
+  url: https://healthriskadapt.nilu.no/thredds/catalog.xml
+id: healthriskadaptniluno
+langs:
+- id: EN
+  name: English
+- id: 'NO'
+  name: Norwegian
+link: https://healthriskadapt.nilu.no/thredds/catalog.html
+name: HealthRiskAdapt THREDDS Data Server
+owner:
+  link: https://nilu.com/
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: NILU
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- THREDDS
+- air quality
+- scientific
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00042350

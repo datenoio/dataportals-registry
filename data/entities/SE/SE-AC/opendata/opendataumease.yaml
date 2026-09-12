@@ -24,6 +24,15 @@ endpoints:
   url: https://opendata.umea.se/api
 - type: sitemap
   url: https://opendata.umea.se/sitemap.xml
+- type: opendatasoftapi
+  url: https://opendata.umea.se/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://opendata.umea.se/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://opendata.umea.se/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://opendata.umea.se/data.json
 id: opendataumease
 identifiers:
 - id: wikidata

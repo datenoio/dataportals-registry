@@ -18,10 +18,19 @@ coverage:
     subregion:
       id: CA-ON
       name: Ontario
-description: This website provides access to published open map data from the City of Cambridge.
+description: This website provides access to published open map data from the City
+  of Cambridge.
 endpoints:
 - type: ogcrecordsapi
   url: https://geohub.cambridge.ca/api/search/v1
+- type: dcatap201
+  url: https://geohub.cambridge.ca/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://geohub.cambridge.ca/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://geohub.cambridge.ca/api/feed/rss/2.0
+- type: dcatus11
+  url: https://geohub.cambridge.ca/data.json
 id: geohubcambridgeca
 identifiers:
 - id: openaire

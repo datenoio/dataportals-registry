@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 20
+    macroregion:
+      id: '143'
+      name: Central Asia
+description: Public ArcGIS Enterprise portal for viewing geological data, maps and
+  modelling results produced by the Kazakhstan Minerals.AI research project.
+endpoints:
+- type: arcgis:portals:self
+  url: https://mineral-ai.kz/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:search
+  url: https://mineral-ai.kz/portal/sharing/rest/search
+- type: arcgis:rest:services
+  url: https://mineral-ai.kz/server/rest/services?f=pjson
+id: mineralaikz
+langs:
+- id: RU
+  name: Russian
+- id: KZ
+  name: Kazakh
+link: https://mineral-ai.kz/portal/home/
+name: Minerals.AI ArcGIS Enterprise Portal
+owner:
+  link: https://minerals-ai.kz/
+  location:
+    country:
+      id: KZ
+      name: Kazakhstan
+  name: Minerals.AI Project
+  type: Academy
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- geology
+topics:
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00042597

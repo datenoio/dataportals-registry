@@ -22,6 +22,14 @@ description: Repositorio de Activos Digitales del IAPH is a DSpace repository li
 endpoints:
 - type: dspace:catalog
   url: https://repositorio.iaph.es
+- type: rss
+  url: https://repositorio.iaph.es/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repositorio.iaph.es/feed/atom_1.0/site
+  version: '1.0'
+- type: sitemap
+  url: https://repositorio.iaph.es/sitemap_index.xml
 id: repositorioiaphes
 identifiers:
 - id: re3data

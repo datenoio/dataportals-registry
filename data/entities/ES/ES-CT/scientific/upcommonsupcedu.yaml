@@ -37,6 +37,14 @@ endpoints:
   url: https://upcommons.upc.edu/htmlmap
 - type: opensearch
   url: http://upcommons.upc.edu:80/open-search/description.xml
+- type: dspace
+  url: https://upcommons.upc.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://upcommons.upc.edu/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://upcommons.upc.edu/sitemap_index.xml
 id: upcommonsupcedu
 langs:
 - id: EN

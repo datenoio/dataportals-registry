@@ -24,6 +24,16 @@ endpoints:
 - type: ckan
   url: https://saritamura.murungrayakab.go.id/api/3
   version: '3'
+- type: ckan:package-search
+  url: https://saritamura.murungrayakab.go.id/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://saritamura.murungrayakab.go.id/api/3/action/package_list
+  version: '3'
+- type: dcat:ttl
+  url: https://saritamura.murungrayakab.go.id/catalog.ttl
+- type: dcat:jsonld
+  url: https://saritamura.murungrayakab.go.id/catalog.jsonld
 id: saritamuramurungrayakabgoid
 langs:
 - id: ID

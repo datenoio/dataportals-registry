@@ -23,6 +23,13 @@ endpoints:
 - type: csw202
   url: https://geonetwork.grenoblealpesmetropole.fr/geonetwork/srv/fre/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
+- type: geonetwork:site
+  url: https://geonetwork.grenoblealpesmetropole.fr/geonetwork/srv/api/site
+- type: csw202
+  url: https://geonetwork.grenoblealpesmetropole.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:selections
+  url: https://geonetwork.grenoblealpesmetropole.fr/geonetwork/srv/api/selections
 id: geonetworkgrenoblealpesmetropolefr
 langs:
 - id: FR

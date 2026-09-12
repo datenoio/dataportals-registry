@@ -28,6 +28,14 @@ endpoints:
 - type: oaipmh20
   url: https://metadatosgeograficos.sernanp.gob.pe/metadatos/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: openapi
+  url: https://metadatosgeograficos.sernanp.gob.pe/metadatos/srv/v2/api-docs
+  version: '2'
+- type: opensearch
+  url: https://metadatosgeograficos.sernanp.gob.pe/metadatos/srv/eng/portal.opensearch
+  version: '1.0'
+- type: geonetwork:site
+  url: https://metadatosgeograficos.sernanp.gob.pe/metadatos/srv/api/site
 id: metadatosgeograficossernanpgobpe
 langs:
 - id: ES

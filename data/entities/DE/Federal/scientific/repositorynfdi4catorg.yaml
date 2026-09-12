@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -38,8 +38,8 @@ owner:
   name: NFDI4Cat
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: dataverse
+  name: Dataverse
 status: active
 tags:
 - scientific
@@ -54,3 +54,11 @@ topics:
   name: Energy
   type: eudatatheme
 uid: cdi00029619
+endpoints:
+- type: dataverseapi
+  url: https://repository.nfdi4cat.org/api/search
+- type: oaipmh20
+  url: https://repository.nfdi4cat.org/oai?verb=Identify
+  version: '2.0'
+- type: dataverseapi
+  url: https://repository.nfdi4cat.org/api/info/version

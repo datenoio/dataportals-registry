@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: LU Faculty SHARE (Scholarship Hub & Research Exchange) is a Scientific
+  data repository operated by LU Faculty SHARE (Scholarship Hub & Research Exchange).
+id: facultysharelibertyedu
+langs:
+- id: EN
+  name: English
+link: https://facultyshare.liberty.edu
+name: LU Faculty SHARE (Scholarship Hub & Research Exchange)
+owner:
+  link: https://facultyshare.liberty.edu
+  location:
+    country:
+      id: US
+      name: United States
+  name: LU Faculty SHARE (Scholarship Hub & Research Exchange)
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042511
+endpoints:
+- type: oaipmh20
+  url: https://facultyshare.liberty.edu/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://facultyshare.liberty.edu/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://facultyshare.liberty.edu/sitemap/datasets.xml

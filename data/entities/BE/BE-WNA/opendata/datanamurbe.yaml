@@ -24,6 +24,13 @@ endpoints:
   url: https://data.namur.be/api
 - type: sitemap
   url: https://data.namur.be/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.namur.be/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.namur.be/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.namur.be/api/explore/v2.1/catalog/exports/dcat
 id: datanamurbe
 langs:
 - id: FR

@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: ES-PV
+      name: Euskal Herria
+description: Lizmap Beterri-Buruntza is a Geoportal operated by Beterri-Buruntza,
+  built with Lizmap.
+id: beterriburuntzagislaneus
+langs:
+- id: ES
+  name: Spanish
+link: https://beterri-buruntza.gislan.eus/
+name: Lizmap Beterri-Buruntza
+owner:
+  link: https://beterri-buruntza.gislan.eus/
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-PV
+      name: Euskal Herria
+  name: Beterri-Buruntza
+  type: Local government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- lizmap
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043130
+endpoints:
+- type: lizmap:service
+  url: https://beterri-buruntza.gislan.eus/index.php/lizmap/service/?repository=beterriburuntza&project=datuak_georref
+- type: wms130
+  url: https://beterri-buruntza.gislan.eus/index.php/lizmap/service/?repository=beterriburuntza&project=datuak_georref&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0

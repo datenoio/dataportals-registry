@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Technical University of Kenya Institutional Repository is a scientific data
-  repository operated by Technical University of Kenya running on DSpace.
+description: Technical University of Kenya Institutional Repository is a scientific
+  data repository operated by Technical University of Kenya running on DSpace.
 endpoints:
 - type: dspace
   url: https://repository.tukenya.ac.ke/server/api
@@ -26,6 +26,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://repository.tukenya.ac.ke/sitemap_index.xml
+- type: oaipmh20
+  url: https://repository.tukenya.ac.ke/server/oai/request?verb=Identify
+  version: '2.0'
 id: repositorytukenyaacke
 langs:
 - id: EN

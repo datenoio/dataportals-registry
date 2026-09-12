@@ -25,6 +25,15 @@ endpoints:
   url: https://data.carync.gov/api
 - type: sitemap
   url: https://data.carync.gov/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.carync.gov/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.carync.gov/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.carync.gov/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.carync.gov/data.json
 id: datacaryncgov
 langs:
 - id: EN

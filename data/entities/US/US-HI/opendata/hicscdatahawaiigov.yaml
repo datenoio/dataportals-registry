@@ -24,6 +24,12 @@ endpoints:
   url: https://hicscdata.hawaii.gov/data.json
 - type: socrata:views
   url: https://hicscdata.hawaii.gov/api/views
+- type: socrata:catalog
+  url: https://hicscdata.hawaii.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://hicscdata.hawaii.gov/opensearch.xml
+  version: '1.1'
 id: hicscdatahawaiigov
 langs:
 - id: EN

@@ -23,6 +23,15 @@ endpoints:
   url: https://opendata.comune.bologna.it/api
 - type: sitemap
   url: https://opendata.comune.bologna.it/sitemap.xml
+- type: opendatasoftapi
+  url: https://opendata.comune.bologna.it/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://opendata.comune.bologna.it/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://opendata.comune.bologna.it/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://opendata.comune.bologna.it/data.json
 id: opendatacomunebolognait
 langs:
 - id: IT

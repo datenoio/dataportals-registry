@@ -14,12 +14,18 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Repositorio Institucional CIAD. Institutional repository operated by Centro de
-  Investigación en Alimentación y Desarrollo (CIAD).
+description: Repositorio Institucional CIAD. Institutional repository operated by
+  Centro de Investigación en Alimentación y Desarrollo (CIAD).
 endpoints:
 - type: oaipmh20
   url: https://ciad.repositorioinstitucional.mx/oai/request?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://ciad.repositorioinstitucional.mx/jspui/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://ciad.repositorioinstitucional.mx/jspui/feed/atom_1.0/site
+  version: '1.0'
 id: ciadrepositorioinstitucionalmx
 langs:
 - id: ES

@@ -13,7 +13,7 @@ coverage:
       name: Republica Dominicana
     level: 20
     macroregion:
-      id: '029'
+      id: 029
       name: Caribbean
 description: GeoNode platform of SINI (Sistema de Información Nacional) with datasets,
   documents, maps, GeoStories and dashboards for the Dominican Republic.
@@ -77,6 +77,12 @@ endpoints:
   url: https://plataforma.sini.gob.do/geoserver/rest/settings
 - type: geoserver:layers
   url: https://plataforma.sini.gob.do/geoserver/rest/layers
+- type: geonode:datasets
+  url: https://plataforma.sini.gob.do/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://plataforma.sini.gob.do/catalogue/opensearch
+  version: '1.1'
 id: plataformasinigobdo
 langs:
 - id: ES

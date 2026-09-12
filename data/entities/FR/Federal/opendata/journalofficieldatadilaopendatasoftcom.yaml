@@ -14,13 +14,22 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Open data catalog of Journal officiel datasets published by DILA, the French
-  government directorate for legal and administrative information.
+description: Open data catalog of Journal officiel datasets published by DILA, the
+  French government directorate for legal and administrative information.
 endpoints:
 - type: opendatasoft
   url: https://journal-officiel-datadila.opendatasoft.com/api
 - type: sitemap
   url: https://journal-officiel-datadila.opendatasoft.com/sitemap.xml
+- type: opendatasoftapi
+  url: https://journal-officiel-datadila.opendatasoft.com/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://journal-officiel-datadila.opendatasoft.com/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://journal-officiel-datadila.opendatasoft.com/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://journal-officiel-datadila.opendatasoft.com/data.json
 id: journalofficieldatadilaopendatasoftcom
 langs:
 - id: FR

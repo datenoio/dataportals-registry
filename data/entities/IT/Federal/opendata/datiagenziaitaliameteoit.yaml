@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Agenzia ItaliaMeteo Catalogo Open Data is an Open data portal operated
+  by Agenzia ItaliaMeteo, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://dati.agenziaitaliameteo.it/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dati.agenziaitaliameteo.it/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dati.agenziaitaliameteo.it/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://dati.agenziaitaliameteo.it/catalog.n3
+- type: dcat:ttl
+  url: https://dati.agenziaitaliameteo.it/catalog.ttl
+- type: dcat:xml
+  url: https://dati.agenziaitaliameteo.it/catalog.xml
+- type: dcat:jsonld
+  url: https://dati.agenziaitaliameteo.it/catalog.jsonld
+- type: dcat
+  url: https://dati.agenziaitaliameteo.it/catalog.rdf
+id: datiagenziaitaliameteoit
+langs:
+- id: IT
+  name: Italian
+link: https://dati.agenziaitaliameteo.it
+name: Agenzia ItaliaMeteo Catalogo Open Data
+owner:
+  link: https://www.agenziaitaliameteo.it
+  location:
+    country:
+      id: IT
+      name: Italy
+  name: Agenzia ItaliaMeteo
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- ckan
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043499

@@ -55,3 +55,9 @@ uid: cdi00026957
 endpoints:
 - type: api
   url: https://dados.unb.br/api/3/action/package_search
+- type: ckan
+  url: https://dados.unb.br/api/3
+  version: '3'
+- type: ckan:package-list
+  url: https://dados.unb.br/api/3/action/package_list
+  version: '3'

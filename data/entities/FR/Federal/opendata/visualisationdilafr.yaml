@@ -19,6 +19,15 @@ description: Data catalog presenting visualizations and public datasets from var
 endpoints:
 - type: opendatasoft
   url: https://visualisation.dila.fr/api
+- type: opendatasoftapi
+  url: https://visualisation.dila.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://visualisation.dila.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://visualisation.dila.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://visualisation.dila.fr/data.json
 id: visualisationdilafr
 langs:
 - id: FR

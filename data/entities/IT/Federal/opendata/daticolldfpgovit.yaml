@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Open Data Ministro per la Pubblica Amministrazione is an Open data portal
+  operated by Dipartimento della Funzione Pubblica, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://dati-coll.dfp.gov.it/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dati-coll.dfp.gov.it/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dati-coll.dfp.gov.it/api/3/action/package_list
+  version: '3'
+id: daticolldfpgovit
+langs:
+- id: IT
+  name: Italian
+link: https://dati-coll.dfp.gov.it
+name: Open Data Ministro per la Pubblica Amministrazione
+owner:
+  link: https://www.funzionepubblica.gov.it
+  location:
+    country:
+      id: IT
+      name: Italy
+  name: Dipartimento della Funzione Pubblica
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- ckan
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043500

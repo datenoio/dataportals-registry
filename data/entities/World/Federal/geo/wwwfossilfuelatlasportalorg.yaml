@@ -65,6 +65,17 @@ endpoints:
 - type: wms-c111
   url: https://www.fossilfuelatlasportal.org/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:documents
+  url: https://www.fossilfuelatlasportal.org/api/documents/
+- type: csw202
+  url: https://www.fossilfuelatlasportal.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: geonode:datasets
+  url: https://www.fossilfuelatlasportal.org/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://www.fossilfuelatlasportal.org/catalogue/opensearch
+  version: '1.1'
 id: wwwfossilfuelatlasportalorg
 langs:
 - id: EN

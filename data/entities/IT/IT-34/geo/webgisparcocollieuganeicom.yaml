@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: IT-34
+      name: Veneto
+description: WebGIS Parco Regionale dei Colli Euganei is a Geoportal operated by Parco
+  Regionale dei Colli Euganei, built with Lizmap.
+id: webgisparcocollieuganeicom
+langs:
+- id: IT
+  name: Italian
+link: https://webgis.parcocollieuganei.com/
+name: WebGIS Parco Regionale dei Colli Euganei
+owner:
+  link: https://www.parcocollieuganei.com
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-34
+      name: Veneto
+  name: Parco Regionale dei Colli Euganei
+  type: Regional government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- lizmap
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043490
+endpoints:
+- type: lizmap:service
+  url: https://webgis.parcocollieuganei.com/index.php/lizmap/service/?repository=collieuganei&project=Colli_Euganei_Map
+- type: wms130
+  url: https://webgis.parcocollieuganei.com/index.php/lizmap/service/?repository=collieuganei&project=Colli_Euganei_Map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0

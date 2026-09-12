@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -61,3 +61,6 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi99991915
+endpoints:
+- type: swing:databank
+  url: https://parkstad.incijfers.nl/databank

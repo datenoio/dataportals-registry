@@ -29,6 +29,15 @@ endpoints:
   version: '2.0'
 - type: opensearch
   url: https://metadados-ingt.gov.cv/geonetwork/srv/eng/portal.opensearch
+- type: openapi
+  url: https://metadados-ingt.gov.cv/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: geonetwork:records
+  url: https://metadados-ingt.gov.cv/geonetwork/srv/api/records
+- type: dcat:xml
+  url: https://metadados-ingt.gov.cv/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://metadados-ingt.gov.cv/geonetwork/srv/api/site
 id: metadadosingtgovcv
 langs:
 - id: PT

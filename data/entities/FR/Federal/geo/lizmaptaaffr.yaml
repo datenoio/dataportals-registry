@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Serveur cartographique des TAAF is a Geoportal operated by Terres australes
+  et antarctiques françaises, built with Lizmap.
+id: lizmaptaaffr
+langs:
+- id: FR
+  name: French
+link: https://lizmap.taaf.fr/
+name: Serveur cartographique des TAAF
+owner:
+  link: https://taaf.fr
+  location:
+    country:
+      id: FR
+      name: France
+  name: Terres australes et antarctiques françaises
+  type: Central government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- lizmap
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043272
+endpoints:
+- type: lizmap:service
+  url: https://lizmap.taaf.fr/index.php/lizmap/service/?repository=delizmappublic&project=Amsterdam_lizmap
+- type: wms130
+  url: https://lizmap.taaf.fr/index.php/lizmap/service/?repository=delizmappublic&project=Amsterdam_lizmap&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0

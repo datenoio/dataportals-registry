@@ -28,6 +28,16 @@ endpoints:
 - type: ckan:package-list
   url: https://ckan.issi.gov.cz/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://ckan.issi.gov.cz/catalog.n3
+- type: dcat:ttl
+  url: https://ckan.issi.gov.cz/catalog.ttl
+- type: dcat:xml
+  url: https://ckan.issi.gov.cz/catalog.xml
+- type: dcat:jsonld
+  url: https://ckan.issi.gov.cz/catalog.jsonld
+- type: dcat
+  url: https://ckan.issi.gov.cz/catalog.rdf
 id: ckanissigovcz
 langs:
 - id: CS

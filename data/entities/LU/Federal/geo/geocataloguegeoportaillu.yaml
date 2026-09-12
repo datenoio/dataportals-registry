@@ -16,8 +16,8 @@ coverage:
       id: '155'
       name: Western Europe
 description: Official GeoNetwork catalogue of Geoportail Luxembourg (geoportail.lu),
-  describing geographic products and INSPIRE-compliant datasets from ministries,
-  administrations, and public-sector bodies.
+  describing geographic products and INSPIRE-compliant datasets from ministries, administrations,
+  and public-sector bodies.
 endpoints:
 - type: geonetwork:query
   url: https://geocatalogue.geoportail.lu/geonetwork/srv/eng/q
@@ -30,6 +30,10 @@ endpoints:
 - type: oaipmh20
   url: https://geocatalogue.geoportail.lu/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:selections
+  url: https://geocatalogue.geoportail.lu/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://geocatalogue.geoportail.lu/geonetwork/srv/api/site
 id: geocataloguegeoportaillu
 langs:
 - id: FR

@@ -23,6 +23,12 @@ endpoints:
   url: https://www.datahub.va.gov/api/views
 - type: sitemap
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-www.datahub.va.gov.xml
+- type: socrata:catalog
+  url: https://www.datahub.va.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://www.datahub.va.gov/opensearch.xml
+  version: '1.1'
 id: wwwdatahubvagov
 langs:
 - id: EN

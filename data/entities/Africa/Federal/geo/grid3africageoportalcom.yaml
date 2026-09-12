@@ -15,9 +15,10 @@ coverage:
     macroregion:
       id: '002'
       name: Africa
-description: GRID3 (Geo-Referenced Infrastructure and Demographic Data for Development) hub
-  on the Africa GeoPortal. Publishes geo-referenced population, settlement, and infrastructure
-  layers used for development and humanitarian applications across Africa.
+description: GRID3 (Geo-Referenced Infrastructure and Demographic Data for Development)
+  hub on the Africa GeoPortal. Publishes geo-referenced population, settlement, and
+  infrastructure layers used for development and humanitarian applications across
+  Africa.
 endpoints:
 - type: dcatap201
   url: https://grid3.africageoportal.com/api/feed/dcat-ap/2.0.1.json
@@ -29,6 +30,8 @@ endpoints:
   url: https://grid3.africageoportal.com/api/search/v1
 - type: sitemap
   url: https://grid3.africageoportal.com/sitemap.xml
+- type: dcatus11
+  url: https://grid3.africageoportal.com/data.json
 id: grid3africageoportalcom
 langs:
 - id: EN

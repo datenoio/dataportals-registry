@@ -47,6 +47,29 @@ endpoints:
 - type: wps100
   url: https://geonode.dpc.neuquen.gov.ar/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:documents
+  url: https://geonode.dpc.neuquen.gov.ar/api/documents/
+- type: csw202
+  url: https://geonode.dpc.neuquen.gov.ar/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geonode.dpc.neuquen.gov.ar/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geonode.dpc.neuquen.gov.ar/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wcs111
+  url: https://geonode.dpc.neuquen.gov.ar/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: geonode:datasets
+  url: https://geonode.dpc.neuquen.gov.ar/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geonode.dpc.neuquen.gov.ar/catalogue/opensearch
+  version: '1.1'
+- type: wfs110
+  url: https://geonode.dpc.neuquen.gov.ar/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
 id: geonodedpcneuquengovar
 langs:
 - id: ES

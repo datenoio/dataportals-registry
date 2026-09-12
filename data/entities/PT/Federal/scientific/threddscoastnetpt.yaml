@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: THREDDS catalog of Portuguese COASTNET coastal ocean satellite SST and
+  chlorophyll datasets.
+endpoints:
+- type: thredds:catalog
+  url: https://thredds.coastnet.pt/thredds/catalog.xml
+- type: thredds:info
+  url: https://thredds.coastnet.pt/thredds/info/serverInfo.xml
+id: threddscoastnetpt
+langs:
+- id: EN
+  name: English
+- id: PT
+  name: Portuguese
+link: https://thredds.coastnet.pt/thredds/catalog.html
+name: COASTNET THREDDS Data Server
+owner:
+  link: https://coastnet.pt/
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: COASTNET
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- THREDDS
+- ocean
+- COASTNET
+- scientific
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00042355

@@ -24,6 +24,15 @@ endpoints:
 - type: oaipmh20
   url: https://repositori.udl.cat/oai/request?verb=Identify
   version: '2.0'
+- type: dspace
+  url: https://repositori.udl.cat/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repositori.udl.cat/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://repositori.udl.cat/server/oai/request?verb=Identify
+  version: '2.0'
 id: repositoriudlcat
 langs:
 - id: ES

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: World
 description: Open NMR database of organic compounds with assigned chemical shifts
   and spectra.
+endpoints:
+- type: docs
+  url: https://nmrshiftdb.nmr.uni-koeln.de/api-docs/
 id: nmrshiftdbnmrunikoelnde
 langs:
 - id: EN
@@ -34,8 +37,8 @@ owner:
   name: University of Cologne
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: nmrshiftdb2
+  name: NMRShiftDB2
 status: active
 tags:
 - chemistry

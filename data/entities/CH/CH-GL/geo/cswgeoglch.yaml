@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: CH-GL
+      name: Glarus
+description: pycsw CSW geospatial metadata catalogue of the Canton of Glarus (geo.gl.ch),
+  distinct from the QWC2 map viewer.
+endpoints:
+- type: ogcrecords
+  url: https://csw.geo.gl.ch/collections?f=json
+  version: '1.0'
+- type: oaipmh20
+  url: https://csw.geo.gl.ch/oaipmh
+  version: '2.0'
+- type: csw202
+  url: https://csw.geo.gl.ch/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: csw300
+  url: https://csw.geo.gl.ch/csw
+  version: 3.0.0
+- type: openapi
+  url: https://csw.geo.gl.ch/openapi?f=json
+- type: opensearch
+  url: https://csw.geo.gl.ch/opensearch
+  version: '1.0'
+- type: sru
+  url: https://csw.geo.gl.ch/sru
+  version: '1.0'
+id: cswgeoglch
+langs:
+- id: DE
+  name: German
+link: https://csw.geo.gl.ch
+name: Canton of Glarus Geospatial Catalogue
+owner:
+  link: https://www.gl.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-GL
+      name: Glarus
+  name: Kanton Glarus
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: pycsw
+  name: pycsw
+status: active
+tags:
+- geospatial
+- metadata
+- pycsw
+- Canton Glarus
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00042903

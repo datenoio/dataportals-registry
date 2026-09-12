@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: CKAN open data portal of Lithuanian public-finance datasets operated with the Ministry of
-  Finance.
+description: CKAN open data portal of Lithuanian public-finance datasets operated
+  with the Ministry of Finance.
 endpoints:
 - type: ckan
   url: https://rinkiniai.lietuvosfinansai.lt/api/3
@@ -34,6 +34,8 @@ endpoints:
   url: https://rinkiniai.lietuvosfinansai.lt/catalog.xml
 - type: dcat:jsonld
   url: https://rinkiniai.lietuvosfinansai.lt/catalog.jsonld
+- type: dcat
+  url: https://rinkiniai.lietuvosfinansai.lt/catalog.rdf
 id: rinkiniailietuvosfinansailt
 langs:
 - id: LT

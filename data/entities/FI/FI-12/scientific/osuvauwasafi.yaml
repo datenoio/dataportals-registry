@@ -21,6 +21,14 @@ description: Open publication repository of the University of Vaasa.
 endpoints:
 - type: dspace:catalog
   url: https://osuva.uwasa.fi
+- type: dspace
+  url: https://osuva.uwasa.fi/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://osuva.uwasa.fi/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://osuva.uwasa.fi/sitemap_index.xml
 id: osuvauwasafi
 langs:
 - id: FI

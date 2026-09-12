@@ -74,6 +74,12 @@ endpoints:
   url: https://geonode.senasa.gob.ar/geoserver/rest/layers
 - type: sitemap
   url: https://geonode.senasa.gob.ar/sitemap.xml
+- type: geonode:datasets
+  url: https://geonode.senasa.gob.ar/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geonode.senasa.gob.ar/catalogue/opensearch
+  version: '1.1'
 id: geonodesenasagobar
 langs:
 - id: ES

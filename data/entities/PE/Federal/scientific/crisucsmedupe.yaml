@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: UCSM is a Scientific data repository operated by UCSM.
+id: crisucsmedupe
+langs:
+- id: ES
+  name: Spanish
+link: https://cris.ucsm.edu.pe
+name: UCSM Research Information System
+owner:
+  link: https://cris.ucsm.edu.pe
+  location:
+    country:
+      id: PE
+      name: Peru
+  name: UCSM
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042445
+endpoints:
+- type: oaipmh20
+  url: https://cris.ucsm.edu.pe/ws/oai?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://cris.ucsm.edu.pe/sitemap/datasets.xml

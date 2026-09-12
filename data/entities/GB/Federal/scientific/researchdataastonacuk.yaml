@@ -39,6 +39,11 @@ endpoints:
   url: https://researchdata.aston.ac.uk/id/contents
 - type: opensearch
   url: http://researchdata.aston.ac.uk:443/cgi/opensearchdescription
+- type: eprints:datasets
+  url: https://researchdata.aston.ac.uk/cgi/exportview/type/dataset/JSON/dataset.js
+- type: opensearch
+  url: https://researchdata.aston.ac.uk/cgi/opensearchdescription
+  version: '1.1'
 id: researchdataastonacuk
 langs:
 - id: EN

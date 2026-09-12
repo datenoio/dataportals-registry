@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Royal Military Academy is a Scientific data repository operated by Royal
+  Military Academy.
+id: researchportalrmaacbe
+langs:
+- id: FR
+  name: French
+- id: NL
+  name: Dutch
+link: https://researchportal.rma.ac.be
+name: Royal Military Academy
+owner:
+  link: https://researchportal.rma.ac.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+  name: Royal Military Academy
+  type: Central government
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042706
+endpoints:
+- type: oaipmh20
+  url: https://researchportal.rma.ac.be/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://researchportal.rma.ac.be/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://researchportal.rma.ac.be/sitemap/datasets.xml

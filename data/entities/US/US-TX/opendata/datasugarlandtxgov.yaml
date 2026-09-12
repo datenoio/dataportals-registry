@@ -29,6 +29,18 @@ endpoints:
 - type: ckan:package-list
   url: https://data.sugarlandtx.gov/api/3/action/package_list
   version: '3'
+- type: dcatus11
+  url: https://data.sugarlandtx.gov/data.json
+- type: dcat:n3
+  url: https://data.sugarlandtx.gov/catalog.n3
+- type: dcat:ttl
+  url: https://data.sugarlandtx.gov/catalog.ttl
+- type: dcat:xml
+  url: https://data.sugarlandtx.gov/catalog.xml
+- type: dcat:jsonld
+  url: https://data.sugarlandtx.gov/catalog.jsonld
+- type: dcat
+  url: https://data.sugarlandtx.gov/catalog.rdf
 id: datasugarlandtxgov
 langs:
 - id: EN

@@ -73,6 +73,12 @@ endpoints:
 - type: wps100
   url: https://siga.meioambiente.go.gov.br/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://siga.meioambiente.go.gov.br/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://siga.meioambiente.go.gov.br/catalogue/opensearch
+  version: '1.1'
 id: sigameioambientegogovbr
 langs:
 - id: PT

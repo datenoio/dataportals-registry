@@ -14,12 +14,14 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: University of Lagos institutional repository of theses, publications, and research
-  collections.
+description: University of Lagos institutional repository of theses, publications,
+  and research collections.
 endpoints:
 - type: oaipmh20
   url: https://ir.unilag.edu.ng/oai/request?verb=Identify
   version: '2.0'
+- type: sitemap
+  url: https://ir.unilag.edu.ng/sitemap_index.xml
 id: irunilagedung
 langs:
 - id: EN

@@ -23,6 +23,17 @@ description: DSpace research data catalogue of the University of Helsinki. It st
 endpoints:
 - type: dspace:catalog
   url: https://datakatalogi.helsinki.fi/
+- type: dspace
+  url: https://datakatalogi.helsinki.fi/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://datakatalogi.helsinki.fi/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://datakatalogi.helsinki.fi/sitemap_index.xml
+- type: oaipmh20
+  url: https://datakatalogi.helsinki.fi/server/oai/request?verb=Identify
+  version: '2.0'
 id: datakatalogihelsinkifi
 langs:
 - id: FI

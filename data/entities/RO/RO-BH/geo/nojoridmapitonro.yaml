@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: RO-BH
+      name: Bihor
+description: Municipal MapStore geoportal of Nojorid commune (Bihor County).
+endpoints:
+- type: mapstore:config
+  url: https://nojorid.mapiton.ro/mapstore/configs/localConfig.json
+id: nojoridmapitonro
+langs:
+- id: RO
+  name: Romanian
+link: https://nojorid.mapiton.ro/mapstore/
+name: Geoportal Comuna Nojorid
+owner:
+  link: https://www.primarianojorid.ro
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 30
+    subregion:
+      id: RO-BH
+      name: Bihor
+  name: Comuna Nojorid
+  type: Local government
+software:
+  id: mapstore
+  name: MapStore
+status: active
+tags:
+- geospatial
+- government
+- mapstore
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043643
+properties:
+  has_doi: false
+  is_national: false

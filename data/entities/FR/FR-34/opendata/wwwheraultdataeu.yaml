@@ -23,6 +23,15 @@ endpoints:
   url: https://www.herault-data.eu/api
 - type: sitemap
   url: https://www.herault-data.eu/sitemap.xml
+- type: opendatasoftapi
+  url: https://www.herault-data.eu/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://www.herault-data.eu/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://www.herault-data.eu/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://www.herault-data.eu/data.json
 id: wwwheraultdataeu
 langs:
 - id: FR

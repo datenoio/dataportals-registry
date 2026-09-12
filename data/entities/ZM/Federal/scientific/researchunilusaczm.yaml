@@ -19,6 +19,14 @@ description: University of Lusaka (UNILUS) DSpace institutional repository of th
 endpoints:
 - type: dspace:catalog
   url: https://research.unilus.ac.zm/
+- type: dspace
+  url: https://research.unilus.ac.zm/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://research.unilus.ac.zm/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://research.unilus.ac.zm/sitemap_index.xml
 id: researchunilusaczm
 langs:
 - id: EN

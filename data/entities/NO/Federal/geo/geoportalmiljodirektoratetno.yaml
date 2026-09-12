@@ -39,6 +39,28 @@ endpoints:
   url: https://geoportal.miljodirektoratet.no/geoportal/opensearch?f=csv&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
 - type: esrigeo:kml
   url: https://geoportal.miljodirektoratet.no/geoportal/opensearch?f=kml&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:geoportal
+  url: https://geoportal.miljodirektoratet.no/rest/geoportal
+- type: esrigeo:metadata:search
+  url: https://geoportal.miljodirektoratet.no/rest/metadata/search
+- type: csw202
+  url: https://geoportal.miljodirektoratet.no/csw
+  version: 3.0.0
+- type: csw202
+  url: https://geoportal.miljodirektoratet.no/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: atom
+  url: https://geoportal.miljodirektoratet.no/opensearch?f=atom&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:json
+  url: https://geoportal.miljodirektoratet.no/opensearch?f=json&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: rss
+  url: https://geoportal.miljodirektoratet.no/opensearch?f=rss&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: dcatus11
+  url: https://geoportal.miljodirektoratet.no/opensearch?f=dcat&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:csv
+  url: https://geoportal.miljodirektoratet.no/opensearch?f=csv&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:kml
+  url: https://geoportal.miljodirektoratet.no/opensearch?f=kml&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
 id: geoportalmiljodirektoratetno
 langs:
 - id: 'NO'

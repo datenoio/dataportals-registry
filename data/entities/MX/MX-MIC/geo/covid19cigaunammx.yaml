@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: MX-MIC
       name: Michoacán de Ocampo
-description: CIGA-UNAM geographic information platform on COVID-19 in Mexico, with municipal and state
-  indicators, maps, and related geospatial layers.
+description: CIGA-UNAM geographic information platform on COVID-19 in Mexico, with
+  municipal and state indicators, maps, and related geospatial layers.
 endpoints:
 - type: dcatap201
   url: https://covid19.ciga.unam.mx/api/feed/dcat-ap/2.0.1.json
@@ -31,6 +31,8 @@ endpoints:
   url: https://covid19.ciga.unam.mx/api/search/v1
 - type: sitemap
   url: https://covid19.ciga.unam.mx/sitemap.xml
+- type: dcatus11
+  url: https://covid19.ciga.unam.mx/data.json
 id: covid19cigaunammx
 langs:
 - id: ES

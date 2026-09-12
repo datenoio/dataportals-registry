@@ -24,6 +24,24 @@ endpoints:
 - type: oaipmh20
   url: https://api.bas.ac.uk/data/metadata/csw/v1?mode=oaipmh&verb=Identify
   version: '2.0'
+- type: oaipmh20
+  url: https://api.bas.ac.uk/data/metadata/csw/v1/oaipmh
+  version: '2.0'
+- type: csw202
+  url: https://api.bas.ac.uk/data/metadata/csw/v1/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://api.bas.ac.uk/data/metadata/csw/v1/opensearch
+  version: '1.0'
+- type: sru
+  url: https://api.bas.ac.uk/data/metadata/csw/v1/sru
+  version: '1.0'
+- type: oaipmh20
+  url: https://api.bas.ac.uk/data/metadata/csw/v1/?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: csw300
+  url: https://api.bas.ac.uk/data/metadata/csw/v1/csw
+  version: 3.0.0
 id: apibasacukdatametadatacsw
 langs:
 - id: EN

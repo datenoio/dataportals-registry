@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: VisitDenmark tourism StatBank (PxWeb SQL) hosted on Statistics Denmark's
+  StatBank platform, distinct from www.statbank.dk.
+endpoints:
+- type: pxweb:catalog
+  url: https://visitdenmark.statbank.dk/
+id: visitdenmarkstatbankdk
+langs:
+- id: DA
+  name: Danish
+- id: EN
+  name: English
+link: https://visitdenmark.statbank.dk/
+name: VisitDenmark StatBank
+owner:
+  link: https://www.visitdenmark.com
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+  name: VisitDenmark
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: pxweb
+  name: PxWeb
+status: active
+tags:
+- statistics
+- indicators
+- PxWeb
+- tourism
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043125

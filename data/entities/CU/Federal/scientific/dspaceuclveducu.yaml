@@ -13,7 +13,7 @@ coverage:
       name: Cuba
     level: 20
     macroregion:
-      id: '029'
+      id: 029
       name: Caribbean
 description: DSpace 9 institutional repository of Universidad Central "Marta Abreu"
   de Las Villas. Public catalog of theses and other research outputs, with a REST
@@ -25,6 +25,11 @@ endpoints:
 - type: oaipmh20
   url: https://dspace.uclv.edu.cu/server/oai/request?verb=Identify
   version: '2.0'
+- type: dspace:objects
+  url: https://dspace.uclv.edu.cu/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://dspace.uclv.edu.cu/sitemap_index.xml
 id: dspaceuclveducu
 langs:
 - id: ES

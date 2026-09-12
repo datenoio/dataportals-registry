@@ -12,7 +12,7 @@ coverage:
       name: Croatia
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: DABAR institutional repository with 2 Dataset/Research data records.
 id: repozitorijkbsplithr
@@ -55,5 +55,8 @@ endpoints:
   version: '2.0'
 - type: sitemap
   url: https://repozitorij.kbsplit.hr/sitemap.xml
+- type: oaipmh20
+  url: https://repozitorij.kbsplit.hr/oai?verb=Identify
+  version: '2.0'
 properties:
   is_national: false

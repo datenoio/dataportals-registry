@@ -24,6 +24,13 @@ endpoints:
   url: https://opendata.aveyron.fr/data.json
 - type: sitemap
   url: https://opendata.aveyron.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://opendata.aveyron.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://opendata.aveyron.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://opendata.aveyron.fr/api/explore/v2.1/catalog/exports/dcat
 id: opendataaveyronfr
 langs:
 - id: FR

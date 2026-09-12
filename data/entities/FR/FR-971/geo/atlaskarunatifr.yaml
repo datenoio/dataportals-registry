@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-971
+      name: Guadeloupe
+description: GeoNature-atlas of fauna and flora observations for Guadeloupe (Karunati
+  / Parc national de la Guadeloupe).
+id: atlaskarunatifr
+langs:
+- id: FR
+  name: French
+link: https://atlas.karunati.fr/
+name: Atlas Karunati
+owner:
+  link: https://www.guadeloupe-parcnational.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-971
+      name: Guadeloupe
+  name: Parc national de la Guadeloupe
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geonature
+  name: GeoNature
+status: active
+tags:
+- geospatial
+- biodiversity
+- GeoNature
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00043166
+endpoints:
+- type: geonature:api
+  url: https://atlas.karunati.fr/atlas/api/searchTaxon
+- type: geonature:api
+  url: https://atlas.karunati.fr/atlas/api/searchCommune

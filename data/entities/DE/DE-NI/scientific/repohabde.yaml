@@ -26,6 +26,14 @@ endpoints:
 - type: dspace:objects
   url: https://repo.hab.de/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://repo.hab.de/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://repo.hab.de/sitemap_index.xml
+- type: oaipmh20
+  url: https://repo.hab.de/server/oai/request?verb=Identify
+  version: '2.0'
 id: repohabde
 identifiers:
 - id: re3data

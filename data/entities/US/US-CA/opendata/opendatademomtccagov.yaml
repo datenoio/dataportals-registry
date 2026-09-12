@@ -25,6 +25,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-open-data-demo.mtc.ca.gov.xml
 - type: opensearch
   url: https://open-data-demo.mtc.ca.gov/opensearch.xml
+- type: socrata:catalog
+  url: https://open-data-demo.mtc.ca.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: opendatademomtccagov
 langs:
 - id: EN

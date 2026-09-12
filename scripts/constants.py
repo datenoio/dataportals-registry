@@ -696,6 +696,7 @@ MAP_SOFTWARE_ALLOWED_CATALOG_TYPES = {
         {"Microdata catalog", "Geoportal", "Open data portal", "Indicators catalog"}
     ),
     "dhis2": frozenset({"Indicators catalog", "Open data portal"}),
+    "redatam": frozenset({"Microdata catalog", "Indicators catalog"}),
     "yoda": frozenset({"Scientific data repository"}),
     "omekas": frozenset(
         {"Scientific data repository", "Open data portal", "Geoportal"}
@@ -747,6 +748,39 @@ MAP_SOFTWARE_ALLOWED_CATALOG_TYPES = {
     "openmlorg": frozenset(
         {"Scientific data repository", "Machine learning catalog"}
     ),
+    "huggingface": frozenset(
+        {"Scientific data repository", "Machine learning catalog"}
+    ),
+    "datasette": frozenset(
+        {"Open data portal", "Scientific data repository"}
+    ),
+    "hydroshare": frozenset(
+        {"Scientific data repository", "Open data portal"}
+    ),
+    "cedar": frozenset(
+        {"Metadata catalog", "Scientific data repository"}
+    ),
+    "opencontext": frozenset(
+        {"Scientific data repository", "Machine learning catalog"}
+    ),
+    "socrata": frozenset(
+        {"Open data portal", "Scientific data repository"}
+    ),
+    "codalab": frozenset(
+        {"Scientific data repository", "Machine learning catalog"}
+    ),
+    "codabench": frozenset(
+        {"Scientific data repository", "Machine learning catalog"}
+    ),
+    "grandchallenge": frozenset(
+        {"Scientific data repository", "Machine learning catalog"}
+    ),
+    "evalai": frozenset(
+        {"Scientific data repository", "Machine learning catalog"}
+    ),
+    "frostserver": frozenset(
+        {"Scientific data repository", "Geoportal"}
+    ),
     "arcgisdashboards": frozenset({"Geoportal", "Indicators catalog"}),
 }
 
@@ -756,6 +790,13 @@ CUSTOM_SOFTWARE_KEYS = list(CUSTOM_SOFTWARE_ALIAS_CATALOG_TYPE.keys())
 # Huwise is a data governance solution built on OpenDataSoft; treat as opendatasoft.
 SOFTWARE_NAME_ALIASES = {
     "huwise": "opendatasoft",
+    "frost-server": "frostserver",
+    "frost server": "frostserver",
+    "brain-geocms": "braingeocms",
+    "brain geocms": "braingeocms",
+    "codalab competitions": "codalab",
+    "easydb 5": "easydb",
+    "fylr": "easydb",
     "ogpl": "ogdindia",
     "ogd platform india": "ogdindia",
     "data eye": "dataeye",
@@ -838,6 +879,39 @@ SOFTWARE_NAME_ALIASES = {
     "virtual lmi": "virtuallmi",
     "vlmi": "virtuallmi",
     "geographic solutions vlmi": "virtuallmi",
+    "terristory": "terristory",
+    "terri story": "terristory",
+    "ihkfachkraeftemonitor": "ihkfachkraeftemonitor",
+    "ihk-fachkraeftemonitor": "ihkfachkraeftemonitor",
+    "ihk fachkräftemonitor": "ihkfachkraeftemonitor",
+    "duva": "duva",
+    "duva informationsportal": "duva",
+    "kosis-gemeinschaft duva": "duva",
+    "geoclip": "geoclip",
+    "géoclip": "geoclip",
+    "geoclip air": "geoclip",
+    "géoclip air": "geoclip",
+    "geoclipair": "geoclip",
+    "instantatlas": "instantatlas",
+    "instant atlas": "instantatlas",
+    "instantatlas bericht": "instantatlas",
+    "mats": "mats",
+    "modernes analyse tool statistik": "mats",
+    "mats-datenportal": "mats",
+    "imonitoring": "imonitoring",
+    "i-monitoring": "imonitoring",
+    "i мониторинг": "imonitoring",
+    "krista imonitoring": "imonitoring",
+    "ifinmon": "imonitoring",
+    "jaxi": "jaxi",
+    "iaeaxi": "jaxi",
+    "jaxit3": "jaxi",
+    "jaxi t3": "jaxi",
+    "ibestat-jaxi": "jaxi",
+    "hdc": "hdc",
+    "health data center": "hdc",
+    "moph hdc": "hdc",
+    "คลังข้อมูลด้านการแพทย์และสุขภาพ": "hdc",
     "superweb2": "superstar",
     "superweb 2": "superstar",
     "super web 2": "superstar",
@@ -1054,6 +1128,12 @@ SOFTWARE_NAME_ALIASES = {
     "dgbasweb": "dgbasweb",
     "dgbas web": "dgbasweb",
     "winsta dgbas": "dgbasweb",
+    "webmain": "webmain",
+    "webmain.aspx": "webmain",
+    "web main.aspx": "webmain",
+    "統計資料動態查詢": "webmain",
+    "共通性查詢": "webmain",
+    "dgbasall": "webmain",
     "yoda": "yoda",
     "redivis": "redivis",
     "ipums": "ipums",
@@ -1151,6 +1231,9 @@ SOFTWARE_NAME_ALIASES = {
     "mycarta": "mycarta",
     "mycarta webmap": "mycarta",
     "aveki mycarta": "mycarta",
+    "addspatial": "addspatial",
+    "addspatial gis": "addspatial",
+    "icebound addspatial": "addspatial",
     "origo": "origo",
     "origomap": "origo",
     "origosamverkan": "origo",
@@ -1356,6 +1439,10 @@ SOFTWARE_NAME_ALIASES = {
     "vb gis": "vbgis",
     "gis4u": "gis4u",
     "terratwin": "terratwin",
+    "digitaltwincloud": "digitaltwincloud",
+    "digital twin cloud": "digitaltwincloud",
+    "egis digital twin cloud": "digitaltwincloud",
+    "newlayer": "digitaltwincloud",
     "mxsig": "mxsig",
     "mapa digital de méxico": "mxsig",
     "mapa digital de mexico": "mxsig",
@@ -1649,6 +1736,8 @@ SOFTWARE_DOCUMENTATION_URLS = {
     "vbgis": "https://vbgis.vn/",
     "gis4u": "https://www.tmapy.cz/gis4u",
     "terratwin": "https://terratwin.de/",
+    "digitaltwincloud": "https://egiscloud.com/main/main.do",
+    "addspatial": "https://www.icebound.com/vara-produkter/addspatial-gis/",
     "dmcity": "https://www.esri.fi/fi-fi/tuotteet/dmcity/intro",
     "infogis": "https://www.infokartta.fi/palvelut/",
     "cadenza": "https://docs.disy.net/cadenza/",
@@ -1686,6 +1775,7 @@ SOFTWARE_DOCUMENTATION_URLS = {
     "pxstat": "https://github.com/CSOIreland/PxStat/wiki",
     "pxweb": "https://www.scb.se/en/services/statistical-programs-for-px-files/px-web/",
     "dgbasweb": "https://winsta.dgbas.gov.tw/",
+    "webmain": "https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?k=dgmain",
     "opensdg": "https://open-sdg.readthedocs.io",
     "phaidra": "https://phaidra.org/docs/get-started/",
     "divaportal": "https://info.diva-portal.org/",
@@ -1715,6 +1805,15 @@ SOFTWARE_DOCUMENTATION_URLS = {
     "cancerrates": "https://www.kcr.uky.edu/support/cancer-rates/",
     "hci": "https://help.healthycities.org/",
     "virtuallmi": "https://www.geographicsolutions.com/VLMI",
+    "terristory": "https://docs.terristory.fr/",
+    "ihkfachkraeftemonitor": "https://www.ihk-fachkraeftemonitor.de/",
+    "duva": "https://duva.de/",
+    "geoclip": "https://www.geoclip.fr/",
+    "instantatlas": "https://help.instantatlas.com/",
+    "mats": "https://www.statistik-nord.de/zahlen-fakten/mats-datenportal/mats-faq",
+    "imonitoring": "https://npo.krista.ru/products/imonitoring/",
+    "jaxi": "https://www.aragon.es/-/difusion-en-pc-axis",
+    "hdc": "https://dmdmoph.github.io/hdc-docs/",
     "ogdindia": "https://data.gov.in/aboutus",
     "redatam": "https://www.redatam.org/en",
     "dataeye": "https://dataeye.jp/",

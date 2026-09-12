@@ -19,8 +19,8 @@ coverage:
       id: US-IL
       name: Illinois
 description: ArcGIS Hub site for exploring and downloading Illinois Department of
-  Transportation GIS data, including assets, boundaries, multimodal, operations,
-  planning, traffic, and safety layers.
+  Transportation GIS data, including assets, boundaries, multimodal, operations, planning,
+  traffic, and safety layers.
 endpoints:
 - type: dcatap201
   url: https://gis-idot.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -32,6 +32,8 @@ endpoints:
   url: https://gis-idot.opendata.arcgis.com/api/search/v1
 - type: sitemap
   url: https://gis-idot.opendata.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://gis-idot.opendata.arcgis.com/data.json
 id: gisidotopendataarcgiscom
 langs:
 - id: EN

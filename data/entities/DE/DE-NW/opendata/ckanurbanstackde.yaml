@@ -29,6 +29,16 @@ endpoints:
 - type: ckan:package-list
   url: https://ckan.urbanstack.de/api/3/action/package_list
   version: '3'
+- type: dcat:ttl
+  url: https://ckan.urbanstack.de/catalog.ttl
+- type: dcat:xml
+  url: https://ckan.urbanstack.de/catalog.xml
+- type: dcat:jsonld
+  url: https://ckan.urbanstack.de/catalog.jsonld
+- type: dcat
+  url: https://ckan.urbanstack.de/catalog.rdf
+- type: dcat:n3
+  url: https://ckan.urbanstack.de/catalog.n3
 id: ckanurbanstackde
 langs:
 - id: DE

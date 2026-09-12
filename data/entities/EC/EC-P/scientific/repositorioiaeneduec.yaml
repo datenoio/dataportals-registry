@@ -23,6 +23,15 @@ endpoints:
 - type: oaipmh20
   url: https://repositorio.iaen.edu.ec/oai/request?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://repositorio.iaen.edu.ec/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repositorio.iaen.edu.ec/feed/atom_1.0/site
+  version: '1.0'
+- type: dspace:items
+  url: https://repositorio.iaen.edu.ec/rest/items
+  version: '6'
 id: repositorioiaeneduec
 langs:
 - id: ES

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: inactive
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,8 +16,7 @@ coverage:
       id: '011'
       name: Western Africa
 description: Esri ArcGIS Hub testing site (SDGHubTestingBF) with placeholder lorem
-  ipsum content. Superseded by the official Burkina Faso SDG Hub at
-  https://burkina-faso-sdg.hub.arcgis.com/.
+  ipsum content. Superseded by the official Burkina Faso SDG Hub at https://burkina-faso-sdg.hub.arcgis.com/.
 id: sdghubtestingbfsdghubarcgiscom
 langs:
 - id: EN
@@ -68,3 +67,12 @@ topics:
   name: Environment
   type: iso19115
 uid: cdi00003138
+endpoints:
+- type: dcatus11
+  url: https://sdghubtestingbf-sdg.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://sdghubtestingbf-sdg.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://sdghubtestingbf-sdg.hub.arcgis.com/api/search/v1
+- type: dcatus11
+  url: https://sdghubtestingbf-sdg.hub.arcgis.com/data.json

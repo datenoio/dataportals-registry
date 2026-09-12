@@ -42,6 +42,17 @@ endpoints:
   url: https://riunet.upv.es/htmlmap
 - type: opensearch
   url: https://riunet.upv.es:443/open-search/description.xml
+- type: dspace
+  url: https://riunet.upv.es/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://riunet.upv.es/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://riunet.upv.es/sitemap_index.xml
+- type: oaipmh20
+  url: https://riunet.upv.es/server/oai/request?verb=Identify
+  version: '2.0'
 id: riunetupves
 langs:
 - id: ES

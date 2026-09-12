@@ -21,6 +21,10 @@ endpoints:
 - type: csw202
   url: https://geode.cirad.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
+- type: geonetwork:selections
+  url: https://geode.cirad.fr/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://geode.cirad.fr/geonetwork/srv/api/site
 id: geodeciradfr
 langs:
 - id: FR

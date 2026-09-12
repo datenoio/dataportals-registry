@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: NOAA NCEI catalog of paleoclimatology studies (tree rings, ice cores,
+  corals, boreholes, and related reconstructions). Origin UI for the NESDIS/ncei/paleo
+  ISO WAF harvested at data.noaa.gov.
+endpoints:
+- type: rest
+  url: https://www.ncei.noaa.gov/access/paleo-search/study/search.json
+id: wwwnceinoaagovaccesspaleosearch
+langs:
+- id: EN
+  name: English
+link: https://www.ncei.noaa.gov/access/paleo-search/
+name: NCEI Paleoclimatology Study Search
+owner:
+  link: https://www.ncei.noaa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: National Centers for Environmental Information
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- NOAA
+- paleoclimate
+- climate
+- NCEI
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00005544

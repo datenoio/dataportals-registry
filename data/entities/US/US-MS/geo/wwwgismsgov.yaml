@@ -19,8 +19,8 @@ coverage:
       id: US-MS
       name: Mississippi
 description: State GIS hub for exploring and downloading Mississippi geospatial data,
-  including MDEM standard datasets, maps, and applications. Coordinated with the
-  Mississippi GIS Council and MARIS.
+  including MDEM standard datasets, maps, and applications. Coordinated with the Mississippi
+  GIS Council and MARIS.
 endpoints:
 - type: dcatap201
   url: https://www.gis.ms.gov/api/feed/dcat-ap/2.0.1.json
@@ -32,6 +32,8 @@ endpoints:
   url: https://www.gis.ms.gov/api/search/v1
 - type: sitemap
   url: https://www.gis.ms.gov/sitemap.xml
+- type: dcatus11
+  url: https://www.gis.ms.gov/data.json
 id: wwwgismsgov
 langs:
 - id: EN

@@ -24,6 +24,17 @@ endpoints:
 - type: oaipmh20
   url: https://soar.wichita.edu/oai/request?verb=Identify
   version: '2.0'
+- type: dspace
+  url: https://soar.wichita.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://soar.wichita.edu/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://soar.wichita.edu/sitemap_index.xml
+- type: oaipmh20
+  url: https://soar.wichita.edu/server/oai/request?verb=Identify
+  version: '2.0'
 id: soarwichitaedu
 langs:
 - id: EN

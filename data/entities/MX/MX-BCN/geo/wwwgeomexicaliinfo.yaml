@@ -72,6 +72,18 @@ endpoints:
   version: 1.1.1
 - type: sitemap
   url: https://www.geomexicali.info/sitemap.xml
+- type: wfs200
+  url: https://www.geomexicali.info/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs201
+  url: https://www.geomexicali.info/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: geonode:datasets
+  url: https://www.geomexicali.info/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://www.geomexicali.info/catalogue/opensearch
+  version: '1.1'
 id: wwwgeomexicaliinfo
 langs:
 - id: ES

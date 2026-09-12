@@ -22,6 +22,12 @@ endpoints:
   version: '2.0'
 - type: rest
   url: https://e-book.fwf.ac.at/api/search/select
+- type: openapi
+  url: https://e-book.fwf.ac.at/api/openapi/json
+- type: rest
+  url: https://e-book.fwf.ac.at/api/search/select?q=cmodel:*Dataset*&wt=json&rows=25
+- type: rest
+  url: https://e-book.fwf.ac.at/api/search/select?q=dc_type:dataset&wt=json&rows=25
 id: ebookfwfacat
 langs:
 - id: DE

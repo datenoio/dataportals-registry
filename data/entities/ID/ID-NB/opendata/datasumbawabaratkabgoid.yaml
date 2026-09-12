@@ -30,6 +30,14 @@ endpoints:
 - type: ckan:package-list
   url: https://data.sumbawabaratkab.go.id/api/3/action/package_list
   version: '3'
+- type: dcat:ttl
+  url: https://data.sumbawabaratkab.go.id/catalog.ttl
+- type: dcat:xml
+  url: https://data.sumbawabaratkab.go.id/catalog.xml
+- type: dcat:jsonld
+  url: https://data.sumbawabaratkab.go.id/catalog.jsonld
+- type: dcat
+  url: https://data.sumbawabaratkab.go.id/catalog.rdf
 id: datasumbawabaratkabgoid
 langs:
 - id: ID

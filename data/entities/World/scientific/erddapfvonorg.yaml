@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 0
+    macroregion:
+      id: '001'
+      name: World
+description: FVON ERDDAP is a Scientific data repository operated by Fishing Vessel
+  Ocean Observing Network.
+endpoints:
+- type: erddap:index
+  url: https://erddap.fvon.org/erddap/index.json
+- type: erddap:datasets
+  url: https://erddap.fvon.org/erddap/info/index.json
+- type: opensearch
+  url: https://erddap.fvon.org/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://erddap.fvon.org/erddap/sitemap.xml
+id: erddapfvonorg
+langs:
+- id: EN
+  name: English
+link: https://erddap.fvon.org/erddap/index.html
+name: FVON ERDDAP
+owner:
+  link: https://fvon.org
+  location:
+    country:
+      id: World
+      name: World
+  name: Fishing Vessel Ocean Observing Network
+  type: Other
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- scientific
+- research
+- erddap
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00042490

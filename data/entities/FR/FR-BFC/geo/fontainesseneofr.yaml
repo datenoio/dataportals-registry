@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-BFC
+      name: Bourgogne-Franche-Comté
+description: SENEO mviewer of public drinking-water access points.
+endpoints:
+- type: mviewer:config
+  url: https://fontaines.seneo.fr/apps/default.xml
+id: fontainesseneofr
+langs:
+- id: FR
+  name: French
+link: https://fontaines.seneo.fr/
+name: SENEO points d'accès à l'eau potable
+owner:
+  link: https://www.seneo.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-BFC
+      name: Bourgogne-Franche-Comté
+  name: SENEO
+  type: Local government
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- government
+- mviewer
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043265

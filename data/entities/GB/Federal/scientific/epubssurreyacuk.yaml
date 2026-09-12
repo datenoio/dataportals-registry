@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -26,7 +26,7 @@ identifiers:
 langs:
 - id: EN
   name: English
-link: http://epubs.surrey.ac.uk/
+link: https://openresearch.surrey.ac.uk/esploro/
 name: Surrey Research Insight
 owner:
   link: http://www.surrey.ac.uk/
@@ -37,8 +37,8 @@ owner:
   name: University of Surrey
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: esploro
+  name: Esploro
 status: active
 tags:
 - scientific
@@ -49,3 +49,6 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00030853
+endpoints:
+- type: esploro
+  url: https://openresearch.surrey.ac.uk/esploro/

@@ -20,6 +20,13 @@ endpoints:
   url: https://boamp-datadila.opendatasoft.com/api
 - type: sitemap
   url: https://boamp-datadila.opendatasoft.com/sitemap.xml
+- type: opendatasoftapi
+  url: https://boamp-datadila.opendatasoft.com/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://boamp-datadila.opendatasoft.com/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://boamp-datadila.opendatasoft.com/api/explore/v2.1/catalog/exports/dcat
 id: boampdatadilaopendatasoftcom
 langs:
 - id: FR

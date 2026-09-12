@@ -19,6 +19,12 @@ description: Institutional repository of Indian Institute of Management Calcutta
 endpoints:
 - type: dspace:catalog
   url: https://ir.iimcal.ac.in:8443/jspui/
+- type: rss
+  url: https://ir.iimcal.ac.in:8443/jspui/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://ir.iimcal.ac.in:8443/jspui/feed/atom_1.0/site
+  version: '1.0'
 id: iriimcalacin
 langs:
 - id: EN

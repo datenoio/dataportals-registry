@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -72,3 +72,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00024543
+endpoints:
+- type: customapi
+  url: https://ibis.utah.gov/ibisph-view/indicator/index/alphabetical

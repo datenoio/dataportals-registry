@@ -21,6 +21,14 @@ endpoints:
 - type: oaipmh20
   url: https://opinvisindi.is/server/oai/request?verb=Identify
   version: '2.0'
+- type: dspace
+  url: https://opinvisindi.is/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://opinvisindi.is/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://opinvisindi.is/sitemap_index.xml
 id: opinvisindiis
 langs:
 - id: IS

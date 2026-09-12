@@ -21,6 +21,17 @@ endpoints:
 - type: oaipmh20
   url: https://researchrepository.ul.ie/server/oai/request?verb=Identify
   version: '2.0'
+- type: dspace
+  url: https://researchrepository.ul.ie/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://researchrepository.ul.ie/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://researchrepository.ul.ie/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://researchrepository.ul.ie/sitemap_index.xml
 id: researchrepositoryulie
 langs:
 - id: EN

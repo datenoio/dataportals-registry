@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -25,6 +25,12 @@ identifiers:
 langs:
 - id: EN
   name: English
+endpoints:
+- type: inveniordmapi:records
+  url: https://galenos-data.aliveevidence.org/api/records
+- type: oaipmh20
+  url: https://galenos-data.aliveevidence.org/oai2d?verb=Identify
+  version: '2.0'
 link: https://galenos-data.aliveevidence.org/
 name: GALENOS Data Repository
 owner:
@@ -36,8 +42,8 @@ owner:
   name: Department of Psychiatry, University of Oxford
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: inveniordm
+  name: InvenioRDM
 status: active
 tags:
 - scientific

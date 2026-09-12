@@ -24,6 +24,11 @@ endpoints:
   url: https://data.fleurysurorne.fr/api
 - type: sitemap
   url: https://data.fleurysurorne.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.fleurysurorne.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.fleurysurorne.fr/api/explore/v2.1/catalog/exports/dcat
 id: datafleurysurornefr
 langs:
 - id: FR

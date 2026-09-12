@@ -1,0 +1,65 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: nextstrain
+name: Nextstrain
+website: https://nextstrain.org
+description: Nextstrain is an open-source project for pathogen genome phylodynamics.
+  The nextstrain.org hub and community instances share Auspice visualizations, a
+  dataset catalog, and documented JSON/narrative APIs for outbreak analyses.
+owner:
+  name: Nextstrain project (University of Basel / Fred Hutch)
+  location:
+    country:
+      id: CH
+      name: Switzerland
+logo_url: https://nextstrain.org/favicon.png
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/nextstrain/nextstrain.org
+documentation_url: https://docs.nextstrain.org
+license:
+  type: AGPL-3.0
+  url: https://www.gnu.org/licenses/agpl-3.0.html
+export_formats:
+- JSON
+- Newick
+- Auspice
+capabilities:
+- Dataset catalog
+- Phylogenetic visualization
+- Community instances
+changelog_url: https://github.com/nextstrain/nextstrain.org/releases
+last_updated: '2026-09-09T00:00:00Z'

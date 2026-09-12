@@ -28,6 +28,15 @@ endpoints:
 - type: ckan:package-list
   url: http://dados.recife.pe.gov.br/api/3/action/package_list
   version: '3'
+- type: ckan
+  url: https://dados.recife.pe.gov.br/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dados.recife.pe.gov.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dados.recife.pe.gov.br/api/3/action/package_list
+  version: '3'
 id: dadosrecifepegovbr
 identifiers:
 - id: dataportals.org

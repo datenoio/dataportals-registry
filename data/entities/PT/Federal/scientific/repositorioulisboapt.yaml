@@ -13,7 +13,7 @@ coverage:
       name: Portugal
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Institutional repository of the University of Lisbon (RCAAP/DSpace).
   Public catalog includes dataset-typed items alongside publications and theses.
@@ -26,6 +26,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://repositorio.ulisboa.pt/sitemap_index.xml
+- type: oaipmh20
+  url: https://repositorio.ulisboa.pt/server/oai/request?verb=Identify
+  version: '2.0'
 id: repositorioulisboapt
 langs:
 - id: PT

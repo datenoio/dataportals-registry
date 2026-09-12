@@ -21,6 +21,20 @@ endpoints:
 - type: oaipmh20
   url: https://mural.maynoothuniversity.ie/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://mural.maynoothuniversity.ie/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://mural.maynoothuniversity.ie/cgi/latest_tool?output=Atom
+- type: eprints:n3
+  url: https://mural.maynoothuniversity.ie/cgi/export/repository/RDFN3/devel.n3
+- type: eprints:rest
+  url: https://mural.maynoothuniversity.ie/rest/eprint
+- type: eprints:rdf
+  url: https://mural.maynoothuniversity.ie/cgi/export/repository/RDFXML/devel.rdf
+- type: opensearch
+  url: https://mural.maynoothuniversity.ie/cgi/opensearchdescription
+  version: '1.1'
 id: muralmaynoothuniversityie
 langs:
 - id: EN

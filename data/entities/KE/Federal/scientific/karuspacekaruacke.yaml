@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-description: Karatina University Institutional Repository is a scientific data
-  repository operated by Karatina University running on DSpace.
+description: Karatina University Institutional Repository is a scientific data repository
+  operated by Karatina University running on DSpace.
 endpoints:
 - type: dspace
   url: https://karuspace.karu.ac.ke/server/api
@@ -26,6 +26,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://karuspace.karu.ac.ke/sitemap_index.xml
+- type: oaipmh20
+  url: https://karuspace.karu.ac.ke/server/oai/request?verb=Identify
+  version: '2.0'
 id: karuspacekaruacke
 langs:
 - id: EN

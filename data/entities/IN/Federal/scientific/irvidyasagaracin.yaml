@@ -18,6 +18,12 @@ description: Institutional repository of Vidyasagar University, running on DSpac
 endpoints:
 - type: dspace:catalog
   url: https://ir.vidyasagar.ac.in
+- type: oaipmh20
+  url: https://ir.vidyasagar.ac.in/oai/request?verb=Identify
+  version: '2.0'
+- type: dspace:items
+  url: https://ir.vidyasagar.ac.in/rest/items
+  version: '6'
 id: irvidyasagaracin
 langs:
 - id: EN

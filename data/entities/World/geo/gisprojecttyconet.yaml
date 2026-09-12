@@ -61,6 +61,12 @@ endpoints:
   version: 1.0.0
 - type: sitemap
   url: https://gis.projecttyco.net/sitemap.xml
+- type: geonode:datasets
+  url: https://gis.projecttyco.net/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://gis.projecttyco.net/catalogue/opensearch
+  version: '1.1'
 id: gisprojecttyconet
 langs:
 - id: EN

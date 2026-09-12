@@ -24,6 +24,13 @@ endpoints:
   url: https://opendata.ha-py.fr/api
 - type: sitemap
   url: https://opendata.ha-py.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://opendata.ha-py.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://opendata.ha-py.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcat:xml
+  url: https://opendata.ha-py.fr/api/v2/catalog/exports/dcat
 id: opendatahapyfr
 langs:
 - id: FR

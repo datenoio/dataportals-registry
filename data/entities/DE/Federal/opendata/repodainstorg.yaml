@@ -27,6 +27,16 @@ endpoints:
 - type: ckan:package-list
   url: https://repo.dainst.org/api/3/action/package_list
   version: '3'
+- type: dcat:ttl
+  url: https://repo.dainst.org/catalog.ttl
+- type: dcat:xml
+  url: https://repo.dainst.org/catalog.xml
+- type: dcat:jsonld
+  url: https://repo.dainst.org/catalog.jsonld
+- type: dcat:n3
+  url: https://repo.dainst.org/catalog.n3
+- type: dcat
+  url: https://repo.dainst.org/catalog.rdf
 id: repodainstorg
 langs:
 - id: EN

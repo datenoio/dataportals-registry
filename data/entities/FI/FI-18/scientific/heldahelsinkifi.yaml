@@ -22,6 +22,15 @@ description: Open digital repository of the University of Helsinki for publicati
 endpoints:
 - type: dspace:catalog
   url: https://helda.helsinki.fi
+- type: dspace
+  url: https://helda.helsinki.fi/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://helda.helsinki.fi/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://helda.helsinki.fi/server/oai/request?verb=Identify
+  version: '2.0'
 id: heldahelsinkifi
 langs:
 - id: FI

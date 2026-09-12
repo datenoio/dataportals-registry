@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: PxWeb StatBank of the Association of Danish Mortgage Banks (Realkreditrådet
+  / Finance Denmark), hosted on Statistics Denmark's StatBank platform.
+endpoints:
+- type: pxweb:catalog
+  url: https://rkr.statbank.dk/
+id: rkrstatbankdk
+langs:
+- id: DA
+  name: Danish
+- id: EN
+  name: English
+link: https://rkr.statbank.dk/
+name: Association of Danish Mortgage Banks StatBank
+owner:
+  link: https://finansdanmark.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+  name: Finance Denmark
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: pxweb
+  name: PxWeb
+status: active
+tags:
+- statistics
+- indicators
+- PxWeb
+- mortgage
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043124

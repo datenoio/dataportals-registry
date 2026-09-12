@@ -13,7 +13,7 @@ coverage:
       name: Cuba
     level: 20
     macroregion:
-      id: '029'
+      id: 029
       name: Caribbean
 description: DSpace 6 institutional repository of Universidad de Guantánamo. Public
   JSPUI catalog of undergraduate, master's, and doctoral theses and related learning
@@ -22,6 +22,12 @@ endpoints:
 - type: oaipmh20
   url: http://repositorio.cug.co.cu:8080/oai/request?verb=Identify
   version: '2.0'
+- type: rss
+  url: http://repositorio.cug.co.cu:8080/jspui/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: http://repositorio.cug.co.cu:8080/jspui/feed/atom_1.0/site
+  version: '1.0'
 id: repositoriocugcocu
 langs:
 - id: ES

@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: DFT Data Catalog is an Open data portal operated by Department of Foreign
+  Trade, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://gdcatalog.dft.go.th/api/3
+  version: '3'
+- type: dcat:n3
+  url: https://gdcatalog.dft.go.th/catalog.n3
+- type: dcat:ttl
+  url: https://gdcatalog.dft.go.th/catalog.ttl
+- type: dcat:xml
+  url: https://gdcatalog.dft.go.th/catalog.xml
+- type: dcat:jsonld
+  url: https://gdcatalog.dft.go.th/catalog.jsonld
+- type: ckan:package-list
+  url: https://gdcatalog.dft.go.th/api/3/action/package_list
+  version: '3'
+id: gdcatalogdftgoth
+langs:
+- id: TH
+  name: Thai
+link: https://gdcatalog.dft.go.th
+name: DFT Data Catalog
+owner:
+  link: https://www.dft.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+  name: Department of Foreign Trade
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- ckan
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043720

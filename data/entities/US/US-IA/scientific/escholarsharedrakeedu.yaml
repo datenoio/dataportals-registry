@@ -26,6 +26,14 @@ endpoints:
 - type: dspace:objects
   url: https://escholarshare.drake.edu/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://escholarshare.drake.edu/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://escholarshare.drake.edu/sitemap_index.xml
+- type: oaipmh20
+  url: https://escholarshare.drake.edu/server/oai/request?verb=Identify
+  version: '2.0'
 id: escholarsharedrakeedu
 langs:
 - id: EN

@@ -29,6 +29,16 @@ endpoints:
 - type: ckan:package-list
   url: https://datos.um.es/api/3/action/package_list
   version: '3'
+- type: dcat:xml
+  url: https://datos.um.es/catalog.xml
+- type: dcat:jsonld
+  url: https://datos.um.es/catalog.jsonld
+- type: dcat:n3
+  url: https://datos.um.es/catalog.n3
+- type: dcat:ttl
+  url: https://datos.um.es/catalog.ttl
+- type: dcat
+  url: https://datos.um.es/catalog.rdf
 id: datosumes
 langs:
 - id: ES

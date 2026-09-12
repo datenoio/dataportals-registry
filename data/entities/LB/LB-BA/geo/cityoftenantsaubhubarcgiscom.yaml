@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LB
+      name: Lebanon
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: LB-BA
+      name: Bayrūt
+description: ArcGIS Hub geoportal of the Beirut Urban Lab mapping Beirut's rental
+  housing market. Publishes tenant survey results and related feature layers, distinct
+  from the Urban Observatory recovery hub and the Open Data Platform basemaps.
+endpoints:
+- type: dcatap201
+  url: https://cityoftenants-aub.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://cityoftenants-aub.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://cityoftenants-aub.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://cityoftenants-aub.hub.arcgis.com/api/search/v1
+- type: dcatus11
+  url: https://cityoftenants-aub.hub.arcgis.com/data.json
+id: cityoftenantsaubhubarcgiscom
+langs:
+- id: AR
+  name: Arabic
+- id: EN
+  name: English
+link: https://cityoftenants-aub.hub.arcgis.com/
+name: City of Tenants
+owner:
+  link: https://beiruturbanlab.com
+  location:
+    country:
+      id: LB
+      name: Lebanon
+    level: 30
+    subregion:
+      id: LB-BA
+      name: Bayrūt
+  name: Beirut Urban Lab
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- has_api
+- housing
+- urban
+- Beirut
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00042436

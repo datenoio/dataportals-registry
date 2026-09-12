@@ -63,6 +63,8 @@ Shared software that sometimes maps here:
 | `huggingface` | Hugging Face Datasets Hub | Site: [huggingface.co/datasets](https://huggingface.co/datasets/). Confirm the datasets catalog. Do not add per-user spaces. |
 | `codalab` | CodaLab Competitions hub | Site: [competitions.codalab.org](https://competitions.codalab.org). Confirm the public competitions list. One hub, not per competition. Distinct from `codabench`. |
 | `codabench` | Codabench hub | Site: [codabench.org](https://www.codabench.org). Confirm title `Codabench`. One hub, not per benchmark. Distinct from `codalab`. |
+| `grandchallenge` | Grand Challenge hub | Site: [grand-challenge.org](https://grand-challenge.org). Confirm the public challenges/archives UI. One hub, not per challenge. |
+| `evalai` | EvalAI hub | Site: [eval.ai](https://eval.ai). Confirm title includes `EvalAI`. One hub, not per challenge. |
 | `galaxy` | Public Galaxy with data libraries | See [discovery-scientific.md](discovery-scientific.md). Prefer Scientific unless ML datasets are the primary product. |
 
 Hugging Face, Kaggle, Papers with Code, and similar **global** hubs are usually already in the registry as single catalogs — do not add per-user spaces or per-dataset pages.
@@ -105,7 +107,31 @@ Open-source successor to CodaLab Competitions. Public hub: [codabench.org](https
 | Censys | `web.names: "codabench.org"` |
 | FOFA | `domain="codabench.org"` |
 
-Regional challenge platforms (Zindi, AIcrowd, SIGNATE, Grand Challenge, and national Chinese hubs such as Baidu AI Studio, BAAI, OpenXLab) are typically `software.id: custom`. Register **one catalog per hub**, not per competition or dataset.
+## Grand Challenge (`grandchallenge`) {#grandchallenge}
+
+Apache-2.0 biomedical-imaging challenge platform. Public hub: [grand-challenge.org](https://grand-challenge.org). Source: [comic/grand-challenge.org](https://github.com/comic/grand-challenge.org). Docs describe a reusable framework plus the public hub. Register that hub once, not each challenge, archive, or algorithm. Bot walls on `/api/v1/` are common — use the HTML catalog.
+
+**Confirm:** GET the hub. Title includes `Grand Challenge`. One catalog for `https://grand-challenge.org`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"grand-challenge.org" (challenge OR archive OR algorithm) biomedical` |
+| Censys | `web.names: "grand-challenge.org"` |
+| FOFA | `host="grand-challenge.org"` |
+
+## EvalAI (`evalai`) {#evalai}
+
+BSD-licensed AI challenge evaluation platform. Public hub: [eval.ai](https://eval.ai). Source: [Cloud-CV/EvalAI](https://github.com/Cloud-CV/EvalAI). Docker Compose installs are documented. Register the hub once, not each challenge or leaderboard.
+
+**Confirm:** GET `https://eval.ai`. Page title binds `EvalAI`. One catalog for that hub.
+
+| Tool | Query |
+|------|-------|
+| Google | `"EvalAI" (challenge OR evaluation OR leaderboard) -site:github.com` |
+| Censys | `web.names: "eval.ai"` |
+| FOFA | `host="eval.ai"` |
+
+Regional challenge platforms (Zindi, AIcrowd, SIGNATE, and national Chinese hubs such as Baidu AI Studio, BAAI, OpenXLab) are typically `software.id: custom`. Register **one catalog per hub**, not per competition or dataset.
 
 | Tool | Query |
 |------|-------|

@@ -28,6 +28,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.richmondgov.com.xml
 - type: opensearch
   url: https://data.richmondgov.com/opensearch.xml
+- type: socrata:catalog
+  url: https://data.richmondgov.com/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: datarichmondgovcom
 identifiers:
 - id: dataportals.org

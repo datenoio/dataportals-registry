@@ -13,7 +13,7 @@ coverage:
       name: Greece
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: GR-I
@@ -34,6 +34,44 @@ endpoints:
 - type: csw202
   url: https://beta.gis.cityofathens.gr/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: geonode:datasets
+  url: https://beta.gis.cityofathens.gr/api/datasets/
+- type: opensearch
+  url: https://beta.gis.cityofathens.gr/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wcs111
+  url: https://beta.gis.cityofathens.gr/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://beta.gis.cityofathens.gr/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://beta.gis.cityofathens.gr/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://beta.gis.cityofathens.gr/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://beta.gis.cityofathens.gr/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://beta.gis.cityofathens.gr/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://beta.gis.cityofathens.gr/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://beta.gis.cityofathens.gr/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://beta.gis.cityofathens.gr/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: geonode:datasets
+  url: https://beta.gis.cityofathens.gr/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://beta.gis.cityofathens.gr/catalogue/opensearch
+  version: '1.1'
 id: betagiscityofathensgr
 langs:
 - id: EL

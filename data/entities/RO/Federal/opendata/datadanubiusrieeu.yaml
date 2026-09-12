@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Official CKAN data portal of DANUBIUS-RI, the International Centre for Advanced Studies on
-  River-Sea Systems, publishing research datasets on the continuum from river source to sea.
+description: Official CKAN data portal of DANUBIUS-RI, the International Centre for
+  Advanced Studies on River-Sea Systems, publishing research datasets on the continuum
+  from river source to sea.
 endpoints:
 - type: ckan
   url: https://data.danubius-ri.eu/api/3
@@ -26,6 +27,16 @@ endpoints:
 - type: ckan:package-list
   url: https://data.danubius-ri.eu/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://data.danubius-ri.eu/catalog.n3
+- type: dcat:ttl
+  url: https://data.danubius-ri.eu/catalog.ttl
+- type: dcat:xml
+  url: https://data.danubius-ri.eu/catalog.xml
+- type: dcat:jsonld
+  url: https://data.danubius-ri.eu/catalog.jsonld
+- type: dcat
+  url: https://data.danubius-ri.eu/catalog.rdf
 id: datadanubiusrieeu
 langs:
 - id: EN

@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SG
+      name: Singapore
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Institute for Adult Learning Dataverse is a Scientific data repository
+  operated by Institute for Adult Learning, built with Dataverse.
+id: dataialedusg
+langs:
+- id: EN
+  name: English
+- id: ZH
+  name: Chinese
+link: https://data.ial.edu.sg
+name: Institute for Adult Learning Dataverse
+owner:
+  link: https://www.ial.edu.sg
+  location:
+    country:
+      id: SG
+      name: Singapore
+  name: Institute for Adult Learning
+  type: Academy
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research
+- academic
+- dataverse
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043697
+endpoints:
+- type: dataverseapi
+  url: https://data.ial.edu.sg/api/search
+- type: dataverseapi
+  url: https://data.ial.edu.sg/api/info/version

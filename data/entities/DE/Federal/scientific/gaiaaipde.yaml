@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -37,8 +37,8 @@ owner:
   name: Leibniz Institute for Astrophysics Potsdam
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: daiquiri
+  name: Daiquiri
 status: active
 tags:
 - scientific
@@ -50,3 +50,6 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00029536
+endpoints:
+- type: tap
+  url: https://gaia.aip.de/tap/availability

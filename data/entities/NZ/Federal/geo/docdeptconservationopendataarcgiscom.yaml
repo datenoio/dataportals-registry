@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+description: Department of Conservation ArcGIS Hub catalog of public conservation
+  geospatial datasets.
+endpoints:
+- type: dcatap201
+  url: https://doc-deptconservation.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://doc-deptconservation.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://doc-deptconservation.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://doc-deptconservation.opendata.arcgis.com/api/search/v1
+id: docdeptconservationopendataarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://doc-deptconservation.opendata.arcgis.com/
+name: DOC Open Spatial Data
+owner:
+  link: https://www.doc.govt.nz
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+  name: Department of Conservation
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- GIS
+- New Zealand
+- ArcGIS Hub
+- conservation
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00005529

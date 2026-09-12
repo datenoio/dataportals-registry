@@ -15,14 +15,28 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: GeoNetwork metadata catalog of the Ministry of Environment, Water and Ecological
-  Transition (MAATE), with climate, biodiversity, and environmental datasets (about 408 records).
+description: GeoNetwork metadata catalog of the Ministry of Environment, Water and
+  Ecological Transition (MAATE), with climate, biodiversity, and environmental datasets
+  (about 408 records).
 endpoints:
 - type: geonetwork:query
   url: http://ide.ambiente.gob.ec:8080/geonetwork/srv/eng/q
 - type: csw202
   url: http://ide.ambiente.gob.ec:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
+- type: geonetwork:records
+  url: http://ide.ambiente.gob.ec:8080/geonetwork/srv/api/records
+- type: openapi
+  url: http://ide.ambiente.gob.ec:8080/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: opensearch
+  url: http://ide.ambiente.gob.ec:8080/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://ide.ambiente.gob.ec:8080/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: dcat:xml
+  url: http://ide.ambiente.gob.ec:8080/geonetwork/srv/api/records?accept=application/rdf+xml
 id: ideambientegobec
 langs:
 - id: ES

@@ -80,6 +80,12 @@ endpoints:
   url: https://georisques.ub.edu.bi/geoserver/rest/settings
 - type: geoserver:layers
   url: https://georisques.ub.edu.bi/geoserver/rest/layers
+- type: geonode:datasets
+  url: https://georisques.ub.edu.bi/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://georisques.ub.edu.bi/catalogue/opensearch
+  version: '1.1'
 id: georisquesubedubi
 langs:
 - id: FR

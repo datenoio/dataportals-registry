@@ -24,6 +24,12 @@ endpoints:
   url: https://opendata.sandag.org/data.json
 - type: socrata:views
   url: https://opendata.sandag.org/api/views
+- type: socrata:catalog
+  url: https://opendata.sandag.org/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://opendata.sandag.org/opensearch.xml
+  version: '1.1'
 id: opendatasandagorg
 langs:
 - id: EN

@@ -26,6 +26,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-performance.fultoncountyga.gov.xml
 - type: opensearch
   url: https://performance.fultoncountyga.gov/opensearch.xml
+- type: socrata:catalog
+  url: https://performance.fultoncountyga.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: performancefultoncountygagov
 langs:
 - id: EN

@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IL
+      name: Israel
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Weizmann Institute of Science is a Scientific data repository operated
+  by Weizmann Institute of Science.
+id: weizmannelsevierpurecom
+langs:
+- id: HE
+  name: Hebrew
+- id: EN
+  name: English
+link: https://weizmann.elsevierpure.com
+name: Weizmann Institute of Science
+owner:
+  link: https://weizmann.elsevierpure.com
+  location:
+    country:
+      id: IL
+      name: Israel
+  name: Weizmann Institute of Science
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042817
+endpoints:
+- type: oaipmh20
+  url: https://weizmann.elsevierpure.com/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://weizmann.elsevierpure.com/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://weizmann.elsevierpure.com/sitemap/datasets.xml

@@ -41,6 +41,12 @@ endpoints:
 - type: opensearch
   url: https://geoportal.saracc.icicor.com/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
   version: '1.0'
+- type: geonode:datasets
+  url: https://geoportal.saracc.icicor.com/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geoportal.saracc.icicor.com/catalogue/opensearch
+  version: '1.1'
 id: geoportalsaraccicicorcom
 langs:
 - id: EN

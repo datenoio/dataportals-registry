@@ -22,6 +22,20 @@ description: DSpace institutional repository of Aalto University for theses, dis
 endpoints:
 - type: dspace:catalog
   url: https://aaltodoc.aalto.fi
+- type: dspace
+  url: https://aaltodoc.aalto.fi/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://aaltodoc.aalto.fi/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://aaltodoc.aalto.fi/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://aaltodoc.aalto.fi/sitemap_index.xml
+- type: oaipmh20
+  url: https://aaltodoc.aalto.fi/server/oai/request?verb=Identify
+  version: '2.0'
 id: aaltodocaaltofi
 langs:
 - id: FI

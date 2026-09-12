@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+description: ICATMAR ERDDAP is a Scientific data repository operated by ICATMAR.
+endpoints:
+- type: erddap:index
+  url: https://erddap.icatmar.cat/erddap/index.json
+- type: erddap:datasets
+  url: https://erddap.icatmar.cat/erddap/info/index.json
+- type: opensearch
+  url: https://erddap.icatmar.cat/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://erddap.icatmar.cat/erddap/sitemap.xml
+id: erddapicatmarcat
+langs:
+- id: ES
+  name: Spanish
+link: https://erddap.icatmar.cat/erddap/index.html
+name: ICATMAR ERDDAP
+owner:
+  link: https://icatmar.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+  name: ICATMAR
+  type: Regional government
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- scientific
+- research
+- government
+- erddap
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042492

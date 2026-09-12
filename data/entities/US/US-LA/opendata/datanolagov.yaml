@@ -26,6 +26,12 @@ endpoints:
   url: https://data.nola.gov/api/views
 - type: sitemap
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.nola.gov.xml
+- type: socrata:catalog
+  url: https://data.nola.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://data.nola.gov/opensearch.xml
+  version: '1.1'
 id: datanolagov
 identifiers:
 - id: dataportals.org

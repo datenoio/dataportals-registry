@@ -32,6 +32,10 @@ endpoints:
 - type: oaipmh20
   url: https://snig.dgterritorio.gov.pt/rndg/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: dcat:xml
+  url: https://snig.dgterritorio.gov.pt/rndg/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://snig.dgterritorio.gov.pt/rndg/srv/api/site
 id: snigdgterritoriogovpt
 langs:
 - id: PT

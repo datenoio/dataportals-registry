@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: FacultyUP — Universidad del Pacífico is a Scientific data repository
+  operated by FacultyUP — Universidad del Pacífico.
+id: facultyupedupe
+langs:
+- id: ES
+  name: Spanish
+link: https://faculty.up.edu.pe
+name: FacultyUP — Universidad del Pacífico
+owner:
+  link: https://faculty.up.edu.pe
+  location:
+    country:
+      id: PE
+      name: Peru
+  name: FacultyUP — Universidad del Pacífico
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042513
+endpoints:
+- type: oaipmh20
+  url: https://faculty.up.edu.pe/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://faculty.up.edu.pe/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://faculty.up.edu.pe/sitemap/datasets.xml

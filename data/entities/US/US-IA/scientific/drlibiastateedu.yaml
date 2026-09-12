@@ -26,6 +26,14 @@ endpoints:
 - type: dspace:objects
   url: https://dr.lib.iastate.edu/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://dr.lib.iastate.edu/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://dr.lib.iastate.edu/sitemap_index.xml
+- type: oaipmh20
+  url: https://dr.lib.iastate.edu/server/oai/request?verb=Identify
+  version: '2.0'
 id: drlibiastateedu
 langs:
 - id: EN

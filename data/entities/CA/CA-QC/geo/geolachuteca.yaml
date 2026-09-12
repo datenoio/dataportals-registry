@@ -74,6 +74,12 @@ endpoints:
 - type: wms-c111
   url: https://geo.lachute.ca/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://geo.lachute.ca/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geo.lachute.ca/catalogue/opensearch
+  version: '1.1'
 id: geolachuteca
 langs:
 - id: FR

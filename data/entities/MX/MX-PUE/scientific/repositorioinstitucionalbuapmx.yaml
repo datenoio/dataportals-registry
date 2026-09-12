@@ -26,6 +26,14 @@ endpoints:
 - type: dspace:objects
   url: https://repositorioinstitucional.buap.mx/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://repositorioinstitucional.buap.mx/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://repositorioinstitucional.buap.mx/sitemap_index.xml
+- type: oaipmh20
+  url: https://repositorioinstitucional.buap.mx/server/oai/request?verb=Identify
+  version: '2.0'
 id: repositorioinstitucionalbuapmx
 identifiers:
 - id: re3data

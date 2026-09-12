@@ -21,6 +21,12 @@ endpoints:
   url: https://cohesiondata.ec.europa.eu/data.json
 - type: socrata:views
   url: https://cohesiondata.ec.europa.eu/api/views
+- type: socrata:catalog
+  url: https://cohesiondata.ec.europa.eu/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://cohesiondata.ec.europa.eu/opensearch.xml
+  version: '1.1'
 id: cohesiondataeceuropaeu
 langs:
 - id: EN

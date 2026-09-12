@@ -21,6 +21,16 @@ endpoints:
 - type: oaipmh20
   url: https://strathprints.strath.ac.uk/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://strathprints.strath.ac.uk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://strathprints.strath.ac.uk/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://strathprints.strath.ac.uk/rest/eprint
+- type: opensearch
+  url: https://strathprints.strath.ac.uk/cgi/opensearchdescription
+  version: '1.1'
 id: strathprintsstrathacuk
 langs:
 - id: EN

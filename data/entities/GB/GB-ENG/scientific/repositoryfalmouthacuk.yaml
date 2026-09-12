@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: GB-ENG
       name: England
-description: Institutional repository of Falmouth University, holding publications and other
-  research outputs, including 4 Dataset records.
+description: Institutional repository of Falmouth University, holding publications
+  and other research outputs, including 4 Dataset records.
 endpoints:
 - type: oaipmh20
   url: https://repository.falmouth.ac.uk/cgi/oai2?verb=Identify
@@ -35,6 +35,9 @@ endpoints:
   url: https://repository.falmouth.ac.uk/cgi/export/repository/RDFXML/devel.rdf
 - type: eprints:n3
   url: https://repository.falmouth.ac.uk/cgi/export/repository/RDFN3/devel.n3
+- type: opensearch
+  url: https://repository.falmouth.ac.uk/cgi/opensearchdescription
+  version: '1.1'
 id: repositoryfalmouthacuk
 langs:
 - id: EN

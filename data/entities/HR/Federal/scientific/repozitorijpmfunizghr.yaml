@@ -13,7 +13,7 @@ coverage:
       name: Croatia
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: DABAR institutional repository of the Faculty of Science, University
   of Zagreb, for theses, publications, and research outputs, with OAI-PMH harvest.
@@ -21,6 +21,8 @@ endpoints:
 - type: oaipmh20
   url: https://repozitorij.pmf.unizg.hr/oai?verb=Identify
   version: '2.0'
+- type: sitemap
+  url: https://repozitorij.pmf.unizg.hr/en/sitemap.xml
 id: repozitorijpmfunizghr
 identifiers:
 - id: openaire

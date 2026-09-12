@@ -21,6 +21,15 @@ endpoints:
   url: https://arscan.opendatasoft.com/api
 - type: sitemap
   url: https://arscan.opendatasoft.com/sitemap.xml
+- type: opendatasoftapi
+  url: https://arscan.opendatasoft.com/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://arscan.opendatasoft.com/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://arscan.opendatasoft.com/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://arscan.opendatasoft.com/data.json
 id: arscanopendatasoftcom
 langs:
 - id: EN

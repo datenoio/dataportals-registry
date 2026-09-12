@@ -23,6 +23,18 @@ endpoints:
 - type: oaipmh20
   url: https://espace.inrs.ca/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://espace.inrs.ca/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: eprints:rest
+  url: https://espace.inrs.ca/rest/eprint
+- type: eprints:datasets
+  url: https://espace.inrs.ca/cgi/exportview/type/dataset/JSON/dataset.js
+- type: atom
+  url: https://espace.inrs.ca/cgi/latest_tool?output=Atom
+- type: opensearch
+  url: https://espace.inrs.ca/cgi/opensearchdescription
+  version: '1.1'
 id: espaceinrsca
 langs:
 - id: FR

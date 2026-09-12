@@ -18,6 +18,9 @@ description: Meteospace SolarDB catalog of solar observations, published through
 endpoints:
 - type: tap:capabilities
   url: https://solar-dachs.oca.eu/tap/capabilities
+- type: oaipmh20
+  url: https://solar-dachs.oca.eu/oai.xml?verb=Identify
+  version: '2.0'
 id: solardachsocaeu
 langs:
 - id: EN

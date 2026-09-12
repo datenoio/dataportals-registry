@@ -69,6 +69,12 @@ endpoints:
 - type: wms-c111
   url: https://jigd.kaltimprov.go.id/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://jigd.kaltimprov.go.id/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://jigd.kaltimprov.go.id/catalogue/opensearch
+  version: '1.1'
 id: jigdkaltimprovgoid
 langs:
 - id: ID
@@ -106,7 +112,8 @@ tags:
 - GIS
 - geospatial
 - government
-description: Geoportal. managed by Pemerintah Provinsi Kalimantan Timur. providing access to jigd kaltim.
+description: Geoportal. managed by Pemerintah Provinsi Kalimantan Timur. providing
+  access to jigd kaltim.
 content_types:
 - dataset
 - map_layer

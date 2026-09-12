@@ -26,6 +26,16 @@ endpoints:
 - type: ckan:package-list
   url: https://pilot.data.gov.la/api/3/action/package_list
   version: '3'
+- type: dcat:ttl
+  url: https://pilot.data.gov.la/catalog.ttl
+- type: dcat
+  url: https://pilot.data.gov.la/catalog.rdf
+- type: dcat:n3
+  url: https://pilot.data.gov.la/catalog.n3
+- type: dcat:xml
+  url: https://pilot.data.gov.la/catalog.xml
+- type: dcat:jsonld
+  url: https://pilot.data.gov.la/catalog.jsonld
 id: pilotdatagovla
 langs:
 - id: LO

@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Lizmap Kamnet is a Geoportal operated by Kamnet.
+id: mapakamnetpl
+langs:
+- id: PL
+  name: Polish
+link: https://mapa.kamnet.pl/
+name: Lizmap Kamnet
+owner:
+  link: https://mapa.kamnet.pl/
+  location:
+    country:
+      id: PL
+      name: Poland
+  name: Kamnet
+  type: Business
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- commercial
+- lizmap
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00042589
+endpoints:
+- type: lizmap:service
+  url: https://mapa.kamnet.pl/index.php/lizmap/service/?repository=mapy&project=Sprawdz_zasieg
+- type: wms130
+  url: https://mapa.kamnet.pl/index.php/lizmap/service/?repository=mapy&project=Sprawdz_zasieg&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0

@@ -28,6 +28,16 @@ endpoints:
 - type: ckan:package-list
   url: https://opendata.mea.or.th/api/3/action/package_list
   version: '3'
+- type: dcat:ttl
+  url: https://opendata.mea.or.th/catalog.ttl
+- type: dcat:xml
+  url: https://opendata.mea.or.th/catalog.xml
+- type: dcat:jsonld
+  url: https://opendata.mea.or.th/catalog.jsonld
+- type: dcat
+  url: https://opendata.mea.or.th/catalog.rdf
+- type: dcat:n3
+  url: https://opendata.mea.or.th/catalog.n3
 id: opendatameaorth
 langs:
 - id: TH

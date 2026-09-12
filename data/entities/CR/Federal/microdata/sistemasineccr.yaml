@@ -16,11 +16,13 @@ coverage:
       id: '013'
       name: Central America
 description: Official NADA microdata catalog of the Instituto Nacional de Estadística
-  y Censos (INEC), with survey and census study documentation. Most files are
-  disseminated under limited/restricted access.
+  y Censos (INEC), with survey and census study documentation. Most files are disseminated
+  under limited/restricted access.
 endpoints:
 - type: nada:catalog-search
   url: https://sistemas.inec.cr/pad5/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://sistemas.inec.cr/pad5/index.php/catalog/export/csv?ps=5000&collection[]
 id: sistemasineccr
 langs:
 - id: ES

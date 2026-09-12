@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Shared CKAN open-data catalog operated by Maggioli for Italian public
+  administrations. dati.gov.it harvests more than 100 municipal and provincial tenants
+  from this hub.
+endpoints:
+- type: ckan
+  url: https://www.opendata.maggioli.cloud/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://www.opendata.maggioli.cloud/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://www.opendata.maggioli.cloud/api/3/action/package_list
+  version: '3'
+id: wwwopendatamaggiolicloud
+langs:
+- id: IT
+  name: Italian
+link: https://www.opendata.maggioli.cloud/
+name: Portale Dati Aperti Maggioli
+owner:
+  link: https://www.maggioli.com
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Maggioli
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- italy
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00003442

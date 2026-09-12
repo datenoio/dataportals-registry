@@ -29,6 +29,16 @@ endpoints:
 - type: ckan:package-list
   url: https://opendata.nida.ac.th/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://opendata.nida.ac.th/catalog.n3
+- type: dcat:ttl
+  url: https://opendata.nida.ac.th/catalog.ttl
+- type: dcat:jsonld
+  url: https://opendata.nida.ac.th/catalog.jsonld
+- type: dcat
+  url: https://opendata.nida.ac.th/catalog.rdf
+- type: dcat:xml
+  url: https://opendata.nida.ac.th/catalog.xml
 id: opendatanidaacth
 langs:
 - id: TH

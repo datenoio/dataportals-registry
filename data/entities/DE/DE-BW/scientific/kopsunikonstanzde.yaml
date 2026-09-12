@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- publication
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+description: University of Konstanz KOPS DSpace 8.2 repository with a first-class
+  Dataset entity (about 1,146 datasets) alongside publications.
+endpoints:
+- type: dspace
+  url: https://kops.uni-konstanz.de/server/api
+  version: '8'
+- type: dspace:objects
+  url: https://kops.uni-konstanz.de/server/api/discover/search/objects
+  version: '8'
+- type: oaipmh20
+  url: https://kops.uni-konstanz.de/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://kops.uni-konstanz.de/sitemap_index.xml
+- type: oaipmh20
+  url: https://kops.uni-konstanz.de/server/oai/request?verb=Identify
+  version: '2.0'
+id: kopsunikonstanzde
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://kops.uni-konstanz.de
+name: KOPS University of Konstanz
+owner:
+  link: https://www.uni-konstanz.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+  name: University of Konstanz
+  type: Academy
+properties:
+  dataset_count_reported: 1146
+  has_doi: true
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- institutional repository
+- DSpace
+- Konstanz
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00042993

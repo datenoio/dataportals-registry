@@ -29,6 +29,11 @@ endpoints:
   url: https://eprints.uklo.edu.mk/cgi/latest_tool?output=Atom
 - type: eprints:rest
   url: https://eprints.uklo.edu.mk/rest/eprint
+- type: eprints:datasets
+  url: https://eprints.uklo.edu.mk/cgi/exportview/type/dataset/JSON/dataset.js
+- type: opensearch
+  url: https://eprints.uklo.edu.mk/cgi/opensearchdescription
+  version: '1.1'
 id: eprintsukloedumk
 langs:
 - id: MK

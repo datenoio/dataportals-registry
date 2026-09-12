@@ -19,6 +19,23 @@ description: Open access publication server of the University of Regensburg for 
 endpoints:
 - type: sitemap
   url: https://epub.uni-regensburg.de/sitemap.xml
+- type: oaipmh20
+  url: https://epub.uni-regensburg.de/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://epub.uni-regensburg.de/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: eprints:rest
+  url: https://epub.uni-regensburg.de/rest/eprint
+- type: atom
+  url: https://epub.uni-regensburg.de/cgi/latest_tool?output=Atom
+- type: eprints:rdf
+  url: https://epub.uni-regensburg.de/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://epub.uni-regensburg.de/cgi/export/repository/RDFN3/devel.n3
+- type: opensearch
+  url: https://epub.uni-regensburg.de/cgi/opensearchdescription
+  version: '1.1'
 id: epubuniregensburgde
 langs:
 - id: DE

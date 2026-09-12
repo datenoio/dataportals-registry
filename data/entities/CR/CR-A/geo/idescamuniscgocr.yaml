@@ -18,9 +18,8 @@ coverage:
     subregion:
       id: CR-A
       name: Alajuela
-description: Infraestructura de Datos Espaciales del Cantón de San Carlos
-  (IDESCA). GeoNode catalog of municipal geographic datasets for San Carlos,
-  Alajuela.
+description: Infraestructura de Datos Espaciales del Cantón de San Carlos (IDESCA).
+  GeoNode catalog of municipal geographic datasets for San Carlos, Alajuela.
 endpoints:
 - type: geonode:layers
   url: https://idesca.munisc.go.cr/api/layers/
@@ -84,6 +83,9 @@ endpoints:
 - type: wms-c111
   url: https://idesca.munisc.go.cr/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://idesca.munisc.go.cr/api/v2/datasets/
+  version: '2'
 id: idescamuniscgocr
 langs:
 - id: ES

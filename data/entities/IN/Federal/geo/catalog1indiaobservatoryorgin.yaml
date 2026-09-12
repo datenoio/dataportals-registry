@@ -25,6 +25,12 @@ endpoints:
 - type: pygeoapi:collections
   url: https://catalog1.indiaobservatory.org.in/collections?f=json
   version: '1.0'
+- type: pygeoapi:openapi
+  url: https://catalog1.indiaobservatory.org.in/openapi
+  version: '1.0'
+- type: ogc:features
+  url: https://catalog1.indiaobservatory.org.in/collections/?f=json
+  version: '1.0'
 id: catalog1indiaobservatoryorgin
 langs:
 - id: EN

@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: Official government GeoNode portal for the National Spatial Data
-  Infrastructure of Kazakhstan (НИПД), with GeoServer OGC services.
+description: Official government GeoNode portal for the National Spatial Data Infrastructure
+  of Kazakhstan (НИПД), with GeoServer OGC services.
 endpoints:
 - type: geonode:datasets
   url: https://map.gov.kz/api/datasets/
@@ -72,6 +72,9 @@ endpoints:
   url: https://map.gov.kz/geoserver/rest/layers
 - type: opensearch
   url: https://map.gov.kz/catalogue/opensearch
+- type: geonode:datasets
+  url: https://map.gov.kz/api/v2/datasets/
+  version: '2'
 id: mapgovkz
 langs:
 - id: RU

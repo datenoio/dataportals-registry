@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: SCK CEN Research Portal is a Scientific data repository operated by SCK
+  CEN Research Portal, built with Pure.
+id: researchportalsckcenbe
+langs:
+- id: FR
+  name: French
+- id: NL
+  name: Dutch
+link: https://researchportal.sckcen.be
+name: SCK CEN Research Portal
+owner:
+  link: https://researchportal.sckcen.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+  name: SCK CEN Research Portal
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042856
+endpoints:
+- type: rss
+  url: https://researchportal.sckcen.be/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://researchportal.sckcen.be/sitemap/datasets.xml

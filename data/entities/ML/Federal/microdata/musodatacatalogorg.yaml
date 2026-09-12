@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Microdata catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ML
+      name: Mali
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: NADA microdata catalog of Muso Health, publishing documentation and datasets
+  from community health research in Mali and Côte d'Ivoire.
+endpoints:
+- type: nada:catalog-search
+  url: https://musodatacatalog.org/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://musodatacatalog.org/index.php/catalog/export/csv?ps=5000&collection[]
+id: musodatacatalogorg
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://musodatacatalog.org
+name: MUSO Data Catalog
+owner:
+  link: https://www.musohealth.org
+  location:
+    country:
+      id: ML
+      name: Mali
+  name: Muso
+  type: Civil society
+software:
+  id: nada
+  name: NADA
+status: active
+tags:
+- microdata
+- statistics
+- civil society
+- nada
+- has_api
+- health
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00042605

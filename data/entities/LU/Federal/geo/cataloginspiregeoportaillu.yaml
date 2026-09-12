@@ -34,6 +34,10 @@ endpoints:
 - type: oaipmh20
   url: https://catalog.inspire.geoportail.lu/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:selections
+  url: https://catalog.inspire.geoportail.lu/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://catalog.inspire.geoportail.lu/geonetwork/srv/api/site
 id: cataloginspiregeoportaillu
 langs:
 - id: FR

@@ -12,7 +12,7 @@ coverage:
       name: Italy
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Phaidra (Permanent Hosting, Archiving and Indexing of Digital Resources
   and Assets) is the University of Padua Library System’s platform for long-term archiving
@@ -29,6 +29,14 @@ endpoints:
 - type: oaipmh20
   url: https://phaidra.unipd.it/api/oai?verb=Identify
   version: '2.0'
+- type: rest
+  url: https://phaidra.unipd.it/api/search/select
+- type: openapi
+  url: https://phaidra.unipd.it/api/openapi/json
+- type: rest
+  url: https://phaidra.unipd.it/api/search/select?q=cmodel:*Dataset*&wt=json&rows=25
+- type: rest
+  url: https://phaidra.unipd.it/api/search/select?q=dc_type:dataset&wt=json&rows=25
 id: phaidraunipdit
 identifiers:
 - id: openaire

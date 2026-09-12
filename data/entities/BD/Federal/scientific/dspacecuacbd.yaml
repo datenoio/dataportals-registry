@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: University of Chittagong DSpace is a scientific data repository operated by
-  University of Chittagong running on DSpace.
+description: University of Chittagong DSpace is a scientific data repository operated
+  by University of Chittagong running on DSpace.
 endpoints:
 - type: dspace
   url: https://dspace.cu.ac.bd/server/api
@@ -25,6 +25,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://dspace.cu.ac.bd/sitemap_index.xml
+- type: oaipmh20
+  url: https://dspace.cu.ac.bd/server/oai/request?verb=Identify
+  version: '2.0'
 id: dspacecuacbd
 langs:
 - id: EN

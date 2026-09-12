@@ -1,0 +1,76 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: SS
+      name: South Sudan
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Technical and Vocational Education and Training management information
+  system of South Sudan's Ministry of General Education and Instruction, operated
+  on DHIS2. Login is required to query education indicators. Distinct from the national
+  HMIS at southsudanhis.org.
+endpoints:
+- type: dhis2:catalog
+  url: https://tvetmis.mogei.gov.ss
+- type: dhis2:system-info
+  url: https://tvetmis.mogei.gov.ss/api/system/info
+- type: dhis2:datasets
+  url: https://tvetmis.mogei.gov.ss/api/dataSets.json?fields=id,displayName&pageSize=1
+id: tvetmismogeigovss
+langs:
+- id: EN
+  name: English
+link: https://tvetmis.mogei.gov.ss
+name: South Sudan TVET MIS (DHIS2)
+owner:
+  link: https://mogei.gov.ss
+  location:
+    country:
+      id: SS
+      name: South Sudan
+    level: 20
+  name: Ministry of General Education and Instruction
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dhis2
+  name: DHIS2
+status: active
+tags:
+- education
+- TVET
+- DHIS2
+- government
+- restricted
+- has_api
+- South Sudan
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043701

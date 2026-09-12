@@ -15,9 +15,8 @@ coverage:
       id: '015'
       name: Northern Africa
 description: Open data portal from a collaboration between the Ministry of Cultural
-  Affairs and its supervised institutions, providing a single entry point to the
-  ministry's open datasets. HTTPS is not served; the CKAN site remains available
-  over HTTP.
+  Affairs and its supervised institutions, providing a single entry point to the ministry's
+  open datasets. HTTPS is not served; the CKAN site remains available over HTTP.
 endpoints:
 - type: ckan
   url: http://www.openculture.gov.tn/api/3
@@ -28,6 +27,12 @@ endpoints:
 - type: ckan:package-list
   url: http://www.openculture.gov.tn/api/3/action/package_list
   version: '3'
+- type: dcat:xml
+  url: http://www.openculture.gov.tn/catalog.xml
+- type: dcat:jsonld
+  url: http://www.openculture.gov.tn/catalog.jsonld
+- type: dcat
+  url: http://www.openculture.gov.tn/catalog.rdf
 id: wwwopenculturegovtn
 langs:
 - id: FR

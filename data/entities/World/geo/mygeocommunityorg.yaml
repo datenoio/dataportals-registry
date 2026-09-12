@@ -61,6 +61,12 @@ endpoints:
 - type: wps100
   url: https://mygeocommunity.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://mygeocommunity.org/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://mygeocommunity.org/catalogue/opensearch
+  version: '1.1'
 id: mygeocommunityorg
 langs:
 - id: EN

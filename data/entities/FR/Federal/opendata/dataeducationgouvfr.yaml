@@ -22,6 +22,11 @@ endpoints:
   url: https://data.education.gouv.fr/api
 - type: sitemap
   url: https://data.education.gouv.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcatus11
+  url: https://data.education.gouv.fr/data.json
 id: dataeducationgouvfr
 langs:
 - id: FR

@@ -13,12 +13,13 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
-description: GeoNetwork metadata catalogue of the European Long-Term Ecosystem Research (eLTER)
-  Data Integration Portal, hosted at BioSense Institute in Novi Sad. The public homepage now
-  redirects to the successor eLTER DiV site (div.elter-ri.eu); GeoNetwork remains at dip.lter-europe.net/geonetwork.
-  Coverage is the eLTER network in Europe; the registry path follows the Serbian host institution.
+description: GeoNetwork metadata catalogue of the European Long-Term Ecosystem Research
+  (eLTER) Data Integration Portal, hosted at BioSense Institute in Novi Sad. The public
+  homepage now redirects to the successor eLTER DiV site (div.elter-ri.eu); GeoNetwork
+  remains at dip.lter-europe.net/geonetwork. Coverage is the eLTER network in Europe;
+  the registry path follows the Serbian host institution.
 endpoints:
 - type: geonetwork:query
   url: https://dip.lter-europe.net/geonetwork/srv/eng/q
@@ -31,6 +32,11 @@ endpoints:
 - type: oaipmh20
   url: https://dip.lter-europe.net/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: openapi
+  url: https://dip.lter-europe.net/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: geonetwork:site
+  url: https://dip.lter-europe.net/geonetwork/srv/api/site
 id: dipltereuropenet
 langs:
 - id: EN

@@ -21,6 +21,15 @@ endpoints:
   url: https://foundation-s-mychildmatters.opendatasoft.com/api
 - type: sitemap
   url: https://foundation-s-mychildmatters.opendatasoft.com/sitemap.xml
+- type: opendatasoftapi
+  url: https://foundation-s-mychildmatters.opendatasoft.com/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://foundation-s-mychildmatters.opendatasoft.com/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://foundation-s-mychildmatters.opendatasoft.com/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://foundation-s-mychildmatters.opendatasoft.com/data.json
 id: foundationsmychildmattersopendatasoftcom
 langs:
 - id: EN

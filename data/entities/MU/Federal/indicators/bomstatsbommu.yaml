@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+- indicator
+coverage:
+- location:
+    country:
+      id: MU
+      name: Mauritius
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: BOMStats is the Bank of Mauritius Istat Data Browser (StatKit) portal
+  for monetary, financial, external-sector, and payment statistics published in the
+  Monthly Statistical Bulletin. Distinct from the Bank's publications HTML page.
+endpoints:
+- type: istatdatabrowser:hub
+  url: https://bomstats.bom.mu/api/core/hub/minimalInfo
+- type: istatdatabrowser:nodes
+  url: https://bomstats.bom.mu/api/core/nodes
+id: bomstatsbommu
+langs:
+- id: EN
+  name: English
+link: https://bomstats.bom.mu/
+name: BOMStats Portal
+owner:
+  link: https://www.bom.mu
+  location:
+    country:
+      id: MU
+      name: Mauritius
+    level: 20
+  name: Bank of Mauritius
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: istatdatabrowser
+  name: Istat Data Browser
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- Mauritius
+- central bank
+- SDMX
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00043570

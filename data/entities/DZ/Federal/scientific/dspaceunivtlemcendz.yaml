@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '015'
       name: Northern Africa
-description: University of Tlemcen Institutional Repository is a scientific data
-  repository operated by Université Abou Bekr Belkaid Tlemcen running on DSpace.
+description: University of Tlemcen Institutional Repository is a scientific data repository
+  operated by Université Abou Bekr Belkaid Tlemcen running on DSpace.
 endpoints:
 - type: dspace
   url: https://dspace.univ-tlemcen.dz/server/api
@@ -26,6 +26,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://dspace.univ-tlemcen.dz/sitemap_index.xml
+- type: oaipmh20
+  url: https://dspace.univ-tlemcen.dz/server/oai/request?verb=Identify
+  version: '2.0'
 id: dspaceunivtlemcendz
 langs:
 - id: AR

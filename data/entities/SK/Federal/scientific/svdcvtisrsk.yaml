@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: National InvenioRDM repository (SVD / Správa výskumných dát) operated
+  by CVTI SR for depositing and publishing research datasets, models, and software
+  from Slovak research organisations. Public catalog lists dataset-typed records alongside
+  other research objects.
+endpoints:
+- type: inveniordmapi:records
+  url: https://svd.cvtisr.sk/svd-api/records
+- type: oaipmh20
+  url: https://svd.cvtisr.sk/svd-api/oai2d?verb=Identify
+  version: '2.0'
+id: svdcvtisrsk
+langs:
+- id: SK
+  name: Slovak
+- id: EN
+  name: English
+link: https://svd.cvtisr.sk/
+name: SVD — Central repository for research data in Slovakia
+owner:
+  link: https://www.cvtisr.sk/
+  location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 20
+  name: Centrum vedecko-technických informácií SR
+  type: Central government
+properties:
+  dataset_count_reported: 11
+  is_national: false
+software:
+  id: inveniordm
+  name: InvenioRDM
+status: active
+tags:
+- scientific
+- research data
+- inveniordm
+- national repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00042788

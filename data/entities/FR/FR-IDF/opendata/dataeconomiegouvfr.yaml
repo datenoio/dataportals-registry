@@ -21,6 +21,15 @@ endpoints:
   url: https://data.economie.gouv.fr/api
 - type: sitemap
   url: https://data.economie.gouv.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.economie.gouv.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.economie.gouv.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.economie.gouv.fr/data.json
 id: dataeconomiegouvfr
 langs:
 - id: FR

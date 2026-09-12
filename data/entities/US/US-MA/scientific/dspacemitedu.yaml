@@ -40,6 +40,14 @@ endpoints:
   url: https://dspace.mit.edu/htmlmap
 - type: opensearch
   url: http://dspace.mit.edu:80/open-search/description.xml
+- type: dspace
+  url: http://dspace.mit.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: http://dspace.mit.edu/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: http://dspace.mit.edu/sitemap_index.xml
 id: dspacemitedu
 langs:
 - id: EN

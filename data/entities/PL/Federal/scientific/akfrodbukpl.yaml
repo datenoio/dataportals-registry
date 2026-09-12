@@ -15,14 +15,16 @@ coverage:
       id: '151'
       name: Eastern Europe
 description: RODBUK Dataverse node of the University of Physical Education in Krakow
-  (AWF Kraków) for depositing and sharing research data from sports science and
-  related disciplines.
+  (AWF Kraków) for depositing and sharing research data from sports science and related
+  disciplines.
 endpoints:
 - type: dataverseapi
   url: https://akf.rodbuk.pl/api/search
 - type: oaipmh20
   url: https://akf.rodbuk.pl/oai?verb=Identify
   version: '2.0'
+- type: dataverseapi
+  url: https://akf.rodbuk.pl/api/info/version
 id: akfrodbukpl
 langs:
 - id: EN

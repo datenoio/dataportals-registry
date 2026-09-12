@@ -22,6 +22,12 @@ description: Open Data portal of the Lazio region dedicated to the Open Data of 
 endpoints:
 - type: ckan
   url: https://dati.lazio.it/api/3
+- type: ckan:package-search
+  url: https://dati.lazio.it/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dati.lazio.it/api/3/action/package_list
+  version: '3'
 id: datilazioit
 langs:
 - id: IT

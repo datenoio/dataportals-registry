@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: MY-01
+      name: Johor
+description: Universiti Tun Hussein Onn Malaysia DSpace 7.6 research-data catalog
+  at data.uthm.edu.my, with Dataset-typed supplementary research files.
+endpoints:
+- type: dspace
+  url: https://data.uthm.edu.my/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://data.uthm.edu.my/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://data.uthm.edu.my/sitemap_index.xml
+- type: oaipmh20
+  url: https://data.uthm.edu.my/server/oai/request?verb=Identify
+  version: '2.0'
+id: datauthmedumy
+langs:
+- id: EN
+  name: English
+link: https://data.uthm.edu.my
+name: UTHM Research Data Repository
+owner:
+  link: https://www.uthm.edu.my
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 30
+    subregion:
+      id: MY-01
+      name: Johor
+  name: Universiti Tun Hussein Onn Malaysia
+  type: Academy
+properties:
+  dataset_count_reported: 6
+  has_doi: true
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- institutional repository
+- DSpace
+- UTHM
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00043576

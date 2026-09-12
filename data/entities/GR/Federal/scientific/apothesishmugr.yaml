@@ -13,7 +13,7 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Apothesis is the institutional repository of the Hellenic Mediterranean
   University Library. It collects, preserves, and provides access to bachelor’s, master’s,
@@ -22,6 +22,8 @@ endpoints:
 - type: oaipmh20
   url: https://apothesis.hmu.gr/oai/request?verb=Identify
   version: '2.0'
+- type: sitemap
+  url: https://apothesis.hmu.gr/sitemap_index.xml
 id: apothesishmugr
 langs:
 - id: EL

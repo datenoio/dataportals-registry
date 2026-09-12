@@ -23,6 +23,13 @@ endpoints:
   url: https://data.eurelien.fr/api
 - type: sitemap
   url: https://data.eurelien.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.eurelien.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.eurelien.fr/api/v2/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.eurelien.fr/data.json
 id: dataeurelienfr
 langs:
 - id: FR

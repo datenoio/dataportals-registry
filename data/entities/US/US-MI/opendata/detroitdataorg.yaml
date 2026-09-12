@@ -28,6 +28,16 @@ endpoints:
 - type: ckan:package-list
   url: https://detroitdata.org/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://detroitdata.org/catalog.n3
+- type: dcat:ttl
+  url: https://detroitdata.org/catalog.ttl
+- type: dcat:xml
+  url: https://detroitdata.org/catalog.xml
+- type: dcat:jsonld
+  url: https://detroitdata.org/catalog.jsonld
+- type: dcat
+  url: https://detroitdata.org/catalog.rdf
 id: detroitdataorg
 langs:
 - id: EN

@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Open data catalog of Taiwan's Water Resources Agency (Ministry of Economic
+  Affairs), listing agency datasets and an OpenAPI page. The public UI is the MODA
+  Nuxt frontend and syncs selected records to data.gov.tw.
+endpoints:
+- type: modaopendata:catalog
+  url: https://opendata.wra.gov.tw
+id: opendatawragovtw
+langs:
+- id: ZH
+  name: Chinese
+link: https://opendata.wra.gov.tw
+name: Water Resources Agency Open Data Platform
+owner:
+  link: https://www.wra.gov.tw
+  location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 20
+  name: Water Resources Agency, Ministry of Economic Affairs
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: modaopendata
+  name: MODA Open Data Platform
+status: active
+tags:
+- open data
+- water
+- government
+- Taiwan
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+uid: cdi00043736

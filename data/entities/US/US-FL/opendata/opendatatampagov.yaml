@@ -29,6 +29,18 @@ endpoints:
 - type: ckan:package-list
   url: https://opendata.tampa.gov/api/3/action/package_list
   version: '3'
+- type: dcatus11
+  url: https://opendata.tampa.gov/data.json
+- type: dcat:n3
+  url: https://opendata.tampa.gov/catalog.n3
+- type: dcat:ttl
+  url: https://opendata.tampa.gov/catalog.ttl
+- type: dcat:xml
+  url: https://opendata.tampa.gov/catalog.xml
+- type: dcat:jsonld
+  url: https://opendata.tampa.gov/catalog.jsonld
+- type: dcat
+  url: https://opendata.tampa.gov/catalog.rdf
 id: opendatatampagov
 langs:
 - id: EN

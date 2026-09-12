@@ -21,6 +21,8 @@ description: C-DAMAA NADA catalogue at the University of Cape Coast. Publishes s
 endpoints:
 - type: nada:catalog-search
   url: https://nada.ucc.edu.gh/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://nada.ucc.edu.gh/index.php/catalog/export/csv?ps=5000&collection[]
 id: nadauccedugh
 langs:
 - id: EN

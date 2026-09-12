@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Metadata catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AE
+      name: United Arab Emirates
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Public Fusion Metadata Registry serving SDMX structural metadata (dataflows,
+  DSDs, codelists) for the UAE Federal Competitiveness and Statistics Centre (FCSA/FCSC
+  agencies).
+endpoints:
+- type: sdmx:dataflows
+  url: https://fmr.agenticx.it.com/ws/public/sdmxapi/rest/dataflow/all/all/latest?detail=allstubs
+  version: '2.1'
+id: fmragenticxitcom
+langs:
+- id: AR
+  name: Arabic
+link: https://fmr.agenticx.it.com/
+name: FCSC Fusion Metadata Registry
+owner:
+  link: https://www.fcsc.gov.ae
+  location:
+    country:
+      id: AE
+      name: United Arab Emirates
+  name: Federal Competitiveness and Statistics Centre
+  type: Central government
+software:
+  id: fusionregistry
+  name: Fusion Metadata Registry
+status: active
+tags:
+- metadata
+- government
+- fusionregistry
+- Fusion Metadata Registry
+- has_api
+- statistics
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00043836

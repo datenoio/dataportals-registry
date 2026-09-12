@@ -1,0 +1,65 @@
+category: Metadata catalog
+subtype: metadata_registry_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: datahubproject
+name: DataHub
+website: https://datahubproject.io
+description: LinkedIn/Acryl DataHub is an open-source metadata platform for the modern
+  data stack. Public catalog UIs title DataHub, describe themselves as a metadata
+  platform, and expose GraphQL at `/api/graphql` (often authenticated). Distinct from
+  datahub.io (CKAN).
+owner:
+  name: DataHub Project
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://datahubproject.io/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+  graphql: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/datahub-project/datahub
+documentation_url: https://datahubproject.io/docs
+license:
+  type: Apache-2.0
+  url: https://www.apache.org/licenses/LICENSE-2.0
+export_formats:
+- JSON
+- GraphQL
+capabilities:
+- Metadata graph
+- GraphQL API
+- Dataset discovery
+last_updated: '2026-09-09T00:00:00Z'

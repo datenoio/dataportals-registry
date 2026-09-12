@@ -1,0 +1,75 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: University of Leeds EPrints catalog of restricted-access research datasets;
+  metadata is publicly searchable and harvestable via OAI-PMH. Distinct from the public
+  Research Data Leeds Repository at archive.researchdata.leeds.ac.uk.
+endpoints:
+- type: oaipmh20
+  url: https://radar.researchdata.leeds.ac.uk/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://radar.researchdata.leeds.ac.uk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://radar.researchdata.leeds.ac.uk/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://radar.researchdata.leeds.ac.uk/rest/eprint
+- type: eprints:rdf
+  url: https://radar.researchdata.leeds.ac.uk/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://radar.researchdata.leeds.ac.uk/cgi/export/repository/RDFN3/devel.n3
+- type: eprints:datasets
+  url: https://radar.researchdata.leeds.ac.uk/cgi/exportview/type/dataset/JSON/dataset.js
+- type: opensearch
+  url: https://radar.researchdata.leeds.ac.uk/cgi/opensearchdescription
+  version: '1.1'
+id: radarresearchdataleedsacuk
+langs:
+- id: EN
+  name: English
+link: https://radar.researchdata.leeds.ac.uk/
+name: Restricted Access Data Repository - Leeds (RADAR)
+owner:
+  link: https://www.leeds.ac.uk/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: University of Leeds
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: eprints
+  name: EPrints
+status: active
+tags:
+- research data
+- eprints
+- restricted
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00043327

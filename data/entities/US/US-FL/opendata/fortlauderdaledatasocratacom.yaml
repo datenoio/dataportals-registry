@@ -30,6 +30,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-fortlauderdale.data.socrata.com.xml
 - type: opensearch
   url: https://fortlauderdale.data.socrata.com/opensearch.xml
+- type: socrata:catalog
+  url: https://fortlauderdale.data.socrata.com/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: fortlauderdaledatasocratacom
 langs:
 - id: EN

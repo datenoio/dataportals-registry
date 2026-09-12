@@ -13,7 +13,7 @@ coverage:
       name: Montenegro
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Development GeoNode of CEDIS (Crnogorski elektrodistributivni sistem),
   Montenegro's electricity distribution system operator. Publishes geospatial layers
@@ -71,6 +71,9 @@ endpoints:
   version: 2.0.0
 - type: sitemap
   url: https://razvojgis.cedis.me/sitemap.xml
+- type: opensearch
+  url: https://razvojgis.cedis.me/catalogue/opensearch
+  version: '1.1'
 id: razvojgiscedisme
 langs:
 - id: SR

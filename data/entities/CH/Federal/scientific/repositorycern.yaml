@@ -19,6 +19,9 @@ description: CERN institutional repository (CDS) for publications, reports, and 
 endpoints:
 - type: inveniordmapi:records
   url: https://repository.cern/api/records
+- type: oaipmh20
+  url: https://repository.cern/oai2d?verb=Identify
+  version: '2.0'
 id: repositorycern
 langs:
 - id: EN

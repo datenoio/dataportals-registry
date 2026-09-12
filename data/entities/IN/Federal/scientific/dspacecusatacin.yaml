@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: DSpace at Cochin University is a scientific data repository operated by
-  Cochin University of Science and Technology running on DSpace.
+description: DSpace at Cochin University is a scientific data repository operated
+  by Cochin University of Science and Technology running on DSpace.
 endpoints:
 - type: dspace
   url: https://dspace.cusat.ac.in/server/api
@@ -23,6 +23,9 @@ endpoints:
 - type: dspace:objects
   url: https://dspace.cusat.ac.in/server/api/discover/search/objects
   version: '7'
+- type: oaipmh20
+  url: https://dspace.cusat.ac.in/server/oai/request?verb=Identify
+  version: '2.0'
 id: dspacecusatacin
 langs:
 - id: EN

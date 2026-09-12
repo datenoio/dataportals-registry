@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -68,3 +68,6 @@ topics:
   name: Economy and finance
   type: eudatatheme
 uid: cdi99995201
+endpoints:
+- type: customapi
+  url: https://statbas.tycg.gov.tw/DgbasWeb/

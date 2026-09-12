@@ -26,6 +26,11 @@ endpoints:
 - type: dspace:objects
   url: https://repozytorium.kul.pl/server/api/discover/search/objects
   version: '7'
+- type: sitemap
+  url: https://repozytorium.kul.pl/sitemap_index.xml
+- type: oaipmh20
+  url: https://repozytorium.kul.pl/server/oai/request?verb=Identify
+  version: '2.0'
 id: repozytoriumkulpl
 identifiers:
 - id: re3data

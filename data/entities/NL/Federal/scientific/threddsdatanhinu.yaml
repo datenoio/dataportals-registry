@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: THREDDS/OPeNDAP catalog of Dutch hydrological model datasets from the
+  Netherlands Hydrological Instrumentarium.
+endpoints:
+- type: thredds:catalog
+  url: https://thredds.data.nhi.nu/thredds/catalog.xml
+- type: thredds:info
+  url: https://thredds.data.nhi.nu/thredds/info/serverInfo.xml
+id: threddsdatanhinu
+langs:
+- id: EN
+  name: English
+- id: NL
+  name: Dutch
+link: https://thredds.data.nhi.nu/thredds/catalog.html
+name: Netherlands Hydrological Instrumentarium THREDDS
+owner:
+  link: https://nhi.nu/
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: Nederlands Hydrologisch Instrumentarium
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- THREDDS
+- hydrology
+- scientific
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+uid: cdi00042349

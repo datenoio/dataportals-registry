@@ -20,6 +20,11 @@ description: DataPLANT publication service for Annotated Research Contexts (ARCs
 endpoints:
 - type: inveniordmapi:records
   url: https://archive.nfdi4plants.org/api/records?size=1
+- type: inveniordmapi:records
+  url: https://archive.nfdi4plants.org/api/records
+- type: oaipmh20
+  url: https://archive.nfdi4plants.org/oai2d?verb=Identify
+  version: '2.0'
 id: archivenfdi4plantsorg
 identifiers:
 - id: re3data

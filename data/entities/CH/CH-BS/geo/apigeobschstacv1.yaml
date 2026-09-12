@@ -24,6 +24,12 @@ description: STAC catalog of geodata for the Canton of Basel-Stadt (Geodatenkata
 endpoints:
 - type: stacserverapi
   url: https://api.geo.bs.ch/stac/v1/
+- type: ogc:features
+  url: https://api.geo.bs.ch/stac/v1/collections/?f=json
+  version: '1.0'
+- type: ogc:features
+  url: https://api.geo.bs.ch/stac/v1/collections?f=json
+  version: '1.0'
 id: apigeobschstacv1
 langs:
 - id: DE

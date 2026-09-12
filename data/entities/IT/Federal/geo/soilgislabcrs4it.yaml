@@ -68,6 +68,12 @@ endpoints:
 - type: wms-c111
   url: https://soilgislab.crs4.it/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://soilgislab.crs4.it/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://soilgislab.crs4.it/catalogue/opensearch
+  version: '1.1'
 id: soilgislabcrs4it
 langs:
 - id: EN

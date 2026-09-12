@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: NIWA Open Data. Public catalog operated by National Institute of Water and Atmospheric
-  Research.
+description: NIWA Open Data. Public catalog operated by National Institute of Water
+  and Atmospheric Research.
 endpoints:
 - type: dcatap201
   url: https://data-niwa.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -26,6 +26,8 @@ endpoints:
   url: https://data-niwa.opendata.arcgis.com/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://data-niwa.opendata.arcgis.com/api/search/v1
+- type: dcatus11
+  url: https://data-niwa.opendata.arcgis.com/data.json
 id: dataniwaopendataarcgiscom
 langs:
 - id: EN

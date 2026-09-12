@@ -28,6 +28,18 @@ endpoints:
 - type: ckan:package-list
   url: https://opendata.winchesterva.gov/api/3/action/package_list
   version: '3'
+- type: dcatus11
+  url: https://opendata.winchesterva.gov/data.json
+- type: dcat:n3
+  url: https://opendata.winchesterva.gov/catalog.n3
+- type: dcat:ttl
+  url: https://opendata.winchesterva.gov/catalog.ttl
+- type: dcat:xml
+  url: https://opendata.winchesterva.gov/catalog.xml
+- type: dcat:jsonld
+  url: https://opendata.winchesterva.gov/catalog.jsonld
+- type: dcat
+  url: https://opendata.winchesterva.gov/catalog.rdf
 id: opendatawinchestervagov
 langs:
 - id: EN

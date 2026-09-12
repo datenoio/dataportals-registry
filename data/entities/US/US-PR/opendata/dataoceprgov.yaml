@@ -28,6 +28,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.oce.pr.gov.xml
 - type: opensearch
   url: https://data.oce.pr.gov/opensearch.xml
+- type: socrata:catalog
+  url: https://data.oce.pr.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: dataoceprgov
 langs:
 - id: ES

@@ -81,6 +81,11 @@ endpoints:
   url: https://ccibis.priestoroveplanovanie.sk/geoserver/rest/layers
 - type: opensearch
   url: https://ccibis.priestoroveplanovanie.sk/catalogue/opensearch
+- type: geonode:datasets
+  url: https://ccibis.priestoroveplanovanie.sk/api/datasets/
+- type: geonode:datasets
+  url: https://ccibis.priestoroveplanovanie.sk/api/v2/datasets/
+  version: '2'
 id: ccibispriestoroveplanovaniesk
 langs:
 - id: SK

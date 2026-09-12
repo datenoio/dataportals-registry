@@ -39,6 +39,9 @@ endpoints:
   url: https://catalog.nsdi.gov.lk/opensearch?f=csv&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
 - type: esrigeo:kml
   url: https://catalog.nsdi.gov.lk/opensearch?f=kml&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: csw202
+  url: https://catalog.nsdi.gov.lk/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
 id: catalognsdigovlk
 langs:
 - id: EN

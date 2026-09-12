@@ -36,6 +36,18 @@ endpoints:
 - type: wfs200
   url: https://www.geoproxy.geoportal-th.de/geoproxy/services?SERVICE=WFS&REQUEST=GetCapabilities&VERSION=2.0.0
   version: 2.0.0
+- type: wms130
+  url: https://www.geoproxy.geoportal-th.de/geoproxy/services?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: csw202
+  url: https://www.geoproxy.geoportal-th.de/geoproxy/services?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: wms130
+  url: https://www.geoproxy.geoportal-th.de/geoproxy/deegree-webservices/services?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: csw202
+  url: https://www.geoproxy.geoportal-th.de/geoproxy/deegree-webservices/services?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
 id: wwwgeoproxygeoportalthde
 langs:
 - id: DE

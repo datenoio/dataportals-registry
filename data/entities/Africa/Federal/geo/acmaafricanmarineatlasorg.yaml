@@ -16,9 +16,9 @@ coverage:
     macroregion:
       id: '002'
       name: Africa
-description: African Coastal and Marine Atlas (ACMA) GeoNode sharing coastal and marine geospatial
-  datasets, maps, documents, and dashboards for the African seas and coasts. CSW, OAI-PMH,
-  and GeoServer OGC services are live.
+description: African Coastal and Marine Atlas (ACMA) GeoNode sharing coastal and marine
+  geospatial datasets, maps, documents, and dashboards for the African seas and coasts.
+  CSW, OAI-PMH, and GeoServer OGC services are live.
 endpoints:
 - type: geonode:datasets
   url: https://acma.africanmarineatlas.org/api/datasets/
@@ -66,6 +66,12 @@ endpoints:
 - type: wps100
   url: https://acma.africanmarineatlas.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://acma.africanmarineatlas.org/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://acma.africanmarineatlas.org/catalogue/opensearch
+  version: '1.1'
 id: acmaafricanmarineatlasorg
 langs:
 - id: EN

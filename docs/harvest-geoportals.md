@@ -67,13 +67,15 @@ GET https://host/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
 
 ```text
 GET https://host/api/datasets/?limit=100&offset=0
+GET https://host/api/v2/datasets/
+GET https://host/catalogue/opensearch
 ```
 
-GeoNode 3 uses `/api/layers/` instead of `/api/datasets/`. Follow `meta.total_count`.
+GeoNode 3 uses `/api/layers/` instead of `/api/datasets/`. GeoNode 4 uses `/api/v2/datasets/`. Follow `meta.total_count`. OpenSearch description is `/catalogue/opensearch` (distinct from CSW `mode=opensearch`).
 
 **Drop:** `/api/maps/` (compositions), `/api/geoapps/`, `/api/documents/` unless those documents are the data product, `/api/profiles/`. CSW at `/catalogue/csw` duplicates REST layers — pick one.
 
-**Keep:** GeoNode **dataset** / layer REST objects (`/api/datasets/` or GeoNode 3 `/api/layers/`).
+**Keep:** GeoNode **dataset** / layer REST objects (`/api/datasets/`, GeoNode 4 `/api/v2/datasets/`, or GeoNode 3 `/api/layers/`).
 
 ## Palapa (`palapa`) {#palapa}
 
@@ -86,6 +88,8 @@ GET https://host/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
 ```
 
 Keep ISO `dataset` / `series` from CSW, or WMS Layer names if CSW is absent. Drop `/gspalapa/` login, `/main/` HTML as datasets, and GeoNode `/api/datasets/` (that is `geonode`, not Palapa).
+
+Type `/geoserver/ows` WMS 1.3.0 as `wms130`. Attach to the catalog `link`; do not prefix `/geoserver` again when the link already includes that mount.
 
 **Keep:** ISO `dataset` / `series` from Palapa CSW (or WMS Layer names if CSW is absent). **Drop:** `/gspalapa/` login, `/main/` HTML, and GeoNode REST.
 
@@ -108,6 +112,8 @@ GET https://host/cubewerx/cubeserv?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabili
 GET https://host/cubewerx/cubeserv?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
 ```
 
+Typical catalog links already end in `/cubewerx/cubeserv`. Cleanup strips `/cubewerx` so those GetCapabilities query strings attach at origin and are not doubled.
+
 Harvest **named layers** from WMS/WMTS or **ISO dataset/series** from CSW. Prefer CSW when both exist. Do not ingest the same layer from WMS and WMTS. Skip the CubeWerx demo and login-only Stratos admin.
 
 **Keep:** ISO dataset/series from CSW, or named WMS/WMTS layers if CSW is absent. **Drop:** the same layer from both WMS and WMTS, CubeWerx demo, and Stratos admin.
@@ -123,6 +129,7 @@ Public `/Apps/` portal. Harvest WMS/WFS GetCapabilities or the portal’s publis
 ```text
 GET https://host/api/search/v1
 GET https://host/api/feed/dcat-us/1.1.json
+GET https://host/data.json
 ```
 
 Keep Feature Layer, Table, Shapefile, CSV, and similar **data** items. Drop Hub Site, StoryMap, Dashboard, Web Mapping Application, Domain, and people. DCAT-US `dataset` entries are the preferred grain. Same software as open data — see [harvest-opendata.md](harvest-opendata.md#arcgishub).
@@ -201,6 +208,8 @@ HTML UI over a STAC API. Harvest the **API** `href` from the catalog JSON the br
 GET https://host/catalog.json
 ```
 
+Typical catalog links already end in `/catalog.json`. Cleanup strips that filename so the harvest path attaches at origin and is not doubled.
+
 
 ## pygeoapi (`pygeoapi`) {#pygeoapi}
 
@@ -211,16 +220,20 @@ OGC API Features / Records. Each collection is a dataset. Protocol grain: [harve
 
 ```text
 GET https://host/collections?f=json
+GET https://host/collections/?f=json
 GET https://host/openapi
 ```
 
+Store `/collections?f=json` (and the trailing-slash twin) as `ogc:features` (OGC API collections grain). OpenAPI stays `pygeoapi:openapi`.
+
 ## pycsw (`pycsw`) {#pycsw}
 
-Prefer CSW `GetRecords` or `/collections?f=json` (same grain as [pygeoapi](#pygeoapi)). Skip installer HTML.
+Prefer CSW `GetRecords` or `/collections?f=json` (same grain as [pygeoapi](#pygeoapi)). Skip installer HTML. Optional OAI-PMH Identify is `/?mode=oaipmh&verb=Identify` (and `/oaipmh` on some installs). Prefer CSW for harvest; OAI is a dump.
 
 ```text
 GET https://host/csw?service=CSW&version=2.0.2&request=GetCapabilities
 GET https://host/collections?f=json
+GET https://host/?mode=oaipmh&verb=Identify
 ```
 
 **Keep:** CSW records or OGC API **collections**. **Drop:** installer HTML.
@@ -235,6 +248,8 @@ Often wraps pygeoapi. Harvest **collections**, not MQTT broker messages. Same `/
 ```text
 GET https://host/collections?f=json
 ```
+
+Typical catalog links already end in `/oapi`. Cleanup strips that mount so `/oapi/openapi` and `/oapi/collections/?f=json` attach at origin and are not doubled. Origin `/collections?f=json` still concatenates onto catalogs whose link is the box root.
 
 
 ## Lizmap (`lizmap`) {#lizmap}
@@ -352,9 +367,12 @@ Each Essentials **site** is one application/catalog analog. Do not scrape Html5V
 ```text
 GET https://host/rest/metadata/search
 GET https://host/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+GET https://host/openSearchDescription
 ```
 
-Keep ISO dataset/series. OpenSearch `/opensearch?f=json` paginates with `from` / `size`. Drop service records.
+Keep ISO dataset/series. OpenSearch `/opensearch?f=json` paginates with `from` / `size`. The OSDD is `{mount}/openSearchDescription` (catalog link plus `/openSearchDescription`, or `/geoportal/openSearchDescription` when the app is mounted at `/geoportal`). Drop service records.
+
+Type `/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities` as `csw202`. Type the OSDD as `opensearch`. Attach to the catalog `link`.
 
 **Keep:** ISO dataset/series (REST search or CSW). **Drop:** service records.
 
@@ -638,7 +656,11 @@ GET https://host/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
 ```text
 GET https://host/csw?service=CSW&version=2.0.2&request=GetCapabilities
 GET https://host/micka/csw?service=CSW&version=2.0.2&request=GetCapabilities
+GET https://host/opensearch
+GET https://host/micka/opensearch
 ```
+
+Typical catalog links already end in `/micka/`. Cleanup strips `/micka` (keeping any path prefix such as `/php`) so the prefixed CSW probe is not doubled. Origin `/csw` still concatenates onto those mounts. OpenSearch is `/opensearch` or `/micka/opensearch`.
 
 CSW GetRecords. Keep ISO `dataset` / `series`. Same grain as GeoNetwork ([harvest-protocols.md](harvest-protocols.md#csw)).
 
@@ -650,7 +672,10 @@ CSW GetRecords. Keep ISO `dataset` / `series`. Same grain as GeoNetwork ([harves
 GET https://host/services?service=WMS&version=1.3.0&request=GetCapabilities
 GET https://host/services?service=CSW&version=2.0.2&request=GetCapabilities
 GET https://host/deegree-webservices/services?service=WMS&version=1.3.0&request=GetCapabilities
+GET https://host/deegree-webservices/services?service=CSW&version=2.0.2&request=GetCapabilities
 ```
+
+Typical catalog links already end in `/deegree-webservices/`. Cleanup strips that servlet (keeping any path prefix) so the prefixed `/services` probes are not doubled. Leave other mounts (`/m4eu/`, `/geoproxy/`, xPlanBox) so origin `/services` concatenates onto those catalog links.
 
 Harvest metadata records or feature types that are published datasets. Skip installer/demo and xPlanBox admin HTML.
 
@@ -661,6 +686,8 @@ Harvest metadata records or feature types that are published datasets. Skip inst
 ```text
 GET https://host/erdas-iws/ogc/wms/?service=WMS&request=GetCapabilities&version=1.3.0
 ```
+
+Typical catalog links already end in `/erdas-iws/` or `/erdas-apollo` (sometimes with an Esri REST suffix). Cleanup strips those mounts so the harvest WMS path attaches at origin and is not doubled.
 
 Also CSW when listed in `endpoints[]`. Keep catalog/coverage records. Drop Image Manager login and the installer.
 
@@ -684,17 +711,18 @@ MapCentia GC2 / Vidi.
 GET https://host/api/v2/configuration
 ```
 
-Harvest MapCache WMTS or WMS GetCapabilities named layers (often `/mapcache/{tenant}/wmts`). Do not treat SQL API query rows (`/api/v1/sql/{db}`) or Vidi saved projects as datasets. Skip `/admin` and the MapCentia demo.
+Type `/api/v2/configuration` as `rest`. Harvest MapCache WMTS or WMS GetCapabilities named layers (often `/mapcache/{tenant}/wmts`). Do not treat SQL API query rows (`/api/v1/sql/{db}`) or Vidi saved projects as datasets. Skip `/admin` and the MapCentia demo.
 
 **Keep:** MapCache WMTS or WMS named layers. **Drop:** SQL API query rows, Vidi saved projects, `/admin`, and the MapCentia demo.
 
 ## hale»connect (`haleconnect`) {#haleconnect}
 
-CSW GetRecords (ISO `dataset` / `series`) on `/csw`. If CSW is missing, harvest published WMS/WFS feature types under `/ows/services/`. The CSW engine is often pycsw — do not harvest it as a second `pycsw` catalog on the same host. Skip transformation projects and hale studio files.
+CSW GetRecords (ISO `dataset` / `series`) on `/csw`. If CSW is missing, harvest published WMS/WFS feature types under `/ows/services/`. The CSW engine is often pycsw — do not harvest it as a second `pycsw` catalog on the same host. Optional OAI-PMH is `/csw?mode=oaipmh&verb=Identify`. Skip transformation projects and hale studio files.
 
 ```text
 GET https://host/csw?service=CSW&version=2.0.2&request=GetCapabilities
 GET https://host/ows/services/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+GET https://host/csw?mode=oaipmh&verb=Identify
 ```
 
 **Keep:** ISO `dataset` / `series` from `/csw` (or WMS/WFS feature types if CSW is missing). **Drop:** a second `pycsw` catalog, transformation projects, and hale studio files.

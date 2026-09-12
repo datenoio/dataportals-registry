@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: ID-BB
+      name: Kepulauan Bangka Belitung
+description: CKAN Satu Data catalog of Bangka Regency (Bangka Belitung); harvested
+  into Portal Satu Data Indonesia.
+endpoints:
+- type: ckan
+  url: https://manajemen-satudata.bangka.go.id/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://manajemen-satudata.bangka.go.id/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://manajemen-satudata.bangka.go.id/api/3/action/package_list
+  version: '3'
+id: manajemensatudatabangkagoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://manajemen-satudata.bangka.go.id
+name: Data SDI Bangka
+owner:
+  link: https://www.bangka.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    subregion:
+      id: ID-BB
+      name: Kepulauan Bangka Belitung
+  name: Pemerintah Kabupaten Bangka
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- open data
+- indonesia
+- satu data
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00003094

@@ -20,6 +20,12 @@ endpoints:
 - type: oaipmh20
   url: http://dspace.chau.ac.zm:8080/oai/request?verb=Identify
   version: '2.0'
+- type: rss
+  url: http://dspace.chau.ac.zm:8080/xmlui/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: http://dspace.chau.ac.zm:8080/xmlui/feed/atom_1.0/site
+  version: '1.0'
 id: dspacechauaczm
 langs:
 - id: EN

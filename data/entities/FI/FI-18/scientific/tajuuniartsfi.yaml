@@ -21,6 +21,17 @@ description: Open institutional repository of the University of the Arts Helsink
 endpoints:
 - type: dspace:catalog
   url: https://taju.uniarts.fi
+- type: dspace
+  url: https://taju.uniarts.fi/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://taju.uniarts.fi/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://taju.uniarts.fi/sitemap_index.xml
+- type: oaipmh20
+  url: https://taju.uniarts.fi/server/oai/request?verb=Identify
+  version: '2.0'
 id: tajuuniartsfi
 langs:
 - id: FI

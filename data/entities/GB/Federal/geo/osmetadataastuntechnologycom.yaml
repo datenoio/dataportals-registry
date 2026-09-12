@@ -15,7 +15,13 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Geospatial metadata catalog providing comprehensive discovery and access to geospatial datasets and map layers through standard OGC CSW (Catalog Service for the Web) and OAI-PMH (Open Archives Initiative Protocol for Metadata Harvesting) interfaces. Hosted by Astun Technology, this GeoNetwork-based catalog enables users to search, discover, browse, and access geospatial metadata records following ISO 19115 standards. The portal supports metadata management, spatial data discovery, and facilitates interoperability across geospatial information systems.
+description: Geospatial metadata catalog providing comprehensive discovery and access
+  to geospatial datasets and map layers through standard OGC CSW (Catalog Service
+  for the Web) and OAI-PMH (Open Archives Initiative Protocol for Metadata Harvesting)
+  interfaces. Hosted by Astun Technology, this GeoNetwork-based catalog enables users
+  to search, discover, browse, and access geospatial metadata records following ISO
+  19115 standards. The portal supports metadata management, spatial data discovery,
+  and facilitates interoperability across geospatial information systems.
 endpoints:
 - type: csw202
   url: https://osmetadata.astuntechnology.com/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -23,6 +29,10 @@ endpoints:
 - type: oaipmh20
   url: https://osmetadata.astuntechnology.com/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:selections
+  url: https://osmetadata.astuntechnology.com/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://osmetadata.astuntechnology.com/geonetwork/srv/api/site
 id: osmetadataastuntechnologycom
 identifiers: []
 langs:

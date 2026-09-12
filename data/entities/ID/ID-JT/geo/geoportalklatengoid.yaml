@@ -76,6 +76,12 @@ endpoints:
 - type: wms-c111
   url: https://geoportal.klaten.go.id/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://geoportal.klaten.go.id/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geoportal.klaten.go.id/catalogue/opensearch
+  version: '1.1'
 id: geoportalklatengoid
 langs:
 - id: ID

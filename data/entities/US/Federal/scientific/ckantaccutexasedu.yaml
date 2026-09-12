@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: TACC DSO Data Discovery is a Scientific data repository operated by Texas
+  Advanced Computing Center, built with CKAN.
+endpoints:
+- type: ckan
+  url: https://ckan.tacc.utexas.edu/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan.tacc.utexas.edu/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.tacc.utexas.edu/api/3/action/package_list
+  version: '3'
+id: ckantaccutexasedu
+langs:
+- id: EN
+  name: English
+link: https://ckan.tacc.utexas.edu
+name: TACC DSO Data Discovery
+owner:
+  link: https://www.tacc.utexas.edu
+  location:
+    country:
+      id: US
+      name: United States
+  name: Texas Advanced Computing Center
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- scientific
+- research
+- academic
+- ckan
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043757

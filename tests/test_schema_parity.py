@@ -124,3 +124,28 @@ def test_jsonld_export_framing(tmp_path):
 
     framed = record_to_jsonld(sample, load_context())
     assert framed["@type"] == "dcat:DataCatalog"
+
+
+def test_jsonld_export_reads_zst(tmp_path):
+    import zstandard as zstd
+    from jsonld_export import export_catalogs_jsonld
+
+    sample = {
+        "uid": "cdi00000002",
+        "id": "zstexample",
+        "name": "ZST Catalog",
+        "link": "https://example.gov/zst",
+    }
+    input_path = tmp_path / "catalogs.jsonl.zst"
+    output_path = tmp_path / "catalogs.jsonld"
+    payload = (json.dumps(sample) + "\n").encode("utf-8")
+    input_path.write_bytes(zstd.ZstdCompressor().compress(payload))
+
+    count = export_catalogs_jsonld(
+        input_path=input_path,
+        output_path=output_path,
+        context_path=CONTEXT_PATH,
+    )
+    assert count == 1
+    exported = json.loads(output_path.read_text(encoding="utf-8").strip())
+    assert exported["@id"] == "urn:cdi:catalog:cdi00000002"

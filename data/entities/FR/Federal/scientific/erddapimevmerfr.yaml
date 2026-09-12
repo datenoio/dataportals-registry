@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: IMEV ERDDAP is a Scientific data repository operated by Institut de la
+  Mer de Villefranche.
+endpoints:
+- type: erddap:index
+  url: https://erddap.imev-mer.fr/erddap/index.json
+- type: erddap:datasets
+  url: https://erddap.imev-mer.fr/erddap/info/index.json
+- type: opensearch
+  url: https://erddap.imev-mer.fr/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://erddap.imev-mer.fr/erddap/sitemap.xml
+id: erddapimevmerfr
+langs:
+- id: FR
+  name: French
+link: https://erddap.imev-mer.fr/erddap/index.html
+name: IMEV ERDDAP
+owner:
+  link: https://www.imev-mer.fr
+  location:
+    country:
+      id: FR
+      name: France
+  name: Institut de la Mer de Villefranche
+  type: Academy
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- scientific
+- research
+- academic
+- erddap
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042493

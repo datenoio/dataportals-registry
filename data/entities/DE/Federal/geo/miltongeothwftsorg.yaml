@@ -61,6 +61,12 @@ endpoints:
 - type: wps100
   url: https://milton-geo.thw-fts.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://milton-geo.thw-fts.org/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://milton-geo.thw-fts.org/catalogue/opensearch
+  version: '1.1'
 id: miltongeothwftsorg
 langs:
 - id: DE

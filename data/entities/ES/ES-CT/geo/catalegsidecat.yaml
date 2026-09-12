@@ -38,6 +38,8 @@ endpoints:
   version: '2.0'
 - type: geonetwork:site
   url: https://catalegs.ide.cat/geonetwork/srv/api/site
+- type: dcat:xml
+  url: https://catalegs.ide.cat/geonetwork/srv/api/records?accept=application/rdf+xml
 id: catalegsidecat
 langs:
 - id: CA

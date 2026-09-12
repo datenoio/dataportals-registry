@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: AT-7
+      name: Tirol
+description: Public VertiGIS WebOffice map client of Land Tirol (tirisMaps) with guest
+  access. Distinct from the Land Tirol ArcGIS REST directory on gis.tirol.gv.at. One
+  catalog for the viewer, not a second record for the mobile client.
+id: mapstirolgvat
+langs:
+- id: DE
+  name: German
+link: https://maps.tirol.gv.at/synserver?user=guest&project=tmap_master&client=auto
+name: tirisMaps
+owner:
+  link: https://www.tirol.gv.at
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    subregion:
+      id: AT-7
+      name: Tirol
+  name: Land Tirol
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: weboffice
+  name: VertiGIS WebOffice
+status: active
+tags:
+- GIS
+- geodata
+- map viewer
+- WebOffice
+- Austria
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00042838

@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ILVO Pure research portal is a Scientific data repository operated by
+  ILVO, built with Pure.
+id: pureportalilvobe
+langs:
+- id: FR
+  name: French
+- id: NL
+  name: Dutch
+link: https://pureportal.ilvo.be
+name: ILVO Pure research portal
+owner:
+  link: https://pureportal.ilvo.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+  name: ILVO
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042855
+endpoints:
+- type: rss
+  url: https://pureportal.ilvo.be/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://pureportal.ilvo.be/sitemap/datasets.xml

@@ -25,6 +25,9 @@ endpoints:
   url: https://healthstat.dph.sbcounty.gov/data.json
 - type: socrata:views
   url: https://healthstat.dph.sbcounty.gov/api/views
+- type: socrata:catalog
+  url: https://healthstat.dph.sbcounty.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: healthstatdphsbcountygov
 langs:
 - id: EN

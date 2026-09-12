@@ -15,17 +15,17 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: "National Park Service Rocky Mountain National Park Data Categories IRMA\
-  \ Portal The Integrated Resource Management Applications (IRMA) Portal is a web-based\
-  \ \"one-stop\" for data and information related to National Park Service natural\
-  \ and cultural resources. From IRMA you can search for, view, and download documents,\
-  \ reports, publications, data sets, and park species lists. You can get information\
-  \ on park visitor numbers, park projects, and apply for a park research permit.\
-  \ Featured Maps All maps tell a story, whether it be a trend, pattern, relationship,\
-  \ issue, event, or some other tale. The National Park Service has enhanced its stories\
-  \ through the creation of\n                story maps. Story maps combine spatial\
-  \ data with multimedia content (such as text, photos, video, and\n             \
-  \   audio) into an elegant user experience."
+description: "National Park Service Rocky Mountain National Park Data Categories IRMA
+  Portal The Integrated Resource Management Applications (IRMA) Portal is a web-based
+  \"one-stop\" for data and information related to National Park Service natural and
+  cultural resources. From IRMA you can search for, view, and download documents,
+  reports, publications, data sets, and park species lists. You can get information
+  on park visitor numbers, park projects, and apply for a park research permit. Featured
+  Maps All maps tell a story, whether it be a trend, pattern, relationship, issue,
+  event, or some other tale. The National Park Service has enhanced its stories through
+  the creation of\n                story maps. Story maps combine spatial data with
+  multimedia content (such as text, photos, video, and\n                audio) into
+  an elegant user experience."
 endpoints:
 - type: dcatap201
   url: https://romo-nps.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -37,6 +37,8 @@ endpoints:
   url: https://romo-nps.opendata.arcgis.com/api/search/v1
 - type: sitemap
   url: https://romo-nps.opendata.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://romo-nps.opendata.arcgis.com/data.json
 id: romonpsopendataarcgiscom
 langs:
 - id: EN

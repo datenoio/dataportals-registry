@@ -19,6 +19,9 @@ description: Optical and infrared spectra and images from ground-based telescope
 endpoints:
 - type: tap:capabilities
   url: http://oirsa.cfa.harvard.edu:8080/tap/capabilities
+- type: oaipmh20
+  url: http://oirsa.cfa.harvard.edu:8080/oai.xml?verb=Identify
+  version: '2.0'
 id: oirsacfaharvardedu
 langs:
 - id: EN

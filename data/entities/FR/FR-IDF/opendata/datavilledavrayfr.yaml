@@ -23,6 +23,15 @@ endpoints:
   url: https://data.villedavray.fr/api
 - type: sitemap
   url: https://data.villedavray.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.villedavray.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.villedavray.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.villedavray.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.villedavray.fr/data.json
 id: datavilledavrayfr
 langs:
 - id: FR

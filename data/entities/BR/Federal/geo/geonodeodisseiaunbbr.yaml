@@ -62,6 +62,11 @@ endpoints:
 - type: wps100
   url: https://geonode.odisseia.unb.br/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://geonode.odisseia.unb.br/api/datasets/
+- type: opensearch
+  url: https://geonode.odisseia.unb.br/catalogue/opensearch
+  version: '1.1'
 id: geonodeodisseiaunbbr
 langs:
 - id: PT

@@ -25,6 +25,9 @@ endpoints:
 - type: wmts100
   url: https://ca.nfis.org/cubewerx/cubeserv?SERVICE=WMTS&REQUEST=GetCapabilities&ACCEPTVERSIONS=1.0.0
   version: 1.0.0
+- type: csw202
+  url: https://ca.nfis.org/cubewerx/cubeserv?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
 id: canfisorg
 langs:
 - id: EN

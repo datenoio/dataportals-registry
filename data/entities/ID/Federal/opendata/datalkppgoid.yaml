@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Lembaga Kebijakan
-  Pengadaan Barang/Jasa Pemerintah.
+description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Lembaga
+  Kebijakan Pengadaan Barang/Jasa Pemerintah.
 endpoints:
 - type: ckan:package-search
   url: https://data.lkpp.go.id/api/3/action/package_search
@@ -23,6 +23,19 @@ endpoints:
 - type: ckan:package-list
   url: https://data.lkpp.go.id/api/3/action/package_list
   version: '3'
+- type: ckan
+  url: https://data.lkpp.go.id/api/3
+  version: '3'
+- type: dcat:ttl
+  url: https://data.lkpp.go.id/catalog.ttl
+- type: dcat:xml
+  url: https://data.lkpp.go.id/catalog.xml
+- type: dcat
+  url: https://data.lkpp.go.id/catalog.rdf
+- type: dcat:n3
+  url: https://data.lkpp.go.id/catalog.n3
+- type: dcat:jsonld
+  url: https://data.lkpp.go.id/catalog.jsonld
 id: datalkppgoid
 langs:
 - id: ID

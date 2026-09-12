@@ -13,7 +13,7 @@ coverage:
       name: Portugal
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Institutional repository of the Polytechnic of Leiria. DSpace search
   lists dataset-typed items.
@@ -26,6 +26,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://iconline.ipleiria.pt/sitemap_index.xml
+- type: oaipmh20
+  url: https://iconline.ipleiria.pt/server/oai/request?verb=Identify
+  version: '2.0'
 id: iconlineipleiriapt
 identifiers:
 - id: openaire

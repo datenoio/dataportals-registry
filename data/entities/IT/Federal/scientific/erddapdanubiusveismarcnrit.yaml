@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: CNR-ISMAR DANUBIUS ERDDAP is a Scientific data repository operated by
+  CNR-ISMAR.
+endpoints:
+- type: erddap:index
+  url: https://erddap-danubius.ve.ismar.cnr.it/erddap/index.json
+- type: erddap:datasets
+  url: https://erddap-danubius.ve.ismar.cnr.it/erddap/info/index.json
+- type: opensearch
+  url: https://erddap-danubius.ve.ismar.cnr.it/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://erddap-danubius.ve.ismar.cnr.it/erddap/sitemap.xml
+id: erddapdanubiusveismarcnrit
+langs:
+- id: IT
+  name: Italian
+link: https://erddap-danubius.ve.ismar.cnr.it/erddap/index.html
+name: CNR-ISMAR DANUBIUS ERDDAP
+owner:
+  link: https://www.ismar.cnr.it
+  location:
+    country:
+      id: IT
+      name: Italy
+  name: CNR-ISMAR
+  type: Academy
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- scientific
+- research
+- academic
+- erddap
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042486

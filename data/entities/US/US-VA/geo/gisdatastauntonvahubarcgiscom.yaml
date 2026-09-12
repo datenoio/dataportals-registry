@@ -15,7 +15,17 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: How to Search and Access Data City of Staunton, VA offers a variety of GIS data layers and tables for download.   Use the links below to find data. The data is offered in several different formats, such as CSV, File Geodatabase, GeoJSON, KML, and Shapefile.  It is suggested that the downloaded data to be projected to the local coordinate system. By accessing any of the data, maps, or applications provided by the city, you agree to the terms in our disclaimer. Any error reports or questions about the city's geospatial data should be directed to the GIS office. Explore Data Categories Boundaries Culture Demographic Education Election Environment Facility &amp; Infrastructure Health &amp; Human Services Land Use, Planning, &amp; Zoning Public Safety Public Service Property &amp; Land Transportation Recreation Utility
+description: How to Search and Access Data City of Staunton, VA offers a variety of
+  GIS data layers and tables for download.   Use the links below to find data. The
+  data is offered in several different formats, such as CSV, File Geodatabase, GeoJSON,
+  KML, and Shapefile.  It is suggested that the downloaded data to be projected to
+  the local coordinate system. By accessing any of the data, maps, or applications
+  provided by the city, you agree to the terms in our disclaimer. Any error reports
+  or questions about the city's geospatial data should be directed to the GIS office.
+  Explore Data Categories Boundaries Culture Demographic Education Election Environment
+  Facility &amp; Infrastructure Health &amp; Human Services Land Use, Planning, &amp;
+  Zoning Public Safety Public Service Property &amp; Land Transportation Recreation
+  Utility
 endpoints:
 - type: dcatap201
   url: https://gis-data-stauntonva.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -27,6 +37,8 @@ endpoints:
   url: https://gis-data-stauntonva.hub.arcgis.com/api/search/v1
 - type: sitemap
   url: https://gis-data-stauntonva.hub.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://gis-data-stauntonva.hub.arcgis.com/data.json
 id: gisdatastauntonvahubarcgiscom
 langs:
 - id: EN

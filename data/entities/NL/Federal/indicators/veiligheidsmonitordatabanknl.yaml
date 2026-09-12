@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -55,3 +55,8 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi99991993
+endpoints:
+- type: swing:databank
+  url: https://veiligheidsmonitor.databank.nl/databank
+- type: swing:viewer
+  url: https://veiligheidsmonitor.databank.nl/viewer/

@@ -30,6 +30,10 @@ endpoints:
 - type: oaipmh20
   url: https://metadane.gison.pl/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: dcat:xml
+  url: https://metadane.gison.pl/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://metadane.gison.pl/geonetwork/srv/api/site
 id: metadanegisonpl
 langs:
 - id: PL
@@ -72,5 +76,5 @@ topics:
   name: Boundaries
   type: iso19115
 uid: cdi00002097
-description: GeoNetwork metadata catalog operated by GISON Sp. z o.o. for Polish
-  geospatial datasets and INSPIRE-oriented metadata services.
+description: GeoNetwork metadata catalog operated by GISON Sp. z o.o. for Polish geospatial
+  datasets and INSPIRE-oriented metadata services.

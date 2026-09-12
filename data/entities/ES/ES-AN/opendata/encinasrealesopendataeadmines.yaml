@@ -32,6 +32,13 @@ endpoints:
 - type: ckan
   url: https://encinasreales-opendata.e-admin.es/api/3
   version: '3'
+- type: ckan:package-search
+  url: https://encinasreales-opendata.e-admin.es/api/3/action/package_search
+  version: '3'
+- type: dcat:n3
+  url: https://encinasreales-opendata.e-admin.es/catalog.n3
+- type: dcat:ttl
+  url: https://encinasreales-opendata.e-admin.es/catalog.ttl
 id: encinasrealesopendataeadmines
 langs:
 - id: ES

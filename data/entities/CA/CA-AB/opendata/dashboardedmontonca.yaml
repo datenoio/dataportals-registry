@@ -25,6 +25,12 @@ endpoints:
   url: https://dashboard.edmonton.ca/data.json
 - type: sitemap
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-openperformance.edmonton.ca.xml
+- type: socrata:catalog
+  url: https://dashboard.edmonton.ca/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://dashboard.edmonton.ca/opensearch.xml
+  version: '1.1'
 id: dashboardedmontonca
 langs:
 - id: EN

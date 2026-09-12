@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Politechnika Śląska is a Scientific data repository operated by Politechnika
+  Śląska.
+id: researchpolslpl
+langs:
+- id: PL
+  name: Polish
+link: https://research.polsl.pl
+name: Politechnika Śląska
+owner:
+  link: https://research.polsl.pl
+  location:
+    country:
+      id: PL
+      name: Poland
+  name: Politechnika Śląska
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042700
+endpoints:
+- type: oaipmh20
+  url: https://research.polsl.pl/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://research.polsl.pl/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://research.polsl.pl/sitemap/datasets.xml

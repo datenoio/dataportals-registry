@@ -2,7 +2,7 @@
 
 Unverified catalogs live under `data/scheduled/` with `status: scheduled` and `uid` values like `temp########`. They are included in `full.jsonl` / `full.parquet` / DuckDB, not in `catalogs.jsonl.zst`.
 
-Current queue size is in [exports.md](exports.md#record-counts) (**0** YAML / **23** JSONL leftover from the last `build`, as of 10 September 2026). After a discovery pass the queue grows; after `promote_scheduled.py` it shrinks.
+Current queue size is in [exports.md](exports.md#record-counts) (**0** YAML / **0** JSONL, as of 12 September 2026). After a discovery pass the queue grows; after `promote_scheduled.py` it shrinks.
 
 Prefer `--scheduled` when adding finds you have not fully reviewed: [discovery.md](discovery.md), [agents/contribute.md](agents/contribute.md).
 

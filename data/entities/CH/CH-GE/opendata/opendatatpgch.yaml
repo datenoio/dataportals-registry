@@ -25,6 +25,15 @@ endpoints:
   url: https://opendata.tpg.ch/api
 - type: sitemap
   url: https://opendata.tpg.ch/sitemap.xml
+- type: opendatasoftapi
+  url: https://opendata.tpg.ch/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://opendata.tpg.ch/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://opendata.tpg.ch/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://opendata.tpg.ch/data.json
 id: opendatatpgch
 langs:
 - id: EN

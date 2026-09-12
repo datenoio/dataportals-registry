@@ -17,8 +17,8 @@ coverage:
     subregion:
       id: DE-BW
       name: Baden-Württemberg
-description: Open Access Repository of Ulm University. DSpace 7 institutional repository with
-  a substantial Forschungsdaten collection.
+description: Open Access Repository of Ulm University. DSpace 7 institutional repository
+  with a substantial Forschungsdaten collection.
 endpoints:
 - type: dspace
   url: https://oparu.uni-ulm.de/server/api
@@ -28,6 +28,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://oparu.uni-ulm.de/sitemap_index.xml
+- type: oaipmh20
+  url: https://oparu.uni-ulm.de/server/oai/request?verb=Identify
+  version: '2.0'
 id: oparuuniulmde
 langs:
 - id: DE

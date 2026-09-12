@@ -24,6 +24,12 @@ endpoints:
   url: https://educationtocareer.data.mass.gov/data.json
 - type: socrata:views
   url: https://educationtocareer.data.mass.gov/api/views
+- type: socrata:catalog
+  url: https://educationtocareer.data.mass.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://educationtocareer.data.mass.gov/opensearch.xml
+  version: '1.1'
 id: educationtocareerdatamassgov
 langs:
 - id: EN

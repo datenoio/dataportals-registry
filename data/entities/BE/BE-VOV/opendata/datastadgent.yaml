@@ -23,6 +23,13 @@ endpoints:
   url: https://data.stad.gent/api
 - type: sitemap
   url: https://data.stad.gent/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.stad.gent/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.stad.gent/api/v2/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.stad.gent/data.json
 id: datastadgent
 identifiers:
 - id: wikidata

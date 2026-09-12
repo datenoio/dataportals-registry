@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-TX
+      name: Texas
+description: Texas A&M University Libraries DSpace 9 research-data catalog (ResearchData@TAMU)
+  with Dataset and ResearchProject entities.
+endpoints:
+- type: dspace
+  url: https://data.library.tamu.edu/server/api
+  version: '9'
+- type: dspace:objects
+  url: https://data.library.tamu.edu/server/api/discover/search/objects
+  version: '9'
+- type: sitemap
+  url: https://data.library.tamu.edu/sitemap_index.xml
+- type: oaipmh20
+  url: https://data.library.tamu.edu/server/oai/request?verb=Identify
+  version: '2.0'
+id: datalibrarytamuedu
+langs:
+- id: EN
+  name: English
+link: https://data.library.tamu.edu
+name: ResearchData@TAMU
+owner:
+  link: https://library.tamu.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TX
+      name: Texas
+  name: Texas A&M University Libraries
+  type: Academy
+properties:
+  dataset_count_reported: 29
+  has_doi: true
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research data
+- institutional repository
+- DSpace
+- Texas A&M
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00043794

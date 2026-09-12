@@ -21,6 +21,17 @@ endpoints:
 - type: oaipmh20
   url: http://eprints.bice.rm.cnr.it/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: http://eprints.bice.rm.cnr.it/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: http://eprints.bice.rm.cnr.it/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: http://eprints.bice.rm.cnr.it/rest/eprint
+- type: eprints:rdf
+  url: http://eprints.bice.rm.cnr.it/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: http://eprints.bice.rm.cnr.it/cgi/export/repository/RDFN3/devel.n3
 id: eprintsbicermcnrit
 langs:
 - id: IT

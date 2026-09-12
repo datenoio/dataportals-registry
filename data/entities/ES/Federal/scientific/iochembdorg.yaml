@@ -19,6 +19,12 @@ description: Network of repositories for computational chemistry datasets; platf
 endpoints:
 - type: iochembd:catalog
   url: https://www.iochem-bd.org/
+- type: dspace:items
+  url: https://www.iochem-bd.org/rest/items
+  version: '6'
+- type: oaipmh20
+  url: https://www.iochem-bd.org/oai/request?verb=Identify
+  version: '2.0'
 id: iochembdorg
 langs:
 - id: EN

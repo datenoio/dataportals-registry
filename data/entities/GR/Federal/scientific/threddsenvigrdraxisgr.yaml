@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: THREDDS catalog of EnviGR geointelligence raster datasets hosted by DRAXIS.
+endpoints:
+- type: thredds:catalog
+  url: https://thredds.envigr.draxis.gr/thredds/catalog.xml
+- type: thredds:info
+  url: https://thredds.envigr.draxis.gr/thredds/info/serverInfo.xml
+id: threddsenvigrdraxisgr
+langs:
+- id: EN
+  name: English
+- id: EL
+  name: Greek
+link: https://thredds.envigr.draxis.gr/thredds/catalog.html
+name: EnviGR DRAXIS THREDDS Data Server
+owner:
+  link: https://draxis.gr/
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: DRAXIS Environmental SA
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- THREDDS
+- geointelligence
+- scientific
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00042345

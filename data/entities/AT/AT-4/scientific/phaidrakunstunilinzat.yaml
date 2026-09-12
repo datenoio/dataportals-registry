@@ -25,6 +25,10 @@ endpoints:
   url: https://phaidra.kunstuni-linz.at/api/search/select
 - type: openapi
   url: https://phaidra.kunstuni-linz.at/api/openapi/json
+- type: rest
+  url: https://phaidra.kunstuni-linz.at/api/search/select?q=cmodel:*Dataset*&wt=json&rows=25
+- type: rest
+  url: https://phaidra.kunstuni-linz.at/api/search/select?q=dc_type:dataset&wt=json&rows=25
 id: phaidrakunstunilinzat
 langs:
 - id: DE

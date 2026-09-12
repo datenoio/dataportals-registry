@@ -27,6 +27,9 @@ endpoints:
   url: https://s3-eu-west-1.amazonaws.com/sa-socrata-sitemaps-eu-west-1-prod/sitemaps/sitemap-www.dati.lombardia.it.xml
 - type: opensearch
   url: https://dati.lombardia.it/opensearch.xml
+- type: socrata:catalog
+  url: https://dati.lombardia.it/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: datilombardiait
 langs:
 - id: IT

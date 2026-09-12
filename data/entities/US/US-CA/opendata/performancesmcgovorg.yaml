@@ -26,6 +26,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-performance.smcgov.org.xml
 - type: opensearch
   url: https://performance.smcgov.org/opensearch.xml
+- type: socrata:catalog
+  url: https://performance.smcgov.org/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: performancesmcgovorg
 langs:
 - id: EN

@@ -1,6 +1,6 @@
 access_mode:
 - open
-api_status: uncertain
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -24,6 +24,10 @@ id: datakingstongovuk
 langs:
 - id: EN
   name: English
+api: true
+endpoints:
+- type: sitemap
+  url: https://data.kingston.gov.uk/sitemap.xml
 link: https://data.kingston.gov.uk/
 name: Kingston Data
 owner:
@@ -39,8 +43,8 @@ owner:
   name: Royal Borough of Kingston upon Thames Council
   type: Local government
 software:
-  id: custom
-  name: Custom software
+  id: esridataobservatory
+  name: Esri UK Data Observatory
 status: active
 tags:
 - government

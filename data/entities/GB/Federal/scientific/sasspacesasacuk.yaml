@@ -21,6 +21,15 @@ endpoints:
 - type: oaipmh20
   url: http://sas-space.sas.ac.uk/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: http://sas-space.sas.ac.uk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: eprints:rest
+  url: http://sas-space.sas.ac.uk/rest/eprint
+- type: eprints:rdf
+  url: http://sas-space.sas.ac.uk/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: http://sas-space.sas.ac.uk/cgi/export/repository/RDFN3/devel.n3
 id: sasspacesasacuk
 langs:
 - id: EN

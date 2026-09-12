@@ -13,7 +13,7 @@ coverage:
       name: Greece
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: GR-I
@@ -29,6 +29,58 @@ endpoints:
 - type: csw202
   url: https://gis.nikaia-rentis.gov.gr/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: geonode:datasets
+  url: https://gis.nikaia-rentis.gov.gr/api/datasets/
+- type: geonode:documents
+  url: https://gis.nikaia-rentis.gov.gr/api/documents/
+- type: opensearch
+  url: https://gis.nikaia-rentis.gov.gr/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://gis.nikaia-rentis.gov.gr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://gis.nikaia-rentis.gov.gr/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://gis.nikaia-rentis.gov.gr/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://gis.nikaia-rentis.gov.gr/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs100
+  url: https://gis.nikaia-rentis.gov.gr/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://gis.nikaia-rentis.gov.gr/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://gis.nikaia-rentis.gov.gr/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://gis.nikaia-rentis.gov.gr/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://gis.nikaia-rentis.gov.gr/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://gis.nikaia-rentis.gov.gr/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://gis.nikaia-rentis.gov.gr/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://gis.nikaia-rentis.gov.gr/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: https://gis.nikaia-rentis.gov.gr/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+- type: geonode:datasets
+  url: https://gis.nikaia-rentis.gov.gr/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://gis.nikaia-rentis.gov.gr/catalogue/opensearch
+  version: '1.1'
 id: gisnikaiarentisgovgr
 langs:
 - id: EL

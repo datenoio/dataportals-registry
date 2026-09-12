@@ -25,6 +25,17 @@ endpoints:
 - type: oaipmh20
   url: https://repository.upenn.edu/server/oai/request?verb=Identify
   version: '2.0'
+- type: dspace
+  url: https://repository.upenn.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repository.upenn.edu/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://repository.upenn.edu/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://repository.upenn.edu/sitemap_index.xml
 id: repositoryupennedu
 langs:
 - id: EN

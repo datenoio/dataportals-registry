@@ -25,6 +25,12 @@ endpoints:
   url: https://hidot-contracts.data.socrata.com/api/views
 - type: sitemap
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-hidot-contracts.data.socrata.com.xml
+- type: socrata:catalog
+  url: https://hidot-contracts.data.socrata.com/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://hidot-contracts.data.socrata.com/opensearch.xml
+  version: '1.1'
 id: hidotcontractsdatasocratacom
 langs:
 - id: EN

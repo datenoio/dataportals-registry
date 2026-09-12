@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: CARTE SIE TVT is a Geoportal operated by SIE / TVT.
+id: cartesiech
+langs:
+- id: DE
+  name: German
+- id: FR
+  name: French
+- id: IT
+  name: Italian
+link: https://carte.sie.ch/
+name: CARTE SIE TVT
+owner:
+  link: https://www.sie.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+  name: SIE / TVT
+  type: Business
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- commercial
+- lizmap
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00042427
+endpoints:
+- type: lizmap:service
+  url: https://carte.sie.ch/index.php/lizmap/service/?repository=carte&project=Portail-public
+- type: wms130
+  url: https://carte.sie.ch/index.php/lizmap/service/?repository=carte&project=Portail-public&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0

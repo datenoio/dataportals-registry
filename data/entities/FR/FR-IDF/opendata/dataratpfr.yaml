@@ -25,6 +25,15 @@ endpoints:
   url: https://data.ratp.fr/api
 - type: sitemap
   url: https://data.ratp.fr/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.ratp.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.ratp.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.ratp.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.ratp.fr/data.json
 id: dataratpfr
 langs:
 - id: FR

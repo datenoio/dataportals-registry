@@ -15,7 +15,18 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: NAIP Image Dates Search, Visualize, Download, Create Find Data Explore your data 2022 NAIP Image Dates 2021 NAIP Image Dates 2020 NAIP Image Dates 2019 NAIP Image Dates 2018 NAIP Image Dates 2017 NAIP Image Dates 2016 NAIP Image Dates 2015 NAIP Image Dates 2014 NAIP Image Dates 2013 NAIP Image Dates 2012 NAIP Image Dates 2011 NAIP Image Dates The NAIP Image date files are available for years 2011 - 2022.  The image date vector files were an enhancement that came later in the history of NAIP so they were not a contract deliverable before 2011.  Please note:  Image date information for years 2011-2013 do not include the RGBNIR field information as this was also a later enhancement. 2022 States that are not available on the hub have either not been delivered yet or we are waiting for corrected files and the remaining states will be uploaded as soon as possible after the corrected files are received.
+description: NAIP Image Dates Search, Visualize, Download, Create Find Data Explore
+  your data 2022 NAIP Image Dates 2021 NAIP Image Dates 2020 NAIP Image Dates 2019
+  NAIP Image Dates 2018 NAIP Image Dates 2017 NAIP Image Dates 2016 NAIP Image Dates
+  2015 NAIP Image Dates 2014 NAIP Image Dates 2013 NAIP Image Dates 2012 NAIP Image
+  Dates 2011 NAIP Image Dates The NAIP Image date files are available for years 2011
+  - 2022.  The image date vector files were an enhancement that came later in the
+  history of NAIP so they were not a contract deliverable before 2011.  Please note: 
+  Image date information for years 2011-2013 do not include the RGBNIR field information
+  as this was also a later enhancement. 2022 States that are not available on the
+  hub have either not been delivered yet or we are waiting for corrected files and
+  the remaining states will be uploaded as soon as possible after the corrected files
+  are received.
 endpoints:
 - type: dcatap201
   url: https://naip-image-dates-usdaonline.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -27,6 +38,8 @@ endpoints:
   url: https://naip-image-dates-usdaonline.hub.arcgis.com/api/search/v1
 - type: sitemap
   url: https://naip-image-dates-usdaonline.hub.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://naip-image-dates-usdaonline.hub.arcgis.com/data.json
 id: naipimagedatesusdaonlinehubarcgiscom
 langs:
 - id: EN

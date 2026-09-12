@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Repositorio UVG is a Scientific data repository operated by Universidad
+  del Valle de Guatemala, built with Dataverse.
+id: repodatosuvgedugt
+langs:
+- id: ES
+  name: Spanish
+link: https://repodatos.uvg.edu.gt
+name: Repositorio UVG
+owner:
+  link: https://www.uvg.edu.gt
+  location:
+    country:
+      id: GT
+      name: Guatemala
+  name: Universidad del Valle de Guatemala
+  type: Academy
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research
+- academic
+- dataverse
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043342
+endpoints:
+- type: dataverseapi
+  url: https://repodatos.uvg.edu.gt/api/search
+- type: dataverseapi
+  url: https://repodatos.uvg.edu.gt/api/info/version

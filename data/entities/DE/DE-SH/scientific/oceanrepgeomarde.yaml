@@ -24,6 +24,10 @@ endpoints:
 - type: oaipmh20
   url: https://oceanrep.geomar.de/cgi/oai2?verb=Identify
   version: '2.0'
+- type: eprints:rest
+  url: https://oceanrep.geomar.de/rest/eprint
+- type: eprints:datasets
+  url: https://oceanrep.geomar.de/cgi/exportview/type/dataset/JSON/dataset.js
 id: oceanrepgeomarde
 identifiers:
 - id: re3data

@@ -118,6 +118,40 @@ def load_jsonl_zst(filepath):
     return data
 
 
+def load_dataset_jsonl(filename: str):
+    """Load a datasets JSONL file, falling back to the .zst copy if needed.
+
+    Uncompressed catalogs.jsonl is not kept in data/datasets (GitHub size
+    limits); use this helper or catalogs.jsonl.zst.
+    """
+    jsonl_path = os.path.join(DATASETS_DIR, filename)
+    if filename.endswith(".zst"):
+        return load_jsonl_zst(jsonl_path)
+    zst_path = jsonl_path + ".zst"
+    if os.path.exists(jsonl_path):
+        return load_jsonl(jsonl_path)
+    if os.path.exists(zst_path):
+        logger.info(
+            "Loading compressed dataset %s", os.path.basename(zst_path)
+        )
+        return load_jsonl_zst(zst_path)
+    raise FileNotFoundError(
+        f"Dataset not found: {jsonl_path} (or {os.path.basename(zst_path)})"
+    )
+
+
+def remove_uncompressed_jsonl(jsonl_filename: str) -> None:
+    """Delete an uncompressed JSONL after its .zst copy has been written."""
+    jsonl_path = os.path.join(DATASETS_DIR, jsonl_filename)
+    if os.path.exists(jsonl_path):
+        os.remove(jsonl_path)
+        logger.info(
+            "Removed uncompressed %s (kept %s.zst)",
+            jsonl_filename,
+            jsonl_filename,
+        )
+
+
 _DUCKDB_TABLE_NAME_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
 
 
@@ -199,22 +233,22 @@ def compress_jsonl(input_path, output_path, compression_level=19):
     )
 
 
-def verify_both_formats_exist(jsonl_filename):
-    """Verify that both JSONL and JSONL.zst files exist"""
+def verify_both_formats_exist(jsonl_filename, require_uncompressed=True):
+    """Verify that JSONL.zst exists, and optionally the uncompressed JSONL."""
     jsonl_path = os.path.join(DATASETS_DIR, jsonl_filename)
     jsonl_zst_path = os.path.join(DATASETS_DIR, jsonl_filename + ".zst")
     
     jsonl_exists = os.path.exists(jsonl_path)
     jsonl_zst_exists = os.path.exists(jsonl_zst_path)
-    
-    if jsonl_exists and jsonl_zst_exists:
-        logger.info(
-            "Verified both formats exist: %s and %s",
-            os.path.basename(jsonl_filename),
-            os.path.basename(jsonl_filename + ".zst"),
-        )
-        return True
-    else:
+
+    if require_uncompressed:
+        if jsonl_exists and jsonl_zst_exists:
+            logger.info(
+                "Verified both formats exist: %s and %s",
+                os.path.basename(jsonl_filename),
+                os.path.basename(jsonl_filename + ".zst"),
+            )
+            return True
         missing = []
         if not jsonl_exists:
             missing.append(os.path.basename(jsonl_filename))
@@ -226,6 +260,18 @@ def verify_both_formats_exist(jsonl_filename):
             ", ".join(missing),
         )
         return False
+
+    if jsonl_zst_exists:
+        logger.info(
+            "Verified compressed export exists: %s",
+            os.path.basename(jsonl_filename + ".zst"),
+        )
+        return True
+    logger.warning(
+        "Missing compressed export: %s",
+        os.path.basename(jsonl_filename + ".zst"),
+    )
+    return False
 
 
 def build_dataset(datapath, dataset_filename):
@@ -340,13 +386,13 @@ def build(
     logger.info("Started building catalogs dataset")
     build_dataset(ROOT_DIR, "catalogs.jsonl")
     logger.info(
-        "Finished building catalogs dataset. File saved as %s",
-        os.path.join(DATASETS_DIR, "catalogs.jsonl"),
+        "Finished building catalogs dataset; uncompressed catalogs.jsonl is a "
+        "build intermediate and will not be kept in data/datasets"
     )
     
     logger.info("Compressing catalogs dataset")
     compress_jsonl("catalogs.jsonl", "catalogs.jsonl.zst")
-    verify_both_formats_exist("catalogs.jsonl")
+    verify_both_formats_exist("catalogs.jsonl", require_uncompressed=False)
     
     logger.info("Started building scheduled dataset")
     build_dataset(SCHEDULED_DIR, "scheduled.jsonl")
@@ -411,6 +457,10 @@ def build(
             os.path.join(DATASETS_DIR, "catalogs.jsonld"),
         )
 
+    # catalogs.jsonl (~61MB) exceeds GitHub's practical file-size limit;
+    # keep only the compressed catalogs.jsonl.zst snapshot.
+    remove_uncompressed_jsonl("catalogs.jsonl")
+
 
 @app.command()
 def report():
@@ -440,7 +490,7 @@ def report():
 @app.command()
 def export(output="export.csv"):
     """Export to CSV"""
-    data = load_jsonl(os.path.join(DATASETS_DIR, "catalogs.jsonl"))
+    data = load_dataset_jsonl("catalogs.jsonl")
     typer.echo("")
     items = []
     for record in data:
@@ -508,7 +558,7 @@ def export(output="export.csv"):
 @app.command()
 def stats(output="country_software.csv"):
     """Generates statistics tables"""
-    data = load_jsonl(os.path.join(DATASETS_DIR, "catalogs.jsonl"))
+    data = load_dataset_jsonl("catalogs.jsonl")
     typer.echo("")
     items = []
     countries = []
@@ -549,45 +599,117 @@ def stats(output="country_software.csv"):
     typer.echo("Wrote %s" % (output))
 
 
+UID_NUMERIC_WIDTH = 8
+UID_NUMERIC_MAX = 10 ** UID_NUMERIC_WIDTH - 1
+_UID_LINE_RE = re.compile(r"^uid:\s*\S+.*$", re.MULTILINE)
+
+
+def _iter_yaml_files(dirpath):
+    """Return sorted YAML paths under dirpath for stable UID assignment."""
+    files = []
+    for root, dirs, filenames in os.walk(dirpath):
+        dirs.sort()
+        for filename in filenames:
+            if filename.endswith(".yaml"):
+                files.append(os.path.join(root, filename))
+    files.sort()
+    return files
+
+
+def _valid_uid_number(uid, prefix):
+    """Return the numeric part of a valid prefix+8-digit UID, else None."""
+    if not uid or not isinstance(uid, str):
+        return None
+    pattern = rf"^{re.escape(prefix)}\d{{{UID_NUMERIC_WIDTH}}}$"
+    if not re.match(pattern, uid):
+        return None
+    return int(uid[len(prefix) :])
+
+
+def _format_uid(prefix, num):
+    """Format an 8-digit UID; refuse numbers that would overflow the width."""
+    if num < 0 or num > UID_NUMERIC_MAX:
+        raise ValueError(
+            f"UID number {num} does not fit {UID_NUMERIC_WIDTH} digits"
+        )
+    return f"{prefix}{num:0{UID_NUMERIC_WIDTH}d}"
+
+
+def _next_available_uid_numbers(used, count):
+    """Allocate unused 8-digit UID numbers, wrapping to gaps after overflow."""
+    if count <= 0:
+        return []
+    used = set(used)
+    allocated = []
+    start = 1
+    if used:
+        highest = max(used)
+        if highest < UID_NUMERIC_MAX:
+            start = highest + 1
+
+    def _candidates(begin):
+        for number in range(begin, UID_NUMERIC_MAX + 1):
+            yield number
+        if begin > 1:
+            for number in range(1, begin):
+                yield number
+
+    for number in _candidates(start):
+        if number in used:
+            continue
+        allocated.append(number)
+        used.add(number)
+        if len(allocated) >= count:
+            return allocated
+    raise RuntimeError(
+        f"Exhausted {UID_NUMERIC_WIDTH}-digit UID space; cannot assign {count} UIDs"
+    )
+
+
+def _upsert_uid_in_yaml(filepath, new_uid):
+    """Replace or append the uid line without rewriting the rest of the file."""
+    with open(filepath, "r", encoding="utf8") as handle:
+        text = handle.read()
+    if _UID_LINE_RE.search(text):
+        text, replaced = re.subn(
+            r"^uid:\s*\S+.*$", f"uid: {new_uid}", text, count=1, flags=re.MULTILINE
+        )
+        if replaced != 1:
+            raise RuntimeError(f"Failed to replace uid in {filepath}")
+    else:
+        if text and not text.endswith("\n"):
+            text += "\n"
+        text += f"uid: {new_uid}\n"
+    with open(filepath, "w", encoding="utf8") as handle:
+        handle.write(text)
+
+
 def assign_by_dir(prefix="cdi", dirpath=ROOT_DIR, dryrun=False):
-    max_num = 0
-    n = 0
-    for root, dirs, files in tqdm.tqdm(os.walk(dirpath)):
-        files = [os.path.join(root, fi) for fi in files if fi.endswith(".yaml")]
-        for filename in files:
-            n += 1
-            #            if n % 1000 == 0: print('Processed %d' % (n))
-            filepath = filename
-            f = open(filepath, "r", encoding="utf8")
-            record = yaml.load(f, Loader=Loader)
-            if "uid" in record.keys():
-                if record["uid"].find(prefix) == -1:
-                    continue
-                num = int(record["uid"].split(prefix, 1)[-1])
-                if num > max_num:
-                    max_num = num
-            f.close()
-    logger.info("Processed %d", n)
-    for root, dirs, files in tqdm.tqdm(os.walk(dirpath)):
-        files = [os.path.join(root, fi) for fi in files if fi.endswith(".yaml")]
-        for filename in files:
-            filepath = filename
-            f = open(filepath, "r", encoding="utf8")
-            record = yaml.load(f, Loader=Loader)
-            f.close()
-            if "uid" not in record.keys():
-                max_num += 1
-                record["uid"] = f"{prefix}{max_num:08}"
-                logger.info(
-                    "Wrote %s uid for %s",
-                    record["uid"],
-                    os.path.basename(filename).split(".", 1)[0],
-                )
-                if dryrun:
-                    continue
-                f = open(filepath, "w", encoding="utf8")
-                f.write(yaml.safe_dump(record, allow_unicode=True))
-                f.close()
+    files = _iter_yaml_files(dirpath)
+    used = set()
+    needs_assign = []
+    for filepath in tqdm.tqdm(files):
+        with open(filepath, "r", encoding="utf8") as handle:
+            record = yaml.load(handle, Loader=Loader) or {}
+        number = _valid_uid_number(record.get("uid"), prefix)
+        if number is None:
+            needs_assign.append(filepath)
+        else:
+            used.add(number)
+    logger.info("Processed %d", len(files))
+    if not needs_assign:
+        return
+    numbers = _next_available_uid_numbers(used, len(needs_assign))
+    for filepath, number in zip(needs_assign, numbers):
+        new_uid = _format_uid(prefix, number)
+        logger.info(
+            "Wrote %s uid for %s",
+            new_uid,
+            os.path.basename(filepath).split(".", 1)[0],
+        )
+        if dryrun:
+            continue
+        _upsert_uid_in_yaml(filepath, new_uid)
 
 
 @app.command()
@@ -765,7 +887,7 @@ def validate_typing():
     """Validates YAML entities files against pydantic model"""
     from cerberus import Validator
 
-    records = load_jsonl(os.path.join(DATASETS_DIR, "catalogs.jsonl"))
+    records = load_dataset_jsonl("catalogs.jsonl")
     typer.echo("Loaded %d data catalog records" % (len(records)))
     from cdiapi.data.datacatalog import DataCatalog
 
@@ -1159,7 +1281,7 @@ def quality_control(mode="full"):
     from rich.console import Console
     from rich.table import Table
 
-    data = load_jsonl(os.path.join(DATASETS_DIR, f"{mode}.jsonl"))
+    data = load_dataset_jsonl(f"{mode}.jsonl")
     metrics = {}
     for key in METRICS.keys():
         metrics[key] = [key, METRICS[key], 0, 0, 0]
@@ -4197,8 +4319,24 @@ def normalize_host_for_id(host):
 
 
 def get_software_map():
-    """Load software definitions for validation"""
+    """Load software definitions for validation from YAML, with JSONL fallback."""
     software_map = {}
+    try:
+        from constants import iter_software_yaml_records
+
+        for _, row in iter_software_yaml_records():
+            software_id = row.get("id")
+            if not software_id:
+                continue
+            software_map[software_id] = {
+                "id": software_id,
+                "name": row.get("name", ""),
+                "has_api": row.get("has_api"),
+            }
+    except Exception:
+        software_map = {}
+    if software_map:
+        return software_map
     try:
         software_data = load_jsonl(os.path.join(DATASETS_DIR, "software.jsonl"))
         for row in software_data:
@@ -4208,7 +4346,6 @@ def get_software_map():
                 "has_api": row.get("has_api"),
             }
     except Exception:
-        # If software.jsonl doesn't exist, return empty map
         pass
     return software_map
 

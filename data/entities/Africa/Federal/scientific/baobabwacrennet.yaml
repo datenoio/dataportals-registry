@@ -14,12 +14,15 @@ coverage:
     macroregion:
       id: '002'
       name: Africa
-description: Regional open-access repository operated by WACREN for West and Central African
-  research institutions. Built on InvenioRDM and includes research datasets alongside other
-  scholarly outputs.
+description: Regional open-access repository operated by WACREN for West and Central
+  African research institutions. Built on InvenioRDM and includes research datasets
+  alongside other scholarly outputs.
 endpoints:
 - type: inveniordmapi:records
   url: https://baobab.wacren.net/api/records
+- type: oaipmh20
+  url: https://baobab.wacren.net/oai2d?verb=Identify
+  version: '2.0'
 id: baobabwacrennet
 langs:
 - id: EN

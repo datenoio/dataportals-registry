@@ -20,6 +20,18 @@ endpoints:
 - type: oaipmh20
   url: https://phrepo.phbern.ch/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://phrepo.phbern.ch/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: eprints:rest
+  url: https://phrepo.phbern.ch/rest/eprint
+- type: eprints:rdf
+  url: https://phrepo.phbern.ch/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://phrepo.phbern.ch/cgi/export/repository/RDFN3/devel.n3
+- type: opensearch
+  url: https://phrepo.phbern.ch/cgi/opensearchdescription
+  version: '1.1'
 id: phrepophbernch
 langs:
 - id: DE

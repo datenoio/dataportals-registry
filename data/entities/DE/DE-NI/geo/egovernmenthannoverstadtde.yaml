@@ -37,6 +37,11 @@ endpoints:
   version: '2.0'
 - type: geonetwork:site
   url: https://e-government.hannover-stadt.de/geonetwork/srv/api/site
+- type: openapi
+  url: https://e-government.hannover-stadt.de/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: dcat:xml
+  url: https://e-government.hannover-stadt.de/geonetwork/srv/api/records?accept=application/rdf+xml
 id: egovernmenthannoverstadtde
 langs:
 - id: DE

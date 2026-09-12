@@ -25,6 +25,9 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-chronicdata.cdc.gov.xml
 - type: opensearch
   url: https://chronicdata.cdc.gov/opensearch.xml
+- type: socrata:catalog
+  url: https://chronicdata.cdc.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: chronicdatacdcgov
 langs:
 - id: EN

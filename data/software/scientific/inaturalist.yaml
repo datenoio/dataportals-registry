@@ -1,0 +1,60 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: inaturalist
+name: iNaturalist
+website: https://www.inaturalist.org
+description: iNaturalist is the open-source citizen-science platform for organism
+  observations. Register the public hub (and documented independent iNaturalist network
+  nodes), not per-user observation feeds.
+owner:
+  name: California Academy of Sciences / National Geographic Society
+  location:
+    country:
+      id: US
+      name: United States
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/inaturalist/inaturalist
+documentation_url: https://www.inaturalist.org/pages/api+reference
+license:
+  type: MIT
+export_formats:
+- JSON
+- Darwin Core
+capabilities:
+- REST API
+- Observation catalog
+last_updated: '2026-09-09T00:00:00Z'

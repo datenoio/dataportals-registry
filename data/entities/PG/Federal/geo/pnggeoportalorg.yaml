@@ -75,6 +75,12 @@ endpoints:
   url: https://png-geoportal.org/geoserver/rest/settings
 - type: geoserver:layers
   url: https://png-geoportal.org/geoserver/rest/layers
+- type: geonode:datasets
+  url: https://png-geoportal.org/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://png-geoportal.org/catalogue/opensearch
+  version: '1.1'
 id: pnggeoportalorg
 langs:
 - id: EN

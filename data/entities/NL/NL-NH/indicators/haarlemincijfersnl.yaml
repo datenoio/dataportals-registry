@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -63,3 +63,8 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi99992036
+endpoints:
+- type: swing:databank
+  url: https://haarlem.incijfers.nl/databank
+- type: swing:viewer
+  url: https://haarlem.incijfers.nl/viewer/

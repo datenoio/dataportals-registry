@@ -12,10 +12,10 @@ coverage:
       name: South Africa
     level: 20
     macroregion:
-      id: '018'
+      id: 018
       name: Southern Africa
-description: DUT Open Scholar is a scientific data repository operated by Durban
-  University of Technology running on DSpace.
+description: DUT Open Scholar is a scientific data repository operated by Durban University
+  of Technology running on DSpace.
 endpoints:
 - type: dspace
   url: https://ir.dut.ac.za/server/api
@@ -25,6 +25,9 @@ endpoints:
   version: '7'
 - type: sitemap
   url: https://ir.dut.ac.za/sitemap_index.xml
+- type: oaipmh20
+  url: https://ir.dut.ac.za/server/oai/request?verb=Identify
+  version: '2.0'
 id: irdutacza
 langs:
 - id: EN

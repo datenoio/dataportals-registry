@@ -20,6 +20,12 @@ description: Institutional DSpace repository of MITSO (Federation of Trade Union
 endpoints:
 - type: dspace:catalog
   url: http://elib.mitso.by/
+- type: rss
+  url: http://elib.mitso.by/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: http://elib.mitso.by/feed/atom_1.0/site
+  version: '1.0'
 id: elibmitsoby
 langs:
 - id: RU

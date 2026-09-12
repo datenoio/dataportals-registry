@@ -37,6 +37,10 @@ endpoints:
 - type: oaipmh20
   url: https://opendata.herne.de/katalogopendata/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: dcat:xml
+  url: https://opendata.herne.de/katalogopendata/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://opendata.herne.de/katalogopendata/srv/api/site
 id: opendatahernede
 langs:
 - id: DE

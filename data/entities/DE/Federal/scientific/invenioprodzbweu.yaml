@@ -19,6 +19,9 @@ description: Publication and research output repository of ZBW – Leibniz Infor
 endpoints:
 - type: inveniordmapi:records
   url: https://invenio-prod.zbw.eu/api/records
+- type: oaipmh20
+  url: https://invenio-prod.zbw.eu/oai2d?verb=Identify
+  version: '2.0'
 id: invenioprodzbweu
 langs:
 - id: DE

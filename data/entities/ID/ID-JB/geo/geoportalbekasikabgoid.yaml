@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: ID-JB
       name: Jawa Barat
-description: Geoportal for Bekasi, Indonesia, providing access to government datasets and related resources.
+description: Geoportal for Bekasi, Indonesia, providing access to government datasets
+  and related resources.
 endpoints:
 - type: wms111
   url: http://geoportal.bekasikab.go.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -62,6 +63,9 @@ endpoints:
 - type: wmts100
   url: http://geoportal.bekasikab.go.id/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
+- type: csw202
+  url: https://geoportal.bekasikab.go.id/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
 id: geoportalbekasikabgoid
 langs:
 - id: ID

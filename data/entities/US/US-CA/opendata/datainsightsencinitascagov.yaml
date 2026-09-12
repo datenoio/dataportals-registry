@@ -26,6 +26,9 @@ endpoints:
   url: https://datainsights.encinitasca.gov/api/views
 - type: opensearch
   url: https://datainsights.encinitasca.gov/opensearch.xml
+- type: socrata:catalog
+  url: https://datainsights.encinitasca.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: datainsightsencinitascagov
 langs:
 - id: EN

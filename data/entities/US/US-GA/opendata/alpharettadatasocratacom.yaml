@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-GA
+      name: Georgia
+description: Public Socrata catalog of City of Alpharetta capital-project and related
+  open datasets.
+endpoints:
+- type: dcatus11
+  url: https://alpharetta.data.socrata.com/data.json
+- type: socrata:views
+  url: https://alpharetta.data.socrata.com/api/views
+- type: socrata:catalog
+  url: https://alpharetta.data.socrata.com/api/catalog/v1?only=datasets&limit=1
+  version: '1'
+- type: opensearch
+  url: https://alpharetta.data.socrata.com/opensearch.xml
+  version: '1.1'
+id: alpharettadatasocratacom
+langs:
+- id: EN
+  name: English
+link: https://alpharetta.data.socrata.com/
+name: City of Alpharetta Open Data
+owner:
+  link: https://www.alpharetta.ga.us/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-GA
+      name: Georgia
+  name: City of Alpharetta
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: socrata
+  name: Socrata
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+uid: cdi00043784

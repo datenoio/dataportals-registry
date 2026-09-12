@@ -23,6 +23,8 @@ endpoints:
 - type: oaipmh20
   url: http://dc.g-vo.org/oai.xml?verb=Identify
   version: '2.0'
+- type: tap:capabilities
+  url: http://dc.g-vo.org/tap/capabilities
 id: dcgvoorg
 langs:
 - id: EN
@@ -46,8 +48,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: dachs
+  name: DaCHS
 status: active
 tags:
 - scientific

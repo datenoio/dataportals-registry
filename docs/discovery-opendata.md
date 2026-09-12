@@ -1,6 +1,6 @@
 # Discovering open data portals
 
-How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax (Google, Censys, Shodan, and [FOFA as a Censys alternative](discovery-search-tools.md#fofa)): [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md). Also covered here: Idra (`idra`), a DCAT-AP federation layer that is usually typed as a **Data search engine**; Piveau, Our Open Data, Gipuzkoa Irekia, DataPress, Taiwan MODA, ResourceContracts, RDF Online Repository, the Guangxi Public Data Open Platform, ODWeb, ATM Maggioli, and OpenGov.
+How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax (Google, Censys, Shodan, and [FOFA as a Censys alternative](discovery-search-tools.md#fofa)): [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md). Also covered here: Idra (`idra`), a DCAT-AP federation layer that is usually typed as a **Data search engine**; Piveau, Our Open Data, Gipuzkoa Irekia, DataPress, Taiwan MODA, ResourceContracts, RDF Online Repository, the Guangxi Public Data Open Platform, ODWeb, ATM Maggioli, OpenGov, and OPENDATAENTE.
 
 Set `software.id` from `data/software/` only when a probe or page signal matches. Otherwise `custom`. After YAML exists: `python scripts/apidetect.py detect-single {id} --dryrun` (replace `{id}` with the catalog id).
 
@@ -126,6 +126,19 @@ Jekyll + CKAN-like static portal. Often GitHub Pages. Datasets as Markdown in `/
 
 Skip the [jkan.io](https://jkan.io) project site unless it is a real catalog instance.
 
+## Datasette (`datasette`) {#datasette}
+
+Open-source SQLite publisher with a JSON/CSV API. Site and instance examples: [datasette.io](https://datasette.io/).
+
+**Confirm:** GET the instance root. Title or footer `Datasette`; table/query UI; JSON at `/-/versions` or `/{database}.json`. Register the published instance, not each table or canned query. Skip datasette.io marketing and `lite.datasette.io` demos unless they are the catalog being registered.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Datasette" ("powered by" OR "explore this database") -site:datasette.io -site:github.com` |
+| Google | `inurl:/-/versions Datasette` |
+| Censys | `web.endpoints.http.body: "Datasette"` |
+| FOFA | `body="Datasette"` |
+
 ## Junar (`junar`) {#junar}
 
 SaaS open-data CMS used in Latin America. Customer list: [junar.com/customers](https://junar.com/customers/). Often `/data.json`.
@@ -218,6 +231,24 @@ Spanish municipal sede electrónica / Portal de Transparencia with an open-data 
 | FOFA | `body="Maggioli"` |
 
 Skip the vendor homepage and Galileo demo sede. Prefer the municipal catalog path, not the whole e-office.
+
+## OPENDATAENTE (`opendataente`) {#opendataente}
+
+Actainfo cloud SaaS open-data catalog for Italian municipalities and local authorities (ACN sa-5127). Product: [opendataente.it](https://opendataente.it/) and the [Actainfo instance list](https://www.actainfo.it/news/dataset-open-data-2025/). Tenants use `dati.comune.{slug}.{province}.it` (or a dedicated `dati.` host), not `*.opendataente.it`.
+
+**Signals:** title “Portale Open Data”; `/env.js` with `BACKEND_BASE_URL` / `DATI_BASE_URL`; footer “Powered by ACTAINFO”; React shell `/static/js/main.*.js`.
+
+**Confirm:** GET `https://host/backend/api/catalog/` and match DCAT-AP_IT RDF (`application/rdf+xml`, `dcatapit:Dataset`). One record per public tenant. Do **not** set `ckan` from a guessed `/api/3` path — the homepage is an SPA shell. Do **not** register `opendataente.it` / `opendataente.cloud` (vendor marketing) or ActaLogin (`login.comune.*`) tenants.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Portale Open Data" "Powered by ACTAINFO"` |
+| Google | `inurl:dati.comune "Portale Open Data" site:.it` |
+| Censys | `web.endpoints.http.html_title: "Portale Open Data"` |
+| FOFA | `title="Portale Open Data" && body="ACTAINFO"` |
+| crt.sh | `dati.comune.%.it` (then confirm `/backend/api/catalog/`) |
+
+Skip the vendor homepage. Prefer the municipal `dati.` catalog, not the commune CMS.
 
 ## OpenGov (`opengov`) {#opengov}
 

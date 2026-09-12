@@ -18,7 +18,8 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: FIU SRH Open Data Hub. Public catalog operated by Florida International University.
+description: FIU SRH Open Data Hub. Public catalog operated by Florida International
+  University.
 endpoints:
 - type: dcatap201
   url: https://fiu-srh-open-data-hub-fiugis.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -26,6 +27,10 @@ endpoints:
   url: https://fiu-srh-open-data-hub-fiugis.hub.arcgis.com/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://fiu-srh-open-data-hub-fiugis.hub.arcgis.com/api/search/v1
+- type: dcatus11
+  url: https://fiu-srh-open-data-hub-fiugis.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: dcatus11
+  url: https://fiu-srh-open-data-hub-fiugis.hub.arcgis.com/data.json
 id: fiusrhopendatahubfiugishubarcgiscom
 langs:
 - id: EN

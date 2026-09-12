@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 10
+    macroregion:
+      id: EU
+      name: European Union
+description: Beyond Epica Catalogue is a Geoportal operated by Beyond EPICA, built
+  with GeoNetwork.
+endpoints:
+- type: csw202
+  url: https://metadata.beyondepica.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:site
+  url: https://metadata.beyondepica.eu/geonetwork/srv/api/site
+- type: geonetwork:selections
+  url: https://metadata.beyondepica.eu/geonetwork/srv/api/selections
+id: metadatabeyondepicaeu
+langs:
+- id: EN
+  name: English
+link: https://metadata.beyondepica.eu/geonetwork
+name: Beyond Epica Catalogue
+owner:
+  link: https://www.beyondepica.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+  name: Beyond EPICA
+  type: Academy
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- academic
+- geonetwork
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043152

@@ -15,9 +15,10 @@ coverage:
     macroregion:
       id: '013'
       name: Central America
-description: Platform for the management and publication of geospatial data, enabling upload, metadata
-  annotation, and mapping of both vector and raster datasets. Supports standard metadata formats (ISO
-  19139:2007 / ISO 19115), OGC standards, and integration with other open-source tools.
+description: Platform for the management and publication of geospatial data, enabling
+  upload, metadata annotation, and mapping of both vector and raster datasets. Supports
+  standard metadata formats (ISO 19139:2007 / ISO 19115), OGC standards, and integration
+  with other open-source tools.
 endpoints:
 - type: geonode:datasets
   url: https://geonode.idegeo.centrogeo.org.mx/api/datasets/
@@ -74,6 +75,9 @@ endpoints:
 - type: wms-c111
   url: https://geonode.idegeo.centrogeo.org.mx/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: opensearch
+  url: https://geonode.idegeo.centrogeo.org.mx/catalogue/opensearch
+  version: '1.1'
 id: geonodeidegeocentrogeoorgmx
 langs:
 - id: ES

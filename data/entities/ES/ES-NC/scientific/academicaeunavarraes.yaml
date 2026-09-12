@@ -26,6 +26,11 @@ endpoints:
 - type: dspace:objects
   url: https://academica-e.unavarra.es/server/api/discover/search/objects
   version: '7'
+- type: sitemap
+  url: https://academica-e.unavarra.es/sitemap_index.xml
+- type: oaipmh20
+  url: https://academica-e.unavarra.es/server/oai/request?verb=Identify
+  version: '2.0'
 id: academicaeunavarraes
 langs:
 - id: ES

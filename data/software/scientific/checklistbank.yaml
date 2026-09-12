@@ -1,0 +1,62 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: checklistbank
+name: ChecklistBank
+website: https://www.checklistbank.org
+description: ChecklistBank is Catalogue of Life's open platform for publishing,
+  versioning, and analysing taxonomic checklists. It powers global species lists
+  with a public dataset catalog, downloads, and a documented REST API.
+owner:
+  name: Catalogue of Life Secretariat
+  location:
+    country:
+      id: NL
+      name: Netherlands
+logo_url: https://www.checklistbank.org/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Structured
+type: Software
+repository_url: https://github.com/CatalogueOfLife/backend
+documentation_url: https://api.checklistbank.org
+export_formats:
+- JSON
+- DwC-A
+- ColDP
+- CSV
+capabilities:
+- REST API
+- Checklist catalog
+- Taxonomic downloads
+last_updated: '2026-09-09T00:00:00Z'

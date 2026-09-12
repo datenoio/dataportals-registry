@@ -25,6 +25,15 @@ endpoints:
   url: https://daten.stadt.sg.ch/api
 - type: sitemap
   url: https://daten.stadt.sg.ch/sitemap.xml
+- type: opendatasoftapi
+  url: https://daten.stadt.sg.ch/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://daten.stadt.sg.ch/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://daten.stadt.sg.ch/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://daten.stadt.sg.ch/data.json
 id: datenstadtsgch
 langs:
 - id: DE

@@ -36,6 +36,20 @@ endpoints:
 - type: csw202
   url: https://geonode.ideal.ufpb.br/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: geonode:datasets
+  url: https://geonode.ideal.ufpb.br/api/datasets/
+- type: oaipmh20
+  url: https://geonode.ideal.ufpb.br/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geonode.ideal.ufpb.br/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: geonode:datasets
+  url: https://geonode.ideal.ufpb.br/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geonode.ideal.ufpb.br/catalogue/opensearch
+  version: '1.1'
 id: geonodeidealufpbbr
 langs:
 - id: PT

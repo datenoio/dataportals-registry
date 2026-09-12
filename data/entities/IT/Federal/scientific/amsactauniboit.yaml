@@ -13,7 +13,7 @@ coverage:
       name: Italy
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: AMS Acta is the institutional open access repository which enables the
   researchers of the Alma Mater Studiorum - University of Bologna to share, preserve
@@ -48,6 +48,16 @@ endpoints:
 - type: oaipmh20
   url: https://amsacta.unibo.it/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://amsacta.unibo.it/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://amsacta.unibo.it/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://amsacta.unibo.it/rest/eprint
+- type: opensearch
+  url: https://amsacta.unibo.it/cgi/opensearchdescription
+  version: '1.1'
 tags:
 - scientific
 - research data

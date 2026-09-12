@@ -23,6 +23,15 @@ endpoints:
   url: https://data.longbeach.gov/api
 - type: sitemap
   url: https://data.longbeach.gov/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.longbeach.gov/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.longbeach.gov/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.longbeach.gov/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.longbeach.gov/data.json
 id: datalongbeachgov
 langs:
 - id: EN

@@ -19,6 +19,15 @@ description: Institutional DSpace repository of Argentina's geological survey, i
 endpoints:
 - type: dspace:catalog
   url: https://repositorio.segemar.gob.ar
+- type: oaipmh20
+  url: https://repositorio.segemar.gob.ar/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://repositorio.segemar.gob.ar/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repositorio.segemar.gob.ar/feed/atom_1.0/site
+  version: '1.0'
 id: repositoriosegemargobar
 identifiers:
 - id: re3data

@@ -19,6 +19,22 @@ description: Institutional repository of ICMR-National Institute for Research in
 endpoints:
 - type: eprints:catalog
   url: https://eprints.nirt.res.in
+- type: eprints:rest
+  url: https://eprints.nirt.res.in/rest/eprint
+- type: eprints:n3
+  url: https://eprints.nirt.res.in/cgi/export/repository/RDFN3/devel.n3
+- type: eprints:datasets
+  url: https://eprints.nirt.res.in/cgi/exportview/type/dataset/JSON/dataset.js
+- type: oaipmh20
+  url: https://eprints.nirt.res.in/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: atom
+  url: https://eprints.nirt.res.in/cgi/latest_tool?output=Atom
+- type: eprints:rdf
+  url: https://eprints.nirt.res.in/cgi/export/repository/RDFXML/devel.rdf
+- type: opensearch
+  url: https://eprints.nirt.res.in/cgi/opensearchdescription
+  version: '1.1'
 id: eprintsnirtresin
 langs:
 - id: EN

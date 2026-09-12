@@ -66,6 +66,9 @@ endpoints:
 - type: wcs100
   url: https://geo.igb-berlin.de/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://geo.igb-berlin.de/api/v2/datasets/
+  version: '2'
 id: geoigbberlinde
 langs:
 - id: DE

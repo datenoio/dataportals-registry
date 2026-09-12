@@ -24,6 +24,23 @@ endpoints:
 - type: oaipmh20
   url: https://catalogue.ejpsoil.eu/?mode=oaipmh&verb=Identify
   version: '2.0'
+- type: ogcrecords
+  url: https://catalogue.ejpsoil.eu/collections?f=json
+  version: '1.0'
+- type: oaipmh20
+  url: https://catalogue.ejpsoil.eu/oaipmh
+  version: '2.0'
+- type: csw300
+  url: https://catalogue.ejpsoil.eu/csw
+  version: 3.0.0
+- type: opensearch
+  url: https://catalogue.ejpsoil.eu/opensearch
+  version: '1.0'
+- type: sru
+  url: https://catalogue.ejpsoil.eu/sru
+  version: '1.0'
+- type: openapi
+  url: https://catalogue.ejpsoil.eu/openapi?f=json
 id: catalogueejpsoileu
 langs:
 - id: EN

@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-BRE
+      name: Bretagne
+description: Public mviewer geoportal of the Couesnon river basin (historical maps,
+  aerial photos, and thematic layers).
+endpoints:
+- type: mviewer:config
+  url: https://geocouesnon.bassin-couesnon.fr/geocouesnon/config.xml
+id: geocouesnonbassincouesnonfr
+langs:
+- id: FR
+  name: French
+link: https://geocouesnon.bassin-couesnon.fr/geocouesnon/
+name: GéoCouesnon
+owner:
+  link: https://www.bassin-couesnon.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-BRE
+      name: Bretagne
+  name: Syndicat du bassin du Couesnon
+  type: Local government
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- government
+- mviewer
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00043266

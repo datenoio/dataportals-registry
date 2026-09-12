@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: WIS2 in a box node of INSIVUMEH (centre-id gt-insivumeh), publishing
+  manual and automatic SYNOP observations to the WMO Information System through an
+  OGC API.
+endpoints:
+- type: pygeoapi:openapi
+  url: http://wis.insivumeh.gob.gt/oapi/openapi
+  version: '1.0'
+- type: pygeoapi:collections
+  url: http://wis.insivumeh.gob.gt/oapi/collections/?f=json
+  version: '1.0'
+id: wisinsivumehgobgt
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: http://wis.insivumeh.gob.gt
+name: Guatemala INSIVUMEH - WIS 2.0 in a box
+owner:
+  link: https://www.insivumeh.gob.gt
+  location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 20
+  name: Instituto Nacional de Sismología, Vulcanología, Meteorología e Hidrología
+    (INSIVUMEH)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: wis20box
+  name: Wis 2.0 Box
+status: active
+tags:
+- meteorology
+- climate
+- weather
+- WIS2
+- government
+- has_api
+topics:
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00043341

@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Axiom Data Science THREDDS catalog of sensor datasets and IOOS regional
+  association catalog harvests.
+endpoints:
+- type: thredds:catalog
+  url: https://thredds.axiomdatascience.com/thredds/catalog.xml
+- type: thredds:info
+  url: https://thredds.axiomdatascience.com/thredds/info/serverInfo.xml
+id: threddsaxiomdatasciencecom
+langs:
+- id: EN
+  name: English
+link: https://thredds.axiomdatascience.com/thredds/catalog.html
+name: Axiom Data Science THREDDS
+owner:
+  link: https://www.axiomdatascience.com/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Axiom Data Science
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- THREDDS
+- ocean
+- Axiom
+- scientific
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00042364

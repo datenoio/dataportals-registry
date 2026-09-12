@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: CO-ANT
       name: Antioquia
-description: ArcGIS Hub geoportal of the Government of Antioquia publishing departmental open
-  geospatial data and map applications by secretariat.
+description: ArcGIS Hub geoportal of the Government of Antioquia publishing departmental
+  open geospatial data and map applications by secretariat.
 endpoints:
 - type: dcatap201
   url: https://geodatos-gobantioquia.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -29,6 +29,8 @@ endpoints:
   url: https://geodatos-gobantioquia.opendata.arcgis.com/api/feed/rss/2.0
 - type: ogcrecordsapi
   url: https://geodatos-gobantioquia.opendata.arcgis.com/api/search/v1
+- type: dcatus11
+  url: https://geodatos-gobantioquia.opendata.arcgis.com/data.json
 id: geodatosgobantioquiaopendataarcgiscom
 langs:
 - id: ES

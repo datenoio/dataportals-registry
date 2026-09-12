@@ -74,6 +74,12 @@ endpoints:
   url: https://geoportal.arkandha.net/geoserver/rest/settings
 - type: geoserver:layers
   url: https://geoportal.arkandha.net/geoserver/rest/layers
+- type: geonode:datasets
+  url: https://geoportal.arkandha.net/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geoportal.arkandha.net/catalogue/opensearch
+  version: '1.1'
 id: geoportalarkandhanet
 langs:
 - id: ES

@@ -19,6 +19,17 @@ description: Institutional repository of the Indian Statistical Institute, Kolka
 endpoints:
 - type: dspace:catalog
   url: https://dspace.isical.ac.in
+- type: dspace
+  url: https://dspace.isical.ac.in/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://dspace.isical.ac.in/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://dspace.isical.ac.in/sitemap_index.xml
+- type: oaipmh20
+  url: https://dspace.isical.ac.in/server/oai/request?verb=Identify
+  version: '2.0'
 id: dspaceisicalacin
 langs:
 - id: EN

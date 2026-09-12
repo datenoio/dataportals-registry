@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,9 +18,8 @@ coverage:
     subregion:
       id: SE-Y
       name: Västernorrlands län [SE-22]
-description: Public Origosamverkan Origo map gallery of Sundsvall Municipality,
-  with themed webbkartor for planning, outdoor recreation, and local geographic
-  data.
+description: Public Origosamverkan Origo map gallery of Sundsvall Municipality, with
+  themed webbkartor for planning, outdoor recreation, and local geographic data.
 id: kartasundsvallse
 langs:
 - id: SV
@@ -71,3 +70,20 @@ topics:
   name: Planning / Cadastre
   type: iso19115
 uid: cdi99991357
+endpoints:
+- type: origo:config
+  url: https://karta.sundsvall.se/sundsvall/index.json
+- type: origo:config
+  url: https://karta.sundsvall.se/bxkarta/index.json
+- type: origo:config
+  url: https://karta.sundsvall.se/friluftskarta/index.json
+- type: origo:config
+  url: https://karta.sundsvall.se/parkeringar/index.json
+- type: origo:config
+  url: https://karta.sundsvall.se/planeringskartan/index.json
+- type: origo:config
+  url: https://karta.sundsvall.se/detaljplaner/index.json
+- type: origo:config
+  url: https://karta.sundsvall.se/skyfallskarta/index.json
+- type: origo:config
+  url: https://karta.sundsvall.se/solkarta/index.json

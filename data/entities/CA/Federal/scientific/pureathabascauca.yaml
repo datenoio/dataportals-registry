@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Athabasca University is a Scientific data repository operated by Athabasca
+  University, built with Pure.
+id: pureathabascauca
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://pure.athabascau.ca
+name: Athabasca University
+owner:
+  link: https://pure.athabascau.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+  name: Athabasca University
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00042901
+endpoints:
+- type: oaipmh20
+  url: https://pure.athabascau.ca/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://pure.athabascau.ca/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://pure.athabascau.ca/sitemap/datasets.xml

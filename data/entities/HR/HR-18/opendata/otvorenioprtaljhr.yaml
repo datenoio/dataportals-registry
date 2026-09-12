@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: HR
+      name: Croatia
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: HR-18
+      name: Istarska županija
+description: DKAN open data portal of the Municipality of Oprtalj-Portole (Istria,
+  Croatia) publishing municipal property, communal fees, scholarships, social welfare,
+  and spatial-plan datasets.
+endpoints:
+- type: ckan:package-list
+  url: https://otvoreni.oprtalj.hr/api/3/action/package_list
+  version: '3'
+id: otvorenioprtaljhr
+langs:
+- id: HR
+  name: Croatian
+link: https://otvoreni.oprtalj.hr
+name: Portal otvorenih podataka Općine Oprtalj-Portole
+owner:
+  link: https://www.oprtalj.hr
+  location:
+    country:
+      id: HR
+      name: Croatia
+    level: 30
+    subregion:
+      id: HR-18
+      name: Istarska županija
+  name: Općina Oprtalj-Portole
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dkan
+  name: DKAN
+status: active
+tags:
+- government
+- croatia
+- istria
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00043349

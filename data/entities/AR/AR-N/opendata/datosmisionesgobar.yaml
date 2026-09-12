@@ -21,6 +21,15 @@ description: Portal de datos abiertos de la Provincia de Misiones (Argentina).
 endpoints:
 - type: ckan
   url: http://www.datos.misiones.gob.ar/api/3
+- type: ckan
+  url: https://www.datos.misiones.gob.ar/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://www.datos.misiones.gob.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://www.datos.misiones.gob.ar/api/3/action/package_list
+  version: '3'
 id: datosmisionesgobar
 langs:
 - id: ES

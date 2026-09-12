@@ -26,6 +26,12 @@ endpoints:
 - type: ckan:package-list
   url: https://daten.greenpeace.de/api/3/action/package_list
   version: '3'
+- type: dcat:ttl
+  url: https://daten.greenpeace.de/catalog.ttl
+- type: dcat:jsonld
+  url: https://daten.greenpeace.de/catalog.jsonld
+- type: dcat
+  url: https://daten.greenpeace.de/catalog.rdf
 id: datengreenpeacede
 langs:
 - id: DE

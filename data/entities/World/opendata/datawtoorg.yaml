@@ -65,3 +65,12 @@ uid: cdi00020580
 endpoints:
 - type: sitemap
   url: https://data.wto.org/sitemap.xml
+- type: ckan
+  url: https://data.wto.org/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.wto.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.wto.org/api/3/action/package_list
+  version: '3'

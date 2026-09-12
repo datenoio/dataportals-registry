@@ -14,18 +14,28 @@ coverage:
     macroregion:
       id: '001'
       name: World
-description: Official IAEA Data Platform providing access to datasets, tools, and resources
-  for nuclear science and technology, safety, and related research.
+description: Official IAEA Data Platform providing access to datasets, tools, and
+  resources for nuclear science and technology, safety, and related research.
 endpoints:
 - type: ckan
   url: https://data.iaea.org/api/3
-  version: "3"
+  version: '3'
 - type: ckan:package-search
   url: https://data.iaea.org/api/3/action/package_search
-  version: "3"
+  version: '3'
 - type: ckan:package-list
   url: https://data.iaea.org/api/3/action/package_list
-  version: "3"
+  version: '3'
+- type: dcat:n3
+  url: https://data.iaea.org/catalog.n3
+- type: dcat:ttl
+  url: https://data.iaea.org/catalog.ttl
+- type: dcat:xml
+  url: https://data.iaea.org/catalog.xml
+- type: dcat:jsonld
+  url: https://data.iaea.org/catalog.jsonld
+- type: dcat
+  url: https://data.iaea.org/catalog.rdf
 id: dataiaeaorg
 langs:
 - id: EN

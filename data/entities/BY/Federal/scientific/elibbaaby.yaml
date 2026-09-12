@@ -20,6 +20,17 @@ description: Institutional DSpace repository of BSAA, including academy history 
 endpoints:
 - type: dspace:catalog
   url: https://elib.baa.by/
+- type: dspace
+  url: https://elib.baa.by/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://elib.baa.by/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://elib.baa.by/sitemap_index.xml
+- type: oaipmh20
+  url: https://elib.baa.by/server/oai/request?verb=Identify
+  version: '2.0'
 id: elibbaaby
 langs:
 - id: RU

@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: InvenioRDM repository of the Faculty of Economics and Management at CZU
+  Prague.
+endpoints:
+- type: inveniordmapi:records
+  url: https://rdm.damp.pef.czu.cz/api/records
+- type: oaipmh20
+  url: https://rdm.damp.pef.czu.cz/oai2d?verb=Identify
+  version: '2.0'
+id: rdmdamppefczucz
+langs:
+- id: CS
+  name: Czech
+link: https://rdm.damp.pef.czu.cz
+name: Repozitář PEF ČZU
+owner:
+  link: https://www.pef.czu.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+  name: Czech University of Life Sciences Prague
+  type: Academy
+software:
+  id: inveniordm
+  name: InvenioRDM
+status: active
+tags:
+- scientific
+- research
+- academic
+- inveniordm
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042977

@@ -1,0 +1,64 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: cellxgene
+name: CELLxGENE Discover
+website: https://cellxgene.cziscience.com
+description: CZ CELLxGENE Discover is the public catalog of curated single-cell datasets
+  from the Chan Zuckerberg Initiative. The data portal and explorer are MIT-licensed.
+  Register the Discover hub, not each h5ad explorer session or Census snapshot as a
+  separate catalog.
+owner:
+  name: Chan Zuckerberg Initiative
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://cellxgene.cziscience.com/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: Uncertain
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Structured
+type: Software
+repository_url: https://github.com/chanzuckerberg/single-cell-data-portal
+documentation_url: https://chanzuckerberg.github.io/cellxgene-documentation/
+license:
+  type: MIT
+  url: https://github.com/chanzuckerberg/single-cell-data-portal/blob/main/LICENSE
+export_formats:
+- H5AD
+- JSON
+capabilities:
+- Curation API
+- Single-cell dataset catalog
+- Explorer visualization
+last_updated: '2026-09-11T00:00:00Z'

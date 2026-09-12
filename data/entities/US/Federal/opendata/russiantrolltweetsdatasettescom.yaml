@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Datasette publishing the Internet Research Agency troll-tweet dataset
+  as a searchable SQLite database.
+id: russiantrolltweetsdatasettescom
+langs:
+- id: EN
+  name: English
+link: https://russian-troll-tweets.datasettes.com/
+name: Russian Troll Tweets
+owner:
+  link: https://datasette.io/
+  location:
+    country:
+      id: US
+      name: United States
+  name: Datasette project
+  type: Civil society
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- social media
+- disinformation
+- tweets
+- open data
+- research data
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: INTR
+  name: International issues
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: datasette:databases
+  url: https://russian-troll-tweets.datasettes.com/-/databases.json
+properties:
+  is_national: false
+uid: cdi00005613

@@ -46,6 +46,12 @@ endpoints:
 - type: wps100
   url: https://ide.sedatu.gob.mx/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://ide.sedatu.gob.mx/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://ide.sedatu.gob.mx/catalogue/opensearch
+  version: '1.1'
 id: idesedatugobmx
 langs:
 - id: ES

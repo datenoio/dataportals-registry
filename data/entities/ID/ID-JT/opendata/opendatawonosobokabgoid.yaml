@@ -17,13 +17,17 @@ coverage:
     subregion: &id002
       id: ID-JT
       name: Jawa Tengah
-description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Kabupaten Wonosobo.
+description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Kabupaten
+  Wonosobo.
 endpoints:
 - type: ckan:package-search
   url: https://opendata.wonosobokab.go.id/api/3/action/package_search
   version: '3'
 - type: ckan:package-list
   url: https://opendata.wonosobokab.go.id/api/3/action/package_list
+  version: '3'
+- type: ckan
+  url: https://opendata.wonosobokab.go.id/api/3
   version: '3'
 id: opendatawonosobokabgoid
 langs:

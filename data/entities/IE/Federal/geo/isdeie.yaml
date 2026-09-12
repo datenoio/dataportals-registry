@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Irish Spatial Data Exchange (ISDE) GeoNetwork catalog for sharing
-  geographically referenced Irish public-sector datasets, including INSPIRE metadata.
+description: Irish Spatial Data Exchange (ISDE) GeoNetwork catalog for sharing geographically
+  referenced Irish public-sector datasets, including INSPIRE metadata.
 endpoints:
 - type: geonetwork:query
   url: https://isde.ie/geonetwork/srv/eng/q
@@ -36,6 +36,8 @@ endpoints:
   url: https://isde.ie/geonetwork/srv/api/site
 - type: opensearch
   url: https://isde.ie/portal.opensearch
+- type: geonetwork:selections
+  url: https://isde.ie/geonetwork/srv/api/selections
 id: isdeie
 langs:
 - id: EN

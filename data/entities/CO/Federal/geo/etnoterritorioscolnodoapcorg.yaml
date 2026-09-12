@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Observatorio de Territorios Étnicos y Campesinos is a Geoportal operated
+  by Observatorio de Territorios Étnicos y Campesinos, built with Lizmap.
+id: etnoterritorioscolnodoapcorg
+langs:
+- id: ES
+  name: Spanish
+link: https://etnoterritorios.colnodo.apc.org/
+name: Observatorio de Territorios Étnicos y Campesinos
+owner:
+  link: https://etnoterritorios.colnodo.apc.org/
+  location:
+    country:
+      id: CO
+      name: Colombia
+  name: Observatorio de Territorios Étnicos y Campesinos
+  type: Academy
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- academic
+- lizmap
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00042969
+endpoints:
+- type: lizmap:service
+  url: https://etnoterritorios.colnodo.apc.org/index.php/lizmap/service/?repository=baru2023&project=Baru
+- type: wms130
+  url: https://etnoterritorios.colnodo.apc.org/index.php/lizmap/service/?repository=baru2023&project=Baru&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0

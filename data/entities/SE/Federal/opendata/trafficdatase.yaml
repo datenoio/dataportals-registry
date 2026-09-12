@@ -26,6 +26,12 @@ endpoints:
 - type: ckan:package-list
   url: https://trafficdata.se/api/3/action/package_list
   version: '3'
+- type: dcat:xml
+  url: https://trafficdata.se/catalog.xml
+- type: dcat:jsonld
+  url: https://trafficdata.se/catalog.jsonld
+- type: dcat
+  url: https://trafficdata.se/catalog.rdf
 id: trafficdatase
 langs:
 - id: SV

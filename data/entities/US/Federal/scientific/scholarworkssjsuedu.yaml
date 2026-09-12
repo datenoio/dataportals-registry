@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -38,8 +38,8 @@ owner:
   name: San Jose State University
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: elsevierdigitalcommons
+  name: Elsevier Digital Commons
 status: active
 tags:
 - scientific
@@ -50,3 +50,6 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00033481
+endpoints:
+- type: oaipmh20
+  url: https://scholarworks.sjsu.edu/do/oai/?verb=Identify

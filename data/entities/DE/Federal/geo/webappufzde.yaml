@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: The UFZ Spatial Data Catalog is a GeoNetwork catalogue of geospatial research
-  datasets produced at the Helmholtz Centre for Environmental Research.
+description: The UFZ Spatial Data Catalog is a GeoNetwork catalogue of geospatial
+  research datasets produced at the Helmholtz Centre for Environmental Research.
 id: webappufzde
 identifiers:
 - id: openaire
@@ -62,3 +62,10 @@ endpoints:
 - type: csw202
   url: https://web.app.ufz.de/geonetwork/srv/eng/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: csw202
+  url: https://web.app.ufz.de/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:selections
+  url: https://web.app.ufz.de/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://web.app.ufz.de/geonetwork/srv/api/site

@@ -28,6 +28,9 @@ endpoints:
   url: https://knowledge.uchicago.edu/opensearchdescription
 - type: unapi
   url: https://knowledge.uchicago.edu/unapi
+- type: oaipmh20
+  url: https://knowledge.uchicago.edu/oai2d?verb=Identify
+  version: '2.0'
 id: knowledgeuchicagoedu
 identifiers:
 - id: roar
@@ -63,8 +66,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: inveniordm
+  name: InvenioRDM
 status: active
 tags:
 - academic

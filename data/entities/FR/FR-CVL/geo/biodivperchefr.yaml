@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-CVL
+      name: Centre-Val de Loire
+description: GeoNature-atlas of biodiversity observations for Parc naturel régional
+  du Perche.
+id: biodivperchefr
+langs:
+- id: FR
+  name: French
+link: https://biodiv-perche.fr/
+name: Biodiv'Perche
+owner:
+  link: https://www.parc-naturel-perche.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-CVL
+      name: Centre-Val de Loire
+  name: Parc naturel régional du Perche
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geonature
+  name: GeoNature
+status: active
+tags:
+- geospatial
+- biodiversity
+- GeoNature
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00043186
+endpoints:
+- type: geonature:api
+  url: https://biodiv-perche.fr/api/searchTaxon
+- type: geonature:api
+  url: https://biodiv-perche.fr/api/searchCommune

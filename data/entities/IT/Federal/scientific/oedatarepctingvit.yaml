@@ -20,6 +20,9 @@ description: Open Data repository featuring scientific datasets related to seism
 endpoints:
 - type: inveniordmapi:records
   url: https://oedatarep.ct.ingv.it/api/records
+- type: oaipmh20
+  url: https://oedatarep.ct.ingv.it/oai2d?verb=Identify
+  version: '2.0'
 id: oedatarepctingvit
 identifiers:
 - id: re3data

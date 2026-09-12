@@ -21,6 +21,15 @@ endpoints:
   url: https://data.bretagne.bzh/api
 - type: sitemap
   url: https://data.bretagne.bzh/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.bretagne.bzh/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.bretagne.bzh/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.bretagne.bzh/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.bretagne.bzh/data.json
 id: databretagnebzh
 langs:
 - id: FR

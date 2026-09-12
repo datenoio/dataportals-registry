@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Datasette index of Socrata open-data resources, with table-level search
+  and JSON/CSV export.
+id: opendatadatasetteio
+langs:
+- id: EN
+  name: English
+link: https://open-data.datasette.io/
+name: Open Data (Socrata index)
+owner:
+  link: https://datasette.io/
+  location:
+    country:
+      id: US
+      name: United States
+  name: Datasette project
+  type: Civil society
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- Socrata
+- catalog index
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: datasette:databases
+  url: https://open-data.datasette.io/-/databases.json
+properties:
+  is_national: false
+uid: cdi00005612

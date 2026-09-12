@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 20
+    macroregion:
+      id: '143'
+      name: Central Asia
+description: Public WebGIS showing production and consumption waste sites identified
+  through satellite monitoring, including licensed and unauthorized waste locations
+  and their changes.
+endpoints:
+- type: arcgis:rest:layer
+  url: https://arcgis.gharysh.kz/server/rest/services/KM_Waste/2022_Othodi_open/MapServer/0
+id: wasteopengharyshkz
+langs:
+- id: RU
+  name: Russian
+link: https://wasteopen.gharysh.kz/
+name: Kazakhstan Waste Monitoring Open Map
+owner:
+  link: https://www.gov.kz/memleket/entities/ecogeo
+  location:
+    country:
+      id: KZ
+      name: Kazakhstan
+  name: Ministry of Ecology and Natural Resources of Kazakhstan
+  type: Central government
+software:
+  id: webappbuilder
+  name: ArcGIS Web AppBuilder
+status: active
+tags:
+- geospatial
+- waste
+- pollution
+- remote sensing
+topics:
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00042812

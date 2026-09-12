@@ -17,13 +17,22 @@ coverage:
     subregion:
       id: CH-SZ
       name: Schwyz
-description: Open data portal of the Canton of Schwyz, publishing cantonal datasets on
-  OpenDataSoft.
+description: Open data portal of the Canton of Schwyz, publishing cantonal datasets
+  on OpenDataSoft.
 endpoints:
 - type: opendatasoftapi
   url: https://data.sz.ch/api
 - type: sitemap
   url: https://data.sz.ch/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.sz.ch/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.sz.ch/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://data.sz.ch/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.sz.ch/data.json
 id: dataszch
 langs:
 - id: DE

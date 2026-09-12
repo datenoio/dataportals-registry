@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: ICATMAR DIGI4ECO Ancona ERDDAP is a Scientific data repository operated
+  by Universitat Politècnica de Catalunya.
+endpoints:
+- type: erddap:index
+  url: https://ancona.icatmar.cat/erddap/index.json
+- type: erddap:datasets
+  url: https://ancona.icatmar.cat/erddap/info/index.json
+- type: opensearch
+  url: https://ancona.icatmar.cat/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://ancona.icatmar.cat/erddap/sitemap.xml
+id: anconaicatmarcat
+langs:
+- id: ES
+  name: Spanish
+link: https://ancona.icatmar.cat/erddap/index.html
+name: ICATMAR DIGI4ECO Ancona ERDDAP
+owner:
+  link: https://www.upc.edu
+  location:
+    country:
+      id: ES
+      name: Spain
+  name: Universitat Politècnica de Catalunya
+  type: Academy
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- scientific
+- research
+- academic
+- erddap
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042402

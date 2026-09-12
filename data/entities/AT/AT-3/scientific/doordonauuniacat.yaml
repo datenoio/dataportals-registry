@@ -11,6 +11,12 @@ endpoints:
   version: '2.0'
 - type: rest
   url: https://door.donau-uni.ac.at/api/search/select
+- type: openapi
+  url: https://door.donau-uni.ac.at/api/openapi/json
+- type: rest
+  url: https://door.donau-uni.ac.at/api/search/select?q=cmodel:*Dataset*&wt=json&rows=25
+- type: rest
+  url: https://door.donau-uni.ac.at/api/search/select?q=dc_type:dataset&wt=json&rows=25
 coverage:
 - location:
     country:
@@ -20,11 +26,12 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: DOOR is the open institutional repository of the University for Continuing Education
-  Krems, formerly known as Danube University Krems. DOOR runs on the fedora Software and is
-  a partner repository of Phaidra Vienna and other fedora users in Austria. We provide access
-  to OA publications, scientific data and much more for interested users and support our scientists
-  and co-workers in their publication processis.
+description: DOOR is the open institutional repository of the University for Continuing
+  Education Krems, formerly known as Danube University Krems. DOOR runs on the fedora
+  Software and is a partner repository of Phaidra Vienna and other fedora users in
+  Austria. We provide access to OA publications, scientific data and much more for
+  interested users and support our scientists and co-workers in their publication
+  processis.
 id: doordonauuniacat
 identifiers:
 - id: openaire

@@ -81,6 +81,12 @@ endpoints:
   url: https://geoportal.lujandecuyo.gob.ar/geoserver/rest/settings
 - type: geoserver:layers
   url: https://geoportal.lujandecuyo.gob.ar/geoserver/rest/layers
+- type: geonode:datasets
+  url: https://geoportal.lujandecuyo.gob.ar/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geoportal.lujandecuyo.gob.ar/catalogue/opensearch
+  version: '1.1'
 id: geoportallujandecuyogobar
 langs:
 - id: ES

@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Heidelberg supernova model atmosphere archive on InvenioRDM.
+endpoints:
+- type: inveniordmapi:records
+  url: https://hesma.h-its.org/api/records
+- type: oaipmh20
+  url: https://hesma.h-its.org/oai2d?verb=Identify
+  version: '2.0'
+id: hesmahitsorg
+langs:
+- id: EN
+  name: English
+link: https://hesma.h-its.org
+name: HESMA
+owner:
+  link: https://www.h-its.org
+  location:
+    country:
+      id: DE
+      name: Germany
+  name: Heidelberg Institute for Theoretical Studies
+  type: Academy
+software:
+  id: inveniordm
+  name: InvenioRDM
+status: active
+tags:
+- scientific
+- research
+- academic
+- inveniordm
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00043108

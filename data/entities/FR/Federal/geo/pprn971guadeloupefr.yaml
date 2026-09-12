@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: PPRN Guadeloupe is a Geoportal operated by Préfecture de la Guadeloupe,
+  built with Lizmap.
+id: pprn971guadeloupefr
+langs:
+- id: FR
+  name: French
+link: https://pprn971guadeloupe.fr/
+name: PPRN Guadeloupe
+owner:
+  link: https://www.guadeloupe.gouv.fr
+  location:
+    country:
+      id: FR
+      name: France
+  name: Préfecture de la Guadeloupe
+  type: Central government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- lizmap
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00043285
+endpoints:
+- type: lizmap:service
+  url: https://pprn971guadeloupe.fr/index.php/lizmap/service/?repository=pprn971&project=ANSEBERTRAND
+- type: wms130
+  url: https://pprn971guadeloupe.fr/index.php/lizmap/service/?repository=pprn971&project=ANSEBERTRAND&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0

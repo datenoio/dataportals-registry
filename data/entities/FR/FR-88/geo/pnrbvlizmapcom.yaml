@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-88
+      name: Vosges
+description: Cartothèque PNR des Ballons des Vosges is a Geoportal operated by Parc
+  naturel régional des Ballons des Vosges, built with Lizmap.
+id: pnrbvlizmapcom
+langs:
+- id: FR
+  name: French
+link: https://pnrbv.lizmap.com/
+name: Cartothèque PNR des Ballons des Vosges
+owner:
+  link: https://www.parc-ballons-vosges.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-88
+      name: Vosges
+  name: Parc naturel régional des Ballons des Vosges
+  type: Regional government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- lizmap
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00043283
+endpoints:
+- type: lizmap:catalog
+  url: https://pnrbv.lizmap.com

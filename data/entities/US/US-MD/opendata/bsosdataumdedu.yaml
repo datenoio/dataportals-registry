@@ -71,3 +71,9 @@ endpoints:
   version: '3.0'
 - type: sitemap
   url: https://bsos-data.umd.edu/sitemap.xml
+- type: ckan
+  url: https://bsos-data.umd.edu/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://bsos-data.umd.edu/api/3/action/package_search
+  version: '3'

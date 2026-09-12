@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: CKAN data catalogue of the Marine Biological Association of the United Kingdom
-  for marine biological and oceanographic datasets.
+description: CKAN data catalogue of the Marine Biological Association of the United
+  Kingdom for marine biological and oceanographic datasets.
 endpoints:
 - type: ckan:package-search
   url: https://ckan.mba.ac.uk/api/3/action/package_search
@@ -26,6 +26,16 @@ endpoints:
 - type: ckan
   url: https://ckan.mba.ac.uk/api/3
   version: '3'
+- type: dcat:ttl
+  url: https://ckan.mba.ac.uk/catalog.ttl
+- type: dcat:xml
+  url: https://ckan.mba.ac.uk/catalog.xml
+- type: dcat
+  url: https://ckan.mba.ac.uk/catalog.rdf
+- type: dcat:n3
+  url: https://ckan.mba.ac.uk/catalog.n3
+- type: dcat:jsonld
+  url: https://ckan.mba.ac.uk/catalog.jsonld
 id: ckanmbaacuk
 langs:
 - id: EN

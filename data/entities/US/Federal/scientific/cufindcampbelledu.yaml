@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Campbell University Faculty Interdisciplinary Network for Discovery (CU
+  FIND) is a Scientific data repository operated by Campbell University Faculty Interdisciplinary
+  Network for Discovery (CU FIND).
+id: cufindcampbelledu
+langs:
+- id: EN
+  name: English
+link: https://cufind.campbell.edu
+name: Campbell University Faculty Interdisciplinary Network for Discovery (CU FIND)
+owner:
+  link: https://cufind.campbell.edu
+  location:
+    country:
+      id: US
+      name: United States
+  name: Campbell University Faculty Interdisciplinary Network for Discovery (CU FIND)
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00042450
+endpoints:
+- type: oaipmh20
+  url: https://cufind.campbell.edu/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://cufind.campbell.edu/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://cufind.campbell.edu/sitemap/datasets.xml

@@ -13,15 +13,21 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
-description: GeoNetwork metadata catalogue of the Republic Hydrometeorological Service of
-  Serbia (RHMZ) for hydrometeorological and related geospatial data. CSW GetCapabilities is
-  public; GeoNetwork /srv/api/site and /srv/api/selections currently return HTTP 500.
+description: GeoNetwork metadata catalogue of the Republic Hydrometeorological Service
+  of Serbia (RHMZ) for hydrometeorological and related geospatial data. CSW GetCapabilities
+  is public; GeoNetwork /srv/api/site and /srv/api/selections currently return HTTP
+  500.
 endpoints:
 - type: csw202
   url: http://wis-geo.hidmet.gov.rs:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
+- type: oaipmh20
+  url: http://wis-geo.hidmet.gov.rs:8080/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: http://wis-geo.hidmet.gov.rs:8080/geonetwork/srv/api/selections
 id: wisgeohidmetgovrs8080geonetwork
 langs:
 - id: SR

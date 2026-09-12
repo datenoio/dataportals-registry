@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: SSMSI Interstats Shiny explorer of validated crime and insecurity time
+  series (monthly, quarterly, annual; national to departmental). Distinct from the
+  territorial recorded-crime app on the same host.
+id: ssmsishinyappsserieschrono
+langs:
+- id: FR
+  name: French
+link: https://ssmsi.shinyapps.io/serieschronologiques/
+name: Séries chronologiques sur la délinquance et l'insécurité
+owner:
+  link: https://www.interieur.gouv.fr/Interstats
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Service statistique ministériel de la sécurité intérieure (SSMSI)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: shiny
+  name: R Shiny
+status: active
+tags:
+- statistics
+- government
+- France
+- crime
+- security
+- indicators
+topics:
+- id: JUST
+  name: Justice, legal system and public safety
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042780

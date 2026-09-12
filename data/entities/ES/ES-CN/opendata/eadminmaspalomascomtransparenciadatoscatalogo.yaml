@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,14 +12,13 @@ coverage:
       name: Spain
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: ES-CN
       name: Canarias
 description: ATM Maggioli sede electrónica open-data catalog of the Ayuntamiento de
-  San Bartolomé de Tirajana, listing reusable municipal datasets on
-  /transparencia/datos/catalogo.
+  San Bartolomé de Tirajana, listing reusable municipal datasets on /transparencia/datos/catalogo.
 id: eadminmaspalomascomtransparenciadatoscatalogo
 langs:
 - id: ES
@@ -48,3 +47,6 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi00010902
+endpoints:
+- type: atmmaggioli:catalog
+  url: https://eadmin.maspalomas.com/transparencia/datos/catalogo

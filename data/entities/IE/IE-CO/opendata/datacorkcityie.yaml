@@ -26,6 +26,19 @@ endpoints:
 - type: ckan:package-list
   url: https://data.corkcity.ie/api/3/action/package_list
   version: '3'
+- type: ckan
+  url: https://data.corkcity.ie/api/3
+  version: '3'
+- type: dcat:n3
+  url: https://data.corkcity.ie/catalog.n3
+- type: dcat:ttl
+  url: https://data.corkcity.ie/catalog.ttl
+- type: dcat:xml
+  url: https://data.corkcity.ie/catalog.xml
+- type: dcat:jsonld
+  url: https://data.corkcity.ie/catalog.jsonld
+- type: dcat
+  url: https://data.corkcity.ie/catalog.rdf
 id: datacorkcityie
 identifiers:
 - id: wikidata

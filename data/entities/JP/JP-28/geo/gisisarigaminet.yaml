@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion:
+      id: JP-28
+      name: Hyogo
+description: QGIS Web Client 2 geoportal for Taka Town and Iwasagami, including town,
+  forestry, welfare, and hazard maps.
+endpoints:
+- type: qwc2:layers
+  url: https://gis.isarigami.net/themes.json
+id: gisisarigaminet
+langs:
+- id: JA
+  name: Japanese
+link: https://gis.isarigami.net/
+name: Taka Town i-GIS
+owner:
+  link: https://www.town.taka.hyogo.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-28
+      name: Hyogo
+  name: Taka Town
+  type: Local government
+software:
+  id: qwc2
+  name: QGIS Web Client 2 (QWC2)
+status: active
+tags:
+- geospatial
+- government
+- qwc2
+- QGIS Web Client 2 (QWC2)
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+uid: cdi00043528

@@ -27,6 +27,12 @@ endpoints:
 - type: ckan:package-list
   url: https://ckan.healthdata.nl/api/3/action/package_list
   version: '3'
+- type: dcat:ttl
+  url: https://ckan.healthdata.nl/catalog.ttl
+- type: dcat:xml
+  url: https://ckan.healthdata.nl/catalog.xml
+- type: dcat:jsonld
+  url: https://ckan.healthdata.nl/catalog.jsonld
 id: ckanhealthdatanl
 langs:
 - id: NL

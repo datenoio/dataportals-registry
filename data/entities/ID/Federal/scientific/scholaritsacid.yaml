@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Institut Teknologi Sepuluh Nopember (ITS), Indonesia is a Scientific
+  data repository operated by Institut Teknologi Sepuluh Nopember (ITS), Indonesia.
+id: scholaritsacid
+langs:
+- id: ID
+  name: Indonesian
+link: https://scholar.its.ac.id
+name: Institut Teknologi Sepuluh Nopember (ITS), Indonesia
+owner:
+  link: https://scholar.its.ac.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+  name: Institut Teknologi Sepuluh Nopember (ITS), Indonesia
+  type: Academy
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research information management
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00042738
+endpoints:
+- type: oaipmh20
+  url: https://scholar.its.ac.id/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://scholar.its.ac.id/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://scholar.its.ac.id/sitemap/datasets.xml

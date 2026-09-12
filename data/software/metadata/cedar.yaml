@@ -1,0 +1,61 @@
+category: Metadata catalog
+subtype: metadata_registry_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: cedar
+name: CEDAR Workbench
+website: https://cedar.metadatacenter.org
+description: CEDAR Workbench is Stanford's open-source Center for Expanded Data
+  Annotation and Retrieval stack. It publishes reusable metadata templates and
+  filled metadata instances for biomedical experiments. Register the public
+  workbench, not each template or the metadatacenter.org marketing site.
+owner:
+  name: Stanford Center for Biomedical Informatics Research
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://cedar.metadatacenter.org/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: Uncertain
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Uncertain
+  supports_licenses: Uncertain
+storage_type: Structured
+type: Software
+repository_url: https://github.com/metadatacenter/cedar-project
+documentation_url: https://metadatacenter.github.io/cedar-docs/
+export_formats:
+- JSON
+- JSON-LD
+capabilities:
+- Metadata template designer
+- Metadata editor
+- Template catalog
+last_updated: '2026-09-11T00:00:00Z'

@@ -22,6 +22,15 @@ endpoints:
 - type: oaipmh20
   url: https://repository.utm.md/oai/request?verb=Identify
   version: '2.0'
+- type: dspace:items
+  url: https://repository.utm.md/rest/items
+  version: '6'
+- type: rss
+  url: https://repository.utm.md/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repository.utm.md/feed/atom_1.0/site
+  version: '1.0'
 id: repositoryutmmd
 identifiers:
 - id: opendoar

@@ -27,6 +27,12 @@ name: HiDALGO CKAN
 endpoints:
 - type: ckan
   url: https://ckan.hidalgo-project.eu/api/3
+- type: ckan:package-search
+  url: https://ckan.hidalgo-project.eu/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.hidalgo-project.eu/api/3/action/package_list
+  version: '3'
 owner:
   link: https://hidalgo-project.eu
   location:

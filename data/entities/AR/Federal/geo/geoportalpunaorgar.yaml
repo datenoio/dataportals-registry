@@ -62,6 +62,12 @@ endpoints:
 - type: wps100
   url: https://geoportal.puna.org.ar/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://geoportal.puna.org.ar/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geoportal.puna.org.ar/catalogue/opensearch
+  version: '1.1'
 id: geoportalpunaorgar
 langs:
 - id: ES

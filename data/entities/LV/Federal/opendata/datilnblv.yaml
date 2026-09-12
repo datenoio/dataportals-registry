@@ -29,6 +29,14 @@ endpoints:
 - type: ckan:package-list
   url: https://dati.lnb.lv/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://dati.lnb.lv/catalog.n3
+- type: dcat:ttl
+  url: https://dati.lnb.lv/catalog.ttl
+- type: dcat:xml
+  url: https://dati.lnb.lv/catalog.xml
+- type: dcat:jsonld
+  url: https://dati.lnb.lv/catalog.jsonld
 id: datilnblv
 langs:
 - id: LV

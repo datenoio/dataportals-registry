@@ -948,6 +948,144 @@ Open-source citizen-science observation platform. Site: [inaturalist.org](https:
 | Censys | `web.names: "inaturalist.org"` |
 | FOFA | `domain="inaturalist.org"` |
 
+## JACQ (`jacq`) {#jacq}
+
+Jointly administered herbarium management system and Virtual Herbaria portal. Site: [jacq.org](https://jacq.org/). REST docs: [api.jacq.org](https://api.jacq.org/).
+
+**Confirm:** GET `https://jacq.org/` (title `JACQ`) or a participating herbarium's public JACQ search. Register the public portal, not each Index Herbariorum acronym on the same server.
+
+| Tool | Query |
+|------|-------|
+| Google | `"JACQ" ("Virtual Herbaria" OR herbarium) (specimens OR database)` |
+| Censys | `web.names: "jacq.org"` |
+| FOFA | `body="JACQ Virtual Herbaria"` |
+
+## NMRShiftDB2 (`nmrshiftdb2`) {#nmrshiftdb2}
+
+Open-source NMR database application for organic structures and assigned spectra. Reference instance: [nmrshiftdb.nmr.uni-koeln.de](https://nmrshiftdb.nmr.uni-koeln.de/). Independent laboratory WAR/source installs exist.
+
+**Confirm:** GET the instance home. Branding `NMRShiftDB2`; spectrum/structure search; `/api-docs/` when enabled. Register each public database instance, not each compound page.
+
+| Tool | Query |
+|------|-------|
+| Google | `"NMRShiftDB2" (NMR OR spectra OR "chemical shift")` |
+| Censys | `web.endpoints.http.body: "NMRShiftDB2"` |
+| FOFA | `body="NMRShiftDB2"` |
+
+## Chemotion Repository (`chemotion`) {#chemotion}
+
+AGPL catalog for samples, reactions, and analytical chemistry data (NFDI4Chem). Distinct from Chemotion ELN. Docs: [chemotion.net/docs/repo](https://www.chemotion.net/docs/repo/). Public hub: [chemotion-repository.net](https://www.chemotion-repository.net/).
+
+**Confirm:** GET `/home/welcome` or the repository home. Do not tag Chemotion ELN notebooks as this id. Register the public repository, not each sample or reaction.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Chemotion Repository" (NFDI4Chem OR samples OR reactions) -ELN` |
+| Censys | `web.names: "chemotion-repository.net"` |
+| FOFA | `host="chemotion-repository.net"` |
+
+## Korp (`korp`) {#korp}
+
+Språkbanken Text corpus-search platform (MIT). Independent national language-bank installs. Distribution notes: [spraakbanken.gu.se/en/tools/korp](https://spraakbanken.gu.se/en/tools/korp/distribution-and-development).
+
+**Confirm:** GET the Korp UI (`/korp/` or a `korp.` host). Title `Korp`. Register each public Korp UI on a distinct host. Do not add Kielipankki `/korp/` as a second catalog when the Language Bank homepage on the same host is already registered (`wwwkielipankkifi`). Skip Málið.is unless the page identifies Korp.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Korp" (Språkbanken OR Kielipankki OR "corpus search")` |
+| Censys | `web.endpoints.http.title: "Korp"` |
+| FOFA | `title="Korp"` |
+
+## DANDI Archive (`dandi`) {#dandi}
+
+Neurophysiology archive using NWB, BIDS, and NIDM. Hub: [dandiarchive.org](https://dandiarchive.org). REST: `https://api.dandiarchive.org/api/dandisets/`.
+
+**Confirm:** GET the hub or the dandisets API. Register the archive hub, not each dandiset landing page.
+
+| Tool | Query |
+|------|-------|
+| Google | `"DANDI Archive" (NWB OR neurophysiology OR dandiset)` |
+| Censys | `web.names: "dandiarchive.org"` |
+| FOFA | `host="dandiarchive.org"` |
+
+## CELLxGENE Discover (`cellxgene`) {#cellxgene}
+
+Chan Zuckerberg public catalog of curated single-cell datasets. Hub: [cellxgene.cziscience.com](https://cellxgene.cziscience.com). Curation API: `https://api.cellxgene.cziscience.com/curation/v1/datasets`.
+
+**Confirm:** GET the Discover hub. Register that hub, not each h5ad explorer session or Census snapshot.
+
+| Tool | Query |
+|------|-------|
+| Google | `"CELLxGENE" (Discover OR Census) (dataset OR catalog)` |
+| Censys | `web.names: "cellxgene.cziscience.com"` |
+| FOFA | `host="cellxgene.cziscience.com"` |
+
+## HydroShare (`hydroshare`) {#hydroshare}
+
+CUAHSI hydrologic data and model sharing platform. Hub: [hydroshare.org](https://www.hydroshare.org). REST: `https://www.hydroshare.org/hsapi/resource/`. Distinct from the HydroShare THREDDS node (`threddshydroshareorg`).
+
+**Confirm:** GET the hub or `/hsapi/`. Title includes `HydroShare`. Register the archive hub, not each resource or the THREDDS catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `"HydroShare" (CUAHSI OR hydrologic) (resource OR dataset)` |
+| Censys | `web.names: "hydroshare.org"` |
+| FOFA | `host="www.hydroshare.org"` |
+
+## Brainlife (`brainlife`) {#brainlife}
+
+Open-source neuroimaging dataset and processing hub. Site: [brainlife.io](https://brainlife.io). Public dataset UI: `/datasets`. [About](https://brainlife.io/about/) describes it as a **turnkey SaaS** hub: institutions register compute into that hub rather than running a separate catalog.
+
+**Confirm:** GET `/datasets`. Title `brainlife`. One catalog for `https://brainlife.io`.
+
+**Skip:** `/pubs`, `/apps`, `/docs`, GitHub (`brainlife.github.io` redirects to the hub), `test.brainlife.io` (refused), HPC resources registered on the hub, OpenNeuro/NEMAR/DANDI as if they were Brainlife tenants.
+
+| Tool | Query |
+|------|-------|
+| Google | `"brainlife.io" (dataset OR neuroimaging)` |
+| Censys | `web.names: "brainlife.io"` |
+| FOFA | `host="brainlife.io"` |
+
+## Open Context (`opencontext`) {#opencontext}
+
+Archaeological research-data publisher. Hub: [opencontext.org](https://opencontext.org). Source: [ekansa/open-context-py](https://github.com/ekansa/open-context-py).
+
+**Confirm:** GET the hub. Title `Open Context`. Register that hub, not each project, image, or media item.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Open Context" (archaeology OR "research data") Alexandria` |
+| Censys | `web.names: "opencontext.org"` |
+| FOFA | `host="opencontext.org"` |
+
+## BioDare2 (`biodare2`) {#biodare2}
+
+MIT circadian timeseries repository. Public hub: [biodare2.ed.ac.uk](https://biodare2.ed.ac.uk). JSON list: `/api/experiments?showPublic=true`. Source: [BioDare2/bd2-backend](https://github.com/BioDare2/bd2-backend). First-party docs describe a single community hub, not software to install at each lab.
+
+**Confirm:** GET `/api/experiments?showPublic=true` (`application/json`, `isOpenAccess` experiments). Title `BioDare2`. One catalog for `https://biodare2.ed.ac.uk`.
+
+**Skip:** period-analysis jobs, login, and each experiment landing page.
+
+| Tool | Query |
+|------|-------|
+| Google | `"BioDare2" (circadian OR timeseries OR "period analysis")` |
+| Censys | `web.names: "biodare2.ed.ac.uk"` |
+| FOFA | `host="biodare2.ed.ac.uk"` |
+
+## TemplateFlow (`templateflow`) {#templateflow}
+
+NiPreps archive of FAIR neuroimaging templates and atlases. Hub: [templateflow.org](https://www.templateflow.org). Archive browser: `/browse/`. DataLad super-dataset: [templateflow/templateflow](https://github.com/templateflow/templateflow).
+
+**Confirm:** GET `/browse/` or `/archive/`. Title `TemplateFlow`. One catalog for `https://www.templateflow.org`.
+
+**Skip:** the Python client, individual template git submodules, and DataLad clones as extra catalogs.
+
+| Tool | Query |
+|------|-------|
+| Google | `"TemplateFlow" (NiPreps OR atlas OR template) neuroimaging` |
+| Censys | `web.names: "templateflow.org"` |
+| FOFA | `host="www.templateflow.org"` |
+
 ## Related
 
 - [discovery-scientific.md](discovery-scientific.md)

@@ -25,6 +25,16 @@ endpoints:
 - type: ckan:package-list
   url: https://catalog.eppo.go.th/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://catalog.eppo.go.th/catalog.n3
+- type: dcat:ttl
+  url: https://catalog.eppo.go.th/catalog.ttl
+- type: dcat:jsonld
+  url: https://catalog.eppo.go.th/catalog.jsonld
+- type: dcat
+  url: https://catalog.eppo.go.th/catalog.rdf
+- type: dcat:xml
+  url: https://catalog.eppo.go.th/catalog.xml
 id: catalogeppogoth
 langs:
 - id: TH

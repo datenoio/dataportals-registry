@@ -24,6 +24,9 @@ endpoints:
   url: https://data.ftb.ca.gov/data.json
 - type: socrata:views
   url: https://data.ftb.ca.gov/api/views
+- type: socrata:catalog
+  url: https://data.ftb.ca.gov/api/catalog/v1?only=datasets&limit=1
+  version: '1'
 id: dataftbcagov
 langs:
 - id: EN

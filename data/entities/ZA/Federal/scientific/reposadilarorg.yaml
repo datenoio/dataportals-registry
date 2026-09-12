@@ -32,6 +32,17 @@ endpoints:
   url: https://repo.sadilar.org/htmlmap
 - type: opensearch
   url: http://repo.sadilar.org:80/open-search/description.xml
+- type: dspace
+  url: https://repo.sadilar.org/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repo.sadilar.org/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://repo.sadilar.org/sitemap_index.xml
+- type: oaipmh20
+  url: https://repo.sadilar.org/server/oai/request?verb=Identify
+  version: '2.0'
 id: reposadilarorg
 langs:
 - id: EN

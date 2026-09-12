@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: LMT Dataverse is a Scientific data repository operated by Large Millimeter
+  Telescope.
+id: dplmtgtmorg
+langs:
+- id: EN
+  name: English
+link: https://dp.lmtgtm.org
+name: LMT Dataverse
+owner:
+  link: https://www.lmtgtm.org
+  location:
+    country:
+      id: MX
+      name: Mexico
+  name: Large Millimeter Telescope
+  type: Academy
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research
+- academic
+- dataverse
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: dataverseapi
+  url: https://dp.lmtgtm.org/api/search
+- type: dataverseapi
+  url: https://dp.lmtgtm.org/api/info/version
+uid: cdi00042466
+properties:
+  is_national: false

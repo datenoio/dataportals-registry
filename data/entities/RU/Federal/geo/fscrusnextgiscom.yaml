@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public NextGIS Web map of the Forest Etalon voluntary forest certification
+  system, with certified-forest, intact-forest-landscape, and indigenous-territory
+  layers.
+endpoints:
+- type: nextgisweb:api
+  url: https://fscrus.nextgis.com/api/resource/
+id: fscrusnextgiscom
+langs:
+- id: RU
+  name: Russian
+link: https://fscrus.nextgis.com
+name: Лесной эталон
+owner:
+  link: https://fscrus.nextgis.com
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 20
+  name: Система добровольной лесной сертификации «Лесной эталон»
+  type: Civil society
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: nextgisweb
+  name: NextGIS Web
+status: active
+tags:
+- geospatial
+- forests
+- certification
+- NextGIS
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00043651

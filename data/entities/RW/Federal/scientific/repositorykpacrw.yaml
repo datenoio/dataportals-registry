@@ -16,14 +16,20 @@ coverage:
       id: '014'
       name: Eastern Africa
 description: DSpace XMLUI institutional repository of Kibogora Polytechnic. Public
-  access is on HTTP port 8080; the HTTPS certificate is not valid for this host.
-  OAI-PMH Identify is available at /oai/request.
+  access is on HTTP port 8080; the HTTPS certificate is not valid for this host. OAI-PMH
+  Identify is available at /oai/request.
 endpoints:
 - type: dspace:catalog
   url: http://repository.kp.ac.rw:8080/xmlui/
 - type: oaipmh20
   url: http://repository.kp.ac.rw:8080/oai/request?verb=Identify
   version: '2.0'
+- type: rss
+  url: http://repository.kp.ac.rw:8080/xmlui/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: http://repository.kp.ac.rw:8080/xmlui/feed/atom_1.0/site
+  version: '1.0'
 id: repositorykpacrw
 langs:
 - id: EN

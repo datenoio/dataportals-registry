@@ -15,7 +15,7 @@ coverage:
       id: GR-F
       name: Ionía Nísia
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Open data portal managed by the Municipality of Corfu
 endpoints:
@@ -24,6 +24,9 @@ endpoints:
   version: '3'
 - type: ckan:package-list
   url: https://ckan.opendatacorfu.gr/api/3/action/package_list
+  version: '3'
+- type: ckan
+  url: https://ckan.opendatacorfu.gr/api/3
   version: '3'
 id: opendatacorfu
 identifiers:

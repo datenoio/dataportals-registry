@@ -16,9 +16,9 @@ coverage:
       name: World
 description: The ACSS Dataverse is an initiative of the Arab Council for the Social
   Sciences, in collaboration with the Odum Institute for Research in Social Science
-  at the University of North Carolina at Chapel Hill. It holds social science
-  datasets produced in Arab countries, with free access for research (registration
-  required to download).
+  at the University of North Carolina at Chapel Hill. It holds social science datasets
+  produced in Arab countries, with free access for research (registration required
+  to download).
 endpoints:
 - type: dataverseapi
   url: https://dataverse.theacss.org/api/search
@@ -29,6 +29,8 @@ endpoints:
   url: https://dataverse.theacss.org/sitemap/sitemap.xml
 - type: sitemap
   url: https://dataverse.theacss.org/sitemap.xml
+- type: dataverseapi
+  url: https://dataverse.theacss.org/api/info/version
 id: dataversetheacssorg
 identifiers:
 - id: re3data

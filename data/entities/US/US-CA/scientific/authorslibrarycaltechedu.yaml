@@ -23,6 +23,9 @@ description: Institutional repository of Caltech research publications and relat
 endpoints:
 - type: inveniordmapi:records
   url: https://authors.library.caltech.edu/api/records
+- type: oaipmh20
+  url: https://authors.library.caltech.edu/oai2d?verb=Identify
+  version: '2.0'
 id: authorslibrarycaltechedu
 langs:
 - id: EN

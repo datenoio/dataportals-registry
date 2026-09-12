@@ -204,6 +204,8 @@ GET https://host/api/v3/datasets
 
 Facility datasets. Stop on `401` for complete metadata; a public list may still exist.
 
+Type `/api/v3/datasets` as `scicat:datasets`. Do not probe SciCat DOI landing hosts (`doi.*`).
+
 **Keep:** SciCat **datasets**. **Drop:** login-only complete metadata when `401`.
 
 ## IRI Data Library (`datalibrary`) {#datalibrary}

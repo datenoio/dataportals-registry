@@ -16,8 +16,8 @@ coverage:
       id: 039
       name: Southern Europe
 description: Slovenian INSPIRE metadata catalogue (IMPS) of the Surveying and Mapping
-  Authority, providing GeoNetwork search, CSW, and related services for national
-  spatial datasets, maps, and network services.
+  Authority, providing GeoNetwork search, CSW, and related services for national spatial
+  datasets, maps, and network services.
 endpoints:
 - type: geonetwork:query
   url: https://eprostor.gov.si/imps/srv/eng/q
@@ -33,6 +33,10 @@ endpoints:
 - type: oaipmh20
   url: https://eprostor.gov.si/imps/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: dcat:xml
+  url: https://eprostor.gov.si/imps/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://eprostor.gov.si/imps/srv/api/site
 id: eprostorgovsi
 langs:
 - id: SL

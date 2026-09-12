@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GE
+      name: Georgia
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: CENN web atlas of hazard, exposure and risk maps for Georgia, with an
+  OpenLayers viewer over MapServer WMS layers for earthquake, flood, landslide, mudflow,
+  rockfall, avalanche, wildfire, drought, windstorm and hail.
+endpoints:
+- type: wms130
+  url: http://drm.cenn.org/cgi-bin/mapserv.exe?map=C:/home/pub/disasters/hazards_simplified.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: http://drm.cenn.org/cgi-bin/mapserv.exe?map=C:/home/pub/disasters/hazards_simplified.map&SERVICE=WFS&VERSION=1.1.0&REQUEST=GetCapabilities
+  version: 1.1.0
+id: drmcennorg
+langs:
+- id: KA
+  name: Georgian
+- id: EN
+  name: English
+link: http://drm.cenn.org/
+name: Geoportal of Natural Hazards and Risks of Georgia
+owner:
+  link: https://www.cenn.org/
+  location:
+    country:
+      id: GE
+      name: Georgia
+    level: 20
+  name: Caucasus Environmental NGO Network (CENN)
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: mapserver
+  name: MapServer
+status: active
+tags:
+- geospatial
+- hazards
+- disaster risk
+- MapServer
+- Georgia
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00042467

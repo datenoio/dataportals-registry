@@ -76,6 +76,12 @@ endpoints:
 - type: wms-c111
   url: https://ide.santarosamendoza.gob.ar/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: geonode:datasets
+  url: https://ide.santarosamendoza.gob.ar/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://ide.santarosamendoza.gob.ar/catalogue/opensearch
+  version: '1.1'
 id: idesantarosamendozagobar
 langs:
 - id: ES

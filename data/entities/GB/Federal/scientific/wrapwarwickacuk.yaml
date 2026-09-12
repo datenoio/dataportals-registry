@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -25,6 +25,15 @@ identifiers:
 langs:
 - id: EN
   name: English
+endpoints:
+- type: oaipmh20
+  url: http://wrap.warwick.ac.uk/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: http://wrap.warwick.ac.uk/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: eprints:rest
+  url: http://wrap.warwick.ac.uk/rest/eprint
 link: http://wrap.warwick.ac.uk/
 name: Warwick Research Archives Portal Repository
 owner:
@@ -36,8 +45,8 @@ owner:
   name: University of Warwick
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: eprints
+  name: EPrints
 status: active
 tags:
 - scientific

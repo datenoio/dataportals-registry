@@ -23,6 +23,20 @@ endpoints:
 - type: oaipmh20
   url: https://researcharchive.wintec.ac.nz/cgi/oai2?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://researcharchive.wintec.ac.nz/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: atom
+  url: https://researcharchive.wintec.ac.nz/cgi/latest_tool?output=Atom
+- type: eprints:rest
+  url: https://researcharchive.wintec.ac.nz/rest/eprint
+- type: eprints:rdf
+  url: https://researcharchive.wintec.ac.nz/cgi/export/repository/RDFXML/devel.rdf
+- type: eprints:n3
+  url: https://researcharchive.wintec.ac.nz/cgi/export/repository/RDFN3/devel.n3
+- type: opensearch
+  url: https://researcharchive.wintec.ac.nz/cgi/opensearchdescription
+  version: '1.1'
 id: researcharchivewintecacnz
 langs:
 - id: EN

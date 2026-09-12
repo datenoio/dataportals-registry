@@ -15,7 +15,7 @@ coverage:
       id: GR-M
       name: Kríti
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Πύλη Ανοιχτών Γεωχωρικών Δεδομένων της Αποκεντρωμένης Διοίκησης Κρήτης,
   με ενταγμένα σύνολα δεδομένων (μετεωρολογικά, υδρολογικά, ποιότητα νερού κολύμβησης
@@ -25,6 +25,8 @@ endpoints:
 - type: ckan:package-list
   url: https://data.apdkritis.gov.gr/api/3/action/package_list
   version: '3'
+- type: dcatus11
+  url: https://data.apdkritis.gov.gr/data.json
 id: dataapdkritisgovgr
 langs:
 - id: EL

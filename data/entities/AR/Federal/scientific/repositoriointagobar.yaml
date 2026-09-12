@@ -19,6 +19,15 @@ description: Institutional DSpace repository of INTA, including agricultural res
 endpoints:
 - type: dspace:catalog
   url: https://repositorio.inta.gob.ar
+- type: oaipmh20
+  url: https://repositorio.inta.gob.ar/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://repositorio.inta.gob.ar/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repositorio.inta.gob.ar/feed/atom_1.0/site
+  version: '1.0'
 id: repositoriointagobar
 identifiers:
 - id: re3data

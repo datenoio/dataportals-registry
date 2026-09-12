@@ -24,6 +24,13 @@ endpoints:
   url: https://data.cannes.com/api
 - type: sitemap
   url: https://data.cannes.com/sitemap.xml
+- type: opendatasoftapi
+  url: https://data.cannes.com/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://data.cannes.com/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://data.cannes.com/data.json
 id: datacannescom
 langs:
 - id: FR

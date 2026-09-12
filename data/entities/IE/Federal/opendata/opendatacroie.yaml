@@ -23,6 +23,19 @@ endpoints:
 - type: ckan:package-list
   url: https://opendata.cro.ie/api/3/action/package_list
   version: '3'
+- type: ckan
+  url: https://opendata.cro.ie/api/3
+  version: '3'
+- type: dcat:n3
+  url: https://opendata.cro.ie/catalog.n3
+- type: dcat:ttl
+  url: https://opendata.cro.ie/catalog.ttl
+- type: dcat:xml
+  url: https://opendata.cro.ie/catalog.xml
+- type: dcat:jsonld
+  url: https://opendata.cro.ie/catalog.jsonld
+- type: dcat
+  url: https://opendata.cro.ie/catalog.rdf
 id: opendatacroie
 langs:
 - id: EN

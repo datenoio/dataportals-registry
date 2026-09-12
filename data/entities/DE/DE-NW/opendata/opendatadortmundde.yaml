@@ -24,6 +24,13 @@ endpoints:
   url: https://open-data.dortmund.de/api
 - type: dcatus11
   url: https://open-data.dortmund.de/data.json
+- type: opendatasoftapi
+  url: https://open-data.dortmund.de/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://open-data.dortmund.de/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://open-data.dortmund.de/api/explore/v2.1/catalog/exports/dcat
 id: opendatadortmundde
 langs:
 - id: DE

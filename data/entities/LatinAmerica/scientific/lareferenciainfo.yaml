@@ -20,7 +20,7 @@ coverage:
       name: Spain
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: LA Referencia is the regional open-science discovery service for Latin
   America and Spain. It harvests national repository nodes and exposes a VuFind search
@@ -32,6 +32,8 @@ endpoints:
 - type: openapi
   url: https://lareferencia.info/vufind/api?openapi
   version: '3.0'
+- type: index
+  url: https://lareferencia.info/vufind/Search/Results?type=AllFields&filter[]=format%3A"Dataset"
 id: lareferenciainfo
 langs:
 - id: ES

@@ -56,6 +56,12 @@ endpoints:
 - type: wps100
   url: https://geonode.marine-analyst.eu/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: geonode:datasets
+  url: https://geonode.marine-analyst.eu/api/v2/datasets/
+  version: '2'
+- type: opensearch
+  url: https://geonode.marine-analyst.eu/catalogue/opensearch
+  version: '1.1'
 id: geonodemarineanalysteu
 link: https://geonode.marine-analyst.eu
 name: Marine Analyst GeoNode

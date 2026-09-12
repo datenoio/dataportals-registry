@@ -27,6 +27,12 @@ endpoints:
 - type: ckan:package-list
   url: https://datos.avellaneda.gob.ar/api/3/action/package_list
   version: '3'
+- type: dcatus11
+  url: https://datos.avellaneda.gob.ar/data.json
+- type: dcat:jsonld
+  url: https://datos.avellaneda.gob.ar/catalog.jsonld
+- type: dcat
+  url: https://datos.avellaneda.gob.ar/catalog.rdf
 id: datosavellanedagobar
 langs:
 - id: ES

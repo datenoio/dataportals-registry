@@ -30,6 +30,13 @@ endpoints:
   url: https://repository.out.ac.tz/cgi/export/repository/RDFXML/devel.rdf
 - type: opensearch
   url: https://repository.out.ac.tz/cgi/opensearchdescription
+- type: eprints:n3
+  url: https://repository.out.ac.tz/cgi/export/repository/RDFN3/devel.n3
+- type: oaipmh20
+  url: https://repository.out.ac.tz/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: atom
+  url: https://repository.out.ac.tz/cgi/latest_tool?output=Atom
 id: repositoryoutactz
 langs:
 - id: EN

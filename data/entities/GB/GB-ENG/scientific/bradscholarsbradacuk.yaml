@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: GB-ENG
       name: England
-description: Institutional repository of University of Bradford, holding publications and
-  other research outputs, including 3 Dataset records.
+description: Institutional repository of University of Bradford, holding publications
+  and other research outputs, including 3 Dataset records.
 endpoints:
 - type: dspace
   url: https://bradscholars.brad.ac.uk/server/api
@@ -32,6 +32,9 @@ endpoints:
   version: '2.0'
 - type: sitemap
   url: https://bradscholars.brad.ac.uk/sitemap_index.xml
+- type: oaipmh20
+  url: https://bradscholars.brad.ac.uk/server/oai/request?verb=Identify
+  version: '2.0'
 id: bradscholarsbradacuk
 langs:
 - id: EN

@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '002'
       name: Africa
-description: UNECA (United Nations Economic Commission for Africa) GeoPortal powered by Esri.
-  A centralized platform for geospatial data and analytics across Africa, supporting informed
-  decision-making across sectors.
+description: UNECA (United Nations Economic Commission for Africa) GeoPortal powered
+  by Esri. A centralized platform for geospatial data and analytics across Africa,
+  supporting informed decision-making across sectors.
 endpoints:
 - type: dcatap201
   url: https://uneca.africageoportal.com/api/feed/dcat-ap/2.0.1.json
@@ -29,6 +29,8 @@ endpoints:
   url: https://uneca.africageoportal.com/api/search/v1
 - type: sitemap
   url: https://uneca.africageoportal.com/sitemap.xml
+- type: dcatus11
+  url: https://uneca.africageoportal.com/data.json
 id: unecaafricageoportalcom
 langs:
 - id: EN

@@ -19,6 +19,9 @@ description: 'Université de Genève: Yareta provides 5.775 datasets ([72%] open
 endpoints:
 - type: sitemap
   url: https://yareta.unige.ch/sitemap.xml
+- type: oaipmh20
+  url: https://access.yareta.unige.ch/oai-info/oai-provider/oai?verb=Identify
+  version: '2.0'
 id: yaretaunigech
 langs:
 - id: EN
@@ -41,12 +44,13 @@ rights:
   privacy_policy_url: null
   rights_type: unknown
   tos_url: null
+properties:
+  is_national: false
 software:
-  id: custom
-  name: Custom software
+  id: dlcm
+  name: DLCM
 status: active
 tags:
-- Custom software
 - open access
 - research data
 topics:
