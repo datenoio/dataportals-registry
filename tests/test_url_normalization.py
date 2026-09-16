@@ -22,3 +22,9 @@ def test_canonicalize_url_keeps_query_string():
         canonicalize_url("https://example.gov/search/?q=test")
         == "https://example.gov/search?q=test"
     )
+
+
+def test_canonicalize_url_matches_url_utils():
+    from url_utils import canonicalize_url as shared
+
+    assert canonicalize_url("https://WWW.Example.Gov/") == shared("https://WWW.Example.Gov/")

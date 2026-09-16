@@ -36,8 +36,12 @@ A GitHub Actions workflow MUST run liveness checks on a scheduled cadence.
 ### Requirement: Machine-Readable Liveness Report
 Liveness results MUST be consumable by agents and fix scripts.
 
-#### Scenario: Agent reads liveness report
-- **WHEN** an agent opens `dataquality/liveness_report.jsonl`
-- **THEN** each line is a JSON object with `uid`, `link`, `liveness_status`, `http_code`, and `checked_at`
-- **AND** records are joinable to catalog entries by `uid`
+### Requirement: Apply confirmed-dead catalogs
+The liveness script MUST be able to mark catalogs inactive from a report without treating inconclusive probes as dead.
+
+#### Scenario: Apply dead rows only
+- **WHEN** `check_liveness.py --apply-dead --write` is run against a report
+- **THEN** only rows with `liveness_status: dead` and a `cdi` UID are updated
+- **AND** those YAML files set `status: inactive`
+- **AND** rows classified `inconclusive` or `error` are left unchanged
 

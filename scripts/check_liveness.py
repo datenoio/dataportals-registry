@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import json
 import random
+import re
 import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -200,6 +201,79 @@ def summarize(results: list[ProbeResult]) -> dict[str, int]:
     return counts
 
 
+def index_yaml_by_uid(entities_dir: Path) -> dict[str, Path]:
+    """Map catalog uid to YAML path."""
+    index: dict[str, Path] = {}
+    for yaml_path in entities_dir.rglob("*.yaml"):
+        with yaml_path.open("r", encoding="utf-8") as handle:
+            record = yaml.load(handle, Loader=Loader) or {}
+        uid = (record.get("uid") or "").strip()
+        if uid:
+            index[uid] = yaml_path
+    return index
+
+
+def _set_yaml_scalar(text: str, key: str, value: str) -> str:
+    pattern = rf"(^{key}:\s*)(\S+)(\s*)$"
+    replacement = rf"\g<1>{value}\3"
+    updated, count = re.subn(pattern, replacement, text, count=1, flags=re.M)
+    return updated if count else text
+
+
+def apply_dead_from_report(
+    report_path: Path,
+    entities_dir: Path,
+    dry_run: bool = True,
+) -> list[dict]:
+    """Mark confirmed-dead catalogs inactive. Does not apply inconclusive/error rows."""
+    if not report_path.exists():
+        raise FileNotFoundError(report_path)
+
+    dead_rows = []
+    with report_path.open("r", encoding="utf-8") as handle:
+        for line in handle:
+            line = line.strip()
+            if not line:
+                continue
+            row = json.loads(line)
+            uid = (row.get("uid") or "").strip()
+            if row.get("liveness_status") != "dead":
+                continue
+            if not uid.startswith("cdi"):
+                continue
+            dead_rows.append(row)
+
+    uid_index = index_yaml_by_uid(entities_dir) if dead_rows else {}
+    applied = []
+    for row in dead_rows:
+        path = uid_index.get(row["uid"])
+        if path is None:
+            applied.append({"uid": row["uid"], "action": "missing_yaml"})
+            continue
+        text = path.read_text(encoding="utf-8")
+        record = yaml.load(text, Loader=Loader) or {}
+        if record.get("status") != "active":
+            applied.append({"uid": row["uid"], "action": "already_inactive", "path": str(path)})
+            continue
+        new_text = _set_yaml_scalar(text, "status", "inactive")
+        if record.get("api") is True:
+            new_text = _set_yaml_scalar(new_text, "api", "false")
+        if record.get("api_status") in {"active", "uncertain"}:
+            new_text = _set_yaml_scalar(new_text, "api_status", "inactive")
+        applied.append(
+            {
+                "uid": row["uid"],
+                "id": record.get("id"),
+                "action": "would_inactivate" if dry_run else "inactivated",
+                "path": str(path),
+                "link": row.get("link") or record.get("link"),
+            }
+        )
+        if not dry_run and new_text != text:
+            path.write_text(new_text, encoding="utf-8")
+    return applied
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Probe catalog URL liveness.")
     parser.add_argument("--entities", default=str(DEFAULT_ENTITIES), help="Entities directory")
@@ -210,10 +284,35 @@ def main() -> None:
     parser.add_argument("--retries", type=int, default=2, help="Retries on timeout/5xx")
     parser.add_argument("--delay", type=float, default=0.0, help="Delay between probes in seconds")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for --sample")
+    parser.add_argument(
+        "--apply-dead",
+        action="store_true",
+        help="Mark report rows with liveness_status=dead as status: inactive",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        default=True,
+        help="With --apply-dead, print actions without writing YAML (default)",
+    )
+    parser.add_argument(
+        "--write",
+        action="store_true",
+        help="With --apply-dead, actually write status: inactive",
+    )
     args = parser.parse_args()
 
     entities_dir = Path(args.entities)
     output_path = Path(args.output)
+
+    if args.apply_dead:
+        dry_run = not args.write
+        applied = apply_dead_from_report(output_path, entities_dir, dry_run=dry_run)
+        print(f"{'Dry-run' if dry_run else 'Applied'} {len(applied)} dead-row actions from {output_path}")
+        for item in applied:
+            print(f"  {item.get('action')}: {item.get('uid')} {item.get('path', '')}")
+        return
+
     records = list(iter_catalog_records(entities_dir, country=args.country))
 
     if args.sample:

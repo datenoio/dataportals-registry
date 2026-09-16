@@ -5,7 +5,7 @@ import pytest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
-from check_liveness import classify_liveness, probe_url
+from check_liveness import apply_dead_from_report, classify_liveness, probe_url
 
 
 class _FakeResponse:
@@ -84,3 +84,28 @@ def test_probe_url_retries_on_503():
     code, error, final_url = probe_url("https://example.gov", session, retries=2)
     assert code == 200
     assert error is None
+
+
+def test_apply_dead_dry_run_does_not_write(tmp_path):
+    entities = tmp_path / "entities" / "XX" / "opendata"
+    entities.mkdir(parents=True)
+    yaml_path = entities / "examplegov.yaml"
+    yaml_path.write_text(
+        "id: examplegov\nuid: cdi00009999\nstatus: active\napi: true\napi_status: active\nlink: https://example.gov\n",
+        encoding="utf-8",
+    )
+    report = tmp_path / "liveness_report.jsonl"
+    report.write_text(
+        '{"uid": "cdi00009999", "link": "https://example.gov", "liveness_status": "dead", "http_code": 404, "checked_at": "2026-09-16T00:00:00Z"}\n'
+        '{"uid": "cdi00009999", "link": "https://example.gov", "liveness_status": "inconclusive", "http_code": 403, "checked_at": "2026-09-16T00:00:00Z"}\n',
+        encoding="utf-8",
+    )
+    applied = apply_dead_from_report(report, tmp_path / "entities", dry_run=True)
+    assert any(item["action"] == "would_inactivate" for item in applied)
+    assert "status: active" in yaml_path.read_text(encoding="utf-8")
+
+    applied = apply_dead_from_report(report, tmp_path / "entities", dry_run=False)
+    text = yaml_path.read_text(encoding="utf-8")
+    assert any(item["action"] == "inactivated" for item in applied)
+    assert "status: inactive" in text
+    assert "api: false" in text

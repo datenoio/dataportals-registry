@@ -1,18 +1,29 @@
 # Catalog URL liveness
 
-Report-only HTTP probes of each catalog `link`. Results do **not** write `status` on YAML. Schema fields such as `liveness_status` / `last_verified_at` are not in the catalog schema yet.
+HTTP probes of each catalog `link`. The weekly workflow writes `dataquality/liveness_report.jsonl` as a CI artifact. A local apply step can mark confirmed-dead catalogs `status: inactive`. Schema fields such as `liveness_status` / `last_verified_at` are not on catalog YAML.
 
-Workflow: `.github/workflows/liveness.yml` (weekly Sunday 03:00 UTC, plus `workflow_dispatch`). Script: `scripts/check_liveness.py`. Output: `dataquality/liveness_report.jsonl` (uploaded as a CI artifact; not a committed export).
+Workflow: `.github/workflows/liveness.yml` (weekly Sunday 03:00 UTC, plus `workflow_dispatch`). Script: `scripts/check_liveness.py`. Do not commit stale probe reports.
 
 ## Local run
 
 ```bash
 python scripts/check_liveness.py --sample 10
-python scripts/check_liveness.py --country US --delay 0.25
+python scripts/check_liveness.py --country World --delay 0.25
 python scripts/check_liveness.py --output dataquality/liveness_report.jsonl
 ```
 
-`--sample N` picks N random entity records (seed 42 by default). `--country` is an ISO code. `--timeout` defaults to 10 seconds; `--retries` defaults to 2.
+`--sample N` picks N random entity records (seed 42 by default). `--country` is an ISO code or a folder such as `World`. `--timeout` defaults to 10 seconds; `--retries` defaults to 2.
+
+## Apply dead hosts
+
+Only `liveness_status: dead` rows with a `cdi########` UID are eligible. Timeouts classified as `error` / `inconclusive` are not applied. Confirm a sample in a browser before `--write`.
+
+```bash
+python scripts/check_liveness.py --apply-dead --dry-run
+python scripts/check_liveness.py --apply-dead --write
+```
+
+`--write` sets `status: inactive` and, when present, `api: false` / `api_status: inactive`. Download the weekly GitHub Actions artifact over the local report before applying.
 
 Do not turn this into an internet-wide scanner. It only reads `link` values already in `data/entities/`.
 

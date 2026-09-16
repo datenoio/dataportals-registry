@@ -30,6 +30,8 @@ Platform-neutral workflow for adding or editing catalog YAML. Full human guide: 
     --scheduled
   ```
 
+  After a live GET, promote in the same session (`python scripts/promote_scheduled.py`), then `assign` and `validate-yaml --id`. If `software.id` is in `CATALOGS_URLMAP`, run `python scripts/apidetect.py detect-software {id} --action insert --max-endpoints 1`. Append one line to `dataquality/hunts.jsonl`.
+
 - Filename / `id`: lowercase letters and digits only
 - Required fields: `id`, `uid`, `name`, `link`, `catalog_type`, `access_mode`, `status`, `software`, `owner`, plus `coverage` (enforced by the `MISSING_COVERAGE` quality rule rather than the schema)
 - **Do not** invent `uid`. Run `python scripts/builder.py assign`

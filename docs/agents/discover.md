@@ -100,6 +100,14 @@ Which data catalogs from {list URL} are missing?
 
 One bounded list per session: ODIS, CoreTrustSeal, STAC Index, WIS2 GDC, GeoNetwork/GeoNode galleries, CLARIN/VLO, PANGAEA harvest sources, FGDC SSC, MappingSupport, Geoseer, Instant Apps Filter Gallery hosts. Duplicate-check hostname; probe live; skip preservation systems with no dataset catalog (CoreTrustSeal SPAR/EWIG) and org homepages (many PANGAEA harvest sources).
 
+### IGO / international organization {#igo-organization}
+
+```text
+Which {agency} data catalogs are missing?
+```
+
+Query `World/` and the agency hostname first. Use the agency’s own data directory. Accept catalog UIs, statistical databases, and geoportals. Reject publication hubs, one-file spreadsheets, and marketing homepages. Put multi-country IGO catalogs in `data/entities/World/`. Promote live finds in the same session; log `dataquality/hunts.jsonl`.
+
 ### Subnational municipal GIS {#subnational-municipal-gis}
 
 ```text
@@ -135,6 +143,8 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | Title “Geoportal Palapa” / `/main/` or `/gspalapa/` | `palapa` | Geoportal |
 | Argenmap `src/js/app.js` / IGN template | `argenmap` | Geoportal |
 | Title `WebEWID` / Portal Mapowy | `webewid` | Geoportal |
+| `{org}.gis.ba` / `/webcity/` GAUSS MapStore | `gausswebcity` | Geoportal |
+| Title `Digital Metric Addressing System` / `{palika}.dmaps.org` | `dmaps` | Geoportal |
 | `/geoserver/ows` GetCapabilities | `geoserver` | Geoportal |
 | ArcGIS Hub search / `opendata.arcgis.com` | `arcgishub` | Geoportal or Open data portal |
 | `/arcgis/rest/info?f=pjson` | `arcgisserver` | Geoportal |
@@ -165,15 +175,23 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | Finnish `/IMS/` karttapalvelu (`tekla-mvc-common`) | `trimblelocus` | Geoportal |
 | `web.dmcity.fi/{city}/public/` title “dmCity Web App” | `dmcity` | Geoportal |
 | `www.infogis.fi/{muni}/` `/codebase-infogis/` | `infogis` | Geoportal |
+| `geoitgis.geo-it.be/touchviewer/` title “Geo-IT GIS™ Touch Viewer” | `geoitgis` | Geoportal |
+| `zeljko-gis.com` Fusion / `zopcina.zeljko-gis.com/{tenant}/` | `zeljkogis` | Geoportal |
 | `/sigimweb/` title “SIGimWeb” / `/gomap_web/` | `sigimweb` | Geoportal |
+| `app.geocentriq.com/mrc/{mrc}` Geocentriq | `geocentriq` | Geoportal |
+| `portail.geocentralis.com/public/sig-web/{mrc}/{code}/` GeoCentralis | `geocentralis` | Geoportal |
+| `sigale.ca/Main.aspx?mrc={code}` SIGALE | `sigale` | Geoportal |
 | `/NetGISRuntime/basis/index.jsp` title “NetGIS - © WSP Danmark” | `netgisruntime` | Geoportal |
 | SpatialMap `webkort` | `spatialsuite` | Geoportal |
 | Hajk `appConfig.json` / `mapserviceBase` | `hajk` | Geoportal |
+| Title `ScalarGIS` / `/static/viewer/` / `logo-splash.png` | `scalargis` | Geoportal |
 | `origo.min.js` / `origo.js` / `Origo(` Origosamverkan | `origo` | Geoportal |
+| Title `Tailormap` / `{org}.tailormap.nl` / `/api/app/{app}` | `tailormap` | Geoportal |
 | Title “myCarta WebMap” / `/webmap/` / `/mycartawebmap/` | `mycarta` | Geoportal |
 | Title `AddSpatial` / `/smart/?profile=` / `images/addspatial.svg` | `addspatial` | Geoportal |
 | `drift.kortinfo.net/Map.aspx` | `kortinfo` | Geoportal |
 | IntraMaps Public `project=` / `*.spatial.t1cloud.com` | `intramaps` | Geoportal |
+| Title `StatMap Earthlight` / `{org}.statmap.co.uk/map/map.html` | `earthlight` | Geoportal |
 | `/connect/analyst/` title Spectrum Spatial / Precisely | `spectrumspatial` | Geoportal |
 | `/exponare/` RestPublicApplication / PublicApplication | `exponare` | Geoportal |
 | LocalMaps `/localmaps/gallery` | `localmaps` | Geoportal |
@@ -181,6 +199,7 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `/vertigisstudio/web/?app=` or `/gcx/WebViewer/` | `vertigisstudioweb` | Geoportal |
 | `portals.landfolio.com` cadastre map | `landfolio` | Geoportal |
 | `{comune}.servizigis.it` / “GeneGis Site Creator” | `genegis` | Geoportal |
+| `cloud.ldpgis.it/{slug}/` / “LdP Viewer” | `ldpgis` | Geoportal |
 | Title “City Maps powered by XY” / `maps.xymaps.com/{city}` / `/xymaps/Map` | `xymaps` | Geoportal |
 | `{council}.pozi.com` title Pozi Web Map | `pozi` | Geoportal |
 | `/JMapWeb/` or JMap NG `jmapserver-ng` / `*.jmaponline.net` | `jmap` | Geoportal |
@@ -219,6 +238,7 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `INGRADA online` / `Softplan.Ingrada.Mobile` | `ingrada` | Geoportal |
 | `html.vcs-ui` title `VC Map` | `vcmap` | Geoportal |
 | `geoportale.sportellounicodigitale.it/GisMaster` `IdCliente=` | `gismaster` | Geoportal |
+| `/page:s_italia:geoportale` or `*.prod.globogis.com` | `gfmaplet` | Geoportal |
 | G3W-CLIENT `/map/{group}/` | `g3wsuite` | Geoportal |
 | MapCentia `/apps/viewer` or `/mapcache/` WMTS | `gc2` | Geoportal |
 | hale»connect `/csw` or `/ows/services/` | `haleconnect` | Geoportal |

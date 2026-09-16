@@ -28,6 +28,7 @@ python scripts/builder.py analyze-quality
 | `dataquality/full_report.jsonl` | Machine-readable issues (join on `uid`) |
 | `dataquality/primary_priority.jsonl` | CRITICAL + IMPORTANT |
 | `dataquality/baseline_counts.json` | CI regression baseline |
+| `dataquality/hunts.jsonl` | Discovery session completeness log |
 | `dataquality/rules/` | Per-rule breakdowns |
 | `dataquality/priorities/` | By CRITICAL / IMPORTANT / MEDIUM / LOW |
 | `dataquality/countries/` | Per-country |

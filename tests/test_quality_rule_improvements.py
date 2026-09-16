@@ -426,3 +426,19 @@ def test_schema_rejects_mixed_nested_types():
     assert validator.validate(record) is False
     errors = validator.errors
     assert "tags" in errors or "owner" in errors or "properties" in errors
+
+
+def test_expected_endpoints_skips_no_standard_probe_software():
+    record = {
+        "id": "kosiskr",
+        "status": "active",
+        "software": {"id": "kosis", "name": "KOSIS"},
+        "link": "https://kosis.kr",
+        "api": False,
+        "endpoints": [],
+    }
+    assert check_software_expected_endpoints(record) is None
+
+
+def test_duplicate_identifier_url_priority():
+    assert get_priority_level("DUPLICATE_IDENTIFIER_URL_NORMALIZED") == "IMPORTANT"

@@ -36,6 +36,7 @@ from collections import defaultdict, Counter
 from typing import List, Dict, Any, Optional
 
 from national_catalog import check_is_national_flag
+from url_utils import canonicalize_url, host_from_url, normalize_host_for_id
 from constants import (
     ENTRY_TEMPLATE,
     CUSTOM_SOFTWARE_KEYS,
@@ -1522,6 +1523,14 @@ def check_software_expected_endpoints(record):
 
     endpoints = record.get("endpoints", [])
     if isinstance(endpoints, list) and len(endpoints) > 0:
+        return None
+
+    # Software with no portable anonymous list API is documented in NO_STANDARD_PROBE.
+    try:
+        from apidetect_urlmaps_draft import NO_STANDARD_PROBE
+    except ImportError:
+        NO_STANDARD_PROBE = {}
+    if software_id in NO_STANDARD_PROBE:
         return None
 
     # Link already points at the API/service root for known service platforms.
@@ -3285,41 +3294,6 @@ def _validate_url_format(url, field_path, issue_type):
     return None
 
 
-def canonicalize_url(url):
-    """Normalize URL for duplicate comparison."""
-    if not url or not isinstance(url, str):
-        return None
-    raw = url.strip()
-    if not raw:
-        return None
-    try:
-        parsed = urlparse(raw)
-    except Exception:
-        return None
-    if not parsed.scheme or not parsed.netloc:
-        return None
-
-    scheme = (parsed.scheme or "").lower()
-    host = (parsed.hostname or "").lower()
-    if host.startswith("www."):
-        host = host[4:]
-    if not host:
-        return None
-
-    port = parsed.port
-    if port and not ((scheme == "http" and port == 80) or (scheme == "https" and port == 443)):
-        host = f"{host}:{port}"
-
-    path = parsed.path or ""
-    if path == "/":
-        path = ""
-    elif path.endswith("/"):
-        path = path.rstrip("/")
-
-    query = f"?{parsed.query}" if parsed.query else ""
-    return f"{scheme}://{host}{path}{query}"
-
-
 def score_duplicate_keeper(meta):
     """Higher score = preferred keeper when resolving duplicate link groups."""
     link = meta.get("link") or ""
@@ -4199,6 +4173,7 @@ ISSUE_PRIORITY_MAP = {
         "CATALOG_TYPE_DIRECTORY_MISMATCH",
         "DUPLICATE_LINK",
         "DUPLICATE_LINK_NORMALIZED",
+        "DUPLICATE_IDENTIFIER_URL_NORMALIZED",
         "MISSING_ENDPOINTS",
         "INVALID_OWNER_TYPE",
     ],
@@ -4300,22 +4275,6 @@ def is_valid_language(lang):
     if not isinstance(lang, dict):
         return False
     return bool(lang.get("id") and lang.get("name"))
-
-
-def host_from_url(url):
-    """Extract host from URL"""
-    try:
-        parsed = urlparse(url)
-        return parsed.netloc.lower() if parsed.netloc else None
-    except Exception:
-        return None
-
-
-def normalize_host_for_id(host):
-    """Normalize host to match ID format (remove dots, dashes, underscores)"""
-    if not host:
-        return ""
-    return host.replace(".", "").replace("-", "").replace("_", "").lower()
 
 
 def get_software_map():
@@ -5023,6 +4982,10 @@ RULE_DESCRIPTIONS = {
         "(scheme/host normalization, default ports, trailing slash handling). "
         "Reports include a preferred keeper (https, non-www, non-Unknown path)."
     ),
+    "DUPLICATE_IDENTIFIER_URL_NORMALIZED": (
+        "Identifies records whose identifiers[].url values canonicalize to the same URL "
+        "after scheme/host/trailing-slash normalization."
+    ),
     "DUPLICATE_RECORD_ID": (
         "Identifies the same catalog id appearing in more than one YAML file path. "
         "IDs must be unique across the registry; merge or rename one of the records."
@@ -5371,12 +5334,17 @@ def analyze_quality(output: str = None):
 
                 # Collect metadata for cross-record duplicate detection
                 link = record.get("link")
+                identifier_urls = []
+                for ident in record.get("identifiers") or []:
+                    if isinstance(ident, dict) and ident.get("url"):
+                        identifier_urls.append(ident["url"])
                 records_metadata.append(
                     {
                         "record_id": record_id,
                         "file_path": rel_file_path,
                         "country_codes": country_codes if country_codes else ["UNKNOWN"],
                         "link": link,
+                        "identifier_urls": identifier_urls,
                     }
                 )
                     
@@ -5547,6 +5515,45 @@ def analyze_quality(output: str = None):
                 "file_path": meta["file_path"],
                 "record_id": meta["record_id"],
                 "priority": get_priority_level("DUPLICATE_LINK_NORMALIZED"),
+                "country_code": country_codes[0],
+            }
+            _emit_cross_record_issue(base_issue, meta)
+
+    # Duplicate identifier URLs by canonicalized URL (across records)
+    ident_canon_to_records = {}
+    for meta in records_metadata:
+        seen_canon = set()
+        for raw_url in meta.get("identifier_urls") or []:
+            normalized = canonicalize_url(raw_url)
+            if not normalized or normalized in seen_canon:
+                continue
+            seen_canon.add(normalized)
+            ident_canon_to_records.setdefault(normalized, []).append(
+                {"meta": meta, "raw_url": raw_url}
+            )
+
+    for normalized_url, hits in ident_canon_to_records.items():
+        record_ids = sorted({h["meta"]["record_id"] for h in hits})
+        if len(record_ids) <= 1:
+            continue
+        for hit in hits:
+            meta = hit["meta"]
+            country_codes = meta["country_codes"] or ["UNKNOWN"]
+            base_issue = {
+                "issue_type": "DUPLICATE_IDENTIFIER_URL_NORMALIZED",
+                "field": "identifiers[].url",
+                "current_value": {
+                    "normalized_url": normalized_url,
+                    "raw_url": hit["raw_url"],
+                    "record_ids": record_ids,
+                },
+                "suggested_action": (
+                    "Canonical identifier URL is shared with another catalog; "
+                    "confirm they are the same catalog or drop the duplicate identifier."
+                ),
+                "file_path": meta["file_path"],
+                "record_id": meta["record_id"],
+                "priority": get_priority_level("DUPLICATE_IDENTIFIER_URL_NORMALIZED"),
                 "country_code": country_codes[0],
             }
             _emit_cross_record_issue(base_issue, meta)

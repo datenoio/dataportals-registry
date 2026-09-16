@@ -2,7 +2,7 @@
 
 How to grow coverage and quality, based on **~3,900 Cursor sessions** (November 2025–8 September 2026) and the releases they produced. This is the *what to work on next* guide. Mechanics live in [discover.md](discover.md), [contribute.md](contribute.md), [scheduled.md](../scheduled.md), and [metadata-quality.md](../metadata-quality.md). Hunt-pattern table: [discovery.md](../discovery.md#hunt-patterns).
 
-Working tree (12 September 2026): **37,170** verified catalogs, **0** scheduled YAML, **486** software IDs, **224** country folders. Published snapshot: v1.21.0 (37,170 catalogs, 0 scheduled, 486 software). Rebuild exports when YAML and `data/datasets/` diverge.
+Working tree (16 September 2026): **38,343** verified catalogs, **0** scheduled YAML, **523** software IDs, **224** country folders. Published snapshot: v1.21.0 (37,170 catalogs, 0 scheduled, 486 software). Rebuild exports when YAML and `data/datasets/` diverge.
 
 ## What those sessions actually did
 
@@ -18,7 +18,9 @@ First-user-message mix across 3,027 indexed chats (through v1.18.0):
 | Software-instance hunt | 1% | `Which DSpace catalogs are missing?` |
 | Docs, changelog, release | 1% | `Update README and CHANGELOG` |
 
-**31 August–8 September 2026** (~547 chats, covering v1.19.0 and v1.20.0) inverted that mix: **~82%** were software-instance or subnational municipal-GIS hunts (`Which {software} catalogs are missing?`, `Which {country} cities and counties geoportals are missing?`). Custom-software reviews on 1–2 and 7 September extracted dozens of new `software.id` values, then instance hunts filled them. A 0-missing result is a valid done state — it documents completeness.
+| **31 August–8 September 2026** (~547 chats, covering v1.19.0 and v1.20.0) inverted that mix: **~82%** were software-instance or subnational municipal-GIS hunts (`Which {software} catalogs are missing?`, `Which {country} cities and counties geoportals are missing?`). Custom-software reviews on 1–2 and 7 September extracted dozens of new `software.id` values, then instance hunts filled them. A 0-missing result is a valid done state — it documents completeness.
+
+**8–16 September 2026** (~390 chats, covering v1.21.0 and the unreleased +1,172 wave): country/IGO hunts **63%**, software-instance **9%**, municipal GIS **8%**, country record reviews **0%**. Volume came from IGO named-directory passes (WHO, FAO, IMF, UNESCO, WMO, …) plus Africa country-shape and a few new municipal GIS products (Map2Web, LDP SIT, Earthlight, Tailormap). Agents often stopped at scheduled YAML instead of promoting in the same session.
 
 Volume came from a **small number of session types**, not from the 1,500 one-off URL adds:
 
@@ -42,14 +44,23 @@ Run these in order. Skipping a step is how duplicates, dead hosts, and `custom` 
 2. Discover  software-first, then country-shape. Probe candidate hosts only
 3. Stage     add-single --scheduled  (temp UIDs)
 4. Probe     live GET; 401/403 stop; dead → drop or inactive
-5. Promote   promote_scheduled.py or manual move; assign; validate-yaml
-6. Enrich    country review: owner, endpoints, is_national, type path
-7. Release   analyze-quality, build, README/CHANGELOG, software-index
+5. Promote   promote_scheduled.py in the **same session**; assign; validate-yaml
+6. Enrich    detect-software for mapped IDs; country review: owner, endpoints, is_national, type path
+7. Log       append one line to dataquality/hunts.jsonl (0 missing is still a complete row)
+8. Release   analyze-quality, build, README/CHANGELOG/AGENTS.md/llms.txt, software-index
 ```
 
 If `datasets.duckdb` is locked (another session writing), query `data/datasets/full.parquet` instead — it is read-only and enough for hostname duplicate checks. Do not walk YAML because DuckDB failed.
 
-Reuse a prior hunt transcript for the same `software.id` or country before starting a second pass. If that hunt already exhausted the vendor list, report completeness and stop unless a new list URL exists.
+Reuse a prior hunt transcript **or** `dataquality/hunts.jsonl` for the same `software.id`, IGO, list URL, or country before starting a second pass. If that hunt already exhausted the vendor list, report completeness and stop unless a new list URL exists.
+
+Hunt log (one JSON object per line):
+
+```json
+{"date":"2026-09-16","kind":"software-instance","target":"tailormap","list_url":"https://www.tailormap.com/","added":11,"skipped_dupes":4,"status":"complete","notes":"vendor list exhausted"}
+```
+
+`kind` is one of: `software-instance`, `country-shape`, `igo`, `named-directory`, `harvest-source`, `university-ir`, `indicators`, `municipal-gis`, `custom-review`, `country-review`, `process`. `status` is `complete`, `partial`, or `blocked`.
 
 Do not commit `.tmp_aq/` probe scripts or JSON. Rebuild `data/datasets/` only when the user asked for a release or the YAML/export counts have diverged.
 
@@ -139,17 +150,17 @@ Re-check counts in DuckDB (and YAML if exports lag) before starting. India/Niger
 
 | Rank | Hunt | Why | How |
 |-----:|------|-----|-----|
-| 1 | Pending instance lists for new v1.20 IDs | Custom reviews added IDs (CartoVista, IGO2, InfoMap, dpWebmap, Flood Intelligence Portal, GeoViewer, …) with hunts still pending | Vendor page / crt.sh hostname pattern → probe ([discover.md](discover.md#software-instance)) |
-| 2 | Dataset-bearing scientific IRs | Shape hole after the university-IR wave: OpenDOAR hosts that list **datasets**, not publications | OpenDOAR + re3data + OpenAIRE, filter DSpace Dataset type / Dataverse; skip microstates |
-| 3 | Native NSO / health / education indicators leftovers | OECD+Asia indicators mostly filled; Africa and some subnational explorers remain | PxWeb / .Stat / STATcube / DHIS2 / TabNet; skip IMF NSDP already present |
-| 4 | Named directories | Bounded lists still convert: ODIS, CoreTrustSeal leftovers, STAC, WIS2 GDC, GeoNode gallery, Instant Apps Filter Gallery | One list URL per session ([discovery.md](../discovery.md#existing-lists-start-here)) |
-| 5 | National harvest-source leftovers | data.go.id added 112 origin catalogs in one pass; other national portals still have unmatched harvest URLs | Harvest/organisations API → probe origin UI ([discovery-opendata.md](../discovery-opendata.md#national-harvest-sources)) |
-| 6 | Africa national + capital open data | UN members that still have **zero** open-data YAML | National CKAN/DKAN/uData, then capital city. Skip more DHIS2 if already added |
-| 7 | India remaining depth | Population × empty states/cities after the first 48 | State SDI, city CKAN, university IRs with datasets, MOSPI/state statistics. Duplicate-check `*.data.gov.in` |
-| 8 | DHIS2 + NADA leftovers | Short lists, high precision | dhis2.org implementations + IHSN ADP; probe `/api/system/info` and `/index.php/catalog` |
-| 9 | Microdata in OECD countries | Spain, Italy, Poland, Australia often show 0 NADA | IHSN list; do not refile indicator table builders as microdata |
-| 10 | Custom-software retag | Sept 7 four-pass review already extracted Argenmap, WebEWID, Dashboards, GT Map, SHK KBS, …; remaining custom geoportals are mostly one-off `.gov` roots | Hostname/path clusters with a named product; one-off `.gov` roots stay `custom` |
-| — | More US/EU commune ArcGIS or e-mapa-class GIS | Already thousands of geo rows; PL e-mapa, CZ GISPLAN, IT GisMaster, JP WagMap filled | Only if a named authoritative list remains unmatched (MappingSupport, FGDC SSC, a new vendor gallery) |
+| 1 | Dataset-bearing scientific IRs | Shape hole: KH, BA, PS, EG, LA still ~0–2 scientific at ≥20 total catalogs | OpenDOAR + re3data + OpenAIRE, filter DSpace Dataset type / Dataverse; skip microstates |
+| 2 | Named directories | Bounded lists still convert: ODIS, CoreTrustSeal leftovers, STAC Index, WIS2 GDC, GeoNode gallery | One list URL per session ([discovery.md](../discovery.md#existing-lists-start-here)); log the URL in hunts.jsonl |
+| 3 | IGO / World catalogs | Sep 15 IGO wave worked; UN family still has leftover portals | `Which {agency} data catalogs are missing?` ([discover.md](discover.md#igo-organization)) |
+| 4 | Africa national + capital open data | Still **0** OD YAML: EG, AO, CM, SD, HT, NE, YE, ZW, and others | National CKAN/DKAN/uData, then capital city. Skip more DHIS2 if already added |
+| 5 | Custom retag on scientific + indicators | `custom` is 40% of scientific and 53% of indicators | Hostname/path clusters with a named product; one-off `.gov` roots stay `custom` |
+| 6 | Native NSO / health / education leftovers | Africa and some subnational explorers remain | PxWeb / .Stat / STATcube / DHIS2 / TabNet; skip IMF NSDP already present |
+| 7 | National harvest-source leftovers | Other national portals still have unmatched harvest URLs | Harvest/organisations API → probe origin UI |
+| 8 | Thin types | Microdata 298, metadata 137, API 51, ML 71, marketplace 46 | IHSN leftover, government API directories, FAIR Data Point |
+| 9 | India remaining depth | Population × empty states/cities after the first passes | State SDI, city CKAN, dataset-bearing university IRs. Duplicate-check `*.data.gov.in` |
+| 10 | Country reviews after bulk adds | Reviews stopped in late August; World/NL/GB/IT/RO/AT gained thousands of rows | `Review records at data/entities/{CC}` |
+| — | More US/EU commune ArcGIS or e-mapa-class GIS | Geo is 58% of the registry; PL/CZ/IT/NL/RO Map2Web filled | Only if a named gallery remains unmatched |
 
 ## Recipes
 
@@ -165,9 +176,24 @@ Agent steps:
 2. `SELECT link, owner.location.country.id FROM catalogs WHERE software.id = '{id}'` on `datasets.duckdb` (or `full.parquet` if DuckDB is locked).
 3. Fetch the vendor list / gallery / crt.sh hostname pattern (not a scanner). Skip if a hunt in the last two weeks already exhausted that list.
 4. Match on hostname; probe fingerprints; `add-single --scheduled`.
-5. If the vendor list is exhausted and probes found nothing new, **stop and report completeness** (0 missing is done).
+5. If the vendor list is exhausted and probes found nothing new, **stop and report completeness** (0 missing is done). Append `dataquality/hunts.jsonl`.
 6. If ≥3 `custom` rows are clearly this product, or a first-party product page names it, retag them and add the software definition first.
 7. Optional second pass: Censys `html_title` / body fingerprint when Google and the gallery are silent, or the FOFA equivalent (`title=` / `body=` / `country=`) when Censys is not configured.
+8. **Promote in the same session** after a live GET. Run `detect-software {id} --action insert --max-endpoints 1` when the software is in `CATALOGS_URLMAP`.
+
+### IGO / international organization hunt
+
+```text
+Which {agency} data catalogs are missing?
+```
+
+Agent steps:
+
+1. Query exports for `World/` plus hostnames (`who.int`, `fao.org`, …).
+2. Take the agency’s own data/publications/geoportal directory — not a web-wide crawl.
+3. **Accept:** catalog UIs, statistical databases, geoportals, SDMX registries. Place under `data/entities/World/` unless a single-country owner is clear.
+4. **Reject:** publication article hubs, one-file Excel “databases”, login walls, marketing homepages, duplicate language mirrors.
+5. Promote live finds in the same session. Log the agency in `dataquality/hunts.jsonl`.
 
 ### Country-shape hunt
 
@@ -284,6 +310,7 @@ If YAML and `catalogs.jsonl.zst` disagree, say so and prefer YAML counts (`data/
 Copy these; they match the loops above.
 
 - `Which {software} catalogs are missing?` — instance hunt (0 missing is done)
+- `Which {agency} data catalogs are missing?` — IGO / World hunt
 - `Which data sources harvested by {national portal} are missing?` — harvest-source hunt
 - `There are a lot of {country} universities… Which scientific repositories are missing?` — IR hunt (dataset-bearing only)
 - `Which {country} indicators catalogs are missing?` — then skip IMF NSDP / national StatBank already registered

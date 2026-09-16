@@ -12,12 +12,12 @@
 
 ## 3. Extended URL coverage
 
-- [ ] 3.1 Apply canonicalization in cross-record duplicate checks for `identifiers[].url` where applicable
+- [x] 3.1 Apply canonicalization in cross-record duplicate checks for `identifiers[].url` where applicable (`DUPLICATE_IDENTIFIER_URL_NORMALIZED`)
 - [x] 3.2 Verify `check_identifier_urls`, `check_rights_urls` share canonicalization with duplicate logic
 - [x] 3.3 Document normalization rules in `devdocs/quality-fix-workflow.md`
 
 ## 4. Verification
 
-- [ ] 4.1 Run `analyze-quality` and confirm new issue type appears for known http/https pairs
+- [x] 4.1 Run `analyze-quality` and confirm new issue type appears for known http/https pairs
 - [x] 4.2 Run `openspec validate add-normalized-url-quality-checks --strict`
 - [x] 4.3 Run pytest
