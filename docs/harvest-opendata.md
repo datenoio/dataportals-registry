@@ -60,6 +60,7 @@ Same Action API as [CKAN](#ckan) when enabled; also `/api/1/search`. Confirm JSO
 GET https://host/api/3/action/package_search?rows=25
 GET https://host/api/1/search
 GET https://host/jsonapi/dataset/dataset
+GET https://host/api/3
 ```
 
 
@@ -167,6 +168,31 @@ DCAT-AP. Harvest **Dataset** / `dcat:Dataset` only. Public DCAT/search API on th
 ```text
 GET https://host/store/search?type=dcat:Dataset
 ```
+
+## Felles datakatalog (`fellesdatakatalog`) {#fellesdatakatalog}
+
+Use the public search service. Pages are one-based:
+
+```text
+POST https://search.api.fellesdatakatalog.digdir.no/search/datasets
+Content-Type: application/json
+
+{"pagination":{"size":1000,"page":1}}
+```
+
+Keep one dataset per `hits[]` element. Increment `pagination.page` through
+`page.totalPages`. Keep distributions nested under their dataset; do not emit them
+as separate datasets.
+
+For Transportportal, add `"profile":"TRANSPORT"` to the request body. That profile
+is a transport-focused subset of data.norge.no, so deduplicate by canonical dataset
+URI if both portals are harvested into one collection. Do not copy the Digdir search
+or SPARQL hosts onto tenant catalog links; harvest uses those absolute URLs from
+`endpoints[]`.
+
+**Keep:** dataset `hits[]` and their distributions. **Drop:** aggregations, search
+suggestions, concepts, information models, services, events, and admin/registration
+objects unless the user explicitly requested those resource types.
 
 
 ## Piveau (`piveau`) {#piveau}
@@ -299,6 +325,26 @@ GET https://host/oportal/
 
 **Keep:** `/oportal/` dataset listing or DCAT if public. **Drop:** the application gallery and login-only 数据开放 admin.
 
+## data.world (`dataworld`) {#dataworld}
+
+Public hub `data.world`. Harvest **datasets** from the public catalog/API. Do not crawl private organization spaces.
+
+```text
+GET https://api.data.world/v0/datasets/search?q=*
+```
+
+Stop on `401`. **Keep:** public **datasets**. **Drop:** per-user files as crawl seeds. One registered hub.
+
+## IUDX Catalogue (`iudx`) {#iudx}
+
+IUDX catalogue server. Harvest **items** from the catalogue API.
+
+```text
+GET https://central-catalogue.iudx.org.in/iudx/cat/v1/search
+```
+
+**Keep:** catalogue **items**. **Drop:** each resource ID as a crawl seed. One harvest scope per public tenant.
+
 ## Liferay (`liferay`) {#liferay}
 
 Spanish RISP / datos abiertos modules on Liferay. Harvest only the **dataset list** (often a JSON/CSV/XML table or `/documents/` open-data folder).
@@ -386,7 +432,7 @@ GET https://host/opendata/
 GET https://host/opendata/opendata.json
 ```
 
-Type `/opendata/opendata.json` as `opendata:json` when present. Do not append `/opendata/` onto catalog links that already are the open-data page. Cleanup strips `/opendata` (keeping any locale prefix such as `/ru`) so that JSON path attaches at origin.
+Type `/opendata/` as `bitrix:catalog` and `/opendata/opendata.json` as `opendata:json` when present. Do not append `/opendata/` onto catalog links that already are the open-data page. Cleanup strips `/opendata` (keeping any locale prefix such as `/ru`) so that JSON and HTML paths attach at origin. Catalog pages without `/opendata` (`.php` / `.aspx`) fall back to origin so `/opendata/` is not concatenated onto the filename.
 
 
 ## DataPress (`datapress`) {#datapress}

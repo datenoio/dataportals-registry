@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Public Cadcorp SIS WebMap 9 geoportal for Eastleigh Borough Council.
+id: emapseastleighgovuk
+langs:
+- id: EN
+  name: English
+link: https://emaps.eastleigh.gov.uk/
+name: Eastleigh Borough Council WebMap
+owner:
+  link: https://www.eastleigh.gov.uk/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: Eastleigh Borough Council
+  type: Local government
+software:
+  id: cadcorp
+  name: Cadcorp SIS WebMap
+status: active
+tags:
+- geoportal
+- geospatial
+- cadcorp
+- Eastleigh
+- England
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: cadcorp:catalog
+  url: https://emaps.eastleigh.gov.uk/
+uid: cdi00006221

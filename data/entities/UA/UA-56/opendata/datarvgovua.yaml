@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id001
+      id: UA-56
+      name: Rivnenska oblast
+description: Open data portal. managed by Рівненська обласна державна адміністрація.
+  powered by CKAN. accessible at data.rv.gov.ua.
+endpoints:
+- type: ckan
+  url: https://data.rv.gov.ua/api/3
+- type: ckan:package-search
+  url: https://data.rv.gov.ua/api/3/action/package_search
+- type: ckan:status-show
+  url: https://data.rv.gov.ua/api/3/action/status_show
+id: datarvgovua
+langs:
+- id: EN
+  name: English
+link: https://data.rv.gov.ua
+name: Портал відкритих даних Рівненської обласної державної адміністрації
+owner:
+  link: https://gov.ua
+  location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 30
+    subregion: *id001
+  name: Рівненська обласна державна адміністрація
+  type: Regional government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- CKAN
+- government
+- open data
+- ukraine
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00006752

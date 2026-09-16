@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-UT
+      name: Utrecht
+description: Public Tailormap geoportal of Gemeente Woerden with municipal map viewers.
+id: woerdentailormapnl
+langs:
+- id: NL
+  name: Dutch
+link: https://woerden.tailormap.nl/
+name: Kaart Woerden
+owner:
+  link: https://www.woerden.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-UT
+      name: Utrecht
+  name: Gemeente Woerden
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: tailormap
+  name: Tailormap
+status: active
+tags:
+- GIS
+- geospatial
+- government
+- netherlands
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00006539
+endpoints:
+- type: tailormap:viewers
+  url: https://woerden.tailormap.nl/nl/page/viewers
+- type: tailormap:start
+  url: https://woerden.tailormap.nl/nl/page/startpagina

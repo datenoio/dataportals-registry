@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ORFEUS EIDA node of the Swiss Seismological Service at ETH Zurich, providing FDSN waveform,
+  station, availability, and WFCatalog access to Swiss and partner seismic networks.
+endpoints:
+- type: api
+  url: https://eida.ethz.ch/fdsnws/station/1/
+- type: api
+  url: https://eida.ethz.ch/fdsnws/dataselect/1/
+- type: api
+  url: https://eida.ethz.ch/fdsnws/availability/1/
+- type: api
+  url: https://eida.ethz.ch/eidaws/wfcatalog/1/
+id: eidaethzch
+langs:
+- id: EN
+  name: English
+link: https://eida.ethz.ch/
+name: SED/ETHZ EIDA node
+owner:
+  link: http://www.seismo.ethz.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+  name: Swiss Seismological Service, ETH Zurich
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- seismology
+- EIDA
+- FDSN
+- EPOS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00005621

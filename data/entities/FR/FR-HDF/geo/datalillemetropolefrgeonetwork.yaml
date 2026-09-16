@@ -31,6 +31,13 @@ endpoints:
   url: https://data.lillemetropole.fr/geonetwork/srv/api/selections
 - type: geonetwork:site
   url: https://data.lillemetropole.fr/geonetwork/srv/api/site
+- type: openapi
+  url: https://data.lillemetropole.fr/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: ogcrecordsapi
+  url: https://data.lillemetropole.fr/geonetwork/srv/ogc/records/collections?f=json
+- type: ogcrecordsapi
+  url: https://data.lillemetropole.fr/geonetwork/ogc/records/collections?f=json
 id: datalillemetropolefrgeonetwork
 langs:
 - id: FR

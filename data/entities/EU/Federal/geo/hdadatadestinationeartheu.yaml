@@ -22,6 +22,12 @@ description: STAC API (v2) for the DestinE Data Lake (DEDL). The Data Lake bring
 endpoints:
 - type: stacserverapi
   url: https://hda.data.destination-earth.eu/stac/v2/
+- type: stacserverapi:collections
+  url: https://hda.data.destination-earth.eu/stac/v2/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://hda.data.destination-earth.eu/stac/v2/conformance
+  version: '1.0'
 id: hdadatadestinationeartheu
 langs:
 - id: EN

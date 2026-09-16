@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion: &id001
+      id: NL-NB
+      name: Noord-Brabant
+description: Shared OneMap / WebGIS map portal for Equalit municipalities including
+  Goirle, Hilvarenbeek, Loon op Zand, Oisterwijk, Oosterhout, Steenbergen, Woensdrecht,
+  Zundert and the ABG municipalities.
+id: equalitwebgisnl
+langs:
+- id: NL
+  name: Dutch
+link: https://equalit.webgis.nl/
+name: Equalit Kaartenportaal
+owner:
+  link: https://equalit.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion: *id001
+  name: Equalit
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: nieuwlandonemap
+  name: NieuwlandGeo Onemap
+status: active
+tags:
+- GIS
+- geospatial
+- government
+- netherlands
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00006501

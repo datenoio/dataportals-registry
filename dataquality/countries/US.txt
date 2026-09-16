@@ -1,0 +1,24 @@
+DATA QUALITY REPORT - COUNTRY: US
+================================================================================
+Generated: 2026-09-16 10:22:32
+Country Code: US
+Total Records with Issues: 1
+Total Issues Found: 1
+
+=== ISSUES BY TYPE ===
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_INTERMINE]
+Count: 1
+Priority: MEDIUM
+
+File: US/Federal/scientific/wwwxenmineorg.yaml
+Record ID: wwwxenmineorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_INTERMINE
+Field: endpoints
+Current Value: {'software_id': 'intermine', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='intermine' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_INTERMINE: 1 issue

@@ -23,6 +23,12 @@ description: STAC API for Data to Science (D2S), serving geospatial collections 
 endpoints:
 - type: stacserverapi
   url: https://stac.d2s.org/api/v1/
+- type: stacserverapi:collections
+  url: https://stac.d2s.org/api/v1/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac.d2s.org/api/v1/conformance
+  version: '1.0'
 id: stacd2sorg
 langs:
 - id: EN

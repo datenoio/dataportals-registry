@@ -17,6 +17,13 @@ Overview: [harvest.md](harvest.md). Finding catalogs: [discovery-indicators.md](
 | Mica **study** / dataset | Network chrome, person records |
 | DHIS2 **data set** / public indicator | Org-unit trees, user accounts, login-only analytics |
 | TabNet **`.def` table** (query form) | CGI query sessions, TabWin `.TAB` downloads, individual table cells |
+| KOSIS **table / indicator** on kosis.kr | Local-government `/stat/` CMS; 지표누리; SGIS; OpenAPI calls that need a service key as if they were the catalog |
+| e-Stat **statistical table** (portal / LOD / dashboard host) | RESAS; ministry pages that only link to e-Stat; every chart on the dashboard host |
+| SIDRA **aggregate / table** (`/api/v3/agregados`) | IBGE Cidades@, Ipeadata, Comex Stat, BCB SGS, DATASUS TabNet |
+| Fingertips **profile / indicator** | Each local-authority area value; `/api` HTML docs as a list |
+| UNdata **series / table** (OpenSearch / portal tree) | SDG Global Database; Comtrade Plus; every observation cell |
+| UN Comtrade Plus **trade dataset / flow** | UI chrome; WITS; concatenating `/api` onto comtradeplus.un.org |
+| Our World in Data **indicator / chart topic** | Every chart URL; Gapminder WordPress download pages |
 | FENIX **domain / dataset** (FAOSTAT groupsanddomains) | FAOSTAT observation cubes; dead CountrySTAT hosts |
 | IPUMS **sample** / collection metadata | Completed extract files and variable pages as catalogs |
 | Knoema **dataset** on a portal | Individual time-series points and knoema.com global search hits |
@@ -57,6 +64,8 @@ Each JSON object with `type: t` (table) is a dataset. `type: l` is a folder — 
 
 **Keep:** PxWeb **tables** (`type: t`). **Drop:** subject **folders** (`type: l`) and POST observation cubes.
 
+Detection strips `/pxweb/{lang}/...` table-tree paths and Dialog pages so `/api/v1/` attaches at the `/PXWeb` app mount or the origin. Origin `/api/v1/` is also probed when the catalog link keeps a PXWeb mount.
+
 ## PxStat (`pxstat`) {#pxstat}
 
 List live tables from the Cube API (often on a `ws.` / `ws-data.` host recorded in `endpoints[]`). Prefer REST ReadCollection; JSON-RPC is equivalent.
@@ -89,12 +98,45 @@ There is no anonymous list API. Keep the public **tables / indicators** the sing
 
 **Keep:** WebMain **tables / indicators**. **Drop:** extra funid theme URLs on the same host, `/DgbasWeb/`, PxWeb, MOTC Portal, and MOENV epanet.
 
+## KOSIS (`kosis`) {#kosis}
+
+Filter exports on `software.id = 'kosis'`. Harvest each registered host as its own catalog (national hub, `/bukhan/`, agency/local `/statHtml/` tenants, ODA clones).
+
+There is no anonymous OpenAPI list without a service key. Harvest the public **table / indicator tree** the portal lists. Grain is the statistical table or indicator, not each year cell or OpenAPI observation query.
+
+**Keep:** KOSIS **tables / indicators** on the registered host.
+**Drop:** local-government `/stat/index.do` CMS skins, 지표누리 (`index.go.kr`), SGIS, and OpenAPI calls that require a service key as if they were the catalog.
+
+```text
+GET https://kosis.kr/
+GET https://kosis.kr/bukhan/
+GET {host}/statHtml/statHtml.do
+```
+
+## e-Stat (`estat`) {#estat}
+
+Filter exports on `software.id = 'estat'`. Three registered hosts: the table portal (`www.e-stat.go.jp`), Statistical LOD (`data.e-stat.go.jp`), and the Statistics Dashboard (`dashboard.e-stat.go.jp`). Harvest each host as its own catalog; do not add extra table or API paths.
+
+The e-Stat API on `api.e-stat.go.jp` needs an application ID — do not invent a relative list on the Drupal portal. Dashboard JSON (`/api/1.0/`) and LOD SPARQL are host-specific. Grain is the **statistical table / indicator**, not every chart.
+
+**Keep:** e-Stat **statistical tables / indicators** on the registered host.
+**Drop:** RESAS, ministry pages that only link to e-Stat, and every dashboard chart URL.
+
+```text
+GET https://www.e-stat.go.jp/
+GET https://data.e-stat.go.jp/
+GET https://dashboard.e-stat.go.jp/
+```
+
 ## OpenSDG (`opensdg`) {#opensdg}
 
 Each SDG indicator is one dataset. List from reporting status or `data/` JSON.
 
 ```text
 GET https://host/reporting-status
+GET https://host/reporting-status/
+GET https://host/en/reporting-status/
+GET https://host/indicators.json
 GET https://host/data/1-1-1.json
 ```
 
@@ -207,7 +249,7 @@ Keep public **indicator** pages (and CSV downloads linked from indicator detail)
 
 Filter exports on `software.id = 'virtuallmi'`. One harvest scope per state tenant.
 
-Keep public **occupation / industry / area profile** tables the VLMI UI lists. Drop job-board postings, case-management VOS modules, and state LMI sites that are not VLMI. Stop on `401`/`403`.
+Keep public **occupation / industry / area profile** tables the VLMI UI lists. Branded `/vosnet/` hosts (Colorado LMI Gateway) are the same grain. Drop job-board postings, case-management VOS modules, and state LMI sites that are not VLMI. Stop on `401`/`403`.
 
 **Keep:** public occupation / industry / area **profile tables**. **Drop:** job-board postings, VOS case-management, and non-VLMI state LMI sites.
 
@@ -323,6 +365,19 @@ GET https://host/indicator/index/alphabetical
 ```
 
 
+## Fingertips (`fingertips`) {#fingertips}
+
+Filter exports on `software.id = 'fingertips'`. One harvest scope for the national England hub.
+
+`GET /api` is HTML documentation. List **profiles** (then indicators inside a profile) from `/api/profiles`. Grain is the profile or indicator, not each area value.
+
+**Keep:** Fingertips **profiles / indicators**.
+**Drop:** per-local-authority area values as extra datasets, IBIS-PH, Power BI embeds, and InstantAtlas reports.
+
+```text
+GET https://fingertips.phe.org.uk/api/profiles
+```
+
 ## DHIS2 (`dhis2`) {#dhis2}
 
 National HMIS / public health indicator portals. Filter exports on `software.id = 'dhis2'`.
@@ -346,6 +401,19 @@ Keep each public **`.def` table** (query form) as one dataset analog: title from
 **Drop** CGI `Mostre` query results, `Copia para Tabwin` files, CSV cell dumps, TabWin desktop packages, and every `.def` on `tabnet.datasus.gov.br` when harvesting the national catalog already listed from the DATASUS TabNet landing page. One harvest scope per installation (national, SES, municipal, ANS). Stop on `401`/`403`.
 
 **Keep:** each public **`.def` table** (query form). **Drop:** CGI `Mostre` results, TabWin files, CSV cell dumps, and every `.def` on the national landing when harvesting that catalog.
+
+## SIDRA (`sidra`) {#sidra}
+
+Filter exports on `software.id = 'sidra'`. One harvest scope for the IBGE SIDRA hub.
+
+List **aggregates / tables** from the IBGE servicodados API (JSON, often gzip). Grain is the aggregate (table), not each observation cell or territorial breakdown. Detection uses that API host (`absolute_url`); do not concatenate `/api/v3/agregados` onto `sidra.ibge.gov.br`.
+
+**Keep:** SIDRA **aggregates / tables**.
+**Drop:** IBGE Cidades@, Ipeadata, Comex Stat, BCB SGS, and DATASUS TabNet.
+
+```text
+GET https://servicodados.ibge.gov.br/api/v3/agregados
+```
 
 ## FENIX (`fenix`) {#fenix}
 
@@ -560,6 +628,8 @@ GET https://sdmx.ilo.org/rest/dataflow
 
 Keep **dataflows**. `www.ilo.org/sdmx/` is often Cloudflare-blocked from scripts — use `sdmx.ilo.org`. Drop ilostat.ilo.org article pages.
 
+Detection uses that SDMX host (`absolute_url`); do not concatenate `/rest/dataflow` onto ilostat.ilo.org.
+
 **Keep:** ILOSTAT SDMX **dataflows**. **Drop:** ilostat.ilo.org article pages.
 
 ## BIS (`databisorg`) {#databisorg}
@@ -569,6 +639,8 @@ GET https://stats.bis.org/api/v1/dataflow
 ```
 
 Keep SDMX **dataflows**. The registered `https://data.bis.org/api/v0/search` is **POST** (not a GET list) and is not a dataset catalog. Drop help HTML and observation queries.
+
+Detection uses the stats.bis.org API host (`absolute_url`); do not concatenate `/api/v1/dataflow` onto `data.bis.org`.
 
 **Keep:** BIS SDMX **dataflows**. **Drop:** help HTML, POST search, and observation queries.
 
@@ -580,7 +652,48 @@ GET https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/dataflow
 
 Keep **dataflows**. Do not treat every country profile on data.unicef.org as a dataset. The HTML site may be Cloudflare-blocked; SDMX is the harvest.
 
+Detection uses the SDMX API host (`absolute_url`); do not concatenate `/ws/public/sdmxapi/rest/dataflow` onto data.unicef.org.
+
 **Keep:** UNICEF SDMX **dataflows**. **Drop:** every country profile on data.unicef.org as a dataset.
+
+## UNdata (`undata`) {#undata}
+
+Filter exports on `software.id = 'undata'`. One registered catalog for data.un.org.
+
+List from OpenSearch (already on the catalog record). Grain is the **series / table**, not observation cells. Drop the SDG Global Database and Comtrade Plus as extra catalogs of this hub — those are separate registered products.
+
+**Keep:** UNdata **series / tables**.
+**Drop:** SDG Global Database, Comtrade Plus, and every observation cell.
+
+```text
+GET https://data.un.org/OpenSearch.xml
+```
+
+## UN Comtrade Plus (`comtradeplus`) {#comtradeplus}
+
+Filter exports on `software.id = 'comtradeplus'`. One registered catalog for comtradeplus.un.org.
+
+The data API lives on `comtradeapi.un.org` and needs a subscription key. Do not concatenate `/api` onto the UI host. Grain is the **trade dataset / flow** the Plus UI lists, not each reporter-partner-year cell. Distinct from WITS and UNdata.
+
+**Keep:** Comtrade Plus **trade datasets / flows**.
+**Drop:** UI chrome, WITS, UNdata series, and key-gated API observation dumps as extra catalogs.
+
+```text
+GET https://comtradeplus.un.org/
+```
+
+## Our World in Data (`ourworldindata`) {#ourworldindata}
+
+Filter exports on `software.id = 'ourworldindata'`. One registered catalog for ourworldindata.org.
+
+There is no relative list API on the catalog link. Harvest **indicator / chart topics** from the public sitemap or charts index. Grain is the indicator topic, not every chart URL or Grapher query. Distinct from Gapminder WordPress data-download pages.
+
+**Keep:** OWID **indicator / chart topics**.
+**Drop:** every chart URL as its own dataset, Grapher query strings, and Gapminder WordPress pages.
+
+```text
+GET https://ourworldindata.org/sitemap.xml
+```
 
 ## StatPlanet (`statplanet`) {#statplanet}
 

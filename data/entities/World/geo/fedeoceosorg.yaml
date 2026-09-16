@@ -20,6 +20,15 @@ description: FedEO Clearinghouse provides interoperable access, following ISO/OG
 endpoints:
 - type: stacserverapi
   url: https://fedeo.ceos.org/
+- type: stacserverapi:collections
+  url: https://fedeo.ceos.org/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://fedeo.ceos.org/conformance
+  version: '1.0'
+- type: openapi
+  url: https://fedeo.ceos.org/api
+  version: '3.0'
 id: fedeoceosorg
 langs:
 - id: EN

@@ -24,6 +24,12 @@ endpoints:
 - type: openapi
   url: https://br-geoportal.itu.int/ITU-R/BR-GeoApi/api
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://br-geoportal.itu.int/ITU-R/BR-GeoApi/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://br-geoportal.itu.int/ITU-R/BR-GeoApi/conformance
+  version: '1.0'
 id: brgeoportalityuintiturbrgeoapi
 langs:
 - id: EN

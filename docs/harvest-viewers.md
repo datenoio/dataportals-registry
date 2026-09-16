@@ -1,6 +1,6 @@
 # Harvesting map viewers and tile caches
 
-Many geoportals in this registry are **viewers** (QWC2, Masterportal, Lizmap, mviewer, Wagmap, Tianditu, Trimble Locus / Louhi / Landfolio, dmCity, InfoGIS, Spatial Suite, Spectrum Spatial Analyst, Exponare, KortInfo, IntraMaps Public, LocalMaps, GEUSMAP, GISApp, GeneGIS PAGIS, GisMaster, HyG Mapgis, SmartMap, VKOMAP, Visor Urbano, Dobles Visor de Mapas, ISY Map, Avinet Adaptive, iObčina, iShare, Cadcorp, VertiGIS Studio Web, ArcGIS Experience Builder, ArcGIS Web AppBuilder, ArcGIS Dashboards, ArcGIS Instant Apps, Argenmap, AvanMap, WebEWID, KC WebGIS, Hajk, myCarta, AddSpatial, T-MAPY GISPLAN, CG WebGIS, Geodeticca WEB GIS, Geoportál GEPRO, GisOnline, K5 MapServer, Marushka, Georeal, Mapotip, giscity, touvia.MAPS, INGRADA online, VC Map, XY Maps, Pozi, JMap, GIS Cloud, MRF Web Map, MuniSight, p.mapper, CommunityView, MS-GIS, Weave, OVIE, SOFTPRO, MxSIG, DIGITAL TWIN CLOUD). The catalog of datasets is the **layer list** (GetCapabilities, `themes.json`, REST services) — not PNG tiles, print PDFs, or the basemap.
+Many geoportals in this registry are **viewers** (QWC2, Masterportal, Lizmap, mviewer, Wagmap, Tianditu, Trimble Locus / Louhi / Landfolio, dmCity, InfoGIS, Spatial Suite, Spectrum Spatial Analyst, Exponare, KortInfo, IntraMaps Public, LocalMaps, GEUSMAP, GISApp, GeneGIS PAGIS, GisMaster, LDP SIT, GFMaplet, HyG Mapgis, SmartMap, SmartGIS, VKOMAP, Visor Urbano, Dobles Visor de Mapas, ISY Map, Avinet Adaptive, iObčina, iShare, Cadcorp, StatMap Earthlight, VertiGIS Studio Web, ArcGIS Experience Builder, ArcGIS Web AppBuilder, ArcGIS Dashboards, ArcGIS Instant Apps, Argenmap, AvanMap, WebEWID, KC WebGIS, Hajk, Origo, Tailormap, myCarta, AddSpatial, T-MAPY GISPLAN, CG WebGIS, Geodeticca WEB GIS, Geoportál GEPRO, GisOnline, K5 MapServer, Marushka, Georeal, Mapotip, giscity, touvia.MAPS, INGRADA online, VC Map, XY Maps, Pozi, JMap, GIS Cloud, MRF Web Map, MuniSight, p.mapper, CommunityView, MS-GIS, Weave, OVIE, SOFTPRO, MxSIG, DIGITAL TWIN CLOUD). The catalog of datasets is the **layer list** (GetCapabilities, `themes.json`, REST services) — not PNG tiles, print PDFs, or the basemap.
 
 Use this page when `software.id` is a viewer or cache. Full SDI catalogs (GeoNetwork, GeoNode, ArcGIS Server): [harvest-geoportals.md](harvest-geoportals.md). Protocol grain: [harvest-protocols.md](harvest-protocols.md). GET only. Stop on `401`/`403`. Do not scrape tiles.
 
@@ -44,6 +44,12 @@ Virtual City Systems `html.vcs-ui` / title `VC Map`. Harvest the public **layer 
 GeoStore `/rest/geostore/` or backend CSW. Keep catalog/dataset resources. Drop saved **maps** and the MapStore UI chrome unless the user asked for maps.
 
 **Keep:** catalog/dataset resources from GeoStore or backend CSW. **Drop:** saved maps and MapStore UI chrome unless asked.
+
+## GAUSS WebCity (`gausswebcity`) {#gausswebcity}
+
+GAUSS MapStore tenants (`{org}.gis.ba`, city hosts with `/webcity/`). Harvest GeoServer OWS GetCapabilities or CSW on the same host. Do not scrape MapStore UI chrome or treat each saved map as a dataset. One harvest scope per public tenant. Distinct from generic `mapstore` and from VertiGIS WebOffice branded WebCity (`weboffice`). Skip `gis.ba/webcity/` vendor demo.
+
+**Keep:** GeoServer OWS GetCapabilities or portal CSW. **Drop:** MapStore UI chrome, saved maps, and login-only `/registered/` shells.
 
 ## Terria (`terria`) {#terria}
 
@@ -545,6 +551,30 @@ Same grain as [Trimble Locus IMS](#trimblelocus): public layer list or WMS, not 
 
 **Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
 
+## NieuwlandGeo Onemap (`nieuwlandonemap`) {#nieuwlandonemap}
+
+`{org}.webgis.nl`. Harvest the public **layer / theme list** if unauthenticated. Do not scrape map tiles. One harvest scope per public tenant. Distinct from GeoServer (`geoserver`) on the same organisation. Skip demo and login-only hosts.
+
+**Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
+
+## KaartViewer (`kaartviewer`) {#kaartviewer}
+
+`{org}.kaartviewer.nl` or a city KaartViewer host. Harvest `/admin/rest/kaartviewerapi/menu` or the public layer list. Do not scrape tiles. One harvest scope per tenant, not per menu map. If GeoServer on the same estate is already harvested as `geoserver`, do not duplicate those services.
+
+**Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
+
+## GeoApps (`geoapps`) {#geoapps}
+
+`{org}.geoapps.nl` public maps. Harvest the public **layer / theme list** if unauthenticated. Stop on SSO. One harvest scope per public viewer. Most GeoApps tenants are staff-only — do not harvest login walls.
+
+**Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
+
+## SITMUN (`sitmun`) {#sitmun}
+
+`sitmun.diba.cat`. Harvest the public **layer / theme list** if unauthenticated. Do not scrape tiles. One harvest scope per public SITMUN catalog.
+
+**Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
+
 ## dmCity (`dmcity`) {#dmcity}
 
 `web.dmcity.fi/{city}/public/`. Harvest the public **layer list** from the Experience Builder app if unauthenticated. Do not scrape Jimu tiles. One harvest scope per city tenant. Distinct from generic `experiencebuilder`. If `{city}.dmcity.fi/server` REST is already harvested as `arcgisserver`, do not duplicate those services.
@@ -569,6 +599,12 @@ Swedish Hajk webGIS. Harvest the public layer/map list from the mapservice API d
 
 **Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
 
+## ScalarGIS (`scalargis`) {#scalargis}
+
+WKT-SI ScalarGIS WebGIS. Harvest the public layer / theme list from the viewer (or WMS/WFS on the same estate if already published as GeoServer). Do not scrape OpenLayers tiles or print PDFs. One harvest scope per public tenant, not per named map path on the same hub (SMOS viSMOS / COScid / COSvgi). Distinct from older WKT CartoMapas viewers and from GeoServer (`geoserver`) / GeoNetwork (`geonetwork`) already harvested on DGT hosts. Skip `/backoffice` login.
+
+**Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
+
 ## Origo (`origo`) {#origo}
 
 Origosamverkan Origo web GIS. Harvest the public layer list from the viewer JSON config (`/index.json`, or `{mapdir}/index.json` when the catalog link is a themed map path) or from WMS/WFS on the same host if already published as GeoServer. Do not scrape OpenLayers tiles. One harvest scope per municipality viewer, not per themed map path. Distinct from Hajk (`hajk`) and myCarta (`mycarta`). If GeoServer on the same host is already harvested as `geoserver`, do not duplicate those services. Gallery landings (Ånge, Sundsvall) stay one catalog: harvest each `{mapdir}/index.json` linked from the landing page as endpoints on that record.
@@ -580,6 +616,18 @@ GET https://host/{mapdir}/index.json
 ```
 
 **Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
+
+## Tailormap (`tailormap`) {#tailormap}
+
+B3Partners Tailormap web GIS. Harvest the public application / layer list from `GET /api/app/{app}` JSON (or the `/nl/page/` gallery) if unauthenticated. Do not scrape OpenLayers tiles. One harvest scope per public tenant, not per `/nl/app/{app}` path. Distinct from GeoServer (`geoserver`) on the same estate (Warmteatlas, WIBON). Skip `demo.tailormap.com`, `snapshot.tailormap.nl`, and login-only staff viewers.
+
+```text
+GET https://host/api/app/{app}
+GET https://host/nl/page/startpagina
+GET https://host/nl/page/viewers
+```
+
+**Keep:** public **application / layer** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
 
 ## myCarta (`mycarta`) {#mycarta}
 
@@ -658,11 +706,29 @@ Technical Design GeoPortale on `geoportale.sportellounicodigitale.it/GisMaster` 
 
 **Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
 
+## LDP SIT (`ldpgis`) {#ldpgis}
+
+Italian `cloud.ldpgis.it/{slug}/` or city-host LDP SIT with LdP Viewer. Harvest the public cartographic **layer list** (or WMS/WFS GetCapabilities if exposed) if unauthenticated. Do not scrape map tiles or Drupal CMS chrome. One harvest scope per comune or union slug. Skip the vendor hub `cloud.ldpgis.it/` with no slug. Distinct from `genegis` and `gfmaplet`.
+
+**Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
+
+## GFMaplet (`gfmaplet`) {#gfmaplet}
+
+Maggioli / GLOBO STU geoportale (`/page:s_italia:geoportale`, `{comune}.prod.globogis.com`, `/stu-geoportale-cartography`, `/gfmaplet/`). If ArcGIS REST on `cartografia*.maggioli.cloud` is already recorded as an endpoint on the same catalog, harvest **that**. Else harvest the public GFMaplet **layer list** if unauthenticated. Do not scrape map tiles or sportello forms. One harvest scope per geoportale tenant — do not add Maggioli ArcGIS REST as a second catalog of the same STU geoportale. Distinct from `gismaster` and `atmmaggioli`.
+
+**Keep:** public **layer / theme** list (or ArcGIS REST / WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, sportello forms, and login walls.
+
 ## SmartMap (`smartmap`) {#smartmap}
 
 `{district}.smartmap.kz` investment viewer. Harvest the public **layer / object list** if unauthenticated. Do not scrape Google/Leaflet tiles. One harvest scope per district tenant. Distinct from `geonomics` and `rgis`.
 
 **Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
+
+## SmartGIS (`smartgis`) {#smartgis}
+
+GEO `{tenant}.geo.rs` or city-host Angular Web GIS (title `SmartGIS`). Harvest the public **layer / project list** if unauthenticated. Do not scrape vector/raster tiles, point clouds, or panoramic images. One harvest scope per public tenant, not per project map. Distinct from `smartmap`, `gis4smart`, `gdivisios`, and unrelated hosts that only use the word SmartGIS. Skip the marketing homepage `smartgis.geo.rs`, docs, `*-beta*` hosts, and vendor demos (`smartgis-app`, `smartgis-gf`, `smartgis-geoput`).
+
+**Keep:** public **layer / theme** list if unauthenticated. **Drop:** map tiles, print PDFs, basemaps, point clouds, and login walls.
 
 ## KAZGISA RGIS (`rgis`) {#rgis}
 
@@ -782,13 +848,43 @@ geoprostor.net / PisoPortal hub. Harvest public WMS or the municipality layer li
 
 ## MapGuide (`mapguide`) {#mapguide}
 
-`/mapguide/` CityScape or `mapviewerphp/ajaxviewer.php`. Harvest the public **layer / legend catalog** if unauthenticated. Do not scrape MapGuide tiles. One harvest scope per municipality. Distinct from `envimap` and `sigimweb`.
+`/mapguide/` CityScape or `mapviewerphp/ajaxviewer.php`. Harvest the public **layer / legend catalog** if unauthenticated. Do not scrape MapGuide tiles. One harvest scope per municipality. Distinct from `envimap`, `sigimweb`, `geoitgis`, and `zeljkogis`.
+
+**Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
+
+## Zeljko GIS (`zeljkogis`) {#zeljkogis}
+
+`zeljko-gis.com` MapGuide Fusion tenants or `zopcina.zeljko-gis.com/{tenant}/` cadastral UIs. Harvest the public **layer / legend catalog** if unauthenticated. Do not scrape MapGuide tiles. One harvest scope per public city or county tenant, not a second cadastral UI of the same map. Distinct from `mapguide`. Skip gas-utility and administrator ports.
+
+**Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
+
+## Geo-IT GIS Touch Viewer (`geoitgis`) {#geoitgis}
+
+`geoitgis.geo-it.be/touchviewer/` with `Library://Gemeenten/{City}/Maps/*.MapDefinition`. Harvest the public **layer / theme list** if unauthenticated. Do not scrape OpenLayers tiles. One harvest scope per municipality tenant, not per themed MapDefinition. Distinct from `mapguide`. Skip cemetery-only and campaign maps.
 
 **Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
 
 ## SIGimWeb (`sigimweb`) {#sigimweb}
 
 `/sigimweb/` or `/sigim/` with title `SIGimWeb`. Harvest the public **layer / theme list** if unauthenticated. Do not scrape ExtJS / GoMap tiles. One harvest scope per public MRC or city tenant, not per municipality in the picker. Distinct from `mapguide`. Skip intranet and JP Cadrin CIF replacements.
+
+**Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
+
+## Geocentriq (`geocentriq`) {#geocentriq}
+
+`app.geocentriq.com/mrc/{mrc}`. Harvest the public **layer / theme list** from a municipality map if unauthenticated. Do not scrape map tiles or require `/login`. One harvest scope per public MRC tenant, not per `/municipalite/` path. Distinct from `sigimweb` and `geocentralis`. Skip the marketing homepage.
+
+**Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
+
+## GeoCentralis (`geocentralis`) {#geocentralis}
+
+`portail.geocentralis.com/public/sig-web/{mrc}/{code}/`. Harvest the public **layer / theme list** from a municipality map if unauthenticated. Do not scrape map tiles or require `/core/login/`. One harvest scope per public MRC or city slug, not per geo-code path. Distinct from `geocentriq` and `sigale`. Skip the marketing homepage.
+
+**Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
+
+## SIGALE (`sigale`) {#sigale}
+
+`sigale.ca/Main.aspx?mrc={code}`. Harvest the public **layer / theme list** if unauthenticated. Do not scrape map tiles or Silverlight viewers. One harvest scope per public MRC code, not per municipality in the picker. Distinct from `geocentriq` and `geocentralis`. Skip the hub without an `mrc` parameter.
 
 **Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
 
@@ -984,6 +1080,12 @@ Public SIS WebMap / Web Map Layers. Harvest WMS/WFS GetCapabilities or the publi
 
 **Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
 
+## StatMap Earthlight (`earthlight`) {#earthlight}
+
+Public Earthlight Portal / Earthlight Public (`/map/map.html?login=ExternalELP`) and Aurora embeds of the same StatMap GIS. Harvest WMS/WFS GetCapabilities or the published public layer list. Do not scrape tiles. Distinct from Astun iShare (`ishare`) and Cadcorp SIS WebMap (`cadcorp`). Skip HorizoNext case-management portals.
+
+**Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, Aurora script variants of the same tenant, and login walls.
+
 ## CartoVista (`cartovista`) {#cartovista}
 
 Start from `/CartoVistaServer/maps/view?page=mapGallery` and enumerate public maps in the gallery. For each map, use its published configuration or documented CartoVista Server API to resolve data layers. Keep named public data layers; drop basemaps, UI themes, thumbnails, and rendered tiles.
@@ -1148,6 +1250,12 @@ Harvest the municipal GeoCMS theme/layer catalog exposed by the public geoportal
 
 **Keep:** named planning, environment, and infrastructure map themes. **Drop:** CMS chrome, login, and rendered tiles.
 
+## DMAPS (`dmaps`) {#dmaps}
+
+`{palika}.dmaps.org` or a municipal `dmaps.` / `metric.` / `imas.` / `gis.` host. Harvest the public **building / road / address layer list** if unauthenticated. Do not scrape map tiles, drone orthophoto, or require staff login. One harvest scope per public municipal tenant. Distinct from Kathmandu custom house-numbering GIS. Skip the marketing homepage and `app.dmaps.org`.
+
+**Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
+
 ## Related
 
 - [harvest.md](harvest.md)
@@ -1158,3 +1266,21 @@ Harvest the municipal GeoCMS theme/layer catalog exposed by the public geoportal
 - [harvest-output.md](harvest-output.md)
 - [discovery-geoportals.md](discovery-geoportals.md)
 - [agents/harvest.md](agents/harvest.md)
+
+## Map2Web (`map2web`) {#map2web}
+
+Schubert & Franzke `*.map2web.eu` town-plan viewers. Browser-only Vue app; export formats include GeoJSON. Harvest only public WFS/OGC or the site's own export; do not scrape map tiles.
+
+**Keep:** public WFS/OGC exports. **Drop:** map tiles.
+
+## EnMapa (`enmapa`) {#enmapa}
+
+Nexus Geographics municipal viewers at `{city}.enmapa.com` and city-host `/visor/guia` installs. Harvest the public theme/layer tree the viewer loads (or WMS GetCapabilities when the tenant exposes one). Do not scrape map tiles, print PDFs, or the Cloudflare admin/dev hosts. One harvest scope per municipality tenant.
+
+**Keep:** public theme/layer tree or WMS GetCapabilities. **Drop:** map tiles, print PDFs, basemaps, and dev/admin/demo subdomains.
+
+## Nexus Public Portal (`nexuspublicportal`) {#nexuspublicportal}
+
+INS Nexus GIS public viewers at `{city}.ins.com.mk/NexusPublicPortal/PublicPortal/Map` and city-host `gis.{city}.gov.mk` installs. Harvest the public layer tree the Map page loads (cadastral parcels, GUP/DUP, business entities) or WMS GetCapabilities when the tenant exposes one. Do not scrape map tiles, print PDFs, or AppCreator login workflows. One harvest scope per municipality tenant.
+
+**Keep:** public layer tree or WMS GetCapabilities. **Drop:** map tiles, print PDFs, basemaps, vendor demo (`nexusgis.ins.com.mk`), and Nexus Twin portals.

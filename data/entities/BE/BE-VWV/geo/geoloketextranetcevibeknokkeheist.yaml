@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: BE
+      name: Belgium
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: BE-VWV
+      name: West-Vlaanderen
+description: Public planning geoloket of Knokke-Heist (Cevi ArcGIS Web AppBuilder)
+  with BPA/RUP plans, permits, and heritage.
+id: geoloketextranetcevibeknokkeheist
+langs:
+- id: NL
+  name: Dutch
+link: https://geoloket.extranet.cevi.be/geoloketten/knokke-heist/stedenbouw/
+name: Geoloket Stedenbouw Knokke-Heist
+owner:
+  link: https://www.knokke-heist.be
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: BE-VWV
+      name: West-Vlaanderen
+  name: Gemeente Knokke-Heist
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: webappbuilder
+  name: ArcGIS Web AppBuilder
+status: active
+tags:
+- geospatial
+- geoportal
+- municipality
+- Belgium
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00006154

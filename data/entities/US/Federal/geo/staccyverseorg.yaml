@@ -21,6 +21,15 @@ description: CyVerse SpatioTemporal Asset Catalog API for geospatial data discov
 endpoints:
 - type: stacserverapi
   url: https://stac.cyverse.org/
+- type: stacserverapi:collections
+  url: https://stac.cyverse.org/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac.cyverse.org/conformance
+  version: '1.0'
+- type: openapi
+  url: https://stac.cyverse.org/api
+  version: '3.0'
 id: staccyverseorg
 langs:
 - id: EN

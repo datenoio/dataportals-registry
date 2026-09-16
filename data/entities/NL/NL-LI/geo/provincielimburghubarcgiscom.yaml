@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-LI
+      name: Limburg
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Geoportal. managed by Provincie Limburg. powered by ArcGIS Hub. accessible
+  at provincielimburg.hub.arcgis.com.
+endpoints:
+- type: ogcrecordsapi
+  url: https://provincielimburg.hub.arcgis.com/api/search/v1
+id: provincielimburghubarcgiscom
+langs:
+- id: NL
+  name: Dutch
+link: https://provincielimburg.hub.arcgis.com/
+name: Provincie Limburg ArcGIS Hub
+owner:
+  link: https://www.provincielimburg.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-LI
+      name: Limburg
+  name: Provincie Limburg
+  type: Regional government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- netherlands
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00006494

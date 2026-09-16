@@ -2,7 +2,7 @@
 
 How to find **indicators catalogs** (`catalog_type: Indicators catalog`) and **microdata catalogs** (`catalog_type: Microdata catalog`). Search-engine syntax (Google, Censys, and [FOFA as a Censys alternative](discovery-search-tools.md#fofa)): [discovery-search-tools.md](discovery-search-tools.md).
 
-Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, PxStat, DGBAS Web, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, .Stat Technology, Istat Data Browser, Swing, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, TerriSTORY, IHK-Fachkräftemonitor, DUVA, Géoclip, InstantAtlas, MATS, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
+Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, PxStat, DGBAS Web, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, .Stat Technology, Istat Data Browser, Swing, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, TerriSTORY, IHK-Fachkräftemonitor, DUVA, Géoclip, InstantAtlas, MATS, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, KOSIS, e-Stat, SIDRA, Fingertips, UNdata, UN Comtrade Plus, Our World in Data. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
 
 ## PxWeb (`pxweb`) {#pxweb}
 
@@ -71,6 +71,38 @@ Taiwan DGBAS-family statistical dynamic query (統計資料動態查詢 / 共通
 | Google | `"統計資料動態查詢" OR "共通性查詢" (webMain OR funid) site:.gov.tw` |
 | Censys | `web.endpoints.http.body: "webMain.aspx"` |
 | FOFA | `body="webMain.aspx" && body="funid"` |
+
+## KOSIS (`kosis`) {#kosis}
+
+Statistics Korea statistical table platform. Hub: [kosis.kr](https://kosis.kr). OpenAPI: [kosis.kr/openapi/](https://kosis.kr/openapi/). Agency and local tenants reuse `/statHtml/statHtml.do`. ODA clones include MMSIS, LAOSIS, and ASIS.
+
+**Signals:** path `/statHtml/statHtml.do`; title “KOSIS” / “국가통계포털” / “통계표조회”; `kosisTitle.gif` / `dbsearchTitle.gif`; NSIST hosting on `stat.kosis.kr`.
+
+**Confirm:** GET a public table tree or a live `/statHtml/statHtml.do?orgId=&tblId=` table (empty servlet error pages still count as the engine). One catalog per public tenant. The `/bukhan/` tree is already a separate registered catalog.
+
+**False positives:** local-government `/stat/index.do` CMS skins that only link out to KOSIS; 지표누리 (`index.go.kr`); SGIS; English/mobile/SSO aliases of `kosis.kr`; `stat.kosis.kr/nsistN` agency hosting console; IP-only COLSIS hits.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/statHtml/statHtml.do (KOSIS OR 통계표조회 OR MMSIS OR LAOSIS OR ASIS)` |
+| Google | `site:kosis.kr (국가통계포털 OR "Korean Statistical Information")` |
+| Censys | `web.names: "kosis.kr"` |
+| FOFA | `title="KOSIS 국가통계포털" && country="KR"` |
+| FOFA | `title="MMSIS" \|\| title="LAOSIS" \|\| title="LankaSIS"` |
+
+## e-Stat (`estat`) {#estat}
+
+Japan portal site for official statistics (政府統計の総合窓口). Hub: [e-stat.go.jp](https://www.e-stat.go.jp). API: [e-Stat API](https://www.e-stat.go.jp/en/api/).
+
+**Signals:** host `e-stat.go.jp`; title “政府統計の総合窓口”; Statistical LOD on `data.e-stat.go.jp`; Statistics Dashboard on `dashboard.e-stat.go.jp`.
+
+**Confirm:** GET the public table portal, LOD home, or dashboard. The three hosts are already registered as distinct catalogs — do **not** add extra table/API paths. Skip RESAS and ministry pages that only link to e-Stat.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:e-stat.go.jp (統計 OR "official statistics")` |
+| Censys | `web.names: "e-stat.go.jp"` |
+| FOFA | `domain="e-stat.go.jp"` |
 
 ## OpenSDG (`opensdg`) {#opensdg}
 
@@ -240,7 +272,7 @@ Geographic Solutions Virtual LMI labor-market databank. Vendor: [geographicsolut
 
 **Signals:** host `*.virtuallmi.com`; path `/vosnet/`; “Virtual LMI”.
 
-**Confirm:** GET the public LMI home or `/vosnet/Default.aspx`. One catalog per state tenant. Do not retag QualityInfo, WisConomy, `/analyzer` ALMIS, or other LMI sites without those fingerprints.
+**Confirm:** GET the public LMI home or `/vosnet/Default.aspx`. One catalog per state tenant. Branded custom domains count when `/vosnet/` is the UI (Colorado LMI Gateway). Do not retag QualityInfo, WisConomy, `/analyzer` ALMIS, or other LMI sites without those fingerprints.
 
 | Tool | Query |
 |------|-------|
@@ -450,6 +482,20 @@ US state public-health indicator system. Community: [Adopt IBIS](https://ibis.ut
 | Censys | `web.endpoints.http.body: "ibisph"` |
 | FOFA | `body="ibisph"` |
 
+## Fingertips (`fingertips`) {#fingertips}
+
+OHID public health profiles for England. Hub: [fingertips.phe.org.uk](https://fingertips.phe.org.uk/). API docs: [Fingertips API](https://fingertips.phe.org.uk/profile/guidance/supporting-information/api).
+
+**Signals:** host `fingertips.phe.org.uk`; title “Fingertips”; REST `/api/profiles`.
+
+**Confirm:** GET `/api/profiles` JSON or the public profiles home. One national hub — do **not** add a catalog per local authority or per profile. Distinct from IBIS-PH, Power BI embeds, and InstantAtlas reports.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Fingertips" ("public health profiles" OR OHID) site:phe.org.uk` |
+| Censys | `web.names: "fingertips.phe.org.uk"` |
+| FOFA | `host="fingertips.phe.org.uk"` |
+
 ## DHIS2 (`dhis2`) {#dhis2}
 
 Open-source health management information system (HISP / University of Oslo). More than 70 ministries run national HMIS instances. Docs: [docs.dhis2.org](https://docs.dhis2.org). Public FlexiPortal front-ends also count when they publish indicators from a DHIS2 backend. Use `software.id: dhis2`. Do not label a CKAN health document site DHIS2 from a tag alone.
@@ -475,7 +521,7 @@ DATASUS CGI tabulator for Brazilian SUS health databases. National hub: [Informa
 
 **Confirm:** GET a public table menu or a `.def` form. One catalog per installation (national vs SES vs municipal vs ANS). Do not add every `.def` table as its own catalog. Skip TabWin desktop downloads and login-only intranet copies.
 
-**False positives:** pytorch-tabnet / tabular ML libraries; a CMS page that only links to the national DATASUS TabNet.
+**False positives:** pytorch-tabnet / tabular ML libraries; a CMS page that only links to the national DATASUS TabNet; IBGE SIDRA (`sidra`).
 
 | Tool | Query |
 |------|-------|
@@ -486,6 +532,20 @@ DATASUS CGI tabulator for Brazilian SUS health databases. National hub: [Informa
 | FOFA | `title="TabNet Win32"` |
 | Censys | `web.endpoints.http.body: "deftohtm.exe"` |
 | FOFA | `body="deftohtm.exe"` |
+
+## SIDRA (`sidra`) {#sidra}
+
+IBGE automatic table-retrieval system. Hub: [sidra.ibge.gov.br](https://sidra.ibge.gov.br). Aggregates API: [servicodados.ibge.gov.br/api/v3/agregados](https://servicodados.ibge.gov.br/api/v3/agregados).
+
+**Signals:** host `sidra.ibge.gov.br`; title “SIDRA” / “Sistema IBGE de Recuperação Automática”.
+
+**Confirm:** GET the public table builder or `/api/v3/agregados` JSON. One catalog for the SIDRA hub. Do **not** retag IBGE Cidades@, Ipeadata, Comex Stat, BCB SGS, or DATASUS TabNet.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:sidra.ibge.gov.br (SIDRA OR agregados)` |
+| Censys | `web.names: "sidra.ibge.gov.br"` |
+| FOFA | `host="sidra.ibge.gov.br"` |
 
 ## FENIX (`fenix`) {#fenix}
 
@@ -803,6 +863,42 @@ Bank for International Settlements statistics. Hub: [data.bis.org](https://data.
 | Censys | `web.names: "data.bis.org"` |
 | FOFA | `host="data.bis.org"` |
 
+## UNdata (`undata`) {#undata}
+
+UN Statistics Division official statistics portal. Hub: [data.un.org](https://data.un.org).
+
+**Confirm:** do **not** re-add data.un.org. Register only a distinct UN statistical catalog UI (for example Comtrade Plus, already `comtradeplus`).
+
+| Tool | Query |
+|------|-------|
+| Google | `"UNdata" (statistics OR databank) -site:data.un.org` |
+| Censys | `web.names: "data.un.org"` |
+| FOFA | `host="data.un.org"` |
+
+## UN Comtrade Plus (`comtradeplus`) {#comtradeplus}
+
+UN merchandise trade statistics. Hub: [comtradeplus.un.org](https://comtradeplus.un.org/).
+
+**Confirm:** do **not** re-add comtradeplus.un.org. Distinct from WITS (`wits.worldbank.org`) and UNdata.
+
+| Tool | Query |
+|------|-------|
+| Google | `"UN Comtrade Plus" OR site:comtradeplus.un.org` |
+| Censys | `web.names: "comtradeplus.un.org"` |
+| FOFA | `host="comtradeplus.un.org"` |
+
+## Our World in Data (`ourworldindata`) {#ourworldindata}
+
+Global Change Data Lab indicator catalog. Hub: [ourworldindata.org](https://ourworldindata.org).
+
+**Confirm:** do **not** re-add ourworldindata.org or add every chart URL. Distinct from Gapminder WordPress data-download pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Our World in Data" (indicators OR grapher) -site:ourworldindata.org` |
+| Censys | `web.names: "ourworldindata.org"` |
+| FOFA | `host="ourworldindata.org"` |
+
 ## Data Insight (`datainsight`) {#datainsight}
 
 Veritas Data Insight is enterprise unstructured-data intelligence. Product: [veritas.com](https://www.veritas.com/insights/data-insight). Public catalogs are rare.
@@ -836,6 +932,13 @@ Veritas Data Insight is enterprise unstructured-data intelligence. Product: [ver
 | `datauniceforg` | see above | |
 | `ilostat` | see above | |
 | `databisorg` | see above | |
+| `undata` | see above | |
+| `comtradeplus` | see above | |
+| `ourworldindata` | see above | |
+| `kosis` | see above | |
+| `estat` | see above | |
+| `sidra` | see above | |
+| `fingertips` | see above | |
 | `datainsight` | see above | |
 
 National statistical office homepages often link “database”, “statbank”, “PC-Axis”, “SDMX”. Follow those links rather than guessing software from the NSO CMS.

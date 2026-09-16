@@ -1,0 +1,64 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: tailormap
+name: Tailormap
+website: https://www.tailormap.com/
+description: Tailormap is an open-source Angular and OpenLayers GIS viewer from
+  B3Partners. Public municipal and agency maps use title Tailormap, path
+  /nl/app/{app} or /nl/page/, JSON GET /api/app/{app}, or the older
+  /portal/page/extern gallery. Hosts are typically {org}.tailormap.nl,
+  {org}.tailormap.com, or a city GIS host. Distinct from GeoServer backends
+  on the same estate and from vendor demo/snapshot tenants.
+owner:
+  name: B3Partners
+  location:
+    country:
+      id: NL
+      name: Netherlands
+logo_url: https://www.tailormap.com/favicon.ico
+documentation_url: https://github.com/B3Partners/tailormap-viewer
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Open
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+repository_url: https://github.com/B3Partners/tailormap-viewer
+export_formats:
+- GeoJSON
+- JSON
+capabilities:
+- REST API
+- Map viewer
+- Municipal GIS
+changelog_url: https://github.com/B3Partners/tailormap-viewer/releases
+last_updated: '2026-09-13T00:00:00Z'

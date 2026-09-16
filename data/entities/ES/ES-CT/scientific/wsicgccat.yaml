@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+description: ORFEUS EIDA node operated by the Institut Cartogràfic i Geològic de Catalunya, providing FDSN
+  waveform, station, availability, and WFCatalog web services.
+endpoints:
+- type: api
+  url: https://ws.icgc.cat/fdsnws/station/1/
+- type: api
+  url: https://ws.icgc.cat/fdsnws/dataselect/1/
+- type: api
+  url: https://ws.icgc.cat/fdsnws/availability/1/
+- type: api
+  url: https://ws.icgc.cat/eidaws/wfcatalog/1/
+id: wsicgccat
+langs:
+- id: EN
+  name: English
+link: https://ws.icgc.cat/
+name: ICGC EIDA node
+owner:
+  link: https://www.icgc.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+  name: Institut Cartogràfic i Geològic de Catalunya
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- seismology
+- EIDA
+- FDSN
+- Catalonia
+- EPOS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00005624

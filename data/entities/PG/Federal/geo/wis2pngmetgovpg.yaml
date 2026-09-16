@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PG
+      name: Papua New Guinea
+    level: 20
+    macroregion:
+      id: '054'
+      name: Melanesia
+description: Papua New Guinea National Weather Service WIS 2.0 in a box node. Public
+  wis2box UI and OGC API with discovery metadata, stations, and 3-hourly SYNOP observations
+  (centre-id pg-pngnws).
+endpoints:
+- type: pygeoapi:openapi
+  url: https://wis2.pngmet.gov.pg/oapi/openapi
+  version: '1.0'
+- type: ogc:features
+  url: https://wis2.pngmet.gov.pg/oapi/collections/?f=json
+  version: '1.0'
+id: wis2pngmetgovpg
+langs:
+- id: EN
+  name: English
+link: https://wis2.pngmet.gov.pg
+name: Papua New Guinea - WIS 2.0 in a box
+owner:
+  link: https://pngmet.gov.pg
+  location:
+    country:
+      id: PG
+      name: Papua New Guinea
+    level: 20
+  name: Papua New Guinea National Weather Service
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: wis20box
+  name: Wis 2.0 Box
+status: active
+tags:
+- meteorology
+- climate
+- weather
+- WIS2
+- WMO
+- government
+- has_api
+topics:
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00006565

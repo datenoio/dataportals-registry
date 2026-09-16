@@ -21,6 +21,18 @@ description: Spatio Temporal Assets Catalog powered by 'Maison de la Teledetecti
 endpoints:
 - type: stacserverapi
   url: https://api.stac.teledetection.fr
+- type: stacserverapi
+  url: https://api.stac.teledetection.fr/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://api.stac.teledetection.fr/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://api.stac.teledetection.fr/conformance
+  version: '1.0'
+- type: openapi
+  url: https://api.stac.teledetection.fr/api
+  version: '3.0'
 id: apistacteledetectionfr
 langs:
 - id: EN

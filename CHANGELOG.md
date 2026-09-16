@@ -7,6 +7,48 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **1,174 new catalog entries** since v1.21.0 (1 removed); registry source now **38,343** entities (**0** scheduled) across **224** country/territory folders.
+- **37 software definitions**; software catalog now **523** platforms. Highest-count new IDs: Map2Web (`map2web`, **258**), LDP SIT (`ldpgis`, **94**), GFMaplet (`gfmaplet`, **73**), KaartViewer (`kaartviewer`, **35**), enMapa (`enmapa`, **30**), Nexus Public Portal (`nexuspublicportal`, **21**), StatMap Earthlight (`earthlight`, **14**), KOSIS (`kosis`, **13**), GeoCentralis (`geocentralis`, **12**), Tailormap (`tailormap`, **11**), and NieuwlandGeo Onemap (`nieuwlandonemap`, **11**).
+- Map2Web (`map2web`) software definition for the map2web.eu municipal Web GIS SaaS; added **258** municipal and county geoportals across Romania (**144**), Austria (**107**), Germany (**5**), and Liechtenstein (**2**).
+- LDP SIT (`ldpgis`) and GFMaplet (`gfmaplet`) software definitions for Italian municipal geoportals; retagged Drupal-tagged LDP and Maggioli STU catalogs onto the new IDs and added missing comuni (**94** and **73** catalogs).
+- KaartViewer (`kaartviewer`), Tailormap (`tailormap`), NieuwlandGeo Onemap (`nieuwlandonemap`), and GeoApps (`geoapps`) software definitions for Dutch municipal Web GIS SaaS; added **61** Netherlands geoportals.
+- enMapa (`enmapa`) and SITMUN (`sitmun`) software definitions for Spanish municipal map viewers; added **33** Spanish geoportals (Balearic municipalities and Catalan provincial consortia).
+- Nexus Public Portal (`nexuspublicportal`) software definition for the INS Nexus municipal GIS platform; added **20** North Macedonia municipalities plus Tirana (**21** catalogs).
+- StatMap Earthlight (`earthlight`) software definition for StatMap UK council map portals; added **14** London borough and UK council geoportals.
+- GeoCentralis (`geocentralis`), SIGALE (`sigale`), and Geocentriq (`geocentriq`) software definitions for Québec municipal/MRC Web GIS; added **28** Canadian geoportals.
+- Zeljko GIS (`zeljkogis`) and GAUSS WebCity (`gausswebcity`) software definitions for ex-Yugoslav municipal MapGuide/WebCity portals; added **9** Croatian and **7** Bosnian geoportals.
+- Geo-IT GIS (`geoitgis`) software definition for the Flemish Geo-IT TouchViewer; added **8** Belgian municipal geoportals.
+- DMAPS (`dmaps`) software definition for Nepali municipal GIS; added **6** Nepal geoportals.
+- ScalarGIS (`scalargis`) software definition for the Portuguese municipal geoportal stack; added **6** Portugal geoportals.
+- SmartGIS (`smartgis`) software definition for GEO (`geo.rs`) municipal Web GIS; retagged Topola, Subotica, and Direkcija Niš from `custom` and added further Serbian tenants (**5** catalogs).
+- KOSIS (`kosis`) software definition for the Korean national statistical portal family; retagged the Korean statistical portals and the KOSIS-derived MMSIS (Myanmar), LaoSIS (Laos), and AZSTAT (Azerbaijan) systems, and added the IT-Stat portal (**13** catalogs).
+- UNdata (`undata`), UN Comtrade Plus (`comtradeplus`), e-Stat (`estat`, **3** Japanese hubs), Fingertips (`fingertips`), SIDRA (`sidra`), and Our World in Data (`ourworldindata`) software definitions for national/IGO indicator platforms; remapped the matching hubs from `custom`.
+- data.world (`dataworld`), Felles datakatalog (`fellesdatakatalog`, **2** Norwegian hubs), and IUDX Catalogue (`iudx`) software definitions; remapped the matching hubs from `custom`.
+- DEIMS-SDR (`deims`), EPOS Data Portal (`epos`), HAL (`hal`), Kaggle (`kaggle`), Mendeley Data (`mendeleydata`), PANGAEA (`pangaea`), and USGS ScienceBase (`sciencebase`) software definitions; remapped the matching well-known repositories from `custom`.
+- **93** IGO and international-organization catalogs under `World/` (UNOSAT Gaza Emergency Response Data Hub, EUROCONTROL Aviation Intelligence, IARC Global Cancer Observatory, GFCM, ICO Coffee Statistics, IOTC, and further UN/treaty-body indicator and data portals).
+- AerialDataset STAC catalog (`aerialdatasetcomstac`) of commercially licensed drone scenes.
+- Data Palestine (`datapalestineorg`) civic indicator/dataset platform (PCBS, World Bank, and humanitarian sources).
+
+### Changed
+
+- Add OpenSDG `reporting-status` and `catalog` endpoints to **93** national SDG indicator catalogs.
+- Custom-catalog review retagged **99** catalogs onto new or existing software IDs: LDP SIT **29**, GFMaplet **21**, KOSIS **11**, JDOP **8**, e-Stat **3**, CLLD **3**, Pathway Tools **2**, Felles datakatalog **2**, and single retags onto DEIMS-SDR, EPOS, HAL, Kaggle, Mendeley Data, PANGAEA, ScienceBase, UNdata, UN Comtrade Plus, SIDRA, Our World in Data, Fingertips, data.world, IUDX, SITMUN, VirtualLMI, SparkMap, OPortal, LocalMaps, and InterMine.
+- Move Mercer County (`mapsmercercountyorg`) and Curry County (`mapscurrycountyorg`) map records from `US-MA` to the correct `US-NJ` and `US-NM` subregion folders.
+- Remove the City of Burnside IntraMaps geoportal (`cobspatialt1cloudcom`).
+- Reassign **27** UIDs that were invalid `cdi9999xxxx` placeholders (**11**) or regular values colliding with another record (**16**), onto the next free 8-digit `cdi` numbers.
+- Extend `scripts/apidetect.py` and `scripts/constants.py` with probe maps and owner/type mappings for the **37** new software IDs; refresh discovery and harvest guides, `docs/software-index.md`, and `docs/software-taxonomy.md` to cover them.
+- Regenerated dataset exports to match source YAML: **38,343** catalogs, **0** scheduled, **523** software.
+- Discovery loop now requires same-session promote, `dataquality/hunts.jsonl` completeness rows, and IGO hunt recipes ([docs/agents/improve.md](docs/agents/improve.md)).
+- `check_software_expected_endpoints` skips `NO_STANDARD_PROBE` IDs. Tailormap gained `/api/app` probes; Earthlight, Nexus Public Portal, and Zeljko GIS are skip-listed as map UIs.
+- Extract `scripts/url_utils.py` from `builder.py`; add `DUPLICATE_IDENTIFIER_URL_NORMALIZED`; `check_liveness.py --apply-dead` can mark confirmed-dead catalogs inactive.
+- Unset `properties.is_national` on the Italian Ministry of Justice DgStat catalog; rename two Emilia-Romagna/Bergamo geoportal files so filename matches `id`.
+- Drop copy-pasted `identifiers[].url` values that were shared across distinct catalogs (dataportals.org, Wikidata org/country QIDs, vendor homepages).
+- Mark the former data.gov.bd, GeoNorge GeoNetwork, Marshall Islands SPREP portal, and Swiss STAC v0.9 integration endpoint inactive and remove leftover harvest URLs.
+- Bump GitHub Actions to checkout/setup-python v4/v5. Ignore `.tmp_aq/` and discovery JSON scratch. One-shot country/Censys scripts moved to `scripts/archive/`.
+- Archive finished OpenSpec changes (`require-software-doc-headings`, `extend-apidetect-protocol-maps`, `add-normalized-url-quality-checks`, `refactor-quality-reporting-pipeline`, `add-schema-allowed-values`).
+
 ## [1.21.0] - 2026-09-12
 
 **GitHub Release**: [v1.21.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.21.0) - Published September 12, 2026

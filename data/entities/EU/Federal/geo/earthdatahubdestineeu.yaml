@@ -23,6 +23,9 @@ description: Gateway of the Destination Earth (DestinE) Data Lake. STAC-complian
 endpoints:
 - type: stacserverapi
   url: https://earthdatahub.destine.eu/api/stac/v1/
+- type: stacserverapi:collections
+  url: https://earthdatahub.destine.eu/api/stac/v1/collections
+  version: '1.0'
 id: earthdatahubdestineeu
 langs:
 - id: EN

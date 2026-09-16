@@ -28,9 +28,9 @@
 
 ## Data layout
 
-- `data/entities/`: verified catalog records (one YAML per catalog, organized by country and catalog type). Source count 12 September 2026: **37,170** files in **224** country/territory folders (published v1.21.0).
-- `data/scheduled/`: unverified records pending promotion — [docs/scheduled.md](docs/scheduled.md) (**0** YAML as of 12 September 2026; **0** in `scheduled.jsonl`)
-- `data/software/`: software/platform definitions (**486** YAML records plus `types.yaml`; `software.jsonl` rebuilt at **486**)
+- `data/entities/`: verified catalog records (one YAML per catalog, organized by country and catalog type). Source count 16 September 2026: **38,343** files in **224** country/territory folders (working tree; published v1.21.0 is 37,170).
+- `data/scheduled/`: unverified records pending promotion — [docs/scheduled.md](docs/scheduled.md) (**0** YAML as of 16 September 2026; **0** in `scheduled.jsonl`)
+- `data/software/`: software/platform definitions (**523** YAML records plus `types.yaml`; `software.jsonl` rebuilt at **523**)
 - `data/schemes/catalog.json`: Cerberus validation schema (CI source of truth)
 - `data/schemes/catalog.schema.json`: JSON Schema with descriptions for external tooling
 - `data/schemes/catalog.context.jsonld`: DCAT/schema.org JSON-LD mappings
@@ -54,7 +54,8 @@ Filter by catalog type or `software.id` in DuckDB / Parquet; there are no `bytyp
 - `dataquality/full_report.txt`: human-readable summary
 - `dataquality/primary_priority.jsonl`: CRITICAL + IMPORTANT issues
 - `dataquality/baseline_counts.json`: CI regression baseline for priority counts
-- `dataquality/liveness_report.jsonl`: URL reachability probes (weekly workflow)
+- `dataquality/liveness_report.jsonl`: URL reachability probes (weekly workflow artifact; apply with `check_liveness.py --apply-dead`)
+- `dataquality/hunts.jsonl`: discovery session completeness log (software/country/IGO/list URL)
 
 ```bash
 python scripts/builder.py validate-yaml

@@ -24,6 +24,21 @@ endpoints:
 - type: openapi
   url: https://openveda.cloud/api/stac/openapi.json
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://openveda.cloud/api/stac/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://openveda.cloud/api/stac/conformance
+  version: '1.0'
+- type: stacserverapi:stac-root
+  url: https://openveda.cloud/api/stac/stac
+  version: '1.0'
+- type: stacserverapi:stac-collections
+  url: https://openveda.cloud/api/stac/stac/collections
+  version: '1.0'
+- type: openapi
+  url: https://openveda.cloud/api/stac/api
+  version: '3.0'
 id: openvedacloudapistac
 langs:
 - id: EN

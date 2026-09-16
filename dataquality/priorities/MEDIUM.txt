@@ -1,7 +1,123 @@
 DATA QUALITY REPORT - PRIORITY: MEDIUM
 ================================================================================
-Generated: 2026-09-12 17:56:41
+Generated: 2026-09-16 10:22:32
 Priority Level: MEDIUM
-Total Issues Found: 0
+Total Issues Found: 10
 
-No issues at this priority level.
+=== ISSUES BY TYPE ===
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB]
+Count: 1
+
+File: UA/UA-65/geo/giskhersontdukrcom.yaml
+Record ID: giskhersontdukrcom
+Country: UA
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
+Field: endpoints
+Current Value: {'software_id': 'arcgishub', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgishub' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
+Count: 1
+
+File: UA/UA-63/opendata/opendatakharkivradagovua.yaml
+Record ID: opendatakharkivradagovua
+Country: UA
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN]
+Count: 1
+
+File: CZ/CZ-80/opendata/kodopavacitycz.yaml
+Record ID: kodopavacitycz
+Country: CZ
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN
+Field: endpoints
+Current Value: {'software_id': 'dkan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dkan' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBCITY]
+Count: 4
+
+File: BA/BA-BIH/geo/bihacgisba.yaml
+Record ID: bihacgisba
+Country: BA
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBCITY
+Field: endpoints
+Current Value: {'software_id': 'gausswebcity', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='gausswebcity' is marked as API-capable in software definitions
+
+File: BA/BA-BIH/geo/novosarajevogisba.yaml
+Record ID: novosarajevogisba
+Country: BA
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBCITY
+Field: endpoints
+Current Value: {'software_id': 'gausswebcity', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='gausswebcity' is marked as API-capable in software definitions
+
+File: BA/BA-BIH/geo/kalesijagisba.yaml
+Record ID: kalesijagisba
+Country: BA
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBCITY
+Field: endpoints
+Current Value: {'software_id': 'gausswebcity', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='gausswebcity' is marked as API-capable in software definitions
+
+File: BA/BA-BIH/geo/tuzlagisba.yaml
+Record ID: tuzlagisba
+Country: BA
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBCITY
+Field: endpoints
+Current Value: {'software_id': 'gausswebcity', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='gausswebcity' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX]
+Count: 2
+
+File: PT/PT-11/geo/geocmodivelaspt.yaml
+Record ID: geocmodivelaspt
+Country: PT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX
+Field: endpoints
+Current Value: {'software_id': 'geocortex', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geocortex' is marked as API-capable in software definitions
+
+File: PT/PT-06/geo/sigcmcoimbrapt.yaml
+Record ID: sigcmcoimbrapt
+Country: PT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX
+Field: endpoints
+Current Value: {'software_id': 'geocortex', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geocortex' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_INTERMINE]
+Count: 1
+
+File: US/Federal/scientific/wwwxenmineorg.yaml
+Record ID: wwwxenmineorg
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_INTERMINE
+Field: endpoints
+Current Value: {'software_id': 'intermine', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='intermine' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBCITY: 4 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_INTERMINE: 1 issue
+
+=== SUMMARY BY COUNTRY ===
+
+BA: 4 issues
+CZ: 1 issue
+PT: 2 issues
+UA: 2 issues
+US: 1 issue

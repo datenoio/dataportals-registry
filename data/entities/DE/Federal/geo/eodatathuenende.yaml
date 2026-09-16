@@ -8,7 +8,7 @@ content_types:
 - map_layer
 coverage:
 - location:
-    country: 
+    country:
       id: DE
       name: Germany
     level: 20
@@ -24,6 +24,12 @@ endpoints:
 - type: openapi
   url: https://eodata.thuenen.de/stac/api/v1/api
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://eodata.thuenen.de/stac/api/v1/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://eodata.thuenen.de/stac/api/v1/conformance
+  version: '1.0'
 id: eodatathuenende
 langs:
 - id: EN
@@ -33,7 +39,7 @@ name: Thünen Earth Observation (ThEO)
 owner:
   link: https://www.thuenen.de
   location:
-    country: 
+    country:
       id: DE
       name: Germany
     level: 20

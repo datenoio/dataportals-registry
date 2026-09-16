@@ -13,7 +13,7 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Water Framework Directive geoportal of the Special Secretariat for Water.
   GET SDI Portal for surface water bodies, nitrate-vulnerable zones, and drinking-water
@@ -86,3 +86,6 @@ endpoints:
 - type: wcs201
   url: https://wfdgis.ypeka.gr/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
   version: 2.0.1
+- type: csw202
+  url: https://wfdgis.ypeka.gr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2

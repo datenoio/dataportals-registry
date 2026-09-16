@@ -14,15 +14,14 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: data.norge.no. open data portal. managed by The Norway Directorate of
-  Digitization. powered by Custom software.
+description: Norway's national data catalog for discovering datasets, data services,
+  concepts, information models, services, and events. It is managed by the Norwegian
+  Digitalisation Agency and powered by Felles datakatalog.
 endpoints:
 - type: customapi
   url: https://search.api.fellesdatakatalog.digdir.no/search/datasets
 - type: sparql
-  url: https://data.norge.no/sparql
-- type: dcatap21
-  url: https://datasets.fellesdatakatalog.digdir.no/catalogs
+  url: https://sparql.fellesdatakatalog.digdir.no
 - type: sitemap
   url: https://data.norge.no/sitemap.xml
 id: datanorgeno
@@ -39,13 +38,13 @@ langs:
 link: https://data.norge.no
 name: Felles datakatalog (Norway)
 owner:
-  link: https://www.norge.no
+  link: https://www.digdir.no
   location:
     country:
       id: 'NO'
       name: Norway
     level: 20
-  name: The Norway Directorate of Digitization
+  name: Norwegian Digitalisation Agency
   type: Central government
 properties:
   has_doi: false
@@ -58,8 +57,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: fellesdatakatalog
+  name: Felles datakatalog
 status: active
 tags:
 - government

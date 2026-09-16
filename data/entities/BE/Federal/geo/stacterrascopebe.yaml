@@ -21,6 +21,18 @@ description: Terrascope is the Belgian Earth Observation Data Space. It provides
 endpoints:
 - type: stacserverapi
   url: https://stac.terrascope.be
+- type: stacserverapi
+  url: https://stac.terrascope.be/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://stac.terrascope.be/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac.terrascope.be/conformance
+  version: '1.0'
+- type: openapi
+  url: https://stac.terrascope.be/api
+  version: '3.0'
 id: stacterrascopebe
 langs:
 - id: EN

@@ -20,6 +20,12 @@ description: STAC 1.0 catalogue API for the Copernicus Atmosphere Data Store (AD
 endpoints:
 - type: stacserverapi
   url: https://ads.atmosphere.copernicus.eu/api/catalogue/v1/
+- type: stacserverapi:collections
+  url: https://ads.atmosphere.copernicus.eu/api/catalogue/v1/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://ads.atmosphere.copernicus.eu/api/catalogue/v1/conformance
+  version: '1.0'
 id: stacadsatmospherecopernicuseu
 langs:
 - id: EN

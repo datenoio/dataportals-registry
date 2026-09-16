@@ -15,11 +15,23 @@ coverage:
     macroregion:
       id: '001'
       name: World
-description: OpenAerialMap STAC API operated by Humanitarian OpenStreetMap Team. Catalog of
-  openly licensed aerial and satellite imagery for humanitarian mapping.
+description: OpenAerialMap STAC API operated by Humanitarian OpenStreetMap Team. Catalog
+  of openly licensed aerial and satellite imagery for humanitarian mapping.
 endpoints:
 - type: stacserverapi
   url: https://api.imagery.hotosm.org/stac
+- type: stacserverapi
+  url: https://api.imagery.hotosm.org/stac/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://api.imagery.hotosm.org/stac/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://api.imagery.hotosm.org/stac/conformance
+  version: '1.0'
+- type: openapi
+  url: https://api.imagery.hotosm.org/stac/api
+  version: '3.0'
 id: apiimageryhotosmorg
 langs:
 - id: EN

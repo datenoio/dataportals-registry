@@ -21,6 +21,15 @@ description: STAC API for the CNES Geodes Data Hub (GDH), providing browsing and
 endpoints:
 - type: stacserverapi
   url: https://geodes-portal.cnes.fr/api/stac
+- type: stacserverapi:collections
+  url: https://geodes-portal.cnes.fr/api/stac/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://geodes-portal.cnes.fr/api/stac/conformance
+  version: '1.0'
+- type: stacserverapi:stac-root
+  url: https://geodes-portal.cnes.fr/api/stac/stac
+  version: '1.0'
 id: apistacgeodesportalcnfr
 langs:
 - id: FR

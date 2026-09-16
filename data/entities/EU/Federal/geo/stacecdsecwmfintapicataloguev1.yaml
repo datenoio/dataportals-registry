@@ -20,6 +20,12 @@ description: STAC 1.0 catalogue API for programmatic discovery of collections ac
 endpoints:
 - type: stacserverapi
   url: https://ecds.ecmwf.int/api/catalogue/v1/
+- type: stacserverapi:collections
+  url: https://ecds.ecmwf.int/api/catalogue/v1/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://ecds.ecmwf.int/api/catalogue/v1/conformance
+  version: '1.0'
 id: stacecdsecwmfintapicataloguev1
 langs:
 - id: EN

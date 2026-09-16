@@ -13,7 +13,7 @@ coverage:
       name: Greece
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: GR-B
@@ -57,6 +57,9 @@ endpoints:
 - type: tms100
   url: https://gis.oraiokastro.gr/geoserver/gwc/service/tms/1.0.0
   version: 1.0.0
+- type: csw202
+  url: https://gis.oraiokastro.gr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
 id: gisoraiokastrogr
 langs:
 - id: EL

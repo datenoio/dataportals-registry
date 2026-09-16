@@ -13,7 +13,7 @@ coverage:
       name: Montenegro
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: ME-08
@@ -67,6 +67,11 @@ endpoints:
 - type: csw202
   url: https://gis.hercegnovi.me/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: csw202
+  url: https://gis.hercegnovi.me/geoserver/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: mapstore:config
+  url: https://gis.hercegnovi.me/configs/localConfig.json
 id: gishercegnovime
 langs:
 - id: SR

@@ -20,6 +20,12 @@ description: Production STAC API v1 of the Swiss Federal Spatial Data Infrastruc
 endpoints:
 - type: stacserverapi
   url: https://data.geo.admin.ch/api/stac/v1/
+- type: stacserverapi:collections
+  url: https://data.geo.admin.ch/api/stac/v1/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://data.geo.admin.ch/api/stac/v1/conformance
+  version: '1.0'
 id: datageoadminchapistacv1
 langs:
 - id: EN

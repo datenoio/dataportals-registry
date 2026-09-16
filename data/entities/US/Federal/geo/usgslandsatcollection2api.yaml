@@ -21,6 +21,15 @@ description: A SpatioTemporal Asset Catalog (STAC) server providing standardized
 endpoints:
 - type: stacserverapi
   url: https://landsatlook.usgs.gov/stac-server/
+- type: stacserverapi:collections
+  url: https://landsatlook.usgs.gov/stac-server/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://landsatlook.usgs.gov/stac-server/conformance
+  version: '1.0'
+- type: openapi
+  url: https://landsatlook.usgs.gov/stac-server/api
+  version: '3.0'
 id: usgslandsatcollection2api
 langs:
 - id: EN

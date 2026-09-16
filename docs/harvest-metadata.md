@@ -37,6 +37,7 @@ Docs: [docs.fairdatapoint.org](https://docs.fairdatapoint.org). Public index: [h
 ```text
 GET https://host/api/v4/
 GET https://host/api/v4/metadata/
+GET https://host/api/v4/metadata
 ```
 
 This is a **metadata registry** (object classes, data elements, value domains). Those are not research-data files.
@@ -60,6 +61,8 @@ GET https://host/ws/rest
 List **dataflows** as the harvest grain for “datasets”. Harvest DSDs/codelists only when the job is a structure crawl. Do not confuse this with PxWeb/.Stat **observation** APIs ([harvest-indicators.md](harvest-indicators.md)).
 
 **Keep:** Fusion Registry **dataflows**. **Drop:** codelists and DSDs unless harvesting structure.
+
+Detection also probes origin `/ws/rest` and `/ws/public/sdmxapi/rest` when the catalog link is a `/FusionRegistry` (or `/FusionMetadataRegistry`) mount.
 
 ## Metadata Browser (`mwmb`) {#mwmb}
 

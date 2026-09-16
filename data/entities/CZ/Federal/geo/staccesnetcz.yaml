@@ -24,6 +24,12 @@ endpoints:
 - type: openapi
   url: https://stac.cesnet.cz/api
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://stac.cesnet.cz/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac.cesnet.cz/conformance
+  version: '1.0'
 id: staccesnetcz
 langs:
 - id: CS

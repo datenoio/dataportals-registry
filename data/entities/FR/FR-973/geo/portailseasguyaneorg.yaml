@@ -24,6 +24,15 @@ description: SpatioTemporal Asset Catalog for SEAS Guyane imagery and related ge
 endpoints:
 - type: stacserverapi
   url: https://portail.seasguyane.org/catalog
+- type: stacserverapi
+  url: https://portail.seasguyane.org/catalog/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://portail.seasguyane.org/catalog/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://portail.seasguyane.org/catalog/conformance
+  version: '1.0'
 id: portailseasguyaneorg
 langs:
 - id: FR

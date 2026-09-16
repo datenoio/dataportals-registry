@@ -15,13 +15,19 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: Official OpenSDG reporting site for Ghana's Sustainable Development
-  Goal indicators, published by Ghana Statistical Service.
+description: Official OpenSDG reporting site for Ghana's Sustainable Development Goal
+  indicators, published by Ghana Statistical Service.
 endpoints:
 - type: opensdg:data
   url: https://sdgs-ghana.github.io/production-data/en/data/1-1-1.json
 - type: opensdg:data
   url: https://sdgs-ghana.github.io/production-data/en/data/1-2-1.json
+- type: opensdg:reporting-status
+  url: https://sdgs-ghana.github.io/reporting-status
+- type: opensdg:reporting-status
+  url: https://sdgs-ghana.github.io/reporting-status/
+- type: opensdg:catalog
+  url: https://sdgs-ghana.github.io/indicators.json
 id: sdgsghanagithubio
 langs:
 - id: EN

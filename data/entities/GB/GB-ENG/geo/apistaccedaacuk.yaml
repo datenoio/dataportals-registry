@@ -25,6 +25,12 @@ endpoints:
 - type: openapi
   url: https://api.stac.ceda.ac.uk/api
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://api.stac.ceda.ac.uk/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://api.stac.ceda.ac.uk/conformance
+  version: '1.0'
 id: apistaccedaacuk
 langs:
 - id: EN

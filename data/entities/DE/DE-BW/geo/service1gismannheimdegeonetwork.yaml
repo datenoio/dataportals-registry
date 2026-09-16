@@ -33,6 +33,13 @@ endpoints:
 - type: oaipmh20
   url: http://service1.gis-mannheim.de/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: openapi
+  url: http://service1.gis-mannheim.de/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: dcat:xml
+  url: http://service1.gis-mannheim.de/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: http://service1.gis-mannheim.de/geonetwork/srv/api/site
 id: service1gismannheimdegeonetwork
 langs:
 - id: DE

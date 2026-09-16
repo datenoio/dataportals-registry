@@ -14,11 +14,13 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Earth System Grid Federation Metagrid node at DKRZ. European index and data node
-  for CMIP and related climate-model archives.
+description: Earth System Grid Federation Metagrid node at DKRZ. European index and
+  data node for CMIP and related climate-model archives.
 endpoints:
 - type: esgf:catalog
   url: https://esgf-data.dkrz.de/
+- type: esgf:search
+  url: https://esgf-data.dkrz.de/esg-search/search?format=application%2Fsolr%2Bjson&limit=0
 id: esgfdatadkrzde
 langs:
 - id: EN

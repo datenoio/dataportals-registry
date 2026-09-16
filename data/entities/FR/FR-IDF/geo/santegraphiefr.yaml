@@ -31,6 +31,13 @@ endpoints:
   url: https://santegraphie.fr/geonetwork/srv/api/site
 - type: geonetwork:selections
   url: https://santegraphie.fr/geonetwork/srv/api/selections
+- type: openapi
+  url: https://santegraphie.fr/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: ogcrecordsapi
+  url: https://santegraphie.fr/geonetwork/srv/ogc/records/collections?f=json
+- type: ogcrecordsapi
+  url: https://santegraphie.fr/geonetwork/ogc/records/collections?f=json
 id: santegraphiefr
 langs:
 - id: FR

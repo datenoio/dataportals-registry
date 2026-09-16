@@ -22,6 +22,15 @@ description: Collections of geospatial datasets from Canada Centre for Mapping a
 endpoints:
 - type: stacserverapi
   url: https://datacube.services.geo.ca/stac/api/
+- type: stacserverapi:collections
+  url: https://datacube.services.geo.ca/stac/api/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://datacube.services.geo.ca/stac/api/conformance
+  version: '1.0'
+- type: openapi
+  url: https://datacube.services.geo.ca/stac/api/api
+  version: '3.0'
 id: datacubeservicesgeoca
 langs:
 - id: EN

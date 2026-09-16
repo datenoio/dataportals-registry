@@ -25,6 +25,12 @@ endpoints:
 - type: openapi
   url: https://catalogue.weed.apex.esa.int/api
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://catalogue.weed.apex.esa.int/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://catalogue.weed.apex.esa.int/conformance
+  version: '1.0'
 id: catalogueweedapexesaint
 langs:
 - id: EN

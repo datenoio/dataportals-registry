@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-FR
+      name: Fryslân
+description: Geoportal. managed by Wetterskip Fryslân. powered by ArcGIS Hub. accessible
+  at gis.wetterskipfryslan.nl.
+endpoints:
+- type: arcgis:portals:self
+  url: https://gis.wetterskipfryslan.nl/portal/sharing/rest/portals/self?f=pjson
+id: giswetterskipfryslannl
+langs:
+- id: NL
+  name: Dutch
+link: https://gis.wetterskipfryslan.nl/portal/home/
+name: Geo Informatieportaal Wetterskip Fryslân
+owner:
+  link: https://www.wetterskipfryslan.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-FR
+      name: Fryslân
+  name: Wetterskip Fryslân
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- netherlands
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00006468

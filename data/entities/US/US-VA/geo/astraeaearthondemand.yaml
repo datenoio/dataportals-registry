@@ -21,6 +21,12 @@ description: An expanding catalogue providing access to a curated collection of 
 endpoints:
 - type: stacserverapi
   url: https://eod-catalog-svc-prod.astraea.earth/
+- type: stacserverapi:collections
+  url: https://eod-catalog-svc-prod.astraea.earth/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://eod-catalog-svc-prod.astraea.earth/conformance
+  version: '1.0'
 id: astraeaearthondemand
 langs:
 - id: EN

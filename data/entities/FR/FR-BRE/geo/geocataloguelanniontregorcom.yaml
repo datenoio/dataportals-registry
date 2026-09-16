@@ -28,29 +28,33 @@ description: Comprehensive geospatial data catalog for the Lannion-Trégor regio
   to urban planning, infrastructure, environment, and administrative boundaries.
 endpoints:
 - type: geonetwork:query
-  url: https://geocatalogue.lannion-tregor.com/geonetwork/srv/eng/q
+  url: https://georchestra.lannion-tregor.com/geonetwork/srv/eng/q
 - type: geonetwork:records
-  url: https://geocatalogue.lannion-tregor.com/geonetwork/srv/api/records
+  url: https://georchestra.lannion-tregor.com/geonetwork/srv/api/records
 - type: openapi
-  url: https://geocatalogue.lannion-tregor.com/geonetwork/srv/v2/api-docs
+  url: https://georchestra.lannion-tregor.com/geonetwork/srv/v2/api-docs
   version: '2'
 - type: csw202
-  url: https://geocatalogue.lannion-tregor.com/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://georchestra.lannion-tregor.com/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: opensearch
-  url: https://geocatalogue.lannion-tregor.com/geonetwork/srv/eng/portal.opensearch
+  url: https://georchestra.lannion-tregor.com/geonetwork/srv/eng/portal.opensearch
   version: '1.0'
 - type: oaipmh20
-  url: https://geocatalogue.lannion-tregor.com/geonetwork/srv/eng/oaipmh?verb=Identify
+  url: https://georchestra.lannion-tregor.com/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:site
+  url: https://georchestra.lannion-tregor.com/geonetwork/srv/api/site
+- type: geonetwork:selections
+  url: https://georchestra.lannion-tregor.com/geonetwork/srv/api/selections
 id: geocataloguelanniontregorcom
 langs:
 - id: EN
   name: English
-link: https://geocatalogue.lannion-tregor.com/geonetwork/srv/rus/catalog.search;jsessionid=A6B970177B97DBFDC021583D56FA6A64#/home
-name: Lannion-Trégor Geoportal
+link: https://georchestra.lannion-tregor.com/geonetwork
+name: Geocatalogue LTC
 owner:
-  link: https://lannion-tregor.com
+  link: https://www.lannion-tregor.com
   location:
     country:
       id: FR
@@ -59,7 +63,7 @@ owner:
     subregion:
       id: FR-BRE
       name: Bretagne
-  name: Lannion-Trégor
+  name: Lannion-Trégor Communauté
   type: Local government
 identifiers: []
 properties:
@@ -76,6 +80,7 @@ software:
   name: GeoNetwork
 status: active
 tags:
+- geOrchestra
 - geospatial
 - geonetwork
 - France

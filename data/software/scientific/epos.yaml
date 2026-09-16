@@ -1,0 +1,59 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: epos
+name: EPOS Data Portal
+website: https://www.ics-c.epos-eu.org/
+description: EPOS Data Portal is the European Plate Observing System ICS-C
+  catalog for solid-Earth science datasets and services. Register the public
+  ICS-C hub, not each underlying research infrastructure. Distinct from
+  generic EPOS project pages.
+owner:
+  name: EPOS ERIC
+  location:
+    country:
+      id: EU
+      name: European Union
+logo_url: https://www.ics-c.epos-eu.org/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: Uncertain
+  dublin_core: 'No'
+  iso19115: Compatible
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Structured
+type: Software
+documentation_url: https://www.epos-eu.org/dataportal
+export_formats:
+- JSON
+capabilities:
+- REST API
+- Dataset catalog
+- Service catalog
+last_updated: '2026-09-14T00:00:00Z'

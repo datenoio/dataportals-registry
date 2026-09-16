@@ -21,6 +21,12 @@ description: OGC API SpatioTemporal Asset Catalog (STAC) endpoint for interopera
 endpoints:
 - type: stacserverapi
   url: https://geoservice.dlr.de/eoc/ogc/stac/v1/
+- type: stacserverapi:collections
+  url: https://geoservice.dlr.de/eoc/ogc/stac/v1/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://geoservice.dlr.de/eoc/ogc/stac/v1/conformance
+  version: '1.0'
 id: stacgeoservicedlreocogcv1
 langs:
 - id: DE

@@ -341,6 +341,13 @@ GEONODE_URLMAP = [
 
 DKAN_URLMAP = [
     {
+        "id": "ckan",
+        "url": "/api/3",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "3",
+    },
+    {
         "id": "ckan:package-search",
         "url": "/api/3/action/package_search",
         "expected_mime": JSON_MIMETYPES,
@@ -631,7 +638,14 @@ GEONETWORK_URLMAP = [
     {
         "id": "opensearch",
         "url": "/srv/eng/portal.opensearch",
-        "expected_mime": XML_MIMETYPES,
+        "expected_mime": XML_MIMETYPES + ["application/opensearchdescription+xml"],
+        "is_json": False,
+        "version": "1.0",
+    },
+    {
+        "id": "opensearch",
+        "url": "/portal.opensearch",
+        "expected_mime": XML_MIMETYPES + ["application/opensearchdescription+xml"],
         "is_json": False,
         "version": "1.0",
     },
@@ -1720,6 +1734,20 @@ ISOGEO_URLMAP = [
 ]
 
 PYCSW30_URLMAP = [
+    {
+        "id": "csw202",
+        "url": "?service=CSW&version=2.0.2&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.2",
+    },
+    {
+        "id": "oaipmh20",
+        "url": "?mode=oaipmh&verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
     {
         "id": "ogcrecords",
         "url": "/collections?f=json",
@@ -3362,6 +3390,76 @@ def dgbasweb_url_cleanup_func(url):
     return url.rstrip("/")
 
 
+PXWEB_TREE_LANGS = frozenset(
+    {
+        "en",
+        "sv",
+        "fi",
+        "da",
+        "no",
+        "is",
+        "ar",
+        "hy",
+        "mn",
+        "de",
+        "fr",
+        "es",
+        "et",
+        "lv",
+        "lt",
+        "pl",
+        "cs",
+        "sk",
+        "hu",
+        "nl",
+        "it",
+        "pt",
+        "en-gb",
+        "en-us",
+    }
+)
+
+
+def pxweb_url_cleanup_func(url):
+    """Strip /pxweb/{lang}/ table trees and Dialog; keep /PXWeb app mounts."""
+    parsed = urlparse(url)
+    parts = [part for part in (parsed.path or "").split("/") if part]
+    kept = []
+    for idx, part in enumerate(parts):
+        lower = part.lower()
+        if lower == "dialog" or lower.startswith("statfile"):
+            break
+        nxt = parts[idx + 1].lower() if idx + 1 < len(parts) else ""
+        if lower == "pxweb" and nxt in PXWEB_TREE_LANGS:
+            break
+        kept.append(part)
+    if not kept:
+        return _origin_url(url)
+    return urlunparse(
+        (parsed.scheme, parsed.netloc, "/" + "/".join(kept), "", "", "")
+    )
+
+
+def esgf_url_cleanup_func(url):
+    """Strip Metagrid /search so /esg-search/search attaches at origin."""
+    parts = [part for part in (urlparse(url).path or "").split("/") if part]
+    if (
+        parts
+        and parts[-1].lower() == "search"
+        and (len(parts) < 2 or parts[-2].lower() != "esg-search")
+    ):
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
+def radar_url_cleanup_func(url):
+    """Strip /radar/{lang}/home so /radar/api/datasets attaches at origin."""
+    parts = [part.lower() for part in (urlparse(url).path or "").split("/") if part]
+    if len(parts) >= 3 and parts[0] == "radar" and parts[-1] == "home":
+        return _origin_url(url)
+    return url.rstrip("/")
+
+
 def hubzero_url_cleanup_func(url):
     return _origin_url(url)
 
@@ -3459,10 +3557,14 @@ def greenstone_url_cleanup_func(url):
 
 
 def bitrix_url_cleanup_func(url):
-    """Strip /opendata so /opendata/opendata.json is not doubled."""
+    """Strip /opendata so /opendata/opendata.json is not doubled.
+
+    Catalog pages without /opendata (for example .php/.aspx) fall back to
+    origin so /opendata/ is not concatenated onto the filename.
+    """
     if "/opendata" in (urlparse(url).path or "").lower():
         return _strip_path_marker(url, "/opendata")
-    return url.rstrip("/")
+    return _origin_url(url)
 
 
 def massbank_url_cleanup_func(url):
@@ -3601,6 +3703,9 @@ URL_CLEANUP_MAP = {
     "tr32db": tr32db_url_cleanup_func,
     "codalab": codalab_url_cleanup_func,
     "dgbasweb": dgbasweb_url_cleanup_func,
+    "pxweb": pxweb_url_cleanup_func,
+    "esgf": esgf_url_cleanup_func,
+    "radar": radar_url_cleanup_func,
     "hubzero": hubzero_url_cleanup_func,
     "copernicusdhus": copernicusdhus_url_cleanup_func,
     "cbioportal": _origin_url,
@@ -3879,6 +3984,7 @@ def api_identifier(
                 base_urls.append(website_url + "/geoserver")
     if software_id in (
         "mapstore",
+        "gausswebcity",
         "getsdiportal",
         "giswebse",
         "gvsigonline",
@@ -3914,6 +4020,8 @@ def api_identifier(
         "hubzero",
         "idra",
         "librecat",
+        "pxweb",
+        "fusionregistry",
     ):
         parsed = urlparse(website_url)
         origin = f"{parsed.scheme}://{parsed.netloc}"

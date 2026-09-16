@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Finnish Meteorological Institute International Monitor for Auroral Geomagnetic Effects (IMAGE)
+  magnetometer network, distributing magnetometer time series, electrojet indicators, and event
+  indicators for EPOS.
+endpoints:
+- type: api
+  url: https://space.fmi.fi/image/epos/data_download_epos.php
+- type: api
+  url: https://space.fmi.fi/image/epos/image_epos_indicators.php
+- type: api
+  url: https://space.fmi.fi/image/epos/image_epos_electrojet_events.php
+id: spacefmifi
+langs:
+- id: EN
+  name: English
+link: https://space.fmi.fi/image/
+name: FMI IMAGE geomagnetic
+owner:
+  link: https://en.ilmatieteenlaitos.fi/
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+  name: Finnish Meteorological Institute
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- geomagnetism
+- magnetometer
+- IMAGE
+- EPOS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00005626

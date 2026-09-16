@@ -1,0 +1,91 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-OCC
+      name: Occitanie
+description: GeoNetwork catalog operated by TerraNIS for GreenCity, now Landia, providing
+  urban vegetation and environmental geospatial datasets for multiple territories.
+endpoints:
+- type: geonetwork:records
+  url: https://greencity.terranis.fr/geonetwork/srv/api/records
+- type: geonetwork:site
+  url: https://greencity.terranis.fr/geonetwork/srv/api/site
+- type: csw202
+  url: https://greencity.terranis.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:query
+  url: https://greencity.terranis.fr/geonetwork/srv/eng/q
+- type: openapi
+  url: https://greencity.terranis.fr/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: opensearch
+  url: https://greencity.terranis.fr/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://greencity.terranis.fr/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: dcat:xml
+  url: https://greencity.terranis.fr/geonetwork/srv/api/records?accept=application/rdf+xml
+id: greencityterranisfr
+langs:
+- id: FR
+  name: French
+link: https://greencity.terranis.fr/geonetwork
+name: GreenCity / Landia GeoNetwork Catalog
+owner:
+  link: https://www.terranis.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-OCC
+      name: Occitanie
+  name: TerraNIS
+  type: Business
+properties:
+  dataset_count_reported: 243
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geOrchestra
+- geospatial
+- metadata
+- urban vegetation
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00005649

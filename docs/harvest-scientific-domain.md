@@ -147,6 +147,8 @@ GET https://host/esg-search/search?format=application%2Fsolr%2Bjson&limit=100&of
 
 **Keep:** Solr docs that represent CMIP/obs4MIPs **datasets** (`master_id` / `dataset_id`). **Drop:** files, aggregations, and wget scripts as extra datasets. Prefer the index host from the catalog `link`. Data-node grain: [harvest-earthdata.md](harvest-earthdata.md#esgf) and [THREDDS](#thredds).
 
+Detection strips Metagrid `/search` so `/esg-search/search` attaches at origin.
+
 ## Atlas of Living Australia (`ala`) {#ala}
 
 Living Atlases stack.
@@ -493,6 +495,47 @@ GET https://host/
 Prefer `endpoints[]` when present. One harvest scope per BioCyc collection or organism database (EcoCyc, MetaCyc, YeastCyc, biocyc.org).
 
 **Keep:** organism / PGDB catalog or published bulk export. **Drop:** gene pages, pathway diagrams, and reaction records.
+
+## PANGAEA (`pangaea`) {#pangaea}
+
+Earth and environmental data publisher hub. Harvest the **dataset catalog**, not each DOI landing page.
+
+```text
+GET https://www.pangaea.de/advanced/search.php
+```
+
+**Keep:** **datasets**. **Drop:** per-DOI files as crawl seeds. One harvest scope for the hub.
+
+## USGS ScienceBase (`sciencebase`) {#sciencebase}
+
+USGS item catalog. Harvest **items** from the catalog API. Do not harvest GeoServer/ArcGIS REST on the same host (those are separate catalogs).
+
+```text
+GET https://www.sciencebase.gov/catalog/items?format=json&max=1
+```
+
+**Keep:** ScienceBase **items**. **Drop:** per-item file bytes and map services already harvested as `geoserver` / `arcgisserver`.
+
+## DEIMS-SDR (`deims`) {#deims}
+
+LTER site/dataset registry. Harvest **sites** and **datasets**, not each sensor reading.
+
+```text
+GET https://deims.org/api/datasets
+GET https://deims.org/api/sites
+```
+
+**Keep:** DEIMS **datasets** (and sites if that was the ask). **Drop:** individual site widgets. One harvest scope for the hub.
+
+## EPOS Data Portal (`epos`) {#epos}
+
+ICS-C catalog. Harvest **datasets / services** from the public portal API, not each underlying RI.
+
+```text
+GET https://www.ics-c.epos-eu.org/
+```
+
+**Keep:** EPOS **datasets** and data services. **Drop:** project marketing pages. One harvest scope for the ICS-C hub.
 
 ## IBDC (`ibdc`) {#ibdc}
 

@@ -13,7 +13,7 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: STAC 1.0 metadata catalogue for spatiotemporal Earth observation datasets
   hosted by ICCS, including super-resolved Sentinel-2, Sentinel-3 land surface temperature,
@@ -24,6 +24,12 @@ endpoints:
 - type: openapi
   url: https://platform-eo.iccs.gr/stac/api
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://platform-eo.iccs.gr/stac/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://platform-eo.iccs.gr/stac/conformance
+  version: '1.0'
 id: stacplatformeoiccsgr
 langs:
 - id: EN

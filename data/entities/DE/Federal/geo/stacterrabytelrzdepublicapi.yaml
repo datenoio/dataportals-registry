@@ -21,6 +21,12 @@ description: Curated STAC 1.0 catalog of the terrabyte platform at LRZ, exposing
 endpoints:
 - type: stacserverapi
   url: https://stac.terrabyte.lrz.de/public/api/
+- type: stacserverapi:collections
+  url: https://stac.terrabyte.lrz.de/public/api/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac.terrabyte.lrz.de/public/api/conformance
+  version: '1.0'
 - type: openapi
   url: https://stac.terrabyte.lrz.de/public/api/api
   version: '3.0'

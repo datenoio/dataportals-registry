@@ -36,9 +36,11 @@ The registry collects and maintains structured metadata about:
 - API Catalogs
 - Data marketplaces
 - Metadata catalogs
+- Datasets lists
+- General research repositories
 - Other data infrastructure
 
-As of 12 September 2026, source YAML contains **37,170** verified catalog entries across **224** country/territory folders, **0** scheduled records, and **486** software definitions. Dataset exports match YAML: **37,170** catalogs, **0** scheduled JSONL, **486** software. Last published snapshot is v1.21.0 (37,170 catalogs, 0 scheduled, 486 software).
+As of 16 September 2026, source YAML contains **38,343** verified catalog entries across **224** country/territory folders, **0** scheduled records, and **523** software definitions. Dataset exports match YAML: **38,343** catalogs, **0** scheduled JSONL, **523** software. Last published snapshot is v1.21.0 (37,170 catalogs, 0 scheduled, 486 software).
 
 ### Scope Boundary (Important)
 
@@ -161,6 +163,8 @@ data/entities/
 | API Catalog | `api/` | API directories |
 | Data marketplace | `marketplace/` | Commercial data markets |
 | Metadata catalog | `metadata/` | Metadata registries |
+| Datasets list | `other/` | HTML tables / GitHub inventories |
+| General research repository | `scientific/` or `other/` | Broad IRs without a named stack |
 | Other | `other/` | Uncategorized |
 
 ---
@@ -285,10 +289,6 @@ python scripts/fix_critical_issues.py
 python scripts/fix_important_issues.py
 python scripts/fix_is_national_flags.py --dry-run
 python scripts/fix_is_national_flags.py
-
-# Method B: Generate Cursor commands
-python scripts/generate_cursor_commands.py
-# Then use scripts/update_all_issues.sh
 
 # 4. Validate fixes
 python scripts/builder.py validate-yaml
@@ -531,7 +531,7 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 3. Prefer vendor/government lists, national harvest-source APIs, and named directories, then documented search queries in [docs/discovery-search-tools.md](docs/discovery-search-tools.md) and the per-platform guides (`docs/discovery-opendata.md`, `docs/discovery-geoportals.md`, `docs/discovery-scientific.md`, `docs/discovery-metadata.md`, `docs/discovery-indicators.md`, `docs/discovery-other.md`). Software ID map: [docs/software-index.md](docs/software-index.md).
 4. Configure Cursor / ChatGPT / Censys MCP (or FOFA as a Censys alternative) using [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md) when the hunt needs those tools
 5. Probe only candidate hosts with targeted GETs; do not write internet-wide scanners
-6. Add verified finds with `add-single --scheduled`, then the contribute checklist below. A hunt that finds 0 missing catalogs is complete — report that and stop.
+6. Add verified finds with `add-single --scheduled`, then live GET, **promote in the same session**, `assign`, `validate-yaml --id`, and probe endpoints if the software map has a GET. Append one line to `dataquality/hunts.jsonl`.
 7. Choose the next hunt from [docs/agents/improve.md](docs/agents/improve.md) (pending instance lists for new software IDs, dataset-bearing IRs, country indicators leftovers, named directories, harvest-source leftovers — not more US ArcGIS or another PL/CZ/IT commune sweep)
 8. Match the user prompt to a hunt type in [docs/agents/discover.md](docs/agents/discover.md#hunt-types)
 

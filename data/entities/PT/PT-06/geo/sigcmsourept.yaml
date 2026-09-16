@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: PT-06
+      name: Coimbra
+description: Geoportal. managed by Câmara Municipal de Soure. powered by Lizmap. accessible
+  at sig.cm-soure.pt.
+endpoints:
+- type: lizmap:service
+  url: https://sig.cm-soure.pt/lizmap/www/index.php/lizmap/service/?repository=arvoredourbano&project=Centros_ecologicos_contentores
+- type: wms130
+  url: https://sig.cm-soure.pt/lizmap/www/index.php/lizmap/service/?repository=arvoredourbano&project=Centros_ecologicos_contentores&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+id: sigcmsourept
+langs:
+- id: PT
+  name: Portuguese
+link: https://sig.cm-soure.pt/
+name: SIG de Soure
+owner:
+  link: https://cm-soure.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    subregion:
+      id: PT-06
+      name: Coimbra
+  name: Câmara Municipal de Soure
+  type: Local government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- GIS
+- geospatial
+- government
+- portugal
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00006577

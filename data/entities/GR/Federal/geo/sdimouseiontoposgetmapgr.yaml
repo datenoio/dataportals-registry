@@ -13,7 +13,7 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Research geoportal from the Mouseion Topos project. GET SDI Portal for
   cultural-heritage geospatial data on historic building stock.
@@ -81,3 +81,6 @@ endpoints:
 - type: wcs201
   url: https://sdi.mouseion-topos.getmap.gr/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
   version: 2.0.1
+- type: csw202
+  url: https://sdi.mouseion-topos.getmap.gr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2

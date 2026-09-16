@@ -22,6 +22,12 @@ description: Iconem 3D STAC Catalog includes datasets for 3d-scans of archeo sit
 endpoints:
 - type: stacserverapi
   url: https://app.iconem.com/api/stac/
+- type: stacserverapi:collections
+  url: https://app.iconem.com/api/stac/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://app.iconem.com/api/stac/conformance
+  version: '1.0'
 id: appiconemcom
 langs:
 - id: EN

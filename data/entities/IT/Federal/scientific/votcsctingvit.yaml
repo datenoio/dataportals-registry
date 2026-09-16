@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: INGV Catania Volcano Observations thematic core service gateway distributing Italian volcano
+  monitoring data including seismic catalogues, strainmeter and tiltmeter series, magnetic data,
+  geochemistry, VONA notices, and volcanic reports.
+endpoints:
+- type: api
+  url: https://vo-tcs.ct.ingv.it/rest/stationInformation/query/
+- type: api
+  url: https://vo-tcs.ct.ingv.it/rest/strainmeter/data
+- type: api
+  url: https://vo-tcs.ct.ingv.it/rest/tiltmeter/data
+- type: api
+  url: https://vo-tcs.ct.ingv.it/rest/magnetic/data
+- type: api
+  url: https://vo-tcs.ct.ingv.it/volc_report/query
+- type: api
+  url: https://vo-tcs.ct.ingv.it/geochem/bulk-rock/query
+id: votcsctingvit
+langs:
+- id: EN
+  name: English
+link: https://vo-tcs.ct.ingv.it/
+name: INGV VOLC-TCS Gateway
+owner:
+  link: http://www.ingv.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Istituto Nazionale di Geofisica e Vulcanologia
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- volcanology
+- seismology
+- EPOS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00005639

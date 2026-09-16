@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: University of Beira Interior GLASS node distributing EPOS GNSS products including station
+  metadata, coordinate time series, velocities, and strain information from European analysis
+  centres.
+endpoints:
+- type: api
+  url: https://gnssproducts.epos.ubi.pt/GlassFramework/swagger.json
+id: gnssproductseposubipt
+langs:
+- id: EN
+  name: English
+link: https://gnssproducts.epos.ubi.pt/
+name: EPOS GNSS Products
+owner:
+  link: http://www.ubi.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: University of Beira Interior
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- GNSS
+- geodesy
+- EPOS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00005643

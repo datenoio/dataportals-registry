@@ -15,10 +15,20 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: Polar Geospatial Center STAC API for polar DEM and related geospatial collections.
+description: Polar Geospatial Center STAC API for polar DEM and related geospatial
+  collections.
 endpoints:
 - type: stacserverapi
   url: https://stac.pgc.umn.edu/api/v1/
+- type: stacserverapi:collections
+  url: https://stac.pgc.umn.edu/api/v1/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac.pgc.umn.edu/api/v1/conformance
+  version: '1.0'
+- type: openapi
+  url: https://stac.pgc.umn.edu/api/v1/api
+  version: '3.0'
 id: stacpgcumnedu
 langs:
 - id: EN

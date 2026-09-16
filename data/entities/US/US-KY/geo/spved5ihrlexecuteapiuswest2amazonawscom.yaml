@@ -25,6 +25,15 @@ description: This API delivers the Kentucky Aerial Photography and Elevation Dat
 endpoints:
 - type: stacserverapi
   url: https://spved5ihrl.execute-api.us-west-2.amazonaws.com/
+- type: stacserverapi:collections
+  url: https://spved5ihrl.execute-api.us-west-2.amazonaws.com/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://spved5ihrl.execute-api.us-west-2.amazonaws.com/conformance
+  version: '1.0'
+- type: openapi
+  url: https://spved5ihrl.execute-api.us-west-2.amazonaws.com/api
+  version: '3.0'
 id: spved5ihrlexecuteapiuswest2amazonawscom
 langs:
 - id: EN

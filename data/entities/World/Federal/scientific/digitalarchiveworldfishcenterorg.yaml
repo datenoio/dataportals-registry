@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: Scientific data repository. managed by WorldFish. powered by DSpace.
+  accessible at digitalarchive.worldfishcenter.org.
+endpoints:
+- type: dspace
+  url: https://digitalarchive.worldfishcenter.org/server/api
+- type: dspace:objects
+  url: https://digitalarchive.worldfishcenter.org/server/api/discover/search/objects
+- type: oaipmh20
+  url: https://digitalarchive.worldfishcenter.org/server/oai/request?verb=Identify
+id: digitalarchiveworldfishcenterorg
+langs:
+- id: EN
+  name: English
+link: https://digitalarchive.worldfishcenter.org/datasets
+name: WorldFish Digital Repository - Datasets
+owner:
+  link: https://worldfishcenter.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: WorldFish
+  type: International
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research
+- scientific
+- world
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Science and technology
+  name: Science and technology
+  type: iso19115
+uid: cdi00006790

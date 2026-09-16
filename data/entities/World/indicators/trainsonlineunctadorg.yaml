@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: UNCTAD TRAINS Online portal for non-tariff measures covering more than
+  120 economies, with a public query UI and bulk researcher files in CSV and Stata
+  (HS 2012 NTM counts by reporter, partner, and product). Distinct from UNCTADstat
+  and World Bank WITS.
+endpoints:
+- type: openapi
+  url: https://api-trains2.unctad.org/swagger/v1/swagger.json
+  version: '3.0'
+id: trainsonlineunctadorg
+langs:
+- id: EN
+  name: English
+link: https://trainsonline.unctad.org/
+name: UNCTAD TRAINS Online
+owner:
+  link: https://unctad.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: United Nations Conference on Trade and Development
+  type: International
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- UNCTAD
+- TRAINS
+- non-tariff measures
+- trade
+- tariffs
+- indicators
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00006705

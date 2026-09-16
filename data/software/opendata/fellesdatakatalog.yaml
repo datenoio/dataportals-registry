@@ -1,0 +1,74 @@
+category: Open data portal
+subtype: data_portal_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: fellesdatakatalog
+name: Felles datakatalog
+website: https://data.norge.no
+description: Felles datakatalog (FDK) is the Norwegian Digitalisation Agency's
+  open-source, federated metadata catalog for datasets, data services, concepts,
+  information models, services, and events. It powers data.norge.no and its
+  Transportportal profile, with DCAT-AP-NO, search, RDF, and SPARQL interfaces.
+owner:
+  name: Norwegian Digitalisation Agency
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'Yes'
+  dublin_core: Compatible
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'Yes'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+  graphql: 'No'
+  openapi: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Structured
+type: Software
+repository_url: https://github.com/Informasjonsforvaltning/fdk-portal
+documentation_url: https://github.com/Informasjonsforvaltning/architecture-documentation/wiki
+license:
+  type: Apache-2.0
+  url: https://www.apache.org/licenses/LICENSE-2.0
+export_formats:
+- JSON
+- JSON-LD
+- RDF
+- RDF/XML
+- Turtle
+- N-Triples
+- N-Quads
+capabilities:
+- REST API
+- DCAT-AP-NO metadata
+- SPARQL
+- Metadata harvesting
+- Organization management
+- Concepts and information models
+- Catalog search profiles
+last_updated: '2026-09-10T09:23:18Z'

@@ -21,6 +21,15 @@ description: Production STAC API (stac-server) for USGS Astrogeology planetary d
 endpoints:
 - type: stacserverapi
   url: https://stac.astrogeology.usgs.gov/api/
+- type: stacserverapi:conformance
+  url: https://stac.astrogeology.usgs.gov/api/conformance
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://stac.astrogeology.usgs.gov/api/collections
+  version: '1.0'
+- type: openapi
+  url: https://stac.astrogeology.usgs.gov/api/api
+  version: '3.0'
 id: stacastrogeologyusgsgov
 langs:
 - id: EN

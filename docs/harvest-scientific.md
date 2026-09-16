@@ -147,6 +147,29 @@ OAI is often `/oai2d?verb=Identify`. Skip zenodo.org if you only need institutio
 
 Docs: [inveniordm.docs.cern.ch](https://inveniordm.docs.cern.ch).
 
+## HAL (`hal`) {#hal}
+
+CCSD HAL open archive. Search/OAI live on `api.archives-ouvertes.fr`, not necessarily on the portal host. Filter to **datasets**; publications dominate.
+
+```text
+GET https://api.archives-ouvertes.fr/search/?q=*:*&wt=json&rows=0
+GET https://api.archives-ouvertes.fr/oai/hal/?verb=Identify
+```
+
+Do not copy those API hosts onto every `*.hal.science` tenant as if they were local. **Keep:** `docType_s:DATA` (or equivalent dataset type). **Drop:** publications, theses, and conference papers. One harvest scope per public HAL portal.
+
+**Keep:** dataset deposits. **Drop:** publications, theses, and conference papers.
+
+## Mendeley Data (`mendeleydata`) {#mendeleydata}
+
+Elsevier hub `data.mendeley.com`. Harvest the public **dataset catalog**. Do not crawl every DOI landing page.
+
+```text
+GET https://data.mendeley.com/research-data/
+```
+
+**Keep:** public **datasets**. **Drop:** Mendeley Desktop libraries and per-dataset files as crawl seeds. One registered hub.
+
 ## EPrints (`eprints`) {#eprints}
 
 Every eprint has a `type` (`article`, `thesis`, `dataset`, `monograph`, …).
@@ -642,6 +665,8 @@ GET https://host/oai/OAIHandler?verb=Identify
 Already datasets (`totalHits` in the JSON). Page the API; keep dataset ids/DOIs. Skip a single `/radar/de/dataset/` landing page as a seed and the FIZ marketing site. OAI is a fallback. Discovery: [discovery-scientific.md](discovery-scientific.md#radar).
 
 **Keep:** RADAR **dataset** ids/DOIs from `/radar/api/datasets` or OAI. **Drop:** a single landing page as a seed and FIZ marketing.
+
+Detection strips `/radar/{lang}/home` so `/radar/api/datasets` and `/oai/OAIHandler` attach at origin.
 
 ## Redivis (`redivis`) {#redivis}
 

@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-34
+      name: Veneto
+description: G3W-SUITE cartographic portal of Comune di Thiene for public QGIS WebGIS
+  maps.
+endpoints:
+- type: g3wsuite:catalog
+  url: https://sit.comune.thiene.g3wsuite.it/
+id: sitcomunethieneg3wsuiteit
+langs:
+- id: IT
+  name: Italian
+link: https://sit.comune.thiene.g3wsuite.it/
+name: SIT Comune di Thiene
+owner:
+  link: https://www.comune.thiene.vi.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-34
+      name: Veneto
+  name: Comune di Thiene
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: g3wsuite
+  name: G3W-SUITE
+status: active
+tags:
+- geospatial
+- geoportal
+- government
+- g3wsuite
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00006343

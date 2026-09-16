@@ -24,6 +24,12 @@ endpoints:
   url: https://console.semablu.com/py/stac
 - type: openapi
   url: https://console.semablu.com/py/openapi.json
+- type: stacserverapi:collections
+  url: https://console.semablu.com/py/stac/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://console.semablu.com/py/stac/conformance
+  version: '1.0'
 id: consolesemablucom
 langs:
 - id: EN

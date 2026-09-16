@@ -22,6 +22,8 @@ description: North Carolina Data Portal with community health assessment tools, 
   and more than 120 public health and social determinants indicators for counties
   and health districts.
 endpoints:
+- type: sparkmap:catalog
+  url: https://ncdataportal.org/
 - type: sitemap
   url: https://ncdataportal.org/sitemap.xml
 - type: sitemap
@@ -45,8 +47,8 @@ owner:
   name: N.C. Department of Health and Human Services Division of Public Health
   type: Regional government
 software:
-  id: custom
-  name: Custom software
+  id: sparkmap
+  name: SparkMap
 status: active
 tags:
 - health

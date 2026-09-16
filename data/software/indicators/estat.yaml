@@ -1,0 +1,66 @@
+category: Indicators catalog
+subtype: indicators_data_platform
+datatypes:
+  datasets: Compatible
+  fields: 'Yes'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: estat
+name: e-Stat
+website: https://www.e-stat.go.jp
+description: e-Stat is Japan’s portal site for official statistics (政府統計の総合窓口).
+  Public catalogs include the table portal (www.e-stat.go.jp), Statistical LOD
+  (data.e-stat.go.jp), and the Statistics Dashboard (dashboard.e-stat.go.jp).
+  The machine API is api.e-stat.go.jp and requires an application ID. Distinct
+  from RESAS and from ministry CMS pages that only link to e-Stat.
+owner:
+  name: Statistics Bureau of Japan
+  location:
+    country:
+      id: JP
+      name: Japan
+logo_url: https://www.e-stat.go.jp/favicon.ico
+documentation_url: https://www.e-stat.go.jp/en/api/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'Yes'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+license:
+  type: Proprietary
+export_formats:
+- CSV
+- Excel
+- JSON
+- RDF
+- XML
+capabilities:
+- REST API
+- SPARQL
+- Statistical tables
+last_updated: '2026-09-13T00:00:00Z'

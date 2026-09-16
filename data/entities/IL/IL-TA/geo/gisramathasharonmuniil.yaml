@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IL
+      name: Israel
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion: &id001
+      id: IL-TA
+      name: Tall Abīb
+description: ArcGIS Enterprise (Server + Portal) REST services directory of the Ramat
+  HaSharon municipality. Verified reachable (HTTP 200 on /arcgis/rest/services, 302
+  on /portal/home) from an Israel-based node on 2026-09-15; host appears geo-blocked
+  outside Israel.
+id: gisramathasharonmuniil
+langs:
+- id: HE
+  name: Hebrew
+link: https://gis.ramat-hasharon.muni.il/arcgis/rest/services
+name: Ramat HaSharon Municipality GIS
+owner:
+  link: https://muni.il
+  location:
+    country:
+      id: IL
+      name: Israel
+    level: 30
+    subregion: *id001
+  name: Ramat HaSharon Municipality
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- israel
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00006716

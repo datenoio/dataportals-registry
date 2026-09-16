@@ -78,6 +78,36 @@ STACSERVER_URLMAP = [
         "is_json": True,
         "version": "1.0",
     },
+    # Origin-link catalogs (Planetary Computer, DestinE) mount STAC under /api/stac/v1
+    {
+        "id": "stacserverapi",
+        "url": "/api/stac/v1/",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "1.0",
+    },
+    {
+        "id": "stacserverapi:collections",
+        "url": "/api/stac/v1/collections",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "1.0",
+    },
+    # stac-fastapi OpenAPI on origin-link catalogs (not the STAC landing)
+    {
+        "id": "openapi",
+        "url": "/api",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES
+        + [
+            "application/vnd.oai.openapi+json",
+            "application/vnd.oai.openapi",
+        ],
+        "is_json": True,
+        "version": "3.0",
+    },
 ]
 
 GALAXY_URLMAP = [
@@ -134,6 +164,20 @@ RASDAMAN_URLMAP = [
     # https://doc.rasdaman.com/stable/05_geo-services-guide.html
     {
         "id": "wcs201",
+        "url": "?service=WCS&version=2.0.1&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.1",
+    },
+    {
+        "id": "wms130",
+        "url": "?service=WMS&version=1.3.0&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.3.0",
+    },
+    {
+        "id": "wcs201",
         "url": "/rasdaman/ows?service=WCS&version=2.0.1&request=GetCapabilities",
         "expected_mime": XML_MIMETYPES,
         "is_json": False,
@@ -186,6 +230,13 @@ ARISTOTLEMDR_URLMAP = [
     {
         "id": "aristotlemdr:metadata",
         "url": "/api/v4/metadata/",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "4",
+    },
+    {
+        "id": "aristotlemdr:metadata",
+        "url": "/api/v4/metadata",
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
         "version": "4",
@@ -818,6 +869,39 @@ DATABISORG_URLMAP = [
         "is_json": True,
         "version": "0",
     },
+    {
+        "id": "sdmx:dataflows",
+        "url": "/api/v1/dataflow",
+        "accept": "application/vnd.sdmx.structure+xml, application/xml, application/json",
+        "expected_mime": SDMX_STRUCTURE_MIMETYPES,
+        "is_json": False,
+        "version": "1",
+        "absolute_url": "https://stats.bis.org/api/v1/dataflow",
+    },
+]
+
+ILOSTAT_URLMAP = [
+    {
+        "id": "sdmx:dataflows",
+        "url": "/rest/dataflow",
+        "accept": "application/vnd.sdmx.structure+xml, application/xml, application/json",
+        "expected_mime": SDMX_STRUCTURE_MIMETYPES,
+        "is_json": False,
+        "version": None,
+        "absolute_url": "https://sdmx.ilo.org/rest/dataflow",
+    },
+]
+
+DATAUNICEFORG_URLMAP = [
+    {
+        "id": "sdmx:dataflows",
+        "url": "/ws/public/sdmxapi/rest/dataflow",
+        "accept": "application/vnd.sdmx.structure+xml, application/xml, application/json",
+        "expected_mime": SDMX_STRUCTURE_MIMETYPES,
+        "is_json": False,
+        "version": None,
+        "absolute_url": "https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/dataflow",
+    },
 ]
 
 RAMADDA_URLMAP = [
@@ -946,6 +1030,13 @@ BITRIX_URLMAP = [
         "version": None,
     },
     {
+        "id": "bitrix:catalog",
+        "url": "/opendata/",
+        "expected_mime": HTML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
         "id": "opendata:json",
         "url": "/opendata/opendata.json",
         "expected_mime": JSON_MIMETYPES,
@@ -1071,6 +1162,13 @@ GETSDIPORTAL_URLMAP = [
         "is_json": False,
         "version": "2.0.1",
     },
+    {
+        "id": "csw202",
+        "url": "/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities",
+        "expected_mime": OGC_XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.2",
+    },
 ]
 
 REDATAM_URLMAP = [
@@ -1110,6 +1208,13 @@ SCICAT_URLMAP = [
 # MapStore2 often sits next to GeoServer; GeoStore REST is on the viewer path.
 MAPSTORE_JSON_MIMETYPES = JSON_MIMETYPES + PLAIN_MIMETYPES + ["application/octet-stream"]
 MAPSTORE_URLMAP = GETSDIPORTAL_URLMAP + [
+    {
+        "id": "csw202",
+        "url": "/geoserver/csw?service=CSW&version=2.0.2&request=GetCapabilities",
+        "expected_mime": OGC_XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.2",
+    },
     {
         "id": "mapstore:geostore",
         "url": "/rest/geostore/misc/categories/",
@@ -1177,6 +1282,34 @@ OPENSDG_URLMAP = [
         "url": "/reporting-status",
         "expected_mime": HTML_MIMETYPES,
         "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "opensdg:reporting-status",
+        "url": "/reporting-status/",
+        "expected_mime": HTML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "opensdg:reporting-status",
+        "url": "/en/reporting-status/",
+        "expected_mime": HTML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "opensdg:catalog",
+        "url": "/indicators.json",
+        "expected_mime": OPENSDG_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "opensdg:catalog",
+        "url": "/en/indicators.json",
+        "expected_mime": OPENSDG_JSON_MIMETYPES,
+        "is_json": True,
         "version": None,
     },
 ]
@@ -2064,6 +2197,13 @@ def _html_probe(url, endpoint_id="customapi", version=None):
     }
 
 
+TAILORMAP_URLMAP = [
+    _json_probe("/api/app", "tailormap:apps"),
+    _html_probe("/nl/page/viewers", "tailormap:viewers"),
+    _html_probe("/nl/page/startpagina", "tailormap:start"),
+]
+
+
 VUFIND_DATASET_SEARCH = (
     '/Search/Results?type=AllFields&filter[]=format%3A"Dataset"'
 )
@@ -2340,6 +2480,12 @@ DATAFAIR_URLMAP = [_json_probe("/data-fair/api/v1/datasets", "datafairapi")]
 
 QGISSERVER_URLMAP = [
     _xml_probe(
+        "?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities",
+        "wms130",
+        "1.3.0",
+        OGC_XML_MIMETYPES,
+    ),
+    _xml_probe(
         "/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities",
         "wms130",
         "1.3.0",
@@ -2347,6 +2493,15 @@ QGISSERVER_URLMAP = [
     ),
     _xml_probe(
         "/ows?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities",
+        "wms130",
+        "1.3.0",
+        OGC_XML_MIMETYPES,
+    ),
+]
+
+MAPSERVER_URLMAP = [
+    _xml_probe(
+        "?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities",
         "wms130",
         "1.3.0",
         OGC_XML_MIMETYPES,
@@ -2460,6 +2615,22 @@ DATAWORLDBANKORG_URLMAP = [
         "/v2/sources?format=json",
         "rest",
         absolute_url="https://api.worldbank.org/v2/sources?format=json",
+    ),
+]
+
+FINGERTIPS_URLMAP = [
+    _json_probe("/api/profiles", "rest"),
+]
+
+UNDATA_URLMAP = [
+    _xml_probe("/OpenSearch.xml", "opensearch", mimes=OPENSEARCH_MIMETYPES),
+]
+
+SIDRA_URLMAP = [
+    _json_probe(
+        "/api/v3/agregados",
+        "rest",
+        absolute_url="https://servicodados.ibge.gov.br/api/v3/agregados",
     ),
 ]
 
@@ -2815,6 +2986,8 @@ DRAFT_CATALOGS_URLMAP = {
     "redatam": REDATAM_URLMAP,
     "scicat": SCICAT_URLMAP,
     "mapstore": MAPSTORE_URLMAP,
+    "gausswebcity": MAPSTORE_URLMAP,
+    "tailormap": TAILORMAP_URLMAP,
     "opensdg": OPENSDG_URLMAP,
     "terria": TERRIA_URLMAP,
     "seek": SEEK_URLMAP,
@@ -2855,6 +3028,8 @@ DRAFT_CATALOGS_URLMAP = {
     "eurostat": EUROSTAT_URLMAP,
     "ecb": ECB_URLMAP,
     "databisorg": DATABISORG_URLMAP,
+    "ilostat": ILOSTAT_URLMAP,
+    "datauniceforg": DATAUNICEFORG_URLMAP,
     "ramadda": RAMADDA_URLMAP,
     "haplo": HAPLO_URLMAP,
     "tablion": TABLION_URLMAP,
@@ -2914,6 +3089,7 @@ DRAFT_CATALOGS_URLMAP = {
     "wikibase": WIKIBASE_URLMAP,
     "datafair": DATAFAIR_URLMAP,
     "qgisserver": QGISSERVER_URLMAP,
+    "mapserver": MAPSERVER_URLMAP,
     "gc2": GC2_URLMAP,
     "deegree": DEEGREE_URLMAP,
     "micka": MICKA_URLMAP,
@@ -2927,6 +3103,9 @@ DRAFT_CATALOGS_URLMAP = {
     "dandi": DANDI_URLMAP,
     "cellxgene": CELLXGENE_URLMAP,
     "dataworldbankorg": DATAWORLDBANKORG_URLMAP,
+    "fingertips": FINGERTIPS_URLMAP,
+    "undata": UNDATA_URLMAP,
+    "sidra": SIDRA_URLMAP,
     "openaire": OPENAIRE_URLMAP,
     "nextstrain": NEXTSTRAIN_URLMAP,
     "plutof": PLUTOF_URLMAP,
@@ -2994,12 +3173,21 @@ NO_STANDARD_PROBE = {
     "d4science": "VRE platform; API behind auth, no stable relative path.",
     "codabench": "Hub /api/datasets/ is 403; homepage HTML is not a catalog dump.",
     "evalai": "Single hub eval.ai; harvest is the challenges UI, not a relative catalog API on other hosts.",
+    "fellesdatakatalog": "Search is POST on search.api.fellesdatakatalog.digdir.no; SPARQL is on sparql.fellesdatakatalog.digdir.no. Do not copy those hub hosts onto data.norge.no / transportportal.no tenants.",
+    "hal": "Search/OAI live on api.archives-ouvertes.fr; do not copy that hub onto every *.hal.science tenant.",
+    "kaggle": "Datasets list API often needs a token; harvest is the public hub HTML, not a relative catalog API on other hosts.",
+    "dataworld": "Catalog search is on api.data.world; do not copy that hub onto other data.world organization spaces.",
+    "mendeleydata": "Single hub data.mendeley.com; harvest is the public dataset catalog, not a relative list API on other hosts.",
+    "pangaea": "Search/OAI paths are the pangaea.de hub; do not invent a relative catalog API on DOI landing pages.",
+    "sciencebase": "Item list is the www.sciencebase.gov catalog hub; GeoServer/ArcGIS REST on the same host are other software IDs.",
+    "deims": "Site/dataset APIs are the deims.org hub; not a relative list on each site record.",
+    "iudx": "Catalogue search path is tenant-specific (/iudx/cat/v1/ or central-catalogue); no portable relative dump on every IUDX host.",
+    "epos": "ICS-C portal has no stable relative catalog dump on the public UI URL.",
     "grandchallenge": "Single hub grand-challenge.org; /api/v1/ may 403, harvest HTML challenges/archives.",
     "goaltracker": "No verified anonymous list API; catalog link is the tenant homepage.",
     "brahmsonline": "BOL project paths are per-herbarium, not a relative list on every catalog link.",
     "ibdc": "IBDC archive paths are per-archive placeholders, not a relative hub list.",
     "datagovmy": "Static site generators; mostly sitemap-only in records.",
-    "datauniceforg": "UNICEF data site; external API not on catalog link.",
     "datavavt": "Custom /analytic/api/v1 on Russian portals.",
     "datawheel": "DataWheel sites; frontend-only, no common /api.",
     "datalad": "DataLad/git annex – no HTTP API on portal link; git-only.",
@@ -3007,6 +3195,8 @@ NO_STANDARD_PROBE = {
     "fedora": "Fedora LDP/OAI is behind a public UI; leftover links are not Fedora roots.",
     "gcnavi": "GC Navi municipal viewers; no documented catalog API on the viewer URL.",
     "geogeo": "GeDA-Public / geogeo.jp municipal viewers; no documented catalog API on the viewer URL.",
+    "geocentriq": "Quebec MRC GIS SaaS at app.geocentriq.com/mrc/{mrc}; no documented relative catalog API on the viewer URL.",
+    "geocentralis": "Quebec MRC GIS SaaS at portail.geocentralis.com/public/sig-web/; no documented relative catalog API on the viewer URL.",
     "geoloniagis": "Geolonia スマートマップ (Tottori GeoMap, Kagawa BRIDGES); Next.js viewer, no catalog harvest API.",
     "genesisonline": "GENESIS-Online web services are POST-only (Destatis as of mid-2025).",
     "hdc": "Thai HDC public pages are tenant HTML dashboards; no shared relative catalog API on /public/.",
@@ -3018,14 +3208,12 @@ NO_STANDARD_PROBE = {
     "geoportalrlp": "Custom geoportal CMS; sitemap only in records.",
     "gisoftgis": "GISoft GIS viewers; no documented public REST on portal URL.",
     "hygmapgis": "HyG Mapgis JSP viewer; layers over ArcGIS REST/WMS, no shared catalog API on mapa.jsp.",
-    "ilostat": "ILOSTAT bulk download; no API on www host.",
     "instdb": "Institutional CRIS; generic /api per site.",
     "jacq": "Herbarium REST is on api.jacq.org, not each Virtual Herbaria catalog link.",
     "jdop": "Zhejiang JDOP portals; no documented anonymous default API path.",
     "mangomap": "MangoMap hosted maps; no shared catalog API on /maps URLs.",
     "mapapps": "con terra map.apps; OWS service names are instance-specific.",
     "mapbiomas": "MapBiomas country platforms; no shared catalog API on plataforma URLs.",
-    "mapserver": "MapServer CGI/OWS path is instance-specific (not a generic /geomet).",
     "masterportal": "Masterportal config/service JSON names are instance-specific.",
     "modaopendata": "Taiwan MODA OpenAPI swagger path is not present on all city portals.",
     "netgisserver": "NetCAD KEOS/NetGIS; no documented public REST on /keos URLs.",
@@ -3044,7 +3232,7 @@ NO_STANDARD_PROBE = {
     "wagmap": "わが街ガイド HTML geoportals; /opendata/ is HTML, not a harvest API.",
     "weboffice": "VertiGIS WebOffice; no standard relative catalog API on the viewer URL.",
     "vertigisstudioweb": "VertiGIS Studio Web viewer; no standard relative catalog API on the viewer URL.",
-    "whoint": "WHO website; not a data API on link.",
+    "whoint": "GHO Indicator API is ghoapi.azureedge.net; do not copy that hub onto both www.who.int and data.who.int.",
     "easydb": "easydb 5 / fylr; /api/v1/session is session metadata, not a catalog dump.",
     "rudi": "RUDI portal metadata search needs an authenticate token; node /api/v1/resources is not on the portal host.",
     "onegeosuite": "Explorer catalog UI; no verified anonymous metadata API on the catalog link.",
@@ -3124,11 +3312,13 @@ NO_STANDARD_PROBE.update(
             "ctmgeo",
             "datumgis",
             "digitaltwincloud",
+            "dmaps",
             "dmcity",
             "doblesvisor",
             "dpwebmap",
             "ekmap",
             "emapa",
+            "enmapa",
             "envimap",
             "evald",
             "experiencebuilder",
@@ -3139,7 +3329,9 @@ NO_STANDARD_PROBE.update(
             "gdivisios",
             "genegis",
             "geoambiental",
+            "geoapps",
             "geodeticca",
+            "geoitgis",
             "geometa",
             "geonube",
             "geopixel",
@@ -3152,6 +3344,7 @@ NO_STANDARD_PROBE.update(
             "gis4u",
             "gisapp",
             "giscity",
+            "gfmaplet",
             "gismaster",
             "gisonline",
             "gisplan",
@@ -3167,13 +3360,16 @@ NO_STANDARD_PROBE.update(
             "iobcina",
             "isymap",
             "k5mapserver",
+            "kaartviewer",
             "kazgisaopenlayers",
             "kcwebgis",
             "kortinfo",
             "landfolio",
+            "ldpgis",
             "localmaps",
             "loftmyndir",
             "louhi",
+            "map2web",
             "mapguide",
             "mapotip",
             "mapplus",
@@ -3187,6 +3383,7 @@ NO_STANDARD_PROBE.update(
             "myeongji",
             "nazca",
             "netgisruntime",
+            "nieuwlandonemap",
             "orbismap",
             "ovie",
             "pmapper",
@@ -3194,14 +3391,21 @@ NO_STANDARD_PROBE.update(
             "publicmaps",
             "rgis",
             "sampaswebgis",
+            "scalargis",
             "seasketch",
+            "sigale",
             "sigimweb",
+            "sitmun",
             "sitwebgis",
+            "smartgis",
             "smartmap",
             "softpro",
             "spatialsuite",
             "spectrumspatial",
             "sputnikweb",
+            "earthlight",
+            "nexuspublicportal",
+            "zeljkogis",
             "terratwin",
             "tobel",
             "touviamaps",
@@ -3239,5 +3443,9 @@ NO_STANDARD_PROBE.update(
         "webmain": "webMain.aspx sys=/funid= trees are instance-specific; no relative catalog API.",
         "terristory": "Regional hub UI; no shared relative catalog API.",
         "virtuallmi": "No anonymous list API; harvest VLMI profile tables.",
+        "kosis": "KOSIS OpenAPI needs a service key; harvest the public table tree.",
+        "estat": "e-Stat API on api.e-stat.go.jp needs an app ID; dashboard vs LOD hosts differ.",
+        "comtradeplus": "Comtrade API is on comtradeapi.un.org and needs a subscription key.",
+        "ourworldindata": "No relative list API on the catalog link; harvest sitemap/chart topics.",
     }
 )

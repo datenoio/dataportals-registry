@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HR
+      name: Croatia
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: HR-03
+      name: Sisačko-moslavačka županija
+description: Public county geoportal of the Sisak-Moslavina Institute for Spatial
+  Planning, with OpenLayers map layers and a GeoServer WFS of spatial plans and cadastre.
+endpoints:
+- type: wfs200
+  url: https://zpusmz.geoportal.hr/wfs?service=WFS&request=GetCapabilities
+  version: 2.0.0
+id: zpusmzgeoportalhr
+langs:
+- id: HR
+  name: Croatian
+link: https://zpusmz.geoportal.hr/
+name: Geoportal ZPUSMZ
+owner:
+  link: https://www.zpusmz.hr/
+  location:
+    country:
+      id: HR
+      name: Croatia
+    level: 30
+    subregion:
+      id: HR-03
+      name: Sisačko-moslavačka županija
+  name: Zavod za prostorno uređenje Sisačko-moslavačke županije
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- GIS
+- Croatia
+- spatial planning
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00006270

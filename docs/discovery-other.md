@@ -61,6 +61,7 @@ Shared software that sometimes maps here:
 |---------------|-------------|------------|
 | `openmlorg` | see above | |
 | `huggingface` | Hugging Face Datasets Hub | Site: [huggingface.co/datasets](https://huggingface.co/datasets/). Confirm the datasets catalog. Do not add per-user spaces. |
+| `kaggle` | Kaggle Datasets hub | Site: [kaggle.com/datasets](https://www.kaggle.com/datasets). Confirm the datasets catalog. One hub, not per notebook. |
 | `codalab` | CodaLab Competitions hub | Site: [competitions.codalab.org](https://competitions.codalab.org). Confirm the public competitions list. One hub, not per competition. Distinct from `codabench`. |
 | `codabench` | Codabench hub | Site: [codabench.org](https://www.codabench.org). Confirm title `Codabench`. One hub, not per benchmark. Distinct from `codalab`. |
 | `grandchallenge` | Grand Challenge hub | Site: [grand-challenge.org](https://grand-challenge.org). Confirm the public challenges/archives UI. One hub, not per challenge. |
@@ -82,6 +83,20 @@ Open machine-learning dataset/task/flow repository. Hub: [openml.org](https://ww
 | Google | `"OpenML" (datasets OR "machine learning") -site:github.com` |
 | Censys | `web.names: "openml.org"` |
 | FOFA | `domain="openml.org"` |
+
+## Kaggle (`kaggle`) {#kaggle}
+
+Kaggle Datasets hub: [kaggle.com/datasets](https://www.kaggle.com/datasets). Distinct from OpenML (`openmlorg`) and Hugging Face (`huggingface`).
+
+**Signals:** host `kaggle.com/datasets`; Kaggle Datasets chrome.
+
+**Confirm:** GET the public datasets catalog. One hub, not per notebook, competition, or user dataset page.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:kaggle.com/datasets` |
+| Censys | `web.names: "kaggle.com"` |
+| FOFA | `host="kaggle.com"` |
 
 ## CodaLab Competitions (`codalab`) {#codalab}
 

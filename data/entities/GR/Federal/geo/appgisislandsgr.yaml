@@ -13,7 +13,7 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Spatial data infrastructure for the Greek islands. GET SDI Portal operated
   with the DAFNI network, including thematic viewers such as traditional windmills.
@@ -81,3 +81,6 @@ endpoints:
 - type: wcs201
   url: https://app.gisislands.gr/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
   version: 2.0.1
+- type: csw202
+  url: https://app.gisislands.gr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2

@@ -20,6 +20,15 @@ description: A publicly available STAC instance cataloging our data for the publ
 endpoints:
 - type: stacserverapi
   url: https://stac.earthgenome.org/
+- type: stacserverapi:collections
+  url: https://stac.earthgenome.org/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac.earthgenome.org/conformance
+  version: '1.0'
+- type: openapi
+  url: https://stac.earthgenome.org/api
+  version: '3.0'
 id: stacearthgenomeorg
 langs:
 - id: EN

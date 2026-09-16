@@ -22,6 +22,12 @@ description: STAC KAGIS - Land Kärnten (Carinthia, Austria)
 endpoints:
 - type: stacserverapi
   url: https://gis.ktn.gv.at/api/stac/v1/
+- type: stacserverapi:collections
+  url: https://gis.ktn.gv.at/api/stac/v1/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://gis.ktn.gv.at/api/stac/v1/conformance
+  version: '1.0'
 id: gisktngvatapistacv1
 langs:
 - id: DE

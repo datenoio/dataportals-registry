@@ -24,6 +24,15 @@ endpoints:
 - type: openapi
   url: https://api.explorer.eopf.copernicus.eu/stac/api
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://api.explorer.eopf.copernicus.eu/stac/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://api.explorer.eopf.copernicus.eu/stac/conformance
+  version: '1.0'
+- type: stacserverapi:stac-root
+  url: https://api.explorer.eopf.copernicus.eu/stac/stac
+  version: '1.0'
 id: apiexplorereopfcopernicuseu
 langs:
 - id: EN

@@ -644,6 +644,69 @@ Sitowise municipal GIS public map viewer. Site: [sitowise.com Louhi](https://www
 | Censys | `web.endpoints.http.body: "partner=stw"` |
 | FOFA | `body="partner=stw"` |
 
+## NieuwlandGeo Onemap (`nieuwlandonemap`) {#nieuwlandonemap}
+
+Dutch municipal map SaaS from [NieuwlandGeo](https://www.nieuwlandgeo.nl/producten/onemap/). Public tenants live at `{org}.webgis.nl`. Distinct from Singapore OneMap, NC OneMap, Maldives OneMap, Chinese OneMapServer, and from GeoServer backends on the same organisation (`geoserver`).
+
+**Signals:** hostname `*.webgis.nl`; Onemap / WebGIS chrome.
+
+**Confirm:** GET the tenant and match the Onemap viewer. One record per public tenant. Skip `webgis.nl`, `onemap.nl`, `gemeenten.webgis.nl` marketing/demo, test tenants, and login-only hosts.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:webgis.nl Onemap OR WebGIS` |
+| Google | `"Onemap" NieuwlandGeo (gemeente OR geoportaal) site:.nl` |
+| Censys | `web.names: "webgis.nl"` |
+| FOFA | `host="webgis.nl"` |
+| crt.sh | `%.webgis.nl` |
+
+## KaartViewer (`kaartviewer`) {#kaartviewer}
+
+GeoSquare / GeoNovation municipal GIS. Product: [geosquare.nl/kaartviewer](https://www.geosquare.nl/kaartviewer/). Tenants at `{org}.kaartviewer.nl` or a city hostname (`kaart.utrecht.nl`, `kaartviewer.maastricht.nl`). Distinct from GeoServer on the same estate (`geoserver`).
+
+**Signals:** hostname `*.kaartviewer.nl` or title KaartViewer; `/admin/rest/kaartviewerapi/menu`; `/?@Openbaar`.
+
+**Confirm:** GET the public viewer or `/admin/rest/kaartviewerapi/menu`. One record per tenant, not per menu map. Skip vendor demos and login-only OD viewers.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:kaartviewer.nl` |
+| Google | `"KaartViewer" (gemeente OR omgevingsdienst) site:.nl` |
+| Censys | `web.names: "kaartviewer.nl"` |
+| FOFA | `host="kaartviewer.nl"` |
+| crt.sh | `%.kaartviewer.nl` |
+
+## GeoApps (`geoapps`) {#geoapps}
+
+Dutch hosted map-app SaaS. Product: [geoapps.nl](https://www.geoapps.nl/). Public viewers use `{org}.geoapps.nl` or a branded host. Most `{org}.geoapps.nl` tenants are staff login — register only unauthenticated public maps. Distinct from generic “geo apps” pages.
+
+**Signals:** hostname `*.geoapps.nl`; GeoApps chrome; public project map without SSO.
+
+**Confirm:** GET the map and confirm it lists layers without login. One record per public viewer. Skip login walls.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:geoapps.nl (kaart OR projectenkaart)` |
+| Google | `"GeoApps" (gemeente OR regio) site:.nl` |
+| Censys | `web.names: "geoapps.nl"` |
+| FOFA | `host="geoapps.nl"` |
+| crt.sh | `%.geoapps.nl` |
+
+## SITMUN (`sitmun`) {#sitmun}
+
+Diputació de Barcelona municipal GIS. Public catalog: [sitmun.diba.cat](https://sitmun.diba.cat/). Distinct from ArcGIS REST on the same estate.
+
+**Signals:** host `sitmun.diba.cat`; SITMUN chrome.
+
+**Confirm:** GET the public viewer. One record per public SITMUN catalog, not per municipality overlay.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:sitmun.diba.cat` |
+| Google | `"SITMUN" (Diputació OR municipi) site:.cat` |
+| Censys | `web.names: "sitmun.diba.cat"` |
+| FOFA | `host="sitmun.diba.cat"` |
+
 ## dmCity (`dmcity`) {#dmcity}
 
 Esri Finland municipal digital-city SaaS. Product: [esri.fi/tuotteet/dmcity](https://www.esri.fi/fi-fi/tuotteet/dmcity/intro). Public map tenants wrap Experience Builder. Distinct from generic Experience Builder (`experiencebuilder`) and from `{city}.dmcity.fi/server` REST (`arcgisserver`).
@@ -707,6 +770,22 @@ Open-source Swedish web GIS (React, Material UI, OpenLayers). Site: [hajkmap.git
 | Censys | `web.endpoints.http.html_title: "Hajk - open source webGIS"` |
 | FOFA | `title="Hajk - open source webGIS"` |
 
+## ScalarGIS (`scalargis`) {#scalargis}
+
+Open-source Flask / OpenLayers WebGIS from WKT-SI. Product: [wkt.pt](https://www.wkt.pt/). Source: [scalargis/scalargis-server](https://github.com/scalargis/scalargis-server) and [scalargis/scalargis-client](https://github.com/scalargis/scalargis-client). Distinct from older WKT CartoMapas viewers (Alcoutim, Alcácer do Sal) and from GeoServer (`geoserver`) backends on the same estate (DGT `geo2.dgterritorio.gov.pt/geoserver`).
+
+**Signals:** HTML title `ScalarGIS` or DGT “WebSIG” chrome that loads `/scalargis/static/viewer/` or `/static/viewer/`; splash `logo-splash.png`; cookie page `/static/viewer/rgpd.html`. Viewer paths include `/mapa/geoportal`, `/mapa/`, `/visualizadorCadastro`, `/vi-smos`, `/dgt`, `/portugal-visto-ceu`. Hosts are typically `geoportal.cm-{muni}.pt`, `*.dgterritorio.gov.pt`, or `geosifor.sgifr.gov.pt`.
+
+**Confirm:** GET the public viewer and match title `ScalarGIS` or `/static/viewer/` assets. One record per public tenant, not per named map path on the same hub (SMOS viSMOS / COScid / COSvgi stay one catalog; Algarve Acolhe is a map on IDEAlg). Skip WKT CartoMapas without the ScalarGIS splash, Contabo demos, and `/backoffice` login. Do **not** set `scalargis` from GeoServer `/geoserver` already registered on the same host, or from SNIG GeoNetwork (`geonetwork`).
+
+| Tool | Query |
+|------|-------|
+| Google | `intitle:ScalarGIS geoportal site:.pt` |
+| Google | `"logo-splash.png" OR inurl:/static/viewer/rgpd.html ScalarGIS` |
+| Censys | `web.endpoints.http.html_title: "ScalarGIS"` |
+| FOFA | `title="ScalarGIS"` |
+| crt.sh | `%.wkt.pt` |
+
 ## Origo (`origo`) {#origo}
 
 Open-source OpenLayers web GIS from Origosamverkan. Product: [origomap.se](https://origomap.se/). Source: [origo-map/origo](https://github.com/origo-map/origo). Docs: [origo-map.github.io/origo-documentation](https://origo-map.github.io/origo-documentation/latest/). Distinct from Hajk (`hajk`), myCarta (`mycarta`), MapGuide Fusion (`mapguide`), and GeoServer (`geoserver`) catalogs on the same host.
@@ -721,6 +800,21 @@ Open-source OpenLayers web GIS from Origosamverkan. Product: [origomap.se](https
 | Google | `"Origosamverkan" OR origomap webbkarta` |
 | Censys | `web.endpoints.http.body: "origo.min.js"` |
 | FOFA | `body="origo.min.js"` |
+
+## Tailormap (`tailormap`) {#tailormap}
+
+Open-source Angular / OpenLayers GIS viewer from B3Partners. Product: [tailormap.com](https://www.tailormap.com/). Source: [B3Partners/tailormap-viewer](https://github.com/B3Partners/tailormap-viewer). API: [B3Partners/tailormap-api](https://github.com/B3Partners/tailormap-api). Distinct from GeoServer (`geoserver`) catalogs on the same estate and from GeoSquare KaartViewer / NieuwlandGeo Onemap on other Dutch municipal hosts.
+
+**Signals:** HTML title `Tailormap`; Angular `data-beasties-container`; path `/nl/app/{app}` or `/nl/page/`; JSON `GET /api/app/{app}`; older B3P portal `/portal/page/extern`. Hosts are typically `{org}.tailormap.nl`, `{org}.tailormap.com`, or a city GIS host that redirects there (Lelystad `kaart.lelystad.nl`).
+
+**Confirm:** GET the public viewer or `/nl/page/startpagina` and match the title or `/api/app/{app}` JSON. One record per public tenant, not per named app path. Skip `demo.tailormap.com`, `snapshot.tailormap.nl`, workshop/cursus/temp hosts, `luchtfoto-*` tile CDNs, and login-only staff GIS. Do **not** set `tailormap` from GeoServer `/geoserver/web/` on a Warmteatlas/WIBON host that is already registered as `geoserver`.
+
+| Tool | Query |
+|------|-------|
+| Google | `intitle:Tailormap site:.nl -snapshot -demo` |
+| Google | `site:tailormap.nl OR site:tailormap.com gemeente OR viewer` |
+| Censys | `web.endpoints.http.html_title: "Tailormap"` |
+| FOFA | `title="Tailormap"` |
 
 ## myCarta (`mycarta`) {#mycarta}
 
@@ -850,7 +944,7 @@ Autodesk MapGuide Open Source / MapGuide Enterprise. Hungarian CityScape E-GOV c
 
 **Signals:** path `/mapguide/` or `/mapguide2010/`; `mapviewerphp/ajaxviewer.php`; Fusion `fusionSF.js`; CityScape E-GOV / Arkance Twigis branding.
 
-**Confirm:** GET the public `internet.php` or MapGuide viewer. Fusion `/mapguide/fusion/` clients (for example Umeåkartan) are `mapguide`, not `origo`. One record per municipality. Do **not** set `mapguide` from a Hungarian `/Admin/GeoForte/` EnviMAP tenant. Do **not** set `mapguide` on Indixio SIGim Web (`sigimweb`).
+**Confirm:** GET the public `internet.php` or MapGuide viewer. Fusion `/mapguide/fusion/` clients (for example Umeåkartan) are `mapguide`, not `origo`. One record per municipality. Do **not** set `mapguide` from a Hungarian `/Admin/GeoForte/` EnviMAP tenant. Do **not** set `mapguide` on Indixio SIGim Web (`sigimweb`), Geo-IT GIS Touch Viewer (`geoitgis`), or Zeljko GIS (`zeljkogis`).
 
 | Tool | Query |
 |------|-------|
@@ -858,6 +952,38 @@ Autodesk MapGuide Open Source / MapGuide Enterprise. Hungarian CityScape E-GOV c
 | Google | `"CityScape E-GOV" OR mapviewerphp MapGuide` |
 | Censys | `web.endpoints.http.body: "mapviewerphp/ajaxviewer.php"` |
 | FOFA | `body="mapviewerphp/ajaxviewer.php"` |
+
+## Zeljko GIS (`zeljkogis`) {#zeljkogis}
+
+Zeljko d.o.o. municipal and county Web GIS for Croatia and Bosnia and Herzegovina. Product: [zeljko.hr/webgis.html](https://www.zeljko.hr/webgis.html). Distinct from generic MapGuide (`mapguide`) even though Fusion tenants load `/mapguide25/fusion/`, `/mapguide252/fusion/`, or `/mapguide26/fusion/`.
+
+**Signals:** hostname `zeljko-gis.com` or `zopcina.zeljko-gis.com`; Fusion `ApplicationDefinition=Library://` on mapguide25/252/26 templates (GradZadar, Psz, slate, obz, Vsz, Bpz); cadastral search UI at `zopcina.zeljko-gis.com/{tenant}/` or `/eki/`; footer `Izrada: Zeljko d.o.o.`; county host that still loads the same Fusion `ApplicationDefinition` (for example `gis.bpzzpu.hr:8008/mapguide/fusion/`).
+
+**Confirm:** GET the public Fusion viewer or cadastral UI. One record per public tenant (city or county), not a second cadastral path of the same county map (`/eki/zadar/` with Grad Zadar Fusion, `zopcina.zeljko-gis.com/vsz/` with VSZ Fusion). Skip gas-utility ports (`Termoplin.GIS`), `Gis.Administrator`, Apache “It works!” on `:8008`, and Ajax Viewer layouts that only say “Cannot establish connection” (Jablanica). Do **not** set `mapguide` from `zeljko-gis.com` or `zopcina.zeljko-gis.com`.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:zeljko-gis.com fusion OR GIS` |
+| Google | `site:zopcina.zeljko-gis.com GIS` |
+| Censys | `web.names: "zeljko-gis.com"` |
+| FOFA | `host="zeljko-gis.com"` |
+| crt.sh | `%.zeljko-gis.com` |
+
+## Geo-IT GIS Touch Viewer (`geoitgis`) {#geoitgis}
+
+Geo-IT hosted Flemish municipal GIS. Product: [Geo-IT GIS Raadplegen](https://geoit.be/nl/producten/geo-it-gis/geo-it-gistm-module-raadplegen-0). Distinct from generic MapGuide (`mapguide`) even though tenants pass `Library://Gemeenten/{City}/Maps/*.MapDefinition` query strings.
+
+**Signals:** hostname `geoitgis.geo-it.be`; path `/touchviewer/`; title `Geo-IT GIS™ Touch Viewer`; scripts `Content/js/jquery/geoit.widgets.js`, `mg-api.js`, `mg-viewer-base-widget.js`; OpenLayers 4.
+
+**Confirm:** GET the public Touch Viewer (not the Geo-IT marketing site). One record per municipality tenant, not per themed MapDefinition. Skip cemetery-only and campaign maps. Do **not** set `mapguide` from `/touchviewer/` or `MapDefinition` query strings.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:geoitgis.geo-it.be/touchviewer` |
+| Google | `"Geo-IT GIS" "Touch Viewer" geoloket` |
+| Censys | `web.names: "geoitgis.geo-it.be"` |
+| FOFA | `host="geoitgis.geo-it.be"` |
+| crt.sh | `geoitgis.geo-it.be` |
 
 ## SIGimWeb (`sigimweb`) {#sigimweb}
 
@@ -873,6 +999,54 @@ Indixio SIGim Web municipal GIS for Quebec MRCs and cities. Product: [indixio.co
 | Google | `"SIGimWeb" OR "SIGim Web" (MRC OR municipalité) cartographie` |
 | Censys | `web.endpoints.http.html_title: "SIGimWeb"` |
 | FOFA | `title="SIGimWeb"` |
+
+## Geocentriq (`geocentriq`) {#geocentriq}
+
+CIM hosted Quebec municipal GIS for graphic matrices, assessment rolls, cadastre, and orthophotos. Product: [Geocentriq](https://geocentriq.com/). Distinct from GeoCentralis (`geocentralis`), SIGimWeb (`sigimweb`), GOnet (`goazimut.com/GOnet6`), and SIGALE (`sigale.ca`).
+
+**Signals:** host `app.geocentriq.com`; path `/mrc/{mrc}`; title `{MRC} - Geocentriq`; scripts `geocentriq.min.js`. Confirm the product assets, not a hostname containing only `geo`.
+
+**Confirm:** GET the MRC tenant URL and match Geocentriq branding plus a municipality picker or public map. One record per public MRC tenant, not per `/municipalite/` path. Skip the marketing homepage and `/login`.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:app.geocentriq.com/mrc` |
+| Google | `"Geocentriq" (MRC OR municipalité) (matrice OR cadastre)` |
+| Censys | `web.names: "app.geocentriq.com"` |
+| FOFA | `host="app.geocentriq.com"` |
+| crt.sh | `app.geocentriq.com` |
+
+## GeoCentralis (`geocentralis`) {#geocentralis}
+
+Évimbec hosted Quebec municipal GIS for graphic matrices, assessment rolls, cadastre, and zoning. Product: [GeoCentralis](https://www.geocentralis.com/). Distinct from Geocentriq (`geocentriq`), SIGimWeb (`sigimweb`), GOnet (`goazimut.com/GOnet6`), and SIGALE (`sigale.ca`).
+
+**Signals:** host `portail.geocentralis.com`; path `/public/sig-web/{mrc}/{code}/` or `/public/sig-web-zonage/{slug}/{code}/`; title `GeoCentralis`; assets on `geocentralis-evaluationapp-prod.s3.amazonaws.com`. Confirm the product branding, not a hostname containing only `geo`.
+
+**Confirm:** GET a municipality path under the MRC or city slug and match GeoCentralis branding plus a municipality picker or public map. One record per public MRC or city slug, not per geo-code path. Skip the marketing homepage, staff `/core/login/`, and a second zonage URL for the same tenant.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:portail.geocentralis.com/public/sig-web` |
+| Google | `"GeoCentralis" (MRC OR municipalité) (matrice OR cadastre OR zonage)` |
+| Censys | `web.names: "portail.geocentralis.com"` |
+| FOFA | `host="portail.geocentralis.com"` |
+| crt.sh | `portail.geocentralis.com` |
+
+## SIGALE (`sigale`) {#sigale}
+
+Fédération québécoise des municipalités graphic-matrix GIS (Altus). Product: [SIGALE](https://sigale.ca/). Distinct from Geocentriq (`geocentriq`), GeoCentralis (`geocentralis`), SIGimWeb (`sigimweb`), and GOnet (`goazimut.com/GOnet6`).
+
+**Signals:** host `sigale.ca`; path `Main.aspx?mrc={code}`, `Map.aspx?mrc={code}`, or `/?mrc={code}`; title `Sigale - Fédération Québécoise des municipalités`; Contribuable municipality picker.
+
+**Confirm:** GET the MRC-coded URL and match SIGALE branding plus a public map or assessment form. One record per public MRC code, not per municipality in the picker. Skip the hub without an `mrc` parameter.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:sigale.ca Main.aspx mrc=` |
+| Google | `"sigale.ca" (MRC OR matrice) (contribuable OR cadastre)` |
+| Censys | `web.names: "sigale.ca"` |
+| FOFA | `host="sigale.ca"` |
+| crt.sh | `sigale.ca` |
 
 ## SeaSketch (`seasketch`) {#seasketch}
 
@@ -987,7 +1161,7 @@ MapInfo / Pitney Bowes municipal web GIS, superseded by Precisely Spectrum Spati
 
 Eagle Technology web GIS for New Zealand councils, on ArcGIS. Product: [LocalMaps](https://www.eagle.co.nz/gis-solutions/industry-solutions/localmaps). Public tenants show title **LocalMaps Gallery**.
 
-**Signals:** path `/localmaps/gallery`; title `LocalMaps Gallery`; sometimes a branded `/{Council}Maps/Gallery/` path that still says LocalMaps in the HTML.
+**Signals:** path `/localmaps/gallery`; title `LocalMaps Gallery`; sometimes a branded `/{Council}Maps/Gallery/` path (Invercargill `ICCMaps/Gallery`) that still says LocalMaps in the HTML.
 
 **Confirm:** GET the gallery and match LocalMaps. One record per council gallery, not per map in the gallery. Do **not** set `localmaps` on the ArcGIS REST `/arcgis/rest/services` directory on the same host (`arcgisserver`), on IntraMaps, Geocortex, Ruapehu InfoMap, or generic Experience Builder apps. Do not bulk-add guessed `{city}.govt.nz/localmaps/` hosts.
 
@@ -1061,6 +1235,38 @@ Technical Design S.r.l. municipal Web GIS (GeoPortale GisMaster / GisMasterWeb).
 | Censys | `web.names: "geoportale.sportellounicodigitale.it"` |
 | FOFA | `host="geoportale.sportellounicodigitale.it"` |
 
+## LDP SIT (`ldpgis`) {#ldpgis}
+
+LDP Progetti GIS hosted municipal territorial information system (SIT) with **LdP Viewer**. Product: [LDP GIS](https://www.ldpgis.it/). Tenants: `cloud.ldpgis.it/{slug}/`, `sct-*.ldpgis.it`, `maps1.ldpgis.it/{slug}/`, and city-owned hosts such as `maps.comune.arezzo.it`. Distinct from Drupal as the public catalog (`drupal` is only the CMS shell), from GeneGIS PAGIS (`genegis`), and from Maggioli GFMaplet (`gfmaplet`).
+
+**Signals:** host `*.ldpgis.it`; title “Sistema Informativo Territoriale”; **LdP Viewer** / `ldpviewer`; `helpdesk@ldpgis.it`; OpenLayers map on `/maps/` or similar.
+
+**Confirm:** GET the public municipal SIT and match LdP Viewer / ldpgis.it. One record per comune or union slug. Skip the vendor marketing hub `cloud.ldpgis.it/` with no slug and empty placeholder tenants that only repeat the LDP product homepage. Do **not** set `ldpgis` from a generic Drupal SIT title without LdP Viewer / ldpgis.it / helpdesk signals. Do not add MapCreator as a second catalog of the same comune.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:cloud.ldpgis.it` |
+| Google | `"LdP Viewer" OR "helpdesk@ldpgis.it" (SIT OR "Sistema Informativo Territoriale") site:.it` |
+| Censys | `web.names: "ldpgis.it"` |
+| FOFA | `domain="ldpgis.it"` |
+| crt.sh | `%.ldpgis.it` |
+
+## GFMaplet (`gfmaplet`) {#gfmaplet}
+
+GLOBO S.r.l. (Gruppo Maggioli) Web GIS for Italian municipal and provincial geoportals, often embedded in Sportello Telematico Unificato (STU) Drupal pages. Product: [Cartografia Online](https://www.sportellotelematicopolifunzionale.it/cartografia-online). Tenants: `{comune}.prod.globogis.com` and city sportello hosts with a geoportale page. Distinct from GisMaster (`gismaster`) on `sportellounicodigitale.it`, from ATM Maggioli (`atmmaggioli`) Spanish open data, and from ArcGIS Server as the public catalog.
+
+**Signals:** path `/page:s_italia:geoportale` or a comune-specific `/page:*:geoportale`; `/stu-geoportale-cartography`; `/gfmaplet/`; host `*.prod.globogis.com`; “Powered by GFMaplet”; Maggioli STU geoportale branding.
+
+**Confirm:** GET the geoportale page (not the sportello form home) and match GFMaplet / Maggioli STU cartography. One record per geoportale tenant. Do **not** add `cartografia*.maggioli.cloud` ArcGIS REST as a second catalog of the same STU geoportale. Do **not** set `gfmaplet` from a Drupal geoportal that only links a GFMaplet user manual when the registered catalog is ArcGIS REST. Do not set `gfmaplet` on GisMaster `IdCliente=` pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:prod.globogis.com geoportale` |
+| Google | `"Powered by GFMaplet" OR inurl:/page:s_italia:geoportale` |
+| Censys | `web.names: "globogis.com"` |
+| FOFA | `domain="globogis.com"` |
+| crt.sh | `%.prod.globogis.com` |
+
 ## SmartMap (`smartmap`) {#smartmap}
 
 Hosted Kazakh district investment geoportals. Tenants share `{district}.smartmap.kz`. Distinct from Geonomics (`geonomics`) akimat regional portals.
@@ -1076,6 +1282,22 @@ Hosted Kazakh district investment geoportals. Tenants share `{district}.smartmap
 | Censys | `web.names: "smartmap.kz"` |
 | FOFA | `domain="smartmap.kz"` |
 | crt.sh | `%.smartmap.kz` |
+
+## SmartGIS (`smartgis`) {#smartgis}
+
+GEO municipal Web GIS (2D/3D viewer). Product: [smartgis.geo.rs](https://smartgis.geo.rs). Docs: [smartgis-docs.geo.rs](https://smartgis-docs.geo.rs). Distinct from Kazakhstan SmartMap (`smartmap`), Greek GIS4Smart (`gis4smart`), GDi Visios (`gdivisios`), Indonesian GeoNode hosts named smartgis, Malaysian ArcGIS smartGIS portals, and unrelated SmartGIS brands (`smartgis.cz`, `smartgis.id`, `gis.smartview.hr`).
+
+**Signals:** HTML title exactly `SmartGIS`; Angular `<app-root></app-root>`; `var point_cloud = null;` / `var viewer = null;`; `base href="/"`; hosts `{tenant}.geo.rs` or a city GIS hostname (`gis.topola.rs`, `suboticagis.rs`).
+
+**Confirm:** GET the public viewer (not the marketing homepage). One record per public tenant, not per project map. Do **not** set `smartgis` from a title that only contains the word SmartGIS. Skip `smartgis.geo.rs`, `smartgis-docs.geo.rs`, `*-beta*` hosts, `www.`/`beta.` aliases of an existing tenant, and vendor demos (`smartgis-app.geo.rs`, `smartgis-gf.geo.rs`, `smartgis-geoput.geo.rs`).
+
+| Tool | Query |
+|------|-------|
+| Google | `intitle:SmartGIS (geoportal OR GIS) site:.rs` |
+| Google | `site:geo.rs SmartGIS -docs -beta` |
+| Censys | `web.endpoints.http.html_title: "SmartGIS"` |
+| FOFA | `title="SmartGIS" && country="RS"` |
+| crt.sh | `%.geo.rs` |
 
 ## KAZGISA RGIS (`rgis`) {#rgis}
 
@@ -1245,6 +1467,22 @@ Brazilian municipal cadastral WebGIS. Vendor: [ctmgeo.com.br](https://www.ctmgeo
 | Censys | `web.names: "ctmgeo.com.br"` |
 | FOFA | `host="ctmgeo.com.br"` |
 | crt.sh | `%.ctmgeo.com.br` |
+
+## GAUSS WebCity (`gausswebcity`) {#gausswebcity}
+
+Gauss d.o.o. Tuzla MapStore-based municipal and cantonal geoportal (also marketed as GAUSS WebPresenter). Product: [gauss.ba/en/solutions/gauss-webcity](https://gauss.ba/en/solutions/gauss-webcity/). Public tenants live at `{org}.gis.ba` or a city host with `/webcity/` loading `dist/mapstore2.js`. Distinct from generic MapStore (`mapstore`) and from VertiGIS WebOffice tenants branded WebCity (`weboffice`).
+
+**Signals:** title `WebCity` or `WebPresenter` plus GAUSS landing (`logo_gauss.png`, “Pristup za javnost”); path `/webcity/`; `dist/mapstore2.js`; hostname `*.gis.ba` (not `gis.ba` vendor home).
+
+**Confirm:** GET the public tenant home or `/webcity/` and match MapStore2 plus GAUSS branding. One record per public tenant. Skip `https://gis.ba/webcity/` vendor demo, hiking/forum/edu hosts, and login-only `/registered/` shells. Do **not** set `mapstore` or `weboffice` on these tenants.
+
+| Tool | Query |
+|------|-------|
+| Google | `"GAUSS WebCity" OR "logo_gauss" geoportal site:.ba` |
+| Google | `inurl:/webcity/ (općina OR kantona) site:.ba` |
+| Censys | `web.names: "gis.ba"` |
+| FOFA | `domain="gis.ba"` |
+| crt.sh | `%.gis.ba` |
 
 ## GISPLAN (`gisplan`) {#gisplan}
 
@@ -1713,6 +1951,22 @@ Cadcorp (NEC) public web GIS. Product: [cadcorp.com](https://www.cadcorp.com). D
 | Censys | `web.endpoints.http.body: "Cadcorp"` |
 | FOFA | `body="Cadcorp"` |
 
+## StatMap Earthlight (`earthlight`) {#earthlight}
+
+UK local-government browser GIS (StatMap). Product: [evo.statmap.co.uk/earthlight-evo](https://evo.statmap.co.uk/earthlight-evo/). Public Earthlight Portal / Earthlight Public tenants (and Aurora embeds of the same stack). Distinct from Astun iShare (`ishare`) and Cadcorp SIS WebMap (`cadcorp`). Live examples: [miltonkeynes.statmap.co.uk/map/map.html?login=ExternalELP](https://miltonkeynes.statmap.co.uk/map/map.html?login=ExternalELP), [maps.bcpcouncil.gov.uk/map/map.html?login=ExternalELP](https://maps.bcpcouncil.gov.uk/map/map.html?login=ExternalELP).
+
+**Signals:** HTML title `StatMap Earthlight`; path `/map/map.html` with `login=ExternalELP`; host `{authority}.statmap.co.uk` or council `maps.{council}.gov.uk/map/`; Aurora.svc embeds on the same `/map/` app.
+
+**Confirm:** GET `/map/map.html?login=ExternalELP` and match the Earthlight title. One record per public tenant, not per Aurora script or map layer. Skip intranet-only Earthlight Enterprise, HorizoNext planning/case portals (`*-publicportal.statmap.co.uk/horizonext`), and hosts that only serve the IIS default page.
+
+| Tool | Query |
+|------|-------|
+| Google | `"StatMap Earthlight" OR inurl:statmap.co.uk/map/map.html` |
+| Google | `"login=ExternalELP" Earthlight (maps OR GIS) site:.gov.uk` |
+| Censys | `web.endpoints.http.html_title: "StatMap Earthlight"` |
+| FOFA | `title="StatMap Earthlight"` |
+| crt.sh | `%.statmap.co.uk` (wildcard cert; still probe named tenants) |
+
 ## Geometa (`geometa`) {#geometa}
 
 Gems Development urban-planning GIS and public GIS OGD geoportals (Agate). Product: [geometa.ru](https://geometa.ru/), module docs [geometa.ru/module/agate](https://geometa.ru/module/agate/). Distinct from unrelated “GeoMeta” catalog products. Typical Russian regional tenants: `portal-gisogd.*`, `agate.*`.
@@ -2049,6 +2303,7 @@ Search the product title with the country TLD. One record per public catalog UI.
 | `geopixel` | see above | |
 | `ctmgeo` | see above | |
 | `dmcity` | `web.dmcity.fi/{city}/public/` | `site:web.dmcity.fi` |
+| `gausswebcity` | `{org}.gis.ba` / `/webcity/` | `domain="gis.ba"` |
 | `infogis` | `www.infogis.fi/{muni}/` | `site:infogis.fi` |
 | `experiencebuilder` | see [SDI](discovery-geoportals-sdi.md#experiencebuilder) | |
 | `webappbuilder` | see [SDI](discovery-geoportals-sdi.md#webappbuilder) | |
@@ -2107,6 +2362,9 @@ Search the product title with the country TLD. One record per public catalog UI.
 | `gisplan` | `{city}.gisplan.sk` / T-MAPY Spinbox | `"GISPLAN mesta" site:gisplan.sk` |
 | `genegis` | `{comune}.servizigis.it` / GeneGis Site Creator | `site:servizigis.it` |
 | `gismaster` | Maggioli `/GisMaster/` `IdCliente=` | `site:geoportale.sportellounicodigitale.it/GisMaster` |
+| `ldpgis` | `cloud.ldpgis.it/{slug}/` / LdP Viewer | `site:cloud.ldpgis.it` |
+| `gfmaplet` | `*.prod.globogis.com` / `/page:s_italia:geoportale` | `site:prod.globogis.com geoportale` |
+| `smartgis` | title `SmartGIS` Angular `<app-root>` `point_cloud` | `title="SmartGIS" && country="RS"` |
 | `smartmap` | `{district}.smartmap.kz` Leaflet | `site:smartmap.kz` |
 | `vkomap` | `/vkomap/` Leaflet + Esri, Geoinfo | `"vkomap" геопортал site:.kz` |
 | `isymap` | ISY Map / GeoInnsyn `/geoinnsyn/` | `"ISY Map" OR GeoInnsyn site:.no` |
@@ -2116,7 +2374,12 @@ Search the product title with the country TLD. One record per public catalog UI.
 | `piso` | geoprostor.net PisoPortal | `site:geoprostor.net PISO` |
 | `gdivisios` | `/visios/` GDi Ensemble viewer | `"GDi Visios" OR inurl:/visios/` |
 | `mapguide` | `/mapguide/` CityScape / ajaxviewer | `inurl:/mapguide/ internet.php` |
+| `zeljkogis` | `zeljko-gis.com` Fusion / `zopcina.zeljko-gis.com` | `site:zeljko-gis.com fusion` |
+| `geoitgis` | `geoitgis.geo-it.be/touchviewer/` title Geo-IT GIS Touch Viewer | `site:geoitgis.geo-it.be/touchviewer` |
 | `sigimweb` | `/sigimweb/` title SIGimWeb / `/gomap_web/` | `inurl:/sigimweb/ site:.qc.ca` |
+| `geocentriq` | `app.geocentriq.com/mrc/{mrc}` | `site:app.geocentriq.com/mrc` |
+| `geocentralis` | `portail.geocentralis.com/public/sig-web/{mrc}/{code}/` | `site:portail.geocentralis.com/public/sig-web` |
+| `sigale` | `sigale.ca/Main.aspx?mrc={code}` | `site:sigale.ca Main.aspx mrc=` |
 | `seasketch` | `seasketch.org/{project}/app` | `site:seasketch.org/app` |
 | `xymaps` | `maps.xymaps.com/{city}` / `/xymaps/Map` | `intitle:"powered by XY" MAPS` |
 | `pozi` | `{council}.pozi.com` title Pozi Web Map | `site:pozi.com "Pozi Web Map"` |
@@ -2161,6 +2424,7 @@ Search the product title with the country TLD. One record per public catalog UI.
 | `evergis` | see above | |
 | `ingeo` | see above | |
 | `farvatergisogd` | see above | |
+| `nexuspublicportal` | `/NexusPublicPortal/PublicPortal/Map` INS Nexus GIS | `inurl:/NexusPublicPortal/PublicPortal/Map` |
 
 ## CartoVista (`cartovista`) {#cartovista}
 
@@ -2440,3 +2704,65 @@ brain-SCC GmbH municipal geoportal CMS. Vendor: [brain-scc.de](https://www.brain
 | Google | `"GeoCMS" (brain-SCC OR Nordhessen OR Vogelsberg) geoportal` |
 | Censys | `web.endpoints.http.body: "brain-SCC"` |
 | FOFA | `body="brain-SCC"` |
+
+## DMAPS (`dmaps`) {#dmaps}
+
+NAXA municipal house-numbering GIS for Nepal palikas. Product: [dmaps.org](https://dmaps.org/). Distinct from Kathmandu `gis.kathmandu.gov.np` (custom), GeoNep `p.mapper`, and Bheemdatta `munportal.naxa.com.np`.
+
+**Signals:** HTML title `Digital Metric Addressing System` (or older `Changu Metric` / `SuryaBinayak Metric System`); shared Vite SPA `/assets/index-*.js`; host `{palika}.dmaps.org` or municipal `dmaps.` / `metric.` / `imas.` / `gis.` on `.gov.np`.
+
+**Confirm:** GET the public viewer and match the DMAPS title plus the Vite shell. One record per public municipal tenant. Do **not** add the marketing homepage `dmaps.org` or `app.dmaps.org`. Skip `*-dev` / `*-stag` / `dma-dev.naxa.com.np`.
+
+| Tool | Query |
+|------|-------|
+| Google | `intitle:"Digital Metric Addressing System"` |
+| Google | `site:dmaps.org` |
+| Censys | `web.endpoints.http.html_title: "Digital Metric Addressing System"` |
+| FOFA | `title="Digital Metric Addressing System"` |
+| FOFA | `domain="dmaps.org"` |
+| crt.sh | `%.dmaps.org` |
+
+## Map2Web (`map2web`) {#map2web}
+
+Schubert & Franzke municipal town-plan viewer. AT/DE/IT/LI tenants at `{city}.map2web.eu`; RO at `{region}-city.map2web.eu` / `{region}-county.map2web.eu`. One record per tenant; do not register the vendor marketing homepage.
+
+**Signals:** title `Map2Web`; Vue.js `/js/app.*.js`; `static.maptoolkit.net/mtk` and `static.maptoolkit.net/mtk.js` script tags.
+
+**Confirm:** GET `https://{tenant}.map2web.eu/`. Distinct from MS-GIS `{city}.msgis.net` title `{City} GeoInformation`.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:map2web.eu` |
+| crt.sh | `%.map2web.eu` |
+
+## EnMapa (`enmapa`) {#enmapa}
+
+Nexus Geographics hosted municipal web GIS for Spanish town councils. Product: [enMapa](https://www.nexusgeographics.com/enmapa). Public tenants live at `{city}.enmapa.com` (Cloudflare in front) and on city hosts such as `geoportal.{city}.cat/visor/guia`.
+
+**Signals:** HTML title `Enmapa` or `EnMapa v4.x`; `/visor/guia` or `visor-guia.jsp` paths; OpenLayers bundle plus `nexus` asset references; tenant cert hostnames on `enmapa.com`.
+
+**Confirm:** GET the public viewer and match the EnMapa title/shell. One record per municipality tenant. Skip `*.dev.enmapa.com`, `admin.*`, `demo.*`, `common.*`, and the CKAN open-data tenants on the same host family (`{city}-opendata.enmapa.com`, `opendata.{city}.enmapa.com` — those are `ckan` open data portals, not geoportals).
+
+| Tool | Query |
+|------|-------|
+| Google | `site:enmapa.com` |
+| Google | `"EnMapa" geoportal ajuntament` |
+| crt.sh | `%.enmapa.com` |
+| Censys | `web.endpoints.http.html_title: "EnMapa"` |
+| FOFA | `title="EnMapa"` |
+
+## Nexus Public Portal (`nexuspublicportal`) {#nexuspublicportal}
+
+INS (Skopje) municipal public web GIS, the public-portal module of Nexus GIS. Product: [Nexus GIS](https://nexus.ins.com.mk/). Public tenants live at `{city}.ins.com.mk/NexusPublicPortal/PublicPortal/Map` and on city hosts such as `gis.{city}.gov.mk/NexusPublicPortal/PublicPortal/Map`. Distinct from Spanish enMapa (`enmapa`, Nexus Geographics) and from Nexus Twin (`twin.{city}.gov.mk`).
+
+**Signals:** path `/NexusPublicPortal/PublicPortal/Map`; HTML title `Map - Public GIS Portal` or `Мапа - Јавен ГИС портал`; OpenLayers viewer with cadastral / GUP / DUP layer lists; tenant cert hostnames on `ins.com.mk`.
+
+**Confirm:** GET the public Map URL and match the Public GIS Portal title plus urban-plan or cadastre layers. One record per municipality. Prefer the official `gis.{city}.gov.mk` host when both that and `{city}.ins.com.mk` serve the same tenant. Skip `nexus.ins.com.mk` marketing, `nexusgis.ins.com.mk` demo, Field GIS, Nexus Twin, and AppCreator login workflows.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/NexusPublicPortal/PublicPortal/Map` |
+| Google | `"Јавен ГИС портал" OR "Public GIS Portal" site:.gov.mk` |
+| crt.sh | `%.ins.com.mk` |
+| Censys | `web.endpoints.http.html_title: "Public GIS Portal"` |
+| FOFA | `title="Public GIS Portal" && body="NexusPublicPortal"` |

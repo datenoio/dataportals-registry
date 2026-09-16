@@ -22,6 +22,18 @@ description: WorldPop STAC API is a specialized platform for accessing and analy
 endpoints:
 - type: stacserverapi
   url: https://api.stac.worldpop.org
+- type: stacserverapi
+  url: https://api.stac.worldpop.org/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://api.stac.worldpop.org/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://api.stac.worldpop.org/conformance
+  version: '1.0'
+- type: openapi
+  url: https://api.stac.worldpop.org/api
+  version: '3.0'
 id: apistacworldpoporg
 langs:
 - id: EN

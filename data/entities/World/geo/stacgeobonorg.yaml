@@ -20,6 +20,15 @@ description: Spatio Temporal Asset Catalog for layers used in BON in a Box, cour
 endpoints:
 - type: stacserverapi
   url: https://stac.geobon.org/
+- type: stacserverapi:collections
+  url: https://stac.geobon.org/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac.geobon.org/conformance
+  version: '1.0'
+- type: openapi
+  url: https://stac.geobon.org/api
+  version: '3.0'
 id: stacgeobonorg
 langs:
 - id: EN

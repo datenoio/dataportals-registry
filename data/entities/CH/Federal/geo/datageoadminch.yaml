@@ -21,6 +21,12 @@ description: Spatial Temporal Asset Catalog (STAC) API providing access to packa
 endpoints:
 - type: stacserverapi
   url: https://data.geo.admin.ch/api/stac/v0.9/
+- type: stacserverapi:collections
+  url: https://data.geo.admin.ch/api/stac/v0.9/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://data.geo.admin.ch/api/stac/v0.9/conformance
+  version: '1.0'
 id: datageoadminch
 langs:
 - id: EN

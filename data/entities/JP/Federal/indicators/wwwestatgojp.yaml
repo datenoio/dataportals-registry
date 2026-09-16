@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -16,6 +17,9 @@ coverage:
 description: Centralized portal for Japanese government statistics, providing search,
   browsing, and data visualization for official statistics published by various ministries
   and agencies.
+endpoints:
+- type: api
+  url: https://api.e-stat.go.jp/rest/3.0/app/json/getStatsList?lang=E
 id: wwwestatgojp
 langs:
 - id: EN
@@ -39,8 +43,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: estat
+  name: e-Stat
 status: active
 tags:
 - statistics

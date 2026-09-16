@@ -23,6 +23,9 @@ description: MapStore geoportal of Cleveland Metroparks for interactive mapping 
 endpoints:
 - type: mapstore:catalog
   url: https://mapstore.cmparks.net
+- type: csw202
+  url: https://mapstore.cmparks.net/geoserver/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
 id: mapstorecmparksnet
 langs:
 - id: EN

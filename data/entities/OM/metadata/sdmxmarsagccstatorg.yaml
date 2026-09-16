@@ -55,8 +55,8 @@ coverage:
       id: '145'
       name: Western Asia
 description: Structural metadata registry of the GCC Statistical Center for authoring,
-  maintaining, storing and exchanging SDMX-compliant Data Structure Definitions,
-  dataflows, codelists and concepts used in official GCC statistics.
+  maintaining, storing and exchanging SDMX-compliant Data Structure Definitions, dataflows,
+  codelists and concepts used in official GCC statistics.
 endpoints:
 - type: sdmx:dataflows
   url: https://sdmx.marsa.gccstat.org/FusionRegistry/ws/public/sdmxapi/rest/dataflow
@@ -66,6 +66,9 @@ endpoints:
   version: '2.1'
 - type: sdmx:codelist
   url: https://sdmx.marsa.gccstat.org/FusionRegistry/ws/public/sdmxapi/rest/codelist
+  version: '2.1'
+- type: sdmx:dataflows
+  url: https://sdmx.marsa.gccstat.org/FusionRegistry/ws/public/sdmxapi/rest/dataflow/all/all/latest?detail=allstubs
   version: '2.1'
 id: sdmxmarsagccstatorg
 langs:

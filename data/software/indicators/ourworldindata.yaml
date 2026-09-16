@@ -1,0 +1,64 @@
+category: Indicators catalog
+subtype: indicators_data_platform
+datatypes:
+  datasets: Compatible
+  fields: 'Yes'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: ourworldindata
+name: Our World in Data
+website: https://ourworldindata.org
+description: Our World in Data is Global Change Data Lab’s public catalog of
+  research indicators and charts on global development, health, energy, and
+  environment. The catalog UI is ourworldindata.org. Do not re-add the hub or
+  add every chart URL. Distinct from Gapminder (WordPress data-download page)
+  and from World Bank / WHO source hubs that OWID cites.
+owner:
+  name: Global Change Data Lab
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+logo_url: https://ourworldindata.org/favicon.ico
+documentation_url: https://docs.owid.io
+repository_url: https://github.com/owid/owid-grapher
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Global
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+license:
+  type: MIT
+  url: https://github.com/owid/owid-grapher/blob/master/LICENSE
+export_formats:
+- CSV
+- JSON
+capabilities:
+- Indicator charts
+- Data downloads
+last_updated: '2026-09-13T00:00:00Z'

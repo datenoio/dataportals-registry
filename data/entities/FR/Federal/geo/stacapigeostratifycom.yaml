@@ -24,6 +24,12 @@ endpoints:
 - type: openapi
   url: https://stac-api.geostratify.com/api
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://stac-api.geostratify.com/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac-api.geostratify.com/conformance
+  version: '1.0'
 id: stacapigeostratifycom
 langs:
 - id: EN

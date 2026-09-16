@@ -21,6 +21,15 @@ description: STAC API for the DestinE Data Lake (DEDL), powered by EODAG. The Da
 endpoints:
 - type: stacserverapi
   url: https://hda.data.destination-earth.eu/stac
+- type: stacserverapi
+  url: https://hda.data.destination-earth.eu/stac/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://hda.data.destination-earth.eu/stac/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://hda.data.destination-earth.eu/stac/conformance
+  version: '1.0'
 id: hdadatadestinationeartheustac
 langs:
 - id: EN

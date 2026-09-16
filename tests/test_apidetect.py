@@ -1146,6 +1146,12 @@ def test_every_named_software_id_is_mapped_or_skipped():
     assert leftover == [], leftover
 
 
+def test_tailormap_urlmap_is_registered():
+    assert "tailormap" in apidetect.CATALOGS_URLMAP
+    urls = [item["url"] for item in apidetect.CATALOGS_URLMAP["tailormap"]]
+    assert "/api/app" in urls
+
+
 def test_tianditu_urlmap_is_registered():
     assert "tianditu" in apidetect.CATALOGS_URLMAP
     urls = [item["url"] for item in apidetect.CATALOGS_URLMAP["tianditu"]]
@@ -1358,6 +1364,8 @@ def test_new_urlmaps_are_not_on_skip_list():
         "tr32db",
         "codalab",
         "librecat",
+        "ilostat",
+        "datauniceforg",
     ):
         assert sid in apidetect.CATALOGS_URLMAP
         assert sid not in NO_STANDARD_PROBE
@@ -3178,6 +3186,25 @@ def test_bitrix_opendata_keeps_locale_prefix():
     )
 
 
+def test_bitrix_php_catalog_probes_origin_opendata(monkeypatch):
+    class _BitrixPhpSession:
+        def get(self, url, **kwargs):
+            if url.rstrip("/").endswith("/opendata") and ".php" not in url:
+                return _html_ok(b"<html><title>Open data</title></html>")
+            return _html_404()
+
+        def post(self, *args, **kwargs):
+            return _html_404()
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _BitrixPhpSession())
+    found = apidetect.api_identifier(
+        "https://city.example.ru/city/open_information.php", "bitrix"
+    )
+    urls = [item["url"] for item in found]
+    assert "https://city.example.ru/opendata/" in urls
+    assert not any(".php/opendata" in item["url"] for item in found)
+
+
 def test_massbank_mount_link_does_not_double(monkeypatch):
     session = _SelectiveSession(
         {
@@ -3359,6 +3386,60 @@ def test_ecb_dataflow_uses_api_host(monkeypatch):
     assert any(item["type"] == "sdmx:dataflows" for item in found)
     assert not any(
         item["url"] == "https://data.ecb.europa.eu/service/dataflow" for item in found
+    )
+
+
+def test_bis_dataflow_uses_stats_api_host(monkeypatch):
+    session = _SelectiveSession(
+        {
+            "https://stats.bis.org/api/v1/dataflow": _xml_ok(b"<message:Structure/>"),
+        }
+    )
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: session)
+    found = apidetect.api_identifier("https://data.bis.org", "databisorg")
+    urls = [item["url"] for item in found]
+    assert "https://stats.bis.org/api/v1/dataflow" in urls
+    assert any(item["type"] == "sdmx:dataflows" for item in found)
+    assert not any(
+        item["url"] == "https://data.bis.org/api/v1/dataflow" for item in found
+    )
+
+
+def test_ilostat_dataflow_uses_sdmx_host(monkeypatch):
+    session = _SelectiveSession(
+        {
+            "https://sdmx.ilo.org/rest/dataflow": _xml_ok(b"<message:Structure/>"),
+        }
+    )
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: session)
+    found = apidetect.api_identifier("https://ilostat.ilo.org", "ilostat")
+    urls = [item["url"] for item in found]
+    assert "https://sdmx.ilo.org/rest/dataflow" in urls
+    assert any(item["type"] == "sdmx:dataflows" for item in found)
+    assert not any(
+        item["url"] == "https://ilostat.ilo.org/rest/dataflow" for item in found
+    )
+
+
+def test_unicef_dataflow_uses_sdmx_host(monkeypatch):
+    session = _SelectiveSession(
+        {
+            "https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/dataflow": _xml_ok(
+                b"<message:Structure/>"
+            ),
+        }
+    )
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: session)
+    found = apidetect.api_identifier("https://data.unicef.org", "datauniceforg")
+    urls = [item["url"] for item in found]
+    assert (
+        "https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/dataflow" in urls
+    )
+    assert any(item["type"] == "sdmx:dataflows" for item in found)
+    assert not any(
+        "/ws/public/sdmxapi/rest/dataflow" in item["url"]
+        and "sdmx.data.unicef.org" not in item["url"]
+        for item in found
     )
 
 
@@ -3858,6 +3939,139 @@ def test_pycsw_mode_oaipmh_identify(monkeypatch):
     }
 
 
+def test_pycsw_getcapabilities_on_csw_link(monkeypatch):
+    wanted = (
+        "https://data.example.org/csw?service=CSW&version=2.0.2&request=GetCapabilities"
+    )
+    doubled = (
+        "https://data.example.org/csw/csw?service=CSW&version=2.0.2&request=GetCapabilities"
+    )
+
+    class _CswSession:
+        def get(self, url, **kwargs):
+            if url == wanted:
+                return _xml_ok(b"<Capabilities/>")
+            return _html_404()
+
+        def post(self, *args, **kwargs):
+            return _html_404()
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _CswSession())
+    found = apidetect.api_identifier("https://data.example.org/csw", "pycsw")
+    urls = [item["url"] for item in found]
+    assert wanted in urls
+    assert doubled not in urls
+
+
+def test_pycsw_getcapabilities_on_pycsw_mount(monkeypatch):
+    wanted = (
+        "https://gdk.example.de/pycsw?service=CSW&version=2.0.2&request=GetCapabilities"
+    )
+
+    class _PycswMountSession:
+        def get(self, url, **kwargs):
+            if url == wanted:
+                return _xml_ok(b"<Capabilities/>")
+            return _html_404()
+
+        def post(self, *args, **kwargs):
+            return _html_404()
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _PycswMountSession())
+    found = apidetect.api_identifier("https://gdk.example.de/pycsw", "pycsw")
+    urls = [item["url"] for item in found]
+    assert wanted in urls
+    assert not any("/pycsw/csw?" in item["url"] for item in found)
+
+
+def test_rasdaman_ows_query_on_link(monkeypatch):
+    wcs = (
+        "https://ows.example.org/rasdaman/ows"
+        "?service=WCS&version=2.0.1&request=GetCapabilities"
+    )
+    wms = (
+        "https://ows.example.org/rasdaman/ows"
+        "?service=WMS&version=1.3.0&request=GetCapabilities"
+    )
+
+    class _RasdamanSession:
+        def get(self, url, **kwargs):
+            if url in {wcs, wms}:
+                return _xml_ok(b"<Capabilities/>")
+            return _html_404()
+
+        def post(self, *args, **kwargs):
+            return _html_404()
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _RasdamanSession())
+    found = apidetect.api_identifier(
+        "https://ows.example.org/rasdaman/ows", "rasdaman"
+    )
+    urls = [item["url"] for item in found]
+    assert wcs in urls
+    assert wms in urls
+    assert not any("/rasdaman/ows/rasdaman/ows" in item["url"] for item in found)
+
+
+def test_mapserver_getcapabilities_on_ows_link(monkeypatch):
+    wanted = (
+        "https://geo.example.ca/geomet"
+        "?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+    )
+    doubled = (
+        "https://geo.example.ca/geomet/geomet"
+        "?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+    )
+
+    class _MapServerSession:
+        def get(self, url, **kwargs):
+            if url == wanted:
+                return _xml_ok(b"<WMS_Capabilities/>")
+            return _html_404()
+
+        def post(self, *args, **kwargs):
+            return _html_404()
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _MapServerSession())
+    found = apidetect.api_identifier("https://geo.example.ca/geomet", "mapserver")
+    urls = [item["url"] for item in found]
+    assert wanted in urls
+    assert doubled not in urls
+
+
+def test_qgisserver_getcapabilities_on_ows_link(monkeypatch):
+    wanted = (
+        "https://ows.example.brussels/belb"
+        "?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+    )
+    doubled_ows = (
+        "https://ows.example.brussels/belb/ows"
+        "?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+    )
+    doubled_fcgi = (
+        "https://ows.example.brussels/belb/cgi-bin/qgis_mapserv.fcgi"
+        "?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+    )
+
+    class _QgisOwsSession:
+        def get(self, url, **kwargs):
+            if url == wanted:
+                return _xml_ok(b"<WMS_Capabilities/>")
+            return _html_404()
+
+        def post(self, *args, **kwargs):
+            return _html_404()
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _QgisOwsSession())
+    found = apidetect.api_identifier(
+        "https://ows.example.brussels/belb", "qgisserver"
+    )
+    urls = [item["url"] for item in found]
+    assert wanted in urls
+    assert doubled_ows not in urls
+    assert doubled_fcgi not in urls
+
+
 def test_dkan_jsonapi_dataset_entity(monkeypatch):
     session = _SelectiveSession(
         {
@@ -3933,6 +4147,279 @@ def test_phaidra_openapi_root(monkeypatch):
     found = apidetect.api_identifier("https://phaidra.example.ac.at", "phaidra")
     assert any(item["type"] == "openapi" for item in found)
     assert "https://phaidra.example.ac.at/api/openapi" in {item["url"] for item in found}
+
+
+def test_opensdg_reporting_status_trailing_slash(monkeypatch):
+    session = _SelectiveSession(
+        {
+            "/reporting-status/": _DummyResponse(
+                content=b"<html><body>Reporting status</body></html>",
+                headers={"Content-Type": "text/html"},
+            ),
+        }
+    )
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: session)
+    found = apidetect.api_identifier("https://sdg.example.gov", "opensdg")
+    assert any(item["type"] == "opensdg:reporting-status" for item in found)
+    assert "https://sdg.example.gov/reporting-status/" in {item["url"] for item in found}
+
+
+def test_opensdg_indicators_json(monkeypatch):
+    session = _SelectiveSession(
+        {
+            "/indicators.json": _json_ok(b'{"indicators":[]}'),
+        }
+    )
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: session)
+    found = apidetect.api_identifier("https://sdg.example.gov", "opensdg")
+    assert any(item["type"] == "opensdg:catalog" for item in found)
+    assert "https://sdg.example.gov/indicators.json" in {item["url"] for item in found}
+
+
+def test_dkan_ckan_api3_root(monkeypatch):
+    session = _SelectiveSession(
+        {
+            "/api/3": _json_ok(b'{"version":3}'),
+        }
+    )
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: session)
+    found = apidetect.api_identifier("https://data.example.org", "dkan")
+    assert any(item["type"] == "ckan" for item in found)
+    assert "https://data.example.org/api/3" in {item["url"] for item in found}
+
+
+def test_aristotle_metadata_without_trailing_slash(monkeypatch):
+    session = _SelectiveSession(
+        {
+            "/api/v4/metadata/": _html_404(),
+            "/api/v4/metadata": _json_ok(b'{"count":0}'),
+        }
+    )
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: session)
+    found = apidetect.api_identifier("https://mdr.example.org", "aristotlemdr")
+    assert any(item["type"] == "aristotlemdr:metadata" for item in found)
+    assert "https://mdr.example.org/api/v4/metadata" in {item["url"] for item in found}
+
+
+def test_geonetwork_portal_opensearch_at_cleaned_base(monkeypatch):
+    session = _SelectiveSession(
+        {
+            "/portal.opensearch": _xml_ok(
+                b'<?xml version="1.0"?><OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"/>'
+            ),
+        }
+    )
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: session)
+    found = apidetect.api_identifier(
+        "https://geo.example.org/geonetwork", "geonetwork"
+    )
+    assert any(item["type"] == "opensearch" for item in found)
+    assert "https://geo.example.org/geonetwork/portal.opensearch" in {
+        item["url"] for item in found
+    }
+
+
+def test_getsdiportal_geonetwork_csw(monkeypatch):
+    session = _SelectiveSession(
+        {
+            "/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities": _xml_ok(
+                b"<Capabilities/>"
+            ),
+        }
+    )
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: session)
+    found = apidetect.api_identifier("https://gis.example.gr", "getsdiportal")
+    assert any(item["type"] == "csw202" for item in found)
+    assert (
+        "https://gis.example.gr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities"
+        in {item["url"] for item in found}
+    )
+
+
+def test_mapstore_geoserver_csw(monkeypatch):
+    session = _SelectiveSession(
+        {
+            "/geoserver/csw?service=CSW&version=2.0.2&request=GetCapabilities": _xml_ok(
+                b"<Capabilities/>"
+            ),
+        }
+    )
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: session)
+    found = apidetect.api_identifier("https://geoportal.example.pt", "mapstore")
+    assert any(item["type"] == "csw202" for item in found)
+    assert (
+        "https://geoportal.example.pt/geoserver/csw?service=CSW&version=2.0.2&request=GetCapabilities"
+        in {item["url"] for item in found}
+    )
+
+
+def test_bitrix_opendata_html_catalog(monkeypatch):
+    class _BitrixSession:
+        def get(self, url, **kwargs):
+            if url.rstrip("/").endswith("/opendata") and not url.endswith(
+                "/opendata.json"
+            ):
+                return _html_ok(b"<html><title>Open data</title></html>")
+            return _html_404()
+
+        def post(self, *args, **kwargs):
+            return _html_404()
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _BitrixSession())
+    found = apidetect.api_identifier("https://city.example.ru/opendata/", "bitrix")
+    urls = [item["url"] for item in found]
+    assert any(item["type"] == "bitrix:catalog" for item in found)
+    assert "https://city.example.ru/opendata/" in urls
+    assert not any("/opendata/opendata/" in item["url"] for item in found)
+
+
+def test_stacserver_api_stac_v1_at_origin(monkeypatch):
+    landing = b'{"stac_version":"1.0.0","conformsTo":[],"links":[]}'
+
+    class _PcStacSession:
+        def get(self, url, **kwargs):
+            if url.rstrip("/").endswith("/api/stac/v1") and "/collections" not in url:
+                return _DummyResponse(content=landing)
+            return _DummyResponse(status_code=404)
+
+        def post(self, *args, **kwargs):
+            return _DummyResponse(status_code=404)
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _PcStacSession())
+    found = apidetect.api_identifier(
+        "https://planetarycomputer.example", "stacserver"
+    )
+    assert any(item["type"] == "stacserverapi" for item in found)
+    assert "https://planetarycomputer.example/api/stac/v1/" in {
+        item["url"] for item in found
+    }
+
+
+def test_stacserver_openapi_at_api(monkeypatch):
+    spec = b'{"openapi":"3.0.2","info":{"title":"stac-fastapi"}}'
+
+    class _StacOpenApiSession:
+        def get(self, url, **kwargs):
+            if url.rstrip("/").endswith("/api") and "/api/stac" not in url:
+                return _DummyResponse(content=spec)
+            return _DummyResponse(status_code=404)
+
+        def post(self, *args, **kwargs):
+            return _DummyResponse(status_code=404)
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _StacOpenApiSession())
+    found = apidetect.api_identifier("https://stac.example.org", "stacserver")
+    assert any(item["type"] == "openapi" for item in found)
+    assert "https://stac.example.org/api" in {item["url"] for item in found}
+
+
+def test_pxweb_strips_language_tree_keeps_mount():
+    assert (
+        apidetect.pxweb_url_cleanup_func(
+            "https://px.example.org/PxWeb/pxweb/sv/DOMstat/"
+        )
+        == "https://px.example.org/PxWeb"
+    )
+    assert (
+        apidetect.pxweb_url_cleanup_func("https://stat.example.org/pxweb/sv/")
+        == "https://stat.example.org"
+    )
+    assert (
+        apidetect.pxweb_url_cleanup_func("https://statistik.example.se/PXWeb")
+        == "https://statistik.example.se/PXWeb"
+    )
+    assert (
+        apidetect.pxweb_url_cleanup_func(
+            "https://pxweb.example.tw/pxweb/Dialog/statfile9.asp"
+        )
+        == "https://pxweb.example.tw/pxweb"
+    )
+
+
+def test_pxweb_language_tree_does_not_double(monkeypatch):
+    class _PxSession:
+        def get(self, url, **kwargs):
+            if url in {
+                "https://px.example.org/PxWeb/api/v1/sv/",
+                "https://px.example.org/api/v1/sv/",
+            }:
+                return _json_ok(b"[]")
+            return _html_404()
+
+        def post(self, *args, **kwargs):
+            return _html_404()
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _PxSession())
+    found = apidetect.api_identifier(
+        "https://px.example.org/PxWeb/pxweb/sv/DOMstat/", "pxweb"
+    )
+    urls = [item["url"] for item in found]
+    assert "https://px.example.org/PxWeb/api/v1/sv/" in urls
+    assert not any("/pxweb/sv/DOMstat/" in item["url"] for item in found)
+
+
+def test_esgf_search_link_does_not_double(monkeypatch):
+    class _EsgfSession:
+        def get(self, url, **kwargs):
+            if url.startswith("https://esgf.example.org/esg-search/search"):
+                return _json_ok(b'{"response":{"numFound":0,"docs":[]}}')
+            return _html_404()
+
+        def post(self, *args, **kwargs):
+            return _html_404()
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _EsgfSession())
+    found = apidetect.api_identifier("https://esgf.example.org/search", "esgf")
+    urls = [item["url"] for item in found]
+    assert any(
+        item["url"].startswith("https://esgf.example.org/esg-search/search")
+        for item in found
+    )
+    assert any(item["type"] == "esgf:search" for item in found)
+    assert not any("/search/esg-search/" in item["url"] for item in found)
+
+
+def test_radar_home_link_does_not_double(monkeypatch):
+    class _RadarSession:
+        def get(self, url, **kwargs):
+            if url == "https://radar.example.org/radar/api/datasets":
+                return _json_ok(b'{"totalHits":0}')
+            if "verb=Identify" in url:
+                return _xml_ok(b"<OAI-PMH><Identify/></OAI-PMH>")
+            return _html_404()
+
+        def post(self, *args, **kwargs):
+            return _html_404()
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _RadarSession())
+    found = apidetect.api_identifier(
+        "https://radar.example.org/radar/en/home", "radar"
+    )
+    urls = [item["url"] for item in found]
+    assert "https://radar.example.org/radar/api/datasets" in urls
+    assert not any("/radar/en/home/radar/" in item["url"] for item in found)
+
+
+def test_fusionregistry_origin_from_mount(monkeypatch):
+    class _FrSession:
+        def get(self, url, **kwargs):
+            if url == "https://registry.example.org/ws/rest":
+                return _xml_ok(b"<message:Structure/>")
+            return _html_404()
+
+        def post(self, *args, **kwargs):
+            return _html_404()
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _FrSession())
+    found = apidetect.api_identifier(
+        "https://registry.example.org/FusionRegistry", "fusionregistry"
+    )
+    urls = [item["url"] for item in found]
+    assert "https://registry.example.org/ws/rest" in urls
+    assert not any(
+        item["url"] == "https://registry.example.org/FusionRegistry/ws/rest"
+        for item in found
+    )
 
 
 def test_omekas_dataset_class_filter(monkeypatch):

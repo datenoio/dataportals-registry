@@ -51,6 +51,14 @@ GET https://www.openml.org/api/v1/json/data/list/limit/100/offset/0
 
 **Keep:** **datasets** (`data`). **Drop:** tasks, flows, runs, and setups. Do not harvest every OpenML task as a dataset. Skip cloning openml.org if you only needed the existing registry record — harvest **contents** when the user asked.
 
+## Kaggle (`kaggle`) {#kaggle}
+
+```text
+GET https://www.kaggle.com/api/v1/datasets/list
+```
+
+**Keep:** **datasets**. **Drop:** notebooks, competitions, and models. The hub is **one** registered catalog. The list API often needs a Kaggle token — if it `401`s, harvest the public HTML datasets catalog only.
+
 ## Hugging Face (`huggingface`) {#huggingface}
 
 ```text

@@ -33,6 +33,13 @@ endpoints:
   url: https://www.datagrandest.fr/geonetwork/srv/api/site
 - type: opensearch
   url: https://www.datagrandest.fr/portal.opensearch
+- type: openapi
+  url: https://www.datagrandest.fr/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: ogcrecordsapi
+  url: https://www.datagrandest.fr/geonetwork/srv/ogc/records/collections?f=json
+- type: ogcrecordsapi
+  url: https://www.datagrandest.fr/geonetwork/ogc/records/collections?f=json
 id: wwwdatagrandestfr
 langs:
 - id: FR

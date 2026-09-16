@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: BE
+      name: Belgium
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: BE-VLI
+      name: Limburg
+description: Public Geo-IT GIS Touch Viewer of Stad Sint-Truiden with the municipal
+  road register and Atlas der Buurtwegen layers.
+id: geoitgisgeoitbesinttruiden
+langs:
+- id: NL
+  name: Dutch
+link: https://geoitgis.geo-it.be/touchviewer/?app=raadplegen&map=Library://Gemeenten/Sint-Truiden/Maps/wegenregister.MapDefinition&niscode=DEF
+name: Wegenregister Sint-Truiden
+owner:
+  link: https://www.sint-truiden.be
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: BE-VLI
+      name: Limburg
+  name: Stad Sint-Truiden
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geoitgis
+  name: Geo-IT GIS
+status: active
+tags:
+- geospatial
+- geoportal
+- municipality
+- Belgium
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00006142

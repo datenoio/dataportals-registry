@@ -20,6 +20,12 @@ description: WeatherLayers is a weather visualization service providing pre-proc
 endpoints:
 - type: stacserverapi
   url: https://catalog.weatherlayers.com/catalog/
+- type: stacserverapi:collections
+  url: https://catalog.weatherlayers.com/catalog/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://catalog.weatherlayers.com/catalog/conformance
+  version: '1.0'
 id: weatherlayers
 langs:
 - id: EN

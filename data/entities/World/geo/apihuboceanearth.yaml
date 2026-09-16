@@ -20,6 +20,15 @@ description: HUB Ocean Ocean Data Platform (ODP) public STAC API. Compatible wit
 endpoints:
 - type: stacserverapi
   url: https://api.hubocean.earth/api/stac
+- type: stacserverapi
+  url: https://api.hubocean.earth/api/stac/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://api.hubocean.earth/api/stac/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://api.hubocean.earth/api/stac/conformance
+  version: '1.0'
 id: apihuboceanearth
 langs:
 - id: EN

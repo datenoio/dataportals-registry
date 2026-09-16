@@ -13,7 +13,7 @@ coverage:
       name: Greece
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: GR-L
@@ -63,6 +63,9 @@ endpoints:
 - type: wmts100
   url: https://naxos.getmap.gr/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
+- type: csw202
+  url: https://naxos.getmap.gr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
 id: naxosgetmapgr
 langs:
 - id: EL

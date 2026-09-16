@@ -1,0 +1,61 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: pangaea
+name: PANGAEA
+website: https://www.pangaea.de
+description: PANGAEA is the publisher stack for the Data Publisher for Earth
+  and Environmental Science. Register the public hub at pangaea.de, not each
+  dataset DOI landing page. Distinct from PANGAEA OAI mirrors tagged as
+  other software.
+owner:
+  name: PANGAEA
+  location:
+    country:
+      id: DE
+      name: Germany
+logo_url: https://www.pangaea.de/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: Compatible
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'Yes'
+  opensearch: 'Yes'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+documentation_url: https://wiki.pangaea.de/
+export_formats:
+- CSV
+- JSON
+- NetCDF
+capabilities:
+- REST API
+- OAI-PMH
+- DOI
+last_updated: '2026-09-14T00:00:00Z'

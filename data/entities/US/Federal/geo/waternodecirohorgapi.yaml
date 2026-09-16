@@ -21,6 +21,12 @@ description: Public SpatioTemporal Asset Catalog (STAC) 1.0 API for the Water Pr
 endpoints:
 - type: stacserverapi
   url: https://waternode.ciroh.org/api/
+- type: stacserverapi:collections
+  url: https://waternode.ciroh.org/api/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://waternode.ciroh.org/api/conformance
+  version: '1.0'
 - type: openapi
   url: https://waternode.ciroh.org/api/api
   version: '3.0'

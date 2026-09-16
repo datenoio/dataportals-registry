@@ -21,6 +21,15 @@ description: A free-to-use STAC API that provides a central search catalog and s
 endpoints:
 - type: stacserverapi
   url: https://earth-search.aws.element84.com/v1/
+- type: stacserverapi:collections
+  url: https://earth-search.aws.element84.com/v1/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://earth-search.aws.element84.com/v1/conformance
+  version: '1.0'
+- type: openapi
+  url: https://earth-search.aws.element84.com/v1/api
+  version: '3.0'
 id: earthsearch
 langs:
 - id: EN

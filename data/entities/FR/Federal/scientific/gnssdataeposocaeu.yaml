@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Observatoire de la Côte d'Azur gateway for EPOS GNSS observation data, distributing RINEX files
+  and station metadata from European GNSS data suppliers.
+endpoints:
+- type: api
+  url: https://gnssdata-epos.oca.eu/GlassFramework/
+id: gnssdataeposocaeu
+langs:
+- id: EN
+  name: English
+link: https://gnssdata-epos.oca.eu/
+name: EPOS GNSS Data Gateway
+owner:
+  link: https://www.oca.eu
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Observatoire de la Côte d'Azur
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- GNSS
+- geodesy
+- EPOS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00005627

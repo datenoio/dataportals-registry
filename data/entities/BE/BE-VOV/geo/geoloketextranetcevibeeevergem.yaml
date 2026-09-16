@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: BE
+      name: Belgium
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: BE-VOV
+      name: Oost-Vlaanderen
+description: Public planning geoloket of Gemeente Evergem (Cevi ArcGIS Web AppBuilder)
+  with permits and cadastral search.
+id: geoloketextranetcevibeeevergem
+langs:
+- id: NL
+  name: Dutch
+link: https://geoloket.extranet.cevi.be/geoloketten/evergem/stedenbouw/
+name: Geoloket Stedenbouw Evergem
+owner:
+  link: https://www.evergem.be
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: BE-VOV
+      name: Oost-Vlaanderen
+  name: Gemeente Evergem
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: webappbuilder
+  name: ArcGIS Web AppBuilder
+status: active
+tags:
+- geospatial
+- geoportal
+- municipality
+- Belgium
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00006145

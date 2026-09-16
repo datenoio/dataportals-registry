@@ -1,0 +1,51 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: STAC catalog of reviewed, commercially licensable drone scenes. Metadata
+  is public; full media requires a written license.
+endpoints:
+- type: stacserverapi
+  url: https://aerialdataset.com/stac
+id: aerialdatasetcomstac
+langs:
+- id: EN
+  name: English
+link: https://aerialdataset.com/stac
+name: AerialDataset
+owner:
+  link: https://aerialdataset.com
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: AerialDataset
+  type: Business
+properties:
+  is_national: false
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- geospatial
+- has_api
+- STAC
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00006792

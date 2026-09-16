@@ -19,6 +19,15 @@ description: MISTEO STAC SERVER, for geo data for selected states
 endpoints:
 - type: stacserverapi
   url: https://stac-server.dev2prod.co/
+- type: stacserverapi:collections
+  url: https://stac-server.dev2prod.co/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac-server.dev2prod.co/conformance
+  version: '1.0'
+- type: openapi
+  url: https://stac-server.dev2prod.co/api
+  version: '3.0'
 id: stacserverdev2prodco
 langs:
 - id: EN

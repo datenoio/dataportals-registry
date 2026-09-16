@@ -23,19 +23,22 @@ description: Public MapStore WebGIS of Gladsaxe Municipality (Nordiq WebGIS), pr
 endpoints:
 - type: wfs100
   url: https://webgis.gladsaxe.dk/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
-  version: '1.0.0'
+  version: 1.0.0
 - type: wfs110
   url: https://webgis.gladsaxe.dk/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: '1.1.0'
+  version: 1.1.0
 - type: wfs200
   url: https://webgis.gladsaxe.dk/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
-  version: '2.0.0'
+  version: 2.0.0
 - type: wcs111
   url: https://webgis.gladsaxe.dk/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: '1.1.1'
+  version: 1.1.1
 - type: wcs201
   url: https://webgis.gladsaxe.dk/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
-  version: '2.0.1'
+  version: 2.0.1
+- type: csw202
+  url: https://webgis.gladsaxe.dk/geoserver/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
 id: webgisgladsaxedk
 langs:
 - id: DA

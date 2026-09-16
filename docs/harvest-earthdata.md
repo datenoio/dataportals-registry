@@ -117,6 +117,8 @@ GET https://host/rasdaman/ows?SERVICE=WCS&REQUEST=GetCapabilities
 
 Each CoverageId is a dataset analog. Skip petascope HTML chrome and one-off WCPS plots.
 
+Detection concatenates `?service=WCS` / `?service=WMS` onto catalog links that already end in `/rasdaman/ows` so GetCapabilities is not doubled as `/rasdaman/ows/rasdaman/ows`. Origin `/rasdaman/ows?service=WCS` still concatenates onto catalogs whose link is the datacube root.
+
 **Keep:** Rasdaman **coverage** (WCS CoverageId). **Drop:** WCPS query results and petascope HTML.
 
 ## ncWMS (`ncwms`) {#ncwms}
@@ -256,6 +258,8 @@ GET https://host/esg-search/search?format=application%2Fsolr%2Bjson&limit=100&of
 Keep Solr **dataset** docs (`master_id` / `dataset_id`). Drop files and wget scripts. ESGF data nodes with `/thredds/catalog.xml` use the THREDDS recipe. Detail: [harvest-scientific-domain.md](harvest-scientific-domain.md#esgf).
 
 **Keep:** Solr **dataset** docs (`master_id` / `dataset_id`). **Drop:** files, aggregations, and wget scripts.
+
+Detection strips Metagrid `/search` so `/esg-search/search` attaches at origin; do not concatenate onto `/search`.
 
 ## ESA Science Archive (`esasciencearchive`) {#esasciencearchive}
 

@@ -27,6 +27,12 @@ endpoints:
 - type: openapi
   url: https://stacapi.devops.grafcan.es/api/v1/pgstac/api
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://stacapi.devops.grafcan.es/api/v1/pgstac/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stacapi.devops.grafcan.es/api/v1/pgstac/conformance
+  version: '1.0'
 id: stacapidevopsgrafcanesapiv1pgstac
 langs:
 - id: ES

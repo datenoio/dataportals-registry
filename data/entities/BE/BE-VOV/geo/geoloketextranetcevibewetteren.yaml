@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: BE
+      name: Belgium
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: BE-VOV
+      name: Oost-Vlaanderen
+description: Public planning geoloket of Gemeente Wetteren (Cevi ArcGIS Web AppBuilder)
+  with permits register and parcel reports.
+id: geoloketextranetcevibewetteren
+langs:
+- id: NL
+  name: Dutch
+link: https://geoloket.extranet.cevi.be/geoloketten/wetteren/Stedenbouw/
+name: Geoloket Stedenbouw Wetteren
+owner:
+  link: https://www.wetteren.be
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: BE-VOV
+      name: Oost-Vlaanderen
+  name: Gemeente Wetteren
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: webappbuilder
+  name: ArcGIS Web AppBuilder
+status: active
+tags:
+- geospatial
+- geoportal
+- municipality
+- Belgium
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00006148

@@ -19,29 +19,29 @@ description: GeoNetwork-based catalog to improve access to spatial data and info
   supporting decision-making and multidisciplinary use.
 endpoints:
 - type: geonetwork:query
-  url: https://ifl.francophonelibre.org/geonetwork/srv/eng/q
+  url: https://ifl2.francophonelibre.org/geonetwork/srv/eng/q
 - type: geonetwork:records
-  url: https://ifl.francophonelibre.org/geonetwork/srv/api/records
+  url: https://ifl2.francophonelibre.org/geonetwork/srv/api/records
 - type: openapi
-  url: https://ifl.francophonelibre.org/geonetwork/srv/v2/api-docs
+  url: https://ifl2.francophonelibre.org/geonetwork/srv/v2/api-docs
   version: '2'
 - type: csw202
-  url: https://ifl.francophonelibre.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://ifl2.francophonelibre.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: opensearch
-  url: https://ifl.francophonelibre.org/geonetwork/srv/eng/portal.opensearch
+  url: https://ifl2.francophonelibre.org/geonetwork/srv/eng/portal.opensearch
   version: '1.0'
 - type: oaipmh20
-  url: https://ifl.francophonelibre.org/geonetwork/srv/eng/oaipmh?verb=Identify
+  url: https://ifl2.francophonelibre.org/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 - type: geonetwork:site
-  url: https://ifl.francophonelibre.org/geonetwork/srv/api/site
+  url: https://ifl2.francophonelibre.org/geonetwork/srv/api/site
 id: iflfrancophonelibreorg
 langs:
 - id: FR
   name: French
-link: https://ifl.francophonelibre.org/geonetwork
-name: IFL - The Spatial Data Infrastructure Francophone Libre
+link: https://ifl2.francophonelibre.org/geonetwork
+name: Catalogue IFL
 owner:
   link: https://leslibresgeographes.org
   location:
@@ -65,6 +65,7 @@ software:
   name: GeoNetwork
 status: active
 tags:
+- geOrchestra
 - geospatial
 - government
 - has_api

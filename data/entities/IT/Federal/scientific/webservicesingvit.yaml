@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: INGV FDSN and EIDA web services providing Italian seismic waveforms, station metadata,
+  availability, and WFCatalog access, including Near-Fault Observatory networks (TABOO, IRPINIA,
+  NITRO).
+endpoints:
+- type: api
+  url: https://webservices.ingv.it/fdsnws/station/1/
+- type: api
+  url: https://webservices.ingv.it/fdsnws/dataselect/1/
+- type: api
+  url: https://webservices.ingv.it/fdsnws/availability/1/
+- type: api
+  url: https://webservices.ingv.it/eidaws/wfcatalog/1/
+id: webservicesingvit
+langs:
+- id: EN
+  name: English
+link: https://webservices.ingv.it/
+name: INGV FDSN/EIDA web services
+owner:
+  link: http://www.ingv.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Istituto Nazionale di Geofisica e Vulcanologia
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- seismology
+- EIDA
+- FDSN
+- EPOS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00005640

@@ -2,7 +2,7 @@
 
 A global registry of data portals, catalogs, data repositories, and related data infrastructure.
 
-**Working tree (12 September 2026):** **37,170** verified catalogs · **486** software platforms · **224** countries and territories · **0** scheduled YAML records.
+**Working tree (16 September 2026):** **38,343** verified catalogs · **523** software platforms · **224** countries and territories · **0** scheduled YAML records.
 
 Last published snapshot: [v1.21.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.21.0), 12 September 2026 (**37,170** catalogs · **486** software · **0** scheduled).
 
@@ -49,10 +49,10 @@ Last published snapshot (**v1.21.0**, 2026-09-12: 37,170 catalogs, 486 software,
 
 | File | Contents |
 |------|----------|
-| `data/datasets/catalogs.jsonl.zst` | **37,170** verified catalog records |
-| `data/datasets/software.jsonl` (+ `.zst`) | **486** software / platform definitions |
+| `data/datasets/catalogs.jsonl.zst` | **38,343** verified catalog records |
+| `data/datasets/software.jsonl` (+ `.zst`) | **523** software / platform definitions |
 | `data/datasets/scheduled.jsonl` (+ `.zst`) | **0** scheduled sources (**0** YAML files) |
-| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**37,170**) |
+| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**38,343**) |
 | `data/datasets/full.parquet`, `data/datasets/datasets.duckdb` | Analytics-friendly copies of `full.jsonl` |
 
 Rebuild from YAML (never hand-edit `data/datasets/`):
@@ -79,6 +79,8 @@ Each record is one catalog: name, URL, owner, geographic coverage, software plat
 | API Catalog | `api/` | API directories |
 | Data marketplace | `marketplace/` | Commercial data markets |
 | Metadata catalog | `metadata/` | Metadata registries |
+| Datasets list | `other/` | HTML/GitHub inventories of datasets |
+| General research repository | `scientific/` or `other/` | Broad IRs without a named IR stack |
 | Other | `other/` | Uncategorized |
 
 Use this registry to find portals by country, type, or software, join catalogs to external identifiers, or feed a downstream harvester from `endpoints[]`. Do **not** use it to search for a dataset by title — harvest the remote catalog instead ([docs/harvest.md](docs/harvest.md)). Scope: [docs/when-to-use.md](docs/when-to-use.md).

@@ -1,0 +1,64 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: hal
+name: HAL
+website: https://hal.science/
+description: HAL (Hyper Articles en Ligne) is CCSD's French open-archive
+  platform for publications and research data. The national hub is
+  hal.science; institutional portals reuse the same stack on *.hal.science
+  and hal.*. Register each public portal, not each deposit. Distinct from
+  Invenio, InvenioRDM, and EPrints.
+owner:
+  name: Centre pour la Communication Scientifique Directe (CCSD)
+  location:
+    country:
+      id: FR
+      name: France
+logo_url: https://hal.science/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'Yes'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/CCSDForge/HAL
+documentation_url: https://api.archives-ouvertes.fr/docs
+license:
+  type: CECILL-2.1
+export_formats:
+- JSON
+- XML
+capabilities:
+- REST API
+- OAI-PMH
+- Open archive
+last_updated: '2026-09-14T00:00:00Z'

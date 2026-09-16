@@ -21,6 +21,12 @@ description: STAC 1.0 catalogue of remote sensing data for the COMUNIDAD project
 endpoints:
 - type: stacserverapi
   url: https://comunidad-project.eu/eo-api/stac
+- type: stacserverapi
+  url: https://comunidad-project.eu/eo-api/stac/
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://comunidad-project.eu/eo-api/stac/conformance
+  version: '1.0'
 id: staccomunidadprojecteu
 langs:
 - id: EN

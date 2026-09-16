@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+- document
+coverage:
+- location:
+    country:
+      id: HT
+      name: Haiti
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: Civil-society library of Haiti public indicators with CSV/JSON downloads
+  and a catalog API, plus official documents sourced from IHSI, BRH, MEF and
+  international agencies.
+endpoints:
+- type: other
+  url: https://www.haitidocs.org/data/api/catalog.json
+id: wwwhaitidocsorg
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://www.haitidocs.org/
+name: HaitiDocs
+owner:
+  link: https://www.haitidocs.org
+  location:
+    country:
+      id: HT
+      name: Haiti
+    level: 20
+  name: HaitiDocs
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- indicators
+- open data
+- Haiti
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00006284

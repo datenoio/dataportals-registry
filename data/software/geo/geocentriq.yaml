@@ -1,0 +1,62 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: geocentriq
+name: Geocentriq
+website: https://geocentriq.com/
+description: Geocentriq is a Quebec municipal GIS SaaS for graphic matrices,
+  assessment rolls, cadastre, and orthophotos. Public tenants live at
+  app.geocentriq.com/mrc/{mrc} with geocentriq.min.js assets and a
+  municipality picker. Distinct from GeoCentralis (geocentralis), SIGimWeb
+  (sigimweb), GOnet (goazimut.com), and SIGALE. One record per public MRC
+  tenant, not per municipality in the picker. Do not register the marketing
+  homepage or /login.
+owner:
+  name: CIM
+  location:
+    country:
+      id: CA
+      name: Canada
+logo_url: https://geocentriq.com/favicon.ico
+documentation_url: https://geocentriq.com/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- JSON
+- PDF
+capabilities:
+- Map viewer
+- Municipal GIS
+last_updated: '2026-09-13T00:00:00Z'

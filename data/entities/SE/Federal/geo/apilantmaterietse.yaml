@@ -21,6 +21,18 @@ description: The catalog contains elevation data from Lantmäteriet over Sweden,
 endpoints:
 - type: stacserverapi
   url: https://api.lantmateriet.se/stac-hojd/v1
+- type: stacserverapi
+  url: https://api.lantmateriet.se/stac-hojd/v1/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://api.lantmateriet.se/stac-hojd/v1/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://api.lantmateriet.se/stac-hojd/v1/conformance
+  version: '1.0'
+- type: openapi
+  url: https://api.lantmateriet.se/stac-hojd/v1/api
+  version: '3.0'
 id: apilantmaterietse
 langs:
 - id: EN

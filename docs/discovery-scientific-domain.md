@@ -281,7 +281,7 @@ Cross-Linguistic Linked Data web apps. Site: [clld.org](https://clld.org). Publi
 
 **Signals:** hostname `*.clld.org`; `clld-static` JS; Cross-Linguistic Linked Data branding.
 
-**Confirm:** GET the project home. One record per CLLD app, not per language or parameter page. Skip clld.org marketing.
+**Confirm:** GET the project home. One record per CLLD app, not per language or parameter page. Skip clld.org marketing. Off-hub apps (Glottolog, WALS Online, PHOIBLE) still use `clld` when the UI is `clld-static`.
 
 | Tool | Query |
 |------|-------|
@@ -523,7 +523,7 @@ SRI International Pathway/Genome Database software. Site: [bioinformatics.ai.sri
 
 **Signals:** “Pathway Tools” / SRI International in the page; BioCyc organism/PGDB switcher; pathway and genome browsers.
 
-**Confirm:** GET the public organism or collection home with Pathway Tools branding. One catalog per **PGDB / collection host**, not per gene or pathway page.
+**Confirm:** GET the public organism or collection home with Pathway Tools branding. One catalog per **PGDB / collection host**, not per gene or pathway page. HumanCyc and BsubCyc redirect into BioCyc and still use `pathwaytools`. SGD (`yeastgenome.org`) stays `custom` unless the UI is Pathway Tools (`pathway.yeastgenome.org`).
 
 | Tool | Query |
 |------|-------|
@@ -531,6 +531,62 @@ SRI International Pathway/Genome Database software. Site: [bioinformatics.ai.sri
 | Google | `site:biocyc.org OR site:ecocyc.org OR site:metacyc.org` |
 | Censys | `web.endpoints.http.body: "Pathway Tools"` |
 | FOFA | `body="Pathway Tools"` |
+
+## PANGAEA (`pangaea`) {#pangaea}
+
+Data Publisher for Earth and Environmental Science. Hub: [pangaea.de](https://www.pangaea.de).
+
+**Signals:** host `pangaea.de`; PANGAEA chrome; dataset DOI landing pages.
+
+**Confirm:** GET the public dataset search. One hub, not each dataset DOI.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:pangaea.de (dataset OR "Data Publisher")` |
+| Censys | `web.names: "pangaea.de"` |
+| FOFA | `host="pangaea.de"` |
+
+## USGS ScienceBase (`sciencebase`) {#sciencebase}
+
+USGS item catalog. Hub: [sciencebase.gov](https://www.sciencebase.gov). Distinct from GeoServer / ArcGIS REST on sciencebase.gov (`geoserver`, `arcgisserver`).
+
+**Signals:** host `www.sciencebase.gov`; ScienceBase catalog chrome; `/catalog/` items.
+
+**Confirm:** GET the public catalog search. One ScienceBase catalog, not per-item pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:www.sciencebase.gov catalog` |
+| Censys | `web.names: "sciencebase.gov"` |
+| FOFA | `host="sciencebase.gov"` |
+
+## DEIMS-SDR (`deims`) {#deims}
+
+LTER site and dataset registry. Hub: [deims.org](https://deims.org).
+
+**Signals:** host `deims.org`; DEIMS-SDR chrome; site/dataset records.
+
+**Confirm:** GET the public site or dataset search. One hub, not each site record.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:deims.org (DEIMS OR LTER)` |
+| Censys | `web.names: "deims.org"` |
+| FOFA | `host="deims.org"` |
+
+## EPOS Data Portal (`epos`) {#epos}
+
+European Plate Observing System ICS-C catalog. Hub: [ics-c.epos-eu.org](https://www.ics-c.epos-eu.org/). Distinct from generic EPOS project pages.
+
+**Signals:** host `ics-c.epos-eu.org`; EPOS Data Portal chrome.
+
+**Confirm:** GET the public data portal. One ICS-C hub, not each underlying research infrastructure.
+
+| Tool | Query |
+|------|-------|
+| Google | `"EPOS Data Portal" OR site:ics-c.epos-eu.org` |
+| Censys | `web.names: "ics-c.epos-eu.org"` |
+| FOFA | `host="ics-c.epos-eu.org"` |
 
 ## IBDC (`ibdc`) {#ibdc}
 

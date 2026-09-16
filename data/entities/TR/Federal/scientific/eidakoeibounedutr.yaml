@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TR
+      name: Turkey
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: ORFEUS EIDA node at Kandilli Observatory and Earthquake Research Institute (Boğaziçi
+  University), serving FDSN waveform, station, availability, and WFCatalog services including
+  Marmara near-fault observatory data.
+endpoints:
+- type: api
+  url: https://eida.koeri.boun.edu.tr/fdsnws/station/1/
+- type: api
+  url: https://eida.koeri.boun.edu.tr/fdsnws/dataselect/1/
+- type: api
+  url: https://eida.koeri.boun.edu.tr/fdsnws/availability/1/
+- type: api
+  url: https://eida.koeri.boun.edu.tr/eidaws/wfcatalog/1/
+id: eidakoeibounedutr
+langs:
+- id: EN
+  name: English
+link: https://eida.koeri.boun.edu.tr/
+name: KOERI EIDA node
+owner:
+  link: http://koeri.boun.edu.tr/
+  location:
+    country:
+      id: TR
+      name: Turkey
+    level: 20
+  name: Kandilli Observatory and Earthquake Research Institute
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- seismology
+- EIDA
+- FDSN
+- EPOS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00005646

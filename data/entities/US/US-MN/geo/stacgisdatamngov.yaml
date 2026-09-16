@@ -27,6 +27,12 @@ endpoints:
 - type: openapi
   url: https://stac.gisdata.mn.gov/api
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://stac.gisdata.mn.gov/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac.gisdata.mn.gov/conformance
+  version: '1.0'
 id: stacgisdatamngov
 langs:
 - id: EN

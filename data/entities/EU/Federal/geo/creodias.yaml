@@ -21,6 +21,15 @@ description: CREODIAS STAC (SpatioTemporal Asset Catalog) endpoint providing acc
 endpoints:
 - type: stacserverapi
   url: https://datahub.creodias.eu/stac/
+- type: stacserverapi:collections
+  url: https://datahub.creodias.eu/stac/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://datahub.creodias.eu/stac/conformance
+  version: '1.0'
+- type: openapi
+  url: https://datahub.creodias.eu/stac/api
+  version: '3.0'
 id: creodias
 langs:
 - id: EN

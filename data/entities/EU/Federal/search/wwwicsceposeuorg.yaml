@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Data search engine
 content_types:
 - dataset
@@ -15,8 +15,11 @@ coverage:
       id: '155'
       name: Western Europe
 description: EPOS Integrated Core Services Central Hub (ICS-C) data portal for discovering
-  solid-Earth datasets, data products, software and services across European Plate Observing
-  System thematic core services.
+  solid-Earth datasets, data products, software and services across European Plate
+  Observing System thematic core services.
+endpoints:
+- type: api
+  url: https://www.ics-c.epos-eu.org/api/v1/resources/search
 id: wwwicsceposeuorg
 langs:
 - id: EN
@@ -35,8 +38,8 @@ owner:
 properties:
   is_national: false
 software:
-  id: custom
-  name: Custom software
+  id: epos
+  name: EPOS Data Portal
 status: active
 tags:
 - earth science

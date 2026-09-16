@@ -22,6 +22,9 @@ description: SpatioTemporal Asset Catalog API on top of NASA [Common Metadata Re
 endpoints:
 - type: stacserverapi
   url: https://cmr.earthdata.nasa.gov/stac/
+- type: stacserverapi:conformance
+  url: https://cmr.earthdata.nasa.gov/stac/conformance
+  version: '1.0'
 id: cmrstac
 langs:
 - id: EN

@@ -25,6 +25,12 @@ endpoints:
 - type: openapi
   url: https://api.catalog.data.philsa.gov.ph/openapi.json
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://api.catalog.data.philsa.gov.ph/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://api.catalog.data.philsa.gov.ph/conformance
+  version: '1.0'
 id: apicatalogdataphilsagovph
 langs:
 - id: EN

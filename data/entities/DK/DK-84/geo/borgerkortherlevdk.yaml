@@ -23,25 +23,28 @@ description: Public MapStore WebGIS of Herlev Municipality (Nordiq WebGIS), prov
 endpoints:
 - type: wms111
   url: https://borgerkort.herlev.dk/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: '1.1.1'
+  version: 1.1.1
 - type: wms130
   url: https://borgerkort.herlev.dk/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: '1.3.0'
+  version: 1.3.0
 - type: wfs100
   url: https://borgerkort.herlev.dk/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
-  version: '1.0.0'
+  version: 1.0.0
 - type: wfs110
   url: https://borgerkort.herlev.dk/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: '1.1.0'
+  version: 1.1.0
 - type: wfs200
   url: https://borgerkort.herlev.dk/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
-  version: '2.0.0'
+  version: 2.0.0
 - type: wcs111
   url: https://borgerkort.herlev.dk/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: '1.1.1'
+  version: 1.1.1
 - type: wcs201
   url: https://borgerkort.herlev.dk/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
-  version: '2.0.1'
+  version: 2.0.1
+- type: csw202
+  url: https://borgerkort.herlev.dk/geoserver/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
 id: borgerkortherlevdk
 langs:
 - id: DA

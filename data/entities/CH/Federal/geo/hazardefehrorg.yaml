@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: European Facilities for Earthquake Hazard and Risk (EFEHR) platform publishing the European
+  Seismic Hazard Model maps and the ESHM20 unified earthquake catalogue as OGC WMS and WFS
+  services.
+endpoints:
+- type: wms130
+  url: https://efehrmaps.ethz.ch/cgi-bin/mapserv?service=WMS&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://efehrmaps.ethz.ch/cgi-bin/mapserv?service=WFS&request=GetCapabilities
+  version: 2.0.0
+id: hazardefehrorg
+langs:
+- id: EN
+  name: English
+link: https://hazard.efehr.org/
+name: EFEHR Earthquake Hazard Platform
+owner:
+  link: http://www.seismo.ethz.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+  name: Swiss Seismological Service, ETH Zurich
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: mapserver
+  name: MapServer
+status: active
+tags:
+- geospatial
+- earthquake
+- hazard
+- MapServer
+- EFEHR
+- EPOS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00005620

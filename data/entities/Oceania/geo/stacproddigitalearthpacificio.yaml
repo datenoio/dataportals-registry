@@ -13,7 +13,7 @@ coverage:
       name: Oceania
     level: 20
     macroregion:
-      id: '009'
+      id: 009
       name: Oceania
 description: Production SpatioTemporal Asset Catalog (STAC) 1.0 API for Digital Earth
   Pacific, exposing regional Earth observation collections including fractional cover,
@@ -26,6 +26,12 @@ endpoints:
 - type: openapi
   url: https://stac.prod.digitalearthpacific.io/api
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://stac.prod.digitalearthpacific.io/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac.prod.digitalearthpacific.io/conformance
+  version: '1.0'
 id: stacproddigitalearthpacificio
 langs:
 - id: EN

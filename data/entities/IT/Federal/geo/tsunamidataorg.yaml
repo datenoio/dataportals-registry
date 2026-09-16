@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Euro-Mediterranean tsunami data portal publishing NEAM tsunami hazard maps, the
+  Euro-Mediterranean Tsunami Catalogue, paleotsunami and tide-gauge layers, and observation-point
+  databases as OGC services.
+endpoints:
+- type: wms130
+  url: https://services.tsunamidata.org/NEAMTHM18/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://services.tsunamidata.org/ITED-EMTC/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wms130
+  url: https://services.tsunamidata.org/NOA_TGNET/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://services.tsunamidata.org/PALEOTSUNAMI/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wfs200
+  url: https://services.tsunamidata.org/TOPDB_TIDB/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wms130
+  url: https://services.tsunamidata.org/INUNDATION_MAPS/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: tsunamidataorg
+langs:
+- id: EN
+  name: English
+link: https://tsunamidata.org/
+name: European Tsunami Data services
+owner:
+  link: http://www.ingv.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Istituto Nazionale di Geofisica e Vulcanologia
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- tsunami
+- hazard
+- GeoServer
+- EPOS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00005636

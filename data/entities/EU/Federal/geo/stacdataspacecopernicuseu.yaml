@@ -21,6 +21,12 @@ description: Open ecosystem providing free access to Copernicus Sentinel and oth
 endpoints:
 - type: stacserverapi
   url: https://stac.dataspace.copernicus.eu/v1
+- type: stacserverapi:collections
+  url: https://stac.dataspace.copernicus.eu/v1/collections
+  version: '1.0'
+- type: stacserverapi
+  url: https://stac.dataspace.copernicus.eu/v1/
+  version: '1.0'
 id: stacdataspacecopernicuseu
 langs:
 - id: EN

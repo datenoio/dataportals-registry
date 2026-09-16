@@ -24,6 +24,15 @@ description: Digital orthophotos (DOP) from Lower Saxony in Germany, provided by
 endpoints:
 - type: stacserverapi
   url: https://dop.stac.lgln.niedersachsen.de
+- type: stacserverapi
+  url: https://dop.stac.lgln.niedersachsen.de/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://dop.stac.lgln.niedersachsen.de/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://dop.stac.lgln.niedersachsen.de/conformance
+  version: '1.0'
 id: dopstaclglnniedersachsende
 langs:
 - id: DE

@@ -24,6 +24,12 @@ endpoints:
 - type: openapi
   url: https://cat4kit.atmohub.kit.edu/stac/api
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://cat4kit.atmohub.kit.edu/stac/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://cat4kit.atmohub.kit.edu/stac/conformance
+  version: '1.0'
 id: cat4kitatmohubkitedustac
 langs:
 - id: EN

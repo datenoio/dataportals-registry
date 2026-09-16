@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: ORFEUS EIDA node operated by the National Observatory of Athens Institute of Geodynamics,
+  exposing FDSN waveform, station, availability, and WFCatalog services, including Corinth Rift
+  Laboratory holdings.
+endpoints:
+- type: api
+  url: https://eida.gein.noa.gr/fdsnws/station/1/
+- type: api
+  url: https://eida.gein.noa.gr/fdsnws/dataselect/1/
+- type: api
+  url: https://eida.gein.noa.gr/fdsnws/availability/1/
+- type: api
+  url: https://eida.gein.noa.gr/eidaws/wfcatalog/1/
+id: eidageinnoagr
+langs:
+- id: EN
+  name: English
+link: https://eida.gein.noa.gr/
+name: NOA EIDA node
+owner:
+  link: http://www.noa.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: National Observatory of Athens
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- seismology
+- EIDA
+- FDSN
+- EPOS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00005630

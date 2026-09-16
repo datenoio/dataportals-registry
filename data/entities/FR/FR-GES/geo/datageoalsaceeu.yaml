@@ -15,33 +15,37 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Alsace GeoNetwork is a regional data catalog allowing users to discover,
-  access, and download geospatial datasets related to the Alsace region.
+description: GeoServices Alsace is the GeoNetwork catalog of the Collectivité européenne
+  d'Alsace, allowing users to discover and access geospatial datasets for Alsace.
 endpoints:
 - type: geonetwork:query
-  url: https://datageo.alsace.eu/geonetwork/srv/eng/q
+  url: https://geoservices.alsace.eu/geonetwork/srv/eng/q
 - type: geonetwork:records
-  url: https://datageo.alsace.eu/geonetwork/srv/api/records
+  url: https://geoservices.alsace.eu/geonetwork/srv/api/records
 - type: openapi
-  url: https://datageo.alsace.eu/geonetwork/srv/v2/api-docs
+  url: https://geoservices.alsace.eu/geonetwork/srv/v2/api-docs
   version: '2'
 - type: csw202
-  url: https://datageo.alsace.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  url: https://geoservices.alsace.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
 - type: opensearch
-  url: https://datageo.alsace.eu/geonetwork/srv/eng/portal.opensearch
+  url: https://geoservices.alsace.eu/geonetwork/srv/eng/portal.opensearch
   version: '1.0'
 - type: oaipmh20
-  url: https://datageo.alsace.eu/geonetwork/srv/eng/oaipmh?verb=Identify
+  url: https://geoservices.alsace.eu/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:site
+  url: https://geoservices.alsace.eu/geonetwork/srv/api/site
+- type: geonetwork:selections
+  url: https://geoservices.alsace.eu/geonetwork/srv/api/selections
 id: datageoalsaceeu
 langs:
 - id: FR
   name: French
-link: https://datageo.alsace.eu/geonetwork
-name: Alsace GeoNetwork
+link: https://geoservices.alsace.eu/geonetwork
+name: GeoServices Alsace
 owner:
-  link: https://datageo.alsace.eu/geonetwork
+  link: https://www.alsace.eu
   location:
     country:
       id: FR
@@ -50,7 +54,7 @@ owner:
     subregion:
       id: FR-GES
       name: Grand-Est
-  name: Region Grand Est / Alsace
+  name: Collectivité européenne d'Alsace
   type: Regional government
 properties:
   has_doi: true
@@ -68,6 +72,7 @@ status: active
 tags:
 - Alsace
 - European Union
+- geOrchestra
 - geonetwork
 - geospatial
 - open data

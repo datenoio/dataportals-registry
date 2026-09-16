@@ -160,6 +160,30 @@ DCAT-AP catalogs, especially Sweden and Nordics. Customers: [entryscape.com/en/c
 | Censys | `web.endpoints.http.body: "EntryScape"` |
 | FOFA | `body="EntryScape"` |
 
+## Felles datakatalog (`fellesdatakatalog`) {#fellesdatakatalog}
+
+Norwegian Digitalisation Agency's open-source federated metadata catalog. It powers
+[data.norge.no](https://data.norge.no) and the transport-focused
+[Transportportal](https://transportportal.no). Source:
+[Informasjonsforvaltning/fdk-portal](https://github.com/Informasjonsforvaltning/fdk-portal).
+
+**Signals:** `/config.js` defines `FDK_PORTAL_BASE_URI` and `SEARCH_SERVICE_HOST`;
+the page title is “Felles datakatalog” or “Der Norge deler data”; the search service
+host is `search.api.fellesdatakatalog.digdir.no`.
+
+**Confirm:** GET `/config.js`, then POST `/search/datasets` on the configured search
+service with `{"pagination":{"size":1,"page":1}}`. A JSON response with `hits` and
+`page.totalElements` confirms the catalog. Transportportal is a distinct public
+`TRANSPORT` profile; skip admin, demo, and staging environments.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Felles datakatalog" (dataset OR datasett) -site:github.com` |
+| Censys | `web.endpoints.http.body: "FDK_PORTAL_BASE_URI"` |
+| FOFA | `title="Felles datakatalog"` |
+| FOFA | `title="Der Norge deler data"` |
+| FOFA | `body="search.api.fellesdatakatalog"` |
+
 ## ArcGIS Hub as an open-data site (`arcgishub`) {#arcgishub}
 
 Many Hub sites are **open data** first (dataset search, DCAT) rather than a map viewer. If the primary UI is a dataset catalog, use `catalog_type: Open data portal` and `software.id: arcgishub`. If it is a GIS hub / map gallery, use **Geoportal** — see [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md#arcgishub).
@@ -295,6 +319,34 @@ Inspur Chinese government open-data product. Deployments share `/oportal/` catal
 | Google | `"浪潮" 开放数据 oportal` |
 | Censys | `web.endpoints.http.body: "/oportal/"` |
 | FOFA | `body="/oportal/"` |
+
+## data.world (`dataworld`) {#dataworld}
+
+Commercial catalog SaaS. Hub: [data.world](https://data.world). Distinct from World Bank Data (`dataworldbankorg`).
+
+**Signals:** host `data.world`; data.world chrome.
+
+**Confirm:** GET the public dataset search. One hub, not per-user or private organization spaces.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:data.world datasets` |
+| Censys | `web.names: "data.world"` |
+| FOFA | `host="data.world"` |
+
+## IUDX Catalogue (`iudx`) {#iudx}
+
+India Urban Data Exchange catalogue server. Hub: [catalogue.iudx.org.in](https://catalogue.iudx.org.in/). Source: [datakaveri/iudx-catalogue-server](https://github.com/datakaveri/iudx-catalogue-server). Distinct from CKAN and from pygeoapi on other IUDX hosts.
+
+**Signals:** IUDX catalogue chrome; `/cat/v1/` or central-catalogue host.
+
+**Confirm:** GET the public catalogue search. One record per public catalogue tenant, not each resource ID.
+
+| Tool | Query |
+|------|-------|
+| Google | `"IUDX" (catalogue OR catalog) site:.in` |
+| Censys | `web.names: "iudx.org.in"` |
+| FOFA | `host="iudx.org.in"` |
 
 ## OGD Platform India (`ogdindia`) {#ogdindia}
 

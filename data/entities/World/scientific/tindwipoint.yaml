@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: WIPO Knowledge Repository (TIND), a mixed institutional repository.
+  Publications dominate; a documented Datasets collection includes GII and related
+  research data files. OAI-PMH is public at /oai2d; the WIPODATASETS set currently
+  returns only deleted identifiers, so harvest needs a type filter on HTML/OAI records.
+id: tindwipoint
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+- id: ES
+  name: Spanish
+endpoints:
+- type: oai-pmh
+  url: https://tind.wipo.int/oai2d?verb=Identify
+link: https://tind.wipo.int/
+name: WIPO Knowledge Repository
+owner:
+  link: https://www.wipo.int
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: World Intellectual Property Organization
+  type: International
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- WIPO
+- institutional repository
+- datasets
+- intellectual property
+- TIND
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00006702

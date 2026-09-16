@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -18,6 +18,9 @@ coverage:
       id: CN-ZJ
       name: Zhejiang Sheng
 description: Municipal public data open platform of Quzhou, Zhejiang.
+endpoints:
+- type: jdop:catalog
+  url: https://data.qz.gov.cn/jdop_front/index.do
 id: dataqzgovcn
 langs:
 - id: ZH
@@ -40,8 +43,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: jdop
+  name: JDOP
 status: active
 tags:
 - government

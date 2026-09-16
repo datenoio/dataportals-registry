@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -20,6 +20,17 @@ description: The Epos-France Seismological data center offers access to seismolo
   to support research on source processes and imaging of the Earth's interior at all
   scales. Epos-France is a French national equipment for the observation and understanding
   of the solid Earth.
+endpoints:
+- type: api
+  url: https://ws.resif.fr/fdsnws/station/1/
+- type: api
+  url: https://ws.resif.fr/fdsnws/dataselect/1/
+- type: api
+  url: https://ws.resif.fr/fdsnws/availability/1/
+- type: api
+  url: https://ws.resif.fr/eidaws/wfcatalog/1/
+- type: api
+  url: https://nfocrl.eost.unistra.fr/fdsnws/event/1/
 id: seismologyresiffr
 identifiers:
 - id: openaire

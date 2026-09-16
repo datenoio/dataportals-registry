@@ -25,6 +25,15 @@ endpoints:
 - type: openapi
   url: https://stac.eodc.eu/api/v1/openapi.json
   version: '3.0'
+- type: stacserverapi
+  url: https://stac.eodc.eu/api/v1/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://stac.eodc.eu/api/v1/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac.eodc.eu/api/v1/conformance
+  version: '1.0'
 id: staceodceu
 langs:
 - id: EN

@@ -21,6 +21,12 @@ description: SpatioTemporal Asset Catalog (STAC) 1.0 API from the Brazil Data Cu
 endpoints:
 - type: stacserverapi
   url: https://data.inpe.br/bdc/stac/v1/
+- type: stacserverapi:collections
+  url: https://data.inpe.br/bdc/stac/v1/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://data.inpe.br/bdc/stac/v1/conformance
+  version: '1.0'
 id: datainpebrbdcstacv1
 langs:
 - id: EN

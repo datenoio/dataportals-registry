@@ -15,13 +15,22 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: Public STAC 1.0 API for the Multi-Mission Algorithm and Analysis Platform (MAAP), a NASA–ESA collaborative platform for Earth science data including biomass, lidar, and airborne and field datasets. Implements OGC API Features and STAC search (stac-fastapi).
+description: Public STAC 1.0 API for the Multi-Mission Algorithm and Analysis Platform
+  (MAAP), a NASA–ESA collaborative platform for Earth science data including biomass,
+  lidar, and airborne and field datasets. Implements OGC API Features and STAC search
+  (stac-fastapi).
 endpoints:
 - type: stacserverapi
   url: https://stac.maap-project.org/
 - type: openapi
   url: https://stac.maap-project.org/api
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://stac.maap-project.org/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac.maap-project.org/conformance
+  version: '1.0'
 id: stacmaapprojectorg
 langs:
 - id: EN

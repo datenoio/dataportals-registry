@@ -14,11 +14,13 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: Earth System Grid Federation Metagrid search portal at LLNL. Federated catalog
-  of CMIP and related climate-model output for the US/DOE domain.
+description: Earth System Grid Federation Metagrid search portal at LLNL. Federated
+  catalog of CMIP and related climate-model output for the US/DOE domain.
 endpoints:
 - type: esgf:catalog
   url: https://aims2.llnl.gov/search
+- type: esgf:search
+  url: https://aims2.llnl.gov/esg-search/search?format=application%2Fsolr%2Bjson&limit=0
 id: aims2llnlgov
 langs:
 - id: EN

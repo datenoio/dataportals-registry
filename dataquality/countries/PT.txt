@@ -1,0 +1,31 @@
+DATA QUALITY REPORT - COUNTRY: PT
+================================================================================
+Generated: 2026-09-16 10:22:32
+Country Code: PT
+Total Records with Issues: 2
+Total Issues Found: 2
+
+=== ISSUES BY TYPE ===
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX]
+Count: 2
+Priority: MEDIUM
+
+File: PT/PT-11/geo/geocmodivelaspt.yaml
+Record ID: geocmodivelaspt
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX
+Field: endpoints
+Current Value: {'software_id': 'geocortex', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geocortex' is marked as API-capable in software definitions
+
+File: PT/PT-06/geo/sigcmcoimbrapt.yaml
+Record ID: sigcmcoimbrapt
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX
+Field: endpoints
+Current Value: {'software_id': 'geocortex', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geocortex' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX: 2 issues

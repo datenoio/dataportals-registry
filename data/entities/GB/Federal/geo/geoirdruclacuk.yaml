@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: UCL Institute for Risk and Disaster Reduction GeoServer publishing Empirical Tsunami Risk
+  Products (ETRIS) vulnerability and fragility curve layers as OGC WMS and WFS.
+endpoints:
+- type: wms130
+  url: https://geo.irdr.ucl.ac.uk/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://geo.irdr.ucl.ac.uk/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wmts100
+  url: https://geo.irdr.ucl.ac.uk/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: geoirdruclacuk
+langs:
+- id: EN
+  name: English
+link: https://geo.irdr.ucl.ac.uk/geoserver/
+name: ETRIS GeoServer
+owner:
+  link: https://www.ucl.ac.uk/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: University College London
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- tsunami
+- risk
+- GeoServer
+- EPOS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00005629

@@ -23,6 +23,15 @@ description: STAC 1.0 catalog of COSMO-SkyMed (CSK) and CSG satellite data for t
 endpoints:
 - type: stacserverapi
   url: https://gep-supersites-stac.terradue.com/
+- type: stacserverapi:collections
+  url: https://gep-supersites-stac.terradue.com/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://gep-supersites-stac.terradue.com/conformance
+  version: '1.0'
+- type: openapi
+  url: https://gep-supersites-stac.terradue.com/api
+  version: '3.0'
 id: gepsupersitesstacterraduecom
 langs:
 - id: EN

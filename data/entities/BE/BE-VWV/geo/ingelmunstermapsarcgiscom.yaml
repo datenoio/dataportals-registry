@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: BE
+      name: Belgium
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: BE-VWV
+      name: West-Vlaanderen
+description: Public ArcGIS Instant Apps geoloket of Gemeente Ingelmunster for spatial
+  plans.
+id: ingelmunstermapsarcgiscom
+langs:
+- id: NL
+  name: Dutch
+link: https://ingelmunster.maps.arcgis.com/apps/instant/basic/index.html?appid=d1805856bc1c4236b2928a613248914b
+name: Plannen Ingelmunster
+owner:
+  link: https://www.ingelmunster.be
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: BE-VWV
+      name: West-Vlaanderen
+  name: Gemeente Ingelmunster
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: instantapps
+  name: ArcGIS Instant Apps
+status: active
+tags:
+- geospatial
+- geoportal
+- municipality
+- Belgium
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00006159

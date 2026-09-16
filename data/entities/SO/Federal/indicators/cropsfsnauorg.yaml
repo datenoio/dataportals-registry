@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: SO
+      name: Somalia
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: FAO FSNAU public crop production explorer for Somalia. Filterable tables
+  of metric-tonne production by zone, region, district, year (1995-2025), season,
+  crop, and livelihood system, with a JSON search-parameter API.
+endpoints:
+- type: api
+  url: https://crops.fsnau.org/api/search_params
+id: cropsfsnauorg
+langs:
+- id: EN
+  name: English
+link: https://crops.fsnau.org/
+name: FSNAU Crop Data
+owner:
+  link: https://fsnau.org
+  location:
+    country:
+      id: SO
+      name: Somalia
+    level: 20
+  name: Food Security and Nutrition Analysis Unit (FSNAU)
+  type: International
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- agriculture
+- crops
+- food security
+- FAO
+- Somalia
+- has_api
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+uid: cdi00006603

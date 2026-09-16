@@ -30,6 +30,21 @@ endpoints:
 - type: wmts100
   url: https://cullera.gvsigonline.com/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
+- type: wms111
+  url: https://cullera.gvsigonline.com/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs100
+  url: https://cullera.gvsigonline.com/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://cullera.gvsigonline.com/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://cullera.gvsigonline.com/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs201
+  url: https://cullera.gvsigonline.com/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
 id: culleragvsigonlinecom
 langs:
 - id: ES

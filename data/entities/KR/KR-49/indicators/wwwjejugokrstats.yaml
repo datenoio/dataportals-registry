@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -20,6 +20,9 @@ coverage:
 description: Official statistics portal of Jeju Special Self-Governing Province (제주통계포털).
   Publishes provincial statistical tables, yearbooks, and local indicators. Distinct
   from Jeju Data Hub.
+endpoints:
+- type: api
+  url: https://www.jeju.go.kr/stats/openapi/statisticsList.do?method=getList&format=json
 id: wwwjejugokrstats
 langs:
 - id: KO
@@ -50,8 +53,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: kosis
+  name: KOSIS
 status: active
 tags:
 - government

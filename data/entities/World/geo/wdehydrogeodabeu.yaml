@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: WMO Hydrological Observing System (WHOS) Water Data Explorer for discovering
+  hydrometeorological stations and downloading time series as CSV or WaterML. Public
+  map/list UI; some WHOS APIs require a free access token.
+id: wdehydrogeodabeu
+langs:
+- id: EN
+  name: English
+link: https://wde.hydro.geodab.eu/apps/water-data-explorer-whos/
+name: WMO WHOS Water Data Explorer
+owner:
+  link: https://wmo.int
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: World Meteorological Organization
+  type: International
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- WMO
+- WHOS
+- hydrology
+- water
+- time series
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00006703

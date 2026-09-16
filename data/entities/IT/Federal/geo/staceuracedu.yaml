@@ -25,6 +25,12 @@ endpoints:
 - type: openapi
   url: https://stac.eurac.edu/api
   version: '3.0'
+- type: stacserverapi:collections
+  url: https://stac.eurac.edu/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac.eurac.edu/conformance
+  version: '1.0'
 id: staceuracedu
 langs:
 - id: EN

@@ -26,6 +26,9 @@ description: 'SpatioTemporal Asset Catalog API on top of [NASA''s Common Metadat
 endpoints:
 - type: stacserverapi
   url: https://cmr.earthdata.nasa.gov/cloudstac/
+- type: stacserverapi:conformance
+  url: https://cmr.earthdata.nasa.gov/cloudstac/conformance
+  version: '1.0'
 id: nasacmrcloudstacproxy
 langs:
 - id: EN

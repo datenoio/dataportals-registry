@@ -21,6 +21,15 @@ description: Data Analytics for Canadian Climate Services (DACCS) project. Searc
 endpoints:
 - type: stacserverapi
   url: https://hirondelle.crim.ca/stac/
+- type: stacserverapi:collections
+  url: https://hirondelle.crim.ca/stac/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://hirondelle.crim.ca/stac/conformance
+  version: '1.0'
+- type: openapi
+  url: https://hirondelle.crim.ca/stac/api
+  version: '3.0'
 id: hirondellecrimca
 langs:
 - id: EN

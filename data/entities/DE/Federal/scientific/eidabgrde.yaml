@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ORFEUS EIDA node operated by the Federal Institute for Geosciences and Natural Resources (BGR),
+  serving FDSN waveform, station metadata, availability, and WFCatalog web services.
+endpoints:
+- type: api
+  url: https://eida.bgr.de/fdsnws/station/1/
+- type: api
+  url: https://eida.bgr.de/fdsnws/dataselect/1/
+- type: api
+  url: https://eida.bgr.de/fdsnws/availability/1/
+- type: api
+  url: https://eida.bgr.de/eidaws/wfcatalog/1/
+id: eidabgrde
+langs:
+- id: EN
+  name: English
+link: https://eida.bgr.de/
+name: BGR EIDA node
+owner:
+  link: https://www.bgr.bund.de/
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Federal Institute for Geosciences and Natural Resources (BGR)
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- seismology
+- EIDA
+- FDSN
+- EPOS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00005622

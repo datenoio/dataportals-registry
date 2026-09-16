@@ -12,7 +12,7 @@ coverage:
       name: Aruba
     level: 20
     macroregion:
-      id: '029'
+      id: 029
       name: Caribbean
 description: Official Open SDG reporting platform for Aruba, publishing Sustainable
   Development Goal indicators compiled by the Central Bureau of Statistics. Indicator
@@ -24,6 +24,10 @@ endpoints:
   url: https://sdgcbsaua.github.io/productiondata/en/data/1-1-1.json
 - type: opensdg:data
   url: https://sdgcbsaua.github.io/productiondata/en/data/1-2-1.json
+- type: opensdg:reporting-status
+  url: https://sdgcbsaua.github.io/reporting-status
+- type: opensdg:catalog
+  url: https://sdgcbsaua.github.io/indicators.json
 id: sdgcbsauagithubio
 langs:
 - id: EN

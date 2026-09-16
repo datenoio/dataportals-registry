@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: BE
+      name: Belgium
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: BE-VWV
+      name: West-Vlaanderen
+description: Public planning geoloket of Stad Oostende (Cevi ArcGIS Web AppBuilder)
+  with plans, DSI links, and permits.
+id: geoloketextranetcevibeoostende
+langs:
+- id: NL
+  name: Dutch
+link: https://geoloket.extranet.cevi.be/geoloketten/oostende/stedenbouw/
+name: Geoloket Stedenbouw Oostende
+owner:
+  link: https://www.oostende.be
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: BE-VWV
+      name: West-Vlaanderen
+  name: Stad Oostende
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: webappbuilder
+  name: ArcGIS Web AppBuilder
+status: active
+tags:
+- geospatial
+- geoportal
+- municipality
+- Belgium
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00006156

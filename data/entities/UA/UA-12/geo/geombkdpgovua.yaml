@@ -1,0 +1,58 @@
+access_mode:
+- restricted
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id001
+      id: UA-12
+      name: Dnipropetrovska oblast
+description: Geoportal. managed by Дніпропетровська обласна державна адміністрація.
+  powered by Custom software. accessible at geo.mbk.dp.gov.ua.
+id: geombkdpgovua
+langs:
+- id: EN
+  name: English
+link: https://geo.mbk.dp.gov.ua
+name: Геопортал містобудівного кадастру Дніпропетровської області
+owner:
+  link: https://gov.ua
+  location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 30
+    subregion: *id001
+  name: Дніпропетровська обласна державна адміністрація
+  type: Regional government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- GIS
+- geospatial
+- government
+- ukraine
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00006737

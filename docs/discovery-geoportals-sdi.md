@@ -369,6 +369,8 @@ OGC API Features / Records. **Confirm:** `/` or `/openapi` JSON with `pygeoapi` 
 
 GeoSolutions MapStore. **Signals:** `/mapstore`, `MapStore2`.
 
+Do **not** set `mapstore` on GAUSS WebCity / WebPresenter tenants (`{org}.gis.ba`, `/webcity/`, `logo_gauss.png`) — use `gausswebcity` ([viewers](discovery-geoportals-viewers.md#gausswebcity)).
+
 | Tool | Query |
 |------|-------|
 | Google | `"MapStore" geoportal OR inurl:/mapstore -site:github.com` |

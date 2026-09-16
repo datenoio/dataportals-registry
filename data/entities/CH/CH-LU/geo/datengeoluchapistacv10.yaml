@@ -24,6 +24,15 @@ description: STAC API for packaged geodata products and metadata from the Canton
 endpoints:
 - type: stacserverapi
   url: https://daten.geo.lu.ch/api/stac/v1.0/
+- type: stacserverapi:collections
+  url: https://daten.geo.lu.ch/api/stac/v1.0/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://daten.geo.lu.ch/api/stac/v1.0/conformance
+  version: '1.0'
+- type: openapi
+  url: https://daten.geo.lu.ch/api/stac/v1.0/api
+  version: '3.0'
 id: datengeoluchapistacv10
 langs:
 - id: DE

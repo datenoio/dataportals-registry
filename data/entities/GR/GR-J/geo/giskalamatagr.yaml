@@ -13,7 +13,7 @@ coverage:
       name: Greece
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: GR-J
@@ -54,6 +54,9 @@ endpoints:
 - type: wps100
   url: https://gis.kalamata.gr/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: csw202
+  url: https://gis.kalamata.gr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
 id: giskalamatagr
 langs:
 - id: EL

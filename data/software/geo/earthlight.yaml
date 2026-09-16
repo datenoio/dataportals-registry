@@ -1,0 +1,64 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: earthlight
+name: StatMap Earthlight
+website: https://evo.statmap.co.uk/earthlight-evo/
+description: StatMap Earthlight is a UK local-government browser GIS (Earthlight
+  Portal / Earthlight Public, with Aurora public map embeds). Public SaaS tenants
+  live at {authority}.statmap.co.uk/map/map.html with HTML title StatMap Earthlight
+  and login=ExternalELP; some councils host the same /map/map.html app on maps.{council}.gov.uk.
+  Distinct from Astun iShare (ishare) and Cadcorp SIS WebMap (cadcorp). Skip intranet-only
+  Earthlight Enterprise and HorizoNext planning case portals.
+owner:
+  name: StatMap
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+logo_url: https://evo.statmap.co.uk/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: Uncertain
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: Uncertain
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'Yes'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+documentation_url: https://evo.statmap.co.uk/earthlight-evo/
+export_formats:
+- GeoJSON
+- JSON
+- KML
+- XML
+capabilities:
+- Map viewer
+- OGC web services
+- Local-government GIS
+last_updated: '2026-09-14T00:00:00Z'

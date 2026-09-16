@@ -152,6 +152,10 @@ class TestConstants:
         assert "Machine learning catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES[
             "openmlorg"
         ]
+        assert "Machine learning catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES[
+            "kaggle"
+        ]
+        assert "Data search engine" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["epos"]
         for software_id, allowed in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES.items():
             primary = MAP_SOFTWARE_OWNER_CATALOG_TYPE.get(software_id)
             if primary:

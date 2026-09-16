@@ -34,6 +34,9 @@ endpoints:
 - type: wcs100
   url: https://qgisserver.geomatick.com/cgi-bin/qgis_mapserv.fcgi?map=/home/qgis/Barval.qgs&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCapabilities
   version: 1.0.0
+- type: wms130
+  url: https://barval.geomatick.com/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0
 id: barvalgeomatickcom
 langs:
 - id: FR

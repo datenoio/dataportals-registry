@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,8 +18,8 @@ id: datatransportportalno
 langs:
 - id: 'NO'
   name: Norwegian
-link: https://datatransportportalno
-name: Transport Portal Sweden
+link: https://transportportal.no
+name: Transportportal (Norwegian Transport Portal)
 owner:
   link: https://www.vegvesen.no
   location:
@@ -29,6 +30,7 @@ owner:
   name: Statens vegvesen
   type: Central government
 properties:
+  is_national: false
   transferable_topics: true
 rights:
   license_id: null
@@ -38,11 +40,13 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: fellesdatakatalog
+  name: Felles datakatalog
 status: active
 tags:
 - government
+- transport
+- DCAT-AP-NO
 topics:
 - id: Transportation
   name: Transportation
@@ -54,5 +58,10 @@ topics:
   name: Location
   type: iso19115
 uid: cdi00002427
-description: Open data portal. managed by Statens vegvesen. powered by Custom software.
-  accessible at datatransportportalno.
+description: Norway's national access point for road, transport, and mobility data.
+  It is a transport-focused profile of Felles datakatalog, managed in cooperation
+  with Statens vegvesen, the Norwegian Railway Directorate, Entur, and the Norwegian
+  Digitalisation Agency.
+endpoints:
+- type: customapi
+  url: https://search.api.fellesdatakatalog.digdir.no/search/datasets

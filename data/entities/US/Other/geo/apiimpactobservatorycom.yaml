@@ -20,6 +20,15 @@ description: STAC API for Impact Observatory land use and land cover products, i
 endpoints:
 - type: stacserverapi
   url: https://api.impactobservatory.com/stac-aws/
+- type: stacserverapi:collections
+  url: https://api.impactobservatory.com/stac-aws/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://api.impactobservatory.com/stac-aws/conformance
+  version: '1.0'
+- type: openapi
+  url: https://api.impactobservatory.com/stac-aws/api
+  version: '3.0'
 id: apiimpactobservatorycom
 langs:
 - id: EN

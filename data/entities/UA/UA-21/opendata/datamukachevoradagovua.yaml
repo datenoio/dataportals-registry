@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion: &id001
+      id: UA-21
+      name: Zakarpatska oblast
+description: Open data portal. managed by Мукачівська міська рада. powered by CKAN.
+  accessible at data.mukachevo-rada.gov.ua.
+endpoints:
+- type: ckan:package-search
+  url: https://data.mukachevo-rada.gov.ua/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.mukachevo-rada.gov.ua/api/3/action/package_list
+  version: '3'
+id: datamukachevoradagovua
+langs:
+- id: EN
+  name: English
+link: https://data.mukachevo-rada.gov.ua
+name: Місцевий портал відкритих даних Мукачівської міської ради
+owner:
+  link: https://gov.ua
+  location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 30
+    subregion: *id001
+  name: Мукачівська міська рада
+  type: Local government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- CKAN
+- government
+- open data
+- ukraine
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00006739

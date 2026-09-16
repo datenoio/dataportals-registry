@@ -13,7 +13,7 @@ coverage:
       name: Serbia
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: MapStore geoportal of Subotica's public water and sewer utility (ViK)
   with network and infrastructure layers.
@@ -39,6 +39,9 @@ endpoints:
 - type: wcs201
   url: https://geoportal.vodovodsu.rs/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
   version: 2.0.1
+- type: csw202
+  url: https://geoportal.vodovodsu.rs/geoserver/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
 id: geoportalvodovodsurs
 langs:
 - id: SR

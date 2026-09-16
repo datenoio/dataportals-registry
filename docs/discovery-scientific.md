@@ -79,6 +79,36 @@ Zenodo-like research data repositories. **Confirm:** `/api/records?size=1` JSON 
 | Censys | `web.endpoints.http.body: "invenio"` |
 | FOFA | `body="invenio"` |
 
+## HAL (`hal`) {#hal}
+
+CCSD Hyper Articles en Ligne. National hub: [hal.science](https://hal.science/). Institutional portals reuse the same stack on `*.hal.science` and `hal.*`. Distinct from Invenio (`invenio`) and InvenioRDM (`inveniordm`).
+
+**Signals:** HAL chrome; host `hal.science` or `*.hal.science`; CCSD; API on `api.archives-ouvertes.fr`.
+
+**Confirm:** GET the public portal. One record per public HAL portal, not each deposit. Skip documentation-only CCSD pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:hal.science` |
+| Google | `"Archive ouverte" HAL (données OR dataset) site:.fr` |
+| Censys | `web.names: "hal.science"` |
+| FOFA | `host="hal.science"` |
+| crt.sh | `%.hal.science` |
+
+## Mendeley Data (`mendeleydata`) {#mendeleydata}
+
+Elsevier research-data hub: [data.mendeley.com](https://data.mendeley.com). Distinct from Elsevier Digital Commons and Figshare.
+
+**Signals:** host `data.mendeley.com`; Mendeley Data chrome.
+
+**Confirm:** GET the public dataset search. One hub, not per-dataset DOI pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:data.mendeley.com datasets` |
+| Censys | `web.names: "data.mendeley.com"` |
+| FOFA | `host="data.mendeley.com"` |
+
 ## EPrints (`eprints`) {#eprints}
 
 **Confirm:** `/eprint` URLs, “Powered by EPrints”, `meta generator` EPrints (Warwick WRAP and UAL Research Online are EPrints 3.4.5; UNAM IIEc is 3.3.16; UCL Discovery is 3.4.3; NERC Open Research Archive, LSE Research Online, and LSHTM Research Online are 3.4.6), or OAI-PMH Identify with an `eprints` xmlns (`/cgi/oai2` or `/oai`; PTB uses `/oai`). Directory: [ROAR](http://roar.eprints.org). Do **not** set `eprints` from a Digital Commons `/do/oai/` Identify that only lists an `eprints` metadata prefix.

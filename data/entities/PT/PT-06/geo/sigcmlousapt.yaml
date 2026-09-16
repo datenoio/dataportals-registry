@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: PT-06
+      name: Coimbra
+description: Geoportal. managed by Câmara Municipal da Lousã. powered by ArcGIS Hub.
+  accessible at sig.cm-lousa.pt.
+endpoints:
+- type: arcgis:portals:self
+  url: https://sig.cm-lousa.pt/portal/sharing/rest/portals/self?f=pjson
+id: sigcmlousapt
+langs:
+- id: PT
+  name: Portuguese
+link: https://sig.cm-lousa.pt/portal/home
+name: SIG da Lousã
+owner:
+  link: https://cm-lousa.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    subregion:
+      id: PT-06
+      name: Coimbra
+  name: Câmara Municipal da Lousã
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- portugal
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00006574

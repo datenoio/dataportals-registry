@@ -1,0 +1,90 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: CO-CUN
+      name: Cundinamarca
+description: Urban observatory of Soacha on ArcGIS Hub, with municipal geospatial
+  datasets on infrastructure and city services.
+endpoints:
+- type: dcatap201
+  url: https://observatorio-urbano-soacha-sigsoacha15.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://observatorio-urbano-soacha-sigsoacha15.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://observatorio-urbano-soacha-sigsoacha15.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://observatorio-urbano-soacha-sigsoacha15.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://observatorio-urbano-soacha-sigsoacha15.hub.arcgis.com/sitemap.xml
+- type: dcatus11
+  url: https://observatorio-urbano-soacha-sigsoacha15.hub.arcgis.com/data.json
+id: observatoriourbanosoachasigsoacha15hubarcgiscom
+langs:
+- id: ES
+  name: Spanish
+link: https://observatorio-urbano-soacha-sigsoacha15.hub.arcgis.com/
+name: Observatorio Urbano de Soacha
+owner:
+  link: https://www.alcaldiasoacha.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    subregion:
+      id: CO-CUN
+      name: Cundinamarca
+  name: Alcaldía de Soacha
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geoportal
+- Colombia
+- Cundinamarca
+- Soacha
+- ArcGIS
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00005682

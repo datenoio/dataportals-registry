@@ -22,6 +22,15 @@ description: SpatioTemporal Asset Catalog (STAC) API for the EASIER Data Initiat
 endpoints:
 - type: stacserverapi
   url: https://stac.easierdata.info/
+- type: stacserverapi:collections
+  url: https://stac.easierdata.info/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://stac.easierdata.info/conformance
+  version: '1.0'
+- type: openapi
+  url: https://stac.easierdata.info/api
+  version: '3.0'
 id: staceasierdatainfo
 langs:
 - id: EN

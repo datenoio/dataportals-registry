@@ -13,7 +13,7 @@ coverage:
       name: Greece
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: GR-K
@@ -31,6 +31,18 @@ endpoints:
 - type: csw202
   url: https://gispva.getmap.gr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
+- type: wfs100
+  url: https://gispva.getmap.gr/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://gispva.getmap.gr/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://gispva.getmap.gr/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs201
+  url: https://gispva.getmap.gr/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
 id: gispvagetmapgr
 langs:
 - id: EL
