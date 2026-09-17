@@ -9,11 +9,35 @@ Agent checklist: [agents/discover.md](agents/discover.md). Platform fingerprints
 ## Workflow
 
 1. Scope the search: one country, one city, one `software.id`, one TLD, or one named list URL. Unscoped queries produce more noise than this registry can review. For municipal geoportals, scope to a **product tenant list**, not every city name.
-2. Duplicate-check exports (`datasets.duckdb` / `full.parquet`) and `data/scheduled/` **before** opening dozens of tabs. Match on hostname, not display name. If DuckDB is locked, use Parquet.
+2. Duplicate-check exports (`datasets.duckdb` / `full.parquet`) and `data/scheduled/` **before** opening dozens of tabs. Match on hostname, not display name. If DuckDB is locked, use Parquet. For a batch of candidates, use `python scripts/hunt.py dedupe candidates.jsonl` — it reads DuckDB read-only and falls back to parquet automatically.
 3. Run a **title / URL** query first (Google `intitle:` / `inurl:`, Censys `html_title`, FOFA `title=`). Then a **body / snippet** query (`"Powered by CKAN"`, HTTP body). For SaaS viewers, Certificate Transparency often beats Google (`%.pozi.com`, `%.giscloud.com`, `%.webewid.pl`).
 4. Restrict with `site:.gov`, a national TLD, a Censys `location.country_code`, or FOFA `country="XX"`.
-5. Confirm the live site with the probe table for that platform. Set `software.id` only when two signals match.
-6. Add verified finds with `add-single --scheduled`. Skip demos, docs, GitHub repos, and login-only sites. If the vendor list is exhausted, report 0 missing and stop.
+5. Confirm the live site with the probe table for that platform. Set `software.id` only when two signals match. For a batch, `python scripts/hunt.py probe candidates.deduped.jsonl --software ckan` does polite per-host GETs with encoding-safe title extraction and fingerprint probes.
+6. Add verified finds with `add-single --scheduled` (or `add-batch` for a list). Skip demos, docs, GitHub repos, and login-only sites. If the vendor list is exhausted, report 0 missing and stop.
+7. Log the hunt with `python scripts/hunt.py log --kind software-instance --target <software-id> --added N --skipped-dupes M --notes "..."`.
+
+## Scripted searches with hunt.py
+
+`scripts/hunt.py` is the tested implementation of the plumbing discovery sessions used to rebuild as throwaway scripts. It is a local maintainer/agent CLI — it queries the documented search APIs and probes only candidate hosts, never the open internet.
+
+```bash
+# FOFA (needs FOFA_EMAIL + FOFA_KEY in the environment)
+python scripts/hunt.py search fofa 'title="数据开放" && country="CN"' --out candidates.jsonl --max-pages 2
+
+# Censys Platform v3 (needs CENSYS_API_TOKEN, optional CENSYS_ORGANIZATION_ID)
+python scripts/hunt.py search censys 'web.endpoints.http.html_title: "HSLayers"' --out candidates.jsonl
+
+# Duplicate-check against exports (DuckDB read-only, parquet fallback on lock)
+python scripts/hunt.py dedupe candidates.jsonl
+
+# Polite probe: per-host serialization, encoding detection, liveness, fingerprints
+python scripts/hunt.py probe candidates.deduped.jsonl --software ckan --concurrency 8
+
+# Log the hunt
+python scripts/hunt.py log --kind software-instance --target ckan --added 5 --skipped-dupes 12
+```
+
+`search` retries 429/5xx with exponential backoff and honors `Retry-After`. `probe` classifies liveness with the same vocabulary as `scripts/check_liveness.py`, decodes legacy encodings (GBK, Big5, Cyrillic) for titles, flags `401`/`403` as `auth_required` (never bypasses them), and annotates `software_id` when a fingerprint probe from the apidetect URL maps matches.
 
 ## What counts as a hit
 

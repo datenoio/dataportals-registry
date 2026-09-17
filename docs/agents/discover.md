@@ -18,8 +18,8 @@ Do not invent `uid`. Do not add dataset-level records. Do not implement producti
 ## Before probing the web
 
 1. Read [llms.txt](https://github.com/datenoio/dataportals-registry/blob/main/llms.txt) if you have not already.
-2. Duplicate-check **exports** (`data/datasets/datasets.duckdb` or `full.parquet`), then `data/scheduled/` if present.
-3. If DuckDB raises a lock error, query `data/datasets/full.parquet` instead. Do not walk YAML.
+2. Duplicate-check **exports** (`data/datasets/datasets.duckdb` or `full.parquet`), then `data/scheduled/` if present. For a batch of candidates, `python scripts/hunt.py dedupe candidates.jsonl` annotates each row with `exists` / `existing_id`.
+3. If DuckDB raises a lock error, query `data/datasets/full.parquet` instead (`hunt.py dedupe` falls back automatically). Do not walk YAML.
 4. If the user named a URL or domain, search that first and stop if it is already registered.
 5. If this is a software-instance hunt, check whether a prior session already exhausted that vendor list (0 missing is done).
 
@@ -332,10 +332,13 @@ See [apidetect.md](../apidetect.md). Do not run `apidetect_urlmaps_draft.py` as 
 
 ## After a valid find
 
-1. `python scripts/builder.py add-single URL --scheduled` (preferred) or write YAML per [contribute.md](contribute.md).
-2. `python scripts/builder.py assign`
+1. `python scripts/builder.py add-single URL --scheduled` for one find, or `python scripts/builder.py add-batch manifest.jsonl` for several (manifest rows carry `url`, `name`, `software`, `catalog_type`, `country`, `subregion`, `owner_name`, `owner_type`, `langs`, `is_national`, `id`; add-batch dedupes, validates, and assigns UIDs itself). Use `--subregion` for regional/local owners and `--id` for path-based tenants.
+2. `python scripts/builder.py assign` (skip after `add-batch`)
 3. `python scripts/builder.py validate-yaml --id` for that catalog id
-4. Cite `id` + `link` in the reply. List skipped duplicates with their existing `id`. If the vendor list is exhausted, say so (0 missing is a complete hunt).
+4. Log the hunt: `python scripts/hunt.py log --kind <hunt-kind> --target <target> --added N --skipped-dupes M --notes "..."` (validates kind/status/date and appends to `dataquality/hunts.jsonl`).
+5. Cite `id` + `link` in the reply. List skipped duplicates with their existing `id`. If the vendor list is exhausted, say so (0 missing is a complete hunt).
+
+For FOFA/Censys hunts, `python scripts/hunt.py search|dedupe|probe` replaces ad-hoc API scripts — see [discovery-search-tools.md](../discovery-search-tools.md#scripted-searches-with-huntpy).
 
 ## Do not
 

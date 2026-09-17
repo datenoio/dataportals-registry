@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
-"""
-Review records in data/scheduled/, update status, and move to proper subdir in data/entities/.
+"""Promote scheduled records to entities: selective, subregion-aware, liveness-gated.
 
 For each scheduled file:
-- Known country (EU, CN, FR, World, etc.): Move to entities/{country}/Federal/{type}/
-- Unknown: Infer country from coverage, owner, link; update coverage/owner; move
+- Known country (EU, CN, FR, World, etc.): move to entities/{country}/{Federal|SUBREGION}/{type}/
+- Unknown: infer country from coverage, owner, link, and data/reference/country_hints.yaml
+- Records with a valid owner/coverage subregion are routed to {CC}/{SUBREGION}/{type}/
 - Update status to active (unless staging/dev)
+- With --probe, classify link liveness first: dead records stay in scheduled
+
+Commands:
+- (default)            promote records (--dry-run, --id, --probe)
+- review-scheduled     read-only triage report for the whole queue
 """
 
 from __future__ import annotations
@@ -17,16 +22,23 @@ import sys
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 if _SCRIPT_DIR not in sys.path:
     sys.path.insert(0, _SCRIPT_DIR)
-import re
-import sys
+
+import json
 from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
 from urllib.parse import urlparse
 
+import requests
+import typer
 import yaml
+
+from check_liveness import classify_liveness, probe_url
 
 BASE_DIR = Path(__file__).parent.parent
 SCHEDULED_DIR = BASE_DIR / "data" / "scheduled"
 ENTITIES_DIR = BASE_DIR / "data" / "entities"
+COUNTRY_HINTS_PATH = BASE_DIR / "data" / "reference" / "country_hints.yaml"
+DEFAULT_REVIEW_OUT = BASE_DIR / "dataquality" / "scheduled_review.jsonl"
 
 # Staging/dev sites - keep as inactive
 STAGING_PATTERNS = ("staging", "dev.", "demo.", "test.", "derilinx.com", "klldev", "disldev")
@@ -47,6 +59,8 @@ TYPE_TO_SUBDIR = {
     "Datasets list": "opendata",
     "General research repository": "scientific",
 }
+
+app = typer.Typer(help="Promote scheduled records to entities (selective, subregion-aware, liveness-gated).")
 
 
 def get_subdir_from_path(rel_path: str) -> str:
@@ -147,7 +161,38 @@ def infer_country_from_link(link: str) -> str | None:
     return None
 
 
-def infer_country_for_unknown(record: dict) -> str:
+# ---------------------------------------------------------------------------
+# Data-driven country hints
+# ---------------------------------------------------------------------------
+
+
+def load_country_hints(path: Optional[Path] = None) -> List[Dict[str, Any]]:
+    """Load substring country hints from data/reference/country_hints.yaml."""
+    hint_path = path or COUNTRY_HINTS_PATH
+    if not hint_path.exists():
+        return []
+    with open(hint_path, "r", encoding="utf-8") as f:
+        data = yaml.safe_load(f) or {}
+    return data.get("hints") or []
+
+
+def match_country_hint(haystack: str, hints: List[Dict[str, Any]]) -> Optional[str]:
+    """Return the country of the first matching hint, evaluated in file order.
+
+    Hint forms:
+      - {pattern: "brasilio", country: BR}   # substring match
+      - {all: ["opendatasoft", "zastrug"], country: RS}  # every substring must appear
+    """
+    for hint in hints:
+        if "all" in hint:
+            if all(str(p).lower() in haystack for p in hint["all"]):
+                return hint["country"]
+        elif hint.get("pattern") and str(hint["pattern"]).lower() in haystack:
+            return hint["country"]
+    return None
+
+
+def infer_country_for_unknown(record: dict, hints: Optional[List[Dict[str, Any]]] = None) -> str:
     """Infer country for Unknown records. Returns country_id, default World."""
     country_id, _ = get_country_from_record(record)
     if country_id:
@@ -158,47 +203,61 @@ def infer_country_for_unknown(record: dict) -> str:
     if cid:
         return cid
 
-    # URL/domain heuristics
     rid = (record.get("id") or "").lower()
-    link_lower = link.lower()
-    if "brasilio" in rid or "brasilio" in link_lower or "brasil.io" in link_lower:
-        return "BR"
-    if "axiell" in rid or "axiell" in link_lower:
-        return "NL"  # Axiell/LDMax.nl
-    if "dakar" in rid or "dakar" in link_lower or "inondationsdakar" in rid:
-        return "SN"
-    if "unesco" in link_lower or "unescwa" in link_lower:
-        return "World"
-    if "unhcr" in link_lower or "unhcrorg" in link_lower:
-        return "World"
-    if "icann" in link_lower:
-        return "World"
-    if "dhsprogram" in link_lower:
-        return "US"
-    if "sdsmt" in link_lower or "sdsmtedu" in link_lower:
-        return "US"
-    if "grandest" in link_lower or "data4citizen" in link_lower:
-        return "FR"
-    if "conaviopendata" in link_lower or "junar" in link_lower:
-        return "CL"
-    if "catalogriits" in link_lower:
-        return "IT"
-    if "redatam" in link_lower:
-        return "World"
-    if "africaopendata" in link_lower or "investigateafrica" in link_lower or "alcafricandatalab" in link_lower:
-        return "World"
-    if "opendatab40cities" in link_lower:
-        return "World"
-    if "opengeohub" in link_lower:
-        return "World"
-    if "marineregions" in link_lower:
-        return "World"
-    if "d4science" in link_lower:
-        return "EU"
-    if "opendatasoft" in link_lower and "zastrug" in rid:
-        return "RS"  # or BA/ME - Balkan region
+    haystack = f"{rid} {link.lower()}"
+    if hints is None:
+        hints = load_country_hints()
+    matched = match_country_hint(haystack, hints)
+    if matched:
+        return matched
 
     return "World"
+
+
+# ---------------------------------------------------------------------------
+# Subregion routing
+# ---------------------------------------------------------------------------
+
+
+def resolve_subregion(record: dict, country_id: Optional[str] = None) -> Tuple[Optional[str], Optional[str]]:
+    """Return (subregion_id, warning) for records carrying a subregion.
+
+    Reads owner.location.subregion.id first, then coverage[].location.subregion.id.
+    Unknown codes produce a warning and a Federal/ fallback (None).
+    """
+    from builder import validate_subregion  # lazy: builder is a heavy import
+
+    candidates: List[str] = []
+    owner_loc = (record.get("owner") or {}).get("location") or {}
+    owner_sub = (owner_loc.get("subregion") or {}).get("id")
+    if owner_sub:
+        candidates.append(str(owner_sub))
+    for cov in record.get("coverage") or []:
+        cov_sub = ((cov.get("location") or {}).get("subregion") or {}).get("id")
+        if cov_sub and str(cov_sub) not in candidates:
+            candidates.append(str(cov_sub))
+
+    if not candidates:
+        return None, None
+    for sid in candidates:
+        try:
+            validate_subregion(sid, country_id if country_id not in (None, "World", "Unknown") else None)
+            return sid.strip().upper(), None
+        except ValueError:
+            continue
+    return None, f"unknown subregion(s) {candidates}; falling back to Federal/"
+
+
+def apply_subregion_level(record: dict, subregion_id: str) -> None:
+    """Ensure owner/coverage locations carrying the subregion have level 30."""
+    owner = record.get("owner") or {}
+    owner_loc = owner.get("location")
+    if isinstance(owner_loc, dict) and (owner_loc.get("subregion") or {}).get("id"):
+        owner_loc["level"] = 30
+    for cov in record.get("coverage") or []:
+        loc = cov.get("location")
+        if isinstance(loc, dict) and (loc.get("subregion") or {}).get("id"):
+            loc["level"] = 30
 
 
 def is_staging_or_dev(record: dict) -> bool:
@@ -219,37 +278,78 @@ def get_subdir_from_catalog_type(catalog_type: str, path_type: str) -> str:
     return path_type if path_type in TYPE_TO_SUBDIR.values() else "opendata"
 
 
-def main() -> None:
-    dry_run = "--dry-run" in sys.argv
-    if dry_run:
-        print("DRY RUN - no files will be moved\n")
-
-    if not SCHEDULED_DIR.exists():
-        print(f"Directory not found: {SCHEDULED_DIR}")
-        return
-
-    # Collect all scheduled YAML files
-    scheduled_files: list[tuple[Path, str, str]] = []  # (path, country_from_path, type_from_path)
-    for yaml_path in sorted(SCHEDULED_DIR.rglob("*.yaml")):
+def collect_scheduled(scheduled_dir: Optional[Path] = None) -> List[Tuple[Path, str, str]]:
+    """Collect (path, country_from_path, type_from_path) for every scheduled YAML."""
+    base = scheduled_dir or SCHEDULED_DIR
+    scheduled_files: List[Tuple[Path, str, str]] = []
+    for yaml_path in sorted(base.rglob("*.yaml")):
         try:
-            rel = yaml_path.relative_to(SCHEDULED_DIR)
+            rel = yaml_path.relative_to(base)
             country = get_country_from_path(str(rel))
             subdir = get_subdir_from_path(str(rel))
             if country and subdir:
                 scheduled_files.append((yaml_path, country, subdir))
         except ValueError:
             continue
+    return scheduled_files
+
+
+# ---------------------------------------------------------------------------
+# Promotion
+# ---------------------------------------------------------------------------
+
+
+def promote_records(
+    dry_run: bool = False,
+    ids: Optional[List[str]] = None,
+    probe: bool = False,
+    timeout: float = 10.0,
+    scheduled_dir: Optional[Path] = None,
+    entities_dir: Optional[Path] = None,
+) -> Dict[str, int]:
+    """Promote scheduled records. Returns counters."""
+    base = scheduled_dir or SCHEDULED_DIR
+    entities = entities_dir or ENTITIES_DIR
+
+    if not base.exists():
+        typer.echo(f"Directory not found: {base}")
+        return {"promoted": 0, "skipped_dup": 0, "dead": 0, "errors": 0}
+
+    scheduled_files = collect_scheduled(base)
+
+    if ids:
+        wanted = set(ids)
+        by_id: Dict[str, Tuple[Path, str, str]] = {}
+        for entry in scheduled_files:
+            by_id[entry[0].stem] = entry
+        missing = wanted - set(by_id)
+        if missing:
+            typer.echo(
+                f"Error: --id value(s) not found in {base}: {', '.join(sorted(missing))}",
+                err=True,
+            )
+            raise typer.Exit(1)
+        scheduled_files = [by_id[i] for i in ids]
 
     if not scheduled_files:
-        print("No YAML files in data/scheduled/")
-        return
+        typer.echo("No YAML files in data/scheduled/")
+        return {"promoted": 0, "skipped_dup": 0, "dead": 0, "errors": 0}
 
-    print(f"Processing {len(scheduled_files)} scheduled records\n")
+    if dry_run:
+        typer.echo("DRY RUN - no files will be moved\n")
+    typer.echo(f"Processing {len(scheduled_files)} scheduled records\n")
+
+    hints = load_country_hints()
+    session = None
+    if probe:
+        session = requests.Session()
+        session.headers.update({"User-Agent": "dataportals-registry-promote/1.0"})
 
     promoted = 0
     skipped_dup = 0
+    dead_count = 0
     updated_coverage = 0
-    errors: list[tuple[Path, str]] = []
+    errors: List[Tuple[Path, str]] = []
 
     for yaml_path, path_country, path_type in scheduled_files:
         try:
@@ -265,9 +365,22 @@ def main() -> None:
         catalog_type = data.get("catalog_type", "")
         target_subdir = get_subdir_from_catalog_type(catalog_type, path_type)
 
+        # Liveness gate
+        if probe:
+            link = (data.get("link") or "").strip()
+            http_code, error, _final = probe_url(link, session, timeout=timeout)
+            liveness = classify_liveness(http_code, error)
+            if liveness == "dead":
+                dead_count += 1
+                typer.echo(f"  [dead] {rid} stays in scheduled ({error or f'HTTP {http_code}'})")
+                continue
+            if liveness in ("inconclusive", "error"):
+                typer.echo(f"  [warn] {rid} liveness={liveness}; promoting anyway")
+            else:
+                typer.echo(f"  [probe] {rid} {liveness} (HTTP {http_code})")
+
         if path_country == "Unknown":
-            country_id = infer_country_for_unknown(data)
-            admin_dir = "Federal"
+            country_id = infer_country_for_unknown(data, hints)
 
             # Update coverage if it was Unknown
             cov = data.get("coverage") or []
@@ -299,6 +412,15 @@ def main() -> None:
                 data["owner"] = owner
         else:
             country_id = path_country
+
+        # Subregion-aware routing
+        subregion_id, sub_warn = resolve_subregion(data, country_id)
+        if sub_warn:
+            typer.echo(f"  [warn] {rid}: {sub_warn}")
+        if subregion_id:
+            admin_dir = subregion_id
+            apply_subregion_level(data, subregion_id)
+        else:
             admin_dir = "Federal"
 
         # Update status
@@ -307,7 +429,7 @@ def main() -> None:
         elif (data.get("status") or "").strip() == "scheduled":
             data["status"] = "active"
 
-        target_dir = ENTITIES_DIR / country_id / admin_dir / target_subdir
+        target_dir = entities / country_id / admin_dir / target_subdir
         target_path = target_dir / yaml_path.name
 
         if target_path.exists() and target_path != yaml_path:
@@ -315,11 +437,11 @@ def main() -> None:
             if not dry_run:
                 yaml_path.unlink()
             skipped_dup += 1
-            print(f"  [skip dup] {rid} -> already in entities")
+            typer.echo(f"  [skip dup] {rid} -> already in entities")
             continue
 
         if dry_run:
-            print(f"  {rid} -> {country_id}/{admin_dir}/{target_subdir}/ (status={data.get('status')})")
+            typer.echo(f"  {rid} -> {country_id}/{admin_dir}/{target_subdir}/ (status={data.get('status')})")
             promoted += 1
             continue
 
@@ -330,22 +452,192 @@ def main() -> None:
         )
         yaml_path.unlink()
         promoted += 1
-        print(f"  {rid} -> {country_id}/{admin_dir}/{target_subdir}/ (status={data.get('status')})")
+        typer.echo(f"  {rid} -> {country_id}/{admin_dir}/{target_subdir}/ (status={data.get('status')})")
 
     if errors:
-        print(f"\nErrors ({len(errors)}):")
+        typer.echo(f"\nErrors ({len(errors)}):")
         for path, err in errors[:10]:
-            print(f"  {path}: {err}")
+            typer.echo(f"  {path}: {err}")
         if len(errors) > 10:
-            print(f"  ... and {len(errors) - 10} more")
+            typer.echo(f"  ... and {len(errors) - 10} more")
 
-    print(f"\nPromoted: {promoted}, updated coverage: {updated_coverage}, skipped (dup): {skipped_dup}")
+    typer.echo(
+        f"\nPromoted: {promoted}, updated coverage: {updated_coverage}, "
+        f"skipped (dup): {skipped_dup}, kept dead: {dead_count}"
+    )
 
     if not dry_run and promoted > 0:
-        print("\nNext steps:")
-        print("  python scripts/builder.py assign")
-        print("  python scripts/builder.py validate-yaml")
-        print("  python scripts/builder.py build")
+        typer.echo("\nNext steps:")
+        typer.echo("  python scripts/builder.py assign")
+        typer.echo("  python scripts/builder.py validate-yaml")
+        typer.echo("  python scripts/builder.py build")
+
+    return {
+        "promoted": promoted,
+        "skipped_dup": skipped_dup,
+        "dead": dead_count,
+        "errors": len(errors),
+    }
+
+
+@app.callback(invoke_without_command=True)
+def promote(
+    ctx: typer.Context,
+    dry_run: bool = typer.Option(False, "--dry-run", help="Preview moves without writing"),
+    ids: Optional[List[str]] = typer.Option(None, "--id", help="Promote only these record ids (repeatable)"),
+    probe: bool = typer.Option(False, "--probe", help="Probe link liveness before moving; dead records stay"),
+    timeout: float = typer.Option(10.0, "--timeout", help="Per-request probe timeout seconds"),
+):
+    """Promote scheduled records to entities (default command)."""
+    if ctx.invoked_subcommand is not None:
+        return
+    promote_records(dry_run=dry_run, ids=ids, probe=probe, timeout=timeout)
+
+
+# ---------------------------------------------------------------------------
+# review-scheduled
+# ---------------------------------------------------------------------------
+
+
+def review_queue(
+    probe: bool = True,
+    country: Optional[str] = None,
+    concurrency: int = 8,
+    timeout: float = 10.0,
+    scheduled_dir: Optional[Path] = None,
+) -> List[Dict[str, Any]]:
+    """Build a triage report for the scheduled queue. Never moves or modifies files."""
+    from hunt import _build_export_indexes, dedupe_rows, probe_rows
+
+    base = scheduled_dir or SCHEDULED_DIR
+    hints = load_country_hints()
+    rows: List[Dict[str, Any]] = []
+
+    for yaml_path, path_country, path_type in collect_scheduled(base):
+        try:
+            data = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
+        except Exception as e:
+            rows.append({"id": yaml_path.stem, "path": str(yaml_path), "bucket": "needs-review",
+                         "notes": f"YAML error: {e}"})
+            continue
+        if not isinstance(data, dict):
+            rows.append({"id": yaml_path.stem, "path": str(yaml_path), "bucket": "needs-review",
+                         "notes": "invalid YAML structure"})
+            continue
+
+        rid = data.get("id", yaml_path.stem)
+        if path_country == "Unknown":
+            country_id = infer_country_for_unknown(data, hints)
+        else:
+            country_id = path_country
+        subregion_id, sub_warn = resolve_subregion(data, country_id)
+
+        row: Dict[str, Any] = {
+            "id": rid,
+            "link": data.get("link"),
+            "path": str(yaml_path.relative_to(base)),
+            "country": country_id,
+            "subregion": subregion_id,
+            "catalog_type": data.get("catalog_type"),
+            "staging": is_staging_or_dev(data),
+        }
+        notes = []
+        if sub_warn:
+            notes.append(sub_warn)
+        if row["staging"]:
+            notes.append("staging/dev host; promotes as inactive")
+        row["notes"] = "; ".join(notes)
+        rows.append(row)
+
+    if country:
+        wanted = country.upper()
+        rows = [r for r in rows if (r.get("country") or "").upper() == wanted]
+
+    # Batch duplicate check against entities exports
+    try:
+        ids, urls, hosts = _build_export_indexes()
+        candidates = [
+            {"url": r.get("link") or "", "host": "", "id": r.get("id")} for r in rows
+        ]
+        deduped = dedupe_rows(candidates, ids, urls, hosts)
+        for row, dup in zip(rows, deduped):
+            row["exists"] = dup.get("exists", False)
+            if dup.get("existing_id"):
+                row["existing_id"] = dup["existing_id"]
+    except ValueError as e:
+        typer.echo(f"Warning: duplicate check skipped ({e})")
+        for row in rows:
+            row["exists"] = False
+
+    # Liveness probe (bounded concurrency, per-host politeness)
+    if probe:
+        to_probe = [r for r in rows if not r.get("exists")]
+        probed = probe_rows(
+            [{"url": r.get("link") or "", "host": "", "id": r.get("id")} for r in to_probe],
+            concurrency=concurrency,
+            timeout=timeout,
+            delay=0.5,
+        )
+        by_id = {p.get("id"): p for p in probed}
+        for row in rows:
+            p = by_id.get(row.get("id"))
+            if p:
+                row["liveness"] = p.get("liveness")
+                row["http_code"] = p.get("http_code")
+
+    # Buckets
+    for row in rows:
+        if row.get("exists"):
+            row["bucket"] = "duplicate"
+        elif probe and row.get("liveness") == "dead":
+            row["bucket"] = "dead"
+        elif probe and row.get("liveness") in ("inconclusive", "error"):
+            row["bucket"] = "needs-review"
+        elif row.get("staging"):
+            row["bucket"] = "needs-review"
+        else:
+            row["bucket"] = "promote-ready"
+    return rows
+
+
+@app.command("review-scheduled")
+def review_scheduled(
+    probe: bool = typer.Option(True, "--probe/--no-probe", help="Probe link liveness"),
+    country: Optional[str] = typer.Option(None, "--country", help="Only review records inferred for this country"),
+    out: Optional[Path] = typer.Option(None, "--out", help=f"JSONL report path (default: {DEFAULT_REVIEW_OUT})"),
+    concurrency: int = typer.Option(8, "--concurrency", help="Max hosts probed in parallel"),
+    timeout: float = typer.Option(10.0, "--timeout", help="Per-request probe timeout seconds"),
+):
+    """Read-only triage report for the scheduled queue (never moves files)."""
+    rows = review_queue(probe=probe, country=country, concurrency=concurrency, timeout=timeout)
+
+    buckets: Dict[str, int] = {}
+    for row in rows:
+        buckets[row["bucket"]] = buckets.get(row["bucket"], 0) + 1
+
+    for row in rows:
+        live = f", {row['liveness']}" if row.get("liveness") else ""
+        dup = f", dup of {row['existing_id']}" if row.get("existing_id") else ""
+        notes = f" — {row['notes']}" if row.get("notes") else ""
+        typer.echo(f"  [{row['bucket']}] {row['id']} ({row.get('country')}{live}{dup}){notes}")
+
+    typer.echo("\nSummary:")
+    for bucket in ("promote-ready", "needs-review", "dead", "duplicate"):
+        if bucket in buckets:
+            typer.echo(f"  {bucket}: {buckets[bucket]}")
+    typer.echo(f"  total: {len(rows)}")
+
+    out_path = out or DEFAULT_REVIEW_OUT
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w", encoding="utf8") as f:
+        for row in rows:
+            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    typer.echo(f"\nWrote {out_path}")
+
+
+def main() -> None:
+    """Backward-compatible entry point: python scripts/promote_scheduled.py [--dry-run]."""
+    app()
 
 
 if __name__ == "__main__":

@@ -1,0 +1,69 @@
+# Country hints for scheduled records whose country cannot be inferred from
+# coverage, owner, or the link TLD. Used by scripts/promote_scheduled.py
+# (infer_country_for_unknown) when routing records out of data/scheduled/Unknown/.
+#
+# Rules are evaluated in file order; the first match wins. Matching is
+# case-insensitive substring matching against the record id + link.
+#
+# Forms:
+#   - pattern: <substring>      # one substring
+#     country: <country_id>
+#   - all: [<substring>, ...]   # every substring must appear
+#     country: <country_id>
+#
+# Add new one-off heuristics here, not in code.
+hints:
+  - pattern: brasilio
+    country: BR
+  - pattern: brasil.io
+    country: BR
+  - pattern: axiell
+    country: NL # Axiell/LDMax.nl
+  - pattern: dakar
+    country: SN
+  - pattern: inondationsdakar
+    country: SN
+  - pattern: unesco
+    country: World
+  - pattern: unescwa
+    country: World
+  - pattern: unhcr
+    country: World
+  - pattern: unhcrorg
+    country: World
+  - pattern: icann
+    country: World
+  - pattern: dhsprogram
+    country: US
+  - pattern: sdsmt
+    country: US
+  - pattern: sdsmtedu
+    country: US
+  - pattern: grandest
+    country: FR
+  - pattern: data4citizen
+    country: FR
+  - pattern: conaviopendata
+    country: CL
+  - pattern: junar
+    country: CL
+  - pattern: catalogriits
+    country: IT
+  - pattern: redatam
+    country: World
+  - pattern: africaopendata
+    country: World
+  - pattern: investigateafrica
+    country: World
+  - pattern: alcafricandatalab
+    country: World
+  - pattern: opendatab40cities
+    country: World
+  - pattern: opengeohub
+    country: World
+  - pattern: marineregions
+    country: World
+  - pattern: d4science
+    country: EU
+  - all: [opendatasoft, zastrug]
+    country: RS # or BA/ME - Balkan region

@@ -94,6 +94,156 @@ def get_subregions_csv_path():
         return SUBREGIONS_CSV_LEGACY
     return SUBREGIONS_CSV
 
+
+_LANGS_REF_CACHE = None
+_COUNTRY_LANGS_CACHE = None
+_OWNER_TYPES_CACHE = None
+_SUBREGION_NAMES_CACHE = None
+_WRITE_VALIDATOR_CACHE = None
+
+
+def load_langs_reference() -> Dict[str, str]:
+    """Return {lang_code: lang_name} from data/reference/langs.csv (TSV)."""
+    global _LANGS_REF_CACHE
+    if _LANGS_REF_CACHE is None:
+        path = os.path.join(_REPO_ROOT, "data", "reference", "langs.csv")
+        langs = {}
+        with open(path, "r", encoding="utf8", newline="") as f:
+            for row in csv.DictReader(f, delimiter="\t"):
+                code = (row.get("code") or "").strip().upper()
+                name = (row.get("name") or "").strip()
+                if code and name:
+                    langs[code] = name
+        _LANGS_REF_CACHE = langs
+    return _LANGS_REF_CACHE
+
+
+def load_country_langs() -> Dict[str, str]:
+    """Return {country_alpha2: lang_code} from data/reference/country_langs.csv (TSV)."""
+    global _COUNTRY_LANGS_CACHE
+    if _COUNTRY_LANGS_CACHE is None:
+        path = os.path.join(_REPO_ROOT, "data", "reference", "country_langs.csv")
+        mapping = {}
+        with open(path, "r", encoding="utf8", newline="") as f:
+            for row in csv.DictReader(f, delimiter="\t"):
+                alpha2 = (row.get("alpha2") or "").strip().upper()
+                langcode = (row.get("langcode") or "").strip().upper()
+                if alpha2 and langcode:
+                    mapping[alpha2] = langcode
+        _COUNTRY_LANGS_CACHE = mapping
+    return _COUNTRY_LANGS_CACHE
+
+
+def resolve_lang_entry(lang: str) -> Dict[str, str]:
+    """Resolve a language code to a schema-valid {id, name} dict.
+
+    Accepts case-insensitive codes and locale forms (``zh-TW`` falls back to
+    ``ZH``). Raises ValueError for codes absent from langs.csv.
+    """
+    langs_ref = load_langs_reference()
+    code = lang.strip().upper()
+    if code not in langs_ref and "-" in code:
+        code = code.split("-", 1)[0]
+    if code not in langs_ref:
+        raise ValueError(f"Unknown language code '{lang}' (not in data/reference/langs.csv)")
+    return {"id": code, "name": langs_ref[code]}
+
+
+def default_lang_for_country(country_id: Optional[str]) -> Optional[Dict[str, str]]:
+    """Return the {id, name} language entry for a country code, or None."""
+    if not country_id:
+        return None
+    code = load_country_langs().get(str(country_id).upper())
+    if not code:
+        return None
+    langs_ref = load_langs_reference()
+    if code not in langs_ref:
+        return None
+    return {"id": code, "name": langs_ref[code]}
+
+
+def load_owner_type_vocabulary() -> tuple:
+    """Return (canonical set, synonym->canonical dict) from owner_types.yaml."""
+    global _OWNER_TYPES_CACHE
+    if _OWNER_TYPES_CACHE is None:
+        path = os.path.join(_REPO_ROOT, "data", "reference", "owner_types.yaml")
+        with open(path, "r", encoding="utf8") as f:
+            data = yaml.load(f, Loader=Loader) or {}
+        canonical = set(data.get("canonical") or [])
+        synonyms = dict(data.get("synonyms") or {})
+        _OWNER_TYPES_CACHE = (canonical, synonyms)
+    return _OWNER_TYPES_CACHE
+
+
+def canonical_owner_type(owner_type: str) -> str:
+    """Return the canonical owner type, raising ValueError for unknown values."""
+    canonical, synonyms = load_owner_type_vocabulary()
+    if owner_type in canonical:
+        return owner_type
+    if owner_type in synonyms:
+        return synonyms[owner_type]
+    raise ValueError(
+        "Unknown owner type '%s'. Canonical values: %s"
+        % (owner_type, ", ".join(sorted(canonical)))
+    )
+
+
+def load_subregion_names() -> Dict[str, str]:
+    """Return {subregion_code: subdivision_name} from the ISO 3166-2 reference."""
+    global _SUBREGION_NAMES_CACHE
+    if _SUBREGION_NAMES_CACHE is None:
+        names = {}
+        with open(get_subregions_csv_path(), "r", encoding="utf8", newline="") as f:
+            for row in csv.reader(f):
+                if not row or row[0] == "code":
+                    continue
+                names[row[0].strip().upper()] = row[1].strip() if len(row) > 1 else ""
+        _SUBREGION_NAMES_CACHE = names
+    return _SUBREGION_NAMES_CACHE
+
+
+def validate_subregion(subregion: str, country_id: Optional[str]) -> Dict[str, str]:
+    """Validate an ISO 3166-2 code; return {id, name}. Raises ValueError."""
+    names = load_subregion_names()
+    code = subregion.strip().upper()
+    if code not in names:
+        raise ValueError(
+            "Unknown subregion '%s' (not in %s)" % (subregion, get_subregions_csv_path())
+        )
+    if country_id and not code.startswith(str(country_id).upper() + "-"):
+        raise ValueError(
+            "Subregion '%s' does not belong to country '%s'" % (code, country_id)
+        )
+    return {"id": code, "name": names[code]}
+
+
+def get_write_validator():
+    """Cerberus validator for freshly written records (uid relaxed).
+
+    New records receive their uid from the `assign` step after writing, so the
+    write-time check enforces every schema rule except uid presence.
+    """
+    global _WRITE_VALIDATOR_CACHE
+    if _WRITE_VALIDATOR_CACHE is None:
+        from cerberus import Validator
+
+        schema_file = os.path.join(_REPO_ROOT, "data", "schemes", "catalog.json")
+        with open(schema_file, "r", encoding="utf8") as f:
+            schema = json.load(f)
+        if "uid" in schema:
+            schema["uid"] = {**schema["uid"], "required": False}
+        _WRITE_VALIDATOR_CACHE = Validator(schema)
+    return _WRITE_VALIDATOR_CACHE
+
+
+def validate_record_for_write(record: Dict[str, Any]) -> Dict[str, Any]:
+    """Return Cerberus errors dict for a record about to be written ({} if valid)."""
+    v = get_write_validator()
+    if v.validate(record):
+        return {}
+    return dict(v.errors)
+
+
 app = typer.Typer()
 
 
@@ -685,7 +835,7 @@ def _upsert_uid_in_yaml(filepath, new_uid):
         handle.write(text)
 
 
-def assign_by_dir(prefix="cdi", dirpath=ROOT_DIR, dryrun=False):
+def assign_by_dir(prefix="cdi", dirpath=ROOT_DIR, dryrun=False, check_exports=True):
     files = _iter_yaml_files(dirpath)
     used = set()
     needs_assign = []
@@ -701,28 +851,458 @@ def assign_by_dir(prefix="cdi", dirpath=ROOT_DIR, dryrun=False):
     if not needs_assign:
         return
     numbers = _next_available_uid_numbers(used, len(needs_assign))
-    for filepath, number in zip(needs_assign, numbers):
-        new_uid = _format_uid(prefix, number)
-        logger.info(
-            "Wrote %s uid for %s",
-            new_uid,
-            os.path.basename(filepath).split(".", 1)[0],
+    assignments = {
+        filepath: _format_uid(prefix, number)
+        for filepath, number in zip(needs_assign, numbers)
+    }
+    if check_exports:
+        _raise_on_export_collisions(list(assignments.values()))
+    _write_uid_assignments(assignments, dryrun=dryrun)
+
+
+def _git_changed_yaml_files(repo_root=None):
+    """Return changed (untracked/modified/added/renamed) YAML files under
+    data/entities and data/scheduled, per `git status --porcelain`."""
+    import subprocess
+
+    root = repo_root or _REPO_ROOT
+    try:
+        result = subprocess.run(
+            ["git", "status", "--porcelain", "--", "data/entities", "data/scheduled"],
+            cwd=root,
+            capture_output=True,
+            text=True,
+            check=True,
         )
-        if dryrun:
+    except Exception as exc:
+        raise ValueError(f"git status --porcelain failed: {exc}")
+    files = []
+    for line in result.stdout.splitlines():
+        if len(line) < 4:
             continue
-        _upsert_uid_in_yaml(filepath, new_uid)
+        path_part = line[3:]
+        if " -> " in path_part:  # renamed: take the new path
+            path_part = path_part.split(" -> ", 1)[1]
+        path_part = path_part.strip().strip('"')
+        if not path_part.endswith(".yaml"):
+            continue
+        if not (
+            path_part.startswith("data/entities/")
+            or path_part.startswith("data/scheduled/")
+        ):
+            continue
+        full_path = os.path.join(root, path_part)
+        if os.path.exists(full_path):
+            files.append(full_path)
+    return sorted(set(files))
+
+
+def _query_export_uid_collisions(uids):
+    """Return {uid: record_id} for uids already present in dataset exports.
+
+    Reads datasets.duckdb read-only; falls back to full.parquet on lock.
+    Returns None when no export exists (caller warns and continues).
+    """
+    if not uids:
+        return {}
+    import duckdb
+
+    db_path = os.path.join(DATASETS_DIR, "datasets.duckdb")
+    parquet_path = os.path.join(DATASETS_DIR, "full.parquet")
+    placeholders = ", ".join(["?"] * len(uids))
+    if os.path.exists(db_path):
+        try:
+            con = duckdb.connect(db_path, read_only=True)
+            try:
+                rows = con.execute(
+                    f"SELECT uid, id FROM catalogs WHERE uid IN ({placeholders})",
+                    list(uids),
+                ).fetchall()
+            finally:
+                con.close()
+            return {uid: rid for uid, rid in rows}
+        except Exception as exc:
+            logger.warning("DuckDB export unreadable (%s); falling back to parquet", exc)
+    if os.path.exists(parquet_path):
+        con = duckdb.connect(":memory:")
+        try:
+            rows = con.execute(
+                f"SELECT uid, id FROM read_parquet(?) WHERE uid IN ({placeholders})",
+                [parquet_path, *uids],
+            ).fetchall()
+        finally:
+            con.close()
+        return {uid: rid for uid, rid in rows}
+    return None
+
+
+def _raise_on_export_collisions(uids):
+    """Fail loudly when any of the to-be-assigned UIDs already exists in exports."""
+    collisions = _query_export_uid_collisions(uids)
+    if collisions is None:
+        logger.warning("Dataset exports not found; skipping UID collision cross-check")
+        return
+    if collisions:
+        details = ", ".join(
+            f"{uid} (export id: {rid})" for uid, rid in sorted(collisions.items())
+        )
+        raise ValueError(
+            f"UID collision with dataset exports: {details}. No files were written."
+        )
+
+
+def assign_new(dryrun=False):
+    """Incremental assign: only git-changed YAML files, with export collision check.
+
+    Files under data/entities get cdi######## UIDs; data/scheduled gets temp########.
+    Next free numbers come from a fast uid-line scan of the full tree (no YAML parse).
+    Returns {filepath: uid}.
+    """
+    files = _git_changed_yaml_files()
+    if not files:
+        typer.echo("No changed YAML files under data/entities or data/scheduled")
+        return {}
+
+    root = os.path.abspath(_REPO_ROOT)
+    entities_prefix = os.path.join(root, "data", "entities") + os.sep
+    scheduled_prefix = os.path.join(root, "data", "scheduled") + os.sep
+    entity_files = [f for f in files if os.path.abspath(f).startswith(entities_prefix)]
+    scheduled_files = [f for f in files if os.path.abspath(f).startswith(scheduled_prefix)]
+
+    all_assignments = {}
+    for prefix, group, scan_dir in (
+        ("cdi", entity_files, ROOT_DIR),
+        ("temp", scheduled_files, SCHEDULED_DIR),
+    ):
+        if not group:
+            continue
+        used = _collect_used_uid_numbers([scan_dir], prefix)
+        all_assignments.update(_compute_uid_assignments(group, prefix, used))
+
+    if not all_assignments:
+        typer.echo("All changed files already have valid UIDs")
+        return {}
+
+    _raise_on_export_collisions(list(all_assignments.values()))
+    _write_uid_assignments(all_assignments, dryrun=dryrun)
+    typer.echo(f"Assigned {len(all_assignments)} UIDs to changed files")
+    return all_assignments
 
 
 @app.command()
 def assign(
     dryrun: bool = typer.Option(False, "--dryrun", help="Log the UIDs that would be written without touching files"),
     mode="entries",
+    new: bool = typer.Option(False, "--new", help="Only scan git-changed YAML files (untracked/modified) under data/entities and data/scheduled"),
 ):
     """Assign unique identifier to each data catalog entry"""
-    if mode == "entries":
-        assign_by_dir("cdi", ROOT_DIR, dryrun=dryrun)
+    if new:
+        try:
+            assign_new(dryrun=dryrun)
+        except ValueError as e:
+            typer.echo(str(e), err=True)
+            raise typer.Exit(1)
+        return
+    try:
+        if mode == "entries":
+            assign_by_dir("cdi", ROOT_DIR, dryrun=dryrun)
+        else:
+            assign_by_dir("temp", SCHEDULED_DIR, dryrun=dryrun)
+    except ValueError as e:
+        typer.echo(str(e), err=True)
+        raise typer.Exit(1)
+
+
+# ---------------------------------------------------------------------------
+# Record update tooling (set-field / enrich-batch)
+# ---------------------------------------------------------------------------
+
+_CATALOG_VALIDATOR_CACHE = None
+_RECORD_ID_RE = re.compile(r"^[a-z0-9]+$")
+
+
+def get_catalog_validator():
+    """Strict Cerberus validator for existing records (uid required)."""
+    global _CATALOG_VALIDATOR_CACHE
+    if _CATALOG_VALIDATOR_CACHE is None:
+        from cerberus import Validator
+
+        schema_file = os.path.join(_REPO_ROOT, "data", "schemes", "catalog.json")
+        with open(schema_file, "r", encoding="utf8") as f:
+            schema = json.load(f)
+        _CATALOG_VALIDATOR_CACHE = Validator(schema)
+    return _CATALOG_VALIDATOR_CACHE
+
+
+def _build_record_file_index():
+    """Map record id -> YAML path across entities and scheduled (filename walk only).
+
+    Entities win over scheduled on id conflicts.
+    """
+    index = {}
+    for base in (SCHEDULED_DIR, ROOT_DIR):
+        if not os.path.exists(base):
+            continue
+        for filepath in _iter_yaml_files(base):
+            index[os.path.splitext(os.path.basename(filepath))[0]] = filepath
+    return index
+
+
+def _parse_scalar(value):
+    """Parse a CLI --value string with YAML scalar rules (true->bool, 30->int, [a, b]->list)."""
+    return yaml.safe_load(value)
+
+
+def _set_dotted(record, path, value, append=False):
+    """Set a dotted path on a record dict, creating intermediate dicts.
+
+    Refuses uid/id (dedicated commands own those). --append appends to lists.
+    """
+    parts = path.split(".")
+    if len(parts) < 1 or any(not p for p in parts):
+        raise ValueError(f"Invalid path '{path}'")
+    if parts[0] in ("uid", "id"):
+        raise ValueError("Refusing to modify 'uid' or 'id' (dedicated commands own those)")
+    node = record
+    for part in parts[:-1]:
+        nxt = node.get(part)
+        if not isinstance(nxt, dict):
+            nxt = {}
+            node[part] = nxt
+        node = nxt
+    leaf = parts[-1]
+    if append:
+        cur = node.get(leaf)
+        if cur is None:
+            node[leaf] = [value]
+        elif isinstance(cur, list):
+            cur.append(value)
+        else:
+            raise ValueError(f"--append on non-list field '{path}'")
     else:
-        assign_by_dir("temp", SCHEDULED_DIR, dryrun=dryrun)
+        node[leaf] = value
+
+
+def _deep_merge(existing, updates):
+    """Recursively merge an updates dict into an existing dict (in place)."""
+    for key, value in updates.items():
+        if isinstance(value, dict) and isinstance(existing.get(key), dict):
+            _deep_merge(existing[key], value)
+        else:
+            existing[key] = value
+    return existing
+
+
+def _short(value, limit=60):
+    text = json.dumps(value, ensure_ascii=False, default=str)
+    return text if len(text) <= limit else text[: limit - 3] + "..."
+
+
+def _diff_summary(before, after):
+    """List of 'field: old -> new' lines for changed top-level fields."""
+    lines = []
+    for key in sorted(set(before) | set(after)):
+        old = before.get(key, "<absent>")
+        new = after.get(key, "<absent>")
+        if old != new:
+            lines.append(f"    {key}: {_short(old)} -> {_short(new)}")
+    return lines
+
+
+def _load_record_file(filepath):
+    with open(filepath, "r", encoding="utf8") as f:
+        record = yaml.load(f, Loader=Loader)
+    if not isinstance(record, dict):
+        raise ValueError(f"{filepath} is not a valid record")
+    return record
+
+
+def _write_record_file(filepath, record):
+    with open(filepath, "w", encoding="utf8") as f:
+        f.write(yaml.safe_dump(record, sort_keys=False, allow_unicode=True))
+
+
+@app.command("set-field")
+def set_field(
+    record_id: str = typer.Option(..., "--id", help="Record id (filename stem)"),
+    path: str = typer.Option(..., "--path", help="Dotted field path, e.g. properties.is_national"),
+    value: str = typer.Option(..., "--value", help="YAML scalar: true, 30, [a, b], or plain string"),
+    append: bool = typer.Option(False, "--append", help="Append to a list field instead of replacing"),
+):
+    """Set one field on one record, re-validating against the schema before saving."""
+    try:
+        if not _RECORD_ID_RE.match(record_id):
+            raise ValueError(f"Invalid record id '{record_id}' (lowercase letters/digits only)")
+        filepath = _build_record_file_index().get(record_id)
+        if not filepath:
+            raise ValueError(f"Record '{record_id}' not found in entities or scheduled")
+        record = _load_record_file(filepath)
+        parsed = _parse_scalar(value)
+        _set_dotted(record, path, parsed, append=append)
+        v = get_catalog_validator()
+        if not v.validate(record):
+            raise ValueError(
+                f"Update would make record invalid: {dict(v.errors)}. File unchanged."
+            )
+        _write_record_file(filepath, record)
+        typer.echo(f"Updated {record_id}: {path} = {_short(parsed)}")
+    except ValueError as e:
+        typer.echo(str(e), err=True)
+        raise typer.Exit(1)
+
+
+@app.command("enrich-batch")
+def enrich_batch(
+    filename: str = typer.Argument(..., help="JSONL manifest: {id, set: {path: value}} or {id, merge: {...}}"),
+    write: bool = typer.Option(False, "--write", help="Apply updates (default is dry-run)"),
+):
+    """Bulk-update records from a JSONL manifest. Dry-run by default."""
+    if not os.path.exists(filename):
+        typer.echo(f"File {filename} not exists", err=True)
+        raise typer.Exit(1)
+
+    rows = []
+    with open(filename, "r", encoding="utf8") as f:
+        for lineno, line in enumerate(f, start=1):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                row = json.loads(line)
+            except json.JSONDecodeError as e:
+                typer.echo(f"  [invalid] line {lineno}: not JSON ({e})")
+                continue
+            rows.append((lineno, row))
+
+    index = _build_record_file_index()
+    v = get_catalog_validator()
+    updated = unchanged = skipped = invalid = 0
+
+    for lineno, row in rows:
+        rid = row.get("id") if isinstance(row, dict) else None
+        filepath = index.get(rid) if rid else None
+        if not filepath:
+            skipped += 1
+            typer.echo(f"  [skip] line {lineno}: unknown id '{rid}'")
+            continue
+        if not row.get("set") and not row.get("merge"):
+            invalid += 1
+            typer.echo(f"  [invalid] {rid}: row needs 'set' or 'merge'")
+            continue
+        if row.get("merge") and {"uid", "id"} & set(row["merge"]):
+            invalid += 1
+            typer.echo(f"  [invalid] {rid}: merge may not touch 'uid' or 'id'")
+            continue
+
+        record = _load_record_file(filepath)
+        before = copy.deepcopy(record)
+        try:
+            for path, value in (row.get("set") or {}).items():
+                _set_dotted(record, path, value)
+            if row.get("merge"):
+                _deep_merge(record, row["merge"])
+        except ValueError as e:
+            invalid += 1
+            typer.echo(f"  [invalid] {rid}: {e}")
+            continue
+
+        diff = _diff_summary(before, record)
+        if not diff:
+            unchanged += 1
+            typer.echo(f"  [unchanged] {rid}")
+            continue
+        if not v.validate(record):
+            invalid += 1
+            typer.echo(f"  [invalid] {rid}: {dict(v.errors)}")
+            continue
+
+        if write:
+            _write_record_file(filepath, record)
+            typer.echo(f"  [updated] {rid}")
+        else:
+            typer.echo(f"  [would update] {rid}")
+        for line in diff:
+            typer.echo(line)
+        updated += 1
+
+    mode = "updated" if write else "would update"
+    typer.echo(
+        f"\n{mode}: {updated}, unchanged: {unchanged}, "
+        f"skipped (unknown id): {skipped}, invalid: {invalid}"
+    )
+    if not write and updated:
+        typer.echo("Dry-run: re-run with --write to apply")
+
+
+# ---------------------------------------------------------------------------
+# Schema introspection (schema-values)
+# ---------------------------------------------------------------------------
+
+SCHEMA_VALUE_FIELDS = [
+    "catalog_type",
+    "status",
+    "access_mode",
+    "owner.type",
+    "langs",
+    "owner.location.subregion",
+    "software.id",
+]
+
+
+def _schema_allowed_values(field):
+    """Allowed values for a top-level schema enum field, or None if it has no enum."""
+    schema_file = os.path.join(_REPO_ROOT, "data", "schemes", "catalog.json")
+    with open(schema_file, "r", encoding="utf8") as f:
+        schema = json.load(f)
+    spec = schema.get(field)
+    if not isinstance(spec, dict):
+        return None
+    if "allowed" in spec:
+        return list(spec["allowed"])
+    inner = spec.get("schema")
+    if isinstance(inner, dict) and "allowed" in inner:
+        return list(inner["allowed"])
+    return None
+
+
+@app.command("schema-values")
+def schema_values(
+    field: str = typer.Argument(..., help="Schema field, e.g. catalog_type or owner.type"),
+    country: Optional[str] = typer.Option(
+        None, "--country", help="Filter owner.location.subregion to one ISO alpha2 country"
+    ),
+):
+    """Print allowed values for a schema field (schema enums + reference vocabularies)."""
+    if field in ("catalog_type", "status", "access_mode"):
+        for value in _schema_allowed_values(field) or []:
+            typer.echo(value)
+    elif field == "owner.type":
+        canonical, synonyms = load_owner_type_vocabulary()
+        for value in sorted(canonical):
+            typer.echo(value)
+        if synonyms:
+            typer.echo("\nSynonyms (canonicalized on write):")
+            for syn, canon in sorted(synonyms.items()):
+                typer.echo(f"  {syn} -> {canon}")
+    elif field == "langs":
+        for code, name in sorted(load_langs_reference().items()):
+            typer.echo(f"{code}\t{name}")
+    elif field == "owner.location.subregion":
+        names = load_subregion_names()
+        prefix = f"{country.upper()}-" if country else None
+        for code in sorted(names):
+            if prefix and not code.startswith(prefix):
+                continue
+            typer.echo(f"{code}\t{names[code]}")
+    elif field == "software.id":
+        for sid in sorted(get_software_map()):
+            typer.echo(sid)
+    else:
+        typer.echo(
+            f"Unknown field '{field}'. Supported fields: {', '.join(SCHEMA_VALUE_FIELDS)}",
+            err=True,
+        )
+        raise typer.Exit(1)
 
 
 @app.command()
@@ -815,9 +1395,18 @@ def validate_yaml(
         "--id", "-i",
         help="Catalog ID to validate (finds {id}.yaml in entities and scheduled)",
     ),
+    changed: bool = typer.Option(
+        False,
+        "--changed",
+        help="Validate only git-changed YAML files (untracked/modified under data/entities and data/scheduled)",
+    ),
 ):
-    """Validates YAML files against Cerberus schema. Without --file or --id, validates all entities."""
+    """Validates YAML files against Cerberus schema. Without --file, --id, or --changed, validates all entities."""
     from cerberus import Validator
+
+    if changed and (file is not None or id is not None):
+        typer.echo("Error: --changed cannot be combined with --file or --id", err=True)
+        raise typer.Exit(1)
 
     schema_file = os.path.join(_REPO_ROOT, "data", "schemes", "catalog.json")
     f = open(schema_file, "r", encoding="utf8")
@@ -829,7 +1418,18 @@ def validate_yaml(
     total = 0
     valid = 0
 
-    if file is not None:
+    if changed:
+        try:
+            filenames = _git_changed_yaml_files()
+        except ValueError as e:
+            typer.echo(f"Error: {e}", err=True)
+            raise typer.Exit(1)
+        if not filenames:
+            typer.echo("No changed YAML files under data/entities or data/scheduled")
+            return 0
+        typer.echo(f"Validating {len(filenames)} changed YAML files")
+        errors, total, valid = _validate_yaml_files(filenames, schema, v)
+    elif file is not None:
         # Single file path
         path = os.path.normpath(file)
         if not os.path.isabs(path):
@@ -935,17 +1535,35 @@ def _add_single_entry(
     scheduled=True,
     force=False,
     preloaded=None,
+    subregion=None,
+    is_national=False,
+    record_id=None,
+    detect=True,
 ):
-    from apidetect import detect_single
+    """Create one catalog YAML from CLI/manifest input.
+
+    Raises ValueError on invalid lang/subregion/owner-type/id or when the
+    assembled record fails schema validation; nothing is written in that case.
+    """
+    if detect:
+        from apidetect import detect_single
 
     # Huwise-based portals are OpenDataSoft; normalize for add/list and detection.
     if isinstance(software, str) and software.strip().lower() in SOFTWARE_NAME_ALIASES:
         software = SOFTWARE_NAME_ALIASES[software.strip().lower()]
 
     domain = urlparse(url).netloc.lower()
-    record_id = (
-        domain.split(":", 1)[0].replace("_", "").replace("-", "").replace(".", "")
-    )
+    if record_id is not None:
+        record_id = record_id.strip().lower()
+        if not re.match(r"^[a-z0-9]+$", record_id):
+            raise ValueError(
+                "Invalid id '%s': only lowercase letters and digits are allowed"
+                % record_id
+            )
+    else:
+        record_id = (
+            domain.split(":", 1)[0].replace("_", "").replace("-", "").replace(".", "")
+        )
 
     if record_id in preloaded:
         logger.info("URL %s already scheduled to be added", record_id)
@@ -971,15 +1589,27 @@ def _add_single_entry(
     if not has_location:
         postfix = domain.rsplit(".", 1)[-1].split(":", 1)[0]
         if postfix in DOMAIN_LOCATIONS.keys():
-            location = DOMAIN_LOCATIONS[postfix]
+            location = copy.deepcopy(DOMAIN_LOCATIONS[postfix])
         else:
-            location = DEFAULT_LOCATION
+            location = copy.deepcopy(DEFAULT_LOCATION)
+
+    country_id = location["location"]["country"]["id"]
+
+    if subregion is not None:
+        subregion_entry = validate_subregion(subregion, country_id)
+        location["location"]["subregion"] = subregion_entry
+        location["location"]["level"] = 30
 
     record["langs"] = []
+    lang_codes = []
     if lang:
-        record["langs"].append(lang)
-    if has_location and postfix in COUNTRIES_LANGS.keys():
-        record["langs"].append(COUNTRIES_LANGS[postfix])
+        lang_codes = [lang] if isinstance(lang, str) else list(lang)
+    if lang_codes:
+        record["langs"] = [resolve_lang_entry(code) for code in lang_codes]
+    else:
+        default_lang = default_lang_for_country(country_id)
+        if default_lang is not None:
+            record["langs"] = [default_lang]
 
     record["link"] = url
     record["name"] = domain if name is None else name
@@ -993,7 +1623,9 @@ def _add_single_entry(
     if owner_link is not None:
         record["owner"]["link"] = owner_link
     if owner_type is not None:
-        record["owner"]["type"] = owner_type
+        record["owner"]["type"] = canonical_owner_type(owner_type)
+    if is_national:
+        record.setdefault("properties", {})["is_national"] = True
 
     if software in MAP_SOFTWARE_OWNER_CATALOG_TYPE.keys():
         record["catalog_type"] = MAP_SOFTWARE_OWNER_CATALOG_TYPE[software]
@@ -1007,10 +1639,18 @@ def _add_single_entry(
         record["software"] = {"id": software, "name": software_map[software]}
     else:
         record["software"] = {"id": software, "name": software.title()}
+    validation_errors = validate_record_for_write(record)
+    if validation_errors:
+        raise ValueError(
+            "Record '%s' failed schema validation: %s" % (record_id, validation_errors)
+        )
+
     root_dir = SCHEDULED_DIR if scheduled else ROOT_DIR
     country_dir = os.path.join(root_dir, location["location"]["country"]["id"])
+    if subregion is not None:
+        country_dir = os.path.join(country_dir, subregion_entry["id"])
     if not os.path.exists(country_dir):
-        os.mkdir(country_dir)
+        os.makedirs(country_dir)
     subdir_name = (
         MAP_CATALOG_TYPE_SUBDIR[record["catalog_type"]]
         if record["catalog_type"] in MAP_CATALOG_TYPE_SUBDIR.keys()
@@ -1018,21 +1658,22 @@ def _add_single_entry(
     )
     subdir_dir = os.path.join(country_dir, subdir_name)
     if not os.path.exists(subdir_dir):
-        os.mkdir(subdir_dir)
+        os.makedirs(subdir_dir)
     filename = os.path.join(subdir_dir, record_id + ".yaml")
     if os.path.exists(filename) and not force:
         logger.info("Already processed and force not set")
-    else:
-        f = open(filename, "w", encoding="utf8")
-        #        logger.debug(record)
-        f.write(yaml.safe_dump(record, allow_unicode=True))
-        f.close()
-        logger.info("%s saved", record_id)
+        return None
+    f = open(filename, "w", encoding="utf8")
+    f.write(yaml.safe_dump(record, allow_unicode=True))
+    f.close()
+    logger.info("%s saved", record_id)
+    if detect:
         detect_single(
             record_id,
             dryrun=False,
             mode="scheduled" if scheduled else "entries",
         )
+    return filename
 
 
 @app.command()
@@ -1047,6 +1688,10 @@ def add_single(
     owner_name=None,
     owner_link=None,
     owner_type=None,
+    subregion: str = typer.Option(None, "--subregion", help="ISO 3166-2 subregion code (e.g. PT-11); routes the file to {CC}/{SUB}/ and sets level 30"),
+    is_national: bool = typer.Option(False, "--is-national", help="Mark properties.is_national=true (official national catalog of its type only)"),
+    record_id: str = typer.Option(None, "--id", help="Override the domain-derived record id (lowercase letters and digits)"),
+    detect: bool = typer.Option(True, "--detect/--no-detect", help="Run the apidetect probe after writing (default) or skip it"),
     force: bool = typer.Option(False, "--force/--no-force", help="Overwrite an existing YAML file"),
     scheduled: bool = typer.Option(True, "--scheduled/--no-scheduled", help="Write under data/scheduled/ (default) or data/entities/"),
 ):
@@ -1056,21 +1701,29 @@ def add_single(
     full_list = []
     for row in full_data:
         full_list.append(row["id"])
-    _add_single_entry(
-        url,
-        software,
-        catalog_type=catalog_type,
-        name=name,
-        description=description,
-        lang=lang,
-        country=country,
-        owner_name=owner_name,
-        owner_link=owner_link,
-        owner_type=owner_type,
-        scheduled=scheduled,
-        force=force,
-        preloaded=full_list,
-    )
+    try:
+        _add_single_entry(
+            url,
+            software,
+            catalog_type=catalog_type,
+            name=name,
+            description=description,
+            lang=lang,
+            country=country,
+            owner_name=owner_name,
+            owner_link=owner_link,
+            owner_type=owner_type,
+            scheduled=scheduled,
+            force=force,
+            preloaded=full_list,
+            subregion=subregion,
+            is_national=is_national,
+            record_id=record_id,
+            detect=detect,
+        )
+    except ValueError as e:
+        logger.error("%s", e)
+        raise typer.Exit(1)
 
 
 @app.command()
@@ -1099,20 +1752,263 @@ def add_list(
         line = line.strip()
         if not line:
             continue
-        _add_single_entry(
-            line,
-            software,
-            catalog_type=catalog_type,
-            name=name,
-            description=description,
-            lang=lang,
-            country=country,
-            owner_name=owner_name,
-            owner_link=owner_link,
-            owner_type=owner_type,
-            preloaded=full_list,
-        )
+        try:
+            _add_single_entry(
+                line,
+                software,
+                catalog_type=catalog_type,
+                name=name,
+                description=description,
+                lang=lang,
+                country=country,
+                owner_name=owner_name,
+                owner_link=owner_link,
+                owner_type=owner_type,
+                preloaded=full_list,
+            )
+        except ValueError as e:
+            logger.error("Skipping %s: %s", line, e)
     f.close()
+
+
+def _manifest_record_id(url, explicit_id=None):
+    """Resolve the record id for a manifest row (same rules as _add_single_entry)."""
+    if explicit_id:
+        return explicit_id.strip().lower()
+    domain = urlparse(url).netloc.lower()
+    return domain.split(":", 1)[0].replace("_", "").replace("-", "").replace(".", "")
+
+
+_UID_VALUE_RE = re.compile(r"^uid:\s*(\S+)", re.MULTILINE)
+
+
+def _collect_used_uid_numbers(dirpaths, prefix):
+    """Collect used UID numbers by scanning uid lines under dirpaths (no YAML parse)."""
+    used = set()
+    for dirpath in dirpaths:
+        if not os.path.exists(dirpath):
+            continue
+        for filepath in _iter_yaml_files(dirpath):
+            try:
+                with open(filepath, "r", encoding="utf8") as handle:
+                    text = handle.read()
+            except OSError:
+                continue
+            match = _UID_VALUE_RE.search(text)
+            if match:
+                number = _valid_uid_number(match.group(1), prefix)
+                if number is not None:
+                    used.add(number)
+    return used
+
+
+def _compute_uid_assignments(filepaths, prefix, used_numbers):
+    """Compute {filepath: new_uid} for files lacking a valid uid. No writes."""
+    used = set(used_numbers)
+    needs_assign = []
+    for filepath in filepaths:
+        with open(filepath, "r", encoding="utf8") as handle:
+            text = handle.read()
+        match = _UID_VALUE_RE.search(text)
+        number = _valid_uid_number(match.group(1), prefix) if match else None
+        if number is None:
+            needs_assign.append(filepath)
+        else:
+            used.add(number)
+    if not needs_assign:
+        return {}
+    numbers = _next_available_uid_numbers(used, len(needs_assign))
+    return {
+        filepath: _format_uid(prefix, number)
+        for filepath, number in zip(needs_assign, numbers)
+    }
+
+
+def _write_uid_assignments(assignments, dryrun=False):
+    """Write computed uid assignments (or log them when dryrun)."""
+    for filepath, new_uid in assignments.items():
+        logger.info(
+            "Wrote %s uid for %s",
+            new_uid,
+            os.path.basename(filepath).split(".", 1)[0],
+        )
+        if dryrun:
+            continue
+        _upsert_uid_in_yaml(filepath, new_uid)
+
+
+def assign_uids_for_files(filepaths, prefix, used_numbers):
+    """Assign UIDs to files lacking a valid one, given the global used-number set.
+
+    Scoped alternative to assign_by_dir: allocation still respects every used
+    number known from the exports plus the affected directories.
+    """
+    assignments = _compute_uid_assignments(filepaths, prefix, used_numbers)
+    _write_uid_assignments(assignments)
+    return assignments
+
+
+def _add_batch_manifest(filename, scheduled=True, detect=False):
+    """Ingest a JSONL manifest of catalog records. Returns a summary dict."""
+    if not os.path.exists(filename):
+        raise ValueError("File %s not exists" % filename)
+
+    rows = []
+    with open(filename, "r", encoding="utf8") as f:
+        for lineno, line in enumerate(f, start=1):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                row = json.loads(line)
+            except json.JSONDecodeError as e:
+                logger.error("Manifest line %d is not valid JSON: %s", lineno, e)
+                continue
+            if not isinstance(row, dict) or not row.get("url"):
+                logger.error("Manifest line %d misses required 'url'", lineno)
+                continue
+            rows.append((lineno, row))
+
+    full_data = load_jsonl(os.path.join(DATASETS_DIR, "full.jsonl"))
+    existing_ids = set()
+    existing_urls = {}
+    existing_hosts = {}
+    for row in full_data:
+        rid = row.get("id")
+        if rid:
+            existing_ids.add(rid)
+        link = row.get("link")
+        if link:
+            canon = canonicalize_url(link)
+            if canon:
+                existing_urls.setdefault(canon, rid)
+            host = host_from_url(link)
+            if host:
+                existing_hosts.setdefault(host, rid)
+
+    written_files = []
+    written_count = 0
+    skipped_dupes = []
+    invalid_rows = []
+    seen_ids = set()
+    seen_urls = {}
+    seen_hosts = {}
+
+    for lineno, row in rows:
+        url = row["url"]
+        rid = _manifest_record_id(url, row.get("id"))
+        canon = canonicalize_url(url)
+        host = host_from_url(url)
+        is_root_path = (urlparse(url).path or "") in ("", "/")
+
+        dupe_of = None
+        if canon and canon in existing_urls:
+            dupe_of = existing_urls[canon]
+        elif rid in existing_ids:
+            dupe_of = rid
+        elif is_root_path and host and host in existing_hosts:
+            dupe_of = existing_hosts[host]
+        elif canon and canon in seen_urls:
+            dupe_of = seen_urls[canon]
+        elif rid in seen_ids:
+            dupe_of = rid
+        elif is_root_path and host and host in seen_hosts:
+            dupe_of = seen_hosts[host]
+        if dupe_of is not None:
+            skipped_dupes.append((rid, dupe_of))
+            logger.info("Skipping duplicate %s (already %s)", rid, dupe_of)
+            continue
+
+        try:
+            written = _add_single_entry(
+                url,
+                row.get("software", "custom"),
+                catalog_type=row.get("catalog_type", "Open data portal"),
+                name=row.get("name"),
+                description=row.get("description"),
+                lang=row.get("langs"),
+                country=row.get("country"),
+                owner_name=row.get("owner_name"),
+                owner_link=row.get("owner_link"),
+                owner_type=row.get("owner_type"),
+                scheduled=scheduled,
+                force=False,
+                preloaded=existing_ids,
+                subregion=row.get("subregion"),
+                is_national=bool(row.get("is_national", False)),
+                record_id=row.get("id"),
+                detect=detect,
+            )
+        except ValueError as e:
+            invalid_rows.append((lineno, rid, str(e)))
+            logger.error("Invalid row %d (%s): %s", lineno, rid, e)
+            continue
+
+        if written is None:
+            skipped_dupes.append((rid, rid))
+            continue
+        written_files.append(written)
+        written_count += 1
+        seen_ids.add(rid)
+        if canon:
+            seen_urls[canon] = rid
+        if host:
+            seen_hosts.setdefault(host, rid)
+
+    assigned = {}
+    if written_files:
+        prefix = "temp" if scheduled else "cdi"
+        used_numbers = set()
+        for row in full_data:
+            number = _valid_uid_number(row.get("uid"), prefix)
+            if number is not None:
+                used_numbers.add(number)
+        root_dir = SCHEDULED_DIR if scheduled else ROOT_DIR
+        affected_dirs = sorted(
+            {
+                os.path.join(root_dir, os.path.relpath(f, root_dir).split(os.sep)[0])
+                for f in written_files
+            }
+        )
+        used_numbers |= _collect_used_uid_numbers(affected_dirs, prefix)
+        assigned = assign_uids_for_files(written_files, prefix, used_numbers)
+
+    return {
+        "written": written_count,
+        "written_files": written_files,
+        "skipped_dupes": skipped_dupes,
+        "invalid_rows": invalid_rows,
+        "assigned_uids": assigned,
+    }
+
+
+@app.command()
+def add_batch(
+    filename,
+    scheduled: bool = typer.Option(True, "--scheduled/--no-scheduled", help="Write under data/scheduled/ (default) or data/entities/"),
+    detect: bool = typer.Option(False, "--detect/--no-detect", help="Run apidetect probes for written records (default: no)"),
+):
+    """Adds data catalogs from a JSONL manifest, one record per line.
+
+    Each row may set: url (required), name, software, catalog_type, country,
+    subregion, owner_name, owner_type, owner_link, langs (list of codes),
+    description, is_national, id. Exports are loaded once; duplicates are
+    skipped; UIDs are assigned to all written records before exiting.
+    """
+    try:
+        summary = _add_batch_manifest(filename, scheduled=scheduled, detect=detect)
+    except ValueError as e:
+        logger.error("%s", e)
+        raise typer.Exit(1)
+
+    typer.echo("\nBatch complete:")
+    typer.echo(f"  Written: {summary['written']}")
+    typer.echo(f"  Skipped duplicates: {len(summary['skipped_dupes'])}")
+    for rid, dupe_of in summary["skipped_dupes"]:
+        typer.echo(f"    - {rid} (existing: {dupe_of})")
+    typer.echo(f"  Invalid rows: {len(summary['invalid_rows'])}")
+    for lineno, rid, err in summary["invalid_rows"]:
+        typer.echo(f"    - line {lineno} ({rid}): {err}")
 
 
 @app.command()
@@ -1125,14 +2021,17 @@ def add_opendatasoft_catalog(filename):
     ods_data = load_jsonl(filename)
     for item in ods_data:
         lang = item["lang"].rsplit("/", 1)[-1].upper()
-        _add_single_entry(
-            item["website"],
-            software="opendatasoft",
-            name=item["title"],
-            description=item["description"],
-            lang=lang,
-            preloaded=full_list,
-        )
+        try:
+            _add_single_entry(
+                item["website"],
+                software="opendatasoft",
+                name=item["title"],
+                description=item["description"],
+                lang=lang,
+                preloaded=full_list,
+            )
+        except ValueError as e:
+            logger.error("Skipping %s: %s", item["website"], e)
 
 
 @app.command()
@@ -1145,13 +2044,16 @@ def add_socrata_catalog(filename):
     ods_data = load_jsonl(filename)
     for item in ods_data:
         lang = item["locale"].rsplit("/", 1)[-1].upper()
-        _add_single_entry(
-            item["website"],
-            software="socrata",
-            name=item["title"],
-            lang=lang,
-            preloaded=full_list,
-        )
+        try:
+            _add_single_entry(
+                item["website"],
+                software="socrata",
+                name=item["title"],
+                lang=lang,
+                preloaded=full_list,
+            )
+        except ValueError as e:
+            logger.error("Skipping %s: %s", item["website"], e)
 
 
 @app.command()
@@ -1177,18 +2079,21 @@ def add_arcgishub_catalog(
         country = item["region"]
         if country == "WO":
             country = "US"
-        _add_single_entry(
-            item["website"],
-            software="arcgishub",
-            name=item["title"],
-            description=item["description"],
-            lang=lang,
-            owner_name=item["owner_name"],
-            country=country,
-            force=force,
-            scheduled=False,
-            preloaded=full_list,
-        )
+        try:
+            _add_single_entry(
+                item["website"],
+                software="arcgishub",
+                name=item["title"],
+                description=item["description"],
+                lang=lang,
+                owner_name=item["owner_name"],
+                country=country,
+                force=force,
+                scheduled=False,
+                preloaded=full_list,
+            )
+        except ValueError as e:
+            logger.error("Skipping %s: %s", item["website"], e)
 
 
 SOFTWARE_MD_TEMPLATE = """---

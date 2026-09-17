@@ -30,7 +30,9 @@ Platform-neutral workflow for adding or editing catalog YAML. Full human guide: 
     --scheduled
   ```
 
-  After a live GET, promote in the same session (`python scripts/promote_scheduled.py`), then `assign` and `validate-yaml --id`. If `software.id` is in `CATALOGS_URLMAP`, run `python scripts/apidetect.py detect-software {id} --action insert --max-endpoints 1`. Append one line to `dataquality/hunts.jsonl`.
+  Useful options: `--subregion PT-11` (routes to `{CC}/{SUB}/`, sets level 30), `--owner-type "Local government"` (validated, synonyms canonicalized), `--is-national`, `--id` (override for path-based tenants), `--no-detect` (skip the apidetect probe). Language is auto-filled from the country; records are schema-validated before writing. For several finds at once, write a JSONL manifest and run `python scripts/builder.py add-batch manifest.jsonl` — it dedupes against exports, validates rows, and assigns UIDs itself.
+
+  After a live GET, promote in the same session (`python scripts/promote_scheduled.py --id {id} [--probe]` — `--id` promotes only your finds, `--probe` re-checks liveness and keeps `dead` records in the queue; subregion records route to `{CC}/{SUBREGION}/{type}/` automatically), then `assign` (not needed after `add-batch`) and `validate-yaml --id`. If `software.id` is in `CATALOGS_URLMAP`, run `python scripts/apidetect.py detect-software {id} --action insert --max-endpoints 1`. Append one line to `dataquality/hunts.jsonl` (or use `python scripts/hunt.py log`). To triage the whole queue without moving anything: `python scripts/promote_scheduled.py review-scheduled`.
 
 - Filename / `id`: lowercase letters and digits only
 - Required fields: `id`, `uid`, `name`, `link`, `catalog_type`, `access_mode`, `status`, `software`, `owner`, plus `coverage` (enforced by the `MISSING_COVERAGE` quality rule rather than the schema)
@@ -50,6 +52,15 @@ pytest tests/test_yaml.py -q
 ```
 
 Validate a single file with `--file path/to/file.yaml`. Run full `validate-yaml` before a large PR.
+
+## Updating existing records
+
+Prefer the CLI over hand-edits and throwaway scripts:
+
+- One field on one record: `python scripts/builder.py set-field --id {id} --path properties.is_national --value true` (`--append` for list fields like `tags`; values parse as YAML scalars).
+- Many records: write a JSONL manifest of `{"id": ..., "set": {...}}` / `{"id": ..., "merge": {...}}` rows and run `python scripts/builder.py enrich-batch updates.jsonl` (dry-run shows per-record diffs), then `--write` to apply.
+
+Both refuse `uid`/`id` changes and re-validate the record against the schema before saving; invalid updates leave files unchanged.
 
 ## Do not
 

@@ -22,7 +22,12 @@ Python **3.10–3.12**. Test layout: [tests/README.md](https://github.com/dateno
 | `python scripts/builder.py validate-software` | Software YAML coverage/profile checks. `version` and `repository_url` thresholds apply to OSS subtypes, not SaaS/CMS/geo viewers. Fails if `software_ids.yaml` does not match `data/software/` |
 | `python scripts/builder.py sync-software-maps` | Rewrite `data/reference/software_ids.yaml` from software YAML |
 | `python scripts/builder.py assign` | Assign missing `cdi########` UIDs in entities (`--dryrun` to preview) |
+| `python scripts/builder.py assign --new` | Incremental: only git-changed YAML (untracked/modified under `data/entities/` + `data/scheduled/`); entities get `cdi########`, scheduled `temp########`. Fast `uid:`-line scan for used numbers, no full YAML parse |
 | `python scripts/builder.py assign --mode scheduled` | Assign `temp########` UIDs in scheduled |
+
+All `assign` paths cross-check to-be-assigned UIDs against the dataset exports (`datasets.duckdb` read-only, `full.parquet` fallback on lock) and **fail without writing** on collision — a collision means exports diverged from YAML (e.g. a deleted record); rebuild exports first. When exports are absent the check is skipped with a warning.
+| `python scripts/builder.py validate-yaml --changed` | Validate only git-changed YAML (untracked/modified under `data/entities/` + `data/scheduled/`) — fast pre-commit check; mutually exclusive with `--file`/`--id` |
+| `python scripts/builder.py schema-values FIELD` | Print allowed values for a field: schema enums (`catalog_type`, `status`, `access_mode`) or reference vocabularies (`owner.type`, `langs`, `owner.location.subregion` with `--country`, `software.id`) |
 | `python scripts/builder.py analyze-quality` | Write `dataquality/` reports |
 | `python scripts/builder.py quality-control` | Terminal completeness metrics (`--mode full` or `catalogs`) |
 | `pytest` | Test suite with coverage |
@@ -40,10 +45,41 @@ python scripts/builder.py add-single "https://example.com/data" \
 
 Use `--no-scheduled` to write under `data/entities/`. After adding files, run `assign` then `validate-yaml`.
 
+Additional `add-single` options: `--subregion PT-11` (ISO 3166-2 code; routes to `{CC}/{SUB}/` and sets level 30), `--owner-type "Local government"` (validated against `data/reference/owner_types.yaml`, synonyms canonicalized), `--is-national`, `--id CUSTOMID` (lowercase letters/digits, for path-based tenants), `--no-detect` (skip the apidetect probe), `--lang it` (resolved to `{id, name}` via `data/reference/langs.csv`; when omitted, the language is auto-filled from the country). Records are schema-validated before writing; invalid records are refused with an error.
+
+For multi-record hunts, use a JSONL manifest (one record per line):
+
+```bash
+python scripts/builder.py add-batch manifest.jsonl
+```
+
+```json
+{"url": "https://dados.cm-faro.pt", "name": "Faro Open Data", "software": "ckan", "catalog_type": "Open data portal", "country": "PT", "subregion": "PT-08", "owner_name": "Municipality of Faro", "owner_type": "Local government", "langs": ["pt"], "is_national": false}
+```
+
+`add-batch` loads the exports once, skips rows whose canonical URL, host (root-path URLs), or id already exist (reporting the existing id), validates every row against the schema before writing, writes valid rows only, and assigns UIDs to all new records before exiting. `--no-scheduled` writes under `data/entities/`; `--detect` runs apidetect probes (off by default).
+
 | Command | Purpose |
 |---------|---------|
 | `add-single` | One URL |
-| `add-list FILENAME` | One URL per line |
+| `add-batch FILENAME` | JSONL manifest, one record per line (preferred for hunts) |
+| `add-list FILENAME` | One URL per line (legacy; superseded by `add-batch`) |
+
+## Updating records
+
+```bash
+# Set one field on one record (schema-validated before saving)
+python scripts/builder.py set-field --id datagov --path properties.is_national --value true
+python scripts/builder.py set-field --id datagov --path tags --value transport --append
+
+# Bulk updates from a JSONL manifest (dry-run by default)
+python scripts/builder.py enrich-batch updates.jsonl          # preview diffs
+python scripts/builder.py enrich-batch updates.jsonl --write  # apply
+```
+
+`set-field` resolves the record across entities and scheduled, creates intermediate dicts for dotted paths, and parses `--value` with YAML scalar rules (`true` → bool, `30` → int, `[a, b]` → list, otherwise string — quote to force a string). It refuses to touch `uid`/`id` and leaves the file unchanged when the update would break schema validation.
+
+`enrich-batch` rows are `{"id": ..., "set": {"dotted.path": value, ...}}` or `{"id": ..., "merge": {"field": {...}}}` (recursive dict merge). Every updated record is schema-validated; invalid rows are reported and skipped. The summary counts updated / unchanged / skipped (unknown id) / invalid.
 | `add-opendatasoft-catalog FILENAME` | Prepared OpenDataSoft JSONL |
 | `add-socrata-catalog FILENAME` | Prepared Socrata JSONL |
 | `add-arcgishub-catalog FILENAME` | Prepared ArcGIS Hub JSONL (writes entities; `--force` to overwrite) |
