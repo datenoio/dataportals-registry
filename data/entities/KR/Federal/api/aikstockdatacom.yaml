@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: API Catalog
+content_types:
+- api endpoint
+- dataset
+coverage:
+- location:
+    country:
+      id: KR
+      name: South Korea
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Daily Korean equity data published as static JSON and CSV with no signup
+  or API key — T+1 settled closes for KOSPI, KOSDAQ and KONEX listings, DART regulatory
+  filings with the time of receipt, quarterly earnings including preliminary figures,
+  and median market-adjusted returns by filing type. Derived from Korean public-sector
+  open data (Financial Services Commission, DART). An OpenAPI 3.1 spec and a remote
+  MCP server are published alongside the files.
+endpoints:
+- type: documentation
+  url: https://aikstockdata.com/datasets
+- type: api
+  url: https://aikstockdata.com/openapi.json
+id: aikstockdatacom
+langs:
+- id: KO
+  name: Korean
+- id: EN
+  name: English
+link: https://aikstockdata.com
+name: aikstockdata — Korean Stock Data
+owner:
+  link: https://aikstockdata.com
+  location:
+    country:
+      id: KR
+      name: South Korea
+    level: 20
+  name: aikstockdata (independent operator)
+  type: Other
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: aiksd-public-1.1 (non-commercial use with attribution; commercial redistribution
+    not permitted)
+  license_url: https://aikstockdata.com/licenses/aiksd-public-1.1.txt
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: https://aikstockdata.com/terms
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- finance
+- stock market
+- has_api
+- API
+- South Korea
+- corporate filings
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+uid: cdi00005620
