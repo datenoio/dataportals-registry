@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: AR-Y
+      name: Jujuy
+description: Portal de datos abiertos de la Municipalidad de Libertador General San
+  Martín (Jujuy), alojado en País Digital. Publica datos municipales en formatos abiertos.
+endpoints:
+- type: ckan:package-search
+  url: http://lib-juy-datos.paisdigital.modernizacion.gob.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://lib-juy-datos.paisdigital.modernizacion.gob.ar/api/3/action/package_list
+  version: '3'
+id: libjuydatospaisdigitalmodernizaciongobar
+langs:
+- id: ES
+  name: Spanish
+link: http://lib-juy-datos.paisdigital.modernizacion.gob.ar
+name: Municipalidad de Libertador Gral. San Martín Portal de Datos Abiertos
+owner:
+  link: null
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-Y
+      name: Jujuy
+  name: Municipalidad de Libertador General San Martín
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: andino
+  name: Andino
+status: active
+tags:
+- open data
+- government
+- municipio
+- Libertador General San Martín
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00007269

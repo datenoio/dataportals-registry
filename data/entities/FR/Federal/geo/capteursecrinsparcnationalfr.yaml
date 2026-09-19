@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: 'Sensor observation data portal of Écrins National Park (France): istSOS-viewer
+  front-end over an istSOS OGC SOS server (https://istsos.ecrins.net/istsos, services
+  ''ecrins'' and ''frequentation'') publishing meteo, hydrological and visitor-frequency
+  time series.'
+endpoints:
+- type: sos100
+  url: https://istsos.ecrins.net/istsos/ecrins
+  version: 1.0.0
+id: capteursecrinsparcnationalfr
+langs:
+- id: FR
+  name: French
+link: https://capteurs.ecrins-parcnational.fr/
+name: Capteurs du Parc national des Écrins
+owner:
+  link: https://www.ecrins-parcnational.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Parc national des Écrins
+  type: Central government
+software:
+  id: istsos
+  name: istSOS
+status: active
+tags:
+- geospatial
+- government
+- environment
+- sensor
+topics:
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00007149

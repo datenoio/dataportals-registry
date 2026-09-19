@@ -49,6 +49,12 @@ OpenAIRE Graph/CONNECT gateways are **data search engines**, not open-data CMSs.
 
 Optional dumps when present in `endpoints[]`: OAI-PMH Identify (`/oai?verb=Identify`) and SPARQL (`/sparql`, ckanext-dcat / ckanext-sparql). Prefer `package_search` for dataset harvest; SPARQL is a catalog dump, not a substitute for packages.
 
+## Andino (`andino`) {#andino}
+
+Argentine CKAN distribution (datos.gob.ar) — harvest exactly like [CKAN](#ckan): `GET https://host/api/3/action/package_search?q=&rows=100&start=0`. Andino also exposes DCAT dumps at `/data.json`, `/catalog.xml`, and `/catalog.jsonld`, and a time-series API (`/series/api/series/`) — the series API is indicator observations, not datasets; do not harvest it as packages.
+
+**Keep:** `package_search` packages. **Drop:** showcases, harvest objects, series API observations.
+
 ## DKAN (`dkan`) {#dkan}
 
 Same Action API as [CKAN](#ckan) when enabled; also `/api/1/search`. Confirm JSON `"success": true`. If only Drupal JSON:API is public, harvest `/jsonapi/dataset/dataset` (DKAN 2 dataset entity) and prefer `dkan` when the product is DKAN.
@@ -417,6 +423,12 @@ DKAN on Drupal: use the [DKAN](#dkan) Action API when enabled — prefer `dkan` 
 GET https://host/wp-json/
 GET https://host/wp-json/wp/v2/dataset
 ```
+
+## Joomla (`joomla`) {#joomla}
+
+Joomla CMS sites have no standard dataset list API. Harvest the catalog or map-gallery
+pages as HTML lists; keep each linked dataset or map as one record and drop article
+chrome, menus, and login pages.
 
 `/wp-json/` only for a **datasets** custom post type (`/wp-json/wp/v2/dataset` or the type the catalog documents). **Keep:** dataset posts. **Drop:** `/wp/v2/posts`, media, and ordinary WordPress homepages.
 

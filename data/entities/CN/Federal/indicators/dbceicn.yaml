@@ -1,0 +1,52 @@
+id: dbceicn
+name: CEInet Statistical Database
+link: https://db.cei.cn
+catalog_type: Indicators catalog
+access_mode:
+- restricted
+status: active
+software:
+  id: ceinet
+  name: CEInet Statistical Database
+owner:
+  name: China Economic Information Network (State Information Center)
+  type: Central government
+  location:
+    country: &id001
+      id: CN
+      name: China
+    level: 20
+  link: https://db.cei.cn
+coverage:
+- location:
+    country: *id001
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: 中经网统计数据库 is the China Economic Information Network statistical database
+  covering Chinese macro, regional and industry indicators.
+langs:
+- id: ZH
+  name: Chinese
+tags:
+- statistics
+- economics
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+content_types:
+- dataset
+api: false
+api_status: uncertain
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+uid: cdi00007503

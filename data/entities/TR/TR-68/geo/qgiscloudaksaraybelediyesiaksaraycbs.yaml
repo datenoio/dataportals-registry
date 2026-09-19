@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TR
+      name: Turkey
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: TR-68
+      name: Aksaray
+description: Public QGIS Cloud city GIS (aksaray_cbs) of the Municipality of Aksaray.
+endpoints:
+- type: wms130
+  url: https://www.qgiscloud.com/aksaraybelediyesi/aksaray_cbs/wms?SERVICE=WMS&REQUEST=GetCapabilities
+id: qgiscloudaksaraybelediyesiaksaraycbs
+langs:
+- id: TR
+  name: Turkish
+link: https://www.qgiscloud.com/aksaraybelediyesi/aksaray_cbs
+name: Aksaray Municipality GIS
+owner:
+  link: https://www.aksaray.bel.tr
+  location:
+    country:
+      id: TR
+      name: Turkey
+    level: 30
+    subregion:
+      id: TR-68
+      name: Aksaray
+  name: Aksaray Belediyesi
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: qgiscloud
+  name: QGIS Cloud
+status: active
+tags:
+- geospatial
+- geoportal
+- qgis-cloud
+- Aksaray
+- Turkey
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007222

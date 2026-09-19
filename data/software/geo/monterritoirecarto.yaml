@@ -1,0 +1,61 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: monterritoirecarto
+name: Mon Territoire Carto
+website: https://www.sogefi-sig.com/accueil/mon-territoire/carto/
+description: Mon Territoire Carto is SOGEFI's French municipal web GIS (cadastre,
+  urbanisme, networks). Public tenants are named instances on
+  carto.monterritoire.fr/map.php?instance= or branded hosts such as
+  guyane.monterritoire.fr. Distinct from Solutions & Territoire (Atelier Fiscal)
+  and from the staff login hub without an instance parameter. Do not register
+  Mon Territoire Voirie, TLPE, or partner Découverte skins as extra Carto tenants.
+owner:
+  name: SOGEFI
+  location:
+    country:
+      id: FR
+      name: France
+logo_url: https://cdn.sogefi-web.com/interne/images/logo-monterritoire/carto.svg
+documentation_url: https://carto.monterritoire.fr/static/manuel/manuel-carto.pdf
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+export_formats:
+- GeoJSON
+- PDF
+capabilities:
+- Map viewer
+- Municipal GIS
+last_updated: '2026-09-18T00:00:00Z'

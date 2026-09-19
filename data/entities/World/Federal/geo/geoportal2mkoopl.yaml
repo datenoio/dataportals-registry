@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: Public SHOGun geoportal of the International Commission for the Protection
+  of the Odra River against Pollution (MKOOpZ / IKSO), including the Odra catchment
+  monitoring application.
+id: geoportal2mkoopl
+langs:
+- id: PL
+  name: Polish
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://geoportal2.mkoo.pl/client/?applicationId=3696
+name: Geoportal of the International Commission for the Protection of the Odra River
+owner:
+  link: https://www.mkoo.pl/
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: International Commission for the Protection of the Odra River against Pollution
+  type: International
+software:
+  id: shogun
+  name: SHOGun
+status: active
+tags:
+- geospatial
+- water
+- Odra
+- international
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00007294
+properties:
+  is_national: false
+endpoints:
+- type: rest
+  url: https://geoportal2.mkoo.pl/applications/3696
+- type: rest
+  url: https://geoportal2.mkoo.pl/applications/3690

@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+    macroregion:
+      id: '021'
+      name: Northern America
+description: 'Comox Valley Regional District public iMap web GIS on the imapTOO platform:
+  property, zoning, cadastral, environmental, flood-hazard, and service-area layers
+  for the Comox Valley, backed by a shared ArcGIS Server.'
+id: mapviewerimaptooca
+langs:
+- id: EN
+  name: English
+link: https://mapviewer.imaptoo.ca/secure/
+name: Comox Valley Regional District iMap
+owner:
+  link: https://www.comoxvalleyrd.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: Comox Valley Regional District
+  type: Regional government
+software:
+  id: imaptoo
+  name: iMap (imapTOO)
+status: active
+tags:
+- GIS
+- geospatial
+- map viewer
+- regional
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00007488
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://mapviewer.imaptoo.ca/imap87320977492837458/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mapviewer.imaptoo.ca/imap87320977492837458/rest/services?f=pjson

@@ -178,12 +178,14 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `geoitgis.geo-it.be/touchviewer/` title “Geo-IT GIS™ Touch Viewer” | `geoitgis` | Geoportal |
 | `zeljko-gis.com` Fusion / `zopcina.zeljko-gis.com/{tenant}/` | `zeljkogis` | Geoportal |
 | `/sigimweb/` title “SIGimWeb” / `/gomap_web/` | `sigimweb` | Geoportal |
+| `{client}.geomapguide.ca` / title `GoMap - {tenant}` | `gomap` | Geoportal |
 | `app.geocentriq.com/mrc/{mrc}` Geocentriq | `geocentriq` | Geoportal |
 | `portail.geocentralis.com/public/sig-web/{mrc}/{code}/` GeoCentralis | `geocentralis` | Geoportal |
 | `sigale.ca/Main.aspx?mrc={code}` SIGALE | `sigale` | Geoportal |
 | `/NetGISRuntime/basis/index.jsp` title “NetGIS - © WSP Danmark” | `netgisruntime` | Geoportal |
 | SpatialMap `webkort` | `spatialsuite` | Geoportal |
 | Hajk `appConfig.json` / `mapserviceBase` | `hajk` | Geoportal |
+| Title `SHOGun` / `SHOGun Client` / `/applications` JSON | `shogun` | Geoportal |
 | Title `ScalarGIS` / `/static/viewer/` / `logo-splash.png` | `scalargis` | Geoportal |
 | `origo.min.js` / `origo.js` / `Origo(` Origosamverkan | `origo` | Geoportal |
 | Title `Tailormap` / `{org}.tailormap.nl` / `/api/app/{app}` | `tailormap` | Geoportal |
@@ -204,6 +206,9 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `{council}.pozi.com` title Pozi Web Map | `pozi` | Geoportal |
 | `/JMapWeb/` or JMap NG `jmapserver-ng` / `*.jmaponline.net` | `jmap` | Geoportal |
 | `{city}.giscloud.com` GIS Cloud | `giscloud` | Geoportal |
+| `{city}.geodados.com.br/Publico` OpenLayers `acessoAnonimo` | `geodados` | Geoportal |
+| `{city}.mapmap.com.br/geo-portal` Laravel MapMap citizen hub | `mapmap` | Geoportal |
+| `webgis.drz.com.br/{city}/` title WebGIS/WebGis OpenLayers DRZ | `drzwebgis` | Geoportal |
 | `{county}.mrf.com` / `js/lib/mrf/` MRF Web Map | `mrf` | Geoportal |
 | `web.munisight.com/{Tenant}` Catalis Login.aspx | `munisight` | Geoportal |
 | `publicmaps.gisquadrat.com/BP/WEPM.aspx` title GeoMedia SmartClient Public Maps | `publicmaps` | Geoportal |
@@ -236,6 +241,8 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `www.gisserver.de/{city}/` portal.js GIScity | `giscity` | Geoportal |
 | `vianovis.net/{tenant}/` or `loadTouviaMaps()` touvia.MAPS | `touviamaps` | Geoportal |
 | `INGRADA online` / `Softplan.Ingrada.Mobile` | `ingrada` | Geoportal |
+| Title `IndorGeo` / `/geo3/` or `/assets/indorgeo/ig1.js` | `indorgeo` | Geoportal |
+| `cmd=wafdownload` / title `CAIGOS-Globe` / GlobeFormCss | `caigos` | Geoportal |
 | `html.vcs-ui` title `VC Map` | `vcmap` | Geoportal |
 | `geoportale.sportellounicodigitale.it/GisMaster` `IdCliente=` | `gismaster` | Geoportal |
 | `/page:s_italia:geoportale` or `*.prod.globogis.com` | `gfmaplet` | Geoportal |
@@ -243,6 +250,8 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | MapCentia `/apps/viewer` or `/mapcache/` WMTS | `gc2` | Geoportal |
 | hale»connect `/csw` or `/ows/services/` | `haleconnect` | Geoportal |
 | `*.sentinel-hub.com` STAC `/api/v1/catalog` | `sentinelhub` | Geoportal |
+| Title `RuMap: геопортал` / `/shpwrite.bundle.min.js` / `ng-app="digimap"` | `rumap` | Geoportal |
+| `/ZuluWeb/` + title `404 ZuluServer Request` / ZWS `GetZMMapList` | `zulugisonline` | Geoportal |
 | `*.revenuedev.org` license portal | `rdfrepository` | Open data portal |
 | ResourceContracts `/contract/resources` | `resourcecontracts` | Open data portal |
 | OpenSpending fiscal dataset search | `openspending` | Open data portal |
@@ -256,6 +265,7 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | ProteoSAFe `/ProteoSAFe/datasets.jsp` | `proteosafe` | Scientific data repository |
 | CyVerse Data Commons catalog | `cyverse` | Scientific data repository |
 | GeoNature-atlas `/static/css/atlas.css` | `geonature` | Geoportal |
+| Title `Geotrek-rando` / `/api/v2/trek/` | `geotrek` | Geoportal |
 | map.geo.admin.ch `/v1.*/assets/index-` | `webmapviewer` | Geoportal |
 | DataHub title + `/api/graphql` | `datahubproject` | Metadata catalog |
 | Hugging Face `/datasets/` | `huggingface` | Machine learning catalog |

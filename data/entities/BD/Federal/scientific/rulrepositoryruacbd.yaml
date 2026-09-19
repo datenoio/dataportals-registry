@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BD
+      name: Bangladesh
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: Institutional repository of the University of Rajshahi Central Library
+  (DSpace), hosting theses, dissertations, and research publications.
+id: rulrepositoryruacbd
+langs:
+- id: EN
+  name: English
+- id: BN
+  name: Bengali
+link: http://rulrepository.ru.ac.bd
+name: Rajshahi University Central Library Repository
+owner:
+  link: https://www.ru.ac.bd
+  location:
+    country:
+      id: BD
+      name: Bangladesh
+  name: University of Rajshahi
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- DSpace
+- academic
+- bangladesh
+- research
+- scientific
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+endpoints:
+- type: dspace
+  url: http://rulrepository.ru.ac.bd/server/api
+  version: '7'
+- type: dspace:objects
+  url: http://rulrepository.ru.ac.bd/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: http://rulrepository.ru.ac.bd/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: http://rulrepository.ru.ac.bd/sitemap_index.xml
+uid: cdi00007122

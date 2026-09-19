@@ -235,6 +235,21 @@ Same optional OAI as [Hyrax](#hyrax): `/catalog/oai?verb=Identify`.
 
 Islandora (`islandora`) is Drupal+Fedora: harvest the public JSON:API or Solr only when a **dataset** content model / collection exists. Prefer Islandora over raw `fedora` `/fcrepo/rest`. See [Islandora](#islandora).
 
+## Clowder (`clowder`) {#clowder}
+
+REST API under `/api` (Swagger UI at `/swagger/`). Use `GET` only — Clowder returns `404` to `HEAD`.
+
+```text
+GET https://host/api/status
+GET https://host/api/datasets?limit=100
+GET https://host/api/datasets/{id}
+GET https://host/api/datasets/{id}/metadata.jsonld
+```
+
+`/api/status` is anonymous and returns version plus dataset/file counts. `/api/datasets` lists datasets visible to the caller — anonymous on open instances, `401 Not authorized` where login is required (then harvest only with an API key, or skip). Collections (`/api/collections`) group datasets; spaces (`/api/spaces`) are access-control groupings, not datasets.
+
+**Keep:** datasets, with their files as resources. **Drop:** spaces and collections as dataset rows (keep as grouping metadata), files without a parent dataset.
+
 ## OPUS (`opus`) {#opus}
 
 German IRs. The dataset document type is usually `researchdata` / `ResearchData`.

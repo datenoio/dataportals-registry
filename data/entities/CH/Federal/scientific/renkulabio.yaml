@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Renku is an open-source platform for reproducible, collaborative data
+  science developed by the Swiss Data Science Center (SDSC), a joint venture of ETH
+  Zurich and EPFL. The RenkuLab deployment lets researchers create, share and discover
+  projects, datasets and data connectors, and run interactive compute sessions.
+endpoints:
+- type: custom_api
+  url: https://renkulab.io/api/data/search/query?q=water
+id: renkulabio
+langs:
+- id: EN
+  name: English
+link: https://renkulab.io/search
+name: RenkuLab
+owner:
+  link: https://www.datascience.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+  name: Swiss Data Science Center
+  type: Academy
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- academic
+- research
+- scientific
+- research data
+- reproducibility
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00006821

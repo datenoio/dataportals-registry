@@ -7,7 +7,7 @@ Fingerprints live on two pages so this overview stays short:
 | Page | Use when |
 |------|----------|
 | [SDI platforms](discovery-geoportals-sdi.md) | GeoNetwork, GeoNode, Palapa, GeoServer, ArcGIS, Experience Builder, Web AppBuilder, STAC, openEO, Sentinel Hub, Lizmap, QGIS Server, G3W-SUITE, CubeWerx, M.App Enterprise, mviewer, Isogeo, Geocortex, MapServer, and other catalog/service stacks |
-| [Regional viewers](discovery-geoportals-viewers.md) | Wagmap, SonicWeb, GeDA-Public, ALANDIS+, Geolonia スマートマップ, EWMAPA, e-mapa.net, Loftmyndir, Alta Vefsjá, Tianditu, Masterportal, GeoMapFish, NetGIS Server, NetGIS Runtime, cardo, MapGIS IGServer, HyG Mapgis, Trimble Locus / Louhi / Landfolio, dmCity, InfoGIS, Spatial Suite, Hajk, Origo, Tailormap, myCarta, AddSpatial, KortInfo, IntraMaps Public, Spectrum Spatial Analyst, Exponare, LocalMaps, GEUSMAP, GISApp, GeneGIS PAGIS, GisMaster, LDP SIT, GFMaplet, SmartMap, SmartGIS, VKOMAP, ISY Map, Avinet Adaptive, MAP+, EnviMAP, PISO, GDi Visios, MapGuide, SeaSketch, iObčina, iShare, Cadcorp, StatMap Earthlight, Visor Urbano, Dobles Visor de Mapas, and municipal GIS viewers |
+| [Regional viewers](discovery-geoportals-viewers.md) | Wagmap, SonicWeb, GeDA-Public, ALANDIS+, Geolonia スマート맵, EWMAPA, e-mapa.net, Loftmyndir, Alta Vefsjá, Tianditu, Masterportal, GeoMapFish, NetGIS Server, NetGIS Runtime, cardo, MapGIS IGServer, HyG Mapgis, Trimble Locus / Louhi / Landfolio, dmCity, InfoGIS, Spatial Suite, Hajk, Origo, Tailormap, myCarta, AddSpatial, KortInfo, IntraMaps Public, Spectrum Spatial Analyst, Exponare, LocalMaps, GEUSMAP, GISApp, GeneGIS PAGIS, GisMaster, GeoPortale.cloud, LDP SIT, GFMaplet, SmartMap, SmartGIS, VKOMAP, ISY Map, Avinet Adaptive, MAP+, EnviMAP, PISO, GDi Visios, MapGuide, SeaSketch, iObčina, iShare, Cadcorp, StatMap Earthlight, Visor Urbano, Dobles Visor de Mapas, and municipal GIS viewers |
 
 All `software.id` values: [software-index.md](software-index.md). Harvest grain (layers vs tiles): [harvest-geoportals.md](harvest-geoportals.md), [harvest-viewers.md](harvest-viewers.md).
 
@@ -37,6 +37,7 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | `portals.landfolio.com` cadastre map | `landfolio` | [viewers](discovery-geoportals-viewers.md#landfolio) |
 | SpatialMap `webkort` | `spatialsuite` | [viewers](discovery-geoportals-viewers.md#spatialsuite) |
 | Hajk `appConfig.json` / `mapserviceBase` | `hajk` | [viewers](discovery-geoportals-viewers.md#hajk) |
+| Title `SHOGun` / `SHOGun Client` / `/applications` JSON | `shogun` | [viewers](discovery-geoportals-viewers.md#shogun) |
 | Title `ScalarGIS` / `/static/viewer/` / `logo-splash.png` | `scalargis` | [viewers](discovery-geoportals-viewers.md#scalargis) |
 | Origo `origo.min.js` / `Origo(` | `origo` | [viewers](discovery-geoportals-viewers.md#origo) |
 | Title `Tailormap` / `{org}.tailormap.nl` / `/nl/app/` | `tailormap` | [viewers](discovery-geoportals-viewers.md#tailormap) |
@@ -59,6 +60,8 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | `gms*.kc-systemhaus.de/BMApp/` | `kcwebgis` | [viewers](discovery-geoportals-viewers.md#kcwebgis) |
 | `{comune}.servizigis.it` or “GeneGis Site Creator” / App PAGIS | `genegis` | [viewers](discovery-geoportals-viewers.md#genegis) |
 | `geoportale.sportellounicodigitale.it/GisMaster` `IdCliente=` | `gismaster` | [viewers](discovery-geoportals-viewers.md#gismaster) |
+| `{comune}.geoportale.cloud` Accesso libero / Urbanistica | `geoportalecloud` | [viewers](discovery-geoportals-viewers.md#geoportalecloud) |
+| UrbisMap `www.urbismap.com` national hub | `urbismap` | [viewers](discovery-geoportals-viewers.md#urbismap) |
 | `cloud.ldpgis.it/{slug}/` or title “LdP Viewer” | `ldpgis` | [viewers](discovery-geoportals-viewers.md#ldpgis) |
 | `/page:s_italia:geoportale` or `*.prod.globogis.com` | `gfmaplet` | [viewers](discovery-geoportals-viewers.md#gfmaplet) |
 | `{district}.smartmap.kz` | `smartmap` | [viewers](discovery-geoportals-viewers.md#smartmap) |
@@ -69,6 +72,7 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | Avinet Adaptive ExtJS atlas | `avinet` | [viewers](discovery-geoportals-viewers.md#avinet) |
 | TYDAC MAP+ `/mapplus-lib/` | `mapplus` | [viewers](discovery-geoportals-viewers.md#mapplus) |
 | EnviMAP / GeoForte | `envimap` | [viewers](discovery-geoportals-viewers.md#envimap) |
+| `*.imaptoo.ca` Web AppBuilder iMap tenants | `imaptoo` | [viewers](discovery-geoportals-viewers.md#imaptoo) |
 | PISO geoprostor.net | `piso` | [viewers](discovery-geoportals-viewers.md#piso) |
 | GDi Visios `/visios/` | `gdivisios` | [viewers](discovery-geoportals-viewers.md#gdivisios) |
 | MapGuide `/mapguide/` | `mapguide` | [viewers](discovery-geoportals-viewers.md#mapguide) |
@@ -84,6 +88,9 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | `{city}.obce.gepro.cz` / Geoportál GEPRO | `gepro` | [viewers](discovery-geoportals-viewers.md#gepro) |
 | `evald.ee/{slug}/` KOVGIS EVALD | `evald` | [viewers](discovery-geoportals-viewers.md#evald) |
 | `{tenant}.tergis.lv` terGIS | `tergis` | [viewers](discovery-geoportals-viewers.md#tergis) |
+| `{tenant}.terragis.de` / `terraweb.js` TerraWeb | `terraweb` | [viewers](discovery-geoportals-viewers.md#terraweb) |
+| `carto.monterritoire.fr/map.php?instance=` Mon Territoire Carto | `monterritoirecarto` | [viewers](discovery-geoportals-viewers.md#monterritoirecarto) |
+| Title `IndorGeo` / `/geo3/` IndorRoad Geoportal | `indorgeo` | [viewers](discovery-geoportals-viewers.md#indorgeo) |
 | `{council}.pozi.com` title Pozi Web Map | `pozi` | [viewers](discovery-geoportals-viewers.md#pozi) |
 | `/JMapWeb/` or JMap NG `jmapserver-ng` | `jmap` | [viewers](discovery-geoportals-viewers.md#jmap) |
 | `{city}.giscloud.com` GIS Cloud | `giscloud` | [viewers](discovery-geoportals-viewers.md#giscloud) |
@@ -104,6 +111,7 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | `www.gisserver.de/{city}/` ibb giscity | `giscity` | [viewers](discovery-geoportals-viewers.md#giscity) |
 | `vianovis.net/{tenant}/` touvia.MAPS | `touviamaps` | [viewers](discovery-geoportals-viewers.md#touviamaps) |
 | `INGRADA online` / `Softplan.Ingrada.Mobile` | `ingrada` | [viewers](discovery-geoportals-viewers.md#ingrada) |
+| `cmd=wafdownload` / `CAIGOS-Globe` / GlobeFormCss | `caigos` | [viewers](discovery-geoportals-viewers.md#caigos) |
 | `html.vcs-ui` title VC Map | `vcmap` | [viewers](discovery-geoportals-viewers.md#vcmap) |
 | G3W-CLIENT / `/map/{group}/` QGIS WebGIS | `g3wsuite` | [SDI](discovery-geoportals-sdi.md#g3wsuite) |
 | MapCentia `/apps/viewer` or `/mapcache/` WMTS | `gc2` | [SDI](discovery-geoportals-sdi.md#gc2) |
@@ -131,13 +139,17 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | CR `/comun/js/leaflet.js` + Leaflet.GoogleMutant | `doblesvisor` | [viewers](discovery-geoportals-viewers.md#doblesvisor) |
 | `geonube.com.ar/visor/{slug}` | `geonube` | [viewers](discovery-geoportals-viewers.md#geonube) |
 | `{city}.geoportal.geopixel.com.br` | `geopixel` | [viewers](discovery-geoportals-viewers.md#geopixel) |
+| `{city}.geodados.com.br/Publico` | `geodados` | [viewers](discovery-geoportals-viewers.md#geodados) |
 | `{city}.ctmgeo.com.br/mapa/` | `ctmgeo` | [viewers](discovery-geoportals-viewers.md#ctmgeo) |
+| `webgis.drz.com.br/{city}/` | `drzwebgis` | [viewers](discovery-geoportals-viewers.md#drzwebgis) |
+| `{city}.mapmap.com.br/geo-portal` | `mapmap` | [viewers](discovery-geoportals-viewers.md#mapmap) |
 | `{org}.gis.ba` or `/webcity/` GAUSS MapStore | `gausswebcity` | [viewers](discovery-geoportals-viewers.md#gausswebcity) |
 | `{city}.gisplan.sk` or T-MAPY Spinbox / GIS4U / `tmapy.svg` | `gisplan` | [viewers](discovery-geoportals-viewers.md#gisplan) |
 | `mobec.sk/{slug}` T-MAPY mOBEC / `tmapyn.svg` | `mobec` | [viewers](discovery-geoportals-viewers.md#mobec) |
 | `web.dmcity.fi/{city}/public/` | `dmcity` | [viewers](discovery-geoportals-viewers.md#dmcity) |
 | `www.infogis.fi/{muni}/` | `infogis` | [viewers](discovery-geoportals-viewers.md#infogis) |
 | `/sigimweb/` title SIGimWeb or `/gomap_web/` | `sigimweb` | [viewers](discovery-geoportals-viewers.md#sigimweb) |
+| `{client}.geomapguide.ca` or title `GoMap - {tenant}` | `gomap` | [viewers](discovery-geoportals-viewers.md#gomap) |
 | `app.geocentriq.com/mrc/{mrc}` | `geocentriq` | [viewers](discovery-geoportals-viewers.md#geocentriq) |
 | `portail.geocentralis.com/public/sig-web/{mrc}/{code}/` | `geocentralis` | [viewers](discovery-geoportals-viewers.md#geocentralis) |
 | `sigale.ca/Main.aspx?mrc={code}` | `sigale` | [viewers](discovery-geoportals-viewers.md#sigale) |
@@ -151,6 +163,9 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | `inkasPortal - GeoNet Online GmbH` / `inkas-portal.js` | `inkasportal` | [viewers](discovery-geoportals-viewers.md#inkasportal) |
 | `geoviewer.io/css/nobel-style.css` | `geoviewer` | [viewers](discovery-geoportals-viewers.md#geoviewer) |
 | `my.floodreport.com.au/{authority}` Water Technology iframe | `floodintelligenceportal` | [viewers](discovery-geoportals-viewers.md#floodintelligenceportal) |
+| `atlasmapperVer=` asset parameter, `Ext-ux/` / `GeoExt-ux/` paths | `atlasmapper` | [viewers](discovery-geoportals-viewers.md#atlasmapper) |
+| `elevation.fsdf.org.au`, title `Elvis` | `elvis` | [viewers](discovery-geoportals-viewers.md#elvis) |
+| `firenorth.org.au/nafi3/`, NAFI branding | `nafi` | [viewers](discovery-geoportals-viewers.md#nafi) |
 | `*.pgis.lv`, title `pGIS`, layer-classifier API | `pgis` | [viewers](discovery-geoportals-viewers.md#pgis) |
 | `*-visorpublico.geoambiental.co/content-layout` | `geoambiental` | [viewers](discovery-geoportals-viewers.md#geoambiental) |
 | `apps.nazcacatastro.com/public/{code}/` cadastral viewer | `nazca` | [viewers](discovery-geoportals-viewers.md#nazca) |
@@ -158,6 +173,7 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | V&G `thirdparty/soda/soda.js` header and `/1/system/` LifeMap | `gtmap` | [viewers](discovery-geoportals-viewers.md#gtmap) |
 | `/js/base/MapSave.js` plus `BaseMap.js` / `SeeMap.js` | `myeongji` | [viewers](discovery-geoportals-viewers.md#myeongji) |
 | HTML comment `DIGITAL TWIN CLOUD - NEWLAYER` | `digitaltwincloud` | [viewers](discovery-geoportals-viewers.md#digitaltwincloud) |
+| `/ZuluWeb/` + title `404 ZuluServer Request` / ZWS `GetZMMapList` | `zulugisonline` | [viewers](discovery-geoportals-viewers.md#zulugisonline) |
 | SHK municipal city guide plus confirmed SHK customer | `shkkbs` | [viewers](discovery-geoportals-viewers.md#shkkbs) |
 | `storymaps.arcgis.com/stories/{item-id}` | `arcgisstorymaps` | [SDI](discovery-geoportals-sdi.md#arcgisstorymaps) |
 
@@ -205,7 +221,7 @@ Prefer these bounded lists over unscoped “missing geoportals” searches. Afte
 | [FGDC Service Status Checker](https://statuschecker.fgdc.gov/) | US federal/state geospatial service hosts |
 | [Geoseer](https://www.geoseer.net/) | Indexed OGC services that actually have layers |
 | [ODIS catalogue](https://catalogue.odis.org/) | Ocean/coastal catalogs (often ERDDAP, GeoNetwork, CKAN) |
-| Vendor viewer lists | Hajk, Aveki myCarta, Origo / Origosamverkan, Icebound AddSpatial, KortInfo, GISApp, GisMaster, LDP SIT `cloud.ldpgis.it/{slug}/`, Maggioli GFMaplet `*.prod.globogis.com`, SeaSketch `/app`, GDi Visios, GEO SmartGIS, PISO hub, EnviMAP tenants, Geoinfo VKOMAP, KAZGISA RGIS, T-MAPY GISPLAN / GIS4U / tmapserver, T-MAPY mOBEC, CORA GEO CG WebGIS, Geoportál GEPRO, TopGis GisOnline, MK Consult K5 MapServer, GEOVAP Marushka, Mapotip, ibb giscity, vianovis touvia.MAPS, EOMAP KOVGIS EVALD, Pozi `{council}.pozi.com`, GIS Cloud, MRF Web Map, Catalis MuniSight, K2 JMap, Geocentriq `app.geocentriq.com/mrc/`, GeoCentralis `portail.geocentralis.com/public/sig-web/`, SIGALE `sigale.ca/?mrc=`, Digital Map Products CommunityView, Cohga Weave Map, INEGI OVIE, SOFTPRO MBK, INEGI MxSIG, WebEWID `*.webewid.pl`, Argenmap, Instant Apps Filter Gallery |
+| Vendor viewer lists | Hajk, Aveki myCarta, Origo / Origosamverkan, Icebound AddSpatial, KortInfo, GISApp, GisMaster, GeoPortale.cloud `{comune}.geoportale.cloud`, LDP SIT `cloud.ldpgis.it/{slug}/`, Maggioli GFMaplet `*.prod.globogis.com`, SeaSketch `/app`, GDi Visios, GEO SmartGIS, PISO hub, EnviMAP tenants, Geoinfo VKOMAP, KAZGISA RGIS, T-MAPY GISPLAN / GIS4U / tmapserver, T-MAPY mOBEC, CORA GEO CG WebGIS, Geoportál GEPRO, TopGis GisOnline, MK Consult K5 MapServer, GEOVAP Marushka, Mapotip, ibb giscity, vianovis touvia.MAPS, CAIGOS Globe, EOMAP KOVGIS EVALD, Pozi `{council}.pozi.com`, GIS Cloud, MRF Web Map, Catalis MuniSight, K2 JMap, Geocentriq `app.geocentriq.com/mrc/`, GeoCentralis `portail.geocentralis.com/public/sig-web/`, SIGALE `sigale.ca/?mrc=`, Digital Map Products CommunityView, Cohga Weave Map, INEGI OVIE, SOFTPRO MBK, INEGI MxSIG, WebEWID `*.webewid.pl`, Argenmap, Instant Apps Filter Gallery, SOGEFI Mon Territoire Carto `carto.monterritoire.fr/map.php?instance=` |
 
 **One catalog per public product** still applies: do not add PISO municipal copies when `wwwgeoprostornet` is the hub; do not add `data.seasketch.org` ArcGIS REST next to a SeaSketch `/app`; do not add GISApp REST adaptors as a second city catalog; do not add both `maps.xymaps.com/{city}` and `www.xymaps.com/{city}`.
 
@@ -253,7 +269,7 @@ A sixteenth pass remapped leftover catalogs onto existing IDs: InDoRES `datavers
 
 A seventeenth pass remapped leftover catalogs onto existing IDs: SDIS 04 OpenSIS `lizmap` (`lizmapPopup`, `/index.php/view/`); Géo Pays de Brest `arcgishub` (`/portal/apps/sites/` with `hub-site` / `opendata-ui`). Do **not** set `arcgishub` from `/portal/home/` alone (ArcGIS Enterprise Portal). Do **not** set `g3wsuite` from GisClient `?mapset=` (`widgetGisClient.js`). Do **not** invent `opensis` or `gisclient` from a single leftover install. SITMUN is `sitmun`.
 
-A eighteenth pass remapped leftover catalogs onto existing IDs: BAW HENRY and AERADE Cranfield `dspace`; RWTH Publications `invenio` (JOIN2); GALENOS `inveniordm`; Warwick WRAP `eprints`; Eisenbahn-Bundesamt GeoPortal `ingrid` (`/user/themes/ingrid/`, `ingrid.js`). Do **not** set `ingrid` on BAW `datenrepository.baw.de` (scientific; `ingrid` would force Geoportal). Do **not** set `dataverse` on the EUR library CMS page. Do **not** set `tergis` on German TerraWeb (`terragis.de` / `terraweb.js`).
+A eighteenth pass remapped leftover catalogs onto existing IDs: BAW HENRY and AERADE Cranfield `dspace`; RWTH Publications `invenio` (JOIN2); GALENOS `inveniordm`; Warwick WRAP `eprints`; Eisenbahn-Bundesamt GeoPortal `ingrid` (`/user/themes/ingrid/`, `ingrid.js`). Do **not** set `ingrid` on BAW `datenrepository.baw.de` (scientific; `ingrid` would force Geoportal). Do **not** set `dataverse` on the EUR library CMS page. German TerraWeb (`terragis.de` / `terraweb.js`) is `terraweb`, not Latvian `tergis`.
 
 A nineteenth pass remapped leftover catalogs onto existing IDs: Rice Research Repository `dspace` (`/server/api` DSpace 9.3); AuScope Data Repository `ckan` (`status_show`); Lancaster datasets portal `pure`; RIT `elsevierdigitalcommons`. Do **not** set `figshare` on ReDATA (`redata.arizona.edu` is a library GitHub Pages hub; the Figshare catalog is already `arizona.figshare.com`). Do **not** set `dlibra` from a Cloudflare “Verifying…” page. Do **not** set `hyrax` on `hydra.hull.ac.uk` (redirects to the library CMS).
 
@@ -314,6 +330,51 @@ separate registry records and software assignments.
 | Google | `"PRODIGE" plateforme données OR "API PRODIGE"` |
 | Censys | `web.endpoints.http.body: "API PRODIGE"` |
 | FOFA | `body="API PRODIGE"` |
+
+## GeoMixer / Kosmosnimki (`geomixer`) {#geomixer}
+
+[ScanEx](https://www.scanex.ru) GeoMixer (Kosmosnimki) is a Russian web GIS platform.
+Server-side instances serve the default HTML title `ScanEx Web Geomixer - просмотр
+карты` and load `/static/lib/geomixer-src.js` + `geomixer.css`; third-party thematic
+maps embed the hosted client via `kosmosnimki.ru/2.0/` script URLs. The vendor runs
+the flagship portal `www.kosmosnimki.ru`, the fires monitor `fires.ru`, and the
+imagery search catalog `search.kosmosnimki.ru`; independent instances are mostly
+Russian bare IPs (not registrable) plus punycode `.рф` domains. Skip vendor corporate
+sites (`scanex.ru`, `scanex.space`), demo maps (`ocean.kosmosnimki.ru` AIS demo), and
+sites that merely use Kosmosnimki satellite basemap tiles (travel guides, trackers).
+
+| Tool | Query |
+|------|-------|
+| Google | `intitle:"ScanEx Web Geomixer"` or `"geomixer-src.js"` |
+| Censys | `web.endpoints.http.html_title: "ScanEx Web Geomixer"` |
+| FOFA | `body="GeoMixer"` or `title="ScanEx Web Geomixer"` or `body="kosmosnimki"` |
+
+## geoCore (`geocore`) {#geocore}
+
+NRCan [Canadian Geospatial Platform](https://geo.ca/behind-the-scenes/) cloud-native
+geospatial catalog ([product docs](https://canadian-geospatial-platform.github.io/geocore/),
+[source](https://github.com/Canadian-Geospatial-Platform/geocore)). The discovery app is
+the SvelteKit [app.geo.ca-v2](https://github.com/Canadian-Geospatial-Platform/app.geo.ca-v2)
+frontend; the map viewer is GeoView (`geoview`). The app is explicitly white-labelable for
+contributors, but as of September 2026 the only production deployment is GEO.ca itself —
+all GitHub forks are NRCan developer forks and crt.sh `%.geo.ca` shows the whole family
+under one domain.
+
+**Signals:** app shell at `/en-ca/map-browser` or `/fr-ca/map-browser`; page text "GeoCore
+records"; backing REST API on a `geocore.api.{host}` style domain with `GET /geo`
+(bbox search) and `GET /id?id={uuid}&lang=en`; extended-GeoJSON record payloads with
+`options` arrays of `{protocol, name, url}`.
+
+**Confirm:** GET `{api}/geo?north=90&south=-90&east=180&west=-180&lang=en&min=1&max=3`
+and match the `Items` payload. One record per portal deployment. Do not register
+`viewer-visualiseur.services.geo.ca` (FGP Viewer / RAMP), `geolocator.api.geo.ca`
+(geocoder API), or `download-telecharger.services.geo.ca` (file listing) as geoCore.
+
+| Tool | Query |
+|------|-------|
+| Google | `"geocore.api" OR "GeoCore records" map browser` |
+| Censys | `web.endpoints.http.body: "geocore.api"` |
+| FOFA | `body="geocore.api"` |
 
 ## Related
 

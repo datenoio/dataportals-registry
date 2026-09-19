@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public Grafana dashboards publishing honeypot and cyber-attack statistics
+  collected by the National Laboratory of Computer Virology at the Bulgarian Academy
+  of Sciences.
+id: statsnlcvbasbg
+langs:
+- id: EN
+  name: English
+link: https://stats.nlcv.bas.bg
+name: NLCV Honeypot Statistics
+owner:
+  link: https://bas.bg
+  location:
+    country:
+      id: BG
+      name: Bulgaria
+  name: National Laboratory of Computer Virology, Bulgarian Academy of Sciences
+  type: Academy
+software:
+  id: grafana
+  name: Grafana
+status: active
+tags:
+- Grafana
+- academic
+- bulgaria
+- indicators
+- statistics
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Elevation
+  name: Elevation
+  type: iso19115
+uid: cdi00007287
+endpoints:
+- type: customapi
+  url: https://stats.nlcv.bas.bg/api/search

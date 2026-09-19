@@ -203,7 +203,10 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | Dobles Visor de Mapas | `/comun/js/leaflet.js`, Leaflet.GoogleMutant | Costa Rican municipal visor; title `Visor de Mapas` |
 | GeoNube | `geonube.com.ar/visor/{slug}` | Leaflet/bootleaf; Cambalache; custom domains OK |
 | Geopixel Cidades | `{city}.geoportal.geopixel.com.br` | Next.js `/_next/`; confirm city; wildcard DNS |
+| Geodados SaaS | `{city}.geodados.com.br/Publico` | OpenLayers; `acessoAnonimo`; skip staff login root |
+| MapMap | `{city}.mapmap.com.br/geo-portal` | Laravel citizen hub; skip cidadao PWA and Licença Suspensa |
 | CTMGEO SigWEB | `{city}.ctmgeo.com.br/mapa/` | Title SIGWeb; not a DNS wildcard; skip generic SIGWeb |
+| DRZ WebGIS | `webgis.drz.com.br/{city}/` | OpenLayers; title WebGIS/WebGis; nginx 404 for unknown slugs |
 | dmCity | `web.dmcity.fi/{city}/public/` | Title `dmCity Web App`; not generic Experience Builder |
 | InfoGIS | `www.infogis.fi/{municipality}/` | `/codebase-infogis/`; Infokartta Oy; not Louhi/IMS |
 | Geo-IT GIS | `geoitgis.geo-it.be/touchviewer/` | Title `Geo-IT GIS™ Touch Viewer`; not generic MapGuide |
@@ -237,6 +240,7 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | GC Navi | `geocloud.jp/webgis/` | Tenant WebGIS home |
 | NOL-IS | `maps.nol-is.de` / `static.nol-is.de` | Public municipal geoportal |
 | map.apps | `/mapapps/` | con terra viewer; catalog UI may be `smartfindersdi` |
+| MapSolution | `/MapSolution/apps/home/welcome`, title `Home MapSolution` | IP SYSCON viewer; not con terra `mapapps` |
 | CoGIS | CoGIS Portal | Portal home; `elitegis` only if that is the branded viewer |
 | OpenGeoPortal | federated layer search | Geoportal home, not a single layer |
 | Knoema | `*.knoema.com` or branded hub | Portal home only — not every dataset URL |
@@ -368,6 +372,7 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - cardo: `/net3/public/`
 - GC Navi: tenant on `geocloud.jp/webgis/`
 - map.apps: `/mapapps/`
+- MapSolution: `/MapSolution/apps/home/welcome`
 - VertiGIS WebOffice: `/synserver` or `/WebOffice/synserver` (title `VertiGIS WebOffice`)
 - VertiGIS Studio Web: `/vertigisstudio/web/?app=` or `/gcx/WebViewer/?app=` (`#gcx-app` / title `VertiGIS Studio Web`)
 - Geocortex Essentials: `/Geocortex/Essentials/REST/sites?f=pjson` or `/Html5Viewer/` (title `Geocortex Essentials Sites Directory` / `Geocortex Viewer for HTML5`)
@@ -395,6 +400,7 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - MS-GIS: `{city}.msgis.net`
 - Weave: HTML title `Weave Map` (Cohga webpack `app.*.js`)
 - eKMap Cloud: `assets/ekmapboxgl/ekmap-mapboxgl.js` (not Hanoi `quyhoach.hanoi.gov.vn`)
+- MapMap: `{city}.mapmap.com.br/geo-portal` (Laravel citizen hub; not `{city}.cidadao.mapmap.com.br`)
 - OVIE: `/js/libs/OpenLayers/OL.js` + Materialize (INEGI economic GIS)
 - SOFTPRO: `{city}.cadastre.com.ua` or `/js/locale/ua.js` Ukrainian MBK
 - MxSIG: `/mdm6/` or `/mxsig2/` amplify.js Mapa Digital

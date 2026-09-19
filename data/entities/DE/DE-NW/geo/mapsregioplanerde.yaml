@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: 'SHOGun WebGIS for regional and local planning maps of Kreis Recklinghausen
+  and Bottrop (application regioplaner.de: Karte).'
+id: mapsregioplanerde
+langs:
+- id: DE
+  name: German
+link: https://maps.regioplaner.de/
+name: regioplaner.de Karte
+owner:
+  link: https://www.kreis-re.de/
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+  name: Kreis Recklinghausen
+  type: Local government
+software:
+  id: shogun
+  name: SHOGun
+status: active
+tags:
+- geospatial
+- government
+- spatial planning
+- Nordrhein-Westfalen
+- Germany
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00007293
+properties:
+  is_national: false
+endpoints:
+- type: rest
+  url: https://maps.regioplaner.de/applications

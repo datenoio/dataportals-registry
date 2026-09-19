@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion:
+      id: CN-AH
+      name: Anhui Sheng
+description: County geographic information public service platform (Map World / Tianditu)
+  of Fengyang County, Chuzhou, Anhui. Built on the GeoGlobe (GeoStar) WebGIS stack.
+endpoints:
+- type: tianditu:catalog
+  url: http://112.29.70.136:8090/tdt/index.html
+id: '1122970136'
+langs:
+- id: ZH
+  name: Chinese
+link: http://112.29.70.136:8090
+name: Tianditu Fengyang County
+owner:
+  link: http://112.29.70.136:8090
+  location:
+    country:
+      id: CN
+      name: China
+    level: 30
+    subregion:
+      id: CN-AH
+      name: Anhui Sheng
+  name: Fengyang County Government
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: tianditu
+  name: Tianditu
+status: active
+tags:
+- geospatial
+- map
+- Tianditu
+- GeoGlobe
+- Fengyang
+- Anhui
+- China
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00007257

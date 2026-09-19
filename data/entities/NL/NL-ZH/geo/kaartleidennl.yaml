@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Western Europe
 description: Geoportal. managed by Gemeente Leiden. powered by Custom software. accessible
   at kaart.leiden.nl.
+endpoints:
+- type: customapi
+  url: https://kaart.leiden.nl/api/maps/2.json
 id: kaartleidennl
 langs:
 - id: NL
@@ -39,8 +42,8 @@ owner:
   name: Gemeente Leiden
   type: Local government
 software:
-  id: custom
-  name: Custom software
+  id: mappi
+  name: Mappi
 status: active
 tags:
 - GIS

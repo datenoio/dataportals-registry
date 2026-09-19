@@ -1,0 +1,63 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: wfcatalog
+name: EIDA WFCatalog
+website: https://orfeus-eu.org/data/eida/webservices/wfcatalog/
+description: EIDA WFCatalog is the ORFEUS/EIDA waveform-metadata web service
+  deployed at every European Integrated Data Archive node. It exposes daily-granularity
+  waveform quality and availability metrics as JSON through a versioned REST API at
+  /eidaws/wfcatalog/1/ (query, version, application.wadl methods), specified by the
+  EIDA WFCatalog specification with source in the EIDA GitHub organization. Node
+  records typically also serve the companion FDSN web services
+  (/fdsnws/station/1/, /fdsnws/dataselect/1/, /fdsnws/availability/1/); FDSN is a
+  protocol family with multiple implementations, so the catalog-specific shared
+  product is WFCatalog. One record per EIDA node.
+owner:
+  name: ORFEUS / EIDA
+  location:
+    country:
+      id: EU
+      name: European Union
+documentation_url: https://www.orfeus-eu.org/documents/WFCatalog_Specification-v0.22.pdf
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'No'
+storage_type: Structured
+type: Software
+export_formats:
+- JSON
+capabilities:
+- REST API
+- Waveform metadata catalog
+- Data availability and quality metrics
+last_updated: '2026-09-16T00:00:00Z'

@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: MX-DUR
+      name: Durango
+description: Public QGIS Cloud map of the Instituto Duranguense de Educación para Adultos (IDEA), embedded
+  on idea.gob.mx.
+endpoints:
+- type: wms130
+  url: https://www.qgiscloud.com/jdcarrillo1234/IDEA/wms?SERVICE=WMS&REQUEST=GetCapabilities
+id: qgiscloudjdcarrillo1234idea
+langs:
+- id: ES
+  name: Spanish
+link: https://www.qgiscloud.com/jdcarrillo1234/IDEA
+name: IDEA Durango Map
+owner:
+  link: https://www.idea.gob.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-DUR
+      name: Durango
+  name: Instituto Duranguense de Educación para Adultos
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: qgiscloud
+  name: QGIS Cloud
+status: active
+tags:
+- geospatial
+- geoportal
+- qgis-cloud
+- Durango
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007214

@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: GISQuick-based public cycling map application 'Mestem na kole' for Prague
+  and Czechia, operated by the Auto*Mat / Prahou na kole NGO. Serves the public project
+  jerrytm/mnk with OGC web services.
+endpoints:
+- type: wms130
+  url: https://mnk-gisquick.dopracenakole.net/api/map/ows/jerrytm/mnk?SERVICE=WMS&REQUEST=GetCapabilities
+  version: 1.3.0
+- type: custom_api
+  url: https://mnk-gisquick.dopracenakole.net/api/map/project/jerrytm/mnk
+id: mnkgisquickdopracenakolenet
+langs:
+- id: CS
+  name: Czech
+link: https://mnk-gisquick.dopracenakole.net
+name: Městem na kole (MNK) Cycling Map
+owner:
+  link: https://prahounakole.cz
+  location:
+    country: *id001
+    level: 20
+  name: Auto*Mat (Prahou na kole)
+  type: Civil society
+properties:
+  is_national: false
+software:
+  id: gisquick
+  name: GISQuick
+status: active
+tags:
+- geospatial
+- has_api
+topics:
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00007184

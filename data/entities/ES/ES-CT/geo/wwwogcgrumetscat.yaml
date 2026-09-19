@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+description: Legacy CREAF OpenGIS map server (Servidor OpenGIS del CREAF) running
+  MiraMon Map Server. The catalog lists the Digital Climatic Atlases of the
+  Iberian Peninsula, Catalonia and Aragon, Meteosat Second Generation imagery,
+  EUROPARC protected natural spaces, world elevation and soil cover, the UAB
+  campus map, demographic maps of peninsular Spain, THALASSA sea-surface
+  temperature and chlorophyll maps, and the SIGPesca Catalan coast fisheries GIS.
+endpoints:
+- type: wms130
+  url: https://www.ogc.grumets.cat/cgi-bin/iberia/MiraMon.cgi?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
+  version: 1.3.0
+id: wwwogcgrumetscat
+langs:
+- id: CA
+  name: Catalan
+- id: ES
+  name: Spanish
+link: https://www.ogc.grumets.cat/
+name: CREAF OpenGIS Map Server
+owner:
+  link: https://www.creaf.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+  name: CREAF
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: miramon
+  name: MiraMon
+status: active
+tags:
+- geospatial
+- miramon
+- wms
+- catalonia
+- research
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00007144

@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: UrbisMap national Web GIS hub for Italian urban planning, cadastre,
+  constraints, and regulatory map layers. Municipal and regional views are published
+  on /territorio/{slug} pages of this single hosted geoportal.
+endpoints:
+- type: customapi
+  url: https://www.urbismap.com/api/territorio
+id: wwwurbismapcom
+langs:
+- id: IT
+  name: Italian
+link: https://www.urbismap.com/
+name: UrbisMap
+owner:
+  link: https://www.urbismap.it/
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: UrbisMap S.r.l.s.
+  type: Business
+properties:
+  is_national: false
+software:
+  id: urbismap
+  name: UrbisMap
+status: active
+tags:
+- geoportal
+- urban planning
+- cadastre
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00007463

@@ -1,0 +1,65 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-SN
+      name: Sachsen
+description: NFDI4Health Local Data Hub operated by IMISE at Leipzig University. FAIRDOM-SEEK
+  catalog for medical research projects, studies, and related health-research
+  assets.
+endpoints:
+- type: rest
+  url: https://ldh.imise.uni-leipzig.de/api
+id: ldhimiseunileipzigde
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://ldh.imise.uni-leipzig.de/
+name: University of Leipzig Research Data Management Hub
+owner:
+  link: https://www.imise.uni-leipzig.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-SN
+      name: Sachsen
+  name: Institute for Medical Informatics, Statistics and Epidemiology (IMISE), Leipzig University
+  type: Academy
+software:
+  id: seek
+  name: FAIRDOM-SEEK
+status: active
+tags:
+- scientific
+- has_api
+- NFDI4Health
+- clinical research
+- FAIR
+- SEEK
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00006819

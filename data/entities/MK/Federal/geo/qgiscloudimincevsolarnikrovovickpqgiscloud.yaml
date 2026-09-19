@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MK
+      name: Republic of North Macedonia
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Public QGIS Cloud map of solar rooftops (solarni krovovi) published by the Center for Climate
+  Change (CKP), North Macedonia.
+endpoints:
+- type: wms130
+  url: https://www.qgiscloud.com/imincev/solarni_krovovi_CKP_qgiscloud/wms?SERVICE=WMS&REQUEST=GetCapabilities
+id: qgiscloudimincevsolarnikrovovickpqgiscloud
+langs:
+- id: MK
+  name: Macedonian
+link: https://www.qgiscloud.com/imincev/solarni_krovovi_CKP_qgiscloud
+name: Solar Roofs Map (Center for Climate Change)
+owner:
+  link: https://ckp.org.mk
+  location:
+    country:
+      id: MK
+      name: Republic of North Macedonia
+    level: 20
+  name: Center for Climate Change (CKP)
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: qgiscloud
+  name: QGIS Cloud
+status: active
+tags:
+- geospatial
+- geoportal
+- qgis-cloud
+- solar
+- North Macedonia
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007213

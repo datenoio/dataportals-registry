@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public geoportal of the UZOR municipal information system (MIS UZOR)
+  running on KB Panorama GIS WebServer SE. Publishes municipal map layers for the
+  cities of Dubna and Kostroma (buildings, streets, recreation areas, monuments,
+  utilities, solid waste sites, vegetation) via OGC WMS and WFS services.
+id: webgisuzorru
+langs:
+- id: RU
+  name: Russian
+link: https://web.gisuzor.ru/
+name: UZOR municipal geoportal (GIS WebServer SE)
+owner:
+  link: https://gisuzor.ru
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 20
+  name: UZOR LLC
+  type: Business
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: giswebse
+  name: GIS WebServer SE
+status: active
+tags:
+- geospatial
+- GIS WebServer SE
+- Panorama
+- municipal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: wms130
+  url: https://web.gisuzor.ru/GISWebServiceSE/service.php?SERVICE=WMS&REQUEST=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://web.gisuzor.ru/GISWebServiceSE/service.php?SERVICE=WFS&REQUEST=GetCapabilities
+  version: 2.0.0
+uid: cdi00007239

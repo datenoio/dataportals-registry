@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: PT-05
+      name: Castelo Branco
+description: Public QGIS Cloud toponymy map of the Município de Belmonte, embedded on cm-belmonte.pt.
+endpoints:
+- type: wms130
+  url: https://www.qgiscloud.com/Topo_Belmonte/Toponimia_BLM_DRAFT8/wms?SERVICE=WMS&REQUEST=GetCapabilities
+id: qgiscloudtopobelmontetoponimiablmdraft8
+langs:
+- id: PT
+  name: Portuguese
+link: https://www.qgiscloud.com/Topo_Belmonte/Toponimia_BLM_DRAFT8
+name: Belmonte Toponymy Map
+owner:
+  link: https://www.cm-belmonte.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    subregion:
+      id: PT-05
+      name: Castelo Branco
+  name: Município de Belmonte
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: qgiscloud
+  name: QGIS Cloud
+status: active
+tags:
+- geospatial
+- geoportal
+- qgis-cloud
+- toponymy
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007218

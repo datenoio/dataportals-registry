@@ -1,0 +1,57 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'Yes'
+  organizations: Compatible
+  resources: 'Yes'
+  topics: Compatible
+has_api: 'Yes'
+has_bulk: 'No'
+id: geomixer
+name: GeoMixer
+website: https://www.kosmosnimki.ru
+description: GeoMixer (Kosmosnimki) is a web GIS platform developed by ScanEx. It
+  powers map-centric geoportals with a layer tree, vector and raster data publishing,
+  satellite imagery catalogs, and a JavaScript/REST API (geomixer.js) used both for
+  ScanEx-operated services (kosmosnimki.ru, fires.ru, search.kosmosnimki.ru) and for
+  third-party thematic maps that embed the Kosmosnimki maps API.
+owner:
+  name: ScanEx
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+logo_url: https://www.kosmosnimki.ru/static/img/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+documentation_url: https://www.kosmosnimki.ru
+capabilities:
+- WMS service
+- Custom REST API
+last_updated: '2026-09-17T00:00:00Z'

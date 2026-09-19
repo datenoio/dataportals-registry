@@ -1,0 +1,70 @@
+category: Geoportal
+subtype: geospatial_service_middleware
+datatypes:
+  datasets: Compatible
+  fields: 'Yes'
+  organizations: Compatible
+  resources: 'Yes'
+  topics: Compatible
+has_api: 'Yes'
+has_bulk: 'No'
+id: istsos
+name: istSOS
+website: https://istsos.org
+description: istSOS is an OGC Sensor Observation Service (SOS) server for managing
+  and publishing sensor and observation data (hydrology, meteorology, environmental
+  monitoring). It implements SOS 1.0.0/2.0, offers a REST administration and data
+  API, a web admin interface and viewer, and supports procedures, offerings,
+  observed properties and time-series observations as interoperable sensor web
+  services.
+owner:
+  name: SUPSI - Istituto scienze della Terra
+  location:
+    country:
+      id: CH
+      name: Switzerland
+logo_url: https://istsos.org/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Uncertain
+  supports_licenses: 'No'
+storage_type: Structured
+type: Software
+repository_url: https://github.com/istSOS/istsos2
+documentation_url: https://istsos.org/istsos/index.html
+version: 2.4.2
+license:
+  type: GPL-2.0
+  url: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+export_formats:
+- XML
+- JSON
+- CSV
+capabilities:
+- OGC SOS 1.0.0 service
+- OGC SOS 2.0 service
+- REST API
+- Sensor web enablement
+- Time-series observations
+last_updated: '2026-09-17T00:00:00Z'

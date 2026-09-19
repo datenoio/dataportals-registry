@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,15 @@ coverage:
       name: Western Europe
 description: Geoportal. managed by Gemeente Apeldoorn. powered by Custom software.
   accessible at atlas.apeldoorn.nl.
+endpoints:
+- type: customapi
+  url: https://atlas.apeldoorn.nl/atlas/api/v1/metadatasets/
+- type: wms130
+  url: https://atlas.apeldoorn.nl/geoserver/public/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://atlas.apeldoorn.nl/geoserver/public/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
 id: atlasapeldoornnl
 langs:
 - id: NL
@@ -39,8 +48,8 @@ owner:
   name: Gemeente Apeldoorn
   type: Local government
 software:
-  id: custom
-  name: Custom software
+  id: atlas
+  name: Atlas
 status: active
 tags:
 - GIS

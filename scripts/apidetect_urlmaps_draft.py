@@ -2202,6 +2202,26 @@ TAILORMAP_URLMAP = [
     _html_probe("/nl/page/viewers", "tailormap:viewers"),
     _html_probe("/nl/page/startpagina", "tailormap:start"),
 ]
+ANDINO_URLMAP = [
+    _json_probe("/api/3", "ckan", "3"),
+    _json_probe("/api/3/action/package_search", "ckan:package-search", "3"),
+    _json_probe("/api/3/action/package_list", "ckan:package-list", "3"),
+    _json_probe("/data.json", "dcatus11"),
+]
+GRAFANA_URLMAP = [
+    _json_probe("/api/search", "customapi"),
+]
+TERRAVISU_URLMAP = [
+    _json_probe("/api/settings/frontend", "customapi"),
+    _json_probe("/api/geolayer/scene/", "customapi"),
+]
+GISQUICK_URLMAP = [
+    _json_probe("/api/app", "gisquick:app"),
+]
+WFCATALOG_URLMAP = [
+    _json_probe("/eidaws/wfcatalog/1/version", "api", "1"),
+    _xml_probe("/eidaws/wfcatalog/1/application.wadl", "api", "1"),
+]
 
 
 VUFIND_DATASET_SEARCH = (
@@ -2227,6 +2247,27 @@ FROSTSERVER_URLMAP = [
     _json_probe("/v1.1/Things?$top=1&$count=true", "sensorthings", version="1.1"),
     _json_probe(
         "/FROST-Server/v1.1/Things?$top=1&$count=true", "sensorthings", version="1.1"
+    ),
+]
+
+N52SOS_URLMAP = [
+    _xml_probe(
+        "/52n-sos-webapp/sos?service=SOS&request=GetCapabilities",
+        "sos200",
+        "2.0.0",
+        OGC_XML_MIMETYPES,
+    ),
+    _xml_probe(
+        "/52n-sos-webapp/service?service=SOS&request=GetCapabilities",
+        "sos200",
+        "2.0.0",
+        OGC_XML_MIMETYPES,
+    ),
+    _xml_probe(
+        "/sos?service=SOS&request=GetCapabilities",
+        "sos200",
+        "2.0.0",
+        OGC_XML_MIMETYPES,
     ),
 ]
 
@@ -2794,6 +2835,12 @@ HUBZERO_URLMAP = [
     _html_probe("/resources?sortby=date"),
 ]
 
+CLOWDER_URLMAP = [
+    # Anonymous instance status: version + spaces/collections/datasets/files counts.
+    # Note: Clowder answers 404 to HEAD – probes must use GET.
+    _json_probe("/api/status", "clowder:status"),
+]
+
 DGBASWEB_URLMAP = [
     _html_probe("/DgbasWeb/"),
 ]
@@ -2810,6 +2857,10 @@ IBISPH_URLMAP = [
 HAJK_URLMAP = [
     _json_probe("/appConfig.json", "api"),
     _json_probe("/publik/appConfig.json", "api"),
+]
+
+SHOGUN_URLMAP = [
+    _json_probe("/applications", "rest"),
 ]
 
 CLLD_URLMAP = [
@@ -2988,6 +3039,11 @@ DRAFT_CATALOGS_URLMAP = {
     "mapstore": MAPSTORE_URLMAP,
     "gausswebcity": MAPSTORE_URLMAP,
     "tailormap": TAILORMAP_URLMAP,
+    "andino": ANDINO_URLMAP,
+    "grafana": GRAFANA_URLMAP,
+    "terravisu": TERRAVISU_URLMAP,
+    "gisquick": GISQUICK_URLMAP,
+    "wfcatalog": WFCATALOG_URLMAP,
     "opensdg": OPENSDG_URLMAP,
     "terria": TERRIA_URLMAP,
     "seek": SEEK_URLMAP,
@@ -3031,6 +3087,7 @@ DRAFT_CATALOGS_URLMAP = {
     "ilostat": ILOSTAT_URLMAP,
     "datauniceforg": DATAUNICEFORG_URLMAP,
     "ramadda": RAMADDA_URLMAP,
+    "clowder": CLOWDER_URLMAP,
     "haplo": HAPLO_URLMAP,
     "tablion": TABLION_URLMAP,
     "mwmb": MWMB_URLMAP,
@@ -3054,6 +3111,7 @@ DRAFT_CATALOGS_URLMAP = {
     "symbiota": SYMBIOTA_URLMAP,
     "idra": IDRA_URLMAP,
     "frostserver": FROSTSERVER_URLMAP,
+    "52northsos": N52SOS_URLMAP,
     "gisopendataportal": GISOPENDATAPORTAL_URLMAP,
     "bexis2": BEXIS2_URLMAP,
     "hydroshare": HYDROSHARE_URLMAP,
@@ -3134,6 +3192,7 @@ DRAFT_CATALOGS_URLMAP = {
     "swing": SWING_URLMAP,
     "ibisph": IBISPH_URLMAP,
     "hajk": HAJK_URLMAP,
+    "shogun": SHOGUN_URLMAP,
     "clld": CLLD_URLMAP,
     "minerva": MINERVA_URLMAP,
     "tergis": TERGIS_URLMAP,
@@ -3164,6 +3223,7 @@ DRAFT_CATALOGS_URLMAP = {
 # Software reviewed for auto-fill: do not invent relative API paths.
 # Entries that now have a URLMAP were removed from this list.
 NO_STANDARD_PROBE = {
+    "activityinfo": "Single SaaS at www.activityinfo.org; reports API requires an API token, published report pages are per-report URLs, not a relative catalog API.",
     "aodn": "AODN portal search API path varies (/portal/search/api).",
     "axiomportal": "Axiom Data Science portals; instance-specific ERDDAP/API hosts.",
     "cadenza": "disy Cadenza; JSF workbook paths, no stable anonymous catalog API.",
@@ -3194,16 +3254,32 @@ NO_STANDARD_PROBE = {
     "ewmapa": "geoportal2.pl HTML viewers; WMS often 403 and path is instance-specific.",
     "fedora": "Fedora LDP/OAI is behind a public UI; leftover links are not Fedora roots.",
     "gcnavi": "GC Navi municipal viewers; no documented catalog API on the viewer URL.",
+    "geotrek": "Public catalogs are Geotrek-rando sites; Geotrek-admin API v2 (/api/v2/trek/) is often on a separate admin host. Do not copy a guessed admin URL onto every rando portal.",
     "geogeo": "GeDA-Public / geogeo.jp municipal viewers; no documented catalog API on the viewer URL.",
     "geocentriq": "Quebec MRC GIS SaaS at app.geocentriq.com/mrc/{mrc}; no documented relative catalog API on the viewer URL.",
     "geocentralis": "Quebec MRC GIS SaaS at portail.geocentralis.com/public/sig-web/; no documented relative catalog API on the viewer URL.",
     "geoloniagis": "Geolonia スマートマップ (Tottori GeoMap, Kagawa BRIDGES); Next.js viewer, no catalog harvest API.",
+    "nazca4u": "Nazca4U Rapportagemodule tenants; address/parcel lookup with PDF report delivery, no public list API on the tenant URL.",
+    "gecoopendata": "GeCO-sys OpenData cancer-registry indicator forms; no documented public list API.",
+    "climseries": "ClimSeries station dashboards; HTML station tables and CSV downloads, no documented relative list API.",
+    "gisnet": "GISNET V5 (Complot) municipal viewers at v5.gis-net.co.il/v5/{authority}; JS viewer, no documented relative catalog API.",
+    "mapexpert": "Taldor MapExpert municipal viewers at gis{NN}.taldor.co.il/{City}Gis; WAF-gated JS viewer, no documented relative catalog API.",
+    "swims": "SWIMS water-source dashboards; HTML inventory tables and map layers, no documented relative list API.",
+    "govpilot": "GovPilot GIS Map tenants at map.govpilot.com/map/{state}/{city}; Kendo ASP.NET viewer, no documented relative catalog API.",
+    "mapsifter": "TerraScan MapSifter county parcel viewers; ASP.NET search behind Disclaimer.aspx, no documented relative catalog API.",
+    "civiltmv": "Civil Solutions Tax Map Viewer tenants at tmv.civilsolutions.biz/viewer/{id}; Mazer viewer, no documented relative catalog API.",
+    "atlas": "Atlas (Purmerend Common Ground geoportal) tenants; Vue SPA over WMS/WFS/MVT layers, no documented relative catalog API on the tenant URL.",
+    "ideba": "IDEBA Visualizador tenants at visualizador.ideba.gba.gob.ar/{municipio}; Leaflet viewer, GeoServer WFS/WMS live on a separate node host, no relative catalog API on the tenant URL.",
+    "intertownup": "Intertown UP tenants at up.intertown.co.il/{code}/public; React SPA, no documented relative catalog API.",
+    "mappi": "Mappi (Swis) tenants at kaart.{city}.nl; map GeoJSON at /api/maps/{id}.json but no documented map-index list API.",
+    "joomla": "Joomla CMS sites; no standard catalog API.",
     "genesisonline": "GENESIS-Online web services are POST-only (Destatis as of mid-2025).",
     "hdc": "Thai HDC public pages are tenant HTML dashboards; no shared relative catalog API on /public/.",
     "brainlife": "Single SaaS hub; harvest is the /datasets UI, not a relative catalog API on other hosts.",
     "cedar": "CEDAR Workbench is a single hub; no relative anonymous catalog dump on the workbench URL.",
     "opencontext": "Open Context is a single hub; harvest is the published project catalog, not a relative list API.",
     "geonomics": "Kazakh municipal GIS; no shared REST path.",
+    "geomixer": "ScanEx GeoMixer/Kosmosnimki; layer-tree API is per-map (needs mapID from config.js), no portable relative catalog dump on the portal URL.",
     "geomediawebmap": "Hexagon GeoMedia WebMap; no standard relative catalog API.",
     "geoportalrlp": "Custom geoportal CMS; sitemap only in records.",
     "gisoftgis": "GISoft GIS viewers; no documented public REST on portal URL.",
@@ -3217,6 +3293,7 @@ NO_STANDARD_PROBE = {
     "masterportal": "Masterportal config/service JSON names are instance-specific.",
     "modaopendata": "Taiwan MODA OpenAPI swagger path is not present on all city portals.",
     "netgisserver": "NetCAD KEOS/NetGIS; no documented public REST on /keos URLs.",
+    "netigma": "Netcad Netigma BELNET portals; content behind Netcad/e-Devlet login, no documented anonymous catalog API on /BELNET URLs.",
     "nolis": "NOL-IS municipal viewers; no documented catalog API on the viewer URL.",
     "ogdindia": "OGD Platform India dataset APIs require a registered API key.",
     "opengeoportal": "Legacy OGP; OAI and Solr paths vary.",
@@ -3288,6 +3365,11 @@ NO_STANDARD_PROBE = {
     "statplanet": "StatPlanet data.csv / settings.csv paths are instance-specific.",
     "datainsight": "Public insight dataset lists are rare; most tenants are login-only BI.",
     "bicontour": "Contour BI report catalog paths are instance-specific.",
+    "gsimaps": "GSI Maps (地理院地図) viewer; layer list lives in layers.txt, no standard catalog API.",
+    "openhinata": "open-hinata / ひなたGIS viewer; layers are hardcoded in js/layers.js, no catalog API.",
+    "maplat": "Maplat historical-map viewer; per-tenant map list is app config JSON, no standard catalog API.",
+    "stroly": "Stroly hosted old-map platform; viewer SPA, no public relative catalog API.",
+    "ecommap": "eコミマップ participatory WebGIS; user-published maps UI, no standard catalog API.",
 }
 
 # Map UIs reviewed for auto-fill: no shared relative catalog API on the viewer URL.
@@ -3295,19 +3377,23 @@ NO_STANDARD_PROBE.update(
     {
         sid: "Map UI; no shared catalog API on the viewer URL (harvest-viewers.md)."
         for sid in (
+            "1map",
             "3map",
             "addspatial",
             "alandis",
             "alta",
             "arcgisdashboards",
             "argenmap",
+            "atlasmapper",
             "avanmap",
             "belsisims",
             "berryict",
             "braingeocms",
             "bulplan",
+            "caigos",
             "cartovista",
             "cgwebgis",
+            "citymaker",
             "communityview",
             "ctmgeo",
             "datumgis",
@@ -3316,11 +3402,14 @@ NO_STANDARD_PROBE.update(
             "dmcity",
             "doblesvisor",
             "dpwebmap",
+            "drzwebgis",
             "ekmap",
+            "elvis",
             "emapa",
             "enmapa",
             "envimap",
             "evald",
+            "evglobe",
             "experiencebuilder",
             "exponare",
             "factawebgis",
@@ -3330,14 +3419,20 @@ NO_STANDARD_PROBE.update(
             "genegis",
             "geoambiental",
             "geoapps",
+            "geocore",
+            "geodados",
             "geodeticca",
             "geoitgis",
             "geometa",
+            "geomoose",
             "geonube",
             "geopixel",
             "geoportalch",
+            "geoportalecloud",
             "georeal",
+            "geoview",
             "geoviewer",
+            "geovis",
             "gepro",
             "gharyshgeoportal",
             "gis4smart",
@@ -3348,8 +3443,12 @@ NO_STANDARD_PROBE.update(
             "gismaster",
             "gisonline",
             "gisplan",
+            "gomap",
             "gpatlas",
+            "hslayersng",
             "igo2",
+            "imaptoo",
+            "indorgeo",
             "infogis",
             "infomap",
             "ingeo",
@@ -3363,36 +3462,48 @@ NO_STANDARD_PROBE.update(
             "kaartviewer",
             "kazgisaopenlayers",
             "kcwebgis",
+            "kommunekart",
             "kortinfo",
             "landfolio",
+            "layman",
             "ldpgis",
             "localmaps",
             "loftmyndir",
             "louhi",
             "map2web",
             "mapguide",
+            "mapmap",
+            "mapmint",
             "mapotip",
             "mapplus",
+            "mapsolution",
             "marushka",
+            "miramon",
             "mobec",
+            "monterritoirecarto",
             "mrf",
             "msgis",
             "munisight",
             "mxsig",
             "mycarta",
             "myeongji",
+            "nafi",
             "nazca",
             "netgisruntime",
             "nieuwlandonemap",
             "orbismap",
             "ovie",
+            "pieengine",
             "pmapper",
             "pozi",
             "publicmaps",
+            "qgiscloud",
             "rgis",
+            "rumap",
             "sampaswebgis",
             "scalargis",
             "seasketch",
+            "septimasearch",
             "sigale",
             "sigimweb",
             "sitmun",
@@ -3406,17 +3517,22 @@ NO_STANDARD_PROBE.update(
             "earthlight",
             "nexuspublicportal",
             "zeljkogis",
+            "terraweb",
             "terratwin",
             "tobel",
             "touviamaps",
             "trimblelocus",
+            "umap",
+            "urbismap",
             "vbgis",
             "vcmap",
+            "vmap2",
             "visorurbano",
             "weave",
             "webappbuilder",
             "webewid",
             "xymaps",
+            "zulugisonline",
         )
     }
 )
@@ -3447,5 +3563,70 @@ NO_STANDARD_PROBE.update(
         "estat": "e-Stat API on api.e-stat.go.jp needs an app ID; dashboard vs LOD hosts differ.",
         "comtradeplus": "Comtrade API is on comtradeapi.un.org and needs a subscription key.",
         "ourworldindata": "No relative list API on the catalog link; harvest sitemap/chart topics.",
+    }
+)
+
+# Chinese vendor indicator platforms: single-tenant SaaS, HTML indicator
+# catalogs, no documented anonymous relative list API. Harvest is the public
+# indicator UI; series values are mostly subscription-gated.
+NO_STANDARD_PROBE.update(
+    {
+        "epsdata": "EPS 数据平台; HTML database catalog, series values behind institutional subscription, no relative list API.",
+        "cnkidata": "CNKI data platform; anti-bot 418 on anonymous GET, no relative list API; harvest public catalog HTML.",
+        "ceinet": "CEInet db.cei.cn / ceidata.cei.cn; HTML indicator navigation, no relative list API.",
+        "drcnet": "DRCNet data.drcnet.com.cn; CN geo-fenced, HTML catalog, no relative list API.",
+        "soshoo": "搜数网; HTTP-only Struts .do pages, no relative list API.",
+        "macrochina": "中宏数据库; JS-redirect landing, HTML catalog, no relative list API.",
+        "pishu": "皮书数据库; HTML yearbook catalog with SiteID params, no relative list API.",
+        "wind": "Wind EDB is terminal-only; vendor site documents series, no web catalog API.",
+        "ceic": "Public /en/indicator/ HTML pages; full series via paid API with key, not a relative list API.",
+        "csmar": "CSMAR data.gtadata.com geo-fenced; HTML module catalog, no relative list API.",
+        "resset": "RESSET; HTML database product list, no relative list API.",
+        "eastmoneydata": "东方财富数据中心; free HTML indicator tables, no relative list API.",
+        "choice": "Choice 终端; subscription terminal, no relative list API on the portal URL.",
+        "thsdata": "同花顺数据中心; free HTML indicator tables, no relative list API.",
+        "ifind": "同花顺 iFinD; subscription terminal, product pages only on www.51ifind.com.",
+        "gildata": "恒生聚源; HTML product list (GBK), no relative list API.",
+        "gogoal": "朝阳永续; HTML product pages, no relative list API.",
+        "cnrds": "CNRDS; HTML module catalog, no relative list API.",
+        "datayes": "萝卜投研; JS portal, no relative list API.",
+        "qianzhan": "前瞻数据库; free HTML indicator tables, no relative list API.",
+        "askci": "中商情报网; free HTML industry statistics, no relative list API.",
+        "huaon": "华经情报网; free HTML industry statistics, no relative list API.",
+        "chyxx": "智研咨询; free HTML industry statistics, no relative list API.",
+        "chinabgao": "中国报告大厅; HTML report catalog, no relative list API.",
+        "bosidata": "博思数据; HTML market data pages (GBK), no relative list API.",
+        "leadleo": "头豹; JS-rendered dashboards, no relative list API.",
+        "iimedia": "艾媒数据中心; HTML indicator catalog, series subscription-gated, no relative list API.",
+        "analysys": "易观分析; HTML indicator articles, no relative list API.",
+        "iresearch": "艾瑞咨询; HTML indicator reports, no relative list API.",
+        "questmobile": "QuestMobile TRUTH; metrics catalog HTML, values subscription-gated, no relative list API.",
+        "baiduindex": "百度指数; login-walled query tool, no catalog API.",
+        "oceaninsight": "巨量算数; JS trend tools, no relative list API.",
+        "gsdata": "清博智能; HTML ranking lists, no relative list API.",
+        "newrank": "新榜; HTML ranking lists, no relative list API.",
+        "qimai": "七麦数据; HTML app rankings, no relative list API.",
+        "diandian": "点点数据; HTML app rankings, no relative list API.",
+        "chanmama": "蝉妈妈; HTML metric pages, no relative list API.",
+        "feigua": "飞瓜数据; HTML metric pages, no relative list API.",
+        "sunsirs": "生意社 100ppi; free HTML commodity price indices, no relative list API.",
+        "mysteel": "我的钢铁网; HTML price pages (GBK), series subscription-gated, no relative list API.",
+        "sci99": "卓创资讯; HTML price pages, series subscription-gated, no relative list API.",
+        "oilchem": "隆众资讯; HTML price pages (GBK), series subscription-gated, no relative list API.",
+        "jinlianchuang": "金联创 315i; JS landing, HTML price pages, no relative list API.",
+        "baiinfo": "百川盈孚; HTML price pages, series subscription-gated, no relative list API.",
+        "sxcoal": "中国煤炭资源网; HTML coal price pages, series subscription-gated, no relative list API.",
+        "chinadataonline": "UMich China Data Online; HTML product pages, no relative list API.",
+    }
+)
+
+# Japanese web-GIS viewers: layer-overlay UIs, no relative catalog API.
+NO_STANDARD_PROBE.update(
+    {
+        "ecommap": "eコミマップ participatory WebGIS; WMS/XYZ overlay viewer, no catalog API on the portal URL.",
+        "gsimaps": "GSI Maps 地理院地図; Leaflet viewer with layers.txt definitions, no relative catalog API.",
+        "maplat": "Maplat historical-map viewer; per-map rubber-sheeting UI, no relative catalog API.",
+        "openhinata": "open-hinata / ひなたGIS; OpenLayers+Vue viewer configured via js/layers.js, no relative catalog API.",
+        "stroly": "Stroly hosted historical-map viewer; per-map overlay UI, no relative catalog API.",
     }
 )

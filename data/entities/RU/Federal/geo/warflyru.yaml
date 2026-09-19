@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: RU
+      name: Russian Federation
+    level: 20
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+description: Volunteer-run catalog and map of World War II aerial photography (1939-1945,
+  mostly German reconnaissance flights; originals held by the US National Archives,
+  NARA). Georeferenced photo frames are published on an interactive map that uses
+  the Kosmosnimki (GeoMixer) maps API, with a catalog section listing the available
+  imagery by city.
+id: warflyru
+langs:
+- id: RU
+  name: Russian
+link: http://warfly.ru
+name: WarFly - WWII Aerial Photography Map and Catalog
+owner:
+  link: http://warfly.ru
+  location:
+    country: *id001
+    level: 20
+  name: WarFly project
+  type: Civil society
+properties:
+  is_national: false
+software:
+  id: geomixer
+  name: GeoMixer
+status: active
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+tags:
+- geospatial
+- historical-imagery
+uid: cdi00007233

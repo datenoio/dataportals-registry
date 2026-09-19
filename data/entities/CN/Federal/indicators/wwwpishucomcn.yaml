@@ -1,0 +1,56 @@
+id: wwwpishucomcn
+name: Pishu Database
+link: https://www.pishu.com.cn
+catalog_type: Indicators catalog
+access_mode:
+- restricted
+status: active
+software:
+  id: pishu
+  name: Pishu Database
+owner:
+  name: Social Sciences Academic Press
+  type: Central government
+  location:
+    country: &id001
+      id: CN
+      name: China
+    level: 20
+  link: https://www.pishu.com.cn
+coverage:
+- location:
+    country: *id001
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: 皮书数据库 is the Social Sciences Academic Press platform publishing Chinese
+  'blue book' statistical yearbooks and research data.
+langs:
+- id: ZH
+  name: Chinese
+tags:
+- statistics
+- yearbooks
+- social sciences
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+content_types:
+- dataset
+api: false
+api_status: uncertain
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+uid: cdi00007534

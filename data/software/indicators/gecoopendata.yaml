@@ -1,0 +1,58 @@
+category: Indicators catalog
+subtype: indicators_data_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: Uncertain
+has_bulk: 'No'
+id: gecoopendata
+name: GeCO-sys OpenData
+website: https://gecoopendata.registrotumoriveneto.it/
+description: GeCO-sys OpenData is a web application used by Italian cancer
+  registries to publish epidemiological indicators computed from AIRTUM record-layout
+  archives. Public tenants live on gecoopendata.{registry-host} with /incidenza.php,
+  /sopravvivenza.php, and related statistic pages on an AdminBSB-based UI with GeCOsys
+  branding, covering incidence, mortality, survival, prevalence, and data-quality
+  indicators by tumour site, age, sex, and territory. Documented as a reusable
+  application by the Registro Tumori Veneto; tenants include the Veneto, Umbria, and
+  ASL Napoli 3 Sud registries. Distinct from GeCo, the Lombardy regional-council
+  management application.
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Structured
+type: Software
+documentation_url: https://www.registrotumoriveneto.it/english/publications/meetings/posters/2018-posters/territorial-extension-of-the-veneto-tumour-registry-and-data-usability-in-the-new-web-portal/
+export_formats:
+- CSV
+- HTML
+capabilities:
+- Indicator reports
+- Custom queries
+- Topic categorization
+last_updated: '2026-09-16T00:00:00Z'

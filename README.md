@@ -2,7 +2,7 @@
 
 A global registry of data portals, catalogs, data repositories, and related data infrastructure.
 
-**Working tree (16 September 2026):** **38,343** verified catalogs · **523** software platforms · **224** countries and territories · **0** scheduled YAML records.
+**Working tree (19 September 2026):** **39,113** verified catalogs · **636** software platforms · **224** countries and territories · **2** scheduled YAML records.
 
 Last published snapshot: [v1.21.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.21.0), 12 September 2026 (**37,170** catalogs · **486** software · **0** scheduled).
 
@@ -45,14 +45,14 @@ More patterns: [docs/query-examples.md](docs/query-examples.md). Join keys and c
 
 ### Data exports
 
-Last published snapshot (**v1.21.0**, 2026-09-12: 37,170 catalogs, 486 software, 0 scheduled). Working-tree exports below match source YAML. Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
+Last published snapshot (**v1.21.0**, 2026-09-12: 37,170 catalogs, 486 software, 0 scheduled). Rebuild exports after YAML edits so `data/datasets/` matches source; record-count contract: [docs/exports.md](docs/exports.md#record-counts).
 
 | File | Contents |
 |------|----------|
-| `data/datasets/catalogs.jsonl.zst` | **38,343** verified catalog records |
-| `data/datasets/software.jsonl` (+ `.zst`) | **523** software / platform definitions |
-| `data/datasets/scheduled.jsonl` (+ `.zst`) | **0** scheduled sources (**0** YAML files) |
-| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**38,343**) |
+| `data/datasets/catalogs.jsonl.zst` | **39,113** verified catalog records |
+| `data/datasets/software.jsonl` (+ `.zst`) | **636** software / platform definitions |
+| `data/datasets/scheduled.jsonl` (+ `.zst`) | **2** scheduled sources (**2** YAML files) |
+| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**39,115**) |
 | `data/datasets/full.parquet`, `data/datasets/datasets.duckdb` | Analytics-friendly copies of `full.jsonl` |
 
 Rebuild from YAML (never hand-edit `data/datasets/`):
@@ -204,6 +204,7 @@ Prefer `--scheduled` for unverified finds; promote later ([docs/scheduled.md](do
 |----------|--------|------|
 | Re3Data metadata into `_re3data` | `python scripts/re3data_enrichment.py enrich --dry-run` | [docs/re3data.md](docs/re3data.md) |
 | CKAN sites from [ecosystem.ckan.org](https://ecosystem.ckan.org/dataset/ckan-sites-metadata) | `python scripts/sync_ckan_ecosystem.py --dry-run` | [docs/ckan-sync.md](docs/ckan-sync.md) |
+| Discovery hunt search / dedupe / probe / log | `python scripts/hunt.py search fofa '…' --out candidates.jsonl` | [docs/discovery-search-tools.md](docs/discovery-search-tools.md#scripted-searches-with-huntpy) |
 | OpenAIRE Graph data sources | `python scripts/extract_openaire_portals.py list-sources --output /tmp/openaire_sources.json` | [docs/openaire-sync.md](docs/openaire-sync.md) |
 
 ## Citation

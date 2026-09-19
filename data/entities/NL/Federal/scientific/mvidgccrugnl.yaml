@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -18,6 +18,9 @@ description: The International Microvillus Inclusion Disease Patient Registry co
   anonymised data on both published and unpublished MVID patients, as well as their
   associated MYO5B, STX3 and STXBP2 mutations and genotypes, and clinical and molecular
   phenotypes.
+endpoints:
+- type: molgenis:catalog
+  url: https://mvid.gcc.rug.nl/
 id: mvidgccrugnl
 identifiers:
 - id: openaire
@@ -37,8 +40,8 @@ owner:
   name: University of Groningen
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: molgenis
+  name: MOLGENIS
 status: active
 tags:
 - scientific

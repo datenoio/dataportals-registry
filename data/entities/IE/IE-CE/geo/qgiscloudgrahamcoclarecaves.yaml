@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: IE-CE
+      name: Clare
+description: Public QGIS Cloud map of the caves of County Clare from the Irish Caves Database (irishcaves.ubss.org.uk).
+endpoints:
+- type: wms130
+  url: https://www.qgiscloud.com/Graham/Co_Clare_Caves/wms?SERVICE=WMS&REQUEST=GetCapabilities
+id: qgiscloudgrahamcoclarecaves
+langs:
+- id: EN
+  name: English
+link: https://www.qgiscloud.com/Graham/Co_Clare_Caves
+name: County Clare Caves (Irish Caves Database)
+owner:
+  link: https://irishcaves.ubss.org.uk
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 30
+    subregion:
+      id: IE-CE
+      name: Clare
+  name: University of Bristol Spelæological Society
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: qgiscloud
+  name: QGIS Cloud
+status: active
+tags:
+- geospatial
+- geoportal
+- qgis-cloud
+- caves
+- Clare
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007209

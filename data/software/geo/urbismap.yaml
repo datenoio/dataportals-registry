@@ -1,0 +1,63 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: urbismap
+name: UrbisMap
+website: https://www.urbismap.com/
+description: UrbisMap is UrbisMap S.r.l.s. hosted national Web GIS for Italian
+  urban-planning, cadastre, constraint, and regulatory layers. The public
+  geoportal is a single hub at www.urbismap.com (Vue app, /v2, and
+  /territorio/{slug} city pages). Affiliated comuni publish on that hub rather
+  than separate tenant hosts. Distinct from GeoPortale.cloud (geoportalecloud),
+  GisMaster (gismaster), GeneGIS PAGIS (genegis), LDP SIT (ldpgis), and
+  p.mapper (pmapper). Skip the marketing site urbismap.it, CRM, tiles/tiler,
+  status, analytics, 401 beta hosts, dead archivio.* / catasto subdomains, and
+  FOIA Accesso agli Atti.
+owner:
+  name: UrbisMap S.r.l.s.
+  location:
+    country:
+      id: IT
+      name: Italy
+logo_url: https://www.urbismap.com/favicon.png
+documentation_url: https://www.urbismap.it/urbismap-per-la-pubblica-amministrazione-webgis/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+export_formats:
+- JSON
+capabilities:
+- Map viewer
+- Municipal GIS
+last_updated: '2026-09-18T12:00:00Z'

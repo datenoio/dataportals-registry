@@ -73,6 +73,19 @@ Fraunhofer IOSB open-source OGC SensorThings API server. Product: [FROST-Server]
 | Censys | `web.endpoints.http.body: "FROST-Server"` |
 | FOFA | `body="FROST-Server"` |
 
+## 52°North SOS (`52northsos`) {#52northsos}
+
+52°North open-source OGC Sensor Observation Service (SOS 1.0/2.0). Product: [52°North SOS](https://52north.org/software/software-components/sos/); source: [github.com/52North/SOS](https://github.com/52North/SOS). Register one public SOS catalog per independently operated instance. Typical `catalog_type` is Scientific data repository (observation offerings are a sensor data catalog, not a map viewer — same rule as FROST-Server). Distinct from FROST-Server (SensorThings JSON) and from an SOS endpoint that is only a download option on another catalog.
+
+**Confirm:** XML Capabilities at `/52n-sos-webapp/sos?service=SOS&request=GetCapabilities` (or a custom mount) listing `sos:Contents` offerings, or the default webapp page titled `52°North Sensor Observation Service` (HTML-escaped as `52&deg;North`). Page bodies commonly link `/52n-sos-webapp/`. Skip `*.52north.org` vendor demos, bare-IP test boxes, and login-walled instances.
+
+| Tool | Query |
+|------|-------|
+| Google | `"52n-sos-webapp" -site:github.com -site:52north.org` |
+| Google | `intitle:"52°North Sensor Observation Service"` |
+| Censys | `web.endpoints.http.body: "52n-sos-webapp"` |
+| FOFA | `body="52n-sos-webapp"` or `body="52&deg;North Sensor Observation Service"` |
+
 ## OPeNDAP (`opendap`) {#opendap}
 
 Remote subsetting protocol and server ecosystem. Site: [opendap.org](https://www.opendap.org). Use `opendap` for a public OPeNDAP catalog whose server implementation is not identified as Hyrax, Pydap, THREDDS, or ERDDAP. Do not register OPeNDAP only as a download option on a THREDDS (`thredds`) or ERDDAP (`erddap`) catalog.
@@ -1141,6 +1154,23 @@ NiPreps archive of FAIR neuroimaging templates and atlases. Hub: [templateflow.o
 | Google | `"TemplateFlow" (NiPreps OR atlas OR template) neuroimaging` |
 | Censys | `web.names: "templateflow.org"` |
 | FOFA | `host="www.templateflow.org"` |
+
+## EIDA WFCatalog (`wfcatalog`) {#wfcatalog}
+
+ORFEUS/EIDA waveform-metadata web service deployed at every European Integrated Data Archive node (ETH Zürich, BGR, LMU, ICGC, NOA, INGV, Bergen/NORSAR, NIEP, KOERI, and others). Service description: [orfeus-eu.org/data/eida/webservices/wfcatalog](https://orfeus-eu.org/data/eida/webservices/wfcatalog/); specification: [WFCatalog_Specification](https://www.orfeus-eu.org/documents/WFCatalog_Specification-v0.22.pdf). Use `software.id: wfcatalog` for EIDA node records.
+
+**Signals:** routes `/eidaws/wfcatalog/1/` (or `/ws/wfcatalog/1/`) with `query`, `version`, and `application.wadl` methods; JSON waveform-metadata responses; companion FDSN services `/fdsnws/station/1/`, `/fdsnws/dataselect/1/`, `/fdsnws/availability/1/` on the same host. FDSN routes alone are a protocol family with several implementations — confirm the WFCatalog route before assigning the ID.
+
+**Confirm:** GET `/eidaws/wfcatalog/1/version` or `/eidaws/wfcatalog/1/application.wadl`. One catalog per EIDA node (the node's service root), not per seismic network it serves.
+
+**Skip:** the ORFEUS central routing service, EIDA portal pages, and FDSN event services as extra catalogs.
+
+| Tool | Query |
+|------|-------|
+| Google | `"eidaws/wfcatalog" OR "WFCatalog" EIDA node` |
+| Google | `inurl:/fdsnws/station/ "EIDA"` |
+| Censys | `web.endpoints.http.body: "wfcatalog" and web.endpoints.http.body: "fdsnws"` |
+| FOFA | `body="/eidaws/wfcatalog/1/"` |
 
 ## Related
 

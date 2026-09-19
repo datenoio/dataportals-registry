@@ -1,0 +1,59 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: nafi
+name: North Australian Fire Information
+website: https://firenorth.org.au
+description: North Australian Fire Information (NAFI) is a hosted fire-mapping
+  service for northern Australia operated by Charles Darwin University with
+  land-manager partners. The OpenLayers web viewer at firenorth.org.au/nafi3/
+  publishes current fire locations, fire scars, and fire-history layers backed
+  by GeoServer with public WMS feeds. Single hosted instance; do not confuse
+  with generic fire-map pages.
+owner:
+  name: Charles Darwin University
+  location:
+    country:
+      id: AU
+      name: Australia
+documentation_url: https://firenorth.org.au
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'No'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- WMS
+capabilities:
+- Fire-scar and fire-history map viewer
+- Current fire location tracking
+last_updated: '2026-09-18T00:00:00Z'

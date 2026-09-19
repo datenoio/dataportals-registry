@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-SK
+      name: Saskatchewan
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Public Grafana dashboards tracking daily electricity generation, capacity
+  and fuel mix for Saskatchewan and other Canadian provinces, built from SaskPower's
+  public data.
+id: wwwskelectricityinfo
+langs:
+- id: EN
+  name: English
+link: https://www.skelectricity.info
+name: SKElectricity - Saskatchewan Electricity Statistics
+owner:
+  link: https://skelectricity.info
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-SK
+      name: Saskatchewan
+  name: SKElectricity
+  type: Civil society
+software:
+  id: grafana
+  name: Grafana
+status: active
+tags:
+- Grafana
+- canada
+- indicators
+- statistics
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
+uid: cdi00007288
+endpoints:
+- type: customapi
+  url: https://www.skelectricity.info/api/search

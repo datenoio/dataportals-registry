@@ -1,0 +1,52 @@
+id: wwwsoshoocom
+name: Soshoo Statistical Database
+link: http://www.soshoo.com
+catalog_type: Indicators catalog
+access_mode:
+- restricted
+status: active
+software:
+  id: soshoo
+  name: Soshoo
+owner:
+  name: China InfoBank
+  type: Business
+  location:
+    country: &id001
+      id: CN
+      name: China
+    level: 20
+  link: http://www.soshoo.com
+coverage:
+- location:
+    country: *id001
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: 搜数网 is China InfoBank's commercial statistical database aggregating Chinese
+  official statistics into searchable indicator tables.
+langs:
+- id: ZH
+  name: Chinese
+tags:
+- statistics
+- economics
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+content_types:
+- dataset
+api: false
+api_status: uncertain
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+uid: cdi00007538

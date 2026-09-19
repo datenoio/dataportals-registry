@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-VC
+      name: Valenciana, Comunidad
+description: Public QGIS Cloud map of Permian Basin methane emissions from the HiResCH4 project (Universitat
+  Politècnica de València), embedded on hiresch4.upv.es.
+endpoints:
+- type: wms130
+  url: https://www.qgiscloud.com/Itziar_Irakulis/PERMIAN_CH4_MAP_LARS/wms?SERVICE=WMS&REQUEST=GetCapabilities
+id: qgisclouditziarirakulispermianch4maplars
+langs:
+- id: ES
+  name: Spanish
+link: https://www.qgiscloud.com/Itziar_Irakulis/PERMIAN_CH4_MAP_LARS
+name: Permian Basin CH4 Map (HiResCH4)
+owner:
+  link: https://hiresch4.upv.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-VC
+      name: Valenciana, Comunidad
+  name: Universitat Politècnica de València
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: qgiscloud
+  name: QGIS Cloud
+status: active
+tags:
+- geospatial
+- geoportal
+- qgis-cloud
+- methane
+- remote sensing
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007205

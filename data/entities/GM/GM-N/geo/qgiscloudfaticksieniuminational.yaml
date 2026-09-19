@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GM
+      name: Gambia
+    level: 30
+    macroregion:
+      id: '011'
+      name: Western Africa
+    subregion:
+      id: GM-N
+      name: North Bank
+description: Public QGIS Cloud map of Niumi National Park (North Bank, Gambia), published within the Fatick/Sine-Saloum
+  cooperation and embedded on ardfatick.org.
+endpoints:
+- type: wms130
+  url: https://www.qgiscloud.com/faticksie/NIUMI_NATIONAL/wms?SERVICE=WMS&REQUEST=GetCapabilities
+id: qgiscloudfaticksieniuminational
+langs:
+- id: EN
+  name: English
+link: https://www.qgiscloud.com/faticksie/NIUMI_NATIONAL
+name: Niumi National Park Map
+owner:
+  link: https://ardfatick.org
+  location:
+    country:
+      id: GM
+      name: Gambia
+    level: 30
+    subregion:
+      id: GM-N
+      name: North Bank
+  name: Agence Régionale de Développement de Fatick
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: qgiscloud
+  name: QGIS Cloud
+status: active
+tags:
+- geospatial
+- geoportal
+- qgis-cloud
+- Niumi
+- Gambia
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007206

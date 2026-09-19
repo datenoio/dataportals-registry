@@ -1,0 +1,61 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: 'No'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'No'
+has_bulk: 'No'
+id: gsimaps
+website: https://maps.gsi.go.jp/
+name: GSI Maps (地理院地図)
+description: GSI Maps (地理院地図) is the open-source Leaflet-based WebGIS behind
+  Japan's national geoportal run by the Geospatial Information Authority of Japan
+  (GSI). Source is published as gsi-cyberjapan/gsimaps (BSD-2-Clause) with
+  layers.txt layer definitions, vector-tile and 3D support; third-party sites
+  redeploy the same source with their own layers (e.g. 全国Q地図).
+owner:
+  name: Geospatial Information Authority of Japan (GSI)
+  location:
+    country:
+      id: JP
+      name: Japan
+logo_url: https://maps.gsi.go.jp/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'No'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Global
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+repository_url: https://github.com/gsi-cyberjapan/gsimaps
+documentation_url: https://maps.gsi.go.jp/help/
+changelog_url: https://github.com/gsi-cyberjapan/gsimaps/releases
+export_formats:
+- GeoJSON
+- KML
+capabilities:
+- Map viewer
+last_updated: '2026-09-18T00:00:00Z'

@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HR
+      name: Croatia
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: HR-20
+      name: Međimurska županija
+description: Public QGIS Cloud energy review map (Energetski pregled 2021) of the Općina Podturen (Međimurje),
+  embedded on opcina-podturen.hr.
+endpoints:
+- type: wms130
+  url: https://www.qgiscloud.com/tesladk/Energetski_pregled_Op_ina_Podtren_2021/wms?SERVICE=WMS&REQUEST=GetCapabilities
+id: qgiscloudtesladkenergetskipregledopinapodtren2021
+langs:
+- id: HR
+  name: Croatian
+link: https://www.qgiscloud.com/tesladk/Energetski_pregled_Op_ina_Podtren_2021
+name: Podturen Municipality Energy Review 2021
+owner:
+  link: https://opcina-podturen.hr
+  location:
+    country:
+      id: HR
+      name: Croatia
+    level: 30
+    subregion:
+      id: HR-20
+      name: Međimurska županija
+  name: Općina Podturen
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: qgiscloud
+  name: QGIS Cloud
+status: active
+tags:
+- geospatial
+- geoportal
+- qgis-cloud
+- Međimurje
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007207

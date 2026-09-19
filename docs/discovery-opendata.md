@@ -28,6 +28,22 @@ Most common self-hosted open-data CMS. Gallery: [CKAN ecosystem](https://ecosyst
 
 **Paths:** `/dataset`, `/organization`, `/api/3`, `/data.json`, `/catalog.xml`. Some installs live under `/data` or `/opendata` — probe `https://host/data/api/3/action/status_show` as well.
 
+## Andino (`andino`) {#andino}
+
+Docker-packaged CKAN distribution from the Argentine Republic (datos.gob.ar): CKAN core plus `gobar_theme`, `series_explorer`, `gobar_ckan_harvester`, and `xlsx_harvester`. Powers Argentina's national portal and provincial/municipal/agency portals; the national modernization office also hosts municipal instances under `*.paisdigital.modernizacion.gob.ar` / `*.paisdigital.innovacion.gob.ar`. Repo: [datosgobar/portal-andino](https://github.com/datosgobar/portal-andino).
+
+**Confirm (GET):** `https://host/api/3/action/status_show` — extensions list contains `gobar_theme`. Homepage HTML includes "andino" or "gobar" (theme assets). Plain CKAN `status_show` without `gobar_theme` is `ckan`, not `andino`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"andino" inurl:/dataset site:.gob.ar OR site:.gov.ar` |
+| Google | `"gobar_theme" OR "portal-andino"` |
+| FOFA | `body="gobar_theme"` |
+| FOFA | `body="andino" && country="AR"` |
+| Censys (web) | `web.endpoints.http.body: "gobar_theme"` |
+
+**False positives:** the datosgobar GitHub/docs pages, blog posts about Andino. Register the portal root, not the repo.
+
 ## DKAN (`dkan`) {#dkan}
 
 Drupal-based portal with a CKAN-compatible Action API plus DKAN’s own `/api/1/` routes. Community: [getdkan.org/community](https://getdkan.org/community).
@@ -465,6 +481,13 @@ Use `wordpress` only for a **datasets** custom post type or CKAN-theme WP catalo
 | Google | `"open data" WordPress (CKAN OR dataset) -site:wordpress.org` |
 | Censys | `web.endpoints.http.body: "wp-content"` |
 | FOFA | `body="wp-content" && body="open data" && body="dataset"` |
+
+## Joomla (`joomla`) {#joomla}
+
+Use `joomla` for catalog or portal records whose site runs on the Joomla CMS, the same
+convention as `wordpress` and `liferay`. Signals: generator meta `Joomla! - Open Source
+Content Management`, `/media/`, and `/components/com_*` asset paths. Ordinary Joomla
+homepages without a data or map catalog function are out of scope.
 
 ## Piveau (`piveau`) {#piveau}
 

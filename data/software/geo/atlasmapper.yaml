@@ -1,0 +1,61 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: atlasmapper
+name: AtlasMapper
+website: https://eatlas.org.au
+repository_url: https://github.com/aims-ks/atlasmapper
+description: AtlasMapper is an open-source atlas mapping framework developed by
+  the Australian Institute of Marine Science (AIMS), originally published on
+  Google Code and now exported to GitHub. It powers the eAtlas family of
+  Australian research atlases (eAtlas at maps.eatlas.org.au, North West Atlas,
+  Ningaloo Atlas) with an Ext JS/GeoExt map client whose static assets carry an
+  atlasmapperVer version parameter. Deployments are typically paired with a
+  GeoNetwork catalogue and GeoServer/THREDDS backends.
+owner:
+  name: Australian Institute of Marine Science
+  location:
+    country:
+      id: AU
+      name: Australia
+documentation_url: https://github.com/aims-ks/atlasmapper
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Open
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- JSON
+capabilities:
+- Map viewer
+- Research atlas
+last_updated: '2026-09-18T00:00:00Z'

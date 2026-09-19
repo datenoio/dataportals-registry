@@ -1,0 +1,49 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: KZ
+      name: Kazakhstan
+    level: 20
+    macroregion:
+      id: '143'
+      name: Central Asia
+description: Interactive map of hunting grounds of the Republic of Kazakhstan, including
+  hunting farm boundaries, reserves and wildlife sanctuaries. Published by the huntmap.ru
+  project on the Kosmosnimki (GeoMixer) maps API.
+id: huntmapkz
+langs:
+- id: RU
+  name: Russian
+link: https://huntmap.kz
+name: HuntMap - Hunting Grounds Map of Kazakhstan
+owner:
+  link: https://huntmap.kz
+  location:
+    country: *id001
+    level: 20
+  name: Huntmap project
+  type: Civil society
+properties:
+  is_national: false
+software:
+  id: geomixer
+  name: GeoMixer
+status: active
+topics:
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+tags:
+- geospatial
+uid: cdi00007230

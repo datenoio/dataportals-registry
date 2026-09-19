@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: AR-K
+      name: Catamarca
+description: Portal de datos abiertos de la Municipalidad de la Ciudad de San Fernando
+  del Valle de Catamarca (Catamarca). Publica datos municipales en formatos abiertos.
+endpoints:
+- type: ckan:package-search
+  url: https://datos.catamarcaciudad.gob.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datos.catamarcaciudad.gob.ar/api/3/action/package_list
+  version: '3'
+id: datoscatamarcaciudadgobar
+langs:
+- id: ES
+  name: Spanish
+link: https://datos.catamarcaciudad.gob.ar
+name: Datos Abiertos Catamarca Capital
+owner:
+  link: https://catamarcaciudad.gob.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-K
+      name: Catamarca
+  name: Municipalidad de la Ciudad de San Fernando del Valle de Catamarca
+  type: Local government
+properties:
+  is_national: false
+software:
+  id: andino
+  name: Andino
+status: active
+tags:
+- open data
+- government
+- municipio
+- Catamarca
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00007265

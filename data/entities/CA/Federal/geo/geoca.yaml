@@ -15,18 +15,26 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: GEO.ca is the definitive source for Canada’s open geospatial information.
+description: GEO.ca is the definitive source for Canada’s open geospatial information,
+  aggregating federal, provincial, and territorial datasets from 40+ contributors.
+  The discovery app at app.geo.ca runs on the geoCore metadata-lake catalog
+  (geocore.api.geo.ca REST API) with the GeoView map viewer; geo.ca is the
+  WordPress landing site.
 endpoints:
-- type: sitemap
-  url: https://geo.ca/sitemap.xml
-- type: sitemap
-  url: https://geo.ca/sitemap_index.xml
+- type: customapi
+  url: https://geocore.api.geo.ca/geo
+  url_pattern: https://geocore.api.geo.ca/geo?north={north}&south={south}&east={east}&west={west}&lang=en&min={offset}&max={limit}
+- type: customapi
+  url: https://geocore.api.geo.ca/id
+  url_pattern: https://geocore.api.geo.ca/id?id={uuid}&lang=en
 id: geoca
 langs:
 - id: EN
   name: English
-link: https://geo.ca
-name: Canada Centre for Mapping and Earth Observation Geoportal
+- id: FR
+  name: French
+link: https://app.geo.ca/
+name: GEO.ca — Canadian Geospatial Platform Geoportal
 owner:
   link: https://www.nrcan-rncan.gc.ca
   location:
@@ -47,13 +55,14 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: geocore
+  name: geoCore
 status: active
 tags:
 - GIS
 - geospatial
 - government
+- geocore
 topics:
 - id: Location
   name: Location

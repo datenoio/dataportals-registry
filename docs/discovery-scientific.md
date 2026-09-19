@@ -4,6 +4,8 @@ How to find **scientific data repository** installations (`catalog_type: Scienti
 
 Do not add dataset-level records (a single Dataverse dataset, a Zenodo deposition, a STAC item).
 
+Do not register CRIS profile portals that expose only people and publications. Symplectic Elements **Discovery Module** portals (`*.discovery.symplectic.org`, self-hosted `profiles.*` / `experts.*` / `scholars.*` / `people.*` hosts; fingerprint `/javascript/configuration.js` with `__clientConfiguration` or "Visit Symplectic website" footer) catalog researchers, publications, grants, and equipment — not datasets — and are out of scope (reviewed 17 Sep 2026: UCL, Toronto, UTS, Cincinnati, UTK, Virginia Tech, Ohio Innovation Exchange, and 12 more all people-only). Register an Elements-based portal only if it exposes a real dataset collection.
+
 | Page | Use when |
 |------|----------|
 | This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, OPUS, RADAR, Yoda, Hyrax, Figshare, Redivis, Pure, Converis, Omega-PSIR, Archipelago, DABAR, OpenScience.si, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, DiVA Portal, META-SHARE, Gen3, …) |
@@ -148,6 +150,19 @@ Hyrax (and Islandora, PHAIDRA) often sit on **Fedora Repository** as the preserv
 | Google | `"Powered by Hyrax" OR "Samvera"` |
 | Censys | `web.endpoints.http.body: "hyrax"` |
 | FOFA | `body="hyrax"` |
+
+## Clowder (`clowder`) {#clowder}
+
+NCSA research data management framework (spaces → collections → datasets → files). **Confirm:** footer `Powered by Clowder(1.x.y ...)`, home page "Welcome to Clowder" with Spaces/Collections/Datasets/Files counters, or `GET /api/status` returning JSON with `version.number` and `counts`. Clowder answers `404` to `HEAD` — always probe with `GET`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Powered by Clowder"` |
+| Google | `"Welcome to Clowder" Datasets Spaces` |
+| Censys | `web.endpoints.http.body: "Powered by Clowder"` |
+| FOFA | `body="Powered by Clowder"` |
+
+Known public instances are few (NCSA demo, TERRA-REF, CINet/IML-CZO, RE-MAT, SMU, Pitschi/UQ, CPMR/TACC, EarthCube). Related NCSA stacks: Geodashboard portals (`greatlakestogulf.org`, `data.imlczo.org/geodashboard/`) run the Geostreaming Data Framework, not Clowder — register them separately. 4CeeD is a Clowder fork for microscopy; tag `clowder` only when the public UI is the Clowder one.
 
 ## Figshare (`figshare`) {#figshare}
 

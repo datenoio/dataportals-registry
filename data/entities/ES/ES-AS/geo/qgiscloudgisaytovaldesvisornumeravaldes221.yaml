@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-AS
+      name: Asturias, Principado de
+description: Public QGIS Cloud municipal viewer (Visor Numera Valdés) of the Ayuntamiento de Valdés (Asturias),
+  embedded on valdes.es.
+endpoints:
+- type: wms130
+  url: https://www.qgiscloud.com/gisaytovaldes/VisorNumeraValdes22_1/wms?SERVICE=WMS&REQUEST=GetCapabilities
+id: qgiscloudgisaytovaldesvisornumeravaldes221
+langs:
+- id: ES
+  name: Spanish
+link: https://www.qgiscloud.com/gisaytovaldes/VisorNumeraValdes22_1
+name: Visor Numera Valdés
+owner:
+  link: https://www.valdes.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-AS
+      name: Asturias, Principado de
+  name: Ayuntamiento de Valdés
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: qgiscloud
+  name: QGIS Cloud
+status: active
+tags:
+- geospatial
+- geoportal
+- qgis-cloud
+- Asturias
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007204

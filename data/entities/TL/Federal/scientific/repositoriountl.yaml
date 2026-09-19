@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- publication
+- dataset
+coverage:
+- location:
+    country:
+      id: TL
+      name: Timor-Leste
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Institutional repository of the Universidade Nacional Timor Lorosa'e
+  (UNTL), hosted in the RCAAP network (DSpace 5.3). Contains the Biblioteca Digital
+  de Timor and the Repositório Científico with theses, articles, and research on Timor-Leste.
+  Public OAI-PMH endpoint at /oai/request.
+endpoints:
+- type: oaipmh20
+  url: http://193.136.21.33/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: http://193.136.21.33/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: http://193.136.21.33/feed/atom_1.0/site
+  version: '1.0'
+id: repositoriountl
+langs:
+- id: PT
+  name: Portuguese
+- id: EN
+  name: English
+link: http://193.136.21.33/
+name: Repositório UNTL — National University of Timor Lorosa'e
+owner:
+  link: https://untl.edu.tl/
+  location:
+    country:
+      id: TL
+      name: Timor-Leste
+    level: 20
+  name: Universidade Nacional Timor Lorosa'e
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- university
+- theses
+- research
+- RCAAP
+- Timor-Leste
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+uid: cdi00007103

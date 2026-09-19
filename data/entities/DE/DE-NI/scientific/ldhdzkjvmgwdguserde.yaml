@@ -1,0 +1,65 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+description: NFDI4Health Local Data Hub of the German Centre for Child and Adolescent Health
+  (DZKJ) at Universitätsmedizin Göttingen. FAIRDOM-SEEK catalog for paediatric
+  and adolescent health studies and metadata.
+endpoints:
+- type: rest
+  url: https://ldh-dzkj.vm.gwdguser.de/api
+id: ldhdzkjvmgwdguserde
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://ldh-dzkj.vm.gwdguser.de/
+name: Local Data Hub DZKJ Göttingen
+owner:
+  link: https://www.umg.eu
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+  name: Universitätsmedizin Göttingen (DZKJ)
+  type: Academy
+software:
+  id: seek
+  name: FAIRDOM-SEEK
+status: active
+tags:
+- scientific
+- has_api
+- NFDI4Health
+- clinical research
+- FAIR
+- SEEK
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00006813

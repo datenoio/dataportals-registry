@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 30
+    subregion:
+      id: NL-NH
+      name: Noord-Holland
+description: Public Atlas geoportal of Gemeente Zaanstad (Common Ground open-source
+  GIS viewer by Gemeente Purmerend / Delta10), served from the municipal viewer host
+  (Dutch interface).
+endpoints:
+- type: customapi
+  url: https://viewer.zaanstad.nl/atlas/api/v1/metadatasets/
+- type: wms130
+  url: https://maps.zaanstad.nl/geoserver/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://maps.zaanstad.nl/geoserver/wfs?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: viewerzaanstadnlatlas
+langs:
+- id: NL
+  name: Dutch
+link: https://viewer.zaanstad.nl/atlas/
+name: Atlas Zaanstad
+owner:
+  link: https://www.zaanstad.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-NH
+      name: Noord-Holland
+  name: Gemeente Zaanstad
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: atlas
+  name: Atlas
+status: active
+tags:
+- GIS
+- geospatial
+- government
+- netherlands
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007034

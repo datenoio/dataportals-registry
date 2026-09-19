@@ -1,0 +1,66 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: shogun
+name: SHOGun
+website: https://terrestris.de/en/software/shogun/
+description: SHOGun is an open-source Spring Boot WebGIS framework by terrestris
+  for configurable geoportals. Public clients load application configurations from
+  REST /applications (optionally GraphQL) and render OpenLayers maps via shogun-gis-client.
+  The stack typically includes GeoServer, PostgreSQL/PostGIS, and Keycloak. Distinct
+  from GeoServer (geoserver), GeoNetwork (geonetwork), and Masterportal (masterportal)
+  on the same estate.
+owner:
+  name: terrestris GmbH & Co. KG
+  location:
+    country:
+      id: DE
+      name: Germany
+logo_url: https://terrestris.de/favicon.ico
+documentation_url: https://terrestris.github.io/shogun/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+repository_url: https://github.com/terrestris/shogun
+version: 25.0.0
+export_formats:
+- GeoJSON
+- JSON
+capabilities:
+- REST API
+- GraphQL
+- Map viewer
+- Layer catalog
+changelog_url: https://github.com/terrestris/shogun/releases
+last_updated: '2026-09-01T12:14:45Z'

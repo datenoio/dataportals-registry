@@ -1,0 +1,52 @@
+id: dataeastmoneycom
+name: East Money Data Center
+link: https://data.eastmoney.com
+catalog_type: Indicators catalog
+access_mode:
+- open
+status: active
+software:
+  id: eastmoneydata
+  name: East Money Data Center
+owner:
+  name: East Money Information Co., Ltd.
+  type: Business
+  location:
+    country: &id001
+      id: CN
+      name: China
+    level: 20
+  link: https://eastmoney.com
+coverage:
+- location:
+    country: *id001
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: 东方财富数据中心 is East Money's free web data portal publishing Chinese macro,
+  market and company indicator tables.
+langs:
+- id: ZH
+  name: Chinese
+tags:
+- finance
+- economics
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+content_types:
+- dataset
+api: false
+api_status: uncertain
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+uid: cdi00007500

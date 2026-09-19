@@ -658,6 +658,7 @@ MAP_SOFTWARE_ALLOWED_CATALOG_TYPES = {
     "molgenis": frozenset({"Metadata catalog", "Scientific data repository"}),
     "vivo": frozenset({"Data search engine", "Scientific data repository"}),
     "nada": frozenset({"Microdata catalog", "Scientific data repository"}),
+    "cadenza": frozenset({"Geoportal", "Indicators catalog"}),
     "ckan": frozenset(
         {"Open data portal", "Geoportal", "Scientific data repository"}
     ),
@@ -1070,6 +1071,11 @@ SOFTWARE_NAME_ALIASES = {
     "ingrada online": "ingrada",
     "ingrada web": "ingrada",
     "softplan ingrada": "ingrada",
+    "caigos": "caigos",
+    "caigos globe": "caigos",
+    "caigos-globe": "caigos",
+    "caigos geoportal": "caigos",
+    "caigos-geoportal": "caigos",
     "cadenza": "cadenza",
     "disy cadenza": "cadenza",
     "cadenza web": "cadenza",
@@ -1797,6 +1803,7 @@ SOFTWARE_DOCUMENTATION_URLS = {
     "cardo": "https://cardogis.com",
     "mapapps": "https://www.conterra.de/portfolio/mapapps",
     "ingrada": "https://www.ingrada.de/technologie.html",
+    "caigos": "https://www.caigos.de/produkte/betriebsmittel/caigos-globe/",
     "ingrid": "https://ingrid-oss.eu",
     "mangomap": "https://mangomap.com",
     "alandis": "https://www.ajiko.co.jp/products/detail/99",

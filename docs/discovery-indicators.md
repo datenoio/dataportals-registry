@@ -513,6 +513,21 @@ Open-source health management information system (HISP / University of Oslo). Mo
 | Censys | `web.endpoints.http.html_title: "DHIS 2"` |
 | FOFA | `title="DHIS 2"` |
 
+## ActivityInfo (`activityinfo`) {#activityinfo}
+
+Hosted M&E / humanitarian-coordination platform (BeDataDriven, Netherlands). Single SaaS at [www.activityinfo.org](https://www.activityinfo.org) — there are no independent instances to find. OCHA, UNHCR, UNICEF, WHO and NGO consortia use it for 4W/5W response monitoring; owners can publish live dashboards as standalone no-login pages or feed public Power BI / Shiny portals through the REST API. Public catalogs surface two ways: (1) published report pages on `activityinfo.org`, (2) API-fed portals on organization domains — e.g. [R4V RMRP Activity Explorer](https://www.r4v.info/en/activity_explorer) and the OCHA Ukraine response dashboards on [response.reliefweb.int/ukraine](https://response.reliefweb.int/ukraine). Use `software.id: activityinfo` for both surfaces. Raw 5W exports are often mirrored on HDX — do not register the HDX mirror as ActivityInfo.
+
+**Signals:** standalone pages under `www.activityinfo.org/app#...`; methodology text saying data is "reported in ActivityInfo" or "collected through ActivityInfo"; cluster guidance PDFs naming an ActivityInfo database; Power BI dashboards on reliefweb.int / humanitarianresponse.info response pages.
+
+**Confirm:** the published page or dashboard loads without login, or the portal documents ActivityInfo as the reporting backend. Skip login-only databases — most ActivityInfo databases are internal coordination tools, not public catalogs.
+
+| Tool | Query |
+|------|-------|
+| Google | `"reported in ActivityInfo" OR "reporting in ActivityInfo" dashboard` |
+| Google | `"ActivityInfo" ("5W" OR "4W" OR "response monitoring") (dashboard OR "data portal")` |
+| Google | `site:reliefweb.int "ActivityInfo" dashboard` |
+| Google | `site:humanitarianresponse.info "ActivityInfo" dashboard` |
+
 ## TabNet (`tabnet`) {#tabnet}
 
 DATASUS CGI tabulator for Brazilian SUS health databases. National hub: [Informações de Saúde (TABNET)](https://datasus.saude.gov.br/informacoes-de-saude-tabnet). States, municipalities, and ANS run separate installations. Use `software.id: tabnet`. Distinct from the OpenDataSUS CKAN portal.
@@ -1101,6 +1116,681 @@ Prompt: `Which {country} indicators catalogs are missing?`
 4. **Reject:** PDF publications pages; ministry CMS homes; login dashboards; agency PxWeb already harvested into the national StatBank (Finland); IMF NSDP already registered; open-data APIs that are not indicator catalogs (data.police.uk); guessed HCI / Virtual LMI / Cancer-Rates county hostnames (timeouts and login loops — use the vendor tenant list).
 
 The 29–30 August 2026 wave covered most OECD and Asian NSO gaps. Remaining yield is Africa, some Pacific NSOs, and subnational health/education explorers.
+
+## GeCO-sys OpenData (`gecoopendata`) {#gecoopendata}
+
+Cancer-registry epidemiological-indicator application used by Italian registries (Veneto, Umbria, ASL Napoli 3 Sud). Documented as a reusable product by the [Registro Tumori Veneto](https://www.registrotumoriveneto.it/english/publications/meetings/posters/2018-posters/territorial-extension-of-the-veneto-tumour-registry-and-data-usability-in-the-new-web-portal/). Use `software.id: gecoopendata`. Distinct from GeCo, the Lombardy regional-council management application.
+
+**Signals:** hostname `gecoopendata.{registry-domain}`; pages `/incidenza.php`, `/sopravvivenza.php` (also under `/web/`); AdminBSB theme assets (`css/themes/all-themes.css`, `plugins/node-waves/`); `GeCOsys` strings; indicator forms for incidence, mortality, survival, prevalence by tumour site, age, sex, and territory.
+
+**Confirm:** GET `/incidenza.php` and check for GeCOsys branding and the AIRTUM-based indicator forms. One catalog per registry tenant.
+
+**False positives:** the Lombardy `GeCo` ASP.NET council app; generic AIRTUM monograph PDF pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `"GeCO-sys OpenData" OR "gecoopendata" registro tumori` |
+| Google | `inurl:gecoopendata incidenza.php` |
+| Censys | `web.names: "gecoopendata.*"` |
+| FOFA | `body="GeCOsys" && body="incidenza"` |
+
+## Grafana (`grafana`) {#grafana}
+
+Open-source dashboard platform (Grafana Labs). Almost all internet-facing instances are private operations monitors — the registry only keeps the rare **anonymous-access instances that publish statistical/indicator dashboards** (energy mix, weather-station networks, IXP traffic, honeypot telemetry). Product page: [grafana.com](https://grafana.com). Use `software.id: grafana`.
+
+**Signals:** HTML title `Grafana`; `GET /api/health` returns JSON; login chrome "Welcome to Grafana".
+
+**Confirm:** `GET https://host/api/search?limit=100` returns `200` with a dashboard list **without credentials** (anonymous auth enabled). `401`/`403` means login-only — reject. Then read the dashboard titles: keep instances whose dashboards publish public statistics (ministry/NSO indicators, environmental or internet-infrastructure telemetry); reject server/Kubernetes/crypto/game/service monitoring (node exporter, perfSONAR host metrics, HPC loads). One record per public tenant.
+
+| Tool | Query |
+|------|-------|
+| Google | `intitle:"Grafana" site:.gov OR site:.gob.* OR site:.go.*` |
+| Censys | `web.endpoints.http.html_title: "Grafana" and web.names: "grafana"` |
+| FOFA | `title="Grafana" && host=".gov"` |
+| FOFA | `title="Grafana" && host=".gob."` |
+
+## EPS Data Platform (`epsdata`) {#epsdata}
+
+Vendor-operated single-tenant SaaS. Site: [epsnet.com.cn](https://www.epsnet.com.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `epsnet.com.cn`; page chrome “EPS数据平台”; database list under `/index.html`.
+
+**Confirm:** GET the platform home; the database catalog is described publicly even though series values need a subscription.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:epsnet.com.cn (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="epsnet.com.cn"` |
+
+
+## CNKI Economic and Social Big Data Research Platform (`cnkidata`) {#cnkidata}
+
+Vendor-operated single-tenant SaaS. Site: [data.cnki.net](https://data.cnki.net). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `data.cnki.net`; title “中国经济社会大数据研究平台”; CNKI chrome; anti-bot `418` responses are normal.
+
+**Confirm:** GET the platform home; yearbook and indicator catalogs are listed publicly before the paywall.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:data.cnki.net (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="data.cnki.net"` |
+
+
+## CEInet Statistical Database (`ceinet`) {#ceinet}
+
+Vendor-operated single-tenant SaaS. Site: [cei.cn](https://db.cei.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** hosts `db.cei.cn` (中经网统计数据库) and `ceidata.cei.cn` (中经数据); titles name the platform.
+
+**Confirm:** GET either host home; both returned `200` with indicator navigation during verification.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:cei.cn (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="cei.cn"` |
+
+
+## DRCNet Statistical Database (`drcnet`) {#drcnet}
+
+Vendor-operated single-tenant SaaS. Site: [data.drcnet.com.cn](https://data.drcnet.com.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `data.drcnet.com.cn`; 国研网 chrome; CN geo-fencing causes timeouts from non-CN networks.
+
+**Confirm:** GET the platform home from a CN-reachable network; title names 国研网统计数据库.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:data.drcnet.com.cn (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="data.drcnet.com.cn"` |
+
+
+## Soshoo (`soshoo`) {#soshoo}
+
+Vendor-operated single-tenant SaaS. Site: [soshoo.com](http://www.soshoo.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.soshoo.com` over plain HTTP; title “搜数网”; `.do` Struts paths such as `/index.do`.
+
+**Confirm:** GET `http://www.soshoo.com` (HTTPS fails); home lists the statistical database catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:soshoo.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="soshoo.com"` |
+
+
+## MacroChina Database (`macrochina`) {#macrochina}
+
+Vendor-operated single-tenant SaaS. Site: [macrochina.com.cn](http://www.macrochina.com.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.macrochina.com.cn`; root serves a JS redirect to `info.shtml`; 中宏数据库 product pages.
+
+**Confirm:** GET `http://www.macrochina.com.cn` and follow to `info.shtml`; HTTPS root returns `404` by design.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:macrochina.com.cn (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="macrochina.com.cn"` |
+
+
+## Pishu Database (`pishu`) {#pishu}
+
+Vendor-operated single-tenant SaaS. Site: [pishu.com.cn](https://www.pishu.com.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.pishu.com.cn`; title “皮书数据库”; paths under `/skwx_ps/database`.
+
+**Confirm:** GET the platform home; it redirects to the database catalog with `SiteID` parameters.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:pishu.com.cn (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="pishu.com.cn"` |
+
+
+## Wind Economic Database (`wind`) {#wind}
+
+Vendor-operated single-tenant SaaS. Site: [wind.com.cn](https://www.wind.com.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.wind.com.cn`; title “万得信息网”; EDB product pages describe the economic database.
+
+**Confirm:** GET the vendor home; the EDB indicator database is documented publicly though series need a terminal subscription.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:wind.com.cn (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="wind.com.cn"` |
+
+
+## CEIC Data (`ceic`) {#ceic}
+
+Vendor-operated single-tenant SaaS. Site: [ceicdata.com](https://www.ceicdata.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.ceicdata.com`; title names CEIC; public indicator pages under `/en/indicator/`.
+
+**Confirm:** GET the home or a public indicator page; indicator catalog is browsable without login.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:ceicdata.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="ceicdata.com"` |
+
+
+## CSMAR (`csmar`) {#csmar}
+
+Vendor-operated single-tenant SaaS. Site: [data.gtadata.com](https://data.gtadata.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `data.gtadata.com`; CSMAR/国泰安 chrome; vendor site `www.csmar.com` confirms the product; data host geo-fenced from non-CN networks.
+
+**Confirm:** GET `https://www.csmar.com` for product confirmation, then the data host from a CN-reachable network.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:data.gtadata.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="data.gtadata.com"` |
+
+
+## RESSET (`resset`) {#resset}
+
+Vendor-operated single-tenant SaaS. Site: [resset.com](https://www.resset.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.resset.com`; 锐思数据 chrome; database product list on the home page.
+
+**Confirm:** GET the vendor home; the research database catalog is listed publicly.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:resset.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="resset.com"` |
+
+
+## East Money Data Center (`eastmoneydata`) {#eastmoneydata}
+
+Vendor-operated single-tenant SaaS. Site: [data.eastmoney.com](https://data.eastmoney.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `data.eastmoney.com`; title “数据中心 _ 东方财富网”; free indicator tables.
+
+**Confirm:** GET the data center home; macro/market indicator tables are public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:data.eastmoney.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="data.eastmoney.com"` |
+
+
+## East Money Choice (`choice`) {#choice}
+
+Vendor-operated single-tenant SaaS. Site: [choice.eastmoney.com](https://choice.eastmoney.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `choice.eastmoney.com`; title “Choice数据-智能金融终端”.
+
+**Confirm:** GET the Choice portal home; product and indicator coverage are described publicly.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:choice.eastmoney.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="choice.eastmoney.com"` |
+
+
+## Tonghuashun Data Center (`thsdata`) {#thsdata}
+
+Vendor-operated single-tenant SaaS. Site: [data.10jqka.com.cn](https://data.10jqka.com.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `data.10jqka.com.cn`; title “同花顺数据中心”; free indicator tables.
+
+**Confirm:** GET the data center home; market/macro indicator tables are public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:data.10jqka.com.cn (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="data.10jqka.com.cn"` |
+
+
+## Tonghuashun iFinD (`ifind`) {#ifind}
+
+Vendor-operated single-tenant SaaS. Site: [51ifind.com](https://www.51ifind.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.51ifind.com`; title “同花顺iFinD”; note `ifind.10jqka.com.cn` is geo-fenced.
+
+**Confirm:** GET `https://www.51ifind.com`; the iFinD indicator databases are documented publicly.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:51ifind.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="51ifind.com"` |
+
+
+## Gildata (`gildata`) {#gildata}
+
+Vendor-operated single-tenant SaaS. Site: [gildata.com](https://www.gildata.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.gildata.com`; 聚源数据 chrome (GBK encoding).
+
+**Confirm:** GET the vendor home; database products are listed publicly.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:gildata.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="gildata.com"` |
+
+
+## Go-Goal (`gogoal`) {#gogoal}
+
+Vendor-operated single-tenant SaaS. Site: [go-goal.com](https://www.go-goal.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.go-goal.com`; title “朝阳永续”.
+
+**Confirm:** GET the vendor home; consensus/earnings databases are described publicly.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:go-goal.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="go-goal.com"` |
+
+
+## CNRDS (`cnrds`) {#cnrds}
+
+Vendor-operated single-tenant SaaS. Site: [cnrds.com](https://www.cnrds.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.cnrds.com`; title “Chinese Research Data Services Platform”; bilingual pages.
+
+**Confirm:** GET the platform home; the research database module catalog is public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:cnrds.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="cnrds.com"` |
+
+
+## DataYes (`datayes`) {#datayes}
+
+Vendor-operated single-tenant SaaS. Site: [robo.datayes.com](https://robo.datayes.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `robo.datayes.com`; 萝卜投研 chrome.
+
+**Confirm:** GET the Robo portal home; indicator/research coverage is described publicly.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:robo.datayes.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="robo.datayes.com"` |
+
+
+## Qianzhan Database (`qianzhan`) {#qianzhan}
+
+Vendor-operated single-tenant SaaS. Site: [d.qianzhan.com](https://d.qianzhan.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `d.qianzhan.com`; title “前瞻数据库”; free macro/industry indicator tables.
+
+**Confirm:** GET the database home; indicator tables are public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:d.qianzhan.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="d.qianzhan.com"` |
+
+
+## AskCI (`askci`) {#askci}
+
+Vendor-operated single-tenant SaaS. Site: [askci.com](https://www.askci.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.askci.com`; title “中商情报网”; industry data navigation.
+
+**Confirm:** GET the portal home; industry statistics sections are public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:askci.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="askci.com"` |
+
+
+## Huaon (`huaon`) {#huaon}
+
+Vendor-operated single-tenant SaaS. Site: [huaon.com](https://www.huaon.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.huaon.com`; title “华经情报网”.
+
+**Confirm:** GET the portal home; industry statistics sections are public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:huaon.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="huaon.com"` |
+
+
+## Chyxx (`chyxx`) {#chyxx}
+
+Vendor-operated single-tenant SaaS. Site: [chyxx.com](https://www.chyxx.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.chyxx.com`; title “智研咨询”.
+
+**Confirm:** GET the portal home; industry statistics sections are public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:chyxx.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="chyxx.com"` |
+
+
+## ChinaBgao (`chinabgao`) {#chinabgao}
+
+Vendor-operated single-tenant SaaS. Site: [chinabgao.com](https://www.chinabgao.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.chinabgao.com`; title “报告大厅”.
+
+**Confirm:** GET the portal home; report/indicator navigation is public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:chinabgao.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="chinabgao.com"` |
+
+
+## Bosidata (`bosidata`) {#bosidata}
+
+Vendor-operated single-tenant SaaS. Site: [bosidata.com](https://www.bosidata.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.bosidata.com`; 博思数据 chrome (GBK encoding).
+
+**Confirm:** GET the portal home; market data sections are public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:bosidata.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="bosidata.com"` |
+
+
+## LeadLeo (`leadleo`) {#leadleo}
+
+Vendor-operated single-tenant SaaS. Site: [leadleo.com](https://www.leadleo.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.leadleo.com`; 头豹 chrome; JS-rendered landing (short initial body).
+
+**Confirm:** GET the portal home; industry report/indicator navigation is public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:leadleo.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="leadleo.com"` |
+
+
+## iiMedia Data Center (`iimedia`) {#iimedia}
+
+Vendor-operated single-tenant SaaS. Site: [data.iimedia.cn](https://data.iimedia.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `data.iimedia.cn`; title “艾媒智库.数据中心”.
+
+**Confirm:** GET the data center home; indicator navigation is public though most series need a subscription.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:data.iimedia.cn (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="data.iimedia.cn"` |
+
+
+## Analysys (`analysys`) {#analysys}
+
+Vendor-operated single-tenant SaaS. Site: [analysys.cn](https://www.analysys.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.analysys.cn`; title “易观分析”.
+
+**Confirm:** GET the portal home; analysis/indicator articles are public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:analysys.cn (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="analysys.cn"` |
+
+
+## iResearch (`iresearch`) {#iresearch}
+
+Vendor-operated single-tenant SaaS. Site: [iresearch.com.cn](https://www.iresearch.com.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.iresearch.com.cn`; 艾瑞咨询 chrome.
+
+**Confirm:** GET the portal home; research/indicator sections are public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:iresearch.com.cn (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="iresearch.com.cn"` |
+
+
+## QuestMobile (`questmobile`) {#questmobile}
+
+Vendor-operated single-tenant SaaS. Site: [data.questmobile.com.cn](https://data.questmobile.com.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `data.questmobile.com.cn`; title “QuestMobile TRUTH-标准数据库”.
+
+**Confirm:** GET the TRUTH database portal; the metrics catalog is described publicly.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:data.questmobile.com.cn (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="data.questmobile.com.cn"` |
+
+
+## Baidu Index (`baiduindex`) {#baiduindex}
+
+Vendor-operated single-tenant SaaS. Site: [index.baidu.com](https://index.baidu.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `index.baidu.com`; title “百度指数”; login wall for queries.
+
+**Confirm:** GET the home; the indicator product is public though queries need a Baidu account.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:index.baidu.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="index.baidu.com"` |
+
+
+## Ocean Engine TrendInsight (`oceaninsight`) {#oceaninsight}
+
+Vendor-operated single-tenant SaaS. Site: [trendinsight.oceanengine.com](https://trendinsight.oceanengine.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `trendinsight.oceanengine.com`; 巨量算数 chrome; JS-rendered.
+
+**Confirm:** GET the home; trend indicator tools are public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:trendinsight.oceanengine.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="trendinsight.oceanengine.com"` |
+
+
+## GSData (`gsdata`) {#gsdata}
+
+Vendor-operated single-tenant SaaS. Site: [gsdata.cn](https://www.gsdata.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.gsdata.cn`; 清博智能 chrome.
+
+**Confirm:** GET the platform home; ranking/metrics products are described publicly.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:gsdata.cn (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="gsdata.cn"` |
+
+
+## NewRank (`newrank`) {#newrank}
+
+Vendor-operated single-tenant SaaS. Site: [newrank.cn](https://www.newrank.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.newrank.cn`; title “新榜”.
+
+**Confirm:** GET the platform home; public rankings are browsable.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:newrank.cn (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="newrank.cn"` |
+
+
+## Qimai (`qimai`) {#qimai}
+
+Vendor-operated single-tenant SaaS. Site: [qimai.cn](https://www.qimai.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.qimai.cn`; title “七麦数据”.
+
+**Confirm:** GET the platform home; app ranking pages are public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:qimai.cn (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="qimai.cn"` |
+
+
+## Diandian (`diandian`) {#diandian}
+
+Vendor-operated single-tenant SaaS. Site: [diandian.com](https://www.diandian.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.diandian.com`; title “点点数据”.
+
+**Confirm:** GET the platform home; app ranking pages are public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:diandian.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="diandian.com"` |
+
+
+## Chanmama (`chanmama`) {#chanmama}
+
+Vendor-operated single-tenant SaaS. Site: [chanmama.com](https://www.chanmama.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.chanmama.com`; 蝉妈妈 chrome.
+
+**Confirm:** GET the platform home; e-commerce metric products are described publicly.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:chanmama.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="chanmama.com"` |
+
+
+## Feigua (`feigua`) {#feigua}
+
+Vendor-operated single-tenant SaaS. Site: [feigua.cn](https://www.feigua.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.feigua.cn`; title “飞瓜数据”.
+
+**Confirm:** GET the platform home; short-video metric products are described publicly.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:feigua.cn (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="feigua.cn"` |
+
+
+## Sunsirs (100ppi) (`sunsirs`) {#sunsirs}
+
+Vendor-operated single-tenant SaaS. Site: [100ppi.com](https://www.100ppi.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.100ppi.com`; 生意社 chrome; commodity index navigation.
+
+**Confirm:** GET the portal home; commodity price indices are public.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:100ppi.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="100ppi.com"` |
+
+
+## Mysteel (`mysteel`) {#mysteel}
+
+Vendor-operated single-tenant SaaS. Site: [mysteel.com](https://www.mysteel.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.mysteel.com`; title “我的钢铁网” (GBK encoding).
+
+**Confirm:** GET the portal home; steel price indicator navigation is public though most series need a subscription.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:mysteel.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="mysteel.com"` |
+
+
+## SCI99 (`sci99`) {#sci99}
+
+Vendor-operated single-tenant SaaS. Site: [sci99.com](https://www.sci99.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.sci99.com`; title “卓创资讯”.
+
+**Confirm:** GET the portal home; commodity price navigation is public though most series need a subscription.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:sci99.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="sci99.com"` |
+
+
+## Oilchem (`oilchem`) {#oilchem}
+
+Vendor-operated single-tenant SaaS. Site: [oilchem.net](https://www.oilchem.net). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.oilchem.net`; title “隆众资讯” (GBK encoding).
+
+**Confirm:** GET the portal home; energy/chemical price navigation is public though most series need a subscription.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:oilchem.net (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="oilchem.net"` |
+
+
+## Jinlianchuang (315i) (`jinlianchuang`) {#jinlianchuang}
+
+Vendor-operated single-tenant SaaS. Site: [315i.com](https://www.315i.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.315i.com`; 金联创 chrome; short JS landing page.
+
+**Confirm:** GET the portal home; commodity price products are described publicly.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:315i.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="315i.com"` |
+
+
+## Baiinfo (`baiinfo`) {#baiinfo}
+
+Vendor-operated single-tenant SaaS. Site: [baiinfo.com](https://www.baiinfo.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.baiinfo.com`; title “百川盈孚”.
+
+**Confirm:** GET the portal home; commodity market data navigation is public though most series need a subscription.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:baiinfo.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="baiinfo.com"` |
+
+
+## Sxcoal (`sxcoal`) {#sxcoal}
+
+Vendor-operated single-tenant SaaS. Site: [sxcoal.com](https://www.sxcoal.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `www.sxcoal.com`; title “煤炭资源网”.
+
+**Confirm:** GET the portal home; coal price navigation is public though most series need a subscription.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:sxcoal.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="sxcoal.com"` |
+
+
+## China Data Online (`chinadataonline`) {#chinadataonline}
+
+Vendor-operated single-tenant SaaS. Site: [chinadatacenter.umich.edu](https://chinadatacenter.umich.edu). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+
+**Signals:** host `chinadatacenter.umich.edu`; “China Data Online” / “All China Data Center” chrome; note `china-data-online.org` is a squatted domain — do not use it.
+
+**Confirm:** GET the UMich host; connection may fail from some networks — verify from a US-reachable network.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:chinadatacenter.umich.edu (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="chinadatacenter.umich.edu"` |
 
 ## Related
 

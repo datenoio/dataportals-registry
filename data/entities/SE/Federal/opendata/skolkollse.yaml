@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Independent open data portal for Swedish school statistics, offering
+  16 downloadable CSV and JSON datasets under CC BY 4.0 with a machine-readable DCAT-AP
+  SE JSON-LD catalog; municipal school economy files are derived from Kolada.
+endpoints:
+- type: dcat:jsonld
+  url: https://skolkoll.se/data/catalog.jsonld
+id: skolkollse
+langs:
+- id: SV
+  name: Swedish
+link: https://skolkoll.se/oppen-data/
+name: Skolkoll öppna data
+owner:
+  link: https://skolkoll.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Skolkoll
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- open data
+- Sweden
+- education
+- kolada
+- has_api
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00007274

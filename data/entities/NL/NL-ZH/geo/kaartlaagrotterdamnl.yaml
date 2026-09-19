@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 30
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+description: Public municipal map viewer of Gemeente Rotterdam on the Mappi platform
+  (Dutch interface).
+endpoints:
+- type: customapi
+  url: https://kaartlaag.rotterdam.nl/api/maps/1.json
+id: kaartlaagrotterdamnl
+langs:
+- id: NL
+  name: Dutch
+link: https://kaartlaag.rotterdam.nl/
+name: Rotterdam op de kaart
+owner:
+  link: https://rotterdam.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+  name: Gemeente Rotterdam
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mappi
+  name: Mappi
+status: active
+tags:
+- GIS
+- geospatial
+- government
+- netherlands
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007019

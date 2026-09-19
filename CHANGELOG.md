@@ -9,8 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- **1,174 new catalog entries** since v1.21.0 (1 removed); registry source now **38,343** entities (**0** scheduled) across **224** country/territory folders.
-- **37 software definitions**; software catalog now **523** platforms. Highest-count new IDs: Map2Web (`map2web`, **258**), LDP SIT (`ldpgis`, **94**), GFMaplet (`gfmaplet`, **73**), KaartViewer (`kaartviewer`, **35**), enMapa (`enmapa`, **30**), Nexus Public Portal (`nexuspublicportal`, **21**), StatMap Earthlight (`earthlight`, **14**), KOSIS (`kosis`, **13**), GeoCentralis (`geocentralis`, **12**), Tailormap (`tailormap`, **11**), and NieuwlandGeo Onemap (`nieuwlandonemap`, **11**).
+- **1,943 net new catalog entries** since v1.21.0; registry source now **39,113** entities (**2** scheduled) across **224** country/territory folders.
+- **150 software definitions** since v1.21.0; software catalog now **636** platforms.
+- **770 additional catalog entries** and **113 additional software definitions** since the 16 September baseline, from continuing discovery hunts (China and Australia federal hubs, Israeli regional portals, French and German municipal geoportals, US state and local catalogs, Bangladesh and Cambodia indicators, and related Global South open-data finds).
+- **1,174 catalog entries** in the first post-v1.21.0 batch (1 removed); **37** software definitions in that batch. Highest-count new IDs: Map2Web (`map2web`, **258**), LDP SIT (`ldpgis`, **94**), GFMaplet (`gfmaplet`, **73**), KaartViewer (`kaartviewer`, **35**), enMapa (`enmapa`, **30**), Nexus Public Portal (`nexuspublicportal`, **21**), StatMap Earthlight (`earthlight`, **14**), KOSIS (`kosis`, **13**), GeoCentralis (`geocentralis`, **12**), Tailormap (`tailormap`, **11**), and NieuwlandGeo Onemap (`nieuwlandonemap`, **11**).
+- **112** new software YAML definitions for municipal and regional Web GIS stacks (including HSLayers NG (`hslayersng`), GeoTrek (`geotrek`), Layman (`layman`), gsimaps (`gsimaps`), Kommunekart (`kommunekart`), MapMint (`mapmint`), Miramon (`miramon`), iSTSOS (`istsos`), GeoMoose (`geomoose`), and related map viewers); vendor-gallery and FOFA hunts add matching tenants.
+- `scripts/hunt.py` discovery hunt toolkit: FOFA/Censys search with pagination, export-backed dedupe, bounded-concurrency probe with software fingerprints, and validated append to `dataquality/hunts.jsonl`.
+- `python scripts/builder.py add-batch` JSONL manifest ingestion (export dedupe, schema validation, UID assignment); `enrich-batch` and `set-field` for schema-checked bulk and single-field updates; `assign --new` and `validate-yaml --changed` for incremental maintainer workflows; `schema-values` for allowed enum and vocabulary lookups.
+- `data/reference/country_hints.yaml` hostname/title hints for `promote_scheduled.py` country inference on scheduled records missing owner country metadata.
 - Map2Web (`map2web`) software definition for the map2web.eu municipal Web GIS SaaS; added **258** municipal and county geoportals across Romania (**144**), Austria (**107**), Germany (**5**), and Liechtenstein (**2**).
 - LDP SIT (`ldpgis`) and GFMaplet (`gfmaplet`) software definitions for Italian municipal geoportals; retagged Drupal-tagged LDP and Maggioli STU catalogs onto the new IDs and added missing comuni (**94** and **73** catalogs).
 - KaartViewer (`kaartviewer`), Tailormap (`tailormap`), NieuwlandGeo Onemap (`nieuwlandonemap`), and GeoApps (`geoapps`) software definitions for Dutch municipal Web GIS SaaS; added **61** Netherlands geoportals.
@@ -39,7 +45,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remove the City of Burnside IntraMaps geoportal (`cobspatialt1cloudcom`).
 - Reassign **27** UIDs that were invalid `cdi9999xxxx` placeholders (**11**) or regular values colliding with another record (**16**), onto the next free 8-digit `cdi` numbers.
 - Extend `scripts/apidetect.py` and `scripts/constants.py` with probe maps and owner/type mappings for the **37** new software IDs; refresh discovery and harvest guides, `docs/software-index.md`, and `docs/software-taxonomy.md` to cover them.
-- Regenerated dataset exports to match source YAML: **38,343** catalogs, **0** scheduled, **523** software.
+- Regenerated dataset exports to match source YAML: **39,113** catalogs, **2** scheduled, **636** software (`full.jsonl`: **39,115** records).
+- Rework `scripts/promote_scheduled.py` with selective `--id` promotion, subregion-aware entity paths, liveness gating (`--probe`), and `review-scheduled` queue triage; document the flow in [docs/scheduled.md](docs/scheduled.md) and [docs/agents/contribute.md](docs/agents/contribute.md).
 - Discovery loop now requires same-session promote, `dataquality/hunts.jsonl` completeness rows, and IGO hunt recipes ([docs/agents/improve.md](docs/agents/improve.md)).
 - `check_software_expected_endpoints` skips `NO_STANDARD_PROBE` IDs. Tailormap gained `/api/app` probes; Earthlight, Nexus Public Portal, and Zeljko GIS are skip-listed as map UIs.
 - Extract `scripts/url_utils.py` from `builder.py`; add `DUPLICATE_IDENTIFIER_URL_NORMALIZED`; `check_liveness.py --apply-dead` can mark confirmed-dead catalogs inactive.
@@ -47,7 +54,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Drop copy-pasted `identifiers[].url` values that were shared across distinct catalogs (dataportals.org, Wikidata org/country QIDs, vendor homepages).
 - Mark the former data.gov.bd, GeoNorge GeoNetwork, Marshall Islands SPREP portal, and Swiss STAC v0.9 integration endpoint inactive and remove leftover harvest URLs.
 - Bump GitHub Actions to checkout/setup-python v4/v5. Ignore `.tmp_aq/` and discovery JSON scratch. One-shot country/Censys scripts moved to `scripts/archive/`.
-- Archive finished OpenSpec changes (`require-software-doc-headings`, `extend-apidetect-protocol-maps`, `add-normalized-url-quality-checks`, `refactor-quality-reporting-pipeline`, `add-schema-allowed-values`).
+- Archive finished OpenSpec changes (`require-software-doc-headings`, `extend-apidetect-protocol-maps`, `add-normalized-url-quality-checks`, `refactor-quality-reporting-pipeline`, `add-schema-allowed-values`, `improve-catalog-ingestion`, `add-hunt-toolkit`, `add-record-update-tooling`, `add-validation-helpers`, `improve-scheduled-promotion`, `improve-uid-assignment`); publish matching specs under `openspec/specs/`.
 
 ## [1.21.0] - 2026-09-12
 

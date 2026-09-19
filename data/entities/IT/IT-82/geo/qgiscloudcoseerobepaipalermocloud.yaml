@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-82
+      name: Sicilia
+description: Public QGIS Cloud map of the Piano di Assetto Idrogeologico (PAI) of Palermo, republished
+  as open data re-elaboration on gbvitrano.it.
+endpoints:
+- type: wms130
+  url: https://www.qgiscloud.com/coseerobe/PAI_Palermo_cloud/wms?SERVICE=WMS&REQUEST=GetCapabilities
+id: qgiscloudcoseerobepaipalermocloud
+langs:
+- id: IT
+  name: Italian
+link: https://www.qgiscloud.com/coseerobe/PAI_Palermo_cloud
+name: PAI Palermo Hydrogeological Plan Map
+owner:
+  link: https://coseerobe.gbvitrano.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-82
+      name: Sicilia
+  name: gbvitrano
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: qgiscloud
+  name: QGIS Cloud
+status: active
+tags:
+- geospatial
+- geoportal
+- qgis-cloud
+- Palermo
+- hydrogeology
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007212

@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AM
+      name: Armenia
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Map composition catalog of VETfarm, an Erasmus+ capacity-building
+  project (VET Demonstration Partnership for Pistachio Farm in Armenia).
+  HSLayers NG web client backed by a Layman publication server (layman-proxy);
+  public map compositions for agricultural vocational training are published as
+  WMS/WFS services.
+endpoints:
+- type: custom_api
+  url: https://vetfarm.org/layman-proxy
+id: vetfarmorg
+langs:
+- id: EN
+  name: English
+link: https://vetfarm.org/map/
+name: VETfarm Map Portal
+owner:
+  link: https://vetfarm.org
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: VETfarm project
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: hslayersng
+  name: HSLayers NG
+status: active
+tags:
+- HSLayers NG
+- Layman
+- agriculture
+- vocational education
+- geospatial
+- map compositions
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+uid: cdi00007226

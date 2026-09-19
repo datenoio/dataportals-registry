@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 30
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+description: Public municipal map viewer of Gemeente Katwijk on the Mappi platform
+  (Dutch interface).
+endpoints:
+- type: customapi
+  url: https://kaart.katwijk.nl/api/maps/1.json
+id: kaartkatwijknl
+langs:
+- id: NL
+  name: Dutch
+link: https://kaart.katwijk.nl/
+name: Kaart Katwijk
+owner:
+  link: https://katwijk.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+  name: Gemeente Katwijk
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mappi
+  name: Mappi
+status: active
+tags:
+- GIS
+- geospatial
+- government
+- netherlands
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007007

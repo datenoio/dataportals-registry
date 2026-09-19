@@ -1,0 +1,69 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'No'
+has_bulk: 'No'
+id: geoview
+name: GeoView
+website: https://canadian-geospatial-platform.github.io/geoview/
+description: GeoView (CGPV) is the Canadian Geospatial Platform's open-source
+  embeddable map viewer for geoCore content. Built with React, TypeScript, and
+  OpenLayers as a Rush monorepo, it is embedded with a single cgpv-main.js script
+  tag and div.geoview-map containers configured through data-config JSON or a
+  programmatic JavaScript/TypeScript API (cgpv.init, createMapFromConfig). It
+  renders WMS, WFS, ESRI REST, GeoJSON, and tile layers, is bilingual (EN/FR) and
+  WCAG 2.1 compliant, and supports external plugins such as Clip-Zip-Ship.
+  Distinct from Nobel Systems GeoViewer Online (geoviewer) hosted on geoviewer.io.
+owner:
+  name: Natural Resources Canada — Canadian Geospatial Platform
+  location:
+    country:
+      id: CA
+      name: Canada
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'No'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'Yes'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Open
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+repository_url: https://github.com/Canadian-Geospatial-Platform/geoview
+documentation_url: https://canadian-geospatial-platform.github.io/geoview/
+export_formats:
+- PNG
+- PDF
+capabilities:
+- Map viewer
+- Embeddable script-tag deployment
+- Plugin support
+- Bilingual EN/FR
+- WCAG accessibility
+license:
+  type: MIT
+  url: https://github.com/Canadian-Geospatial-Platform/geoview/blob/develop/LICENSE.md
+last_updated: '2026-09-18T00:00:00Z'

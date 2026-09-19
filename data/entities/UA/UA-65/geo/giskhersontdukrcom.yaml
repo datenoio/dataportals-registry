@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Khersonska oblast
 description: Geoportal. managed by Херсонська обласна державна адміністрація. powered
   by ArcGIS Hub. accessible at gis-kherson.tdukr.com.
+endpoints:
+- type: arcgishubapi
+  url: https://gis-kherson.tdukr.com/api/v3/datasets
 id: giskhersontdukrcom
 langs:
 - id: EN

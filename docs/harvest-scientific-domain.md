@@ -64,6 +64,16 @@ Type `/v1.1/Things` as `sensorthings`. Probe both origin `/v1.1/Things` and `/FR
 
 **Keep:** **Things** (stations / sensors) or **Datastreams** (observed properties), depending on the harvest ask — not both as duplicate datasets unless requested. Page with `$skip` / `$top` and `@iot.nextLink`. **Drop:** Observations, HistoricalLocations, FeaturesOfInterest rows, and the HTML start page. Stop on `401`/`403`. Skip demo/scratchpad hosts. Prefer the API root from the catalog `link` (some UIs sit on a separate dataportaal host).
 
+## 52°North SOS (`52northsos`) {#52northsos}
+
+OGC Sensor Observation Service (SOS 1.0/2.0, KVP/XML). Filter exports on `software.id = '52northsos'`. Prefer `endpoints[]` (`sos200`).
+
+```text
+GET https://host/52n-sos-webapp/sos?service=SOS&request=GetCapabilities
+```
+
+Type the GetCapabilities URL as `sos200` (`sos100` for 1.0-only mounts). The catalog grain is the **offering**: each `sos:ObservationOffering` under `sos:Contents` bundles a procedure, observed properties, phenomenon/result time, and a feature footprint. **Keep:** offerings (or procedures when offerings are 1:1). **Drop:** individual `GetObservation` responses, `ows:OperationsMetadata`, filter capabilities, and the HTML test client. Stop on `401`/`403`. Skip `*.52north.org` vendor demos and bare-IP test boxes.
+
 ## Symbiota (`symbiota`) {#symbiota}
 
 Biodiversity collections CMS. Official directory: [symbiota.org/symbiota-portals](https://symbiota.org/symbiota-portals/). Filter exports on `software.id = 'symbiota'`.
@@ -1010,6 +1020,22 @@ Keep **templates / atlases** in the archive. Drop Python-client cache files, Dat
 Type `/browse/` as `index`. One archive hub (`templateflow.org`).
 
 **Keep:** templates / atlases. **Drop:** client cache files and per-file NIfTI derivatives.
+
+## EIDA WFCatalog (`wfcatalog`) {#wfcatalog}
+
+```text
+GET {node}/eidaws/wfcatalog/1/query?network={net}&start={date}&end={date}
+GET {node}/fdsnws/station/1/query?level=station&format=text
+```
+
+One harvest scope per EIDA node. Keep **seismic networks/stations** (from `fdsnws-station`)
+as the dataset grain, with WFCatalog daily waveform-metadata documents as the availability
+and quality layer beneath each station. Type `/eidaws/wfcatalog/1/` and the `/fdsnws/` routes
+as `api`. Responses are JSON (WFCatalog) and FDSN StationXML/text (station service).
+
+**Keep:** networks and stations with waveform availability. **Drop:** raw waveform
+miniSEED downloads as catalog rows, the Swagger UI, `application.wadl` documents, and
+per-day metric documents as separate datasets.
 
 ## Related
 

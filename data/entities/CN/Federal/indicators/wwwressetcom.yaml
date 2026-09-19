@@ -1,0 +1,52 @@
+id: wwwressetcom
+name: RESSET Financial Research Database
+link: https://www.resset.com
+catalog_type: Indicators catalog
+access_mode:
+- restricted
+status: active
+software:
+  id: resset
+  name: RESSET
+owner:
+  name: Beijing RESSET Data Technology
+  type: Business
+  location:
+    country: &id001
+      id: CN
+      name: China
+    level: 20
+  link: https://www.resset.com
+coverage:
+- location:
+    country: *id001
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: 锐思数据 RESSET is an academic research data platform for Chinese financial
+  and economic indicator series.
+langs:
+- id: ZH
+  name: Chinese
+tags:
+- finance
+- economics
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+content_types:
+- dataset
+api: false
+api_status: uncertain
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+uid: cdi00007536

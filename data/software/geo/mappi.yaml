@@ -1,0 +1,60 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: mappi
+name: Mappi
+website: https://www.mappi.nl/
+description: Mappi is Swis's hosted map platform for Dutch municipalities and
+  organizations ("het kaartenplatform voor organisaties"). Public tenants run on
+  city hostnames (kaart.leiden.nl, kaart.kampen.nl, kaart.amsterdam.nl,
+  kaart.katwijk.nl, kaart.westerkwartier.nl, kaartlaag.rotterdam.nl,
+  kaart.halle.be) as a Laravel/Vue SPA carrying
+  <meta name="tenant-id"> and a shared <meta name="app-version"> build hash, with
+  map GeoJSON served from /api/maps/{id}.json. One record per public tenant;
+  event maps (kaart.marathon.nl) are out of scope.
+owner:
+  name: Swis
+  location:
+    country:
+      id: NL
+      name: Netherlands
+documentation_url: https://www.mappi.nl/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+capabilities:
+- Map viewer
+- Municipal GIS
+- Editorial map builder
+last_updated: '2026-09-16T00:00:00Z'

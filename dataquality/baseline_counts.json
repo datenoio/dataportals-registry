@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-09-16T07:22:53Z",
+  "generated_at": "2026-09-17T17:47:55Z",
   "source": "dataquality/full_report.jsonl",
-  "total_records_analyzed": 38343,
+  "total_records_analyzed": 38736,
   "by_priority": {
-    "CRITICAL": 0,
-    "IMPORTANT": 0,
-    "MEDIUM": 10,
-    "LOW": 0
+    "CRITICAL": 3,
+    "IMPORTANT": 298,
+    "MEDIUM": 61,
+    "LOW": 319
   },
   "by_track": {
     "integrity": {
-      "CRITICAL": 0,
-      "IMPORTANT": 0,
-      "MEDIUM": 0,
+      "CRITICAL": 3,
+      "IMPORTANT": 298,
+      "MEDIUM": 4,
       "LOW": 0
     },
     "enrichment": {
       "CRITICAL": 0,
       "IMPORTANT": 0,
-      "MEDIUM": 10,
-      "LOW": 0
+      "MEDIUM": 57,
+      "LOW": 319
     }
   },
   "enrichment_issue_prefixes": [
@@ -46,11 +46,23 @@
     "TOPIC_SCHEMA_VIOLATION"
   ],
   "by_issue_type": {
-    "SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB": 1,
+    "API_STATUS_MISMATCH": 5,
+    "CATALOG_SOFTWARE_MISMATCH": 3,
+    "COVERAGE_NORMALIZATION": 164,
+    "INVALID_OWNER_TYPE": 2,
+    "MISSING_CONTACT_INFO": 2,
+    "MISSING_ENDPOINTS": 24,
+    "MISSING_LANGS": 46,
+    "MISSING_OWNER_LINK": 153,
+    "MISSING_TAGS": 82,
+    "MISSING_TOPICS": 82,
+    "OWNER_LOCATION_SUBREGION_REQUIRED": 6,
+    "OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH": 97,
+    "OWNER_TYPE_NONCANONICAL": 5,
+    "PLACEHOLDER_TITLE": 2,
+    "SOFTWARE_EXPECTED_ENDPOINTS_MISSING_52NORTHSOS": 2,
     "SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN": 1,
-    "SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN": 1,
-    "SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBCITY": 4,
-    "SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX": 2,
-    "SOFTWARE_EXPECTED_ENDPOINTS_MISSING_INTERMINE": 1
+    "SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS": 1,
+    "SUBREGION_NAME_ID_MISMATCH": 4
   }
 }

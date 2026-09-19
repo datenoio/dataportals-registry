@@ -1,129 +1,357 @@
 DATA QUALITY ANALYSIS REPORT
 ================================================================================
-Generated: 2026-09-16 10:22:32
-Total Records Analyzed: 38343
-Total Issues Found: 10
-Records with Issues: 10
+Generated: 2026-09-18 23:43:01
+Total Records Analyzed: 39113
+Total Issues Found: 41
+Records with Issues: 40
 
 === ISSUES BY TYPE ===
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB]
+[MISSING_CONTACT_INFO]
 Count: 1
-Priority: MEDIUM
+Priority: LOW
 
-File: UA/UA-65/geo/giskhersontdukrcom.yaml
-Record ID: giskhersontdukrcom
-Country: UA
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
-Field: endpoints
-Current Value: {'software_id': 'arcgishub', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='arcgishub' is marked as API-capable in software definitions
+File: BR/BR-SC/geo/prefeiturasc1mapcombr.yaml
+Record ID: prefeiturasc1mapcombr
+Country: BR
+Issue: MISSING_CONTACT_INFO
+Field: owner.link
+Current Value: None
+Suggested Action: Add a contact or support URL for the organization or portal, so users know how to request access or ask questions.
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
-Count: 1
-Priority: MEDIUM
+[MISSING_OWNER_LINK]
+Count: 40
+Priority: LOW
 
-File: UA/UA-63/opendata/opendatakharkivradagovua.yaml
-Record ID: opendatakharkivradagovua
-Country: UA
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
-Field: endpoints
-Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+File: CN/CN-AH/geo/scpcmuyxscloudcom.yaml
+Record ID: scpcmuyxscloudcom
+Country: CN
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN]
-Count: 1
-Priority: MEDIUM
+File: CN/Federal/indicators/wwwchinabgaocom.yaml
+Record ID: wwwchinabgaocom
+Country: CN
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
-File: CZ/CZ-80/opendata/kodopavacitycz.yaml
-Record ID: kodopavacitycz
-Country: CZ
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN
-Field: endpoints
-Current Value: {'software_id': 'dkan', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='dkan' is marked as API-capable in software definitions
+File: CN/Federal/geo/knowledgeyinchuanwatercn.yaml
+Record ID: knowledgeyinchuanwatercn
+Country: CN
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBCITY]
-Count: 4
-Priority: MEDIUM
+File: CN/Federal/geo/witsmartsdccom.yaml
+Record ID: witsmartsdccom
+Country: CN
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
-File: BA/BA-BIH/geo/bihacgisba.yaml
-Record ID: bihacgisba
-Country: BA
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBCITY
-Field: endpoints
-Current Value: {'software_id': 'gausswebcity', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='gausswebcity' is marked as API-capable in software definitions
+File: AR/AR-W/opendata/somcordatospaisdigitalmodernizaciongobar.yaml
+Record ID: somcordatospaisdigitalmodernizaciongobar
+Country: AR
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
-File: BA/BA-BIH/geo/novosarajevogisba.yaml
-Record ID: novosarajevogisba
-Country: BA
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBCITY
-Field: endpoints
-Current Value: {'software_id': 'gausswebcity', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='gausswebcity' is marked as API-capable in software definitions
+File: AR/AR-Y/opendata/libjuydatospaisdigitalmodernizaciongobar.yaml
+Record ID: libjuydatospaisdigitalmodernizaciongobar
+Country: AR
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
-File: BA/BA-BIH/geo/kalesijagisba.yaml
-Record ID: kalesijagisba
-Country: BA
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBCITY
-Field: endpoints
-Current Value: {'software_id': 'gausswebcity', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='gausswebcity' is marked as API-capable in software definitions
+File: BR/BR-SC/geo/prefeiturasc1mapcombr.yaml
+Record ID: prefeiturasc1mapcombr
+Country: BR
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
-File: BA/BA-BIH/geo/tuzlagisba.yaml
-Record ID: tuzlagisba
-Country: BA
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBCITY
-Field: endpoints
-Current Value: {'software_id': 'gausswebcity', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='gausswebcity' is marked as API-capable in software definitions
+File: FR/FR-ARA/geo/randovalleedeladromecom.yaml
+Record ID: randovalleedeladromecom
+Country: FR
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX]
-Count: 2
-Priority: MEDIUM
+File: FR/FR-ARA/geo/randorhonecrussolardechecom.yaml
+Record ID: randorhonecrussolardechecom
+Country: FR
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
-File: PT/PT-11/geo/geocmodivelaspt.yaml
-Record ID: geocmodivelaspt
-Country: PT
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX
-Field: endpoints
-Current Value: {'software_id': 'geocortex', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geocortex' is marked as API-capable in software definitions
+File: IL/IL-JM/geo/v5gisnetcoilariel.yaml
+Record ID: v5gisnetcoilariel
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
-File: PT/PT-06/geo/sigcmcoimbrapt.yaml
-Record ID: sigcmcoimbrapt
-Country: PT
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX
-Field: endpoints
-Current Value: {'software_id': 'geocortex', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geocortex' is marked as API-capable in software definitions
+File: IL/IL-JM/geo/gis03taldorcoilmateyehudagis.yaml
+Record ID: gis03taldorcoilmateyehudagis
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_INTERMINE]
-Count: 1
-Priority: MEDIUM
+File: IL/IL-HA/geo/v5gisnetcoilmordothacarmel.yaml
+Record ID: v5gisnetcoilmordothacarmel
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
-File: US/Federal/scientific/wwwxenmineorg.yaml
-Record ID: wwwxenmineorg
-Country: US
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_INTERMINE
-Field: endpoints
-Current Value: {'software_id': 'intermine', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='intermine' is marked as API-capable in software definitions
+File: IL/IL-HA/geo/gis05taldorcoilzevulungis.yaml
+Record ID: gis05taldorcoilzevulungis
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-HA/geo/v5gisnetcoilhadera.yaml
+Record ID: v5gisnetcoilhadera
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-HA/geo/v5gisnetcoilrecheshacarmel.yaml
+Record ID: v5gisnetcoilrecheshacarmel
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-D/geo/gis06taldorcoilabubasmanew.yaml
+Record ID: gis06taldorcoilabubasmanew
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-D/geo/v5gisnetcoilashdod.yaml
+Record ID: v5gisnetcoilashdod
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-D/geo/v5gisnetcoilkmalachi.yaml
+Record ID: v5gisnetcoilkmalachi
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-D/geo/gispmatamarcoilportal.yaml
+Record ID: gispmatamarcoilportal
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-M/geo/v5gisnetcoiltaibehint.yaml
+Record ID: v5gisnetcoiltaibehint
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-M/geo/v5gisnetcoilsdotdan.yaml
+Record ID: v5gisnetcoilsdotdan
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-M/geo/gis06taldorcoilramlegis.yaml
+Record ID: gis06taldorcoilramlegis
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-M/geo/gis03taldorcoillodgis.yaml
+Record ID: gis03taldorcoillodgis
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-M/geo/ags20intertowncoilsrklayers.yaml
+Record ID: ags20intertowncoilsrklayers
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-M/geo/v5gisnetcoilganeytikva.yaml
+Record ID: v5gisnetcoilganeytikva
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-M/geo/v5gisnetcoilsharonim.yaml
+Record ID: v5gisnetcoilsharonim
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-M/geo/v5gisnetcoiljaljuliaint.yaml
+Record ID: v5gisnetcoiljaljuliaint
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-M/geo/gis10taldorcoilkfarkasemgis.yaml
+Record ID: gis10taldorcoilkfarkasemgis
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-Z/geo/orhitecerpgiscoil.yaml
+Record ID: orhitecerpgiscoil
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-Z/geo/v5gisnetcoiltzafat.yaml
+Record ID: v5gisnetcoiltzafat
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-Z/geo/v5gisnetcoilgalilmerkazi.yaml
+Record ID: v5gisnetcoilgalilmerkazi
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-Z/geo/v5gisnetcoilshfelathagalil.yaml
+Record ID: v5gisnetcoilshfelathagalil
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-Z/geo/v5gisnetcoilgaliltachton.yaml
+Record ID: v5gisnetcoilgaliltachton
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-Z/geo/gis05taldorcoilemekhamaayanotgis.yaml
+Record ID: gis05taldorcoilemekhamaayanotgis
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-Z/geo/gis05taldorcoiletzbahagalilgis.yaml
+Record ID: gis05taldorcoiletzbahagalilgis
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-Z/geo/ags20intertowncoilbhylayers.yaml
+Record ID: ags20intertowncoilbhylayers
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-Z/geo/ags20intertowncoilehglayers.yaml
+Record ID: ags20intertowncoilehglayers
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-Z/geo/gis08taldorcoilmashergis.yaml
+Record ID: gis08taldorcoilmashergis
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-Z/geo/v5gisnetcoilgalilmizrachi.yaml
+Record ID: v5gisnetcoilgalilmizrachi
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IL/IL-Z/geo/upintertowncoilmhg.yaml
+Record ID: upintertowncoilmhg
+Country: IL
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB (MEDIUM): 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN (MEDIUM): 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN (MEDIUM): 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBCITY (MEDIUM): 4 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX (MEDIUM): 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_INTERMINE (MEDIUM): 1 issue
+MISSING_CONTACT_INFO (LOW): 1 issue
+MISSING_OWNER_LINK (LOW): 40 issues
 
 === SUMMARY BY PRIORITY ===
 
-MEDIUM: 10 issues
+LOW: 41 issues
 
 === RECORDS WITH MULTIPLE ISSUES (3+) ===
 

@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: AR-X
+      name: Córdoba
+description: Public QGIS Cloud municipal GIS of the Municipalidad de Hernando (Córdoba), embedded on hernando.gob.ar.
+endpoints:
+- type: wms130
+  url: https://www.qgiscloud.com/sigmunihernando/SIG_Hernando_1/wms?SERVICE=WMS&REQUEST=GetCapabilities
+id: qgiscloudsigmunihernandosighernando1
+langs:
+- id: ES
+  name: Spanish
+link: https://www.qgiscloud.com/sigmunihernando/SIG_Hernando_1
+name: SIG Hernando
+owner:
+  link: https://hernando.gob.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-X
+      name: Córdoba
+  name: Municipalidad de Hernando
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: qgiscloud
+  name: QGIS Cloud
+status: active
+tags:
+- geospatial
+- geoportal
+- qgis-cloud
+- Córdoba
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007188

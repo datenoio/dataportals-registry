@@ -392,6 +392,19 @@ Keep **data sets** and public **indicators**. Drop user accounts, org-unit trees
 
 **Keep:** DHIS2 **data sets** and public **indicators**. **Drop:** user accounts, org-unit trees as datasets, and login-only analytics.
 
+## ActivityInfo (`activityinfo`) {#activityinfo}
+
+Humanitarian 4W/5W response-monitoring dashboards on the hosted ActivityInfo SaaS. Filter exports on `software.id = 'activityinfo'`.
+
+Two surfaces per catalog record:
+
+- **Published report pages** on `activityinfo.org`: the standalone published page is public, but the reports API (`GET https://www.activityinfo.org/resources/reports/{reportId}/published`) requires an API token. Harvest the tables/charts exposed on the published page itself; there is no public directory of databases to enumerate.
+- **API-fed portals** (R4V Activity Explorer, OCHA Ukraine response dashboards): harvest the front-end's public downloads (CSV/XLSX) or the documented HDX mirror dataset. The ActivityInfo backend requires authentication — do not probe it.
+
+Grain: one published dashboard/report ≈ one dataset analog; keep 5W activity tables (partner, sector, location, people reached, funding requirements). Drop login-gated databases, partner contact lists, and record-level beneficiary data. Stop on `401`/`403`.
+
+**Keep:** published 5W/indicator tables and public dashboard downloads. **Drop:** login-only databases, user/partner directories, record-level beneficiary data.
+
 ## TabNet (`tabnet`) {#tabnet}
 
 Brazilian DATASUS CGI tabulators. Filter exports on `software.id = 'tabnet'`. There is no REST list API.
@@ -809,6 +822,400 @@ Keep **public indicator tables**. Drop intranet VA/VT copies and login-only anal
 | `datavavt` | see above | Intranet |
 | `bicontour` | see above | Viewer-only |
 | `datainsight` | see above | Internal BI |
+
+## GeCO-sys OpenData (`gecoopendata`) {#gecoopendata}
+
+Italian cancer-registry indicator tenants on `gecoopendata.{registry-domain}`. One harvest
+scope per registry. Indicator pages (`/incidenza.php`, `/sopravvivenza.php`, also under
+`/web/`) are interactive calculation forms; there is no documented public list API.
+
+**Keep:** each **indicator calculation view** (incidence, mortality, survival, prevalence,
+data quality) as one dataset analog, with territory/sex/age breakdowns noted in metadata.
+**Drop:** the form chrome, chart images, and session-bound query results. Do not harvest the
+registry's editorial pages.
+
+## Grafana (`grafana`) {#grafana}
+
+Anonymous-access Grafana instances only (registry entries already require it). List dashboards
+from the HTTP API; grain is the **dashboard**, not each panel or time series.
+
+**Keep:** each public **dashboard** (`/api/search` items with `type: dash-db`) as one dataset
+analog; folders (`dash-folder`) are topics, not datasets.
+**Drop:** panels, snapshots, playlists, alert rules, and data-source proxies as separate
+datasets. Never attempt authenticated API access — `401` on `/api/search` means the instance
+is out of scope.
+
+```text
+GET https://host/api/search?limit=5000
+GET https://host/api/dashboards/uid/{uid}
+```
+
+## EPS Data Platform (`epsdata`) {#epsdata}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public database/indicator list pages and free sample tables; grain is the statistical table or indicator series.
+**Drop:** subscription-gated series values, institutional login sessions, and marketing pages.
+
+
+## CNKI Economic and Social Big Data Research Platform (`cnkidata`) {#cnkidata}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public yearbook/indicator catalog pages; grain is the statistical yearbook or indicator table.
+**Drop:** paywalled table values, CNKI literature search results, and user account pages.
+
+
+## CEInet Statistical Database (`ceinet`) {#ceinet}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public indicator navigation and free series metadata; grain is the indicator series.
+**Drop:** subscription-gated series values and the two hosts as duplicate scopes — register `db.cei.cn` and `ceidata.cei.cn` as separate catalogs of the same software.
+
+
+## DRCNet Statistical Database (`drcnet`) {#drcnet}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public database/indicator catalog pages; grain is the statistical table.
+**Drop:** subscription-gated series values and DRCNet report full texts.
+
+
+## Soshoo (`soshoo`) {#soshoo}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public statistical-table catalog pages; grain is the statistical table.
+**Drop:** subscription-gated table values and China InfoBank news databases.
+
+
+## MacroChina Database (`macrochina`) {#macrochina}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public database introduction and indicator list pages; grain is the indicator series.
+**Drop:** subscription-gated series values and the JS-redirect stub page itself.
+
+
+## Pishu Database (`pishu`) {#pishu}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public yearbook/report catalog pages; grain is the blue-book volume or statistical table.
+**Drop:** paywalled full texts and Social Sciences Academic Press bookshop pages.
+
+
+## Wind Economic Database (`wind`) {#wind}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public EDB product/indicator documentation pages; grain is the documented indicator series.
+**Drop:** terminal-only downloads, paid API extracts, and marketing pages.
+
+
+## CEIC Data (`ceic`) {#ceic}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public indicator pages (`/en/indicator/...`); grain is the indicator series.
+**Drop:** subscription-gated full history, paid API extracts, and sales pages.
+
+
+## CSMAR (`csmar`) {#csmar}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public database/module catalog pages; grain is the research database module.
+**Drop:** subscription-gated table values and the vendor marketing site as a separate catalog.
+
+
+## RESSET (`resset`) {#resset}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public database product list; grain is the research database.
+**Drop:** subscription-gated series values and login pages.
+
+
+## East Money Data Center (`eastmoneydata`) {#eastmoneydata}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public indicator tables (macro, market, company); grain is the indicator table.
+**Drop:** news articles, quote pages, and the separate Choice terminal.
+
+
+## East Money Choice (`choice`) {#choice}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public product/indicator documentation; grain is the documented indicator series.
+**Drop:** terminal-only data, paid API extracts, and the free `data.eastmoney.com` portal (separate catalog).
+
+
+## Tonghuashun Data Center (`thsdata`) {#thsdata}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public indicator tables; grain is the indicator table.
+**Drop:** news articles, quote pages, and the separate iFinD terminal.
+
+
+## Tonghuashun iFinD (`ifind`) {#ifind}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public product/indicator documentation; grain is the documented indicator series.
+**Drop:** terminal-only data and the free `data.10jqka.com.cn` portal (separate catalog).
+
+
+## Gildata (`gildata`) {#gildata}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public database product list; grain is the database product.
+**Drop:** subscription-gated series values and Hundsun corporate pages.
+
+
+## Go-Goal (`gogoal`) {#gogoal}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public product/database pages; grain is the database product.
+**Drop:** subscription-gated estimates data and marketing pages.
+
+
+## CNRDS (`cnrds`) {#cnrds}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public database module catalog; grain is the research database module.
+**Drop:** subscription-gated table values and paper-citation pages.
+
+
+## DataYes (`datayes`) {#datayes}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public indicator and research navigation; grain is the indicator series.
+**Drop:** subscription-gated data, quant tool sessions, and marketing pages.
+
+
+## Qianzhan Database (`qianzhan`) {#qianzhan}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public indicator tables; grain is the indicator series.
+**Drop:** paid report pages on the main `qianzhan.com` site.
+
+
+## AskCI (`askci`) {#askci}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public industry statistics pages; grain is the industry indicator table.
+**Drop:** paid report pages and consulting service pages.
+
+
+## Huaon (`huaon`) {#huaon}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public industry statistics pages; grain is the industry indicator table.
+**Drop:** paid report pages and consulting service pages.
+
+
+## Chyxx (`chyxx`) {#chyxx}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public industry statistics pages; grain is the industry indicator table.
+**Drop:** paid report pages and consulting service pages.
+
+
+## ChinaBgao (`chinabgao`) {#chinabgao}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public report catalog and free indicator pages; grain is the report or indicator table.
+**Drop:** paid report full texts and ordering pages.
+
+
+## Bosidata (`bosidata`) {#bosidata}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public market data pages; grain is the indicator table.
+**Drop:** paid report full texts and consulting pages.
+
+
+## LeadLeo (`leadleo`) {#leadleo}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public industry indicator dashboards and report catalog; grain is the indicator dashboard.
+**Drop:** paid report full texts and analyst service pages.
+
+
+## iiMedia Data Center (`iimedia`) {#iimedia}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public indicator catalog pages; grain is the indicator series.
+**Drop:** subscription-gated series values and iiMedia report shop pages.
+
+
+## Analysys (`analysys`) {#analysys}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public indicator articles and data pages; grain is the indicator series.
+**Drop:** paid analytics products and consulting pages.
+
+
+## iResearch (`iresearch`) {#iresearch}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public indicator reports and data charts; grain is the indicator series.
+**Drop:** paid report full texts and consulting pages.
+
+
+## QuestMobile (`questmobile`) {#questmobile}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public metrics catalog pages; grain is the app metric series.
+**Drop:** subscription-gated metric values and demo login pages.
+
+
+## Baidu Index (`baiduindex`) {#baiduindex}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public product pages and published index reports; grain is the keyword index series.
+**Drop:** login-only query sessions and Baidu marketing pages.
+
+
+## Ocean Engine TrendInsight (`oceaninsight`) {#oceaninsight}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public trend indicator pages and published reports; grain is the trend indicator series.
+**Drop:** advertiser-only dashboards and Ocean Engine ad platform pages.
+
+
+## GSData (`gsdata`) {#gsdata}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public ranking lists and product pages; grain is the account metric series.
+**Drop:** subscription-gated metrics and Qingbo marketing pages.
+
+
+## NewRank (`newrank`) {#newrank}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public account rankings and metric pages; grain is the account metric series.
+**Drop:** subscription-gated metrics and NewRank marketing pages.
+
+
+## Qimai (`qimai`) {#qimai}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public app rankings and ASO indicator pages; grain is the app metric series.
+**Drop:** subscription-gated historical metrics and account pages.
+
+
+## Diandian (`diandian`) {#diandian}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public app rankings and market indicator pages; grain is the app metric series.
+**Drop:** subscription-gated historical metrics and account pages.
+
+
+## Chanmama (`chanmama`) {#chanmama}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public metric/ranking pages; grain is the product or livestream metric series.
+**Drop:** subscription-gated metrics and account pages.
+
+
+## Feigua (`feigua`) {#feigua}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public metric/ranking pages; grain is the account or product metric series.
+**Drop:** subscription-gated metrics and account pages.
+
+
+## Sunsirs (100ppi) (`sunsirs`) {#sunsirs}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public commodity price index pages; grain is the commodity price series.
+**Drop:** paid data services and Sunsirs corporate pages.
+
+
+## Mysteel (`mysteel`) {#mysteel}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public price index pages; grain is the price series.
+**Drop:** subscription-gated series values and Mysteel corporate pages.
+
+
+## SCI99 (`sci99`) {#sci99}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public price index pages; grain is the price series.
+**Drop:** subscription-gated series values and Zhuochuang corporate pages.
+
+
+## Oilchem (`oilchem`) {#oilchem}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public price index pages; grain is the price series.
+**Drop:** subscription-gated series values and Longzhong corporate pages.
+
+
+## Jinlianchuang (315i) (`jinlianchuang`) {#jinlianchuang}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public price index pages; grain is the price series.
+**Drop:** subscription-gated series values and corporate pages.
+
+
+## Baiinfo (`baiinfo`) {#baiinfo}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public price index pages; grain is the price series.
+**Drop:** subscription-gated series values and corporate pages.
+
+
+## Sxcoal (`sxcoal`) {#sxcoal}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public coal price index pages; grain is the price series.
+**Drop:** subscription-gated series values and Fenwei corporate pages.
+
+
+## China Data Online (`chinadataonline`) {#chinadataonline}
+
+Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.
+
+**Keep:** public product/indicator documentation and free sample tables; grain is the statistical table.
+**Drop:** subscription-gated yearbook tables and University of Michigan corporate pages.
 
 ## Related
 

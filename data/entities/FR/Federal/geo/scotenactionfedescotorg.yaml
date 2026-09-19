@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Public TerraVisu map of French SCoT perimeters and resource centre from
+  the national SCoT federation.
+id: scotenactionfedescotorg
+langs:
+- id: FR
+  name: French
+link: https://scotenaction.fedescot.org/
+name: SCoT en Action
+owner:
+  link: https://www.fedescot.org/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Fédération nationale des SCoT
+  type: Civil society
+software:
+  id: terravisu
+  name: TerraVisu
+status: active
+tags:
+- GIS
+- france
+- geospatial
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00007407
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: custom_api
+  url: https://scotenaction.fedescot.org/api/geolayer/scene/

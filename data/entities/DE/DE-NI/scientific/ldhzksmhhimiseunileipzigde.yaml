@@ -1,0 +1,65 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+description: NFDI4Health Local Data Hub of the Centre for Clinical Trials at Hannover Medical
+  School (MHH). FAIRDOM-SEEK catalog for clinical studies and related
+  health-research assets.
+endpoints:
+- type: rest
+  url: https://ldh.zks-mhh.imise.uni-leipzig.de/api
+id: ldhzksmhhimiseunileipzigde
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://ldh.zks-mhh.imise.uni-leipzig.de/
+name: Local Data Hub ZKS Hannover
+owner:
+  link: https://www.mhh.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+  name: Medizinische Hochschule Hannover
+  type: Academy
+software:
+  id: seek
+  name: FAIRDOM-SEEK
+status: active
+tags:
+- scientific
+- has_api
+- NFDI4Health
+- clinical research
+- FAIR
+- SEEK
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00006814

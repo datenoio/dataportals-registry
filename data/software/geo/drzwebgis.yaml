@@ -1,0 +1,60 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'No'
+has_bulk: 'No'
+id: drzwebgis
+name: DRZ WebGIS
+website: https://www.drz.com.br/
+description: DRZ WebGIS (Plataforma SIG Web) is a Brazilian municipal cadastral
+  WebGIS from DRZ Territórios Inteligentes. Public tenants live at
+  webgis.drz.com.br/{city}/ with OpenLayers, meta Rodolfo/DRZ Geotecnologia,
+  and lot/zoning search. Nonexistent city paths return nginx 404 (not a
+  wildcard). Distinct from CTMGEO SigWEB (ctmgeo), Geodados SaaS (geodados),
+  and Geopixel Cidades (geopixel). Skip the nginx default root, /drz/ clients
+  map, Tomcat manager, and demo/docs/examples paths.
+owner:
+  name: DRZ Territórios Inteligentes
+  location:
+    country:
+      id: BR
+      name: Brazil
+documentation_url: https://www.drz.com.br/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'No'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+export_formats:
+- JSON
+capabilities:
+- Map viewer
+- Municipal GIS
+last_updated: '2026-09-18T00:00:00Z'

@@ -107,6 +107,18 @@ One Layer (or LayerGroup) = one dataset-like object. Do not also ingest every WF
 
 **Keep:** WMS **Layer** / LayerGroup names (or OGC API collections). **Drop:** duplicate WFS FeatureTypes and WCS Coverages of the same name, and `/geoserver/web` login.
 
+## istSOS (`istsos`) {#istsos}
+
+OGC Sensor Observation Service. Harvest **offerings** (or procedures/stations) from SOS GetCapabilities; the service name is per-installation (`/istsos/{service}`), so take it from the registry record's `endpoints[]` or the viewer `/config/config.json` (`apiBaseUrl`, `defaultService`).
+
+```text
+GET https://host/istsos/{service}?service=SOS&version=1.0.0&request=GetCapabilities
+```
+
+One ObservationOffering (or procedure, when offerings are absent) = one dataset-like object. Do not ingest every `GetObservation` time series as a dataset. Some instances protect the raw SOS API with HTTP basic auth while serving a public istSOS-viewer front-end; register the viewer as `link` and keep the SOS URL in `endpoints[]`.
+
+**Keep:** ObservationOffering / procedure identifiers and names. **Drop:** individual observations, `/istsos/admin` login, viewer static assets.
+
 ## CubeWerx CubeSERV (`cubewerx`) {#cubewerx}
 
 ```text
@@ -268,6 +280,17 @@ GET https://host/index.php/lizmap/service?repository=REPO&project=PROJECT&SERVIC
 Harvest **layers in published projects**. Skip `/admin.php`. One Lizmap site may have many repositories — use the catalog `link` repository, not every sibling.
 
 **Keep:** layers in published Lizmap projects. **Drop:** `/admin.php` and sibling repositories that are not the catalog `link`.
+
+## Geotrek (`geotrek`) {#geotrek}
+
+```text
+GET https://host/api/v2/trek/?page_size=1
+GET https://host/api/trek/json/
+```
+
+Keep **treks** (and outdoor sites / touristic contents when listed as catalog objects) from Geotrek-admin API v2 or the rando v2 `/api/trek/json/` proxy. The public catalog is Geotrek-rando; the API is often on a separate Geotrek-admin host — resolve it from the live rando config, do not guess `/admin`. Drop Geotrek-admin login, mobile apps, and widget embeds. One harvest scope per public rando portal. Viewer grain: [harvest-viewers.md](harvest-viewers.md).
+
+**Keep:** published **treks** (and outdoor/tourism catalog objects). **Drop:** Geotrek-admin login, mobile apps, and widget embeds.
 
 ## GeoNature (`geonature`) {#geonature}
 
@@ -469,6 +492,12 @@ Argentine GeoNube Leaflet/bootleaf visors. Same grain as [Wagmap](#wagmap). [har
 
 **Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#geonube)). **Drop:** tiles, print PDFs, basemaps, and login walls.
 
+## Sistema Geodados SaaS (`geodados`) {#geodados}
+
+Brazilian Geodados SaaS municipal GIS. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#geodados).
+
+**Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#geodados)). **Drop:** tiles, print PDFs, basemaps, and login walls.
+
 ## Geopixel Cidades (`geopixel`) {#geopixel}
 
 Brazilian Geopixel Cidades municipal geoportals. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#geopixel).
@@ -480,6 +509,18 @@ Brazilian Geopixel Cidades municipal geoportals. Same grain as [Wagmap](#wagmap)
 Brazilian CTMGEO SigWEB municipal cadastral maps. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#ctmgeo).
 
 **Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#ctmgeo)). **Drop:** tiles, print PDFs, basemaps, and login walls.
+
+## MapMap (`mapmap`) {#mapmap}
+
+Brazilian MapMap municipal citizen geoportals. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#mapmap). Distinct from `geodados`, `ctmgeo`, `geopixel`, and `drzwebgis`.
+
+**Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#mapmap)). **Drop:** tiles, print PDFs, basemaps, citizen-issue reports, and login walls.
+
+## DRZ WebGIS (`drzwebgis`) {#drzwebgis}
+
+Brazilian DRZ WebGIS municipal cadastral maps. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#drzwebgis). Distinct from `ctmgeo`.
+
+**Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#drzwebgis)). **Drop:** tiles, print PDFs, basemaps, and login walls.
 
 ## NieuwlandGeo Onemap (`nieuwlandonemap`) {#nieuwlandonemap}
 
@@ -740,6 +781,32 @@ CSW GetRecords. Keep ISO `dataset` / `series`. Same grain as GeoNetwork ([harves
 
 **Keep:** ISO `dataset` / `series` from Micka CSW. **Drop:** service records and installer HTML.
 
+## HSLayers NG (`hslayersng`) {#hslayersng}
+
+```text
+GET https://host/layman-proxy/rest/workspaces/{workspace}/maps
+GET https://host/rest/workspaces/{workspace}/maps
+GET https://host/rest/workspaces/{workspace}/layers
+```
+
+HSLayers NG is a client framework; the harvestable catalog is the Layman backend it ships with. Typical catalog links end in `/map/` or `/mapy/`. Cleanup strips those app paths so the origin `/rest/...` and `/layman-proxy/rest/...` probes are not doubled. Workspace names are deployment-specific (`browser`, user accounts); discover them from composition URLs embedded in the hub home page (`/map?composition=https://host/rest/workspaces/<workspace>/maps/<name>`).
+
+Map and layer listings return JSON with `access_rights`, `bounding_box`, `title`, and WMS/WFS service references. Grain: one record per map composition or per layer, not per WMS feature type. If a sibling Micka CSW (`/micka/`) exists on the same host, prefer CSW for metadata-rich records and use Layman only for the composition list.
+
+**Keep:** Layman `maps` and `layers` items readable by `EVERYONE`. **Drop:** login-walled workspaces, the WordPress/Wagtail marketing pages around the app, and QGIS-plugin-only drafts.
+
+## Layman (`layman`) {#layman}
+
+```text
+GET https://host/rest/workspaces/{workspace}/maps
+GET https://host/rest/workspaces/{workspace}/layers
+GET https://host/layman-proxy/rest/workspaces/{workspace}/maps
+```
+
+Bare Layman servers expose the same REST API without the HSLayers client. Root `/rest/` may answer 404 — probe item paths directly. Public workspaces list `read: ["EVERYONE"]` in `access_rights`. Layer items carry `file`, `db`, `wms`/`wfs` blocks; map items carry composition JSON.
+
+**Keep:** public `maps` and `layers` items. **Drop:** the “Layman Test Client” HTML, authentication endpoints, and empty workspaces.
+
 ## deegree (`deegree`) {#deegree}
 
 ```text
@@ -887,6 +954,149 @@ endpoint. Discover the current metadata service from the linked catalog and appl
 [shared protocol guidance](harvest-protocols.md). No catalog API fields were changed.
 
 **Keep:** one metadata record per dataset identifier (CSW / Atom / public read API). **Drop:** editorial pages, authenticated resource-API writes, and spatial features as extra datasets.
+
+## Nazca4U Rapportagemodule (`nazca4u`) {#nazca4u}
+
+Nazca soil-information tenants at `{tenant}.nazca4u.nl/rapportage/`. One harvest scope per
+public tenant. The ASP.NET application has no documented public list API: bodeminformatie is
+queried by address, parcel, or map selection and delivered as a PDF report by e-mail, with
+linked bodemonderzoek reports where available.
+
+**Keep:** the tenant's soil-investigation report index (linked `bodemonderzoek` documents per
+parcel/layer) as dataset analogs. **Drop:** the PDF report-order flow, e-mail forms, account
+pages, and basemap tiles. Do not harvest the vendor marketing site.
+
+## ClimSeries (`climseries`) {#climseries}
+
+FAO SWALIM climate time-series tenants (`climseries.faoswalim.org`,
+`climseries.imcpuntland.so`, `www.imcsomaliland.org/climseries/station/`). One harvest scope
+per tenant. Station groups are listed under `/station/map/{aws,mrs,ss,gws}/` with per-station
+tables and CSV downloads.
+
+**Keep:** each **station** (with its time-series download) as one dataset analog; station-group
+pages as the list source. **Drop:** dashboard charts, map tiles, and the download request form
+itself. Keep the three tenants as separate catalogs; do not merge them into the FAO SWALIM record.
+
+## GISNET V5 (`gisnet`) {#gisnet}
+
+Complot municipal GIS tenants at `v5.gis-net.co.il/v5/{authority}/` and `mg{1,2}.gis-net.co.il/{Authority}Gis`.
+One harvest scope per public tenant. The JS viewer has no documented public list API: layers are
+browsed in the TOC and queried by parcel, address, or plan.
+
+**Keep:** the tenant's published layer list (parcels, plans, engineering layers) as map-layer
+dataset analogs. **Drop:** basemap tiles, print/share tools, and the embedded Google Street View.
+The host geo-blocks some non-IL networks; harvest from an IL-reachable network.
+
+## Taldor MapExpert (`mapexpert`) {#mapexpert}
+
+Taldor municipal GIS tenants at `gis{NN}.taldor.co.il/{City}Gis`. One harvest scope per public
+tenant. The viewer has no documented public list API; a WAF answers 403 to non-browser clients.
+
+**Keep:** the tenant's published layer list as map-layer dataset analogs. **Drop:** basemap tiles
+and UI chrome. Harvest needs a browser-like client or an IL-reachable network.
+
+## SWIMS (`swims`) {#swims}
+
+FAO SWALIM water-source tenants (`swims.faoswalim.org`, `pwsims.imcpuntland.so`). One harvest
+scope per tenant. The dashboard pairs an operational LiveMap with a tabular water-source
+inventory (boreholes, dug wells, dams, berkads, springs).
+
+**Keep:** each **water-source record** in the inventory table (with functioning status, quality
+analytics, and survey metadata) as one dataset analog; the inventory table as the list source.
+**Drop:** dashboard charts, map tiles, and user-account pages. ClimSeries and FRRIMS on the same
+hosts are separate applications — do not merge.
+
+## GovPilot GIS Map (`govpilot`) {#govpilot}
+
+GovPilot tenants at `map.govpilot.com/map/{state}/{city}`. One harvest scope per public tenant.
+The Kendo ASP.NET viewer has no documented public list API.
+
+**Keep:** the tenant's published layer list (parcels, zoning, administrative layers) as map-layer
+dataset analogs. **Drop:** basemap tiles and UI chrome. Do not harvest the vendor marketing site.
+
+## MapSifter (`mapsifter`) {#mapsifter}
+
+TerraScan county parcel tenants at `{county}-mapsifter.publicaccessnow.com` (and legacy
+`{county}.mapsifter.com`). One harvest scope per public tenant. The ASP.NET application sits
+behind a `Disclaimer.aspx` gateway and has no documented public list API.
+
+**Keep:** parcel search results (parcel number, owner, address, assessment, zoning) as dataset
+analogs where bulk terms allow. **Drop:** the disclaimer gateway, print pages, and basemap tiles.
+Bare subdomain guesses may hit an AWS ALB `Target Group Heartbeat` default — not a tenant.
+
+## Civil Solutions Tax Map Viewer (`civiltmv`) {#civiltmv}
+
+Civil Solutions / ARH tenants at `tmv.civilsolutions.biz/viewer/{tenant-id}`. One harvest scope
+per public tenant. The Mazer viewer has no documented public list API: tax maps are searched by
+block/lot, address, or map sheet and parcel details render in a side panel.
+
+**Keep:** each **tax map sheet** (with its parcel detail extract) as one dataset analog; the
+map-sheet index as the list source. **Drop:** the viewer UI, key-map navigation, and basemap
+tiles. Do not harvest the vendor site.
+
+## IDEBA Visualizador (`ideba`) {#ideba}
+
+IDEBA municipal tenants at `visualizador.ideba.gba.gob.ar/{municipio}`. One harvest scope per
+tenant. The Leaflet viewer is backed by per-tenant GeoServer workspaces at
+`geoserver-nodo2.ideba.gba.gob.ar/geoserver/{municipio}/wfs|wms` — use the standard GeoServer
+layer listing as the list source.
+
+**Keep:** each **GeoServer layer** in the tenant workspace as one map-layer dataset analog.
+**Drop:** basemap tiles, measure/locate tools, and the province-level portal pages.
+
+## Intertown UP (`intertownup`) {#intertownup}
+
+Intertown UP tenants at `up.intertown.co.il/{code}/public/`. One harvest scope per public
+tenant. The React SPA has no documented public list API; layers load from the tenant config.
+
+**Keep:** the tenant's published layer list as map-layer dataset analogs. **Drop:** the
+login-only `/org/` systems, basemap tiles, and UI chrome.
+
+## GeoMixer / Kosmosnimki (`geomixer`) {#geomixer}
+
+One harvest scope per GeoMixer map (the `window.defaultMapID` in `config.js`, or the map
+loaded by `index.html`). The layer tree is available from the GeoMixer REST API
+(`/api/` on the portal host); ScanEx portals such as `www.kosmosnimki.ru` and `fires.ru`
+publish many layers, while thematic sites (warfly.ru, huntmap.kz, оопт.рф) serve a
+single curated layer set. `search.kosmosnimki.ru` is an imagery archive catalog: scene
+footprints and acquisition metadata, not downloadable rasters.
+
+**Keep:** each **layer in the map's layer tree** as one map-layer dataset analog; for
+`search.kosmosnimki.ru`, each **satellite program catalog** (GeoEye, Ikonos, QuickBird,
+WorldView, Eros) as one dataset analog. **Drop:** basemap tiles, the geomixer.js client,
+and vendor demo maps.
+
+## Atlas (`atlas`) {#atlas}
+
+Atlas (Purmerend Common Ground geoportal) tenants on municipal hosts. One harvest scope per
+tenant. The Vue/Django app serves WMS, WFS, WMTS, and vector-tile layers; there is no
+documented catalog list API on the tenant URL.
+
+**Keep:** the tenant's published layer list as map-layer dataset analogs. **Drop:** basemap
+tiles and UI chrome.
+
+## Mappi (`mappi`) {#mappi}
+
+Mappi (Swis) tenants at `kaart.{city}.nl`. One harvest scope per tenant. Each published map is
+a GeoJSON FeatureCollection at `/api/maps/{id}.json`; there is no documented map-index list
+API, so enumerate map ids from the tenant's page or menu config.
+
+**Keep:** each **published map** (`/api/maps/{id}.json`) as one dataset analog. **Drop:** the
+editorial page chrome and basemap tiles. Do not harvest event maps (kaart.marathon.nl).
+
+## geoCore (`geocore`) {#geocore}
+
+One harvest scope per geoCore portal (the deployment's `GEOCORE_API_DOMAIN`, e.g.
+`https://geocore.api.geo.ca` for GEO.ca). The REST API is enumerable: bbox search
+`GET /geo?north=90&south=-90&east=180&west=-180&lang=en&min={offset}&max={limit}` returns
+`Items` with `total` for paging; record detail is `GET /id?id={uuid}&lang=en`. Records are
+extended GeoJSON; `options` is a doubly-escaped JSON string of `{protocol, name, url}`
+distribution links (HTTPS downloads, WMS, ESRI REST, HTML pages). Avoid `GET /featured`
+(Lambda payload limit). [API docs](https://canadian-geospatial-platform.github.io/geocore/docs/api-documentation/).
+
+**Keep:** each **metadata record** (`id` UUID) as one dataset analog; use `options[].url`
+as distributions and `topicCategory` as theme. **Drop:** `/analytics/*` endpoints,
+saved-search/community endpoints (API-key only), and the GeoView viewer chrome.
 
 ## Related
 

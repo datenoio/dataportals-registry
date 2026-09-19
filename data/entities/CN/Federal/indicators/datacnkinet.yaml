@@ -1,0 +1,56 @@
+id: datacnkinet
+name: CNKI Economic and Social Big Data Research Platform
+link: https://data.cnki.net
+catalog_type: Indicators catalog
+access_mode:
+- restricted
+status: active
+software:
+  id: cnkidata
+  name: CNKI Economic and Social Big Data Research Platform
+owner:
+  name: Tongfang Knowledge Network (CNKI)
+  type: Business
+  location:
+    country: &id001
+      id: CN
+      name: China
+    level: 20
+  link: https://cnki.net
+coverage:
+- location:
+    country: *id001
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: 中国经济社会大数据研究平台 is CNKI's statistical data platform digitizing thousands
+  of Chinese statistical yearbooks into searchable indicator tables.
+langs:
+- id: ZH
+  name: Chinese
+tags:
+- statistics
+- economics
+- yearbooks
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+content_types:
+- dataset
+api: false
+api_status: uncertain
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+uid: cdi00007499

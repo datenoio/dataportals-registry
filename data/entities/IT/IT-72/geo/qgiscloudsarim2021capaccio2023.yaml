@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-72
+      name: Campania
+description: Public QGIS Cloud municipal map (CAPACCIO2023) of the Comune di Capaccio Paestum, embedded
+  on comune.capaccio.sa.it.
+endpoints:
+- type: wms130
+  url: https://www.qgiscloud.com/Sarim2021/CAPACCIO2023/wms?SERVICE=WMS&REQUEST=GetCapabilities
+id: qgiscloudsarim2021capaccio2023
+langs:
+- id: IT
+  name: Italian
+link: https://www.qgiscloud.com/Sarim2021/CAPACCIO2023
+name: Capaccio Paestum Municipal Map 2023
+owner:
+  link: https://comune.capaccio.sa.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-72
+      name: Campania
+  name: Comune di Capaccio Paestum
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: qgiscloud
+  name: QGIS Cloud
+status: active
+tags:
+- geospatial
+- geoportal
+- qgis-cloud
+- Campania
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007211

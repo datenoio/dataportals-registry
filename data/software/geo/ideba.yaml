@@ -1,0 +1,60 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: ideba
+name: IDEBA Visualizador
+website: https://visualizador.ideba.gba.gob.ar/
+description: IDEBA Visualizador is the hosted municipal map-viewer platform of the
+  Buenos Aires Province spatial data infrastructure (IDEBA, Infraestructura de Datos
+  Espaciales de la Provincia de Buenos Aires). Municipal tenants live at
+  visualizador.ideba.gba.gob.ar/{municipio} as a Leaflet application
+  (src/leaflet/plugins/*, map-toolbar.css) backed by per-tenant GeoServer workspaces
+  at geoserver-nodo2.ideba.gba.gob.ar/geoserver/{municipio}/wfs|wms. One record per
+  public municipal tenant; the province-level GeoNetwork catalog and GeoServer nodes
+  are separate records.
+owner:
+  name: Provincia de Buenos Aires - IDEBA
+  location:
+    country:
+      id: AR
+      name: Argentina
+documentation_url: https://ideba.gba.gob.ar/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'No'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'Yes'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+capabilities:
+- Map viewer
+- Municipal GIS
+- OGC WMS/WFS layers
+last_updated: '2026-09-16T00:00:00Z'

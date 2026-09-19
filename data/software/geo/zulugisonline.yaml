@@ -1,0 +1,62 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: zulugisonline
+name: ZuluGIS Online
+website: https://www.politerm.com/products/geo/zulugisonline/
+description: ZuluGIS Online (ZuluWeb) is Politerm's browser client for ZuluServer.
+  Public installations list published web maps at /ZuluWeb/ and expose layers through
+  Zulu Web Service (ZWS) commands such as GetZMMapList / GetLayerList plus optional
+  WMS, WFS, WMTS and ZWMTS endpoints. The default HTTP port is 6473.
+owner:
+  name: Politerm
+  location:
+    country:
+      id: RU
+      name: Russia
+logo_url: https://www.politerm.com/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+documentation_url: https://www.politerm.com/zulugisonline/webhelp/intro.html
+export_formats:
+- GeoJSON
+- JSON
+- XML
+capabilities:
+- Web map catalog
+- Zulu Web Service (ZWS)
+- WMS
+- Utility-network topology
+last_updated: '2026-09-18T00:00:00Z'

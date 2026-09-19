@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 30
+    subregion:
+      id: BE-VBR
+      name: Vlaams-Brabant
+description: Public municipal map viewer of Stad Halle on the Mappi platform (Dutch
+  interface).
+endpoints:
+- type: customapi
+  url: https://kaart.halle.be/api/maps/4.json
+id: kaarthallebe
+langs:
+- id: NL
+  name: Dutch
+link: https://kaart.halle.be/
+name: Kaart Halle
+owner:
+  link: https://halle.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 30
+    subregion:
+      id: BE-VBR
+      name: Vlaams-Brabant
+  name: Stad Halle
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mappi
+  name: Mappi
+status: active
+tags:
+- GIS
+- geospatial
+- government
+- belgium
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007018

@@ -1,0 +1,492 @@
+{
+  "review_date": "2026-09-07",
+  "scope": "24 preselected scientific custom catalog records with registered OAI-PMH endpoints; homepage and endpoint GETs, 12 second timeouts. HTTP 200 is not protocol validation.",
+  "results": [
+    {
+      "id": "etdohiolinkedu",
+      "requests": [
+        {
+          "url": "https://etd.ohiolink.edu/",
+          "final": "https://etd.ohiolink.edu/acprod/odb_etd/r/etd/search/1?clear=0,1,5,10,20,21,1001",
+          "status": 200,
+          "server": null,
+          "signals": []
+        },
+        {
+          "url": "https://etd.ohiolink.edu/acprod/odb_etd/ws/oai/oai?verb=Identify",
+          "final": "https://etd.ohiolink.edu/acprod/odb_etd/ws/oai/oai?verb=Identify",
+          "status": 200,
+          "server": null,
+          "signals": [
+            "      <eprints xmlns=\"http://www.openarchives.org/OAI/1.1/eprints\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.openarchives.org/OAI/1.",
+            "1/eprints http://www.openarchives.org/OAI/1.1/eprints.xsd\">",
+            "      </eprints>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rdaucaredu",
+      "requests": [
+        {
+          "url": "https://rda.ucar.edu",
+          "final": "https://gdex.ucar.edu/",
+          "status": 200,
+          "server": null,
+          "signals": []
+        },
+        {
+          "url": "https://rda.ucar.edu/cgi-bin/oai?verb=Identify",
+          "final": "https://gdex.ucar.edu/cgi-bin/oai?verb=Identify",
+          "status": 404,
+          "server": null,
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "digitallibraryuntedu",
+      "requests": [
+        {
+          "url": "https://digital.library.unt.edu/explore/collections/UNTDRD/",
+          "final": "https://digital.library.unt.edu/explore/collections/UNTDRD/",
+          "status": 200,
+          "server": "Apache/2.4.62 (Red Hat Enterprise Linux) mod_wsgi/4.7.1 Python/3.9",
+          "signals": []
+        },
+        {
+          "url": "https://digital.library.unt.edu/oai/?verb=Identify",
+          "final": "https://digital.library.unt.edu/oai/?verb=Identify",
+          "status": 200,
+          "server": "Apache/2.4.62 (Red Hat Enterprise Linux) mod_wsgi/4.7.1 Python/3.9",
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "corporauclouvainbe",
+      "requests": [
+        {
+          "url": "https://corpora.uclouvain.be/catalog/",
+          "final": "https://corpora.uclouvain.be/catalog/",
+          "status": 200,
+          "server": "nginx/1.26.3",
+          "signals": []
+        },
+        {
+          "url": "https://repository.clarin.uclouvain.be/oai-pmh?verb=Identify",
+          "final": "https://repository.clarin.uclouvain.be/oai-pmh?verb=Identify",
+          "status": 200,
+          "server": "nginx/1.26.3",
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "tekstlabuiono",
+      "requests": [
+        {
+          "url": "https://tekstlab.uio.no/clarino/",
+          "final": "https://tekstlab.uio.no/clarino/",
+          "status": 200,
+          "server": "Apache",
+          "signals": [
+            "ing and future language resources easily accessible for researchers and to bring eScience to humanities disciplines. The CLARINO project is coordinated by University of Bergen"
+          ]
+        },
+        {
+          "url": "https://tekstlab.uio.no/oai?verb=Identify",
+          "final": "https://tekstlab.uio.no/oai/?verb=Identify",
+          "status": 200,
+          "server": "Apache",
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "nbnosprakbanken",
+      "requests": [
+        {
+          "url": "https://www.nb.no/sprakbanken/",
+          "final": "https://www.nb.no/sprakbanken/",
+          "status": 200,
+          "server": "nginx",
+          "signals": []
+        },
+        {
+          "url": "https://www.nb.no/sprakbanken/oai?verb=Identify",
+          "final": "https://www.nb.no/sprakbanken/oai?verb=Identify",
+          "status": 200,
+          "server": "nginx",
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "inventoryclaringr",
+      "requests": [
+        {
+          "url": "https://inventory.clarin.gr/",
+          "final": "https://inventory.clarin.gr/",
+          "status": 200,
+          "server": "nginx/1.17.8",
+          "signals": []
+        },
+        {
+          "url": "https://inventory.clarin.gr/catalogue_backend/api/oai-pmh/?verb=Identify",
+          "final": "https://inventory.clarin.gr/catalogue_backend/api/oai-pmh/?verb=Identify",
+          "status": 200,
+          "server": "nginx/1.17.8",
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "digitallibraryspcint",
+      "requests": [
+        {
+          "url": "https://www.spc.int/digitallibrary/",
+          "final": "https://www.spc.int/digitallibrary/FAME",
+          "status": 200,
+          "server": "cloudflare",
+          "signals": []
+        },
+        {
+          "url": "https://www.spc.int/DigitalLibrary/OAI?verb=Identify",
+          "final": "https://www.spc.int/DigitalLibrary/OAI?verb=Identify",
+          "status": 200,
+          "server": "cloudflare",
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "appdaschswiss",
+      "requests": [
+        {
+          "url": "https://app.dasch.swiss",
+          "final": "https://app.dasch.swiss/",
+          "status": 200,
+          "server": "nginx",
+          "signals": []
+        },
+        {
+          "url": "https://repository.dasch.swiss/dpe/oai?verb=Identify",
+          "final": "https://repository.dasch.swiss/dpe/oai?verb=Identify",
+          "status": 200,
+          "server": null,
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "korpuscz",
+      "requests": [
+        {
+          "url": "https://www.korpus.cz/",
+          "final": "https://www.korpus.cz/",
+          "status": 200,
+          "server": "nginx/1.18.0 (Ubuntu)",
+          "signals": []
+        },
+        {
+          "url": "https://korpus.cz/vlo/oai?verb=Identify",
+          "final": "https://korpus.cz/vlo/oai?verb=Identify",
+          "status": 200,
+          "server": "nginx/1.18.0 (Ubuntu)",
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "portulanclarinnet",
+      "requests": [
+        {
+          "url": "https://portulanclarin.net/repository/search/",
+          "error": "ReadTimeout"
+        },
+        {
+          "url": "https://portulanclarin.net/repository/oaipmh/",
+          "error": "ReadTimeout"
+        }
+      ]
+    },
+    {
+      "id": "radarbrookesacuk",
+      "requests": [
+        {
+          "url": "https://radar.brookes.ac.uk/radar",
+          "final": "https://radar.brookes.ac.uk/radar",
+          "status": 200,
+          "server": "Apache/2.4.58 (Ubuntu)",
+          "signals": [
+            "n\" href=\"https://radar.brookes.ac.uk/radar/p/r/2025.2.1/com.equella.core/images/favicon.ico\">",
+            "0\" href=\"https://radar.brookes.ac.uk/radar/p/r/2025.2.1/com.equella.core/images/favicon.120x120px.png\">",
+            "2\" href=\"https://radar.brookes.ac.uk/radar/p/r/2025.2.1/com.equella.core/images/favicon.152x152px.png\">",
+            "7\" href=\"https://radar.brookes.ac.uk/radar/p/r/2025.2.1/com.equella.core/images/favicon.167x167px.png\">"
+          ]
+        },
+        {
+          "url": "https://radar.brookes.ac.uk/radar/oai?verb=Identify",
+          "final": "https://radar.brookes.ac.uk/radar/oai?verb=Identify",
+          "status": 200,
+          "server": "Apache/2.4.58 (Ubuntu)",
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "wwwmdwacatrepository",
+      "requests": [
+        {
+          "url": "https://www.mdw.ac.at/repository",
+          "final": "https://www.mdw.ac.at/repository/",
+          "status": 200,
+          "server": null,
+          "signals": []
+        },
+        {
+          "url": "https://repo.mdw.ac.at/cgi-bin/OAI-XMLFile-2.1/XMLFile/mdw/oai.pl",
+          "final": "https://repo.mdw.ac.at/cgi-bin/OAI-XMLFile-2.1/XMLFile/mdw/oai.pl",
+          "status": 200,
+          "server": "Apache/2.4.6 () OpenSSL/1.0.2k-fips PHP/5.4.16 mod_wsgi/3.4 Python/2.7.5",
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "archeacdhoeawacat",
+      "requests": [
+        {
+          "url": "https://arche.acdh.oeaw.ac.at",
+          "final": "https://arche.acdh.oeaw.ac.at/browser/",
+          "status": 200,
+          "server": "nginx",
+          "signals": [
+            "<meta name=\"Generator\" content=\"Drupal 10 (https://www.drupal.org)\" />",
+            "<link rel=\"icon\" href=\"/browser/themes/contrib/arche-theme-bs/favicon.ico\" type=\"image/vnd.microsoft.icon\" />",
+            "        <title>Home | ARCHE</title>",
+            " rel=\"stylesheet\" media=\"all\" href=\"/browser/themes/contrib/arche-theme-bs/css/jquery-ui-1.13.3.min.css?tksbfa\" />"
+          ]
+        },
+        {
+          "url": "https://arche.acdh.oeaw.ac.at/oaipmh/",
+          "final": "https://arche.acdh.oeaw.ac.at/oaipmh/",
+          "status": 200,
+          "server": null,
+          "signals": [
+            "    <request >http://arche.acdh.oeaw.ac.at/oaipmh/</request>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deimsorg",
+      "requests": [
+        {
+          "url": "https://deims.org",
+          "final": "https://deims.org/",
+          "status": 200,
+          "server": "Apache",
+          "signals": [
+            "<meta name=\"Generator\" content=\"Drupal 10 (https://www.drupal.org)\" />",
+            "edia=\"all\" href=\"https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.4.0/8.x-3.x/drupal-bootstrap.min.css\" integrity=\"sha512-tGFFYdzcicBwsd5EPO92iUI",
+            "    <div data-drupal-messages-fallback class=\"hidden\"></div>",
+            "    <script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"pathPrefix\":\"\",\"currentPath\":\"node\\/2\",\"currentPathIsAdmin\":false,\"is"
+          ]
+        },
+        {
+          "url": "https://deims.org/pycsw/?mode=oaipmh&verb=Identify",
+          "final": "https://deims.org/pycsw/?mode=oaipmh&verb=Identify",
+          "status": 200,
+          "server": "gunicorn",
+          "signals": [
+            "{\"id\": \"pycsw-catalogue\", \"links\": [{\"rel\": \"self\", \"type\": \"application/json\", \"title\": \"This document as JSON\", \"href\": \"",
+            "https://deims.org/pycsw?f=json\", \"hreflang\": \"en-US\"}, {\"rel\": \"conformance\", \"type\": \"application/json\", \"title\": \"Conformance as JS",
+            "ON\", \"href\": \"https://deims.org/pycsw/conformance?f=json\"}, {\"rel\": \"service-doc\", \"type\": \"text/html\", \"title\": \"The OpenAPI definition as HTML\", ",
+            "\"href\": \"https://deims.org/pycsw/openapi?f=html\"}, {\"rel\": \"service-desc\", \"type\": \"application/vnd.oai.openapi+json;version=3.0\", \"title\": \"T"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lacunikoelnde",
+      "requests": [
+        {
+          "url": "https://lac.uni-koeln.de/",
+          "final": "https://lac.uni-koeln.de/",
+          "status": 200,
+          "server": "nginx",
+          "signals": [
+            "emibold text-base-content/60 uppercase tracking-widest\">Researcher</th>",
+            " the main phase of the project (2010-15), the principal researchers Nikolaus P. Himmelmann, Freya Morigerowsky, Volker Unterladstetter and Yusuf Sawaki worked in close coopera",
+            "n close collaboration with speakers of the language and researchers of other disciplines from outside the community. This collection of texts constitutes a sub-corpus of the V"
+          ]
+        },
+        {
+          "url": "https://lac.uni-koeln.de/oai?verb=Identify",
+          "final": "https://lac.uni-koeln.de/oai/?verb=Identify",
+          "status": 200,
+          "server": "nginx",
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "clarinphonetikunimuenchende",
+      "requests": [
+        {
+          "url": "https://clarin.phonetik.uni-muenchen.de/BASRepository/",
+          "final": "https://clarin.phonetik.uni-muenchen.de/BASRepository/",
+          "status": 200,
+          "server": "Apache/2.4.52 (Ubuntu)",
+          "signals": []
+        },
+        {
+          "url": "https://clarin.phonetik.uni-muenchen.de/cgi-bin/BASRepository/oaipmh/oai.pl?verb=Identify",
+          "final": "https://clarin.phonetik.uni-muenchen.de/cgi-bin/BASRepository/oaipmh/oai.pl?verb=Identify",
+          "status": 200,
+          "server": "Apache/2.4.52 (Ubuntu)",
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "talarsfsunituebingende",
+      "requests": [
+        {
+          "url": "https://talar.sfs.uni-tuebingen.de/",
+          "final": "https://talar.sfs.uni-tuebingen.de/",
+          "status": 200,
+          "server": "Apache/2.4.37 (AlmaLinux) OpenSSL/1.1.1k",
+          "signals": []
+        },
+        {
+          "url": "https://talar.sfs.uni-tuebingen.de:8088/api/oai?verb=Identify",
+          "final": "https://talar.sfs.uni-tuebingen.de:8088/api/oai?verb=Identify",
+          "status": 200,
+          "server": null,
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "pangaeade",
+      "requests": [
+        {
+          "url": "https://pangaea.de",
+          "final": "https://pangaea.de/",
+          "status": 200,
+          "server": "nginx/1.31.5",
+          "signals": []
+        },
+        {
+          "url": "https://ws.pangaea.de/oai/provider?verb=Identify",
+          "final": "https://ws.pangaea.de/oai/provider?verb=Identify",
+          "status": 200,
+          "server": "nginx/1.31.5",
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "cocoonhumanumfr",
+      "requests": [
+        {
+          "url": "https://cocoon.huma-num.fr/",
+          "final": "https://cocoon.huma-num.fr/",
+          "status": 200,
+          "server": "Apache",
+          "signals": []
+        },
+        {
+          "url": "https://cocoon.huma-num.fr/exist/crdo/oai.xql?verb=Identify",
+          "final": "https://cocoon.huma-num.fr/exist/crdo/oai.xql?verb=Identify",
+          "status": 200,
+          "server": "Jetty(9.4.57.v20241219)",
+          "signals": [
+            "            <eprints xmlns=\"http://www.openarchives.org/OAI/1.1/eprints\" xsi:schemaLocation=\"http://www.openarchives.org/OAI/1.1/e",
+            "prints http://www.openarchives.org/OAI/1.1/eprints.xsd\">",
+            "            </eprints>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "investigacionuniriojaes",
+      "requests": [
+        {
+          "url": "https://investigacion.unirioja.es",
+          "final": "https://investigacion.unirioja.es/",
+          "status": 200,
+          "server": "Apache/2.4.68",
+          "signals": [
+            "a class=\"navbar__investigadores\" href=\"/investigadores\">Researchers</a>   ",
+            "         <div class=\"index-contadores__contador-titulo\">Researchers</div>"
+          ]
+        },
+        {
+          "url": "https://investigacion.unirioja.es/oai/openaire?verb=Identify",
+          "final": "https://investigacion.unirioja.es/oai/openaire?verb=Identify",
+          "status": 200,
+          "server": "Apache/2.4.68",
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "midaslt",
+      "requests": [
+        {
+          "url": "https://midas.lt",
+          "final": "https://midas.lt/",
+          "status": 200,
+          "server": null,
+          "signals": []
+        },
+        {
+          "url": "https://midas.lt/web/action/oaipmh?verb=Identify",
+          "final": "https://midas.lt/web/action/oaipmh?verb=Identify",
+          "status": 200,
+          "server": null,
+          "signals": []
+        }
+      ]
+    },
+    {
+      "id": "datacericericeu",
+      "requests": [
+        {
+          "url": "https://data.ceric-eric.eu",
+          "error": "SSLError"
+        },
+        {
+          "url": "https://data.ceric-eric.eu/oaipmh/request?verb=Identify",
+          "error": "SSLError"
+        }
+      ]
+    },
+    {
+      "id": "opensciencedataesaint",
+      "requests": [
+        {
+          "url": "https://opensciencedata.esa.int",
+          "final": "https://opensciencedata.esa.int/",
+          "status": 200,
+          "server": "nginx/1.31.5",
+          "signals": []
+        },
+        {
+          "url": "https://catalog.opensciencedata.esa.int/?mode=oaipmh&verb=Identify",
+          "final": "https://catalog.opensciencedata.esa.int/?mode=oaipmh&verb=Identify",
+          "status": 200,
+          "server": "gunicorn",
+          "signals": [
+            "{\"stac_version\": \"1.0.0\", \"id\": \"pycsw-catalogue\", \"type\": \"Catalog\", \"conformsTo\": [\"http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core\", \"h",
+            "talogue\", \"description\": \"Open Science Catalogue powered by pycsw\", \"keywords\": [\"catalogue\", \"discovery\", \"metadata\"]}"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AM
+      name: Armenia
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: 'Civic air-quality data portal for Armenia. Publishes hourly sensor measurements
+  (PM1, PM2.5, PM10, temperature, humidity) from Yerevan Municipality and independent
+  networks as open data: bulk file exports (DbCL 1.0) and a documented public JSON
+  API with station, current-readings and history endpoints.'
+id: airqualityam
+langs:
+- id: EN
+  name: English
+- id: HY
+  name: Armenian
+link: https://airquality.am
+name: AirQuality.am - Open Air Quality Data Armenia
+owner:
+  link: https://airquality.am
+  location:
+    country:
+      id: AM
+      name: Armenia
+  name: AirQuality.am
+  type: Civil society
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- armenia
+- open-data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00006806
+endpoints:
+- type: customapi
+  url: https://airquality.am/en/air-quality-app/v1/stations.json

@@ -1,0 +1,62 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: atlas
+name: Atlas
+website: https://gitlab.com/purmerend/atlas
+description: Atlas is the open-source (EUPL 1.2) Common Ground municipal geoportal
+  started by Gemeente Purmerend and developed with Delta10 and the Atlas community.
+  Public tenants run at municipal hosts (atlas.apeldoorn.nl, geodata.zutphen.nl,
+  datalab.purmerend.nl/atlas, viewer.zaanstad.nl/atlas) as a Vue.js SPA served from
+  /atlas/static/assets/
+  with the title "Atlas · Gemeente {name}", backed by Django and OpenLayers with
+  WMS, WFS, WMTS, and vector-tile (MVT) layers. Documented users include Purmerend,
+  Utrecht, Zutphen, Apeldoorn, Zaanstad, Dijk en Waard, Voorst, and the SED
+  collaboration (Stede Broec, Enkhuizen, Drechterland). One record per public
+  tenant. Distinct from InstantAtlas (instantatlas) and unrelated "Atlas" products.
+owner:
+  name: Gemeente Purmerend / Atlas community
+  location:
+    country:
+      id: NL
+      name: Netherlands
+documentation_url: https://gitlab.com/purmerend/atlas
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'Yes'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+capabilities:
+- Map viewer
+- Municipal GIS
+- Common Ground geoportal
+last_updated: '2026-09-16T00:00:00Z'

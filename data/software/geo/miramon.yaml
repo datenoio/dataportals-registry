@@ -1,0 +1,70 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: miramon
+name: MiraMon
+website: https://www.miramon.cat
+description: MiraMon is a GIS and remote sensing software suite developed by CREAF
+  and the Universitat Autònoma de Barcelona (GRUMETS research group). The MiraMon
+  Map Server (CGI) publishes OGC WMS/WMTS/SOS collections, and the MiraMon Map
+  Browser is an HTML5/JavaScript client configured by a declarative config.json
+  that can combine layers, binary arrays, and data cubes from several servers.
+  Deployed mainly by Catalan and Andorran research and government bodies as
+  thematic geoportals, climatic atlases, and Earth observation data cubes.
+owner:
+  name: CREAF - Universitat Autònoma de Barcelona (GRUMETS)
+  location:
+    country:
+      id: ES
+      name: Spain
+logo_url: https://www.miramon.cat/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'No'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: Uncertain
+  wfs: Uncertain
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+repository_url: https://github.com/grumets/MiraMonMapBrowser
+documentation_url: https://www.miramon.cat/ENG/Prod-NavegadorServidor.htm
+export_formats:
+- GeoJSON
+- JSON
+capabilities:
+- Map viewer
+- WMS and WMTS server and client
+- OGC SOS server
+- Data cube (analysis-ready Earth observation data)
+- config.json declarative layer catalog
+changelog_url: https://github.com/grumets/MiraMonMapBrowser/commits
+license:
+  type: AGPL-3.0
+  url: https://github.com/grumets/MiraMonMapBrowser/blob/master/LICENSE
+last_updated: '2026-09-17T12:00:00Z'

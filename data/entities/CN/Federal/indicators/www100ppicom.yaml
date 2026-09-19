@@ -1,0 +1,52 @@
+id: www100ppicom
+name: Sunsirs Commodity Data (100ppi)
+link: https://www.100ppi.com
+catalog_type: Indicators catalog
+access_mode:
+- open
+status: active
+software:
+  id: sunsirs
+  name: Sunsirs (100ppi)
+owner:
+  name: Shanghai Sunsirs Information Service
+  type: Business
+  location:
+    country: &id001
+      id: CN
+      name: China
+    level: 20
+  link: https://100ppi.com
+coverage:
+- location:
+    country: *id001
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: 生意社 Sunsirs (100ppi.com) publishes Chinese commodity price indices across
+  energy, metals, chemicals and agriculture.
+langs:
+- id: ZH
+  name: Chinese
+tags:
+- commodities
+- prices
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+content_types:
+- dataset
+api: false
+api_status: uncertain
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+uid: cdi00007508

@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Public Grafana dashboards streaming observations from the 3D-PAWS (3D-Printed
+  Automatic Weather Station) network in Kenya.
+id: 3dpawsksagoke
+langs:
+- id: EN
+  name: English
+link: https://3dpaws.ksa.go.ke
+name: 3D-PAWS Kenya
+owner:
+  link: https://www.ksa.go.ke
+  location:
+    country:
+      id: KE
+      name: Kenya
+  name: Kenya Space Agency
+  type: Central government
+software:
+  id: grafana
+  name: Grafana
+status: active
+tags:
+- Grafana
+- government
+- indicators
+- kenya
+- statistics
+- weather
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00007289
+endpoints:
+- type: customapi
+  url: https://3dpaws.ksa.go.ke/api/search

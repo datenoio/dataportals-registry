@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: KH
+      name: Cambodia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: CamEd Open Access Repository (CamEd-OAR), the institutional DSpace
+  repository of CamEd Business School in Phnom Penh, listed in OpenDOAR. Hosts journal
+  articles, conference proceedings, theses and dissertations, research reports and the
+  CamEd Business Review.
+endpoints:
+- type: dspace
+  url: https://cam-ed-oar.com/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://cam-ed-oar.com/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://cam-ed-oar.com/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://cam-ed-oar.com/sitemap_index.xml
+id: camedoarcom
+langs:
+- id: EN
+  name: English
+link: https://cam-ed-oar.com/
+name: CamEd Open Access Repository
+owner:
+  link: https://cam-ed.edu.kh/
+  location:
+    country:
+      id: KH
+      name: Cambodia
+    level: 20
+  name: CamEd Business School
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- repository
+- research
+- publications
+- DSpace
+- has_api
+- Cambodia
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+uid: cdi00007110

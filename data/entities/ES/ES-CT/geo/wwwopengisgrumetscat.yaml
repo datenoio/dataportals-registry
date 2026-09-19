@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+description: Public MiraMon Map Server of the GRUMETS research group (Universitat
+  Autònoma de Barcelona / CREAF). The root page catalogs the map browsers and WMS
+  collections hosted on the server, including official ICC cartography and
+  orthophotos of Catalonia, the Land Cover Map of Catalonia (MCSC), SatCat Landsat
+  imagery, digital climatic atlases (Catalonia, Aragon, Iberian Peninsula,
+  Andorra), THALASSA sea-surface temperature and chlorophyll maps, EUROPARC
+  protected areas, and world soil cover and elevation layers.
+endpoints:
+- type: wms130
+  url: https://wwwopengis.grumets.cat/cgi-bin/MCSC/MiraMon.cgi?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
+  version: 1.3.0
+id: wwwopengisgrumetscat
+langs:
+- id: CA
+  name: Catalan
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: https://wwwopengis.grumets.cat/
+name: GRUMETS MiraMon Map Server
+owner:
+  link: https://www.creaf.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+  name: GRUMETS - Universitat Autònoma de Barcelona / CREAF
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: miramon
+  name: MiraMon
+status: active
+tags:
+- geospatial
+- miramon
+- wms
+- catalonia
+- research
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00007145

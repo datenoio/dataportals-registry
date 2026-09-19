@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PH
+      name: Philippines
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: PH-BTG
+      name: Batangas
+description: Public QGIS Cloud map of the Lemery road and traffic index (PMS_LEMERY), Batangas, embedded
+  on rti-lemery.com.
+endpoints:
+- type: wms130
+  url: https://www.qgiscloud.com/pmslemery/PMS_LEMERY/wms?SERVICE=WMS&REQUEST=GetCapabilities
+id: qgiscloudpmslemerypmslemery
+langs:
+- id: EN
+  name: English
+link: https://www.qgiscloud.com/pmslemery/PMS_LEMERY
+name: PMS Lemery Road and Traffic Index
+owner:
+  link: https://www.rti-lemery.com
+  location:
+    country:
+      id: PH
+      name: Philippines
+    level: 30
+    subregion:
+      id: PH-BTG
+      name: Batangas
+  name: Municipality of Lemery
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: qgiscloud
+  name: QGIS Cloud
+status: active
+tags:
+- geospatial
+- geoportal
+- qgis-cloud
+- Batangas
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007217

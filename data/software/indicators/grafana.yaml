@@ -1,0 +1,66 @@
+category: Indicators catalog
+subtype: indicators_data_platform
+datatypes:
+  datasets: Compatible
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: Generated
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: grafana
+website: https://grafana.com
+description: Grafana is an open-source analytics and interactive visualization platform
+  used to build dashboards over connected data sources. Public instances with anonymous
+  access serve as indicator catalogs of statistical, environmental, or infrastructure
+  dashboards; most deployments are private operations monitors and are out of scope.
+owner:
+  name: Grafana Labs
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://grafana.com/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+name: Grafana
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+repository_url: https://github.com/grafana/grafana
+documentation_url: https://grafana.com/docs/grafana/latest/
+changelog_url: https://github.com/grafana/grafana/releases
+license:
+  type: AGPL-3.0
+export_formats:
+- CSV
+- JSON
+- PNG
+capabilities:
+- REST API
+- Interactive dashboards
+- Public dashboard sharing
+- Alerting
+last_updated: '2026-09-18T00:00:00Z'

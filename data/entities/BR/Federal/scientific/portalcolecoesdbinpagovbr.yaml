@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Public Specify Web Portal for the biological collections database of
+  the Instituto Nacional de Pesquisas da Amazonia (INPA), currently publishing the
+  Diptera collection. Served over HTTP on port 80; the HTTPS vhost serves the Acta
+  Amazonica journal instead.
+id: portalcolecoesdbinpagovbr
+langs:
+- id: PT
+  name: Portuguese
+link: http://portalcolecoesdb.inpa.gov.br/
+name: INPA Portal de Colecoes Biologicas
+owner:
+  link: http://portal.inpa.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+  name: Instituto Nacional de Pesquisas da Amazonia
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: specify
+  name: Specify Web Portal
+status: active
+tags:
+- biodiversity
+- specimens
+- Specify
+topics:
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00006942
+endpoints:
+- type: specify:portal
+  url: http://portalcolecoesdb.inpa.gov.br/

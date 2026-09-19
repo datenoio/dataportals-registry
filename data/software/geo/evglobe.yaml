@@ -1,0 +1,70 @@
+category: Geoportal
+subtype: geospatial_service_middleware
+datatypes:
+  datasets: Compatible
+  fields: Compatible
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: evglobe
+name: EV-Globe
+website: https://www.ev-image.com/
+description: EV-Globe is Beijing Guotu Xintiandi's (国遥新天地) proprietary 3D GIS
+  / spatial-information platform family (EarthView brand). EV-Globe Desktop and WebGL
+  viewers plus the EV-Server cloud GIS server (currently EV-Server 7) that hosts,
+  processes, and publishes imagery, DEM, vector, tile, and 3D-model services with
+  OGC WMS/WFS support. Public instances splash with title EV-Server and redirect to
+  the login-gated manager SPA at /earthview/server/manager/index.html (v7) or
+  /ev-server/manager/index.html (older). Most deployments are Chinese government,
+  energy, or intranet systems. Register only tenants with a public unauthenticated
+  service or catalog view. Do not register the vendor homepage ev-image.com, the
+  forum bbs.ev-image.com, bare-IP manager consoles, or the manager login itself.
+owner:
+  name: Beijing Guotu Xintiandi Information Technology Co., Ltd.
+  location:
+    country:
+      id: CN
+      name: China
+logo_url: https://www.ev-image.com/favicon.ico
+documentation_url: https://www.ev-image.com/column135
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: Uncertain
+  wfs: 'Yes'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- 3D Tiles
+- GeoJSON
+- JSON
+- KML
+capabilities:
+- REST API
+- WMS service
+- WFS service
+- 3D model and terrain publication
+- 2D and 3D geodata exploration
+last_updated: '2026-09-18T00:00:00Z'

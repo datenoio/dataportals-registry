@@ -1,0 +1,66 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: gomap
+name: GoMap
+website: https://indixio.com/gomap/
+description: Indixio GoMap (formerly Geomap GIS Amérique, hosting brand
+  iGeoMapGuide / geomapguide.ca) is a proprietary web GIS platform built on
+  MapGuide Open Source and FDO for publishing, viewing, querying, and editing
+  geospatial data. SaaS tenants live on {client}.geomapguide.ca; on-premise
+  tenants use paths such as /gomap/ or /map/ on the owner domain. Viewer title
+  pattern "GoMap - {tenant}", scripts under /gomap_web/, MapGuide mapagent
+  backend. Distinct from SIGimWeb (sigimweb), the Indixio Quebec municipal
+  assessment viewer on the same engine, and from generic MapGuide (mapguide)
+  sites. One record per public tenant.
+owner:
+  name: Indixio
+  location:
+    country:
+      id: CA
+      name: Canada
+logo_url: https://indixio.com/favicon.ico
+documentation_url: https://indixio.com/gomap/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- KML
+- SHP
+- Excel
+capabilities:
+- Map viewer
+- Web GIS
+- Feature editing
+last_updated: '2026-09-18T00:00:00Z'

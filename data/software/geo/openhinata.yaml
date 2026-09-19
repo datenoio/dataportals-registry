@@ -1,0 +1,58 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: 'No'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'No'
+has_bulk: 'No'
+id: openhinata
+website: https://hgis.pref.miyazaki.lg.jp/hinata/
+name: open-hinata (ひなたGIS)
+description: open-hinata is the open-source edition (OpenLayers 5 + Vue) of
+  ひなたGIS, the free public WebGIS originally built for Miyazaki Prefecture.
+  Layers are added via js/layers.js. The open-hinata3 / OH3 fork
+  (oh3lab.jp/oh3/) targets land surveyors with 登記所地図 (地図XML), 地番図 and
+  SIMA exchange.
+owner:
+  name: Ken Ochiai (kenzkenz)
+  location:
+    country:
+      id: JP
+      name: Japan
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'No'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Global
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+repository_url: https://github.com/kenzkenz/open-hinata
+documentation_url: https://github.com/kenzkenz/open-hinata
+export_formats:
+- GeoJSON
+capabilities:
+- Map viewer
+last_updated: '2026-09-18T00:00:00Z'

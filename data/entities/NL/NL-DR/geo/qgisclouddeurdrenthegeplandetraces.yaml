@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-DR
+      name: Drenthe
+description: Public QGIS Cloud map of planned trail routes (Geplande tracés) published by Deur Drenthe.
+endpoints:
+- type: wms130
+  url: https://www.qgiscloud.com/DeurDrenthe/Geplande_traces/wms?SERVICE=WMS&REQUEST=GetCapabilities
+id: qgisclouddeurdrenthegeplandetraces
+langs:
+- id: NL
+  name: Dutch
+link: https://www.qgiscloud.com/DeurDrenthe/Geplande_traces
+name: Deur Drenthe Planned Routes
+owner:
+  link: https://deurdrenthe.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-DR
+      name: Drenthe
+  name: Deur Drenthe
+  type: Civil society
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: qgiscloud
+  name: QGIS Cloud
+status: active
+tags:
+- geospatial
+- geoportal
+- qgis-cloud
+- Drenthe
+- trails
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007215

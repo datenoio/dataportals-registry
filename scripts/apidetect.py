@@ -1657,6 +1657,23 @@ ALEPH_URLMAP = [
     },
 ]
 
+ISTSOS_URLMAP = [
+    {
+        "id": "sos100",
+        "url": "/istsos/demo?service=SOS&version=1.0.0&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.0.0",
+    },
+    {
+        "id": "sos200",
+        "url": "/istsos/demo?service=SOS&version=2.0.0&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.0",
+    },
+]
+
 QWC2_URLMAP = [
     {
         "id": "qwc2:layers",
@@ -1949,6 +1966,14 @@ ARCGISHUB_URLMAP = [
     {
         "id": "ogcrecordsapi",
         "url": "/api/search/v1",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "arcgishubapi",
+        "url": "/api/v3/datasets",
         "accept": "application/json",
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
@@ -2901,6 +2926,7 @@ CATALOGS_URLMAP = {
     "pure": PURE_URLMAP,
     "nada": NADA_URLMAP,
     "geoserver": GEOSERVER_URLMAP,
+    "istsos": ISTSOS_URLMAP,
     "eprints": EPRINTS_URLMAP,
     "koordinates": KOORDINATES_URLMAP,
     "aleph": ALEPH_URLMAP,

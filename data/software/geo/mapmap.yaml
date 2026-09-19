@@ -1,0 +1,61 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: Compatible
+has_api: Uncertain
+has_bulk: 'No'
+id: mapmap
+name: MapMap
+website: https://mapmap.com.br/
+description: MapMap is a Brazilian municipal GIS SaaS (cadastre, master plan,
+  and citizen geoportal) from MapMap. Public tenants live at
+  {city}.mapmap.com.br with a Laravel citizen hub and /geo-portal. Distinct
+  from mapmap.ai routing APIs and from MapMap Cidadão PWAs at
+  {city}.cidadao.mapmap.com.br. Skip www/app/tributario marketing and staff
+  apps, teste/demonstracao/staging, geoserver backends, and tenants that
+  return HTTP 403 Licença Suspensa. The *.mapmap.com.br certificate is a
+  wildcard — do not guess cities; use cidadao.mapmap.com.br/api/organizacoes-ativas.
+owner:
+  name: MapMap
+  location:
+    country:
+      id: BR
+      name: Brazil
+logo_url: https://mapmap.com.br/favicon.ico
+documentation_url: https://mapmap.com.br/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+capabilities:
+- Map viewer
+- Municipal GIS
+- Citizen geoportal
+last_updated: '2026-09-18T00:00:00Z'

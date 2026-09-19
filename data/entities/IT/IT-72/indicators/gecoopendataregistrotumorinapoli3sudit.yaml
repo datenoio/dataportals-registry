@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Campania
 description: Registro Tumori ASL Napoli 3 Sud GecoOpenData, a public explorer of cancer
   incidence, mortality, and survival indicators for the local health authority territory.
+endpoints:
+- type: customapi
+  url: https://gecoopendata.registrotumorinapoli3sud.it/json/getDatiIncidenza.php
 id: gecoopendataregistrotumorinapoli3sudit
 langs:
 - id: IT
@@ -42,8 +45,8 @@ properties:
   has_doi: false
   is_national: false
 software:
-  id: custom
-  name: Custom software
+  id: gecoopendata
+  name: GeCO-sys OpenData
 status: active
 tags:
 - statistics

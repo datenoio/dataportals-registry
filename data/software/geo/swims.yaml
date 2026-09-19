@@ -1,0 +1,64 @@
+category: Geoportal
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: Uncertain
+has_bulk: 'No'
+id: swims
+name: SWIMS
+website: https://swims.faoswalim.org/
+description: SWIMS (Water Sources Information Management System) is FAO SWALIM's
+  web application for inventorying and monitoring Somali water sources. Public
+  tenants pair an operational dashboard and LiveMap with a tabular inventory of
+  boreholes, dug wells, dams, berkads, and springs, including functioning status,
+  quality analytics, and survey metadata. Deployed for FAO SWALIM
+  (swims.faoswalim.org) and replicated to the Puntland Information Management Center
+  (pwsims.imcpuntland.so, branded PWIMS); both serve the same AdminBSB/calcite-maps
+  application with /dashboard/view and water-source WFS/WMS layers. Related
+  SWALIM-family applications (ClimSeries, FRRIMS) are separate products. One record
+  per public tenant.
+owner:
+  name: FAO SWALIM
+  location:
+    country:
+      id: SO
+      name: Somalia
+documentation_url: https://swims.faoswalim.org/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- CSV
+capabilities:
+- Map viewer
+- Water-source inventory
+- Dashboard
+last_updated: '2026-09-16T00:00:00Z'

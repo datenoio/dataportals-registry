@@ -1,0 +1,67 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: geomoose
+name: GeoMoose
+website: https://www.geomoose.org
+description: GeoMoose is an open-source WebGIS JavaScript framework, an OSGeo
+  community project originally created for Minnesota state and county governments.
+  Version 2 pairs a PHP/MapScript frontend with MapServer mapfiles; version 3 is a
+  React/Redux client with small Node or PHP services (identify, search, select,
+  geocode). Widely deployed by US counties and by agencies in Mongolia, Latin
+  America, and Europe as public parcel and thematic map viewers.
+owner:
+  name: Open Source Geospatial Foundation
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://www.geomoose.org/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+repository_url: https://github.com/geomoose/geomoose
+documentation_url: https://docs.geomoose.org/
+export_formats:
+- GeoJSON
+- JSON
+capabilities:
+- Map viewer
+- WMS client
+- Identify/search/select services
+changelog_url: https://github.com/geomoose/geomoose/releases
+license:
+  type: MIT
+  url: https://opensource.org/licenses/MIT
+last_updated: '2026-09-17T12:00:00Z'

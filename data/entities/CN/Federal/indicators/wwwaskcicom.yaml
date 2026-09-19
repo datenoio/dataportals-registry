@@ -1,0 +1,52 @@
+id: wwwaskcicom
+name: AskCI Industry Data
+link: https://www.askci.com
+catalog_type: Indicators catalog
+access_mode:
+- open
+status: active
+software:
+  id: askci
+  name: AskCI
+owner:
+  name: AskCI Corporation (中商产业研究院)
+  type: Business
+  location:
+    country: &id001
+      id: CN
+      name: China
+    level: 20
+  link: https://askci.com
+coverage:
+- location:
+    country: *id001
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: 中商情报网 AskCI is an industry research portal publishing per-sector Chinese
+  statistical indicators and market data.
+langs:
+- id: ZH
+  name: Chinese
+tags:
+- industry
+- economics
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+content_types:
+- dataset
+api: false
+api_status: uncertain
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+uid: cdi00007512

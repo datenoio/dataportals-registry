@@ -226,6 +226,21 @@ QGIS Server web client. **Signals:** `/index.php/view/`, `lizMap`, project list.
 | Censys | `web.endpoints.http.body: "lizMap"` |
 | FOFA | `body="lizMap"` |
 
+## Geotrek (`geotrek`) {#geotrek}
+
+French outdoor/trail suite (GeotrekCE). Public catalogs are **Geotrek-rando** sites (v2 or v3). Docs: [geotrek.fr](https://geotrek.fr), instance list: [Liste des Geotrek connus](https://github.com/GeotrekCE/Geotrek-website/wiki/Liste-des-Geotrek-connus), map: [utilisateurs.geotrek.fr](https://geotrek.fr/utilisateurs.html). Distinct from GeoNature-atlas on the same park.
+
+**Signals:** title `Geotrek-rando`; `__NEXT_DATA__` / `/_next/` (v3); `geotrekApp` (v2); Geotrek-admin `/api/v2/trek/`. Hosts often `rando.*`, `destination.*`, or `*rando*`.
+
+**Confirm:** GET the public rando home. One record per public rando portal, not Geotrek-admin `/login/`, not geotrek.fr, not mobile apps, not Geotrek-rando-widget embeds on a tourism CMS, and not district search URLs of the same hub (Via Columbani, Chemins des Parcs, Rando IdF).
+
+| Tool | Query |
+|------|-------|
+| Google | `"Geotrek-rando" OR "Geotrek rando" (randonnée OR trek) -site:github.com -site:geotrek.fr` |
+| Google | `inurl:rando geotrek OR "geotrek-rando" site:.fr` |
+| Censys | `web.endpoints.http.body: "Geotrek-rando"` |
+| FOFA | `body="Geotrek-rando"` |
+
 ## GeoNature (`geonature`) {#geonature}
 
 French biodiversity suite (PnX-SI). Public catalogs are **GeoNature-atlas** sites. Docs: [geonature.fr](https://geonature.fr), [GeoNature-atlas](https://github.com/PnX-SI/GeoNature-atlas). Distinct from Lizmap cartothèques on the same park.
@@ -595,6 +610,31 @@ Czech/Slovak metadata catalog. **Signals:** `/micka`, HSLayers, “Micka”.
 | Censys | `web.endpoints.http.body: "micka"` |
 | FOFA | `body="micka"` |
 
+## HSLayers NG (`hslayersng`) {#hslayersng}
+
+Czech open-source web mapping framework (Angular + OpenLayers + CesiumJS) used for map-composition catalogs; usually paired with a [Layman](#layman) backend and often a Micka CSW sibling. Typical deployments: Hub4Everybody-platform hubs (`/map/`, `/mapy/` pages with composition galleries). **Signals:** `hslayers` / `hslayers-ng` JS bundles, `layman-proxy` or `/rest/workspaces/{workspace}/maps` composition URLs, “Hub4Everybody” platform links.
+
+**Confirm:** GET the map app and match `hslayers` in the page, then verify the Layman REST listing (`/rest/workspaces/<workspace>/maps` or `/layman-proxy/rest/workspaces/<workspace>/maps`) returns a JSON array with `access_rights`. One record per public map hub. **Skip** ISP network-coverage viewers (HsOptika portals such as `hsoptika.*` / `optika.*`), single-map embeds on municipal pages, the dead official demo (`ng.hslayers.org` redirects to the GitHub wiki), and WordPress front pages that merely link to the platform.
+
+| Tool | Query |
+|------|-------|
+| Google | `"hslayers" (geoportal OR map OR compositions) -site:github.com` |
+| Google | `inurl:/mapy/ OR inurl:/map/ "hub4everybody"` |
+| Censys | `web.endpoints.http.body: "hslayers-ng"` |
+| FOFA | `body="hslayers"` (expect HsOptika ISP noise) or `body="hub4everybody"` |
+
+## Layman (`layman`) {#layman}
+
+Open-source geodata publication server (Layer Manager) by CCSS / Plan4all: REST API for layers and map compositions over GeoServer / PostGIS / QGIS Server with Micka metadata. Almost always reached through an [HSLayers NG](#hslayersng) client, so hunt the client fingerprints above; the server itself answers JSON at `/rest/workspaces/...` (root `/rest/` may 404 while item paths resolve). **Signals:** `/rest/workspaces/`, `/layman-proxy`, “Layman Test Client”.
+
+**Confirm:** GET `/rest/workspaces/<workspace>/maps/<name>` or the workspace maps listing and match Layman JSON (`access_rights` with `EVERYONE`, `bounding_box`, `file.path`). Public workspaces are readable without login.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/rest/workspaces/ maps layman` |
+| Censys | `web.endpoints.http.body: "/rest/workspaces/"` |
+| FOFA | `body="/layman/rest"` or `title="Layman Test Client"` |
+
 ## GeoBlacklight (`geoblacklight`) {#geoblacklight}
 
 Library geoportals (often US universities). Showcase: [geoblacklight.org/showcase](https://geoblacklight.org/showcase/).
@@ -837,6 +877,21 @@ WMS for NetCDF / multidimensional environmental data. Docs: [ncwms](https://read
 | Google | `"ncWMS" OR Godiva (WMS OR NetCDF) -site:github.com` |
 | Censys | `web.endpoints.http.body: "ncWMS"` |
 | FOFA | `body="ncWMS"` |
+
+## istSOS (`istsos`) {#istsos}
+
+OGC Sensor Observation Service (SOS) server for sensor and observation time series (hydrology, meteorology, environmental monitoring), developed by SUPSI Istituto scienze della Terra. Project: [istsos.org](https://istsos.org). Register the public viewer or SOS service root when it is the data catalog, not a login-only `/istsos/admin`.
+
+**Confirm:** `https://host/istsos/{service}?service=SOS&request=GetCapabilities` returns `sos:Capabilities` titled "IST Sensor Observation Service" (default installs ship a `demo` service). Web admin / viewer HTML title `istSOS` or `istSOS-viewer`; the viewer's `/config/config.json` reveals `apiBaseUrl` and service names.
+
+| Tool | Query |
+|------|-------|
+| Google | `intitle:"istSOS" OR inurl:/istsos/ -site:github.com` |
+| Censys | `web.endpoints.http.html_title: "istSOS"` |
+| FOFA | `title="istSOS"` |
+| Shodan | `http.title:"istSOS"` |
+
+SOS paths carry a per-installation service name (`/istsos/{service}`), so a root or guessed-path GET may 404/401 while the catalog is alive — check the viewer (`/`, title `istSOS-viewer`) before discarding. One SOS server can back several viewer vhosts; register one catalog per server.
 
 ## ArcGIS StoryMaps (`arcgisstorymaps`) {#arcgisstorymaps}
 

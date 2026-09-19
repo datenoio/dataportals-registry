@@ -1,0 +1,59 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: terraweb
+name: TerraWeb
+website: https://www.terraplan.com/webgis/
+description: TerraWeb is Terraplan's German municipal WebGIS. Public tenants
+  live at {tenant}.terragis.de and on custom Kreis domains, with an OpenLayers
+  launcher, terraweb.js, and guest viewers at login-ol.htm?login=gast (or a
+  named public account such as buergerauskunft). Distinct from Latvian terGIS
+  (tergis) and from Terria (terria). Do not register the vendor marketing
+  homepage terragis.de or TerraSchüler / TerraIndividual apps.
+owner:
+  name: Terraplan
+  location:
+    country:
+      id: DE
+      name: Germany
+documentation_url: https://www.terraplan.com/webgis/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+export_formats:
+- GeoJSON
+capabilities:
+- Map viewer
+- Municipal GIS
+last_updated: '2026-09-18T00:00:00Z'

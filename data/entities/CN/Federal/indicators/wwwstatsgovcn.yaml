@@ -1,0 +1,58 @@
+id: wwwstatsgovcn
+name: China Statistical Yearbook
+link: https://www.stats.gov.cn/sj/ndsj
+catalog_type: Indicators catalog
+access_mode:
+- open
+status: active
+software:
+  id: custom
+  name: Custom software
+owner:
+  name: National Bureau of Statistics of China
+  type: Central government
+  location:
+    country: &id001
+      id: CN
+      name: China
+    level: 20
+  link: http://www.stats.gov.cn
+coverage:
+- location:
+    country: *id001
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: 中国统计年鉴 is the NBS web portal publishing China Statistical Yearbook tables;
+  distinct from the data.stats.gov.cn macro indicator portal.
+langs:
+- id: ZH
+  name: Chinese
+tags:
+- statistics
+- yearbooks
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+content_types:
+- dataset
+api: false
+api_status: uncertain
+properties:
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+uid: cdi00007539

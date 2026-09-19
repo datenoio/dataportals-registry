@@ -1,0 +1,69 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: hslayersng
+name: HSLayers NG
+website: https://ng.hslayers.org
+description: HSLayers NG is an open-source web mapping framework (Angular +
+  OpenLayers + CesiumJS) used to build map composition catalogs and geoportals.
+  Deployments typically pair the HSLayers NG client with a Layman backend
+  (maps/layers REST API) and Micka metadata catalogue; public map compositions
+  are browsable in the built-in composition catalogue.
+owner:
+  name: HSLayers project (CCSS / Help Service - Remote Sensing)
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+logo_url: https://ng.hslayers.org/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'Yes'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+repository_url: https://github.com/hslayers/hslayers-ng
+documentation_url: https://github.com/hslayers/hslayers-ng/wiki
+version: 17.0.0
+export_formats:
+- JSON
+- WMS
+- WFS
+capabilities:
+- Map viewer
+- Map composition catalog
+- Layman REST integration
+- Micka CSW integration
+changelog_url: https://github.com/hslayers/hslayers-ng/releases
+license:
+  type: MIT
+  url: https://github.com/hslayers/hslayers-ng/blob/master/LICENSE
+last_updated: '2026-09-17T18:00:00Z'

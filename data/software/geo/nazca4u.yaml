@@ -1,0 +1,62 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: nazca4u
+name: Nazca4U Rapportagemodule
+website: https://nazca4u.nl/
+description: Nazca4U Rapportagemodule is Dutch company Nazca's hosted
+  soil-information reporting application for provinces, omgevingsdiensten, and
+  municipalities. Public tenants live at {tenant}.nazca4u.nl/rapportage/ and
+  serve the same ASP.NET application with /Rapportage/Geolocator/{Map,Toolbar,Legend}/
+  assets and App_Themes/RapportageModule/*.css. Users look up bodeminformatie by
+  address, parcel, or map selection and receive a PDF report by e-mail; underlying
+  bodemonderzoek reports are linked where available. Distinct from NAZCA, Soltesoft's
+  Colombian cadastral viewer (nazca). One record per public tenant.
+owner:
+  name: Nazca
+  location:
+    country:
+      id: NL
+      name: Netherlands
+documentation_url: https://nazca4u.nl/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- PDF
+capabilities:
+- Map viewer
+- Soil-information reporting
+- Address and parcel search
+last_updated: '2026-09-16T00:00:00Z'

@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Institutional Renku deployment operated by the Idiap Research Institute
+  (Martigny, Valais). Renku is an open-source platform for reproducible, collaborative
+  data science developed by the Swiss Data Science Center. The public search lists
+  projects, datasets and data connectors hosted on this instance.
+endpoints:
+- type: custom_api
+  url: https://renku.idiap.ch/api/data/search/query?q=water
+id: renkuidiapch
+langs:
+- id: EN
+  name: English
+link: https://renku.idiap.ch/search
+name: Renku at Idiap Research Institute
+owner:
+  link: https://www.idiap.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-VS
+      name: Valais
+  name: Idiap Research Institute
+  type: Academy
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- academic
+- research
+- scientific
+- research data
+- reproducibility
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00006910
