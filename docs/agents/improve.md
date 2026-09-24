@@ -2,7 +2,7 @@
 
 How to grow coverage and quality, based on **~3,900 Cursor sessions** (November 2025–8 September 2026) and the releases they produced. This is the *what to work on next* guide. Mechanics live in [discover.md](discover.md), [contribute.md](contribute.md), [scheduled.md](../scheduled.md), and [metadata-quality.md](../metadata-quality.md). Hunt-pattern table: [discovery.md](../discovery.md#hunt-patterns).
 
-Working tree (16 September 2026): **38,343** verified catalogs, **0** scheduled YAML, **523** software IDs, **224** country folders. Published snapshot: v1.21.0 (37,170 catalogs, 0 scheduled, 486 software). Rebuild exports when YAML and `data/datasets/` diverge.
+Working tree (24 September 2026): **41,167** verified catalogs, **1** scheduled YAML, **665** software IDs, **224** country folders. Published snapshot: v1.22.0 (41,167 catalogs, 1 scheduled, 665 software). Rebuild exports when YAML and `data/datasets/` diverge.
 
 ## What those sessions actually did
 
@@ -32,6 +32,7 @@ Volume came from a **small number of session types**, not from the 1,500 one-off
 | v1.19.0 | +4,823 | +84 | Municipal GIS viewers (Experience Builder, Mapotip, GisMaster, GISPLAN, IntraMaps, SonicWeb, …), harvest-source dumps, university IRs, named directories |
 | v1.20.0 | +5,450 | +57 | Polish e-mapa.net, Czech/Slovak municipal GIS (GISPLAN, GisOnline, Mapotip, GEPRO, mOBEC), Italian GisMaster, Swiss GeoMapFish, Brazilian CTMGEO, Japanese WagMap, new software IDs (WebEWID, DaCHS, Argenmap, …) |
 | v1.21.0 | +1,904 | +63 | Custom-catalog OSS IDs (Géoclip, GeoNature, FROST-Server, MINERVA, Datasette, TerriSTORY, InstantAtlas, OPENDATAENTE), harvest/apidetect recipe fill, scheduled queue emptied |
+| v1.22.0 | +3,997 | +179 | Municipal GIS and open-data SaaS (Map2Web, Municipium, BODIK ODCS, LDP SIT, GFMaplet, GajaMatrix), custom-catalog retags, hunt toolkit and batch ingestion |
 
 **Lesson:** one bounded **vendor tenant list** or hostname pattern (e-mapa.net, `{city}.gisplan.sk`, GisMaster `IdCliente=`) outperforms Google for every city in the country. After v1.18.0 the high-yield *prompts* were harvest sources, university IRs, country indicators, and named directories. After v1.19.0 they shifted again: define the municipal GIS product, then hunt its tenants. Country hunts still matter when the hole is *shape* (no dataset-bearing scientific IRs, no native NSO table DB, UN members with zero open-data YAML), not *count*. Do not repeat “which France/Spain/Texas cities geoportals” now that those markets are dense.
 
