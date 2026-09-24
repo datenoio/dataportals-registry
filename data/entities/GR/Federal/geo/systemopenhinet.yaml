@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: 'MapServer WMS of Greek surface-water bodies from the Open Hydrosystem
+  Information Network (OpenHi.net): river basins, drainage basins, watercourses, standing
+  waters, and monitoring stations.'
+id: systemopenhinet
+langs:
+- id: EL
+  name: Greek
+link: https://system.openhi.net/cgi-bin/mapserv?map=/opt/enhydris-openhi/enhydris-openhigis/mapserver/openhigis.map
+name: OpenHi Hydrographic MapServer
+owner:
+  link: https://www.ntua.gr/
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: National Technical University of Athens
+  type: Academy
+software:
+  id: mapserver
+  name: MapServer
+status: active
+tags:
+- geospatial
+- maps
+- research
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00014149
+properties:
+  is_national: false
+endpoints:
+- type: wms130
+  url: https://system.openhi.net/cgi-bin/mapserv?map=/opt/enhydris-openhi/enhydris-openhigis/mapserver/openhigis.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0

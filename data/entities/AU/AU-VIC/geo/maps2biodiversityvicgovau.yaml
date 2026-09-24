@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 30
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+    subregion:
+      id: AU-VIC
+      name: Victoria
+description: Victorian NatureKit Geocortex Essentials catalog of threatened species,
+  habitat distribution models, and Victorian Biodiversity Atlas records.
+id: maps2biodiversityvicgovau
+langs:
+- id: EN
+  name: English
+link: https://maps2.biodiversity.vic.gov.au/Geocortex/Essentials/REST/sites
+name: Victoria NatureKit
+owner:
+  link: https://www.deeca.vic.gov.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 30
+    subregion:
+      id: AU-VIC
+      name: Victoria
+  name: Department of Energy, Environment and Climate Action
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- Geocortex
+- biodiversity
+- Victoria
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00009656
+endpoints:
+- type: geocortex:catalog
+  url: https://maps2.biodiversity.vic.gov.au/Geocortex/Essentials/REST/sites?f=pjson

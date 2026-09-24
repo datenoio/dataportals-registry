@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: OPUS 4 publication server of Hochschule Aalen.
+id: opushtwaalenbszbwde
+langs:
+- id: DE
+  name: German
+link: https://opus-htw-aalen.bsz-bw.de
+name: OPUS - Repository of Aalen University of Applied Sciences
+owner:
+  link: https://opus-htw-aalen.bsz-bw.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+  name: Hochschule Aalen
+  type: Academy
+software:
+  id: opus
+  name: OPUS
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00011374
+endpoints:
+- type: oaipmh20
+  url: https://opus-htw-aalen.bsz-bw.de/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://opus-htw-aalen.bsz-bw.de/rss/index/index/searchtype/latest
+  version: '2.0'

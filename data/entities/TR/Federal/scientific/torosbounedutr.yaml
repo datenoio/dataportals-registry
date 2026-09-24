@@ -17,13 +17,13 @@ coverage:
 description: Kandilli Observatory TOROS near-fault observatory services for the Marmara region, exposing FDSN
   event catalogues plus radon station, concentration, and Vp/Vs products.
 endpoints:
-- type: api
+- type: rest
   url: https://toros.boun.edu.tr/fdsnws/event/1/
-- type: api
+- type: rest
   url: https://toros.boun.edu.tr/nfo_marsite/radon/stations
-- type: api
+- type: rest
   url: https://toros.boun.edu.tr/nfo_marsite/radon/query
-- type: api
+- type: rest
   url: https://toros.boun.edu.tr/nfo_marsite/vpvs/query
 id: torosbounedutr
 langs:

@@ -20,10 +20,11 @@ coverage:
 description: Open-access repository of Knowledge Commons (formerly Humanities Commons)
   for sharing research works and datasets.
 endpoints:
-- type: sitemap
-  url: https://works.hcommons.org/sitemap/siteindex.xml
-- type: figshare:graphql
-  url: https://works.hcommons.org/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+- type: inveniordmapi:records
+  url: https://works.hcommons.org/api/records
+- type: oaipmh20
+  url: https://works.hcommons.org/oai2d?verb=Identify
+  version: '2.0'
 id: workshcommonsorg
 identifiers:
 - id: re3data
@@ -47,8 +48,8 @@ owner:
   name: Knowledge Commons
   type: Civil society
 software:
-  id: figshare
-  name: Figshare
+  id: inveniordm
+  name: InvenioRDM
 status: active
 tags:
 - open access

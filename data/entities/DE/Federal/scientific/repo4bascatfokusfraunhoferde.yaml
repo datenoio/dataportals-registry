@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Catalysis research data repository hosted at Fraunhofer FOKUS, publishing
+  datasets on catalytic materials and reaction studies.
+id: repo4bascatfokusfraunhoferde
+langs:
+- id: DE
+  name: German
+link: https://repo4bascat.fokus.fraunhofer.de
+name: Repo4BASCAT
+owner:
+  link: https://www.fokus.fraunhofer.de
+  location:
+    country:
+      id: DE
+      name: Germany
+  name: Fraunhofer FOKUS
+  type: Academy
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: dataverseapi
+  url: https://repo4bascat.fokus.fraunhofer.de/api/search
+- type: dataverseapi
+  url: https://repo4bascat.fokus.fraunhofer.de/api/info/version
+- type: oaipmh20
+  url: https://repo4bascat.fokus.fraunhofer.de/oai?verb=Identify
+  version: '2.0'
+uid: cdi00011656

@@ -17,13 +17,13 @@ coverage:
 description: ORFEUS EIDA node of the Swiss Seismological Service at ETH Zurich, providing FDSN waveform,
   station, availability, and WFCatalog access to Swiss and partner seismic networks.
 endpoints:
-- type: api
+- type: rest
   url: https://eida.ethz.ch/fdsnws/station/1/
-- type: api
+- type: rest
   url: https://eida.ethz.ch/fdsnws/dataselect/1/
-- type: api
+- type: rest
   url: https://eida.ethz.ch/fdsnws/availability/1/
-- type: api
+- type: rest
   url: https://eida.ethz.ch/eidaws/wfcatalog/1/
 id: eidaethzch
 langs:

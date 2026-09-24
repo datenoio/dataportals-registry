@@ -1,0 +1,50 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    macroregion:
+      id: '021'
+      name: Northern America
+    level: 20
+description: Public Datasette of datasets hosted by Stanford Big Local News.
+id: datasettebiglocalnewsorg
+langs:
+- id: EN
+  name: English
+link: https://datasette.biglocalnews.org/
+name: Big Local News Datasette
+owner:
+  link: https://biglocalnews.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Big Local News
+  type: Academy
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00016083
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://datasette.biglocalnews.org/-/databases.json

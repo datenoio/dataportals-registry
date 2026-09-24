@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: InstDB catalog of the South China National Botanical Garden Data Center
+  (华南国家植物园数据中心), with a public dataset listing.
+id: idbscbgaccn
+langs:
+- id: ZH
+  name: Chinese
+link: https://idb.scbg.ac.cn
+name: South China National Botanical Garden Data Center
+owner:
+  link: https://scbg.ac.cn
+  location:
+    country:
+      id: CN
+      name: China
+    level: 20
+  name: South China National Botanical Garden
+  type: Academy
+software:
+  id: instdb
+  name: InstDB
+status: active
+tags:
+- scientific
+- China
+- InstDB
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00010144
+endpoints:
+- type: custom:api
+  url: https://idb.scbg.ac.cn/api
+properties:
+  dataset_count_reported: 333
+  is_national: false
+  has_doi: true

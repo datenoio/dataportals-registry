@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    level: 30
+    subregion:
+      id: IT-25
+      name: Lombardia
+description: Municipal GFMaplet geoportal of Comune di Roncello for cadastre, planning, and topographic
+  map layers.
+endpoints:
+- type: arcgis:rest:services
+  url: https://ags03.globogis.it/arcgis/rest/services/Roncello?f=pjson
+id: stucomuneroncellombit
+langs:
+- id: IT
+  name: Italian
+link: https://stu.comune.roncello.mb.it/page:s_italia:geoportale
+name: Geoportale Comune di Roncello
+owner:
+  link: https://stu.comune.roncello.mb.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-25
+      name: Lombardia
+  name: Comune di Roncello
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: gfmaplet
+  name: GFMaplet
+status: active
+tags:
+- geospatial
+- geoportal
+- government
+- gfmaplet
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00008643

@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MA
+      name: Massachusetts
+description: Research data archive of the Marcus Institute for Aging Research, published
+  with PortalJS. Study datasets include MOBILIZE and MiWiSH. CKAN API is on midas.hsl.harvard.edu.
+id: datahslharvardedu
+langs:
+- id: EN
+  name: English
+link: https://data.hsl.harvard.edu/
+name: Marcus Institute Data Archive
+owner:
+  link: https://www.hebrewseniorlife.org/research
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MA
+      name: Massachusetts
+  name: Marcus Institute for Aging Research
+  type: Academy
+software:
+  id: portaljs
+  name: PortalJS
+status: active
+tags:
+- open data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00016357
+endpoints:
+- type: ckan
+  url: https://midas.hsl.harvard.edu/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://midas.hsl.harvard.edu/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://midas.hsl.harvard.edu/api/3/action/package_list
+  version: '3'

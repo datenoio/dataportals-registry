@@ -1,0 +1,63 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: renku
+name: Renku
+website: https://renkulab.io
+description: Renku is an open-source platform for reproducible, collaborative data
+  science from the Swiss Data Science Center. Deployments publish a project and
+  dataset search at /search and a dataset search API at /api/data/search/query.
+  One record per deployment (RenkuLab or an institutional install).
+owner:
+  name: Swiss Data Science Center
+  location:
+    country:
+      id: CH
+      name: Switzerland
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: Uncertain
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: Uncertain
+storage_type: Both
+type: Software
+repository_url: https://github.com/SwissDataScienceCenter/renku
+documentation_url: https://renku.readthedocs.io/en/latest/
+changelog_url: https://github.com/SwissDataScienceCenter/renku/releases
+export_formats:
+- JSON
+capabilities:
+- REST API
+- Dataset search
+license:
+  type: Apache-2.0
+  url: https://www.apache.org/licenses/LICENSE-2.0
+version: 2.21.0
+last_updated: '2026-09-22T00:00:00Z'

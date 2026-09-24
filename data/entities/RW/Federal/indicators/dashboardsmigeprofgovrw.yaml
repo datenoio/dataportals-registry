@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: RW
+      name: Rwanda
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Public DHIS2 dashboards of Rwanda's Ministry of Gender and Family Promotion.
+  The anonymous Web API lists 203 data sets, including DHS indicators on spousal violence
+  and attitudes toward wife beating.
+id: dashboardsmigeprofgovrw
+langs:
+- id: EN
+  name: English
+link: https://dashboards.migeprof.gov.rw
+name: MIGEPROF Gender and Family Dashboards
+owner:
+  link: https://www.migeprof.gov.rw
+  location:
+    country:
+      id: RW
+      name: Rwanda
+    level: 20
+  name: Ministry of Gender and Family Promotion
+  type: Central government
+software:
+  id: dhis2
+  name: DHIS2
+status: active
+tags:
+- health
+- gender
+- DHIS2
+- government
+- Rwanda
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00015710
+endpoints:
+- type: dhis2:catalog
+  url: https://dashboards.migeprof.gov.rw
+- type: dhis2:system-info
+  url: https://dashboards.migeprof.gov.rw/api/system/info
+- type: dhis2:datasets
+  url: https://dashboards.migeprof.gov.rw/api/dataSets.json?fields=id,displayName&pageSize=1
+properties:
+  has_doi: false
+  is_national: false

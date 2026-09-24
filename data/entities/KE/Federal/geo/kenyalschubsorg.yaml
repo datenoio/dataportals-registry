@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Land, soil and crop metadata catalogue for Kenya, published with pycsw.
+  The catalogue lists datasets and related services.
+id: kenyalschubsorg
+langs:
+- id: EN
+  name: English
+link: https://kenya.lsc-hubs.org/cat/
+name: LSC-Hub Kenya Catalogue
+owner:
+  link: https://kenya.lsc-hubs.org/
+  location:
+    country:
+      id: KE
+      name: Kenya
+  name: LSC Hub Kenya
+  type: Academy
+software:
+  id: pycsw
+  name: pycsw
+status: active
+tags:
+- geospatial
+- maps
+- research
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00014931
+endpoints:
+- type: ogcrecords
+  url: https://kenya.lsc-hubs.org/cat/collections?f=json
+  version: '1.0'
+- type: openapi
+  url: https://kenya.lsc-hubs.org/cat/openapi?f=json

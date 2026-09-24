@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+description: Public Tailormap geoportal of the Gouda Tijdmachine heritage project.
+  Distinct from gis.gouda.nl municipal Tailormap and the Omeka-S collection at www.goudatijdmachine.nl.
+id: gisgoudatijdmachinenl
+langs:
+- id: NL
+  name: Dutch
+link: https://gis.goudatijdmachine.nl/
+name: Gouda Tijdmachine GIS
+owner:
+  link: https://www.goudatijdmachine.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+  name: Gemeente Gouda
+  type: Local government
+software:
+  id: tailormap
+  name: Tailormap
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00008015
+endpoints:
+- type: tailormap:viewers
+  url: https://gis.goudatijdmachine.nl/api/app

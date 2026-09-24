@@ -20,11 +20,11 @@ coverage:
 description: CIVORA / Piveau municipal data catalog of Kreisstadt Siegburg, publishing
   local open datasets through a public hub-search API.
 endpoints:
-- type: customapi
+- type: rest
   url: https://piveau-search.siegburg.civora.org/search
-- type: customapi
+- type: rest
   url: https://piveau-repo.siegburg.civora.org/catalogues
-- type: customapi
+- type: rest
   url: https://piveau-repo.siegburg.civora.org/datasets
 - type: ckan:package-search
   url: https://piveau-search.siegburg.civora.org/ckan/package_search

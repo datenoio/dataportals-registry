@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TO
+      name: Tonga
+    level: 20
+    macroregion:
+      id: '061'
+      name: Polynesia
+description: WIS 2.0 in a box node of the Tonga Meteorological Service (centre-id
+  met-tonga). Publishes WMO discovery metadata for hourly synoptic observations through
+  an OGC API Features service. Public endpoint is an IP address.
+id: '136156132115'
+langs:
+- id: EN
+  name: English
+link: http://136.156.132.115
+name: Tonga - WIS 2.0 in a box
+owner:
+  link: https://met.gov.to
+  location:
+    country:
+      id: TO
+      name: Tonga
+    level: 20
+  name: Tonga Meteorological Service
+  type: Central government
+software:
+  id: wis20box
+  name: Wis 2.0 Box
+status: active
+tags:
+- meteorology
+- climate
+- WIS2
+- government
+- has_api
+topics:
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00015930
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: pygeoapi:openapi
+  url: http://136.156.132.115/oapi/openapi
+  version: '1.0'
+- type: ogc:features
+  url: http://136.156.132.115/oapi/collections/?f=json
+  version: '1.0'

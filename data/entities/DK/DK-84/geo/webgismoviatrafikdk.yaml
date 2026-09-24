@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: DK-84
+      name: Hovedstaden
+description: Movia Geocortex Essentials WebGIS of bus stops, vehicle permits, and
+  passenger counts for the Capital Region and Region Zealand.
+id: webgismoviatrafikdk
+langs:
+- id: DA
+  name: Danish
+link: https://webgis.moviatrafik.dk/Geocortex/Essentials/REST/sites
+name: Movia WebGIS
+owner:
+  link: https://www.moviatrafik.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 30
+    subregion:
+      id: DK-84
+      name: Hovedstaden
+  name: Movia
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- Geocortex
+- public transport
+- Denmark
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00011689
+endpoints:
+- type: geocortex:catalog
+  url: https://webgis.moviatrafik.dk/Geocortex/Essentials/REST/sites?f=pjson

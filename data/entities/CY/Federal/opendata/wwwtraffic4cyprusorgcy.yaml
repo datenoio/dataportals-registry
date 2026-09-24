@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Cyprus National Access Point (CyNAP) CKAN catalog for ITS and multimodal
+  transport data under the EU ITS Directive, including road network, public transport,
+  cycling, and shared-mobility datasets.
+id: wwwtraffic4cyprusorgcy
+langs:
+- id: EN
+  name: English
+- id: EL
+  name: Greek
+link: https://www.traffic4cyprus.org.cy/
+name: Cyprus National Access Point
+owner:
+  link: https://www.traffic4cyprus.org.cy
+  location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+  name: Public Works Department
+  type: Central government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00008018
+endpoints:
+- type: ckan
+  url: https://www.traffic4cyprus.org.cy/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://www.traffic4cyprus.org.cy/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://www.traffic4cyprus.org.cy/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://www.traffic4cyprus.org.cy/catalog.n3
+- type: dcat:ttl
+  url: https://www.traffic4cyprus.org.cy/catalog.ttl
+- type: dcat:xml
+  url: https://www.traffic4cyprus.org.cy/catalog.xml
+- type: dcat:jsonld
+  url: https://www.traffic4cyprus.org.cy/catalog.jsonld
+- type: dcat
+  url: https://www.traffic4cyprus.org.cy/catalog.rdf

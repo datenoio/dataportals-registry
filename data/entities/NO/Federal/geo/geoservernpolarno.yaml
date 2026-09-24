@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    level: 20
+description: GeoServer WMS/WFS of the Norwegian Polar Institute, with Arctic and Svalbard
+  thematic layers including wildlife, biogeographic zones and monitoring data. Distinct
+  from geodata.npolar.no ArcGIS Server.
+id: geoservernpolarno
+langs:
+- id: EN
+  name: English
+link: https://geoserver.npolar.no/geoserver
+name: Norwegian Polar Institute GeoServer
+owner:
+  link: https://www.npolar.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: Norsk Polarinstitutt
+  type: Central government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: wms111
+  url: https://geoserver.npolar.no/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserver.npolar.no/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoserver.npolar.no/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geoserver.npolar.no/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoserver.npolar.no/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+uid: cdi00007769
+properties:
+  has_doi: false
+  is_national: false

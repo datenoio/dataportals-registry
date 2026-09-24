@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+- indicator
+coverage:
+- location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: BA-SRP
+      name: Republika Srpska
+description: OpenSDG reporting site for global Sustainable Development Goal indicators
+  at Republika Srpska level, published by the Republika Srpska Institute of Statistics.
+id: sdgrzsrsba
+langs:
+- id: SR
+  name: Serbian
+- id: EN
+  name: English
+link: https://sdg.rzs.rs.ba/
+name: Republika Srpska SDG Indicators
+owner:
+  link: https://www.rzs.rs.ba
+  location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 30
+    subregion:
+      id: BA-SRP
+      name: Republika Srpska
+  name: Republički zavod za statistiku Republike Srpske
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: opensdg
+  name: OpenSDG
+status: active
+tags:
+- statistics
+- government
+- has_api
+- SDG
+- indicators
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: opensdg:reporting-status
+  url: https://sdg.rzs.rs.ba/reporting-status
+- type: opensdg:reporting-status
+  url: https://sdg.rzs.rs.ba/reporting-status/
+- type: opensdg:reporting-status
+  url: https://sdg.rzs.rs.ba/en/reporting-status/
+- type: opensdg:catalog
+  url: https://sdg.rzs.rs.ba/indicators.json
+- type: opensdg:catalog
+  url: https://sdg.rzs.rs.ba/en/indicators.json
+- type: opensdg:data
+  url: https://rs-statistika-sdg.github.io/sdg-data-rs/cir/data/1-2-1.json
+- type: opensdg:data
+  url: https://rs-statistika-sdg.github.io/sdg-data-rs/cir/data/3-2-2.json
+uid: cdi00008750

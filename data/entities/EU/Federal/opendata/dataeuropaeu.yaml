@@ -22,9 +22,9 @@ endpoints:
   url: https://data.europa.eu/sitemap.xml
 - type: sitemap
   url: https://data.europa.eu/sitemap.xml.gz
-- type: customapi
+- type: rest
   url: https://data.europa.eu/api/hub/search/search
-- type: customapi
+- type: rest
   url: https://data.europa.eu/api/hub/repo/catalogues
 - type: ckan:package-search
   url: https://data.europa.eu/api/hub/search/ckan/package_search
@@ -33,7 +33,7 @@ endpoints:
   url: https://data.europa.eu/sparql
 - type: docs
   url: https://data.europa.eu/api/hub/search/
-- type: customapi
+- type: rest
   url: https://data.europa.eu/api/hub/search/search?q=&filter=dataset
 id: dataeuropaeu
 identifiers:

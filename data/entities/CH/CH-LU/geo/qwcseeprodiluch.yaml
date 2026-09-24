@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-UR
+      name: Uri
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ILU AG QWC2 viewer for a lake-bed filling project on the Urnersee, with
+  active dump stages and a 2024 lake-floor survey.
+id: qwcseeprodiluch
+langs:
+- id: DE
+  name: German
+link: https://qwc-see-prod.ilu.ch/
+name: ILU Seegrund Schüttprojekt
+owner:
+  link: https://www.ilu.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-LU
+      name: Luzern
+  name: ILU AG
+  type: Business
+software:
+  id: qwc2
+  name: QGIS Web Client 2 (QWC2)
+status: active
+tags:
+- GIS
+- geospatial
+- QWC2
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00010029
+endpoints:
+- type: qwc2:layers
+  url: https://qwc-see-prod.ilu.ch/themes.json

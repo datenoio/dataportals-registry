@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion:
+      id: '001'
+      name: World
+description: Data catalog of the Green Growth Knowledge Platform (GGKP), a
+  partnership of international organizations including UNEP, publishing datasets on
+  green growth, sustainability, and the green economy.
+id: datacatalogggkporg
+langs:
+- id: EN
+  name: English
+link: https://datacatalog.ggkp.org
+name: GGKP Data Catalog
+owner:
+  link: "https://datacatalog.ggkp.org"
+  location:
+    country:
+      id: World
+      name: World
+  name: Green Growth Knowledge Platform
+  type: International
+software:
+  id: dkan
+  name: DKAN
+status: active
+tags:
+- open data
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00007559
+endpoints:
+- type: dcatus11
+  url: https://datacatalog.ggkp.org/data.json
+- type: dkan:search
+  url: https://datacatalog.ggkp.org/api/1/search
+  version: '1'
+- type: dkan:metastore
+  url: https://datacatalog.ggkp.org/api/1/metastore
+  version: '1'

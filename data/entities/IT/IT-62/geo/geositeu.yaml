@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-62
+      name: Lazio
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: G3W-SUITE map of the Fare Verde picnic area at Lago di Canterno (Ferentino),
+  with cadastral, vegetation, and tree layers.
+id: geositeu
+langs:
+- id: IT
+  name: Italian
+link: https://geosit.eu/
+name: Fare Verde Fiuggi WebGIS
+owner:
+  link: https://www.fareverde.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-62
+      name: Lazio
+  name: Fare Verde
+  type: Civil society
+software:
+  id: g3wsuite
+  name: G3W-SUITE
+status: active
+tags:
+- geospatial
+- geoportal
+- g3wsuite
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00014599
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: g3wsuite:catalog
+  url: https://geosit.eu/

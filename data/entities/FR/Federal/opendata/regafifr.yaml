@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Open data catalog of the ACPR REGAFI and REFASSU registers, listing banks,
+  insurers, authorizations, and passports.
+id: regafifr
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://www.regafi.fr
+name: Portail ACPR REGAFI/REFASSU
+owner:
+  link: https://acpr.banque-france.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Autorité de contrôle prudentiel et de résolution
+  type: Central government
+software:
+  id: opendatasoft
+  name: OpenDataSoft
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00013966
+endpoints:
+- type: opendatasoftapi
+  url: https://www.regafi.fr/api
+- type: opendatasoftapi
+  url: https://www.regafi.fr/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://www.regafi.fr/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://www.regafi.fr/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://www.regafi.fr/data.json

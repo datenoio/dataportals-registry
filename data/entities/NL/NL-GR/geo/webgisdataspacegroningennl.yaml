@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-GR
+      name: Groningen
+description: Public Tailormap map of the regional water chain for Groningen and northern
+  Drenthe, published by Waterketen Groningen-Drenthe on Data Space Groningen.
+id: webgisdataspacegroningennl
+langs:
+- id: NL
+  name: Dutch
+link: https://webgis.dataspacegroningen.nl/
+name: Waterketenkaart Groningen-Drenthe
+owner:
+  link: https://www.waterketengroningendrenthe.nl/
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-GR
+      name: Groningen
+  name: Waterketen Groningen-Drenthe
+  type: Regional government
+software:
+  id: tailormap
+  name: Tailormap
+status: active
+tags:
+- GIS
+- geospatial
+- government
+- netherlands
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00015367
+properties:
+  is_national: false
+endpoints:
+- type: tailormap:apps
+  url: https://webgis.dataspacegroningen.nl/api/app
+- type: tailormap:viewers
+  url: https://webgis.dataspacegroningen.nl/nl/page/viewers
+- type: tailormap:start
+  url: https://webgis.dataspacegroningen.nl/nl/page/startpagina

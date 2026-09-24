@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IN-TS
+      name: Telangāna
+description: ADeX catalogue of Telangana agriculture datasets, including agromet advisories,
+  market prices, weather, and farm credit. Served by the IUDX Catalogue Server.
+endpoints:
+- type: rest
+  url: https://ts.adex.org.in/adex/cat/v1/search
+id: dataexplorertsadexorgin
+langs:
+- id: EN
+  name: English
+link: https://dataexplorer.ts.adex.org.in/
+name: Telangana Agriculture Data Exchange
+owner:
+  link: https://cdpg.org.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 20
+    subregion:
+      id: IN-TS
+      name: Telangāna
+  name: Centre of Data for Public Good
+  type: Academy
+properties:
+  dataset_count_reported: 39
+software:
+  id: iudx
+  name: IUDX Catalogue
+status: active
+tags:
+- agriculture
+- Telangana
+- ADeX
+- IUDX
+- open data
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+uid: cdi00014345

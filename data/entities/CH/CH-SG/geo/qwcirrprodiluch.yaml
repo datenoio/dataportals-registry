@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-SG
+      name: Sankt Gallen
+    macroregion:
+      id: '155'
+      name: Western Europe
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: AT-8
+      name: Vorarlberg
+description: Public QWC2 geoportal of the Internationale Rheinregulierung, with Alpine
+  Rhine flood scenarios, dams, the Negrelli river map, and river-network themes for
+  Switzerland and Austria.
+id: qwcirrprodiluch
+langs:
+- id: DE
+  name: German
+link: https://qwc-irr-prod.ilu.ch/
+name: Internationale Rheinregulierung Karten
+owner:
+  link: https://rheinregulierung.org/
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-SG
+      name: Sankt Gallen
+  name: Internationale Rheinregulierung
+  type: International
+software:
+  id: qwc2
+  name: QGIS Web Client 2 (QWC2)
+status: active
+tags:
+- GIS
+- geospatial
+- QWC2
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00010033
+endpoints:
+- type: qwc2:layers
+  url: https://qwc-irr-prod.ilu.ch/themes.json

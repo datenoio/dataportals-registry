@@ -50,6 +50,7 @@ Open the harvest heading from [software-index.md](../software-index.md). Do not 
 | `dspace` / `dspacecris` | `f.entityType=Dataset` or OAI `ListSets` |
 | `invenio` / `inveniordm` | `/api/records?q=metadata.resource_type.type:dataset` |
 | `ckan` / `dkan` | `package_search` (packages, not resources) |
+| `ekan` | `/jsonapi/dataset/dataset` or `/data.json` |
 | `opendatasoft` | `/api/explore/v2.1/catalog/datasets` |
 | `socrata` | `/api/catalog/v1?only=datasets` |
 | `geonetwork` | CSW `GetRecords`; `hierarchyLevel` dataset/series |

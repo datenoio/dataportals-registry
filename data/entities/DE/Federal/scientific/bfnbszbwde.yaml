@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 20
+description: OPUS 4 publication server of Bundesamt für Naturschutz.
+id: bfnbszbwde
+langs:
+- id: DE
+  name: German
+link: https://bfn.bsz-bw.de
+name: Bundesamt für Naturschutz publication server
+owner:
+  link: https://bfn.bsz-bw.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Bundesamt für Naturschutz
+  type: Central government
+software:
+  id: opus
+  name: OPUS
+status: active
+tags:
+- scientific
+- research data
+- government
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00011621
+endpoints:
+- type: oaipmh20
+  url: https://bfn.bsz-bw.de/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://bfn.bsz-bw.de/rss/index/index/searchtype/latest
+  version: '2.0'

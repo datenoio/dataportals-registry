@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-NAQ
+      name: Nouvelle-Aquitaine
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GeoNature-atlas of mollusc observations for Nouvelle-Aquitaine.
+id: mollusquesnouvelleaquitainefr
+langs:
+- id: FR
+  name: French
+link: https://mollusques-nouvelle-aquitaine.fr/
+name: Atlas des mollusques de Nouvelle-Aquitaine
+owner:
+  link: https://mollusqueslimousin.jimdofree.com/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-NAQ
+      name: Nouvelle-Aquitaine
+  name: Société Limousine d'étude des Mollusques
+  type: Civil society
+software:
+  id: geonature
+  name: GeoNature
+status: active
+tags:
+- geospatial
+- biodiversity
+- GeoNature
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00013796
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: geonature:api
+  url: https://mollusques-nouvelle-aquitaine.fr/api/searchTaxon
+- type: geonature:api
+  url: https://mollusques-nouvelle-aquitaine.fr/api/searchCommune

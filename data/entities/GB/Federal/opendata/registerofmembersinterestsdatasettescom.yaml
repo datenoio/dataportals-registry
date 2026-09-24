@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    level: 20
+description: UK parliamentary register of members' financial interests.
+id: registerofmembersinterestsdatasettescom
+langs:
+- id: EN
+  name: English
+link: https://register-of-members-interests.datasettes.com/
+name: UK Register of Members' Interests
+owner:
+  link: https://datasette.io/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: Datasette project
+  type: Civil society
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- civil society
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00014039
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://register-of-members-interests.datasettes.com/-/databases.json

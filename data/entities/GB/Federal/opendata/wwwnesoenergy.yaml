@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Open data catalog of Great Britain electricity system demand, generation,
+  and balancing datasets. The public CKAN API is at api.neso.energy.
+id: wwwnesoenergy
+langs:
+- id: EN
+  name: English
+link: https://www.neso.energy/data-portal
+name: NESO Data Portal
+owner:
+  link: https://www.neso.energy/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: National Energy System Operator
+  type: Central government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+uid: cdi00008306
+endpoints:
+- type: ckan
+  url: https://api.neso.energy/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://api.neso.energy/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://api.neso.energy/api/3/action/package_list
+  version: '3'

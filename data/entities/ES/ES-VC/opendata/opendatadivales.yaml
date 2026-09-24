@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: ES-VC
+      name: Valenciana, Comunidad
+description: CKAN open-data portal of the Provincial Council of Valencia (about 3,900
+  packages).
+id: opendatadivales
+langs:
+- id: ES
+  name: Spanish
+- id: CA
+  name: Catalan
+link: https://opendata.dival.es
+name: Portal de datos abiertos Diputación de Valencia
+owner:
+  link: https://www.dival.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-VC
+      name: Valenciana, Comunidad
+  name: Diputación de Valencia
+  type: Local government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00007586
+endpoints:
+- type: ckan
+  url: https://opendata.dival.es/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata.dival.es/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.dival.es/api/3/action/package_list
+  version: '3'

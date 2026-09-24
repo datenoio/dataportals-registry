@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Xinjiang Astronomical Observatory archive portal. Publishes local pulsar
+  and FAST products, together with reference catalogs, through a DaCHS TAP service.
+id: dataxaoaccn
+langs:
+- id: ZH
+  name: Chinese
+link: https://data.xao.ac.cn/
+name: XAO Data Center
+owner:
+  link: https://www.xao.ac.cn/
+  location:
+    country:
+      id: CN
+      name: China
+    level: 20
+  name: Xinjiang Astronomical Observatory, Chinese Academy of Sciences
+  type: Academy
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00010142
+endpoints:
+- type: tap:capabilities
+  url: https://data.xao.ac.cn/tap/capabilities
+- type: oaipmh20
+  url: https://data.xao.ac.cn/oai.xml?verb=Identify
+  version: '2.0'

@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GeoServer catalog publishing 1115 layers outside the default sample workspaces
+  (WMS GetCapabilities).
+id: geoclearlyapp
+langs:
+- id: NL
+  name: Dutch
+link: https://geo.clearly.app/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+name: Future Insight GeoServer
+owner:
+  link: "https://geo.clearly.app/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities"
+  location:
+    country:
+      id: NL
+      name: Netherlands
+  name: Future Insight Group
+  type: Business
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- maps
+- business
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00015292
+endpoints:
+- type: wms111
+  url: https://geo.clearly.app/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geo.clearly.app/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geo.clearly.app/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geo.clearly.app/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geo.clearly.app/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

@@ -28,4 +28,15 @@ python scripts/sync_ckan_ecosystem.py --delay 2.0 --no-enrich
 
 After a real sync, run `python scripts/builder.py assign` and `validate-yaml`. Promote reviewed files with [scheduled.md](scheduled.md). Finding catalogs in general: [discovery.md](discovery.md).
 
+## Insights dashboard as a hunt source
+
+[CKAN Ecosystem Insights](https://ecosystem.ckan.org/insights) is a weekly-crawl dashboard over every portal the ecosystem catalog tracks: per-instance dataset counts, CKAN versions, installed extensions, and crawl reliability. The page reads a published rollup that can be diffed against registry exports without scraping:
+
+```bash
+curl -sLO https://raw.githubusercontent.com/dathere/pose-ckanext-metadata/main/dashboard-data/dashboard.json
+# dashboard.json -> instances[]: n (name), u (url), h (host), d (datasets), up (weekly reachability), gone
+```
+
+Match each instance host against `data/datasets/full.parquet` (`link` and `endpoints[].url` hosts). Watch for alias domains before adding: portals often answer on both `*.gov.ar`/`*.gob.ar`-style pairs, and the CKAN `status_show` `site_url` reveals the canonical host. Instances flagged `gone` or with all-zero `up` weeks are usually dead — probe before scheduling.
+
 Maintainer notes: [devdocs/ckan_ecosystem_sync.md](https://github.com/datenoio/dataportals-registry/blob/main/devdocs/ckan_ecosystem_sync.md).

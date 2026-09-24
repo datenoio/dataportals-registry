@@ -1,0 +1,48 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 20
+    macroregion:
+      id: '018'
+      name: Southern Africa
+description: Unisa institutional repository (DSpace) with OAI-PMH endpoint at /oai/request.
+  Replaces the deliberately shut down uir.unisa.ac.za service.
+endpoints:
+- type: oaipmh20
+  url: https://ir.unisa.ac.za/oai/request
+  version: '2.0'
+id: irunisaacza
+langs:
+- id: EN
+  name: English
+link: https://ir.unisa.ac.za/
+name: UnisaIR
+owner:
+  link: https://www.unisa.ac.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+  name: University of South Africa
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00007854

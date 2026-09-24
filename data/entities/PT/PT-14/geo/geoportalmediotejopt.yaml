@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: PT-14
+      name: Santarém
+description: ArcGIS Enterprise geoportal of CIM Médio Tejo, with REST services for
+  the intermunicipal community and member municipalities.
+id: geoportalmediotejopt
+langs:
+- id: PT
+  name: Portuguese
+link: https://geoportal.mediotejo.pt/
+name: Geoportal CIM Médio Tejo
+owner:
+  link: https://www.mediotejo.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    subregion:
+      id: PT-14
+      name: Santarém
+  name: Comunidade Intermunicipal do Médio Tejo
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:portals:self
+  url: "https://geoportal.mediotejo.pt/portal/sharing/rest/portals/self?f=pjson"
+uid: cdi00007630

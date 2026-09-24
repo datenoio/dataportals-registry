@@ -20,7 +20,7 @@ description: Official INEI platform for monitoring Peru's Sustainable Developmen
   to the 17 SDGs, with tables, charts, maps, metadata, and a public REST API for indicator
   series used by policymakers, researchers, and the general public.
 endpoints:
-- type: customapi
+- type: rest
   url: https://servicesrest.inei.gob.pe/odsmonitoreo-ver2-backend/api/
 id: odsineigobpe
 langs:
@@ -39,7 +39,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
-  is_national: true
+  is_national: false
 rights:
   license_id: null
   license_name: null

@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: CKAN catalog of publicly shared medical imaging datasets (mammogram,
+  prostate MRI, brain CT/MRI) from Ramathibodi Hospital.
+id: datamaitaiinth
+langs:
+- id: TH
+  name: Thai
+link: https://data.mait.ai.in.th
+name: Medical AI Data Sharing Platform
+owner:
+  link: https://www.rama.mahidol.ac.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+  name: Faculty of Medicine Ramathibodi Hospital, Mahidol University
+  type: Academy
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00008172
+properties:
+  is_national: false
+endpoints:
+- type: ckan
+  url: https://data.mait.ai.in.th/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.mait.ai.in.th/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.mait.ai.in.th/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://data.mait.ai.in.th/catalog.n3
+- type: dcat:ttl
+  url: https://data.mait.ai.in.th/catalog.ttl
+- type: dcat:xml
+  url: https://data.mait.ai.in.th/catalog.xml
+- type: dcat:jsonld
+  url: https://data.mait.ai.in.th/catalog.jsonld
+- type: dcat
+  url: https://data.mait.ai.in.th/catalog.rdf

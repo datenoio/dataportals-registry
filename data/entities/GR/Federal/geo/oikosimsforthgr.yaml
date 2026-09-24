@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: GeoServer catalog publishing 544 layers outside the default sample workspaces
+  (WMS GetCapabilities).
+id: oikosimsforthgr
+langs:
+- id: EL
+  name: Greek
+link: https://oikos.ims.forth.gr/geoserver
+name: IMS-FORTH GeoServer
+owner:
+  link: https://oikos.ims.forth.gr/geoserver
+  location:
+    country:
+      id: GR
+      name: Greece
+  name: Foundation for Research and Technology Hellas
+  type: Academy
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- maps
+- research
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00014145
+endpoints:
+- type: wms111
+  url: https://oikos.ims.forth.gr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://oikos.ims.forth.gr/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://oikos.ims.forth.gr/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://oikos.ims.forth.gr/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://oikos.ims.forth.gr/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

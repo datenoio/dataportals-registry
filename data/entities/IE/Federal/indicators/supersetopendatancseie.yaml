@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: National Council for Special Education Superset dashboards and tables
+  on special classes and school resource allocations, separate from the NCSE CKAN
+  portal.
+endpoints:
+- type: rest
+  url: https://superset.opendata.ncse.ie/api/v1/dataset/
+id: supersetopendatancseie
+langs:
+- id: EN
+  name: English
+link: https://superset.opendata.ncse.ie/superset/welcome/
+name: NCSE datAdore
+owner:
+  link: https://www.ncse.ie
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+  name: National Council for Special Education
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: superset
+  name: Apache Superset
+status: active
+tags:
+- statistics
+- government
+- has_api
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+uid: cdi00008210

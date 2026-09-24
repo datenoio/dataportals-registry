@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: CZ-32
+      name: Plzeňský kraj
+description: ArcGIS Hub geodata catalog of the City of Plzeň (CSV/KML/GeoJSON/WMS/WFS
+  downloads). Distinct from the custom open-data portal at opendata.plzen.eu and the
+  map portal at mapy.plzen.eu.
+id: geodataplzeneu
+langs:
+- id: CS
+  name: Czech
+link: https://geodata.plzen.eu/
+name: Geodata města Plzně
+owner:
+  link: https://www.plzen.eu
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 30
+    subregion:
+      id: CZ-32
+      name: Plzeňský kraj
+  name: Statutární město Plzeň
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: dcatap201
+  url: "https://geodata.plzen.eu/api/feed/dcat-ap/2.0.1.json"
+uid: cdi00008042

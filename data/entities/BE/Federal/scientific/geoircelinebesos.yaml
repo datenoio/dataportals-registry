@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: 52°North SOS of IRCEL-CELINE, the Belgian interregional air-quality network.
+  The public webapp is mounted at /sos/. GetCapabilities lists about 748 observation
+  offerings (stations and procedures such as PM2.5 and BTEX), and the timeseries API
+  exposes 680 series.
+id: geoircelinebesos
+langs:
+- id: NL
+  name: Dutch
+link: https://geo.irceline.be/sos/
+name: IRCEL-CELINE Sensor Observation Service
+owner:
+  link: https://www.irceline.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+  name: Belgian Interregional Environment Agency
+  type: Central government
+software:
+  id: 52northsos
+  name: 52°North SOS
+status: active
+tags:
+- environment
+- sensor
+- geospatial
+- government
+topics:
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00009769
+endpoints:
+- type: sos200
+  url: https://geo.irceline.be/sos/service?service=SOS&request=GetCapabilities
+  version: 2.0.0

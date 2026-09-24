@@ -17,7 +17,7 @@ coverage:
 description: Education open-data catalog for the Pays de la Loire academic region,
   on OpenDataSoft.
 endpoints:
-- type: opendatasoft
+- type: opendatasoftapi
   url: https://pays-de-la-loire-dataeducation.opendatasoft.com/api
 - type: opendatasoftapi
   url: https://pays-de-la-loire-dataeducation.opendatasoft.com/api/explore/v2.1/catalog/datasets?limit=1
@@ -34,6 +34,7 @@ owner:
     country:
       id: FR
       name: France
+    level: 20
   name: MINISTERE DE L'EDUCATION NATIONALE
   type: Central government
 software:

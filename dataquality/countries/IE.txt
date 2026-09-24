@@ -1,0 +1,31 @@
+DATA QUALITY REPORT - COUNTRY: IE
+================================================================================
+Generated: 2026-09-24 20:41:37
+Country Code: IE
+Total Records with Issues: 2
+Total Issues Found: 2
+
+=== ISSUES BY TYPE ===
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
+Count: 2
+Priority: MEDIUM
+
+File: IE/Federal/indicators/wwwseaiie.yaml
+Record ID: wwwseaiie
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: IE/Federal/indicators/wwwncriie.yaml
+Record ID: wwwncriie
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 2 issues

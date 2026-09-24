@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public ArcGIS Server 12.1 REST catalog hosted by CESNET with Sentinel-2
+  Czech Republic ImageServers. Distinct from the STAC API at stac.cesnet.cz.
+id: arcgiscesnetcz
+langs:
+- id: CS
+  name: Czech
+link: https://arcgis.cesnet.cz/server/rest/services
+name: CESNET ArcGIS Server
+owner:
+  link: https://www.cesnet.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+  name: CESNET
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgis.cesnet.cz/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgis.cesnet.cz/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgis.cesnet.cz/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://arcgis.cesnet.cz/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arcgis.cesnet.cz/server/rest/services?f=geositemap
+uid: cdi00008043

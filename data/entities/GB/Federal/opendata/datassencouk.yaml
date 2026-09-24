@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Open data portal of Scottish and Southern Electricity Networks, the electricity
+  distribution operator for central southern England and northern Scotland. Publishes
+  network, smart meter and embedded capacity datasets. PortalJS frontend backed by
+  a CKAN API at data-api.ssen.co.uk.
+id: datassencouk
+langs:
+- id: EN
+  name: English
+link: https://data.ssen.co.uk
+name: SSEN Data Portal
+owner:
+  link: https://www.ssen.co.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+  name: Scottish and Southern Electricity Networks
+  type: Business
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- has_api
+- energy
+- electricity
+- open data
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+endpoints:
+- type: ckan
+  url: https://data-api.ssen.co.uk/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data-api.ssen.co.uk/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data-api.ssen.co.uk/api/3/action/package_list
+  version: '3'
+uid: cdi00007151

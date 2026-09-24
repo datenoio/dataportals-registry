@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: NOMAD Oasis of the Cluster of Excellence ct.qmat (Complexity and Topology
+  in Quantum Matter). The public REST API lists published entries, including NeXus
+  measurements on indenene.
+endpoints:
+- type: rest
+  url: https://nomad.ctqmat.de/nomad-oasis/api/v1/info
+- type: rest
+  url: https://nomad.ctqmat.de/nomad-oasis/api/v1/entries
+id: nomadctqmatde
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://nomad.ctqmat.de/nomad-oasis/gui/
+name: ct.qmat NOMAD Oasis
+owner:
+  link: https://www.ctqmat.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: ct.qmat (TU Dresden and Universität Würzburg)
+  type: Academy
+properties:
+  dataset_count_reported: 10
+software:
+  id: nomad
+  name: NOMAD
+status: active
+tags:
+- scientific
+- has_api
+- materials science
+- NOMAD Oasis
+- FAIR data
+- quantum materials
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00011645

@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BY
+      name: Bayern
+description: University of Bayreuth NOMAD Oasis for computational materials data.
+  The public REST API lists 920 published entries, including Quantum ESPRESSO calculations
+  on MoS2 phases.
+endpoints:
+- type: rest
+  url: https://nomad-oasis.uni-bayreuth.de/nomad-oasis/api/v1/info
+- type: rest
+  url: https://nomad-oasis.uni-bayreuth.de/nomad-oasis/api/v1/entries
+id: nomadoasisunibayreuthde
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://nomad-oasis.uni-bayreuth.de/nomad-oasis/gui/
+name: University of Bayreuth NOMAD Oasis
+owner:
+  link: https://www.uni-bayreuth.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BY
+      name: Bayern
+  name: Universität Bayreuth
+  type: Academy
+properties:
+  dataset_count_reported: 920
+software:
+  id: nomad
+  name: NOMAD
+status: active
+tags:
+- scientific
+- has_api
+- materials science
+- NOMAD Oasis
+- FAIR data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00011403

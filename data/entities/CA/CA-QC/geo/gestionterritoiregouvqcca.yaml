@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-QC
+      name: Quebec
+description: Quebec public-land information system (SIGT), published as an IGO2 viewer.
+  Public WFS GetCapabilities on the passerelle lists named territorial layers, including
+  leases, wildlife habitat, and parks. The context-list API requires authentication.
+id: gestionterritoiregouvqcca
+langs:
+- id: FR
+  name: French
+link: https://gestion.territoire.gouv.qc.ca
+name: Système d'information et de gestion du territoire
+owner:
+  link: https://www.quebec.ca/gouvernement/ministeres-organismes/ressources-naturelles-forets
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-QC
+      name: Quebec
+  name: Ministère des Ressources naturelles et des Forêts
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: igo2
+  name: IGO2
+status: active
+tags:
+- geospatial
+- Quebec
+- public land
+- IGO2
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning Cadastre
+  name: Planning Cadastre
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00009983

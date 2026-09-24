@@ -27,10 +27,10 @@ description: Interactive Apache Superset catalog of indicators from Morocco's 20
   General Census of Population and Housing (RGPH 2024), with tables, charts, and thematic
   maps down to the commune, including Laâyoune-Sakia El Hamra and Dakhla-Oued Ed-Dahab.
 endpoints:
-- type: customapi
+- type: rest
   url: https://resultats2024.rgphapps.ma/api/v1/dashboard/
   version: '1'
-- type: customapi
+- type: rest
   url: https://resultats2024.rgphapps.ma/api/v1/dataset/
   version: '1'
 id: resultats2024rgphappsma
@@ -52,7 +52,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
-  is_national: true
+  is_national: false
 rights:
   license_id: null
   license_name: null

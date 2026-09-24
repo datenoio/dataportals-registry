@@ -1,0 +1,68 @@
+category: Open data portal
+subtype: managed_saas_service
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: dataportalai
+website: https://www.sister.it/prodotti/dataportalai/
+name: DataPortal.AI
+description: DataPortal.AI is the Sister (Almawave) open-data portal, the current
+  generation of StatPortal Open Data and SPOD. Italian administrations publish a
+  dataset catalog on their own host. SPOD portals are Drupal 7 with
+  /sites/all/modules/spodata/, a statportal or spod_bootstrap theme, a catalog
+  at /catalogo-opendata or /catalog, and datasets under /opendata/{slug}. The
+  DataPortal.AI shell has title DataPortal.AI and /lmap/lmap-core/. Distinct
+  from the Istat browser at statportal.it, from Sister Data Browser, from
+  StatKit, from CKAN (including a former SPOD host that now returns
+  ckan_version), and from a generic Drupal theme.
+owner:
+  name: Sister - Sistemi Territoriali S.r.l.
+  location:
+    country:
+      id: IT
+      name: Italy
+logo_url: https://www.sister.it/favicon.ico
+documentation_url: https://www.sister.it/prodotti/dataportalai/
+metadata_support:
+  ckan_api: Uncertain
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: Uncertain
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: Uncertain
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+  odata: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Structured
+type: Software
+export_formats:
+- CSV
+- JSON
+- RDF
+capabilities:
+- Open data catalog
+- OData API
+- dati.gov.it federation
+- Municipal and regional SaaS portal
+last_updated: '2026-09-22T20:00:00Z'

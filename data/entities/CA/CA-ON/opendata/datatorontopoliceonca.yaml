@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -46,8 +46,8 @@ owner:
   name: Toronto Police Service
   type: Local government
 software:
-  id: custom
-  name: Custom software
+  id: arcgishub
+  name: ArcGIS Hub
 status: active
 tags:
 - open data
@@ -65,4 +65,17 @@ topics:
 - id: Transportation
   name: Transportation
   type: iso19115
+endpoints:
+- type: dcatap201
+  url: https://data.tps.ca/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://data.tps.ca/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://data.tps.ca/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://data.tps.ca/api/search/v1
+- type: arcgishubapi
+  url: https://data.tps.ca/api/v3/datasets
+- type: dcatus11
+  url: https://data.tps.ca/data.json
 uid: cdi00028769

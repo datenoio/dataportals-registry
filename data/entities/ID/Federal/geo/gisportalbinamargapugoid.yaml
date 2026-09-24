@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Public ArcGIS Server 11.5 service directory for national road, bridge,
+  and slope map layers maintained by the Directorate General of Highways.
+id: gisportalbinamargapugoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://gisportal.binamarga.pu.go.id/arcgis/rest/services
+name: ArcGIS Server Direktorat Jenderal Bina Marga
+owner:
+  link: https://binamarga.pu.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+  name: Direktorat Jenderal Bina Marga
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00008192
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisportal.binamarga.pu.go.id/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisportal.binamarga.pu.go.id/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisportal.binamarga.pu.go.id/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisportal.binamarga.pu.go.id/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisportal.binamarga.pu.go.id/arcgis/rest/services?f=geositemap

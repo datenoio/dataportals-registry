@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-75
+      name: Puglia
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: G3W-SUITE geoportal of Comune di Altamura for public lighting and PNRR
+  map projects.
+id: sitcomunealtamurabait
+langs:
+- id: IT
+  name: Italian
+link: https://sit.comune.altamura.ba.it/
+name: GeoSIT Comune di Altamura
+owner:
+  link: https://www.comune.altamura.ba.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-75
+      name: Puglia
+  name: Comune di Altamura
+  type: Local government
+software:
+  id: g3wsuite
+  name: G3W-SUITE
+status: active
+tags:
+- geospatial
+- geoportal
+- government
+- g3wsuite
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00014646
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: g3wsuite:catalog
+  url: https://sit.comune.altamura.ba.it/

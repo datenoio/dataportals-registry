@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-89
+      name: Yonne
+description: ArcGIS Hub open-data site of the Département de l'Yonne with DCAT and
+  downloadable geospatial datasets.
+id: cartesyonnefr
+langs:
+- id: FR
+  name: French
+link: https://cartes.yonne.fr/
+name: Cartes Yonne
+owner:
+  link: https://www.yonne.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-89
+      name: Yonne
+  name: Département de l'Yonne
+  type: Regional government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- opendata
+- arcgis hub
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007758
+properties:
+  is_national: false
+  has_doi: false
+endpoints:
+- type: dcatap201
+  url: https://cartes.yonne.fr/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://cartes.yonne.fr/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://cartes.yonne.fr/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://cartes.yonne.fr/api/search/v1
+- type: arcgishubapi
+  url: https://cartes.yonne.fr/api/v3/datasets
+- type: dcatus11
+  url: https://cartes.yonne.fr/data.json

@@ -36,6 +36,9 @@ Integrity-track CRITICAL and IMPORTANT counts must not grow (`dataquality/baseli
 | `INCOMPLETE_IDENTIFIER` | Each identifier needs `id` and `value` |
 | `INCONSISTENT_LICENSE` | Align `rights.license_id` / `license_name` / `license_url` |
 | `API_STATUS_MISMATCH` | If `api` is true, set a coherent `api_status` |
+| `COVERAGE_LEVEL_NONSTANDARD` | Set `coverage[].location.level` to 10, 20, 30, 40, 50, or 60. Level 0, 1, and 2 are not in the vocabulary |
+| `OWNER_LEVEL_MISSING` | Central and federal owners need `owner.location.level` (usually 20). Regional and local owners are covered by `OWNER_LOCATION_SUBREGION_REQUIRED` |
+| `GOV_COVERAGE_COUNTRY_MISMATCH` | A government owner whose coverage is a single sovereign country must use that same country. Multi-country coverage and supranational coverage ids (`World`, `EU`, `Africa`, …) are not flagged |
 | `MISSING_API_STATUS` | Set `api_status` when `api: true` |
 | `MISSING_ENDPOINTS` | Add at least one `endpoints[]` entry when `api: true` |
 | `SOFTWARE_ID_UNKNOWN` | Use an id from `data/software/` or `custom` |
@@ -63,7 +66,11 @@ Integrity-track CRITICAL and IMPORTANT counts must not grow (`dataquality/baseli
 | `MISSING_ACCESS_MODE` | Integrity | Set `access_mode` (prefer `open` / `restricted`) |
 | `TAG_HYGIENE` | Enrichment | Normalize messy tags |
 | `TOPIC_INCOMPLETE` | Enrichment | Complete `topics[].{type,id,name}` |
-| `STATUS_API_STATUS_MISMATCH` | Integrity | Inactive catalogs should not claim an active API |
+| `STATUS_API_STATUS_MISMATCH` | Integrity | Inactive or deprecated catalogs must not have `api_status: active`. An active catalog with endpoints must not have `api_status: inactive` |
+| `ENDPOINT_TYPE_ALIAS` | Enrichment | Replace retired `endpoints[].type` names (`customapi`, `custom_api`, `api`, `opendatasoft`, `geonetwork`, `stac`, `csw`, `oaipmh`, `socrata:opendata`) with the preferred type |
+| `IS_NATIONAL_EXCESS` | Enrichment | More than two `properties.is_national: true` records for the same owner country and `catalog_type`. Keep one current catalog and one legacy |
+| `TOPIC_TYPE_NONCANONICAL` | Enrichment | `topics[].type` must be `eudatatheme` or `iso19115` |
+| `BOILERPLATE_DESCRIPTION` | Enrichment | Description is shared by 5 or more catalogs (longer than 80 characters) or says the site is a template / “City of Ca” |
 | `RIGHTS_INCOMPLETE` | Enrichment | Add license / ToS / privacy URLs when known |
 | `PLACEHOLDER_TITLE` | Enrichment | Replace placeholder `name` |
 | `PLACEHOLDER_OWNER_NAME` | Integrity | Replace placeholder `owner.name` |
@@ -91,6 +98,11 @@ Integrity-track CRITICAL and IMPORTANT counts must not grow (`dataquality/baseli
 | `DUPLICATE_COVERAGE` | Remove repeated coverage entries (same country, level, and subregion) |
 | `MISSING_CONTACT_INFO` | Add `owner.link` on **active** catalogs with `restricted` in `access_mode` (there is no catalog `contact` field; checker: `check_contact_info` in `scripts/builder.py`) |
 | `TOPIC_SCHEMA_VIOLATION` | Fix `topics` shape (`type`, `id`, `name`) |
+| `LANGUAGE_NAME_NONCANONICAL` | Set `langs[].name` to the English name in `data/reference/langs.csv` |
+| `LANGUAGE_CODE_UNKNOWN` | Use a code from `data/reference/langs.csv` (`ZH` for Chinese, not `CN`) |
+| `ACCESS_MODE_NONPREFERRED` | Prefer `open` or `restricted` over `limited`, `public`, `protected`, `closed`, `private` |
+| `CONTENT_TYPE_NONCANONICAL` | Use a value from `data/reference/content_types.yaml` |
+| `MISSING_RIGHTS` | The official national open-data portal (`properties.is_national: true`, active, `access_mode: open`, central or federal owner) needs `rights.license_id`, `license_name`, or `license_url`. Agency and thematic catalogs are not flagged |
 
 ## Software definition issues
 

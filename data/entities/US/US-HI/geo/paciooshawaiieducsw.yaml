@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-HI
+      name: Hawaii
+description: pycsw metadata catalogue of Pacific Islands Ocean Observing System scientific
+  and coastal datasets.
+id: paciooshawaiieducsw
+langs:
+- id: EN
+  name: English
+link: https://www.pacioos.hawaii.edu/ogc/csw
+name: PacIOOS Catalog Service for the Web
+owner:
+  link: https://www.pacioos.hawaii.edu/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-HI
+      name: Hawaii
+  name: Pacific Islands Ocean Observing System (PacIOOS)
+  type: Academy
+software:
+  id: pycsw
+  name: pycsw
+status: active
+tags:
+- geospatial
+- maps
+- research
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00016319
+endpoints:
+- type: csw202
+  url: https://www.pacioos.hawaii.edu/ogc/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://www.pacioos.hawaii.edu/ogc/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: oaipmh20
+  url: https://www.pacioos.hawaii.edu/ogc/csw/oaipmh
+  version: '2.0'
+- type: oaipmh20
+  url: https://www.pacioos.hawaii.edu/ogc/csw/?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: csw202
+  url: https://www.pacioos.hawaii.edu/ogc/csw/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: csw300
+  url: https://www.pacioos.hawaii.edu/ogc/csw/csw
+  version: 3.0.0
+- type: opensearch
+  url: https://www.pacioos.hawaii.edu/ogc/csw/opensearch
+  version: '1.0'
+- type: sru
+  url: https://www.pacioos.hawaii.edu/ogc/csw/sru
+  version: '1.0'

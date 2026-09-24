@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: National shared ArcGIS Enterprise platform (GeoHub-SI) publishing public
+  GIS services and applications of Slovenian government institutions on the state
+  cloud.
+id: geohubgovsi
+langs:
+- id: SL
+  name: Slovenian
+link: https://geohub.gov.si/ags/rest/services
+name: GeoHub-SI
+owner:
+  link: https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-digitalno-preobrazbo/
+  location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 20
+  name: Ministry of Digital Transformation
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://geohub.gov.si/ags/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geohub.gov.si/ags/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geohub.gov.si/ags/services?wsdl
+- type: arcgis:sitemap
+  url: https://geohub.gov.si/ags/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geohub.gov.si/ags/rest/services?f=geositemap
+uid: cdi00008078

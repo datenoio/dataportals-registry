@@ -20,11 +20,11 @@ coverage:
 description: CIVORA / Piveau municipal data catalog of Stadt Troisdorf (Smartes Troisdorf),
   listing local open datasets from the city's urban data hub.
 endpoints:
-- type: customapi
+- type: rest
   url: https://piveau-search.troisdorf.civora.org/search
-- type: customapi
+- type: rest
   url: https://piveau-repo.troisdorf.civora.org/catalogues
-- type: customapi
+- type: rest
   url: https://piveau-repo.troisdorf.civora.org/datasets
 - type: ckan:package-search
   url: https://piveau-search.troisdorf.civora.org/ckan/package_search

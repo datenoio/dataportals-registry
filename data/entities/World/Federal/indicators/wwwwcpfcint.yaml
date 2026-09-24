@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -32,8 +32,8 @@ owner:
   name: Western and Central Pacific Fisheries Commission
   type: International
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - fisheries
@@ -44,4 +44,7 @@ topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
+endpoints:
+- type: drupal:jsonapi
+  url: https://www.wcpfc.int/jsonapi
 uid: cdi00006782

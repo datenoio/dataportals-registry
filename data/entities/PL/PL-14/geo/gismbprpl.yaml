@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: PL-14
+      name: Mazowieckie
+description: Public Lizmap geoportal of Mazowieckie Biuro Planowania Regionalnego
+  with regional spatial-planning monitoring, landscape-audit, and business-support
+  map projects.
+id: gismbprpl
+langs:
+- id: PL
+  name: Polish
+link: https://gis.mbpr.pl/
+name: Geoportal Mazowieckiego Biura Planowania Regionalnego
+owner:
+  link: https://mbpr.pl
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    subregion:
+      id: PL-14
+      name: Mazowieckie
+  name: Mazowieckie Biuro Planowania Regionalnego
+  type: Regional government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: wms130
+  url: "https://gis.mbpr.pl/index.php/lizmap/service?repository=iob&project=GeoportalIOB&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+  version: "1.3.0"
+uid: cdi00007910

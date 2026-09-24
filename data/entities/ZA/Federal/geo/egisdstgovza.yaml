@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 20
+    macroregion:
+      id: '018'
+      name: Southern Africa
+description: Public ArcGIS Enterprise portal of the Department of Science, Technology
+  and Innovation; 54 items in the public catalog search.
+endpoints:
+- type: arcgis:portals:self
+  url: https://egis.dst.gov.za/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:search
+  url: https://egis.dst.gov.za/portal/sharing/rest/search?f=json&q=orgid:0123456789ABCDEF
+id: egisdstgovza
+langs:
+- id: EN
+  name: English
+link: https://egis.dst.gov.za/portal/home/
+name: DSTI eGIS Portal
+owner:
+  link: https://www.dst.gov.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 20
+  name: Department of Science, Technology and Innovation
+  type: Central government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007850

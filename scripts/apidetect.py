@@ -427,6 +427,31 @@ DKAN_URLMAP = [
     },
 ]
 
+EKAN_URLMAP = [
+    {
+        "id": "drupal:jsonapi",
+        "url": "/jsonapi/dataset/dataset",
+        "accept": "application/vnd.api+json, application/json",
+        "expected_mime": JSON_MIMETYPES + ["application/vnd.api+json"],
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "dcatus11",
+        "url": "/data.json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "dcat:xml",
+        "url": "/catalog.xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+]
+
 CKAN_URLMAP = [
     {
         "id": "ckan",
@@ -2914,6 +2939,7 @@ DEEP_SEARCH_FUNCTIONS = [analyze_robots, analyze_root]
 CATALOGS_URLMAP = {
     "geonode": GEONODE_URLMAP,
     "dkan": DKAN_URLMAP,
+    "ekan": EKAN_URLMAP,
     "ckan": CKAN_URLMAP,
     "geonetwork": GEONETWORK_URLMAP,
     "openwis": GEONETWORK_URLMAP,

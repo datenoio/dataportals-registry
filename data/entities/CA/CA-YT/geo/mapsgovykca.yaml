@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-YT
+      name: Yukon
+description: Government of Yukon public ArcGIS Server REST endpoint exposing map, feature, and imagery services covering community hazards, mining, civic addressing, and other territorial spatial data.
+id: mapsgovykca
+langs:
+- id: EN
+  name: English
+link: https://maps.gov.yk.ca/arcgis/rest/services
+name: Government of Yukon Maps ArcGIS Server
+owner:
+  link: "https://maps.gov.yk.ca"
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-YT
+      name: Yukon
+  name: Government of Yukon
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.gov.yk.ca/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.gov.yk.ca/arcgis/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://maps.gov.yk.ca/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.gov.yk.ca/arcgis/rest/services?f=geositemap
+uid: cdi00007873

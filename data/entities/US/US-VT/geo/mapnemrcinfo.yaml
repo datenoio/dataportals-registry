@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-VT
+      name: Vermont
+description: Public parcel-map gallery from the New England Municipal Resource Center
+  in Fairfax, Vermont. The portal publishes municipal parcel maps for Vermont towns,
+  including Sutton, Fairfax, Jericho, Milton, and Middlebury.
+endpoints:
+- type: mangomap:catalog
+  url: https://map.nemrc.info/nemrc/maps
+id: mapnemrcinfo
+langs:
+- id: EN
+  name: English
+link: https://map.nemrc.info/nemrc/maps
+name: NEMRC Map and Data Portal
+owner:
+  link: https://nemrc.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-VT
+      name: Vermont
+  name: New England Municipal Resource Center
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://mangomap.com/privacy
+  rights_type: global
+  tos_url: https://mangomap.com/terms
+software:
+  id: mangomap
+  name: MangoMap
+status: active
+tags:
+- GIS
+- geospatial
+- parcels
+- cadastre
+- Vermont
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00008658

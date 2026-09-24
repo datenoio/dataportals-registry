@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+description: Public Mappi map catalog of Gemeente Oegstgeest with GeoJSON/GeoRSS map
+  API.
+id: kaartoegstgeestnl
+langs:
+- id: NL
+  name: Dutch
+link: https://kaart.oegstgeest.nl/
+name: Kaart Oegstgeest
+owner:
+  link: https://www.oegstgeest.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+  name: Gemeente Oegstgeest
+  type: Local government
+software:
+  id: mappi
+  name: Mappi
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00008016
+endpoints:
+- type: rest
+  url: https://kaart.oegstgeest.nl/api/maps/42.json

@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: API Catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: FI-19
+      name: Varsinais-Suomi
+description: TSJL open data API of Turku region public transport (Foli). Static GTFS and realtime bus
+  traffic and timetable data for the Turku region, public without registration.
+endpoints:
+- type: rest
+  url: https://data.foli.fi/gtfs/routes
+- type: rest
+  url: https://data.foli.fi/gtfs/gtfs.zip
+id: datafolifi
+langs:
+- id: FI
+  name: Finnish
+- id: EN
+  name: English
+link: https://data.foli.fi
+name: TSJL - Föli Open Data API
+owner:
+  link: "https://data.foli.fi"
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 30
+    subregion:
+      id: FI-19
+      name: Varsinais-Suomi
+  name: Turku Region Public Transport Föli
+  type: Regional government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- api
+- government
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00007894

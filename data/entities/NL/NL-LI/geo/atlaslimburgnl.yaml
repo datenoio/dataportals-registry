@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-LI
+      name: Limburg
+description: Public Tailormap geoportal of Provincie Limburg. Distinct from provincielimburg.hub.arcgis.com.
+id: atlaslimburgnl
+langs:
+- id: NL
+  name: Dutch
+link: https://atlas.limburg.nl/
+name: Atlas Limburg
+owner:
+  link: https://www.limburg.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-LI
+      name: Limburg
+  name: Provincie Limburg
+  type: Regional government
+software:
+  id: tailormap
+  name: Tailormap
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00008005
+endpoints:
+- type: tailormap:viewers
+  url: https://atlas.limburg.nl/nl/page/viewers
+- type: tailormap:start
+  url: https://atlas.limburg.nl/nl/page/startpagina

@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-60
+      name: Oise
+description: GeoNetwork / geOrchestra datahub of Grand Beauvaisis, with about 48 public
+  geospatial metadata records.
+id: siggrandbeauvaisisfr
+langs:
+- id: FR
+  name: French
+link: https://sig.grandbeauvaisis.fr/geonetwork/srv/fre/catalog.search
+name: GéoNetwork Grand Beauvaisis
+owner:
+  link: https://www.grandbeauvaisis.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-60
+      name: Oise
+  name: Communauté d'agglomération du Grand Beauvaisis
+  type: Local government
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- government
+- geonetwork
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007709
+properties:
+  is_national: false
+endpoints:
+- type: openapi
+  url: https://sig.grandbeauvaisis.fr/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://sig.grandbeauvaisis.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://sig.grandbeauvaisis.fr/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: ogcrecordsapi
+  url: https://sig.grandbeauvaisis.fr/geonetwork/srv/ogc/records/collections?f=json
+- type: ogcrecordsapi
+  url: https://sig.grandbeauvaisis.fr/geonetwork/ogc/records/collections?f=json
+- type: geonetwork:selections
+  url: https://sig.grandbeauvaisis.fr/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://sig.grandbeauvaisis.fr/geonetwork/srv/api/site

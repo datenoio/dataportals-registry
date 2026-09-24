@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+- indicator
+coverage:
+- location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: BA-SRP
+      name: Republika Srpska
+description: OpenSDG portal of demographic-resilience indicators for Republika Srpska,
+  covering population, census, health, social protection, education, economy, labour,
+  and violence. Distinct from the Republika Srpska SDG site at sdg.rzs.rs.ba and from
+  the state-level portal at pdo.bhas.gov.ba.
+id: pdorzsrsba
+langs:
+- id: EN
+  name: English
+- id: SR
+  name: Serbian
+link: https://pdo.rzs.rs.ba/
+name: Republika Srpska Demographic Resilience Data
+owner:
+  link: https://www.rzs.rs.ba
+  location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 30
+    subregion:
+      id: BA-SRP
+      name: Republika Srpska
+  name: Republički zavod za statistiku Republike Srpske
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: opensdg
+  name: OpenSDG
+status: active
+tags:
+- statistics
+- government
+- has_api
+- SDG
+- indicators
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: opensdg:reporting-status
+  url: https://pdo.rzs.rs.ba/reporting-status
+- type: opensdg:reporting-status
+  url: https://pdo.rzs.rs.ba/reporting-status/
+- type: opensdg:catalog
+  url: https://pdo.rzs.rs.ba/indicators.json
+- type: opensdg:data
+  url: https://demografijars.github.io/populationData-data/en/data/1-1-1.json
+- type: opensdg:data
+  url: https://demografijars.github.io/populationData-data/en/data/1-2-1.json
+uid: cdi00008749

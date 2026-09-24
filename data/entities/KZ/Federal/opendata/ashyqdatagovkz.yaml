@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+endpoints:
+- type: magda:datasets
+  url: https://ashyq.data.gov.kz/api/v0/search/datasets
+- type: magda:organizations
+  url: https://ashyq.data.gov.kz/api/v0/search/organisations
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 20
+    macroregion:
+      id: '143'
+      name: Central Asia
+description: Kazakhstan government open data catalog (Ashyq Data), a Magda portal
+  publishing datasets from Smart Data Ukimet.
+id: ashyqdatagovkz
+langs:
+- id: RU
+  name: Russian
+- id: KZ
+  name: Kazakh
+- id: EN
+  name: English
+link: https://ashyq.data.gov.kz/
+name: Ashyq Data
+owner:
+  link: https://sdu.gov.kz/
+  location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 20
+  name: Smart Data Ukimet
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: magda
+  name: Magda
+status: active
+tags:
+- government
+- open data
+- catalog
+- kazakhstan
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00008206

@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: GeoServer catalog publishing 54 layers outside the default sample workspaces
+  (WMS GetCapabilities).
+id: owsremotesensingdatagovscot
+langs:
+- id: EN
+  name: English
+link: https://ows.remotesensing.data.gov.scot/geoserver
+name: JNCC Remote Sensing GeoServer
+owner:
+  link: https://ows.remotesensing.data.gov.scot/geoserver
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: Joint Nature Conservation Committee
+  type: Central government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- maps
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00014012
+endpoints:
+- type: wms111
+  url: https://ows.remotesensing.data.gov.scot/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://ows.remotesensing.data.gov.scot/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://ows.remotesensing.data.gov.scot/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://ows.remotesensing.data.gov.scot/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://ows.remotesensing.data.gov.scot/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

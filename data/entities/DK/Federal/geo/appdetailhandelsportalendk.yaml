@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: COWI retail-planning geoportal on MapCentia GC2/Vidi. Public layers include
+  municipal consumption, a population heatmap, and local-plan frames.
+id: appdetailhandelsportalendk
+langs:
+- id: DA
+  name: Danish
+link: https://app.detailhandelsportalen.dk/app/dhp/
+name: Detailhandelsportalen
+owner:
+  link: https://www.detailhandelsportalen.dk/
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+  name: COWI
+  type: Business
+software:
+  id: gc2
+  name: GC2
+status: active
+tags:
+- GC2
+- Vidi
+- retail
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00011703
+endpoints:
+- type: wms130
+  url: https://app.detailhandelsportalen.dk/api/wms/dhp/public?service=WMS&request=GetCapabilities
+  version: 1.3.0
+- type: rest
+  url: https://app.detailhandelsportalen.dk/api/meta/dhp/public
+properties:
+  has_doi: false
+  is_national: false

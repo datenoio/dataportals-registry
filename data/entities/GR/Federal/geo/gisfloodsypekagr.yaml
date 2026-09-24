@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: GET SDI Portal flood-risk geoportal of the Ministry of Environment and
+  Energy, distinct from the WFD GIS.
+id: gisfloodsypekagr
+langs:
+- id: EL
+  name: Greek
+link: https://gis.floods.ypeka.gr
+name: YPEKA Floods Geoportal
+owner:
+  link: https://ypen.gov.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: Ministry of Environment and Energy
+  type: Central government
+software:
+  id: getsdiportal
+  name: GET SDI Portal
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: wms130
+  url: "https://gis.floods.ypeka.gr/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities"
+  version: "1.3.0"
+uid: cdi00007660

@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ASEAN
+      name: ASEAN
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    level: 20
+description: ASEAN-DIWA tables on ICT skills, enrolment, phone ownership, and internet
+  access.
+id: dataaseandiwaorg
+langs:
+- id: EN
+  name: English
+link: https://data.aseandiwa.org/
+name: ASEAN-DIWA Database
+owner:
+  link: https://data.aseandiwa.org/
+  location:
+    country:
+      id: ASEAN
+      name: ASEAN
+    level: 20
+  name: ASEAN-DIWA
+  type: International
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- international
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00008783
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://data.aseandiwa.org/-/databases.json

@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Research data catalog of the AURORA project.
+id: dataauroralinkeddataes
+langs:
+- id: EN
+  name: English
+link: https://data.aurora.linkeddata.es
+name: AURORA
+owner:
+  link: https://data.aurora.linkeddata.es
+  location:
+    country:
+      id: ES
+      name: Spain
+  name: AURORA
+  type: Academy
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: ckan:package-search
+  url: https://data.aurora.linkeddata.es/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.aurora.linkeddata.es/api/3/action/package_list
+  version: '3'
+uid: cdi00011962
+properties:
+  is_national: false

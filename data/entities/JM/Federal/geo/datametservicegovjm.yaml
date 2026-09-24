@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: JM
+      name: Jamaica
+    level: 20
+    macroregion:
+      id: '029'
+      name: Caribbean
+description: Jamaica national weather service SmartMet Server. Public OGC WMS and
+  timeseries plugins for forecast grids (GEM and other producers).
+id: datametservicegovjm
+langs:
+- id: EN
+  name: English
+link: https://data.metservice.gov.jm/wms?service=WMS&request=GetCapabilities
+name: Meteorological Service of Jamaica SmartMet Server
+owner:
+  link: https://metservice.gov.jm
+  location:
+    country:
+      id: JM
+      name: Jamaica
+    level: 20
+  name: Meteorological Service of Jamaica
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: smartmetserver
+  name: SmartMet Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007956
+endpoints:
+- type: wms130
+  url: https://data.metservice.gov.jm/wms?service=WMS&request=GetCapabilities

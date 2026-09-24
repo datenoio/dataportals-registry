@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: MX-SON
+      name: Sonora
+description: Technology observatory data catalog of the Universidad de Sonora for
+  the Gulf of California region.
+id: otfmcunisonmx
+langs:
+- id: ES
+  name: Spanish
+link: https://ot-fmc.unison.mx
+name: Observatorio Tecnológico Mar de Cortés
+owner:
+  link: https://www.unison.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-SON
+      name: Sonora
+  name: Universidad de Sonora
+  type: Academy
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: ckan
+  url: https://ot-fmc.unison.mx/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ot-fmc.unison.mx/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ot-fmc.unison.mx/api/3/action/package_list
+  version: '3'
+uid: cdi00015246
+properties:
+  is_national: false

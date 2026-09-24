@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public ArcGIS Server 10.7.1 REST catalog of Lechner Knowledge Center
+  (gisserver.lechnerkozpont.hu/arcgis1), distinct from the access-restricted arcgisserver.lechnerkozpont.hu
+  instance.
+id: gisserverlechnerkozponthu
+langs:
+- id: HU
+  name: Hungarian
+link: https://gisserver.lechnerkozpont.hu/arcgis1/rest/services
+name: Lechner Knowledge Center GIS Server
+owner:
+  link: https://lechnerkozpont.hu
+  location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+  name: Lechner Knowledge Center
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007915
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisserver.lechnerkozpont.hu/arcgis1/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisserver.lechnerkozpont.hu/arcgis1/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisserver.lechnerkozpont.hu/arcgis1/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisserver.lechnerkozpont.hu/arcgis1/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisserver.lechnerkozpont.hu/arcgis1/rest/services?f=geositemap

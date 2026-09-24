@@ -32,6 +32,7 @@ Use the **package/dataset** id, not a file/resource/distribution id. `ipums`, `d
 | `software.id` | Native id | Not an id |
 |---------------|-----------|-----------|
 | `ckan` / `dkan` / `datapress` | `id` (UUID) and/or `name` | Resource `id` |
+| `ekan` | Drupal dataset UUID (`/jsonapi/dataset/dataset`) | Resource UUID |
 | `opendatasoft` | `dataset_id` | Attachment filename |
 | `socrata` | `id` (four-four) | Column id |
 | `dataverse` | `persistentId` (DOI) | File id |

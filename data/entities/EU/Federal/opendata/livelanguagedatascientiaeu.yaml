@@ -14,20 +14,13 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Open data portal. managed by Datascientia. powered by CKAN. accessible
-  at livelanguage.datascientia.eu.
+description: Datascientia catalog of cross-lingual lexical datasets (UKC LiveLanguage),
+  published with JKAN. The public URL redirects to the GitHub Pages site.
 endpoints:
-- type: ckan
-  url: https://livelanguage.datascientia.eu/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://livelanguage.datascientia.eu/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://livelanguage.datascientia.eu/api/3/action/package_list
-  version: '3'
 - type: dcatus11
-  url: https://livelanguage.datascientia.eu/data.json
+  url: https://datascientiafoundation.github.io/LiveLanguage/data.json
+- type: dcatus11
+  url: https://datascientiafoundation.github.io/LiveLanguage/datasets.json
 id: livelanguagedatascientiaeu
 langs:
 - id: EN
@@ -51,12 +44,14 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: ckan
-  name: CKAN
+  id: jkan
+  name: JKAN
 status: active
 tags:
 - European Union
-- ckan
+- jkan
+- open data
+- linguistics
 topics:
 - id: GOVE
   name: Government and public sector

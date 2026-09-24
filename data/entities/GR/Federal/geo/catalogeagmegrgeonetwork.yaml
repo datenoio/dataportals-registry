@@ -1,0 +1,50 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: GeoNetwork metadata catalogue of the Hellenic Authority of Geological
+  and Mining Research.
+id: catalogeagmegrgeonetwork
+langs:
+- id: EL
+  name: Greek
+link: https://catalog.eagme.gr/geonetwork
+name: EAGME GeoNetwork Catalogue
+owner:
+  link: https://www.eagme.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: Hellenic Authority of Geological and Mining Research (EAGME)
+  type: Central government
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: geonetwork:api
+  url: "https://catalog.eagme.gr/geonetwork/srv/api"
+uid: cdi00007657

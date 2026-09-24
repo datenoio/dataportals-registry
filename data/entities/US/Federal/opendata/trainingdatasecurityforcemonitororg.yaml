@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    macroregion:
+      id: '021'
+      name: Northern America
+    level: 20
+description: Unclassified US training of foreign security forces from 2001 to 2021.
+id: trainingdatasecurityforcemonitororg
+langs:
+- id: EN
+  name: English
+link: https://trainingdata.securityforcemonitor.org/
+name: US Security Force Training Dataset
+owner:
+  link: https://securityforcemonitor.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Security Force Monitor
+  type: Civil society
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- civil society
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00016098
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://trainingdata.securityforcemonitor.org/-/databases.json

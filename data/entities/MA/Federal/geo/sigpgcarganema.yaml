@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MA
+      name: Morocco
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: Public GeoNode catalog of layers and maps.
+id: sigpgcarganema
+langs:
+- id: AR
+  name: Arabic
+link: https://sig.pgc-argane.ma/
+name: SIG PGC Argane
+owner:
+  link: https://sig.pgc-argane.ma/
+  location:
+    country:
+      id: MA
+      name: Morocco
+    level: 2
+  name: SIG PGC Argane
+  type: Central government
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- maps
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+endpoints:
+- type: geonode:datasets
+  url: https://sig.pgc-argane.ma/api/datasets/
+- type: geonode:datasets
+  url: https://sig.pgc-argane.ma/api/v2/datasets/
+  version: '2'
+- type: geonode:documents
+  url: https://sig.pgc-argane.ma/api/documents/
+- type: opensearch
+  url: https://sig.pgc-argane.ma/catalogue/opensearch
+  version: '1.1'
+- type: wcs111
+  url: https://sig.pgc-argane.ma/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs100
+  url: https://sig.pgc-argane.ma/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://sig.pgc-argane.ma/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://sig.pgc-argane.ma/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://sig.pgc-argane.ma/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://sig.pgc-argane.ma/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+uid: cdi00015102

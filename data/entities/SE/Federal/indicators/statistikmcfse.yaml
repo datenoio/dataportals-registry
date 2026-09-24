@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: PxWeb tool from the Swedish Civil Defence Agency (Myndigheten för civilt
+  försvar) with tables on deaths in fires and rescue-service responses.
+id: statistikmcfse
+langs:
+- id: SV
+  name: Swedish
+link: https://statistik.mcf.se/PxWeb/pxweb/sv/
+name: Statistikverktyg för bränder och olyckor
+owner:
+  link: https://www.mcf.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Myndigheten för civilt försvar
+  type: Central government
+software:
+  id: pxweb
+  name: PxWeb
+status: active
+tags:
+- statistics
+- indicators
+- government
+- has_api
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00015736
+endpoints:
+- type: pxwebapi
+  url: https://statistik.mcf.se/PxWeb/api/v1/en/
+  version: '1'
+- type: pxwebapi
+  url: https://statistik.mcf.se/PxWeb/api/v1/sv/
+  version: '1'

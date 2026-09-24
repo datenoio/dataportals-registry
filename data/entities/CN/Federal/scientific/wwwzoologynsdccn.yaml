@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: InstDB catalog of the Zoology Data Center (动物学科学数据中心), with a public
+  dataset listing. The same node also answers on animal.especies.cn and www.biodinfo.org.
+id: wwwzoologynsdccn
+langs:
+- id: ZH
+  name: Chinese
+link: http://www.zoology.nsdc.cn:8081
+name: Zoology Data Center
+owner:
+  link: http://www.zoology.nsdc.cn:8081
+  location:
+    country:
+      id: CN
+      name: China
+    level: 20
+  name: Zoology Data Center
+  type: Academy
+software:
+  id: instdb
+  name: InstDB
+status: active
+tags:
+- scientific
+- China
+- InstDB
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00010374
+endpoints:
+- type: custom:api
+  url: http://www.zoology.nsdc.cn:8081/api
+properties:
+  dataset_count_reported: 543
+  is_national: false
+  has_doi: true

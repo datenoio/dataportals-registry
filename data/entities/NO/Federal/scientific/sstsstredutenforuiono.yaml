@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Archive of Swedish 1-m Solar Telescope observations reduced with SSTRED
+  and published from the University of Oslo. Serves CRISP, CRISP2, and CHROMIS spectro-polarimetric
+  data cubes through EPN-TAP.
+id: sstsstredutenforuiono
+langs:
+- id: 'NO'
+  name: Norwegian
+link: https://sst-sstred.utenforuio.no/
+name: Stockholm SST Archive
+owner:
+  link: https://www.mn.uio.no/astro/english/
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: University of Oslo
+  type: Academy
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00015447
+endpoints:
+- type: tap:capabilities
+  url: https://sst-sstred.utenforuio.no/tap/capabilities
+- type: oaipmh20
+  url: https://sst-sstred.utenforuio.no/oai.xml?verb=Identify
+  version: '2.0'

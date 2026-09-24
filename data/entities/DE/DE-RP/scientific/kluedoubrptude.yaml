@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-RP
+      name: Rheinland-Pfalz
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: OPUS 4 publication server of Rheinland-Pfälzische Technische Universität
+  Kaiserslautern-Landau.
+id: kluedoubrptude
+langs:
+- id: DE
+  name: German
+link: https://kluedo.ub.rptu.de
+name: KLUEDO
+owner:
+  link: https://kluedo.ub.rptu.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-RP
+      name: Rheinland-Pfalz
+  name: Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau
+  type: Academy
+software:
+  id: opus
+  name: OPUS
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00011519
+endpoints:
+- type: oaipmh20
+  url: https://kluedo.ub.rptu.de/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://kluedo.ub.rptu.de/rss/index/index/searchtype/latest
+  version: '2.0'

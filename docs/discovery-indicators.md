@@ -2,7 +2,7 @@
 
 How to find **indicators catalogs** (`catalog_type: Indicators catalog`) and **microdata catalogs** (`catalog_type: Microdata catalog`). Search-engine syntax (Google, Censys, and [FOFA as a Censys alternative](discovery-search-tools.md#fofa)): [discovery-search-tools.md](discovery-search-tools.md).
 
-Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, PxStat, DGBAS Web, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, .Stat Technology, Istat Data Browser, Swing, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, TerriSTORY, IHK-Fachkräftemonitor, DUVA, Géoclip, InstantAtlas, MATS, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, KOSIS, e-Stat, SIDRA, Fingertips, UNdata, UN Comtrade Plus, Our World in Data. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
+Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, PxStat, DGBAS Web, OpenSDG, SDG Index, Goal Tracker, IMF NSDP, .Stat Suite, .Stat Technology, Istat Data Browser, Swing, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, TerriSTORY, IHK-Fachkräftemonitor, DUVA, Géoclip, InstantAtlas, MATS, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, KOSIS, e-Stat, SIDRA, Fingertips, UNdata, UN Comtrade Plus, Our World in Data. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
 
 ## PxWeb (`pxweb`) {#pxweb}
 
@@ -10,11 +10,15 @@ PC-Axis web tables, widely used by Nordic and other NSOs. Examples: [SCB PxWeb e
 
 **Confirm:** `https://host/api/v1/` (language segment may be `/api/v1/en/` or `/api/v1/{lang}/`). UI often `/pxweb/` or titled “PxWeb”.
 
+[PXWeb/PxWeb.Master](https://github.com/statisticssweden/PxWeb/blob/master/PXWeb/PxWeb.Master) links `Resources/Styles/main-pxweb.css` and sets `id="pxwebcontent"` (73 and 76 hosts in September 2026, including `pxweb.lansstyrelsen.se`). `body="PxWeb"` matched 646 because many offices replace that stylesheet. Keep the wider query.
+
 | Tool | Query |
 |------|-------|
 | Google | `intitle:PxWeb OR inurl:/pxweb` |
 | Google | `inurl:/api/v1 "px" statistics` |
 | Google | `"PxWeb" (statistik OR statistics OR tilastot)` |
+| Censys | `web.endpoints.http.body: "main-pxweb.css"` |
+| FOFA | `body="main-pxweb.css"` |
 | Censys | `web.endpoints.http.html_title: "PxWeb"` |
 | FOFA | `title="PxWeb"` |
 | Censys | `web.endpoints.http.body: "PxWeb"` |
@@ -76,11 +80,11 @@ Taiwan DGBAS-family statistical dynamic query (統計資料動態查詢 / 共通
 
 Statistics Korea statistical table platform. Hub: [kosis.kr](https://kosis.kr). OpenAPI: [kosis.kr/openapi/](https://kosis.kr/openapi/). Agency and local tenants reuse `/statHtml/statHtml.do`. ODA clones include MMSIS, LAOSIS, and ASIS.
 
-**Signals:** path `/statHtml/statHtml.do`; title “KOSIS” / “국가통계포털” / “통계표조회”; `kosisTitle.gif` / `dbsearchTitle.gif`; NSIST hosting on `stat.kosis.kr`.
+**Signals:** path `/statHtml/statHtml.do`; title “KOSIS” / “국가통계포털” / “통계표조회”; `kosisTitle.gif` / `dbsearchTitle.gif`; current skin `/ext/newKosis/css/main.css`; agency 통계포털 shell `vw_cd=MT_DTITLE` / `TblInfoListResult.html`; older ODA JSP tree `statDbList.jsp` / `fileDb.jsp`; NSIST hosting on `stat.kosis.kr` (`statHtml_host/statHtml.do`).
 
-**Confirm:** GET a public table tree or a live `/statHtml/statHtml.do?orgId=&tblId=` table (empty servlet error pages still count as the engine). One catalog per public tenant. The `/bukhan/` tree is already a separate registered catalog.
+**Confirm:** GET a public table tree or a live `/statHtml/statHtml.do?orgId=&tblId=` table that returns a named statistical table. One catalog per public tenant. The `/bukhan/` tree is already a separate registered catalog. Keep a host only when that table is served on the host. City pages that only deep-link `stat.kosis.kr/statHtml_host` are link-outs.
 
-**False positives:** local-government `/stat/index.do` CMS skins that only link out to KOSIS; 지표누리 (`index.go.kr`); SGIS; English/mobile/SSO aliases of `kosis.kr`; `stat.kosis.kr/nsistN` agency hosting console; IP-only COLSIS hits.
+**False positives:** local-government `/stat/index.do` CMS skins that only link out to KOSIS (Paju `stat.paju.go.kr` is this case); 지표누리 (`index.go.kr`); SGIS; English/mobile/SSO aliases of `kosis.kr` (`edu`, `sso`, `mgmk`); `stat.kosis.kr/nsistN` agency hosting console; IP-only COLSIS hits; `body="dbsearchTitle"` without `.gif` (library guides). LankaSIS (`sis.statistics.gov.lk`) matches `statDbList.jsp` but did not answer on GET in September 2026.
 
 | Tool | Query |
 |------|-------|
@@ -89,6 +93,15 @@ Statistics Korea statistical table platform. Hub: [kosis.kr](https://kosis.kr). 
 | Censys | `web.names: "kosis.kr"` |
 | FOFA | `title="KOSIS 국가통계포털" && country="KR"` |
 | FOFA | `title="MMSIS" \|\| title="LAOSIS" \|\| title="LankaSIS"` |
+| FOFA | `body="/statHtml/statHtml.do"` |
+| FOFA | `body="kosisTitle.gif"` |
+| FOFA | `body="/ext/newKosis/css/main.css"` |
+| FOFA | `body="vw_cd=MT_DTITLE"` |
+| FOFA | `body="TblInfoListResult.html"` |
+| FOFA | `body="statDbList.jsp"` |
+| FOFA | `body="fileDb.jsp"` |
+| FOFA | `body="statHtml_host/statHtml.do"` |
+| FOFA | `body="statHtml/statHtml.do?orgId" && domain!="kosis.kr"` |
 
 ## e-Stat (`estat`) {#estat}
 
@@ -110,15 +123,39 @@ Static SDG reporting sites (often GitHub Pages). Community: [open-sdg.org/commun
 
 **Signals:** `/reporting-status`, indicator pages `/\{goal\}-\{target\}-\{indicator\}`, “Open SDG” in footer or `open-sdg` JS.
 
+**GitHub, do both.** Code search does not index most forks. The repo operators fork is [open-sdg/open-sdg-site-starter](https://github.com/open-sdg/open-sdg-site-starter). `_config.yml` sets `remote_theme: open-sdg/open-sdg`. `Gemfile` requires `jekyll-open-sdg-plugins`. Jekyll writes that gem name into the built HTML, so FOFA sees it (`body="jekyll-open-sdg-plugins"`, 48 hosts in September 2026, including `kenya-sdg.github.io`). `body="open-sdg"` is wider (128). General method: [discovery-search-tools.md](discovery-search-tools.md#github).
+
 | Tool | Query |
 |------|-------|
+| GitHub forks | `repos/open-sdg/open-sdg-site-starter/forks` |
+| GitHub code | `remote_theme: open-sdg/open-sdg filename:_config.yml` |
+| GitHub code | `jekyll-open-sdg-plugins filename:Gemfile` |
 | Google | `"Open SDG" OR "open-sdg" indicators` |
 | Google | `inurl:reporting-status "sustainable development"` |
 | Google | `site:github.io "Open SDG"` |
 | Censys | `web.endpoints.http.body: "open-sdg"` |
 | FOFA | `body="open-sdg"` |
+| FOFA | `body="jekyll-open-sdg-plugins"` |
 
 Start from the community list; use Google for national translations (`indicadores ODS`, `indicateurs ODD`).
+
+## SDG Index (`sdgindex`) {#sdgindex}
+
+SDSN Sustainable Development Report dashboards and the regional or subnational editions built from the same template. Product: [dashboards.sdgindex.org](https://dashboards.sdgindex.org). Starter: [sdsna/sdgindex-starter](https://github.com/sdsna/sdgindex-starter). Editions are listed on the [Sustainable Development Report online library](https://www.sustainabledevelopment.report/).
+
+**Signals:** host `*.sdgindex.org` (also `countries.africasdgindex.org` when it resolves); Next.js `/_next/` or `@sdgindex`; title “Sustainable Development Report” or “SDG Index”; rankings, map, and profile navigation.
+
+**Confirm:** GET the dashboard home and match rankings or profiles. One record per public host. Do not add each country, state, or city profile on that host.
+
+**False positives:** OpenSDG (`opensdg`, `open-sdg` / `/reporting-status`); the SDSN library and news site [sdgtransformationcenter.org](https://sdgtransformationcenter.org); PDF-only report pages; official NSO SDG portals that are not an SDSN dashboard.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:sdgindex.org (dashboard OR rankings OR profiles)` |
+| Google | `"Sustainable Development Report" (site:sdgindex.org OR "SDG Index")` |
+| Censys | `web.names: "sdgindex.org"` |
+| FOFA | `domain="sdgindex.org"` |
+| crt.sh | `%.sdgindex.org` |
 
 ## .Stat Suite (`statsuite`) {#statsuite}
 
@@ -126,12 +163,16 @@ SIS-CC .Stat Suite **Data Explorer** (current generation). Product: [siscc.org/s
 
 **Confirm:** `/api/search` or SDMX endpoints; UI “.Stat Suite” / Data Explorer.
 
+[en.json](https://gitlab.com/sis-cc/.stat-suite/dotstatsuite-config-data/-/blob/develop/i18n/en.json) sets the footer author `.Stat Suite` (284 hosts in September 2026, including `stathub.nso.go.th` and `dataexplorer.ukdataservice.ac.uk`). The same file titles the app `.Stat Data Explorer` (195 hosts, including `de-demo.siscc.org` and `datacube.uba.de`). `body=".Stat"` matched 14,060,434 hosts, and the first hits are unrelated sites.
+
 | Tool | Query |
 |------|-------|
 | Google | `".Stat Suite" OR "SIS-CC" "data explorer"` |
 | Google | `inurl:/nsi OR "DotStat" SDMX` |
-| Censys | `web.endpoints.http.body: ".Stat"` |
-| FOFA | `body=".Stat"` |
+| Censys | `web.endpoints.http.body: ".Stat Suite"` |
+| FOFA | `body=".Stat Suite"` |
+| Censys | `web.endpoints.http.body: ".Stat Data Explorer"` |
+| FOFA | `body=".Stat Data Explorer"` |
 
 **False positives:** classic OECD.Stat / I.Stat “Powered by .Stat technology” (`stattech`); Istat **Data Browser** / StatKit (`databrowserhub/api/core`, `istatdatabrowser`).
 
@@ -160,13 +201,15 @@ Istat StatKit Data Browser (EUPL). Site: [sdmxistattoolkit.github.io](https://sd
 
 **False positives:** I.Stat / .Stat Technology (`dati.istat.it`); a raw SDMX-RI `/SDMXWS` page with no Data Browser UI (keep `sdmxri`); KNBS Census 2019 JSON-stat DataBrowser (`data.knbs.or.ke`); UNESCO UIS Data Browser; Survey Solutions Data Browser.
 
+[index.html](https://github.com/SDMXISTATTOOLKIT/DATABROWSER/blob/master/App_first_installation/databrowser/index.html) sets `webpackJsonpdata-browser` (2 hosts in September 2026, `app.databrowser.sister.it`). `body="databrowserhub"` matched 0. `lmap/lmap/css/lmap.css` in the same file matched `dati.lavoro.gov.it`, titled DataPortal.AI.
+
 | Tool | Query |
 |------|-------|
 | Google | `"databrowserhub" OR inurl:/databrowserhub/api` |
 | Google | `"Istat Data Browser" OR "StatKit" databrowser SDMX` |
 | Google | `inurl:/databrowser "Data Browser" (Istat OR NSO OR statistics)` |
-| Censys | `web.endpoints.http.body: "databrowserhub"` |
-| FOFA | `body="databrowserhub"` |
+| Censys | `web.endpoints.http.body: "webpackJsonpdata-browser"` |
+| FOFA | `body="webpackJsonpdata-browser"` |
 
 ## Swing (`swing`) {#swing}
 
@@ -182,23 +225,36 @@ ABF Research statistical databank (Swing Viewer / Swing Jive). Vendor: [swingsof
 | Google | `"Powered by Swing" OR "Swing Viewer" (incijfers OR databank)` |
 | Censys | `web.names: "incijfers.be"` |
 | FOFA | `domain="incijfers.be"` |
+| FOFA | `body="Powered by Swing"` |
 | crt.sh | `%.incijfers.be` |
 
 ## Knoema (`knoema`) {#knoema}
 
-Commercial indicator portals and country hubs. Site: [knoema.com](https://knoema.com). Ministries and banks often run a branded hub on a `knoema.com` subdomain or a custom domain.
+Commercial indicator portals and country hubs. Site: [knoema.com](https://knoema.com). Ministries and banks often run a branded hub on a `knoema.com` subdomain or a custom domain. Most registered tenants are African country hubs on Knoema's **Open Data for Africa** platform brand (`*.opendataforafrica.org`), which `domain="knoema.com"` does not match.
 
 **Signals:** Knoema chrome; `/atlas` or dataset explorer; REST under `/api/1.0/` or `/api/3.0/`.
 
-**Confirm:** GET the **portal home** (a catalog of datasets). Do **not** add every Knoema dataset URL. Skip the global knoema.com hub if it is already registered; add only distinct institutional sites.
+The appliance homepage ([data.gov.om](https://data.gov.om)) writes a hidden `isApplianceInstance` input and `knoema-event-tracker` (92 hosts each in September 2026, including `comstat.comesa.int`). The same page links `/assets.axd/Css/Knoema/knoema.page` (81 hosts) and `/assets.axd/Knoema.Registry` (63). `header="KnoemaUserId"` matched 1,889 rows, almost all ports on one bare IP plus those same custom domains. `domain="knoema.com"` matched 1,204 rows (508 hostnames) and is not usable alone: the zone is a wildcard, so mail hosts, `no-exist-subdomain-pre.*`, and random labels dominate. `domain="knoema.org"` (2) does not resolve. Open Data for Africa tenants stay on `domain="opendataforafrica.org"`; Cloudflare hides the body strings.
+
+**Confirm:** GET the **portal home** (a catalog of datasets). Count datasets with `GET /api/1.0/search?query=1&scope=dataset&version=2` and keep the host only when `items[].resource.type` is `Dataset`. Do **not** add every Knoema dataset URL. Skip the global knoema.com hub if it is already registered; add only distinct institutional sites. Skip the default product title “One Platform for Data Discovery…” when `communityId` is empty, login-only `/sys/login` hubs, and a custom domain that repeats an existing `communityId` (COMSTAT on `comstat.comesa.int` is the same hub as `comesa.opendataforafrica.org`).
 
 | Tool | Query |
 |------|-------|
 | Google | `site:knoema.com (atlas OR "data portal")` |
 | Google | `"powered by Knoema" OR "Knoema" (statistics OR indicators) -site:knoema.com` |
+| Google | `site:opendataforafrica.org` |
 | Censys | `web.names: "knoema.com"` |
 | FOFA | `domain="knoema.com"` |
+| Censys | `web.names: "opendataforafrica.org"` |
+| FOFA | `domain="opendataforafrica.org"` |
+| FOFA | `domain="tourismdataforafrica.org"` |
+| FOFA | `body="opendataforafrica"` |
+| FOFA | `body="isApplianceInstance"` |
+| FOFA | `body="knoema-event-tracker"` |
+| FOFA | `body="Css/Knoema/knoema.page"` |
+| FOFA | `body="Knoema.Registry"` |
 | crt.sh | `%.knoema.com` |
+| crt.sh | `%.opendataforafrica.org` |
 
 ## SparkMap (`sparkmap`) {#sparkmap}
 
@@ -215,8 +271,14 @@ CARES (University of Missouri Extension) community mapping and assessment platfo
 | Google | `site:engagementnetwork.org "Map Room"` |
 | Censys | `web.endpoints.http.body: "SparkMap"` |
 | FOFA | `body="SparkMap"` |
+| FOFA | `body="Powered by CARES"` |
+| FOFA | `body="wp-content/plugins/cares-data-tools"` |
+| FOFA | `body="wp-content/plugins/cares-flexbox-grids"` |
+| FOFA | `body="services.engagementnetwork.org"` |
+| FOFA | `body="help@cares.missouri.edu"` |
 | Censys | `web.names: "engagementnetwork.org"` |
 | FOFA | `domain="engagementnetwork.org"` |
+| FOFA | `domain="datahubs.org"` |
 
 ## eDatos (`edatos`) {#edatos}
 
@@ -250,6 +312,8 @@ Kentucky Cancer Registry multi-tenant cancer incidence/mortality query. Tenant l
 | Google | `"Cancer-Rates.com" (county OR incidence)` |
 | Censys | `web.names: "cancer-rates.com"` |
 | FOFA | `domain="cancer-rates.com"` |
+| FOFA | `domain="cancer-rates.info"` |
+| FOFA | `title="Cancer-Rates.com"` |
 
 ## Conduent Healthy Communities Institute (`hci`) {#hci}
 
@@ -280,7 +344,33 @@ Geographic Solutions Virtual LMI labor-market databank. Vendor: [geographicsolut
 | Google | `"Virtual LMI" (QCEW OR LAUS OR workforce)` |
 | Censys | `web.names: "virtuallmi.com"` |
 | FOFA | `domain="virtuallmi.com"` |
+| FOFA | `body="vosnet"` |
+| FOFA | `body="Virtual LMI"` |
 | crt.sh | `%.virtuallmi.com` |
+
+## CityViz (`cityviz`) {#cityviz}
+
+CityViz Data Solutions (Calgary/Kelowna) community economic-development data platform for Canadian municipalities and regional economic development organizations. Vendor: [cityviz.ca](https://cityviz.ca/). Tenant leads: homepage “CityViz in Action” showcase, the testimonials page, and CT logs over `%.cityviz.ca` (includes decommissioned tenants — probe before adding).
+
+**Signals:** host `*.cityviz.ca`; custom domains such as `data.choose*.ca`, `insights.medicinehat.ca`, `cityviz.penticton.ca`, `data.langleycity.ca`; title “Economic Development Data Platform” with “powered by Cityviz” chrome; R Shiny assets (`shiny-javascript-*/shiny.min.js`); paths `/economic-indicators`, `/search`, `/report-studio`.
+
+**Confirm:** GET the portal home without a login wall; the overview must list indicator dashboards for a named community. One catalog per community tenant. Skip the vendor marketing site `cityviz.ca`, the fictional `bellaville.cityviz.ca` showcase, placeholder tenants (“Reach out to explore how CityViz can support your data requirements”), Cloudflare Access login-gated tenants, and tenants answering with nginx `50x.html` or `/not-found` (decommissioned).
+
+| Tool | Query |
+|------|-------|
+| Google | `"powered by Cityviz" OR "powered by CityViz"` |
+| Google | `"Economic Development Data Platform" (CityViz OR cityviz.ca)` |
+| Censys | `web.names: "cityviz.ca"` |
+| FOFA | `domain="cityviz.ca"` |
+| FOFA | `title="Economic Development Data Platform"` |
+| FOFA | `body="economic-development-data-platform-logo.png"` |
+| FOFA | `body="www/js/cityviz.js"` |
+| FOFA | `body="www/cityviz.css"` |
+| FOFA | `body="CityViz economic development data platform"` |
+| FOFA | `body="request_dataset-request_dataset_modal"` |
+| crt.sh | `%.cityviz.ca` |
+
+`www/js/cityviz.js` and `www/cityviz.css` are in the R Shiny shell, so they find custom domains (`data.invest*.ca`, `data.*county.com`) that `domain="cityviz.ca"` and CT logs miss. Confirm `/search` lists indicator datasets before adding. A vendor host that has become a CMS while the custom domain still serves `/search` is the same tenant — record the custom domain.
 
 ## TerriSTORY (`terristory`) {#terristory}
 
@@ -292,10 +382,14 @@ Open-source French territorial energy/climate indicator platform. Product: [terr
 
 **False positives:** other French energy observatories (OPTEER, CIGALE, TRACE) that are not TerriSTORY; ADEME data pages; Open SDG.
 
+[front/index.html](https://gitlab.com/terristory/terristory/-/blob/master/front/index.html) describes `base de données TerriSTORY` (2 hosts in September 2026, `128.140.74.161:3001` and `34.155.137.190:3000`, both titled TerriSTORY). `body="TerriSTORY®"` matched 15, and the first hit is `rare.fr`. The six public regional hubs stay on `terristory.fr`.
+
 | Tool | Query |
 |------|-------|
 | Google | `site:terristory.fr (indicateurs OR énergie OR climat)` |
 | Google | `"TerriSTORY" (région OR observatoire) (énergie OR climat)` |
+| Censys | `web.endpoints.http.body: "base de données TerriSTORY"` |
+| FOFA | `body="base de données TerriSTORY"` |
 | Censys | `web.names: "terristory.fr"` |
 | FOFA | `domain="terristory.fr"` |
 | crt.sh | `%.terristory.fr` |
@@ -321,7 +415,7 @@ German Chamber of Industry and Commerce (IHK) multi-Land skills-shortage dashboa
 
 German KOSIS-Gemeinschaft municipal statistics information system. Product: [duva.de](https://duva.de/). Community: [KOSIS DUVA](https://www.staedtestatistik.de/arbeitsgemeinschaften/kosis/duva). Public catalog UI is the **Informationsportal**.
 
-**Signals:** path `/Informationsportal/` or `/Informationsportal11_*/`; title “Informationsportal”; DUVA / KOSIS-Gemeinschaft chrome; some branded hosts (FR.ITZ).
+**Signals:** path `/Informationsportal/` or `/Informationsportal11_*/` or a branded path such as `/Statistikportal/`; GWT bootstrap `InformationPortal.nocache.js` (current) or `Informationsportal.nocache.js` (older); stylesheet `InformationPortal/css/domino-ui.css`; title “Informationsportal”; some branded hosts (FR.ITZ, GÖSIS). A bare `body="Informationsportal"` query is not a fingerprint.
 
 **Confirm:** GET the public Informationsportal and confirm a table/evaluation tree without login. One catalog per city or county public portal. About 60 community members exist; many use DUVA only internally.
 
@@ -331,8 +425,10 @@ German KOSIS-Gemeinschaft municipal statistics information system. Product: [duv
 |------|-------|
 | Google | `inurl:Informationsportal (Statistik OR Kommunalstatistik) site:.de` |
 | Google | `"DUVA" "Informationsportal" (Stadt OR Statistik)` |
-| Censys | `web.endpoints.http.body: "Informationsportal"` |
-| FOFA | `body="Informationsportal"` |
+| Censys | `web.endpoints.http.body: "InformationPortal.nocache.js"` |
+| FOFA | `body="InformationPortal.nocache.js"` |
+| FOFA | `body="InformationPortal/css/domino-ui.css"` |
+| FOFA | `body="Informationsportal.nocache.js"` |
 
 ## Géoclip (`geoclip`) {#geoclip}
 
@@ -367,6 +463,8 @@ Esri UK geostatistical HTML reports and Dashboard Builder. Help: [help.instantat
 | Google | `"ia-min.js" OR "Powered By InstantAtlas"` |
 | Censys | `web.endpoints.http.html_title: "InstantAtlas"` |
 | FOFA | `title="InstantAtlas"` |
+| FOFA | `body="ia-min.js"` |
+| FOFA | `body="Powered By InstantAtlas"` |
 
 ## MATS (`mats`) {#mats}
 
@@ -387,7 +485,7 @@ Modernes Analyse Tool Statistik — shared Land statistical data-warehouse of St
 
 ## Health Data Center (`hdc`) {#hdc}
 
-Thailand Ministry of Public Health medical and health data warehouse (ระบบคลังข้อมูลด้านการแพทย์และสุขภาพ). Docs: [dmdmoph.github.io/hdc-docs](https://dmdmoph.github.io/hdc-docs/). National hub: [hdc.moph.go.th/center/public/](https://hdc.moph.go.th/center/public/). Provincial สสจ. tenants use `https://hdc.moph.go.th/{slug}` (docs: “HDC ประจำจังหวัด”).
+Thailand Ministry of Public Health medical and health data warehouse (ระบบคลังข้อมูลด้านการแพทย์และสุขภาพ). Docs: [dmdmoph.github.io/hdc-docs](https://dmdmoph.github.io/hdc-docs/). National hub: [hdc.moph.go.th/center/public/](https://hdc.moph.go.th/center/public/). Provincial สสจ. tenants use `https://hdc.moph.go.th/{slug}` (docs: “HDC ประจำจังหวัด”). A second MOPH agency hub runs on `hdc.dms.go.th/hdc/` (Department of Medical Services), which the `hdc.moph.go.th` host query does not match.
 
 **Signals:** host `hdc.moph.go.th`; path `/{tenant}/public/` or `/{tenant}/public/main`; title “HDC Service”; chrome “ระบบคลังข้อมูลด้านการแพทย์และสุขภาพ (HDC)”; `assets/images/moph-logo.gif`; link to `dmdmoph.github.io/hdc-docs`.
 
@@ -401,6 +499,8 @@ Thailand Ministry of Public Health medical and health data warehouse (ระบ�
 | Google | `"HDC Service" "สำนักงานสาธารณสุขจังหวัด" site:hdc.moph.go.th` |
 | Censys | `web.names: "hdc.moph.go.th"` |
 | FOFA | `host="hdc.moph.go.th"` |
+| FOFA | `host="hdc.dms.go.th"` |
+| FOFA | `title="HDC Service"` |
 
 ## JAXI (`jaxi`) {#jaxi}
 
@@ -437,7 +537,17 @@ NPO Krista public-finance and socio-economic indicator platform (KristaBI). Prod
 | Google | `"Открытый бюджет" (krista OR ifinmon OR "конструктор данных")` |
 | Censys | `web.names: "ifinmon.ru"` |
 | FOFA | `domain="ifinmon.ru"` |
+| FOFA | `body="@krista.ru"` |
+| FOFA | `body="static-report/web/middleware"` |
+| FOFA | `body="acr_reports"` |
+| FOFA | `body="mdxexpert"` |
+| FOFA | `body="mdx-expert"` |
+| FOFA | `body="konstruktor-dannykh"` |
 | crt.sh | `%.ifinmon.ru` |
+
+`body="static-report/web/middleware"` and `body="acr_reports"` are the Krista report shell (served HTML, not the vendor email). `body="mdxexpert"` / `body="mdx-expert"` is the public data constructor — prefer it when the hunt must keep catalogs that list datasets. `body="konstruktor-dannykh"` is the alternate transliteration of the constructor path (`konstruktor-dannyx` was the earlier query).
+
+**FOFA false positives (September 2026):** `title="iMonitoring"` matches diabetes, media-monitoring, and IT-monitoring products. `body="content=\"MYOB\""` matches unrelated Joomla sites. `body="kristaBIContext"` returned no indexed hosts. `body="themeManager.min.js"` also hits banking portals. `body="НПО Криста"` and `body="8-800-200-20-73"` hit the vendor site, branch offices, and login-only budget systems (`plan.minfinrk.ru` redirects to `/login`). Procurement GIS hosts such as `zakupki.eao.ru` share the report shell but are the regional contract system, not an Open Budget catalog. Crimea `ib.` / `shkib.` / `stib.budget.rk.ifinmon.ru` are sections of the already registered `budget.rk.ifinmon.ru` portal.
 
 ## SDMX-RI (`sdmxri`) {#sdmxri}
 
@@ -502,7 +612,11 @@ Open-source health management information system (HISP / University of Oslo). Mo
 
 **Signals:** `/dhis-web-commons/`, `/dhis-web-dashboard/`, login chrome “DHIS 2”; REST `/api/system/info`.
 
-**Confirm:** `GET https://host/api/system/info` JSON with a `version` field, or a public portal that is documented as DHIS2. Skip staff-only logins with no public indicator catalog.
+**Confirm:** anonymous `GET https://host/api/dataSets.json?fields=id,displayName&pageSize=1` or `/api/indicators.json` with `pager.total` greater than 0. A login shell is not enough. Skip staff-only logins, dev/test/training/sandbox hosts, and `play.dhis2.org` / `*.im.dhis2.org` demos.
+
+[login.html](https://github.com/dhis2/dhis2-core/blob/master/dhis-2/dhis-web-api/src/main/resources/org/hisp/dhis/webapi/controller/login.html) loads `dhis-web-commons` (3,065 hosts in September 2026, including `sl.dhis2.org` and `dhis-pbf.moh.gov.et`). `body="DHIS2"` is not usable: it matched 5,074 hosts, including `ucb.go.ug`.
+
+[shell/index.html](https://github.com/dhis2/app-platform/blob/master/shell/index.html) sets `<meta name="dhis2-base-url">` and mounts `#dhis2-app-root` and `#dhis2-portal-root` (798 and 779 domain hosts in September 2026 for `dhis2-app-root` and `dhis2-base-url`, including `dashboards.migeprof.gov.rw`). GitHub code search for `dhis2-base-url filename:index.html` hits the template and app skeletons; committed copies keep the placeholder `__DHIS2_BASE_URL__` and do not list instances. `dhis.conf` `server.base.url` hits are Ansible templates. These strings are not usable as FOFA queries: `body="logo_front.png"` (1,232 hosts, including `tiendaya.co`), `body="twoFAToggle"` (1,112, including SureMDM), `body="api/loginConfig"` (50, generic cloud-login pages), `body="You are logging in using the fallback login page."` (0), and `body="Powered by DHIS2."` (17, including `docs.dhis2.org`).
 
 | Tool | Query |
 |------|-------|
@@ -512,6 +626,10 @@ Open-source health management information system (HISP / University of Oslo). Mo
 | FOFA | `body="dhis-web-commons"` |
 | Censys | `web.endpoints.http.html_title: "DHIS 2"` |
 | FOFA | `title="DHIS 2"` |
+| GitHub | `dhis2-base-url filename:index.html` |
+| Censys | `web.endpoints.http.body: "dhis2-app-root"` |
+| FOFA | `body="dhis2-app-root" && is_domain=true` |
+| FOFA | `body="dhis2-base-url" && is_domain=true` |
 
 ## ActivityInfo (`activityinfo`) {#activityinfo}
 
@@ -626,20 +744,22 @@ Legacy ASP.NET cube browser (Beyond 20/20 Inc., Ottawa). Public catalogs expose 
 
 StatSilk interactive maps and dashboards (StatPlanet Cloud / HTML5, older Flash). Site: [statsilk.com](https://www.statsilk.com). Gallery: [statsilk.com/gallery](https://www.statsilk.com/gallery). Live example: [EC-OECD STIP Compass statistics](https://stip.oecd.org/Stats/STIP-StatTrends.html).
 
-**Signals:** HTML title `StatPlanet`; `StatPlanet Cloud`; `StatPlanet_Cloud.html`; `data.csv` / `settings.csv`; StatSilk footer or logo; URL params `i=` `v=` `t=` on Cloud dashboards.
+**Signals:** `id="statsilk-container"`; HTML title `StatPlanet`; `StatPlanet Cloud`; `StatPlanet_Cloud.html`; `data.csv` / `settings.csv`; StatSilk footer or logo; URL params `i=` `v=` `t=` on Cloud dashboards.
 
 **Confirm:** GET the dashboard HTML and a public `data.csv` (or SDMX-backed Cloud instance). One record per public explorer, not per indicator or per `*-StatTrends.html` file on the same host.
+
+[StatPlanet_Cloud.html](https://github.com/StatSilk/StatPlanet/blob/master/StatPlanet_Cloud.html) sets `id="statsilk-container"` (5 hosts in September 2026, including `unicefdashboard.netlify.app` and `statplanet.itcloud.pt`). The same file writes `StatPlanet Cloud` (4 hosts, all `statplanet.itcloud.pt`). `title="StatPlanet"` matched 7; three of those rows are `statplanet.org`, a business site titled “Statplanet — Premium Business”, not a StatSilk dashboard.
 
 | Tool | Query |
 |------|-------|
 | Google | `"StatPlanet Cloud" OR "StatPlanet_Cloud.html" (indicators OR statistics)` |
 | Google | `"powered by StatSilk" OR intitle:StatPlanet (map OR dashboard)` |
-| Censys | `web.endpoints.http.html_title: "StatPlanet"` |
-| FOFA | `title="StatPlanet"` |
+| Censys | `web.endpoints.http.body: "statsilk-container"` |
+| FOFA | `body="statsilk-container"` |
 | Censys | `web.endpoints.http.body: "StatPlanet Cloud"` |
 | FOFA | `body="StatPlanet Cloud"` |
 
-**False positives:** statsilk.com marketing, GitHub `StatSilk/StatPlanet`, Flash-only dead maps, a single thematic poster, StatPlanet World Bank / EdStats viewers of [data.worldbank.org](https://data.worldbank.org) (already `dataworldbankorg`). Skip login-only corporate dashboards.
+**False positives:** statsilk.com marketing, GitHub `StatSilk/StatPlanet`, Flash-only dead maps, a single thematic poster, StatPlanet World Bank / EdStats viewers of [data.worldbank.org](https://data.worldbank.org) (already `dataworldbankorg`), `statplanet.org` (“Premium Business”). Skip login-only corporate dashboards.
 
 ## Microsoft Power BI (`powerbi`) {#powerbi}
 
@@ -691,6 +811,54 @@ Statistics/indicator sections published on Microsoft SharePoint sites (ministrie
 
 **False positives:** SharePoint vendor content; intranets requiring login; document libraries with no indicator/tables layer.
 
+## TYPO3 (`typo3`) {#typo3}
+
+Statistics/indicator sections published on TYPO3 CMS sites (statistical offices, ministries, regional monitoring portals) instead of a data platform. Used by Statistik Austria, ISTAT, and several German indicator portals.
+
+**Signals:** `<meta name="generator" content="TYPO3 CMS">`; `/typo3conf/` and `/typo3temp/` asset paths; `tx_` extension parameters in URLs.
+
+**Confirm:** GET the statistics section and confirm it is TYPO3-driven (generator meta or `typo3conf` assets). One catalog per institution. Skip pages that only host downloads while the catalog itself runs on another platform.
+
+| Tool | Query |
+|-------|-------|
+| Google | `"TYPO3 CMS" (statistics OR indicators OR statistik) site:.gov OR site:.gv.at` |
+| Censys | `web.endpoints.http.body: "content=\"TYPO3 CMS\""` + manual review for statistics content |
+| FOFA | `body="content=\"TYPO3 CMS\""` |
+
+**False positives:** TYPO3 agency showcases; government sites whose statistics section is a separate non-TYPO3 application.
+
+## SPIP (`spip`) {#spip}
+
+Statistics/indicator sections published on SPIP, a French open-source CMS used by French regional observatories and data portals (carif-oref networks, regional data observatories).
+
+**Signals:** `<meta name="generator" content="SPIP">`; `spip.php?page=` URLs; `/squelettes/` and `/plugins/` asset paths.
+
+**Confirm:** GET the statistics section and confirm it is SPIP-driven (generator meta or `spip.php` URLs). One catalog per institution.
+
+| Tool | Query |
+|-------|-------|
+| Google | `"SPIP" (observatoire OR indicateurs OR statistiques) site:.fr` |
+| Censys | `web.endpoints.http.body: "content=\"SPIP\""` + manual review for statistics content |
+| FOFA | `body="content=\"SPIP\""` |
+
+**False positives:** SPIP community/documentation sites; observatory pages with no indicator tables.
+
+## Contao (`contao`) {#contao}
+
+Statistics/indicator sections published on Contao, an open-source CMS used by statistical offices and data portals in Germany and Switzerland (cantonal statistics, federal topic portals).
+
+**Signals:** `<meta name="generator" content="Contao Open Source CMS">`; `/contao/` asset paths; `tl_` CSS classes.
+
+**Confirm:** GET the statistics section and confirm it is Contao-driven (generator meta). One catalog per institution.
+
+| Tool | Query |
+|-------|-------|
+| Google | `"Contao Open Source CMS" (statistik OR statistique OR datenportal)` |
+| Censys | `web.endpoints.http.body: "content=\"Contao Open Source CMS\""` + manual review for statistics content |
+| FOFA | `body="content=\"Contao Open Source CMS\""` |
+
+**False positives:** Contao agency showcases; sites whose data section is a separate non-Contao application.
+
 ## R Shiny (`shiny`) {#shiny}
 
 Shiny (Posit/RStudio) web applications deployed as statistical query tools and indicator dashboards — self-hosted (`shiny.<agency>`, `/shiny/` paths) or on `*.shinyapps.io`.
@@ -699,12 +867,14 @@ Shiny (Posit/RStudio) web applications deployed as statistical query tools and i
 
 **Confirm:** GET the app and confirm the app **itself** is Shiny (its HTML loads shiny.min.js), not a portal that merely links to a Shiny tool elsewhere. One catalog per app (or per tool family under one path). Skip RStudio marketing and teaching/demo apps.
 
+[shiny.min.css](https://github.com/rstudio/shiny/blob/main/inst/www/shared/shiny.min.css) is served as `shared/shiny.min.css` (1,536 hosts in September 2026, including `amrmap.net`). That is every indexed Shiny app, so still require a statistics or indicator catalog.
+
 | Tool | Query |
 |-------|-------|
 | Google | `inurl:shinyapps.io (statistics OR indicators OR dashboard)` |
 | Google | `"shiny.min.js" (statistics OR "data portal") site:.gov` |
-| Censys | `web.endpoints.http.body: "shared/shiny.css"` |
-| FOFA | `body="shared/shiny.css"` |
+| Censys | `web.endpoints.http.body: "shared/shiny.min.css"` |
+| FOFA | `body="shared/shiny.min.css"` |
 
 **False positives:** portals linking to external Shiny apps; course projects; internal-only apps.
 
@@ -760,11 +930,14 @@ Open-source BI dashboards. Site: [superset.apache.org](https://superset.apache.o
 
 **Confirm:** GET a public dataset or dashboard list without login. Stop on `401`. One catalog per public installation.
 
+[superset/templates/superset/spa.html](https://github.com/apache/superset/blob/master/superset/templates/superset/spa.html) sets `localStorage` key `superset-theme-mode` (4,915 hosts in September 2026). The same file sets `window.__SUPERSET_LANGUAGE_PACK__` (108 hosts). `body="Superset"` matched about 130,000 unrelated hosts.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Apache Superset" (open data OR indicators)` |
-| Censys | `web.endpoints.http.body: "superset"` |
-| FOFA | `body="superset"` |
+| Censys | `web.endpoints.http.body: "superset-theme-mode"` |
+| FOFA | `body="superset-theme-mode"` |
+| FOFA | `body="__SUPERSET_LANGUAGE_PACK__"` |
 
 ## IBM Cognos Analytics (`ibmcognos`) {#ibmcognos}
 
@@ -908,9 +1081,13 @@ Global Change Data Lab indicator catalog. Hub: [ourworldindata.org](https://ourw
 
 **Confirm:** do **not** re-add ourworldindata.org or add every chart URL. Distinct from Gapminder WordPress data-download pages.
 
+[SiteFooter.tsx](https://github.com/owid/owid-grapher/blob/master/site/SiteFooter.tsx) links `Teaching with OWID` (26 hosts in September 2026, including the fork `aging-data-lab.org` and the hub; `thinkdataforgovernment.com` is a copied page, not a catalog). `body="Our World in Data"` matched 2,463 unrelated sites. Keep the host query for the canonical hub.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Our World in Data" (indicators OR grapher) -site:ourworldindata.org` |
+| Censys | `web.endpoints.http.body: "Teaching with OWID"` |
+| FOFA | `body="Teaching with OWID"` |
 | Censys | `web.names: "ourworldindata.org"` |
 | FOFA | `host="ourworldindata.org"` |
 
@@ -964,13 +1141,15 @@ IHSN National Data Archive for survey microdata. Site: [nada.ihsn.org](https://n
 
 **Confirm:** `https://host/index.php/api/catalog/search` (JSON) or the public catalog listing without login.
 
+The theme footers [themes/nada/footer.php](https://github.com/ihsn/nada/blob/main/themes/nada/footer.php) and [themes/nada52/footer.php](https://github.com/ihsn/nada/blob/main/themes/nada52/footer.php) ship the class `nada-logo`. `body="NADA"` is not usable: in September 2026 it matched about 1.4 million unrelated hosts. `body="nada-logo"` matched 617, including `repositorio.um.edu.cv`. `full-row-footer-black-components` is only the nada52 footer (201 hosts) and misses the older theme.
+
 | Tool | Query |
 |------|-------|
 | Google | `"NADA" "microdata" OR "national data archive" IHSN` |
 | Google | `inurl:/index.php/catalog "microdata"` |
 | Google | `"Powered by NADA" OR "nada" "survey catalog"` |
-| Censys | `web.endpoints.http.body: "NADA"` |
-| FOFA | `body="NADA"` |
+| Censys | `web.endpoints.http.body: "nada-logo"` |
+| FOFA | `body="nada-logo"` |
 | Censys | `web.endpoints.http.body: "IHSN"` |
 | FOFA | `body="IHSN"` |
 
@@ -1031,9 +1210,13 @@ Epidemiological / population-health study catalog (OBiBa). Often paired with Opa
 
 **Confirm:** GET the public study catalog. Skip login-only research networks.
 
+[footer.ftl](https://github.com/obiba/mica2/blob/master/mica-webapp/src/main/resources/_templates/libs/footer.ftl) links `https://www.obiba.org` (115 hosts in September 2026, including `mica.clinicalresearch.nl`). “Powered by” is an i18n string, so the href is the contiguous token. `body="obiba"` matched 347, including `maelstrom-research.org`. Keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Mica" OBiBa (studies OR catalog) -site:github.com` |
+| Censys | `web.endpoints.http.body: "www.obiba.org"` |
+| FOFA | `body="www.obiba.org"` |
 | Censys | `web.endpoints.http.body: "obiba"` |
 | FOFA | `body="obiba"` |
 | Censys | `web.endpoints.http.body: "Mica"` |
@@ -1042,6 +1225,8 @@ Epidemiological / population-health study catalog (OBiBa). Often paired with Opa
 ## Survey Solutions (`surveysolutions`) {#surveysolutions}
 
 World Bank survey suite. Register only a **public Data Browser** of microdata, not a data-collection server. **Reject** `*.mysurvey.solutions` / KNBS/INE interviewer hosts — they are survey collection platforms, not catalogs (September 2026 instance hunt).
+
+[index.html](https://github.com/surveysolutions/surveysolutions/blob/master/src/UI/WB.UI.Frontend/index.html) defines `__setLocaleData__` (815 hosts in September 2026, including `encuestas.bch.hn`). That shell is the headquarters app, not a Data Browser. Do not use it as the catalog query.
 
 | Tool | Query |
 |------|-------|
@@ -1063,6 +1248,7 @@ Central-bank macroeconomic warehouse. Site: [datawarehousepro.com](https://dataw
 | Google | `"DataWarehousePro" ("central bank" OR statistics)` |
 | Censys | `web.names: "app.datawarehousepro.com"` |
 | FOFA | `host="app.datawarehousepro.com"` |
+| FOFA | `body="DataWarehousePro"` |
 | crt.sh | `%.datawarehousepro.com` |
 
 ## IMF National Summary Data Page (`imfnsdp`) {#imfnsdp}
@@ -1084,15 +1270,17 @@ IMF e-GDDS / SDDS / SDDS Plus National Summary Data Page hosted by an NSO or cen
 
 Data Act Lab SDG country platforms. Site: [goaltracker.org](https://goaltracker.org). Distinct from Open SDG (`opensdg`).
 
-**Signals:** host `*.goaltracker.org`; title “Goal Tracker”; Data Act Lab branding.
+**Signals:** title `Goal Tracker`; header classes `bg-goals-1` … `bg-goals-17` (the 17-stripe SDG bar). Current Strapi builds also embed `hasOwnData` on each indicator. Tenant HTML does not contain “Data Act Lab”. `host="goaltracker"` matches unrelated goal-tracking apps.
 
-**Confirm:** GET the country tenant home. One record per country site. Skip the vendor marketing page if a country tenant is already registered.
+**Confirm:** GET the country tenant home. Keep the record only when the page JSON lists indicators that have data (`hasData` / `hasOwnData`, or a non-empty `data` series). One record per country site. Skip the vendor marketing page (`goaltracker.org`, `test.goaltracker.org`), Strapi admin (`*.api.goaltracker.org`), and `401` hosts.
 
 | Tool | Query |
 |------|-------|
 | Google | `site:goaltracker.org` |
 | Google | `"Goal Tracker" (SDG OR "Global Goals") -site:goaltracker.org/about` |
 | Censys | `web.names: "goaltracker.org"` |
+| FOFA | `title="Goal Tracker" && body="bg-goals-17"` |
+| FOFA | `title="Goal Tracker" && body="hasOwnData"` |
 | FOFA | `domain="goaltracker.org"` |
 | crt.sh | `%.goaltracker.org` |
 
@@ -1138,7 +1326,7 @@ Cancer-registry epidemiological-indicator application used by Italian registries
 
 Open-source dashboard platform (Grafana Labs). Almost all internet-facing instances are private operations monitors — the registry only keeps the rare **anonymous-access instances that publish statistical/indicator dashboards** (energy mix, weather-station networks, IXP traffic, honeypot telemetry). Product page: [grafana.com](https://grafana.com). Use `software.id: grafana`.
 
-**Signals:** HTML title `Grafana`; `GET /api/health` returns JSON; login chrome "Welcome to Grafana".
+**Signals:** HTML title `Grafana`; `GET /api/health` returns JSON; login chrome "Welcome to Grafana". [public/views/index.html](https://github.com/grafana/grafana/blob/main/public/views/index.html) links `grafana_mask_icon.svg` (784,980 hosts in September 2026). That icon is every Grafana install, not a catalog list, so keep the government-host filters.
 
 **Confirm:** `GET https://host/api/search?limit=100` returns `200` with a dashboard list **without credentials** (anonymous auth enabled). `401`/`403` means login-only — reject. Then read the dashboard titles: keep instances whose dashboards publish public statistics (ministry/NSO indicators, environmental or internet-infrastructure telemetry); reject server/Kubernetes/crypto/game/service monitoring (node exporter, perfSONAR host metrics, HPC loads). One record per public tenant.
 
@@ -1277,16 +1465,23 @@ Vendor-operated single-tenant SaaS. Site: [ceicdata.com](https://www.ceicdata.co
 
 ## CSMAR (`csmar`) {#csmar}
 
-Vendor-operated single-tenant SaaS. Site: [data.gtadata.com](https://data.gtadata.com). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+Vendor-operated single-tenant SaaS. Site: [data.csmar.com](https://data.csmar.com) (moved from `data.gtadata.com`). University pages are library guides or WebVPN aliases of that host, not separate deployments. A September 2026 pass with the shell and HiDa fingerprints below found no additional host whose public response lists datasets.
 
-**Signals:** host `data.gtadata.com`; CSMAR/国泰安 chrome; vendor site `www.csmar.com` confirms the product; data host geo-fenced from non-CN networks.
+**Signals:** index HTML loads `/csmar.html` and stores `solution_t` in `sessionStorage`; title `CSMAR`. Config lives in `/config/config.js` (`window.APIURL`, `/api/csmar-main`). Legacy hosts `cn.gtadata.com` and `www.gtarsc.com` only show “该域名已不再使用” and link to `data.csmar.com`. HiDa (`hida.csmar.com`, port 5003, title “希施玛 · HiDa财经终端”) is the same vendor’s terminal; the data dictionary is `hida.csmar.com:8080` (title “CSMAR财经数据说明书”).
 
-**Confirm:** GET `https://www.csmar.com` for product confirmation, then the data host from a CN-reachable network.
+`body="/csmar.html"`, `body="__path__full__"`, and `body="sessionStorage.setItem('solution_"` are the shell (about 18 named hosts in September 2026, all `csmar.com` / `gtadata.com` or bare IPs). `body="api/csmar-main"` and `body="js/csmar."` match nothing: those strings are in JavaScript, which FOFA does not index. `icon_hash="239425243"` (the 1,284-byte favicon) collides with hundreds of unrelated sites. `title="国泰安"` is insurance and teaching-system noise. `body="经济金融研究数据库"` is library A–Z pages. `host="csmar" && host=".edu.cn"` is WebVPN and ezproxy.
+
+**Confirm:** Keep a host only when a public response lists datasets or tables (`tbname` or a database list with rows). `GET /api/csmar-main/single/getSeriesTree/-1` on the Vue shells returns 401. HiDa `GET /api/GetWholeTheme/` returns 269 theme folders and every `tbname` is null; `ListSearchTheme` and `TableFields` require a customer session; the `:8080` dictionary returns “缺少 token”. Skip those, skip “该域名已不再使用” notices, bare IPs of an already registered host, WebVPN and `*.sjuku.top` aliases, trading simulators (`实盘大赛`, 投资交易仿真), and `www.csmar.com` (marketing).
 
 | Tool | Query |
 |------|-------|
-| Google | `site:data.gtadata.com (数据 OR 指标 OR 数据库)` |
-| FOFA | `domain="data.gtadata.com"` |
+| Google | `site:data.csmar.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="csmar.com" \|\| domain="gtadata.com"` |
+| FOFA | `body="/csmar.html"` |
+| FOFA | `body="__path__full__"` |
+| FOFA | `body="sessionStorage.setItem('solution_"` |
+| FOFA | `title="CSMAR财经数据说明书"` |
+| FOFA | `body="HiDa财经终端"` |
 
 
 ## RESSET (`resset`) {#resset}
@@ -1781,16 +1976,16 @@ Vendor-operated single-tenant SaaS. Site: [sxcoal.com](https://www.sxcoal.com). 
 
 ## China Data Online (`chinadataonline`) {#chinadataonline}
 
-Vendor-operated single-tenant SaaS. Site: [chinadatacenter.umich.edu](https://chinadatacenter.umich.edu). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
+Vendor-operated single-tenant SaaS. Site: [china-data-online.com](https://china-data-online.com) (moved from `chinadatacenter.umich.edu`). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.
 
-**Signals:** host `chinadatacenter.umich.edu`; “China Data Online” / “All China Data Center” chrome; note `china-data-online.org` is a squatted domain — do not use it.
+**Signals:** host `china-data-online.com` (legacy `chinadatacenter.umich.edu`); “China Data Online” / “All China Data Center” chrome; note `china-data-online.org` is a squatted domain — do not use it.
 
-**Confirm:** GET the UMich host; connection may fail from some networks — verify from a US-reachable network.
+**Confirm:** GET the current host; connection may fail from some networks — verify from a US-reachable network.
 
 | Tool | Query |
 |------|-------|
-| Google | `site:chinadatacenter.umich.edu (数据 OR 指标 OR 数据库)` |
-| FOFA | `domain="chinadatacenter.umich.edu"` |
+| Google | `site:china-data-online.com (数据 OR 指标 OR 数据库)` |
+| FOFA | `domain="china-data-online.com" \|\| domain="chinadatacenter.umich.edu"` |
 
 ## Related
 

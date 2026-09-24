@@ -1,6 +1,6 @@
 access_mode:
 - open
-- limited
+- restricted
 api: true
 api_status: active
 catalog_type: Scientific data repository
@@ -20,7 +20,7 @@ description: Institutional repository that supports Radboud University and Radbo
   repository assigns a DOI and rich metadata to every collection and supports long-term
   storage, internal archival, and public publication of research data.
 endpoints:
-- type: customapi
+- type: rest
   url: https://data.ru.nl/api/search/collections/published
 id: datarunl
 identifiers:

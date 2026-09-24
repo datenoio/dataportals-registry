@@ -1,0 +1,60 @@
+DATA QUALITY REPORT - COUNTRY: IT
+================================================================================
+Generated: 2026-09-24 20:41:37
+Country Code: IT
+Total Records with Issues: 4
+Total Issues Found: 4
+
+=== ISSUES BY TYPE ===
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB]
+Count: 1
+Priority: MEDIUM
+
+File: IT/IT-88/geo/arpasmapsarcgiscom.yaml
+Record ID: arpasmapsarcgiscom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
+Field: endpoints
+Current Value: {'software_id': 'arcgishub', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgishub' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
+Count: 1
+Priority: MEDIUM
+
+File: IT/Federal/opendata/opendatavigilfuocoit.yaml
+Record ID: opendatavigilfuocoit
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
+Count: 1
+Priority: MEDIUM
+
+File: IT/Federal/indicators/indicatoriambientaliisprambienteit.yaml
+Record ID: indicatoriambientaliisprambienteit
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_EKAN]
+Count: 1
+Priority: MEDIUM
+
+File: IT/Federal/opendata/daticamerait.yaml
+Record ID: daticamerait
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_EKAN
+Field: endpoints
+Current Value: {'software_id': 'ekan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ekan' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_EKAN: 1 issue

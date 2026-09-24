@@ -104,9 +104,13 @@ Open-source ML competition platform. Public hub: [competitions.codalab.org](http
 
 **Confirm:** GET the public competitions list. Title includes `CodaLab`.
 
+[base.html](https://github.com/codalab/codalab-competitions/blob/develop/codalab/apps/web/templates/base.html) titles every page `CodaLab - …` (1,027 hosts in September 2026, including `competitions.codalab.org` and `141.5.101.228` titled CodaLab - Home). Keep the host query for the canonical hub.
+
 | Tool | Query |
 |------|-------|
 | Google | `"CodaLab" competitions datasets -site:github.com` |
+| Censys | `web.endpoints.http.body: "<title>CodaLab -"` |
+| FOFA | `body="<title>CodaLab -"` |
 | Censys | `web.names: "competitions.codalab.org"` |
 | FOFA | `host="competitions.codalab.org"` |
 
@@ -116,23 +120,37 @@ Open-source successor to CodaLab Competitions. Public hub: [codabench.org](https
 
 **Confirm:** GET the home. Title `Codabench`.
 
+[base.html](https://github.com/codalab/codabench/blob/develop/src/templates/base.html) sets the default title `Codabench` (26 hosts in September 2026, including `www.codabench.org` and `qtim-challenges.southcentralus.cloudapp.azure.com`). Keep the domain query for the canonical hub.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Codabench" (benchmark OR competition OR datasets) -site:github.com` |
+| Censys | `web.endpoints.http.html_title: "Codabench"` |
+| FOFA | `title="Codabench"` |
 | Censys | `web.names: "codabench.org"` |
 | FOFA | `domain="codabench.org"` |
 
 ## Grand Challenge (`grandchallenge`) {#grandchallenge}
 
-Apache-2.0 biomedical-imaging challenge platform. Public hub: [grand-challenge.org](https://grand-challenge.org). Source: [comic/grand-challenge.org](https://github.com/comic/grand-challenge.org). Docs describe a reusable framework plus the public hub. Register that hub once, not each challenge, archive, or algorithm. Bot walls on `/api/v1/` are common — use the HTML catalog.
+Apache-2.0 biomedical-imaging challenge platform. Public hub: [grand-challenge.org](https://grand-challenge.org). Source: [DIAGNijmegen/rse-grand-challenge](https://github.com/DIAGNijmegen/rse-grand-challenge) (the `comic/grand-challenge.org` repository redirects here). Register **one catalog per installation**, not each challenge, archive, algorithm, or track subdomain. Bot walls on `/api/v1/` are common — use the HTML catalog.
 
-**Confirm:** GET the hub. Title includes `Grand Challenge`. One catalog for `https://grand-challenge.org`.
+**Confirm:** GET the homepage and `/challenges/` or `/data/`. Keep the install when those pages list challenges or datasets. Drop empty clones, test hosts, and hosts that no longer resolve. Track subdomains of one install (`frame.example.org`, `procedure.example.org`) are the same catalog.
+
+[script.html](https://github.com/DIAGNijmegen/rse-grand-challenge/blob/main/app/grandchallenge/core/templates/grandchallenge/partials/script.html) serves `js/datatables.defaults.mjs`. The footer links `github.com/DIAGNijmegen/rse-grand-challenge/`; older installs still link `github.com/comic/grand-challenge.org`. `<h6>Grand Challenge</h6>` matches challenge subdomains of the public hub (445 hosts in September 2026) and **zero** independent installs (24 September 2026). `body="Grand Challenge"` matched 6,183 unrelated hosts.
+
+GitHub code search skips forks. Fork homepages of `DIAGNijmegen/rse-grand-challenge` still say `https://grand-challenge.org`. Code search `datatables.defaults.mjs` and `public.ecr.aws/diag-nijmegen/grand-challenge` hit the upstream repo and [NBISweden/gc-bp-helm](https://github.com/NBISweden/gc-bp-helm) (`domainName: storprovning.test`, not a public catalog).
 
 | Tool | Query |
 |------|-------|
+| GitHub | forks of `DIAGNijmegen/rse-grand-challenge`; code search `datatables.defaults.mjs` and `public.ecr.aws/diag-nijmegen/grand-challenge` |
 | Google | `"grand-challenge.org" (challenge OR archive OR algorithm) biomedical` |
-| Censys | `web.names: "grand-challenge.org"` |
+| FOFA | `body="js/datatables.defaults.mjs" && domain!="grand-challenge.org"` |
+| FOFA | `body="github.com/DIAGNijmegen/rse-grand-challenge/" && domain!="grand-challenge.org"` |
+| FOFA | `body="github.com/comic/grand-challenge.org" && domain!="grand-challenge.org"` |
+| Censys | `web.endpoints.http.body: "js/datatables.defaults.mjs" and not web.hostname: "grand-challenge.org"` |
 | FOFA | `host="grand-challenge.org"` |
+
+On 24 September 2026 the independent `datatables.defaults.mjs` query returned `orena-focus-challenge.org` (public HeiCo-FOCUS VQA and LapChole-FOCUS VQA datasets), `zodiac-observatory.org` and `test-zodiac-observatory.org` (HTTP 403), and `fraunhofer-mevis-showroom.de` (DNS dead). The older comic footer also returned `vlm3dchallenge.com` task hosts (DNS dead).
 
 ## EvalAI (`evalai`) {#evalai}
 
@@ -140,9 +158,15 @@ BSD-licensed AI challenge evaluation platform. Public hub: [eval.ai](https://eva
 
 **Confirm:** GET `https://eval.ai`. Page title binds `EvalAI`. One catalog for that hub.
 
+[base.html](https://github.com/Cloud-CV/EvalAI/blob/master/frontend/base.html) sets `ng-app="evalai"` (50 hosts in September 2026, including `competition.aiforgood.itu.int` and `labs.scientechresearch.io`) and the meta description `EvalAI is an open-source web platform` (40 hosts, including `health.aiaudit.org`). Keep the host query for the canonical hub.
+
 | Tool | Query |
 |------|-------|
 | Google | `"EvalAI" (challenge OR evaluation OR leaderboard) -site:github.com` |
+| Censys | `web.endpoints.http.body: "ng-app=\"evalai\""` |
+| FOFA | `body="ng-app=\"evalai\""` |
+| Censys | `web.endpoints.http.body: "EvalAI is an open-source web platform"` |
+| FOFA | `body="EvalAI is an open-source web platform"` |
 | Censys | `web.names: "eval.ai"` |
 | FOFA | `host="eval.ai"` |
 

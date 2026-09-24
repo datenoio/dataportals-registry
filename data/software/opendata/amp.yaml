@@ -1,0 +1,65 @@
+category: Open data portal
+subtype: data_portal_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: Uncertain
+has_bulk: Uncertain
+id: amp
+name: Aid Management Platform
+website: https://devgateway.github.io/amp/
+description: The Aid Management Platform (AMP) is Development Gateway's open-source
+  aid-information system. Country installations publish official development
+  assistance activities with public reports, charts, and maps. One record per
+  country portal, not per report or dashboard.
+owner:
+  name: Development Gateway
+  location:
+    country:
+      id: US
+      name: United States
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: Uncertain
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: Uncertain
+storage_type: Structured
+type: Software
+repository_url: https://github.com/devgateway/amp
+documentation_url: https://devgateway.github.io/amp/
+changelog_url: https://github.com/devgateway/amp/releases
+export_formats:
+- XLS
+- PDF
+- XML
+capabilities:
+- Aid activity catalog
+- Public reports
+license:
+  type: GPL-3.0
+  url: https://www.gnu.org/licenses/gpl-3.0.html
+version: '4.0'
+last_updated: '2026-09-22T00:00:00Z'

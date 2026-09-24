@@ -1,0 +1,49 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Public GNSS station metadata and RINEX product catalogue of the CyCLOPS
+  research infrastructure. OpenAPI lists 19 stations and derived GNSS products (rinex_daily_30s,
+  rinex_hourly_30s); displacement timeseries remain authenticated.
+id: apicyclopscutaccy
+langs:
+- id: EN
+  name: English
+link: https://api.cyclops.cut.ac.cy/v1/public/docs
+name: CyCLOPS Stations Metadata API
+owner:
+  link: https://www.cut.ac.cy
+  location:
+    country:
+      id: CY
+      name: Cyprus
+  name: Cyprus University of Technology
+  type: Academy
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00007695
+endpoints:
+- type: openapi
+  url: https://api.cyclops.cut.ac.cy/v1/public/openapi.yaml
+  version: '3.1'

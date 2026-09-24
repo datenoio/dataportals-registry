@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    level: 20
+description: Public Adaptive map of Akvaplan-niva ocean current modelling (Havstraum).
+id: kartakvaplannivano
+langs:
+- id: 'NO'
+  name: Norwegian
+link: https://kart.akvaplan.niva.no/
+name: Havstraum
+owner:
+  link: https://www.akvaplan.niva.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: Akvaplan-niva
+  type: Business
+software:
+  id: avinet
+  name: Avinet Adaptive
+status: active
+tags:
+- geospatial
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007770
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: avinet:catalog
+  url: https://kart.akvaplan.niva.no

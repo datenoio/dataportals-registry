@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: GeoServer catalog publishing 7 layers outside the default sample workspaces
+  (WMS GetCapabilities).
+id: cartografiainecgobec
+langs:
+- id: ES
+  name: Spanish
+link: https://cartografia.inec.gob.ec/geoserver
+name: INEC Cartografía
+owner:
+  link: https://cartografia.inec.gob.ec/geoserver
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 20
+  name: Instituto Nacional de Estadística y Censos
+  type: Central government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- maps
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00011736
+endpoints:
+- type: wms111
+  url: https://cartografia.inec.gob.ec/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://cartografia.inec.gob.ec/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://cartografia.inec.gob.ec/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://cartografia.inec.gob.ec/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0

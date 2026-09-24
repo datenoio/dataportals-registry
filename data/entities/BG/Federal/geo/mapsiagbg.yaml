@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: GeoServer WMS/WFS of the Executive Forest Agency (Изпълнителна агенция
+  по горите), publishing forest-inventory and hunting-district layers.
+id: mapsiagbg
+langs:
+- id: BG
+  name: Bulgarian
+link: https://maps.iag.bg/geoserver/ows
+name: Executive Forest Agency GeoServer
+owner:
+  link: https://www.iag.bg
+  location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+  name: Executive Forest Agency
+  type: Central government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: wms111
+  url: https://maps.iag.bg/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://maps.iag.bg/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://maps.iag.bg/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://maps.iag.bg/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://maps.iag.bg/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+uid: cdi00007683

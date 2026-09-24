@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CO
+      name: Colorado
+description: RAMADDA catalog of Amazon Sustainability Data Initiative collections,
+  including NOAA, NASA POWER, Natural Earth, and related open Earth-science data.
+id: asdiramaddaorg
+langs:
+- id: EN
+  name: English
+link: https://asdi.ramadda.org/repository
+name: AWS ASDI Challenge
+owner:
+  link: https://geodesystems.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CO
+      name: Colorado
+  name: Geode Systems LLC
+  type: Business
+software:
+  id: ramadda
+  name: RAMADDA
+status: active
+tags:
+- scientific
+- research data
+- business
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00016291
+endpoints:
+- type: ramadda:entry-show
+  url: https://asdi.ramadda.org/repository/entry/show?output=json

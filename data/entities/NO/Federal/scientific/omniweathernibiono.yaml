@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: THREDDS catalog of gridded weather datasets operated by the Norwegian
+  Institute of Bioeconomy Research, including Malawi grids and ECMWF and Copernicus
+  collections.
+id: omniweathernibiono
+langs:
+- id: EN
+  name: English
+link: https://omni-weather.nibio.no/thredds/catalog.html
+name: NIBIO THREDDS Data Server
+owner:
+  link: https://www.nibio.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+  name: Norwegian Institute of Bioeconomy Research
+  type: Academy
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00015446
+endpoints:
+- type: thredds:catalog
+  url: https://omni-weather.nibio.no/thredds/catalog.xml
+- type: thredds:info
+  url: https://omni-weather.nibio.no/thredds/info/serverInfo.xml

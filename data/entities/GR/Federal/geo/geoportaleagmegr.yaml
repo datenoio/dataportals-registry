@@ -1,0 +1,50 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: ArcGIS Enterprise portal (11.3) of the Hellenic Authority of Geological
+  and Mining Research.
+id: geoportaleagmegr
+langs:
+- id: EL
+  name: Greek
+link: https://geoportal.eagme.gr/portal
+name: EAGME ArcGIS Portal
+owner:
+  link: https://www.eagme.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: Hellenic Authority of Geological and Mining Research (EAGME)
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:portals:self
+  url: "https://geoportal.eagme.gr/portal/sharing/rest/portals/self?f=pjson"
+uid: cdi00007659

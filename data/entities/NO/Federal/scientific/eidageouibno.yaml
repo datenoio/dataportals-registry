@@ -17,13 +17,13 @@ coverage:
 description: ORFEUS EIDA node jointly operated by the University of Bergen and NORSAR, providing FDSN
   waveform, station, availability, and WFCatalog web services.
 endpoints:
-- type: api
+- type: rest
   url: https://eida.geo.uib.no/fdsnws/station/1/
-- type: api
+- type: rest
   url: https://eida.geo.uib.no/fdsnws/dataselect/1/
-- type: api
+- type: rest
   url: https://eida.geo.uib.no/fdsnws/availability/1/
-- type: api
+- type: rest
   url: https://eida.geo.uib.no/eidaws/wfcatalog/1/
 id: eidageouibno
 langs:

@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: InstDB discovery portal of the Scientific Data Center of the Chinese
+  Academy of Sciences (中国科学院科学数据中心). Separate from the CASDC institutional repository
+  at instdb.casdc.cn.
+id: wwwcasdccn
+langs:
+- id: ZH
+  name: Chinese
+link: https://www.casdc.cn
+name: CAS Science Data Center
+owner:
+  link: https://www.casdc.cn
+  location:
+    country:
+      id: CN
+      name: China
+    level: 20
+  name: Scientific Data Center, Chinese Academy of Sciences
+  type: Academy
+software:
+  id: instdb
+  name: InstDB
+status: active
+tags:
+- scientific
+- China
+- InstDB
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00010150
+endpoints:
+- type: custom:api
+  url: https://www.casdc.cn/api
+properties:
+  dataset_count_reported: 132074
+  is_national: false
+  has_doi: true

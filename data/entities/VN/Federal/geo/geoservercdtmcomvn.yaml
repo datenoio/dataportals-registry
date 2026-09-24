@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Public GeoServer of CDTM. WMS exposes planning layers.
+endpoints:
+- type: wms111
+  url: https://geoserver.cdtm.com.vn/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserver.cdtm.com.vn/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: https://geoserver.cdtm.com.vn/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoserver.cdtm.com.vn/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: geoservercdtmcomvn
+langs:
+- id: VN
+  name: Vietnamese
+link: https://geoserver.cdtm.com.vn/geoserver/web/
+name: CDTM GeoServer
+owner:
+  link: https://cdtm.com.vn
+  location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 20
+  name: CDTM Joint Stock Company
+  type: Business
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00008185

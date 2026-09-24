@@ -2,7 +2,7 @@
 
 A global registry of data portals, catalogs, data repositories, and related data infrastructure.
 
-**Working tree (19 September 2026):** **39,113** verified catalogs · **636** software platforms · **224** countries and territories · **2** scheduled YAML records.
+**Working tree (24 September 2026):** **41,167** verified catalogs · **665** software platforms · **224** countries and territories · **1** scheduled YAML record.
 
 Last published snapshot: [v1.21.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.21.0), 12 September 2026 (**37,170** catalogs · **486** software · **0** scheduled).
 
@@ -45,15 +45,15 @@ More patterns: [docs/query-examples.md](docs/query-examples.md). Join keys and c
 
 ### Data exports
 
-Last published snapshot (**v1.21.0**, 2026-09-12: 37,170 catalogs, 486 software, 0 scheduled). Rebuild exports after YAML edits so `data/datasets/` matches source; record-count contract: [docs/exports.md](docs/exports.md#record-counts).
+Last published snapshot (**v1.21.0**, 2026-09-12: 37,170 catalogs, 486 software, 0 scheduled). `data/software/types.yaml` is the category dictionary and is not a platform. Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
 
 | File | Contents |
 |------|----------|
-| `data/datasets/catalogs.jsonl.zst` | **39,113** verified catalog records |
-| `data/datasets/software.jsonl` (+ `.zst`) | **636** software / platform definitions |
-| `data/datasets/scheduled.jsonl` (+ `.zst`) | **2** scheduled sources (**2** YAML files) |
-| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**39,115**) |
-| `data/datasets/full.parquet`, `data/datasets/datasets.duckdb` | Analytics-friendly copies of `full.jsonl` |
+| `data/datasets/catalogs.jsonl.zst` | **41,167** catalog records |
+| `data/datasets/software.jsonl` (+ `.zst`) | **665** software / platform definitions |
+| `data/datasets/scheduled.jsonl` (+ `.zst`) | **1** scheduled record |
+| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**41,168**) |
+| `data/datasets/full.parquet`, `data/datasets/datasets.duckdb` | Analytics-friendly copies of `full.jsonl` (**41,168** rows; DuckDB `software` table: **665**) |
 
 Rebuild from YAML (never hand-edit `data/datasets/`):
 

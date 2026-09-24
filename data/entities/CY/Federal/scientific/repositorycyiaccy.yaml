@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Institutional DSpace 6.2 repository of The Cyprus Institute. Public type
+  browse includes Dataset (5 items) alongside publications; OAI-PMH is available.
+  Distinct from the DARECLIMED climate data repository on www.cyi.ac.cy.
+id: repositorycyiaccy
+langs:
+- id: EN
+  name: English
+link: https://repository.cyi.ac.cy
+name: CyI Knowledge Bank
+owner:
+  link: https://www.cyi.ac.cy
+  location:
+    country:
+      id: CY
+      name: Cyprus
+  name: The Cyprus Institute
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: oaipmh20
+  url: https://repository.cyi.ac.cy/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://repository.cyi.ac.cy/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repository.cyi.ac.cy/feed/atom_1.0/site
+  version: '1.0'
+uid: cdi00007696

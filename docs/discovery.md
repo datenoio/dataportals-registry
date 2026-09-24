@@ -18,7 +18,7 @@ The registry records **catalogs** (portals, geoportals, repositories, and simila
 |-------|----------|
 | [Search engines and internet maps](discovery-search-tools.md) | Google, Censys, Shodan, FOFA, URLScan, crt.sh, and similar tools |
 | [Agents, Cursor, ChatGPT](discovery-agent-tools.md) | Configure MCP, APIs, Custom GPTs, and LLM clients to use those tools |
-| [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye, Piveau, Our Open Data, DataPress, ResourceContracts, RDF Online Repository, Guangxi, ODWeb, OpenGov |
+| [Open data portals](discovery-opendata.md) | CKAN, DKAN, EKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye, Piveau, Our Open Data, DataPress, ResourceContracts, RDF Online Repository, Guangxi, ODWeb, OpenGov |
 | [Geoportals](discovery-geoportals.md) | Overview; SDI stacks: [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md); viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md) (GISApp, SmartMap, SmartGIS, ISY Map, Avinet, MAP+, EnviMAP, PISO, GDi Visios, MapGuide, Zeljko GIS, SeaSketch, XY Maps, Hajk, Origo, myCarta, AddSpatial, KortInfo, …) |
 | [Scientific repositories](discovery-scientific.md) | Institutional IRs and CRIS (DSpace, Hyrax, Figshare, Pure, Converis, Omega-PSIR, Archipelago, Redivis, DABAR, OpenScience.si, …); domain repos: [discovery-scientific-domain.md](discovery-scientific-domain.md) |
 | [Metadata catalogs](discovery-metadata.md) | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
@@ -58,6 +58,7 @@ Many platforms publish installation galleries. Cross-check each URL against the 
 | Source | Typical catalogs |
 |--------|------------------|
 | [CKAN ecosystem](https://ecosystem.ckan.org/dataset/ckan-sites-metadata) | CKAN open-data portals (automated: `scripts/sync_ckan_ecosystem.py`) |
+| [CKAN Ecosystem Insights](https://ecosystem.ckan.org/insights) | Weekly-crawl dashboard of every tracked CKAN portal (dataset counts, versions, reachability). Machine-readable rollup: [`dashboard-data/dashboard.json`](https://raw.githubusercontent.com/dathere/pose-ckanext-metadata/main/dashboard-data/dashboard.json) — diff its `instances` list against exports to spot unregistered or moved CKAN sites |
 | [Datashades](https://datashades.info/) | CKAN and other portals |
 | [data.europa.eu catalogues](https://data.europa.eu/data/catalogues) | EU and member-state catalogs |
 | [GeoNetwork gallery](https://github.com/geonetwork/doc/blob/develop/source/annexes/gallery/gallery-urls.csv) | GeoNetwork geoportals |
@@ -123,7 +124,7 @@ Recent discovery sessions (through 8 September 2026, v1.20.0) produced catalogs 
 
 | Hunt | Prompt that works | Start from | Accept | Reject |
 |------|-------------------|------------|--------|--------|
-| Software instance | `Which {software} catalogs are missing?` | Vendor gallery / hostname pattern / crt.sh for SaaS | Live public UI matching that `software.id` | Demos, marketplace tenants, a second copy of the same hub; repeating a hunt from the last two weeks |
+| Software instance | `Which {software} catalogs are missing?` | Vendor gallery / hostname pattern / crt.sh for SaaS / [GitHub forks and code search](discovery-search-tools.md#github) for open-source products | Live public UI matching that `software.id` | Demos, marketplace tenants, a second copy of the same hub (including the same catalog on `github.io` and a custom domain); repeating a hunt from the last two weeks |
 | National harvest sources | `Which data sources harvested by {national portal} are missing?` | Harvest / organisations / catalogues API on the national site | Independent origin catalog (CKAN, GeoNetwork, Hub, agency `/opendata` list) | XML dataset feeds, price files, slices of the same national catalog, IR dumps already registered |
 | Country university IRs | `There are a lot of {country} universities… Which scientific repositories are missing?` | [OpenDOAR](https://v2.sherpa.ac.uk/opendoar/), [ROAR](http://roar.eprints.org), re3data country, OpenAIRE Graph | Public IR that **lists datasets** (DSpace Dataset type, Dataverse, research-data community) | Publication-only IRs, theses-only with no Dataset type, login walls, microstates with no universities |
 | Country indicators | `Which {country} indicators catalogs are missing?` | NSO site, health ministry, SDG, central bank | Queryable table DB or indicator explorer | PDF publications, CMS home, IMF NSDP already registered, agency PxWeb already on the national StatBank |
@@ -141,8 +142,9 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 
 | Platform | Typical signals | Probe (GET, timeout, public only) |
 |----------|-----------------|-----------------------------------|
-| CKAN | `/api/3/action/package_list`, “Powered by CKAN” | `https://host/api/3/action/status_show` |
+| CKAN | generator meta `ckan`, `ckan-footer-logo`, `/api/3/action/package_list` | `https://host/api/3/action/status_show` |
 | DKAN | CKAN-compatible API plus `/api/1/search` | same as CKAN, plus `/api/1/search` |
+| EKAN | `ekan_theme` / `profiles/contrib/ekan`, Drupal 9+ DKAN-1 successor | `/jsonapi/dataset/dataset` or `/data.json` |
 | Socrata | `/api/views`, `*.socrata.com` or SODA | `https://host/api/views.json?limit=1` |
 | OpenDataSoft | `/api/explore/v2.1/catalog/datasets` | that path |
 | GeoNetwork | `/srv/api`, `/srv/eng/csw` | CSW `GetCapabilities` |
@@ -227,7 +229,7 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | JMap | `/JMapWeb/` or JMap NG `/services/ng/` | Not hostnames that merely contain `jmap` |
 | GIS Cloud | `{city}.giscloud.com` | Not MuniSight login |
 | MRF Web Map | `{county}.mrf.com` / `js/lib/mrf/` | Not `web.munisight.com` (`munisight`) |
-| MuniSight | `web.munisight.com/{Tenant}` Catalis Login.aspx | Not `mrf`; not generic GeoMedia WebMap |
+| MuniSight | `app.munisight.com/{Tenant}` or `{tenant}.gis.catalisgov.ca` Catalis Login.aspx | Not `mrf`; not generic GeoMedia WebMap |
 | GeoMedia SmartClient Public Maps | `publicmaps.gisquadrat.com/BP/WEPM.aspx` `ig.publicmaps` | Not GeoMedia WebMap `$GP`; not ERDAS APOLLO |
 | SIT WebGis | `webgis.sit-puglia.it/{comune}/` `ng-app="WebApp"` or `SIT-` | Not Regione Puglia GeoNetwork; not Lizmap |
 | p.mapper | `/pmapper/` or `{city}.geo-portale.it` | Not UMN MapServer as the public catalog |
@@ -392,7 +394,7 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - JMap: `/JMapWeb/` or JMap NG `/services/ng/`
 - GIS Cloud: `{city}.giscloud.com`
 - MRF Web Map: `{county}.mrf.com` or `js/lib/mrf/`
-- MuniSight: `web.munisight.com/{Tenant}` Catalis Login.aspx
+- MuniSight: `app.munisight.com/{Tenant}` or `{tenant}.gis.catalisgov.ca` Catalis Login.aspx
 - GeoMedia SmartClient Public Maps: `publicmaps.gisquadrat.com/BP/WEPM.aspx` (`ig.publicmaps.application.min.js`)
 - SIT WebGis: `webgis.sit-puglia.it/{comune}/` (`ng-app="WebApp"` + `ol.js`, or Angular `SIT-{TOWN}`)
 - p.mapper: `/pmapper/` or `{city}.geo-portale.it`

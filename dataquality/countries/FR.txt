@@ -1,31 +1,100 @@
 DATA QUALITY REPORT - COUNTRY: FR
 ================================================================================
-Generated: 2026-09-18 23:43:01
+Generated: 2026-09-24 20:41:37
 Country Code: FR
-Total Records with Issues: 2
-Total Issues Found: 2
+Total Records with Issues: 9
+Total Issues Found: 9
 
 === ISSUES BY TYPE ===
 
-[MISSING_OWNER_LINK]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
+Count: 4
+Priority: MEDIUM
+
+File: FR/FR-GES/indicators/observatoireatmograndesteu.yaml
+Record ID: observatoireatmograndesteu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: FR/Federal/indicators/observatoiredesterritoiresgouvfr.yaml
+Record ID: observatoiredesterritoiresgouvfr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: FR/FR-CVL/indicators/odaceligairfr.yaml
+Record ID: odaceligairfr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: FR/FR-NOR/indicators/orecanfr.yaml
+Record ID: orecanfr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP]
+Count: 1
+Priority: MEDIUM
+
+File: FR/FR-BFC/geo/cartoparchautjurafr.yaml
+Record ID: cartoparchautjurafr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE]
+Count: 1
+Priority: MEDIUM
+
+File: FR/Federal/geo/agdvpbrgmfr.yaml
+Record ID: agdvpbrgmfr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE
+Field: endpoints
+Current Value: {'software_id': 'mapstore', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapstore' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL]
+Count: 1
+Priority: MEDIUM
+
+File: FR/Federal/scientific/marimbaobsvlfrfr.yaml
+Record ID: marimbaobsvlfrfr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+Field: endpoints
+Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS]
 Count: 2
-Priority: LOW
+Priority: MEDIUM
 
-File: FR/FR-ARA/geo/randovalleedeladromecom.yaml
-Record ID: randovalleedeladromecom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: FR/Federal/indicators/statistiquesmsafr.yaml
+Record ID: statistiquesmsafr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: FR/FR-ARA/geo/randorhonecrussolardechecom.yaml
-Record ID: randorhonecrussolardechecom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: FR/Federal/indicators/widworld.yaml
+Record ID: widworld
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 4 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS: 2 issues

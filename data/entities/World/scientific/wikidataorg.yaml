@@ -21,9 +21,9 @@ endpoints:
   url: https://query.wikidata.org/sparql
 - type: sparql:web
   url: https://query.wikidata.org
-- type: api
+- type: rest
   url: https://www.wikidata.org/w/api.php
-- type: customapi
+- type: rest
   url: https://www.wikidata.org/w/api.php?action=query&meta=siteinfo&format=json
 id: wikidataorg
 langs:

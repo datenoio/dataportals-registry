@@ -19,7 +19,7 @@ description: INSPIRE ATOM download services of the Czech Office for Surveying, M
   and Cadastre (ČÚZK). Provides pre-packaged geospatial datasets for cadastre, RÚIAN,
   and INSPIRE themes, with OpenSearch discovery.
 endpoints:
-- type: customapi
+- type: rest
   url: https://atom.cuzk.cz/getcapabilities.ashx
 - type: atom
   url: https://atom.cuzk.cz/getservicefeed.ashx?service=AU

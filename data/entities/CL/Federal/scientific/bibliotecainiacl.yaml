@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CL
+      name: Chile
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: INIA Chile digital library on DSpace 9.2. Dataset items include plant-tissue
+  nutrient measurements and plastics-fragmentation study data.
+id: bibliotecainiacl
+langs:
+- id: ES
+  name: Spanish
+link: https://biblioteca.inia.cl
+name: Biblioteca Digital INIA
+owner:
+  link: https://www.inia.cl
+  location:
+    country:
+      id: CL
+      name: Chile
+    level: 20
+  name: Instituto de Investigaciones Agropecuarias
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00010109
+endpoints:
+- type: dspace
+  url: https://biblioteca.inia.cl/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://biblioteca.inia.cl/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://biblioteca.inia.cl/server/oai/request?verb=Identify
+  version: '2.0'

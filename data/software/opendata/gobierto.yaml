@@ -1,0 +1,65 @@
+category: Open data portal
+subtype: managed_saas_service
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: gobierto
+website: https://www.gobierto.es/
+name: Gobierto Datos
+description: Gobierto Datos is the open-data catalog module of Gobierto, the
+  municipal open-government platform from Populate Tools. Each administration
+  gets a hosted site with a dataset hub at /datos/, DCAT metadata, CSV/JSON/XML
+  downloads, and a SQL API over HTTP. The same suite also ships budget,
+  contracts, and transparency modules; those pages are not this catalog.
+  Source is at github.com/PopulateTools/gobierto. Populate also offers it as SaaS.
+owner:
+  name: Populate Tools
+  location:
+    country:
+      id: ES
+      name: Spain
+logo_url: https://www.gobierto.es/favicon.ico
+documentation_url: https://www.gobierto.es/transparencia/datos-abiertos
+repository_url: https://github.com/PopulateTools/gobierto
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'Yes'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Structured
+type: Software
+export_formats:
+- CSV
+- JSON
+- XML
+capabilities:
+- Open data catalog
+- DCAT metadata
+- SQL API
+- Municipal SaaS portal
+last_updated: '2026-09-22T19:30:00Z'

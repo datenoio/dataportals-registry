@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MO
+      name: Missouri
+description: Recovery Friendly Missouri data hub from University of Missouri Extension,
+  with a CARES SparkMap community data report and Map Room for Missouri counties.
+endpoints:
+- type: sparkmap:catalog
+  url: https://recoveryfriendlymo.com/
+id: recoveryfriendlymocom
+langs:
+- id: EN
+  name: English
+link: https://recoveryfriendlymo.com/
+name: Recovery Friendly Missouri
+owner:
+  link: https://extension.missouri.edu/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MO
+      name: Missouri
+  name: University of Missouri Extension
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: sparkmap
+  name: SparkMap
+status: active
+tags:
+- indicators
+- health
+- recovery
+- Missouri
+- mapping
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00016377

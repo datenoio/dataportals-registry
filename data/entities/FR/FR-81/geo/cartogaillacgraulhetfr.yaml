@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-81
+      name: Tarn
+description: Public ArcGIS Enterprise data portal of Gaillac-Graulhet Agglomération
+  with feature and map services.
+id: cartogaillacgraulhetfr
+langs:
+- id: FR
+  name: French
+link: https://carto.gaillac-graulhet.fr/portal/home/
+name: Portail DATA Gaillac-Graulhet
+owner:
+  link: https://www.gaillac-graulhet.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-81
+      name: Tarn
+  name: Communauté d'agglomération Gaillac-Graulhet
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- geoportal
+- France
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007757
+properties:
+  is_national: false
+  has_doi: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://carto.gaillac-graulhet.fr/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://carto.gaillac-graulhet.fr/server/rest/services?f=pjson

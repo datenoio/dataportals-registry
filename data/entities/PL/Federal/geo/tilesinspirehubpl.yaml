@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: MapProxy catalog of municipal INSPIRE and local spatial-plan layers for
+  Polish gminas, operated by GIS Support. The public demo lists planning, cadastral,
+  and related map layers.
+id: tilesinspirehubpl
+langs:
+- id: PL
+  name: Polish
+link: https://tiles.inspire-hub.pl/mapproxy
+name: Inspire Hub WMTS
+owner:
+  link: https://gis-support.pl/
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 20
+  name: GIS Support
+  type: Business
+software:
+  id: mapproxy
+  name: MapProxy
+status: active
+tags:
+- geospatial
+- maps
+- business
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00015539
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: wms111
+  url: https://tiles.inspire-hub.pl/mapproxy/service?REQUEST=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://tiles.inspire-hub.pl/mapproxy/service?REQUEST=GetCapabilities&SERVICE=WMTS
+  version: 1.0.0
+- type: tms100
+  url: https://tiles.inspire-hub.pl/mapproxy/tms/1.0.0/
+  version: 1.0.0
+- type: wmts100
+  url: https://tiles.inspire-hub.pl/mapproxy/wmts/1.0.0/WMTSCapabilities.xml
+  version: 1.0.0

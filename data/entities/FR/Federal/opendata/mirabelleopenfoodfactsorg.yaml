@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 20
+description: Product, nutrition, and data-quality databases published by Open Food
+  Facts.
+id: mirabelleopenfoodfactsorg
+langs:
+- id: FR
+  name: French
+link: https://mirabelle.openfoodfacts.org/
+name: Open Food Facts databases
+owner:
+  link: https://world.openfoodfacts.org
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Open Food Facts
+  type: Civil society
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- civil society
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00013950
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://mirabelle.openfoodfacts.org/-/databases.json

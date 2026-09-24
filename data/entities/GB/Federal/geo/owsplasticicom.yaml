@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Datacube-ows service for Plastic-i, publishing satellite detections of
+  floating debris, aquaculture infrastructure, and seagrass scarring as OGC WMS, WMTS,
+  and WCS.
+id: owsplasticicom
+langs:
+- id: EN
+  name: English
+link: https://ows.plastic-i.com
+name: Plastic-i OGC Web Services
+owner:
+  link: https://plastic-i.com/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: Plastic-i
+  type: Business
+software:
+  id: datacubews
+  name: Datacube Open Web Services
+status: active
+tags:
+- geospatial
+- has_api
+- Earth observation
+- satellite
+- remote sensing
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00014011
+endpoints:
+- type: wms130
+  url: https://ows.plastic-i.com/?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wmts100
+  url: https://ows.plastic-i.com/?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs201
+  url: https://ows.plastic-i.com/?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1

@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-FL
+      name: Florida
+description: Florida Gulf Coast University research data repository for sharing and
+  citing datasets produced at the university.
+id: dataversefgcuedu
+langs:
+- id: EN
+  name: English
+link: https://dataverse.fgcu.edu
+name: FGCU Research Data Repository
+owner:
+  link: https://www.fgcu.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: Florida Gulf Coast University
+  type: Academy
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: dataverseapi
+  url: https://dataverse.fgcu.edu/api/search
+- type: dataverseapi
+  url: https://dataverse.fgcu.edu/api/info/version
+- type: oaipmh20
+  url: https://dataverse.fgcu.edu/oai?verb=Identify
+  version: '2.0'
+uid: cdi00016310

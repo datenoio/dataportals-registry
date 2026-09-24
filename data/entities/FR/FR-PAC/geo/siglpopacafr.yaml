@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-PAC
+      name: Provence-Alpes-Côte-d’Azur
+description: LPO PACA Lizmap cartographic portal with public naturalist survey maps
+  for birds, odonates, butterflies, reptiles, and species action plans.
+id: siglpopacafr
+langs:
+- id: FR
+  name: French
+link: https://sig.lpo-paca.fr/
+name: Portail cartographique LPO PACA
+owner:
+  link: https://paca.lpo.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-PAC
+      name: Provence-Alpes-Côte-d’Azur
+  name: Ligue pour la Protection des Oiseaux PACA
+  type: Civil society
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- biodiversity
+- lizmap
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: wms130
+  url: "https://sig.lpo-paca.fr/index.php/lizmap/service?repository=mobilisationnaturaliste&project=prospections_avifaune&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+  version: "1.3.0"
+uid: cdi00007714
+properties:
+  is_national: false

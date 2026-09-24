@@ -1,5 +1,5 @@
 access_mode:
-- public
+- open
 api: true
 api_status: active
 catalog_type: Geoportal
@@ -21,7 +21,7 @@ description: A GeoNetwork data catalog hosted by Luke (Natural Resources Institu
 endpoints:
 - type: geonetwork:query
   url: http://geonetwork.luke.fi/geonetwork/srv/eng/q
-- type: geonetwork
+- type: csw202
   url: http://geonetwork.luke.fi/geonetwork/srv/api
 - type: sitemap
   url: http://geonetwork.luke.fi/geonetwork/srv/eng/portal.sitemap

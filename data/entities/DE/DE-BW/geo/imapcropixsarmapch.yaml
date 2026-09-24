@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Cropix iMap, a QWC2 catalog of Sentinel-1 SAR agricultural map products
+  for cropland monitoring in multiple countries.
+id: imapcropixsarmapch
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://imap-cropix.sarmap.ch/cropix/
+name: Cropix iMap
+owner:
+  link: https://cropix.net/
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+  name: Cropix
+  type: Business
+software:
+  id: qwc2
+  name: QGIS Web Client 2 (QWC2)
+status: active
+tags:
+- GIS
+- geospatial
+- QWC2
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00011338
+endpoints:
+- type: qwc2:layers
+  url: https://imap-cropix.sarmap.ch/cropix/themes.json

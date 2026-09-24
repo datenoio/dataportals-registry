@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-GE
+      name: Gelderland
+description: Atlas geoportal of Regio Stedendriehoek with public metadatasets and
+  maps (PDOK BRT, regional energy strategy, wind energy, WKO). Distinct from the GeoApps
+  project map at kaarten.regiostedendriehoek.nl.
+id: geodataregiostedendriehoeknl
+langs:
+- id: NL
+  name: Dutch
+link: https://geodata.regiostedendriehoek.nl/
+name: Atlas Regio Stedendriehoek
+owner:
+  link: https://stedendriehoek.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-GE
+      name: Gelderland
+  name: Regio Stedendriehoek
+  type: Regional government
+software:
+  id: atlas
+  name: Atlas
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00008003
+endpoints:
+- type: rest
+  url: https://geodata.regiostedendriehoek.nl/atlas/api/v1/metadatasets/

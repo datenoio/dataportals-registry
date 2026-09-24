@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: GR-A
+      name: Anatolikí Makedonía kai Thráki
+description: Public MapServer GIS of the Municipal Water and Sewerage Company of Kavala,
+  including network and well layers.
+id: gisdeyakavgr
+langs:
+- id: EL
+  name: Greek
+link: https://gis.deyakav.gr
+name: DEYA Kavala GIS
+owner:
+  link: https://www.deyakav.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    subregion:
+      id: GR-A
+      name: Anatolikí Makedonía kai Thráki
+  name: Municipal Water and Sewerage Company of Kavala (DEYAK)
+  type: Local government
+software:
+  id: mapserver
+  name: MapServer
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: wms130
+  url: "https://gis.deyakav.gr/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+  version: "1.3.0"
+uid: cdi00007666

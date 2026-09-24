@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Public Open Data Cube explorer for Taiwan Data Cube, with Sentinel-2
+  and elevation products. The About page reports 1,390 datasets.
+id: twodccolifeorgtw
+langs:
+- id: ZH
+  name: Chinese
+- id: EN
+  name: English
+link: https://twodc.colife.org.tw
+name: Taiwan Data Cube Explorer
+owner:
+  link: https://www.nchc.org.tw
+  location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 20
+  name: National Center for High-performance Computing
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: opendatacube
+  name: Open Data Cube
+status: active
+tags:
+- geospatial
+- has_api
+- Earth Observation
+- Remote Sensing
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+endpoints:
+- type: stacserverapi
+  url: https://twodc.colife.org.tw/stac
+  version: '1.0'
+- type: stacserverapi
+  url: https://twodc.colife.org.tw/stac/
+  version: '1.0'
+- type: stacserverapi:stac-collections
+  url: https://twodc.colife.org.tw/stac/collections
+  version: '1.0'
+uid: cdi00015952

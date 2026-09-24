@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: Public GeoServer for Western and Central Pacific Fisheries Commission
+  geospatial layers, including the convention line, exclusive economic zones, and
+  high-seas areas.
+endpoints:
+- type: wms130
+  url: https://gis.wcpfc.int/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: giswcpfcint
+langs:
+- id: EN
+  name: English
+link: https://gis.wcpfc.int/geoserver/web/
+name: WCPFC GeoServer
+owner:
+  link: https://www.wcpfc.int
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: Western and Central Pacific Fisheries Commission
+  type: International
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- Geographic Information
+- Fisheries
+- WebGIS
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00008063

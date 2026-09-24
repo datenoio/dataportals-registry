@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TN
+      name: Tennessee
+    macroregion:
+      id: '021'
+      name: Northern America
+description: QWC2 map of downtown Chattanooga elevations published by Earthworx, a
+  geodetic survey and GIS firm in Chattanooga, Tennessee.
+id: mapsearthworxllccom
+langs:
+- id: EN
+  name: English
+link: https://maps.earthworxllc.com/downtown-chatt-elevs/
+name: Downtown Chattanooga Elevations
+owner:
+  link: https://www.earthworxllc.com/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TN
+      name: Tennessee
+  name: Earthworx, LLC
+  type: Business
+software:
+  id: qwc2
+  name: QGIS Web Client 2 (QWC2)
+status: active
+tags:
+- GIS
+- geospatial
+- QWC2
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00016426
+endpoints:
+- type: qwc2:layers
+  url: https://maps.earthworxllc.com/downtown-chatt-elevs/themes.json

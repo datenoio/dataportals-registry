@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -35,8 +35,8 @@ owner:
   name: Japan Long Term Ecological Research Network (JaLTER Network)
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: dataone
+  name: DataONE
 status: active
 tags:
 - academic
@@ -50,4 +50,8 @@ topics:
 - id: Oceans
   name: Oceans
   type: iso19115
+endpoints:
+- type: rest
+  url: "https://jalter.diasjp.net/metacat/d1/mn/v2"
+  version: "2"
 uid: cdi00007091

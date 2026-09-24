@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion:
+      id: '001'
+      name: World
+description: Terria catalog of FAO risk-monitor profile, monitoring, and forecast
+  layers.
+id: riskmonitorfaoorg
+langs:
+- id: EN
+  name: English
+link: https://riskmonitor.fao.org/
+name: FAO Risk Monitor
+owner:
+  link: https://www.fao.org/
+  location:
+    country:
+      id: World
+      name: World
+  name: Food and Agriculture Organization of the United Nations
+  type: International
+software:
+  id: terria
+  name: Terria
+status: active
+tags:
+- geospatial
+- maps
+- international
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+endpoints:
+- type: terria:config
+  url: https://riskmonitor.fao.org/config.json
+uid: cdi00016544

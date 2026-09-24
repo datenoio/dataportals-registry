@@ -17,13 +17,13 @@ coverage:
 description: ORFEUS EIDA node of the British Geological Survey, providing FDSN waveform,
   station, availability, and WFCatalog access to UK and partner seismic networks.
 endpoints:
-- type: api
+- type: rest
   url: https://eida.bgs.ac.uk/fdsnws/station/1/
-- type: api
+- type: rest
   url: https://eida.bgs.ac.uk/fdsnws/dataselect/1/
-- type: api
+- type: rest
   url: https://eida.bgs.ac.uk/fdsnws/availability/1/
-- type: api
+- type: rest
   url: https://eida.bgs.ac.uk/eidaws/wfcatalog/1/
 id: eidabgsacuk
 langs:

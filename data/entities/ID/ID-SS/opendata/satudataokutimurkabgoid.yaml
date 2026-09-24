@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: ID-SS
+      name: Sumatera Selatan
+description: Satu Data portal of Ogan Komering Ulu Timur Regency, South Sumatra.
+id: satudataokutimurkabgoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://satudata.okutimurkab.go.id
+name: Satu Data OKU Timur
+owner:
+  link: https://okutimurkab.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    subregion:
+      id: ID-SS
+      name: Sumatera Selatan
+  name: Kabupaten Ogan Komering Ulu Timur
+  type: Local government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: ckan
+  url: https://satudata.okutimurkab.go.id/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://satudata.okutimurkab.go.id/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://satudata.okutimurkab.go.id/api/3/action/package_list
+  version: '3'
+uid: cdi00014255
+properties:
+  is_national: false

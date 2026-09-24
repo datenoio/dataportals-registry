@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: GeoServer catalog publishing 51 layers outside the default sample workspaces
+  (WMS GetCapabilities).
+id: geoserveragroassistru
+langs:
+- id: RU
+  name: Russian
+link: https://geoserver.agroassist.ru/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+name: Agroassist GeoServer
+owner:
+  link: "https://geoserver.agroassist.ru/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities"
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+  name: Agroassist
+  type: Business
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- maps
+- business
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00015664
+endpoints:
+- type: wms111
+  url: https://geoserver.agroassist.ru/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserver.agroassist.ru/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoserver.agroassist.ru/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geoserver.agroassist.ru/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoserver.agroassist.ru/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

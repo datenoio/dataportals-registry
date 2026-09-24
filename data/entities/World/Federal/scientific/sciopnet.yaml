@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: SciOp is the public catalog of Safeguarding Research & Culture, indexing
+  scientific and cultural datasets distributed as BitTorrent uploads, with a REST
+  API and RSS feeds.
+endpoints:
+- type: openapi
+  url: https://sciop.net/api/v1/openapi.json
+- type: rest
+  url: https://sciop.net/api/v1/datasets/
+- type: rss
+  url: https://sciop.net/rss/all.rss
+id: sciopnet
+langs:
+- id: EN
+  name: English
+link: https://sciop.net/
+name: SciOp
+owner:
+  link: https://safeguar.de/
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: Safeguarding Research & Culture
+  type: Community
+properties:
+  dataset_count_reported: 318
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- scientific
+- research data
+- BitTorrent
+- preservation
+- datasets
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00016634

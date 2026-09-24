@@ -18,15 +18,15 @@ description: INGV FRIDGE gateway for EPOS Near-Fault Observatories, providing ac
   datasets (seismic events, CO2, radon, meteorological, and Vp/Vs products) via FDSN and REST
   services.
 endpoints:
-- type: api
+- type: rest
   url: https://fridgews.ingv.it/fdsn/event
-- type: api
+- type: rest
   url: https://fridgews.ingv.it/co2/stations
-- type: api
+- type: rest
   url: https://fridgews.ingv.it/radon/stations
-- type: api
+- type: rest
   url: https://fridgews.ingv.it/vpvs/
-- type: api
+- type: rest
   url: https://fridgews.ingv.it/meteo/
 id: fridgeingvit
 langs:

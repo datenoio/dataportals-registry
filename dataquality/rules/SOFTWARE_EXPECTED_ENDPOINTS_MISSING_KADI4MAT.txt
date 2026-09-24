@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_KADI4MAT
+================================================================================
+Generated: 2026-09-24 20:41:37
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_KADI4MAT
+Priority: MEDIUM
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='kadi4mat' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+DE: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+kadi4matnfdi4ingde: 1 issue
+
+=== ISSUES ===
+
+File: DE/Federal/scientific/kadi4matnfdi4ingde.yaml
+Record ID: kadi4matnfdi4ingde
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_KADI4MAT
+Field: endpoints
+Current Value: {"software_id": "kadi4mat", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='kadi4mat' is marked as API-capable in software definitions

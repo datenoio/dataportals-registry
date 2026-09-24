@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: NO-42
+      name: Agder
+description: Public Adaptive atlas of Statsforvalteren i Agder, with thematic layers
+  for aquaculture, fisheries, and other county themes.
+id: agderkartno
+langs:
+- id: 'NO'
+  name: Norwegian
+link: https://agderkart.no/
+name: Agderkart
+owner:
+  link: https://www.statsforvalteren.no/agder/
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 30
+    subregion:
+      id: NO-42
+      name: Agder
+  name: Statsforvalteren i Agder
+  type: Central government
+software:
+  id: avinet
+  name: Avinet Adaptive
+status: active
+tags:
+- geospatial
+- maps
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00008670
+endpoints:
+- type: avinet:catalog
+  url: https://agderkart.no
+properties:
+  is_national: false

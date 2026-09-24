@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-VA
+      name: Virginia
+description: THREDDS catalog of scientific datasets hosted by the Virginia Institute
+  of Marine Science, including investigator data collections.
+id: tds2vimsedu
+langs:
+- id: EN
+  name: English
+link: https://tds2.vims.edu/thredds/catalog.html
+name: VIMS THREDDS Data Server
+owner:
+  link: https://www.vims.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-VA
+      name: Virginia
+  name: Virginia Institute of Marine Science
+  type: Academy
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00016445
+endpoints:
+- type: thredds:catalog
+  url: https://tds2.vims.edu/thredds/catalog.xml
+- type: thredds:info
+  url: https://tds2.vims.edu/thredds/info/serverInfo.xml

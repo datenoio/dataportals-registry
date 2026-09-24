@@ -18,13 +18,13 @@ description: ORFEUS EIDA node operated by the National Observatory of Athens Ins
   exposing FDSN waveform, station, availability, and WFCatalog services, including Corinth Rift
   Laboratory holdings.
 endpoints:
-- type: api
+- type: rest
   url: https://eida.gein.noa.gr/fdsnws/station/1/
-- type: api
+- type: rest
   url: https://eida.gein.noa.gr/fdsnws/dataselect/1/
-- type: api
+- type: rest
   url: https://eida.gein.noa.gr/fdsnws/availability/1/
-- type: api
+- type: rest
   url: https://eida.gein.noa.gr/eidaws/wfcatalog/1/
 id: eidageinnoagr
 langs:

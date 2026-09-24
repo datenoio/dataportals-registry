@@ -1,0 +1,67 @@
+category: Open data portal
+subtype: data_portal_platform
+datatypes:
+  datasets: 'Yes'
+  fields: Uncertain
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: kukan
+website: https://kukan.dev/
+name: KUKAN
+description: KUKAN (Knowledge Unified Katalog And Network) is an open-source
+  TypeScript data catalog from Info Lounge, built as a CKAN-compatible
+  alternative. It publishes datasets, organizations, groups, and resources,
+  with a native /api/v1 catalog API and CKAN Action API v3 read endpoints.
+owner:
+  name: Info Lounge
+  location:
+    country:
+      id: JP
+      name: Japan
+logo_url: https://kukan.dev/favicon.svg
+metadata_support:
+  ckan_api: 'Yes'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/kukan-project/kukan
+documentation_url: https://kukan.dev/
+changelog_url: https://github.com/kukan-project/kukan/releases
+export_formats:
+- JSON
+- CSV
+capabilities:
+- REST API
+- CKAN API
+- Organization management
+- Full-text search
+license:
+  type: AGPL-3.0
+  url: https://www.gnu.org/licenses/agpl-3.0.html
+version: 0.30.4
+last_updated: '2026-09-18T13:14:12Z'

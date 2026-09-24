@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 30
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+    subregion:
+      id: AU-VIC
+      name: Victoria
+endpoints:
+- type: rss
+  url: https://ipt.rbg.vic.gov.au/ipt/rss.do
+  version: '2.0'
+- type: dcat:ttl
+  url: https://ipt.rbg.vic.gov.au/ipt/dcat
+- type: ipt:dataset
+  url: https://ipt.rbg.vic.gov.au/ipt/inventory/dataset
+description: GBIF Integrated Publishing Toolkit for the National Herbarium of Victoria
+  (MEL) at Royal Botanic Gardens Victoria. Publishes the MEL Australasian Virtual
+  Herbarium occurrence dataset.
+id: iptrbgvicgovau
+langs:
+- id: EN
+  name: English
+link: https://ipt.rbg.vic.gov.au/ipt/
+name: Royal Botanic Gardens Victoria IPT
+owner:
+  link: https://www.rbg.vic.gov.au/
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 30
+    subregion:
+      id: AU-VIC
+      name: Victoria
+  name: Royal Botanic Gardens Victoria
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: ipt
+  name: GBIF Integrated Publishing Toolkit (IPT)
+status: active
+tags:
+- GBIF
+- IPT
+- biodiversity
+- herbarium
+topics:
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00009666

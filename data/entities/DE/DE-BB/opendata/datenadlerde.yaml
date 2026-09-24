@@ -24,11 +24,11 @@ endpoints:
 - type: ckan:package-search
   url: https://piveau.offene.daten-brandenburg.de/api/hub/search/ckan/package_search
   version: '3'
-- type: customapi
+- type: rest
   url: https://piveau.offene.daten-brandenburg.de/api/hub/search/search
-- type: customapi
+- type: rest
   url: https://piveau.offene.daten-brandenburg.de/api/hub/repo/catalogues
-- type: customapi
+- type: rest
   url: https://piveau.offene.daten-brandenburg.de/api/hub/repo/datasets
 - type: sparql
   url: https://piveau.offene.daten-brandenburg.de/api/sparql

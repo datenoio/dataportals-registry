@@ -58,7 +58,7 @@ Match the user prompt to one of these loops. Do not mix them in the same pass.
 Which {software} catalogs are missing?
 ```
 
-Read the software YAML and [software-index.md](../software-index.md) row. `SELECT link FROM catalogs WHERE software.id = '{id}'`. Fetch the vendor list or hostname pattern (not a scanner). Optional: crt.sh for SaaS hosts (`%.pozi.com`, `%.giscloud.com`), then Censys or FOFA title/body if Google is silent ([FOFA as Censys alternative](../discovery-search-tools.md#fofa)). Probe fingerprints. One record per public tenant, not a second copy of the same hub (PISO geoprostor.net, SeaSketch marketing home, GISApp REST adaptor).
+Read the software YAML and [software-index.md](../software-index.md) row. `SELECT link FROM catalogs WHERE software.id = '{id}'`. Fetch the vendor list or hostname pattern (not a scanner). For open-source products people deploy by forking, that list is the upstream fork network **and** a code search (code search skips forks): [discovery-search-tools.md](../discovery-search-tools.md#github). JKAN: forks of `timwis/jkan`, then `jkan_theme filename:_config.yml`. When that file string is also served, use it as the FOFA `body=` query ([common files](../discovery-search-tools.md#common-files)). Optional: crt.sh for SaaS hosts (`%.pozi.com`, `%.giscloud.com`), then Censys or FOFA title/body if Google is silent ([FOFA as Censys alternative](../discovery-search-tools.md#fofa)). Probe fingerprints. One record per public tenant, not a second copy of the same hub (PISO geoprostor.net, SeaSketch marketing home, GISApp REST adaptor, the same JKAN `data.json` on a custom domain and on `github.io`).
 
 If the vendor list is exhausted and nothing new probes live, **stop and list 0 missing**. Do not invent extra cities.
 
@@ -133,11 +133,15 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | If you see | `software.id` | Typical type |
 |------------|---------------|--------------|
 | `/api/3/action/status_show` | `ckan` | Open data portal |
+| `profiles/dkan` or `/api/1/metastore/schemas/dataset` | `dkan` | Open data portal |
+| Aid Management Platform country portal | `amp` | Open data portal |
+| `/profiles/contrib/ekan/` or `ekan_theme` | `ekan` | Open data portal |
 | `/api/explore/v2.1/catalog/datasets` | `opendatasoft` | Open data portal |
 | `/api/views` (SODA) | `socrata` | Open data portal |
 | `/transparencia/datos/catalogo` Maggioli/Galileo | `atmmaggioli` | Open data portal |
 | `{org}.opengov.com` /transparency | `opengov` | Open data portal |
 | `/backend/api/catalog/` DCAT-AP_IT / “Powered by ACTAINFO” | `opendataente` | Open data portal |
+| Title `DataPortal.AI` + `/lmap/lmap-core/`, or `/sites/all/modules/spodata/`, or `themes/statportal` / `spod_bootstrap` | `dataportalai` | Open data portal |
 | `/opendata/set/lkod` or lkod.cz catalog | `lkod` | Open data portal |
 | `/srv/eng/csw` or `/srv/api` | `geonetwork` | Geoportal |
 | Title “Geoportal Palapa” / `/main/` or `/gspalapa/` | `palapa` | Geoportal |
@@ -145,6 +149,9 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | Title `WebEWID` / Portal Mapowy | `webewid` | Geoportal |
 | `{org}.gis.ba` / `/webcity/` GAUSS MapStore | `gausswebcity` | Geoportal |
 | Title `Digital Metric Addressing System` / `{palika}.dmaps.org` | `dmaps` | Geoportal |
+| `{city}.r3gis.com` / `{city}-app.r3gis.com` public mapset | `r3gis` | Geoportal |
+| `Choosemap.aspx` WebGIS Publisher | `webgispublisher` | Geoportal |
+| `{tenant}.lightship.works/v2/public` | `lightship` | Geoportal |
 | `/geoserver/ows` GetCapabilities | `geoserver` | Geoportal |
 | ArcGIS Hub search / `opendata.arcgis.com` | `arcgishub` | Geoportal or Open data portal |
 | `/arcgis/rest/info?f=pjson` | `arcgisserver` | Geoportal |
@@ -152,6 +159,7 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `/apps/webappviewer/index.html?id=` | `webappbuilder` | Geoportal |
 | STAC `/collections` JSON | `stacserver` | Geoportal |
 | `/api/info/version` | `dataverse` | Scientific data repository |
+| `/api/data/search/query` Renku | `renku` | Scientific data repository |
 | DSpace `/server/api` or `/xmlui` | `dspace` | Scientific data repository |
 | GAVO DaCHS TAP / `DaCHS` | `dachs` | Scientific data repository |
 | BEXIS2 `/api/` or bexis2 chrome | `bexis2` | Scientific data repository |
@@ -187,6 +195,8 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | Hajk `appConfig.json` / `mapserviceBase` | `hajk` | Geoportal |
 | Title `SHOGun` / `SHOGun Client` / `/applications` JSON | `shogun` | Geoportal |
 | Title `ScalarGIS` / `/static/viewer/` / `logo-splash.png` | `scalargis` | Geoportal |
+| Title `CartoMapas` / `bundle-map-app.js` / WKTApp Arade | `cartomapas` | Geoportal |
+| `/page/viewer?id=` / `/var/www/MapFusion/` GeoPlan Yii2 | `mapfusion` | Geoportal |
 | `origo.min.js` / `origo.js` / `Origo(` Origosamverkan | `origo` | Geoportal |
 | Title `Tailormap` / `{org}.tailormap.nl` / `/api/app/{app}` | `tailormap` | Geoportal |
 | Title “myCarta WebMap” / `/webmap/` / `/mycartawebmap/` | `mycarta` | Geoportal |
@@ -210,7 +220,7 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `{city}.mapmap.com.br/geo-portal` Laravel MapMap citizen hub | `mapmap` | Geoportal |
 | `webgis.drz.com.br/{city}/` title WebGIS/WebGis OpenLayers DRZ | `drzwebgis` | Geoportal |
 | `{county}.mrf.com` / `js/lib/mrf/` MRF Web Map | `mrf` | Geoportal |
-| `web.munisight.com/{Tenant}` Catalis Login.aspx | `munisight` | Geoportal |
+| `app.munisight.com/{Tenant}` or `{tenant}.gis.catalisgov.ca` Login.aspx | `munisight` | Geoportal |
 | `publicmaps.gisquadrat.com/BP/WEPM.aspx` title GeoMedia SmartClient Public Maps | `publicmaps` | Geoportal |
 | `webgis.sit-puglia.it/{comune}/` title WebGis or SIT- | `sitwebgis` | Geoportal |
 | `/pmapper/` or `{city}.geo-portale.it` p.mapper | `pmapper` | Geoportal |
@@ -272,6 +282,7 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | Title `CodaLab` / `competitions.codalab.org` | `codalab` | Machine learning catalog |
 | Title `Codabench` / `codabench.org` | `codabench` | Machine learning catalog |
 | `/v1.1/` SensorThings JSON (`Things` / `Datastreams`) or title `FROST-Server` | `frostserver` | Scientific data repository |
+| Server header `SmartMet Server` / `/edr/collections` / WMS titled SmartMet | `smartmetserver` | Geoportal |
 | Title `easydb 5` / `fylr_inject` / `/api/v1/session` | `easydb` | Scientific data repository |
 | Title `Yareta` / `/oai-info/oai-provider/oai` | `dlcm` | Scientific data repository |
 | `meta generator` `GeoCMS Version:` `brain-SCC` | `braingeocms` | Geoportal |

@@ -20,11 +20,11 @@ coverage:
 description: CIVORA / Piveau data catalog of Wetteraukreis, publishing district administrative
   and planning datasets through a public hub-search API.
 endpoints:
-- type: customapi
+- type: rest
   url: https://piveau-search.wetterau.civora.org/search
-- type: customapi
+- type: rest
   url: https://piveau-repo.wetterau.civora.org/catalogues
-- type: customapi
+- type: rest
   url: https://piveau-repo.wetterau.civora.org/datasets
 - type: ckan:package-search
   url: https://piveau-search.wetterau.civora.org/ckan/package_search

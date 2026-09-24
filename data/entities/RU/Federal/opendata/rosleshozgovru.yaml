@@ -17,7 +17,7 @@ coverage:
 description: Open-data catalog of the Federal Forestry Agency (Rosleshoz), with a
   Methodological Recommendations 3.0 registry at /opendata/list.csv.
 endpoints:
-- type: custom_api
+- type: rest
   url: https://rosleshoz.gov.ru/opendata/list.csv
 id: rosleshozgovru
 langs:
@@ -46,8 +46,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: bitrix
+  name: Bitrix
 status: active
 tags:
 - government

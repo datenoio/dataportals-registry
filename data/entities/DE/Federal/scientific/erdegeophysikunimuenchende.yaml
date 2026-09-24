@@ -17,13 +17,13 @@ coverage:
 description: ORFEUS EIDA node operated by Ludwig Maximilian University of Munich, providing FDSN waveform,
   station, availability, and WFCatalog web services.
 endpoints:
-- type: api
+- type: rest
   url: https://erde.geophysik.uni-muenchen.de/fdsnws/station/1/
-- type: api
+- type: rest
   url: https://erde.geophysik.uni-muenchen.de/fdsnws/dataselect/1/
-- type: api
+- type: rest
   url: https://erde.geophysik.uni-muenchen.de/fdsnws/availability/1/
-- type: api
+- type: rest
   url: https://erde.geophysik.uni-muenchen.de/eidaws/wfcatalog/1/
 id: erdegeophysikunimuenchende
 langs:

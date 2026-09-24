@@ -19,17 +19,17 @@ description: Public meteorological and hydrological data portal of Poland's Inst
   current and historical synoptic, meteorological, and hydrological observations,
   weather and flood warnings, bulk file downloads, and a REST API.
 endpoints:
-- type: customapi
+- type: rest
   url: https://danepubliczne.imgw.pl/api/data/synop
-- type: customapi
+- type: rest
   url: https://danepubliczne.imgw.pl/api/data/hydro
-- type: customapi
+- type: rest
   url: https://danepubliczne.imgw.pl/api/data/meteo
-- type: customapi
+- type: rest
   url: https://danepubliczne.imgw.pl/api/data/warningsmeteo
-- type: customapi
+- type: rest
   url: https://danepubliczne.imgw.pl/api/data/warningshydro
-- type: customapi
+- type: rest
   url: https://danepubliczne.imgw.pl/api/data/product
 - type: docs
   url: https://danepubliczne.imgw.pl/apiinfo

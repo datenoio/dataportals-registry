@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: active
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,7 +20,7 @@ description: Custom geoportal of the National Spatial Data Infrastructure of the
   Intended to publish, catalogue, and share national geospatial datasets among government
   geodata holders. The nsdi.tj host did not accept connections (24 August 2026).
 endpoints:
-- type: customapi
+- type: rest
   url: https://nsdi.tj/datasets
 id: nsditj
 langs:

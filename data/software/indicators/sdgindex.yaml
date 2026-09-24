@@ -1,0 +1,68 @@
+category: Indicators catalog
+subtype: indicators_data_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'No'
+  topics: 'Yes'
+has_api: 'No'
+has_bulk: 'Yes'
+id: sdgindex
+website: https://dashboards.sdgindex.org
+name: SDG Index
+description: SDG Index dashboards are the Sustainable Development Solutions Network
+  (SDSN) indicator sites for the Sustainable Development Report and regional or
+  subnational editions. Current hosts are Next.js apps, usually on *.sdgindex.org,
+  with rankings, maps, profiles, and a downloadable indicator database. The 2019
+  European Cities edition is an earlier static build on euro-cities.sdgindex.org.
+  Country profile pages on the same host are not separate catalogs. Do not label
+  OpenSDG sites or the SDSN library at sdgtransformationcenter.org.
+owner:
+  name: Sustainable Development Solutions Network
+  location:
+    country:
+      id: World
+      name: World
+logo_url: https://dashboards.sdgindex.org/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'No'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Global
+  supports_licenses: 'No'
+storage_type: Structured
+type: Software
+repository_url: https://github.com/sdsna/sdgindex-starter
+documentation_url: https://code.sdgindex.org/
+version: 1.0.0
+license:
+  type: ISC
+export_formats:
+- Excel
+- JSON
+capabilities:
+- SDG rankings and dashboards
+- Country, state, or city profiles
+- Indicator maps and time series
+- Downloadable indicator database
+last_updated: '2026-09-22T00:00:00Z'

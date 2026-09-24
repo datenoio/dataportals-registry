@@ -4,7 +4,7 @@ api: true
 api_status: active
 catalog_type: Open data portal
 content_types:
-- api endpoint
+- dataset
 coverage:
 - location:
     country:
@@ -17,7 +17,7 @@ coverage:
 description: Annuaire API des administrations et services publics francais pour faciliter
   l'acces et la reutilisation des informations de reference.
 endpoints:
-- type: opendatasoft
+- type: opendatasoftapi
   url: https://api-lannuaire.service-public.fr/api
 - type: sitemap
   url: https://api-lannuaire.service-public.fr/sitemap.xml

@@ -1,0 +1,67 @@
+DATA QUALITY REPORT - COUNTRY: SE
+================================================================================
+Generated: 2026-09-24 20:41:37
+Country Code: SE
+Total Records with Issues: 5
+Total Issues Found: 5
+
+=== ISSUES BY TYPE ===
+
+[MISSING_RIGHTS]
+Count: 1
+Priority: LOW
+
+File: SE/Federal/opendata/dataportalse.yaml
+Record ID: dataportalse
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB]
+Count: 2
+Priority: MEDIUM
+
+File: SE/Federal/geo/kartorsfvse.yaml
+Record ID: kartorsfvse
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
+Field: endpoints
+Current Value: {'software_id': 'arcgishub', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgishub' is marked as API-capable in software definitions
+
+File: SE/SE-E/geo/kartaatvidabergse.yaml
+Record ID: kartaatvidabergse
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
+Field: endpoints
+Current Value: {'software_id': 'arcgishub', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgishub' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS]
+Count: 1
+Priority: MEDIUM
+
+File: SE/SE-M/opendata/opendatamalmose.yaml
+Record ID: opendatamalmose
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS
+Field: endpoints
+Current Value: {'software_id': 'portaljs', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='portaljs' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS]
+Count: 1
+Priority: MEDIUM
+
+File: SE/Federal/indicators/statistiketikprovningsansokanse.yaml
+Record ID: statistiketikprovningsansokanse
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+MISSING_RIGHTS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS: 1 issue

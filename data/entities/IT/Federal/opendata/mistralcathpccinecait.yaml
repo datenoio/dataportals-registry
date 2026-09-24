@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Open data catalog of the ItaliaMeteo agency, hosted at CINECA.
+id: mistralcathpccinecait
+langs:
+- id: IT
+  name: Italian
+link: https://mistral-cat.hpc.cineca.it
+name: ItaliaMeteo Open Data Catalog
+owner:
+  link: https://www.agenziaitaliameteo.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Agenzia ItaliaMeteo
+  type: Central government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: ckan
+  url: https://mistral-cat.hpc.cineca.it/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://mistral-cat.hpc.cineca.it/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://mistral-cat.hpc.cineca.it/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://mistral-cat.hpc.cineca.it/catalog.n3
+- type: dcat:ttl
+  url: https://mistral-cat.hpc.cineca.it/catalog.ttl
+- type: dcat:xml
+  url: https://mistral-cat.hpc.cineca.it/catalog.xml
+- type: dcat:jsonld
+  url: https://mistral-cat.hpc.cineca.it/catalog.jsonld
+- type: dcat
+  url: https://mistral-cat.hpc.cineca.it/catalog.rdf
+uid: cdi00014409
+properties:
+  is_national: false

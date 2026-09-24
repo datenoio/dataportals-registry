@@ -5,7 +5,6 @@ api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
-- time series
 coverage:
 - location:
     country:
@@ -19,7 +18,7 @@ description: Official macroeconomic time-series database (BCRPData) of Peru's Ce
   Reserve Bank. Publishes monetary, financial, fiscal, external-sector, and national-accounts
   indicators, with a documented REST API supporting JSON, CSV, XML, and Excel.
 endpoints:
-- type: customapi
+- type: rest
   url: https://estadisticas.bcrp.gob.pe/estadisticas/series/api/
 - type: docs
   url: https://estadisticas.bcrp.gob.pe/estadisticas/series/ayuda/api

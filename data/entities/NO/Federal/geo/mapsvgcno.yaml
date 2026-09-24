@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: MapTiler Server catalog of Schmaps styles and Norwegian tilesets, including
+  election districts and borough boundaries. The homepage is a logo shell; the catalog
+  API lists the datasets.
+id: mapsvgcno
+langs:
+- id: 'NO'
+  name: Norwegian
+link: https://maps.vgc.no
+name: Schmaps MapTiler Server
+owner:
+  link: https://maps.vgc.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+  name: Schmaps
+  type: Other
+software:
+  id: maptilerserver
+  name: MapTiler Server
+status: active
+tags:
+- geospatial
+- tiles
+- MapTiler
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00015419
+endpoints:
+- type: maptilerserver:catalog
+  url: https://maps.vgc.no

@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Alpine Space WebGIS of the Interreg Smart Altitude project, a renamed
+  mf-geoadmin3 fork (galp) hosted for the Austrian Academy of Sciences. Public catalogue
+  of ecosystem-service, land-cover, protected-area, and administrative layers for
+  the Alps.
+id: webgissmartaltitudeeu
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+- id: FR
+  name: French
+- id: IT
+  name: Italian
+- id: SL
+  name: Slovenian
+link: http://webgis.smartaltitude.eu/
+name: Smart Altitude WebGIS
+owner:
+  link: https://www.oeaw.ac.at/igf
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+  name: Institute for Interdisciplinary Mountain Research (IGF), Austrian Academy
+    of Sciences
+  type: Academy
+software:
+  id: mfgeoadmin3
+  name: mf-geoadmin3
+status: active
+tags:
+- Alps
+- ecosystem services
+- mf-geoadmin3
+- geodata
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009619
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: rest
+  url: http://webgis.smartaltitude.eu/data/catalogue.json

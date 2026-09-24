@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: ES-RI
+      name: La Rioja
+description: CKAN open-data portal of Logroño Smart City (173 packages). Distinct
+  from the CMS listing at logrono.es/datos-abiertos.
+id: opendatalogronoes
+langs:
+- id: ES
+  name: Spanish
+link: https://opendata.logrono.es
+name: Logroño SmartCity Open Data
+owner:
+  link: https://www.logrono.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-RI
+      name: La Rioja
+  name: Ayuntamiento de Logroño
+  type: Local government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00007584
+endpoints:
+- type: ckan:package-search
+  url: https://opendata.logrono.es/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.logrono.es/api/3/action/package_list
+  version: '3'

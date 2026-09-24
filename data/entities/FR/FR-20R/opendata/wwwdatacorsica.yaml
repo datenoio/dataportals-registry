@@ -17,22 +17,19 @@ coverage:
     subregion:
       id: FR-20R
       name: Corse
-description: No data could be extracted directly from the raw text provided or the
-  given URL. Extractable information must be accessed through structured data such
-  as API endpoints, downloadable metadata files (RDF, JSON-LD), or by scraping live
-  web pages with permission and technical means. The provided URL only indicates a
-  domain, not the specific DCAT-AP or structured metadata endpoint needed for extraction.
+description: Portail de données ouvertes de la Collectivité de Corse. Accès libre
+  aux jeux de données publics de Corse.
 endpoints:
-- type: opendatasoftapi
-  url: https://www.data.corsica/api
+- type: datafairapi
+  url: https://data.corsica/data-fair/api/v1/datasets
 - type: sitemap
-  url: https://www.data.corsica/sitemap.xml
+  url: https://data.corsica/sitemap.xml
 id: wwwdatacorsica
 langs:
 - id: FR
   name: French
-link: https://www.data.corsica
-name: Corsica Government Open data portal
+link: https://data.corsica
+name: Data Corsica
 owner:
   link: https://data.corsica
   location:
@@ -43,7 +40,7 @@ owner:
     subregion:
       id: FR-20R
       name: Corse
-  name: Corsica Government
+  name: Collectivité de Corse
   type: Regional government
 properties:
   has_doi: false
@@ -51,16 +48,17 @@ rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: https://www.data.corsica/terms/privacy-policy/
+  privacy_policy_url: null
   rights_type: granular
-  tos_url: https://www.data.corsica/terms/terms-and-conditions/
+  tos_url: null
 software:
-  id: opendatasoft
-  name: OpenDataSoft
+  id: datafair
+  name: Data Fair
 status: active
 tags:
 - government
 - open data
+- datafair
 topics:
 - id: GOVE
   name: Government and public sector

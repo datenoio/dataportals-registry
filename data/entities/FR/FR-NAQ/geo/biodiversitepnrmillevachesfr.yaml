@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-NAQ
+      name: Nouvelle-Aquitaine
+description: Public GeoNature atlas of fauna and flora for Parc naturel régional de
+  Millevaches en Limousin.
+id: biodiversitepnrmillevachesfr
+langs:
+- id: FR
+  name: French
+link: https://biodiversite.pnr-millevaches.fr/
+name: Atlas de la biodiversité du PNR de Millevaches
+owner:
+  link: https://www.pnr-millevaches.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-NAQ
+      name: Nouvelle-Aquitaine
+  name: Parc naturel régional de Millevaches en Limousin
+  type: Regional government
+software:
+  id: geonature
+  name: GeoNature
+status: active
+tags:
+- geospatial
+- biodiversity
+- geonature
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007761
+properties:
+  is_national: false
+  has_doi: false
+endpoints:
+- type: geonature:api
+  url: https://biodiversite.pnr-millevaches.fr/api/searchTaxon
+- type: geonature:api
+  url: https://biodiversite.pnr-millevaches.fr/api/searchCommune

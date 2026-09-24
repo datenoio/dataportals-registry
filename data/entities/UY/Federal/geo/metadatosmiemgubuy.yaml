@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: DINAMIGE GeoNetwork catalogue of mining and geology metadata for Uruguay.
+  Distinct from the MIEM ministry GeoNetwork and the geological map viewer.
+id: metadatosmiemgubuy
+langs:
+- id: ES
+  name: Spanish
+link: https://metadatos.miem.gub.uy/geonetwork
+name: Catalogo DINAMIGE
+owner:
+  link: https://www.miem.gub.uy
+  location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 20
+  name: DINAMIGE
+  type: Central government
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- maps
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00016481
+endpoints:
+- type: geonetwork:query
+  url: https://metadatos.miem.gub.uy/geonetwork/srv/eng/q
+- type: openapi
+  url: https://metadatos.miem.gub.uy/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://metadatos.miem.gub.uy/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://metadatos.miem.gub.uy/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://metadatos.miem.gub.uy/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: dcat:xml
+  url: https://metadatos.miem.gub.uy/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: https://metadatos.miem.gub.uy/geonetwork/srv/api/site

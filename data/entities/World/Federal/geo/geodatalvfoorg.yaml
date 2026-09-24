@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion:
+      id: '001'
+      name: World
+description: Lake Victoria Fisheries Organization GeoNetwork catalogue of lake environmental
+  layers, including chlorophyll, turbidity, and night lights.
+id: geodatalvfoorg
+langs:
+- id: EN
+  name: English
+link: https://geodata.lvfo.org/geonetwork
+name: LVFO Geodata Platform
+owner:
+  link: https://www.lvfo.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 2
+  name: Lake Victoria Fisheries Organization
+  type: International
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- maps
+- international
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00016529
+endpoints:
+- type: csw202
+  url: https://geodata.lvfo.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geodata.lvfo.org/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://geodata.lvfo.org/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://geodata.lvfo.org/geonetwork/srv/api/site

@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: Metro Vancouver Regional District ArcGIS Server REST services providing basemaps, geocoding, imagery, and regional spatial data services.
+id: gismetrovancouverorg
+langs:
+- id: EN
+  name: English
+link: https://gis.metrovancouver.org/arcgis/rest/services
+name: Metro Vancouver GIS ArcGIS Server
+owner:
+  link: "https://gis.metrovancouver.org"
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: Metro Vancouver Regional District
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.metrovancouver.org/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.metrovancouver.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.metrovancouver.org/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.metrovancouver.org/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.metrovancouver.org/arcgis/rest/services?f=geositemap
+uid: cdi00007866

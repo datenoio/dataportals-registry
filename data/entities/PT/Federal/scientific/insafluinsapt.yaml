@@ -18,7 +18,7 @@ description: Public Auspice catalog of SARS-CoV-2 phylogenies at Portugal's Nati
   Institute of Health INSA, served alongside the INSaFLU-TELEVIR genomic surveillance
   platform.
 endpoints:
-- type: customapi
+- type: rest
   url: https://insaflu.insa.pt/charon/getAvailable
 id: insafluinsapt
 langs:
@@ -32,6 +32,7 @@ owner:
     country:
       id: PT
       name: Portugal
+    level: 20
   name: Instituto Nacional de Saúde Doutor Ricardo Jorge
   type: Central government
 properties:

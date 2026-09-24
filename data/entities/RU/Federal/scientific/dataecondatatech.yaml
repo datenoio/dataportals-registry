@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Infoculture research data repository (НЦСЭД) on InvenioRDM.
+id: dataecondatatech
+langs:
+- id: RU
+  name: Russian
+link: https://data.econdata.tech
+name: 'НЦСЭД: Репозиторий данных'
+owner:
+  link: https://infoculture.ru
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 20
+  name: АНО Инфокультура
+  type: Civil society
+software:
+  id: inveniordm
+  name: InvenioRDM
+status: active
+tags:
+- scientific
+- research data
+- civil society
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: inveniordmapi:records
+  url: https://data.econdata.tech/api/records
+- type: oaipmh20
+  url: https://data.econdata.tech/oai2d?verb=Identify
+  version: '2.0'
+uid: cdi00015680

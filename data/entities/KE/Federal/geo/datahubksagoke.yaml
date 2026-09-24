@@ -20,7 +20,7 @@ description: KSA Datahub is the Kenya Space Agency GIS and Remote Sensing Data H
   mapping and analysis in support of Kenya's space research and Earth observation
   initiatives. Custom React application with a REST API and GeoServer backend.
 endpoints:
-- type: customapi
+- type: rest
   url: https://datahub.ksa.go.ke/api/data/category/
 - type: wms111
   url: https://datahub.ksa.go.ke/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -40,6 +40,7 @@ owner:
     country:
       id: KE
       name: Kenya
+    level: 20
   name: Kenya Space Agency
   type: Central government
 properties:

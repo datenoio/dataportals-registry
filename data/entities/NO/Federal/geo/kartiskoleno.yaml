@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: School map atlas of Norway operated by the science education laboratory
+  at the University of Bergen and funded by the Ministry of Education. mf-geoadmin3
+  viewer with a public layersConfig of thematic geodata including schools, population,
+  land use, hazards, and marine layers.
+id: kartiskoleno
+langs:
+- id: 'NO'
+  name: Norwegian
+link: https://kartiskolen.no/
+name: Kart i skolen
+owner:
+  link: https://www.uib.no/skolelab
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: Skolelaboratoriet i realfag, University of Bergen
+  type: Academy
+software:
+  id: mfgeoadmin3
+  name: mf-geoadmin3
+status: active
+tags:
+- geodata
+- schools
+- Norway
+- mf-geoadmin3
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00015416
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: rest
+  url: https://kartiskolen.no/rest/services/api/MapServer/layersConfig

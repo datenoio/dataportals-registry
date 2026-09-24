@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: ArcGIS Enterprise GIS portal of the Inspectorate for Agriculture, Forestry,
+  Hunting and Fisheries (IRSKGLR) and MKGP, with public forestry, hunting, food-safety
+  and orthophoto services. Distinct from the FURS tax geoportal on gis3.furs.gov.si.
+id: gisportalfursgovsi
+langs:
+- id: SL
+  name: Slovenian
+link: https://gisportal.furs.gov.si/arcgis/rest/services
+name: IRSKGLR / MKGP GIS Portal
+owner:
+  link: https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-kmetijstvo-gozdarstvo-in-prehrano/
+  location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 20
+  name: Ministry of Agriculture, Forestry and Food
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisportal.furs.gov.si/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisportal.furs.gov.si/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisportal.furs.gov.si/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisportal.furs.gov.si/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisportal.furs.gov.si/arcgis/rest/services?f=geositemap
+uid: cdi00008080

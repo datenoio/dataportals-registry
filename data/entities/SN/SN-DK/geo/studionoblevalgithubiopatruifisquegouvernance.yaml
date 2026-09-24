@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SN
+      name: Senegal
+    level: 30
+    subregion:
+      id: SN-DK
+      name: Dakar
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Public mviewer of local food producers and processors for the territorial
+  food policy of Rufisque.
+endpoints:
+- type: mviewer:config
+  url: https://studio-noble-val.github.io/pat-rufisque/mviewer/apps/public/gouvernance/map_gouvernance.xml
+id: studionoblevalgithubiopatruifisquegouvernance
+langs:
+- id: FR
+  name: French
+link: https://studio-noble-val.github.io/pat-rufisque/mviewer/?config=apps/public/gouvernance/map_gouvernance.xml
+name: Producteurs locaux de Rufisque
+owner:
+  link: https://studio-noble-val.github.io/pat-rufisque/
+  location:
+    country:
+      id: SN
+      name: Senegal
+    level: 30
+    subregion:
+      id: SN-DK
+      name: Dakar
+  name: Conseil départemental de Rufisque
+  type: Local government
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- mviewer
+- geoportal
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00008774

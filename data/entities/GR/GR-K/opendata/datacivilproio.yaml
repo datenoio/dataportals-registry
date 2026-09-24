@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: GR-K
+      name: Vóreio Aigaío
+description: Open data portal of the Region of North Aegean, Greece.
+id: datacivilproio
+langs:
+- id: EL
+  name: Greek
+link: https://data.civilpro.io
+name: Open Data Portal of the Region of North Aegean
+owner:
+  link: https://data.civilpro.io
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    subregion:
+      id: GR-K
+      name: Vóreio Aigaío
+  name: Region of North Aegean
+  type: Regional government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: ckan
+  url: https://data.civilpro.io/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.civilpro.io/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.civilpro.io/api/3/action/package_list
+  version: '3'
+uid: cdi00008734
+properties:
+  is_national: false

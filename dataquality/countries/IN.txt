@@ -1,0 +1,48 @@
+DATA QUALITY REPORT - COUNTRY: IN
+================================================================================
+Generated: 2026-09-24 20:41:37
+Country Code: IN
+Total Records with Issues: 3
+Total Issues Found: 3
+
+=== ISSUES BY TYPE ===
+
+[MISSING_RIGHTS]
+Count: 1
+Priority: LOW
+
+File: IN/Federal/opendata/datagovin.yaml
+Record ID: datagovin
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN]
+Count: 1
+Priority: MEDIUM
+
+File: IN/IN-KA/opendata/opendatabensclcom.yaml
+Record ID: opendatabensclcom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN
+Field: endpoints
+Current Value: {'software_id': 'dkan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dkan' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
+Count: 1
+Priority: MEDIUM
+
+File: IN/Federal/indicators/databanknedficom.yaml
+Record ID: databanknedficom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+MISSING_RIGHTS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue

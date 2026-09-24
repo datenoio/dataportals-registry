@@ -133,6 +133,13 @@ class TestConstants:
         assert "Geoportal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["opendatasoft"]
         assert "Geoportal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["wordpress"]
         assert "Indicators catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["wordpress"]
+        assert "Geoportal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["joomla"]
+        assert "Indicators catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["joomla"]
+        assert "Open data portal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["dkan"]
+        assert (
+            "Scientific data repository"
+            in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["dkan"]
+        )
         assert "Microdata catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["nada"]
         assert "Scientific data repository" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["nada"]
         assert "Metadata catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["molgenis"]

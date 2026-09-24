@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Development coordination locations tracked by Tampa Monitor.
+id: devcoordtampamonitorcom
+langs:
+- id: EN
+  name: English
+link: https://dev-coord.tampamonitor.com/
+name: Tampa Development Coordination Locations
+owner:
+  link: https://tampamonitor.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: Tampa Monitor
+  type: Civil society
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- civil society
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00016308
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://dev-coord.tampamonitor.com/-/databases.json

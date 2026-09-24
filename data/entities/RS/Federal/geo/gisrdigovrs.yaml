@@ -1,0 +1,50 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RS
+      name: Serbia
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Public ArcGIS Enterprise Sites catalog of the Republic Directorate for
+  Property, with state-property maps and related layers.
+id: gisrdigovrs
+langs:
+- id: SR
+  name: Serbian
+link: https://gis.rdi.gov.rs/portal/apps/sites/#/imovinars
+name: Geoportal Republičke direkcije za imovinu
+owner:
+  link: https://www.rdi.gov.rs
+  location:
+    country:
+      id: RS
+      name: Serbia
+    level: 20
+  name: Republic Directorate for Property of the Republic of Serbia
+  type: Central government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:services
+  url: "https://gis.rdi.gov.rs/server/rest/services?f=pjson"
+uid: cdi00008164

@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-78
+      name: Yvelines
+description: ArcGIS Server of Communauté urbaine Grand Paris Seine et Oise, publishing
+  public feature and map services distinct from the OpenDataSoft portal.
+id: siggpseofr
+langs:
+- id: FR
+  name: French
+link: https://sig.gpseo.fr/server/rest/services
+name: Grand Paris Seine et Oise ArcGIS Server
+owner:
+  link: https://www.gpseo.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-78
+      name: Yvelines
+  name: Communauté urbaine Grand Paris Seine et Oise
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- ArcGIS
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007711
+properties:
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://sig.gpseo.fr/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.gpseo.fr/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig.gpseo.fr/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://sig.gpseo.fr/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sig.gpseo.fr/server/rest/services?f=geositemap

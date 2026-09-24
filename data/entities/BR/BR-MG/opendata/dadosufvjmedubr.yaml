@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-MG
+      name: Minas Gerais
+description: Open data portal of the Federal University of the Jequitinhonha and Mucuri
+  Valleys.
+id: dadosufvjmedubr
+langs:
+- id: PT
+  name: Portuguese
+link: https://dados.ufvjm.edu.br
+name: Dados Abertos UFVJM
+owner:
+  link: https://www.ufvjm.edu.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-MG
+      name: Minas Gerais
+  name: Universidade Federal dos Vales do Jequitinhonha e Mucuri
+  type: Academy
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: ckan
+  url: https://dados.ufvjm.edu.br/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dados.ufvjm.edu.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dados.ufvjm.edu.br/api/3/action/package_list
+  version: '3'
+uid: cdi00009843
+properties:
+  is_national: false

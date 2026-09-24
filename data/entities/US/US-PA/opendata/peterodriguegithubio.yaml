@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-PA
+      name: Pennsylvania
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Philadelphia street-tree and air-monitoring datasets published as a JKAN
+  catalog.
+id: peterodriguegithubio
+langs:
+- id: EN
+  name: English
+link: https://pete-rodrigue.github.io/jkan/
+name: Philly Tree Data
+owner:
+  link: https://pete-rodrigue.github.io/jkan/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-PA
+      name: Pennsylvania
+  name: Philly Tree Data
+  type: Community
+software:
+  id: jkan
+  name: JKAN
+status: active
+tags:
+- open data
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00016415
+endpoints:
+- type: dcatus11
+  url: https://pete-rodrigue.github.io/jkan/data.json
+- type: dcatus11
+  url: https://pete-rodrigue.github.io/jkan/datasets.json

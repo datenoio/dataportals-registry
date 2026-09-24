@@ -27,11 +27,11 @@ endpoints:
 - type: ckan:package-search
   url: https://open.bydata.de/api/hub/search/ckan/package_search
   version: '3'
-- type: customapi
+- type: rest
   url: https://open.bydata.de/api/hub/search/search
-- type: customapi
+- type: rest
   url: https://open.bydata.de/api/hub/repo/catalogues
-- type: customapi
+- type: rest
   url: https://open.bydata.de/api/hub/repo/datasets
 - type: sparql
   url: https://open.bydata.de/api/sparql
@@ -39,7 +39,7 @@ endpoints:
   url: https://open.bydata.de/sitemap.xml
 - type: sitemap
   url: https://open.bydata.de/sitemap.xml.gz
-- type: customapi
+- type: rest
   url: https://open.bydata.de/api/hub/search/search?q=&filter=dataset
 - type: docs
   url: https://open.bydata.de/api/hub/search/

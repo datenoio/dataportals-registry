@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-PE
+      name: Prince Edward Island
+description: Government of Prince Edward Island GIS (GeoLinc) ArcGIS Server REST services with dozens of public map and feature services covering base data, environment, forestry, and agriculture.
+id: gisprinceedwardislandca
+langs:
+- id: EN
+  name: English
+link: https://gis.princeedwardisland.ca/server/rest/services
+name: Prince Edward Island GIS ArcGIS Server
+owner:
+  link: "https://gis.princeedwardisland.ca"
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-PE
+      name: Prince Edward Island
+  name: Government of Prince Edward Island
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.princeedwardisland.ca/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.princeedwardisland.ca/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.princeedwardisland.ca/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.princeedwardisland.ca/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.princeedwardisland.ca/server/rest/services?f=geositemap
+uid: cdi00007872

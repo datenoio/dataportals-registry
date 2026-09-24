@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-OH
+      name: Ohio
+description: Public OntoPortal of the MDS3 Center of Excellence at Case Western Reserve
+  University. It hosts materials data science ontologies used by the Materials Data
+  Science for Stockpile Stewardship program.
+id: mdsontoportalcom
+langs:
+- id: EN
+  name: English
+link: https://mdsonto-portal.com
+name: MDS-Onto Portal
+owner:
+  link: https://mds3-coe.com/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-OH
+      name: Ohio
+  name: MDS3 Center of Excellence, Case Western Reserve University
+  type: Academy
+software:
+  id: ontoportal
+  name: OntoPortal
+status: active
+tags:
+- ontologies
+- materials science
+- research
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00016406
+properties:
+  is_national: false
+  dataset_count_reported: 9
+endpoints:
+- type: ontoportal:catalog
+  url: https://mdsonto-portal.com/ontologies

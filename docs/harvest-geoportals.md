@@ -243,6 +243,20 @@ GET https://host/openapi
 
 Store `/collections?f=json` (and the trailing-slash twin) as `ogc:features` (OGC API collections grain). OpenAPI stays `pygeoapi:openapi`.
 
+## SmartMet Server (`smartmetserver`) {#smartmetserver}
+
+Filter exports on `software.id = 'smartmetserver'`. Prefer `endpoints[]`.
+
+**Keep:** OGC API — EDR **collections** when `/edr/collections` is live; otherwise named **WMS layers** from GetCapabilities; otherwise WFS 2.0 **stored queries** from `ListStoredQueries`. **Drop:** `/timeseries` point responses as datasets, `/admin?what=qengine` engine dumps, GetMap/Dali images, and alias vhosts of the same cluster (`data.fmi.fi` vs `opendata.fmi.fi`; `harmonia.geoss.space` / `urban.geoss.space` vs `data.geoss.space`).
+
+```text
+GET https://host/edr/collections
+GET https://host/wms?service=WMS&version=1.3.0&request=GetCapabilities
+GET https://host/wfs?service=WFS&version=2.0.0&request=ListStoredQueries
+```
+
+Type `/edr/collections` as `rest` (or `ogc:edr` when that type exists on the record). Type WMS as `wms130` and WFS as `wfs200`. Harvest EDR collections once; do not also ingest every WMS layer of the same producer.
+
 ## pycsw (`pycsw`) {#pycsw}
 
 Prefer CSW `GetRecords` or `/collections?f=json` (same grain as [pygeoapi](#pygeoapi)). Skip installer HTML. Optional OAI-PMH Identify is `/?mode=oaipmh&verb=Identify` (and `/oaipmh` on some installs). Prefer CSW for harvest; OAI is a dump.
@@ -528,6 +542,24 @@ Dutch `{org}.webgis.nl` Onemap tenants. Same grain as [Wagmap](#wagmap). [harves
 
 **Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#nieuwlandonemap)). **Drop:** tiles, print PDFs, basemaps, and login walls.
 
+## Lightship Works (`lightship`) {#lightship}
+
+`{tenant}.lightship.works/v2/public` map workspaces. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#lightship).
+
+**Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#lightship)). **Drop:** tiles, print PDFs, basemaps, and login walls.
+
+## R3GIS (`r3gis`) {#r3gis}
+
+Italian `{city}.r3gis.com` and `{city}-app.r3gis.com` public mapsets. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#r3gis). Skip login-only GreenSpaces modules.
+
+**Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#r3gis)). **Drop:** tiles, print PDFs, basemaps, and login walls.
+
+## WebGIS Publisher (`webgispublisher`) {#webgispublisher}
+
+Nieuwland `Choosemap.aspx` themakaart choosers. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#webgispublisher). Distinct from `nieuwlandonemap` and from `geoserver` on `webgispublisher.nl`.
+
+**Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#webgispublisher)). **Drop:** tiles, print PDFs, basemaps, and login walls.
+
 ## KaartViewer (`kaartviewer`) {#kaartviewer}
 
 GeoSquare `{org}.kaartviewer.nl` (and city-host) viewers. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#kaartviewer). Distinct from `geoserver` on the same estate.
@@ -698,9 +730,21 @@ Virtual City Systems VC Map (`html.vcs-ui`). Same grain as [Wagmap](#wagmap). [h
 
 ## ScalarGIS (`scalargis`) {#scalargis}
 
-WKT-SI ScalarGIS viewers (`title ScalarGIS`, `/static/viewer/`). Same grain as [Origo](harvest-viewers.md#origo). [harvest-viewers.md](harvest-viewers.md#scalargis). Distinct from older WKT CartoMapas and from `geoserver` / `geonetwork` on DGT hosts.
+WKT-SI ScalarGIS viewers (`title ScalarGIS`, `/static/viewer/`). Same grain as [Origo](harvest-viewers.md#origo). [harvest-viewers.md](harvest-viewers.md#scalargis). Distinct from older WKT CartoMapas (`cartomapas`) and from `geoserver` / `geonetwork` on DGT hosts.
 
 **Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#scalargis)). **Drop:** tiles, print PDFs, basemaps, and login walls.
+
+## CartoMapas (`cartomapas`) {#cartomapas}
+
+WKT-SI CartoMapas / WKTApp Arade viewers (`bundle-map-app.js`, title `CartoMapas`, WKTApp Arade credits). Same grain as [ScalarGIS](harvest-viewers.md#scalargis). [harvest-viewers.md](harvest-viewers.md#cartomapas). Distinct from `scalargis` and from `geonetwork` on the same host (Portimão).
+
+**Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#cartomapas)). **Drop:** tiles, print PDFs, basemaps, and login walls.
+
+## MapFusion (`mapfusion`) {#mapfusion}
+
+GeoPlan MapFusion Yii2 viewers (`/page/viewer?id=`, `/var/www/MapFusion/`). Same grain as [CartoMapas](harvest-viewers.md#cartomapas). [harvest-viewers.md](harvest-viewers.md#mapfusion). Distinct from `mapguide`, `qgisserver`, and Águeda `ckan` / `geonetwork` / `geoserver`.
+
+**Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#mapfusion)). **Drop:** tiles, print PDFs, basemaps, and login walls.
 
 ## Origo (`origo`) {#origo}
 
@@ -1083,6 +1127,39 @@ API, so enumerate map ids from the tenant's page or menu config.
 
 **Keep:** each **published map** (`/api/maps/{id}.json`) as one dataset analog. **Drop:** the
 editorial page chrome and basemap tiles. Do not harvest event maps (kaart.marathon.nl).
+
+## GajaMatrix GeoPortal (`gajamatrix`) {#gajamatrix}
+
+Gingko.Systeme municipal GeoPortal / GDI-Knoten frontends (geoportal.merseburg.de,
+geoportal.gera.de, geoportal.wassernord.de). One harvest scope per GeoPortal UI. The JS viewer
+has no documented public list API; layers are browsed in the TOC. The `*.gajamatrix.de/geoserver`
+and `gdi.gajamatrix.de/geonetwork` backends are separate `geoserver` / `geonetwork` records —
+harvest those via their own software, not here.
+
+**Keep:** the tenant's published layer list as map-layer dataset analogs. **Drop:** basemap
+tiles, print/search tools, and the GDI-node metadata handoff. Do not confuse with disy Cadenza
+(`cadenza`) workbook hosts.
+
+## GBD WebSuite (`gbdwebsuite`) {#gbdwebsuite}
+
+gbd-consult open-source WebGIS clients (webgis.schmallenberg.de, webgis.hase-wasseracht.de)
+loading `/_/webSystemAsset/path/{app,vendor,util}.js`. One harvest scope per public viewer.
+The client renders QGIS Server projects and exposes OGC WMS/WFS, but there is no documented
+relative catalog list API on the viewer URL.
+
+**Keep:** the published layer list (from the TOC or the WMS `GetCapabilities`) as map-layer
+dataset analogs. **Drop:** basemap tiles, print layouts, and the login/admin area. Do not set
+`gbdwebsuite` from a bare QGIS Server or GeoServer backend on the same host.
+
+## INVENT WebGIS (`inventwebgis`) {#inventwebgis}
+
+INVENT ltd WebGIS viewers for Albanian authorities at `/aps/?name={tenant}` or
+`/apps/?name={tenant}` (webgis.arrsh.gov.al, webgis.atp.gov.al). One harvest scope per public
+viewer. The OpenLayers/dojo client has no documented public list API.
+
+**Keep:** the published layer list (road network, cadastral/property layers) as map-layer
+dataset analogs. **Drop:** basemap tiles and UI chrome. The IKTK heritage viewers
+(arkeologjia/monumente.iktk.gov.al) are a separate OpenLayers/GeoExt build — do not merge.
 
 ## geoCore (`geocore`) {#geocore}
 

@@ -1,0 +1,50 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    level: 20
+description: Public QWC2 map catalog of the Monti Sibillini National Park, with geology,
+  hydrogeology, soils, trails, land use, and vegetation themes.
+id: cartografiasibillininet
+langs:
+- id: IT
+  name: Italian
+link: https://cartografia.sibillini.net/
+name: Mappe del Parco Nazionale dei Monti Sibillini
+owner:
+  link: https://www.sibillini.net/
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Parco Nazionale dei Monti Sibillini
+  type: Central government
+software:
+  id: qwc2
+  name: QGIS Web Client 2 (QWC2)
+status: active
+tags:
+- GIS
+- geospatial
+- QWC2
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00014359
+endpoints:
+- type: qwc2:layers
+  url: https://cartografia.sibillini.net/themes.json

@@ -1,30 +1,74 @@
 # Discovering open data portals
 
-How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax (Google, Censys, Shodan, and [FOFA as a Censys alternative](discovery-search-tools.md#fofa)): [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md). Also covered here: Idra (`idra`), a DCAT-AP federation layer that is usually typed as a **Data search engine**; Piveau, Our Open Data, Gipuzkoa Irekia, DataPress, Taiwan MODA, ResourceContracts, RDF Online Repository, the Guangxi Public Data Open Platform, ODWeb, ATM Maggioli, OpenGov, and OPENDATAENTE.
+How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax (Google, Censys, Shodan, and [FOFA as a Censys alternative](discovery-search-tools.md#fofa)): [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md). Also covered here: Idra (`idra`), a DCAT-AP federation layer that is usually typed as a **Data search engine**; Piveau, Our Open Data, Gipuzkoa Irekia, DataPress, Taiwan MODA, ResourceContracts, RDF Online Repository, the Guangxi Public Data Open Platform, ODWeb, ATM Maggioli, OpenGov, OPENDATAENTE, KUKAN, the Epoint Big Data Open Platform, BODIK ODCS, and the jig.jp Open Data Platform.
 
 Set `software.id` from `data/software/` only when a probe or page signal matches. Otherwise `custom`. After YAML exists: `python scripts/apidetect.py detect-single {id} --dryrun` (replace `{id}` with the catalog id).
 
 ## CKAN (`ckan`) {#ckan}
 
-Most common self-hosted open-data CMS. Gallery: [CKAN ecosystem](https://ecosystem.ckan.org/dataset/ckan-sites-metadata) (automated: `python scripts/sync_ckan_ecosystem.py --dry-run`) and [Datashades](https://datashades.info/).
+Most common self-hosted open-data CMS. Gallery: [CKAN ecosystem](https://ecosystem.ckan.org/dataset/ckan-sites-metadata) (automated: `python scripts/sync_ckan_ecosystem.py --dry-run`) and [Datashades](https://datashades.info/). GitHub method for server apps: [discovery-search-tools.md](discovery-search-tools.md#github).
 
-**Signals:** footer “Powered by CKAN”; `/dataset` or `/dataset/` listing; HTML includes `ckan.js` or `ckanext-`; cookie `ckan_`.
+**Signals:** `<meta name="generator" content="ckan {version}">`; footer class `ckan-footer-logo` in [footer.html](https://github.com/ckan/ckan/blob/master/ckan/templates/footer.html); static files `/base/images/ckan.ico` and `/base/images/od_80x15_blue.png`; asset paths containing `ckanext-`; Beaker session cookie `ckan`. The default footer is `<strong>Powered by</strong>` plus a separate `<a class="hide-text ckan-footer-logo" href="http://ckan.org">CKAN</a>`, so the page source usually lacks the contiguous phrase “Powered by CKAN”. Current installs load hashed webassets (2.9+) or `fanstatic/base` (2.8). A script named `ckan.js` is rare.
 
 **Confirm (GET):** `https://host/api/3/action/status_show` and/or `/api/3/action/package_list`. JSON with `"success": true` is enough. Scientific data repositories may also be `ckan` when that API matches (AuScope Data Repository, `generator` CKAN 2.10.1; Observatorio Medioambiental La Plata, `generator` CKAN 2.7.3). HTML that mentions “ckan” is not enough when `status_show` returns HTML or 503 (INAIL `dati.inail.it`). An `og:url` pointing at a CKAN test host is not enough when `status_show` 404s (NIRD `archive.sigma2.no`).
 
+**GitHub: read `ckan.site_url`, skip the fork list.** Forks of [ckan/ckan](https://github.com/ckan/ckan), [ckan/ckan-docker](https://github.com/ckan/ckan-docker), [okfn/docker-ckan](https://github.com/okfn/docker-ckan), and [keitaroinc/docker-ckan](https://github.com/keitaroinc/docker-ckan) are the software and Compose templates. `CKAN_SITE_URL` in those trees is `localhost`, `ckan:5000`, or `nginx:8080`. Code search does not index most forks, and paginating these forks does not list portals.
+
+The public URL, when someone committed it, is in one of these files:
+
+| File | Where the URL sits |
+|------|--------------------|
+| `ckan.ini` (and `ckan.ini.j2`) | `ckan.site_url` — CKAN 2.9+ |
+| `production.ini` | `ckan.site_url` — CKAN 2.8 and earlier |
+| `.env`, README, shell | `CKAN_SITE_URL=` |
+
+```bash
+gh api -H "Accept: application/vnd.github.text-match+json" \
+  "search/code?q=%22ckan.site_url%20%3D%20https%3A%2F%2F%22&per_page=100"
+gh api -H "Accept: application/vnd.github.text-match+json" \
+  "search/code?q=ckan.site_url+https%3A%2F%2F+extension%3Aini&per_page=100"
+gh api -H "Accept: application/vnd.github.text-match+json" \
+  "search/code?q=%22CKAN_SITE_URL%3Dhttps%3A%2F%2F%22&per_page=100"
+```
+
+Keep a literal hostname (`https://energydata.info`, `https://danepubliczne.gov.pl`, `https://data.openpeoria.com`, `https://openafrica.net` in a README). Skip `localhost`, `127.0.0.1`, docker DNS names, unsubstituted `{{ }}` / `${VAR}` / `<%= %>`, `example.com`, `.env.example`, and hosts marked notprod, test, or staging unless that host is the public catalog. Then GET `status_show`. In September 2026 `"ckan.site_url = https://"` had about 40 code hits and `"CKAN_SITE_URL=https://"` about 100, and most of both were templates.
+
+**FOFA** (checked September 2026). Google’s `"Powered by CKAN"` still matches the visible footer. FOFA, Censys, Shodan, and PublicWWW search HTML source, where those two words are not adjacent. FOFA has no `app="CKAN"`. `js_name="ckan.js"` returned 0 and `body="ckan.js"` returned 22. `body="webassets"` matches tens of thousands of unrelated hosts. `body="/api/3/action/status_show"` returned 8 because that path is not in the HTML. `body="Powered by CKAN"` returned 85, and the first host was ckan.org.
+
+| Query | Hits | What it matches |
+|-------|------|-----------------|
+| `body="name=\"generator\" content=\"ckan"` | 5607 | generator meta `ckan {version}` |
+| `body="ckanext-"` | 4253 | extension assets, including themes that drop the footer |
+| `header="ckan="` | 4278 | Beaker cookie; also docs.ckan.org; `header=` is often off on free plans |
+| `body="ckan-footer-logo"` | 3638 | default footer class |
+| `body="docs.ckan.org"` | 2966 | footer “CKAN API” link |
+| `body="od_80x15_blue.png"` | 2898 | Open Definition badge in the default footer |
+| `body="/base/images/ckan.ico"` | 2809 | default favicon; a custom favicon drops this |
+| `body="fanstatic/base"` | 929 | CKAN 2.8 and earlier |
+| `title="CKAN"` | 1092 | default title suffix; branded titles are absent |
+| `body="Powered by CKAN"` | 85 | themes that flatten the split footer, plus ckan.org |
+
+Use the generator query first. Add `ckan-footer-logo` or `ckanext-` when a theme replaces `base.html`. Add `country=` or `host=` for a single-country hunt. When `body=` is not on the plan, fall back to `title="CKAN"` and expect branded portals to be missing. Deduplicate `http`/`https` and `www`.
+
 | Tool | Query |
 |------|-------|
+| Google | `"ckan-footer-logo" OR "od_80x15_blue.png" -site:ckan.org` |
 | Google | `"Powered by CKAN" inurl:/dataset -site:github.com -site:ckan.org` |
 | Google | `inurl:/api/3/action/status_show` |
-| Google | `"CKAN" "open data" site:.gov` |
-| Censys (web) | `web.endpoints.http.body: "Powered by CKAN"` |
-| FOFA | `body="Powered by CKAN"` |
-| Censys (web) | `web.endpoints.http.html_title: "CKAN"` |
+| Censys (web) | `web.endpoints.http.body: "ckan-footer-logo"` |
+| Censys (web) | `web.endpoints.http.body: "name=\"generator\" content=\"ckan"` |
+| FOFA | `body="name=\"generator\" content=\"ckan"` |
+| FOFA | `body="ckan-footer-logo"` |
+| FOFA | `body="ckanext-"` |
+| FOFA | `body="/base/images/ckan.ico"` |
+| FOFA | `body="fanstatic/base"` |
 | FOFA | `title="CKAN" && country="PT"` |
-| Shodan | `http.html:"Powered by CKAN"` |
-| PublicWWW | `"Powered by CKAN"` or `"ckan.js"` |
+| Shodan | `http.html:"ckan-footer-logo"` |
+| PublicWWW | `"ckan-footer-logo"` or `"od_80x15_blue.png"` |
+| GitHub code | `"ckan.site_url = https://"` |
+| GitHub code | `"CKAN_SITE_URL=https://"` |
 
-**False positives:** ckan.org, docs, GitHub, demo.ckan.org, CKAN extensions that are not a portal, harvest *sources* listed inside another CKAN. Prefer the catalog homepage, not `/dataset/{slug}`.
+**False positives:** ckan.org, docs.ckan.org, demo.ckan.org, Datopian onboarding hosts, the same catalog on ports 80 and 443, CKAN extensions that are not a portal, harvest *sources* listed inside another CKAN. Prefer the catalog homepage, not `/dataset/{slug}`.
 
 **Paths:** `/dataset`, `/organization`, `/api/3`, `/data.json`, `/catalog.xml`. Some installs live under `/data` or `/opendata` — probe `https://host/data/api/3/action/status_show` as well.
 
@@ -34,31 +78,138 @@ Docker-packaged CKAN distribution from the Argentine Republic (datos.gob.ar): CK
 
 **Confirm (GET):** `https://host/api/3/action/status_show` — extensions list contains `gobar_theme`. Homepage HTML includes "andino" or "gobar" (theme assets). Plain CKAN `status_show` without `gobar_theme` is `ckan`, not `andino`.
 
+[footer.html](https://github.com/datosgobar/ckanext-gobar-theme/blob/main/ckanext/gobar_theme/templates/footer.html) sets `class="gobar-footer-grid"` (6 hosts in September 2026, all `datos.gob.ar` / `andino-v2.datos.gob.ar`). [base.html](https://github.com/datosgobar/ckanext-gobar-theme/blob/main/ckanext/gobar_theme/templates/base.html) loads the `gobar_theme` asset (the same 6 hosts). `body="andino" && country="AR"` matched 843, and the first hits are `reservadoncarmelo.unsj.edu.ar` and a geology lab, not Andino portals.
+
 | Tool | Query |
 |------|-------|
 | Google | `"andino" inurl:/dataset site:.gob.ar OR site:.gov.ar` |
 | Google | `"gobar_theme" OR "portal-andino"` |
+| Censys | `web.endpoints.http.body: "gobar-footer-grid"` |
+| FOFA | `body="gobar-footer-grid"` |
+| Censys | `web.endpoints.http.body: "gobar_theme"` |
 | FOFA | `body="gobar_theme"` |
-| FOFA | `body="andino" && country="AR"` |
-| Censys (web) | `web.endpoints.http.body: "gobar_theme"` |
 
 **False positives:** the datosgobar GitHub/docs pages, blog posts about Andino. Register the portal root, not the repo.
 
-## DKAN (`dkan`) {#dkan}
+## BODIK ODCS (`bodikodcs`) {#bodikodcs}
 
-Drupal-based portal with a CKAN-compatible Action API plus DKAN’s own `/api/1/` routes. Community: [getdkan.org/community](https://getdkan.org/community).
+Hosted Japanese municipal open-data catalogs from the Big Data & Open Data Initiative Kyushu. Gallery: [odcs.bodik.jp](https://odcs.bodik.jp/). Tenant URL `https://odcs.bodik.jp/{lgcode}` (6-digit local-government code). Shared CKAN API: [data.bodik.jp](https://data.bodik.jp/). Organization list: `GET https://data.bodik.jp/api/3/action/organization_list`.
 
-**Confirm:** CKAN-style `/api/3/action/package_search` **and** `/api/1/search` or `/api/1/metastore`. Often `/data.json` (DCAT-US).
+**Signals:** host `odcs.bodik.jp` or `data.bodik.jp`; WordPress theme `bodik_odcs`; footer credit to 九州先端科学技術研究所.
+
+**Confirm:** the tenant page lists datasets, or `package_search?q=organization:{lgcode}` returns that municipality. One record per local government. The aggregate `data.bodik.jp` catalog is the shared API host, not a second copy of each tenant. Skip non-municipality organization ids (`city`, `isit`, and similar slugs). Plain CKAN on any other host stays `ckan`.
+
+[base.html](https://github.com/ISITBODIK/odpkg-docker/blob/master/ckan/ckanext-bodik_theme/ckanext/bodik_theme/templates/base.html) links `/bodik_odcs.css` (8 hosts in September 2026, including `data.bodik.jp`, `gifu-opendata.pref.gifu.lg.jp`, and `ckan.pf-sapporo.jp`). `body="bodik_odcs"` matched 4, including the WordPress gallery `odcs.bodik.jp`, which does not serve that stylesheet. Keep the host query for gallery tenants.
 
 | Tool | Query |
 |------|-------|
-| Google | `"powered by DKAN" OR inurl:/api/1/metastore` |
-| Google | `"DKAN" "open data" site:.gov` |
-| Censys | `web.endpoints.http.body: "DKAN"` |
-| FOFA | `body="DKAN"` |
-| Shodan | `http.html:"dkan"` |
+| Google | `site:odcs.bodik.jp` |
+| Google | `"BODIK ODCS" オープンデータ` |
+| Censys | `web.endpoints.http.body: "bodik_odcs.css"` |
+| FOFA | `body="bodik_odcs.css"` |
+| Censys | `web.endpoints.http.body: "bodik_odcs"` |
+| FOFA | `body="bodik_odcs"` |
+| FOFA | `host="odcs.bodik.jp"` |
 
-Do not label a site `dkan` from the CKAN API alone — that is usually `ckan`.
+## jig.jp Open Data Platform (`jigodp`) {#jigodp}
+
+Hosted municipal catalog from B Inc. Product site: [odp.jig.jp](https://odp.jig.jp/). Shared CKAN: [ckan.odp.jig.jp](https://ckan.odp.jig.jp/). Municipalities are organizations inside that one catalog.
+
+**Signals:** host `odp.jig.jp` or `ckan.odp.jig.jp`; `GET /api/3/action/status_show` extensions include `odp`.
+
+**Confirm:** the status payload lists `odp` and `package_search` returns datasets. One record for the shared catalog, not one record per municipality organization. Other CKAN sites stay `ckan`.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:odp.jig.jp` |
+| Google | `"ckan.odp.jig.jp"` |
+| Censys | `web.endpoints.http.body: "ckan.odp.jig.jp"` |
+| FOFA | `host="ckan.odp.jig.jp"` |
+
+## DKAN (`dkan`) {#dkan}
+
+Drupal portal from [GetDKAN](https://github.com/GetDKAN/dkan). Two public shells, checked September 2026:
+
+- **DKAN 1** (Drupal 7 install profile [dkan-drops-7](https://github.com/GetDKAN/dkan-drops-7)). HTML serves `profiles/dkan/` and, on the default theme, `nuboot_radix`. The generator meta says Drupal 7. The “Powered by DKAN” block is easy to remove.
+- **DKAN 2** (Drupal `getdkan/dkan` plus the React shell [data-catalog-app](https://github.com/GetDKAN/data-catalog-app)). The shell’s `index.html` ships the title `DKAN data catalog`, the meta description `DKAN is an open-source data management platform.`, and `/dkan-avatar-blue.png` (often copied to `/frontend/build/`). A custom title keeps the description. The Drupal backend HTML can omit the string `dkan`.
+
+**Confirm.** DKAN 1: homepage HTML contains `profiles/dkan`. When the API is open, `GET /api/3/action/site_read` returns `"success": true`, and `GET /data.json` is Project Open Data JSON (Czech Telecommunication Office, Alaska Conservation Science Catalog). `GET /api/3/action/package_search` and `GET /api/1/search` 404 on several live DKAN 1 hosts, so a 404 there does not rule the profile out. DKAN 2: `GET /api/1/metastore/schemas/dataset` returns a JSON schema (`data.bmel.cloud`, `webktim.ellak.gr`, `datosabiertos.rosario.gob.ar`). A CKAN Action API with no `profiles/dkan` path and no metastore schema is [`ckan`](#ckan). `profiles/contrib/ekan` or `ekan_theme` is [`ekan`](#ekan).
+
+**GitHub: read the project file, then the README.** Forks of [GetDKAN/dkan](https://github.com/GetDKAN/dkan) (about 170) and [GetDKAN/dkan-drops-7](https://github.com/GetDKAN/dkan-drops-7) (about 35) are the software and the Pantheon upstream. Code search does not index most forks. The drops-7 homepage field stays empty; two forks name a portal in `homepage` or the README ([inptdat.de](https://www.inptdat.de), diversicon-kb.eu). Forks of [data-catalog-app](https://github.com/GetDKAN/data-catalog-app) are frontends whose README is still the starter text.
+
+The committed files that identify a deployment:
+
+| File | What it holds |
+|------|----------------|
+| `composer.json`, `composer.lock` | `"getdkan/dkan"` — a DKAN 2 project. The public URL is usually absent. `"getdkan/dkan" filename:composer.json` was about 12 hits, and several are GetDKAN itself (`Ktimatologio/opendata` is a real portal repo). |
+| `.env.production`, `.env.development`, `src/frontend/.env.*`, `docroot/frontend/.env.*` | `REACT_APP_ROOT_URL` or `VITE_REACT_APP_ROOT_URL`. The value is usually the relative path `"/api/1"`, so the hostname is the published site. An absolute `https://` value is the API host. |
+| `src/assets/config.json`, `src/frontend/src/assets/config.json` | display name in `site` / `slogan` |
+| `index.html` (data-catalog-app) | default title, description, and `dkan-avatar-blue.png` — the FOFA strings below |
+| README | sometimes the only public URL |
+
+`dktl.yml` is often empty. DKAN Tools serves `{slug}.localtest.me`. `$base_url` next to `dkan` in PHP was about 52 hits, and the sampled `sites/default/settings.php` files still had the commented `example.com` line.
+
+```bash
+gh api -H "Accept: application/vnd.github.text-match+json" \
+  "search/code?q=%22getdkan%2Fdkan%22+filename%3Acomposer.json&per_page=100"
+gh api -H "Accept: application/vnd.github.text-match+json" \
+  "search/code?q=%22REACT_APP_ROOT_URL%22+%22%2Fapi%2F1%22&per_page=100"
+```
+
+The second query also hits `VITE_REACT_APP_ROOT_URL` (18 hits in September 2026, almost all `"/api/1"`). Keep a literal hostname. Skip `dkan.localtest.me`, `example.com`, and unsubstituted `${VAR}`. `"GATSBY_API_URL=https://"` is any Gatsby app (about 100 hits). `DYNAMIC_API_URL` is unrelated (about 220 hits). The older Gatsby frontend only counts when `GATSBY_API_URL` sits next to `/api/1`.
+
+**FOFA** (checked September 2026). FOFA has no `app="DKAN"`. `body="dkan.js"` and `js_name="dkan.js"` returned 0. `body="modules/contrib/dkan"` and `body="data-catalog-frontend"` returned 0 (those paths are not in the HTML). `body="sites/all/modules/dkan"` returned 1 (pre-profile layout). `body="DKAN"` returned 2261 and is a mention search (blogs, vendors, reviews). `body="Powered by DKAN"` returned 8. `body="/api/1/datastore"` returned 19 and the first hosts were unrelated healthcare sites. `header="dkan"` was noisy.
+
+| Query | Hits | What it matches |
+|-------|------|-----------------|
+| `body="profiles/dkan"` | 199 | DKAN 1 install profile in CSS/JS; survives a theme that drops the footer |
+| `body="nuboot_radix"` | 199 | DKAN 1 default theme |
+| `body="dkan_dataset.css"` | 199 | DKAN 1 dataset stylesheet |
+| `body="dkan_sitewide_dataset_search_form"` | 165 | DKAN 1 homepage search form; a replaced form drops this |
+| `body="getdkan.org"` | 44 | footer link, plus getdkan.org |
+| `body="DKAN is an open-source data management platform"` | 22 | DKAN 2 React shell, including retitled portals |
+| `body="dkan-avatar-blue.png"` | 14 | DKAN 2 default icon; also getdkan.org and `demo.*` |
+| `title="DKAN data catalog"` | 8 | untouched DKAN 2 `<title>` |
+| `title="DKAN"` | 35 | default title, plus shops such as dkan.co.th |
+| `body="Powered by DKAN"` | 8 | DKAN 1 sites that kept the footer block |
+
+Use `profiles/dkan` for DKAN 1 and the default meta description for DKAN 2. Add `country=` or `host=` for a single-country hunt. Deduplicate `http`/`https` and `www`. A DKAN 2 backend with a fully custom frontend has neither string; confirm it with the metastore schema.
+
+| Tool | Query |
+|------|-------|
+| Google | `"profiles/dkan" OR "nuboot_radix" -site:github.com` |
+| Google | `"dkan-avatar-blue.png" OR "DKAN is an open-source data management platform"` |
+| Google | `inurl:/api/1/metastore/schemas/dataset` |
+| Censys (web) | `web.endpoints.http.body: "profiles/dkan"` |
+| Censys (web) | `web.endpoints.http.body: "DKAN is an open-source data management platform"` |
+| FOFA | `body="profiles/dkan"` |
+| FOFA | `body="nuboot_radix"` |
+| FOFA | `body="dkan_sitewide_dataset_search_form"` |
+| FOFA | `body="DKAN is an open-source data management platform"` |
+| FOFA | `body="dkan-avatar-blue.png"` |
+| Shodan | `http.html:"profiles/dkan"` |
+| Shodan | `http.html:"dkan-avatar-blue.png"` |
+| GitHub code | `"getdkan/dkan" filename:composer.json` |
+| GitHub code | `"REACT_APP_ROOT_URL" "/api/1"` |
+
+**False positives:** getdkan.org, `demo.webktim.ellak.gr`, `demodkan.*.zyxware.com`, dkan.co.th and other “DKAN” shops, the same catalog on ports 80 and 443, DKAN extension repos. Prefer the catalog homepage. A description hit whose metastore schema 404s (`data.ncsi.gov.om`, `otvoreni.oprtalj.hr` in this pass) still needs another confirm before `software.id` is `dkan`.
+
+## EKAN (`ekan`) {#ekan}
+
+Eighty Options Drupal 9/10 distribution and the upgrade path for Drupal 7 DKAN 1.0 sites. Product: [ekan-data.org](https://www.ekan-data.org/). Drupal project: [drupal.org/project/ekan](https://www.drupal.org/project/ekan). Distinct from GetDKAN ([`dkan`](#dkan)).
+
+**Confirm:** HTML serves `/profiles/contrib/ekan/` or `ekan_theme` (or a subtheme such as `ouc_ekan_theme`) **and** Drupal 9+. Dataset list is Drupal JSON:API `/jsonapi/dataset/dataset` when public; many INFORM/Cyprus sites also publish `/data.json`. The CKAN-style `/api/3` and GetDKAN `/api/1/metastore` routes are **absent**.
+
+| Tool | Query |
+|------|-------|
+| Google | `"ekan_theme" OR inurl:/profiles/contrib/ekan` |
+| Google | `"EKAN Datastore" OR "ekan_search"` |
+| Censys | `web.endpoints.http.body: "ekan_theme"` |
+| FOFA | `body="profiles/contrib/ekan"` |
+| FOFA | `body="ekan_theme.style.css"` |
+| Shodan | `http.html:"ekan_theme"` |
+
+**False positives:** the product homepage, Packagist/Drupal.org project pages, Eighty Options staging hosts (`*.eightyoptions.com.au`), the vendor demo. Register the public catalog root. Login-only Drupal apps on the same vendor (TREDS, Indicator Reporting Tool) are not catalogs.
 
 ## OpenDataSoft (`opendatasoft`) {#opendatasoft}
 
@@ -75,6 +226,7 @@ SaaS and self-hosted Explore portals. Many hosts end in `*.opendatasoft.com` or 
 | FOFA | `domain="opendatasoft.com"` |
 | Censys | `web.endpoints.http.body: "OpenDataSoft"` |
 | FOFA | `body="OpenDataSoft"` |
+| FOFA | `body="ods-explore"` |
 | FOFA | `body="OpenDataSoft" && country="BE"` |
 | crt.sh | `%.opendatasoft.com` |
 
@@ -93,6 +245,8 @@ Tyler / Socrata Open Data. UI often `/browse` or `/datasets`. SODA API under `/a
 | Google | `site:*.socrata.com` (custom domains are more interesting) |
 | Censys | `web.endpoints.http.body: "socrata"` |
 | FOFA | `header="X-Socrata"` |
+| FOFA | `body="socrata"` |
+| FOFA | `body="Powered by Socrata"` |
 | Shodan | `http.html:"X-Socrata" OR http.html:"soda.demo"` |
 
 Skip `soda.demo.socrata.com` and Tyler marketing sites. Prefer the city’s production domain.
@@ -103,16 +257,33 @@ French-origin portal (data.gouv.fr lineage). Dataset UI `/datasets/`. API `/api/
 
 **Confirm:** `https://host/api/1/datasets/?page_size=1` returns JSON with `data` / `total`.
 
+The default theme footer [udata_front/theme/gouvfr/templates/footer.html](https://github.com/datagouv/udata-front/blob/master/udata_front/theme/gouvfr/templates/footer.html) links `https://github.com/opendatateam/udata/` (16 hosts in September 2026, including `demo.data.gouv.fr`). The visible label is translated, so `body="Open-source engine: udata"` matched 1 host. `body="udata"` matched about 20,000 unrelated hosts. Production themes often drop the engine link, so a miss there still needs the API check.
+
 | Tool | Query |
 |------|-------|
 | Google | `"opendata" inurl:/datasets site:.gouv.fr` |
 | Google | `"udata" "jeux de données" OR inurl:/api/1/datasets` |
-| Censys | `web.endpoints.http.body: "udata"` |
-| FOFA | `body="udata"` |
+| Censys | `web.endpoints.http.body: "github.com/opendatateam/udata/"` |
+| FOFA | `body="github.com/opendatateam/udata/"` |
 | Censys | `web.names: "data.gouv"` |
 | FOFA | `domain="data.gouv"` |
 
 Local clones exist outside France. Do not assume every `/api/1/datasets` is uData — check the JSON shape.
+
+## PortalJS (`portaljs`) {#portaljs}
+
+Datopian catalog frontend. Product: [PortalJS](https://www.portaljs.com/). Showcase: [data portals](https://www.portaljs.com/data-portals). Live shells include [opendata.malmo.se](https://opendata.malmo.se/), [data.hounslow.gov.uk](https://data.hounslow.gov.uk/), [data.lincolnshire.gov.uk](https://data.lincolnshire.gov.uk/), [www.opendatani.gov.uk](https://www.opendatani.gov.uk/), [opendatanepal.com](https://opendatanepal.com/), and [portal.transport-data.org](https://portal.transport-data.org/).
+
+**Signals:** footer “PortalJS” or “PortalJS on CKAN Backend”; dataset path `/@{org}/{slug}` (a locale prefix such as `/en` may sit in front).
+
+**Confirm:** GET the catalog home or `/search` and match that footer plus a dataset link. One portal host = one record. Do **not** register `portaljs.com` marketing, `arc.portaljs.com` sign-in, or GitHub example repos. A CKAN Action API on the same host or on a linked `admin.` / `api.` / `ckan.` host stays with this catalog; do **not** set `ckan` for the public PortalJS shell, and do **not** add the API host as a second catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `"PortalJS on CKAN Backend" OR "Powered by PortalJS"` |
+| Google | `inurl:/@ "PortalJS" (dataset OR "open data")` |
+| Censys | `web.endpoints.http.body: "PortalJS on CKAN Backend"` |
+| FOFA | `body="PortalJS"` |
 
 ## Magda (`magda`) {#magda}
 
@@ -120,27 +291,57 @@ Search-centric catalog (data.gov.au and derivatives). API `/api/v0/search/datase
 
 **Confirm:** that search endpoint returns JSON datasets. UI often `/search` or `/dataset`.
 
+[magda-web-client/public/index.html](https://github.com/magda-io/magda/blob/main/magda-web-client/public/index.html) requests `/api/v0/content/favicon.ico` (13 hosts in September 2026). `body="magda"` is not usable: it matched about 67,000 unrelated hosts.
+
 | Tool | Query |
 |------|-------|
 | Google | `"magda" "data catalog" OR inurl:/api/v0/search/datasets` |
 | Google | `inurl:/search/api/v0/search/datasets` |
-| Censys | `web.endpoints.http.body: "magda"` |
-| FOFA | `body="magda"` |
+| Censys | `web.endpoints.http.body: "/api/v0/content/favicon.ico"` |
+| FOFA | `body="/api/v0/content/favicon.ico"` |
 
 ## JKAN (`jkan`) {#jkan}
 
-Jekyll + CKAN-like static portal. Often GitHub Pages. Datasets as Markdown in `/datasets`.
+Jekyll + CKAN-like static portal. Often GitHub Pages. Datasets as Markdown in `_datasets/`, listed at `/datasets/`. Project: [jkan.io](https://jkan.io). The fork parent for public installs is [timwis/jkan](https://github.com/timwis/jkan). General GitHub method (forks plus code search): [discovery-search-tools.md](discovery-search-tools.md#github).
 
-**Confirm:** HTML “JKAN” / `_config.yml` mentions; dataset list at `/datasets/`. No CKAN Action API.
+**Signals:** `_config.yml` key `jkan_theme`; page or repo text “backend-free open data portal”; DCAT-US `GET /data.json` or `GET /datasets.json` with a `dataset` array. No CKAN Action API. A `status_show` body that includes `ckan_version` is CKAN, not JKAN.
+
+**Confirm:** the dataset list or `data.json` has entries beyond the stock “Sample dataset”. One published site = one record. A custom domain and `{owner}.github.io/{repo}` that return the same `data.json` are one catalog (Swiss Heritage is [data.openglam.ch](https://data.openglam.ch/), not a second copy of the GitHub Pages URL). Several catalogs on one `github.io` host (`/LiveData/`, `/LiveDataNUM/`) are separate records; set `--id` so the host-only id does not collide.
+
+**GitHub, do both.** Code search does not index most forks.
+
+1. Forks: `GET /repos/timwis/jkan/forks` (`gh api`, paginate). `homepage` is often still `https://jkan.io` on forks that never edited it. Probe `https://{owner}.github.io/{repo}/data.json` anyway.
+2. Detached copies (not forks): code search `jkan_theme filename:_config.yml`. Wider and noisier: `"backend-free open data portal"`.
+
+**Skip:** [jkan.io](https://jkan.io), [demo.jkan.io](https://demo.jkan.io), untouched “Welcome to JKAN” templates, fictional training cities, empty `data.json`, and repos whose page says the catalog moved (Open Austin → data.world). `title="JKAN"` misses branded portals (OxOpenData, OpenKnoxville, A-GeoCat).
 
 | Tool | Query |
 |------|-------|
+| GitHub forks | `repos/timwis/jkan/forks` |
+| GitHub code | `jkan_theme filename:_config.yml` |
+| GitHub code | `"backend-free open data portal"` |
 | Google | `"JKAN" "open data" OR "jkan" inurl:/datasets` |
 | Google | `site:github.io "JKAN"` |
-| Censys | `web.endpoints.http.body: "JKAN"` |
-| FOFA | `body="JKAN"` |
+| Censys | `web.endpoints.http.body: "jkan_theme"` |
+| FOFA | `body="jkan_theme"` |
+| FOFA | `body="timwis/jkan"` |
+| FOFA | `body="backend-free open data portal"` |
 
-Skip the [jkan.io](https://jkan.io) project site unless it is a real catalog instance.
+`body="JKAN"` and `title="JKAN"` are weak: the short token matches unrelated hosts, and the real fingerprint sits in `_config.yml`, which FOFA does not see on GitHub Pages. In September 2026 the three longer FOFA queries returned only jkan.io, demo.jkan.io, and a report that mentions the project. Use GitHub first.
+
+## KUKAN (`kukan`) {#kukan}
+
+Open-source CKAN-compatible catalog from Info Lounge. Product site: [kukan.dev](https://kukan.dev/). Source: [kukan-project/kukan](https://github.com/kukan-project/kukan). Native API `/api/v1/packages`; CKAN read API `/api/3/action/package_search`.
+
+**Signals:** page or footer text `KUKAN`; `GET /api/health` returns `{"status":"ok"}` together with CKAN-shaped `/api/3/action/package_search`. A CKAN `status_show` body that includes `ckan_version` is CKAN, not KUKAN.
+
+**Confirm:** the package search JSON lists datasets and the health or UI names KUKAN. One catalog per installation. Skip kukan.dev marketing. Niigata Prefecture’s catalog is contracted and not public until March 2027.
+
+| Tool | Query |
+|------|-------|
+| Google | `"KUKAN" ("データカタログ" OR "open data" OR "package_search") -site:kukan.dev -site:github.com` |
+| Censys | `web.endpoints.http.body: "KUKAN"` |
+| FOFA | `body="KUKAN" && body="package_search"` |
 
 ## Datasette (`datasette`) {#datasette}
 
@@ -148,12 +349,30 @@ Open-source SQLite publisher with a JSON/CSV API. Site and instance examples: [d
 
 **Confirm:** GET the instance root. Title or footer `Datasette`; table/query UI; JSON at `/-/versions` or `/{database}.json`. Register the published instance, not each table or canned query. Skip datasette.io marketing and `lite.datasette.io` demos unless they are the catalog being registered.
 
+The footer in `datasette/templates/_footer.html` is `Powered by <a ...>Datasette</a>`, so `body="Powered by Datasette"` matches nothing. The contiguous string is the alternate link type in `datasette/templates/base.html` (`application/json+datasette`, 544 hosts in September 2026). `datasette-manager.js` in the same template matched 47 hosts. Forks of [simonw/datasette](https://github.com/simonw/datasette) are the software, not a portal list.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Datasette" ("powered by" OR "explore this database") -site:datasette.io -site:github.com` |
 | Google | `inurl:/-/versions Datasette` |
-| Censys | `web.endpoints.http.body: "Datasette"` |
-| FOFA | `body="Datasette"` |
+| Censys | `web.endpoints.http.body: "application/json+datasette"` |
+| FOFA | `body="application/json+datasette"` |
+
+## Datadex (`datadex`) {#datadex}
+
+Serverless, local-first open-data pattern. Product page: [Datadex](https://datadex.datonic.io/). The implementation list is the [Datadex README](https://github.com/datonic/datadex#implementations). Live portals include [datania.cc](https://datania.cc/), [filecoindataportal.xyz](https://filecoindataportal.xyz/), and [grantsdataportal.xyz](https://grantsdataportal.xyz/).
+
+**Signals:** page text “instance of Datadex”, or a dataset index of Parquet/CSV files next to a repository under [datonic/datadex](https://github.com/datonic/datadex). Filecoin’s about page names Datadex explicitly.
+
+**Confirm:** GET the portal and find a list of downloadable tables. One portal host = one record. Skip [datadex.datonic.io](https://datadex.datonic.io/) (pattern homepage) and GitHub repos. Skip Hugging Face organization pages; those datasets already belong to the Hugging Face Datasets catalog. `body="datadex"`, `title="Datadex"`, and `host="datadex"` are mostly unrelated names (Hainan Data Exchange, Ficus DataDex, a Pokémon app, and pages that mention a token named DataDex).
+
+| Tool | Query |
+|------|-------|
+| Google | `"instance of Datadex"` |
+| Google | `"github.com/datonic/datadex" (datasets OR parquet) -site:github.com` |
+| Censys | `web.endpoints.http.body: "instance of Datadex"` |
+| FOFA | `body="instance of Datadex"` |
+| FOFA | `body="local-first Data Platform"` |
 
 ## Junar (`junar`) {#junar}
 
@@ -192,9 +411,13 @@ service with `{"pagination":{"size":1,"page":1}}`. A JSON response with `hits` a
 `page.totalElements` confirms the catalog. Transportportal is a distinct public
 `TRANSPORT` profile; skip admin, demo, and staging environments.
 
+[index.html](https://github.com/Informasjonsforvaltning/fdk-portal/blob/main/src/entrypoints/main/index.html) points Open Graph images at `cms.fellesdatakatalog.digdir.no` (2 hosts in September 2026, `transportportal.no`).
+
 | Tool | Query |
 |------|-------|
 | Google | `"Felles datakatalog" (dataset OR datasett) -site:github.com` |
+| Censys | `web.endpoints.http.body: "cms.fellesdatakatalog.digdir.no"` |
+| FOFA | `body="cms.fellesdatakatalog.digdir.no"` |
 | Censys | `web.endpoints.http.body: "FDK_PORTAL_BASE_URI"` |
 | FOFA | `title="Felles datakatalog"` |
 | FOFA | `title="Der Norge deler data"` |
@@ -248,10 +471,14 @@ Digital experience CMS. **Only** register when a public Open Data / RISP dataset
 
 **Confirm:** GET the open-data page and verify a reusable dataset list. Skip city hall homepages that only mention open data in a news article.
 
+[portal_normal.ftl](https://github.com/liferay/liferay-portal/blob/master/modules/apps/frontend-theme/frontend-theme-classic/src/templates/portal_normal.ftl) links `http://www.liferay.com` from the powered-by footer (5,471 hosts in September 2026, including `nutricion.umsa.bo`). `body="Liferay"` matched 54,186. Sites that drop that footer still match the product name, so keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"datos abiertos" Liferay OR RISP (ayuntamiento OR diputación) site:.es` |
 | Google | `inurl:/web/guest/ "datos abiertos"` |
+| Censys | `web.endpoints.http.body: "http://www.liferay.com"` |
+| FOFA | `body="http://www.liferay.com"` |
 | Censys | `web.endpoints.http.body: "Liferay"` |
 | FOFA | `body="Liferay"` |
 
@@ -261,7 +488,7 @@ Spanish municipal sede electrónica / Portal de Transparencia with an open-data 
 
 **Signals:** path `/transparencia/datos/catalogo`; Maggioli / Galileo IyS / ATM branding; title “Sede Electrónica”; dataset list under transparencia.
 
-**Confirm:** GET `https://host/transparencia/datos/catalogo` and match a reusable dataset listing. One record per municipality tenant. Do **not** set `ckan`, `opendatasoft`, or `socrata` from guessed `/api/3`, `/api/v2/catalog`, or `/api/views` paths — those URLs return the HTML shell. Do **not** set `atmmaggioli` on Italian Municipium / Maggioli “Portale Opendata” shells (`municipiumapp.it` civic CMS); that is a different product and has no dedicated software id.
+**Confirm:** GET `https://host/transparencia/datos/catalogo` and match a reusable dataset listing. One record per municipality tenant. Do **not** set `ckan`, `opendatasoft`, or `socrata` from guessed `/api/3`, `/api/v2/catalog`, or `/api/views` paths — those URLs return the HTML shell. Do **not** set `atmmaggioli` on Italian Municipium / Maggioli “Portale Opendata” shells (`municipiumapp.it` civic CMS); that is a different product — use [`municipium`](#municipium).
 
 | Tool | Query |
 |------|-------|
@@ -271,6 +498,38 @@ Spanish municipal sede electrónica / Portal de Transparencia with an open-data 
 | FOFA | `body="Maggioli"` |
 
 Skip the vendor homepage and Galileo demo sede. Prefer the municipal catalog path, not the whole e-office.
+
+## Gobierto Datos (`gobierto`) {#gobierto}
+
+Populate Tools open-data catalog for Spanish municipalities, offered as SaaS and as the open-source Gobierto suite. Product: [Gobierto Datos](https://www.gobierto.es/transparencia/datos-abiertos). Source: [PopulateTools/gobierto](https://github.com/PopulateTools/gobierto).
+
+**Signals:** Gobierto chrome; dataset hub path `/datos/`; DCAT metadata; SQL API over HTTP.
+
+**Confirm:** GET the tenant `/datos` list and match reusable datasets. One record per municipality host. Do **not** set `gobierto` on budget, contracts, agendas, or transparency pages that have no dataset catalog, and do **not** register `gobierto.es` marketing or the national budget explorer `presupuestos.gobierto.es`. Do **not** set `ckan`.
+
+[_gobierto_footer.html.erb](https://github.com/PopulateTools/gobierto/blob/master/app/views/layouts/_gobierto_footer.html.erb) sets `window.gobiertoAPI` (51 hosts in September 2026, including `frp.gobierto.es`). That object is the whole Gobierto suite, so still require a `/datos` catalog. `body="gobierto"` matched 159 hosts, including `populate.tools`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Gobierto" "/datos" (ayuntamiento OR datasets OR "datos abiertos")` |
+| Google | `inurl:/datos gobierto (csv OR dcat)` |
+| Censys | `web.endpoints.http.body: "window.gobiertoAPI"` |
+| FOFA | `body="window.gobiertoAPI"` |
+
+## Municipium Portale Opendata (`municipium`) {#municipium}
+
+Maggioli Municipium "Portale Opendata" — Italian municipal open-data SaaS, distinct from the Spanish ATM Maggioli product above. Tenants run on their own host (`opendata.comune.{slug}.it`, `opendata.cittametropolitana.{slug}.it`) backed by `{tenant}-opendata-api.cloud.municipiumapp.it`. Demo: [opendata.municipiumapp.it](https://opendata.municipiumapp.it/it). Product: [Maggioli Municipium](https://www.maggioli.com/it-it/soluzioni/servizi-al-cittadino/municipium).
+
+**Signals:** jQuery loaded from `opendata-api.cloud.municipiumapp.it/s3/0/sito/jquery/`, `/js/agid-home.js` + `/js/all-agid-home.js`, `bootstrap-italia` assets, `apis.maggioli.cloud/rest/captcha/v2/widget.module.min.js`, title “Portale Opendata”, catalog page `/it/page/catalogo`.
+
+**Confirm:** GET the tenant root or `/it` and match at least the `municipiumapp.it` asset host. One record per comune tenant. Do **not** set `atmmaggioli` on these (Spanish sede product) and do not register the `opendata.municipiumapp.it` demo (“Comune di Futura” placeholder content) or `{tenant}-opendata-sito.cloud.municipiumapp.it` staging hosts that 403. The shared CKAN hub [opendata.maggioli.cloud](https://www.opendata.maggioli.cloud/) is already registered as `ckan`. Do not add an `organization:` filter on that hub as a second catalog of a comune that already has a Municipium portale.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:opendata.comune "Portale Opendata" catalogo` |
+| Google | `"municipiumapp" opendata comune` |
+| Censys | `web.endpoints.http.body: "municipiumapp.it"` |
+| FOFA | `body="municipiumapp.it"` |
 
 ## OPENDATAENTE (`opendataente`) {#opendataente}
 
@@ -289,6 +548,77 @@ Actainfo cloud SaaS open-data catalog for Italian municipalities and local autho
 | crt.sh | `dati.comune.%.it` (then confirm `/backend/api/catalog/`) |
 
 Skip the vendor homepage. Prefer the municipal `dati.` catalog, not the commune CMS.
+
+## DataPortal.AI (`dataportalai`) {#dataportalai}
+
+Sister (Almawave) open-data portal, current name of StatPortal Open Data / SPOD. Product: [DataPortal.AI](https://www.sister.it/prodotti/dataportalai/). The vendor site has no tenant gallery (product page, sitemap, and news only). Tenants run on the administration’s own host. Mapped portals show two generations; require signals from one generation, not a Drupal or CKAN guess.
+
+**StatPortal Open Data / SPOD (Drupal 7).** Mapped: [dati.veneto.it](https://dati.veneto.it/), [opendata.comune.pisa.it](https://opendata.comune.pisa.it/).
+
+- `/sites/all/modules/spodata/`
+- theme `/sites/all/themes/statportal` (including `statportal_{tenant}`) or `/sites/all/themes/spod_bootstrap`
+- catalog index `/catalogo-opendata` or `/catalog`
+- dataset pages `/opendata/{slug}` (`/content/` is mostly CMS pages)
+- Pisa footer only: “Realizzato con la tecnologia Open Source **StatPortal OpenData**”, linking to `opendata.statportal.it`. Veneto has no product footer. The phrase “Powered by StatPortal Open Data” is not on these portals.
+
+**DataPortal.AI SPA.** Mapped: [dati.lavoro.gov.it](https://dati.lavoro.gov.it/).
+
+- HTML title `DataPortal.AI`
+- shell `/lmap/lmap-core/` and `/config/custom.css` (the same HTML is returned for `/catalogo-opendata/` and `/content/`)
+- `/config/config.json` with `"baseURL": "/api/core/"`
+
+**Confirm:** two signals from the same generation, and a public dataset list (SPOD catalog or `/opendata/{slug}`, or the SPA title). One administration portal = one record.
+
+**Reject:**
+
+- Drupal `generator` alone, or a generic Drupal theme
+- `/api/3` or `SpodCkanApi` alone. `GET /api/3/action/status_show` that returns `ckan_version` is CKAN. FOFA still lists [dati.unionevallesavio.it](https://dati.unionevallesavio.it/) under `modules/spodata` and `themes/statportal`; the live site is CKAN 2.9.8, and both `/catalogo-opendata` and `SpodCkanApi` are 404
+- `/lmap/lmap-core/` with title `Data Browser` (Sister Data Browser / Istat-style indicator UI: `esploradati.istat.it`, `*.databrowser.sister.it`)
+- Istat browser [statportal.it](http://www.statportal.it/catalogo-dati)
+- StatKit statistical portals such as ASTATDATA (`statastat.prov.bz.it`). Product: [StatKit](https://www.sister.it/prodotti/statkit/)
+- `sister.it` marketing
+
+| Tool | Query |
+|------|-------|
+| Google | `"modules/spodata" OR "themes/statportal" OR "spod_bootstrap"` |
+| Google | `"StatPortal OpenData" OR intitle:"DataPortal.AI"` |
+| Censys | `web.endpoints.http.body: "/sites/all/modules/spodata/"` |
+| Censys | `web.endpoints.http.html_title: "DataPortal.AI"` |
+| FOFA | `body="modules/spodata"` |
+| FOFA | `body="themes/statportal" \|\| body="themes/spod_bootstrap"` |
+| FOFA | `title="DataPortal.AI"` |
+
+`body="StatPortal Open Data"` returns no FOFA hits. Re-check any `spodata` host whose live generator is `ckan`.
+
+## ComunWeb (`comunweb`) {#comunweb}
+
+Consorzio dei Comuni Trentini website platform. Product: [ComunWeb](https://www.comunweb.it/). Trentino municipalities publish a dataset list on their own host.
+
+**Signals:** content class `opendata_dataset` at `/api/opendata/v1/content/class/opendata_dataset`; CSV `/exportas/csv/opendata_dataset`; public path `Open-Data/I-dataset-disponibili`.
+
+**Confirm:** GET the `opendata_dataset` class and match dataset nodes (`objectName`, `fullUrl`). One ente site = one record. Do **not** register `comunweb.it` or `comunitrentini.it` marketing. Do **not** set `ckan` because `objectRemoteId` starts with `ckan_`; that is a remote id. Set `ckan` only when `/api/3/action/status_show` returns `ckan_version`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"piattaforma ComunWeb" "Open-Data"` |
+| Google | `inurl:/api/opendata/v1/content/class/opendata_dataset` |
+| Censys | `web.endpoints.http.body: "opendata_dataset"` |
+| FOFA | `body="opendata_dataset"` |
+
+## PA-Online Open Data (`paonline`) {#paonline}
+
+Technical Design hosted DCAT catalogs for Italian municipalities. Host: [pa-online.it](https://www.pa-online.it/). dati.gov.it harvests per-comune RDF under `/OpenData/{ISTAT code}/`.
+
+**Signals:** path `/OpenData/` plus a 6-digit ISTAT directory; file `METADATO.rdf` or a comune-named `.rdf` with `dcatapit:Dataset`.
+
+**Confirm:** GET the comune RDF and match a DCAT catalog. One ISTAT directory = one record. Do **not** register `hosting.pa-online.it` sportello pages, `GisMasterWebS` payment or SUAP screens, or GisMaster map viewers (`gismaster`).
+
+| Tool | Query |
+|------|-------|
+| Google | `site:pa-online.it/OpenData METADATO.rdf` |
+| Google | `inurl:pa-online.it/OpenData filetype:rdf` |
+| Censys | `web.endpoints.http.body: "pa-online.it/OpenData"` |
+| FOFA | `host="pa-online.it" && body="dcatapit"` |
 
 ## OpenGov (`opengov`) {#opengov}
 
@@ -336,6 +666,21 @@ Inspur Chinese government open-data product. Deployments share `/oportal/` catal
 | Censys | `web.endpoints.http.body: "/oportal/"` |
 | FOFA | `body="/oportal/"` |
 
+## Epoint Big Data Open Platform (`epointopendata`) {#epointopendata}
+
+Commercial Chinese public-data portal from Epoint (国泰新点软件), branded 新点大数据开放平台. Catalog UI is served under `/extranet/openportal/` on the agency host. Not Inspur oPortal (`oportal`).
+
+**Signals:** page title or HTML `新点大数据开放平台`; application script references `epoint.com.cn` with `basePath` `/extranet/openportal` (Tongliao’s `boot.min.js` does). Shared path plus `ResBoot` is a lead, not proof.
+
+**Confirm:** the product name or the `epoint.com.cn` asset, and a public dataset listing. One record per government tenant. Leave lookalike `/extranet/openportal/` hosts as `custom` until that signal is present. Do not retag `/oportal/` tenants.
+
+| Tool | Query |
+|------|-------|
+| Google | `"新点大数据开放平台"` |
+| Google | `inurl:/extranet/openportal/ 新点` |
+| Censys | `web.endpoints.http.body: "新点大数据开放平台"` |
+| FOFA | `body="新点大数据开放平台"` |
+
 ## data.world (`dataworld`) {#dataworld}
 
 Commercial catalog SaaS. Hub: [data.world](https://data.world). Distinct from World Bank Data (`dataworldbankorg`).
@@ -356,11 +701,21 @@ India Urban Data Exchange catalogue server. Hub: [catalogue.iudx.org.in](https:/
 
 **Signals:** IUDX catalogue chrome; `/cat/v1/` or central-catalogue host.
 
-**Confirm:** GET the public catalogue search. One record per public catalogue tenant, not each resource ID.
+**Confirm:** GET `{base}/count?property=[type]&value=[[iudx:Resource]]` (or the tenant base `adex/cat/v1`, `dx/cat/v1`). Keep a host only when `totalHits` is a public dataset list. One record per public catalogue tenant, not each resource ID, and not a second hostname of the same index.
+
+The catalogue UI `index.html` title is `IUDX | Indian Urban Data Exchange` and the author meta is `IUDX UI Team` (rebrands such as GDI keep that author). [apidoc.html](https://github.com/datakaveri/iudx-catalogue-server/blob/master/docs/apidoc.html) titles the ReDoc page `DX Catalogue API Docs`. Forks of `datakaveri/iudx-catalogue-server` repeat the national hub. Deployed hostnames are the ingress files in [datakaveri/iudx-deployment](https://github.com/datakaveri/iudx-deployment) (`host: api.*catalogue`, `host: dataexplorer.*`).
+
+`catalogue.iudx.org.in` redirects to `catalogue.cos.iudx.org.in`. That API returns the same resource ids as `api.central-catalogue.iudx.org.in` (already `centralcatalogueiudxorgin`). Do not add COS as a second catalog. Skip sandbox, `*.iudx.io` test hosts, and API-doc vhosts whose items are secure test records (GMAS).
 
 | Tool | Query |
 |------|-------|
 | Google | `"IUDX" (catalogue OR catalog) site:.in` |
+| GitHub | ingress `host:` in `datakaveri/iudx-deployment` |
+| Censys | `web.endpoints.http.body: "DX Catalogue API Docs"` |
+| FOFA | `body="DX Catalogue API Docs"` |
+| FOFA | `title="IUDX \| Indian Urban Data Exchange"` |
+| FOFA | `body="IUDX UI Team"` |
+| FOFA | `domain="adex.org.in"` |
 | Censys | `web.names: "iudx.org.in"` |
 | FOFA | `host="iudx.org.in"` |
 
@@ -382,9 +737,11 @@ NIC SaaS on data.gov.in for ministries and states. Site: [data.gov.in](https://d
 
 ## data eye (`dataeye`) {#dataeye}
 
-Japanese municipal open-data SaaS (Data Cradle). Site: [dataeye.jp](https://dataeye.jp). Some tenants expose a CKAN-compatible metadata API.
+Japanese municipal open-data SaaS (Data Cradle). Site: [dataeye.jp](https://dataeye.jp). Some tenants expose a CKAN-compatible metadata API. Custom-domain tenants (`opendata.pref.chiba.lg.jp`, `shimane-opendata.jp`, `www.okayama-opendata.jp`) still link `https://dataeye.jp/` from the footer, so the `body="dataeye.jp"` query catches hosts the domain query misses.
 
-**Confirm:** GET the prefecture/city catalog. One record per tenant (including joint prefecture-municipality group portals).
+**Confirm:** GET the prefecture/city catalog and `ckan_api/package_search`. Keep a tenant only when `result.count` is greater than 0. One record per tenant (including joint prefecture-municipality group portals). Drop the vendor homepage, `dev-*` hosts, idea-box-only sites, and map viewers that 404 `package_search` (`kurashiki-vaccine-map.dataeye.jp`, `map.dataeye.jp`, `kanko-dataeye.jp`).
+
+**FOFA** (checked 24 September 2026). `domain="dataeye.jp"` returned 59 rows (38 hosts). `cert="dataeye.jp"` returned 139 and was the same wildcard certificate (`*.dataeye.jp`), not extra catalogs. `body="datasets_condition"` is the catalog-nav path and returned 77 rows, including the custom domains the domain query misses. `body="/graphs/top"` returned 101 and was mostly unrelated sites. `body="/ckan_api/"` returned 1 unrelated blog. `body="ckan_api/package_search"` returned 0 because that path is not in the HTML.
 
 | Tool | Query |
 |------|-------|
@@ -392,7 +749,23 @@ Japanese municipal open-data SaaS (Data Cradle). Site: [dataeye.jp](https://data
 | Google | `"data eye" オープンデータ (市 OR 県)` |
 | crt.sh | `%.dataeye.jp` |
 | Censys | `web.names: "dataeye.jp"` |
+| FOFA | `body="datasets_condition"` |
 | FOFA | `domain="dataeye.jp"` |
+| FOFA | `body="dataeye.jp"` |
+
+## LinkData (`linkdata`) {#linkdata}
+
+Info Lounge hosted hub for publishing open tables. Site: [linkdata.org](https://linkdata.org/). Japanese municipalities publish dataset works on this single platform.
+
+**Signals:** host `linkdata.org`; LinkData work pages; CSV and RDF downloads.
+
+**Confirm:** GET the public hub and match published data works. One record for the hub. Do **not** register each municipality homepage that only links to a work, and do **not** register `app.linkdata.org` or `idea.linkdata.org` as separate catalogs.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:linkdata.org オープンデータ` |
+| Censys | `web.names: "linkdata.org"` |
+| FOFA | `host="linkdata.org"` |
 
 ## Seoul Open Data Plaza (`seoulopendataplaza`) {#seoulopendataplaza}
 
@@ -415,11 +788,13 @@ Koumoul open-source data portals. Docs: [data-fair.github.io](https://data-fair.
 
 **Confirm:** GET the public portal and a dataset list API. Skip the vendor docs site.
 
+[ui/index.html](https://github.com/data-fair/data-fair/blob/master/ui/index.html) loads `simple-directory/api/sites` (93 hosts in September 2026, including `data.grandpoitiers.fr`). `body="data-fair"` is not usable: it matched 2,169 hosts, including `fairplus-project.eu`.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Data Fair" (Koumoul OR datasets) -site:github.com` |
-| Censys | `web.endpoints.http.body: "data-fair"` |
-| FOFA | `body="data-fair"` |
+| Censys | `web.endpoints.http.body: "simple-directory/api/sites"` |
+| FOFA | `body="simple-directory/api/sites"` |
 
 ## Datawheel (`datawheel`) {#datawheel}
 
@@ -462,7 +837,7 @@ Linked-data / knowledge-graph publishing with SPARQL. Site: [triplydb.com](https
 
 ## Drupal (`drupal`) {#drupal}
 
-Use `drupal` only when the **public product is a dataset catalog** (open-data nodes, JSON:API dataset bundle). Do not register ordinary CMS homepages. If the site is DKAN, use `dkan`. Dutch municipal OpenGDC tenants (`/openapi.json` + `/api/datasets`) use [`opengdc`](#opengdc), not `drupal`.
+Use `drupal` only when the **public product is a dataset catalog** (open-data nodes, JSON:API dataset bundle). Do not register ordinary CMS homepages. If the site is DKAN, use `dkan`. If it is EKAN (`profiles/contrib/ekan` / `ekan_theme`), use [`ekan`](#ekan). Dutch municipal OpenGDC tenants (`/openapi.json` + `/api/datasets`) use [`opengdc`](#opengdc), not `drupal`.
 
 **Confirm:** `/jsonapi/node/dataset` (or the site’s dataset bundle) or a public `data.json`.
 
@@ -497,11 +872,13 @@ DCAT-AP microservice catalog (Fraunhofer FOKUS). Site: [piveau.de](https://www.p
 
 **Confirm:** GET the public catalog and a DCAT/search API. Do not re-add data.europa.eu if it is already registered.
 
+[index.html](https://github.com/piveau-data/piveau-hub-ui/blob/master/index.html) sets `<title>Piveau UI</title>` (3 hosts in September 2026, including `www.sozial-informations-system.de` and `piveau-hub-ui-gsi.apps.osc.fokus.fraunhofer.de`). `body="piveau"` matched 52, and the first hits include a scheduling endpoint and `apirails.com`. `class="edp2-footer"` is in a Vue component and matched nothing.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Piveau" (DCAT-AP OR "open data") -site:github.com -site:piveau.de` |
-| Censys | `web.endpoints.http.body: "piveau"` |
-| FOFA | `body="piveau"` |
+| Censys | `web.endpoints.http.body: "<title>Piveau UI</title>"` |
+| FOFA | `body="<title>Piveau UI</title>"` |
 
 ## LKOD (`lkod`) {#lkod}
 
@@ -509,12 +886,14 @@ Czech local DCAT-AP-CZ catalogs (Golemio / Operátor ICT). Harvests into NKOD. S
 
 **Confirm:** GET the municipal/local catalog (Next.js LKOD UI or `/opendata/set/lkod`), not the national NKOD/data.slovensko.sk record twice.
 
+[metatags.json](https://gitlab.com/operator-ict/golemio/lkod/lkod-catalog-2-0/-/blob/release/src/app/metatags.json) describes `Procházejte a stahujte datové sady` (2 hosts in September 2026, both `lkod.cz`). The same file’s title `Lokální katalog otevřených dat` matched 13, and the first hits are `golemio.cz` and the admin host `lkod-admin.msmt.gov.cz`. `body="lkod"` matched 2,767, and the first hits are a monastery site, a Hungarian GMO map, and unrelated pages.
+
 | Tool | Query |
 |------|-------|
 | Google | `"LKOD" OR "lokální katalog otevřených dat" site:.cz` |
 | Google | `inurl:/opendata/set/lkod site:.sk` |
-| Censys | `web.endpoints.http.body: "lkod"` |
-| FOFA | `body="lkod"` |
+| Censys | `web.endpoints.http.body: "Procházejte a stahujte datové sady"` |
+| FOFA | `body="Procházejte a stahujte datové sady"` |
 
 ## Aleph (`aleph`) {#aleph}
 
@@ -522,11 +901,13 @@ OCCRP investigative document/dataset search. Site: [aleph.occrp.org](https://ale
 
 **Confirm:** GET a public Aleph instance. Skip login-only investigations.
 
+The shell in [ui/public/index.html](https://github.com/alephdata/aleph/blob/develop/ui/public/index.html) is `<html data-api-endpoint="/api/2/">`. `body="aleph"` also matches Ex Libris Aleph library catalogs and unrelated pages. `body="data-api-endpoint=\"/api/2/\""` matched 319 hosts in September 2026.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Aleph" OCCRP (datasets OR documents) -site:occrp.org` |
-| Censys | `web.endpoints.http.body: "aleph"` |
-| FOFA | `body="aleph"` |
+| Censys | `web.endpoints.http.body: "data-api-endpoint=\"/api/2/\""` |
+| FOFA | `body="data-api-endpoint=\"/api/2/\""` |
 
 ## Our Open Data (`ouropendata`) {#ouropendata}
 
@@ -602,10 +983,14 @@ NRGI oil/gas/mining contract repository. Hub: [resourcecontracts.org](https://re
 
 **Confirm:** GET the public contract search (hub or country tenant). One record per public catalog, not per contract PDF.
 
+[head.blade.php](https://github.com/younginnovations/resourcecontracts-rc-subsite/blob/master/resources/views/layout/partials/head.blade.php) links `css/new-rc.css` (7 hosts in September 2026, including `resourcecontracts.org`; `dmachine.mshstudios.com` is a copied template, not a catalog). Country tenants that drop the stylesheet still match the domain query, so keep it.
+
 | Tool | Query |
 |------|-------|
 | Google | `site:resourcecontracts.org` |
 | Google | `"ResourceContracts" (mining OR petroleum) contract` |
+| Censys | `web.endpoints.http.body: "css/new-rc.css"` |
+| FOFA | `body="css/new-rc.css"` |
 | Censys | `web.names: "resourcecontracts.org"` |
 | FOFA | `domain="resourcecontracts.org"` |
 | crt.sh | `%.resourcecontracts.org` |
@@ -616,9 +1001,13 @@ Open Knowledge Foundation public-finance catalog. Hub: [openspending.org](https:
 
 **Confirm:** GET the public dataset search. One record for the hub (and any independent OpenSpending deployment). Skip individual budget visualizations as catalogs.
 
+[layout.html](https://github.com/openspending/spendb/blob/master/spendb/templates/layout.html) describes the site as `explore, visualize and track government spending` (3 hosts in September 2026, all `openspending.hel.ninja`, the City of Helsinki spendb deployment). `ng-app="spendb"` in the same file matched nothing. Keep the domain query for the canonical hub.
+
 | Tool | Query |
 |------|-------|
 | Google | `"OpenSpending" (budget OR "fiscal data" OR "open spending")` |
+| Censys | `web.endpoints.http.body: "explore, visualize and track government spending"` |
+| FOFA | `body="explore, visualize and track government spending"` |
 | Censys | `web.names: "openspending.org"` |
 | FOFA | `domain="openspending.org"` |
 
@@ -661,10 +1050,14 @@ Dutch municipal open-data and Woo catalog (Drupal / Dexes). Product site: [openg
 
 **Confirm:** GET `https://host/openapi.json` and `https://host/api/datasets` (JSON:API, `meta.total`). Some tenants sit behind a WAF (`403`). Prefer `opengdc` over generic `drupal`. One municipality = one catalog.
 
+[page.html.twig](https://gitlab.com/dexes.efro/drupal-dataspace/-/blob/main/web/themes/custom/dexes/templates/page.html.twig) is the Dexes theme; served pages load assets from `themes/custom/dexes` (31 hosts in September 2026, including `dexes.eu` and `stedelijkverkeer.staging.dmi.dexes.eu`, both titled “Your trusted data marketplace”).
+
 | Tool | Query |
 |------|-------|
 | Google | `"OpenGDC" (dataportaal OR datacatalogus) site:.nl` |
 | Google | `inurl:/openapi.json "api/datasets" (Datacatalogus OR Dataportaal)` |
+| Censys | `web.endpoints.http.body: "themes/custom/dexes"` |
+| FOFA | `body="themes/custom/dexes"` |
 | Censys | `web.endpoints.http.body: "api/dossiers"` |
 | FOFA | `body="api/dossiers"` |
 
@@ -951,6 +1344,25 @@ host currently serves a hosting placeholder.
 | Google | `"SIMAI" "Портал открытых данных" OR simai.opendata` |
 | Censys | `web.endpoints.http.body: "simai.opendata"` |
 | FOFA | `body="simai.opendata"` |
+
+## Aid Management Platform (`amp`) {#amp}
+
+Development Gateway aid-information system. Product: [devgateway.github.io/amp](https://devgateway.github.io/amp/). Country installations publish official development-assistance activities. Source: [github.com/devgateway/amp](https://github.com/devgateway/amp).
+
+**Signals:** “Aid Management Platform” or AMP portal chrome on a government aid-transparency host.
+
+**Confirm:** GET the public activity catalog. One record per country portal, not per report, chart, or dashboard. Skip PDF-only aid reports that are not an AMP installation.
+
+[about-template.html](https://github.com/devgateway/amp/blob/develop/amp/TEMPLATE/ampTemplate/amp-boilerplate/src/templates/about-template.html) serves `/TEMPLATE/ampTemplate/` (105 hosts in September 2026, including `amp.mofed.gov.et` and `amp.gov.md`). `body="Aid Management Platform"` matched 34, the same product, including `amp.finance.go.ug`. Translated skins drop the English name, so keep both.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Aid Management Platform" (portal OR "development assistance" OR disbursement)` |
+| Google | `"ampTemplate" (aid OR ODA OR portal)` |
+| Censys | `web.endpoints.http.body: "ampTemplate"` |
+| FOFA | `body="ampTemplate"` |
+| Censys | `web.endpoints.http.body: "Aid Management Platform"` |
+| FOFA | `body="Aid Management Platform"` |
 
 ## Related
 

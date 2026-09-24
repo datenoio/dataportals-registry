@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-ARA
+      name: Auvergne-Rhône-Alpes
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GeoNature-atlas of biodiversity observations for the îles and lônes of
+  the Rhône (SMIRIL).
+id: biodiversiteilcrfr
+langs:
+- id: FR
+  name: French
+link: https://xn--biodiversit-ilcr-lqb.fr/
+name: Biodiversité îles, lônes et coteaux du Rhône
+owner:
+  link: https://www.smiril.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-ARA
+      name: Auvergne-Rhône-Alpes
+  name: SMIRIL
+  type: Local government
+software:
+  id: geonature
+  name: GeoNature
+status: active
+tags:
+- geospatial
+- biodiversity
+- GeoNature
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00013696
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: geonature:api
+  url: https://xn--biodiversit-ilcr-lqb.fr/api/searchTaxon
+- type: geonature:api
+  url: https://xn--biodiversit-ilcr-lqb.fr/api/searchCommune

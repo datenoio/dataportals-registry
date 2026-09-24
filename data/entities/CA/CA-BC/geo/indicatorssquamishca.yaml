@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: District of Squamish community performance indicators site on ArcGIS Hub, presenting themed indicator dashboards (resilient, healthy, engaged, connected, climate, liveable).
+id: indicatorssquamishca
+langs:
+- id: EN
+  name: English
+link: https://indicators.squamish.ca
+name: Squamish Community Performance Indicators
+owner:
+  link: "https://indicators.squamish.ca"
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: District of Squamish
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: dcatap201
+  url: https://indicators.squamish.ca/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://indicators.squamish.ca/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://indicators.squamish.ca/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://indicators.squamish.ca/api/search/v1
+- type: arcgishubapi
+  url: https://indicators.squamish.ca/api/v3/datasets
+- type: dcatus11
+  url: https://indicators.squamish.ca/data.json
+uid: cdi00007870

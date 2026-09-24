@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CI
+      name: Cote d Ivoire
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Public Landfolio map of Cote d'Ivoire mining permits (Trimble). Unauthenticated
+  /api/config/map lists research permits, exploitation permits, and quarry authorizations.
+  The older map on portals.landfolio.com/CoteDIvoire stays a separate catalog.
+id: gouvcicadastreminierorg
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://gouv.ci.cadastreminier.org/page/PublicMap
+name: Cote d'Ivoire Mining Cadastre Portal
+owner:
+  link: https://energie.gouv.ci
+  location:
+    country:
+      id: CI
+      name: Cote d Ivoire
+    level: 20
+  name: Ministere des Mines, du Petrole et de l Energie
+  type: Central government
+software:
+  id: landfolio
+  name: Trimble Landfolio
+status: active
+tags:
+- geospatial
+- maps
+- government
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00008663
+properties:
+  has_doi: false
+  is_national: false

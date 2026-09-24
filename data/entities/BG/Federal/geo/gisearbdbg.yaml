@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public ArcGIS REST catalog of the East Aegean River Basin Directorate
+  (Басейнова дирекция „Източнобеломорски район“), including flood-risk, RBMP consultation,
+  and investment-proposal map services.
+id: gisearbdbg
+langs:
+- id: BG
+  name: Bulgarian
+link: https://gis.earbd.bg/arcgis/rest/services
+name: East Aegean River Basin Directorate GIS
+owner:
+  link: https://earbd.bg
+  location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+  name: Basin Directorate East Aegean Region
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.earbd.bg/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.earbd.bg/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.earbd.bg/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.earbd.bg/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.earbd.bg/arcgis/rest/services?f=geositemap
+uid: cdi00007679

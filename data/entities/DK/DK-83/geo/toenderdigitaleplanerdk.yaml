@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: DK-83
+      name: Syddanmark
+description: COWI PLAN geoportal for Tønder Kommune on MapCentia GC2/Vidi. The public
+  kommuneplan schema exposes about 5 schools, forest, and retail layers.
+id: toenderdigitaleplanerdk
+langs:
+- id: DA
+  name: Danish
+link: https://webgis.digitaleplaner.dk/app/toender/
+name: Tønder Kommuneplan
+owner:
+  link: https://www.toender.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 30
+    subregion:
+      id: DK-83
+      name: Syddanmark
+  name: Tønder Kommune
+  type: Local government
+software:
+  id: gc2
+  name: GC2
+status: active
+tags:
+- GC2
+- Vidi
+- kommuneplan
+- municipal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00011681
+endpoints:
+- type: wms130
+  url: https://webgis.digitaleplaner.dk/api/wms/toender/kommuneplan?service=WMS&request=GetCapabilities
+  version: 1.3.0
+- type: rest
+  url: https://webgis.digitaleplaner.dk/api/meta/toender/kommuneplan
+properties:
+  has_doi: false
+  is_national: false

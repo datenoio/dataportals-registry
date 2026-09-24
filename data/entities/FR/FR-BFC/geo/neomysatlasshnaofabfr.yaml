@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-BFC
+      name: Bourgogne-Franche-Comté
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GeoNature-atlas of fauna observations for Bourgogne, published by the
+  SHNA.
+id: neomysatlasshnaofabfr
+langs:
+- id: FR
+  name: French
+link: https://neomys-atlas.shna-ofab.fr/
+name: Atlas de la faune de Bourgogne
+owner:
+  link: https://www.shna-ofab.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-BFC
+      name: Bourgogne-Franche-Comté
+  name: Société d'histoire naturelle d'Autun
+  type: Civil society
+software:
+  id: geonature
+  name: GeoNature
+status: active
+tags:
+- geospatial
+- biodiversity
+- GeoNature
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00013710
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: geonature:api
+  url: https://neomys-atlas.shna-ofab.fr/api/searchTaxon
+- type: geonature:api
+  url: https://neomys-atlas.shna-ofab.fr/api/searchCommune

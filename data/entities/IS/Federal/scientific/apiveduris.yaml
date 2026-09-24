@@ -18,11 +18,11 @@ description: Icelandic Meteorological Office web services exposing volcano monit
   gas forecast, and eruption catalogue data for the EPOS Volcano Observations thematic core
   service.
 endpoints:
-- type: api
+- type: rest
   url: https://api.vedur.is/epos/volcano/general-information/list-of-eruptions
-- type: api
+- type: rest
   url: https://api.vedur.is/epos/seismic/bulletin
-- type: api
+- type: rest
   url: https://api.vedur.is/epos/gps/station
 - type: wms130
   url: https://api.vedur.is/epos/hazard/maps/impact/tephra/wms

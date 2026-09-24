@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Historical officials of the Nowogródek voivodeship, from the Institute
+  of History of the Polish Academy of Sciences.
+id: urzednicyihpanedupl
+langs:
+- id: PL
+  name: Polish
+link: https://urzednicy.ihpan.edu.pl/
+name: Urzędnicy województwa nowogródzkiego
+owner:
+  link: https://ihpan.edu.pl
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 20
+  name: Instytut Historii im. Tadeusza Manteuffla PAN
+  type: Academy
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00015548
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://urzednicy.ihpan.edu.pl/-/databases.json

@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-25
+      name: Doubs
+description: Lizmap geoportal of the Pays de Montbéliard urban-planning agency, with
+  public maps on land-use, green infrastructure, energy, and industrial heritage.
+id: mapsadumontbeliardfr
+langs:
+- id: FR
+  name: French
+link: https://maps.adu-montbeliard.fr/
+name: Lizmap ADU Pays de Montbéliard
+owner:
+  link: https://www.adu-montbeliard.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-25
+      name: Doubs
+  name: Agence de Développement et d'Urbanisme du Pays de Montbéliard
+  type: Regional government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- lizmap
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: wms130
+  url: "https://maps.adu-montbeliard.fr/index.php/lizmap/service?repository=appcarto&project=app10_energie&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+  version: "1.3.0"
+uid: cdi00007707
+properties:
+  is_national: false

@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 10
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: STAC API of value-added products from ESA Earth Observation Projects,
+  including EO4PORTS air-quality indicators and ANACONDA expansion-mission simulations.
+id: eoresultsesaintstac
+langs:
+- id: EN
+  name: English
+link: https://eoresults.esa.int/stac
+name: ESA Project Results Repository
+owner:
+  link: https://www.esa.int
+  location:
+    country:
+      id: EU
+      name: European Union
+  name: European Space Agency
+  type: International
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- geospatial
+- maps
+- international
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00011987
+endpoints:
+- type: stacserverapi
+  url: https://eoresults.esa.int/stac/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://eoresults.esa.int/stac/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://eoresults.esa.int/stac/conformance
+  version: '1.0'
+- type: openapi
+  url: https://eoresults.esa.int/stac/api
+  version: '3.0'

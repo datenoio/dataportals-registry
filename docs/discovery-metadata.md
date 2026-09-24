@@ -12,14 +12,18 @@ Open-source REST API and web client for FAIR metadata as RDF (DCAT + the [FAIR D
 
 **Confirm:** GET the catalog URL with `Accept: text/turtle` or `application/ld+json` and check for DCAT `Catalog` / FAIR Data Point metadata. The HTML UI alone is not enough if it is only a marketing page.
 
+[public/index.html](https://github.com/FAIRDataTeam/FAIRDataPoint-client/blob/develop/public/index.html) noscript says “fdp-client doesn't work properly” (196 hosts in September 2026, including `fdp.envri.eu`). `body="fdp-client"` matched 206. Keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"FAIR Data Point" OR "fairdatapoint" (catalog OR DCAT) -site:github.com` |
 | Google | `inurl:fairdatapoint OR intitle:"FAIR Data Point"` |
-| Censys | `web.endpoints.http.body: "fairdatapoint"` |
-| FOFA | `body="fairdatapoint"` |
+| Censys | `web.endpoints.http.body: "fdp-client doesn't work properly"` |
+| FOFA | `body="fdp-client doesn't work properly"` |
 | Censys | `web.endpoints.http.body: "fdp-client"` |
 | FOFA | `body="fdp-client"` |
+| Censys | `web.endpoints.http.body: "fairdatapoint"` |
+| FOFA | `body="fairdatapoint"` |
 | crt.sh | `fdp.%` |
 
 Start from the public index, then fill gaps with search. Skip points that require login for any catalog listing. Register the FDP root, not a single dataset IRI. Do not duplicate the index (`home.fairdatapoint.org`) if it is already in the registry.
@@ -75,9 +79,13 @@ LinkedIn/Acryl DataHub metadata platform. Site: [datahubproject.io](https://data
 
 **Confirm:** GET the catalog home. Stop on login-only tenants with no public dataset list. Do not invent this id from a generic “data hub” heading.
 
+[index.html](https://github.com/datahub-project/datahub/blob/master/datahub-web-react/index.html) describes “A Metadata Platform for the Modern Data Stack” (1,556 hosts in September 2026, including `89.58.44.88:9002`). `title="DataHub"` matched 5,058 hosts, including a Chinese data-hub system (`1.94.188.107`). Installs that change the description still match the title, so keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"DataHub" "Metadata Platform for the Modern Data Stack"` |
+| Censys | `web.endpoints.http.body: "A Metadata Platform for the Modern Data Stack"` |
+| FOFA | `body="A Metadata Platform for the Modern Data Stack"` |
 | Censys | `web.endpoints.http.title: "DataHub"` |
 | FOFA | `title="DataHub"` |
 

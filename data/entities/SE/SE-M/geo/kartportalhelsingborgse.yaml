@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: SE-M
+      name: Skåne län [SE-12]
+description: Public ArcGIS Enterprise portal of Helsingborg, distinct from the ArcGIS
+  REST directory.
+id: kartportalhelsingborgse
+langs:
+- id: SV
+  name: Swedish
+link: https://kartportal.helsingborg.se/portal/home/
+name: Helsingborg kartportal
+owner:
+  link: https://www.helsingborg.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    subregion:
+      id: SE-M
+      name: Skåne län [SE-12]
+  name: Helsingborgs stad
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:portals:self
+  url: "https://kartportal.helsingborg.se/portal/sharing/rest/portals/self?f=pjson"
+uid: cdi00007799

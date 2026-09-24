@@ -1,0 +1,62 @@
+category: Open data portal
+subtype: managed_saas_service
+datatypes:
+  datasets: 'Yes'
+  fields: Uncertain
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: bodikodcs
+website: https://odcs.bodik.jp/
+name: BODIK ODCS
+description: Hosted open-data catalog for Japanese local governments, run by
+  the Big Data and Open Data Initiative Kyushu (ISIT). Each municipality is a
+  tenant at odcs.bodik.jp/{lgcode}. The shared catalog API is CKAN at
+  data.bodik.jp. A 2020 Docker package (odpkg-docker) bundles CKAN, WordPress,
+  and a map dashboard; live tenants are the hosted service, not that package.
+owner:
+  name: Big Data & Open Data Initiative Kyushu
+  location:
+    country:
+      id: JP
+      name: Japan
+logo_url: https://odcs.bodik.jp/wp-content/themes/bodik_odcs/images/logo.gif
+documentation_url: https://odcs.bodik.jp/developers/
+repository_url: https://github.com/ISITBODIK/odpkg-docker
+metadata_support:
+  ckan_api: 'Yes'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: Uncertain
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+export_formats:
+- JSON
+- CSV
+capabilities:
+- CKAN API
+- Municipal tenant catalogs
+- WordPress portal
+last_updated: '2026-09-23T00:00:00Z'

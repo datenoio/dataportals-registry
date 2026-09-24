@@ -1,0 +1,64 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: gbdwebsuite
+name: GBD WebSuite
+website: https://gbd-websuite.de/
+description: GBD WebSuite is an open-source WebGIS platform from gbd-consult combining
+  a WebGIS server, a responsive web client, OGC services (WMS, WMTS, WFS), and 1:1
+  QGIS Server project rendering, deployed as Docker containers. Public clients load
+  /_/webSystemAsset/path/{app,vendor,util}.js, expose a gc/main React module and
+  gwsLogin/gwsOptions globals, and are used by German municipalities and water boards
+  (Schmallenberg, Hase-Wasseracht). Source and docs are public.
+owner:
+  name: gbd-consult
+  location:
+    country:
+      id: DE
+      name: Germany
+logo_url: https://gbd-websuite.de/favicon.ico
+repository_url: https://github.com/gbd-consult/gbd-websuite
+documentation_url: https://docs.gbd-websuite.de/stable/
+metadata_support:
+  ckan_api: 'No'
+  csw: Uncertain
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'Yes'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Open
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+export_formats:
+- GeoJSON
+- GML
+capabilities:
+- Map viewer
+- WMS service
+- WFS service
+- QGIS Server integration
+last_updated: '2026-09-20T00:00:00Z'

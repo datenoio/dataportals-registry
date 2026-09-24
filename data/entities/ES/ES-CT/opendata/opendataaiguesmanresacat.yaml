@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+description: CKAN open-data portal of the Manresa municipal water company.
+id: opendataaiguesmanresacat
+langs:
+- id: CA
+  name: Catalan
+- id: ES
+  name: Spanish
+link: https://opendata.aiguesmanresa.cat
+name: Aigües de Manresa Open Data
+owner:
+  link: https://www.aiguesmanresa.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+  name: Aigües de Manresa
+  type: Business
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00007582
+endpoints:
+- type: ckan
+  url: https://opendata.aiguesmanresa.cat/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata.aiguesmanresa.cat/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.aiguesmanresa.cat/api/3/action/package_list
+  version: '3'

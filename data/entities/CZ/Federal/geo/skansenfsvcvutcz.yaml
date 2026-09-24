@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: GISQuick map of the VISKALIA virtual open-air museum of Czech vernacular
+  architecture, published by the CTU Faculty of Civil Engineering. Public project
+  admin/viskalia includes documented buildings, plans, and photographs.
+id: skansenfsvcvutcz
+langs:
+- id: CS
+  name: Czech
+link: https://skansen.fsv.cvut.cz
+name: VISKALIA Virtual Open-Air Museum
+owner:
+  link: https://www.fsv.cvut.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: Czech Technical University in Prague, Faculty of Civil Engineering
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: gisquick
+  name: GISQuick
+status: active
+tags:
+- geospatial
+- has_api
+topics:
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: wms130
+  url: https://skansen.fsv.cvut.cz/api/map/ows/admin/viskalia?SERVICE=WMS&REQUEST=GetCapabilities
+  version: 1.3.0
+- type: rest
+  url: https://skansen.fsv.cvut.cz/api/map/project/admin/viskalia
+- type: gisquick:app
+  url: https://skansen.fsv.cvut.cz/api/app
+uid: cdi00011264

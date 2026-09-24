@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: Public map geoportal of the City of Herne, distinct from the geodaten.herne.de
+  GeoServer.
+id: geoportalhernedebasis
+langs:
+- id: DE
+  name: German
+link: https://geoportal.herne.de/basis/
+name: Geoportal Stadt Herne
+owner:
+  link: https://www.herne.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+  name: Stadt Herne
+  type: Local government
+software:
+  id: qwc2
+  name: QGIS Web Client 2 (QWC2)
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: qwc2:layers
+  url: "https://geoportal.herne.de/basis/themes.json"
+uid: cdi00007735

@@ -17,11 +17,11 @@ coverage:
 description: Piveau metadata catalogue of the Horizon Europe GREEN.DAT.AI project,
   publishing DCAT-AP records for energy, mobility, and water-management use-case datasets.
 endpoints:
-- type: customapi
+- type: rest
   url: https://search-piveau.greendatai.ari-energy.eu/search
-- type: customapi
+- type: rest
   url: https://repo-piveau.greendatai.ari-energy.eu/catalogues
-- type: customapi
+- type: rest
   url: https://repo-piveau.greendatai.ari-energy.eu/datasets
 - type: ckan:package-search
   url: https://search-piveau.greendatai.ari-energy.eu/ckan/package_search

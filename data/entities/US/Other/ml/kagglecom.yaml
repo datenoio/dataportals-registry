@@ -1,5 +1,5 @@
 access_mode:
-- limited
+- restricted
 api: true
 api_status: active
 catalog_type: Machine learning catalog
@@ -17,7 +17,7 @@ coverage:
 description: A public catalog of datasets hosted on Kaggle, curated for data science
   and analytics use.
 endpoints:
-- type: api
+- type: rest
   url: https://www.kaggle.com/api/v1/datasets/list
 id: kagglecom
 langs:

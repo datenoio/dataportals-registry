@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Linked open data publication of the Helmuth Plessner letter archive at
+  the University of Groningen Library. The archive is described as a schema.org Dataset
+  and contains about 14,000 letters.
+id: lodubrugnl
+langs:
+- id: EN
+  name: English
+- id: NL
+  name: Dutch
+link: https://lod.ub.rug.nl/s/plessner-archive
+name: Letter Archive Helmuth Plessner
+owner:
+  link: https://www.rug.nl/library/
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: University of Groningen Library
+  type: Academy
+software:
+  id: omekas
+  name: Omeka S
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00015332
+endpoints:
+- type: rest
+  url: https://lod.ub.rug.nl/api/items
+- type: rest
+  url: https://lod.ub.rug.nl/api/items?resource_class_label=Dataset
+- type: rest
+  url: https://lod.ub.rug.nl/api-context

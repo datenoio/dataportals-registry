@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    subregion:
+      id: AT-6
+      name: Steiermark
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: OPUS 4 publication server of FH CAMPUS 02.
+id: opuscampus02at
+langs:
+- id: DE
+  name: German
+link: https://opus.campus02.at
+name: Online Publication Server University of Applied Science CAMPUS 02
+owner:
+  link: https://opus.campus02.at
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    subregion:
+      id: AT-6
+      name: Steiermark
+  name: FH CAMPUS 02
+  type: Academy
+software:
+  id: opus
+  name: OPUS
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00009595
+endpoints:
+- type: oaipmh20
+  url: https://opus.campus02.at/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://opus.campus02.at/rss/index/index/searchtype/latest
+  version: '2.0'

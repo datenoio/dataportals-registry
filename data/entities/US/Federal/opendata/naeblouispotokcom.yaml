@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    macroregion:
+      id: '021'
+      name: Northern America
+    level: 20
+description: Mirror of the Native American Ethnobotany database of recorded plant
+  uses.
+id: naeblouispotokcom
+langs:
+- id: EN
+  name: English
+link: https://naeb.louispotok.com/
+name: Native American Ethnobotany
+owner:
+  link: https://naeb.louispotok.com/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Native American Ethnobotany
+  type: Academy
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00016091
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://naeb.louispotok.com/-/databases.json

@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: NOAA NCEI Colorado THREDDS catalog of scientific datasets, including
+  VIIRS ocean color, water level, and digital elevation collections.
+id: wwwngdcnoaagovthredds
+langs:
+- id: EN
+  name: English
+link: https://www.ngdc.noaa.gov/thredds/catalog.html
+name: NCEI Colorado THREDDS Data Server
+owner:
+  link: https://www.ncei.noaa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: NOAA National Centers for Environmental Information
+  type: Central government
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- scientific
+- research data
+- government
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00016189
+endpoints:
+- type: thredds:catalog
+  url: https://www.ngdc.noaa.gov/thredds/catalog.xml
+- type: thredds:info
+  url: https://www.ngdc.noaa.gov/thredds/info/serverInfo.xml

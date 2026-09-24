@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    subregion:
+      id: CO-VAC
+      name: Valle del Cauca
+    macroregion:
+      id: '005'
+      name: South America
+description: Municipal open data catalog of Jamundí, Valle del Cauca, with a public
+  dataset listing and API.
+id: datosabiertosjamundigovco
+langs:
+- id: ES
+  name: Spanish
+link: https://datosabiertos.jamundi.gov.co
+name: Datos Abiertos Jamundí
+owner:
+  link: https://www.jamundi.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    subregion:
+      id: CO-VAC
+      name: Valle del Cauca
+  name: Alcaldía Municipal de Jamundí
+  type: Local government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00008224
+endpoints:
+- type: rest
+  url: https://oticjamundi.com/datos/api/v1/datasets
+properties:
+  is_national: false
+  has_doi: false

@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PH
+      name: Philippines
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: OPeNDAP Hyrax catalog of monthly near-real-time Delft3D D-Flow FM hydrodynamic
+  outputs for Manila Bay, including sea surface height, temperature, salinity, and
+  currents. Produced by the Marine Environment and Resources Foundation (MERF) for
+  the MB-CIA project. NetCDF global attributes name the Department of Environment
+  and Natural Resources as the institution.
+endpoints:
+- type: opendap:catalog
+  url: http://129.121.79.2:8080/opendap/
+- type: thredds:catalog
+  url: http://129.121.79.2:8080/opendap/catalog.xml
+id: '129121792'
+langs:
+- id: EN
+  name: English
+link: http://129.121.79.2:8080/opendap/
+name: Manila Bay Operational Hydrodynamic Model
+owner:
+  link: https://msi.upd.edu.ph/
+  location:
+    country:
+      id: PH
+      name: Philippines
+    level: 20
+  name: Marine Science Institute, University of the Philippines Diliman
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: opendaphyrax
+  name: OPeNDAP Hyrax
+status: active
+tags:
+- OPeNDAP
+- Hyrax
+- oceanography
+- Manila Bay
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00015514

@@ -18,7 +18,7 @@ description: Lithuania's dedicated platform for accessing statistical open datas
   Data Agency. Provides RESTful web services and Search API for programmatic access. Includes datasets
   on COVID-19, migration, vaccinations, thematic dashboards on ecosystems, climate, and economic indicators.
 endpoints:
-- type: customapi
+- type: rest
   url: https://open-data.stat.gov.lt/api/search/definition/
 id: opendatastatgovlt
 langs:
@@ -38,8 +38,8 @@ owner:
   name: State Data Agency (Valstybės duomenų agentūra)
   type: Central government
 software:
-  id: custom
-  name: Custom software
+  id: arcgishub
+  name: ArcGIS Hub
 status: active
 tags:
 - statistics

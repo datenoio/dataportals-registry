@@ -144,6 +144,21 @@ Language prefixes (`/en/data/…`) vary. Harvest every indicator id the site pub
 
 **Keep:** OpenSDG **indicator** JSON. **Drop:** goal/target **pages** without a data file.
 
+## SDG Index (`sdgindex`) {#sdgindex}
+
+One harvest scope per dashboard host. Indicator grain is the published database, not each profile URL.
+
+```text
+GET https://dashboards.sdgindex.org/
+GET https://dashboards.sdgindex.org/rankings
+GET https://dashboards.sdgindex.org/profiles
+GET https://dashboards.sdgindex.org/downloads/
+```
+
+Regional hosts use the same paths (`/rankings`, `/profiles` or `/profils`, `/downloads` or `/telechargements`). The bulk file is usually an `.xlsx` under `/static/downloads/`.
+
+**Keep:** the dashboard’s indicator database (Excel or JSON) and the profile list for that host. **Drop:** chapter narrative pages, individual profile URLs as separate catalogs, and the SDSN marketing site.
+
 ## .Stat Suite (`statsuite`) {#statsuite}
 
 ```text
@@ -252,6 +267,18 @@ Filter exports on `software.id = 'virtuallmi'`. One harvest scope per state tena
 Keep public **occupation / industry / area profile** tables the VLMI UI lists. Branded `/vosnet/` hosts (Colorado LMI Gateway) are the same grain. Drop job-board postings, case-management VOS modules, and state LMI sites that are not VLMI. Stop on `401`/`403`.
 
 **Keep:** public occupation / industry / area **profile tables**. **Drop:** job-board postings, VOS case-management, and non-VLMI state LMI sites.
+
+## CityViz (`cityviz`) {#cityviz}
+
+Filter exports on `software.id = 'cityviz'`. One harvest scope per community tenant (custom domain or `*.cityviz.ca` host).
+
+There is no anonymous list API. Keep the public **indicator datasets** the `/search` catalog lists (workforce, population, business counts, housing, real estate) and the **indicator dashboards / community profiles** they feed. Grain is the indicator dataset, not each chart, map tile, or generated Report Studio PDF/PPTX. Drop vendor marketing pages, the fictional Bellaville showcase tenant, login-gated tenants, and embed-only website widgets on municipal CMS pages. Stop on `401`/`403`.
+
+```text
+GET https://host/search
+```
+
+**Keep:** public **indicator datasets** from `/search` and community-profile dashboards. **Drop:** charts, map tiles, generated reports, marketing pages, and login-gated tenants.
 
 ## TerriSTORY (`terristory`) {#terristory}
 
@@ -774,6 +801,30 @@ SharePoint statistics pages publish documents/lists, not dataset records. Harves
 
 **Keep:** documented Excel/CSV files the statistics page links.
 **Drop:** `Authenticate.aspx`, `/_vti_bin/`, and login walls. Stop on `401`.
+
+
+## TYPO3 (`typo3`) {#typo3}
+
+TYPO3 statistics pages publish documents/content elements, not dataset records. Harvest documented Excel/CSV **files** the page links (statistics tables, indicator downloads). Drop login-only intranet sections.
+
+**Keep:** documented Excel/CSV files the statistics page links.
+**Drop:** login-only sections; pages that only link to an external data platform.
+
+
+## SPIP (`spip`) {#spip}
+
+SPIP statistics pages publish articles/documents, not dataset records. Harvest documented Excel/CSV **files** the page links (indicator tables, observatory downloads).
+
+**Keep:** documented Excel/CSV files the statistics page links.
+**Drop:** article-only pages with no data files.
+
+
+## Contao (`contao`) {#contao}
+
+Contao statistics pages publish documents/content elements, not dataset records. Harvest documented Excel/CSV **files** the page links (statistics tables, indicator downloads).
+
+**Keep:** documented Excel/CSV files the statistics page links.
+**Drop:** pages that only link to an external data platform.
 
 
 ## R Shiny (`shiny`) {#shiny}

@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Brazilian Science Data Center Virtual Observatory, developed at CBPF
+  with ICRANet. Publishes high-energy catalogs including MAGIC spectra, VERITAS spectra
+  and light curves, and the 1WHSP blazar sample through DaCHS.
+id: vobsdcicranetorg
+langs:
+- id: PT
+  name: Portuguese
+link: http://vo.bsdc.icranet.org/
+name: BSDC Virtual Observatory
+owner:
+  link: https://www.cbpf.br/
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+  name: Brazilian Science Data Center
+  type: Academy
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00009899
+endpoints:
+- type: tap:capabilities
+  url: http://vo.bsdc.icranet.org/tap/capabilities
+- type: oaipmh20
+  url: http://vo.bsdc.icranet.org/oai.xml?verb=Identify
+  version: '2.0'

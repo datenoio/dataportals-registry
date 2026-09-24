@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-PAC
+      name: Provence-Alpes-Côte-d’Azur
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GeoNature-atlas of wildlife observations around the Cadarache site in
+  the lower Durance valley.
+id: biodiversitebassedurancefr
+langs:
+- id: FR
+  name: French
+link: https://biodiversite-basse-durance.fr/
+name: Atlas de la biodiversité de Cadarache
+owner:
+  link: https://biodiversite-basse-durance.fr/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-PAC
+      name: Provence-Alpes-Côte-d’Azur
+  name: Basse vallée de la Durance
+  type: Other
+software:
+  id: geonature
+  name: GeoNature
+status: active
+tags:
+- geospatial
+- biodiversity
+- GeoNature
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00013830
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: geonature:api
+  url: https://biodiversite-basse-durance.fr/api/searchTaxon
+- type: geonature:api
+  url: https://biodiversite-basse-durance.fr/api/searchCommune

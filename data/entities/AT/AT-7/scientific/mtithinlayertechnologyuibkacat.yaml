@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: AT-7
+      name: Tirol
+description: NOMAD Oasis of the Thin-Layer Technology group at the Universität Innsbruck.
+  The public REST API lists 97 published entries, mainly X-ray fluorescence measurements.
+endpoints:
+- type: rest
+  url: https://mti-thinlayertechnology.uibk.ac.at/nomad-oasis/api/v1/info
+- type: rest
+  url: https://mti-thinlayertechnology.uibk.ac.at/nomad-oasis/api/v1/entries
+id: mtithinlayertechnologyuibkacat
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://mti-thinlayertechnology.uibk.ac.at/nomad-oasis/gui/
+name: University of Innsbruck Thin-Layer Technology NOMAD Oasis
+owner:
+  link: https://www.uibk.ac.at/
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    subregion:
+      id: AT-7
+      name: Tirol
+  name: Universität Innsbruck
+  type: Academy
+properties:
+  dataset_count_reported: 97
+software:
+  id: nomad
+  name: NOMAD
+status: active
+tags:
+- scientific
+- has_api
+- materials science
+- NOMAD Oasis
+- FAIR data
+- thin films
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00009597

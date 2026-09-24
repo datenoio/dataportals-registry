@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -33,8 +33,8 @@ owner:
   name: International Fund for Agricultural Development (IFAD)
   type: International
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - IFAD
@@ -55,4 +55,10 @@ topics:
 - id: Society
   name: Society
   type: iso19115
+endpoints:
+- type: rest
+  url: https://remitscope.org/wp-json/
+- type: rest:posts
+  url: https://remitscope.org/wp-json/wp/v2/posts
+  version: '2'
 uid: cdi00006682

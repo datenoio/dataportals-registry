@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: OPUS 4 publication server of Hochschule Biberach.
+id: opusbszbwdehbc
+langs:
+- id: DE
+  name: German
+link: https://opus.bsz-bw.de/hbc
+name: Hochschule Biberach
+owner:
+  link: https://opus.bsz-bw.de/hbc
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+  name: Hochschule Biberach
+  type: Academy
+software:
+  id: opus
+  name: OPUS
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00011363
+endpoints:
+- type: oaipmh20
+  url: https://opus.bsz-bw.de/hbc/oai?verb=Identify
+  version: '2.0'

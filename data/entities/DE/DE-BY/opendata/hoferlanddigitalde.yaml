@@ -21,11 +21,11 @@ description: CIVORA / Piveau data catalog of hoferLand.digital for Landkreis Hof
   publishing municipal and harvested DCAT-AP.de datasets from the district's smart-city
   data hub.
 endpoints:
-- type: customapi
+- type: rest
   url: https://piveau-search.hoferland.civora.org/search
-- type: customapi
+- type: rest
   url: https://piveau-repo.hoferland.civora.org/catalogues
-- type: customapi
+- type: rest
   url: https://piveau-repo.hoferland.civora.org/datasets
 - type: ckan:package-search
   url: https://piveau-search.hoferland.civora.org/ckan/package_search

@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IN-MH
+      name: Mahārāshtra
+description: Data archive of the Centre for Education, Innovation and Action Research
+  at the Tata Institute of Social Sciences.
+id: archivecetetissacin
+langs:
+- id: EN
+  name: English
+link: https://archive-cete.tiss.ac.in
+name: TISS CETE Data Archive
+owner:
+  link: https://www.tiss.edu
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-MH
+      name: Mahārāshtra
+  name: Tata Institute of Social Sciences
+  type: Academy
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: ckan
+  url: https://archive-cete.tiss.ac.in/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://archive-cete.tiss.ac.in/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://archive-cete.tiss.ac.in/api/3/action/package_list
+  version: '3'
+uid: cdi00008735
+properties:
+  is_national: false

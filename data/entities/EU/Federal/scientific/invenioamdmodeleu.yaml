@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: InvenioRDM data repository for the AM-D-Model project, including materials-science
+  datasets.
+id: invenioamdmodeleu
+langs:
+- id: EN
+  name: English
+link: https://invenio.am-d-model.eu
+name: AM-D-Model Data Repository
+owner:
+  link: https://invenio.am-d-model.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: AM-D-Model
+  type: Academy
+software:
+  id: inveniordm
+  name: InvenioRDM
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: inveniordmapi:records
+  url: https://invenio.am-d-model.eu/api/records
+- type: oaipmh20
+  url: https://invenio.am-d-model.eu/oai2d?verb=Identify
+  version: '2.0'
+uid: cdi00013572

@@ -51,6 +51,16 @@ from constants import (
     SOFTWARE_IDS_PATH,
     render_software_ids_yaml,
     ACCESS_MODE_ALLOWED,
+    ACCESS_MODE_PREFERRED,
+    COVERAGE_LEVELS_ALLOWED,
+    CENTRAL_OWNER_TYPES,
+    GOVERNMENT_OWNER_TYPES,
+    CANONICAL_TOPIC_TYPES,
+    IS_NATIONAL_MAX_PER_GROUP,
+    BOILERPLATE_DESCRIPTION_MIN_LENGTH,
+    BOILERPLATE_DESCRIPTION_MIN_COPIES,
+    BOILERPLATE_DESCRIPTION_PHRASES,
+    ENDPOINT_TYPE_ALIASES,
     CATALOG_TYPE_ALLOWED,
     STATUS_ALLOWED,
     API_STATUS_ALLOWED,
@@ -2818,15 +2828,19 @@ def check_api_status_coherence(record):
             "suggested_action": "Set api_status to 'active', 'inactive', or 'uncertain'",
         })
     
-    # Check for mismatches
+    # Check for mismatches. A retired catalog may keep endpoints with
+    # api_status inactive; that state is required by STATUS_API_STATUS_MISMATCH.
+    status = record.get("status")
+    retired = status in {"inactive", "deprecated"}
     if api is True:
         if api_status in ["inactive", "uncertain"] and len(endpoints) > 0:
-            issues.append({
-                "issue_type": "API_STATUS_MISMATCH",
-                "field": "api_status",
-                "current_value": f"api={api}, api_status={api_status}, endpoints={len(endpoints)}",
-                "suggested_action": f"Update api_status to 'active' since endpoints are present",
-            })
+            if not (retired and api_status == "inactive"):
+                issues.append({
+                    "issue_type": "API_STATUS_MISMATCH",
+                    "field": "api_status",
+                    "current_value": f"api={api}, api_status={api_status}, endpoints={len(endpoints)}",
+                    "suggested_action": f"Update api_status to 'active' since endpoints are present",
+                })
     elif api is False and len(endpoints) > 0:
         issues.append({
             "issue_type": "API_STATUS_MISMATCH",
@@ -3900,14 +3914,14 @@ def check_status_api_status_coherence_extended(record):
 
     issues = []
 
-    if status == "inactive" and api_status == "active":
+    if status in {"inactive", "deprecated"} and api_status == "active":
         issues.append(
             {
                 "issue_type": "STATUS_API_STATUS_MISMATCH",
                 "field": "api_status",
                 "current_value": {"status": status, "api_status": api_status},
                 "suggested_action": (
-                    "Catalog is inactive but API is marked active; update api_status "
+                    f"Catalog is {status} but API is marked active; update api_status "
                     "or catalog status to keep them consistent."
                 ),
             }
@@ -5067,6 +5081,9 @@ ISSUE_PRIORITY_MAP = {
         "SOFTWARE_ID_UNKNOWN",
         "SOFTWARE_NAME_MISMATCH",
         "COVERAGE_NORMALIZATION",
+        "COVERAGE_LEVEL_NONSTANDARD",
+        "OWNER_LEVEL_MISSING",
+        "GOV_COVERAGE_COUNTRY_MISMATCH",
         "STATUS_DIRECTORY_MISMATCH",
         "OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH",
         "SUBREGION_INVALID_ISO3166_2",
@@ -5106,6 +5123,10 @@ ISSUE_PRIORITY_MAP = {
         "OWNER_TYPE_NONCANONICAL",
         "PATH_COUNTRY_MISMATCH",
         "IS_NATIONAL_AGENCY_OR_TOPIC",
+        "ENDPOINT_TYPE_ALIAS",
+        "IS_NATIONAL_EXCESS",
+        "TOPIC_TYPE_NONCANONICAL",
+        "BOILERPLATE_DESCRIPTION",
     ],
     "LOW": [
         "MISSING_TOPICS",
@@ -5115,6 +5136,11 @@ ISSUE_PRIORITY_MAP = {
         "DUPLICATE_COVERAGE",
         "MISSING_CONTACT_INFO",
         "TOPIC_SCHEMA_VIOLATION",
+        "LANGUAGE_NAME_NONCANONICAL",
+        "LANGUAGE_CODE_UNKNOWN",
+        "ACCESS_MODE_NONPREFERRED",
+        "CONTENT_TYPE_NONCANONICAL",
+        "MISSING_RIGHTS",
     ],
 }
 
@@ -6079,6 +6105,436 @@ def generate_rule_reports(issues_by_type, output_dir):
             os.remove(rule_path)
 
 
+_LANG_NAMES_CACHE = None
+_CONTENT_TYPES_CACHE = None
+
+
+def get_lang_names():
+    """Map ISO 639-1 style codes to English names from data/reference/langs.csv."""
+    global _LANG_NAMES_CACHE
+    if _LANG_NAMES_CACHE is not None:
+        return _LANG_NAMES_CACHE
+    path = os.path.join(_REPO_ROOT, "data", "reference", "langs.csv")
+    names = {}
+    with open(path, "r", encoding="utf-8") as handle:
+        for row in csv.DictReader(handle, delimiter="\t"):
+            code = (row.get("code") or "").strip().upper()
+            name = (row.get("name") or "").strip()
+            if code and name:
+                names[code] = name
+    _LANG_NAMES_CACHE = names
+    return names
+
+
+def get_canonical_content_types():
+    """Load canonical content_types from data/reference/content_types.yaml."""
+    global _CONTENT_TYPES_CACHE
+    if _CONTENT_TYPES_CACHE is not None:
+        return _CONTENT_TYPES_CACHE
+    path = os.path.join(_REPO_ROOT, "data", "reference", "content_types.yaml")
+    with open(path, "r", encoding="utf-8") as handle:
+        loaded = yaml.load(handle, Loader=Loader)
+    if not isinstance(loaded, list):
+        raise ValueError(f"Expected a list in {path}")
+    _CONTENT_TYPES_CACHE = frozenset(
+        item.strip() for item in loaded if isinstance(item, str) and item.strip()
+    )
+    return _CONTENT_TYPES_CACHE
+
+
+def _coverage_country_ids(record):
+    """Return coverage country ids in order, skipping empty values."""
+    ids = []
+    for entry in record.get("coverage") or []:
+        if not isinstance(entry, dict):
+            continue
+        location = entry.get("location") or {}
+        country = location.get("country") or {}
+        if isinstance(country, dict):
+            country_id = country.get("id")
+            if isinstance(country_id, str) and country_id.strip():
+                ids.append(country_id.strip())
+    return ids
+
+
+def _is_non_sovereign_country(country_id):
+    if not isinstance(country_id, str):
+        return True
+    return country_id.strip().upper() in PATH_COUNTRY_ALLOWLIST
+
+
+def check_coverage_level_values(record):
+    """Flag coverage levels outside the geographic-level vocabulary."""
+    issues = []
+    for idx, entry in enumerate(record.get("coverage") or []):
+        if not isinstance(entry, dict):
+            continue
+        location = entry.get("location") or {}
+        if "level" not in location or location.get("level") is None:
+            continue
+        level = location.get("level")
+        try:
+            level_int = int(level)
+        except (TypeError, ValueError):
+            level_int = None
+        if level_int in COVERAGE_LEVELS_ALLOWED:
+            continue
+        issues.append(
+            {
+                "issue_type": "COVERAGE_LEVEL_NONSTANDARD",
+                "field": f"coverage[{idx}].location.level",
+                "current_value": level,
+                "suggested_action": (
+                    "Set coverage level to 10 (supranational), 20 (national), "
+                    "30 (first-level subnational), 40, 50, or 60."
+                ),
+            }
+        )
+    return issues if issues else None
+
+
+def check_owner_level_missing(record):
+    """Central and federal owners need owner.location.level.
+
+    Regional and local owners are already covered by
+    OWNER_LOCATION_SUBREGION_REQUIRED.
+    """
+    owner = record.get("owner") or {}
+    owner_type = owner.get("type")
+    if owner_type not in CENTRAL_OWNER_TYPES:
+        return None
+    location = owner.get("location") or {}
+    if not isinstance(location, dict):
+        return None
+    if location.get("level") is not None:
+        return None
+    return {
+        "issue_type": "OWNER_LEVEL_MISSING",
+        "field": "owner.location.level",
+        "current_value": {"owner_type": owner_type, "level": None},
+        "suggested_action": (
+            "Set owner.location.level to 20 for a national government owner, "
+            "or 10 when the owner is supranational."
+        ),
+    }
+
+
+def check_gov_coverage_country_mismatch(record):
+    """Government owner country must match a single sovereign coverage country."""
+    owner = record.get("owner") or {}
+    if owner.get("type") not in GOVERNMENT_OWNER_TYPES:
+        return None
+    location = owner.get("location") or {}
+    country = location.get("country") or {}
+    owner_country = country.get("id") if isinstance(country, dict) else None
+    if not isinstance(owner_country, str) or not owner_country.strip():
+        return None
+    owner_country = owner_country.strip()
+    coverage_ids = list(dict.fromkeys(_coverage_country_ids(record)))
+    if len(coverage_ids) != 1:
+        return None
+    coverage_country = coverage_ids[0]
+    if _is_non_sovereign_country(coverage_country) or _is_non_sovereign_country(owner_country):
+        return None
+    if coverage_country == owner_country:
+        return None
+    return {
+        "issue_type": "GOV_COVERAGE_COUNTRY_MISMATCH",
+        "field": "coverage",
+        "current_value": {
+            "owner_country": owner_country,
+            "coverage_country": coverage_country,
+            "owner_type": owner.get("type"),
+        },
+        "suggested_action": (
+            "Government owner country and the single coverage country differ. "
+            "Align them, or record genuine multi-country coverage as separate "
+            "coverage entries."
+        ),
+    }
+
+
+def check_endpoint_type_aliases(record):
+    """Flag retired endpoint type names."""
+    issues = []
+    for idx, endpoint in enumerate(record.get("endpoints") or []):
+        if not isinstance(endpoint, dict):
+            continue
+        endpoint_type = endpoint.get("type")
+        if endpoint_type not in ENDPOINT_TYPE_ALIASES:
+            continue
+        replacement = ENDPOINT_TYPE_ALIASES[endpoint_type]
+        if replacement:
+            action = (
+                f"Replace endpoint type '{endpoint_type}' with '{replacement}'."
+            )
+        else:
+            action = (
+                f"Replace endpoint type '{endpoint_type}' with a specific type "
+                "already used for this software (see docs/vocabularies.md)."
+            )
+        issues.append(
+            {
+                "issue_type": "ENDPOINT_TYPE_ALIAS",
+                "field": f"endpoints[{idx}].type",
+                "current_value": endpoint_type,
+                "suggested_action": action,
+            }
+        )
+    return issues if issues else None
+
+
+def check_topic_type_values(record):
+    """Flag topic types outside EU data themes and ISO 19115."""
+    issues = []
+    for idx, topic in enumerate(record.get("topics") or []):
+        if not isinstance(topic, dict):
+            continue
+        topic_type = topic.get("type")
+        if not isinstance(topic_type, str) or not topic_type.strip():
+            continue
+        if topic_type in CANONICAL_TOPIC_TYPES:
+            continue
+        issues.append(
+            {
+                "issue_type": "TOPIC_TYPE_NONCANONICAL",
+                "field": f"topics[{idx}].type",
+                "current_value": topic_type,
+                "suggested_action": (
+                    "Use topic type 'eudatatheme' or 'iso19115'."
+                ),
+            }
+        )
+    return issues if issues else None
+
+
+def check_language_reference(record):
+    """Flag language codes and names that do not match langs.csv."""
+    issues = []
+    lang_names = get_lang_names()
+    for idx, lang in enumerate(record.get("langs") or []):
+        if not isinstance(lang, dict):
+            continue
+        code = lang.get("id")
+        name = lang.get("name")
+        if not isinstance(code, str) or not code.strip():
+            continue
+        code_key = code.strip().upper()
+        expected = lang_names.get(code_key)
+        if expected is None:
+            issues.append(
+                {
+                    "issue_type": "LANGUAGE_CODE_UNKNOWN",
+                    "field": f"langs[{idx}].id",
+                    "current_value": code,
+                    "suggested_action": (
+                        "Use a language code from data/reference/langs.csv. "
+                        "Chinese is ZH, not CN."
+                    ),
+                }
+            )
+            continue
+        if isinstance(name, str) and name.strip() and name.strip().casefold() != expected.casefold():
+            issues.append(
+                {
+                    "issue_type": "LANGUAGE_NAME_NONCANONICAL",
+                    "field": f"langs[{idx}].name",
+                    "current_value": {"id": code_key, "name": name, "expected": expected},
+                    "suggested_action": (
+                        f"Set langs name for {code_key} to '{expected}'."
+                    ),
+                }
+            )
+    return issues if issues else None
+
+
+def check_access_mode_preferred(record):
+    """Flag allowed access modes other than open and restricted."""
+    issues = []
+    access_mode = record.get("access_mode") or []
+    if not isinstance(access_mode, list):
+        return None
+    for idx, value in enumerate(access_mode):
+        if not isinstance(value, str):
+            continue
+        normalized = value.strip().lower()
+        if normalized not in ACCESS_MODE_ALLOWED or normalized in ACCESS_MODE_PREFERRED:
+            continue
+        issues.append(
+            {
+                "issue_type": "ACCESS_MODE_NONPREFERRED",
+                "field": f"access_mode[{idx}]",
+                "current_value": value,
+                "suggested_action": (
+                    "Prefer access_mode 'open' or 'restricted'."
+                ),
+            }
+        )
+    return issues if issues else None
+
+
+def check_content_type_values(record):
+    """Flag content_types values outside the canonical list."""
+    issues = []
+    allowed = get_canonical_content_types()
+    for idx, value in enumerate(record.get("content_types") or []):
+        if not isinstance(value, str) or not value.strip():
+            continue
+        if value in allowed:
+            continue
+        issues.append(
+            {
+                "issue_type": "CONTENT_TYPE_NONCANONICAL",
+                "field": f"content_types[{idx}]",
+                "current_value": value,
+                "suggested_action": (
+                    "Use a value from data/reference/content_types.yaml "
+                    "(dataset, map_layer, indicator, publication, microdata, document)."
+                ),
+            }
+        )
+    return issues if issues else None
+
+
+def check_missing_rights_open_data(record):
+    """Flag the official national open-data portal when it has no license fields.
+
+    Agency and thematic catalogs stay unflagged even when the owner is central
+    or federal government. ``properties.is_national`` marks the country's
+    official catalog of this type.
+    """
+    properties = record.get("properties") or {}
+    if not isinstance(properties, dict) or properties.get("is_national") is not True:
+        return None
+    if record.get("status") != "active":
+        return None
+    if record.get("catalog_type") != "Open data portal":
+        return None
+    access_mode = record.get("access_mode") or []
+    if not isinstance(access_mode, list) or "open" not in access_mode:
+        return None
+    owner = record.get("owner") or {}
+    if owner.get("type") not in CENTRAL_OWNER_TYPES:
+        return None
+    rights = record.get("rights") or {}
+    if not isinstance(rights, dict):
+        rights = {}
+    if any(rights.get(key) for key in ("license_id", "license_name", "license_url")):
+        return None
+    return {
+        "issue_type": "MISSING_RIGHTS",
+        "field": "rights",
+        "current_value": rights or None,
+        "suggested_action": (
+            "Add rights.license_id, license_name, and license_url for this "
+            "official national open-data portal."
+        ),
+    }
+
+
+def _corpus_issue(issue_type, field, current_value, suggested_action, meta):
+    country_codes = meta.get("country_codes") or ["UNKNOWN"]
+    return {
+        "issue_type": issue_type,
+        "field": field,
+        "current_value": current_value,
+        "suggested_action": suggested_action,
+        "file_path": meta.get("file_path"),
+        "record_id": meta.get("record_id"),
+        "priority": get_priority_level(issue_type),
+        "country_code": country_codes[0],
+    }
+
+
+def iter_is_national_excess_issues(records_metadata):
+    """Yield issues when more than two catalogs of one type are national."""
+    groups = defaultdict(list)
+    for meta in records_metadata:
+        if not meta.get("is_national"):
+            continue
+        owner_country = meta.get("owner_country")
+        catalog_type = meta.get("catalog_type")
+        if not owner_country or not catalog_type:
+            continue
+        groups[(owner_country, catalog_type)].append(meta)
+
+    for (owner_country, catalog_type), metas in groups.items():
+        if len(metas) <= IS_NATIONAL_MAX_PER_GROUP:
+            continue
+        sibling_ids = sorted(m.get("record_id") for m in metas)
+        for meta in metas:
+            yield (
+                _corpus_issue(
+                    "IS_NATIONAL_EXCESS",
+                    "properties.is_national",
+                    {
+                        "owner_country": owner_country,
+                        "catalog_type": catalog_type,
+                        "national_count": len(metas),
+                        "record_ids": sibling_ids,
+                    },
+                    (
+                        f"{owner_country} has {len(metas)} {catalog_type} records "
+                        "with is_national true. Keep at most one current catalog "
+                        "and one legacy; set is_national false on the others."
+                    ),
+                    meta,
+                ),
+                meta,
+            )
+
+
+def iter_boilerplate_description_issues(records_metadata):
+    """Yield one issue per catalog with a copied or template description."""
+    groups = defaultdict(list)
+    for meta in records_metadata:
+        description = meta.get("description") or ""
+        if not isinstance(description, str):
+            continue
+        description = description.strip()
+        if len(description) > BOILERPLATE_DESCRIPTION_MIN_LENGTH:
+            groups[description].append(meta)
+    shared = {
+        text
+        for text, metas in groups.items()
+        if len(metas) >= BOILERPLATE_DESCRIPTION_MIN_COPIES
+    }
+
+    for meta in records_metadata:
+        description = meta.get("description") or ""
+        if not isinstance(description, str):
+            continue
+        text = description.strip()
+        lowered = text.casefold()
+        phrase = next((item for item in BOILERPLATE_DESCRIPTION_PHRASES if item in lowered), None)
+        is_shared = text in shared
+        if not is_shared and phrase is None:
+            continue
+        reasons = []
+        if is_shared:
+            reasons.append(f"shared by {len(groups[text])} catalogs")
+        if phrase is not None:
+            reasons.append(f"contains '{phrase}'")
+        yield (
+            _corpus_issue(
+                "BOILERPLATE_DESCRIPTION",
+                "description",
+                {
+                    "reasons": reasons,
+                    "shared_count": len(groups[text]) if is_shared else 1,
+                    "excerpt": text[:120],
+                },
+                (
+                    "Replace this description with text about this catalog. "
+                    + "; ".join(reasons)
+                    + "."
+                ),
+                meta,
+            ),
+            meta,
+        )
+
+
 @app.command()
 def analyze_quality(output: str = None):
     """Analyze data portal records for missing values and data quality issues, generating organized reports"""
@@ -6156,6 +6612,15 @@ def analyze_quality(output: str = None):
                     check_content_types_access_mode,
                     check_language_validation,
                     check_coverage_normalization,
+                    check_coverage_level_values,
+                    check_owner_level_missing,
+                    check_gov_coverage_country_mismatch,
+                    check_endpoint_type_aliases,
+                    check_topic_type_values,
+                    check_language_reference,
+                    check_access_mode_preferred,
+                    check_content_type_values,
+                    check_missing_rights_open_data,
                     check_software_normalization,
                     check_catalog_software_coherence,
                     check_tag_topic_hygiene,
@@ -6243,6 +6708,16 @@ def analyze_quality(output: str = None):
                 for ident in record.get("identifiers") or []:
                     if isinstance(ident, dict) and ident.get("url"):
                         identifier_urls.append(ident["url"])
+                owner = record.get("owner") or {}
+                owner_location = owner.get("location") or {}
+                owner_country_obj = owner_location.get("country") or {}
+                owner_country = (
+                    owner_country_obj.get("id")
+                    if isinstance(owner_country_obj, dict)
+                    else None
+                )
+                properties = record.get("properties") or {}
+                description = record.get("description")
                 records_metadata.append(
                     {
                         "record_id": record_id,
@@ -6250,6 +6725,10 @@ def analyze_quality(output: str = None):
                         "country_codes": country_codes if country_codes else ["UNKNOWN"],
                         "link": link,
                         "identifier_urls": identifier_urls,
+                        "description": description if isinstance(description, str) else "",
+                        "catalog_type": record.get("catalog_type"),
+                        "owner_country": owner_country,
+                        "is_national": properties.get("is_national") is True,
                     }
                 )
                     
@@ -6462,6 +6941,11 @@ def analyze_quality(output: str = None):
                 "country_code": country_codes[0],
             }
             _emit_cross_record_issue(base_issue, meta)
+
+    for corpus_issue, meta in iter_is_national_excess_issues(records_metadata):
+        _emit_cross_record_issue(corpus_issue, meta)
+    for corpus_issue, meta in iter_boilerplate_description_issues(records_metadata):
+        _emit_cross_record_issue(corpus_issue, meta)
 
     # Group issues by country (for country reports - include issues for all countries a record spans)
     issues_by_country = {}

@@ -90,7 +90,7 @@ GET https://grand-challenge.org/challenges/
 GET https://grand-challenge.org/archives/
 ```
 
-**Keep:** public **challenges** and **archives** (dataset collections). **Drop:** algorithms as extra catalogs, reader studies, submissions, and per-user workspaces. `/api/v1/` may return `403` to non-browser clients — stop and use the HTML lists. One registered hub.
+**Keep:** public **challenges** and **archives** (dataset collections), including a hub `/data/` page that lists datasets. **Drop:** algorithms as extra catalogs, reader studies, submissions, per-user workspaces, and track subdomains of an install already registered. `/api/v1/` may return `403` to non-browser clients — stop and use the HTML lists. One catalog per installation.
 
 ## EvalAI (`evalai`) {#evalai}
 

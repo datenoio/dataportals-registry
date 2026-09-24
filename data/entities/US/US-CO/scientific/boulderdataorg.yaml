@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CO
+      name: Colorado
+description: RAMADDA hub of City of Boulder and Boulder County tables, including crashes,
+  trees, crime, emissions, and utilities.
+id: boulderdataorg
+langs:
+- id: EN
+  name: English
+link: https://boulderdata.org/repository
+name: Boulder Data Hub
+owner:
+  link: https://geodesystems.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CO
+      name: Colorado
+  name: Geode Systems LLC
+  type: Business
+software:
+  id: ramadda
+  name: RAMADDA
+status: active
+tags:
+- scientific
+- research data
+- business
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00016292
+endpoints:
+- type: ramadda:entry-show
+  url: https://boulderdata.org/repository/entry/show?output=json

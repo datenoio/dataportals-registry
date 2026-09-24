@@ -1,5 +1,5 @@
 access_mode:
-- public
+- open
 api: true
 api_status: active
 catalog_type: Geoportal
@@ -21,7 +21,7 @@ description: The Planetary Computer Data Catalog includes petabytes of environme
 endpoints:
 - type: stacserverapi
   url: https://planetarycomputer.microsoft.com/api/stac/v1/
-- type: customapi
+- type: stacserverapi
   url: https://planetarycomputer.microsoft.com/api/stac/v1/collections
 id: microsoftpc
 langs:

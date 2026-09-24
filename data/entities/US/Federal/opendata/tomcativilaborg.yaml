@@ -1,0 +1,50 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    macroregion:
+      id: '021'
+      name: Northern America
+    level: 20
+description: Archived ToMCAT multi-agent research dataset.
+id: tomcativilaborg
+langs:
+- id: EN
+  name: English
+link: https://tomcat.ivilab.org/
+name: ToMCAT Dataset
+owner:
+  link: https://tomcat.ivilab.org/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: ToMCAT
+  type: Academy
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00016097
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://tomcat.ivilab.org/-/databases.json

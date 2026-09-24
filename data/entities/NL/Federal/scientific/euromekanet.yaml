@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Erasmus University Library catalog of letters sent by Jan Tinbergen from
+  the mid-1920s until 1994, published as a schema.org Dataset on Omeka S.
+id: euromekanet
+langs:
+- id: EN
+  name: English
+link: https://eur.omeka.net/s/tb_ltrs_s
+name: Tinbergen Letters Sent
+owner:
+  link: https://www.eur.nl/en/library
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: Erasmus University Library
+  type: Academy
+software:
+  id: omekas
+  name: Omeka S
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00015330
+endpoints:
+- type: rest
+  url: https://eur.omeka.net/api/items
+- type: rest
+  url: https://eur.omeka.net/api/items?resource_class_label=Dataset
+- type: rest
+  url: https://eur.omeka.net/api-context

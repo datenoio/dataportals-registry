@@ -4,7 +4,7 @@ api: true
 api_status: active
 catalog_type: API Catalog
 content_types:
-- api endpoint
+- dataset
 coverage:
 - location:
     country:
@@ -18,7 +18,7 @@ description: Monetary Authority of Singapore API catalogue of MAS Data APIs (non
   for monthly statistical bulletin series, including banking, insurance, exchange
   rates, interest rates, and other financial statistics.
 endpoints:
-- type: customapi
+- type: rest
   url: https://eservices.mas.gov.sg/apimg-portal/api-catalog
 id: eservicesmasgovsgapimgportal
 langs:

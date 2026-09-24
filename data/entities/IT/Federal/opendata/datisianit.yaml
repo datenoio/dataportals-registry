@@ -1,0 +1,50 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    level: 20
+description: CKAN open data catalog of the National Agricultural Information System
+  (SIAN), including maritime fisheries datasets.
+id: datisianit
+langs:
+- id: IT
+  name: Italian
+link: https://dati.sian.it
+name: SIAN Open Data
+owner:
+  link: https://www.sian.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Ministero dell'Agricoltura, della Sovranità alimentare e delle Foreste
+  type: Central government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+endpoints:
+- type: ckan
+  url: "https://dati.sian.it/api/3"
+  version: "3"
+uid: cdi00007641

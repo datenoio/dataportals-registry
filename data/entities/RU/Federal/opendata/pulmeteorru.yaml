@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 20
+description: Meteor observations and camera status, licensed CC BY 4.0.
+id: pulmeteorru
+langs:
+- id: RU
+  name: Russian
+link: https://pulmeteor.ru/
+name: izMeteors Database
+owner:
+  link: https://pulmeteor.ru/
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 20
+  name: izMeteors
+  type: Community
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00015676
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://pulmeteor.ru/-/databases.json

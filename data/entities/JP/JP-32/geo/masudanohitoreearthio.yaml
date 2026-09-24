@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-32
+      name: Shimane
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Map of people and everyday life in Masuda City, published for the city's
+  community-development program.
+id: masudanohitoreearthio
+langs:
+- id: JA
+  name: Japanese
+link: https://masudanohito.reearth.io/
+name: 益田のひとMAP
+owner:
+  link: https://www.city.masuda.lg.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-32
+      name: Shimane
+  name: 益田市
+  type: Local government
+software:
+  id: reearth
+  name: Re:Earth
+status: active
+tags:
+- geospatial
+- GIS
+- Re:Earth
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00014834
+endpoints:
+- type: reearth:catalog
+  url: https://masudanohito.reearth.io/

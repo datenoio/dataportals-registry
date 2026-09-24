@@ -19,9 +19,9 @@ description: Treasury Open Budget portal of the Kyrgyz Republic. Publishes repub
   and local budget execution indicators (income, spending, and public debt) with a
   public JSON API. Distinct from the NSC open-data tables and the IMF NSDP.
 endpoints:
-- type: custom_api
+- type: rest
   url: https://budget.okmot.kg/api/home/data
-- type: custom_api
+- type: rest
   url: https://budget.okmot.kg/api/settings
 id: budgetokmotkg
 langs:

@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 30
+    macroregion:
+      id: '018'
+      name: Southern Africa
+    subregion:
+      id: ZA-FS
+      name: Free State
+description: Public ArcGIS Enterprise portal of the University of the Free State;
+  40 items in the public catalog search.
+endpoints:
+- type: arcgis:portals:self
+  url: https://arcgis.ufs.ac.za/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:search
+  url: https://arcgis.ufs.ac.za/portal/sharing/rest/search?f=json&q=orgid:0123456789ABCDEF
+id: arcgisufsacza
+langs:
+- id: EN
+  name: English
+link: https://arcgis.ufs.ac.za/portal/home/
+name: University of the Free State ArcGIS Enterprise
+owner:
+  link: https://www.ufs.ac.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 30
+    subregion:
+      id: ZA-FS
+      name: Free State
+  name: University of the Free State
+  type: Academy
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007858

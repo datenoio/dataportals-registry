@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: PT-08
+      name: Faro
+description: Public Lizmap geoportal of Olhão municipality.
+id: websigcmolhaopt
+langs:
+- id: PT
+  name: Portuguese
+link: https://websig.cm-olhao.pt/lm/
+name: SIG Município de Olhão
+owner:
+  link: https://www.cm-olhao.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    subregion:
+      id: PT-08
+      name: Faro
+  name: Câmara Municipal de Olhão
+  type: Local government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: wms130
+  url: "https://websig.cm-olhao.pt/lm/index.php/lizmap/service?repository=pub&project=Demografia&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+  version: "1.3.0"
+uid: cdi00007622

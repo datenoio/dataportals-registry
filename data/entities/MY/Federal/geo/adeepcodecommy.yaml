@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: SuperMap iPortal of SmartMap Sdn. Bhd., listing municipal geospatial
+  datasets and maps for Malaysian local authorities including Johor Bahru, Melaka,
+  Seberang Perai, and Bentong. The a.deepcode.com.my and b.deepcode.com.my hostnames
+  serve the same catalog.
+id: adeepcodecommy
+langs:
+- id: MS
+  name: Malay
+- id: EN
+  name: English
+link: http://a.deepcode.com.my:8190/iportal
+name: SmartMap SuperMap iPortal
+owner:
+  link: http://a.deepcode.com.my:8190/iportal
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 20
+  name: SmartMap Sdn. Bhd.
+  type: Business
+software:
+  id: supermapiportal
+  name: SuperMap iPortal
+status: active
+tags:
+- SuperMap
+- iPortal
+- geospatial
+- municipal
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00015250
+properties:
+  has_doi: false
+  is_national: false
+  dataset_count_reported: 140
+endpoints:
+- type: supermapiportal:services
+  url: http://a.deepcode.com.my:8190/iportal/web/services.json
+- type: supermapiportal:maps
+  url: http://a.deepcode.com.my:8190/iportal/web/maps.json
+- type: supermapiportal:datas
+  url: http://a.deepcode.com.my:8190/iportal/web/datas.json

@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Dataverse of the Sano Centre for Computational Medicine for sharing and
+  archiving computational medicine research data.
+id: dataversesanoscience
+langs:
+- id: PL
+  name: Polish
+link: https://dataverse.sano.science
+name: Sano Dataverse
+owner:
+  link: https://sano.science
+  location:
+    country:
+      id: PL
+      name: Poland
+  name: Sano Centre for Computational Medicine
+  type: Academy
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: dataverseapi
+  url: https://dataverse.sano.science/api/search
+- type: dataverseapi
+  url: https://dataverse.sano.science/api/info/version
+uid: cdi00015549

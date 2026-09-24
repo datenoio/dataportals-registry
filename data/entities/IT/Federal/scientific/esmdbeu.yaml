@@ -17,9 +17,9 @@ coverage:
 description: ORFEUS Engineering Strong-Motion Database distributing European and Mediterranean strong-motion
   waveforms, peak-motion parameters, ShakeMap products, and the ESM 2018 flatfile.
 endpoints:
-- type: api
+- type: rest
   url: https://esm-db.eu/esmws/eventdata/1/query
-- type: api
+- type: rest
   url: https://esm-db.eu/esmws/shakemap/1/query
 id: esmdbeu
 langs:

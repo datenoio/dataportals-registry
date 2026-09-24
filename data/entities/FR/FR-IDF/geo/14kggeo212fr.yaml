@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Île-de-France
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Public mviewer of environmental quality indicators for communes in Île-de-France,
+  published by Geo212 with Murmuration.
+id: 14kggeo212fr
+langs:
+- id: FR
+  name: French
+link: https://14kg.geo212.fr/
+name: 14kg Île-de-France
+owner:
+  link: https://www.geo212.com/
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Île-de-France
+  name: Geo212
+  type: Business
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- mviewer
+- geoportal
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: mviewer:catalog
+  url: https://14kg.geo212.fr/
+uid: cdi00013745

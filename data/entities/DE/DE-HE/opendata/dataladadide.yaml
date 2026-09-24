@@ -20,11 +20,11 @@ coverage:
 description: CIVORA / Piveau data catalog of Landkreis Darmstadt-Dieburg (LaDaDi),
   publishing district datasets from the open municipal data platform at data.ladadi.de.
 endpoints:
-- type: customapi
+- type: rest
   url: https://piveau-search.ladadi.civora.org/search
-- type: customapi
+- type: rest
   url: https://piveau-repo.ladadi.civora.org/catalogues
-- type: customapi
+- type: rest
   url: https://piveau-repo.ladadi.civora.org/datasets
 - type: ckan:package-search
   url: https://piveau-search.ladadi.civora.org/ckan/package_search

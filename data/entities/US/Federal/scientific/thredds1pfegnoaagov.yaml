@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: THREDDS catalog of satellite and ocean datasets from the NOAA Environmental
+  Research Division at the Pacific Fisheries Environmental Group.
+id: thredds1pfegnoaagov
+langs:
+- id: EN
+  name: English
+link: https://thredds1.pfeg.noaa.gov/thredds/catalog.html
+name: NOAA ERD THREDDS Data Server
+owner:
+  link: https://oceanview.pfeg.noaa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: NOAA Southwest Fisheries Science Center Environmental Research Division
+  type: Central government
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- scientific
+- research data
+- government
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00016180
+endpoints:
+- type: thredds:catalog
+  url: https://thredds1.pfeg.noaa.gov/thredds/catalog.xml
+- type: thredds:info
+  url: https://thredds1.pfeg.noaa.gov/thredds/info/serverInfo.xml

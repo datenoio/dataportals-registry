@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: BE-WAL
+      name: wallonne, Région
+description: Public ArcGIS Server 11.5 of the City of Mons with hosted feature services.
+  Distinct from the OpenDataSoft portal opendata.mons.be.
+id: arcgismonsbe
+langs:
+- id: FR
+  name: French
+link: https://arcgis.mons.be/server/rest/services
+name: Ville de Mons ArcGIS Server
+owner:
+  link: https://mons.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 30
+    subregion:
+      id: BE-WAL
+      name: wallonne, Région
+  name: Ville de Mons
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007981
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgis.mons.be/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgis.mons.be/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgis.mons.be/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://arcgis.mons.be/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arcgis.mons.be/server/rest/services?f=geositemap

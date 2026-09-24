@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+- indicator
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-AN
+      name: Andalucía
+description: OpenSDG scorecard of sustainable-development indicators for Universidad
+  Pablo de Olavide, tracking the university UPO2030 action plan, including scholarships
+  and campus operations.
+id: upousdgithubio
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: https://upo-usd.github.io/scorecard-site/
+name: UPO Sustainable Development Scorecard
+owner:
+  link: https://www.upo.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-AN
+      name: Andalucía
+  name: Universidad Pablo de Olavide
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: opensdg
+  name: OpenSDG
+status: active
+tags:
+- statistics
+- education
+- has_api
+- SDG
+- indicators
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: opensdg:reporting-status
+  url: https://upo-usd.github.io/scorecard-site/reporting-status
+- type: opensdg:reporting-status
+  url: https://upo-usd.github.io/scorecard-site/reporting-status/
+- type: opensdg:catalog
+  url: https://upo-usd.github.io/scorecard-site/indicators.json
+- type: opensdg:data
+  url: https://upo-usd.github.io/scorecard-data/en/data/1-4-1.json
+- type: opensdg:data
+  url: https://upo-usd.github.io/scorecard-data/en/data/11-2-2.json
+uid: cdi00011776

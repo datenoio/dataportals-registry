@@ -18,9 +18,9 @@ coverage:
 description: Official macroeconomic data warehouse of the State Bank of Vietnam. Time series cover GDP,
   industrial production, labour, consumer prices, investment, PMI, and related statistics.
 endpoints:
-- type: customapi
+- type: rest
   url: https://app.datawarehousepro.com/guest/getDatabanksWithMnemonics/sbv
-- type: customapi
+- type: rest
   url: https://app.datawarehousepro.com/guest/export/sbv
 id: appdatawarehouseprocomgosbv
 langs:

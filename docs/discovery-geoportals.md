@@ -39,6 +39,8 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | Hajk `appConfig.json` / `mapserviceBase` | `hajk` | [viewers](discovery-geoportals-viewers.md#hajk) |
 | Title `SHOGun` / `SHOGun Client` / `/applications` JSON | `shogun` | [viewers](discovery-geoportals-viewers.md#shogun) |
 | Title `ScalarGIS` / `/static/viewer/` / `logo-splash.png` | `scalargis` | [viewers](discovery-geoportals-viewers.md#scalargis) |
+| Title `CartoMapas` / `bundle-map-app.js` / WKTApp Arade | `cartomapas` | [viewers](discovery-geoportals-viewers.md#cartomapas) |
+| `/page/viewer?id=` / `/var/www/MapFusion/` GeoPlan | `mapfusion` | [viewers](discovery-geoportals-viewers.md#mapfusion) |
 | Origo `origo.min.js` / `Origo(` | `origo` | [viewers](discovery-geoportals-viewers.md#origo) |
 | Title `Tailormap` / `{org}.tailormap.nl` / `/nl/app/` | `tailormap` | [viewers](discovery-geoportals-viewers.md#tailormap) |
 | `{org}.webgis.nl` NieuwlandGeo Onemap | `nieuwlandonemap` | [viewers](discovery-geoportals-viewers.md#nieuwlandonemap) |
@@ -95,7 +97,7 @@ Confirm with a GET on the candidate host only. Stop on `401`/`403`.
 | `/JMapWeb/` or JMap NG `jmapserver-ng` | `jmap` | [viewers](discovery-geoportals-viewers.md#jmap) |
 | `{city}.giscloud.com` GIS Cloud | `giscloud` | [viewers](discovery-geoportals-viewers.md#giscloud) |
 | `{county}.mrf.com` / `js/lib/mrf/` MRF Web Map | `mrf` | [viewers](discovery-geoportals-viewers.md#mrf) |
-| `web.munisight.com/{Tenant}` Catalis Login.aspx | `munisight` | [viewers](discovery-geoportals-viewers.md#munisight) |
+| `app.munisight.com/{Tenant}` or `{tenant}.gis.catalisgov.ca` Login.aspx | `munisight` | [viewers](discovery-geoportals-viewers.md#munisight) |
 | `/pmapper/` or `{city}.geo-portale.it` p.mapper | `pmapper` | [viewers](discovery-geoportals-viewers.md#pmapper) |
 | `VECommunityView/cities/{city}/` CommunityView | `communityview` | [viewers](discovery-geoportals-viewers.md#communityview) |
 | `{city}.msgis.net` title GeoInformation | `msgis` | [viewers](discovery-geoportals-viewers.md#msgis) |
@@ -304,10 +306,14 @@ Explorer catalog; generic Angular or Gatsby bundles are insufficient. Search
 `"OneGeo Suite" "catalogue"` and the vendor's references. Keep separately registered
 GeoNetwork/GeoServer components classified as their own software.
 
+[gatsby-config.js](https://git.neogeo.fr/onegeo-suite/sites/onegeo-suite-site-portal/-/blob/main/gatsby-config.js) titles the Portal `Onegeo Portal` (2 hosts in September 2026, both `demo.onegeosuite.fr`). The white-label subtitle `Hub géospatial collaboratif` matched nothing. Keep the login-shell query.
+
 
 | Tool | Query |
 |------|-------|
 | Google | `"OneGeo Suite" (catalogue OR catalog)` |
+| Censys | `web.endpoints.http.body: "Onegeo Portal"` |
+| FOFA | `body="Onegeo Portal"` |
 | Censys | `web.endpoints.http.body: "onegeo-suite-site-login-vuejs"` |
 | FOFA | `body="onegeo-suite-site-login-vuejs"` |
 

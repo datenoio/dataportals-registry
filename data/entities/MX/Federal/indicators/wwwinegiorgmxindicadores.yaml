@@ -20,7 +20,7 @@ description: INEGI Banco de Indicadores provides sociodemographic and economic i
   can be queried through the web application and a documented REST API (JSON, JSONP, XML, JSON-stat, and
   PC-Axis).
 endpoints:
-- type: customapi
+- type: rest
   url: https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/
   version: '2.0'
 - type: docs
@@ -44,7 +44,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
-  is_national: true
+  is_national: false
 rights:
   license_id: null
   license_name: null

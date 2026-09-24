@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: UG
+      name: Uganda
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: WIS 2.0 in a box node of the Uganda National Meteorological Authority
+  (centre-id ug-meteo). Publishes WMO discovery metadata for hourly synoptic observations
+  through an OGC API Features service. Public endpoint is an IP address.
+id: '3435135154'
+langs:
+- id: EN
+  name: English
+link: http://34.35.135.154
+name: Uganda - WIS 2.0 in a box
+owner:
+  link: https://www.unma.go.ug
+  location:
+    country:
+      id: UG
+      name: Uganda
+    level: 20
+  name: Uganda National Meteorological Authority
+  type: Central government
+software:
+  id: wis20box
+  name: Wis 2.0 Box
+status: active
+tags:
+- meteorology
+- climate
+- WIS2
+- government
+- has_api
+topics:
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00015987
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: pygeoapi:openapi
+  url: http://34.35.135.154/oapi/openapi
+  version: '1.0'
+- type: ogc:features
+  url: http://34.35.135.154/oapi/collections/?f=json
+  version: '1.0'

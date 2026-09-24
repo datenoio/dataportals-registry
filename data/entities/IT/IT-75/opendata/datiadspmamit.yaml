@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-75
+      name: Puglia
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: CKAN open data catalog of the Southern Adriatic Sea Port System Authority
+  (PENTAS), with port and logistics datasets.
+id: datiadspmamit
+langs:
+- id: IT
+  name: Italian
+link: https://dati.adspmam.it
+name: Open Data AdSP Mar Adriatico Meridionale
+owner:
+  link: https://adspmam.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-75
+      name: Puglia
+  name: Autorità di Sistema Portuale del Mare Adriatico Meridionale
+  type: Regional government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+endpoints:
+- type: ckan
+  url: "https://dati.adspmam.it/api/3"
+  version: "3"
+uid: cdi00007653

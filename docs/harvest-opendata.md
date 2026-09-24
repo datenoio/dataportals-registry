@@ -55,6 +55,26 @@ Argentine CKAN distribution (datos.gob.ar) — harvest exactly like [CKAN](#ckan
 
 **Keep:** `package_search` packages. **Drop:** showcases, harvest objects, series API observations.
 
+## BODIK ODCS (`bodikodcs`) {#bodikodcs}
+
+Shared CKAN at `data.bodik.jp`. Harvest one municipality at a time.
+
+```text
+GET https://data.bodik.jp/api/3/action/package_search?q=organization:{lgcode}&rows=100
+```
+
+**Keep:** packages for that organization. **Drop:** other municipalities' packages, the WordPress marketing pages, and non-municipality organization ids. The aggregate `package_search` without an organization filter belongs only on the shared `data.bodik.jp` catalog.
+
+## jig.jp Open Data Platform (`jigodp`) {#jigodp}
+
+One shared CKAN. Municipalities are organizations, not separate catalogs.
+
+```text
+GET https://ckan.odp.jig.jp/api/3/action/package_search?rows=100
+```
+
+**Keep:** packages from that catalog. **Drop:** the odp.jig.jp marketing site. Do not register each organization as its own catalog.
+
 ## DKAN (`dkan`) {#dkan}
 
 Same Action API as [CKAN](#ckan) when enabled; also `/api/1/search`. Confirm JSON `"success": true`. If only Drupal JSON:API is public, harvest `/jsonapi/dataset/dataset` (DKAN 2 dataset entity) and prefer `dkan` when the product is DKAN.
@@ -69,6 +89,18 @@ GET https://host/jsonapi/dataset/dataset
 GET https://host/api/3
 ```
 
+## EKAN (`ekan`) {#ekan}
+
+Drupal 9/10 DKAN-1 successor. Harvest Drupal JSON:API dataset entities when public; otherwise the DCAT dump.
+
+**Keep:** `/jsonapi/dataset/dataset` entities, or `/data.json` / `/catalog.xml` dataset records.
+**Drop:** Drupal `page` / `article` nodes, login forms, vendor demo and staging hosts. Prefer `ekan` over `dkan` or `drupal` when `ekan_theme` or `/profiles/contrib/ekan/` is present. Do not harvest GetDKAN `/api/1/search` on these sites — that route is not EKAN.
+
+```text
+GET https://host/jsonapi/dataset/dataset
+GET https://host/data.json
+GET https://host/catalog.xml
+```
 
 ## OpenDataSoft (`opendatasoft`) {#opendatasoft}
 
@@ -117,6 +149,18 @@ Do not page `/api/1/reuses/` or `/api/1/posts/` as datasets.
 
 **Keep:** `/api/1/datasets/` dataset objects. **Drop:** `/api/1/reuses/` and `/api/1/posts/`.
 
+## PortalJS (`portaljs`) {#portaljs}
+
+Datopian catalog shells. Harvest dataset pages and, when it answers, the CKAN package API on the host the portal uses.
+
+```text
+GET https://host/search
+GET https://host/@{org}/{slug}
+GET https://host/api/3/action/package_search?rows=100
+```
+
+The package API is sometimes on a linked host (`api.`, `admin.`, or `ckan.`). **Keep:** dataset pages under `/@{org}/{slug}` and `package_search` results. **Drop:** `portaljs.com` marketing, `arc.portaljs.com` sign-in, and GitHub example repos. One portal host = one harvest scope.
+
 ## Magda (`magda`) {#magda}
 
 Catalog search API from `endpoints[]`. Keep datasets, not portal chrome.
@@ -140,6 +184,17 @@ GET https://host/datasets.json
 
 **Keep:** published dataset entries. **Drop:** GitHub issues and the JKAN docs site.
 
+## KUKAN (`kukan`) {#kukan}
+
+CKAN-compatible read API plus the native package list. Keep datasets, not admin or auth routes.
+
+```text
+GET https://host/api/3/action/package_search?rows=100
+GET https://host/api/v1/packages
+```
+
+**Keep:** package/dataset records and their resources. **Drop:** `/api/auth`, `/api/mcp`, `/api/v1/admin`, and the kukan.dev product site. If `/api/3/action/status_show` returns `ckan_version`, harvest it as CKAN instead.
+
 ## Datasette (`datasette`) {#datasette}
 
 Harvest the published instance root. Each SQLite database or listed table is a dataset; canned queries and SQL result rows are not extra catalogs.
@@ -151,6 +206,18 @@ GET https://host/{database}/{table}.json?_shape=array&_size=1
 ```
 
 **Keep:** published databases/tables and their JSON/CSV exports. **Drop:** `/-/` debug pages, canned-query result rows, and datasette.io marketing.
+
+## Datadex (`datadex`) {#datadex}
+
+Static portals. The dataset page lists Parquet and CSV tables. Files are often on `data.{host}`.
+
+```text
+GET https://host/datasets
+GET https://data.host/{table}.parquet
+GET https://data.host/{table}.csv
+```
+
+**Keep:** tables named on that dataset page. **Drop:** datadex.datonic.io, GitHub source repositories, and Hugging Face dataset pages already covered by the Hugging Face Datasets catalog. Some instances (Datania) only mirror tables onto Hugging Face; harvest the portal’s own file list when it has one, and do not open a second harvest of the Hugging Face copy.
 
 ## Junar (`junar`) {#junar}
 
@@ -311,6 +378,16 @@ GET https://host/ckan_api/package_list
 
 **Keep:** tenant **datasets** from `package_search` or the public catalog JSON. **Drop:** idea-box posts and the vendor homepage. One tenant = one scope (`%.dataeye.jp`). If `status_show` 404s, harvest the HTML catalog list only.
 
+## LinkData (`linkdata`) {#linkdata}
+
+Single hub at `linkdata.org`. Harvest published data works, not apps or ideas.
+
+```text
+GET https://linkdata.org/
+```
+
+**Keep:** data works (table title + CSV or RDF download). **Drop:** App.LinkData applications, Idea.LinkData posts, and Knowledge Connector pages. One hub = one harvest scope. Do not open a second record for a municipality site that only links to a work.
+
 ## Seoul Open Data Plaza (`seoulopendataplaza`) {#seoulopendataplaza}
 
 `/openinf/` JSP catalogs. Open API developer space often needs a key.
@@ -330,6 +407,16 @@ GET https://host/oportal/
 ```
 
 **Keep:** `/oportal/` dataset listing or DCAT if public. **Drop:** the application gallery and login-only 数据开放 admin.
+
+## Epoint Big Data Open Platform (`epointopendata`) {#epointopendata}
+
+Public catalog pages under `/extranet/openportal/`. No verified anonymous list API on every tenant.
+
+```text
+GET https://host/extranet/openportal/pages/default/index.html
+```
+
+**Keep:** the public dataset or catalog listing for that government tenant. **Drop:** login-only申请 workflows, the API application gallery, and `/oportal/` Inspur tenants.
 
 ## data.world (`dataworld`) {#dataworld}
 
@@ -381,6 +468,26 @@ GET https://host/transparencia/datos/catalogo
 
 **Keep:** rows that are datasets (title + landing or file URL). **Drop:** the rest of the e-office, transparency obligation pages, and guessed CKAN/OpenDataSoft/Socrata paths (they are HTML). If the list is HTML-only with no machine table, stop. One municipality tenant = one harvest scope.
 
+## Gobierto Datos (`gobierto`) {#gobierto}
+
+Populate Gobierto dataset hub. Harvest the `/datos` catalog, not the budget or contracts modules.
+
+```text
+GET https://host/datos
+```
+
+**Keep:** dataset pages under `/datos/{slug}` (title, metadata, file or SQL API link). **Drop:** `/presupuestos`, contracts, agendas, planes, `gobierto.es` marketing, and `presupuestos.gobierto.es`. One municipality host = one harvest scope. Do not set `ckan`.
+
+## Municipium Portale Opendata (`municipium`) {#municipium}
+
+Maggioli Municipium tenants (Italian comuni). Harvest the **catalog page** on the tenant host, not the shared API host.
+
+```text
+GET https://host/it/page/catalogo
+```
+
+**Keep:** dataset entries listed on the catalog page (title + landing page). **Drop:** informative pages (`/it/page/informazioni-*`), the DATI.GOV national catalog links, siti tematici navigation, and the vendor demo `opendata.municipiumapp.it`. The `{tenant}-opendata-api.cloud.municipiumapp.it` backend serves assets and has no documented public dataset API — do not guess endpoints there. Do not harvest `opendata.maggioli.cloud` organization slices here; that hub is the shared CKAN catalog. One comune tenant = one harvest scope.
+
 ## OPENDATAENTE (`opendataente`) {#opendataente}
 
 Italian Actainfo municipal SaaS. Harvest `dcat:Dataset` from the tenant DCAT-AP_IT catalog, not the React theme tiles.
@@ -390,6 +497,45 @@ GET https://host/backend/api/catalog/
 ```
 
 **Keep:** `dcatapit:Dataset` / `dcat:Dataset` in that RDF. **Drop:** `dcat:Distribution` files, the vendor sites `opendataente.it` / `opendataente.cloud`, ActaLogin hosts, and dati.gov.it copies of the same datasets. One tenant = one harvest scope.
+
+## DataPortal.AI (`dataportalai`) {#dataportalai}
+
+Sister StatPortal Open Data / DataPortal.AI portals. Harvest the catalog index and dataset pages, not the vendor site. Fingerprints: [discovery-opendata.md](discovery-opendata.md#dataportalai).
+
+StatPortal Open Data / SPOD (Drupal):
+
+```text
+GET https://host/catalogo-opendata
+GET https://host/catalog
+GET https://host/opendata/{slug}
+```
+
+The catalog path is `/catalogo-opendata` (Pisa) or `/catalog` (Veneto). Dataset records live under `/opendata/{slug}`.
+
+DataPortal.AI SPA (`dati.lavoro.gov.it`): the HTML shell is the same document for `/`, `/catalogo-opendata/`, and `/content/`. `/config/config.json` sets `baseURL` to `/api/core/` and names `/api/odata/`. Harvest a dataset list from those APIs only after a GET returns dataset records.
+
+**Keep:** dataset entries (title + `/opendata/{slug}` landing page + file link). **Drop:** `/content/` CMS pages, `?t=Tabella` / `?t=Grafico` / `?t=Scarica` views of the same dataset, `sister.it` and `almawave.com` marketing, the Istat browser `statportal.it`, Sister Data Browser (`title` `Data Browser`), StatKit / ASTATDATA, and dati.gov.it copies of the same datasets. One administration portal = one harvest scope. Do not guess `/api/3`. A host whose `/api/3/action/status_show` returns `ckan_version` is CKAN (`dati.unionevallesavio.it`).
+
+## ComunWeb (`comunweb`) {#comunweb}
+
+Trentino ComunWeb sites. Harvest the dataset class, not the rest of the municipal CMS.
+
+```text
+GET https://host/api/opendata/v1/content/class/opendata_dataset
+GET https://host/exportas/csv/opendata_dataset
+```
+
+**Keep:** nodes whose `classIdentifier` is `opendata_dataset` (title `objectName`, landing page `fullUrl`). **Drop:** other classes from `/api/opendata/v1/content/classList` (albo, news, banners, comments), `comunweb.it` marketing, and login pages. A `ckan_` prefix on `objectRemoteId` does not make the host CKAN. One ente host = one harvest scope.
+
+## PA-Online Open Data (`paonline`) {#paonline}
+
+Technical Design RDF catalogs on `pa-online.it`.
+
+```text
+GET https://www.pa-online.it/OpenData/{istat}/METADATO.rdf
+```
+
+The file name is sometimes the comune name instead of `METADATO.rdf`. **Keep:** `dcatapit:Dataset` records in that RDF. **Drop:** `hosting.pa-online.it` sportello pages, `GisMasterWebS` SUAP and payment screens, and GisMaster map viewers. One ISTAT directory = one harvest scope.
 
 ## OpenGov (`opengov`) {#opengov}
 
@@ -415,7 +561,7 @@ GET https://host/data.json
 
 Bundle names vary (`dataset`, `open_data`, `ckan_dataset`). Inspect `/jsonapi` once for dataset-like bundles. **Keep:** those dataset nodes. **Drop:** `article`, `page`, `media`, and user accounts.
 
-DKAN on Drupal: use the [DKAN](#dkan) Action API when enabled — prefer `dkan` as `software.id`.
+DKAN on Drupal: use the [DKAN](#dkan) Action API when enabled — prefer `dkan` as `software.id`. EKAN: use the [EKAN](#ekan) JSON:API dataset list — prefer `ekan`.
 
 ## WordPress (`wordpress`) {#wordpress}
 
@@ -712,6 +858,12 @@ GET https://host/datasets/
 public metadata API was verified; do not infer one from the underlying Bitrix CMS.
 The [vendor demo](https://opendata.sf2.simai.ru/datasets/) contains demonstration data
 and must remain distinguishable from production holdings.
+
+## Aid Management Platform (`amp`) {#amp}
+
+Country AMP portal (often `/portal/`). Harvest the public **activity / project** list if unauthenticated. One harvest scope per country installation, not per report or chart.
+
+**Keep:** public aid **activities / projects**. **Drop:** news, login walls, and individual PDF reports.
 
 ## Related
 

@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-SN
+      name: Sachsen
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: OPUS 4 publication server of Hochschule Mittweida.
+id: monamihsmittweidade
+langs:
+- id: DE
+  name: German
+link: https://monami.hs-mittweida.de
+name: MOnAMi
+owner:
+  link: https://monami.hs-mittweida.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-SN
+      name: Sachsen
+  name: Hochschule Mittweida
+  type: Academy
+software:
+  id: opus
+  name: OPUS
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00011540
+endpoints:
+- type: oaipmh20
+  url: https://monami.hs-mittweida.de/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://monami.hs-mittweida.de/rss/index/index/searchtype/latest
+  version: '2.0'

@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP
+================================================================================
+Generated: 2026-09-24 20:41:37
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP
+Priority: MEDIUM
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='lizmap' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+FR: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+cartoparchautjurafr: 1 issue
+
+=== ISSUES ===
+
+File: FR/FR-BFC/geo/cartoparchautjurafr.yaml
+Record ID: cartoparchautjurafr
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP
+Field: endpoints
+Current Value: {"software_id": "lizmap", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions

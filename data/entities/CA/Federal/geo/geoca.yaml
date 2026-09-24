@@ -21,10 +21,10 @@ description: GEO.ca is the definitive source for Canada’s open geospatial info
   (geocore.api.geo.ca REST API) with the GeoView map viewer; geo.ca is the
   WordPress landing site.
 endpoints:
-- type: customapi
+- type: rest
   url: https://geocore.api.geo.ca/geo
   url_pattern: https://geocore.api.geo.ca/geo?north={north}&south={south}&east={east}&west={west}&lang=en&min={offset}&max={limit}
-- type: customapi
+- type: rest
   url: https://geocore.api.geo.ca/id
   url_pattern: https://geocore.api.geo.ca/id?id={uuid}&lang=en
 id: geoca

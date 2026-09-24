@@ -1,0 +1,66 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: CZ-64
+      name: Jihomoravský kraj
+description: Kadi4Mat research data repository and electronic lab notebook of Brno
+  University of Technology. Research data is stored on CESNET S3 object storage. Record
+  and collection listings require a BUT Shibboleth login.
+id: kadi4matlibvutbrcz
+langs:
+- id: CS
+  name: Czech
+- id: EN
+  name: English
+link: https://kadi4mat.lib.vutbr.cz/
+name: Kadi4Mat BUT
+owner:
+  link: https://www.vut.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 30
+    subregion:
+      id: CZ-64
+      name: Jihomoravský kraj
+  name: Brno University of Technology
+  type: Academy
+software:
+  id: kadi4mat
+  name: Kadi4Mat
+status: active
+tags:
+- scientific
+- research data
+- academic
+- materials science
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00011227
+endpoints:
+- type: kadi4mat:records
+  url: https://kadi4mat.lib.vutbr.cz/api/records
+- type: kadi4mat:collections
+  url: https://kadi4mat.lib.vutbr.cz/api/collections
+properties:
+  is_national: false

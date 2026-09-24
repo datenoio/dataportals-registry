@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion:
+      id: '001'
+      name: World
+description: Public GeoNode catalog of layers and maps.
+id: cdiegeonodeprodakvoorg
+langs:
+- id: EN
+  name: English
+link: https://cdie-geonode-prod.akvo.org/
+name: CDIE GeoNode
+owner:
+  link: https://cdie-geonode-prod.akvo.org/
+  location:
+    country:
+      id: World
+      name: World
+    level: 2
+  name: CDIE GeoNode
+  type: Civil society
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- maps
+- civil society
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+endpoints:
+- type: geonode:documents
+  url: https://cdie-geonode-prod.akvo.org/api/documents/
+- type: csw202
+  url: https://cdie-geonode-prod.akvo.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://cdie-geonode-prod.akvo.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://cdie-geonode-prod.akvo.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: opensearch
+  url: https://cdie-geonode-prod.akvo.org/catalogue/opensearch
+  version: '1.1'
+- type: wfs110
+  url: https://cdie-geonode-prod.akvo.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs100
+  url: https://cdie-geonode-prod.akvo.org/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://cdie-geonode-prod.akvo.org/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wps100
+  url: https://cdie-geonode-prod.akvo.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+uid: cdi00016523

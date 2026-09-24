@@ -1,358 +1,1508 @@
 DATA QUALITY ANALYSIS REPORT
 ================================================================================
-Generated: 2026-09-18 23:43:01
-Total Records Analyzed: 39113
-Total Issues Found: 41
-Records with Issues: 40
+Generated: 2026-09-24 20:41:37
+Total Records Analyzed: 41167
+Total Issues Found: 211
+Records with Issues: 211
 
 === ISSUES BY TYPE ===
 
-[MISSING_CONTACT_INFO]
+[MISSING_RIGHTS]
+Count: 53
+Priority: LOW
+
+File: SK/Federal/opendata/dataslovenskosk.yaml
+Record ID: dataslovenskosk
+Country: SK
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: SE/Federal/opendata/dataportalse.yaml
+Record ID: dataportalse
+Country: SE
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: UZ/Federal/opendata/dataegovuz.yaml
+Record ID: dataegovuz
+Country: UZ
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: PE/Federal/opendata/catalogodatosabiertosgobpe.yaml
+Record ID: catalogodatosabiertosgobpe
+Country: PE
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: PE/Federal/opendata/datosabiertosgobpe.yaml
+Record ID: datosabiertosgobpe
+Country: PE
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: PY/Federal/opendata/datosgovpy.yaml
+Record ID: datosgovpy
+Country: PY
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: HK/Federal/opendata/datagovhk.yaml
+Record ID: datagovhk
+Country: HK
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: MO/opendata/datagovmo.yaml
+Record ID: datagovmo
+Country: MO
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': 'https://data.gov.mo/PrivacyClause', 'rights_type': 'granular', 'tos_url': 'https://data.gov.mo/UseClause'}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: GT/Federal/opendata/catalogosenacytgobgt.yaml
+Record ID: catalogosenacytgobgt
+Country: GT
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: BE/Federal/opendata/datagovbe.yaml
+Record ID: datagovbe
+Country: BE
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: DO/Federal/opendata/datosgobdo.yaml
+Record ID: datosgobdo
+Country: DO
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: GR/Federal/opendata/datagovgr.yaml
+Record ID: datagovgr
+Country: GR
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': 'https://data.gov.gr/pages/privacy', 'rights_type': 'granular', 'tos_url': 'https://data.gov.gr/pages/terms-of-use'}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: BD/Federal/opendata/ogdnewsdggovbd.yaml
+Record ID: ogdnewsdggovbd
+Country: BD
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': 'https://ogdnew.sdg.gov.bd/privacy-policy', 'rights_type': 'unknown', 'tos_url': 'https://ogdnew.sdg.gov.bd/terms-of-use'}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: AL/Federal/opendata/opendatagoval.yaml
+Record ID: opendatagoval
+Country: AL
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: MN/Federal/opendata/opendatagovmn.yaml
+Record ID: opendatagovmn
+Country: MN
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: IR/Federal/opendata/catalogdatagovir.yaml
+Record ID: catalogdatagovir
+Country: IR
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: IN/Federal/opendata/datagovin.yaml
+Record ID: datagovin
+Country: IN
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: LV/Federal/opendata/datagovlv.yaml
+Record ID: datagovlv
+Country: LV
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: CH/Federal/opendata/opendataswiss.yaml
+Record ID: opendataswiss
+Country: CH
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: CH/Federal/opendata/databfsadminch.yaml
+Record ID: databfsadminch
+Country: CH
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': 'https://www.bfs.admin.ch/bfs/de/home/bfs/bundesamt-statistik/rechtliche-hinweise.html', 'rights_type': 'global', 'tos_url': 'https://www.bfs.admin.ch/bfs/de/home/bfs/bundesamt-statistik/nutzungsbedingungen.html'}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: LK/Federal/opendata/datagovlk.yaml
+Record ID: datagovlk
+Country: LK
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: EC/Federal/opendata/catalogodatosabiertosgobec.yaml
+Record ID: catalogodatosabiertosgobec
+Country: EC
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: TW/Federal/opendata/datagovtw.yaml
+Record ID: datagovtw
+Country: TW
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: RS/Federal/opendata/datagovrs.yaml
+Record ID: datagovrs
+Country: RS
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: VE/Federal/opendata/datosgobve.yaml
+Record ID: datosgobve
+Country: VE
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: PT/Federal/opendata/dadosgovpt.yaml
+Record ID: dadosgovpt
+Country: PT
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: PH/Federal/opendata/datagovph.yaml
+Record ID: datagovph
+Country: PH
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: PA/Federal/opendata/datosabiertosgobpa.yaml
+Record ID: datosabiertosgobpa
+Country: PA
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: BH/Federal/opendata/datagovbh.yaml
+Record ID: datagovbh
+Country: BH
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': 'https://data.gov.bh/terms/privacy-policy/', 'rights_type': 'granular', 'tos_url': 'https://data.gov.bh/terms/terms-and-conditions/'}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: BO/Federal/opendata/datosgobbo.yaml
+Record ID: datosgobbo
+Country: BO
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: KR/Federal/opendata/datagokr.yaml
+Record ID: datagokr
+Country: KR
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: MK/Federal/opendata/datagovmk.yaml
+Record ID: datagovmk
+Country: MK
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: BT/Federal/opendata/datagovbt.yaml
+Record ID: datagovbt
+Country: BT
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: MY/Federal/opendata/datagovmy.yaml
+Record ID: datagovmy
+Country: MY
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: AR/Federal/opendata/datosgobar.yaml
+Record ID: datosgobar
+Country: AR
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: KG/Federal/opendata/datagovkg.yaml
+Record ID: datagovkg
+Country: KG
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: HR/Federal/opendata/datagovhr.yaml
+Record ID: datagovhr
+Country: HR
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: NL/Federal/opendata/dataoverheidnl.yaml
+Record ID: dataoverheidnl
+Country: NL
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: KZ/Federal/opendata/dataegovkz.yaml
+Record ID: dataegovkz
+Country: KZ
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: BN/Federal/opendata/datagovbn.yaml
+Record ID: datagovbn
+Country: BN
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'global', 'tos_url': 'https://www.data.gov.bn/data-policy-terms-of-use/'}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: MX/Federal/opendata/datosgobmx.yaml
+Record ID: datosgobmx
+Country: MX
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: DK/Federal/opendata/datavejviserdk.yaml
+Record ID: datavejviserdk
+Country: DK
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: BR/Federal/opendata/dadosgovbr.yaml
+Record ID: dadosgovbr
+Country: BR
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: JE/Federal/opendata/opendatagovje.yaml
+Record ID: opendatagovje
+Country: JE
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: LU/Federal/opendata/datapubliclu.yaml
+Record ID: datapubliclu
+Country: LU
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': 'https://data.public.lu/en/pages/legal/privacy', 'rights_type': 'granular', 'tos_url': 'https://data.public.lu/en/pages/legal/terms'}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: ID/Federal/opendata/katalogdatagoid.yaml
+Record ID: katalogdatagoid
+Country: ID
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: IQ/Federal/opendata/nogpgoviq.yaml
+Record ID: nogpgoviq
+Country: IQ
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'global', 'tos_url': 'https://nogp.gov.iq/POLICIES.aspx'}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: ES/Federal/opendata/datosgobes.yaml
+Record ID: datosgobes
+Country: ES
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: JM/Federal/opendata/datagovjm.yaml
+Record ID: datagovjm
+Country: JM
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: LT/Federal/opendata/datagovlt.yaml
+Record ID: datagovlt
+Country: LT
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+... and 3 more records with this issue
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB]
+Count: 4
+Priority: MEDIUM
+
+File: SE/Federal/geo/kartorsfvse.yaml
+Record ID: kartorsfvse
+Country: SE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
+Field: endpoints
+Current Value: {'software_id': 'arcgishub', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgishub' is marked as API-capable in software definitions
+
+File: SE/SE-E/geo/kartaatvidabergse.yaml
+Record ID: kartaatvidabergse
+Country: SE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
+Field: endpoints
+Current Value: {'software_id': 'arcgishub', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgishub' is marked as API-capable in software definitions
+
+File: IT/IT-88/geo/arpasmapsarcgiscom.yaml
+Record ID: arpasmapsarcgiscom
+Country: IT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
+Field: endpoints
+Current Value: {'software_id': 'arcgishub', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgishub' is marked as API-capable in software definitions
+
+File: RS/RS-VO/geo/geoportalvojvodinagovrs.yaml
+Record ID: geoportalvojvodinagovrs
+Country: RS
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
+Field: endpoints
+Current Value: {'software_id': 'arcgishub', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgishub' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX]
+Count: 7
+Priority: MEDIUM
+
+File: RU/RU-ALT/opendata/opendatabarnaulorg.yaml
+Record ID: opendatabarnaulorg
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-AL/opendata/mcxaltairu.yaml
+Record ID: mcxaltairu
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-NGR/opendata/igoknnovregru.yaml
+Record ID: igoknnovregru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-IVA/opendata/deritivanovooblru.yaml
+Record ID: deritivanovooblru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-KHA/opendata/khfomsru.yaml
+Record ID: khfomsru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-KHM/opendata/opendataadmmegionru.yaml
+Record ID: opendataadmmegionru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-CE/opendata/mkchrru.yaml
+Record ID: mkchrru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
 Count: 1
-Priority: LOW
+Priority: MEDIUM
 
-File: BR/BR-SC/geo/prefeiturasc1mapcombr.yaml
-Record ID: prefeiturasc1mapcombr
-Country: BR
-Issue: MISSING_CONTACT_INFO
-Field: owner.link
-Current Value: None
-Suggested Action: Add a contact or support URL for the organization or portal, so users know how to request access or ask questions.
+File: IT/Federal/opendata/opendatavigilfuocoit.yaml
+Record ID: opendatavigilfuocoit
+Country: IT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-[MISSING_OWNER_LINK]
-Count: 40
-Priority: LOW
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN]
+Count: 1
+Priority: MEDIUM
 
-File: CN/CN-AH/geo/scpcmuyxscloudcom.yaml
-Record ID: scpcmuyxscloudcom
-Country: CN
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: IN/IN-KA/opendata/opendatabensclcom.yaml
+Record ID: opendatabensclcom
+Country: IN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN
+Field: endpoints
+Current Value: {'software_id': 'dkan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dkan' is marked as API-capable in software definitions
 
-File: CN/Federal/indicators/wwwchinabgaocom.yaml
-Record ID: wwwchinabgaocom
-Country: CN
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
+Count: 85
+Priority: MEDIUM
 
-File: CN/Federal/geo/knowledgeyinchuanwatercn.yaml
-Record ID: knowledgeyinchuanwatercn
-Country: CN
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: US/US-WI/indicators/dhswisconsingovepht.yaml
+Record ID: dhswisconsingovepht
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
 
-File: CN/Federal/geo/witsmartsdccom.yaml
-Record ID: witsmartsdccom
-Country: CN
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: US/US-WI/indicators/dhswisconsingovwish.yaml
+Record ID: dhswisconsingovwish
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
 
-File: AR/AR-W/opendata/somcordatospaisdigitalmodernizaciongobar.yaml
-Record ID: somcordatospaisdigitalmodernizaciongobar
-Country: AR
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: US/US-WA/indicators/dohwagov.yaml
+Record ID: dohwagov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
 
-File: AR/AR-Y/opendata/libjuydatospaisdigitalmodernizaciongobar.yaml
-Record ID: libjuydatospaisdigitalmodernizaciongobar
-Country: AR
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: US/US-WA/indicators/ospik12waus.yaml
+Record ID: ospik12waus
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
 
-File: BR/BR-SC/geo/prefeiturasc1mapcombr.yaml
-Record ID: prefeiturasc1mapcombr
-Country: BR
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: US/US-WA/indicators/esdwagov.yaml
+Record ID: esdwagov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
 
-File: FR/FR-ARA/geo/randovalleedeladromecom.yaml
-Record ID: randovalleedeladromecom
+File: US/US-PA/indicators/pasdchbgpsuedu.yaml
+Record ID: pasdchbgpsuedu
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: US/US-NJ/indicators/njchilddatarutgersedu.yaml
+Record ID: njchilddatarutgersedu
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: US/US-AZ/indicators/oeoazgov.yaml
+Record ID: oeoazgov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: US/US-NY/indicators/dolnygov.yaml
+Record ID: dolnygov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: US/US-IA/indicators/hhsiowagov.yaml
+Record ID: hhsiowagov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: US/US-VT/indicators/laborvermontgov.yaml
+Record ID: laborvermontgov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: US/US-VT/indicators/healthvermontorg.yaml
+Record ID: healthvermontorg
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: US/US-VT/indicators/educationvermontgov.yaml
+Record ID: educationvermontgov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: US/US-GA/indicators/georgiadataorg.yaml
+Record ID: georgiadataorg
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: US/US-MN/indicators/wwwmncompassorg.yaml
+Record ID: wwwmncompassorg
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: BW/Federal/indicators/wwwbankofbotswanabw.yaml
+Record ID: wwwbankofbotswanabw
+Country: BW
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: MU/Federal/indicators/wwwbommu.yaml
+Record ID: wwwbommu
+Country: MU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: IN/Federal/indicators/databanknedficom.yaml
+Record ID: databanknedficom
+Country: IN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: EE/Federal/indicators/statistikajustdigiee.yaml
+Record ID: statistikajustdigiee
+Country: EE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: EE/Federal/indicators/terviseametee.yaml
+Record ID: terviseametee
+Country: EE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: EE/Federal/indicators/kliimapoliitikaandmevarav.yaml
+Record ID: kliimapoliitikaandmevarav
+Country: EE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: EE/Federal/indicators/keskkonnahoidlikuarenguandmevarav.yaml
+Record ID: keskkonnahoidlikuarenguandmevarav
+Country: EE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: EE/Federal/indicators/palgadstatee.yaml
+Record ID: palgadstatee
+Country: EE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: EE/Federal/indicators/wwwtranspordiametee.yaml
+Record ID: wwwtranspordiametee
+Country: EE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: EE/Federal/indicators/wwwemtaee.yaml
+Record ID: wwwemtaee
+Country: EE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: LV/Federal/indicators/statgovlv.yaml
+Record ID: statgovlv
+Country: LV
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: LV/Federal/indicators/wwwzvagovlv.yaml
+Record ID: wwwzvagovlv
+Country: LV
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: LV/Federal/indicators/wwwviisgovlv.yaml
+Record ID: wwwviisgovlv
+Country: LV
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: IT/Federal/indicators/indicatoriambientaliisprambienteit.yaml
+Record ID: indicatoriambientaliisprambienteit
+Country: IT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: CA/Federal/indicators/wwwcihica.yaml
+Record ID: wwwcihica
+Country: CA
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: CZ/Federal/indicators/wwwenvirometrcz.yaml
+Record ID: wwwenvirometrcz
+Country: CZ
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: CZ/Federal/indicators/wwwsdgdatacz.yaml
+Record ID: wwwsdgdatacz
+Country: CZ
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/wwwuntourismint.yaml
+Record ID: wwwuntourismint
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/goodsscheduleswtoorg.yaml
+Record ID: goodsscheduleswtoorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/wwwideaint.yaml
+Record ID: wwwideaint
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/unstatsunorggenderminset.yaml
+Record ID: unstatsunorggenderminset
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/dataunwomenorg.yaml
+Record ID: dataunwomenorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/importlicensingwtoorg.yaml
+Record ID: importlicensingwtoorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/washdataorg.yaml
+Record ID: washdataorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/eitiorg.yaml
+Record ID: eitiorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/aricadborgrcepservices.yaml
+Record ID: aricadborgrcepservices
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/wwwuntfsurveyorg.yaml
+Record ID: wwwuntfsurveyorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/ozoneuneporg.yaml
+Record ID: ozoneuneporg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/wwwwiderunuedudata.yaml
+Record ID: wwwwiderunuedudata
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/edbwtoorg.yaml
+Record ID: edbwtoorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/aricadborgporttraffic.yaml
+Record ID: aricadborgporttraffic
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/publicadministrationunorgegovkb.yaml
+Record ID: publicadministrationunorgegovkb
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/sdg6dataorg.yaml
+Record ID: sdg6dataorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/globalenergymonitororg.yaml
+Record ID: globalenergymonitororg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/indicators/wwwpopulationtrendsasiapacificorg.yaml
+Record ID: wwwpopulationtrendsasiapacificorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+... and 35 more records with this issue
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE]
+Count: 1
+Priority: MEDIUM
+
+File: JP/JP-17/scientific/dspacejaistacjp.yaml
+Record ID: dspacejaistacjp
+Country: JP
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE
+Field: endpoints
+Current Value: {'software_id': 'dspace', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dspace' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_EKAN]
+Count: 1
+Priority: MEDIUM
+
+File: IT/Federal/opendata/daticamerait.yaml
+Record ID: daticamerait
+Country: IT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_EKAN
+Field: endpoints
+Current Value: {'software_id': 'ekan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ekan' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX]
+Count: 1
+Priority: MEDIUM
+
+File: PT/PT-11/geo/websigcmlisboapt.yaml
+Record ID: websigcmlisboapt
+Country: PT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX
+Field: endpoints
+Current Value: {'software_id': 'geocortex', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geocortex' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK]
+Count: 1
+Priority: MEDIUM
+
+File: RS/Federal/geo/metakataloggeosrbijars.yaml
+Record ID: metakataloggeosrbijars
+Country: RS
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_KADI4MAT]
+Count: 1
+Priority: MEDIUM
+
+File: DE/Federal/scientific/kadi4matnfdi4ingde.yaml
+Record ID: kadi4matnfdi4ingde
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_KADI4MAT
+Field: endpoints
+Current Value: {'software_id': 'kadi4mat', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='kadi4mat' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP]
+Count: 1
+Priority: MEDIUM
+
+File: FR/FR-BFC/geo/cartoparchautjurafr.yaml
+Record ID: cartoparchautjurafr
 Country: FR
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
 
-File: FR/FR-ARA/geo/randorhonecrussolardechecom.yaml
-Record ID: randorhonecrussolardechecom
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBENDER]
+Count: 3
+Priority: MEDIUM
+
+File: DE/DE-NW/geo/fnkgeoportalruhr.yaml
+Record ID: fnkgeoportalruhr
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBENDER
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
+
+File: DE/DE-HE/geo/starkregenlindschultede.yaml
+Record ID: starkregenlindschultede
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBENDER
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
+
+File: DE/DE-BB/geo/geoportalvlfpotsdamde.yaml
+Record ID: geoportalvlfpotsdamde
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBENDER
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE]
+Count: 2
+Priority: MEDIUM
+
+File: NL/Federal/geo/mapstoreoudommennl.yaml
+Record ID: mapstoreoudommennl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE
+Field: endpoints
+Current Value: {'software_id': 'mapstore', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapstore' is marked as API-capable in software definitions
+
+File: FR/Federal/geo/agdvpbrgmfr.yaml
+Record ID: agdvpbrgmfr
 Country: FR
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE
+Field: endpoints
+Current Value: {'software_id': 'mapstore', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapstore' is marked as API-capable in software definitions
 
-File: IL/IL-JM/geo/v5gisnetcoilariel.yaml
-Record ID: v5gisnetcoilariel
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPUS]
+Count: 3
+Priority: MEDIUM
 
-File: IL/IL-JM/geo/gis03taldorcoilmateyehudagis.yaml
-Record ID: gis03taldorcoilmateyehudagis
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: DE/DE-HH/scientific/epubepflichthamburg.yaml
+Record ID: epubepflichthamburg
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPUS
+Field: endpoints
+Current Value: {'software_id': 'opus', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='opus' is marked as API-capable in software definitions
 
-File: IL/IL-HA/geo/v5gisnetcoilmordothacarmel.yaml
-Record ID: v5gisnetcoilmordothacarmel
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: DE/DE-HE/scientific/fuldokhsfuldade.yaml
+Record ID: fuldokhsfuldade
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPUS
+Field: endpoints
+Current Value: {'software_id': 'opus', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='opus' is marked as API-capable in software definitions
 
-File: IL/IL-HA/geo/gis05taldorcoilzevulungis.yaml
-Record ID: gis05taldorcoilzevulungis
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: DE/Federal/scientific/bastopushbznrwde.yaml
+Record ID: bastopushbznrwde
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPUS
+Field: endpoints
+Current Value: {'software_id': 'opus', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='opus' is marked as API-capable in software definitions
 
-File: IL/IL-HA/geo/v5gisnetcoilhadera.yaml
-Record ID: v5gisnetcoilhadera
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS]
+Count: 5
+Priority: MEDIUM
 
-File: IL/IL-HA/geo/v5gisnetcoilrecheshacarmel.yaml
-Record ID: v5gisnetcoilrecheshacarmel
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: SE/SE-M/opendata/opendatamalmose.yaml
+Record ID: opendatamalmose
+Country: SE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS
+Field: endpoints
+Current Value: {'software_id': 'portaljs', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='portaljs' is marked as API-capable in software definitions
 
-File: IL/IL-D/geo/gis06taldorcoilabubasmanew.yaml
-Record ID: gis06taldorcoilabubasmanew
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: US/Federal/opendata/dataculturedataio.yaml
+Record ID: dataculturedataio
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS
+Field: endpoints
+Current Value: {'software_id': 'portaljs', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='portaljs' is marked as API-capable in software definitions
 
-File: IL/IL-D/geo/v5gisnetcoilashdod.yaml
-Record ID: v5gisnetcoilashdod
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: World/Federal/opendata/eitiportaljscom.yaml
+Record ID: eitiportaljscom
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS
+Field: endpoints
+Current Value: {'software_id': 'portaljs', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='portaljs' is marked as API-capable in software definitions
 
-File: IL/IL-D/geo/v5gisnetcoilkmalachi.yaml
-Record ID: v5gisnetcoilkmalachi
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: GB/GB-ENG/opendata/lincolnshireckanio.yaml
+Record ID: lincolnshireckanio
+Country: GB
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS
+Field: endpoints
+Current Value: {'software_id': 'portaljs', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='portaljs' is marked as API-capable in software definitions
 
-File: IL/IL-D/geo/gispmatamarcoilportal.yaml
-Record ID: gispmatamarcoilportal
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: ES/ES-CT/opendata/espaidedadestercersectorcat.yaml
+Record ID: espaidedadestercersectorcat
+Country: ES
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS
+Field: endpoints
+Current Value: {'software_id': 'portaljs', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='portaljs' is marked as API-capable in software definitions
 
-File: IL/IL-M/geo/v5gisnetcoiltaibehint.yaml
-Record ID: v5gisnetcoiltaibehint
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL]
+Count: 9
+Priority: MEDIUM
 
-File: IL/IL-M/geo/v5gisnetcoilsdotdan.yaml
-Record ID: v5gisnetcoilsdotdan
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: US/Federal/scientific/bradybasedbiudeledu.yaml
+Record ID: bradybasedbiudeledu
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+Field: endpoints
+Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
 
-File: IL/IL-M/geo/gis06taldorcoilramlegis.yaml
-Record ID: gis06taldorcoilramlegis
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: US/Federal/scientific/lemnaorg.yaml
+Record ID: lemnaorg
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+Field: endpoints
+Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
 
-File: IL/IL-M/geo/gis03taldorcoillodgis.yaml
-Record ID: gis03taldorcoillodgis
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: GR/Federal/scientific/grolivedbcom.yaml
+Record ID: grolivedbcom
+Country: GR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+Field: endpoints
+Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
 
-File: IL/IL-M/geo/ags20intertowncoilsrklayers.yaml
-Record ID: ags20intertowncoilsrklayers
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: CN/Federal/scientific/bryogenomesorg.yaml
+Record ID: bryogenomesorg
+Country: CN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+Field: endpoints
+Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
 
-File: IL/IL-M/geo/v5gisnetcoilganeytikva.yaml
-Record ID: v5gisnetcoilganeytikva
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: CN/Federal/scientific/bnaomicsocrigenomicsnet.yaml
+Record ID: bnaomicsocrigenomicsnet
+Country: CN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+Field: endpoints
+Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
 
-File: IL/IL-M/geo/v5gisnetcoilsharonim.yaml
-Record ID: v5gisnetcoilsharonim
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: CN/Federal/scientific/peachdbcn.yaml
+Record ID: peachdbcn
+Country: CN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+Field: endpoints
+Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
 
-File: IL/IL-M/geo/v5gisnetcoiljaljuliaint.yaml
-Record ID: v5gisnetcoiljaljuliaint
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: AU/Federal/scientific/icgrcinfo.yaml
+Record ID: icgrcinfo
+Country: AU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+Field: endpoints
+Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
 
-File: IL/IL-M/geo/gis10taldorcoilkfarkasemgis.yaml
-Record ID: gis10taldorcoilkfarkasemgis
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: DE/Federal/scientific/pfluevolbiompgde.yaml
+Record ID: pfluevolbiompgde
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+Field: endpoints
+Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
 
-File: IL/IL-Z/geo/orhitecerpgiscoil.yaml
-Record ID: orhitecerpgiscoil
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: FR/Federal/scientific/marimbaobsvlfrfr.yaml
+Record ID: marimbaobsvlfrfr
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL
+Field: endpoints
+Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
 
-File: IL/IL-Z/geo/v5gisnetcoiltzafat.yaml
-Record ID: v5gisnetcoiltzafat
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS]
+Count: 32
+Priority: MEDIUM
 
-File: IL/IL-Z/geo/v5gisnetcoilgalilmerkazi.yaml
-Record ID: v5gisnetcoilgalilmerkazi
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: SK/Federal/indicators/nbssk.yaml
+Record ID: nbssk
+Country: SK
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: IL/IL-Z/geo/v5gisnetcoilshfelathagalil.yaml
-Record ID: v5gisnetcoilshfelathagalil
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: SE/Federal/indicators/statistiketikprovningsansokanse.yaml
+Record ID: statistiketikprovningsansokanse
+Country: SE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: IL/IL-Z/geo/v5gisnetcoilgaliltachton.yaml
-Record ID: v5gisnetcoilgaliltachton
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: PK/Federal/indicators/mc2020pbosgovpk.yaml
+Record ID: mc2020pbosgovpk
+Country: PK
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: IL/IL-Z/geo/gis05taldorcoilemekhamaayanotgis.yaml
-Record ID: gis05taldorcoilemekhamaayanotgis
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: PK/Federal/indicators/tradedatagovpk.yaml
+Record ID: tradedatagovpk
+Country: PK
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: IL/IL-Z/geo/gis05taldorcoiletzbahagalilgis.yaml
-Record ID: gis05taldorcoiletzbahagalilgis
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: PK/Federal/indicators/economicdatagovpk.yaml
+Record ID: economicdatagovpk
+Country: PK
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: IL/IL-Z/geo/ags20intertowncoilbhylayers.yaml
-Record ID: ags20intertowncoilbhylayers
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: PK/Federal/indicators/nadatagovpk.yaml
+Record ID: nadatagovpk
+Country: PK
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: IL/IL-Z/geo/ags20intertowncoilehglayers.yaml
-Record ID: ags20intertowncoilehglayers
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: UZ/Federal/indicators/nsdgstatuz.yaml
+Record ID: nsdgstatuz
+Country: UZ
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: IL/IL-Z/geo/gis08taldorcoilmashergis.yaml
-Record ID: gis08taldorcoilmashergis
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: PE/Federal/indicators/siniaminamgobpe.yaml
+Record ID: siniaminamgobpe
+Country: PE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: IL/IL-Z/geo/v5gisnetcoilgalilmizrachi.yaml
-Record ID: v5gisnetcoilgalilmizrachi
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: US/US-WA/indicators/ofmwagov.yaml
+Record ID: ofmwagov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: IL/IL-Z/geo/upintertowncoilmhg.yaml
-Record ID: upintertowncoilmhg
-Country: IL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: US/US-DE/indicators/lmidelawaregov.yaml
+Record ID: lmidelawaregov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: US/US-MO/indicators/mcdcmissouriedu.yaml
+Record ID: mcdcmissouriedu
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: US/US-GA/indicators/dataneighborhoodnexusorg.yaml
+Record ID: dataneighborhoodnexusorg
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: SV/Federal/indicators/estadisticasbcrgobsv.yaml
+Record ID: estadisticasbcrgobsv
+Country: SV
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: AE/AE-RK/indicators/cssrakae.yaml
+Record ID: cssrakae
+Country: AE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: CH/CH-TI/indicators/statisticaluganochsite.yaml
+Record ID: statisticaluganochsite
+Country: CH
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: CO/CO-DC/indicators/oabambientebogotagovco.yaml
+Record ID: oabambientebogotagovco
+Country: CO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: CO/CO-VAC/indicators/indicadorescaligovco.yaml
+Record ID: indicadorescaligovco
+Country: CO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: World/indicators/ci5iarcwhoint.yaml
+Record ID: ci5iarcwhoint
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: World/indicators/emberenergyorg.yaml
+Record ID: emberenergyorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: ASEAN/indicators/dataaseanstatsorg.yaml
+Record ID: dataaseanstatsorg
+Country: ASEAN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: PT/PT-20/indicators/sreaazoresgovpt.yaml
+Record ID: sreaazoresgovpt
+Country: PT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: PH/Federal/opendata/datadswdgovph.yaml
+Record ID: datadswdgovph
+Country: PH
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: AR/AR-V/indicators/ipiectierradelfuegogobar.yaml
+Record ID: ipiectierradelfuegogobar
+Country: AR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: NP/Federal/indicators/nrborgnpdatabaseonnepaleseeconomy.yaml
+Record ID: nrborgnpdatabaseonnepaleseeconomy
+Country: NP
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: MX/MX-MIC/indicators/mapadigitalmichoacangobmxindicador.yaml
+Record ID: mapadigitalmichoacangobmxindicador
+Country: MX
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: MX/MX-JAL/indicators/iieggobmx.yaml
+Record ID: iieggobmx
+Country: MX
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: DK/Federal/indicators/statistikselvmordsforskningdk.yaml
+Record ID: statistikselvmordsforskningdk
+Country: DK
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: FR/Federal/indicators/statistiquesmsafr.yaml
+Record ID: statistiquesmsafr
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: FR/Federal/indicators/widworld.yaml
+Record ID: widworld
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: CL/Federal/indicators/chileagenda2030gobcl.yaml
+Record ID: chileagenda2030gobcl
+Country: CL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: TT/Federal/indicators/csogovtt.yaml
+Record ID: csogovtt
+Country: TT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: TH/Federal/indicators/sdgdashboardnesdcgoth.yaml
+Record ID: sdgdashboardnesdcgoth
+Country: TH
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_CONTACT_INFO (LOW): 1 issue
-MISSING_OWNER_LINK (LOW): 40 issues
+MISSING_RIGHTS (LOW): 53 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB (MEDIUM): 4 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX (MEDIUM): 7 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN (MEDIUM): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN (MEDIUM): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL (MEDIUM): 85 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE (MEDIUM): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_EKAN (MEDIUM): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX (MEDIUM): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK (MEDIUM): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_KADI4MAT (MEDIUM): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP (MEDIUM): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBENDER (MEDIUM): 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE (MEDIUM): 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPUS (MEDIUM): 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS (MEDIUM): 5 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL (MEDIUM): 9 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS (MEDIUM): 32 issues
 
 === SUMMARY BY PRIORITY ===
 
-LOW: 41 issues
+MEDIUM: 158 issues
+LOW: 53 issues
 
 === RECORDS WITH MULTIPLE ISSUES (3+) ===
 
-No records found with 3+ issues
+Record ID: observatorioalianzapacificocepalorg
+File: LatinAmerica/indicators/observatorioalianzapacificocepalorg.yaml
+Country: LatinAmerica
+Issue Count: 5
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL (MEDIUM): endpoints
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL (MEDIUM): endpoints
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL (MEDIUM): endpoints
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL (MEDIUM): endpoints
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL (MEDIUM): endpoints

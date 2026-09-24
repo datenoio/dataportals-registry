@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Berkeley housing projects, permit events, and addresses from city permit
+  records.
+id: berkeleyhousingflydev
+langs:
+- id: EN
+  name: English
+link: https://berkeley-housing.fly.dev/
+name: Berkeley Housing Pipeline Database
+owner:
+  link: https://berkeley-housing.fly.dev/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: Berkeley Housing Pipeline Database
+  type: Civil society
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- civil society
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00016278
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://berkeley-housing.fly.dev/-/databases.json

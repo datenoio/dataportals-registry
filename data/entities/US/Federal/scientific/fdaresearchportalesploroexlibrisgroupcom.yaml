@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: U.S. Food and Drug Administration Esploro research portal for institutional
+  research outputs, including research datasets.
+id: fdaresearchportalesploroexlibrisgroupcom
+langs:
+- id: EN
+  name: English
+link: https://fda-researchportal.esploro.exlibrisgroup.com
+name: FDA Research Portal
+owner:
+  link: https://www.fda.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: U.S. Food and Drug Administration
+  type: Central government
+software:
+  id: esploro
+  name: Esploro
+status: active
+tags:
+- scientific
+- research
+- government
+- institutional repository
+- datasets
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+endpoints:
+- type: esploro:search
+  url: https://fda-researchportal.esploro.exlibrisgroup.com/esplorows/rest/research/simpleSearch
+- type: sitemap
+  url: https://fda-researchportal.esploro.exlibrisgroup.com/view/google/siteindex.xml
+  url_pattern: /dataset/
+uid: cdi00016127
+properties:
+  is_national: false
+  dataset_count_reported: 223

@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-ARA
+      name: Auvergne-Rhône-Alpes
+description: Public ArcGIS Enterprise geoportal GéoRhône at ENS de Lyon, distinct
+  from the EVS GeoServer.
+id: websigenslyonfr
+langs:
+- id: FR
+  name: French
+link: https://websig.ens-lyon.fr/portal/home/
+name: GéoRhône ENS de Lyon
+owner:
+  link: https://www.ens-lyon.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-ARA
+      name: Auvergne-Rhône-Alpes
+  name: École normale supérieure de Lyon
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- geoportal
+- France
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007759
+properties:
+  is_national: false
+  has_doi: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://websig.ens-lyon.fr/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://websig.ens-lyon.fr/server/rest/services?f=pjson

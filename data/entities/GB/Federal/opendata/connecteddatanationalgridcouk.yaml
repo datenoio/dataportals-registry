@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Open data catalog of Great Britain electricity distribution network assets,
+  connections, demand, and system planning.
+id: connecteddatanationalgridcouk
+langs:
+- id: EN
+  name: English
+link: https://connecteddata.nationalgrid.co.uk/
+name: National Grid Electricity Distribution Connected Data Portal
+owner:
+  link: https://www.nationalgrid.co.uk/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+  name: National Grid Electricity Distribution
+  type: Business
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- has_api
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+endpoints:
+- type: ckan:package-search
+  url: https://connecteddata.nationalgrid.co.uk/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://connecteddata.nationalgrid.co.uk/api/3/action/package_list
+  version: '3'
+uid: cdi00008304

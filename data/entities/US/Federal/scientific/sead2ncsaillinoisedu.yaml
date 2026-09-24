@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: SEAD 2.0 research data repository for managing, annotating, and publishing
+  scientific datasets. Hosted at NCSA.
+id: sead2ncsaillinoisedu
+langs:
+- id: EN
+  name: English
+link: https://sead2.ncsa.illinois.edu/
+name: SEAD research data repository
+owner:
+  link: https://illinois.edu/
+  location:
+    country:
+      id: US
+      name: United States
+  name: University of Illinois at Urbana-Champaign
+  type: Academy
+software:
+  id: clowder
+  name: Clowder
+status: active
+tags:
+- Clowder
+- academic
+- research
+- scientific
+- united-states
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00016178
+endpoints:
+- type: clowder:status
+  url: https://sead2.ncsa.illinois.edu/api/status

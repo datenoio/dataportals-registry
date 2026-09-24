@@ -1,6 +1,6 @@
 access_mode:
 - open
-- limited
+- restricted
 api: true
 api_status: active
 catalog_type: Scientific data repository
@@ -21,7 +21,7 @@ coverage:
 description: Public Korp corpus-search installation of the Alberta Language Technology
   Lab at the University of Alberta, hosting Plains Cree and related Algonquian corpora.
 endpoints:
-- type: customapi
+- type: rest
   url: https://backend.korp.altlab.dev/
 id: korpaltlabdev
 langs:

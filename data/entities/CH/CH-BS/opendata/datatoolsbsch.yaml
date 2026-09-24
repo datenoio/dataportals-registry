@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-BS
+      name: Basel-Stadt
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Queryable survey and monitoring databases published by Canton Basel-Stadt.
+id: datatoolsbsch
+langs:
+- id: DE
+  name: German
+link: https://datatools.bs.ch/
+name: Erweitertes Datenportal Kanton Basel-Stadt
+owner:
+  link: https://www.bs.ch/
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-BS
+      name: Basel-Stadt
+  name: Kanton Basel-Stadt
+  type: Regional government
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00010024
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://datatools.bs.ch/-/databases.json

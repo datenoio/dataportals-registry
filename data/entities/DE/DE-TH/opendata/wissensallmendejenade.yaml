@@ -22,12 +22,12 @@ description: Urban data platform of the City of Jena (WISSENsAllmende), aggregat
   CKAN open data portal as Jena's central catalog for public-space objects, environment,
   and administrative data.
 endpoints:
-- type: customapi
+- type: rest
   url: https://wissensallmende.jena.de/api/hub/search/search
 - type: ckan:package-search
   url: https://wissensallmende.jena.de/api/hub/search/ckan/package_search
   version: '3'
-- type: customapi
+- type: rest
   url: https://wissensallmende.jena.de/api/hub/repo/catalogues
 - type: docs
   url: https://wissensallmende.jena.de/api/hub/search/

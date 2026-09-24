@@ -9,7 +9,7 @@ Query recipes (Google operators, Censys CenQL, FOFA as a Censys alternative, Sho
 | Job | Data the agent needs | Typical tools |
 |-----|----------------------|---------------|
 | **Query** catalogs already in the registry | DuckDB / Parquet / JSONL in this repo, or [dateno-api](https://github.com/datenoio/dateno-api) | Local files, SQL, optional HTTP API |
-| **Discover** catalogs not yet registered | Web search + internet maps + a live GET to confirm the site | Google (or CSE/Brave), Censys, Shodan, FOFA, URLScan, crt.sh, browser |
+| **Discover** catalogs not yet registered | Web search + internet maps + a live GET to confirm the site | Google (or CSE/Brave), Censys, Shodan, FOFA, GitHub (`gh api` forks and code search), URLScan, crt.sh, browser |
 
 Do not mix them up. Searching Google for “CKAN Portugal” does not tell you whether `dados.gov.pt` is already in `data/datasets/datasets.duckdb`. Duplicate-check exports **before** adding YAML ([agents/query.md](agents/query.md)).
 
@@ -35,6 +35,8 @@ Query existing catalogs from exports (DuckDB/Parquet/JSONL), never by walking da
 If datasets.duckdb is locked, use full.parquet.
 Discover missing catalogs with docs/agents/discover.md and docs/discovery-search-tools.md.
 FOFA is the Censys alternative (title= / body= / host= / country=).
+For open-source catalog software deployed by forking, search GitHub
+forks and code search (code search skips forks): docs/discovery-search-tools.md#github.
 Hunt patterns (harvest sources, university IRs, country indicators, named directories,
 software tenant lists, subnational municipal GIS):
 docs/discovery.md#hunt-patterns and docs/agents/improve.md.
@@ -94,7 +96,9 @@ Follow docs/agents/discover.md. Duplicate-check datasets.duckdb first
 (or full.parquet if DuckDB is locked).
 Use Google queries from docs/discovery-opendata.md, then confirm
 /api/3/action/status_show. If Censys MCP is not connected, use FOFA
-title="CKAN" && country="PT" (see docs/discovery-search-tools.md#fofa).
+body="name=\"generator\" content=\"ckan" && country="PT"
+(if body= is not on the plan: title="CKAN" && country="PT").
+See docs/discovery-opendata.md#ckan.
 Add verified finds with add-single --scheduled.
 ```
 
@@ -349,7 +353,7 @@ curl -sS "https://api.platform.censys.io/v3/global/search/query" \
   -H "X-Organization-ID: $CENSYS_ORG_ID" \
   -H "Content-Type: application/json" \
   -d '{
-    "query": "web.location.country_code = \"PT\" and web.endpoints.http.body: \"Powered by CKAN\"",
+    "query": "web.location.country_code = \"PT\" and web.endpoints.http.body: \"ckan-footer-logo\"",
     "page_size": 25
   }'
 ```
@@ -400,7 +404,7 @@ FOFA is the **Censys alternative** for this registry: same job (title / body / c
 ```bash
 python - <<'PY'
 import base64, json, os, urllib.parse, urllib.request
-q = 'body="Powered by CKAN" && country="JP"'
+q = 'body="name=\\"generator\\" content=\\"ckan" && country="JP"'
 qb = base64.b64encode(q.encode()).decode()
 url = (
     "https://fofa.info/api/v1/search/all?"
@@ -412,7 +416,11 @@ url = (
         "size": 20,
     })
 )
-data = json.loads(urllib.request.urlopen(url, timeout=30).read().decode())
+req = urllib.request.Request(
+    url,
+    headers={"User-Agent": "dataportals-registry-hunt/1.0"},
+)
+data = json.loads(urllib.request.urlopen(req, timeout=30).read().decode())
 if data.get("error"):
     raise SystemExit(data)
 for row in data.get("results") or []:
@@ -423,7 +431,8 @@ PY
 Example queries an agent can paste into the FOFA UI or the script above:
 
 ```text
-title="CKAN" && country="PT"
+body="name=\"generator\" content=\"ckan" && country="PT"
+body="ckan-footer-logo" && country="JP"
 body="OpenDataSoft" && country="BE"
 title="GeoNetwork" && country="CZ"
 domain="opendatasoft.com"
@@ -505,9 +514,10 @@ Find unregistered OpenDataSoft portals in Belgium.
 ```text
 Find unregistered CKAN portals in Japan. Censys is not configured; use FOFA.
 1) SQL duplicate-check software.id = 'ckan' and link like '%.jp%'
-2) Google: "Powered by CKAN" inurl:/dataset site:.jp
-3) FOFA: body="Powered by CKAN" && country="JP"
+2) Google: "ckan-footer-logo" site:.jp
+3) FOFA: body="name=\"generator\" content=\"ckan" && country="JP"
    (if body= is not on the plan: title="CKAN" && country="JP")
+   GitHub: "ckan.site_url = https://" — see docs/discovery-opendata.md#ckan
 4) Confirm /api/3/action/status_show
 5) add-single --scheduled for new hosts only
 ```
@@ -528,6 +538,7 @@ I will check the registry myself. Do not invent uids.
 | Agent walks thousands of YAML files | Ignored `llms.txt` | Point it at exports; repeat [agents/query.md](agents/query.md) |
 | Censys MCP does nothing | No API role / OAuth not completed / Free plan has no search | Finish consent; check credits; fall back to FOFA or Google |
 | `401` from Censys API | Missing PAT or org header | Use MCP OAuth, or set both `Authorization` and `X-Organization-ID` |
+| FOFA HTTP `403` | Request has no `User-Agent` | Send one; the API rejects a bare `urllib` client |
 | FOFA `error: true` / empty `results` | Missing key, `body=` not on the plan, or query too broad | Check `FOFA_EMAIL`/`FOFA_KEY`; retry `title=`/`host=`; add `country=` |
 | Agent sets `link` to an IP | Censys/Shodan/FOFA host record | Use certificate / web-property / FOFA `host` name; confirm HTTPS vhost |
 | Google CSE returns only your site | Entire-web toggle off | Enable “Search the entire web” on the engine |

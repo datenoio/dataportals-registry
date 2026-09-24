@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-77
+      name: Seine-et-Marne
+description: Public ArcGIS Enterprise portal of Val d'Europe Agglomération with map
+  services such as waste management and tourist furnished rentals.
+id: sigvaldeuropeagglofr
+langs:
+- id: FR
+  name: French
+link: https://sig.valdeuropeagglo.fr/portal/home/
+name: Portail SIG Val d'Europe Agglomération
+owner:
+  link: https://www.valdeuropeagglo.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-77
+      name: Seine-et-Marne
+  name: Val d'Europe Agglomération
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- ArcGIS
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007710
+properties:
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://sig.valdeuropeagglo.fr/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.valdeuropeagglo.fr/server/rest/services?f=pjson

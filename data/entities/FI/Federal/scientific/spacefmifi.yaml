@@ -18,11 +18,11 @@ description: Finnish Meteorological Institute International Monitor for Auroral 
   magnetometer network, distributing magnetometer time series, electrojet indicators, and event
   indicators for EPOS.
 endpoints:
-- type: api
+- type: rest
   url: https://space.fmi.fi/image/epos/data_download_epos.php
-- type: api
+- type: rest
   url: https://space.fmi.fi/image/epos/image_epos_indicators.php
-- type: api
+- type: rest
   url: https://space.fmi.fi/image/epos/image_epos_electrojet_events.php
 id: spacefmifi
 langs:

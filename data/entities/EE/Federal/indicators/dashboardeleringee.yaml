@@ -18,9 +18,9 @@ description: Public live dashboard of the Estonian electricity and gas transmiss
   system operator. Real-time series for production, consumption, cross-border flows,
   prices, and system plan data, with a JSON API.
 endpoints:
-- type: customapi
+- type: rest
   url: https://dashboard.elering.ee/api/nps/price
-- type: customapi
+- type: rest
   url: https://dashboard.elering.ee/api/system/with-plan
 id: dashboardeleringee
 langs:

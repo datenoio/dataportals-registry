@@ -23,7 +23,7 @@ description: Statewide LiDAR data portal maintained by the Washington Geological
   to lidar point clouds, digital elevation models, hillshade derivatives, and survey
   metadata covering Washington, with an interactive map viewer and downloads.
 endpoints:
-- type: customapi
+- type: arcgis:rest:services
   url: https://lidarportal.dnr.wa.gov/project
 - type: arcgis:rest:info
   url: https://lidarportal.dnr.wa.gov/arcgis/rest/info?f=pjson

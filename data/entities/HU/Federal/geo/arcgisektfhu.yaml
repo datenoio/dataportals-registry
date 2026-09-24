@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public ArcGIS Server 10.4.1 REST catalog of Eszterházy Károly University
+  (legacy ektf.hu host), publishing forestry maps and the Felsőtárkány municipal WebGIS
+  services.
+id: arcgisektfhu
+langs:
+- id: HU
+  name: Hungarian
+link: http://arcgis.ektf.hu/arcgis/rest/services
+name: Eszterházy Károly University ArcGIS Server
+owner:
+  link: https://uni-eszterhazy.hu
+  location:
+    country:
+      id: HU
+      name: Hungary
+  name: Eszterházy Károly Catholic University
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007913
+endpoints:
+- type: arcgis:rest:info
+  url: http://arcgis.ektf.hu/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://arcgis.ektf.hu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://arcgis.ektf.hu/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://arcgis.ektf.hu/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://arcgis.ektf.hu/arcgis/rest/services?f=geositemap

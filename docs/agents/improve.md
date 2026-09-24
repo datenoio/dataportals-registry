@@ -174,7 +174,7 @@ Agent steps:
 
 1. Read the software YAML and [software-index.md](../software-index.md) row.
 2. `SELECT link, owner.location.country.id FROM catalogs WHERE software.id = '{id}'` on `datasets.duckdb` (or `full.parquet` if DuckDB is locked).
-3. Fetch the vendor list / gallery / crt.sh hostname pattern (not a scanner). Skip if a hunt in the last two weeks already exhausted that list.
+3. Fetch the vendor list / gallery / crt.sh hostname pattern (not a scanner). For open-source products deployed by forking, that list is GitHub forks plus a code search that excludes forks ([discovery-search-tools.md](../discovery-search-tools.md#github)). Skip if a hunt in the last two weeks already exhausted that list.
 4. Match on hostname; probe fingerprints; `add-single --scheduled`.
 5. If the vendor list is exhausted and probes found nothing new, **stop and report completeness** (0 missing is done). Append `dataquality/hunts.jsonl`.
 6. If ≥3 `custom` rows are clearly this product, or a first-party product page names it, retag them and add the software definition first.

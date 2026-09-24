@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Elsevier Pure portal for Dublin City University, with public research
+  outputs and a datasets section.
+id: researchdcuie
+langs:
+- id: EN
+  name: English
+link: https://research.dcu.ie
+name: Dublin City University Research Portal
+owner:
+  link: https://www.dcu.ie
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+  name: Dublin City University
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: oaipmh20
+  url: "https://research.dcu.ie/ws/oai?verb=Identify"
+  version: "2.0"
+uid: cdi00008213

@@ -22,9 +22,9 @@ description: City geoportal of Temirtau (Karaganda Region) for urban-planning an
   cadastral map layers, including buildings, addresses, and land objects. Layer list
   is published at /Public/GetLayers.
 endpoints:
-- type: customapi
+- type: rest
   url: https://temirmap.kz/Public/GetLayers?kato=352410000
-- type: customapi
+- type: rest
   url: https://temirmap.kz/Public/GetKatoList
 id: temirmapkz
 langs:

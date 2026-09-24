@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-78
+      name: Calabria
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: G3W-SUITE map of Comune di Castrovillari civic numbers and the national
+  address register (ANNCSU).
+id: anncsug3wsuiteit
+langs:
+- id: IT
+  name: Italian
+link: https://anncsu.g3wsuite.it/
+name: ANNCSU Comune di Castrovillari
+owner:
+  link: https://comune.castrovillari.cs.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-78
+      name: Calabria
+  name: Comune di Castrovillari
+  type: Local government
+software:
+  id: g3wsuite
+  name: G3W-SUITE
+status: active
+tags:
+- geospatial
+- geoportal
+- government
+- g3wsuite
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00014662
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: g3wsuite:catalog
+  url: https://anncsu.g3wsuite.it/

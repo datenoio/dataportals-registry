@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: IT-34
+      name: Veneto
+description: Geocortex Essentials catalog for ARPA Veneto avalanche, CLPV, and related
+  environmental map sites.
+id: sivarpavenetoit
+langs:
+- id: IT
+  name: Italian
+link: https://siv.arpa.veneto.it/Geocortex/Essentials/REST/sites
+name: ARPAV SIV
+owner:
+  link: https://www.arpa.veneto.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-34
+      name: Veneto
+  name: ARPA Veneto
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geocortex
+  name: Geocortex Essentials
+status: active
+tags:
+- GIS
+- geospatial
+- Geocortex
+- avalanches
+- Veneto
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00014540
+endpoints:
+- type: geocortex:catalog
+  url: https://siv.arpa.veneto.it/Geocortex/Essentials/REST/sites?f=pjson

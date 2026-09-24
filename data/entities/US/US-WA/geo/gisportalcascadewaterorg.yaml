@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-WA
+      name: Washington
+description: Public ArcGIS Enterprise 11.5 REST catalog of Cascade Water Alliance
+  member-city and utility map services in the Puget Sound region.
+id: gisportalcascadewaterorg
+langs:
+- id: EN
+  name: English
+link: https://gisportal.cascadewater.org/server/rest/services
+name: Cascade Water Alliance GIS Portal
+owner:
+  link: https://cascadewater.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WA
+      name: Washington
+  name: Cascade Water Alliance
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisportal.cascadewater.org/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisportal.cascadewater.org/server/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://gisportal.cascadewater.org/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisportal.cascadewater.org/server/rest/services?f=geositemap
+uid: cdi00008168

@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SV
+      name: El Salvador
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: SV-SS
+      name: San Salvador
+description: Data archive of the Universidad de El Salvador.
+id: archivouesedusv
+langs:
+- id: ES
+  name: Spanish
+link: https://archivo.ues.edu.sv
+name: Archivo UES
+owner:
+  link: https://www.ues.edu.sv
+  location:
+    country:
+      id: SV
+      name: El Salvador
+    level: 30
+    subregion:
+      id: SV-SS
+      name: San Salvador
+  name: Universidad de El Salvador
+  type: Academy
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: ckan
+  url: https://archivo.ues.edu.sv/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://archivo.ues.edu.sv/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://archivo.ues.edu.sv/api/3/action/package_list
+  version: '3'
+uid: cdi00015861
+properties:
+  is_national: false

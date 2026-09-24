@@ -1,0 +1,60 @@
+category: Open data portal
+subtype: managed_saas_service
+datatypes:
+  datasets: 'Yes'
+  fields: Uncertain
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: jigodp
+website: https://odp.jig.jp/
+name: jig.jp Open Data Platform
+description: Hosted Japanese municipal open-data platform from B Inc. (jig.jp).
+  Subscribers publish into one shared CKAN catalog at ckan.odp.jig.jp, where
+  each local government is an organization. status_show lists a custom
+  extension named odp. The product site also advertises Linked RDF and a
+  SPARQL endpoint.
+owner:
+  name: B Inc.
+  location:
+    country:
+      id: JP
+      name: Japan
+logo_url: https://odp.jig.jp/favicon.ico
+documentation_url: https://odp.jig.jp/
+metadata_support:
+  ckan_api: 'Yes'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: Uncertain
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: Uncertain
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: Uncertain
+storage_type: Both
+type: Software
+export_formats:
+- JSON
+- CSV
+capabilities:
+- CKAN API
+- Shared municipal catalog
+last_updated: '2026-09-23T00:00:00Z'

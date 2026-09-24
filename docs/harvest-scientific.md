@@ -392,6 +392,16 @@ GET https://host/articles/dataset/
 
 Type `/articles/dataset/` as `index`. **Keep:** institutional Figshare `item_type` 3 (dataset) and 4 (fileset). **Drop:** papers, theses, posters, presentations, and a global figshare.com crawl.
 
+## Renku (`renku`) {#renku}
+
+One harvest scope per deployment (`renkulab.io` or an institutional host).
+
+```text
+GET https://host/api/data/search/query?q=water
+```
+
+Page the search. **Keep:** datasets and data connectors. **Drop:** compute sessions, user profiles, and individual project files.
+
 ## Haplo (`haplo`) {#haplo}
 
 Output types include publications and datasets. Use the public catalog/OAI and keep records typed as dataset / research data. Skip grant and HR objects. Skip haplo.com marketing hosts.

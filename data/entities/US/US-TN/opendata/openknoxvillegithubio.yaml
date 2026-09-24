@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TN
+      name: Tennessee
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Civic open data catalog for Knoxville, Tennessee, with local budget,
+  transport, and city datasets.
+id: openknoxvillegithubio
+langs:
+- id: EN
+  name: English
+link: https://openknoxville.github.io/
+name: OpenKnoxville
+owner:
+  link: https://github.com/OpenKnoxville
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TN
+      name: Tennessee
+  name: OpenKnoxville
+  type: Community
+software:
+  id: jkan
+  name: JKAN
+status: active
+tags:
+- open data
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00016428
+endpoints:
+- type: dcatus11
+  url: https://openknoxville.github.io/data.json
+- type: dcatus11
+  url: https://openknoxville.github.io/datasets.json

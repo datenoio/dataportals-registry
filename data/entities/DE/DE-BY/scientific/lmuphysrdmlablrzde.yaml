@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BY
+      name: Bayern
+description: Physics research-data repository of LMU Munich on InvenioRDM, hosted
+  at LRZ.
+id: lmuphysrdmlablrzde
+langs:
+- id: DE
+  name: German
+link: https://lmuphys.rdm.lab.lrz.de
+name: Open Data LMU - Physics
+owner:
+  link: https://www.ub.uni-muenchen.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BY
+      name: Bayern
+  name: University Library LMU
+  type: Academy
+software:
+  id: inveniordm
+  name: InvenioRDM
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: inveniordmapi:records
+  url: https://lmuphys.rdm.lab.lrz.de/api/records
+- type: oaipmh20
+  url: https://lmuphys.rdm.lab.lrz.de/oai2d?verb=Identify
+  version: '2.0'
+uid: cdi00011402

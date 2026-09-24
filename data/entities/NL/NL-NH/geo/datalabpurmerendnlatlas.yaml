@@ -21,7 +21,7 @@ coverage:
 description: Public Atlas geoportal of Gemeente Purmerend (the Atlas product's home
   municipality), served from the municipal datalab host (Dutch interface).
 endpoints:
-- type: customapi
+- type: rest
   url: https://datalab.purmerend.nl/atlas/api/v1/metadatasets/
 - type: wms130
   url: https://datalab.purmerend.nl/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities

@@ -18,13 +18,13 @@ description: INGV FDSN and EIDA web services providing Italian seismic waveforms
   availability, and WFCatalog access, including Near-Fault Observatory networks (TABOO, IRPINIA,
   NITRO).
 endpoints:
-- type: api
+- type: rest
   url: https://webservices.ingv.it/fdsnws/station/1/
-- type: api
+- type: rest
   url: https://webservices.ingv.it/fdsnws/dataselect/1/
-- type: api
+- type: rest
   url: https://webservices.ingv.it/fdsnws/availability/1/
-- type: api
+- type: rest
   url: https://webservices.ingv.it/eidaws/wfcatalog/1/
 id: webservicesingvit
 langs:

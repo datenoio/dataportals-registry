@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: VOXastro Data Center v2. Serves the Reference Catalog of Galaxy SEDs
+  version 2, with galaxy spectra and photometry, through a DaCHS TAP service.
+id: dcvoxastroorg
+langs:
+- id: RU
+  name: Russian
+link: https://dc.voxastro.org/
+name: VOXastro Data Center
+owner:
+  link: https://www.sai.msu.ru/
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 20
+  name: Sternberg Astronomical Institute, Lomonosov Moscow State University
+  type: Academy
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00015681
+endpoints:
+- type: tap:capabilities
+  url: https://dc.voxastro.org/tap/capabilities
+- type: oaipmh20
+  url: https://dc.voxastro.org/oai.xml?verb=Identify
+  version: '2.0'

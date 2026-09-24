@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion:
+      id: JP-01
+      name: Hokkaido
+description: Ishikari city environmental open data portal on ArcGIS Hub, including
+  public datasets such as brown-bear sightings.
+id: environmentishikarihubarcgiscom
+langs:
+- id: JA
+  name: Japanese
+link: https://environment-ishikari.hub.arcgis.com/
+name: 石狩市環境情報等オープンデータポータルサイト
+owner:
+  link: https://www.city.ishikari.hokkaido.jp/
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-01
+      name: Hokkaido
+  name: 石狩市
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: dcatap201
+  url: https://environment-ishikari.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://environment-ishikari.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://environment-ishikari.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://environment-ishikari.hub.arcgis.com/api/search/v1
+- type: arcgishubapi
+  url: https://environment-ishikari.hub.arcgis.com/api/v3/datasets
+- type: dcatus11
+  url: https://environment-ishikari.hub.arcgis.com/data.json
+uid: cdi00008190

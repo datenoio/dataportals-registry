@@ -5,7 +5,6 @@ api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
-- time series
 coverage:
 - location:
     country:
@@ -22,7 +21,7 @@ description: Official economic indicators catalog of the Banco Central de Costa 
 endpoints:
 - type: docs
   url: https://gee.bccr.fi.cr/indicadoreseconomicos/Documentos/DocumentosMetodologiasNotasTecnicas/Estandar_API_SDDE.pdf
-- type: customapi
+- type: rest
   url: https://apim.bccr.fi.cr/SDDE/api/Bccr.Ge.SDDE.Publico.Indicadores.API
 id: sddbccrficr
 langs:

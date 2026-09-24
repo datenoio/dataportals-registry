@@ -1,0 +1,106 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Public GeoNode catalog of layers and maps.
+id: gisperpusnasgoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://gis.perpusnas.go.id/
+name: Geoportal Perpustakaan Nasional RI
+owner:
+  link: https://gis.perpusnas.go.id/
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 2
+  name: Geoportal Perpustakaan Nasional RI
+  type: Central government
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- maps
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+endpoints:
+- type: geonode:datasets
+  url: https://gis.perpusnas.go.id/api/datasets/
+- type: geonode:datasets
+  url: https://gis.perpusnas.go.id/api/v2/datasets/
+  version: '2'
+- type: geonode:documents
+  url: https://gis.perpusnas.go.id/api/documents/
+- type: csw202
+  url: https://gis.perpusnas.go.id/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://gis.perpusnas.go.id/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: opensearch
+  url: https://gis.perpusnas.go.id/catalogue/opensearch
+  version: '1.1'
+- type: wms111
+  url: https://gis.perpusnas.go.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://gis.perpusnas.go.id/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://gis.perpusnas.go.id/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://gis.perpusnas.go.id/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wms130
+  url: https://gis.perpusnas.go.id/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://gis.perpusnas.go.id/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://gis.perpusnas.go.id/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://gis.perpusnas.go.id/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://gis.perpusnas.go.id/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://gis.perpusnas.go.id/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wps100
+  url: https://gis.perpusnas.go.id/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://gis.perpusnas.go.id/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: https://gis.perpusnas.go.id/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+uid: cdi00014222

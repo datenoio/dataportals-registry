@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    subregion:
+      id: AT-8
+      name: Vorarlberg
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: OPUS 4 publication server of Pädagogische Hochschule Vorarlberg.
+id: phvopushbznrwde
+langs:
+- id: DE
+  name: German
+link: https://phv.opus.hbz-nrw.de
+name: Publication server of the University College of Teacher Education Vorarlberg
+owner:
+  link: https://phv.opus.hbz-nrw.de
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    subregion:
+      id: AT-8
+      name: Vorarlberg
+  name: Pädagogische Hochschule Vorarlberg
+  type: Academy
+software:
+  id: opus
+  name: OPUS
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00009601
+endpoints:
+- type: oaipmh20
+  url: https://phv.opus.hbz-nrw.de/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://phv.opus.hbz-nrw.de/rss/index/index/searchtype/latest
+  version: '2.0'

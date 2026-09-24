@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -44,8 +44,8 @@ properties:
   has_doi: false
   is_national: false
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - statistics
@@ -70,4 +70,10 @@ topics:
 - id: Economy
   name: Economy
   type: iso19115
+endpoints:
+- type: rest
+  url: https://ibestat.es/wp-json/
+- type: rest:posts
+  url: https://ibestat.es/wp-json/wp/v2/posts
+  version: '2'
 uid: cdi99994720

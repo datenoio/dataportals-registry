@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: EE
+      name: Estonia
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Public election open-data catalog of the Estonian State Electoral Office.
+  Lists XML files for candidates, turnout, and results by election event (RK, KOV,
+  EP), with a documented machine interface at /api/{event}/{filename}.
+endpoints:
+- type: rest
+  url: https://opendata.valimised.ee/api/
+id: opendatavalimisedee
+langs:
+- id: ET
+  name: Estonian
+- id: EN
+  name: English
+link: https://opendata.valimised.ee/
+name: Valimiste avaandmed
+owner:
+  link: https://www.valimised.ee
+  location:
+    country:
+      id: EE
+      name: Estonia
+    level: 20
+  name: State Electoral Office of Estonia
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- elections
+- open data
+- Estonia
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00007900

@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion:
+      id: JP-23
+      name: Aichi
+description: Regional open data portal for eastern Mikawa (Aichi), publishing datasets
+  from Toyohashi City and other Higashi-Mikawa public agencies, companies, universities,
+  and civic groups.
+id: wwwtemirinjp
+langs:
+- id: JA
+  name: Japanese
+link: https://www.temirin.jp
+name: Open Data Higashi-Mikawa
+owner:
+  link: https://www.temirin.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-23
+      name: Aichi
+  name: 東三河オープンデータ
+  type: Community
+software:
+  id: dkan
+  name: DKAN
+status: active
+tags:
+- open data
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: ckan:package-list
+  url: https://www.temirin.jp/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://www.temirin.jp/data.json
+uid: cdi00014776

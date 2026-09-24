@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: FI-18
+      name: Uusimaa
+description: Public Oskari map of the City of Espoo, hosted by Ubigu Kartalla, with
+  municipal orthophotos, zoning maps, and guide maps.
+id: espoooskarikartallaio
+langs:
+- id: FI
+  name: Finnish
+link: https://espoo.oskari.kartalla.io
+name: Espoo Oskari map service
+owner:
+  link: https://www.espoo.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 30
+    subregion:
+      id: FI-18
+      name: Uusimaa
+  name: City of Espoo
+  type: Local government
+software:
+  id: oskari
+  name: Oskari
+status: active
+tags:
+- geospatial
+- maps
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+endpoints:
+- type: oskari:gethiermaplayers
+  url: https://espoo.oskari.kartalla.io/action?action_route=GetHierarchicalMapLayerGroups
+uid: cdi00013613

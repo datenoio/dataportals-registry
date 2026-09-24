@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-HI
+      name: Hawaii
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Hawaii food prices, trade, crop insurance, and farm-payment tables.
+id: explorehawaiifoodatlascom
+langs:
+- id: EN
+  name: English
+link: https://explore.hawaiifoodatlas.com/
+name: Hawaii Food Atlas Data API
+owner:
+  link: https://explore.hawaiifoodatlas.com/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-HI
+      name: Hawaii
+  name: Hawaii Food Atlas
+  type: Civil society
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- civil society
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00016323
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://explore.hawaiifoodatlas.com/-/databases.json

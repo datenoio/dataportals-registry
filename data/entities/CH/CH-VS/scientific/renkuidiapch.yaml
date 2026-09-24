@@ -19,7 +19,7 @@ description: Institutional Renku deployment operated by the Idiap Research Insti
   data science developed by the Swiss Data Science Center. The public search lists
   projects, datasets and data connectors hosted on this instance.
 endpoints:
-- type: custom_api
+- type: rest
   url: https://renku.idiap.ch/api/data/search/query?q=water
 id: renkuidiapch
 langs:
@@ -40,8 +40,8 @@ owner:
   name: Idiap Research Institute
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: renku
+  name: Renku
 status: active
 tags:
 - academic

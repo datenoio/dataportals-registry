@@ -14,11 +14,19 @@ coverage:
     macroregion:
       id: '030'
       name: Eastern Asia
+- location:
+    country:
+      id: KR
+      name: South Korea
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
 description: Statistics Korea North Korea Statistics portal compiling about 700 indicator
   series from South Korean agencies and international organizations, with thematic
   tables, 1993 and 2008 census extracts, population projections, and statistical publications.
 endpoints:
-- type: api
+- type: rest
   url: https://kosis.kr/openapi/statisticsList.do?method=getList&format=json
 id: kosiskrbukhan
 langs:

@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 20
+description: Structured catalog of Swiss and Liechtenstein retail bank products, fees,
+  and interest rates.
+id: apibankproductsinfo
+langs:
+- id: DE
+  name: German
+link: https://api.bankproducts.info/
+name: Swiss and Liechtenstein bank products
+owner:
+  link: https://bankproducts.info/
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+  name: bankproducts.info
+  type: Business
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- business
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+uid: cdi00010054
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://api.bankproducts.info/-/databases.json

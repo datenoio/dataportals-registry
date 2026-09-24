@@ -1,0 +1,50 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: API Catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Norwegian national public-transport developer portal. Documents and exposes
+  SIRI 2.0 (ET, VM, SX), SIRI Lite, GTFS-RT, NeTEx, and journey-planner APIs. Distinct
+  from transportportal.no.
+endpoints:
+- type: rest
+  url: https://api.entur.io/realtime/v1/rest/sx
+id: developerenturno
+langs:
+- id: EN
+  name: English
+- id: 'NO'
+  name: Norwegian
+link: https://developer.entur.no
+name: Entur for Developers
+owner:
+  link: https://entur.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+  name: Entur AS
+  type: Business
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- api
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00007997

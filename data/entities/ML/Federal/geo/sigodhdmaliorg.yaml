@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ML
+      name: Mali
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Public mviewer of communal poverty and basic-service indicators for the
+  703 communes of Mali, published by the Observatoire du Développement Humain Durable
+  et de la Lutte contre la Pauvreté.
+endpoints:
+- type: mviewer:catalog
+  url: http://sig.odhd-mali.org/
+id: sigodhdmaliorg
+langs:
+- id: FR
+  name: French
+link: http://sig.odhd-mali.org/
+name: SIG des 703 communes du Mali
+owner:
+  link: https://www.odhd-mali.org/
+  location:
+    country:
+      id: ML
+      name: Mali
+    level: 20
+  name: Observatoire du Développement Humain Durable et de la Lutte contre la Pauvreté
+  type: Central government
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- mviewer
+- geoportal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00015163

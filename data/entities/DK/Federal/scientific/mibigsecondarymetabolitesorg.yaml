@@ -10,7 +10,7 @@ coverage:
     country:
       id: World
       name: World
-    level: 0
+    level: 10
     macroregion:
       id: '001'
       name: World
@@ -21,7 +21,7 @@ description: The MIBiG (Minimum Information about a Biosynthetic Gene Cluster) R
   BGC function and novelty central to both small and large-scale studies of microbes and microbial
   communities.
 endpoints:
-- type: customapi
+- type: rest
   url: https://mibig.secondarymetabolites.org/api/v1/stats
 id: mibigsecondarymetabolitesorg
 identifiers:

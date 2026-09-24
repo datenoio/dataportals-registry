@@ -18,13 +18,13 @@ description: ORFEUS EIDA node at Kandilli Observatory and Earthquake Research In
   University), serving FDSN waveform, station, availability, and WFCatalog services including
   Marmara near-fault observatory data.
 endpoints:
-- type: api
+- type: rest
   url: https://eida.koeri.boun.edu.tr/fdsnws/station/1/
-- type: api
+- type: rest
   url: https://eida.koeri.boun.edu.tr/fdsnws/dataselect/1/
-- type: api
+- type: rest
   url: https://eida.koeri.boun.edu.tr/fdsnws/availability/1/
-- type: api
+- type: rest
   url: https://eida.koeri.boun.edu.tr/eidaws/wfcatalog/1/
 id: eidakoeibounedutr
 langs:

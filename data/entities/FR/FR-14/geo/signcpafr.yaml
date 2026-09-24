@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-14
+      name: Calvados
+description: Lizmap observatory of Communauté de communes Normandie-Cabourg-Pays d'Auge,
+  with public maps on demography, economy, housing, and health.
+id: signcpafr
+langs:
+- id: FR
+  name: French
+link: https://sig.ncpa.fr/
+name: Observatoire SIG Normandie-Cabourg-Pays d'Auge
+owner:
+  link: https://www.ncpa.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-14
+      name: Calvados
+  name: Communauté de communes Normandie-Cabourg-Pays d'Auge
+  type: Local government
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- government
+- lizmap
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: wms130
+  url: "https://sig.ncpa.fr/index.php/lizmap/service?repository=observatoire&project=observatoire_demographie&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+  version: "1.3.0"
+uid: cdi00007706
+properties:
+  is_national: false

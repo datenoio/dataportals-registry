@@ -19,9 +19,9 @@ description: Official macroeconomic data warehouse of the Central Bank of The Ga
   Provides time series for monetary, fiscal, external, national accounts, prices,
   and other macroeconomic statistics, with guest databank and export APIs.
 endpoints:
-- type: customapi
+- type: rest
   url: https://app.datawarehousepro.com/guest/getDatabanksWithMnemonics/cbg
-- type: customapi
+- type: rest
   url: https://app.datawarehousepro.com/guest/export/cbg
 id: appdatawarehouseprocomgocbg
 langs:

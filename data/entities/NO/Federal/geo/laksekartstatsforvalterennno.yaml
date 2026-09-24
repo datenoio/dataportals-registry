@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Public Adaptive map of the Norwegian salmon register, with stock assessments
+  and anadromous river stretches.
+id: laksekartstatsforvalterennno
+langs:
+- id: 'NO'
+  name: Norwegian
+link: https://laksekart.statsforvalteren.no/
+name: Lakseregisteret kart
+owner:
+  link: https://www.statsforvalteren.no/
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: Statsforvalteren
+  type: Central government
+software:
+  id: avinet
+  name: Avinet Adaptive
+status: active
+tags:
+- geospatial
+- maps
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00008667
+endpoints:
+- type: avinet:catalog
+  url: https://laksekart.statsforvalteren.no
+properties:
+  is_national: false

@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 10
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ESA APEX STAC API for the EO4SEM project, with collections of EnMAP site
+  imagery, ammonia, and regional fossil-fuel CO2 inversion products.
+id: catalogueeo4semapexesaint
+langs:
+- id: EN
+  name: English
+link: https://catalogue.eo4sem.apex.esa.int
+name: EO4SEM Data Catalogue
+owner:
+  link: https://www.esa.int
+  location:
+    country:
+      id: EU
+      name: European Union
+  name: European Space Agency
+  type: International
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- geospatial
+- maps
+- international
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00011977
+endpoints:
+- type: stacserverapi
+  url: https://catalogue.eo4sem.apex.esa.int/
+  version: '1.0'
+- type: stacserverapi:collections
+  url: https://catalogue.eo4sem.apex.esa.int/collections
+  version: '1.0'
+- type: stacserverapi:conformance
+  url: https://catalogue.eo4sem.apex.esa.int/conformance
+  version: '1.0'
+- type: openapi
+  url: https://catalogue.eo4sem.apex.esa.int/api
+  version: '3.0'

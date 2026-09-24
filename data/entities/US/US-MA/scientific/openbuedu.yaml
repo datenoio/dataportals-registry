@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MA
+      name: Massachusetts
+description: Boston University institutional repository on DSpace 7.6. The Dataset
+  item type includes the Boston University Common Data Set series.
+id: openbuedu
+langs:
+- id: EN
+  name: English
+link: https://open.bu.edu
+name: OpenBU
+owner:
+  link: https://www.bu.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MA
+      name: Massachusetts
+  name: Boston University
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00016360
+endpoints:
+- type: dspace
+  url: https://open.bu.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://open.bu.edu/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://open.bu.edu/oai/request?verb=Identify
+  version: '2.0'
+- type: oaipmh20
+  url: https://open.bu.edu/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://open.bu.edu/sitemap_index.xml

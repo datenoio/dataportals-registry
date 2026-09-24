@@ -20,7 +20,7 @@ description: Official UK census and labour market statistics service from the Of
   at national, regional and local levels, including current and historic census data,
   employment, unemployment, earnings, qualifications, benefit claimants and businesses.
 endpoints:
-- type: customapi
+- type: rest
   url: https://www.nomisweb.co.uk/api/v01/
   version: '01'
 - type: sdmx-json
@@ -42,7 +42,7 @@ owner:
   type: Central government
 properties:
   has_doi: false
-  is_national: true
+  is_national: false
 rights:
   license_id: null
   license_name: Open Government Licence v3.0

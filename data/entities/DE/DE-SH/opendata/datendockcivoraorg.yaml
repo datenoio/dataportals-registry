@@ -20,11 +20,11 @@ coverage:
 description: CIVORA / Piveau data catalog (DatenDock) for KielRegion, listing regional
   open datasets from Kiel and surrounding districts with a public hub-search API.
 endpoints:
-- type: customapi
+- type: rest
   url: https://piveau-search.datendock.civora.org/search
-- type: customapi
+- type: rest
   url: https://piveau-repo.datendock.civora.org/catalogues
-- type: customapi
+- type: rest
   url: https://piveau-repo.datendock.civora.org/datasets
 - type: ckan:package-search
   url: https://piveau-search.datendock.civora.org/ckan/package_search

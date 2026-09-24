@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: City of Coquitlam GIS data ArcGIS Server REST services exposing cached and dynamic municipal map services.
+id: gisdatacoquitlamca
+langs:
+- id: EN
+  name: English
+link: https://gisdata.coquitlam.ca/arcgis/rest/services
+name: City of Coquitlam GIS Data ArcGIS Server
+owner:
+  link: "https://gisdata.coquitlam.ca"
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: City of Coquitlam
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisdata.coquitlam.ca/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisdata.coquitlam.ca/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisdata.coquitlam.ca/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisdata.coquitlam.ca/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisdata.coquitlam.ca/arcgis/rest/services?f=geositemap
+uid: cdi00007865

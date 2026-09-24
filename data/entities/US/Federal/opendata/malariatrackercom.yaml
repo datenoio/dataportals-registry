@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    macroregion:
+      id: '021'
+      name: Northern America
+    level: 20
+description: Malaria-endemic regions for US blood-donor screening, compiled from CDC
+  Travelers' Health guidance.
+id: malariatrackercom
+langs:
+- id: EN
+  name: English
+link: https://malariatracker.com/
+name: Malaria Region Tracker
+owner:
+  link: https://malariatracker.com/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Malaria Region Tracker
+  type: Civil society
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- civil society
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00016089
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://malariatracker.com/-/databases.json

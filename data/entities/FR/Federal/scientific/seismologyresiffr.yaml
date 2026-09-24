@@ -21,15 +21,15 @@ description: The Epos-France Seismological data center offers access to seismolo
   scales. Epos-France is a French national equipment for the observation and understanding
   of the solid Earth.
 endpoints:
-- type: api
+- type: rest
   url: https://ws.resif.fr/fdsnws/station/1/
-- type: api
+- type: rest
   url: https://ws.resif.fr/fdsnws/dataselect/1/
-- type: api
+- type: rest
   url: https://ws.resif.fr/fdsnws/availability/1/
-- type: api
+- type: rest
   url: https://ws.resif.fr/eidaws/wfcatalog/1/
-- type: api
+- type: rest
   url: https://nfocrl.eost.unistra.fr/fdsnws/event/1/
 id: seismologyresiffr
 identifiers:

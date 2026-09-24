@@ -1,0 +1,43 @@
+DATA QUALITY REPORT - COUNTRY: CH
+================================================================================
+Generated: 2026-09-24 20:41:37
+Country Code: CH
+Total Records with Issues: 3
+Total Issues Found: 3
+
+=== ISSUES BY TYPE ===
+
+[MISSING_RIGHTS]
+Count: 2
+Priority: LOW
+
+File: CH/Federal/opendata/opendataswiss.yaml
+Record ID: opendataswiss
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: CH/Federal/opendata/databfsadminch.yaml
+Record ID: databfsadminch
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': 'https://www.bfs.admin.ch/bfs/de/home/bfs/bundesamt-statistik/rechtliche-hinweise.html', 'rights_type': 'global', 'tos_url': 'https://www.bfs.admin.ch/bfs/de/home/bfs/bundesamt-statistik/nutzungsbedingungen.html'}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS]
+Count: 1
+Priority: MEDIUM
+
+File: CH/CH-TI/indicators/statisticaluganochsite.yaml
+Record ID: statisticaluganochsite
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+MISSING_RIGHTS: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS: 1 issue

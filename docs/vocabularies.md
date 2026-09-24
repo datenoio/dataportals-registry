@@ -16,7 +16,7 @@ Controlled values for catalog YAML. Source files live under `data/reference/`. C
 | `50` | City | Same |
 | `60` | Commune / local authority | Same |
 
-Regional and local government owners must have `owner.location.level` of **30 or higher** and a matching subregion directory (`US-CA/`, `GB-SCT/`, …), not `Federal/`.
+Regional and local government owners must have `owner.location.level` of **30 or higher** and a matching subregion directory (`US-CA/`, `GB-SCT/`, …), not `Federal/`. Other level numbers are `COVERAGE_LEVEL_NONSTANDARD`. Central and federal owners with no level are `OWNER_LEVEL_MISSING`.
 
 Country folders use ISO 3166-1 alpha-2. Special roots (`World`, `EU`, `Africa`, `ASEAN`, …) are listed in `PATH_COUNTRY_ALLOWLIST` in `scripts/constants.py`. Subregion ids use ISO 3166-2 style. Macroregion ids are UN M49 numeric codes stored as **quoted strings** (`'021'` Northern America, `'155'` Western Europe). Quote country code `'NO'` (Norway); unquoted `NO` is a YAML 1.1 boolean.
 
@@ -70,7 +70,11 @@ Also present in historical records (do not add for new catalogs unless there is 
 | `dataverseapi` | Dataverse |
 | `wms130`, `wfs200`, `wcs201`, `wmts100` | OGC OWS |
 
-Harvestable catalog dumps (`/data.json`, `/catalog.xml`, `/catalog.rdf`) are `endpoints[]` entries, not `catalog_export`. The observed inventory is `data/reference/endpoint_types.yaml` (generated from YAML, not a closed allow-list).
+Harvestable catalog dumps (`/data.json`, `/catalog.xml`, `/catalog.rdf`) are `endpoints[]` entries, not `catalog_export`. The observed inventory is `data/reference/endpoint_types.yaml` (generated from YAML, not a closed allow-list). Retired aliases (`customapi`, `custom_api`, bare `api`, `opendatasoft`, `geonetwork`, `geonetwork:csw`, `stac`, `csw`, `oaipmh`, `socrata:opendata`) are `ENDPOINT_TYPE_ALIAS`.
+
+## Content types
+
+`content_types[]` values come from `data/reference/content_types.yaml`: `dataset`, `map_layer`, `indicator`, `publication`, `microdata`, `document`. Other strings are `CONTENT_TYPE_NONCANONICAL`.
 
 ## Topics
 
@@ -81,11 +85,11 @@ Harvestable catalog dumps (`/data.json`, `/catalog.xml`, `/catalog.rdf`) are `en
 | EU data theme | `AGRI`, `ECON`, `EDUC`, `ENER`, `ENVI`, `GOVE`, `HEAL`, `INTR`, `JUST`, `REGI`, `SOCI`, `TECH`, `TRAN` | `data/reference/data_themes.yaml` |
 | ISO 19115 | Biota, Boundaries, Elevation, Oceans, … | `data/reference/iso19115.yaml` |
 
-Open-data portals usually use EU data themes. Geoportals may use ISO 19115. Incomplete `{type,id,name}` triples are `TOPIC_INCOMPLETE`.
+Open-data portals usually use EU data themes. Geoportals may use ISO 19115. Incomplete `{type,id,name}` triples are `TOPIC_INCOMPLETE`. Any other `type` is `TOPIC_TYPE_NONCANONICAL`.
 
 ## Languages
 
-`langs[]` is `{id, name}` with ISO 639-1 style codes (`EN` / `English`). Codes and names: `data/reference/langs.csv`.
+`langs[]` is `{id, name}` with ISO 639-1 style codes (`EN` / `English`). Codes and names must match `data/reference/langs.csv` (`LANGUAGE_CODE_UNKNOWN`, `LANGUAGE_NAME_NONCANONICAL`). Chinese is `ZH`, not `CN`.
 
 ## Other reference files
 
@@ -94,7 +98,8 @@ Open-data portals usually use EU data themes. Geoportals may use ISO 19115. Inco
 | `catalog_types.yaml` | `catalog_type` |
 | `software_ids.yaml` | `software.id` (generated from `data/software/` by `python scripts/builder.py sync-software-maps`) |
 | `status.yaml` | `status` |
-| `access_modes.yaml` | `access_mode` (prefer `open` / `restricted`) |
+| `access_modes.yaml` | `access_mode` (prefer `open` / `restricted`; other allowed values are `ACCESS_MODE_NONPREFERRED`) |
+| `content_types.yaml` | canonical `content_types` |
 | `owner_types.yaml` | canonical `owner.type` plus synonym map |
 | `countries.csv` | country id/name |
 | `macroregion_countries.csv` | UN M49 membership |

@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-MT
+      name: Mato Grosso
+description: Open data portal of the state of Mato Grosso, Brazil.
+id: dadosabertosmtgovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://dadosabertos.mt.gov.br
+name: Portal de Dados Abertos de Mato Grosso
+owner:
+  link: https://www.mt.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-MT
+      name: Mato Grosso
+  name: Governo do Estado de Mato Grosso
+  type: Regional government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: ckan
+  url: https://dadosabertos.mt.gov.br/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dadosabertos.mt.gov.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dadosabertos.mt.gov.br/api/3/action/package_list
+  version: '3'
+uid: cdi00009846
+properties:
+  is_national: false

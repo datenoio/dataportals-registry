@@ -20,11 +20,11 @@ coverage:
 description: CIVORA / Piveau municipal data catalog of Stadt Gelsenkirchen, separate
   from the city's DKAN open data portal, with public hub-search and hub-repo APIs.
 endpoints:
-- type: customapi
+- type: rest
   url: https://piveau-search.gelsenkirchen.civora.org/search
-- type: customapi
+- type: rest
   url: https://piveau-repo.gelsenkirchen.civora.org/catalogues
-- type: customapi
+- type: rest
   url: https://piveau-repo.gelsenkirchen.civora.org/datasets
 - type: ckan:package-search
   url: https://piveau-search.gelsenkirchen.civora.org/ckan/package_search

@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: GISQuick map of cadastral agrometeorology for Czechia, operated by the
+  Czech University of Life Sciences Prague with ČHMÚ observations. Public project
+  admin/agrometeo publishes temperature, precipitation, and wind layers and is embedded
+  by agropocasi.cz.
+id: mapyagrometeorologiecz
+langs:
+- id: CS
+  name: Czech
+link: https://mapy.agrometeorologie.cz
+name: Agropočasí Agrometeorology Maps
+owner:
+  link: https://www.czu.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: Czech University of Life Sciences Prague
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: gisquick
+  name: GISQuick
+status: active
+tags:
+- geospatial
+- has_api
+topics:
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
+endpoints:
+- type: wms130
+  url: https://mapy.agrometeorologie.cz/api/map/ows/admin/agrometeo?SERVICE=WMS&REQUEST=GetCapabilities
+  version: 1.3.0
+- type: rest
+  url: https://mapy.agrometeorologie.cz/api/map/project/admin/agrometeo
+- type: gisquick:app
+  url: https://mapy.agrometeorologie.cz/api/app
+uid: cdi00011259

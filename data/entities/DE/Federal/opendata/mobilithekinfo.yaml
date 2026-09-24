@@ -1,6 +1,6 @@
 access_mode:
 - open
-- limited
+- restricted
 api: true
 api_status: active
 catalog_type: Open data portal
@@ -20,11 +20,11 @@ description: Germany's National Access Point (NAP) for mobility data, published 
   and restricted traffic, public transport, and infrastructure datasets required under
   the EU ITS Directive, including DATEX II feeds and DCAT-AP.de metadata.
 endpoints:
-- type: customapi
+- type: rest
   url: https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/search/unrestricted
-- type: customapi
+- type: rest
   url: https://mobilithek.info/mdp-api/mdp-msa-metadata/v1/vocabs
-- type: customapi
+- type: rest
   url: https://mobilithek.info:8443/mobilithek/api/v1.0/
 - type: docs
   url: https://mobilithek.info/help

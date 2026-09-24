@@ -1,0 +1,50 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: Open data catalog run by Social Network, a Greek civil society
+  organization, publishing datasets on social and public-interest topics for Greece.
+id: opendatasocialnetworkgr
+langs:
+- id: EL
+  name: Greek
+link: https://open-data.social-network.gr
+name: Open Data - Social Network
+owner:
+  link: "https://open-data.social-network.gr"
+  location:
+    country:
+      id: GR
+      name: Greece
+  name: Social Network
+  type: Civil society
+software:
+  id: dkan
+  name: DKAN
+status: active
+tags:
+- open data
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00007558
+endpoints:
+- type: ckan:package-list
+  url: https://open-data.social-network.gr/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://open-data.social-network.gr/data.json

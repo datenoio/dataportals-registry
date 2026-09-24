@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: MiraMon Map Browser for the Open-Earth-Monitor Cyberinfrastructure interoperability
+  experiment. GRUMETS (Universitat Autònoma de Barcelona / CREAF) publishes European
+  and global Earth-observation layers, including Copernicus productivity, ESA CCI
+  land cover, FAPAR, and leaf-area products.
+endpoints:
+- type: wms130
+  url: https://geoserver.earthmonitor.org/geoserver/oem/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+  version: 1.3.0
+id: mapsoemcgrumetscat
+langs:
+- id: CA
+  name: Catalan
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: https://maps.oemc.grumets.cat/
+name: Open Earth Monitor Cyberinfrastructure
+owner:
+  link: https://earthmonitor.org
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: Open-Earth-Monitor project (EU Horizon Europe)
+  type: International
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: miramon
+  name: MiraMon
+status: active
+tags:
+- geospatial
+- miramon
+- earth observation
+- research
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00011997

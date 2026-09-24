@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Meeting minutes, agendas, and civic records for the Cosumnes Community
+  Services District.
+id: cosumnescsdcacivicband
+langs:
+- id: EN
+  name: English
+link: https://cosumnes-csd.ca.civic.band/
+name: Cosumnes Community Services District Civic Data
+owner:
+  link: https://www.cosumnescsd.gov/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: Cosumnes Community Services District
+  type: Local government
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00016279
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://cosumnes-csd.ca.civic.band/-/databases.json

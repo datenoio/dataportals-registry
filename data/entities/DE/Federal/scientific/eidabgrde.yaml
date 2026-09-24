@@ -17,13 +17,13 @@ coverage:
 description: ORFEUS EIDA node operated by the Federal Institute for Geosciences and Natural Resources (BGR),
   serving FDSN waveform, station metadata, availability, and WFCatalog web services.
 endpoints:
-- type: api
+- type: rest
   url: https://eida.bgr.de/fdsnws/station/1/
-- type: api
+- type: rest
   url: https://eida.bgr.de/fdsnws/dataselect/1/
-- type: api
+- type: rest
   url: https://eida.bgr.de/fdsnws/availability/1/
-- type: api
+- type: rest
   url: https://eida.bgr.de/eidaws/wfcatalog/1/
 id: eidabgrde
 langs:

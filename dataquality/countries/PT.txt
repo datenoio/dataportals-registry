@@ -1,0 +1,48 @@
+DATA QUALITY REPORT - COUNTRY: PT
+================================================================================
+Generated: 2026-09-24 20:41:37
+Country Code: PT
+Total Records with Issues: 3
+Total Issues Found: 3
+
+=== ISSUES BY TYPE ===
+
+[MISSING_RIGHTS]
+Count: 1
+Priority: LOW
+
+File: PT/Federal/opendata/dadosgovpt.yaml
+Record ID: dadosgovpt
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX]
+Count: 1
+Priority: MEDIUM
+
+File: PT/PT-11/geo/websigcmlisboapt.yaml
+Record ID: websigcmlisboapt
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX
+Field: endpoints
+Current Value: {'software_id': 'geocortex', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geocortex' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS]
+Count: 1
+Priority: MEDIUM
+
+File: PT/PT-20/indicators/sreaazoresgovpt.yaml
+Record ID: sreaazoresgovpt
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+MISSING_RIGHTS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS: 1 issue

@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: MapStore geoportal of the Data-K application operated by NAOMIS.
+id: mapstoredataknaomisfr
+langs:
+- id: FR
+  name: French
+link: https://mapstore.datak.naomis.fr/mapstore/
+name: Data-K MapStore
+owner:
+  link: https://mapstore.datak.naomis.fr
+  location:
+    country:
+      id: FR
+      name: France
+  name: NAOMIS
+  type: Business
+software:
+  id: mapstore
+  name: MapStore
+status: active
+tags:
+- geospatial
+- maps
+- business
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00013888
+endpoints:
+- type: mapstore:config
+  url: https://mapstore.datak.naomis.fr/mapstore/configs/localConfig.json

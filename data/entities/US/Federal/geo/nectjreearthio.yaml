@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Map of Japanese-language education projects published by the Northeast
+  Council of Teachers of Japanese.
+id: nectjreearthio
+langs:
+- id: JA
+  name: Japanese
+- id: EN
+  name: English
+link: https://nectj.reearth.io/
+name: NECTJ project map
+owner:
+  link: https://nectj.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Northeast Council of Teachers of Japanese
+  type: Academy
+software:
+  id: reearth
+  name: Re:Earth
+status: active
+tags:
+- geospatial
+- GIS
+- Re:Earth
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00016036
+endpoints:
+- type: reearth:catalog
+  url: https://nectj.reearth.io/

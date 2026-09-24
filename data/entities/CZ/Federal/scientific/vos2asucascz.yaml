@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Stellar data center of the Astronomical Institute of the Czech Academy
+  of Sciences. Publishes CCD700, HEROS, and LAMOST spectra plus Ondřejov photometric
+  survey tables (Bextract, DK154) through a DaCHS TAP service.
+id: vos2asucascz
+langs:
+- id: CS
+  name: Czech
+link: http://vos2.asu.cas.cz/
+name: Astronomical Institute CAS VO Services
+owner:
+  link: https://www.asu.cas.cz/
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: Astronomical Institute of the Czech Academy of Sciences
+  type: Academy
+software:
+  id: dachs
+  name: DaCHS
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00011287
+endpoints:
+- type: tap:capabilities
+  url: http://vos2.asu.cas.cz/tap/capabilities
+- type: oaipmh20
+  url: http://vos2.asu.cas.cz/oai.xml?verb=Identify
+  version: '2.0'

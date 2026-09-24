@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 30
+    macroregion:
+      id: '018'
+      name: Southern Africa
+    subregion:
+      id: ZA-GP
+      name: Gauteng
+description: Public ArcGIS Enterprise portal of Gauteng Province with an Integrated
+  Geospatial Data Platform site; 223 items in the public catalog search.
+endpoints:
+- type: arcgis:portals:self
+  url: https://gisportal.gauteng.gov.za/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:search
+  url: https://gisportal.gauteng.gov.za/portal/sharing/rest/search?f=json&q=orgid:0123456789ABCDEF
+id: gisportalgautenggovza
+langs:
+- id: EN
+  name: English
+link: https://gisportal.gauteng.gov.za/portal/home
+name: Gauteng Integrated Geospatial Data Platform
+owner:
+  link: https://www.gauteng.gov.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 30
+    subregion:
+      id: ZA-GP
+      name: Gauteng
+  name: Gauteng Provincial Government
+  type: Regional government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007859

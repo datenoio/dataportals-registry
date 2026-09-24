@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BY
+      name: Bayern
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: QWC2 map of school bicycle-route planning in Munich published by ADFC
+  München, including the planned cycle network and school sites.
+id: schulenradwegplanungadfcmuenchende
+langs:
+- id: DE
+  name: German
+link: https://schulen.radwegplanung.adfc-muenchen.de/
+name: Radwegplanung Schulen München
+owner:
+  link: https://muenchen.adfc.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BY
+      name: Bayern
+  name: ADFC Kreisverband München e.V.
+  type: Civil society
+software:
+  id: qwc2
+  name: QGIS Web Client 2 (QWC2)
+status: active
+tags:
+- GIS
+- geospatial
+- QWC2
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00011392
+endpoints:
+- type: qwc2:layers
+  url: https://schulen.radwegplanung.adfc-muenchen.de/themes.json

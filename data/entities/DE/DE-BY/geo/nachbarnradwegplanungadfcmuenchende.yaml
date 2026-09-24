@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BY
+      name: Bayern
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: QWC2 map of Munich neighborhood districts published by ADFC München,
+  separate from the bicycle-path planning viewer.
+id: nachbarnradwegplanungadfcmuenchende
+langs:
+- id: DE
+  name: German
+link: https://nachbarn.radwegplanung.adfc-muenchen.de/
+name: Nachbarschaftsviertel München
+owner:
+  link: https://muenchen.adfc.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BY
+      name: Bayern
+  name: ADFC Kreisverband München e.V.
+  type: Civil society
+software:
+  id: qwc2
+  name: QGIS Web Client 2 (QWC2)
+status: active
+tags:
+- GIS
+- geospatial
+- QWC2
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00011391
+endpoints:
+- type: qwc2:layers
+  url: https://nachbarn.radwegplanung.adfc-muenchen.de/themes.json

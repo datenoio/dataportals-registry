@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: FMI Open Data SmartMet Server. Finnish Meteorological Institute open weather and climate
+  data via OGC APIs, including WFS 2.0 and EDR collections (ECMWF and other forecast and observation datasets).
+id: opendatafmifi
+langs:
+- id: FI
+  name: Finnish
+- id: EN
+  name: English
+link: https://opendata.fmi.fi
+name: FMI Open Data SmartMet Server
+owner:
+  link: "https://opendata.fmi.fi"
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+  name: Finnish Meteorological Institute
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: smartmetserver
+  name: SmartMet Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00007892
+endpoints:
+- type: rest
+  url: https://opendata.fmi.fi/edr/collections
+- type: wfs200
+  url: https://opendata.fmi.fi/wfs?service=WFS&request=GetCapabilities

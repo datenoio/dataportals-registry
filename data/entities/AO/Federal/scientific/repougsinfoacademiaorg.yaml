@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AO
+      name: Angola
+    level: 20
+    macroregion:
+      id: '017'
+      name: Middle Africa
+description: Institutional repository of Universidade Gregório Semedo in Luanda, running
+  InvenioRDM.
+id: repougsinfoacademiaorg
+langs:
+- id: PT
+  name: Portuguese
+link: https://repo-ugs.infoacademia.org
+name: Repositório Gregório Semedo
+owner:
+  link: https://repo-ugs.infoacademia.org
+  location:
+    country:
+      id: AO
+      name: Angola
+    level: 20
+  name: Universidade Gregório Semedo
+  type: Academy
+software:
+  id: inveniordm
+  name: InvenioRDM
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: inveniordmapi:records
+  url: https://repo-ugs.infoacademia.org/api/records
+- type: oaipmh20
+  url: https://repo-ugs.infoacademia.org/oai2d?verb=Identify
+  version: '2.0'
+uid: cdi00008887

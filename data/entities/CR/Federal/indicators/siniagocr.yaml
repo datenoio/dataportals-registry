@@ -21,10 +21,10 @@ description: Official environmental information platform of Costa Rica, operated
   and Energy (MINAE). Provides national environmental indicators, statistics, maps,
   and reports.
 endpoints:
-- type: customapi
+- type: rest
   url: https://sis-backend.sinia.go.cr/alfresco/sis/categories
   version: '1'
-- type: customapi
+- type: rest
   url: https://z7yfp2h8cj.execute-api.us-east-1.amazonaws.com/Stage/api/v1/indicator/category/
   version: '1'
 id: siniagocr

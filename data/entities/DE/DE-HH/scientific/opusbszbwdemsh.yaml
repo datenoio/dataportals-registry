@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-HH
+      name: Hamburg
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: OPUS 4 publication server of Medical School Hamburg.
+id: opusbszbwdemsh
+langs:
+- id: DE
+  name: German
+link: https://opus.bsz-bw.de/msh
+name: MSH Medical School Hamburg Publication Server
+owner:
+  link: https://opus.bsz-bw.de/msh
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-HH
+      name: Hamburg
+  name: Medical School Hamburg
+  type: Academy
+software:
+  id: opus
+  name: OPUS
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00011441
+endpoints:
+- type: oaipmh20
+  url: https://opus.bsz-bw.de/msh/oai?verb=Identify
+  version: '2.0'

@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Catch-all repository for Czech scientific data, operated for EOSC-CZ
+  on InvenioRDM.
+id: datarepoeosccz
+langs:
+- id: CS
+  name: Czech
+link: https://datarepo.eosc.cz
+name: Datový Catch-all Repozitář
+owner:
+  link: https://www.cesnet.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: CESNET
+  type: Academy
+software:
+  id: inveniordm
+  name: InvenioRDM
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: inveniordmapi:records
+  url: https://datarepo.eosc.cz/api/records
+- type: oaipmh20
+  url: https://datarepo.eosc.cz/oai2d?verb=Identify
+  version: '2.0'
+uid: cdi00011285

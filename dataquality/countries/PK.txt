@@ -1,0 +1,45 @@
+DATA QUALITY REPORT - COUNTRY: PK
+================================================================================
+Generated: 2026-09-24 20:41:37
+Country Code: PK
+Total Records with Issues: 4
+Total Issues Found: 4
+
+=== ISSUES BY TYPE ===
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS]
+Count: 4
+Priority: MEDIUM
+
+File: PK/Federal/indicators/mc2020pbosgovpk.yaml
+Record ID: mc2020pbosgovpk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: PK/Federal/indicators/tradedatagovpk.yaml
+Record ID: tradedatagovpk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: PK/Federal/indicators/economicdatagovpk.yaml
+Record ID: economicdatagovpk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: PK/Federal/indicators/nadatagovpk.yaml
+Record ID: nadatagovpk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS: 4 issues

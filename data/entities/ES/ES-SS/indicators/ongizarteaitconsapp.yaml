@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+- indicator
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-SS
+      name: Gipuzkoa
+description: OpenSDG wellbeing indicator site for Gipuzkoa, with series on health-related
+  quality of life, life expectancy, and related local measures. Indicator metadata
+  covers Gipuzkoa.
+id: ongizarteaitconsapp
+langs:
+- id: EU
+  name: Basque
+- id: ES
+  name: Spanish
+link: https://ongizartea.itcons.app/
+name: Ongizartea Gipuzkoa
+owner:
+  link: https://www.gipuzkoa.eus
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-SS
+      name: Gipuzkoa
+  name: Gipuzkoako Foru Aldundia
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: opensdg
+  name: OpenSDG
+status: active
+tags:
+- statistics
+- government
+- has_api
+- SDG
+- indicators
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: opensdg:reporting-status
+  url: https://ongizartea.itcons.app/reporting-status
+- type: opensdg:reporting-status
+  url: https://ongizartea.itcons.app/reporting-status/
+- type: opensdg:catalog
+  url: https://ongizartea.itcons.app/indicators.json
+- type: opensdg:data
+  url: https://itcons-app.github.io/ongizartea/eu/data/1-1-1.json
+- type: opensdg:data
+  url: https://itcons-app.github.io/ongizartea/eu/data/1-2-1.json
+uid: cdi00008753

@@ -10,14 +10,14 @@ coverage:
     country:
       id: World
       name: World
-    level: 0
+    level: 10
     macroregion:
       id: '001'
       name: World
 description: Shin-MassBank metabolomics mass spectrometry repository (MB-POST) for
   depositing and sharing raw and processed experimental datasets.
 endpoints:
-- type: customapi
+- type: rest
   url: https://repository.massbank.jp/api/projects
 id: repositorymassbankjp
 langs:

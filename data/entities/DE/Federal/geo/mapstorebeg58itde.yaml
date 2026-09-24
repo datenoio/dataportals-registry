@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: MapStore geoportal titled Mapstore BEG-58.
+id: mapstorebeg58itde
+langs:
+- id: DE
+  name: German
+link: https://mapstore.beg58-it.de/
+name: MapStore BEG-58
+owner:
+  link: https://mapstore.beg58-it.de
+  location:
+    country:
+      id: DE
+      name: Germany
+  name: BEG-58
+  type: Other
+software:
+  id: mapstore
+  name: MapStore
+status: active
+tags:
+- geospatial
+- maps
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00011575
+endpoints:
+- type: wms111
+  url: https://mapstore.beg58-it.de/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://mapstore.beg58-it.de/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://mapstore.beg58-it.de/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://mapstore.beg58-it.de/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://mapstore.beg58-it.de/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: mapstore:config
+  url: https://mapstore.beg58-it.de/configs/localConfig.json

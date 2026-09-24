@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CL
+      name: Chile
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Public GeoNode catalog of layers and maps.
+id: incertidumbreenccrvcl
+langs:
+- id: ES
+  name: Spanish
+link: https://incertidumbre.enccrv.cl/
+name: ENCCRV INCERTIDUMBRE
+owner:
+  link: https://incertidumbre.enccrv.cl/
+  location:
+    country:
+      id: CL
+      name: Chile
+    level: 2
+  name: ENCCRV INCERTIDUMBRE
+  type: Central government
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- maps
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+endpoints:
+- type: geonode:documents
+  url: https://incertidumbre.enccrv.cl/api/documents/
+- type: csw202
+  url: https://incertidumbre.enccrv.cl/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://incertidumbre.enccrv.cl/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://incertidumbre.enccrv.cl/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: opensearch
+  url: https://incertidumbre.enccrv.cl/catalogue/opensearch
+  version: '1.1'
+uid: cdi00010088

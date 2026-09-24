@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PH
+      name: Philippines
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: DSpace 8 repository of the UNESCO National Commission of the Philippines
+  with communities for Ocean Decade Philippines, NAMRIA, PAGASA, PHIVOLCS, DENR-BMB,
+  BFAR and other agencies; includes research datasets.
+id: repositoryunescogovph
+langs:
+- id: EN
+  name: English
+link: https://repository.unesco.gov.ph
+name: UNACOM Online and Digital Enabling Library and Index (UNACOMODELI)
+owner:
+  link: https://www.unesco.gov.ph
+  location:
+    country:
+      id: PH
+      name: Philippines
+    level: 20
+  name: UNESCO National Commission of the Philippines
+  type: Central government
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- research
+- government
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00007892
+endpoints:
+- type: dspace
+  url: https://repository.unesco.gov.ph/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://repository.unesco.gov.ph/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://repository.unesco.gov.ph/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://repository.unesco.gov.ph/sitemap_index.xml

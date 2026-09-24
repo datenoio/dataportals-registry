@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: InstDB catalog of the CAS National Time Service Center at idb.ntscstdc.cn,
+  with a public dataset listing alongside papers, patents, and software.
+id: idbntscstdccn
+langs:
+- id: ZH
+  name: Chinese
+link: https://idb.ntscstdc.cn
+name: National Time Service Science Data Center
+owner:
+  link: https://ntsc.ac.cn
+  location:
+    country:
+      id: CN
+      name: China
+    level: 20
+  name: CAS National Time Service Center
+  type: Academy
+software:
+  id: instdb
+  name: InstDB
+status: active
+tags:
+- scientific
+- China
+- InstDB
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00010143
+endpoints:
+- type: custom:api
+  url: https://idb.ntscstdc.cn/api
+properties:
+  dataset_count_reported: 3
+  is_national: false
+  has_doi: true

@@ -20,13 +20,13 @@ coverage:
 description: ORFEUS EIDA node operated by the Institut Cartogràfic i Geològic de Catalunya, providing FDSN
   waveform, station, availability, and WFCatalog web services.
 endpoints:
-- type: api
+- type: rest
   url: https://ws.icgc.cat/fdsnws/station/1/
-- type: api
+- type: rest
   url: https://ws.icgc.cat/fdsnws/dataselect/1/
-- type: api
+- type: rest
   url: https://ws.icgc.cat/fdsnws/availability/1/
-- type: api
+- type: rest
   url: https://ws.icgc.cat/eidaws/wfcatalog/1/
 id: wsicgccat
 langs:

@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion:
+      id: '001'
+      name: World
+description: Transport Data Commons is a global open data portal for transport and
+  mobility datasets, run by a non-profit coalition. PortalJS frontend backed by a
+  CKAN API at ckan.transport-data.org.
+id: portaltransportdataorg
+langs:
+- id: EN
+  name: English
+link: https://portal.transport-data.org
+name: Transport Data Commons
+owner:
+  link: https://transport-data.org
+  location:
+    country:
+      id: World
+      name: World
+  name: Transport Data Commons
+  type: Civil society
+software:
+  id: portaljs
+  name: PortalJS
+status: active
+tags:
+- has_api
+- transport
+- mobility
+- open data
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+endpoints:
+- type: ckan
+  url: https://ckan.transport-data.org/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan.transport-data.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.transport-data.org/api/3/action/package_list
+  version: '3'
+uid: cdi00007552

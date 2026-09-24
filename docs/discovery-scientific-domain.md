@@ -14,10 +14,14 @@ Integrated Publishing Toolkit for biodiversity data. List: [gbif.org/ipt](https:
 
 **Confirm:** `/rss.do`, `/inventory/dataset`, or the IPT homepage with installation name.
 
+[footer.ftl](https://github.com/gbif/ipt/blob/master/src/main/webapp/WEB-INF/pages/inc/footer.ftl) serves `GBIF-2015-standard-ipt.png` (431 hosts in September 2026, including `ipt.nature.ca`). `body="Integrated Publishing Toolkit"` matched 485. Pages that name the toolkit without the logo still match the phrase, so keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Integrated Publishing Toolkit" IPT GBIF` |
 | Google | `inurl:/ipt "GBIF"` |
+| Censys | `web.endpoints.http.body: "GBIF-2015-standard-ipt.png"` |
+| FOFA | `body="GBIF-2015-standard-ipt.png"` |
 | Censys | `web.endpoints.http.body: "Integrated Publishing Toolkit"` |
 | FOFA | `body="Integrated Publishing Toolkit"` |
 
@@ -31,10 +35,14 @@ Theme-based portals (SEINet, MyCoPortal, CCH2, Ecdysis, and others) publish spec
 
 **Confirm:** public collection search (`/collections/index.php` or `/portal/collections/`) and/or dataset RSS at `/collections/datasets/rsshandler.php`. Page signals include “Symbiota”, `collid=`, and “Search Collections”. Skip login-only portals and the vendor homepage.
 
+[head_template.php](https://github.com/Symbiota/Symbiota/blob/master/includes/head_template.php) links `symbiota/header.css` (92 hosts in September 2026, including `mycoportal.org`). `body="Symbiota"` matched 256. Themed portals can drop that stylesheet path, so keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Powered by Symbiota" OR "Symbiota portal" (collections OR occurrences) -site:symbiota.org -site:github.com` |
 | Google | `inurl:/collections/datasets/rsshandler.php` |
+| Censys | `web.endpoints.http.body: "symbiota/header.css"` |
+| FOFA | `body="symbiota/header.css"` |
 | Censys | `web.endpoints.http.body: "Symbiota"` |
 | FOFA | `body="Symbiota"` |
 
@@ -42,12 +50,17 @@ Theme-based portals (SEINet, MyCoPortal, CCH2, Ecdysis, and others) publish spec
 
 Scientific data servers (often climate/ocean). **Confirm:** `/thredds/catalog.html` or `/thredds/catalog.xml`.
 
+[catalog.html](https://github.com/Unidata/thredds/blob/5.0.0/tds/src/main/webapp/WEB-INF/templates/catalog.html) links `tds.css` (356 hosts in September 2026, including `thredds-su.ipsl.fr`). `body="THREDDS"` matched 878, including documentation that only mentions the server. Keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `inurl:/thredds/catalog.html` |
 | Google | `"THREDDS Data Server" catalog` |
+| Censys | `web.endpoints.http.body: "tds.css"` |
+| FOFA | `body="tds.css"` |
 | Censys | `web.endpoints.http.body: "THREDDS"` |
 | FOFA | `body="THREDDS"` |
+| Shodan | `http.html:"THREDDS Data Server"` |
 | Shodan | `http.html:"THREDDS Data Server"` |
 
 ## ERDDAP (`erddap`) {#erddap}
@@ -66,6 +79,8 @@ Fraunhofer IOSB open-source OGC SensorThings API server. Product: [FROST-Server]
 
 **Confirm:** JSON at `/v1.1/`, `/v1.0/`, or `/FROST-Server/v1.1/` listing `Things` / `Datastreams` / `Locations`, or the default HTML start page titled `Start Page` with heading `FROST-Server`. `Things?$top=1&$count=true` returns `@iot.count`. Skip Fraunhofer k8s demos, SensorUp scratchpads, login-walled hydrometry, and hosts with only a single Thing.
 
+[index.html](https://github.com/FraunhoferIOSB/FROST-Server/blob/v2.x/FROST-Server.MQTTP/src/main/webapp/index.html) uses the heading `FROST-Server` (101 hosts in September 2026, including `dgw.ve.ismar.cnr.it`).
+
 | Tool | Query |
 |------|-------|
 | Google | `"FROST-Server" (SensorThings OR Things OR Datastreams) -site:github.com` |
@@ -79,12 +94,16 @@ Fraunhofer IOSB open-source OGC SensorThings API server. Product: [FROST-Server]
 
 **Confirm:** XML Capabilities at `/52n-sos-webapp/sos?service=SOS&request=GetCapabilities` (or a custom mount) listing `sos:Contents` offerings, or the default webapp page titled `52°North Sensor Observation Service` (HTML-escaped as `52&deg;North`). Page bodies commonly link `/52n-sos-webapp/`. Skip `*.52north.org` vendor demos, bare-IP test boxes, and login-walled instances.
 
+[header.jsp](https://github.com/52North/SOS/blob/develop/spring/views/src/main/webapp/WEB-INF/views/common/header.jsp) loads `static/css/52n.css` (2 hosts in September 2026, including a page titled `52°North Sensor Observation Service`). `body="52n-sos-webapp"` matched 3, including `geomon.geologie.ac.at`. Custom mounts drop the stylesheet, so keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"52n-sos-webapp" -site:github.com -site:52north.org` |
 | Google | `intitle:"52°North Sensor Observation Service"` |
+| Censys | `web.endpoints.http.body: "static/css/52n.css"` |
+| FOFA | `body="static/css/52n.css"` |
 | Censys | `web.endpoints.http.body: "52n-sos-webapp"` |
-| FOFA | `body="52n-sos-webapp"` or `body="52&deg;North Sensor Observation Service"` |
+| FOFA | `body="52n-sos-webapp"` |
 
 ## OPeNDAP (`opendap`) {#opendap}
 
@@ -102,7 +121,7 @@ Remote subsetting protocol and server ecosystem. Site: [opendap.org](https://www
 
 The OPeNDAP 4 Data Server, unrelated to the Samvera repository product that uses `software.id: hyrax`. Register one public Hyrax server per independently operated dataset catalog. Prefer `thredds` or `erddap` when Hyrax is only an alternate access service for one of those catalogs.
 
-**Confirm:** the directory page title starts with `OPeNDAP Hyrax: Contents of`, the footer reports `Hyrax (version)`, or `/opendap/catalog.xml` returns the server catalog.
+**Confirm:** the directory page title starts with `OPeNDAP Hyrax: Contents of`, the footer reports `Hyrax (version)`, or `/opendap/catalog.xml` returns the server catalog. [threddsCatalogPresentation.xsl](https://github.com/OPENDAP/olfs/blob/master/resources/hyrax/xsl/threddsCatalogPresentation.xsl) writes `OPeNDAP Hyrax` into that directory page (52 hosts in September 2026, including `opendap.mars.le.isac.cnr.it`).
 
 | Tool | Query |
 |------|-------|
@@ -117,9 +136,13 @@ Earth-science member-node network. Site: [dataone.org](https://www.dataone.org).
 
 **Confirm:** GET the member-node home. Duplicate-check before adding nodes already in re3data / this registry.
 
+MetacatUI’s [src/index.html](https://github.com/NCEAS/metacatui/blob/main/src/index.html) comments “configuration file for MetacatUI” (105 hosts in September 2026, including `opc.dataone.org`). `body="DataONE"` matched 2,274 hosts, including pages that only mention the project. Keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"DataONE" ("member node" OR MN) repository` |
+| Censys | `web.endpoints.http.body: "configuration file for MetacatUI"` |
+| FOFA | `body="configuration file for MetacatUI"` |
 | Censys | `web.endpoints.http.body: "DataONE"` |
 | FOFA | `body="DataONE"` |
 
@@ -137,12 +160,16 @@ page is not sufficient evidence.
 available. Register one public catalogue or registry per installation, not each
 database table, cohort, biobank, or variable.
 
+[FooterComponent.vue](https://github.com/molgenis/molgenis-emx2/blob/master/apps/tailwind-components/app/components/FooterComponent.vue) renders the heading `Created with MOLGENIS` (6 hosts in September 2026, including `catalogue.hdsu.nl`). `body="MOLGENIS"` matched 205 hosts, including `directory.canserv.eu`. Themed catalogues drop the heading, so keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Created with MOLGENIS" (catalogue OR registry OR collections)` |
 | Google | `inurl:molgenis.do (data OR database OR repository)` |
 | Censys | `web.endpoints.http.body: "Created with MOLGENIS"` |
 | FOFA | `body="Created with MOLGENIS"` |
+| Censys | `web.endpoints.http.body: "MOLGENIS"` |
+| FOFA | `body="MOLGENIS"` |
 
 ## BEXIS2 (`bexis2`) {#bexis2}
 
@@ -157,10 +184,14 @@ assets and ASP.NET application; read-only `/api/dataset`, `/api/metadata/{id}`, 
 **Confirm:** GET the public search and a read-only dataset API. Register one BEXIS2
 installation, not each project, metadata schema, or dataset.
 
+[_Layout.cshtml](https://github.com/BEXIS2/Core/blob/master/Console/BExIS.Web.Shell/Themes/Default/Layouts/_Layout.cshtml) renders `bundles/bexis` (35 hosts in September 2026, including `bexis.ufz.de`). `body="BEXIS2"` matched 64. Themed shells can drop the bundle path, so keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"BEXIS2" (repository OR "research data") -site:github.com` |
 | Google | `inurl:/home/Start BEXIS` |
+| Censys | `web.endpoints.http.body: "bundles/bexis"` |
+| FOFA | `body="bundles/bexis"` |
 | Censys | `web.endpoints.http.body: "BEXIS2"` |
 | FOFA | `body="BEXIS2"` |
 
@@ -220,12 +251,14 @@ configured Data Distribution API.
 Do not register a profiles-only VIVO deployment, individual researcher pages, or the
 project website itself.
 
+[footer.ftl](https://github.com/vivo-project/VIVO/blob/main/webapp/src/main/webapp/themes/wilma/templates/footer.ftl) links `http://vivoweb.org` (386 hosts in September 2026, including `experts.colorado.edu`). `body="vitro" && body="VIVO"` is not usable: it matched 21,978 hosts, including `www.jennio-bio.com`.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Powered by VIVO" (dataset OR repository OR data)` |
 | Google | `"VIVO" "research data" (search OR repository)` |
-| Censys | `web.endpoints.http.body: "vitro" AND web.endpoints.http.body: "VIVO"` |
-| FOFA | `body="vitro" && body="VIVO"` |
+| Censys | `web.endpoints.http.body: "vivoweb.org"` |
+| FOFA | `body="vivoweb.org"` |
 
 ## CWIS (`cwis`) {#cwis}
 
@@ -254,9 +287,13 @@ Usable-analysis platform that sometimes publishes public data libraries. Site: [
 
 **Confirm:** GET the instance and a public data-library or toolshed-adjacent dataset listing.
 
+[templates/js-app.mako](https://github.com/galaxyproject/galaxy/blob/dev/templates/js-app.mako) includes the noscript heading “Javascript Required for Galaxy” (987 hosts in September 2026, including `www.mutarget.com`). `body="usegalaxy"` only matches the public usegalaxy.org family. Forks of `galaxyproject/galaxy` are the software, not a portal list.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Galaxy" ("data libraries" OR usegalaxy) -site:galaxyproject.org` |
+| Censys | `web.endpoints.http.body: "Javascript Required for Galaxy"` |
+| FOFA | `body="Javascript Required for Galaxy"` |
 | Censys | `web.endpoints.http.body: "usegalaxy"` |
 | FOFA | `body="usegalaxy"` |
 
@@ -264,13 +301,11 @@ Usable-analysis platform that sometimes publishes public data libraries. Site: [
 
 Biodiversity occurrence catalogs (ALA and national living-atlas forks). Site: [ala.org.au](https://www.ala.org.au).
 
-**Confirm:** GET the public occurrence/search portal. One record per national atlas, not per collection.
+**Confirm:** GET the public occurrence/search portal. One record per national atlas, not per collection. `body="biocache"` is not usable: it matched 89 hosts in September 2026, including a BIODATACR dashboard (`195.26.250.143`).
 
 | Tool | Query |
 |------|-------|
 | Google | `"Atlas of Living Australia" OR "Living Atlas" (occurrences OR biocache)` |
-| Censys | `web.endpoints.http.body: "biocache"` |
-| FOFA | `body="biocache"` |
 
 ## BirdMap Africa (`birdmap`) {#birdmap}
 
@@ -296,10 +331,16 @@ Cross-Linguistic Linked Data web apps. Site: [clld.org](https://clld.org). Publi
 
 **Confirm:** GET the project home. One record per CLLD app, not per language or parameter page. Skip clld.org marketing. Off-hub apps (Glottolog, WALS Online, PHOIBLE) still use `clld` when the UI is `clld-static`.
 
+[app.mako](https://github.com/clld/clld/blob/master/src/clld/web/templates/app.mako) uses the class `clld-disclaimer` (120 hosts in September 2026, including `d-place.org`). `body="clld-static"` matched 131 hosts, including `dictionaria.clld.org` and `afbo.info`. `domain="clld.org"` misses those off-hub apps, so keep both body queries.
+
 | Tool | Query |
 |------|-------|
 | Google | `site:clld.org (Grambank OR Lexibank OR Pofatu OR "Cross-Linguistic")` |
 | Google | `"Cross-Linguistic Linked Data" OR "clld-static"` |
+| Censys | `web.endpoints.http.body: "clld-disclaimer"` |
+| FOFA | `body="clld-disclaimer"` |
+| Censys | `web.endpoints.http.body: "clld-static"` |
+| FOFA | `body="clld-static"` |
 | Censys | `web.names: "clld.org"` |
 | FOFA | `domain="clld.org"` |
 | crt.sh | `%.clld.org` |
@@ -328,9 +369,13 @@ Metadata catalogue for photon/neutron facilities. Docs: [scicatproject.github.io
 
 **Confirm:** GET the public dataset search. One record per facility catalogue.
 
+[src/index.html](https://github.com/SciCatProject/frontend/blob/master/src/index.html) describes the page as “SciCat metadata catalogue” (31 hosts in September 2026, including `public-data.desy.de`). `body="scicat"` matched 90 hosts, including unrelated pages. Facilities rewrite that description, so keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"SciCat" (dataset OR catalogue) (ESS OR PSI OR "MAX IV") -site:github.com` |
+| Censys | `web.endpoints.http.body: "SciCat metadata catalogue"` |
+| FOFA | `body="SciCat metadata catalogue"` |
 | Censys | `web.endpoints.http.body: "scicat"` |
 | FOFA | `body="scicat"` |
 
@@ -354,6 +399,8 @@ Ontology repositories (BioPortal-style). Site: [ontoportal.org](https://ontoport
 
 **Confirm:** GET the public ontology browser / REST. One record per public OntoPortal appliance.
 
+[_footer.html.haml](https://github.com/ontoportal-lirmm/bioportal_web_ui/blob/master/app/views/layouts/_footer.html.haml) loads `logos/ontoportal.svg`. The filename is hashed out of the HTML FOFA indexed. `body="ontoportal"` still matched 179 hosts in September 2026, including `agroportal.eu` and `odp.lovportal.lirmm.fr`.
+
 | Tool | Query |
 |------|-------|
 | Google | `"OntoPortal" OR "BioPortal" (ontology repository) -site:bioontology.org` |
@@ -368,10 +415,16 @@ Crop breeding information systems. Site: [breedbase.org](https://breedbase.org).
 
 **Confirm:** GET `https://host/brapi/v2/serverinfo` JSON, or the public trial/search UI. One record per crop instance, not per trial.
 
+[body.mas](https://github.com/solgenomics/sgn/blob/master/mason/site/footer/body.mas) links `github.com/solgenomics/sgn` (407 hosts in September 2026, including `cassavabase.org`). The same footer class `git-version-commit` matched 43 hosts, including `oat.txsmallgrains.org`. The brand word is split around a `<b>` tag. `body="Breedbase"` matched 292, including `Blueberrybase`. Keep the name query for instances that drop the GitHub link.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Breedbase" OR CassavaBase OR MusaBase OR YamBase OR SweetPotatoBase (breeding OR BrAPI)` |
 | Google | `inurl:/brapi/v2/serverinfo` |
+| Censys | `web.endpoints.http.body: "solgenomics/sgn"` |
+| FOFA | `body="solgenomics/sgn"` |
+| Censys | `web.endpoints.http.body: "git-version-commit"` |
+| FOFA | `body="git-version-commit"` |
 | Censys | `web.endpoints.http.body: "Breedbase"` |
 | FOFA | `body="Breedbase"` |
 
@@ -379,13 +432,15 @@ Crop breeding information systems. Site: [breedbase.org](https://breedbase.org).
 
 GMOD Tripal genome databases (Drupal + Chado). Site: [tripal.info](https://tripal.info).
 
-**Signals:** “Powered by Tripal”; `/web-services/`; Chado/Tripal footer.
+**Signals:** “Powered by Tripal”; `/web-services/`; Chado/Tripal footer. The library stylesheet is [tripal/css/tripal.css](https://github.com/tripal/tripal/blob/4.x/tripal/css/tripal.css) (265 hosts in September 2026). `body="Tripal"` matched 764. Drupal CSS aggregation can drop the filename, so keep both.
 
 **Confirm:** GET the public organism/dataset home or Tripal web services. Skip generic Drupal sites without Chado biological content. Prefer Tripal over `drupal` when the catalog is a genome database.
 
 | Tool | Query |
 |------|-------|
 | Google | `"Powered by Tripal" OR "Tripal" (genome OR germplasm OR Chado) -site:tripal.info -site:github.com` |
+| Censys | `web.endpoints.http.body: "tripal.css"` |
+| FOFA | `body="tripal.css"` |
 | Censys | `web.endpoints.http.body: "Tripal"` |
 | FOFA | `body="Tripal"` |
 
@@ -411,12 +466,14 @@ Community reference mass-spectral databases. Instances: MassBank Europe, MassBan
 
 **Confirm:** GET the public spectral search. One record per instance, not per spectrum.
 
+[Index.jsp](https://github.com/MassBank/MassBank-web/blob/dev/MassBank-Project/MassBank-web/src/main/webapp/Index.jsp) sets the copyright meta `MassBank Consortium` (4 hosts in September 2026, including `shin.massbank.jp`). `body="Mass Spectral DataBase"` is not usable: it matched 40 hosts, including mzCloud. `body="MassBank"` matched 120 hosts, including `www.norman-network.com`.
+
 | Tool | Query |
 |------|-------|
 | Google | `"MassBank" (spectra OR "mass spectral") (database OR repository) -site:github.com` |
 | Google | `"MassBank of North America" OR MoNA spectra` |
-| Censys | `web.endpoints.http.body: "MassBank"` |
-| FOFA | `body="MassBank"` |
+| Censys | `web.endpoints.http.body: "MassBank Consortium"` |
+| FOFA | `body="MassBank Consortium"` |
 
 ## ioChem-BD (`iochembd`) {#iochembd}
 
@@ -464,9 +521,13 @@ Biological data warehouse. Site: [intermine.org](https://intermine.org). Organis
 
 **Confirm:** GET `/begin.do` or `/service/version`. Skip intermine.org marketing and a single gene report.
 
+[layout.jsp](https://github.com/intermine/intermine/blob/dev/intermine/webapp/src/main/webapp/layout.jsp) embeds `intermine.Service` (34 hosts in September 2026, including `hymenopteramine.rnet.missouri.edu`). `body="InterMine"` matched 325. Keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"InterMine" OR FlyMine OR HumanMine ("begin.do" OR "web service") -site:intermine.org -site:github.com` |
+| Censys | `web.endpoints.http.body: "intermine.Service"` |
+| FOFA | `body="intermine.Service"` |
 | Censys | `web.endpoints.http.body: "InterMine"` |
 | FOFA | `body="InterMine"` |
 
@@ -512,9 +573,13 @@ Cancer genomics study portal. Site: [cbioportal.org](https://www.cbioportal.org)
 
 **Confirm:** GET `/api/info` (`portalVersion`) or the public study list. One record per public instance. Skip a single study landing page.
 
+[my-index.ejs](https://github.com/cBioPortal/cbioportal-frontend/blob/master/my-index.ejs) sets `class="cbioportal-frontend"` on the root element (143 hosts in September 2026, including `cbioportal.crc.pitt.edu`). `body="cBioPortal"` matched 585. Keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"cBioPortal" ("cancer genomics" OR studies) -site:github.com` |
+| Censys | `web.endpoints.http.body: "cbioportal-frontend"` |
+| FOFA | `body="cbioportal-frontend"` |
 | Censys | `web.endpoints.http.body: "cBioPortal"` |
 | FOFA | `body="cBioPortal"` |
 
@@ -628,10 +693,13 @@ is not a Specify fingerprint. Example: `https://specifyportal.uog.edu/`.
 **Search:** `"Specify Web Portal" (museum OR collection OR university)`.
 Register the public collection portal, not a staff login or each specimen page.
 
+[index.html](https://github.com/specify/webportal-installer/blob/improve-build/PortalApp/index.html) loads `resources/css/thumb-view.css` (8 hosts in September 2026, including `paleobotany-search.colorado.edu` and `specify.lep.ufrrj.br`). The shorter `thumb-view.css` also matches a warehouse site. `body="Specify Web Portal"` matched 58 hosts, including `specify-portal.calacademy.org` and the Speciforum. Skins drop the stylesheet path, so keep both.
 
 | Tool | Query |
 |------|-------|
 | Google | `"Specify Web Portal" (museum OR collection OR university)` |
+| Censys | `web.endpoints.http.body: "resources/css/thumb-view.css"` |
+| FOFA | `body="resources/css/thumb-view.css"` |
 | Censys | `web.endpoints.http.body: "Specify Web Portal"` |
 | FOFA | `body="Specify Web Portal"` |
 
@@ -670,12 +738,13 @@ Do not classify arbitrary variant databases or every link in the broader LSDB di
 The registered `www.lovd.nl` URL is a network/software entry page linking to databases;
 resolve the intended installation before harvesting or adding an API endpoint.
 
+[template.php](https://github.com/LOVDnl/LOVD3/blob/master/src/class/template.php) prints `LOVD v.` in the footer (13 hosts in September 2026, including `gnomad.lovd.nl`). “Powered by” is split around the version link, so that phrase is not the query. `body="LOVD" && body="variants"` is not usable: it matched 63 hosts, including a Text2Gene library and an unrelated storefront.
 
 | Tool | Query |
 |------|-------|
 | Google | `"LOVD" variants genes -site:lovd.app` |
-| Censys | `web.endpoints.http.body: "Leiden Open Variation Database"` |
-| FOFA | `body="LOVD" && body="variants"` |
+| Censys | `web.endpoints.http.body: "LOVD v."` |
+| FOFA | `body="LOVD v."` |
 
 
 ## DaCHS (`dachs`) {#dachs}
@@ -691,6 +760,8 @@ content, not merely HTTP 200. GAVO, ASTRON and ArVO are verified examples.
 **Search:** `"gavo_dc.css"` or `"DaCHS" "data center"`.
 Treat GAVO's `dc.g-vo.org` and `dc.zah.uni-heidelberg.de` as a potential alias pair during
 new-record discovery; matching software on two registry records does not prove two deployments.
+
+[dachs-xsl-config.xsl](https://gitlab-p4n.aip.de/gavo/dachs/-/blob/main/gavo/resources/web/xsl/dachs-xsl-config.xsl) links `/static/css/gavo_dc.css` (125 hosts in September 2026, including the PADC TAP Servers on `voparis-tap-sandbox.obspm.fr`).
 
 
 | Tool | Query |
@@ -732,12 +803,12 @@ HTML branding. A previous timeout alone does not establish inactivity.
 **Search:** `"AMBIT" "eNanoMapper" "database"` or `"AMBIT REST web services"`.
 Avoid confusing this product with unrelated software also named Ambit.
 
+`AMBIT REST web services` is in the README, not a served template. `body="AMBIT REST web services"` matched 4 hosts in September 2026, and the first hits are `findanapi.com` and `apiterms.com`.
+
 
 | Tool | Query |
 |------|-------|
 | Google | `"AMBIT" ("eNanoMapper" OR "REST web services") database -site:sourceforge.net` |
-| Censys | `web.endpoints.http.body: "AMBIT REST"` |
-| FOFA | `body="AMBIT REST web services"` |
 
 
 ## ESIMO (`esimo`) {#esimo}
@@ -771,9 +842,13 @@ LCSB Luxembourg pathway-map platform. Docs: [minerva.pages.uni.lu](https://miner
 
 **Confirm:** GET the instance home or MINERVA-Net. Title/body `MINERVA`. One catalog per **public instance or the Net registry**, not per disease-map diagram. Skip login-only lab tenants.
 
+[_document.tsx](https://gitlab.com/uniluxembourg/lcsb/BioCore/minerva/frontend/-/blob/development/pages/_document.tsx) loads `/minerva/config.js` (41 hosts in September 2026, including `air.elixir-luxembourg.org` and `osteoarthritis.uni.lu`). The same file's `/minerva/favicon.ico` matched 49. `body="MINERVA"` also matches unrelated pages, so keep it as the wider query.
+
 | Tool | Query |
 |------|-------|
 | Google | `"MINERVA" (pathway OR "disease map" OR SBGN) (platform OR registry) -site:github.com` |
+| Censys | `web.endpoints.http.body: "/minerva/config.js"` |
+| FOFA | `body="/minerva/config.js"` |
 | Censys | `web.endpoints.http.body: "MINERVA"` |
 | FOFA | `body="MINERVA"` |
 
@@ -783,9 +858,13 @@ Pathogen phylodynamics platform. Hub: [nextstrain.org](https://nextstrain.org). 
 
 **Confirm:** GET the public dataset catalog (`nextstrain.org` or a documented community host). One record per public Nextstrain/Auspice catalog, not per pathogen narrative page.
 
+[footer/index.tsx](https://github.com/nextstrain/nextstrain.org/blob/master/static-site/components/footer/index.tsx) requires “attribution to nextstrain.org” (126 hosts in September 2026, including `18.166.223.201`). Community Auspice catalogs can drop that footer, so keep the title query.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Nextstrain" (pathogen OR phylogeny OR Auspice) (dataset OR catalog)` |
+| Censys | `web.endpoints.http.body: "attribution to nextstrain.org"` |
+| FOFA | `body="attribution to nextstrain.org"` |
 | Censys | `web.endpoints.http.title: "Nextstrain"` |
 | FOFA | `title="Nextstrain"` |
 
@@ -795,11 +874,13 @@ EPFL/MARVEL computational materials platform (AiiDA Explore UI). Distinct from M
 
 **Confirm:** GET `/explore` or the Explore work-graph catalog. Do **not** retag `archive.materialscloud.org`.
 
+[index.html.j2](https://github.com/materialscloud-org/voila-materialscloud-template/blob/main/share/jupyter/nbconvert/templates/materialscloud-discover/index.html.j2) loads `mcloud_theme.min.css` (18 hosts in September 2026, including `www.materialscloud.cscs.ch`). `body="Materials Cloud"` is not usable: it matched 457 hosts, including `www.mobiledepotinc.com`.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Materials Cloud" (Explore OR AiiDA) -archive.materialscloud.org` |
-| Censys | `web.endpoints.http.body: "Materials Cloud"` |
-| FOFA | `body="Materials Cloud"` |
+| Censys | `web.endpoints.http.body: "mcloud_theme.min.css"` |
+| FOFA | `body="mcloud_theme.min.css"` |
 
 ## OpenKIM (`openkim`) {#openkim}
 
@@ -819,9 +900,13 @@ Catalogue of Life checklist platform. Site: [checklistbank.org](https://www.chec
 
 **Confirm:** GET the dataset catalog or `/api`. One record for the hub (and any independent ChecklistBank deployments). Not GBIF IPT; not Catalogue of Life’s public website alone.
 
+[index.html](https://github.com/CatalogueOfLife/checklistbank/blob/master/index.html) sets `<title>ChecklistBank</title>` (3 hosts in September 2026, all `checklistbank.org`, including `www.dev.checklistbank.org`). `body="ChecklistBank"` matched 50, and the first hits are `builds.gbif.org`, `tomcat.gbif.org`, and `www.itis.gov`.
+
 | Tool | Query |
 |------|-------|
 | Google | `"ChecklistBank" ("Catalogue of Life" OR taxonomy OR checklist)` |
+| Censys | `web.endpoints.http.body: "<title>ChecklistBank</title>"` |
+| FOFA | `body="<title>ChecklistBank</title>"` |
 | Censys | `web.names: "checklistbank.org"` |
 | FOFA | `domain="checklistbank.org"` |
 
@@ -831,11 +916,13 @@ UCSD CCMS mass-spectrometry catalog UI shared by GNPS and MassIVE (`/ProteoSAFe/
 
 **Confirm:** GET `/ProteoSAFe/datasets.jsp` or the GNPS/MassIVE dataset list. One record per public ProteoSAFe catalog (GNPS metabolomics vs MassIVE proteomics), not per dataset or workflow job.
 
+[index.jsp](https://github.com/CCMS-UCSD/ProteoSAFe/blob/master/LiveSearch/src/main/webapp/index.jsp) ships the HTML comment `General ProteoSAFe scripts` (19 hosts in September 2026, including `gnps.ucsd.edu`, `massive.ucsd.edu`, and `proteomics.ucsd.edu`). The same comment is in `datasets.jsp`. `body="ProteoSAFe"` matched 107 hosts, including `www.omicsdi.org`.
+
 | Tool | Query |
 |------|-------|
 | Google | `"ProteoSAFe" (GNPS OR MassIVE OR datasets.jsp)` |
-| Censys | `web.endpoints.http.body: "ProteoSAFe"` |
-| FOFA | `body="ProteoSAFe"` |
+| Censys | `web.endpoints.http.body: "General ProteoSAFe scripts"` |
+| FOFA | `body="General ProteoSAFe scripts"` |
 
 ## CyVerse Data Commons (`cyverse`) {#cyverse}
 
@@ -879,9 +966,13 @@ MediaWiki knowledge-base software. Wikidata ([wikidata.org](https://www.wikidata
 
 **Confirm:** GET the wiki home. Title/body `Wikidata` / `Wikibase`. One record per public instance, not per entity.
 
+[view/resources/templates.php](https://github.com/wikimedia/Wikibase/blob/master/view/resources/templates.php) renders the class `wikibase-title` (58 hosts in September 2026). That class is on entity pages. A front page FOFA indexed without an item still matches `body="wikibase"`. `wikibase-entityview` from the same file was absent from the HTML FOFA indexed.
+
 | Tool | Query |
 |------|-------|
 | Google | `"powered by Wikibase" OR "Special:ListDatatypes" Wikibase` |
+| Censys | `web.endpoints.http.body: "wikibase-title"` |
+| FOFA | `body="wikibase-title"` |
 | Censys | `web.endpoints.http.body: "wikibase"` |
 | FOFA | `body="wikibase"` |
 
@@ -891,9 +982,13 @@ DBpedia dataset catalog/versioning bus. Site: [databus.dbpedia.org](https://data
 
 **Confirm:** GET Databus (OIDC login on the SPA is OK if the product is Databus). Do not retag www.dbpedia.org.
 
+[footer.ejs](https://github.com/dbpedia/databus/blob/master/public/templates/footer.ejs) says “Global and Unified Access to Knowledge Graphs” (8 hosts in September 2026, including `databus.kiltax.infai.org`). Keep the host query for the canonical bus.
+
 | Tool | Query |
 |------|-------|
 | Google | `"DBpedia Databus" (dataset OR catalog)` |
+| Censys | `web.endpoints.http.body: "Global and Unified Access to Knowledge Graphs"` |
+| FOFA | `body="Global and Unified Access to Knowledge Graphs"` |
 | Censys | `web.names: "databus.dbpedia.org"` |
 | FOFA | `host="databus.dbpedia.org"` |
 
@@ -1023,11 +1118,17 @@ Jointly administered herbarium management system and Virtual Herbaria portal. Si
 
 **Confirm:** GET `https://jacq.org/` (title `JACQ`) or a participating herbarium's public JACQ search. Register the public portal, not each Index Herbariorum acronym on the same server.
 
+[index.php](https://github.com/jacq-system/jacq-legacy/blob/develop/output.new/index.php) loads `JACQ_LOGO.png` (6 hosts in September 2026, including `methus.jacq.org`) and sets the title `JACQ - Virtual Herbaria` (19 hosts, including `herbonauten.de`).
+
 | Tool | Query |
 |------|-------|
 | Google | `"JACQ" ("Virtual Herbaria" OR herbarium) (specimens OR database)` |
+| Censys | `web.endpoints.http.body: "JACQ_LOGO.png"` |
+| FOFA | `body="JACQ_LOGO.png"` |
+| Censys | `web.endpoints.http.body: "JACQ - Virtual Herbaria"` |
+| FOFA | `body="JACQ - Virtual Herbaria"` |
 | Censys | `web.names: "jacq.org"` |
-| FOFA | `body="JACQ Virtual Herbaria"` |
+| FOFA | `domain="jacq.org"` |
 
 ## NMRShiftDB2 (`nmrshiftdb2`) {#nmrshiftdb2}
 
@@ -1059,9 +1160,13 @@ Språkbanken Text corpus-search platform (MIT). Independent national language-ba
 
 **Confirm:** GET the Korp UI (`/korp/` or a `korp.` host). Title `Korp`. Register each public Korp UI on a distinct host. Do not add Kielipankki `/korp/` as a second catalog when the Language Bank homepage on the same host is already registered (`wwwkielipankkifi`). Skip Málið.is unless the page identifies Korp.
 
+[app/index.html](https://github.com/spraakbanken/korp-frontend/blob/dev/app/index.html) includes the noscript “You need JavaScript to run Korp.” (22 hosts in September 2026, including `malheildir.arnastofnun.is`). `title="Korp"` matched 290 hosts, including a Korp VPN login. National forks translate that sentence, so keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Korp" (Språkbanken OR Kielipankki OR "corpus search")` |
+| Censys | `web.endpoints.http.body: "You need JavaScript to run Korp."` |
+| FOFA | `body="You need JavaScript to run Korp."` |
 | Censys | `web.endpoints.http.title: "Korp"` |
 | FOFA | `title="Korp"` |
 
@@ -1071,9 +1176,13 @@ Neurophysiology archive using NWB, BIDS, and NIDM. Hub: [dandiarchive.org](https
 
 **Confirm:** GET the hub or the dandisets API. Register the archive hub, not each dandiset landing page.
 
+[web/index.html](https://github.com/dandi/dandi-archive/blob/master/web/index.html) noscript says “the DANDI Archive doesn't work properly” (16 hosts in September 2026, including `dandi.izbrain.info`). `body="DANDI"` is not usable: it matched 8,463 hosts, including hotel sites. Keep the `dandiarchive.org` host query for the canonical hub.
+
 | Tool | Query |
 |------|-------|
 | Google | `"DANDI Archive" (NWB OR neurophysiology OR dandiset)` |
+| Censys | `web.endpoints.http.body: "DANDI Archive doesn't work properly"` |
+| FOFA | `body="DANDI Archive doesn't work properly"` |
 | Censys | `web.names: "dandiarchive.org"` |
 | FOFA | `host="dandiarchive.org"` |
 
@@ -1083,9 +1192,13 @@ Chan Zuckerberg public catalog of curated single-cell datasets. Hub: [cellxgene.
 
 **Confirm:** GET the Discover hub. Register that hub, not each h5ad explorer session or Census snapshot.
 
+[_app.tsx](https://github.com/chanzuckerberg/single-cell-data-portal/blob/main/frontend/src/pages/_app.tsx) sets the Open Graph title `Cellxgene Data Portal` (49 hosts in September 2026, including `cellxgene.cziscience.com`). Skip the stage host `frontend.stage.single-cell.czi.technology`. Keep the hub host query.
+
 | Tool | Query |
 |------|-------|
 | Google | `"CELLxGENE" (Discover OR Census) (dataset OR catalog)` |
+| Censys | `web.endpoints.http.body: "Cellxgene Data Portal"` |
+| FOFA | `body="Cellxgene Data Portal"` |
 | Censys | `web.names: "cellxgene.cziscience.com"` |
 | FOFA | `host="cellxgene.cziscience.com"` |
 
@@ -1095,9 +1208,13 @@ CUAHSI hydrologic data and model sharing platform. Hub: [hydroshare.org](https:/
 
 **Confirm:** GET the hub or `/hsapi/`. Title includes `HydroShare`. Register the archive hub, not each resource or the THREDDS catalog.
 
+[base.html](https://github.com/hydroshare/hydroshare/blob/develop/theme/templates/base.html) links `css/hydroshare_core.css` (5 hosts in September 2026). One is titled CUAHSI HydroShare. The others are `media.prod-cloud-native.hydroshare.org` and `cdn-site.site`, so keep a host only when the page title is HydroShare.
+
 | Tool | Query |
 |------|-------|
 | Google | `"HydroShare" (CUAHSI OR hydrologic) (resource OR dataset)` |
+| Censys | `web.endpoints.http.body: "hydroshare_core.css"` |
+| FOFA | `body="hydroshare_core.css"` |
 | Censys | `web.names: "hydroshare.org"` |
 | FOFA | `host="www.hydroshare.org"` |
 
@@ -1109,9 +1226,13 @@ Open-source neuroimaging dataset and processing hub. Site: [brainlife.io](https:
 
 **Skip:** `/pubs`, `/apps`, `/docs`, GitHub (`brainlife.github.io` redirects to the hub), `test.brainlife.io` (refused), HPC resources registered on the hub, OpenNeuro/NEMAR/DANDI as if they were Brainlife tenants.
 
+[index.html](https://github.com/brainlife/warehouse/blob/master/ui/index.html) sets `<title>brainlife</title>` (4 hosts in September 2026: `brainlife.io`, its `149.165.155.77` mirror, and `brainlife.kstage.co.za`). Keep the host query for the canonical hub.
+
 | Tool | Query |
 |------|-------|
 | Google | `"brainlife.io" (dataset OR neuroimaging)` |
+| Censys | `web.endpoints.http.body: "<title>brainlife</title>"` |
+| FOFA | `body="<title>brainlife</title>"` |
 | Censys | `web.names: "brainlife.io"` |
 | FOFA | `host="brainlife.io"` |
 
@@ -1121,9 +1242,13 @@ Archaeological research-data publisher. Hub: [opencontext.org](https://openconte
 
 **Confirm:** GET the hub. Title `Open Context`. Register that hub, not each project, image, or media item.
 
+[page_footer.html](https://github.com/ekansa/open-context-py/blob/main/opencontext_py/templates/bootstrap_vue/page_footer.html) says “Open Context is a publishing service” (6 hosts in September 2026, including `www.opencontext.org`). Keep the host query for the canonical hub.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Open Context" (archaeology OR "research data") Alexandria` |
+| Censys | `web.endpoints.http.body: "Open Context is a publishing service"` |
+| FOFA | `body="Open Context is a publishing service"` |
 | Censys | `web.names: "opencontext.org"` |
 | FOFA | `host="opencontext.org"` |
 
@@ -1135,9 +1260,13 @@ MIT circadian timeseries repository. Public hub: [biodare2.ed.ac.uk](https://bio
 
 **Skip:** period-analysis jobs, login, and each experiment landing page.
 
+[index.html](https://github.com/BioDare2/bd2-backend/blob/master/src/main/resources/static/index.html) titles the page `BioDare2 - circadian period analysis` (1 host in September 2026, `biodare2.ed.ac.uk`).
+
 | Tool | Query |
 |------|-------|
 | Google | `"BioDare2" (circadian OR timeseries OR "period analysis")` |
+| Censys | `web.endpoints.http.body: "BioDare2 - circadian period analysis"` |
+| FOFA | `body="BioDare2 - circadian period analysis"` |
 | Censys | `web.names: "biodare2.ed.ac.uk"` |
 | FOFA | `host="biodare2.ed.ac.uk"` |
 

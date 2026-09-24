@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: OPUS 4 publication server of Hochschule Reutlingen.
+id: opusbszbwdeftrc
+langs:
+- id: DE
+  name: German
+link: https://opus.bsz-bw.de/ftrc
+name: Fashion and Textile Resource Center
+owner:
+  link: https://opus.bsz-bw.de/ftrc
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Württemberg
+  name: Hochschule Reutlingen
+  type: Academy
+software:
+  id: opus
+  name: OPUS
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00011362
+endpoints:
+- type: oaipmh20
+  url: https://opus.bsz-bw.de/ftrc/oai?verb=Identify
+  version: '2.0'

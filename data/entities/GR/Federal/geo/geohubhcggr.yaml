@@ -1,0 +1,50 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: ArcGIS Enterprise geoportal of the Hellenic Coast Guard with a public
+  Hub site and REST services.
+id: geohubhcggr
+langs:
+- id: EL
+  name: Greek
+link: https://geohub.hcg.gr
+name: Hellenic Coast Guard GeoHub
+owner:
+  link: https://www.hcg.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: Hellenic Coast Guard
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:portals:self
+  url: "https://geohub.hcg.gr/portal/sharing/rest/portals/self?f=pjson"
+uid: cdi00007658

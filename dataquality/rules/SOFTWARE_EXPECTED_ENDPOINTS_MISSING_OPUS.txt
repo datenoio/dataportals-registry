@@ -1,0 +1,44 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPUS
+================================================================================
+Generated: 2026-09-24 20:41:37
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPUS
+Priority: MEDIUM
+Total Issues Found: 3
+
+Rule: Identifies records using software.id='opus' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+DE: 3 issues
+
+=== SUMMARY BY RECORD ===
+
+epubepflichthamburg: 1 issue
+fuldokhsfuldade: 1 issue
+bastopushbznrwde: 1 issue
+
+=== ISSUES ===
+
+File: DE/DE-HH/scientific/epubepflichthamburg.yaml
+Record ID: epubepflichthamburg
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPUS
+Field: endpoints
+Current Value: {"software_id": "opus", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='opus' is marked as API-capable in software definitions
+
+File: DE/DE-HE/scientific/fuldokhsfuldade.yaml
+Record ID: fuldokhsfuldade
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPUS
+Field: endpoints
+Current Value: {"software_id": "opus", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='opus' is marked as API-capable in software definitions
+
+File: DE/Federal/scientific/bastopushbznrwde.yaml
+Record ID: bastopushbznrwde
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPUS
+Field: endpoints
+Current Value: {"software_id": "opus", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='opus' is marked as API-capable in software definitions

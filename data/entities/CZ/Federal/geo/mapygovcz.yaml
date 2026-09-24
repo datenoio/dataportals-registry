@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: National geoportal of territorial planning (NGÚP) with public ArcGIS
+  Server 11.3 REST services for planning documentation. Distinct from the INSPIRE
+  geoportal at geoportal.gov.cz.
+id: mapygovcz
+langs:
+- id: CS
+  name: Czech
+link: https://mapy.gov.cz/
+name: Národní geoportál územního plánování
+owner:
+  link: https://mmr.gov.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: Ministerstvo pro místní rozvoj
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:portals:self
+  url: https://mapy.gov.cz/portal/sharing/rest/portals/self?f=pjson
+uid: cdi00008048

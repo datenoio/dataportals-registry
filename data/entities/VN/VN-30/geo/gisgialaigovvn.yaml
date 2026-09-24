@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: VN-30
+      name: Gia Lai
+description: ArcGIS Hub site for Gia Lai provincial GIS layers and maps.
+id: gisgialaigovvn
+langs:
+- id: VN
+  name: Vietnamese
+link: https://gis.gialai.gov.vn/portal/apps/sites/#/gisgialai/
+name: Gia Lai GIS Hub
+owner:
+  link: https://gialai.gov.vn
+  location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 30
+    subregion:
+      id: VN-30
+      name: Gia Lai
+  name: Gia Lai Provincial People's Committee
+  type: Regional government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: dcatap201
+  url: "https://gis.gialai.gov.vn/api/feed/dcat-ap/2.0.1.json"
+uid: cdi00008182

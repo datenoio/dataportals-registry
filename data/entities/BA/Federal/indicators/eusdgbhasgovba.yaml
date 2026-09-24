@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+- indicator
+coverage:
+- location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: OpenSDG portal for European Union Sustainable Development Goal indicators
+  for Bosnia and Herzegovina, maintained by the Agency for Statistics of Bosnia and
+  Herzegovina (BHAS). Distinct from the UN SDG site at sdg.bhas.gov.ba.
+id: eusdgbhasgovba
+langs:
+- id: EN
+  name: English
+- id: BS
+  name: Bosnian
+- id: SR
+  name: Serbian
+- id: HR
+  name: Croatian
+link: https://eu-sdg.bhas.gov.ba/
+name: EU Indicators for the Sustainable Development Goals (Bosnia and Herzegovina)
+owner:
+  link: https://bhas.gov.ba
+  location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 20
+  name: Agency for Statistics of Bosnia and Herzegovina
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: opensdg
+  name: OpenSDG
+status: active
+tags:
+- statistics
+- government
+- has_api
+- SDG
+- indicators
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: opensdg:reporting-status
+  url: https://eu-sdg.bhas.gov.ba/reporting-status
+- type: opensdg:reporting-status
+  url: https://eu-sdg.bhas.gov.ba/reporting-status/
+- type: opensdg:catalog
+  url: https://eu-sdg.bhas.gov.ba/indicators.json
+- type: opensdg:data
+  url: https://sdgbih.github.io/sdgnewdata/en/data/1-10.json
+- type: opensdg:data
+  url: https://sdgbih.github.io/sdgnewdata/en/data/1-20.json
+uid: cdi00009726

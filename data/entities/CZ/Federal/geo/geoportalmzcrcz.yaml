@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public ArcGIS Server 11.1 REST catalog of the Ministry of Health (bathing
+  waters, summer camps, strategic noise maps). Distinct from the CKAN open-data catalog
+  at opendata.mzcr.cz.
+id: geoportalmzcrcz
+langs:
+- id: CS
+  name: Czech
+link: https://geoportal.mzcr.cz/server/rest/services
+name: Geoportál Ministerstva zdravotnictví
+owner:
+  link: https://www.mzcr.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: Ministerstvo zdravotnictví České republiky
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://geoportal.mzcr.cz/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoportal.mzcr.cz/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoportal.mzcr.cz/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoportal.mzcr.cz/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoportal.mzcr.cz/server/rest/services?f=geositemap
+uid: cdi00008046

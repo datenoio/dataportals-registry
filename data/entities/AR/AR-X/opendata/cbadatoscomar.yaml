@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: AR-X
+      name: Córdoba
+description: Open data portal of Córdoba Province, Argentina.
+id: cbadatoscomar
+langs:
+- id: ES
+  name: Spanish
+link: https://cbadatos.com.ar
+name: Córdoba Datos
+owner:
+  link: https://cbadatos.com.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-X
+      name: Córdoba
+  name: Gobierno de la Provincia de Córdoba
+  type: Regional government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: ckan
+  url: https://cbadatos.com.ar/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://cbadatos.com.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://cbadatos.com.ar/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://cbadatos.com.ar/catalog.n3
+- type: dcat:ttl
+  url: https://cbadatos.com.ar/catalog.ttl
+- type: dcat:xml
+  url: https://cbadatos.com.ar/catalog.xml
+- type: dcat:jsonld
+  url: https://cbadatos.com.ar/catalog.jsonld
+- type: dcat
+  url: https://cbadatos.com.ar/catalog.rdf
+uid: cdi00009563
+properties:
+  is_national: false

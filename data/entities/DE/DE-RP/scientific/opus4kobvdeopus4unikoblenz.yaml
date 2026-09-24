@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-RP
+      name: Rheinland-Pfalz
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: OPUS 4 publication server of Universität Koblenz.
+id: opus4kobvdeopus4unikoblenz
+langs:
+- id: DE
+  name: German
+link: https://opus4.kobv.de/opus4-uni-koblenz
+name: Universität Koblenz publication server
+owner:
+  link: https://opus4.kobv.de/opus4-uni-koblenz
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-RP
+      name: Rheinland-Pfalz
+  name: Universität Koblenz
+  type: Academy
+software:
+  id: opus
+  name: OPUS
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00011521
+endpoints:
+- type: oaipmh20
+  url: https://opus4.kobv.de/opus4-uni-koblenz/oai?verb=Identify
+  version: '2.0'

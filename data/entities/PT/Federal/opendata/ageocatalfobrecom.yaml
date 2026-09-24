@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    level: 20
+description: Alfobre geodata catalog of heritage and historical geography datasets,
+  mostly for Portugal and Iberia, published with a modified JKAN.
+id: ageocatalfobrecom
+langs:
+- id: EN
+  name: English
+link: https://a-geocat.alfobre.com/
+name: A-GeoCat
+owner:
+  link: https://alfobre.com
+  location:
+    country:
+      id: PT
+      name: Portugal
+  name: Alfobre
+  type: Civil society
+software:
+  id: jkan
+  name: JKAN
+status: active
+tags:
+- open data
+- civil society
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00015570
+endpoints:
+- type: dcatus11
+  url: https://a-geocat.alfobre.com/data.json
+- type: dcatus11
+  url: https://a-geocat.alfobre.com/datasets.json

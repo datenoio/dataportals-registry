@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: PEDSnet metadata repository on DSpace 8.2. Public entities are concept
+  sets, studies, phenotypes, and data-quality checks rather than publications.
+id: metadatapedsnetorg
+langs:
+- id: EN
+  name: English
+link: https://pedsnet.org/metadata
+name: PEDSpace
+owner:
+  link: https://pedsnet.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: PEDSnet
+  type: Academy
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00016147
+endpoints:
+- type: dspace
+  url: https://pedsnet.org/metadata/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://pedsnet.org/metadata/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://pedsnet.org/metadata/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://pedsnet.org/metadata/sitemap_index.xml

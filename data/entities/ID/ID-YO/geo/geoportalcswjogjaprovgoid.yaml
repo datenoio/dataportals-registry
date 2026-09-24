@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: ID-YO
+      name: Yogyakarta
+description: Special Region of Yogyakarta pycsw catalogue of provincial geospatial
+  metadata, including datasets and map features.
+id: geoportalcswjogjaprovgoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://geoportal-csw.jogjaprov.go.id/
+name: Yogyakarta pycsw Geospatial Catalogue
+owner:
+  link: https://jogjaprov.go.id/
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    subregion:
+      id: ID-YO
+      name: Yogyakarta
+  name: Pemerintah Daerah Istimewa Yogyakarta
+  type: Regional government
+software:
+  id: pycsw
+  name: pycsw
+status: active
+tags:
+- geospatial
+- maps
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00014258
+endpoints:
+- type: ogcrecords
+  url: https://geoportal-csw.jogjaprov.go.id/collections?f=json
+  version: '1.0'
+- type: openapi
+  url: https://geoportal-csw.jogjaprov.go.id/openapi?f=json

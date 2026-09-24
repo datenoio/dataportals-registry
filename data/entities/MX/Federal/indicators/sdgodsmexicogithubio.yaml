@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+- indicator
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Public OpenSDG site of Mexican Sustainable Development Goal indicators
+  with state-level series. Metadata cites INEGI and CONEVAL as sources. Distinct from
+  the official SIODS platform at agenda2030.mx.
+id: sdgodsmexicogithubio
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: https://sdg-odsmexico.github.io/site/
+name: Indicadores para los Objetivos de Desarrollo Sostenible (México)
+owner:
+  link: https://www.inegi.org.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+  name: Instituto Nacional de Estadística y Geografía
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: opensdg
+  name: OpenSDG
+status: active
+tags:
+- statistics
+- government
+- has_api
+- SDG
+- indicators
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: opensdg:reporting-status
+  url: https://sdg-odsmexico.github.io/site/reporting-status
+- type: opensdg:reporting-status
+  url: https://sdg-odsmexico.github.io/site/reporting-status/
+- type: opensdg:reporting-status
+  url: https://sdg-odsmexico.github.io/site/en/reporting-status/
+- type: opensdg:catalog
+  url: https://sdg-odsmexico.github.io/site/indicators.json
+- type: opensdg:catalog
+  url: https://sdg-odsmexico.github.io/site/en/indicators.json
+- type: opensdg:data
+  url: https://sdg-odsmexico.github.io/data/es/data/1-1-1.json
+uid: cdi00015206

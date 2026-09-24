@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: SK-PV
+      name: Prešovský kraj
+description: City of Prešov CKAN open-data catalog, distinct from the ArcGIS Hub Datový
+  portál, with public packages including civic registers and a datahub harvester.
+id: datapresovsk
+langs:
+- id: SK
+  name: Slovak
+link: https://data.presov.sk
+name: CKAN Open Data Prešov
+owner:
+  link: https://www.presov.sk
+  location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 30
+    subregion:
+      id: SK-PV
+      name: Prešovský kraj
+  name: Mesto Prešov
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- Slovakia
+- municipality
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+endpoints:
+- type: ckan
+  url: https://data.presov.sk/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.presov.sk/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.presov.sk/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://data.presov.sk/catalog.n3
+- type: dcat:ttl
+  url: https://data.presov.sk/catalog.ttl
+- type: dcat:xml
+  url: https://data.presov.sk/catalog.xml
+- type: dcat:jsonld
+  url: https://data.presov.sk/catalog.jsonld
+- type: dcat
+  url: https://data.presov.sk/catalog.rdf
+uid: cdi00008033

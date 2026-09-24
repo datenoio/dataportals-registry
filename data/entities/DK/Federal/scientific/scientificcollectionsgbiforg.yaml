@@ -10,7 +10,7 @@ coverage:
     country:
       id: World
       name: World
-    level: 0
+    level: 10
     macroregion:
       id: '001'
       name: World
@@ -18,9 +18,9 @@ description: Global Registry of Scientific Collections (GRSciColl) is GBIF's com
   registry of institutions, collections, and associated staff across natural history and related
   scientific disciplines. It is the reference for Darwin Core institution and collection codes.
 endpoints:
-- type: customapi
+- type: rest
   url: https://api.gbif.org/v1/grscicoll/institution
-- type: customapi
+- type: rest
   url: https://api.gbif.org/v1/grscicoll/collection
 id: scientificcollectionsgbiforg
 identifiers:

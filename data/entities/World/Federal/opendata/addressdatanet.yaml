@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    macroregion:
+      id: '001'
+      name: World
+    level: 20
+description: OpenStreetMap address extracts for more than 1,500 cities, with CSV and
+  JSON download.
+id: addressdatanet
+langs:
+- id: EN
+  name: English
+link: https://addressdata.net/
+name: AddressData
+owner:
+  link: https://addressdata.net/
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: AddressData
+  type: Civil society
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- civil society
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00016579
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://addressdata.net/-/databases.json

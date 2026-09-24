@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Harvester Seasons SmartMet Server at ml.harvesterseasons.com. Public
+  OGC API EDR with 30 collections (ERA5, ERA5-Land, Copernicus, CLMS, E-OBS, AURORA).
+id: mlharvesterseasonscom
+langs:
+- id: EN
+  name: English
+- id: FI
+  name: Finnish
+link: https://ml.harvesterseasons.com/edr/collections
+name: Harvester Seasons SmartMet Server
+owner:
+  link: https://en.ilmatieteenlaitos.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+  name: Finnish Meteorological Institute
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: smartmetserver
+  name: SmartMet Server
+status: active
+tags:
+- geospatial
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+endpoints:
+- type: rest
+  url: https://ml.harvesterseasons.com/edr/collections
+uid: cdi00013635

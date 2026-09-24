@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CT
+      name: Connecticut
+    macroregion:
+      id: '021'
+      name: Northern America
+description: JKAN hub of training and data-governance resources for Connecticut state
+  agencies. The state's open data catalog is data.ct.gov.
+id: tkleykampgithubio
+langs:
+- id: EN
+  name: English
+link: https://tkleykamp.github.io/jkan/
+name: Connecticut State Agency Data Resource Center
+owner:
+  link: https://portal.ct.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CT
+      name: Connecticut
+  name: Connecticut State Agency Data Resource Center
+  type: Regional government
+software:
+  id: jkan
+  name: JKAN
+status: active
+tags:
+- open data
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00016295
+endpoints:
+- type: dcatus11
+  url: https://tkleykamp.github.io/jkan/data.json
+- type: dcatus11
+  url: https://tkleykamp.github.io/jkan/datasets.json

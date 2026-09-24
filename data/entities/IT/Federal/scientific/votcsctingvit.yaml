@@ -18,17 +18,17 @@ description: INGV Catania Volcano Observations thematic core service gateway dis
   monitoring data including seismic catalogues, strainmeter and tiltmeter series, magnetic data,
   geochemistry, VONA notices, and volcanic reports.
 endpoints:
-- type: api
+- type: rest
   url: https://vo-tcs.ct.ingv.it/rest/stationInformation/query/
-- type: api
+- type: rest
   url: https://vo-tcs.ct.ingv.it/rest/strainmeter/data
-- type: api
+- type: rest
   url: https://vo-tcs.ct.ingv.it/rest/tiltmeter/data
-- type: api
+- type: rest
   url: https://vo-tcs.ct.ingv.it/rest/magnetic/data
-- type: api
+- type: rest
   url: https://vo-tcs.ct.ingv.it/volc_report/query
-- type: api
+- type: rest
   url: https://vo-tcs.ct.ingv.it/geochem/bulk-rock/query
 id: votcsctingvit
 langs:

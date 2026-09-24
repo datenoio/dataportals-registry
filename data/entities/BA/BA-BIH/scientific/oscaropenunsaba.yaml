@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: BA-BIH
+      name: Federacija Bosne i Hercegovine
+description: Research data repository of the University of Sarajevo for depositing
+  and citing research datasets.
+id: oscaropenunsaba
+langs:
+- id: SR
+  name: Serbian
+link: https://oscar.open.unsa.ba
+name: Oscar — Istraživački podaci Univerziteta u Sarajevu
+owner:
+  link: https://www.unsa.ba
+  location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 30
+    subregion:
+      id: BA-BIH
+      name: Federacija Bosne i Hercegovine
+  name: Univerzitet u Sarajevu
+  type: Academy
+software:
+  id: dataverse
+  name: Dataverse
+status: active
+tags:
+- scientific
+- research data
+- research
+- has_api
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+endpoints:
+- type: dataverseapi
+  url: https://oscar.open.unsa.ba/api/search
+- type: dataverseapi
+  url: https://oscar.open.unsa.ba/api/info/version
+- type: oaipmh20
+  url: https://oscar.open.unsa.ba/oai?verb=Identify
+  version: '2.0'
+uid: cdi00008889

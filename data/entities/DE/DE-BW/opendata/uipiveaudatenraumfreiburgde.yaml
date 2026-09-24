@@ -21,11 +21,11 @@ description: Urban data catalog of the City of Freiburg (DATEN:RAUM:FREIBURG), a
   open datasets from the municipal geodata infrastructure and FRITZ open data on the
   Piveau platform.
 endpoints:
-- type: customapi
+- type: rest
   url: https://search.piveau.datenraum.freiburg.de/search
-- type: customapi
+- type: rest
   url: https://repo.piveau.datenraum.freiburg.de/catalogues
-- type: customapi
+- type: rest
   url: https://repo.piveau.datenraum.freiburg.de/datasets
 - type: ckan:package-search
   url: https://search.piveau.datenraum.freiburg.de/ckan/package_search

@@ -20,16 +20,16 @@ coverage:
 description: Official open data portal of the state capital Wiesbaden, providing machine-readable
   municipal datasets from city administration with search and repository APIs.
 endpoints:
-- type: customapi
+- type: rest
   url: https://opendata.cloud.wiesbaden.de/api/hub/search/search
-- type: customapi
+- type: rest
   url: https://opendata.cloud.wiesbaden.de/api/hub/repo/catalogues
-- type: customapi
+- type: rest
   url: https://opendata.cloud.wiesbaden.de/api/hub/repo/datasets
 - type: ckan:package-search
   url: https://opendata.cloud.wiesbaden.de/api/hub/search/ckan/package_search
   version: '3'
-- type: customapi
+- type: rest
   url: https://opendata.cloud.wiesbaden.de/api/hub/search/search?q=&filter=dataset
 - type: docs
   url: https://opendata.cloud.wiesbaden.de/api/hub/search/

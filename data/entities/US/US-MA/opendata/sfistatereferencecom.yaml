@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MA
+      name: Massachusetts
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Statements of financial interest and conflict disclosures filed with
+  the Massachusetts State Ethics Commission.
+id: sfistatereferencecom
+langs:
+- id: EN
+  name: English
+link: https://sfi.statereference.com/
+name: Massachusetts SFI and Disclosure Database
+owner:
+  link: https://sfi.statereference.com/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MA
+      name: Massachusetts
+  name: State Reference
+  type: Civil society
+software:
+  id: datasette
+  name: Datasette
+status: active
+tags:
+- open data
+- civil society
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00016359
+properties:
+  is_national: false
+endpoints:
+- type: datasette:databases
+  url: https://sfi.statereference.com/-/databases.json

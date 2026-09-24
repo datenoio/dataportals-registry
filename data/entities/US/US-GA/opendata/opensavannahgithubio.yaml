@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-GA
+      name: Georgia
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Unofficial civic catalog of Greater Savannah and Chatham County datasets
+  collected by the Open Savannah brigade.
+id: opensavannahgithubio
+langs:
+- id: EN
+  name: English
+link: https://opensavannah.github.io/jkan/
+name: Open Savannah Brigade Data Portal
+owner:
+  link: https://github.com/opensavannah
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-GA
+      name: Georgia
+  name: Open Savannah
+  type: Community
+software:
+  id: jkan
+  name: JKAN
+status: active
+tags:
+- open data
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00016315
+endpoints:
+- type: dcatus11
+  url: https://opensavannah.github.io/jkan/data.json
+- type: dcatus11
+  url: https://opensavannah.github.io/jkan/datasets.json

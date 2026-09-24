@@ -493,6 +493,45 @@ DOMAIN_LOCATIONS = {
 ACCESS_MODE_ALLOWED = frozenset(
     ["open", "restricted", "limited", "public", "protected", "closed", "private"]
 )
+# Preferred values for new records. Other ACCESS_MODE_ALLOWED values stay valid
+# but are flagged as ACCESS_MODE_NONPREFERRED.
+ACCESS_MODE_PREFERRED = frozenset(["open", "restricted"])
+# coverage[].location.level and owner.location.level. See docs/vocabularies.md.
+COVERAGE_LEVELS_ALLOWED = frozenset([10, 20, 30, 40, 50, 60])
+CENTRAL_OWNER_TYPES = frozenset(["Central government", "Federal government"])
+GOVERNMENT_OWNER_TYPES = frozenset(
+    [
+        "Central government",
+        "Federal government",
+        "Regional government",
+        "Local government",
+    ]
+)
+CANONICAL_TOPIC_TYPES = frozenset(["iso19115", "eudatatheme"])
+# More than this many properties.is_national true records for one country and
+# catalog_type is IS_NATIONAL_EXCESS (one current catalog plus one legacy).
+IS_NATIONAL_MAX_PER_GROUP = 2
+BOILERPLATE_DESCRIPTION_MIN_LENGTH = 80
+BOILERPLATE_DESCRIPTION_MIN_COPIES = 5
+BOILERPLATE_DESCRIPTION_PHRASES = (
+    "not a production",
+    "demonstration or template",
+    "template site",
+    "city of ca,",
+)
+# Retired endpoints[].type values. None means there is no single replacement.
+ENDPOINT_TYPE_ALIASES = {
+    "customapi": None,
+    "custom_api": None,
+    "api": None,
+    "opendatasoft": "opendatasoftapi",
+    "geonetwork": "csw202",
+    "geonetwork:csw": "csw202",
+    "stac": "stacserverapi",
+    "csw": "csw202",
+    "oaipmh": "oaipmh20",
+    "socrata:opendata": "socrata:views",
+}
 CATALOG_TYPE_ALLOWED = frozenset([
     "Open data portal",
     "Geoportal",
@@ -535,6 +574,15 @@ ENRICHMENT_ISSUE_TYPES = frozenset(
         "DUPLICATE_COVERAGE",
         "OWNER_TYPE_NONCANONICAL",
         "IS_NATIONAL_AGENCY_OR_TOPIC",
+        "ENDPOINT_TYPE_ALIAS",
+        "IS_NATIONAL_EXCESS",
+        "TOPIC_TYPE_NONCANONICAL",
+        "BOILERPLATE_DESCRIPTION",
+        "LANGUAGE_NAME_NONCANONICAL",
+        "LANGUAGE_CODE_UNKNOWN",
+        "ACCESS_MODE_NONPREFERRED",
+        "CONTENT_TYPE_NONCANONICAL",
+        "MISSING_RIGHTS",
     ]
 )
 
@@ -662,6 +710,8 @@ MAP_SOFTWARE_ALLOWED_CATALOG_TYPES = {
     "ckan": frozenset(
         {"Open data portal", "Geoportal", "Scientific data repository"}
     ),
+    # DKAN hosts open-data portals and scientific archives (same extra type as CKAN).
+    "dkan": frozenset({"Open data portal", "Scientific data repository"}),
     "drupal": frozenset({"Open data portal", "Geoportal", "Indicators catalog"}),
     "opendatasoft": frozenset({"Open data portal", "Geoportal"}),
     "openeo": frozenset({"Geoportal", "Scientific data repository"}),
@@ -671,6 +721,8 @@ MAP_SOFTWARE_ALLOWED_CATALOG_TYPES = {
     ),
     "wordpress": frozenset({"Open data portal", "Geoportal", "Indicators catalog"}),
     "liferay": frozenset({"Open data portal", "Geoportal", "Indicators catalog"}),
+    # Joomla is a CMS, same catalog types as WordPress and Liferay.
+    "joomla": frozenset({"Open data portal", "Geoportal", "Indicators catalog"}),
     "udata": frozenset({"Open data portal", "Geoportal"}),
     "geonetwork": frozenset({"Geoportal", "Open data portal"}),
     "onegeosuite": frozenset({"Geoportal", "Open data portal"}),

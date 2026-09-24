@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: '039'
+      name: Southern Europe
+    subregion:
+      id: IT-34
+      name: Veneto
+description: GeoServer catalog publishing 17 layers outside the default sample workspaces
+  (WMS GetCapabilities).
+id: revxcomuneveneziait
+langs:
+- id: IT
+  name: Italian
+link: https://revx.comune.venezia.it/geoserver
+name: Comune di Venezia GeoServer
+owner:
+  link: https://revx.comune.venezia.it/geoserver
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-34
+      name: Veneto
+  name: Comune di Venezia
+  type: Local government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- maps
+- government
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00014527
+endpoints:
+- type: wms111
+  url: https://revx.comune.venezia.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://revx.comune.venezia.it/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://revx.comune.venezia.it/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://revx.comune.venezia.it/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://revx.comune.venezia.it/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

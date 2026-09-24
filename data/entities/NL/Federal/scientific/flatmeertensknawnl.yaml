@@ -1,0 +1,62 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: FLAT catalog of Meertens Institute research collections on Dutch language
+  variation and ethnology. Collections are described with CMDI metadata; many can
+  be downloaded and others require a viewing request.
+id: flatmeertensknawnl
+langs:
+- id: NL
+  name: Dutch
+- id: EN
+  name: English
+link: https://flat.meertens.knaw.nl/flat/
+name: Meertens Institute Research Collections
+owner:
+  link: https://meertens.knaw.nl/
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: Meertens Institute
+  type: Academy
+software:
+  id: flat
+  name: FLAT
+status: active
+tags:
+- scientific
+- linguistics
+- language resources
+- clarin
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00015331
+endpoints:
+- type: oaipmh20
+  url: https://flat.meertens.knaw.nl/flat/oai2?verb=Identify
+  version: '2.0'

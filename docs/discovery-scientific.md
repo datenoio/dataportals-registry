@@ -17,7 +17,7 @@ All `software.id` values: [software-index.md](software-index.md). Harvest filter
 
 Installations JSON: [dataverse-installations data.json](https://iqss.github.io/dataverse-installations/data/data.json). Branding is often ``{Org} Dataverse``.
 
-**Confirm:** `https://host/api/info/version` and/or `/api/search?q=*&type=dataset`. OAI-PMH: `/oai?verb=Identify`.
+**Confirm:** `https://host/api/info/version` and/or `/api/search?q=*&type=dataset`. OAI-PMH: `/oai?verb=Identify`. The JSF view `src/main/webapp/dataverse.xhtml` is the tighter body fingerprint (1,092 hosts in September 2026). The installations JSON stays the first list.
 
 | Tool | Query |
 |------|-------|
@@ -26,6 +26,8 @@ Installations JSON: [dataverse-installations data.json](https://iqss.github.io/d
 | Google | `"API" "info/version" dataverse` |
 | Censys | `web.endpoints.http.html_title: "Dataverse"` |
 | FOFA | `title="Dataverse"` |
+| Censys | `web.endpoints.http.body: "dataverse.xhtml"` |
+| FOFA | `body="dataverse.xhtml"` |
 | Censys | `web.endpoints.http.body: "dataverse"` |
 | FOFA | `body="dataverse"` |
 | Shodan | `http.title:"Dataverse"` |
@@ -44,7 +46,12 @@ Institutional repositories. DSpace 7+ API at `/server/api` even when the public 
 | Google | `inurl:/server/api/discover/search/objects` |
 | Censys | `web.endpoints.http.body: "DSpace"` |
 | FOFA | `body="DSpace"` |
+| Censys | `web.endpoints.http.body: "generator\" content=\"DSpace"` |
+| FOFA | `body="generator\" content=\"DSpace"` |
 | Shodan | `http.html:"generator\" content=\"DSpace"` |
+| GitHub code | `"dspace.ui.url = https://" filename:local.cfg` |
+
+DSpace Angular writes the generator meta in `src/app/core/metadata/head-tag.service.ts` (`content: root.dspaceVersion`). `body="generator\" content=\"DSpace"` matched 12,001 hosts in September 2026. Forks of `DSpace/DSpace` keep `dspace.ui.url` on localhost in `dspace/config/local.cfg.EXAMPLE`. Search committed configs for a public URL: `"dspace.ui.url = https://" filename:local.cfg`.
 
 ROAR ([roar.eprints.org](http://roar.eprints.org)) lists many DSpace hosts; still duplicate-check this registry. Harvest type filters: [harvest-scientific.md](harvest-scientific.md#dspace).
 
@@ -64,9 +71,13 @@ Classic Invenio (not RDM). **Confirm:** `/api/records?size=1` JSON and Invenio b
 
 Use `inveniordm` when the product is InvenioRDM. Skip zenodo.org itself if already registered.
 
+The classic footer [invenio_theme/templates/semantic-ui/invenio_theme/footer.html](https://github.com/inveniosoftware/invenio-theme/blob/master/invenio_theme/templates/semantic-ui/invenio_theme/footer.html) puts “Powered by” and “Invenio” on either side of an `<a>` tag, so `body="Powered by Invenio"` matched 7 hosts. The href `http://inveniosoftware.org` matched 396 (including `nadre.ethernet.edu.et`). InvenioRDM footers link the same host; use [`app-rdm-footer`](#inveniordm) when the install is RDM.
+
 | Tool | Query |
 |------|-------|
 | Google | `inurl:/api/records "invenio" -InvenioRDM` |
+| Censys | `web.endpoints.http.body: "http://inveniosoftware.org"` |
+| FOFA | `body="http://inveniosoftware.org"` |
 | Censys | `web.endpoints.http.body: "invenio"` |
 | FOFA | `body="invenio"` |
 
@@ -80,6 +91,10 @@ Zenodo-like research data repositories. **Confirm:** `/api/records?size=1` JSON 
 | Google | `inurl:/api/records "invenio"` |
 | Censys | `web.endpoints.http.body: "invenio"` |
 | FOFA | `body="invenio"` |
+| Censys | `web.endpoints.http.body: "app-rdm-footer"` |
+| FOFA | `body="app-rdm-footer"` |
+
+The RDM footer class `app-rdm-footer` is in `invenio_app_rdm/theme/templates/semantic-ui/invenio_app_rdm/footer.html` (196 hosts in September 2026, including `inis.iaea.org`). Classic Invenio does not ship that class. `body="About InvenioRDM"` is the same footer and matched 109 hosts.
 
 ## HAL (`hal`) {#hal}
 
@@ -115,10 +130,14 @@ Elsevier research-data hub: [data.mendeley.com](https://data.mendeley.com). Dist
 
 **Confirm:** `/eprint` URLs, “Powered by EPrints”, `meta generator` EPrints (Warwick WRAP and UAL Research Online are EPrints 3.4.5; UNAM IIEc is 3.3.16; UCL Discovery is 3.4.3; NERC Open Research Archive, LSE Research Online, and LSHTM Research Online are 3.4.6), or OAI-PMH Identify with an `eprints` xmlns (`/cgi/oai2` or `/oai`; PTB uses `/oai`). Directory: [ROAR](http://roar.eprints.org). Do **not** set `eprints` from a Digital Commons `/do/oai/` Identify that only lists an `eprints` metadata prefix.
 
+The default template [lib/templates/default.xml](https://github.com/eprints/eprints/blob/3.3/lib/templates/default.xml) uses the class `ep_tm_header` (3,724 hosts in September 2026, including `www.rmoa.unina.it`). `body="EPrints"` matched 10,995 hosts, including the project site and pages that only mention the software. Bootstrap flavours can omit `ep_tm_*`, so keep both queries. Forks of `eprints/eprints` are the software, not a portal list.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Powered by EPrints" -site:eprints.org` |
 | Google | `inurl:/cgi/oai2 eprints` |
+| Censys | `web.endpoints.http.body: "ep_tm_header"` |
+| FOFA | `body="ep_tm_header"` |
 | Censys | `web.endpoints.http.body: "EPrints"` |
 | FOFA | `body="EPrints"` |
 
@@ -140,7 +159,7 @@ Swedish shared IR (Uppsala University Library). Tenants at `{org}.diva-portal.or
 
 ## Samvera Hyrax (`hyrax`) {#hyrax}
 
-Rails institutional repo. **Confirm:** `/catalog.json` or Blacklight `/catalog`. Branding “Hyrax”, “Samvera”, “Nurax”.
+Rails institutional repo. **Confirm:** `/catalog.json` or Blacklight `/catalog`. Branding “Hyrax”, “Samvera”, “Nurax”. The generator partial `app/views/layouts/_generator_meta_tag.html.erb` emits `Samvera Hyrax` plus the version (`hyrax_generator_meta_tag` in `app/helpers/hyrax/hyrax_helper_behavior.rb`). `body="Samvera Hyrax"` matched 198 hosts in September 2026. Forks of `samvera/hyrax` are the software, not a portal list.
 
 Hyrax (and Islandora, PHAIDRA) often sit on **Fedora Repository** as the preservation backend. Set `software.id` from the **public catalog UI**, not the storage layer. Use `fedora` only when Fedora’s REST/LDP API is the public product — see [Fedora](#fedora).
 
@@ -148,6 +167,8 @@ Hyrax (and Islandora, PHAIDRA) often sit on **Fedora Repository** as the preserv
 |------|-------|
 | Google | `"Hyrax" (repository OR "research data") site:.edu` |
 | Google | `"Powered by Hyrax" OR "Samvera"` |
+| Censys | `web.endpoints.http.body: "Samvera Hyrax"` |
+| FOFA | `body="Samvera Hyrax"` |
 | Censys | `web.endpoints.http.body: "hyrax"` |
 | FOFA | `body="hyrax"` |
 
@@ -155,18 +176,20 @@ Hyrax (and Islandora, PHAIDRA) often sit on **Fedora Repository** as the preserv
 
 NCSA research data management framework (spaces → collections → datasets → files). **Confirm:** footer `Powered by Clowder(1.x.y ...)`, home page "Welcome to Clowder" with Spaces/Collections/Datasets/Files counters, or `GET /api/status` returning JSON with `version.number` and `counts`. Clowder answers `404` to `HEAD` — always probe with `GET`.
 
+[main.scala.html](https://github.com/clowder-framework/clowder/blob/master/app/views/main.scala.html) links `clowderframework.org` in the About menu (38 hosts in September 2026, including `clowder.smu.edu`). “Powered by” is split around the Clowder link, and `body="Powered by Clowder"` is not usable: it matched 96 hosts, including `www.imismarketplace.com`.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Powered by Clowder"` |
 | Google | `"Welcome to Clowder" Datasets Spaces` |
-| Censys | `web.endpoints.http.body: "Powered by Clowder"` |
-| FOFA | `body="Powered by Clowder"` |
+| Censys | `web.endpoints.http.body: "clowderframework.org"` |
+| FOFA | `body="clowderframework.org"` |
 
 Known public instances are few (NCSA demo, TERRA-REF, CINet/IML-CZO, RE-MAT, SMU, Pitschi/UQ, CPMR/TACC, EarthCube). Related NCSA stacks: Geodashboard portals (`greatlakestogulf.org`, `data.imlczo.org/geodashboard/`) run the Geostreaming Data Framework, not Clowder — register them separately. 4CeeD is a Clowder fork for microscopy; tag `clowder` only when the public UI is the Clowder one.
 
 ## Figshare (`figshare`) {#figshare}
 
-Institutional Figshare (not figshare.com itself). **Signals:** `{org}.figshare.com` or a custom domain with Figshare UI.
+Institutional Figshare (not figshare.com itself). **Signals:** `{org}.figshare.com` or a custom domain with Figshare UI. Custom domains still serve the Figshare shell: `<meta content="figshare" name="application-name">`, `<figshare-modal>` / `<figshare-notification>` custom elements, and footer links to `figshare.com` — so the body queries below catch campus domains the domain query misses.
 
 Do **not** set `figshare` on a library CMS or GitHub Pages hub that only links an already-tagged `{org}.figshare.com` catalog (University of Arizona ReDATA → `arizona.figshare.com`).
 
@@ -177,16 +200,42 @@ Do **not** set `figshare` on a library CMS or GitHub Pages hub that only links a
 | crt.sh | `%.figshare.com` |
 | Censys | `web.names: "figshare.com"` |
 | FOFA | `domain="figshare.com"` |
+| FOFA | `body="figshare-modal"` |
+| FOFA | `body="876az-branding-figshare"` |
+| FOFA | `body="figshare-confirm"` |
+| FOFA | `body="content=\"figshare\" name=\"application-name\""` |
+| FOFA | `body="websitev3-p-eu.figstatic.com"` |
+| FOFA | `body="websitev3-p-us.figstatic.com"` |
+
+The v3 shell puts `content="figshare" name="application-name"` and `<figshare-confirm>` in the document early; `figshare-modal` sits much later, so FOFA often indexes the new strings and misses the old ones. In September 2026 `body="figshare-confirm"` and the application-name query each matched 15 hosts, and `body="websitev3-p-eu.figstatic.com"` matched 16. `body="figstatic.com"` alone matched 0. Keep `figshare-confirm` (or the application-name meta): the CDN hostname also appears on pages that only hotlink the default logo. `figshare.us` did not resolve and `figshare.dev` was not publicly reachable. `cert="figshare.com" && domain!="figshare.com"` is mostly a shared Figshare IP presenting a certificate that does not match the hostname.
 
 Register the **institution** instance, not individual article URLs.
+
+## Renku (`renku`) {#renku}
+
+Swiss Data Science Center platform for reproducible data science. Hosted lab: [renkulab.io](https://renkulab.io/search). Institutional deployments use the same UI on their own host. Source: [github.com/SwissDataScienceCenter/renku](https://github.com/SwissDataScienceCenter/renku).
+
+**Signals:** `/search` plus `GET /api/data/search/query?q=water` JSON listing projects, datasets, or data connectors.
+
+**Confirm:** the search API returns dataset records. One record per deployment. Skip project pages, compute sessions, and user profiles.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Renku" ("data connectors" OR renkulab) (dataset OR search)` |
+| Censys | `web.endpoints.http.body: "renku"` |
+| FOFA | `body="renku" && body="/api/data/search"` |
 
 ## MyCoRe (`mycore`) {#mycore}
 
 German institutional repos. List: [mycore.de applications](https://www.mycore.de/site/applications/list/).
 
+The MIR skin [mir-common-layout.xsl](https://github.com/MyCoRe-Org/mir/blob/main/mir-module/src/main/resources/xslt/layout/mir-common-layout.xsl) uses the class `mir-lang` (91 hosts in September 2026, including `kartdok.staatsbibliothek-berlin.de`). `body="MyCoRe"` matched 2,342 hosts, including pages that only mention the software. Older layouts omit that class, so keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"MyCoRe" (repositorium OR repository) site:.de` |
+| Censys | `web.endpoints.http.body: "mir-lang"` |
+| FOFA | `body="mir-lang"` |
 | Censys | `web.endpoints.http.body: "MyCoRe"` |
 | FOFA | `body="MyCoRe"` |
 
@@ -198,12 +247,14 @@ Prefer instances that publish research data (`doc-type:ResearchData` in OAI-PMH 
 
 **Confirm:** `{base}/oai?verb=Identify` and `{base}/oai?verb=ListSets` (replace `{base}` with the repository root). Search UI often under `/solrsearch/` or `/home`. `meta name="Opus-Version"` plus Identify `repositoryName` `Opus4 … Instance` is enough on an already-registered scientific IR (BBAW edoc 4.8.0.19) even when ListSets has no `doc-type:ResearchData`.
 
+[public/layouts/opus4/common.phtml](https://github.com/OPUS4/application/blob/master/public/layouts/opus4/common.phtml) serves stylesheets under `layouts/opus4` (62 hosts in September 2026, including `ludwigsburg-montbeliard.bsz-bw.de`). `body="OPUS 4"` is not usable: it matched about 49,000 unrelated hosts.
+
 | Tool | Query |
 |------|-------|
 | Google | `"OPUS 4" (Forschungsdaten OR "research data" OR Repositorium) site:.de` |
 | Google | `inurl:opus4.kobv.de OR inurl:opus.bsz-bw.de` |
-| Censys | `web.endpoints.http.body: "OPUS 4"` |
-| FOFA | `body="OPUS 4"` |
+| Censys | `web.endpoints.http.body: "layouts/opus4"` |
+| FOFA | `body="layouts/opus4"` |
 
 Skip intranet-only thesis portals (Hochschulnetz / account required). Register the repository root, not a single document frontdoor.
 
@@ -247,10 +298,14 @@ Dutch research-data management platform (Utrecht University / Yoda Consortium, o
 
 **Confirm:** a public dataset landing or portal titled Yoda / Your Data for that institution. Hostnames often `public.yoda.*`, `portal.yoda.*`, or `*-landing.irods.surfsara.nl`. Use `software.id: yoda`. Skip login-only workspaces and SURF marketing pages.
 
+[themes/vu/index.html](https://github.com/UtrechtUniversity/yoda-portal/blob/development/themes/vu/index.html) (and the Utrecht themes) say `Yoda is a share-collaborate environment` (150 hosts in September 2026, including `geohealth-p.yoda-glb.uu.nl`) and load `img/yoda.svg` (133 hosts). Keep the host query for landings whose HTML drops that sentence.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Yoda" ("research data" OR "data publication") (university OR SURF) site:.nl` |
 | Google | `inurl:yoda. "data" (portal OR public)` |
+| Censys | `web.endpoints.http.body: "Yoda is a share-collaborate environment"` |
+| FOFA | `body="Yoda is a share-collaborate environment"` |
 | Censys | `web.names: "yoda."` |
 | FOFA | `host="yoda."` |
 
@@ -310,12 +365,14 @@ Cultural-heritage and research publishing platform. JSON-LD REST API; modules in
 
 Set `omekas` when the public product is a **dataset catalog** (schema.org DataCatalog, SPARQL, or a datasets/items API), not an exhibit-only museum site.
 
-**Confirm:** `https://host/api` or `/api/items` returns JSON-LD. Optional: `/.well-known/datacatalog`, `/oai`.
+**Confirm:** `https://host/api` or `/api/items` returns JSON-LD. Optional: `/.well-known/datacatalog`, `/oai`. The footer “Powered by Omeka S” is in `application/view/layout/layout.phtml` (2,190 hosts in September 2026). Forks of `omeka/omeka-s` are the software, not a portal list.
 
 | Tool | Query |
 |------|-------|
 | Google | `"Omeka S" (dataset OR datacatalog OR SPARQL OR "linked open data") -site:omeka.org` |
 | Google | `inurl:/api/items omeka` |
+| Censys | `web.endpoints.http.body: "Powered by Omeka S"` |
+| FOFA | `body="Powered by Omeka S"` |
 | Censys | `web.endpoints.http.body: "Omeka S"` |
 | FOFA | `body="Omeka S"` |
 | Censys | `web.endpoints.http.body: "o:item"` |
@@ -329,10 +386,14 @@ Preservation repository with a Linked Data Platform REST API. Public catalogs us
 
 **Confirm:** `GET https://host/fcrepo/rest` or `/rest` with Fedora version headers or RDF. Use `fedora` only if that API (or a thin Fedora HTML) is what users treat as the catalog.
 
+[index.html](https://github.com/fcrepo/fcrepo/blob/main/fcrepo-webapp/src/main/webapp/index.html) links `static/images/fcrepo-favicon.png` (12 hosts in September 2026, including `lod.unige.ch`). `body="Fedora Repository"` matched 120. Most deployments replace this welcome page, so keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Fedora Repository" OR inurl:/fcrepo/rest (research OR dataset)` |
 | Google | `"fcrepo" "research data" -site:github.com` |
+| Censys | `web.endpoints.http.body: "fcrepo-favicon.png"` |
+| FOFA | `body="fcrepo-favicon.png"` |
 | Censys | `web.endpoints.http.body: "Fedora Repository"` |
 | FOFA | `body="Fedora Repository"` |
 
@@ -344,10 +405,14 @@ University of Vienna institutional repository (and clones). List and docs: [phai
 
 **Confirm:** `/api/oai?verb=Identify` or `/api/search/select`. Hostnames often `phaidra.{university}`.
 
+[src/phaidra-ui/app.html](https://github.com/phaidra/phaidra/blob/main/src/phaidra-ui/app.html) includes the comment “This repository is powered by PHAIDRA” (33 hosts in September 2026). `body="PHAIDRA"` matched 666 hosts, including pages that only mention the project.
+
 | Tool | Query |
 |------|-------|
 | Google | `"PHAIDRA" (repository OR Forschungsdaten OR "research data") -site:univie.ac.at` |
 | Google | `inurl:phaidra (oai OR repository)` |
+| Censys | `web.endpoints.http.body: "This repository is powered by PHAIDRA"` |
+| FOFA | `body="This repository is powered by PHAIDRA"` |
 | Censys | `web.endpoints.http.body: "PHAIDRA"` |
 | FOFA | `body="PHAIDRA"` |
 
@@ -378,6 +443,7 @@ Register the institutional research portal that lists datasets, not a single out
 | Google | `site:esploro.exlibrisgroup.com` |
 | Censys | `web.names: "esploro.exlibrisgroup.com"` |
 | FOFA | `host="esploro.exlibrisgroup.com"` |
+| FOFA | `body="base href=\"/esploro/\""` |
 | crt.sh | `%.esploro.exlibrisgroup.com` |
 
 ## Elsevier Digital Commons (`elsevierdigitalcommons`) {#elsevierdigitalcommons}
@@ -400,14 +466,19 @@ Hosted institutional repository (bepress / Elsevier). Hosts often `*.bepress.com
 
 FairStack institutional research-data repository (CAS / CNIC). Site: [fairstack.cn](https://fairstack.cn/product/software/InstDB).
 
-**Signals:** InstDB / FairStack branding; Chinese Academy of Sciences data-center portals; DOI/CSTR assignment UI.
+**Signals:** Vue shell noscript `instdb-web doesn't work properly`; `plugClient.main.js` from `market.casdc.cn` together with `src/assets/img/logo-b.png`. DOI/CSTR assignment UI.
 
-**Confirm:** GET the public catalog home. One record per institutional node, not per dataset.
+**Confirm:** GET the public catalog home and `POST /api/index/getIndexAllResourceByES` with an empty `esParameter` and a `resourceType` aggregation. Keep the host only when the `数据集` facet is greater than 0. One record per `basicConfig.id`, not per hostname alias and not per dataset. Skip `demo.fairstack.cn`, FairMan, DataSpace (same plugin script, title `DataSpace`), and nodes whose only public resource is software.
+
+The Vue CLI `index.html` noscript is the served fingerprint (`We're sorry but instdb-web doesn't work properly without JavaScript enabled`). Checked 24 September 2026: FOFA `body="instdb-web doesn't work properly"` returned 72 hosts. `body="plugClient.main.js"` returned 166 and is mostly DataSpace. `body="src/assets/img/logo-b.png"` returned 829 and is not specific. `body="banaer_icoLogo"` and `body="getIndexAllResourceByES"` returned 0 because those strings are in JavaScript, which FOFA does not index. `body="机构数据存储库"` returned 9 (marketplace copy, not nodes). `host="instdb"` returned 24, including demos and unrelated `instdb.com`. `body="InstDB" && body="FairStack"` returned 0. `body="plugClient.main.js" && body="logo-b.png" && body!="DataSpace"` is the noscript set without the DataSpace tenants.
 
 | Tool | Query |
 |------|-------|
 | Google | `"InstDB" OR "FairStack" (数据仓储 OR repository) -site:fairstack.cn` |
 | Censys | `web.endpoints.http.body: "InstDB"` |
+| FOFA | `body="instdb-web doesn't work properly"` |
+| FOFA | `body="plugClient.main.js" && body="logo-b.png" && body!="DataSpace"` |
+| FOFA | `host="instdb"` |
 | FOFA | `body="InstDB"` |
 
 ## DABAR (`dabar`) {#dabar}
@@ -450,9 +521,13 @@ NII / RCOS open-source institutional repository. Docs: [weko3.readthedocs.io](ht
 
 **Confirm:** GET the repository home. Prefer `/api/records/` on WEKO3/JAIRO Cloud. `/oai?verb=Identify` is often missing. Register the IR root, not a single item.
 
+[header.html](https://github.com/RCOSDP/weko/blob/main/modules/weko-theme/weko_theme/templates/weko_theme/header.html) links `weko_admin/quill.snow.css` (529 hosts in September 2026, including `tsuda.repo.nii.ac.jp`). `body="WEKO3"` matched 553. Keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"WEKO3" OR "WEKO 3" (repository OR 機関リポジトリ) -site:github.com` |
+| Censys | `web.endpoints.http.body: "weko_admin/quill.snow.css"` |
+| FOFA | `body="weko_admin/quill.snow.css"` |
 | Censys | `web.endpoints.http.body: "WEKO3"` |
 | FOFA | `body="WEKO3"` |
 
@@ -558,9 +633,13 @@ Repository for Archiving, Managing and Accessing Diverse Data. Site: [ramadda.or
 
 **Confirm:** GET the repository entry page (folder/catalog UI). Skip a single file download.
 
+[jsimports.html](https://github.com/geodesystems/ramadda/blob/master/src/org/ramadda/repository/resources/web/jsimports.html) loads `/ramadda.js` (11 hosts in September 2026, including `ramadda.data.bas.ac.uk`). `body="RAMADDA"` matched 193. Installs that ship the minified bundle still match the name, so keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"RAMADDA" (repository OR catalog OR "data portal") -site:github.com` |
+| Censys | `web.endpoints.http.body: "ramadda.js"` |
+| FOFA | `body="ramadda.js"` |
 | Censys | `web.endpoints.http.body: "RAMADDA"` |
 | FOFA | `body="RAMADDA"` |
 
@@ -572,12 +651,14 @@ META-NET language-resource repository nodes. Site: [meta-net.eu/meta-share](http
 
 **Confirm:** GET the public repository home (resource search). One catalog per **node**, not per language resource. Skip Victoria MetaShare (that is GeoNetwork). Do not add a single corpus landing page.
 
+[base.html](https://github.com/metashare/META-SHARE/blob/master/metashare/templates/base.html) loads `metashare/js/metashare.js` (12 hosts in September 2026, including `193.40.154.95`). `body="META-SHARE"` is not usable: it matched 74,096 hosts, including `bloodtest.co.uk`.
+
 | Tool | Query |
 |------|-------|
 | Google | `"META-SHARE" (corpus OR "language resource" OR repository) -site:github.com` |
 | Google | `inurl:metashare (repository OR resources)` |
-| Censys | `web.endpoints.http.body: "META-SHARE"` |
-| FOFA | `body="META-SHARE"` |
+| Censys | `web.endpoints.http.body: "metashare/js/metashare.js"` |
+| FOFA | `body="metashare/js/metashare.js"` |
 | crt.sh | `metashare.%` |
 
 ## LabKey Server (`labkey`) {#labkey}
@@ -586,9 +667,13 @@ LabKey Server study/assay platform. Site: [labkey.com](https://www.labkey.com). 
 
 **Confirm:** GET a public project home or `begin.view`. One record per public LabKey instance. Skip login-only folders and a single assay run.
 
+[pageTemplate.jsp](https://github.com/LabKey/platform/blob/develop/core/src/org/labkey/core/view/template/bootstrap/pageTemplate.jsp) uses the class `lk-body-ct` (169 hosts in September 2026, including `brindl.urmc.rochester.edu`). `body="LabKey"` matched 434. Keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"LabKey Server" OR "LabKey" (Panorama OR "begin.view" OR study) -site:labkey.com -site:github.com` |
+| Censys | `web.endpoints.http.body: "lk-body-ct"` |
+| FOFA | `body="lk-body-ct"` |
 | Censys | `web.endpoints.http.body: "LabKey"` |
 | FOFA | `body="LabKey"` |
 
@@ -598,11 +683,13 @@ Sage Bionetworks hosted biomedical sharing platform. Site: [synapse.org](https:/
 
 **Confirm:** GET the public project/dataset catalog. One record per public portal or the main Synapse catalog. Skip a single file entity (`syn########` download).
 
+[Portal.html](https://github.com/Sage-Bionetworks/SynapseWebClient/blob/develop/src/main/webapp/Portal.html) names the author `info@sagebase.org` (4 hosts in September 2026, all `cdn-www.synapse.org`). `body="Sage Bionetworks"` is not usable: it matched 302 hosts, including `www.commonhealth.org`.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Synapse" "Sage Bionetworks" (portal OR datasets) -site:github.com` |
-| Censys | `web.endpoints.http.body: "Sage Bionetworks"` |
-| FOFA | `body="Sage Bionetworks"` |
+| Censys | `web.endpoints.http.body: "info@sagebase.org"` |
+| FOFA | `body="info@sagebase.org"` |
 
 ## Gen3 (`gen3`) {#gen3}
 
@@ -612,12 +699,12 @@ University of Chicago CTDS data-commons platform. Site: [gen3.org](https://gen3.
 
 **Confirm:** GET `/_status` and/or DRS `service-info`. One catalog per **commons portal**, not per study or file. Do **not** label NCI GDC, PDC, or IDC as Gen3 (different stacks). Do not label Bento UIs (ICDC and similar) as Gen3 even when Fence is used for login.
 
+The revproxy health body `Feelin good!` in [nginx.conf](https://github.com/uc-cdis/gen3-helm/blob/master/helm/revproxy/nginx/nginx.conf) is not usable: FOFA matched 1,141 hosts in September 2026, including `kodaisato.net`.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Gen3" ("data portal" OR "data commons") (Fence OR Indexd OR CTDS)` |
 | Google | `inurl:/index/ga4gh/drs/v1/service-info` |
-| Censys | `web.endpoints.http.body: "Feelin good!"` |
-| FOFA | `body="Feelin good!"` |
 | crt.sh | `%.midrc.org` |
 
 ## XNAT (`xnat`) {#xnat}
@@ -626,9 +713,13 @@ Neuroimaging archive platform. Site: [xnat.org](https://www.xnat.org). Independe
 
 **Confirm:** GET the public XNAT home or REST project list. Skip login-only archives and a single imaging session.
 
+[htmlOpen.vm](https://github.com/NrgXnat/xnat-web/blob/master/src/main/webapp/xnat-templates/navigations/htmlOpen.vm) comments `xnat-templates/navigations/htmlOpen` on each page (476 hosts in September 2026, including `cnda.wustl.edu`). `body="XNAT"` matched 2,664 hosts, including unrelated pages. Keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"XNAT" (neuroimaging OR "imaging archive" OR repository) -site:xnat.org -site:github.com` |
+| Censys | `web.endpoints.http.body: "xnat-templates/navigations/htmlOpen"` |
+| FOFA | `body="xnat-templates/navigations/htmlOpen"` |
 | Censys | `web.endpoints.http.body: "XNAT"` |
 | FOFA | `body="XNAT"` |
 
@@ -638,11 +729,13 @@ Inria Empenn neuroimaging platform (Shanoir-NG). Site: [project.inria.fr/shanoir
 
 **Confirm:** GET the public welcome UI (`/shanoir-ng/welcome` or `/`). One record per public instance. Skip login-only hospital tenants and a single imaging study. Demo/docs hosts are out of scope.
 
+[index.html](https://github.com/fli-iam/shanoir-ng/blob/develop/shanoir-ng-front/src/index.html) sets `<base href="/shanoir-ng/">` (7 hosts in September 2026, including `shanoir.irisa.fr`). `title="Shanoir"` is not usable: it matched a personal blog (`13.60.223.36`).
+
 | Tool | Query |
 |------|-------|
 | Google | `"Shanoir" (neuroimaging OR "imaging" OR OFSEP) (repository OR platform) -site:github.com` |
-| Censys | `web.endpoints.http.title: "Shanoir"` |
-| FOFA | `title="Shanoir"` |
+| Censys | `web.endpoints.http.body: "/shanoir-ng/"` |
+| FOFA | `body="/shanoir-ng/"` |
 
 ## LORIS (`loris`) {#loris}
 
@@ -662,11 +755,13 @@ Open Microscopy Environment image repository. Public archives such as the Image 
 
 **Confirm:** GET the public repository home or documented OMERO JSON API. Skip a single image/screen landing page.
 
+[login.html](https://github.com/ome/omero-web/blob/master/omeroweb/webclient/templates/webclient/login.html) links `ome.login.css` (511 hosts in September 2026, including `omero.microverse.uni-jena.de`). `body="OMERO"` is not usable: it matched 6,033 hosts, including pages that use the Italian name (`www.formeletterarie.unina.it`).
+
 | Tool | Query |
 |------|-------|
 | Google | `"OMERO" OR "Image Data Resource" (microscopy OR repository) -site:github.com` |
-| Censys | `web.endpoints.http.body: "OMERO"` |
-| FOFA | `body="OMERO"` |
+| Censys | `web.endpoints.http.body: "ome.login.css"` |
+| FOFA | `body="ome.login.css"` |
 
 ## Kadi4Mat (`kadi4mat`) {#kadi4mat}
 
@@ -674,11 +769,13 @@ KIT research-data infrastructure for materials science. Site: [kadi.iam.kit.edu]
 
 **Confirm:** GET the public records/collections UI or REST API. One record per public Kadi instance. Skip login-only lab tenants.
 
+[base.html](https://gitlab.com/iam-cms/kadi/-/blob/master/kadi/templates/base.html) sets `window.kadi` (39 hosts in September 2026, including `kadi4mat.iam.kit.edu` and `kadi4mat.postlithiumstorage.org`). `body="Kadi4Mat"` matched 76, including `www.materials.kit.edu`.
+
 | Tool | Query |
 |------|-------|
 | Google | `"Kadi4Mat" OR "Kadi" (KIT OR "research data") -site:github.com` |
-| Censys | `web.endpoints.http.body: "Kadi4Mat"` |
-| FOFA | `body="Kadi4Mat"` |
+| Censys | `web.endpoints.http.body: "window.kadi"` |
+| FOFA | `body="window.kadi"` |
 
 ## TR32DB (`tr32db`) {#tr32db}
 
@@ -713,11 +810,13 @@ NOMAD Laboratory archive and Oasis software for computational materials data. Si
 
 **Confirm:** GET `/prod/v1/api/v1/info` or the public upload/entry catalog. One record per public Oasis or the central archive. Skip a single calculation entry.
 
+[index.html](https://github.com/FAIRmat-NFDI/nomad/blob/develop/gui/public/index.html) includes the fallback “close all NOMAD tabs” (37 hosts in September 2026, including `oasis.ientrance.eu`). `body="nomad-lab"` is not usable: it matched 189 hosts, including `www.nomad-lab.jp`.
+
 | Tool | Query |
 |------|-------|
 | Google | `"NOMAD" ("Oasis" OR "nomad-lab" OR "materials discovery") (repository OR API) -site:github.com` |
-| Censys | `web.endpoints.http.body: "nomad-lab"` |
-| FOFA | `body="nomad-lab"` |
+| Censys | `web.endpoints.http.body: "close all NOMAD tabs"` |
+| FOFA | `body="close all NOMAD tabs"` |
 
 ## AODN Portal (`aodn`) {#aodn}
 
@@ -781,9 +880,13 @@ EMBL-EBI genome browsers. Hub: [ensembl.org](https://www.ensembl.org). Docs: [En
 
 **Confirm:** do **not** clone www.ensembl.org. Register only distinct **taxon portals** (Fungi, Protists, Metazoa, Bacteria, Plants, …) with their own public UI.
 
+[ensembl_powered.html](https://github.com/Ensembl/ensembl-webcode/blob/release/116/htdocs/info/about/ensembl_powered.html) links the `/img/empowered.png` badge (52 hosts in September 2026, including `jun2026-protists.ensembl.org` and `parasite.wormbase.org`). The badge also appears on Ensembl-powered archives, so confirm a taxon portal before registering.
+
 | Tool | Query |
 |------|-------|
 | Google | `site:ensembl.org` taxon portals only |
+| Censys | `web.endpoints.http.body: "/img/empowered.png"` |
+| FOFA | `body="/img/empowered.png"` |
 | Censys | `web.names: "ensembl.org"` |
 | FOFA | `domain="ensembl.org"` |
 
@@ -807,9 +910,13 @@ G-Node git-annex neuroscience repositories. Hub: [gin.g-node.org](https://gin.g-
 
 **Confirm:** GET a public organization or dataset listing. One catalog for GIN (plus independent GIN-like deployments). Skip individual repositories as catalogs.
 
+[footer_gin_brand.tmpl](https://github.com/G-Node/gogs/blob/master/templates/base/footer_gin_brand.tmpl) links the re3data DOI `10.17616/R3SX9N` (51 hosts in September 2026, including `gin.g-node.org`). Keep the host query for the canonical hub.
+
 | Tool | Query |
 |------|-------|
 | Google | `site:gin.g-node.org` OR `"GIN" g-node` |
+| Censys | `web.endpoints.http.body: "doi.org/10.17616/R3SX9N"` |
+| FOFA | `body="doi.org/10.17616/R3SX9N"` |
 | Censys | `web.names: "gin.g-node.org"` |
 | FOFA | `host="gin.g-node.org"` |
 
@@ -821,9 +928,13 @@ Science-gateway platform. Site: [hubzero.org](https://hubzero.org). Docs: [hubze
 
 **Confirm:** GET a public resources/database listing. One gateway per hub. Skip marketing and login-only sites.
 
+[en-GB.tpl_kameleon.ini](https://github.com/hubzero/hubzero-cms/blob/2.4-main/core/templates/kameleon/language/en-GB/en-GB.tpl_kameleon.ini) puts `http://hubzero.org` in the footer (29 hosts in September 2026, including `mccarran.crbs.ucsd.edu`). The “Powered by” label is split around that link. `body="HUBzero"` matched 137. Hubs that drop the footer still match the name, so keep both.
+
 | Tool | Query |
 |------|-------|
 | Google | `"HUBzero" (resources OR database)` |
+| Censys | `web.endpoints.http.body: "http://hubzero.org"` |
+| FOFA | `body="http://hubzero.org"` |
 | Censys | `web.endpoints.http.body: "HUBzero"` |
 | FOFA | `body="HUBzero"` |
 
@@ -845,13 +956,15 @@ IFREMER oceanographic data publishing. Hub: [seanoe.org](https://www.seanoe.org)
 
 Publication and research-information repository. Site: [librecat.org](https://librecat.org). Source: [LibreCat/LibreCat](https://github.com/LibreCat/LibreCat).
 
-**Signals:** LibreCat chrome; publication/dataset catalog.
+**Signals:** LibreCat chrome; publication/dataset catalog. [views/header.tt](https://github.com/LibreCat/LibreCat/blob/master/views/header.tt) writes the comment `BEGIN header.tt` into the page (15 hosts in September 2026).
 
 **Confirm:** GET a public repository search that includes datasets. Skip publication-only CRIS with no dataset records.
 
 | Tool | Query |
 |------|-------|
 | Google | `"LibreCat" repository` |
+| Censys | `web.endpoints.http.body: "BEGIN header.tt"` |
+| FOFA | `body="BEGIN header.tt"` |
 | Censys | `web.endpoints.http.body: "LibreCat"` |
 | FOFA | `body="LibreCat"` |
 
@@ -873,13 +986,15 @@ IndiScale research-data toolkit (formerly CaosDB). Site: [getlinkahead.com](http
 
 Instrument-data repository. Site: [mytardis.org](https://www.mytardis.org). Docs: [mytardis.readthedocs.io](https://mytardis.readthedocs.io).
 
-**Signals:** MyTardis chrome; experiment/dataset browser.
+**Signals:** MyTardis chrome; experiment/dataset browser. [portal_template.html](https://github.com/mytardis/mytardis/blob/develop/tardis/tardis_portal/templates/tardis_portal/portal_template.html) puts “Powered by” and “MyTardis” on either side of a link to `github.com/mytardis/mytardis` (14 hosts in September 2026, including `mhtp-seq.erc.monash.edu`). `body="MyTardis"` matched 18.
 
 **Confirm:** GET the public experiment/dataset list. One facility catalog per deployment.
 
 | Tool | Query |
 |------|-------|
 | Google | `"MyTardis" (data OR repository)` |
+| Censys | `web.endpoints.http.body: "github.com/mytardis/mytardis"` |
+| FOFA | `body="github.com/mytardis/mytardis"` |
 | Censys | `web.endpoints.http.body: "MyTardis"` |
 | FOFA | `body="MyTardis"` |
 
@@ -917,23 +1032,34 @@ Python OPeNDAP server. Site: [pydap.github.io/pydap](https://pydap.github.io/pyd
 
 **Confirm:** GET the catalog directory of dataset nodes. Use `opendap` if PyDAP is not the branded product.
 
+[index.html](https://github.com/pydap/pydap/blob/main/src/pydap/wsgi/templates/index.html) titles the directory `OPeNDAP pydap` (1 host in September 2026, `134.94.198.57`, already registered as BioDT). `body="pydap"` is not usable: it matched 116 hosts, including `xmzyk.36ve.com`.
+
+Older servers (3.2–3.4) do not use that title. [3.2 index.html](https://github.com/pydap/pydap/blob/3.2.2/src/pydap/wsgi/templates/index.html) writes `class="pure-table pydap-listing"`. [3.4 base.html](https://github.com/pydap/pydap/blob/3.4.0/src/pydap/wsgi/templates/base.html) links `http://pydap.org/` in the footer. Current [base.html](https://github.com/pydap/pydap/blob/main/src/pydap/wsgi/templates/base.html) links `pydap.github.io/pydap/intro.html`. Keep a host only when the directory lists dataset nodes (`.nc` with `.dds` / `.html`), not an empty `data/` folder.
+
+GitHub code search does not list deployments. `pydap-listing`, `"DAP Response Links"`, and `pydap --data` hit the upstream repo, vendored `site-packages`, and localhost compose files. Forks of `pydap/pydap` are the library. `body="DAP Response Links"` also matches Hyrax `contents.xsl`. `body="Roberto De Almeida"` matches the old footer and hundreds of unrelated pages.
+
 | Tool | Query |
 |------|-------|
 | Google | `"PyDAP" OPeNDAP` |
-| Censys | `web.endpoints.http.body: "pydap"` |
-| FOFA | `body="pydap"` |
+| Censys | `web.endpoints.http.body: "OPeNDAP pydap"` |
+| FOFA | `body="OPeNDAP pydap"` |
+| FOFA | `body="pydap-listing"` |
+| FOFA | `body="http://pydap.org/"` |
+| GitHub | `pydap-listing` (library and vendored copies, not a portal list) |
 
 ## VuFind (`vufind`) {#vufind}
 
 Library discovery over catalogs and repositories. Site: [vufind.org](https://vufind.org). Wiki: [vufind.org/wiki](https://vufind.org/wiki). Use only for **data/repo discovery**, not a library OPAC with no datasets.
 
-**Signals:** VuFind chrome; `/vufind/` paths; research-data community.
+**Signals:** VuFind chrome; `/vufind/` paths; research-data community. `themes/bootstrap5/templates/layout/layout.phtml` sets `VuFind.path` (952 hosts in September 2026). `vufind-offcanvas-overlay` in the same layout matched 413. Forks of `vufind-org/vufind` are the software, not a portal list.
 
 **Confirm:** GET a public search that lists datasets or research-data records. Skip publication-only library catalogs.
 
 | Tool | Query |
 |------|-------|
 | Google | `"VuFind" (research data OR datasets)` |
+| Censys | `web.endpoints.http.body: "VuFind.path"` |
+| FOFA | `body="VuFind.path"` |
 | Censys | `web.endpoints.http.body: "VuFind"` |
 | FOFA | `body="VuFind"` |
 
@@ -1020,6 +1146,8 @@ Lund Humanities Lab serves `/flat/oai2?verb=Identify`; other deployments may use
 OAI paths. **Search:** `"flat_bootstrap_theme"` or `"Fedora Language Archiving Technology"`.
 Use the more specific `flat` ID only with FLAT evidence; ordinary Islandora remains `islandora`.
 
+[template.php](https://github.com/TLA-FLAT/FLAT/blob/develop/docker/flat/islandora/template.php) names the theme `flat_bootstrap_theme` (5 hosts in September 2026, `archive.humlab.lu.se`).
+
 
 | Tool | Query |
 |------|-------|
@@ -1040,12 +1168,16 @@ Check the live asset paths and published OAI endpoint; a generic `/items/` route
 The [source project](https://github.com/openequella/openEQUELLA) and vendor use cases
 establish reuse across independent institutions.
 
+[ResourcesService.java](https://github.com/openequella/openEQUELLA/blob/develop/Source/Plugins/Core/com.equella.core/src/com/tle/web/resources/ResourcesService.java) writes `com.equella.core` into asset URLs (133 hosts in September 2026, including `radar.brookes.ac.uk`). `body="openEQUELLA"` matched 97, the same product.
+
 
 | Tool | Query |
 |------|-------|
 | Google | `"com.equella.core" OR "openEQUELLA" research` |
 | Censys | `web.endpoints.http.body: "com.equella.core"` |
 | FOFA | `body="com.equella.core"` |
+| Censys | `web.endpoints.http.body: "openEQUELLA"` |
+| FOFA | `body="openEQUELLA"` |
 
 
 ## Aubrey (`aubrey`) {#aubrey}

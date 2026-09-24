@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -38,8 +38,8 @@ owner:
   name: NORMAN network
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: dkan
+  name: DKAN
 status: active
 tags:
 - scientific
@@ -49,4 +49,10 @@ topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+endpoints:
+- type: dcatus11
+  url: https://dsfp.norman-data.eu/data.json
+- type: dkan:search
+  url: https://dsfp.norman-data.eu/api/1/search
+  version: '1'
 uid: cdi00030200
