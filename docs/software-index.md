@@ -303,7 +303,7 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `gfmaplet` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#gfmaplet) | [harvest-viewers](harvest-viewers.md#gfmaplet) | — |
 | `ggis` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#ggis) | [harvest-geoportals](harvest-geoportals.md#ggis) | — |
 | `gharyshgeoportal` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#gharyshgeoportal) | [harvest-viewers](harvest-viewers.md#gharyshgeoportal) | — |
-| `gigwa` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#gigwa) | [harvest-scientific-domain](harvest-scientific-domain.md#gigwa) | — |
+| `gigwa` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#gigwa) | [harvest-scientific-domain](harvest-scientific-domain.md#gigwa) | yes |
 | `gildata` | indicators | [discovery-indicators](discovery-indicators.md#gildata) | [harvest-indicators](harvest-indicators.md#gildata) | — |
 | `gin` | scientific | [discovery-scientific](discovery-scientific.md#gin) | [harvest-scientific](harvest-scientific.md#gin) | yes |
 | `gines` | indicators | [discovery-indicators](discovery-indicators.md#gines) | [harvest-indicators](harvest-indicators.md#gines) | — |

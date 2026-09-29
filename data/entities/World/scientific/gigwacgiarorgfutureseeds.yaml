@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '001'
       name: World
-description: CGIAR Gigwa genotype portal for the Future Seeds genebank, with bean
-  and cassava genotyping projects.
+description: CGIAR Gigwa genotype portal for the Future Seeds genebank, with bean and cassava genotyping
+  projects.
 id: gigwacgiarorgfutureseeds
 langs:
 - id: EN
@@ -57,3 +57,6 @@ topics:
   name: Biota
   type: iso19115
 uid: cdi00009696
+endpoints:
+- type: docs
+  url: https://gigwa.cgiar.org/FutureSeeds/rest/swagger-ui/index.html

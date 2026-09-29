@@ -1057,6 +1057,19 @@ CONVERIS_URLMAP = [
 
 DATALAD_URLMAP = []  # git/annex only – see NO_STANDARD_PROBE
 
+# Gigwa 2.x (genotyping data manager) exposes its REST API under {app}/rest/;
+# the Swagger UI page is the only stable anonymous GET (verified on
+# gigwa.cgiar.org instances, gigwa.rosaceae.org, gigwa.cottongen.org).
+GIGWA_URLMAP = [
+    {
+        "id": "docs",
+        "url": "/rest/swagger-ui/index.html",
+        "expected_mime": HTML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+]
+
 SURVEYSOLUTIONS_URLMAP = [
     {
         "id": "surveysolutions:api",
@@ -3181,6 +3194,7 @@ DRAFT_CATALOGS_URLMAP = {
     "bitrix": BITRIX_URLMAP,
     "converis": CONVERIS_URLMAP,
     "surveysolutions": SURVEYSOLUTIONS_URLMAP,
+    "gigwa": GIGWA_URLMAP,
     "breedbase": BREEDBASE_URLMAP,
     "tripal": TRIPAL_URLMAP,
     "veupathdb": VEUPATHDB_URLMAP,
@@ -3491,6 +3505,9 @@ NO_STANDARD_PROBE = {
     "mapainversiones": "IDB MapaInversiones deployments are ASP.NET national portals; harvest is the Datos Abiertos download section, no documented public catalog API on the tenant URL.",
     "liveshop": "LiveShop statistics databases (ASP.NET /shop + /data-browser tenants) publish chart/table HTML with no documented public catalog API on the tenant URL.",
     "cod": "COD (Crystallography Open Database) search is a parameterized result.php query on crystallography.net; no stable anonymous list-all API, bulk harvest is CIF/MySQL dumps per the obtain-data wiki (harvest-scientific-domain.md).",
+    "aphia": "Aphia (WoRMS) registers are served by the central REST hub at www.marinespecies.org/rest; tenant hosts (molluscabase.org, decanet.info, aphia.org subdomains, etc.) return 404 on /rest. Do not copy the hub API onto every register URL.",
+    "sedoo": "Sedoo/AERIS/Data-Terra portals are WordPress pages embedding the aeris-catalogue web component, which queries per-tenant metadata services on the central api.sedoo.fr hub; no anonymous list API on the portal URL itself.",
+    "envista": "Envista ARM air-quality portals use a session-token web-app API (Scripts/service/API.js, getApiFromBackToken); no anonymous portable list API on the portal URL.",
 }
 
 # Map UIs reviewed for auto-fill: no shared relative catalog API on the viewer URL.

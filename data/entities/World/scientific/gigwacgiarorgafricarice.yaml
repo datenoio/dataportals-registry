@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,8 +14,7 @@ coverage:
     macroregion:
       id: '001'
       name: World
-description: CGIAR Gigwa genotype portal for Africa Rice Center DArTseq genotyping
-  of Oryza accessions.
+description: CGIAR Gigwa genotype portal for Africa Rice Center DArTseq genotyping of Oryza accessions.
 id: gigwacgiarorgafricarice
 langs:
 - id: EN
@@ -57,3 +56,6 @@ topics:
   name: Biota
   type: iso19115
 uid: cdi00009694
+endpoints:
+- type: docs
+  url: https://gigwa.cgiar.org/AfricaRice/rest/swagger-ui/index.html
