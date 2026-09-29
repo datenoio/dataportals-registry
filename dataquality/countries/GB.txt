@@ -1,14 +1,14 @@
 DATA QUALITY REPORT - COUNTRY: GB
 ================================================================================
-Generated: 2026-09-29 20:07:41
+Generated: 2026-09-29 21:46:09
 Country Code: GB
-Total Records with Issues: 13
-Total Issues Found: 14
+Total Records with Issues: 14
+Total Issues Found: 16
 
 === ISSUES BY TYPE ===
 
 [MISSING_TAGS]
-Count: 1
+Count: 2
 Priority: LOW
 
 File: GB/indicators/wwwuktradeinfocom.yaml
@@ -18,12 +18,26 @@ Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
 
+File: GB/Federal/indicators/devtrackerfcdogovuk.yaml
+Record ID: devtrackerfcdogovuk
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
 [MISSING_TOPICS]
-Count: 1
+Count: 2
 Priority: LOW
 
 File: GB/indicators/wwwuktradeinfocom.yaml
 Record ID: wwwuktradeinfocom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: GB/Federal/indicators/devtrackerfcdogovuk.yaml
+Record ID: devtrackerfcdogovuk
 Issue: MISSING_TOPICS
 Field: topics
 Current Value: []
@@ -140,8 +154,8 @@ Suggested Action: Add at least one endpoint because software.id='statswales' is 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_TAGS: 1 issue
-MISSING_TOPICS: 1 issue
+MISSING_TAGS: 2 issues
+MISSING_TOPICS: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA: 7 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_EPRINTS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT: 1 issue

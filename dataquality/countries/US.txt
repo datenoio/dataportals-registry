@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: US
 ================================================================================
-Generated: 2026-09-29 20:07:41
+Generated: 2026-09-29 21:46:09
 Country Code: US
-Total Records with Issues: 54
-Total Issues Found: 57
+Total Records with Issues: 55
+Total Issues Found: 59
 
 === ISSUES BY TYPE ===
 
@@ -19,7 +19,7 @@ Current Value: None
 Suggested Action: Add owner organization website URL
 
 [MISSING_TAGS]
-Count: 3
+Count: 4
 Priority: LOW
 
 File: US/indicators/atlashksharvardedu.yaml
@@ -38,13 +38,20 @@ Suggested Action: Extract tags from description and catalog_type
 
 File: US/indicators/datawebusitcgov.yaml
 Record ID: datawebusitcgov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/indicators/wwwstatcompilercom.yaml
+Record ID: wwwstatcompilercom
 Issue: MISSING_TAGS
 Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
 
 [MISSING_TOPICS]
-Count: 3
+Count: 4
 Priority: LOW
 
 File: US/indicators/atlashksharvardedu.yaml
@@ -63,6 +70,13 @@ Suggested Action: Add relevant topics based on catalog_type and description
 
 File: US/indicators/datawebusitcgov.yaml
 Record ID: datawebusitcgov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/indicators/wwwstatcompilercom.yaml
+Record ID: wwwstatcompilercom
 Issue: MISSING_TOPICS
 Field: topics
 Current Value: []
@@ -474,8 +488,8 @@ Suggested Action: Add at least one endpoint because software.id='xnat' is marked
 === SUMMARY BY ISSUE TYPE ===
 
 MISSING_OWNER_LINK: 1 issue
-MISSING_TAGS: 3 issues
-MISSING_TOPICS: 3 issues
+MISSING_TAGS: 4 issues
+MISSING_TOPICS: 4 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BENTO: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue

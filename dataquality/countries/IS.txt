@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: IS
 ================================================================================
-Generated: 2026-09-29 20:07:41
+Generated: 2026-09-29 21:46:09
 Country Code: IS
 Total Records with Issues: 2
-Total Issues Found: 5
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
 
@@ -29,24 +29,6 @@ Field: topics
 Current Value: []
 Suggested Action: Add relevant topics based on catalog_type and description
 
-[PLACEHOLDER_TITLE]
-Count: 2
-Priority: MEDIUM
-
-File: IS/Federal/opendata/althingiai.yaml
-Record ID: althingiai
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: althingi.ai
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: IS/Federal/opendata/althingiai.yaml
-Record ID: althingiai
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: althingi.ai
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDIS]
 Count: 1
 Priority: MEDIUM
@@ -63,16 +45,4 @@ Suggested Action: Add at least one endpoint because software.id='islandis' is ma
 
 MISSING_TAGS: 1 issue
 MISSING_TOPICS: 1 issue
-PLACEHOLDER_TITLE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDIS: 1 issue
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: althingiai
-File: IS/Federal/opendata/althingiai.yaml
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - PLACEHOLDER_TITLE: name
-  - PLACEHOLDER_TITLE: name

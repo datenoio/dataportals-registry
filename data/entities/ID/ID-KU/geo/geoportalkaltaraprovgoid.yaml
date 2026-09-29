@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: ID-KU
       name: Kalimantan Utara
-description: A data catalog and geospatial data service platform hosted by the Kaltara Provincial Government using GeoServer, typically providing access to geospatial datasets and services.
+description: A data catalog and geospatial data service platform hosted by the Kaltara Provincial Government
+  using GeoServer, typically providing access to geospatial datasets and services.
 id: geoportalkaltaraprovgoid
 langs:
 - id: ID
@@ -74,3 +75,7 @@ topics:
   name: Boundaries
   type: iso19115
 uid: cdi99993711
+endpoints:
+- type: csw202
+  url: https://geoportal.kaltaraprov.go.id/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2

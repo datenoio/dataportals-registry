@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: ID
 ================================================================================
-Generated: 2026-09-29 20:07:41
+Generated: 2026-09-29 21:46:09
 Country Code: ID
-Total Records with Issues: 15
-Total Issues Found: 16
+Total Records with Issues: 7
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
 
@@ -59,22 +59,8 @@ Current Value: {'software_id': 'centurion', 'has_api': 'Yes', 'endpoints_count':
 Suggested Action: Add at least one endpoint because software.id='centurion' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA]
-Count: 11
+Count: 3
 Priority: MEDIUM
-
-File: ID/ID-RI/geo/dumaikotainasdiorid.yaml
-Record ID: dumaikotainasdiorid
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
-Field: endpoints
-Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
-
-File: ID/ID-JT/geo/geoportalbatangkabgoid.yaml
-Record ID: geoportalbatangkabgoid
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
-Field: endpoints
-Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
 
 File: ID/ID-JT/geo/geoportalbanyumaskabgoid.yaml
 Record ID: geoportalbanyumaskabgoid
@@ -85,48 +71,6 @@ Suggested Action: Add at least one endpoint because software.id='palapa' is mark
 
 File: ID/ID-JT/geo/geoportalkuduskabgoid.yaml
 Record ID: geoportalkuduskabgoid
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
-Field: endpoints
-Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
-
-File: ID/ID-JT/geo/geoportalpurworejokabgoid.yaml
-Record ID: geoportalpurworejokabgoid
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
-Field: endpoints
-Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
-
-File: ID/ID-PD/geo/rajaampatkabinasdiorid.yaml
-Record ID: rajaampatkabinasdiorid
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
-Field: endpoints
-Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
-
-File: ID/ID-KS/geo/tanahlautkabinasdiorid.yaml
-Record ID: tanahlautkabinasdiorid
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
-Field: endpoints
-Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
-
-File: ID/ID-KT/geo/geoportalkaltenggoid.yaml
-Record ID: geoportalkaltenggoid
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
-Field: endpoints
-Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
-
-File: ID/ID-BT/geo/geoportalserangkabgoid.yaml
-Record ID: geoportalserangkabgoid
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
-Field: endpoints
-Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
-
-File: ID/ID-KU/geo/geoportalkaltaraprovgoid.yaml
-Record ID: geoportalkaltaraprovgoid
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
 Field: endpoints
 Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
@@ -146,4 +90,4 @@ MISSING_RIGHTS: 1 issue
 MISSING_TAGS: 1 issue
 MISSING_TOPICS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CENTURION: 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA: 11 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA: 3 issues

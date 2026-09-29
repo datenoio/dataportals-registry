@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -77,3 +77,7 @@ topics:
   name: Boundaries
   type: iso19115
 uid: cdi99993662
+endpoints:
+- type: csw202
+  url: https://geoportal.batangkab.go.id/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2

@@ -1,15 +1,22 @@
 DATA QUALITY REPORT - COUNTRY: AT
 ================================================================================
-Generated: 2026-09-29 20:07:41
+Generated: 2026-09-29 21:46:09
 Country Code: AT
-Total Records with Issues: 5
-Total Issues Found: 6
+Total Records with Issues: 6
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
 
 [MISSING_TAGS]
-Count: 1
+Count: 2
 Priority: LOW
+
+File: AT/Federal/indicators/wwwworldminingdatainfo.yaml
+Record ID: wwwworldminingdatainfo
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
 
 File: AT/Federal/geo/ideaslabplusacat.yaml
 Record ID: ideaslabplusacat
@@ -19,8 +26,15 @@ Current Value: []
 Suggested Action: Extract tags from description and catalog_type
 
 [MISSING_TOPICS]
-Count: 1
+Count: 2
 Priority: LOW
+
+File: AT/Federal/indicators/wwwworldminingdatainfo.yaml
+Record ID: wwwworldminingdatainfo
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
 
 File: AT/Federal/geo/ideaslabplusacat.yaml
 Record ID: ideaslabplusacat
@@ -64,6 +78,6 @@ Suggested Action: Add at least one endpoint because software.id='webgiscloud' is
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_TAGS: 1 issue
-MISSING_TOPICS: 1 issue
+MISSING_TAGS: 2 issues
+MISSING_TOPICS: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD: 4 issues

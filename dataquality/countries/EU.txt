@@ -1,11 +1,89 @@
 DATA QUALITY REPORT - COUNTRY: EU
 ================================================================================
-Generated: 2026-09-29 20:07:41
+Generated: 2026-09-29 21:46:09
 Country Code: EU
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 7
+Total Issues Found: 12
 
 === ISSUES BY TYPE ===
+
+[MISSING_TAGS]
+Count: 5
+Priority: LOW
+
+File: EU/Federal/indicators/fraeuropaeu.yaml
+Record ID: fraeuropaeu
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: EU/Federal/indicators/wwweurofoundeuropaeu.yaml
+Record ID: wwweurofoundeuropaeu
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: EU/Federal/indicators/ghsljrceceuropaeu.yaml
+Record ID: ghsljrceceuropaeu
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: EU/Federal/indicators/drmkcjrceceuropaeu.yaml
+Record ID: drmkcjrceceuropaeu
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: EU/Federal/indicators/wwweudaeuropaeu.yaml
+Record ID: wwweudaeuropaeu
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 5
+Priority: LOW
+
+File: EU/Federal/indicators/fraeuropaeu.yaml
+Record ID: fraeuropaeu
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: EU/Federal/indicators/wwweurofoundeuropaeu.yaml
+Record ID: wwweurofoundeuropaeu
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: EU/Federal/indicators/ghsljrceceuropaeu.yaml
+Record ID: ghsljrceceuropaeu
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: EU/Federal/indicators/drmkcjrceceuropaeu.yaml
+Record ID: drmkcjrceceuropaeu
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: EU/Federal/indicators/wwweudaeuropaeu.yaml
+Record ID: wwweudaeuropaeu
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA]
 Count: 1
@@ -29,20 +107,10 @@ Field: endpoints
 Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
 
-[STATUS_API_STATUS_MISMATCH]
-Count: 1
-Priority: MEDIUM
-
-File: EU/Federal/geo/creodiasrasdamancom.yaml
-Record ID: creodiasrasdamancom
-Issue: STATUS_API_STATUS_MISMATCH
-Field: api_status
-Current Value: {'status': 'deprecated', 'api_status': 'active'}
-Suggested Action: Catalog is deprecated but API is marked active; update api_status or catalog status to keep them consistent.
-
 
 === SUMMARY BY ISSUE TYPE ===
 
+MISSING_TAGS: 5 issues
+MISSING_TOPICS: 5 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue
-STATUS_API_STATUS_MISMATCH: 1 issue

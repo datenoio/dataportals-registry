@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: ID-PD
       name: Papua Barat Daya
-description: A GeoServer instance providing geospatial data for Raja Ampat Regency, possibly maintained as part of a local government open data initiative.
+description: A GeoServer instance providing geospatial data for Raja Ampat Regency, possibly maintained
+  as part of a local government open data initiative.
 id: rajaampatkabinasdiorid
 langs:
 - id: ID
@@ -72,3 +73,7 @@ topics:
   name: Geoscientific Information
   type: iso19115
 uid: cdi99993738
+endpoints:
+- type: csw202
+  url: https://rajaampatkab.ina-sdi.or.id/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
