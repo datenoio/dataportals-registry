@@ -3425,6 +3425,7 @@ NO_STANDARD_PROBE = {
     "fenix": "FAOSTAT groupsanddomains is one FENIX app; other FENIX UIs have no shared list API.",
     "sparkmap": "No anonymous layer-list API on the public Map Room.",
     "imfnsdp": "NSDP is an HTML country page linking SDMX; no relative catalog API on the page.",
+    "idds": "Hong Kong C&SD Interactive Data Dissemination Service; Trade IDDS JSON GET API needs cookie consent and query params, Common-IDDS and census tenants have no anonymous list API.",
     "datawarehousepro": "Guest databank URLs are tenant-specific paths.",
     "esridataobservatory": "ArcGIS catalog IDs are per InstantAtlas deployment; no universal /api.",
     "liferay": "Open-data module paths vary by Liferay site; no single relative catalog API.",
@@ -3487,6 +3488,7 @@ NO_STANDARD_PROBE = {
     "sciencedb": "ScienceDB (scidb.cn) is a single-instance repository; dataset discovery is search HTML plus per-DOI landing pages, no public bulk catalog API confirmed.",
     "bonmaximus": "Bon Maximus e-Procurement portals are IIS/ASP.NET HTML sites with OCDS publication pages; no documented public catalog API on the tenant URL.",
     "budeshi": "Budeshi (PPDC) deployments expose instance-specific OCDS endpoints (/api, /ocds-api on Kaduna) that are not stable across tenants; no shared relative catalog probe.",
+    "mapainversiones": "IDB MapaInversiones deployments are ASP.NET national portals; harvest is the Datos Abiertos download section, no documented public catalog API on the tenant URL.",
     "liveshop": "LiveShop statistics databases (ASP.NET /shop + /data-browser tenants) publish chart/table HTML with no documented public catalog API on the tenant URL.",
     "cod": "COD (Crystallography Open Database) search is a parameterized result.php query on crystallography.net; no stable anonymous list-all API, bulk harvest is CIF/MySQL dumps per the obtain-data wiki (harvest-scientific-domain.md).",
 }
@@ -3614,6 +3616,7 @@ NO_STANDARD_PROBE.update(
             "pozi",
             "publicmaps",
             "qgiscloud",
+            "qgis2web",
             "rgis",
             "rumap",
             "sampaswebgis",

@@ -18,8 +18,6 @@ description: GBIF Integrated Publishing Toolkit of the ASEAN Centre for Biodiver
   hosting occurrence and checklist datasets from ASEAN member states. The IPT is
   operated from Los Baños, Philippines.
 endpoints:
-- type: dcat:ttl
-  url: https://ipt.aseanbiodiversity.org/dcat
 - type: ipt:dataset
   url: https://ipt.aseanbiodiversity.org/inventory/dataset
 - type: rss
@@ -40,6 +38,8 @@ owner:
     level: 20
   name: ASEAN Centre for Biodiversity (ACB)
   type: International
+properties:
+  is_national: false
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)

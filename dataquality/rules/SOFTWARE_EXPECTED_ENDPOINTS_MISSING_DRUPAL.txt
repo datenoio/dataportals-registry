@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
 ================================================================================
-Generated: 2026-09-29 11:21:05
+Generated: 2026-09-29 20:07:41
 Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
 Priority: MEDIUM
-Total Issues Found: 60
+Total Issues Found: 62
 
 Rule: Identifies records using software.id='drupal' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
 
@@ -16,7 +16,7 @@ CA: 2 issues
 CN: 1 issue
 DE: 4 issues
 EE: 2 issues
-ES: 6 issues
+ES: 8 issues
 EU: 1 issue
 FR: 3 issues
 IE: 1 issue
@@ -86,6 +86,8 @@ wwwgazelinsermfr: 1 issue
 wwwgeodairfr: 1 issue
 datospfcyles: 1 issue
 valledemenaesparticipaciondatosabiertoscatalogoded: 1 issue
+wwwjuntadeandaluciaesindea: 1 issue
+wwwjuntadeandaluciaesods: 1 issue
 transparenciamimurciamurciaes: 1 issue
 dodibacat: 1 issue
 fegaesesdatosabiertos: 1 issue
@@ -507,6 +509,22 @@ Suggested Action: Add at least one endpoint because software.id='drupal' is mark
 
 File: ES/ES-CL/opendata/valledemenaesparticipaciondatosabiertoscatalogoded.yaml
 Record ID: valledemenaesparticipaciondatosabiertoscatalogoded
+Country: ES
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {"software_id": "drupal", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: ES/ES-AN/indicators/wwwjuntadeandaluciaesindea.yaml
+Record ID: wwwjuntadeandaluciaesindea
+Country: ES
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {"software_id": "drupal", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: ES/ES-AN/indicators/wwwjuntadeandaluciaesods.yaml
+Record ID: wwwjuntadeandaluciaesods
 Country: ES
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
 Field: endpoints

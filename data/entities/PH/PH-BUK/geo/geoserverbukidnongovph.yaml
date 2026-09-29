@@ -64,9 +64,6 @@ endpoints:
 - type: wmts100
   url: https://gisportal.bukidnon.gov.ph/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
-- type: csw202
-  url: https://gisportal.bukidnon.gov.ph/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
 id: geoserverbukidnongovph
 langs:
 - id: EN
@@ -86,6 +83,7 @@ owner:
   name: Provincial Government of Bukidnon
   type: Local government
 properties:
+  is_national: false
   has_doi: false
 rights:
   license_id: null

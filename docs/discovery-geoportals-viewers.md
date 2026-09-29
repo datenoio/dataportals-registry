@@ -4556,3 +4556,31 @@ crawlable.
 | Censys | `web.endpoints.http.body: "cmv/cmv-app"` |
 | FOFA | `body="cmv/cmv-app"` |
 | FOFA | `body="js/config/viewer.js" && body="dojo"` |
+
+
+## qgis2web (`qgis2web`) {#qgis2web}
+
+Open-source QGIS plugin that exports the current map as a static OpenLayers or
+Leaflet web viewer. Exports are uploaded as-is, often under municipal
+`visor`/`mapas`/`sig` paths (for example Costa Rican municipal cadastral
+viewers). Repo: [qgis2web/qgis2web](https://github.com/qgis2web/qgis2web).
+
+**Signals:** assets `resources/qgis2web.js`, `resources/qgis2web.css`,
+`resources/qgis2web_expressions.js`; layer data file `layers/layers.js`;
+OpenLayers exports may add `resources/ol3gm.js` (OL3-Google-Maps) and
+`ol-layerswitcher` / `ol-geocoder` assets; Leaflet exports reference
+`leaflet.js` together with `qgis2web.css`.
+
+**Confirm:** GET the viewer HTML and match a `qgis2web` asset path. Do **not**
+set `qgis2web` on a generic OpenLayers or Leaflet site without qgis2web assets —
+that stays `custom`. The plugin emits static pages; WMS/WFS layers the map loads
+come from a backing server (`geoserver`, `arcgisserver`, ...) that is a separate
+record only when independently crawlable.
+
+| Tool | Query |
+|------|-------|
+| Google | `"resources/qgis2web.js" OR "qgis2web_expressions.js"` |
+| Google | `inurl:qgis2web.css (visor OR mapas OR sig)` |
+| Censys | `web.endpoints.http.body: "qgis2web.js"` |
+| FOFA | `body="qgis2web.js"` |
+| FOFA | `body="qgis2web_expressions.js"` |

@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: US
 ================================================================================
-Generated: 2026-09-29 11:21:05
+Generated: 2026-09-29 20:07:41
 Country Code: US
-Total Records with Issues: 51
-Total Issues Found: 51
+Total Records with Issues: 54
+Total Issues Found: 57
 
 === ISSUES BY TYPE ===
 
@@ -17,6 +17,56 @@ Issue: MISSING_OWNER_LINK
 Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 3
+Priority: LOW
+
+File: US/indicators/atlashksharvardedu.yaml
+Record ID: atlashksharvardedu
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/indicators/usatradeonlinecensusgov.yaml
+Record ID: usatradeonlinecensusgov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/indicators/datawebusitcgov.yaml
+Record ID: datawebusitcgov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 3
+Priority: LOW
+
+File: US/indicators/atlashksharvardedu.yaml
+Record ID: atlashksharvardedu
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/indicators/usatradeonlinecensusgov.yaml
+Record ID: usatradeonlinecensusgov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/indicators/datawebusitcgov.yaml
+Record ID: datawebusitcgov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB]
 Count: 1
@@ -424,6 +474,8 @@ Suggested Action: Add at least one endpoint because software.id='xnat' is marked
 === SUMMARY BY ISSUE TYPE ===
 
 MISSING_OWNER_LINK: 1 issue
+MISSING_TAGS: 3 issues
+MISSING_TOPICS: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BENTO: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue

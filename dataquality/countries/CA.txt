@@ -1,11 +1,33 @@
 DATA QUALITY REPORT - COUNTRY: CA
 ================================================================================
-Generated: 2026-09-29 11:21:05
+Generated: 2026-09-29 20:07:41
 Country Code: CA
-Total Records with Issues: 7
-Total Issues Found: 7
+Total Records with Issues: 8
+Total Issues Found: 9
 
 === ISSUES BY TYPE ===
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: CA/indicators/isedtradedataonline.yaml
+Record ID: isedtradedataonline
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: CA/indicators/isedtradedataonline.yaml
+Record ID: isedtradedataonline
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
 Count: 2
@@ -75,6 +97,8 @@ Suggested Action: Add at least one endpoint because software.id='wordpress' is m
 
 === SUMMARY BY ISSUE TYPE ===
 
+MISSING_TAGS: 1 issue
+MISSING_TOPICS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OCEANS30: 1 issue

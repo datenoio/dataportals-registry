@@ -1,13 +1,24 @@
 DATA QUALITY REPORT - PRIORITY: LOW
 ================================================================================
-Generated: 2026-09-29 11:21:05
+Generated: 2026-09-29 20:07:41
 Priority Level: LOW
-Total Issues Found: 109
+Total Issues Found: 285
 
 === ISSUES BY TYPE ===
 
+[LANGUAGE_CODE_UNKNOWN]
+Count: 1
+
+File: AF/Federal/indicators/boostmofgovaf.yaml
+Record ID: boostmofgovaf
+Country: AF
+Issue: LANGUAGE_CODE_UNKNOWN
+Field: langs[1].id
+Current Value: PS
+Suggested Action: Use a language code from data/reference/langs.csv. Chinese is ZH, not CN.
+
 [MISSING_OWNER_LINK]
-Count: 57
+Count: 58
 
 File: US/US-GA/geo/agsjaspergaagdmapscom.yaml
 Record ID: agsjaspergaagdmapscom
@@ -457,6 +468,14 @@ Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
 
+File: AR/Federal/opendata/mapainversionesobraspublicasgobar.yaml
+Record ID: mapainversionesobraspublicasgobar
+Country: AR
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
 File: HU/HU-ST/geo/salgotarjanizsidotemetoerdahu.yaml
 Record ID: salgotarjanizsidotemetoerdahu
 Country: HU
@@ -884,67 +903,1497 @@ Field: rights
 Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
 Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
 
+[MISSING_TAGS]
+Count: 87
+
+File: ZM/other/zambiatradeportalgovzm.yaml
+Record ID: zambiatradeportalgovzm
+Country: ZM
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: UG/other/ugandatradesgoug.yaml
+Record ID: ugandatradesgoug
+Country: UG
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: PE/Federal/opendata/mapainversionesminemgobpe.yaml
+Record ID: mapainversionesminemgobpe
+Country: PE
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: ZW/other/tradezimbabwecom.yaml
+Record ID: tradezimbabwecom
+Country: ZW
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/indicators/atlashksharvardedu.yaml
+Record ID: atlashksharvardedu
+Country: US
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/indicators/usatradeonlinecensusgov.yaml
+Record ID: usatradeonlinecensusgov
+Country: US
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/indicators/datawebusitcgov.yaml
+Record ID: datawebusitcgov
+Country: US
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: VN/other/vietnamtradeportalgovvn.yaml
+Record ID: vietnamtradeportalgovvn
+Country: VN
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: PY/Federal/opendata/rindiendocuentasgovpy.yaml
+Record ID: rindiendocuentasgovpy
+Country: PY
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: BW/other/botswanatradeportalorgbw.yaml
+Record ID: botswanatradeportalorgbw
+Country: BW
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NG/NG-EN/opendata/dueprocessengovng.yaml
+Record ID: dueprocessengovng
+Country: NG
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NG/NG-KD/indicators/hefakdbsng.yaml
+Record ID: hefakdbsng
+Country: NG
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NG/NG-KD/indicators/kdbsng.yaml
+Record ID: kdbsng
+Country: NG
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NG/NG-KD/opendata/ckankdbsng.yaml
+Record ID: ckankdbsng
+Country: NG
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NG/Federal/indicators/emiseducationgovng.yaml
+Record ID: emiseducationgovng
+Country: NG
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NG/Federal/opendata/githubcompyungawesomenigeriadatasets.yaml
+Record ID: githubcompyungawesomenigeriadatasets
+Country: NG
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NG/Federal/opendata/nocopobppgovng.yaml
+Record ID: nocopobppgovng
+Country: NG
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NG/NG-CR/opendata/ocdsdppibcrsgovorg.yaml
+Record ID: ocdsdppibcrsgovorg
+Country: NG
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: MA/other/portnetma.yaml
+Record ID: portnetma
+Country: MA
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: KE/other/infotradekenyagoke.yaml
+Record ID: infotradekenyagoke
+Country: KE
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NZ/indicators/nztradedashboard.yaml
+Record ID: nztradedashboard
+Country: NZ
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: DO/Federal/opendata/mapainversionesgobdo.yaml
+Record ID: mapainversionesgobdo
+Country: DO
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: BD/other/bangladeshtradeportalgovbd.yaml
+Record ID: bangladeshtradeportalgovbd
+Country: BD
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NA/other/namibiatradeportalgovna.yaml
+Record ID: namibiatradeportalgovna
+Country: NA
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: CI/other/pwicgucecotedivoireci.yaml
+Record ID: pwicgucecotedivoireci
+Country: CI
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: IN/indicators/tradestatcommercegovin.yaml
+Record ID: tradestatcommercegovin
+Country: IN
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: IN/indicators/niryatgovin.yaml
+Record ID: niryatgovin
+Country: IN
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: CH/indicators/swissimpexadminch.yaml
+Record ID: swissimpexadminch
+Country: CH
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: CO/CO-DC/opendata/mapainversionesgobiernoabiertobogotagovco.yaml
+Record ID: mapainversionesgobiernoabiertobogotagovco
+Country: CO
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: CO/CO-VAC/opendata/paqueveascaligovco.yaml
+Record ID: paqueveascaligovco
+Country: CO
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: CO/Federal/opendata/mapainversionesdnpgovco.yaml
+Record ID: mapainversionesdnpgovco
+Country: CO
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: CA/indicators/isedtradedataonline.yaml
+Record ID: isedtradedataonline
+Country: CA
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: IS/Federal/opendata/althingiai.yaml
+Record ID: althingiai
+Country: IS
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/indicators/sdgtradeorg.yaml
+Record ID: sdgtradeorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/indicators/tinatrade.yaml
+Record ID: tinatrade
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/other/globaltradehelpdeskorg.yaml
+Record ID: globaltradehelpdeskorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/other/siceoasorg.yaml
+Record ID: siceoasorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/other/findrulesoforiginorg.yaml
+Record ID: findrulesoforiginorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/datavizvamwfporg.yaml
+Record ID: datavizvamwfporg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/wwwfoodsecurityportalorg.yaml
+Record ID: wwwfoodsecurityportalorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/wwwegedaewgapecorg.yaml
+Record ID: wwwegedaewgapecorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/wwwgovindicatorsorg.yaml
+Record ID: wwwgovindicatorsorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/waterdataiwmiorg.yaml
+Record ID: waterdataiwmiorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/wwwipcinfoorg.yaml
+Record ID: wwwipcinfoorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/wwwglobalinnovationindexorg.yaml
+Record ID: wwwglobalinnovationindexorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/espenafrowhoint.yaml
+Record ID: espenafrowhoint
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/wwwjodidataorg.yaml
+Record ID: wwwjodidataorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/sdgtrackerorg.yaml
+Record ID: sdgtrackerorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/datacommonsorg.yaml
+Record ID: datacommonsorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/datatheglobalfundorg.yaml
+Record ID: datatheglobalfundorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/globalfindexworldbankorg.yaml
+Record ID: globalfindexworldbankorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/lpiworldbankorg.yaml
+Record ID: lpiworldbankorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/indicatorshelcomfi.yaml
+Record ID: indicatorshelcomfi
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/oecdai.yaml
+Record ID: oecdai
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/remittancepricesworldbankorg.yaml
+Record ID: remittancepricesworldbankorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/vizhubhealthdataorg.yaml
+Record ID: vizhubhealthdataorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: World/Federal/indicators/wwwgccstatorg.yaml
+Record ID: wwwgccstatorg
+Country: World
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: ASEAN/other/tarifffinderaseanorg.yaml
+Record ID: tarifffinderaseanorg
+Country: ASEAN
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: ASEAN/other/atraseanorg.yaml
+Record ID: atraseanorg
+Country: ASEAN
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: SZ/other/eswatinitradeportalcom.yaml
+Record ID: eswatinitradeportalcom
+Country: SZ
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: PH/indicators/ictstatisticsdictgovph.yaml
+Record ID: ictstatisticsdictgovph
+Country: PH
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: PH/indicators/cmcidtigovph.yaml
+Record ID: cmcidtigovph
+Country: PH
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: PH/other/tradelinephilippinesdtigovph.yaml
+Record ID: tradelinephilippinesdtigovph
+Country: PH
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: KR/indicators/tradedatagokr.yaml
+Record ID: tradedatagokr
+Country: KR
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: BF/other/burkinatradeportalbf.yaml
+Record ID: burkinatradeportalbf
+Country: BF
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: MW/other/malawitradeportalcom.yaml
+Record ID: malawitradeportalcom
+Country: MW
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: BS/other/bahamastradeinfogovbs.yaml
+Record ID: bahamastradeinfogovbs
+Country: BS
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: GB/indicators/wwwuktradeinfocom.yaml
+Record ID: wwwuktradeinfocom
+Country: GB
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: BT/other/bhutantradeportalbt.yaml
+Record ID: bhutantradeportalbt
+Country: BT
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: AR/other/argentinatradenet.yaml
+Record ID: argentinatradenet
+Country: AR
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: AR/Federal/opendata/mapainversionesobraspublicasgobar.yaml
+Record ID: mapainversionesobraspublicasgobar
+Country: AR
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: BI/other/burunditradeportalorg.yaml
+Record ID: burunditradeportalorg
+Country: BI
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: MM/other/myanmartradeportalgovmm.yaml
+Record ID: myanmartradeportalgovmm
+Country: MM
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: AT/Federal/geo/ideaslabplusacat.yaml
+Record ID: ideaslabplusacat
+Country: AT
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: MX/indicators/siavieconomiagobmx.yaml
+Record ID: siavieconomiagobmx
+Country: MX
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: HN/Federal/opendata/inversionespublicassefingobhn.yaml
+Record ID: inversionespublicassefingobhn
+Country: HN
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: KH/other/cambodiantrgovkh.yaml
+Record ID: cambodiantrgovkh
+Country: KH
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: ID/other/inatradekemendaggoid.yaml
+Record ID: inatradekemendaggoid
+Country: ID
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: ES/indicators/datacomexcomercioes.yaml
+Record ID: datacomexcomercioes
+Country: ES
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: JM/other/jamaicatradeportalgovjm.yaml
+Record ID: jamaicatradeportalgovjm
+Country: JM
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: JM/Federal/opendata/publicinvestmentmapgovjm.yaml
+Record ID: publicinvestmentmapgovjm
+Country: JM
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: LA/other/laotradeportalgovla.yaml
+Record ID: laotradeportalgovla
+Country: LA
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: TZ/other/tradetanzaniagotz.yaml
+Record ID: tradetanzaniagotz
+Country: TZ
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: Africa/indicators/comstatcomesaint.yaml
+Record ID: comstatcomesaint
+Country: Africa
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: Africa/other/tradehelpdeskeacint.yaml
+Record ID: tradehelpdeskeacint
+Country: Africa
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RW/other/rwandatraderw.yaml
+Record ID: rwandatraderw
+Country: RW
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: TG/other/togotradegouvtg.yaml
+Record ID: togotradegouvtg
+Country: TG
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 87
+
+File: ZM/other/zambiatradeportalgovzm.yaml
+Record ID: zambiatradeportalgovzm
+Country: ZM
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: UG/other/ugandatradesgoug.yaml
+Record ID: ugandatradesgoug
+Country: UG
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: PE/Federal/opendata/mapainversionesminemgobpe.yaml
+Record ID: mapainversionesminemgobpe
+Country: PE
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: ZW/other/tradezimbabwecom.yaml
+Record ID: tradezimbabwecom
+Country: ZW
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/indicators/atlashksharvardedu.yaml
+Record ID: atlashksharvardedu
+Country: US
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/indicators/usatradeonlinecensusgov.yaml
+Record ID: usatradeonlinecensusgov
+Country: US
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/indicators/datawebusitcgov.yaml
+Record ID: datawebusitcgov
+Country: US
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: VN/other/vietnamtradeportalgovvn.yaml
+Record ID: vietnamtradeportalgovvn
+Country: VN
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: PY/Federal/opendata/rindiendocuentasgovpy.yaml
+Record ID: rindiendocuentasgovpy
+Country: PY
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: BW/other/botswanatradeportalorgbw.yaml
+Record ID: botswanatradeportalorgbw
+Country: BW
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NG/NG-EN/opendata/dueprocessengovng.yaml
+Record ID: dueprocessengovng
+Country: NG
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NG/NG-KD/indicators/hefakdbsng.yaml
+Record ID: hefakdbsng
+Country: NG
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NG/NG-KD/indicators/kdbsng.yaml
+Record ID: kdbsng
+Country: NG
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NG/NG-KD/opendata/ckankdbsng.yaml
+Record ID: ckankdbsng
+Country: NG
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NG/Federal/indicators/emiseducationgovng.yaml
+Record ID: emiseducationgovng
+Country: NG
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NG/Federal/opendata/githubcompyungawesomenigeriadatasets.yaml
+Record ID: githubcompyungawesomenigeriadatasets
+Country: NG
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NG/Federal/opendata/nocopobppgovng.yaml
+Record ID: nocopobppgovng
+Country: NG
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NG/NG-CR/opendata/ocdsdppibcrsgovorg.yaml
+Record ID: ocdsdppibcrsgovorg
+Country: NG
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: MA/other/portnetma.yaml
+Record ID: portnetma
+Country: MA
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: KE/other/infotradekenyagoke.yaml
+Record ID: infotradekenyagoke
+Country: KE
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NZ/indicators/nztradedashboard.yaml
+Record ID: nztradedashboard
+Country: NZ
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: DO/Federal/opendata/mapainversionesgobdo.yaml
+Record ID: mapainversionesgobdo
+Country: DO
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: BD/other/bangladeshtradeportalgovbd.yaml
+Record ID: bangladeshtradeportalgovbd
+Country: BD
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NA/other/namibiatradeportalgovna.yaml
+Record ID: namibiatradeportalgovna
+Country: NA
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: CI/other/pwicgucecotedivoireci.yaml
+Record ID: pwicgucecotedivoireci
+Country: CI
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: IN/indicators/tradestatcommercegovin.yaml
+Record ID: tradestatcommercegovin
+Country: IN
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: IN/indicators/niryatgovin.yaml
+Record ID: niryatgovin
+Country: IN
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: CH/indicators/swissimpexadminch.yaml
+Record ID: swissimpexadminch
+Country: CH
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: CO/CO-DC/opendata/mapainversionesgobiernoabiertobogotagovco.yaml
+Record ID: mapainversionesgobiernoabiertobogotagovco
+Country: CO
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: CO/CO-VAC/opendata/paqueveascaligovco.yaml
+Record ID: paqueveascaligovco
+Country: CO
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: CO/Federal/opendata/mapainversionesdnpgovco.yaml
+Record ID: mapainversionesdnpgovco
+Country: CO
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: CA/indicators/isedtradedataonline.yaml
+Record ID: isedtradedataonline
+Country: CA
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: IS/Federal/opendata/althingiai.yaml
+Record ID: althingiai
+Country: IS
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/indicators/sdgtradeorg.yaml
+Record ID: sdgtradeorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/indicators/tinatrade.yaml
+Record ID: tinatrade
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/other/globaltradehelpdeskorg.yaml
+Record ID: globaltradehelpdeskorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/other/siceoasorg.yaml
+Record ID: siceoasorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/other/findrulesoforiginorg.yaml
+Record ID: findrulesoforiginorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/datavizvamwfporg.yaml
+Record ID: datavizvamwfporg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/wwwfoodsecurityportalorg.yaml
+Record ID: wwwfoodsecurityportalorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/wwwegedaewgapecorg.yaml
+Record ID: wwwegedaewgapecorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/wwwgovindicatorsorg.yaml
+Record ID: wwwgovindicatorsorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/waterdataiwmiorg.yaml
+Record ID: waterdataiwmiorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/wwwipcinfoorg.yaml
+Record ID: wwwipcinfoorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/wwwglobalinnovationindexorg.yaml
+Record ID: wwwglobalinnovationindexorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/espenafrowhoint.yaml
+Record ID: espenafrowhoint
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/wwwjodidataorg.yaml
+Record ID: wwwjodidataorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/sdgtrackerorg.yaml
+Record ID: sdgtrackerorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/datacommonsorg.yaml
+Record ID: datacommonsorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/datatheglobalfundorg.yaml
+Record ID: datatheglobalfundorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/globalfindexworldbankorg.yaml
+Record ID: globalfindexworldbankorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/lpiworldbankorg.yaml
+Record ID: lpiworldbankorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/indicatorshelcomfi.yaml
+Record ID: indicatorshelcomfi
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/oecdai.yaml
+Record ID: oecdai
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/remittancepricesworldbankorg.yaml
+Record ID: remittancepricesworldbankorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/vizhubhealthdataorg.yaml
+Record ID: vizhubhealthdataorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: World/Federal/indicators/wwwgccstatorg.yaml
+Record ID: wwwgccstatorg
+Country: World
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: ASEAN/other/tarifffinderaseanorg.yaml
+Record ID: tarifffinderaseanorg
+Country: ASEAN
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: ASEAN/other/atraseanorg.yaml
+Record ID: atraseanorg
+Country: ASEAN
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: SZ/other/eswatinitradeportalcom.yaml
+Record ID: eswatinitradeportalcom
+Country: SZ
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: PH/indicators/ictstatisticsdictgovph.yaml
+Record ID: ictstatisticsdictgovph
+Country: PH
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: PH/indicators/cmcidtigovph.yaml
+Record ID: cmcidtigovph
+Country: PH
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: PH/other/tradelinephilippinesdtigovph.yaml
+Record ID: tradelinephilippinesdtigovph
+Country: PH
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: KR/indicators/tradedatagokr.yaml
+Record ID: tradedatagokr
+Country: KR
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: BF/other/burkinatradeportalbf.yaml
+Record ID: burkinatradeportalbf
+Country: BF
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: MW/other/malawitradeportalcom.yaml
+Record ID: malawitradeportalcom
+Country: MW
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: BS/other/bahamastradeinfogovbs.yaml
+Record ID: bahamastradeinfogovbs
+Country: BS
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: GB/indicators/wwwuktradeinfocom.yaml
+Record ID: wwwuktradeinfocom
+Country: GB
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: BT/other/bhutantradeportalbt.yaml
+Record ID: bhutantradeportalbt
+Country: BT
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: AR/other/argentinatradenet.yaml
+Record ID: argentinatradenet
+Country: AR
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: AR/Federal/opendata/mapainversionesobraspublicasgobar.yaml
+Record ID: mapainversionesobraspublicasgobar
+Country: AR
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: BI/other/burunditradeportalorg.yaml
+Record ID: burunditradeportalorg
+Country: BI
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: MM/other/myanmartradeportalgovmm.yaml
+Record ID: myanmartradeportalgovmm
+Country: MM
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: AT/Federal/geo/ideaslabplusacat.yaml
+Record ID: ideaslabplusacat
+Country: AT
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: MX/indicators/siavieconomiagobmx.yaml
+Record ID: siavieconomiagobmx
+Country: MX
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: HN/Federal/opendata/inversionespublicassefingobhn.yaml
+Record ID: inversionespublicassefingobhn
+Country: HN
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: KH/other/cambodiantrgovkh.yaml
+Record ID: cambodiantrgovkh
+Country: KH
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: ID/other/inatradekemendaggoid.yaml
+Record ID: inatradekemendaggoid
+Country: ID
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: ES/indicators/datacomexcomercioes.yaml
+Record ID: datacomexcomercioes
+Country: ES
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: JM/other/jamaicatradeportalgovjm.yaml
+Record ID: jamaicatradeportalgovjm
+Country: JM
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: JM/Federal/opendata/publicinvestmentmapgovjm.yaml
+Record ID: publicinvestmentmapgovjm
+Country: JM
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: LA/other/laotradeportalgovla.yaml
+Record ID: laotradeportalgovla
+Country: LA
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: TZ/other/tradetanzaniagotz.yaml
+Record ID: tradetanzaniagotz
+Country: TZ
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: Africa/indicators/comstatcomesaint.yaml
+Record ID: comstatcomesaint
+Country: Africa
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: Africa/other/tradehelpdeskeacint.yaml
+Record ID: tradehelpdeskeacint
+Country: Africa
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RW/other/rwandatraderw.yaml
+Record ID: rwandatraderw
+Country: RW
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: TG/other/togotradegouvtg.yaml
+Record ID: togotradegouvtg
+Country: TG
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 57 issues
+LANGUAGE_CODE_UNKNOWN: 1 issue
+MISSING_OWNER_LINK: 58 issues
 MISSING_RIGHTS: 52 issues
+MISSING_TAGS: 87 issues
+MISSING_TOPICS: 87 issues
 
 === SUMMARY BY COUNTRY ===
 
+AF: 1 issue
 AL: 1 issue
-AR: 1 issue
-BD: 1 issue
+AR: 6 issues
+ASEAN: 4 issues
+AT: 2 issues
+Africa: 4 issues
+BD: 3 issues
 BE: 1 issue
+BF: 2 issues
 BH: 1 issue
+BI: 2 issues
 BN: 1 issue
 BO: 2 issues
 BR: 1 issue
-BT: 1 issue
-CH: 2 issues
+BS: 2 issues
+BT: 3 issues
+BW: 2 issues
+CA: 2 issues
+CH: 4 issues
+CI: 2 issues
 CL: 1 issue
-CO: 1 issue
+CO: 7 issues
 DK: 1 issue
-DO: 1 issue
+DO: 3 issues
 EC: 2 issues
-ES: 1 issue
+ES: 3 issues
+GB: 2 issues
 GR: 1 issue
 GT: 1 issue
 HK: 1 issue
+HN: 2 issues
 HR: 1 issue
 HU: 1 issue
-ID: 1 issue
+ID: 3 issues
 IL: 1 issue
-IN: 1 issue
+IN: 5 issues
 IQ: 1 issue
 IR: 1 issue
+IS: 2 issues
 IT: 46 issues
 JE: 1 issue
-JM: 1 issue
+JM: 5 issues
+KE: 2 issues
 KG: 1 issue
-KR: 1 issue
+KH: 2 issues
+KR: 3 issues
 KZ: 1 issue
+LA: 2 issues
 LK: 1 issue
 LT: 1 issue
 LV: 1 issue
+MA: 2 issues
 MK: 1 issue
+MM: 2 issues
 MN: 1 issue
 MO: 1 issue
-MX: 1 issue
+MW: 2 issues
+MX: 3 issues
 MY: 1 issue
+NA: 2 issues
+NG: 16 issues
 NL: 1 issue
-NZ: 1 issue
+NZ: 3 issues
 PA: 1 issue
-PE: 2 issues
-PH: 2 issues
+PE: 4 issues
+PH: 8 issues
 PL: 1 issue
 PT: 1 issue
-PY: 1 issue
+PY: 3 issues
+RW: 2 issues
 SE: 1 issue
 SK: 1 issue
+SZ: 2 issues
+TG: 2 issues
 TH: 1 issue
 TW: 1 issue
-US: 1 issue
+TZ: 2 issues
+UG: 2 issues
+US: 7 issues
 UZ: 1 issue
 VE: 1 issue
-World: 4 issues
+VN: 2 issues
+World: 52 issues
+ZM: 2 issues
+ZW: 2 issues

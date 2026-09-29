@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: NZ
 ================================================================================
-Generated: 2026-09-29 11:21:05
+Generated: 2026-09-29 20:07:41
 Country Code: NZ
-Total Records with Issues: 4
-Total Issues Found: 4
+Total Records with Issues: 5
+Total Issues Found: 6
 
 === ISSUES BY TYPE ===
 
@@ -17,6 +17,28 @@ Issue: MISSING_OWNER_LINK
 Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: NZ/indicators/nztradedashboard.yaml
+Record ID: nztradedashboard
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: NZ/indicators/nztradedashboard.yaml
+Record ID: nztradedashboard
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PMR2]
 Count: 2
@@ -51,5 +73,7 @@ Suggested Action: Add at least one endpoint because software.id='redbox' is mark
 === SUMMARY BY ISSUE TYPE ===
 
 MISSING_OWNER_LINK: 1 issue
+MISSING_TAGS: 1 issue
+MISSING_TOPICS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PMR2: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDBOX: 1 issue

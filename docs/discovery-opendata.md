@@ -995,6 +995,26 @@ catalog, not per agency site.
 | Censys | `web.endpoints.http.body: "Government Site Builder"` |
 | FOFA | `body="Government Site Builder"` |
 
+## Ísland.is (`islandis`) {#islandis}
+
+Open-source digital-services platform of the Icelandic government (Stafrænt Ísland /
+Digital Iceland). Source: [island-is/island.is](https://github.com/island-is/island.is)
+(MIT). Government content catalogs — the Stjórnartíðindi official gazette, the Opin
+gögn open-data page — are published as Ísland.is applications on `island.is`.
+Distinct from the national CKAN catalog on `ckan.island.is` (`ckan`).
+
+**Signals:** `island.is` hostname with the Ísland.is design system; Next.js `_next`
+assets; GraphQL gateway at `api.island.is`; developer handbook at `docs.devland.is`.
+
+**Confirm:** GET the catalog page on `island.is`. One record per published catalog,
+not per island.is service page. Do not register the island.is portal root or
+ministry profile pages as catalogs.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:island.is (gögn OR gagnasafn OR "open data")` |
+| Censys | `web.endpoints.http.body: "island.is" and services.port: 443` |
+
 ## Piveau (`piveau`) {#piveau}
 
 DCAT-AP microservice catalog (Fraunhofer FOKUS). Site: [piveau.de](https://www.piveau.de). Powers several European public-sector portals (including patterns used by data.europa.eu).
@@ -1704,6 +1724,31 @@ Open contracting data platform by the Public and Private Development Centre (PPD
 | Google | `inurl:ocds "Budeshi"` |
 | FOFA | `body="Budeshi"` |
 | Censys | `web.endpoints.http.body: "Budeshi"` |
+
+## MapaInversiones (`mapainversiones`) {#mapainversiones}
+
+IDB regional public-investment transparency platform, open source since 2025
+(Code4Dev catalog). National deployments in 14+ Latin American and Caribbean
+countries, usually on a planning-ministry domain and branded "MapaInversiones"
+(for example `rendircuentas.mideplan.go.cr`, `mapainversiones.dnp.gov.co`,
+`mapainversiones.gob.do`). Regional hub: [iadb.org
+MapaInversiones](https://www.iadb.org/es/quienes-somos/topicos/modernizacion-del-estado/mapainversiones).
+
+**Signals:** page title or footer "MapaInversiones" (often "+ Módulo
+COVID-19"); ASP.NET/IIS stack; sections Presupuesto / Contratación Pública /
+Entidades / Inversiones Públicas / Datos Abiertos; BID (IDB) credit on the
+"Acerca de" page.
+
+**Confirm:** GET the site root and match the MapaInversiones brand or the IDB
+credit. One record per national deployment. Do not register the regional
+iadb.org hub pages as catalogs.
+
+| Tool | Query |
+|------|-------|
+| Google | `"MapaInversiones" "Datos Abiertos" (gob OR gov)` |
+| Google | `intitle:MapaInversiones inversión pública` |
+| Censys | `web.endpoints.http.body: "MapaInversiones"` |
+| FOFA | `body="MapaInversiones"` |
 
 ## Related
 

@@ -1759,3 +1759,14 @@ One harvest scope per public viewer.
 
 **Keep:** `viewer.js` **operationalLayers / layer tree** (or backing ArcGIS REST
 services). **Drop:** map tiles, basemaps, print PDFs.
+
+
+## qgis2web (`qgis2web`) {#qgis2web}
+
+Static QGIS plugin exports (OpenLayers or Leaflet). No dataset API — harvest the
+layer list from `layers/layers.js` as map layers and record the backing WMS/WFS
+service URLs the layers point at. Do not scrape map tiles. One harvest scope per
+public viewer.
+
+**Keep:** `layers/layers.js` layer tree and backing service URLs. **Drop:** map
+tiles, basemaps, static page chrome.

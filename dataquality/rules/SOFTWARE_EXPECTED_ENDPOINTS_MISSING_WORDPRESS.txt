@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 ================================================================================
-Generated: 2026-09-29 11:21:05
+Generated: 2026-09-29 20:07:41
 Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Priority: MEDIUM
-Total Issues Found: 40
+Total Issues Found: 41
 
 Rule: Identifies records using software.id='wordpress' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
 
@@ -22,6 +22,7 @@ IN: 1 issue
 JP: 1 issue
 MX: 2 issues
 MY: 1 issue
+PH: 1 issue
 PK: 4 issues
 PL: 1 issue
 PT: 1 issue
@@ -57,6 +58,7 @@ emberenergyorg: 1 issue
 repositorytopdownproteomicsorg: 1 issue
 dataaseanstatsorg: 1 issue
 sreaazoresgovpt: 1 issue
+mapsdswdgovph: 1 issue
 cpedbmardigovmy: 1 issue
 mapadigitalmichoacangobmxindicador: 1 issue
 iieggobmx: 1 issue
@@ -270,6 +272,14 @@ Suggested Action: Add at least one endpoint because software.id='wordpress' is m
 File: PT/PT-20/indicators/sreaazoresgovpt.yaml
 Record ID: sreaazoresgovpt
 Country: PT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: PH/Federal/geo/mapsdswdgovph.yaml
+Record ID: mapsdswdgovph
+Country: PH
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}

@@ -1,0 +1,64 @@
+category: Indicators catalog
+subtype: indicators_data_platform
+datatypes:
+  datasets: Compatible
+  fields: 'Yes'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: idds
+name: IDDS
+website: https://idds.censtatd.gov.hk/
+description: IDDS (Interactive Data Dissemination Service) is the Hong Kong Census
+  and Statistics Department custom statistical table platform. Each installation is
+  a themed tenant on its own host — Common-IDDS (idds.censtatd.gov.hk) for social
+  and economic statistics, Trade IDDS (tradeidds.censtatd.gov.hk) for merchandise
+  trade with a documented JSON GET API, and census-round tenants such as the 2021
+  Population Census IDDS (idds.census2021.gov.hk). Users build custom tables and
+  charts and download the outputs.
+owner:
+  name: Census and Statistics Department
+  location:
+    country:
+      id: HK
+      name: Hong Kong
+documentation_url: https://tradeidds.censtatd.gov.hk/PageID/ApiSpec
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Structured
+type: Software
+export_formats:
+- Excel
+- CSV
+- JSON
+capabilities:
+- Statistical tables
+- Indicator explorer
+- Custom table builder
+- JSON GET API
+last_updated: '2026-09-29T00:00:00Z'

@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDIS
+================================================================================
+Generated: 2026-09-29 20:07:41
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDIS
+Priority: MEDIUM
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='islandis' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+IS: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+islandisstjornartidindi: 1 issue
+
+=== ISSUES ===
+
+File: IS/Federal/opendata/islandisstjornartidindi.yaml
+Record ID: islandisstjornartidindi
+Country: IS
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDIS
+Field: endpoints
+Current Value: {"software_id": "islandis", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='islandis' is marked as API-capable in software definitions

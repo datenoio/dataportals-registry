@@ -32,6 +32,8 @@ owner:
     level: 20
   name: National Mapping and Resource Information Authority
   type: Central government
+properties:
+  is_national: true
 rights:
   license_id: null
   license_name: null
@@ -94,5 +96,7 @@ topics:
   type: iso19115
 uid: cdi00001275
 endpoints:
+- type: rest
+  url: https://geoportal.gov.ph/api/layers
 - type: sitemap
   url: https://geoportal.gov.ph/sitemap.xml

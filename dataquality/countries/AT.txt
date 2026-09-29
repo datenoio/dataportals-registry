@@ -1,11 +1,33 @@
 DATA QUALITY REPORT - COUNTRY: AT
 ================================================================================
-Generated: 2026-09-29 11:21:05
+Generated: 2026-09-29 20:07:41
 Country Code: AT
-Total Records with Issues: 4
-Total Issues Found: 4
+Total Records with Issues: 5
+Total Issues Found: 6
 
 === ISSUES BY TYPE ===
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: AT/Federal/geo/ideaslabplusacat.yaml
+Record ID: ideaslabplusacat
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: AT/Federal/geo/ideaslabplusacat.yaml
+Record ID: ideaslabplusacat
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD]
 Count: 4
@@ -42,4 +64,6 @@ Suggested Action: Add at least one endpoint because software.id='webgiscloud' is
 
 === SUMMARY BY ISSUE TYPE ===
 
+MISSING_TAGS: 1 issue
+MISSING_TOPICS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD: 4 issues

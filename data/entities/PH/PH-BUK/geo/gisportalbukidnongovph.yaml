@@ -32,9 +32,6 @@ endpoints:
 - type: csw202
   url: https://gisportal.bukidnon.gov.ph/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
-- type: oaipmh20
-  url: https://gisportal.bukidnon.gov.ph/catalogue/csw?mode=oaipmh&verb=Identify
-  version: '2.0'
 - type: opensearch
   url: https://gisportal.bukidnon.gov.ph/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
   version: '1.0'
@@ -104,6 +101,8 @@ owner:
       name: Bukidnon
   name: Provincial Government of Bukidnon
   type: Local government
+properties:
+  is_national: false
 software:
   id: geonode
   name: GeoNode

@@ -1,0 +1,24 @@
+DATA QUALITY REPORT - COUNTRY: AF
+================================================================================
+Generated: 2026-09-29 20:07:41
+Country Code: AF
+Total Records with Issues: 1
+Total Issues Found: 1
+
+=== ISSUES BY TYPE ===
+
+[LANGUAGE_CODE_UNKNOWN]
+Count: 1
+Priority: LOW
+
+File: AF/Federal/indicators/boostmofgovaf.yaml
+Record ID: boostmofgovaf
+Issue: LANGUAGE_CODE_UNKNOWN
+Field: langs[1].id
+Current Value: PS
+Suggested Action: Use a language code from data/reference/langs.csv. Chinese is ZH, not CN.
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+LANGUAGE_CODE_UNKNOWN: 1 issue

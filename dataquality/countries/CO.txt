@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: CO
 ================================================================================
-Generated: 2026-09-29 11:21:05
+Generated: 2026-09-29 20:07:41
 Country Code: CO
-Total Records with Issues: 2
-Total Issues Found: 2
+Total Records with Issues: 5
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
 
@@ -17,6 +17,56 @@ Issue: MISSING_OWNER_LINK
 Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 3
+Priority: LOW
+
+File: CO/CO-DC/opendata/mapainversionesgobiernoabiertobogotagovco.yaml
+Record ID: mapainversionesgobiernoabiertobogotagovco
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: CO/CO-VAC/opendata/paqueveascaligovco.yaml
+Record ID: paqueveascaligovco
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: CO/Federal/opendata/mapainversionesdnpgovco.yaml
+Record ID: mapainversionesdnpgovco
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 3
+Priority: LOW
+
+File: CO/CO-DC/opendata/mapainversionesgobiernoabiertobogotagovco.yaml
+Record ID: mapainversionesgobiernoabiertobogotagovco
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: CO/CO-VAC/opendata/paqueveascaligovco.yaml
+Record ID: paqueveascaligovco
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: CO/Federal/opendata/mapainversionesdnpgovco.yaml
+Record ID: mapainversionesdnpgovco
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS]
 Count: 1
@@ -33,4 +83,6 @@ Suggested Action: Add at least one endpoint because software.id='wordpress' is m
 === SUMMARY BY ISSUE TYPE ===
 
 MISSING_OWNER_LINK: 1 issue
+MISSING_TAGS: 3 issues
+MISSING_TOPICS: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS: 1 issue

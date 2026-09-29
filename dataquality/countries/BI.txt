@@ -1,0 +1,36 @@
+DATA QUALITY REPORT - COUNTRY: BI
+================================================================================
+Generated: 2026-09-29 20:07:41
+Country Code: BI
+Total Records with Issues: 1
+Total Issues Found: 2
+
+=== ISSUES BY TYPE ===
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: BI/other/burunditradeportalorg.yaml
+Record ID: burunditradeportalorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: BI/other/burunditradeportalorg.yaml
+Record ID: burunditradeportalorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+MISSING_TAGS: 1 issue
+MISSING_TOPICS: 1 issue

@@ -142,6 +142,22 @@ Japan portal site for official statistics (政府統計の総合窓口). Hub: [e
 | Censys | `web.names: "e-stat.go.jp"` |
 | FOFA | `domain="e-stat.go.jp"` |
 
+## IDDS (`idds`) {#idds}
+
+Hong Kong Census and Statistics Department Interactive Data Dissemination Service. Each themed tenant runs on its own host: Common-IDDS ([idds.censtatd.gov.hk](https://idds.censtatd.gov.hk/)), Trade IDDS ([tradeidds.censtatd.gov.hk](https://tradeidds.censtatd.gov.hk/)) with a JSON GET API (spec at `/PageID/ApiSpec`), and census-round tenants such as the 2021 Population Census IDDS ([idds.census2021.gov.hk](https://idds.census2021.gov.hk/app/idds.html)).
+
+**Signals:** hostname `idds.{org}.gov.hk` or `{theme}idds.censtatd.gov.hk`; title “Interactive Data Dissemination Service” or “Common-IDDS”; ASP.NET MVC bundles `/Content/bundles/js` plus DevExpress `DXR.axd` on the trade tenant; jQuery-i18n app at `/app/idds.html` on census tenants.
+
+**Confirm:** GET the portal home and match the IDDS custom-table builder UI. One catalog per themed tenant host — the three hosts above are already registered; do not add per-table or per-theme URLs on the same host. C&SD pages that only link to an IDDS host are link-outs.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Interactive Data Dissemination Service" site:gov.hk` |
+| Google | `inurl:idds site:censtatd.gov.hk` |
+| Censys | `web.names: "censtatd.gov.hk"` |
+| FOFA | `title="Interactive Data Dissemination Service"` |
+| FOFA | `body="/PageID/ApiSpec"` |
+
 ## OpenSDG (`opensdg`) {#opensdg}
 
 Static SDG reporting sites (often GitHub Pages). Community: [open-sdg.org/community](https://open-sdg.org/community).

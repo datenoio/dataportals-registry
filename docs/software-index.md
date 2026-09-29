@@ -360,6 +360,7 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `ibisph` | indicators | [discovery-indicators](discovery-indicators.md#ibisph) | [harvest-indicators](harvest-indicators.md#ibisph) | yes |
 | `ibmcognos` | indicators | [discovery-indicators](discovery-indicators.md#ibmcognos) | [harvest-indicators](harvest-indicators.md#ibmcognos) | — |
 | `icat` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#icat) | [harvest-scientific-domain](harvest-scientific-domain.md#icat) | yes |
+| `idds` | indicators | [discovery-indicators](discovery-indicators.md#idds) | [harvest-indicators](harvest-indicators.md#idds) | — |
 | `ideba` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#ideba) | [harvest-geoportals](harvest-geoportals.md#ideba) | — |
 | `idescat` | indicators | [discovery-indicators](discovery-indicators.md#idescat) | [harvest-indicators](harvest-indicators.md#idescat) | yes |
 | `idigbio` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#idigbio) | [harvest-scientific-domain](harvest-scientific-domain.md#idigbio) | yes |
@@ -400,6 +401,7 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `iresearch` | indicators | [discovery-indicators](discovery-indicators.md#iresearch) | [harvest-indicators](harvest-indicators.md#iresearch) | — |
 | `ishare` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#ishare) | [harvest-viewers](harvest-viewers.md#ishare) | — |
 | `isigeo` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#isigeo) | [harvest-viewers](harvest-viewers.md#isigeo) | yes |
+| `islandis` | opendata | [discovery-opendata](discovery-opendata.md#islandis) | [harvest-opendata](harvest-opendata.md#islandis) | — |
 | `islandora` | scientific | [discovery-scientific](discovery-scientific.md#islandora) | [harvest-scientific](harvest-scientific.md#islandora) | yes |
 | `isogeo` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#isogeo) | [harvest-geoportals](harvest-geoportals.md#isogeo) | yes |
 | `istar` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#istar) | [harvest-viewers](harvest-viewers.md#istar) | — |
@@ -460,6 +462,7 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `magda` | opendata | [discovery-opendata](discovery-opendata.md#magda) | [harvest-opendata](harvest-opendata.md#magda) | yes |
 | `mangomap` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#mangomap) | [harvest-viewers](harvest-viewers.md#mangomap) | — |
 | `map2web` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#map2web) | [harvest-viewers](harvest-viewers.md#map2web) | — |
+| `mapainversiones` | opendata | [discovery-opendata](discovery-opendata.md#mapainversiones) | [harvest-opendata](harvest-opendata.md#mapainversiones) | — |
 | `mapapps` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#mapapps) | [harvest-viewers](harvest-viewers.md#mapapps) | — |
 | `mapbender` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#mapbender) | [harvest-geoportals](harvest-geoportals.md#mapbender) | yes |
 | `mapbiomas` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#mapbiomas) | [harvest-viewers](harvest-viewers.md#mapbiomas) | — |
@@ -616,6 +619,7 @@ Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agen
 | `pycsw` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#pycsw) | [harvest-geoportals](harvest-geoportals.md#pycsw) | yes |
 | `pydap` | scientific | [discovery-scientific](discovery-scientific.md#pydap) | [harvest-earthdata](harvest-earthdata.md#pydap) | — |
 | `pygeoapi` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#pygeoapi) | [harvest-earthdata](harvest-earthdata.md#pygeoapi) | yes |
+| `qgis2web` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#qgis2web) | [harvest-viewers](harvest-viewers.md#qgis2web) | — |
 | `qgiscloud` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#qgiscloud) | [harvest-viewers](harvest-viewers.md#qgiscloud) | — |
 | `qgisserver` | geo | [discovery-geoportals-sdi](discovery-geoportals-sdi.md#qgisserver) | [harvest-geoportals](harvest-geoportals.md#qgisserver) | yes |
 | `qianzhan` | indicators | [discovery-indicators](discovery-indicators.md#qianzhan) | [harvest-indicators](harvest-indicators.md#qianzhan) | — |

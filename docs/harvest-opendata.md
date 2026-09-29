@@ -582,6 +582,18 @@ GET https://host/election/{id}/data-json
 
 **Keep:** each election or vote as a dataset, with the JSON/CSV/Excel download linked from the catalog. **Drop:** the portal chrome, map tiles, and PDF-only result sheets when a machine-readable file exists. One portal host = one harvest scope. Discovery: [discovery-opendata.md](discovery-opendata.md#onegov).
 
+## Ísland.is (`islandis`) {#islandis}
+
+Icelandic government content catalogs published as Ísland.is applications (official gazette Stjórnartíðindi, Opin gögn). Filter exports on `software.id = 'islandis'`.
+
+```text
+GET https://island.is/stjornartidindi
+GET https://island.is/s/stafraent-island/opingogn
+GET https://api.island.is/graphql
+```
+
+The GraphQL gateway at `api.island.is` is authentication-gated for most queries; public catalog pages are server-rendered and list documents as HTML. **Keep:** each published gazette issue or listed dataset as a record, with the linked PDF/JSON download. **Drop:** portal navigation, service pages, and ministry profiles. One island.is catalog page = one harvest scope. Discovery: [discovery-opendata.md](discovery-opendata.md#islandis).
+
 ## Drupal (`drupal`) {#drupal}
 
 Only when the public product is a dataset catalog (not a news CMS).
@@ -1053,6 +1065,16 @@ GET https://host/ocds-api
 ```
 
 **Keep:** OCDS releases from `/api` and `/ocds-api` (JSON packages; flatten releases to tender/award records). **Drop:** portal chrome, project marketing pages, and the platform home `budeshi.ng`. One deployment = one harvest scope. Do not set `bonmaximus` on Budeshi-hosted portals.
+
+## MapaInversiones (`mapainversiones`) {#mapainversiones}
+
+IDB public-investment transparency deployments. No documented public dataset
+API — harvest the national "Datos Abiertos" download section (CSV/Excel/OCDS
+files) and the public investment project list as the dataset grain.
+
+**Keep:** open-data downloads (projects, budgets, OCDS procurement files).
+**Drop:** map chrome, news, and citizen-participation pages. One national
+deployment = one harvest scope.
 
 ## Related
 

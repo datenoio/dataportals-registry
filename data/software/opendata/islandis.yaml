@@ -1,0 +1,67 @@
+category: Open data portal
+subtype: cms_or_app_framework
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: islandis
+name: Ísland.is
+website: https://island.is
+description: Ísland.is is the open-source digital-services platform of the Icelandic
+  government (Stafrænt Ísland / Digital Iceland), developed as a public MIT-licensed
+  TypeScript monorepo. Government content catalogs such as the Stjórnartíðindi official
+  gazette and the Opin gögn open-data page are published as Ísland.is applications.
+  A GraphQL gateway at api.island.is fronts the underlying REST microservices, and
+  machine-to-machine services are registered in the X-Road Straumurinn API catalogue.
+  Distinct from the national CKAN catalog on ckan.island.is (ckan).
+owner:
+  name: Stafrænt Ísland (Digital Iceland)
+  location:
+    country:
+      id: IS
+      name: Iceland
+logo_url: https://island.is/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Global
+  supports_licenses: 'No'
+storage_type: Structured
+type: Software
+license:
+  type: MIT
+  url: https://github.com/island-is/island.is/blob/main/LICENSE
+repository_url: https://github.com/island-is/island.is
+documentation_url: https://docs.devland.is
+export_formats:
+- JSON
+capabilities:
+- Government services portal
+- Content catalogs
+- GraphQL API gateway
+- X-Road integration
+last_updated: '2026-09-29T00:00:00Z'

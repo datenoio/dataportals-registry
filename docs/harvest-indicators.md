@@ -143,6 +143,21 @@ GET https://data.e-stat.go.jp/
 GET https://dashboard.e-stat.go.jp/
 ```
 
+## IDDS (`idds`) {#idds}
+
+Filter exports on `software.id = 'idds'`. One harvest scope per themed tenant host (Common-IDDS, Trade IDDS, census-round tenants). Grain is the **statistical table / indicator**, not each custom-table cell or downloaded chart.
+
+Trade IDDS exposes a documented JSON GET API (`/api/get`, spec at `/PageID/ApiSpec`) that requires cookie consent — use it for table metadata, not raw observation dumps. Common-IDDS and census tenants have no anonymous list API; keep the published table tree.
+
+**Keep:** IDDS **statistical tables / indicators** on the registered host.
+**Drop:** chart images, per-cell API calls, and C&SD pages that only link to an IDDS host.
+
+```text
+GET https://idds.censtatd.gov.hk/
+GET https://tradeidds.censtatd.gov.hk/
+GET https://idds.census2021.gov.hk/app/idds.html
+```
+
 ## OpenSDG (`opensdg`) {#opensdg}
 
 Each SDG indicator is one dataset. List from reporting status or `data/` JSON.

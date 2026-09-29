@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,60 +20,7 @@ coverage:
       name: Zamboanga Peninsula (Region IX)
 description: GeoNode geoportal of the Regional Geographic Information Network for
   Region 9 (Zamboanga Peninsula), coordinated by the Regional Development Council.
-  Many layers require sign-in.
-endpoints:
-- type: geonode:layers
-  url: https://rgin.rdc9.gov.ph/api/layers/
-- type: wms111
-  url: https://rgin.rdc9.gov.ph/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wfs110
-  url: https://rgin.rdc9.gov.ph/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: https://rgin.rdc9.gov.ph/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wmts100
-  url: https://rgin.rdc9.gov.ph/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wms130
-  url: https://rgin.rdc9.gov.ph/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
-- type: wfs100
-  url: https://rgin.rdc9.gov.ph/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wfs200
-  url: https://rgin.rdc9.gov.ph/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
-  version: 2.0.0
-- type: wcs100
-  url: https://rgin.rdc9.gov.ph/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wcs110
-  url: https://rgin.rdc9.gov.ph/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs11
-  url: https://rgin.rdc9.gov.ph/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
-  version: '1.1'
-- type: wcs201
-  url: https://rgin.rdc9.gov.ph/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
-  version: 2.0.1
-- type: wps100
-  url: https://rgin.rdc9.gov.ph/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: tms100
-  url: https://rgin.rdc9.gov.ph/geoserver/gwc/service/tms/1.0.0
-  version: 1.0.0
-- type: wms-c111
-  url: https://rgin.rdc9.gov.ph/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
-  version: 1.1.1
-- type: geoserver:version
-  url: https://rgin.rdc9.gov.ph/geoserver/rest/about/version
-- type: geoserver:settings
-  url: https://rgin.rdc9.gov.ph/geoserver/rest/settings
-- type: geoserver:layers
-  url: https://rgin.rdc9.gov.ph/geoserver/rest/layers
-- type: opensearch
-  url: https://rgin.rdc9.gov.ph/catalogue/opensearch
+  Many layers require sign-in. As of September 2026 the host no longer responds (connection timeout).
 id: rginrdc9govph
 langs:
 - id: EN
@@ -93,6 +40,7 @@ owner:
   name: Regional Development Council IX
   type: Regional government
 properties:
+  is_national: false
   has_doi: false
 rights:
   license_id: null
@@ -104,7 +52,7 @@ rights:
 software:
   id: geonode
   name: GeoNode
-status: active
+status: inactive
 tags:
 - geospatial
 - government

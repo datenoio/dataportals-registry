@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -18,15 +18,6 @@ coverage:
 description: Algeria country portal on the African Development Bank Open Data for
   Africa platform (Africa Information Highway / Knoema). Provides official national
   statistical indicators compiled with the Office National des Statistiques (ONS).
-endpoints:
-- type: knoema:search
-  url: https://algeria.opendataforafrica.org/api/1.0/search
-  version: '1.0'
-- type: sdmx:datastructure
-  url: https://algeria.opendataforafrica.org/api/1.0/sdmx
-  version: '2.0'
-- type: opensearch
-  url: https://algeria.opendataforafrica.org/OpenSearch.xml
 id: algeriaopendataforafricaorg
 langs:
 - id: FR
@@ -55,11 +46,10 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: knoema
-  name: Knoema
+  id: custom
+  name: Custom software
 status: active
 tags:
-- has_api
 - statistics
 - government
 - official statistics

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: inactive
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,13 +14,14 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: Former ASEAN Centre for Biodiversity IPT mirror at bim-mirror.aseanbiodiversity.org.
-  The host no longer responds; the live IPT is at ipt.aseanbiodiversity.org.
+description: GBIF Integrated Publishing Toolkit (IPT) mirror of the ASEAN Centre
+  for Biodiversity, republishing biodiversity datasets alongside the primary IPT
+  at ipt.aseanbiodiversity.org. Responds over HTTP on port 8080 only.
 id: bimmirroraseanbiodiversityorg
 langs:
 - id: EN
   name: English
-link: http://bim-mirror.aseanbiodiversity.org:8080/ipt
+link: http://bim-mirror.aseanbiodiversity.org:8080/ipt/
 name: ASEAN Centre for Biodiversity IPT (mirror)
 owner:
   link: https://www.aseanbiodiversity.org
@@ -31,10 +32,18 @@ owner:
     level: 20
   name: ASEAN Centre for Biodiversity (ACB)
   type: International
+endpoints:
+- type: ipt:dataset
+  url: http://bim-mirror.aseanbiodiversity.org:8080/ipt/inventory/dataset
+- type: rss
+  url: http://bim-mirror.aseanbiodiversity.org:8080/ipt/rss.do
+  version: '2.0'
+properties:
+  is_national: false
 software:
   id: ipt
   name: GBIF Integrated Publishing Toolkit (IPT)
-status: inactive
+status: active
 tags:
 - GBIF
 - IPT
