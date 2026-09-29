@@ -489,6 +489,29 @@ Distributed computational-chemistry repository. Site: [iochem-bd.org](https://ww
 | Censys | `web.endpoints.http.body: "ioChem-BD"` |
 | FOFA | `body="ioChem-BD"` |
 
+## Physiome Model Repository 2 (`pmr2`) {#pmr2}
+
+Version-controlled repository for CellML/FieldML physiological models, built on Plone
+and Git. Official instance: [models.physiomeproject.org](https://models.physiomeproject.org);
+the CellML Model Repository at [models.cellml.org](https://models.cellml.org) and the
+teaching mirror at `teaching.physiomeproject.org` run the same software. Source:
+[github.com/PMR2](https://github.com/PMR2).
+
+**Signals:** Plone theming asset path `/++theme++cellml.theme/`; exposure pages under
+`/e/{id}/view`; navigation to `/exposure`, `/exposure/listing/full-list`, or
+`/about/pmr2`; CellML/FieldML model files; Apache server with Plone `@@search` views.
+
+**Confirm:** GET `/exposure/listing/full-list` and check that exposure links resolve to
+`/e/{hex}/view` pages with workspace content. Register one PMR2 **instance** (host), not
+each workspace, exposure, or model category.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Physiome Model Repository" (PMR2 OR "models.physiomeproject.org" OR cellml) -site:github.com` |
+| Google | `inurl:"/e/" inurl:"/view" cellml` |
+| Censys | `web.endpoints.http.body: "++theme++cellml.theme"` |
+| FOFA | `body="++theme++cellml.theme"` |
+
 ## ESGF (`esgf`) {#esgf}
 
 Earth System Grid Federation **search/index** (Metagrid, esg-search). Site: [esgf.llnl.gov](https://esgf.llnl.gov).

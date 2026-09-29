@@ -4,6 +4,7 @@ Map each published `software.id` (except `custom`) to the discovery and harvest 
 
 Adding a software definition: [software-taxonomy.md](software-taxonomy.md). Agent checklists: [agents/discover.md](agents/discover.md), [agents/harvest.md](agents/harvest.md).
 
+| `pmr2` | scientific | [discovery-scientific-domain](discovery-scientific-domain.md#pmr2) | [harvest-scientific-domain](harvest-scientific-domain.md#pmr2) | — |
 | `software.id` | Category | Discovery | Harvest | apidetect |
 |---------------|----------|-----------|---------|-----------|
 | `1map` | geo | [discovery-geoportals-viewers](discovery-geoportals-viewers.md#1map) | [harvest-viewers](harvest-viewers.md#1map) | — |

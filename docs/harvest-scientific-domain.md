@@ -147,6 +147,23 @@ GET https://host/oai/request?verb=ListRecords&metadataPrefix=oai_dc
 
 **Keep:** published collections/items (CML datasets). **Drop:** Create-module private workspaces and unpublished items. Prefer a **node** over cloning the Find homepage unless harvesting the central index was requested. Use OAI when REST is incomplete.
 
+## Physiome Model Repository 2 (`pmr2`) {#pmr2}
+
+Plone/Git model repository instances (Auckland Physiome Repository, CellML Model
+Repository, teaching mirrors).
+
+```text
+GET https://host/exposure/listing/full-list
+GET https://host/e/{id}/view
+```
+
+**Keep:** one record per published **exposure** (a citable snapshot of a model
+workspace at a given revision). **Drop:** workspaces without a published exposure,
+individual model files, and category/section listing pages. The full list is a single
+large HTML page; paginate via `b_start:int` when present, and fall back to Git
+workspace clones for bulk retrieval. Stop when a workspace or exposure requires
+authentication.
+
 ## ESGF (`esgf`) {#esgf}
 
 Metagrid / esg-search **index** portals. Do not use this recipe on ESGF **data nodes** — those are `thredds`.
