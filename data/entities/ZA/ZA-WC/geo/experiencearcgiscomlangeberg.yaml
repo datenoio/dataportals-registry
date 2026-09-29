@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Western Cape
 description: Langeberg Municipality public Experience Builder mapping viewer for cadastral,
   zoning and MSDF layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/e4650e747b504ffcaf018663de99ba41/data?f=json
 id: experiencearcgiscomlangeberg
 langs:
 - id: EN

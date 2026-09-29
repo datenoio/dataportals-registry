@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -73,3 +73,12 @@ topics:
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi99994198
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgistest.baerum.kommune.no/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgistest.baerum.kommune.no/arcgis/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://arcgistest.baerum.kommune.no/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arcgistest.baerum.kommune.no/arcgis/rest/services?f=geositemap

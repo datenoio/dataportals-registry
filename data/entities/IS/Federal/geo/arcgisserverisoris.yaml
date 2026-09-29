@@ -16,25 +16,26 @@ coverage:
       id: '154'
       name: Northern Europe
 description: ArcGIS Server REST services of ÍSOR (Iceland GeoSurvey), publishing
-  geothermal, geological, and related geospatial datasets for Iceland.
+  geothermal, geological, and related geospatial datasets for Iceland. The
+  directory moved from arcgisserver.isor.is to kort.isor.is.
 endpoints:
 - type: arcgis:rest:info
-  url: https://arcgisserver.isor.is/arcgis/rest/info?f=pjson
+  url: https://kort.isor.is/server/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: https://arcgisserver.isor.is/arcgis/rest/services?f=pjson
+  url: https://kort.isor.is/server/rest/services?f=pjson
 - type: arcgis:soap
-  url: https://arcgisserver.isor.is/arcgis/services?wsdl
+  url: https://kort.isor.is/server/services?wsdl
 - type: arcgis:sitemap
-  url: https://arcgisserver.isor.is/arcgis/rest/services?f=sitemap
+  url: https://kort.isor.is/server/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: https://arcgisserver.isor.is/arcgis/rest/services?f=geositemap
+  url: https://kort.isor.is/server/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: https://arcgisserver.isor.is/arcgis/rest/services?f=kmz
+  url: https://kort.isor.is/server/rest/services?f=kmz
 id: arcgisserverisoris
 langs:
 - id: IS
   name: Icelandic
-link: https://arcgisserver.isor.is/arcgis/rest/services
+link: https://kort.isor.is/server/rest/services
 name: ÍSOR ArcGIS Server
 owner:
   link: https://isor.is

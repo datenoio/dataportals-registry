@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-GA
+      name: Georgia
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Bulloch County and Statesboro layers, including board of education districts,
+  hosted at stabull.org.
+id: stabullorg
+langs:
+- id: EN
+  name: English
+link: https://stabull.org/server/rest/services
+name: Bulloch County ArcGIS Server
+owner:
+  link: https://www.bullochcounty.net
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-GA
+      name: Georgia
+  name: Bulloch County
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- education
+- geospatial
+- government
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00008870
+properties:
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://stabull.org/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://stabull.org/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://stabull.org/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://stabull.org/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://stabull.org/server/rest/services?f=geositemap

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -42,8 +42,8 @@ properties:
   has_doi: false
   is_national: false
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - geoportal
@@ -65,3 +65,9 @@ topics:
   name: Planning / Cadastre
   type: iso19115
 uid: cdi99998673
+endpoints:
+- type: rest
+  url: https://sigtol.gob.mx/wp-json/
+- type: rest:posts
+  url: https://sigtol.gob.mx/wp-json/wp/v2/posts
+  version: '2'

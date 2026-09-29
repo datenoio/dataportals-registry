@@ -20,6 +20,9 @@ description: DataONE portal for Smithsonian Tropical Research Institute datasets
 endpoints:
 - type: dataone:catalog
   url: https://search.dataone.org/portals/tropical
+- type: dataone:query
+  url: https://search.dataone.org/cn/v2/query/solr/?q=formatType:DATA&rows=1
+  version: '2'
 id: tropicaldataone
 langs:
 - id: EN

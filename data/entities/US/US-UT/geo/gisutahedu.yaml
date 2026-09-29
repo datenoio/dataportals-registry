@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-UT
+      name: Utah
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ArcGIS Server for University of Utah facilities. Public services include
+  campus utility layers.
+id: gisutahedu
+langs:
+- id: EN
+  name: English
+link: https://gis.utah.edu/server/rest/services
+name: University of Utah Facilities GIS Server
+owner:
+  link: https://www.utah.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-UT
+      name: Utah
+  name: University of Utah
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- geospatial
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00009134
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.utah.edu/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.utah.edu/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.utah.edu/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.utah.edu/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.utah.edu/server/rest/services?f=geositemap

@@ -16,8 +16,9 @@ coverage:
       id: '005'
       name: South America
 description: National geospatial catalog of the Geoportal de Chile (IDE Chile), the
-  official discovery service of Chile's spatial data infrastructure. Harvests CSW
-  metadata from public institutions for download and map viewing.
+  official discovery service of Chile's spatial data infrastructure. The catalog
+  application is Geonodo and exposes pycsw CSW. It harvests metadata from public
+  institutions for download and map viewing.
 id: wwwgeoportalclcat
 langs:
 - id: ES
@@ -43,8 +44,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: geonodo
+  name: Geonodo
 status: active
 tags:
 - geospatial
@@ -58,3 +59,6 @@ uid: cdi00005243
 endpoints:
 - type: sitemap
   url: https://geoportal.cl/sitemap.xml
+- type: csw202
+  url: https://geoportal.cl/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2

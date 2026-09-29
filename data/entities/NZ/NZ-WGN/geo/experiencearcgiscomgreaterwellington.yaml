@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Greater Wellington
 description: Regional viewer bringing together environmental monitoring, natural hazards,
   parks, public transport, resource consents, and other spatial data.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/8ca4cb5241604ee0a981935b9be3fd4c/data?f=json
 id: experiencearcgiscomgreaterwellington
 langs:
 - id: EN

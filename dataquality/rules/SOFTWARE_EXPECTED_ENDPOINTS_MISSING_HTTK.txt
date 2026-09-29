@@ -1,0 +1,35 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_HTTK
+================================================================================
+Generated: 2026-09-29 11:21:05
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_HTTK
+Priority: MEDIUM
+Total Issues Found: 2
+
+Rule: Identifies records using software.id='httk' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+SE: 2 issues
+
+=== SUMMARY BY RECORD ===
+
+defectsanyterialse: 1 issue
+hadbfunmatiise: 1 issue
+
+=== ISSUES ===
+
+File: SE/Federal/scientific/defectsanyterialse.yaml
+Record ID: defectsanyterialse
+Country: SE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_HTTK
+Field: endpoints
+Current Value: {"software_id": "httk", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='httk' is marked as API-capable in software definitions
+
+File: SE/Federal/scientific/hadbfunmatiise.yaml
+Record ID: hadbfunmatiise
+Country: SE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_HTTK
+Field: endpoints
+Current Value: {"software_id": "httk", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='httk' is marked as API-capable in software definitions

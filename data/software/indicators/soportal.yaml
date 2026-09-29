@@ -1,0 +1,69 @@
+category: Indicators catalog
+subtype: indicators_data_platform
+datatypes:
+  datasets: Compatible
+  fields: 'Yes'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: Uncertain
+id: soportal
+name: SOPORTAL
+website: https://www.wise.co.kr/
+description: SOPORTAL is Wiseitech's agency statistical-table portal for South
+  Korean public authorities. Tenants share indexPage.do, a /css/{skin}/soportal/
+  stylesheet tree, /js/portal/lib/, and /portal/stat/ table browsers
+  (easyStatPage.do, orgStatPage.do, nameStatPage.do), mounted under a context
+  path such as /portal/, /research/portal/, or /r-one/portal/. OpenAPI pages
+  live under /portal/openapi/ and require a service key. commonness.js carries
+  COPYRIGHT (C) 2013 WISEITECH CO., LTD., but that file also ships on unrelated
+  Wiseitech sites (Gyeonggi Data Dream, Open National Assembly) that use
+  mainPage.do. Distinct from KOSIS /statHtml/statHtml.do, from MOLIT 통계누리,
+  and from IBSheet used as a grid on other statistical sites.
+owner:
+  name: Wiseitech
+  location:
+    country:
+      id: KR
+      name: South Korea
+documentation_url: https://stat.mcee.go.kr/portal/openapi/openApiIntroPage.do
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Structured
+type: Software
+license:
+  type: Proprietary
+export_formats:
+- Excel
+- CSV
+- JSON
+- XML
+capabilities:
+- Statistical table browser
+- Open API
+- Thematic and organization statistics lists
+last_updated: '2026-09-27T00:00:00Z'

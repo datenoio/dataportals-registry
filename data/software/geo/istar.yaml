@@ -1,0 +1,61 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: istar
+name: iSTAR
+website: https://www.istar.igg.unam.mx/lab/geoportal-tecnologia
+description: iSTAR is the UNAM GITS web GIS viewer (version 3.1). Public
+  installs answer with Server iStar-Platform and X-Powered-By iStar-UNAM,
+  and load /static/js/main.bundle.js with Turf and D3 under /static/js/lib/.
+  The HTML root is id="istar" or id="gits" with data-puma_role. Distinct
+  from INEGI MxSIG (mxsig) and OVIE (ovie), and from a generic OpenLayers
+  copy. The IDEA download catalog is the dataset collection behind the
+  GITS viewer, not a second product.
+owner:
+  name: Instituto de Geografía, UNAM (Unidad GITS)
+  location:
+    country:
+      id: MX
+      name: Mexico
+documentation_url: https://www.istar.igg.unam.mx/lab/geoportal-tecnologia
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Open
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- JSON
+- GeoJSON
+capabilities:
+- Map viewer
+- WMS
+last_updated: '2026-09-27T00:00:00Z'

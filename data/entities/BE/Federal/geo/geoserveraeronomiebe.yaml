@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Public GeoServer of the Royal Belgian Institute for Space Aeronomy with
+  atmospheric composition layers, including Sentinel-5P trace-gas maps.
+id: geoserveraeronomiebe
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+- id: NL
+  name: Dutch
+link: https://geoserver.aeronomie.be/geoserver
+name: BIRA-IASB GeoServer
+owner:
+  link: https://www.aeronomie.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+  name: Royal Belgian Institute for Space Aeronomy (BIRA-IASB)
+  type: Academy
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- academic
+- belgium
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009445
+endpoints:
+- type: wms111
+  url: https://geoserver.aeronomie.be/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserver.aeronomie.be/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoserver.aeronomie.be/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geoserver.aeronomie.be/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoserver.aeronomie.be/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

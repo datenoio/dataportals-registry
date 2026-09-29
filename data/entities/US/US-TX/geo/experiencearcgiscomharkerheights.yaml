@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: US-TX
       name: Texas
 description: City of Harker Heights public ArcGIS Experience Builder city GIS map.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/07e255b080ac4bbc8513cdc510a8bb38/data?f=json
 id: experiencearcgiscomharkerheights
 langs:
 - id: EN

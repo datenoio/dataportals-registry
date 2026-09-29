@@ -1,0 +1,64 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: cmv
+name: Configurable Map Viewer (CMV)
+website: https://cmv.io/
+description: CMV (The Configurable Map Viewer) is a community-supported
+  open-source mapping framework built with the Esri JavaScript API (3.x) and
+  the Dojo Toolkit. Deployments load cmv/cmv-app viewer assets (for example
+  viewer/css/main.css), configure the viewer through js/config/viewer.js with
+  a dojoConfig block, and commonly reference cmv.io. It works with ArcGIS
+  Server and ArcGIS Online services and is popular with US local-government
+  GIS sites and national SDI portals.
+owner:
+  name: CMV community
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://cmv.io/favicon.ico
+documentation_url: https://cmv.readthedocs.io/
+repository_url: https://github.com/cmv/cmv-app
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: Uncertain
+  wfs: Uncertain
+  wms: Compatible
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Open
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+license:
+  type: MIT
+  url: https://github.com/cmv/cmv-app/blob/master/LICENSE
+capabilities:
+- Map viewer
+- Configurable widget framework
+- ArcGIS Server and ArcGIS Online integration
+last_updated: '2026-09-29T00:00:00Z'

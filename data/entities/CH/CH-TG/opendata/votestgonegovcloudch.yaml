@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: CH-TG
+      name: Thurgau
+description: Official OneGov Election Day portal of the Canton of Thurgau. Publishes
+  election and vote results, including municipal ballots hosted on the cantonal
+  portal, as open data with a DCAT-AP CH catalog.
+endpoints:
+- type: dcatap21
+  url: https://votes-tg.onegovcloud.ch/catalog.rdf
+id: votestgonegovcloudch
+langs:
+- id: DE
+  name: German
+link: https://votes-tg.onegovcloud.ch
+name: Thurgau Elections and Votes
+owner:
+  link: https://www.tg.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-TG
+      name: Thurgau
+  name: Kanton Thurgau
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: onegov
+  name: OneGov Election Day
+status: active
+tags:
+- elections
+- OneGov
+- government
+- open data
+- Switzerland
+- Thurgau
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00009679

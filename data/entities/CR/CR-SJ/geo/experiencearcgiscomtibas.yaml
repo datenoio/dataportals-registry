@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: CR-SJ
       name: San José
 description: Municipal cadastral viewer of Municipalidad de Tibás, Costa Rica.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/96a37e7369b94c3e9bec1e1b7fc8d383/data?f=json
 id: experiencearcgiscomtibas
 langs:
 - id: ES

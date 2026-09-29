@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: ArcGIS REST services directory for the Taadeen mining platform. The public
+  Maps service lists mining applications, licences, and complexes, together with administrative
+  base maps.
+id: gistaadeensa
+langs:
+- id: AR
+  name: Arabic
+link: https://gis.taadeen.sa/server/rest/services
+name: Taadeen Mining Platform ArcGIS Server
+owner:
+  link: https://taadeen.sa
+  location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 20
+  name: Ministry of Industry and Mineral Resources
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- saudi-arabia
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009056
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.taadeen.sa/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.taadeen.sa/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.taadeen.sa/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.taadeen.sa/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.taadeen.sa/server/rest/services?f=geositemap

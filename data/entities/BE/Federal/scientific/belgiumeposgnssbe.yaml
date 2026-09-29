@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Royal Observatory of Belgium node distributing daily RINEX data and station metadata from
+  Belgian EPOS GNSS stations.
+endpoints:
+- type: rest
+  url: https://belgium-epos.gnss.be:8181/GlassFramework/swagger.json
+id: belgiumeposgnssbe
+langs:
+- id: EN
+  name: English
+link: https://belgium-epos.gnss.be:8181/glasswebui/
+name: Belgian EPOS-GNSS data Node
+owner:
+  link: https://www.astro.oma.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+  name: Royal Observatory of Belgium
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: glass
+  name: EPOS GLASS
+status: active
+tags:
+- scientific
+- GNSS
+- geodesy
+- EPOS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00009801

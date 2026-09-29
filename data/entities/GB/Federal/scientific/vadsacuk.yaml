@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -19,6 +19,9 @@ description: VADS provides a national collection of over 140,000 images from ove
   use in education. The images cover the broad range of the visual arts including
   applied arts, architecture, design, fashion, fine art, and media. VADS is a service
   of the Library at the University for the Creative Arts (UCA).
+endpoints:
+- type: contentdm:collections
+  url: https://vads.ac.uk/digital/api/collections
 id: vadsacuk
 identifiers:
 - id: openaire
@@ -38,8 +41,8 @@ owner:
   name: University for the Creative Arts
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: contentdm
+  name: CONTENTdm
 status: active
 tags:
 - scientific

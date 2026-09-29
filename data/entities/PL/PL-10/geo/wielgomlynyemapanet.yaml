@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Łódzkie
 description: Geoportal of Gmina Wielgomłyny in Łódzkie, Poland, published on the Geo-System
   e-mapa.net platform with cadastral, address, and spatial planning data.
+endpoints:
+- type: emapa:init
+  url: https://wielgomlyny.e-mapa.net/application/system/init.php
 id: wielgomlynyemapanet
 langs:
 - id: PL

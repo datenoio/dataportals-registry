@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Alberta
 description: Town of Canmore public ArcGIS Experience Builder interactive community
   map for property, land use, and related municipal GIS layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/eeb4342ab48c46549136c4428a7c43dc/data?f=json
 id: experiencearcgiscomcanmore
 langs:
 - id: EN

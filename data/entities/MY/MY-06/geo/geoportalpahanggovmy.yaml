@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: MY-06
+      name: Pahang
+description: ArcGIS REST services directory for the Pahang state geoportal, including
+  roads, place names, and industrial-site layers.
+id: geoportalpahanggovmy
+langs:
+- id: MS
+  name: Malay
+link: https://geoportal.pahang.gov.my/server/rest/services
+name: Pahang Geoportal ArcGIS REST Services
+owner:
+  link: https://www.pahang.gov.my
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 30
+    subregion:
+      id: MY-06
+      name: Pahang
+  name: Pahang State Government
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- malaysia
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009181
+endpoints:
+- type: arcgis:rest:info
+  url: https://geoportal.pahang.gov.my/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoportal.pahang.gov.my/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoportal.pahang.gov.my/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoportal.pahang.gov.my/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoportal.pahang.gov.my/server/rest/services?f=geositemap

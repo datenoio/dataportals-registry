@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: AT-3
+      name: Niederösterreich
+description: IIASA GeoServer publishing NaturaConnector protected-area expansion scenarios.
+  The scenario app at naturaconnector.iiasa.ac.at uses this service.
+id: becgeoserveriiasaacat
+langs:
+- id: DE
+  name: German
+link: https://bec-geoserver.iiasa.ac.at/geoserver
+name: IIASA NaturaConnector GeoServer
+owner:
+  link: https://www.iiasa.ac.at
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    subregion:
+      id: AT-3
+      name: Niederösterreich
+  name: International Institute for Applied Systems Analysis (IIASA)
+  type: International
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- austria
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009461
+endpoints:
+- type: wms111
+  url: https://bec-geoserver.iiasa.ac.at/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://bec-geoserver.iiasa.ac.at/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://bec-geoserver.iiasa.ac.at/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://bec-geoserver.iiasa.ac.at/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://bec-geoserver.iiasa.ac.at/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Newfoundland and Labrador
 description: Town of Conception Bay South public interactive GIS map for municipal
   boundaries, roads, parks, development notices, and related layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/6ab5490723b848afab5cf79f36508dc4/data?f=json
 id: experiencearcgiscomcbs
 langs:
 - id: EN

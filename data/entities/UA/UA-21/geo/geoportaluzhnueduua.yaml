@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: UA-21
+      name: Zakarpatska oblast
+description: ArcGIS Server of Uzhhorod National University publishing an orthophoto,
+  a Solotvyno aerial mosaic, and a terrain image service.
+id: geoportaluzhnueduua
+langs:
+- id: UK
+  name: Ukrainian
+link: https://geoportal.uzhnu.edu.ua/server/rest/services
+name: Геопортал Ужгородського національного університету
+owner:
+  link: https://www.uzhnu.edu.ua
+  location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 30
+    subregion:
+      id: UA-21
+      name: Zakarpatska oblast
+  name: Uzhhorod National University
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- ArcGIS
+- geospatial
+- Ukraine
+- Uzhhorod
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:portals:self
+  url: https://geoportal.uzhnu.edu.ua/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://geoportal.uzhnu.edu.ua/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoportal.uzhnu.edu.ua/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoportal.uzhnu.edu.ua/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoportal.uzhnu.edu.ua/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoportal.uzhnu.edu.ua/server/rest/services?f=geositemap
+uid: cdi00009447

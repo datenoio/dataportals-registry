@@ -1,0 +1,90 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BD
+      name: Bangladesh
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: BD-C
+      name: Dhaka
+description: Public ArcGIS Enterprise 11.0 geoportal of the Dhaka North City Corporation
+  emergency operations center. Services include mouza maps and the primary road network.
+id: eocgeoportaldnccgovbd
+langs:
+- id: EN
+  name: English
+- id: BN
+  name: Bengali
+link: https://eocgeoportal.dncc.gov.bd
+name: Dhaka North City Corporation Emergency Operations Center Geoportal
+owner:
+  link: https://dncc.gov.bd
+  location:
+    country:
+      id: BD
+      name: Bangladesh
+    level: 30
+    subregion:
+      id: BD-C
+      name: Dhaka
+  name: Dhaka North City Corporation
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+- GIS
+- emergency
+- Bangladesh
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00009335
+endpoints:
+- type: arcgis:portals:self
+  url: https://eocgeoportal.dncc.gov.bd/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://eocgeoportal.dncc.gov.bd/server/rest/info?f=json
+- type: arcgis:rest:services
+  url: https://eocgeoportal.dncc.gov.bd/server/rest/services?f=json
+- type: arcgis:soap
+  url: https://eocgeoportal.dncc.gov.bd/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://eocgeoportal.dncc.gov.bd/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://eocgeoportal.dncc.gov.bd/server/rest/services?f=geositemap

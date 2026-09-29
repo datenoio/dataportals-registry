@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,7 +17,8 @@ coverage:
     subregion:
       id: TH-40
       name: Khon Kaen
-description: University public data portal of Khon Kaen University.
+description: University public data portal of Khon Kaen University, published with
+  WordPress. opendata.kku.ac.th redirects to open-data.kku.ac.th.
 id: opendatakkuacth
 langs:
 - id: TH
@@ -46,8 +47,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - open data
@@ -61,3 +62,9 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00022873
+endpoints:
+- type: rest
+  url: https://opendata.kku.ac.th/wp-json/
+- type: rest:posts
+  url: https://opendata.kku.ac.th/wp-json/wp/v2/posts
+  version: '2'

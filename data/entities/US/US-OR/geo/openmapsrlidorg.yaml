@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-OR
+      name: Oregon
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Lane Council of Governments RLID services for Curry County and regional
+  layers, on a different host from gateway.maps.rlid.org.
+id: openmapsrlidorg
+langs:
+- id: EN
+  name: English
+link: https://open.maps.rlid.org/arcgis/rest/services
+name: RLID Open ArcGIS Server
+owner:
+  link: https://www.lcog.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-OR
+      name: Oregon
+  name: Lane Council of Governments
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00008918
+properties:
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://open.maps.rlid.org/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://open.maps.rlid.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://open.maps.rlid.org/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://open.maps.rlid.org/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://open.maps.rlid.org/arcgis/rest/services?f=geositemap

@@ -2,7 +2,7 @@
 
 A global registry of data portals, catalogs, data repositories, and related data infrastructure.
 
-**Working tree (24 September 2026):** **41,167** verified catalogs · **665** software platforms · **224** countries and territories · **1** scheduled YAML record.
+**Working tree (27 September 2026):** **42,390** verified catalogs · **733** software platforms · **224** countries and territories · **1** scheduled YAML record.
 
 Last published snapshot: [v1.22.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.22.0), 24 September 2026 (**41,167** catalogs · **665** software · **1** scheduled).
 
@@ -49,11 +49,11 @@ Last published snapshot (**v1.22.0**, 2026-09-24: 41,167 catalogs, 665 software,
 
 | File | Contents |
 |------|----------|
-| `data/datasets/catalogs.jsonl.zst` | **41,167** catalog records |
-| `data/datasets/software.jsonl` (+ `.zst`) | **665** software / platform definitions |
+| `data/datasets/catalogs.jsonl.zst` | **42,390** catalog records |
+| `data/datasets/software.jsonl` (+ `.zst`) | **733** software / platform definitions |
 | `data/datasets/scheduled.jsonl` (+ `.zst`) | **1** scheduled record |
-| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**41,168**) |
-| `data/datasets/full.parquet`, `data/datasets/datasets.duckdb` | Analytics-friendly copies of `full.jsonl` (**41,168** rows; DuckDB `software` table: **665**) |
+| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**42,391**) |
+| `data/datasets/full.parquet`, `data/datasets/datasets.duckdb` | Analytics-friendly copies of `full.jsonl` (**42,391** rows; DuckDB `software` table: **733**) |
 
 Rebuild from YAML (never hand-edit `data/datasets/`):
 

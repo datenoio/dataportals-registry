@@ -18,30 +18,28 @@ coverage:
     subregion:
       id: AE-AZ
       name: Abū Z̧aby
-description: ArcGIS REST services and Enterprise portal for Al Dhafra Region Municipality,
-  covering addressing, Makani, infrastructure projects, and land valuation layers.
+description: ArcGIS REST services for Al Dhafra Region Municipality, covering addressing,
+  Makani, infrastructure projects, and land valuation layers.
 endpoints:
-- type: arcgis:portals:self
-  url: https://geoportal.drm.gov.ae/portal/sharing/rest/portals/self?f=pjson
 - type: arcgis:rest:info
-  url: https://geoportal.drm.gov.ae/server/rest/info?f=pjson
+  url: https://geoportal.drm.gov.ae/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: https://geoportal.drm.gov.ae/server/rest/services?f=pjson
+  url: https://geoportal.drm.gov.ae/arcgis/rest/services?f=pjson
 - type: arcgis:soap
-  url: https://geoportal.drm.gov.ae/server/services?wsdl
+  url: https://geoportal.drm.gov.ae/arcgis/services?wsdl
 - type: arcgis:sitemap
-  url: https://geoportal.drm.gov.ae/server/rest/services?f=sitemap
+  url: https://geoportal.drm.gov.ae/arcgis/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: https://geoportal.drm.gov.ae/server/rest/services?f=geositemap
+  url: https://geoportal.drm.gov.ae/arcgis/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: https://geoportal.drm.gov.ae/server/rest/services?f=kmz
+  url: https://geoportal.drm.gov.ae/arcgis/rest/services?f=kmz
 id: geoportaldrmgovae
 langs:
 - id: AR
   name: Arabic
 - id: EN
   name: English
-link: https://geoportal.drm.gov.ae/server/rest/services
+link: https://geoportal.drm.gov.ae/arcgis/rest/services
 name: Al Dhafra Region Municipality Geoportal
 owner:
   link: https://www.drm.gov.ae

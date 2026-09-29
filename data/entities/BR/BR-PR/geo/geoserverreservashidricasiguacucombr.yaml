@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-PR
+      name: Paraná
+    macroregion:
+      id: '005'
+      name: South America
+description: Sanepar GeoServer for water-reserve and basin layers of the Alto Iguaçu,
+  in the sanepar workspace.
+id: geoserverreservashidricasiguacucombr
+langs:
+- id: PT
+  name: Portuguese
+link: https://geoserver.reservashidricasiguacu.com.br/geoserver
+name: GeoServer Reservas Hídricas do Alto Iguaçu
+owner:
+  link: https://www.sanepar.com.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-PR
+      name: Paraná
+  name: Companhia de Saneamento do Paraná (Sanepar)
+  type: Regional government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- brazil
+- geospatial
+- government
+- water
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+endpoints:
+- type: wms111
+  url: https://geoserver.reservashidricasiguacu.com.br/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserver.reservashidricasiguacu.com.br/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoserver.reservashidricasiguacu.com.br/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geoserver.reservashidricasiguacu.com.br/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoserver.reservashidricasiguacu.com.br/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+uid: cdi00009589

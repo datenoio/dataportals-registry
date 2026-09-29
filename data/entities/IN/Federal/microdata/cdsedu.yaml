@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: Kerala Migration Survey at the Centre for Development Studies, a repeated household
-  survey documenting international and internal migration from Kerala, with reports and data
-  products.
+description: Kerala Migration Survey at the Centre for Development Studies, a repeated
+  household survey documenting international and internal migration from Kerala, with
+  reports and data products.
 id: cdsedu
 identifiers:
 - id: openaire
@@ -38,8 +38,8 @@ owner:
   name: Centre for Development Studies
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - migration
@@ -54,3 +54,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00031575
+endpoints:
+- type: sitemap
+  url: https://cds.edu/sitemap.xml

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Lamphun
 description: Public Geo City Data Learning Platform of Lamphun Town Municipality on ArcGIS Experience
   Builder.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/700c700586d24d74950d4e70003d11b6/data?f=json
 id: experiencearcgiscomlamphun
 langs:
 - id: TH

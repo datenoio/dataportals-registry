@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,12 +14,12 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: SCEC's mission includes gathering data on earthquakes, both in Southern California
-  and other locales; integrate the information into a comprehensive understanding of earthquake
-  phenomena; and communicate useful knowledge for reducing earthquake risk to society at large.
-  The SCEC community consists of more than 600 scientists from 16 core institutions and 47
-  additional participating institutions. SCEC is funded by the National Science Foundation
-  and the U.S. Geological Survey.
+description: SCEC's mission includes gathering data on earthquakes, both in Southern
+  California and other locales; integrate the information into a comprehensive understanding
+  of earthquake phenomena; and communicate useful knowledge for reducing earthquake
+  risk to society at large. The SCEC community consists of more than 600 scientists
+  from 16 core institutions and 47 additional participating institutions. SCEC is
+  funded by the National Science Foundation and the U.S. Geological Survey.
 id: wwwscecorg
 identifiers:
 - id: openaire
@@ -40,8 +40,8 @@ owner:
   name: Southern California Earthquake Center
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -67,3 +67,9 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00033770
+endpoints:
+- type: rest
+  url: https://www.scec.org/wp-json/
+- type: rest:posts
+  url: https://www.scec.org/wp-json/wp/v2/posts
+  version: '2'

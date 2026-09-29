@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Public ArcGIS Server catalogue of Lithuanian Railways parcels, buildings,
+  and noise map services.
+id: arcgislitraillt
+langs:
+- id: LT
+  name: Lithuanian
+link: https://arcgis.litrail.lt/server/rest/services
+name: Lietuvos geležinkeliai ArcGIS REST
+owner:
+  link: https://ltg.lt/
+  location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 20
+  name: AB „Lietuvos geležinkeliai“
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- railways
+- spatial data
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:portals:self
+  url: https://arcgis.litrail.lt/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://arcgis.litrail.lt/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgis.litrail.lt/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgis.litrail.lt/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://arcgis.litrail.lt/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arcgis.litrail.lt/server/rest/services?f=geositemap
+uid: cdi00009079

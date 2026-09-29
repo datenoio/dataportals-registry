@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: California
 description: Town of Yucca Valley public ArcGIS Experience Builder general plan and zoning
   GIS map.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/8d739bc93b044464a62b4d77fc034d48/data?f=json
 id: experiencearcgiscomyuccavalley
 langs:
 - id: EN

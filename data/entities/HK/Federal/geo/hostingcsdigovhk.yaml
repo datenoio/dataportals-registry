@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HK
+      name: Hong Kong
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Lands Department ArcGIS Server for the Common Spatial Data Infrastructure,
+  publishing HKSAR government map layers. Public folders include common and govt;
+  Hosted, open, and po require a token.
+id: hostingcsdigovhk
+langs:
+- id: ZH
+  name: Chinese
+link: https://hosting.csdi.gov.hk/server/rest/services
+name: Hong Kong CSDI Map Services
+owner:
+  link: https://www.landsd.gov.hk
+  location:
+    country:
+      id: HK
+      name: Hong Kong
+    level: 20
+  name: Lands Department
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- hong-kong
+- infrastructure
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+endpoints:
+- type: arcgis:rest:info
+  url: https://hosting.csdi.gov.hk/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://hosting.csdi.gov.hk/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://hosting.csdi.gov.hk/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://hosting.csdi.gov.hk/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://hosting.csdi.gov.hk/server/rest/services?f=geositemap
+uid: cdi00009384
+properties:
+  is_national: false

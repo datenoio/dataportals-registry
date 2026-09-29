@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: New South Wales
 description: Cessnock City Council ArcGIS Experience Builder public GIS for property,
   planning, flood, and local government map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/6c7626ed701646d9966b96ba1ca96b70/data?f=json
 id: experiencearcgiscomcessnock
 langs:
 - id: EN

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -12,7 +12,7 @@ coverage:
       name: Spain
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Spanish petroleum product stocks, imports, and consumption statistics
   published by CORES.
@@ -32,8 +32,8 @@ owner:
   name: Corporación de Reservas Estratégicas de Productos Petrolíferos
   type: Central government
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - petroleum
@@ -45,3 +45,6 @@ topics:
 properties:
   is_national: false
 uid: cdi00008333
+endpoints:
+- type: rss
+  url: https://www.cores.es/rss.xml

@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,11 +14,11 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: Through its Blood4Research Program based in Vancouver, the Centre for Innovation
-  collects blood from committed donors who have been deferred from donating blood for patient
-  use. The collected blood is processed and provided to investigators to facilitate research
-  that promotes advances in the fields of transfusion, cellular therapies, and transplantation
-  medicine.
+description: Through its Blood4Research Program based in Vancouver, the Centre for
+  Innovation collects blood from committed donors who have been deferred from donating
+  blood for patient use. The collected blood is processed and provided to investigators
+  to facilitate research that promotes advances in the fields of transfusion, cellular
+  therapies, and transplantation medicine.
 id: wwwbloodca
 identifiers:
 - id: openaire
@@ -41,8 +41,8 @@ owner:
   name: Canadian Blood Services
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -77,3 +77,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00028834
+endpoints:
+- type: sitemap
+  url: https://www.blood.ca/sitemap.xml

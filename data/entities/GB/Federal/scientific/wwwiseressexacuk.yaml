@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,10 +14,10 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Originally established in 1989 at the University of Essex to house the British
-  Household Panel Survey (BHPS), ISER has grown into a leading centre for the production and
-  analysis of longitudinal studies. It encompasses the ESRC Research Centre on Micro-Social
-  Change and the successor to the BHPS, Understanding Society.
+description: Originally established in 1989 at the University of Essex to house the
+  British Household Panel Survey (BHPS), ISER has grown into a leading centre for
+  the production and analysis of longitudinal studies. It encompasses the ESRC Research
+  Centre on Micro-Social Change and the successor to the BHPS, Understanding Society.
 id: wwwiseressexacuk
 identifiers:
 - id: openaire
@@ -38,8 +38,8 @@ owner:
   name: Economic and Social Research Council
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -65,3 +65,9 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00030976
+endpoints:
+- type: rest
+  url: https://www.iser.essex.ac.uk/wp-json/
+- type: rest:posts
+  url: https://www.iser.essex.ac.uk/wp-json/wp/v2/posts
+  version: '2'

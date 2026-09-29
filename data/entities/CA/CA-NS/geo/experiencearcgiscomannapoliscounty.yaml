@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Nova Scotia
 description: Municipality of the County of Annapolis county-wide zoning GIS map, published
   as an ArcGIS Experience Builder app from the county planning pages.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/9c4ce0275e1b4075ab246dd86a0bbbb6/data?f=json
 id: experiencearcgiscomannapoliscounty
 langs:
 - id: EN

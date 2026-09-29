@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -61,3 +61,14 @@ topics:
   name: Oceans
   type: iso19115
 uid: cdi00034934
+endpoints:
+- type: arcgis:rest:info
+  url: http://ec2-50-19-218-171.compute-1.amazonaws.com/arcgis1/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://ec2-50-19-218-171.compute-1.amazonaws.com/arcgis1/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://ec2-50-19-218-171.compute-1.amazonaws.com/arcgis1/services?wsdl
+- type: arcgis:sitemap
+  url: http://ec2-50-19-218-171.compute-1.amazonaws.com/arcgis1/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://ec2-50-19-218-171.compute-1.amazonaws.com/arcgis1/rest/services?f=geositemap

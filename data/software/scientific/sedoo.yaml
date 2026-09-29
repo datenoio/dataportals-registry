@@ -1,0 +1,60 @@
+category: Scientific data repository
+subtype: managed_saas_service
+datatypes:
+  datasets: 'Yes'
+  fields: Uncertain
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: sedoo
+name: SEDOO Catalogue
+website: https://www.sedoo.fr/catalogue-donnees/
+description: SEDOO Catalogue is the dataset catalog of the Observatoire Midi-Pyrénées
+  data service. Project and campaign sites embed the same catalog (metadata entry,
+  search, download, DOI landing pages, and a REST API). Distinct from the SEDOO
+  organization homepage and from THREDDS servers SEDOO also operates.
+owner:
+  name: Observatoire Midi-Pyrénées
+  location:
+    country:
+      id: FR
+      name: France
+metadata_support:
+  ckan_api: 'No'
+  csw: 'Yes'
+  custom_api: 'Yes'
+  dcat: Uncertain
+  dublin_core: 'Yes'
+  iso19115: 'Yes'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+documentation_url: https://www.sedoo.fr/catalogue-donnees/
+export_formats:
+- CSV
+- JSON
+- NetCDF
+capabilities:
+- REST API
+- Dataset metadata catalog
+- DOI landing pages
+last_updated: '2026-09-26T00:00:00Z'

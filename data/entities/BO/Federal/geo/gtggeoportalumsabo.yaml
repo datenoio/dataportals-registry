@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -59,3 +59,24 @@ topics:
 uid: cdi00000173
 description: Former UMSA GeoNetwork instance on port 8087. The host still resolves
   but TCP connections to gtggeoportal.umsa.bo:8087 are refused.
+endpoints:
+- type: geonetwork:query
+  url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/api/records
+- type: openapi
+  url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: dcat:xml
+  url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/api/records?accept=application/rdf+xml
+- type: geonetwork:site
+  url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/api/site

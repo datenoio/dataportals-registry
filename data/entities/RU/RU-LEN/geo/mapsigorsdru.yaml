@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion:
+      id: RU-LEN
+      name: Leningradskaja oblast'
+description: Public GeoServer of bathymetry for water bodies in Leningrad Oblast and
+  nearby waters (Neva isobaths and shoreline shapes), with a map at maps.igorsd.ru.
+id: mapsigorsdru
+langs:
+- id: RU
+  name: Russian
+link: https://maps.igorsd.ru/
+name: Глубины водоёмов Ленинградской области
+owner:
+  link: https://maps.igorsd.ru/
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    subregion:
+      id: RU-LEN
+      name: Leningradskaja oblast'
+  name: Глубины водоёмов Ленинградской области
+  type: Community
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- geospatial
+- russian-federation
+- water
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+endpoints:
+- type: wms111
+  url: https://maps.igorsd.ru/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://maps.igorsd.ru/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://maps.igorsd.ru/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://maps.igorsd.ru/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://maps.igorsd.ru/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+uid: cdi00009506

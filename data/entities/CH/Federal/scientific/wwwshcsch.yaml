@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,12 +14,12 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: The Swiss HIV Cohort Study (SHCS), established in 1988, is a systematic longitudinal
-  study enrolling HIV-infected individuals in Switzerland. It is a collaboration of all Swiss
-  University Hospital infectious disease outpatient clinics, two large cantonal hospitals,
-  all with affiliated laboratories, and with affiliated smaller hospitals and private physicians
-  carrying for HIV patients. The Swiss Mother and Child HIV Cohort Study (MoCHiV) is integrated
-  into the SHCS.
+description: The Swiss HIV Cohort Study (SHCS), established in 1988, is a systematic
+  longitudinal study enrolling HIV-infected individuals in Switzerland. It is a collaboration
+  of all Swiss University Hospital infectious disease outpatient clinics, two large
+  cantonal hospitals, all with affiliated laboratories, and with affiliated smaller
+  hospitals and private physicians carrying for HIV patients. The Swiss Mother and
+  Child HIV Cohort Study (MoCHiV) is integrated into the SHCS.
 id: wwwshcsch
 identifiers:
 - id: openaire
@@ -46,8 +46,8 @@ owner:
   name: University Hospital of Zurich
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -82,3 +82,9 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00028954
+endpoints:
+- type: rest
+  url: https://www.shcs.ch/wp-json/
+- type: rest:posts
+  url: https://www.shcs.ch/wp-json/wp/v2/posts
+  version: '2'

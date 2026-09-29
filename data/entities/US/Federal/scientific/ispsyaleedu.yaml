@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,11 +14,11 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: The majority of digital content in the ISPS Data Archive currently consists of
-  social science research data from experiments, program files with the code for analyzing
-  these data, requisite documentation to use and understand the data, and associated files.
-  Access to the ISPS Data Archive is provided at no cost and is granted for scholarship and
-  research purposes only.
+description: The majority of digital content in the ISPS Data Archive currently consists
+  of social science research data from experiments, program files with the code for
+  analyzing these data, requisite documentation to use and understand the data, and
+  associated files. Access to the ISPS Data Archive is provided at no cost and is
+  granted for scholarship and research purposes only.
 id: ispsyaleedu
 identifiers:
 - id: openaire
@@ -39,8 +39,8 @@ owner:
   name: Yale University
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -66,3 +66,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00033319
+endpoints:
+- type: sitemap
+  url: https://isps.yale.edu/sitemap.xml

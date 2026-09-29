@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -48,8 +48,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - geology
@@ -71,3 +71,6 @@ topics:
   name: Inland Waters
   type: iso19115
 uid: cdi00024261
+endpoints:
+- type: sitemap
+  url: https://kgs.ku.edu/sitemap.xml

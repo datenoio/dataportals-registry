@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Ontario
 description: Public interactive GIS map for the Regional Municipality of Waterloo,
   linked from the Region Locator at gis.regionofwaterloo.ca.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/cfd1949151fd4713b00ff57844b4305d/data?f=json
 id: experiencearcgiscomwaterlooregion
 langs:
 - id: EN

@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: HU-NO
+      name: Nógrád
+description: Public GeoServer of the Ipoly Erdő forestry information system (ESZR),
+  with forest-compartment, road, and facility layers.
+id: eszr3ipolyerdohu
+langs:
+- id: HU
+  name: Hungarian
+link: https://eszr3.ipolyerdo.hu:6443/geoserver
+name: Ipoly Erdő ESZR GeoServer
+owner:
+  link: https://www.ipolyerdo.hu/
+  location:
+    country:
+      id: HU
+      name: Hungary
+    level: 30
+    subregion:
+      id: HU-NO
+      name: Nógrád
+  name: Ipoly Erdő Zrt.
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- commercial
+- forestry
+- geospatial
+- hungary
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+endpoints:
+- type: wms111
+  url: https://eszr3.ipolyerdo.hu:6443/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://eszr3.ipolyerdo.hu:6443/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://eszr3.ipolyerdo.hu:6443/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://eszr3.ipolyerdo.hu:6443/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://eszr3.ipolyerdo.hu:6443/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+uid: cdi00009503

@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: ArcGIS REST services of Brazil's energy research company, including biofuels,
+  liquid-fuel infrastructure, and planned hydropower maps.
+id: gisepeprd2epegovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://gisepeprd2.epe.gov.br/arcgis/rest/services
+name: EPE ArcGIS Server
+owner:
+  link: https://www.epe.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+  name: Empresa de Pesquisa Energética (EPE)
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- brazil
+- energy
+- geospatial
+- government
+- infrastructure
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
+uid: cdi00009253
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisepeprd2.epe.gov.br/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisepeprd2.epe.gov.br/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisepeprd2.epe.gov.br/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisepeprd2.epe.gov.br/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisepeprd2.epe.gov.br/arcgis/rest/services?f=geositemap

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -31,8 +31,8 @@ owner:
   name: Monitorul Oficial
   type: Central government
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - official gazette
@@ -42,3 +42,9 @@ topics:
   name: Justice, legal system and public safety
   type: eudatatheme
 uid: cdi00008157
+endpoints:
+- type: rest
+  url: https://monitoruloficial.ro/wp-json/
+- type: rest:posts
+  url: https://monitoruloficial.ro/wp-json/wp/v2/posts
+  version: '2'

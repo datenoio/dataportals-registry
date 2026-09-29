@@ -181,13 +181,25 @@ Regional challenge platforms (Zindi, AIcrowd, SIGNATE, and national Chinese hubs
 
 Directories of APIs (developer portals that list many APIs with docs and keys), not a CKAN Action API on an open-data site.
 
-There is no high-volume shared `software.id` for this type in `data/software/`. Use `custom` unless a named platform definition already exists. A CKAN/Socrata/OpenDataSoft site stays **Open data portal** even if it has an API.
+Use a named platform when the portal matches it. A CKAN, Socrata, or OpenDataSoft site stays **Open data portal** even if it has an API, except a CKAN site whose product is the API directory itself (Suomi.fi Liityntäkatalogi is `ckan` with `catalog_type: API Catalog`).
 
 **Confirm:** a browsable list of APIs is the product. Skip a single REST endpoint with no catalog.
 
 | Tool | Query |
 |------|-------|
 | Google | `"API catalog" OR "API directory" OR "developer portal" (datasets OR government)` plus a country name |
+
+## Azure API Management (`azureapim`) {#azureapim}
+
+Microsoft Azure API Management developer portal. Docs: [developer portal](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-developer-portal). `catalog_type` is **API Catalog**.
+
+**Confirm:** the HTML title contains `Microsoft Azure API Management - developer portal`. Hosts may be a custom domain or `*.developer.azure-api.net`. Register each public developer portal. Do not add each API operation as its own catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Microsoft Azure API Management - developer portal"` |
+| Censys | `web.endpoints.http.title: "Microsoft Azure API Management - developer portal"` |
+| FOFA | `title="Microsoft Azure API Management - developer portal"` |
 
 ## Data marketplaces (`marketplace/`)
 
@@ -214,6 +226,34 @@ Simple pages that list datasets without a full portal CMS (spreadsheet catalogs,
 ## General research repositories
 
 Broad institutional research repos that are not clearly Dataverse/DSpace/Invenio. Prefer a named `software.id` from [discovery-scientific.md](discovery-scientific.md) (including Islandora, Samvera, Haplo, Worktribe). If none match, `custom` and `catalog_type: General research repository` or Scientific data repository per the **primary** UI.
+
+## Squarespace (`squarespace`) {#squarespace}
+
+Squarespace hosted website builder; small research groups and foundations publish data and indicator pages as Squarespace sites (Kentucky Health Facts, Freedom on the Move, SAIS CARI Data).
+
+**Signals:** `Server: Squarespace` response header; `static1.squarespace.com` assets; `end of squarespace headers` HTML comment.
+
+**Confirm:** GET the data page and match the header or asset host. One record per site. Do not tag Squarespace marketing pages with no data content.
+
+| Tool | Query |
+|------|-------|
+| Censys | `web.endpoints.http.headers: "Squarespace"` |
+| FOFA | `server="Squarespace" && body="data"` |
+| FOFA | `body="static1.squarespace.com" && body="dataset"` |
+
+## Jekyll (`jekyll`) {#jekyll}
+
+Jekyll static site generator, often on GitHub Pages; research projects publish dataset catalogs as Jekyll sites (Open Graph Benchmark, Therapeutics Data Commons, Gene Ontology, BridgeDb). Source: [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll).
+
+**Signals:** `begin jekyll seo tag` / `end jekyll seo tag` HTML comments; generator meta `Jekyll vX.Y.Z`.
+
+**Confirm:** GET the catalog page and match the comments or generator meta. One record per project site. Do not tag custom repository applications that only keep a Jekyll docs frame (for example a Chaise/PhysioNet app behind a Jekyll home).
+
+| Tool | Query |
+|------|-------|
+| Google | `"jekyll seo tag" (datasets OR "data catalog")` |
+| Censys | `web.endpoints.http.body: "jekyll seo tag"` |
+| FOFA | `body="jekyll seo tag" && body="dataset"` |
 
 ## Custom software (`custom`) {#custom}
 

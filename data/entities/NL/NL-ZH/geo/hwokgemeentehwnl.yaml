@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Zuid-Holland
 description: Public KaartViewer of Gemeente Hoeksche Waard, including the climate
   stress test and public-space maps.
+endpoints:
+- type: kaartviewer:menu
+  url: https://hwok.gemeentehw.nl/admin/rest/kaartviewerapi/menu
 id: hwokgemeentehwnl
 langs:
 - id: NL

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,11 +14,11 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: WHOI is the world's leading non-profit oceanographic research organization. WHOI
-  maintains unparalleled depth and breadth of expertise across a range of oceanographic research
-  areas. Institution scientists and engineers work collaboratively within and across six research
-  departments to advance knowledge of the global ocean and its fundamental importance to other
-  planetary systems.
+description: WHOI is the world's leading non-profit oceanographic research organization.
+  WHOI maintains unparalleled depth and breadth of expertise across a range of oceanographic
+  research areas. Institution scientists and engineers work collaboratively within
+  and across six research departments to advance knowledge of the global ocean and
+  its fundamental importance to other planetary systems.
 id: wwwwhoiedu
 identifiers:
 - id: openaire
@@ -39,8 +39,8 @@ owner:
   name: Woods Hole Oceanographic Institution
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -78,3 +78,6 @@ topics:
   name: Environment
   type: iso19115
 uid: cdi00033804
+endpoints:
+- type: sitemap
+  url: https://www.whoi.edu/sitemap.xml

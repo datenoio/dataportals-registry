@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Alberta
 description: Village of Nampa public ArcGIS Experience Builder web map operated with
   Mackenzie Municipal Services Agency for parcels and related GIS layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/af0b84c9419841db8fe2bf0155d5027c/data?f=json
 id: experiencearcgiscomnampa
 langs:
 - id: EN

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -19,6 +19,11 @@ coverage:
       name: Östergötlands län [SE-05]
 description: Database of computationally derived materials properties maintained at
   Linköping University.
+endpoints:
+- type: rest
+  url: https://optimade.openmaterialsdb.se/v1/info
+- type: rest
+  url: https://optimade.openmaterialsdb.se/v1/structures
 id: openmaterialsdbse
 langs:
 - id: EN
@@ -49,8 +54,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: httk
+  name: High-Throughput Toolkit
 status: active
 tags:
 - scientific

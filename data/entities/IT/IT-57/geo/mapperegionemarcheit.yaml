@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,7 @@ coverage:
     subregion:
       id: IT-57
       name: Marche
-description: Professional map viewer of Regione Marche (Geomarche 2032 technical edition)
+description: TerriaJS map viewer of Regione Marche (Geomarche 2032 technical edition)
   for territorial and infrastructure layers. The harvestable ArcGIS REST catalog is
   recorded separately.
 id: mapperegionemarcheit
@@ -49,8 +49,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: terria
+  name: Terria
 status: active
 tags:
 - geospatial
@@ -72,3 +72,6 @@ topics:
   name: Structure
   type: iso19115
 uid: cdi00025023
+endpoints:
+- type: terria:config
+  url: https://mappe.regione.marche.it/config.json

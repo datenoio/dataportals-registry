@@ -1,0 +1,65 @@
+category: Open data portal
+subtype: managed_saas_service
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'No'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: azureapim
+name: Azure API Management
+website: https://azure.microsoft.com/products/api-management
+description: Microsoft Azure API Management developer portal. Each installation
+  lists APIs with documentation and subscription signup. Catalog records use
+  catalog_type API Catalog. The software category is Open data portal because
+  the software schema has no API Catalog category. Register each public
+  developer portal, not each API operation.
+owner:
+  name: Microsoft
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://azure.microsoft.com/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  openapi: 'Yes'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per item
+  supports_licenses: 'No'
+storage_type: Structured
+type: Software
+documentation_url: https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-developer-portal
+license:
+  type: Proprietary
+  url: https://azure.microsoft.com/products/api-management
+export_formats:
+- JSON
+- OpenAPI
+capabilities:
+- Developer portal API list
+- OpenAPI documentation
+- Subscription keys
+last_updated: '2026-09-27T00:00:00Z'

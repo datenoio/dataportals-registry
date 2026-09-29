@@ -1,0 +1,66 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: mediatum
+website: https://mediatum.github.io/
+name: mediaTUM
+description: mediaTUM is open-source Python software for publishing documents, images,
+  video, and research data. It is the media and publication server of the Technical
+  University of Munich and is also installed by other German university libraries.
+owner:
+  name: University Library of the Technical University of Munich
+  location:
+    country:
+      id: DE
+      name: Germany
+logo_url: https://mediatum.ub.tum.de/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Raw
+type: Software
+repository_url: https://github.com/mediatum/mediatum
+documentation_url: https://mediatum.readthedocs.io
+version: '2026.09'
+license:
+  type: AGPL-3.0
+  url: https://www.gnu.org/licenses/agpl-3.0.html
+export_formats:
+- HTML
+- JSON
+- PDF
+capabilities:
+- Document and media publishing
+- Collection search
+- Rights per object
+changelog_url: https://github.com/mediatum/mediatum/tags
+last_updated: '2026-09-26T19:40:00Z'

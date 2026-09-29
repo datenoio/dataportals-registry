@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: PT
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Country Code: PT
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 4
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
 
@@ -29,6 +29,17 @@ Field: endpoints
 Current Value: {'software_id': 'geocortex', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geocortex' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STRAPI]
+Count: 1
+Priority: MEDIUM
+
+File: PT/Federal/indicators/odslocalpt.yaml
+Record ID: odslocalpt
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STRAPI
+Field: endpoints
+Current Value: {'software_id': 'strapi', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='strapi' is marked as API-capable in software definitions
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS]
 Count: 1
 Priority: MEDIUM
@@ -45,4 +56,5 @@ Suggested Action: Add at least one endpoint because software.id='wordpress' is m
 
 MISSING_RIGHTS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOCORTEX: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STRAPI: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS: 1 issue

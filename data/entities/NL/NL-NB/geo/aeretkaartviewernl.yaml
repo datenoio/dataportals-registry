@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
       name: Western Europe
 description: Public KaartViewer of Aeret with open drone airspace, NOTAM, and infrastructure
   layers for the Netherlands.
+endpoints:
+- type: kaartviewer:menu
+  url: https://aeret.kaartviewer.nl/admin/rest/kaartviewerapi/menu
 id: aeretkaartviewernl
 langs:
 - id: NL

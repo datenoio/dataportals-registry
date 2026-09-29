@@ -18,9 +18,8 @@ coverage:
     subregion:
       id: DE-SN
       name: Sachsen
-description: NFDI4Health Local Data Hub of the Centre for Clinical Trials Leipzig (ZKS).
-  FAIRDOM-SEEK catalog for clinical-trial protocols, datasets, and study
-  metadata.
+description: NFDI4Health Local Data Hub of the Centre for Clinical Trials Leipzig
+  (ZKS). FAIRDOM-SEEK catalog for clinical-trial protocols, datasets, and study metadata.
 endpoints:
 - type: rest
   url: https://ldh.zks.uni-leipzig.de/api
@@ -56,10 +55,13 @@ tags:
 - FAIR
 - SEEK
 topics:
-- id: HEAL
-  name: Health
-  type: eudatatheme
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
 uid: cdi00006820

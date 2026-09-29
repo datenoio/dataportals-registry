@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Ontario
 description: Town of Carleton Place public GIS viewer for parcels, zoning, imagery,
   and related municipal layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/5fa1554c17d24925bf2a1862ed0a5075/data?f=json
 id: experiencearcgiscomcarletonplace
 langs:
 - id: EN

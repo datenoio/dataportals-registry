@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Geospatial data portal of the Florida Department of Agriculture and Consumer
+  Services.
+id: geodatafdacsgov
+langs:
+- id: EN
+  name: English
+link: https://geodata.fdacs.gov/
+name: Florida Department of Agriculture and Consumer Services Geospatial Data Portal
+owner:
+  link: https://www.fdacs.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: Florida Department of Agriculture and Consumer Services
+  type: Regional government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- ArcGIS
+- GIS
+- agriculture
+- geospatial
+- government
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+uid: cdi00008708
+endpoints:
+- type: dcatap201
+  url: https://geodata.fdacs.gov/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://geodata.fdacs.gov/api/feed/dcat-us/1.1.json
+- type: ogcrecordsapi
+  url: https://geodata.fdacs.gov/api/search/v1
+- type: dcatus11
+  url: https://geodata.fdacs.gov/data.json

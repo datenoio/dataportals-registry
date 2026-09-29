@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,9 +14,10 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: STScI's innovative ways to share Hubble's remarkable discoveries with the public.HubbleSite
-  prepares and disseminates the photographs and animations seen in the news... as well as
-  posters, slide shows, exhibits, and educational products in print and electronic formats.
+description: STScI's innovative ways to share Hubble's remarkable discoveries with
+  the public.HubbleSite prepares and disseminates the photographs and animations seen
+  in the news... as well as posters, slide shows, exhibits, and educational products
+  in print and electronic formats.
 id: sciencenasagov
 identifiers:
 - id: openaire
@@ -37,8 +38,8 @@ owner:
   name: Space Telescope Science Institute
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -55,3 +56,6 @@ topics:
   name: Education, culture and sport
   type: eudatatheme
 uid: cdi00033484
+endpoints:
+- type: sitemap
+  url: https://science.nasa.gov/sitemap.xml

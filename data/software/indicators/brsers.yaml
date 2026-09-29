@@ -1,0 +1,60 @@
+category: Indicators catalog
+subtype: indicators_data_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'No'
+  topics: 'Yes'
+has_api: 'No'
+has_bulk: 'Yes'
+id: brsers
+name: BRS Electronic Reporting System Dashboards
+website: https://ers.basel.int/eRSodataReports2/ReportBC_DashBoard.html
+description: Shared reporting dashboards of the Secretariat of the Basel, Rotterdam
+  and Stockholm Conventions, built on the BRS Electronic Reporting System (eRS).
+  Each convention runs the same eRSodataReports dashboard application
+  (/eRSodataReports2/...DashBoard.html) over its national-report submissions, with
+  filters by year, region, and country and Excel downloads. Live instances cover the
+  Basel Convention (ers.basel.int) and the Stockholm Convention (ers.pops.int).
+owner:
+  name: Secretariat of the Basel, Rotterdam and Stockholm Conventions
+  location:
+    country:
+      id: CH
+      name: Switzerland
+logo_url: https://www.brsmeas.org/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'No'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Open
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+capabilities:
+- National report dashboards
+- Filter by year, region, and country
+- Excel downloads
+export_formats:
+- Excel
+last_updated: '2026-09-28T00:00:00Z'

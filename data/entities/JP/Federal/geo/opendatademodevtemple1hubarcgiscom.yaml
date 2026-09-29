@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -62,3 +62,6 @@ topics:
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00003053
+endpoints:
+- type: arcgishubapi
+  url: https://opendata-demo-dev-temple1.hub.arcgis.com/api/v3/datasets

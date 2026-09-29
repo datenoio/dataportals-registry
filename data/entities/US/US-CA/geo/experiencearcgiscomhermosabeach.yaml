@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: California
 description: City of Hermosa Beach public ArcGIS Experience Builder GIS viewer for parcels
   and related city layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/6491b56b0f6d4551965572836982165f/data?f=json
 id: experiencearcgiscomhermosabeach
 langs:
 - id: EN

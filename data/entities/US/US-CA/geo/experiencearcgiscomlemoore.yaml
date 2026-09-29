@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: US-CA
       name: California
 description: City of Lemoore public ArcGIS Experience Builder zoning map.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/2458760b4a5641d6b88eff29ba5b4c03/data?f=json
 id: experiencearcgiscomlemoore
 langs:
 - id: EN

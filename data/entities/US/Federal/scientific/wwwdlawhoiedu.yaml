@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,10 +14,11 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: The Data Library and Archives (DLA) is part of the joint library system supported
-  by the Marine Biological Laboratory and the Woods Hole Oceanographic Institution. The DLA
-  holds collections of administrative records, photographs, scientists' data and papers, film
-  and video, historical instruments, as well as books, journals and technical reports.
+description: The Data Library and Archives (DLA) is part of the joint library system
+  supported by the Marine Biological Laboratory and the Woods Hole Oceanographic Institution.
+  The DLA holds collections of administrative records, photographs, scientists' data
+  and papers, film and video, historical instruments, as well as books, journals and
+  technical reports.
 id: wwwdlawhoiedu
 identifiers:
 - id: openaire
@@ -38,8 +39,8 @@ owner:
   name: Woods Hole Oceanographic Institution
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -74,3 +75,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00033629
+endpoints:
+- type: sitemap
+  url: https://www.dla.whoi.edu/sitemap.xml

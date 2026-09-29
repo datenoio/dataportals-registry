@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Older public ArcGIS Server 10.5 on port 6443 with Talajinfo, Tokaj soil
+  grids, and DOSoReMI services that are not on the current /server/rest/services directory.
+id: mapsrissachu6443
+langs:
+- id: HU
+  name: Hungarian
+link: https://maps.rissac.hu:6443/arcgis/rest/services
+name: Institute for Soil Sciences legacy ArcGIS Server
+owner:
+  link: https://atk.hun-ren.hu
+  location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+  name: HUN-REN Centre for Agricultural Research, Institute for Soil Sciences
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- arcgisserver
+- geoportal
+- geospatial
+- GIS
+- Hungary
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.rissac.hu:6443/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.rissac.hu:6443/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.rissac.hu:6443/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.rissac.hu:6443/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.rissac.hu:6443/arcgis/rest/services?f=geositemap
+uid: cdi00009305

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Podlaskie
 description: Municipal geoportal of Łomża on the Geo-System e-mapa.net platform, publishing
   cadastral, address, and spatial planning data.
+endpoints:
+- type: emapa:init
+  url: https://mlomza.e-mapa.net/application/system/init.php
 id: mlomzaemapanet
 langs:
 - id: PL

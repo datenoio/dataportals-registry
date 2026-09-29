@@ -1,0 +1,56 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: API Catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Opplysningsrådet for veitrafikken developer portal for Norwegian vehicle
+  registration, ownership-transfer, and vehicle-specification APIs.
+id: dataofvno
+langs:
+- id: 'NO'
+  name: Norwegian
+- id: EN
+  name: English
+link: https://data.ofv.no/
+name: OFV vehicle data APIs
+owner:
+  link: https://ofv.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: Opplysningsrådet for veitrafikken
+  type: Business
+properties:
+  is_national: false
+software:
+  id: azureapim
+  name: Azure API Management
+status: active
+tags:
+- transport
+- vehicles
+- API
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00010009
+endpoints:
+- type: sitemap
+  url: https://data.ofv.no/sitemap.xml

@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: The Crystal Structure Depot at FIZ Karlsruhe provides access to published crystal-structure
-  data and related crystallographic information services.
+description: The Crystal Structure Depot at FIZ Karlsruhe provides access to published
+  crystal-structure data and related crystallographic information services.
 id: wwwfizkarlsruhede
 identifiers:
 - id: openaire
@@ -38,8 +38,8 @@ owner:
   name: FIZ Karlsruhe – Leibniz Institute for Information Infrastructure
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -50,3 +50,6 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00029699
+endpoints:
+- type: sitemap
+  url: https://www.fiz-karlsruhe.de/sitemap.xml

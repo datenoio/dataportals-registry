@@ -1,0 +1,56 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: CoLiTec corpus infrastructure at DIT Forlì (University of Bologna) serving
+  the WaCky, acWaC, la Repubblica, EPIC, Bulletin and GeLeCo corpora through a NoSketch
+  Engine interface; access requires HTTP Basic credentials.
+id: corporadipintrait
+langs:
+- id: IT
+  name: Italian
+- id: EN
+  name: English
+link: https://corpora.dipintra.it/public/run.cgi
+name: CoLiTec Corpora at DIT Forli (NoSketch Engine)
+owner:
+  link: https://www.unibo.it/
+  location:
+    country:
+      id: IT
+      name: Italy
+  name: University of Bologna
+  type: Academy
+software:
+  id: nosketch
+  name: NoSketch Engine
+status: active
+tags:
+- scientific
+- language resources
+- corpora
+- linguistics
+- WaCky
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00010072
+endpoints:
+- type: search
+  url: https://corpora.dipintra.it/public/run.cgi

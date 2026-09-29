@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: CLS GeoServer on the Copernicus Marine host publishing traffic-separation
+  schemes, MARPOL Annex VI emission-control areas, aids to navigation, and bathymetry.
+id: geoservermarinecopernicuseu
+langs:
+- id: EN
+  name: English
+link: https://geoserver.marine.copernicus.eu/geoserver
+name: Copernicus Marine CLS GeoServer
+owner:
+  link: https://marine.copernicus.eu/
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: Copernicus
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- academic
+- european-union
+- geospatial
+- marine
+- traffic
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+endpoints:
+- type: wms111
+  url: https://geoserver.marine.copernicus.eu/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserver.marine.copernicus.eu/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoserver.marine.copernicus.eu/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geoserver.marine.copernicus.eu/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoserver.marine.copernicus.eu/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+uid: cdi00009559

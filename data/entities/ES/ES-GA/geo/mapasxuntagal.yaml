@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: ES-GA
       name: Galicia [Galicia]
-description: Public geoportal of the Spatial Data Infrastructure of Galicia (IDEG), providing
-  map access to regional geographic information.
+description: Public geoportal of the Spatial Data Infrastructure of Galicia (IDEG),
+  providing map access to regional geographic information.
 id: mapasxuntagal
 langs:
 - id: ES
@@ -42,8 +42,8 @@ properties:
   has_doi: false
   is_national: false
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - geospatial
@@ -53,3 +53,6 @@ topics:
   name: Location
   type: iso19115
 uid: cdi99995605
+endpoints:
+- type: sitemap
+  url: https://mapas.xunta.gal/sitemap.xml

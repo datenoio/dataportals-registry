@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: TH-42
       name: Loei
 description: Public municipal GIS of Loei Town Municipality on ArcGIS Experience Builder.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/f9373b8ce3c4470585da4ead08f339af/data?f=json
 id: experiencearcgiscomloei
 langs:
 - id: TH

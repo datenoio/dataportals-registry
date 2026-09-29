@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: California
 description: Mendocino County public ArcGIS Experience Builder GIS map with parcels, zoning,
   and related county layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/88d91d2f59bb4ab49231e4ab81e32c8f/data?f=json
 id: experiencearcgiscommendocino
 langs:
 - id: EN

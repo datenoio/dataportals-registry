@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Ontario
 description: County of Perth public Lite GIS viewer for parcels and related geographic
   features at the county and member municipal level.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/8a2c876bab7c414fa5ef80ca686f5806/data?f=json
 id: experiencearcgiscomperthcounty
 langs:
 - id: EN

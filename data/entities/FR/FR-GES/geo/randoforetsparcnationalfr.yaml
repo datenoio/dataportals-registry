@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,10 @@ coverage:
       id: '155'
       name: Western Europe
 description: Geotrek-rando catalog of outdoor routes in Parc national de forêts.
+endpoints:
+- type: geotrek:trek
+  url: https://admin-geotrek.forets-parcnational.fr/api/v2/trek/
+  version: '2'
 id: randoforetsparcnationalfr
 langs:
 - id: FR

@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DZ
+      name: Algeria
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: ForestVigi GeoServer of forest-management layers for Algeria.
+id: mapsforestvigicom
+langs:
+- id: FR
+  name: French
+link: https://maps.forestvigi.com/geoserver
+name: ForestVigi GeoServer
+owner:
+  link: https://www.forestvigi.com/
+  location:
+    country:
+      id: DZ
+      name: Algeria
+  name: ForestVigi
+  type: Business
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- algeria
+- commercial
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009615
+endpoints:
+- type: wms111
+  url: https://maps.forestvigi.com/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://maps.forestvigi.com/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://maps.forestvigi.com/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://maps.forestvigi.com/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://maps.forestvigi.com/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

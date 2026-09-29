@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: LT-VL
+      name: Vilniaus apskritis
+description: Public ArcGIS Server catalogue of UAB Grinda snow-pole and street-maintenance
+  map services in Vilnius.
+id: gisgrindalt
+langs:
+- id: LT
+  name: Lithuanian
+link: https://gis.grinda.lt/arcgis/rest/services
+name: Grinda ArcGIS REST
+owner:
+  link: https://www.grinda.lt/
+  location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 30
+    subregion:
+      id: LT-VL
+      name: Vilniaus apskritis
+  name: UAB „Grinda“
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- municipal services
+- spatial data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:portals:self
+  url: https://gis.grinda.lt/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://gis.grinda.lt/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.grinda.lt/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.grinda.lt/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.grinda.lt/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.grinda.lt/arcgis/rest/services?f=geositemap
+uid: cdi00009084

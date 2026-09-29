@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: TH-13
       name: Pathum Thani
 description: Public municipal GIS of Rangsit City Municipality on ArcGIS Experience Builder.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/9a52a05c2c854904a4933b25b2e94e97/data?f=json
 id: experiencearcgiscomrangsit
 langs:
 - id: TH

@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -72,3 +72,14 @@ topics:
   name: Environment
   type: iso19115
 uid: cdi00004850
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.tltb.com.fj/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.tltb.com.fj/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.tltb.com.fj/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.tltb.com.fj/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.tltb.com.fj/arcgis/rest/services?f=geositemap

@@ -105,12 +105,27 @@ Filter exports on `software.id = 'kosis'`. Harvest each registered host as its o
 There is no anonymous OpenAPI list without a service key. Harvest the public **table / indicator tree** the portal lists. Grain is the statistical table or indicator, not each year cell or OpenAPI observation query.
 
 **Keep:** KOSIS **tables / indicators** on the registered host.
-**Drop:** local-government `/stat/index.do` CMS skins, 지표누리 (`index.go.kr`), SGIS, and OpenAPI calls that require a service key as if they were the catalog.
+**Drop:** local-government `/stat/index.do` CMS skins, 지표누리 (`index.go.kr`), SGIS, SOPORTAL, and OpenAPI calls that require a service key as if they were the catalog.
 
 ```text
 GET https://kosis.kr/
 GET https://kosis.kr/bukhan/
 GET {host}/statHtml/statHtml.do
+```
+
+## SOPORTAL (`soportal`) {#soportal}
+
+Filter exports on `software.id = 'soportal'`. Harvest each registered host as its own catalog. The application is mounted under a context path (`/portal/`, `/research/portal/`, `/r-one/portal/`).
+
+There is no anonymous OpenAPI list without a service key. Harvest the public **tables / indicators** listed by `{prefix}/portal/stat/` (`easyStatPage.do`, `orgStatPage.do`, `nameStatPage.do`) and `{prefix}/portal/data/dataset/searchDatasetPage.do`. Grain is the statistical table or indicator, not each year cell or OpenAPI observation.
+
+**Keep:** SOPORTAL **tables / indicators** on the registered host.
+**Drop:** OpenAPI calls that require a service key, bulletin pages, chart-only dashboards, KOSIS `/statHtml/` tenants, and Wiseitech `commonness.js` hosts that use `mainPage.do`.
+
+```text
+GET {prefix}/portal/main/indexPage.do
+GET {prefix}/portal/stat/easyStatPage.do
+GET {prefix}/portal/stat/orgStatPage.do
 ```
 
 ## e-Stat (`estat`) {#estat}
@@ -143,6 +158,12 @@ GET https://host/data/1-1-1.json
 Language prefixes (`/en/data/…`) vary. Harvest every indicator id the site publishes, not only `1-1-1`. Drop goal/target **pages** without a data file.
 
 **Keep:** OpenSDG **indicator** JSON. **Drop:** goal/target **pages** without a data file.
+
+## Klimadashboard Münster (`klimadashboardmuenster`) {#klimadashboardmuenster}
+
+One harvest scope per municipal host. Indicator grain is the published **tile / indicator series**, not each chart interaction. Drop the Next.js shell and the national product at klimadashboard.de.
+
+**Keep:** published **indicator** series. **Drop:** UI chrome and Klimadashboard Deutschland.
 
 ## SDG Index (`sdgindex`) {#sdgindex}
 
@@ -184,6 +205,19 @@ Some installs nest the API under `/databrowser/api/core/` (Astat, INPS) or a pat
 **Keep:** Istat Data Browser **dataflows**. **Drop:** hub chrome, news, dashboards, and observation cubes.
 
 **Drop** observation cubes unless the user asked for data files. Stop on `401`/`403`. Grain: [harvest-protocols.md](harvest-protocols.md#sdmx).
+
+## Fusion Data Browser (`fusiondatabrowser`) {#fusiondatabrowser}
+
+Filter exports on `software.id = 'fusiondatabrowser'`. One harvest scope per public browser (the UI at `/FusionDataBrowser/`). List SDMX **dataflows** from the attached Fusion Edge Server or Fusion Registry. Do not harvest a structural Fusion Registry (`fusionregistry`) that has no Data Browser UI.
+
+```text
+GET https://host/FusionEdgeServer/ws/public/sdmxapi/rest/dataflow/all/all/latest?detail=allstubs
+GET https://host/FusionEdgeServer/sdmx/v2/
+```
+
+Some installs mount the API only under `/FusionEdgeServer/sdmx/v2/data/dataflow/`. Prefer `endpoints[]`. Keep dataflow id + name. Drop observation cubes, charts, and browser chrome unless the user asked for data files. Grain: [harvest-protocols.md](harvest-protocols.md#sdmx).
+
+**Keep:** Fusion Data Browser **dataflows**. **Drop:** observation cubes, charts, and Fusion Registry structure-only installs.
 
 ## Swing (`swing`) {#swing}
 
@@ -244,6 +278,31 @@ Type `/indicators/v1.0/indicators` as `rest`. Keep **indicators** and **indicato
 
 **Keep:** JSON-stat **indicators** and indicator systems. **Drop:** institute CMS chrome and time-series observation cubes.
 
+## Idescat (`idescat`) {#idescat}
+
+Filter exports on `software.id = 'idescat'`. One harvest scope per product family (tables, Emex, ODS).
+
+```text
+GET https://api.idescat.cat/emex/v1/nodes.json?lang=en
+GET https://api.idescat.cat/taules/v2
+```
+
+Type the `api.idescat.cat` endpoints as `rest`. Keep indicator tables (`/taules/`) and municipal-profile indicators (`/emex/`) from the JSON / JSON-stat API. Drop the institute CMS pages and per-municipality HTML views.
+
+**Keep:** indicator tables and Emex indicators via the API. **Drop:** CMS chrome and per-municipality HTML pages.
+
+## INEbase (`inebase`) {#inebase}
+
+Filter exports on `software.id = 'inebase'`. One harvest scope for the operations catalog.
+
+```text
+GET https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES
+```
+
+The Tempus3 API lists statistical operations; each operation expands to tables in the jaxiT3 browser (`/jaxiT3/`). Keep statistical operations and tables as the dataset grain. Drop INE website CMS pages, press releases, and the NSDP (separate catalog, `imfnsdp`).
+
+**Keep:** statistical operations and tables (Tempus3 / jaxiT3). **Drop:** INE CMS chrome, press releases, NSDP pages.
+
 ## Cancer-Rates.info (`cancerrates`) {#cancerrates}
 
 Filter exports on `software.id = 'cancerrates'`. There is no anonymous REST list API.
@@ -267,6 +326,14 @@ Filter exports on `software.id = 'virtuallmi'`. One harvest scope per state tena
 Keep public **occupation / industry / area profile** tables the VLMI UI lists. Branded `/vosnet/` hosts (Colorado LMI Gateway) are the same grain. Drop job-board postings, case-management VOS modules, and state LMI sites that are not VLMI. Stop on `401`/`403`.
 
 **Keep:** public occupation / industry / area **profile tables**. **Drop:** job-board postings, VOS case-management, and non-VLMI state LMI sites.
+
+## Cascade CMS (`cascadecms`) {#cascadecms}
+
+Filter exports on `software.id = 'cascadecms'`. One harvest scope per state portal.
+
+There is no data API; pages are CMS-published HTML. Keep the public **indicator / data tables and publication pages** the portal lists (LAUS, QCEW, OEWS, projections, area profiles). Grain is the published table or report page, not each navigation or news item. Drop CMS chrome (news, carousel, contact pages) and embedded third-party dashboards (Tableau iframes) as separate records. Stop on `401`/`403`.
+
+**Keep:** public indicator / data **tables and report pages**. **Drop:** CMS chrome, news items, and embedded third-party dashboards.
 
 ## CityViz (`cityviz`) {#cityviz}
 
@@ -316,6 +383,14 @@ There is no anonymous list API. Keep the public **indicators / maps / territory 
 
 **Keep:** public **indicators / maps / territory reports**. **Drop:** commune polygons, exported PNG, geoclip.fr marketing, and login/admin.
 
+## GINES (`gines`) {#gines}
+
+Filter exports on `software.id = 'gines'`. The public Bern atlas is the harvest scope. Login-only cantonal GINES tenants are out of scope.
+
+Keep the **indicators and territorial views** the public atlas lists. Grain is the indicator, not each commune polygon or chart image. Drop the GINES login shell and `gines.ch` / `gines.biz` marketing. Discovery: [discovery-indicators.md](discovery-indicators.md#gines).
+
+**Keep:** public atlas **indicators and territorial views**. **Drop:** login-only tenants, commune polygons, and product marketing.
+
 ## InstantAtlas (`instantatlas`) {#instantatlas}
 
 Filter exports on `software.id = 'instantatlas'`. One harvest scope per public atlas/report.
@@ -354,7 +429,20 @@ Filter exports on `software.id = 'imonitoring'`. One harvest scope per regional 
 
 Keep public **budget / socio-economic indicator views** and the open-data register the portal lists. Grain is the report, constructor cube, or dataset, not each municipality row or infographic frame. Drop the national comparison tree as extra catalogs, login/admin, and non-Krista open-budget CMS homes.
 
-**Keep:** public **budget / socio-economic views** and listed open-data files. **Drop:** iminfin.ru region rows as separate catalogs, login/admin, and non-Krista open-budget CMS.
+**Keep:** public **budget / socio-economic views** and listed open-data files. **Drop:** iminfin.ru region rows as separate catalogs, login/admin, and non-Krista open-budget CMS. Zabaykalsky and other EB/GZW portals are [KS Open Budget](#ksopenbudget).
+
+## KS Open Budget (`ksopenbudget`) {#ksopenbudget}
+
+Filter exports on `software.id = 'ksopenbudget'`. One harvest scope per regional or municipal finance portal.
+
+Keep public **budget indicator pages** and the open-data register the portal lists (`/opendata/`, `list.csv`). Grain is the indicator table or dataset passport, not each municipality row or budget-law PDF.
+
+**Keep:** budget indicator views and listed open-data files. **Drop:** news, login/admin, and iMonitoring (`ifinmon.ru`) portals.
+
+```text
+GET https://host/
+GET https://host/opendata/
+```
 
 ## SDMX-RI (`sdmxri`) {#sdmxri}
 
@@ -392,6 +480,16 @@ GET https://host/indicator/index/alphabetical
 ```
 
 
+## Envista Web (`envista`) {#envista}
+
+Filter exports on `software.id = 'envista'`. Public station map and report downloads. The session API (`POST /Account/GetApiFromBackToken`, then `POST /api`) is not a GET list.
+
+```text
+GET https://host/
+```
+
+**Keep:** monitoring stations and published report files. **Drop:** hourly measurement rows, guest session tokens, and the admin Web Manager. One agency network = one harvest scope. Stop on `401`/`403`.
+
 ## Fingertips (`fingertips`) {#fingertips}
 
 Filter exports on `software.id = 'fingertips'`. One harvest scope for the national England hub.
@@ -404,6 +502,31 @@ Filter exports on `software.id = 'fingertips'`. One harvest scope for the nation
 ```text
 GET https://fingertips.phe.org.uk/api/profiles
 ```
+
+## Nomis (`nomis`) {#nomis}
+
+Filter exports on `software.id = 'nomis'`. One harvest scope for the national UK hub. API help: [www.nomisweb.co.uk/api/v01/help](https://www.nomisweb.co.uk/api/v01/help).
+
+List datasets from the SDMX-JSON dataset definition endpoint; each `keyfamily` is one dataset. Grain is the dataset, not each geography or time value.
+
+```text
+GET https://www.nomisweb.co.uk/api/v01/dataset/def.sdmx.json
+```
+
+**Keep:** Nomis **datasets** (keyfamilies). **Drop:** per-geography or per-time-series extractions as extra datasets, the ONS website (ons.gov.uk), and third-party dashboards embedding Nomis tables.
+
+## StatsWales (`statswales`) {#statswales}
+
+Filter exports on `software.id = 'statswales'`. One harvest scope for the national Welsh hub. API docs (OAS 3.1): [api.stats.gov.wales](https://api.stats.gov.wales/v1/docs/).
+
+The API root returns the published dataset list as JSON `data` (id, title, first_published_at, last_updated_at); `/topic` returns the bilingual topic tree. Grain is the dataset, not each dimension value.
+
+```text
+GET https://api.stats.gov.wales/v1/
+GET https://api.stats.gov.wales/v1/topic
+```
+
+**Keep:** StatsWales **datasets**. **Drop:** per-dimension filtered views as extra datasets and the retired `open.statswales.gov.wales` OData endpoints (shut down August 2024).
 
 ## DHIS2 (`dhis2`) {#dhis2}
 
@@ -455,6 +578,8 @@ List **aggregates / tables** from the IBGE servicodados API (JSON, often gzip). 
 GET https://servicodados.ibge.gov.br/api/v3/agregados
 ```
 
+Type that URL as `sidra:agregados`.
+
 ## FENIX (`fenix`) {#fenix}
 
 Filter exports on `software.id = 'fenix'`. One harvest scope per public FENIX app (FAOSTAT, AMIS, AIDmonitor, DAD-IS, WIEWS, GIFT), not per CountrySTAT dataset dumped into FAO CKAN.
@@ -469,6 +594,24 @@ Keep **domains / datasets** from that JSON. Observation queries (`/faostat/api/v
 
 **Keep:** FENIX **domains / datasets** (FAOSTAT groupsanddomains or the public UI list). **Drop:** observation cubes, dead CountrySTAT hosts, and GitHub UI repos.
 
+## FPMA Tool (`fpmatool`) {#fpmatool}
+
+FAO GIEWS food-price dashboards; global instance at `fpma.fao.org/giews/fpmat4/global/` plus national instances. No anonymous list API — harvest the public indicator/series list from the UI selectors, then stop.
+
+**Keep:** monthly price **series** by country, market, and commodity (the indicator grain). **Drop:** chart images, GIEWS report PDFs, and aggregate map layers. One country instance = one harvest scope; do not merge the global instance with national ones.
+
+## Global Cancer Observatory (`gco`) {#gco}
+
+IARC/WHO cancer indicators (Cancer Today / Tomorrow / Over Time on gco.iarc.fr and gco.iarc.who.int). No anonymous list API — harvest the public indicator table for the chosen scope from the UI, then stop.
+
+**Keep:** GLOBOCAN **indicator series** (incidence, mortality, prevalence) by country, cancer type, age, sex. **Drop:** fact-sheet PDFs, methodology notes, and per-cancer infographic pages. One GCO tool scope = one harvest scope.
+
+## BRS Electronic Reporting System Dashboards (`brsers`) {#brsers}
+
+Basel/Stockholm convention national-report dashboards (`/eRSodataReports2/...DashBoard.html`). No public API — harvest the dashboard table for the selected filters or the Excel export.
+
+**Keep:** national-report **indicator rows** by party, year, and report section. **Drop:** convention text pages and meeting documents. One convention dashboard = one harvest scope.
+
 ## DataWarehousePro (`datawarehousepro`) {#datawarehousepro}
 
 ```text
@@ -479,6 +622,17 @@ GET https://app.datawarehousepro.com/guest/export/{tenant}
 Keep **databanks / series catalogs** for that tenant. Drop admin paste-from-Excel UI and other tenants on the same host. One portal = one harvest scope.
 
 **Keep:** tenant **databanks / series catalogs**. **Drop:** admin paste-from-Excel UI and other tenants on the same host.
+
+## LiveShop (`liveshop`) {#liveshop}
+
+The `/shop` sector/category/table tree plus the `/data-browser` views are the catalog. There is no verified anonymous list API — stop rather than scraping every chart. Drop `/shop/meta-data` definitions prose and `/shop/data-calendar` schedule pages as catalog records, but use them to confirm the platform. One institutional tenant = one harvest scope.
+
+**Keep:** **sector / category / table** time-series entries listed under `/shop` and rendered in `/data-browser`.
+**Drop:** meta-data definitions prose, data-calendar pages, and country-profile marketing pages.
+
+```text
+GET https://host/shop
+```
 
 ## IMF National Summary Data Page (`imfnsdp`) {#imfnsdp}
 
@@ -797,7 +951,7 @@ Tableau Public/Server vizzes are per-visualization, not a catalog. Harvest the p
 
 ## Microsoft SharePoint (`sharepoint`) {#sharepoint}
 
-SharePoint statistics pages publish documents/lists, not dataset records. Harvest documented Excel/CSV **files** the page links (statistics tables, data dictionaries). Drop `Authenticate.aspx`, `/_vti_bin/`, and any login wall. Stop on `401`.
+SharePoint statistics and open-data pages publish documents/lists, not dataset records. Harvest documented Excel/CSV **files** the page links (statistics tables, data dictionaries, open-data downloads). Drop `Authenticate.aspx`, `/_vti_bin/`, and any login wall. Stop on `401`.
 
 **Keep:** documented Excel/CSV files the statistics page links.
 **Drop:** `Authenticate.aspx`, `/_vti_bin/`, and login walls. Stop on `401`.
@@ -1267,6 +1421,54 @@ Vendor-hosted indicator platform; one harvest scope per registered instance. No 
 
 **Keep:** public product/indicator documentation and free sample tables; grain is the statistical table.
 **Drop:** subscription-gated yearbook tables and University of Michigan corporate pages.
+
+## Cascade CMS (`cascadecms`) {#cascadecms}
+
+Hannon Hill Cascade CMS indicator pages. Filter exports on `software.id = 'cascadecms'`. There is no catalog API.
+
+```text
+GET https://host/
+```
+
+**Keep:** published indicator, data-search, and dashboard pages on that host. **Drop:** news posts, staff directories, and documents that are not data pages. Data applications embedded in the CMS are site-specific; harvest the public pages the catalog record points at.
+
+## DesInventar (`desinventar`) {#desinventar}
+
+Filter exports on `software.id = 'desinventar'`. Harvest each registered host as its own country catalog (global DesInventar Sendai hub and national systems such as CamDi).
+
+There is no anonymous machine-readable list API. Harvest the public **disaster event inventory**: classic installations expose the country database via `/DesInventar/main.jsp` query pages with region downloads (Excel); the Sendai web system exposes country profiles. Grain is the **national disaster loss inventory** (its event records), not each indicator cell.
+
+**Keep:** DesInventar **disaster event / loss inventory** for the country on the registered host.
+**Drop:** Sendai Framework Monitor (`sendaimonitor.undrr.org`, separate product), methodology and training documents, and reports that only cite DesInventar data.
+
+```text
+GET https://www.desinventar.net
+GET {host}/DesInventar/main.jsp
+```
+
+## SORMAS (`sormas`) {#sormas}
+
+National disease surveillance deployments with a public bulletin/dashboard. Filter exports on `software.id = 'sormas'`. One harvest scope per registered public dashboard host.
+
+There is no anonymous list API on most deployments; the REST API (`/sormas-rest/`) requires credentials — do not probe it. Harvest only the anonymous public surface: the **bulletin/dashboard disease-count tables** (weekly counts of outbreak-prone diseases by province/district/municipality, e.g. Nepal EDCD `analysis.edcd.gov.np/bulletin`) and any documented CSV/Excel export on those pages.
+
+Grain: one published bulletin table or indicator series ≈ one dataset analog. Drop staff login pages, case records, contact-tracing data, and any endpoint requiring authentication. Stop on `401`/`403`.
+
+**Keep:** public bulletin/dashboard disease-count tables and their documented exports.
+**Drop:** login-only surveillance apps, case/contact records, `/sormas-rest/` probing.
+
+```text
+GET https://analysis.edcd.gov.np/bulletin
+```
+
+## BOOST (`boost`) {#boost}
+
+Country-owned BOOST open-budget portals. Filter exports on `software.id = 'boost'`. One harvest scope per country portal. There is no anonymous list API; pages are pivot-table apps with CSV/Excel export buttons and (some instances) a file library such as `/fichiersBoost/`.
+
+Keep the published **budget tables** — expenditure/revenue pivots by administrative, economic, functional, and program classification — and the documented CSV/Excel exports linked from them. Grain: one published BOOST table or export file ≈ one dataset analog, not every pivot cell selection. Drop interactive pivot session state, chart images, and World Bank program pages.
+
+**Keep:** published budget tables and their CSV/Excel exports.
+**Drop:** pivot UI session state, chart images, WB program/documentation pages.
 
 ## Related
 

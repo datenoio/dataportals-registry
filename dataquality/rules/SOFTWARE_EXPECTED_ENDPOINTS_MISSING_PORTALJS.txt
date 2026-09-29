@@ -1,15 +1,14 @@
 DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS
 Priority: MEDIUM
-Total Issues Found: 5
+Total Issues Found: 4
 
 Rule: Identifies records using software.id='portaljs' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
 
 === SUMMARY BY COUNTRY ===
 
-ES: 1 issue
 GB: 1 issue
 SE: 1 issue
 US: 1 issue
@@ -21,7 +20,6 @@ opendatamalmose: 1 issue
 dataculturedataio: 1 issue
 eitiportaljscom: 1 issue
 lincolnshireckanio: 1 issue
-espaidedadestercersectorcat: 1 issue
 
 === ISSUES ===
 
@@ -52,14 +50,6 @@ Suggested Action: Add at least one endpoint because software.id='portaljs' is ma
 File: GB/GB-ENG/opendata/lincolnshireckanio.yaml
 Record ID: lincolnshireckanio
 Country: GB
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS
-Field: endpoints
-Current Value: {"software_id": "portaljs", "has_api": "Yes", "endpoints_count": 0}
-Suggested Action: Add at least one endpoint because software.id='portaljs' is marked as API-capable in software definitions
-
-File: ES/ES-CT/opendata/espaidedadestercersectorcat.yaml
-Record ID: espaidedadestercersectorcat
-Country: ES
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS
 Field: endpoints
 Current Value: {"software_id": "portaljs", "has_api": "Yes", "endpoints_count": 0}

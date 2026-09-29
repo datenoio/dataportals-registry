@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: EE
+      name: Estonia
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: SARV·DOI assigns DOI identifiers to geoscientific datasets, images,
+  and other digital objects in the Estonian Geocollections information system. Member
+  of the DataCite Estonia consortium. Distinct from the eMaapõu portal at geoloogia.info.
+endpoints:
+- type: openapi
+  url: https://rwapi.geoloogia.info/api/schema/v1/public/
+  version: '3.0'
+- type: rest
+  url: https://rwapi.geoloogia.info/api/v1/public/dois/
+id: doigeocollectionsinfo
+langs:
+- id: EN
+  name: English
+link: https://doi.geocollections.info
+name: SARV·DOI
+owner:
+  link: https://taltech.ee/en/department-geology
+  location:
+    country:
+      id: EE
+      name: Estonia
+    level: 30
+    subregion:
+      id: EE-37
+      name: Harjumaa
+  name: Tallinn University of Technology, Department of Geology
+  type: Academy
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: sarv
+  name: SARV
+status: active
+tags:
+- scientific
+- has_api
+- geology
+- geoscience
+- DOI
+- Estonia
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00010021

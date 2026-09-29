@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Ontario
 description: City of Belleville B-Connect public GIS viewer for zoning, services,
   infrastructure, and related municipal layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/7e93957ff8fd48dfb71944f37e10ca94/data?f=json
 id: experiencearcgiscombelleville
 langs:
 - id: EN

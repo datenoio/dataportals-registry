@@ -1,0 +1,50 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: General Commons (GC) hosts NCI-funded cancer data of multiple types that
+  do not match other CRDC data commons, built on the Bento framework.
+id: generaldatacommonscancergov
+langs:
+- id: EN
+  name: English
+link: https://general.datacommons.cancer.gov
+name: General Commons
+owner:
+  link: https://datacommons.cancer.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: NCI Cancer Research Data Commons
+  type: Central government
+software:
+  id: bento
+  name: Bento Framework
+status: active
+tags:
+- government
+- research
+- scientific
+- united-states
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00010048
+endpoints:
+- type: bento:injectenv
+  url: https://general.datacommons.cancer.gov/injectEnv.js

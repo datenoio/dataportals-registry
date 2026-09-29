@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Niederösterreich
 description: Public Map2Web digital town plan of Zwettl-Niederösterreich hosted at
   zwettl.map2web.eu.
+endpoints:
+- type: map2web:project
+  url: https://map.map2web.eu/apiv2/project/zwettl.map2web.eu
 id: zwettlmap2webeu
 langs:
 - id: DE

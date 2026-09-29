@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Open data portal
 content_types:
@@ -52,3 +52,13 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi00001127
+endpoints:
+- type: ckan
+  url: http://portal.merit.mn/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://portal.merit.mn/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://portal.merit.mn/api/3/action/package_list
+  version: '3'

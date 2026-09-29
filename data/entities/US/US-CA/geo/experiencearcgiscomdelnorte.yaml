@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: US-CA
       name: California
 description: Del Norte County public ArcGIS Experience Builder parcel viewer.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/aae802f34f9f43eaad52f334145bc798/data?f=json
 id: experiencearcgiscomdelnorte
 langs:
 - id: EN

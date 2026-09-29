@@ -17,8 +17,9 @@ coverage:
     subregion:
       id: CH-GL
       name: Glarus
-description: Official Landsgemeinde portal of the Canton of Glarus. Publishes assembly
-  and vote result datasets as open data with a DCAT-AP CH catalog harvested by opendata.swiss.
+description: Official OneGov Election Day portal of the Glarus Landsgemeinde. Publishes
+  assembly and vote result datasets as open data with a DCAT-AP CH catalog harvested
+  by opendata.swiss.
 endpoints:
 - type: dcatap21
   url: https://www.landsgemeinde.gl.ch/catalog.rdf
@@ -44,11 +45,12 @@ properties:
   has_doi: false
   is_national: false
 software:
-  id: custom
-  name: Custom software
+  id: onegov
+  name: OneGov Election Day
 status: active
 tags:
 - elections
+- OneGov
 - government
 - open data
 - Switzerland

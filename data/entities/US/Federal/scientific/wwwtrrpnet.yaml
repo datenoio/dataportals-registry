@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -38,8 +38,8 @@ owner:
   name: Trinity River Restoration Program
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -58,3 +58,6 @@ topics:
   name: Biota
   type: iso19115
 uid: cdi00033789
+endpoints:
+- type: sitemap
+  url: https://www.trrp.net/sitemap.xml

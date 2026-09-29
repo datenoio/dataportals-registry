@@ -1,0 +1,65 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: Uncertain
+has_bulk: 'No'
+id: kvwmap
+website: https://kvwmap.de/
+name: kvwmap
+description: kvwmap is an open-source PHP WebGIS for German district and municipal
+  administrations. It uses MapServer, PostGIS, and GDAL, with role-based access and
+  specialist modules for cadastral and planning data. Public guest viewers are a
+  separate catalog from the CMS page that links to them.
+owner:
+  name: GDI-Service
+  location:
+    country:
+      id: DE
+      name: Germany
+logo_url: https://kvwmap.de/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Global
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+repository_url: https://github.com/srahn/kvwmap
+documentation_url: https://kvwmap.de/wiki/index.php/Admin-Dokumentation
+version: 4.1.69
+license:
+  type: GPL
+export_formats:
+- HTML
+- WMS
+capabilities:
+- Map viewer
+- Guest access
+- Role-based layers
+changelog_url: https://github.com/srahn/kvwmap/tags
+last_updated: '2026-09-26T19:40:00Z'

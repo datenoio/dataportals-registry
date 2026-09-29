@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -22,6 +22,9 @@ description: Public WebGIS of the Limassol District Local Government Organisatio
   (Eparchiakos Organismos Autodioikisis Lemesou), linked from the official site eoalemesos.org.cy.
   Interactive map of sewerage and water-supply networks, green points, serviced community
   boundaries and related municipal infrastructure data.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/e367fdbcfe1949968c07246f577b472a/data?f=json
 id: experiencearcgiscomeoalimassol
 langs:
 - id: EL

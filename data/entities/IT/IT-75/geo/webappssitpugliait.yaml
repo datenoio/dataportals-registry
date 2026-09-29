@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-75
+      name: Puglia
+description: Regional ArcGIS Server of the Sistema Informativo Territoriale della
+  Puglia, with public basemaps and operational land-use, nature, and planning layers.
+id: webappssitpugliait
+langs:
+- id: IT
+  name: Italian
+link: https://webapps.sit.puglia.it/arcgis/rest/services
+name: SIT Puglia
+owner:
+  link: https://www.regione.puglia.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-75
+      name: Puglia
+  name: Regione Puglia
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- italy
+- planning
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00008978
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://webapps.sit.puglia.it/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://webapps.sit.puglia.it/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://webapps.sit.puglia.it/arcgis/services?wsdl

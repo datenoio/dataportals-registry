@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Western Australia
 description: Shire of Harvey ArcGIS Experience Builder public map of planning and
   local government spatial layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/9eae5cd4bcc14fdf93d9b53e32821ba8/data?f=json
 id: experiencearcgiscomharvey
 langs:
 - id: EN

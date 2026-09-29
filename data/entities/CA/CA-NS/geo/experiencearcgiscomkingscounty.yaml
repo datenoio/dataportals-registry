@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Nova Scotia
 description: Municipality of the County of Kings Public Atlas, an ArcGIS Experience
   Builder GIS map for addresses, properties, heritage, boundaries, and emergency management.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/afdc21f0ee6f4e6e806b6d11054d9222/data?f=json
 id: experiencearcgiscomkingscounty
 langs:
 - id: EN

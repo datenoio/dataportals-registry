@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -18,6 +18,9 @@ description: The Claremont Colleges Digital Library (CCDL) provides access to hi
   and visual resources collections created both by and for The Claremont Colleges
   community, including artworks, college photo archives, videos of lectures, rare
   books, etc.
+endpoints:
+- type: contentdm:collections
+  url: https://ccdl.claremont.edu/digital/api/collections
 id: ccdlclaremontedu
 identifiers:
 - id: openaire
@@ -37,8 +40,8 @@ owner:
   name: Claremont Colleges Library
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: contentdm
+  name: CONTENTdm
 status: active
 tags:
 - scientific

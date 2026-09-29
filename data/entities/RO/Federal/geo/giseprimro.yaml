@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: SOBIS ePRIM GeoServer publishing public orthophoto and urban-plan layers
+  for several Romanian localities, including Orăștie, Cisnădie, Tulcea, and Chitila.
+id: giseprimro
+langs:
+- id: RO
+  name: Romanian
+link: https://gis.eprim.ro/geoserver/web/
+name: SOBIS ePRIM GeoServer
+owner:
+  link: https://eprim.ro
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+  name: SOBIS Solutions SRL
+  type: Business
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- commercial
+- geospatial
+- romania
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009497
+endpoints:
+- type: wms111
+  url: https://gis.eprim.ro/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://gis.eprim.ro/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://gis.eprim.ro/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://gis.eprim.ro/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://gis.eprim.ro/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

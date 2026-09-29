@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: MX-VER
+      name: Veracruz de Ignacio de la Llave
+description: Universidad Veracruzana Contrataciones Abiertas dashboard of public
+  procurement records in OCDS. common.js points the capture API at port 8080
+  on the same host.
+endpoints:
+- type: rest
+  url: https://contratacionesabiertas.uv.mx:8080/edca/fiscalYears
+id: contratacionesabiertasuvmx
+langs:
+- id: ES
+  name: Spanish
+link: https://contratacionesabiertas.uv.mx/contratacionesabiertas/datosabiertos
+name: Contrataciones Abiertas UV
+owner:
+  link: https://www.uv.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-VER
+      name: Veracruz de Ignacio de la Llave
+  name: Universidad Veracruzana
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: contratacionesabiertas
+  name: Contrataciones Abiertas
+status: active
+tags:
+- procurement
+- OCDS
+- university
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+uid: cdi00009847

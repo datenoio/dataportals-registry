@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Deltares CoCliCo GeoServer publishing European coastal population layers
+  under sea-level scenarios.
+id: coclicoavideltaresnl
+langs:
+- id: NL
+  name: Dutch
+link: https://coclico.avi.deltares.nl/geoserver
+name: Deltares CoCliCo GeoServer
+owner:
+  link: https://www.deltares.nl/
+  location:
+    country:
+      id: NL
+      name: Netherlands
+  name: Deltares
+  type: Academy
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- academic
+- geospatial
+- netherlands
+- population
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009406
+endpoints:
+- type: wms111
+  url: https://coclico.avi.deltares.nl/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://coclico.avi.deltares.nl/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://coclico.avi.deltares.nl/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://coclico.avi.deltares.nl/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://coclico.avi.deltares.nl/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

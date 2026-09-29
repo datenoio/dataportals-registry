@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CL
+      name: Chile
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Metadata catalog of the Infraestructura de Datos Geoespaciales of the
+  Ministerio de Bienes Nacionales, published with Geonodo.
+endpoints:
+- type: csw202
+  url: https://idembn.bienes.cl/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+id: idembnbienescl
+langs:
+- id: ES
+  name: Spanish
+link: https://idembn.bienes.cl/idembn/catalog
+name: Geoportal IDE MBN
+owner:
+  link: https://www.bienes.cl
+  location:
+    country:
+      id: CL
+      name: Chile
+    level: 20
+  name: Ministerio de Bienes Nacionales
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geonodo
+  name: Geonodo
+status: active
+tags:
+- geospatial
+- government
+- Chile
+- IDE
+- Geonodo
+- geoportal
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00009954

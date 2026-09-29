@@ -1,0 +1,5088 @@
+[
+  {
+    "file": "data/entities/SL/Federal/indicators/educationdatahubdstigovsl.yaml",
+    "id": "educationdatahubdstigovsl",
+    "name": "DSTI Education Data Hub",
+    "link": "https://educationdatahub.dsti.gov.sl/",
+    "domain": "educationdatahub.dsti.gov.sl",
+    "catalog_type": "Indicators catalog",
+    "country": "SL",
+    "owner_name": "Directorate of Science, Technology and Innovation",
+    "endpoints": [],
+    "description": "DSTI Education Data Hub with school census data, examination results, a searchable school directory, and indicator maps for the Government of Sierra Leone. The hostname resolves to CloudFront but currently resets connections, so the portal is not reachable.",
+    "tags": [
+      "education",
+      "schools",
+      "indicators",
+      "government",
+      "Sierra Leone"
+    ],
+    "hints": [
+      "datahub(.io/oss)"
+    ],
+    "status": "inactive"
+  },
+  {
+    "file": "data/entities/SL/Federal/opendata/epahubepagovsl.yaml",
+    "id": "epahubepagovsl",
+    "name": "EPA-SL GRS Portal",
+    "link": "https://epahub.epa.gov.sl/portal",
+    "domain": "epahub.epa.gov.sl",
+    "catalog_type": "Open data portal",
+    "country": "SL",
+    "owner_name": "Environment Protection Agency",
+    "endpoints": [],
+    "description": "Public GRS portal of the Environment Protection Agency Sierra Leone OneEPA Database System. Lists environmental applications, licensed companies, concession maps, and documents (CEDAS).",
+    "tags": [
+      "environment",
+      "licensing",
+      "government",
+      "Sierra Leone"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SL/Federal/opendata/opendataslgovsl.yaml",
+    "id": "opendataslgovsl",
+    "name": "Open Data Sierra Leone",
+    "link": "https://opendatasl.gov.sl/",
+    "domain": "opendatasl.gov.sl",
+    "catalog_type": "Open data portal",
+    "country": "SL",
+    "owner_name": "Statistics Sierra Leone",
+    "endpoints": [],
+    "description": "National open data portal of Sierra Leone (opendatasl.gov.sl), historically associated with Statistics Sierra Leone and the Right to Access Information Commission. The hostname currently times out on DNS and TLS, so the portal is not reachable.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "open data",
+      "Sierra Leone"
+    ],
+    "hints": [],
+    "status": "inactive"
+  },
+  {
+    "file": "data/entities/ZM/Federal/microdata/z360daspmohgovzm.yaml",
+    "id": "z360daspmohgovzm",
+    "name": "Zambia 360 Data Access & Sharing Portal",
+    "link": "https://z360dasp.moh.gov.zm/",
+    "domain": "z360dasp.moh.gov.zm",
+    "catalog_type": "Microdata catalog",
+    "country": "ZM",
+    "owner_name": "Ministry of Health Zambia",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://z360dasp.moh.gov.zm/api/api/datasets"
+      }
+    ],
+    "description": "Official Ministry of Health Zambia platform (Z360DASP) for discovering and requesting controlled access to curated national health datasets drawn from SmartCare Pro (the national EHR) and the national health data warehouse. Users can browse dataset metadata and request time-bound access to full datasets or selected variables, subject to MoH, IRB, and NHRA approval. Published collections include de-identified client-level records for HIV ART cohorts, COVID-19, immunization, and non-communicable diseases.",
+    "tags": [
+      "health",
+      "microdata",
+      "Zambia",
+      "HIV",
+      "COVID-19",
+      "immunization",
+      "NCD",
+      "SmartCare",
+      "has_api",
+      "restricted"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZM/Federal/indicators/wwwbozzm.yaml",
+    "id": "wwwbozzm",
+    "name": "Bank of Zambia Statistics",
+    "link": "https://www.boz.zm/statistics.htm",
+    "domain": "www.boz.zm",
+    "catalog_type": "Indicators catalog",
+    "country": "ZM",
+    "owner_name": "Bank of Zambia",
+    "endpoints": [],
+    "description": "Bank of Zambia statistics catalog of monetary, financial, and macroeconomic indicators.",
+    "tags": [
+      "statistics",
+      "government",
+      "central bank",
+      "official statistics",
+      "Zambia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZM/Federal/opendata/portalzambiaeitiorg.yaml",
+    "id": "portalzambiaeitiorg",
+    "name": "Zambia EITI Data Portal",
+    "link": "https://portal.zambiaeiti.org/home",
+    "domain": "portal.zambiaeiti.org",
+    "catalog_type": "Open data portal",
+    "country": "ZM",
+    "owner_name": "Zambia Extractive Industries Transparency Initiative",
+    "endpoints": [],
+    "description": "Zambia EITI Fusion / mainstreaming portal. Interactive public disclosures of extractive-sector revenue, production, and G-Factor for Natural Resources data.",
+    "tags": [
+      "EITI",
+      "mining",
+      "extractives",
+      "government",
+      "Zambia",
+      "transparency"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZM/Federal/metadata/ndpgsbgovzm.yaml",
+    "id": "ndpgsbgovzm",
+    "name": "ZamData - National Data Portal",
+    "link": "https://ndp.gsb.gov.zm/data-registers",
+    "domain": "ndp.gsb.gov.zm",
+    "catalog_type": "Metadata catalog",
+    "country": "ZM",
+    "owner_name": "SMART Zambia Institute",
+    "endpoints": [],
+    "description": "Zambia's national catalog of government data registers (ZamData) on the Government Service Bus. It publishes National Data Registers (NDRs), semantic entities, classifiers, and operations across identity, business, land, agriculture, health, and other domains so agencies can discover and reuse government data.",
+    "tags": [
+      "government",
+      "metadata",
+      "interoperability",
+      "Zambia",
+      "NDR",
+      "GSB"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZM/Federal/scientific/researchicuaczm.yaml",
+    "id": "researchicuaczm",
+    "name": "Information and Communication University Research Repository",
+    "link": "https://research.icu.ac.zm/",
+    "domain": "research.icu.ac.zm",
+    "catalog_type": "Scientific data repository",
+    "country": "ZM",
+    "owner_name": "Information and Communication University",
+    "endpoints": [],
+    "description": "Information and Communication University research repository of departmental collections and scholarly publications.",
+    "tags": [
+      "institutional repository",
+      "research data",
+      "Zambia",
+      "ICU"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZM/Federal/scientific/netdaczm.yaml",
+    "id": "netdaczm",
+    "name": "Zambia National ETD Portal",
+    "link": "http://netd.ac.zm/",
+    "domain": "netd.ac.zm",
+    "catalog_type": "Scientific data repository",
+    "country": "ZM",
+    "owner_name": "University of Zambia DataLab",
+    "endpoints": [],
+    "description": "Zambia National Electronic Theses and Dissertations (ZANETD) portal. Aggregates ETD metadata harvested via OAI-PMH from higher-education institutional repositories across Zambia.",
+    "tags": [
+      "ETD",
+      "theses",
+      "dissertations",
+      "Zambia",
+      "aggregator",
+      "OAI-PMH"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZM/Federal/scientific/zaouaczmrepository.yaml",
+    "id": "zaouaczmrepository",
+    "name": "Zambian Open University Repository",
+    "link": "https://zaou.ac.zm/repository",
+    "domain": "zaou.ac.zm",
+    "catalog_type": "Scientific data repository",
+    "country": "ZM",
+    "owner_name": "Zambian Open University",
+    "endpoints": [],
+    "description": "Zambian Open University institutional repository of academic research output, theses, and dissertations.",
+    "tags": [
+      "institutional repository",
+      "research data",
+      "Zambia",
+      "ZAOU",
+      "theses"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/UG/Federal/indicators/statisticsubosorg.yaml",
+    "id": "statisticsubosorg",
+    "name": "UBOS Dissemination Portal",
+    "link": "https://statistics.ubos.org/",
+    "domain": "statistics.ubos.org",
+    "catalog_type": "Indicators catalog",
+    "country": "UG",
+    "owner_name": "Uganda Bureau of Statistics (UBOS)",
+    "endpoints": [],
+    "description": "Official UBOS dissemination portal for census, survey, and national indicator products, including the interactive National Population and Housing Census 2024 explorer.",
+    "tags": [
+      "statistics",
+      "census",
+      "government",
+      "official statistics",
+      "Uganda"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/UG/Federal/indicators/wwwbouorug.yaml",
+    "id": "wwwbouorug",
+    "name": "Bank of Uganda Statistics",
+    "link": "https://www.bou.or.ug/bouwebsite/bouwebsitecontent/statistics/",
+    "domain": "www.bou.or.ug",
+    "catalog_type": "Indicators catalog",
+    "country": "UG",
+    "owner_name": "Bank of Uganda",
+    "endpoints": [],
+    "description": "Bank of Uganda statistics catalog of monetary, banking, and macroeconomic tables.",
+    "tags": [
+      "statistics",
+      "government",
+      "central bank",
+      "official statistics",
+      "Uganda"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/UG/Federal/indicators/budgetfinancegoug.yaml",
+    "id": "budgetfinancegoug",
+    "name": "Uganda Budget Information",
+    "link": "https://budget.finance.go.ug/dataportal",
+    "domain": "budget.finance.go.ug",
+    "catalog_type": "Indicators catalog",
+    "country": "UG",
+    "owner_name": "Ministry of Finance, Planning and Economic Development",
+    "endpoints": [],
+    "description": "Ministry of Finance budget portal with a dashboard and an Excel download catalog of approved budgets and outturns for the national government, local governments and facilities.",
+    "tags": [
+      "government",
+      "budget",
+      "finance",
+      "Uganda"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/UG/Federal/scientific/freshwaterbiodiversitygoug.yaml",
+    "id": "freshwaterbiodiversitygoug",
+    "name": "Freshwater Biodiversity Portal for Uganda",
+    "link": "https://freshwaterbiodiversity.go.ug/",
+    "domain": "freshwaterbiodiversity.go.ug",
+    "catalog_type": "Scientific data repository",
+    "country": "UG",
+    "owner_name": "National Fisheries Resources Research Institute",
+    "endpoints": [],
+    "description": "National freshwater biodiversity data portal for Uganda, publishing fish occurrence, composition, and habitat datasets from lakes, rivers, and wetlands.",
+    "tags": [
+      "biodiversity",
+      "freshwater",
+      "fisheries",
+      "Uganda"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SD/Federal/geo/susissd.yaml",
+    "id": "susissd",
+    "name": "Sudan Soil Information System (SUSIS)",
+    "link": "https://susis.sd/",
+    "domain": "susis.sd",
+    "catalog_type": "Geoportal",
+    "country": "SD",
+    "owner_name": "Agricultural Research Corporation (ARC)",
+    "endpoints": [],
+    "description": "Sudan Soil Information System (SUSIS), created in 2016, is the national repository for collecting, storing, and sharing soil and land-resource information that previously existed only as scattered hard-copy maps, reports, and databases. Publishes regional soil datasets (East, Kordofan, North, North Darfur, South, and South Darfur) at 0–30, 30–60, and 60–100 cm depths. Some products are downloadable; others are available on request. No public machine-readable catalog API was found.",
+    "tags": [
+      "soil",
+      "geospatial",
+      "agriculture",
+      "land",
+      "government",
+      "Sudan"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SC/Federal/indicators/sfafimstraseablecom.yaml",
+    "id": "sfafimstraseablecom",
+    "name": "SFA Fisheries Information Management System",
+    "link": "https://sfa-fims.traseable.com/public",
+    "domain": "sfa-fims.traseable.com",
+    "catalog_type": "Indicators catalog",
+    "country": "SC",
+    "owner_name": "Seychelles Fisheries Authority",
+    "endpoints": [],
+    "description": "Public Fisheries Information Management System of the Seychelles Fisheries Authority. Dashboards publish licensing, catch, trade, and revenue statistics with downloadable tables. A separate login is used for the staff/secure view.",
+    "tags": [
+      "fisheries",
+      "statistics",
+      "government",
+      "FiTI",
+      "open data"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SC/Federal/opendata/publicbitmexcom.yaml",
+    "id": "publicbitmexcom",
+    "name": "BitMEX Public Data",
+    "link": "https://public.bitmex.com/",
+    "domain": "public.bitmex.com",
+    "catalog_type": "Datasets list",
+    "country": "SC",
+    "owner_name": "BitMEX",
+    "endpoints": [],
+    "description": "Public file catalog of BitMEX historical market data.",
+    "tags": [
+      "cryptocurrency",
+      "bitcoin",
+      "market data",
+      "dataset"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SC/Federal/opendata/okxcom.yaml",
+    "id": "okxcom",
+    "name": "OKX historical market data",
+    "link": "https://www.okx.com/en-us/historical-data",
+    "domain": "www.okx.com",
+    "catalog_type": "Datasets list",
+    "country": "SC",
+    "owner_name": "OKX",
+    "endpoints": [],
+    "description": "Download catalog of OKX historical trades, candlesticks, funding rates, order books, and borrowing rates.",
+    "tags": [
+      "cryptocurrency",
+      "bitcoin",
+      "market data",
+      "dataset"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SC/Federal/opendata/mexcco.yaml",
+    "id": "mexcco",
+    "name": "MEXC market data download",
+    "link": "https://www.mexc.co/market-data-download",
+    "domain": "www.mexc.co",
+    "catalog_type": "Datasets list",
+    "country": "SC",
+    "owner_name": "MEXC",
+    "endpoints": [],
+    "description": "Download catalog of free historical MEXC spot chart data for all trading pairs, at daily and monthly intervals.",
+    "tags": [
+      "cryptocurrency",
+      "bitcoin",
+      "market data",
+      "dataset"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SC/Federal/opendata/historicaldatakucoincom.yaml",
+    "id": "historicaldatakucoincom",
+    "name": "KuCoin Data Collection",
+    "link": "https://historical-data.kucoin.com/",
+    "domain": "historical-data.kucoin.com",
+    "catalog_type": "Datasets list",
+    "country": "SC",
+    "owner_name": "KuCoin",
+    "endpoints": [],
+    "description": "Public file catalog of KuCoin market data, published as daily and monthly archives.",
+    "tags": [
+      "cryptocurrency",
+      "bitcoin",
+      "market data",
+      "dataset"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SC/Federal/opendata/bitgetcom.yaml",
+    "id": "bitgetcom",
+    "name": "Bitget history data download",
+    "link": "https://www.bitget.com/data-download",
+    "domain": "www.bitget.com",
+    "catalog_type": "Datasets list",
+    "country": "SC",
+    "owner_name": "Bitget",
+    "endpoints": [],
+    "description": "Download catalog of Bitget spot and futures candlesticks, transaction history, and order-book depth.",
+    "tags": [
+      "cryptocurrency",
+      "bitcoin",
+      "market data",
+      "dataset"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SC/Federal/geo/umbrellasychossonlineorg.yaml",
+    "id": "umbrellasychossonlineorg",
+    "name": "UMBRELLA Seychelles LDN Platform",
+    "link": "https://umbrella-sych.oss-online.org",
+    "domain": "umbrella-sych.oss-online.org",
+    "catalog_type": "Geoportal",
+    "country": "SC",
+    "owner_name": "Ministry of Environment, Climate, Energy and Natural Resources",
+    "endpoints": [],
+    "description": "Land Degradation Neutrality monitoring platform for Seychelles, developed under the GEF/UNEP Umbrella project with the Sahara and Sahel Observatory. Public geoportal, dashboard, and open-data sections integrate environmental and geospatial layers used for UNCCD and SDG 15.3.1 reporting.",
+    "tags": [
+      "geoportal",
+      "land degradation",
+      "UNCCD",
+      "environment",
+      "government",
+      "SDG"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SC/Federal/scientific/researchconnectuniseyacsc.yaml",
+    "id": "researchconnectuniseyacsc",
+    "name": "University of Seychelles ResearchConnect",
+    "link": "https://researchconnect.unisey.ac.sc/",
+    "domain": "researchconnect.unisey.ac.sc",
+    "catalog_type": "Scientific data repository",
+    "country": "SC",
+    "owner_name": "University of Seychelles",
+    "endpoints": [],
+    "description": "Custom Next.js institutional repository of the University of Seychelles. Public catalog of research outputs, faculty profiles, research units, and student theses (148 records listed). No DSpace, EPrints, or OAI-PMH interface.",
+    "tags": [
+      "scientific",
+      "institutional repository",
+      "research"
+    ],
+    "hints": [
+      "dspace",
+      "eprints",
+      "nuxt/next custom"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZW/Federal/scientific/wwwzimbabwefloracozw.yaml",
+    "id": "wwwzimbabwefloracozw",
+    "name": "Flora of Zimbabwe",
+    "link": "https://www.zimbabweflora.co.zw/",
+    "domain": "www.zimbabweflora.co.zw",
+    "catalog_type": "Scientific data repository",
+    "country": "ZW",
+    "owner_name": "Hyde, Wursten, Ballings and Coates Palgrave",
+    "endpoints": [],
+    "description": "E-flora of native and naturalised vascular plants of Zimbabwe, part of the Flora Zambesiaca family of regional flora websites, with family, genus, and species pages and checklists.",
+    "tags": [
+      "flora",
+      "biodiversity",
+      "plants",
+      "Zimbabwe"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/GA/Federal/indicators/comptabilitenationaleinstatgabon.yaml",
+    "id": "comptabilitenationaleinstatgabon",
+    "name": "Comptabilité nationale du Gabon",
+    "link": "http://new.instatgabon.org:8083/",
+    "domain": "new.instatgabon.org",
+    "catalog_type": "Indicators catalog",
+    "country": "GA",
+    "owner_name": "Institut National de la Statistique (INSTAT Gabon)",
+    "endpoints": [],
+    "description": "INSTAT Gabon national accounts portal with SNA 2008 production, expenditure and income tables for GDP 2022 (current PIB 13,103,182 million FCFA; primary sector 5,234,740 million FCFA, 39.95 percent). Includes Excel/PDF downloads. Distinct from the IHPC CPI dashboard and Open Data for Africa.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "national accounts",
+      "Gabon"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/GA/Federal/indicators/ihpcinstatgabonorg.yaml",
+    "id": "ihpcinstatgabonorg",
+    "name": "INSTAT Gabon tableau de bord IHPC",
+    "link": "https://ihpc.instatgabon.org/",
+    "domain": "ihpc.instatgabon.org",
+    "catalog_type": "Indicators catalog",
+    "country": "GA",
+    "owner_name": "Institut National de la Statistique (INSTAT Gabon)",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://ihpc.instatgabon.org/api/key-figures"
+      },
+      {
+        "type": "rest",
+        "url": "https://ihpc.instatgabon.org/api/ipch/series?limit=5"
+      }
+    ],
+    "description": "INSTAT Gabon IHPC dashboard with monthly CPI tables, COICOP functions, regional indices, average prices, and REST JSON from the IHPC MySQL server. July 2026 national index 115.4 (base 100 = 2018), monthly variation -0.26 percent, annual 0.17 percent. Distinct from Open Data for Africa and the old stat-gabon.org CMS.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "prices",
+      "Gabon",
+      "has_api"
+    ],
+    "hints": [
+      "tableau"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/GA/Federal/opendata/minesetgeologiega.yaml",
+    "id": "minesetgeologiega",
+    "name": "Portail des Permis Miniers du Gabon",
+    "link": "https://minesetgeologie.ga/suivi-permis",
+    "domain": "minesetgeologie.ga",
+    "catalog_type": "Open data portal",
+    "country": "GA",
+    "owner_name": "Ministère des Mines et des Ressources Géologiques",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://minesetgeologie.ga/api/permis"
+      }
+    ],
+    "description": "Public mining-title portal of Gabon's Ministry of Mines and Geological Resources. Lists permit applications and titles (operator, substance, province, status) with a harvestable JSON API.",
+    "tags": [
+      "mining",
+      "permits",
+      "government",
+      "has_api",
+      "extractives",
+      "Gabon"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/BW/Federal/geo/bhbgiorgbw.yaml",
+    "id": "bhbgiorgbw",
+    "name": "BoreHive",
+    "link": "https://bh.bgi.org.bw/",
+    "domain": "bh.bgi.org.bw",
+    "catalog_type": "Geoportal",
+    "country": "BW",
+    "owner_name": "Botswana Geoscience Institute",
+    "endpoints": [],
+    "description": "BoreHive is the Botswana Geoscience Institute borehole portal. It publishes searchable water and exploration borehole records, logs, and related reports collected from government, mining, and private sources.",
+    "tags": [
+      "geoscience",
+      "borehole",
+      "groundwater",
+      "exploration",
+      "Botswana"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/BW/Federal/geo/geosbgiorgbw.yaml",
+    "id": "geosbgiorgbw",
+    "name": "Botswana Geoscience Portal",
+    "link": "https://geos.bgi.org.bw",
+    "domain": "geos.bgi.org.bw",
+    "catalog_type": "Geoportal",
+    "country": "BW",
+    "owner_name": "Botswana Geoscience Institute",
+    "endpoints": [],
+    "description": "Interactive GIS platform of the Botswana Geoscience Institute for multidisciplinary geoscience data search and access, including geology, geophysics, geochemistry, drill holes, seismic data, and publications.",
+    "tags": [
+      "geoscience",
+      "geology",
+      "geospatial",
+      "mining",
+      "Botswana"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/KM/Federal/scientific/libmidoceanedukm.yaml",
+    "id": "libmidoceanedukm",
+    "name": "Midocean University Digital Library",
+    "link": "https://lib.midocean.edu.km/",
+    "domain": "lib.midocean.edu.km",
+    "catalog_type": "Scientific data repository",
+    "country": "KM",
+    "owner_name": "Midocean University",
+    "endpoints": [],
+    "description": "Public digital library of Midocean University with searchable articles, books, conference papers, lectures, and graduation projects. Listing at /en/search does not require login.",
+    "tags": [
+      "institutional repository",
+      "theses",
+      "university"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MZ/Federal/indicators/wwwbancomocmz.yaml",
+    "id": "wwwbancomocmz",
+    "name": "Banco de Moçambique Domínios e Indicadores Estatísticos",
+    "link": "https://www.bancomoc.mz/pt/areas-de-actuacao/estatisticas/dominios-e-indicadores-estatisticos/",
+    "domain": "www.bancomoc.mz",
+    "catalog_type": "Indicators catalog",
+    "country": "MZ",
+    "owner_name": "Banco de Moçambique",
+    "endpoints": [],
+    "description": "Banco de Moçambique public catalog of monetary, foreign-exchange, external-sector, and financial-inclusion statistical indicators, including long series downloads.",
+    "tags": [
+      "statistics",
+      "government",
+      "central bank",
+      "official statistics",
+      "time series"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MZ/Federal/opendata/wwwdadosinfracomz.yaml",
+    "id": "wwwdadosinfracomz",
+    "name": "Portal de Divulgação de Dados de Infra-estruturas Públicas",
+    "link": "https://www.dadosinfra.co.mz/",
+    "domain": "www.dadosinfra.co.mz",
+    "catalog_type": "Open data portal",
+    "country": "MZ",
+    "owner_name": "Fundo de Estradas",
+    "endpoints": [],
+    "description": "Public infrastructure project catalog operated by Fundo de Estradas, publishing road, bridge, and other public-works records aligned with the Open Contracting for Infrastructure Data Standard (OC4IDS).",
+    "tags": [
+      "infrastructure",
+      "open contracting",
+      "OC4IDS",
+      "roads",
+      "government"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MZ/Federal/scientific/wwwmozambiquefloracom.yaml",
+    "id": "wwwmozambiquefloracom",
+    "name": "Flora of Mozambique",
+    "link": "https://www.mozambiqueflora.com/",
+    "domain": "www.mozambiqueflora.com",
+    "catalog_type": "Scientific data repository",
+    "country": "ZW",
+    "owner_name": "Hyde, Wursten, Ballings and Coates Palgrave",
+    "endpoints": [],
+    "description": "E-flora of flowering plants and ferns of Mozambique, part of the Flora Zambesiaca family of regional flora websites.",
+    "tags": [
+      "flora",
+      "biodiversity",
+      "plants",
+      "Mozambique"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MZ/Federal/scientific/openscidataorg.yaml",
+    "id": "openscidataorg",
+    "name": "BioNoMo - Biodiversity Network of Mozambique",
+    "link": "https://openscidata.org/",
+    "domain": "openscidata.org",
+    "catalog_type": "Scientific data repository",
+    "country": "MZ",
+    "owner_name": "Universidade Eduardo Mondlane",
+    "endpoints": [],
+    "description": "Biodiversity Network of Mozambique (BioNoMo) portal for primary occurrence records and related digital collections from national universities, research centres, and conservation areas.",
+    "tags": [
+      "biodiversity",
+      "occurrences",
+      "Mozambique",
+      "BioNoMo"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/GH/Federal/indicators/fiscaldatamofepgovgh.yaml",
+    "id": "fiscaldatamofepgovgh",
+    "name": "Ghana Fiscal Data",
+    "link": "https://mofep.gov.gh/fiscal-data",
+    "domain": "mofep.gov.gh",
+    "catalog_type": "Indicators catalog",
+    "country": "GH",
+    "owner_name": "Ministry of Finance",
+    "endpoints": [],
+    "description": "Yearly central-government fiscal data workbooks published by Ghana's Ministry of Finance, with a downloadable spreadsheet for each year from 2018 through 2026.",
+    "tags": [],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/GH/Federal/indicators/gheatoolkitenergycomgovgh.yaml",
+    "id": "gheatoolkitenergycomgovgh",
+    "name": "Ghana Energy Database",
+    "link": "https://gheatoolkit.energycom.gov.gh/",
+    "domain": "gheatoolkit.energycom.gov.gh",
+    "catalog_type": "Indicators catalog",
+    "country": "GH",
+    "owner_name": "Energy Commission of Ghana",
+    "endpoints": [],
+    "description": "National energy statistics and district mapping platform of the Energy Commission of Ghana (GhED). Dataset pages cover energy supply, consumption, prices, SDG 7, oil, gas, and administrative boundaries.",
+    "tags": [
+      "energy",
+      "statistics",
+      "Ghana",
+      "SDG7",
+      "government"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-KO/opendata/eprocbppkggovng.yaml",
+    "id": "eprocbppkggovng",
+    "name": "Kogi State e-Procurement OCDS Portal",
+    "link": "https://eproc.bpp.kg.gov.ng/",
+    "domain": "eproc.bpp.kg.gov.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "Kogi State Bureau of Public Procurement",
+    "endpoints": [],
+    "description": "Kogi State e-procurement portal of the Bureau of Public Procurement, with public tender and award listings.",
+    "tags": [
+      "government",
+      "procurement",
+      "OCDS",
+      "open contracting",
+      "Kogi"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-BA/opendata/eprocurementbauchistategovng.yaml",
+    "id": "eprocurementbauchistategovng",
+    "name": "Bauchi State E-Procurement Open Contracting",
+    "link": "https://eprocurement.bauchistate.gov.ng/ocds",
+    "domain": "eprocurement.bauchistate.gov.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "Bauchi State E-Procurement",
+    "endpoints": [],
+    "description": "Bauchi State e-procurement OCDS page publishing open contracting releases for state procurement.",
+    "tags": [
+      "government",
+      "procurement",
+      "OCDS",
+      "open contracting",
+      "Bauchi"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-AN/opendata/eprocurebppangovng.yaml",
+    "id": "eprocurebppangovng",
+    "name": "Anambra State e-GP OCDS Portal",
+    "link": "https://eprocure.bpp.an.gov.ng/",
+    "domain": "eprocure.bpp.an.gov.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "Anambra State Bureau of Public Procurement",
+    "endpoints": [],
+    "description": "Anambra State Public Procurement portal publishing tenders, awards, and OCDS-style contracting records.",
+    "tags": [
+      "government",
+      "procurement",
+      "OCDS",
+      "open contracting",
+      "Anambra"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-LA/opendata/wwwlagosppagovng.yaml",
+    "id": "wwwlagosppagovng",
+    "name": "Lagos State PPA Registered Awards",
+    "link": "https://www.lagosppa.gov.ng/registered-awards/",
+    "domain": "www.lagosppa.gov.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "Lagos State Public Procurement Agency",
+    "endpoints": [],
+    "description": "Lagos State Public Procurement Agency public register of awarded contracts.",
+    "tags": [
+      "government",
+      "procurement",
+      "OCDS",
+      "open contracting",
+      "Lagos"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-LA/opendata/eko360ng.yaml",
+    "id": "eko360ng",
+    "name": "Lagos Bureau of Statistics Open Data Portal",
+    "link": "https://eko360.ng/",
+    "domain": "eko360.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "Lagos Bureau of Statistics",
+    "endpoints": [],
+    "description": "Official open data portal of the Lagos Bureau of Statistics, publishing health, education, economic, and public-order statistics for Lagos State.",
+    "tags": [
+      "government",
+      "open data",
+      "Lagos",
+      "statistics"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-OG/opendata/eprocurementsogunstategovng.yaml",
+    "id": "eprocurementsogunstategovng",
+    "name": "Ogun State e-Procurement OCDS Portal",
+    "link": "https://eprocurements.ogunstate.gov.ng/",
+    "domain": "eprocurements.ogunstate.gov.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "Ogun State Public Procurement",
+    "endpoints": [],
+    "description": "Ogun State e-procurement portal presenting public procurement and open contracting records.",
+    "tags": [
+      "government",
+      "procurement",
+      "OCDS",
+      "open contracting",
+      "Ogun"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-OS/opendata/egposunstategovng.yaml",
+    "id": "egposunstategovng",
+    "name": "Osun State e-Procurement OCDS Portal",
+    "link": "https://egp.osunstate.gov.ng/",
+    "domain": "egp.osunstate.gov.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "Osun State Public Procurement Agency",
+    "endpoints": [],
+    "description": "Osun State Public Procurement Agency e-procurement portal publishing tenders, awards, and related contracting records.",
+    "tags": [
+      "government",
+      "procurement",
+      "OCDS",
+      "open contracting",
+      "Osun"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-AB/opendata/abiaeprocurementabgovng.yaml",
+    "id": "abiaeprocurementabgovng",
+    "name": "Abia State e-Procurement OCDS Portal",
+    "link": "https://abiaeprocurement.ab.gov.ng/",
+    "domain": "abiaeprocurement.ab.gov.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "Abia State Bureau of Public Procurement",
+    "endpoints": [],
+    "description": "Abia State e-procurement portal publishing public contracting records, including OCDS-oriented award and tender listings.",
+    "tags": [
+      "government",
+      "procurement",
+      "OCDS",
+      "open contracting",
+      "Abia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-KD/opendata/wwwocdskdsggovng.yaml",
+    "id": "wwwocdskdsggovng",
+    "name": "Kaduna State Open Contracting Portal",
+    "link": "https://www.ocds.kdsg.gov.ng/",
+    "domain": "www.ocds.kdsg.gov.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "Kaduna State Public Procurement Authority",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://www.ocds.kdsg.gov.ng/api"
+      },
+      {
+        "type": "rest",
+        "url": "https://www.ocds.kdsg.gov.ng/ocds-api"
+      }
+    ],
+    "description": "Kaduna State open contracting portal publishing procurement records as OCDS packages, with project search and documented HTTP APIs at /api and /ocds-api.",
+    "tags": [
+      "has_api",
+      "procurement",
+      "OCDS",
+      "government",
+      "Kaduna",
+      "Nigeria"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-KD/geo/ipdatakdsggovng.yaml",
+    "id": "ipdatakdsggovng",
+    "name": "KADPPA Infrastructure Portal",
+    "link": "https://ipdata.kdsg.gov.ng/public/home",
+    "domain": "ipdata.kdsg.gov.ng",
+    "catalog_type": "Geoportal",
+    "country": "NG",
+    "owner_name": "Kaduna State Public Procurement Authority",
+    "endpoints": [],
+    "description": "Kaduna State infrastructure project map and list published to the Open Contracting for Infrastructure Data Standard (OC4IDS).",
+    "tags": [
+      "infrastructure",
+      "OC4IDS",
+      "government",
+      "Kaduna",
+      "Nigeria"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-AD/opendata/wwwocdsbppadamawastategovng.yaml",
+    "id": "wwwocdsbppadamawastategovng",
+    "name": "Adamawa State OCDS Portal",
+    "link": "https://www.ocdsbpp.adamawastate.gov.ng/",
+    "domain": "www.ocdsbpp.adamawastate.gov.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "Adamawa State Bureau of Public Procurement",
+    "endpoints": [],
+    "description": "Adamawa State Bureau of Public Procurement OCDS portal of projects, tenders, and awards.",
+    "tags": [
+      "government",
+      "procurement",
+      "OCDS",
+      "open contracting",
+      "Adamawa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/Federal/indicators/nigerianstatgovng.yaml",
+    "id": "nigerianstatgovng",
+    "name": "National Bureau of Statistics Nigeria",
+    "link": "https://www.nigerianstat.gov.ng/",
+    "domain": "www.nigerianstat.gov.ng",
+    "catalog_type": "Indicators catalog",
+    "country": "NG",
+    "owner_name": "National Bureau of Statistics",
+    "endpoints": [],
+    "description": "Official statistics website and data portal of Nigeria's National Bureau of Statistics. Publishes indicator tables, statistical reports, and an eLibrary of national accounts, CPI, GDP, labour, and social statistics.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "indicators",
+      "national statistical office"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/Federal/indicators/dashboardneitigovng.yaml",
+    "id": "dashboardneitigovng",
+    "name": "NEITI Data Dashboard",
+    "link": "https://dashboard.neiti.gov.ng/",
+    "domain": "dashboard.neiti.gov.ng",
+    "catalog_type": "Indicators catalog",
+    "country": "NG",
+    "owner_name": "Nigeria Extractive Industries Transparency Initiative",
+    "endpoints": [],
+    "description": "Former NEITI public dashboards and downloadable series for oil, gas, and solid minerals production, revenue, and payments. The dashboard.neiti.gov.ng host currently enters an HTTP redirect loop and is not usable. NEITI still publishes reports from neiti.gov.ng.",
+    "tags": [
+      "extractives",
+      "oil and gas",
+      "government",
+      "Nigeria",
+      "NEITI"
+    ],
+    "hints": [],
+    "status": "inactive"
+  },
+  {
+    "file": "data/entities/NG/Federal/indicators/statisticscbngovng.yaml",
+    "id": "statisticscbngovng",
+    "name": "CBN Statistics Database",
+    "link": "https://statistics.cbn.gov.ng/shop",
+    "domain": "statistics.cbn.gov.ng",
+    "catalog_type": "Indicators catalog",
+    "country": "NG",
+    "owner_name": "Central Bank of Nigeria",
+    "endpoints": [],
+    "description": "Central Bank of Nigeria statistics database (LiveShop) of monetary, external, fiscal, and real-sector time series, with chart and table views at /shop and /data-browser.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "Nigeria",
+      "CBN",
+      "monetary"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/Federal/opendata/grid3govng.yaml",
+    "id": "grid3govng",
+    "name": "GRID3 Nigeria datasets",
+    "link": "https://grid3.gov.ng/datasets",
+    "domain": "grid3.gov.ng",
+    "catalog_type": "Datasets list",
+    "country": "NG",
+    "owner_name": "National Space Research and Development Agency (NASRDA)",
+    "endpoints": [],
+    "description": "Former GRID3 Nigeria public dataset listing for population, settlements, boundaries, and infrastructure layers. The programme geodatabase was transferred to NASRDA. The hostname grid3.gov.ng currently times out.",
+    "tags": [
+      "government",
+      "GRID3",
+      "Nigeria",
+      "population",
+      "settlements",
+      "geospatial"
+    ],
+    "hints": [],
+    "status": "inactive"
+  },
+  {
+    "file": "data/entities/NG/Federal/opendata/openstatesng.yaml",
+    "id": "openstatesng",
+    "name": "Open Nigerian States",
+    "link": "https://openstates.ng/",
+    "domain": "openstates.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "The BudgIT Foundation",
+    "endpoints": [],
+    "description": "BudgIT civic portal of Nigerian state fiscal and administrative data, with per-state profiles and downloadable figures.",
+    "tags": [
+      "government",
+      "open data",
+      "Nigeria",
+      "BudgIT"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/Federal/opendata/wwwgovspendng.yaml",
+    "id": "wwwgovspendng",
+    "name": "GovSpend",
+    "link": "https://www.govspend.ng/",
+    "domain": "www.govspend.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "The BudgIT Foundation",
+    "endpoints": [],
+    "description": "BudgIT GovSpend tracker of Nigerian federal treasury payments, with searchable daily spending reports.",
+    "tags": [
+      "government",
+      "budget",
+      "spending",
+      "Nigeria"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-ED/opendata/eprocurementedostategovng.yaml",
+    "id": "eprocurementedostategovng",
+    "name": "Edo State OCDS Releases",
+    "link": "https://e-procurement.edostate.gov.ng/ocds",
+    "domain": "e-procurement.edostate.gov.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "Edo State Public Procurement Agency",
+    "endpoints": [],
+    "description": "Edo State Public Procurement Agency OCDS releases catalog of public contracting records.",
+    "tags": [
+      "government",
+      "procurement",
+      "OCDS",
+      "open contracting",
+      "Edo"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-JI/opendata/wwwdueprocessjggovng.yaml",
+    "id": "wwwdueprocessjggovng",
+    "name": "Jigawa Due Process Awarded Contracts",
+    "link": "https://www.dueprocess.jg.gov.ng/contract-awarded.php",
+    "domain": "www.dueprocess.jg.gov.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "Jigawa Due Process and Project Monitoring Bureau",
+    "endpoints": [],
+    "description": "Jigawa Due Process and Project Monitoring Bureau listing of awarded public contracts.",
+    "tags": [
+      "government",
+      "procurement",
+      "OCDS",
+      "open contracting",
+      "Jigawa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-EK/opendata/ocdsbppekitistategovng.yaml",
+    "id": "ocdsbppekitistategovng",
+    "name": "Ekiti State BPP Open Contracting Portal",
+    "link": "https://ocds.bpp.ekitistate.gov.ng/Home/Procurements",
+    "domain": "ocds.bpp.ekitistate.gov.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "Ekiti State Bureau of Public Procurement",
+    "endpoints": [],
+    "description": "Ekiti State Bureau of Public Procurement open contracting catalog of procurement records.",
+    "tags": [
+      "government",
+      "procurement",
+      "OCDS",
+      "open contracting",
+      "Ekiti"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-EK/opendata/bigfutportalazurewebsitesnet.yaml",
+    "id": "bigfutportalazurewebsitesnet",
+    "name": "Ekiti State Open Contracting Dashboard",
+    "link": "https://bigfutportal.azurewebsites.net/Home/OcdsRecords",
+    "domain": "bigfutportal.azurewebsites.net",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "Ekiti State Bureau of Public Procurement",
+    "endpoints": [],
+    "description": "Ekiti State Bureau of Public Procurement OCDS records portal (BigFUT), listing open contracting releases for state procurement.",
+    "tags": [
+      "government",
+      "procurement",
+      "OCDS",
+      "open contracting",
+      "Ekiti"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NG/NG-EB/opendata/ebonyieprocureebgovng.yaml",
+    "id": "ebonyieprocureebgovng",
+    "name": "Ebonyi State e-Procurement OCDS Portal",
+    "link": "https://ebonyieprocure.eb.gov.ng/",
+    "domain": "ebonyieprocure.eb.gov.ng",
+    "catalog_type": "Open data portal",
+    "country": "NG",
+    "owner_name": "Ebonyi State Bureau of Public Procurement",
+    "endpoints": [],
+    "description": "Ebonyi State e-procurement portal with public tender, award, and open contracting pages.",
+    "tags": [
+      "government",
+      "procurement",
+      "OCDS",
+      "open contracting",
+      "Ebonyi"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MA/Federal/indicators/bdshcpma.yaml",
+    "id": "bdshcpma",
+    "name": "Base de Données Statistiques - HCP Maroc",
+    "link": "https://bds.hcp.ma",
+    "domain": "bds.hcp.ma",
+    "catalog_type": "Indicators catalog",
+    "country": "MA",
+    "owner_name": "Haut Commissariat au Plan (HCP)",
+    "endpoints": [],
+    "description": "Statistical database (BDS) of Morocco's Haut Commissariat au Plan, with indicators from the population census, household surveys, and economic and social statistics.",
+    "tags": [
+      "statistics",
+      "population",
+      "recensement",
+      "household surveys",
+      "socio-economic",
+      "official statistics",
+      "HCP",
+      "indicators",
+      "government"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MA/Federal/indicators/bkamastatistics.yaml",
+    "id": "bkamastatistics",
+    "name": "Bank Al-Maghrib Statistics",
+    "link": "https://www.bkam.ma/en/Statistics",
+    "domain": "www.bkam.ma",
+    "catalog_type": "Indicators catalog",
+    "country": "MA",
+    "owner_name": "Bank Al-Maghrib",
+    "endpoints": [],
+    "description": "Bank Al-Maghrib (Central Bank of Morocco) statistics catalog of monetary, financial, and macroeconomic indicators.",
+    "tags": [
+      "statistics",
+      "government",
+      "central bank",
+      "official statistics",
+      "Morocco"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MA/Federal/indicators/plateformeoddhcpma.yaml",
+    "id": "plateformeoddhcpma",
+    "name": "Plateforme ODD - Indicateurs de Développement Durable du Maroc",
+    "link": "http://plateforme-odd.hcp.ma/ODD_HCP/fr/",
+    "domain": "plateforme-odd.hcp.ma",
+    "catalog_type": "Indicators catalog",
+    "country": "MA",
+    "owner_name": "Haut Commissariat au Plan (HCP)",
+    "endpoints": [],
+    "description": "Interactive HCP platform of Sustainable Development Goal (SDG / ODD) indicators and metadata, covering the UN official list and complementary national indicators for Morocco.",
+    "tags": [
+      "ODD",
+      "SDG",
+      "Objectifs de Développement Durable",
+      "indicateurs",
+      "métadonnées",
+      "statistiques",
+      "sustainable development",
+      "HCP",
+      "UN indicators",
+      "government"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MA/Federal/geo/geoportailandagovma.yaml",
+    "id": "geoportailandagovma",
+    "name": "ANDA Marine Aquaculture Geoportal",
+    "link": "https://geoportail.anda.gov.ma",
+    "domain": "geoportail.anda.gov.ma",
+    "catalog_type": "Geoportal",
+    "country": "MA",
+    "owner_name": "Agence Nationale pour le Développement de l'Aquaculture (ANDA)",
+    "endpoints": [],
+    "description": "Public marine aquaculture geoportal of Morocco's National Aquaculture Development Agency (ANDA). Lists allocated aquaculture zones, active farms, licensed projects, free parcels, and landing infrastructure along the Atlantic coast, including Dakhla and Boujdour.",
+    "tags": [
+      "aquaculture",
+      "fisheries",
+      "geoportal",
+      "government"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MA/Federal/scientific/mfmdpasteurma.yaml",
+    "id": "mfmdpasteurma",
+    "name": "Mediterranean Founder Mutation Database",
+    "link": "http://mfmd.pasteur.ma/",
+    "domain": "mfmd.pasteur.ma",
+    "catalog_type": "Scientific data repository",
+    "country": "MA",
+    "owner_name": "Institut Pasteur du Maroc",
+    "endpoints": [],
+    "description": "Web database of founder mutations in Mediterranean populations, maintained by Institut Pasteur du Maroc, to support diagnostic test design and research on population history and migration.",
+    "tags": [
+      "scientific",
+      "research data",
+      "academic",
+      "health",
+      "genetics"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MA/Federal/scientific/mgddpasteurma.yaml",
+    "id": "mgddpasteurma",
+    "name": "Moroccan Genetic Disease Database",
+    "link": "http://mgdd.pasteur.ma/index.php",
+    "domain": "mgdd.pasteur.ma",
+    "catalog_type": "Scientific data repository",
+    "country": "MA",
+    "owner_name": "Institut Pasteur du Maroc",
+    "endpoints": [],
+    "description": "The Moroccan Genetic Disease Database (MGDD) documents mutations and polymorphism frequencies reported in the Moroccan population, for research and clinical lookup by disease or gene.",
+    "tags": [
+      "scientific",
+      "research data",
+      "academic",
+      "health",
+      "genetics"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/KE/Federal/indicators/dataknbsorke.yaml",
+    "id": "dataknbsorke",
+    "name": "KNBS Census DataBrowser",
+    "link": "http://data.knbs.or.ke/",
+    "domain": "data.knbs.or.ke",
+    "catalog_type": "Indicators catalog",
+    "country": "KE",
+    "owner_name": "Kenya National Bureau of Statistics",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "http://api1.knbs.or.ke/getDatasetList?lang=en"
+      },
+      {
+        "type": "rest",
+        "url": "http://api1.knbs.or.ke/getDataset"
+      }
+    ],
+    "description": "KNBS JSON-stat DataBrowser (Istat Cooperation) for the 2019 Kenya Population and Housing Census. Interactive table explorer listed on the KNBS portals page as the Census 2019 Data Browser. Distinct from KeNADA microdata and Open Data for Africa.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "census",
+      "Kenya",
+      "has_api"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/KE/Federal/indicators/cpiexplorerknbsorke.yaml",
+    "id": "cpiexplorerknbsorke",
+    "name": "KNBS CPI Explorer",
+    "link": "https://cpiexplorer.knbs.or.ke/",
+    "domain": "cpiexplorer.knbs.or.ke",
+    "catalog_type": "Indicators catalog",
+    "country": "KE",
+    "owner_name": "Kenya National Bureau of Statistics",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://cpiexplorer.knbs.or.ke/api/v1/cpi/"
+      }
+    ],
+    "description": "Kenya National Bureau of Statistics Consumer Price Index explorer with COICOP breakdowns, regional series, an inflation calculator, and a public JSON API of published CPI observations. Distinct from the KNBS data listing page and KeNADA.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "CPI",
+      "Kenya",
+      "has_api"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/KE/Federal/geo/datahubksagoke.yaml",
+    "id": "datahubksagoke",
+    "name": "KSA Datahub",
+    "link": "https://datahub.ksa.go.ke",
+    "domain": "datahub.ksa.go.ke",
+    "catalog_type": "Geoportal",
+    "country": "KE",
+    "owner_name": "Kenya Space Agency",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://datahub.ksa.go.ke/api/data/category/"
+      },
+      {
+        "type": "wms111",
+        "url": "https://datahub.ksa.go.ke/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities",
+        "version": "1.1.1"
+      },
+      {
+        "type": "wfs110",
+        "url": "https://datahub.ksa.go.ke/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities",
+        "version": "1.1.0"
+      }
+    ],
+    "description": "KSA Datahub is the Kenya Space Agency GIS and Remote Sensing Data Hub, providing access to geospatial data, satellite imagery, story maps and tools for mapping and analysis in support of Kenya's space research and Earth observation initiatives. Custom React application with a REST API and GeoServer backend.",
+    "tags": [
+      "geospatial",
+      "government",
+      "has_api"
+    ],
+    "hints": [
+      "geoserver",
+      "datahub(.io/oss)",
+      "nuxt/next custom",
+      "wms/wfs server"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/GN/Federal/indicators/rgphinsguineeorg.yaml",
+    "id": "rgphinsguineeorg",
+    "name": "Indicateurs du RGPH 2014",
+    "link": "https://rgph.insguinee.org/resultatindicateur/",
+    "domain": "rgph.insguinee.org",
+    "catalog_type": "Indicators catalog",
+    "country": "GN",
+    "owner_name": "Institut National de la Statistique de Guinée",
+    "endpoints": [],
+    "description": "INS query database of indicators from Guinea's 2014 General Population and Housing Census (RGPH). Users select theme, indicator, and disaggregation for fertility, mortality, education, households, and economic characteristics.",
+    "tags": [
+      "statistics",
+      "census",
+      "government",
+      "official statistics",
+      "Guinea"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/GN/Federal/indicators/indicateursclesinsguineeorg.yaml",
+    "id": "indicateursclesinsguineeorg",
+    "name": "INS Guinée Indicateurs clés",
+    "link": "https://indicateurs-cles.insguinee.org/dbindicateurs",
+    "domain": "indicateurs-cles.insguinee.org",
+    "catalog_type": "Indicators catalog",
+    "country": "GN",
+    "owner_name": "Institut National de la Statistique de Guinée",
+    "endpoints": [],
+    "description": "Key indicators database of Guinea's National Institute of Statistics. Users select years, regions, and themes to query official statistics on demography, economy, education, health, agriculture, and other topics.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "Guinea"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/GN/Federal/indicators/infrasinsguineeorg.yaml",
+    "id": "infrasinsguineeorg",
+    "name": "Infrastructures socio-économiques de base de la Guinée",
+    "link": "https://infras.insguinee.org/infrastructures/",
+    "domain": "infras.insguinee.org",
+    "catalog_type": "Indicators catalog",
+    "country": "GN",
+    "owner_name": "Institut National de la Statistique de Guinée",
+    "endpoints": [],
+    "description": "INS query catalog of Guinea's 2017 inventory of basic socio-economic infrastructure (schools, health facilities, markets, transport, and other amenities) by region, prefecture, and sub-prefecture.",
+    "tags": [
+      "statistics",
+      "infrastructure",
+      "government",
+      "official statistics",
+      "Guinea"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MU/indicators/fareimuapmis.yaml",
+    "id": "fareimuapmis",
+    "name": "APMIS Mauritius",
+    "link": "https://farei.mu/apmis/index.html",
+    "domain": "farei.mu",
+    "catalog_type": "Indicators catalog",
+    "country": "MU",
+    "owner_name": "Food and Agricultural Research and Extension Institute",
+    "endpoints": [],
+    "description": "Agricultural Production and Market Information System of FAREI. National catalog of crop production, area harvested, retail and wholesale market prices, and related agricultural statistics for Mauritius.",
+    "tags": [
+      "agriculture",
+      "market prices",
+      "statistics",
+      "government",
+      "Mauritius"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MU/opendata/odegovmuorg.yaml",
+    "id": "odegovmuorg",
+    "name": "Data ODE",
+    "link": "https://ode.govmu.org/data-ode",
+    "domain": "ode.govmu.org",
+    "catalog_type": "Open data portal",
+    "country": "MU",
+    "owner_name": "Ministry of Environment, Solid Waste Management and Climate Change",
+    "endpoints": [],
+    "description": "Open data portal of the Observatoire de l'Environnement. Searchable environmental datasets and indicators for Mauritius, covering themes such as biodiversity, climate, waste, water, and energy.",
+    "tags": [
+      "environment",
+      "open data",
+      "indicators",
+      "Mauritius"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MU/scientific/moigovmuorgmarinedb.yaml",
+    "id": "moigovmuorgmarinedb",
+    "name": "Database of Marine Organisms of Mauritius",
+    "link": "https://moi.govmu.org/marinedb/",
+    "domain": "moi.govmu.org",
+    "catalog_type": "Scientific data repository",
+    "country": "MU",
+    "owner_name": "Mauritius Oceanography Institute",
+    "endpoints": [],
+    "description": "Database of Marine Organisms of Mauritius. Taxonomic checklist of marine species reported from the maritime territory of the Republic of Mauritius, compiled by the Mauritius Oceanography Institute from literature and existing databases.",
+    "tags": [
+      "biodiversity",
+      "marine",
+      "taxonomy",
+      "species checklist",
+      "Mauritius"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MU/scientific/mdgdbcom.yaml",
+    "id": "mdgdbcom",
+    "name": "Marine Diversity and Genetic Data Bank",
+    "link": "https://mdgdb.com/",
+    "domain": "mdgdb.com",
+    "catalog_type": "Scientific data repository",
+    "country": "MU",
+    "owner_name": "Mauritius Oceanography Institute",
+    "endpoints": [],
+    "description": "Marine Diversity and Genetic Data Bank of the Mauritius Oceanography Institute. Searchable morphometric and DNA-barcode records of commercial and other marine organisms from Mauritian waters, with nomenclature and BLAST search.",
+    "tags": [
+      "biodiversity",
+      "marine",
+      "genetics",
+      "DNA barcoding",
+      "Mauritius"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MU/scientific/repositorymu.yaml",
+    "id": "repositorymu",
+    "name": "Mauritius Research Repository",
+    "link": "https://repository.mu/mrc/",
+    "domain": "repository.mu",
+    "catalog_type": "Scientific data repository",
+    "country": "MU",
+    "owner_name": "Mauritius Research and Innovation Council",
+    "endpoints": [],
+    "description": "National open-access research repository of the Mauritius Research and Innovation Council. Collects reports, publications, and other research outputs related to Mauritius or produced by Mauritian authors. Public browsing is available; REST and OAI-PMH paths redirect to login.",
+    "tags": [
+      "scientific",
+      "institutional repository",
+      "research",
+      "Mauritius"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MU/Federal/indicators/maustatsgovmuorg.yaml",
+    "id": "maustatsgovmuorg",
+    "name": "Maustats Platform",
+    "link": "https://maustats.govmu.org/home/",
+    "domain": "maustats.govmu.org",
+    "catalog_type": "Indicators catalog",
+    "country": "MU",
+    "owner_name": "Statistics Mauritius",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://maustats.govmu.org/maustatsapigateway/api/data-retrieval/data/get-area-indicator-timeperiod"
+      },
+      {
+        "type": "rest",
+        "url": "https://maustats.govmu.org/maustatsapigateway/api/data-retrieval/key-facts/key-fact-data"
+      }
+    ],
+    "description": "Statistics Mauritius official Maustats data hub with a data bank, dashboards, regional and sector views, SDMX exchange, and an API gateway. Distinct from the IMF NSDP page, the NADA microdata archive, and Open Data for Africa.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "Mauritius",
+      "national statistical office",
+      "has_api"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MR/Federal/indicators/boostbudgetmr.yaml",
+    "id": "boostbudgetmr",
+    "name": "BOOST Mauritania",
+    "link": "http://boost.budget.mr/",
+    "domain": "boost.budget.mr",
+    "catalog_type": "Indicators catalog",
+    "country": "MR",
+    "owner_name": "Ministère des Finances",
+    "endpoints": [],
+    "description": "Ministry of Finance BOOST open-budget pivot of central-government expenditure and revenue. Users filter by year, administrative title, chapter and economic article and read inscribed, initial, revised and payment amounts.",
+    "tags": [
+      "government",
+      "budget",
+      "finance",
+      "BOOST",
+      "Mauritania"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MR/Federal/indicators/scappoddgovmr.yaml",
+    "id": "scappoddgovmr",
+    "name": "Base nationale d'indicateurs SCAPP-ODD",
+    "link": "http://scapp-odd.gov.mr/",
+    "domain": "scapp-odd.gov.mr",
+    "catalog_type": "Indicators catalog",
+    "country": "MR",
+    "owner_name": "Agence Nationale de la Statistique et de l'Analyse Démographique et Économique (ANSADE)",
+    "endpoints": [],
+    "description": "National database of SCAPP (Stratégie de Croissance Accélérée et de Prospérité Partagée) and Sustainable Development Goal (ODD) indicators used to monitor Mauritania's 2016-2030 development strategy and related sectoral plans.",
+    "tags": [
+      "ODD",
+      "SDG",
+      "SCAPP",
+      "indicators",
+      "government",
+      "statistics",
+      "Mauritania"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MR/Federal/opendata/dataportalrimaicom.yaml",
+    "id": "dataportalrimaicom",
+    "name": "DataMR - Catalogue de Données de la Mauritanie",
+    "link": "https://dataportal.rim-ai.com/",
+    "domain": "dataportal.rim-ai.com",
+    "catalog_type": "Open data portal",
+    "country": "MR",
+    "owner_name": "RIM-AI",
+    "endpoints": [],
+    "description": "DataMR is a public catalogue of Mauritania-related datasets operated by the RIM-AI community. It lists about 100 downloadable datasets (CSV, GeoJSON, XLSX) compiled from official and international sources such as UNHCR, IATI, the World Bank, WFP HungerMap, ACLED, and UN SDG indicators.",
+    "tags": [
+      "open data",
+      "Mauritania",
+      "statistics",
+      "humanitarian",
+      "civil society"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MR/Federal/opendata/wwwbeyanatmr.yaml",
+    "id": "wwwbeyanatmr",
+    "name": "Beyanat Mauritania, Economic, budgetary and monetary data portal",
+    "link": "https://www.beyanat.mr",
+    "domain": "www.beyanat.mr",
+    "catalog_type": "Open data portal",
+    "country": "MR",
+    "owner_name": "Ministère des Affaires Économiques et de la Promotion des Secteurs Productifs",
+    "endpoints": [],
+    "description": "Former public portal for Mauritanian economic, budgetary and monetary data operated by the ministry in charge of the economy. The hostname www.beyanat.mr no longer resolves (August 2026).",
+    "tags": [
+      "government",
+      "economy",
+      "budget",
+      "statistics",
+      "Mauritania"
+    ],
+    "hints": [],
+    "status": "inactive"
+  },
+  {
+    "file": "data/entities/MR/Federal/opendata/transparencemtnimagovmr.yaml",
+    "id": "transparencemtnimagovmr",
+    "name": "Transparence MTNIMA - Suivi des marchés publics",
+    "link": "https://transparence.mtnima.gov.mr/",
+    "domain": "transparence.mtnima.gov.mr",
+    "catalog_type": "Open data portal",
+    "country": "MR",
+    "owner_name": "Ministère de la Transformation Numérique, de l'Innovation et de la Modernisation de l'Administration",
+    "endpoints": [],
+    "description": "Public portal of the Ministry of Digital Transformation for tracking ministry procurement and spending since August 2024. Provides searchable contract and below-threshold expenditure records, with filters and summary statistics, in Arabic and French. No registration is required.",
+    "tags": [
+      "government",
+      "procurement",
+      "transparency",
+      "budget",
+      "Mauritania"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/DZ/Federal/indicators/wwwonsdz.yaml",
+    "id": "wwwonsdz",
+    "name": "ONS Algérie",
+    "link": "https://www.ons.dz/",
+    "domain": "www.ons.dz",
+    "catalog_type": "Indicators catalog",
+    "country": "DZ",
+    "owner_name": "Office National des Statistiques",
+    "endpoints": [],
+    "description": "Official statistics website of Algeria's National Statistics Office (ONS). Publishes statistical tables and publications covering census, demography, prices, and economic statistics.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "indicators",
+      "national statistical office"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/DZ/Federal/indicators/wwwbankofalgeriadz.yaml",
+    "id": "wwwbankofalgeriadz",
+    "name": "Bank of Algeria Statistics",
+    "link": "https://www.bank-of-algeria.dz/statistiques/",
+    "domain": "www.bank-of-algeria.dz",
+    "catalog_type": "Indicators catalog",
+    "country": "DZ",
+    "owner_name": "Bank of Algeria",
+    "endpoints": [],
+    "description": "Bank of Algeria public statistics catalog of monetary, banking, and macroeconomic tables.",
+    "tags": [
+      "statistics",
+      "government",
+      "central bank",
+      "official statistics",
+      "time series"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/DZ/Federal/opendata/wwwupgrowthdz.yaml",
+    "id": "wwwupgrowthdz",
+    "name": "Open Data UpGrowth",
+    "link": "https://www.upgrowth.dz/datasets",
+    "domain": "www.upgrowth.dz",
+    "catalog_type": "Open data portal",
+    "country": "DZ",
+    "owner_name": "UpGrowth",
+    "endpoints": [],
+    "description": "Public catalog of Algerian reference datasets published by UpGrowth under CC BY 4.0, including CNRC activity codes, ANAE auto-entrepreneur activities, wilaya reference data, a Journal officiel index, and customs tariff nomenclature.",
+    "tags": [
+      "open data",
+      "Algeria",
+      "reference data"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/DZ/Federal/geo/geoalgeriacom.yaml",
+    "id": "geoalgeriacom",
+    "name": "GeoAlgeria",
+    "link": "https://geoalgeria.com/",
+    "domain": "geoalgeria.com",
+    "catalog_type": "Geoportal",
+    "country": "DZ",
+    "owner_name": "Yasser's Studio",
+    "endpoints": [
+      {
+        "type": "sitemap",
+        "url": "https://geoalgeria.com/sitemap.xml"
+      }
+    ],
+    "description": "Community atlas of Algeria with an interactive trilingual map of 69 wilayas and 1,541 communes, plus MIT-licensed open geographic datasets (boundaries, post offices, banks, health, transit, and related points of interest) published as JSON, CSV, GeoJSON, and SQL.",
+    "tags": [
+      "geospatial",
+      "open data",
+      "administrative boundaries",
+      "wilayas",
+      "communes",
+      "Algeria"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/DZ/Federal/geo/aquamapalgeriecdtadz.yaml",
+    "id": "aquamapalgeriecdtadz",
+    "name": "Aquamap Algérie",
+    "link": "https://aquamap-algerie.cdta.dz/",
+    "domain": "aquamap-algerie.cdta.dz",
+    "catalog_type": "Geoportal",
+    "country": "DZ",
+    "owner_name": "Centre de Développement des Technologies Avancées",
+    "endpoints": [],
+    "description": "Public marine aquaculture geoportal for Algerian coastal waters, mapping aquaculture sites and related marine spatial layers. Developed by CDTA for the National Centre for Fisheries and Aquaculture Research and Development (CNRDPA).",
+    "tags": [
+      "marine",
+      "oceans",
+      "aquaculture",
+      "geospatial",
+      "Algeria"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MG/Federal/indicators/datavizinstatmg.yaml",
+    "id": "datavizinstatmg",
+    "name": "INSTAT Dataviz",
+    "link": "https://dataviz.instat.mg/accueil",
+    "domain": "dataviz.instat.mg",
+    "catalog_type": "Indicators catalog",
+    "country": "MG",
+    "owner_name": "Institut National de la Statistique (INSTAT Madagascar)",
+    "endpoints": [],
+    "description": "Interactive statistical visualization portal of Madagascar's National Institute of Statistics. Presents official indicators by theme and region. The origin behind Cloudflare returned HTTP 521 when last checked (August 2026).",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "Madagascar"
+    ],
+    "hints": [],
+    "status": "inactive"
+  },
+  {
+    "file": "data/entities/MG/Federal/opendata/wwwopenstatmadagascarmg.yaml",
+    "id": "wwwopenstatmadagascarmg",
+    "name": "OpenStat Madagascar",
+    "link": "https://www.openstat-madagascar.mg/",
+    "domain": "www.openstat-madagascar.mg",
+    "catalog_type": "Open data portal",
+    "country": "MG",
+    "owner_name": "Madagascar Initiatives for Digital Innovation (MAIDI)",
+    "endpoints": [],
+    "description": "Civil society open data portal operated by Madagascar Initiatives for Digital Innovation (MAIDI). Publishes datasets on public finance, health, economy, education, energy, and society to promote open data and open government in Madagascar.",
+    "tags": [
+      "open data",
+      "Madagascar",
+      "civil society",
+      "statistics",
+      "public finance",
+      "transparency"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/BJ/Federal/indicators/instadbj.yaml",
+    "id": "instadbj",
+    "name": "INStaD Benin",
+    "link": "https://instad.bj/",
+    "domain": "instad.bj",
+    "catalog_type": "Indicators catalog",
+    "country": "BJ",
+    "owner_name": "Institut National de la Statistique et de la Démographie",
+    "endpoints": [],
+    "description": "Official statistics website of Benin's National Institute of Statistics and Demography (INStaD). Publishes statistical tables and publications covering census, demography, prices, and economic statistics.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "indicators",
+      "national statistical office"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/BJ/Federal/indicators/sidoffengsocialgouvbj.yaml",
+    "id": "sidoffengsocialgouvbj",
+    "name": "SIDoFFE-NG – statistiques sociales publiques",
+    "link": "https://www.sidoffe-ng.social.gouv.bj/sidoffepublic/public",
+    "domain": "www.sidoffe-ng.social.gouv.bj",
+    "catalog_type": "Indicators catalog",
+    "country": "BJ",
+    "owner_name": "Ministère des Affaires Sociales et de la Microfinance",
+    "endpoints": [],
+    "description": "Public module of SIDoFFE-NG (Système Intégré des Données relatives à la Famille, la Femme et l'Enfant, Nouvelle Génération). Disseminates official social statistics on family, women, children, disability, and social protection in Benin. The public site is an Angular application; no harvestable catalog API was found.",
+    "tags": [
+      "social statistics",
+      "gender",
+      "family",
+      "children",
+      "government"
+    ],
+    "hints": [
+      "angular"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/BJ/Federal/opendata/opendatabudgetbeninbj.yaml",
+    "id": "opendatabudgetbeninbj",
+    "name": "Base de données financière de la Direction Générale du Budget",
+    "link": "https://opendata.budgetbenin.bj/",
+    "domain": "opendata.budgetbenin.bj",
+    "catalog_type": "Open data portal",
+    "country": "BJ",
+    "owner_name": "Direction Générale du Budget",
+    "endpoints": [],
+    "description": "Public financial database of Benin's Direction Générale du Budget (DGB), linked from budgetbenin.bj. Angular application for budget and public-finance datasets. No harvestable catalog API was found at /api (the path serves the SPA).",
+    "tags": [
+      "budget",
+      "public finance",
+      "government",
+      "open data"
+    ],
+    "hints": [
+      "angular"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NA/Federal/indicators/wwwboncomna.yaml",
+    "id": "wwwboncomna",
+    "name": "Bank of Namibia Statistical Information",
+    "link": "https://www.bon.com.na/Economic-information/Statistical-information.aspx",
+    "domain": "www.bon.com.na",
+    "catalog_type": "Indicators catalog",
+    "country": "NA",
+    "owner_name": "Bank of Namibia",
+    "endpoints": [],
+    "description": "Bank of Namibia statistical information catalog of monetary, financial, and macroeconomic tables available as downloadable spreadsheets.",
+    "tags": [
+      "statistics",
+      "government",
+      "central bank",
+      "official statistics",
+      "time series"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NA/Federal/geo/digitalnamibiansaorgna.yaml",
+    "id": "digitalnamibiansaorgna",
+    "name": "Digital Namibia",
+    "link": "https://digitalnamibia.nsa.org.na",
+    "domain": "digitalnamibia.nsa.org.na",
+    "catalog_type": "Geoportal",
+    "country": "NA",
+    "owner_name": "Namibia Statistics Agency",
+    "endpoints": [],
+    "description": "Digital Namibia map browser of the Namibia Statistics Agency. View and analyse NSDI fundamental geospatial datasets from government institutions. NSA lists this geoportal as an official NSDI e-service alongside the GeoFind metadata catalogue.",
+    "tags": [
+      "government",
+      "GIS",
+      "NSDI",
+      "geospatial"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NA/Federal/metadata/geofindnsaorgna.yaml",
+    "id": "geofindnsaorgna",
+    "name": "GeoFind NSDI Metadata Catalogue",
+    "link": "http://geofind.nsa.org.na/",
+    "domain": "geofind.nsa.org.na",
+    "catalog_type": "Metadata catalog",
+    "country": "NA",
+    "owner_name": "Namibia Statistics Agency",
+    "endpoints": [],
+    "description": "GeoFind NSDI metadata catalogue (Metadata Browser) of the Namibia Statistics Agency. Search and evaluate metadata for government geospatial datasets under the National Spatial Data Infrastructure. NSA still lists this HTTP catalogue as an official e-service alongside Digital Namibia.",
+    "tags": [
+      "government",
+      "metadata",
+      "NSDI",
+      "geospatial"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NA/Federal/scientific/theeiscom.yaml",
+    "id": "theeiscom",
+    "name": "Environmental Information Service Namibia eLibrary",
+    "link": "https://the-eis.com/elibrary/",
+    "domain": "the-eis.com",
+    "catalog_type": "Scientific data repository",
+    "country": "NA",
+    "owner_name": "Namibian Chamber of Environment",
+    "endpoints": [],
+    "description": "Environmental Information Service Namibia eLibrary. Open catalogue of environmental literature, reports, and spatial datasets compiled with the Namibian Chamber of Environment.",
+    "tags": [
+      "environment",
+      "biodiversity",
+      "eLibrary",
+      "GIS"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NA/Federal/scientific/datasasscalorg.yaml",
+    "id": "datasasscalorg",
+    "name": "SASSCAL Data and Information Portal",
+    "link": "http://data.sasscal.org/",
+    "domain": "data.sasscal.org",
+    "catalog_type": "Scientific data repository",
+    "country": "NA",
+    "owner_name": "Southern African Science Service Centre for Climate Change and Adaptive Land Management (SASSCAL)",
+    "endpoints": [],
+    "description": "SASSCAL Data and Information Portal. Open metadata catalogue of climate change and adaptive land-management datasets for Southern Africa, hosted by the SASSCAL Open Access Data Centre in Windhoek. HTTPS presents a hostname-mismatched certificate; the public catalogue is served over HTTP.",
+    "tags": [
+      "climate",
+      "environment",
+      "Southern Africa",
+      "SASSCAL",
+      "research data"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/CG/Federal/indicators/inscongocg.yaml",
+    "id": "inscongocg",
+    "name": "INS Congo",
+    "link": "https://ins-congo.cg/",
+    "domain": "ins-congo.cg",
+    "catalog_type": "Indicators catalog",
+    "country": "CG",
+    "owner_name": "Institut National de la Statistique",
+    "endpoints": [],
+    "description": "Official statistics website of the Republic of the Congo's National Institute of Statistics (INS). Publishes statistical tables and publications covering census, demography, and economic statistics.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "indicators",
+      "national statistical office"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/CI/Federal/indicators/wwwanstatci.yaml",
+    "id": "wwwanstatci",
+    "name": "ANSTAT Indicateurs",
+    "link": "https://www.anstat.ci/indicateur",
+    "domain": "www.anstat.ci",
+    "catalog_type": "Indicators catalog",
+    "country": "CI",
+    "owner_name": "Agence Nationale de la Statistique",
+    "endpoints": [],
+    "description": "Official ANSTAT indicator explorer for Côte d'Ivoire, with thematic time series, charts, and publications. The public site is behind Cloudflare bot protection; the former api-public.anstat.ci host no longer resolves.",
+    "tags": [
+      "statistics",
+      "indicators",
+      "government",
+      "official statistics",
+      "ANSTAT"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/CI/Federal/indicators/sigsefci.yaml",
+    "id": "sigsefci",
+    "name": "SIGSEF Côte d'Ivoire",
+    "link": "https://sigsef.ci/",
+    "domain": "sigsef.ci",
+    "catalog_type": "Indicators catalog",
+    "country": "CI",
+    "owner_name": "Direction Générale de l'Économie",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://sigsef.ci/gettableauxprefefinis/32"
+      }
+    ],
+    "description": "Integrated system for economic and financial statistics of Côte d'Ivoire, operated by the Direction Générale de l'Économie. Public multicriteria and predefined table consultation across five sectors (real, monetary, public finance, external, social), with about 84 tables and 1,990 indicators and Excel export. Distinct from the ANSTAT indicator explorer.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "Côte d'Ivoire",
+      "has_api"
+    ],
+    "hints": [
+      "tableau"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/CI/Federal/geo/sieenvironnementgouvci.yaml",
+    "id": "sieenvironnementgouvci",
+    "name": "SIE Cote d Ivoire",
+    "link": "https://sie.environnement.gouv.ci/",
+    "domain": "sie.environnement.gouv.ci",
+    "catalog_type": "Geoportal",
+    "country": "CI",
+    "owner_name": "Ministere de l Environnement, du Developpement Durable et de la Transition Ecologique",
+    "endpoints": [],
+    "description": "Système d'Information Environnementale (SIE) of the Ministry of Environment, with thematic environmental indicators and a SIG-SIE GIS module (https://sie.environnement.gouv.ci/sieapp2/sig_index.php). No public catalog API is advertised.",
+    "tags": [
+      "environment",
+      "statistics",
+      "GIS",
+      "government",
+      "indicators"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/CI/Federal/geo/sigfuciportal.yaml",
+    "id": "sigfuciportal",
+    "name": "SIGFU Plateforme de partage de donnees",
+    "link": "https://sigfu.ci/portal/",
+    "domain": "sigfu.ci",
+    "catalog_type": "Geoportal",
+    "country": "CI",
+    "owner_name": "Ministere de la Construction, du Logement et de l Urbanisme",
+    "endpoints": [],
+    "description": "Geographic data-sharing platform of the Ministry of Construction (MCLU) for Greater Abidjan and Assinie (orthophoto, urban database, SDUGA layers), built under the SIGFU / SDUGA programmes. https://sigfu.ci/portal/ times out and does not respond.",
+    "tags": [
+      "land",
+      "urban",
+      "cadastre",
+      "Abidjan",
+      "geoportal"
+    ],
+    "hints": [],
+    "status": "inactive"
+  },
+  {
+    "file": "data/entities/CI/Federal/scientific/documentseconomieivoirienneci.yaml",
+    "id": "documentseconomieivoirienneci",
+    "name": "Base documentaire DGE",
+    "link": "https://documents.economie-ivoirienne.ci/",
+    "domain": "documents.economie-ivoirienne.ci",
+    "catalog_type": "Scientific data repository",
+    "country": "CI",
+    "owner_name": "Direction Generale de l Economie",
+    "endpoints": [],
+    "description": "Document and statistics repository of the Direction Générale de l'Économie, with REST catalog and OAI-PMH. https://documents.economie-ivoirienne.ci currently returns Cloudflare HTTP 530 (tunnel down).",
+    "tags": [
+      "economy",
+      "publications",
+      "statistics",
+      "government"
+    ],
+    "hints": [],
+    "status": "inactive"
+  },
+  {
+    "file": "data/entities/CF/Federal/indicators/wwwicaseesorg.yaml",
+    "id": "wwwicaseesorg",
+    "name": "ICASEES Centrafrique",
+    "link": "https://www.icasees.org/",
+    "domain": "www.icasees.org",
+    "catalog_type": "Indicators catalog",
+    "country": "CF",
+    "owner_name": "Institut centrafricain des statistiques, des études économiques et sociales",
+    "endpoints": [],
+    "description": "Official statistics website of the Central African Institute of Statistics, Economic and Social Studies (ICASEES). Publishes statistical tables and publications covering census, demography, and economic statistics. Distinct from the ICASEES NADA microdata catalog.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "indicators",
+      "national statistical office"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/LY/Federal/indicators/libyastatcom.yaml",
+    "id": "libyastatcom",
+    "name": "LibyaStat",
+    "link": "https://libyastat.com/",
+    "domain": "libyastat.com",
+    "catalog_type": "Indicators catalog",
+    "country": "LY",
+    "owner_name": "LibyaStat",
+    "endpoints": [],
+    "description": "Independent public explorer of Libyan macroeconomic, trade, oil, and exchange-rate indicators compiled from the Central Bank of Libya, the National Oil Corporation, and official trade sources.",
+    "tags": [
+      "statistics",
+      "economy",
+      "trade",
+      "oil",
+      "indicators",
+      "Libya"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/LY/Federal/geo/portallsdiy.yaml",
+    "id": "portallsdiy",
+    "name": "Libya Spatial Data Portal",
+    "link": "https://portal.lsdi.ly/",
+    "domain": "portal.lsdi.ly",
+    "catalog_type": "Geoportal",
+    "country": "LY",
+    "owner_name": "General Information Authority",
+    "endpoints": [],
+    "description": "National spatial data catalog of the Libyan Spatial Data Infrastructure (LSDI / بوابة البيانات المكانية), operated by the General Information Authority. Leaflet catalog of geospatial metadata and map layers shared by Libyan public institutions. No public CSW or OGC API was reachable in August 2026.",
+    "tags": [
+      "geospatial",
+      "SDI",
+      "metadata",
+      "government",
+      "Libya"
+    ],
+    "hints": [
+      "openlayers/leaflet",
+      "csw server"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/TD/Federal/indicators/wwwinseedtd.yaml",
+    "id": "wwwinseedtd",
+    "name": "INSEED Tchad",
+    "link": "https://www.inseed.td/",
+    "domain": "www.inseed.td",
+    "catalog_type": "Indicators catalog",
+    "country": "TD",
+    "owner_name": "Institut national de la statistique, des études économiques et démographiques",
+    "endpoints": [],
+    "description": "Official statistics website of Chad's National Institute of Statistics, Economic and Demographic Studies (INSEED). Publishes statistical tables and publications covering census, demography, and economic statistics.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "indicators",
+      "national statistical office"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/TD/Federal/opendata/wwwobservatoiretd.yaml",
+    "id": "wwwobservatoiretd",
+    "name": "Observatoire Tchadien des Finances Publiques",
+    "link": "https://www.observatoire.td/",
+    "domain": "www.observatoire.td",
+    "catalog_type": "Open data portal",
+    "country": "TD",
+    "owner_name": "Observatoire Tchadien des Finances Publiques",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://www.observatoire.td/api/datasets"
+      },
+      {
+        "type": "rest",
+        "url": "https://www.observatoire.td/api/contrats-petroliers"
+      },
+      {
+        "type": "rest",
+        "url": "https://www.observatoire.td/api/titres-miniers"
+      },
+      {
+        "type": "rest",
+        "url": "https://www.observatoire.td/api/budget/jeux-donnees"
+      }
+    ],
+    "description": "Public-finance and extractives open-data platform of Chad. Lists budget datasets plus public APIs for petroleum contracts, mining titles, mining conventions, and related authorizations.",
+    "tags": [
+      "government",
+      "open data",
+      "budget",
+      "extractives",
+      "mining",
+      "petroleum",
+      "has_api",
+      "Chad"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SS/Federal/indicators/climissouthsudanorg.yaml",
+    "id": "climissouthsudanorg",
+    "name": "CLiMIS South Sudan",
+    "link": "https://climis-southsudan.org",
+    "domain": "climis-southsudan.org",
+    "catalog_type": "Indicators catalog",
+    "country": "SS",
+    "owner_name": "South Sudan National Bureau of Statistics",
+    "endpoints": [],
+    "description": "Crop and Livestock Market Information System (CLiMIS) data warehouse of the National Bureau of Statistics and the Ministry of Agriculture and Food Security, developed with FAO and partners. Public dashboard of market prices, terms of trade, exchange rates, CPI, cross-border trade, rainfall, crop production, livestock, food-security indicators, and IPC population data.",
+    "tags": [
+      "food security",
+      "agriculture",
+      "markets",
+      "livestock",
+      "IPC",
+      "government",
+      "statistics",
+      "official statistics"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SS/Federal/scientific/csrfsouthsudanorg.yaml",
+    "id": "csrfsouthsudanorg",
+    "name": "CSRF Research Repository",
+    "link": "https://csrf-southsudan.org/resources/research-repository/",
+    "domain": "csrf-southsudan.org",
+    "catalog_type": "Scientific data repository",
+    "country": "SS",
+    "owner_name": "Conflict Sensitivity Resource Facility",
+    "endpoints": [],
+    "description": "Searchable library of research papers, reports, briefings, and county profiles on conflict sensitivity and aid in South Sudan. Filterable by state, document type, and theme.",
+    "tags": [
+      "scientific",
+      "research data",
+      "institutional repository",
+      "civil society",
+      "South Sudan",
+      "humanitarian"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SZ/Federal/geo/cdiendmaorgsz.yaml",
+    "id": "cdiendmaorgsz",
+    "name": "Eswatini Drought Monitor",
+    "link": "https://cdie.ndma.org.sz/",
+    "domain": "cdie.ndma.org.sz",
+    "catalog_type": "Geoportal",
+    "country": "SZ",
+    "owner_name": "National Disaster Management Agency",
+    "endpoints": [
+      {
+        "type": "openapi",
+        "url": "https://cdie.ndma.org.sz/api/schema/",
+        "version": "3.0"
+      },
+      {
+        "type": "droughtmap:maps",
+        "url": "https://cdie.ndma.org.sz/api/v1/maps/",
+        "version": "1.0"
+      }
+    ],
+    "description": "Public DroughtMap Hub catalog operated by the National Disaster Management Agency. Publishes monthly Composite Drought Indicator maps for browse, compare, and download, with the Ministry of Agriculture and the Eswatini Meteorological Service. Akvo-built Next.js/Django application with a public REST API; rasters are stored on the separate NDMA GeoNode Digital Risk Database.",
+    "tags": [
+      "drought",
+      "climate",
+      "meteorology",
+      "government",
+      "has_api",
+      "disaster management"
+    ],
+    "hints": [
+      "geonode",
+      "nuxt/next custom",
+      "django"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SO/Federal/indicators/lmismolfrgovso.yaml",
+    "id": "lmismolfrgovso",
+    "name": "Somalia Livestock Market Information System",
+    "link": "https://lmis.molfr.gov.so/",
+    "domain": "lmis.molfr.gov.so",
+    "catalog_type": "Indicators catalog",
+    "country": "SO",
+    "owner_name": "Ministry of Livestock, Forestry and Range",
+    "endpoints": [],
+    "description": "Federal Ministry of Livestock, Forestry and Range Livestock Market Information System. Public portal with analytics, a market data explorer, and reports covering livestock markets and prices across Somali regions.",
+    "tags": [
+      "livestock",
+      "markets",
+      "agriculture",
+      "prices",
+      "Somalia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SO/Federal/indicators/mofgovso.yaml",
+    "id": "mofgovso",
+    "name": "Somalia Ministry of Finance Fiscal Data",
+    "link": "https://mof.gov.so/fiscal/download.html",
+    "domain": "mof.gov.so",
+    "catalog_type": "Indicators catalog",
+    "country": "SO",
+    "owner_name": "Ministry of Finance",
+    "endpoints": [],
+    "description": "Federal Ministry of Finance public fiscal tables for FGS budget, expenditure, and revenue (dbSomaliaFgsRevExp) with monthly updates since 2014. Excel, TSV, and CSV annual packages plus a documented machine-readable index API.",
+    "tags": [
+      "government",
+      "budget",
+      "public finance",
+      "GFS",
+      "Somalia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SO/Federal/indicators/cropsfsnauorg.yaml",
+    "id": "cropsfsnauorg",
+    "name": "FSNAU Crop Data",
+    "link": "https://crops.fsnau.org/",
+    "domain": "crops.fsnau.org",
+    "catalog_type": "Indicators catalog",
+    "country": "SO",
+    "owner_name": "Food Security and Nutrition Analysis Unit (FSNAU)",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://crops.fsnau.org/api/search_params"
+      }
+    ],
+    "description": "FAO FSNAU public crop production explorer for Somalia. Filterable tables of metric-tonne production by zone, region, district, year (1995-2025), season, crop, and livelihood system, with a JSON search-parameter API.",
+    "tags": [
+      "agriculture",
+      "crops",
+      "food security",
+      "FAO",
+      "Somalia",
+      "has_api"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SO/Federal/indicators/dashboardfsnauorg.yaml",
+    "id": "dashboardfsnauorg",
+    "name": "FSNAU Early Warning Early Action Dashboard",
+    "link": "https://dashboard.fsnau.org/",
+    "domain": "dashboard.fsnau.org",
+    "catalog_type": "Indicators catalog",
+    "country": "SO",
+    "owner_name": "Food Security and Nutrition Analysis Unit (FSNAU)",
+    "endpoints": [],
+    "description": "FAO FSNAU Early Warning Early Action dashboard for Somalia. Public district maps and time-series of food-security alarm indicators (markets, climate, nutrition, health, population movement, insecurity, drought).",
+    "tags": [
+      "food security",
+      "early warning",
+      "nutrition",
+      "humanitarian",
+      "FAO",
+      "Somalia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SO/Federal/indicators/cdifaoswalimorg.yaml",
+    "id": "cdifaoswalimorg",
+    "name": "SWALIM Combined Drought Index",
+    "link": "https://cdi.faoswalim.org/",
+    "domain": "cdi.faoswalim.org",
+    "catalog_type": "Indicators catalog",
+    "country": "SO",
+    "owner_name": "FAO Somalia Water and Land Information Management (SWALIM)",
+    "endpoints": [],
+    "description": "FAO SWALIM Combined Drought Index (CDI) map. Public district drought severity from rainfall and temperature, with CSV download. NDVI is currently excluded from the index.",
+    "tags": [
+      "drought",
+      "climate",
+      "indicators",
+      "FAO",
+      "Somalia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SO/Federal/geo/frrimsfaoswalimorg.yaml",
+    "id": "frrimsfaoswalimorg",
+    "name": "SWALIM Flood Risk and Response Information Management System",
+    "link": "https://frrims.faoswalim.org/",
+    "domain": "frrims.faoswalim.org",
+    "catalog_type": "Geoportal",
+    "country": "SO",
+    "owner_name": "FAO Somalia Water and Land Information Management (SWALIM)",
+    "endpoints": [],
+    "description": "FAO SWALIM Flood Risk and Response Information Management System (FRRMIS). Public river-level tables, forecast maps, river-breakage inventory, and flood map layers for the Juba and Shabelle basins.",
+    "tags": [
+      "floods",
+      "rivers",
+      "early warning",
+      "geospatial",
+      "FAO",
+      "Somalia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SO/Federal/scientific/snrfafaoswalimorg.yaml",
+    "id": "snrfafaoswalimorg",
+    "name": "Somalia National River Flow Archive",
+    "link": "https://snrfa.faoswalim.org/",
+    "domain": "snrfa.faoswalim.org",
+    "catalog_type": "Scientific data repository",
+    "country": "SO",
+    "owner_name": "FAO Somalia Water and Land Information Management (SWALIM)",
+    "endpoints": [],
+    "description": "Somalia National River Flow Archive (SNRFA) of FAO SWALIM. Public station catalog for Juba and Shabelle gauges with daily water-level and flow timeseries and downloads (records from 1951 onward).",
+    "tags": [
+      "hydrology",
+      "rivers",
+      "timeseries",
+      "FAO",
+      "Somalia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SO/SO-NU/geo/puntlandwimscom.yaml",
+    "id": "puntlandwimscom",
+    "name": "Puntland Water Information Management System",
+    "link": "https://puntlandwims.com/",
+    "domain": "puntlandwims.com",
+    "catalog_type": "Geoportal",
+    "country": "SO",
+    "owner_name": "Puntland Ministry of Energy, Minerals and Water",
+    "endpoints": [],
+    "description": "Puntland Water Information Management System (WIMS) of the Ministry of Energy, Minerals and Water. Public catalog of about 350 water sources with functioning status, quality analytics, rehabilitation projects, and a water resources atlas.",
+    "tags": [
+      "water",
+      "WASH",
+      "geospatial",
+      "Puntland",
+      "Somalia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/ZA-WC/geo/giselsenburgcom.yaml",
+    "id": "giselsenburgcom",
+    "name": "CapeFarmMapper 3",
+    "link": "https://gis.elsenburg.com/apps/cfm/",
+    "domain": "gis.elsenburg.com",
+    "catalog_type": "Geoportal",
+    "country": "ZA",
+    "owner_name": "Western Cape Department of Agriculture",
+    "endpoints": [],
+    "description": "Online agricultural mapping application of the Western Cape Department of Agriculture. Provides access to cadastral, land cover, biodiversity and farm-level geographic layers.",
+    "tags": [
+      "agriculture",
+      "GIS",
+      "Western Cape",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/ZA-EC/opendata/nelsonmandelabaygovza.yaml",
+    "id": "nelsonmandelabaygovza",
+    "name": "Nelson Mandela Bay GIS Data Downloads",
+    "link": "https://www.nelsonmandelabay.gov.za/documentslist?catID=66",
+    "domain": "www.nelsonmandelabay.gov.za",
+    "catalog_type": "Datasets list",
+    "country": "ZA",
+    "owner_name": "Nelson Mandela Bay Municipality",
+    "endpoints": [],
+    "description": "Nelson Mandela Bay Municipality public GIS downloads, including cadastral, ward, cemetery and waste-site shapefiles.",
+    "tags": [
+      "GIS",
+      "cadastre",
+      "local government",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/microdata/isibalowebstatssagovza.yaml",
+    "id": "isibalowebstatssagovza",
+    "name": "ISIbalo Data Portal",
+    "link": "https://isibaloweb.statssa.gov.za/",
+    "domain": "isibaloweb.statssa.gov.za",
+    "catalog_type": "Microdata catalog",
+    "country": "ZA",
+    "owner_name": "Statistics South Africa",
+    "endpoints": [],
+    "description": "Official Statistics South Africa data product portal. Provides downloadable census, survey and administrative datasets and metadata after the Nesstar service was discontinued.",
+    "tags": [
+      "microdata",
+      "statistics",
+      "census",
+      "South Africa",
+      "official statistics"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/indicators/dhbhstorgza.yaml",
+    "id": "dhbhstorgza",
+    "name": "HST District Health Barometer",
+    "link": "https://dhb.hst.org.za/",
+    "domain": "dhb.hst.org.za",
+    "catalog_type": "Indicators catalog",
+    "country": "ZA",
+    "owner_name": "Health Systems Trust",
+    "endpoints": [],
+    "description": "Interactive District Health Barometer of the Health Systems Trust. Public health performance indicators for South Africa's 52 districts, with maps, league tables and downloads.",
+    "tags": [
+      "health",
+      "indicators",
+      "districts",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/indicators/wwwglobalindexai.yaml",
+    "id": "wwwglobalindexai",
+    "name": "Global Index on Responsible AI",
+    "link": "https://www.global-index.ai/",
+    "domain": "www.global-index.ai",
+    "catalog_type": "Indicators catalog",
+    "country": "ZA",
+    "owner_name": "Global Center on AI Governance",
+    "endpoints": [],
+    "description": "Country rankings, pillar and dimension scores, and an evidence explorer assessing responsible artificial-intelligence governance, implementation, civil society participation and enabling conditions worldwide.",
+    "tags": [
+      "indicators",
+      "artificial intelligence",
+      "AI governance",
+      "responsible AI",
+      "human rights"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/indicators/greenbookcoza.yaml",
+    "id": "greenbookcoza",
+    "name": "CSIR GreenBook",
+    "link": "https://greenbook.co.za/",
+    "domain": "greenbook.co.za",
+    "catalog_type": "Indicators catalog",
+    "country": "ZA",
+    "owner_name": "Council for Scientific and Industrial Research",
+    "endpoints": [],
+    "description": "CSIR GreenBook online repository of municipal climate-risk data, projections and adaptation information for South African settlements.",
+    "tags": [
+      "climate",
+      "adaptation",
+      "municipalities",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/indicators/wwwresbankcoza.yaml",
+    "id": "wwwresbankcoza",
+    "name": "SARB Online Statistical Query",
+    "link": "https://www.resbank.co.za/en/home/what-we-do/statistics/releases/online-statistical-query",
+    "domain": "www.resbank.co.za",
+    "catalog_type": "Indicators catalog",
+    "country": "ZA",
+    "owner_name": "South African Reserve Bank",
+    "endpoints": [],
+    "description": "South African Reserve Bank download facility for Quarterly Bulletin macroeconomic time series. Series can be selected by KBP code or keyword and exported as tables.",
+    "tags": [
+      "statistics",
+      "macroeconomic",
+      "central bank",
+      "South Africa",
+      "time series"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/indicators/censusstatssagovza.yaml",
+    "id": "censusstatssagovza",
+    "name": "Stats SA Census Dissemination",
+    "link": "https://census.statssa.gov.za/",
+    "domain": "census.statssa.gov.za",
+    "catalog_type": "Indicators catalog",
+    "country": "ZA",
+    "owner_name": "Statistics South Africa",
+    "endpoints": [],
+    "description": "Interactive Census 2022 dissemination portal of Statistics South Africa. Distinct from the SuperWEB2 table builder; publishes census indicators and geographic profiles as a JavaScript census explorer.",
+    "tags": [
+      "statistics",
+      "census",
+      "government",
+      "official statistics",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/indicators/youthexplorerorgza.yaml",
+    "id": "youthexplorerorgza",
+    "name": "Youth Explorer",
+    "link": "https://youthexplorer.org.za/",
+    "domain": "youthexplorer.org.za",
+    "catalog_type": "Indicators catalog",
+    "country": "ZA",
+    "owner_name": "Southern Africa Labour and Development Research Unit, University of Cape Town",
+    "endpoints": [],
+    "description": "Youth-centred indicator explorer for South Africa, mapping census, labour market and wellbeing measures from national to ward and main-place level.",
+    "tags": [
+      "youth",
+      "census",
+      "indicators",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/indicators/niwisdwsgovza.yaml",
+    "id": "niwisdwsgovza",
+    "name": "National Integrated Water Information System",
+    "link": "https://www.dws.gov.za/niwis2/",
+    "domain": "www.dws.gov.za",
+    "catalog_type": "Indicators catalog",
+    "country": "ZA",
+    "owner_name": "Department of Water and Sanitation",
+    "endpoints": [],
+    "description": "National Integrated Water Information System dashboards publishing Department of Water and Sanitation water-resource indicators with CSV and Excel downloads.",
+    "tags": [
+      "water",
+      "indicators",
+      "hydrology",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/indicators/toolssarsgovza.yaml",
+    "id": "toolssarsgovza",
+    "name": "SARS Trade Stats Portal",
+    "link": "https://tools.sars.gov.za/Tradestatsportal/",
+    "domain": "tools.sars.gov.za",
+    "catalog_type": "Indicators catalog",
+    "country": "ZA",
+    "owner_name": "South African Revenue Service",
+    "endpoints": [],
+    "description": "South African Revenue Service merchandise trade statistics portal, with interactive visualisations and a download wizard for imports and exports by country and commodity.",
+    "tags": [
+      "trade",
+      "customs",
+      "statistics",
+      "government",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/indicators/crimehuborg.yaml",
+    "id": "crimehuborg",
+    "name": "ISS Crime Hub",
+    "link": "https://crimehub.org/wizard",
+    "domain": "crimehub.org",
+    "catalog_type": "Indicators catalog",
+    "country": "ZA",
+    "owner_name": "Institute for Security Studies",
+    "endpoints": [],
+    "description": "Institute for Security Studies Crime Hub statistics wizard. Compares SAPS crime categories, police stations and reporting years, with maps and downloadable reports.",
+    "tags": [
+      "crime",
+      "public safety",
+      "statistics",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/opendata/dwsiwqsgovza.yaml",
+    "id": "dwsiwqsgovza",
+    "name": "RQIS Water Quality Data and Reports",
+    "link": "https://www.dws.gov.za/iwqs/default.aspx",
+    "domain": "www.dws.gov.za",
+    "catalog_type": "Datasets list",
+    "country": "ZA",
+    "owner_name": "Department of Water and Sanitation",
+    "endpoints": [],
+    "description": "Resource Quality Information Services data and reports for South African river and dam water quality, including chemistry time series and monitoring programme outputs.",
+    "tags": [
+      "water quality",
+      "hydrology",
+      "monitoring",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/opendata/spatialtaxdataorgza.yaml",
+    "id": "spatialtaxdataorgza",
+    "name": "Spatial Tax Data South Africa",
+    "link": "https://spatialtaxdata.org.za/",
+    "domain": "spatialtaxdata.org.za",
+    "catalog_type": "Open data portal",
+    "country": "ZA",
+    "owner_name": "The Human Sciences Research Council",
+    "endpoints": [],
+    "description": "There is a glaring gap in the availability of credible spatial economic data in South Africa. This ambitious project draws on administrative tax recor",
+    "tags": [
+      "economics",
+      "has_api",
+      "tax",
+      "economic activity",
+      "municipal",
+      "spatial",
+      "panel data",
+      "South Africa",
+      "open data",
+      "SEAD-SA"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/opendata/dataetendersgovza.yaml",
+    "id": "dataetendersgovza",
+    "name": "National Treasury Transparency Portal",
+    "link": "https://data.etenders.gov.za/",
+    "domain": "data.etenders.gov.za",
+    "catalog_type": "Open data portal",
+    "country": "ZA",
+    "owner_name": "National Treasury Republic of South Africa",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://ocds-api.etenders.gov.za/"
+      },
+      {
+        "type": "docs",
+        "url": "https://ocds-api.etenders.gov.za/swagger/index.html"
+      },
+      {
+        "type": "docs",
+        "url": "https://data.etenders.gov.za/Home/LearnMore"
+      }
+    ],
+    "description": "National Treasury Transparency Portal publishing South African public procurement data as Open Contracting Data Standard (OCDS) packages, with bulk JSON, CSV and Excel downloads and a REST API.",
+    "tags": [
+      "procurement",
+      "OCDS",
+      "government",
+      "has_api",
+      "South Africa",
+      "treasury"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/opendata/municipaldatatreasurygovza.yaml",
+    "id": "municipaldatatreasurygovza",
+    "name": "Municipal Finance Data",
+    "link": "https://municipaldata.treasury.gov.za/",
+    "domain": "municipaldata.treasury.gov.za",
+    "catalog_type": "Open data portal",
+    "country": "ZA",
+    "owner_name": "National Treasury Republic of South Africa",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://municipaldata.treasury.gov.za/api/cubes"
+      },
+      {
+        "type": "docs",
+        "url": "https://municipaldata.treasury.gov.za/docs"
+      }
+    ],
+    "description": "National Treasury catalog and JSON API for South African municipal Section 71 financial data, covering metro, district and local municipalities.",
+    "tags": [
+      "municipal finance",
+      "government",
+      "has_api",
+      "South Africa",
+      "treasury"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/opendata/municipalmoneygovza.yaml",
+    "id": "municipalmoneygovza",
+    "name": "Municipal Money",
+    "link": "https://municipalmoney.gov.za/",
+    "domain": "municipalmoney.gov.za",
+    "catalog_type": "Open data portal",
+    "country": "ZA",
+    "owner_name": "National Treasury Republic of South Africa",
+    "endpoints": [],
+    "description": "National Treasury citizen scorecard for municipal financial performance. Profiles indicators, audit outcomes and comparisons for South African municipalities. Machine-readable cubes are published on Municipal Finance Data.",
+    "tags": [
+      "municipal finance",
+      "government",
+      "South Africa",
+      "treasury",
+      "transparency"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/opendata/datavulekamaligovza.yaml",
+    "id": "datavulekamaligovza",
+    "name": "Vulekamali – South Africa Budget Data Portal",
+    "link": "https://vulekamali.gov.za/",
+    "domain": "vulekamali.gov.za",
+    "catalog_type": "Open data portal",
+    "country": "ZA",
+    "owner_name": "National Treasury Republic of South Africa",
+    "endpoints": [],
+    "description": "National Treasury budget transparency portal for South African national and provincial expenditure data, developed with Imali Yethu. The former CKAN datastore at data.vulekamali.gov.za no longer resolves; the public catalog is the vulekamali website.",
+    "tags": [
+      "government",
+      "budget",
+      "fiscal",
+      "government data"
+    ],
+    "hints": [
+      "ckan"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/opendata/egisenvironmentgovza.yaml",
+    "id": "egisenvironmentgovza",
+    "name": "Environmental Geographic Information Systems (EGIS) - Data Download",
+    "link": "https://egis.environment.gov.za/data_egis/data_download/current",
+    "domain": "egis.environment.gov.za",
+    "catalog_type": "Datasets list",
+    "country": "ZA",
+    "owner_name": "Department of Environmental Affairs",
+    "endpoints": [],
+    "description": "Provides access to baseline geospatial data and services for geospatial technology users.",
+    "tags": [
+      "government",
+      "has_api",
+      "geospatial",
+      "baseline data",
+      "data services",
+      "environmental data"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/opendata/politicaleconomyorgza.yaml",
+    "id": "politicaleconomyorgza",
+    "name": "PESA Political Economy Data Portal",
+    "link": "https://politicaleconomy.org.za/download-category/dataset/",
+    "domain": "politicaleconomy.org.za",
+    "catalog_type": "Datasets list",
+    "country": "ZA",
+    "owner_name": "PESA",
+    "endpoints": [],
+    "description": "Former PESA political economy dataset downloads. The hostname politicaleconomy.org.za no longer resolves.",
+    "tags": [
+      "has_api",
+      "microdata",
+      "society",
+      "political economy",
+      "datasets",
+      "South Africa"
+    ],
+    "hints": [
+      "ckan"
+    ],
+    "status": "inactive"
+  },
+  {
+    "file": "data/entities/ZA/Federal/geo/sanhocoza.yaml",
+    "id": "sanhocoza",
+    "name": "SANHO nautical chart catalogue",
+    "link": "https://sanho.co.za/products/paper_charts.htm",
+    "domain": "sanho.co.za",
+    "catalog_type": "Geoportal",
+    "country": "ZA",
+    "owner_name": "South African Navy Hydrographic Office",
+    "endpoints": [],
+    "description": "Public catalogue of South African Navy Hydrographic Office paper charts and Electronic Navigational Charts, with ENC usage-band listings (overview, coastal, approaches, harbour) and product metadata. Distinct from the DFFE OCIMS operational portal.",
+    "tags": [
+      "hydrographic",
+      "oceans",
+      "ENC",
+      "nautical",
+      "government",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/geo/ocimsenvironmentgovza.yaml",
+    "id": "ocimsenvironmentgovza",
+    "name": "South Africa Oceans and Coastal Information Management System",
+    "link": "https://ocims.environment.gov.za/",
+    "domain": "ocims.environment.gov.za",
+    "catalog_type": "Geoportal",
+    "country": "ZA",
+    "owner_name": "Department of Forestry, Fisheries and the Environment",
+    "endpoints": [],
+    "description": "Oceans and Coastal Information Management System of the Department of Forestry, Fisheries and the Environment, providing operational marine tools, a coastal viewer, aquaculture and fisheries support, and links to related data resources. Distinct from the CSIR OCIMS CKAN catalog.",
+    "tags": [
+      "marine",
+      "oceans",
+      "coastal",
+      "fisheries",
+      "geospatial",
+      "South Africa"
+    ],
+    "hints": [
+      "ckan"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/geo/cataloguesansaorgza.yaml",
+    "id": "cataloguesansaorgza",
+    "name": "SANSA Earth Observation Catalogue",
+    "link": "http://catalogue.sansa.org.za/search/",
+    "domain": "catalogue.sansa.org.za",
+    "catalog_type": "Geoportal",
+    "country": "ZA",
+    "owner_name": "South African National Space Agency",
+    "endpoints": [],
+    "description": "Earth observation catalogue of the South African National Space Agency. Provides search and ordering of satellite imagery covering southern Africa, including Landsat, SPOT, CBERS and SumbandilaSAT archives.",
+    "tags": [
+      "earth observation",
+      "satellite",
+      "remote sensing",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/geo/csgdlrrdgovza.yaml",
+    "id": "csgdlrrdgovza",
+    "name": "Chief Surveyor-General Spatial Data",
+    "link": "https://csg.dlrrd.gov.za/spatial.htm",
+    "domain": "csg.dlrrd.gov.za",
+    "catalog_type": "Geoportal",
+    "country": "ZA",
+    "owner_name": "Chief Surveyor-General, Department of Land Reform and Rural Development",
+    "endpoints": [],
+    "description": "Chief Surveyor-General spatial data page for South African cadastral datasets including erven, farms, servitudes and administrative boundaries.",
+    "tags": [
+      "cadastre",
+      "survey",
+      "GIS",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/geo/screeningenvironmentgovza.yaml",
+    "id": "screeningenvironmentgovza",
+    "name": "National Environmental Screening Tool",
+    "link": "https://screening.environment.gov.za/",
+    "domain": "screening.environment.gov.za",
+    "catalog_type": "Geoportal",
+    "country": "ZA",
+    "owner_name": "Department of Forestry, Fisheries and the Environment",
+    "endpoints": [],
+    "description": "National web-based environmental screening tool used to generate mandatory EIA screening reports and inspect spatial environmental sensitivity themes.",
+    "tags": [
+      "EIA",
+      "environment",
+      "screening",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/geo/marineweathersacoza.yaml",
+    "id": "marineweathersacoza",
+    "name": "SAWS Marine Portal",
+    "link": "https://marine.weathersa.co.za/",
+    "domain": "marine.weathersa.co.za",
+    "catalog_type": "Geoportal",
+    "country": "ZA",
+    "owner_name": "South African Weather Service",
+    "endpoints": [],
+    "description": "Marine data portal of the South African Weather Service: in-situ and remotely sensed ocean observations (SST, sea level, currents, drifting buoys, ships, HF radar, Argo), forecasts and products.",
+    "tags": [
+      "geospatial",
+      "government"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/geo/pasastorefront.yaml",
+    "id": "pasastorefront",
+    "name": "Petroleum Agency SA Data Portal",
+    "link": "https://geoportal.petroleumagencysa.com/Storefront/Viewer/index_map.html",
+    "domain": "geoportal.petroleumagencysa.com",
+    "catalog_type": "Geoportal",
+    "country": "ZA",
+    "owner_name": "Petroleum Agency SA",
+    "endpoints": [],
+    "description": "Public map of South African petroleum wells, seismic surveys, and licence areas.",
+    "tags": [
+      "petroleum",
+      "oil",
+      "gas",
+      "seismic"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/scientific/servicedirisaacza.yaml",
+    "id": "servicedirisaacza",
+    "name": "DIRISA Data Share",
+    "link": "https://service.dirisa.ac.za/",
+    "domain": "service.dirisa.ac.za",
+    "catalog_type": "Scientific data repository",
+    "country": "ZA",
+    "owner_name": "Data Intensive Research Initiative of South Africa",
+    "endpoints": [],
+    "description": "DIRISA national research data services portal, including Data Share for FAIR publication of research datasets with DataCite DOIs and related deposit tools.",
+    "tags": [
+      "research data",
+      "FAIR",
+      "DOI",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/scientific/observationssaeonacza.yaml",
+    "id": "observationssaeonacza",
+    "name": "SAEON Observations Database",
+    "link": "https://observations.saeon.ac.za/",
+    "domain": "observations.saeon.ac.za",
+    "catalog_type": "Scientific data repository",
+    "country": "ZA",
+    "owner_name": "The South African Environmental Observation Network (SAEON)",
+    "endpoints": [],
+    "description": "SAEON observations platform: 36 sites, 267 stations, 1,716 sensors, 1,489 datasets and 67.5M verified observations; public dataset/sensor query at /query/datasets and /query/data.",
+    "tags": [
+      "research"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/scientific/gatewayidiaacza.yaml",
+    "id": "gatewayidiaacza",
+    "name": "IDIA Public Data Archive",
+    "link": "https://gateway.idia.ac.za/public_data",
+    "domain": "gateway.idia.ac.za",
+    "catalog_type": "Scientific data repository",
+    "country": "ZA",
+    "owner_name": "University of Cape Town",
+    "endpoints": [],
+    "description": "Inter-University Institute for Data Intensive Astronomy public data archive, hosting MeerKAT and related radio-astronomy datasets.",
+    "tags": [
+      "scientific",
+      "research data",
+      "academic"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/scientific/jjjmibacuk.yaml",
+    "id": "jjjmibacuk",
+    "name": "JWS Online",
+    "link": "https://jjj.mib.ac.uk/",
+    "domain": "jjj.mib.ac.uk",
+    "catalog_type": "Scientific data repository",
+    "country": "ZA",
+    "owner_name": "Stellenbosch University",
+    "endpoints": [],
+    "description": "JWS Online is a systems biology repository and browser-based simulator for curated kinetic models, maintained by Stellenbosch University with a Manchester University mirror at this URL. A Stellenbosch instance is also available at https://jjj.biochem.sun.ac.za/.",
+    "tags": [
+      "scientific",
+      "research data",
+      "academic"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/scientific/archivesaraoacza.yaml",
+    "id": "archivesaraoacza",
+    "name": "MeerKAT Archive",
+    "link": "https://archive.sarao.ac.za",
+    "domain": "archive.sarao.ac.za",
+    "catalog_type": "Scientific data repository",
+    "country": "ZA",
+    "owner_name": "South African Radio Astronomy Observatory",
+    "endpoints": [],
+    "description": "Archive of MeerKAT radio telescope observations operated by the South African Radio Astronomy Observatory.",
+    "tags": [
+      "astronomy",
+      "radio astronomy",
+      "MeerKAT",
+      "SARAO"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/scientific/curationhsrcacza.yaml",
+    "id": "curationhsrcacza",
+    "name": "HSRC Research Data Service",
+    "link": "http://curation.hsrc.ac.za",
+    "domain": "curation.hsrc.ac.za",
+    "catalog_type": "Scientific data repository",
+    "country": "ZA",
+    "owner_name": "Human Sciences Research Council",
+    "endpoints": [],
+    "description": "Former HSRC Research Data Service at curation.hsrc.ac.za. Current public catalog is the HSRC Research Output Repository on Figshare (hsrcrepositoryfigsharecom).",
+    "tags": [
+      "social sciences",
+      "humanities",
+      "research data",
+      "evidence-based policy",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "deprecated"
+  },
+  {
+    "file": "data/entities/ZA/Federal/scientific/wwwweathersacoza.yaml",
+    "id": "wwwweathersacoza",
+    "name": "South African Weather Service",
+    "link": "https://www.weathersa.co.za/",
+    "domain": "www.weathersa.co.za",
+    "catalog_type": "Scientific data repository",
+    "country": "ZA",
+    "owner_name": "South African Weather Service",
+    "endpoints": [],
+    "description": "South African Weather Service public website, listed in re3data as a climate data source. Harvestable WIS 2.0 services are recorded separately as wisweathersacoza.",
+    "tags": [
+      "scientific",
+      "research data",
+      "academic",
+      "climate"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/scientific/cataloguesaeonacza.yaml",
+    "id": "cataloguesaeonacza",
+    "name": "South African Environmental Observation Network Open Data Platform",
+    "link": "https://catalogue.saeon.ac.za",
+    "domain": "catalogue.saeon.ac.za",
+    "catalog_type": "Scientific data repository",
+    "country": "ZA",
+    "owner_name": "The South African Environmental Observation Network (SAEON)",
+    "endpoints": [
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-5f96d725b60be3f312bfe4b3.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-5f96d725b60be3f312bfe4cf.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-5f96d725b60be3f312bfe4d1.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-5f96d725b60be3f312bfe4e1.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-60471cd80073f75b83f38461.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-60471cd80073f75b83f38463.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cb6.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cb8.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cba.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cbc.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cbe.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cc0.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cc2.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cc4.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cc6.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cc8.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cca.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73ccc.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cce.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cd0.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cd2.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cd4.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cd6.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cd8.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cda.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cdc.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73cde.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73ce0.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-606d73ebe4cc2dc76ef73ce2.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-60c1fcccd29f9e65ad789d73.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-615c4ac3d5e9e92d4ff6aeb3.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-615c4e15d5e9e92d4ff6bdcb.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-615c638bd5e9e92d4ff74fba.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-615c960bd5e9e92d4ff789ec.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-61601ce33c628150f72882d9.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-63d8b3c1534659577efb44d6.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-63d8d8fd15237f40747e0e2d.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-63d8dacc15237f40747e0e32.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-63d8e1d915237f40747e0e59.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-63d8e4b615237f40747e0e71.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collection_records-63ee085b6c50c9a9400a0292.xml"
+      },
+      {
+        "type": "sitemap",
+        "url": "https://catalogue.saeon.ac.za/sitemap_collections.xml"
+      }
+    ],
+    "description": "The South African Environmental Observation Network (SAEON) Open Data Platform (ODP) is a metadata repository that facilitates the publication, discovery, dissemination, and preservation of earth observation and environmental data in South Africa. SAEON is a long-term environmental observation and research facility of the National Research Foundation (NRF).",
+    "tags": [
+      "environment",
+      "metadata",
+      "environmental",
+      "earth observation",
+      "open data",
+      "South Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ZA/Federal/scientific/cmrmandelaacza.yaml",
+    "id": "cmrmandelaacza",
+    "name": "MARISMA Spatial Data Portal",
+    "link": "https://cmr.mandela.ac.za/Research-Projects/EBSA-Portal/MARISMA-Spatial-Data-Portal",
+    "domain": "cmr.mandela.ac.za",
+    "catalog_type": "Scientific data repository",
+    "country": "ZA",
+    "owner_name": "Nelson Mandela University",
+    "endpoints": [],
+    "description": "Spatial data used in the MARISMA project (EBSA and MSP workstreams) in an interactive data viewer. Users can select and download files for different countries. Shapefiles require GIS programs, KMZ files require Google Earth. Metadata describes data sources and methods. The portal is managed by the Institute for Coastal and Marine Research, Nelson Mandela University.",
+    "tags": [
+      "environment",
+      "MARISMA",
+      "EBSA",
+      "MSP",
+      "marine spatial planning",
+      "geospatial data",
+      "shapefile",
+      "KMZ"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SN/Federal/indicators/odpregionalstatsenegalsn.yaml",
+    "id": "odpregionalstatsenegalsn",
+    "name": "ODP régional du Sénégal",
+    "link": "https://odpregional.statsenegal.sn/",
+    "domain": "odpregional.statsenegal.sn",
+    "catalog_type": "Indicators catalog",
+    "country": "SN",
+    "owner_name": "Agence Nationale de la Statistique et de la Démographie (ANSD)",
+    "endpoints": [],
+    "description": "ANSD regional Open Data Platform (ODP) for official statistics of Senegal's 14 regions. Distinct from the national AfDB/Knoema Open Data for Africa hub.",
+    "tags": [
+      "statistics",
+      "open data",
+      "regional",
+      "government",
+      "Senegal",
+      "ANSD"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SN/Federal/geo/pgiissecgouvsn.yaml",
+    "id": "pgiissecgouvsn",
+    "name": "Géoportail du PGIIS",
+    "link": "https://pgiis.sec.gouv.sn/portal/",
+    "domain": "pgiis.sec.gouv.sn",
+    "catalog_type": "Geoportal",
+    "country": "SN",
+    "owner_name": "Projet de gestion des inondations et de l'insertion sociale (PGIIS)",
+    "endpoints": [],
+    "description": "PGIIS flood-management geoportal cited by Géo Sénégal as the data-exchange platform for inundation management. The public URL is an ArcGIS Enterprise Portal path (/portal/). Distinct from the CKAN site inondations-dakar.org. The TLS handshake currently fails from some networks.",
+    "tags": [
+      "floods",
+      "geospatial",
+      "PGIIS",
+      "Senegal"
+    ],
+    "hints": [
+      "arcgis",
+      "ckan"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SN/Federal/geo/geosenegalgouvsn.yaml",
+    "id": "geosenegalgouvsn",
+    "name": "Géo Sénégal",
+    "link": "https://geosenegal.gouv.sn/",
+    "domain": "geosenegal.gouv.sn",
+    "catalog_type": "Geoportal",
+    "country": "SN",
+    "owner_name": "Agence nationale de l'aménagement du territoire (ANAT)",
+    "endpoints": [],
+    "description": "National geospatial data infrastructure portal of Senegal (Géo Sénégal). Publishes Géo Data themes, a cartothèque, and BaseGéo vector/imagery downloads produced with ANAT.",
+    "tags": [
+      "geospatial",
+      "SDI",
+      "government",
+      "Senegal",
+      "ANAT"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/SN/Federal/scientific/wwwwestafricanvegetationorg.yaml",
+    "id": "wwwwestafricanvegetationorg",
+    "name": "West African Vegetation Database",
+    "link": "http://www.westafricanvegetation.org/menu/home.aspx",
+    "domain": "www.westafricanvegetation.org",
+    "catalog_type": "Scientific data repository",
+    "country": "SN",
+    "owner_name": "Cheikh Anta Diop University",
+    "endpoints": [],
+    "description": "Vegetation-plot database for West Africa (phytosociological and dendrometric relevés and floristic inventories), maintained with Cheikh Anta Diop University. Public search is available; a free account is required for full download. HTTPS is not offered. Last data edit noted on the site in January 2023.",
+    "tags": [
+      "scientific",
+      "research data",
+      "academic",
+      "vegetation",
+      "West Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ML/Federal/geo/cadastreminesml.yaml",
+    "id": "cadastreminesml",
+    "name": "Cadastre minier du Mali (SICAM)",
+    "link": "https://cadastre.mines.ml/",
+    "domain": "cadastre.mines.ml",
+    "catalog_type": "Geoportal",
+    "country": "ML",
+    "owner_name": "Direction Nationale de la Géologie et des Mines",
+    "endpoints": [],
+    "description": "Système Intégré du Cadastre Minier (SICAM / SIGCAM), the public mining-cadastre portal of the Direction Nationale de la Géologie et des Mines. Custom JHipster application (not Trimble Landfolio). Successor to the MCAS repository at mali.revenuedev.org.",
+    "tags": [
+      "mining",
+      "cadastre",
+      "geospatial",
+      "government",
+      "SICAM"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/BF/Federal/geo/nendogovbf.yaml",
+    "id": "nendogovbf",
+    "name": "NENDO - Nos Écoles Nos Données",
+    "link": "https://www.nendo.gov.bf/",
+    "domain": "www.nendo.gov.bf",
+    "catalog_type": "Geoportal",
+    "country": "BF",
+    "owner_name": "Agence Nationale de Promotion des TIC (ANPTIC)",
+    "endpoints": [],
+    "description": "NENDO (Nos Écoles Nos Données) school map and education indicators application from the Burkina Open Data Initiative. Locates preschool and primary schools in selected communes and publishes examination success rates. No public catalog API is exposed.",
+    "tags": [
+      "education",
+      "schools",
+      "BODI",
+      "government"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/BF/Federal/scientific/ineraopendatacom.yaml",
+    "id": "ineraopendatacom",
+    "name": "INERA OpenData",
+    "link": "https://ineraopendata.com/",
+    "domain": "ineraopendata.com",
+    "catalog_type": "Scientific data repository",
+    "country": "BF",
+    "owner_name": "Institut de l'Environnement et de Recherches Agricoles (INERA)",
+    "endpoints": [],
+    "description": "Phytosanitary image and research-data bank of INERA (Direction régionale de recherches environnementales et agricoles de l'Ouest, Bobo-Dioulasso). Publishes labelled and raw smartphone and drone datasets (mango, cashew, rice, cotton; COCO and YOLO formats) from the FONRID-IA project, with a public dataset dashboard and downloads.",
+    "tags": [
+      "scientific",
+      "research data",
+      "institutional repository",
+      "academic",
+      "Burkina Faso",
+      "agriculture",
+      "environment",
+      "machine learning"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/GW/Federal/indicators/wwwstatguinebissaucom.yaml",
+    "id": "wwwstatguinebissaucom",
+    "name": "INE Guiné-Bissau",
+    "link": "https://www.stat-guinebissau.com/",
+    "domain": "www.stat-guinebissau.com",
+    "catalog_type": "Indicators catalog",
+    "country": "GW",
+    "owner_name": "Instituto Nacional de Estatística da Guiné-Bissau",
+    "endpoints": [],
+    "description": "Official statistics website of Guinea-Bissau's National Institute of Statistics. Publishes statistical tables and indicators covering census, demography, and economic statistics.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "indicators",
+      "national statistical office"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MW/Federal/indicators/wwwnsomalawimw.yaml",
+    "id": "wwwnsomalawimw",
+    "name": "National Statistical Office of Malawi",
+    "link": "https://www.nsomalawi.mw/",
+    "domain": "www.nsomalawi.mw",
+    "catalog_type": "Indicators catalog",
+    "country": "MW",
+    "owner_name": "National Statistical Office",
+    "endpoints": [],
+    "description": "Official statistics website of Malawi's National Statistical Office. Publishes statistical tables and publications covering census, demography, prices, and economic statistics.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "indicators",
+      "national statistical office"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/MW/Federal/indicators/mip1dashboardmw.yaml",
+    "id": "mip1dashboardmw",
+    "name": "MIP-1 Monitoring Dashboard",
+    "link": "https://mip1dashboard.mw/",
+    "domain": "mip1dashboard.mw",
+    "catalog_type": "Indicators catalog",
+    "country": "MW",
+    "owner_name": "National Planning Commission",
+    "endpoints": [],
+    "description": "Former public indicator warehouse of the National Planning Commission for Malawi 2063 and the First 10-Year Implementation Plan (MIP-1), including SDG tracking, metadata, and downloadable Excel datasets. The mip1dashboard.mw hostname no longer resolves.",
+    "tags": [
+      "SDGs",
+      "indicators",
+      "official statistics",
+      "Malawi",
+      "MIP-1",
+      "Malawi 2063"
+    ],
+    "hints": [],
+    "status": "inactive"
+  },
+  {
+    "file": "data/entities/MW/Federal/opendata/masspifpriinfo.yaml",
+    "id": "masspifpriinfo",
+    "name": "IFPRI Malawi Datasets Catalog",
+    "link": "https://massp.ifpri.info/datasets/",
+    "domain": "massp.ifpri.info",
+    "catalog_type": "Datasets list",
+    "country": "MW",
+    "owner_name": "International Food Policy Research Institute (IFPRI)",
+    "endpoints": [],
+    "description": "WordPress datasets listing of the IFPRI Malawi Strategy Support Program (MaSSP). Entries are mostly IFPRI Malawi studies deposited in Harvard Dataverse, not a harvestable open-data portal.",
+    "tags": [
+      "agriculture",
+      "food policy",
+      "rural development",
+      "Malawi",
+      "Dataverse"
+    ],
+    "hints": [
+      "wordpress"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/DJ/Federal/opendata/instaddj.yaml",
+    "id": "instaddj",
+    "name": "Institut National de la Statistique de Djibouti (INSTAD)",
+    "link": "https://instad.dj/",
+    "domain": "instad.dj",
+    "catalog_type": "Datasets list",
+    "country": "DJ",
+    "owner_name": "Institut National de la Statistique de Djibouti (INSTAD)",
+    "endpoints": [],
+    "description": "INSTAD national statistics website with downloadable statistical yearbooks, monthly and quarterly bulletins, CPI and trade indices, RGPH census reports, and a microdata request form.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "census",
+      "Djibouti"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/DJ/Federal/geo/wwwcerddj.yaml",
+    "id": "wwwcerddj",
+    "name": "Cartes nationales du CERD",
+    "link": "https://www.cerd.dj/cartesdjibouti.html",
+    "domain": "www.cerd.dj",
+    "catalog_type": "Geoportal",
+    "country": "DJ",
+    "owner_name": "Centre d'Études et de Recherche de Djibouti (CERD)",
+    "endpoints": [],
+    "description": "CERD national thematic map gallery covering geology, seismicity, hydrogeology, climate, soils, vegetation, and regional atlas sheets for Djibouti.",
+    "tags": [
+      "geospatial",
+      "geoportal",
+      "geology",
+      "hydrology",
+      "seismicity",
+      "Djibouti"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/DJ/Federal/geo/wwwgeohornorg.yaml",
+    "id": "wwwgeohornorg",
+    "name": "Portail Interactif de Djibouti",
+    "link": "https://www.geohorn.org/portail_djibouti/",
+    "domain": "www.geohorn.org",
+    "catalog_type": "Geoportal",
+    "country": "DJ",
+    "owner_name": "GeoHorn",
+    "endpoints": [],
+    "description": "GeoHorn territorial portal for Djibouti with Leaflet map dashboards of INSTAD RGPH 2024 census indicators. Demography is published; heritage, health, education, and other themes are being rolled out.",
+    "tags": [
+      "geospatial",
+      "geoportal",
+      "census",
+      "statistics",
+      "Djibouti"
+    ],
+    "hints": [
+      "openlayers/leaflet"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/AO/Federal/indicators/censo2024inegovao.yaml",
+    "id": "censo2024inegovao",
+    "name": "Censo 2024 — Angola",
+    "link": "https://censo2024.ine.gov.ao/",
+    "domain": "censo2024.ine.gov.ao",
+    "catalog_type": "Indicators catalog",
+    "country": "AO",
+    "owner_name": "Instituto Nacional de Estatística (INE Angola)",
+    "endpoints": [],
+    "description": "Official 2024 Population and Housing Census results portal of Angola's Instituto Nacional de Estatística. Publishes a national statistical panorama (36.6 million inhabitants), a provincial explorer, a census atlas, and Excel/PDF downloads covering 76 indicators for all 21 provinces on population, housing, energy, water, sanitation, and education.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "Angola",
+      "census",
+      "population",
+      "housing",
+      "demographics"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/AO/Federal/indicators/agroclimainametgovao.yaml",
+    "id": "agroclimainametgovao",
+    "name": "Plataforma de Monitorização Agro-Climática (INAMET)",
+    "link": "https://agroclima.inamet.gov.ao/",
+    "domain": "agroclima.inamet.gov.ao",
+    "catalog_type": "Indicators catalog",
+    "country": "AO",
+    "owner_name": "Instituto Nacional de Meteorologia (INAMET)",
+    "endpoints": [],
+    "description": "INAMET agro-climatic monitoring platform for southern Angola (Cunene, Huíla, and Namibe). Publishes province, municipality, and grid indicators for precipitation, temperature, soil water, vegetation health, and drought, plus hydrologic-year bulletins.",
+    "tags": [
+      "climate",
+      "agriculture",
+      "drought",
+      "government",
+      "official statistics",
+      "Angola"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/AO/Federal/indicators/wwwbnaao.yaml",
+    "id": "wwwbnaao",
+    "name": "Banco Nacional de Angola Statistics",
+    "link": "https://www.bna.ao/en/estatistica/",
+    "domain": "www.bna.ao",
+    "catalog_type": "Indicators catalog",
+    "country": "AO",
+    "owner_name": "Banco Nacional de Angola",
+    "endpoints": [],
+    "description": "National Bank of Angola statistics catalog of monetary, banking, and macroeconomic indicators.",
+    "tags": [
+      "statistics",
+      "government",
+      "central bank",
+      "official statistics",
+      "Angola"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NE/Federal/indicators/statnigerorg.yaml",
+    "id": "statnigerorg",
+    "name": "Plateforme Migration INS Niger",
+    "link": "https://stat-niger.org/migrations/public/indicateurs",
+    "domain": "stat-niger.org",
+    "catalog_type": "Indicators catalog",
+    "country": "NE",
+    "owner_name": "Institut National de la Statistique (INS)",
+    "endpoints": [],
+    "description": "INS Niger public migration-statistics platform with indicator tables on labour migration, internal displacement, refugee pupils, trafficking, and related themes. HTTP and HTTPS to /migrations/public/indicateurs timed out on 25 August 2026.",
+    "tags": [
+      "migration",
+      "statistics",
+      "government",
+      "indicators",
+      "Niger"
+    ],
+    "hints": [],
+    "status": "inactive"
+  },
+  {
+    "file": "data/entities/NE/Federal/indicators/simanigernet.yaml",
+    "id": "simanigernet",
+    "name": "Système d'Information sur les Marchés Agricoles (SIMA Niger)",
+    "link": "https://simaniger.net/prix-produits",
+    "domain": "simaniger.net",
+    "catalog_type": "Indicators catalog",
+    "country": "NE",
+    "owner_name": "Ministère du Commerce et de l'Industrie",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://simaniger.net/_api/prix-produits-agricoles/cereal/data"
+      }
+    ],
+    "description": "Agricultural market information system of Niger (SIMA). Public weekly price tables by year, month, region, market, and product, with CSV/Excel export. JSON series are served at /_api/prix-produits-agricoles/.",
+    "tags": [
+      "agriculture",
+      "prices",
+      "markets",
+      "government",
+      "has_api",
+      "Niger"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NE/Federal/geo/ecadastrene.yaml",
+    "id": "ecadastrene",
+    "name": "Carte Cadastrale — Cadastre Niger",
+    "link": "https://ecadastre.ne/cadastre",
+    "domain": "ecadastre.ne",
+    "catalog_type": "Geoportal",
+    "country": "NE",
+    "owner_name": "Ministère de l'Urbanisme et de l'Habitat",
+    "endpoints": [],
+    "description": "Public cadastral map of Cadastre Niger (Ministère de l'Urbanisme et de l'Habitat). Leaflet/OpenLayers viewer with GeoServer WMS layer cadastre:parcelles and parcel pop-ups. Distinct from the paid e-services homepage and from the mining cadastre.",
+    "tags": [
+      "cadastre",
+      "land",
+      "geospatial",
+      "government",
+      "GeoServer"
+    ],
+    "hints": [
+      "geoserver",
+      "openlayers/leaflet",
+      "wms/wfs server"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NE/Federal/geo/cadastreminenigerne.yaml",
+    "id": "cadastreminenigerne",
+    "name": "Cadastre minier du Niger (e-Mines)",
+    "link": "https://cadastremineniger.ne/cadastre-niger",
+    "domain": "cadastremineniger.ne",
+    "catalog_type": "Geoportal",
+    "country": "NE",
+    "owner_name": "Ministère des Mines",
+    "endpoints": [],
+    "description": "Public mining-cadastre map of e-Mines Niger (Ministère des Mines). Lists mineral titles with holders, substances, areas, and a Leaflet/Mapbox map. The application-and-payment homepage is not this catalog.",
+    "tags": [
+      "mining",
+      "cadastre",
+      "geospatial",
+      "government",
+      "e-Mines"
+    ],
+    "hints": [
+      "openlayers/leaflet"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NE/Federal/geo/modernisationvillesne.yaml",
+    "id": "modernisationvillesne",
+    "name": "Géoportail - Adressage de la ville de Niamey",
+    "link": "https://modernisation-villes.ne/geoportail/",
+    "domain": "modernisation-villes.ne",
+    "catalog_type": "Geoportal",
+    "country": "NE",
+    "owner_name": "Agence de Modernisation des Villes du Niger (AMV-Niger)",
+    "endpoints": [],
+    "description": "Public addressing geoportal of Niamey operated by Agence de Modernisation des Villes du Niger. Custom OpenLayers map of addressed streets, neighbourhoods, public facilities, and arrondissement boundaries published as GeoJSON layers.",
+    "tags": [
+      "geospatial",
+      "addressing",
+      "Niamey",
+      "government",
+      "GIS"
+    ],
+    "hints": [
+      "openlayers/leaflet"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NE/Federal/geo/wwwcatastropheprotectioncivilene.yaml",
+    "id": "wwwcatastropheprotectioncivilene",
+    "name": "Géoportail de la Direction Générale de la Protection Civile",
+    "link": "http://www.catastrophe.protectioncivile.ne/geoportail/index.php",
+    "domain": "www.catastrophe.protectioncivile.ne",
+    "catalog_type": "Geoportal",
+    "country": "NE",
+    "owner_name": "Direction Générale de la Protection Civile",
+    "endpoints": [],
+    "description": "Public Leaflet geoportal of the Direction Générale de la Protection Civile. Maps disaster events with filters by type, region, and period, plus counts of people, households, and houses affected.",
+    "tags": [
+      "geospatial",
+      "disaster",
+      "government",
+      "GIS",
+      "civil protection"
+    ],
+    "hints": [
+      "openlayers/leaflet"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/NE/Federal/scientific/wwwinondationsnigerorg.yaml",
+    "id": "wwwinondationsnigerorg",
+    "name": "BDINA - Base de Données sur les Inondations ANADIA-Niger",
+    "link": "https://www.inondations-niger.org/",
+    "domain": "www.inondations-niger.org",
+    "catalog_type": "Scientific data repository",
+    "country": "NE",
+    "owner_name": "Cellule de Coordination du Système d'Alerte Précoce (CC/SAP)",
+    "endpoints": [],
+    "description": "BDINA flood-impact database for Niger since 1998 (ANADIA). Guest login opens table, map, and chart queries of localities, people affected, and damages. Managed by CC/SAP; the query application is hosted at anadia2.fi.ibimet.cnr.it.",
+    "tags": [
+      "floods",
+      "disaster",
+      "early warning",
+      "ANADIA",
+      "government",
+      "Niger"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/BI/Federal/indicators/wwwisteebubi.yaml",
+    "id": "wwwisteebubi",
+    "name": "ISTEEBU Burundi",
+    "link": "https://www.isteebu.bi/",
+    "domain": "www.isteebu.bi",
+    "catalog_type": "Indicators catalog",
+    "country": "BI",
+    "owner_name": "Institut de statistiques et d’études économiques du Burundi",
+    "endpoints": [],
+    "description": "Official statistics website of Burundi's Institute of Statistics and Economic Studies (ISTEEBU). Publishes statistical tables and publications covering census, demography, prices, and economic statistics.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "indicators",
+      "national statistical office"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/GM/Federal/indicators/gbosdataorg.yaml",
+    "id": "gbosdataorg",
+    "name": "GBoS Data Portal",
+    "link": "https://www.gbosdata.org/",
+    "domain": "www.gbosdata.org",
+    "catalog_type": "Indicators catalog",
+    "country": "GM",
+    "owner_name": "Gambia Bureau of Statistics",
+    "endpoints": [],
+    "description": "Official statistics portal of the Gambia Bureau of Statistics (GBoS). Publishes sector indicator tables with CSV, Excel, and PDF downloads covering macroeconomic and financial data, education, health, demography, tourism, agriculture, SDGs, and related official statistics, plus a GIS mapping page.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "Gambia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/CV/Federal/indicators/inecvindicador.yaml",
+    "id": "inecvindicador",
+    "name": "INE Cabo Verde Indicadores",
+    "link": "https://ine.cv/indicador",
+    "domain": "ine.cv",
+    "catalog_type": "Indicators catalog",
+    "country": "CV",
+    "owner_name": "Instituto Nacional de Estatística de Cabo Verde",
+    "endpoints": [],
+    "description": "National indicators explorer on the website of Cabo Verde's National Institute of Statistics. Disseminates official statistical indicators across socio-economic themes. The site is a custom Angular application without a documented public API.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "Cabo Verde"
+    ],
+    "hints": [
+      "angular"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/LR/Federal/indicators/lisgisgovlr.yaml",
+    "id": "lisgisgovlr",
+    "name": "LISGIS Data Bank",
+    "link": "https://lisgis.gov.lr/database.php",
+    "domain": "lisgis.gov.lr",
+    "catalog_type": "Indicators catalog",
+    "country": "LR",
+    "owner_name": "Liberia Institute of Statistics and Geo-Information Services (LISGIS)",
+    "endpoints": [],
+    "description": "Statistical data bank of the Liberia Institute of Statistics and Geo-Information Services. Publishes official indicator tables, including monthly Consumer Price Index series, with spreadsheet download. The LISGIS site also points to the NADA microdata catalog and the Open Data for Africa portal.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "Liberia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/LR/Federal/opendata/leitidataportalorg.yaml",
+    "id": "leitidataportalorg",
+    "name": "LEITI Data Warehouse",
+    "link": "https://www.leitidataportal.org/",
+    "domain": "www.leitidataportal.org",
+    "catalog_type": "Open data portal",
+    "country": "LR",
+    "owner_name": "Liberia Extractive Industries Transparency Initiative",
+    "endpoints": [],
+    "description": "Liberia Extractive Industries Transparency Initiative (LEITI) public data warehouse. Interactive tables cover extractive-sector revenue, production, exports, employment, social and environmental contributions, active licenses, contracts, and beneficial ownership from 2007 onward.",
+    "tags": [
+      "EITI",
+      "mining",
+      "extractives",
+      "government",
+      "Liberia",
+      "transparency"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/CD/Federal/indicators/bcccdstatistiques.yaml",
+    "id": "bcccdstatistiques",
+    "name": "Banque Centrale du Congo - Statistiques",
+    "link": "https://www.bcc.cd/statistiques",
+    "domain": "www.bcc.cd",
+    "catalog_type": "Indicators catalog",
+    "country": "CD",
+    "owner_name": "Banque Centrale du Congo",
+    "endpoints": [],
+    "description": "Official macroeconomic statistics catalog of the Banque Centrale du Congo. Time series cover the external, monetary and real sectors, with frequency controls and XLSX export.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "central bank"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/CD/Federal/indicators/insgouvcdportailstatistique.yaml",
+    "id": "insgouvcdportailstatistique",
+    "name": "INS RDC Portail Statistique",
+    "link": "https://www.ins.gouv.cd/portail-statistique",
+    "domain": "www.ins.gouv.cd",
+    "catalog_type": "Indicators catalog",
+    "country": "CD",
+    "owner_name": "Institut National de la Statistique (INS-RDC)",
+    "endpoints": [],
+    "description": "Official statistical indicator portal of the Institut National de la Statistique (INS-RDC). Browse, filter and export national series on inflation, national accounts, poverty, FDI, public debt and mining production.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/CD/Federal/opendata/datawarehousectcpmcd.yaml",
+    "id": "datawarehousectcpmcd",
+    "name": "Entrepôt des données minières de la RDC (CTCPM)",
+    "link": "https://datawarehouse.ctcpm.cd",
+    "domain": "datawarehouse.ctcpm.cd",
+    "catalog_type": "Open data portal",
+    "country": "CD",
+    "owner_name": "Cellule Technique de Coordination et de Planification Minière (CTCPM)",
+    "endpoints": [],
+    "description": "Mining data warehouse of the DRC (CTCPM). Public registers of mining contracts, operators, industrial projects and mining/quarry titles, with statistics and cartography.",
+    "tags": [
+      "mining",
+      "government",
+      "contracts",
+      "transparency"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/CD/Federal/opendata/wwwrgccd.yaml",
+    "id": "wwwrgccd",
+    "name": "Référentiel Géographique Commun (RGC) - RDC",
+    "link": "http://www.rgc.cd/index.php?option=com_content&view=category&layout=blog&id=60&Itemid=76",
+    "domain": "www.rgc.cd",
+    "catalog_type": "Datasets list",
+    "country": "CD",
+    "owner_name": "Référentiel Géographique Commun (RGC)",
+    "endpoints": [],
+    "description": "Former official data catalog of the Référentiel Géographique Commun (RGC) of the Democratic Republic of the Congo, listing documents, reports and geospatial datasets. The www.rgc.cd host still resolves in DNS but HTTP(S) connections time out as of August 2026.",
+    "tags": [
+      "government",
+      "geospatial",
+      "geographic reference"
+    ],
+    "hints": [],
+    "status": "inactive"
+  },
+  {
+    "file": "data/entities/CD/Federal/opendata/wwwitierdcnet.yaml",
+    "id": "wwwitierdcnet",
+    "name": "ITIE-RDC Données et Divulgation Systématique",
+    "link": "https://www.itierdc.net/donnees/",
+    "domain": "www.itierdc.net",
+    "catalog_type": "Open data portal",
+    "country": "CD",
+    "owner_name": "ITIE-RDC",
+    "endpoints": [],
+    "description": "Official EITI DRC systematic disclosure portal. Public registers of beneficial owners and extractive contracts, plus mining and petroleum production and revenue figures.",
+    "tags": [
+      "EITI",
+      "extractives",
+      "mining",
+      "petroleum",
+      "contracts",
+      "government",
+      "transparency",
+      "open data"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/ET/Federal/indicators/databankessgovet.yaml",
+    "id": "databankessgovet",
+    "name": "ESS StatBank",
+    "link": "https://databank.ess.gov.et/reports",
+    "domain": "databank.ess.gov.et",
+    "catalog_type": "Indicators catalog",
+    "country": "ET",
+    "owner_name": "Ethiopian Statistical Service",
+    "endpoints": [],
+    "description": "Statistical databank of the Ethiopian Statistical Service. Provides queryable national official statistics and indicator reports across economic and social themes.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "Ethiopia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/CM/Federal/indicators/wwwboostcamerooncm.yaml",
+    "id": "wwwboostcamerooncm",
+    "name": "BOOST Cameroon Open Budget portal",
+    "link": "https://www.boostcameroon.cm/",
+    "domain": "www.boostcameroon.cm",
+    "catalog_type": "Indicators catalog",
+    "country": "CM",
+    "owner_name": "Direction Générale du Budget, Ministère des Finances",
+    "endpoints": [],
+    "description": "Ministry of Finance BOOST / open-budget portal with interactive tables of Cameroon government revenue and expenditure and downloadable BOOST files from the fichiersBoost section.",
+    "tags": [
+      "government",
+      "budget",
+      "finance",
+      "BOOST",
+      "Cameroon"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/CM/Federal/geo/plateformeurbainecm.yaml",
+    "id": "plateformeurbainecm",
+    "name": "Plateforme Urbaine du Cameroun",
+    "link": "https://plateforme-urbaine.cm/",
+    "domain": "plateforme-urbaine.cm",
+    "catalog_type": "Geoportal",
+    "country": "CM",
+    "owner_name": "Ministère de l'Habitat et du Développement Urbain (MINHDU)",
+    "endpoints": [
+      {
+        "type": "hydra:collection",
+        "url": "https://plateforme-urbaine.cm/api/resources"
+      },
+      {
+        "type": "hydra:collection",
+        "url": "https://plateforme-urbaine.cm/api/projects"
+      },
+      {
+        "type": "hydra:collection",
+        "url": "https://plateforme-urbaine.cm/api/atlases"
+      },
+      {
+        "type": "hydra:apiDocumentation",
+        "url": "https://plateforme-urbaine.cm/api/docs"
+      }
+    ],
+    "description": "National urban geoportal for Cameroon infrastructure and planning data. Public Hydra catalog of resources, projects, and QGIS/MapStore atlases.",
+    "tags": [
+      "urban",
+      "geospatial",
+      "Cameroon",
+      "government",
+      "has_api"
+    ],
+    "hints": [
+      "mapstore"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/LS/Federal/indicators/landcoverstatsgovls.yaml",
+    "id": "landcoverstatsgovls",
+    "name": "Lesotho Land Cover Statistics",
+    "link": "https://www.landcoverstats.gov.ls/",
+    "domain": "www.landcoverstats.gov.ls",
+    "catalog_type": "Indicators catalog",
+    "country": "LS",
+    "owner_name": "Ministry of Forestry, Range and Soil Conservation",
+    "endpoints": [],
+    "description": "Lesotho NextGen land-cover statistics viewer (NextGen-LCDB / NextGen-Atlas / ReNOKA). Annual land-cover indicators prepared for integrated catchment management, developed with the Ministry of Forestry, Range and Soil Conservation and partner institutions.",
+    "tags": [
+      "land cover",
+      "environment",
+      "statistics",
+      "ReNOKA",
+      "government",
+      "Lesotho"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/LS/Federal/indicators/wwwbosgovls.yaml",
+    "id": "wwwbosgovls",
+    "name": "Lesotho Bureau of Statistics",
+    "link": "https://www.bos.gov.ls/",
+    "domain": "www.bos.gov.ls",
+    "catalog_type": "Indicators catalog",
+    "country": "LS",
+    "owner_name": "Bureau of Statistics",
+    "endpoints": [],
+    "description": "Official statistics website and data portal of Lesotho's Bureau of Statistics. Publishes indicator tables and statistical publications covering census, prices, national accounts, and social statistics.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "indicators",
+      "national statistical office"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/LS/Federal/indicators/statisticalwebportalazurewebsitesnet.yaml",
+    "id": "statisticalwebportalazurewebsitesnet",
+    "name": "Lesotho Statistical Research Portal",
+    "link": "https://statisticalwebportal.azurewebsites.net/",
+    "domain": "statisticalwebportal.azurewebsites.net",
+    "catalog_type": "Indicators catalog",
+    "country": "LS",
+    "owner_name": "Central Bank of Lesotho",
+    "endpoints": [],
+    "description": "Statistical Research Portal for Lesotho macroeconomic time series. Browse by category and download series sourced from the Central Bank of Lesotho, Bureau of Statistics, and Ministry of Finance (balance of payments, national accounts, government finance, prices, and monetary survey).",
+    "tags": [
+      "statistics",
+      "macroeconomic",
+      "government",
+      "official statistics",
+      "Lesotho"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/LS/Federal/geo/lesisgovls.yaml",
+    "id": "lesisgovls",
+    "name": "Lesotho Soil Information System (LeSIS)",
+    "link": "https://lesis.gov.ls/",
+    "domain": "lesis.gov.ls",
+    "catalog_type": "Geoportal",
+    "country": "LS",
+    "owner_name": "Ministry of Forestry, Range and Soil Conservation",
+    "endpoints": [],
+    "description": "Lesotho Soil Information System (LeSIS). National soil and land maps from the Ministry of Forestry, Range and Soil Conservation, including primary survey points, secondary products, land maps, and related spatial layers used for digital soil mapping.",
+    "tags": [
+      "geospatial",
+      "soil",
+      "land",
+      "government",
+      "Lesotho"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/EG/Federal/indicators/wwwcapmasgoveg.yaml",
+    "id": "wwwcapmasgoveg",
+    "name": "CAPMAS Egypt",
+    "link": "https://www.capmas.gov.eg/",
+    "domain": "www.capmas.gov.eg",
+    "catalog_type": "Indicators catalog",
+    "country": "EG",
+    "owner_name": "Central Agency for Public Mobilization and Statistics",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://www.capmas.gov.eg:8080/api/PinedIndicator/IndicatorFilter"
+      },
+      {
+        "type": "rest",
+        "url": "https://www.capmas.gov.eg:8080/api/Subject/HasData"
+      }
+    ],
+    "description": "Official statistics website of Egypt's Central Agency for Public Mobilization and Statistics (CAPMAS). The public indicator SPA and REST API on port 8080 serve numeric series for CPI, labour force, foreign trade, and other subjects. Pinned CPI for Total Egypt was 13.0 percent year-on-year in July 2026 (83 monthly observations).",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "indicators",
+      "national statistical office",
+      "has_api"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/EG/Federal/indicators/mofdigitalgategoveg.yaml",
+    "id": "mofdigitalgategoveg",
+    "name": "Ministry of Finance Data Repository",
+    "link": "http://mofdigitalgate.gov.eg/",
+    "domain": "mofdigitalgate.gov.eg",
+    "catalog_type": "Indicators catalog",
+    "country": "EG",
+    "owner_name": "Ministry of Finance",
+    "endpoints": [],
+    "description": "Public data warehouse of the Egyptian Ministry of Finance. Publishes fiscal, revenue, expenditure, debt, and real-sector indicator tables in Arabic and English, plus budget and mid-year review reports.",
+    "tags": [
+      "statistics",
+      "government",
+      "budget",
+      "public finance",
+      "official statistics"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/EG/Federal/indicators/analyticsmpedgoveg.yaml",
+    "id": "analyticsmpedgoveg",
+    "name": "Egypt National Accounts Data",
+    "link": "https://mped.gov.eg/Analytics",
+    "domain": "mped.gov.eg",
+    "catalog_type": "Indicators catalog",
+    "country": "EG",
+    "owner_name": "Ministry of Planning and Economic Development",
+    "endpoints": [],
+    "description": "Interactive national accounts explorer of the Ministry of Planning and Economic Development, publishing GDP, public investment, and governorate accounts tables.",
+    "tags": [
+      "statistics",
+      "government",
+      "national accounts",
+      "GDP",
+      "official statistics",
+      "Egypt"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/EG/Federal/indicators/enowgoveg.yaml",
+    "id": "enowgoveg",
+    "name": "Egypt National Observatory for Women",
+    "link": "https://enow.gov.eg/",
+    "domain": "enow.gov.eg",
+    "catalog_type": "Indicators catalog",
+    "country": "EG",
+    "owner_name": "National Council for Women",
+    "endpoints": [],
+    "description": "Interactive indicators dashboard monitoring Egypt's National Strategy for the Empowerment of Egyptian Women 2030, covering political, economic, social, and protection indicators.",
+    "tags": [
+      "statistics",
+      "gender",
+      "women",
+      "government",
+      "indicators",
+      "Egypt"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/EG/Federal/indicators/wwwcbeorgeg.yaml",
+    "id": "wwwcbeorgeg",
+    "name": "CBE Time Series",
+    "link": "https://www.cbe.org.eg/en/economic-research/time-series",
+    "domain": "www.cbe.org.eg",
+    "catalog_type": "Indicators catalog",
+    "country": "EG",
+    "owner_name": "Central Bank of Egypt",
+    "endpoints": [],
+    "description": "Central Bank of Egypt public time-series catalog of monetary, banking, and macroeconomic indicators.",
+    "tags": [
+      "statistics",
+      "government",
+      "central bank",
+      "official statistics",
+      "time series",
+      "Egypt"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/EG/Federal/geo/wwwnenhdgoveg.yaml",
+    "id": "wwwnenhdgoveg",
+    "name": "ENHD ENC Online Digital Catalogue",
+    "link": "https://www.enhd.gov.eg/enc-online-digital-catalogue/",
+    "domain": "www.enhd.gov.eg",
+    "catalog_type": "Geoportal",
+    "country": "EG",
+    "owner_name": "Egyptian Navy Hydrographic Department",
+    "endpoints": [],
+    "description": "Public online catalogue of Electronic Navigational Charts (ENC) produced by the Egyptian Navy Hydrographic Department, listing official ENC cells for Egyptian waters.",
+    "tags": [
+      "hydrographic",
+      "oceans",
+      "ENC",
+      "nautical",
+      "government",
+      "Egypt"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/EG/Federal/geo/atlasmldgoveg.yaml",
+    "id": "atlasmldgoveg",
+    "name": "Atlas of Egyptian Cities",
+    "link": "https://atlas.mld.gov.eg/",
+    "domain": "atlas.mld.gov.eg",
+    "catalog_type": "Geoportal",
+    "country": "EG",
+    "owner_name": "Ministry of Local Development",
+    "endpoints": [],
+    "description": "Public geoportal of the Ministry of Local Development with interactive city comparisons and atlas levels for urban sustainability and climate indicators across Egyptian cities.",
+    "tags": [
+      "geospatial",
+      "GIS",
+      "urban",
+      "climate",
+      "government",
+      "Egypt"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/EG/Federal/scientific/darbibalexorg.yaml",
+    "id": "darbibalexorg",
+    "name": "Bibliotheca Alexandrina Digital Assets Repository",
+    "link": "https://dar.bibalex.org",
+    "domain": "dar.bibalex.org",
+    "catalog_type": "Scientific data repository",
+    "country": "EG",
+    "owner_name": "Bibliotheca Alexandrina",
+    "endpoints": [],
+    "description": "Bibliotheca Alexandrina Digital Assets Repository is a scientific data repository operated by Bibliotheca Alexandrina.",
+    "tags": [
+      "scientific",
+      "research data",
+      "institutional repository",
+      "academic",
+      "Egypt"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/TZ/Federal/indicators/sensanbsgotz.yaml",
+    "id": "sensanbsgotz",
+    "name": "Tanzania Census Information Dissemination Platform",
+    "link": "https://sensa.nbs.go.tz/",
+    "domain": "sensa.nbs.go.tz",
+    "catalog_type": "Indicators catalog",
+    "country": "TZ",
+    "owner_name": "National Bureau of Statistics (Tanzania)",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://tisp.nbs.go.tz:8000/"
+      },
+      {
+        "type": "openapi",
+        "url": "https://tisp.nbs.go.tz:8000/?format=openapi"
+      }
+    ],
+    "description": "Official Census Information Dissemination Platform (Census Hub) of Tanzania's National Bureau of Statistics. Provides 2022 Population and Housing Census results, visualizations, publications, and an API for population, buildings, social services, and disability indicators.",
+    "tags": [
+      "statistics",
+      "government",
+      "official statistics",
+      "Tanzania",
+      "census",
+      "population",
+      "demographics",
+      "NBS",
+      "has_api"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/TZ/Federal/opendata/datanestgotz.yaml",
+    "id": "datanestgotz",
+    "name": "NeST Open Contracting Data Portal",
+    "link": "https://data.nest.go.tz",
+    "domain": "data.nest.go.tz",
+    "catalog_type": "Open data portal",
+    "country": "TZ",
+    "owner_name": "Public Procurement Regulatory Authority",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://nest.go.tz/gateway/nest-data-portal-api/api/releases"
+      }
+    ],
+    "description": "National e-Procurement System of Tanzania (NeST) Open Contracting Data Portal of the Public Procurement Regulatory Authority. Publishes public procurement records as Open Contracting Data Standard (OCDS) packages, with search, filters, downloads, and a REST API.",
+    "tags": [
+      "procurement",
+      "OCDS",
+      "open contracting",
+      "government",
+      "has_api",
+      "Tanzania"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/Africa/Federal/scientific/rihaafricanherbariaorg.yaml",
+    "id": "rihaafricanherbariaorg",
+    "name": "Plateforme RIHA",
+    "link": "http://riha.african-herbaria.org/",
+    "domain": "riha.african-herbaria.org",
+    "catalog_type": "Scientific data repository",
+    "country": "TG",
+    "owner_name": "Université de Lomé",
+    "endpoints": [],
+    "description": "Public specimen catalog of the RIHA (Réseau des Herbiers d'Afrique) regional platform. Browseable collections include Herbier National de Guinée (HNG) plus herbaria in Benin, Cameroon, Côte d'Ivoire, Gabon, and Togo. Distinct from the inactive Living Atlases datasets host collections.african-herbaria.org and from the network IPT.",
+    "tags": [
+      "biodiversity",
+      "herbaria",
+      "specimens",
+      "Guinea",
+      "West Africa"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/RW/Federal/indicators/minecofingovrw.yaml",
+    "id": "minecofingovrw",
+    "name": "MINECOFIN Data",
+    "link": "https://www.minecofin.gov.rw/publications/data",
+    "domain": "www.minecofin.gov.rw",
+    "catalog_type": "Indicators catalog",
+    "country": "RW",
+    "owner_name": "Ministry of Finance and Economic Planning",
+    "endpoints": [],
+    "description": "File catalog of Rwanda government finance statistics (GFSM 2014 workbooks), public debt stock series, and the macro framework dataset.",
+    "tags": [],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/RW/Federal/indicators/wwwbnrrw.yaml",
+    "id": "wwwbnrrw",
+    "name": "National Bank of Rwanda Statistics",
+    "link": "https://www.bnr.rw/browse-in/statistics/",
+    "domain": "www.bnr.rw",
+    "catalog_type": "Indicators catalog",
+    "country": "RW",
+    "owner_name": "National Bank of Rwanda",
+    "endpoints": [],
+    "description": "National Bank of Rwanda public statistics catalog of monetary, financial, and macroeconomic tables. Distinct from the registration-required FX rates API.",
+    "tags": [
+      "statistics",
+      "government",
+      "central bank",
+      "official statistics",
+      "time series"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/RW/Federal/opendata/datagovrw.yaml",
+    "id": "datagovrw",
+    "name": "Rwanda Data Sharing Platform",
+    "link": "https://data.gov.rw",
+    "domain": "data.gov.rw",
+    "catalog_type": "Open data portal",
+    "country": "RW",
+    "owner_name": "Rwanda Information Society Authority (RISA)",
+    "endpoints": [
+      {
+        "type": "rest",
+        "url": "https://api.data.gov.rw/api/v1/datasets/public"
+      }
+    ],
+    "description": "National Data Sharing Platform of Rwanda. Public catalog of government datasets operated by the Rwanda Information Society Authority (RISA), with a JSON API at api.data.gov.rw.",
+    "tags": [
+      "open data",
+      "government",
+      "Rwanda",
+      "RISA",
+      "has_api"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/RW/Federal/geo/geoportalmininfragovrw.yaml",
+    "id": "geoportalmininfragovrw",
+    "name": "MININFRA Infrastructure Geoportal",
+    "link": "https://geoportal.mininfra.gov.rw",
+    "domain": "geoportal.mininfra.gov.rw",
+    "catalog_type": "Geoportal",
+    "country": "RW",
+    "owner_name": "Ministry of Infrastructure",
+    "endpoints": [],
+    "description": "Ministry of Infrastructure geoportal that previously published public GIS downloads for administrative boundaries, transport, energy, urbanization, and facilities. HTTPS is refused and HTTP times out, so the catalog is treated as offline.",
+    "tags": [
+      "GIS",
+      "infrastructure",
+      "transport",
+      "energy",
+      "MININFRA"
+    ],
+    "hints": [],
+    "status": "inactive"
+  },
+  {
+    "file": "data/entities/TN/Federal/indicators/wwwbctgovtn.yaml",
+    "id": "wwwbctgovtn",
+    "name": "BCT Statistiques",
+    "link": "https://www.bct.gov.tn/bct/siteprod/stat_index.jsp",
+    "domain": "www.bct.gov.tn",
+    "catalog_type": "Indicators catalog",
+    "country": "TN",
+    "owner_name": "Banque Centrale de Tunisie",
+    "endpoints": [],
+    "description": "Banque Centrale de Tunisie public statistical tables covering monetary, banking, and related macroeconomic series, beyond the IMF National Summary Data Page.",
+    "tags": [
+      "statistics",
+      "government",
+      "central bank",
+      "official statistics",
+      "time series"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/TN/Federal/indicators/dataportalinstn.yaml",
+    "id": "dataportalinstn",
+    "name": "Tunisia Data Portal",
+    "link": "http://dataportal.ins.tn",
+    "domain": "dataportal.ins.tn",
+    "catalog_type": "Indicators catalog",
+    "country": "TN",
+    "owner_name": "Institut National de la Statistique",
+    "endpoints": [],
+    "description": "INS Tunisia data portal for analyzing, visualizing, and reporting official statistical indicators for Tunisia and its governorates. No public machine-readable API was found beyond the website.",
+    "tags": [
+      "statistics",
+      "official statistics",
+      "visualization",
+      "government"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/TN/Federal/indicators/wwwmizaniatounagovtn.yaml",
+    "id": "wwwmizaniatounagovtn",
+    "name": "Portail Mizaniatouna du Ministère des Finances",
+    "link": "http://www.mizaniatouna.gov.tn/tunisia/template_fr/",
+    "domain": "www.mizaniatouna.gov.tn",
+    "catalog_type": "Indicators catalog",
+    "country": "TN",
+    "owner_name": "Ministère des Finances",
+    "endpoints": [],
+    "description": "Ministry of Finance BOOST / open-budget portal (Mizaniatouna) with interactive visualizations of Tunisian government budget allocations and expenditure.",
+    "tags": [
+      "government",
+      "budget",
+      "finance",
+      "BOOST",
+      "Tunisia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/TN/Federal/indicators/openbudgetfinancesgovtn.yaml",
+    "id": "openbudgetfinancesgovtn",
+    "name": "Plateforme du Budget ouvert de la Tunisie",
+    "link": "https://openbudget.finances.gov.tn/fr/",
+    "domain": "openbudget.finances.gov.tn",
+    "catalog_type": "Indicators catalog",
+    "country": "TN",
+    "owner_name": "Ministère des Finances",
+    "endpoints": [],
+    "description": "Open-budget platform of the Tunisian Ministry of Finance with public dashboards of government expenditure by programme, operational unit, and economic nature.",
+    "tags": [
+      "government",
+      "budget",
+      "finance",
+      "Tunisia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/TN/Federal/opendata/opendatainterieurgovtn.yaml",
+    "id": "opendatainterieurgovtn",
+    "name": "Données ouvertes du Ministère de l'Intérieur",
+    "link": "https://opendata.interieur.gov.tn/",
+    "domain": "opendata.interieur.gov.tn",
+    "catalog_type": "Open data portal",
+    "country": "TN",
+    "owner_name": "Ministère de l'Intérieur",
+    "endpoints": [],
+    "description": "Sectoral open data portal of the Tunisian Ministry of Interior, listing public datasets on security, civil protection, and interior administration.",
+    "tags": [
+      "government",
+      "open data",
+      "interior",
+      "security",
+      "Tunisia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/TN/Federal/opendata/datatransporttn.yaml",
+    "id": "datatransporttn",
+    "name": "Portail sectoriel des données ouvertes du transport",
+    "link": "https://data.transport.tn",
+    "domain": "data.transport.tn",
+    "catalog_type": "Open data portal",
+    "country": "TN",
+    "owner_name": "Ministère du Transport",
+    "endpoints": [],
+    "description": "Sectoral open data portal of the Tunisian Ministry of Transport, publishing transport networks, stops, and related public datasets. The former CKAN API is no longer available.",
+    "tags": [
+      "government",
+      "transport",
+      "open data"
+    ],
+    "hints": [
+      "ckan"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/TN/Federal/opendata/agridatatn.yaml",
+    "id": "agridatatn",
+    "name": "Portail des données agricoles ouvertes",
+    "link": "https://agridata.tn",
+    "domain": "agridata.tn",
+    "catalog_type": "Open data portal",
+    "country": "TN",
+    "owner_name": "Ministère de l'Agriculture, des Ressources Hydrauliques et de la Pêche",
+    "endpoints": [],
+    "description": "Open data portal of the Ministry of Agriculture, Water Resources and Fisheries, publishing agricultural, water, and fisheries datasets for Tunisia. The former CKAN API is no longer available.",
+    "tags": [
+      "government",
+      "agriculture",
+      "open data"
+    ],
+    "hints": [
+      "ckan"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/TN/Federal/geo/wwwotcnattn.yaml",
+    "id": "wwwotcnattn",
+    "name": "OTC Géoportail cadastral",
+    "link": "https://www.otc.nat.tn/geoportail",
+    "domain": "www.otc.nat.tn",
+    "catalog_type": "Geoportal",
+    "country": "TN",
+    "owner_name": "Office de la Topographie et du Cadastre",
+    "endpoints": [],
+    "description": "Cadastral geoportal of the Office de la Topographie et du Cadastre (OTC), providing web-GIS access to Tunisian cadastral and topographic information.",
+    "tags": [
+      "geospatial",
+      "cadastre",
+      "topography",
+      "GIS",
+      "Tunisia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/TN/Federal/metadata/registredatagovtn.yaml",
+    "id": "registredatagovtn",
+    "name": "Registre National des Données Publiques",
+    "link": "https://registre.data.gov.tn/",
+    "domain": "registre.data.gov.tn",
+    "catalog_type": "Metadata catalog",
+    "country": "TN",
+    "owner_name": "Présidence du Gouvernement - Unité de l'Administration Électronique",
+    "endpoints": [],
+    "description": "National Register of Public Data (registre.data.gov.tn / PDIMS), the inventory of datasets produced by Tunisian public bodies. Complementary to the national open data portal at data.gov.tn.",
+    "tags": [
+      "government",
+      "metadata",
+      "inventory",
+      "open data",
+      "Tunisia"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/TN/Federal/scientific/bactibasehammamilaborg.yaml",
+    "id": "bactibasehammamilaborg",
+    "name": "Bactibase: database dedicated to bacteriocins",
+    "link": "http://bactibase.hammamilab.org/main.php",
+    "domain": "bactibase.hammamilab.org",
+    "catalog_type": "Scientific data repository",
+    "country": "TN",
+    "owner_name": "Higher Institute of Applied Biological Sciences of Tunis (ISSBAT)",
+    "endpoints": [],
+    "description": "BACTIBASE contains calculated or predicted physicochemical properties of bacteriocins produced by both Gram-positive and Gram-negative bacteria. The information in the database allows rapid prediction of structure/function relationships and target organisms of these peptides, supporting medical and food applications.",
+    "tags": [
+      "scientific",
+      "research data",
+      "bacteriocins",
+      "health"
+    ],
+    "hints": [],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/TG/Federal/geo/geodatagouvtg.yaml",
+    "id": "geodatagouvtg",
+    "name": "Geodata Togo",
+    "link": "https://geodata.gouv.tg/",
+    "domain": "geodata.gouv.tg",
+    "catalog_type": "Geoportal",
+    "country": "TG",
+    "owner_name": "Agence Togo Digital",
+    "endpoints": [
+      {
+        "type": "wms111",
+        "url": "https://geoserver.geoportail.gouv.tg/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities",
+        "version": "1.1.1"
+      },
+      {
+        "type": "wms130",
+        "url": "https://geoserver.geoportail.gouv.tg/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+        "version": "1.3.0"
+      },
+      {
+        "type": "wcs100",
+        "url": "https://geoserver.geoportail.gouv.tg/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities",
+        "version": "1.0.0"
+      },
+      {
+        "type": "wmts100",
+        "url": "https://geoserver.geoportail.gouv.tg/geoserver/gwc/service/wmts?REQUEST=GetCapabilities",
+        "version": "1.0.0"
+      }
+    ],
+    "description": "National institutional geoportal of Togo (Geodata Togo / Géoportail institutionnel), a custom map catalogue also served at geoportail.gouv.tg. Public layers are published through GeoServer WMS, WCS, and WMTS; WFS is not publicly accessible.",
+    "tags": [
+      "geospatial",
+      "government",
+      "has_api",
+      "national geoportal"
+    ],
+    "hints": [
+      "geoserver",
+      "wms/wfs server"
+    ],
+    "status": "active"
+  },
+  {
+    "file": "data/entities/TG/Federal/geo/fertitogotg.yaml",
+    "id": "fertitogotg",
+    "name": "FertiTogo",
+    "link": "https://fertitogo.tg",
+    "domain": "fertitogo.tg",
+    "catalog_type": "Geoportal",
+    "country": "TG",
+    "owner_name": "Institut Togolais de Recherche Agronomique (ITRA)",
+    "endpoints": [],
+    "description": "ITRA soil fertility information system for Togo. Publishes regional fertility maps (pH, organic matter, available phosphorus, exchangeable potassium, and salinity) as downloadable products, plus crop fertilizer recommendation sheets and an interactive advisor built from soil samples collected across the country.",
+    "tags": [
+      "soil",
+      "fertility",
+      "agriculture",
+      "maps",
+      "ITRA"
+    ],
+    "hints": [],
+    "status": "active"
+  }
+]

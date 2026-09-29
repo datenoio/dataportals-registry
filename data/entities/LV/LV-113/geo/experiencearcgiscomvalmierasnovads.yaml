@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -21,6 +21,9 @@ coverage:
 description: Public ArcGIS Experience Builder GIS of Valmiera Municipality (Valmieras
   novads) with municipal map layers. The ArcGIS Online organization itself is not
   public.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/13b3c5feabab47a7bbc3177ecfe919fd/data?f=json
 id: experiencearcgiscomvalmierasnovads
 langs:
 - id: LV

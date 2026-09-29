@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Alberta
 description: Town of Manning public ArcGIS Experience Builder web map operated with
   Mackenzie Municipal Services Agency for parcels and related GIS layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/fb752f0f1bf149f79cc7e6f4189a2a25/data?f=json
 id: experiencearcgiscommanning
 langs:
 - id: EN

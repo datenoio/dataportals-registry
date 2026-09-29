@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,16 +18,13 @@ coverage:
     subregion: &id002
       id: ID-BT
       name: Banten
-description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Kabupaten Serang.
-endpoints:
-- type: csw202
-  url: https://geoportal.serangkab.go.id/csw?service=csw&version=2.0.2&request=GetCapabilities
-  version: '2.0.2'
+description: Harvest source for Portal Satu Data Indonesia (data.go.id) from Kabupaten
+  Serang.
 id: geoportalserangkabgoid
 langs:
 - id: ID
   name: Indonesian
-link: https://geoportal.serangkab.go.id
+link: https://geoportal.serangkab.go.id/main
 name: Kabupaten Serang Geoportal
 owner:
   link: https://serangkab.go.id
@@ -41,8 +38,8 @@ properties:
   has_doi: false
   is_national: false
 software:
-  id: geoserver
-  name: GeoServer
+  id: palapa
+  name: Palapa
 status: active
 tags:
 - government
@@ -50,6 +47,12 @@ tags:
 - indonesia
 - has_api
 topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 - id: REGI
   name: Regions and cities
   type: eudatatheme

@@ -15,13 +15,14 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Spatial data infrastructure portal of Chile's Ministerio del Medio Ambiente,
-  distinct from the SINIA GeoNetwork metadata catalog.
+description: Spatial data infrastructure portal of Chile's Ministerio del Medio Ambiente.
+  The public metadata catalog is a Geonodo node with a SINIA skin, distinct from
+  the SINIA GeoNetwork catalog at catalogador.mma.gob.cl.
 id: idemmagobcl
 langs:
 - id: ES
   name: Spanish
-link: https://ide.mma.gob.cl/
+link: https://ide.mma.gob.cl/catalog
 name: IDE MMA
 owner:
   link: https://mma.gob.cl
@@ -33,12 +34,14 @@ owner:
   name: Ministerio del Medio Ambiente
   type: Central government
 software:
-  id: custom
-  name: Custom software
+  id: geonodo
+  name: Geonodo
 status: active
 tags:
 - geospatial
 - government
+- Geonodo
+- SINIA
 topics:
 - id: Location
   name: Location

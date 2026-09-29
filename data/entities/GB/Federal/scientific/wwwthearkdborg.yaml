@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: ArkDB, operated by Biotechnology and Biological Sciences Research Council, provides
-  research data on basic biological and medical research, general genetics, and zoology.
+description: ArkDB, operated by Biotechnology and Biological Sciences Research Council,
+  provides research data on basic biological and medical research, general genetics,
+  and zoology.
 id: wwwthearkdborg
 identifiers:
 - id: openaire
@@ -36,8 +37,8 @@ owner:
   name: Biotechnology and Biological Sciences Research Council
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -57,3 +58,6 @@ topics:
   name: Biota
   type: iso19115
 uid: cdi00031006
+endpoints:
+- type: sitemap
+  url: https://www.thearkdb.org/sitemap.xml

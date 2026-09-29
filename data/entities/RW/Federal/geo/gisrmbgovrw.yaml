@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RW
+      name: Rwanda
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: ArcGIS Enterprise catalog of the Rwanda Mines, Petroleum and Gas Board,
+  including mining concessions, mine sites, quarries, wetlands, and administrative
+  boundaries.
+id: gisrmbgovrw
+langs:
+- id: EN
+  name: English
+link: https://gis.rmb.gov.rw/server/rest/services
+name: RMB GIS Portal
+owner:
+  link: https://www.rmb.gov.rw
+  location:
+    country:
+      id: RW
+      name: Rwanda
+    level: 20
+  name: Rwanda Mines, Petroleum and Gas Board (RMB)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- REST
+- mining
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00009258
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.rmb.gov.rw/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.rmb.gov.rw/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.rmb.gov.rw/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.rmb.gov.rw/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.rmb.gov.rw/server/rest/services?f=geositemap

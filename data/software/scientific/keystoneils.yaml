@@ -1,0 +1,63 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: keystoneils
+website: https://www.indexdata.com
+name: Index Data Keystone
+description: Index Data Keystone is the Keystone Digital Library Suite, a PHP and
+  Zebra catalog whose public UI is Toolkit Lite (TKL). Installations show a
+  “Powered by the Index Data Keystone ILS” footer, `.tkl` templates, and CCL
+  search parameters (`cclterm`, `wf_step`). It is not Keystone Systems KLAS
+  and not Trimble Locus. The last published TKL release is 1.5.9.
+owner:
+  name: Index Data
+  location:
+    country:
+      id: DK
+      name: Denmark
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per item
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+documentation_url: https://web.archive.org/web/20071013080817/http://indexdata.dk/keystone/
+version: '1.5.9'
+license:
+  type: GPL-2.0
+export_formats:
+- XML
+capabilities:
+- CCL search
+- Z39.50
+- SRU/SRW
+- OAI-PMH harvesting
+last_updated: '2026-09-27T00:00:00Z'

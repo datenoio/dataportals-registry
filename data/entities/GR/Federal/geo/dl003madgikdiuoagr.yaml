@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: GeoServer of the MaDgIK lab at the University of Athens for the CARMINE
+  climate-refuge project, with urban amenity and deprivation layers. The same GetCapabilities
+  is also served by dl03.di.uoa.gr:8090.
+id: dl003madgikdiuoagr
+langs:
+- id: EL
+  name: Greek
+link: http://dl003.madgik.di.uoa.gr:8090/geoserver/web/
+name: MaDgIK CARMINE GeoServer
+owner:
+  link: https://www.uoa.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: National and Kapodistrian University of Athens
+  type: Academy
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- academic
+- climate
+- geospatial
+- greece
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00009512
+endpoints:
+- type: wms111
+  url: http://dl003.madgik.di.uoa.gr:8090/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: http://dl003.madgik.di.uoa.gr:8090/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: http://dl003.madgik.di.uoa.gr:8090/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: http://dl003.madgik.di.uoa.gr:8090/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: http://dl003.madgik.di.uoa.gr:8090/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

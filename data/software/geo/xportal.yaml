@@ -1,0 +1,65 @@
+category: Geoportal
+subtype: managed_saas_service
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: xportal
+name: XPortal
+website: https://www.ingeea.ro
+description: XPortal is the municipal public GIS portal engine by Intergraph Computer
+  Services (Romania), sold inside the Ingeea suite (product page "Pachetul Hartă de
+  Public"; Sibiu deployment brands itself IngeeaCity Public). Modern deployments are
+  ASP.NET apps (IIS/Kestrel) loading Kendo UI for jQuery webpack bundles (vendors.bundle.js,
+  ClientEventManager.js, kendo.aspnetmvc.min.js) under xportal*-prefixed paths such
+  as /xportalurb or /xportalBacau_public; the login screen reads XPortal with footer
+  "powered by Intergraph Computer Services". The legacy generation (ExtJS 4.2 + OpenLayers
+  2.14, _xportalTemplate scripts, title Harta public) also runs on the vendor SaaS
+  saas.ingeea.ro. Known installations include Bucharest PMB (urbanism.pmb.ro UrbOnline plus
+  hip.pmb.ro), Bacău County Council (gis.csjbacau.ro), Sibiu County Council (egis.cjsibiu.ro),
+  and Brașov (serviciiharta.brasovcity.ro). The footer string alone also appears on
+  other Intergraph Computer Services products (ORDA portals) and is not sufficient
+  without the portal fingerprints.
+owner:
+  name: Intergraph Computer Services
+  location:
+    country:
+      id: RO
+      name: Romania
+documentation_url: http://www.ingeea.ro/ro/main/c/produse-2/pachetul-harta-de-public-6.html
+metadata_support:
+  ckan_api: 'No'
+  csw: Uncertain
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: Uncertain
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: Uncertain
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Raw
+type: Software
+capabilities:
+- Map viewer
+- Municipal GIS
+- Urbanism document search
+last_updated: '2026-09-28T00:00:00Z'

@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: CH-ZH
+      name: Zürich
+description: Public ArcGIS services for the ETH Zurich campus, including the Hönggerberg
+  orthophoto and the public path network.
+id: arcgisprdwebethzch
+langs:
+- id: DE
+  name: German
+link: https://arcgis-prd-web.ethz.ch/server/rest/services
+name: ETH Zurich campus ArcGIS server
+owner:
+  link: https://ethz.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-ZH
+      name: Zürich
+  name: ETH Zurich
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- geospatial
+- switzerland
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00008983
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgis-prd-web.ethz.ch/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgis-prd-web.ethz.ch/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgis-prd-web.ethz.ch/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://arcgis-prd-web.ethz.ch/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arcgis-prd-web.ethz.ch/server/rest/services?f=geositemap

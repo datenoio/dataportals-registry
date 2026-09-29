@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -16,16 +16,6 @@ coverage:
       name: South-eastern Asia
 description: Open data portal for Hutan Harapan ecosystem restoration project (Macan/tiger
   data). Part of the Lumbung Hutan Harapan data ecosystem in Sumatra, Indonesia.
-endpoints:
-- type: ckan
-  url: https://macan.lumbung.hutanharapan.id/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://macan.lumbung.hutanharapan.id/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://macan.lumbung.hutanharapan.id/api/3/action/package_list
-  version: '3'
 id: macanlumbunghutanharapanid
 langs:
 - id: ID
@@ -53,7 +43,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - open data
 - forest

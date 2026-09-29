@@ -1,46 +1,29 @@
 DATA QUALITY REPORT - COUNTRY: EU
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Country Code: EU
-Total Records with Issues: 5
-Total Issues Found: 5
+Total Records with Issues: 2
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
-Count: 5
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA]
+Count: 1
 Priority: MEDIUM
 
-File: EU/Federal/indicators/stecfeceuropaeu.yaml
-Record ID: stecfeceuropaeu
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+File: BE/Federal/scientific/algaetraitsorg.yaml
+Record ID: algaetraitsorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA
 Field: endpoints
-Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+Current Value: {'software_id': 'aphia', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='aphia' is marked as API-capable in software definitions
 
-File: EU/Federal/indicators/singlemarketscoreboardeceuropaeu.yaml
-Record ID: singlemarketscoreboardeceuropaeu
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
-Field: endpoints
-Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
+Count: 1
+Priority: MEDIUM
 
-File: EU/Federal/indicators/eigeeuropaeu.yaml
-Record ID: eigeeuropaeu
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
-Field: endpoints
-Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
-
-File: EU/Federal/indicators/economyfinanceeceuropaeu.yaml
-Record ID: economyfinanceeceuropaeu
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
-Field: endpoints
-Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
-
-File: EU/Federal/indicators/blueeconomyobservatoryeceuropaeu.yaml
-Record ID: blueeconomyobservatoryeceuropaeu
+File: EU/Federal/scientific/eurdplatformjrceceuropaeu.yaml
+Record ID: eurdplatformjrceceuropaeu
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
 Field: endpoints
 Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
@@ -49,4 +32,5 @@ Suggested Action: Add at least one endpoint because software.id='drupal' is mark
 
 === SUMMARY BY ISSUE TYPE ===
 
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 5 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue

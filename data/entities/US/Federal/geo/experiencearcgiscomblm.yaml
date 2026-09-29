@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
       name: Northern America
 description: Bureau of Land Management national viewer for exploring public geospatial
   datasets created and maintained by BLM programs.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/9a89ee80c604431e8f8d939a186fbdbb/data?f=json
 id: experiencearcgiscomblm
 langs:
 - id: EN

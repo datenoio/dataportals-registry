@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: British Columbia
 description: City of Williams Lake public ArcGIS Experience Builder map (CityMapPro)
   for properties, parcels, and related municipal layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/811352cd031548c6b135883640434e31/data?f=json
 id: experiencearcgiscomwilliamslake
 langs:
 - id: EN

@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Scientific data repository
 content_types:
@@ -52,3 +52,7 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00011100
+endpoints:
+- type: oaipmh20
+  url: http://datadoi.ut.ee/oai?verb=Identify
+  version: '2.0'

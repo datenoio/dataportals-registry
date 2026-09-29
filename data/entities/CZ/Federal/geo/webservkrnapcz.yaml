@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public ArcGIS Server 10.3 REST catalog of Krkonoše National Park on port
+  6443 (trail restrictions, zoning proposals, map sheets, and terrain facilities).
+id: webservkrnapcz
+langs:
+- id: CS
+  name: Czech
+link: https://webserv.krnap.cz:6443/arcgis/rest/services
+name: Krkonoše National Park ArcGIS Server
+owner:
+  link: https://www.krnap.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: Správa Krkonošského národního parku
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- czech-republic
+- geospatial
+- government
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://webserv.krnap.cz:6443/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://webserv.krnap.cz:6443/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://webserv.krnap.cz:6443/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://webserv.krnap.cz:6443/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://webserv.krnap.cz:6443/arcgis/rest/services?f=geositemap
+uid: cdi00009211

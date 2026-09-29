@@ -1,0 +1,57 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: geoexplorer
+name: GeoExplorer
+website: null
+description: GeoExplorer (branded "GEOhub") is a shared Saudi municipal web-GIS viewer
+  deployed per municipality (amanat). Installations are hosted on municipal
+  mapservice.* / webgis.* subdomains with a per-city path such as /HailGeoExplorer/
+  or /Asir_GeoExplorer, and serve a shared static asset root /MapControl_GeoExplorer/.
+  The front end is a Blazor application built on the ArcGIS Maps SDK for JavaScript
+  that consumes the municipality's map services, offering layer browsing, search and
+  identify, and shapefile import/export.
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- CSV
+- PDF
+- Shapefile
+capabilities:
+- Municipal map viewer
+- Layer browsing
+- Search and identify
+- Shapefile import/export
+last_updated: '2026-09-28T00:00:00Z'

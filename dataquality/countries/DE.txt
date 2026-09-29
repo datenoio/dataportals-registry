@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: DE
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Country Code: DE
-Total Records with Issues: 12
-Total Issues Found: 12
+Total Records with Issues: 19
+Total Issues Found: 19
 
 === ISSUES BY TYPE ===
 
@@ -11,33 +11,44 @@ Total Issues Found: 12
 Count: 4
 Priority: MEDIUM
 
-File: DE/DE-NW/indicators/wwwenergieatlasnrwde.yaml
-Record ID: wwwenergieatlasnrwde
+File: DE/DE-NW/geo/wwwbielefeldde.yaml
+Record ID: wwwbielefeldde
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
 Field: endpoints
 Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
 
-File: DE/DE-NW/indicators/wwwklimaatlasnrwde.yaml
-Record ID: wwwklimaatlasnrwde
+File: DE/Federal/scientific/psilacmdcberlinde.yaml
+Record ID: psilacmdcberlinde
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
 Field: endpoints
 Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
 
-File: DE/DE-NW/indicators/wwwmagsnrwsozialindikatoren.yaml
-Record ID: wwwmagsnrwsozialindikatoren
+File: DE/Federal/scientific/escienceserviceunisiegende.yaml
+Record ID: escienceserviceunisiegende
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
 Field: endpoints
 Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
 
-File: DE/DE-BY/indicators/klimainformationssystembayernde.yaml
-Record ID: klimainformationssystembayernde
+File: DE/Federal/scientific/wwwforschungsdatenzentrumde.yaml
+Record ID: wwwforschungsdatenzentrumde
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
 Field: endpoints
 Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE]
+Count: 1
+Priority: MEDIUM
+
+File: DE/Federal/scientific/openscienceubovgude.yaml
+Record ID: openscienceubovgude
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE
+Field: endpoints
+Current Value: {'software_id': 'dspace', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dspace' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_KADI4MAT]
 Count: 1
@@ -75,6 +86,24 @@ Field: endpoints
 Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MEDIATUM]
+Count: 2
+Priority: MEDIUM
+
+File: DE/DE-BY/scientific/mediatumubtumde.yaml
+Record ID: mediatumubtumde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MEDIATUM
+Field: endpoints
+Current Value: {'software_id': 'mediatum', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mediatum' is marked as API-capable in software definitions
+
+File: DE/DE-BY/scientific/mediakude.yaml
+Record ID: mediakude
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MEDIATUM
+Field: endpoints
+Current Value: {'software_id': 'mediatum', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mediatum' is marked as API-capable in software definitions
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPUS]
 Count: 3
 Priority: MEDIUM
@@ -111,11 +140,46 @@ Field: endpoints
 Current Value: {'software_id': 'tripal', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='tripal' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS]
+Count: 4
+Priority: MEDIUM
+
+File: DE/DE-MV/geo/geoportalvgde.yaml
+Record ID: geoportalvgde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: DE/DE-BY/geo/geoportalbbvdeutschlandde.yaml
+Record ID: geoportalbbvdeutschlandde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: DE/DE-BY/scientific/opendataiisysde.yaml
+Record ID: opendataiisysde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: DE/Federal/scientific/humanitiesdatacentrede.yaml
+Record ID: humanitiesdatacentrede
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 4 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_KADI4MAT: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBENDER: 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MEDIATUM: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPUS: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS: 4 issues

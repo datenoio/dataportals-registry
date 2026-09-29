@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Nova Scotia
 description: Town of Yarmouth zoning lookup GIS map published as an ArcGIS Experience
   Builder app.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/9aab24710afb426c81561c0af384ec5c/data?f=json
 id: experiencearcgiscomtownofyarmouth
 langs:
 - id: EN

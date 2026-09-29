@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ArcGIS Server for the Florida Automated Weather Network. Public services
+  include the FAWN and Florida map layers.
+id: fawngisifasufledu
+langs:
+- id: EN
+  name: English
+link: https://fawn-gis.ifas.ufl.edu/arcgis/rest/services
+name: FAWN GIS Server
+owner:
+  link: https://fawn.ifas.ufl.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: University of Florida IFAS
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- geospatial
+- united-states
+- weather
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00009107
+endpoints:
+- type: arcgis:rest:info
+  url: https://fawn-gis.ifas.ufl.edu/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://fawn-gis.ifas.ufl.edu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://fawn-gis.ifas.ufl.edu/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://fawn-gis.ifas.ufl.edu/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://fawn-gis.ifas.ufl.edu/arcgis/rest/services?f=geositemap

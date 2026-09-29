@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -13,7 +13,7 @@ coverage:
       name: Spain
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Official statistical database of Spain's National Statistics Institute
   (INE). INEbase lists statistical operations and lets users build and download indicator
@@ -39,8 +39,8 @@ properties:
   has_doi: false
   is_national: true
 software:
-  id: custom
-  name: Custom software
+  id: inebase
+  name: INEbase
 status: active
 tags:
 - statistics
@@ -77,3 +77,6 @@ topics:
   name: Farming
   type: iso19115
 uid: cdi99990494
+endpoints:
+- type: rest
+  url: https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES

@@ -17,19 +17,6 @@ coverage:
     subregion:
       id: ES-PV
       name: Euskal Herria
-endpoints:
-- type: ckan
-  url: http://www.getxo.eus/api/3
-- type: ckan
-  url: http://www.getxo.eus/api/3/action/package_list
-- type: opendatasoftapi
-  url: http://www.getxo.eus/api/v2/catalog
-- type: socrata
-  url: http://www.getxo.eus/api/views
-- type: dcatap201
-  url: http://www.getxo.eus/api/feed/dcat
-- type: sitemap
-  url: http://www.getxo.eus/sitemap.xml
 id: getxoeusesgobiernoabiertoopndata
 langs:
 - id: ES
@@ -61,3 +48,6 @@ topics:
 uid: cdi00010916
 description: Open data portal. managed by Getxo Opendata. providing access to getxo
   opendata.
+endpoints:
+- type: sitemap
+  url: https://www.getxo.eus/sitemap.xml

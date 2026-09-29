@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: New South Wales
 description: Bathurst Regional Council ArcGIS Experience Builder spatial digital twin
   for local 3D and map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/a81beca78d2f4ae08a7b16a6ba498504/data?f=json
 id: experiencearcgiscombathurst
 langs:
 - id: EN

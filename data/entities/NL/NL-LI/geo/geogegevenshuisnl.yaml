@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Limburg
 description: Public KaartViewer of Het Gegevenshuis, the shared geo-information service
   for municipalities in South Limburg.
+endpoints:
+- type: kaartviewer:menu
+  url: https://geo.gegevenshuis.nl/admin/rest/kaartviewerapi/menu
 id: geogegevenshuisnl
 langs:
 - id: NL

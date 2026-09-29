@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: ID
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Country Code: ID
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 14
+Total Issues Found: 14
 
 === ISSUES BY TYPE ===
 
@@ -18,7 +18,108 @@ Field: rights
 Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
 Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CENTURION]
+Count: 2
+Priority: MEDIUM
+
+File: ID/Federal/opendata/datapolrigoid.yaml
+Record ID: datapolrigoid
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CENTURION
+Field: endpoints
+Current Value: {'software_id': 'centurion', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='centurion' is marked as API-capable in software definitions
+
+File: ID/ID-SU/opendata/sadainasumutprovgoid.yaml
+Record ID: sadainasumutprovgoid
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CENTURION
+Field: endpoints
+Current Value: {'software_id': 'centurion', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='centurion' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA]
+Count: 11
+Priority: MEDIUM
+
+File: ID/ID-RI/geo/dumaikotainasdiorid.yaml
+Record ID: dumaikotainasdiorid
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
+Field: endpoints
+Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
+
+File: ID/ID-JT/geo/geoportalbatangkabgoid.yaml
+Record ID: geoportalbatangkabgoid
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
+Field: endpoints
+Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
+
+File: ID/ID-JT/geo/geoportalbanyumaskabgoid.yaml
+Record ID: geoportalbanyumaskabgoid
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
+Field: endpoints
+Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
+
+File: ID/ID-JT/geo/geoportalkuduskabgoid.yaml
+Record ID: geoportalkuduskabgoid
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
+Field: endpoints
+Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
+
+File: ID/ID-JT/geo/geoportalpurworejokabgoid.yaml
+Record ID: geoportalpurworejokabgoid
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
+Field: endpoints
+Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
+
+File: ID/ID-PD/geo/rajaampatkabinasdiorid.yaml
+Record ID: rajaampatkabinasdiorid
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
+Field: endpoints
+Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
+
+File: ID/ID-KS/geo/tanahlautkabinasdiorid.yaml
+Record ID: tanahlautkabinasdiorid
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
+Field: endpoints
+Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
+
+File: ID/ID-KT/geo/geoportalkaltenggoid.yaml
+Record ID: geoportalkaltenggoid
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
+Field: endpoints
+Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
+
+File: ID/ID-BT/geo/geoportalserangkabgoid.yaml
+Record ID: geoportalserangkabgoid
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
+Field: endpoints
+Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
+
+File: ID/ID-KU/geo/geoportalkaltaraprovgoid.yaml
+Record ID: geoportalkaltaraprovgoid
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
+Field: endpoints
+Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
+
+File: ID/ID-SS/geo/geoportalsumselprovgoid.yaml
+Record ID: geoportalsumselprovgoid
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA
+Field: endpoints
+Current Value: {'software_id': 'palapa', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='palapa' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
 MISSING_RIGHTS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CENTURION: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PALAPA: 11 issues

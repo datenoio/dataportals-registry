@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Western Australia
 description: Shire of Augusta Margaret River ArcGIS Experience Builder public map
   of local planning scheme, property, and spatial layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/b8f4b8be3c1a49f2bb6a0d5b8e423dd4/data?f=json
 id: experiencearcgiscomamrshire
 langs:
 - id: EN

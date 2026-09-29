@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 30
+    subregion:
+      id: CZ-31
+      name: Jihočeský kraj
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public ArcGIS Server REST catalog of the South Bohemian Cycle Trails
+  Foundation, with a public map of routes and visitor infrastructure.
+id: gisjihoceskecyklostezkycz
+langs:
+- id: CS
+  name: Czech
+link: https://gis.jihoceske-cyklostezky.cz/server/rest/services
+name: South Bohemian Cycle Trails ArcGIS Server
+owner:
+  link: https://www.jihoceske-cyklostezky.cz/njc/
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 30
+    subregion:
+      id: CZ-31
+      name: Jihočeský kraj
+  name: Nadace Jihočeské cyklostezky
+  type: Civil society
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- czech-republic
+- geospatial
+- infrastructure
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.jihoceske-cyklostezky.cz/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.jihoceske-cyklostezky.cz/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.jihoceske-cyklostezky.cz/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.jihoceske-cyklostezky.cz/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.jihoceske-cyklostezky.cz/server/rest/services?f=geositemap
+uid: cdi00009206

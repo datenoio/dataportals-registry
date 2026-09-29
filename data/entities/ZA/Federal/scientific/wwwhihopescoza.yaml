@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -12,7 +12,7 @@ coverage:
       name: South Africa
     level: 20
     macroregion:
-      id: '018'
+      id: 018
       name: Southern Africa
 description: Restricted longitudinal research dataset of deaf children in the HI HOPES
   early intervention programme at the University of the Witwatersrand Centre for Deaf
@@ -37,8 +37,8 @@ owner:
   name: University of the Witwatersrand, Centre for Deaf Studies
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -49,3 +49,9 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00034874
+endpoints:
+- type: rest
+  url: https://www.hihopes.co.za/wp-json/
+- type: rest:posts
+  url: https://www.hihopes.co.za/wp-json/wp/v2/posts
+  version: '2'

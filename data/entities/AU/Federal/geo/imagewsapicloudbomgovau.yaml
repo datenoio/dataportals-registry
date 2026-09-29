@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 20
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+description: Bureau of Meteorology image services for Australian Water Resources Assessment
+  historical, seasonal, and projection grids.
+id: imagewsapicloudbomgovau
+langs:
+- id: EN
+  name: English
+link: https://image.wsapi.cloud.bom.gov.au/arcgis/rest/services
+name: Bureau of Meteorology AWRA Image Services
+owner:
+  link: https://www.bom.gov.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 20
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+  name: Bureau of Meteorology
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- australia
+- geospatial
+- government
+- water
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009032
+endpoints:
+- type: arcgis:rest:info
+  url: https://image.wsapi.cloud.bom.gov.au/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://image.wsapi.cloud.bom.gov.au/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://image.wsapi.cloud.bom.gov.au/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://image.wsapi.cloud.bom.gov.au/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://image.wsapi.cloud.bom.gov.au/arcgis/rest/services?f=geositemap

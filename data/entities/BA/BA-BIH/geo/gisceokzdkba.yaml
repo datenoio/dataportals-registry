@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 30
+    subregion:
+      id: BA-BIH
+      name: Federacija Bosne i Hercegovine
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: ArcGIS Server of the Kemal Kapetanović Institute in Zenica for the Zenica-Doboj
+  Canton air-quality information system. The site root is an ArcGIS Hub page over
+  this services directory.
+id: gisceokzdkba
+langs:
+- id: SR
+  name: Serbian
+link: https://gis.ceok-zdk.ba/server/rest/services
+name: Kvalitet zraka Zeničko-dobojskog kantona
+owner:
+  link: https://ikk.unze.ba
+  location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 30
+    subregion:
+      id: BA-BIH
+      name: Federacija Bosne i Hercegovine
+  name: Institut Kemal Kapetanović u Zenici
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- has_api
+- air quality
+- arcgisserver
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009354
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.ceok-zdk.ba/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.ceok-zdk.ba/server/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://gis.ceok-zdk.ba/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.ceok-zdk.ba/server/rest/services?f=geositemap

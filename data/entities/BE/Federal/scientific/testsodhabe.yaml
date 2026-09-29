@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Scientific data repository
 content_types:
@@ -71,3 +71,11 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00010222
+endpoints:
+- type: dataverseapi
+  url: https://test.sodha.be/api/search
+- type: dataverseapi
+  url: https://test.sodha.be/api/info/version
+- type: oaipmh20
+  url: https://test.sodha.be/oai?verb=Identify
+  version: '2.0'

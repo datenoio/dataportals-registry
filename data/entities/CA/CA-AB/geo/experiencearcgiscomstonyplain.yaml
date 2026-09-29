@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Alberta
 description: Town of Stony Plain public ArcGIS Experience Builder map for planning,
   infrastructure, and land use.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/e990d1236d9c425299d53b8c8c1d395b/data?f=json
 id: experiencearcgiscomstonyplain
 langs:
 - id: EN

@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Open data portal
 content_types:
@@ -62,3 +62,9 @@ topics:
   name: Regions and cities
   type: eudatatheme
 uid: cdi00027500
+endpoints:
+- type: rest
+  url: https://opendata.edostate.gov.ng/wp-json/
+- type: rest:posts
+  url: https://opendata.edostate.gov.ng/wp-json/wp/v2/posts
+  version: '2'

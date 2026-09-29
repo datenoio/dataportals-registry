@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Zuid-Holland
 description: Public KaartViewer geoportal of Gemeente Lansingerland with thematic
   municipal maps.
+endpoints:
+- type: kaartviewer:menu
+  url: https://lansingerland.kaartviewer.nl/admin/rest/kaartviewerapi/menu
 id: lansingerlandkaartviewernl
 langs:
 - id: NL

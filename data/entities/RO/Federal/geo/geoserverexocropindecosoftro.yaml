@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public GeoServer of ExoCrop (INDECO SOFT) publishing agricultural climate
+  layers and urban geospatial layers, including a Bistrița air-quality twin.
+id: geoserverexocropindecosoftro
+langs:
+- id: RO
+  name: Romanian
+link: https://geoserver.exocrop.indecosoft.ro/geoserver
+name: ExoCrop GeoServer
+owner:
+  link: https://indecosoft.ro
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+  name: INDECO SOFT
+  type: Business
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- climate
+- commercial
+- geospatial
+- romania
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+uid: cdi00009496
+endpoints:
+- type: wms111
+  url: https://geoserver.exocrop.indecosoft.ro/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserver.exocrop.indecosoft.ro/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoserver.exocrop.indecosoft.ro/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geoserver.exocrop.indecosoft.ro/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoserver.exocrop.indecosoft.ro/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

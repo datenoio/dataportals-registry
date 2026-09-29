@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: National civil-protection radar GeoServer (radardpc, VMI, and regioni
+  layers). The service root is the host, not /geoserver.
+id: radargeoserverprotezionecivileit
+langs:
+- id: IT
+  name: Italian
+link: https://radar-geoserver.protezionecivile.it/
+name: Protezione Civile radar GeoServer
+owner:
+  link: https://www.protezionecivile.gov.it/
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Dipartimento della Protezione Civile
+  type: Central government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- geospatial
+- government
+- italy
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009377
+endpoints:
+- type: wms111
+  url: https://radar-geoserver.protezionecivile.it/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://radar-geoserver.protezionecivile.it/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://radar-geoserver.protezionecivile.it/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://radar-geoserver.protezionecivile.it/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://radar-geoserver.protezionecivile.it/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: tms100
+  url: https://radar-geoserver.protezionecivile.it/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wmts100
+  url: https://radar-geoserver.protezionecivile.it/gwc/service/wmts?REQUEST=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://radar-geoserver.protezionecivile.it/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: https://radar-geoserver.protezionecivile.it/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+- type: wmts100
+  url: https://radar-geoserver.protezionecivile.it/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
+  version: 1.0.0

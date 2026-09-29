@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,13 +13,14 @@ coverage:
       name: Serbia
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: RS-00
       name: Beograd
-description: ArcGIS Hub site srsrb-gis-hub-srsrb.hub.arcgis.com. Esri APIs return SB_0005
-  (subscription disabled); the public Hub page is a generic shell with no catalog content.
+description: ArcGIS Hub site srsrb-gis-hub-srsrb.hub.arcgis.com. Esri APIs return
+  SB_0005 (subscription disabled); the public Hub page is a generic shell with no
+  catalog content.
 id: srsrbgishubsrsrbhubarcgiscom
 langs:
 - id: EN
@@ -66,3 +67,6 @@ topics:
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00003158
+endpoints:
+- type: arcgishubapi
+  url: https://srsrb-gis-hub-srsrb.hub.arcgis.com/api/v3/datasets

@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: GeoServer of the Pozemkov.cz land service, with municipality boundaries,
+  spatial-plan drawings, and rent layers.
+id: servicespozemkovcz
+langs:
+- id: CS
+  name: Czech
+link: https://services.pozemkov.cz/geoserver/web/
+name: Pozemkov GeoServer
+owner:
+  link: https://pozemkov.cz/
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: Pozemkov.cz
+  type: Business
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- boundaries
+- commercial
+- czech-republic
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00009472
+endpoints:
+- type: wms130
+  url: https://services.pozemkov.cz/geoserver/Pozemkov/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://services.pozemkov.cz/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://services.pozemkov.cz/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://services.pozemkov.cz/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

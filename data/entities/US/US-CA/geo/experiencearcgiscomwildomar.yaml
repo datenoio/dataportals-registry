@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: US-CA
       name: California
 description: City of Wildomar public ArcGIS Experience Builder parcel information tool.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/6fa2e70c038d49959e13ff41f1397364/data?f=json
 id: experiencearcgiscomwildomar
 langs:
 - id: EN

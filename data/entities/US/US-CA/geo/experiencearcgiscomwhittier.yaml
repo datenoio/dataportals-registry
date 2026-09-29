@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: US-CA
       name: California
 description: City of Whittier public ArcGIS Experience Builder city GIS map.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/645e664911ae4bd29fb43973bd3544b5/data?f=json
 id: experiencearcgiscomwhittier
 langs:
 - id: EN

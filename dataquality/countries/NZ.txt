@@ -1,0 +1,55 @@
+DATA QUALITY REPORT - COUNTRY: NZ
+================================================================================
+Generated: 2026-09-29 11:21:05
+Country Code: NZ
+Total Records with Issues: 4
+Total Issues Found: 4
+
+=== ISSUES BY TYPE ===
+
+[MISSING_OWNER_LINK]
+Count: 1
+Priority: LOW
+
+File: NZ/Federal/geo/nzcfwebgis1com.yaml
+Record ID: nzcfwebgis1com
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PMR2]
+Count: 2
+Priority: MEDIUM
+
+File: NZ/NZ-AUK/scientific/modelsphysiomeprojectorg.yaml
+Record ID: modelsphysiomeprojectorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PMR2
+Field: endpoints
+Current Value: {'software_id': 'pmr2', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pmr2' is marked as API-capable in software definitions
+
+File: NZ/NZ-AUK/scientific/modelscellmlorg.yaml
+Record ID: modelscellmlorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PMR2
+Field: endpoints
+Current Value: {'software_id': 'pmr2', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pmr2' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDBOX]
+Count: 1
+Priority: MEDIUM
+
+File: NZ/Federal/scientific/dmpaucklandacnz.yaml
+Record ID: dmpaucklandacnz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDBOX
+Field: endpoints
+Current Value: {'software_id': 'redbox', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='redbox' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+MISSING_OWNER_LINK: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PMR2: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDBOX: 1 issue

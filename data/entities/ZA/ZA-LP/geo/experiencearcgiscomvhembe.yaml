@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Limpopo
 description: Vhembe District Municipality public Experience Builder land information
   viewer for land use, local municipality and related district map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/7456a4c3cf2b40ac992aa0d0f5729959/data?f=json
 id: experiencearcgiscomvhembe
 langs:
 - id: EN

@@ -1,0 +1,68 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: Compatible
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: geonodo
+name: Geonodo
+website: https://www.ide.cl/index.php/productos-y-servicios/herramientas/geonodo/descubre-geonodo
+description: Geonodo is the open geospatial platform of Chile's Secretaría Ejecutiva
+  SNIT - IDE Chile. Public institutions run it as an IDE node with an ISO 19115
+  metadata catalog, map viewers, and a page builder. The public catalog is a
+  Laravel Livewire app ("Descubre N datos territoriales", assets under
+  /images/metadatagis/) with pycsw CSW at /csw. Distinct from GeoNode, including
+  GeoNode hosts whose names contain geonodo.
+owner:
+  name: Secretaría Ejecutiva SNIT - IDE Chile
+  location:
+    country:
+      id: CL
+      name: Chile
+documentation_url: https://www.ide.cl/index.php/productos-y-servicios/herramientas/geonodo/manual-geonodo
+logo_url: https://www.ide.cl/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'Yes'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'Yes'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'Yes'
+  wfs: 'Yes'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+export_formats:
+- GeoJSON
+- GML
+- JSON
+- KML
+- Shapefile
+- XML
+capabilities:
+- CSW catalog service
+- WMS service
+- WFS service
+- Metadata catalog
+- Map viewer
+last_updated: '2026-09-27T00:00:00Z'

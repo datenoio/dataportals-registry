@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: TH-33
       name: Si Sa Ket
 description: Public City Data Learning Platform geoportal of Si Sa Ket on ArcGIS Experience Builder.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/daef68d70dc34a8ca8e19933b6a72e76/data?f=json
 id: experiencearcgiscomsisaket
 langs:
 - id: TH

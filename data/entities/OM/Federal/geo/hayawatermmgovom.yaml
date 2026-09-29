@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: OM
+      name: Oman
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: ArcGIS REST services directory for the Haya Water network, operated by
+  Nama Water Services, publishing water and wastewater map layers including hydrants,
+  flow meters, fittings, and network assets.
+id: hayawatermmgovom
+langs:
+- id: AR
+  name: Arabic
+- id: EN
+  name: English
+link: https://hayawater.mm.gov.om/arcgis/rest/services
+name: Haya Water GIS
+owner:
+  link: https://nws.nama.om/
+  location:
+    country:
+      id: OM
+      name: Oman
+    level: 20
+  name: Nama Water Services
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- water
+- wastewater
+- utilities
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+uid: cdi00009327
+endpoints:
+- type: arcgis:rest:info
+  url: https://hayawater.mm.gov.om/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://hayawater.mm.gov.om/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://hayawater.mm.gov.om/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://hayawater.mm.gov.om/arcgis/rest/services?f=sitemap

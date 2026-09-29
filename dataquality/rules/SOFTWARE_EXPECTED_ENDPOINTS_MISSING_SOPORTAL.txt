@@ -1,0 +1,44 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SOPORTAL
+================================================================================
+Generated: 2026-09-29 11:21:05
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SOPORTAL
+Priority: MEDIUM
+Total Issues Found: 3
+
+Rule: Identifies records using software.id='soportal' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+KR: 3 issues
+
+=== SUMMARY BY RECORD ===
+
+wwwreborkrrone: 1 issue
+kbioisorkr: 1 issue
+houstathgokr: 1 issue
+
+=== ISSUES ===
+
+File: KR/Federal/indicators/wwwreborkrrone.yaml
+Record ID: wwwreborkrrone
+Country: KR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SOPORTAL
+Field: endpoints
+Current Value: {"software_id": "soportal", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='soportal' is marked as API-capable in software definitions
+
+File: KR/Federal/indicators/kbioisorkr.yaml
+Record ID: kbioisorkr
+Country: KR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SOPORTAL
+Field: endpoints
+Current Value: {"software_id": "soportal", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='soportal' is marked as API-capable in software definitions
+
+File: KR/Federal/indicators/houstathfgokr.yaml
+Record ID: houstathgokr
+Country: KR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SOPORTAL
+Field: endpoints
+Current Value: {"software_id": "soportal", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='soportal' is marked as API-capable in software definitions

@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Microdata catalog
 content_types:
@@ -17,9 +17,9 @@ coverage:
       name: Central America
 description: Former REDATAM census query portal of the Statistical Institute of Belize
   for tabulating 1991, 2000, and 2010 population and housing census microdata. As
-  of August 2026 the host redatam.sib.org.bz no longer serves REDATAM; requests
-  redirect to an unrelated Belize Agricultural Livestock Management Systems bee-reporting
-  app. SIB now points users to its Data Portals pages instead.
+  of August 2026 the host redatam.sib.org.bz no longer serves REDATAM; requests redirect
+  to an unrelated Belize Agricultural Livestock Management Systems bee-reporting app.
+  SIB now points users to its Data Portals pages instead.
 id: redatamsiborgbz
 langs:
 - id: EN
@@ -67,3 +67,10 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00023338
+endpoints:
+- type: redatam
+  url: http://redatam.sib.org.bz/redbin/RpWebEngine.exe/Portal?BASE=BELIZECENSUS_2010
+- type: redatam
+  url: http://redatam.sib.org.bz/redbin/RpWebEngine.exe/Portal
+- type: redatam
+  url: http://redatam.sib.org.bz/RpWebEngine.exe/Portal

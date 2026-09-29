@@ -1,0 +1,45 @@
+DATA QUALITY REPORT - COUNTRY: AT
+================================================================================
+Generated: 2026-09-29 11:21:05
+Country Code: AT
+Total Records with Issues: 4
+Total Issues Found: 4
+
+=== ISSUES BY TYPE ===
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD]
+Count: 4
+Priority: MEDIUM
+
+File: AT/AT-8/geo/atlasvorarlbergat.yaml
+Record ID: atlasvorarlbergat
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD
+Field: endpoints
+Current Value: {'software_id': 'webgiscloud', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='webgiscloud' is marked as API-capable in software definitions
+
+File: AT/AT-1/geo/geodatenbgldgvat.yaml
+Record ID: geodatenbgldgvat
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD
+Field: endpoints
+Current Value: {'software_id': 'webgiscloud', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='webgiscloud' is marked as API-capable in software definitions
+
+File: AT/AT-2/geo/gisktngvatatlasmobile.yaml
+Record ID: gisktngvatatlasmobile
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD
+Field: endpoints
+Current Value: {'software_id': 'webgiscloud', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='webgiscloud' is marked as API-capable in software definitions
+
+File: AT/AT-3/geo/atlasnoegvat.yaml
+Record ID: atlasnoegvat
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD
+Field: endpoints
+Current Value: {'software_id': 'webgiscloud', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='webgiscloud' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD: 4 issues

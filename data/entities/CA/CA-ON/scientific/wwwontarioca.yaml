@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,11 +17,12 @@ coverage:
     subregion:
       id: CA-ON
       name: Ontario
-description: The Ontario Natural Heritage Information Centre (NHIC) compiles, maintains and
-  provides information on rare, threatened and endangered species and spaces in Ontario. This
-  information is stored in a central repository composed of computerized databases, map files
-  and an information library, which are accessible for conservation applications, land use
-  development planning, park management, etc. Ministry of Natural Resources, Ontario.
+description: The Ontario Natural Heritage Information Centre (NHIC) compiles, maintains
+  and provides information on rare, threatened and endangered species and spaces in
+  Ontario. This information is stored in a central repository composed of computerized
+  databases, map files and an information library, which are accessible for conservation
+  applications, land use development planning, park management, etc. Ministry of Natural
+  Resources, Ontario.
 id: wwwontarioca
 identifiers:
 - id: openaire
@@ -45,8 +46,8 @@ owner:
   name: Ministry of Natural Resources
   type: Regional government
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - biodiversity
@@ -88,3 +89,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00028873
+endpoints:
+- type: sitemap
+  url: https://www.ontario.ca/sitemap.xml

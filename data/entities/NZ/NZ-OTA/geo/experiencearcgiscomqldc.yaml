@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Otago
 description: Queenstown Lakes District Council's primary public map viewer, covering
   property, underground services, district planning, parks, and open spaces.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/80c97d34e5764669bb9aab99e40d5b8d/data?f=json
 id: experiencearcgiscomqldc
 langs:
 - id: EN

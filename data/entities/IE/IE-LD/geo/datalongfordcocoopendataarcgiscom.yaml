@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: IE-LD
       name: Longford
-description: Former Longford County Council ArcGIS Open Data hub. The public Hub
-  subscription is disabled and the site no longer serves a catalog.
+description: Former Longford County Council ArcGIS Open Data hub. The public Hub subscription
+  is disabled and the site no longer serves a catalog.
 id: datalongfordcocoopendataarcgiscom
 langs:
 - id: EN
@@ -56,7 +56,16 @@ tags:
 - local government
 - ArcGIS
 topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 - id: REGI
   name: Regions and cities
   type: eudatatheme
 uid: cdi00002734
+endpoints:
+- type: arcgishubapi
+  url: https://data-longfordcoco.opendata.arcgis.com/api/v3/datasets

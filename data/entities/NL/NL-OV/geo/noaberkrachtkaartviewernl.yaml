@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Overijssel
 description: Shared KaartViewer geoportal of Noaberkracht for the municipalities of
   Dinkelland and Tubbergen.
+endpoints:
+- type: kaartviewer:menu
+  url: https://noaberkracht.kaartviewer.nl/admin/rest/kaartviewerapi/menu
 id: noaberkrachtkaartviewernl
 langs:
 - id: NL

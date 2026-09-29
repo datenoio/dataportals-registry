@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: US-CA
       name: California
 description: City of Culver City public ArcGIS Experience Builder zoning and land-use viewer.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/fd625284ed6346379f4cfd8ba50adc45/data?f=json
 id: experiencearcgiscomculvercity
 langs:
 - id: EN

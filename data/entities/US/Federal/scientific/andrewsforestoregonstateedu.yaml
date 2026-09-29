@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,9 +16,9 @@ coverage:
       name: Northern America
 description: The Andrews Forest is a place of inquiry. Our mission is to support research
   on forests, streams, and watersheds, and to foster strong collaboration among ecosystem
-  science, education, natural resource management, and the humanities. Our place and our work
-  are administered cooperatively by the USDA Forest Service's Pacific Northwest Research Station,
-  Oregon State University, and the Willamette National Forest.
+  science, education, natural resource management, and the humanities. Our place and
+  our work are administered cooperatively by the USDA Forest Service's Pacific Northwest
+  Research Station, Oregon State University, and the Willamette National Forest.
 id: andrewsforestoregonstateedu
 identifiers:
 - id: openaire
@@ -39,8 +39,8 @@ owner:
   name: USDA Forest Servic, Pacific Northwest Research Station
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -60,3 +60,6 @@ topics:
   name: Biota
   type: iso19115
 uid: cdi00033073
+endpoints:
+- type: sitemap
+  url: https://andrewsforest.oregonstate.edu/sitemap.xml

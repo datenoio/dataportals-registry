@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -37,8 +37,8 @@ owner:
   name: Netherlands Heart Institute - Durrer Center
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -57,3 +57,9 @@ topics:
   name: Health
   type: iso19115
 uid: cdi00032188
+endpoints:
+- type: rest
+  url: https://capacity-covid.eu/wp-json/
+- type: rest:posts
+  url: https://capacity-covid.eu/wp-json/wp/v2/posts
+  version: '2'

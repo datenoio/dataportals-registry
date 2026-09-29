@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+endpoints:
+- type: wms111
+  url: https://tripura-fews.in/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-TR
+      name: Tripura
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: Flood forecasting GeoServer for the Haora and Manu basins in Tripura.
+  Public WMS workspaces fews and fews_manual feed the FEWS Tripura dashboard.
+id: tripurafewsin
+langs:
+- id: EN
+  name: English
+link: https://tripura-fews.in
+name: FEWS Tripura
+owner:
+  link: https://tripura-fews.in/contact_us.aspx
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-TR
+      name: Tripura
+  name: Water Resource Investigation Division, Public Works Department
+  type: Regional government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- geospatial
+- government
+- india
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009647

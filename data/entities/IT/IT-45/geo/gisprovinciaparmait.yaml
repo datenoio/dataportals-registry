@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-45
+      name: Emilia-Romagna
+description: Provincial ArcGIS Server of Parma with public protected areas, landslide
+  inventory, forest map, and hydrography.
+id: gisprovinciaparmait
+langs:
+- id: IT
+  name: Italian
+link: https://gis.provincia.parma.it/server/rest/services
+name: SIT Provincia di Parma
+owner:
+  link: https://www.provincia.parma.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-45
+      name: Emilia-Romagna
+  name: Provincia di Parma
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- italy
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00008972
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.provincia.parma.it/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.provincia.parma.it/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.provincia.parma.it/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.provincia.parma.it/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.provincia.parma.it/server/rest/services?f=geositemap

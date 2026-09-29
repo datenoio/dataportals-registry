@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    level: 30
+    subregion:
+      id: RU-SPE
+      name: Sankt-Peterburg
+description: Public GeoServer of the MeteoCube aviation-weather platform operated
+  for RUAMC Pulkovo. WMS lists flight-information regions and gridded products (turbulence,
+  icing, gusts). The web application at meteocube.ru requires a login. A second hostname
+  on the same platform is a non-production copy and is not a separate catalog.
+id: geoservermeteocuberu
+langs:
+- id: RU
+  name: Russian
+link: https://geoserver.meteocube.ru/geoserver
+name: МетеоКуб — РУАМЦ Пулково
+owner:
+  link: https://meteocube.ru
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    subregion:
+      id: RU-SPE
+      name: Sankt-Peterburg
+  name: РУАМЦ «Пулково»
+  type: Central government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- geospatial
+- government
+- russian-federation
+- weather
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+endpoints:
+- type: wms111
+  url: https://geoserver.meteocube.ru/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserver.meteocube.ru/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoserver.meteocube.ru/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geoserver.meteocube.ru/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoserver.meteocube.ru/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+uid: cdi00009507

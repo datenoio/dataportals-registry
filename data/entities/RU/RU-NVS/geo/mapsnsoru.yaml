@@ -18,9 +18,9 @@ coverage:
     subregion:
       id: RU-NVS
       name: Novosibirskaja oblast'
-description: Regional Geographic Information System of Novosibirsk Oblast (RGIS
-  NSO) published as a CoGIS Portal catalog of interactive maps. Map services
-  remain on ArcGIS Server at /arcgis3/rest/services.
+description: Regional Geographic Information System of Novosibirsk Oblast (RGIS NSO)
+  published as a CoGIS Portal catalog of interactive maps. Map services remain on
+  ArcGIS Server at /arcgis3/rest/services.
 endpoints:
 - type: arcgis:rest:services
   url: https://maps.nso.ru/arcgis3/rest/services
@@ -62,6 +62,12 @@ tags:
 - GIS
 - ArcGIS
 topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 - id: REGI
   name: Regions and cities
   type: eudatatheme

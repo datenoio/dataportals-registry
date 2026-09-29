@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ArcGIS REST services of Landkreis Aurich covering protected areas, nature
+  conservation, water, schools, and spatial planning.
+id: gislandkreisaurichde
+langs:
+- id: DE
+  name: German
+link: https://gis.landkreis-aurich.de/server/rest/services
+name: Landkreis Aurich ArcGIS REST Services
+owner:
+  link: https://www.landkreis-aurich.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+  name: Landkreis Aurich
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- germany
+- government
+- planning
+- water
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.landkreis-aurich.de/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.landkreis-aurich.de/server/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://gis.landkreis-aurich.de/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.landkreis-aurich.de/server/rest/services?f=geositemap
+uid: cdi00008948

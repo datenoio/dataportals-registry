@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: API Catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: SE-M
+      name: Skåne län [SE-12]
+description: Skånetrafiken developer portal for public-transport APIs, including stop
+  search, geocoding, and journey-planner services for Skåne.
+id: devportalskanetrafikense
+langs:
+- id: SV
+  name: Swedish
+- id: EN
+  name: English
+link: https://devportal.skanetrafiken.se/
+name: Skånetrafiken developer portal
+owner:
+  link: https://www.skanetrafiken.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    subregion:
+      id: SE-M
+      name: Skåne län [SE-12]
+  name: Skånetrafiken
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: azureapim
+  name: Azure API Management
+status: active
+tags:
+- transit
+- transport
+- API
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00010014
+endpoints:
+- type: sitemap
+  url: https://devportal.skanetrafiken.se/sitemap.xml

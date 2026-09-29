@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,11 +14,11 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: Our Frozen Zoo® is the largest and most diverse collection of its kind in the
-  world. It contains over 10,000 living cell cultures, oocytes, sperm, and embryos representing
-  nearly 1,000 taxa, including one extinct species, the po’ouli. Located at the Beckman Center
-  for Conservation Research, the collection is also duplicated for safekeeping at a second
-  site.
+description: Our Frozen Zoo® is the largest and most diverse collection of its kind
+  in the world. It contains over 10,000 living cell cultures, oocytes, sperm, and
+  embryos representing nearly 1,000 taxa, including one extinct species, the po’ouli.
+  Located at the Beckman Center for Conservation Research, the collection is also
+  duplicated for safekeeping at a second site.
 id: sciencesandiegozooorg
 identifiers:
 - id: openaire
@@ -39,8 +39,8 @@ owner:
   name: San Diego Zoo Global
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -81,3 +81,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00033485
+endpoints:
+- type: sitemap
+  url: https://sandiegozoowildlifealliance.org/sitemap.xml

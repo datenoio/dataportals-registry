@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Ontario
 description: Town of Oakville Information Map for parcels, parks, facilities, trails,
   cycle routes, and related municipal geographic layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/0ec7056bb7e3432680158fe7ea4d39e5/data?f=json
 id: experiencearcgiscomoakville
 langs:
 - id: EN

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -18,6 +18,11 @@ coverage:
       id: '013'
       name: Central America
 description: Yucatán open-contracting catalog of public procurement records in OCDS.
+  The public dashboard is Contrataciones Abiertas; common.js points the
+  capture API at captura.contratacionesabiertas.inaipyucatan.org.mx.
+endpoints:
+- type: rest
+  url: https://captura.contratacionesabiertas.inaipyucatan.org.mx/edca/fiscalYears
 id: contratacionesabiertasinaipyucatanorgmx
 langs:
 - id: ES
@@ -36,8 +41,8 @@ owner:
     de Datos Personales de Yucatán
   type: Regional government
 software:
-  id: custom
-  name: Custom software
+  id: contratacionesabiertas
+  name: Contrataciones Abiertas
 status: active
 tags:
 - procurement

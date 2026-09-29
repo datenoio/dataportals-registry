@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Northland
 description: Far North District Council atlas combining themed maps for property,
   planning, water services, consents, hazards, and cultural information.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/df5f99f47450498f978166472b3500eb/data?f=json
 id: experiencearcgiscomfarnorth
 langs:
 - id: EN

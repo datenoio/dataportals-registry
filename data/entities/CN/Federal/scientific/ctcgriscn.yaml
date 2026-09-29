@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -15,12 +15,13 @@ coverage:
       id: '030'
       name: Eastern Asia
 description: The National Tropical Plant Germplasm Repository, supported by the Institute
-  of Tropical Crop Variety Resources of the Chinese Academy of Tropical Agricultural Sciences
-  (CATAS) and jointly constructed by 11 units including the Institute of Fruit Tree Research
-  of the Guangdong Academy of Agricultural Sciences and Hainan University, aims to provide
-  information and physical support for scientific and technological innovation in tropical
-  crop seed industry, increase the income of farmers in hot regions, alleviate poverty, the
-  "One Belt One Road" initiative and the National Tropical Agricultural Science Centre.
+  of Tropical Crop Variety Resources of the Chinese Academy of Tropical Agricultural
+  Sciences (CATAS) and jointly constructed by 11 units including the Institute of
+  Fruit Tree Research of the Guangdong Academy of Agricultural Sciences and Hainan
+  University, aims to provide information and physical support for scientific and
+  technological innovation in tropical crop seed industry, increase the income of
+  farmers in hot regions, alleviate poverty, the "One Belt One Road" initiative and
+  the National Tropical Agricultural Science Centre.
 id: ctcgriscn
 identifiers:
 - id: openaire
@@ -43,8 +44,8 @@ owner:
   name: Chinese Academy of Tropical Agricultural Sciences
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -64,3 +65,6 @@ topics:
   name: Farming
   type: iso19115
 uid: cdi00029047
+endpoints:
+- type: rss
+  url: https://ctcgris.cn/rss.xml

@@ -1,21 +1,41 @@
 DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE
 Priority: MEDIUM
-Total Issues Found: 1
+Total Issues Found: 3
 
 Rule: Identifies records using software.id='dspace' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
 
 === SUMMARY BY COUNTRY ===
 
+DE: 1 issue
 JP: 1 issue
+US: 1 issue
 
 === SUMMARY BY RECORD ===
 
+wwwglopadorg: 1 issue
+openscienceubovgude: 1 issue
 dspacejaistacjp: 1 issue
 
 === ISSUES ===
+
+File: US/Federal/scientific/wwwglopadorg.yaml
+Record ID: wwwglopadorg
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE
+Field: endpoints
+Current Value: {"software_id": "dspace", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='dspace' is marked as API-capable in software definitions
+
+File: DE/Federal/scientific/openscienceubovgude.yaml
+Record ID: openscienceubovgude
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE
+Field: endpoints
+Current Value: {"software_id": "dspace", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='dspace' is marked as API-capable in software definitions
 
 File: JP/JP-17/scientific/dspacejaistacjp.yaml
 Record ID: dspacejaistacjp

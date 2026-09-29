@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Zuid-Holland
 description: Public KaartViewer geoportal of Gemeente Pijnacker-Nootdorp with municipal
   maps and a dataset portal.
+endpoints:
+- type: kaartviewer:menu
+  url: https://kaartviewer.pijnacker-nootdorp.nl/admin/rest/kaartviewerapi/menu
 id: kaartviewerpijnackernootdorpnl
 langs:
 - id: NL

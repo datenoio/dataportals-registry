@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: ArcGIS REST services for disaster and farm map layers hosted by Ihuitu.
+id: zaihaiihuitucn
+langs:
+- id: ZH
+  name: Chinese
+link: https://zaihai.ihuitu.cn:6443/arcgis/rest/services
+name: Ihuitu Disaster ArcGIS Services
+owner:
+  link: https://zaihai.ihuitu.cn:6443/
+  location:
+    country:
+      id: CN
+      name: China
+  name: Ihuitu
+  type: Business
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- china
+- commercial
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009170
+endpoints:
+- type: arcgis:rest:info
+  url: https://zaihai.ihuitu.cn:6443/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://zaihai.ihuitu.cn:6443/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://zaihai.ihuitu.cn:6443/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://zaihai.ihuitu.cn:6443/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://zaihai.ihuitu.cn:6443/arcgis/rest/services?f=geositemap

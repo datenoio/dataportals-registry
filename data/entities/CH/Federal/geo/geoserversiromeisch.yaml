@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GeoServer of Siromeis publishing drone-survey products for 3D solar planning,
+  including orthomosaics, elevation models, hillshade, and solar-radiation layers.
+id: geoserversiromeisch
+langs:
+- id: DE
+  name: German
+link: https://geoserver.siromeis.ch/geoserver
+name: Siromeis GeoServer
+owner:
+  link: https://siromeis.ch/
+  location:
+    country:
+      id: CH
+      name: Switzerland
+  name: Siromeis
+  type: Business
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00009459
+endpoints:
+- type: wms111
+  url: https://geoserver.siromeis.ch/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserver.siromeis.ch/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoserver.siromeis.ch/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geoserver.siromeis.ch/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoserver.siromeis.ch/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

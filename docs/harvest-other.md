@@ -114,7 +114,17 @@ Hugging Face (`huggingface`) has its own harvest section above. Kaggle and Paper
 
 ## API catalogs
 
-The product is a **list of APIs**, not datasets. Harvest API entries (name, docs URL, publisher) only when the user wants an API inventory. Store the API’s stable id + the catalog `uid` ([harvest-identifiers.md](harvest-identifiers.md)). A CKAN Action API stays an open-data harvest ([harvest-opendata.md](harvest-opendata.md)).
+The product is a **list of APIs**, not datasets. Harvest API entries (name, docs URL, publisher) only when the user wants an API inventory. Store the API’s stable id + the catalog `uid` ([harvest-identifiers.md](harvest-identifiers.md)). A CKAN Action API stays an open-data harvest ([harvest-opendata.md](harvest-opendata.md)) unless the catalog itself is an API directory on CKAN.
+
+## Azure API Management (`azureapim`) {#azureapim}
+
+Harvest the developer portal's API list. One portal is one catalog.
+
+```text
+GET https://host/apis
+```
+
+**Keep:** API products listed in the developer portal. **Drop:** subscription keys, user profiles, and test-console calls.
 
 ## Data marketplaces
 
@@ -124,6 +134,21 @@ Public catalog of datasets for sale or license. Harvest **public** listing APIs 
 
 HTML tables, spreadsheets, GitHub inventories (`catalog_type: Datasets list`). One row / bullet with a dataset title + URL = one dataset. Skip the wrapping README as a dataset. No CMS API — parse the published file the catalog `link` points at, not a site-wide scrape.
 
+## Squarespace (`squarespace`) {#squarespace}
+
+Filter exports on `software.id = 'squarespace'`. One harvest scope per site.
+
+No data API. Keep the public **data / indicator pages** (and the files they link) listed in the site navigation or data page. Grain is the published table, report, or file — not each marketing page. Drop blog, about, and contact chrome.
+
+**Keep:** public data / indicator **pages and linked files**. **Drop:** marketing and blog chrome.
+
+## Jekyll (`jekyll`) {#jekyll}
+
+Filter exports on `software.id = 'jekyll'`. One harvest scope per project site.
+
+No data API; Jekyll sites are static HTML. Keep the public **dataset listing pages** and the release/download files they link. Grain is the dataset or benchmark entry, not each docs post. Drop documentation, blog, and paper pages. Many Jekyll catalogs also have a GitHub repo — release assets there count as the dataset files.
+
+**Keep:** public **dataset listing pages** and linked release files. **Drop:** docs, blog, and paper pages.
 
 ## Custom software (`custom`) {#custom}
 

@@ -327,6 +327,9 @@ Forks of a server framework (CKAN, Datasette, Omeka S, DSpace, VuFind, Hyrax) ar
 | [`dachs`](discovery-scientific-domain.md#dachs) | `resources/web/xsl/dachs-xsl-config.xsl` | FOFA `body="gavo_dc.css"` |
 | [`iudx`](discovery-opendata.md#iudx) | `docs/apidoc.html`, UI `index.html` | FOFA `body="DX Catalogue API Docs"`; UI `title="IUDX \| Indian Urban Data Exchange"` and `body="IUDX UI Team"`; GitHub ingress hosts in `datakaveri/iudx-deployment` |
 | [`masterportal`](discovery-geoportals-viewers.md#masterportal) | `portal/master/index.html` | FOFA `body="masterportal-root"` |
+| [`kvwmap`](discovery-geoportals-viewers.md#kvwmap) | `funktionen/gui_functions.js` | FOFA `body="funktionen/gui_functions.js"` |
+| [`mediatum`](discovery-scientific.md#mediatum) | generator meta | FOFA `body="mediatum - a multimedia content repository"` |
+| [`klimadashboardmuenster`](discovery-indicators.md#klimadashboardmuenster) | Open CoDE credit | FOFA `body="klimadashboard-muenster"` |
 | [`minerva`](discovery-scientific-domain.md#minerva) | `pages/_document.tsx` | FOFA `body="/minerva/config.js"` |
 | [`opengdc`](discovery-opendata.md#opengdc) | `themes/custom/dexes/templates/page.html.twig` | FOFA `body="themes/custom/dexes"` |
 | [`ensembl`](discovery-scientific.md#ensembl) | `htdocs/info/about/ensembl_powered.html` | FOFA `body="/img/empowered.png"` |
@@ -494,6 +497,14 @@ FOFA uses `field="value"` with `&&` (AND), `||` (OR), and `!=` (NOT). Values are
 
 `host=` is a substring match, so `host=".gouv.fr"` is the usual TLD filter. Combine with country whenever the query would otherwise be global.
 
+`domain=` is the registrable domain (`arcgis.com`), not a product hostname. A row for `city.hub.arcgis.com` has `domain` = `arcgis.com`, so `domain!="hub.arcgis.com"` does **not** drop ArcGIS Hub tenants. Exclude that SaaS with `domain!="arcgis.com"`, and find the tenants themselves with `host="hub.arcgis.com"` (substring) or `domain="opendata.arcgis.com"`. Custom-domain Hub shells are `body="hubcdn.arcgis.com/opendata-ui" && domain!="arcgis.com"` — see [ArcGIS Hub](discovery-geoportals-sdi.md#arcgishub). Short body tokens (`body="opendata-ui"`, `body="hub.js"`) are weak fingerprints.
+
+**Path tenants.** `host=` and `domain=` return one asset per host. A product that puts every city on one host (`app.gisonline.cz/{city}`) does not yield one FOFA row per city. Search the tenant host as a body backlink (`body="app.gisonline.cz" && domain!="gisonline.cz"`) and read the path from the referring page. See [GisOnline](discovery-geoportals-viewers.md#gisonline).
+
+**Scheme stored in `host`.** Some rows set `host` to `https://app.example.cz` rather than `app.example.cz`. `protocol="https"` then returns 0. Filter those with `port="443"`.
+
+**`body=` query versus `body` field.** A `body="..."` query can succeed on a plan that still rejects `fields` containing `body` (FOFA error `820001`, no permission to return the body). Keep `fields` to `host,link,title,domain,port` and open the live page for the path.
+
 **Worked translations**
 
 | Censys | FOFA |
@@ -536,13 +547,16 @@ CKAN’s default footer splits “Powered by” and “CKAN” around the class 
 
 DKAN has no `app="DKAN"`. `body="DKAN"` is a mention search (2261 hosts in September 2026). `body="dkan.js"` and `js_name="dkan.js"` return 0. Prefer `body="profiles/dkan"` for the Drupal 7 profile and `body="DKAN is an open-source data management platform"` for the DKAN 2 React shell, then the file queries in [discovery-opendata.md](discovery-opendata.md#dkan).
 
+Tablion has no `app="Tablion"`. `body="Tablion"` is a mention search (38 hosts in September 2026) and also matches the Byzantine garment of that name. `domain="tabliondata.com"` only sees the marketing redirect. Tenant apps are `{org}.tabliondata.com`; find the names with `%.tabliondata.com` in Certificate Transparency, then the chrome queries in [discovery-opendata.md](discovery-opendata.md#tablion). `body="aristotle_mdr"` is the metadata registry, not Tablion.
+
 ### How to turn a FOFA hit into a registry URL
 
 1. Prefer `host`, `domain`, or `link` in the result, not `ip`.
 2. Try `https://{host}/` first (drop `:443`; keep a non-443 port only if the catalog really listens there), then the platform path (`/dataset`, `/geonetwork`, `/dataverse`, `/odweb/`).
-3. Duplicate-check the hostname in DuckDB.
-4. Probe the public API path from the platform guide.
-5. Skip hosts that only serve a login form, a default web-server page, or an internal dashboard.
+3. If the hit is a site that only links the product, follow that product URL. Do not register the referring homepage.
+4. Duplicate-check the hostname in DuckDB. For a path tenant, duplicate-check the full path, not the shared host.
+5. Probe the public API path from the platform guide.
+6. Skip hosts that only serve a login form, a default web-server page, or an internal dashboard.
 
 FOFA often returns the same catalog on ports 80 and 443, or several vhosts on one IP. Deduplicate by hostname before probing. Never set `link` to a bare IP.
 

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,11 @@ coverage:
       name: Northern Europe
 description: High-throughput computational screening catalog of altermagnetic materials
   from Linköping University. The public OPTIMADE API reports 169 structures.
+endpoints:
+- type: rest
+  url: https://altermagnets.anyterial.se/optimade/amdb/v1/info
+- type: rest
+  url: https://altermagnets.anyterial.se/optimade/amdb/v1/structures
 id: altermagnetsanyterialse
 langs:
 - id: EN
@@ -31,8 +36,8 @@ owner:
   name: Linköping University
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: httk
+  name: High-Throughput Toolkit
 status: active
 tags:
 - materials science

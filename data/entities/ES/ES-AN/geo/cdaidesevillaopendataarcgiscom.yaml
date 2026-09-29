@@ -17,7 +17,8 @@ coverage:
     subregion:
       id: ES-AN
       name: Andalucía
-description: Open data geoportal of the City of Seville (IDE Sevilla / Urbanismo Sevilla) published on ArcGIS Hub.
+description: Open data geoportal of the City of Seville (IDE Sevilla / Urbanismo Sevilla)
+  published on ArcGIS Hub.
 endpoints:
 - type: dcatap201
   url: https://cda-idesevilla.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -68,6 +69,12 @@ tags:
 - sevilla
 - spain
 topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 - id: REGI
   name: Regions and cities
   type: eudatatheme

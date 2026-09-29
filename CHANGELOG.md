@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **1,223 net new catalog entries** since v1.22.0 (1,226 added, 3 removed); registry source now **42,390** entities (**1** scheduled) across **224** country/territory folders.
+- **68 software definitions** since v1.22.0; software catalog now **733** platforms (`data/software/types.yaml` is the category dictionary, not a platform).
+- New catalog files are mostly geoportals (**982**), scientific repositories (**122**), indicator catalogs (**72**), and open-data portals (**21**), plus smaller API, microdata, and ML finds. Largest country additions: United States (**185**), Italy (**84**), France (**56**), China (**52**), Netherlands (**38**), Brazil (**36**), Hungary (**36**), Czechia (**33**), and World/IGO (**33**).
+- SilverBrowser (`silverbrowser`, **46** Hungarian municipal geoportals), SEDOO Catalogue (`sedoo`, **31** French scientific catalogs), Envista Web (`envista`, **22** water-quality indicator UIs), ErdaGIS (`erdagis`, **16**), Aphia (`aphia`, **14** WoRMS/marine taxonomy nodes), Azure API Management (`azureapim`, **12**), EPOS GLASS (`glass`, **12**), Jekyll (`jekyll`, **12**), and Gosweb (`gosweb`, **11**) software definitions with matching tenants.
+- GIGWA (`gigwa`, **9**), kvwmap (`kvwmap`, **8**), CAMD-Web (`camdweb`, **8**), GISMAT (`gismat`, **8**), ReDBox (`redbox`, **7**), SARV (`sarv`, **6**), METSIS (`metsis`, **5**), Craft CMS (`craftcms`, **5**), DashGIS (`dashgis`, **5**), and Squarespace (`squarespace`, **5**) software definitions.
+- BIMS (`bims`), Biodiv (`biodiv`), iSTAR (`istar`), KS Open Budget (`ksopenbudget`), Pathogens Portal Node (`nodepathogensportal`), OneGov Election Day (`onegov`), SOPORTAL (`soportal`), GeoShop (`geoshop`), Geonodo (`geonodo`), GAUSS WebGIS (`gausswebgis`), IGiS (`igis`), VLAB (`vlab`), WebGIS Cloud (`webgiscloud`), CatasIA (`catasia`), Klimadashboard Münster (`klimadashboardmuenster`), Contrataciones Abiertas (`contratacionesabiertas`), Protwis (`protwis`), and further single- or few-catalog geoportal, scientific, indicator, and open-data IDs (`geoblox`, `localgis`, `terrisoft`, `urbagis`, `dataloket`, `emndatahub`, `fusiondatabrowser`, `liverpooldruginteractions`, `mediatum`, `panelapp`, `sbsdigitalcollection`).
+- CMS and portal platform definitions with no or few tagged catalogs yet: Cascade CMS (`cascadecms`), Centurion (`centurion`), Plone (`plone`), Taiwan Government Website Open Data (`twgovopendata`), Taiji Digital Public Data Open Platform (`tykyopendata`), Viavansi Open Government (`viavansi`), CBD Clearing-House (`cbdchm`), WMO OSCAR (`oscar`), Dielmo Maps (`dielmomaps`), Orhitec ERP/GIS (`erpgis`), G·GIS (`ggis`), Joruri Maps (`jorurimaps`), Mundi (`mundi`), rmDATA GeoWeb (`rmdatageoweb`), DaSCH Service Platform (`dsp`), Fairdata (`fairdata`), Index Data Keystone (`keystoneils`), High-Throughput Toolkit (`httk`), and GINES (`gines`).
+- Statistical production software category and definitions for CSPro (`cspro`) and DataSHIELD (`datashield`) (OpenSpec `add-statistical-production-software`).
+- `scripts/hunt.py` agent hunt loop: `prior`, `budget`, `next`, inline `--dedupe`, catalog verdict on `probe`, and `ingest` that calls `add-batch` / promote; every loop command prints a `next:` line. Documented as the always-loaded command card in `AGENTS.md`, `.cursor/rules/catalog-discovery.mdc`, and `docs/agents/discover.md` (OpenSpec `add-agent-hunt-loop`).
+- Internacia country/bloc resolution task in `AGENTS.md` for turning names into ISO codes and international blocks.
+
+### Changed
+
+- Custom-catalog and platform review retagged **771** catalogs onto a named `software.id`. Largest moves: `custom` to WordPress **199**, Drupal **197**, TYPO3 **47**, Joomla **23**, Liferay **19**, SharePoint **13**, and Shiny **11**; GeoServer to Palapa **43**; plus smaller retags onto Plone, Azure API Management, Geonodo, METSIS, SoftPro, Jekyll, Squarespace, and related IDs.
+- Mark **17** catalogs inactive and **1** deprecated after liveness checks; remove three stale entity files (`elocuslibuocgr`, `iadccnrit`, `dataarcticobservingorg`).
+- Extend discovery and harvest guides, `scripts/apidetect.py`, and `scripts/constants.py` for the **68** new software IDs; refresh `docs/software-index.md` and `docs/software-taxonomy.md`.
+- Rebuild dataset exports to match source YAML: **42,390** catalogs, **1** scheduled, **733** software (`full.jsonl`, `full.parquet`, and the DuckDB `catalogs` table: **42,391**).
+
 ## [1.22.0] - 2026-09-24
 
 **GitHub Release**: [v1.22.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.22.0) - Published September 24, 2026

@@ -1,0 +1,53 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBGIS
+================================================================================
+Generated: 2026-09-29 11:21:05
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBGIS
+Priority: MEDIUM
+Total Issues Found: 4
+
+Rule: Identifies records using software.id='gausswebgis' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+BR: 4 issues
+
+=== SUMMARY BY RECORD ===
+
+viamaowebgisgeobr: 1 issue
+riopardowebgisgeobr: 1 issue
+montenegrowebgisgeobr: 1 issue
+sesicomcienciawebgisgeobr: 1 issue
+
+=== ISSUES ===
+
+File: BR/BR-RS/geo/viamaowebgisgeobr.yaml
+Record ID: viamaowebgisgeobr
+Country: BR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBGIS
+Field: endpoints
+Current Value: {"software_id": "gausswebgis", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='gausswebgis' is marked as API-capable in software definitions
+
+File: BR/BR-RS/geo/riopardowebgisgeobr.yaml
+Record ID: riopardowebgisgeobr
+Country: BR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBGIS
+Field: endpoints
+Current Value: {"software_id": "gausswebgis", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='gausswebgis' is marked as API-capable in software definitions
+
+File: BR/BR-RS/geo/montenegrowebgisgeobr.yaml
+Record ID: montenegrowebgisgeobr
+Country: BR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBGIS
+Field: endpoints
+Current Value: {"software_id": "gausswebgis", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='gausswebgis' is marked as API-capable in software definitions
+
+File: BR/BR-RS/geo/sesicomcienciawebgisgeobr.yaml
+Record ID: sesicomcienciawebgisgeobr
+Country: BR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBGIS
+Field: endpoints
+Current Value: {"software_id": "gausswebgis", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='gausswebgis' is marked as API-capable in software definitions

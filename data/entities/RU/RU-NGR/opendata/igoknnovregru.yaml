@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,8 +17,8 @@ coverage:
     subregion:
       id: RU-NGR
       name: Novgorodskaja oblast'
-description: Open-data catalog of the Novgorod Oblast cultural-heritage inspectorate with
-  CSV datasets including the heritage-object list.
+description: Open-data catalog of the Novgorod Oblast cultural-heritage inspectorate
+  with CSV datasets including the heritage-object list.
 id: igoknnovregru
 langs:
 - id: RU
@@ -63,3 +63,6 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi00037633
+endpoints:
+- type: sitemap
+  url: https://igokn.novreg.ru/sitemap.xml

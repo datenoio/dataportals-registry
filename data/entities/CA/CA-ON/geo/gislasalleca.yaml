@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Public ArcGIS REST services for the Town of LaSalle, Ontario, including
+  active transportation, parks, and pedestrian bridges.
+id: gislasalleca
+langs:
+- id: EN
+  name: English
+link: https://gis.lasalle.ca/arcgis/rest/services
+name: Town of LaSalle ArcGIS REST Services
+owner:
+  link: https://www.lasalle.ca/
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: Town of LaSalle
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- canada
+- geospatial
+- government
+- transport
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00008993
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.lasalle.ca/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.lasalle.ca/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.lasalle.ca/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.lasalle.ca/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.lasalle.ca/arcgis/rest/services?f=geositemap

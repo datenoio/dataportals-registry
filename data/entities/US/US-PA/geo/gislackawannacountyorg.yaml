@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-PA
+      name: Pennsylvania
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Lackawanna County land records and NG911 address layers.
+id: gislackawannacountyorg
+langs:
+- id: EN
+  name: English
+link: https://gis.lackawannacounty.org/arcgis/rest/services
+name: Lackawanna County ArcGIS Server
+owner:
+  link: https://www.lackawannacounty.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-PA
+      name: Pennsylvania
+  name: Lackawanna County
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00008907
+properties:
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.lackawannacounty.org/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.lackawannacounty.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.lackawannacounty.org/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.lackawannacounty.org/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.lackawannacounty.org/arcgis/rest/services?f=geositemap

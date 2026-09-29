@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Open data portal
 content_types:
@@ -53,3 +53,13 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi00035371
+endpoints:
+- type: ckan
+  url: https://data.hellenicdataservice.gr/api/3
+  version: '3'
+- type: ckan:package-list
+  url: https://data.hellenicdataservice.gr/api/3/action/package_list
+  version: '3'
+- type: oaipmh20
+  url: https://data.hellenicdataservice.gr/oai?verb=Identify
+  version: '2.0'

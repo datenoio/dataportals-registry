@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -12,13 +12,13 @@ coverage:
       name: Spain
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: The AMIGA project (Analysis of the interstellar Medium of Isolated GAlaxies)
-  involves the identification and study of a statistically significant sample of the most
-  isolated galaxies in the local Universe. Our goal is to quantify the properties of different
-  phases of the interstellar medium in these galaxies which are likely to be least affected
-  by their external environment.
+  involves the identification and study of a statistically significant sample of the
+  most isolated galaxies in the local Universe. Our goal is to quantify the properties
+  of different phases of the interstellar medium in these galaxies which are likely
+  to be least affected by their external environment.
 id: amigaiaacsices
 identifiers:
 - id: openaire
@@ -41,8 +41,8 @@ owner:
   name: Spanish National Research Council
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -61,3 +61,6 @@ topics:
   name: Environment
   type: iso19115
 uid: cdi00030051
+endpoints:
+- type: rest
+  url: https://amiga.iaa.csic.es/wp-json/

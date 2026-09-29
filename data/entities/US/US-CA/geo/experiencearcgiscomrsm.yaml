@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: California
 description: City of Rancho Santa Margarita public ArcGIS Experience Builder GIS viewer for
   parcels, zoning, and land use.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/e36a570db4d7423f95cf0c4eae3ba4b8/data?f=json
 id: experiencearcgiscomrsm
 langs:
 - id: EN

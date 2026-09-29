@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Scientific data repository
 content_types:
@@ -61,3 +61,11 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00000881
+endpoints:
+- type: dataverseapi
+  url: https://data.crossda.hr/api/search
+- type: dataverseapi
+  url: https://data.crossda.hr/api/info/version
+- type: oaipmh20
+  url: https://data.crossda.hr/oai?verb=Identify
+  version: '2.0'

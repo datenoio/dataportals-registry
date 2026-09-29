@@ -1301,7 +1301,7 @@ def test_api_identifier_contentdm_uses_origin(monkeypatch):
         "contentdm",
     )
 
-    assert any(item["type"] == "customapi" for item in found)
+    assert any(item["type"] == "contentdm:collections" for item in found)
     assert any(
         item["url"] == "https://statsnz.contentdm.oclc.org/digital/api/collections"
         for item in found
@@ -1414,7 +1414,7 @@ def test_api_identifier_hajk_appconfig(monkeypatch):
 
     found = apidetect.api_identifier("https://karta.laxa.se", "hajk")
 
-    assert any(item["type"] == "api" for item in found)
+    assert any(item["type"] == "hajk:config" for item in found)
     assert any(item["url"] == "https://karta.laxa.se/appConfig.json" for item in found)
 
 
@@ -4430,7 +4430,7 @@ def test_omekas_dataset_class_filter(monkeypatch):
     )
     monkeypatch.setattr(apidetect.requests, "Session", lambda: session)
     found = apidetect.api_identifier("https://omeka.example.org", "omekas")
-    assert any(item["type"] == "rest" for item in found)
+    assert any(item["type"] == "omekas:items" for item in found)
     assert any(
         item["url"]
         == "https://omeka.example.org/api/items?resource_class_label=Dataset"

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -41,8 +41,8 @@ owner:
     Manchester M23 9LT, UK
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -53,3 +53,9 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00030942
+endpoints:
+- type: rest
+  url: http://www.cadre-genomes.org.uk/wp-json/
+- type: rest:posts
+  url: http://www.cadre-genomes.org.uk/wp-json/wp/v2/posts
+  version: '2'

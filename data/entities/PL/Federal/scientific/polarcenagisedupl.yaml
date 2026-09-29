@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -54,8 +54,8 @@ owner:
   name: Warsaw University of Technology
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: ckan
+  name: CKAN
 status: active
 tags:
 - scientific
@@ -79,3 +79,13 @@ topics:
   name: Location
   type: iso19115
 uid: cdi00032511
+endpoints:
+- type: ckan
+  url: https://polar.cenagis.edu.pl/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://polar.cenagis.edu.pl/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://polar.cenagis.edu.pl/api/3/action/package_list
+  version: '3'

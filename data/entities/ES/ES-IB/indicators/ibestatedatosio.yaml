@@ -19,10 +19,13 @@ coverage:
       id: ES-IB
       name: Illes Balears [Islas Baleares]
 description: IBESTAT eDatos Open Data Service, the Balearic Islands tenant of the
-  shared eDatos statistical infrastructure, with a public ODS catalog UI.
+  shared eDatos statistical infrastructure. The indicators API lists the public
+  indicator catalog; each indicator's data is JSON-stat 2.0. The ODS catalog UI
+  is a separate view of the same tenant.
 endpoints:
 - type: rest
-  url: https://ibestat.edatos.io/ods/ca/
+  url: https://ibestat.es/edatos/apis/indicators/v1.0/indicators
+  version: '1.0'
 id: ibestatedatosio
 langs:
 - id: CA

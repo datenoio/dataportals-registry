@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -19,25 +19,6 @@ coverage:
       name: Valenciana, Comunidad
 description: The connection was denied because this country is blocked in the Geolocation
   settings.
-endpoints:
-- type: ckan
-  url: http://datosabiertos.torrent.es/api/3
-- type: ckan
-  url: http://datosabiertos.torrent.es/api/3/action/package_list
-- type: opendatasoftapi
-  url: http://datosabiertos.torrent.es/api/v2/catalog
-- type: socrata
-  url: http://datosabiertos.torrent.es/api/views
-- type: dcatap201
-  url: http://datosabiertos.torrent.es/api/feed/dcat
-- type: dcat
-  url: http://datosabiertos.torrent.es/catalog.xml
-- type: dcatap
-  url: http://datosabiertos.torrent.es/catalog.rdf
-- type: dcat:jsonld
-  url: http://datosabiertos.torrent.es/catalog.jsonld
-- type: sitemap
-  url: http://datosabiertos.torrent.es/sitemap.xml
 id: datosabiertostorrentesesdataset
 langs:
 - id: EN
@@ -55,8 +36,8 @@ owner:
   type: Local government
   link: https://torrent.es
 software:
-  id: custom
-  name: Custom software
+  id: ckan
+  name: CKAN
 status: active
 tags:
 - government

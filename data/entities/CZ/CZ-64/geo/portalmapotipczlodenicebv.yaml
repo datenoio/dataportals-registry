@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: CZ-64
       name: Jihomoravský kraj
 description: Mapotip map portal of the municipality of Loděnice.
+endpoints:
+- type: mapotip:project
+  url: https://portal.mapotip.cz/api/map/alias/lodenice-bv?domain=portal.mapotip.cz
 id: portalmapotipczlodenicebv
 langs:
 - id: CS

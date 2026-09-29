@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -18,9 +18,9 @@ coverage:
     subregion:
       id: DZ-24
       name: Guelma
-description: Former ArcGIS Hub for COVID-19 monitoring in the wilaya of Guelma.
-  The Hub item covid19-wilaya-de-guelma-achaouki-bedoud.hub.arcgis.com returns 404
-  (item does not exist or is inaccessible).
+description: Former ArcGIS Hub for COVID-19 monitoring in the wilaya of Guelma. The
+  Hub item covid19-wilaya-de-guelma-achaouki-bedoud.hub.arcgis.com returns 404 (item
+  does not exist or is inaccessible).
 id: covid19wilayadeguelmaachaoukibedoudhubarcgiscom
 langs:
 - id: FR
@@ -68,3 +68,6 @@ topics:
   name: Health
   type: iso19115
 uid: cdi00002883
+endpoints:
+- type: arcgishubapi
+  url: https://covid19-wilaya-de-guelma-achaouki-bedoud.hub.arcgis.com/api/v3/datasets

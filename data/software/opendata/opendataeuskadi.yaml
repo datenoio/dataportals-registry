@@ -1,0 +1,63 @@
+category: Open data portal
+subtype: data_portal_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: opendataeuskadi
+website: https://opendata.euskadi.eus
+name: Open Data Euskadi
+description: Open Data Euskadi is the Basque Government's own open data portal platform,
+  run on the euskadi.eus web stack. The catalog publishes datasets in Basque, Spanish
+  and English, exposes a documented custom REST API (JSON/XML) plus a SPARQL endpoint
+  on api.euskadi.eus, and federates DCAT metadata to datos.gob.es.
+owner:
+  name: Eusko Jaurlaritza / Basque Government
+  location:
+    country:
+      id: ES
+      name: Spain
+logo_url: https://opendata.euskadi.eus/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'Yes'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'Yes'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+documentation_url: https://opendata.euskadi.eus/apis/
+export_formats:
+- CSV
+- JSON
+- RDF
+- XML
+capabilities:
+- Dataset catalog
+- Custom REST API
+- SPARQL endpoint
+- DCAT federation to datos.gob.es
+last_updated: '2026-09-28T00:00:00Z'

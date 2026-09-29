@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,10 +14,10 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: 'Record does not exist anymore: Environmental Information Data Centre . The record
-  with identifier content 10.25504/FAIRsharing.9raft1 was invalid.Records previously linked:
-  [3418, 3419, 3424, 3427, 3429, 3453]. Organisations previously linked: [2090, 461]. Licences
-  previously linked: [115, 1056].'
+description: 'Record does not exist anymore: Environmental Information Data Centre
+  . The record with identifier content 10.25504/FAIRsharing.9raft1 was invalid.Records
+  previously linked: [3418, 3419, 3424, 3427, 3429, 3453]. Organisations previously
+  linked: [2090, 461]. Licences previously linked: [115, 1056].'
 id: eidcacuk
 identifiers:
 - id: openaire
@@ -41,8 +41,8 @@ owner:
   name: UK Centre for Ecology & Hydrology
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -64,3 +64,6 @@ topics:
   name: Environment
   type: iso19115
 uid: cdi00030849
+endpoints:
+- type: drupal:jsonapi
+  url: https://eidc.ac.uk/jsonapi

@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: ArcGIS REST services for land, forest, and mountain layers.
+id: wwwlandinfocn
+langs:
+- id: ZH
+  name: Chinese
+link: http://www.land-info.cn:6080/arcgis/rest/services
+name: Land Info ArcGIS Services
+owner:
+  link: http://www.land-info.cn:6080/
+  location:
+    country:
+      id: CN
+      name: China
+  name: Land Info
+  type: Business
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- china
+- commercial
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009152
+endpoints:
+- type: arcgis:rest:info
+  url: http://www.land-info.cn:6080/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://www.land-info.cn:6080/arcgis/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: http://www.land-info.cn:6080/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://www.land-info.cn:6080/arcgis/rest/services?f=geositemap

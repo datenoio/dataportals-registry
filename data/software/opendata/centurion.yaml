@@ -1,0 +1,63 @@
+category: Open data portal
+subtype: managed_saas_service
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: Compatible
+  resources: 'No'
+  topics: Compatible
+has_api: 'Yes'
+has_bulk: 'No'
+id: centurion
+website: https://centurion.id
+name: Centurion
+description: Centurion is the government data-portal platform from PT eBdesk
+  Teknologi. Public shells set theme-fontsize and data-maps on the html element
+  and theme-shape="rounded" on the body. Installations load the Charts module
+  from https://fem.centurion.id/remoteEntry.js or from a same-host
+  /femc/remoteEntry.js that begins with "var Charts". Some tenants also expose
+  a PostGraphile API at POST /api/v1/graphql (metadata_datasets). A satudata
+  hostname alone is not this product. The centurion.id login and
+  fem.centurion.id module host are not catalogs.
+owner:
+  name: PT eBdesk Teknologi
+  location:
+    country:
+      id: ID
+      name: Indonesia
+documentation_url: https://www.ebdesk.com/goverment-intelligence.html
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+  graphql: 'Yes'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: Uncertain
+rights_management:
+  licensing_type: Uncertain
+  supports_licenses: Uncertain
+storage_type: Structured
+type: Software
+export_formats:
+- JSON
+capabilities:
+- Open data catalog
+- GraphQL metadata API
+- Vendor-hosted and customer-domain portals
+last_updated: '2026-09-27T12:00:00Z'

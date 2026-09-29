@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -70,3 +70,14 @@ topics:
   name: Planning / Cadastre
   type: iso19115
 uid: cdi99996753
+endpoints:
+- type: arcgis:rest:info
+  url: https://geodata.skivekommune.dk/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geodata.skivekommune.dk/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geodata.skivekommune.dk/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geodata.skivekommune.dk/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geodata.skivekommune.dk/server/rest/services?f=geositemap

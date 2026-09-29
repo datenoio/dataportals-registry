@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: California
 description: City of Ontario public ArcGIS Experience Builder land-use map for The Ontario
   Plan 2050.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/fdb21a3f2d4d4fd9a02f867b3d365ce9/data?f=json
 id: experiencearcgiscomontarioca
 langs:
 - id: EN

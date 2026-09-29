@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: DE-NI
       name: Niedersachsen
-description: NFDI4Health Local Data Hub of the German Centre for Child and Adolescent Health
-  (DZKJ) at Universitätsmedizin Göttingen. FAIRDOM-SEEK catalog for paediatric
+description: NFDI4Health Local Data Hub of the German Centre for Child and Adolescent
+  Health (DZKJ) at Universitätsmedizin Göttingen. FAIRDOM-SEEK catalog for paediatric
   and adolescent health studies and metadata.
 endpoints:
 - type: rest
@@ -56,10 +56,13 @@ tags:
 - FAIR
 - SEEK
 topics:
-- id: HEAL
-  name: Health
-  type: eudatatheme
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
 uid: cdi00006813

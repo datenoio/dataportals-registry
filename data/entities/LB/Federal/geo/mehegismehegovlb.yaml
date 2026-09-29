@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LB
+      name: Lebanon
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: ArcGIS Enterprise 11.5 of the Lebanese Ministry of Education and Higher
+  Education. Public map services include public and private schools, regional education
+  offices, governorates, cazas, and cadasters, plus a Hosted folder of school, shelter,
+  and displacement layers.
+endpoints:
+- type: arcgis:portals:self
+  url: https://mehegis.mehe.gov.lb/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://mehegis.mehe.gov.lb/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mehegis.mehe.gov.lb/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mehegis.mehe.gov.lb/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://mehegis.mehe.gov.lb/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mehegis.mehe.gov.lb/server/rest/services?f=geositemap
+id: mehegismehegovlb
+langs:
+- id: EN
+  name: English
+- id: AR
+  name: Arabic
+link: https://mehegis.mehe.gov.lb/server/rest/services
+name: Ministry of Education and Higher Education GIS
+owner:
+  link: https://www.mehe.gov.lb
+  location:
+    country:
+      id: LB
+      name: Lebanon
+    level: 20
+  name: Ministry of Education and Higher Education
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- has_api
+- GIS
+- education
+- schools
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00009334

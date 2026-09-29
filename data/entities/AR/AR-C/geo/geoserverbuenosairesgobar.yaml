@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-C
+      name: Ciudad Autónoma de Buenos Aires
+    macroregion:
+      id: '005'
+      name: South America
+description: GeoServer of the City of Buenos Aires geospatial intelligence unit, publishing
+  the production base map and the catalogo_og_130 layer catalog.
+id: geoserverbuenosairesgobar
+langs:
+- id: ES
+  name: Spanish
+link: https://geoserver.buenosaires.gob.ar/geoserver
+name: Geoservicios GCBA
+owner:
+  link: https://buenosaires.gob.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-C
+      name: Ciudad Autónoma de Buenos Aires
+  name: Gobierno de la Ciudad de Buenos Aires
+  type: Local government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- argentina
+- geospatial
+- government
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009605
+endpoints:
+- type: wms111
+  url: https://geoserver.buenosaires.gob.ar/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserver.buenosaires.gob.ar/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoserver.buenosaires.gob.ar/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geoserver.buenosaires.gob.ar/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoserver.buenosaires.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,10 +14,10 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: The CSSDP project provides space scientists with access to a wide range of space
-  data, observations, and investigative tools. It provides a seamless, single- point of access
-  to these resources through a custom web portal. To date, more than 350 scientists are registered
-  users of the CSSDP portal.
+description: The CSSDP project provides space scientists with access to a wide range
+  of space data, observations, and investigative tools. It provides a seamless, single-
+  point of access to these resources through a custom web portal. To date, more than
+  350 scientists are registered users of the CSSDP portal.
 id: cssdpca
 identifiers:
 - id: openaire
@@ -40,8 +40,8 @@ owner:
   name: Cybera
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -61,3 +61,6 @@ topics:
   name: Climatology / Meteorology / Atmosphere
   type: iso19115
 uid: cdi00028758
+endpoints:
+- type: sitemap
+  url: https://cssdp.ca/sitemap.xml

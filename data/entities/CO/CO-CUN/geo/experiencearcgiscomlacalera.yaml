@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Cundinamarca
 description: Public municipal geovisor of La Calera, Cundinamarca, on ArcGIS Experience
   Builder, with PBOT, administrative, infrastructure, and risk layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/55e270898ce846d2a23a990abecde384/data?f=json
 id: experiencearcgiscomlacalera
 langs:
 - id: ES

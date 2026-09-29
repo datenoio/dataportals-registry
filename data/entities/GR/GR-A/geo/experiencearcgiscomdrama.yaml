@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Anatolikí Makedonía kai Thráki
 description: Municipal ArcGIS Experience Builder geoportal of Drama, with public maps
   of municipal units, civic assets, and citizen issue reporting.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/5133d4b447d84e7ab676f8589f983535/data?f=json
 id: experiencearcgiscomdrama
 langs:
 - id: EL

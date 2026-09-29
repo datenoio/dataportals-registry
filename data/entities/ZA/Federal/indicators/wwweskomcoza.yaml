@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -12,7 +12,7 @@ coverage:
       name: South Africa
     level: 20
     macroregion:
-      id: '018'
+      id: 018
       name: Southern Africa
 description: Demand, generation, and outage statistics for the South African power
   system.
@@ -32,8 +32,8 @@ owner:
   name: Eskom
   type: Business
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - electricity
@@ -44,3 +44,9 @@ topics:
 properties:
   is_national: false
 uid: cdi00008381
+endpoints:
+- type: rest
+  url: https://www.eskom.co.za/dataportal/wp-json/
+- type: rest:posts
+  url: https://www.eskom.co.za/dataportal/wp-json/wp/v2/posts
+  version: '2'

@@ -1,6 +1,6 @@
 access_mode:
 - open
-api_status: uncertain
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -18,11 +18,14 @@ coverage:
       name: Valenciana, Comunidad
 description: Portal de Datos Abiertos del Ciclo Integral del Agua de Aguas de Alicante.
   Open data portal for the integral water cycle in Alicante.
+endpoints:
+- type: ckan
+  url: https://datosabiertos-back.aguasdealicante.es/api/3
 id: datosabiertosaguasdealicantepreapslio
 langs:
 - id: ES
   name: Spanish
-link: https://datosabiertos-aguasdealicante.pre.apsl.io/
+link: https://datosabiertos.aguasdealicante.es/
 name: Portal de Datos Abiertos - Aguas de Alicante
 owner:
   location:
@@ -37,8 +40,8 @@ owner:
   type: Local government
   link: https://apsl.io
 software:
-  id: custom
-  name: Custom software
+  id: ckan
+  name: CKAN
 status: active
 tags:
 - open data
@@ -52,3 +55,4 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi00021296
+api: true

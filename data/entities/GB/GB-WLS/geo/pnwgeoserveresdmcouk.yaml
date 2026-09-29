@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-WLS
+      name: Wales [Cymru GB-CYM]
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: GeoServer for the List of Historic Place Names of Wales, with cantref,
+  commote, head-name, and recorded place-name layers. Hosted by exeGesIS SDM for the
+  Royal Commission on the Ancient and Historical Monuments of Wales.
+id: pnwgeoserveresdmcouk
+langs:
+- id: EN
+  name: English
+link: https://pnwgeoserver.esdm.co.uk/geoserver
+name: List of Historic Place Names of Wales
+owner:
+  link: https://rcahmw.gov.uk/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-WLS
+      name: Wales [Cymru GB-CYM]
+  name: Royal Commission on the Ancient and Historical Monuments of Wales
+  type: Regional government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- geospatial
+- government
+- united-kingdom
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009541
+endpoints:
+- type: wms111
+  url: https://pnwgeoserver.esdm.co.uk/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://pnwgeoserver.esdm.co.uk/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://pnwgeoserver.esdm.co.uk/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://pnwgeoserver.esdm.co.uk/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://pnwgeoserver.esdm.co.uk/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

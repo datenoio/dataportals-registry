@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Tasmania
 description: Devonport City Council Public Map Experience Builder for public infrastructure,
   parks, services, and related local government map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/00452854f7b94318b8fcf68f40782946/data?f=json
 id: experiencearcgiscomdevonport
 langs:
 - id: EN

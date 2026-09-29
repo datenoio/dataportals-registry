@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Metadata catalog
 content_types:
 - dataset
@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '001'
       name: World
-description: European Directory of Marine Environmental Research Projects (EDMERP), the SeaDataNet
-  catalog of marine research projects.
+description: European Directory of Marine Environmental Research Projects (EDMERP),
+  the SeaDataNet catalog of marine research projects.
 id: edmerpseadatanetorg
 langs:
 - id: EN
@@ -34,8 +34,8 @@ owner:
 properties:
   is_national: false
 software:
-  id: custom
-  name: Custom software
+  id: seadatanet
+  name: SeaDataNet
 status: active
 tags:
 - ocean
@@ -51,3 +51,6 @@ topics:
   name: Oceans
   type: iso19115
 uid: cdi99995596
+endpoints:
+- type: sitemap
+  url: https://edmerp.seadatanet.org/sitemap.xml

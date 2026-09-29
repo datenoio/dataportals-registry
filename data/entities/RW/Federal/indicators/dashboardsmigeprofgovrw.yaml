@@ -58,6 +58,8 @@ endpoints:
   url: https://dashboards.migeprof.gov.rw/api/system/info
 - type: dhis2:datasets
   url: https://dashboards.migeprof.gov.rw/api/dataSets.json?fields=id,displayName&pageSize=1
+- type: dhis2:indicators
+  url: https://dashboards.migeprof.gov.rw/api/indicators.json?fields=id,displayName&pageSize=1
 properties:
   has_doi: false
   is_national: false

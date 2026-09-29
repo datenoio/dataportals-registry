@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: GR-I
+      name: Attikí
+description: ArcGIS Enterprise services directory of the Region of Attica, with public
+  regional-programme and livestock feature services. Distinct from the investment
+  geoportal at gis.attica.gov.gr.
+id: geoportalatticagovgr
+langs:
+- id: EL
+  name: Greek
+link: https://geoportal.attica.gov.gr/server/rest/services
+name: Region of Attica GIS REST Services
+owner:
+  link: https://www.attica.gov.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    subregion:
+      id: GR-I
+      name: Attikí
+  name: Region of Attica
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- greece
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+endpoints:
+- type: arcgis:rest:info
+  url: https://geoportal.attica.gov.gr/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoportal.attica.gov.gr/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoportal.attica.gov.gr/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoportal.attica.gov.gr/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoportal.attica.gov.gr/server/rest/services?f=geositemap
+uid: cdi00009002

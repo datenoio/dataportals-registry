@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -18,16 +18,6 @@ coverage:
       id: ID-AC
       name: Aceh
 description: Official CKAN open data portal of Subulussalam City, Aceh, Indonesia.
-endpoints:
-- type: ckan
-  url: https://data.subulussalamkota.go.id/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://data.subulussalamkota.go.id/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://data.subulussalamkota.go.id/api/3/action/package_list
-  version: '3'
 id: datasubulussalamkotagoid
 langs:
 - id: ID
@@ -56,7 +46,7 @@ rights:
 software:
   id: ckan
   name: CKAN
-status: active
+status: inactive
 tags:
 - government
 - has_api

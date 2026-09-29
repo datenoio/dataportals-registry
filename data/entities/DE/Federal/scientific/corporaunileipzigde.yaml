@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: NoSketch Engine (Bonito/Manatee) instance of the Leipzig Corpora Collection
+  exposing its newspaper, Wikipedia and web corpora for many languages via CQL concordance
+  search. Site is protected by an anti-bot gateway.
+id: corporaunileipzigde
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://corpora.uni-leipzig.de/bonito/run.cgi/first_form
+name: Leipzig Corpora Collection - NoSketch Engine
+owner:
+  link: https://www.uni-leipzig.de/
+  location:
+    country:
+      id: DE
+      name: Germany
+  name: Leipzig University
+  type: Academy
+software:
+  id: nosketch
+  name: NoSketch Engine
+status: active
+tags:
+- scientific
+- language resources
+- corpora
+- linguistics
+- Leipzig Corpora Collection
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00010070
+endpoints:
+- type: search
+  url: https://corpora.uni-leipzig.de/bonito/run.cgi/first_form

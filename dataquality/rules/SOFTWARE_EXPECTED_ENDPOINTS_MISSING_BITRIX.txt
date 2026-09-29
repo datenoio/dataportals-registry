@@ -1,27 +1,39 @@
 DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
 Priority: MEDIUM
-Total Issues Found: 7
+Total Issues Found: 9
 
 Rule: Identifies records using software.id='bitrix' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
 
 === SUMMARY BY COUNTRY ===
 
+BY: 1 issue
+KZ: 1 issue
 RU: 7 issues
 
 === SUMMARY BY RECORD ===
 
+mineralmapbelgeocentrby: 1 issue
 opendatabarnaulorg: 1 issue
 mcxaltairu: 1 issue
-igoknnovregru: 1 issue
 deritivanovooblru: 1 issue
 khfomsru: 1 issue
 opendataadmmegionru: 1 issue
+investmap49govru: 1 issue
 mkchrru: 1 issue
+statgovkz: 1 issue
 
 === ISSUES ===
+
+File: BY/Federal/geo/mineralmapbelgeocentrby.yaml
+Record ID: mineralmapbelgeocentrby
+Country: BY
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {"software_id": "bitrix", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
 
 File: RU/RU-ALT/opendata/opendatabarnaulorg.yaml
 Record ID: opendatabarnaulorg
@@ -33,14 +45,6 @@ Suggested Action: Add at least one endpoint because software.id='bitrix' is mark
 
 File: RU/RU-AL/opendata/mcxaltairu.yaml
 Record ID: mcxaltairu
-Country: RU
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
-Field: endpoints
-Current Value: {"software_id": "bitrix", "has_api": "Yes", "endpoints_count": 0}
-Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
-
-File: RU/RU-NGR/opendata/igoknnovregru.yaml
-Record ID: igoknnovregru
 Country: RU
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
 Field: endpoints
@@ -71,9 +75,25 @@ Field: endpoints
 Current Value: {"software_id": "bitrix", "has_api": "Yes", "endpoints_count": 0}
 Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
 
+File: RU/RU-MAG/geo/investmap49govru.yaml
+Record ID: investmap49govru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {"software_id": "bitrix", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
 File: RU/RU-CE/opendata/mkchrru.yaml
 Record ID: mkchrru
 Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {"software_id": "bitrix", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: KZ/Federal/indicators/statgovkz.yaml
+Record ID: statgovkz
+Country: KZ
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
 Field: endpoints
 Current Value: {"software_id": "bitrix", "has_api": "Yes", "endpoints_count": 0}

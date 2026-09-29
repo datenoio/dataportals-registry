@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -35,8 +35,8 @@ owner:
   name: Institut Des Matériaux de Nantes
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -54,3 +54,9 @@ topics:
   name: Utilities / Communication
   type: iso19115
 uid: cdi00030665
+endpoints:
+- type: rest
+  url: https://eelsdb.eu/wp-json/
+- type: rest:posts
+  url: https://eelsdb.eu/wp-json/wp/v2/posts
+  version: '2'

@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    subregion:
+      id: RU-MOW
+      name: Moskva
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public ArcGIS Server REST directory of Moscow Witte University, with
+  hosted campus, ecology, and city map layers.
+id: arcgismuivru
+langs:
+- id: RU
+  name: Russian
+link: https://arcgis.muiv.ru/server/rest/services
+name: Moscow Witte University ArcGIS Server
+owner:
+  link: https://muiv.ru
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    subregion:
+      id: RU-MOW
+      name: Moskva
+  name: Moscow Witte University
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- geospatial
+- russian-federation
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgis.muiv.ru/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgis.muiv.ru/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgis.muiv.ru/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://arcgis.muiv.ru/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arcgis.muiv.ru/server/rest/services?f=geositemap
+uid: cdi00008813

@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -18,8 +18,9 @@ coverage:
     subregion:
       id: EC-P
       name: Pichincha
-description: Former ArcGIS Open Data hub of the Municipality of Quito for smart-city and citizen-engagement
-  layers. The site now returns an empty ArcGIS Hub shell and is no longer a usable catalog.
+description: Former ArcGIS Open Data hub of the Municipality of Quito for smart-city
+  and citizen-engagement layers. The site now returns an empty ArcGIS Hub shell and
+  is no longer a usable catalog.
 id: quitosmartgobiernoslocalesopendataarcgiscom
 langs:
 - id: ES
@@ -103,3 +104,6 @@ topics:
   name: Transportation
   type: iso19115
 uid: cdi00003120
+endpoints:
+- type: arcgishubapi
+  url: https://quitosmart-gobiernoslocales.opendata.arcgis.com/api/v3/datasets

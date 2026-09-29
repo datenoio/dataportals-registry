@@ -1,25 +1,54 @@
 DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Priority: MEDIUM
-Total Issues Found: 1
+Total Issues Found: 4
 
 Rule: Identifies records using software.id='ckan' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
 
 === SUMMARY BY COUNTRY ===
 
+ES: 2 issues
 IT: 1 issue
+US: 1 issue
 
 === SUMMARY BY RECORD ===
 
+txwaterdatahuborg: 1 issue
 opendatavigilfuocoit: 1 issue
+datosabiertosbneescatalogodataset: 1 issue
+wwwopendatabizkaiaeus: 1 issue
 
 === ISSUES ===
+
+File: US/US-TX/opendata/txwaterdatahuborg.yaml
+Record ID: txwaterdatahuborg
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {"software_id": "ckan", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
 File: IT/Federal/opendata/opendatavigilfuocoit.yaml
 Record ID: opendatavigilfuocoit
 Country: IT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {"software_id": "ckan", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+File: ES/Federal/opendata/datosabiertosbneescatalogodataset.yaml
+Record ID: datosabiertosbneescatalogodataset
+Country: ES
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {"software_id": "ckan", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+File: ES/ES-PV/opendata/wwwopendatabizkaiaeus.yaml
+Record ID: wwwopendatabizkaiaeus
+Country: ES
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
 Current Value: {"software_id": "ckan", "has_api": "Yes", "endpoints_count": 0}

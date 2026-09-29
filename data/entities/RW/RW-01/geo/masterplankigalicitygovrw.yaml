@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RW
+      name: Rwanda
+    level: 30
+    subregion:
+      id: RW-01
+      name: City of Kigali
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: ArcGIS Enterprise catalog of the City of Kigali, including the 2020 master
+  plan, zoning phases, and parcel layers.
+id: masterplankigalicitygovrw
+langs:
+- id: EN
+  name: English
+link: https://masterplan.kigalicity.gov.rw/server/rest/services
+name: City of Kigali GIS Portal
+owner:
+  link: https://www.kigalicity.gov.rw
+  location:
+    country:
+      id: RW
+      name: Rwanda
+    level: 30
+    subregion:
+      id: RW-01
+      name: City of Kigali
+  name: City of Kigali
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- REST
+- master plan
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00009259
+endpoints:
+- type: arcgis:rest:info
+  url: https://masterplan.kigalicity.gov.rw/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://masterplan.kigalicity.gov.rw/server/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://masterplan.kigalicity.gov.rw/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://masterplan.kigalicity.gov.rw/server/rest/services?f=geositemap

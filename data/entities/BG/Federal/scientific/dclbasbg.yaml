@@ -1,0 +1,53 @@
+access_mode:
+- restricted
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Corpus Collocation REST service of the Department of Computational Linguistics
+  (Bulgarian Academy of Sciences), built on NoSketch Engine and giving access to the
+  Bulgarian National Corpus; the concordance endpoint currently requires authentication.
+id: dclbasbg
+langs:
+- id: BG
+  name: Bulgarian
+link: https://dcl.bas.bg/collocations/
+name: BAS Corpus Collocation Service - Bulgarian National Corpus
+owner:
+  link: https://www.bas.bg/
+  location:
+    country:
+      id: BG
+      name: Bulgaria
+  name: Bulgarian Academy of Sciences
+  type: Academy
+software:
+  id: nosketch
+  name: NoSketch Engine
+status: active
+tags:
+- scientific
+- language resources
+- corpora
+- linguistics
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00010068
+endpoints:
+- type: search
+  url: https://dcl.bas.bg/collocations/

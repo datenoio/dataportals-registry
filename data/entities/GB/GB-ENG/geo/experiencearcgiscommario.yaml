@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: England
 description: Lancashire County Council's Mapping and Related Information Online viewer,
   providing access to council information layers, maps, and downloadable data.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/e44a8cb4fcae4aed8516b258e09b335b/data?f=json
 id: experiencearcgiscommario
 langs:
 - id: EN

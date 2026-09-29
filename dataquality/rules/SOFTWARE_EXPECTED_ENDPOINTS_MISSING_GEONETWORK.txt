@@ -1,21 +1,31 @@
 DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
 Priority: MEDIUM
-Total Issues Found: 1
+Total Issues Found: 2
 
 Rule: Identifies records using software.id='geonetwork' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
 
 === SUMMARY BY COUNTRY ===
 
+IT: 1 issue
 RS: 1 issue
 
 === SUMMARY BY RECORD ===
 
+iadccnrit: 1 issue
 metakataloggeosrbijars: 1 issue
 
 === ISSUES ===
+
+File: IT/Federal/geo/iadccnrit.yaml
+Record ID: iadccnrit
+Country: IT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
+Field: endpoints
+Current Value: {"software_id": "geonetwork", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
 File: RS/Federal/geo/metakataloggeosrbijars.yaml
 Record ID: metakataloggeosrbijars

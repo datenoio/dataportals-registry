@@ -1,0 +1,60 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: Uncertain
+id: glass
+name: EPOS GLASS
+website: https://gnss-epos.eu/glass-api/
+description: EPOS GLASS (GNSS Linkage Advanced Software System) is the Java
+  node software of the EPOS GNSS thematic service. Public nodes expose
+  /GlassFramework/ for station metadata, RINEX file metadata, and GNSS
+  products. Register each public node (products portal, data gateway), not
+  the EPOS ICS-C hub (epos) and not the M3G metadata site.
+owner:
+  name: EPOS GNSS
+  location:
+    country:
+      id: EU
+      name: European Union
+logo_url: https://gnss-epos.eu/favicon.ico
+documentation_url: https://gnss-epos.eu/glass-api/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: Uncertain
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: Uncertain
+  persistent_dataset_url: Uncertain
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: Uncertain
+storage_type: Structured
+type: Software
+export_formats:
+- JSON
+capabilities:
+- REST API
+- GNSS station catalog
+- RINEX metadata
+last_updated: '2026-09-27T00:00:00Z'

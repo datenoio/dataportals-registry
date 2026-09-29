@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-SP
+      name: São Paulo
+    macroregion:
+      id: '005'
+      name: South America
+description: ArcGIS REST services of São Paulo's agricultural extension service, including
+  biomes, indigenous lands, quilombo areas, and MapBiomas layers. Some CAR folders
+  require a token.
+id: geocatispgovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://geo.cati.sp.gov.br/server/rest/services
+name: CATI São Paulo ArcGIS Server
+owner:
+  link: https://www.cati.sp.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-SP
+      name: São Paulo
+  name: Coordenadoria de Assistência Técnica Integral (CATI)
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- brazil
+- geospatial
+- government
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009252
+endpoints:
+- type: arcgis:rest:info
+  url: https://geo.cati.sp.gov.br/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geo.cati.sp.gov.br/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geo.cati.sp.gov.br/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geo.cati.sp.gov.br/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geo.cati.sp.gov.br/server/rest/services?f=geositemap

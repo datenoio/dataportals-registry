@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: ArcGIS Server for the Forest Industry Organization, including plantation
+  and boundary layers.
+id: gisportalfiocoth
+langs:
+- id: TH
+  name: Thai
+link: https://gisportal.fio.co.th/arcgis/rest/services
+name: Forest Industry Organization GIS
+owner:
+  link: https://www.fio.co.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+  name: Forest Industry Organization
+  type: Business
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- commercial
+- geospatial
+- thailand
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009196
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisportal.fio.co.th/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisportal.fio.co.th/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisportal.fio.co.th/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisportal.fio.co.th/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisportal.fio.co.th/arcgis/rest/services?f=geositemap

@@ -22,7 +22,7 @@ endpoints:
   url: https://data.europa.eu/sitemap.xml
 - type: sitemap
   url: https://data.europa.eu/sitemap.xml.gz
-- type: rest
+- type: piveau:search
   url: https://data.europa.eu/api/hub/search/search
 - type: rest
   url: https://data.europa.eu/api/hub/repo/catalogues
@@ -33,7 +33,7 @@ endpoints:
   url: https://data.europa.eu/sparql
 - type: docs
   url: https://data.europa.eu/api/hub/search/
-- type: rest
+- type: piveau:search
   url: https://data.europa.eu/api/hub/search/search?q=&filter=dataset
 id: dataeuropaeu
 identifiers:

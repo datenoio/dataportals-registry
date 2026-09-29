@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    macroregion:
+      id: 039
+      name: Southern Europe
+    level: 30
+    subregion:
+      id: ES-AN
+      name: Andalucía
+description: MAPERA GeoServer at CICA publishing wind-energy suitability and turbine
+  layers.
+id: geoservermaperacicaes
+langs:
+- id: ES
+  name: Spanish
+link: https://geoserver.mapera.cica.es/geoserver
+name: MAPERA GeoServer
+owner:
+  link: https://www.cica.es/
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-AN
+      name: Andalucía
+  name: Centro Informático Científico de Andalucía (CICA)
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- academic
+- energy
+- geospatial
+- spain
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
+uid: cdi00009386
+endpoints:
+- type: wms111
+  url: https://geoserver.mapera.cica.es/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserver.mapera.cica.es/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoserver.mapera.cica.es/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geoserver.mapera.cica.es/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoserver.mapera.cica.es/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

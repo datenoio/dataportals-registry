@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: BE-WAL
+      name: wallonne, Région
+description: GeoServer of the CRA-W Agromet platform, publishing agrometeorological
+  grids and agricultural zones for Wallonia.
+id: agrometbe
+langs:
+- id: FR
+  name: French
+link: https://agromet.be/geoserver
+name: Agromet GeoServer
+owner:
+  link: https://www.cra.wallonie.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 30
+    subregion:
+      id: BE-WAL
+      name: wallonne, Région
+  name: Centre wallon de Recherches agronomiques (CRA-W)
+  type: Academy
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- academic
+- belgium
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009444
+endpoints:
+- type: wms111
+  url: https://agromet.be/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://agromet.be/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://agromet.be/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://agromet.be/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://agromet.be/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

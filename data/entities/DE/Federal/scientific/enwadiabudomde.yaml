@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: W.A.D.I. (Wadi Abu Dom Investigations) publishes archaeological survey and excavation
-  data from the Wadi Abu Dom in Sudan as a web GIS and project archive.
+description: W.A.D.I. (Wadi Abu Dom Investigations) publishes archaeological survey
+  and excavation data from the Wadi Abu Dom in Sudan as a web GIS and project archive.
 id: enwadiabudomde
 identifiers:
 - id: openaire
@@ -38,8 +38,8 @@ owner:
   name: Westfälische Wilhelms-Universität Münster, Institut für Ägyptologie und Koptologie
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -50,3 +50,6 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00029525
+endpoints:
+- type: rss
+  url: http://en.wadi-abu-dom.de/feed/

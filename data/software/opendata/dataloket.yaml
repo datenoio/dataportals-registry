@@ -1,0 +1,60 @@
+category: Open data portal
+subtype: managed_saas_service
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: dataloket
+name: Het Dataloket
+website: https://kbenp.nl/expertise/datatoepassingen
+description: Het Dataloket is Analyze's hosted catalog of data assets for Dutch
+  governments (datasets, maps, dashboards, and reports). Public tenants are a
+  Vue SPA titled "Dataportaal", with /assets/img/search-blue.svg and
+  /assets/img/logo_analyze.svg, configuration at /api/configuration, and catalog
+  search at /api/search. Known hosts include data.venlo.nl,
+  dataportaal.tilburg.nl, and dataportaal.prvlimburg.nl. One record per tenant.
+  Distinct from Civity CKAN at ckan.dataplatform.nl, Swing incijfers sites, and
+  the separate Limburg viewer at dataportaal-viewer.prvlimburg.nl.
+owner:
+  name: Analyze
+  location:
+    country:
+      id: NL
+      name: Netherlands
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Per item
+  supports_licenses: Uncertain
+storage_type: Both
+type: Software
+export_formats:
+- JSON
+capabilities:
+- Data asset catalog
+- Municipal SaaS portal
+last_updated: '2026-09-26T20:40:00Z'

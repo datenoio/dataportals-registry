@@ -6,7 +6,7 @@ GET only. Stop on `401`/`403`. Prefer `endpoints[]`.
 
 | Page | Use when |
 |------|----------|
-| This page | IPT, Symbiota, THREDDS, ERDDAP, FROST-Server, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, Galaxy, SEEK, ICAT, MyTardis, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal, CLLD, TalkBank, Pathway Tools, IBDC |
+| This page | IPT, Symbiota, BIMS, THREDDS, ERDDAP, FROST-Server, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, Galaxy, SEEK, ICAT, MyTardis, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal, CLLD, TalkBank, Pathway Tools, IBDC |
 | [Institutional IRs and CRIS](harvest-scientific.md) | Dataverse, DSpace, Invenio, EPrints, Pure, RADAR, Yoda, mixed publication catalogs |
 | [harvest-biodiversity.md](harvest-biodiversity.md) | IPT, Symbiota, ALA — occurrence vs dataset grain |
 | [harvest-earthdata.md](harvest-earthdata.md) | THREDDS, ERDDAP, ESGF data nodes, SciCat, openEO, ESA Science Archive |
@@ -88,6 +88,30 @@ GET https://host/portal/collections/datasets/rsshandler.php
 Typical catalog links already end in `/portal/` or `/collections/`. Cleanup strips those mounts so harvest collection paths attach at origin and are not doubled (`/portal/portal/`).
 
 **Keep:** published Darwin Core **datasets** (RSS) and, if the user wants collection-level catalogs, one record per public collection (`collid`). **Drop:** individual occurrences, images, and checklists as datasets. One portal = one harvest scope (not per collection unless asked). Login-only portals: stop. Detail: [harvest-biodiversity.md](harvest-biodiversity.md#symbiota).
+
+## Biodiv (`biodiv`) {#biodiv}
+
+Strand Life Sciences Biodiversity Informatics Platform. Filter exports on `software.id = 'biodiv'`. The public UI lists datasets, datatables, documents, and maps. Detail: [harvest-biodiversity.md](harvest-biodiversity.md#biodiv).
+
+```text
+GET https://host/dataset/list
+GET https://host/datatable/list
+GET https://host/document/list
+```
+
+**Keep:** published **datasets**, **datatables**, and document collections. **Drop:** species pages, single observations, user profiles, and map tiles. One portal = one harvest scope. Stop on `401`/`403`. Do not harvest a same-host `/geoserver` as a second catalog.
+
+## BIMS (`bims`) {#bims}
+
+Kartoza Biodiversity Information Management System. Filter exports on `software.id = 'bims'`. Occurrence grain is in [harvest-biodiversity.md](harvest-biodiversity.md#bims).
+
+```text
+GET https://host/source-references/
+GET https://host/api/module-summary/
+GET https://host/api/layer/
+```
+
+**Keep:** source references and published spatial layers. **Drop:** individual occurrence records, taxon pages, user accounts, and CSV download jobs. One portal = one harvest scope. Stop on `401`/`403`. Skip `bims.kartoza.com`.
 
 ## Breedbase (`breedbase`) {#breedbase}
 
@@ -197,7 +221,10 @@ Harvest the **member node** dataset search (`formatType=DATA` when supported). D
 
 ```text
 GET https://host/cn/v2/query/solr/?q=formatType:DATA&rows=25
+GET https://host/metacat/d1/mn/v2
 ```
+
+Type the Solr search as `dataone:query` and the member-node service root as `dataone:mn`.
 
 
 ## MOLGENIS (`molgenis`) {#molgenis}
@@ -452,6 +479,22 @@ Keep accession/taxonomy **catalog exports** (CSV/Excel) and documented web-servi
 
 **Keep:** accession/taxonomy **catalog exports** and documented web-service lists. **Drop:** individual accession HTML pages unless accession-level harvest was asked.
 
+## Genesys PGR (`genesys`) {#genesys}
+
+Crop Trust / CGIAR plant genetic resources platform (hub at genesys-pgr.org; embedded in partner genebank catalogs such as WorldVeg).
+
+```text
+GET https://api.genesys-pgr.org/api/v1/acn/filter
+```
+
+**Keep:** genebank **accessions** with passport data (institute, species, country of origin). **Drop:** individual characterization observation rows and image attachments unless asked. One genebank/institute scope per harvest; do not flatten the global hub and every embedding genebank into one crawl.
+
+## HuGE AMP Knowledge Portal (`hugeamp`) {#hugeamp}
+
+AMP genetics knowledge portals (CMDKP at hugeamp.org, T2D KP at t2d.hugeamp.org).
+
+**Keep:** **datasets / summary statistics** listed for download (association result sets, annotations). **Drop:** gene, variant, and phenotype report pages as datasets. One portal deployment = one harvest scope.
+
 ## PlutoF (`plutof`) {#plutof}
 
 ```text
@@ -461,6 +504,20 @@ GET https://api.plutof.ut.ee/v1/
 Keep published **datasets / DOI records**. Drop occurrence rows, sequences, and taxon pages. Do not harvest UNITE (`unite.ut.ee`) as PlutoF. Stop on `401`.
 
 **Keep:** published **datasets / DOI records**. **Drop:** occurrence rows, sequences, taxon pages, and UNITE.
+
+## SARV (`sarv`) {#sarv}
+
+Estonian geoscience portals (eMaapõu, fossils, minerals, peat, SARV·DOI) share one read API. On eMaapõu and SARV·DOI, harvest **datasets** and **DOI records**. On a thematic portal, harvest that portal's catalog and drop individual specimen, mineral, or peat-site pages.
+
+```text
+GET https://rwapi.geoloogia.info/api/schema/v1/public/
+GET https://rwapi.geoloogia.info/api/v1/public/datasets/
+GET https://rwapi.geoloogia.info/api/v1/public/dois/
+```
+
+Type the schema as `openapi`. Type `/api/v1/public/datasets/` and `/api/v1/public/dois/` as `rest`. Attach those URLs from `rwapi.geoloogia.info`, not from the portal host. One public portal = one harvest scope. Do not harvest `gis.geocollections.info` (GeoServer), `kirjandus.geoloogia.info`, or `edit.geocollections.info` under this id.
+
+**Keep:** datasets and DOI records on eMaapõu and SARV·DOI; the thematic catalog on fossils, minerals, and peat portals. **Drop:** individual specimen, mineral, and peat-site pages, plus bibliography pages.
 
 ## JGI Genome Portal (`jgi`) {#jgi}
 
@@ -482,6 +539,18 @@ GET https://host/api/studies
 Type the study catalog as `cbioportal:studies`. Keep **studies**. Drop mutation/CNA rows, patient samples, and a single study view as a crawl seed. One public instance = one harvest scope.
 
 **Keep:** cBioPortal **studies**. **Drop:** mutation/CNA rows, patient samples, and a single study view as a crawl seed.
+
+## Progenetix (`progenetix`) {#progenetix}
+
+```text
+GET https://host/beacon/info
+GET https://host/beacon/datasets
+GET https://host/beacon/filtering_terms
+```
+
+Type the beacon dataset catalog as `progenetix:datasets`. Keep **datasets** (progenetix, arrayMap, TCGA cohorts). Drop biosample and analysis rows, individual CNV profiles, and a single cohort view as a crawl seed. One bycon installation = one harvest scope.
+
+**Keep:** beacon **datasets**. **Drop:** biosamples/analyses rows, individual CNV profiles, and a single cohort view as a crawl seed.
 
 ## CLLD (`clld`) {#clld}
 
@@ -533,6 +602,15 @@ GET https://www.pangaea.de/advanced/search.php
 
 **Keep:** **datasets**. **Drop:** per-DOI files as crawl seeds. One harvest scope for the hub.
 
+## EMN Data Hub (`emndatahub`) {#emndatahub}
+
+Energy Materials Network consortium hubs on `datahub-*.nlr.gov`. One harvest scope per consortium
+tenant. The public SPA has no documented CKAN action API on these hosts.
+
+**Keep:** public **datasets** listed in the hub UI (or any documented download/API once confirmed).
+**Drop:** login-only project spaces, Wind Data Hub / Livewire hosts, and HyMARC CKAN
+(`ckan`). Do not assume `/api/3/action/*` works.
+
 ## USGS ScienceBase (`sciencebase`) {#sciencebase}
 
 USGS item catalog. Harvest **items** from the catalog API. Do not harvest GeoServer/ArcGIS REST on the same host (those are separate catalogs).
@@ -562,7 +640,18 @@ ICS-C catalog. Harvest **datasets / services** from the public portal API, not e
 GET https://www.ics-c.epos-eu.org/
 ```
 
-**Keep:** EPOS **datasets** and data services. **Drop:** project marketing pages. One harvest scope for the ICS-C hub.
+**Keep:** EPOS **datasets** and data services. **Drop:** project marketing pages. One harvest scope for the ICS-C hub. GLASS nodes are `glass`, not this id.
+
+## EPOS GLASS (`glass`) {#glass}
+
+EPOS GNSS GLASS nodes (`/GlassFramework/`). Harvest the station catalog and GNSS product series from the public API. Do not download RINEX files. One harvest scope per public node (products portal or data gateway), not the ICS-C hub (`epos`) and not M3G.
+
+```text
+GET https://{host}/GlassFramework/swagger.json
+GET https://{host}/GlassFramework/webresources/stations/v2/list/station
+```
+
+**Keep:** **stations** and GNSS **product series**. **Drop:** individual RINEX files and project marketing pages.
 
 ## IBDC (`ibdc`) {#ibdc}
 
@@ -809,6 +898,8 @@ GET https://databus.dbpedia.org/system/api/search?query=*
 GET https://www.ebi.ac.uk/metagenomics/api/v1/studies
 ```
 
+Type that URL as `mgnify:studies`.
+
 Keep **studies / analyses**. Drop individual reads and contig pages.
 
 **Keep:** MGnify **studies / analyses**. **Drop:** individual reads as extra datasets.
@@ -819,6 +910,8 @@ Keep **studies / analyses**. Drop individual reads and contig pages.
 GET https://www.ebi.ac.uk/metabolights/ws/studies
 ```
 
+Type that URL as `metabolights:studies`.
+
 Keep **studies**. Drop individual metabolite records when a parent study exists.
 
 **Keep:** MetaboLights **studies**. **Drop:** individual assay files under a study.
@@ -828,6 +921,8 @@ Keep **studies**. Drop individual metabolite records when a parent study exists.
 ```text
 GET https://www.ebi.ac.uk/biostudies/api/v1/search
 ```
+
+Type that URL as `biostudies:search`.
 
 Keep **studies**. Drop supplementary file rows as separate datasets.
 
@@ -924,6 +1019,16 @@ Keep published **herbarium / collection** catalogs. Drop individual specimen, im
 
 **Keep:** herbarium / collection catalogs. **Drop:** specimen, image, and taxon pages.
 
+## Aphia (`aphia`) {#aphia}
+
+WoRMS and other hosts that serve `/aphia/js/aphia.js`. Taxon pages are the wrong grain.
+
+```text
+GET https://www.marinespecies.org/rest/
+```
+
+**Keep:** the species register (one catalog per host). **Drop:** per-taxon `aphia.php` pages, and thematic path registers on the same `marinespecies.org` host. Do not treat a site that only links to WoRMS as `aphia`.
+
 ## NMRShiftDB2 (`nmrshiftdb2`) {#nmrshiftdb2}
 
 Start at the public database instance. Swagger UI is at `/api-docs/` on the Cologne reference install.
@@ -956,15 +1061,29 @@ Harvest the public Korp UI for one installation. Corpus collections are the data
 ```text
 GET https://spraakbanken.gu.se/korp/
 GET https://korp.eki.ee/
+GET https://www.kielipankki.fi/korp/
+GET https://www.kielipankki.fi/korp/api8
 ```
 
 **Keep:** published **corpus collections** in that Korp instance. **Drop:** concordance/KWIC rows, word-picture widgets, and login-only corpora listings that are not a public catalog.
+
+## NoSketch Engine (`nosketch`) {#nosketch}
+
+Harvest the public Bonito UI for one installation. Corpus collections are the dataset grain; concordance/KWIC hits are not datasets.
+
+```text
+GET https://nosketch.korpuss.lv/
+```
+
+**Keep:** published **corpus collections** in that NoSketch instance (the corpus list of the Bonito first page). **Drop:** concordance/KWIC rows, CQL query results, and login-only corpora listings that are not a public catalog.
 
 ## DANDI Archive (`dandi`) {#dandi}
 
 ```text
 GET https://api.dandiarchive.org/api/dandisets/
 ```
+
+Type that URL as `dandi:dandisets`.
 
 Keep **dandisets**. Drop individual NWB assets, blobs, and per-file download URLs as extra datasets. One harvest scope for the archive hub.
 
@@ -977,6 +1096,8 @@ Detection uses the documented API host (`https://api.dandiarchive.org/api/dandis
 ```text
 GET https://api.cellxgene.cziscience.com/curation/v1/datasets
 ```
+
+Type that URL as `cellxgene:datasets`.
 
 Keep curated **datasets** from the Discover/Curation API. Drop explorer sessions, embeddings, and Census snapshot files as extra catalogs.
 
@@ -1047,12 +1168,193 @@ GET {node}/fdsnws/station/1/query?level=station&format=text
 
 One harvest scope per EIDA node. Keep **seismic networks/stations** (from `fdsnws-station`)
 as the dataset grain, with WFCatalog daily waveform-metadata documents as the availability
-and quality layer beneath each station. Type `/eidaws/wfcatalog/1/` and the `/fdsnws/` routes
-as `api`. Responses are JSON (WFCatalog) and FDSN StationXML/text (station service).
+and quality layer beneath each station. Type `/eidaws/wfcatalog/1/query` as `wfcatalog:query`
+and `/fdsnws/station/1/` as `fdsnws:station`. Responses are JSON (WFCatalog) and FDSN
+StationXML/text (station service).
 
 **Keep:** networks and stations with waveform availability. **Drop:** raw waveform
 miniSEED downloads as catalog rows, the Swagger UI, `application.wadl` documents, and
 per-day metric documents as separate datasets.
+
+## GIGWA (`gigwa`) {#gigwa}
+
+CIRAD/IRD genotyping portals (South Green GIGWA and other standalone Gigwa instances).
+
+```text
+GET https://host/gigwa/
+GET https://host/gigwa/{database}/brapi/v2/programs
+```
+
+**Keep:** genotyping projects / databases exposed for browse and export. **Drop:** individual variants, samples, and marker calls. One standalone portal = one harvest scope. Do not harvest GIGWA embedded inside another genome hub as a second catalog.
+
+## SEDOO Catalogue (`sedoo`) {#sedoo}
+
+OMP/SEDOO project catalogs (AERIS, BAOBAB, MISTRALS, INDAAF, SOFOG3D).
+
+```text
+GET https://host/catalogue/
+```
+
+**Keep:** dataset metadata records in the embedded catalogue. **Drop:** the WordPress campaign narrative, news posts, and THREDDS file listings (`thredds` is a separate software id). One project catalogue URL = one harvest scope. Leave `www.sedoo.fr` off this id; it is the service homepage.
+
+## PanelApp (`panelapp`) {#panelapp}
+
+List gene panels from the installation origin. Genomics England and PanelApp Australia use the same API.
+
+```text
+GET https://panelapp.genomicsengland.co.uk/api/v1/panels/
+GET https://panelapp-aus.org/api/v1/panels/
+```
+
+Follow the `next` URL until it is null. One panel (`results[].id` and `name`) is one dataset. Panel genes, STR regions, and expert review ratings belong to that panel.
+
+**Keep:** public gene panels from `/api/v1/panels/`. **Drop:** individual gene reviews, evidence ratings, and account or curation screens.
+
+## Liverpool Drug Interactions (`liverpooldruginteractions`) {#liverpooldruginteractions}
+
+Start at the deployment's interaction list. HIV, hepatitis, and COVID-19 use `/view_all_interactions`. Cancer uses `/view_all_interactions/new` (the unsuffixed path returns 404). PrEP does not publish `/view_all_interactions` yet; use `/checker` and `/prescribing_resources`.
+
+```text
+GET https://www.hiv-druginteractions.org/view_all_interactions
+GET https://www.hep-druginteractions.org/view_all_interactions
+GET https://www.covid19-druginteractions.org/view_all_interactions
+GET https://www.cancer-druginteractions.org/view_all_interactions/new
+GET https://www.prep-druginteractions.org/checker
+GET https://www.prep-druginteractions.org/prescribing_resources
+```
+
+The page is the catalog of drug entries for that deployment. The checker route is `/checker` (HIV and hepatitis redirect it to `/drug_queries/new`). There is no documented public API.
+
+**Keep:** drug entries on `/view_all_interactions`. **Drop:** checker sessions, pairwise popups, and account pages as separate datasets.
+
+## METSIS (`metsis`) {#metsis}
+
+MET Norway discovery catalog. Filter exports on `software.id = 'metsis'`. Dataset search is HTML.
+
+```text
+GET https://host/metsis/search
+GET https://host/metsis/search?page=0
+```
+
+Each `/metsis/metadata/{id}` link is one dataset. Page with `?page=`. `/metsis/export/{id}` is that dataset's metadata document.
+
+**Keep:** dataset records from `/metsis/search`. **Drop:** Drupal news nodes, captcha interstitials, `related_dataset_id` filter pages, and `*.csw.met.no` or THREDDS catalogs (`pycsw`, `thredds`). Some hosts put `/metsis/search` behind an antibot check; use an installation that serves the search HTML directly, such as `data.met.no`.
+
+## CAMD-Web (`camdweb`) {#camdweb}
+
+Materials browsers from DTU CAMD. One hostname is one catalog.
+
+```text
+GET https://host/
+GET https://c2db.fysik.dtu.dk/optimade/v1/structures
+```
+
+On a materials app, each search-result row is one material. Follow `/material/{uid}` when that path exists. Where OPTIMADE is present, each structure in `/optimade/v1/structures` is that same material. Page with the OPTIMADE `links.next` cursor.
+
+`cmrdb.fysik.dtu.dk` is the project index. Each project row (name and `.db` download) is one database. Do not expand every structure inside the sqlite file as its own dataset.
+
+**Keep:** material rows, or project databases on the CMR projects index. **Drop:** filter widgets, the column picker, and convex-hull figures. Skip `c2db-test` and the Sphinx site `cmr.fysik.dtu.dk`.
+
+## Protwis (`protwis`) {#protwis}
+
+GPCR resources that share the Protwis REST API. One hostname is one catalog.
+
+```text
+GET https://host/services/receptorlist/
+GET https://host/services/?format=openapi
+```
+
+One `entry_name` in the receptor list is one dataset. Structures, alignments, and ligand calls for that protein belong to it.
+
+**Keep:** proteins from `/services/receptorlist/`. **Drop:** alignment statistics, workshop manuals, and menu links to the other Protwis hosts as separate datasets.
+
+## Fairdata (`fairdata`) {#fairdata}
+
+Harvest published datasets from Metax. Etsin is the finder UI for the same records.
+
+```text
+GET https://metax.fairdata.fi/v3/datasets
+GET https://etsin.fairdata.fi/
+```
+
+Page with `next` until it is null. Each object in `results` is one dataset.
+
+**Keep:** published datasets from Metax. **Drop:** IDA project files that are not published, Qvain drafts, and pages on `www.fairdata.fi`.
+
+## Bento Framework (`bento`) {#bento}
+
+Bento deployments expose a GraphQL API. Grain: one program/study in the commons is one dataset; files and cases belong to it.
+
+```text
+POST https://host/v1/graphql/
+{"query": "{__schema{queryType{fields{name}}}}"}
+```
+
+Enumerate the study/program query fields, then page through them. The exact type names vary per deployment.
+
+**Keep:** programs/studies with their case and file counts. **Drop:** individual files and cases as separate datasets, static content pages.
+
+## NBIA (`nbia`) {#nbia}
+
+NBIA archives expose a versioned REST API. Grain: one imaging collection is one dataset.
+
+```text
+GET https://host/nbia-api/services/v1/getCollectionValues
+GET https://host/nbia-api/services/v1/getPatient?Collection=<NAME>
+```
+
+**Keep:** collections from `getCollectionValues`. **Drop:** patients, studies, series and image rows as separate datasets; the NBIA Data Retriever download client.
+
+## VectorSurv (`vectorsurv`) {#vectorsurv}
+
+Hosted surveillance service; most agency data sits behind login. Harvest only the public exports and the open arbovirus map data.
+
+```text
+GET https://vectorsurv.org/
+GET https://host/  (state-branded deployment)
+```
+
+**Keep:** public surveillance summaries and downloadable tables. **Drop:** login-only agency records, embedded map tiles.
+
+## SISMER (`sismer`) {#sismer}
+
+Ifremer marine data catalogs. Harvest the dataset list from the catalog search UI/API of each SISMER host (`data.ifremer.fr`, campaign catalog on `donnees-campagnes.flotteoceanographique.fr`).
+
+**Keep:** dataset and oceanographic-campaign records. **Drop:** news, documentation, and static information pages.
+
+## Ocean Atlas (`oceanatlas`) {#oceanatlas}
+
+MIO "Ocean … Atlas" instances (OGA/OBA/ORA). These are analysis front-ends over reference sequence collections, not general dataset catalogs.
+
+**Keep:** the reference sequence collections and environmental context datasets documented by each atlas. **Drop:** per-sequence or per-barcode query results — those are analysis hits, not datasets.
+
+## VizieR (`vizier`) {#vizier}
+
+Astronomical catalogues via VO protocols.
+
+```text
+GET https://vizier.cds.unistra.fr/viz-bin/VizieR?-source=meta
+```
+
+List catalogues through the TAP `tables` endpoint or the `meta` view, not through individual cone searches.
+
+**Keep:** published catalogues and tables (VizieR "catalogue" grain). **Drop:** individual rows/records and cone-search results.
+
+## Crystallography Open Database (`cod`) {#cod}
+
+Crystal-structure databases (COD experimental, PCOD predicted, TCOD theoretical).
+
+```text
+GET https://www.crystallography.net/cod/result.php?el1=Si&strictmin=2&format=json
+GET https://www.crystallography.net/cod/result.php?id=1000000&format=cif
+```
+
+Query `result.php` (JSON/CSV/CIF output) and paginate by COD id ranges; prefer the full
+database dumps (CIF archives / MySQL dumps, see `wiki.crystallography.net/howtoobtaincod/`)
+for bulk harvests.
+
+**Keep:** one record per deposited structure (the seven-digit COD/PCOD/TCOD entry grain).
+**Drop:** search-result pages, formula/element query listings, and mirror downloads.
 
 ## Related
 

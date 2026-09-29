@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Quebec
 description: Public ArcGIS Experience Builder property-assessment map of MRC du Granit,
   covering cadastre and evaluation rolls for municipalities of the MRC.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/2991713e9b0b42e1a0c8f519b2d1a147/data?f=json
 id: experiencearcgiscommrcgranit
 langs:
 - id: FR

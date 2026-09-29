@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: 2025 ArcGIS Server services directory of INGEMMET's geological and mining
+  cadastre, published under /server/rest/services.
+id: geocatmin2025ingemmetgobpe
+langs:
+- id: ES
+  name: Spanish
+link: https://geocatmin2025.ingemmet.gob.pe/server/rest/services
+name: GEOCATMIN 2025
+owner:
+  link: https://www.ingemmet.gob.pe/
+  location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+  name: Instituto Geológico, Minero y Metalúrgico (INGEMMET)
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- peru
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://geocatmin2025.ingemmet.gob.pe/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geocatmin2025.ingemmet.gob.pe/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geocatmin2025.ingemmet.gob.pe/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geocatmin2025.ingemmet.gob.pe/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geocatmin2025.ingemmet.gob.pe/server/rest/services?f=geositemap
+uid: cdi00009204

@@ -1,0 +1,62 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSHOP
+================================================================================
+Generated: 2026-09-29 11:21:05
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSHOP
+Priority: MEDIUM
+Total Issues Found: 5
+
+Rule: Identifies records using software.id='geoshop' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+CH: 5 issues
+
+=== SUMMARY BY RECORD ===
+
+geoshopavinfragonch: 1 issue
+geourch: 1 issue
+geoshoplisagchzg: 1 issue
+geoshopszch: 1 issue
+geodata01adminch: 1 issue
+
+=== ISSUES ===
+
+File: CH/CH-BE/geo/geoshopavinfragonch.yaml
+Record ID: geoshopavinfragonch
+Country: CH
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSHOP
+Field: endpoints
+Current Value: {"software_id": "geoshop", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='geoshop' is marked as API-capable in software definitions
+
+File: CH/CH-UR/geo/geourch.yaml
+Record ID: geourch
+Country: CH
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSHOP
+Field: endpoints
+Current Value: {"software_id": "geoshop", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='geoshop' is marked as API-capable in software definitions
+
+File: CH/CH-ZG/geo/geoshoplisagchzg.yaml
+Record ID: geoshoplisagchzg
+Country: CH
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSHOP
+Field: endpoints
+Current Value: {"software_id": "geoshop", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='geoshop' is marked as API-capable in software definitions
+
+File: CH/CH-SZ/geo/geoshopszch.yaml
+Record ID: geoshopszch
+Country: CH
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSHOP
+Field: endpoints
+Current Value: {"software_id": "geoshop", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='geoshop' is marked as API-capable in software definitions
+
+File: CH/Federal/geo/geodata01adminch.yaml
+Record ID: geodata01adminch
+Country: CH
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSHOP
+Field: endpoints
+Current Value: {"software_id": "geoshop", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='geoshop' is marked as API-capable in software definitions

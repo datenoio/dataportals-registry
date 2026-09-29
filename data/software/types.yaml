@@ -33,6 +33,7 @@ categories:
     examples:
       - GeoNetwork
       - GeoNode
+      - Geonodo
       - GeoServer
       - ArcGIS Hub
       - OpenGeoPortal
@@ -163,6 +164,19 @@ categories:
       - Versioning
       - Validation
 
+  "Statistical production software":
+    description: "Non-catalog software for producing statistics and controlled analysis"
+    use_cases:
+      - Census and survey processing
+      - Non-disclosive analysis of sensitive data
+    examples:
+      - CSPro
+      - DataSHIELD
+    typical_features:
+      - Data processing workflows
+      - Statistical analysis
+      - Access and disclosure controls
+
 # Per-id category and subtype live on each record in data/software/.
 # MAP_SOFTWARE_OWNER_CATALOG_TYPE is loaded from those YAML files.
 # Canonical IDs: data/reference/software_ids.yaml (python scripts/builder.py sync-software-maps).
@@ -193,3 +207,7 @@ subtypes:
     description: "Domain-specific scientific data infrastructures combining curation, access, and analysis components."
   general_software:
     description: "Fallback for software that does not yet fit a more specific subtype."
+  statistical_processing_system:
+    description: "Tools for editing, validating, tabulating, and producing census or survey data."
+  confidential_analysis_system:
+    description: "Controlled analysis of sensitive data without direct record-level release."

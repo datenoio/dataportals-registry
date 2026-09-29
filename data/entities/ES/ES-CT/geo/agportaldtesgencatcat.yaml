@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: ArcGIS REST services directory of the Catalan Department of Territory,
+  including public cadastral parcel and public-domain layers.
+id: agportaldtesgencatcat
+langs:
+- id: CA
+  name: Catalan
+- id: ES
+  name: Spanish
+link: https://agportal.dtes.gencat.cat/server/rest/services
+name: Portal del Departament de Territori
+owner:
+  link: https://territori.gencat.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya [Cataluña]
+  name: Departament de Territori, Generalitat de Catalunya
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- spain
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00009272
+endpoints:
+- type: arcgis:rest:info
+  url: https://agportal.dtes.gencat.cat/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://agportal.dtes.gencat.cat/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://agportal.dtes.gencat.cat/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://agportal.dtes.gencat.cat/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://agportal.dtes.gencat.cat/server/rest/services?f=geositemap

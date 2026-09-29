@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: ArcGIS REST services directory for NAHRIM, including public water-related
+  map services. Some flood-map folders require a token.
+id: gisnahrimgovmy
+langs:
+- id: MS
+  name: Malay
+link: https://gis.nahrim.gov.my/server/rest/services
+name: NAHRIM ArcGIS REST Services
+owner:
+  link: https://www.nahrim.gov.my
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 20
+  name: National Water Research Institute of Malaysia
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- malaysia
+- water
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009180
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.nahrim.gov.my/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.nahrim.gov.my/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.nahrim.gov.my/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.nahrim.gov.my/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.nahrim.gov.my/server/rest/services?f=geositemap

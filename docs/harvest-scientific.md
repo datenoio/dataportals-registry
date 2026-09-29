@@ -8,7 +8,7 @@ Use `endpoints[]` from the registry when present ([apidetect.md](apidetect.md)).
 
 | Page | Use when |
 |------|----------|
-| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, Pure, Converis, Omega-PSIR, Archipelago, RADAR, Yoda, Redivis, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, META-SHARE, Gen3, TR32DB, …) |
+| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, Pure, Converis, Omega-PSIR, Archipelago, RADAR, Yoda, Redivis, LabKey, Synapse, BioUML, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, META-SHARE, Gen3, TR32DB, Index Data Keystone, …) |
 | [Domain repositories](harvest-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, SciCat-adjacent stacks, CLLD, TalkBank, Pathway Tools, IBDC |
 
 All `software.id` values: [software-index.md](software-index.md).
@@ -17,7 +17,7 @@ All `software.id` values: [software-index.md](software-index.md).
 
 | Class | `software.id` (typical) | Filter needed? |
 |-------|-------------------------|----------------|
-| Mixed IR / CRIS | `dspace`, `dspacecris`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `samvera`, `islandora`, `archipelago`, `opus`, `mycore`, `phaidra`, `weko3`, `dabar`, `opensciencesi`, `pure`, `esploro`, `elsevierdigitalcommons`, `figshare`, `haplo`, `worktribe`, `omegapsir`, `converis`, `librecat`, `vufind`, `divaportal` | **Yes** — publications dominate |
+| Mixed IR / CRIS | `dspace`, `dspacecris`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `samvera`, `islandora`, `archipelago`, `opus`, `mycore`, `phaidra`, `weko3`, `dabar`, `opensciencesi`, `pure`, `esploro`, `elsevierdigitalcommons`, `figshare`, `haplo`, `worktribe`, `omegapsir`, `converis`, `librecat`, `vufind`, `divaportal`, `keystoneils` | **Yes** — publications dominate |
 | Dataset-native | `dataverse`, `radar`, `yoda`, `redivis`, `instdb`, `labkey`, `synapse`, `xnat`, `omero`, `kadi4mat`, `edal`, `nomad`, `gen3` on this page; IPT/THREDDS/Breedbase/ESGF/InterMine/cBioPortal and similar on [harvest-scientific-domain.md](harvest-scientific-domain.md) | Little or none — still skip files, occurrences, and login-only rows |
 
 ## OAI-PMH fallback (any IR)
@@ -201,6 +201,20 @@ If there is no dataset set, ListRecords and keep `dc:type` = `dataset` / `Datase
 
 **Keep:** eprints with `type=dataset` (exportview, OAI set, or `dc:type`).
 
+## Index Data Keystone (`keystoneils`) {#keystoneils}
+
+HTML catalog. Search uses CCL query parameters, not a dataset JSON API.
+
+```text
+GET https://host/search?search_type=simple&wf_step=init&cclterm1=&cclfield1=term
+```
+
+Record pages reuse that query string with `display_mode=detail`. There is no stable list URL.
+
+The suite can expose Z39.50, SRU/SRW, and OAI-PMH. Many installs do not. e-Locus returns 404 for `/oai/request`. When Identify succeeds, use the [OAI fallback](#oai-pmh-fallback-any-ir) and keep `dc:type` dataset / research data.
+
+**Keep:** items typed as a dataset or research data. **Drop:** theses, dissertations, articles, books, and digitized monograph pages. University of Crete e-Locus and Anemi are publication and digitized-document libraries; do not harvest them as dataset catalogs unless a dataset collection is present.
+
 ## Samvera Hyrax (`hyrax`) {#hyrax}
 
 Blacklight JSON catalog. Work types include GenericWork, Dataset, Etd, Image, FileSet.
@@ -267,6 +281,12 @@ GET https://host/oai?verb=ListRecords&metadataPrefix=oai_dc&set=doc-type:researc
 Solr UI often supports a doctype facet (`doctypefq=researchdata`). Thesis-only OPUS hosts have no dataset set — skip them for a data crawl (they can still be valid **catalog** records).
 
 **Keep:** `doc-type:researchdata` / ResearchData OAI or Solr facet. **Drop:** thesis-only OPUS hosts for a data crawl.
+
+## mediaTUM (`mediatum`) {#mediatum}
+
+Generator `mediatum - a multimedia content repository`. Harvest published **documents, media, and research-data records** from the public search or collection listing. Drop image derivatives, login-only admin, and the project site `mediatum.github.io`. One harvest scope per installation. Distinct from OPUS on the same university.
+
+**Keep:** public documents, media, and research-data records. **Drop:** derivatives, admin, and the project site.
 
 ## MyCoRe (`mycore`) {#mycore}
 
@@ -630,6 +650,8 @@ GET https://host/digital/api/collections
 GET https://host/digital/oai/oai.php?verb=Identify
 ```
 
+Type `/digital/api/collections` as `contentdm:collections`. OAI-PMH Identify stays `oaipmh20`.
+
 
 ## Omeka S (`omekas`) {#omekas}
 
@@ -641,6 +663,8 @@ Only when accepted as a dataset catalog. `/api/items` filtered to Dataset / Data
 ```text
 GET https://host/api/items?resource_class_label=Dataset
 ```
+
+Type that items URL as `omekas:items`.
 
 
 ## OSF (`osf`) {#osf}
@@ -729,6 +753,18 @@ Keep deposited **datasets** and their DOIs. Follow resumption tokens. Drop the A
 
 **Keep:** deposited **datasets** and their DOIs (OAI on the access module). **Drop:** Angular UI chrome, WordPress marketing, and login-only OAI.
 
+## DaSCH Service Platform (`dsp`) {#dsp}
+
+Humanities repository. Filter exports on `software.id = 'dsp'`. One harvest scope for `app.dasch.swiss`. Projects listed by the admin API are collections inside that catalog.
+
+```text
+GET https://api.dasch.swiss/admin/projects
+GET https://repository.dasch.swiss/dpe/oai?verb=Identify
+GET https://repository.dasch.swiss/dpe/oai?verb=ListRecords&metadataPrefix=oai_dc
+```
+
+**Keep:** research-data projects and their OAI records. **Drop:** `dasch.swiss` organization pages, DSP-APP chrome, and user accounts. Discovery: [discovery-scientific.md](discovery-scientific.md#dsp).
+
 ## easydb (`easydb`) {#easydb}
 
 Programmfabrik easydb 5 / fylr. Filter exports on `software.id = 'easydb'`. There is usually **no** public dataset-list API; `/api/v1/session` is session metadata, not a catalog dump.
@@ -746,6 +782,16 @@ GET https://host/login/begin.view
 Keep **studies / published folders** (Panorama Public libraries, Open Research Portal projects). Drop assay run rows and a single `begin.view` folder as a seed. Stop on `401`.
 
 **Keep:** **studies / published folders**. **Drop:** assay run rows and a single `begin.view` folder as a seed.
+
+## BioUML (`biouml`) {#biouml}
+
+```text
+GET https://host/ (database home: table listing)
+```
+
+Keep **databases / collections** (GTRD ChIP-seq experiments, HOCOMOCO motif models, EpiFactors entries). Drop a single table row, motif model, or track download as a seed. Grain is the collection/table, not the record.
+
+**Keep:** **databases / collections**. **Drop:** a single table row, motif model, or track download as a seed.
 
 ## Synapse (`synapse`) {#synapse}
 
@@ -765,6 +811,8 @@ Data-commons portal. Prefer `endpoints[]` (Indexd, DRS, GraphQL). Defaults:
 GET https://host/_status
 GET https://host/index/ga4gh/drs/v1/service-info
 ```
+
+Type DRS service-info as `ga4gh:drs`.
 
 Keep **studies / projects** from the public GraphQL or portal catalog. Drop individual DRS objects, files, and Fence `/user/login` as harvest seeds. Stop on `401`/`403`. Do not harvest NCI GDC/PDC/IDC under this recipe.
 
@@ -862,6 +910,37 @@ Type `/prod/v1/api/v1/info` and `/prod/v1/api/v1/entries` as `rest`.
 
 **Keep:** published **uploads / entries**. **Drop:** individual calculation files and parser logs.
 
+## High-Throughput Toolkit (`httk`) {#httk}
+
+OPTIMADE where the site publishes it. The base is `/optimade/{db}/v1/` on the catalog host, or `https://optimade.{host}/v1/` on a sibling host.
+
+```text
+GET https://host/optimade/{db}/v1/info
+GET https://host/optimade/{db}/v1/structures
+GET https://optimade.{host}/v1/info
+GET https://optimade.{host}/v1/structures
+```
+
+Keep OPTIMADE **structures** (and related entry types such as references) as datasets. Drop raw calculation inputs, charge-density blobs, and the httk.org documentation site. One public database is one harvest scope.
+
+Type the OPTIMADE `/v1/info` URL as `rest`. Follow `page_limit` and `page_offset` from the response `meta` links.
+
+**Keep:** OPTIMADE **structures** and related entry types. **Drop:** raw calculation files and the toolkit documentation site.
+
+httkweb catalogs with no OPTIMADE base (ADAQ, the hard-coating alloys database) are harvested from the public materials or defect search, not from calculation files.
+
+## Pathogens Portal Node (`nodepathogensportal`) {#nodepathogensportal}
+
+Toolbox nodes publish a dataset listing at `/datasets/`. The Swedish original lists datasets from its own data section on `www.pathogens.se`.
+
+```text
+GET https://host/datasets/
+```
+
+Keep listed **datasets** and data highlights. Drop dashboards, news, events, training pages, and the EMBL-EBI central portal. One national node is one harvest scope.
+
+**Keep:** listed **datasets** and data highlights. **Drop:** dashboards, news, events, and training pages.
+
 ## dLibra (`dlibra`) {#dlibra}
 
 Polish digital library. Most installs expose Identify at `/dlibra/oai-pmh-repository.xml?verb=Identify` (catalog links that already end in `/dlibra` are stripped before that path is attached).
@@ -871,6 +950,16 @@ GET https://host/dlibra/oai-pmh-repository.xml?verb=Identify
 ```
 
 **Keep:** OAI-PMH records with a dataset / dane `set` or `dc:type` filter ([harvest-protocols.md](harvest-protocols.md#oai-pmh)). **Drop:** manuscript/photo libraries that were never accepted as dataset catalogs, and unfiltered ListRecords.
+
+## ARPHA Platform (`arpha`) {#arpha}
+
+Pensoft publishing platform tenants (preprint server, journal hosts). One harvest scope per tenant root. OAI-PMH 2.0 with `oai_dc` and `mods` at `/oai`:
+
+```text
+GET https://preprints.arphahub.com/oai?verb=ListRecords&metadataPrefix=oai_dc
+```
+
+**Keep:** preprints and data-bearing article records (occurrence/checklist/treatment data articles with DOIs). **Drop:** journal news, issue tables of contents, and full HTML article bodies; Pensoft journal *data* portals are `gbifplatform` — harvest those via [harvest-biodiversity.md](harvest-biodiversity.md#gbifplatform), not ARPHA OAI.
 
 ## Dataset-native platforms (short)
 
@@ -891,6 +980,8 @@ Little publication noise. Still skip non-dataset objects.
 | Kadi4Mat (`kadi4mat`) | [above](#kadi4mat) | Records and collections |
 | e!DAL (`edal`) | [above](#edal) | DOI datasets |
 | NOMAD (`nomad`) | [above](#nomad) | Published entries/uploads |
+| High-Throughput Toolkit (`httk`) | [above](#httk) | OPTIMADE structures; httkweb search when no API |
+| Pathogens Portal Node (`nodepathogensportal`) | [above](#nodepathogensportal) | `/datasets/` listings |
 
 Domain stacks (IPT, THREDDS, Breedbase, ESGF, …): [harvest-scientific-domain.md](harvest-scientific-domain.md). Omeka S and CONTENTdm: sections above.
 
@@ -967,6 +1058,43 @@ same dataset twice. The presence of a CRIS platform does not prove that every te
 datasets; return an empty dataset result if the available records are only publications.
 
 **Keep:** explicitly typed **datasets** and their metadata/resource links. **Drop:** researcher profiles, projects, indicators, and publication-only entries.
+
+## ReDBox (`redbox`) {#redbox}
+
+Institutional ReDBox / RDMP portals. Prefer the tenant's public list or OAI-PMH endpoint used
+to feed Research Data Australia. Paths often look like `/default/rdmp/`.
+
+```text
+GET https://host/default/rdmp/
+```
+
+**Keep:** public research **data collection** / dataset metadata records and their download or landing URLs. **Drop:** research data management plans (RDMP forms), person/Mint lookup records, login-walled drafts, and Research Data Australia itself (national aggregator, not a ReDBox tenant).
+
+## Craft CMS (`craftcms`) {#craftcms}
+
+Filter exports on `software.id = 'craftcms'`. One harvest scope per institution.
+
+No standard data API; catalog pages are CMS-published HTML. Keep the public **data catalog / download pages** and the dataset records or files they list. Grain is the dataset or data collection, not each news or outreach page. Drop site chrome (news, people, events) and any embedded third-party apps as separate records. Stop on `401`/`403`.
+
+**Keep:** public **data catalog pages and listed datasets/files**. **Drop:** news, people, events chrome.
+
+## SBS Digital Collection (`sbsdigitalcollection`) {#sbsdigitalcollection}
+
+University digital-collection installs from Simply Bright System. Items mix theses, articles, books, archives, and research outputs in one index.
+
+Collection search is HTML, not a public dataset JSON API. Paths look like `/Search/index/{collection}` or `/frontend/Search/index/{collection}`. DigiVerse `robots.txt` disallows `/api/` and those paths return 404. Do not invent an API URL.
+
+**Keep:** items in a collection whose scope is research data or datasets. **Drop:** theses, dissertations, articles, books, exam papers, newspapers, archival scans, and each file page inside an item.
+
+## ScienceDB (`sciencedb`) {#sciencedb}
+
+Generalist repository at `https://scidb.cn`. No public bulk JSON API confirmed; dataset discovery is via the site search HTML, and each dataset resolves through its DOI (`10.57760/sciencedb.*`) to a landing page with metadata and file downloads.
+
+```text
+GET https://www.scidb.cn/en/search
+```
+
+**Keep:** dataset landing pages (one DOI = one dataset). **Drop:** news, help/about pages, journal partner pages, and per-file download URLs as separate records.
 
 ## Related
 

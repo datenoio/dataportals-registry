@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -12,7 +12,7 @@ coverage:
       name: Spain
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: PhylomeDB is a unique knowledge base providing public access to minable
   and browsable catalogues of pre-computed, genome-wide collections of annotated sequences,
@@ -45,8 +45,8 @@ owner:
   name: Barcelona Supercomputing Center
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -65,3 +65,6 @@ topics:
   name: Biota
   type: iso19115
 uid: cdi00030071
+endpoints:
+- type: rss
+  url: http://phylomedb.org/rss.xml

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -22,6 +22,9 @@ description: Official Web-GIS of the Municipality of Kyrenia (Efarmogi Dimou Ker
   Interactive map documenting the history of Kyrenia, its religious and cultural heritage
   before 1974, historical maps and archival material, with citizen-science contributions
   (My home in Kyrenia crowdsourcing).
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/b3ea1c6f4c294ec2bc2c63506108d75b/data?f=json
 id: experiencearcgiscomkyreniamunicipality
 langs:
 - id: EL

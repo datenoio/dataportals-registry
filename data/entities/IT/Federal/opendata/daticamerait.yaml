@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -11,7 +11,7 @@ coverage:
       id: IT
       name: Italy
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     level: 20
 description: Linked open data portal of the Italian Chamber of Deputies, with SPARQL
@@ -45,3 +45,6 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi00007636
+endpoints:
+- type: sitemap
+  url: https://dati.camera.it/sitemap.xml

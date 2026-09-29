@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: British Columbia
 description: District of Kent public ArcGIS Experience Builder web map for parcels,
   zoning, OCP, infrastructure, and related municipal layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/d589c2bc5d644545a21dc82e59203b78/data?f=json
 id: experiencearcgiscomkent
 langs:
 - id: EN

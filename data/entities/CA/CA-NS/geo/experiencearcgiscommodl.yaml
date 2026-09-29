@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -21,6 +21,9 @@ coverage:
 description: Municipality of the District of Lunenburg public zoning GIS map for current
   planning areas, built with ArcGIS Experience Builder. Distinct from the municipal-wide
   draft zoning map on the same platform.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/d7c2296350b34f699f5c73eb8e3a4b76/data?f=json
 id: experiencearcgiscommodl
 langs:
 - id: EN

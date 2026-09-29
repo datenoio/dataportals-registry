@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -21,6 +21,9 @@ coverage:
 description: Northern Midlands Council ArcGIS Experience Builder public GIS (council
   mapping.nmc.tas.gov.au IntraMaps URL now redirects here) for property, planning,
   and local government map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/18508d1dc30e4d71b2b1e7b5da8cbe34/data?f=json
 id: experiencearcgiscomnorthernmidlands
 langs:
 - id: EN

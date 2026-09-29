@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -32,12 +32,12 @@ owner:
       id: US
       name: United States
     level: 20
-  name: U.S. Department of Health and Human Services, National Institutes of Health, National
-    Institute of Allergy and Infectious Diseases
+  name: U.S. Department of Health and Human Services, National Institutes of Health,
+    National Institute of Allergy and Infectious Diseases
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -72,3 +72,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00033764
+endpoints:
+- type: sitemap
+  url: https://www.roarproject.org/wp-sitemap.xml

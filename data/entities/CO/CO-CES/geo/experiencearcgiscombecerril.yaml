@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Cesar
 description: Municipal geoportal of Becerril, Cesar, on ArcGIS Experience Builder,
   for urban-license management and control.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/f2ab869068464bc9987af59b7fdfa1e4/data?f=json
 id: experiencearcgiscombecerril
 langs:
 - id: ES

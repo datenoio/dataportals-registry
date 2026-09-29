@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -84,3 +84,14 @@ topics:
   name: Transport
   type: eudatatheme
 uid: cdi00002654
+endpoints:
+- type: dcatap201
+  url: https://pmus-preventas.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://pmus-preventas.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://pmus-preventas.hub.arcgis.com/api/feed/rss/2.0
+- type: arcgishubapi
+  url: https://pmus-preventas.hub.arcgis.com/api/v3/datasets
+- type: dcatus11
+  url: https://pmus-preventas.hub.arcgis.com/data.json

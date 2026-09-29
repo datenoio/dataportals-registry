@@ -43,8 +43,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: dkan
+  name: DKAN
 status: active
 tags:
 - scientific
@@ -56,4 +56,9 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00020328
-api_status: uncertain
+api_status: active
+endpoints:
+- type: ckan:package-list
+  url: https://rdpcidat.ruhr-uni-bochum.de/api/3/action/package_list
+  version: '3'
+api: true

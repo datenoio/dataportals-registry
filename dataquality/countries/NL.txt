@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: NL
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Country Code: NL
-Total Records with Issues: 2
-Total Issues Found: 2
+Total Records with Issues: 4
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
 
@@ -17,6 +17,28 @@ Issue: MISSING_RIGHTS
 Field: rights
 Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
 Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA]
+Count: 1
+Priority: MEDIUM
+
+File: BE/Federal/scientific/wwwscheldemonitororg.yaml
+Record ID: wwwscheldemonitororg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA
+Field: endpoints
+Current Value: {'software_id': 'aphia', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='aphia' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
+Count: 1
+Priority: MEDIUM
+
+File: NL/Federal/scientific/portalclarinnl.yaml
+Record ID: portalclarinnl
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE]
 Count: 1
@@ -33,4 +55,6 @@ Suggested Action: Add at least one endpoint because software.id='mapstore' is ma
 === SUMMARY BY ISSUE TYPE ===
 
 MISSING_RIGHTS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE: 1 issue

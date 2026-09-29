@@ -40,6 +40,13 @@ Platform-neutral workflow for adding or editing catalog YAML. Full human guide: 
 - `owner.type` from `data/reference/owner_types.yaml`
 - `software.id` from `data/software/` (or `custom`)
 - Path country must match `owner.location.country.id` / coverage country
+- Resolve a country name or a bloc with Internacia (`pip install internacia`):
+
+  ```bash
+  python -c "from internacia import InternaciaClient; c=InternaciaClient(); print(c.search.fuzzy('QUERY', limit=5))"
+  ```
+
+  Country `id` is an alpha-2 with `code_status == official_iso3166_1`, plus `XK`. Write `country.name` from `COUNTRIES` (`scripts/constants.py`) or `data/reference/countries.csv`. Blocs (EU, ASEAN, Africa, treaties) are Internacia intblocks; registry path roots stay `PATH_COUNTRY_ALLOWLIST`. ISO 3166-2 subdivisions stay on `pycountry` or `data/reference/subregions/`.
 - Regional/local owners: `owner.location.level` 30 and a subregion folder (`US-CA/`, …)
 - `properties.is_national: true` **only** for the country’s official catalog of that type (national open-data portal, NSDI/geoportal, or NSO statistical product). Do **not** set it because the owner is a central/federal agency, the file is under `Federal/`, or the host is `.gov`. Agency, thematic, scientific, and subnational catalogs get `is_national: false` or omit the key. Full rule: [data-model.md](../data-model.md#propertiesis_national)
 

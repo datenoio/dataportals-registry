@@ -1,0 +1,64 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'No'
+has_bulk: 'No'
+id: metsis
+name: METSIS
+website: https://data.met.no/
+description: METSIS (MET Norway Scientific Information System) is MET Norway's
+  Drupal catalog for discovery metadata. Installations expose /metsis/search
+  and dataset pages at /metsis/metadata/{id}, backed by the MET Norway Metadata
+  Format (MMD). Distinct from a plain Drupal site and from pycsw endpoints on
+  *.csw.met.no.
+owner:
+  name: Norwegian Meteorological Institute
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+logo_url: https://data.met.no/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'No'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: Compatible
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+  graphql: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Structured
+type: Software
+repository_url: https://github.com/metno/metsis-drupal
+documentation_url: https://github.com/metno/metsis-drupal
+license:
+  type: GPL-3.0
+  url: https://www.gnu.org/licenses/gpl-3.0.html
+export_formats:
+- XML
+capabilities:
+- Dataset search
+- Metadata export
+last_updated: '2026-09-27T00:00:00Z'

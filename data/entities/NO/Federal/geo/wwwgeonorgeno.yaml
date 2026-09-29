@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -74,3 +74,11 @@ topics:
   name: Transportation
   type: iso19115
 uid: cdi00002334
+endpoints:
+- type: csw202
+  url: http://www.geonorge.no/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:selections
+  url: http://www.geonorge.no/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: http://www.geonorge.no/geonetwork/srv/api/site

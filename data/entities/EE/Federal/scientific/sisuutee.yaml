@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: The Estonian Social Science Data Archive (ESSDA) contains Estonian Social science
-  data and survey data, as well as university publications and Estonian radio archival materials.
+description: The Estonian Social Science Data Archive (ESSDA) contains Estonian Social
+  science data and survey data, as well as university publications and Estonian radio
+  archival materials.
 id: sisuutee
 identifiers:
 - id: openaire
@@ -38,8 +39,8 @@ owner:
   name: University of Tartu, Department of Sociology
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -59,3 +60,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00029875
+endpoints:
+- type: sitemap
+  url: https://sisu.ut.ee/sitemap.xml

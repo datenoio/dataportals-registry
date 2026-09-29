@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: South Australia
 description: Tatiara District Council ArcGIS Experience Builder public GIS for paths,
   property, and local government map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/692d845ef1504db0909608746ab4d2ee/data?f=json
 id: experiencearcgiscomtatiara
 langs:
 - id: EN

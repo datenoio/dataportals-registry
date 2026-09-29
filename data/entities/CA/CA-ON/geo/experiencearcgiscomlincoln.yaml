@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Ontario
 description: Town of Lincoln Community Map GIS viewer for zoning, boundaries, greenbelt,
   Niagara Escarpment, and related municipal layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/33038fc9d61247efaafc691a8c778380/data?f=json
 id: experiencearcgiscomlincoln
 langs:
 - id: EN

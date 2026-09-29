@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Open data portal
 content_types:
@@ -62,3 +62,7 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi00000131
+endpoints:
+- type: ckan:package-list
+  url: https://data.gov.bd/api/3/action/package_list
+  version: '3'

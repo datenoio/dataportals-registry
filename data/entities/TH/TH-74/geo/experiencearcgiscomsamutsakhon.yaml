@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: TH-74
       name: Samut Sakhon
 description: Public municipal GIS of Samut Sakhon City Municipality on ArcGIS Experience Builder.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/f4ce7e58ddc94ef8987ed08ded2d078c/data?f=json
 id: experiencearcgiscomsamutsakhon
 langs:
 - id: TH

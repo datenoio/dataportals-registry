@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    subregion:
+      id: PL-22
+      name: Pomorskie
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public ArcGIS Server directory for the municipality of Kartuzy, including
+  utility-network and municipal map layers.
+id: mapakartuzypl
+langs:
+- id: PL
+  name: Polish
+link: http://mapa.kartuzy.pl/arcgis/rest/services
+name: Gmina Kartuzy map services
+owner:
+  link: http://mapa.kartuzy.pl
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    subregion:
+      id: PL-22
+      name: Pomorskie
+  name: Gmina Kartuzy
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- poland
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00008940
+endpoints:
+- type: arcgis:rest:info
+  url: http://mapa.kartuzy.pl/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://mapa.kartuzy.pl/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://mapa.kartuzy.pl/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://mapa.kartuzy.pl/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://mapa.kartuzy.pl/arcgis/rest/services?f=geositemap

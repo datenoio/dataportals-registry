@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,7 +12,7 @@ coverage:
       name: Greece
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Government Gazette of Greece, published by the National Printing House.
   Catalog of issues of the official journal.
@@ -32,8 +32,8 @@ owner:
   name: National Printing House of Greece
   type: Central government
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - official gazette
@@ -43,3 +43,9 @@ topics:
   name: Justice, legal system and public safety
   type: eudatatheme
 uid: cdi00008141
+endpoints:
+- type: rest
+  url: https://www.et.gr/wp-json/
+- type: rest:posts
+  url: https://www.et.gr/wp-json/wp/v2/posts
+  version: '2'

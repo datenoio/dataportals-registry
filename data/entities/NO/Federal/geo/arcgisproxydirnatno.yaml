@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -15,9 +15,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Legacy ArcGIS proxy of the former Directorate for Nature Management
-  (Direktoratet for naturforvaltning). The directorate was merged into the Norwegian
-  Environment Agency in 2013; this host returned HTTP 500 during review.
+description: Legacy ArcGIS proxy of the former Directorate for Nature Management (Direktoratet
+  for naturforvaltning). The directorate was merged into the Norwegian Environment
+  Agency in 2013; this host returned HTTP 500 during review.
 id: arcgisproxydirnatno
 langs:
 - id: 'NO'
@@ -58,3 +58,8 @@ topics:
   name: Environment
   type: iso19115
 uid: cdi99994163
+endpoints:
+- type: arcgis:rest:info
+  url: http://arcgisproxy.dirnat.no/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://arcgisproxy.dirnat.no/arcgis/rest/services?f=pjson

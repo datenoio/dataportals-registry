@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: CR-SJ
       name: San José
 description: Municipal geoportal of Municipalidad de Alajuelita, Costa Rica.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/36c72735291140848529896f631c9033/data?f=json
 id: experiencearcgiscomalajuelita
 langs:
 - id: ES

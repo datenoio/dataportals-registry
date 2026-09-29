@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Salto
 description: Public geoportal for municipal projects, neighbourhood units, departmental
   planning regulations, cadastral flood risk, and other map information for Salto.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/f986ea84b0b14de5be37fd8c94c512a5/data?f=json
 id: experiencearcgiscomsalto
 langs:
 - id: ES

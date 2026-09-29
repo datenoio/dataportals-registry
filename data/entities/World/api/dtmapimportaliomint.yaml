@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: API Catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: '001'
+      name: World
+description: International Organization for Migration Displacement Tracking Matrix
+  developer portal listing the DTM services API.
+id: dtmapimportaliomint
+langs:
+- id: EN
+  name: English
+link: https://dtm-apim-portal.iom.int/
+name: IOM DTM API portal
+owner:
+  link: https://dtm.iom.int
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: International Organization for Migration
+  type: International
+properties:
+  is_national: false
+software:
+  id: azureapim
+  name: Azure API Management
+status: active
+tags:
+- migration
+- humanitarian
+- API
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00010016
+endpoints:
+- type: sitemap
+  url: https://dtm-apim-portal.iom.int/sitemap.xml

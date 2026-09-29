@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,6 +18,9 @@ coverage:
 description: UNESCO Sites Navigator GIS for verified boundaries of World Heritage
   properties, Biosphere Reserves, Global Geoparks, and Hague Convention sites, with
   about 50 overlay datasets and shapefile/GeoJSON/KML export.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/4f1652275d1f4656964b64a20a7346d3/data?f=json
 id: experiencearcgiscomunescositesnav
 langs:
 - id: EN

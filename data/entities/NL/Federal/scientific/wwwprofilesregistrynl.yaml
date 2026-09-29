@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,8 +16,8 @@ coverage:
       name: Western Europe
 description: Patient Reported Outcomes Following Initial treatment and Long term Evaluation
   of Survivorship (PROFILES)’ is a registry for the study of the physical and psychosocial
-  impact of cancer and its treatment from a dynamic, growing population-based cohort of both
-  short and long-term cancer survivors.
+  impact of cancer and its treatment from a dynamic, growing population-based cohort
+  of both short and long-term cancer survivors.
 id: wwwprofilesregistrynl
 identifiers:
 - id: openaire
@@ -40,8 +40,8 @@ owner:
   name: Integraal Kankercentrum Nederland
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -73,3 +73,9 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00032249
+endpoints:
+- type: rest
+  url: https://www.profilesregistry.nl/wp-json/
+- type: rest:posts
+  url: https://www.profilesregistry.nl/wp-json/wp/v2/posts
+  version: '2'

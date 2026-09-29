@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Victoria
 description: Hobsons Bay City Council ArcGIS Experience Builder public map for municipal
   GIS layers and property information.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/fffef568b68342568d4c7d8072e39fb5/data?f=json
 id: experiencearcgiscomhobsonsbay
 langs:
 - id: EN

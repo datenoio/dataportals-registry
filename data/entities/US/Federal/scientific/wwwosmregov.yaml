@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,10 +14,10 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: The National Mine Map Repository (NMMR) collects, maintains, and provides U.S.
-  coal and non-coal mine maps to individuals, public and private sectors. NMMR mine maps and
-  data are searchable and indexed by state, county, company name, and mine name. Accessing
-  NMMR mine maps and data requires contacting NMMR.
+description: The National Mine Map Repository (NMMR) collects, maintains, and provides
+  U.S. coal and non-coal mine maps to individuals, public and private sectors. NMMR
+  mine maps and data are searchable and indexed by state, county, company name, and
+  mine name. Accessing NMMR mine maps and data requires contacting NMMR.
 id: wwwosmregov
 identifiers:
 - id: openaire
@@ -35,12 +35,12 @@ owner:
       id: US
       name: United States
     level: 20
-  name: United States Department of the Interior, Office of Surface Mining Reclamation and
-    Enforcement
+  name: United States Department of the Interior, Office of Surface Mining Reclamation
+    and Enforcement
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -60,3 +60,6 @@ topics:
   name: Geoscientific Information
   type: iso19115
 uid: cdi00033741
+endpoints:
+- type: sitemap
+  url: https://www.osmre.gov/sitemap.xml

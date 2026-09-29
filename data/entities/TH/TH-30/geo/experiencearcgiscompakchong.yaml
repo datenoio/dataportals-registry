@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: TH-30
       name: Nakhon Ratchasima
 description: Public municipal GIS of Pak Chong Town Municipality on ArcGIS Experience Builder.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/94a7644fa2da41f5971fe6c16260a48e/data?f=json
 id: experiencearcgiscompakchong
 langs:
 - id: TH

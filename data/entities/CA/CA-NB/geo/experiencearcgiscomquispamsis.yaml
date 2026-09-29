@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: CA-NB
       name: New Brunswick
 description: Public ArcGIS Experience Builder address and zoning map for the Town of Quispamsis.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/4922f63ad9bf426a88cb6c4684b67fc6/data?f=json
 id: experiencearcgiscomquispamsis
 langs:
 - id: EN

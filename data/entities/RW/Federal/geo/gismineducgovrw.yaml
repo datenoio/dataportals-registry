@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RW
+      name: Rwanda
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: ArcGIS Enterprise catalog of the Ministry of Education (GVARS), including
+  school and TVET map services.
+id: gismineducgovrw
+langs:
+- id: EN
+  name: English
+link: https://gis.mineduc.gov.rw/server/rest/services
+name: MINEDUC GVARS Geoportal
+owner:
+  link: https://www.mineduc.gov.rw
+  location:
+    country:
+      id: RW
+      name: Rwanda
+    level: 20
+  name: Ministry of Education (MINEDUC)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- REST
+- education
+- has_api
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00009256
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.mineduc.gov.rw/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.mineduc.gov.rw/server/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://gis.mineduc.gov.rw/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.mineduc.gov.rw/server/rest/services?f=geositemap

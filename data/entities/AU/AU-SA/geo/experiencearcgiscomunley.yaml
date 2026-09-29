@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: South Australia
 description: City of Unley ArcGIS Experience Builder public GIS for property, planning,
   and local government map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/636d5b76e14b43178196080325e1903f/data?f=json
 id: experiencearcgiscomunley
 langs:
 - id: EN

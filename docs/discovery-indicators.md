@@ -2,7 +2,7 @@
 
 How to find **indicators catalogs** (`catalog_type: Indicators catalog`) and **microdata catalogs** (`catalog_type: Microdata catalog`). Search-engine syntax (Google, Censys, and [FOFA as a Censys alternative](discovery-search-tools.md#fofa)): [discovery-search-tools.md](discovery-search-tools.md).
 
-Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, PxStat, DGBAS Web, OpenSDG, SDG Index, Goal Tracker, IMF NSDP, .Stat Suite, .Stat Technology, Istat Data Browser, Swing, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX / CountrySTAT, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, TerriSTORY, IHK-Fachkräftemonitor, DUVA, Géoclip, InstantAtlas, MATS, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, KOSIS, e-Stat, SIDRA, Fingertips, UNdata, UN Comtrade Plus, Our World in Data. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
+Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, PxStat, DGBAS Web, OpenSDG, SDG Index, Goal Tracker, IMF NSDP, .Stat Suite, .Stat Technology, Istat Data Browser, Swing, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, Envista Web, FENIX / CountrySTAT, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, TerriSTORY, IHK-Fachkräftemonitor, DUVA, Géoclip, InstantAtlas, MATS, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, KOSIS, SOPORTAL, e-Stat, SIDRA, Fingertips, UNdata, UN Comtrade Plus, Our World in Data. Related PC-Axis stack: PxStat (CSO Ireland; not PxWeb).
 
 ## PxWeb (`pxweb`) {#pxweb}
 
@@ -67,14 +67,20 @@ Taiwan DGBAS-family statistical dynamic query (統計資料動態查詢 / 共通
 
 **Confirm:** GET the public query home (not a CMS page that only links out) and match `webMain.aspx` plus `funid=`. One catalog per agency tenant. Do **not** add extra catalogs for each `funid=` theme on the same host (DGBAS income vs prices vs macro are one nstatdb catalog).
 
-**False positives:** local-government `/DgbasWeb/` (`dgbasweb`); PxWeb `statdb.dgbas.gov.tw/pxweb`; MOTC `/motc/Portal/`; MOENV `/epanet/`; MOA `moasdweb`; tourism `stat.taiwan.net.tw`; gender.ey.gov.tw GECdb.
+**False positives:** local-government `/DgbasWeb/` (`dgbasweb`); PxWeb `statdb.dgbas.gov.tw/pxweb` and Taipei public-works PxWeb `pwbstat.taipei.gov.tw/pxweb2007p/` (the dialog only links out to WebMain); MOTC `/motc/Portal/`; MOENV `/epanet/`; MOA `moasdweb`; tourism `stat.taiwan.net.tw`; gender.ey.gov.tw GECdb. The same `webMain.aspx` engine also serves non-catalog apps: Executive Yuan interpellation case systems (`inquery.ey.gov.tw`, `query.ey.gov.tw`), MOTC trucking-survey filing (`survey.motc.gov.tw`), and the freight-insurance login (`statap.motc.gov.tw`). CMS homepages that only link a WebMain tree (household offices, `www.mol.gov.tw`, `dbas.gov.taipei`, `statistics.health.gov.tw`) are not separate catalogs. `home.gotac168.com` is the vendor site.
+
+Checked 24 September 2026. FOFA often indexes a one-line `location.replace("…/webMain.aspx")` that does not contain `funid`, so `body="webMain.aspx" && body="funid"` (59 hosts) misses those shells and also matches Taiwantrade, university personnel offices, and unrelated pages. `body="webMain.aspx"` alone is 144 and includes ASP.NET pages outside Taiwan. Scope with `host=".gov.tw"` (23 hosts) or `host=".gov.tw" || host=".gov.taipei"` (29). The vendor HTML comment is tighter: `body="系統開發:金諄"` is 7 hosts, `body="webMain.aspx" && body="金諄"` is 11, and `body="2759-6506"` is 9 (that phone number also hits `home.gotac168.com`). `body="統計資料動態查詢"`, `body="webtemp/usr"`, `body="usrdgbasJS"`, and `body="kendo.common.mintmp"` are 0 because those strings sit in frames or stylesheets FOFA does not index. `title="共通性查詢"` is 1. `host="dgbas.gov.tw"` is 157 and is mostly DGBAS Web. FOFA did not return the live MOI, MOF `njswww`, MOE `edust`, or Taipei TSIS tenants. `census.dgbas.gov.tw` and `dtable.dgbas.gov.tw` (三大普查) match the `.gov.tw` query, but a live GET stops at Cloudflare 403.
 
 | Tool | Query |
 |------|-------|
 | Google | `inurl:webMain.aspx (funid OR "統計資料動態查詢") site:.gov.tw` |
 | Google | `"統計資料動態查詢" OR "共通性查詢" (webMain OR funid) site:.gov.tw` |
 | Censys | `web.endpoints.http.body: "webMain.aspx"` |
-| FOFA | `body="webMain.aspx" && body="funid"` |
+| FOFA | `body="webMain.aspx" && host=".gov.tw"` |
+| FOFA | `body="webMain.aspx" && (host=".gov.tw" \|\| host=".gov.taipei")` |
+| FOFA | `body="系統開發:金諄"` |
+| FOFA | `body="webMain.aspx" && body="金諄"` |
+| FOFA | `body="2759-6506" && host=".gov.tw"` |
 
 ## KOSIS (`kosis`) {#kosis}
 
@@ -84,7 +90,7 @@ Statistics Korea statistical table platform. Hub: [kosis.kr](https://kosis.kr). 
 
 **Confirm:** GET a public table tree or a live `/statHtml/statHtml.do?orgId=&tblId=` table that returns a named statistical table. One catalog per public tenant. The `/bukhan/` tree is already a separate registered catalog. Keep a host only when that table is served on the host. City pages that only deep-link `stat.kosis.kr/statHtml_host` are link-outs.
 
-**False positives:** local-government `/stat/index.do` CMS skins that only link out to KOSIS (Paju `stat.paju.go.kr` is this case); 지표누리 (`index.go.kr`); SGIS; English/mobile/SSO aliases of `kosis.kr` (`edu`, `sso`, `mgmk`); `stat.kosis.kr/nsistN` agency hosting console; IP-only COLSIS hits; `body="dbsearchTitle"` without `.gif` (library guides). LankaSIS (`sis.statistics.gov.lk`) matches `statDbList.jsp` but did not answer on GET in September 2026.
+**False positives:** local-government `/stat/index.do` CMS skins that only link out to KOSIS (Paju `stat.paju.go.kr` is this case); 지표누리 (`index.go.kr`); SGIS; SOPORTAL (`indexPage.do` with `/soportal/` stylesheets); English/mobile/SSO aliases of `kosis.kr` (`edu`, `sso`, `mgmk`); `stat.kosis.kr/nsistN` agency hosting console; IP-only COLSIS hits; `body="dbsearchTitle"` without `.gif` (library guides). LankaSIS (`sis.statistics.gov.lk`) matches `statDbList.jsp` but did not answer on GET in September 2026.
 
 | Tool | Query |
 |------|-------|
@@ -102,6 +108,25 @@ Statistics Korea statistical table platform. Hub: [kosis.kr](https://kosis.kr). 
 | FOFA | `body="fileDb.jsp"` |
 | FOFA | `body="statHtml_host/statHtml.do"` |
 | FOFA | `body="statHtml/statHtml.do?orgId" && domain!="kosis.kr"` |
+
+## SOPORTAL (`soportal`) {#soportal}
+
+Wiseitech agency statistical-table portal. Vendor: [wise.co.kr](https://www.wise.co.kr/). Live tenants: [stat.mcee.go.kr](https://stat.mcee.go.kr/portal/main/indexPage.do), [houstat.hf.go.kr](https://houstat.hf.go.kr/research/portal/main/indexPage.do), [reb.or.kr/r-one](https://www.reb.or.kr/r-one/portal/main/indexPage.do).
+
+**Signals:** `indexPage.do` together with `/soportal/` stylesheets (`/css/{skin}/soportal/`) and `/js/portal/lib/`; table browsers `easyStatPage.do`, `orgStatPage.do`, or `nameStatPage.do`; OpenAPI routes `openApiActKeyPage.do` and `openApiIntroPage.do`. The application is mounted under a context path (`/portal/`, `/research/portal/`, `/r-one/portal/`).
+
+**Confirm:** GET the public `indexPage.do` and check for a `soportal` stylesheet or a `/portal/stat/easyStatPage.do` link. One catalog per agency host.
+
+**False positives:** `commonness.js` or `COPYRIGHT (C) 2013 WISEITECH` alone (Gyeonggi Data Dream `data.gg.go.kr` and Open National Assembly `open.assembly.go.kr` use `mainPage.do`); IBSheet on MOLIT 통계누리, 문화셈터, or K-stat; KOSIS `/statHtml/statHtml.do`; 지표누리; SGIS.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:easyStatPage.do (통계 OR statistics)` |
+| Google | `inurl:openApiActKeyPage.do` |
+| Censys | `web.endpoints.http.body: "soportal"` |
+| FOFA | `body="soportal" && body="indexPage.do"` |
+| FOFA | `body="easyStatPage.do"` |
+| FOFA | `body="openApiActKeyPage.do"` |
 
 ## e-Stat (`estat`) {#estat}
 
@@ -138,6 +163,22 @@ Static SDG reporting sites (often GitHub Pages). Community: [open-sdg.org/commun
 | FOFA | `body="jekyll-open-sdg-plugins"` |
 
 Start from the community list; use Google for national translations (`indicadores ODS`, `indicateurs ODD`).
+
+## Klimadashboard Münster (`klimadashboardmuenster`) {#klimadashboardmuenster}
+
+Municipal climate and local-indicator dashboard first built by the City of Münster and adapted by other cities. Source: [Open CoDE](https://gitlab.opencode.de/smart-city-muenster/klimadashboard-muenster/klimadashboard-muenster). Live copies include [klimadashboard.ms](https://www.klimadashboard.ms/) and Aschaffenburg’s Smart Data Dashboard.
+
+**Signals:** credit to `klimadashboard.ms` or `klimadashboard-muenster`; Reedu GmbH in the AGPL notice; Next.js app shell.
+
+**Confirm:** GET the city dashboard and match a Münster/Open CoDE credit. One record per municipal host. Do **not** set `klimadashboardmuenster` on [klimadashboard.de](https://klimadashboard.de/) (Klimadashboard Deutschland, a different product).
+
+| Tool | Query |
+|------|-------|
+| Google | `"klimadashboard.ms" OR "klimadashboard-muenster" (Dashboard OR Klima)` |
+| Google | `"adaptiert von" Klimadashboard Münster` |
+| Censys | `web.endpoints.http.body: "klimadashboard-muenster"` |
+| FOFA | `body="klimadashboard-muenster"` |
+| FOFA | `body="klimadashboard.ms" && body="AGPL"` |
 
 ## SDG Index (`sdgindex`) {#sdgindex}
 
@@ -211,22 +252,69 @@ Istat StatKit Data Browser (EUPL). Site: [sdmxistattoolkit.github.io](https://sd
 | Censys | `web.endpoints.http.body: "webpackJsonpdata-browser"` |
 | FOFA | `body="webpackJsonpdata-browser"` |
 
+## Fusion Data Browser (`fusiondatabrowser`) {#fusiondatabrowser}
+
+Metadata Technology SDMX dissemination UI. Docs: [Fusion Data Browser](https://wiki.sdmxcloud.org/Fusion_Data_Browser). Live example: [Bank of Israel](https://edge.boi.gov.il/FusionDataBrowser/) (title `Fusion Data Browser`, assets `dist/assets/css/all.min.css`). The UI reads Fusion Edge Server or Fusion Registry at `/FusionEdgeServer/ws/public/sdmxapi/rest` and `/FusionEdgeServer/sdmx/v2/`.
+
+**Signals:** HTML title `Fusion Data Browser`; path `/FusionDataBrowser/`; stylesheet `dist/assets/css/all.min.css`; sibling API `/FusionEdgeServer/ws/public/sdmxapi/rest/dataflow`.
+
+**Confirm:** GET `/FusionDataBrowser/` and check the title, then GET the dataflow list. One record per public browser, not per dataflow. A structural registry at `/FusionRegistry` with no Data Browser UI stays `fusionregistry`.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:FusionDataBrowser "Fusion Data Browser"` |
+| Google | `inurl:FusionEdgeServer SDMX` |
+| Censys | `web.endpoints.http.html_title: "Fusion Data Browser"` |
+| FOFA | `title="Fusion Data Browser"` |
+| FOFA | `body="FusionEdgeServer"` |
+
 ## Swing (`swing`) {#swing}
 
-ABF Research statistical databank (Swing Viewer / Swing Jive). Vendor: [swingsoftware.eu](https://swingsoftware.eu/). Flemish public tenants live at `{city}.incijfers.be` and `provincies.incijfers.be`.
+ABF Research statistical databank (Swing Viewer / Swing Jive / Swing Mosaic / Ballroom). Vendor: [swingsoftware.eu](https://swingsoftware.eu/). Flemish public tenants live at `{city}.incijfers.be` and `provincies.incijfers.be`. Dutch municipal tenants use `{city}.incijfers.nl`, with older neighbourhood monitors on `*.buurtmonitor.nl` and some thematic databanks on `*.databank.nl` or a custom domain.
 
-**Signals:** hostname `*.incijfers.be`; “Powered by Swing”; Swing Viewer / databank UI.
+**Signals:** hostname `*.incijfers.be`, `*.incijfers.nl`, or `*.buurtmonitor.nl`; Ballroom shell `/script/ballroom.js`; Mosaic footer link `swingsoftware.eu/modules/swing-mosaic`; chart assets `cdn.abf.nl/abfcharts`; `SwingLogoutButton`.
 
-**Confirm:** GET the public databank (not `/Admin/Studio/`). One record per municipal or provincial tenant. Dutch “in cijfers” / waarstaatjegemeente sites on other hosts are the same product when Swing-branded.
+The Mosaic footer is `Powered by <a …>Swing Mosaic</a>`, so the words are not adjacent in the HTML. A live Alkmaar page writes `ABF_Model.JiveTimestamps` and `ABF_Model.Settings` in an inline script; FOFA does not index those dotted identifiers.
+
+**FOFA** (checked September 2026):
+
+| Query | Rows | Use |
+|-------|------|-----|
+| `body="swingsoftware.eu/modules/swing-mosaic"` | 295 (92 hosts) | Mosaic dashboards, including custom domains |
+| `body="SwingLogoutButton"` | 301 | Same dashboard shell |
+| `body="cdn.abf.nl/abfcharts"` | 307 | Chart bundle; overlaps the Mosaic footer |
+| `body="/script/ballroom.js"` | 80 | Ballroom shell. Catches custom domains the footer query misses (`brabantscan.nl`, `datawonen.nl`, `findo.nl`, `*.inzicht.nl`) |
+| `body="keepalive_ballroom.js"` | 80 | Same Ballroom set |
+| `body="ballroomstatic.ashx"` | 73 | Same Ballroom set |
+| `domain="incijfers.nl"` | 582 (328 hosts) | Municipal zone. Most rows are wildcard DNS (`mail.`, `*-plus`, `test.`, random labels) titled “Document Moved” |
+| `domain="incijfers.be"` | 44 | Flemish zone. Smaller than the registry: many live `.be` tenants are not in the FOFA crawl |
+| `domain="buurtmonitor.nl"` | 18 | Older neighbourhood-monitor hostnames. Some now redirect to `*.incijfers.nl` |
+| `domain="databank.nl"` | 45 | Mostly hosting backends (`test.`, `admin.`, `cname.`). Keep a row only when the title is a databank |
+| `body="Powered by Swing"` | 28 | Weak. Misses the split Mosaic footer and matches unrelated “swing” sites |
+| `body="ABF_Model.Settings"` | 0 | Dotted script identifiers are not in the FOFA index |
+| `body="ABF_Model.JiveTimestamps"` | 0 | Same |
+| `body="/Jive"` | ~60,000 | Path token, not a fingerprint |
+| `domain="inzahlen.be"` | 0 | `ostbelgien.inzahlen.be` is not in this domain index |
+
+Do not register the vendor template (`incijfers.nl`, `incijfers.be`, `ginc-abf.incijfers.nl`, `demo.swingsoftware.eu`), `AvailableDomains.aspx` pickers, `*-plus` / `beta` / `test` labels, or a short alias of a tenant already registered (`vls.incijfers.nl` is Velsen, `lv.incijfers.nl` is Leidschendam-Voorburg, `zp.incijfers.nl` is Zutphen).
+
+**Confirm:** GET the public databank or Mosaic dashboard (not `/Admin/Studio/`, not a login-only `/login.aspx?returnurl=/home`). One record per municipal, provincial, or named thematic tenant. A second hostname that redirects to a registered catalog is the same record. Dutch “in cijfers” / waarstaatjegemeente sites on other hosts are the same product when Swing-branded.
 
 | Tool | Query |
 |------|-------|
 | Google | `site:incijfers.be` |
-| Google | `"Powered by Swing" OR "Swing Viewer" (incijfers OR databank)` |
+| Google | `site:incijfers.nl` |
+| Google | `"Powered by Swing" OR "Swing Mosaic" OR "Swing Viewer" (incijfers OR databank)` |
 | Censys | `web.names: "incijfers.be"` |
+| Censys | `web.names: "incijfers.nl"` |
+| FOFA | `body="/script/ballroom.js"` |
+| FOFA | `body="swingsoftware.eu/modules/swing-mosaic"` |
+| FOFA | `body="cdn.abf.nl/abfcharts"` |
+| FOFA | `domain="incijfers.nl"` |
 | FOFA | `domain="incijfers.be"` |
-| FOFA | `body="Powered by Swing"` |
+| FOFA | `domain="buurtmonitor.nl"` |
 | crt.sh | `%.incijfers.be` |
+| crt.sh | `%.incijfers.nl` |
 
 ## Knoema (`knoema`) {#knoema}
 
@@ -298,6 +386,36 @@ Open-source statistical data/metadata stack from ISTAC (Canary Islands), also us
 | FOFA | `domain="edatos.io"` |
 | crt.sh | `%.edatos.io` |
 
+## Idescat (`idescat`) {#idescat}
+
+Statistical Institute of Catalonia dissemination platform. Hub: [idescat.cat](https://www.idescat.cat). Public REST APIs on `api.idescat.cat` return JSON / JSON-stat (`/emex/v1/`, `/taules/v2`).
+
+**Signals:** host `idescat.cat` or `api.idescat.cat`; paths `/estad/`, `/emex/`, `/dades/ods/`; chrome "Idescat".
+
+**Confirm:** GET `https://api.idescat.cat/emex/v1/nodes.json?lang=en` (200 JSON) or the `/estad/` operations list. One catalog per product family (statistical tables, Emex municipal profiles, ODS indicators), not per table. The Idescat CMS home is not a separate catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:idescat.cat (estad OR emex OR indicadors)` |
+| Google | `site:api.idescat.cat` |
+| Censys | `web.names: "idescat.cat"` |
+| FOFA | `domain="idescat.cat"` |
+
+## INEbase (`inebase`) {#inebase}
+
+Spain's National Statistics Institute (INE) dissemination platform. Hub: [ine.es/dyngs/INEbase](https://www.ine.es/dyngs/INEbase/es/listaoperaciones.htm). jaxiT3 table browser plus the Tempus3 JSON REST API on `servicios.ine.es/wstempus/`.
+
+**Signals:** paths `/dyngs/INEbase/`, `/dyngs/ODS/`, `/jaxiT3/`; host `servicios.ine.es/wstempus/`; chrome "INEbase".
+
+**Confirm:** GET `https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES` (200 JSON) or the INEbase operations list. One catalog per product (INEbase operations, Agenda 2030 ODS, microdata), not per statistical operation. The IMF NSDP page is `imfnsdp`.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:ine.es/dyngs INEbase` |
+| Google | `inurl:/jaxiT3/ ine.es` |
+| Censys | `web.names: "ine.es"` |
+| FOFA | `domain="ine.es"` |
+
 ## Cancer-Rates.info (`cancerrates`) {#cancerrates}
 
 Kentucky Cancer Registry multi-tenant cancer incidence/mortality query. Tenant list: [cancer-rates.info/about](https://www.cancer-rates.info/about/). Live UI is often `cancer-rates.com/{code}/`.
@@ -334,19 +452,32 @@ Conduent HCI standalone community-health indicator sites (often “Health Matter
 
 Geographic Solutions Virtual LMI labor-market databank. Vendor: [geographicsolutions.com/VLMI](https://www.geographicsolutions.com/VLMI).
 
-**Signals:** host `*.virtuallmi.com`; path `/vosnet/`; “Virtual LMI”.
+**Signals:** host `*.virtuallmi.com`; path `/vosnet/` on the LMI UI itself; “Virtual LMI”.
 
 **Confirm:** GET the public LMI home or `/vosnet/Default.aspx`. One catalog per state tenant. Branded custom domains count when `/vosnet/` is the UI (Colorado LMI Gateway). Do not retag QualityInfo, WisConomy, `/analyzer` ALMIS, or other LMI sites without those fingerprints.
+
+Checked 24 September 2026. `domain="virtuallmi.com"` and `cert="virtuallmi.com"` are unindexed, so a hostname FOFA query misses the tenants. `body="Virtual LMI"` is the vendor site only. `body="vosnet"` (590 hosts) and `body="/vosnet/Default.aspx"` (458) are pages that link Virtual OneStop job boards, not LMI dataset UIs. `body="vosnet" && body="QCEW"` hits CMS sites that link out (Nevada LMI, Alabama Labor). Use `crt.sh` `%.virtuallmi.com`, then GET the public LMI home. Imperva blocks many neighboring job-board hosts.
 
 | Tool | Query |
 |------|-------|
 | Google | `site:virtuallmi.com OR inurl:/vosnet "labor market"` |
 | Google | `"Virtual LMI" (QCEW OR LAUS OR workforce)` |
 | Censys | `web.names: "virtuallmi.com"` |
-| FOFA | `domain="virtuallmi.com"` |
-| FOFA | `body="vosnet"` |
-| FOFA | `body="Virtual LMI"` |
 | crt.sh | `%.virtuallmi.com` |
+
+## Cascade CMS (`cascadecms`) {#cascadecms}
+
+Hannon Hill Cascade CMS, a general web CMS that several US state labor-market information portals publish through. Vendor: [hannonhill.com/products/cascade-cms](https://www.hannonhill.com/products/cascade-cms/index.html).
+
+**Signals:** HTML comments with Cascade template regions such as `<system-region name="CAROUSEL"/>`; state LMI tenants share a `_files/css` + `_files/js` asset layout (`scripts.js`, `news-gallery.js`, `random-background.js`, sometimes `lmi.js`) with jQuery 3.5.1 and Bootstrap 4.5.2 from stackpath; Google CSE search.
+
+**Confirm:** GET the LMI home and look for `system-region` comments or the `_files/` asset layout. One catalog per state LMI portal. Do not retag sites that merely link Cascade-hosted pages, Oregon's QualityInfo (custom), or Virtual LMI `/vosnet/` tenants.
+
+| Tool | Query |
+|------|-------|
+| Google | `"_files/js/lmi.js" OR "_files/js/news-gallery.js" labor market` |
+| Censys | `web.endpoints.http.body: "system-region"` |
+| FOFA | `body="system-region" && body="labor market"` |
 
 ## CityViz (`cityviz`) {#cityviz}
 
@@ -434,37 +565,72 @@ German KOSIS-Gemeinschaft municipal statistics information system. Product: [duv
 
 Commercial geostatistical observatory (Géoclip Air) from Business Geografic / Ciril GROUP. Product: [geoclip.fr](https://www.geoclip.fr/). Public tenants are independent French, Swiss, and Belgian observatories (INSEE Statistiques locales, regional ORS atlases, Hainaut Stat, cantonal atlases), not one national CMS.
 
-**Signals:** `GC_loadCss.php?output=user`; path `/geoclipair/` or `/geoclip/`; HTML comment `Logo geoclip` / class `gc_logo`; title or chrome “Géoclip”; hash routes `#c=indicator` / `#c=home`; shared meta “Explorez et visualisez sous forme de cartes, graphiques et tableaux interactifs”.
+**Signals:** `window.GCO5` (current Air bootstrap); `GC_loadCss.php?output=user` (stylesheet on most Air shells); hash routes `#c=indicator` / `#c=home`; shared meta “Explorez et visualisez sous forme de cartes, graphiques et tableaux interactifs”. Older chrome (`Logo geoclip`, class `gc_logo`, path `/geoclipair/`) is rare on live Air HTML.
 
-**Confirm:** GET the public observatory (not login/admin) and match `GC_loadCss.php` or the geoclip logo block. One catalog per observatory / tenant, not each indicator or each commune report. Skip `geoclip.fr` marketing and demo observatories.
+**Confirm:** GET the public observatory (not login/admin) and match `window.GCO5` or `GC_loadCss.php`. One catalog per observatory / tenant, not each indicator or each commune report. Skip `geoclip.fr` marketing, `*-decouverte` and other vendor vitrines, `preprod` / `gcpreprod` hosts, and a second hostname of an observatory already registered.
 
-**False positives:** Articque Platform / Cartes & Données; ANCT Observatoire des territoires `/donnees_ouvertes` Drupal catalog (keep `custom`); OCSTAT `statistique.ge.ch/` CMS home (the atlas is `/atlas/`); INSEE `insee.fr` search pages that mention GeoClip; French energy observatories (OPTEER, CIGALE, TrACE) that are not Géoclip; TerritoireAngular (`reperes-paysdelaloire.fr`).
+**False positives:** Articque Platform / Cartes & Données; ANCT Observatoire des territoires `/donnees_ouvertes` Drupal catalog (keep `custom`); OCSTAT `statistique.ge.ch/` CMS home (the atlas is `/atlas/`); INSEE `insee.fr` search pages that mention GeoClip; French energy observatories (OPTEER, CIGALE, TrACE) that are not Géoclip; TerritoireAngular (`reperes-paysdelaloire.fr`); the GeoCLIP image-geolocation model (`geoclip.xyz` and research homepages); PopGIS3 (`*.popgis.spc.int`) which loads `GC_loadCss.php` but is already `popgis`.
+
+**FOFA** (checked 24 September 2026). There is no `app="Geoclip"`. `body="GC_loadCss.php"` and `body="GC_loadCss.php?output=user"` are the same 192 hosts. `body="window.GCO5"` is 222 and is the query that still hits Air shells whose indexed HTML has no `GC_loadCss.php` (31 extra hosts, including `demographie.medecin.fr`, `statrhena.statabs.ch`, and `mapadasaude.saude.go.gov.br`). `body="GCO5"` alone is 449 and too broad. `body="Explorez et visualisez sous forme de cartes, graphiques et tableaux interactifs"` is 145 and only the French default meta; every hit is already inside the two shell queries.
+
+Do **not** hunt with `body="geoclip"` or `body="/geoclip/"` (82 each): they miss most Air shells and match the GeoCLIP model, vendor marketing, and unrelated pages. `body="gc_logo"` is 1,742 and is not this product. `body="geoclipair"` and `body="/geoclipair/"` return 1. `body="Geoclip Air"`, `title="Geoclip Air"`, `cert="geoclip"`, `header="geoclip"`, and `js_name="GC_loadCss.php"` return 0 — tenants replace the title, and FOFA does not index that phrase from the script block. `title="Geoclip"` is 5 and `title="Géoclip"` is 3. `host="geoclip"` (49) includes `geoclip.xyz`, `geoclip.ru`, `geoclip.com.mx`, and S3 buckets. `domain="geoclip.fr"` (21) is the vendor: `www.geoclip.fr`, découverte demos, and homemade vitrines (Observatoire des Votes, télécoms). `body="Logo geoclip"` is 2.
+
+The same observatory is often indexed on port 80 and 443, on `www`, and as a bare IP. Deduplicate by hostname. `statatlas.bfs.admin.ch` is the same catalog as `www.mapexplorer.bfs.admin.ch`. `atlasau.mitma.gob.es` is the same atlas as `atlasau.mivau.gob.es`. `geoclip.aua-toulouse.org` and `gcpreprod.aua-toulouse.org` are the registered Portail Carto.
 
 | Tool | Query |
 |------|-------|
 | Google | `inurl:GC_loadCss.php OR inurl:/geoclipair/` |
 | Google | `"Géoclip" (observatoire OR atlas OR "statistiques locales")` |
 | Censys | `web.endpoints.http.body: "GC_loadCss.php"` |
+| Censys | `web.endpoints.http.body: "window.GCO5"` |
 | FOFA | `body="GC_loadCss.php"` |
+| FOFA | `body="window.GCO5"` |
+| FOFA | `body="GC_loadCss.php" \|\| body="window.GCO5"` |
+
+## GINES (`gines`) {#gines}
+
+Hosted Swiss indicator and spatial-monitoring platform from GINES GmbH. Product: [gines.ch](https://www.gines.ch/). The public Canton of Bern statistical atlas embeds [bern.gines.ch](https://bern.gines.ch/). Vendor references also name Aargau, Graubünden, Schaffhausen, Solothurn, and Uri. Distinct from Géoclip (`geoclip`) cantonal atlases.
+
+**Signals:** hostname `*.gines.ch`; title `GINES`; login shell that names GINES; Bern atlas pages that embed `bern.gines.ch`.
+
+**Confirm:** GET a public atlas that loads GINES without a login wall. Register that public atlas, not each indicator. Skip login-only cantonal tenants and the product sites `gines.ch` and `gines.biz`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"GINES" (Raumbeobachtung OR Statistik OR Atlas) site:.ch` |
+| Google | `inurl:gines.ch` |
+| Censys | `web.endpoints.http.body: "GINES"` |
+| FOFA | `host="gines.ch"` |
 
 ## InstantAtlas (`instantatlas`) {#instantatlas}
 
 Esri UK geostatistical HTML reports and Dashboard Builder. Help: [help.instantatlas.com](https://help.instantatlas.com/). Distinct from Esri UK Data Observatory (`esridataobservatory`).
 
-**Signals:** title “InstantAtlas™ Bericht” / “Rapport InstantAtlas™”; `ia-min.js`; “Powered By InstantAtlas™”; “This InstantAtlas™ report requires JavaScript”; path `/imagemap/instantatlas/` or `atlas.html` report; `dashboards.instantatlas.com/viewer/report?appid=`.
+**Signals:** title “InstantAtlas™ Bericht” / “Rapport InstantAtlas™”; `ia-min.js` or `ia-max.js`; `iaInitReport()`; footer “Powered By InstantAtlas™”; path `/imagemap/instantatlas/` or `atlas.html` report; `dashboards.instantatlas.com/viewer/report?appid=`.
 
-**Confirm:** GET the public atlas/report (not a CMS homepage that only links to one chart). One catalog per public atlas, not each indicator or each year of the same atlas. Skip `instantatlas.com` marketing and Dashboard Builder authoring.
+**Confirm:** GET the public atlas/report (not a CMS homepage that only links to one chart). One catalog per public atlas, not each indicator or each year of the same atlas. Skip `instantatlas.com` marketing and Dashboard Builder authoring. `structuraldataatlas.urbanaudit.de` is the English host of the registered Urban Audit Strukturdatenatlas.
 
 **False positives:** Esri UK Data Observatory WordPress (`/wp-content/themes/ia-theme/` without an InstantAtlas report as the catalog — those are `esridataobservatory`); Report Builder for ArcGIS; a GBE table tree that only mentions InstantAtlas Kreis maps as extras (Sachsen-Anhalt GBE-net); Urban Audit hosts that are DUVA Informationsportale.
+
+**FOFA** (checked 25 September 2026). There is no `app="InstantAtlas"`. The noscript line is `This <a …>InstantAtlas™</a> report requires JavaScript`, so `body="This InstantAtlas"` is 0. The footer text is adjacent: `body="Powered By InstantAtlas"` is 22 rows (FOFA `body` is case-insensitive, so `body="powered by InstantAtlas"` is the same 22). `body="ia-min.js"` is 21 and misses the HTML5 shell that loads `ia-max.js` (1 row, bare IP `194.24.230.194`, Herne HiTS). Together, `body="Powered By InstantAtlas" || body="ia-min.js"` is 24 rows and 11 hostnames. That union is the hunt query: it is the only one that still includes both the self-hosted reports and the older ECDC ASP.NET atlas (`atlas.ecdc.europa.eu`, footer only, no `ia-min.js`).
+
+`body="iaInitReport"`, `body="atlas-unsupported.html"`, and `body="ia.supportsCanvas"` are 20 rows / 9 hostnames, the same self-hosted shells, and they miss ECDC. `js_name="ia-min.js"` is 15, a subset; `js_name="ia-max.js"` is 0. `body="ia-report-container"` is 23 and also matches unrelated dashboards (TaoSageVision, ScorePulse). `body="wurde mit InstantAtlas"` and `body="mit InstantAtlas"` are 8, the German meta, already inside the footer query. `body="erstellt mit InstantAtlas"` and `body="basé sur InstantAtlas"` are 0 because the trademark and word order split those phrases. `body="report requires JavaScript"` is 34 and wider than this product. `body="Geowise Ltd"` is 20 and the same reports. `body="GeoWise"` is 111.
+
+`title="InstantAtlas"` is 14 and mixes report shells with Dashboard Builder and Data Observatory titles (`www.durhaminsight.info`). `body="InstantAtlas"` is 49 and is a mention search (training pages, `doctoral.co.jp`, Data Observatory homes). `body="/imagemap/instantatlas/"` is 0. `domain="instantatlas.com"` is 20 and is the vendor (help, hub, dashboards, reports, online, cdn). `host="instantatlas"` is 27 and adds `instantatlas.statistik-berlin-brandenburg.de:8885`, which did not answer on HTTPS. `cert="instantatlas.com"` is 1 (`www2.instantatlas.com`, a 301). `body="dashboards.instantatlas.com/viewer/report"` is 5 and is pages that link a hosted dashboard (Gesundheitsatlas BW, EHINZ), not separate installs.
+
+Do **not** hunt with `body="ia-theme"` (1,725; the Data Observatory WordPress theme), `title="Dashboard Builder"` (519), `title="Statistikatlas"` (5; NRW and Westfalen-Lippe map apps with no InstantAtlas shell), `body="Ce rapport"`, or `body="Dieser Bericht"`.
+
+FOFA indexes the report when that HTML is the page it crawled. Deep `atlas.html` paths on a municipal CMS (Dresden, Kassel, Braunschweig, Heidelberg, Gloucestershire, Statistikamt Nord Kreismonitor and Hamburger Stadtteilprofile) are absent. Deduplicate port 80/443 and `www`. `www.statistik.wuerzburg.de` is a stale hit: live HTTPS redirects to the registered OpenDataSoft Statistikatlas. The Herne HiTS shell on `194.24.230.194` has no hostname; the public portal is the Shiny app at `hits.herne.de/portal/`.
 
 | Tool | Query |
 |------|-------|
 | Google | `intitle:"InstantAtlas" (Bericht OR Rapport OR report)` |
-| Google | `"ia-min.js" OR "Powered By InstantAtlas"` |
+| Google | `"ia-min.js" OR "ia-max.js" OR "Powered By InstantAtlas"` |
 | Censys | `web.endpoints.http.html_title: "InstantAtlas"` |
-| FOFA | `title="InstantAtlas"` |
-| FOFA | `body="ia-min.js"` |
-| FOFA | `body="Powered By InstantAtlas"` |
+| Censys | `web.endpoints.http.body: "Powered By InstantAtlas"` |
+| FOFA | `body="Powered By InstantAtlas" \|\| body="ia-min.js"` |
+| FOFA | `body="iaInitReport"` |
+| FOFA | `body="ia-max.js"` |
 
 ## MATS (`mats`) {#mats}
 
@@ -506,20 +672,35 @@ Thailand Ministry of Public Health medical and health data warehouse (ระบ�
 
 INE PC-Axis table browser, ceded to Spanish regional statistical offices. Product note: [IAEST difusión en PC-Axis](https://www.aragon.es/-/difusion-en-pc-axis) (“IAEAxi está basada en la herramienta JAXI que ha sido cedida por el INE”).
 
-**Signals:** path `/jaxi/Tabla.htm`, `/jaxi/Datos.htm`, `/jaxiT3/Tabla.htm`; Struts `menu.do` / `tabla.do` on `iaeaxi` or `*-jaxi` apps; `css/jaxi.css` or `theme/custom_jaxi_css/`; branded IAEAxi.
+**Signals:** path `/jaxi/Tabla.htm`, `/jaxi/Datos.htm`, `/jaxiT3/Tabla.htm`, `/jaxiPx/Tabla.htm`; Struts `menu.do` / `tabla.do` on `iaeaxi` or `*-jaxi` apps; `./css/jaxi.css` and `./js/jaxi.js`; `theme/custom_jaxi_css/` or `bundles/customjaxi.js`; table HTML `var pathJaxi` and `/menus/plantillas/jaxiT3/js/jaxi.js` (jaxiPx uses `var pathJaxi = "/jaxiPx/"`); Magnolia shell `portalEstadisticoPlantilla` with `datos.html?type=jaxi` embedding `dynPx/inebase` and `jaxiPx/Tabla.htm`.
 
-**Confirm:** GET the public table-browser menu (not a CMS home that only links out) and match JAXI paths or chrome. One catalog per tenant. Bare `/iaeaxi/` may redirect to the institute CMS — use `menu.do`. IBESTAT needs `menu.do?nodeId=0` (`/ibestat-jaxi/` alone is a not-found page).
+**Confirm:** GET the public table-browser menu (not a CMS home that only links out) and match JAXI paths or chrome. One catalog per tenant. Bare `/iaeaxi/` may redirect to the institute CMS — use `menu.do`. IBESTAT needs `menu.do?nodeId=0` (`/ibestat-jaxi/` alone is a not-found page). A `portalEstadistico` home is JAXI when a public page embeds `jaxiPx` or `dynPx/inebase`, not when the title merely says “Portal Estadístico”.
 
 **False positives:** INEbase operations CMS (`/dyngs/INEbase/`); ibestat.es institute portal; eDatos ODS tenants (`edatos`); PxWeb `/api/v1/`; PxStat; other CCAA `/jaxi/` guesses that 404.
 
 Do **not** add a second INE catalog for a random `Tabla.htm` URL, and do **not** retag INEbase as `jaxi` — the registered INEbase home is the operations list, not the table UI.
 
+Search the application HTML, not pages that only link to `www.ine.es/jaxiT3/Tabla.htm`. FOFA `body` is case-insensitive, so `jaxi.js` also matches an unrelated `jAxi.js`.
+
 | Tool | Query |
 |------|-------|
 | Google | `inurl:/jaxi/Tabla.htm OR inurl:/jaxiT3/Tabla.htm site:.es` |
 | Google | `"herramienta JAXI" OR IAEAxi OR inurl:ibestat-jaxi` |
-| Censys | `web.endpoints.http.body: "jaxi.css"` |
-| FOFA | `body="jaxi.css"` |
+| Censys | `web.endpoints.http.body: "var pathJaxi"` |
+| Censys | `web.endpoints.http.body: "plantillas/jaxiT3/js/jaxi.js"` |
+| Censys | `web.endpoints.http.body: "./css/jaxi.css"` |
+| Censys | `web.endpoints.http.body: "theme/custom_jaxi_css"` |
+| Censys | `web.endpoints.http.body: "portalEstadisticoPlantilla"` |
+| FOFA | `body="var pathJaxi"` |
+| FOFA | `body="plantillas/jaxiT3/js/jaxi.js"` |
+| FOFA | `body="./css/jaxi.css"` |
+| FOFA | `body="theme/custom_jaxi_css"` |
+| FOFA | `body="portalEstadisticoPlantilla"` |
+| FOFA | `body="datos.html?type=jaxi"` |
+
+`body="var pathJaxi"` and `body="plantillas/jaxiT3/js/jaxi.js"` are the jaxiT3 / jaxiPx table page (served on the app host). `body="./css/jaxi.css"` is the ceded Struts UI (IAEAxi). `body="theme/custom_jaxi_css"` is the IBESTAT skin. `body="portalEstadisticoPlantilla"` and `body="datos.html?type=jaxi"` are the Magnolia shell that embeds jaxiPx (the crime-statistics portal). Prefer these over a bare product-name search.
+
+**FOFA false positives (24 September 2026):** `body="jaxi.css"` and `body="css/jaxi.css"` returned 0 hosts. The live Aragón, IBESTAT, and INE table pages are not in that body index (`host="iaeaxi"`, `host="ibestat-jaxi"`, `host="jaxiT3"`, and `host="jaxiPx"` were also 0). `body="js/jaxi.js"` and `body="./js/jaxi.js"` match `assets/js/jAxi.js` on `analisi-rischi.vitanuova.it` (an insurance landing page). `body="jaxiT3"` (39 hosts) and `body="/jaxi/Tabla.htm"` (6) are pages that link to `www.ine.es/jaxiT3/Tabla.htm`. `body!="ine.es"` does not drop those `www.ine.es` links; `body="jaxiT3/Tabla.htm" && body!="www.ine.es"` returned 0. `body="jaxiPx"`, `body="JaxiPx"`, and `body="IAEAxi"` match Chinese spam. `title="JAXI"` (19) is a plumbing brand, a Japanese jobs site, and companies. `title="IAEAxi"` returned 0. `cert="jaxi"` is about 108 substring certificates; `cert="jaxi" && country="ES"` is 0. `body="dynPx"` is thousands of unrelated GraphQL Playground pages. `body="jaxi" && country="ES"` is 4 rows: the registered SES portal, plus GlobalSuite (the letters `jaxi` inside a base64 blob) and its IP. `title="Portal Estadístico" && country="ES"` also hits the Universidad de La Laguna statistics portal and the Notariado property-price portal, which do not serve JAXI. The only catalog host these queries returned is `estadisticasdecriminalidad.ses.mir.es`, already registered.
 
 ## iMonitoring (`imonitoring`) {#imonitoring}
 
@@ -529,7 +710,22 @@ NPO Krista public-finance and socio-economic indicator platform (KristaBI). Prod
 
 **Confirm:** GET the public Open Budget home (not login/admin) and match Krista support, the data constructor, or an `ifinmon.ru` tenant. One catalog per regional portal. Do **not** add a catalog per subject listed on the iminfin.ru comparison tree — that is one hub.
 
-**False positives:** other Russian open-budget CMS sites without Krista fingerprints (Leningrad Oblast `budget.lenobl.ru`, Zabaykalsky `budgetzab.75.ru`, Moscow city `budget.mos.ru`); Krasnodar `openbudget23region.ru/otkrytye-dannye` when it is already registered as an open-data catalog; `ifinmon.ru` apex with an expired certificate.
+**False positives:** other Russian open-budget CMS sites without Krista fingerprints (Leningrad Oblast `budget.lenobl.ru`, Moscow city `budget.mos.ru`). Zabaykalsky `budgetzab.75.ru` is Keysystems Open Budget (`ksopenbudget`). Krasnodar `openbudget23region.ru/otkrytye-dannye` is a Joomla open-data catalog. `ifinmon.ru` apex with an expired certificate is not a new tenant.
+
+## KS Open Budget (`ksopenbudget`) {#ksopenbudget}
+
+Keysystems public-finance portal «КС Открытый бюджет. Бюджет для граждан». Product: [keysystems.ru](https://www.keysystems.ru/products/Internet-solutions/ks-otkrtyy-byudzhet-byudzhet-dlya-grazhdan/). Regional portals use their own hosts, with per-region skins under `/Content/Skin*/`.
+
+**Signals:** `/Scripts/Site.js` defining `EB` and `GZW`; `/Menu/Page/` and `/Show/Category/`; `/Content/BudgetCalculator/`; `jquery.ks.multichoicer.js`; title «Единый портал бюджетной системы».
+
+**Confirm:** GET the public budget home and match those paths. One catalog per finance-portal host. An `/opendata/` register on the same host is the same product and may stay an open-data catalog. Do not tag iMonitoring (`*.ifinmon.ru`), `budget.lenobl.ru`, or `budget.mos.ru`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Единый портал бюджетной системы" "Открытый бюджет"` |
+| Censys | `web.endpoints.http.body: "jquery.ks.multichoicer.js"` |
+| FOFA | `body="jquery.ks.multichoicer.js"` |
+| FOFA | `body="/Content/BudgetCalculator/"` |
 
 | Tool | Query |
 |------|-------|
@@ -567,16 +763,30 @@ Eurostat SDMX Reference Infrastructure (NSI web service). Site: [sdmx.org](https
 
 Destatis / Länder statistical database. Example: [www-genesis.destatis.de](https://www-genesis.destatis.de). Table retrieval is often **POST-only** — do not invent GET API paths.
 
-**Signals:** GENESIS-Online; `genesisclient`; `/genesis/online`.
+The classic catalog HTML loads `genesis-online.css` and `recherchehilfe.js` from the installation context (`/genesis/`, `/genesisonline/`, `/genonline/`, `/ldbnrw/`, `/bildung/`). The 2025 shell is a separate page at `/datenbank/online`: title `GENESIS-Online`, `class="gor-webapp"`, and assets `gor-webapp.*.js`. That page is the same catalog as the classic UI on the same host.
 
-**Confirm:** GET the public table catalog. One record per statistical-office instance (Bund vs Land).
+**Signals:** `genesis-online.css`; `recherchehilfe.js`; `gor-webapp`; paths `/genesis/online` and `/datenbank/online`.
+
+**Confirm:** GET a page that serves the classic stylesheet or the `gor-webapp` shell and lists tables. One record per statistical-office installation (Bund vs Land vs a thematic database such as the census or the education monitor). Host aliases are the same catalog (`ldb.nrw.de`, `landesdatenbank.nrw`, `newsletter.landesdatenbank.nrw.de`, `newsletter.regionalstatistik.de`). `genesis.destatis.de` and `www-genesis.destatis.de` are the federal front door, not a second catalog. Skip newsletter hosts, bare IPs, and pages that only link to Destatis or Regionalstatistik.
+
+Checked 24 September 2026. `body="genesis-online.css"` returned 26 rows and 9 hosts: the NRW aliases, `regionalstatistik.de` and its newsletter host, `bildungsmonitoring.de`, and `genesis.sachsen-anhalt.de`. The same 26 rows came back for `body="css/genesis-online.css"`, `body="genesis-online-colors.css"`, `body="AmtsLogo.svg"`, `body="js/fokus.js" && body="GENESIS"`, and `body="Menu=Anmeldung" && body="genesis-online"`. Prefer the stylesheet name. `AmtsLogo.svg` is a generic asset filename that happened to match this set.
+
+`body="recherchehilfe.js"` returned 29 rows and 12 hosts. It adds the Destatis links page (`genesis.destatis.de`, `www-genesis.destatis.de`) and the bare IP `194.95.119.21`. `body="genesis-online.css" || body="recherchehilfe.js"` is that same 29. `body="tief gegliederte Ergebnisse der amtlichen Statistik"` is also 29 (the classic meta description). `js_name="recherchehilfe.js"` returned 0.
+
+FOFA has not indexed the catalog HTML of several live installations. `host="statistikdaten.bayern.de"` is 2 rows titled `禁止访问！`. `host="daten.statistik-bw.de"` is a 301. `host="statistik.sachsen.de"` is the office homepage plus `collab-edge` ports, not `/genonline/online`. `host="ergebnisse.zensus2022.de"` is a 400. GET still shows the classic shell on Bayern, Baden-Württemberg, and Sachsen, and those records are already registered.
+
+The 2025 shell is not in the index. `body="gor-webapp.1"`, `body="gor-webapp-custom"`, and `body="gor-webapp" && country="DE"` returned 0. `body="Statis Sans" && title="GENESIS-Online"` and `body="sequenz=statistikTabellen"` returned 0. `body="gor-webapp"` alone is 4 unrelated hosts (`rutasdemoteros.es`, `show.kostecky.cz`). `body="searchInputRoot"` is 3 unrelated sites. Live `/datenbank/online` pages on Regionalstatistik, the NRW Landesdatenbank, and the education monitor still serve `gor-webapp`.
+
+These are not usable as the catalog query. `body="GENESIS-Online"` and `body="/genesis/online"` both returned 435, and `body="GENESIS-Online" && country="DE"` returned 159: office homepages, Datenguide (`datengui.de` and `ernte-teilen.org` vhosts), API wrappers, and other brands. `title="GENESIS-Online"` is 23 and is mostly games and schools (`silkroadgenesis.com`, `genesisonlineschool.com`, `star-genesis.com`), plus the Destatis links page. `body="genesisclient"` is 6 (bioinformatics and a fintech site), so drop that token. `body="Gemeinsames Neues Statistisches Informations-System"` is 0. `body="operation=themes"` is 41 and includes unrelated hosts; `body="GENESIS-Online" && body="operation=themes"` is 30 and adds link-out pages (`statistik.thueringen.de`, `mobilitydatamap.iis.fraunhofer.de`), not extra installations. `body="genesisonline"` is 34 and includes the Baden-Württemberg office homepage plus unrelated sites. `body="OpenSearch_de.xml"` is 2,016. `body="datenbank/online"` is 241. `host="genesis" && country="DE"` is 837 and `cert="genesis" && country="DE"` is 636 (CAS genesisWorld, the car brand, and other agencies).
 
 | Tool | Query |
 |------|-------|
 | Google | `"GENESIS-Online" (Statistik OR Destatis) site:.de` |
 | Google | `inurl:/genesis/online` |
-| Censys | `web.endpoints.http.body: "GENESIS-Online"` |
-| FOFA | `body="GENESIS-Online"` |
+| Censys | `web.endpoints.http.body: "genesis-online.css"` |
+| FOFA | `body="genesis-online.css"` |
+| Censys | `web.endpoints.http.body: "recherchehilfe.js"` |
+| FOFA | `body="recherchehilfe.js"` |
 
 ## IBIS-PH (`ibisph`) {#ibisph}
 
@@ -592,19 +802,84 @@ US state public-health indicator system. Community: [Adopt IBIS](https://ibis.ut
 | Censys | `web.endpoints.http.body: "ibisph"` |
 | FOFA | `body="ibisph"` |
 
-## Fingertips (`fingertips`) {#fingertips}
+## Envista Web (`envista`) {#envista}
 
-OHID public health profiles for England. Hub: [fingertips.phe.org.uk](https://fingertips.phe.org.uk/). API docs: [Fingertips API](https://fingertips.phe.org.uk/profile/guidance/supporting-information/api).
+Envitech public air-quality and environmental monitoring sites. Product: [Envista Web](https://www.envitechsoftware.com/Software). Flagship in this registry: [SAAQIS](https://saaqis.environment.gov.za/). The desktop Envista ARM client is not a catalog.
 
-**Signals:** host `fingertips.phe.org.uk`; title “Fingertips”; REST `/api/profiles`.
+**Signals:** script `/scripts/layers/envitechIndex/envitechIndex.js`; `/Scripts/utils/Kendo/KendoSettingsOverride.js`; API path `v1/envista`. Asset query `v=3.24x.16.*` matches the Envista ARM Web revision series and changes between builds.
 
-**Confirm:** GET `/api/profiles` JSON or the public profiles home. One national hub — do **not** add a catalog per local authority or per profile. Distinct from IBIS-PH, Power BI embeds, and InstantAtlas reports.
+**Confirm:** GET the public station home and match `envitechIndex.js`. One record per agency network, not per station or hourly measurement. A page that only loads Kendo UI is not Envista. Skip the Envitech marketing site.
 
 | Tool | Query |
 |------|-------|
+| Google | `"envitechIndex.js" OR "KendoSettingsOverride.js" air quality` |
+| Google | `"v1/envista" (AQI OR "air quality" OR stations)` |
+| Censys | `web.endpoints.http.body: "envitechIndex.js"` |
+| FOFA | `body="envitechIndex.js"` |
+| Censys | `web.endpoints.http.body: "KendoSettingsOverride.js"` |
+| FOFA | `body="KendoSettingsOverride.js"` |
+| FOFA | `body="v1/envista"` |
+
+## Fingertips (`fingertips`) {#fingertips}
+
+OHID public health profiles for England. Hub: [fingertips.phe.org.uk](https://fingertips.phe.org.uk/). API docs: [Fingertips API](https://fingertips.phe.org.uk/profile/guidance/supporting-information/api). The home page sets `FT.url.corews` to [fingertipsws.phe.org.uk](https://fingertipsws.phe.org.uk/), which returns the same `/api/profiles` JSON. That host is the API of this hub.
+
+**Signals:** stylesheet `/css-fingertips`, script `/js-fingertips1`, classes `app-masthead-fingertips` and `app-width-container-fingertips`; title `Fingertips | Department of Health and Social Care`; REST `/api/profiles`.
+
+**Confirm:** GET `/api/profiles` JSON (profile `Id`, `Name`, `Key`) or the public profiles home. One national hub — do **not** add a catalog per local authority or per profile. Skip the bare-IP “Fingertips CMS - Login” shell. Distinct from IBIS-PH, Power BI embeds, and InstantAtlas reports.
+
+Checked 24 September 2026. `body="css-fingertips"` is 3 rows: `fingertips.phe.org.uk` on ports 80 and 443, plus `172.187.234.240:8081` (title “Fingertips CMS - Login”, no domain; connect timeout, login shell). `body="js-fingertips1"`, `body="app-masthead-fingertips"`, `body="app-width-container-fingertips"`, `body="fingertipsws.phe.org.uk"`, and `title="Fingertips | Department of Health and Social Care"` are 2 rows, both the public hub. `host="fingertipsws"` is 1 (`fingertipsws.phe.org.uk`). `host="fingertips.phe.org.uk"` is 3 and only restates that hub.
+
+These strings are not usable as instance queries: `title="Fingertips"` (9,871 hosts, the idiom “at your fingertips”), `body="fingertips-title"` (7,339; FOFA splits the hyphen), `host="fingertips"` (640, including `*.fingertips.alarislabs.com` and `fingertips.kr`), `body="FT.url"` (444), `body="js-fingertips"` and `body="/js-fingertips"` (4, including Jean Yip salon admin hosts whose live HTML does not contain that path — prefer `js-fingertips1`), `cert="fingertips"` (27 company sites; `cert="fingertips.phe.org.uk"` is 0), `body="corews"` (94), `body="Public health profiles"` (28, including ScotPHO and the Leeds Observatory), and `body="Fingertips CMS"` (2, including `www.aspey-lawrence.co.uk`). `host="fingertips" && country="GB"` is 11 and adds `fingertips.org.uk` (Myth:Auth login) and `fingertips.online`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"css-fingertips" OR "js-fingertips1" OR "app-masthead-fingertips"` |
 | Google | `"Fingertips" ("public health profiles" OR OHID) site:phe.org.uk` |
-| Censys | `web.names: "fingertips.phe.org.uk"` |
-| FOFA | `host="fingertips.phe.org.uk"` |
+| Censys | `web.endpoints.http.body: "css-fingertips"` |
+| FOFA | `body="css-fingertips"` |
+| Censys | `web.endpoints.http.body: "js-fingertips1"` |
+| FOFA | `body="js-fingertips1"` |
+| Censys | `web.endpoints.http.body: "app-masthead-fingertips"` |
+| FOFA | `body="app-masthead-fingertips"` |
+| FOFA | `body="app-width-container-fingertips"` |
+| FOFA | `title="Fingertips \| Department of Health and Social Care"` |
+| FOFA | `host="fingertipsws"` |
+
+## Nomis (`nomis`) {#nomis}
+
+ONS official labour market and census statistics service, run under contract by Durham University. Hub: [www.nomisweb.co.uk](https://www.nomisweb.co.uk/). API help: [Nomis API](https://www.nomisweb.co.uk/api/v01/help). Use `software.id: nomis`.
+
+**Signals:** host `www.nomisweb.co.uk`; title `Nomis - Official Census and Labour Market Statistics`; REST `/api/v01/dataset/def.sdmx.json` returns the SDMX-JSON dataset list with sender `NOMIS`.
+
+**Confirm:** GET `/api/v01/dataset/def.sdmx.json` (header sender id `NOMIS`). One national hub — do **not** add a catalog per dataset or per geography. Distinct from the ONS website (ons.gov.uk), from NISRA and StatsWales products, and from Power BI or InstantAtlas labour-market dashboards.
+
+Checked 28 September 2026. `host="www.nomisweb.co.uk"` restates the single hub; branded look-alikes are third-party sites embedding Nomis tables, not instances.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Nomis" "Official Census and Labour Market Statistics"` |
+| Google | `site:nomisweb.co.uk "api/v01"` |
+| Censys | `web.endpoints.http.body: "support@nomisweb.co.uk"` |
+| FOFA | `body="support@nomisweb.co.uk"` |
+| FOFA | `title="Nomis - Official Census and Labour Market Statistics"` |
+
+## StatsWales (`statswales`) {#statswales}
+
+Welsh Government official statistics dissemination service. Hub: [statswales.gov.wales](https://statswales.gov.wales/). Public API (OAS 3.1): [api.stats.gov.wales/v1](https://api.stats.gov.wales/v1/docs/). Use `software.id: statswales`.
+
+**Signals:** host `statswales.gov.wales`; bilingual English/Welsh catalog chrome; API docs at `api.stats.gov.wales/v1/docs`.
+
+**Confirm:** GET `https://api.stats.gov.wales/v1/datasets` (list of published datasets) or the bilingual catalog home. One national hub — do **not** add a catalog per topic or per dataset. The legacy OData service on `open.statswales.gov.wales` was retired in August 2024; do not add it as an instance. Distinct from InfoBaseCymru local authority profiles.
+
+Checked 28 September 2026. `host="statswales.gov.wales"` and `host="api.stats.gov.wales"` restate the single hub and its API.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:statswales.gov.wales "Catalogue"` |
+| Google | `"StatsWales" "api.stats.gov.wales"` |
+| FOFA | `host="statswales.gov.wales"` |
+| FOFA | `host="api.stats.gov.wales"` |
 
 ## DHIS2 (`dhis2`) {#dhis2}
 
@@ -700,6 +975,55 @@ FAO’s open-source statistical dissemination stack (D3S / ChaplinJS UIs). Flags
 
 **False positives:** FAOSTAT API host as a second catalog (it belongs on the FAOSTAT record); ingested CountrySTAT tables on `data.apps.fao.org`; training PDFs; GitHub UI repos with no public catalog.
 
+## FPMA Tool (`fpmatool`) {#fpmatool}
+
+FAO GIEWS Food Price Monitoring and Analysis Tool, version 4. Global instance: [fpma.fao.org/giews/fpmat4/global/](https://fpma.fao.org/giews/fpmat4/global/). National instances run on FAO hosts (`fpma.fao.org/giews/fpmat4/{iso3}/`, `fpma.review.fao.org/giews/fpmat4/{iso3}/`) or on national statistical-office and agriculture-ministry sites (Kyrgyzstan, Tajikistan, Uzbekistan, El Salvador, Guatemala are in the registry).
+
+**Signals:** URL path `/giews/fpmat4/`; “Food Price Monitoring and Analysis (FPMA) Tool” branding with the GIEWS logo; country/market/commodity selector with monthly price charts.
+
+**Confirm:** public price dashboard loads with selectable markets and commodities and CSV/Excel download. Use `software.id: fpmatool`. One record per country instance.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Food Price Monitoring and Analysis" tool (GIEWS OR FAO) -site:fao.org` |
+| Google | `inurl:/giews/fpmat4/` |
+| Censys | `web.endpoints.http.body: "fpmat4"` |
+| FOFA | `body="fpmat4"` |
+
+**False positives:** FAOSTAT and other FENIX-family FAO apps (use `fenix`); GIEWS country briefs and price-analysis PDF reports; WFP VAM price tools (different stack).
+
+## Global Cancer Observatory (`gco`) {#gco}
+
+IARC/WHO cancer indicators platform (GLOBOCAN). Mirrored on [gco.iarc.fr](https://gco.iarc.fr) and [gco.iarc.who.int](https://gco.iarc.who.int); tools include Cancer Today, Cancer Tomorrow, and Cancer Over Time.
+
+**Signals:** GCO branding with IARC/WHO logos; `/today/`, `/tomorrow/`, `/overtime/` tool paths on `gco.iarc.*` hosts; "Global Cancer Observatory" title.
+
+**Confirm:** public Cancer Today data table loads with country and cancer-type selectors. Use `software.id: gco`. One record per GCO host or tool scope; do not add each cancer-type page.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Global Cancer Observatory" (GLOBOCAN OR "Cancer Today")` |
+| Censys | `web.names: "gco.iarc.fr" OR web.names: "gco.iarc.who.int"` |
+| FOFA | `body="Global Cancer Observatory"` |
+
+**False positives:** IARC publications portal; CanScreen5 (separate IARC screening repository); national cancer registries that only cite GLOBOCAN numbers.
+
+## BRS Electronic Reporting System Dashboards (`brsers`) {#brsers}
+
+Basel, Rotterdam and Stockholm Conventions national-report dashboards, one eRSodataReports app per convention. Live instances: [Basel](https://ers.basel.int/eRSodataReports2/ReportBC_DashBoard.html) and [Stockholm](https://ers.pops.int/eRSodataReports2/ReportSC_DashBoard.html).
+
+**Signals:** URL path `/eRSodataReports2/` with `Report{BC,SC}_DashBoard.html`; "Electronic Reporting System" branding on `ers.*.int` hosts.
+
+**Confirm:** public dashboard loads with year/region/country filters and Excel export. Use `software.id: brsers`. One record per convention dashboard.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:eRSodataReports2` |
+| Censys | `web.endpoints.http.body: "eRSodataReports"` |
+| FOFA | `body="eRSodataReports"` |
+
+**False positives:** convention main sites (basel.int / pops.int homepages are not data catalogs); PIC Rotterdam Convention pages without the eRS dashboard.
+
 ## SuperSTAR / SuperWEB2 (`superstar`) {#superstar}
 
 WingArc Australia SuperSTAR suite (formerly Space-Time Research). The public catalog UI is **SuperWEB2**. Use `software.id: superstar`. Do not confuse with STR (CoStar) hotel SuperSTAR.
@@ -724,9 +1048,13 @@ WingArc Australia SuperSTAR suite (formerly Space-Time Research). The public cat
 
 Legacy ASP.NET cube browser (Beyond 20/20 Inc., Ottawa). Public catalogs expose a **report-folder tree**, not a REST list API. Vendor: [beyond2020.com/web-data-server](https://www.beyond2020.com/web-data-server/). Live public examples: [JODI World Database](http://www.jodidb.org), [IES Castilla-La Mancha](https://difusion.jccm.es/wds/).
 
-**Signals:** HTML title `Beyond 20/20 WDS`; paths `/ReportFolders/reportFolders.aspx`, `/TableViewer/tableView.aspx`; `Common/Images/wds.gif`; language-selection page with the Beyond 20/20 logo; IVT downloads.
+**Signals:** HTML title `Beyond 20/20 WDS`; language-selection page assets `Common/Images/biglogo125.gif`, `WDS.resources.js`, `Common/Styles/Style_NS.css`, `initWdsFormObj`; paths `/ReportFolders/reportFolders.aspx`, `/TableViewer/tableView.aspx`; reports-page logo `Common/Images/wds.gif`; IVT downloads.
 
-**Confirm:** GET the language page or `ReportFolders/reportFolders.aspx` without login. One catalog per public WDS **installation** (the folder tree), not per `ReportId`. Skip Crime Insight / Perspective (`*.beyond2020.com` NIBRS tenants), OSFI `osfi.beyond2020.com` (self-registration), IEA `wds.iea.org` (login; product retired for public data), and Statistics Canada’s unrelated **Web Data Service** REST API.
+**Confirm:** GET the language page or `ReportFolders/reportFolders.aspx` without login. One catalog per public WDS **installation** (the folder tree), not per `ReportId`. Skip Crime Insight / Perspective (`*.beyond2020.com` NIBRS tenants), OSFI `osfi.beyond2020.com` (self-registration), the vendor demo `wds.beyond2020.com`, IEA `wds.iea.org` (login; product retired for public data), and Statistics Canada’s unrelated **Web Data Service** REST API.
+
+Checked 24 September 2026. FOFA indexes the **language-selection page**, not the reports page. That page titles itself `Beyond 20/20 WDS - Language Selection` and loads `biglogo125.gif`, `WDS.resources.js`, `Common/Styles/Style_NS.css`, and `initWdsFormObj` (`UILangRedirect` is the same page). Each of those queries, and `title="Beyond 20/20 WDS"`, returned the same 5 rows: `wds.beyond2020.com`, bare IP `54.217.191.97`, `tradestats.thedti.gov.za`, and `www.jodidb.org` (scheme duplicates). Subpath installs such as `difusion.jccm.es/wds/` are absent from that set.
+
+`title="Beyond 20/20 WDS - Reports"`, `body="Common/Images/wds.gif"`, `body="wdsAPI.js"`, and `js_name="WDS.resources.js"` returned 0: those strings live on the reports page. `body="ReportFolders/reportFolders.aspx"` matched 16 hosts that **link** the path (`jodidata.org`, `thedtic.gov.za`, `estadistica.castillalamancha.es`, blogs, `osfi.beyond2020.com`), so use it to find a parent page and then open the installation URL. These are not usable as the catalog query: `body="wds.gif"` (92 unrelated hosts), `body="tableView.aspx"` (37, blogs and other ASP.NET apps), `body="G_strLanguage"` (28,441, Yealink phones), `title="Beyond 20/20"` (23, mostly optometry), `body="Beyond 20/20 Inc."` (Crime Insight marketing; the reports-page generator meta matched 0), and `domain="beyond2020.com"` (99: Crime Insight, Perspective, and SIDEARM Sports, plus the vendor WDS host).
 
 | Tool | Query |
 |------|-------|
@@ -735,10 +1063,14 @@ Legacy ASP.NET cube browser (Beyond 20/20 Inc., Ottawa). Public catalogs expose 
 | Google | `"Beyond 20/20 WDS - Table view"` |
 | Censys | `web.endpoints.http.html_title: "Beyond 20/20 WDS"` |
 | FOFA | `title="Beyond 20/20 WDS"` |
+| Censys | `web.endpoints.http.body: "biglogo125.gif"` |
+| FOFA | `body="biglogo125.gif"` |
+| Censys | `web.endpoints.http.body: "WDS.resources.js"` |
+| FOFA | `body="WDS.resources.js"` |
 | Censys | `web.endpoints.http.body: "ReportFolders/reportFolders.aspx"` |
 | FOFA | `body="ReportFolders/reportFolders.aspx"` |
 
-**False positives:** Beyond 20/20 Professional Browser / IVT file downloads with no WDS UI; Crime Insight; vendor marketing; login-only WDS; UNCTADstat `/wds/` redirects (now Data Centre); UNESCO UIS Data Browser (migrated off WDS).
+**False positives:** Beyond 20/20 Professional Browser / IVT file downloads with no WDS UI; Crime Insight; SIDEARM Sports (`sidearm.beyond2020.com`, a different “Beyond 2020”); vendor demo `wds.beyond2020.com` (sample cubes under “This is the new server WDS01”); bare IPs with an empty tree; login-only WDS; UNCTADstat `/wds/` redirects (now Data Centre); UNESCO UIS Data Browser (migrated off WDS).
 
 ## StatPlanet (`statplanet`) {#statplanet}
 
@@ -748,7 +1080,7 @@ StatSilk interactive maps and dashboards (StatPlanet Cloud / HTML5, older Flash)
 
 **Confirm:** GET the dashboard HTML and a public `data.csv` (or SDMX-backed Cloud instance). One record per public explorer, not per indicator or per `*-StatTrends.html` file on the same host.
 
-[StatPlanet_Cloud.html](https://github.com/StatSilk/StatPlanet/blob/master/StatPlanet_Cloud.html) sets `id="statsilk-container"` (5 hosts in September 2026, including `unicefdashboard.netlify.app` and `statplanet.itcloud.pt`). The same file writes `StatPlanet Cloud` (4 hosts, all `statplanet.itcloud.pt`). `title="StatPlanet"` matched 7; three of those rows are `statplanet.org`, a business site titled “Statplanet — Premium Business”, not a StatSilk dashboard.
+[StatPlanet_Cloud.html](https://github.com/StatSilk/StatPlanet/blob/master/StatPlanet_Cloud.html) sets `id="statsilk-container"` (5 hosts in September 2026, including `unicefdashboard.netlify.app` and `statplanet.itcloud.pt`). The same file writes `StatPlanet Cloud` (4 hosts, all `statplanet.itcloud.pt`). `title="StatPlanet"` matched 7; three of those rows are `statplanet.org`, a business site titled “Statplanet — Premium Business”, not a StatSilk dashboard. `body="statplanet-cloud.js"` and `body="js/splashscreen.css"` only hit `statplanet.itcloud.pt` (the stock ICT sample). `body="cloud.statsilk.com"` is the public tenant bucket index, not a catalog homepage. Keep `body="statsilk-container"`.
 
 | Tool | Query |
 |------|-------|
@@ -797,7 +1129,7 @@ Salesforce Tableau as the interactive statistics layer of an indicators portal �
 
 ## Microsoft SharePoint (`sharepoint`) {#sharepoint}
 
-Statistics/indicator sections published on Microsoft SharePoint sites (ministries, central banks, planning agencies) instead of a data platform.
+Statistics/indicator sections published on Microsoft SharePoint sites (ministries, central banks, planning agencies) instead of a data platform. The same id covers open-data catalog pages on SharePoint, including Spanish ministry sedes and university catalogs.
 
 **Signals:** `<meta name="GENERATOR" content="Microsoft SharePoint">`; `/_layouts/15/`; `.aspx` pages with SharePoint chrome; `Authenticate.aspx` references.
 
@@ -1251,6 +1583,22 @@ Central-bank macroeconomic warehouse. Site: [datawarehousepro.com](https://dataw
 | FOFA | `body="DataWarehousePro"` |
 | crt.sh | `%.datawarehousepro.com` |
 
+## LiveShop (`liveshop`) {#liveshop}
+
+Central-bank / monetary-institute statistics database on the tenant's own domain. Known tenants: [statistics.cbn.gov.ng](https://statistics.cbn.gov.ng) (Central Bank of Nigeria), [wami-data.org](https://wami-data.org) (West African Monetary Institute). No first-party vendor site is known.
+
+**Signals:** HTML title `Home Page - LiveShop`; `/shop` landing page with `/shop/meta-data` and `/shop/data-calendar`; `/data-browser` chart/table view; ASP.NET layout with `/lib/bootstrap/dist/...` asset paths.
+
+**Confirm:** GET `/` and `/shop` — title must be `Home Page - LiveShop`. Distinct from DataWarehousePro (`datawarehousepro`), which hosts tenants on the vendor domain `app.datawarehousepro.com/go/{tenant}`. One record per institutional tenant.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Home Page - LiveShop"` |
+| Google | `inurl:"shop/meta-data" (statistics OR "data browser")` |
+| Censys | `web.endpoints.http.body: "Home Page - LiveShop"` |
+| FOFA | `body="Home Page - LiveShop"` |
+| FOFA | `title="LiveShop"` |
+
 ## IMF National Summary Data Page (`imfnsdp`) {#imfnsdp}
 
 IMF e-GDDS / SDDS / SDDS Plus National Summary Data Page hosted by an NSO or central bank. Hub: [dsbb.imf.org](https://dsbb.imf.org). Distinct from Knoema (`knoema`) and WordPress (`wordpress`) sites that only wrap an NSDP, and from a whole NSO homepage that happens to link to one.
@@ -1270,7 +1618,7 @@ IMF e-GDDS / SDDS / SDDS Plus National Summary Data Page hosted by an NSO or cen
 
 Data Act Lab SDG country platforms. Site: [goaltracker.org](https://goaltracker.org). Distinct from Open SDG (`opensdg`).
 
-**Signals:** title `Goal Tracker`; header classes `bg-goals-1` … `bg-goals-17` (the 17-stripe SDG bar). Current Strapi builds also embed `hasOwnData` on each indicator. Tenant HTML does not contain “Data Act Lab”. `host="goaltracker"` matches unrelated goal-tracking apps.
+**Signals:** title `Goal Tracker`; header classes `bg-goals-1` … `bg-goals-17` (the 17-stripe SDG bar). Current Strapi builds also embed `hasOwnData` on each indicator. Tenant HTML does not contain “Data Act Lab”, so `body="Data Act Lab"` returned 0 (24 September 2026). `body="gt-heading-v6-latin"`, `body="api.goaltracker.org"`, `body="calc(100% / 17)"`, and `body="available_indicators"` also returned 0. `body="giorgio-sans-bold.woff2"` and `body="dataAvailabilityDescription"` are noisy. `host="goaltracker"` matches unrelated goal-tracking apps.
 
 **Confirm:** GET the country tenant home. Keep the record only when the page JSON lists indicators that have data (`hasData` / `hasOwnData`, or a non-empty `data` series). One record per country site. Skip the vendor marketing page (`goaltracker.org`, `test.goaltracker.org`), Strapi admin (`*.api.goaltracker.org`), and `401` hosts.
 
@@ -1986,6 +2334,71 @@ Vendor-operated single-tenant SaaS. Site: [china-data-online.com](https://china-
 |------|-------|
 | Google | `site:china-data-online.com (数据 OR 指标 OR 数据库)` |
 | FOFA | `domain="china-data-online.com" \|\| domain="chinadatacenter.umich.edu"` |
+
+## Cascade CMS (`cascadecms`) {#cascadecms}
+
+Hannon Hill Cascade CMS, used by US state agencies and universities to publish indicator and data pages. Product: [hannonhill.com/products/cascade-cms](https://www.hannonhill.com/products/cascade-cms/index.html).
+
+**Signals:** template comments `<system-region name="CAROUSEL"/>`; state labor-market sites share `_files/css`, `_files/js`, `news-gallery.js`, and `random-background.js`.
+
+**Confirm:** the system-region comment or that shared `_files` layout on a public indicator or data page. One host = one catalog. Do not assign `cascadecms` to a page that only links out to a Cascade site, or to a custom data application that does not carry the CMS template.
+
+| Tool | Query |
+|------|-------|
+| Google | `"system-region" Cascade (LMI OR statistics OR indicators)` |
+| Google | `inurl:_files/js "news-gallery.js"` |
+| Censys | `web.endpoints.http.body: "system-region name=\"CAROUSEL\""` |
+| FOFA | `body="system-region name=\"CAROUSEL\""` |
+
+## DesInventar (`desinventar`) {#desinventar}
+
+UNDRR disaster loss and damage database methodology and software. Global hub: [desinventar.net](https://www.desinventar.net) (DesInventar Sendai). National installations are typically ministry or disaster-management agency hosts, e.g. CamDi at [camdi.ncdm.gov.kh/DesInventar/main.jsp](https://camdi.ncdm.gov.kh/DesInventar/main.jsp).
+
+**Signals:** path `/DesInventar/main.jsp` (classic Java webapp); title or body "DesInventar" with "disaster loss" / "Sendai" wording; UNDRR / UNDRR DesInventar Sendai branding; country-coded database profiles.
+
+**Confirm:** GET the public query page (`main.jsp` or the Sendai web system) and check it serves a named national disaster loss inventory. One catalog per country database host.
+
+**False positives:** Sendai Framework Monitor (`sendaimonitor.undrr.org`, a separate UNDRR product, registered on its own); academic papers and NGO reports that merely cite DesInventar data; EM-DAT.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/DesInventar/main.jsp` |
+| Google | `"DesInventar" ("disaster loss" OR "damage and loss") database` |
+| Censys | `web.endpoints.http.body: "DesInventar"` |
+| FOFA | `body="/DesInventar/main.jsp"` |
+| FOFA | `title="DesInventar"` |
+
+## SORMAS (`sormas`) {#sormas}
+
+Open-source disease surveillance and outbreak response platform (SORMAS Foundation, GPL-3.0). National deployments are run by ministries of health — e.g. Nepal EDCD at [analysis.edcd.gov.np/bulletin](https://analysis.edcd.gov.np/bulletin). Registered catalogs are the **public dashboards/bulletins** a deployment chooses to publish, not the staff-facing case-management app. Docs and code: [github.com/SORMAS-Foundation/SORMAS-Project](https://github.com/SORMAS-Foundation/SORMAS-Project). Use `software.id: sormas`.
+
+**Signals:** "SORMAS" branding on a login page or public bulletin; paths `/sormas-ui/`, `/sormas-rest/`; ministry of health / epidemiology division hosts publishing weekly counts of outbreak-prone diseases (AGE, SARI, dengue) by district.
+
+**Confirm:** the public dashboard or bulletin loads without login and shows disease counts by administrative unit. Skip staff-only surveillance logins with no public data surface — most SORMAS deployments publish nothing anonymous. One catalog per public dashboard host, not per disease module.
+
+| Tool | Query |
+|------|-------|
+| Google | `"SORMAS" (dashboard OR bulletin OR "public") (surveillance OR outbreak) site:gov.*` |
+| Google | `inurl:/sormas-ui OR inurl:/sormas-rest` |
+| Censys | `web.endpoints.http.body: "sormas-ui"` |
+| FOFA | `body="sormas-ui"` |
+
+## BOOST (`boost`) {#boost}
+
+World Bank BOOST open-budget portals: country-owned fiscal transparency sites publishing line-item expenditure/revenue extracted from national FMIS systems (90+ country engagements since 2010). Product page: [worldbank.org/en/programs/boost-portal](https://www.worldbank.org/en/programs/boost-portal). Registered instances: Paraguay [boostvep.mef.gov.py](https://boostvep.mef.gov.py/gastos_anual/), Cameroon [boostcameroon.cm](https://www.boostcameroon.cm/), Mauritania [boost.budget.mr](http://boost.budget.mr/), Tunisia Mizaniatouna [mizaniatouna.gov.tn](http://www.mizaniatouna.gov.tn/tunisia/template_fr/).
+
+**Signals:** “BOOST” branding in the page title or footer; finance-ministry hosts; paths like `/gastos_anual/`, `/fichiersBoost/`; JS globals `boost.boost_options` and `boost-pivot`; interactive pivot tables of budget execution with CSV/Excel download.
+
+**Confirm:** the public pivot/download UI loads without login and shows budget expenditure or revenue tables with a CSV/Excel export. One catalog per country portal. Skip the World Bank BOOST program pages and the WB-hosted Open Budgets Portal itself — those are program/documentation surfaces, not country catalogs.
+
+| Tool | Query |
+|------|-------|
+| Google | `"BOOST" (budget OR gastos OR dépenses) (finance OR hacienda) (pivot OR download) -site:worldbank.org` |
+| Google | `inurl:boost (budget OR finance OR gastos) site:gov.*` |
+| Google | `"boost-pivot" OR "boost_options"` |
+| Censys | `web.endpoints.http.body: "boost_options"` |
+| FOFA | `body="boost-pivot"` |
+| FOFA | `body="boost_options"` |
 
 ## Related
 

@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 30
+    subregion:
+      id: CN-JS
+      name: Jiangsu Sheng
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: ArcGIS REST services for Kunshan map folders.
+id: treasttranscn
+langs:
+- id: ZH
+  name: Chinese
+link: https://tr.easttrans.cn:16443/arcgis/rest/services
+name: Easttrans Kunshan ArcGIS Services
+owner:
+  link: https://tr.easttrans.cn:16443/
+  location:
+    country:
+      id: CN
+      name: China
+    level: 30
+    subregion:
+      id: CN-JS
+      name: Jiangsu Sheng
+  name: Easttrans
+  type: Business
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- china
+- commercial
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009143
+endpoints:
+- type: arcgis:rest:services
+  url: https://tr.easttrans.cn:16443/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://tr.easttrans.cn:16443/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://tr.easttrans.cn:16443/arcgis/rest/services?f=sitemap

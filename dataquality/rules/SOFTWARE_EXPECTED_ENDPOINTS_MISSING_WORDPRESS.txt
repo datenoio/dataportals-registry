@@ -1,81 +1,79 @@
 DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Priority: MEDIUM
-Total Issues Found: 32
+Total Issues Found: 40
 
 Rule: Identifies records using software.id='wordpress' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
 
 === SUMMARY BY COUNTRY ===
 
-AE: 1 issue
-AR: 1 issue
 ASEAN: 1 issue
-CH: 1 issue
-CL: 1 issue
-CO: 2 issues
+BR: 1 issue
+CA: 1 issue
+CD: 1 issue
+CO: 1 issue
+DE: 4 issues
 DK: 1 issue
+ES: 2 issues
 FR: 2 issues
+IN: 1 issue
+JP: 1 issue
 MX: 2 issues
-NP: 1 issue
-PE: 1 issue
-PH: 1 issue
+MY: 1 issue
 PK: 4 issues
+PL: 1 issue
 PT: 1 issue
 SE: 1 issue
-SK: 1 issue
 SV: 1 issue
-TH: 1 issue
-TT: 1 issue
-US: 4 issues
-UZ: 1 issue
+US: 11 issues
 World: 2 issues
 
 === SUMMARY BY RECORD ===
 
-nbssk: 1 issue
 statistiketikprovningsansokanse: 1 issue
 mc2020pbosgovpk: 1 issue
 tradedatagovpk: 1 issue
 economicdatagovpk: 1 issue
 nadatagovpk: 1 issue
-nsdgstatuz: 1 issue
-siniaminamgobpe: 1 issue
-ofmwagov: 1 issue
-lmidelawaregov: 1 issue
+infomxrdricmedupl: 1 issue
+wwwrouteviewsorg: 1 issue
+barroleecom: 1 issue
+genelabnasagov: 1 issue
+visibleearthnasagov: 1 issue
+aesepsuedu: 1 issue
+wwwcalipsolarcnasagov: 1 issue
+ogdcucsdedu: 1 issue
+trmmgsfcnasagov: 1 issue
+catenabgcbardedu: 1 issue
 mcdcmissouriedu: 1 issue
 dataneighborhoodnexusorg: 1 issue
 estadisticasbcrgobsv: 1 issue
-cssrakae: 1 issue
-statisticaluganochsite: 1 issue
-oabambientebogotagovco: 1 issue
+wwwndrdghgovin: 1 issue
 indicadorescaligovco: 1 issue
-ci5iarcwhoint: 1 issue
+wwwiisdorg: 1 issue
 emberenergyorg: 1 issue
+repositorytopdownproteomicsorg: 1 issue
 dataaseanstatsorg: 1 issue
 sreaazoresgovpt: 1 issue
-datadswdgovph: 1 issue
-ipiectierradelfuegogobar: 1 issue
-nrborgnpdatabaseonnepaleseeconomy: 1 issue
+cpedbmardigovmy: 1 issue
 mapadigitalmichoacangobmxindicador: 1 issue
 iieggobmx: 1 issue
+geoportalvgde: 1 issue
+geoportalbbvdeutschlandde: 1 issue
+opendataiisysde: 1 issue
+humanitiesdatacentrede: 1 issue
 statistikselvmordsforskningdk: 1 issue
-statistiquesmsafr: 1 issue
-widworld: 1 issue
-chileagenda2030gobcl: 1 issue
-csogovtt: 1 issue
-sdgdashboardnesdcgoth: 1 issue
+observatorioalgovbr: 1 issue
+caidcd: 1 issue
+wwwlexiqueorg: 1 issue
+bipaagenouestorg: 1 issue
+236wsdpteruelestransparenciadpteruelopendatabuscad: 1 issue
+evolclustdborg: 1 issue
+datacongrantjp: 1 issue
 
 === ISSUES ===
-
-File: SK/Federal/indicators/nbssk.yaml
-Record ID: nbssk
-Country: SK
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
-Field: endpoints
-Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
-Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
 File: SE/Federal/indicators/statistiketikprovningsansokanse.yaml
 Record ID: statistiketikprovningsansokanse
@@ -117,32 +115,80 @@ Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
 Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: UZ/Federal/indicators/nsdgstatuz.yaml
-Record ID: nsdgstatuz
-Country: UZ
+File: PL/Federal/scientific/infomxrdricmedupl.yaml
+Record ID: infomxrdricmedupl
+Country: PL
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
 Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: PE/Federal/indicators/siniaminamgobpe.yaml
-Record ID: siniaminamgobpe
-Country: PE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
-Field: endpoints
-Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
-Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
-
-File: US/US-WA/indicators/ofmwagov.yaml
-Record ID: ofmwagov
+File: US/US-OR/scientific/wwwrouteviewsorg.yaml
+Record ID: wwwrouteviewsorg
 Country: US
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
 Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: US/US-DE/indicators/lmidelawaregov.yaml
-Record ID: lmidelawaregov
+File: US/Federal/indicators/barroleecom.yaml
+Record ID: barroleecom
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: US/Federal/scientific/genelabnasagov.yaml
+Record ID: genelabnasagov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: US/Federal/scientific/visibleearthnasagov.yaml
+Record ID: visibleearthnasagov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: US/Federal/scientific/aesepsuedu.yaml
+Record ID: aesepsuedu
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: US/Federal/scientific/wwwcalipsolarcnasagov.yaml
+Record ID: wwwcalipsolarcnasagov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: US/Federal/scientific/ogdcucsdedu.yaml
+Record ID: ogdcucsdedu
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: US/Federal/scientific/trmmgsfcnasagov.yaml
+Record ID: trmmgsfcnasagov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: US/Federal/scientific/catenabgcbardedu.yaml
+Record ID: catenabgcbardedu
 Country: US
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Field: endpoints
@@ -173,25 +219,9 @@ Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
 Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: AE/AE-RK/indicators/cssrakae.yaml
-Record ID: cssrakae
-Country: AE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
-Field: endpoints
-Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
-Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
-
-File: CH/CH-TI/indicators/statisticaluganochsite.yaml
-Record ID: statisticaluganochsite
-Country: CH
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
-Field: endpoints
-Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
-Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
-
-File: CO/CO-DC/indicators/oabambientebogotagovco.yaml
-Record ID: oabambientebogotagovco
-Country: CO
+File: IN/Federal/scientific/wwwndrdghgovin.yaml
+Record ID: wwwndrdghgovin
+Country: IN
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
@@ -205,9 +235,9 @@ Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
 Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: World/indicators/ci5iarcwhoint.yaml
-Record ID: ci5iarcwhoint
-Country: World
+File: CA/Federal/scientific/wwwiisdorg.yaml
+Record ID: wwwiisdorg
+Country: CA
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
@@ -215,6 +245,14 @@ Suggested Action: Add at least one endpoint because software.id='wordpress' is m
 
 File: World/indicators/emberenergyorg.yaml
 Record ID: emberenergyorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: World/Federal/scientific/repositorytopdownproteomicsorg.yaml
+Record ID: repositorytopdownproteomicsorg
 Country: World
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Field: endpoints
@@ -237,25 +275,9 @@ Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
 Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: PH/Federal/opendata/datadswdgovph.yaml
-Record ID: datadswdgovph
-Country: PH
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
-Field: endpoints
-Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
-Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
-
-File: AR/AR-V/indicators/ipiectierradelfuegogobar.yaml
-Record ID: ipiectierradelfuegogobar
-Country: AR
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
-Field: endpoints
-Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
-Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
-
-File: NP/Federal/indicators/nrborgnpdatabaseonnepaleseeconomy.yaml
-Record ID: nrborgnpdatabaseonnepaleseeconomy
-Country: NP
+File: MY/Federal/scientific/cpedbmardigovmy.yaml
+Record ID: cpedbmardigovmy
+Country: MY
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
@@ -277,6 +299,38 @@ Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
 Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
+File: DE/DE-MV/geo/geoportalvgde.yaml
+Record ID: geoportalvgde
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: DE/DE-BY/geo/geoportalbbvdeutschlandde.yaml
+Record ID: geoportalbbvdeutschlandde
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: DE/DE-BY/scientific/opendataiisysde.yaml
+Record ID: opendataiisysde
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: DE/Federal/scientific/humanitiesdatacentrede.yaml
+Record ID: humanitiesdatacentrede
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
 File: DK/Federal/indicators/statistikselvmordsforskningdk.yaml
 Record ID: statistikselvmordsforskningdk
 Country: DK
@@ -285,41 +339,57 @@ Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
 Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: FR/Federal/indicators/statistiquesmsafr.yaml
-Record ID: statistiquesmsafr
+File: BR/BR-AL/indicators/observatorioalgovbr.yaml
+Record ID: observatorioalgovbr
+Country: BR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: CD/Federal/indicators/caidcd.yaml
+Record ID: caidcd
+Country: CD
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: FR/Federal/scientific/wwwlexiqueorg.yaml
+Record ID: wwwlexiqueorg
 Country: FR
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
 Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: FR/Federal/indicators/widworld.yaml
-Record ID: widworld
+File: FR/Federal/scientific/bipaagenouestorg.yaml
+Record ID: bipaagenouestorg
 Country: FR
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
 Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: CL/Federal/indicators/chileagenda2030gobcl.yaml
-Record ID: chileagenda2030gobcl
-Country: CL
+File: ES/ES-AR/opendata/236wsdpteruelestransparenciadpteruelopendatabuscad.yaml
+Record ID: 236wsdpteruelestransparenciadpteruelopendatabuscad
+Country: ES
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
 Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: TT/Federal/indicators/csogovtt.yaml
-Record ID: csogovtt
-Country: TT
+File: ES/Federal/scientific/evolclustdborg.yaml
+Record ID: evolclustdborg
+Country: ES
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}
 Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
-File: TH/Federal/indicators/sdgdashboardnesdcgoth.yaml
-Record ID: sdgdashboardnesdcgoth
-Country: TH
+File: JP/Federal/opendata/datacongrantjp.yaml
+Record ID: datacongrantjp
+Country: JP
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Field: endpoints
 Current Value: {"software_id": "wordpress", "has_api": "Yes", "endpoints_count": 0}

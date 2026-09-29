@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+    subregion:
+      id: PL-18
+      name: Podkarpackie
+description: Municipal planning GeoServer for Gmina Leżajsk, including local spatial-plan
+  rasters. The same GetCapabilities document is served at /gis/ows.
+id: mapylezajskpl
+langs:
+- id: PL
+  name: Polish
+link: https://mapylezajsk.pl/geoserver
+name: Portal mapowy Gminy Leżajsk
+owner:
+  link: https://mapylezajsk.pl/
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    subregion:
+      id: PL-18
+      name: Podkarpackie
+  name: Gmina Leżajsk
+  type: Local government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- geospatial
+- government
+- planning
+- poland
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+endpoints:
+- type: wms111
+  url: https://mapylezajsk.pl/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://mapylezajsk.pl/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://mapylezajsk.pl/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://mapylezajsk.pl/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://mapylezajsk.pl/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+uid: cdi00009477

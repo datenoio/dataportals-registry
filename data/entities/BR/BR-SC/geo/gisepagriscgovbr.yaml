@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-SC
+      name: Santa Catarina
+    macroregion:
+      id: '005'
+      name: South America
+description: ArcGIS REST services of Epagri for Santa Catarina, including climate,
+  ocean, topography, and agricultural zoning layers.
+id: gisepagriscgovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://gis.epagri.sc.gov.br/arcgis/rest/services
+name: Epagri Santa Catarina ArcGIS Server
+owner:
+  link: https://www.epagri.sc.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-SC
+      name: Santa Catarina
+  name: Epagri
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+uid: cdi00008795
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.epagri.sc.gov.br/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.epagri.sc.gov.br/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.epagri.sc.gov.br/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.epagri.sc.gov.br/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.epagri.sc.gov.br/arcgis/rest/services?f=geositemap
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+tags:
+- ArcGIS
+- GIS
+- brazil
+- climate
+- geospatial
+- government
+- ocean

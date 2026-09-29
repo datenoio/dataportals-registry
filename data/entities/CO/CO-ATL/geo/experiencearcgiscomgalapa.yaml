@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Atlántico
 description: Municipal geoportal of Galapa, Atlántico, on ArcGIS Experience Builder,
   for urban-license management and control.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/97961a77da2948dc9ab074933f2caab3/data?f=json
 id: experiencearcgiscomgalapa
 langs:
 - id: ES

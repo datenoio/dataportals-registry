@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -35,8 +35,8 @@ owner:
 properties:
   is_national: false
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - open data
@@ -46,3 +46,6 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi00008216
+endpoints:
+- type: drupal:jsonapi
+  url: https://datos.inah.gob.mx/jsonapi

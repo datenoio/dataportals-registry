@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Western Cape
 description: Drakenstein Municipality public Experience Builder spatial viewer for
   cadastral, flood and related municipal map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/a24ac86dceb844c7b4bee00a49cfc63c/data?f=json
 id: experiencearcgiscomdrakenstein
 langs:
 - id: EN

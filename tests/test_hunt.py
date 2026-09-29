@@ -2,6 +2,7 @@
 
 import base64
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -361,3 +362,437 @@ class TestLog:
         row = json.loads(log_path.read_text().strip())
         assert row["target"] == "AU"
         assert row["status"] == "complete"
+
+
+# ---------------------------------------------------------------------------
+# prior / budget / search guards / probe verdict / ingest
+# ---------------------------------------------------------------------------
+
+
+def _write_hunts(path, rows):
+    path.write_text("".join(json.dumps(row) + "\n" for row in rows))
+
+
+class TestPrior:
+    def test_recent_slice_stops(self, tmp_path, monkeypatch):
+        log_path = tmp_path / "hunts.jsonl"
+        _write_hunts(
+            log_path,
+            [
+                {
+                    "date": "2026-09-20",
+                    "kind": "software-instance",
+                    "target": "geoserver.es",
+                    "added": 4,
+                    "status": "complete",
+                    "notes": "ES slice done",
+                }
+            ],
+        )
+        monkeypatch.setattr(hunt, "HUNTS_LOG", log_path)
+        monkeypatch.setattr(hunt, "_today", lambda: __import__("datetime").date(2026, 9, 26))
+        result = runner.invoke(hunt.app, ["prior", "--target", "geoserver.es"])
+        assert result.exit_code == 0
+        assert "decision: stop" in result.output
+        assert "2026-09-20" in result.output
+        assert "added: 4" in result.output
+        assert "ES slice done" in result.output
+        assert result.output.strip().splitlines()[-1] == "next: none"
+
+    def test_new_country_continues(self, tmp_path, monkeypatch):
+        log_path = tmp_path / "hunts.jsonl"
+        _write_hunts(
+            log_path,
+            [
+                {
+                    "date": "2026-09-20",
+                    "kind": "software-instance",
+                    "target": "geoserver.es",
+                    "added": 4,
+                    "status": "complete",
+                    "notes": "done",
+                }
+            ],
+        )
+        monkeypatch.setattr(hunt, "HUNTS_LOG", log_path)
+        monkeypatch.setattr(hunt, "_today", lambda: __import__("datetime").date(2026, 9, 26))
+        result = runner.invoke(hunt.app, ["prior", "--target", "geoserver.fr"])
+        assert result.exit_code == 0
+        assert "decision: continue" in result.output
+        assert "covered: es" in result.output
+        last = result.output.strip().splitlines()[-1]
+        assert last.startswith("next: python scripts/hunt.py search")
+        assert "geoserver.fr" in last
+
+    def test_aliases_collapse(self, tmp_path, monkeypatch):
+        log_path = tmp_path / "hunts.jsonl"
+        _write_hunts(
+            log_path,
+            [
+                {
+                    "date": "2026-09-01",
+                    "kind": "software-instance",
+                    "target": "arcgisserver.org",
+                    "added": 2,
+                    "status": "complete",
+                    "notes": "",
+                },
+                {
+                    "date": "2026-09-02",
+                    "kind": "software-instance",
+                    "target": "arcgisserver.edu",
+                    "added": 3,
+                    "status": "complete",
+                    "notes": "",
+                },
+            ],
+        )
+        monkeypatch.setattr(hunt, "HUNTS_LOG", log_path)
+        monkeypatch.setattr(hunt, "_today", lambda: __import__("datetime").date(2026, 9, 26))
+        result = runner.invoke(hunt.app, ["prior", "--target", "arcgisserver"])
+        assert result.exit_code == 0
+        assert "arcgisserver.org" in result.output or "org" in result.output
+        assert "edu" in result.output
+        assert "decision: continue" in result.output
+
+
+class TestBudgetAndSearchGuards:
+    def test_budget_zero_stops(self, monkeypatch):
+        monkeypatch.setenv("FOFA_EMAIL", "a@b.c")
+        monkeypatch.setenv("FOFA_KEY", "secret")
+        monkeypatch.setattr(hunt, "_fofa_account_info", lambda session=None: {"remain_api_data": 0})
+        result = runner.invoke(hunt.app, ["budget"])
+        assert result.exit_code != 0
+        assert "decision: stop-budget" in result.output
+        assert result.output.strip().splitlines()[-1] == "next: none"
+
+    def test_budget_positive_continues(self, monkeypatch):
+        monkeypatch.setenv("FOFA_EMAIL", "a@b.c")
+        monkeypatch.setenv("FOFA_KEY", "secret")
+        monkeypatch.setattr(hunt, "_fofa_account_info", lambda session=None: {"remain_api_data": 12})
+        result = runner.invoke(hunt.app, ["budget"])
+        assert result.exit_code == 0
+        assert "decision: continue" in result.output
+        assert "12" in result.output
+        assert result.output.strip().splitlines()[-1].startswith("next: python scripts/hunt.py search")
+
+    def test_search_refuses_empty_balance(self, monkeypatch, tmp_path):
+        monkeypatch.setenv("FOFA_EMAIL", "a@b.c")
+        monkeypatch.setenv("FOFA_KEY", "secret")
+        monkeypatch.setattr(hunt, "_fofa_account_info", lambda session=None: {"remain_api_data": 0})
+
+        def _boom(*_args, **_kwargs):
+            raise AssertionError("search must not run")
+
+        monkeypatch.setattr(hunt, "_fofa_search", _boom)
+        out = tmp_path / "candidates.jsonl"
+        result = runner.invoke(
+            hunt.app, ["search", "fofa", "app=GeoServer", "--out", str(out)]
+        )
+        assert result.exit_code != 0
+        assert "decision: stop-budget" in result.output
+        assert not out.exists()
+        assert result.output.strip().splitlines()[-1] == "next: none"
+
+    def test_query_file_limit(self, monkeypatch, tmp_path):
+        query_file = tmp_path / "queries.txt"
+        query_file.write_text("\n".join(f"q{i}" for i in range(26)) + "\n")
+
+        def _boom(*_args, **_kwargs):
+            raise AssertionError("API must not be called")
+
+        monkeypatch.setattr(hunt, "_fofa_account_info", _boom)
+        monkeypatch.setattr(hunt, "_fofa_search", _boom)
+        result = runner.invoke(
+            hunt.app, ["search", "fofa", "--query-file", str(query_file)]
+        )
+        assert result.exit_code != 0
+        assert "26" in result.output
+        assert "--allow-wide" in result.output
+
+    def test_default_output_under_tmp(self, monkeypatch, tmp_path):
+        monkeypatch.setenv("FOFA_EMAIL", "a@b.c")
+        monkeypatch.setenv("FOFA_KEY", "secret")
+        monkeypatch.chdir(tmp_path)
+        monkeypatch.setattr(hunt, "_fofa_account_info", lambda session=None: {"remain_api_data": 4})
+        monkeypatch.setattr(
+            hunt,
+            "_fofa_search",
+            lambda *_args, **_kwargs: [
+                {
+                    "host": "new.example",
+                    "url": "https://new.example",
+                    "title": "New",
+                    "source": "fofa",
+                    "query": "zzzhuntloop",
+                }
+            ],
+        )
+        result = runner.invoke(hunt.app, ["search", "fofa", "zzzhuntloop"])
+        assert result.exit_code == 0
+        assert not (tmp_path / "candidates.jsonl").exists()
+        written = Path("/tmp/hunts/zzzhuntloop/candidates.jsonl")
+        assert written.exists()
+        assert "next: python scripts/hunt.py dedupe" in result.output
+        written.unlink()
+
+    def test_search_dedupe_marks_known_host(self, monkeypatch, tmp_path):
+        monkeypatch.setenv("FOFA_EMAIL", "a@b.c")
+        monkeypatch.setenv("FOFA_KEY", "secret")
+        monkeypatch.setattr(hunt, "_fofa_account_info", lambda session=None: {"remain_api_data": 4})
+        monkeypatch.setattr(
+            hunt,
+            "_fofa_search",
+            lambda *_args, **_kwargs: [
+                {
+                    "host": "catalog.data.gov",
+                    "url": "https://catalog.data.gov",
+                    "title": "Data",
+                    "source": "fofa",
+                    "query": "q",
+                }
+            ],
+        )
+        monkeypatch.setattr(hunt, "_build_export_indexes", lambda: TestDedupeRows.INDEXES)
+        out = tmp_path / "candidates.jsonl"
+        result = runner.invoke(
+            hunt.app, ["search", "fofa", "q", "--dedupe", "--out", str(out)]
+        )
+        assert result.exit_code == 0
+        row = json.loads(out.read_text().splitlines()[0])
+        assert row["exists"] is True
+        assert row["existing_id"] == "datagov"
+        assert result.output.strip().splitlines()[-1].startswith("next: python scripts/hunt.py probe")
+
+
+class TestProbeVerdict:
+    def test_geoserver_layers_are_catalog(self):
+        session = FakeSession(
+            [
+                FakeResponse(content=b"<title>Geo</title>"),
+                FakeResponse(content=b"<Layer><Name>roads</Name></Layer>"),
+            ]
+        )
+        row = hunt._probe_one(
+            {"url": "http://geo.example"},
+            session,
+            5.0,
+            {"geoserver": hunt.CAPABILITY_PROBES["geoserver"]},
+        )
+        assert row["verdict"] == "catalog"
+        assert row["collection_count"] > 0
+        assert "GetCapabilities" in session.calls[1][1]
+
+    def test_arcgis_services_are_catalog(self):
+        session = FakeSession(
+            [
+                FakeResponse(content=b"<title>REST</title>"),
+                FakeResponse(json_data={"services": [{"name": "Parcels", "type": "MapServer"}]}),
+            ]
+        )
+        row = hunt._probe_one(
+            {"url": "http://gis.example/arcgis"},
+            session,
+            5.0,
+            {"arcgisserver": hunt.CAPABILITY_PROBES["arcgisserver"]},
+        )
+        assert row["verdict"] == "catalog"
+        assert row["collection_count"] == 1
+
+    def test_ckan_package_count(self):
+        session = FakeSession(
+            [
+                FakeResponse(content=b"<title>CKAN</title>"),
+                FakeResponse(json_data={"success": True, "result": {"count": 4, "results": []}}),
+            ]
+        )
+        row = hunt._probe_one(
+            {"url": "http://ckan.example"},
+            session,
+            5.0,
+            {"ckan": hunt.CAPABILITY_PROBES["ckan"]},
+        )
+        assert row["verdict"] == "catalog"
+        assert row["collection_count"] == 4
+        assert "package_search" in session.calls[1][1]
+
+    def test_auth_stops_after_one_request(self):
+        session = FakeSession([FakeResponse(status_code=401)])
+        row = hunt._probe_one(
+            {"url": "http://private.example"},
+            session,
+            5.0,
+            {"geoserver": hunt.CAPABILITY_PROBES["geoserver"]},
+        )
+        assert row["verdict"] == "auth"
+        assert len(session.calls) == 1
+
+    def test_empty_capabilities(self):
+        session = FakeSession(
+            [
+                FakeResponse(content=b"<title>Geo</title>"),
+                FakeResponse(content=b"<WMS_Capabilities></WMS_Capabilities>"),
+            ]
+        )
+        row = hunt._probe_one(
+            {"url": "http://geo.example"},
+            session,
+            5.0,
+            {"geoserver": hunt.CAPABILITY_PROBES["geoserver"]},
+        )
+        assert row["verdict"] == "empty"
+        assert row["collection_count"] == 0
+
+    def test_http_5xx_is_dead(self):
+        session = FakeSession([FakeResponse(status_code=502)])
+        row = hunt._probe_one({"url": "http://down.example"}, session, 5.0, {})
+        assert row["verdict"] == "dead"
+        assert len(session.calls) == 1
+
+    def test_unknown_software_omits_count(self):
+        session = FakeSession([FakeResponse(content=b"<title>Other</title>")])
+        row = hunt._probe_one({"url": "http://other.example"}, session, 5.0, {})
+        assert row["verdict"] == "unknown"
+        assert "collection_count" not in row
+
+
+class TestIngest:
+    def test_skips_auth_empty_and_duplicates(self, tmp_path, monkeypatch):
+        probed = tmp_path / "probed.jsonl"
+        rows = [
+            {
+                "url": "https://keep.example",
+                "title": "Keep",
+                "verdict": "catalog",
+                "exists": False,
+                "software_id": "ckan",
+                "country": "FR",
+                "is_national": True,
+            },
+            {"url": "https://auth.example", "verdict": "auth"},
+            {"url": "https://empty.example", "verdict": "empty"},
+            {
+                "url": "https://dupe.example",
+                "verdict": "catalog",
+                "exists": True,
+                "existing_id": "dupeid",
+            },
+        ]
+        probed.write_text("".join(json.dumps(row) + "\n" for row in rows))
+        calls = {}
+
+        def _add(path):
+            calls["manifest"] = Path(path).read_text()
+            return {
+                "written": 1,
+                "written_files": [str(tmp_path / "keepexample.yaml")],
+                "skipped_dupes": [],
+                "invalid_rows": [],
+            }
+
+        monkeypatch.setattr(hunt, "_add_batch", _add)
+        monkeypatch.setattr(hunt, "_promote_ids", lambda ids: calls.setdefault("promote", ids))
+        monkeypatch.setattr(hunt, "_validate_ids", lambda ids: calls.setdefault("validate", ids))
+        result = runner.invoke(hunt.app, ["ingest", str(probed)])
+        assert result.exit_code == 0
+        assert "reason=auth" in result.output
+        assert "reason=empty" in result.output
+        assert "reason=exists" in result.output
+        assert "is_national" not in calls["manifest"]
+        assert "https://keep.example" in calls["manifest"]
+        assert "https://auth.example" not in calls["manifest"]
+        assert calls["promote"] == ["keepexample"]
+        assert calls["validate"] == ["keepexample"]
+        assert "hunt.py log" in result.output.strip().splitlines()[-1]
+
+    def test_all_skipped_does_not_write(self, tmp_path, monkeypatch):
+        probed = tmp_path / "probed.jsonl"
+        probed.write_text(json.dumps({"url": "https://auth.example", "verdict": "auth"}) + "\n")
+
+        def _add(_path):
+            raise AssertionError("add-batch must not run")
+
+        monkeypatch.setattr(hunt, "_add_batch", _add)
+        result = runner.invoke(hunt.app, ["ingest", str(probed)])
+        assert result.exit_code == 0
+        assert "Ingest wrote 0 records" in result.output
+
+
+class TestNextHint:
+    def test_omits_recent_slice_and_deprioritizes_custom(self, tmp_path, monkeypatch):
+        log_path = tmp_path / "hunts.jsonl"
+        _write_hunts(
+            log_path,
+            [
+                {
+                    "date": "2026-09-20",
+                    "kind": "software-instance",
+                    "target": "geoserver.es",
+                    "added": 4,
+                    "status": "complete",
+                    "notes": "",
+                },
+                {
+                    "date": "2026-09-22",
+                    "kind": "named-directory",
+                    "target": "stac-index",
+                    "added": 1,
+                    "status": "partial",
+                    "notes": "",
+                },
+                {
+                    "date": "2026-09-18",
+                    "kind": "custom-review",
+                    "target": "indicators-custom",
+                    "added": 0,
+                    "status": "partial",
+                    "notes": "",
+                },
+            ],
+        )
+        monkeypatch.setattr(hunt, "HUNTS_LOG", log_path)
+        monkeypatch.setattr(hunt, "_today", lambda: __import__("datetime").date(2026, 9, 26))
+        result = runner.invoke(hunt.app, ["next"])
+        assert result.exit_code == 0
+        assert "geoserver.es" not in result.output
+        output_lines = [
+            line for line in result.output.splitlines() if not line.startswith("next:")
+        ]
+        named_at = next(i for i, line in enumerate(output_lines) if "named-directory" in line)
+        custom_at = next(i for i, line in enumerate(output_lines) if "custom-review" in line)
+        assert named_at < custom_at
+        assert "deprioritized" in output_lines[custom_at]
+        assert result.output.strip().splitlines()[-1].startswith("next:")
+
+
+class TestAgentCard:
+    ROOT = Path(__file__).parent.parent
+
+    def test_entry_points_name_prior(self):
+        agents = (self.ROOT / "AGENTS.md").read_text()
+        assert "python scripts/hunt.py prior" in agents
+        assert "validate-yaml --id" in agents
+        rule = (self.ROOT / ".cursor/rules/catalog-discovery.mdc").read_text()
+        assert "alwaysApply: false" in rule
+        assert "python scripts/hunt.py prior" in rule
+        assert "Do not write a FOFA client" in rule
+        discover = (self.ROOT / "docs/agents/discover.md").read_text()
+        assert discover.index("## Command card") < discover.index("## Hunt types")
+        assert "python scripts/hunt.py ingest" in discover
+        llms = (self.ROOT / "llms.txt").read_text()
+        assert "python scripts/hunt.py prior" in llms
+
+    def test_published_kinds_match_cli(self):
+        text = (self.ROOT / "docs/agents/improve.md").read_text()
+        line = next(item for item in text.splitlines() if item.startswith("`kind` is one of:"))
+        found = set(re.findall(r"`([^`]+)`", line))
+        extras = {
+            "kind",
+            "status",
+            "complete",
+            "partial",
+            "blocked",
+            "HUNT_KINDS",
+            "scripts/hunt.py",
+        }
+        assert found - extras == hunt.HUNT_KINDS

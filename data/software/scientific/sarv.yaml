@@ -1,0 +1,59 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: sarv
+name: SARV
+website: https://geoloogia.info
+description: SARV is the Estonian geoscience data platform developed at Tallinn
+  University of Technology. Public portals (eMaapõu, fossils, minerals, peat, and
+  SARV·DOI) share one read API for datasets, DOI records, specimens, and localities.
+owner:
+  name: Tallinn University of Technology, Department of Geology
+  location:
+    country:
+      id: EE
+      name: Estonia
+logo_url: https://geoloogia.info/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+repository_url: https://github.com/geocollections/sarv-workbench
+documentation_url: https://rwapi.geoloogia.info/api/schema/v1/public/swagger-ui/
+export_formats:
+- JSON
+capabilities:
+- REST API
+- DOI catalog
+- Specimen and locality catalog
+last_updated: '2026-09-27T00:00:00Z'

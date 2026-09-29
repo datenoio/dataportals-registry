@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -45,8 +45,8 @@ owner:
   name: National Geospatial Program, United States Geological Survey, Virginia, USA
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -64,3 +64,6 @@ topics:
   name: Location
   type: iso19115
 uid: cdi00033796
+endpoints:
+- type: sitemap
+  url: https://www.usgs.gov/sitemap.xml

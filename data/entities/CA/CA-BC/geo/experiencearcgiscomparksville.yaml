@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: British Columbia
 description: City of Parksville public ArcGIS Experience Builder map for properties,
   infrastructure, parks, and related municipal layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/eee3b34de4174733afd8b8f2ad058ad0/data?f=json
 id: experiencearcgiscomparksville
 langs:
 - id: EN

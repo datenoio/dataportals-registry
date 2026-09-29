@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Western Cape
 description: Public municipal GIS viewer for exploring cadastral, zoning, valuation,
   infrastructure, and other spatial layers for Mossel Bay.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/7be14152ab404bc498eca64915858858/data?f=json
 id: experiencearcgiscommosselbay
 langs:
 - id: EN

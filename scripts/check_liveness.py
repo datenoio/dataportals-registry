@@ -145,6 +145,9 @@ def probe_url(
                 final_url = response.url
                 if last_code in RETRYABLE_STATUS_CODES and attempt < attempts - 1:
                     break
+                # Some apps (GisOnline) answer HEAD with 404 and GET with 200.
+                if method == "HEAD" and last_code in (404, 405):
+                    continue
                 return last_code, None, final_url
             except requests.exceptions.Timeout as exc:
                 last_error = f"timeout: {exc}"

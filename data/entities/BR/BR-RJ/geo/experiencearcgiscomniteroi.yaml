@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Rio de Janeiro
 description: Municipal geoportal for viewing public geospatial data published by the
   City of Niterói.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/11d179ccba3949828f3dbac2bc8b0ce7/data?f=json
 id: experiencearcgiscomniteroi
 langs:
 - id: PT

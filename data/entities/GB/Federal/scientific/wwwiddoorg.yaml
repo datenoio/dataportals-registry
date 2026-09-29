@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -41,8 +41,8 @@ owner:
   name: WorldWide Antimalarial Resistance Network
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -53,3 +53,6 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00030971
+endpoints:
+- type: sitemap
+  url: https://www.iddo.org/sitemap.xml

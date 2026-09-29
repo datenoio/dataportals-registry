@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Stimson Center maps of armed conflict, bioclimates, and deforestation.
+id: gisstimsonorg
+langs:
+- id: EN
+  name: English
+link: https://gis.stimson.org/server/rest/services
+name: Stimson Center ArcGIS Server
+owner:
+  link: https://www.stimson.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Stimson Center
+  type: Civil society
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- climate
+- geospatial
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00008859
+properties:
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.stimson.org/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.stimson.org/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.stimson.org/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.stimson.org/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.stimson.org/server/rest/services?f=geositemap

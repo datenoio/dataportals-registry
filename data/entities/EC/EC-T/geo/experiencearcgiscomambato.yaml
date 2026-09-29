@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Tungurahua
 description: Ambato municipal geoportal providing updated maps and geospatial data
   for urban management, property consultation, and territorial planning.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/93445ddb9cc440c9a14497da9f2f6abb/data?f=json
 id: experiencearcgiscomambato
 langs:
 - id: ES

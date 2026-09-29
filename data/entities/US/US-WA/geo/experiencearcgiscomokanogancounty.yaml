@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Northern America
 description: Geoportal. managed by Okanogan County. powered by ArcGIS Experience Builder.
   accessible at experience.arcgis.com.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/e2585c02900a4e7d91e2adf4af212ba9/data?f=json
 id: experiencearcgiscomokanogancounty
 langs:
 - id: EN

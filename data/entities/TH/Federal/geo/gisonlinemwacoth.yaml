@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,19 +16,6 @@ coverage:
       id: '035'
       name: South-eastern Asia
 description: ArcGIS REST map services for water and environmental management
-endpoints:
-- type: arcgis:rest:info
-  url: https://gisonline.mwa.co.th/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://gisonline.mwa.co.th/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://gisonline.mwa.co.th/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://gisonline.mwa.co.th/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://gisonline.mwa.co.th/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://gisonline.mwa.co.th/arcgis/rest/services?f=kmz
 id: gisonlinemwacoth
 langs:
 - id: TH
@@ -56,7 +43,7 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: active
+status: inactive
 tags:
 - waterworks
 - environment

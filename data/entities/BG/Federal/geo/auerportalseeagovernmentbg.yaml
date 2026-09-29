@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: GeoServer of the Sustainable Energy Development Agency (AUER) publishing
+  municipality, province, building, and energy-object layers. portal.seea.government.bg:8080
+  serves the same GetCapabilities.
+id: auerportalseeagovernmentbg
+langs:
+- id: BG
+  name: Bulgarian
+link: http://auerportal.seea.government.bg:8080/geoserver/ows
+name: AUER GeoServer
+owner:
+  link: https://seea.government.bg
+  location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+  name: Sustainable Energy Development Agency
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- energy
+- AUER
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00009510
+endpoints:
+- type: wms111
+  url: http://auerportal.seea.government.bg:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: http://auerportal.seea.government.bg:8080/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0

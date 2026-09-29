@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Western Cape
 description: Breede Valley Municipality public Experience Builder map viewer for cadastral,
   planning and municipal infrastructure layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/0563cacb8e49400791df6976c4be1b58/data?f=json
 id: experiencearcgiscombreedevalley
 langs:
 - id: EN

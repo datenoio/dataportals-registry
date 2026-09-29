@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Ontario
 description: Township of East Garafraxa public interactive GIS map for parcels, zoning,
   municipal boundaries, and aerial photography, hosted on Dufferin County ArcGIS Online.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/aae3083c709e4111ae0a552297458d4a/data?f=json
 id: experiencearcgiscomeastgarafraxa
 langs:
 - id: EN

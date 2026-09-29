@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Queensland
 description: Sunshine Coast Council MyMaps Property Information Experience Builder
   for property, planning, and related local government map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/f97f4087e99a4d428e081a65eab1ac63/data?f=json
 id: experiencearcgiscomsunshinecoast
 langs:
 - id: EN

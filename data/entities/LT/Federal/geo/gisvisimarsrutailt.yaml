@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Public ArcGIS Server catalogue of LTSA route and basemap services for
+  the Visi maršrutai journey planner.
+id: gisvisimarsrutailt
+langs:
+- id: LT
+  name: Lithuanian
+link: https://gis.visimarsrutai.lt/server/rest/services
+name: Visi maršrutai ArcGIS REST
+owner:
+  link: https://www.visimarsrutai.lt
+  location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 20
+  name: Lithuanian Transport Safety Administration
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- transport
+- routing
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:portals:self
+  url: https://gis.visimarsrutai.lt/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://gis.visimarsrutai.lt/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.visimarsrutai.lt/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.visimarsrutai.lt/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.visimarsrutai.lt/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.visimarsrutai.lt/server/rest/services?f=geositemap
+uid: cdi00009080

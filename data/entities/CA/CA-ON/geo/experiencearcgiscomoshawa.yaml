@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Ontario
 description: Public mapOshawa GIS viewer for the City of Oshawa, including address
   search and municipal geographic layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/01972f6611cb464bbfe5073ed673c417/data?f=json
 id: experiencearcgiscomoshawa
 langs:
 - id: EN

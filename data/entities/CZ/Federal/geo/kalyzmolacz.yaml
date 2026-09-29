@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: GeoServer for the Kaly JmK sludge and sewer map covering districts of
+  the South Moravian Region.
+id: kalyzmolacz
+langs:
+- id: CS
+  name: Czech
+link: https://kaly.zmola.cz/geoserver/web/
+name: Kaly JmK GeoServer
+owner:
+  link: https://kaly.zmola.cz/
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: Zmola
+  type: Business
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- commercial
+- czech-republic
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00009471
+endpoints:
+- type: wms130
+  url: https://kaly.zmola.cz/geoserver/sber/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://kaly.zmola.cz/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://kaly.zmola.cz/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://kaly.zmola.cz/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

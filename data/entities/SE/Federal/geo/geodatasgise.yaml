@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    level: 20
+description: Public ArcGIS REST services of the Swedish Geotechnical Institute.
+id: geodatasgise
+langs:
+- id: SV
+  name: Swedish
+link: https://geodata.sgi.se/server/rest/services
+name: SGI ArcGIS REST Services
+owner:
+  link: https://www.sgi.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Statens geotekniska institut
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- sweden
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00008826
+endpoints:
+- type: arcgis:rest:info
+  url: https://geodata.sgi.se/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geodata.sgi.se/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geodata.sgi.se/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geodata.sgi.se/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geodata.sgi.se/server/rest/services?f=geositemap

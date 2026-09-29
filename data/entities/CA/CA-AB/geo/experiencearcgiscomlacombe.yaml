@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Alberta
 description: City of Lacombe public ArcGIS Experience Builder interactive map for
   municipal properties and related layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/08338fb2ca954a1bbde4a199a3af3bc9/data?f=json
 id: experiencearcgiscomlacombe
 langs:
 - id: EN

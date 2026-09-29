@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IR
+      name: Iran
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IR-10
+      name: Eşfahān
+description: ArcGIS Server of Falavarjan Municipality, publishing the municipal base
+  map and the street-tree inventory.
+id: treefalavarjanir
+langs:
+- id: FA
+  name: Persian
+link: http://tree.falavarjan.ir:6080/arcgis/rest/services
+name: Falavarjan Municipal GIS
+owner:
+  link: https://falavarjan.ir
+  location:
+    country:
+      id: IR
+      name: Iran
+    level: 30
+    subregion:
+      id: IR-10
+      name: Eşfahān
+  name: Falavarjan Municipality
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- GIS
+- has_api
+- municipality
+- Falavarjan
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00009373
+endpoints:
+- type: arcgis:rest:info
+  url: http://tree.falavarjan.ir:6080/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://tree.falavarjan.ir:6080/arcgis/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: http://tree.falavarjan.ir:6080/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://tree.falavarjan.ir:6080/arcgis/rest/services?f=geositemap

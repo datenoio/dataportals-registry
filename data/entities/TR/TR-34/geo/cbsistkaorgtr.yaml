@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TR
+      name: Turkey
+    level: 30
+    subregion:
+      id: TR-34
+      name: İstanbul
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Public ArcGIS Server directory of the Istanbul Development Agency, with
+  project and creative-network feature services.
+id: cbsistkaorgtr
+langs:
+- id: TR
+  name: Turkish
+link: https://cbs.istka.org.tr/server/rest/services
+name: İstanbul Kalkınma Ajansı ArcGIS Server
+owner:
+  link: https://www.istka.org.tr
+  location:
+    country:
+      id: TR
+      name: Turkey
+    level: 30
+    subregion:
+      id: TR-34
+      name: İstanbul
+  name: İstanbul Kalkınma Ajansı
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- turkey
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009008
+endpoints:
+- type: arcgis:rest:info
+  url: https://cbs.istka.org.tr/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://cbs.istka.org.tr/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://cbs.istka.org.tr/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://cbs.istka.org.tr/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://cbs.istka.org.tr/server/rest/services?f=geositemap

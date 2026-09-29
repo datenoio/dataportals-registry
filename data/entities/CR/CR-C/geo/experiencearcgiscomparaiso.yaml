@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: CR-C
       name: Cartago
 description: Municipal cadastral viewer of Municipalidad de Paraíso, Costa Rica.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/8e8930a6a9784380916a873afbe294d1/data?f=json
 id: experiencearcgiscomparaiso
 langs:
 - id: ES

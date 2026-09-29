@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Washington
 description: Washington Natural Heritage Program data explorer for public rare-species,
   ecosystem, ecological-integrity, wetland, and supporting reference datasets.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/174566100f2a47bebe56db3f0f78b5d9/data?f=json
 id: experiencearcgiscomwnhp
 langs:
 - id: EN

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Missouri
 description: Missouri Spatial Data Information Service viewer and download tool for
   statewide aerial imagery, elevation products, and LiDAR data.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/831650c9299c45deb7df05d0a8beadde/data?f=json
 id: experiencearcgiscommissourimap
 langs:
 - id: EN

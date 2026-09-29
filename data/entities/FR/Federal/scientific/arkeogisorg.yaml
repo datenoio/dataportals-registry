@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,8 +16,9 @@ coverage:
       name: Western Europe
 description: ArkeoGIS is a unified scientific data publishing platform. It is a multilingual
   Geographic Information System (GIS), initially developed in order to mutualize archaeological
-  and paleoenvironmental data of the Rhine Valley. Today, it allows the pooling of spatialized
-  scientific data concerning the past, from prehistory to the present day.
+  and paleoenvironmental data of the Rhine Valley. Today, it allows the pooling of
+  spatialized scientific data concerning the past, from prehistory to the present
+  day.
 id: arkeogisorg
 identifiers:
 - id: openaire
@@ -40,8 +41,8 @@ owner:
   name: University of Strasbourg
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -73,3 +74,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00030638
+endpoints:
+- type: sitemap
+  url: https://arkeogis.org/sitemap.xml

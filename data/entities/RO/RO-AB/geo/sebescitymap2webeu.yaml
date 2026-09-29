@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: RO-AB
       name: Alba
 description: Public Map2Web digital town plan of Sebeș hosted at sebes-city.map2web.eu.
+endpoints:
+- type: map2web:project
+  url: https://map.map2web.eu/apiv2/project/sebes-city.map2web.eu
 id: sebescitymap2webeu
 langs:
 - id: RO

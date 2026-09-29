@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-HID
+      name: Hidalgo
+    macroregion:
+      id: '013'
+      name: Central America
+description: ArcGIS REST services directory for the municipality of Tulancingo, Hidalgo,
+  with land-use, construction, and drinking-water layers.
+id: ssvudtulancingogobmx
+langs:
+- id: ES
+  name: Spanish
+link: https://ssvud.tulancingo.gob.mx/arcgis/rest/services
+name: Tulancingo ArcGIS REST
+owner:
+  link: https://www.tulancingo.gob.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-HID
+      name: Hidalgo
+  name: Municipio de Tulancingo
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- mexico
+- water
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+endpoints:
+- type: arcgis:rest:info
+  url: https://ssvud.tulancingo.gob.mx/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ssvud.tulancingo.gob.mx/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://ssvud.tulancingo.gob.mx/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://ssvud.tulancingo.gob.mx/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://ssvud.tulancingo.gob.mx/arcgis/rest/services?f=geositemap
+uid: cdi00009063

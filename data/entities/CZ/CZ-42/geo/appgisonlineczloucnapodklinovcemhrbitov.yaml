@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Ústecký kraj
 description: GisOnline cemetery map application of the municipality of Loučná pod
   Klínovcem.
+endpoints:
+- type: gisonline:project
+  url: https://app.gisonline.cz/api2/projects/39
 id: appgisonlineczloucnapodklinovcemhrbitov
 langs:
 - id: CS

@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -15,7 +15,9 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: "National Portal Geoportal is a geoportal published by National Portal for United States, using ArcGIS Hub. It is available at country-national-portal-nationalportal.hub.arcgis.com. Catalog id countrynationalportalnationalportalhubarcgiscom."
+description: National Portal Geoportal is a geoportal published by National Portal
+  for United States, using ArcGIS Hub. It is available at country-national-portal-nationalportal.hub.arcgis.com.
+  Catalog id countrynationalportalnationalportalhubarcgiscom.
 id: countrynationalportalnationalportalhubarcgiscom
 langs:
 - id: EN
@@ -57,3 +59,6 @@ topics:
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00003353
+endpoints:
+- type: arcgishubapi
+  url: https://country-national-portal-nationalportal.hub.arcgis.com/api/v3/datasets

@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: GeoServer of the EDPP digital flood portal, with flood zones, gauges,
+  and municipal flood-planning layers for Czechia.
+id: edppcz
+langs:
+- id: CS
+  name: Czech
+link: https://edpp.cz/geoserver/web/
+name: EDPP GeoServer
+owner:
+  link: https://www.edpp.cz/
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: ENVIPARTNER, s.r.o.
+  type: Business
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- commercial
+- czech-republic
+- geospatial
+- planning
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00009466
+endpoints:
+- type: wms111
+  url: https://edpp.cz/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://edpp.cz/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0

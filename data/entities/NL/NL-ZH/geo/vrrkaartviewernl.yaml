@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Zuid-Holland
 description: Public KaartViewer geoportal of Veiligheidsregio Rotterdam-Rijnmond,
   including a GeoPortaal map menu.
+endpoints:
+- type: kaartviewer:menu
+  url: https://vrr.kaartviewer.nl/admin/rest/kaartviewerapi/menu
 id: vrrkaartviewernl
 langs:
 - id: NL

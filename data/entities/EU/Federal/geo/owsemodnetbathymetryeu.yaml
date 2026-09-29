@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: EMODnet Bathymetry WMS of coastlines, depth contours, and digital terrain
+  model layers for European seas.
+id: owsemodnetbathymetryeu
+langs:
+- id: EN
+  name: English
+link: https://ows.emodnet-bathymetry.eu/wms?service=WMS&request=GetCapabilities
+name: EMODnet Bathymetry
+owner:
+  link: https://emodnet.ec.europa.eu/
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: European Marine Observation and Data Network (EMODnet)
+  type: Academy
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- GIS
+- academic
+- european-union
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Elevation
+  name: Elevation
+  type: iso19115
+uid: cdi00008721

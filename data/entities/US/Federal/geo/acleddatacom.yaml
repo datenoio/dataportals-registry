@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -35,8 +35,8 @@ owner:
   name: Armed Conflict Location & Event Data Project (ACLED)
   type: Civil society
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - conflict
@@ -55,3 +55,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00036213
+endpoints:
+- type: sitemap
+  url: https://acleddata.com/sitemap.xml

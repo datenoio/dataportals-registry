@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Tasmania
 description: West Tamar Council public Infrastructure Map Experience Builder for roads,
   stormwater, buildings, and related local government map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/402e5bd013ce4af39abde17b4c7fca9c/data?f=json
 id: experiencearcgiscomwesttamar
 langs:
 - id: EN

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Flevoland
 description: Public ArcGIS Experience Builder open-data portal of Waterschap Zuiderzeeland
   with maps and water datasets.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/22559d8489a4489f84d52c366e6e33a7/data?f=json
 id: experiencearcgiscomzuiderzeeland
 langs:
 - id: NL

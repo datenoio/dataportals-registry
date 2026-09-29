@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+    macroregion:
+      id: '021'
+      name: Northern America
+description: LADOT map services for bicycle facilities, census blocks, and curb inventory,
+  separate from the citywide ArcGIS directories.
+id: gisdot4laorg
+langs:
+- id: EN
+  name: English
+link: https://gis.dot4la.org/server/rest/services
+name: Los Angeles Department of Transportation ArcGIS Server
+owner:
+  link: https://ladot.lacity.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: Los Angeles Department of Transportation
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- transport
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00008888
+properties:
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.dot4la.org/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.dot4la.org/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.dot4la.org/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.dot4la.org/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.dot4la.org/server/rest/services?f=geositemap

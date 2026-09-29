@@ -23,6 +23,9 @@ description: DataONE Search portal for research datasets from The Nature Conserv
 endpoints:
 - type: dataone:catalog
   url: https://search.dataone.org/portals/tnc_dangermond
+- type: dataone:query
+  url: https://search.dataone.org/cn/v2/query/solr/?q=formatType:DATA&rows=1
+  version: '2'
 id: dangermonddataoneorg
 langs:
 - id: EN

@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: API Catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-AB
+      name: Alberta
+description: Alberta Electric System Operator developer portal for public electricity-market
+  reports, including supply and demand, pool price, metered volume, interties, and
+  outage forecasts.
+id: developerapimaesoca
+langs:
+- id: EN
+  name: English
+link: https://developer-apim.aeso.ca/
+name: AESO public data APIs
+owner:
+  link: https://www.aeso.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-AB
+      name: Alberta
+  name: Alberta Electric System Operator
+  type: Regional government
+properties:
+  is_national: false
+software:
+  id: azureapim
+  name: Azure API Management
+status: active
+tags:
+- energy
+- electricity
+- API
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+uid: cdi00010005
+endpoints:
+- type: sitemap
+  url: https://developer-apim.aeso.ca/sitemap.xml

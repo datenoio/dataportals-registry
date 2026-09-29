@@ -58,6 +58,20 @@ def test_probe_url_head_success():
     assert session.calls[0][0] == "HEAD"
 
 
+def test_probe_url_head_404_falls_back_to_get():
+    session = _FakeSession(
+        [
+            _FakeResponse(404, "https://app.example.cz/city"),
+            _FakeResponse(200, "https://app.example.cz/city"),
+        ]
+    )
+    code, error, final_url = probe_url("https://app.example.cz/city", session)
+    assert code == 200
+    assert error is None
+    assert final_url == "https://app.example.cz/city"
+    assert [call[0] for call in session.calls] == ["HEAD", "GET"]
+
+
 def test_probe_url_get_fallback():
     import requests
 

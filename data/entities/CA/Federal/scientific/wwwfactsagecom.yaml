@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,11 +14,11 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: FactSage is a fully integrated Canadian thermochemical database system which
-  couples proven software with self-consistent critically assessed thermodynamic data. It
-  currently contains data on over 5000 chemical substances as well as solution databases representing
-  over 1000 non-ideal multicomponent solutions (oxides, salts, sulfides, alloys, aqueous,
-  etc.). FactSage is available for use with Windows.
+description: FactSage is a fully integrated Canadian thermochemical database system
+  which couples proven software with self-consistent critically assessed thermodynamic
+  data. It currently contains data on over 5000 chemical substances as well as solution
+  databases representing over 1000 non-ideal multicomponent solutions (oxides, salts,
+  sulfides, alloys, aqueous, etc.). FactSage is available for use with Windows.
 id: wwwfactsagecom
 identifiers:
 - id: openaire
@@ -41,8 +41,8 @@ owner:
   name: École Polytechnique de Montréal, Génie chimique, CRCT
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -56,3 +56,9 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00028852
+endpoints:
+- type: rest
+  url: https://www.factsage.com/wp-json/
+- type: rest:posts
+  url: https://www.factsage.com/wp-json/wp/v2/posts
+  version: '2'

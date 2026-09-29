@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: British Columbia
 description: City of Colwood public land information map built with ArcGIS Experience
   Builder.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/35568862d9d444398a96e6d7f08516b3/data?f=json
 id: experiencearcgiscomcolwood
 langs:
 - id: EN

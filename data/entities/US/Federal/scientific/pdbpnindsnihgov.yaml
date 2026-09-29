@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -39,8 +39,8 @@ owner:
   name: National Institute of Neurological Disorders and Stroke
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -63,3 +63,6 @@ topics:
   name: Biota
   type: iso19115
 uid: cdi00033419
+endpoints:
+- type: rss
+  url: https://pdbp.ninds.nih.gov/rss.xml

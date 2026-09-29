@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,12 +14,12 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: DASH Search is a centralized system for searching and discovering digital scientific
-  assets across NSF NCAR and UCAR Community Programs. The NCAR is a federally funded research
-  and development center committed to research and education in atmospheric science and related
-  scientific fields. NCAR seeks to support and enhance the scientific community nationally
-  and globally by monitoring and researching the atmosphere and related physical and biological
-  systems.
+description: DASH Search is a centralized system for searching and discovering digital
+  scientific assets across NSF NCAR and UCAR Community Programs. The NCAR is a federally
+  funded research and development center committed to research and education in atmospheric
+  science and related scientific fields. NCAR seeks to support and enhance the scientific
+  community nationally and globally by monitoring and researching the atmosphere and
+  related physical and biological systems.
 id: ncarucaredu
 identifiers:
 - id: openaire
@@ -40,8 +40,8 @@ owner:
   name: National Science Foundation
   type: Central government
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -85,3 +85,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00033375
+endpoints:
+- type: sitemap
+  url: https://ncar.ucar.edu/sitemap.xml

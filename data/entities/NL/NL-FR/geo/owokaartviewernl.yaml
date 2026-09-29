@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Fryslân
 description: Shared KaartViewer geoportal of the OWO municipalities Ooststellingwerf,
   Weststellingwerf, and Opsterland, with public maps and a dataset portal.
+endpoints:
+- type: kaartviewer:menu
+  url: https://owo.kaartviewer.nl/admin/rest/kaartviewerapi/menu
 id: owokaartviewernl
 langs:
 - id: NL

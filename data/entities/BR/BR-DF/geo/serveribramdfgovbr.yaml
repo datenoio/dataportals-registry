@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-DF
+      name: Distrito Federal
+    macroregion:
+      id: '005'
+      name: South America
+description: ArcGIS REST services of Instituto Brasília Ambiental, including protected
+  areas and priority conservation zones of the Federal District.
+id: serveribramdfgovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://server.ibram.df.gov.br/arcgis/rest/services
+name: IBRAM-DF IDE Brasília Ambiental
+owner:
+  link: https://www.ibram.df.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-DF
+      name: Distrito Federal
+  name: Instituto Brasília Ambiental (IBRAM-DF)
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- brazil
+- geospatial
+- government
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009240
+endpoints:
+- type: arcgis:rest:info
+  url: https://server.ibram.df.gov.br/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://server.ibram.df.gov.br/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://server.ibram.df.gov.br/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://server.ibram.df.gov.br/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://server.ibram.df.gov.br/arcgis/rest/services?f=geositemap

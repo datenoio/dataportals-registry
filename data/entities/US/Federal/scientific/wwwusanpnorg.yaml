@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,10 +14,10 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: The USA National Phenology Network serves science and society by promoting broad
-  understanding of plant and animal phenology and its relationship with environmental change.
-  The Network is a consortium of individuals and organizations that collect, share, and use
-  phenology data, models, and related information.
+description: The USA National Phenology Network serves science and society by promoting
+  broad understanding of plant and animal phenology and its relationship with environmental
+  change. The Network is a consortium of individuals and organizations that collect,
+  share, and use phenology data, models, and related information.
 id: wwwusanpnorg
 identifiers:
 - id: openaire
@@ -38,8 +38,8 @@ owner:
   name: University of Wisconsin-Milwaukee
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -67,3 +67,6 @@ topics:
   name: Environment
   type: iso19115
 uid: cdi00033794
+endpoints:
+- type: drupal:jsonapi
+  url: https://www.usanpn.org/jsonapi

@@ -1,0 +1,58 @@
+category: Metadata catalog
+subtype: metadata_registry_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'No'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: oscar
+description: WMO OSCAR (Observing Systems Capability Analysis and Review Tool) is
+  the WIGOS catalog of observation requirements, satellite capabilities, and
+  surface-based stations. OSCAR/Surface and OSCAR/Space are the public modules.
+  The WMO Weather Radar Database is a separate catalog.
+owner:
+  name: World Meteorological Organization
+  location:
+    country:
+      id: CH
+      name: Switzerland
+logo_url: https://space.oscar.wmo.int/img/wmologo.png
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+name: WMO OSCAR
+website: https://space.oscar.wmo.int/
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Global
+  supports_licenses: 'No'
+storage_type: Structured
+type: Software
+documentation_url: https://space.oscar.wmo.int/apidoc/
+export_formats:
+- JSON
+capabilities:
+- REST API
+- WIGOS station metadata
+- Satellite capability catalog

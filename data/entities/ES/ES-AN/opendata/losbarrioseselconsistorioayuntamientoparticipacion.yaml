@@ -20,22 +20,6 @@ coverage:
 description: Blog Ciudadan@          Documentos públicos   Fiestas y eventos    Pagos
     Servicios sociales    Turismo   Los Barrios Opina    Fomento y empleo   Cuida
 endpoints:
-- type: ckan
-  url: http://www.losbarrios.es/api/3
-- type: ckan
-  url: http://www.losbarrios.es/api/3/action/package_list
-- type: opendatasoftapi
-  url: http://www.losbarrios.es/api/v2/catalog
-- type: socrata
-  url: http://www.losbarrios.es/api/views
-- type: dcatap201
-  url: http://www.losbarrios.es/api/feed/dcat
-- type: dcat
-  url: http://www.losbarrios.es/catalog.xml
-- type: dcatap
-  url: http://www.losbarrios.es/catalog.rdf
-- type: dcat:jsonld
-  url: http://www.losbarrios.es/catalog.jsonld
 - type: sitemap
   url: http://www.losbarrios.es/sitemap.xml
 id: losbarrioseselconsistorioayuntamientoparticipacion
@@ -57,8 +41,8 @@ owner:
   type: Local government
   link: https://losbarrios.es
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - government

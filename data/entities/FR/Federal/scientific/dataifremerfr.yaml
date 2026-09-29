@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,9 +14,9 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: SISMER (Scientific Information Systems for the Sea) is Ifremer's service in charge
-  of managing numerous marine databases and information systems which Ifremer is responsible
-  for implementing.
+description: SISMER (Scientific Information Systems for the Sea) is Ifremer's service
+  in charge of managing numerous marine databases and information systems which Ifremer
+  is responsible for implementing.
 id: dataifremerfr
 identifiers:
 - id: openaire
@@ -39,8 +39,8 @@ owner:
   name: French Research Institute for Exploitation of the Sea
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: sismer
+  name: SISMER
 status: active
 tags:
 - scientific
@@ -78,3 +78,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00030659
+endpoints:
+- type: sitemap
+  url: https://data.ifremer.fr/sitemap.xml

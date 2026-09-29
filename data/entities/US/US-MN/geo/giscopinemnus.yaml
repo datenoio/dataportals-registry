@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MN
+      name: Minnesota
+description: Public ArcGIS REST services for Pine County, Minnesota, including parcels
+  and a basemap.
+id: giscopinemnus
+langs:
+- id: EN
+  name: English
+link: https://gis.co.pine.mn.us/server/rest/services
+name: Pine County GIS Portal
+owner:
+  link: https://www.co.pine.mn.us
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MN
+      name: Minnesota
+  name: Pine County
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.co.pine.mn.us/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.co.pine.mn.us/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.co.pine.mn.us/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.co.pine.mn.us/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.co.pine.mn.us/server/rest/services?f=geositemap
+uid: cdi00009429

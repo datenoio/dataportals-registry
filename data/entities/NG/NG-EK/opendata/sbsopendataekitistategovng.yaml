@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Open data portal
 content_types:
@@ -71,3 +71,13 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00001163
+endpoints:
+- type: ckan
+  url: http://sbsopendata.ekitistate.gov.ng/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://sbsopendata.ekitistate.gov.ng/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://sbsopendata.ekitistate.gov.ng/api/3/action/package_list
+  version: '3'

@@ -27,7 +27,7 @@ endpoints:
 - type: ckan:package-search
   url: https://open.bydata.de/api/hub/search/ckan/package_search
   version: '3'
-- type: rest
+- type: piveau:search
   url: https://open.bydata.de/api/hub/search/search
 - type: rest
   url: https://open.bydata.de/api/hub/repo/catalogues
@@ -39,7 +39,7 @@ endpoints:
   url: https://open.bydata.de/sitemap.xml
 - type: sitemap
   url: https://open.bydata.de/sitemap.xml.gz
-- type: rest
+- type: piveau:search
   url: https://open.bydata.de/api/hub/search/search?q=&filter=dataset
 - type: docs
   url: https://open.bydata.de/api/hub/search/

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Bolívar
 description: Public municipal geovisor of Turbaco, Bolívar, on ArcGIS Experience Builder,
   with political-administrative divisions from official municipal sources.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/28e05301a4a14907a044279865288636/data?f=json
 id: experiencearcgiscomturbaco
 langs:
 - id: ES

@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -60,3 +60,8 @@ topics:
   name: Location
   type: iso19115
 uid: cdi99994308
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgis02.eapp.gov.ps:6443/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgis02.eapp.gov.ps:6443/arcgis/rest/services?f=pjson

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Queensland
 description: Brisbane City Council Community Maps Experience Builder for community
   and recreation, land and environment, transport, and utilities layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/ad063f42efd84e4d91d0212387d6fb36/data?f=json
 id: experiencearcgiscombrisbane
 langs:
 - id: EN

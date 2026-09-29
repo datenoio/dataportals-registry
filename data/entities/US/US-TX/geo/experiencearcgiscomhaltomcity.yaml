@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Texas
 description: City of Haltom City public ArcGIS Experience Builder environmental services
   GIS portal.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/ecdb91eee46f4440abcd5d41f71b4f3f/data?f=json
 id: experiencearcgiscomhaltomcity
 langs:
 - id: EN

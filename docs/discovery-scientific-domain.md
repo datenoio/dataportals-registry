@@ -2,7 +2,7 @@
 
 Biodiversity, facility, crop, chemistry, and earth-system repositories (`catalog_type: Scientific data repository`). Institutional IRs: [discovery-scientific.md](discovery-scientific.md). Search-engine syntax (Google, Censys, and [FOFA as a Censys alternative](discovery-search-tools.md#fofa)): [discovery-search-tools.md](discovery-search-tools.md). Harvest: [harvest-scientific-domain.md](harvest-scientific-domain.md).
 
-High-count domain stacks with their own recipes: IPT, Symbiota, THREDDS, ERDDAP, FROST-Server, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat, InterMine, GRIN-Global, PlutoF, JGI Genome Portal, cBioPortal, ESA Science Archive, CLLD, TalkBank, Pathway Tools, IBDC.
+High-count domain stacks with their own recipes: IPT, Symbiota, Biodiv, BIMS, THREDDS, ERDDAP, FROST-Server, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat, InterMine, GRIN-Global, PlutoF, JGI Genome Portal, cBioPortal, ESA Science Archive, CLLD, TalkBank, Pathway Tools, IBDC.
 
 One portal / node = one registry record. Do not add gene pages, occurrences, or ESGF data nodes as extra catalogs.
 
@@ -45,6 +45,36 @@ Theme-based portals (SEINet, MyCoPortal, CCH2, Ecdysis, and others) publish spec
 | FOFA | `body="symbiota/header.css"` |
 | Censys | `web.endpoints.http.body: "Symbiota"` |
 | FOFA | `body="Symbiota"` |
+
+## Biodiv (`biodiv`) {#biodiv}
+
+Strand Life Sciences Biodiversity Informatics Platform. Product: [strandls.com/biodiversity-informatics](https://us.strandls.com/biodiversity-informatics). UI source: [strandls/biodiv-ui](https://github.com/strandls/biodiv-ui). Flagship: [indiabiodiversity.org](https://indiabiodiversity.org/). Other installations include the Bhutan Biodiversity Portal, WIKTROP, and related regional portals. Distinct from Symbiota (`symbiota`), Specify (`specify`), and a GeoServer that only publishes a Biodiv workspace.
+
+**Signals:** footer text `Biodiversity Informatics Platform`; technology partner Strand Life Sciences; public paths `/dataset/list`, `/observation/list`, `/species/list`, `/document/list`.
+
+**Confirm:** GET the portal home and match the platform footer. One record per portal installation, not per species page, observation, or user group. Do not retag a `/geoserver` endpoint on the same host as `biodiv`. Skip the Strand marketing page.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Biodiversity Informatics Platform" (portal OR observations OR species) -site:github.com` |
+| Google | `"Technology Partner" "Strand Life Sciences" biodiversity` |
+| Censys | `web.endpoints.http.body: "Biodiversity Informatics Platform"` |
+| FOFA | `body="Biodiversity Informatics Platform"` |
+
+## BIMS (`bims`) {#bims}
+
+Kartoza Biodiversity Information Management System. Product page: [bims.kartoza.com](https://bims.kartoza.com/). Source: [kartoza/django-bims](https://github.com/kartoza/django-bims). Published portals include FBIS South Africa, FBIS Africa, SANParks BIMS, RBIS Rwanda, Kafue Flats, and FADA. Distinct from Symbiota (`symbiota`), Biodiv (`biodiv`), and the Jordan ArcGIS host `bims.rscn.org.jo`.
+
+**Signals:** inline `githubRepo = 'kartoza/django-bims'`; source-reference list at `/source-references/`; JSON at `/api/module-summary/` and `/api/layer/`.
+
+**Confirm:** GET the portal home and match `kartoza/django-bims`. One record per portal, not per occurrence, taxon, or map tile. Skip the vendor homepage `bims.kartoza.com`. Skip FIPbio while the site says it is under development, and skip ORBIS while it is offline. Login-only downloads still count as one catalog when the home page is the BIMS portal.
+
+| Tool | Query |
+|------|-------|
+| Google | `"kartoza/django-bims" (biodiversity OR freshwater OR occurrence)` |
+| Google | `inurl:/source-references "Occurrence Records"` |
+| Censys | `web.endpoints.http.body: "kartoza/django-bims"` |
+| FOFA | `body="kartoza/django-bims"` |
 
 ## THREDDS (`thredds`) {#thredds}
 
@@ -566,6 +596,39 @@ Genebank information system (USDA NPGS, AAFC, and other centres). Site: [grin-gl
 | Censys | `web.endpoints.http.body: "GRIN-Global"` |
 | FOFA | `body="GRIN-Global"` |
 
+## Genesys PGR (`genesys`) {#genesys}
+
+Global platform for plant genetic resources for food and agriculture, operated by the Global Crop Diversity Trust with CGIAR. Hub: [genesys-pgr.org](https://www.genesys-pgr.org). Partner genebanks embed the Genesys interface in their own catalogs (for example the World Vegetable Center genebank at `genebank.worldveg.org`).
+
+**Signals:** Genesys branding and accession passport-data layout; API host `api.genesys-pgr.org`; embedded Genesys search widgets on genebank sites.
+
+**Confirm:** GET `https://api.genesys-pgr.org/api/v1/acn/filter` or the public accession search UI. Use `software.id: genesys`. Distinguish from `gringlobal` (USDA-style genebank management) and `gigwa` (genotype data): a genebank catalog that embeds Genesys is `genesys`, its internal GRIN-Global back office is not the public catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Genesys" (genebank OR "plant genetic resources") accession -site:genesys-pgr.org` |
+| Google | `inurl:api.genesys-pgr.org` |
+| Censys | `web.names: "api.genesys-pgr.org"` |
+| FOFA | `body="genesys-pgr.org"` |
+
+**False positives:** genesys.com (contact-center vendor); Crop ontology and GLIS (related Treaty/Crop Trust tools, different stacks).
+
+## HuGE AMP Knowledge Portal (`hugeamp`) {#hugeamp}
+
+Open-source human genetics knowledge portals from the Accelerating Medicines Partnership. Instances: Common Metabolic Diseases KP ([hugeamp.org](https://hugeamp.org)) and Type 2 Diabetes KP ([t2d.hugeamp.org](https://t2d.hugeamp.org)).
+
+**Signals:** HuGE AMP "Knowledge Portal" chrome; gene/variant/phenotype page structure; `*.hugeamp.org` hosts; "HuGE AMP" or "AMP CMD" footer.
+
+**Confirm:** public portal loads with gene and phenotype search and downloadable summary statistics. Use `software.id: hugeamp`. One record per knowledge-portal deployment.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Knowledge Portal" (hugeamp OR "HuGE AMP") genetics` |
+| Censys | `web.names: "*.hugeamp.org"` |
+| FOFA | `body="hugeamp"` |
+
+**False positives:** AMP grant announcement pages; bioinformatics tool docs that cite the portals; non-AMP "knowledge portals" in other domains.
+
 ## PlutoF (`plutof`) {#plutof}
 
 University of Tartu biodiversity workbench. Site: [plutof.ut.ee](https://plutof.ut.ee). Public API at `https://api.plutof.ut.ee/v1/`. Do **not** remap UNITE (`unite.ut.ee`) — UNITE is a sequence database that uses PlutoF as a companion workbench.
@@ -577,6 +640,20 @@ University of Tartu biodiversity workbench. Site: [plutof.ut.ee](https://plutof.
 | Google | `"PlutoF" (repository OR biodiversity OR DOI) site:.ee` |
 | Censys | `web.endpoints.http.body: "PlutoF"` |
 | FOFA | `body="PlutoF"` |
+
+## SARV (`sarv`) {#sarv}
+
+Estonian geoscience data platform (TalTech Department of Geology). Public portals share `https://rwapi.geoloogia.info/api/v1/public/`. Site: [geoloogia.info](https://geoloogia.info). Code: [github.com/geocollections](https://github.com/geocollections).
+
+**Confirm:** GET `/api/v1/public/datasets/` (OpenAPI title `SARV API`) or a portal home that names eMaapõu or SARV·DOI. One record per public portal (eMaapõu, fossils, minerals, peat, DOI), not per specimen, locality, or fossil page. Leave `gis.geocollections.info` as GeoServer. Skip the bibliography at `kirjandus.geoloogia.info`, the edit workbench at `edit.geocollections.info`, and GeoCASe (`geocase.eu`).
+
+| Tool | Query |
+|------|-------|
+| Google | `"SARV" (eMaapõu OR geocollections OR "SARV·DOI") (dataset OR portal)` |
+| Censys | `web.endpoints.http.body: "SARV API"` |
+| FOFA | `body="SARV API"` |
+| Censys | `web.endpoints.http.body: "SARV·DOI"` |
+| FOFA | `body="SARV·DOI"` |
 
 ## JGI Genome Portal (`jgi`) {#jgi}
 
@@ -605,6 +682,22 @@ Cancer genomics study portal. Site: [cbioportal.org](https://www.cbioportal.org)
 | FOFA | `body="cbioportal-frontend"` |
 | Censys | `web.endpoints.http.body: "cBioPortal"` |
 | FOFA | `body="cBioPortal"` |
+
+## Progenetix (`progenetix`) {#progenetix}
+
+Cancer CNV profiling portal on the open-source [bycon](https://github.com/progenetix/bycon) Beacon+ stack. Site: [progenetix.org](https://progenetix.org). The progenetix, arrayMap, and TCGA cohort collections are datasets of one installation, not separate portals.
+
+**Confirm:** GET `/beacon/info` returns `"beaconId": "org.progenetix"` (other bycon deployments use their own beaconId) and `"apiVersion": "v2.3.0-beaconplus"`. One record per public instance.
+
+The bycon error envelope names `byconservices`, which distinguishes bycon from other Beacon v2 servers.
+
+| Tool | Query |
+|------|-------|
+| Google | `progenetix OR bycon OR "Beacon+" (beacon OR "copy number") cancer` |
+| Censys | `web.endpoints.http.body: "byconservices"` |
+| FOFA | `body="byconservices"` |
+| Censys | `web.endpoints.http.body: "beaconplus"` |
+| FOFA | `body="beaconplus"` |
 
 ## ESA Science Archive (`esasciencearchive`) {#esasciencearchive}
 
@@ -647,6 +740,22 @@ Data Publisher for Earth and Environmental Science. Hub: [pangaea.de](https://ww
 | Censys | `web.names: "pangaea.de"` |
 | FOFA | `host="pangaea.de"` |
 
+## EMN Data Hub (`emndatahub`) {#emndatahub}
+
+DOE Energy Materials Network consortium data hubs hosted by NREL / NLR. Product context: [Energy Materials Network](https://www.energy.gov/eere/amo/energy-materials-network); example about page: [DuraMAT Data Hub](https://www.duramat.org/projects/data-hub). Live public tenants: `datahub-duramat.nlr.gov`, `datahub-electrocat.nlr.gov`, `datahub-h2awsm.nlr.gov`, `datahub-chemcatbio.nlr.gov`.
+
+**Signals:** host `datahub-*.nlr.gov` (legacy `*.duramat.org` / HyMARC redirects may differ); title patterns `Datahub … app` or consortium Data Hub; `js/remote-app-entry.js` module federation (`DuramatdhApp`, `ElectrocatdhApp`, `DatahubH2AwsmdhApp`, `ChemcatbioApp`).
+
+**Confirm:** GET `/` and `/js/remote-app-entry.js` and match the shared SPA / app entry. One catalog per consortium hub. Do **not** set `ckan` — public hosts return 404 on `/api/3/action/status_show` even though older docs describe a CKAN-based EMN framework. Do not label Wind Data Hub (`wdh.energy.gov`), Livewire (`livewire.energy.gov`), or HyMARC CKAN (`datahub.hymarc.org` / `ckan`) as `emndatahub`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Data Hub" (DuraMAT OR ElectroCat OR ChemCatBio OR HydroGEN) (NREL OR NLR)` |
+| Google | `site:nlr.gov datahub` |
+| Censys | `web.names: "nlr.gov" and web.endpoints.http.body: "remote-app-entry"` |
+| FOFA | `host="nlr.gov" && body="remote-app-entry.js"` |
+| FOFA | `body="DuramatdhApp" \|\| body="ElectrocatdhApp"` |
+
 ## USGS ScienceBase (`sciencebase`) {#sciencebase}
 
 USGS item catalog. Hub: [sciencebase.gov](https://www.sciencebase.gov). Distinct from GeoServer / ArcGIS REST on sciencebase.gov (`geoserver`, `arcgisserver`).
@@ -681,13 +790,28 @@ European Plate Observing System ICS-C catalog. Hub: [ics-c.epos-eu.org](https://
 
 **Signals:** host `ics-c.epos-eu.org`; EPOS Data Portal chrome.
 
-**Confirm:** GET the public data portal. One ICS-C hub, not each underlying research infrastructure.
+**Confirm:** GET the public data portal. One ICS-C hub, not each underlying research infrastructure. Do **not** set `epos` on a GLASS node (`/GlassFramework/`); use `glass`.
 
 | Tool | Query |
 |------|-------|
 | Google | `"EPOS Data Portal" OR site:ics-c.epos-eu.org` |
 | Censys | `web.names: "ics-c.epos-eu.org"` |
 | FOFA | `host="ics-c.epos-eu.org"` |
+
+## EPOS GLASS (`glass`) {#glass}
+
+EPOS GNSS node software. API: [Glass Framework](https://gnss-epos.eu/glass-api/). Public nodes publish station metadata, RINEX file metadata, and GNSS products. Distinct from the EPOS ICS-C hub (`epos`) and from M3G (`gnss-metadata.eu`).
+
+**Signals:** path `/GlassFramework/` or `/GlassFramework/swagger.json`; titles `EPOS GNSS Products` or `EPOS GNSS Data Gateway`.
+
+**Confirm:** GET `/GlassFramework/` or the swagger document and match the GLASS API. One record per public node. Do **not** set `glass` on the ICS-C hub, on M3G, or on a GeoNetwork catalog that only links a GlassFramework endpoint.
+
+| Tool | Query |
+|------|-------|
+| Google | `"GlassFramework" EPOS GNSS` |
+| Google | `inurl:GlassFramework/swagger.json` |
+| Censys | `web.endpoints.http.body: "GlassFramework"` |
+| FOFA | `body="GlassFramework"` |
 
 ## IBDC (`ibdc`) {#ibdc}
 
@@ -1153,6 +1277,23 @@ Jointly administered herbarium management system and Virtual Herbaria portal. Si
 | Censys | `web.names: "jacq.org"` |
 | FOFA | `domain="jacq.org"` |
 
+## Aphia (`aphia`) {#aphia}
+
+VLIZ taxonomic platform behind the World Register of Marine Species and related species registers. About: [marinespecies.org/about.php](https://www.marinespecies.org/about.php). REST: [marinespecies.org/rest](https://www.marinespecies.org/rest).
+
+**Signals:** the host serves `/aphia/js/aphia.js` (WoRMS does). A page that only links to `marinespecies.org/aphia.php` is not an Aphia installation (EurOBIS does this).
+
+**Confirm:** GET the register home and the script URL on that same host. One catalog per host. Thematic registers that are paths on `marinespecies.org` stay on the WoRMS record. Do not add per-taxon pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `"World Register of Marine Species" Aphia VLIZ` |
+| Google | `inurl:aphia.php "AphiaID"` |
+| Censys | `web.endpoints.http.body: "/aphia/js/aphia.js"` |
+| FOFA | `body="/aphia/js/aphia.js"` |
+| Censys | `web.names: "marinespecies.org"` |
+| FOFA | `host="marinespecies.org"` |
+
 ## NMRShiftDB2 (`nmrshiftdb2`) {#nmrshiftdb2}
 
 Open-source NMR database application for organic structures and assigned spectra. Reference instance: [nmrshiftdb.nmr.uni-koeln.de](https://nmrshiftdb.nmr.uni-koeln.de/). Independent laboratory WAR/source installs exist.
@@ -1181,7 +1322,7 @@ AGPL catalog for samples, reactions, and analytical chemistry data (NFDI4Chem). 
 
 Språkbanken Text corpus-search platform (MIT). Independent national language-bank installs. Distribution notes: [spraakbanken.gu.se/en/tools/korp](https://spraakbanken.gu.se/en/tools/korp/distribution-and-development).
 
-**Confirm:** GET the Korp UI (`/korp/` or a `korp.` host). Title `Korp`. Register each public Korp UI on a distinct host. Do not add Kielipankki `/korp/` as a second catalog when the Language Bank homepage on the same host is already registered (`wwwkielipankkifi`). Skip Málið.is unless the page identifies Korp.
+**Confirm:** GET the Korp UI (`/korp/` or a `korp.` host). Title `Korp`. Register each public Korp UI on a distinct host. The Finland installation is `wwwkielipankkifi` at `https://www.kielipankki.fi/korp/`. Do not add a second catalog for the WordPress page at `/language-bank/` on that host. Skip Málið.is unless the page identifies Korp.
 
 [app/index.html](https://github.com/spraakbanken/korp-frontend/blob/dev/app/index.html) includes the noscript “You need JavaScript to run Korp.” (22 hosts in September 2026, including `malheildir.arnastofnun.is`). `title="Korp"` matched 290 hosts, including a Korp VPN login. National forks translate that sentence, so keep both.
 
@@ -1192,6 +1333,21 @@ Språkbanken Text corpus-search platform (MIT). Independent national language-ba
 | FOFA | `body="You need JavaScript to run Korp."` |
 | Censys | `web.endpoints.http.title: "Korp"` |
 | FOFA | `title="Korp"` |
+
+## NoSketch Engine (`nosketch`) {#nosketch}
+
+Open-source (GPL-2.0) corpus query suite of the NLP Centre at Masaryk University and Lexical Computing: Manatee index backend plus Bonito web interface, the simplified sibling of the commercial Sketch Engine. Independent national language-bank and CLARIN installations. Distribution notes: [nlp.fi.muni.cz/trac/noske](https://nlp.fi.muni.cz/trac/noske).
+
+**Confirm:** GET the Bonito UI (often a `nosketch.` host). Page title `NoSketch Engine`. Register each public NoSketch UI on a distinct host; the Latvia installation is `korpusslv` at `https://nosketch.korpuss.lv/`. Do not confuse with KonText (Czech National Corpus) or with Språkbanken `korp` installations. Do not register the commercial Sketch Engine subscription site as this id.
+
+The Bonito index page renders `NoSketch Engine` in title and body on every installation (e.g. `nosketch.korpuss.lv`, `corpora.dipintra.it`).
+
+| Tool | Query |
+|------|-------|
+| Google | `"NoSketch Engine" (corpus OR Bonito OR Manatee) -"Sketch Engine"` |
+| Censys | `web.endpoints.http.title: "NoSketch Engine"` |
+| FOFA | `title="NoSketch Engine"` |
+| FOFA | `body="NoSketch Engine"` |
 
 ## DANDI Archive (`dandi`) {#dandi}
 
@@ -1323,6 +1479,222 @@ ORFEUS/EIDA waveform-metadata web service deployed at every European Integrated 
 | Google | `inurl:/fdsnws/station/ "EIDA"` |
 | Censys | `web.endpoints.http.body: "wfcatalog" and web.endpoints.http.body: "fdsnws"` |
 | FOFA | `body="/eidaws/wfcatalog/1/"` |
+
+## GIGWA (`gigwa`) {#gigwa}
+
+CIRAD/IRD genotype portal. Product page: [cirad.fr](https://www.cirad.fr/en/work-with-us/cirad-innov-solutions/products-and-services/gigwa). Reference instance: [gigwa.southgreen.fr/gigwa/](https://gigwa.southgreen.fr/gigwa/). Source: [SouthGreenPlatform/Gigwa2](https://github.com/SouthGreenPlatform/Gigwa2).
+
+**Signals:** title `Gigwa`; path `/gigwa/`; BrAPI under `/{database}/brapi/`. A genome hub that only embeds GIGWA (Musa Germplasm Information System) stays its own catalog.
+
+**Confirm:** GET the public database chooser or `/gigwa/` home. One record per standalone portal, not per genotyping project inside it.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Gigwa" OR GIGWA (genotype OR BrAPI OR "genome-wide") -site:github.com` |
+| Censys | `web.endpoints.http.body: "Gigwa"` |
+| FOFA | `body="Gigwa"` |
+
+## SEDOO Catalogue (`sedoo`) {#sedoo}
+
+Observatoire Midi-Pyrénées dataset catalog embedded in project and campaign sites. Product page: [sedoo.fr/catalogue-donnees](https://www.sedoo.fr/catalogue-donnees/). Examples: AERIS, BAOBAB, MISTRALS, INDAAF, SOFOG3D.
+
+**Signals:** catalog path `/catalogue/` on `sedoo.fr`, `aeris-data.fr`, or `obs-mip.fr`, with the SEDOO metadata search. The WordPress theme `sedoo-wpth-labs` also wraps campaign homepages that are not catalogs.
+
+**Confirm:** GET the `/catalogue/` search page and treat that URL as the catalog. Do not assign `sedoo` to `www.sedoo.fr` (the data-center homepage) or to `thredds.sedoo.fr` (`thredds`).
+
+| Tool | Query |
+|------|-------|
+| Google | `"Catalogue de données" SEDOO (AERIS OR BAOBAB OR MISTRALS OR INDAAF)` |
+| Google | `inurl:/catalogue/ site:sedoo.fr OR site:aeris-data.fr` |
+| Censys | `web.endpoints.http.body: "sedoo" and web.endpoints.http.body: "catalogue"` |
+| FOFA | `body="sedoo" && body="catalogue"` |
+
+## PanelApp (`panelapp`) {#panelapp}
+
+Open-source gene-panel platform from Genomics England. Live installations: [panelapp.genomicsengland.co.uk](https://panelapp.genomicsengland.co.uk/) and [PanelApp Australia](https://panelapp-aus.org/).
+
+**Signals:** `GET /api/v1/panels/?page_size=1` returns JSON with `count` and `results[].name`, plus `disease_group` and `stats.number_of_genes`. The page title is PanelApp.
+
+**Confirm:** the panels API, not a PDF or paper that mentions PanelApp. Do not assign `panelapp` to a laboratory gene-panel spreadsheet or to Genomics England's other services.
+
+| Tool | Query |
+|------|-------|
+| Google | `"PanelApp" "gene panels" (Genomics England OR Australia)` |
+| Censys | `web.endpoints.http.body: "PanelApp" and web.endpoints.http.body: "disease_group"` |
+| FOFA | `body="PanelApp" && body="disease_group"` |
+
+## Liverpool Drug Interactions (`liverpooldruginteractions`) {#liverpooldruginteractions}
+
+University of Liverpool drug-drug interaction checker. Deployments: [HIV](https://www.hiv-druginteractions.org/), [hepatitis](https://www.hep-druginteractions.org/), [COVID-19](https://www.covid19-druginteractions.org/), [PrEP](https://www.prep-druginteractions.org/) (beta; checker and prescribing resources, no `/view_all_interactions` yet), and [cancer](https://www.cancer-druginteractions.org/) (with Radboud UMC; list at `/view_all_interactions/new`). Disease hostnames such as `hbv.hep-druginteractions.org` and alternate names such as `covid-druginteractions.org` and `hepatology-druginteractions.org` are the same hepatitis or COVID-19 catalog. `www.druginteractions.org` is the group landing page.
+
+**Signals:** title `Liverpool HIV Interactions`, `Liverpool HEP Interactions`, `Liverpool COVID-19 Interactions`, `Liverpool PrEP Interactions`, or `Cancer Drug Interactions from Radboud UMC and University of Liverpool`, plus `/view_all_interactions` or `/checker` with University of Liverpool copyright. HIV and hepatitis pages link to each other.
+
+**Confirm:** the Liverpool title and a public interaction list (`/view_all_interactions`, `/view_all_interactions/new`, or the PrEP checker). Do not assign this id to other interaction databases (IMEx, SNAPPI) or to a page that only cites the Liverpool checker. One record per deployment, not per alias hostname.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Liverpool" "Interactions" "view_all_interactions"` |
+| Google | `"Liverpool PrEP Interactions"` |
+| Censys | `web.endpoints.http.body: "Liverpool" and web.endpoints.http.body: "view_all_interactions"` |
+| FOFA | `body="Liverpool" && body="view_all_interactions"` |
+| FOFA | `title="Liverpool" && body="prescribing_resources"` |
+
+## METSIS (`metsis`) {#metsis}
+
+MET Norway Scientific Information System. Drupal module: [metno/metsis-drupal](https://github.com/metno/metsis-drupal). Live catalogs include [data.met.no](https://data.met.no/), Arctic Data Centre, GCW, APPLICATE, SIOS, and the Norwegian National Ground Segment.
+
+**Signals:** `/modules/metsis/metsis_search/` and a public `/metsis/search` page whose results link to `/metsis/metadata/{id}`.
+
+**Confirm:** GET `/metsis/search` and find dataset metadata links. Do not assign `metsis` to a Drupal site that only mentions MET Norway, or to `*.csw.met.no` (`pycsw`) and THREDDS catalogs on the same organization. One METSIS installation = one catalog. A facility list and the dataset search on the same host can be separate records when they publish different collections.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/metsis/search` |
+| Google | `"Metadata Search" metsis (met.no OR sios-svalbard.org OR satellittdata.no)` |
+| Censys | `web.endpoints.http.body: "/modules/metsis/metsis_search/"` |
+| FOFA | `body="/modules/metsis/metsis_search/"` |
+
+## CAMD-Web (`camdweb`) {#camdweb}
+
+DTU CAMD materials browser. Source: [camd/camd-web](https://gitlab.com/camd/camd-web). Live apps include [C2DB](https://c2db.fysik.dtu.dk/), [CMR projects](https://cmrdb.fysik.dtu.dk/), [QPOD](https://qpod.fysik.dtu.dk/), [BiDB](https://bidb.fysik.dtu.dk/), [CRYSP](https://crysp.fysik.dtu.dk/), [CrystalBank](https://crystalbank.fysik.dtu.dk/), [HetDB](https://hetdb.fysik.dtu.dk/), [X2DB](https://x2db.fysik.dtu.dk/), and [PAH](https://molexdb.fysik.dtu.dk/).
+
+**Signals:** footer `Powered by Bottle and CAMD-Web`. The search page reports `Found N rows out of` and an `Add column` control. C2DB serves OPTIMADE at `/optimade/v1/structures`.
+
+**Confirm:** the footer or that search page on a host listed in the CAMD-Web README. Do not assign `camdweb` to the Sphinx documentation at `cmr.fysik.dtu.dk`, to `c2db-test`, or to a paper that only cites C2DB. One app hostname = one catalog. CMR projects is the database index; it is not the same record as C2DB.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Powered by Bottle and CAMD-Web"` |
+| Censys | `web.endpoints.http.body: "Powered by Bottle and CAMD-Web"` |
+| FOFA | `body="Powered by Bottle and CAMD-Web"` |
+
+## Protwis (`protwis`) {#protwis}
+
+Django platform for GPCR resources. Source: [protwis/protwis](https://github.com/protwis/protwis). Live deployments: [GPCRdb](https://gpcrdb.org/), [GproteinDb](https://gproteindb.org/), [ArrestinDb](https://arrestindb.org/), and [Biased Signaling Atlas](https://biasedsignalingatlas.org/).
+
+**Signals:** `GET /services/receptorlist/` returns JSON objects with `entry_name`. `GET /services/` is Swagger (`Powered by Django REST Swagger`). Pages link to GPCRdb under `FOR DEVELOPERS` / `Linking to GPCRdb` and load `/static/home/js/gpcrdb.js`.
+
+**Confirm:** the receptor list JSON on that host. Do not assign `protwis` to a publication that cites GPCRdb, or to an external GPCR tool linked from the menu. One hostname = one catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Linking to GPCRdb" "receptorlist"` |
+| Censys | `web.endpoints.http.body: "gpcrdb.js" and web.endpoints.http.body: "receptorlist"` |
+| FOFA | `body="gpcrdb.js" && body="receptorlist"` |
+
+## Fairdata (`fairdata`) {#fairdata}
+
+Finland's national research data services, operated by CSC. Product site: [fairdata.fi](https://www.fairdata.fi/en/). Finder source: [CSCfi/etsin-finder](https://github.com/CSCfi/etsin-finder). Public hosts are Etsin (`etsin.fairdata.fi`), IDA (`ida.fairdata.fi`), and the service homepage (`www.fairdata.fi`). Dataset metadata is in Metax.
+
+**Confirm:** the host is under `fairdata.fi` and the page is Etsin, IDA, or the Fairdata service homepage. Title `Etsin | Research Dataset Finder` or `Fairdata IDA`. Register each public service host. Do not add a record per dataset, and do not tag a generic FAIR Data Point (`fairdatapoint`) as Fairdata.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Fairdata" (Etsin OR IDA OR Qvain) site:fairdata.fi` |
+| Censys | `web.names: "fairdata.fi"` |
+| FOFA | `domain="fairdata.fi"` |
+
+## Bento Framework (`bento`) {#bento}
+
+NCI CBIIT's reusable data-commons framework. Source: [CBIIT/bento-frontend](https://github.com/CBIIT/bento-frontend) (`@bento-core/create-bento-app` scaffolder). Live deployments: [ICDC](https://caninecommons.cancer.gov/), [C3DC](https://clinicalcommons.ccdi.cancer.gov/), [MTP](https://moleculartargets.ccdi.cancer.gov/).
+
+**Signals:** the SPA loads `/injectEnv.js` (serves `window.injectedEnv`), `/js/session.js`, and `/manifest.json`; GraphQL backend at `/v1/graphql/` answers introspection.
+
+**Confirm:** GET `/injectEnv.js` on the host, or POST `{__schema{queryType{name}}}` to `/v1/graphql/`. Do not assign `bento` to portals that merely link an NCI data commons, and not to Gen3 stacks (different shell: no `injectEnv.js`).
+
+| Tool | Query |
+|------|-------|
+| Google | `"injectEnv.js" ("data commons" OR cancer)` |
+| Censys | `web.endpoints.http.body: "injectedEnv"` |
+| FOFA | `body="injectEnv.js"` |
+
+## NBIA (`nbia`) {#nbia}
+
+National Biomedical Imaging Archive — open-source (BSD 3-Clause) DICOM image archive software; source: [NCIP/national-biomedical-image-archive](https://github.com/NCIP/national-biomedical-image-archive), product wiki: [NCI NBIA](https://wiki.nci.nih.gov/display/NBIA). The Cancer Imaging Archive ([cancerimagingarchive.net](https://www.cancerimagingarchive.net/)) runs on NBIA; the retired NCIA instance served it at `imaging.nci.nih.gov/ncia`.
+
+**Signals:** NBIA REST API at `/nbia-api/services/v1/` (`getCollectionValues` returns collection JSON); legacy instances expose `/ncia/` JSF pages.
+
+**Confirm:** GET `/nbia-api/services/v1/getCollectionValues`. Instances federate — one record per public archive, not per collection. Do not tag imaging portals built on other stacks (IDC at imaging.datacommons.cancer.gov is not NBIA).
+
+| Tool | Query |
+|------|-------|
+| Google | `"NBIA" ("getCollectionValues" OR "nbia-api")` |
+| Censys | `web.endpoints.http.body: "nbia-api"` |
+| FOFA | `body="nbia-api"` |
+
+## VectorSurv (`vectorsurv`) {#vectorsurv}
+
+Hosted vector-borne disease surveillance platform operated by UC Davis for US state/local agencies. Central system: [vectorsurv.org](https://vectorsurv.org). State-branded deployments embed the service.
+
+**Signals:** VectorSurv branding, `VectorSurv-Logo` assets, an embedded frame with id `vectorsurvEmbedded` or iframes/links to `vectorsurv.org/arbo/` on the state site.
+
+**Confirm:** GET the public page and check for the embed/branding. One record for the central portal plus one per state-branded deployment that visibly embeds VectorSurv. Skip agency login pages and sites that only link to vectorsurv.org.
+
+| Tool | Query |
+|------|-------|
+| Google | `"VectorSurv" (surveillance OR "west nile") -site:vectorsurv.org` |
+| Censys | `web.endpoints.http.body: "vectorsurvEmbedded"` |
+| FOFA | `body="vectorsurvEmbedded"` |
+
+## SISMER (`sismer`) {#sismer}
+
+Ifremer's marine data information system. Public hosts are the marine data catalog (`data.ifremer.fr`), the oceanographic campaign catalog (`donnees-campagnes.flotteoceanographique.fr`), and related Ifremer data services branded "SISMER" in the page body.
+
+**Confirm:** GET the host home and look for "SISMER" / "Systèmes d'Informations Scientifiques pour la Mer" branding. One record per service host, not per cruise or dataset. `en.data.ifremer.fr` is the English path of the same catalog (`data.ifremer.fr/en`), not a separate record.
+
+| Tool | Query |
+|------|-------|
+| Google | `SISMER Ifremer ("portail de données" OR "données marines")` |
+| Censys | `web.names: "ifremer.fr"` |
+| FOFA | `domain="ifremer.fr"` |
+
+## Ocean Atlas (`oceanatlas`) {#oceanatlas}
+
+MIO's shared "Ocean … Atlas" web application behind the Ocean Gene Atlas (`tara-oceans.mio.osupytheas.fr`), Ocean Barcode Atlas (`oba.mio.osupytheas.fr/ocean-atlas/`), and Ocean Read Atlas (`ora.mio.osupytheas.fr`). Instances share the same Bootstrap/jQuery-UI build (`/build/css/custom.css`, `select2`, `icomoon`, `nprogress` assets).
+
+**Confirm:** GET the host home; the page title is "Ocean Gene/Barcode/Read Atlas" and the asset paths match the shared build. One record per atlas instance, not per gene or barcode query.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Ocean Gene Atlas" OR "Ocean Barcode Atlas" OR "Ocean Read Atlas"` |
+| Censys | `web.names: "mio.osupytheas.fr"` |
+| FOFA | `domain="mio.osupytheas.fr"` |
+
+## VizieR (`vizier`) {#vizier}
+
+CDS service for astronomical catalogues and tables. Canonical host is `vizier.cds.unistra.fr`; mirrors run the same software at partner data centers (e.g., CfA/Harvard, CADC, IUCAA). The old host `vizier.u-strasbg.fr` / `vizier.unistra.fr` redirects to the canonical host — do not register both.
+
+**Confirm:** GET the host; title contains "VizieR" and the page exposes VO endpoints (`/viz-bin/VizieR`, TAP at `/tap`). Register the canonical CDS host and each independent mirror, not individual catalogue pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `"VizieR" "catalogue" mirror site` |
+| Google | `inurl:viz-bin "VizieR"` |
+| Censys | `web.html: "VizieR" and web.html: "viz-bin"` |
+
+## Crystallography Open Database (`cod`) {#cod}
+
+Open-source crystal-structure repository platform (Perl/CGI + MySQL, cod-tools CIF
+utilities) maintained by the COD advisory board at Vilnius University. One codebase
+powers the experimental COD, the predicted structures database (PCOD), and the
+theoretical structures database (TCOD) — all on `crystallography.net` — plus OPTIMADE
+provider endpoints.
+
+**Signals:** `/cod/`, `/pcod/`, `/tcod/` paths on the same host; "Crystallography Open
+Database" branding; `result.php` search endpoint; wiki links to
+`wiki.crystallography.net`.
+
+**Confirm:** GET `https://host/cod/result.php?el1=Si&strictmin=2` (or any query) and
+check CIF/JSON/CSV result links; GET the wiki link. Register each database (COD, PCOD,
+TCOD) as a distinct catalog when hosted as sibling paths; do not register search
+variants or mirror paths separately.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Crystallography Open Database" (COD OR PCOD OR TCOD) -site:crystallography.net` |
+| Google | `inurl:result.php "crystallography"` |
+| Censys | `web.html: "Crystallography Open Database"` |
+| FOFA | `body="Crystallography Open Database"` |
 
 ## Related
 

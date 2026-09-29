@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 30
+    subregion:
+      id: BA-BIH
+      name: Federacija Bosne i Hercegovine
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: ArcGIS Server of BH Telecom publishing a public broadband-availability
+  map. Other network folders on this server require a token.
+id: webgisbhtelecomba
+langs:
+- id: SR
+  name: Serbian
+link: https://webgis.bhtelecom.ba/arcgis/rest/services
+name: BH Telecom WebGIS
+owner:
+  link: https://www.bhtelecom.ba
+  location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 30
+    subregion:
+      id: BA-BIH
+      name: Federacija Bosne i Hercegovine
+  name: BH Telecom d.d. Sarajevo
+  type: Business
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- has_api
+- telecommunications
+- arcgisserver
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009356
+endpoints:
+- type: arcgis:portals:self
+  url: https://webgis.bhtelecom.ba/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://webgis.bhtelecom.ba/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://webgis.bhtelecom.ba/arcgis/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://webgis.bhtelecom.ba/arcgis/rest/services?f=sitemap

@@ -113,6 +113,7 @@ _NAT_OD_URL = re.compile(
         data\.go\.id|
         katalog\.data\.go\.id|
         govdata\.de|
+        dane\.gov\.pl|
         data\.overheid\.nl|
         data\.public\.lu|
         opendata\.gov\.[a-z.]+|

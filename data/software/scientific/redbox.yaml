@@ -1,0 +1,71 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'No'
+id: redbox
+name: ReDBox
+website: https://www.redboxresearchdata.com.au
+description: ReDBox (Research Data Box) is an open-source research data management
+  platform led by QCIF. Australian and New Zealand universities use it to capture
+  metadata for research collections, run research data management plans (RDMP), and
+  publish to Research Data Australia via OAI-PMH. Public portals commonly expose
+  paths under /default/rdmp/.
+owner:
+  name: Queensland Cyber Infrastructure Foundation (QCIF)
+  location:
+    country:
+      id: AU
+      name: Australia
+logo_url: https://www.redboxresearchdata.com.au/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Structured
+type: Software
+repository_url: https://github.com/redbox-mint/redbox-portal
+documentation_url: https://www.redboxresearchdata.com.au/documentation-redbox2/installationDocumentation/introduction.html
+changelog_url: https://github.com/redbox-mint/redbox-portal/releases
+version: 5.0.1
+release_date: '2026-09-14'
+license:
+  type: GPL-3.0
+  url: https://github.com/redbox-mint/redbox-portal/blob/master/LICENSE
+export_formats:
+- CSV
+- JSON
+- XML
+capabilities:
+- Research data registry
+- RDMP workflows
+- OAI-PMH harvesting
+- Mint lookup service
+- Publish to Research Data Australia
+last_updated: '2026-09-27T00:00:00Z'

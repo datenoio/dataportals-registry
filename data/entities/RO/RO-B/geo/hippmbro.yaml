@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: RO-B
+      name: București
+description: Bucharest public-map GeoServer (HIP) publishing fountains, public toilets,
+  parking, and points of interest for Primăria Municipiului București.
+id: hippmbro
+langs:
+- id: RO
+  name: Romanian
+link: https://hip.pmb.ro:8443/geoserver
+name: Bucharest HIP GeoServer
+owner:
+  link: https://www.pmb.ro
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 30
+    subregion:
+      id: RO-B
+      name: București
+  name: Primăria Municipiului București
+  type: Local government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- geospatial
+- government
+- romania
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009500
+endpoints:
+- type: wms111
+  url: https://hip.pmb.ro:8443/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://hip.pmb.ro:8443/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://hip.pmb.ro:8443/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://hip.pmb.ro:8443/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://hip.pmb.ro:8443/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

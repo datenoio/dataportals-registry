@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Fukuoka
 description: Chikushino City public WebGIS (ArcGIS Experience) publishing urban-planning
   and related map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/53f8065584e44bfaaa96e0ee0d9a0327/data?f=json
 id: experiencearcgiscomchikushino
 langs:
 - id: JA

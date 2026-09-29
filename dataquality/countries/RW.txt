@@ -1,0 +1,24 @@
+DATA QUALITY REPORT - COUNTRY: RW
+================================================================================
+Generated: 2026-09-29 11:21:05
+Country Code: RW
+Total Records with Issues: 1
+Total Issues Found: 1
+
+=== ISSUES BY TYPE ===
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIMS]
+Count: 1
+Priority: MEDIUM
+
+File: RW/Federal/scientific/rbisuracrw.yaml
+Record ID: rbisuracrw
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIMS
+Field: endpoints
+Current Value: {'software_id': 'bims', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bims' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIMS: 1 issue

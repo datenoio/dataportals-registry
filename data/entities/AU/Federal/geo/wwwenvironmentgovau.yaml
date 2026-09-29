@@ -19,22 +19,22 @@ description: Web mapping services providing environmental data from the Australi
   government. Data is available for download and use as web mapping services.
 endpoints:
 - type: arcgis:rest:info
-  url: http://www.environment.gov.au/mapping/rest/info?f=pjson
+  url: https://gis.environment.gov.au/gispubmap/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: http://www.environment.gov.au/mapping/rest/services?f=pjson
+  url: https://gis.environment.gov.au/gispubmap/rest/services?f=pjson
 - type: arcgis:soap
-  url: http://www.environment.gov.au/mapping/services?wsdl
+  url: https://gis.environment.gov.au/gispubmap/services?wsdl
 - type: arcgis:sitemap
-  url: http://www.environment.gov.au/mapping/rest/services?f=sitemap
+  url: https://gis.environment.gov.au/gispubmap/rest/services?f=sitemap
 - type: arcgis:geositemap
-  url: http://www.environment.gov.au/mapping/rest/services?f=geositemap
+  url: https://gis.environment.gov.au/gispubmap/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: http://www.environment.gov.au/mapping/rest/services?f=kmz
+  url: https://gis.environment.gov.au/gispubmap/rest/services?f=kmz
 id: wwwenvironmentgovau
 langs:
 - id: EN
   name: English
-link: http://www.environment.gov.au/mapping/services
+link: https://gis.environment.gov.au/gispubmap/rest/services
 name: Environmental Mapping Services (Australian Department of Climate Change, Energy,
   the Environment and Water)
 owner:

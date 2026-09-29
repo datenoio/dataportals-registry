@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ERDDAP data server (Data Access Program) of Ocean Networks Canada,
+  companion to the Oceans 3.0 data portal. Provides standardized access to
+  oceanographic datasets from ONC cabled observatories, mobile platforms and
+  autonomous instruments via tabledap and griddap in common scientific file formats.
+endpoints:
+- type: erddap:index
+  url: https://dap.oceannetworks.ca/erddap/index.json
+- type: erddap:datasets
+  url: https://dap.oceannetworks.ca/erddap/info/index.json
+- type: opensearch
+  url: https://dap.oceannetworks.ca/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://dap.oceannetworks.ca/erddap/sitemap.xml
+id: dapoceannetworksca
+langs:
+- id: EN
+  name: English
+link: https://dap.oceannetworks.ca/erddap/index.html
+name: Ocean Networks Canada ERDDAP Server
+owner:
+  link: https://www.oceannetworks.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+  name: Ocean Networks Canada
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: erddap
+  name: ERDDAP
+status: active
+tags:
+- ocean
+- oceanography
+- oceanographic data
+- real-time data
+- ERDDAP
+- marine data
+- scientific data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00010050

@@ -1,0 +1,60 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: Uncertain
+has_bulk: 'No'
+id: sciencedb
+name: ScienceDB
+website: https://scidb.cn
+description: ScienceDB (Science Data Bank, 科学数据银行) is a generalist research
+  data repository operated by the Computer Network Information Center (CNIC) of the
+  Chinese Academy of Sciences. It publishes datasets with CSTR/DOI identifiers,
+  bilingual metadata, and journal data-availability integrations, and serves as the
+  recommended repository for many Chinese journals.
+owner:
+  name: Computer Network Information Center, Chinese Academy of Sciences
+  location:
+    country:
+      id: CN
+      name: China
+logo_url: https://scidb.cn/favicon.ico
+documentation_url: https://www.scidb.cn/en/about
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: Uncertain
+  dublin_core: Uncertain
+  iso19115: 'No'
+  oai-pmh: Uncertain
+  ogcrecords: 'No'
+  openaire: Uncertain
+  opensearch: Uncertain
+  rdf_sparql: 'No'
+  schema-org: Uncertain
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+export_formats:
+- JSON
+capabilities:
+- Dataset repository
+- DOI and CSTR assignment
+- Journal data submission workflows
+last_updated: '2026-09-28T00:00:00Z'

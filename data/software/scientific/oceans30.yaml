@@ -1,0 +1,65 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: oceans30
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+name: Ocean Networks Canada Oceans 3.0
+website: https://data.oceannetworks.ca
+documentation_url: https://wiki.oceannetworks.ca/display/O2A
+description: Oceans 3.0 is the data management and archive system (DMAS) operated
+  by Ocean Networks Canada for its cabled ocean observatories, mobile platforms and
+  autonomous instruments. The portal at data.oceannetworks.ca provides dataset
+  search, preview, visualization and download, backed by the Oceans 3.0 REST API
+  and companion ERDDAP servers.
+owner:
+  name: Ocean Networks Canada, University of Victoria
+  location:
+    country:
+      id: CA
+      name: Canada
+logo_url: https://data.oceannetworks.ca/favicons/favicon.ico
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+export_formats:
+- CSV
+- JSON
+- NetCDF
+- XML
+capabilities:
+- REST API
+- ERDDAP access
+- Real-time oceanographic data
+- Data preview and visualization
+- Bulk downloads
+last_updated: '2026-09-28T00:00:00Z'

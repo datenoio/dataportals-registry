@@ -1,6 +1,6 @@
 access_mode:
 - open
-api_status: uncertain
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -33,8 +33,8 @@ owner:
   type: Central government
   link: https://fecyt.es
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - government
@@ -44,3 +44,7 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi00010813
+endpoints:
+- type: rss
+  url: https://www.fecyt.es/rss.xml
+api: true

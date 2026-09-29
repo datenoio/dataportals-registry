@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: NL-ZH
       name: Zuid-Holland
-description: ArcGIS Open Data geoportal of the municipality of The Hague (Gemeente Den Haag).
+description: ArcGIS Open Data geoportal of the municipality of The Hague (Gemeente
+  Den Haag).
 endpoints:
 - type: dcatap201
   url: https://geoportaal.ddh.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -64,6 +65,12 @@ tags:
 - geospatial
 - has_api
 topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 - id: REGI
   name: Regions and cities
   type: eudatatheme

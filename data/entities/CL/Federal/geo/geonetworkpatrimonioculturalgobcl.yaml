@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -58,3 +58,14 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00021751
+endpoints:
+- type: csw202
+  url: https://geonetwork.patrimoniocultural.gob.cl/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geonetwork.patrimoniocultural.gob.cl/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://geonetwork.patrimoniocultural.gob.cl/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://geonetwork.patrimoniocultural.gob.cl/geonetwork/srv/api/site

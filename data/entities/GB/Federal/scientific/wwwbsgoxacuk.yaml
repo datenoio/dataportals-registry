@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,10 +14,10 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: The Oxford COVID-19 Government Response Tracker (OxCGRT) systematically collects
-  information on several different common policy responses that governments have taken to
-  respond to the pandemic on 18 indicators such as school closures and travel restrictions.
-  It now has data from more than 180 countries.
+description: The Oxford COVID-19 Government Response Tracker (OxCGRT) systematically
+  collects information on several different common policy responses that governments
+  have taken to respond to the pandemic on 18 indicators such as school closures and
+  travel restrictions. It now has data from more than 180 countries.
 id: wwwbsgoxacuk
 identifiers:
 - id: openaire
@@ -38,8 +38,8 @@ owner:
   name: University of Oxford, Blavatnik School of Government
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -59,3 +59,6 @@ topics:
   name: Health
   type: iso19115
 uid: cdi00030940
+endpoints:
+- type: sitemap
+  url: https://www.bsg.ox.ac.uk/sitemap.xml

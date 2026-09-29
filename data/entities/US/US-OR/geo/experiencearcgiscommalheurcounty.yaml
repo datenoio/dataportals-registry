@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Northern America
 description: Malheur County tax lot map built with ArcGIS Experience Builder, linked
   from the county GIS page.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/6ff041d3786e43a794de02d9330b492e/data?f=json
 id: experiencearcgiscommalheurcounty
 langs:
 - id: EN

@@ -1,0 +1,68 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: dsp
+name: DaSCH Service Platform
+website: https://docs.dasch.swiss/
+description: The DaSCH Service Platform (DSP, formerly Knora) is an open-source
+  repository for humanities research data. DSP-API stores RDF and media, exposes
+  a JSON-LD HTTP API, and serves the public virtual research environment at
+  app.dasch.swiss. Projects are tenants of that installation. The organization
+  site dasch.swiss is not the repository.
+owner:
+  name: Swiss National Data and Service Center for the Humanities (DaSCH)
+  location:
+    country:
+      id: CH
+      name: Switzerland
+logo_url: https://app.dasch.swiss/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'Yes'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+license:
+  type: Apache-2.0
+  url: https://github.com/dasch-swiss/dsp-api/blob/main/LICENSE
+version: 40.0.0
+repository_url: https://github.com/dasch-swiss/dsp-api
+documentation_url: https://docs.dasch.swiss/latest/developers/introduction/
+changelog_url: https://github.com/dasch-swiss/dsp-api/releases
+export_formats:
+- JSON
+- JSON-LD
+- RDF
+capabilities:
+- Humanities research data repository
+- JSON-LD API
+- OAI-PMH
+last_updated: '2026-09-26T00:00:00Z'

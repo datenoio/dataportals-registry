@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -16,8 +16,8 @@ coverage:
       id: '145'
       name: Western Asia
 description: Former ArcGIS Hub used to publish Global Forest Watch / REC Caucasus
-  forest, land-use, and conservation layers for Armenia. The Hub item at
-  data-download-gfw.hub.arcgis.com no longer exists (HTTP 404).
+  forest, land-use, and conservation layers for Armenia. The Hub item at data-download-gfw.hub.arcgis.com
+  no longer exists (HTTP 404).
 id: datadownloadgfwhubarcgiscom
 langs:
 - id: EN
@@ -72,3 +72,6 @@ topics:
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00000019
+endpoints:
+- type: arcgishubapi
+  url: https://data-download-gfw.hub.arcgis.com/api/v3/datasets

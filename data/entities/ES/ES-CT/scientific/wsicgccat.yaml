@@ -28,6 +28,9 @@ endpoints:
   url: https://ws.icgc.cat/fdsnws/availability/1/
 - type: rest
   url: https://ws.icgc.cat/eidaws/wfcatalog/1/
+- type: fdsnws:station
+  url: https://ws.icgc.cat/fdsnws/station/1/version
+  version: '1'
 id: wsicgccat
 langs:
 - id: EN

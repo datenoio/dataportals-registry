@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -16,7 +16,14 @@ coverage:
       id: '154'
       name: Northern Europe
 description: Data catalog hosted on GeoNetwork platform
-endpoints: []
+endpoints:
+- type: csw202
+  url: http://geonet.se/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:selections
+  url: http://geonet.se/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: http://geonet.se/geonetwork/srv/api/site
 id: geonetse
 langs:
 - id: SV

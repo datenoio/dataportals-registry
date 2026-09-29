@@ -8,7 +8,7 @@ Do not register CRIS profile portals that expose only people and publications. S
 
 | Page | Use when |
 |------|----------|
-| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, OPUS, RADAR, Yoda, Hyrax, Figshare, Redivis, Pure, Converis, Omega-PSIR, Archipelago, DABAR, OpenScience.si, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, DiVA Portal, META-SHARE, Gen3, …) |
+| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, OPUS, RADAR, Yoda, Hyrax, Figshare, Redivis, Pure, Converis, Omega-PSIR, Archipelago, DABAR, OpenScience.si, LabKey, Synapse, BioUML, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, DiVA Portal, META-SHARE, Gen3, Index Data Keystone, …) |
 | [Domain repositories](discovery-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, BirdMap Africa, SciCat, CLLD, Pathway Tools, IBDC |
 
 All `software.id` values: [software-index.md](software-index.md). Harvest filters: [harvest-scientific.md](harvest-scientific.md), [harvest-scientific-domain.md](harvest-scientific-domain.md).
@@ -141,6 +141,20 @@ The default template [lib/templates/default.xml](https://github.com/eprints/epri
 | Censys | `web.endpoints.http.body: "EPrints"` |
 | FOFA | `body="EPrints"` |
 
+## Index Data Keystone (`keystoneils`) {#keystoneils}
+
+Index Data digital-library suite. The public catalog is Toolkit Lite (TKL) on Zebra. Distinct from Keystone Systems KLAS and from Trimble Locus (`trimblelocus`).
+
+**Confirm:** footer or image alt “Powered by the Index Data Keystone ILS” (`/gfx/keystone.gif`), or CCL parameters `cclterm1` and `wf_step=init` together with a `.tkl` template (`index.tkl`). A meta author of “Index Data” alone is not enough. Known live portals: University of Crete e-Locus and Anemi (`anemi.lib.uoc.gr`, same organization). Do not tag a library homepage that only links to a Keystone catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Powered by the Index Data Keystone ILS"` |
+| Google | `cclterm1 wf_step=init keystone` |
+| Censys | `web.endpoints.http.body: "Index Data Keystone ILS"` |
+| FOFA | `body="Index Data Keystone ILS"` |
+| FOFA | `body="cclterm1" && body="wf_step=init"` |
+
 ## DiVA Portal (`divaportal`) {#divaportal}
 
 Swedish shared IR (Uppsala University Library). Tenants at `{org}.diva-portal.org` with a JSF smash search UI. Hub: [diva-portal.org](https://www.diva-portal.org). Distinct from **DIVA-GIS** species downloads.
@@ -258,6 +272,23 @@ Prefer instances that publish research data (`doc-type:ResearchData` in OAI-PMH 
 
 Skip intranet-only thesis portals (Hochschulnetz / account required). Register the repository root, not a single document frontdoor.
 
+## mediaTUM (`mediatum`) {#mediatum}
+
+Python document, image, and research-data server from the Technical University of Munich. Product: [mediatum.github.io](https://mediatum.github.io/). Live systems listed there include TUM, the Augsburg university library, Universität der Bundeswehr München (AtheneForschung), and KU.media.
+
+**Signals:** `<meta name="generator" content="mediatum - a multimedia content repository">`.
+
+**Confirm:** GET the repository home and match that generator. One record per installation. Do **not** set `mediatum` on an OPUS publication server of the same university.
+
+| Tool | Query |
+|------|-------|
+| Google | `"mediatum - a multimedia content repository"` |
+| Google | `"powered by mediaTUM" OR "mediaTUM" (Medienserver OR Publikationsserver) site:.de` |
+| Censys | `web.endpoints.http.body: "mediatum - a multimedia content repository"` |
+| FOFA | `body="mediatum - a multimedia content repository"` |
+
+Skip the project site `mediatum.github.io`.
+
 ## RADAR (`radar`) {#radar}
 
 FIZ Karlsruhe research data repositories (RADAR Cloud and RADAR Local). Official instance notes: [About RADAR](https://radar.products.fiz-karlsruhe.de/en/radarabout/ueber-radar). re3data lists them under software **RADAR**.
@@ -325,6 +356,21 @@ swissuniversities OAIS research-data platform (University of Geneva). Product: [
 | FOFA | `body="Yareta"` |
 
 Register one catalog per public tenant. Do not add the product marketing site as a second catalog.
+
+## DaSCH Service Platform (`dsp`) {#dsp}
+
+Open-source humanities repository (DSP-API, formerly Knora) from the Swiss National Data and Service Center for the Humanities. Product docs: [docs.dasch.swiss](https://docs.dasch.swiss/latest/developers/introduction/). The public installation is [app.dasch.swiss](https://app.dasch.swiss). Projects are tenants of that host, not separate catalogs. Source: [dasch-swiss/dsp-api](https://github.com/dasch-swiss/dsp-api).
+
+**Signals:** title `DaSCH Service Platform`; API at `api.dasch.swiss`; OAI-PMH on `repository.dasch.swiss`; `knora` ontology IRIs in project data.
+
+**Confirm:** GET `https://app.dasch.swiss` and `https://api.dasch.swiss/admin/projects`. Register the platform once. Do **not** set `dsp` on `dasch.swiss` (organization site) or on a single project page inside the platform.
+
+| Tool | Query |
+|------|-------|
+| Google | `"DaSCH Service Platform" OR app.dasch.swiss` |
+| Google | `"dsp-api" Knora repository` |
+| Censys | `web.endpoints.http.body: "DaSCH Service Platform"` |
+| FOFA | `body="DaSCH Service Platform"` |
 
 ## easydb (`easydb`) {#easydb}
 
@@ -435,7 +481,9 @@ Skip marketing pages. The public research **portal** is the catalog, not the adm
 
 Clarivate / Ex Libris research information management and repository. Vendor: [Esploro](https://exlibrisgroup.com/products/esploro-research-services-platform/). Hosts often `*.esploro.exlibrisgroup.com` or a campus custom domain with `/esploro` or research-outputs views. Surrey Research Insight redirected from `epubs.surrey.ac.uk` to `openresearch.surrey.ac.uk/esploro/` (`<base href="/esploro/"/>`). A `202` empty body on a successor host (Manchester Met `repository.mmu.ac.uk`) is not enough.
 
-Register the institutional research portal that lists datasets, not a single output URL. Skip Ex Libris marketing pages.
+`host="esploro.exlibrisgroup.com"` misses campus custom domains. The shell loads `esp-init-loader` and `assets/fonts/clarivate.css` and writes `<strong>Esploro</strong>` (95 hosts each on 24 September 2026, including Rangahau at `rangahau.twoa.ac.nz`). `body="esplorows"` returned 5. `body="<esp-root"` returned 3,406 and is mostly unrelated pages.
+
+Register the institutional research portal that lists datasets, not a single output URL. Keep a host only when the research search returns `rtype=datasets`. Skip Ex Libris marketing pages, Alma `500` hosts, and sandbox tenants.
 
 | Tool | Query |
 |------|-------|
@@ -443,6 +491,10 @@ Register the institutional research portal that lists datasets, not a single out
 | Google | `site:esploro.exlibrisgroup.com` |
 | Censys | `web.names: "esploro.exlibrisgroup.com"` |
 | FOFA | `host="esploro.exlibrisgroup.com"` |
+| FOFA | `body="esp-init-loader"` |
+| FOFA | `body="assets/fonts/clarivate.css"` |
+| FOFA | `body="<strong>Esploro</strong>"` |
+| FOFA | `body="esplorows"` |
 | FOFA | `body="base href=\"/esploro/\""` |
 | crt.sh | `%.esploro.exlibrisgroup.com` |
 
@@ -677,6 +729,22 @@ LabKey Server study/assay platform. Site: [labkey.com](https://www.labkey.com). 
 | Censys | `web.endpoints.http.body: "LabKey"` |
 | FOFA | `body="LabKey"` |
 
+## BioUML (`biouml`) {#biouml}
+
+BioUML systems-biology platform from the Institute of Systems Biology (biosoft.ru). Site: [biouml.org](https://biouml.org). Public databases run as `*.autosome.org` or `*.biouml.org` hosts (GTRD, HOCOMOCO, EpiFactors) with the shared table-based database browser.
+
+**Signals:** "BioUML" branding or "Powered by BioUML"; `autosome.org` / `biouml.org` hosts; table browser with per-table export.
+
+**Confirm:** GET the public database home (table listing). One record per public database, not per table or motif model. Skip a single downloaded track or PWM file.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Powered by BioUML" OR "BioUML platform" (database OR download) -site:github.com` |
+| Google | `site:autosome.org` |
+| Censys | `web.endpoints.http.body: "BioUML"` |
+| FOFA | `body="BioUML"` |
+| crt.sh | `%.autosome.org` |
+
 ## Synapse (`synapse`) {#synapse}
 
 Sage Bionetworks hosted biomedical sharing platform. Site: [synapse.org](https://www.synapse.org). Disease portals (AD Knowledge Portal, NF Data Portal) are Synapse tenants.
@@ -818,6 +886,37 @@ NOMAD Laboratory archive and Oasis software for computational materials data. Si
 | Censys | `web.endpoints.http.body: "close all NOMAD tabs"` |
 | FOFA | `body="close all NOMAD tabs"` |
 
+## High-Throughput Toolkit (`httk`) {#httk}
+
+Open-source materials-database stack from Linköping University. Site: [httk.org](https://www.httk.org/). Source: [httk/httk-serve](https://github.com/httk/httk-serve). Distinct from NOMAD (`nomad`) and from other OPTIMADE providers that do not run httk.
+
+**Signals:** stylesheet `httkdemo.css` or “httkweb” in the page; current sites load `/_httk/serve/` and expose OPTIMADE at `/optimade/{db}/v1/info` or `https://optimade.{host}/v1/info`.
+
+**Confirm:** GET the public materials catalog and match `httkdemo.css`, `/_httk/serve/`, or an OPTIMADE `/v1/info` document for that database. One record per public database, not per structure. Skip [httk.org](https://www.httk.org/) (documentation), and skip OPTIMADE providers that are not httk, including NOMAD and the Organic Materials Database at `omdb.mathub.io`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"httkdemo.css" OR "/_httk/serve/" OR "httkweb" materials database` |
+| Censys | `web.endpoints.http.body: "httkdemo.css"` |
+| FOFA | `body="httkdemo.css"` |
+| FOFA | `body="/_httk/serve/"` |
+
+## Pathogens Portal Node (`nodepathogensportal`) {#nodepathogensportal}
+
+SciLifeLab Hugo toolbox for national pathogen-data portals. Source: [node-pathogens-portal](https://github.com/ScilifelabDataCentre/node-pathogens-portal). The Swedish portal is the original [pathogens-portal](https://github.com/ScilifelabDataCentre/pathogens-portal) site. Later nodes use the toolbox or a fork such as [spanish-pathogens-portal](https://github.com/BU-ISCIII/spanish-pathogens-portal). Distinct from the EMBL-EBI central portal (`www.pathogensportal.org`) and from the Swiss theme [hugo-pathogens-portal](https://github.com/sib-swiss/hugo-pathogens-portal).
+
+**Signals:** footer or about-page link to `node-pathogens-portal`; Hugo about title `About the node pathogens portal`; public listing at `/datasets/`. `www.pathogens.se` is the original Swedish node.
+
+**Confirm:** GET `/` and `/datasets/` and match the toolbox link, the default about title, or the Swedish pathogens-portal site. One record per national node. Skip the SciLifeLab demo `demo-pathogens-portal.serve.scilifelab.se`, the EMBL-EBI portal, the Swiss SIB theme (`pathogensportal.ch`), and same-network sites on other stacks (`pathogens.no`, `patogenos.cl`, `www.pathogensportal.nl`).
+
+| Tool | Query |
+|------|-------|
+| Google | `"node-pathogens-portal" OR "About the node pathogens portal"` |
+| Google | `"Pathogens Portal" (datasets OR "pandemic preparedness") site:.se OR site:.hu OR site:.es` |
+| Censys | `web.endpoints.http.body: "node-pathogens-portal"` |
+| FOFA | `body="node-pathogens-portal"` |
+| FOFA | `body="About the node pathogens portal"` |
+
 ## AODN Portal (`aodn`) {#aodn}
 
 Australian Ocean Data Network marine/climate discovery. Hub: [portal.aodn.org.au](https://portal.aodn.org.au).
@@ -831,6 +930,37 @@ Australian Ocean Data Network marine/climate discovery. Hub: [portal.aodn.org.au
 | Google | `"AODN" portal` |
 | Censys | `web.names: "aodn.org.au"` |
 | FOFA | `host="aodn.org.au"` |
+
+## SeaDataNet (`seadatanet`) {#seadatanet}
+
+Pan-European marine data infrastructure; portal software developed by MARIS for the SeaDataNet consortium of National Oceanographic Data Centres. The same stack powers the CDI data discovery service (`cdi.seadatanet.org`), the CSR cruise directory (`csr.seadatanet.org`), the EDMED / EDMERP / EDMO directories, and the SeaDataNet data products catalogue (`www.seadatanet.org/Products`).
+
+**Signals:** `*.seadatanet.org` hosts; “SeaDataNet” and “CDI” branding; SeaDataNet ISO 19115 metadata profiles; MARIS-built viewers (`*.maris.nl`); CDI SRU-style search endpoints.
+
+**Confirm:** GET the public CDI search UI or a directory listing (EDMED/EDMO/EDMERP/CSR). Use `software.id: seadatanet`. Related MARIS viewers without the SeaDataNet directories stay `custom` unless the SeaDataNet stack is evident. EMODnet lots reuse SeaDataNet formats but run their own software (for example GeoNetwork) — tag the actual stack, not the format.
+
+| Tool | Query |
+|------|-------|
+| Google | `"SeaDataNet" (CDI OR EDMED OR EDMERP OR EDMO) -site:seadatanet.org` |
+| Google | `inurl:seadatanet.org "Cruise Summary Report" OR "Common Data Index"` |
+| Censys | `web.endpoints.http.body: "SeaDataNet"` |
+| FOFA | `body="SeaDataNet"` |
+
+**False positives:** EMODnet portals on other software; national NODC catalogs that only expose SeaDataNet XML via CSW; ODV/NetCDF product download pages with no catalog.
+
+## Oceans 3.0 (`oceans30`) {#oceans30}
+
+Ocean Networks Canada data management and archive system (DMAS) for cabled ocean observatories, mobile platforms and autonomous instruments. Hub: [data.oceannetworks.ca](https://data.oceannetworks.ca). API docs: [wiki.oceannetworks.ca/display/O2A](https://wiki.oceannetworks.ca/display/O2A).
+
+**Signals:** title `Ocean Networks Canada - Oceans 3.0`; the `window.DMAS` / `DMAS.Config` JavaScript block exposing `DMAS_URL` and `ERDDAP_URL`; assets under `onc-static`. Companion ERDDAP servers live under `dap.oceannetworks.ca/erddap` and are registered separately.
+
+**Confirm:** GET the portal or an Oceans 3.0 API method. One record for the DMAS portal per operator; keep ERDDAP companions as their own `erddap` records. Skip individual sensor data-product downloads.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Oceans 3.0" data portal` |
+| Censys | `web.names: "oceannetworks.ca"` |
+| FOFA | `host="oceannetworks.ca"` |
 
 ## DataLad (`datalad`) {#datalad}
 
@@ -901,6 +1031,24 @@ Global Biodiversity Information Facility infrastructure. Hub: [gbif.org](https:/
 | Google | `"GBIF" (portal OR occurrence) -site:gbif.org` |
 | Censys | `web.names: "gbif.org"` |
 | FOFA | `domain="gbif.org"` |
+
+## ARPHA Platform (`arpha`) {#arpha}
+
+Pensoft's hosted scholarly publishing platform. Product page: [arpha.pensoft.net](https://arpha.pensoft.net). Manual: [arphahub.com/manual](https://arphahub.com/manual). Tenants live on `arphahub.com` and `{journal}.pensoft.net` hosts; `preprints.arphahub.com` is the shared preprint server.
+
+**Signals:** body class `pensoft`; title containing "ARPHA"; header logo linking to `pensoft.net`; scripts from `/lib/js/build/output/*_en.bundle.js`; OAI-PMH at `/oai`.
+
+**Confirm:** `GET https://host/oai?verb=Identify` returns repositoryName "ARPHA OAI-PMH Endpoint". Use `software.id: arpha`. Pensoft journal *data* portals on `data.{journal}.pensoft.net` are GBIF Hosted Portals — use `gbifplatform`, not this id.
+
+| Tool | Query |
+|------|-------|
+| Google | `"ARPHA Platform" (preprints OR journal)` |
+| Google | `site:arphahub.com -site:arphahub.com/manual` |
+| Censys | `web.endpoints.http.body: "pensoft.net"` |
+| FOFA | `body="ARPHA Platform"` |
+| crt.sh | `%.arphahub.com` |
+
+Register the **service root** (a preprint or journal tenant host), not individual article pages and not the manual.
 
 ## GIN (`gin`) {#gin}
 
@@ -1217,6 +1365,68 @@ Distinguish hosted institutional CRIS portals from the central Dialnet bibliogra
 | Google | `"Dialnet CRIS" portal OR "Fundación Dialnet" investigadores` |
 | Censys | `web.endpoints.http.body: "Dialnet CRIS"` |
 | FOFA | `body="Dialnet CRIS"` |
+
+## ReDBox (`redbox`) {#redbox}
+
+QCIF ReDBox research data management platform used by Australian and New Zealand universities. Product: [redboxresearchdata.com.au](https://www.redboxresearchdata.com.au). Source: [github.com/redbox-mint/redbox-portal](https://github.com/redbox-mint/redbox-portal). Distinct from Research Data Australia (national aggregator), Figshare institutional tenants, VIVO research profiles, and Pure/Esploro CRIS.
+
+**Signals:** path `/default/rdmp/` (home, list, view); title or copy mentioning ReDBox or Research Data Management Plan (RDMP); Mint lookup integration; OAI-PMH for Research Data Australia harvest.
+
+**Confirm:** GET a public `/default/rdmp/home` (or equivalent RDMP home) and match ReDBox/RDMP UI. One record per institutional deployment. Do **not** set `redbox` on Research Data Australia (`researchdata.edu.au`), university marketing pages that only link ReDBox, or login-walled staff RDMP without a public catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/default/rdmp/ "research data" site:.edu.au` |
+| Google | `"ReDBox" ("research data" OR RDMP) (university OR portal)` |
+| Censys | `web.endpoints.http.body: "/default/rdmp/"` |
+| FOFA | `body="/default/rdmp/"` |
+| FOFA | `body="ReDBox" && body="rdmp"` |
+
+## Craft CMS (`craftcms`) {#craftcms}
+
+Craft CMS (Pixel & Tonic) general CMS; a few US research-data sites publish their data catalog pages through it (CUAHSI, Chesapeake Bay Program data hub, Neotoma). Vendor: [craftcms.com](https://craftcms.com/).
+
+**Signals:** `X-Powered-By: Craft CMS` response header; `/cpresources/` asset paths.
+
+**Confirm:** GET the data page and match the header or `/cpresources/`. One record per institution. Do not tag sites that only embed a Craft-hosted page, and do not tag custom data applications that sit behind a Craft marketing frame.
+
+| Tool | Query |
+|------|-------|
+| Censys | `web.endpoints.http.headers: "Craft CMS"` |
+| FOFA | `header="Craft CMS"` |
+| FOFA | `body="/cpresources/" && body="data"` |
+
+## SBS Digital Collection (`sbsdigitalcollection`) {#sbsdigitalcollection}
+
+Simply Bright System (Chiang Mai) Electronic Digital Collection Management System for university libraries. Product page: [simplybright.co.th/solutions/detail/2](https://www.simplybright.co.th/solutions/detail/2). Showcases: CMU Digital Collections, Chula DigiVerse, Thammasat University Digital Collections, Kasetsart University Knowledge Repository. Self-hosted PHP. Do not use this id for the vendor's CKAN open-data installs (`data.go.th`, GD Catalog).
+
+**Confirm:** `body` contains `chartSBS.js` or `/statics/js/highcharts5012/chartSBS.js`, usually with `/layout/default_theme/` or `default_theme_new`. Collection search is `/Search/index/{slug}` (some installs prefix `/frontend/`). KUKR is the same product on a later Vue theme and does not serve `chartSBS.js`; accept it from the vendor showcase, not from that fingerprint. `beyond.library.tu.ac.th` is a second host of TUDC, not a second catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `"chartSBS.js" OR "sbs-directive.js"` |
+| Google | `inurl:default_theme "Digital Collections"` |
+| Censys | `web.endpoints.http.body: "chartSBS.js"` |
+| FOFA | `body="chartSBS.js"` |
+| FOFA | `body="sbs-directive.js"` |
+| Shodan | `http.html:"chartSBS.js"` |
+
+Harvest type filters: [harvest-scientific.md](harvest-scientific.md#sbsdigitalcollection).
+
+## ScienceDB (`sciencedb`) {#sciencedb}
+
+ScienceDB (Science Data Bank, 科学数据银行) — generalist research data repository operated by CNIC, Chinese Academy of Sciences. Canonical host `scidb.cn` (alias `www.scidb.cn`); dataset landing pages carry DOIs under prefix `10.57760/sciencedb`. Single-instance platform: register the repository once, not per dataset collection.
+
+**Signals:** host `scidb.cn`; DOI prefix `10.57760/sciencedb`; footer credit 中国科学院计算机网络信息中心.
+
+**Confirm:** GET `https://scidb.cn` and match the Science Data Bank chrome. Do not register journal submission endpoints or per-dataset DOI URLs as catalogs.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:scidb.cn dataset` |
+| Google | `"10.57760/sciencedb"` |
+| Censys | `web.names: "scidb.cn"` |
+| FOFA | `domain="scidb.cn"` |
 
 ## Related
 

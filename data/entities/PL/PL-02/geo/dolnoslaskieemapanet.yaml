@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Dolnośląskie
 description: Regional e-mapa.net geoportal aggregator for Dolnośląskie, Poland, providing
   access to local cadastral, address, and spatial planning map services.
+endpoints:
+- type: emapa:init
+  url: https://dolnoslaskie.e-mapa.net/application/system/init.php
 id: dolnoslaskieemapanet
 langs:
 - id: PL

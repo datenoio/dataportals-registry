@@ -1,0 +1,53 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD
+================================================================================
+Generated: 2026-09-29 11:21:05
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD
+Priority: MEDIUM
+Total Issues Found: 4
+
+Rule: Identifies records using software.id='webgiscloud' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+AT: 4 issues
+
+=== SUMMARY BY RECORD ===
+
+atlasvorarlbergat: 1 issue
+geodatenbgldgvat: 1 issue
+gisktngvatatlasmobile: 1 issue
+atlasnoegvat: 1 issue
+
+=== ISSUES ===
+
+File: AT/AT-8/geo/atlasvorarlbergat.yaml
+Record ID: atlasvorarlbergat
+Country: AT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD
+Field: endpoints
+Current Value: {"software_id": "webgiscloud", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='webgiscloud' is marked as API-capable in software definitions
+
+File: AT/AT-1/geo/geodatenbgldgvat.yaml
+Record ID: geodatenbgldgvat
+Country: AT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD
+Field: endpoints
+Current Value: {"software_id": "webgiscloud", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='webgiscloud' is marked as API-capable in software definitions
+
+File: AT/AT-2/geo/gisktngvatatlasmobile.yaml
+Record ID: gisktngvatatlasmobile
+Country: AT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD
+Field: endpoints
+Current Value: {"software_id": "webgiscloud", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='webgiscloud' is marked as API-capable in software definitions
+
+File: AT/AT-3/geo/atlasnoegvat.yaml
+Record ID: atlasnoegvat
+Country: AT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD
+Field: endpoints
+Current Value: {"software_id": "webgiscloud", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='webgiscloud' is marked as API-capable in software definitions

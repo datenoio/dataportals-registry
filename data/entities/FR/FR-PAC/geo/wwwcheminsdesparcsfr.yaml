@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,10 @@ coverage:
       name: Western Europe
 description: Shared Geotrek-rando catalog of outdoor routes for PACA regional nature
   parks.
+endpoints:
+- type: geotrek:trek
+  url: https://admin.cheminsdesparcs.fr/api/v2/trek/
+  version: '2'
 id: wwwcheminsdesparcsfr
 langs:
 - id: FR

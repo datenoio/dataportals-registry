@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Středočeský kraj
 description: GisOnline cemetery map application of the municipality of Kostelec nad
   Černými lesy.
+endpoints:
+- type: gisonline:project
+  url: https://app.gisonline.cz/api2/projects/17067
 id: appgisonlineczkostelecnadclhrbitov
 langs:
 - id: CS

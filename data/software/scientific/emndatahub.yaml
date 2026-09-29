@@ -1,0 +1,61 @@
+category: Scientific data repository
+subtype: scientific_repository_platform
+datatypes:
+  datasets: 'Yes'
+  fields: Uncertain
+  organizations: Uncertain
+  resources: 'Yes'
+  topics: Uncertain
+has_api: Uncertain
+has_bulk: Uncertain
+id: emndatahub
+name: EMN Data Hub
+website: https://www.energy.gov/eere/amo/energy-materials-network
+description: EMN Data Hub is the shared Energy Materials Network repository UI
+  hosted by the National Renewable Energy Laboratory / National Laboratory of the
+  Rockies for DOE consortium data hubs. Public tenants at datahub-*.nlr.gov
+  (DuraMAT, ElectroCat, HydroGEN / H2AWSM, ChemCatBio) serve the same SPA shell
+  with js/remote-app-entry.js module federation (for example DuramatdhApp,
+  ElectrocatdhApp). The platform was originally built on CKAN for the Energy
+  Materials Network; the current public hosts do not expose a live CKAN
+  /api/3/action/status_show endpoint, so do not label them ckan. Distinct from
+  Wind Data Hub, Livewire, and HyMARC CKAN.
+owner:
+  name: National Renewable Energy Laboratory
+  location:
+    country:
+      id: US
+      name: United States
+documentation_url: https://www.duramat.org/projects/data-hub
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: Uncertain
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: Uncertain
+storage_type: Both
+type: Software
+capabilities:
+- Consortium research data hub
+- Dataset discovery and download
+- Project-level access control
+last_updated: '2026-09-27T00:00:00Z'

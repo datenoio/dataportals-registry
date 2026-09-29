@@ -1,6 +1,6 @@
 # Harvesting biodiversity and genomics catalogs
 
-IPT, Symbiota, Living Atlases, Ensembl, PlutoF, InterMine, JGI, cBioPortal, and BirdMap Africa publish **datasets, collections, studies, or genome databases**. Occurrence rows, gene records, mutation tables, and map clicks are the wrong grain.
+IPT, Symbiota, Biodiv, BIMS, Living Atlases, Ensembl, PlutoF, InterMine, JGI, cBioPortal, and BirdMap Africa publish **datasets, collections, studies, or genome databases**. Occurrence rows, gene records, mutation tables, and map clicks are the wrong grain.
 
 Overview: [harvest.md](harvest.md). Finding portals: [discovery-scientific.md](discovery-scientific.md). GET only. Stop on `401`/`403`. Prefer `endpoints[]`.
 
@@ -10,6 +10,8 @@ Overview: [harvest.md](harvest.md). Finding portals: [discovery-scientific.md](d
 |------|------|
 | IPT Darwin Core **archive** | Occurrence rows inside the archive |
 | Symbiota published **dataset** (RSS) or collection (`collid`) if asked | Images, checklists, single occurrences |
+| Biodiv **dataset**, **datatable**, or document collection | Species pages, single observations, user profiles |
+| BIMS **source reference** or spatial layer | Occurrence rows, taxon pages, user accounts |
 | ALA **collection** / data resource | `/ws/occurrences/search` hits |
 | GBIF **dataset** (`api.gbif.org`) | Occurrence search; publisher orgs as datasets |
 | Ensembl **species / genome database** | Every gene, variation, or REST ping |
@@ -47,6 +49,30 @@ GET https://host/collections/datasets/rsshandler.php
 **Keep** Darwin Core datasets (RSS). Collection-level harvest only if the user wants one record per `collid`. One portal = one harvest scope. Login-only: stop. Directory: [symbiota.org/symbiota-portals](https://symbiota.org/symbiota-portals/).
 
 **Keep:** published Darwin Core **datasets** (RSS). **Drop:** images, checklists, and single occurrences.
+
+## Biodiv (`biodiv`) {#biodiv}
+
+Filter exports on `software.id = 'biodiv'`. Public list pages:
+
+```text
+GET https://host/dataset/list
+GET https://host/datatable/list
+GET https://host/document/list
+```
+
+**Keep:** published **datasets**, **datatables**, and document collections. **Drop:** species pages, single observations, and user profiles. One portal = one harvest scope. Stop on `401`/`403`.
+
+## BIMS (`bims`) {#bims}
+
+Filter exports on `software.id = 'bims'`. Portal list: [bims.kartoza.com](https://bims.kartoza.com/).
+
+```text
+GET https://host/source-references/
+GET https://host/api/module-summary/
+GET https://host/api/layer/
+```
+
+**Keep:** source references and published spatial layers. **Drop:** occurrence rows, taxon pages, and user accounts. One portal = one harvest scope. Stop on `401`/`403`.
 
 ## Atlas of Living Australia (`ala`) {#ala}
 

@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -15,7 +15,9 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: "Open SDG Data Hub is a geoportal published by SDGs for United States, using ArcGIS Hub. It is available at sdg-hub-template-adam-p-sdgs.hub.arcgis.com. Catalog id sdghubtemplateadampsdgshubarcgiscom."
+description: Open SDG Data Hub is a geoportal published by SDGs for United States,
+  using ArcGIS Hub. It is available at sdg-hub-template-adam-p-sdgs.hub.arcgis.com.
+  Catalog id sdghubtemplateadampsdgshubarcgiscom.
 id: sdghubtemplateadampsdgshubarcgiscom
 langs:
 - id: EN
@@ -82,3 +84,16 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00003968
+endpoints:
+- type: dcatap201
+  url: https://sdg-hub-template-adam-p-sdgs.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://sdg-hub-template-adam-p-sdgs.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://sdg-hub-template-adam-p-sdgs.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://sdg-hub-template-adam-p-sdgs.hub.arcgis.com/api/search/v1
+- type: arcgishubapi
+  url: https://sdg-hub-template-adam-p-sdgs.hub.arcgis.com/api/v3/datasets
+- type: dcatus11
+  url: https://sdg-hub-template-adam-p-sdgs.hub.arcgis.com/data.json

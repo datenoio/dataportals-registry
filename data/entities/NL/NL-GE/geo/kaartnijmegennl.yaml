@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Western Europe
 description: Geoportal. managed by Gemeente Nijmegen. powered by KaartViewer. accessible
   at kaart.nijmegen.nl.
+endpoints:
+- type: kaartviewer:menu
+  url: https://kaart.nijmegen.nl/admin/rest/kaartviewerapi/menu
 id: kaartnijmegennl
 langs:
 - id: NL

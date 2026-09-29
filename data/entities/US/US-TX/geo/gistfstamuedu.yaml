@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TX
+      name: Texas
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ArcGIS Server for Texas A&M Forest Service operations. Public services
+  include emergency operations, radio coverage, and disaster layers. Separate from
+  the forest-applications directory on tfsgis02.tfs.tamu.edu.
+id: gistfstamuedu
+langs:
+- id: EN
+  name: English
+link: https://gis.tfs.tamu.edu/arcgis/rest/services
+name: Texas A&M Forest Service Operations GIS Server
+owner:
+  link: https://tfsweb.tamu.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TX
+      name: Texas
+  name: Texas A&M Forest Service
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- geospatial
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009132
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.tfs.tamu.edu/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.tfs.tamu.edu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.tfs.tamu.edu/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.tfs.tamu.edu/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.tfs.tamu.edu/arcgis/rest/services?f=geositemap

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: California
 description: City of Union City public ArcGIS Experience Builder viewer for parcels, city
   services, and local features.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/fff9e94cc41c47dca3c0ab38559dab31/data?f=json
 id: experiencearcgiscomunioncity
 langs:
 - id: EN

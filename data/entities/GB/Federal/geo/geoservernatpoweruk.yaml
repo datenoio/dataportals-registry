@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: GeoServer operated by NatPower UK publishing energy network, planning
+  constraint, marine, and site-assessment layers for Great Britain.
+id: geoservernatpoweruk
+langs:
+- id: EN
+  name: English
+link: https://geoserver.natpower.uk/geoserver
+name: NatPower UK GeoServer
+owner:
+  link: https://natpower.uk/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+  name: NatPower UK
+  type: Business
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- commercial
+- energy
+- geospatial
+- marine
+- planning
+- united-kingdom
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00009535
+endpoints:
+- type: wms111
+  url: https://geoserver.natpower.uk/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserver.natpower.uk/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoserver.natpower.uk/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geoserver.natpower.uk/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoserver.natpower.uk/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

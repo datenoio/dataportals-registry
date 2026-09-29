@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -37,8 +37,8 @@ owner:
   name: Association of European Schools of Planning (AESOP)
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: dspace
+  name: DSpace
 status: active
 tags:
 - scientific
@@ -53,4 +53,19 @@ topics:
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: cdi00030191
+endpoints:
+- type: dspace
+  url: https://archive.aesop-planning.eu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://archive.aesop-planning.eu/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://archive.aesop-planning.eu/server/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://archive.aesop-planning.eu/sitemap_index.xml

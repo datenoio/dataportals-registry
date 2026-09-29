@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Scientific data repository
 content_types:
@@ -49,3 +49,10 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00032501
+endpoints:
+- type: rss
+  url: https://dspace.uni.lodz.pl:8443/xmlui/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://dspace.uni.lodz.pl:8443/xmlui/feed/atom_1.0/site
+  version: '1.0'

@@ -1,0 +1,65 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIODIV
+================================================================================
+Generated: 2026-09-29 11:21:05
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIODIV
+Priority: MEDIUM
+Total Issues Found: 5
+
+Rule: Identifies records using software.id='biodiv' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+BT: 1 issue
+FR: 1 issue
+IN: 2 issues
+KE: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+portalmikokocoke: 1 issue
+indiabiodiversityorg: 1 issue
+communityconservedareasorg: 1 issue
+biodiversitybt: 1 issue
+portalwiktroporg: 1 issue
+
+=== ISSUES ===
+
+File: KE/Federal/scientific/portalmikokocoke.yaml
+Record ID: portalmikokocoke
+Country: KE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIODIV
+Field: endpoints
+Current Value: {"software_id": "biodiv", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='biodiv' is marked as API-capable in software definitions
+
+File: IN/Federal/scientific/indiabiodiversityorg.yaml
+Record ID: indiabiodiversityorg
+Country: IN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIODIV
+Field: endpoints
+Current Value: {"software_id": "biodiv", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='biodiv' is marked as API-capable in software definitions
+
+File: IN/Federal/scientific/communityconservedareasorg.yaml
+Record ID: communityconservedareasorg
+Country: IN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIODIV
+Field: endpoints
+Current Value: {"software_id": "biodiv", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='biodiv' is marked as API-capable in software definitions
+
+File: BT/Federal/scientific/biodiversitybt.yaml
+Record ID: biodiversitybt
+Country: BT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIODIV
+Field: endpoints
+Current Value: {"software_id": "biodiv", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='biodiv' is marked as API-capable in software definitions
+
+File: FR/Federal/scientific/portalwiktroporg.yaml
+Record ID: portalwiktroporg
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIODIV
+Field: endpoints
+Current Value: {"software_id": "biodiv", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='biodiv' is marked as API-capable in software definitions

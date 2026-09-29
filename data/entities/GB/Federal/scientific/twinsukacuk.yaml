@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: The TwinsUK resource is the biggest UK adult twin registry of 14.000 twins used
-  to study the genetic and environmental aetiology of age related complex traits and diseases.
+description: The TwinsUK resource is the biggest UK adult twin registry of 14.000
+  twins used to study the genetic and environmental aetiology of age related complex
+  traits and diseases.
 id: twinsukacuk
 identifiers:
 - id: openaire
@@ -36,8 +37,8 @@ owner:
   name: King's College London
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -72,3 +73,9 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00028483
+endpoints:
+- type: rest
+  url: https://twinsuk.ac.uk/wp-json/
+- type: rest:posts
+  url: https://twinsuk.ac.uk/wp-json/wp/v2/posts
+  version: '2'

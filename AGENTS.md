@@ -40,7 +40,7 @@ The registry collects and maintains structured metadata about:
 - General research repositories
 - Other data infrastructure
 
-As of 24 September 2026, source YAML contains **41,167** verified catalog entries across **224** country/territory folders, **1** scheduled record, and **665** software definitions. Dataset exports match YAML: **41,167** catalogs, **1** scheduled JSONL, **665** software. Last published snapshot is v1.22.0 (41,167 catalogs, 1 scheduled, 665 software).
+As of 27 September 2026, source YAML contains **42,390** verified catalog entries across **224** country/territory folders, **1** scheduled record, and **733** software definitions. Dataset exports match YAML: **42,390** catalogs, **1** scheduled JSONL, **733** software. Last published snapshot is v1.22.0 (41,167 catalogs, 1 scheduled, 665 software).
 
 ### Scope Boundary (Important)
 
@@ -526,14 +526,18 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 
 ### Task: Discover catalogs not yet in the registry
 
-1. Duplicate-check exports (`data/datasets/datasets.duckdb` or `full.parquet`), not a full YAML walk. If DuckDB is locked, use Parquet.
-2. Follow [docs/agents/discover.md](docs/agents/discover.md) (human narrative: [docs/discovery.md](docs/discovery.md), hunt patterns: [docs/discovery.md#hunt-patterns](docs/discovery.md#hunt-patterns))
-3. Prefer vendor/government lists, national harvest-source APIs, and named directories, then documented search queries in [docs/discovery-search-tools.md](docs/discovery-search-tools.md) and the per-platform guides (`docs/discovery-opendata.md`, `docs/discovery-geoportals.md`, `docs/discovery-scientific.md`, `docs/discovery-metadata.md`, `docs/discovery-indicators.md`, `docs/discovery-other.md`). Software ID map: [docs/software-index.md](docs/software-index.md).
-4. Configure Cursor / ChatGPT / Censys MCP (or FOFA as a Censys alternative) using [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md) when the hunt needs those tools
-5. Probe only candidate hosts with targeted GETs; do not write internet-wide scanners
-6. Add verified finds with `add-single --scheduled`, then live GET, **promote in the same session**, `assign`, `validate-yaml --id`, and probe endpoints if the software map has a GET. Append one line to `dataquality/hunts.jsonl`.
-7. Choose the next hunt from [docs/agents/improve.md](docs/agents/improve.md) (pending instance lists for new software IDs, dataset-bearing IRs, country indicators leftovers, named directories, harvest-source leftovers — not more US ArcGIS or another PL/CZ/IT commune sweep)
-8. Match the user prompt to a hunt type in [docs/agents/discover.md](docs/agents/discover.md#hunt-types)
+Run this command card. After each command, execute the stdout line that starts with `next:`. Stop when that line is `next: none`.
+
+1. `python scripts/hunt.py prior --target TARGET`
+2. `python scripts/hunt.py budget` when the next line says so
+3. `python scripts/hunt.py search fofa QUERY --dedupe` (or `search censys`)
+4. `python scripts/hunt.py probe CANDIDATES.jsonl --software SOFTWARE_ID`
+5. `python scripts/hunt.py ingest PROBED.jsonl`
+6. `python scripts/hunt.py log --kind KIND --target TARGET --added N`
+
+Do not write a FOFA client, an export-query heredoc, or an HTTP probe script for a step `hunt.py` covers. Validation for the hunt is `python scripts/builder.py validate-yaml --id ID` (ingest runs it). Do not run `pytest` or `python scripts/builder.py build` as part of the hunt. When the user did not name a target, start with `python scripts/hunt.py next`.
+
+Hunt types and accept/reject rules: [docs/agents/discover.md](docs/agents/discover.md). Human narrative: [docs/discovery.md](docs/discovery.md).
 
 ### Task: Harvest datasets from a catalog API
 
@@ -546,6 +550,18 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 ### Task: Choose what to improve next
 
 Follow [docs/agents/improve.md](docs/agents/improve.md): software-first vendor tenant lists, country-shape hunts (scientific IRs, native NSO tables, Global South open data), then country record reviews. Do not start unscoped US/EU geoportal sweeps or repeat a software-instance hunt from the last two weeks.
+
+### Task: Resolve a country or international block
+
+Use [Internacia](https://github.com/datenoio/internacia-db) to turn a name into a code or to identify a bloc. Install the SDK once per environment with `pip install internacia` (first use caches `internacia.duckdb`).
+
+```bash
+python -c "from internacia import InternaciaClient; c=InternaciaClient(); print(c.search.fuzzy('QUERY', limit=5))"
+```
+
+- Country records: alpha-2 with `code_status == official_iso3166_1`, plus `XK`. Write `country.name` from `COUNTRIES` in `scripts/constants.py` or `data/reference/countries.csv`.
+- Blocs (EU, ASEAN, Africa, treaties): Internacia intblocks. Registry path roots stay `PATH_COUNTRY_ALLOWLIST` in `scripts/constants.py`.
+- Subdivisions (ISO 3166-2): `pycountry` or `data/reference/subregions/`.
 
 ### Task: Add a New Catalog Entry
 

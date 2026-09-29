@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: inactive
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,25 +17,6 @@ coverage:
       name: South-eastern Asia
 description: Badan Informasi Geospasial (BIG) Geoportal PyCSW catalog providing geospatial
   metadata services for Indonesian national geospatial data.
-endpoints:
-- type: csw202
-  url: https://geoportal.big.go.id/csw/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: https://geoportal.big.go.id/csw/?mode=oaipmh&verb=Identify
-  version: '2.0'
-- type: csw300
-  url: https://geoportal.big.go.id/csw/csw
-  version: 3.0.0
-- type: oaipmh20
-  url: https://geoportal.big.go.id/csw/oaipmh
-  version: '2.0'
-- type: opensearch
-  url: https://geoportal.big.go.id/csw/opensearch
-  version: '1.0'
-- type: sru
-  url: https://geoportal.big.go.id/csw/sru
-  version: '1.0'
 id: geoportalbiggoidcsw
 langs:
 - id: ID
@@ -65,7 +46,7 @@ rights:
 software:
   id: pycsw
   name: pycsw
-status: active
+status: inactive
 tags:
 - geospatial
 - metadata

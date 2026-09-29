@@ -107,12 +107,14 @@ class TestConstants:
     def test_map_software_owner_catalog_type_from_yaml(self):
         """Primary catalog_type comes from software YAML category, not a hand list."""
         assert "custom" not in MAP_SOFTWARE_OWNER_CATALOG_TYPE
+        non_catalog_ids = {path.stem for path in (Path(SOFTWARE_IDS_PATH).parent.parent / "software" / "statistical").glob("*.yaml")}
         for software_id in SOFTWARE_MAP_SKIP_IDS:
             assert software_id not in MAP_SOFTWARE_OWNER_CATALOG_TYPE
         for software_id in software_ids_from_yaml():
-            if software_id in SOFTWARE_MAP_SKIP_IDS:
+            if software_id in SOFTWARE_MAP_SKIP_IDS or software_id in non_catalog_ids:
                 continue
             assert software_id in MAP_SOFTWARE_OWNER_CATALOG_TYPE
+        assert non_catalog_ids.isdisjoint(MAP_SOFTWARE_OWNER_CATALOG_TYPE)
         assert MAP_SOFTWARE_OWNER_CATALOG_TYPE["stattech"] == "Indicators catalog"
         for alias, catalog_type in CUSTOM_SOFTWARE_ALIAS_CATALOG_TYPE.items():
             assert MAP_SOFTWARE_OWNER_CATALOG_TYPE[alias] == catalog_type
@@ -126,13 +128,33 @@ class TestConstants:
         assert "drupal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES
         assert "Geoportal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["drupal"]
         assert "Indicators catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["drupal"]
+        assert (
+            "Scientific data repository"
+            in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["drupal"]
+        )
+        assert "Microdata catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["drupal"]
         assert "publishmydata" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES
         assert "Metadata catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["publishmydata"]
         assert "Geoportal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["ckan"]
         assert "Scientific data repository" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["ckan"]
         assert "Geoportal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["opendatasoft"]
+        assert "Indicators catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["opendatasoft"]
         assert "Geoportal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["wordpress"]
         assert "Indicators catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["wordpress"]
+        assert (
+            "Scientific data repository"
+            in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["wordpress"]
+        )
+        assert "Microdata catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["wordpress"]
+        assert "Indicators catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["typo3"]
+        assert "Open data portal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["typo3"]
+        assert "Datasets list" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["typo3"]
+        assert "Datasets list" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["liferay"]
+        assert (
+            "Scientific data repository"
+            in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["shiny"]
+        )
+        assert "Indicators catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["ckan"]
         assert "Geoportal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["joomla"]
         assert "Indicators catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["joomla"]
         assert "Open data portal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["dkan"]

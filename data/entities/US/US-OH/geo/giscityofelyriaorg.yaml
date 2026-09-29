@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-OH
+      name: Ohio
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Lead service line inventory and sanitary sewer layers published by the
+  City of Elyria.
+id: giscityofelyriaorg
+langs:
+- id: EN
+  name: English
+link: http://gis.cityofelyria.org:6080/arcgis/rest/services
+name: City of Elyria ArcGIS Server
+owner:
+  link: https://www.cityofelyria.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-OH
+      name: Ohio
+  name: City of Elyria
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00008922
+properties:
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: http://gis.cityofelyria.org:6080/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://gis.cityofelyria.org:6080/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://gis.cityofelyria.org:6080/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://gis.cityofelyria.org:6080/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://gis.cityofelyria.org:6080/arcgis/rest/services?f=geositemap

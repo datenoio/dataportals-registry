@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Ontario
 description: St. Catharines CIVIC Maps public GIS viewer for city limits, property
   lines, zoning, building permits, and related municipal layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/36ec63fa930a42f9b5e4ffbfa68de3a6/data?f=json
 id: experiencearcgiscomstcatharines
 langs:
 - id: EN

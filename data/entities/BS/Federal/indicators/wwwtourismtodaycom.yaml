@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -13,7 +13,7 @@ coverage:
       name: Bahamas (the)
     level: 20
     macroregion:
-      id: '029'
+      id: 029
       name: Caribbean
 description: Research and statistics site of the Bahamas Ministry of Tourism. Publishes
   visitor arrivals, cruise and stopover series, exit surveys, expenditure, hotels
@@ -68,3 +68,6 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi00025629
+endpoints:
+- type: sitemap
+  url: https://www.tourismtoday.com/sitemap.xml

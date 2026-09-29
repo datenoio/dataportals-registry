@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,9 +14,9 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: The Roper Center has made available its entire collection of Primary exit polls.
-  Primary exit polls datasets include standard demographic makeup of interviewee and questions
-  pertinent to the issues of each state.
+description: The Roper Center has made available its entire collection of Primary
+  exit polls. Primary exit polls datasets include standard demographic makeup of interviewee
+  and questions pertinent to the issues of each state.
 id: ropercentercornelledu
 identifiers:
 - id: openaire
@@ -37,8 +37,8 @@ owner:
   name: Cornell University, Roper Center
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -58,3 +58,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00033476
+endpoints:
+- type: sitemap
+  url: https://ropercenter.cornell.edu/sitemap.xml

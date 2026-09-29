@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: IPGP node distributing GNSS observation data and station metadata from IPGP observatories.
+endpoints:
+- type: rest
+  url: http://volobsis.ipgp.fr/GlassFramework/swagger.json
+id: volobsisipgpfr
+langs:
+- id: EN
+  name: English
+link: http://volobsis.ipgp.fr/glasswebui/
+name: IPGP EPOS-GNSS node
+owner:
+  link: https://www.ipgp.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Institut de Physique du Globe de Paris
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: glass
+  name: EPOS GLASS
+status: active
+tags:
+- scientific
+- GNSS
+- geodesy
+- EPOS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00009806

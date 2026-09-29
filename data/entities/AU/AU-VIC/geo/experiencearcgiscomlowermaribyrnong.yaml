@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Victoria
 description: Melbourne Water Lower Maribyrnong Flood Information Portal for property
   flood maps, flood hazard, and current and 2100 flood extents.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/ea936fa4beec4647bddc69964bf17f69/data?f=json
 id: experiencearcgiscomlowermaribyrnong
 langs:
 - id: EN

@@ -95,6 +95,15 @@ def software_category(software_id: str) -> str:
     return "unknown"
 
 
+def production_documentation(software_id: str) -> str | None:
+    """Official product reference for non-catalog statistical software."""
+    path = SOFTWARE_DIR / "statistical" / f"{software_id}.yaml"
+    if not path.exists():
+        return None
+    record = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return record.get("documentation_url") or record.get("website")
+
+
 def _heading_ids_in_text(text: str) -> dict[str, str]:
     """Map software.id -> markdown heading slug fragment (explicit {#id} or first capture)."""
     found: dict[str, str] = {}
@@ -154,6 +163,7 @@ def coverage_rows() -> list[dict]:
                 "in_discovery": bool(d["files"]),
                 "in_harvest": bool(h["files"]),
                 "apidetect": sid in apidetect,
+                "production_documentation": production_documentation(sid),
             }
         )
     return rows
@@ -161,16 +171,16 @@ def coverage_rows() -> list[dict]:
 
 def missing_mentions() -> tuple[list[str], list[str]]:
     rows = coverage_rows()
-    missing_d = [r["id"] for r in rows if not r["in_discovery"]]
-    missing_h = [r["id"] for r in rows if not r["in_harvest"]]
+    missing_d = [r["id"] for r in rows if not r["production_documentation"] and not r["in_discovery"]]
+    missing_h = [r["id"] for r in rows if not r["production_documentation"] and not r["in_harvest"]]
     return missing_d, missing_h
 
 
 def missing_headings() -> tuple[list[str], list[str]]:
     """IDs that lack a unique ``## Name (`id`) {#id}`` heading."""
     rows = coverage_rows()
-    missing_d = [r["id"] for r in rows if not r["discovery_heading"]]
-    missing_h = [r["id"] for r in rows if not r["harvest_heading"]]
+    missing_d = [r["id"] for r in rows if not r["production_documentation"] and not r["discovery_heading"]]
+    missing_h = [r["id"] for r in rows if not r["production_documentation"] and not r["harvest_heading"]]
     return missing_d, missing_h
 
 
@@ -189,6 +199,7 @@ def render_index_markdown(rows: list[dict]) -> str:
         "",
         "Map each published `software.id` (except `custom`) to the discovery and "
         "harvest guide that mentions it, plus whether `apidetect` has a URL map. "
+        "Non-catalog statistical production software links to official product documentation instead. "
         "Generated from YAML + docs headings. "
         "Regenerate with `python scripts/docs_software_coverage.py`.",
         "",
@@ -208,6 +219,9 @@ def render_index_markdown(rows: list[dict]) -> str:
             row["harvest_heading"] or (row["harvest_files"][0] if row["harvest_files"] else None),
             row["harvest_anchor"] if row["harvest_heading"] else None,
         )
+        if row["production_documentation"]:
+            disc = f"[product documentation]({row['production_documentation']})"
+            harv = "not a catalog"
         api = "yes" if row["apidetect"] else "—"
         lines.append(
             f"| `{row['id']}` | {row['category']} | {disc} | {harv} | {api} |"

@@ -32,6 +32,20 @@ def test_keep_catalog_data_gov():
     assert check_is_national_flag(rec) is None
 
 
+def test_keep_dane_gov_pl():
+    rec = _opendata(
+        "Poland government Open Data Portal",
+        "https://dane.gov.pl",
+        "Poland government",
+    )
+    rec["software"] = {"id": "custom", "name": "Custom software"}
+    rec["_file_path"] = "PL/Federal/opendata/danegovpl.yaml"
+    keep, reason = classify_is_national(rec, rec["_file_path"])
+    assert keep is True
+    assert reason == "national_open_data"
+    assert check_is_national_flag(rec) is None
+
+
 def test_unset_ncbi_biosample():
     rec = {
         "name": "NCBI BioSample",

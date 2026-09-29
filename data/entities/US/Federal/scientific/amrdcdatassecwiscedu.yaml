@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -40,8 +40,8 @@ owner:
   name: Antarctic Meteorological Research and Data Center
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: ckan
+  name: CKAN
 status: active
 tags:
 - scientific
@@ -52,3 +52,15 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00033072
+endpoints:
+- type: ckan
+  url: https://amrdcdata.ssec.wisc.edu/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://amrdcdata.ssec.wisc.edu/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://amrdcdata.ssec.wisc.edu/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://amrdcdata.ssec.wisc.edu/catalog.n3

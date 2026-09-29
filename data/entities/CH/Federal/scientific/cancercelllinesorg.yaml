@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Cancer cell line copy number profiling data resource built on the Progenetix
+  Beacon+ environment, providing genomic variation information for cancer cell lines
+  (cellz collection).
+id: cancercelllinesorg
+langs:
+- id: DE
+  name: German
+link: https://cancercelllines.org
+name: Cancer Cell Line Genomics (cancercelllines.org)
+owner:
+  link: https://www.sib.swiss/
+  location:
+    country:
+      id: CH
+      name: Switzerland
+  name: SIB Swiss Institute of Bioinformatics
+  type: Academy
+software:
+  id: progenetix
+  name: Progenetix
+status: active
+tags:
+- scientific
+- research data
+- academic
+- cancer
+- health
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00010045
+endpoints:
+- type: rest
+  url: https://cancercelllines.org/beacon/info

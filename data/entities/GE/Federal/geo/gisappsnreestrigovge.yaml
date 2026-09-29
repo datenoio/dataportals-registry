@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -58,3 +58,12 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi99993532
+endpoints:
+- type: arcgis:rest:services
+  url: http://gisappsn.reestri.gov.ge/ArcGIS/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://gisappsn.reestri.gov.ge/ArcGIS/services?wsdl
+- type: arcgis:sitemap
+  url: http://gisappsn.reestri.gov.ge/ArcGIS/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://gisappsn.reestri.gov.ge/ArcGIS/rest/services?f=geositemap

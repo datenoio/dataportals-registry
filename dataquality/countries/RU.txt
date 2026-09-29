@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: RU
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Country Code: RU
-Total Records with Issues: 7
-Total Issues Found: 7
+Total Records with Issues: 8
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
 
@@ -20,13 +20,6 @@ Suggested Action: Add at least one endpoint because software.id='bitrix' is mark
 
 File: RU/RU-AL/opendata/mcxaltairu.yaml
 Record ID: mcxaltairu
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
-Field: endpoints
-Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
-
-File: RU/RU-NGR/opendata/igoknnovregru.yaml
-Record ID: igoknnovregru
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
 Field: endpoints
 Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
@@ -53,6 +46,13 @@ Field: endpoints
 Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
 
+File: RU/RU-MAG/geo/investmap49govru.yaml
+Record ID: investmap49govru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
 File: RU/RU-CE/opendata/mkchrru.yaml
 Record ID: mkchrru
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
@@ -60,7 +60,19 @@ Field: endpoints
 Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
+Count: 1
+Priority: MEDIUM
+
+File: RU/RU-ORL/opendata/dmitrovskorelru.yaml
+Record ID: dmitrovskorelru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX: 7 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue

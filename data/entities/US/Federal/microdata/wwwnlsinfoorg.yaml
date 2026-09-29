@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Microdata catalog
 content_types:
 - microdata
@@ -32,8 +32,8 @@ owner:
   name: U.S. Bureau of Labor Statistics
   type: Central government
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - labor
@@ -56,3 +56,6 @@ uid: cdi00008432
 properties:
   is_national: false
   has_doi: false
+endpoints:
+- type: sitemap
+  url: https://www.nlsinfo.org/sitemap.xml

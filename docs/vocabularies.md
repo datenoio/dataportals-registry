@@ -69,6 +69,11 @@ Also present in historical records (do not add for new catalogs unless there is 
 | `arcgis:rest:services`, `arcgis:rest:info` | ArcGIS Server / Hub |
 | `dataverseapi` | Dataverse |
 | `wms130`, `wfs200`, `wcs201`, `wmts100` | OGC OWS |
+| `ogc:edr` | OGC API EDR collections |
+| `ga4gh:drs` | Gen3 / GA4GH DRS service info |
+| `fdsnws:station`, `wfcatalog:query` | FDSN station and EIDA WFCatalog |
+| `piveau:search`, `omekas:items`, `hajk:config` | Piveau hub search, Omeka S items, Hajk config |
+| `dataone:mn`, `dataone:query` | DataONE member node and Solr query |
 
 Harvestable catalog dumps (`/data.json`, `/catalog.xml`, `/catalog.rdf`) are `endpoints[]` entries, not `catalog_export`. The observed inventory is `data/reference/endpoint_types.yaml` (generated from YAML, not a closed allow-list). Retired aliases (`customapi`, `custom_api`, bare `api`, `opendatasoft`, `geonetwork`, `geonetwork:csw`, `stac`, `csw`, `oaipmh`, `socrata:opendata`) are `ENDPOINT_TYPE_ALIAS`.
 

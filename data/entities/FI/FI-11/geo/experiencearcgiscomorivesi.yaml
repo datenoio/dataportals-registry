@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Pirkanmaa
 description: City of Orivesi public map service (ArcGIS Experience Builder) with municipal
   geographic datasets.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/ae77370151ef4c98b1ea21bf32ded58a/data?f=json
 id: experiencearcgiscomorivesi
 langs:
 - id: FI

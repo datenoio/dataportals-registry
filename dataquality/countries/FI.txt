@@ -1,0 +1,43 @@
+DATA QUALITY REPORT - COUNTRY: FI
+================================================================================
+Generated: 2026-09-29 11:21:05
+Country Code: FI
+Total Records with Issues: 3
+Total Issues Found: 3
+
+=== ISSUES BY TYPE ===
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA]
+Count: 2
+Priority: MEDIUM
+
+File: FI/FI-02/indicators/ekilmanlaatunet.yaml
+Record ID: ekilmanlaatunet
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
+Field: endpoints
+Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
+
+File: FI/FI-15/indicators/aqverkkokuopionet.yaml
+Record ID: aqverkkokuopionet
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
+Field: endpoints
+Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATA]
+Count: 1
+Priority: MEDIUM
+
+File: FI/Federal/scientific/idafairdatafi.yaml
+Record ID: idafairdatafi
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATA
+Field: endpoints
+Current Value: {'software_id': 'fairdata', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='fairdata' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATA: 1 issue

@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ArcGIS Server REST directory of the European Commission Joint Research
+  Centre, with public map and feature services for Copernicus EMS rapid mapping, CORINE
+  land cover, EU wastewater treatment plants, and related thematic layers.
+id: arcgisjrceceuropaeu
+langs:
+- id: EN
+  name: English
+link: https://arcgis.jrc.ec.europa.eu/server/rest/services
+name: JRC ArcGIS Server
+owner:
+  link: https://joint-research-centre.ec.europa.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: European Commission Joint Research Centre
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- european-union
+- geospatial
+- government
+- water
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgis.jrc.ec.europa.eu/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgis.jrc.ec.europa.eu/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgis.jrc.ec.europa.eu/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://arcgis.jrc.ec.europa.eu/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arcgis.jrc.ec.europa.eu/server/rest/services?f=geositemap
+uid: cdi00009096

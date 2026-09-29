@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LV
+      name: Latvia
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: LV-RIX
+      name: Rīga
+description: Public ArcGIS REST services of Riga Technical University. The services
+  directory publishes campus room and wall map layers. Other folders on the same server
+  require a token.
+id: gisrtulv
+langs:
+- id: LV
+  name: Latvian
+link: https://gis.rtu.lv/server/rest/services
+name: Riga Technical University ArcGIS REST Services
+owner:
+  link: https://www.rtu.lv
+  location:
+    country:
+      id: LV
+      name: Latvia
+    level: 30
+    subregion:
+      id: LV-RIX
+      name: Rīga
+  name: Riga Technical University
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- geospatial
+- latvia
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+endpoints:
+- type: arcgis:portals:self
+  url: https://gis.rtu.lv/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://gis.rtu.lv/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.rtu.lv/server/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://gis.rtu.lv/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.rtu.lv/server/rest/services?f=geositemap
+uid: cdi00009271

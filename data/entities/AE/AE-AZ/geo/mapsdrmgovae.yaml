@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AE
+      name: United Arab Emirates
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: AE-AZ
+      name: Abū Z̧aby
+description: Public ArcGIS REST services of Al Dhafra Region Municipality covering
+  cemeteries, orthophotos, satellite imagery, sea resorts, and Smart Makani addressing.
+id: mapsdrmgovae
+langs:
+- id: AR
+  name: Arabic
+- id: EN
+  name: English
+link: https://maps.drm.gov.ae/arcgis/rest/services
+name: Al Dhafra Region Municipality Maps Services
+owner:
+  link: https://www.drm.gov.ae
+  location:
+    country:
+      id: AE
+      name: United Arab Emirates
+    level: 30
+    subregion:
+      id: AE-AZ
+      name: Abū Z̧aby
+  name: Al Dhafra Region Municipality
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- imagery
+- united-arab-emirates
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00009059
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.drm.gov.ae/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.drm.gov.ae/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.drm.gov.ae/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.drm.gov.ae/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.drm.gov.ae/arcgis/rest/services?f=geositemap

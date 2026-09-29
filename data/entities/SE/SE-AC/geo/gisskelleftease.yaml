@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -50,3 +50,14 @@ topics:
   name: Location
   type: iso19115
 uid: cdi00007792
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.skelleftea.se/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.skelleftea.se/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.skelleftea.se/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.skelleftea.se/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.skelleftea.se/arcgis/rest/services?f=geositemap

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,11 +14,12 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: The NCEAS Data Repository contains information about the research data sets collected
-  and collated as part of NCEAS' funded activities. Information in the NCEAS Data Repository
-  is concurrently available through the Knowledge Network for Biocomplexity (KNB), an international
-  data repository. A number of the data sets were synthesized from multiple data sources that
-  originated from the efforts of many contributors, while others originated from a single.
+description: The NCEAS Data Repository contains information about the research data
+  sets collected and collated as part of NCEAS' funded activities. Information in
+  the NCEAS Data Repository is concurrently available through the Knowledge Network
+  for Biocomplexity (KNB), an international data repository. A number of the data
+  sets were synthesized from multiple data sources that originated from the efforts
+  of many contributors, while others originated from a single.
 id: wwwnceasucsbedu
 identifiers:
 - id: openaire
@@ -39,8 +40,8 @@ owner:
   name: National Center for Ecological Analysis and Synthesis
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -60,3 +61,6 @@ topics:
   name: Biota
   type: iso19115
 uid: cdi00033714
+endpoints:
+- type: sitemap
+  url: https://www.nceas.ucsb.edu/sitemap.xml

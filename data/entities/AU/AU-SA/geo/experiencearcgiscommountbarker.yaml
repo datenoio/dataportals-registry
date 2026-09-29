@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: South Australia
 description: Mount Barker District Council ArcGIS Experience Builder public GIS for
   property, planning, and local government map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/db048b7def904da3a2a725b662e6348a/data?f=json
 id: experiencearcgiscommountbarker
 langs:
 - id: EN

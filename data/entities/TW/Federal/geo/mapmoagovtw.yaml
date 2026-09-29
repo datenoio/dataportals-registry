@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: ArcGIS REST services for the agricultural and farmland resources inventory,
+  including farmland survey and crop map layers.
+id: mapmoagovtw
+langs:
+- id: ZH
+  name: Chinese
+link: https://map.moa.gov.tw/server/rest/services
+name: MOA Farmland Resources Inventory ArcGIS REST Services
+owner:
+  link: https://www.moa.gov.tw
+  location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 20
+  name: Ministry of Agriculture
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+properties:
+  has_doi: false
+  is_national: false
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- taiwan
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+uid: cdi00009319
+endpoints:
+- type: arcgis:rest:info
+  url: https://map.moa.gov.tw/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://map.moa.gov.tw/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://map.moa.gov.tw/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://map.moa.gov.tw/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://map.moa.gov.tw/server/rest/services?f=geositemap

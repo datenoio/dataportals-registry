@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Newfoundland and Labrador
 description: Town of Stephenville public GIS map for roads, trails, playgrounds, town
   infrastructure, and related points of interest.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/7153d6c641fc4e748f07a2ad469117cd/data?f=json
 id: experiencearcgiscomstephenville
 langs:
 - id: EN

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: British Columbia
 description: Regional District of Central Okanagan public ArcGIS Experience Builder
   GIS map for parcels, zoning, and related regional layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/cc57a53b6d4f4aac8e30109d743d2049/data?f=json
 id: experiencearcgiscomrdco
 langs:
 - id: EN

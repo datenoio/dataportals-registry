@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: TH-77
       name: Prachuap Khiri Khan
 description: Public city data geoportal of Hua Hin Town Municipality on ArcGIS Experience Builder.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/ea98925b5ff346aa994f7d8b9461cd19/data?f=json
 id: experiencearcgiscomhuahin
 langs:
 - id: TH

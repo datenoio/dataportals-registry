@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TR
+      name: Turkey
+    level: 30
+    subregion:
+      id: TR-31
+      name: Hatay
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Samandağ municipality GeoServer publishing address, parcel, building,
+  and road layers.
+id: ehizmetsamandagbeltr
+langs:
+- id: TR
+  name: Turkish
+link: http://e-hizmet.samandag.bel.tr:8080/geoserver
+name: Samandağ Belediyesi GeoServer
+owner:
+  link: https://www.samandag.bel.tr
+  location:
+    country:
+      id: TR
+      name: Turkey
+    level: 30
+    subregion:
+      id: TR-31
+      name: Hatay
+  name: Samandağ Belediyesi
+  type: Local government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- geospatial
+- government
+- turkey
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+endpoints:
+- type: wms111
+  url: http://e-hizmet.samandag.bel.tr:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: http://e-hizmet.samandag.bel.tr:8080/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: http://e-hizmet.samandag.bel.tr:8080/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: http://e-hizmet.samandag.bel.tr:8080/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: http://e-hizmet.samandag.bel.tr:8080/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+uid: cdi00009531

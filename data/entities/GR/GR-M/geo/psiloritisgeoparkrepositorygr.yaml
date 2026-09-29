@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: GR-M
+      name: Kríti
+description: GeoServer on the Psiloritis Geopark repository host, publishing Sikyon
+  Survey terrain and land-cover layers and Oikom Natura layers.
+id: psiloritisgeoparkrepositorygr
+langs:
+- id: EL
+  name: Greek
+link: http://psiloritisgeopark-repository.gr:8080/geoserver/web/
+name: Psiloritis Geopark Repository GeoServer
+owner:
+  link: https://www.psiloritisgeopark.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    subregion:
+      id: GR-M
+      name: Kríti
+  name: Psiloritis UNESCO Global Geopark
+  type: Civil society
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- geospatial
+- greece
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Elevation
+  name: Elevation
+  type: iso19115
+uid: cdi00009522
+endpoints:
+- type: wms111
+  url: http://psiloritisgeopark-repository.gr:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: http://psiloritisgeopark-repository.gr:8080/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: http://psiloritisgeopark-repository.gr:8080/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: http://psiloritisgeopark-repository.gr:8080/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: http://psiloritisgeopark-repository.gr:8080/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: CNR-ISMAR Bologna ArcGIS Server on port 6080, with public marine places
+  of interest, RITMARE, FEAMP, and protected-area layers.
+id: gismarblackboismarcnrit
+langs:
+- id: IT
+  name: Italian
+link: http://gismarblack.bo.ismar.cnr.it:6080/arcgis/rest/services
+name: ISMAR Bologna ArcGIS Server
+owner:
+  link: https://www.ismar.cnr.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Istituto di Scienze Marine (ISMAR), Consiglio Nazionale delle Ricerche
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- geospatial
+- italy
+- marine
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00008967
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: http://gismarblack.bo.ismar.cnr.it:6080/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://gismarblack.bo.ismar.cnr.it:6080/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://gismarblack.bo.ismar.cnr.it:6080/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://gismarblack.bo.ismar.cnr.it:6080/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://gismarblack.bo.ismar.cnr.it:6080/arcgis/rest/services?f=geositemap

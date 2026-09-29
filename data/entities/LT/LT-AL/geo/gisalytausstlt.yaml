@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: LT-AL
+      name: Alytaus apskritis
+description: Public ArcGIS Server catalogue of Alytus district-heating routes, communications,
+  and orthophoto.
+id: gisalytausstlt
+langs:
+- id: LT
+  name: Lithuanian
+link: https://gis.alytausst.lt/arcgis/rest/services
+name: Alytaus šilumos tinklai ArcGIS REST
+owner:
+  link: https://www.alytausst.lt/
+  location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 30
+    subregion:
+      id: LT-AL
+      name: Alytaus apskritis
+  name: UAB „Alytaus šilumos tinklai“
+  type: Business
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- district heating
+- spatial data
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:portals:self
+  url: https://gis.alytausst.lt/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://gis.alytausst.lt/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.alytausst.lt/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.alytausst.lt/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.alytausst.lt/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.alytausst.lt/arcgis/rest/services?f=geositemap
+uid: cdi00009082

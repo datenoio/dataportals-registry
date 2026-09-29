@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -58,7 +58,16 @@ tags:
 - ArcGIS
 - REST
 topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 - id: REGI
   name: Regions and cities
   type: eudatatheme
 uid: cdi00035558
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.horsholm.dk/arcgis/rest/info?f=pjson

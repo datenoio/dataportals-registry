@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: EE
+      name: Estonia
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: SARV portal for Estonian construction mineral resources (TEM-TA143).
+  Public search of deposits, mining permits, and related sample data via the shared
+  Geocollections API.
+endpoints:
+- type: openapi
+  url: https://rwapi.geoloogia.info/api/schema/v1/public/
+  version: '3.0'
+- type: rest
+  url: https://rwapi.geoloogia.info/api/v1/public/
+id: maavarageoloogiainfo
+langs:
+- id: ET
+  name: Estonian
+- id: EN
+  name: English
+link: https://maavara.geoloogia.info
+name: Eesti mineraalsed ehitustoormed
+owner:
+  link: https://taltech.ee/en/department-geology
+  location:
+    country:
+      id: EE
+      name: Estonia
+    level: 30
+    subregion:
+      id: EE-37
+      name: Harjumaa
+  name: Tallinn University of Technology, Department of Geology
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: sarv
+  name: SARV
+status: active
+tags:
+- scientific
+- geology
+- minerals
+- construction
+- Estonia
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00010032

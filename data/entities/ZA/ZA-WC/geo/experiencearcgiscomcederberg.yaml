@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Western Cape
 description: Cederberg Municipality public Experience Builder mapping viewer for cadastral,
   zoning and related municipal map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/e59aef53cdf4408ca108459d51b1bae2/data?f=json
 id: experiencearcgiscomcederberg
 langs:
 - id: EN

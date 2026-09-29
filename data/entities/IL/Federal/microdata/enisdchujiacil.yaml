@@ -1,8 +1,8 @@
 access_mode:
 - open
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
@@ -35,8 +35,8 @@ owner:
   name: Hebrew University of Jerusalem
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -52,3 +52,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi99991655
+endpoints:
+- type: sitemap
+  url: https://en.isdc.huji.ac.il/sitemap.xml

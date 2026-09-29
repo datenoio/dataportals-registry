@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -14,11 +14,13 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Bank of Israel Fusion Data Browser providing access to financial and
-  economic data, macroeconomic time series, and statistical indicators. The platform
-  offers data browsing, visualization, and export capabilities for monetary policy,
-  financial stability, banking supervision, economic activity, prices, exchange rates,
-  money and capital markets, and other economic indicators for Israel.
+description: Bank of Israel public Fusion Data Browser on Fusion Edge Server.
+  It publishes monetary, financial, and macroeconomic time series, with charts and
+  CSV, Excel, and SDMX export. The SDMX 2.1 API is at /FusionEdgeServer/.
+endpoints:
+- type: sdmx:dataflows
+  url: https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/dataflow/all/all/latest?detail=allstubs
+  version: '2.1'
 id: edgeboigovil
 langs:
 - id: HE
@@ -44,8 +46,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: fusiondatabrowser
+  name: Fusion Data Browser
 status: active
 tags:
 - statistics
@@ -65,6 +67,8 @@ tags:
 - capital markets
 - public finances
 - economic indicators
+- SDMX
+- Fusion Data Browser
 topics:
 - id: ECON
   name: Economy and finance

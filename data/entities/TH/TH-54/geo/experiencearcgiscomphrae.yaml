@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Phrae
 description: Public City Data Learning Platform geoportal of Phrae Town Municipality on ArcGIS
   Experience Builder.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/c59dd1f43fa24b05885de9bbae0c8649/data?f=json
 id: experiencearcgiscomphrae
 langs:
 - id: TH

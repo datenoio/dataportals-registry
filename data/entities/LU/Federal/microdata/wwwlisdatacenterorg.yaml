@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Microdata catalog
 content_types:
 - microdata
@@ -32,8 +32,8 @@ owner:
   name: LIS Cross-National Data Center
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - income
@@ -56,3 +56,9 @@ uid: cdi00008407
 properties:
   has_doi: false
   is_national: false
+endpoints:
+- type: rest
+  url: https://www.lisdatacenter.org/wp-json/
+- type: rest:posts
+  url: https://www.lisdatacenter.org/wp-json/wp/v2/posts
+  version: '2'

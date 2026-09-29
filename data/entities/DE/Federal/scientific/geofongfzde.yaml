@@ -36,6 +36,12 @@ endpoints:
   url: https://geofon.gfz.de/fdsnws/availability/1/
 - type: rest
   url: https://geofon.gfz.de/eidaws/wfcatalog/1/
+- type: wfcatalog:query
+  url: https://geofon.gfz.de/eidaws/wfcatalog/1/query?network=GE&start=2020-01-01&end=2020-01-02
+  version: '1'
+- type: fdsnws:station
+  url: https://geofon.gfz.de/fdsnws/station/1/version
+  version: '1'
 id: geofongfzde
 identifiers:
 - id: openaire

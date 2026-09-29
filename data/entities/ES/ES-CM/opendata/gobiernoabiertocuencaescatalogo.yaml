@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,25 +17,6 @@ coverage:
     subregion:
       id: ES-CM
       name: Castilla-La Mancha
-endpoints:
-- type: ckan
-  url: https://gobiernoabierto.cuenca.es/api/3
-- type: ckan
-  url: https://gobiernoabierto.cuenca.es/api/3/action/package_list
-- type: opendatasoftapi
-  url: https://gobiernoabierto.cuenca.es/api/v2/catalog
-- type: socrata
-  url: https://gobiernoabierto.cuenca.es/api/views
-- type: dcatap201
-  url: https://gobiernoabierto.cuenca.es/api/feed/dcat
-- type: dcat
-  url: https://gobiernoabierto.cuenca.es/catalog.xml
-- type: dcatap
-  url: https://gobiernoabierto.cuenca.es/catalog.rdf
-- type: dcat:jsonld
-  url: https://gobiernoabierto.cuenca.es/catalog.jsonld
-- type: sitemap
-  url: https://gobiernoabierto.cuenca.es/sitemap.xml
 id: gobiernoabiertocuencaescatalogo
 langs:
 - id: ES

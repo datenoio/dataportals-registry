@@ -1,24 +1,26 @@
 DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
 Priority: MEDIUM
-Total Issues Found: 4
+Total Issues Found: 5
 
 Rule: Identifies records using software.id='arcgishub' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
 
 === SUMMARY BY COUNTRY ===
 
-IT: 1 issue
+MY: 1 issue
 RS: 1 issue
 SE: 2 issues
+US: 1 issue
 
 === SUMMARY BY RECORD ===
 
 kartorsfvse: 1 issue
 kartaatvidabergse: 1 issue
-arpasmapsarcgiscom: 1 issue
+datacarlsbadcagov: 1 issue
 geoportalvojvodinagovrs: 1 issue
+geojbgovmy: 1 issue
 
 === ISSUES ===
 
@@ -38,9 +40,9 @@ Field: endpoints
 Current Value: {"software_id": "arcgishub", "has_api": "Yes", "endpoints_count": 0}
 Suggested Action: Add at least one endpoint because software.id='arcgishub' is marked as API-capable in software definitions
 
-File: IT/IT-88/geo/arpasmapsarcgiscom.yaml
-Record ID: arpasmapsarcgiscom
-Country: IT
+File: US/US-CA/opendata/datacarlsbadcagov.yaml
+Record ID: datacarlsbadcagov
+Country: US
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
 Field: endpoints
 Current Value: {"software_id": "arcgishub", "has_api": "Yes", "endpoints_count": 0}
@@ -49,6 +51,14 @@ Suggested Action: Add at least one endpoint because software.id='arcgishub' is m
 File: RS/RS-VO/geo/geoportalvojvodinagovrs.yaml
 Record ID: geoportalvojvodinagovrs
 Country: RS
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
+Field: endpoints
+Current Value: {"software_id": "arcgishub", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='arcgishub' is marked as API-capable in software definitions
+
+File: MY/MY-01/geo/geojbgovmy.yaml
+Record ID: geojbgovmy
+Country: MY
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
 Field: endpoints
 Current Value: {"software_id": "arcgishub", "has_api": "Yes", "endpoints_count": 0}

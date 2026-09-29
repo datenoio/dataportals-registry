@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,11 +14,11 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: The goal of NGEE–Arctic is to reduce uncertainty in projections of future climate
-  by developing and validating a model representation of permafrost ecosystems and incorporating
-  that representation into Earth system models. The new modeling capabilities will improve
-  our confidence in model projections and will enable scientist to better respond to questions
-  about processes and interactions now and in the future.
+description: The goal of NGEE–Arctic is to reduce uncertainty in projections of future
+  climate by developing and validating a model representation of permafrost ecosystems
+  and incorporating that representation into Earth system models. The new modeling
+  capabilities will improve our confidence in model projections and will enable scientist
+  to better respond to questions about processes and interactions now and in the future.
 id: ngeearcticornlgov
 identifiers:
 - id: openaire
@@ -39,8 +39,8 @@ owner:
   name: Brookhaven National Laboratory
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -90,3 +90,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00033388
+endpoints:
+- type: sitemap
+  url: https://ngee-arctic.ornl.gov/sitemap.xml

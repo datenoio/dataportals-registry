@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Noord-Brabant
 description: Shared KaartViewer geoportal of A2-Samenwerking for Cranendonck, Heeze-Leende
   and Valkenswaard.
+endpoints:
+- type: kaartviewer:menu
+  url: https://a2.kaartviewer.nl/admin/rest/kaartviewerapi/menu
 id: a2kaartviewernl
 langs:
 - id: NL

@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CBDCHM
+================================================================================
+Generated: 2026-09-29 11:21:05
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CBDCHM
+Priority: MEDIUM
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='cbdchm' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+World: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+bchcbdint: 1 issue
+
+=== ISSUES ===
+
+File: World/metadata/bchcbdint.yaml
+Record ID: bchcbdint
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CBDCHM
+Field: endpoints
+Current Value: {"software_id": "cbdchm", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='cbdchm' is marked as API-capable in software definitions

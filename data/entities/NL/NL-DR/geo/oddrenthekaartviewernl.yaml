@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Drenthe
 description: Public KaartViewer geoportal of Omgevingsdienst Drenthe with environmental
   maps.
+endpoints:
+- type: kaartviewer:menu
+  url: https://oddrenthe.kaartviewer.nl/admin/rest/kaartviewerapi/menu
 id: oddrenthekaartviewernl
 langs:
 - id: NL

@@ -17,8 +17,8 @@ coverage:
     subregion:
       id: ZA-WC
       name: Western Cape
-description: City of Cape Town ERDAS APOLLO imagery services, including aerial
-  photography mosaics, hillshade, topographic backdrops and historical maps.
+description: City of Cape Town ERDAS APOLLO imagery services, including aerial photography
+  mosaics, hillshade, topographic backdrops and historical maps.
 id: cityimgcapetowngovza
 langs:
 - id: EN
@@ -54,9 +54,18 @@ tags:
 - government
 - city cape town municipal municipality
 topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: cdi00002015
 endpoints:
 - type: arcgis:rest:services

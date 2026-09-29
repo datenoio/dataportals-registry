@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Open data portal
 content_types:
@@ -54,3 +54,19 @@ topics:
   name: Oceans
   type: iso19115
 uid: cdi99992451
+endpoints:
+- type: ckan
+  url: https://catalogue.dev.cioosatlantic.ca/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalogue.dev.cioosatlantic.ca/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalogue.dev.cioosatlantic.ca/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://catalogue.dev.cioosatlantic.ca/catalog.n3
+- type: dcat:ttl
+  url: https://catalogue.dev.cioosatlantic.ca/catalog.ttl
+- type: dcat
+  url: https://catalogue.dev.cioosatlantic.ca/catalog.rdf

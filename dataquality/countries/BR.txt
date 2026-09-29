@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: BR
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Country Code: BR
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 6
+Total Issues Found: 6
 
 === ISSUES BY TYPE ===
 
@@ -18,7 +18,52 @@ Field: rights
 Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
 Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBGIS]
+Count: 4
+Priority: MEDIUM
+
+File: BR/BR-RS/geo/viamaowebgisgeobr.yaml
+Record ID: viamaowebgisgeobr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBGIS
+Field: endpoints
+Current Value: {'software_id': 'gausswebgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='gausswebgis' is marked as API-capable in software definitions
+
+File: BR/BR-RS/geo/riopardowebgisgeobr.yaml
+Record ID: riopardowebgisgeobr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBGIS
+Field: endpoints
+Current Value: {'software_id': 'gausswebgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='gausswebgis' is marked as API-capable in software definitions
+
+File: BR/BR-RS/geo/montenegrowebgisgeobr.yaml
+Record ID: montenegrowebgisgeobr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBGIS
+Field: endpoints
+Current Value: {'software_id': 'gausswebgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='gausswebgis' is marked as API-capable in software definitions
+
+File: BR/BR-RS/geo/sesicomcienciawebgisgeobr.yaml
+Record ID: sesicomcienciawebgisgeobr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBGIS
+Field: endpoints
+Current Value: {'software_id': 'gausswebgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='gausswebgis' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS]
+Count: 1
+Priority: MEDIUM
+
+File: BR/BR-AL/indicators/observatorioalgovbr.yaml
+Record ID: observatorioalgovbr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
 MISSING_RIGHTS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBGIS: 4 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS: 1 issue

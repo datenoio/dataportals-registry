@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: eLabour is a research data centre for qualitative and mixed-methods data on work
-  and employment, operated at TU Dortmund's Social Research Centre.
+description: eLabour is a research data centre for qualitative and mixed-methods data
+  on work and employment, operated at TU Dortmund's Social Research Centre.
 id: elabourde
 identifiers:
 - id: openaire
@@ -38,8 +38,8 @@ owner:
   name: Technische Universität Dortmund, Sozialforschungsstelle Dortmund
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -50,3 +50,9 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00029524
+endpoints:
+- type: rest
+  url: http://elabour.de/wp-json/
+- type: rest:posts
+  url: http://elabour.de/wp-json/wp/v2/posts
+  version: '2'

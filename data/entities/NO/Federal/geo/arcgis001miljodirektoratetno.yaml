@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    level: 20
+description: ArcGIS REST services of the Norwegian Environment Agency, covering nature
+  monitoring, outdoor recreation, and environmental themes.
+id: arcgis001miljodirektoratetno
+langs:
+- id: 'NO'
+  name: Norwegian
+link: https://arcgis001.miljodirektoratet.no/arcgis/rest/services
+name: Miljødirektoratet ArcGIS Server
+owner:
+  link: https://www.miljodirektoratet.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: Miljødirektoratet
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+uid: cdi00008799
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgis001.miljodirektoratet.no/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgis001.miljodirektoratet.no/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgis001.miljodirektoratet.no/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://arcgis001.miljodirektoratet.no/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arcgis001.miljodirektoratet.no/arcgis/rest/services?f=geositemap
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+tags:
+- ArcGIS
+- GIS
+- environment
+- geospatial
+- government
+- norway

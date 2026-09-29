@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MI
+      name: Michigan
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ArcGIS Server for Michigan Technological University coastal research.
+  Public services include sonar, elevation, and coastal layers.
+id: giscoresabumtuedu
+langs:
+- id: EN
+  name: English
+link: https://gis-core.sabu.mtu.edu:6443/arcgis/rest/services
+name: Michigan Tech Coastal GIS Server
+owner:
+  link: https://www.mtu.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MI
+      name: Michigan
+  name: Michigan Technological University
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- elevation
+- geospatial
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Elevation
+  name: Elevation
+  type: iso19115
+uid: cdi00009115
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis-core.sabu.mtu.edu:6443/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis-core.sabu.mtu.edu:6443/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis-core.sabu.mtu.edu:6443/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis-core.sabu.mtu.edu:6443/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis-core.sabu.mtu.edu:6443/arcgis/rest/services?f=geositemap

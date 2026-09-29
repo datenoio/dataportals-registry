@@ -1,6 +1,6 @@
 # Discovering open data portals
 
-How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax (Google, Censys, Shodan, and [FOFA as a Censys alternative](discovery-search-tools.md#fofa)): [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md). Also covered here: Idra (`idra`), a DCAT-AP federation layer that is usually typed as a **Data search engine**; Piveau, Our Open Data, Gipuzkoa Irekia, DataPress, Taiwan MODA, ResourceContracts, RDF Online Repository, the Guangxi Public Data Open Platform, ODWeb, ATM Maggioli, OpenGov, OPENDATAENTE, KUKAN, the Epoint Big Data Open Platform, BODIK ODCS, and the jig.jp Open Data Platform.
+How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax (Google, Censys, Shodan, and [FOFA as a Censys alternative](discovery-search-tools.md#fofa)): [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md). Also covered here: Idra (`idra`), a DCAT-AP federation layer that is usually typed as a **Data search engine**; Piveau, Our Open Data, Gipuzkoa Irekia, DataPress, Taiwan MODA, ResourceContracts, RDF Online Repository, the Guangxi Public Data Open Platform, ODWeb, ATM Maggioli, OpenGov, OPENDATAENTE, KUKAN, the Epoint Big Data Open Platform, Taiji Digital, BODIK ODCS, and the jig.jp Open Data Platform.
 
 Set `software.id` from `data/software/` only when a probe or page signal matches. Otherwise `custom`. After YAML exists: `python scripts/apidetect.py detect-single {id} --dryrun` (replace `{id}` with the catalog id).
 
@@ -213,24 +213,32 @@ Eighty Options Drupal 9/10 distribution and the upgrade path for Drupal 7 DKAN 1
 
 ## OpenDataSoft (`opendatasoft`) {#opendatasoft}
 
-SaaS and self-hosted Explore portals. Many hosts end in `*.opendatasoft.com` or use a custom domain with `/explore`.
+SaaS and self-hosted Explore portals. Many hosts end in `*.opendatasoft.com` or use a custom domain with `/explore`. Huwise is the same product after the rebrand (`*.huwise.com` and custom domains that no longer say OpenDataSoft).
 
 **Confirm:** `https://host/api/explore/v2.1/catalog/datasets` (or legacy `/api/v2/catalog/datasets/`). UI path `/explore`.
+
+`domain="opendatasoft.com"`, `body="OpenDataSoft"`, and `body="ods-explore"` miss Huwise-branded hosts and custom domains that dropped the old name. Checked 24 September 2026: `domain="huwise.com"` returned 77. `body="ods-front-header" && domain!="opendatasoft.com"` returned 399. `body="huwise-black.svg"` returned 90 custom-domain rows. `body="opendatasoft-staticfileset"` returned 259 custom-domain rows. `body="ods-widgets" && body!="ods-front-header"` returned 119 and is mostly widget embeds, not portals.
 
 | Tool | Query |
 |------|-------|
 | Google | `inurl:/explore "opendatasoft" -site:opendatasoft.com/blog` |
 | Google | `site:opendatasoft.com/explore` |
 | Google | `"Powered by OpenDataSoft" OR "ods-explore"` |
+| Google | `site:huwise.com/explore` |
 | Censys | `web.names: "opendatasoft.com"` |
 | FOFA | `domain="opendatasoft.com"` |
+| FOFA | `domain="huwise.com"` |
 | Censys | `web.endpoints.http.body: "OpenDataSoft"` |
 | FOFA | `body="OpenDataSoft"` |
 | FOFA | `body="ods-explore"` |
+| FOFA | `body="ods-front-header"` |
+| FOFA | `body="huwise-black.svg"` |
+| FOFA | `body="opendatasoft-staticfileset"` |
 | FOFA | `body="OpenDataSoft" && country="BE"` |
 | crt.sh | `%.opendatasoft.com` |
+| crt.sh | `%.huwise.com` |
 
-**False positives:** the vendor homepage, academy, and blog. Register the **portal** (`{org}.opendatasoft.com` or the city’s custom domain), not `www.opendatasoft.com`. List: [Open Data Inception](https://data.opendatasoft.com/explore/dataset/open-data-sources%40public/information/).
+**False positives:** the vendor homepage, academy, and blog; widget embeds; login walls; a second hostname of the same `domain_id`. Register the **portal** (`{org}.opendatasoft.com`, `{org}.huwise.com`, or the city’s custom domain), not `www.opendatasoft.com`. List: [Open Data Inception](https://data.opendatasoft.com/explore/dataset/open-data-sources%40public/information/).
 
 ## Socrata (`socrata`) {#socrata}
 
@@ -386,14 +394,26 @@ SaaS open-data CMS used in Latin America. Customer list: [junar.com/customers](h
 
 ## EntryScape (`entryscape`) {#entryscape}
 
-DCAT-AP catalogs, especially Sweden and Nordics. Customers: [entryscape.com/en/customers](https://entryscape.com/en/customers/). UI may be Blocks/Catalog; API under `/store/`.
+DCAT-AP catalogs, especially Sweden and Nordics. Customers: [entryscape.com/en/customers](https://entryscape.com/en/customers/). UI may be Blocks or the Catalog suite; API under `/store/`.
+
+The suite shell [suite/stable/index.html](https://static.cdn.entryscape.com/suite/stable/index.html) sets `<title>EntryScape</title>`, points `dc.source` at `static.cdn.entryscape.com/suite/{version}/index.html`, and loads `bootstrap.js` from that path. The same response sends a Content-Security-Policy report to `security.entryscape.com`. The shell is `noindex, nofollow`, so Google misses hosts that FOFA still has.
+
+Checked 24 September 2026. `title=="EntryScape"` is the exact suite title (144 hosts). `title="EntryScape"` is 152 and also matches “EntryScape Community” and “EntryScape Service Desk”. `body="static.cdn.entryscape.com/suite/"` is the same shell (136). `header="security.entryscape.com"` alone is 266, and the extra rows are mostly bare-IP 404s; keep it only together with the exact title. `domain="entryscape.net"` is the SaaS tenant list (165). Names such as `catalog-goteborg-se.entryscape.net` are often 404 aliases of a custom domain (`catalog.goteborg.se`) — register the custom domain. `body="static.entryscape.com"` is the older Blocks CDN (11) and still catches branded portals that do not use the suite title, including `www.opendata.sachsen.de`.
+
+Do **not** hunt with `body="entryscape"` (195, including `docs.entryscape.com`, municipal homepages, and unrelated hosts such as `mtscapes.com`; `body=="entryscape"` is the same 195 because this plan stays in extended mode). `body="EntryStore"` matched 240 unrelated sites. `body="blocks-ext"` matched 18,061. `body="data-entryscape"` matched 9 (docs and embeds). `body="data-entryscape-entrystore"` and `body="static.cdn.entryscape.com/blocks/1/app.js"` matched 0 — FOFA does not index that attribute or the current Blocks script URL. `cert="entryscape.net"` and `cert="entryscape.com"` matched 2 hosts each. `host=".entryscape.com"` (63) is the vendor: docs, assets, demo, and dev.
+
+A Blocks page whose `data-entryscape-entrystore` points at a store already registered (Miljödokument → `data.naturvardsverket.se`) is that catalog, not a second one. Skip `admin`, `editera`, `sandbox`, `staging`, `test`, `demo`, `dev`, `docs`, `assets`, and `support` hosts.
 
 | Tool | Query |
 |------|-------|
 | Google | `"EntryScape" (catalog OR "öppna data" OR dcat)` |
 | Google | `inurl:/store "entryscape"` |
 | Censys | `web.endpoints.http.body: "EntryScape"` |
-| FOFA | `body="EntryScape"` |
+| FOFA | `title=="EntryScape"` |
+| FOFA | `body="static.cdn.entryscape.com/suite/"` |
+| FOFA | `header="security.entryscape.com" && title=="EntryScape"` |
+| FOFA | `domain="entryscape.net"` |
+| FOFA | `body="static.entryscape.com"` |
 
 ## Felles datakatalog (`fellesdatakatalog`) {#fellesdatakatalog}
 
@@ -429,6 +449,8 @@ Many Hub sites are **open data** first (dataset search, DCAT) rather than a map 
 
 **Confirm:** `/api/search/v1` or `/api/feed/dcat-us/1.1.json`. Hosts often `*.hub.arcgis.com` or `opendata.arcgis.com`. Custom-domain example: Bloemendaal (`hubcdn.arcgis.com/opendata-ui`).
 
+Checked 24 September 2026. Same FOFA rules as [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md#arcgishub): `host="hub.arcgis.com"` matches SaaS tenants (1,829) because `host=` is a substring, and custom domains need the CDN path plus `domain!="arcgis.com"` (2,676). `domain!="hub.arcgis.com"` does not exclude `*.hub.arcgis.com` — FOFA's `domain` field is the registrable domain `arcgis.com`.
+
 | Tool | Query |
 |------|-------|
 | Google | `site:hub.arcgis.com "open data"` |
@@ -436,8 +458,12 @@ Many Hub sites are **open data** first (dataset search, DCAT) rather than a map 
 | Google | `inurl:hub.arcgis.com` |
 | Censys | `web.names: "hub.arcgis.com"` |
 | FOFA | `host="hub.arcgis.com"` |
-| FOFA | `body="opendata-ui"` |
+| FOFA | `domain="opendata.arcgis.com"` |
+| FOFA | `body="hubcdn.arcgis.com/opendata-ui" && domain!="arcgis.com"` |
+| FOFA | `body="hub-site-head-content"` |
 | crt.sh | `%.hub.arcgis.com` |
+
+Do **not** use `body="opendata-ui"` as the custom-domain query (5,998, broader than the CDN path) or `body="hub.js"` (12,006, unrelated). Dataset-first sites stay Open data portal; map galleries stay Geoportal.
 
 Gallery: [hub.arcgis.com](https://hub.arcgis.com/).
 
@@ -515,6 +541,20 @@ Populate Tools open-data catalog for Spanish municipalities, offered as SaaS and
 | Google | `inurl:/datos gobierto (csv OR dcat)` |
 | Censys | `web.endpoints.http.body: "window.gobiertoAPI"` |
 | FOFA | `body="window.gobiertoAPI"` |
+
+## Viavansi Open Government (`viavansi`) {#viavansi}
+
+Spanish municipal open-data catalog skinned with the Viavansi WordPress theme. Installs: [Diputación de Cádiz](https://datosabiertos.dipucadiz.es/data/) (`viavansi-open-government`) and [Santander](https://datos.santander.es/) (`viavansi-ogov-current`). Product note: [INPRO portal de datos abiertos](https://inpro.dipusevilla.es/productos-y-servicios/participacion-y-transparencia/portal-de-datos-abiertos/index.html).
+
+**Signals:** `/wp-content/themes/viavansi-open-government/` or `/wp-content/themes/viavansi-ogov-current/`.
+
+**Confirm:** GET the catalog page and match the theme path. One record per institution. A WordPress open-data page without this theme stays `wordpress`. Do **not** set `ckan` unless the public catalog UI is CKAN.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:wp-content/themes/viavansi "datos abiertos"` |
+| FOFA | `body="viavansi-open-government"` |
+| FOFA | `body="viavansi-ogov"` |
 
 ## Municipium Portale Opendata (`municipium`) {#municipium}
 
@@ -637,6 +677,21 @@ Tyler / OpenGov financial transparency SaaS for US cities and states. Public ten
 
 Skip `www.opengov.com` marketing. Do not bulk-add every guessed city subdomain.
 
+## OneGov Election Day (`onegov`) {#onegov}
+
+Seantis OneGov Cloud application for Swiss election and vote results. Source: [onegov-cloud](https://github.com/OneGov/onegov-cloud). Public portals include [abstimmungen.gr.ch](https://abstimmungen.gr.ch), [wab.zug.ch](https://wab.zug.ch), [wab.sg.ch](https://wab.sg.ch), and [landsgemeinde.gl.ch](https://www.landsgemeinde.gl.ch). Distinct from Tyler OpenGov (`opengov`) on `*.opengov.com`.
+
+**Signals:** HTML `onegov` and `election_day`; `data-version` on the document element; DCAT-AP CH at `/catalog.rdf`; JSON at `/json` and `/archive/{year}/json`.
+
+**Confirm:** GET `/catalog.rdf` and the portal home. One record per public canton or commune portal. Skip `abstimmungen.sz.ch` (hostname does not resolve) and cantonal CMS pages that only link to results. Do not register the OneGov Cloud marketing site as a catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Wahlen & Abstimmungen" (Kanton OR Landsgemeinde) catalog.rdf` |
+| Google | `inurl:catalog.rdf (abstimmungen OR wab) site:.ch` |
+| Censys | `web.endpoints.http.body: "election_day"` |
+| FOFA | `body="election_day" && body="onegov"` |
+
 ## POMOSAM (`pomosam`) {#pomosam}
 
 CORA GEO municipal eGovernment / open-data publisher used by Slovak cities (contracts, invoices, orders, public datasets). Vendor: [pomosam.sk](http://www.pomosam.sk).
@@ -680,6 +735,27 @@ Commercial Chinese public-data portal from Epoint (国泰新点软件), branded 
 | Google | `inurl:/extranet/openportal/ 新点` |
 | Censys | `web.endpoints.http.body: "新点大数据开放平台"` |
 | FOFA | `body="新点大数据开放平台"` |
+
+## Taiji Digital Public Data Open Platform (`tykyopendata`) {#tykyopendata}
+
+Commercial Chinese public-data portal from Taiji Digital (深圳太极数智技术有限公司, tyky.com.cn), branded 太极数智公共数据开放平台. Product page: [tyky.com.cn](https://www.tyky.com.cn/product/show-1059.html). Distinct from Inspur oPortal (`oportal`) and Epoint (`epointopendata`).
+
+**Signals:** homepage assets under `/static/opendata1.0/`; the vendor page names the host. The live shell does not print 太极 or tyky.
+
+**Confirm:** `/static/opendata1.0/` on a public dataset catalog, or the vendor page cites that exact host, and the page lists datasets. One record per government. A city named only in the vendor case list, with no asset path and no cited URL, stays `custom`. Do not retag `/oportal/` or `/extranet/openportal/` tenants.
+
+Checked 25 September 2026. Of Chinese open-data homepages that answered, only [opendata.sz.gov.cn](https://opendata.sz.gov.cn/) served `/static/opendata1.0/`. The vendor page cites that URL. Guiyang is a case title only; `www.gyopendata.gov.cn` did not resolve.
+
+**FOFA** (same day). `body="/static/opendata1.0/"` returned two hosts: Shenzhen and [data.ziyang.gov.cn](http://data.ziyang.gov.cn/) (资阳市政府数据开放平台). The same pair is returned by `body="opendata1.0"`, `body="/data/api/toApi"`, `body="t4_css.css"`, and `body="t4_index.js"`. Ziyang did not answer a live GET from outside China; the FOFA body match is the confirm. `body="太极数智公共数据开放平台"` and `title="太极数智"` hit the vendor site and spam clones, not catalogs — the shell does not print the brand. `domain="tyky.com.cn"` is wildcard noise. `body="2018-10-18-PC.css"` also hits Ningbo JDOP (`../src/assets/css/2018-10-18-PC.css` on `/sjkfptold/`), which has no `/static/opendata1.0/`. `body="useOldFixed.css"` hits hospital sites. `body="/static/opendata/"` is unrelated.
+
+| Tool | Query |
+|------|-------|
+| Google | `"opendata1.0" 数据开放` |
+| Google | `"太极数智公共数据开放平台"` |
+| Censys | `web.endpoints.http.body: "/static/opendata1.0/"` |
+| FOFA | `body="/static/opendata1.0/"` |
+| FOFA | `body="/data/api/toApi"` |
+| FOFA | `body="t4_css.css"` |
 
 ## data.world (`dataworld`) {#dataworld}
 
@@ -864,6 +940,61 @@ convention as `wordpress` and `liferay`. Signals: generator meta `Joomla! - Open
 Content Management`, `/media/`, and `/components/com_*` asset paths. Ordinary Joomla
 homepages without a data or map catalog function are out of scope.
 
+## OutSystems (`outsystems`) {#outsystems}
+
+Low-code application platform. Site: [outsystems.com](https://www.outsystems.com). Use
+`outsystems` when the catalog itself is an OutSystems application. Confirmed
+installations: PORDATA (PT indicators database), Diário da República (PT official
+gazette), and the California DWR Water Data Library (US-CA hydrometric station
+archive, traditional-web `.aspx` + `RichWidgets`).
+
+**Signals:** `OutSystems*.js` scripts (`OutSystemsReactView.js`, `OutSystemsClientRuntime`), `_OSGlobalJS`, and `/Blocks/` + `RichWidgets` asset paths.
+
+| Tool | Query |
+|------|-------|
+| Google | `"OutSystems" ("open data" OR statistics) (portal OR catálogo)` |
+| Censys | `web.endpoints.http.body: "OutSystemsReactView"` |
+| FOFA | `body="OutSystemsReactView.js"` |
+
+## Plone (`plone`) {#plone}
+
+Zope CMS. Site: [plone.org](https://plone.org). Use `plone` when the catalog page
+itself is served by Plone. Confirmed installations: Brazil’s gov.br portal
+(INEP microdata) and the BCGSC physical-mapping file catalog
+(`plone.bcgsc.ca`).
+
+**Signals:** generator meta `Plone - http://plone.org`; `/portal_css/`; Zope
+`ZServer` banner.
+
+**Confirm:** GET the catalog page and check the generator meta. One record per
+catalog, not per Plone site. Skip ordinary ministry homepages.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Plone - http://plone.org" (microdata OR datasets OR catalog)` |
+| Censys | `web.endpoints.http.body: "Plone - http://plone.org"` |
+| FOFA | `body="Plone - http://plone.org"` |
+
+## Government Site Builder (`governmentsitebuilder`) {#governmentsitebuilder}
+
+Central CMS of the German federal administration, provided by ITZBund and used by
+80+ federal agencies (250+ websites). Use `governmentsitebuilder` when a German
+federal catalog page (statistics, health reporting, legal or open-data
+publications) is served by the GSB itself. GSB 11 is TYPO3-based but keeps its own
+generator meta; do not retag those sites as `typo3`.
+
+**Signals:** generator meta `Government Site Builder` (sometimes `GSB11`);
+`*.bund.de` hostnames.
+
+**Confirm:** GET the catalog page and check the generator meta. One record per
+catalog, not per agency site.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Government Site Builder" (statistik OR daten OR "open data")` |
+| Censys | `web.endpoints.http.body: "Government Site Builder"` |
+| FOFA | `body="Government Site Builder"` |
+
 ## Piveau (`piveau`) {#piveau}
 
 DCAT-AP microservice catalog (Fraunhofer FOKUS). Site: [piveau.de](https://www.piveau.de). Powers several European public-sector portals (including patterns used by data.europa.eu).
@@ -934,6 +1065,21 @@ Shared open-government / open-data platform for Gipuzkoa municipalities. Hub: [g
 | Censys | `web.names: "gipuzkoairekia.eus"` |
 | FOFA | `domain="gipuzkoairekia.eus"` |
 
+## Open Data Euskadi (`opendataeuskadi`) {#opendataeuskadi}
+
+Basque Government open data portal on the euskadi.eus web stack. Hub: [opendata.euskadi.eus](https://opendata.euskadi.eus). Custom REST API documented under `/apis/`, plus a SPARQL endpoint on `api.euskadi.eus`.
+
+**Signals:** host `opendata.euskadi.eus`; path `/catalogo-datos/`; euskadi.eus chrome ("Open Data Euskadi", trilingual eu/es/en).
+
+**Confirm:** GET the catalog at `/catalogo-datos/` or a documented API collection under `/apis/`. Register the hub once — geoEuskadi (`geo.euskadi.eus`) and Udalmap are separate catalogs, and municipal Basque portals (Bilbao, Getxo) run their own stacks.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:opendata.euskadi.eus catalogo-datos` |
+| Google | `"Open Data Euskadi" ("datos abiertos" OR "datu irekiak")` |
+| Censys | `web.names: "opendata.euskadi.eus"` |
+| FOFA | `domain="opendata.euskadi.eus"` |
+
 ## DataPress (`datapress`) {#datapress}
 
 Managed CKAN plus CMS. Site: [datapress.com](https://datapress.com). Prefer `datapress` when the public product is branded DataPress; otherwise `ckan` if only the CKAN API is visible.
@@ -958,6 +1104,30 @@ Taiwan Nuxt/Vue open-data frontend (national data.gov.tw family plus local clone
 | Google | `"moda-gov-tw" opendata` |
 | Censys | `web.names: "data.gov.tw"` |
 | FOFA | `host="data.gov.tw"` |
+
+## Taiwan Government Website Open Data (`twgovopendata`) {#twgovopendata}
+
+ASP.NET open-data module on Taiwan local-government websites. Dataset list, detail, and file-download pages share one application. Not the MODA Nuxt platform (`modaopendata`).
+
+**Signals:** `OpenDataList.aspx` plus `OpenDataDetail.aspx` or `OpenDataContent.aspx`, and `OpenDataFileHit.ashx`. Miaoli also serves `OpenDataGroup.aspx`, `OpenDataOrg.aspx`, and `OpenDataTheme.aspx`.
+
+**Confirm:** the list page shows datasets (title, format, organization) on that same host. One record per government catalog. Leave `Default.aspx` sections that do not serve those pages as `custom`. Do not retag `_nuxt` / `modaopendata` hosts. A page that only links `OpenDataList.aspx` on another host is a link-out.
+
+Checked 25 September 2026. `body="OpenDataList.aspx" && body="OpenDataFileHit.ashx"` is 2 rows, both `opendata.yunlin.gov.tw`. `body="OpenDataFileHit.ashx"` and `body="/Common/OpenDataFileHit.ashx"` are the same two rows. `body="OpenDataList.aspx"` worldwide is 8 rows and 5 hosts: Yunlin is the catalog; `food-safety.tycg.gov.tw` links to Yunlin; `www.hcshb.gov.tw` links to `www.hsinchu.gov.tw/OpenDataList.aspx`; `eghouse.hccg.gov.tw` is the registered Hsinchu City Web GIS; `opendata.hccg.gov.tw` is the registered Hsinchu City CKAN host (live GET timed out). `social.hsinchu.gov.tw` is in that set and did not answer. `body="OpenDataDetail.aspx" && country="TW"` is 4 and adds `www.hccp.gov.tw` and `citizenshandbook.hccg.gov.tw`, both linking to `opendata.hccg.gov.tw`. Miaoli serves `OpenDataList.aspx`, `OpenDataDetail.aspx`, and `OpenDataFileHit.ashx` on the homepage and is absent from FOFA. `body="OpenDataTheme.aspx"`, `body="customize-openData"`, and `body="OpenDataFileHit.ashx?s="` are 0.
+
+Title and host queries list Taiwan open-data homepages that still need a same-host GET. They are mostly CKAN, MODA, or another stack: `title="開放資料平台" && country="TW"` is 10, `title="資料開放平臺" && country="TW"` is 21, `title="資料開放平台" && country="TW"` is 24, `title="開放資料" && host=".gov.tw"` is 12, `host="opendata" && host=".gov.tw"` is 20. `body="jUtil.js" && body="OpenData" && country="TW"` is 13 and is the shared government CMS (`Scripts/jUtil.js`), including agency homepages that do not serve the dataset list.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:OpenDataList.aspx 資料開放` |
+| Censys | `web.endpoints.http.body: "OpenDataFileHit.ashx"` |
+| FOFA | `body="OpenDataList.aspx" && country="TW"` |
+| FOFA | `body="OpenDataList.aspx" && body="OpenDataFileHit.ashx"` |
+| FOFA | `title="開放資料平台" && country="TW"` |
+| FOFA | `title="資料開放平臺" && country="TW"` |
+| FOFA | `title="資料開放平台" && country="TW"` |
+| FOFA | `host="opendata" && host=".gov.tw"` |
+| FOFA | `body="jUtil.js" && body="OpenData" && country="TW"` |
 
 ## RDF Online Repository (`rdfrepository`) {#rdfrepository}
 
@@ -1065,15 +1235,31 @@ Dutch municipal open-data and Woo catalog (Drupal / Dexes). Product site: [openg
 
 1C-Bitrix CMS used for government dataset catalogs. Site: [1c-bitrix.ru](https://www.1c-bitrix.ru). Skip ordinary Bitrix homepages.
 
-**Signals:** Bitrix chrome; a **datasets** catalog section (открытые данные), not a news CMS.
+**Signals:** Bitrix chrome; a **datasets** catalog section (открытые данные), not a news CMS. A geoportal on the same CMS uses a site template such as `/bitrix/cache/css/s1/investmap/`.
 
-**Confirm:** GET the public dataset listing. One catalog per dataset portal.
+**Confirm:** GET the public dataset listing or the public map catalog. One catalog per dataset portal or geoportal.
 
 | Tool | Query |
 |------|-------|
 | Google | `"Битрикс" открытые данные` |
 | Censys | `web.endpoints.http.body: "bitrix"` |
 | FOFA | `body="bitrix"` |
+
+## Gosweb (`gosweb`) {#gosweb}
+
+Gosuslugi website constructor for Russian state and municipal bodies. Tenants use `*.gosweb.gosuslugi.ru` or a branded host that still loads Gosweb assets.
+
+**Signals:** `static.gosweb.gosuslugi.ru/omsu/`; NetCat template `/netcat_template/template/gw_omsu/`; open-data path `/ofitsialno/statistika/otkrytye-dannye/` with `list.csv` or `meta.csv`.
+
+**Confirm:** GET the open-data page and match `gw_omsu`. One catalog per municipality or agency site. Do not tag a generic NetCat site that lacks `gw_omsu` (for example Obninsk). Do not tag `esnsi.gosuslugi.ru`.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:gosweb.gosuslugi.ru "открытые данные"` |
+| Google | `"gw_omsu" "открытые данные"` |
+| Censys | `web.endpoints.http.body: "netcat_template/template/gw_omsu"` |
+| FOFA | `body="netcat_template/template/gw_omsu"` |
+| FOFA | `body="static.gosweb.gosuslugi.ru/omsu"` |
 
 ## Copernicus Data Stores (`copernicuscds`) {#copernicuscds}
 
@@ -1183,17 +1369,36 @@ Headless CMS. Site: [strapi.io](https://strapi.io). Docs: [strapi.io/docs](https
 
 ## Tablion (`tablion`) {#tablion}
 
-Aristotle Metadata data portal. Product: [Tablion Data Portal](https://www.aristotlemetadata.com/products/tablion-data-portal/).
+Aristotle Metadata data-request portal. Product: [Tablion Data Portal](https://www.aristotlemetadata.com/products/tablion-data-portal/). Help: [tablion-help.aristotlemetadata.com](https://tablion-help.aristotlemetadata.com/). Tenants are `{org}.tabliondata.com` or a customer domain (DSS uses [requestdata.dss.gov.au](https://requestdata.dss.gov.au/)). The apex `tabliondata.com` is a Netlify redirect to the marketing page.
 
-**Signals:** Tablion chrome; Aristotle metadata/data portal UI.
+**Signals:** public home nav `Dataset Library`, `Apply for Data Passport`, `Submit a Data Request`, and `Register` / `Login`. Default copy on the product screenshot is “Step 1: Apply for Data Passport”. Mail from a tenant is `notifications@noreply.tabliondata.com`.
 
-**Confirm:** GET the public dataset search. One catalog per portal.
+**Confirm:** GET the public home or Dataset Library. One catalog per portal. Stop on `403` from `awselb` (the app tenants reject crawlers). Skip the marketing redirect. An Aristotle Metadata Registry (`body="aristotle_mdr"`, `*.aristotlecloud.io`, `/account/login/`) is [`aristotlemdr`](discovery-metadata.md#aristotlemdr), not Tablion.
+
+**FOFA** (checked 24 September 2026). There is no `app="Tablion"`. `body="Tablion"` is a mention search (38 hosts). The word is also a Byzantine garment, so the first hits are fashion-history sites, a museum, restaurants, and the vendor’s own pages (`aristotlemetadata.com`, `community.aristotlemetadata.com`, `help.aristotlemetadata.com`, `tabliondata.com`). `title="tablion"` returned 0. `body="Tablion Data Portal"` returned 2 (the vendor home and a conference page). `body="powered by Tablion"`, `body="/static/tablion"`, and `body="noreply.tabliondata.com"` returned 0.
+
+`host=` is a substring, but the app tenants are not in the web index: `domain="tabliondata.com"` and `host="tabliondata.com"` returned 3 (apex and `www`, the marketing redirect), and `cert="tabliondata.com"` returned 2 of the same. `host="dcj.tabliondata.com"`, `host="mast.tabliondata.com"`, `host="temporary.tabliondata.com"`, and `host="dss.tabliondata.com"` returned 0, as did `cert=` for those names. `body="Apply for Data Passport"` and `body="Dataset Library" && body="Data Passport"` returned 0 because that HTML is behind the load balancer. `body="Dataset Library"` alone returned 174 unrelated hosts. `body="Submit a Data Request"` returned 391.
+
+Find tenant names in Certificate Transparency (`%.tabliondata.com`), then GET. Unexpired names on 24 September 2026: `dss.tabliondata.com`, `dcj.tabliondata.com`, `mast.tabliondata.com`, `temporary.tabliondata.com`, plus the apex. All four app hosts returned HTTP 403 (`server: awselb/2.0`), including `/robots.txt`. Historical urlscan captures `metservice.tabliondata.com` (2023) and `boldatapassport.tabliondata.com` (2022) no longer resolve.
+
+| Query | Hits | What it matches |
+|-------|------|-----------------|
+| `domain="tabliondata.com"` | 3 | Marketing redirect only (`tabliondata.com`, `www`) |
+| `host="tabliondata.com"` | 3 | Same. Does not list `{org}.tabliondata.com` while those hosts are absent from the index |
+| `cert="tabliondata.com"` | 2 | Marketing certificate, not the tenant certificates |
+| `body="Apply for Data Passport"` | 0 | Product chrome; use it when a tenant HTML page is indexed |
+| `body="Dataset Library" && body="Data Passport"` | 0 | Same chrome, both labels |
+| `body="Tablion"` | 38 | Garment, museums, vendor docs. Not a portal list |
 
 | Tool | Query |
 |------|-------|
-| Google | `"Tablion" "data portal"` |
-| Censys | `web.endpoints.http.body: "Tablion"` |
-| FOFA | `body="Tablion"` |
+| Google | `"tabliondata.com" OR "Apply for Data Passport"` |
+| Censys | `web.names: "tabliondata.com"` |
+| FOFA | `domain="tabliondata.com"` |
+| FOFA | `host="tabliondata.com"` |
+| Censys | `web.endpoints.http.body: "Apply for Data Passport"` |
+| FOFA | `body="Apply for Data Passport"` |
+| crt.sh | `%.tabliondata.com` |
 
 ## Other open-data platforms
 
@@ -1228,6 +1433,7 @@ Try these on a **named** government or city host only (not as an internet-wide s
 - `/api/explore/v2.1/catalog/datasets` (OpenDataSoft)
 - `/IdraPortal/` and `/Idra/api/v1/` (Idra)
 - `/oportal/` (Inspur oPortal)
+- `/static/opendata1.0/` (Taiji Digital)
 - `/openinf/` (Seoul Open Data Plaza)
 - `/assets/cms/public.css` (Our Open Data)
 - `*.revenuedev.org` tenant home (RDF Online Repository)
@@ -1363,6 +1569,141 @@ Development Gateway aid-information system. Product: [devgateway.github.io/amp](
 | FOFA | `body="ampTemplate"` |
 | Censys | `web.endpoints.http.body: "Aid Management Platform"` |
 | FOFA | `body="Aid Management Platform"` |
+
+## Het Dataloket (`dataloket`) {#dataloket}
+
+Analyze SaaS catalog of data assets for Dutch municipalities and provinces. Product: [Het Dataloket](https://kbenp.nl/expertise/datatoepassingen). Tenants use their own host (`data.venlo.nl`, `dataportaal.tilburg.nl`, `dataportaal.prvlimburg.nl`), not a shared vendor domain.
+
+**Signals:** HTML title “Dataportaal”; `/assets/img/search-blue.svg` and `/assets/img/logo_analyze.svg`; `/api/configuration` JSON with `feature_flags.has_public_portal`; `/api/search` JSON with `Total` and `Results`; Kibana host `dataloket-{org}-*.kb.westeurope.azure.elastic-cloud.com`.
+
+**Confirm:** GET `/api/configuration` and `/api/search`. One record per tenant host. Register a tenant when `/api/search` returns public (`Openbaar`) assets, including Venlo where `has_public_portal` is false. Do **not** set `dataloket` on `dataportaal-viewer.prvlimburg.nl` (a separate indicator viewer), Civity CKAN at `ckan.dataplatform.nl`, or Swing `*.incijfers.nl`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Dataportaal" "search-blue.svg"` |
+| Google | `"Het Dataloket" (gemeente OR provincie) dataportaal` |
+| Censys | `web.endpoints.http.body: "/assets/img/search-blue.svg"` |
+| FOFA | `body="/assets/img/search-blue.svg"` |
+
+## Contrataciones Abiertas (`contratacionesabiertas`) {#contratacionesabiertas}
+
+INAI EDCA-MX capture system and public dashboard. Source: [datosabiertosmx/contrataciones-abiertas-infraestructura](https://github.com/datosabiertosmx/contrataciones-abiertas-infraestructura) (version 2.1.8). The dashboard is `/contratacionesabiertas/datosabiertos`. `static/javascripts/common.js` sets `globals.site.url` and `globals.site.port` for the capture API.
+
+**Signals:** path `/contratacionesabiertas/datosabiertos`; `/contratacionesabiertas/static/bower_components/`; `X-Powered-By: Express`; common.js comment `Variables de conexion a la API del sistema de captura para contrataciones abiertas`.
+
+**Confirm:** GET the datos abiertos page and match that common.js comment. Read `globals.site` and confirm `GET {url}:{port}/edca/fiscalYears` returns JSON. One record per institution. Do **not** set `contratacionesabiertas` on Peru's OECE portal, on a page that only cites the OCDS standard, or on INFO CDMX CKAN (`datosabiertos.infocdmx.org.mx`).
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/contratacionesabiertas/datosabiertos` |
+| Google | `"sistema de captura para contrataciones abiertas"` |
+| Censys | `web.endpoints.http.body: "/contratacionesabiertas/static/javascripts/common.js"` |
+| FOFA | `body="/contratacionesabiertas/static/javascripts/common.js"` |
+
+## Centurion (`centurion`) {#centurion}
+
+eBdesk government data portal. Product login: [centurion.id](https://centurion.id). Vendor description: [Government Intelligence](https://www.ebdesk.com/goverment-intelligence.html). Live shells include [data.kalselprov.go.id](https://data.kalselprov.go.id), [sadaina.sumutprov.go.id](https://sadaina.sumutprov.go.id), and [data.polri.go.id](https://data.polri.go.id).
+
+**Signals:** `<html theme-fontsize data-maps>` and `<body theme-shape="rounded">`. Module federation `https://fem.centurion.id/remoteEntry.js`, or same-host `/femc/remoteEntry.js` whose body starts with `var Charts`. Tenant hostnames `*.centurion.id`.
+
+**Confirm:** GET the public portal and match that shell. A `satudata.*` hostname alone is not Centurion. One installation = one record. Kalimantan Selatan `data.`, `opendata.`, and `satupeta.` share one `metadata_datasets` collection (same `totalCount`); keep the registered open-data host. Do **not** register `satudata.kalselprov.go.id` (GraphQL returns 401), the `centurion.id` login, or `fem.centurion.id`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"theme-fontsize" "data-maps" (satudata OR "open data" OR "satu data")` |
+| Censys | `web.endpoints.http.body: "theme-fontsize"` |
+| FOFA | `body="theme-fontsize" && body="data-maps"` |
+| FOFA | `body="fem.centurion.id/remoteEntry.js"` |
+
+## CreatorCMS (`creatorcms`) {#creatorcms}
+
+Chinese government website CMS data-open module on Hunan municipal portals. Catalog path `/webapp/{city}/dataPublic/index.jsp` (or `/webapp/{city}/index.jsp`), dataset pages `dataDetail.jsp?id=`, front-end assets `KCUI/KCUI3.min.js`, backend routes `/creatorCMS/`.
+
+**Signals:** path `/webapp/{city}/` + `dataDetail.jsp`; body strings `KCUI/KCUI3` or `/creatorCMS/`; page title 数据开放.
+
+**Confirm:** GET the data-open page and match `KCUI` or `creatorCMS`. One municipal catalog = one record. Do not register the parent government homepage or non-data modules of the same CMS.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:dataPublic inurl:index.jsp 数据开放` |
+| Google | `"creatorCMS" 数据开放` |
+| Censys | `web.endpoints.http.body: "creatorCMS"` |
+| FOFA | `body="/creatorCMS/" || body="KCUI/KCUI3"` |
+
+## Anhui open-data-web (`ahopendataweb`) {#ahopendataweb}
+
+Anhui provincial/municipal public-data platform. Catalog under `/open-data-web/` with Struts `.do` actions (Hefei `index-hfs.do`, Bozhou `index.do`) or `/dataopen-web/` on the provincial host `data.ahzwfw.gov.cn`. Distinct from Inspur oPortal (`oportal`), Zhejiang JDOP (`jdop`), ODWeb (`odweb`).
+
+**Signals:** path `/open-data-web/` or `/dataopen-web/`; `.do` index actions; 公共数据开放平台 chrome.
+
+**Confirm:** GET the catalog root and match the path scheme. One city or provincial catalog = one record.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:open-data-web 数据开放` |
+| Google | `inurl:dataopen-web 安徽` |
+| Censys | `web.endpoints.http.path: "/open-data-web/"` |
+| FOFA | `body="open-data-web" && title="数据开放"` |
+
+## openportal (`openportal`) {#openportal}
+
+Chinese government open-data portal product serving the catalog under `/extranet/openportal/pages/...`. Observed on Yichun, Jiangxi (`data.yichun.gov.cn`) and Zhangjiakou, Hebei (`kf.zjkzwfw.gov.cn`). Distinct from Inspur oPortal (`oportal`) and ODWeb (`odweb`).
+
+**Signals:** path `/extranet/openportal/pages/`; default index `pages/default/index.html`.
+
+**Confirm:** GET `/extranet/openportal/pages/default/index.html`. One municipal catalog = one record.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:extranet inurl:openportal` |
+| Censys | `web.endpoints.http.path: "/extranet/openportal/"` |
+| FOFA | `body="/extranet/openportal/"` |
+
+## Oraș Digital (`orasdigital`) {#orasdigital}
+
+Romanian municipal open-data portal product by [Oraș Digital](https://oras.digital) ("Connecting the City through technology"), deployed per city as `{city}.oras.digital` with a sister city-app at `{city}.digital`. Known deployment: Iași ([iasi.oras.digital](https://iasi.oras.digital/), alias `opendata.oras.digital`). Distinct from CKAN-based Romanian portals and from the vendor marketing homepage itself.
+
+**Signals:** host `*.oras.digital`; title `Portal Open Data {City}`; Cloudflare-hosted shell loading `assets/js/app.min.js` and `assets/css/app.css`; dataset routes `/datasets/{slug}/` with institution and format filters (HTML, CSV, XLS, XLSX, API); API docs at `/api-docs/` linking a Postman collection (`assets/api/api-postman-collection.json`).
+
+**Confirm:** GET the city subdomain and match the portal shell plus `/api-docs/`. One record per city portal; do not register `oras.digital`, `cx.oras.digital`, or cPanel port variants on the apex, and treat `{city}.digital` city apps as separate products, not portals.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:oras.digital "Portal Open Data"` |
+| Google | `"oras.digital" "Documentație API"` |
+| Censys | `web.names: "oras.digital"` |
+| FOFA | `host="oras.digital"` |
+| FOFA | `body="api-postman-collection.json"` |
+
+## Bon Maximus e-Procurement (`bonmaximus`) {#bonmaximus}
+
+Nigerian vendor-built electronic government procurement portal by [Bon Maximus Companies Ltd](https://bonmaximus.com) (Abuja; "e-Procurement, e-QS, and Digital Solutions"). Deployed for Nigerian state Bureaus of Public Procurement; known public OCDS-facing installs: Kogi (`eproc.bpp.kg.gov.ng`), Osun (`egp.osunstate.gov.ng`), Abia (`abiaeprocurement.ab.gov.ng`), Ebonyi (`ebonyieprocure.eb.gov.ng`), Anambra (`eprocure.bpp.an.gov.ng`).
+
+**Signals:** footer credit "Powered by Bon Maximus Companies"; IIS/10.0 backend with ASP.NET-style pages (`publication.php`, award/tender listing routes); site title pattern `Home | {State} ...`.
+
+**Confirm:** GET the portal root and match the "Bon Maximus" footer credit. One record per state BPP portal. Do not register `bonmaximus.com` itself (vendor marketing), and do not set this id on Nigerian e-procurement portals without the credit (e.g. Edo, Bauchi, Jigawa, Ogun builds are separate one-offs). Do not set `ckan` — no CKAN API is exposed.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Powered by Bon Maximus"` |
+| Google | `inurl:e-procurement OR inurl:eprocure "Bon Maximus"` |
+| FOFA | `body="Bon Maximus"` |
+| Censys | `web.endpoints.http.body: "Bon Maximus"` |
+
+## Budeshi (`budeshi`) {#budeshi}
+
+Open contracting data platform by the Public and Private Development Centre (PPDC, Nigeria; [budeshi.ng](https://www.budeshi.ng)). Hosts government procurement portals publishing projects, tenders, and awards as OCDS releases with documented HTTP APIs. Known install: Kaduna State Open Contracting Portal (`www.ocds.kdsg.gov.ng`, endpoints `/api` and `/ocds-api`).
+
+**Signals:** footer or page credit "Powered By Budeshi"; OCDS release/search pages; documented REST endpoints (`/api`, `/ocds-api`) serving OCDS JSON.
+
+**Confirm:** GET the portal root or `/api` and match the Budeshi credit or OCDS API. One record per deployment. Do not register `budeshi.ng` itself (platform home), and do not set `bonmaximus` on Budeshi-hosted portals or vice versa — check the footer credit.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Powered By Budeshi" OR "powered by budeshi"` |
+| Google | `inurl:ocds "Budeshi"` |
+| FOFA | `body="Budeshi"` |
+| Censys | `web.endpoints.http.body: "Budeshi"` |
 
 ## Related
 

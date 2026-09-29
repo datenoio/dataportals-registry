@@ -1,0 +1,68 @@
+category: Scientific data repository
+subtype: domain_data_infrastructure
+datatypes:
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: seadatanet
+name: SeaDataNet
+website: https://www.seadatanet.org
+documentation_url: https://www.seadatanet.org/Standards
+description: SeaDataNet is the pan-European infrastructure for marine and ocean data
+  management, operated by a consortium of National Oceanographic Data Centres with
+  portal software developed by MARIS. The same stack powers the Common Data Index
+  (CDI) data discovery and access service, the Cruise Summary Reports (CSR)
+  directory, and the EDMED, EDMERP, and EDMO directories of datasets, research
+  projects, and marine organisations, as well as the SeaDataNet data products
+  catalogue. Metadata records follow SeaDataNet ISO 19115 profiles and are exposed
+  through a public SRU/OAI-style search API and OGC services.
+owner:
+  name: SeaDataNet consortium (portal software by MARIS)
+  location:
+    country:
+      id: NL
+      name: Netherlands
+logo_url: https://www.seadatanet.org/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'Yes'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'Yes'
+  wms: 'Yes'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+capabilities:
+- REST API
+- Geospatial search
+- OGC WFS and WMS services
+- ISO 19115 metadata profiles
+- Bulk downloads
+export_formats:
+- XML
+- CSV
+- ODV
+- NetCDF
+last_updated: '2026-09-28T00:00:00Z'

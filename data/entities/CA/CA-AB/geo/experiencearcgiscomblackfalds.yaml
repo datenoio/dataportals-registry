@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Alberta
 description: Town of Blackfalds public ArcGIS Experience Builder town map for municipal
   GIS layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/742d2b02af5a496ba70933330a6c6792/data?f=json
 id: experiencearcgiscomblackfalds
 langs:
 - id: EN

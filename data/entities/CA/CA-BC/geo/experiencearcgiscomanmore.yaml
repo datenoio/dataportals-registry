@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: British Columbia
 description: Village of Anmore public ArcGIS Experience Builder web map for properties,
   zoning, and related municipal layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/e975a7231532420183321900e81f4c4a/data?f=json
 id: experiencearcgiscomanmore
 langs:
 - id: EN

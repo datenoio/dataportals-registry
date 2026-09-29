@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: New South Wales
 description: Port Stephens Council ArcGIS Experience Builder public GIS for property,
   planning, flood, and local government map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/8bbca9aaed754d35b78474c9b56b2be9/data?f=json
 id: experiencearcgiscomportstephens
 langs:
 - id: EN

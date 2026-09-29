@@ -1,0 +1,62 @@
+category: Geoportal
+subtype: geospatial_catalog_platform
+datatypes:
+  datasets: Compatible
+  fields: 'No'
+  organizations: 'No'
+  resources: Compatible
+  topics: 'No'
+has_api: Uncertain
+has_bulk: 'No'
+id: vlab
+name: VLAB
+website: https://vlab.tech/
+description: VLAB is the online planning-map product of VLAB Co., Ltd (footer
+  credit "Phát triển bởi VLAB" / VLAB J.S.C). Vietnamese cities publish approved
+  zoning maps and parcel lookup on their own hosts or on vlab.tech. Confirmed
+  installations include Ho Chi Minh City
+  (thongtinquyhoach.hochiminhcity.gov.vn, Leaflet and Tangram, guest.map CSS)
+  and Thu Duc City (ttqh-thuduc.tphcm.gov.vn, guest.index CSS), plus vendor-hosted
+  maps such as htkt-thuduc.vlab.tech. Require the VLAB credit, a vlab.tech host,
+  or a /img/vlab.png (or vlab-logo.png) asset. Do not set vlab from the words
+  "quy hoạch" alone, from eKMap (ekmapboxgl), from Hanoi quyhoach.hanoi.gov.vn
+  (Next.js), or from Vinh Phuc OpenLayers planning.
+owner:
+  name: VLAB Co., Ltd
+  location:
+    country:
+      id: VN
+      name: Vietnam
+documentation_url: https://vlab.tech/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: Uncertain
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: Uncertain
+  wms: Uncertain
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'No'
+rights_management:
+  licensing_type: Proprietary
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+capabilities:
+- Approved zoning and land-use plan viewer
+- Parcel lookup by map sheet and parcel number
+- Planning-certificate request on some city tenants
+last_updated: '2026-09-27T00:00:00Z'

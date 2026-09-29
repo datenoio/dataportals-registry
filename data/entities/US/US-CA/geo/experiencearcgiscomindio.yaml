@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: US-CA
       name: California
 description: City of Indio public ArcGIS Experience Builder zoning GIS map.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/a6749efd8b694e1eb87a2ff1b504da75/data?f=json
 id: experiencearcgiscomindio
 langs:
 - id: EN

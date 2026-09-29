@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,12 +14,13 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: The Cancer Cell Line Encyclopedia project is a collaboration between the Broad
-  Institute, and the Novartis Institutes for Biomedical Research and its Genomics Institute
-  of the Novartis Research Foundation to conduct a detailed genetic and pharmacologic characterization
-  of a large panel of human cancer models, to develop integrated computational analyses that
-  link distinct pharmacologic vulnerabilities to genomic patterns and to translate cell line
-  integrative genomics into cancer patient stratification.
+description: The Cancer Cell Line Encyclopedia project is a collaboration between
+  the Broad Institute, and the Novartis Institutes for Biomedical Research and its
+  Genomics Institute of the Novartis Research Foundation to conduct a detailed genetic
+  and pharmacologic characterization of a large panel of human cancer models, to develop
+  integrated computational analyses that link distinct pharmacologic vulnerabilities
+  to genomic patterns and to translate cell line integrative genomics into cancer
+  patient stratification.
 id: sitesbroadinstituteorg
 identifiers:
 - id: openaire
@@ -40,8 +41,8 @@ owner:
   name: Novartis Institutes for Biomedical Research
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -61,3 +62,6 @@ topics:
   name: Health
   type: iso19115
 uid: cdi00033496
+endpoints:
+- type: sitemap
+  url: https://sites.broadinstitute.org/sitemap.xml

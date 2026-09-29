@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -12,7 +12,7 @@ coverage:
       name: Italy
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: The Italian National Database of Monovarietal Extra Virgin Olive Oils
   documents Italian monovarietal olive oils produced from single olive varieties across
@@ -38,8 +38,8 @@ owner:
   name: Institute of BioEconomy (IBE)
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -51,3 +51,9 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00031754
+endpoints:
+- type: rest
+  url: https://www.olimonovarietali.it/en/wp-json/
+- type: rest:posts
+  url: https://www.olimonovarietali.it/en/wp-json/wp/v2/posts
+  version: '2'

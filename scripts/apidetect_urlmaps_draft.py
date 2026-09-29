@@ -1880,7 +1880,7 @@ RESOURCECONTRACTS_URLMAP = [
 
 PIVEAU_URLMAP = [
     {
-        "id": "customapi",
+        "id": "piveau:search",
         "url": "/api/hub/search",
         "accept": "application/json",
         "expected_mime": JSON_MIMETYPES,
@@ -1888,7 +1888,7 @@ PIVEAU_URLMAP = [
         "version": None,
     },
     {
-        "id": "customapi",
+        "id": "piveau:search",
         "url": "/api/hub/search/search",
         "accept": "application/json",
         "expected_mime": JSON_MIMETYPES,
@@ -1896,7 +1896,7 @@ PIVEAU_URLMAP = [
         "version": None,
     },
     {
-        "id": "customapi",
+        "id": "piveau:search",
         "url": "/api/hub/search/search?q=&filter=dataset",
         "accept": "application/json",
         "expected_mime": JSON_MIMETYPES,
@@ -2023,7 +2023,7 @@ OMEKAS_URLMAP = [
         "version": None,
     },
     {
-        "id": "rest",
+        "id": "omekas:items",
         "url": "/api/items?resource_class_label=Dataset",
         "accept": "application/json",
         "expected_mime": JSONLD_MIMETYPES,
@@ -2058,7 +2058,7 @@ OMEKAS_URLMAP = [
 
 CONTENTDM_URLMAP = [
     {
-        "id": "customapi",
+        "id": "contentdm:collections",
         "url": "/digital/api/collections",
         "accept": "application/json",
         "expected_mime": JSON_MIMETYPES,
@@ -2143,7 +2143,7 @@ IDRA_URLMAP = [
         "version": "1",
     },
     {
-        "id": "customapi",
+        "id": "idra:catalogues",
         "url": "/Idra/api/v1/catalogues",
         "accept": "application/json",
         "expected_mime": JSON_MIMETYPES,
@@ -2197,6 +2197,10 @@ def _html_probe(url, endpoint_id="customapi", version=None):
     }
 
 
+DATALOKET_URLMAP = [
+    _json_probe("/api/search", "dataloket:search"),
+    _json_probe("/api/configuration", "dataloket:configuration"),
+]
 TAILORMAP_URLMAP = [
     _json_probe("/api/app", "tailormap:apps"),
     _html_probe("/nl/page/viewers", "tailormap:viewers"),
@@ -2218,9 +2222,22 @@ TERRAVISU_URLMAP = [
 GISQUICK_URLMAP = [
     _json_probe("/api/app", "gisquick:app"),
 ]
+EMAPA_URLMAP = [
+    _json_probe("/application/system/init.php", "emapa:init"),
+]
 WFCATALOG_URLMAP = [
-    _json_probe("/eidaws/wfcatalog/1/version", "api", "1"),
-    _xml_probe("/eidaws/wfcatalog/1/application.wadl", "api", "1"),
+    _json_probe(
+        "/eidaws/wfcatalog/1/query?network=GE&start=2020-01-01&end=2020-01-02",
+        "wfcatalog:query",
+        "1",
+    ),
+    {
+        "id": "fdsnws:station",
+        "url": "/fdsnws/station/1/version",
+        "expected_mime": PLAIN_MIMETYPES + XML_MIMETYPES,
+        "is_json": False,
+        "version": "1",
+    },
 ]
 
 
@@ -2349,6 +2366,28 @@ EDATOS_URLMAP = [
     _json_probe("/indicators/v1.0/indicators", "rest", version="1.0"),
 ]
 
+IDESCAT_URLMAP = [
+    _json_probe(
+        "/emex/v1/nodes.json?lang=en",
+        "rest",
+        absolute_url="https://api.idescat.cat/emex/v1/nodes.json?lang=en",
+    ),
+    _json_probe(
+        "/taules/v2",
+        "rest",
+        version="2",
+        absolute_url="https://api.idescat.cat/taules/v2",
+    ),
+]
+
+INEBASE_URLMAP = [
+    _json_probe(
+        "/wstempus/js/ES/OPERACIONES_DISPONIBLES",
+        "rest",
+        absolute_url="https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES",
+    ),
+]
+
 ESASCIENCEARCHIVE_URLMAP = [
     _xml_probe("/tap/capabilities", "tap:capabilities"),
     _xml_probe("/tap-server/tap/capabilities", "tap:capabilities"),
@@ -2357,7 +2396,7 @@ ESASCIENCEARCHIVE_URLMAP = [
 
 GEN3_URLMAP = [
     _json_probe("/_status"),
-    _json_probe("/index/ga4gh/drs/v1/service-info"),
+    _json_probe("/index/ga4gh/drs/v1/service-info", "ga4gh:drs"),
 ]
 
 GIPUZKOAIREKIA_URLMAP = [
@@ -2633,7 +2672,7 @@ OPENALEX_URLMAP = [
 DANDI_URLMAP = [
     _json_probe(
         "/api/dandisets/",
-        "rest",
+        "dandi:dandisets",
         absolute_url="https://api.dandiarchive.org/api/dandisets/",
     ),
 ]
@@ -2641,7 +2680,7 @@ DANDI_URLMAP = [
 CELLXGENE_URLMAP = [
     _json_probe(
         "/curation/v1/datasets",
-        "rest",
+        "cellxgene:datasets",
         absolute_url="https://api.cellxgene.cziscience.com/curation/v1/datasets",
     ),
 ]
@@ -2670,7 +2709,7 @@ UNDATA_URLMAP = [
 SIDRA_URLMAP = [
     _json_probe(
         "/api/v3/agregados",
-        "rest",
+        "sidra:agregados",
         absolute_url="https://servicodados.ibge.gov.br/api/v3/agregados",
     ),
 ]
@@ -2720,6 +2759,7 @@ CHECKLISTBANK_URLMAP = [
 BIOSTUDIES_URLMAP = [
     _json_probe(
         "/biostudies/api/v1/search",
+        "biostudies:search",
         version="1",
         absolute_url="https://www.ebi.ac.uk/biostudies/api/v1/search",
     ),
@@ -2728,6 +2768,7 @@ BIOSTUDIES_URLMAP = [
 METABOLIGHTS_URLMAP = [
     _json_probe(
         "/metabolights/ws/studies",
+        "metabolights:studies",
         absolute_url="https://www.ebi.ac.uk/metabolights/ws/studies",
     ),
 ]
@@ -2735,6 +2776,7 @@ METABOLIGHTS_URLMAP = [
 MGNIFY_URLMAP = [
     _json_probe(
         "/metagenomics/api/v1/studies",
+        "mgnify:studies",
         version="1",
         absolute_url="https://www.ebi.ac.uk/metagenomics/api/v1/studies",
     ),
@@ -2855,8 +2897,8 @@ IBISPH_URLMAP = [
 ]
 
 HAJK_URLMAP = [
-    _json_probe("/appConfig.json", "api"),
-    _json_probe("/publik/appConfig.json", "api"),
+    _json_probe("/appConfig.json", "hajk:config"),
+    _json_probe("/publik/appConfig.json", "hajk:config"),
 ]
 
 SHOGUN_URLMAP = [
@@ -2979,10 +3021,21 @@ DATASETTE_URLMAP = [
     _json_probe("/-/databases.json", "datasette:databases"),
 ]
 
+SMARTMET_URLMAP = [
+    _json_probe("/edr/collections", "ogc:edr"),
+]
+
 DATAONE_URLMAP = [
-    _xml_probe("/metacat/d1/mn/v2", "rest", "2"),
-    _xml_probe("/mn", "rest"),
-    _xml_probe("/d1/mn/v2", "rest", "2"),
+    _xml_probe("/metacat/d1/mn/v2", "dataone:mn", "2"),
+    _xml_probe("/mn", "dataone:mn"),
+    _xml_probe("/d1/mn/v2", "dataone:mn", "2"),
+    {
+        "id": "dataone:query",
+        "url": "/cn/v2/query/solr/?q=formatType:DATA&rows=1",
+        "expected_mime": XML_MIMETYPES + JSON_MIMETYPES,
+        "is_json": False,
+        "version": "2",
+    },
     _xml_probe("/metacat/sitemaps/sitemap_index.xml", "sitemap"),
 ]
 
@@ -3009,6 +3062,33 @@ OPENGOV_URLMAP = [
         "is_json": False,
         "version": None,
     },
+]
+
+# EPOS GLASS nodes publish station and RINEX metadata at a fixed path.
+GLASS_URLMAP = [
+    {
+        "id": "glass",
+        "url": "/GlassFramework/swagger.json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+# NCI CBIIT Bento data-commons frontends load a runtime config at /injectEnv.js.
+BENTO_URLMAP = [
+    {
+        "id": "bento:injectenv",
+        "url": "/injectEnv.js",
+        "expected_mime": ["application/javascript", "text/javascript"],
+        "is_json": False,
+        "version": None,
+    },
+]
+
+# NBIA archives expose a versioned REST API; collections are the dataset grain.
+NBIA_URLMAP = [
+    _json_probe("/nbia-api/services/v1/getCollectionValues", "nbia:collections"),
 ]
 
 # ---------------------------------------------------------------------------
@@ -3039,10 +3119,12 @@ DRAFT_CATALOGS_URLMAP = {
     "mapstore": MAPSTORE_URLMAP,
     "gausswebcity": MAPSTORE_URLMAP,
     "tailormap": TAILORMAP_URLMAP,
+    "dataloket": DATALOKET_URLMAP,
     "andino": ANDINO_URLMAP,
     "grafana": GRAFANA_URLMAP,
     "terravisu": TERRAVISU_URLMAP,
     "gisquick": GISQUICK_URLMAP,
+    "emapa": EMAPA_URLMAP,
     "wfcatalog": WFCATALOG_URLMAP,
     "opensdg": OPENSDG_URLMAP,
     "terria": TERRIA_URLMAP,
@@ -3066,6 +3148,8 @@ DRAFT_CATALOGS_URLMAP = {
     "maptilerserver": MAPTILERSERVER_URLMAP,
     "mytardis": MYTARDIS_URLMAP,
     "nyudatacatalog": NYUDATACATALOG_URLMAP,
+    "bento": BENTO_URLMAP,
+    "nbia": NBIA_URLMAP,
     # Tier B
     "lizmap": LIZMAP_URLMAP,
     "mapbender": MAPBENDER_URLMAP,
@@ -3126,6 +3210,8 @@ DRAFT_CATALOGS_URLMAP = {
     "djehuty": DJEHUTY_URLMAP,
     "omegapsir": OMEGAPSIR_URLMAP,
     "edatos": EDATOS_URLMAP,
+    "idescat": IDESCAT_URLMAP,
+    "inebase": INEBASE_URLMAP,
     "esasciencearchive": ESASCIENCEARCHIVE_URLMAP,
     "gen3": GEN3_URLMAP,
     "gipuzkoairekia": GIPUZKOAIREKIA_URLMAP,
@@ -3218,17 +3304,24 @@ DRAFT_CATALOGS_URLMAP = {
     "tr32db": TR32DB_URLMAP,
     "origo": ORIGO_URLMAP,
     "datasette": DATASETTE_URLMAP,
+    "smartmetserver": SMARTMET_URLMAP,
+    "glass": GLASS_URLMAP,
 }
 
 # Software reviewed for auto-fill: do not invent relative API paths.
 # Entries that now have a URLMAP were removed from this list.
 NO_STANDARD_PROBE = {
+    "boost": "World Bank BOOST country open-budget portals; pivot-table UI with CSV/Excel export buttons, no anonymous list API on the portal URL.",
+    "opendataeuskadi": "Basque Government euskadi.eus stack; paginated HTML catalog, custom API documented under /apis/ with no stable relative probe path.",
+    "cspro": "Statistical processing software, not a public catalog or relative catalog API.",
+    "datashield": "Authenticated federated analysis framework, not a public catalog API; do not probe sensitive data servers.",
     "activityinfo": "Single SaaS at www.activityinfo.org; reports API requires an API token, published report pages are per-report URLs, not a relative catalog API.",
     "aodn": "AODN portal search API path varies (/portal/search/api).",
     "axiomportal": "Axiom Data Science portals; instance-specific ERDDAP/API hosts.",
     "cadenza": "disy Cadenza; JSF workbook paths, no stable anonymous catalog API.",
     "chemotion": "Public repository listing is HTML (/home/welcome); no stable relative catalog API.",
     "cardo": "cardo GIS viewers; no shared REST path on the portal URL.",
+    "geoexplorer": "Saudi municipal GEOhub viewer (Blazor + ArcGIS Maps SDK); no dataset API on the portal URL, harvest is the viewer layer list.",
     "copernicuscds": "CDS retrieve API needs a personal access token, not on catalog link.",
     "d4science": "VRE platform; API behind auth, no stable relative path.",
     "codabench": "Hub /api/datasets/ is 403; homepage HTML is not a catalog dump.",
@@ -3249,6 +3342,7 @@ NO_STANDARD_PROBE = {
     "ibdc": "IBDC archive paths are per-archive placeholders, not a relative hub list.",
     "datagovmy": "Static site generators; mostly sitemap-only in records.",
     "datavavt": "Custom /analytic/api/v1 on Russian portals.",
+    "biouml": "BioUML databases (autosome.org / biouml.org) expose a table-browser UI; no portable anonymous catalog list API on the database home.",
     "datawheel": "DataWheel sites; frontend-only, no common /api.",
     "datalad": "DataLad/git annex – no HTTP API on portal link; git-only.",
     "ewmapa": "geoportal2.pl HTML viewers; WMS often 403 and path is instance-specific.",
@@ -3270,6 +3364,7 @@ NO_STANDARD_PROBE = {
     "govpilot": "GovPilot GIS Map tenants at map.govpilot.com/map/{state}/{city}; Kendo ASP.NET viewer, no documented relative catalog API.",
     "mapsifter": "TerraScan MapSifter county parcel viewers; ASP.NET search behind Disclaimer.aspx, no documented relative catalog API.",
     "civiltmv": "Civil Solutions Tax Map Viewer tenants at tmv.civilsolutions.biz/viewer/{id}; Mazer viewer, no documented relative catalog API.",
+    "vectorsurv": "Hosted UC Davis surveillance service; agency data behind login, state deployments embed the central UI (vectorsurvEmbedded). No relative catalog API.",
     "atlas": "Atlas (Purmerend Common Ground geoportal) tenants; Vue SPA over WMS/WFS/MVT layers, no documented relative catalog API on the tenant URL.",
     "ideba": "IDEBA Visualizador tenants at visualizador.ideba.gba.gob.ar/{municipio}; Leaflet viewer, GeoServer WFS/WMS live on a separate node host, no relative catalog API on the tenant URL.",
     "intertownup": "Intertown UP tenants at up.intertown.co.il/{code}/public; React SPA, no documented relative catalog API.",
@@ -3292,6 +3387,7 @@ NO_STANDARD_PROBE = {
     "geoportalrlp": "Custom geoportal CMS; sitemap only in records.",
     "gisoftgis": "GISoft GIS viewers; no documented public REST on portal URL.",
     "hygmapgis": "HyG Mapgis JSP viewer; layers over ArcGIS REST/WMS, no shared catalog API on mapa.jsp.",
+    "igvt": "DGU (Croatia) IGVT/iGeo GIS viewer template; branded Angular/ExtJS viewer consuming OGC services, no catalog API on the viewer URL.",
     "instdb": "Institutional CRIS; generic /api per site.",
     "jacq": "Herbarium REST is on api.jacq.org, not each Virtual Herbaria catalog link.",
     "jdop": "Zhejiang JDOP portals; no documented anonymous default API path.",
@@ -3357,6 +3453,7 @@ NO_STANDARD_PROBE = {
     "flybase": "FlyBase downloads are HTML; no relative catalog API on the catalog link.",
     "jgi": "/portal/ is HTML workspace; genome APIs are host-specific.",
     "korp": "Korp corpus list is the instance UI; no shared relative catalog API on every /korp/ path.",
+    "nosketch": "NoSketch Engine (Bonito/Manatee) corpus list is the instance UI; no shared relative catalog API on the Bonito URL.",
     "loris": "LORIS study portals are HTML; no shared relative catalog API.",
     "lovd": "LOVD public_list is HTML; path varies by install.",
     "metashare": "META-SHARE listing is HTML.",
@@ -3378,6 +3475,20 @@ NO_STANDARD_PROBE = {
     "maplat": "Maplat historical-map viewer; per-tenant map list is app config JSON, no standard catalog API.",
     "stroly": "Stroly hosted old-map platform; viewer SPA, no public relative catalog API.",
     "ecommap": "eコミマップ participatory WebGIS; user-published maps UI, no standard catalog API.",
+    "cascadecms": "Cascade CMS publishes static HTML indicator/report pages; no catalog API on the portal URL.",
+    "craftcms": "Craft CMS publishes HTML data pages; no standard catalog API on the portal URL.",
+    "squarespace": "Squarespace sites are hosted HTML pages; no catalog API.",
+    "jekyll": "Jekyll static sites have no catalog API; dataset lists are HTML pages.",
+    "dashgis": "DashGIS tenants are Angular path apps on mydashgis.com; no documented relative catalog API on the tenant URL.",
+    "emndatahub": "EMN Data Hub hubs serve a React remote-entry app; dataset lists are hub-specific, no shared relative catalog API.",
+    "creatorcms": "CreatorCMS data-open module lists datasets in HTML (/webapp/{city}/dataPublic/*.jsp); no public catalog API confirmed.",
+    "ahopendataweb": "Anhui open-data-web catalog is HTML under /open-data-web/ or /dataopen-web/ (.do actions); no public catalog API confirmed.",
+    "openportal": "openportal catalog is HTML under /extranet/openportal/pages/; no public catalog API confirmed.",
+    "sciencedb": "ScienceDB (scidb.cn) is a single-instance repository; dataset discovery is search HTML plus per-DOI landing pages, no public bulk catalog API confirmed.",
+    "bonmaximus": "Bon Maximus e-Procurement portals are IIS/ASP.NET HTML sites with OCDS publication pages; no documented public catalog API on the tenant URL.",
+    "budeshi": "Budeshi (PPDC) deployments expose instance-specific OCDS endpoints (/api, /ocds-api on Kaduna) that are not stable across tenants; no shared relative catalog probe.",
+    "liveshop": "LiveShop statistics databases (ASP.NET /shop + /data-browser tenants) publish chart/table HTML with no documented public catalog API on the tenant URL.",
+    "cod": "COD (Crystallography Open Database) search is a parameterized result.php query on crystallography.net; no stable anonymous list-all API, bulk harvest is CIF/MySQL dumps per the obtain-data wiki (harvest-scientific-domain.md).",
 }
 
 # Map UIs reviewed for auto-fill: no shared relative catalog API on the viewer URL.
@@ -3414,12 +3525,10 @@ NO_STANDARD_PROBE.update(
             "drzwebgis",
             "ekmap",
             "elvis",
-            "emapa",
             "enmapa",
             "envimap",
             "evald",
             "evglobe",
-            "experiencebuilder",
             "exponare",
             "factawebgis",
             "farvatergisogd",
@@ -3450,7 +3559,6 @@ NO_STANDARD_PROBE.update(
             "giscity",
             "gfmaplet",
             "gismaster",
-            "gisonline",
             "gisplan",
             "gomap",
             "gpatlas",
@@ -3479,12 +3587,10 @@ NO_STANDARD_PROBE.update(
             "localmaps",
             "loftmyndir",
             "louhi",
-            "map2web",
             "mapfusion",
             "mapguide",
             "mapmap",
             "mapmint",
-            "mapotip",
             "mapplus",
             "mapsolution",
             "marushka",
@@ -3544,6 +3650,16 @@ NO_STANDARD_PROBE.update(
             "xymaps",
             "zulugisonline",
         )
+    }
+)
+
+# Catalog URL is not a fixed relative path on the viewer host. Records store it directly.
+NO_STANDARD_PROBE.update(
+    {
+        "map2web": "Project JSON is https://map.map2web.eu/apiv2/project/{hostname} (map2web:project), not a path on the tenant host.",
+        "gisonline": "Layer list is /api2/projects/{id} (gisonline:project). The id is in the page HTML; login-required projects return 403.",
+        "experiencebuilder": "Hosted apps use https://www.arcgis.com/sharing/rest/content/items/{id}/data?f=json (arcgis:item:data). Self-hosted Jimu apps have no shared relative catalog path.",
+        "mapotip": "Layer tree is /api/map/alias/{slug}?domain=portal.mapotip.cz (mapotip:project), not a fixed path.",
     }
 )
 

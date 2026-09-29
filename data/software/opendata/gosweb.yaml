@@ -1,0 +1,65 @@
+category: Open data portal
+subtype: cms_or_app_framework
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'No'
+has_bulk: 'No'
+id: gosweb
+name: Gosweb
+website: https://gosweb.gosuslugi.ru
+description: Gosweb is the Gosuslugi website constructor for Russian state and
+  municipal bodies. Public pages load assets from
+  static.gosweb.gosuslugi.ru/omsu/ and the NetCat template gw_omsu
+  (/netcat_template/template/gw_omsu/). Open data is published at
+  /ofitsialno/statistika/otkrytye-dannye/ with list.csv and meta.csv
+  passports. A NetCat site that does not use the gw_omsu template is not
+  Gosweb. esnsi.gosuslugi.ru is a separate reference-data system.
+owner:
+  name: Ministry of Digital Development of the Russian Federation
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+logo_url: https://www.gosuslugi.ru/favicon.ico
+documentation_url: https://gosweb.gosuslugi.ru
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'No'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Per dataset
+  supports_licenses: 'No'
+storage_type: Structured
+type: Software
+license:
+  type: Proprietary
+export_formats:
+- CSV
+- HTML
+- XML
+capabilities:
+- Municipal and agency website constructor
+- Open-data registry with dataset passports
+last_updated: '2026-09-27T00:00:00Z'

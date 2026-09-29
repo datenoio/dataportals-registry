@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: ArcGIS REST services for Spain's transport network, including Hermes
+  roads, ports, airports, and railways.
+id: mapasfomentogobes
+langs:
+- id: ES
+  name: Spanish
+link: https://mapas.fomento.gob.es/arcgis/rest/services
+name: Mapas del Ministerio de Transportes
+owner:
+  link: https://www.transportes.gob.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+  name: Ministerio de Transportes y Movilidad Sostenible
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- spain
+- transport
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00008935
+endpoints:
+- type: arcgis:rest:info
+  url: https://mapas.fomento.gob.es/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mapas.fomento.gob.es/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mapas.fomento.gob.es/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://mapas.fomento.gob.es/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mapas.fomento.gob.es/arcgis/rest/services?f=geositemap

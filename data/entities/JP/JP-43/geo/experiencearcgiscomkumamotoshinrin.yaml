@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Kumamoto
 description: Kumamoto Prefecture public forest GIS publishing forest-plan areas and
   related geospatial layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/5f1e2e50054c47218ea89651227635c1/data?f=json
 id: experiencearcgiscomkumamotoshinrin
 langs:
 - id: JA

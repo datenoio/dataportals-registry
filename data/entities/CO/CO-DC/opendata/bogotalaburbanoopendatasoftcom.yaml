@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Open data portal
 content_types:
@@ -87,3 +87,15 @@ topics:
   name: Economy
   type: iso19115
 uid: cdi99992493
+endpoints:
+- type: opendatasoftapi
+  url: https://bogota-laburbano.opendatasoft.com/api
+- type: opendatasoftapi
+  url: https://bogota-laburbano.opendatasoft.com/api/explore/v2.1/catalog/datasets?limit=1
+  version: '2.1'
+- type: dcat:xml
+  url: https://bogota-laburbano.opendatasoft.com/api/v2/catalog/exports/dcat
+- type: dcat:xml
+  url: https://bogota-laburbano.opendatasoft.com/api/explore/v2.1/catalog/exports/dcat
+- type: dcatus11
+  url: https://bogota-laburbano.opendatasoft.com/data.json

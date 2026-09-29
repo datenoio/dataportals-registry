@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: GeoServer for the London Borough of Redbridge publishing planning constraints,
+  flood zones, conservation areas, and related map layers. Hosted by Agile Applications.
+id: redbridgegeoserveragileapplicationscouk
+langs:
+- id: EN
+  name: English
+link: https://redbridge.geoserver.agileapplications.co.uk/geoserver/web/
+name: Redbridge Council GeoServer
+owner:
+  link: https://www.redbridge.gov.uk/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: London Borough of Redbridge
+  type: Local government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- geospatial
+- government
+- planning
+- united-kingdom
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00009540
+endpoints:
+- type: wms111
+  url: https://redbridge.geoserver.agileapplications.co.uk/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://redbridge.geoserver.agileapplications.co.uk/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://redbridge.geoserver.agileapplications.co.uk/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://redbridge.geoserver.agileapplications.co.uk/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://redbridge.geoserver.agileapplications.co.uk/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

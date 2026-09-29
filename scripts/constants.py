@@ -691,7 +691,8 @@ def _load_map_software_owner_catalog_type():
     for _, record in iter_software_yaml_records():
         software_id = record.get("id")
         category = record.get("category")
-        if not software_id or not category or software_id in SOFTWARE_MAP_SKIP_IDS:
+        if (not software_id or not category or software_id in SOFTWARE_MAP_SKIP_IDS
+                or category == "Statistical production software"):
             continue
         mapping[software_id] = category
     mapping.update(CUSTOM_SOFTWARE_ALIAS_CATALOG_TYPE)
@@ -704,27 +705,187 @@ MAP_SOFTWARE_OWNER_CATALOG_TYPE = _load_map_software_owner_catalog_type()
 # platforms are also valid under additional types; see MAP_SOFTWARE_ALLOWED_CATALOG_TYPES.
 MAP_SOFTWARE_ALLOWED_CATALOG_TYPES = {
     "molgenis": frozenset({"Metadata catalog", "Scientific data repository"}),
+    # SeaDataNet stack powers the CDI data portal, the scientific directories,
+    # and the EDMED/EDMO/EDMERP metadata directories.
+    "seadatanet": frozenset(
+        {
+            "Scientific data repository",
+            "Open data portal",
+            "Metadata catalog",
+        }
+    ),
     "vivo": frozenset({"Data search engine", "Scientific data repository"}),
     "nada": frozenset({"Microdata catalog", "Scientific data repository"}),
     "cadenza": frozenset({"Geoportal", "Indicators catalog"}),
     "ckan": frozenset(
-        {"Open data portal", "Geoportal", "Scientific data repository"}
+        {
+            "Open data portal",
+            "Geoportal",
+            "Scientific data repository",
+            "Indicators catalog",
+            # Suomi.fi Liityntäkatalogi is a CKAN directory of service-bus APIs.
+            "API Catalog",
+        }
     ),
     # DKAN hosts open-data portals and scientific archives (same extra type as CKAN).
     "dkan": frozenset({"Open data portal", "Scientific data repository"}),
-    "drupal": frozenset({"Open data portal", "Geoportal", "Indicators catalog"}),
-    "opendatasoft": frozenset({"Open data portal", "Geoportal"}),
+    # Drupal also backs metadata harvesting portals (umwelt.info).
+    "drupal": frozenset(
+        {
+            "Open data portal",
+            "Geoportal",
+            "Indicators catalog",
+            "Scientific data repository",
+            "Microdata catalog",
+            "Datasets list",
+            "Metadata catalog",
+        }
+    ),
+    # METSIS dataset search, satellite geoportal, and facility catalogues.
+    "metsis": frozenset(
+        {
+            "Scientific data repository",
+            "Geoportal",
+            "Other",
+        }
+    ),
+    # Webstat (Banque de France) is an indicators catalog built on OpenDataSoft.
+    "opendatasoft": frozenset({"Open data portal", "Geoportal", "Indicators catalog"}),
+    # Developer portals. Category stays Open data portal because the software
+    # schema has no API Catalog category; live catalogs use API Catalog.
+    "azureapim": frozenset({"Open data portal", "API Catalog"}),
+    # INE's dissemination platform also serves microdata products and the
+    # open-data (Satellite) catalog pages on the same dyngs stack.
+    "inebase": frozenset(
+        {
+            "Indicators catalog",
+            "Microdata catalog",
+            "Open data portal",
+        }
+    ),
+    # GovSiteBuilder CMS sites also host indicator portals and geoportals,
+    # federal research-data centres (DRKS, RKI/KBA FDZ, GPCC), and the bund.dev API portal.
+    "governmentsitebuilder": frozenset(
+        {
+            "Open data portal",
+            "Indicators catalog",
+            "Geoportal",
+            "Scientific data repository",
+            "API Catalog",
+        }
+    ),
+    # Craft CMS sites also host indicator portals (e.g. resourcetrade.earth)
+    # and scientific data repositories (Neotoma, CUAHSI-HIS, diatoms.org).
+    "craftcms": frozenset(
+        {"Open data portal", "Indicators catalog", "Scientific data repository"}
+    ),
     "openeo": frozenset({"Geoportal", "Scientific data repository"}),
     "publishmydata": frozenset({"Open data portal", "Metadata catalog"}),
     "fairdatapoint": frozenset(
         {"Metadata catalog", "Data search engine", "Scientific data repository"}
     ),
-    "wordpress": frozenset({"Open data portal", "Geoportal", "Indicators catalog"}),
-    "liferay": frozenset({"Open data portal", "Geoportal", "Indicators catalog"}),
+    # WordPress also hosts research dataset lists (ARCHES robotics, V-SENSE),
+    # dataset directories (ORASECOM WIS, BERD Open Big Data), and developer
+    # API portals (AfriGIS Developers).
+    "wordpress": frozenset(
+        {
+            "Open data portal",
+            "Geoportal",
+            "Indicators catalog",
+            "Scientific data repository",
+            "Microdata catalog",
+            "Machine learning catalog",
+            "Datasets list",
+            "API Catalog",
+        }
+    ),
+    # Squarespace sites host research-data pages and foundation indicator portals.
+    "squarespace": frozenset(
+        {
+            "Scientific data repository",
+            "Indicators catalog",
+            "Open data portal",
+        }
+    ),
+    # Jekyll static sites host scientific dataset catalogs and ML benchmark lists.
+    "jekyll": frozenset(
+        {
+            "Scientific data repository",
+            "Machine learning catalog",
+            "Open data portal",
+            "Datasets list",
+        }
+    ),
+    # Liferay also hosts microdata sections of an NSO site (ELSTAT public-use files)
+    # and HTML dataset inventories (Contraloría General de la República).
+    "liferay": frozenset(
+        {
+            "Open data portal",
+            "Geoportal",
+            "Indicators catalog",
+            "Scientific data repository",
+            "Microdata catalog",
+            "Datasets list",
+        }
+    ),
+    # 1C-Bitrix hosts open-data sections, municipal geoportals, and NSO sites (stat.gov.kz).
+    "bitrix": frozenset({"Open data portal", "Geoportal", "Indicators catalog"}),
+    # Strapi also backs SDG indicator platforms (ODSlocal).
+    "strapi": frozenset({"Open data portal", "Indicators catalog"}),
+    # OutSystems low-code portals: statistics databases (PORDATA), gazettes, and
+    # the California DWR Water Data Library hydrometric station archive.
+    "outsystems": frozenset(
+        {"Open data portal", "Indicators catalog", "Scientific data repository"}
+    ),
+    # Keysystems Open Budget publishes indicator portals and an open-data register.
+    "ksopenbudget": frozenset({"Indicators catalog", "Open data portal"}),
     # Joomla is a CMS, same catalog types as WordPress and Liferay.
-    "joomla": frozenset({"Open data portal", "Geoportal", "Indicators catalog"}),
+    "joomla": frozenset(
+        {
+            "Open data portal",
+            "Geoportal",
+            "Indicators catalog",
+            "Scientific data repository",
+        }
+    ),
+    # Plone hosts open-data pages, scientific file catalogs, and microdata lists.
+    "plone": frozenset(
+        {
+            "Open data portal",
+            "Geoportal",
+            "Indicators catalog",
+            "Scientific data repository",
+            "Microdata catalog",
+        }
+    ),
+    # CMS shells that already catalog indicators and also host scientific catalogs.
+    # French communes also publish open-data pages on TYPO3 (Grand Nancy, Istres, Puy-de-Dôme),
+    # and German municipalities run geoportals on TYPO3 (Passau, Oldenburg, Kreis Soest).
+    "typo3": frozenset(
+        {
+            "Indicators catalog",
+            "Scientific data repository",
+            "Open data portal",
+            "Datasets list",
+            "Geoportal",
+        }
+    ),
+    "spip": frozenset({"Indicators catalog", "Scientific data repository"}),
+    "contao": frozenset({"Indicators catalog", "Scientific data repository"}),
+    # Spanish ministry and university open-data pages also run on SharePoint.
+    "sharepoint": frozenset(
+        {
+            "Indicators catalog",
+            "Scientific data repository",
+            "Open data portal",
+            "Datasets list",
+        }
+    ),
+    "shiny": frozenset({"Indicators catalog", "Scientific data repository"}),
     "udata": frozenset({"Open data portal", "Geoportal"}),
     "geonetwork": frozenset({"Geoportal", "Open data portal"}),
+    # Geoservice WebGIS: municipal geoportals and the open-data module.
+    "silverbrowser": frozenset({"Geoportal", "Open data portal"}),
     "onegeosuite": frozenset({"Geoportal", "Open data portal"}),
     "prodige": frozenset({"Geoportal", "Open data portal"}),
     "oracleapex": frozenset(
@@ -988,6 +1149,12 @@ SOFTWARE_NAME_ALIASES = {
     "i мониторинг": "imonitoring",
     "krista imonitoring": "imonitoring",
     "ifinmon": "imonitoring",
+    "gosweb": "gosweb",
+    "госвеб": "gosweb",
+    "gw_omsu": "gosweb",
+    "ks open budget": "ksopenbudget",
+    "кс открытый бюджет": "ksopenbudget",
+    "keysystems open budget": "ksopenbudget",
     "jaxi": "jaxi",
     "iaeaxi": "jaxi",
     "jaxit3": "jaxi",
@@ -1451,6 +1618,9 @@ SOFTWARE_NAME_ALIASES = {
     "envimap": "envimap",
     "geoforte": "envimap",
     "fortemap": "envimap",
+    "erdagis": "erdagis",
+    "erda gis": "erdagis",
+    "erdagis web": "erdagis",
     "piso": "piso",
     "geoprostor": "piso",
     "gdi visios": "gdivisios",
@@ -2080,6 +2250,7 @@ SOFTWARE_DOCUMENTATION_URLS = {
     "avinet": "https://www.avinet.no/",
     "mapplus": "https://www.tydac.ch/en/mapplus/",
     "envimap": "https://envimap.hu/",
+    "erdagis": "https://www.erda.hu/hu/erdagis-web",
     "piso": "https://www.geoprostor.net",
     "gdivisios": "https://gdi.net/ensemble/ensemble-smart-portal/",
     "mapguide": "https://mapguide.osgeo.org/",

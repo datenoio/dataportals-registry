@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: British Columbia
 description: District of Sparwood public ArcGIS Experience Builder parcel map for
   property, land use, recreation, and infrastructure layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/ae45f41c82584883815c377f82d60d3d/data?f=json
 id: experiencearcgiscomsparwood
 langs:
 - id: EN

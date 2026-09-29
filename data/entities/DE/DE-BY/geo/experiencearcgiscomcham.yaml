@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Bayern
 description: Public GeoBIS-Cham web map of Landkreis Cham with municipal and state
   spatial layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/9149318bab4e4f89b5ffcd0ec008ebbe/data?f=json
 id: experiencearcgiscomcham
 langs:
 - id: DE

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -41,8 +41,8 @@ owner:
   name: Global Carbon Project, Future Earth
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -53,3 +53,9 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00034533
+endpoints:
+- type: rest
+  url: http://www.globalcarbonatlas.org/wp-json/
+- type: rest:posts
+  url: http://www.globalcarbonatlas.org/wp-json/wp/v2/posts
+  version: '2'

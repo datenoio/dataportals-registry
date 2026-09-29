@@ -1,24 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: MU
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Country Code: MU
 Total Records with Issues: 1
 Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA]
 Count: 1
 Priority: MEDIUM
 
-File: MU/Federal/indicators/wwwbommu.yaml
-Record ID: wwwbommu
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+File: MU/Federal/indicators/airqualitygovmuorg.yaml
+Record ID: airqualitygovmuorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
 Field: endpoints
-Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA: 1 issue

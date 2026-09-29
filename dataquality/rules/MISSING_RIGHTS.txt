@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - RULE: MISSING_RIGHTS
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Issue Type: MISSING_RIGHTS
 Priority: LOW
-Total Issues Found: 53
+Total Issues Found: 52
 
 === SUMMARY BY COUNTRY ===
 
@@ -38,7 +38,6 @@ KR: 1 issue
 KZ: 1 issue
 LK: 1 issue
 LT: 1 issue
-LU: 1 issue
 LV: 1 issue
 MK: 1 issue
 MN: 1 issue
@@ -49,9 +48,9 @@ NL: 1 issue
 PA: 1 issue
 PE: 2 issues
 PH: 1 issue
+PL: 1 issue
 PT: 1 issue
 PY: 1 issue
-RS: 1 issue
 SE: 1 issue
 SK: 1 issue
 TH: 1 issue
@@ -64,6 +63,7 @@ VE: 1 issue
 dataslovenskosk: 1 issue
 dataportalse: 1 issue
 dataegovuz: 1 issue
+danegovpl: 1 issue
 catalogodatosabiertosgobpe: 1 issue
 datosabiertosgobpe: 1 issue
 datosgovpy: 1 issue
@@ -84,7 +84,6 @@ databfsadminch: 1 issue
 datagovlk: 1 issue
 catalogodatosabiertosgobec: 1 issue
 datagovtw: 1 issue
-datagovrs: 1 issue
 datosgobve: 1 issue
 dadosgovpt: 1 issue
 datagovph: 1 issue
@@ -105,7 +104,6 @@ datosgobmx: 1 issue
 datavejviserdk: 1 issue
 dadosgovbr: 1 issue
 opendatagovje: 1 issue
-datapubliclu: 1 issue
 katalogdatagoid: 1 issue
 nogpgoviq: 1 issue
 datosgobes: 1 issue
@@ -136,6 +134,14 @@ Suggested Action: Add rights.license_id, license_name, and license_url for this 
 File: UZ/Federal/opendata/dataegovuz.yaml
 Record ID: dataegovuz
 Country: UZ
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {"license_id": null, "license_name": null, "license_url": null, "privacy_policy_url": null, "rights_type": "unknown", "tos_url": null}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+File: PL/Federal/opendata/danegovpl.yaml
+Record ID: danegovpl
+Country: PL
 Issue: MISSING_RIGHTS
 Field: rights
 Current Value: {"license_id": null, "license_name": null, "license_url": null, "privacy_policy_url": null, "rights_type": "unknown", "tos_url": null}
@@ -301,14 +307,6 @@ Field: rights
 Current Value: {"license_id": null, "license_name": null, "license_url": null, "privacy_policy_url": null, "rights_type": "unknown", "tos_url": null}
 Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
 
-File: RS/Federal/opendata/datagovrs.yaml
-Record ID: datagovrs
-Country: RS
-Issue: MISSING_RIGHTS
-Field: rights
-Current Value: {"license_id": null, "license_name": null, "license_url": null, "privacy_policy_url": null, "rights_type": "granular", "tos_url": null}
-Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
-
 File: VE/Federal/opendata/datosgobve.yaml
 Record ID: datosgobve
 Country: VE
@@ -467,14 +465,6 @@ Country: JE
 Issue: MISSING_RIGHTS
 Field: rights
 Current Value: {"license_id": null, "license_name": null, "license_url": null, "privacy_policy_url": null, "rights_type": "granular", "tos_url": null}
-Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
-
-File: LU/Federal/opendata/datapubliclu.yaml
-Record ID: datapubliclu
-Country: LU
-Issue: MISSING_RIGHTS
-Field: rights
-Current Value: {"license_id": null, "license_name": null, "license_url": null, "privacy_policy_url": "https://data.public.lu/en/pages/legal/privacy", "rights_type": "granular", "tos_url": "https://data.public.lu/en/pages/legal/terms"}
 Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
 
 File: ID/Federal/opendata/katalogdatagoid.yaml

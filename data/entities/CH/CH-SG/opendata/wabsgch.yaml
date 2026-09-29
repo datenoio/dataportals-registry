@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: CH-SG
+      name: Sankt Gallen
+description: Official OneGov Election Day portal of the Canton of St. Gallen. Publishes
+  election and vote results as open data with a DCAT-AP CH catalog harvested by
+  opendata.swiss.
+endpoints:
+- type: dcatap21
+  url: https://wab.sg.ch/catalog.rdf
+id: wabsgch
+langs:
+- id: DE
+  name: German
+link: https://wab.sg.ch
+name: St. Gallen Elections and Votes
+owner:
+  link: https://www.sg.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-SG
+      name: Sankt Gallen
+  name: Kanton St. Gallen
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: onegov
+  name: OneGov Election Day
+status: active
+tags:
+- elections
+- government
+- open data
+- Switzerland
+- Sankt Gallen
+- has_api
+- OneGov
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00009664

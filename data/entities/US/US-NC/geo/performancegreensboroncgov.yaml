@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NC
+      name: North Carolina
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Gate City Stats performance hub of the City of Greensboro, North Carolina.
+id: performancegreensboroncgov
+langs:
+- id: EN
+  name: English
+link: https://performance.greensboro-nc.gov/
+name: Gate City Stats
+owner:
+  link: https://www.greensboro-nc.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NC
+      name: North Carolina
+  name: City of Greensboro
+  type: Local government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00008714
+endpoints:
+- type: dcatap201
+  url: https://performance.greensboro-nc.gov/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://performance.greensboro-nc.gov/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://performance.greensboro-nc.gov/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://performance.greensboro-nc.gov/api/search/v1
+- type: arcgishubapi
+  url: https://performance.greensboro-nc.gov/api/v3/datasets
+- type: dcatus11
+  url: https://performance.greensboro-nc.gov/data.json

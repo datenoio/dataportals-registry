@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 30
+    subregion:
+      id: CZ-51
+      name: Liberecký kraj
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public ArcGIS Server 12 REST catalog of Liberecký kraj (protected areas,
+  Natura 2000, flood maps, and cross-border services).
+id: maparcgiskrajlbccz
+langs:
+- id: CS
+  name: Czech
+link: https://maparcgis.kraj-lbc.cz/arcgis/rest/services
+name: Liberecký kraj ArcGIS Server
+owner:
+  link: https://www.kraj-lbc.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 30
+    subregion:
+      id: CZ-51
+      name: Liberecký kraj
+  name: Liberecký kraj
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- czech-republic
+- geospatial
+- government
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009213
+endpoints:
+- type: arcgis:rest:info
+  url: https://maparcgis.kraj-lbc.cz/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maparcgis.kraj-lbc.cz/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maparcgis.kraj-lbc.cz/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://maparcgis.kraj-lbc.cz/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maparcgis.kraj-lbc.cz/arcgis/rest/services?f=geositemap

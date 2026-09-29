@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Victoria
 description: Virtual Merri-bek 3D digital twin for planning applications, building
   models, LiDAR, and municipal 3D spatial data.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/c28b61c126714e52a275c6edcb4ec14c/data?f=json
 id: experiencearcgiscommerribek
 langs:
 - id: EN

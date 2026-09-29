@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -39,8 +39,8 @@ owner:
   name: Agência Executiva de Gestão das Águas do Estado da Paraíba
   type: Regional government
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - geospatial
@@ -50,3 +50,9 @@ topics:
   name: Location
   type: iso19115
 uid: cdi00008235
+endpoints:
+- type: rest
+  url: https://geoportal.aesa.pb.gov.br/wp-json/
+- type: rest:posts
+  url: https://geoportal.aesa.pb.gov.br/wp-json/wp/v2/posts
+  version: '2'

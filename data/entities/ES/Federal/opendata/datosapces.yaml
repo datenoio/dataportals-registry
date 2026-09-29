@@ -18,30 +18,11 @@ description: Esta información se publica con el objetivo de mejorar la transpar
   pública, y facilitar su reutilización con el conjunto de la sociedad. Estos datos
   podrán ser consultados y descargados, y su actualización será continua por parte
   de la Autoridad.
-endpoints:
-- type: ckan
-  url: http://datos.apc.es/api/3
-- type: ckan
-  url: http://datos.apc.es/api/3/action/package_list
-- type: opendatasoftapi
-  url: http://datos.apc.es/api/v2/catalog
-- type: socrata
-  url: http://datos.apc.es/api/views
-- type: dcatap201
-  url: http://datos.apc.es/api/feed/dcat
-- type: dcat
-  url: http://datos.apc.es/catalog.xml
-- type: dcatap
-  url: http://datos.apc.es/catalog.rdf
-- type: dcat:jsonld
-  url: http://datos.apc.es/catalog.jsonld
-- type: sitemap
-  url: http://datos.apc.es/sitemap.xml
 id: datosapces
 langs:
 - id: ES
   name: Spanish
-link: http://datos.apc.es/
+link: https://datosabiertos.apc.gob.es/
 name: Datos Abiertos Autoridad Portuaria de Cartagena
 owner:
   location:
@@ -51,8 +32,8 @@ owner:
   type: Central government
   link: https://apc.es
 software:
-  id: custom
-  name: Custom software
+  id: ckan
+  name: CKAN
 status: active
 tags:
 - government
@@ -63,3 +44,6 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi00010874
+endpoints:
+- type: ckan
+  url: https://datosabiertos.apc.gob.es/api/3

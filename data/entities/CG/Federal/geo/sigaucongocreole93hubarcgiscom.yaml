@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -68,3 +68,6 @@ topics:
   name: Planning / Cadastre
   type: iso19115
 uid: cdi00003146
+endpoints:
+- type: arcgishubapi
+  url: https://sig-au-congo-creole93.hub.arcgis.com/api/v3/datasets

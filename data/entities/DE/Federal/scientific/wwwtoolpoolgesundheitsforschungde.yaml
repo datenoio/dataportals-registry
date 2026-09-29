@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: The German Biobank Register (Deutsches Biobanken-Register) lists human biobanks
-  in Germany and their collections, operated via TMF / German Biobank Alliance.
+description: The German Biobank Register (Deutsches Biobanken-Register) lists human
+  biobanks in Germany and their collections, operated via TMF / German Biobank Alliance.
 id: wwwtoolpoolgesundheitsforschungde
 identifiers:
 - id: openaire
@@ -35,11 +35,12 @@ owner:
       id: DE
       name: Germany
     level: 20
-  name: TMF – Technologie- und Methodenplattform für die vernetzte medizinische Forschung e.V.
+  name: TMF – Technologie- und Methodenplattform für die vernetzte medizinische Forschung
+    e.V.
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -54,3 +55,6 @@ topics:
   name: Health
   type: iso19115
 uid: cdi00029772
+endpoints:
+- type: sitemap
+  url: https://www.toolpool-gesundheitsforschung.de/sitemap.xml

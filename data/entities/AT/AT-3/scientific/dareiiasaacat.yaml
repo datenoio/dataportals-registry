@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Scientific data repository
 content_types:
@@ -56,3 +56,17 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00011122
+endpoints:
+- type: oaipmh20
+  url: https://dare.iiasa.ac.at/cgi/oai2?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://dare.iiasa.ac.at/cgi/latest_tool?output=RSS2
+  version: '2.0'
+- type: eprints:rest
+  url: https://dare.iiasa.ac.at/rest/eprint
+- type: eprints:datasets
+  url: https://dare.iiasa.ac.at/cgi/exportview/type/dataset/JSON/dataset.js
+- type: opensearch
+  url: https://dare.iiasa.ac.at/cgi/opensearchdescription
+  version: '1.1'

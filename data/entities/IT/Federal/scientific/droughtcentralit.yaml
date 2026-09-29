@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -12,7 +12,7 @@ coverage:
       name: Italy
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Drought monitoring and climate-data portal of the CNR Institute for BioEconomy,
   publishing drought indicators and related environmental datasets for Italy.
@@ -38,8 +38,8 @@ owner:
   name: CNR Institute for BioEconomy
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - scientific
@@ -58,3 +58,6 @@ topics:
   name: Climatology / Meteorology / Atmosphere
   type: iso19115
 uid: cdi00031867
+endpoints:
+- type: sitemap
+  url: https://droughtcentral.it/sitemap.xml

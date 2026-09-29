@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: OpenEarth GeoServer publishing NWDM water-measurement layers for BODC
+  parameter groups P01 and P35, including fixed-location and gridded coverages.
+id: nwdmopeneartheu
+langs:
+- id: EN
+  name: English
+link: https://nwdm.openearth.eu/geoserver
+name: OpenEarth NWDM GeoServer
+owner:
+  link: https://nwdm.openearth.eu/geoserver
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: OpenEarth
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- academic
+- european-union
+- geospatial
+- location
+- water
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+endpoints:
+- type: wms111
+  url: https://nwdm.openearth.eu/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://nwdm.openearth.eu/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://nwdm.openearth.eu/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://nwdm.openearth.eu/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://nwdm.openearth.eu/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+uid: cdi00009561

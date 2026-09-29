@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LU
+      name: Luxembourg
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ArcGIS Server REST services directory of SIGcom, the municipal GIS platform
+  operated by LSC360 for Luxembourg communes. The public Hosted folder lists commune
+  boundaries, flood-zone caches, and Natura 2000 layers. Most other folders require
+  a token.
+id: portalsigcomlu
+langs:
+- id: FR
+  name: French
+link: https://portal.sigcom.lu/server/rest/services
+name: SIGcom
+owner:
+  link: https://lsc360.lu
+  location:
+    country:
+      id: LU
+      name: Luxembourg
+    level: 20
+  name: LSC360
+  type: Business
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- boundaries
+- commercial
+- geospatial
+- luxembourg
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+endpoints:
+- type: arcgis:rest:info
+  url: https://portal.sigcom.lu/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://portal.sigcom.lu/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://portal.sigcom.lu/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://portal.sigcom.lu/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://portal.sigcom.lu/server/rest/services?f=geositemap
+uid: cdi00009399

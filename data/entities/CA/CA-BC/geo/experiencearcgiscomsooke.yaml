@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: British Columbia
 description: District of Sooke public ArcGIS Experience Builder land information map
   for properties, zoning, and related municipal layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/f766259fe4c045d3aeba472a58de5185/data?f=json
 id: experiencearcgiscomsooke
 langs:
 - id: EN

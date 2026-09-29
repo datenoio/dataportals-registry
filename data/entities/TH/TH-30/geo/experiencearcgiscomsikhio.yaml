@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: TH-30
       name: Nakhon Ratchasima
 description: Public Geo City Data Platform of Sikhio Town Municipality on ArcGIS Experience Builder.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/9968a0bb68d344a7bdde5d76b8f3605a/data?f=json
 id: experiencearcgiscomsikhio
 langs:
 - id: TH

@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: ArcGIS Server REST catalog of the Hellenic Statistical Authority (ELSTAT),
+  with public census, historical census, and atlas map services.
+id: webgissrvstatisticsgr
+langs:
+- id: EL
+  name: Greek
+link: https://webgissrv.statistics.gr/server/rest/services
+name: ELSTAT Geospatial REST Services
+owner:
+  link: https://www.statistics.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: Hellenic Statistical Authority
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- greece
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+endpoints:
+- type: arcgis:rest:info
+  url: https://webgissrv.statistics.gr/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://webgissrv.statistics.gr/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://webgissrv.statistics.gr/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://webgissrv.statistics.gr/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://webgissrv.statistics.gr/server/rest/services?f=geositemap
+uid: cdi00009001

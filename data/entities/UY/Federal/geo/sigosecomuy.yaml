@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: ArcGIS Server REST services directory of Obras Sanitarias del Estado.
+  Publishes water-supply plants, localities, sanitation networks, parcels, telemetry,
+  and departmental boundaries.
+id: sigosecomuy
+langs:
+- id: ES
+  name: Spanish
+link: https://sig.ose.com.uy/arcgis/rest/services
+name: OSE ArcGIS REST Services
+owner:
+  link: https://www.ose.com.uy
+  location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 20
+  name: Obras Sanitarias del Estado
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- ArcGIS
+- REST
+- Uruguay
+- OSE
+- water
+- sanitation
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://sig.ose.com.uy/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.ose.com.uy/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig.ose.com.uy/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://sig.ose.com.uy/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sig.ose.com.uy/arcgis/rest/services?f=geositemap
+uid: cdi00009296

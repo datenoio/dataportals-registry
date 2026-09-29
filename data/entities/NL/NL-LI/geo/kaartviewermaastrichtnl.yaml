@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Limburg
 description: Public KaartViewer geoportal of Gemeente Maastricht with thematic municipal
   maps.
+endpoints:
+- type: kaartviewer:menu
+  url: https://kaartviewer.maastricht.nl/admin/rest/kaartviewerapi/menu
 id: kaartviewermaastrichtnl
 langs:
 - id: NL

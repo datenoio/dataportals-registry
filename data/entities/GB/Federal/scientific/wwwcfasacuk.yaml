@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,10 +14,11 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: The Cognitive Function and Ageing Studies (CFAS) are population based studies
-  of individuals aged 65 years and over living in the community, including institutions, which
-  is the only large multi-centred population-based study in the UK that has reached sufficient
-  maturity. There are three main studies within the CFAS group.
+description: The Cognitive Function and Ageing Studies (CFAS) are population based
+  studies of individuals aged 65 years and over living in the community, including
+  institutions, which is the only large multi-centred population-based study in the
+  UK that has reached sufficient maturity. There are three main studies within the
+  CFAS group.
 id: wwwcfasacuk
 identifiers:
 - id: openaire
@@ -38,8 +39,8 @@ owner:
   name: Medical Research Council
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -65,3 +66,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00030945
+endpoints:
+- type: rss
+  url: https://www.phpc.cam.ac.uk/rss.xml

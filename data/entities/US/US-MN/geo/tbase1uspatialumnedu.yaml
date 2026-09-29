@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MN
+      name: Minnesota
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ArcGIS Server for University of Minnesota U-Spatial. Public services
+  include historical plat mosaics.
+id: tbase1uspatialumnedu
+langs:
+- id: EN
+  name: English
+link: https://tbase1.uspatial.umn.edu/arcgis/rest/services
+name: University of Minnesota U-Spatial GIS Server
+owner:
+  link: https://uspatial.umn.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MN
+      name: Minnesota
+  name: University of Minnesota
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- geospatial
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00009117
+endpoints:
+- type: arcgis:rest:info
+  url: https://tbase1.uspatial.umn.edu/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://tbase1.uspatial.umn.edu/arcgis/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://tbase1.uspatial.umn.edu/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://tbase1.uspatial.umn.edu/arcgis/rest/services?f=geositemap

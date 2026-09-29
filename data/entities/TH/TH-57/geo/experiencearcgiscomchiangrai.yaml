@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Chiang Rai
 description: Public City Data Learning Platform geoportal of Chiang Rai City Municipality on ArcGIS
   Experience Builder.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/885ad03326fa43d6a37b7043cf9563b0/data?f=json
 id: experiencearcgiscomchiangrai
 langs:
 - id: TH

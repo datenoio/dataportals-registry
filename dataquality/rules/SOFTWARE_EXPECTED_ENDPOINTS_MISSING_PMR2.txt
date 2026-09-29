@@ -1,0 +1,35 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PMR2
+================================================================================
+Generated: 2026-09-29 11:21:05
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PMR2
+Priority: MEDIUM
+Total Issues Found: 2
+
+Rule: Identifies records using software.id='pmr2' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+NZ: 2 issues
+
+=== SUMMARY BY RECORD ===
+
+modelsphysiomeprojectorg: 1 issue
+modelscellmlorg: 1 issue
+
+=== ISSUES ===
+
+File: NZ/NZ-AUK/scientific/modelsphysiomeprojectorg.yaml
+Record ID: modelsphysiomeprojectorg
+Country: NZ
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PMR2
+Field: endpoints
+Current Value: {"software_id": "pmr2", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='pmr2' is marked as API-capable in software definitions
+
+File: NZ/NZ-AUK/scientific/modelscellmlorg.yaml
+Record ID: modelscellmlorg
+Country: NZ
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PMR2
+Field: endpoints
+Current Value: {"software_id": "pmr2", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='pmr2' is marked as API-capable in software definitions

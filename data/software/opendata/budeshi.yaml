@@ -1,0 +1,63 @@
+category: Open data portal
+subtype: managed_saas_service
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'No'
+id: budeshi
+name: Budeshi
+website: https://www.budeshi.ng
+description: Budeshi is an open contracting data platform by the Public and
+  Private Development Centre (PPDC, Nigeria). It hosts government procurement
+  portals that publish projects, tenders, and awards as Open Contracting Data
+  Standard (OCDS) releases, with documented HTTP APIs (e.g. /api and /ocds-api
+  on the Kaduna State deployment). Installations carry a "Powered By Budeshi"
+  credit. Use this id for Budeshi-hosted portals; unrelated one-off OCDS portals
+  without the credit stay custom.
+owner:
+  name: Public and Private Development Centre
+  location:
+    country:
+      id: NG
+      name: Nigeria
+documentation_url: https://www.budeshi.ng/
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Not applicable
+  supports_licenses: 'No'
+storage_type: Both
+type: Software
+export_formats:
+- JSON
+- CSV
+- XLSX
+capabilities:
+- Open contracting (OCDS) releases
+- REST API
+- Procurement record search
+last_updated: '2026-09-28T00:00:00Z'

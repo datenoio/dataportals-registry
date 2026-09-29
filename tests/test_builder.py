@@ -403,6 +403,13 @@ class TestSoftwareSubtypeValidation:
         issues = validate_software_profile(record)
         assert any(i["issue_type"] == "SOFTWARE_SUBTYPE_CATEGORY_MISMATCH" for i in issues)
 
+    def test_statistical_production_subtypes_are_distinct_from_catalogs(self):
+        record = self._base_software()
+        record.update(category="Statistical production software", subtype="statistical_processing_system")
+        assert not any(i["issue_type"].startswith("SOFTWARE_SUBTYPE") for i in validate_software_profile(record))
+        record["subtype"] = "microdata_catalog_platform"
+        assert any(i["issue_type"] == "SOFTWARE_SUBTYPE_CATEGORY_MISMATCH" for i in validate_software_profile(record))
+
     def test_coverage_includes_oss_portal_for_version_and_repo(self):
         record = self._base_software()
         assert _software_counts_toward_coverage(record, "version")

@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: UA-56
+      name: Rivnenska oblast
+description: ArcGIS Server of Varash urban territorial community publishing the community
+  boundary, settlement boundaries, archaeological sites, and public internet access
+  points. Land-cadastre and emergency folders require a token.
+id: gisvarashmtggovua
+langs:
+- id: UK
+  name: Ukrainian
+link: https://gis.varashmtg.gov.ua/server/rest/services
+name: Геопортал Вараської міської територіальної громади
+owner:
+  link: https://varashmtg.gov.ua
+  location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 30
+    subregion:
+      id: UA-56
+      name: Rivnenska oblast
+  name: Varash City Council
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- ArcGIS
+- geospatial
+- Ukraine
+- Varash
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:portals:self
+  url: https://gis.varashmtg.gov.ua/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://gis.varashmtg.gov.ua/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.varashmtg.gov.ua/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.varashmtg.gov.ua/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.varashmtg.gov.ua/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.varashmtg.gov.ua/server/rest/services?f=geositemap
+uid: cdi00009451

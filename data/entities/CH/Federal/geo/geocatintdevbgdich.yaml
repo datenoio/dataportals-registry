@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -17,7 +17,14 @@ coverage:
       name: Western Europe
 description: Integration/test GeoNetwork instance of geocat.ch (geocat-int.dev.bgdi.ch),
   not the production Swiss geographic metadata catalogue.
-endpoints: []
+endpoints:
+- type: csw202
+  url: https://geocat-int.dev.bgdi.ch/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:selections
+  url: https://geocat-int.dev.bgdi.ch/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://geocat-int.dev.bgdi.ch/geonetwork/srv/api/site
 id: geocatintdevbgdich
 langs:
 - id: DE

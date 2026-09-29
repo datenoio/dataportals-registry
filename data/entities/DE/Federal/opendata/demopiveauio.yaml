@@ -18,7 +18,7 @@ description: Official live demo of the Piveau metadata catalogue platform, opera
   by Fraunhofer FOKUS. Provides a basic public deployment of Piveau hub, search, repository,
   and SPARQL APIs for testing DCAT-AP catalogs.
 endpoints:
-- type: rest
+- type: piveau:search
   url: https://demo.piveau.io/api/hub/search/search
 - type: rest
   url: https://demo.piveau.io/api/hub/repo/catalogues
@@ -31,7 +31,7 @@ endpoints:
   url: https://demo.piveau.io/sparql
 - type: docs
   url: https://demo.piveau.io/api/hub/search/
-- type: rest
+- type: piveau:search
   url: https://demo.piveau.io/api/hub/search/search?q=&filter=dataset
 id: demopiveauio
 langs:

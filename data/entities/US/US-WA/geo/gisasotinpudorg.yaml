@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WA
+      name: Washington
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Public utility maps for Asotin County Public Utility District, including
+  2020 and 2025 imagery and the all-purpose utility map.
+id: gisasotinpudorg
+langs:
+- id: EN
+  name: English
+link: https://gis.asotinpud.org/server/rest/services
+name: Asotin County PUD ArcGIS Server
+owner:
+  link: https://www.asotinpud.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WA
+      name: Washington
+  name: Asotin County Public Utility District
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- imagery
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00008912
+properties:
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.asotinpud.org/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.asotinpud.org/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.asotinpud.org/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.asotinpud.org/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.asotinpud.org/server/rest/services?f=geositemap

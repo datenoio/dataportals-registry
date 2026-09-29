@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Nakhon Sawan
 description: Public City Data Learning Platform geoportal of Nakhon Sawan on ArcGIS Experience
   Builder.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/cb48686247f04077b99ac50129e95502/data?f=json
 id: experiencearcgiscomnakhonsawan
 langs:
 - id: TH

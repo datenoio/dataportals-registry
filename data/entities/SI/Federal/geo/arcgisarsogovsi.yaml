@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Public ArcGIS Server services directory of the Slovenian Environment
+  Agency, including the environmental atlas, orthophotos, topographic maps, and water-quality
+  folders. Distinct from the GeoServer catalog on the same host.
+id: arcgisarsogovsi
+langs:
+- id: SL
+  name: Slovenian
+link: https://gis.arso.gov.si/arcgis/rest/services
+name: Slovenian Environment Agency (ARSO) ArcGIS REST services
+owner:
+  link: https://www.arso.gov.si
+  location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 20
+  name: Slovenian Environment Agency (ARSO)
+  type: Central government
+properties:
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- environment
+- geospatial
+- government
+- slovenia
+- water
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00009288
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.arso.gov.si/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.arso.gov.si/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.arso.gov.si/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.arso.gov.si/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.arso.gov.si/arcgis/rest/services?f=geositemap

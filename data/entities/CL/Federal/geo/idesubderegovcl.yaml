@@ -16,8 +16,10 @@ coverage:
       id: '005'
       name: South America
 description: Geospatial data infrastructure of Chile's Subsecretaría de Desarrollo
-  Regional y Administrativo (SUBDERE). Publishes map viewers and downloadable territorial
-  layers on regional governments, municipalities, local offices, and SUBDERE investment.
+  Regional y Administrativo (SUBDERE). The geospatial node is Geonodo (catalog and
+  GeoServer on geonodo.ide.subdere.gov.cl). The public homepage is a WordPress site.
+  It publishes map viewers and downloadable territorial layers on regional governments,
+  municipalities, local offices, and SUBDERE investment.
 endpoints:
 - type: rest
   url: https://ide.subdere.gov.cl/wp-json/
@@ -70,14 +72,15 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: geonodo
+  name: Geonodo
 status: active
 tags:
 - geospatial
 - government
 - chile
 - SUBDERE
+- Geonodo
 - geoportal
 - has_api
 topics:

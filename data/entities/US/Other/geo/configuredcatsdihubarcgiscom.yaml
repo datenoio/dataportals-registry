@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: "Configure DCAT is a geoportal published by SDI for United States, using ArcGIS Hub. It is available at configure-dcat-sdi.hub.arcgis.com. Catalog id configuredcatsdihubarcgiscom."
+description: Configure DCAT is a geoportal published by SDI for United States, using
+  ArcGIS Hub. It is available at configure-dcat-sdi.hub.arcgis.com. Catalog id configuredcatsdihubarcgiscom.
 id: configuredcatsdihubarcgiscom
 langs:
 - id: EN
@@ -57,3 +58,6 @@ topics:
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00003340
+endpoints:
+- type: arcgishubapi
+  url: https://configure-dcat-sdi.hub.arcgis.com/api/v3/datasets

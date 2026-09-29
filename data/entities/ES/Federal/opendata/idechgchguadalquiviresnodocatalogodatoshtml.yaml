@@ -17,22 +17,6 @@ coverage:
 description: Infraestructura de Datos Espaciales de la Confederación Hidrográfica
   del Guadalquivir
 endpoints:
-- type: ckan
-  url: https://idechg.chguadalquivir.es/api/3
-- type: ckan
-  url: https://idechg.chguadalquivir.es/api/3/action/package_list
-- type: opendatasoftapi
-  url: https://idechg.chguadalquivir.es/api/v2/catalog
-- type: socrata
-  url: https://idechg.chguadalquivir.es/api/views
-- type: dcatap201
-  url: https://idechg.chguadalquivir.es/api/feed/dcat
-- type: dcat
-  url: https://idechg.chguadalquivir.es/catalog.xml
-- type: dcatap
-  url: https://idechg.chguadalquivir.es/catalog.rdf
-- type: dcat:jsonld
-  url: https://idechg.chguadalquivir.es/catalog.jsonld
 - type: sitemap
   url: https://idechg.chguadalquivir.es/sitemap.xml
 id: idechgchguadalquiviresnodocatalogodatoshtml
@@ -49,8 +33,8 @@ owner:
   type: Central government
   link: https://chguadalquivir.es
 software:
-  id: custom
-  name: Custom software
+  id: liferay
+  name: Liferay
 status: active
 tags:
 - government

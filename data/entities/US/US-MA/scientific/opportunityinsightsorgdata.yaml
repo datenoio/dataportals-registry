@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -38,8 +38,8 @@ owner:
   name: Opportunity Insights, Harvard University
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - economic mobility
@@ -61,3 +61,6 @@ uid: cdi00008492
 properties:
   has_doi: false
   is_national: false
+endpoints:
+- type: sitemap
+  url: https://opportunityinsights.org/sitemap.xml

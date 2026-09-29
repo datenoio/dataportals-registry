@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Cundinamarca
 description: Public geographic viewer of Soacha's Plan de Ordenamiento Territorial
   (Acuerdo 046 de 2000) on ArcGIS Experience Builder.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/eb67ba907cfb462e85e66c9d23d500c8/data?f=json
 id: experiencearcgiscomsoacha
 langs:
 - id: ES

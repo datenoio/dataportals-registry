@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Cundinamarca
 description: Municipal geoportal of Anapoima, Cundinamarca, on ArcGIS Experience Builder,
   for urban-license management and control.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/94f2058ea669457f9b93979d1892d174/data?f=json
 id: experiencearcgiscomanapoima
 langs:
 - id: ES

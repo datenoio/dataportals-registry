@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Iuav ArcGIS Server on port 6443 with public Cortina d'Ampezzo path and
+  network services. geoservizi2025.iuav.it serves the same directory.
+id: geoserviziiuavit
+langs:
+- id: IT
+  name: Italian
+link: https://geoservizi.iuav.it:6443/arcgis/rest/services
+name: ArcGIS Server Università Iuav di Venezia
+owner:
+  link: https://www.iuav.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Università Iuav di Venezia
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- geospatial
+- italy
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00008966
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://geoservizi.iuav.it:6443/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoservizi.iuav.it:6443/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoservizi.iuav.it:6443/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoservizi.iuav.it:6443/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoservizi.iuav.it:6443/arcgis/rest/services?f=geositemap

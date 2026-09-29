@@ -1,33 +1,26 @@
 DATA QUALITY REPORT - COUNTRY: CO
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Country Code: CO
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 2
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
+[MISSING_OWNER_LINK]
 Count: 1
-Priority: MEDIUM
+Priority: LOW
 
-File: LatinAmerica/indicators/observatorioalianzapacificocepalorg.yaml
-Record ID: observatorioalianzapacificocepalorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
-Field: endpoints
-Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+File: CO/CO-VAC/geo/geoservervalleavanzacom.yaml
+Record ID: geoservervalleavanzacom
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS]
-Count: 2
+Count: 1
 Priority: MEDIUM
-
-File: CO/CO-DC/indicators/oabambientebogotagovco.yaml
-Record ID: oabambientebogotagovco
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
-Field: endpoints
-Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
 File: CO/CO-VAC/indicators/indicadorescaligovco.yaml
 Record ID: indicadorescaligovco
@@ -39,5 +32,5 @@ Suggested Action: Add at least one endpoint because software.id='wordpress' is m
 
 === SUMMARY BY ISSUE TYPE ===
 
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS: 2 issues
+MISSING_OWNER_LINK: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS: 1 issue

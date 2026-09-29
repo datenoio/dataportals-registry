@@ -21,7 +21,7 @@ The registry records **catalogs** (portals, geoportals, repositories, and simila
 | [Open data portals](discovery-opendata.md) | CKAN, DKAN, EKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye, Piveau, Our Open Data, DataPress, ResourceContracts, RDF Online Repository, Guangxi, ODWeb, OpenGov |
 | [Geoportals](discovery-geoportals.md) | Overview; SDI stacks: [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md); viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md) (GISApp, SmartMap, SmartGIS, ISY Map, Avinet, MAP+, EnviMAP, PISO, GDi Visios, MapGuide, Zeljko GIS, SeaSketch, XY Maps, Hajk, Origo, myCarta, AddSpatial, KortInfo, …) |
 | [Scientific repositories](discovery-scientific.md) | Institutional IRs and CRIS (DSpace, Hyrax, Figshare, Pure, Converis, Omega-PSIR, Archipelago, Redivis, DABAR, OpenScience.si, …); domain repos: [discovery-scientific-domain.md](discovery-scientific-domain.md) |
-| [Metadata catalogs](discovery-metadata.md) | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
+| [Metadata catalogs](discovery-metadata.md) | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser, CBD Clearing-House, WMO OSCAR |
 | [Indicators and microdata](discovery-indicators.md) | PxWeb, PxStat, DGBAS Web, OpenSDG, Goal Tracker, IMF NSDP, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, FENIX, TabNet, SparkMap, eDatos, Cancer-Rates.info, Conduent HCI, Virtual LMI, DataWarehousePro, Beyond 20/20, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS, StatPlanet |
 | [Search, ML, API, marketplaces](discovery-other.md) | Data search engines (Idra, OpenAIRE), ML catalogs, API directories, data marketplaces |
 
@@ -248,7 +248,7 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | Knoema | `*.knoema.com` or branded hub | Portal home only — not every dataset URL |
 | StatPlanet | title `StatPlanet`, `data.csv` / StatPlanet Cloud | Public explorer home, not a single indicator URL |
 | SDMX-RI | `NSIWebService` / NSIStdV20Service | Public NSI/SDMX catalog |
-| GENESIS-Online | `/genesis/online` | Table catalog (POST-heavy API) |
+| GENESIS-Online | `genesis-online.css` or `gor-webapp`; `/genesis/online` or `/datenbank/online` | Table catalog (POST-heavy API) |
 | IBIS-PH | `/ibisph-view/`, IBIS-Q | Public indicator home |
 | eDatos | `/indicators/v1.0/indicators`, `*.edatos.io` | JSON-stat or public ODS UI |
 | Cancer-Rates.info | `cancer-rates.com/{code}/` | Public query UI, not login |

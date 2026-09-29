@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-72
+      name: Campania
+description: Municipal ArcGIS Server of Naples with a public historic-fabric map and
+  a large hosted set of acoustics and city layers.
+id: sitcomunenapoliit
+langs:
+- id: IT
+  name: Italian
+link: https://sit.comune.napoli.it/server/rest/services
+name: SIT Comune di Napoli
+owner:
+  link: https://www.comune.napoli.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-72
+      name: Campania
+  name: Comune di Napoli
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- italy
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00008977
+properties:
+  has_doi: false
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://sit.comune.napoli.it/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sit.comune.napoli.it/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sit.comune.napoli.it/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://sit.comune.napoli.it/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sit.comune.napoli.it/server/rest/services?f=geositemap

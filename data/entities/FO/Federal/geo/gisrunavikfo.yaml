@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FO
+      name: Faroe Islands
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: ArcGIS Server catalog of Runavíkar kommuna with municipal layers for
+  building permits, street lighting, water, cemeteries, and local place names.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.runavik.fo/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.runavik.fo/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.runavik.fo/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.runavik.fo/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.runavik.fo/arcgis/rest/services?f=geositemap
+id: gisrunavikfo
+langs:
+- id: FO
+  name: Faroese
+- id: EN
+  name: English
+link: https://gis.runavik.fo/arcgis/rest/services
+name: Runavíkar kommuna GIS
+owner:
+  link: https://runavik.fo/
+  location:
+    country:
+      id: FO
+      name: Faroe Islands
+    level: 20
+  name: Runavíkar kommuna
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- government
+- has_api
+- GIS
+- municipality
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00009330

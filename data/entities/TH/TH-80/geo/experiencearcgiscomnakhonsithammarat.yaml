@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Nakhon Si Thammarat
 description: Public spatial database geoportal of Nakhon Si Thammarat City Municipality on ArcGIS
   Experience Builder.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/a1d383e93f43405c9ddb3f96391e033c/data?f=json
 id: experiencearcgiscomnakhonsithammarat
 langs:
 - id: TH

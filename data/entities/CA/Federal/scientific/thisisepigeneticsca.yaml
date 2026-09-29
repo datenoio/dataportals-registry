@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -15,9 +15,9 @@ coverage:
       id: '021'
       name: Northern America
 description: CEEHRC represents a multi-stage funding commitment by the Canadian Institutes
-  of Health Research (CIHR) and multiple Canadian and international partners. The overall
-  aim is to position Canada at the forefront of international efforts to translate new discoveries
-  in the field of epigenetics into improved human health.
+  of Health Research (CIHR) and multiple Canadian and international partners. The
+  overall aim is to position Canada at the forefront of international efforts to translate
+  new discoveries in the field of epigenetics into improved human health.
 id: thisisepigeneticsca
 identifiers:
 - id: openaire
@@ -40,8 +40,8 @@ owner:
   name: The Canadian Epigenetics, Environment and Health Research Consortium
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -70,3 +70,6 @@ topics:
   name: Environment
   type: iso19115
 uid: cdi00028820
+endpoints:
+- type: sitemap
+  url: https://thisisepigenetics.ca/sitemap.xml

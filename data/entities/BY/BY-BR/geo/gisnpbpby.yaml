@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BY
+      name: Belarus
+    level: 30
+    subregion:
+      id: BY-BR
+      name: Bresckaja voblasć
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: ArcGIS Server of Belovezhskaya Pushcha National Park, publishing spatial
+  layers for forests, wetlands, waters, soils, and related park themes.
+id: gisnpbpby
+langs:
+- id: RU
+  name: Russian
+- id: BE
+  name: Belarusian
+link: https://gis.npbp.by/arcgis/rest/services
+name: Belovezhskaya Pushcha National Park ArcGIS Server
+owner:
+  link: https://www.npbp.by
+  location:
+    country:
+      id: BY
+      name: Belarus
+    level: 30
+    subregion:
+      id: BY-BR
+      name: Bresckaja voblasć
+  name: Belovezhskaya Pushcha National Park
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- belarus
+- geospatial
+- government
+- water
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.npbp.by/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.npbp.by/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.npbp.by/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.npbp.by/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.npbp.by/arcgis/rest/services?f=geositemap
+uid: cdi00009312

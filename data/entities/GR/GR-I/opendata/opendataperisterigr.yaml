@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,7 +12,7 @@ coverage:
       name: Greece
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: GR-I
@@ -38,8 +38,8 @@ owner:
   name: Municipality of Peristeri
   type: Local government
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - open data
@@ -48,4 +48,13 @@ topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: cdi00007670
+endpoints:
+- type: rest
+  url: https://opendata.peristeri.gr/wp-json/
+- type: rest:posts
+  url: https://opendata.peristeri.gr/wp-json/wp/v2/posts
+  version: '2'

@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-HDF
+      name: Hauts-de-France
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: CAUE du Nord architecture and landscape drawing services for the Nord
+  department.
+id: sig59spassorg
+langs:
+- id: FR
+  name: French
+link: https://sig59.s-pass.org/arcgis/rest/services
+name: CAUE du Nord ArcGIS Server
+owner:
+  link: https://sig59.s-pass.org
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-HDF
+      name: Hauts-de-France
+  name: CAUE du Nord
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- france
+- geospatial
+- government
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00008844
+properties:
+  is_national: false
+endpoints:
+- type: arcgis:rest:info
+  url: https://sig59.s-pass.org/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig59.s-pass.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig59.s-pass.org/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://sig59.s-pass.org/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sig59.s-pass.org/arcgis/rest/services?f=geositemap

@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+- indicator
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-ZE
+      name: Zeeland
+description: Municipal indicator databank (Gemeente in Cijfers / Swing) for Reimerswaal,
+  with neighbourhood and municipal statistics.
+id: reimerswaalincijfersnl
+langs:
+- id: NL
+  name: Dutch
+link: https://reimerswaal.incijfers.nl
+name: Reimerswaal in Cijfers
+owner:
+  link: https://reimerswaal.incijfers.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-ZE
+      name: Zeeland
+  name: Gemeente Reimerswaal
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: swing
+  name: Swing
+status: active
+tags:
+- indicators
+- statistics
+- Swing
+- Netherlands
+- Reimerswaal
+- Gemeente in Cijfers
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+endpoints:
+- type: swing:databank
+  url: https://reimerswaal.incijfers.nl/databank
+uid: cdi00008737

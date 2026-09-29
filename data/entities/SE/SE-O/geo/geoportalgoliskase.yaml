@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    subregion:
+      id: SE-O
+      name: Västra Götalands län [SE-14]
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Public ArcGIS REST services of Göliska IT for Essunga, Götene, Grästorp,
+  Lidköping, Skara, and Vara.
+id: geoportalgoliskase
+langs:
+- id: SV
+  name: Swedish
+link: https://geoportal.goliska.se/arcgis/rest/services
+name: Göliska IT ArcGIS REST Services
+owner:
+  link: https://www.goliskait.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    subregion:
+      id: SE-O
+      name: Västra Götalands län [SE-14]
+  name: Göliska IT
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- sweden
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00008836
+endpoints:
+- type: arcgis:rest:info
+  url: https://geoportal.goliska.se/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoportal.goliska.se/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoportal.goliska.se/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoportal.goliska.se/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoportal.goliska.se/arcgis/rest/services?f=geositemap

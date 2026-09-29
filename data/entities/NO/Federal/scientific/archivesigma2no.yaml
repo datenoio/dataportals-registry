@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,9 +14,15 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: The NIRD Research Data Archive (RDA) is a long-term storage service for
-  research data developed by Sigma2/NRIS that supports Open Science by allowing researchers
-  to upload and manage datasets of any size or field.
+description: Public front end of the NIRD Research Data Archive. Dataset storage
+  and the CKAN API are on data.archive.sigma2.no, which is the same archive.
+endpoints:
+- type: ckan:package-search
+  url: https://data.archive.sigma2.no/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.archive.sigma2.no/api/3/action/package_list
+  version: '3'
 id: archivesigma2no
 identifiers:
 - id: openaire
@@ -37,8 +43,8 @@ owner:
   name: Norwegian research infrastructure services (NRIS)
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: ckan
+  name: CKAN
 status: active
 tags:
 - scientific

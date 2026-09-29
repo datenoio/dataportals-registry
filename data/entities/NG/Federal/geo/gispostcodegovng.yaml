@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Public ArcGIS Server 12.1 directory of Nigeria postal geography. The
+  Hosted/Map2 feature service publishes postal-district polygons (PD, 235 features)
+  and postal-code-area polygons (PCA, 10164 features) with state, local government
+  area, and locality attributes. The Utilities folder requires a token. The site root
+  is the IIS welcome page.
+id: gispostcodegovng
+langs:
+- id: EN
+  name: English
+link: https://gis.postcode.gov.ng/server/rest/services
+name: NIPOST Postcode GIS
+owner:
+  link: https://www.nipost.gov.ng
+  location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 20
+  name: Nigerian Postal Service
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- postcode
+- has_api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.postcode.gov.ng/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.postcode.gov.ng/server/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://gis.postcode.gov.ng/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.postcode.gov.ng/server/rest/services?f=geositemap
+uid: cdi00009370

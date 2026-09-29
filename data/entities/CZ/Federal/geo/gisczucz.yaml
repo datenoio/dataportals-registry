@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public ArcGIS Server 11.5 REST catalog of the Czech University of Life
+  Sciences (rooftop solar potential and fire-service districts). Soil, ministry, and
+  India folders require a token. The proxy host wkii-arcgis-pxy.czu.cz repeats this
+  directory.
+id: gisczucz
+langs:
+- id: CS
+  name: Czech
+link: https://gis.czu.cz/server/rest/services
+name: Czech University of Life Sciences ArcGIS Server
+owner:
+  link: https://www.czu.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+  name: Česká zemědělská univerzita v Praze
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- czech-republic
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.czu.cz/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.czu.cz/server/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://gis.czu.cz/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.czu.cz/server/rest/services?f=geositemap
+uid: cdi00009210

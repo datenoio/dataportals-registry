@@ -4,6 +4,19 @@ Find catalog installations that are **not yet in this registry**, then hand off 
 
 This is **not** the query workflow. To look up existing records, use [query.md](query.md). To list datasets *inside* a catalog, use [harvest.md](harvest.md).
 
+## Command card
+
+Run these commands in order. After each one, execute the stdout line that starts with `next:`. Stop when that line is `next: none`.
+
+1. `python scripts/hunt.py prior --target TARGET`
+2. `python scripts/hunt.py budget` when the next line says so
+3. `python scripts/hunt.py search fofa QUERY --dedupe` (or `search censys`)
+4. `python scripts/hunt.py probe CANDIDATES.jsonl --software SOFTWARE_ID`
+5. `python scripts/hunt.py ingest PROBED.jsonl`
+6. `python scripts/hunt.py log --kind KIND --target TARGET --added N`
+
+Do not write a FOFA client, an export-query heredoc, or an HTTP probe script for a step `hunt.py` covers. Validation for the hunt is `python scripts/builder.py validate-yaml --id ID` (ingest runs it). Do not run `pytest` or `python scripts/builder.py build` as part of the hunt. When the user did not name a target, start with `python scripts/hunt.py next`.
+
 ## Goal
 
 Produce a short list of verified candidate URLs with:
@@ -142,6 +155,7 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `{org}.opengov.com` /transparency | `opengov` | Open data portal |
 | `/backend/api/catalog/` DCAT-AP_IT / “Powered by ACTAINFO” | `opendataente` | Open data portal |
 | Title `DataPortal.AI` + `/lmap/lmap-core/`, or `/sites/all/modules/spodata/`, or `themes/statportal` / `spod_bootstrap` | `dataportalai` | Open data portal |
+| `theme-fontsize` + `data-maps`, or `fem.centurion.id/remoteEntry.js` / `/femc/remoteEntry.js` (`var Charts`) | `centurion` | Open data portal |
 | `/opendata/set/lkod` or lkod.cz catalog | `lkod` | Open data portal |
 | `/srv/eng/csw` or `/srv/api` | `geonetwork` | Geoportal |
 | Title “Geoportal Palapa” / `/main/` or `/gspalapa/` | `palapa` | Geoportal |
@@ -170,8 +184,8 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | `terristory.fr/{region}` TerriSTORY hub | `terristory` | Indicators catalog |
 | `ihk-fachkraeftemonitor.de/{land}/` | `ihkfachkraeftemonitor` | Indicators catalog |
 | `/Informationsportal/` DUVA (KOSIS-Gemeinschaft) | `duva` | Indicators catalog |
-| `GC_loadCss.php` / `/geoclipair/` Géoclip Air | `geoclip` | Indicators catalog |
-| Title InstantAtlas™ / `ia-min.js` | `instantatlas` | Indicators catalog |
+| `window.GCO5` / `GC_loadCss.php` Géoclip Air | `geoclip` | Indicators catalog |
+| Title InstantAtlas™ / `ia-min.js` or `ia-max.js` / “Powered By InstantAtlas” | `instantatlas` | Indicators catalog |
 | MATS-Datenportal / “Modernes Analyse Tool Statistik” | `mats` | Indicators catalog |
 | `*.ifinmon.ru` / iminfin.ru iMonitoring Open Budget | `imonitoring` | Indicators catalog |
 | `/jaxi/Tabla.htm` `/jaxiT3/` / `iaeaxi` / `*-jaxi` menu.do | `jaxi` | Indicators catalog |
@@ -307,12 +321,15 @@ Do not paste long GET recipes here — open the index row, then the discovery he
 | Cologne CRC `/site/index.php` helper.js | `tr32db` | Scientific data repository |
 | `/prod/v1/api/v1/info` NOMAD Oasis | `nomad` | Scientific data repository |
 | InterMine `/begin.do` / `/service/version` | `intermine` | Scientific data repository |
+| Footer `Powered by Bottle and CAMD-Web` | `camdweb` | Scientific data repository |
+| `/services/receptorlist/` plus GPCRdb chrome | `protwis` | Scientific data repository |
 | `/gringlobal/` accession search | `gringlobal` | Scientific data repository |
 | `{project}.birdmap.africa` pentad atlas | `birdmap` | Scientific data repository |
 | `{bank}.talkbank.org` CHAT corpus browser | `talkbank` | Scientific data repository |
 | `/do/{uuid}` + strawberryfield / “indexed Digital Objects” | `archipelago` | Scientific data repository |
 | `{org}.redivis.com` / OpenAPI titled Redivis | `redivis` | Scientific data repository |
 | PlutoF workbench (`api.plutof.ut.ee`) | `plutof` | Scientific data repository |
+| SARV `/api/v1/public/datasets/` or eMaapõu / SARV·DOI | `sarv` | Scientific data repository |
 | MycoCosm / Phytozome / JGI Genome Portal | `jgi` | Scientific data repository |
 | cBioPortal `/api/info` `portalVersion` | `cbioportal` | Scientific data repository |
 | ESA TAP `/tap/capabilities` | `esasciencearchive` | Scientific data repository |
@@ -352,6 +369,8 @@ See [apidetect.md](../apidetect.md). Do not run `apidetect_urlmaps_draft.py` as 
 - Marketplace and demo tenants (`giscloud` `mapportal` / `crowdsource-demo`)
 
 ## After a valid find
+
+When `probe` has written a JSONL file, run `python scripts/hunt.py ingest` and follow its `next:` line. The steps below are the same work for one URL the user already named.
 
 1. `python scripts/builder.py add-single URL --scheduled` for one find, or `python scripts/builder.py add-batch manifest.jsonl` for several (manifest rows carry `url`, `name`, `software`, `catalog_type`, `country`, `subregion`, `owner_name`, `owner_type`, `langs`, `is_national`, `id`; add-batch dedupes, validates, and assigns UIDs itself). Use `--subregion` for regional/local owners and `--id` for path-based tenants.
 2. `python scripts/builder.py assign` (skip after `add-batch`)

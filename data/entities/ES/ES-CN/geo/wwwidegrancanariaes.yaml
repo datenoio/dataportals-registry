@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -43,8 +43,8 @@ properties:
   has_doi: false
   is_national: false
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - geoportal
@@ -62,3 +62,6 @@ topics:
   name: Boundaries
   type: iso19115
 uid: cdi99996557
+endpoints:
+- type: sitemap
+  url: https://www.idegrancanaria.es/sitemap.xml

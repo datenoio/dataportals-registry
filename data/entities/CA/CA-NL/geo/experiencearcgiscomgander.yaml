@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Newfoundland and Labrador
 description: Town of Gander public GIS map linked from the municipal website for local
   geospatial layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/d5dedd13d8314050adfaf9f5c6477d87/data?f=json
 id: experiencearcgiscomgander
 langs:
 - id: EN

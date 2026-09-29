@@ -45,8 +45,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: ckan
+  name: CKAN
 status: active
 tags:
 - government
@@ -61,5 +61,11 @@ topics:
   type: eudatatheme
 uid: cdi00020181
 endpoints:
+- type: ckan
+  url: https://liityntakatalogi.suomi.fi/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://liityntakatalogi.suomi.fi/api/3/action/package_search
+  version: '3'
 - type: sitemap
   url: https://liityntakatalogi.suomi.fi/sitemap.xml

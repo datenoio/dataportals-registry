@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    subregion:
+      id: RU-STA
+      name: Stavropol'skij kraj
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public ArcGIS Server REST directory of the Stavropol Plague Control Research
+  Institute, with mosquito surveillance map and feature services.
+id: gissnipchiru
+langs:
+- id: RU
+  name: Russian
+link: https://gis.snipchi.ru/arcgis/rest/services
+name: Stavropol Plague Control Research Institute ArcGIS Server
+owner:
+  link: https://www.snipchi.ru
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    subregion:
+      id: RU-STA
+      name: Stavropol'skij kraj
+  name: Stavropol Plague Control Research Institute
+  type: Academy
+properties:
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- geospatial
+- russian-federation
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.snipchi.ru/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.snipchi.ru/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.snipchi.ru/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.snipchi.ru/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.snipchi.ru/arcgis/rest/services?f=geositemap
+uid: cdi00008812

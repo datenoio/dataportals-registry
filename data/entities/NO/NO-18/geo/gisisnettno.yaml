@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: NO-18
+      name: Nordland
+description: Public ArcGIS REST services for ongoing power outages and planned disconnections,
+  hosted by Salten Kraftsamband.
+id: gisisnettno
+langs:
+- id: 'NO'
+  name: Norwegian
+link: https://gis.isnett.no/arcgis/rest/services
+name: Salten Kraftsamband outage map services
+owner:
+  link: https://www.sks.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 30
+    subregion:
+      id: NO-18
+      name: Nordland
+  name: Salten Kraftsamband
+  type: Business
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- commercial
+- geospatial
+- norway
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.isnett.no/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.isnett.no/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.isnett.no/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.isnett.no/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.isnett.no/arcgis/rest/services?f=geositemap
+uid: cdi00008842

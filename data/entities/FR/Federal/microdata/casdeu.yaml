@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Microdata catalog
 content_types:
 - microdata
@@ -32,8 +32,8 @@ owner:
   name: Secure Data Access Centre
   type: Central government
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - administrative data
@@ -50,3 +50,6 @@ uid: cdi00008442
 properties:
   is_national: false
   has_doi: false
+endpoints:
+- type: sitemap
+  url: https://www.casd.eu/sitemap.xml

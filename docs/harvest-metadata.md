@@ -58,7 +58,7 @@ GET https://host/ws/public/sdmxapi/rest
 GET https://host/ws/rest
 ```
 
-List **dataflows** as the harvest grain for “datasets”. Harvest DSDs/codelists only when the job is a structure crawl. Do not confuse this with PxWeb/.Stat **observation** APIs ([harvest-indicators.md](harvest-indicators.md)).
+List **dataflows** as the harvest grain for “datasets”. Harvest DSDs/codelists only when the job is a structure crawl. Do not confuse this with PxWeb/.Stat **observation** APIs ([harvest-indicators.md](harvest-indicators.md)) or with Fusion Data Browser series catalogs (`fusiondatabrowser`).
 
 **Keep:** Fusion Registry **dataflows**. **Drop:** codelists and DSDs unless harvesting structure.
 
@@ -94,9 +94,36 @@ GET https://cedar.metadatacenter.org
 
 **Keep:** published **metadata templates** and filled experiment metadata records. **Drop:** login, template-designer chrome, and the metadatacenter.org homepage.
 
+## CBD Clearing-House (`cbdchm`) {#cbdchm}
+
+Public records of the CBD clearing-house realms (CHM, ABSCH, BCH).
+
+```text
+GET https://chm.cbd.int/en/
+GET https://absch.cbd.int/en/
+GET https://bch.cbd.int/en/
+```
+
+The shared API is documented at [docs.cbddev.xyz](https://docs.cbddev.xyz/). Production calls go to `api.cbd.int`.
+
+**Keep:** published national records, certificates, decisions, and country profiles. **Drop:** login, draft submission workflows, and the developer documentation portal. One harvest scope per realm. Bioland national portals are not this software.
+
+## WMO OSCAR (`oscar`) {#oscar}
+
+Station, satellite, and instrument metadata. Read endpoints are public; writes require an account.
+
+```text
+GET https://oscar.wmo.int/surface/rest/api/search/station
+GET https://space.oscar.wmo.int/apidoc/
+```
+
+OSCAR/Surface search results are paged (`stationSearchResults`, `page`, `items`). OSCAR/Space record JSON is described in the API doc on that host.
+
+**Keep:** stations, satellites, instruments, and observation variables. **Drop:** user accounts, gap-analysis chrome, and the WMO Weather Radar Database (`wrd.mgm.gov.tr`), which is not OSCAR.
+
 ## DCAT without an FDP
 
-Many open-data sites expose `/catalog.xml`, `/data.json`, or DCAT-AP. That harvest belongs with [harvest-opendata.md](harvest-opendata.md) (`dcat:Dataset` only). Protocol details: [harvest-protocols.md](harvest-protocols.md#dcat). Use this page when `software.id` is `fairdatapoint`, `aristotlemdr`, `fusionregistry`, `mwmb`, `datahubproject`, or `cedar`.
+Many open-data sites expose `/catalog.xml`, `/data.json`, or DCAT-AP. That harvest belongs with [harvest-opendata.md](harvest-opendata.md) (`dcat:Dataset` only). Protocol details: [harvest-protocols.md](harvest-protocols.md#dcat). Use this page when `software.id` is `fairdatapoint`, `aristotlemdr`, `fusionregistry`, `mwmb`, `datahubproject`, `cedar`, `cbdchm`, or `oscar`.
 
 ## Related
 

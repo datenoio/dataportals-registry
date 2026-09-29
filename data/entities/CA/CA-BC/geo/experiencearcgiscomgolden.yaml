@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: British Columbia
 description: Town of Golden public ArcGIS Experience Builder interactive maps for
   properties and related municipal layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/da367d07ce3147c09fad971b5aa78ca1/data?f=json
 id: experiencearcgiscomgolden
 langs:
 - id: EN

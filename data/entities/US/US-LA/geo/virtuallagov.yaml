@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-LA
+      name: Louisiana
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Virtual Louisiana geospatial hub of the State of Louisiana.
+id: virtuallagov
+langs:
+- id: EN
+  name: English
+link: https://virtual.la.gov/
+name: Virtual Louisiana
+owner:
+  link: https://www.louisiana.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-LA
+      name: Louisiana
+  name: State of Louisiana
+  type: Regional government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00008712
+endpoints:
+- type: dcatus11
+  url: https://virtual.la.gov/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://virtual.la.gov/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://virtual.la.gov/api/search/v1
+- type: arcgishubapi
+  url: https://virtual.la.gov/api/v3/datasets
+- type: dcatus11
+  url: https://virtual.la.gov/data.json

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Noord-Holland
 description: Public KaartViewer geoportal of Gemeente Hilversum. Distinct from data.hilversum.nl
   OpenGDC and open.hilversum.nl ArcGIS Hub.
+endpoints:
+- type: kaartviewer:menu
+  url: https://geo.hilversum.nl/admin/rest/kaartviewerapi/menu
 id: geohilversumnl
 langs:
 - id: NL

@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 30
+    subregion:
+      id: CN-JS
+      name: Jiangsu Sheng
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: ArcGIS Server of crop remote-sensing and farmland layers operated by
+  the Shennong Smart Agriculture Research Institute in Nanjing.
+id: arcgisserversnfarmingcom
+langs:
+- id: ZH
+  name: Chinese
+link: https://arcgisserver.snfarming.com/server/rest/services
+name: Shennong Smart Agriculture ArcGIS Server
+owner:
+  link: http://www.snzhny.com/
+  location:
+    country:
+      id: CN
+      name: China
+    level: 30
+    subregion:
+      id: CN-JS
+      name: Jiangsu Sheng
+  name: Nanjing Shennong Smart Agriculture Research Institute
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- agriculture
+- china
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+uid: cdi00009283
+endpoints:
+- type: arcgis:rest:services
+  url: https://arcgisserver.snfarming.com/server/rest/services?f=pjson
+- type: arcgis:rest:info
+  url: https://arcgisserver.snfarming.com/server/rest/info?f=pjson

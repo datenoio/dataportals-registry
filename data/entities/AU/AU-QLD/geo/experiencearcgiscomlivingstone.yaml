@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Queensland
 description: Livingstone Shire Council public Experience Builder map for the Livingstone
   Planning Scheme 2018 zones, overlays, and related layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/25f9cf783f3b437c9aa805acc25382a6/data?f=json
 id: experiencearcgiscomlivingstone
 langs:
 - id: EN

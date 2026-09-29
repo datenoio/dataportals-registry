@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -15,10 +15,10 @@ coverage:
       id: '021'
       name: Northern America
 description: Natural Resources Canada (NRCan) seeks to enhance the responsible development
-  and use of Canada’s natural resources and the competitiveness of Canada’s natural resources
-  products. We are an established leader in science and technology in the fields of energy,
-  forests, and minerals and metals and use our expertise in earth sciences to build and maintain
-  an up-to-date knowledge base of our landmass.
+  and use of Canada’s natural resources and the competitiveness of Canada’s natural
+  resources products. We are an established leader in science and technology in the
+  fields of energy, forests, and minerals and metals and use our expertise in earth
+  sciences to build and maintain an up-to-date knowledge base of our landmass.
 id: wwwnrcangcca
 identifiers:
 - id: openaire
@@ -41,8 +41,8 @@ owner:
   name: Natural Resources Canada
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -80,3 +80,6 @@ topics:
   name: Environment
   type: iso19115
 uid: cdi00028872
+endpoints:
+- type: sitemap
+  url: https://natural-resources.canada.ca/sitemap.xml

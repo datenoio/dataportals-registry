@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Alberta
 description: Lac Ste. Anne County public ArcGIS Experience Builder assessment summary
   map for property and related county GIS layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/4f568d37e24e4da2aa1abd93750e5f44/data?f=json
 id: experiencearcgiscomlacsteanne
 langs:
 - id: EN

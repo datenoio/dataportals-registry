@@ -1,29 +1,97 @@
 DATA QUALITY REPORT - COUNTRY: GB
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Country Code: GB
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 12
+Total Issues Found: 12
 
 === ISSUES BY TYPE ===
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
-Count: 2
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA]
+Count: 7
 Priority: MEDIUM
 
-File: GB/Federal/indicators/wwwlrfoundationorguk.yaml
-Record ID: wwwlrfoundationorguk
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+File: GB/Federal/indicators/ukairqualitynet.yaml
+Record ID: ukairqualitynet
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
 Field: endpoints
-Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
 
-File: GB/Federal/indicators/naeienergysecuritygovuk.yaml
-Record ID: naeienergysecuritygovuk
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+File: GB/GB-ENG/indicators/nottinghamaqmnet.yaml
+Record ID: nottinghamaqmnet
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
 Field: endpoints
-Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/indicators/norfolkairqualitynet.yaml
+Record ID: norfolkairqualitynet
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
+Field: endpoints
+Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/indicators/nlincsairinfo.yaml
+Record ID: nlincsairinfo
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
+Field: endpoints
+Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/indicators/cheshirewestairinfo.yaml
+Record ID: cheshirewestairinfo
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
+Field: endpoints
+Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/indicators/southamptonairorguk.yaml
+Record ID: southamptonairorguk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
+Field: endpoints
+Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/indicators/airqualitywolverhamptongovuk.yaml
+Record ID: airqualitywolverhamptongovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
+Field: endpoints
+Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_EPRINTS]
+Count: 1
+Priority: MEDIUM
+
+File: GB/Federal/scientific/espacemmuacuk.yaml
+Record ID: espacemmuacuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_EPRINTS
+Field: endpoints
+Current Value: {'software_id': 'eprints', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='eprints' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT]
+Count: 1
+Priority: MEDIUM
+
+File: GB/Federal/opendata/northerngasopendataportalcouk.yaml
+Record ID: northerngasopendataportalcouk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT
+Field: endpoints
+Current Value: {'software_id': 'opendatasoft', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='opendatasoft' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PANELAPP]
+Count: 1
+Priority: MEDIUM
+
+File: GB/Federal/scientific/panelappgenomicsenglandcouk.yaml
+Record ID: panelappgenomicsenglandcouk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PANELAPP
+Field: endpoints
+Current Value: {'software_id': 'panelapp', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='panelapp' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS]
 Count: 1
@@ -36,8 +104,23 @@ Field: endpoints
 Current Value: {'software_id': 'portaljs', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='portaljs' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATSWALES]
+Count: 1
+Priority: MEDIUM
+
+File: GB/GB-WLS/indicators/statswalesgovwales.yaml
+Record ID: statswalesgovwales
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATSWALES
+Field: endpoints
+Current Value: {'software_id': 'statswales', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='statswales' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA: 7 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_EPRINTS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PANELAPP: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATSWALES: 1 issue

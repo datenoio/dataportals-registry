@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: ArcGIS Server of the Ministry of Defence of Bosnia and Herzegovina (Armed
+  Forces of BiH), publishing public hosted layers for locations, quarantine sites,
+  and migrant camps.
+id: gismodgovba
+langs:
+- id: SR
+  name: Serbian
+link: https://gis.mod.gov.ba/server/rest/services
+name: OS BiH ArcGIS
+owner:
+  link: https://mod.gov.ba
+  location:
+    country:
+      id: BA
+      name: Bosnia and Herzegovina
+    level: 20
+  name: Ministarstvo odbrane Bosne i Hercegovine
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+- defence
+- arcgisserver
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009357
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.mod.gov.ba/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.mod.gov.ba/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.mod.gov.ba/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.mod.gov.ba/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.mod.gov.ba/server/rest/services?f=geositemap

@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    macroregion:
+      id: '021'
+      name: Northern America
+    level: 20
+description: Public ArcGIS map and imagery services for Ocean Networks Canada, including
+  observatory infrastructure, bathymetry, sea ice, and marine protected areas. Separate
+  from the Oceans 3.0 data portal.
+id: arcgisoceannetworksca
+langs:
+- id: EN
+  name: English
+link: https://arcgis.oceannetworks.ca/arcgis/rest/services
+name: Ocean Networks Canada ArcGIS REST Services
+owner:
+  link: https://www.oceannetworks.ca/
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+  name: Ocean Networks Canada
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- canada
+- geospatial
+- imagery
+- infrastructure
+- marine
+- ocean
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00008999
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgis.oceannetworks.ca/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgis.oceannetworks.ca/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgis.oceannetworks.ca/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://arcgis.oceannetworks.ca/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arcgis.oceannetworks.ca/arcgis/rest/services?f=geositemap

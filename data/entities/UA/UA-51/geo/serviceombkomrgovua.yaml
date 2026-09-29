@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: UA-51
+      name: Odeska oblast
+description: ArcGIS Server of the Odesa Department of Architecture and Urban Planning
+  publishing the general plan, zoning, and topographic map services.
+id: serviceombkomrgovua
+langs:
+- id: UK
+  name: Ukrainian
+link: https://service.ombk.omr.gov.ua/arcgis/rest/services
+name: Геопортал департаменту архітектури та містобудування Одеси
+owner:
+  link: https://omr.gov.ua
+  location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 30
+    subregion:
+      id: UA-51
+      name: Odeska oblast
+  name: Odesa City Department of Architecture and Urban Planning
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- ArcGIS
+- geospatial
+- Ukraine
+- Odesa
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://service.ombk.omr.gov.ua/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://service.ombk.omr.gov.ua/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://service.ombk.omr.gov.ua/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://service.ombk.omr.gov.ua/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://service.ombk.omr.gov.ua/arcgis/rest/services?f=geositemap
+uid: cdi00009450

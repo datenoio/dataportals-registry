@@ -281,6 +281,8 @@ GET https://host/sparql
 GET https://host/api/sparql
 ```
 
+Type `/api/hub/search` as `piveau:search`. SPARQL stays `sparql`.
+
 SPARQL is `/sparql` or `/api/sparql` on some hubs.
 
 
@@ -294,6 +296,8 @@ Federation of other catalogs (`catalog_type` is often Data search engine). Harve
 ```text
 GET https://host/Idra/api/v1/catalogues
 ```
+
+Type `/Idra/api/v1/catalogues` as `idra:catalogues`.
 
 
 ## ArcGIS Hub (`arcgishub`) as open data {#arcgishub}
@@ -418,6 +422,16 @@ GET https://host/extranet/openportal/pages/default/index.html
 
 **Keep:** the public dataset or catalog listing for that government tenant. **Drop:** login-only申请 workflows, the API application gallery, and `/oportal/` Inspur tenants.
 
+## Taiji Digital Public Data Open Platform (`tykyopendata`) {#tykyopendata}
+
+Taiji Digital shells. No verified anonymous list API on every tenant. Shenzhen serves the catalog UI at the site root.
+
+```text
+GET https://host/
+```
+
+**Keep:** the public dataset or catalog listing for that government. **Drop:** login-only 数据申请 workflows, the developer center, and Inspur `/oportal/` or Epoint `/extranet/openportal/` tenants.
+
 ## data.world (`dataworld`) {#dataworld}
 
 Public hub `data.world`. Harvest **datasets** from the public catalog/API. Do not crawl private organization spaces.
@@ -477,6 +491,12 @@ GET https://host/datos
 ```
 
 **Keep:** dataset pages under `/datos/{slug}` (title, metadata, file or SQL API link). **Drop:** `/presupuestos`, contracts, agendas, planes, `gobierto.es` marketing, and `presupuestos.gobierto.es`. One municipality host = one harvest scope. Do not set `ckan`.
+
+## Viavansi Open Government (`viavansi`) {#viavansi}
+
+WordPress theme `viavansi-open-government` or `viavansi-ogov-current`. Harvest the public **dataset list** on the catalog page (title and file or DCAT link). One harvest scope per institution. Do not set `ckan` unless the public UI is the CKAN catalog. Do not set `wordpress` when this theme is present.
+
+**Keep:** dataset rows on the catalog page. **Drop:** theme assets, the WordPress admin, and login walls.
 
 ## Municipium Portale Opendata (`municipium`) {#municipium}
 
@@ -548,6 +568,20 @@ GET https://host/data/
 
 **Keep:** named **reports / stories** on `/transparency` or `/data/`. **Drop:** every Highcharts breakdown row and `www.opengov.com` marketing. One government tenant = one harvest scope. Distinct from the city’s CKAN/Socrata/ArcGIS Hub open-data portal.
 
+## OneGov Election Day (`onegov`) {#onegov}
+
+Swiss election and vote portals. Filter exports on `software.id = 'onegov'`. Distinct from Tyler OpenGov (`opengov`).
+
+```text
+GET https://host/catalog.rdf
+GET https://host/json
+GET https://host/archive/{year}/json
+GET https://host/vote/{id}/data-json
+GET https://host/election/{id}/data-json
+```
+
+**Keep:** each election or vote as a dataset, with the JSON/CSV/Excel download linked from the catalog. **Drop:** the portal chrome, map tiles, and PDF-only result sheets when a machine-readable file exists. One portal host = one harvest scope. Discovery: [discovery-opendata.md](discovery-opendata.md#onegov).
+
 ## Drupal (`drupal`) {#drupal}
 
 Only when the public product is a dataset catalog (not a news CMS).
@@ -576,7 +610,27 @@ Joomla CMS sites have no standard dataset list API. Harvest the catalog or map-g
 pages as HTML lists; keep each linked dataset or map as one record and drop article
 chrome, menus, and login pages.
 
+## OutSystems (`outsystems`) {#outsystems}
+
+OutSystems apps expose no standard dataset API. Harvest the catalog HTML or the
+per-app REST endpoints the operator documents. **Keep:** dataset, indicator, and
+legislation pages. **Drop:** login/session chrome and reactive app-shell routes.
+
+## Plone (`plone`) {#plone}
+
+Plone has no standard dataset API. Harvest the catalog HTML. **Keep:** linked
+microdata files, study pages, and dataset downloads. **Drop:** news, navigation,
+and login chrome. gov.br agency sites share one Plone installation; record each
+catalog page, not the ministry home.
+
 `/wp-json/` only for a **datasets** custom post type (`/wp-json/wp/v2/dataset` or the type the catalog documents). **Keep:** dataset posts. **Drop:** `/wp/v2/posts`, media, and ordinary WordPress homepages.
+
+## Government Site Builder (`governmentsitebuilder`) {#governmentsitebuilder}
+
+GSB has no standard dataset API. Harvest the catalog pages as HTML lists.
+**Keep:** linked datasets, statistics tables, and download files. **Drop:** news,
+navigation, and ordinary agency pages. GSB sites often embed Apache Solr search
+forms; treat those as HTML search UI, not an API.
 
 ## Bitrix (`bitrix`) {#bitrix}
 
@@ -592,6 +646,18 @@ GET https://host/opendata/opendata.json
 
 Type `/opendata/` as `bitrix:catalog` and `/opendata/opendata.json` as `opendata:json` when present. Do not append `/opendata/` onto catalog links that already are the open-data page. Cleanup strips `/opendata` (keeping any locale prefix such as `/ru`) so that JSON and HTML paths attach at origin. Catalog pages without `/opendata` (`.php` / `.aspx`) fall back to origin so `/opendata/` is not concatenated onto the filename.
 
+## Gosweb (`gosweb`) {#gosweb}
+
+Filter exports on `software.id = 'gosweb'`. One harvest scope per municipal or agency site.
+
+Harvest the open-data page `/ofitsialno/statistika/otkrytye-dannye/` and the machine-readable register (`list.csv`, `meta.csv`) linked from it. Grain is the dataset passport, not each CSV column or the rest of the municipal website.
+
+**Keep:** dataset passports and their download files. **Drop:** news, service pages, and other sections of the Gosweb site.
+
+```text
+GET https://host/ofitsialno/statistika/otkrytye-dannye/
+GET https://host/ofitsialno/statistika/otkrytye-dannye/list.csv
+```
 
 ## DataPress (`datapress`) {#datapress}
 
@@ -636,6 +702,19 @@ GET https://host/api/feed/dcat
 ```
 
 
+## Open Data Euskadi (`opendataeuskadi`) {#opendataeuskadi}
+
+Filter exports on `software.id = 'opendataeuskadi'`. One harvest scope: the Basque Government hub.
+
+```text
+GET https://opendata.euskadi.eus/catalogo-datos/
+```
+
+The catalog is paginated HTML on the euskadi.eus stack; dataset pages carry download resources (CSV/JSON/XML/RDF) and the portal federates DCAT metadata to datos.gob.es. Keep datasets from the catalog listing. Drop euskadi.eus CMS chrome, news, and the geoEuskadi / Udalmap products (separate catalogs).
+
+**Keep:** catalog datasets and their download resources.
+**Drop:** CMS chrome, news, geoEuskadi and Udalmap content.
+
 ## MODA (`modaopendata`) {#modaopendata}
 
 Tenant catalog API, not a second national data.gov.tw clone.
@@ -646,6 +725,17 @@ Tenant catalog API, not a second national data.gov.tw clone.
 ```text
 GET https://host/api/v2/rest/dataset/od{limit}
 ```
+
+## Taiwan Government Website Open Data (`twgovopendata`) {#twgovopendata}
+
+ASP.NET dataset list on a county or city government host. Not the MODA Nuxt catalog.
+
+```text
+GET https://host/OpenDataList.aspx
+GET https://host/opendata/OpenDataList.aspx
+```
+
+**Keep:** one dataset per `OpenDataDetail.aspx` or `OpenDataContent.aspx` page, including its `OpenDataFileHit.ashx` files. **Drop:** the county homepage, news, and accessibility chrome. A `Default.aspx` open-data section without those pages stays `custom`.
 
 
 ## PublishMyData (`publishmydata`) {#publishmydata}
@@ -864,6 +954,105 @@ and must remain distinguishable from production holdings.
 Country AMP portal (often `/portal/`). Harvest the public **activity / project** list if unauthenticated. One harvest scope per country installation, not per report or chart.
 
 **Keep:** public aid **activities / projects**. **Drop:** news, login walls, and individual PDF reports.
+
+## Het Dataloket (`dataloket`) {#dataloket}
+
+Dutch Analyze data-asset catalog. Harvest public search hits, not the Vue shell or the embedded Kibana dashboard.
+
+```text
+GET https://host/api/search
+GET https://host/api/search?offset=10
+```
+
+**Keep:** each `Results` item with `access` `Openbaar` (`contentUID`, title, description, `contentTypeName`, `path`). Asset types include Dataset, Kaart, Dashboard, Rapportage, and Document. **Drop:** FAQ, `/datavraag`, `/toegang`, the portal Kibana embed, and rows that are not public. `offset=0` and `offset=10` each returned 10 rows on Venlo, Tilburg, and Limburg (2026-09-26); `offset=20` returned an empty `Results` list while `Total` stayed larger. Do not assume further pages. One tenant host = one harvest scope. Do not harvest `dataportaal-viewer.prvlimburg.nl` or `ckan.dataplatform.nl` as Dataloket.
+
+## Contrataciones Abiertas (`contratacionesabiertas`) {#contratacionesabiertas}
+
+INAI EDCA-MX dashboard. Read `globals.site.url` and `globals.site.port` from `/contratacionesabiertas/static/javascripts/common.js`.
+
+```text
+GET {url}:{port}/edca/fiscalYears
+GET {url}:{port}/edca/recordPackages/{year}
+```
+
+`fiscalYears[].year` with `status: true` are the years to request. Each `recordPackages[]` item is one OCDS record package (one contracting process). The datos abiertos page also documents `/edca/contractingprocess/{year}` and `/edcapi/project/`; use those only when they return JSON. On 27 September 2026 the same paths on port 443 of the dashboard host returned 404, while Universidad Veracruzana `:8080` and Yucatán `captura.contratacionesabiertas.inaipyucatan.org.mx` returned record packages. INFO CDMX port 3000 timed out. If the capture host does not respond, stop.
+
+**Keep:** OCDS record packages. **Drop:** `fiscalYears` admin rows, the capture UI, Excel sheet splits of one process, and `/contratacionesabiertas/implementa`. Do not harvest Peru OECE or a CKAN portal on the same institution as this dashboard.
+
+## Centurion (`centurion`) {#centurion}
+
+eBdesk Centurion catalog. Harvest dataset rows from PostGraphile when the tenant exposes it.
+
+```text
+POST https://host/api/v1/graphql
+{"query":"{ metadata_datasets(first: 100, offset: 0) { totalCount nodes { id title reference_code status } } }"}
+```
+
+Page with `offset` or the `after` cursor. **Keep:** `metadata_datasets` nodes (`id`, `title`, `reference_code`, `status`). **Drop:** users, roles, auth, surveys, publications, and geospatial layers as extra datasets. Kalimantan Selatan `data.`, `opendata.`, and `satupeta.` return the same `totalCount`; harvest one host. `satudata.kalselprov.go.id` requires a token. Polri and Sumatera Utara returned HTTP 405 on this path (September 2026); do not invent another list URL for those shells.
+
+## CreatorCMS (`creatorcms`) {#creatorcms}
+
+Hunan municipal data-open module. HTML listing only; no public JSON API confirmed.
+
+```text
+GET https://host/webapp/{city}/dataPublic/index.jsp
+GET https://host/webapp/{city}/dataPublic/dataDetail.jsp?id={n}
+```
+
+**Keep:** each `dataDetail.jsp?id=` record as one dataset. **Drop:** the parent government homepage, news/articles served by the same CMS, and login-only admin paths.
+
+## Anhui open-data-web (`ahopendataweb`) {#ahopendataweb}
+
+Anhui public-data platform. Catalog HTML under `/open-data-web/` (`.do` actions) or `/dataopen-web/`; no public JSON API confirmed.
+
+```text
+GET https://host/open-data-web/index/index.do
+```
+
+**Keep:** open dataset entries in the catalog list. **Drop:** login-only 数据申请 apply flows, the parent government homepage, and app-gallery entries.
+
+## openportal (`openportal`) {#openportal}
+
+Municipal open-data portal under `/extranet/openportal/pages/...`. HTML listing; no public JSON API confirmed.
+
+```text
+GET https://host/extranet/openportal/pages/default/index.html
+```
+
+**Keep:** catalog dataset entries. **Drop:** the parent government homepage and login-only apply flows.
+
+## Oraș Digital (`orasdigital`) {#orasdigital}
+
+Romanian city open-data SaaS (`{city}.oras.digital`). REST JSON API documented per deployment; grab the Postman collection for the method list.
+
+```text
+GET https://{city}.oras.digital/api/
+GET https://{city}.oras.digital/assets/api/api-postman-collection.json
+```
+
+**Keep:** dataset and resource records from `/api/` (CSV/XLS/XLSX/HTML/API resources). **Drop:** `{city}.digital` city-app pages, terms/cookie pages, and user-account endpoints.
+
+## Bon Maximus e-Procurement (`bonmaximus`) {#bonmaximus}
+
+Nigerian state e-procurement portals (Bon Maximus Companies). No documented public API — harvest the OCDS-oriented publication and award pages from the HTML portal.
+
+```text
+GET https://host/
+GET https://host/publication.php
+```
+
+**Keep:** tender/award records and OCDS publication pages (title, buyer, award value, date, linked OCDS JSON when offered). **Drop:** vendor pages (`bonmaximus.com`), login/registration flows, and state government homepages. One state BPP portal = one harvest scope. Do not set `ckan` or `budeshi`.
+
+## Budeshi (`budeshi`) {#budeshi}
+
+PPDC open contracting platform deployments (e.g. Kaduna `www.ocds.kdsg.gov.ng`). Documented REST API serving OCDS releases.
+
+```text
+GET https://host/api
+GET https://host/ocds-api
+```
+
+**Keep:** OCDS releases from `/api` and `/ocds-api` (JSON packages; flatten releases to tender/award records). **Drop:** portal chrome, project marketing pages, and the platform home `budeshi.ng`. One deployment = one harvest scope. Do not set `bonmaximus` on Budeshi-hosted portals.
 
 ## Related
 

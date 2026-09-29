@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Alberta
 description: City of Beaumont public ArcGIS Experience Builder land use district map
   for zoning and related municipal GIS layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/2a340b88cb0a4d65aaf560f209c056d2/data?f=json
 id: experiencearcgiscombeaumont
 langs:
 - id: EN

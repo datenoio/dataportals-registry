@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Second CENAPRED ArcGIS REST services directory, with municipal risk atlases
+  and flood-hazard layers. Distinct from servicios1.cenapred.unam.mx.
+id: servicios2cenapredunammx
+langs:
+- id: ES
+  name: Spanish
+link: http://servicios2.cenapred.unam.mx:6080/arcgis/rest/services
+name: CENAPRED ArcGIS REST (servicios2)
+owner:
+  link: https://www.unam.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+  name: Universidad Nacional Autónoma de México (UNAM)
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- geospatial
+- mexico
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+endpoints:
+- type: arcgis:rest:info
+  url: http://servicios2.cenapred.unam.mx:6080/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://servicios2.cenapred.unam.mx:6080/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://servicios2.cenapred.unam.mx:6080/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://servicios2.cenapred.unam.mx:6080/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://servicios2.cenapred.unam.mx:6080/arcgis/rest/services?f=geositemap
+uid: cdi00009062

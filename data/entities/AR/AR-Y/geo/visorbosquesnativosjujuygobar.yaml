@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -48,8 +48,8 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - geospatial
@@ -74,3 +74,9 @@ topics:
   name: Biota
   type: iso19115
 uid: cdi99995873
+endpoints:
+- type: rest
+  url: https://visorbosquesnativos.jujuy.gob.ar/wp-json/
+- type: rest:posts
+  url: https://visorbosquesnativos.jujuy.gob.ar/wp-json/wp/v2/posts
+  version: '2'

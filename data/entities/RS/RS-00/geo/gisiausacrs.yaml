@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RS
+      name: Serbia
+    level: 30
+    subregion:
+      id: RS-00
+      name: Beograd
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: ArcGIS Server REST catalog of the Institute of Architecture and Urban
+  and Spatial Planning of Serbia (IAUS), with a public planning-documents service.
+id: gisiausacrs
+langs:
+- id: SR
+  name: Serbian
+link: https://gis.iaus.ac.rs/server/rest/services
+name: IAUS Geoportal
+owner:
+  link: https://iaus.ac.rs
+  location:
+    country:
+      id: RS
+      name: Serbia
+    level: 30
+    subregion:
+      id: RS-00
+      name: Beograd
+  name: Institute of Architecture and Urban and Spatial Planning of Serbia
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- planning
+- Serbia
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: PlanningCadastre
+  name: Planning Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.iaus.ac.rs/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.iaus.ac.rs/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.iaus.ac.rs/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.iaus.ac.rs/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.iaus.ac.rs/server/rest/services?f=geositemap
+- type: arcgis:portals:self
+  url: https://gis.iaus.ac.rs/portal/sharing/rest/portals/self?f=pjson
+uid: cdi00009343
+properties:
+  has_doi: false
+  is_national: false

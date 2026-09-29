@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -13,7 +13,7 @@ coverage:
       name: Spain
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: ES-CT
@@ -46,8 +46,8 @@ properties:
   has_doi: false
   is_national: false
 software:
-  id: custom
-  name: Custom software
+  id: idescat
+  name: Idescat
 status: active
 tags:
 - statistics
@@ -77,3 +77,9 @@ topics:
   name: Economy
   type: iso19115
 uid: cdi99994736
+endpoints:
+- type: rest
+  url: https://api.idescat.cat/emex/v1/nodes.json?lang=en
+- type: rest
+  url: https://api.idescat.cat/taules/v2
+  version: '2'

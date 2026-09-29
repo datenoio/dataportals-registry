@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: ArcGIS Server services directory of DRAP Norte, with reservoirs, burned
+  areas, and agricultural parcels. Published at /server/rest/services. The TLS certificate
+  is expired.
+id: sigdrapnortegovpt
+langs:
+- id: PT
+  name: Portuguese
+link: https://sig.drapnorte.gov.pt/server/rest/services
+name: SIG DRAP Norte
+owner:
+  link: https://www.drapnorte.gov.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: Direção Regional de Agricultura e Pescas do Norte
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- portugal
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00008951
+endpoints:
+- type: arcgis:rest:info
+  url: https://sig.drapnorte.gov.pt/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.drapnorte.gov.pt/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig.drapnorte.gov.pt/server/services?wsdl

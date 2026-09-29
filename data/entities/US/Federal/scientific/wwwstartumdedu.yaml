@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,11 +14,11 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: The Global Terrorism Database (GTD) is an open-source database including information
-  on terrorist events around the world from 1970 through 2020 (with annual updates planned
-  for the future). Unlike many other event databases, the GTD includes systematic data on
-  domestic as well as international terrorist incidents that have occurred during this time
-  period and now includes more than 200,000 cases.
+description: The Global Terrorism Database (GTD) is an open-source database including
+  information on terrorist events around the world from 1970 through 2020 (with annual
+  updates planned for the future). Unlike many other event databases, the GTD includes
+  systematic data on domestic as well as international terrorist incidents that have
+  occurred during this time period and now includes more than 200,000 cases.
 id: wwwstartumdedu
 identifiers:
 - id: openaire
@@ -39,8 +39,8 @@ owner:
   name: Department of Homeland Security, Science & Technology Directorate
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -59,3 +59,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00033778
+endpoints:
+- type: rss
+  url: https://www.start.umd.edu/rss.xml

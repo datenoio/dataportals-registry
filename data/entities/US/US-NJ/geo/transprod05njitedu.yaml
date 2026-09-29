@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NJ
+      name: New Jersey
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ArcGIS Server for NJIT transportation research. Public services include
+  statewide transportation improvement and ITS layers.
+id: transprod05njitedu
+langs:
+- id: EN
+  name: English
+link: https://transprod05.njit.edu:6443/arcgis/rest/services
+name: NJIT Transportation GIS Server
+owner:
+  link: https://www.njit.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NJ
+      name: New Jersey
+  name: New Jersey Institute of Technology
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- geospatial
+- transport
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00009122
+endpoints:
+- type: arcgis:rest:info
+  url: https://transprod05.njit.edu:6443/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://transprod05.njit.edu:6443/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://transprod05.njit.edu:6443/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://transprod05.njit.edu:6443/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://transprod05.njit.edu:6443/arcgis/rest/services?f=geositemap

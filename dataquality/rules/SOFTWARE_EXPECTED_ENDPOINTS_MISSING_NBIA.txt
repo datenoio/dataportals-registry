@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NBIA
+================================================================================
+Generated: 2026-09-29 11:21:05
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NBIA
+Priority: MEDIUM
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='nbia' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+US: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+imagingncinihgov: 1 issue
+
+=== ISSUES ===
+
+File: US/Federal/scientific/imagingncinihgov.yaml
+Record ID: imagingncinihgov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NBIA
+Field: endpoints
+Current Value: {"software_id": "nbia", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='nbia' is marked as API-capable in software definitions

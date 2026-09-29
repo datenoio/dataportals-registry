@@ -1,0 +1,24 @@
+DATA QUALITY REPORT - COUNTRY: NO
+================================================================================
+Generated: 2026-09-29 11:21:05
+Country Code: NO
+Total Records with Issues: 1
+Total Issues Found: 1
+
+=== ISSUES BY TYPE ===
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GBIFPLATFORM]
+Count: 1
+Priority: MEDIUM
+
+File: NO/Federal/scientific/datalivingnorwayno.yaml
+Record ID: datalivingnorwayno
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GBIFPLATFORM
+Field: endpoints
+Current Value: {'software_id': 'gbifplatform', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='gbifplatform' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GBIFPLATFORM: 1 issue

@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATA
+================================================================================
+Generated: 2026-09-29 11:21:05
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATA
+Priority: MEDIUM
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='fairdata' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+FI: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+idafairdatafi: 1 issue
+
+=== ISSUES ===
+
+File: FI/Federal/scientific/idafairdatafi.yaml
+Record ID: idafairdatafi
+Country: FI
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATA
+Field: endpoints
+Current Value: {"software_id": "fairdata", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='fairdata' is marked as API-capable in software definitions

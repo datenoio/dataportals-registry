@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: CZ-72
       name: Zlínský kraj
 description: GisOnline map application of the municipality of Podhradí.
+endpoints:
+- type: gisonline:project
+  url: https://app.gisonline.cz/api2/projects/367
 id: appgisonlineczpodhradi
 langs:
 - id: CS

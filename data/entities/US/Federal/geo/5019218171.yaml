@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: Legacy IP address of the Northeast Ocean Data Portal ArcGIS Server
-  (same /arcgis1/rest/services catalog as services.northeastoceandata.org).
+description: Legacy IP address of the Northeast Ocean Data Portal ArcGIS Server (same
+  /arcgis1/rest/services catalog as services.northeastoceandata.org).
 id: '5019218171'
 langs:
 - id: EN
@@ -57,3 +57,14 @@ topics:
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00037378
+endpoints:
+- type: arcgis:rest:info
+  url: http://50.19.218.171/arcgis1/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://50.19.218.171/arcgis1/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://50.19.218.171/arcgis1/services?wsdl
+- type: arcgis:sitemap
+  url: http://50.19.218.171/arcgis1/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://50.19.218.171/arcgis1/rest/services?f=geositemap

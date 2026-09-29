@@ -21,10 +21,10 @@ Do not mix these three numbers. Exports lag YAML until `python scripts/builder.p
 | Layer | Date | Catalogs | Scheduled | Software | Countries |
 |-------|------|----------|-----------|----------|-----------|
 | **Published GitHub snapshot** | v1.22.0, 24 September 2026 | **41,167** | **1** | **665** | **224** |
-| **Working-tree exports** | last `build` in this tree (24 September 2026) | **41,167** (`catalogs.jsonl.zst`) | **1** | **665** | **224** |
-| **Current source YAML** | 24 September 2026 | **41,167** (`data/entities/`) | **1** (`data/scheduled/`) | **665** | **224** |
+| **Working-tree exports** | last `build` in this tree (27 September 2026) | **42,390** (`catalogs.jsonl.zst`) | **1** | **733** | **224** |
+| **Current source YAML** | 27 September 2026 | **42,390** (`data/entities/`) | **1** (`data/scheduled/`) | **733** | **224** |
 
-Working-tree exports match entity YAML (**41,167** catalogs, **1** scheduled, **665** software). `full.jsonl` is **41,168** (entities plus the scheduled record). Canonical software IDs: `data/reference/software_ids.yaml`.
+Working-tree exports match entity YAML (**42,390** catalogs, **1** scheduled, **733** software). `full.jsonl` is **42,391** (entities plus the scheduled record). Canonical software IDs: `data/reference/software_ids.yaml`.
 
 Filter by catalog type or software in DuckDB / Parquet (see [query-examples.md](query-examples.md)); there are no pre-sliced `bytype/` or `bysoftware/` dumps.
 

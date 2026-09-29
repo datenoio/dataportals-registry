@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,10 +14,10 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: CLARIN-UK is a consortium of centres of expertise involved in research and resource
-  creation involving digital language data and tools. The consortium includes the national
-  library, and academic departments and university centres in linguistics, languages, literature
-  and computer science.
+description: CLARIN-UK is a consortium of centres of expertise involved in research
+  and resource creation involving digital language data and tools. The consortium
+  includes the national library, and academic departments and university centres in
+  linguistics, languages, literature and computer science.
 id: wwwclarinacuk
 identifiers:
 - id: openaire
@@ -38,8 +38,8 @@ owner:
   name: University of Oxford, Oxford e-Research Centre
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -62,3 +62,6 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00030948
+endpoints:
+- type: drupal:jsonapi
+  url: https://www.clarin.ac.uk/jsonapi

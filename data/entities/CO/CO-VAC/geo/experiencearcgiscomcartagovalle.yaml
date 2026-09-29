@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Valle del Cauca
 description: Municipal geoportal of Cartago, Valle del Cauca, on ArcGIS Experience
   Builder, for urban-license management and control.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/fd391f57145e4499b81a379cf9b2a8f3/data?f=json
 id: experiencearcgiscomcartagovalle
 langs:
 - id: ES

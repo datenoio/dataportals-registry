@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Ontario
 description: Public Let Me Map 2.0 GIS for Peterborough County, with search, drawing,
   measurement, and county map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/ddbc67fe5d17401192c602cfd088cd0a/data?f=json
 id: experiencearcgiscomptbocounty
 langs:
 - id: EN

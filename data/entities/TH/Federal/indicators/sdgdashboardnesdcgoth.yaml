@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -78,3 +78,9 @@ topics:
   name: Environment
   type: iso19115
 uid: cdi99994999
+endpoints:
+- type: rest
+  url: https://sdgdashboard.nesdc.go.th/wp-json/
+- type: rest:posts
+  url: https://sdgdashboard.nesdc.go.th/wp-json/wp/v2/posts
+  version: '2'

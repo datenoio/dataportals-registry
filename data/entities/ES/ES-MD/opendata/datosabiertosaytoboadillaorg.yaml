@@ -1,6 +1,6 @@
 access_mode:
 - open
-api_status: uncertain
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -38,8 +38,8 @@ owner:
   type: Local government
   link: https://aytoboadilla.org
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - Spain
@@ -60,3 +60,10 @@ topics:
   name: Location
   type: iso19115
 uid: cdi99992868
+endpoints:
+- type: rest
+  url: https://datosabiertos.aytoboadilla.org/wp-json/
+- type: rest:posts
+  url: https://datosabiertos.aytoboadilla.org/wp-json/wp/v2/posts
+  version: '2'
+api: true

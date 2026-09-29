@@ -18,6 +18,9 @@ description: Breedbase database for sweet potato breeding and genomic data.
 endpoints:
 - type: breedbase:catalog
   url: https://sweetpotatobase.org/
+- type: brapi:trials
+  url: https://sweetpotatobase.org/brapi/v2/trials?page=0&pageSize=1
+  version: '2'
 id: sweetpotatobaseorg
 langs:
 - id: EN

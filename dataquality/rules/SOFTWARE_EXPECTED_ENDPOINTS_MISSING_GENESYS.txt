@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GENESYS
+================================================================================
+Generated: 2026-09-29 11:21:05
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GENESYS
+Priority: MEDIUM
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='genesys' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+World: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+genebankworldvegorg: 1 issue
+
+=== ISSUES ===
+
+File: World/scientific/genebankworldvegorg.yaml
+Record ID: genebankworldvegorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GENESYS
+Field: endpoints
+Current Value: {"software_id": "genesys", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='genesys' is marked as API-capable in software definitions

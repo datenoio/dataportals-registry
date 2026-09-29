@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Texas
 description: City of Edinburg public ArcGIS Experience Builder GIS map for streets,
   addressing, infrastructure, development, and zoning.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/bcad27c5f3544240a8bd8deccb4c6127/data?f=json
 id: experiencearcgiscomedinburg
 langs:
 - id: EN

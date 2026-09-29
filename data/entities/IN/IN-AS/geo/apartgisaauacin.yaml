@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+endpoints:
+- type: wms111
+  url: https://apartgis.aau.ac.in/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-AS
+      name: Assam
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: Public web GIS of the Assam Agribusiness and Rural Transformation Project.
+  Maps cover kharif rice area, rabi rice-fallow, cropping intensity, and soil suitability
+  for districts, blocks, and villages. Developed for the Government of Assam by Assam
+  Agricultural University and the International Rice Research Institute.
+id: apartgisaauacin
+langs:
+- id: EN
+  name: English
+link: https://apartgis.aau.ac.in/publicmap/defaultMap.php
+name: APART Web GIS
+owner:
+  link: https://apartgis.aau.ac.in/contact-us.php
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-AS
+      name: Assam
+  name: Assam Rural Infrastructure and Agricultural Services Society
+  type: Regional government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- business
+- geospatial
+- government
+- india
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+uid: cdi00009648

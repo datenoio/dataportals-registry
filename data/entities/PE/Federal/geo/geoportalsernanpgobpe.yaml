@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -33,8 +33,8 @@ owner:
   name: Servicio Nacional de Áreas Naturales Protegidas por el Estado (SERNANP)
   type: Central government
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - geospatial
@@ -44,3 +44,9 @@ topics:
   name: Location
   type: iso19115
 uid: cdi00008242
+endpoints:
+- type: rest
+  url: https://geoportal.sernanp.gob.pe/wp-json/
+- type: rest:posts
+  url: https://geoportal.sernanp.gob.pe/wp-json/wp/v2/posts
+  version: '2'

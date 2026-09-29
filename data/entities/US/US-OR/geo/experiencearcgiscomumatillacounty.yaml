@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Northern America
 description: Umatilla County interactive map built with ArcGIS Experience Builder,
   linked from the county GIS department page.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/2cabcc1b565f4c1cb2e808e91451ca7d/data?f=json
 id: experiencearcgiscomumatillacounty
 langs:
 - id: EN

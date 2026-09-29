@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: ES
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Country Code: ES
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 11
+Total Issues Found: 11
 
 === ISSUES BY TYPE ===
 
@@ -18,31 +18,92 @@ Field: rights
 Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
 Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
-Count: 1
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
+Count: 2
 Priority: MEDIUM
 
-File: ES/ES-CM/indicators/estadisticacastillalamanchaes.yaml
-Record ID: estadisticacastillalamanchaes
+File: ES/Federal/opendata/datosabiertosbneescatalogodataset.yaml
+Record ID: datosabiertosbneescatalogodataset
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+File: ES/ES-PV/opendata/wwwopendatabizkaiaeus.yaml
+Record ID: wwwopendatabizkaiaeus
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
+Count: 6
+Priority: MEDIUM
+
+File: ES/ES-CL/opendata/datospfcyles.yaml
+Record ID: datospfcyles
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
 Field: endpoints
 Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS]
-Count: 1
+File: ES/ES-CL/opendata/valledemenaesparticipaciondatosabiertoscatalogoded.yaml
+Record ID: valledemenaesparticipaciondatosabiertoscatalogoded
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: ES/ES-MC/opendata/transparenciamimurciamurciaes.yaml
+Record ID: transparenciamimurciamurciaes
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: ES/ES-CT/opendata/dodibacat.yaml
+Record ID: dodibacat
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: ES/Federal/opendata/fegaesesdatosabiertos.yaml
+Record ID: fegaesesdatosabiertos
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: ES/Federal/opendata/datosabiertosmitecogobes.yaml
+Record ID: datosabiertosmitecogobes
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS]
+Count: 2
 Priority: MEDIUM
 
-File: ES/ES-CT/opendata/espaidedadestercersectorcat.yaml
-Record ID: espaidedadestercersectorcat
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS
+File: ES/ES-AR/opendata/236wsdpteruelestransparenciadpteruelopendatabuscad.yaml
+Record ID: 236wsdpteruelestransparenciadpteruelopendatabuscad
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
 Field: endpoints
-Current Value: {'software_id': 'portaljs', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='portaljs' is marked as API-capable in software definitions
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: ES/Federal/scientific/evolclustdborg.yaml
+Record ID: evolclustdborg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
 MISSING_RIGHTS: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 6 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS: 2 issues

@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Multi-tenant GeoServer of the DATA PROCON survey office. Municipal spatial-plan
+  workspaces such as Ďáblice, Hustopeče, and Ruzyně are published here; the geo, sber,
+  and sber2 map portals are clients of this server.
+id: g2dataproconcz
+langs:
+- id: CS
+  name: Czech
+link: https://g2.dataprocon.cz/geoserver/web/
+name: DATA PROCON GeoServer
+owner:
+  link: https://www.dataprocon.cz/
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: DATA PROCON
+  type: Business
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- commercial
+- czech-republic
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00009467
+endpoints:
+- type: wms130
+  url: https://g2.dataprocon.cz/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://g2.dataprocon.cz/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://g2.dataprocon.cz/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://g2.dataprocon.cz/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

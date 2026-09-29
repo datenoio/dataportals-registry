@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: ArcGIS Server for the Electricity Generating Authority of Thailand. The
+  public Hosted folder includes geology, fault, and facility layers. Several project
+  folders require a token.
+id: gisportalegatcoth
+langs:
+- id: TH
+  name: Thai
+link: https://gisportal.egat.co.th/arcgis/rest/services
+name: EGAT GIS Portal
+owner:
+  link: https://www.egat.co.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+  name: Electricity Generating Authority of Thailand
+  type: Business
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- commercial
+- geospatial
+- thailand
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009194
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisportal.egat.co.th/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisportal.egat.co.th/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisportal.egat.co.th/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisportal.egat.co.th/arcgis/rest/services?f=sitemap

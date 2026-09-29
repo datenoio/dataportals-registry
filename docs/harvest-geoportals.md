@@ -25,6 +25,7 @@ Match discovery: [discovery.md](discovery.md#one-catalog-per-public-product).
 |-------|----------------|------------------------|
 | GeoNetwork + GeoServer | CSW `GetRecords` dataset/series | WMS layers already in CSW |
 | Palapa + GeoServer | Palapa CSW `/csw` or Palapa catalog layers | A second `geoserver` crawl of `/geoserver` |
+| Geonodo + GeoServer | Geonodo CSW `/csw` dataset/series | A second `geoserver` crawl of `/geoserver` |
 | Lizmap / QWC2 / mviewer + QGIS Server | Viewer config or the viewer’s WMS | A second crawl of `qgis_mapserv.fcgi` |
 | ArcGIS Hub + Server | Hub DCAT or Hub search | REST services already listed as Hub items |
 | STAC API + Browser | `/collections` on the API | Browser HTML as a second catalog |
@@ -78,6 +79,19 @@ GeoNode 3 uses `/api/layers/` instead of `/api/datasets/`. GeoNode 4 uses `/api/
 **Drop:** `/api/maps/` (compositions), `/api/geoapps/`, `/api/documents/` unless those documents are the data product, `/api/profiles/`. CSW at `/catalogue/csw` duplicates REST layers — pick one.
 
 **Keep:** GeoNode **dataset** / layer REST objects (`/api/datasets/`, GeoNode 4 `/api/v2/datasets/`, or GeoNode 3 `/api/layers/`).
+
+## Geonodo (`geonodo`) {#geonodo}
+
+Chilean IDE metadata catalog. Prefer pycsw CSW. Public dataset pages are `/{instance}/catalog/{id}/{slug}` and are the same records as CSW.
+
+```text
+GET https://host/csw?service=CSW&version=2.0.2&request=GetCapabilities
+GET https://host/csw?service=CSW&version=2.0.2&request=GetRecords&resultType=results&outputSchema=http://www.isotc211.org/2005/gmd&typeNames=gmd:MD_Metadata&elementSetName=summary&maxRecords=50&startPosition=1
+```
+
+The catalog may be mounted under a prefix (`/catalog`, `/ide-los-lagos/catalog`, `/sinia/catalog`, `/R00/catalog`). CSW stays at `/csw` on the host. Type that URL as `csw202`.
+
+**Keep:** ISO `dataset` / `series` from CSW. **Drop:** `/catalog/login`, map-viewer pages, and a second GeoServer crawl of the same layers. GeoNode `/api/datasets/` is `geonode`, not Geonodo.
 
 ## Palapa (`palapa`) {#palapa}
 
@@ -255,7 +269,7 @@ GET https://host/wms?service=WMS&version=1.3.0&request=GetCapabilities
 GET https://host/wfs?service=WFS&version=2.0.0&request=ListStoredQueries
 ```
 
-Type `/edr/collections` as `rest` (or `ogc:edr` when that type exists on the record). Type WMS as `wms130` and WFS as `wfs200`. Harvest EDR collections once; do not also ingest every WMS layer of the same producer.
+Type `/edr/collections` as `ogc:edr`. Type WMS as `wms130` and WFS as `wfs200`. Harvest EDR collections once; do not also ingest every WMS layer of the same producer.
 
 ## pycsw (`pycsw`) {#pycsw}
 
@@ -337,6 +351,16 @@ GET https://host/themes
 Theme JSON lists layers. Keep data layers; drop background/basemap-only entries if the theme is a viewer chrome. Do not scrape MapFish print.
 
 **Keep:** data layers from `/themes`. **Drop:** background/basemap-only entries and MapFish print.
+
+## GeoShop (`geoshop`) {#geoshop}
+
+infoGrips geodata order client. Filter exports on `software.id = 'geoshop'`.
+
+```text
+GET https://host/
+```
+
+**Keep:** geodata products the public client lists for order or download (title, format, coverage). **Drop:** the map preview, INTERLIS conversion chrome, and infoGrips marketing. One shop host = one harvest scope. A CMS page that only links to the shop is not the catalog. Discovery: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md#geoshop).
 
 ## QWC2 (`qwc2`) {#qwc2}
 
@@ -536,6 +560,12 @@ Brazilian DRZ WebGIS municipal cadastral maps. Same grain as [Wagmap](#wagmap). 
 
 **Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#drzwebgis)). **Drop:** tiles, print PDFs, basemaps, and login walls.
 
+## GAUSS WebGIS (`gausswebgis`) {#gausswebgis}
+
+Brazilian GAUSS WebGIS municipal cadastral maps. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#gausswebgis). Distinct from Bosnian `gausswebcity` and from `drzwebgis`.
+
+**Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#gausswebgis)). **Drop:** tiles, print PDFs, basemaps, and login walls.
+
 ## NieuwlandGeo Onemap (`nieuwlandonemap`) {#nieuwlandonemap}
 
 Dutch `{org}.webgis.nl` Onemap tenants. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#nieuwlandonemap). Distinct from Singapore/NC OneMap and from `geoserver`.
@@ -578,6 +608,24 @@ Diputació de Barcelona `sitmun.diba.cat`. Same grain as [Wagmap](#wagmap). [har
 
 **Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#sitmun)). **Drop:** tiles, print PDFs, basemaps, and login walls.
 
+## G·GIS (`ggis`) {#ggis}
+
+Guadaltel `/ggis-cloud/` viewers. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#ggis). Distinct from `geonetwork` and `geoserver` on the same host.
+
+**Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#ggis)). **Drop:** tiles, print PDFs, basemaps, and login walls.
+
+## Dielmo Maps (`dielmomaps`) {#dielmomaps}
+
+Neobora `/gvw/?scenarioid=` viewers. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#dielmomaps).
+
+**Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#dielmomaps)). **Drop:** tiles, print PDFs, basemaps, and login walls.
+
+## LocalGIS (`localgis`) {#localgis}
+
+Spanish LOCALGIS municipal viewers. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#localgis). Distinct from `gvsigonline` and `enmapa`.
+
+**Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#localgis)). **Drop:** tiles, print PDFs, basemaps, and login walls.
+
 ## dmCity (`dmcity`) {#dmcity}
 
 Esri Finland `web.dmcity.fi/{city}/public/` tenants. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#dmcity). Distinct from `experiencebuilder`.
@@ -596,11 +644,23 @@ Geo-IT `geoitgis.geo-it.be/touchviewer/` Flemish municipal GIS. Same grain as [W
 
 **Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#geoitgis)). **Drop:** tiles, print PDFs, basemaps, and login walls.
 
+## Geoblox (`geoblox`) {#geoblox}
+
+GIM Geoblox thematic map applications. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#geoblox). Distinct from the Walloon Geoviewer API and from `mapstore`.
+
+**Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#geoblox)). **Drop:** tiles, print PDFs, basemaps, and login walls.
+
 ## Zeljko GIS (`zeljkogis`) {#zeljkogis}
 
 Zeljko d.o.o. `zeljko-gis.com` / `zopcina.zeljko-gis.com` Croatian and Bosnian municipal GIS. Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#zeljkogis). Distinct from `mapguide`.
 
 **Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#zeljkogis)). **Drop:** tiles, print PDFs, basemaps, and login walls.
+
+## Amnex Smart City GIS (`amnex`) {#amnex}
+
+Amnex Infotechnologies Indian smart-city GIS portals (`citymap_js` codebase, `/{city}citygis/` app roots). Same grain as [Wagmap](#wagmap). [harvest-viewers.md](harvest-viewers.md#amnex). Distinct from `igis` (Scanpoint) smart-city tenants.
+
+**Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#amnex)). **Drop:** tiles, print PDFs, basemaps, and login walls.
 
 ## SIGimWeb (`sigimweb`) {#sigimweb}
 
@@ -745,6 +805,12 @@ WKT-SI CartoMapas / WKTApp Arade viewers (`bundle-map-app.js`, title `CartoMapas
 GeoPlan MapFusion Yii2 viewers (`/page/viewer?id=`, `/var/www/MapFusion/`). Same grain as [CartoMapas](harvest-viewers.md#cartomapas). [harvest-viewers.md](harvest-viewers.md#mapfusion). Distinct from `mapguide`, `qgisserver`, and Águeda `ckan` / `geonetwork` / `geoserver`.
 
 **Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#mapfusion)). **Drop:** tiles, print PDFs, basemaps, and login walls.
+
+## GISMAT (`gismat`) {#gismat}
+
+PH Informática GISMAT viewers (`CESIUM_BASE_URL`, `geoportal.svg`). Same grain as [MapFusion](harvest-viewers.md#mapfusion). [harvest-viewers.md](harvest-viewers.md#gismat). Distinct from `mapguide` and from `geoserver` on the same host.
+
+**Keep:** public **layer / theme** list ([harvest-viewers.md](harvest-viewers.md#gismat)). **Drop:** tiles, location-plan PDFs, basemaps, and login walls.
 
 ## Origo (`origo`) {#origo}
 
@@ -1039,6 +1105,17 @@ tenant. The viewer has no documented public list API; a WAF answers 403 to non-b
 **Keep:** the tenant's published layer list as map-layer dataset analogs. **Drop:** basemap tiles
 and UI chrome. Harvest needs a browser-like client or an IL-reachable network.
 
+## Orhitec ERP/GIS (`erpgis`) {#erpgis}
+
+Orhitec municipal GIS tenants at `{authority}.erpgis.co.il` and
+`orhitec.erpgis.co.il/{authority}gispub`. One harvest scope per public tenant. The viewer
+has no documented public list API; layers are browsed in the map and queried by parcel
+or plan.
+
+**Keep:** the tenant's published layer list (parcels, plans, infrastructure) as map-layer
+dataset analogs. **Drop:** basemap tiles, login-only staff modules, and the vendor site
+`orhitec.com`.
+
 ## SWIMS (`swims`) {#swims}
 
 FAO SWALIM water-source tenants (`swims.faoswalim.org`, `pwsims.imcpuntland.so`). One harvest
@@ -1057,6 +1134,15 @@ The Kendo ASP.NET viewer has no documented public list API.
 
 **Keep:** the tenant's published layer list (parcels, zoning, administrative layers) as map-layer
 dataset analogs. **Drop:** basemap tiles and UI chrome. Do not harvest the vendor marketing site.
+
+## DashGIS (`dashgis`) {#dashgis}
+
+California CAD Solutions tenants at `mydashgis.com/{Tenant}Public/`. One harvest scope per
+public tenant. The Angular SPA has no documented public list API; layers load inside the viewer.
+
+**Keep:** the tenant's published layer list (parcels, utilities, administrative layers) as
+map-layer dataset analogs. **Drop:** basemap tiles, UI chrome, staff paths without `Public`,
+and the dashgis.com marketing site.
 
 ## MapSifter (`mapsifter`) {#mapsifter}
 
@@ -1174,6 +1260,33 @@ distribution links (HTTPS downloads, WMS, ESRI REST, HTML pages). Avoid `GET /fe
 **Keep:** each **metadata record** (`id` UUID) as one dataset analog; use `options[].url`
 as distributions and `topicCategory` as theme. **Drop:** `/analytics/*` endpoints,
 saved-search/community endpoints (API-key only), and the GeoView viewer chrome.
+
+## Solargis (`solargis`) {#solargis}
+
+One harvest scope for the whole vendor-hosted service (the public
+[maps-and-gis-data download](https://solargis.com/maps-and-gis-data/download) catalog;
+paid Data/WMS API access is key-gated). Filter exports on `software.id = 'solargis'`.
+
+**Keep:** publicly listed GIS data / map-layer products (solar resource layers,
+meteorological parameters, coverage and format metadata). **Drop:** Solargis Atlas /
+Evaluate viewer chrome, per-user project exports, and marketing pages. Vendor-hosted
+commercial service — do not treat the WMS API GetCapabilities as a second catalog when
+the download host is already registered. Discovery:
+[discovery-geoportals-sdi.md](discovery-geoportals-sdi.md#solargis).
+
+## IGVT (`igvt`) {#igvt}
+
+DGU-branded viewer with no catalog API of its own — it consumes OGC services
+(WMS/WMTS/WFS) and a per-deployment layer config. Harvest the OGC GetCapabilities
+behind the viewer (same grain as [GeoServer](#geoserver)), not the Angular/ExtJS
+viewer chrome. There is no standard relative API on the catalog link (tier D —
+no apidetect probes).
+
+**Keep:** named layers/datasets from the deployment's WMS/WMTS/WFS
+GetCapabilities that the viewer exposes. **Drop:** basemap tiles, print/PDF
+reports, `igeo-loading` app shell, and bookmarked-layer local state
+(`igvt_bookmarked_layers`). Viewer grain: [harvest-viewers.md](harvest-viewers.md).
+Discovery: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md#igvt).
 
 ## Related
 

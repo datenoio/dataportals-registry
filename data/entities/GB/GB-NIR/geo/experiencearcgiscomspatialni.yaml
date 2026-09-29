@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Northern Ireland
 description: Official public map viewer for interrogating Ordnance Survey mapping
   and authoritative geospatial information from multiple Northern Ireland sources.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/61a4d209f6854ab2b79437fad24a6e9d/data?f=json
 id: experiencearcgiscomspatialni
 langs:
 - id: EN

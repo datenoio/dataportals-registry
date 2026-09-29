@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Nakhon Si Thammarat
 description: Public City Data Learning Platform geoportal of Thung Song Town Municipality on ArcGIS
   Experience Builder.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/b2e8c58a37b74af68bd299ce1adef872/data?f=json
 id: experiencearcgiscomthungsong
 langs:
 - id: TH

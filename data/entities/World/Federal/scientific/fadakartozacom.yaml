@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion:
+      id: '001'
+      name: World
+description: infraFADA publishes expert-curated global checklists of freshwater
+  animal species and genera on the Biodiversity Information Management System.
+  The lists are a taxonomic backbone for Catalogue of Life, GBIF, and related
+  infrastructures.
+endpoints:
+- type: rest
+  url: https://fada.kartoza.com/api/module-summary/
+- type: rest
+  url: https://fada.kartoza.com/api/layer/
+id: fadakartozacom
+langs:
+- id: EN
+  name: English
+link: https://fada.kartoza.com/
+name: Freshwater Animal Diversity Assessment
+owner:
+  link: https://fada.kartoza.com/
+  location:
+    country:
+      id: World
+      name: World
+  name: Freshwater Animal Diversity Assessment
+  type: Academy
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: bims
+  name: BIMS
+status: active
+tags:
+- biodiversity
+- taxonomy
+- freshwater
+- checklists
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00009930

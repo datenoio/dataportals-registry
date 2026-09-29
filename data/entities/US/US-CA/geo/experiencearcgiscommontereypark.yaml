@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: US-CA
       name: California
 description: City of Monterey Park public ArcGIS Experience Builder zoning standards map.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/b43701234c9d4b359cd399f39ebb3ab3/data?f=json
 id: experiencearcgiscommontereypark
 langs:
 - id: EN

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -49,8 +49,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: arcgisserver
+  name: ArcGIS Server
 status: active
 tags:
 - geospatial
@@ -67,3 +67,8 @@ topics:
   name: Planning / Cadastre
   type: iso19115
 uid: cdi99996612
+endpoints:
+- type: arcgis:rest:info
+  url: https://sigcevennes.fr/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sigcevennes.fr/arcgis/rest/services?f=pjson

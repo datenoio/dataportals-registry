@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -67,3 +67,6 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: cdi00003106
+endpoints:
+- type: arcgishubapi
+  url: https://portal-de-datos-abiertos-del-igg-cigeo-igg-cigeo.hub.arcgis.com/api/v3/datasets

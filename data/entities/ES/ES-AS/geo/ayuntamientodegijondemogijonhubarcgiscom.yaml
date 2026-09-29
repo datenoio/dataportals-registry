@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -111,3 +111,6 @@ topics:
   name: Transportation
   type: iso19115
 uid: cdi00002829
+endpoints:
+- type: arcgishubapi
+  url: https://ayuntamiento-de-gijon-demo-gijon.hub.arcgis.com/api/v3/datasets

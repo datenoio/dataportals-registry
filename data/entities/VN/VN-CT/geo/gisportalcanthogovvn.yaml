@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: VN-CT
+      name: Cần Thơ
+description: ArcGIS Server REST catalog of Can Tho City, publishing land-use status
+  maps and department planning services. The same directory also answers on gisapi.cantho.gov.vn,
+  www.gis.cantho.gov.vn, and spp.cantho.gov.vn.
+id: gisportalcanthogovvn
+langs:
+- id: VN
+  name: Vietnamese
+link: https://gisportal.cantho.gov.vn:6443/arcgis/rest/services
+name: Can Tho City ArcGIS geoportal
+owner:
+  link: https://cantho.gov.vn
+  location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 30
+    subregion:
+      id: VN-CT
+      name: Cần Thơ
+  name: Can Tho City People's Committee
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- planning
+- vietnam
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00009201
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisportal.cantho.gov.vn:6443/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisportal.cantho.gov.vn:6443/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisportal.cantho.gov.vn:6443/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisportal.cantho.gov.vn:6443/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisportal.cantho.gov.vn:6443/arcgis/rest/services?f=geositemap

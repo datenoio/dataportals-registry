@@ -17,11 +17,11 @@ Coding agents: [agents/harvest.md](agents/harvest.md). Production harvesting for
 | Guide | Use when |
 |-------|----------|
 | [Scientific repositories](harvest-scientific.md) | DSpace, Invenio, EPrints, Pure, Esploro, DLCM, easydb, Haplo, Omega-PSIR, Hyrax, Archipelago, LabKey, Synapse, XNAT, OMERO, Kadi4Mat, e!DAL, NOMAD, and other IRs that mix **publications, theses, software, and datasets** |
-| [Domain scientific repositories](harvest-scientific-domain.md) | IPT, THREDDS, ERDDAP, FROST-Server, GeoNature, Specify, DaCHS, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal |
+| [Domain scientific repositories](harvest-scientific-domain.md) | IPT, Biodiv, THREDDS, ERDDAP, FROST-Server, GeoNature, Specify, DaCHS, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, InterMine, GRIN-Global, PlutoF, JGI, cBioPortal |
 | [Open data portals](harvest-opendata.md) | CKAN, OpenDataSoft, Socrata, RUDI, GIS Open Data Portal, ResourceContracts, RDF Online Repository, Guangxi, ODWeb, OpenGov — packages vs resources vs contracts vs reports |
 | [Geoportals](harvest-geoportals.md) | GeoNetwork CSW, GeoNode, ArcGIS, STAC, OGC API, OneGeo Suite, PRODIGE, G3W-SUITE, CubeWerx, M.App Enterprise, mviewer, Isogeo, Geocortex, QGIS Server — layers vs services vs tiles |
 | [Indicators and microdata](harvest-indicators.md) | PxWeb / PxStat tables, DGBAS Web tables, SDMX dataflows, OpenSDG / Goal Tracker, IMF NSDP, NADA studies, DHIS2, TabNet, SIDRA, FENIX, SparkMap, eDatos, Cancer-Rates.info, HCI, Virtual LMI, Fingertips, KOSIS, e-Stat, UNdata, Comtrade Plus, Our World in Data, IPUMS |
-| [Metadata catalogs](harvest-metadata.md) | FAIR Data Point DCAT, Aristotle MDR, Fusion Registry, Metadata Browser structure |
+| [Metadata catalogs](harvest-metadata.md) | FAIR Data Point DCAT, Aristotle MDR, Fusion Registry, Metadata Browser, CBD Clearing-House, WMO OSCAR |
 | [Search, ML, API, marketplaces](harvest-other.md) | Aggregators, OpenAIRE, OpenML, Hugging Face, CodaLab, API directories, marketplaces, `custom` |
 | [Protocols](harvest-protocols.md) | OAI-PMH, CSW, DCAT, STAC, SDMX, OGC, ArcGIS REST — grain that is shared across products |
 | [Incremental harvests](harvest-incremental.md) | `from=`, `metadata_modified`, STAC `datetime`, checkpoints |

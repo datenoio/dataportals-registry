@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -36,8 +36,8 @@ owner:
   name: San Diego Supercomputer Center
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -55,3 +55,6 @@ topics:
   name: Geoscientific Information
   type: iso19115
 uid: cdi00033739
+endpoints:
+- type: sitemap
+  url: https://www.opentopography.org/sitemap.xml

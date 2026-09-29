@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
       name: Northern Europe
 description: Marine data portal for discovering and downloading Irish seabed survey
   reports, bathymetry, backscatter, sub-bottom profiles, and vector data.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/3f2815ec89e745d2b65630429d06385c/data?f=json
 id: experiencearcgiscominfomar
 langs:
 - id: EN

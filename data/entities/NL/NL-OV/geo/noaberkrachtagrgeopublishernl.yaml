@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-OV
+      name: Overijssel
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ArcGIS REST services for the Noaberkracht Dinkelland-Tubbergen landscape
+  casco in Noordoost-Twente.
+id: noaberkrachtagrgeopublishernl
+langs:
+- id: NL
+  name: Dutch
+link: https://noaberkracht-agr.geopublisher.nl/arcgis/rest/services
+name: Noaberkracht Noordoost-Twente ArcGIS Server
+owner:
+  link: https://www.noaberkracht.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-OV
+      name: Overijssel
+  name: Noaberkracht Dinkelland Tubbergen
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+uid: cdi00008811
+endpoints:
+- type: arcgis:rest:info
+  url: https://noaberkracht-agr.geopublisher.nl/arcgis/rest/info?f=json
+- type: arcgis:rest:services
+  url: https://noaberkracht-agr.geopublisher.nl/arcgis/rest/services?f=json
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- netherlands

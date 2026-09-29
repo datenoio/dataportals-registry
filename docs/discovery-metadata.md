@@ -48,7 +48,7 @@ SDMX-native structural metadata registry (code lists, DSDs, REST). Often branded
 
 **Signals:** Fusion Registry; SDMX REST (`/sdmx/v2/` or `/ws/public/sdmxapi/`); structural metadata browser.
 
-**Confirm:** GET the public registry or SDMX REST catalog. Do not confuse with a PxWeb/.Stat **data** portal — those stay `pxweb` / `statsuite` under indicators.
+**Confirm:** GET the public registry or SDMX REST catalog. Do not confuse with a PxWeb/.Stat **data** portal — those stay `pxweb` / `statsuite` under indicators. A public series UI titled Fusion Data Browser stays `fusiondatabrowser`.
 
 | Tool | Query |
 |------|-------|
@@ -100,6 +100,44 @@ Stanford metadata-template workbench. App: [cedar.metadatacenter.org](https://ce
 | Google | `"CEDAR Workbench" OR "Project Cedar" (metadata OR template)` |
 | Censys | `web.names: "cedar.metadatacenter.org"` |
 | FOFA | `host="cedar.metadatacenter.org"` |
+
+## CBD Clearing-House (`cbdchm`) {#cbdchm}
+
+Secretariat application for the Convention on Biological Diversity clearing-houses. Repository: [scbd/absch.cbd.int](https://github.com/scbd/absch.cbd.int). API notes: [docs.cbddev.xyz](https://docs.cbddev.xyz/).
+
+**Signals:** `/app/css/template.css` and `/app/components/scbd-branding/`. Public realms are `chm.cbd.int`, `absch.cbd.int`, and `bch.cbd.int`.
+
+**Confirm:** GET the realm home and check for `/app/css/template.css`. Register each public realm once. Skip `api.cbd.int`, `accounts.cbd.int`, `oasis.cbd.int` (staff manage UI), `*.cbddev.xyz`, training hosts, and the developer docs portal. The Online Reporting Tool at `ort.cbd.int` is a separate Nuxt app ([scbd/online-reporting-tool](https://github.com/scbd/online-reporting-tool)), not this software. National Bioland sites (`github.com/scbd/bioland`) are a different product.
+
+Checked 25 September 2026. Live realm HTML no longer contains `scbd/angular-flex`. That FOFA query still returns nine hosts from an older index (the three realms, `training-absch.cbd.int`, `accounts.cbd.int`, `oasis.cbd.int`, plus `accounts`, `bch`, and `oasis` on `cbddev.xyz`). `body="scbd-branding"` and `body="@scbd/ckeditor5"` return 0 because FOFA has not indexed the current shell. Unscoped `body="/app/css/template.css"` is noise (hundreds of unrelated shops). Scope it with `domain="cbd.int"`: four hosts, the three public realms plus `training-absch.cbd.int` (times out; training copy). `domain="cbd.int"` itself is about 90 hosts and is the sibling check; no other host on that domain serves this app. `body="scbd/angular-flex" && domain!="cbd.int" && domain!="cbddev.xyz"` is 0.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Clearing-House" (ABSCH OR BCH OR CHM) site:cbd.int` |
+| Censys | `web.endpoints.http.body: "scbd/angular-flex"` |
+| FOFA | `body="/app/css/template.css" && domain="cbd.int"` |
+| FOFA | `body="scbd/angular-flex"` |
+
+## WMO OSCAR (`oscar`) {#oscar}
+
+WMO Observing Systems Capability Analysis and Review Tool. Product home: [space.oscar.wmo.int](https://space.oscar.wmo.int/). API notes: [space.oscar.wmo.int/apidoc](https://space.oscar.wmo.int/apidoc/).
+
+**Signals:** OSCAR/Space sets cookie `Oscar-release-diag` and title “WMO OSCAR” at `space.oscar.wmo.int`. OSCAR/Surface (`oscar.wmo.int/surface`, `/surface/rest/api`) and GAWSIS (`gawsis.meteoswiss.ch/GAWSIS/`) share an Angular shell with `Application.OSCAR` in the HTML. The Surface `<title>` is empty until that app boots.
+
+**Confirm:** GET the module home. One record per public module (Surface, Space). GAWSIS is the same shell and is already registered on its own. Skip OSCAR/Requirements pages on the Space host. Skip staging hosts `space-test.oscar.wmo.int`, `oscardepl.wmo.int`, `gawsisdepl.meteoswiss.ch`, and `gawsisdevt.meteoswiss.ch`. Skip the WMO Weather Radar Database, the OSCAR speech corpus, university repositories named Oscar, and OSCAR-CEL (`oscar-cel.com`, title “Bienvenue sur OSCAR”).
+
+Checked 25 September 2026. `body="Observing Systems Capability Analysis and Review Tool"` is 17 rows: Space, `space-test`, GAWSIS production and staging, plus a Japanese meteorology blog and weathernco.com. It misses production Surface, because `oscar.wmo.int/` is a 301 to Space and FOFA does not store `/surface/`. `title="WMO OSCAR"` is 4 rows (Space and `space-test` only). `body="css/oscar.css"` is 108 and is mostly other products named OSCAR. `body="favicon_oscar.ico"` also matches OSCAR-CEL.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Observing Systems Capability Analysis and Review Tool" OSCAR` |
+| Censys | `web.endpoints.http.body: "Oscar-release-diag"` |
+| FOFA | `body="Oscar-release-diag"` |
+| Censys | `web.endpoints.http.body: "Application.OSCAR"` |
+| FOFA | `body="Application.OSCAR"` |
+| FOFA | `body="Oscar-release-diag" \|\| body="Application.OSCAR"` |
+| FOFA | `host=".oscar.wmo.int"` |
+| crt.sh | `%.oscar.wmo.int` |
 
 ## Related
 

@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: ID-KS
+      name: Kalimantan Selatan
+description: Kabupaten Hulu Sungai Tengah geospatial network (SJIG). WMS title Geoportal
+  Web Map Service Kab.Hulu Sungai Tengah, with village boundaries and sector layers.
+id: geoportalhstkabgoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://geoportal.hstkab.go.id/geoserver
+name: Geoportal Kabupaten Hulu Sungai Tengah
+owner:
+  link: https://geoportal.hstkab.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    subregion:
+      id: ID-KS
+      name: Kalimantan Selatan
+  name: Pemerintah Kabupaten Hulu Sungai Tengah
+  type: Local government
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- boundaries
+- geospatial
+- government
+- indonesia
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009574
+endpoints:
+- type: wms111
+  url: https://geoportal.hstkab.go.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoportal.hstkab.go.id/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoportal.hstkab.go.id/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geoportal.hstkab.go.id/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoportal.hstkab.go.id/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

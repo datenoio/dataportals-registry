@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Western Cape
 description: Theewaterskloof Municipality public Experience Builder GIS viewer for
   cadastral and related municipal map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/56030cf3e61a48ebb2f95f9a5847c0c5/data?f=json
 id: experiencearcgiscomtheewaterskloof
 langs:
 - id: EN

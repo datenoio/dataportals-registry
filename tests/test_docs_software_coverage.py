@@ -14,12 +14,18 @@ from docs_software_coverage import (
     missing_mentions,
     render_index_markdown,
     coverage_rows,
+    production_documentation,
     stale_software_anchor_links,
     DOCS,
 )
 
 
 class TestDocsSoftwareCoverage:
+    def test_non_catalog_products_have_documentation_instead_of_harvest_recipes(self):
+        assert production_documentation("cspro") == "https://www.census.gov/data/software/cspro.html"
+        assert production_documentation("datashield") == "https://datashield.org/about/"
+        assert production_documentation("ckan") is None
+
     def test_all_software_ids_mentioned(self):
         missing_d, missing_h = missing_mentions()
         assert missing_d == [], (

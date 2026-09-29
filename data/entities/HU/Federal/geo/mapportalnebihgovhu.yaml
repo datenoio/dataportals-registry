@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public ArcGIS Server on the NÉBIH map portal. The open OKF folder publishes
+  forest and settlement fire-danger maps. Distinct from the Airterkép services directory.
+id: mapportalnebihgovhu
+langs:
+- id: HU
+  name: Hungarian
+link: https://mapportal.nebih.gov.hu/arcgis/rest/services
+name: NÉBIH map portal fire-risk services
+owner:
+  link: https://portal.nebih.gov.hu
+  location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+  name: National Food Chain Safety Office (NÉBIH)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- arcgisserver
+- geoportal
+- geospatial
+- GIS
+- Hungary
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://mapportal.nebih.gov.hu/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mapportal.nebih.gov.hu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mapportal.nebih.gov.hu/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://mapportal.nebih.gov.hu/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mapportal.nebih.gov.hu/arcgis/rest/services?f=geositemap
+uid: cdi00009303

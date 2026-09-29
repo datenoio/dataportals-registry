@@ -21,6 +21,11 @@ coverage:
 description: Web portal for geoscience data from Estonia. Provides direct search capabilities
   to SARV information system and links to other data sources.
 endpoints:
+- type: openapi
+  url: https://rwapi.geoloogia.info/api/schema/v1/public/
+  version: '3.0'
+- type: rest
+  url: https://rwapi.geoloogia.info/api/v1/public/datasets/
 - type: sitemap
   url: https://geoloogia.info/sitemap.xml
 - type: sitemap
@@ -60,8 +65,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: sarv
+  name: SARV
 status: active
 tags:
 - scientific

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,12 @@ coverage:
     subregion:
       id: PT-13
       name: Porto
-description: Public spatial data infrastructure (SIGAMP) geoportal of Trofa municipality.
+description: Public spatial data infrastructure (SIGAMP) geoportal of Trofa municipality,
+  with a GeoNetwork metadata catalog at sig.mun-trofa.pt/geonetwork.
+endpoints:
+- type: csw202
+  url: https://sig.mun-trofa.pt/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
 id: sigmuntrofapt
 langs:
 - id: PT
@@ -38,8 +43,8 @@ owner:
   name: Município da Trofa
   type: Local government
 software:
-  id: custom
-  name: Custom software
+  id: geonetwork
+  name: GeoNetwork
 status: active
 tags:
 - geospatial

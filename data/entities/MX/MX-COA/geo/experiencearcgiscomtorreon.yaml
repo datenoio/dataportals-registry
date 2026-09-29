@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Coahuila de Zaragoza
 description: IMPLAN Torreón Sistema Digital de Gestión Territorial Experience Builder
   viewer for zoning, road structure, socioeconomics, and municipal services layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/1f07f24ca23d41399303f2e0ee3e126a/data?f=json
 id: experiencearcgiscomtorreon
 langs:
 - id: ES

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,7 +13,7 @@ coverage:
       name: Greece
     level: 30
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
     subregion:
       id: GR-I
@@ -51,8 +51,8 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - geospatial
@@ -78,3 +78,6 @@ topics:
   name: Planning / Cadastre
   type: iso19115
 uid: cdi00027501
+endpoints:
+- type: drupal:jsonapi
+  url: https://gis.attica.gov.gr/jsonapi

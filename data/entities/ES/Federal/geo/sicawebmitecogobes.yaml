@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,7 +13,7 @@ coverage:
       name: Spain
     level: 20
     macroregion:
-      id: '039'
+      id: 039
       name: Southern Europe
 description: Spanish noise information system (Sistema de Información sobre Contaminación
   Acústica) with strategic noise maps reported under the Environmental Noise Directive.
@@ -22,7 +22,7 @@ langs:
 - id: ES
   name: Spanish
 link: https://sicaweb.miteco.gob.es/
-name: "SICA noise information system"
+name: SICA noise information system
 owner:
   link: https://www.miteco.gob.es
   location:
@@ -33,8 +33,8 @@ owner:
   name: Ministerio para la Transición Ecológica y el Reto Demográfico
   type: Central government
 software:
-  id: custom
-  name: Custom software
+  id: wordpress
+  name: WordPress
 status: active
 tags:
 - geospatial
@@ -44,3 +44,9 @@ topics:
   name: Location
   type: iso19115
 uid: cdi00008097
+endpoints:
+- type: rest
+  url: https://sicaweb.miteco.gob.es/wp-json/
+- type: rest:posts
+  url: https://sicaweb.miteco.gob.es/wp-json/wp/v2/posts
+  version: '2'

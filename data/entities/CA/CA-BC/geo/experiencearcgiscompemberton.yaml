@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: British Columbia
 description: Village of Pemberton public ArcGIS Experience Builder web maps for parcels,
   zoning, OCP, infrastructure, and related municipal layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/b6d340fe06ff4337bdf93c47d16034cc/data?f=json
 id: experiencearcgiscompemberton
 langs:
 - id: EN

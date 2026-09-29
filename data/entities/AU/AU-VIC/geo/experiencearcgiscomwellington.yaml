@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Victoria
 description: Wellington Shire Council ArcGIS Experience Builder Property Enquiry Map
   for planning zones, overlays, and municipal spatial layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/9574d185f20c477f84bbc2afbb80d75c/data?f=json
 id: experiencearcgiscomwellington
 langs:
 - id: EN

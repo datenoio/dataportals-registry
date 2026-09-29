@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 20
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+description: Daily European snow-cover map from the Space Research Centre of the Polish
+  Academy of Sciences. The same WMS GetCapabilities is also published at snieg.cbkpan.pl
+  and whereissnow.com.
+id: snowcbkpanpl
+langs:
+- id: PL
+  name: Polish
+link: https://snow.cbkpan.pl/geoserver
+name: CBK PAN Snow Cover
+owner:
+  link: https://snow.cbkpan.pl/
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 20
+  name: Centrum Badań Kosmicznych PAN
+  type: Academy
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GIS
+- GeoServer
+- academic
+- geospatial
+- poland
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Elevation
+  name: Elevation
+  type: iso19115
+endpoints:
+- type: wms111
+  url: https://snow.cbkpan.pl/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://snow.cbkpan.pl/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://snow.cbkpan.pl/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://snow.cbkpan.pl/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://snow.cbkpan.pl/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+uid: cdi00009476

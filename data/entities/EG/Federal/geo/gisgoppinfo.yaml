@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EG
+      name: Egypt
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: ArcGIS Server REST services directory for Egypt's General Organization
+  for Physical Planning. The public Hosted folder publishes approved urban-boundary,
+  governorate, and cadastral-survey layers.
+id: gisgoppinfo
+langs:
+- id: AR
+  name: Arabic
+link: https://gis.gopp.info/arcgis/rest/services
+name: General Organization for Physical Planning GIS Server
+owner:
+  link: https://gopp.gov.eg
+  location:
+    country:
+      id: EG
+      name: Egypt
+    level: 20
+  name: General Organization for Physical Planning
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- egypt
+- geospatial
+- government
+- planning
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.gopp.info/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.gopp.info/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.gopp.info/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.gopp.info/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.gopp.info/arcgis/rest/services?f=geositemap
+uid: cdi00009310

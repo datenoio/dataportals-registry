@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: EEA Discomap NEST ArcGIS REST directory with public landscape-fragmentation,
+  local-authority signatory, and protected-area map services. Several thematic folders
+  require a token.
+id: nestdiscomapeeaeuropaeu
+langs:
+- id: EN
+  name: English
+link: https://nest.discomap.eea.europa.eu/arcgis/rest/services
+name: Discomap NEST Services
+owner:
+  link: https://www.eea.europa.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+  name: European Environment Agency
+  type: International
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- european-union
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+endpoints:
+- type: arcgis:rest:info
+  url: https://nest.discomap.eea.europa.eu/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://nest.discomap.eea.europa.eu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://nest.discomap.eea.europa.eu/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://nest.discomap.eea.europa.eu/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://nest.discomap.eea.europa.eu/arcgis/rest/services?f=geositemap
+uid: cdi00009097

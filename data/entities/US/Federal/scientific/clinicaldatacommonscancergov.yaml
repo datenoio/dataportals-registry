@@ -1,0 +1,50 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Clinical and Translational Data Commons (CTDC) provides access to clinical
+  and translational data from NCI-funded trials and studies, built on the Bento framework.
+id: clinicaldatacommonscancergov
+langs:
+- id: EN
+  name: English
+link: https://clinical.datacommons.cancer.gov
+name: Clinical and Translational Data Commons
+owner:
+  link: https://datacommons.cancer.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: NCI Cancer Research Data Commons
+  type: Central government
+software:
+  id: bento
+  name: Bento Framework
+status: active
+tags:
+- government
+- research
+- scientific
+- united-states
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00010047
+endpoints:
+- type: bento:injectenv
+  url: https://clinical.datacommons.cancer.gov/injectEnv.js

@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-QC
+      name: Quebec
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Public ArcGIS REST services for Ville de Rivière-du-Loup, including the
+  cadastre and the general city map used by the municipal interactive map.
+id: arcgisvillerdlca
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://arcgis.villerdl.ca/server/rest/services
+name: Ville de Rivière-du-Loup ArcGIS REST Services
+owner:
+  link: https://villerdl.ca/
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-QC
+      name: Quebec
+  name: Ville de Rivière-du-Loup
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- canada
+- geospatial
+- government
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00008994
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgis.villerdl.ca/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgis.villerdl.ca/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgis.villerdl.ca/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://arcgis.villerdl.ca/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arcgis.villerdl.ca/server/rest/services?f=geositemap

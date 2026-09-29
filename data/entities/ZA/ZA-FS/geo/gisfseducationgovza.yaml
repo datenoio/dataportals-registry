@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 30
+    macroregion:
+      id: 018
+      name: Southern Africa
+    subregion:
+      id: ZA-FS
+      name: Free State
+description: Public ArcGIS REST services directory of the Free State Department of
+  Education, including school property and pass-rate map services.
+id: gisfseducationgovza
+langs:
+- id: EN
+  name: English
+link: https://gis.fseducation.gov.za/server/rest/services
+name: Free State Education ArcGIS Services
+owner:
+  link: https://www.education.fs.gov.za/
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 30
+    subregion:
+      id: ZA-FS
+      name: Free State
+  name: Free State Department of Education
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- education
+- geospatial
+- government
+- south-africa
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00009049
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.fseducation.gov.za/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.fseducation.gov.za/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.fseducation.gov.za/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.fseducation.gov.za/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.fseducation.gov.za/server/rest/services?f=geositemap

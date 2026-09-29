@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Queensland
 description: Mount Isa City Council public Experience Builder GIS explorer for underground
   infrastructure and local government map layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/0adc629ed3034918b31f3773891c5d1e/data?f=json
 id: experiencearcgiscommountisa
 langs:
 - id: EN

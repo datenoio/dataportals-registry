@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: MX-CMX
+      name: Ciudad de México
+description: INFO Ciudad de México Contrataciones Abiertas dashboard of public
+  procurement records in OCDS. Distinct from the INFO CKAN open-data portal.
+  common.js points the capture API at contratacionesabiertas.infocdmx.org.mx
+  port 3000; that port did not respond on 27 September 2026.
+id: dashboardinfocdmxorgmx
+langs:
+- id: ES
+  name: Spanish
+link: https://dashboard.infocdmx.org.mx/contratacionesabiertas/datosabiertos
+name: Contrataciones Abiertas INFO CDMX
+owner:
+  link: https://www.infocdmx.org.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-CMX
+      name: Ciudad de México
+  name: Instituto de Transparencia, Acceso a la Información Pública, Protección de Datos Personales y
+    Rendición de Cuentas de la Ciudad de México (INFOCDMX)
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: contratacionesabiertas
+  name: Contrataciones Abiertas
+status: active
+tags:
+- procurement
+- OCDS
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+uid: cdi00009849

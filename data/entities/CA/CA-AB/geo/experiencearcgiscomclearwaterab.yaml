@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Alberta
 description: Clearwater County public ArcGIS Experience Builder property assessment
   map for parcels and related county GIS layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/5e705aa7badf4b4fa2ebe9a8b1820128/data?f=json
 id: experiencearcgiscomclearwaterab
 langs:
 - id: EN

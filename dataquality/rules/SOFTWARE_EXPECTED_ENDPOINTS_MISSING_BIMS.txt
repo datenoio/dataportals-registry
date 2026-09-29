@@ -1,0 +1,45 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIMS
+================================================================================
+Generated: 2026-09-29 11:21:05
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIMS
+Priority: MEDIUM
+Total Issues Found: 3
+
+Rule: Identifies records using software.id='bims' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+RW: 1 issue
+ZA: 2 issues
+
+=== SUMMARY BY RECORD ===
+
+freshwaterbiodiversityorg: 1 issue
+bimssanparksorg: 1 issue
+rbisuracrw: 1 issue
+
+=== ISSUES ===
+
+File: ZA/Federal/scientific/freshwaterbiodiversityorg.yaml
+Record ID: freshwaterbiodiversityorg
+Country: ZA
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIMS
+Field: endpoints
+Current Value: {"software_id": "bims", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='bims' is marked as API-capable in software definitions
+
+File: ZA/Federal/scientific/bimssanparksorg.yaml
+Record ID: bimssanparksorg
+Country: ZA
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIMS
+Field: endpoints
+Current Value: {"software_id": "bims", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='bims' is marked as API-capable in software definitions
+
+File: RW/Federal/scientific/rbisuracrw.yaml
+Record ID: rbisuracrw
+Country: RW
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIMS
+Field: endpoints
+Current Value: {"software_id": "bims", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='bims' is marked as API-capable in software definitions

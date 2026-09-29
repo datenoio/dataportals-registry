@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: HU-BU
+      name: Budapest
+description: Public ArcGIS Server for Budapest District XIV (Zugló), with the internet
+  base map, address and parcel search, institutions, and election layers.
+id: terkepzuglohu
+langs:
+- id: HU
+  name: Hungarian
+link: https://terkep.zuglo.hu/arcgis/rest/services
+name: Zugló public map services
+owner:
+  link: https://www.zuglo.hu
+  location:
+    country:
+      id: HU
+      name: Hungary
+    level: 30
+    subregion:
+      id: HU-BU
+      name: Budapest
+  name: Budapest Főváros XIV. Kerület Zugló Önkormányzata
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- arcgisserver
+- geoportal
+- geospatial
+- GIS
+- Hungary
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+endpoints:
+- type: arcgis:rest:info
+  url: https://terkep.zuglo.hu/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://terkep.zuglo.hu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://terkep.zuglo.hu/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://terkep.zuglo.hu/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://terkep.zuglo.hu/arcgis/rest/services?f=geositemap
+uid: cdi00009309

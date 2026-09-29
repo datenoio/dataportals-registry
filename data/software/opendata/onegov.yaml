@@ -1,0 +1,68 @@
+category: Open data portal
+subtype: data_portal_platform
+datatypes:
+  datasets: 'Yes'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'No'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: onegov
+name: OneGov Election Day
+website: https://github.com/OneGov/onegov-cloud
+description: OneGov Election Day is the open-source elections and votes application
+  in OneGov Cloud (Seantis). Swiss cantons and communes publish result tables, JSON
+  and CSV downloads, and a DCAT-AP CH catalog at /catalog.rdf for opendata.swiss.
+  Distinct from Tyler OpenGov (opengov) financial transparency on opengov.com.
+owner:
+  name: Seantis GmbH
+  location:
+    country:
+      id: CH
+      name: Switzerland
+logo_url: https://onegov.github.io/onegov-cloud/favicon.ico
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'Yes'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Global
+  supports_licenses: 'Yes'
+storage_type: Structured
+type: Software
+license:
+  type: MIT
+  url: https://github.com/OneGov/onegov-cloud/blob/master/LICENSE
+version: '2026.43'
+repository_url: https://github.com/OneGov/onegov-cloud
+documentation_url: https://onegov.github.io/onegov-cloud/api/election_day/open_data_en.html
+changelog_url: https://github.com/OneGov/onegov-cloud/releases
+export_formats:
+- JSON
+- CSV
+- Excel
+- RDF
+capabilities:
+- Election and vote results
+- DCAT-AP CH catalog
+- JSON and CSV downloads
+last_updated: '2026-09-26T00:00:00Z'

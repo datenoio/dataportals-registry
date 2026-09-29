@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -15,9 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Former ArcGIS REST services catalog of Port of Antwerp-Bruges. The
-  /arcgis/rest/services path now returns 404 and the host redirects to an authenticated
-  portal login.
+description: Former ArcGIS REST services catalog of Port of Antwerp-Bruges. The /arcgis/rest/services
+  path now returns 404 and the host redirects to an authenticated portal login.
 id: webappsportofantwerpbrugescom
 langs:
 - id: NL
@@ -76,3 +75,6 @@ topics:
   name: Location
   type: iso19115
 uid: cdi00035919
+endpoints:
+- type: arcgis:rest:info
+  url: https://webapps.portofantwerpbruges.com/arcgis/rest/info?f=pjson

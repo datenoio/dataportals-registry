@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Public GeoServer operated by GIS Hosting in Switzerland, with climate,
+  agricultural, and MagOSM workspaces.
+id: geoservergishostingch
+langs:
+- id: DE
+  name: German
+link: https://geoserver.gishosting.ch/geoserver
+name: GIS Hosting GeoServer
+owner:
+  link: https://www.gishosting.ch/
+  location:
+    country:
+      id: CH
+      name: Switzerland
+  name: GIS Hosting
+  type: Business
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00009452
+endpoints:
+- type: wms111
+  url: https://geoserver.gishosting.ch/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserver.gishosting.ch/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoserver.gishosting.ch/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geoserver.gishosting.ch/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geoserver.gishosting.ch/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

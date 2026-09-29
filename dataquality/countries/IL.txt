@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: IL
 ================================================================================
-Generated: 2026-09-24 20:41:37
+Generated: 2026-09-29 11:21:05
 Country Code: IL
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 8
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
 
@@ -18,7 +18,71 @@ Field: rights
 Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
 Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER]
+Count: 1
+Priority: MEDIUM
+
+File: IL/IL-D/geo/gispmatamarcoilportal.yaml
+Record ID: gispmatamarcoilportal
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
+Count: 1
+Priority: MEDIUM
+
+File: IL/Federal/scientific/weizmannacilmolgenloqate.yaml
+Record ID: weizmannacilmolgenloqate
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA]
+Count: 5
+Priority: MEDIUM
+
+File: IL/IL-HA/indicators/svivaschnet.yaml
+Record ID: svivaschnet
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
+Field: endpoints
+Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
+
+File: IL/IL-HA/indicators/envihaifanet.yaml
+Record ID: envihaifanet
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
+Field: endpoints
+Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
+
+File: IL/IL-D/indicators/neothovavonline.yaml
+Record ID: neothovavonline
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
+Field: endpoints
+Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
+
+File: IL/Federal/indicators/airsvivagovil.yaml
+Record ID: airsvivagovil
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
+Field: endpoints
+Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
+
+File: IL/Federal/indicators/meteocoil.yaml
+Record ID: meteocoil
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
+Field: endpoints
+Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
 MISSING_RIGHTS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA: 5 issues

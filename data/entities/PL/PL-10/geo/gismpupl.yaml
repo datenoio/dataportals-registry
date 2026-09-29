@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    subregion:
+      id: PL-10
+      name: Łódzkie
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Public ArcGIS Server directory of the Łódź municipal urban-planning office,
+  including local spatial-plan and study map layers.
+id: gismpupl
+langs:
+- id: PL
+  name: Polish
+link: https://gis.mpu.pl/server/rest/services
+name: Miejska Pracownia Urbanistyczna w Łodzi
+owner:
+  link: https://mpu.lodz.pl
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    subregion:
+      id: PL-10
+      name: Łódzkie
+  name: Miejska Pracownia Urbanistyczna w Łodzi
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- planning
+- poland
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00008938
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.mpu.pl/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.mpu.pl/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.mpu.pl/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.mpu.pl/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.mpu.pl/server/rest/services?f=geositemap

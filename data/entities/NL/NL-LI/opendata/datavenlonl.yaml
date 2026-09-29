@@ -17,10 +17,13 @@ coverage:
     subregion:
       id: NL-LI
       name: Limburg
-description: Open data portal of the municipality of Venlo
+description: Data-asset catalog of Gemeente Venlo on Het Dataloket. Public search
+  lists open assets; the tenant is not flagged as a fully public portal.
 endpoints:
-- type: sitemap
-  url: https://data.venlo.nl/sitemap.xml
+- type: dataloket:search
+  url: https://data.venlo.nl/api/search
+- type: dataloket:configuration
+  url: https://data.venlo.nl/api/configuration
 id: datavenlonl
 langs:
 - id: NL
@@ -50,8 +53,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: dataloket
+  name: Het Dataloket
 status: active
 tags:
 - government

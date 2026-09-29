@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: New Brunswick
 description: Capital Region Service Commission Experience Builder zoning map covering rural
   communities and the Capital Region rural district around Fredericton.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/21af708b8d254d6ab2410a471442ee95/data?f=json
 id: experiencearcgiscomcrsc
 langs:
 - id: EN

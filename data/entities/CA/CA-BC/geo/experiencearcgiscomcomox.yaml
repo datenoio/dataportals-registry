@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: British Columbia
 description: Town of Comox public ArcGIS Experience Builder interactive map for properties
   and related municipal layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/ef066532b9ed4d398f31648a2148344c/data?f=json
 id: experiencearcgiscomcomox
 langs:
 - id: EN

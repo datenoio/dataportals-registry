@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,8 +14,8 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Hungarian CLARIN national consortium portal listing HunCLARIN member institutions and language
-  resources.
+description: Hungarian CLARIN national consortium portal listing HunCLARIN member
+  institutions and language resources.
 id: clarinhu
 identifiers:
 - id: openaire
@@ -38,8 +38,8 @@ owner:
   name: HunCLARIN / Hungarian Research Centre for Linguistics
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -59,3 +59,6 @@ rights:
   privacy_policy_url: null
   rights_type: unknown
   tos_url: null
+endpoints:
+- type: rss
+  url: https://clarin.hu/rss.xml

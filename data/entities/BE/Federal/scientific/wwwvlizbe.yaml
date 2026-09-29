@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,9 +14,10 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: The Flanders Marine Institute (VLIZ) is a centre for marine and coastal research.
-  As a partner in various projects and networks it promotes and supports the international
-  image of Flemish marine scientific research and international marine education.
+description: The Flanders Marine Institute (VLIZ) is a centre for marine and coastal
+  research. As a partner in various projects and networks it promotes and supports
+  the international image of Flemish marine scientific research and international
+  marine education.
 id: wwwvlizbe
 identifiers:
 - id: openaire
@@ -41,8 +42,8 @@ owner:
   name: Flanders Marine Institute
   type: Academy
 software:
-  id: custom
-  name: Custom software
+  id: drupal
+  name: Drupal
 status: active
 tags:
 - scientific
@@ -62,3 +63,6 @@ topics:
   name: Oceans
   type: iso19115
 uid: cdi00028507
+endpoints:
+- type: rss
+  url: https://www.vliz.be/rss.xml

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: CZ-32
       name: Plzeňský kraj
 description: GisOnline map application of the municipality of Líně.
+endpoints:
+- type: gisonline:project
+  url: https://app.gisonline.cz/api2/projects/436
 id: appgisonlineczline
 langs:
 - id: CS

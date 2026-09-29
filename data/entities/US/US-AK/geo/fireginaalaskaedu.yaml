@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-AK
+      name: Alaska
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ArcGIS Server for the Geographic Information Network of Alaska. Public
+  services include VIIRS fire and heat-point layers.
+id: fireginaalaskaedu
+langs:
+- id: EN
+  name: English
+link: https://fire.gina.alaska.edu/arcgis/rest/services
+name: GINA Wildfire GIS Server
+owner:
+  link: https://gina.alaska.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-AK
+      name: Alaska
+  name: Geographic Information Network of Alaska
+  type: Academy
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- academic
+- geospatial
+- united-states
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00009098
+endpoints:
+- type: arcgis:rest:info
+  url: https://fire.gina.alaska.edu/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://fire.gina.alaska.edu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://fire.gina.alaska.edu/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://fire.gina.alaska.edu/arcgis/rest/services?f=sitemap

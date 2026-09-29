@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Public ArcGIS REST services for Ontario Northland, including Moosonee
+  and northern Quebec imagery and the production enterprise-asset map. The GL1 application
+  folder requires a token.
+id: arcgismyontcca
+langs:
+- id: EN
+  name: English
+link: https://arcgis.myontc.ca/server/rest/services
+name: Ontario Northland ArcGIS REST Services
+owner:
+  link: https://www.ontarionorthland.ca/
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: Ontario Northland Transportation Commission
+  type: Regional government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- canada
+- geospatial
+- government
+- imagery
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00008991
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgis.myontc.ca/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgis.myontc.ca/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgis.myontc.ca/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://arcgis.myontc.ca/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arcgis.myontc.ca/server/rest/services?f=geositemap

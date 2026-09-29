@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    subregion:
+      id: PT-05
+      name: Castelo Branco
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: ArcGIS Server 11.3 services directory of Oleiros, with municipal master-plan
+  and water-infrastructure folders.
+id: sigcmoleirospt
+langs:
+- id: PT
+  name: Portuguese
+link: https://sig.cm-oleiros.pt/arcgis/rest/services
+name: SIG de Oleiros
+owner:
+  link: https://www.cm-oleiros.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    subregion:
+      id: PT-05
+      name: Castelo Branco
+  name: Câmara Municipal de Oleiros
+  type: Local government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- geospatial
+- government
+- infrastructure
+- portugal
+- water
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00008955
+endpoints:
+- type: arcgis:rest:info
+  url: https://sig.cm-oleiros.pt/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.cm-oleiros.pt/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig.cm-oleiros.pt/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://sig.cm-oleiros.pt/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sig.cm-oleiros.pt/arcgis/rest/services?f=geositemap

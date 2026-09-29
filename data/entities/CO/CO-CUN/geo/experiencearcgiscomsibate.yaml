@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Cundinamarca
 description: Public cadastral geovisor of Sibaté, Cundinamarca, on ArcGIS Experience
   Builder, with municipal boundaries and urban and rural parcels.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/dc734b34b002498594026efc8344b951/data?f=json
 id: experiencearcgiscomsibate
 langs:
 - id: ES

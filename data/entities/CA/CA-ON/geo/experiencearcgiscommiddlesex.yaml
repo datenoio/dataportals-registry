@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Ontario
 description: Public Middlesex Map GIS viewer for Middlesex County, Ontario, including
   property, planning, and source-water layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/487815eb4525429bb9aae32ff50dcd09/data?f=json
 id: experiencearcgiscommiddlesex
 langs:
 - id: EN

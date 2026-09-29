@@ -2,7 +2,7 @@
 
 How to grow coverage and quality, based on **~3,900 Cursor sessions** (November 2025–8 September 2026) and the releases they produced. This is the *what to work on next* guide. Mechanics live in [discover.md](discover.md), [contribute.md](contribute.md), [scheduled.md](../scheduled.md), and [metadata-quality.md](../metadata-quality.md). Hunt-pattern table: [discovery.md](../discovery.md#hunt-patterns).
 
-Working tree (24 September 2026): **41,167** verified catalogs, **1** scheduled YAML, **665** software IDs, **224** country folders. Published snapshot: v1.22.0 (41,167 catalogs, 1 scheduled, 665 software). Rebuild exports when YAML and `data/datasets/` diverge.
+Working tree (27 September 2026): **42,390** verified catalogs, **1** scheduled YAML, **733** software IDs, **224** country folders. Published snapshot: v1.22.0 (41,167 catalogs, 1 scheduled, 665 software). Rebuild exports when YAML and `data/datasets/` diverge.
 
 ## What those sessions actually did
 
@@ -61,7 +61,7 @@ Hunt log (one JSON object per line):
 {"date":"2026-09-16","kind":"software-instance","target":"tailormap","list_url":"https://www.tailormap.com/","added":11,"skipped_dupes":4,"status":"complete","notes":"vendor list exhausted"}
 ```
 
-`kind` is one of: `software-instance`, `country-shape`, `igo`, `named-directory`, `harvest-source`, `university-ir`, `indicators`, `municipal-gis`, `custom-review`, `country-review`, `process`. `status` is `complete`, `partial`, or `blocked`.
+`kind` is one of: `analysis`, `country-gap`, `country-geoportals`, `country-indicators`, `country-opendata`, `country-review`, `country-scientific`, `country-shape`, `custom-review`, `igo-organization`, `municipal-gis`, `named-directory`, `national-harvest-sources`, `process`, `scheduled-review`, `single-add`, `software-instance`, `university-ir`. `status` is `complete`, `partial`, or `blocked`. The same set is `HUNT_KINDS` in `scripts/hunt.py`.
 
 Do not commit `.tmp_aq/` probe scripts or JSON. Rebuild `data/datasets/` only when the user asked for a release or the YAML/export counts have diverged.
 

@@ -186,6 +186,17 @@ GET https://host/portal/search
 
 **Keep:** AODN **dataset** hits. **Drop:** individual file downloads and the national map chrome.
 
+## SeaDataNet (`seadatanet`) {#seadatanet}
+
+Pan-European marine metadata infrastructure (CDI, CSR, EDMED, EDMERP, EDMO) on MARIS-built portal software; ISO 19115 SeaDataNet profiles, OGC WFS/WMS on the CDI metadata overview.
+
+```text
+GET https://cdi.seadatanet.org/search
+GET https://geo-service.maris.nl/seadatanet/wfs?request=GetCapabilities
+```
+
+**Keep:** CDI **dataset metadata records** (and CSR cruises when harvesting that directory). **Drop:** EDMO organisation rows and EDMERP project rows as datasets (they are registry entries, not data), map-layer legends, and ODV/NetCDF aggregated products unless asked. One directory/service = one harvest scope.
+
 ## DataONE (`dataone`) {#dataone}
 
 Member-node search with `formatType=DATA`. Do not crawl the coordinating node for copies of MNs already in this registry unless asked.
@@ -197,6 +208,16 @@ Member-node search with `formatType=DATA`. Do not crawl the coordinating node fo
 GET https://host/cn/v2/query/solr/?q=formatType:DATA&rows=25
 ```
 
+
+## Oceans 3.0 (`oceans30`) {#oceans30}
+
+Ocean Networks Canada DMAS. Prefer the companion ERDDAP server (`erddap` recipe) for dataset-grain harvest; the Oceans 3.0 API requires a free token and is oriented to deployments and data products rather than dataset lists.
+
+```text
+GET https://host/api/deployments?method=get&token=YOUR_TOKEN
+```
+
+**Keep:** deployment and data-product level entries (observatory/instrument datasets). **Drop:** raw scalar readings, HLS/video streams, and per-file data-product downloads.
 
 ## SciCat (`scicat`) {#scicat}
 

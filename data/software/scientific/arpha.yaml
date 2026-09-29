@@ -1,0 +1,59 @@
+category: Scientific data repository
+subtype: managed_saas_service
+datatypes:
+  datasets: 'No'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'No'
+  topics: 'Yes'
+has_api: 'Yes'
+has_bulk: 'Yes'
+id: arpha
+name: ARPHA Platform
+website: https://arpha.pensoft.net
+description: ARPHA is the publishing platform of Pensoft Publishers used to host
+  scholarly journals, their data and preprint services. Tenants live on arphahub.com
+  and {journal}.pensoft.net domains; preprints.arphahub.com serves preprints of all
+  participating journals. Exposes OAI-PMH (oai_dc, MODS) at /oai.
+owner:
+  name: Pensoft Publishers
+  location:
+    country:
+      id: BG
+      name: Bulgaria
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'No'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'Yes'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'Yes'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+pid_support:
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
+rights_management:
+  licensing_type: Open
+  supports_licenses: 'Yes'
+storage_type: Both
+type: Software
+documentation_url: https://arphahub.com/manual
+export_formats:
+- OAI-PMH XML (oai_dc, MODS)
+- PDF
+capabilities:
+- Preprint hosting
+- Journal publishing workflow
+- OAI-PMH harvesting
+last_updated: '2026-09-28T00:00:00Z'

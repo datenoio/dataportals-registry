@@ -10,10 +10,10 @@
 - [docs/ai-consumers.md](docs/ai-consumers.md): consumption contract, join keys, DuckDB LIST/STRUCT nested fields
 - [docs/data-model.md](docs/data-model.md), [docs/vocabularies.md](docs/vocabularies.md), [docs/catalog-types.md](docs/catalog-types.md), [docs/software-taxonomy.md](docs/software-taxonomy.md), [docs/software-index.md](docs/software-index.md)
 - [docs/exports.md](docs/exports.md), [docs/query-examples.md](docs/query-examples.md), [docs/cli.md](docs/cli.md)
-- [docs/discovery.md](docs/discovery.md): find catalogs not yet in the registry (human). Hunt patterns (harvest sources, university IRs, country indicators, named directories, software tenant lists, subnational municipal GIS): [docs/discovery.md#hunt-patterns](docs/discovery.md#hunt-patterns). Next hunt: [docs/agents/improve.md](docs/agents/improve.md). If `datasets.duckdb` is locked, query `full.parquet`.
+- [docs/discovery.md](docs/discovery.md): find catalogs not yet in the registry (human). A discovery session starts with `python scripts/hunt.py prior --target TARGET` and then follows each `next:` line ([docs/agents/discover.md](docs/agents/discover.md)). Hunt patterns: [docs/discovery.md#hunt-patterns](docs/discovery.md#hunt-patterns). Next hunt when no target was named: `python scripts/hunt.py next`. If `datasets.duckdb` is locked, `hunt.py dedupe` uses `full.parquet`.
 - [docs/software-index.md](docs/software-index.md): every `software.id` → discovery/harvest recipe
 - [docs/harvest.md](docs/harvest.md): crawl datasets from catalog APIs; filter datasets from publications in scientific IRs ([harvest-scientific.md](docs/harvest-scientific.md) ([domain](docs/harvest-scientific-domain.md)), [harvest-opendata.md](docs/harvest-opendata.md), [harvest-geoportals.md](docs/harvest-geoportals.md), [harvest-indicators.md](docs/harvest-indicators.md), [harvest-metadata.md](docs/harvest-metadata.md), [harvest-other.md](docs/harvest-other.md), [harvest-protocols.md](docs/harvest-protocols.md), [harvest-incremental.md](docs/harvest-incremental.md), [harvest-earthdata.md](docs/harvest-earthdata.md), [harvest-biodiversity.md](docs/harvest-biodiversity.md), [harvest-viewers.md](docs/harvest-viewers.md), [harvest-identifiers.md](docs/harvest-identifiers.md), [harvest-output.md](docs/harvest-output.md))
-- [docs/discovery-search-tools.md](docs/discovery-search-tools.md): Google, Censys, Shodan, FOFA (Censys alternative), URLScan, crt.sh
+- [docs/discovery-search-tools.md](docs/discovery-search-tools.md): Google, Censys, Shodan, FOFA (Censys alternative), GitHub forks and code search, URLScan, crt.sh
 - [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md): configure Cursor, ChatGPT, Claude, MCP, and search APIs for discovery
 - [docs/discovery-opendata.md](docs/discovery-opendata.md), [docs/discovery-geoportals.md](docs/discovery-geoportals.md) ([SDI](docs/discovery-geoportals-sdi.md), [viewers](docs/discovery-geoportals-viewers.md)), [docs/discovery-scientific.md](docs/discovery-scientific.md) ([domain](docs/discovery-scientific-domain.md)), [docs/discovery-metadata.md](docs/discovery-metadata.md), [docs/discovery-indicators.md](docs/discovery-indicators.md), [docs/discovery-other.md](docs/discovery-other.md): per-platform discovery queries
 - [docs/apidetect.md](docs/apidetect.md), [docs/liveness.md](docs/liveness.md): endpoint probes and URL reachability
@@ -28,7 +28,7 @@
 
 ## Data layout
 
-- `data/entities/`: verified catalog records (one YAML per catalog, organized by country and catalog type). Source count 24 September 2026: **41,167** files in **224** country/territory folders (published v1.22.0).
+- `data/entities/`: verified catalog records (one YAML per catalog, organized by country and catalog type). Source count 27 September 2026: **42,390** files in **224** country/territory folders (published v1.22.0: 41,167).
 - `data/scheduled/`: unverified records pending promotion — [docs/scheduled.md](docs/scheduled.md) (**1** YAML as of 24 September 2026; **1** in `scheduled.jsonl`)
 - `data/software/`: software/platform definitions (**665** YAML records plus `types.yaml`; `software.jsonl` rebuilt at **665**)
 - `data/schemes/catalog.json`: Cerberus validation schema (CI source of truth)

@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: "GIS Nation SDI Hub is a geoportal published by SDI for United States, using ArcGIS Hub. It is available at gisnation-sdi.hub.arcgis.com. Catalog id gisnationsdihubarcgiscom."
+description: GIS Nation SDI Hub is a geoportal published by SDI for United States,
+  using ArcGIS Hub. It is available at gisnation-sdi.hub.arcgis.com. Catalog id gisnationsdihubarcgiscom.
 id: gisnationsdihubarcgiscom
 langs:
 - id: EN
@@ -57,3 +58,14 @@ topics:
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00003564
+endpoints:
+- type: dcatap201
+  url: https://gisnation-sdi.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://gisnation-sdi.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: ogcrecordsapi
+  url: https://gisnation-sdi.hub.arcgis.com/api/search/v1
+- type: arcgishubapi
+  url: https://gisnation-sdi.hub.arcgis.com/api/v3/datasets
+- type: dcatus11
+  url: https://gisnation-sdi.hub.arcgis.com/data.json

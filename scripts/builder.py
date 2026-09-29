@@ -2133,6 +2133,7 @@ SOFTWARE_PATH_MAP = {
     "Metadata catalog": "metadata",
     "Microdata catalog": "microdata",
     "Scientific data repository": "scientific",
+    "Statistical production software": "statistical",
 }
 
 
@@ -3331,6 +3332,8 @@ def validate_software_profile(software_record):
         "managed_saas_service",
         "domain_data_infrastructure",
         "general_software",
+        "statistical_processing_system",
+        "confidential_analysis_system",
     }
     allowed_subtypes_by_category = {
         "Open data portal": {
@@ -3371,6 +3374,10 @@ def validate_software_profile(software_record):
             "metadata_registry_platform",
             "protocol_or_api_server",
             "general_software",
+        },
+        "Statistical production software": {
+            "statistical_processing_system",
+            "confidential_analysis_system",
         },
     }
     

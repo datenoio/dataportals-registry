@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- dataset
+- indicator
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-DR
+      name: Drenthe
+description: Public Swing Mosaic sustainability-score dashboard for Aa en Hunze, with
+  Excel and CSV export of indicator tables.
+id: duurzaamheidsscorenl
+langs:
+- id: NL
+  name: Dutch
+link: https://duurzaamheidsscore.nl
+name: Duurzaamheidsscore Aa en Hunze
+owner:
+  link: https://duurzaamheidsscore.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-DR
+      name: Drenthe
+  name: Gemeente Aa en Hunze
+  type: Local government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: swing
+  name: Swing
+status: active
+tags:
+- indicators
+- statistics
+- Swing
+- Netherlands
+- Aa en Hunze
+- sustainability
+- Swing Mosaic
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+endpoints:
+- type: swing:viewer
+  url: https://duurzaamheidsscore.nl/viewer
+uid: cdi00008728

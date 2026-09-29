@@ -22,9 +22,8 @@ description: The Language Bank of Finland (Kielipankki) is a service for researc
   be applied for electronically. The service is coordinated by the national FIN-CLARIN
   consortium and is part of CLARIN ERIC.
 endpoints:
-- type: oaipmh20
-  url: https://clarino.uib.no/oai?verb=Identify
-  version: '2.0'
+- type: rest
+  url: https://www.kielipankki.fi/korp/api8
 id: wwwkielipankkifi
 identifiers:
 - id: re3data
@@ -38,7 +37,7 @@ langs:
   name: Finnish
 - id: EN
   name: English
-link: https://www.kielipankki.fi/language-bank/
+link: https://www.kielipankki.fi/korp/
 name: The Language Bank of Finland (Kielipankki)
 owner:
   link: https://www.helsinki.fi
@@ -59,8 +58,8 @@ rights:
   rights_type: granular
   tos_url: https://www.kielipankki.fi/support/terms-of-use/
 software:
-  id: custom
-  name: Custom software
+  id: korp
+  name: Korp
 status: active
 tags:
 - scientific

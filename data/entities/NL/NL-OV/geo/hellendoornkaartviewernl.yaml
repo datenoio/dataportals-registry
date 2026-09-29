@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Overijssel
 description: Public KaartViewer geoportal of Gemeente Hellendoorn with municipal maps
   including trees, winter routes, and monuments.
+endpoints:
+- type: kaartviewer:menu
+  url: https://hellendoorn.kaartviewer.nl/admin/rest/kaartviewerapi/menu
 id: hellendoornkaartviewernl
 langs:
 - id: NL

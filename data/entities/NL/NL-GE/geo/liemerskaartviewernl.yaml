@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Gelderland
 description: Shared KaartViewer geoportal of 1Stroom for the Liemers municipalities,
   including Zevenaar mobile maps.
+endpoints:
+- type: kaartviewer:menu
+  url: https://liemers.kaartviewer.nl/admin/rest/kaartviewerapi/menu
 id: liemerskaartviewernl
 langs:
 - id: NL

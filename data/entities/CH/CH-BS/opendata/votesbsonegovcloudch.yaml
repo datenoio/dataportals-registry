@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: CH-BS
+      name: Basel-Stadt
+description: Official OneGov Election Day portal of the Canton of Basel-Stadt.
+  Publishes election and vote results as open data with a DCAT-AP CH catalog.
+endpoints:
+- type: dcatap21
+  url: https://votes-bs.onegovcloud.ch/catalog.rdf
+id: votesbsonegovcloudch
+langs:
+- id: DE
+  name: German
+link: https://votes-bs.onegovcloud.ch
+name: Basel-Stadt Elections and Votes
+owner:
+  link: https://www.bs.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-BS
+      name: Basel-Stadt
+  name: Kanton Basel-Stadt
+  type: Regional government
+properties:
+  has_doi: false
+  is_national: false
+software:
+  id: onegov
+  name: OneGov Election Day
+status: active
+tags:
+- elections
+- OneGov
+- government
+- open data
+- Switzerland
+- Basel-Stadt
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00009675

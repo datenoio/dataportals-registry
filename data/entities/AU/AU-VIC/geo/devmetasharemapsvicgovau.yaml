@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -126,3 +126,14 @@ topics:
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi99992162
+endpoints:
+- type: csw202
+  url: https://dev-metashare.maps.vic.gov.au/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://dev-metashare.maps.vic.gov.au/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://dev-metashare.maps.vic.gov.au/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://dev-metashare.maps.vic.gov.au/geonetwork/srv/api/site

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Alberta
 description: Mountain View County public ArcGIS Experience Builder land use map for
   zoning districts and related county GIS layers.
+endpoints:
+- type: arcgis:item:data
+  url: https://www.arcgis.com/sharing/rest/content/items/ea38230ef47a47b994813d11a2f5e4b9/data?f=json
 id: experiencearcgiscommountainview
 langs:
 - id: EN

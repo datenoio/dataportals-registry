@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: inactive
 catalog_type: Geoportal
 content_types:
@@ -17,7 +17,17 @@ coverage:
       name: South America
 description: Beta GeoNetwork instance of IBICT VISÃO. Production catalog is visao.ibict.br;
   this hostname is a pre-release environment and is marked inactive.
-endpoints: []
+endpoints:
+- type: csw202
+  url: https://beta.visao.ibict.br/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://beta.visao.ibict.br/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://beta.visao.ibict.br/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://beta.visao.ibict.br/geonetwork/srv/api/site
 id: betavisaoibictbr
 langs:
 - id: PT
