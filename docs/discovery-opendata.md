@@ -999,9 +999,11 @@ catalog, not per agency site.
 
 Open-source digital-services platform of the Icelandic government (Stafrænt Ísland /
 Digital Iceland). Source: [island-is/island.is](https://github.com/island-is/island.is)
-(MIT). Government content catalogs — the Stjórnartíðindi official gazette, the Opin
-gögn open-data page — are published as Ísland.is applications on `island.is`.
-Distinct from the national CKAN catalog on `ckan.island.is` (`ckan`).
+(MIT). Government content catalogs — the Opin gögn open-data page — are published as
+Ísland.is applications on `island.is`. The Stjórnartíðindi official gazette is an
+Ísland.is application too, but official gazettes are out of scope (documents, not
+datasets) — never register it. Distinct from the national CKAN catalog on
+`ckan.island.is` (`ckan`).
 
 **Signals:** `island.is` hostname with the Ísland.is design system; Next.js `_next`
 assets; GraphQL gateway at `api.island.is`; developer handbook at `docs.devland.is`.

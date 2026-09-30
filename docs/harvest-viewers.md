@@ -607,6 +607,12 @@ Same grain as [Ingeo](#ingeo).
 
 **Keep:** public **layer / theme** list (or WMS GetCapabilities named layers). **Drop:** map tiles, print PDFs, basemaps, and login walls.
 
+## Accent (`accent`) {#accent}
+
+Harvest the public GIS OGD **document registry and layer list** of the region portal (Vue SPA; API host from `/static/js/configuration.js` `appConfig.default.api`). Fetch with a browser User-Agent — default HTTP-client UAs are dropped.
+
+**Keep:** public document registries and map-layer lists. **Drop:** tiles, basemaps, the `/app/isogd/` staff authorization app, and vendor marketing at bingosoft.ru.
+
 ## IndorRoad Geoportal (`indorgeo`) {#indorgeo}
 
 Harvest the public **object-type / road catalog** behind the IndorGeo landing page or `/geo3/` SPA (tables of signs, bridges, accidents, and other IndorRoad layers). Do not scrape map tiles or krpano panoramas.

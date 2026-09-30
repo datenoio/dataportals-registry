@@ -584,15 +584,14 @@ GET https://host/election/{id}/data-json
 
 ## Ísland.is (`islandis`) {#islandis}
 
-Icelandic government content catalogs published as Ísland.is applications (official gazette Stjórnartíðindi, Opin gögn). Filter exports on `software.id = 'islandis'`.
+Icelandic government content catalogs published as Ísland.is applications (Opin gögn; the Stjórnartíðindi official gazette is out of scope — documents, not datasets). Filter exports on `software.id = 'islandis'`.
 
 ```text
-GET https://island.is/stjornartidindi
 GET https://island.is/s/stafraent-island/opingogn
 GET https://api.island.is/graphql
 ```
 
-The GraphQL gateway at `api.island.is` is authentication-gated for most queries; public catalog pages are server-rendered and list documents as HTML. **Keep:** each published gazette issue or listed dataset as a record, with the linked PDF/JSON download. **Drop:** portal navigation, service pages, and ministry profiles. One island.is catalog page = one harvest scope. Discovery: [discovery-opendata.md](discovery-opendata.md#islandis).
+The GraphQL gateway at `api.island.is` is authentication-gated for most queries; public catalog pages are server-rendered and list documents as HTML. **Keep:** each listed dataset as a record, with the linked JSON/CSV download. **Drop:** portal navigation, service pages, gazette issues, and ministry profiles. One island.is catalog page = one harvest scope. Discovery: [discovery-opendata.md](discovery-opendata.md#islandis).
 
 ## Drupal (`drupal`) {#drupal}
 

@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
 Priority: MEDIUM
-Total Issues Found: 62
+Total Issues Found: 72
 
 Rule: Identifies records using software.id='drupal' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
 
@@ -26,7 +26,7 @@ JP: 1 issue
 KZ: 1 issue
 MX: 1 issue
 NL: 1 issue
-RU: 1 issue
+RU: 11 issues
 SA: 1 issue
 SE: 1 issue
 US: 24 issues
@@ -68,6 +68,16 @@ indicatoriambientaliisprambienteit: 1 issue
 wwwaceuwaterlooca: 1 issue
 braincodeca: 1 issue
 dmitrovskorelru: 1 issue
+alaniagovruopendata: 1 issue
+giskrasnru: 1 issue
+wwwgobogdanovichru: 1 issue
+pskovru: 1 issue
+opendatarospotrebnadzorru: 1 issue
+wwwmintransgovru: 1 issue
+hcvfru: 1 issue
+geoportalrgoru: 1 issue
+ooptaarinextgisru: 1 issue
+tglru: 1 issue
 goodsscheduleswtoorg: 1 issue
 unstatsunorggenderminset: 1 issue
 publicadministrationunorgegovkb: 1 issue
@@ -365,6 +375,86 @@ Suggested Action: Add at least one endpoint because software.id='drupal' is mark
 
 File: RU/RU-ORL/opendata/dmitrovskorelru.yaml
 Record ID: dmitrovskorelru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {"software_id": "drupal", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/RU-SE/opendata/alaniagovruopendata.yaml
+Record ID: alaniagovruopendata
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {"software_id": "drupal", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/RU-KYA/geo/giskrasnru.yaml
+Record ID: giskrasnru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {"software_id": "drupal", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/RU-SVE/opendata/wwwgobogdanovichru.yaml
+Record ID: wwwgobogdanovichru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {"software_id": "drupal", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/RU-PSK/opendata/pskovru.yaml
+Record ID: pskovru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {"software_id": "drupal", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/Federal/opendata/opendatarospotrebnadzorru.yaml
+Record ID: opendatarospotrebnadzorru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {"software_id": "drupal", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/Federal/opendata/wwwmintransgovru.yaml
+Record ID: wwwmintransgovru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {"software_id": "drupal", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/Federal/geo/hcvfru.yaml
+Record ID: hcvfru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {"software_id": "drupal", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/Federal/geo/geoportalrgoru.yaml
+Record ID: geoportalrgoru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {"software_id": "drupal", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/Federal/geo/ooptaarinextgisru.yaml
+Record ID: ooptaarinextgisru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {"software_id": "drupal", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/RU-SAM/opendata/tglru.yaml
+Record ID: tglru
 Country: RU
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
 Field: endpoints

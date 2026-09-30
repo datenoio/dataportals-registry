@@ -201,6 +201,20 @@ Microsoft Azure API Management developer portal. Docs: [developer portal](https:
 | Censys | `web.endpoints.http.title: "Microsoft Azure API Management - developer portal"` |
 | FOFA | `title="Microsoft Azure API Management - developer portal"` |
 
+## WSO2 API Manager (`wso2apimanager`) {#wso2apimanager}
+
+WSO2 API Manager developer portal (`/devportal`). Governments run it as a national API catalog of REST/SOAP services (e.g. api.viss.gov.lv in Latvia). Product: [wso2.com/api-manager](https://wso2.com/api-manager/). `catalog_type` is **API Catalog**.
+
+**Signals:** devportal HTML starts with the `Copyright (c) 2019, WSO2 Inc.` license comment; `<base href="/devportal/" />`; API list at `/devportal/apis`.
+
+**Confirm:** GET `https://host/devportal/apis` and match the WSO2 copyright comment. Register each public developer portal. Do not add each API operation as its own catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:devportal/apis WSO2` |
+| Censys | `web.endpoints.http.body: "Copyright (c) 2019, WSO2 Inc."` |
+| FOFA | `body="/devportal/apis" && body="WSO2"` |
+
 ## Data marketplaces (`marketplace/`)
 
 Commercial markets that sell or license datasets. Access is often `restricted`.

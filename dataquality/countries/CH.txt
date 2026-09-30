@@ -1,51 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: CH
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Country Code: CH
-Total Records with Issues: 10
-Total Issues Found: 11
+Total Records with Issues: 7
+Total Issues Found: 7
 
 === ISSUES BY TYPE ===
-
-[MISSING_RIGHTS]
-Count: 2
-Priority: LOW
-
-File: CH/Federal/opendata/opendataswiss.yaml
-Record ID: opendataswiss
-Issue: MISSING_RIGHTS
-Field: rights
-Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
-Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
-
-File: CH/Federal/opendata/databfsadminch.yaml
-Record ID: databfsadminch
-Issue: MISSING_RIGHTS
-Field: rights
-Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': 'https://www.bfs.admin.ch/bfs/de/home/bfs/bundesamt-statistik/rechtliche-hinweise.html', 'rights_type': 'global', 'tos_url': 'https://www.bfs.admin.ch/bfs/de/home/bfs/bundesamt-statistik/nutzungsbedingungen.html'}
-Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
-
-[MISSING_TAGS]
-Count: 1
-Priority: LOW
-
-File: CH/indicators/swissimpexadminch.yaml
-Record ID: swissimpexadminch
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
-
-File: CH/indicators/swissimpexadminch.yaml
-Record ID: swissimpexadminch
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GBIFPLATFORM]
 Count: 1
@@ -111,9 +71,6 @@ Suggested Action: Add at least one endpoint because software.id='invenio' is mar
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_RIGHTS: 2 issues
-MISSING_TAGS: 1 issue
-MISSING_TOPICS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GBIFPLATFORM: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSHOP: 5 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_INVENIO: 1 issue

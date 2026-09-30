@@ -1,0 +1,58 @@
+DATA QUALITY REPORT - COUNTRY: CZ
+================================================================================
+Generated: 2026-09-30 20:41:32
+Country Code: CZ
+Total Records with Issues: 1
+Total Issues Found: 3
+
+=== ISSUES BY TYPE ===
+
+[MISSING_OWNER_LINK]
+Count: 1
+Priority: LOW
+
+File: CZ/Federal/opendata/dataatlasczech.yaml
+Record ID: dataatlasczech
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: CZ/Federal/opendata/dataatlasczech.yaml
+Record ID: dataatlasczech
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: CZ/Federal/opendata/dataatlasczech.yaml
+Record ID: dataatlasczech
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+MISSING_OWNER_LINK: 1 issue
+MISSING_TAGS: 1 issue
+MISSING_TOPICS: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: dataatlasczech
+File: CZ/Federal/opendata/dataatlasczech.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_OWNER_LINK: owner.link

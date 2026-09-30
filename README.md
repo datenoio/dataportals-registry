@@ -2,9 +2,9 @@
 
 A global registry of data portals, catalogs, data repositories, and related data infrastructure.
 
-**Working tree (27 September 2026):** **42,390** verified catalogs · **733** software platforms · **224** countries and territories · **1** scheduled YAML record.
+**Working tree (30 September 2026):** **43,047** verified catalogs · **784** software platforms · **225** countries and territories · **49** scheduled YAML records.
 
-Last published snapshot: [v1.22.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.22.0), 24 September 2026 (**41,167** catalogs · **665** software · **1** scheduled).
+Last published snapshot: [v1.23.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.23.0), 30 September 2026 (**43,047** catalogs · **784** software · **49** scheduled).
 
 This is the catalog-metadata pillar of the [Common Data Index](https://dateno.io) / open search engine. It describes **catalogs** (open data portals, geoportals, scientific repositories, indicator sites, and similar infrastructure), not the datasets those catalogs hold.
 
@@ -45,15 +45,15 @@ More patterns: [docs/query-examples.md](docs/query-examples.md). Join keys and c
 
 ### Data exports
 
-Last published snapshot (**v1.22.0**, 2026-09-24: 41,167 catalogs, 665 software, 1 scheduled). Working-tree exports below match source YAML. `data/software/types.yaml` is the category dictionary and is not a platform. Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
+Last published snapshot (**v1.23.0**, 2026-09-30: 43,047 catalogs, 784 software, 49 scheduled). Working-tree exports below match source YAML. `data/software/types.yaml` is the category dictionary and is not a platform. Record-count contract: [docs/exports.md](docs/exports.md#record-counts).
 
 | File | Contents |
 |------|----------|
-| `data/datasets/catalogs.jsonl.zst` | **42,390** catalog records |
-| `data/datasets/software.jsonl` (+ `.zst`) | **733** software / platform definitions |
-| `data/datasets/scheduled.jsonl` (+ `.zst`) | **1** scheduled record |
-| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**42,391**) |
-| `data/datasets/full.parquet`, `data/datasets/datasets.duckdb` | Analytics-friendly copies of `full.jsonl` (**42,391** rows; DuckDB `software` table: **733**) |
+| `data/datasets/catalogs.jsonl.zst` | **43,047** catalog records |
+| `data/datasets/software.jsonl` (+ `.zst`) | **784** software / platform definitions |
+| `data/datasets/scheduled.jsonl` (+ `.zst`) | **49** scheduled records |
+| `data/datasets/full.jsonl` (+ `.zst`) | Entities + scheduled (**43,096**) |
+| `data/datasets/full.parquet`, `data/datasets/datasets.duckdb` | Analytics-friendly copies of `full.jsonl` (**43,096** rows; DuckDB `software` table: **784**) |
 
 Rebuild from YAML (never hand-edit `data/datasets/`):
 

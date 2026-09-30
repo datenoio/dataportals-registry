@@ -1070,6 +1070,17 @@ GET https://host/api/search?limit=5000
 GET https://host/api/dashboards/uid/{uid}
 ```
 
+## eazyBI (`eazybi`) {#eazybi}
+
+Public eazyBI dashboards only (registry entries already require public access).
+No anonymous list API is documented for published pages — harvest the public
+HTML report/dashboard list and the tables each report exposes.
+
+**Keep:** public **dashboards and reports** (each published report page as one
+dataset analog) and their export files (CSV/XLSX).
+**Drop:** private workspace assets, user accounts, and report-builder screens.
+Stop on login pages — an authenticated eazyBI workspace is out of scope.
+
 ## EPS Data Platform (`epsdata`) {#epsdata}
 
 Vendor-hosted indicator platform; one harvest scope per registered instance. No anonymous list API is documented — harvest the public HTML indicator catalog.

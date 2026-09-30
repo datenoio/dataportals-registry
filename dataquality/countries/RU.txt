@@ -1,15 +1,1498 @@
 DATA QUALITY REPORT - COUNTRY: RU
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Country Code: RU
-Total Records with Issues: 8
-Total Issues Found: 8
+Total Records with Issues: 463
+Total Issues Found: 887
 
 === ISSUES BY TYPE ===
 
+[MISSING_OWNER_LINK]
+Count: 6
+Priority: LOW
+
+File: RU/RU-MOW/ml/aimosru.yaml
+Record ID: aimosru
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: RU/RU-MOW/ml/researchyandexcom.yaml
+Record ID: researchyandexcom
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: RU/RU-MOW/ml/videoprocessingai.yaml
+Record ID: videoprocessingai
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: RU/RU-TUL/indicators/dftoru.yaml
+Record ID: dftoru
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: RU/Federal/indicators/datamartsroskaznaru.yaml
+Record ID: datamartsroskaznaru
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: RU/RU-CE/indicators/forcitizensru.yaml
+Record ID: forcitizensru
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_RIGHTS]
+Count: 1
+Priority: LOW
+
+File: RU/Federal/opendata/datagovru.yaml
+Record ID: datagovru
+Issue: MISSING_RIGHTS
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
+Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+
+[MISSING_TAGS]
+Count: 417
+Priority: LOW
+
+File: RU/RU-KC/opendata/kurdjinovogosuslugiru.yaml
+Record ID: kurdjinovogosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-KLU/opendata/kozelskijr40goswebgosuslugiru.yaml
+Record ID: kozelskijr40goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-KLU/opendata/borovskr40goswebgosuslugiru.yaml
+Record ID: borovskr40goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-KLU/opendata/maloyargosuslugiru.yaml
+Record ID: maloyargosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-KLU/opendata/maloyaroslaveczkayar40goswebgosuslugiru.yaml
+Record ID: maloyaroslaveczkayar40goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-KLU/opendata/admdumgosuslugiru.yaml
+Record ID: admdumgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-KLU/opendata/betlicagosuslugiru.yaml
+Record ID: betlicagosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MO/opendata/atyashevospgosuslugiru.yaml
+Record ID: atyashevospgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MO/opendata/atyashevskr13goswebgosuslugiru.yaml
+Record ID: atyashevskr13goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MO/opendata/atyashevogpgosuslugiru.yaml
+Record ID: atyashevogpgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MO/opendata/krasnoslobodskgosuslugiru.yaml
+Record ID: krasnoslobodskgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MO/opendata/atyashevskoer13goswebgosuslugiru.yaml
+Record ID: atyashevskoer13goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MO/opendata/ichalkigosuslugiru.yaml
+Record ID: ichalkigosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MO/opendata/bignatovogosuslugiru.yaml
+Record ID: bignatovogosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MO/opendata/kirzhemanyatyashevogosuslugiru.yaml
+Record ID: kirzhemanyatyashevogosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MO/opendata/atyashevogosuslugiru.yaml
+Record ID: atyashevogosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MO/opendata/kirzhemanskoer13goswebgosuslugiru.yaml
+Record ID: kirzhemanskoer13goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MO/opendata/kochkurovormgosuslugiru.yaml
+Record ID: kochkurovormgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MO/opendata/alovskoer13goswebgosuslugiru.yaml
+Record ID: alovskoer13goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MO/opendata/manadyshigosuslugiru.yaml
+Record ID: manadyshigosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MO/opendata/sabancheevogosuslugiru.yaml
+Record ID: sabancheevogosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-STA/opendata/minvodigosuslugiru.yaml
+Record ID: minvodigosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-STA/opendata/arzgirskijr07goswebgosuslugiru.yaml
+Record ID: arzgirskijr07goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-STA/opendata/adminlmrgosuslugiru.yaml
+Record ID: adminlmrgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-STA/opendata/stavropolr07goswebgosuslugiru.yaml
+Record ID: stavropolr07goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-STA/opendata/nevadmgosuslugiru.yaml
+Record ID: nevadmgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-STA/opendata/ipatovo26gosuslugiru.yaml
+Record ID: ipatovo26gosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-STA/opendata/nevinnomysskr07goswebgosuslugiru.yaml
+Record ID: nevinnomysskr07goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-STA/opendata/stavropolgosuslugiru.yaml
+Record ID: stavropolgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-STA/opendata/essentukigosuslugiru.yaml
+Record ID: essentukigosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-STA/opendata/aamoskgosuslugiru.yaml
+Record ID: aamoskgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-STA/opendata/newalexandrovskgosuslugiru.yaml
+Record ID: newalexandrovskgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-STA/opendata/andropovskiygosuslugiru.yaml
+Record ID: andropovskiygosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-STA/opendata/mineralovodskijr07goswebgosuslugiru.yaml
+Record ID: mineralovodskijr07goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-STA/opendata/almoskr07goswebgosuslugiru.yaml
+Record ID: almoskr07goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-DA/opendata/kaladjuhadmgosuslugiru.yaml
+Record ID: kaladjuhadmgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-DA/opendata/admkalagosuslugiru.yaml
+Record ID: admkalagosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-DA/opendata/mokokrekgosuslugiru.yaml
+Record ID: mokokrekgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-DA/opendata/moakbulatyrtgosuslugiru.yaml
+Record ID: moakbulatyrtgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-DA/opendata/motemiraulgosuslugiru.yaml
+Record ID: motemiraulgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-DA/opendata/atlanaulr82goswebgosuslugiru.yaml
+Record ID: atlanaulr82goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-DA/opendata/mokostekgosuslugiru.yaml
+Record ID: mokostekgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-DA/opendata/novyjkostekr82gosuslugiru.yaml
+Record ID: novyjkostekr82gosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-DA/opendata/karchagskijr82goswebgosuslugiru.yaml
+Record ID: karchagskijr82goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MOW/ml/aimosru.yaml
+Record ID: aimosru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MOW/ml/researchyandexcom.yaml
+Record ID: researchyandexcom
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-MOW/ml/videoprocessingai.yaml
+Record ID: videoprocessingai
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/verxobskir22gosuslugiru.yaml
+Record ID: verxobskir22gosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/moaltaygosuslugiru.yaml
+Record ID: moaltaygosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/admtabrngosuslugiru.yaml
+Record ID: admtabrngosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/slavgorodgosuslugiru.yaml
+Record ID: slavgorodgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/admpnkgosuslugiru.yaml
+Record ID: admpnkgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/malinovoeozerogosuslugiru.yaml
+Record ID: malinovoeozerogosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/belokurixar22goswebgosuslugiru.yaml
+Record ID: belokurixar22goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/admzspgosuslugiru.yaml
+Record ID: admzspgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/solonovkar22gosuslugiru.yaml
+Record ID: solonovkar22gosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/kluchevskygosuslugiru.yaml
+Record ID: kluchevskygosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/mixajlovskoer22goswebgosuslugiru.yaml
+Record ID: mixajlovskoer22goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/belokurihagosuslugiru.yaml
+Record ID: belokurihagosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/tochilnoer22gosuslugiru.yaml
+Record ID: tochilnoer22gosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/sychevkar22gosuslugiru.yaml
+Record ID: sychevkar22gosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/andronovskijr22goswebgosuslugiru.yaml
+Record ID: andronovskijr22goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/anujskoer22gosuslugiru.yaml
+Record ID: anujskoer22gosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/adminkrutihagosuslugiru.yaml
+Record ID: adminkrutihagosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/anujskoer22goswebgosuslugiru.yaml
+Record ID: anujskoer22goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/mhlaltaygosuslugiru.yaml
+Record ID: mhlaltaygosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/altadmgosuslugiru.yaml
+Record ID: altadmgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/novoaltayskgosuslugiru.yaml
+Record ID: novoaltayskgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/zelenoroshhinskijr22goswebgosuslugiru.yaml
+Record ID: zelenoroshhinskijr22goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/pavlovsk22gosuslugiru.yaml
+Record ID: pavlovsk22gosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/novoaltajskr22goswebgosuslugiru.yaml
+Record ID: novoaltajskr22goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/velizhanskijr22goswebgosuslugiru.yaml
+Record ID: velizhanskijr22goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-ALT/opendata/admrubashevkagosuslugiru.yaml
+Record ID: admrubashevkagosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-TUL/indicators/dftoru.yaml
+Record ID: dftoru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-TUL/opendata/amobelevgosuslugiru.yaml
+Record ID: amobelevgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-TUL/opendata/kimovskgosuslugiru.yaml
+Record ID: kimovskgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-TUL/opendata/kamenskiygosuslugiru.yaml
+Record ID: kamenskiygosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-TUL/opendata/tular71goswebgosuslugiru.yaml
+Record ID: tular71goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/admvolotgosuslugiru.yaml
+Record ID: admvolotgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/fyodorkovskoer49goswebgosuslugiru.yaml
+Record ID: fyodorkovskoer49goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/valdajskayar49goswebgosuslugiru.yaml
+Record ID: valdajskayar49goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/parfinskij53gosuslugiru.yaml
+Record ID: parfinskij53gosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/xvojninskayar49goswebgosuslugiru.yaml
+Record ID: xvojninskayar49goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/admpestovogosuslugiru.yaml
+Record ID: admpestovogosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/demadmingosuslugiru.yaml
+Record ID: demadmingosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/marevoadmgosuslugiru.yaml
+Record ID: marevoadmgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/boradmingosuslugiru.yaml
+Record ID: boradmingosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/admchudovogosuslugiru.yaml
+Record ID: admchudovogosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/novgorodskijrayongosuslugiru.yaml
+Record ID: novgorodskijrayongosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/admgruzinogosuslugiru.yaml
+Record ID: admgruzinogosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/mvishadmgosuslugiru.yaml
+Record ID: mvishadmgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/maryovskijr49goswebgosuslugiru.yaml
+Record ID: maryovskijr49goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/shimskijr49goswebgosuslugiru.yaml
+Record ID: shimskijr49goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/volotovskijr49goswebgosuslugiru.yaml
+Record ID: volotovskijr49goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/chudovskijr49goswebgosuslugiru.yaml
+Record ID: chudovskijr49goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/moshenskgosuslugiru.yaml
+Record ID: moshenskgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/holmadmingosuslugiru.yaml
+Record ID: holmadmingosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/admpoddoregosuslugiru.yaml
+Record ID: admpoddoregosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/velikijnovgorodr49goswebgosuslugiru.yaml
+Record ID: velikijnovgorodr49goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-NGR/opendata/polavskoer49goswebgosuslugiru.yaml
+Record ID: polavskoer49goswebgosuslugiru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+... and 317 more records with this issue
+
+[MISSING_TOPICS]
+Count: 417
+Priority: LOW
+
+File: RU/RU-KC/opendata/kurdjinovogosuslugiru.yaml
+Record ID: kurdjinovogosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-KLU/opendata/kozelskijr40goswebgosuslugiru.yaml
+Record ID: kozelskijr40goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-KLU/opendata/borovskr40goswebgosuslugiru.yaml
+Record ID: borovskr40goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-KLU/opendata/maloyargosuslugiru.yaml
+Record ID: maloyargosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-KLU/opendata/maloyaroslaveczkayar40goswebgosuslugiru.yaml
+Record ID: maloyaroslaveczkayar40goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-KLU/opendata/admdumgosuslugiru.yaml
+Record ID: admdumgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-KLU/opendata/betlicagosuslugiru.yaml
+Record ID: betlicagosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MO/opendata/atyashevospgosuslugiru.yaml
+Record ID: atyashevospgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MO/opendata/atyashevskr13goswebgosuslugiru.yaml
+Record ID: atyashevskr13goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MO/opendata/atyashevogpgosuslugiru.yaml
+Record ID: atyashevogpgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MO/opendata/krasnoslobodskgosuslugiru.yaml
+Record ID: krasnoslobodskgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MO/opendata/atyashevskoer13goswebgosuslugiru.yaml
+Record ID: atyashevskoer13goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MO/opendata/ichalkigosuslugiru.yaml
+Record ID: ichalkigosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MO/opendata/bignatovogosuslugiru.yaml
+Record ID: bignatovogosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MO/opendata/kirzhemanyatyashevogosuslugiru.yaml
+Record ID: kirzhemanyatyashevogosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MO/opendata/atyashevogosuslugiru.yaml
+Record ID: atyashevogosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MO/opendata/kirzhemanskoer13goswebgosuslugiru.yaml
+Record ID: kirzhemanskoer13goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MO/opendata/kochkurovormgosuslugiru.yaml
+Record ID: kochkurovormgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MO/opendata/alovskoer13goswebgosuslugiru.yaml
+Record ID: alovskoer13goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MO/opendata/manadyshigosuslugiru.yaml
+Record ID: manadyshigosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MO/opendata/sabancheevogosuslugiru.yaml
+Record ID: sabancheevogosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-STA/opendata/minvodigosuslugiru.yaml
+Record ID: minvodigosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-STA/opendata/arzgirskijr07goswebgosuslugiru.yaml
+Record ID: arzgirskijr07goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-STA/opendata/adminlmrgosuslugiru.yaml
+Record ID: adminlmrgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-STA/opendata/stavropolr07goswebgosuslugiru.yaml
+Record ID: stavropolr07goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-STA/opendata/nevadmgosuslugiru.yaml
+Record ID: nevadmgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-STA/opendata/ipatovo26gosuslugiru.yaml
+Record ID: ipatovo26gosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-STA/opendata/nevinnomysskr07goswebgosuslugiru.yaml
+Record ID: nevinnomysskr07goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-STA/opendata/stavropolgosuslugiru.yaml
+Record ID: stavropolgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-STA/opendata/essentukigosuslugiru.yaml
+Record ID: essentukigosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-STA/opendata/aamoskgosuslugiru.yaml
+Record ID: aamoskgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-STA/opendata/newalexandrovskgosuslugiru.yaml
+Record ID: newalexandrovskgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-STA/opendata/andropovskiygosuslugiru.yaml
+Record ID: andropovskiygosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-STA/opendata/mineralovodskijr07goswebgosuslugiru.yaml
+Record ID: mineralovodskijr07goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-STA/opendata/almoskr07goswebgosuslugiru.yaml
+Record ID: almoskr07goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-DA/opendata/kaladjuhadmgosuslugiru.yaml
+Record ID: kaladjuhadmgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-DA/opendata/admkalagosuslugiru.yaml
+Record ID: admkalagosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-DA/opendata/mokokrekgosuslugiru.yaml
+Record ID: mokokrekgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-DA/opendata/moakbulatyrtgosuslugiru.yaml
+Record ID: moakbulatyrtgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-DA/opendata/motemiraulgosuslugiru.yaml
+Record ID: motemiraulgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-DA/opendata/atlanaulr82goswebgosuslugiru.yaml
+Record ID: atlanaulr82goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-DA/opendata/mokostekgosuslugiru.yaml
+Record ID: mokostekgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-DA/opendata/novyjkostekr82gosuslugiru.yaml
+Record ID: novyjkostekr82gosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-DA/opendata/karchagskijr82goswebgosuslugiru.yaml
+Record ID: karchagskijr82goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MOW/ml/aimosru.yaml
+Record ID: aimosru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MOW/ml/researchyandexcom.yaml
+Record ID: researchyandexcom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-MOW/ml/videoprocessingai.yaml
+Record ID: videoprocessingai
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/verxobskir22gosuslugiru.yaml
+Record ID: verxobskir22gosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/moaltaygosuslugiru.yaml
+Record ID: moaltaygosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/admtabrngosuslugiru.yaml
+Record ID: admtabrngosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/slavgorodgosuslugiru.yaml
+Record ID: slavgorodgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/admpnkgosuslugiru.yaml
+Record ID: admpnkgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/malinovoeozerogosuslugiru.yaml
+Record ID: malinovoeozerogosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/belokurixar22goswebgosuslugiru.yaml
+Record ID: belokurixar22goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/admzspgosuslugiru.yaml
+Record ID: admzspgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/solonovkar22gosuslugiru.yaml
+Record ID: solonovkar22gosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/kluchevskygosuslugiru.yaml
+Record ID: kluchevskygosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/mixajlovskoer22goswebgosuslugiru.yaml
+Record ID: mixajlovskoer22goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/belokurihagosuslugiru.yaml
+Record ID: belokurihagosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/tochilnoer22gosuslugiru.yaml
+Record ID: tochilnoer22gosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/sychevkar22gosuslugiru.yaml
+Record ID: sychevkar22gosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/andronovskijr22goswebgosuslugiru.yaml
+Record ID: andronovskijr22goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/anujskoer22gosuslugiru.yaml
+Record ID: anujskoer22gosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/adminkrutihagosuslugiru.yaml
+Record ID: adminkrutihagosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/anujskoer22goswebgosuslugiru.yaml
+Record ID: anujskoer22goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/mhlaltaygosuslugiru.yaml
+Record ID: mhlaltaygosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/altadmgosuslugiru.yaml
+Record ID: altadmgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/novoaltayskgosuslugiru.yaml
+Record ID: novoaltayskgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/zelenoroshhinskijr22goswebgosuslugiru.yaml
+Record ID: zelenoroshhinskijr22goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/pavlovsk22gosuslugiru.yaml
+Record ID: pavlovsk22gosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/novoaltajskr22goswebgosuslugiru.yaml
+Record ID: novoaltajskr22goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/velizhanskijr22goswebgosuslugiru.yaml
+Record ID: velizhanskijr22goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-ALT/opendata/admrubashevkagosuslugiru.yaml
+Record ID: admrubashevkagosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-TUL/indicators/dftoru.yaml
+Record ID: dftoru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-TUL/opendata/amobelevgosuslugiru.yaml
+Record ID: amobelevgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-TUL/opendata/kimovskgosuslugiru.yaml
+Record ID: kimovskgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-TUL/opendata/kamenskiygosuslugiru.yaml
+Record ID: kamenskiygosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-TUL/opendata/tular71goswebgosuslugiru.yaml
+Record ID: tular71goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/admvolotgosuslugiru.yaml
+Record ID: admvolotgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/fyodorkovskoer49goswebgosuslugiru.yaml
+Record ID: fyodorkovskoer49goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/valdajskayar49goswebgosuslugiru.yaml
+Record ID: valdajskayar49goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/parfinskij53gosuslugiru.yaml
+Record ID: parfinskij53gosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/xvojninskayar49goswebgosuslugiru.yaml
+Record ID: xvojninskayar49goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/admpestovogosuslugiru.yaml
+Record ID: admpestovogosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/demadmingosuslugiru.yaml
+Record ID: demadmingosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/marevoadmgosuslugiru.yaml
+Record ID: marevoadmgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/boradmingosuslugiru.yaml
+Record ID: boradmingosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/admchudovogosuslugiru.yaml
+Record ID: admchudovogosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/novgorodskijrayongosuslugiru.yaml
+Record ID: novgorodskijrayongosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/admgruzinogosuslugiru.yaml
+Record ID: admgruzinogosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/mvishadmgosuslugiru.yaml
+Record ID: mvishadmgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/maryovskijr49goswebgosuslugiru.yaml
+Record ID: maryovskijr49goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/shimskijr49goswebgosuslugiru.yaml
+Record ID: shimskijr49goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/volotovskijr49goswebgosuslugiru.yaml
+Record ID: volotovskijr49goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/chudovskijr49goswebgosuslugiru.yaml
+Record ID: chudovskijr49goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/moshenskgosuslugiru.yaml
+Record ID: moshenskgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/holmadmingosuslugiru.yaml
+Record ID: holmadmingosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/admpoddoregosuslugiru.yaml
+Record ID: admpoddoregosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/velikijnovgorodr49goswebgosuslugiru.yaml
+Record ID: velikijnovgorodr49goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-NGR/opendata/polavskoer49goswebgosuslugiru.yaml
+Record ID: polavskoer49goswebgosuslugiru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+... and 317 more records with this issue
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX]
-Count: 7
+Count: 22
 Priority: MEDIUM
+
+File: RU/RU-AD/opendata/wwwadygheyaru.yaml
+Record ID: wwwadygheyaru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-VGG/opendata/opendatavolganetru.yaml
+Record ID: opendatavolganetru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
 
 File: RU/RU-ALT/opendata/opendatabarnaulorg.yaml
 Record ID: opendatabarnaulorg
@@ -25,8 +1508,43 @@ Field: endpoints
 Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
 
+File: RU/RU-TUL/opendata/wwwopendata71ru.yaml
+Record ID: wwwopendata71ru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-YAN/indicators/monitoringyanaoru.yaml
+Record ID: monitoringyanaoru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-LIP/opendata/opendata48ru.yaml
+Record ID: opendata48ru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-LEN/indicators/budgetlenoblru.yaml
+Record ID: budgetlenoblru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
 File: RU/RU-IVA/opendata/deritivanovooblru.yaml
 Record ID: deritivanovooblru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-SAR/opendata/wwwsaratovgovru.yaml
+Record ID: wwwsaratovgovru
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
 Field: endpoints
 Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
@@ -39,8 +1557,64 @@ Field: endpoints
 Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
 
+File: RU/RU-BRY/geo/wwwinvest32rumap.yaml
+Record ID: wwwinvest32rumap
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/Federal/indicators/statmkrfru.yaml
+Record ID: statmkrfru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/Federal/geo/gisgcrasru.yaml
+Record ID: gisgcrasru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/Federal/geo/speleoatlasru.yaml
+Record ID: speleoatlasru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/Federal/geo/baikalgisrubaikalgis.yaml
+Record ID: baikalgisrubaikalgis
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/Federal/api/wwwapiportalru.yaml
+Record ID: wwwapiportalru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-VLG/opendata/datagov35ru.yaml
+Record ID: datagov35ru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
 File: RU/RU-KHM/opendata/opendataadmmegionru.yaml
 Record ID: opendataadmmegionru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-AMU/geo/investmapamuroblru.yaml
+Record ID: investmapamuroblru
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
 Field: endpoints
 Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
@@ -61,7 +1635,7 @@ Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
-Count: 1
+Count: 11
 Priority: MEDIUM
 
 File: RU/RU-ORL/opendata/dmitrovskorelru.yaml
@@ -71,8 +1645,234 @@ Field: endpoints
 Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
 
+File: RU/RU-SE/opendata/alaniagovruopendata.yaml
+Record ID: alaniagovruopendata
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/RU-KYA/geo/giskrasnru.yaml
+Record ID: giskrasnru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/RU-SVE/opendata/wwwgobogdanovichru.yaml
+Record ID: wwwgobogdanovichru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/RU-PSK/opendata/pskovru.yaml
+Record ID: pskovru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/Federal/opendata/opendatarospotrebnadzorru.yaml
+Record ID: opendatarospotrebnadzorru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/Federal/opendata/wwwmintransgovru.yaml
+Record ID: wwwmintransgovru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/Federal/geo/hcvfru.yaml
+Record ID: hcvfru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/Federal/geo/geoportalrgoru.yaml
+Record ID: geoportalrgoru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/Federal/geo/ooptaarinextgisru.yaml
+Record ID: ooptaarinextgisru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: RU/RU-SAM/opendata/tglru.yaml
+Record ID: tglru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB]
+Count: 2
+Priority: MEDIUM
+
+File: RU/Federal/geo/geologygisgcrasru.yaml
+Record ID: geologygisgcrasru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB
+Field: endpoints
+Current Value: {'software_id': 'nextgisweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nextgisweb' is marked as API-capable in software definitions
+
+File: RU/Federal/geo/arcticgisgcrasru.yaml
+Record ID: arcticgisgcrasru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB
+Field: endpoints
+Current Value: {'software_id': 'nextgisweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nextgisweb' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS]
+Count: 11
+Priority: MEDIUM
+
+File: RU/RU-KC/opendata/mzkchrru.yaml
+Record ID: mzkchrru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: RU/RU-AST/opendata/verhnekalinovomoru.yaml
+Record ID: verhnekalinovomoru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: RU/indicators/wwwlevadarurindikatory.yaml
+Record ID: wwwlevadarurindikatory
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: RU/RU-IN/opendata/mtseingru.yaml
+Record ID: mtseingru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: RU/RU-ME/geo/geo12rfatlas.yaml
+Record ID: geo12rfatlas
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: RU/Federal/indicators/datamartsroskaznaru.yaml
+Record ID: datamartsroskaznaru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: RU/Federal/opendata/fishgovru.yaml
+Record ID: fishgovru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: RU/Federal/geo/baikalgisrudeltagis.yaml
+Record ID: baikalgisrudeltagis
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: RU/Federal/search/openurbandataru.yaml
+Record ID: openurbandataru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: RU/Federal/scientific/meteoruwdcocean.yaml
+Record ID: meteoruwdcocean
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
+File: RU/RU-SAM/opendata/opendatasamregionru.yaml
+Record ID: opendatasamregionru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS
+Field: endpoints
+Current Value: {'software_id': 'wordpress', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='wordpress' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX: 7 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue
+MISSING_OWNER_LINK: 6 issues
+MISSING_RIGHTS: 1 issue
+MISSING_TAGS: 417 issues
+MISSING_TOPICS: 417 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX: 22 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 11 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS: 11 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: datamartsroskaznaru
+File: RU/Federal/indicators/datamartsroskaznaru.yaml
+Issue Count: 4
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS: endpoints
+  - MISSING_OWNER_LINK: owner.link
+
+Record ID: aimosru
+File: RU/RU-MOW/ml/aimosru.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_OWNER_LINK: owner.link
+
+Record ID: researchyandexcom
+File: RU/RU-MOW/ml/researchyandexcom.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_OWNER_LINK: owner.link
+
+Record ID: videoprocessingai
+File: RU/RU-MOW/ml/videoprocessingai.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_OWNER_LINK: owner.link
+
+Record ID: dftoru
+File: RU/RU-TUL/indicators/dftoru.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_OWNER_LINK: owner.link
+
+Record ID: forcitizensru
+File: RU/RU-CE/indicators/forcitizensru.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_OWNER_LINK: owner.link

@@ -126,6 +126,19 @@ GET https://host/apis
 
 **Keep:** API products listed in the developer portal. **Drop:** subscription keys, user profiles, and test-console calls.
 
+## WSO2 API Manager (`wso2apimanager`) {#wso2apimanager}
+
+Harvest the developer portal's API list. One portal is one catalog.
+
+```text
+GET https://host/devportal/apis
+```
+
+**Keep:** APIs listed in the developer portal (name, docs URL, publisher).
+**Drop:** subscription keys, application registrations, and user profiles.
+Unauthenticated `/devportal` REST endpoints vary by version — stop on `401`
+rather than probing admin APIs.
+
 ## Data marketplaces
 
 Public catalog of datasets for sale or license. Harvest **public** listing APIs only (dataset id, title, landing URL). Stop on paywalls and `401`. Do not scrape prices, buyer lists, or sample files into this repository. `access_mode` on the **catalog** record is often `restricted` — still harvest metadata if it is public.

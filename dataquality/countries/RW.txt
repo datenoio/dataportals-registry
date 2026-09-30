@@ -1,33 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: RW
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Country Code: RW
-Total Records with Issues: 2
-Total Issues Found: 3
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
-
-[MISSING_TAGS]
-Count: 1
-Priority: LOW
-
-File: RW/other/rwandatraderw.yaml
-Record ID: rwandatraderw
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
-
-File: RW/other/rwandatraderw.yaml
-Record ID: rwandatraderw
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIMS]
 Count: 1
@@ -43,6 +21,4 @@ Suggested Action: Add at least one endpoint because software.id='bims' is marked
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_TAGS: 1 issue
-MISSING_TOPICS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIMS: 1 issue

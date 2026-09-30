@@ -1,22 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: BR
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Country Code: BR
-Total Records with Issues: 6
-Total Issues Found: 6
+Total Records with Issues: 5
+Total Issues Found: 5
 
 === ISSUES BY TYPE ===
-
-[MISSING_RIGHTS]
-Count: 1
-Priority: LOW
-
-File: BR/Federal/opendata/dadosgovbr.yaml
-Record ID: dadosgovbr
-Issue: MISSING_RIGHTS
-Field: rights
-Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
-Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBGIS]
 Count: 4
@@ -64,6 +53,5 @@ Suggested Action: Add at least one endpoint because software.id='wordpress' is m
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_RIGHTS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GAUSSWEBGIS: 4 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WORDPRESS: 1 issue

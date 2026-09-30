@@ -1,0 +1,18 @@
+---
+description: Resolve country codes and international blocs with Internacia when editing catalog location fields
+globs: data/entities/**/*.yaml,data/scheduled/**/*.yaml
+alwaysApply: false
+---
+
+# Country and bloc lookup
+
+When setting `owner.location.country`, `coverage`, or a country path (`data/entities/{CC}/…`), resolve the code with Internacia. Install once with `pip install internacia`.
+
+```bash
+python -c "from internacia import InternaciaClient; c=InternaciaClient(); print(c.search.fuzzy('QUERY', limit=5))"
+```
+
+- Country `id`: alpha-2 with `code_status == official_iso3166_1`, plus `XK`. Write `country.name` from `COUNTRIES` in `scripts/constants.py` or `data/reference/countries.csv`.
+- Blocs (EU, ASEAN, Africa, treaties): Internacia intblocks. Path roots stay `PATH_COUNTRY_ALLOWLIST` in `scripts/constants.py` (`EU`, `ASEAN`, `AFRICA`, `WORLD`, and the other listed folders).
+- Subdivisions (ISO 3166-2, such as `US-CA`): `pycountry` or `data/reference/subregions/`.
+- Quote YAML 1.1 boolean-looking codes: `'NO'`.

@@ -785,8 +785,9 @@ MAP_SOFTWARE_ALLOWED_CATALOG_TYPES = {
         {"Metadata catalog", "Data search engine", "Scientific data repository"}
     ),
     # WordPress also hosts research dataset lists (ARCHES robotics, V-SENSE),
-    # dataset directories (ORASECOM WIS, BERD Open Big Data), and developer
-    # API portals (AfriGIS Developers).
+    # dataset directories (ORASECOM WIS, BERD Open Big Data), developer
+    # API portals (AfriGIS Developers), and searchable dataset directories
+    # (openurbandata.ru).
     "wordpress": frozenset(
         {
             "Open data portal",
@@ -797,6 +798,7 @@ MAP_SOFTWARE_ALLOWED_CATALOG_TYPES = {
             "Machine learning catalog",
             "Datasets list",
             "API Catalog",
+            "Data search engine",
         }
     ),
     # Squarespace sites host research-data pages and foundation indicator portals.
@@ -828,8 +830,14 @@ MAP_SOFTWARE_ALLOWED_CATALOG_TYPES = {
             "Datasets list",
         }
     ),
-    # 1C-Bitrix hosts open-data sections, municipal geoportals, and NSO sites (stat.gov.kz).
-    "bitrix": frozenset({"Open data portal", "Geoportal", "Indicators catalog"}),
+    # 1C-Bitrix hosts open-data sections, municipal geoportals, NSO sites
+    # (stat.gov.kz), and the apiportal.ru API provider directory.
+    "bitrix": frozenset(
+        {"Open data portal", "Geoportal", "Indicators catalog", "API Catalog"}
+    ),
+    # WSO2 API Manager developer portals (api.viss.gov.lv, Met Office) are
+    # API catalogs on API-management software.
+    "wso2apimanager": frozenset({"Open data portal", "API Catalog"}),
     # Strapi also backs SDG indicator platforms (ODSlocal).
     "strapi": frozenset({"Open data portal", "Indicators catalog"}),
     # OutSystems low-code portals: statistics databases (PORDATA), gazettes, and

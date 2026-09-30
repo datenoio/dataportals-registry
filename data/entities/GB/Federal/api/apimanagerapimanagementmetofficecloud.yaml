@@ -1,0 +1,70 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: API Catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Met Office developer portal running on WSO2 API Manager. Catalog of
+  published Met Office APIs, including space weather products such as the atmospheric
+  density API from the SWIMMR programme. API browsing is public; subscription requires
+  registration.
+endpoints:
+- type: docs
+  url: https://api-manager.api-management.metoffice.cloud/devportal/apis
+- type: openapi
+  url: https://api-manager.api-management.metoffice.cloud/api/am/devportal/apis
+id: apimanagerapimanagementmetofficecloud
+langs:
+- id: EN
+  name: English
+link: https://api-manager.api-management.metoffice.cloud/devportal/apis
+name: Met Office API Manager Developer Portal
+owner:
+  link: https://www.metoffice.gov.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: Met Office
+  type: Central government
+properties:
+  has_doi: false
+  is_national: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: wso2apimanager
+  name: WSO2 API Manager
+status: active
+tags:
+- government
+- has_api
+- API
+- meteorology
+- weather
+- United Kingdom
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00008131

@@ -1,11 +1,61 @@
 DATA QUALITY REPORT - COUNTRY: DE
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Country Code: DE
-Total Records with Issues: 19
-Total Issues Found: 19
+Total Records with Issues: 22
+Total Issues Found: 25
 
 === ISSUES BY TYPE ===
+
+[MISSING_TAGS]
+Count: 3
+Priority: LOW
+
+File: DE/DE-NW/geo/digitaltwinwuppertalgeoportal.yaml
+Record ID: digitaltwinwuppertalgeoportal
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: DE/Federal/ml/fairforwarddatasets.yaml
+Record ID: fairforwarddatasets
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: DE/Federal/scientific/glcregistry.yaml
+Record ID: glcregistry
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 3
+Priority: LOW
+
+File: DE/DE-NW/geo/digitaltwinwuppertalgeoportal.yaml
+Record ID: digitaltwinwuppertalgeoportal
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: DE/Federal/ml/fairforwarddatasets.yaml
+Record ID: fairforwarddatasets
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: DE/Federal/scientific/glcregistry.yaml
+Record ID: glcregistry
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
 Count: 4
@@ -175,6 +225,8 @@ Suggested Action: Add at least one endpoint because software.id='wordpress' is m
 
 === SUMMARY BY ISSUE TYPE ===
 
+MISSING_TAGS: 3 issues
+MISSING_TOPICS: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 4 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_KADI4MAT: 1 issue

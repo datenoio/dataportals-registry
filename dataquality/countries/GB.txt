@@ -1,25 +1,36 @@
 DATA QUALITY REPORT - COUNTRY: GB
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Country Code: GB
-Total Records with Issues: 14
-Total Issues Found: 16
+Total Records with Issues: 7
+Total Issues Found: 10
 
 === ISSUES BY TYPE ===
+
+[MISSING_OWNER_LINK]
+Count: 1
+Priority: LOW
+
+File: GB/Federal/scientific/nepalheritagecatalogue.yaml
+Record ID: nepalheritagecatalogue
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
 [MISSING_TAGS]
 Count: 2
 Priority: LOW
 
-File: GB/indicators/wwwuktradeinfocom.yaml
-Record ID: wwwuktradeinfocom
+File: GB/Federal/opendata/ukpublicservicesdatacatalogue.yaml
+Record ID: ukpublicservicesdatacatalogue
 Issue: MISSING_TAGS
 Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
 
-File: GB/Federal/indicators/devtrackerfcdogovuk.yaml
-Record ID: devtrackerfcdogovuk
+File: GB/Federal/scientific/nepalheritagecatalogue.yaml
+Record ID: nepalheritagecatalogue
 Issue: MISSING_TAGS
 Field: tags
 Current Value: []
@@ -29,72 +40,19 @@ Suggested Action: Extract tags from description and catalog_type
 Count: 2
 Priority: LOW
 
-File: GB/indicators/wwwuktradeinfocom.yaml
-Record ID: wwwuktradeinfocom
+File: GB/Federal/opendata/ukpublicservicesdatacatalogue.yaml
+Record ID: ukpublicservicesdatacatalogue
 Issue: MISSING_TOPICS
 Field: topics
 Current Value: []
 Suggested Action: Add relevant topics based on catalog_type and description
 
-File: GB/Federal/indicators/devtrackerfcdogovuk.yaml
-Record ID: devtrackerfcdogovuk
+File: GB/Federal/scientific/nepalheritagecatalogue.yaml
+Record ID: nepalheritagecatalogue
 Issue: MISSING_TOPICS
 Field: topics
 Current Value: []
 Suggested Action: Add relevant topics based on catalog_type and description
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA]
-Count: 7
-Priority: MEDIUM
-
-File: GB/Federal/indicators/ukairqualitynet.yaml
-Record ID: ukairqualitynet
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
-Field: endpoints
-Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
-
-File: GB/GB-ENG/indicators/nottinghamaqmnet.yaml
-Record ID: nottinghamaqmnet
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
-Field: endpoints
-Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
-
-File: GB/GB-ENG/indicators/norfolkairqualitynet.yaml
-Record ID: norfolkairqualitynet
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
-Field: endpoints
-Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
-
-File: GB/GB-ENG/indicators/nlincsairinfo.yaml
-Record ID: nlincsairinfo
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
-Field: endpoints
-Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
-
-File: GB/GB-ENG/indicators/cheshirewestairinfo.yaml
-Record ID: cheshirewestairinfo
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
-Field: endpoints
-Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
-
-File: GB/GB-ENG/indicators/southamptonairorguk.yaml
-Record ID: southamptonairorguk
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
-Field: endpoints
-Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
-
-File: GB/GB-ENG/indicators/airqualitywolverhamptongovuk.yaml
-Record ID: airqualitywolverhamptongovuk
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
-Field: endpoints
-Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_EPRINTS]
 Count: 1
@@ -154,11 +112,21 @@ Suggested Action: Add at least one endpoint because software.id='statswales' is 
 
 === SUMMARY BY ISSUE TYPE ===
 
+MISSING_OWNER_LINK: 1 issue
 MISSING_TAGS: 2 issues
 MISSING_TOPICS: 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA: 7 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_EPRINTS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PANELAPP: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PORTALJS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATSWALES: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: nepalheritagecatalogue
+File: GB/Federal/scientific/nepalheritagecatalogue.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_OWNER_LINK: owner.link

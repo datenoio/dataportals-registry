@@ -1,44 +1,156 @@
 DATA QUALITY REPORT - COUNTRY: NZ
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Country Code: NZ
-Total Records with Issues: 5
-Total Issues Found: 6
+Total Records with Issues: 14
+Total Issues Found: 22
 
 === ISSUES BY TYPE ===
 
-[MISSING_OWNER_LINK]
-Count: 1
-Priority: LOW
-
-File: NZ/Federal/geo/nzcfwebgis1com.yaml
-Record ID: nzcfwebgis1com
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
 [MISSING_TAGS]
-Count: 1
+Count: 8
 Priority: LOW
 
-File: NZ/indicators/nztradedashboard.yaml
-Record ID: nztradedashboard
+File: NZ/indicators/lawaorgnz.yaml
+Record ID: lawaorgnz
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NZ/indicators/whakamauadashboard.yaml
+Record ID: whakamauadashboard
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NZ/indicators/nzhealthsurveyexplorer.yaml
+Record ID: nzhealthsurveyexplorer
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NZ/indicators/data1850nz.yaml
+Record ID: data1850nz
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NZ/indicators/communityinsightsorgnz.yaml
+Record ID: communityinsightsorgnz
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NZ/indicators/educationcountsgovtnz.yaml
+Record ID: educationcountsgovtnz
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NZ/indicators/transportgovtnzstats.yaml
+Record ID: transportgovtnzstats
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: NZ/Federal/scientific/datasetsoceanumio.yaml
+Record ID: datasetsoceanumio
 Issue: MISSING_TAGS
 Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
 
 [MISSING_TOPICS]
-Count: 1
+Count: 8
 Priority: LOW
 
-File: NZ/indicators/nztradedashboard.yaml
-Record ID: nztradedashboard
+File: NZ/indicators/lawaorgnz.yaml
+Record ID: lawaorgnz
 Issue: MISSING_TOPICS
 Field: topics
 Current Value: []
 Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NZ/indicators/whakamauadashboard.yaml
+Record ID: whakamauadashboard
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NZ/indicators/nzhealthsurveyexplorer.yaml
+Record ID: nzhealthsurveyexplorer
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NZ/indicators/data1850nz.yaml
+Record ID: data1850nz
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NZ/indicators/communityinsightsorgnz.yaml
+Record ID: communityinsightsorgnz
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NZ/indicators/educationcountsgovtnz.yaml
+Record ID: educationcountsgovtnz
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NZ/indicators/transportgovtnzstats.yaml
+Record ID: transportgovtnzstats
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: NZ/Federal/scientific/datasetsoceanumio.yaml
+Record ID: datasetsoceanumio
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_AZUREAPIM]
+Count: 3
+Priority: MEDIUM
+
+File: NZ/NZ-AUK/api/devportalatgovtnz.yaml
+Record ID: devportalatgovtnz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_AZUREAPIM
+Field: endpoints
+Current Value: {'software_id': 'azureapim', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='azureapim' is marked as API-capable in software definitions
+
+File: NZ/NZ-CAN/api/apidevelopersmetroinfoconz.yaml
+Record ID: apidevelopersmetroinfoconz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_AZUREAPIM
+Field: endpoints
+Current Value: {'software_id': 'azureapim', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='azureapim' is marked as API-capable in software definitions
+
+File: NZ/Federal/api/portalapisstatsgovtnz.yaml
+Record ID: portalapisstatsgovtnz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_AZUREAPIM
+Field: endpoints
+Current Value: {'software_id': 'azureapim', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='azureapim' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PMR2]
 Count: 2
@@ -72,8 +184,8 @@ Suggested Action: Add at least one endpoint because software.id='redbox' is mark
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 1 issue
-MISSING_TAGS: 1 issue
-MISSING_TOPICS: 1 issue
+MISSING_TAGS: 8 issues
+MISSING_TOPICS: 8 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_AZUREAPIM: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PMR2: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDBOX: 1 issue

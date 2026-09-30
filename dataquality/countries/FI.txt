@@ -1,29 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: FI
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Country Code: FI
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA]
-Count: 2
-Priority: MEDIUM
-
-File: FI/FI-02/indicators/ekilmanlaatunet.yaml
-Record ID: ekilmanlaatunet
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
-Field: endpoints
-Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
-
-File: FI/FI-15/indicators/aqverkkokuopionet.yaml
-Record ID: aqverkkokuopionet
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
-Field: endpoints
-Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATA]
 Count: 1
@@ -39,5 +21,4 @@ Suggested Action: Add at least one endpoint because software.id='fairdata' is ma
 
 === SUMMARY BY ISSUE TYPE ===
 
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATA: 1 issue

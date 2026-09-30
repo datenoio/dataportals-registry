@@ -1,33 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: NL
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Country Code: NL
-Total Records with Issues: 4
-Total Issues Found: 4
+Total Records with Issues: 2
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
-
-[MISSING_RIGHTS]
-Count: 1
-Priority: LOW
-
-File: NL/Federal/opendata/dataoverheidnl.yaml
-Record ID: dataoverheidnl
-Issue: MISSING_RIGHTS
-Field: rights
-Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
-Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA]
-Count: 1
-Priority: MEDIUM
-
-File: BE/Federal/scientific/wwwscheldemonitororg.yaml
-Record ID: wwwscheldemonitororg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA
-Field: endpoints
-Current Value: {'software_id': 'aphia', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='aphia' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
 Count: 1
@@ -54,7 +32,5 @@ Suggested Action: Add at least one endpoint because software.id='mapstore' is ma
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_RIGHTS: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE: 1 issue

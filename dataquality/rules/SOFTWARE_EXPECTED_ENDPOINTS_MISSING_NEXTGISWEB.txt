@@ -1,0 +1,35 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB
+================================================================================
+Generated: 2026-09-30 20:41:32
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB
+Priority: MEDIUM
+Total Issues Found: 2
+
+Rule: Identifies records using software.id='nextgisweb' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+RU: 2 issues
+
+=== SUMMARY BY RECORD ===
+
+geologygisgcrasru: 1 issue
+arcticgisgcrasru: 1 issue
+
+=== ISSUES ===
+
+File: RU/Federal/geo/geologygisgcrasru.yaml
+Record ID: geologygisgcrasru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB
+Field: endpoints
+Current Value: {"software_id": "nextgisweb", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='nextgisweb' is marked as API-capable in software definitions
+
+File: RU/Federal/geo/arcticgisgcrasru.yaml
+Record ID: arcticgisgcrasru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB
+Field: endpoints
+Current Value: {"software_id": "nextgisweb", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='nextgisweb' is marked as API-capable in software definitions

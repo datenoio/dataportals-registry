@@ -1,0 +1,44 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_AZUREAPIM
+================================================================================
+Generated: 2026-09-30 20:41:32
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_AZUREAPIM
+Priority: MEDIUM
+Total Issues Found: 3
+
+Rule: Identifies records using software.id='azureapim' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+NZ: 3 issues
+
+=== SUMMARY BY RECORD ===
+
+devportalatgovtnz: 1 issue
+apidevelopersmetroinfoconz: 1 issue
+portalapisstatsgovtnz: 1 issue
+
+=== ISSUES ===
+
+File: NZ/NZ-AUK/api/devportalatgovtnz.yaml
+Record ID: devportalatgovtnz
+Country: NZ
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_AZUREAPIM
+Field: endpoints
+Current Value: {"software_id": "azureapim", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='azureapim' is marked as API-capable in software definitions
+
+File: NZ/NZ-CAN/api/apidevelopersmetroinfoconz.yaml
+Record ID: apidevelopersmetroinfoconz
+Country: NZ
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_AZUREAPIM
+Field: endpoints
+Current Value: {"software_id": "azureapim", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='azureapim' is marked as API-capable in software definitions
+
+File: NZ/Federal/api/portalapisstatsgovtnz.yaml
+Record ID: portalapisstatsgovtnz
+Country: NZ
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_AZUREAPIM
+Field: endpoints
+Current Value: {"software_id": "azureapim", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='azureapim' is marked as API-capable in software definitions

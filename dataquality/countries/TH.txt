@@ -1,24 +1,36 @@
 DATA QUALITY REPORT - COUNTRY: TH
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Country Code: TH
 Total Records with Issues: 1
-Total Issues Found: 1
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
 
-[MISSING_RIGHTS]
+[MISSING_TAGS]
 Count: 1
 Priority: LOW
 
-File: TH/Federal/opendata/datagoth.yaml
-Record ID: datagoth
-Issue: MISSING_RIGHTS
-Field: rights
-Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'granular', 'tos_url': None}
-Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
+File: TH/Federal/scientific/globalreefopendata.yaml
+Record ID: globalreefopendata
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: TH/Federal/scientific/globalreefopendata.yaml
+Record ID: globalreefopendata
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_RIGHTS: 1 issue
+MISSING_TAGS: 1 issue
+MISSING_TOPICS: 1 issue

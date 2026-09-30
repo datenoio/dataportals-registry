@@ -1556,17 +1556,19 @@ Indixio GoMap web GIS platform (MapGuide Open Source + FDO), formerly Geomap GIS
 
 SunGIS (SIA SunGIS, Latvia) municipal and utility WebGIS. Product: [Go GIS](https://www.sungis.lv/our-products/go-gis/). Public tenants are `{org}.gis.sungis.lv`. Distinct from Indixio GoMap (`gomap`) on `geomapguide.ca`, from Latvian terGIS (`tergis`) and pGIS (`pgis`), and from Stellenbosch University's `sungis08` GeoServer.
 
-**Signals:** HTML title `Gogis V2` or `GogisFrontendV3`; Angular `data-beasties-container`; logo `/assets/images/gogis_logo_white-min.png`; OpenLayers under `/assets/ol/`; hostname `{tenant}.gis.sungis.lv`.
+**Signals:** HTML title `Gogis V2` or `GogisFrontendV3`; Angular `data-beasties-container`; logo `/assets/images/gogis_logo_white-min.png`; OpenLayers under `/assets/ol/`; hostname `{tenant}.gis.sungis.lv`. Self-hosted municipal deployments serve the `gopub` public portal variant: HTML title `gopub`, `data-theme="gogis"` on the root element, JS bundle references `https://www.sungis.lv/` (e.g. geodati.jelgava.lv).
 
-**Confirm:** GET `https://{tenant}.gis.sungis.lv/` and match the Gogis V2 / GogisFrontendV3 title. One record per public tenant subdomain. Do **not** add the marketing homepage `sungis.lv`. Do **not** set `gomap` or `tergis` from a `*.gis.sungis.lv` host. Skip login-walled tenants and NXDOMAIN names. A municipality may already have terGIS/pGIS/ArcGIS catalogs — Go GIS is a separate product.
+**Confirm:** GET `https://{tenant}.gis.sungis.lv/` and match the Gogis V2 / GogisFrontendV3 title, or match the `gopub` + `data-theme="gogis"` signals on a municipal domain. One record per public tenant. Do **not** add the marketing homepage `sungis.lv`. Do **not** set `gomap` or `tergis` from a `*.gis.sungis.lv` host. Skip login-walled tenants and NXDOMAIN names. A municipality may already have terGIS/pGIS/ArcGIS catalogs — Go GIS is a separate product.
 
 | Tool | Query |
 |------|-------|
 | Google | `site:gis.sungis.lv Gogis` |
 | Google | `"Gogis V2" OR "GogisFrontendV3" sungis` |
+| Google | `intitle:gopub "gogis"` |
 | Censys | `web.names: "gis.sungis.lv"` |
 | FOFA | `host=".gis.sungis.lv"` |
 | FOFA | `title="Gogis V2"` |
+| FOFA | `title="gopub" && body="gogis"` |
 | crt.sh | `%.gis.sungis.lv` |
 
 ## Geocentriq (`geocentriq`) {#geocentriq}
@@ -3075,6 +3077,20 @@ Internet-Fregat urban-planning GIS OGD. Product: [gisogd](https://ifrigate.ru/so
 | Google | `"Farvater" ГИСОГД` |
 | Censys | `web.endpoints.http.body: "Farvater"` |
 | FOFA | `body="Farvater"` |
+
+## Accent (`accent`) {#accent}
+
+Bingo-Soft low-code platform «Акцент»; powers the standard ("типовое решение") GIS OGD portals rolled out to Russian regions from 2025. Product: [bingosoft.ru](https://bingosoft.ru/) (ГИСОГД under Цифровая картография).
+
+**Signals:** Vue SPA titled `Gisogd` (config `project: "Gisogd<Region>"`); `/static/js/configuration.js` exposes `window.appConfig` whose `ag_grid_license` starts `CompanyName=Bingo-Soft,LicensedApplication=Accent`; Element UI chunk assets (`/element/index.css`, `/css/chunk-*.css`); `manifest.json` with `"display": "standalone"`. Staff variant sits at `/app/isogd/` titled `Авторизация ИСОГД (Типовое решение)` (login wall — reject).
+
+**Confirm:** GET the portal root with a browser User-Agent (the stack drops default `requests` UAs); accept only the public map/document portal, not the `/app/isogd/` authorization page. One catalog per region.
+
+| Tool | Query |
+|------|-------|
+| Google | `"типовое решение" ГИСОГД портал` |
+| Censys | `web.endpoints.http.body: "LicensedApplication=Accent"` |
+| FOFA | `body="LicensedApplication=Accent"` |
 
 ## IndorRoad Geoportal (`indorgeo`) {#indorgeo}
 

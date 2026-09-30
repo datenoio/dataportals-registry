@@ -1,11 +1,33 @@
 DATA QUALITY REPORT - COUNTRY: AU
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Country Code: AU
-Total Records with Issues: 11
-Total Issues Found: 11
+Total Records with Issues: 12
+Total Issues Found: 13
 
 === ISSUES BY TYPE ===
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: AU/Federal/scientific/accessnricatalogue.yaml
+Record ID: accessnricatalogue
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: AU/Federal/scientific/accessnricatalogue.yaml
+Record ID: accessnricatalogue
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
 Count: 2
@@ -99,6 +121,8 @@ Suggested Action: Add at least one endpoint because software.id='tripal' is mark
 
 === SUMMARY BY ISSUE TYPE ===
 
+MISSING_TAGS: 1 issue
+MISSING_TOPICS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDBOX: 8 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPAL: 1 issue

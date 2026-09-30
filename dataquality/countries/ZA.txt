@@ -1,11 +1,51 @@
 DATA QUALITY REPORT - COUNTRY: ZA
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Country Code: ZA
-Total Records with Issues: 4
-Total Issues Found: 4
+Total Records with Issues: 3
+Total Issues Found: 6
 
 === ISSUES BY TYPE ===
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: ZA/Federal/opendata/healthsitesio.yaml
+Record ID: healthsitesio
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: ZA/Federal/opendata/healthsitesio.yaml
+Record ID: healthsitesio
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[PLACEHOLDER_TITLE]
+Count: 2
+Priority: MEDIUM
+
+File: ZA/Federal/opendata/healthsitesio.yaml
+Record ID: healthsitesio
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: Healthsites.io
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ZA/Federal/opendata/healthsitesio.yaml
+Record ID: healthsitesio
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: Healthsites.io
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIMS]
 Count: 2
@@ -25,26 +65,21 @@ Field: endpoints
 Current Value: {'software_id': 'bims', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='bims' is marked as API-capable in software definitions
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA]
-Count: 2
-Priority: MEDIUM
-
-File: ZA/Federal/indicators/saaqisenvironmentgovza.yaml
-Record ID: saaqisenvironmentgovza
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
-Field: endpoints
-Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
-
-File: ZA/ZA-KZN/indicators/rbcaaorgza.yaml
-Record ID: rbcaaorgza
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA
-Field: endpoints
-Current Value: {'software_id': 'envista', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='envista' is marked as API-capable in software definitions
-
 
 === SUMMARY BY ISSUE TYPE ===
 
+MISSING_TAGS: 1 issue
+MISSING_TOPICS: 1 issue
+PLACEHOLDER_TITLE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BIMS: 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENVISTA: 2 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: healthsitesio
+File: ZA/Federal/opendata/healthsitesio.yaml
+Issue Count: 4
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name

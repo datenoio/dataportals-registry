@@ -1701,6 +1701,19 @@ Open-source dashboard platform (Grafana Labs). Almost all internet-facing instan
 | FOFA | `title="Grafana" && host=".gov"` |
 | FOFA | `title="Grafana" && host=".gob."` |
 
+## eazyBI (`eazybi`) {#eazybi}
+
+Commercial BI and dashboard platform from the Latvian vendor eazyBI (Riga); cloud and server deployments. Only **publicly published dashboards / report pages** count as catalogs (e.g. VSAA social-insurance statistics at statistika-vsaa.lv); private BI workspaces are out of scope. Product: [eazybi.com](https://eazybi.com/).
+
+**Signals:** page text or `og:description` naming "eazyBI" as the reporting tool with a link to `eazybi.com`; embedded `eazybi.com/...` or `/eazybi/...` report iframes; account hosts under `*.eazybi.com`.
+
+**Confirm:** GET the statistics page and find the eazyBI attribution or embedded eazyBI report. One record per public statistics site. Do not register private workspaces or the vendor marketing pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `"eazyBI" statistics dashboards government` |
+| Google | `site:eazybi.com "public"` dashboards statistics |
+
 ## EPS Data Platform (`epsdata`) {#epsdata}
 
 Vendor-operated single-tenant SaaS. Site: [epsnet.com.cn](https://www.epsnet.com.cn). The vendor instance is the only catalog — no third-party deployments to hunt; discovery is complete once the vendor instance is registered.

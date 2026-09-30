@@ -358,6 +358,7 @@ See [apidetect.md](../apidetect.md). Do not run `apidetect_urlmaps_draft.py` as 
 
 **Reject** (do not add):
 
+- Official gazettes and legislation-only portals (official journal, gazette, legal acts catalogs such as EUR-Lex, Fedlex, Riigi Teataja): they catalog documents, not datasets, and are not suitable for automatic dataset indexing. Never add them, even tagged `official gazette`
 - Demo, template, or documentation-only sites
 - Single file downloads with no catalog
 - Sites that require authentication for any catalog listing

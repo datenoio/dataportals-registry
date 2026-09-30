@@ -1288,6 +1288,21 @@ reports, `igeo-loading` app shell, and bookmarked-layer local state
 (`igvt_bookmarked_layers`). Viewer grain: [harvest-viewers.md](harvest-viewers.md).
 Discovery: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md#igvt).
 
+## Platforma GeoCloud (`geocloud`) {#geocloud}
+
+MŽP SR national GeoICT platform (`geoportal.gov.sk`, `rpi.gov.sk`,
+`inspire.gov.sk`). Harvest each tenant application separately. For the Národný
+geoportál use the FastAPI backend at `api.geocloud.gov.sk/geoportal` if
+unauthenticated; for RPI use its metadata record pages / API. Shared OGC services
+live at `gis.geocloud.gov.sk/geoserver/{workspace}/ows` — harvest named layers
+via workspace GetCapabilities (same grain as [GeoServer](#geoserver)), one scope
+per workspace. Do not register or harvest the bare GeoServer/MapProxy service
+roots as catalogs.
+
+**Keep:** tenant dataset / metadata-record lists, named WMS/WFS layers per
+workspace. **Drop:** basemap tiles, CMS media (`cms.geocloud.gov.sk`), and
+login-only provider areas.
+
 ## Related
 
 - [harvest.md](harvest.md)

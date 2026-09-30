@@ -2081,3 +2081,19 @@ Esri's current geospatial storytelling product. Product: [ArcGIS StoryMaps](http
 | Google | `site:storymaps.arcgis.com/stories (data OR atlas OR catalog)` |
 | Censys | `web.endpoints.http.body: "ArcGIS StoryMaps"` |
 | FOFA | `body="ArcGIS StoryMaps"` |
+
+## Platforma GeoCloud (`geocloud`) {#geocloud}
+
+Slovak national GeoICT platform of the Ministry of Environment (MŽP SR, ESPUS project). Product: [geocloud.gov.sk](https://geocloud.gov.sk/). Hosts the national INSPIRE applications on shared FastAPI + PostgreSQL/PostGIS backends with GeoServer/MapProxy at `gis.geocloud.gov.sk` and a Strapi CMS at `cms.geocloud.gov.sk`. Tenants: Národný geoportál (`geoportal.gov.sk`, Vue.js/Vuetify), Register priestorových informácií (`rpi.gov.sk`, Angular), NIPI website (`inspire.gov.sk`). Distinct from Cegal GeoCloud, US GeoCloud Inc (`gpt.geocloud.com`, `esrigeo`), and Chinese 地质云.
+
+**Signals:** host `*.geocloud.gov.sk`; `/settings.js` exposing `VUE_APP_API_ENDPOINT_GP: https://api.geocloud.gov.sk/geoportal` (Národný geoportál); FastAPI backends on `api.geocloud.gov.sk`; GeoServer workspace WMS/WFS under `gis.geocloud.gov.sk/geoserver/{workspace}/ows`.
+
+**Confirm:** GET the portal home and match the `api.geocloud.gov.sk` / `gis.geocloud.gov.sk` references. One record per tenant application (`geoportal.gov.sk`, `rpi.gov.sk`, `inspire.gov.sk`), not per GeoServer workspace. Do **not** register bare `gis.geocloud.gov.sk` / `cms.geocloud.gov.sk` service roots beside their parent tenants, and do **not** set `geocloud` on unrelated municipal GeoServer hosts ending in `.sk`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"geocloud.gov.sk" site:.sk` |
+| Google | `site:geocloud.gov.sk -gis -cms` |
+| Censys | `web.endpoints.http.body: "api.geocloud.gov.sk"` |
+| FOFA | `host="geocloud.gov.sk"` |
+| FOFA | `body="VUE_APP_API_ENDPOINT_GP"` |

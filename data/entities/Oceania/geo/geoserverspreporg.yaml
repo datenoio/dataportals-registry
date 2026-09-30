@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: '009'
       name: Oceania
-description: Open source server for sharing geospatial data, designed for interoperability
+description: GeoServer instance of the Secretariat of the Pacific Regional Environment
+  Programme (SPREP), serving Pacific environment geospatial data via OGC web services.
 endpoints:
 - type: wms111
   url: https://geoserver.sprep.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -64,15 +65,15 @@ langs:
 - id: EN
   name: English
 link: https://geoserver.sprep.org/geoserver
-name: GeoServer Project / deploying organization not specified Geoportal
+name: SPREP GeoServer
 owner:
-  link: https://geoserver.org
+  link: https://www.sprep.org
   location:
     country:
       id: Oceania
       name: Oceania
     level: 20
-  name: GeoServer Project / deploying organization not specified
+  name: Secretariat of the Pacific Regional Environment Programme (SPREP)
   type: International
 properties:
   has_doi: false

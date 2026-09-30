@@ -14,9 +14,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: National open data portal of Paraguay (DKAN on Drupal 7), publishing
-  government datasets across sectors with a CKAN-compatible Action API and a Project
-  Open Data / DCAT-US data.json export.
+description: National open data portal of Paraguay (DKAN on Drupal 7), publishing government datasets
+  across sectors with a CKAN-compatible Action API and a Project Open Data / DCAT-US data.json export.
 endpoints:
 - type: ckan:package-list
   url: https://www.datos.gov.py/api/3/action/package_list
@@ -43,8 +42,9 @@ properties:
   is_national: true
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Licencia de Uso de la Informacion y los Datos Abiertos Publicos propiedad del Estado Paraguayo
+    (Decreto 4064/2015, Anexo II)
+  license_url: https://informacionpublica.paraguay.gov.py/#!/license
   privacy_policy_url: null
   rights_type: granular
   tos_url: null

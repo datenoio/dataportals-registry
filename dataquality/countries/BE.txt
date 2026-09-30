@@ -1,103 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: BE
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Country Code: BE
-Total Records with Issues: 13
-Total Issues Found: 13
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
-
-[MISSING_RIGHTS]
-Count: 1
-Priority: LOW
-
-File: BE/Federal/opendata/datagovbe.yaml
-Record ID: datagovbe
-Issue: MISSING_RIGHTS
-Field: rights
-Current Value: {'license_id': None, 'license_name': None, 'license_url': None, 'privacy_policy_url': None, 'rights_type': 'unknown', 'tos_url': None}
-Suggested Action: Add rights.license_id, license_name, and license_url for this official national open-data portal.
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA]
-Count: 11
-Priority: MEDIUM
-
-File: BE/Federal/scientific/wwwscheldemonitororg.yaml
-Record ID: wwwscheldemonitororg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA
-Field: endpoints
-Current Value: {'software_id': 'aphia', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='aphia' is marked as API-capable in software definitions
-
-File: BE/Federal/scientific/wwwcompositaeorg.yaml
-Record ID: wwwcompositaeorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA
-Field: endpoints
-Current Value: {'software_id': 'aphia', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='aphia' is marked as API-capable in software definitions
-
-File: BE/Federal/scientific/nemysugentbe.yaml
-Record ID: nemysugentbe
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA
-Field: endpoints
-Current Value: {'software_id': 'aphia', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='aphia' is marked as API-capable in software definitions
-
-File: BE/Federal/scientific/algaetraitsorg.yaml
-Record ID: algaetraitsorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA
-Field: endpoints
-Current Value: {'software_id': 'aphia', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='aphia' is marked as API-capable in software definitions
-
-File: BE/Federal/scientific/wwwmolluscabaseorg.yaml
-Record ID: wwwmolluscabaseorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA
-Field: endpoints
-Current Value: {'software_id': 'aphia', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='aphia' is marked as API-capable in software definitions
-
-File: BE/Federal/scientific/wwwdecanetinfo.yaml
-Record ID: wwwdecanetinfo
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA
-Field: endpoints
-Current Value: {'software_id': 'aphia', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='aphia' is marked as API-capable in software definitions
-
-File: BE/Federal/scientific/rotiferaaphiaorg.yaml
-Record ID: rotiferaaphiaorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA
-Field: endpoints
-Current Value: {'software_id': 'aphia', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='aphia' is marked as API-capable in software definitions
-
-File: BE/Federal/scientific/wwwcyperaceaeorg.yaml
-Record ID: wwwcyperaceaeorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA
-Field: endpoints
-Current Value: {'software_id': 'aphia', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='aphia' is marked as API-capable in software definitions
-
-File: BE/Federal/scientific/wwwdiatombaseorg.yaml
-Record ID: wwwdiatombaseorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA
-Field: endpoints
-Current Value: {'software_id': 'aphia', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='aphia' is marked as API-capable in software definitions
-
-File: BE/Federal/scientific/strepsipteraaphiaorg.yaml
-Record ID: strepsipteraaphiaorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA
-Field: endpoints
-Current Value: {'software_id': 'aphia', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='aphia' is marked as API-capable in software definitions
-
-File: BE/Federal/scientific/wwwaphiaorg.yaml
-Record ID: wwwaphiaorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA
-Field: endpoints
-Current Value: {'software_id': 'aphia', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='aphia' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
 Count: 1
@@ -113,6 +21,4 @@ Suggested Action: Add at least one endpoint because software.id='drupal' is mark
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_RIGHTS: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_APHIA: 11 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue

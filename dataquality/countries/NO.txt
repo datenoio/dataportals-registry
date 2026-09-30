@@ -1,11 +1,44 @@
 DATA QUALITY REPORT - COUNTRY: NO
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Country Code: NO
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 2
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
+
+[MISSING_OWNER_LINK]
+Count: 1
+Priority: LOW
+
+File: NO/Federal/search/finnnorskegeodata.yaml
+Record ID: finnnorskegeodata
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: NO/Federal/search/finnnorskegeodata.yaml
+Record ID: finnnorskegeodata
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: NO/Federal/search/finnnorskegeodata.yaml
+Record ID: finnnorskegeodata
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GBIFPLATFORM]
 Count: 1
@@ -21,4 +54,17 @@ Suggested Action: Add at least one endpoint because software.id='gbifplatform' i
 
 === SUMMARY BY ISSUE TYPE ===
 
+MISSING_OWNER_LINK: 1 issue
+MISSING_TAGS: 1 issue
+MISSING_TOPICS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GBIFPLATFORM: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: finnnorskegeodata
+File: NO/Federal/search/finnnorskegeodata.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_OWNER_LINK: owner.link

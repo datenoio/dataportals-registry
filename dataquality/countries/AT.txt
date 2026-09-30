@@ -1,43 +1,40 @@
 DATA QUALITY REPORT - COUNTRY: AT
 ================================================================================
-Generated: 2026-09-29 21:46:09
+Generated: 2026-09-30 20:41:32
 Country Code: AT
-Total Records with Issues: 6
-Total Issues Found: 8
+Total Records with Issues: 5
+Total Issues Found: 7
 
 === ISSUES BY TYPE ===
 
-[MISSING_TAGS]
-Count: 2
+[MISSING_OWNER_LINK]
+Count: 1
 Priority: LOW
 
-File: AT/Federal/indicators/wwwworldminingdatainfo.yaml
-Record ID: wwwworldminingdatainfo
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
+File: AT/Federal/opendata/openfootball.yaml
+Record ID: openfootball
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
 
-File: AT/Federal/geo/ideaslabplusacat.yaml
-Record ID: ideaslabplusacat
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: AT/Federal/opendata/openfootball.yaml
+Record ID: openfootball
 Issue: MISSING_TAGS
 Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
 
 [MISSING_TOPICS]
-Count: 2
+Count: 1
 Priority: LOW
 
-File: AT/Federal/indicators/wwwworldminingdatainfo.yaml
-Record ID: wwwworldminingdatainfo
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AT/Federal/geo/ideaslabplusacat.yaml
-Record ID: ideaslabplusacat
+File: AT/Federal/opendata/openfootball.yaml
+Record ID: openfootball
 Issue: MISSING_TOPICS
 Field: topics
 Current Value: []
@@ -78,6 +75,17 @@ Suggested Action: Add at least one endpoint because software.id='webgiscloud' is
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_TAGS: 2 issues
-MISSING_TOPICS: 2 issues
+MISSING_OWNER_LINK: 1 issue
+MISSING_TAGS: 1 issue
+MISSING_TOPICS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_WEBGISCLOUD: 4 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: openfootball
+File: AT/Federal/opendata/openfootball.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_OWNER_LINK: owner.link
