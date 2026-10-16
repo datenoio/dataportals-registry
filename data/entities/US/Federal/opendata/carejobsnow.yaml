@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: CareJobs.Now publishes free open data on US healthcare job postings and
+  posted pay, read daily from the career sites of about 270 hospitals, health systems
+  and care companies. JSON and CSV files list open jobs by kind of job and employer
+  and posted hourly pay by kind of job, with no key required. An archived release
+  is deposited on Zenodo under CC BY 4.0.
+endpoints:
+- type: api
+  url: https://carejobs.now/roles.json
+- type: api
+  url: https://carejobs.now/pay.json
+identifiers:
+- id: doi
+  url: https://doi.org/10.5281/zenodo.23395728
+  value: 10.5281/zenodo.23395728
+- id: github
+  url: https://github.com/yumaheymans/carejobs-mcp
+  value: yumaheymans/carejobs-mcp
+id: carejobsnow
+langs:
+- id: EN
+  name: English
+link: https://carejobs.now/data
+name: CareJobs.Now Open Data
+owner:
+  link: https://carejobs.now
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: CareJobs.Now
+  type: Business
+properties:
+  has_doi: true
+  is_national: false
+rights:
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
+  rights_type: granular
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- open data
+- healthcare jobs
+- job postings
+- labor market
+- wages
+- nursing
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+uid: cdi00013864
