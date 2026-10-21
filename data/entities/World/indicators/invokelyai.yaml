@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion:
+      id: '001'
+      name: World
+description: >-
+  Public catalog of official-statistics indicators with definitions, units and rankings.
+  Values are available through a hosted REST API for US states and counties, EU regions,
+  Spanish municipalities, and country and world indicators from the World Bank. Each value
+  includes its publisher and a citation. The catalog is browsable without an account.
+  The free plan includes 500 MCP calls per month; REST data queries require Builder, Pro
+  or prepaid credits. Full history and CSV export are included on every plan, with up to
+  5,000 series points per call. Original publishers' licenses govern reuse.
+endpoints:
+- type: openapi
+  url: https://invokely.ai/openapi.json
+- type: rest
+  url: https://invokely.ai/api/v1/indicators
+id: invokelyai
+langs:
+- id: EN
+  name: English
+link: https://invokely.ai/data
+name: Invokely
+owner:
+  link: https://invokely.ai
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+  name: Invokely
+  type: Business
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://invokely.ai/privacy
+  rights_type: granular
+  tos_url: https://invokely.ai/terms
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- official statistics
+- indicators
+- REST API
+uid: cdi00013864
