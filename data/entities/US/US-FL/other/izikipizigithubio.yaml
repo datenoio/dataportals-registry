@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Datasets list
+catalog_export: Frictionless Data Package
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Public catalog of vendor-neutral MSP and RMM operations resources, including
+  29 downloadable CSV templates and a source-dated RMM pricing dataset. Resources are
+  ungated, published with a Frictionless Data Package descriptor, and accompanied by
+  schemas, byte counts, SHA-256 hashes, and structured catalog metadata.
+endpoints:
+- type: data-package
+  url: https://izikipizi.github.io/nizlo-msp-operations-resources/datapackage.json
+- type: custom:json
+  url: https://izikipizi.github.io/nizlo-msp-operations-resources/resource-index.json
+id: izikipizigithubio
+langs:
+- id: EN
+  name: English
+link: https://izikipizi.github.io/nizlo-msp-operations-resources/
+name: Nizlo MSP Operations Resources
+owner:
+  link: https://nizlo.com/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: Cloud 84 Holdings
+  type: Business
+properties:
+  dataset_count_reported: 30
+  has_doi: false
+  is_national: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- managed service providers
+- remote monitoring and management
+- IT operations
+- operational templates
+- pricing transparency
+- open data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi99990002
