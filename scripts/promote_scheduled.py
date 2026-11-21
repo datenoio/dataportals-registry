@@ -312,6 +312,14 @@ def promote_records(
     entities = entities_dir or ENTITIES_DIR
 
     if not base.exists():
+        if ids:
+            # An empty queue has no directory in git; requested ids still cannot exist.
+            typer.echo(
+                f"Error: --id value(s) not found in {base}: {', '.join(sorted(set(ids)))}"
+                " (directory not found)",
+                err=True,
+            )
+            raise typer.Exit(1)
         typer.echo(f"Directory not found: {base}")
         return {"promoted": 0, "skipped_dup": 0, "dead": 0, "errors": 0}
 
