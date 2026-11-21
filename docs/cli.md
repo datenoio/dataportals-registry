@@ -137,4 +137,4 @@ pytest -m unit
 pytest --no-cov
 ```
 
-CI (`.github/workflows/tests.yml`) runs `validate-yaml`, pytest on Python 3.10–3.12, and the quality regression guard.
+CI (`.github/workflows/tests.yml`) runs `validate-yaml`, pytest on Python 3.12, and the quality regression guard.

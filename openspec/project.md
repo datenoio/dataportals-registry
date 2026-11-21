@@ -87,7 +87,7 @@ The registry is organized as a collection of YAML files that will eventually be 
 - **Naming**: Test files follow `test_*.py` convention
 - **Coverage**: Aim for comprehensive test coverage, especially for core builder functions
 - **CI/CD**: Automated testing on push/PR via GitHub Actions
-  - Tests run on Python 3.10, 3.11, 3.12
+  - Tests run on Python 3.12
   - Coverage reports uploaded to Codecov
 - **Test Types**:
   - Unit tests for individual functions
