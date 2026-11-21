@@ -75,19 +75,19 @@ class TestIdFilter:
         # nothing moved
         assert (scheduled / "US" / "opendata" / "reca.yaml").exists()
 
-    def test_unknown_id_errors_when_scheduled_dir_missing(self, tmp_path):
-        # An empty queue has no data/scheduled directory in git.
+    def test_unknown_id_errors_when_queue_dir_missing(self, tmp_path):
         with pytest.raises(typer.Exit) as exc:
             ps.promote_records(
                 ids=["nope"],
-                scheduled_dir=tmp_path / "missing",
+                scheduled_dir=tmp_path / "no-such-scheduled",
                 entities_dir=tmp_path / "entities",
             )
         assert exc.value.exit_code == 1
 
-    def test_missing_scheduled_dir_without_ids_is_noop(self, tmp_path):
+    def test_missing_queue_dir_without_ids_is_noop(self, tmp_path):
         counters = ps.promote_records(
-            scheduled_dir=tmp_path / "missing", entities_dir=tmp_path / "entities"
+            scheduled_dir=tmp_path / "no-such-scheduled",
+            entities_dir=tmp_path / "entities",
         )
         assert counters["promoted"] == 0
 
