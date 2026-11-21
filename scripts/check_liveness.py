@@ -12,11 +12,15 @@ import argparse
 import json
 import random
 import re
+import threading
 import time
+from collections import OrderedDict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Iterator, Optional
+from typing import Iterable, Iterator, Optional
+from urllib.parse import urlparse
 
 import requests
 import yaml
@@ -31,6 +35,18 @@ DEFAULT_ENTITIES = REPO_ROOT / "data" / "entities"
 DEFAULT_OUTPUT = REPO_ROOT / "dataquality" / "liveness_report.jsonl"
 
 RETRYABLE_STATUS_CODES = {408, 429, 500, 502, 503, 504}
+
+# Connection errors that a retry will not fix: the host does not resolve or
+# refuses the connection. Probing stops at the first one.
+FATAL_CONNECTION_TOKENS = (
+    "name or service not known",
+    "nodename nor servname",
+    "no address associated with hostname",
+    "failed to resolve",
+    "connection refused",
+)
+
+USER_AGENT = "dataportals-registry-liveness/1.0 (+https://github.com/datenoio/dataportals-registry)"
 
 
 @dataclass
@@ -153,6 +169,8 @@ def probe_url(
                 last_error = f"timeout: {exc}"
             except requests.exceptions.ConnectionError as exc:
                 last_error = f"connection error: {exc}"
+                if any(token in str(exc).lower() for token in FATAL_CONNECTION_TOKENS):
+                    return last_code, last_error, final_url
             except requests.exceptions.RequestException as exc:
                 last_error = str(exc)
 
@@ -190,11 +208,85 @@ def probe_record(
     )
 
 
-def write_report(results: list[ProbeResult], output_path: Path) -> None:
+def host_of(link: str) -> str:
+    return (urlparse(link).hostname or "").lower()
+
+
+def interleave_by_host(records: list[dict]) -> list[dict]:
+    """Reorder records round-robin by host, so that workers rarely wait on the
+    same host. Records of one host keep their relative order."""
+    groups: "OrderedDict[str, list[dict]]" = OrderedDict()
+    for record in records:
+        groups.setdefault(host_of(record["link"]), []).append(record)
+    queues = list(groups.values())
+    ordered: list[dict] = []
+    depth = 0
+    while queues:
+        queues = [queue for queue in queues if depth < len(queue)]
+        ordered.extend(queue[depth] for queue in queues)
+        depth += 1
+    return ordered
+
+
+def _new_session() -> requests.Session:
+    session = requests.Session()
+    session.headers.update({"User-Agent": USER_AGENT, "Accept": "*/*"})
+    return session
+
+
+def probe_records(
+    records: Iterable[dict],
+    output_path: Path,
+    workers: int = 16,
+    timeout: float = 10.0,
+    retries: int = 2,
+    delay: float = 0.0,
+    progress_every: int = 1000,
+    session_factory=_new_session,
+) -> list[ProbeResult]:
+    """Probe records with a thread pool and append each result to output_path
+    as soon as it is ready, so an interrupted run keeps a partial report.
+
+    One request at a time goes to a host; `delay` is the pause after each probe
+    of that host. Rows are written in completion order, not input order.
+    """
+    records = interleave_by_host(list(records))
     output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    local = threading.local()
+    host_locks: dict[str, threading.Lock] = {}
+    host_locks_guard = threading.Lock()
+
+    def _host_lock(host: str) -> threading.Lock:
+        with host_locks_guard:
+            return host_locks.setdefault(host, threading.Lock())
+
+    def _probe(record: dict) -> ProbeResult:
+        session = getattr(local, "session", None)
+        if session is None:
+            session = local.session = session_factory()
+        with _host_lock(host_of(record["link"])):
+            result = probe_record(record, session, timeout=timeout, retries=retries)
+            if delay:
+                time.sleep(delay)
+        return result
+
+    results: list[ProbeResult] = []
     with output_path.open("w", encoding="utf-8") as handle:
-        for result in results:
-            handle.write(json.dumps(result.to_dict(), ensure_ascii=False) + "\n")
+        with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
+            futures = [pool.submit(_probe, record) for record in records]
+            try:
+                for future in as_completed(futures):
+                    result = future.result()
+                    results.append(result)
+                    handle.write(json.dumps(result.to_dict(), ensure_ascii=False) + "\n")
+                    handle.flush()
+                    if progress_every and len(results) % progress_every == 0:
+                        print(f"Probed {len(results)}/{len(records)}", flush=True)
+            except KeyboardInterrupt:
+                pool.shutdown(wait=False, cancel_futures=True)
+                raise
+    return results
 
 
 def summarize(results: list[ProbeResult]) -> dict[str, int]:
@@ -285,7 +377,12 @@ def main() -> None:
     parser.add_argument("--sample", type=int, help="Probe only N random records")
     parser.add_argument("--timeout", type=float, default=10.0, help="Per-request timeout seconds")
     parser.add_argument("--retries", type=int, default=2, help="Retries on timeout/5xx")
-    parser.add_argument("--delay", type=float, default=0.0, help="Delay between probes in seconds")
+    parser.add_argument(
+        "--delay", type=float, default=0.0, help="Pause after each probe of the same host, in seconds"
+    )
+    parser.add_argument(
+        "--workers", type=int, default=16, help="Parallel probes (one at a time per host)"
+    )
     parser.add_argument("--seed", type=int, default=42, help="Random seed for --sample")
     parser.add_argument(
         "--apply-dead",
@@ -323,23 +420,14 @@ def main() -> None:
         if args.sample < len(records):
             records = random.sample(records, args.sample)
 
-    session = requests.Session()
-    session.headers.update(
-        {
-            "User-Agent": "dataportals-registry-liveness/1.0 (+https://github.com/datenoio/dataportals-registry)",
-            "Accept": "*/*",
-        }
+    results = probe_records(
+        records,
+        output_path,
+        workers=args.workers,
+        timeout=args.timeout,
+        retries=args.retries,
+        delay=args.delay,
     )
-
-    results: list[ProbeResult] = []
-    for index, record in enumerate(records):
-        results.append(
-            probe_record(record, session, timeout=args.timeout, retries=args.retries)
-        )
-        if args.delay and index < len(records) - 1:
-            time.sleep(args.delay)
-
-    write_report(results, output_path)
     summary = summarize(results)
     print(f"Wrote {len(results)} results to {output_path}")
     for status, count in sorted(summary.items()):

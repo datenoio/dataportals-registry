@@ -5,7 +5,13 @@ import pytest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
-from check_liveness import apply_dead_from_report, classify_liveness, probe_url
+from check_liveness import (
+    apply_dead_from_report,
+    classify_liveness,
+    interleave_by_host,
+    probe_records,
+    probe_url,
+)
 
 
 class _FakeResponse:
@@ -123,3 +129,71 @@ def test_apply_dead_dry_run_does_not_write(tmp_path):
     assert any(item["action"] == "inactivated" for item in applied)
     assert "status: inactive" in text
     assert "api: false" in text
+
+
+def test_probe_url_stops_on_dns_failure():
+    import requests
+
+    session = _FakeSession(
+        [requests.exceptions.ConnectionError("Failed to resolve 'gone.example' ([Errno -2] Name or service not known)")]
+    )
+    code, error, final_url = probe_url("https://gone.example", session, retries=2)
+    assert code is None
+    assert "connection error" in error
+    assert len(session.calls) == 1  # no GET fallback, no retries
+    assert classify_liveness(code, error) == "dead"
+
+
+def test_probe_url_retries_other_connection_errors():
+    import requests
+
+    session = _FakeSession(
+        [
+            requests.exceptions.ConnectionError("Connection reset by peer"),
+            _FakeResponse(200, "https://flaky.example"),
+        ]
+    )
+    code, error, _ = probe_url("https://flaky.example", session, retries=2)
+    assert code == 200
+    assert error is None
+
+
+def test_interleave_by_host_round_robin():
+    records = [
+        {"uid": "a1", "link": "https://a.example/1"},
+        {"uid": "a2", "link": "https://a.example/2"},
+        {"uid": "a3", "link": "https://A.example/3"},
+        {"uid": "b1", "link": "https://b.example/1"},
+        {"uid": "c1", "link": "https://c.example/1"},
+        {"uid": "c2", "link": "https://c.example/2"},
+    ]
+    ordered = [r["uid"] for r in interleave_by_host(records)]
+    assert ordered == ["a1", "b1", "c1", "a2", "c2", "a3"]
+
+
+class _RecordingSession:
+    def __init__(self):
+        self.calls = []
+
+    def request(self, method, url, timeout=None, allow_redirects=None):
+        self.calls.append((method, url))
+        return _FakeResponse(404 if "dead" in url else 200, url)
+
+
+def test_probe_records_writes_every_row(tmp_path):
+    import json
+
+    records = [
+        {"uid": f"cdi0000000{i}", "link": f"https://host{i % 3}.example/{'dead' if i == 4 else i}"}
+        for i in range(8)
+    ]
+    output = tmp_path / "out" / "liveness_report.jsonl"
+    results = probe_records(
+        records, output, workers=4, timeout=1, retries=0, session_factory=_RecordingSession
+    )
+    rows = [json.loads(line) for line in output.read_text(encoding="utf-8").splitlines()]
+    assert len(results) == len(rows) == 8
+    assert {row["uid"] for row in rows} == {r["uid"] for r in records}
+    by_uid = {row["uid"]: row["liveness_status"] for row in rows}
+    assert by_uid["cdi00000004"] == "dead"
+    assert by_uid["cdi00000001"] == "live"

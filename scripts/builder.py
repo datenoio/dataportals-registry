@@ -878,7 +878,15 @@ def _git_changed_yaml_files(repo_root=None):
     root = repo_root or _REPO_ROOT
     try:
         result = subprocess.run(
-            ["git", "status", "--porcelain", "--", "data/entities", "data/scheduled"],
+            [
+                "git",
+                "status",
+                "--porcelain",
+                "--untracked-files=all",  # list files inside new folders
+                "--",
+                "data/entities",
+                "data/scheduled",
+            ],
             cwd=root,
             capture_output=True,
             text=True,
@@ -900,6 +908,44 @@ def _git_changed_yaml_files(repo_root=None):
             path_part.startswith("data/entities/")
             or path_part.startswith("data/scheduled/")
         ):
+            continue
+        full_path = os.path.join(root, path_part)
+        if os.path.exists(full_path):
+            files.append(full_path)
+    return sorted(set(files))
+
+
+def _git_yaml_files_since(ref, repo_root=None):
+    """Return YAML files under data/entities and data/scheduled that were added,
+    copied, modified or renamed between `ref` and HEAD (`git diff ref...HEAD`).
+
+    Deleted files are skipped. Used by CI to validate only the files a pull
+    request touches.
+    """
+    root = repo_root or _REPO_ROOT
+    try:
+        result = subprocess.run(
+            [
+                "git",
+                "diff",
+                "--name-only",
+                "--diff-filter=ACMR",
+                f"{ref}...HEAD",
+                "--",
+                "data/entities",
+                "data/scheduled",
+            ],
+            cwd=root,
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+    except Exception as exc:
+        raise ValueError(f"git diff {ref}...HEAD failed: {exc}")
+    files = []
+    for line in result.stdout.splitlines():
+        path_part = line.strip().strip('"')
+        if not path_part.endswith(".yaml"):
             continue
         full_path = os.path.join(root, path_part)
         if os.path.exists(full_path):
@@ -1392,30 +1438,80 @@ def _validate_yaml_files(filenames: List[str], schema: dict, v) -> tuple:
     return errors, total, valid
 
 
-@app.command()
-def validate_yaml(
-    file: Optional[str] = typer.Option(
-        None,
-        "--file", "-f",
-        help="Path to a single YAML file to validate",
-        path_type=str,
-    ),
-    id: Optional[str] = typer.Option(
-        None,
-        "--id", "-i",
-        help="Catalog ID to validate (finds {id}.yaml in entities and scheduled)",
-    ),
-    changed: bool = typer.Option(
-        False,
-        "--changed",
-        help="Validate only git-changed YAML files (untracked/modified under data/entities and data/scheduled)",
-    ),
-):
-    """Validates YAML files against Cerberus schema. Without --file, --id, or --changed, validates all entities."""
+# Below this many files, validation stays in-process: starting worker
+# processes costs more than it saves.
+_PARALLEL_VALIDATION_MIN_FILES = 500
+# Smallest batch handed to one worker process.
+_VALIDATION_MIN_CHUNK = 100
+
+_WORKER_SCHEMA = None
+_WORKER_VALIDATOR = None
+
+
+def _init_validation_worker(schema: dict) -> None:
+    """Build one Cerberus validator per worker process."""
+    global _WORKER_SCHEMA, _WORKER_VALIDATOR
     from cerberus import Validator
 
-    if changed and (file is not None or id is not None):
-        typer.echo("Error: --changed cannot be combined with --file or --id", err=True)
+    _WORKER_SCHEMA = schema
+    _WORKER_VALIDATOR = Validator(schema)
+
+
+def _validate_yaml_chunk(filenames: List[str]) -> tuple:
+    return _validate_yaml_files(filenames, _WORKER_SCHEMA, _WORKER_VALIDATOR)
+
+
+def _validate_yaml_files_parallel(
+    filenames: List[str], schema: dict, v, workers: int = 0
+) -> tuple:
+    """Validate YAML files across worker processes. Returns (errors, total, valid).
+
+    workers <= 0 uses every CPU. Small batches and workers == 1 run in-process
+    with the given validator. Errors keep the order of `filenames`.
+    """
+    if workers <= 0:
+        workers = os.cpu_count() or 1
+    if workers == 1 or len(filenames) < _PARALLEL_VALIDATION_MIN_FILES:
+        return _validate_yaml_files(filenames, schema, v)
+
+    from concurrent.futures import ProcessPoolExecutor
+
+    chunk_size = max(_VALIDATION_MIN_CHUNK, len(filenames) // (workers * 4))
+    chunks = [filenames[i : i + chunk_size] for i in range(0, len(filenames), chunk_size)]
+    errors = []
+    total = 0
+    valid = 0
+    with ProcessPoolExecutor(
+        max_workers=workers,
+        initializer=_init_validation_worker,
+        initargs=(schema,),
+    ) as pool:
+        for chunk_errors, chunk_total, chunk_valid in pool.map(_validate_yaml_chunk, chunks):
+            errors.extend(chunk_errors)
+            total += chunk_total
+            valid += chunk_valid
+    return errors, total, valid
+
+
+def run_validate_yaml(
+    file: Optional[str] = None,
+    id: Optional[str] = None,
+    changed: bool = False,
+    since: Optional[str] = None,
+    workers: int = 0,
+) -> int:
+    """Validate YAML files against the Cerberus schema. Returns 0 when all files
+    are valid and 1 otherwise. Without file, id, changed or since, validates all
+    entities."""
+    from cerberus import Validator
+
+    selectors = sum(
+        [file is not None, id is not None, bool(changed), since is not None]
+    )
+    if selectors > 1:
+        typer.echo(
+            "Error: --file, --id, --changed and --since cannot be combined", err=True
+        )
         raise typer.Exit(1)
 
     schema_file = os.path.join(_REPO_ROOT, "data", "schemes", "catalog.json")
@@ -1428,9 +1524,12 @@ def validate_yaml(
     total = 0
     valid = 0
 
-    if changed:
+    if changed or since is not None:
         try:
-            filenames = _git_changed_yaml_files()
+            if since is not None:
+                filenames = _git_yaml_files_since(since)
+            else:
+                filenames = _git_changed_yaml_files()
         except ValueError as e:
             typer.echo(f"Error: {e}", err=True)
             raise typer.Exit(1)
@@ -1438,7 +1537,7 @@ def validate_yaml(
             typer.echo("No changed YAML files under data/entities or data/scheduled")
             return 0
         typer.echo(f"Validating {len(filenames)} changed YAML files")
-        errors, total, valid = _validate_yaml_files(filenames, schema, v)
+        errors, total, valid = _validate_yaml_files_parallel(filenames, schema, v, workers)
     elif file is not None:
         # Single file path
         path = os.path.normpath(file)
@@ -1475,7 +1574,8 @@ def validate_yaml(
             filenames.extend(
                 os.path.join(root, fi) for fi in files if fi.endswith(".yaml")
             )
-        errors, total, valid = _validate_yaml_files(filenames, schema, v)
+        filenames.sort()
+        errors, total, valid = _validate_yaml_files_parallel(filenames, schema, v, workers)
 
     typer.echo(f"\nValidation complete:")
     typer.echo(f"  Total files: {total}")
@@ -1491,6 +1591,43 @@ def validate_yaml(
     else:
         typer.echo("\nAll files are valid!")
         return 0
+
+
+@app.command()
+def validate_yaml(
+    file: Optional[str] = typer.Option(
+        None,
+        "--file", "-f",
+        help="Path to a single YAML file to validate",
+        path_type=str,
+    ),
+    id: Optional[str] = typer.Option(
+        None,
+        "--id", "-i",
+        help="Catalog ID to validate (finds {id}.yaml in entities and scheduled)",
+    ),
+    changed: bool = typer.Option(
+        False,
+        "--changed",
+        help="Validate only git-changed YAML files (untracked/modified under data/entities and data/scheduled)",
+    ),
+    since: Optional[str] = typer.Option(
+        None,
+        "--since",
+        help="Validate only YAML files changed between this git ref and HEAD (git diff REF...HEAD), e.g. origin/main",
+    ),
+    workers: int = typer.Option(
+        0,
+        "--workers", "-j",
+        help="Worker processes for large batches (0 = all CPUs, 1 = no multiprocessing)",
+    ),
+):
+    """Validates YAML files against Cerberus schema. Without --file, --id, --changed or --since, validates all entities. Exits 1 when any file is invalid."""
+    code = run_validate_yaml(
+        file=file, id=id, changed=changed, since=since, workers=workers
+    )
+    if code:
+        raise typer.Exit(code)
 
 
 @app.command()

@@ -9,10 +9,12 @@ Workflow: `.github/workflows/liveness.yml` (weekly Sunday 03:00 UTC, plus `workf
 ```bash
 python scripts/check_liveness.py --sample 10
 python scripts/check_liveness.py --country World --delay 0.25
-python scripts/check_liveness.py --output dataquality/liveness_report.jsonl
+python scripts/check_liveness.py --workers 32 --output dataquality/liveness_report.jsonl
 ```
 
-`--sample N` picks N random entity records (seed 42 by default). `--country` is an ISO code or a folder such as `World`. `--timeout` defaults to 10 seconds; `--retries` defaults to 2.
+`--sample N` picks N random entity records (seed 42 by default). `--country` is an ISO code or a folder such as `World`. `--timeout` defaults to 10 seconds; `--retries` defaults to 2. A host that does not resolve or refuses the connection is not retried.
+
+`--workers` (default 16) sets how many probes run in parallel. Only one request at a time goes to a host, and `--delay` is the pause after each probe of that host. The report is written row by row in completion order, so an interrupted run keeps the rows it finished. The weekly workflow uses `--workers 64 --delay 0.25` and uploads the report even when the job fails or times out.
 
 ## Apply dead hosts
 
