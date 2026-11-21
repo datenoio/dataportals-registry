@@ -41,7 +41,7 @@ Each catalog is one YAML document validated against `data/schemes/catalog.json` 
 | `trust_score` / `trust_score_components` | Optional 0–100 score; see [trust-score.md](trust-score.md) |
 | `_re3data` | Re3Data payload; see [re3data.md](re3data.md) |
 
-Do not invent `uid`. Scheduled records use `temp########` until [scheduled.md](scheduled.md) promotion.
+Do not invent `uid`; each `uid` must be unique across the registry (`validate-yaml` fails on duplicates). Scheduled records use `temp########` until [scheduled.md](scheduled.md) promotion.
 
 ## Properties
 

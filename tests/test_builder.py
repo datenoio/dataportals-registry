@@ -1247,9 +1247,13 @@ class TestValidationHelpers:
         other = self._write_yaml(temp_dir, "other.yaml", "id: otherrec\n")
 
         monkeypatch.setattr(builder, "_git_changed_yaml_files", lambda: [valid, invalid])
+        # Keep the uid-uniqueness scan inside temp_dir, away from the real registry.
+        monkeypatch.setattr(builder, "ROOT_DIR", str(temp_dir))
+        monkeypatch.setattr(builder, "SCHEDULED_DIR", os.path.join(str(temp_dir), "scheduled"))
         result = self._runner().invoke(builder.app, ["validate-yaml", "--changed"])
-        assert result.exit_code == 0, result.output
+        assert result.exit_code == 1, result.output
         assert "Total files: 2" in result.output
+        assert "Duplicate uids: 0" in result.output
         assert "Valid: 1" in result.output
         assert "Errors: 1" in result.output
         # per-file errors are reported via the logger
