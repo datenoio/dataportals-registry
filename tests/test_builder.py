@@ -1389,17 +1389,17 @@ class TestCreateTableFromJsonl:
             SELECT id, software.id, owner.type,
                    list_contains(tags, 'government'),
                    list_contains(
-                       list_transform(coverage, x -> x.location.country.id),
+                       list_transform(coverage, lambda x: x.location.country.id),
                        'US'
                    ),
                    list_contains(
-                       list_transform(identifiers, x -> x.id),
+                       list_transform(identifiers, lambda x: x.id),
                        'wikidata'
                    )
             FROM catalogs
             WHERE software.id = 'ckan'
               AND list_contains(
-                  list_transform(coverage, x -> x.location.country.id),
+                  list_transform(coverage, lambda x: x.location.country.id),
                   'US'
               )
             """
