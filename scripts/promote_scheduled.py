@@ -311,11 +311,13 @@ def promote_records(
     base = scheduled_dir or SCHEDULED_DIR
     entities = entities_dir or ENTITIES_DIR
 
-    if not base.exists():
+    # A missing queue dir (git drops it when the queue is empty) is a no-op,
+    # unless --id was given: requested ids that cannot be found are an error.
+    if not base.exists() and not ids:
         typer.echo(f"Directory not found: {base}")
         return {"promoted": 0, "skipped_dup": 0, "dead": 0, "errors": 0}
 
-    scheduled_files = collect_scheduled(base)
+    scheduled_files = collect_scheduled(base) if base.exists() else []
 
     if ids:
         wanted = set(ids)

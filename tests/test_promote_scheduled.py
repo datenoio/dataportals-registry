@@ -75,6 +75,21 @@ class TestIdFilter:
         # nothing moved
         assert (scheduled / "US" / "opendata" / "reca.yaml").exists()
 
+    def test_unknown_id_errors_when_queue_dir_missing(self, tmp_path):
+        with pytest.raises(typer.Exit):
+            ps.promote_records(
+                ids=["nope"],
+                scheduled_dir=tmp_path / "no-such-scheduled",
+                entities_dir=tmp_path / "entities",
+            )
+
+    def test_missing_queue_dir_without_ids_is_noop(self, tmp_path):
+        counters = ps.promote_records(
+            scheduled_dir=tmp_path / "no-such-scheduled",
+            entities_dir=tmp_path / "entities",
+        )
+        assert counters["promoted"] == 0
+
     def test_cli_unknown_id_exit_1(self):
         result = runner.invoke(ps.app, ["--id", "definitely-not-a-real-id-xyz"])
         assert result.exit_code == 1
