@@ -58,7 +58,7 @@ SELECT id, name, link
 FROM catalogs
 WHERE software.id = 'ckan'
   AND list_contains(
-        list_transform(coverage, x -> x.location.country.id),
+        list_transform(coverage, lambda x: x.location.country.id),
         'FR'
       );
 ```

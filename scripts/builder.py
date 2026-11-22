@@ -1451,7 +1451,8 @@ def validate_yaml(
             typer.echo(f"Error: File must be a YAML file: {path}", err=True)
             raise typer.Exit(1)
         typer.echo(f"Validating single file: {path}")
-        errors, total, valid = _validate_yaml_files([path], schema, v)
+        filenames = [path]
+        errors, total, valid = _validate_yaml_files(filenames, schema, v)
     elif id is not None:
         # Find by catalog ID
         pattern = os.path.join("**", f"{id}.yaml")
@@ -1466,7 +1467,8 @@ def validate_yaml(
         if len(candidates) > 1:
             typer.echo(f"Found {len(candidates)} files for id '{id}', validating all")
         typer.echo(f"Validating: {', '.join(candidates)}")
-        errors, total, valid = _validate_yaml_files(candidates, schema, v)
+        filenames = candidates
+        errors, total, valid = _validate_yaml_files(filenames, schema, v)
     else:
         # All entities
         typer.echo("Validating YAML files in entities directory...")
@@ -1476,10 +1478,15 @@ def validate_yaml(
                 os.path.join(root, fi) for fi in files if fi.endswith(".yaml")
             )
         errors, total, valid = _validate_yaml_files(filenames, schema, v)
+        filenames = None  # full run: report every duplicate uid in the tree
+
+    uid_errors = _duplicate_uid_errors(filenames)
+    errors.extend(uid_errors)
 
     typer.echo(f"\nValidation complete:")
     typer.echo(f"  Total files: {total}")
     typer.echo(f"  Valid: {valid}")
+    typer.echo(f"  Duplicate uids: {len(uid_errors)}")
     typer.echo(f"  Errors: {len(errors)}")
 
     if errors:
@@ -1487,7 +1494,8 @@ def validate_yaml(
         for filename, error in errors:
             rel_path = os.path.relpath(filename, _REPO_ROOT)
             logger.error("%s: %s", rel_path, error)
-        return 1
+        # A returned int is ignored by Typer; exit non-zero so CI and callers fail.
+        raise typer.Exit(1)
     else:
         typer.echo("\nAll files are valid!")
         return 0
@@ -1810,6 +1818,68 @@ def _collect_used_uid_numbers(dirpaths, prefix):
                 if number is not None:
                     used.add(number)
     return used
+
+
+def _read_uid_value(filepath):
+    """Return the top-level uid value of a YAML file (uid-line scan), or None."""
+    try:
+        with open(filepath, "r", encoding="utf8") as handle:
+            text = handle.read()
+    except OSError:
+        return None
+    match = _UID_VALUE_RE.search(text)
+    if not match:
+        return None
+    return match.group(1).strip("'\"") or None
+
+
+def _collect_uid_paths(dirpaths):
+    """Map uid value -> YAML paths under dirpaths (uid-line scan, no YAML parse)."""
+    by_uid = defaultdict(list)
+    for dirpath in dirpaths:
+        if not os.path.exists(dirpath):
+            continue
+        for filepath in _iter_yaml_files(dirpath):
+            uid = _read_uid_value(filepath)
+            if uid:
+                by_uid[uid].append(filepath)
+    return by_uid
+
+
+def _find_duplicate_uids(dirpaths):
+    """Return {uid: [paths]} for uid values used by more than one YAML file."""
+    return {
+        uid: paths
+        for uid, paths in _collect_uid_paths(dirpaths).items()
+        if len(paths) > 1
+    }
+
+
+def _duplicate_uid_errors(filenames=None, dirpaths=None):
+    """Return (filepath, message) errors for uids shared by more than one record.
+
+    With filenames=None every duplicate in dirpaths is reported; otherwise only
+    the given files are checked against the whole tree.
+    """
+    dirpaths = dirpaths or [ROOT_DIR, SCHEDULED_DIR]
+    by_uid = _collect_uid_paths(dirpaths)
+    if filenames is None:
+        targets = [p for paths in by_uid.values() if len(paths) > 1 for p in paths]
+    else:
+        targets = filenames
+    errors = []
+    for filepath in targets:
+        uid = _read_uid_value(filepath)
+        if not uid:
+            continue
+        own = os.path.abspath(filepath)
+        others = [p for p in by_uid.get(uid, []) if os.path.abspath(p) != own]
+        if others:
+            shared = ", ".join(
+                os.path.relpath(p, _REPO_ROOT) for p in sorted(others)
+            )
+            errors.append((filepath, f"duplicate uid {uid} (also in: {shared})"))
+    return errors
 
 
 def _compute_uid_assignments(filepaths, prefix, used_numbers):

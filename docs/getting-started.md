@@ -23,7 +23,7 @@ con.execute(
     FROM catalogs
     WHERE catalog_type = 'Open data portal'
       AND list_contains(
-            list_transform(coverage, x -> x.location.country.id),
+            list_transform(coverage, lambda x: x.location.country.id),
             'US'
           )
     LIMIT 10

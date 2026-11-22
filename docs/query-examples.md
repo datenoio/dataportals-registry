@@ -35,7 +35,7 @@ SELECT id, name, link
 FROM catalogs
 WHERE software.id = 'ckan'
   AND list_contains(
-        list_transform(coverage, x -> x.location.country.id),
+        list_transform(coverage, lambda x: x.location.country.id),
         'US'
       )
   AND status = 'active'
@@ -69,7 +69,7 @@ ORDER BY n DESC;
 ```sql
 SELECT id, name, identifiers
 FROM catalogs
-WHERE list_contains(list_transform(identifiers, x -> x.id), 'wikidata')
+WHERE list_contains(list_transform(identifiers, lambda x: x.id), 'wikidata')
 LIMIT 20;
 ```
 
@@ -79,7 +79,7 @@ LIMIT 20;
 SELECT id, name, link
 FROM catalogs
 WHERE catalog_type = 'Scientific data repository'
-  AND list_contains(list_transform(identifiers, x -> x.id), 're3data')
+  AND list_contains(list_transform(identifiers, lambda x: x.id), 're3data')
 ORDER BY name
 LIMIT 50;
 ```

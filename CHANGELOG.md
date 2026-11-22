@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- **Duplicate UIDs**: 177 `uid` values were shared by 385 catalog records (up to 7 records per value). Each value now stays with one record and the other 208 records get new UIDs `cdi00043952`–`cdi00044159`, a range never used in git history. The record that keeps a value is the one added to git first; for 36 pairs added in the same commit it is the first by path, except `cdi00020014`, which stays with `w3clovportallirmmfr` as in v1.4.0. The old → new mapping is in `dataquality/uid_reassignments_2026-11-21.jsonl`.
+- **`validate-yaml` exit code**: schema errors now exit with code 1. Before, the command returned 1 but Typer ignored the return value, so the CI step always passed.
+- **CI on `main`**: `website/static/llms.txt` and `website/static/.well-known/llms.txt` are synced with the root `llms.txt` again. `promote_scheduled.py --id` now exits with code 1 when `data/scheduled/` does not exist.
+
+### Added
+
+- `validate-yaml` checks that every `uid` is unique across `data/entities/` and `data/scheduled/`, in every mode (`--file`, `--id`, `--changed` and a full run), and `tests/test_uid_uniqueness.py` checks the same for the registry data.
+
 ## [1.27.0] - 2026-10-15
 
 **GitHub Release**: [v1.27.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.27.0) - Published October 15, 2026

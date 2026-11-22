@@ -88,7 +88,7 @@ The test suite covers:
 ## Continuous Integration
 
 Tests are automatically run on GitHub Actions for:
-- Python 3.10, 3.11, and 3.12
+- Python 3.12
 - On push to main/master/develop branches
 - On pull requests
 
