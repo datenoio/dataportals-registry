@@ -27,12 +27,6 @@ DUPLICATE_ALLOWLIST = {
     "fix_yaml_file": "Replaced by apply-fixes (openspec: add-deterministic-fix-rules).",
     "fix_owner_link": "Replaced by apply-fixes (openspec: add-deterministic-fix-rules).",
     "parse_report_file": "Replaced by apply-fixes (openspec: add-deterministic-fix-rules).",
-    "infer_country_from_link": "Diverged copies; unify in dpr.geo (task 3.1).",
-    "read_jsonl_issues": "Diverged copies; unify in dpr.reports (task 3.2).",
-    "fetch_re3data_page": "Diverged copies; unify in dpr.re3data (task 3.3).",
-    "get_re3data_url": "Diverged copies; unify in dpr.re3data (task 3.3).",
-    "collect_re3data_identifiers": "Diverged copies; unify in dpr.re3data (task 3.3).",
-    "_iter_yaml_files": "Diverged copies; unify in dpr (task 3.5).",
 }
 
 
@@ -95,3 +89,4 @@ def test_no_sys_path_manipulation(path):
         f"{path.relative_to(REPO_ROOT)} changes sys.path on lines {calls}. Scripts run with "
         "scripts/ on their path, and pytest.ini sets pythonpath = scripts."
     )
+

@@ -18,11 +18,11 @@
 
 ## 3. Diverged helpers
 
-- [ ] 3.1 Add characterization tests for both callers of `infer_country_from_link`, then keep one implementation in `dpr.geo`.
-- [ ] 3.2 Do the same for `parse_report_file` and `read_jsonl_issues` in `dpr.reports`.
-- [ ] 3.3 Do the same for `fetch_re3data_page`, `get_re3data_url` and `collect_re3data_identifiers` in `dpr.re3data`.
-- [ ] 3.4 Move the shared hunt/promote functions into `dpr` so that `promote_scheduled.py` no longer imports `hunt`.
-- [ ] 3.5 Unify `_iter_yaml_files` (`apidetect.py`, `builder.py`) in `dpr`.
+- [x] 3.1 Add characterization tests for both callers of `infer_country_from_link`, then keep one implementation in `dpr.geo` (`tests/test_dpr_geo.py`). The `promote_scheduled.py` version is kept unchanged. `fix_important_issues.py` now uses it and takes country names from `constants.COUNTRIES`; see the design note.
+- [x] 3.2 Do the same for `read_jsonl_issues` in `dpr.reports`. `parse_report_file` exists only in `fix_*.py` scripts, so it goes with `add-deterministic-fix-rules`.
+- [x] 3.3 Do the same for `fetch_re3data_page`, `get_re3data_url`, `collect_re3data_identifiers` and `RE3DATA_BASE_URL` in `dpr.re3data`.
+- [ ] 3.4 Move the shared hunt/promote functions into `dpr` so that `promote_scheduled.py` no longer imports `hunt`. Deferred to its own PR; see the design note.
+- [x] 3.5 Unify `_iter_yaml_files` (`apidetect.py`, `builder.py`) as `dpr.yaml_io.iter_yaml_files`. It keeps the sorted `builder.py` behaviour, so `apidetect.py` now walks files in sorted order.
 
 ## 4. Entry-point conventions
 

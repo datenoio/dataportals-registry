@@ -34,6 +34,7 @@ from requests.exceptions import (
 )
 import urllib3
 from urllib3.exceptions import InsecureRequestWarning  # , ConnectionError
+from dpr.yaml_io import iter_yaml_files as _iter_yaml_files
 
 # Probes check TLS certificates unless the caller opts out with --insecure
 # (or set_insecure_tls(True)). Catalogs with expired or self-signed
@@ -4287,13 +4288,6 @@ def __detect_one(
 
 def _resolve_root_dir(mode):
     return ENTRIES_DIR if mode == "entries" else SCHEDULED_DIR
-
-
-def _iter_yaml_files(root_dir):
-    for root, _, files in os.walk(root_dir):
-        for fi in files:
-            if fi.endswith(".yaml"):
-                yield os.path.join(root, fi)
 
 
 def _yaml_id_glob_paths(root_dir, uniqid):

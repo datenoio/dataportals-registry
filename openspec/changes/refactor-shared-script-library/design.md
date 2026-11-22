@@ -45,6 +45,21 @@ Both imports are lazy, so the cycle works at runtime.
 - **Decision:** `_probe_one` in `apidetect.py` and `hunt.py` stays duplicated for now. The two copies return different shapes (endpoint dict versus probe verdict), so merging them needs its own design. The duplicate-name guard allowlists it with a comment.
 - **Decision:** `fix_all_issues.py` is deleted. It is an older copy of the `builder.py fix` command, which runs `cursor-agent` on `primary_priority.jsonl`. The `builder.py` copy has since changed: it passes the prompt as an argument rather than on stdin, and reports errors better. The `AGENTS.md` fix-script table and `devdocs/quality-fix-workflow.md` pointed at the script; they now point at `builder.py fix`.
 
+## Implementation notes (task 3)
+
+- **`infer_country_from_link`.** Both versions were scored on the `link` and `owner.link` of all 43,614 records in `full.parquet`, comparing the inferred code with `owner.location.country.id`.
+
+  | Version | Links covered | Correct |
+  |---|---|---|
+  | `promote_scheduled.py` (kept) | 56,836 of 87,154 | 55,665 (97.9%) |
+  | `fix_important_issues.py` | 16,087 | 15,894 |
+
+  - The two never return different codes for the same link.
+  - The `fix_important_issues.py` version also returned `{"id", "name"}`, with names from its own table that differ from `constants.COUNTRIES` (for example "Ivory Coast" for `CI`). Its caller now builds the dict from `COUNTRIES`.
+- **`read_jsonl_issues`.** The kept `builder.py` version skips records without issues. Every record in `dataquality/primary_priority.jsonl` has issues (84 of 84), so `fix_all_priority_issues.py` reads the same records as before.
+- **re3data helpers.** The kept `re3data_enrichment.py` versions add a User-Agent header that the `re3data_integration.py` copy did not send. `collect_re3data_identifiers` maps identifiers to file paths. `re3data_integration.py` mapped them to catalog ids, but it only uses the keys.
+- **Task 3.4 deferred.** Moving `_build_export_indexes`, `dedupe_rows` and `probe_rows` out of `hunt.py` brings 11 functions and 255 lines, plus `check_liveness.classify_liveness`. Tests patch `hunt.probe_rows`, `hunt._build_export_indexes`, `hunt.requests.Session` and `hunt.time.sleep`, so those patches must move with the code. Otherwise the `promote_scheduled.py` test would make real network requests. Both imports in the cycle are lazy, so nothing breaks in the meantime.
+
 ## Risks / Trade-offs
 
 - **Diverged copies hide behaviour differences.** Choosing one version can change results for the script that used the other.
@@ -63,3 +78,7 @@ Both imports are lazy, so the cycle works at runtime.
 5. Turn on the guard tests.
 
 Rollback: each step is a separate PR and can be reverted on its own.
+
+## Open Questions
+
+- **Country-inference fallback.** Using the `fix_important_issues.py` suffix table as a fallback when the kept version returns None would cover 3,162 more links. 2,975 of them (94%) would be correct; most errors come from mapping a bare `.edu` to the United States. This changes what `hunt.py ingest` and promotion infer, so it needs its own change.

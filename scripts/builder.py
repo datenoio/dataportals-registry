@@ -63,6 +63,8 @@ from constants import (
     PATH_COUNTRY_ALIASES,
 )
 from dpr.jsonl import load_jsonl
+from dpr.reports import read_jsonl_issues
+from dpr.yaml_io import iter_yaml_files as _iter_yaml_files
 
 # Configure logging
 logging.basicConfig(
@@ -748,18 +750,6 @@ def stats(output="country_software.csv"):
 UID_NUMERIC_WIDTH = 8
 UID_NUMERIC_MAX = 10 ** UID_NUMERIC_WIDTH - 1
 _UID_LINE_RE = re.compile(r"^uid:\s*\S+.*$", re.MULTILINE)
-
-
-def _iter_yaml_files(dirpath):
-    """Return sorted YAML paths under dirpath for stable UID assignment."""
-    files = []
-    for root, dirs, filenames in os.walk(dirpath):
-        dirs.sort()
-        for filename in filenames:
-            if filename.endswith(".yaml"):
-                files.append(os.path.join(root, filename))
-    files.sort()
-    return files
 
 
 def _valid_uid_number(uid, prefix):
@@ -5436,34 +5426,6 @@ def calculate_file_hash(file_path: str) -> Optional[str]:
     except Exception as e:
         logger.debug(f"Error calculating hash for {file_path}: {e}")
         return None
-
-
-def read_jsonl_issues(file_path: str) -> List[Dict[str, Any]]:
-    """Read and parse JSONL file for issues."""
-    records = []
-    if not os.path.exists(file_path):
-        logger.error(f"Error: File not found: {file_path}")
-        return records
-    
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            for line_num, line in enumerate(f, 1):
-                line = line.strip()
-                if not line:
-                    continue
-                
-                try:
-                    record = json.loads(line)
-                    issues_list = record.get('issues', [])
-                    if issues_list:
-                        records.append(record)
-                except json.JSONDecodeError as e:
-                    logger.warning(f"Failed to parse JSON at line {line_num}: {e}")
-                    continue
-    except Exception as e:
-        logger.error(f"Error reading file {file_path}: {e}")
-    
-    return records
 
 
 def build_prompt(record: Dict[str, Any]) -> str:

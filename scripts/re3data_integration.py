@@ -14,6 +14,7 @@ from requests.exceptions import RequestException, Timeout
 
 from dpr.yaml_io import Loader, Dumper
 from dpr.re3data import get_re3data_identifier
+from dpr.re3data import collect_re3data_identifiers, fetch_re3data_page, get_re3data_url
 
 # Configure logging
 logging.basicConfig(
@@ -48,24 +49,6 @@ TRUST_SEAL_INDICATORS = [
 ]
 
 app = typer.Typer()
-
-
-def get_re3data_url(re3data_id: str) -> str:
-    """Get re3data URL for a given identifier."""
-    return f"https://www.re3data.org/repository/{re3data_id}"
-
-
-def fetch_re3data_page(re3data_id: str, timeout: int = 10) -> Optional[str]:
-    """Fetch re3data repository page HTML."""
-    url = get_re3data_url(re3data_id)
-    
-    try:
-        response = requests.get(url, timeout=timeout, verify=True)
-        response.raise_for_status()
-        return response.text
-    except (RequestException, Timeout) as e:
-        logger.warning(f"Could not fetch re3data page for {re3data_id}: {e}")
-        return None
 
 
 def check_trust_seal_in_content(content: str) -> bool:
@@ -131,38 +114,6 @@ def check_re3data_trust_seal(re3data_id: str, use_cache: bool = True) -> bool:
         return check_trust_seal_in_content(content)
     
     return False
-
-
-def collect_re3data_identifiers() -> Dict[str, str]:
-    """Collect all re3data identifiers from catalog files."""
-    re3data_ids = {}
-    
-    logger.info("Collecting re3data identifiers from catalogs...")
-    
-    all_files = []
-    for root, dirs, files in os.walk(ROOT_DIR):
-        all_files.extend(
-            [os.path.join(root, fi) for fi in files if fi.endswith(".yaml")]
-        )
-    
-    for filepath in all_files:
-        try:
-            with open(filepath, "r", encoding="utf-8") as f:
-                catalog = yaml.load(f, Loader=Loader)
-            
-            if not catalog:
-                continue
-            
-            re3data_id = get_re3data_identifier(catalog)
-            if re3data_id:
-                catalog_id = catalog.get("id", os.path.basename(filepath))
-                re3data_ids[re3data_id] = catalog_id
-        
-        except Exception as e:
-            logger.debug(f"Error reading {filepath}: {e}")
-    
-    logger.info(f"Found {len(re3data_ids)} catalogs with re3data identifiers")
-    return re3data_ids
 
 
 @app.command()
