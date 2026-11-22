@@ -345,7 +345,7 @@ After a YAML file exists, optional endpoint fill:
 python scripts/apidetect.py detect-single catalogdatagov --dryrun
 ```
 
-See [apidetect.md](../apidetect.md). Do not run `apidetect_urlmaps_draft.py` as a CLI.
+See [apidetect.md](../apidetect.md). Do not run `apidetect_urlmaps.py` as a CLI.
 
 ## Accept / reject
 

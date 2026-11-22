@@ -1131,14 +1131,14 @@ def test_api_identifier_nyudatacatalog_jsonld(monkeypatch):
 
 
 def test_no_standard_probe_skip_list_is_not_in_urlmap():
-    from apidetect_urlmaps_draft import NO_STANDARD_PROBE
+    from apidetect_urlmaps import NO_STANDARD_PROBE
 
     overlap = sorted(set(NO_STANDARD_PROBE) & set(apidetect.CATALOGS_URLMAP))
     assert overlap == [], overlap
 
 
 def test_every_named_software_id_is_mapped_or_skipped():
-    from apidetect_urlmaps_draft import NO_STANDARD_PROBE
+    from apidetect_urlmaps import NO_STANDARD_PROBE
     from docs_software_coverage import load_software_ids
 
     known = set(load_software_ids())
@@ -1338,7 +1338,7 @@ def test_api_identifier_resourcecontracts_json(monkeypatch):
 
 
 def test_new_urlmaps_are_not_on_skip_list():
-    from apidetect_urlmaps_draft import NO_STANDARD_PROBE
+    from apidetect_urlmaps import NO_STANDARD_PROBE
 
     for sid in (
         "hajk",
@@ -2325,7 +2325,7 @@ def test_omegapsir_oai_identify(monkeypatch):
 
 
 def test_omegapsir_is_mapped():
-    from apidetect_urlmaps_draft import NO_STANDARD_PROBE
+    from apidetect_urlmaps import NO_STANDARD_PROBE
 
     assert "omegapsir" not in NO_STANDARD_PROBE
     assert "omegapsir" in apidetect.CATALOGS_URLMAP
@@ -4497,7 +4497,7 @@ def test_elsevierdigitalcommons_oai_identify(monkeypatch):
 
 
 def test_hdc_is_skipped_not_mapped():
-    from apidetect_urlmaps_draft import NO_STANDARD_PROBE
+    from apidetect_urlmaps import NO_STANDARD_PROBE
 
     assert "hdc" in NO_STANDARD_PROBE
     assert "hdc" not in apidetect.CATALOGS_URLMAP

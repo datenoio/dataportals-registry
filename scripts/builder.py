@@ -1632,23 +1632,6 @@ def validate_yaml(
 
 
 @app.command()
-def validate_typing():
-    """Validates YAML entities files against pydantic model"""
-    from cerberus import Validator
-
-    records = load_dataset_jsonl("catalogs.jsonl")
-    typer.echo("Loaded %d data catalog records" % (len(records)))
-    from cdiapi.data.datacatalog import DataCatalog
-
-    for d in records:
-        logger.info("Validating %s", d["id"])
-        try:
-            entry = DataCatalog.parse_obj(d)
-        except Exception as e:
-            logger.error("%s error %s", d["id"], str(e))
-
-
-@app.command()
 def add_legacy():
     """Adds all legacy catalogs"""
 
@@ -2643,7 +2626,7 @@ def check_software_expected_endpoints(record):
 
     # Software with no portable anonymous list API is documented in NO_STANDARD_PROBE.
     try:
-        from apidetect_urlmaps_draft import NO_STANDARD_PROBE
+        from apidetect_urlmaps import NO_STANDARD_PROBE
     except ImportError:
         NO_STANDARD_PROBE = {}
     if software_id in NO_STANDARD_PROBE:
