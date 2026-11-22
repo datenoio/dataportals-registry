@@ -27,7 +27,6 @@ The registry is organized as a collection of YAML files that will eventually be 
 - **typer**: CLI framework for Python scripts
 - **PyYAML**: YAML parsing and generation
 - **Cerberus**: Schema validation
-- **pydantic**: Data validation and settings management
 - **pandas**: Data manipulation and analysis
 - **requests**: HTTP client for API interactions
 - **rich**: Terminal formatting and progress bars

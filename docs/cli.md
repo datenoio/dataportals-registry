@@ -126,7 +126,6 @@ python scripts/generate_cursor_commands.py
 | `python scripts/builder.py report` | Legacy incomplete-field scan on `full.jsonl` |
 | `python scripts/builder.py country-report` | Per-country counts from Parquet |
 | `python scripts/builder.py get-countries` | Print a `COUNTRIES` map snippet |
-| `python scripts/builder.py validate-typing` | Optional pydantic check (needs `cdiapi`) |
 | `python scripts/builder.py build-docs` | Software stub markdown for the sibling `cdi-docs` repo |
 
 ## Tests

@@ -1,7 +1,8 @@
 """
 URLMAP entries for API-capable software merged into apidetect.py.
 
-Imported by scripts/apidetect.py (DRAFT_CATALOGS_URLMAP, OPENDAP_URLMAP_DRAFT).
+Imported by scripts/apidetect.py (EXTRA_CATALOGS_URLMAP, OPENDAP_URLMAP) and
+scripts/builder.py (NO_STANDARD_PROBE).
 
 Research date: 2026-06-17
 Sources: official docs, existing catalog endpoint patterns, registry records.
@@ -431,8 +432,8 @@ DSPACECRIS_URLMAP = [
     },
 ]
 
-# Fill existing empty map in apidetect.py
-OPENDAP_URLMAP_DRAFT = [
+# apidetect.py uses this as its OPENDAP_URLMAP
+OPENDAP_URLMAP = [
     {
         "id": "opendap:catalog",
         "url": "/",
@@ -3138,10 +3139,10 @@ NBIA_URLMAP = [
 ]
 
 # ---------------------------------------------------------------------------
-# Proposed CATALOGS_URLMAP additions (merge into apidetect.py)
+# Merged into CATALOGS_URLMAP by apidetect.py
 # ---------------------------------------------------------------------------
 
-DRAFT_CATALOGS_URLMAP = {
+EXTRA_CATALOGS_URLMAP = {
     # Tier A
     "stacserver": STACSERVER_URLMAP,
     "galaxy": GALAXY_URLMAP,

@@ -63,13 +63,13 @@ def load_software_ids() -> list[str]:
 
 
 def load_apidetect_ids() -> set[str]:
-    """IDs with a URL map in apidetect.py or the draft merge file.
+    """IDs with a URL map in apidetect.py or apidetect_urlmaps.py.
 
-    Runtime ``CATALOGS_URLMAP`` is built-in maps plus ``DRAFT_CATALOGS_URLMAP``.
-    Scanning only ``apidetect.py`` under-counts draft keys as ``—`` in the index.
+    Runtime ``CATALOGS_URLMAP`` is built-in maps plus ``EXTRA_CATALOGS_URLMAP``.
+    Scanning only ``apidetect.py`` under-counts those keys as ``—`` in the index.
     """
     keys: set[str] = set()
-    for rel in ("scripts/apidetect.py", "scripts/apidetect_urlmaps_draft.py"):
+    for rel in ("scripts/apidetect.py", "scripts/apidetect_urlmaps.py"):
         text = (REPO_ROOT / rel).read_text(encoding="utf-8")
         keys.update(URLMAP_KEY_RE.findall(text))
     keys.discard("custom")

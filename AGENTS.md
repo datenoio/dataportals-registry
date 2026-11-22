@@ -62,7 +62,7 @@ API and MCP delivery surfaces are maintained in separate repositories. Do not pr
 | **Export Formats** | JSONL, Parquet, DuckDB |
 | **Compression** | zstandard (zstd) |
 | **CLI Framework** | typer |
-| **Schema Validation** | Cerberus, pydantic |
+| **Schema Validation** | Cerberus (`catalog.json`), JSON Schema (`catalog.schema.json`) |
 | **Testing** | pytest with coverage (pytest-cov) |
 | **Data Analysis** | pandas, DuckDB |
 | **HTTP Client** | requests |

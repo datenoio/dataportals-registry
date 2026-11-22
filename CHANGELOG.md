@@ -27,6 +27,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `ruff check` runs in CI with a narrow, bug-only rule set (`pyproject.toml`).
 - Test and lint dependencies (`pytest`, `pytest-cov`, `pytest-mock`, `jsonschema`, `ruff`) move to `requirements-dev.txt`. CI installs the pinned set in `requirements.lock`.
 - `validate-yaml` checks that every `uid` is unique across `data/entities/` and `data/scheduled/`, in every mode (`--file`, `--id`, `--changed` and a full run), and `tests/test_uid_uniqueness.py` checks the same for the registry data.
+- OpenSpec proposal `update-committed-dataset-exports`: stop tracking `full.jsonl`, `full.jsonl.zst` and `datasets.duckdb` in git, and keep them as release assets. Proposal only; nothing changes until it is approved.
+
+### Changed
+
+- `scripts/apidetect_urlmaps_draft.py` is renamed `scripts/apidetect_urlmaps.py`. `apidetect.py` merges it into `CATALOGS_URLMAP` on every run, so it was never a draft. Its exports are renamed `EXTRA_CATALOGS_URLMAP` and `OPENDAP_URLMAP`; `NO_STANDARD_PROBE` keeps its name.
+- 22 one-off scripts that no doc, test or other script referenced move to `scripts/archive/`:
+  - `analyze_africa_custom`, `check_software_id`, `clear_inconsistent_license`;
+  - `fix_catalog_type_directory_mismatch`, `fix_country_names`, `fix_de_unk_subregions`, `fix_fr_unk_subregions`, `fix_full_report_issues`, `fix_low_rights`;
+  - `fix_owner_location_subregion_required`, `fix_owner_subregion_federal_directory_mismatch`, `fix_placeholder_title_issues`, `fix_subregion_name_id_mismatch`, `fix_subregion_unk_placeholder`, `fix_topic_schema`;
+  - `migrate_metadata_support_keys`, `promote_scheduled_unknown`, `promote_unknown_geo`, `promote_unknown_scientific`;
+  - `remove_incomplete_identifiers`, `remove_owner_location_macroregion`, `verify_arcgishub_dcat`.
+
+  To run one again, move it back to `scripts/`.
+
+### Removed
+
+- `builder.py validate-typing`, the pydantic models in `scripts/cdiapi/` and `tests/test_datacatalog.py`. The models had drifted from the schema: they reported 43 errors on records that pass `validate-yaml`. The command also exited 0 on every error, and CI did not run it. `validate-yaml` (Cerberus) and `data/schemes/catalog.schema.json` remain the schema checks. `pydantic` is no longer a direct dependency; typer still installs it.
 
 ## [1.27.0] - 2026-10-15
 

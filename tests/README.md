@@ -44,7 +44,7 @@ python -m pytest ../tests
 ```bash
 pytest tests/test_builder.py
 pytest tests/test_constants.py
-pytest tests/test_datacatalog.py
+pytest tests/test_yaml_safety.py
 pytest tests/test_yaml.py
 pytest tests/test_utils.py
 ```
@@ -69,7 +69,7 @@ pytest tests/test_builder.py::TestLoadJsonl::test_load_jsonl_basic
 - `conftest.py` - Shared fixtures and pytest configuration
 - `test_builder.py` - Tests for builder.py functions (load_jsonl, build_dataset, merge_datasets)
 - `test_constants.py` - Tests for constants.py utilities and mappings
-- `test_datacatalog.py` - Tests for pydantic DataCatalog model and shared models
+- `test_yaml_safety.py` - Checks that scripts load YAML only with the safe loader from `yaml_io.py`
 - `test_yaml.py` - Tests for YAML parsing and validation
 - `test_utils.py` - Tests for utility functions (URL parsing, domain mapping, etc.)
 

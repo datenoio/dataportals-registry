@@ -4,7 +4,7 @@ Fill `endpoints[]` on catalog YAML after the record exists. The script GETs know
 
 This is **enrichment**, not discovery and not a dataset crawl. Find catalogs with [discovery.md](discovery.md); add YAML with [cli.md](cli.md); then optionally run apidetect. To list datasets inside a catalog, use [harvest.md](harvest.md).
 
-Do not treat `scripts/apidetect_urlmaps_draft.py` as a CLI. Draft maps are merged into `CATALOGS_URLMAP` inside `apidetect.py` at import time.
+Do not treat `scripts/apidetect_urlmaps.py` as a CLI. Its maps are merged into `CATALOGS_URLMAP` inside `apidetect.py` at import time.
 
 ## When to run
 
@@ -45,7 +45,7 @@ Probes check TLS certificates. A catalog with an expired or self-signed certific
 
 ## Software IDs with URL maps
 
-Maps exist for the IDs in `CATALOGS_URLMAP` (built-in plus draft merge from `apidetect_urlmaps_draft.py`). The [software index](software-index.md) `apidetect` column is `yes` when a map exists. High-traffic examples:
+Maps exist for the IDs in `CATALOGS_URLMAP` (built-in plus the maps in `apidetect_urlmaps.py`). The [software index](software-index.md) `apidetect` column is `yes` when a map exists. High-traffic examples:
 
 | Area | `software.id` |
 |------|----------------|
@@ -55,7 +55,7 @@ Maps exist for the IDs in `CATALOGS_URLMAP` (built-in plus draft merge from `api
 | Indicators / microdata | `pxweb`, `pxstat`, `opensdg`, `statsuite`, `istatdatabrowser`, `sdmxri`, `nada`, `nesstar`, `redatam`, `colectica`, `obibamica`, `knoema`, `dhis2`, `edatos`, `superset`, `dgbasweb`, `swing`, `ibisph`, `superstar`, `duva`, `beyond2020` |
 | Metadata | `fusionregistry`, `aristotlemdr`, `mwmb`, `fairdatapoint`, `datahubproject` |
 
-If `detect-single` reports no map for the ID, stop. Do not copy URLs from a different platform. Most map-viewer IDs and BI/query UIs are listed in `NO_STANDARD_PROBE` (`apidetect_urlmaps_draft.py`); the [software index](software-index.md) shows `—` for those IDs.
+If `detect-single` reports no map for the ID, stop. Do not copy URLs from a different platform. Most map-viewer IDs and BI/query UIs are listed in `NO_STANDARD_PROBE` (`apidetect_urlmaps.py`); the [software index](software-index.md) shows `—` for those IDs.
 
 ## After a successful run
 
