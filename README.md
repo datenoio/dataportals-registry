@@ -16,7 +16,7 @@ Code is [MIT](LICENSE); data and documentation are [CC BY 4.0](https://creativec
 
 ## Using the data
 
-Python **3.10–3.12**. Install deps with `pip install -r requirements.txt`. Nested fields in DuckDB and Parquet are native `STRUCT` / `LIST` types; query them with field access, not `LIKE` on JSON text.
+Python **3.11–3.13**. Install deps with `pip install -r requirements.txt` (add `-r requirements-dev.txt` for tests and lint). Nested fields in DuckDB and Parquet are native `STRUCT` / `LIST` types; query them with field access, not `LIKE` on JSON text.
 
 ```bash
 duckdb data/datasets/datasets.duckdb \

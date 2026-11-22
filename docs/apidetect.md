@@ -35,6 +35,8 @@ python scripts/apidetect.py detect-cattype "Open data portal" --dryrun
 
 `--dryrun` prints planned endpoints and does not write YAML. Omit it to insert. `--action insert` is the default and **skips records that already have endpoints**. Use `--action update` to add newly mapped protocols (OAI, DCAT RDF, SPARQL, TAP, OData) without replacing existing URLs.
 
+Probes check TLS certificates. A catalog with an expired or self-signed certificate fails with `SSL Error`. To probe it anyway, put `--insecure` before the command: `python scripts/apidetect.py --insecure detect-single catalogdatagov --dryrun`.
+
 `--include-custom` is required to probe `software.id: custom` with the dump map (`/catalog.xml`, OAI-PMH, CSW, SPARQL, …). Quality fixers never set this flag.
 
 `--mode entries` (default) walks `data/entities/`. Use `--mode scheduled` for unverified files.

@@ -33,11 +33,14 @@ Thank you for your interest in contributing to the dataportals-registry project!
 
 ### Development Environment Setup
 
-1. Ensure you have Python 3.10–3.12 installed (CI runs on 3.12 only)
-2. Install dependencies:
+1. Ensure you have Python 3.11–3.13 installed (CI runs tests on 3.11, 3.12 and 3.13)
+2. Install dependencies (runtime, tests and lint):
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirements-dev.txt
    ```
+   CI installs the pinned set in `requirements.lock`. After changing `requirements.txt` or
+   `requirements-dev.txt`, regenerate it with the command at the top of `requirements-dev.txt`.
+3. Before pushing Python changes, run `ruff check scripts tests` (rules in `pyproject.toml`).
 
 ### Project Structure
 

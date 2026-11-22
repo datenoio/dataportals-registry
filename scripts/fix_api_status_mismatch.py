@@ -10,10 +10,7 @@ import yaml
 from pathlib import Path
 from typing import Dict, List, Tuple
 
-try:
-    from yaml import CLoader as Loader, CDumper as Dumper
-except ImportError:
-    from yaml import Loader, Dumper
+from yaml_io import Loader, Dumper
 
 # Get script directory and repository root
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))

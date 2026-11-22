@@ -1,27 +1,27 @@
 # Tests for dataportals-registry
 
-Pytest suite for `scripts/` (configured in `pytest.ini` at the repository root). Python **3.10–3.12**. Published CLI notes: [docs/cli.md](../docs/cli.md).
+Pytest suite for `scripts/` (configured in `pytest.ini` at the repository root). Python **3.11–3.13**. Published CLI notes: [docs/cli.md](../docs/cli.md).
 
 From the repository root:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 pytest
 pytest tests/test_builder.py -v
 pytest -m unit
 pytest --no-cov
 ```
 
-CI (`.github/workflows/tests.yml`) runs `validate-yaml`, pytest, and the quality regression guard.
+CI (`.github/workflows/tests.yml`) runs `ruff check`, `validate-yaml`, pytest, and the quality regression guard.
 
 ## Running Tests
 
 ### Install Dependencies
 
-First, install the required dependencies including pytest:
+First, install the runtime and test dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 ```
 
 ### Run All Tests
@@ -88,7 +88,7 @@ The test suite covers:
 ## Continuous Integration
 
 Tests are automatically run on GitHub Actions for:
-- Python 3.12
+- Python 3.11, 3.12 and 3.13
 - On push to main/master/develop branches
 - On pull requests
 

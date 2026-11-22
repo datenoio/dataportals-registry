@@ -10,10 +10,7 @@ from typing import Dict, Any, Optional, Tuple
 from collections import defaultdict
 import tqdm
 
-try:
-    from yaml import CLoader as Loader, CDumper as Dumper
-except ImportError:
-    from yaml import Loader, Dumper
+from yaml_io import Loader, Dumper
 
 # Configure logging
 logging.basicConfig(

@@ -11,10 +11,7 @@ if _SCRIPT_DIR not in sys.path:
 
 import yaml
 
-try:
-    from yaml import CLoader as Loader, CDumper as Dumper
-except ImportError:
-    from yaml import Loader, Dumper
+from yaml_io import Loader, Dumper
 
 _REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCHEDULED_UNKNOWN = os.path.join(_REPO_ROOT, "data", "scheduled", "Unknown", "opendata")

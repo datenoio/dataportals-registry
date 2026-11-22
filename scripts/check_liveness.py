@@ -25,10 +25,7 @@ from urllib.parse import urlparse
 import requests
 import yaml
 
-try:
-    from yaml import CLoader as Loader
-except ImportError:
-    from yaml import Loader
+from yaml_io import Loader
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_ENTITIES = REPO_ROOT / "data" / "entities"

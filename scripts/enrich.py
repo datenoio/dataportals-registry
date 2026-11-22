@@ -7,21 +7,16 @@ import requests
 import datetime
 import yaml
 
-try:
-    from yaml import CLoader as Loader, CDumper as Dumper
-except ImportError:
-    from yaml import Loader, Dumper
+from yaml_io import Loader, Dumper
 import csv
 import json
 import os
 from urllib.parse import urlparse
 import shutil
 import pprint
-from requests.exceptions import ConnectionError, TooManyRedirects
+from requests.exceptions import ConnectionError, ReadTimeout, TooManyRedirects
+import urllib3
 from urllib3.exceptions import InsecureRequestWarning
-
-# Suppress only the single warning from urllib3 needed.
-requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
 # Configure logging
 logging.basicConfig(
@@ -266,8 +261,17 @@ headers = {"Accept": "application/json"}
 
 
 @app.command()
-def setstatus(updatedata=False):
+def setstatus(
+    updatedata: bool = False,
+    insecure: bool = typer.Option(
+        False,
+        "--insecure",
+        help="Skip TLS certificate checks, for sites with expired or self-signed certificates.",
+    ),
+):
     """Checks every site existence and endpoints availability except Geonetwork yet"""
+    if insecure:
+        urllib3.disable_warnings(InsecureRequestWarning)
     session = requests.Session()
     session.max_redirects = 100
     results = []
@@ -300,7 +304,7 @@ def setstatus(updatedata=False):
             report["api_content_type"] = ""
             try:
                 response = session.head(
-                    item["link"], verify=False, allow_redirects=True
+                    item["link"], verify=not insecure, allow_redirects=True
                 )
                 report["link_http_code"] = response.status_code
                 if not response.ok:
@@ -352,9 +356,9 @@ def setstatus(updatedata=False):
                             noerror = True
                             try:
                                 response = session.get(
-                                    search_endpoint, headers=headers, verify=False
+                                    search_endpoint, headers=headers, verify=not insecure
                                 )
-                            except:
+                            except Exception:
                                 report["api_status"] = "deprecated"
                                 noerror = False
                             if noerror:
@@ -380,7 +384,7 @@ def setstatus(updatedata=False):
                         if item["endpoints"][0]["type"] == "nada:catalog-search":
                             search_endpoint = item["endpoints"][0]["url"]
                             response = session.get(
-                                search_endpoint, headers=headers, verify=False
+                                search_endpoint, headers=headers, verify=not insecure
                             )
                             report["api_http_code"] = response.status_code
                             report["api_content_type"] = (
@@ -403,7 +407,7 @@ def setstatus(updatedata=False):
                         if item["endpoints"][0]["type"] == "dataverseapi":
                             search_endpoint = item["endpoints"][0]["url"]
                             response = session.get(
-                                search_endpoint, headers=headers, verify=False
+                                search_endpoint, headers=headers, verify=not insecure
                             )
                             report["api_http_code"] = response.status_code
                             report["api_content_type"] = (
@@ -427,7 +431,7 @@ def setstatus(updatedata=False):
                         if "dcatap201" in endpoints.keys():
                             search_endpoint = endpoints["dcatap201"]["url"]
                             response = session.get(
-                                search_endpoint, headers=headers, verify=False
+                                search_endpoint, headers=headers, verify=not insecure
                             )
                             report["api_http_code"] = response.status_code
                             report["api_content_type"] = (
@@ -455,7 +459,7 @@ def setstatus(updatedata=False):
                         if "inveniordmapi:records" in endpoints.keys():
                             search_endpoint = endpoints["inveniordmapi:records"]["url"]
                             response = session.get(
-                                search_endpoint, headers=headers, verify=False
+                                search_endpoint, headers=headers, verify=not insecure
                             )
                             report["api_http_code"] = response.status_code
                             report["api_content_type"] = (
@@ -477,7 +481,7 @@ def setstatus(updatedata=False):
                 elif item["software"] == "uData":
                     search_endpoint = item["link"] + "/api/1/datasets/"
                     response = session.get(
-                        search_endpoint, headers=headers, verify=False
+                        search_endpoint, headers=headers, verify=not insecure
                     )
                     report["api_http_code"] = response.status_code
                     report["api_content_type"] = response.headers["content-type"]

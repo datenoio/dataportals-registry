@@ -1,0 +1,9 @@
+# Tests and lint. Runtime dependencies come from requirements.txt.
+# CI installs the pinned set from requirements.lock; regenerate it with:
+#   uv pip compile --universal --python-version 3.11 requirements-dev.txt -o requirements.lock
+-r requirements.txt
+jsonschema>=4.22.0
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.1
+ruff==0.14.9

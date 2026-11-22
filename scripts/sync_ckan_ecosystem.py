@@ -11,10 +11,6 @@ import re
 from urllib.parse import urlparse, urljoin
 from typing import Dict, List, Optional, Set, Tuple
 from requests.exceptions import RequestException, Timeout
-from urllib3.exceptions import InsecureRequestWarning
-
-# Suppress only the single warning from urllib3 needed.
-requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
 try:
     from bs4 import BeautifulSoup
@@ -501,7 +497,7 @@ def get_existing_entries() -> Tuple[Set[str], Set[str], Dict[str, str]]:
         for filepath in tqdm.tqdm(yaml_files, desc="Loading scheduled entries", unit="file", leave=False):
             try:
                 import yaml
-                from yaml import CLoader as Loader
+                from yaml_io import Loader
                 with open(filepath, "r", encoding="utf8") as f:
                     record = yaml.load(f, Loader=Loader)
                     record_id = record.get("id")

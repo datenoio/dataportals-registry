@@ -20,10 +20,7 @@ from pathlib import Path
 import typer
 import yaml
 
-try:
-    from yaml import CLoader as Loader
-except ImportError:
-    from yaml import Loader
+from yaml_io import Loader
 
 BASE_DIR = Path(__file__).parent.parent
 ENTITIES_DIR = BASE_DIR / "data" / "entities"
