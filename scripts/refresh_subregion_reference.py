@@ -8,11 +8,12 @@ Output schema is intentionally compatible with existing consumers:
 
 from __future__ import annotations
 
-import argparse
 import csv
 from pathlib import Path
+from typing import Annotated
 
 import pycountry
+import typer
 
 
 def build_rows() -> list[tuple[str, str]]:
@@ -27,17 +28,21 @@ def build_rows() -> list[tuple[str, str]]:
     return rows
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--output",
-        default="data/reference/subregions/ISO3166-2.CSV",
-        help="Output CSV path relative to repository root.",
-    )
-    args = parser.parse_args()
+app = typer.Typer(
+    add_completion=False,
+    context_settings={"help_option_names": ["-h", "--help"]},
+)
 
+
+@app.command()
+def main(
+    output: Annotated[
+        str,
+        typer.Option("--output", help="Output CSV path relative to repository root."),
+    ] = "data/reference/subregions/ISO3166-2.CSV",
+) -> None:
     repo_root = Path(__file__).resolve().parent.parent
-    output_path = (repo_root / args.output).resolve()
+    output_path = (repo_root / output).resolve()
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     rows = build_rows()
@@ -46,8 +51,8 @@ def main() -> None:
         writer.writerow(["code", "subdivision_name"])
         writer.writerows(rows)
 
-    print(f"Wrote {len(rows)} rows to {output_path}")
+    typer.echo(f"Wrote {len(rows)} rows to {output_path}")
 
 
 if __name__ == "__main__":
-    main()
+    app()

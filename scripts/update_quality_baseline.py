@@ -3,39 +3,46 @@
 
 from __future__ import annotations
 
-import argparse
 from pathlib import Path
+from typing import Annotated
+
+import typer
 
 from quality_regression import DEFAULT_BASELINE, DEFAULT_REPORT, write_baseline
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Update quality regression baseline counts")
-    parser.add_argument("--report", default=str(DEFAULT_REPORT), help="Path to full_report.jsonl")
-    parser.add_argument("--baseline", default=str(DEFAULT_BASELINE), help="Path to baseline JSON")
-    args = parser.parse_args()
+app = typer.Typer(
+    add_completion=False,
+    context_settings={"help_option_names": ["-h", "--help"]},
+)
 
+
+@app.command(help="Update quality regression baseline counts")
+def main(
+    report: Annotated[str, typer.Option("--report", help="Path to full_report.jsonl")] = str(DEFAULT_REPORT),
+    baseline: Annotated[str, typer.Option("--baseline", help="Path to baseline JSON")] = str(DEFAULT_BASELINE),
+) -> None:
     payload = write_baseline(
-        baseline_path=Path(args.baseline),
-        report_path=Path(args.report),
+        baseline_path=Path(baseline),
+        report_path=Path(report),
     )
-    print(f"Updated baseline: {args.baseline}")
-    print(f"  CRITICAL: {payload['by_priority']['CRITICAL']}")
-    print(f"  IMPORTANT: {payload['by_priority']['IMPORTANT']}")
-    print(f"  MEDIUM: {payload['by_priority']['MEDIUM']}")
-    print(f"  LOW: {payload['by_priority']['LOW']}")
+    typer.echo(f"Updated baseline: {baseline}")
+    typer.echo(f"  CRITICAL: {payload['by_priority']['CRITICAL']}")
+    typer.echo(f"  IMPORTANT: {payload['by_priority']['IMPORTANT']}")
+    typer.echo(f"  MEDIUM: {payload['by_priority']['MEDIUM']}")
+    typer.echo(f"  LOW: {payload['by_priority']['LOW']}")
     by_track = payload.get("by_track") or {}
     integrity = by_track.get("integrity") or {}
     enrichment = by_track.get("enrichment") or {}
-    print(
+    typer.echo(
         "  Integrity CRITICAL/IMPORTANT: "
         f"{integrity.get('CRITICAL', 0)}/{integrity.get('IMPORTANT', 0)}"
     )
-    print(
+    typer.echo(
         "  Enrichment MEDIUM/LOW: "
         f"{enrichment.get('MEDIUM', 0)}/{enrichment.get('LOW', 0)}"
     )
 
 
 if __name__ == "__main__":
-    main()
+    app()

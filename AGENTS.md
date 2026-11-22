@@ -318,6 +318,7 @@ python scripts/builder.py analyze-quality
 - Import ordering: standard library, third-party, local
 - Put a helper that two or more scripts need in `scripts/dpr/` and import it; do not copy it. `tests/test_script_library.py` fails on duplicate module-level functions
 - Do not edit `sys.path` in scripts or tests: scripts run with `scripts/` on their path, and `pytest.ini` sets `pythonpath = scripts`
+- Command-line scripts use typer and keep existing option names. Report progress and diagnostics with `logging`, and the command's result with `typer.echo`. Never use `print()`; `tests/test_script_library.py` enforces this (the `fix_*.py` scripts are exempt until `apply-fixes` replaces them)
 - Load and dump YAML with `from dpr.yaml_io import Loader, Dumper`, never `yaml.Loader` or `yaml.CLoader`: those run code from `!!python/*` tags. `tests/test_yaml_safety.py` enforces this
 - HTTP probes verify TLS certificates. Skipping the check needs an explicit `--insecure` option
 

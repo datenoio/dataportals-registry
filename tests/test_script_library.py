@@ -90,3 +90,72 @@ def test_no_sys_path_manipulation(path):
         "scripts/ on their path, and pytest.ini sets pythonpath = scripts."
     )
 
+
+# Entry points that keep their own CLI and print() until apply-fixes replaces
+# them (openspec: add-deterministic-fix-rules).
+ENTRY_POINT_EXEMPT = {
+    "fix_all_priority_issues.py",
+    "fix_api_status_mismatch.py",
+    "fix_catalog_software_mismatch.py",
+    "fix_critical_issues.py",
+    "fix_duplicate_tags.py",
+    "fix_es_unk_subregions.py",
+    "fix_important_issues.py",
+    "fix_is_national_flags.py",
+    "fix_low_issues.py",
+    "fix_medium_issues.py",
+    "fix_software_id.py",
+    "fix_tag_hygiene.py",
+}
+
+
+def _is_entry_point(tree: ast.Module) -> bool:
+    for node in tree.body:
+        if (
+            isinstance(node, ast.If)
+            and isinstance(node.test, ast.Compare)
+            and isinstance(node.test.left, ast.Name)
+            and node.test.left.id == "__name__"
+        ):
+            return True
+    return False
+
+
+def _entry_points():
+    return [
+        p
+        for p in sorted(SCRIPTS.glob("*.py"))
+        if p.name not in ENTRY_POINT_EXEMPT and _is_entry_point(_parse(p))
+    ]
+
+
+@pytest.mark.unit
+@pytest.mark.parametrize("path", _entry_points(), ids=lambda p: p.name)
+def test_entry_point_uses_typer(path):
+    source = path.read_bytes().decode("utf-8")
+    assert "import typer" in source, (
+        f"{path.name} is run from the command line but does not use typer; "
+        "define its CLI with typer and keep the existing option names."
+    )
+
+
+@pytest.mark.unit
+@pytest.mark.parametrize("path", _library_and_scripts(), ids=lambda p: str(p.relative_to(REPO_ROOT)))
+def test_no_print_calls(path):
+    if path.name in ENTRY_POINT_EXEMPT:
+        pytest.skip("replaced by apply-fixes")
+    lines = [
+        node.lineno
+        for node in ast.walk(_parse(path))
+        if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == "print"
+    ]
+    assert not lines, (
+        f"{path.relative_to(REPO_ROOT)} calls print() on lines {lines}. Use logging for "
+        "progress and diagnostics, and typer.echo for the command's output."
+    )
+
+
+@pytest.mark.unit
+def test_entry_point_exemptions_are_current():
+    missing = sorted(name for name in ENTRY_POINT_EXEMPT if not (SCRIPTS / name).exists())
+    assert not missing, f"Remove these deleted scripts from ENTRY_POINT_EXEMPT: {missing}"

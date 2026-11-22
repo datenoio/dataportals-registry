@@ -26,13 +26,13 @@
 
 ## 4. Entry-point conventions
 
-- [ ] 4.1 Convert to typer, keeping option names: `check_liveness.py`, `refresh_subregion_reference.py`, `update_quality_baseline.py`, and the `__main__`-only scripts that `add-deterministic-fix-rules` does not remove.
-- [ ] 4.2 Replace `print()` with `logging`, or with `typer.echo` for primary command output.
-- [ ] 4.3 Document the conventions in `AGENTS.md` (Code Style) and `docs/cli.md`.
+- [x] 4.1 Convert to typer, keeping option names: `check_liveness.py`, `refresh_subregion_reference.py`, `update_quality_baseline.py`, and the `__main__`-only scripts that `add-deterministic-fix-rules` does not remove.
+- [x] 4.2 Replace `print()` with `logging`, or with `typer.echo` for primary command output, in `check_liveness.py`, `refresh_subregion_reference.py`, `update_quality_baseline.py`, `docs_software_coverage.py` and `remove_scheduled_duplicates.py`. `tests/test_cli_conventions.py` pins their options, defaults and output.
+- [x] 4.3 Document the conventions in `AGENTS.md` (Code Style) and `docs/cli.md` (Script conventions).
 
 ## 5. Guards and verification
 
 - [x] 5.1 Add guard tests for duplicate module-level function names (`tests/test_script_library.py`, with an allowlist that fails on stale entries) and for `sys.path` manipulation.
-- [ ] 5.1a Add the guard test for `print()` in CLI modules, after task 4.2.
-- [ ] 5.2 Run `pytest`, `ruff check scripts tests`, `python scripts/builder.py validate-yaml` and the liveness workflow command with `--sample 5`.
-- [ ] 5.3 Run `openspec validate refactor-shared-script-library --strict`.
+- [x] 5.1a Add guard tests in `tests/test_script_library.py` that every entry point imports typer and that no active script or `dpr` module calls `print()`. The `fix_*.py` scripts are exempt until `add-deterministic-fix-rules` replaces them.
+- [x] 5.2 Run `pytest`, `ruff check scripts tests`, `python scripts/builder.py validate-yaml` and the liveness workflow command with `--sample 5`.
+- [x] 5.3 Run `openspec validate refactor-shared-script-library --strict`.
