@@ -1,12 +1,10 @@
 """UID uniqueness: duplicate-uid detection and the validate-yaml exit code."""
 
-import sys
 from pathlib import Path
 
 from typer.testing import CliRunner
 
 REPO_ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 import builder  # noqa: E402
 

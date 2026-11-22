@@ -1,9 +1,5 @@
 """Unit tests for quality rules added in the September 2026 review."""
 
-import os
-import sys
-
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
 from builder import (  # noqa: E402
     check_access_mode_preferred,

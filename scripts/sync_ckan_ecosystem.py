@@ -40,12 +40,10 @@ _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 _REPO_ROOT = os.path.dirname(_SCRIPT_DIR)
 
 # Import from builder.py - need to import the module to access its functions
-import sys
-sys.path.insert(0, _SCRIPT_DIR)
 
 # Import builder module and access its components
-# Note: builder.py imports constants, so we need to ensure the path is set first
 import builder
+from dpr.urls import normalize_domain, normalize_url
 
 # Access constants and functions from builder
 DATASETS_DIR = builder.DATASETS_DIR
@@ -65,28 +63,6 @@ USER_AGENT = "Mozilla/5.0 (compatible; DataPortalsRegistry/1.0; +https://github.
 
 # Rate limiting: delay between requests (seconds)
 REQUEST_DELAY = 1.0
-
-
-def normalize_url(url: str) -> str:
-    """Normalize URL for duplicate detection."""
-    if not url:
-        return ""
-    # Remove protocol, www, trailing slashes, convert to lowercase
-    url = url.lower().strip()
-    url = re.sub(r'^https?://', '', url)
-    url = re.sub(r'^www\.', '', url)
-    url = url.rstrip('/')
-    return url
-
-
-def normalize_domain(url: str) -> str:
-    """Extract normalized domain from URL."""
-    normalized = normalize_url(url)
-    if not normalized:
-        return ""
-    # Extract domain (handle ports)
-    domain = normalized.split('/')[0].split(':')[0]
-    return domain
 
 
 def query_ckan_api(action: str, params: Dict = None, timeout: int = 30) -> Optional[Dict]:
@@ -497,7 +473,7 @@ def get_existing_entries() -> Tuple[Set[str], Set[str], Dict[str, str]]:
         for filepath in tqdm.tqdm(yaml_files, desc="Loading scheduled entries", unit="file", leave=False):
             try:
                 import yaml
-                from yaml_io import Loader
+                from dpr.yaml_io import Loader
                 with open(filepath, "r", encoding="utf8") as f:
                     record = yaml.load(f, Loader=Loader)
                     record_id = record.get("id")

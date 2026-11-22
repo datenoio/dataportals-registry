@@ -19,7 +19,6 @@ import json
 import logging
 import os
 import re
-import sys
 import time
 from typing import Any, Dict, Iterable, List, Optional, Set, Tuple
 from urllib.parse import urlparse
@@ -29,7 +28,6 @@ import typer
 import yaml
 from requests.exceptions import RequestException
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import builder  # noqa: E402
 from constants import COUNTRIES, DOMAIN_LOCATIONS, ENTRY_TEMPLATE  # noqa: E402
 

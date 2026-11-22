@@ -1,14 +1,11 @@
 """Tests for YAML parsing and validation"""
 
-import os
-import sys
 import yaml
 import pytest
 import tempfile
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
 
 
 class TestYAMLParsing:

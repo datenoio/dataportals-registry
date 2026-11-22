@@ -7,7 +7,7 @@ such as ``!!python/object/apply:os.system``, so parsing a crafted file with
 them runs code. Import ``Loader`` and ``Dumper`` from this module instead of
 from ``yaml``::
 
-    from yaml_io import Loader, Dumper
+    from dpr.yaml_io import Loader, Dumper
 
     record = yaml.load(handle, Loader=Loader)
 
@@ -23,4 +23,22 @@ except ImportError:  # PyYAML built without libyaml
     from yaml import SafeDumper as Dumper
     from yaml import SafeLoader as Loader
 
-__all__ = ["Dumper", "Loader"]
+__all__ = ["Dumper", "Loader", "iter_yaml_files"]
+
+
+def iter_yaml_files(dirpath):
+    """Return the paths of all ``.yaml`` files under dirpath, sorted.
+
+    Directories are walked in sorted order and the result is sorted, so callers
+    such as UID assignment see the same order on every run and platform.
+    """
+    import os
+
+    files = []
+    for root, dirs, filenames in os.walk(dirpath):
+        dirs.sort()
+        for filename in filenames:
+            if filename.endswith(".yaml"):
+                files.append(os.path.join(root, filename))
+    files.sort()
+    return files

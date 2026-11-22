@@ -4,15 +4,11 @@ from __future__ import annotations
 
 import json
 import re
-import sys
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Tuple
 
-_SCRIPTS_DIR = Path(__file__).resolve().parent
-if str(_SCRIPTS_DIR) not in sys.path:
-    sys.path.insert(0, str(_SCRIPTS_DIR))
 
 from constants import ENRICHMENT_ISSUE_PREFIXES, ENRICHMENT_ISSUE_TYPES  # noqa: E402
 

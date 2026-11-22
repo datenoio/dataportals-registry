@@ -40,7 +40,7 @@ flowchart LR
 1. **Source YAML** — one file per catalog or software definition. Edit these; never hand-edit `data/datasets/`.
 2. **Reference vocabularies** — allowed values under `data/reference/` (owner types, catalog types, software IDs, access modes, status).
 3. **Validation** — Cerberus schema (`data/schemes/catalog.json`), JSON Schema (`catalog.schema.json`), and quality rules.
-4. **Build** — flattens YAML into JSONL, compresses with zstd, writes Parquet and DuckDB. Shared URL helpers live in `scripts/url_utils.py`; frozen one-shot scripts sit in `scripts/archive/`.
+4. **Build** — flattens YAML into JSONL, compresses with zstd, writes Parquet and DuckDB. Helpers shared by several scripts, including the URL helpers, live in the `scripts/dpr/` package; frozen one-shot scripts sit in `scripts/archive/`.
 5. **Consumers** — DuckDB/Parquet preferred (nested fields are native `STRUCT` / `LIST`); JSONL for line-oriented tools; YAML only when authoring.
 
 ## Enrichment and monitoring

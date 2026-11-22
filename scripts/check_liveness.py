@@ -8,8 +8,8 @@ may be added to catalog YAML in a later phase.
 
 from __future__ import annotations
 
-import argparse
 import json
+import logging
 import random
 import re
 import threading
@@ -19,13 +19,16 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Iterable, Iterator, Optional
+from typing import Annotated, Iterable, Iterator, Optional
 from urllib.parse import urlparse
 
 import requests
+import typer
 import yaml
 
-from yaml_io import Loader
+from dpr.yaml_io import Loader
+
+logger = logging.getLogger(__name__)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_ENTITIES = REPO_ROOT / "data" / "entities"
@@ -279,7 +282,7 @@ def probe_records(
                     handle.write(json.dumps(result.to_dict(), ensure_ascii=False) + "\n")
                     handle.flush()
                     if progress_every and len(results) % progress_every == 0:
-                        print(f"Probed {len(results)}/{len(records)}", flush=True)
+                        logger.info("Probed %d/%d", len(results), len(records))
             except KeyboardInterrupt:
                 pool.shutdown(wait=False, cancel_futures=True)
                 raise
@@ -366,70 +369,73 @@ def apply_dead_from_report(
     return applied
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Probe catalog URL liveness.")
-    parser.add_argument("--entities", default=str(DEFAULT_ENTITIES), help="Entities directory")
-    parser.add_argument("--output", default=str(DEFAULT_OUTPUT), help="Output JSONL path")
-    parser.add_argument("--country", help="Limit to ISO country code (e.g. US)")
-    parser.add_argument("--sample", type=int, help="Probe only N random records")
-    parser.add_argument("--timeout", type=float, default=10.0, help="Per-request timeout seconds")
-    parser.add_argument("--retries", type=int, default=2, help="Retries on timeout/5xx")
-    parser.add_argument(
-        "--delay", type=float, default=0.0, help="Pause after each probe of the same host, in seconds"
-    )
-    parser.add_argument(
-        "--workers", type=int, default=16, help="Parallel probes (one at a time per host)"
-    )
-    parser.add_argument("--seed", type=int, default=42, help="Random seed for --sample")
-    parser.add_argument(
-        "--apply-dead",
-        action="store_true",
-        help="Mark report rows with liveness_status=dead as status: inactive",
-    )
-    parser.add_argument(
-        "--dry-run",
-        action="store_true",
-        default=True,
-        help="With --apply-dead, print actions without writing YAML (default)",
-    )
-    parser.add_argument(
-        "--write",
-        action="store_true",
-        help="With --apply-dead, actually write status: inactive",
-    )
-    args = parser.parse_args()
+app = typer.Typer(
+    add_completion=False,
+    context_settings={"help_option_names": ["-h", "--help"]},
+)
 
-    entities_dir = Path(args.entities)
-    output_path = Path(args.output)
 
-    if args.apply_dead:
-        dry_run = not args.write
+@app.command(help="Probe catalog URL liveness.")
+def main(
+    entities: Annotated[str, typer.Option("--entities", help="Entities directory")] = str(DEFAULT_ENTITIES),
+    output: Annotated[str, typer.Option("--output", help="Output JSONL path")] = str(DEFAULT_OUTPUT),
+    country: Annotated[
+        Optional[str], typer.Option("--country", help="Limit to ISO country code (e.g. US)")
+    ] = None,
+    sample: Annotated[Optional[int], typer.Option("--sample", help="Probe only N random records")] = None,
+    timeout: Annotated[float, typer.Option("--timeout", help="Per-request timeout seconds")] = 10.0,
+    retries: Annotated[int, typer.Option("--retries", help="Retries on timeout/5xx")] = 2,
+    delay: Annotated[
+        float, typer.Option("--delay", help="Pause after each probe of the same host, in seconds")
+    ] = 0.0,
+    workers: Annotated[
+        int, typer.Option("--workers", help="Parallel probes (one at a time per host)")
+    ] = 16,
+    seed: Annotated[int, typer.Option("--seed", help="Random seed for --sample")] = 42,
+    apply_dead: Annotated[
+        bool,
+        typer.Option("--apply-dead", help="Mark report rows with liveness_status=dead as status: inactive"),
+    ] = False,
+    dry_run: Annotated[
+        bool,
+        typer.Option("--dry-run", help="With --apply-dead, print actions without writing YAML (default)"),
+    ] = True,
+    write: Annotated[
+        bool, typer.Option("--write", help="With --apply-dead, actually write status: inactive")
+    ] = False,
+) -> None:
+    entities_dir = Path(entities)
+    output_path = Path(output)
+
+    if apply_dead:
+        dry_run = not write
         applied = apply_dead_from_report(output_path, entities_dir, dry_run=dry_run)
-        print(f"{'Dry-run' if dry_run else 'Applied'} {len(applied)} dead-row actions from {output_path}")
+        typer.echo(f"{'Dry-run' if dry_run else 'Applied'} {len(applied)} dead-row actions from {output_path}")
         for item in applied:
-            print(f"  {item.get('action')}: {item.get('uid')} {item.get('path', '')}")
+            typer.echo(f"  {item.get('action')}: {item.get('uid')} {item.get('path', '')}")
         return
 
-    records = list(iter_catalog_records(entities_dir, country=args.country))
+    records = list(iter_catalog_records(entities_dir, country=country))
 
-    if args.sample:
-        random.seed(args.seed)
-        if args.sample < len(records):
-            records = random.sample(records, args.sample)
+    if sample:
+        random.seed(seed)
+        if sample < len(records):
+            records = random.sample(records, sample)
 
     results = probe_records(
         records,
         output_path,
-        workers=args.workers,
-        timeout=args.timeout,
-        retries=args.retries,
-        delay=args.delay,
+        workers=workers,
+        timeout=timeout,
+        retries=retries,
+        delay=delay,
     )
     summary = summarize(results)
-    print(f"Wrote {len(results)} results to {output_path}")
+    typer.echo(f"Wrote {len(results)} results to {output_path}")
     for status, count in sorted(summary.items()):
-        print(f"  {status}: {count}")
+        typer.echo(f"  {status}: {count}")
 
 
 if __name__ == "__main__":
-    main()
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+    app()

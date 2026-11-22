@@ -11,17 +11,16 @@ import yaml
 from pathlib import Path
 from urllib.parse import urlparse
 from typing import Dict, Any, List, Optional, Tuple
-import sys
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
 
 # Import constants
-sys.path.insert(0, str(Path(__file__).parent))
 from constants import (
     MAP_SOFTWARE_ALLOWED_CATALOG_TYPES,
     MAP_SOFTWARE_OWNER_CATALOG_TYPE,
     COUNTRIES,
 )
+from dpr.reports import read_jsonl_issues
 
 BASE_DIR = Path(__file__).parent.parent
 ISSUES_FILE = BASE_DIR / "dataquality" / "primary_priority.jsonl"
@@ -611,29 +610,6 @@ class IssueFixer:
         if fixer:
             return fixer(issue)
         return False
-
-
-def read_jsonl_issues(file_path: Path) -> List[Dict[str, Any]]:
-    """Read and parse JSONL issues file."""
-    records = []
-    if not file_path.exists():
-        print(f"Error: File not found: {file_path}")
-        return records
-    
-    with open(file_path, 'r', encoding='utf-8') as f:
-        for line_num, line in enumerate(f, 1):
-            line = line.strip()
-            if not line:
-                continue
-            
-            try:
-                record = json.loads(line)
-                records.append(record)
-            except json.JSONDecodeError as e:
-                print(f"Warning: Failed to parse JSON at line {line_num}: {e}")
-                continue
-    
-    return records
 
 
 def fix_record(record: Dict[str, Any]) -> Tuple[bool, List[str]]:

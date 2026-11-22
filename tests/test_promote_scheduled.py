@@ -1,14 +1,11 @@
 """Tests for scripts/promote_scheduled.py — selective, subregion-aware, liveness-gated promotion."""
 
-import sys
-from pathlib import Path
 
 import pytest
 import typer
 import yaml
 from typer.testing import CliRunner
 
-sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
 
 import promote_scheduled as ps  # noqa: E402
 

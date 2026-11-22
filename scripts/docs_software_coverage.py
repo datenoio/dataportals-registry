@@ -9,6 +9,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+import typer
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -273,29 +274,34 @@ def write_index(path: Path | None = None) -> Path:
     return dest
 
 
+app = typer.Typer(add_completion=False)
+
+
+@app.command()
 def main() -> None:
+    """Write docs/software-index.md and list software IDs that the docs miss."""
     missing_d, missing_h = missing_mentions()
     missing_hd, missing_hh = missing_headings()
     combined = combined_software_headings()
     stale = stale_software_anchor_links()
     dest = write_index()
-    print(f"Wrote {dest}")
+    typer.echo(f"Wrote {dest}")
     if missing_d:
-        print("Missing discovery mentions:", ", ".join(missing_d))
+        typer.echo("Missing discovery mentions: " + ", ".join(missing_d))
     if missing_h:
-        print("Missing harvest mentions:", ", ".join(missing_h))
+        typer.echo("Missing harvest mentions: " + ", ".join(missing_h))
     if missing_hd:
-        print("Missing discovery headings:", ", ".join(missing_hd))
+        typer.echo("Missing discovery headings: " + ", ".join(missing_hd))
     if missing_hh:
-        print("Missing harvest headings:", ", ".join(missing_hh))
+        typer.echo("Missing harvest headings: " + ", ".join(missing_hh))
     if combined:
-        print("Combined software H2s (split these):")
+        typer.echo("Combined software H2s (split these):")
         for hit in combined:
-            print(" ", hit)
+            typer.echo(f"  {hit}")
     if stale:
-        print("Stale software heading links:")
+        typer.echo("Stale software heading links:")
         for hit in stale:
-            print(" ", hit)
+            typer.echo(f"  {hit}")
     if (
         not missing_d
         and not missing_h
@@ -304,8 +310,8 @@ def main() -> None:
         and not combined
         and not stale
     ):
-        print("All software IDs mentioned; unique H2s; anchors current.")
+        typer.echo("All software IDs mentioned; unique H2s; anchors current.")
 
 
 if __name__ == "__main__":
-    main()
+    app()

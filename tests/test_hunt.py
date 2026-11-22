@@ -3,13 +3,11 @@
 import base64
 import json
 import re
-import sys
 from pathlib import Path
 
 import pytest
 from typer.testing import CliRunner
 
-sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
 
 import hunt  # noqa: E402
 

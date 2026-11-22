@@ -128,6 +128,23 @@ python scripts/generate_cursor_commands.py
 | `python scripts/builder.py get-countries` | Print a `COUNTRIES` map snippet |
 | `python scripts/builder.py build-docs` | Software stub markdown for the sibling `cdi-docs` repo |
 
+## Script conventions
+
+Every script that you run from the command line follows the same rules:
+
+- Its CLI is defined with typer, so `--help` (and `-h` on single-command scripts) lists every option.
+- Progress and diagnostics go through `logging` to stderr. The result you ran the command for goes to stdout.
+- Long options must be spelled out in full: `--workers 8`, not `--work 8`.
+
+Helpers that several scripts share live in `scripts/dpr/` (`dpr.yaml_io`, `dpr.urls`, `dpr.geo`, `dpr.jsonl`, `dpr.reports`, `dpr.re3data`, `dpr.software`). `tests/test_script_library.py` enforces this layout:
+
+- no function copied between scripts;
+- no `sys.path` edits;
+- typer for every entry point;
+- no `print()`.
+
+The `fix_*.py` scripts are exempt until `builder.py apply-fixes` replaces them.
+
 ## Tests
 
 ```bash
@@ -137,4 +154,4 @@ pytest -m unit
 pytest --no-cov
 ```
 
-CI (`.github/workflows/tests.yml`) runs `validate-yaml` once (pull requests check only the YAML they change, unless they touch `data/schemes/`, `scripts/builder.py`, `scripts/constants.py`, `scripts/yaml_io.py` or a requirements file), `ruff check`, pytest on Python 3.11, 3.12 and 3.13, and the quality regression guard. CI installs dependencies from `requirements.lock`. Docs-only changes skip the workflow.
+CI (`.github/workflows/tests.yml`) runs `validate-yaml` once (pull requests check only the YAML they change, unless they touch `data/schemes/`, `scripts/builder.py`, `scripts/constants.py`, `scripts/dpr/yaml_io.py` or a requirements file), `ruff check`, pytest on Python 3.11, 3.12 and 3.13, and the quality regression guard. CI installs dependencies from `requirements.lock`. Docs-only changes skip the workflow.

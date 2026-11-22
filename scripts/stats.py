@@ -10,7 +10,7 @@ from requests.exceptions import ConnectionError
 
 import yaml
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
 import csv
 import json
 import os
@@ -27,6 +27,7 @@ from constants import (
     MAP_CATALOG_TYPE_SUBDIR,
     COUNTRIES,
 )
+from dpr.jsonl import load_jsonl
 
 
 ROOT_DIR = "../data/entities"
@@ -36,15 +37,6 @@ DATASETS_DIR = "../data/datasets"
 UNPROCESSED_DIR = "../data/_unprocessed"
 
 app = typer.Typer()
-
-
-def load_jsonl(filepath):
-    data = []
-    f = open(filepath, "r", encoding="utf8")
-    for l in f:
-        data.append(json.loads(l))
-    f.close()
-    return data
 
 
 @app.command()

@@ -14,7 +14,9 @@ from urllib.parse import urlparse
 from requests.exceptions import RequestException, Timeout
 from datetime import datetime
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
+from dpr.re3data import get_re3data_identifier
+from dpr.re3data import RE3DATA_BASE_URL, collect_re3data_identifiers, fetch_re3data_page, get_re3data_url
 
 try:
     from bs4 import BeautifulSoup
@@ -40,38 +42,8 @@ RE3DATA_CACHE_FILE = os.path.join(CACHE_DIR, "re3data_repositories.json")
 
 # Re3Data API endpoint (if available)
 RE3DATA_API_BASE = "https://www.re3data.org/api/v1"
-RE3DATA_BASE_URL = "https://www.re3data.org"
 
 app = typer.Typer()
-
-
-def get_re3data_identifier(catalog: Dict[str, Any]) -> Optional[str]:
-    """Extract re3data identifier from catalog identifiers."""
-    identifiers = catalog.get("identifiers", [])
-    for identifier in identifiers:
-        if isinstance(identifier, dict) and identifier.get("id") == "re3data":
-            return identifier.get("value")
-    return None
-
-
-def get_re3data_url(re3data_id: str) -> str:
-    """Get re3data URL for a given identifier."""
-    return f"{RE3DATA_BASE_URL}/repository/{re3data_id}"
-
-
-def fetch_re3data_page(re3data_id: str, timeout: int = 10) -> Optional[str]:
-    """Fetch re3data repository page HTML."""
-    url = get_re3data_url(re3data_id)
-    
-    try:
-        response = requests.get(url, timeout=timeout, verify=True, headers={
-            'User-Agent': 'Mozilla/5.0 (compatible; dataportals-registry/1.0)'
-        })
-        response.raise_for_status()
-        return response.text
-    except (RequestException, Timeout) as e:
-        logger.warning(f"Could not fetch re3data page for {re3data_id}: {e}")
-        return None
 
 
 def parse_re3data_html(html_content: str, re3data_id: str) -> Dict[str, Any]:
@@ -552,38 +524,6 @@ def cache_re3data_data(re3data_id: str, data: Dict[str, Any]) -> None:
             json.dump(cached_data, f, indent=2, ensure_ascii=False)
     except Exception as e:
         logger.warning(f"Could not cache re3data data: {e}")
-
-
-def collect_re3data_identifiers() -> Dict[str, str]:
-    """Collect all re3data identifiers from catalog files."""
-    re3data_ids = {}
-    
-    logger.info("Collecting re3data identifiers from catalogs...")
-    
-    all_files = []
-    for root, dirs, files in os.walk(ROOT_DIR):
-        all_files.extend(
-            [os.path.join(root, fi) for fi in files if fi.endswith(".yaml")]
-        )
-    
-    for filepath in all_files:
-        try:
-            with open(filepath, "r", encoding="utf-8") as f:
-                catalog = yaml.load(f, Loader=Loader)
-            
-            if not catalog:
-                continue
-            
-            re3data_id = get_re3data_identifier(catalog)
-            if re3data_id:
-                catalog_id = catalog.get("id", os.path.basename(filepath))
-                re3data_ids[re3data_id] = filepath
-        
-        except Exception as e:
-            logger.debug(f"Error reading {filepath}: {e}")
-    
-    logger.info(f"Found {len(re3data_ids)} catalogs with re3data identifiers")
-    return re3data_ids
 
 
 def enrich_catalog_with_re3data(catalog: Dict[str, Any], re3data_data: Dict[str, Any]) -> Dict[str, Any]:

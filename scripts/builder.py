@@ -12,7 +12,7 @@ from requests.exceptions import ConnectionError
 
 import yaml
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
 import csv
 import glob
 import json
@@ -29,7 +29,7 @@ from collections import defaultdict, Counter
 from typing import List, Dict, Any, Optional
 
 from national_catalog import check_is_national_flag
-from url_utils import canonicalize_url, host_from_url, normalize_host_for_id
+from dpr.urls import canonicalize_url, host_from_url, normalize_host_for_id
 from constants import (
     ENTRY_TEMPLATE,
     CUSTOM_SOFTWARE_KEYS,
@@ -62,6 +62,9 @@ from constants import (
     PATH_COUNTRY_ALLOWLIST,
     PATH_COUNTRY_ALIASES,
 )
+from dpr.jsonl import load_jsonl
+from dpr.reports import read_jsonl_issues
+from dpr.yaml_io import iter_yaml_files as _iter_yaml_files
 
 # Configure logging
 logging.basicConfig(
@@ -248,15 +251,6 @@ def validate_record_for_write(record: Dict[str, Any]) -> Dict[str, Any]:
 
 
 app = typer.Typer()
-
-
-def load_jsonl(filepath):
-    data = []
-    f = open(filepath, "r", encoding="utf8")
-    for l in f:
-        data.append(json.loads(l))
-    f.close()
-    return data
 
 
 def load_jsonl_zst(filepath):
@@ -756,18 +750,6 @@ def stats(output="country_software.csv"):
 UID_NUMERIC_WIDTH = 8
 UID_NUMERIC_MAX = 10 ** UID_NUMERIC_WIDTH - 1
 _UID_LINE_RE = re.compile(r"^uid:\s*\S+.*$", re.MULTILINE)
-
-
-def _iter_yaml_files(dirpath):
-    """Return sorted YAML paths under dirpath for stable UID assignment."""
-    files = []
-    for root, dirs, filenames in os.walk(dirpath):
-        dirs.sort()
-        for filename in filenames:
-            if filename.endswith(".yaml"):
-                files.append(os.path.join(root, filename))
-    files.sort()
-    return files
 
 
 def _valid_uid_number(uid, prefix):
@@ -5366,15 +5348,6 @@ def extract_country_codes(record):
     return country_codes if country_codes else ["UNKNOWN"]
 
 
-def is_enrichment_issue_type(issue_type):
-    """Return True when an issue type is enrichment debt (non-blocking for CI)."""
-    if not issue_type:
-        return False
-    if issue_type in ENRICHMENT_ISSUE_TYPES:
-        return True
-    return any(issue_type.startswith(prefix) for prefix in ENRICHMENT_ISSUE_PREFIXES)
-
-
 def get_priority_level(issue_type):
     """Get priority level for an issue type."""
     # Software-expected endpoints are enrichment debt (MEDIUM), not integrity.
@@ -5453,34 +5426,6 @@ def calculate_file_hash(file_path: str) -> Optional[str]:
     except Exception as e:
         logger.debug(f"Error calculating hash for {file_path}: {e}")
         return None
-
-
-def read_jsonl_issues(file_path: str) -> List[Dict[str, Any]]:
-    """Read and parse JSONL file for issues."""
-    records = []
-    if not os.path.exists(file_path):
-        logger.error(f"Error: File not found: {file_path}")
-        return records
-    
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            for line_num, line in enumerate(f, 1):
-                line = line.strip()
-                if not line:
-                    continue
-                
-                try:
-                    record = json.loads(line)
-                    issues_list = record.get('issues', [])
-                    if issues_list:
-                        records.append(record)
-                except json.JSONDecodeError as e:
-                    logger.warning(f"Failed to parse JSON at line {line_num}: {e}")
-                    continue
-    except Exception as e:
-        logger.error(f"Error reading file {file_path}: {e}")
-    
-    return records
 
 
 def build_prompt(record: Dict[str, Any]) -> str:

@@ -11,6 +11,7 @@ import os
 import yaml
 from pathlib import Path
 from typing import Dict, Tuple
+from dpr.software import load_software_definitions
 
 # Base directories
 BASE_DIR = Path(__file__).parent.parent
@@ -26,28 +27,6 @@ INVALID_ID_MAPPING = {
 
 # (id, name) aliases: custom + display name -> canonical software id (Huwise is OpenDataSoft)
 SOFTWARE_NAME_ALIASES = {"huwise": "opendatasoft"}
-
-
-def load_software_definitions() -> Dict[str, Dict]:
-    """Load all software definitions from data/software directory."""
-    software = {}
-    
-    for software_file in SOFTWARE_DIR.rglob("*.yaml"):
-        if software_file.name == "_template.tmpl":
-            continue
-            
-        try:
-            with open(software_file, "r", encoding="utf-8") as f:
-                data = yaml.safe_load(f)
-                if data and "id" in data:
-                    software[data["id"]] = {
-                        "id": data["id"],
-                        "name": data.get("name", ""),
-                    }
-        except Exception as e:
-            print(f"Error loading {software_file}: {e}")
-    
-    return software
 
 
 def fix_entity_file(filepath: Path, software_defs: Dict[str, Dict], dry_run: bool = False) -> Tuple[bool, str]:

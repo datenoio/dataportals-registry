@@ -13,6 +13,7 @@ Usage:
 
 from __future__ import annotations
 
+import logging
 import os
 import re
 from pathlib import Path
@@ -20,33 +21,16 @@ from pathlib import Path
 import typer
 import yaml
 
-from yaml_io import Loader
+from dpr.yaml_io import Loader
+from dpr.urls import normalize_domain, normalize_url
+
+logger = logging.getLogger(__name__)
 
 BASE_DIR = Path(__file__).parent.parent
 ENTITIES_DIR = BASE_DIR / "data" / "entities"
 SCHEDULED_DIR = BASE_DIR / "data" / "scheduled"
 
 app = typer.Typer()
-
-
-def normalize_url(url: str) -> str:
-    """Normalize URL for duplicate detection."""
-    if not url:
-        return ""
-    url = url.lower().strip()
-    url = re.sub(r"^https?://", "", url)
-    url = re.sub(r"^www\.", "", url)
-    url = url.rstrip("/")
-    return url
-
-
-def normalize_domain(url: str) -> str:
-    """Extract normalized domain from URL."""
-    normalized = normalize_url(url)
-    if not normalized:
-        return ""
-    domain = normalized.split("/")[0].split(":")[0]
-    return domain
 
 
 def load_entity_ids_and_urls() -> tuple[set[str], set[str]]:
@@ -102,15 +86,15 @@ def main(
 ) -> None:
     """Remove scheduled records that already exist in entities."""
     if dry_run:
-        print("DRY RUN - no files will be deleted\n")
+        logger.info("DRY RUN - no files will be deleted")
 
     if not SCHEDULED_DIR.exists():
-        print(f"Scheduled directory not found: {SCHEDULED_DIR}")
+        logger.error("Scheduled directory not found: %s", SCHEDULED_DIR)
         return
 
-    print("Loading entity IDs and URLs...")
+    logger.info("Loading entity IDs and URLs...")
     entity_ids, entity_urls = load_entity_ids_and_urls()
-    print(f"  Loaded {len(entity_ids)} entity IDs, {len(entity_urls)} entity URLs\n")
+    logger.info("Loaded %d entity IDs, %d entity URLs", len(entity_ids), len(entity_urls))
 
     removed = 0
     kept = 0
@@ -137,20 +121,20 @@ def main(
         rid = data.get("id", "unknown")
         if is_duplicate(data, entity_ids, entity_urls):
             if dry_run:
-                print(f"  [would remove] {rid} -> exists in entities")
+                typer.echo(f"  [would remove] {rid} -> exists in entities")
             else:
                 yaml_path.unlink()
-                print(f"  [removed] {rid}")
+                typer.echo(f"  [removed] {rid}")
             removed += 1
         else:
             kept += 1
 
     if errors:
-        print(f"\nErrors ({len(errors)}):")
+        logger.warning("Errors (%d):", len(errors))
         for path, err in errors[:10]:
-            print(f"  {path}: {err}")
+            logger.warning("  %s: %s", path, err)
         if len(errors) > 10:
-            print(f"  ... and {len(errors) - 10} more")
+            logger.warning("  ... and %d more", len(errors) - 10)
 
     # Clean up empty subdirs (bottom-up) when files were removed
     dirs_removed = 0
@@ -167,12 +151,13 @@ def main(
             except OSError:
                 pass
 
-    print(f"\nRemoved: {removed}, kept: {kept}" + (f", empty dirs cleaned: {dirs_removed}" if dirs_removed else ""))
+    typer.echo(f"\nRemoved: {removed}, kept: {kept}" + (f", empty dirs cleaned: {dirs_removed}" if dirs_removed else ""))
 
     if not dry_run and removed > 0:
-        print("\nNext steps:")
-        print("  python scripts/builder.py build")
+        typer.echo("\nNext steps:")
+        typer.echo("  python scripts/builder.py build")
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
     app()

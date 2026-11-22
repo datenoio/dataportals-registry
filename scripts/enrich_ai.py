@@ -5,7 +5,7 @@ import logging
 import typer
 import requests
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
 import csv
 import tqdm
 import json
@@ -28,26 +28,7 @@ ENRICHED_DIR = "../data/enriched"
 app = typer.Typer()
 
 from prompts import get_profile
-
-
-def load_csv_dict(filepath, key, delimiter="\t"):
-    data = {}
-    f = open(filepath, "r", encoding="utf8")
-    reader = csv.DictReader(f, delimiter=delimiter)
-    for r in reader:
-        data[r[key]] = r
-    f.close()
-    return data
-
-
-def load_jsonl_dict(filepath, key):
-    data = {}
-    f = open(filepath, "r", encoding="utf8")
-    for line in f:
-        r = json.loads(line)
-        data[r[key]] = r
-    f.close()
-    return data
+from dpr.jsonl import load_csv_dict
 
 
 def load_yaml_dict(filepath, key):

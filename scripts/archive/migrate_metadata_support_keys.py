@@ -6,7 +6,7 @@ from __future__ import annotations
 import os
 import sys
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
 
 import yaml
 

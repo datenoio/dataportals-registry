@@ -98,6 +98,7 @@ dataportals-registry/
 │   │   └── full.parquet    # Parquet format
 │   └── reference/          # Reference data and vocabularies
 ├── scripts/                # Python automation scripts
+│   ├── dpr/                # Helpers shared by several scripts (yaml_io, urls, jsonl, ...)
 │   ├── builder.py          # Main build/validation CLI
 │   ├── constants.py        # Constants and mappings
 │   ├── re3data_enrichment.py  # Re3Data integration
@@ -315,7 +316,10 @@ python scripts/builder.py analyze-quality
 - Keep functions focused and small
 - Use type hints where appropriate
 - Import ordering: standard library, third-party, local
-- Load and dump YAML with `from yaml_io import Loader, Dumper`, never `yaml.Loader` or `yaml.CLoader`: those run code from `!!python/*` tags. `tests/test_yaml_safety.py` enforces this
+- Put a helper that two or more scripts need in `scripts/dpr/` and import it; do not copy it. `tests/test_script_library.py` fails on duplicate module-level functions
+- Do not edit `sys.path` in scripts or tests: scripts run with `scripts/` on their path, and `pytest.ini` sets `pythonpath = scripts`
+- Command-line scripts use typer and keep existing option names. Report progress and diagnostics with `logging`, and the command's result with `typer.echo`. Never use `print()`; `tests/test_script_library.py` enforces this (the `fix_*.py` scripts are exempt until `apply-fixes` replaces them)
+- Load and dump YAML with `from dpr.yaml_io import Loader, Dumper`, never `yaml.Loader` or `yaml.CLoader`: those run code from `!!python/*` tags. `tests/test_yaml_safety.py` enforces this
 - HTTP probes verify TLS certificates. Skipping the check needs an explicit `--insecure` option
 
 ### YAML Files
@@ -412,7 +416,7 @@ CLI commands available:
 | `fix_important_issues.py` | IMPORTANT |
 | `fix_medium_issues.py` | MEDIUM |
 | `fix_low_issues.py` | LOW |
-| `fix_all_issues.py` | All priorities |
+| `builder.py fix` | All priorities, through `cursor-agent` |
 | `fix_duplicate_tags.py` | Tag duplicates |
 | `fix_tag_hygiene.py` | Tag quality |
 | `fix_software_id.py` | Software ID fixes |
@@ -615,7 +619,7 @@ Follow [docs/software-taxonomy.md](docs/software-taxonomy.md#adding-a-software-d
 
 - **No secrets in code**: Do not commit API keys, passwords, or tokens
 - **URL validation**: All URLs are validated for proper format (scheme + netloc)
-- **Input sanitization**: YAML parsing uses safe loading (`scripts/yaml_io.py`)
+- **Input sanitization**: YAML parsing uses safe loading (`scripts/dpr/yaml_io.py`)
 - **HTTP requests**: Use requests library with proper timeout and SSL verification
 - **File permissions**: YAML files should be world-readable (0644)
 

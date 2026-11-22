@@ -1,9 +1,5 @@
 """Tests for extract_openaire_portals.py (OpenAIRE Graph harvest)."""
 
-import os
-import sys
-
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
 from extract_openaire_portals import (
     catalog_id_from_url,

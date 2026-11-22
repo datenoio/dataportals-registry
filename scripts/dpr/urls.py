@@ -1,5 +1,6 @@
-"""URL helpers shared by builder quality checks and tests."""
+"""URL helpers shared by builder quality checks, the hunt toolkit and tests."""
 
+import re
 from urllib.parse import urlparse
 
 
@@ -75,3 +76,25 @@ def validate_url_format(url, field_path, issue_type):
             "current_value": url,
             "suggested_action": f"Fix invalid URL in {field_path}",
         }
+
+
+def normalize_url(url: str) -> str:
+    """Lowercase a URL and strip its scheme, leading ``www.`` and trailing slashes.
+
+    Used for duplicate detection against scheduled records and the CKAN
+    ecosystem list. Use ``canonicalize_url`` when the scheme matters.
+    """
+    if not url:
+        return ""
+    url = url.lower().strip()
+    url = re.sub(r"^https?://", "", url)
+    url = re.sub(r"^www\.", "", url)
+    return url.rstrip("/")
+
+
+def normalize_domain(url: str) -> str:
+    """Return the host of ``normalize_url(url)``, without a port."""
+    normalized = normalize_url(url)
+    if not normalized:
+        return ""
+    return normalized.split("/")[0].split(":")[0]

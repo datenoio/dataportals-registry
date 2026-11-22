@@ -34,7 +34,7 @@ Run the existing fix scripts by priority (see `scripts/`):
 - `fix_medium_issues.py`
 - `fix_low_issues.py`
 
-Or run all: `fix_all_issues.py` (may use Cursor automation).
+Or run all: `python scripts/builder.py fix` (uses Cursor automation; `fix_all_issues.py` was removed in November 2026).
 
 **Option B – Cursor / agent-driven fixes**
 
