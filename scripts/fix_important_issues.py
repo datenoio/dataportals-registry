@@ -17,6 +17,7 @@ import yaml
 from pathlib import Path
 from urllib.parse import urlparse
 from typing import Dict, Optional, Tuple
+from dpr.software import load_software_definitions
 
 # Base directories
 BASE_DIR = Path(__file__).parent.parent
@@ -52,26 +53,6 @@ def load_macroregion_dict() -> Dict[str, Dict[str, str]]:
                     }
     return macroregion_dict
 
-def load_software_definitions() -> Dict[str, Dict]:
-    """Load all software definitions from data/software directory."""
-    software = {}
-    
-    for software_file in SOFTWARE_DIR.rglob("*.yaml"):
-        if software_file.name == "_template.tmpl":
-            continue
-            
-        try:
-            with open(software_file, "r", encoding="utf-8") as f:
-                data = yaml.safe_load(f)
-                if data and "id" in data:
-                    software[data["id"]] = {
-                        "id": data["id"],
-                        "name": data.get("name", ""),
-                    }
-        except Exception as e:
-            print(f"Error loading {software_file}: {e}")
-    
-    return software
 
 def infer_country_from_coverage(record):
     """Try to infer country from record's coverage"""

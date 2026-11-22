@@ -12,7 +12,8 @@ from typing import Dict, Any, Optional, Set
 from urllib.parse import urlparse
 from requests.exceptions import RequestException, Timeout
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
+from dpr.re3data import get_re3data_identifier
 
 # Configure logging
 logging.basicConfig(
@@ -47,15 +48,6 @@ TRUST_SEAL_INDICATORS = [
 ]
 
 app = typer.Typer()
-
-
-def get_re3data_identifier(catalog: Dict[str, Any]) -> Optional[str]:
-    """Extract re3data identifier from catalog identifiers."""
-    identifiers = catalog.get("identifiers", [])
-    for identifier in identifiers:
-        if isinstance(identifier, dict) and identifier.get("id") == "re3data":
-            return identifier.get("value")
-    return None
 
 
 def get_re3data_url(re3data_id: str) -> str:

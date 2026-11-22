@@ -12,7 +12,7 @@ from requests.exceptions import ConnectionError
 
 import yaml
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
 import csv
 import glob
 import json
@@ -29,7 +29,7 @@ from collections import defaultdict, Counter
 from typing import List, Dict, Any, Optional
 
 from national_catalog import check_is_national_flag
-from url_utils import canonicalize_url, host_from_url, normalize_host_for_id
+from dpr.urls import canonicalize_url, host_from_url, normalize_host_for_id
 from constants import (
     ENTRY_TEMPLATE,
     CUSTOM_SOFTWARE_KEYS,
@@ -62,6 +62,7 @@ from constants import (
     PATH_COUNTRY_ALLOWLIST,
     PATH_COUNTRY_ALIASES,
 )
+from dpr.jsonl import load_jsonl
 
 # Configure logging
 logging.basicConfig(
@@ -248,15 +249,6 @@ def validate_record_for_write(record: Dict[str, Any]) -> Dict[str, Any]:
 
 
 app = typer.Typer()
-
-
-def load_jsonl(filepath):
-    data = []
-    f = open(filepath, "r", encoding="utf8")
-    for l in f:
-        data.append(json.loads(l))
-    f.close()
-    return data
 
 
 def load_jsonl_zst(filepath):
@@ -5364,15 +5356,6 @@ def extract_country_codes(record):
     
     # If no country found, return ["UNKNOWN"]
     return country_codes if country_codes else ["UNKNOWN"]
-
-
-def is_enrichment_issue_type(issue_type):
-    """Return True when an issue type is enrichment debt (non-blocking for CI)."""
-    if not issue_type:
-        return False
-    if issue_type in ENRICHMENT_ISSUE_TYPES:
-        return True
-    return any(issue_type.startswith(prefix) for prefix in ENRICHMENT_ISSUE_PREFIXES)
 
 
 def get_priority_level(issue_type):

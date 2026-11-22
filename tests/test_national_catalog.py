@@ -1,7 +1,4 @@
-import os
-import sys
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
 from builder import check_is_national_flag, get_priority_level
 from constants import ENRICHMENT_ISSUE_TYPES

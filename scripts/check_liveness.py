@@ -25,7 +25,7 @@ from urllib.parse import urlparse
 import requests
 import yaml
 
-from yaml_io import Loader
+from dpr.yaml_io import Loader
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_ENTITIES = REPO_ROOT / "data" / "entities"

@@ -4,13 +4,10 @@
 import pytest
 import json
 import yaml
-import os
 import tempfile
 from typing import Dict, Any
 
 # Import functions from re3data_enrichment
-import sys
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'scripts'))
 
 # Import after path is set
 try:

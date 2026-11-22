@@ -7,7 +7,7 @@ import requests
 import datetime
 import yaml
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
 import csv
 import json
 import os
@@ -17,6 +17,7 @@ import pprint
 from requests.exceptions import ConnectionError, ReadTimeout, TooManyRedirects
 import urllib3
 from urllib3.exceptions import InsecureRequestWarning
+from dpr.jsonl import load_csv_dict
 
 # Configure logging
 logging.basicConfig(
@@ -45,26 +46,6 @@ DATA_NAMES = [
     "offendaten",
 ]
 GOV_NAMES = ["gov", "gob", "gouv", "egov", "e-gov", "go", "govt"]
-
-
-def load_csv_dict(filepath, key, delimiter="\t"):
-    data = {}
-    f = open(filepath, "r", encoding="utf8")
-    reader = csv.DictReader(f, delimiter=delimiter)
-    for r in reader:
-        data[r[key]] = r
-    f.close()
-    return data
-
-
-def load_jsonl_dict(filepath, key):
-    data = {}
-    f = open(filepath, "r", encoding="utf8")
-    for line in f:
-        r = json.loads(line)
-        data[r[key]] = r
-    f.close()
-    return data
 
 
 @app.command()

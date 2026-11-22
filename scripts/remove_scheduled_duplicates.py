@@ -20,33 +20,14 @@ from pathlib import Path
 import typer
 import yaml
 
-from yaml_io import Loader
+from dpr.yaml_io import Loader
+from dpr.urls import normalize_domain, normalize_url
 
 BASE_DIR = Path(__file__).parent.parent
 ENTITIES_DIR = BASE_DIR / "data" / "entities"
 SCHEDULED_DIR = BASE_DIR / "data" / "scheduled"
 
 app = typer.Typer()
-
-
-def normalize_url(url: str) -> str:
-    """Normalize URL for duplicate detection."""
-    if not url:
-        return ""
-    url = url.lower().strip()
-    url = re.sub(r"^https?://", "", url)
-    url = re.sub(r"^www\.", "", url)
-    url = url.rstrip("/")
-    return url
-
-
-def normalize_domain(url: str) -> str:
-    """Extract normalized domain from URL."""
-    normalized = normalize_url(url)
-    if not normalized:
-        return ""
-    domain = normalized.split("/")[0].split(":")[0]
-    return domain
 
 
 def load_entity_ids_and_urls() -> tuple[set[str], set[str]]:

@@ -2,10 +2,6 @@
 and give each one a unique ``## Name (`id`) {#id}`` heading.
 """
 
-import os
-import sys
-
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
 from docs_software_coverage import (
     REPO_ROOT,

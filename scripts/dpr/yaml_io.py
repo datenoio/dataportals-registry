@@ -7,7 +7,7 @@ such as ``!!python/object/apply:os.system``, so parsing a crafted file with
 them runs code. Import ``Loader`` and ``Dumper`` from this module instead of
 from ``yaml``::
 
-    from yaml_io import Loader, Dumper
+    from dpr.yaml_io import Loader, Dumper
 
     record = yaml.load(handle, Loader=Loader)
 

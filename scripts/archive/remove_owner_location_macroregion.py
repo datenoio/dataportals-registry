@@ -10,7 +10,7 @@ import sys
 
 import yaml
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
 
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 _REPO_ROOT = os.path.dirname(_SCRIPT_DIR)

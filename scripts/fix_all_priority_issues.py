@@ -11,12 +11,10 @@ import yaml
 from pathlib import Path
 from urllib.parse import urlparse
 from typing import Dict, Any, List, Optional, Tuple
-import sys
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
 
 # Import constants
-sys.path.insert(0, str(Path(__file__).parent))
 from constants import (
     MAP_SOFTWARE_ALLOWED_CATALOG_TYPES,
     MAP_SOFTWARE_OWNER_CATALOG_TYPE,

@@ -1,6 +1,6 @@
 # Tests for dataportals-registry
 
-Pytest suite for `scripts/` (configured in `pytest.ini` at the repository root). Python **3.11–3.13**. Published CLI notes: [docs/cli.md](../docs/cli.md).
+Pytest suite for `scripts/` (configured in `pytest.ini` at the repository root, which puts `scripts/` on the import path with `pythonpath = scripts`; tests import scripts directly, as in `import builder`). Python **3.11–3.13**. Published CLI notes: [docs/cli.md](../docs/cli.md).
 
 From the repository root:
 

@@ -22,7 +22,7 @@ from collections import Counter, defaultdict
 
 import yaml
 
-from yaml_io import Loader
+from dpr.yaml_io import Loader
 
 from national_catalog import classify_is_national, is_legacy_open_data_name
 

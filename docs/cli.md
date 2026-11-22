@@ -137,4 +137,4 @@ pytest -m unit
 pytest --no-cov
 ```
 
-CI (`.github/workflows/tests.yml`) runs `validate-yaml` once (pull requests check only the YAML they change, unless they touch `data/schemes/`, `scripts/builder.py`, `scripts/constants.py`, `scripts/yaml_io.py` or a requirements file), `ruff check`, pytest on Python 3.11, 3.12 and 3.13, and the quality regression guard. CI installs dependencies from `requirements.lock`. Docs-only changes skip the workflow.
+CI (`.github/workflows/tests.yml`) runs `validate-yaml` once (pull requests check only the YAML they change, unless they touch `data/schemes/`, `scripts/builder.py`, `scripts/constants.py`, `scripts/dpr/yaml_io.py` or a requirements file), `ruff check`, pytest on Python 3.11, 3.12 and 3.13, and the quality regression guard. CI installs dependencies from `requirements.lock`. Docs-only changes skip the workflow.

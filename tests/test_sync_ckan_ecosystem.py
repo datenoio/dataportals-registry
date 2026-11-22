@@ -1,6 +1,5 @@
 """Tests for sync_ckan_ecosystem.py functions"""
 
-import os
 import json
 import tempfile
 import pytest
@@ -8,8 +7,6 @@ from unittest.mock import Mock, patch, MagicMock
 from urllib.parse import urlparse
 
 # Import sync_ckan_ecosystem functions
-import sys
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
 from sync_ckan_ecosystem import (
     normalize_url,

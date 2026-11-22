@@ -10,7 +10,8 @@ from typing import Dict, Any, Optional, Tuple
 from collections import defaultdict
 import tqdm
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
+from dpr.re3data import get_re3data_identifier
 
 # Configure logging
 logging.basicConfig(
@@ -53,15 +54,6 @@ CATALOG_TYPE_SCORES = {
     "Metadata catalog": 0,
     "Other": 0,
 }
-
-
-def get_re3data_identifier(catalog: Dict[str, Any]) -> Optional[str]:
-    """Extract re3data identifier from catalog identifiers."""
-    identifiers = catalog.get("identifiers", [])
-    for identifier in identifiers:
-        if isinstance(identifier, dict) and identifier.get("id") == "re3data":
-            return identifier.get("value")
-    return None
 
 
 def calculate_owner_type_score(catalog: Dict[str, Any]) -> int:

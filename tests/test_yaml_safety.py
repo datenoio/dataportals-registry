@@ -3,21 +3,18 @@
 Catalog YAML comes from outside contributors and CI validates it on every pull
 request. PyYAML's full loaders run code from tags such as
 ``!!python/object/apply``, so every script takes ``Loader`` and ``Dumper``
-from ``scripts/yaml_io.py``.
+from ``scripts/dpr/yaml_io.py``.
 """
 
 import ast
 import json
-import os
-import sys
 from pathlib import Path
 
 import pytest
 import yaml
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
-import yaml_io  # noqa: E402
+from dpr import yaml_io  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_PATH = REPO_ROOT / "data" / "schemes" / "catalog.json"
@@ -101,7 +98,7 @@ def test_no_unsafe_yaml_loader(path):
     uses = _unsafe_yaml_uses(path)
     assert not uses, (
         f"{path.relative_to(REPO_ROOT)} uses an unsafe PyYAML loader or dumper: "
-        f"{uses}. Import Loader and Dumper from yaml_io instead."
+        f"{uses}. Import Loader and Dumper from dpr.yaml_io instead."
     )
 
 

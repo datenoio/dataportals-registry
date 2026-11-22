@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-- **Safe YAML loading**: scripts parsed registry YAML with `yaml.CLoader`, which runs code from `!!python/*` tags. `validate-yaml` runs on every pull request, so a crafted catalog file could run commands. All scripts now take `Loader` and `Dumper` from `scripts/yaml_io.py` (`CSafeLoader` / `CSafeDumper`). On all 44,405 entity and software files the safe classes load and dump the same result as before. `tests/test_yaml_safety.py` fails if a script imports an unsafe loader.
+- **Safe YAML loading**: scripts parsed registry YAML with `yaml.CLoader`, which runs code from `!!python/*` tags. `validate-yaml` runs on every pull request, so a crafted catalog file could run commands. All scripts now take `Loader` and `Dumper` from `scripts/dpr/yaml_io.py` (`CSafeLoader` / `CSafeDumper`). On all 44,405 entity and software files the safe classes load and dump the same result as before. `tests/test_yaml_safety.py` fails if a script imports an unsafe loader.
 - **TLS checks on by default**: `apidetect.py` and `enrich.py setstatus` no longer pass `verify=False`. To probe a catalog with an expired or self-signed certificate, pass `--insecure` (`python scripts/apidetect.py --insecure detect-single ID`). Eight scripts that never skipped TLS checks no longer silence urllib3 warnings.
 
 ### Fixed
@@ -31,6 +31,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **Shared script library (`scripts/dpr/`)**, first part of the OpenSpec change `refactor-shared-script-library`:
+  - `scripts/yaml_io.py` moves to `scripts/dpr/yaml_io.py`, and `scripts/url_utils.py` moves to `scripts/dpr/urls.py`. Import them as `dpr.yaml_io` and `dpr.urls`.
+  - Helpers that several scripts copied now have one definition in `dpr`: `load_jsonl` and `load_csv_dict` in `dpr.jsonl`, `normalize_url` and `normalize_domain` in `dpr.urls`, `load_software_definitions` in `dpr.software`, and `get_re3data_identifier` in `dpr.re3data`.
+  - `pytest.ini` sets `pythonpath = scripts`. The 21 `sys.path.insert` calls in tests and the 7 in scripts are gone.
+  - `tests/test_script_library.py` fails when a module-level function is defined in two scripts (outside an allowlist of 12 names still to unify) or when a script or test edits `sys.path`.
 - `scripts/apidetect_urlmaps_draft.py` is renamed `scripts/apidetect_urlmaps.py`. `apidetect.py` merges it into `CATALOGS_URLMAP` on every run, so it was never a draft. Its exports are renamed `EXTRA_CATALOGS_URLMAP` and `OPENDAP_URLMAP`; `NO_STANDARD_PROBE` keeps its name.
 - 22 one-off scripts that no doc, test or other script referenced move to `scripts/archive/`:
   - `analyze_africa_custom`, `check_software_id`, `clear_inconsistent_license`;
@@ -43,6 +48,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+- `scripts/fix_all_issues.py`, an older copy of `python scripts/builder.py fix`. Use `builder.py fix` instead; it runs the same `cursor-agent` loop and reports errors in more detail.
+- Two helpers that nothing called: `load_jsonl_dict` (in `enrich.py` and `enrich_ai.py`) and the `builder.py` copy of `is_enrichment_issue_type`.
 - `builder.py validate-typing`, the pydantic models in `scripts/cdiapi/` and `tests/test_datacatalog.py`. The models had drifted from the schema: they reported 43 errors on records that pass `validate-yaml`. The command also exited 0 on every error, and CI did not run it. `validate-yaml` (Cerberus) and `data/schemes/catalog.schema.json` remain the schema checks. `pydantic` is no longer a direct dependency; typer still installs it.
 
 ## [1.27.0] - 2026-10-15

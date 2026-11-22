@@ -1,12 +1,9 @@
 """Regression guard for quality issue counts."""
 
 import json
-import os
-import sys
 
 import pytest
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
 from quality_regression import (  # noqa: E402
     DEFAULT_BASELINE,

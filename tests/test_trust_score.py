@@ -1,10 +1,7 @@
 """Tests for trust score calculation"""
 
-import os
-import sys
 import pytest
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
 from calculate_trust_scores import (
     calculate_trust_score,

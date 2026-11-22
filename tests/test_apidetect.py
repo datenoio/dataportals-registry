@@ -1,13 +1,9 @@
 """Regression tests for apidetect endpoint probing."""
 
-import os
-import sys
 import types
 
 import pytest
 
-
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
 import apidetect
 
@@ -4575,7 +4571,6 @@ def test_invalid_redirect_port_does_not_abort_probes(monkeypatch):
         "https://example.org", "testsw", probe_workers=4
     )
     assert found == []
-
 
 
 class _RecordingSession:

@@ -1,7 +1,4 @@
-import os
-import sys
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
 from builder import canonicalize_url
 
@@ -24,7 +21,7 @@ def test_canonicalize_url_keeps_query_string():
     )
 
 
-def test_canonicalize_url_matches_url_utils():
-    from url_utils import canonicalize_url as shared
+def test_canonicalize_url_matches_dpr_urls():
+    from dpr.urls import canonicalize_url as shared
 
     assert canonicalize_url("https://WWW.Example.Gov/") == shared("https://WWW.Example.Gov/")

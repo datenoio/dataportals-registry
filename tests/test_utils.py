@@ -1,11 +1,8 @@
 """Tests for utility functions"""
 
-import os
-import sys
 import pytest
 from urllib.parse import urlparse
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
 from constants import (
     DOMAIN_LOCATIONS,

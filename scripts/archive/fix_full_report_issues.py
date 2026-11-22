@@ -15,7 +15,7 @@ from typing import Dict, Any, List, Optional, Tuple
 from collections import defaultdict
 import sys
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
 
 # Import constants
 sys.path.insert(0, str(Path(__file__).parent))

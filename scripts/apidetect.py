@@ -15,7 +15,7 @@ from urllib.parse import urljoin
 import datetime
 import yaml
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
 import csv
 import json
 import os

@@ -10,7 +10,7 @@ import yaml
 from pathlib import Path
 from typing import Dict, List, Tuple
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
 
 # Get script directory and repository root
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))

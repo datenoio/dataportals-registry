@@ -13,7 +13,7 @@ import requests
 from requests.exceptions import RequestException, ConnectionError
 
 import yaml
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
 
 import typer
 from tqdm import tqdm

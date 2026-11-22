@@ -14,7 +14,8 @@ from urllib.parse import urlparse
 from requests.exceptions import RequestException, Timeout
 from datetime import datetime
 
-from yaml_io import Loader, Dumper
+from dpr.yaml_io import Loader, Dumper
+from dpr.re3data import get_re3data_identifier
 
 try:
     from bs4 import BeautifulSoup
@@ -43,15 +44,6 @@ RE3DATA_API_BASE = "https://www.re3data.org/api/v1"
 RE3DATA_BASE_URL = "https://www.re3data.org"
 
 app = typer.Typer()
-
-
-def get_re3data_identifier(catalog: Dict[str, Any]) -> Optional[str]:
-    """Extract re3data identifier from catalog identifiers."""
-    identifiers = catalog.get("identifiers", [])
-    for identifier in identifiers:
-        if isinstance(identifier, dict) and identifier.get("id") == "re3data":
-            return identifier.get("value")
-    return None
 
 
 def get_re3data_url(re3data_id: str) -> str:

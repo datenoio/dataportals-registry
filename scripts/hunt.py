@@ -26,7 +26,6 @@ import json
 import os
 import random
 import re
-import sys
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -39,11 +38,9 @@ import requests
 import typer
 
 _SCRIPT_DIR = Path(__file__).resolve().parent
-if str(_SCRIPT_DIR) not in sys.path:
-    sys.path.insert(0, str(_SCRIPT_DIR))
 
 from check_liveness import classify_liveness  # noqa: E402
-from url_utils import canonicalize_url, host_from_url, normalize_host_for_id  # noqa: E402
+from dpr.urls import canonicalize_url, host_from_url, normalize_host_for_id  # noqa: E402
 
 _REPO_ROOT = _SCRIPT_DIR.parent
 DATASETS_DIR = _REPO_ROOT / "data" / "datasets"
