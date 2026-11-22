@@ -15,7 +15,7 @@ Python **3.10–3.12**. Test layout: [tests/README.md](https://github.com/dateno
 |---------|---------|
 | `python scripts/builder.py build` | Rebuild JSONL, zstd, Parquet, and DuckDB from YAML |
 | `python scripts/builder.py build --jsonld` | Also emit `data/datasets/catalogs.jsonld` |
-| `python scripts/builder.py validate-yaml` | Validate entity YAML against the Cerberus schema |
+| `python scripts/builder.py validate-yaml` | Validate entity YAML against the Cerberus schema. Exits 1 when any file is invalid. Large batches use every CPU; `--workers N` (`-j N`) sets the process count, `-j 1` disables multiprocessing |
 | `python scripts/builder.py validate-yaml --id catalogdatafaagov` | Validate one catalog id |
 | `python scripts/builder.py validate-yaml --file path/to/file.yaml` | Validate one file |
 | `python scripts/builder.py validate` | Validate built `full.jsonl` against the same schema |
@@ -28,7 +28,8 @@ Python **3.10–3.12**. Test layout: [tests/README.md](https://github.com/dateno
 Every `validate-yaml` mode also checks `uid` uniqueness across `data/entities/` + `data/scheduled/` (a `uid:`-line scan): a full run reports every shared `uid`, and `--file`/`--id`/`--changed` check the given files against the whole tree. Any schema error or duplicate `uid` exits with code 1.
 
 All `assign` paths cross-check to-be-assigned UIDs against the dataset exports (`datasets.duckdb` read-only, `full.parquet` fallback on lock) and **fail without writing** on collision — a collision means exports diverged from YAML (e.g. a deleted record); rebuild exports first. When exports are absent the check is skipped with a warning.
-| `python scripts/builder.py validate-yaml --changed` | Validate only git-changed YAML (untracked/modified under `data/entities/` + `data/scheduled/`) — fast pre-commit check; mutually exclusive with `--file`/`--id` |
+| `python scripts/builder.py validate-yaml --changed` | Validate only git-changed YAML (untracked/modified under `data/entities/` + `data/scheduled/`) — fast pre-commit check; mutually exclusive with `--file`/`--id`/`--since` |
+| `python scripts/builder.py validate-yaml --since origin/main` | Validate only YAML added or modified between a git ref and HEAD (`git diff REF...HEAD`). CI uses `--since HEAD^1` on pull requests |
 | `python scripts/builder.py schema-values FIELD` | Print allowed values for a field: schema enums (`catalog_type`, `status`, `access_mode`) or reference vocabularies (`owner.type`, `langs`, `owner.location.subregion` with `--country`, `software.id`) |
 | `python scripts/builder.py analyze-quality` | Write `dataquality/` reports |
 | `python scripts/builder.py quality-control` | Terminal completeness metrics (`--mode full` or `catalogs`) |
@@ -137,4 +138,4 @@ pytest -m unit
 pytest --no-cov
 ```
 
-CI (`.github/workflows/tests.yml`) runs `validate-yaml`, pytest on Python 3.12, and the quality regression guard.
+CI (`.github/workflows/tests.yml`) runs `validate-yaml` once (pull requests check only the YAML they change, unless they touch `data/schemes/`, `scripts/builder.py`, `scripts/constants.py` or `requirements.txt`), pytest on Python 3.12, and the quality regression guard. Docs-only changes skip the workflow.

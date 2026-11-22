@@ -3,10 +3,61 @@ name: Tests
 on:
   push:
     branches: [ main, master, develop ]
+    paths-ignore:
+      - 'docs/**'
+      - 'devdocs/**'
+      - 'website/**'
+      - 'openspec/**'
+      - '**/*.md'
+      - 'llms.txt'
   pull_request:
     branches: [ main, master, develop ]
+    paths-ignore:
+      - 'docs/**'
+      - 'devdocs/**'
+      - 'website/**'
+      - 'openspec/**'
+      - '**/*.md'
+      - 'llms.txt'
+
+# A new push to a pull request cancels its older runs. Pushes to branches run to the end.
+concurrency:
+  group: tests-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
+  # Data checks do not depend on the Python version, so they run once.
+  validate-yaml:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        # A pull_request checkout is a merge commit; HEAD^1 is the base branch tip.
+        fetch-depth: 2
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+        cache: pip
+        cache-dependency-path: requirements.txt
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Validate YAML (schema)
+      run: |
+        # Pull requests validate only the YAML they touch, unless they change
+        # the schema or the validation code: then every file is checked.
+        if [ "${{ github.event_name }}" = "pull_request" ] \
+          && ! git diff --name-only HEAD^1 HEAD | grep -qE '^(data/schemes/|scripts/(builder|constants)\.py$|requirements\.txt$)'; then
+          python scripts/builder.py validate-yaml --since HEAD^1
+        else
+          python scripts/builder.py validate-yaml
+        fi
+
   test:
     runs-on: ubuntu-latest
     strategy:
@@ -15,26 +66,25 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
-    
+        cache: pip
+        cache-dependency-path: requirements.txt
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Validate YAML (schema)
-      run: |
-        python scripts/builder.py validate-yaml
-
     - name: Run tests
       run: |
         python -m pytest tests -v --cov=scripts --cov-report=xml --cov-report=term
-    
+
     - name: Upload coverage to Codecov
+      if: matrix.python-version == '3.12'
       uses: codecov/codecov-action@v4
       with:
         file: ./coverage.xml
@@ -50,6 +100,8 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: "3.12"
+        cache: pip
+        cache-dependency-path: requirements.txt
 
     - name: Install dependencies
       run: |
@@ -61,4 +113,3 @@ jobs:
 
     - name: Quality regression guard
       run: python -m pytest tests/test_quality_regression.py -v
-

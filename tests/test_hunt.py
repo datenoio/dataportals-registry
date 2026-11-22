@@ -657,6 +657,15 @@ class TestProbeVerdict:
 
 
 class TestIngest:
+    def test_validate_ids_reports_failures(self, monkeypatch, capsys):
+        import builder
+
+        monkeypatch.setattr(
+            builder, "run_validate_yaml", lambda id=None, **_: 1 if id == "bad" else 0
+        )
+        hunt._validate_ids(["good", "bad"])
+        assert "validate-yaml failed for: bad" in capsys.readouterr().out
+
     def test_skips_auth_empty_and_duplicates(self, tmp_path, monkeypatch):
         probed = tmp_path / "probed.jsonl"
         rows = [

@@ -2,12 +2,24 @@ name: Roam Code Analysis
 on:
   pull_request:
     branches: [main, master]
+    # Code analysis only: pull requests that change only catalog data skip it.
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
+      - 'website/src/**'
+      - 'requirements.txt'
+      - '.roamignore'
+      - '.github/workflows/roam.yml'
 permissions:
   contents: read
   pull-requests: write
+concurrency:
+  group: roam-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
 jobs:
   roam:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
@@ -16,6 +28,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install roam-code
+      # .roamignore keeps data/ and dataquality/ out of the index.
       - run: roam index
       - run: roam fitness
       - run: roam pr-risk --json

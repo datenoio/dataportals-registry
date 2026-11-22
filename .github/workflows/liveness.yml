@@ -22,7 +22,7 @@ concurrency:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 360
+    timeout-minutes: 240
 
     steps:
       - uses: actions/checkout@v4
@@ -31,6 +31,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
 
       - name: Install dependencies
         run: |
@@ -38,17 +40,25 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run liveness probes
+        env:
+          SAMPLE: ${{ github.event.inputs.sample }}
+          COUNTRY: ${{ github.event.inputs.country }}
         run: |
-          CMD=(python scripts/check_liveness.py --delay 0.25)
-          if [ -n "${{ github.event.inputs.sample }}" ]; then
-            CMD+=(--sample "${{ github.event.inputs.sample }}")
+          # 64 parallel probes, one request at a time per host. A full run takes
+          # about 1-1.5 h: hosts that time out cost up to ~60 s each.
+          CMD=(python scripts/check_liveness.py --workers 64 --delay 0.25)
+          if [ -n "$SAMPLE" ]; then
+            CMD+=(--sample "$SAMPLE")
           fi
-          if [ -n "${{ github.event.inputs.country }}" ]; then
-            CMD+=(--country "${{ github.event.inputs.country }}")
+          if [ -n "$COUNTRY" ]; then
+            CMD+=(--country "$COUNTRY")
           fi
           "${CMD[@]}"
 
+      # The report is written row by row, so a timed-out run still uploads
+      # the rows it probed.
       - name: Upload liveness report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: liveness-report

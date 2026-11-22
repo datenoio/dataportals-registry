@@ -1173,10 +1173,11 @@ def _promote_ids(ids: List[str]) -> None:
 
 
 def _validate_ids(ids: List[str]) -> None:
-    from builder import validate_yaml
+    from builder import run_validate_yaml
 
-    for record_id in ids:
-        validate_yaml(file=None, id=record_id, changed=False)
+    failed = [record_id for record_id in ids if run_validate_yaml(id=record_id)]
+    if failed:
+        typer.echo(f"validate-yaml failed for: {', '.join(failed)}")
 
 
 def _ids_from_summary(summary: Dict[str, Any]) -> List[str]:

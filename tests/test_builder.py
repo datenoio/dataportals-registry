@@ -999,6 +999,51 @@ class TestAssignNew:
         with pytest.raises(ValueError, match="git status"):
             builder._git_changed_yaml_files(repo_root=temp_dir)
 
+    def test_since_lists_files_changed_after_ref(self, temp_dir):
+        import builder
+        import subprocess as real_subprocess
+
+        def git(*args):
+            real_subprocess.run(
+                ["git", *args], cwd=temp_dir, check=True, capture_output=True
+            )
+
+        def write(rel, text="id: x\n"):
+            full = os.path.join(temp_dir, rel)
+            os.makedirs(os.path.dirname(full), exist_ok=True)
+            with open(full, "w", encoding="utf8") as f:
+                f.write(text)
+
+        git("init", "-q")
+        git("config", "user.email", "test@example.com")
+        git("config", "user.name", "Test")
+        write("data/entities/US/opendata/old.yaml")
+        write("data/entities/US/opendata/gone.yaml")
+        git("add", "-A")
+        git("commit", "-q", "-m", "base")
+        git("tag", "base")
+        write("data/entities/US/opendata/old.yaml", "id: y\n")
+        write("data/scheduled/FR/opendata/new.yaml")
+        write("docs/notes.yaml")
+        os.remove(os.path.join(temp_dir, "data/entities/US/opendata/gone.yaml"))
+        git("add", "-A")
+        git("commit", "-q", "-m", "change")
+
+        files = builder._git_yaml_files_since("base", repo_root=temp_dir)
+        rels = {os.path.relpath(f, temp_dir) for f in files}
+        assert rels == {
+            "data/entities/US/opendata/old.yaml",
+            "data/scheduled/FR/opendata/new.yaml",
+        }
+
+    def test_since_unknown_ref_raises_value_error(self, temp_dir):
+        import builder
+        import subprocess as real_subprocess
+
+        real_subprocess.run(["git", "init", "-q"], cwd=temp_dir, check=True)
+        with pytest.raises(ValueError, match="git diff"):
+            builder._git_yaml_files_since("no-such-ref", repo_root=temp_dir)
+
 
 class TestRecordUpdateTooling:
     """set-field and enrich-batch record update commands."""
@@ -1251,6 +1296,7 @@ class TestValidationHelpers:
         monkeypatch.setattr(builder, "ROOT_DIR", str(temp_dir))
         monkeypatch.setattr(builder, "SCHEDULED_DIR", os.path.join(str(temp_dir), "scheduled"))
         result = self._runner().invoke(builder.app, ["validate-yaml", "--changed"])
+        # an invalid file must fail the command, so CI fails too
         assert result.exit_code == 1, result.output
         assert "Total files: 2" in result.output
         assert "Duplicate uids: 0" in result.output
@@ -1278,6 +1324,92 @@ class TestValidationHelpers:
         assert "cannot be combined" in result.output
         result = runner.invoke(builder.app, ["validate-yaml", "--changed", "--file", "x.yaml"])
         assert result.exit_code == 1
+        result = runner.invoke(builder.app, ["validate-yaml", "--since", "HEAD", "--changed"])
+        assert result.exit_code == 1
+        assert "cannot be combined" in result.output
+
+    _VALID_RECORD = (
+        "id: {rid}\n"
+        "uid: cdi00000001\n"
+        "name: Valid\n"
+        "link: https://example.com\n"
+        "catalog_type: Open data portal\n"
+        "access_mode:\n  - open\n"
+        "status: active\n"
+        "software:\n  id: custom\n  name: Custom\n"
+        "owner:\n"
+        "  name: Owner\n"
+        "  type: Central government\n"
+        "  location:\n    country:\n      id: US\n      name: United States\n"
+    )
+
+    def test_validate_all_valid_exits_zero(self, temp_dir, monkeypatch):
+        import builder
+
+        path = self._write_yaml(temp_dir, "okrec.yaml", self._VALID_RECORD.format(rid="okrec"))
+        monkeypatch.setattr(builder, "_git_changed_yaml_files", lambda: [path])
+        # Keep the uid-uniqueness scan inside temp_dir, away from the real registry.
+        monkeypatch.setattr(builder, "ROOT_DIR", str(temp_dir))
+        monkeypatch.setattr(builder, "SCHEDULED_DIR", os.path.join(str(temp_dir), "scheduled"))
+        result = self._runner().invoke(builder.app, ["validate-yaml", "--changed"])
+        assert result.exit_code == 0, result.output
+        assert "All files are valid!" in result.output
+
+    def test_validate_since_uses_git_diff_files(self, temp_dir, monkeypatch):
+        import builder
+
+        path = self._write_yaml(temp_dir, "okrec.yaml", self._VALID_RECORD.format(rid="okrec"))
+        seen = {}
+
+        def _since(ref):
+            seen["ref"] = ref
+            return [path]
+
+        monkeypatch.setattr(builder, "_git_yaml_files_since", _since)
+        # Keep the uid-uniqueness scan inside temp_dir, away from the real registry.
+        monkeypatch.setattr(builder, "ROOT_DIR", str(temp_dir))
+        monkeypatch.setattr(builder, "SCHEDULED_DIR", os.path.join(str(temp_dir), "scheduled"))
+        result = self._runner().invoke(builder.app, ["validate-yaml", "--since", "origin/main"])
+        assert result.exit_code == 0, result.output
+        assert seen["ref"] == "origin/main"
+        assert "Validating 1 changed YAML files" in result.output
+
+    def test_run_validate_yaml_returns_code(self, temp_dir, monkeypatch):
+        import builder
+
+        bad = self._write_yaml(temp_dir, "bad.yaml", "id: bad\n")
+        monkeypatch.setattr(builder, "_git_changed_yaml_files", lambda: [bad])
+        # Keep the uid-uniqueness scan inside temp_dir, away from the real registry.
+        monkeypatch.setattr(builder, "ROOT_DIR", str(temp_dir))
+        monkeypatch.setattr(builder, "SCHEDULED_DIR", os.path.join(str(temp_dir), "scheduled"))
+        assert builder.run_validate_yaml(changed=True) == 1
+
+    def test_parallel_validation_matches_sequential(self, temp_dir, monkeypatch):
+        import builder
+        from cerberus import Validator
+
+        filenames = []
+        for i in range(6):
+            filenames.append(
+                self._write_yaml(
+                    temp_dir, f"rec{i}.yaml", self._VALID_RECORD.format(rid=f"rec{i}")
+                )
+            )
+        filenames.insert(2, self._write_yaml(temp_dir, "bad1.yaml", "id: bad1\n"))
+        filenames.append(self._write_yaml(temp_dir, "bad2.yaml", "id: bad2\n"))
+
+        with open(builder.os.path.join(builder._REPO_ROOT, "data", "schemes", "catalog.json"), encoding="utf8") as f:
+            schema = json.load(f)
+        v = Validator(schema)
+        sequential = builder._validate_yaml_files(filenames, schema, v)
+
+        monkeypatch.setattr(builder, "_PARALLEL_VALIDATION_MIN_FILES", 1)
+        monkeypatch.setattr(builder, "_VALIDATION_MIN_CHUNK", 3)  # 8 files -> 3 chunks
+        parallel = builder._validate_yaml_files_parallel(filenames, schema, v, workers=2)
+
+        assert parallel == sequential
+        assert parallel[1:] == (8, 6)
+        assert [os.path.basename(name) for name, _ in parallel[0]] == ["bad1.yaml", "bad2.yaml"]
 
 
 class TestSoftwareMap:
