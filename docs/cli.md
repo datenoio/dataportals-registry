@@ -25,6 +25,8 @@ Python **3.10–3.12**. Test layout: [tests/README.md](https://github.com/dateno
 | `python scripts/builder.py assign --new` | Incremental: only git-changed YAML (untracked/modified under `data/entities/` + `data/scheduled/`); entities get `cdi########`, scheduled `temp########`. Fast `uid:`-line scan for used numbers, no full YAML parse |
 | `python scripts/builder.py assign --mode scheduled` | Assign `temp########` UIDs in scheduled |
 
+Every `validate-yaml` mode also checks `uid` uniqueness across `data/entities/` + `data/scheduled/` (a `uid:`-line scan): a full run reports every shared `uid`, and `--file`/`--id`/`--changed` check the given files against the whole tree. Any schema error or duplicate `uid` exits with code 1.
+
 All `assign` paths cross-check to-be-assigned UIDs against the dataset exports (`datasets.duckdb` read-only, `full.parquet` fallback on lock) and **fail without writing** on collision — a collision means exports diverged from YAML (e.g. a deleted record); rebuild exports first. When exports are absent the check is skipped with a warning.
 | `python scripts/builder.py validate-yaml --changed` | Validate only git-changed YAML (untracked/modified under `data/entities/` + `data/scheduled/`) — fast pre-commit check; mutually exclusive with `--file`/`--id`/`--since` |
 | `python scripts/builder.py validate-yaml --since origin/main` | Validate only YAML added or modified between a git ref and HEAD (`git diff REF...HEAD`). CI uses `--since HEAD^1` on pull requests |
@@ -136,4 +138,4 @@ pytest -m unit
 pytest --no-cov
 ```
 
-CI (`.github/workflows/tests.yml`) runs `validate-yaml` once (pull requests check only the YAML they change, unless they touch `data/schemes/`, `scripts/builder.py`, `scripts/constants.py` or `requirements.txt`), pytest on Python 3.10–3.12, and the quality regression guard. Docs-only changes skip the workflow.
+CI (`.github/workflows/tests.yml`) runs `validate-yaml` once (pull requests check only the YAML they change, unless they touch `data/schemes/`, `scripts/builder.py`, `scripts/constants.py` or `requirements.txt`), pytest on Python 3.12, and the quality regression guard. Docs-only changes skip the workflow.

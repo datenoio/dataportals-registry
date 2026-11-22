@@ -1292,10 +1292,14 @@ class TestValidationHelpers:
         other = self._write_yaml(temp_dir, "other.yaml", "id: otherrec\n")
 
         monkeypatch.setattr(builder, "_git_changed_yaml_files", lambda: [valid, invalid])
+        # Keep the uid-uniqueness scan inside temp_dir, away from the real registry.
+        monkeypatch.setattr(builder, "ROOT_DIR", str(temp_dir))
+        monkeypatch.setattr(builder, "SCHEDULED_DIR", os.path.join(str(temp_dir), "scheduled"))
         result = self._runner().invoke(builder.app, ["validate-yaml", "--changed"])
         # an invalid file must fail the command, so CI fails too
         assert result.exit_code == 1, result.output
         assert "Total files: 2" in result.output
+        assert "Duplicate uids: 0" in result.output
         assert "Valid: 1" in result.output
         assert "Errors: 1" in result.output
         # per-file errors are reported via the logger
@@ -1344,6 +1348,9 @@ class TestValidationHelpers:
 
         path = self._write_yaml(temp_dir, "okrec.yaml", self._VALID_RECORD.format(rid="okrec"))
         monkeypatch.setattr(builder, "_git_changed_yaml_files", lambda: [path])
+        # Keep the uid-uniqueness scan inside temp_dir, away from the real registry.
+        monkeypatch.setattr(builder, "ROOT_DIR", str(temp_dir))
+        monkeypatch.setattr(builder, "SCHEDULED_DIR", os.path.join(str(temp_dir), "scheduled"))
         result = self._runner().invoke(builder.app, ["validate-yaml", "--changed"])
         assert result.exit_code == 0, result.output
         assert "All files are valid!" in result.output
@@ -1359,6 +1366,9 @@ class TestValidationHelpers:
             return [path]
 
         monkeypatch.setattr(builder, "_git_yaml_files_since", _since)
+        # Keep the uid-uniqueness scan inside temp_dir, away from the real registry.
+        monkeypatch.setattr(builder, "ROOT_DIR", str(temp_dir))
+        monkeypatch.setattr(builder, "SCHEDULED_DIR", os.path.join(str(temp_dir), "scheduled"))
         result = self._runner().invoke(builder.app, ["validate-yaml", "--since", "origin/main"])
         assert result.exit_code == 0, result.output
         assert seen["ref"] == "origin/main"
@@ -1369,6 +1379,9 @@ class TestValidationHelpers:
 
         bad = self._write_yaml(temp_dir, "bad.yaml", "id: bad\n")
         monkeypatch.setattr(builder, "_git_changed_yaml_files", lambda: [bad])
+        # Keep the uid-uniqueness scan inside temp_dir, away from the real registry.
+        monkeypatch.setattr(builder, "ROOT_DIR", str(temp_dir))
+        monkeypatch.setattr(builder, "SCHEDULED_DIR", os.path.join(str(temp_dir), "scheduled"))
         assert builder.run_validate_yaml(changed=True) == 1
 
     def test_parallel_validation_matches_sequential(self, temp_dir, monkeypatch):
@@ -1508,17 +1521,17 @@ class TestCreateTableFromJsonl:
             SELECT id, software.id, owner.type,
                    list_contains(tags, 'government'),
                    list_contains(
-                       list_transform(coverage, x -> x.location.country.id),
+                       [x.location.country.id FOR x IN coverage],
                        'US'
                    ),
                    list_contains(
-                       list_transform(identifiers, x -> x.id),
+                       [x.id FOR x IN identifiers],
                        'wikidata'
                    )
             FROM catalogs
             WHERE software.id = 'ckan'
               AND list_contains(
-                  list_transform(coverage, x -> x.location.country.id),
+                  [x.location.country.id FOR x IN coverage],
                   'US'
               )
             """
