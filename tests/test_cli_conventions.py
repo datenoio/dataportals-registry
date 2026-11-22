@@ -7,6 +7,7 @@ network request or writes outside ``tmp_path``.
 """
 
 import logging
+import re
 
 import pytest
 from typer.main import get_command
@@ -143,11 +144,16 @@ def test_check_liveness_apply_dead_flags(monkeypatch, tmp_path, extra, dry_run, 
     ]
 
 
+# typer forces rich colour output when GITHUB_ACTIONS is set, which splits
+# option names with ANSI codes ("\x1b[1;36m-\x1b[0m\x1b[1;36m-workers").
+_ANSI = re.compile(r"\x1b\[[0-9;]*m")
+
+
 @pytest.mark.parametrize("flag", ["-h", "--help"])
 def test_check_liveness_help_flags(flag):
     result = runner.invoke(check_liveness.app, [flag])
     assert result.exit_code == 0
-    assert "--workers" in result.stdout
+    assert "--workers" in _ANSI.sub("", result.stdout)
 
 
 def test_check_liveness_usage_error_exits_2():
