@@ -26,6 +26,23 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
+  # Lint needs only ruff, at the version pinned in requirements.lock.
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+
+    - name: Install ruff
+      run: pip install "$(grep -E '^ruff==' requirements.lock)"
+
+    - name: Lint (rules in pyproject.toml)
+      run: ruff check --output-format=github scripts tests
+
   # Data checks do not depend on the Python version, so they run once.
   validate-yaml:
     runs-on: ubuntu-latest
@@ -40,19 +57,20 @@ jobs:
       with:
         python-version: "3.12"
         cache: pip
-        cache-dependency-path: requirements.txt
+        cache-dependency-path: requirements.lock
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -r requirements.lock
 
     - name: Validate YAML (schema)
       run: |
         # Pull requests validate only the YAML they touch, unless they change
-        # the schema or the validation code: then every file is checked.
+        # the schema, the validation code or the dependencies: then every file
+        # is checked.
         if [ "${{ github.event_name }}" = "pull_request" ] \
-          && ! git diff --name-only HEAD^1 HEAD | grep -qE '^(data/schemes/|scripts/(builder|constants)\.py$|requirements\.txt$)'; then
+          && ! git diff --name-only HEAD^1 HEAD | grep -qE '^(data/schemes/|scripts/(builder|constants|yaml_io)\.py$|requirements(-dev)?\.(txt|lock)$)'; then
           python scripts/builder.py validate-yaml --since HEAD^1
         else
           python scripts/builder.py validate-yaml
@@ -61,8 +79,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
+      # One failing Python version does not cancel the others.
+      fail-fast: false
       matrix:
-        python-version: ["3.12"]
+        # 3.11 is the floor: duckdb 2.x does not install on 3.10.
+        python-version: ["3.11", "3.12", "3.13"]
 
     steps:
     - uses: actions/checkout@v4
@@ -72,12 +93,12 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
         cache: pip
-        cache-dependency-path: requirements.txt
+        cache-dependency-path: requirements.lock
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -r requirements.lock
 
     - name: Run tests
       run: |
@@ -101,12 +122,12 @@ jobs:
       with:
         python-version: "3.12"
         cache: pip
-        cache-dependency-path: requirements.txt
+        cache-dependency-path: requirements.lock
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -r requirements.lock
 
     - name: Analyze data quality
       run: python scripts/builder.py analyze-quality

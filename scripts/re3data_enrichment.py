@@ -14,10 +14,7 @@ from urllib.parse import urlparse
 from requests.exceptions import RequestException, Timeout
 from datetime import datetime
 
-try:
-    from yaml import CLoader as Loader, CDumper as Dumper
-except ImportError:
-    from yaml import Loader, Dumper
+from yaml_io import Loader, Dumper
 
 try:
     from bs4 import BeautifulSoup
@@ -26,9 +23,6 @@ except ImportError:
     HAS_BS4 = False
     logger = logging.getLogger(__name__)
     logger.warning("BeautifulSoup4 not available, will use basic HTML parsing")
-
-# Suppress only the single warning from urllib3 needed.
-requests.packages.urllib3.disable_warnings()
 
 # Configure logging
 logging.basicConfig(

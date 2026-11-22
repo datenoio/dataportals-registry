@@ -15,10 +15,7 @@ from urllib.parse import urljoin
 import datetime
 import yaml
 
-try:
-    from yaml import CLoader as Loader, CDumper as Dumper
-except ImportError:
-    from yaml import Loader, Dumper
+from yaml_io import Loader, Dumper
 import csv
 import json
 import os
@@ -35,10 +32,21 @@ from requests.exceptions import (
     RequestException,
     TooManyRedirects,
 )
+import urllib3
 from urllib3.exceptions import InsecureRequestWarning  # , ConnectionError
 
-# Suppress only the single warning from urllib3 needed.
-requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
+# Probes check TLS certificates unless the caller opts out with --insecure
+# (or set_insecure_tls(True)). Catalogs with expired or self-signed
+# certificates then fail with "SSL Error" instead of being probed.
+TLS_VERIFY = True
+
+
+def set_insecure_tls(insecure: bool) -> None:
+    """Skip (True) or restore (False) TLS certificate checks for all probes."""
+    global TLS_VERIFY
+    TLS_VERIFY = not insecure
+    if insecure:
+        urllib3.disable_warnings(InsecureRequestWarning)
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -53,6 +61,20 @@ _REPO_ROOT = os.path.dirname(_SCRIPT_DIR)
 ENTRIES_DIR = os.path.join(_REPO_ROOT, "data", "entities")
 SCHEDULED_DIR = os.path.join(_REPO_ROOT, "data", "scheduled")
 app = typer.Typer()
+
+
+@app.callback()
+def _cli_options(
+    insecure: Annotated[
+        bool,
+        typer.Option(
+            "--insecure",
+            help="Skip TLS certificate checks, for catalogs with expired or self-signed certificates.",
+        ),
+    ] = False,
+):
+    """Detect catalog software and API endpoints."""
+    set_insecure_tls(insecure)
 
 DEFAULT_TIMEOUT = 5
 DEFAULT_RECORD_WORKERS = 8
@@ -2710,7 +2732,7 @@ def analyze_robots(root_url):
         r = requests.get(
             robots_url,
             timeout=DEFAULT_TIMEOUT,
-            verify=False,
+            verify=TLS_VERIFY,
         )
     except Exception as e:
         logger.error("Error analyzing robots.txt: %s", e)
@@ -2757,7 +2779,7 @@ def analyze_root(root_url):
     try:
         response = s.get(
             root_url,
-            verify=False,
+            verify=TLS_VERIFY,
             headers={"User-Agent": USER_AGENT},
             timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT),
         )
@@ -3396,7 +3418,7 @@ def origo_config_urls_from_page(site_url, session=None, timeout=DEFAULT_TIMEOUT)
     try:
         response = getter(
             site_url,
-            verify=False,
+            verify=TLS_VERIFY,
             headers={"User-Agent": USER_AGENT},
             timeout=(timeout, timeout),
         )
@@ -3833,7 +3855,7 @@ def opensdg_remote_data_base_url(site_url, session=None, timeout=DEFAULT_TIMEOUT
     try:
         response = getter(
             site_url,
-            verify=False,
+            verify=TLS_VERIFY,
             headers={"User-Agent": USER_AGENT},
             timeout=(timeout, timeout),
         )
@@ -3877,7 +3899,7 @@ def _probe_one(session, item, request_url, base_url, timeout, verify_json):
                 headers["Accept"] = item["accept"]
             response = session.post(
                 request_url,
-                verify=False,
+                verify=TLS_VERIFY,
                 headers=headers,
                 json=json.loads(item["post_params"]),
                 timeout=(timeout, timeout),
@@ -3893,14 +3915,14 @@ def _probe_one(session, item, request_url, base_url, timeout, verify_json):
             if response is None and "accept" in item.keys():
                 response = session.get(
                     request_url,
-                    verify=False,
+                    verify=TLS_VERIFY,
                     headers={"User-Agent": USER_AGENT, "Accept": item["accept"]},
                     timeout=(timeout, timeout),
                 )
             elif response is None:
                 response = session.get(
                     request_url,
-                    verify=False,
+                    verify=TLS_VERIFY,
                     headers={"User-Agent": USER_AGENT},
                     timeout=(timeout, timeout),
                 )

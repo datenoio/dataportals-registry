@@ -20,15 +20,15 @@ ENTITIES_DIR = BASE_DIR / "data" / "entities"
 
 # Language mapping based on country codes (from constants.py)
 LANGS_BY_COUNTRY = {
-    "US": ["EN"], "GB": ["EN"], "AU": ["EN"], "CA": ["EN"], "NZ": ["EN"],
+    "US": ["EN"], "GB": ["EN"], "AU": ["EN"], "CA": ["EN", "FR"], "NZ": ["EN"],
     "IE": ["EN"], "ZA": ["EN"], "ZW": ["EN"], "TT": ["EN"], "TZ": ["EN"],
     "RW": ["EN"], "UG": ["EN"], "NG": ["EN"], "ZM": ["EN"], "LK": ["EN"],
     "SG": ["EN"], "IN": ["EN"], "MN": ["MN"], "LT": ["LT"],
     "ES": ["ES"], "AR": ["ES"], "SV": ["ES"], "MX": ["ES"], "CL": ["ES"],
     "GT": ["ES"], "HN": ["ES"], "EC": ["ES"], "CR": ["ES"], "PE": ["ES"],
     "PY": ["ES"], "BO": ["ES"], "UY": ["ES"], "DO": ["ES"], "AD": ["ES"],
-    "JP": ["JP"], "AT": ["DE"], "DE": ["DE"], "CH": ["DE"],
-    "FR": ["FR"], "CI": ["FR"], "TG": ["FR"], "BE": ["FR"], "LU": ["FR"],
+    "JP": ["JP"], "AT": ["DE"], "DE": ["DE"], "CH": ["DE", "FR", "IT"],
+    "FR": ["FR"], "CI": ["FR"], "TG": ["FR"], "BE": ["FR", "NL"], "LU": ["FR"],
     "BF": ["FR"], "CD": ["FR"], "RU": ["RU"], "BY": ["RU"],
     "DK": ["DA"], "FO": ["DA"], "GL": ["DA"], "FI": ["FI"],
     "NL": ["NL"], "BG": ["BG"], "BH": ["AR"], "SA": ["AR"], "PS": ["AR"],
@@ -43,9 +43,9 @@ LANGS_BY_COUNTRY = {
     "GE": ["KA"], "IL": ["HE"], "SK": ["SK"], "NP": ["NE"],
     "HR": ["HR"], "MK": ["MK"], "MD": ["MD"],
     # Multi-language countries
-    "BE": ["FR", "NL"],  # Belgium has both French and Dutch
-    "CH": ["DE", "FR", "IT"],  # Switzerland has multiple languages
-    "CA": ["EN", "FR"],  # Canada has English and French
+    # Belgium has both French and Dutch
+    # Switzerland has multiple languages
+    # Canada has English and French
     # Additional country/region codes from quality report
     "SY": ["AR"],  # Syria - Arabic
     "EU": ["EN"],  # European Union - English as common
@@ -130,7 +130,7 @@ def generate_description(record):
             # Extract meaningful domain info
             if domain:
                 parts.append(f"accessible at {domain}")
-        except:
+        except Exception:
             pass
     
     if parts:
@@ -230,7 +230,7 @@ def expand_description(record, file_path):
                     # Just add domain info if not already there
                     if not any(part.startswith("accessible at") for part in parts):
                         parts.append(f"accessible at {domain}")
-            except:
+            except Exception:
                 pass
         
         # If we have parts, combine them

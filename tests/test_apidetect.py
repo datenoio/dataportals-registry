@@ -2,6 +2,7 @@
 
 import os
 import sys
+import types
 
 import pytest
 
@@ -4575,3 +4576,43 @@ def test_invalid_redirect_port_does_not_abort_probes(monkeypatch):
     )
     assert found == []
 
+
+
+class _RecordingSession:
+    """Session stub that records the verify flag of each request."""
+
+    def __init__(self):
+        self.verify_flags = []
+
+    def get(self, url, **kwargs):
+        self.verify_flags.append(kwargs.get("verify"))
+        return types.SimpleNamespace(status_code=404, headers={}, content=b"", text="")
+
+
+@pytest.fixture
+def restore_tls_verify():
+    yield
+    apidetect.set_insecure_tls(False)
+
+
+def test_probes_verify_tls_by_default(restore_tls_verify):
+    session = _RecordingSession()
+    item = {"id": "ckan", "url": "/api/3", "expected_mime": [], "is_json": True}
+
+    apidetect._probe_one(session, item, "https://example.org/api/3", "https://example.org", 5, False)
+
+    assert apidetect.TLS_VERIFY is True
+    assert session.verify_flags == [True]
+
+
+def test_insecure_option_turns_tls_checks_off(restore_tls_verify):
+    from typer.testing import CliRunner
+
+    result = CliRunner().invoke(apidetect.app, ["--insecure", "report", "--help"])
+    assert result.exit_code == 0, result.output
+    assert apidetect.TLS_VERIFY is False
+
+    session = _RecordingSession()
+    item = {"id": "ckan", "url": "/api/3", "expected_mime": [], "is_json": True}
+    apidetect._probe_one(session, item, "https://example.org/api/3", "https://example.org", 5, False)
+    assert session.verify_flags == [False]

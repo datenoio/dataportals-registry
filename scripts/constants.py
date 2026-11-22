@@ -162,7 +162,12 @@ DOMAIN_LOCATIONS = {
     "us": {"location": {"country": {"id": "US", "name": "United States"}, "level": 2}},
     "at": {"location": {"country": {"id": "AT", "name": "Austria"}, "level": 2}},
     "es": {"location": {"country": {"id": "ES", "name": "Spain"}, "level": 2}},
-    "ci": {"location": {"country": {"id": "CI", "name": "Cote d Ivoire"}, "level": 2}},
+    "ci": {
+        "location": {
+            "country": {"id": "CI", "name": "Republic of Ivory Coast"},
+            "level": 2,
+        }
+    },
     "jp": {"location": {"country": {"id": "JP", "name": "Japan"}, "level": 2}},
     "it": {"location": {"country": {"id": "IT", "name": "Italy"}, "level": 2}},
     "fo": {"location": {"country": {"id": "FO", "name": "Faroe Islands"}, "level": 2}},
@@ -298,12 +303,6 @@ DOMAIN_LOCATIONS = {
     "aq": {"location": {"country": {"id": "Unknown", "name": "Unknown"}, "level": 2}},
     "bt": {"location": {"country": {"id": "BT", "name": "Bhutan"}, "level": 2}},
     "ge": {"location": {"country": {"id": "GE", "name": "Georgia"}, "level": 2}},
-    "ci": {
-        "location": {
-            "country": {"id": "CI", "name": "Republic of Ivory Coast"},
-            "level": 2,
-        }
-    },
     "ad": {"location": {"country": {"id": "AD", "name": "Andorra"}, "level": 2}},
     "mc": {"location": {"country": {"id": "MC", "name": "Monaco"}, "level": 2}},
     "tl": {"location": {"country": {"id": "TL", "name": "Timor-Leste"}, "level": 2}},
@@ -471,9 +470,6 @@ DOMAIN_LOCATIONS = {
     "dm": {"location": {"country": {"id": "DM", "name": "Dominica"}, "level": 2}},
     "gd": {"location": {"country": {"id": "GD", "name": "Grenada"}, "level": 2}},
     "zm": {"location": {"country": {"id": "ZM", "name": "Zambia"}, "level": 2}},
-    "tt": {
-        "location": {"country": {"id": "TT", "name": "Trinidad and Tobago"}, "level": 2}
-    },
     "qa": {"location": {"country": {"id": "QA", "name": "Qatar"}, "level": 2}},
     "pg": {
         "location": {"country": {"id": "PG", "name": "Papua New Guinea"}, "level": 2}
@@ -1560,7 +1556,7 @@ SOFTWARE_NAME_ALIASES = {
     "t-mapy": "gisplan",
     "tmapy": "gisplan",
     "spinbox": "gisplan",
-    "gis4u": "gisplan",
+    "gis4u": "gis4u",
     "t-wist": "gisplan",
     "twist": "gisplan",
     "tmapserver": "gisplan",
@@ -1737,7 +1733,6 @@ SOFTWARE_NAME_ALIASES = {
     "berry gis": "berryict",
     "vbgis": "vbgis",
     "vb gis": "vbgis",
-    "gis4u": "gis4u",
     "terratwin": "terratwin",
     "digitaltwincloud": "digitaltwincloud",
     "digital twin cloud": "digitaltwincloud",
@@ -2636,7 +2631,6 @@ COUNTRIES = {
     "SD": "Sudan",
     "TC": "Turks and Caicos Islands",
     "MV": "Maldives",
-    "GH": "Ghana",
     "KM": "Comoros",
     "LY": "Libya",
     "BM": "Bermuda",

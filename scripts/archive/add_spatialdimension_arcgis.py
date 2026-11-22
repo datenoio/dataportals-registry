@@ -12,9 +12,9 @@ from typing import List, Dict, Optional
 import time
 
 try:
-    from yaml import CLoader as Loader, CDumper as Dumper
+    from yaml import CSafeLoader as Loader, CSafeDumper as Dumper
 except ImportError:
-    from yaml import Loader, Dumper
+    from yaml import SafeLoader as Loader, SafeDumper as Dumper
 
 # Suppress only the single warning from urllib3 needed.
 requests.packages.urllib3.disable_warnings()

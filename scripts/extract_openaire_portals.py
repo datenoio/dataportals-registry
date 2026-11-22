@@ -33,8 +33,6 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import builder  # noqa: E402
 from constants import COUNTRIES, DOMAIN_LOCATIONS, ENTRY_TEMPLATE  # noqa: E402
 
-requests.packages.urllib3.disable_warnings()
-
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )

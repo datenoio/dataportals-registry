@@ -12,13 +12,7 @@ from typing import Dict, Any, Optional, Set
 from urllib.parse import urlparse
 from requests.exceptions import RequestException, Timeout
 
-try:
-    from yaml import CLoader as Loader, CDumper as Dumper
-except ImportError:
-    from yaml import Loader, Dumper
-
-# Suppress only the single warning from urllib3 needed.
-requests.packages.urllib3.disable_warnings()
+from yaml_io import Loader, Dumper
 
 # Configure logging
 logging.basicConfig(

@@ -57,7 +57,7 @@ API and MCP delivery surfaces are maintained in separate repositories. Do not pr
 
 | Component | Technology |
 |-----------|------------|
-| **Language** | Python 3.10-3.12 |
+| **Language** | Python 3.11-3.13 |
 | **Data Storage** | YAML files (individual catalog entries) |
 | **Export Formats** | JSONL, Parquet, DuckDB |
 | **Compression** | zstandard (zstd) |
@@ -124,7 +124,10 @@ dataportals-registry/
 │   ├── quality-fix-workflow.md
 │   ├── ckan_ecosystem_sync.md
 │   └── scheduled-to-entities.md
-├── requirements.txt        # Python dependencies
+├── requirements.txt        # Runtime dependencies
+├── requirements-dev.txt    # Test and lint dependencies
+├── requirements.lock       # Pinned set that CI installs
+├── pyproject.toml          # ruff configuration
 ├── pytest.ini             # pytest configuration
 ├── CONTRIBUTING.md         # Contribution guidelines
 └── README.md               # Project overview
@@ -228,8 +231,11 @@ Schema is defined in `data/schemes/catalog.json` using Cerberus format. Key vali
 ### Essential Commands
 
 ```bash
-# Install dependencies
-pip install -r requirements.txt
+# Install dependencies (runtime, tests and lint)
+pip install -r requirements-dev.txt
+
+# Lint Python code (rules in pyproject.toml)
+ruff check scripts tests
 
 # Build all datasets (from YAML to JSONL/DuckDB)
 python scripts/builder.py build
@@ -309,6 +315,8 @@ python scripts/builder.py analyze-quality
 - Keep functions focused and small
 - Use type hints where appropriate
 - Import ordering: standard library, third-party, local
+- Load and dump YAML with `from yaml_io import Loader, Dumper`, never `yaml.Loader` or `yaml.CLoader`: those run code from `!!python/*` tags. `tests/test_yaml_safety.py` enforces this
+- HTTP probes verify TLS certificates. Skipping the check needs an explicit `--insecure` option
 
 ### YAML Files
 
@@ -607,7 +615,7 @@ Follow [docs/software-taxonomy.md](docs/software-taxonomy.md#adding-a-software-d
 
 - **No secrets in code**: Do not commit API keys, passwords, or tokens
 - **URL validation**: All URLs are validated for proper format (scheme + netloc)
-- **Input sanitization**: YAML parsing uses safe loading
+- **Input sanitization**: YAML parsing uses safe loading (`scripts/yaml_io.py`)
 - **HTTP requests**: Use requests library with proper timeout and SSL verification
 - **File permissions**: YAML files should be world-readable (0644)
 

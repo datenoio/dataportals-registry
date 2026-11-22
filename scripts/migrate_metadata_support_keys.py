@@ -6,10 +6,7 @@ from __future__ import annotations
 import os
 import sys
 
-try:
-    from yaml import CLoader as Loader, CDumper as Dumper
-except ImportError:
-    from yaml import Loader, Dumper
+from yaml_io import Loader, Dumper
 
 import yaml
 

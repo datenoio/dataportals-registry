@@ -13,10 +13,7 @@ from urllib.parse import urlparse
 from typing import Dict, Any, List, Optional, Tuple
 import sys
 
-try:
-    from yaml import CLoader as Loader, CDumper as Dumper
-except ImportError:
-    from yaml import Loader, Dumper
+from yaml_io import Loader, Dumper
 
 # Import constants
 sys.path.insert(0, str(Path(__file__).parent))
@@ -33,15 +30,15 @@ ENTITIES_DIR = BASE_DIR / "data" / "entities"
 
 # Language mapping (from fix_medium_issues.py)
 LANGS_BY_COUNTRY_DETAILED = {
-    "US": ["EN"], "GB": ["EN"], "AU": ["EN"], "CA": ["EN"], "NZ": ["EN"],
+    "US": ["EN"], "GB": ["EN"], "AU": ["EN"], "CA": ["EN", "FR"], "NZ": ["EN"],
     "IE": ["EN"], "ZA": ["EN"], "ZW": ["EN"], "TT": ["EN"], "TZ": ["EN"],
     "RW": ["EN"], "UG": ["EN"], "NG": ["EN"], "ZM": ["EN"], "LK": ["EN"],
     "SG": ["EN"], "IN": ["EN"], "MN": ["MN"], "LT": ["LT"],
     "ES": ["ES"], "AR": ["ES"], "SV": ["ES"], "MX": ["ES"], "CL": ["ES"],
     "GT": ["ES"], "HN": ["ES"], "EC": ["ES"], "CR": ["ES"], "PE": ["ES"],
     "PY": ["ES"], "BO": ["ES"], "UY": ["ES"], "DO": ["ES"], "AD": ["ES"],
-    "JP": ["JP"], "AT": ["DE"], "DE": ["DE"], "CH": ["DE"],
-    "FR": ["FR"], "CI": ["FR"], "TG": ["FR"], "BE": ["FR"], "LU": ["FR"],
+    "JP": ["JP"], "AT": ["DE"], "DE": ["DE"], "CH": ["DE", "FR", "IT"],
+    "FR": ["FR"], "CI": ["FR"], "TG": ["FR"], "BE": ["FR", "NL"], "LU": ["FR"],
     "BF": ["FR"], "CD": ["FR"], "RU": ["RU"], "BY": ["RU"],
     "DK": ["DA"], "FO": ["DA"], "GL": ["DA"], "FI": ["FI"],
     "NL": ["NL"], "BG": ["BG"], "BH": ["AR"], "SA": ["AR"], "PS": ["AR"],
@@ -55,9 +52,9 @@ LANGS_BY_COUNTRY_DETAILED = {
     "EE": ["ET"], "HU": ["HU"], "KR": ["KR"], "CZ": ["CZ"],
     "GE": ["KA"], "IL": ["HE"], "SK": ["SK"], "NP": ["NE"],
     "HR": ["HR"], "MK": ["MK"], "MD": ["MD"],
-    "BE": ["FR", "NL"],  # Belgium
-    "CH": ["DE", "FR", "IT"],  # Switzerland
-    "CA": ["EN", "FR"],  # Canada
+    # Belgium
+    # Switzerland
+    # Canada
 }
 
 LANG_NAMES = {

@@ -5,10 +5,7 @@ import logging
 import typer
 import requests
 
-try:
-    from yaml import CLoader as Loader, CDumper as Dumper
-except ImportError:
-    from yaml import Loader, Dumper
+from yaml_io import Loader, Dumper
 import csv
 import tqdm
 import json

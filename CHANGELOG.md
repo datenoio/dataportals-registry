@@ -7,7 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Security
+
+- **Safe YAML loading**: scripts parsed registry YAML with `yaml.CLoader`, which runs code from `!!python/*` tags. `validate-yaml` runs on every pull request, so a crafted catalog file could run commands. All scripts now take `Loader` and `Dumper` from `scripts/yaml_io.py` (`CSafeLoader` / `CSafeDumper`). On all 44,405 entity and software files the safe classes load and dump the same result as before. `tests/test_yaml_safety.py` fails if a script imports an unsafe loader.
+- **TLS checks on by default**: `apidetect.py` and `enrich.py setstatus` no longer pass `verify=False`. To probe a catalog with an expired or self-signed certificate, pass `--insecure` (`python scripts/apidetect.py --insecure detect-single ID`). Eight scripts that never skipped TLS checks no longer silence urllib3 warnings.
+
 ### Fixed
+
+- `enrich.py setstatus` caught `ReadTimeout` without importing it, so a timeout raised `NameError`.
+- Repeated keys in dictionary literals in `constants.py`, `fix_all_priority_issues.py`, `fix_medium_issues.py`, `fix_important_issues.py` and `fix_fr_unk_subregions.py` are removed. Python kept the last value of each key, so behaviour does not change. The dropped values include two wrong subregions, `hautegaronne: FR-NAQ` and `fossurmer: FR-971`; the values that stay are `FR-OCC` and `FR-PAC`.
+- Python support was documented as 3.10–3.12, but `duckdb==2.0.1` does not install on 3.10. Supported versions are now 3.11–3.13, and CI runs the tests on all three.
 
 - **Duplicate UIDs**: 177 `uid` values were shared by 385 catalog records (up to 7 records per value). Each value now stays with one record and the other 208 records get new UIDs `cdi00043952`–`cdi00044159`, a range never used in git history. The record that keeps a value is the one added to git first; for 36 pairs added in the same commit it is the first by path, except `cdi00020014`, which stays with `w3clovportallirmmfr` as in v1.4.0. The old → new mapping is in `dataquality/uid_reassignments_2026-11-21.jsonl`.
 - **`validate-yaml` exit code**: schema errors now exit with code 1. Before, the command returned 1 but Typer ignored the return value, so the CI step always passed.
@@ -15,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `ruff check` runs in CI with a narrow, bug-only rule set (`pyproject.toml`).
+- Test and lint dependencies (`pytest`, `pytest-cov`, `pytest-mock`, `jsonschema`, `ruff`) move to `requirements-dev.txt`. CI installs the pinned set in `requirements.lock`.
 - `validate-yaml` checks that every `uid` is unique across `data/entities/` and `data/scheduled/`, in every mode (`--file`, `--id`, `--changed` and a full run), and `tests/test_uid_uniqueness.py` checks the same for the registry data.
 
 ## [1.27.0] - 2026-10-15

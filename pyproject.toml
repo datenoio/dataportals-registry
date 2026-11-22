@@ -1,0 +1,16 @@
+# Tool configuration only. Dependencies live in requirements.txt (runtime),
+# requirements-dev.txt (tests and lint) and requirements.lock (pinned, used by CI).
+
+[tool.ruff]
+target-version = "py311"
+extend-exclude = ["scripts/archive"]
+
+[tool.ruff.lint]
+# Start with rules that catch real bugs: syntax errors, undefined names,
+# dictionary keys repeated with different values, and bare `except:`.
+# Widen the set one rule family at a time, fixing the code in the same PR.
+select = ["E9", "F63", "F7", "F82", "F601", "E722"]
+
+# `ruff format` is configured with its defaults but not enforced in CI yet:
+# it would rewrite 71 files at once. Reformat them in one dedicated PR, then
+# add `ruff format --check` to the lint job.

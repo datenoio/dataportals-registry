@@ -22,10 +22,7 @@ from collections import Counter, defaultdict
 
 import yaml
 
-try:
-    from yaml import CLoader as Loader
-except ImportError:
-    from yaml import Loader
+from yaml_io import Loader
 
 from national_catalog import classify_is_national, is_legacy_open_data_name
 

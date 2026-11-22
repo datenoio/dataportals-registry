@@ -7,17 +7,10 @@ import datetime
 from urllib.parse import urlparse
 import requests
 from requests.exceptions import ConnectionError
-from urllib3.exceptions import InsecureRequestWarning
-
-# Suppress only the single warning from urllib3 needed.
-requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
 import yaml
 
-try:
-    from yaml import CLoader as Loader, CDumper as Dumper
-except ImportError:
-    from yaml import Loader, Dumper
+from yaml_io import Loader, Dumper
 import csv
 import json
 import os
